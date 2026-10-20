@@ -735,5 +735,12 @@
       "label": "Hays County: find your district and ballot",
       "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
     }
-  ]
+  ],
+  "early_in_person": {
+    "start": "2026-10-19",
+    "end": "2026-10-30",
+    "hours_short": "Travis County sites are open 7 AM to 7 PM every day.",
+    "source": "https://votetravis.gov/wp-content/uploads/G26-Early-Voting-Flyer-9.21.pdf",
+    "confidence": "verified"
+  }
 }

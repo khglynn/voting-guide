@@ -10,6 +10,8 @@
   "model_plain": "Every active registered voter already got a ballot in the mail (counties mailed them by October 5; LA County mailed October 1). Fill it out at home, sign the envelope, and drop it in any official drop box, any vote center, or the mail. Or skip the mail ballot and vote in person at a vote center from October 24 (LA, Orange and San Diego counties) or at your polling place on Election Day (San Francisco).",
   "registration": {
     "check_url": "https://voterstatus.sos.ca.gov/",
+    "register_url": "https://vote.gov/register/california",
+    "register_url_source": "https://vote.gov/register",
     "deadlines": [
       {
         "method": "online",
@@ -101,16 +103,42 @@
     "confidence": "verified"
   },
   "gotchas": [
-    "The registration deadline is Monday, October 19. Register online at RegisterToVote.ca.gov by then to get a ballot in the mail. Missed it? You can still register and vote in person, same day, at any vote center or your county elections office through 8 PM on November 3.",
-    "Mailed ballots must be postmarked by November 3 and arrive by November 10. During the final week, use an official drop box or vote center instead. Dropping a ballot in an ordinary mailbox on Election Day may not give it that day's postmark. Official drop boxes and vote centers accept ballots until 8 PM on November 3; track yours to confirm it was received and accepted.",
-    "Sign the envelope, and sign it the way you signed your driver's license. A missing or mismatched signature is the top reason California ballots get rejected. If the county flags yours, you have until 5 PM on November 25 to fix it, but only if they can reach you. Sign up at WheresMyBallot.sos.ca.gov so you get a text.",
-    "You can vote at ANY vote center in your county (LA, Orange, San Diego), not an assigned one. The first wave opens Saturday, October 24, and all of them open Saturday, October 31. San Francisco is different: it still uses neighborhood polling places on Election Day, plus the City Hall voting center for early voting.",
-    "Three propositions are designed to cancel each other out. Props 41 and 42 each say that if they get more yes votes than Prop 40 (the billionaire tax), Prop 40 is blocked even if it passes. Under the state constitution, when measures conflict, the one with more yes votes wins. If you have a view on Prop 40, your votes on 41 and 42 matter just as much."
+    {
+      "text": "The registration deadline is Monday, October 19. Register online at RegisterToVote.ca.gov by then to get a ballot in the mail. Missed it? You can still register and vote in person, same day, at any vote center or your county elections office through 8 PM on November 3.",
+      "short": "After Oct 19, register and vote the same day at a vote center."
+    },
+    {
+      "text": "Mailed ballots must be postmarked by November 3 and arrive by November 10. During the final week, use an official drop box or vote center instead. Dropping a ballot in an ordinary mailbox on Election Day may not give it that day's postmark. Official drop boxes and vote centers accept ballots until 8 PM on November 3; track yours to confirm it was received and accepted.",
+      "short": "In the final week, use an official drop box or vote center, not the mail."
+    },
+    {
+      "text": "Sign the envelope, and sign it the way you signed your driver's license. A missing or mismatched signature is the top reason California ballots get rejected. If the county flags yours, you have until 5 PM on November 25 to fix it, but only if they can reach you. Sign up at WheresMyBallot.sos.ca.gov so you get a text.",
+      "short": "Sign your envelope the way you signed your driver's license."
+    },
+    {
+      "text": "You can vote at ANY vote center in your county (LA, Orange, San Diego), not an assigned one. The first wave opens Saturday, October 24, and all of them open Saturday, October 31. San Francisco is different: it still uses neighborhood polling places on Election Day, plus the City Hall voting center for early voting.",
+      "short": "In LA, Orange and San Diego, vote at any vote center in your county."
+    },
+    {
+      "text": "Three propositions are designed to cancel each other out. Props 41 and 42 each say that if they get more yes votes than Prop 40 (the billionaire tax), Prop 40 is blocked even if it passes. Under the state constitution, when measures conflict, the one with more yes votes wins. If you have a view on Prop 40, your votes on 41 and 42 matter just as much.",
+      "short": "Props 41 and 42 can block Prop 40, so your votes on all three matter."
+    }
   ],
   "situations": [
     {
       "id": "moved_in_state",
       "question": "I moved to a new address in California.",
+      "short": "Update your registration and vote the same day at any vote center in the county you live in now.",
+      "actions": [
+        {
+          "label": "Find a vote center",
+          "url": "https://caearlyvoting.sos.ca.gov/"
+        },
+        {
+          "label": "Check my registration",
+          "url": "https://voterstatus.sos.ca.gov/"
+        }
+      ],
       "answer": "Re-register at your new address at RegisterToVote.ca.gov by Monday, October 19 and your new county mails you a ballot. After that, you can still update your registration and vote the same day at any vote center in the county you live in now, through 8 PM on Election Day.",
       "steps": [
         "Moved within the same county (say, within LA County)? At a vote center you can vote a provisional ballot for your new address; it counts once your signature matches.",
@@ -124,6 +152,13 @@
     {
       "id": "moved_out_of_state",
       "question": "I just moved to California from another state.",
+      "short": "Register and vote in one trip at any vote center in your county, through 8 PM on Election Day.",
+      "actions": [
+        {
+          "label": "Find a vote center",
+          "url": "https://caearlyvoting.sos.ca.gov/"
+        }
+      ],
       "answer": "You can register here if California is now where you live. Register online at RegisterToVote.ca.gov by Monday, October 19 to get a ballot in the mail, or register and vote in one trip at any vote center in your county through 8 PM on Election Day.",
       "steps": [
         "Register online at RegisterToVote.ca.gov by Oct 19.",
@@ -137,6 +172,17 @@
     {
       "id": "not_registered",
       "question": "I'm not registered to vote.",
+      "short": "Register and vote the same day at any vote center or county elections office through 8 PM Nov 3.",
+      "actions": [
+        {
+          "label": "Check my registration",
+          "url": "https://voterstatus.sos.ca.gov/"
+        },
+        {
+          "label": "Find a vote center",
+          "url": "https://caearlyvoting.sos.ca.gov/"
+        }
+      ],
       "answer": "You still can. Register online at RegisterToVote.ca.gov by Monday, October 19 to get a ballot in the mail; after that, register and vote the same day at any vote center or your county elections office, through 8 PM on November 3.",
       "steps": [
         "Check first at voterstatus.sos.ca.gov; you may already be registered.",
@@ -150,6 +196,13 @@
     {
       "id": "wrong_polling_place",
       "question": "I went to the wrong polling place.",
+      "short": "In LA and Orange counties, you can vote at any vote center in the county where you're registered.",
+      "actions": [
+        {
+          "label": "Find a vote center",
+          "url": "https://caearlyvoting.sos.ca.gov/"
+        }
+      ],
       "answer": "LA and Orange counties use vote centers, so you can vote at any vote center in your county. Just go to the nearest one in the county where you're registered.",
       "steps": [
         "Find vote centers and drop boxes at caearlyvoting.sos.ca.gov.",
@@ -163,6 +216,17 @@
     {
       "id": "no_mail_ballot_or_lost",
       "question": "My mail ballot never came, or I lost it.",
+      "short": "Ask your county for a replacement or vote in person at any vote center in your county.",
+      "actions": [
+        {
+          "label": "Track my ballot",
+          "url": "https://california.ballottrax.net/voter/"
+        },
+        {
+          "label": "Find a vote center",
+          "url": "https://caearlyvoting.sos.ca.gov/"
+        }
+      ],
       "answer": "Ask your county for a replacement, or vote in person at any vote center in your county instead. In LA County, the last day to ask for a replacement by mail is Tuesday, October 27.",
       "steps": [
         "Check Where's My Ballot to see when and where it was mailed.",
@@ -176,6 +240,13 @@
     {
       "id": "mistake_on_ballot",
       "question": "I made a mistake on my ballot.",
+      "short": "Before you cast it, ask a worker for a new one, or swap your mail ballot at a vote center.",
+      "actions": [
+        {
+          "label": "Find a vote center",
+          "url": "https://caearlyvoting.sos.ca.gov/"
+        }
+      ],
       "answer": "You have the right to a new ballot as long as you haven't cast it yet. Ask a worker at the vote center for a new one, or bring your mail ballot to a vote center or your county elections office and exchange it.",
       "steps": [
         "In person: tell a worker before you cast your ballot.",
@@ -189,6 +260,17 @@
     {
       "id": "mailed_but_want_in_person",
       "question": "I mailed my ballot but now want to vote in person.",
+      "short": "Your returned mail ballot counts; if you haven't sent it, hand it in at a vote center and vote.",
+      "actions": [
+        {
+          "label": "Track my ballot",
+          "url": "https://california.ballottrax.net/voter/"
+        },
+        {
+          "label": "Find a vote center",
+          "url": "https://caearlyvoting.sos.ca.gov/"
+        }
+      ],
       "answer": "If your mail ballot was returned before polls close, that's the one that counts, so there's no need to vote again. If you haven't sent it yet, bring it to any vote center in your county, hand it in, and vote in person.",
       "steps": [
         "Check Where's My Ballot to see whether it was received.",
@@ -202,6 +284,7 @@
     {
       "id": "no_id",
       "question": "I don't have an ID.",
+      "short": "Most voters don't need ID; if you're asked, a utility bill or your county's sample ballot booklet works.",
       "answer": "Most California voters don't need ID, by mail or in person; your signature is checked instead. Only some first-time voters who registered without a license or Social Security number may be asked, and a utility bill or the sample ballot booklet the county mailed you counts.",
       "steps": [
         "If you're asked and have nothing, you can vote a provisional ballot.",
@@ -214,6 +297,13 @@
     {
       "id": "name_changed",
       "question": "My name changed since I registered.",
+      "short": "Update your name and vote the same day at any vote center in your county, through 8 PM Nov 3.",
+      "actions": [
+        {
+          "label": "Find a vote center",
+          "url": "https://caearlyvoting.sos.ca.gov/"
+        }
+      ],
       "answer": "Update your registration with your new name at RegisterToVote.ca.gov by Monday, October 19. After that, you can update it and vote the same day at any vote center in your county.",
       "steps": [
         "Re-register online with your new name by Oct 19.",
@@ -227,6 +317,17 @@
     {
       "id": "college_student",
       "question": "I'm a college student.",
+      "short": "Vote where you're registered, school or home; to switch now, use Same Day Registration at a vote center there.",
+      "actions": [
+        {
+          "label": "Check my registration",
+          "url": "https://voterstatus.sos.ca.gov/"
+        },
+        {
+          "label": "Find a vote center",
+          "url": "https://caearlyvoting.sos.ca.gov/"
+        }
+      ],
       "answer": "You choose: register at your school address or your family's home address, but not both. Every registered voter gets a mail ballot, so make sure it's going where you'll actually be.",
       "steps": [
         "Update your address at RegisterToVote.ca.gov by Oct 19 so the ballot reaches you.",
@@ -240,6 +341,17 @@
     {
       "id": "away_on_election_day",
       "question": "I'll be away on Election Day.",
+      "short": "Vote your mail ballot before you go and drop it off, or mail it so it's postmarked by Nov 3.",
+      "actions": [
+        {
+          "label": "Find a drop box",
+          "url": "https://caearlyvoting.sos.ca.gov/"
+        },
+        {
+          "label": "Track my ballot",
+          "url": "https://california.ballottrax.net/voter/"
+        }
+      ],
       "answer": "You already have a mail ballot, so vote it before you go. Drop it in any official drop box or vote center, or mail it so it's postmarked by Nov 3; the state suggests mailing at least a week early.",
       "steps": [
         "No stamp needed. The return envelope is prepaid.",
@@ -253,6 +365,7 @@
     {
       "id": "in_line_at_close",
       "question": "I'm in line when polls close.",
+      "short": "Stay in line: if you're in line when polls close at 8 PM, you can vote.",
       "answer": "Stay in line. You have the right to vote if you're in line when polls close at 8 PM.",
       "steps": [
         "Don't leave, even if the line is long.",
@@ -265,6 +378,13 @@
     {
       "id": "signature_problem",
       "question": "They said my signature doesn't match.",
+      "short": "Return the signature form your county sends by 5 PM on Wednesday, Nov 25.",
+      "actions": [
+        {
+          "label": "Track my ballot",
+          "url": "https://california.ballottrax.net/voter/"
+        }
+      ],
       "answer": "You can fix it. Your county will contact you with a signature form; return it by 5 PM on Wednesday, November 25.",
       "steps": [
         "Fill out the signature verification form from your notice or your county's website and send it back.",
@@ -278,6 +398,7 @@
     {
       "id": "provisional_ballot",
       "question": "What's a provisional ballot?",
+      "short": "It's a regular ballot in a special envelope, counted once the county confirms you're registered there and didn't already vote.",
       "answer": "It's a regular ballot sealed in a special envelope, used when your name isn't on the list or you can't show you haven't already voted by mail. It's counted once the county confirms you're registered in that county and didn't already vote.",
       "steps": [
         "If you voted at an address in your county other than your registered one, only the races you're eligible for are counted.",
@@ -290,6 +411,13 @@
     {
       "id": "check_ballot_counted",
       "question": "How do I check my ballot was counted?",
+      "short": "Sign up for Where's My Ballot to get a text or email when your mail ballot is counted.",
+      "actions": [
+        {
+          "label": "Track my ballot",
+          "url": "https://california.ballottrax.net/voter/"
+        }
+      ],
       "answer": "Sign up for Where's My Ballot, the state's official tracker, to get a text or email when your mail ballot is received and counted. For a provisional ballot, check with your county.",
       "steps": [
         "Sign up at california.ballottrax.net.",

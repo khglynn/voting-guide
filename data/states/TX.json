@@ -6,10 +6,13 @@
     "name": "VoteTexas.gov (Texas Secretary of State)",
     "url": "https://www.votetexas.gov/"
   },
+  "sample_ballot_url": "https://content.govdelivery.com/attachments/TXSOS/2026/08/28/file_attachments/3762824/2026%20Sample%20Ballot-final.pdf",
   "voting_model": "in_person_first",
   "model_plain": "Most Texans vote in person, either during early voting (Oct. 19 to 30) or on Election Day (Nov. 3). Mail ballots are only for people who qualify: 65 or older, sick or disabled, out of the county, expecting a baby, or in jail.",
   "registration": {
     "check_url": "https://teamrv-mvp.sos.texas.gov/MVP/mvp.do",
+    "register_url": "https://vote.gov/register/texas",
+    "register_url_source": "https://vote.gov/register",
     "deadlines": [
       {
         "method": "online",
@@ -104,17 +107,46 @@
     "confidence": "verified"
   },
   "gotchas": [
-    "Registration is closed. The deadline was October 5. If you aren't registered, you can't vote in this election. Check your status at the My Voter Portal before you go so there are no surprises.",
-    "If you applied for a mail ballot but want to vote in person, bring the mail ballot with you and hand it over ('surrender' it) to get a regular ballot. If you show up without it, you'll have to vote a provisional ballot, which only counts after the county confirms your mail ballot was never returned.",
-    "No phones in the voting room, period, and no ballot photos (recording within 100 feet of a voting station is banned, Election Code 61.014). Research at home and bring a printed cheat sheet or handwritten notes. Paper is explicitly allowed; phones are not. The 'I Voted' sticker selfie outside is fine.",
-    "A mail ballot arriving after 7 PM on November 3 only counts if it has a postmark by that time AND arrives by 5 PM the next day. Postmarks are not guaranteed; if you're cutting it close, hand-deliver it to the Early Voting Clerk's office on Election Day with your photo ID, or just vote in person.",
-    "Vote centers: in Travis, Williamson, Hays, Dallas, Collin, Tarrant, Harris, Fort Bend and Bexar counties you can vote at ANY polling location in your county, during early voting and on Election Day. You are not tied to a precinct. Pick the one with the shortest line.",
-    "For a write-in, use the official declared write-in list for your ballot. It must be posted in each voting booth and included with mail ballots. On paper ballots, a write-in line appears only in races with a declared write-in candidate. The SOS list covers federal, state and district offices; county and precinct write-ins are certified locally."
+    {
+      "text": "Registration is closed. The deadline was October 5. If you aren't registered, you can't vote in this election. Check your status at the My Voter Portal before you go so there are no surprises.",
+      "short": "Check your registration before you go; the Oct 5 deadline has passed."
+    },
+    {
+      "text": "If you applied for a mail ballot but want to vote in person, bring the mail ballot with you and hand it over ('surrender' it) to get a regular ballot. If you show up without it, you'll have to vote a provisional ballot, which only counts after the county confirms your mail ballot was never returned.",
+      "short": "Bring your mail ballot to the polls if you'd rather vote in person."
+    },
+    {
+      "text": "No phones in the voting room, period, and no ballot photos (recording within 100 feet of a voting station is banned, Election Code 61.014). Research at home and bring a printed cheat sheet or handwritten notes. Paper is explicitly allowed; phones are not. The 'I Voted' sticker selfie outside is fine.",
+      "short": "Leave your phone outside the voting room; bring printed or handwritten notes instead."
+    },
+    {
+      "text": "A mail ballot arriving after 7 PM on November 3 only counts if it has a postmark by that time AND arrives by 5 PM the next day. Postmarks are not guaranteed; if you're cutting it close, hand-deliver it to the Early Voting Clerk's office on Election Day with your photo ID, or just vote in person.",
+      "short": "Close to Nov 3, hand-deliver your mail ballot with photo ID, or vote in person."
+    },
+    {
+      "text": "Vote centers: in Travis, Williamson, Hays, Dallas, Collin, Tarrant, Harris, Fort Bend and Bexar counties you can vote at ANY polling location in your county, during early voting and on Election Day. You are not tied to a precinct. Pick the one with the shortest line.",
+      "short": "In vote-center counties like Travis and Harris, vote at any location in your county."
+    },
+    {
+      "text": "For a write-in, use the official declared write-in list for your ballot. It must be posted in each voting booth and included with mail ballots. On paper ballots, a write-in line appears only in races with a declared write-in candidate. The SOS list covers federal, state and district offices; county and precinct write-ins are certified locally.",
+      "short": "For a write-in, pick a name from the official declared write-in list."
+    }
   ],
   "situations": [
     {
       "id": "moved_in_state",
       "question": "I moved to a new address in Texas.",
+      "short": "Same county: vote anywhere with a Statement of Residence; new county: ask about a limited ballot by Oct 30.",
+      "actions": [
+        {
+          "label": "Check my registration",
+          "url": "https://teamrv-mvp.sos.texas.gov/MVP/mvp.do"
+        },
+        {
+          "label": "Find voting places",
+          "url": "https://www.votetexas.gov/voting/where.html"
+        }
+      ],
       "answer": "If you moved within the same county, you can still vote: go to any polling place in your county and fill out a short Statement of Residence. If you moved to a different Texas county and didn't re-register there by October 5, you may be able to vote a limited ballot in your new county, but only during early voting (Oct 19 to 30) at its main early voting site.",
       "steps": [
         "Same county (say, a move within Travis or within Harris): vote anywhere in the county and tell the worker your address changed.",
@@ -128,6 +160,13 @@
     {
       "id": "moved_out_of_state",
       "question": "I just moved to Texas from another state.",
+      "short": "Texas registration closed Oct 5, so register now for next time.",
+      "actions": [
+        {
+          "label": "Register for next time",
+          "url": "https://vote.gov/register/texas"
+        }
+      ],
       "answer": "Texas registration for this election closed October 5, so if you weren't registered here by then, you can't vote in Texas on November 3. Register now so you're ready next time; a registration takes effect 30 days after the county accepts it.",
       "steps": [
         "Fill out the form at VoteTexas.gov, then print, sign and mail it to your county voter registrar. Texas has no fully online registration.",
@@ -140,6 +179,17 @@
     {
       "id": "not_registered",
       "question": "I'm not registered to vote.",
+      "short": "The deadline was Oct 5, but check first, because you may be registered and not know it.",
+      "actions": [
+        {
+          "label": "Check my registration",
+          "url": "https://teamrv-mvp.sos.texas.gov/MVP/mvp.do"
+        },
+        {
+          "label": "Register for next time",
+          "url": "https://vote.gov/register/texas"
+        }
+      ],
       "answer": "We're sorry: the Texas deadline was October 5, so if you didn't register by then, you can't vote in this election. Before you give up, double-check, because you may be registered and not know it.",
       "steps": [
         "Look yourself up at the My Voter Portal, or call your county voter registrar.",
@@ -153,6 +203,13 @@
     {
       "id": "wrong_polling_place",
       "question": "I went to the wrong polling place.",
+      "short": "In Travis, Williamson, Hays and Harris, you can vote at any polling place in your county.",
+      "actions": [
+        {
+          "label": "Find voting places",
+          "url": "https://www.votetexas.gov/voting/where.html"
+        }
+      ],
       "answer": "Travis, Williamson, Hays and Harris counties use vote centers, so you can vote at any polling place in your county, early or on Election Day. Just head to the closest one in the county where you're registered.",
       "steps": [
         "Find locations (and wait times, in many counties) on your county elections site or the My Voter Portal.",
@@ -165,6 +222,17 @@
     {
       "id": "no_mail_ballot_or_lost",
       "question": "My mail ballot never came, or I lost it.",
+      "short": "Vote in person instead, or cancel it in writing and apply for a new one by Oct 23.",
+      "actions": [
+        {
+          "label": "Track my ballot",
+          "url": "https://www.votetexas.gov/voting-by-mail/track-my-ballot.html"
+        },
+        {
+          "label": "Find voting places",
+          "url": "https://www.votetexas.gov/voting/where.html"
+        }
+      ],
       "answer": "Texas only mails ballots to voters who applied and qualified. If yours never came or got lost, you can vote in person instead, or cancel it in writing and apply for a new one.",
       "steps": [
         "Check the Ballot by Mail Tracker to see whether it was mailed.",
@@ -178,6 +246,13 @@
     {
       "id": "mistake_on_ballot",
       "question": "I made a mistake on my ballot.",
+      "short": "Don't cast it; ask a worker for a new one, or bring a mail ballot to the polls and vote.",
+      "actions": [
+        {
+          "label": "Find voting places",
+          "url": "https://www.votetexas.gov/voting/where.html"
+        }
+      ],
       "answer": "At the polls, don't cast it: Texas law gives you a new ballot when you hand the spoiled one back to an election worker. On a mail ballot, bring the whole packet to an early voting site or your Election Day polling place, surrender it, and vote in person.",
       "steps": [
         "In person: tell a poll worker before you cast your ballot and ask for a new one.",
@@ -190,6 +265,17 @@
     {
       "id": "mailed_but_want_in_person",
       "question": "I mailed my ballot but now want to vote in person.",
+      "short": "Once the county has it, that's your vote; if you still have it, bring it to the polls and vote.",
+      "actions": [
+        {
+          "label": "Track my ballot",
+          "url": "https://www.votetexas.gov/voting-by-mail/track-my-ballot.html"
+        },
+        {
+          "label": "Find voting places",
+          "url": "https://www.votetexas.gov/voting/where.html"
+        }
+      ],
       "answer": "Once the county has your marked mail ballot, that's your vote and you can't swap it for an in-person one. If you haven't sent it yet, bring it to any polling place in your county, surrender it, and vote a regular ballot.",
       "steps": [
         "Check the Ballot by Mail Tracker to see whether it was received.",
@@ -203,6 +289,7 @@
     {
       "id": "no_id",
       "question": "I don't have an ID.",
+      "short": "If you can't get a photo ID, bring a utility bill or bank statement and sign a Reasonable Impediment Declaration.",
       "answer": "Texas asks for one of 7 photo IDs, like a Texas driver's license or a U.S. passport, and it can be expired up to 4 years (any length of time if you're 70 or older). If you don't have one and can't reasonably get one, bring a supporting document, like a utility bill, bank statement or your voter registration certificate, and sign a Reasonable Impediment Declaration to vote a regular ballot.",
       "steps": [
         "Have a photo ID but left it at home? Go get it and come back before polls close.",
@@ -216,6 +303,13 @@
     {
       "id": "name_changed",
       "question": "My name changed since I registered.",
+      "short": "You can still vote if your name is close enough; you sign a short affidavit at the polls.",
+      "actions": [
+        {
+          "label": "Check my registration",
+          "url": "https://teamrv-mvp.sos.texas.gov/MVP/mvp.do"
+        }
+      ],
       "answer": "You can still vote. If the name on your ID doesn't exactly match the voter list, workers check whether it's substantially similar (they also look at your address and birth date), and if it is, you sign a short affidavit and vote.",
       "steps": [
         "Bring your photo ID, plus your voter registration certificate if you have it.",
@@ -228,6 +322,17 @@
     {
       "id": "college_student",
       "question": "I'm a college student.",
+      "short": "Vote where you're registered; if that's home and you'll be away, your mail ballot application must arrive by Oct 23.",
+      "actions": [
+        {
+          "label": "Check my registration",
+          "url": "https://teamrv-mvp.sos.texas.gov/MVP/mvp.do"
+        },
+        {
+          "label": "Find voting places",
+          "url": "https://www.votetexas.gov/voting/where.html"
+        }
+      ],
       "answer": "Registration closed October 5, so you vote where you're already registered. If that's your family's county and you'll be away at school for all of early voting and on Election Day, you can vote by mail, but your application must arrive by Friday, October 23.",
       "steps": [
         "Get the mail ballot application at VoteTexas.gov and send it to the early voting clerk in your home county.",
@@ -241,6 +346,13 @@
     {
       "id": "away_on_election_day",
       "question": "I'll be away on Election Day.",
+      "short": "Vote early at any site in your county through Oct 30.",
+      "actions": [
+        {
+          "label": "Find early voting places",
+          "url": "https://www.votetexas.gov/voting/where.html"
+        }
+      ],
       "answer": "Vote early in person, Monday, October 19 through Friday, October 30, at any early voting site in your county. If you'll be out of your county for all of early voting and on Election Day, you can vote by mail; your application must arrive by Friday, October 23.",
       "steps": [
         "Check your county's early voting hours (Travis, Williamson, Hays and Harris each post their own).",
@@ -254,6 +366,7 @@
     {
       "id": "in_line_at_close",
       "question": "I'm in line when polls close.",
+      "short": "Stay in line: if you're in line at 7 PM, you get to vote.",
       "answer": "Stay in line. If you're inside or in line at the polling place at 7 PM, you get to vote.",
       "steps": [
         "Don't leave, even if the line is long.",
@@ -266,6 +379,17 @@
     {
       "id": "signature_problem",
       "question": "They said my signature doesn't match.",
+      "short": "Fix it by Nov 9 with the Corrective Action Form, by mail or at your county's early voting clerk.",
+      "actions": [
+        {
+          "label": "How to fix it",
+          "url": "https://www.votetexas.gov/voting-by-mail/corrective-action.html"
+        },
+        {
+          "label": "Track my ballot",
+          "url": "https://www.votetexas.gov/voting-by-mail/track-my-ballot.html"
+        }
+      ],
       "answer": "You can fix it. Fill out the Corrective Action Form that came with your notice and mail it back, or do it in person at your county's early voting clerk's office, by Monday, November 9.",
       "steps": [
         "If the problem is a missing or wrong ID number, fix it online in the Ballot by Mail Tracker.",
@@ -279,6 +403,7 @@
     {
       "id": "provisional_ballot",
       "question": "What's a provisional ballot?",
+      "short": "It's a backup ballot when workers can't confirm you can vote; the county decides later if it counts.",
       "answer": "It's a backup ballot for when workers can't confirm on the spot that you can vote, such as when you're not on the list or don't have ID with you. You sign a short affidavit, and the county decides afterward whether it counts.",
       "steps": [
         "If it was about ID, show your photo ID at the county voter registrar's office by Monday, Nov 9.",
@@ -291,6 +416,13 @@
     {
       "id": "check_ballot_counted",
       "question": "How do I check my ballot was counted?",
+      "short": "If you voted by mail, use the Ballot by Mail Tracker; a provisional ballot gets a mailed notice.",
+      "actions": [
+        {
+          "label": "Track my ballot",
+          "url": "https://www.votetexas.gov/voting-by-mail/track-my-ballot.html"
+        }
+      ],
       "answer": "If you voted by mail, use the state's Ballot by Mail Tracker to see when your ballot was received and whether there's a problem to fix. If you voted a provisional ballot, the county mails you a notice saying whether it counted.",
       "steps": [
         "Log in with your Texas license or ID number and the last 4 of your Social Security number.",

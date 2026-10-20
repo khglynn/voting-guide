@@ -764,6 +764,39 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await ctx.close();
 }
 
+/* ---------- common questions: quick answers with buttons (Kevin, Oct 20) ----------
+   "They should be quick answers with things that you can do." An opened question shows one
+   short line and its buttons; the full answer, steps and source wait behind "More". Each common
+   mistake is one line, its full text behind its own "More". */
+for (const [zip, label, id, btn, href, full] of [
+  ['78702', 'Austin', 'not_registered', 'Register for next time', /^https:\/\/vote\.gov\/register\/texas$/, /the Texas deadline was October 5/],
+  ['90004', 'Los Angeles', 'not_registered', 'Find a vote center', /^https:\/\/caearlyvoting\.sos\.ca\.gov\/$/, /RegisterToVote\.ca\.gov/],
+]) {
+  const { ctx, page } = await newPage();
+  await openBallot(page, zip);
+  await tap(page, '[data-act="open"][data-k="whatif"]');
+  await tap(page, `[data-act="open"][data-k="wi-${id}"]`);
+  const a = `.wi-a:has(.wi-short)`;
+  const short = await text(page, `${a} .wi-short`);
+  check(`${label}: "I'm not registered" opens to one short line`, short.length > 0 && short.split(/\s+/).length <= 20 && !full.test(await text(page, a)), short);
+  const acts = await page.$$eval(`${a} .wi-acts a`, (els) => els.map((e) => ({ t: e.textContent.trim(), href: e.getAttribute('href'), blank: e.target === '_blank', h: e.getBoundingClientRect().height })));
+  check(`${label}: with one or two official buttons, "${btn}" among them`, acts.length >= 1 && acts.length <= 2 && acts.every((x) => /^https:\/\//.test(x.href) && x.blank) && acts.some((x) => x.t === btn && href.test(x.href)), JSON.stringify(acts));
+  check(`${label}: the buttons are big enough to tap`, acts.every((x) => x.h >= 44), acts.map((x) => Math.round(x.h)).join(','));
+  await shot(page, `05-${label.toLowerCase().replace(/\s+/g, '-')}-quick-answer`);
+  await tap(page, `[data-act="open"][data-k="wim-${id}"]`);
+  check(`${label}: "More" shows the full answer, the steps and the source`, full.test(await text(page, `${a} .wi-full`)) && !!(await page.$(`${a} .wi-full ol li`)) && !!(await page.$(`${a} .wi-full .src`)) && (await page.getAttribute(`[data-k="wim-${id}"]`, 'aria-expanded')) === 'true');
+  const tips = await page.$$eval('.whatifs .gotchas li.g-short', (els) => els.map((e) => e.firstChild.textContent.trim()));
+  check(`${label}: each common mistake is one short line`, tips.length >= 5 && tips.every((t) => t.split(/\s+/).length <= 15), tips.join(' | '));
+  const before = await text(page, '.whatifs .gotchas li.g-short:first-child');
+  await tap(page, '.whatifs .gotchas [data-act="open"][data-k="gm-0"]');
+  const after = await text(page, '.whatifs .gotchas li.g-short:first-child .pd-x');
+  check(`${label}: a mistake's "More" shows its full text`, after.length > before.length, after.slice(0, 80));
+  check(`${label}: nothing in all caps in the panel`, (await upperCased(page)).length === 0, (await upperCased(page)).join(' | '));
+  await noSideScroll(page, `${label} common questions`);
+  noErrors(page, `${label} common questions`);
+  await ctx.close();
+}
+
 /* ---------- statewide-only, uncovered, shared ZIPs ---------- */
 {
   const { ctx, page } = await newPage();
@@ -773,6 +806,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('Spokane: links an official ballot lookup', !!(await page.$('.bhead .statewide-note a[href^="http"]')));
   check('Spokane: See my sample ballot and Ask for your city', (await page.$$eval('.statewide-note .row-btns a', (els) => els.map((e) => e.textContent.trim()))).join('|') === 'See my sample ballot|Ask for your city'
     && /docs\.google\.com/.test((await page.getAttribute('.statewide-note a:last-child', 'href')) || ''));
+  check('Spokane: the sample ballot link is the state lookup, not one county\'s PDF', /^https:\/\/voter\.votewa\.gov\//.test((await page.getAttribute('.bhead .statewide-note a[href^="http"]', 'href')) || ''));
   check('Spokane: no city or county sections', !(await page.$('.sec[data-sec="city"], .sec[data-sec="county"]')));
   noErrors(page, 'Spokane');
   await ctx.close();
@@ -1110,7 +1144,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await tap(page, '#plan [data-act="view"][data-v="pass"]');
   await page.waitForSelector('#msg-pub');
   const pub = await text(page, '#msg-pub');
-  check('Austin: the public message says Election Day and the early-voting dates', /Election Day in Texas is Tue, Nov 3\./.test(pub) && /Early voting runs Mon, Oct 19 through Fri, Oct 30\./.test(pub), pub.slice(0, 140));
+  check('Austin: the public message says Election Day and the early-voting dates', /Election Day in Texas is Tue, Nov 3\./.test(pub) && /Early voting (in Austin )?runs Mon, Oct 19 through Fri, Oct 30\./.test(pub), pub.slice(0, 140));
   await tap(page, '[data-act="view"][data-v="ballot"]');
   const oth = await text(page, '#sec-school .grp.oth');
   check('Austin: other school districts’ races fold into one line', /Other school districts that touch Austin/.test(oth) && !(await page.$('#sec-school [data-fold]')), oth.slice(0, 120));

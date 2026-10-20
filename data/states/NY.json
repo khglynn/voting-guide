@@ -6,10 +6,13 @@
     "name": "New York State Board of Elections",
     "url": "https://elections.ny.gov/"
   },
+  "sample_ballot_url": "https://voterlookup.elections.ny.gov/",
   "voting_model": "in_person_first",
   "model_plain": "Most New Yorkers vote in person, either during nine days of early voting (Sat Oct 24 to Sun Nov 1) or on Election Day (Tue Nov 3, 6 AM to 9 PM). Anyone can also ask for a mail ballot, but you must request one; nothing is mailed to you automatically.",
   "registration": {
     "check_url": "https://voterlookup.elections.ny.gov/",
+    "register_url": "https://vote.gov/register/new-york",
+    "register_url_source": "https://vote.gov/register",
     "deadlines": [
       {
         "method": "online",
@@ -101,16 +104,38 @@
     "confidence": "sourced"
   },
   "gotchas": [
-    "Two Saturday deadlines in one: October 24 is the last day to register AND the last day the county board can receive your mail-ballot request. Both are received-by, not postmarked, so don't trust the mail with either this late. Register online; request your ballot online. No same-day registration in New York.",
-    "The deadline to submit an address change is October 19. If you miss it and moved within New York, use the polling place for your new address and ask for an affidavit ballot. Check your poll site before leaving.",
-    "Nobody mails you a ballot unless you ask. If you want to vote by mail, request an early mail ballot (no reason needed). Once a mail ballot is issued to you, you can't vote on a machine in person; you'd vote an affidavit ballot instead, and only one of the two counts.",
-    "Fusion voting: the same candidate appears on more than one line. Hochul is on Democratic and Working Families; Blakeman is on Republican, Conservative and Vote Affordable. Votes on every line add up for that person. Fill in ONE oval. Two ovals for the same person still count once; two ovals for different people in one race void that race.",
-    "NYC: your early voting site is assigned and is often NOT your Election Day poll site. Check both at findmypollsite.vote.nyc. Early voting ends Sunday, November 1; there's no voting on Monday, November 2. NYC ballots also carry five ballot questions this year, all proposed City Charter amendments (NYC Votes: 'NYC voters will see five ballot proposals on their ballots'), usually on the back. Flip it over. There is no statewide ballot question in 2026."
+    {
+      "text": "Two Saturday deadlines in one: October 24 is the last day to register AND the last day the county board can receive your mail-ballot request. Both are received-by, not postmarked, so don't trust the mail with either this late. Register online; request your ballot online. No same-day registration in New York.",
+      "short": "Register and request a mail ballot online by Oct 24; don't trust the mail."
+    },
+    {
+      "text": "The deadline to submit an address change is October 19. If you miss it and moved within New York, use the polling place for your new address and ask for an affidavit ballot. Check your poll site before leaving.",
+      "short": "After Oct 19, vote by affidavit ballot at your new address's poll site."
+    },
+    {
+      "text": "Nobody mails you a ballot unless you ask. If you want to vote by mail, request an early mail ballot (no reason needed). Once a mail ballot is issued to you, you can't vote on a machine in person; you'd vote an affidavit ballot instead, and only one of the two counts.",
+      "short": "To vote by mail, request an early mail ballot; no reason needed."
+    },
+    {
+      "text": "Fusion voting: the same candidate appears on more than one line. Hochul is on Democratic and Working Families; Blakeman is on Republican, Conservative and Vote Affordable. Votes on every line add up for that person. Fill in ONE oval. Two ovals for the same person still count once; two ovals for different people in one race void that race.",
+      "short": "Fill in one oval per race, even if your candidate is on several lines."
+    },
+    {
+      "text": "NYC: your early voting site is assigned and is often NOT your Election Day poll site. Check both at findmypollsite.vote.nyc. Early voting ends Sunday, November 1; there's no voting on Monday, November 2. NYC ballots also carry five ballot questions this year, all proposed City Charter amendments (NYC Votes: 'NYC voters will see five ballot proposals on their ballots'), usually on the back. Flip it over. There is no statewide ballot question in 2026.",
+      "short": "NYC: your early voting site may differ from Election Day's; flip the ballot over."
+    }
   ],
   "situations": [
     {
       "id": "moved_in_state",
       "question": "I moved to a new address in New York.",
+      "short": "Go to the poll site for your new address and vote by affidavit ballot; it counts and moves your registration.",
+      "actions": [
+        {
+          "label": "Find my poll site",
+          "url": "https://voterlookup.elections.ny.gov/"
+        }
+      ],
       "answer": "Update your address by Monday, October 19 at elections.ny.gov or through the DMV. If you miss that, go to the poll site for your new address anywhere in New York and vote by affidavit ballot; it counts and moves your registration.",
       "steps": [
         "Look up the poll site for your new address at voterlookup.elections.ny.gov (NYC: findmypollsite.vote.nyc).",
@@ -124,6 +149,13 @@
     {
       "id": "moved_out_of_state",
       "question": "I moved out of New York.",
+      "short": "Register in your new state instead; some still take registrations or offer same-day registration.",
+      "actions": [
+        {
+          "label": "Register in my new state",
+          "url": "https://vote.gov/register"
+        }
+      ],
       "answer": "You vote where you live now, so register in your new state instead. Some states still take registrations or offer same-day registration, so check today.",
       "steps": [
         "Look up your new state's rules and deadline at vote.gov.",
@@ -136,6 +168,17 @@
     {
       "id": "not_registered",
       "question": "I'm not registered yet.",
+      "short": "Register online by Oct 24, but check first, because you may already be registered.",
+      "actions": [
+        {
+          "label": "Check my registration",
+          "url": "https://voterlookup.elections.ny.gov/"
+        },
+        {
+          "label": "Register to vote",
+          "url": "https://vote.gov/register/new-york"
+        }
+      ],
       "answer": "Register online or deliver your application to your county board by October 24. After that date, new voters cannot register for the November 3 election; New York has no same-day registration. Check your existing registration before assuming you cannot vote.",
       "steps": [
         "Check first at voterlookup.elections.ny.gov. You may already be registered.",
@@ -149,6 +192,13 @@
     {
       "id": "wrong_polling_place",
       "question": "I went to the wrong polling place.",
+      "short": "Go to your assigned poll site if you can; if not, vote an affidavit ballot where you are.",
+      "actions": [
+        {
+          "label": "Find my poll site",
+          "url": "https://voterlookup.elections.ny.gov/"
+        }
+      ],
       "answer": "You need your own assigned poll site, so ask a poll worker to find it and go there if you can. If you can't, you can vote an affidavit ballot where you are, and it counts for the races you're eligible for as long as you're in the right county and Assembly district.",
       "steps": [
         "Find your correct site at findmypollsite.vote.nyc (NYC) or voterlookup.elections.ny.gov.",
@@ -162,6 +212,13 @@
     {
       "id": "no_mail_ballot_or_lost",
       "question": "My mail ballot never came, or I lost it.",
+      "short": "Request a new one, or vote in person on an affidavit ballot that counts if the first never returns.",
+      "actions": [
+        {
+          "label": "Track my ballot",
+          "url": "https://voterlookup.elections.ny.gov/"
+        }
+      ],
       "answer": "Check its status, then ask for a new one or vote in person. In person you'll vote an affidavit ballot, which counts as long as your first mail ballot never comes back.",
       "steps": [
         "Track your ballot at voterlookup.elections.ny.gov.",
@@ -175,6 +232,7 @@
     {
       "id": "mistake_on_ballot",
       "question": "I made a mistake on my ballot.",
+      "short": "Don't scan it; ask a poll worker for a fresh one, or your county board for a new mail ballot.",
       "answer": "At a poll site, tell a poll worker before you scan it and you'll get a fresh ballot, up to three in all. On a mail ballot, ask your county board for a replacement; if both come back, the one with the later postmark counts.",
       "steps": [
         "In person: hand the marked ballot to a poll worker. Don't put it in the scanner.",
@@ -188,6 +246,13 @@
     {
       "id": "mailed_but_want_in_person",
       "question": "I got a mail ballot, but I want to vote in person.",
+      "short": "You can, on an affidavit ballot, which counts only if your mail ballot didn't reach the board.",
+      "actions": [
+        {
+          "label": "Find my poll site",
+          "url": "https://voterlookup.elections.ny.gov/"
+        }
+      ],
       "answer": "You can, but you'll vote an affidavit ballot instead of using the machine. If your mail ballot already reached the board, the affidavit ballot isn't counted; if it didn't, the affidavit ballot counts.",
       "steps": [
         "Go to your early voting site (October 24 to November 1) or your Election Day poll site.",
@@ -201,6 +266,7 @@
     {
       "id": "no_id",
       "question": "I don't have an ID.",
+      "short": "Most New Yorkers don't need ID; if you're asked and have none, vote an affidavit ballot.",
       "answer": "Most New Yorkers don't need one; you sign in and your signature is checked. If you're a first-time voter who is asked for ID and don't have it, you can still vote an affidavit ballot, which counts once the board confirms you're registered.",
       "steps": [
         "If asked, a photo ID works, or a current utility bill, bank statement, paycheck, government check or government document with your name and address."
@@ -212,6 +278,7 @@
     {
       "id": "name_changed",
       "question": "My name changed since I registered.",
+      "short": "You can still vote: tell the poll worker, and sign with both names.",
       "answer": "You can still vote. Tell the poll worker your name changed; you'll sign with both names and fill out a signature card that updates your record.",
       "steps": null,
       "deadline": null,
@@ -221,6 +288,13 @@
     {
       "id": "college_student",
       "question": "I'm a college student.",
+      "short": "Request an early mail ballot online by Oct 24 and have it sent to your school address.",
+      "actions": [
+        {
+          "label": "Request a mail ballot",
+          "url": "https://elections.ny.gov/request-ballot"
+        }
+      ],
       "answer": "Registered at home but away at school? Request an early mail ballot online by Saturday, October 24 and have it sent to your school address; no reason is needed.",
       "steps": [
         "Apply at ballotapplication.elections.ny.gov and give your school mailing address.",
@@ -234,6 +308,17 @@
     {
       "id": "away_on_election_day",
       "question": "I'll be away on Election Day.",
+      "short": "Vote early, Oct 24 to Nov 1, or request an early mail ballot online by Oct 24.",
+      "actions": [
+        {
+          "label": "Find my early voting site",
+          "url": "https://voterlookup.elections.ny.gov/"
+        },
+        {
+          "label": "Request a mail ballot",
+          "url": "https://elections.ny.gov/request-ballot"
+        }
+      ],
       "answer": "Vote early in person any day from Saturday, October 24 through Sunday, November 1, or request an early mail ballot online by October 24. You can also apply in person at your county board through November 2 and vote it right there.",
       "steps": [
         "NYC: check your assigned early voting site at findmypollsite.vote.nyc.",
@@ -247,6 +332,7 @@
     {
       "id": "in_line_at_close",
       "question": "I'm in line when the polls close.",
+      "short": "Stay in line: if you're in line by 9 PM, you can vote.",
       "answer": "Stay in line. If you're in line by 9 PM on Election Day, you have the right to vote.",
       "steps": null,
       "deadline": null,
@@ -256,6 +342,13 @@
     {
       "id": "signature_problem",
       "question": "There's a problem with the signature on my mail ballot.",
+      "short": "Return the cure form the board sends you, in person or by mail; a timely postmark counts.",
+      "actions": [
+        {
+          "label": "Track my ballot",
+          "url": "https://voterlookup.elections.ny.gov/"
+        }
+      ],
       "answer": "The board must tell you by mail, and by email or phone if it has them, and send you a cure form. Return it by the later of the day before the election or seven business days after the notice was mailed.",
       "steps": [
         "Watch your ballot status at voterlookup.elections.ny.gov.",
@@ -269,6 +362,7 @@
     {
       "id": "provisional_ballot",
       "question": "They told me to vote a provisional ballot.",
+      "short": "New York calls it an affidavit ballot; fill out the envelope completely, and it counts once you're confirmed eligible.",
       "answer": "In New York this is called an affidavit ballot. Fill out the envelope completely; it's counted once the board confirms you're eligible, and the envelope also works as a registration update.",
       "steps": [
         "If your name isn't in the poll book, ask for an affidavit ballot. Don't leave without voting.",
@@ -282,6 +376,13 @@
     {
       "id": "check_ballot_counted",
       "question": "How do I check that my ballot was counted?",
+      "short": "Track a mail ballot with the state's Mail Ballot Tracker; for an affidavit ballot, call your county board.",
+      "actions": [
+        {
+          "label": "Track my ballot",
+          "url": "https://voterlookup.elections.ny.gov/"
+        }
+      ],
       "answer": "Track a mail ballot with the state's Mail Ballot Tracker at voterlookup.elections.ny.gov. For an affidavit ballot, call your county board of elections after the election.",
       "steps": null,
       "deadline": null,

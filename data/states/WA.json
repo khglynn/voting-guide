@@ -6,10 +6,13 @@
     "name": "VoteWA (Washington Secretary of State)",
     "url": "https://voter.votewa.gov/"
   },
+  "sample_ballot_url": "https://voter.votewa.gov/",
   "voting_model": "all_mail",
   "model_plain": "Every registered voter gets a ballot in the mail. Sign the envelope and put it in an official drop box by 8:00 PM on Election Day, or mail it (no stamp needed) more than a week early so it's postmarked by Election Day.",
   "registration": {
     "check_url": "https://voter.votewa.gov/",
+    "register_url": "https://vote.gov/register/washington",
+    "register_url_source": "https://vote.gov/register",
     "deadlines": [
       {
         "method": "online",
@@ -99,17 +102,46 @@
     "confidence": "sourced"
   },
   "gotchas": [
-    "The postmark trap. If you mail your ballot, it must be postmarked by November 3, and USPS no longer reliably postmarks mail the day you send it. Late-postmark rejections jumped in 2025. The state and King County both say mail it more than a week early (by about October 27), or skip the mailbox and use any of King County's 100 official drop boxes any time before 8:00 PM on November 3. Drop boxes are free and don't depend on a postmark.",
-    "Sign the envelope, and sign the way you sign your driver's license. A missing or mismatched signature is the top reason Washington ballots get challenged. Put your phone number and email on the envelope so the county can reach you. If you get a notice, you have until 4:30 PM on Monday, November 23 to fix it (online is fastest). Check VoteWA.gov until your status says accepted.",
-    "8:00 PM is 8:00 PM. King County locks drop boxes at '8 p.m. sharp' on Election Day. Earlier is better; King County's boxes have been open since October 15 and ballots went out October 14.",
-    "You can still register. Online registration closes Monday, October 26, but you can register and vote in person through 8:00 PM on Election Day at King County Elections (919 SW Grady Way, Renton) or any Vote Center (open Oct 31, Nov 2 and Nov 3; list at kingcounty.gov/elections).",
-    "The initiatives have strange numbers and one is backwards. They're printed as IP26-645, IL26-001 and IL26-638 (a new numbering system). All three ask 'Should this measure be enacted into law?' On IP26-645, YES REPEALS the state's new 9.9% tax on income over $1 million and no keeps it. On IL26-001, yes restores the 2024 Parents' Bill of Rights as first written. On IL26-638, yes limits girls' school sports to students verified as female by a health care provider. The old 'advisory votes' are gone (repealed in 2023), so you won't see those.",
-    "Five Supreme Court seats, not one. Positions 1, 3, 4, 5 and 7 are all on the ballot statewide, each with two candidates and no party labels. Positions 1 and 5 are two-year unexpired terms (the appointees are running to keep seats they were given in 2026). Don't skip them; a blank is a vote you didn't cast."
+    {
+      "text": "The postmark trap. If you mail your ballot, it must be postmarked by November 3, and USPS no longer reliably postmarks mail the day you send it. Late-postmark rejections jumped in 2025. The state and King County both say mail it more than a week early (by about October 27), or skip the mailbox and use any of King County's 100 official drop boxes any time before 8:00 PM on November 3. Drop boxes are free and don't depend on a postmark.",
+      "short": "Mail by about Oct 27, or use a drop box before 8 PM Nov 3."
+    },
+    {
+      "text": "Sign the envelope, and sign the way you sign your driver's license. A missing or mismatched signature is the top reason Washington ballots get challenged. Put your phone number and email on the envelope so the county can reach you. If you get a notice, you have until 4:30 PM on Monday, November 23 to fix it (online is fastest). Check VoteWA.gov until your status says accepted.",
+      "short": "Sign the envelope the way you sign your driver's license, and add your phone number."
+    },
+    {
+      "text": "8:00 PM is 8:00 PM. King County locks drop boxes at '8 p.m. sharp' on Election Day. Earlier is better; King County's boxes have been open since October 15 and ballots went out October 14.",
+      "short": "Drop boxes lock at 8 PM sharp on Election Day, so go earlier."
+    },
+    {
+      "text": "You can still register. Online registration closes Monday, October 26, but you can register and vote in person through 8:00 PM on Election Day at King County Elections (919 SW Grady Way, Renton) or any Vote Center (open Oct 31, Nov 2 and Nov 3; list at kingcounty.gov/elections).",
+      "short": "After Oct 26, register and vote in person at a vote center."
+    },
+    {
+      "text": "The initiatives have strange numbers and one is backwards. They're printed as IP26-645, IL26-001 and IL26-638 (a new numbering system). All three ask 'Should this measure be enacted into law?' On IP26-645, YES REPEALS the state's new 9.9% tax on income over $1 million and no keeps it. On IL26-001, yes restores the 2024 Parents' Bill of Rights as first written. On IL26-638, yes limits girls' school sports to students verified as female by a health care provider. The old 'advisory votes' are gone (repealed in 2023), so you won't see those.",
+      "short": "On IP26-645, yes repeals the 9.9% tax on income over $1 million; no keeps it."
+    },
+    {
+      "text": "Five Supreme Court seats, not one. Positions 1, 3, 4, 5 and 7 are all on the ballot statewide, each with two candidates and no party labels. Positions 1 and 5 are two-year unexpired terms (the appointees are running to keep seats they were given in 2026). Don't skip them; a blank is a vote you didn't cast.",
+      "short": "Five Supreme Court seats are on the ballot, not one, so look for all five."
+    }
   ],
   "situations": [
     {
       "id": "moved_in_state",
       "question": "I moved to a new address in Washington.",
+      "short": "Update your address at VoteWA.gov by Oct 26, or in person at a voting center by 8 PM Nov 3.",
+      "actions": [
+        {
+          "label": "Update my address",
+          "url": "https://voter.votewa.gov/"
+        },
+        {
+          "label": "Find a voting center",
+          "url": "https://www.sos.wa.gov/elections/voters/voter-registration/drop-box-and-voting-center-locations"
+        }
+      ],
       "answer": "Update your address at VoteWA.gov by Monday, October 26 and the county will send a ballot to your new address. After that, go in person to a voting center or your county elections office by 8 PM on November 3, update there and vote.",
       "steps": [
         "Ballots aren't forwarded, so update before your old-address ballot gets lost.",
@@ -123,6 +155,13 @@
     {
       "id": "moved_out_of_state",
       "question": "I moved out of Washington.",
+      "short": "Register in your new state instead; some still take registrations or offer same-day registration.",
+      "actions": [
+        {
+          "label": "Register in my new state",
+          "url": "https://vote.gov/register"
+        }
+      ],
       "answer": "You vote where you live now, so register in your new state instead. Some states still take registrations or offer same-day registration, so check today.",
       "steps": [
         "Look up your new state's rules and deadline at vote.gov.",
@@ -135,6 +174,17 @@
     {
       "id": "not_registered",
       "question": "I'm not registered yet.",
+      "short": "You still have time: register at VoteWA.gov by Oct 26, or in person through 8 PM Election Day.",
+      "actions": [
+        {
+          "label": "Check my registration",
+          "url": "https://voter.votewa.gov/"
+        },
+        {
+          "label": "Register to vote",
+          "url": "https://vote.gov/register/washington"
+        }
+      ],
       "answer": "You still have time. Register online at VoteWA.gov by Monday, October 26 and a ballot will be mailed to you; after that, register in person at a voting center or county elections office until 8 PM on Election Day and vote right there.",
       "steps": [
         "Have your Washington license, permit or ID number, or the last four digits of your Social Security number.",
@@ -148,6 +198,13 @@
     {
       "id": "wrong_polling_place",
       "question": "Where's my polling place?",
+      "short": "No polling places: return your ballot to any county drop box or voting center by 8 PM Nov 3.",
+      "actions": [
+        {
+          "label": "Find a drop box",
+          "url": "https://www.sos.wa.gov/elections/voters/voter-registration/drop-box-and-voting-center-locations"
+        }
+      ],
       "answer": "Washington has no neighborhood polling places. Return your ballot to any official drop box in your county or to a voting center by 8 PM on Election Day.",
       "steps": [
         "King County has 100 drop boxes, open around the clock until 8 PM on November 3.",
@@ -160,6 +217,17 @@
     {
       "id": "no_mail_ballot_or_lost",
       "question": "My ballot never came, or I lost it.",
+      "short": "Print a replacement through VoteWA.gov, or pick one up at a voting center through 8 PM Election Day.",
+      "actions": [
+        {
+          "label": "Print a new ballot",
+          "url": "https://voter.votewa.gov/"
+        },
+        {
+          "label": "Find a voting center",
+          "url": "https://www.sos.wa.gov/elections/voters/voter-registration/drop-box-and-voting-center-locations"
+        }
+      ],
       "answer": "Get a replacement: print one at home through VoteWA.gov or King County's online ballot site, or pick one up in person at the Elections office in Renton or any Vote Center through 8 PM on Election Day.",
       "steps": [
         "King County says to call 206-296-8683 if your ballot hadn't arrived by October 19.",
@@ -173,6 +241,13 @@
     {
       "id": "mistake_on_ballot",
       "question": "I made a mistake on my ballot.",
+      "short": "Get a replacement online or at a voting center, or fix it on the ballot and make your choice clear.",
+      "actions": [
+        {
+          "label": "Find a voting center",
+          "url": "https://www.sos.wa.gov/elections/voters/voter-registration/drop-box-and-voting-center-locations"
+        }
+      ],
       "answer": "You can get a replacement ballot, online or at a Vote Center. If you fix it on the ballot instead, make your final choice clear; election staff review corrections in teams of two using the state's voter intent rules.",
       "steps": [
         "Print a replacement through King County's online ballot site, or visit a Vote Center or the Elections office in Renton.",
@@ -185,6 +260,17 @@
     {
       "id": "mailed_but_want_in_person",
       "question": "I'd rather vote in person.",
+      "short": "Go to a voting center for a replacement ballot; if you already returned yours, you've voted.",
+      "actions": [
+        {
+          "label": "Find a voting center",
+          "url": "https://www.sos.wa.gov/elections/voters/voter-registration/drop-box-and-voting-center-locations"
+        },
+        {
+          "label": "Track my ballot",
+          "url": "https://voter.votewa.gov/"
+        }
+      ],
       "answer": "Go to a Vote Center or the county elections office; staff can give you a replacement ballot and accessible voting equipment. If you've already returned your ballot, you've voted.",
       "steps": [
         "King County Vote Centers open Saturday October 31 (10 AM to 4 PM), Monday November 2 (8:30 AM to 6 PM) and Election Day (until 8 PM).",
@@ -198,6 +284,7 @@
     {
       "id": "no_id",
       "question": "I don't have an ID.",
+      "short": "You don't need one to vote by mail; at a voting center, sign a declaration instead.",
       "answer": "You don't need one to vote by mail; your signature on the envelope is your ID. At a voting center you can either show photo ID or sign a declaration instead.",
       "steps": [
         "Registering for the first time? You'll need your Washington license, permit or ID number, or the last four digits of your Social Security number."
@@ -209,6 +296,13 @@
     {
       "id": "name_changed",
       "question": "My name changed since I registered.",
+      "short": "Update your registration at VoteWA.gov by Oct 26, or in person by 8 PM Election Day.",
+      "actions": [
+        {
+          "label": "Update my registration",
+          "url": "https://voter.votewa.gov/"
+        }
+      ],
       "answer": "Update your registration at VoteWA.gov by October 26, or in person by 8 PM on Election Day. The county checks your envelope signature against the one on file, so if your signature changed too, updating matters.",
       "steps": [
         "If the county can't match your signature, it will contact you, and you can fix it by November 23."
@@ -220,6 +314,13 @@
     {
       "id": "college_student",
       "question": "I'm a college student.",
+      "short": "King County will mail your ballot anywhere, or you can print it online.",
+      "actions": [
+        {
+          "label": "Check my registration",
+          "url": "https://voter.votewa.gov/"
+        }
+      ],
       "answer": "Away from home? King County will mail your ballot anywhere, or you can download and print it online. At a Washington public university, look for a Student Engagement Hub on campus, including UW Seattle, UW Bothell and UW Tacoma.",
       "steps": [
         "Print your ballot at King County's online ballot site, or contact King County Elections with your temporary mailing address.",
@@ -233,6 +334,17 @@
     {
       "id": "away_on_election_day",
       "question": "I'll be away on Election Day.",
+      "short": "Vote your ballot and use a drop box before you leave, or mail it by about Oct 27.",
+      "actions": [
+        {
+          "label": "Find a drop box",
+          "url": "https://www.sos.wa.gov/elections/voters/voter-registration/drop-box-and-voting-center-locations"
+        },
+        {
+          "label": "Track my ballot",
+          "url": "https://voter.votewa.gov/"
+        }
+      ],
       "answer": "If you have your ballot, vote it and use an official drop box before you leave, by 8 PM on November 3, or mail it by about October 27. If you need a replacement while traveling, download and print one from King County Elections online, or ask the county to mail it to your travel address. Allow time to return it.",
       "steps": [
         "Mail by about October 27; the postmark must be November 3 or earlier.",
@@ -245,6 +357,7 @@
     {
       "id": "in_line_at_close",
       "question": "I'm in line when it closes.",
+      "short": "Drop boxes close at 8 PM sharp; in a voting center line at 8 PM, you can still vote.",
       "answer": "Drop boxes close at 8 PM sharp, so don't cut it close. If you're inside a voting center or in its line at 8 PM, you can still register and vote.",
       "steps": null,
       "deadline": null,
@@ -254,6 +367,17 @@
     {
       "id": "signature_problem",
       "question": "There's a problem with the signature on my ballot envelope.",
+      "short": "Fix it online, by mail, by email or in person; the form must arrive by 4:30 PM Monday, Nov 23.",
+      "actions": [
+        {
+          "label": "How to fix it",
+          "url": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/signature-challenges"
+        },
+        {
+          "label": "Track my ballot",
+          "url": "https://voter.votewa.gov/"
+        }
+      ],
       "answer": "King County will mail you a letter and a signature form within one business day, and call, email or text if it can. Fix it online, by mail, by email or in person; the form must be received by 4:30 PM on Monday, November 23.",
       "steps": [
         "Online is fastest: log in with your name and date of birth.",
@@ -267,6 +391,13 @@
     {
       "id": "provisional_ballot",
       "question": "They told me to vote a provisional ballot.",
+      "short": "It counts once the county confirms you're eligible and your signature matches.",
+      "actions": [
+        {
+          "label": "Track my ballot",
+          "url": "https://voter.votewa.gov/"
+        }
+      ],
       "answer": "This can happen at a voting center if staff can't confirm your registration. It's counted once the county confirms you're eligible and your signature matches.",
       "steps": [
         "Fill out everything they give you, and sign the way you usually sign.",
@@ -279,6 +410,13 @@
     {
       "id": "check_ballot_counted",
       "question": "How do I check that my ballot was counted?",
+      "short": "Track your ballot at VoteWA.gov until it says accepted.",
+      "actions": [
+        {
+          "label": "Track my ballot",
+          "url": "https://voter.votewa.gov/"
+        }
+      ],
       "answer": "Track your ballot at VoteWA.gov until it says accepted. King County voters can also use the county's ballot tracker.",
       "steps": null,
       "deadline": null,

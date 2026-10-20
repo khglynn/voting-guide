@@ -290,10 +290,11 @@ function computeEntries(b: Ballot): Map<SectionKey, Entry[]> {
    item the voter hasn't hidden (its row says "Maybe on your ballot", or "Only in <place>" on a
    ballot for several places), or a race in a district group answered "Not sure". The row tag,
    the one-tap fills and the cheat sheet all read this one rule, so a fill never picks a race the
-   row itself calls a maybe. */
+   row itself calls a maybe. A "may apply" race your address put on your ballot (S.b.mine) is no
+   longer a maybe. */
 export function isMaybe(id: string): boolean {
   const b = S.ballot!;
-  if (b.mayApply.has(id)) return !S.b.notMine.includes(id);
+  if (b.mayApply.has(id)) return !S.b.notMine.includes(id) && !(S.b.mine || []).includes(id);
   const g = b.groupOf[id];
   return !!g && S.b.districts[g] === '*';
 }

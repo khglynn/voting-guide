@@ -1431,4 +1431,60 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     open('CA', []);
     check('sample ballot: a state with none keeps the old fallback', !!common.sampleBallot() && !read('state-CA.json').howto.sample_ballot_url);
   }
+  /* ---------- Kevin, Oct 20: a clear address result ----------
+     The Census's capitals tidied, every match it found, what the districts set on the ballot, and the
+     line the ballot keeps (never the address). Made-up addresses only. */
+  {
+    const { address } = mods;
+    const ledger = views.ledger;
+    const t = geo.tidyAddress;
+    check('address: the Census capitals read the way people write them', t('100 N TEST ST, AUSTIN, TX, 78704') === '100 N Test St, Austin, TX 78704', t('100 N TEST ST, AUSTIN, TX, 78704'));
+    check('address: ordinals, units and road prefixes', t('12 W 1ST AVE APT 4B, TESTVILLE, CO, 80205-1234') === '12 W 1st Ave Apt 4B, Testville, CO 80205-1234' && t('9 FM 1626, TEST CITY, TX, 78748') === '9 FM 1626, Test City, TX 78748' && t("1 O'TEST LN-EAST, TESTTOWN, MD, 21201") === "1 O'Test Ln-East, Testtown, MD 21201", t('12 W 1ST AVE APT 4B, TESTVILLE, CO, 80205-1234'));
+    check('address: the bare test string', t('TEST') === 'Test' && t('') === '');
+    const g = (matched, cd, upper, lower) => ({ matchedAddress: matched, geographies: {
+      States: [{ STATE: '48' }], 'Incorporated Places': [{ BASENAME: 'Austin' }], '119th Congressional Districts': [{ BASENAME: String(cd) }],
+      '2024 State Legislative Districts - Upper': [{ BASENAME: String(upper) }], '2024 State Legislative Districts - Lower': [{ BASENAME: String(lower) }] } });
+    const one = geo.parseCensus({ result: { addressMatches: [g('TEST ONE, AUSTIN, TX, 78704', 37, 14, 49)] } });
+    check('address: one Census match is one result, with its districts and ZIP', one.length === 1 && one[0].state === 'TX' && one[0].place === 'Austin' && one[0].cd === 37 && one[0].upper === 14 && one[0].lower === 49 && one[0].zip === '78704', JSON.stringify(one));
+    const two = geo.parseCensus({ result: { addressMatches: [g('TEST ONE, AUSTIN, TX, 78704', 37, 14, 49), g('TEST ONE, AUSTIN, TX, 78704', 37, 14, 49), g('TEST TWO, AUSTIN, TX, 78745', 35, 21, 50)] } });
+    check('address: several matches are all kept, the same address once', two.length === 2 && two[1].matched === 'TEST TWO, AUSTIN, TX, 78745' && two[1].upper === 21, JSON.stringify(two.map((x) => x.matched)));
+    check('address: no match, or a broken answer, is none', geo.parseCensus({ result: { addressMatches: [] } }).length === 0 && geo.parseCensus(null).length === 0 && geo.parseCensus({}).length === 0);
+
+    // Austin: Congress and the state House are questions; the one state Senate race (SD-21) may apply.
+    const au = open('TX', ['austin-tx']);
+    const before = ledger.addressCount();
+    const set = address.setFromAddress(au, S.b, { cd: 37, upper: 14, lower: 49 });
+    check('address: Austin names what it set, Congress, then the Senate, then the House', set.join(' | ') === 'U.S. Representative, District 37 | State Senator, District 14 | State Representative, District 49', set.join(' | '));
+    check('address: the line the ballot keeps is Kevin’s, word for word', address.addrSummary(set) === 'Set from your address: U.S. Representative, District 37 · State Senator, District 14 · State Representative, District 49.', address.addrSummary(set));
+    const cdq = au.groups.find((x) => x.kind === 'cd');
+    check('address: the Congress question gets its race', S.b.districts[cdq.key] === 'tx-us-house-37' || /37/.test(au.byId.get(S.b.districts[cdq.key])?.district || ''), S.b.districts[cdq.key]);
+    check('address: Senate District 14 takes the SD-21 race off the ballot', S.b.notMine.includes('tx-senate-21') && !S.b.mine.includes('tx-senate-21') && !bl.isMaybe('tx-senate-21'));
+    const after = ledger.addressCount();
+    check('address: fewer races depend on your address after it', after < before, `${before} then ${after}`);
+    // Not it: a second address in SD-21 puts the race back, on the ballot for sure now.
+    address.setFromAddress(au, S.b, { cd: 35, upper: 21, lower: 50 });
+    check('address: a second lookup moves the race to "on your ballot", no longer a maybe', S.b.mine.includes('tx-senate-21') && !S.b.notMine.includes('tx-senate-21') && !bl.isMaybe('tx-senate-21'), JSON.stringify({ mine: S.b.mine, notMine: S.b.notMine }));
+    check('address: so it no longer counts as depending on your address', ledger.addressCount() === after, `${ledger.addressCount()} vs ${after}`);
+    const row = views.open.openHTML(au.byId.get('tx-senate-21'));
+    const secH = ledger.sectionHTML('state', bl.entriesBySection().get('state'));
+    const own = secH.slice(secH.indexOf('id="i-tx-senate-21"'), secH.indexOf('id="i-', secH.indexOf('id="i-tx-senate-21"') + 5) >>> 0);
+    check('address: its row drops "Maybe on your ballot" and its open row "Only on some ballots"', own.length > 0 && !/Maybe on your ballot/.test(own) && !/Only on some ballots/.test(row), own.slice(0, 120));
+    // The save link carries none of it beyond the districts and notMine it always had.
+    const linked = st.encodeShare(au, S.b);
+    const bare = { ...S.b, mine: [] };
+    check('address: "mine" never goes in the save link', st.encodeShare(au, bare) === linked && st.decodeShare(au, head(linked)).state.mine.length === 0);
+    const old = { zip: '78704', picks: {}, ranks: {}, auto: {}, noAuto: [], notes: {}, districts: {}, notMine: [], sources: null, planSeen: false, offerDismissed: null, addrNote: null, party: null, ticks: [], setupDone: true, hideDecided: false };
+    check('address: an older save reads "mine" as empty', JSON.stringify({ ...st.emptyBallotState(), ...old }.mine) === '[]');
+    // Statewide Florida: the appeals judges are the sample ballot's; nothing here turns on Congress.
+    const fl = open('FL', []);
+    const fset = address.setFromAddress(fl, S.b, { cd: 24, upper: 38, lower: null });
+    check('address: statewide Florida sets nothing, and keeps "Found your address."', fset.length === 0 && address.addrSummary(fset) === 'Found your address.', fset.join(' | '));
+    // DC: the "upper" layer is the ward, which the place already settles.
+    const dc = open('DC', ['dc-ward-1']);
+    check('address: DC sets nothing from its ward layer', address.setFromAddress(dc, S.b, { cd: null, upper: 1, lower: null }).length === 0);
+    // Lakewood: three races by congressional district may apply; District 7 puts them on the ballot.
+    const lk = open('CO', ['lakewood-co']);
+    const lset = address.setFromAddress(lk, S.b, { cd: 7, upper: 22, lower: 24 });
+    check('address: Lakewood names each office District 7 set', lset.filter((x) => /District 7$/.test(x)).length === 3 && ['co-us-house-7', 'co-sboe-7', 'co-cu-regent-7'].every((id) => S.b.mine.includes(id) && !bl.isMaybe(id)), lset.join(' | '));
+  }
 }

@@ -185,7 +185,7 @@ function unoppHTML(sec: SectionKey, list: Contest[]): string {
     ${isOpen(k) ? `<ul class="unopp-list">${list.map((c) => {
       const k1 = c.candidates[0];
       const r = rowTitle(c);
-      return `<li id="i-${esc(c.id)}" data-item="${esc(c.id)}"><span class="u-t">${esc(r.title)}${r.sub ? `, ${esc(r.sub)}` : ''}</span> <b>${esc(k1.name)}</b>${k1.party ? ` <span class="py">${esc(k1.party)}</span>` : ''}${b.mayApply.has(c.id) ? ' <span class="tag">Maybe on your ballot</span>' : ''}</li>`;
+      return `<li id="i-${esc(c.id)}" data-item="${esc(c.id)}"><span class="u-t">${esc(r.title)}${r.sub ? `, ${esc(r.sub)}` : ''}</span> <b>${esc(k1.name)}</b>${k1.party ? ` <span class="py">${esc(k1.party)}</span>` : ''}${b.mayApply.has(c.id) && !(S.b.mine || []).includes(c.id) ? ' <span class="tag">Maybe on your ballot</span>' : ''}</li>`;
     }).join('')}</ul>` : ''}</li>`;
 }
 

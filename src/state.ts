@@ -2,6 +2,7 @@
 import type { Index } from './types';
 import type { Ballot } from './ballot';
 import type { ChipKey } from './model/lens';
+import type { GeoResult } from './geo';
 import { load, save, hash, b64urlEncode, b64urlDecode } from './util';
 
 export interface Prefs {
@@ -22,15 +23,16 @@ export interface BallotState {
   sources: string[] | null;          // null = the defaults
   planSeen: boolean;
   offerDismissed: string | null;     // v2 only; kept so old saved state reads cleanly
-  addrNote: string | null;           // "Matched from your address" summary, no address kept
+  addrNote: string | null;           // what an address lookup set ("Set from your address: ..."), never the address
   party: string | null;              // the party chosen in "A party" (for its sources and its candidates in the fill)
   ticks: string[];                   // Help your friends vote: who you've texted
   setupDone: boolean;                // step 2 ("Pick by endorsements or party") finished on this device
   hideDecided: boolean;              // "Hide races I've decided", on this device; never in the save link
+  mine: string[];                    // "may apply" races an address lookup put on your ballot; never in the save link
 }
 export const emptyBallotState = (zip = ''): BallotState => ({
   zip, picks: {}, ranks: {}, auto: {}, noAuto: [], notes: {}, districts: {}, notMine: [], sources: null,
-  planSeen: false, offerDismissed: null, addrNote: null, party: null, ticks: [], setupDone: false, hideDecided: false,
+  planSeen: false, offerDismissed: null, addrNote: null, party: null, ticks: [], setupDone: false, hideDecided: false, mine: [],
 });
 
 /* View state for the ledger. Nothing here is saved. */
@@ -55,6 +57,8 @@ export interface UI {
   addrBusy: boolean;
   addrMsg: string | null;
   addrFail: '' | 'down' | 'miss'; // the lookup didn't answer (Try again) or matched nothing usable
+  addrFound: string | null;   // the address the Census matched, tidied, shown back until a reload or another ballot ("Found: ...")
+  addrWhich: GeoResult[] | null; // the Census matched several addresses: "Which one is yours?"
   saveOpen: boolean;
   copyFallback: string | null;
   bulk: string | null;        // how many races the last fill from your sources filled, while its Undo is live
@@ -90,7 +94,7 @@ export const S = {
   prefs: { parties: null, endorsedOnly: false, foldDecided: true, autoPick: false } as Prefs,
   ui: {
     view: 'ballot', open: new Set(), row: null, page: {}, others: new Set(), folded: new Set(), unfolded: new Set(), reveal: new Set(), keep: null, beat: null,
-    noteOpen: new Set(), reader: null, sheet: null, sheetFrom: null, sheetBack: null, addrOpen: false, addrBusy: false, addrMsg: null, addrFail: '', saveOpen: false, copyFallback: null, bulk: null,
+    noteOpen: new Set(), reader: null, sheet: null, sheetFrom: null, sheetBack: null, addrOpen: false, addrBusy: false, addrMsg: null, addrFail: '', addrFound: null, addrWhich: null, saveOpen: false, copyFallback: null, bulk: null,
     setupFill: false, setupOnly: false, resume: false,
   } as UI,
   /* ?try=fresh|aunt|straight|sources: a scenario on whatever ballot opens, never saved. */

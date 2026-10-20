@@ -458,7 +458,8 @@ A.notmine = (d) => {
   const it = b.byId.get(d.id!)!;
   // "Hide all like this": the same scope (a race) or the same district (a measure), same kind.
   const scope = (x: Item | undefined) => (!x ? null : x.kind === 'contest' ? `c|${x.scope_plain}` : `m|${x.jurisdiction}`);
-  const ids = d.all ? [...b.mayApply].filter((id) => scope(b.byId.get(id)) === scope(it)) : [d.id!];
+  // A race your address put on your ballot stays (model/address.ts).
+  const ids = d.all ? [...b.mayApply].filter((id) => scope(b.byId.get(id)) === scope(it) && !(S.b.mine || []).includes(id)) : [d.id!];
   ids.forEach((id) => { if (!S.b.notMine.includes(id)) S.b.notMine.push(id); });
   if (S.ui.row && ids.includes(S.ui.row)) S.ui.row = null;
   anchored(() => renderSection(sectionOf(it)));

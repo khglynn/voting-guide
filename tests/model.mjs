@@ -35,7 +35,7 @@ const util = await load('/src/util.ts');
 const geo = await load('/src/geo.ts');
 const common = await load('/src/views/common.ts');
 const mods = {};
-for (const m of ['lens', 'tally', 'bulk', 'judges', 'labels', 'plan']) {
+for (const m of ['lens', 'tally', 'bulk', 'judges', 'labels', 'plan', 'address']) {
   const f = path.join(ROOT, 'src', 'model', `${m}.ts`);
   if (fs.existsSync(f)) mods[m] = await load(`/src/model/${m}.ts`);
 }

@@ -1,15 +1,16 @@
 /* The app's flows: loading data, opening a ballot (saved picks, save links, the restore prompt),
    the ZIP box, the Census address lookup, views and the browser's Back button, and the hidden
    "try as" scenarios. */
-import type { Index, PlaceBundle, StateBundle, Contest } from './types';
+import type { Index, PlaceBundle, StateBundle } from './types';
 import { S, emptyBallotState, persist, forgetLast, savedBallot, parseShareHead, decodeShare, normalizeRanks, type BallotState, type View } from './state';
-import { buildBallot, contestDistrict, entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, rankMax, decisionItems, chosenIds, type Ballot } from './ballot';
+import { buildBallot, entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, rankMax, decisionItems, chosenIds, type Ballot } from './ballot';
 import { zipState, censusLookup, placeFromGeo, settleAddress, withPlace, type GeoResult } from './geo';
 import { toast, hideToast, plural } from './util';
 import { render, renderBallot, renderAddr, anchored, $ } from './render';
 import { setInvolved, type GetInvolved } from './views/pass';
 import { addressCount } from './views/ledger';
 import { planAgree, applyFills, planParty, planSetup, forgetUndo } from './model/bulk';
+import { setFromAddress, addrSummary } from './model/address';
 import { partiesOnBallot, toggleChip, setSources, setParty, chipMembers, chipState, doorNone, noEndorsements, CHIPS } from './model/lens';
 
 /* ---------- data ---------- */
@@ -386,8 +387,9 @@ export async function runAddress(addr: string): Promise<void> {
   const full = withPlace(addr, st, zip);
   let r: GeoResult | null;
   try {
-    r = await censusLookup(full);
-    if (!r && full !== addr.trim()) r = await censusLookup(addr.trim());
+    let list = await censusLookup(full);
+    if (!list.length && full !== addr.trim()) list = await censusLookup(addr.trim());
+    r = list[0] || null;
   }
   catch { addrFailed('The Census lookup didn’t answer.', 'down'); return; }
   S.ui.addrBusy = false;
@@ -444,27 +446,13 @@ export async function runAddress(addr: string): Promise<void> {
   }
   applyGeo(r);
 }
-export function applyGeo(r: { cd: number | null; upper: number | null; lower: number | null; state?: string | null }): void {
+/* The districts a Census match settles on this ballot (model/address.ts), and the line that names
+   them, which the ballot keeps. The address itself is never kept. */
+export function applyGeo(r: GeoResult): void {
   const b = S.ballot!;
-  const num = (k: 'cd' | 'upper' | 'lower') => (b.st === 'DC' && k === 'upper' ? null : r[k]);
-  let answered = 0;
-  for (const g of b.groups) {
-    if (!g.kind || num(g.kind) == null) continue;
-    const hit = g.members.find((id) => contestDistrict(b.byId.get(id) as Contest).n === num(g.kind!));
-    S.b.districts[g.key] = hit || 'none';
-    answered++;
-  }
-  for (const id of b.mayApply) {
-    const c = b.byId.get(id);
-    if (!c || c.kind !== 'contest') continue;
-    const d = contestDistrict(c);
-    if (!d.kind || num(d.kind) == null) continue;
-    S.b.notMine = S.b.notMine.filter((x) => x !== id);
-    if (d.n !== num(d.kind)) S.b.notMine.push(id);
-    answered++;
-  }
-  const parts = [r.cd != null ? `Congressional District ${r.cd}` : '', r.upper != null ? (b.st === 'DC' ? `Ward ${r.upper}` : `State Senate ${r.upper}`) : '', r.lower != null ? `State House ${r.lower}` : ''].filter(Boolean);
-  S.b.addrNote = parts.length ? `Your districts: ${parts.join(', ')}. We didn’t save your address. Double-check with your sample ballot.` : null;
+  const set = setFromAddress(b, S.b, r);
+  const answered = set.length;
+  S.b.addrNote = addrSummary(set);
   S.ui.addrOpen = false;
   S.ui.addrMsg = null;
   S.ui.addrFail = '';

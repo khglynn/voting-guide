@@ -31,9 +31,10 @@ for (const [name, zip] of [['Chicago', '60614'], ['Houston', '77002'], ['Aurora 
     el.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true, button: 0, pointerType: 'mouse' }));
     requestAnimationFrame(() => setTimeout(() => resolve(Math.round(performance.now() - t)), 0));
   }), sel);
-  // Step 2's chips and switches repaint its counts (the fills and coverage) on every tap.
-  const setupChip = await tapTime('#setup [data-act="chip"][data-k="papers"]');
-  await tapTime('#setup [data-act="chip"][data-k="papers"]');
+  // Step 2's chips and switches repaint its counts (the fills and coverage) on every tap. A group chip
+  // on and off again, so the newspapers stay on and the fill switch stays there.
+  const setupChip = await tapTime('#setup [data-act="chip"][data-k="progressive"]');
+  await tapTime('#setup [data-act="chip"][data-k="progressive"]');
   const setupFill = await tapTime('[data-act="setup-fill"]');
   await tapTime('[data-act="setup-fill"]');
   // "Show my ballot" paints the whole ballot (not a tap budget: it is the ballot opening).

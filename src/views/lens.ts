@@ -24,10 +24,10 @@ export function chipsHTML(): string {
     return `<button class="chip${st === 'some' ? ' some' : ''}" data-act="chip" data-k="${c.key}" aria-pressed="${on}" data-fk="chip-${c.key}">${TICK}${esc(c.label)}</button>`;
   }).join('');
 }
-/* "Picks: Newspapers and guides" at the top of the ballot: whose picks show, in a few words. */
+/* "Endorsements: Newspapers and guides" at the top of the ballot: whose endorsements show, in a few words ("Off" when none; Kevin's "Picks:" read like your own picks, UX walk, Oct 20). */
 export function lensSummary(): string {
   const b = S.ballot!;
-  if (noEndorsements()) return 'No endorsements shown';
+  if (noEndorsements()) return 'Off';
   const on = CHIPS.filter((c) => ['on', 'some'].includes(chipState(b, c.key))).map((c) => `${chipState(b, c.key) === 'some' ? 'some ' : ''}${c.label.toLowerCase()}`);
   if (S.b.party) on.push(`the ${S.b.party} Party`);
   const n = chosenIds().length;

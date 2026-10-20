@@ -137,6 +137,9 @@ async function oracle(st, placeIds) {
   const here = pbs.flatMap((p) => [p.label, ...p.counties]).map((x) => x.replace(/\s*\(.*\)$/, '').replace(/\s+County$/i, '').toLowerCase());
   return { items, byId, groups, kinds: Object.fromEntries(items.map((i) => [i.id, kindOf(i)])), titles: sheetTitles(items, here) };
 }
+/* Two seats of one district ("LD-32 Position 1" and "Position 2") are one answer: both show. */
+const seatBase = (o, id) => { const d = (o.byId.get(id)?.district || ''); return /\s+Position\s+\d+$/i.test(d) ? d.replace(/\s+Position\s+\d+$/i, '') : ''; };
+const sameSeat = (o, a, b) => a !== b && !!seatBase(o, a) && seatBase(o, a) === seatBase(o, b);
 /* What should be on screen for a set of district answers (group key -> member id or '*'). */
 function expected(o, answers) {
   const hidden = new Set();
@@ -144,7 +147,7 @@ function expected(o, answers) {
   for (const g of o.groups) {
     const a = answers[g.key];
     if (a === undefined) { unanswered.push(g); g.members.forEach((m) => hidden.add(m)); }
-    else if (a !== '*') g.members.filter((m) => m !== a).forEach((m) => hidden.add(m));
+    else if (a !== '*') g.members.filter((m) => m !== a && !sameSeat(o, a, m)).forEach((m) => hidden.add(m));
   }
   const visible = o.items.filter((i) => !hidden.has(i.id));
   const perSec = {};
@@ -416,8 +419,10 @@ async function open(browser, ballot, R) {
       await page.locator(sel).first().click();
     }
     // The first page names the place under the ZIP box; "Show my ballot" with both switches off
-    // shows the ballot as is.
+    // shows the ballot as is (the fill switch starts on, so it goes off first).
     await page.waitForSelector('.door-place', { timeout: 20000 });
+    const fill = page.locator('#setup [data-act="setup-fill"][aria-checked="true"]');
+    if (await fill.count()) await fill.click();
     await page.locator('[data-act="setup-done"]').click();
     await page.waitForSelector('#plan', { timeout: 20000 });
     await page.evaluate(() => Promise.race([document.fonts.ready, new Promise((r) => setTimeout(r, 4000))])); // real font metrics, but never wait long
@@ -465,10 +470,12 @@ async function checkStructure(page, ballot, o, answers, label, R) {
   return { ex, snap };
 }
 /* A district question is a row: open it, then answer. */
-const pressDistrict = async (page, key, v) => {
+const pressDistrict = async (page, key, v, also = []) => {
   const sel = `.row[data-q="${key.replace(/"/g, '\\"')}"]`;
   await page.locator(sel).first().evaluate((r) => { if (!r.classList.contains('is-open')) window.__press(r.querySelector('[data-act="row"]')); });
-  await page.locator(`${sel} [data-act="district"][data-v="${v}"]`).first().evaluate((e) => window.__press(e));
+  // A two-seat district has one button, for either seat.
+  const ids = [v, ...also];
+  await page.locator(sel).first().evaluate((r, list) => { const b = list.map((x) => r.querySelector(`[data-act="district"][data-v="${x}"]`)).find(Boolean); window.__press(b); }, ids);
 };
 const pressChange = (page, key) => page.locator(`[data-act="district-change"][data-g="${key.replace(/"/g, '\\"')}"]`).first().evaluate((e) => window.__press(e));
 
@@ -490,7 +497,7 @@ async function sweepBallot(browser, ballot) {
         const answers = Object.fromEntries(o.groups.map((g) => [g.key, g.members[k % g.members.length]]));
         for (const g of o.groups) {
           if (k > 0) await pressChange(page, g.key);
-          await pressDistrict(page, g.key, answers[g.key]);
+          await pressDistrict(page, g.key, answers[g.key], g.members.filter((m) => sameSeat(o, answers[g.key], m)));
         }
         await page.waitForTimeout(100);
         await checkStructure(page, ballot, o, answers, `district variant ${k + 1}/${maxN}`, R);

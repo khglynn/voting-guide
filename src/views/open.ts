@@ -2,14 +2,15 @@
    the buttons to decide. One tap deeper ("Full details") is the reader. */
 import type { Candidate, Contest, Endorser, Item, Measure } from '../types';
 import { S } from '../state';
-import { status, isRCV, isMultiSeat, isMultiJudge, isPartisan, rankMax, ranksOf, ordinal, chosen, chosenIds, contestDistrict } from '../ballot';
+import { status, isRCV, isMultiSeat, isMultiJudge, isPartisan, rankMax, ranksOf, ordinal, chosen, chosenIds, contestDistrict, sameSeat } from '../ballot';
 import { esc, hash, plural, host } from '../util';
 import { lineup, weighedIn, orderCandidates, type Lineup } from '../model/tally';
 import { candidateReview, judicialReview, judgesLead, surveyLines, surveySentence, pollsFor, raceRatings, hasRatings, type Review } from '../model/judges';
 import { seatLabel, cheatTitle, thresholdLabel } from '../model/labels';
 import { picksOnBallot } from '../model/lens';
-import { sourceLean, leanHTML, ext, clampP, escP, sampleBallot, isOpen, leadRest, srcLink, reportURL, paywallRowHTML } from './common';
+import { sourceLean, leanHTML, ext, clampP, escP, sampleBallot, isOpen, leadRest, wordsSrc, reportURL, paywallRowHTML } from './common';
 import { headsUp, headsHTML, addressCount } from './ledger';
+import { schoolOf } from '../model/address';
 
 /* "Report a problem" on a row: the form (see common.reportURL) prefilled with this row. */
 export const reportLink = (it: Item): string => reportURL(`${cheatTitle(it)} [${it.id}]`);
@@ -21,10 +22,12 @@ const PAGE = 3;
 
 /* ---------- the top of an open row: where it applies ---------- */
 /* The Census lookup answers Congress and the state legislature (DC's "upper" is a ward, which it
-   doesn't), so only those rows offer to check with your address. */
-export function censusSettles(c: Contest): boolean {
+   doesn't), and a race or measure every voter in one school district votes on (model/address.ts),
+   so only those rows offer to check with your address. */
+export function censusSettles(c: Item): boolean {
+  if (c.kind !== 'contest') return !!schoolOf(c)?.whole;
   const k = contestDistrict(c).kind;
-  return !!k && !(S.ballot!.st === 'DC' && k === 'upper');
+  return (!!k && !(S.ballot!.st === 'DC' && k === 'upper')) || !!schoolOf(c)?.whole;
 }
 /* "Only on some ballots": who votes on it, then a way to find out: your address (where the Census
    settles it), your sample ballot, or "It's not on my ballot". Hiding every one like it at once
@@ -33,7 +36,7 @@ function mayHTML(it: Item, scope: string, same: number, allLabel: string): strin
   const sb = sampleBallot();
   // The form opens in the address box at the top, which shows while any race depends on your
   // address. Once a lookup has run on this ballot, it has answered all it can.
-  const addr = it.kind === 'contest' && censusSettles(it) && !S.b.addrNote && addressCount() > 0;
+  const addr = censusSettles(it) && !S.b.addrNote && addressCount() > 0;
   const btns = [
     addr ? `<button class="mini dark" data-act="addr-open" data-fk="ma-${esc(it.id)}">Check with my address</button>` : '',
     sb ? `<a class="mini${addr ? '' : ' dark'}" href="${esc(sb.url)}" target="_blank" rel="noopener">See my sample ballot</a>` : '',
@@ -55,7 +58,11 @@ function whereHTML(it: Item): string {
   if (g) {
     const ans = S.b.districts[g];
     const grp = b.groups.find((x) => x.key === g)!;
-    if (ans === it.id) return `<p class="ob-meta">You said you’re in ${esc(seatLabel(it) || 'this district')}. <button class="linkbtn" data-act="district-change" data-g="${esc(g)}">Change</button></p>`;
+    // Who chose the district: the address lookup, or you. A district with two seats is one answer.
+    if (ans === it.id || (ans && ans !== '*' && ans !== 'none' && sameSeat(b.byId.get(ans), it))) {
+      const where = (seatLabel(b.byId.get(ans) as Contest) || 'this district').replace(/,\s*Position \d+$/i, '');
+      return `<p class="ob-meta">${(S.b.addrSet || []).includes(g) ? 'Your address puts you in' : 'You said you’re in'} ${esc(where)}. <button class="linkbtn" data-act="district-change" data-g="${esc(g)}">Change</button></p>`;
+    }
     return `<p class="ob-meta"><b>Maybe on your ballot.</b> You weren’t sure of your ${esc(grp.office)} district, so all ${grp.members.length} show. ${escP(it.scope_plain)} <button class="linkbtn" data-act="district-change" data-g="${esc(g)}">Choose one</button></p>`;
   }
   if (b.onlyIn[it.id]) return `<p class="ob-meta">Only on ballots in ${esc(b.onlyIn[it.id].join(', '))}. <button class="linkbtn" data-act="notmine" data-id="${esc(it.id)}">Not on my ballot</button></p>`;
@@ -88,9 +95,33 @@ function quietLines(l: Lineup, it: Item, picked = true): string {
   const pw = paywallRowHTML(l.paywalled, cheatTitle(it));
   return `${out.length ? `<p class="gridnote">${out.join(' ')}</p>` : ''}${pw}`;
 }
-function srcCell(e: Endorser): string {
-  // The dots and the lean word stay in the cell; how the lean was placed is one tap away.
-  return `<th scope="row"><span class="sn">${esc(e.short)}</span><button class="lean-tap" data-act="basis" data-id="${esc(e.id)}" aria-label="${esc(`${e.short}: how its lean was placed`)}">${leanHTML(e.lean)}</button></th>`;
+/* Where a source's word on this race lives (Kevin, Oct 20: let people click through to the source):
+   the page its pick, or its "no stand", came from, else its guide. A pick opens at the pick where
+   the browser can, through a text fragment for the candidate's full name, then last name, or the
+   measure's number ("Proposition A", "Prop A"); a browser without them, or a page that words it
+   another way, just opens the page. Verified anchors per page are a later research pass. */
+export function pickURL(it: Item, e: Endorser): string | null {
+  const r = (S.ballot!.ends[it.id] || {})[e.id];
+  const url = (r && r.url) || e.guide_url || null;
+  if (!url || !r || !r.url || r.s !== 'endorsed') return url;
+  const words: string[] = [];
+  if (it.kind === 'contest') {
+    const name = (r.c || []).find((x) => it.candidates.some((k) => k.name === x));
+    if (name) words.push(name, name.replace(/,?\s+(jr|sr|ii|iii|iv)\.?$/i, '').split(/\s+/).pop() || name);
+  } else if (it.kind === 'measure' && it.number) {
+    const p = it.number.match(/^Proposition\s+(\S+)$/i);
+    words.push(it.number, ...(p ? [`Prop ${p[1]}`, `Prop. ${p[1]}`] : []));
+  }
+  if (!words.length) return url;
+  const enc = (t: string) => encodeURIComponent(t).replace(/-/g, '%2D');
+  return `${url}${url.includes('#') ? '' : '#'}:~:${[...new Set(words)].map((w) => `text=${enc(w)}`).join('&')}`;
+}
+function srcCell(it: Item, e: Endorser): string {
+  // The source's name opens its page for this race; the dots and the lean word stay in the cell, and
+  // how the lean was placed is one tap away.
+  const url = pickURL(it, e);
+  const name = url ? `<a class="sn" href="${esc(url)}" target="_blank" rel="noopener">${esc(e.short)}</a>` : `<span class="sn">${esc(e.short)}</span>`;
+  return `<th scope="row">${name}<button class="lean-tap" data-act="basis" data-id="${esc(e.id)}" aria-label="${esc(`${e.short}: how its lean was placed`)}">${leanHTML(e.lean)}</button></th>`;
 }
 function spanCell(it: Item, e: Endorser, cols: string[], n: number): string | null {
   const r = (S.ballot!.ends[it.id] || {})[e.id];
@@ -109,9 +140,9 @@ function gridHTML(it: Item, l: Lineup, cols: { key: string; head: string; sub: s
   const keys = cols.map((c) => c.key);
   const body = rows.map((e) => {
     const span = spanCell(it, e, keys, cols.length);
-    if (span) return `<tr>${srcCell(e)}${span}</tr>`;
+    if (span) return `<tr>${srcCell(it, e)}${span}</tr>`;
     const r = (S.ballot!.ends[it.id] || {})[e.id]!;
-    return `<tr>${srcCell(e)}${cols.map((c) => `<td class="${c.mine ? 'col-me' : ''}">${(r.c || []).includes(c.key) ? `<span class="hit" role="img" aria-label="${esc(e.short)} ${c.aria ? esc(c.aria) : `endorses ${esc(c.head)}`}">${CHECK}</span>` : ''}</td>`).join('')}</tr>`;
+    return `<tr>${srcCell(it, e)}${cols.map((c) => `<td class="${c.mine ? 'col-me' : ''}">${(r.c || []).includes(c.key) ? `<span class="hit" role="img" aria-label="${esc(e.short)} ${c.aria ? esc(c.aria) : `endorses ${esc(c.head)}`}">${CHECK}</span>` : ''}</td>`).join('')}</tr>`;
   }).join('');
   return `<div class="gridwrap"><table class="grid c${cols.length}">
     <colgroup><col class="src">${cols.map(() => '<col>').join('')}</colgroup>
@@ -144,8 +175,8 @@ function othersHTML(it: Item): string {
   if (!w.length) return '';
   const k = it.id;
   const open = S.ui.others.has(k);
-  const list = open ? `<ul class="others">${ol.groups.flatMap((g) => g.sources.map((e) => `<li><span class="o-n">${esc(e.short)}</span>${sourceLean(e)}<span class="o-p">${esc(g.label)}</span>
-      <button class="mini quiet" data-act="src" data-id="${esc(e.id)}" data-fk="add-${esc(it.id)}-${esc(e.id)}">Add to my sources</button></li>`)).join('')}</ul>` : '';
+  const list = open ? `<ul class="others">${ol.groups.flatMap((g) => g.sources.map((e) => { const u = pickURL(it, e); return `<li>${u ? `<a class="o-n" href="${esc(u)}" target="_blank" rel="noopener">${esc(e.short)}</a>` : `<span class="o-n">${esc(e.short)}</span>`}${sourceLean(e)}<span class="o-p">${esc(g.label)}</span>
+      <button class="mini quiet" data-act="src" data-id="${esc(e.id)}" data-fk="add-${esc(it.id)}-${esc(e.id)}">Add to my sources</button></li>`; })).join('')}</ul>` : '';
   return `<div class="others-wrap"><button class="linkbtn" data-act="others" data-id="${esc(k)}" aria-expanded="${open}">${open ? 'Hide' : 'See'} ${plural(w.length, 'other source')} that endorsed here</button>${list}</div>`;
 }
 
@@ -232,11 +263,13 @@ function listHTML(c: Contest, l: Lineup): string {
       <span class="cl-n"><b>${esc(k.name)}</b><span class="py">${esc([partyText(c, k), k.incumbent ? 'incumbent' : ''].filter(Boolean).join(', '))}</span>${backedBy(c, k, l)}${wordsLine(k)}</span>
       ${pickBtn(c, k, 'pick cl-b')}</li>`;
   const wi = cands.filter((k) => isWriteIn(k) && !chosen(k));
-  if (wi.length < 2) return `<ol class="clist">${cands.map(row).join('')}</ol>`;
+  // With endorsements off there's no grid, so each candidate's own words show in full (UX walk, Oct 20).
+  const cls = chosenIds().length ? 'clist' : 'clist full';
+  if (wi.length < 2) return `<ol class="${cls}">${cands.map(row).join('')}</ol>`;
   const k = `wi-${c.id}`;
   const open = isOpen(k);
   const last = (n: string) => n.replace(/\s*'[^']*'\s*/, ' ').trim().split(/\s+/).pop() || n;
-  return `<ol class="clist">${cands.filter((x) => !wi.includes(x)).map(row).join('')}
+  return `<ol class="${cls}">${cands.filter((x) => !wi.includes(x)).map(row).join('')}
     <li class="cl wi-fold"><span class="cl-n">${wi.length} write-in candidates: ${esc(wi.map((x) => last(x.name)).join(', '))}.</span><button class="linkbtn" data-act="open" data-k="${esc(k)}" aria-expanded="${open}">${open ? 'Hide' : 'Show'}</button></li>
     ${open ? wi.map(row).join('') : ''}</ol>`;
 }
@@ -248,7 +281,7 @@ function voicesHTML(c: Contest, cands: Candidate[]): string {
     if (o) {
       const quote = o.is_quote;
       return `<figure class="pq${quote ? '' : ' para'}"><blockquote class="clamp">${quote ? (/["“”]/.test(o.text) ? esc(o.text) : `“${esc(o.text)}”`) : escP(o.text)}</blockquote>
-        <figcaption><b>${esc(k.short)}</b>${quote ? '' : ', paraphrased by us'}${o.source ? `. ${srcLink(o.source)}` : ''}</figcaption></figure>`;
+        <figcaption><b>${esc(k.short)}</b>${quote ? '' : ', paraphrased by us'}${o.source ? `. ${wordsSrc(o)}` : ''}</figcaption></figure>`;
     }
     if (k.own_words_status === 'none_found') {
       const ch = k.own_words_checked;
@@ -329,7 +362,9 @@ function reviewHTML(r: Review | null, c: Candidate): string {
     ${r.links.length ? `<p class="fl">${r.links.map((x) => ext(x.url, x.label)).join(' · ')}</p>` : ''}</div>`;
 }
 /* Ratings in a contested judicial race: lawyer polls with every candidate's count side by side,
-   then each candidate's bar ratings. No tone color on either. */
+   then each candidate's bar ratings. No tone color on either. With polls, their one-line lede says
+   what they are, so the state's note on what a rating means doesn't say it again under them (UX
+   walk, Oct 20: Texas read the same caveat four times before the Pick buttons). */
 export function raceRatingsHTML(c: Contest): string {
   if (!hasRatings(c)) return '';
   const polls = pollsFor(c);
@@ -341,7 +376,7 @@ export function raceRatingsHTML(c: Contest): string {
   return `<div class="ratings">
     ${polls.length ? `<h4>Lawyer preference polls</h4><p class="fine">A count of which candidate responding lawyers prefer. Not an endorsement or a job review.</p><ul>${pollHTML}</ul>` : ''}
     ${groups.length ? `<h4>Bar association ratings</h4><ul>${groupHTML}</ul>${groups.some((g) => g.review.concerns.length) ? `<button class="linkbtn" data-act="open" data-k="${esc(k)}" aria-expanded="${isOpen(k)}">${isOpen(k) ? 'Hide the reasons' : 'Show the reasons they gave'}</button>` : ''}` : ''}
-    ${jr && jr.what_the_rating_means ? `<p class="fine">${escP(leadRest(jr.what_the_rating_means, 30)[0])}</p>` : ''}
+    ${jr && jr.what_the_rating_means && !polls.length ? `<p class="fine">${escP(leadRest(jr.what_the_rating_means, 30)[0])}</p>` : ''}
   </div>`;
 }
 function meansLineHTML(): string {
@@ -388,7 +423,7 @@ function multiJudgeHTML(c: Contest): string {
           <button class="mini${v === 'YES' ? ' on' : ''}" data-act="jpick" data-k="${esc(key)}" data-v="YES" aria-pressed="${v === 'YES'}" data-fk="jp-${hash(key)}-y">Keep</button>
           <button class="mini${v === 'NO' ? ' on' : ''}" data-act="jpick" data-k="${esc(key)}" data-v="NO" aria-pressed="${v === 'NO'}" data-fk="jp-${hash(key)}-n">Remove</button></span></div>
         ${r || k.background || k.own_words.length ? `<button class="linkbtn" data-act="open" data-k="${esc(bk)}" aria-expanded="${isOpen(bk)}">${isOpen(bk) ? 'Less' : 'About this judge'}</button>` : ''}
-        ${isOpen(bk) ? `<div class="j-more">${reviewHTML(r, k)}${k.background ? `<p class="small">${escP(k.background)}</p>` : ''}${!r && k.own_words[0] ? `<p class="small">${escP(k.own_words[0].text)} ${srcLink(k.own_words[0].source)}</p>` : ''}</div>` : ''}</li>`;
+        ${isOpen(bk) ? `<div class="j-more">${reviewHTML(r, k)}${k.background ? `<p class="small">${escP(k.background)}</p>` : ''}${!r && k.own_words[0] ? `<p class="small">${escP(k.own_words[0].text)} ${wordsSrc(k.own_words[0])}</p>` : ''}</div>` : ''}</li>`;
     }).join('')}</ul>${pwOnly(c)}`;
 }
 /* A row whose sources made no readable pick still names its paywalled ones, once (Kevin, Oct 19). */

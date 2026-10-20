@@ -56,7 +56,7 @@ function planSub(step: Step): string[] {
    fits), when every place on the ballot gives the same one and lies in one county. One county's
    hours can't speak for a place across county lines: Austin reaches into Williamson and Hays,
    and in Texas you vote early only in your own county. */
-function hoursLine(step: Step): string {
+export function hoursLine(step: Step): string {
   if (step.phase !== 'early_before' && step.phase !== 'early_open') return '';
   if (S.ballot!.places.some((p) => p.counties.length !== 1)) return '';
   const line = (e: PlaceEarly | undefined): string => {

@@ -97,6 +97,7 @@
   "in_the_booth": {
     "phones": "restricted",
     "phones_detail": "No state law bans carrying your phone or reading your notes on it at the poll site, and poll workers generally allow it. What's illegal is showing your marked ballot to anyone, and a federal court has read Election Law 17-130(10) to cover photographing it (Silberberg v. Board of Elections, S.D.N.Y. 2017). Many sites post 'no photography' signs and a poll worker can ask you to put the phone away. Keep it to reading your list. Source: https://www.nysenate.gov/legislation/laws/ELN/17-130",
+    "phones_short": "You can read your plan on your phone; don't photograph your marked ballot.",
     "notes_allowed": "allowed",
     "notes_detail": "Bring a printed or handwritten list, a marked-up sample ballot, or this guide. The only limit is electioneering: don't show it around or hand it out within 100 feet of the poll site entrance (Election Law 8-104). Source: https://www.nysenate.gov/legislation/laws/ELN/8-104 and https://www.nyclu.org/resources/know-your-rights/voting-new-york",
     "ballot_selfies": "prohibited",

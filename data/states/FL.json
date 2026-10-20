@@ -106,6 +106,7 @@
   "in_the_booth": {
     "phones": "restricted",
     "phones_detail": "No Florida law bans carrying a phone into the polling place, and you may read notes or your marked sample ballot on it. The photo rule is s. 102.031(5), F.S.: 'No photography is permitted in the polling room or early voting area, except an elector may photograph his or her own ballot.' So you may photograph your own ballot, but not other voters, their ballots, or the room. Poll workers can ask you to put the phone away if it is disruptive. Source (2026 Florida Statutes): http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0102/Sections/0102.031.html",
+    "phones_short": "You can read your plan on your phone; the only photo allowed is of your own ballot.",
     "notes_allowed": "allowed",
     "notes_detail": "Yes. You can bring a printed or handwritten cheat sheet, this guide, or your marked sample ballot into the booth. County supervisors (including Orange County) encourage it: mark your sample ballot at home and bring it. The only limit is you cannot campaign or hand materials to other voters inside or within 150 feet of the entrance. Source: https://voteorangefl.gov/ and s. 102.031, F.S.",
     "ballot_selfies": "allowed",

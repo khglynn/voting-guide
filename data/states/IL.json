@@ -97,6 +97,7 @@
   "in_the_booth": {
     "phones": "restricted",
     "phones_detail": "No Illinois law bans phones in the polling place, and you may use yours to look at notes or a sample ballot. But do not photograph or show your marked ballot: 10 ILCS 5/29-9 makes it a Class 4 felony to knowingly mark or show a ballot so another person can see how you voted (the Sun-Times guide: ballot selfies 'are prohibited' and a Class 4 felony; sticker selfies are fine). Election judges can ask you to put the phone away if it slows the line or bothers other voters. Source: https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=170&ChapterID=3 and https://chicago.suntimes.com/elections/2026/how-to-vote-illinois-general",
+    "phones_short": "You can read your plan on your phone; don't photograph your marked ballot.",
     "notes_allowed": "allowed",
     "notes_detail": "Yes. Bring a printed cheat sheet, a marked-up sample ballot, or a voter guide. The Sun-Times guide: 'Voters may bring notes, sample ballots, and endorsements into the booth.' Injustice Watch's judicial guide is built to be printed and carried in. Just don't hand your notes to other voters or leave campaign material in the booth.",
     "ballot_selfies": "prohibited",

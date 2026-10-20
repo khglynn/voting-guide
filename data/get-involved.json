@@ -113,21 +113,6 @@
         "label": "Nonpartisan ways to help",
         "items": [
           {
-            "id": "poll-worker",
-            "label": "Work the polls",
-            "kind": "election_service",
-            "lean": "neutral",
-            "action": "Sign-ups and training for Nov 3 have closed in many counties. Ask yours if it still needs help, or sign up for the next election.",
-            "url": "https://www.helpamericavote.gov/",
-            "lean_basis_kind": null,
-            "mission_quote": null,
-            "sources": [
-              "https://www.helpamericavote.gov/"
-            ],
-            "verified_on": "2026-10-19",
-            "confidence": "verified"
-          },
-          {
             "id": "help-a-friend-vote",
             "label": "Help someone get to the polls",
             "kind": "personal_help",
@@ -261,10 +246,6 @@
         "preferred_field": "confirmed_place.county_election_office.url",
         "fallback_field": "state.official_site.url",
         "fallback_url": "https://www.usa.gov/election-office"
-      },
-      "poll-worker": {
-        "url": "https://www.helpamericavote.gov/",
-        "note": "The EAC lookup links directly to state or local election offices. This covers every state and DC without inventing state poll-worker fields."
       }
     },
     "selection_note": "Examples of ways to take part, not recommendations. Each side has one voter outreach group and one policy organizing group."
@@ -344,11 +325,6 @@
     {
       "title": "Nonpartisan",
       "items": [
-        {
-          "label": "Work the polls",
-          "url": "https://www.helpamericavote.gov/",
-          "note": "Sign-ups and training for Nov 3 have closed in many counties. Ask yours if it still needs help, or sign up for the next election."
-        },
         {
           "label": "Help someone get to the polls",
           "url": "https://www.usa.gov/election-office",

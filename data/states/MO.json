@@ -97,6 +97,7 @@
   "in_the_booth": {
     "phones": "restricted",
     "phones_detail": "No Missouri statute bans carrying a phone into the polling place, and you may use it to look at your notes. But photographing your marked ballot is risky: RSMo 115.637(14) makes it an election offense for a voter to let their ballot be seen 'with the intent of letting it be known how he is about to vote or has voted.' Local election authorities post their own rules and may tell you to put the phone away. Treat it as: notes yes, photos of your ballot no. Source: https://revisor.mo.gov/main/OneSection.aspx?section=115.637",
+    "phones_short": "You can read your plan on your phone; don't photograph your marked ballot.",
     "notes_allowed": "allowed",
     "notes_detail": "Yes. Bring a printed or handwritten list, or a marked-up sample ballot. Just don't show it around or leave campaign material at the polls (that's electioneering). The SOS 'View Candidates & Issues' page and the county's lookup tool show your sample ballot ahead of time. Source: https://www.sos.mo.gov/elections/goVoteMissouri/howtovote",
     "ballot_selfies": "prohibited",

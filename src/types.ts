@@ -13,7 +13,7 @@ export interface Candidate {
   website: string | null;
   website_confidence: Confidence;
   background: string | null;
-  own_words: { text: string; is_quote: boolean; source: string | null }[];
+  own_words: { text: string; is_quote: boolean; source: string | null; source_label?: string | null }[];
   lwv_status: string | null;
   lwv_url: string | null;
   /* "none_found" when a real search found no statement; own_words_checked says where and when. */
@@ -207,6 +207,8 @@ export interface HowTo {
   in_the_booth: {
     phones: string;
     phones_detail: string | null;
+    /* Where phones are "restricted": the rule in one plain line for My plan, from phones_detail. */
+    phones_short?: string | null;
     notes_allowed: string;
     notes_detail: string | null;
     ballot_selfies: string | null;

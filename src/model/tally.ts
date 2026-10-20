@@ -237,20 +237,21 @@ function lineupUnderPick(l: Lineup, it: Item): string {
   return named ? `${named}: ${lab}` : `all ${w.length}: ${lab}`;
 }
 
-/* How a filled row's verdict names its fill. A fill from one source names it ("Filled from Knock
-   LA"), so a single paper's pick never reads like the agreement of several; two or more that agreed
-   read "Filled from your sources". The saved reason lists the sources by short name, and a list that
-   is exactly one source's name is one source (names can hold commas). */
+/* How a filled row's verdict names its fill, in the few words the column has room for (Kevin, Oct 20:
+   "Filled from your sources" ran long beside the pick): "From your sources" when two or more agreed,
+   the one source's name when it was one ("From Knock LA"), so a single paper's pick never reads like
+   the agreement of several. The saved reason lists the sources by short name, and a list that is
+   exactly one source's name is one source (names can hold commas). */
 export const FILL_SOURCES = 'Filled in from your sources: ';
 function filledFrom(auto: string): string {
   if (auto.startsWith(FILL_SOURCES)) {
     const list = auto.slice(FILL_SOURCES.length);
     const one = S.ballot!.endorsers.find((e) => e.short === list);
-    return one ? `Filled from ${one.short}` : 'Filled from your sources';
+    return one ? `From ${one.short}` : 'From your sources';
   }
-  if (/party|candidate on the ballot|^Filled in with the .+ candidate/i.test(auto)) return 'Filled from your party';
-  if (/review/i.test(auto)) return 'Filled from the review';
-  return 'Filled from your sources';
+  if (/party|candidate on the ballot|^Filled in with the .+ candidate/i.test(auto)) return 'From your party';
+  if (/review/i.test(auto)) return 'From the review';
+  return 'From your sources';
 }
 
 export function verdict(it: Item): Verdict {

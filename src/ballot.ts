@@ -40,16 +40,39 @@ export interface Ballot {
   hasLocal: boolean;
 }
 
+/* Which Census district a race is for, read from its district: Congress (cd), the state senate
+   (upper) or the state house or assembly (lower), with its number. The research mostly writes "CD-37",
+   "SD-14", "HD-49" or "AD-51", and a few places another way (Oct 20): a U.S. House seat as "GA-5" or
+   "NY-13", a legislature seat spelled out ("Senate District 35", "House District 53"), and Washington's
+   legislative districts, which elect one senator each ("LD-32") and two representatives ("LD-32
+   Position 1" and "Position 2", both on that district's ballot, so one answer shows both: sameSeat).
+   Anything else is no Census district. */
+const US_HOUSE = /\bU\.?\s?S\.?\s+(?:House|Representative)|\bCongress/i;
 const districtNum = (c: Contest): { kind: Group['kind']; n: number | null } => {
-  const d = c.district || '';
+  const d = (c.district || '').trim();
   let m = d.match(/^CD-?\s*(\d+)/i);
   if (m) return { kind: 'cd', n: +m[1] };
   m = d.match(/^SD-?\s*(\d+)/i);
   if (m) return { kind: 'upper', n: +m[1] };
   m = d.match(/^(?:HD|AD)-?\s*(\d+)/i);
   if (m) return { kind: 'lower', n: +m[1] };
+  m = d.match(/^[A-Z]{2}-(\d+)$/);
+  if (m && US_HOUSE.test(c.office)) return { kind: 'cd', n: +m[1] };
+  m = d.match(/^(?:State )?Senate District (\d+)$/i);
+  if (m) return { kind: 'upper', n: +m[1] };
+  m = d.match(/^(?:State )?(?:House|Assembly) District (\d+)$/i);
+  if (m) return { kind: 'lower', n: +m[1] };
+  m = d.match(/^LD-?\s*(\d+)$/i);
+  if (m && /senat/i.test(c.office)) return { kind: 'upper', n: +m[1] };
+  m = d.match(/^LD-?\s*(\d+)\s+Position\s+\d+$/i);
+  if (m && /representative|house/i.test(c.office)) return { kind: 'lower', n: +m[1] };
   return { kind: null, n: null };
 };
+/* Two seats of one district in a district question: Washington's "LD-32 Position 1" and "LD-32
+   Position 2" are both on every 32nd District ballot, so answering the question with one puts both
+   on (review, Oct 20: picking a position hid the other one). */
+const seatBase = (c: Item | undefined): string => (c && c.kind === 'contest' && /\s+Position\s+\d+$/i.test(c.district || '') ? (c.district || '').replace(/\s+Position\s+\d+$/i, '') : '');
+export const sameSeat = (a: Item | undefined, c: Item | undefined): boolean => !!a && !!c && a !== c && !!seatBase(a) && seatBase(a) === seatBase(c);
 export const contestDistrict = districtNum;
 
 /* A single regional race a place's own research listed, whose scope names that place's
@@ -277,10 +300,11 @@ function computeEntries(b: Ballot): Map<SectionKey, Entry[]> {
         seenGroup.add(gk);
         push(sec, ans === undefined ? { t: 'question', group: g } : { t: 'groupline', group: g });
       }
-      if (ans === '*' || ans === it.id) push(sec, { t: 'item', id: it.id });
+      if (ans === '*' || ans === it.id || (ans !== 'none' && sameSeat(b.byId.get(ans), it))) push(sec, { t: 'item', id: it.id });
       continue;
     }
-    if (b.mayApply.has(it.id) && S.b.notMine.includes(it.id)) { push(sec, { t: 'notmine', id: it.id }); continue; }
+    // A "may apply" race you said isn't yours, or one school district's race your address took off.
+    if (S.b.notMine.includes(it.id)) { push(sec, { t: 'notmine', id: it.id }); continue; }
     push(sec, { t: 'item', id: it.id });
   }
   return out;
@@ -307,11 +331,12 @@ export function isMaybe(id: string): boolean {
    - the races folded under "Other school districts that touch ..." count only once you claim
      one: open the fold, or pick or note one of them. */
 /* Other school districts' races: "may apply" school races outside any district question. Three
-   or more fold into one row on the ballot ("Other school districts that touch Austin"). */
+   or more fold into one row on the ballot ("Other school districts that touch Austin"). One your
+   address put on your ballot (S.b.mine) is yours, so it stands as its own row. */
 export const OTH_KEY = 'school|oth';
 export function otherSchools(entries: Entry[]): Entry[] {
   const b = S.ballot!;
-  const oth = entries.filter((e) => (e.t === 'item' || e.t === 'notmine') && b.mayApply.has(e.id) && b.byId.get(e.id)!.kind === 'contest' && !b.groupOf[e.id] && status(b.byId.get(e.id)!) !== 'unopposed');
+  const oth = entries.filter((e) => e.t === 'item' && b.mayApply.has(e.id) && b.byId.get(e.id)!.kind === 'contest' && !b.groupOf[e.id] && status(b.byId.get(e.id)!) !== 'unopposed' && !(S.b.mine || []).includes(e.id));
   return oth.length >= 3 ? oth : [];
 }
 export const othOpen = (oth: Entry[]): boolean => S.ui.unfolded.has(OTH_KEY) || oth.some((e) => e.t === 'item' && (e.id === S.ui.row || e.id === S.ui.keep));

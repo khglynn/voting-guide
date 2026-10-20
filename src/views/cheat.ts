@@ -8,6 +8,7 @@ import { SECTIONS, entriesBySection, status, decisionItems, unclaimed, isMultiJu
 import { esc, fmtDate, todayISO } from '../util';
 import { cheatTitle, pickLabel } from '../model/labels';
 import { nextStep } from '../model/plan';
+import { hoursLine } from './planstrip';
 import { sectionTitle } from './ledger';
 
 /* maybe: a pick on a race the ballot marks "Maybe on your ballot", so the sheet says "if it's on
@@ -18,8 +19,8 @@ const rankedList = (it: Item | null): string[] => (it && it.kind === 'contest' &
 const rankNote = (it: Contest): string => `Ranked choice: rank up to ${it.rank_up_to}`;
 
 const MAYBE = 'If it’s on your ballot';
-/* An unanswered district question: the ballot's own words, and a tap that takes you to it. */
-const Q_SUB = 'Depends on your district';
+/* An unanswered district question: where to find the answer, and a tap that takes you to it. */
+const Q_SUB = 'Your sample ballot shows which';
 const Q_ACT = 'Pick your district';
 
 function lines(): Line[] {
@@ -54,10 +55,20 @@ export function essentials(t = todayISO()): string[] {
   // While the next step is mailing your ballot, the box gives the mail steps, not the rules for a
   // voting booth you may never see (Oct 20: LA's box said "In the booth" to someone at home).
   if (step.phase === 'mail') return [head, ...step.sub];
-  const out = [head, ...step.sub.slice(0, 1)];
+  // The plan you carry has what the strip shows and what it folds away (UX walk, Oct 20: Orlando's
+  // box had no hours, no ID rule and no Election Day): the step's own lines, the sites' hours in one
+  // line where the place gives them, Election Day for anyone who misses early voting, then the ID.
+  const ed = step.sub.filter((x) => /^Or vote on Election Day/.test(x));
+  const id = h.id_rules.required === 'photo' ? ['Bring a photo ID.'] : [];
+  const out = [head, ...step.sub.filter((x) => !ed.includes(x)), hoursLine(step), ...ed, ...id].filter(Boolean);
   const booth = h.in_the_booth;
-  const rule = (v: string, yes: string, no: string) => (v === 'allowed' ? yes : v === 'prohibited' ? no : v === 'restricted' ? 'are restricted' : 'rules are unclear');
-  out.push(`In the booth: notes ${rule(booth.notes_allowed, 'are allowed', 'are not allowed')}; phones ${rule(booth.phones, 'are allowed', 'are not allowed')}.`);
+  const rule = (v: string, yes: string, no: string) => (v === 'allowed' ? yes : v === 'prohibited' ? no : 'rules are unclear');
+  // Phones "restricted": the state's own short line ("You can read your plan on your phone; don't
+  // photograph your marked ballot."), not the bare word.
+  const notes = `notes ${rule(booth.notes_allowed, 'are allowed', 'are not allowed')}`;
+  out.push(booth.phones === 'restricted'
+    ? `In the booth: ${notes}.${booth.phones_short ? ` ${booth.phones_short}` : ''}`
+    : `In the booth: ${notes}; phones ${rule(booth.phones, 'are allowed', 'are not allowed')}.`);
   return out;
 }
 

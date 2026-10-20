@@ -3,12 +3,12 @@
    because the save link and saved picks depend on it. */
 import type { Contest, Item } from './types';
 import { S, persist, emptyBallotState, type View } from './state';
-import { status, sectionOf, rankMax, ordinal, chosenIds, entriesBySection, pageWalk, OTH_KEY, type SectionKey } from './ballot';
+import { status, sectionOf, rankMax, ordinal, chosenIds, entriesBySection, pageWalk, sameSeat, OTH_KEY, type SectionKey } from './ballot';
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
-import { render, renderRow, renderSection, renderSummaries, renderLens, flushLens, markBehind, renderBallot, renderAddr, rowEl, scrollRowIntoView, rowTop, holdRow, opensLow, anchored, $ } from './render';
+import { render, renderRow, renderSection, renderSummaries, renderOff, renderLens, flushLens, markBehind, renderBallot, renderAddr, rowEl, scrollRowIntoView, rowTop, holdRow, opensLow, anchored, $ } from './render';
 import { growOpen, inkRow, followFold, glideTo, land, stopGlide, grow, shrinkAway, collapseRow, finishCollapse } from './motion';
 import { HOW_K } from './views/trust';
-import { openBallot, openChosen, go, openReader, runAddress, reopenAddr, useMatch, toDoor, showBallot, rechoose } from './app';
+import { openBallot, openChosen, go, openReader, runAddress, reopenAddr, useMatch, toDoor, showBallot, rechoose, openSaved, fillWhy } from './app';
 import { judgeBatch } from './model/judges';
 import { planAgree, planParty, planJudges, planSetup, applyFills, undoFills, emptyPlan, touchUndo, type Plan } from './model/bulk';
 import { toggleChip, setParty, setSources, noEndorsements, doorNone, type ChipKey } from './model/lens';
@@ -279,11 +279,12 @@ A.sec = (d, btn) => {
   }
   if (folded) { S.ui.folded.delete(s); S.ui.unfolded.add(s); } else { S.ui.unfolded.delete(s); S.ui.folded.add(s); if (S.ui.row && B().byId.get(S.ui.row) && sectionOf(B().byId.get(S.ui.row)!) === s) S.ui.row = null; }
   anchored(() => renderSection(s), `sec-${s}`);
+  persist(); // the sections as you left them come back after a reload
 };
 /* A band's count ("2 of 5 decided", ledger countHTML): under "Hide races I've decided" it shows or
    hides the section's decided rows (a folded band opens with them); otherwise it folds or unfolds
-   the section, even one still being decided. The band stays where it is. The choice lasts for this
-   visit; the filter itself is what's saved. */
+   the section, even one still being decided. The band stays where it is. The choice is saved with
+   the ballot (S.b.secs, by persist), so a reload shows the sections as you left them. */
 A['sec-count'] = (d) => {
   const s = d.sec as SectionKey;
   anchored(() => endBeat(), `sec-${s}`);
@@ -303,6 +304,7 @@ A['sec-count'] = (d) => {
   anchored(() => renderSection(s), `sec-${s}`);
   // The other school districts' fold may have opened or closed with it: the counts follow.
   renderSummaries();
+  persist();
 };
 A.grp = (d) => {
   const k = d.g!;
@@ -313,6 +315,7 @@ A.grp = (d) => {
   anchored(() => renderSection(s), `sec-${s}`);
   // Opening the other school districts' fold claims its races, so the count changes.
   if (k === OTH_KEY) renderSummaries();
+  persist();
 };
 
 /* ---------- picks ---------- */
@@ -432,6 +435,7 @@ A.note = (d) => { S.ui.noteOpen.add(d.id!); renderRow(d.id!); $(`[data-note="${C
 A.district = (d) => {
   const g = B().groups.find((x) => x.key === d.g)!;
   S.b.districts[g.key] = d.v!;
+  S.b.addrSet = (S.b.addrSet || []).filter((k) => k !== g.key); // your answer now, not the address's
   // Answering swaps the question for that district's race, opened, in the same place. "Not sure"
   // shows them all; "Not in any of these" leaves one line saying so, with Change.
   const one = d.v !== '*' && d.v !== 'none';
@@ -441,18 +445,29 @@ A.district = (d) => {
   renderSummaries();
   persist();
   if (one) scrollRowIntoView(d.v!);
-  else if (d.v === 'none') focusFk(`dc-${qId(g)}`);
+  else if (d.v === 'none') { toast('Moved to “Not on your ballot” at the bottom.'); focusFk('off'); }
 };
 A['district-change'] = (d) => {
   const g = B().groups.find((x) => x.key === d.g)!;
   const ans = S.b.districts[g.key];
   delete S.b.districts[g.key];
-  if (ans && ans !== '*' && ans !== 'none') { delete S.b.picks[ans]; delete S.b.ranks[ans]; delete S.b.auto[ans]; touchUndo(ans); }
+  S.b.addrSet = (S.b.addrSet || []).filter((k) => k !== g.key);
+  if (ans && ans !== '*' && ans !== 'none') {
+    // Everything the answer showed: a Washington district's two House seats come from one answer.
+    const a = B().byId.get(ans);
+    for (const id of [ans, ...g.members.filter((m) => sameSeat(a, B().byId.get(m)))]) {
+      for (const k of Object.keys(S.b.picks)) if (k === id || k.startsWith(`${id}|`)) delete S.b.picks[k];
+      for (const k of Object.keys(S.b.auto)) if (k === id || k.startsWith(`${id}|`)) delete S.b.auto[k];
+      delete S.b.ranks[id];
+      touchUndo(id);
+    }
+  }
   S.ui.row = `q:${g.key}`;
   renderSection(sectionOf(B().byId.get(g.members[0])!));
   renderSummaries();
   persist();
   scrollRowIntoView(`q:${g.key}`);
+  focusFk(`row-${qId(g)}`); // its Change, or the bottom list's button, is gone: the question it asks again
 };
 A.notmine = (d) => {
   const b = B();
@@ -466,7 +481,8 @@ A.notmine = (d) => {
   anchored(() => renderSection(sectionOf(it)));
   renderSummaries();
   persist();
-  if (ids.length > 1) toast(`Took ${ids.length} ${it.kind === 'measure' ? 'measures' : 'races'} off your list.`);
+  // It leaves its section for the list at the bottom: say where it went.
+  toast(ids.length > 1 ? `Moved ${ids.length} ${it.kind === 'measure' ? 'measures' : 'races'} to “Not on your ballot” at the bottom.` : 'Moved to “Not on your ballot” at the bottom.');
 };
 /* "None of these are on my ballot" for the other school districts' races, all at once. */
 A['notmine-oth'] = () => {
@@ -478,9 +494,20 @@ A['notmine-oth'] = () => {
   anchored(() => renderSection('school'));
   renderSummaries();
   persist();
-  toast(`Took ${plural(ids.length, 'race')} off your list. Open the line to bring one back.`);
+  toast(`Moved ${plural(ids.length, 'race')} to “Not on your ballot” at the bottom.`);
 };
-A['notmine-undo'] = (d) => { S.b.notMine = S.b.notMine.filter((x) => x !== d.id); anchored(() => renderSection(sectionOf(B().byId.get(d.id!)!))); renderSummaries(); persist(); };
+/* "It's on my ballot", from the "Not on your ballot" list: back in its section, where the page goes. */
+A['notmine-undo'] = (d) => {
+  S.b.notMine = S.b.notMine.filter((x) => x !== d.id);
+  const sec = sectionOf(B().byId.get(d.id!)!);
+  // Back among the other school districts' races, their fold stays open so the race doesn't vanish.
+  if (sec === 'school') S.ui.unfolded.add(OTH_KEY);
+  renderSection(sec);
+  renderSummaries();
+  persist();
+  scrollRowIntoView(d.id!);
+  focusFk(`row-${d.id}`);
+};
 
 /* ---------- the lens ----------
    Chips and sources apply as you tap. On the ballot they live in the Edit sheet, and the ballot
@@ -493,19 +520,23 @@ A.chip = (d) => {
   if (S.view !== 'ballot') {
     const on = doorBallot() ? toggleChip(B(), k) : !S.door.chips[k];
     S.door.chips[k] = on;
+    S.ui.lensEmptied = !on; // the chips stay on screen even when that was the last one
     render(['mast']);
     announce(on ? 'Turned on.' : 'Turned off.');
     return;
   }
   const on = toggleChip(B(), k);
+  S.ui.lensEmptied = !on;
   renderLens(); persist();
   announce(on ? 'Turned on.' : 'Turned off.');
 };
 A['party-off'] = () => {
+  S.ui.lensEmptied = true;
   if (S.view !== 'ballot') { S.door.party = null; if (doorBallot()) setParty(B(), null); render(['mast']); return; }
   setParty(B(), null); renderLens(); persist();
 };
 A['party-set'] = (d) => {
+  S.ui.lensEmptied = false;
   if (S.view !== 'ballot') {
     S.door.party = d.p!;
     if (doorBallot()) setParty(B(), d.p!);
@@ -530,28 +561,30 @@ A.src = (d) => {
   renderLens();
 };
 A['src-default'] = () => { S.b.sources = null; S.b.party = null; persist(); renderLens(); };
-/* "Don’t show endorsements" (step 2 and the Edit sheet): every source off and no party, so every row shows
-   just the choices; the save link carries it as an empty source list. Tapped again, the newspapers
-   and guides come back. Any other chip, or a party, ends it on its own. */
-A['no-ends'] = () => {
+/* "Show endorsements" (step 2 and the Edit sheet), on to start. Off: every source off and no party, so
+   every row shows just the choices; the save link carries it as an empty source list. On again, the
+   newspapers and guides come back. */
+A.ends = () => {
+  S.ui.lensEmptied = false;
   if (S.view !== 'ballot') {
-    // With a ballot found, the chip shows that ballot's choice (it may have its own): turn that over.
-    const on = doorBallot() ? !noEndorsements() : !doorNone();
-    S.door.chips = { papers: !on, progressive: false, conservative: false };
+    // With a ballot found, the switch shows that ballot's choice (it may have its own): turn that over.
+    const off = doorBallot() ? !noEndorsements() : !doorNone();
+    S.door.chips = { papers: !off, progressive: false, conservative: false };
     S.door.party = null;
-    if (on) S.door.fill = false;
+    if (off) S.door.fill = false;
+    else if (!S.door.fillSet) S.door.fill = !(doorBallot() && S.b.setupDone); // back to its default
     S.ui.open.delete('su-party');
-    if (doorBallot()) { S.b.sources = on ? [] : null; S.b.party = null; }
+    if (doorBallot()) { S.b.sources = off ? [] : null; S.b.party = null; }
     render(['mast']);
-    announce(on ? 'Turned on.' : 'Turned off.');
+    announce(off ? 'Turned off.' : 'Turned on.');
     return;
   }
-  const on = !noEndorsements();
-  S.b.sources = on ? [] : null;
+  const off = !noEndorsements();
+  S.b.sources = off ? [] : null;
   S.b.party = null;
-  if (on) S.ui.setupFill = false;
+  if (off) S.ui.setupFill = false;
   renderLens(); persist();
-  announce(on ? 'Turned on.' : 'Turned off.');
+  announce(off ? 'Turned off.' : 'Turned on.');
 };
 A['src-none'] = () => { S.b.sources = []; S.b.party = null; persist(); renderLens(); };
 /* All sources or a party. Opened from the Edit sheet, it goes back there when it closes. */
@@ -570,7 +603,7 @@ function backToPicks(lensChanged = false): void {
   if (lensChanged) renderLens(); else render(['sheet']);
   if (from) focusFk(from);
 }
-/* "Picks: ... · Edit" and the menu's "Quick picks": step 2's controls in a sheet. The fill switch
+/* "Endorsements: ... · Edit" and the menu's "Quick picks": step 2's controls in a sheet. The fill switch
    starts off each time; "Hide races I've decided" shows where the ballot is now. */
 A.picks = (_d, el) => {
   S.ui.sheetFrom = S.ui.sheet === 'toc' ? 'bar-menu' : el.dataset.fk || null;
@@ -590,7 +623,7 @@ function closePicks(): void {
   S.ui.setupFill = false;
   render(['sheet']);
   const n = plan && plan.fills.length ? applyFills(plan.fills) : 0;
-  if (n) { S.ui.bulk = String(n); S.ui.row = null; S.ui.keep = null; }
+  if (n) { S.ui.bulk = String(n); S.ui.bulkWhy = plan ? fillWhy(plan) : null; S.ui.row = null; S.ui.keep = null; }
   if (n || only !== S.b.hideDecided) dropBeat();
   const onlyChanged = only !== S.b.hideDecided;
   if (onlyChanged) { S.b.hideDecided = only; S.ui.keep = null; }
@@ -699,6 +732,7 @@ A.open = (d, el) => {
   const k = d.k!;
   if (k === HOW_K) { toggleHow(); return; }
   S.ui.open.has(k) ? S.ui.open.delete(k) : S.ui.open.add(k);
+  if (k === 'off') { renderOff(); return; }
   const row = el.closest<HTMLElement>('.row[data-item]');
   if (row && S.ui.view === 'ballot') { renderRow(row.dataset.item!); return; }
   const region = el.closest<HTMLElement>('[id^="r-"]');
@@ -730,19 +764,19 @@ A['change-place'] = () => {
 /* Step 2's two switches on the first page, and the Edit sheet's: each repaints where it lives. */
 A['setup-fill'] = () => {
   if (S.ui.sheet === 'picks') { S.ui.setupFill = !S.ui.setupFill; render(['sheet']); return; }
-  S.door.fill = !S.door.fill; render(['mast']);
+  S.door.fill = !S.door.fill; S.door.fillSet = true; render(['mast']);
 };
 A['setup-only'] = () => {
   if (S.ui.sheet === 'picks') { S.ui.setupOnly = !S.ui.setupOnly; render(['sheet']); return; }
   S.door.only = !S.door.only; render(['mast']);
 };
 /* "Show my ballot" (and Enter in the ZIP box): app.ts showBallot, then the fill's toast with Undo. */
-A['setup-done'] = async () => {
-  const r = await showBallot();
-  if (r) fillToast(fillHead(r.n, r.plan), setupPlan(r.plan));
-};
+/* "Show my ballot". What a fill did is the ballot head's own line ("20 filled in from your sources.
+   Undo"), not a toast over the next step (UX walk, Oct 20). */
+A['setup-done'] = async () => { await showBallot(); };
 /* "Change" on the place line, after the place question: ask it again. */
 A.rechoose = () => { rechoose(); };
+A['saved-open'] = () => { openSaved(); };
 A['addr-open'] = () => { S.ui.addrOpen = true; S.ui.addrMsg = null; S.ui.addrFail = ''; S.ui.addrWhich = null; renderAddr(); const i = $('#addr-in'); if (i) { i.scrollIntoView({ block: 'center' }); i.focus({ preventScroll: true }); } };
 A['addr-close'] = () => { S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.addrFail = ''; S.ui.addrWhich = null; renderAddr(); focusFk($('[data-fk="addr-again"]') ? 'addr-again' : 'addr-open'); };
 /* "Not it? Try again" beside what the Census found, and "None of these" under several matches: the
@@ -772,7 +806,7 @@ A.basis = (d) => {
   toast(e.lean ? `${e.short}: ${LEANS[e.lean][1]}, ${how || 'basis not recorded'}. Tap “See all sources” for details.` : `${e.short}: not rated for lean.`);
 };
 A['shared-keep'] = () => { S.pending = null; render(['restore']); toast('Using the picks from your link. Change any pick as you go.'); };
-A['shared-fresh'] = () => { const zip = S.b.zip; const hide = S.b.hideDecided; S.b = emptyBallotState(zip); S.b.hideDecided = hide; S.pending = null; render(); persist(true); toast('Started fresh. The shared picks are cleared on this device.'); };
+A['shared-fresh'] = () => { const zip = S.b.zip; const hide = S.b.hideDecided; const secs = S.b.secs; S.b = emptyBallotState(zip); S.b.hideDecided = hide; S.b.secs = secs; S.pending = null; render(); persist(true); toast('Started fresh. The shared picks are cleared on this device.'); };
 A['restore-no'] = () => { S.pending = null; render(['restore']); toast('Kept the picks on this device.'); };
 
 /* ---------- cheat sheet, save link, pass it on ---------- */

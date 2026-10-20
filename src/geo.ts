@@ -44,6 +44,7 @@ export interface GeoResult {
   upper: number | null;      // state senate
   lower: number | null;      // state house
   zip?: string | null;       // the ZIP Census matched (its ZCTA layer, else the end of the matched address)
+  schools?: string[];        // its school districts, as the Census names them ("Austin Independent School District")
 }
 
 const STATE_FIPS: Record<string, string> = {
@@ -139,6 +140,9 @@ export function parseCensus(data: any): GeoResult[] {
   for (const m of list) {
     const g = (m && m.geographies) || {};
     const layer = (re: RegExp) => { const k = Object.keys(g).find((x) => re.test(x)); return k && g[k] && g[k][0] ? g[k][0] : null; };
+    // Every layer the Census has (layers=all) can carry more than one map of a kind: the newest is the
+    // one this election uses (the 120th Congress, the 2026 legislature), whatever order they come in.
+    const newest = (re: RegExp) => { const k = Object.keys(g).map((x) => ({ x, m: x.match(re) })).filter((o) => o.m).sort((a, b) => Number(b.m![1]) - Number(a.m![1]))[0]; return k && g[k.x] && g[k.x][0] ? g[k.x][0] : null; };
     const num = (x: any) => { const n = x ? parseInt(String(x.BASENAME || '').replace(/\D/g, ''), 10) : NaN; return Number.isFinite(n) ? n : null; };
     const st = layer(/^States$/);
     const county = layer(/^Counties$/);
@@ -151,9 +155,11 @@ export function parseCensus(data: any): GeoResult[] {
       state: st ? STATE_FIPS[String(st.STATE)] || null : null,
       county: county ? String(county.BASENAME || '') : null,
       place: place ? String(place.BASENAME || '') : null,
-      cd: num(layer(/Congressional Districts/)),
-      upper: num(layer(/State Legislative Districts - Upper/)),
-      lower: num(layer(/State Legislative Districts - Lower/)),
+      cd: num(newest(/^(\d+)\w* Congressional Districts/) || layer(/Congressional Districts/)),
+      upper: num(newest(/^(\d{4}) State Legislative Districts - Upper/) || layer(/State Legislative Districts - Upper/)),
+      lower: num(newest(/^(\d{4}) State Legislative Districts - Lower/) || layer(/State Legislative Districts - Lower/)),
+      // Unified, or elementary and secondary where a state splits them.
+      schools: Object.keys(g).filter((k) => /School Districts/.test(k)).flatMap((k) => (g[k] || []).map((x: any) => String(x.NAME || x.BASENAME || ''))).filter(Boolean),
       zip: zcta && /^\d{5}$/.test(String(zcta.ZCTA5 || zcta.BASENAME || '')) ? String(zcta.ZCTA5 || zcta.BASENAME) : zipAt ? zipAt[1] : null,
     };
     if (!out.some((x) => tidyAddress(x.matched) === tidyAddress(r.matched))) out.push(r);
@@ -178,7 +184,8 @@ export function censusLookup(address: string, timeoutMs = 15000): Promise<GeoRes
       try { resolve(parseCensus(data)); } catch (e) { reject(e); }
     };
     const q = new URLSearchParams({
-      address, benchmark: 'Public_AR_Current', vintage: 'Current_Current', format: 'jsonp', callback: cb,
+      // Every layer: the defaults leave out school districts.
+      address, benchmark: 'Public_AR_Current', vintage: 'Current_Current', layers: 'all', format: 'jsonp', callback: cb,
     });
     script.src = `https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?${q.toString()}`;
     script.onerror = () => { if (!done) { cleanup(); reject(new Error('network')); } };

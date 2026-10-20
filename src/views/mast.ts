@@ -3,7 +3,7 @@
 import type { Index } from '../types';
 import { S } from '../state';
 import { esc, fmtDate, todayISO } from '../util';
-import { ext, isOpen, askCityURL, formURL, creditHTML } from './common';
+import { ext, isOpen, askCityURL, formURL, kevinLink, coffeeLink } from './common';
 import { countyName } from './ledger';
 import { doorPicksHTML, placeLine } from './setup';
 import { stateName, tidyAddress } from '../geo';
@@ -103,6 +103,7 @@ function doorHTML(): string {
     <ul class="ticks">${ticks.map((t) => `<li><i aria-hidden="true"></i>${esc(t)}</li>`).join('')}</ul>
     <div class="pad door" id="door">
       <span class="sheet-top" aria-hidden="true"></span><span class="sheet-fill" aria-hidden="true"></span>
+      <div data-part="saved">${savedLineHTML()}</div>
       <form class="zipform" data-form="zip" novalidate>
         <label for="zip" class="step su-h zip-h"><span class="step-n" aria-hidden="true">1</span>Where do you vote?</label>
         <div class="zip-row"><input class="zip-input" id="zip" name="zip" data-fk="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="ZIP code" value="${esc(S.zip)}" ${S.zipErr ? 'aria-describedby="zip-err" aria-invalid="true"' : ''}></div>
@@ -114,6 +115,18 @@ function doorHTML(): string {
     <div class="door-foot" data-part="fine">${creditsHTML()}</div>
     ${PILE}
   </header>`;
+}
+
+/* The ballot you went back to the first page from, while anything on it is saved (a pick, a ranking
+   not finished yet, a note): saved, and a tap away, with how many races are decided when some are. */
+function savedLineHTML(): string {
+  const d = S.doorSaved;
+  const idx = S.index;
+  if (!d || !idx) return '';
+  const [st, placesStr] = d.key.split('|');
+  const places = placesStr === '-' ? [] : placesStr.split('+').filter((p) => idx.places[p]);
+  const where = places.length ? places.map((p) => idx.places[p].label.replace(/\s*\(.*\)$/, '')).join(' or ') : idx.states[st]?.name || '';
+  return `<div class="door-saved" role="status"><p>Your ${esc(where)} ballot is saved${d.n ? `, ${d.n === 1 ? '1 race' : `${d.n} races`} decided` : ''}.</p><button class="mini dark" data-act="saved-open" data-fk="saved-open">Open my ballot</button></div>`;
 }
 
 /* The states the guide covers, cut from paper and piled up at the foot of the first page (scripts/paper
@@ -147,14 +160,15 @@ function whereHTML(): string {
     after = `<div class="notice" role="status"><p><b>We don’t cover ${name ? esc(name) : 'that area'} yet.</b> ${ext('https://vote.gov/', 'Vote.gov')} has official info for every state.</p>
       <p>Want this for your city? <a href="${esc(ask)}" target="_blank" rel="noopener" data-ask-kevin>Ask Kevin</a>.</p></div>`;
   }
-  // "Use my address for the most accurate local results" (Kevin's words, Oct 20: the Census settles
-  // Congress and the legislature, not every local race) opens the address form right here. The place
+  // "Use my address for a more exact ballot" (Kevin, Oct 20: shorter than "for the most accurate
+  // local results", and still true, since the Census settles Congress and the legislature, not every
+  // local race) opens the address form right here. The place
   // question has its own link, so this one steps aside while it shows. After a lookup, what the
   // Census found takes its place, for this visit only, with "Not it? Try again" (the form again,
   // with what you typed).
   const found = b && S.ui.addrFound
     ? `<p class="door-found" role="status"><span><b>Found:</b> ${esc(S.ui.addrFound)}</span> <button class="linkbtn" data-act="addr-again" data-fk="addr-again">Not it? Try again</button></p>` : '';
-  const addr = S.zipChoice ? '' : S.ui.addrOpen ? addrHTML(true) : found || '<p class="addr-cta"><button class="linkbtn" data-act="addr-open" data-fk="addr-open">Use my address for the most accurate local results</button></p>';
+  const addr = S.zipChoice ? '' : S.ui.addrOpen ? addrHTML(true) : found || '<p class="addr-cta"><button class="linkbtn" data-act="addr-open" data-fk="addr-open">Use my address for a more exact ballot</button></p>';
   return `${err}
     ${S.view === 'loading' ? '<p class="small" role="status">Loading your ballot...</p>' : ''}
     ${S.loadErr ? `<p class="zip-err" role="alert">${esc(S.loadErr)}</p>${retryHTML()}` : ''}
@@ -162,15 +176,16 @@ function whereHTML(): string {
     ${addr}`;
 }
 
-/* The small print, one paragraph: how many cities, each one a tap away (the list opens below), a
-   way to ask for yours through the report form (prefilled with the ZIP in the box), and the credit. */
+/* The small print, one paragraph: how many cities, each one a tap away (the list opens below), whose
+   friends they are (his name links to his site; Kevin, Oct 20: name him once), a way to ask for yours
+   through the report form (prefilled with the ZIP in the box), and the coffee link. */
 function creditsHTML(): string {
   const idx = S.index;
   const ask = `<a href="${esc(askCityURL(S.zip))}" target="_blank" rel="noopener" data-ask>Ask for yours</a>`;
   const k = 'browse';
   const n = idx ? cityCount(idx) : 0;
-  const cover = idx ? `Covers <button class="linkbtn" data-act="open" data-k="${k}" aria-expanded="${isOpen(k)}" data-fk="browse">${n} ${n === 1 ? 'city' : 'cities'}</button> where Kevin’s friends live. ` : '';
-  return `<p class="fine credits">${cover}${ask} · ${creditHTML()}</p>
+  const cover = idx ? `Covers <button class="linkbtn" data-act="open" data-k="${k}" aria-expanded="${isOpen(k)}" data-fk="browse">${n} ${n === 1 ? 'city' : 'cities'}</button> where ${kevinLink()}’s friends live. ` : '';
+  return `<p class="fine credits">${cover}${[ask, coffeeLink()].filter(Boolean).join(' · ')}</p>
     ${idx && isOpen(k) ? browseHTML() : ''}`;
 }
 

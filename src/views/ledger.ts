@@ -8,7 +8,7 @@ import type { Contest, Item, PlaceBundle } from '../types';
 import { S } from '../state';
 import {
   SECTIONS, type SectionKey, type Entry, type Group, entriesBySection, status, isDecision, sectionOf, decisionItems, isMultiJudge, isMaybe,
-  OTH_KEY, otherSchools, othOpen, unclaimed, pageWalk,
+  OTH_KEY, otherSchools, othOpen, unclaimed, pageWalk, contestDistrict,
 } from '../ballot';
 import { esc, hash, plural } from '../util';
 import { rowTitle, measureTag, courtGroup, cleanOffice, optionLabel } from '../model/labels';
@@ -148,7 +148,9 @@ function questionBodyHTML(g: Group): string {
   const b = S.ballot!;
   // The count is the whole place's, not your ZIP's: say so ("Houston has 24 of these").
   const where = () => (b.places.length === 1 ? b.places[0].label.replace(/\s*\(.*\)$/, '') : b.places.length ? 'Your area' : b.stateName);
-  const members = g.members.map((id) => b.byId.get(id) as Contest);
+  // In number order, as a sample ballot lists them (the data keeps its own order: 10, 11, 27, 37, 31).
+  const num = (c: Contest) => contestDistrict(c).n ?? Infinity;
+  const members = g.members.map((id) => b.byId.get(id) as Contest).sort((x, y) => num(x) - num(y));
   const finders = findersFor(g);
   const sb = sampleBallot();
   return `<div class="ob dq">
@@ -492,10 +494,10 @@ export function ballotHTML(): string {
 
 /* ---------- the bottom bar ----------
    On the ballot, two buttons: the menu ("☰ 20 of 43", whose .bar-txt reads "20 of 43 decided") and
-   My plan (the cheat sheet). From 1000px the menu also stands as a rail in the left margin, drawn
+   My plan (the cheat sheet). From 1180px the menu also stands as a rail in the left margin, drawn
    here so it repaints with the bar after every pick. */
 const BURGER = '<svg class="burger" viewBox="0 0 18 14" aria-hidden="true" focusable="false"><path d="M1 1.5h16M1 7h16M1 12.5h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
-export const RAIL_AT = '(min-width: 1000px)';
+export const RAIL_AT = '(min-width: 1180px)';
 const wide = (): boolean => typeof window !== 'undefined' && typeof window.matchMedia === 'function' && window.matchMedia(RAIL_AT).matches;
 export function barHTML(): string {
   if (!S.ballot) return '';
@@ -517,7 +519,7 @@ export function barHTML(): string {
     </div></div>`;
 }
 
-/* ---------- the menu: a sheet under 1000px, a rail from there ----------
+/* ---------- the menu: a sheet under 1180px, a rail from there ----------
    "Next up" first, the "Show only what's left" switch, then rows that go somewhere: your next
    step, Quick picks (the Edit sheet), each section on the page with what's left, and My plan. */
 /* The next undecided race or question after the one you're on (open, or just decided), in page

@@ -69,7 +69,8 @@ export function mastHTML(): string {
     const wards = b.places.length > 1 && b.places.every((p) => /^DC Ward \d+$/.test(p.label)) ? b.places.map((p) => p.label.replace('DC Ward ', '')) : null;
     const name = wards ? 'Washington, DC' : b.places.length ? b.places.map((p) => bare(p.label)).join(' or ') : b.stateName;
     const note = wards ? `Ward ${wards.slice(0, -1).join(', ')} or ${wards[wards.length - 1]}` : b.places.length === 1 ? (b.places[0].label.match(/\((.*)\)$/) || [])[1] : '';
-    const county = b.places.length === 1 && b.st !== 'DC' ? countyName(b.places[0]) : '';
+    // A city in several counties (Austin) shows just the state: three county names wrap to two lines.
+    const county = b.places.length === 1 && b.st !== 'DC' && b.places[0].counties.length === 1 ? countyName(b.places[0]) : '';
     // "Travis County, Texas · 78704 · Change". The election office is in the plan's details.
     const where = [b.places.length ? (county && county !== b.stateName ? `${county}, ${b.stateName}` : b.stateName) : 'Statewide races', S.b.zip].filter(Boolean).join(' · ');
     return `<header class="mast wrap">${tryBanner()}

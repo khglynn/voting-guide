@@ -61,8 +61,11 @@ function anchorRow(): { el: string; top: number } | null {
   for (const r of rows) {
     const rect = r.getBoundingClientRect();
     if (rect.bottom > 4) {
+      // A section's header has no id of its own: the anchor is its section, measured as itself
+      // (the header sits a little below the section's top, and mixing the two moved the page).
       const id = r.id || (r.closest('.sec') as HTMLElement | null)?.id || '';
-      return id ? { el: id, top: rect.top } : null;
+      const el = id ? document.getElementById(id) : null;
+      return el ? { el: id, top: el.getBoundingClientRect().top } : null;
     }
   }
   return null;

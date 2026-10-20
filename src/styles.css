@@ -67,7 +67,10 @@
 /* paper:end */
 
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-padding-top: 12px; }
+/* The page keeps its own place when rows open, close and repaint (render.ts anchored, holdRow).
+   The browser's own scroll anchoring loses its anchor when a row is rebuilt, then follows something
+   below and throws the page hundreds of pixels, so it is off. */
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 12px; overflow-anchor: none; }
 html, body { margin: 0; }
 body {
   background-color: var(--bone); background-image: var(--tile); background-size: 256px; background-blend-mode: var(--tile-blend); color: var(--ink);

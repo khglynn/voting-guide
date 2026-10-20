@@ -119,6 +119,7 @@ export function shrinkAway(at: HTMLElement | null, old: HTMLElement | null, h: n
 /* ---------- scrolling ---------- */
 let tween = 0;
 let unhook: (() => void) | null = null;
+let span = { from: 0, to: 0 };
 export function stopGlide(): void {
   if (tween) cancelAnimationFrame(tween);
   tween = 0;
@@ -128,12 +129,12 @@ export function stopGlide(): void {
    takes over. */
 function tweenScroll(from: number, to: number, ms: number, done?: () => void): void {
   stopGlide();
-  const d = to - from;
+  span = { from, to };
   let t0 = 0;
   const step = (now: number): void => {
     if (!t0) t0 = now;
     const t = Math.min(1, (now - t0) / ms);
-    window.scrollTo(0, from + d * easeOut(t));
+    window.scrollTo(0, span.from + (span.to - span.from) * easeOut(t));
     if (t < 1) { tween = requestAnimationFrame(step); return; }
     tween = 0;
     if (unhook) { const u = unhook; unhook = null; u(); }
@@ -145,6 +146,12 @@ function tweenScroll(from: number, to: number, ms: number, done?: () => void): v
   const stop = (): void => stopGlide();
   evs.forEach((ev) => window.addEventListener(ev, stop, opts));
   unhook = () => evs.forEach((ev) => window.removeEventListener(ev, stop, opts));
+}
+
+/* Content above changed height by `d` while a glide runs (render.ts anchored kept the view still):
+   the glide's path moves with it, so it doesn't undo that. */
+export function nudgeGlide(d: number): void {
+  if (tween) { span.from += d; span.to += d; }
 }
 
 /* Glide the page so `el` sits `offset` px below the top. A long way skips most of it and glides

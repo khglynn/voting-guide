@@ -1037,6 +1037,78 @@ const placeAt = (page, sel, y) => page.evaluate(([s, y]) => window.scrollBy(0, d
   await ctx.close();
 }
 
+/* ---------- the page keeps its place (review, Oct 20) ----------
+   A row or a fold repainted at the top of the screen leaves what you tapped where it was. The
+   browser's own scroll anchoring is off: a repaint took its anchor away, and it then followed
+   something far below, throwing the page hundreds or thousands of pixels. Raw touch taps here, so
+   Playwright scrolls nothing into view first. */
+const touchAt = async (page, sel) => {
+  const b = await page.locator(sel).first().boundingBox();
+  await page.touchscreen.tap(b.x + Math.min(30, b.width / 2), b.y + b.height / 2);
+  await page.waitForTimeout(140);
+};
+{
+  const { ctx, page } = await newPage();
+  await openZip(page, '20001');
+  await page.waitForSelector('[data-act="choose-place"]');
+  await tap(page, '[data-act="choose-place"][data-fk="cp-unsure"]');
+  await throughSetup(page);
+  const openRowNow = () => page.evaluate(() => { const r = document.querySelector('.ledger .row.is-open'); return r ? [r.dataset.item, r.getBoundingClientRect().top] : null; });
+  await next(page);
+  await settle(page);
+  const first = await openRowNow();
+  await tap(page, `#i-${first[0]} [data-act="skip"]`);
+  await settle(page);
+  await next(page);
+  await settle(page);
+  const [id, y0] = await openRowNow();
+  await touchAt(page, `#i-${id} [data-act="pick"]`);
+  await settle(page);
+  const y1 = await topOf(page, `#i-${id}`);
+  check('Place: Next up to the Shadow Senator, then a pick, leaves its header where it was (within 2px)', first[0] === 'dc-delegate' && id === 'dc-shadow-senator' && y0 <= 8 && Math.abs(y1 - y0) <= 2 && !!(await page.$(`#i-${id}:not(.is-open) .vd.done`)), `${first[0]}, then ${id} at ${Math.round(y0)}px, then ${Math.round(y1)}px`);
+  noErrors(page, 'Place 20001');
+  await ctx.close();
+}
+{
+  const { ctx, page } = await newPage();
+  await openBallot(page, '80205');
+  const q = await page.evaluate(() => document.querySelector('.ledger .row[data-q]').id);
+  const Q = `#${q}`;
+  for (const y of [4, 60]) {
+    await placeAt(page, Q, 300);
+    await touchAt(page, `${Q} > .row-hd`);
+    await settle(page);
+    await placeAt(page, Q, y);
+    const y0 = await topOf(page, Q);
+    await touchAt(page, `${Q} > .row-hd`);
+    await settle(page);
+    const y1 = await topOf(page, Q);
+    check(`Place: closing the district question by its header at ${y}px leaves the header there`, !(await page.$(`${Q}.is-open`)) && Math.abs(y1 - y0) <= 2, `${Math.round(y0)}px, then ${Math.round(y1)}px`);
+  }
+  noErrors(page, 'Place 80205');
+  await ctx.close();
+}
+{
+  const { ctx, page } = await newPage();
+  await openBallot(page, '60614');
+  const G = '[data-act="grp"][data-g="judicial|Circuit Court of Cook County"]';
+  await placeAt(page, G, 4);
+  const g0 = await topOf(page, G);
+  await touchAt(page, G);
+  await settle(page);
+  const g1 = await topOf(page, G);
+  check('Place: opening the Cook County court group near the top leaves its button there', (await page.getAttribute(G, 'aria-expanded')) === 'true' && Math.abs(g1 - g0) <= 2, `${Math.round(g0)}px, then ${Math.round(g1)}px`);
+  const U = '#sec-judicial [data-act="open"][data-k="unopp-judicial"]';
+  await placeAt(page, U, 4);
+  const u0 = await topOf(page, U);
+  await touchAt(page, U);
+  await settle(page);
+  const u1 = await topOf(page, U);
+  check('Place: opening the unopposed races near the top leaves their button there', !!(await page.$(`${U}[aria-expanded="true"]`)) && Math.abs(u1 - u0) <= 2, `${Math.round(u0)}px, then ${Math.round(u1)}px`);
+  noErrors(page, 'Place 60614');
+  await ctx.close();
+}
+
 /* ---------- "No endorsements" (Kevin, Oct 20): an option, never the default; tight rows ---------- */
 {
   const { ctx, page } = await newPage();

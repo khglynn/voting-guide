@@ -13,7 +13,7 @@ import { cheatSectionHTML, cheatHTML } from './views/cheat';
 import { passHTML } from './views/pass';
 import { trustHTML } from './views/trust';
 import { readerHTML } from './views/reader';
-import { foldAway, glideTo, sheetIn, sheetOut, land } from './motion';
+import { foldAway, glideTo, sheetIn, sheetOut, land, nudgeGlide } from './motion';
 
 export type Region = 'mast' | 'restore' | 'plan' | 'ballot' | 'cheat' | 'pass' | 'trust' | 'bar' | 'sheet' | 'print';
 export const ALL: Region[] = ['mast', 'restore', 'plan', 'ballot', 'cheat', 'pass', 'trust', 'bar', 'sheet'];
@@ -74,7 +74,7 @@ export function anchored(fn: () => void, anchorId?: string): void {
   const el = document.getElementById(a.el);
   if (!el) return;
   const d = el.getBoundingClientRect().top - a.top;
-  if (Math.abs(d) > 1) window.scrollBy(0, d);
+  if (Math.abs(d) > 1) { window.scrollBy(0, d); nudgeGlide(d); }
 }
 
 /* The first page, repainted in parts: everything marked data-part is replaced and the ZIP box is
@@ -222,11 +222,13 @@ export function renderSummaries(): void {
   window.clearTimeout(lazyTimer);
   lazyTimer = window.setTimeout(() => {
     if (S.ui.view !== 'ballot' || !S.ballot) return;
-    withFocusKept(() => {
+    // The head can change height (the "filled in" line or the address box going away): the rows
+    // you're looking at stay where they are.
+    anchored(() => withFocusKept(() => {
       // Leave the head alone while the address form is open: repainting it would clear what you typed.
       const wrap = $('.wrap-led');
       if (wrap && !S.ui.addrOpen) wrap.innerHTML = ballotHeadHTML();
-    });
+    }));
   }, 60);
 }
 /* Whose picks you see changed. The first page's chips live in its masthead. While a sheet is

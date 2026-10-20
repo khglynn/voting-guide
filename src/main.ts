@@ -2,7 +2,7 @@
 import './styles.css';
 import { S, readSaved, persist, parseShareHead } from './state';
 import { stepKey, planKey } from './views/planstrip';
-import { render } from './render';
+import { render, anchored } from './render';
 import { RAIL_AT } from './views/ledger';
 import { ensureIndex, openBallot, zipTyped, offerResume, dismissResume } from './app';
 import { A, runAddress } from './actions';
@@ -108,7 +108,7 @@ try {
    Check once a minute and whenever the tab comes back; repaint the strip only when it changed. */
 function refreshPlan(): void {
   if (!S.ballot || S.view !== 'ballot') return;
-  if (stepKey(S.ballot.howto) !== planKey) render(['plan']);
+  if (stepKey(S.ballot.howto) !== planKey) anchored(() => render(['plan']));
 }
 document.addEventListener('visibilitychange', () => { if (!document.hidden) refreshPlan(); });
 window.addEventListener('focus', refreshPlan);

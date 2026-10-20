@@ -33,7 +33,8 @@ function afterPick(id: string, close = true): void {
   const box = shut ? rowEl(id)?.getBoundingClientRect() : undefined;
   const fold = renderRow(id, true, shut);
   const it = B().byId.get(id);
-  if (it && it.kind === 'measure') it.links.forEach((l) => renderRow(l));
+  // A linked measure's row may sit above this one: this row stays where it is.
+  if (it && it.kind === 'measure' && it.links.length) anchored(() => it.links.forEach((l) => renderRow(l)), rowEl(id)?.id);
   renderSummaries();
   persist();
   if (shut) {
@@ -185,7 +186,8 @@ A.grp = (d) => {
   const el = document.querySelector<HTMLElement>(`[data-act="grp"][data-g="${CSS.escape(k)}"]`);
   const open = el?.getAttribute('aria-expanded') === 'true';
   if (open) S.ui.unfolded.delete(k); else S.ui.unfolded.add(k);
-  renderSection(k.split('|')[0] as SectionKey);
+  const s = k.split('|')[0] as SectionKey;
+  anchored(() => renderSection(s), `sec-${s}`);
   // Opening the other school districts' fold claims its races, so the count changes.
   if (k === OTH_KEY) renderSummaries();
 };
@@ -569,7 +571,7 @@ A.open = (d, el) => {
   const row = el.closest<HTMLElement>('.row[data-item]');
   if (row && S.ui.view === 'ballot') { renderRow(row.dataset.item!); return; }
   const region = el.closest<HTMLElement>('[id^="r-"]');
-  if (region && region.id === 'r-ballot') { const sec = el.closest<HTMLElement>('.sec'); if (sec) { renderSection(sec.dataset.sec as SectionKey); return; } }
+  if (region && region.id === 'r-ballot') { const sec = el.closest<HTMLElement>('.sec'); if (sec) { anchored(() => renderSection(sec.dataset.sec as SectionKey), sec.id); return; } }
   if (region) render([region.id.slice(2) as never]);
 };
 

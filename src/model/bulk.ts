@@ -12,8 +12,8 @@
    Undo toast is up survives it. */
 import type { Item } from '../types';
 import { S } from '../state';
-import { entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, isPartisan } from '../ballot';
-import { lineup, weighedIn } from './tally';
+import { entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, isPartisan, isMaybe } from '../ballot';
+import { lineup, weighedIn, FILL_SOURCES } from './tally';
 import { judgeBatch } from './judges';
 
 export interface Fill { id: string; set: Record<string, string>; single: boolean; why: string }
@@ -24,12 +24,14 @@ export const emptyPlan = (): Plan => ({ fills: [], single: 0, skippedTwo: 0, ski
 const pickedIn = (it: Item, picks: Record<string, string> = S.b.picks): number =>
   it.kind === 'contest' ? it.candidates.filter((c) => picks[`${it.id}|${c.name}`] === 'PICK').length : 0;
 
+/* Open rows the fills may touch: never one tagged "Maybe on your ballot" (another district's race,
+   or every district of a question answered "Not sure"), since that race may not be the voter's. */
 function visibleOpen(): Item[] {
   const b = S.ballot!;
   const out: Item[] = [];
   for (const [, entries] of entriesBySection()) {
     for (const e of entries) {
-      if (e.t !== 'item') continue;
+      if (e.t !== 'item' || isMaybe(e.id)) continue;
       const it = b.byId.get(e.id)!;
       if (status(it) === 'open') out.push(it);
     }
@@ -47,7 +49,7 @@ export function planAgree(): Plan {
     if (!w.length || l.groups.length !== 1 || l.both.length) continue;
     const g = l.groups[0];
     if (!g.choices.length) continue;
-    const why = `Filled in from your sources: ${w.map((e) => e.short).join(', ')}`;
+    const why = `${FILL_SOURCES}${w.map((e) => e.short).join(', ')}`;
     if (it.kind === 'measure' || it.is_retention) {
       if (g.choices.length !== 1 || !['YES', 'NO'].includes(g.choices[0])) continue;
       fills.push({ id: it.id, set: { [it.id]: g.choices[0] }, single: w.length === 1, why });

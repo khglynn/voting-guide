@@ -5,7 +5,7 @@
 import type { Endorser } from '../types';
 import type { Ballot } from '../ballot';
 import { S } from '../state';
-import { chosenIds, isPartisan } from '../ballot';
+import { chosenIds, isPartisan, entriesBySection, status, isDecision } from '../ballot';
 
 export type ChipKey = 'papers' | 'progressive' | 'conservative';
 const LEFT = ['left', 'lean_left'];
@@ -13,10 +13,16 @@ const RIGHT = ['lean_right', 'right'];
 
 /* Newspapers and guides: newsrooms and nonpartisan civic groups. These are the defaults
    (Kevin's founding rule: neutral by default, partisan by choice). */
-export const isPaper = (e: Endorser): boolean => e.type === 'publication' || e.type === 'civic_nonpartisan';
-const isGroup = (e: Endorser): boolean => e.type !== 'party' && e.type !== 'publication';
+/* A publication whose lean comes only from its own stated mission (Knock LA: "a voice to the
+   left") is an advocate, not a newsroom rated from outside, so it sits with the groups on its side
+   and starts off (Kevin, Oct 20). build-data's default_on follows the same rule. */
+export const sidedByMission = (e: Endorser): boolean => e.type === 'publication' && e.lean_basis_kind === 'mission' && !!e.lean && [...LEFT, ...RIGHT].includes(e.lean);
+export const isPaper = (e: Endorser): boolean => (e.type === 'publication' && !sidedByMission(e)) || e.type === 'civic_nonpartisan';
+const isGroup = (e: Endorser): boolean => e.type !== 'party' && (e.type !== 'publication' || sidedByMission(e));
 /* A source that never picks anything (an explainer: Colorado Sun, CalMatters, VOTE411). */
 export const explainsOnly = (e: Endorser): boolean => !e.endorses_candidates && !e.endorses_measures;
+/* A paper whose endorsements sit behind a paywall we couldn't read, with its note on (Kevin, Oct 19). */
+export const hasPaywallNote = (e: Endorser): boolean => e.paywall === true && e.paywall_note_ok !== false;
 
 export const CHIPS: { key: ChipKey; label: string; empty: string }[] = [
   { key: 'papers', label: 'Newspapers and guides', empty: 'None of the newspapers here made endorsements on this ballot. Try another group.' },
@@ -46,6 +52,24 @@ export function picksOnBallot(b: Ballot, eid: string): number {
   return m.get(eid) || 0;
 }
 export const withPicks = (b: Ballot, list: Endorser[]): Endorser[] => list.filter((e) => picksOnBallot(b, e.id) > 0);
+/* How many of the choices your ballot shows each source endorsed in: the same choices the bar's
+   "N of M decided" counts (no district variants you haven't picked, no races you hid), so the
+   sources sheet never says "Endorsed in 59" on a 46-item ballot. `unopposed` counts its picks in
+   the unopposed races your ballot shows, which the bar leaves out. Computed per call. */
+export function picksShown(b: Ballot): { decisions: Map<string, number>; unopposed: Map<string, number> } {
+  const decisions = new Map<string, number>();
+  const unopposed = new Map<string, number>();
+  for (const [, entries] of entriesBySection()) {
+    for (const x of entries) {
+      if (x.t !== 'item') continue;
+      const s = status(b.byId.get(x.id)!);
+      const m = s === 'unopposed' ? unopposed : isDecision(s) ? decisions : null;
+      if (!m) continue;
+      for (const [e, en] of Object.entries(b.ends[x.id] || {})) if (en.s === 'endorsed') m.set(e, (m.get(e) || 0) + 1);
+    }
+  }
+  return { decisions, unopposed };
+}
 
 /* ---------- parties ---------- */
 const PARTY_WORDS: [RegExp, string][] = [

@@ -78,10 +78,22 @@ function measureCovers(m: Measure, places: PlaceBundle[]): boolean {
   }
   return true;
 }
-const DISTRICTISH = /precinct|ward\b|trustee area|congressional|\bseat\b|\bplace \d|district\s*(?:\d|[a-z]\b)|\b(?:CD|SD|HD|AD)-\d/i;
+/* A scope that names a district inside the place: a precinct, ward, numbered district or judicial
+   subcircuit ("Only voters in Cook County Judicial Subcircuit 1"), or a neighborhood's own
+   district ("Only voters who live inside the Vista Lakes Community Development District in
+   southeast Orange County"). Naming the county only to say where such a district sits never
+   makes it cover the place. */
+const DISTRICTISH = /precinct|ward\b|trustee area|congressional|\bseat\b|\bplace \d|district\s*(?:\d|[a-z]\b)|\b(?:CD|SD|HD|AD)-\d|\bsubcircuit\s*\d|community development district/i;
+/* A ward's own race on that ward's ballot: "Only Ward 6 voters" on "DC Ward 6" covers it. An ANC
+   race ("You vote in one ANC race") names its ward too, but stays a maybe: each voter has one of
+   many single-member districts. */
+const OWN_WARD = /^only ward (\d+) voters\b/i;
+const placeWard = (p: PlaceBundle): string | null => (p.label.match(/\bward (\d+)$/i) || [])[1] || null;
 function coversPlace(c: Contest, places: PlaceBundle[]): boolean {
   if (!places.length || !places.every((p) => p.order.includes(c.id))) return false;
   const scope = c.scope_plain || '';
+  const ward = (scope.match(OWN_WARD) || [])[1];
+  if (ward && places.every((p) => placeWard(p) === ward)) return true;
   if (DISTRICTISH.test(scope)) return false;
   return places.every((p) => p.counties.some((county) => {
     const name = county.replace(/\s*\(.*\)\s*/, '').replace(/\s+County$/i, '').trim();
@@ -272,6 +284,18 @@ function computeEntries(b: Ballot): Map<SectionKey, Entry[]> {
     push(sec, { t: 'item', id: it.id });
   }
   return out;
+}
+
+/* "Maybe on your ballot": a race or measure this ballot can't promise is yours. A "may apply"
+   item the voter hasn't hidden (its row says "Maybe on your ballot", or "Only in <place>" on a
+   ballot for several places), or a race in a district group answered "Not sure". The row tag,
+   the one-tap fills and the cheat sheet all read this one rule, so a fill never picks a race the
+   row itself calls a maybe. */
+export function isMaybe(id: string): boolean {
+  const b = S.ballot!;
+  if (b.mayApply.has(id)) return !S.b.notMine.includes(id);
+  const g = b.groupOf[id];
+  return !!g && S.b.districts[g] === '*';
 }
 
 /* Visible decision items, in order, for progress and "Next undecided". */

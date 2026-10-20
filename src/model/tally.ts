@@ -7,7 +7,7 @@ import type { Ballot } from '../ballot';
 import { S } from '../state';
 import { chosen, status, entriesBySection, isDecision, isRCV } from '../ballot';
 import { choiceShort, pickShort } from './labels';
-import { explainsOnly } from './lens';
+import { explainsOnly, hasPaywallNote } from './lens';
 import { judgeReview } from './judges';
 
 export interface LGroup { key: string; label: string; choices: string[]; sources: Endorser[] }
@@ -17,6 +17,7 @@ export interface Lineup {
   noStand: Endorser[];       // looked, took no position
   notFound: Endorser[];      // looked, found nothing
   notChecked: Endorser[];    // covers this kind of item here, no row yet
+  paywalled: Endorser[];     // behind a paywall: no record here, or one that says it couldn't be read; only the paywall note names it
   guides: Endorser[];        // explain without picking (this kind of item)
   relevant: Endorser[];      // everyone above except guides
 }
@@ -24,7 +25,15 @@ export interface Lineup {
 /* Does a source cover this item's area? It has a row on some item of the same kind here
    (statewide races, statewide judges, statewide measures, or local items at the same level).
    Without this, a Boulder paper with one row on a shared rail measure would read as
-   "not checked" on every Lakewood race. */
+   "not checked" on every Lakewood race.
+   A district race (a U.S. House, legislative, state board or appeals-court district) also needs
+   the source's own geography to include this ballot's place, when the source names places at all.
+   Without this, the San Antonio Express-News, with picks in the two districts Austin shares with
+   San Antonio, read "not checked yet" on every other Austin district. Statewide groups (no place
+   in their geography, or a party or group that names its state, like the Colorado Working
+   Families Party) have no home_places and still cover every district in their state. */
+const LOCAL_LEVELS = new Set(['county', 'city', 'school', 'special_district']);
+const districtRace = (it: Item): boolean => it.kind === 'contest' && !it.every && !LOCAL_LEVELS.has(it.level);
 const areaCache = new WeakMap<Ballot, Map<string, Set<string>>>();
 const areaKey = (b: Ballot, it: Item): string => {
   const sw = b.statewide.has(it.id);
@@ -44,7 +53,9 @@ function covers(b: Ballot, e: Endorser, it: Item): boolean {
     }
     areaCache.set(b, m);
   }
-  return !!m.get(e.id)?.has(areaKey(b, it));
+  if (!m.get(e.id)?.has(areaKey(b, it))) return false;
+  const home = e.home_places;
+  return !districtRace(it) || !home || !home.length || b.places.some((p) => home.includes(p.id));
 }
 const makesKind = (e: Endorser, it: Item): boolean => (it.kind === 'measure' ? e.endorses_measures : e.endorses_candidates);
 const en = (b: Ballot, it: Item, e: Endorser): Endorsement | null => (b.ends[it.id] || {})[e.id] || null;
@@ -77,20 +88,25 @@ export function lineup(it: Item, sources?: Endorser[]): Lineup {
 export const clearLineups = (): void => { lineCache = null; };
 function computeLineup(it: Item, sources: Endorser[]): Lineup {
   const b = S.ballot!;
-  const out: Lineup = { groups: [], both: [], noStand: [], notFound: [], notChecked: [], guides: [], relevant: [] };
+  const out: Lineup = { groups: [], both: [], noStand: [], notFound: [], notChecked: [], paywalled: [], guides: [], relevant: [] };
   const groups = new Map<string, LGroup>();
   for (const e of sources) {
     const r = en(b, it, e);
     const picks = makesKind(e, it);
     if (!r) {
       if (!picks || explainsOnly(e)) { if (covers(b, e, it) || explainsOnly(e)) out.guides.push(e); continue; }
-      if (covers(b, e, it)) { out.notChecked.push(e); out.relevant.push(e); }
+      if (covers(b, e, it)) { (hasPaywallNote(e) ? out.paywalled : out.notChecked).push(e); out.relevant.push(e); }
       continue;
     }
     if (r.s !== 'endorsed' && (explainsOnly(e) || !picks)) { out.guides.push(e); continue; }
     out.relevant.push(e);
     if (r.s === 'no_position') { out.noStand.push(e); continue; }
-    if (r.s === 'not_found') { out.notFound.push(e); continue; }
+    // The record decides the state. A paywalled paper's "not found" is "No endorsements found" when
+    // its source was read (the Orlando Sentinel: "Checked the board's current general-election
+    // slate ... No November endorsement for this race was listed"), and only its paywall note when
+    // the record says the page couldn't be read (`unreadable`). Never both, and a paywalled paper
+    // with no record here gets only the note (above), never "Not checked yet" as well.
+    if (r.s === 'not_found') { (r.unreadable && hasPaywallNote(e) ? out.paywalled : out.notFound).push(e); continue; }
     if (r.both) { out.both.push(e); continue; }
     // Two sources naming the same candidates in a different order agree. In a ranked-choice
     // race a source's list is a ranking, so sources are grouped by their first choice ("Novick
@@ -173,13 +189,13 @@ export function tally(l: Lineup): string {
 }
 
 export type VKind = 'mine' | 'agree' | 'split' | 'none' | 'review';
-export type NoneWhy = 'no_stand' | 'not_found' | 'not_checked' | 'no_cover' | 'no_sources' | 'both' | 'mixed';
+export type NoneWhy = 'no_stand' | 'not_found' | 'not_checked' | 'paywall' | 'no_cover' | 'no_sources' | 'both' | 'mixed';
 /* shade: 'one' when a single source weighed in (one group is not a consensus), 'lean' for a
    lopsided split (2 to 1 or wider), 'even' for a close one. The view styles each differently. */
 export interface Verdict { kind: VKind; main: string; sub: string; why?: NoneWhy; filled?: boolean; tone?: 'fav' | 'unfav' | 'mixed' | 'none'; shade?: 'one' | 'lean' | 'even' }
 
 export const NONE_WORDS: Record<NoneWhy, string> = {
-  no_stand: 'Took no stand', not_found: 'No endorsements found', not_checked: 'Not checked yet',
+  no_stand: 'Took no stand', not_found: 'No endorsements found', not_checked: 'Not checked yet', paywall: 'Behind a paywall',
   // The common case on local races: a quiet invitation on the row, said once on the section band.
   no_cover: 'Not covered by your sources', no_sources: 'No sources on', both: 'Listed both sides',
   mixed: 'No endorsements',
@@ -193,6 +209,7 @@ export function noneWhy(l: Lineup, anyChosen: boolean): NoneWhy {
   if (l.noStand.length) states.push('no_stand');
   if (l.notFound.length) states.push('not_found');
   if (l.notChecked.length) states.push('not_checked');
+  if (l.paywalled.length) states.push('paywall');
   if (l.both.length) states.push('both');
   return states.length === 1 ? states[0] : 'mixed';
 }
@@ -204,6 +221,7 @@ export function noneCounts(l: Lineup): string {
     l.notFound.length ? `nothing found for ${l.notFound.length}` : '',
     l.notChecked.length ? `${l.notChecked.length} not checked yet` : '',
     l.both.length ? `${l.both.length} listed both sides` : '',
+    l.paywalled.length ? `${l.paywalled.length} behind a paywall` : '',
   ].filter(Boolean)[0] || '';
 }
 
@@ -218,13 +236,29 @@ function lineupUnderPick(l: Lineup, it: Item): string {
   return named ? `${named}: ${lab}` : `all ${w.length}: ${lab}`;
 }
 
+/* How a filled row's verdict names its fill. A fill from one source names it ("Filled from Knock
+   LA"), so a single paper's pick never reads like the agreement of several; two or more that agreed
+   read "Filled from your sources". The saved reason lists the sources by short name, and a list that
+   is exactly one source's name is one source (names can hold commas). */
+export const FILL_SOURCES = 'Filled in from your sources: ';
+function filledFrom(auto: string): string {
+  if (auto.startsWith(FILL_SOURCES)) {
+    const list = auto.slice(FILL_SOURCES.length);
+    const one = S.ballot!.endorsers.find((e) => e.short === list);
+    return one ? `Filled from ${one.short}` : 'Filled from your sources';
+  }
+  if (/party|candidate on the ballot|^Filled in with the .+ candidate/i.test(auto)) return 'Filled from your party';
+  if (/review/i.test(auto)) return 'Filled from the review';
+  return 'Filled from your sources';
+}
+
 export function verdict(it: Item): Verdict {
   const l = lineup(it);
   const s = status(it);
   if (s === 'decided' || s === 'auto' || s === 'skipped') {
     // A filled pick says where it came from, in a few words; what the sources said is in the open row.
     const auto = S.b.auto[it.id];
-    const from = auto ? (/party|candidate on the ballot|^Filled in with the .+ candidate/i.test(auto) ? 'Filled from your party' : /review/i.test(auto) ? 'Filled from the review' : 'Filled from your sources') : '';
+    const from = auto ? filledFrom(auto) : '';
     return { kind: 'mine', main: pickShort(it) || 'Decided', sub: s === 'skipped' ? '' : from || lineupUnderPick(l, it), filled: !!auto };
   }
   // Judges: the official review, in its own neutral style. It is not one of your sources.
@@ -237,7 +271,7 @@ export function verdict(it: Item): Verdict {
     const why = noneWhy(l, chosen().length > 0);
     // A judge with no review in our data yet and no source picks: point to what the row holds.
     // (A wording choice only: no fact is read out of the prose.)
-    if (it.kind === 'contest' && it.is_retention && (why === 'no_cover' || why === 'not_checked')) {
+    if (it.kind === 'contest' && it.is_retention && (why === 'no_cover' || why === 'not_checked' || why === 'paywall')) {
       const reviewed = /commission|evaluat|review|rated|recommend|bar association|poll/i.test(`${it.why_it_matters || ''} ${it.candidates.map((c) => c.own_words.map((o) => o.text).join(' ')).join(' ')}`);
       return { kind: 'none', main: reviewed ? 'See the review' : 'Keep or remove?', sub: '', why };
     }

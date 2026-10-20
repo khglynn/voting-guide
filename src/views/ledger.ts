@@ -7,7 +7,7 @@
 import type { Contest, Item, PlaceBundle } from '../types';
 import { S } from '../state';
 import {
-  SECTIONS, type SectionKey, type Entry, type Group, entriesBySection, status, isDecision, sectionOf, decisionItems, isMultiJudge,
+  SECTIONS, type SectionKey, type Entry, type Group, entriesBySection, status, isDecision, sectionOf, decisionItems, isMultiJudge, isMaybe,
 } from '../ballot';
 import { esc, hash, plural } from '../util';
 import { rowTitle, measureTag, courtGroup, cleanOffice, optionLabel } from '../model/labels';
@@ -101,7 +101,7 @@ export function rowHTML(it: Item): string {
   else vd = verdictHTML(verdict(it));
   const tags: string[] = [];
   if (b.onlyIn[it.id]) tags.push(`Only in ${b.onlyIn[it.id].join(', ')}`);
-  else if (b.mayApply.has(it.id) || (b.groupOf[it.id] && S.b.districts[b.groupOf[it.id]] === '*')) tags.push('Maybe on your ballot');
+  else if (isMaybe(it.id)) tags.push('Maybe on your ballot');
   const cls = ['row', decided ? 'is-done' : '', open ? 'is-open' : '', s === 'info' ? 'is-info' : '', S.ui.keep === it.id ? 'just' : ''].filter(Boolean).join(' ');
   return `<li class="${cls}" id="i-${esc(it.id)}" data-item="${esc(it.id)}"${s === 'open' ? ' data-undecided' : ''}>
     <button class="row-hd" data-act="row" data-id="${esc(it.id)}" aria-expanded="${open}" data-fk="row-${esc(it.id)}">
@@ -212,7 +212,8 @@ function foldSummary(entries: Entry[]): string {
     const v = verdict(it);
     if (v.kind === 'mine') bits.push(v.main);
   }
-  if (keep || remove) bits.unshift([keep ? `Keep ${keep}` : '', remove ? `remove ${remove}` : ''].filter(Boolean).join(', '));
+  // The summary starts with a capital: "Keep 2, remove 1", or "Remove 1" when nothing is kept.
+  if (keep || remove) bits.unshift([keep ? `Keep ${keep}` : '', remove ? `${keep ? 'remove' : 'Remove'} ${remove}` : ''].filter(Boolean).join(', '));
   return bits.join(', ');
 }
 
@@ -256,6 +257,37 @@ export const hiddenByOnly = (e: Entry): boolean => {
   if (e.id === S.ui.keep || e.id === S.ui.row) return false;
   return status(S.ballot!.byId.get(e.id)!) !== 'open';
 };
+/* Other school districts' races: "may apply" school races outside any district question. Three
+   or more fold into one row on the ballot ("Other school districts that touch Austin"), and the
+   cheat sheet leaves out the undecided ones while that row is closed. */
+export const OTH_KEY = 'school|oth';
+export function otherSchools(entries: Entry[]): Entry[] {
+  const b = S.ballot!;
+  const oth = entries.filter((e) => (e.t === 'item' || e.t === 'notmine') && b.mayApply.has(e.id) && b.byId.get(e.id)!.kind === 'contest' && !b.groupOf[e.id] && status(b.byId.get(e.id)!) !== 'unopposed');
+  return oth.length >= 3 ? oth : [];
+}
+export const othOpen = (oth: Entry[]): boolean => S.ui.unfolded.has(OTH_KEY) || oth.some((e) => e.t === 'item' && (e.id === S.ui.row || e.id === S.ui.keep));
+/* Every choice and district question in the order the page draws them: sections in SECTIONS
+   order, then rows in each section's own order (rowsHTML keeps it; unopposed races, which are not
+   choices, are the only rows it moves). "N of M decided" in the bar walks this list. key is an
+   item id or "q:<group key>". `folded` marks the other school districts' races while their fold
+   is closed: the page draws none of them, so the walk passes them by. */
+export function pageOrder(): { key: string; done: boolean; folded?: boolean }[] {
+  const b = S.ballot!;
+  const by = entriesBySection();
+  const oth = otherSchools(by.get('school') || []);
+  const shut = new Set(othOpen(oth) ? [] : oth);
+  const out: { key: string; done: boolean; folded?: boolean }[] = [];
+  for (const [sec] of SECTIONS) {
+    for (const e of by.get(sec) || []) {
+      if (e.t === 'question') { out.push({ key: `q:${e.group.key}`, done: false }); continue; }
+      if (e.t !== 'item') continue;
+      const s = status(b.byId.get(e.id)!);
+      if (isDecision(s)) out.push({ key: e.id, done: s !== 'open', ...(shut.has(e) ? { folded: true } : {}) });
+    }
+  }
+  return out;
+}
 /* "Klein ISD" from "Klein ISD Trustee, Position 6": the district's own name, for the fold line. */
 const districtName = (c: Contest): string => {
   const m = c.office.match(/^(.*?\b(?:ISD|CISD|School District|Unified|Public Schools|Schools))\b/i);
@@ -284,10 +316,10 @@ function rowsHTML(sec: SectionKey, entries: Entry[]): string {
   // Other school districts' races (Round Rock, Pflugerville and Leander ISD seats on an East
   // Austin ballot) fold into one row where the first of them would be; open, they list there.
   if (sec === 'school') {
-    const oth = entries.filter((e) => (e.t === 'item' || e.t === 'notmine') && b.mayApply.has(e.id) && b.byId.get(e.id)!.kind === 'contest' && !b.groupOf[e.id] && status(b.byId.get(e.id)!) !== 'unopposed');
-    if (oth.length >= 3) {
-      const k = 'school|oth';
-      const open = S.ui.unfolded.has(k) || oth.some((e) => e.t === 'item' && (e.id === S.ui.row || e.id === S.ui.keep));
+    const oth = otherSchools(entries);
+    if (oth.length) {
+      const k = OTH_KEY;
+      const open = othOpen(oth);
       const names = [...new Set(oth.map((e) => districtName(b.byId.get((e as { id: string }).id) as Contest)))];
       const live = oth.filter((e) => e.t === 'item');
       const city = b.places.length === 1 ? b.places[0].label.replace(/\s*\(.*\)$/, '') : 'your area';

@@ -39,6 +39,9 @@ for (const m of ['lens', 'tally', 'bulk', 'judges', 'labels', 'plan']) {
   const f = path.join(ROOT, 'src', 'model', `${m}.ts`);
   if (fs.existsSync(f)) mods[m] = await load(`/src/model/${m}.ts`);
 }
+/* The string views the ledger paints (no DOM needed to build their HTML). */
+const views = {};
+for (const v of ['ledger', 'cheat', 'open', 'lens']) views[v] = await load(`/src/views/${v}.ts`);
 
 const results = [];
 const check = (name, ok, extra = '') => { results.push({ name, ok }); console.log(`${ok ? 'PASS' : 'FAIL'}  ${name}${!ok && extra ? `  (${extra})` : ''}`); };
@@ -53,6 +56,28 @@ function open(stCode, placeIds, b = null) {
   return ballot;
 }
 const head = (link) => st.parseShareHead(link);
+
+/* ---------- 0. the address lookup adds the state and ZIP the guide already knows ---------- */
+{
+  const w = geo.withPlace;
+  check('Address: a bare street gets the state and ZIP', w('2 Main St', 'TX', '78701') === '2 Main St, TX 78701', w('2 Main St', 'TX', '78701'));
+  check('Address: a street with a city gets the state and ZIP after it', w('2 Main St, Austin', 'TX', '78701') === '2 Main St, Austin, TX 78701');
+  check('Address: one that ends in a ZIP is left alone', w('2 Main St, Austin, TX 78702', 'TX', '78701') === '2 Main St, Austin, TX 78702');
+  check('Address: one that ends in the state gets only the ZIP', w('2 Main St Austin TX', 'TX', '78701') === '2 Main St Austin TX 78701' && w('2 Main St, Austin, Texas', 'TX', '78701') === '2 Main St, Austin, Texas 78701');
+  check('Address: with no ZIP known, the state alone', w('2 Main St', 'CO', null) === '2 Main St, CO');
+  check('Address: trailing commas and spaces are trimmed', w('2 Main St, ', 'CO', '80205') === '2 Main St, CO 80205');
+}
+
+/* ---------- 0b. a publication sided only by its own mission sits with the groups, off by default ---------- */
+{
+  const lens = await load('/src/model/lens.ts');
+  const b = open('CA', ['los-angeles-ca']);
+  const knock = b.endorsers.find((e) => e.id === 'knock-la');
+  const ids = (k) => lens.chipMembers(b, k).map((e) => e.id);
+  check('Lens: Knock LA is off by default', !!knock && knock.default_on === false, JSON.stringify(knock && { d: knock.default_on, k: knock.lean_basis_kind }));
+  check('Lens: Knock LA is a progressive group, not a newspaper', ids('progressive').includes('knock-la') && !ids('papers').includes('knock-la'));
+  check('Lens: papers rated from outside stay in the default', ['la-times-eb', 'sac-bee-eb'].some((id) => ids('papers').includes(id)), ids('papers').join(','));
+}
 
 /* ---------- 1. the pinned v1 link from the live site (DC Ward 1, before ranked choice) ---------- */
 {
@@ -183,7 +208,7 @@ function roundTrip(name, stCode, places, mutate) {
 const extra = path.join(ROOT, 'tests', 'model-ledger.mjs');
 if (fs.existsSync(extra)) {
   const { run } = await import(extra);
-  await run({ st, bl, util, geo, common, mods, open, head, read, INDEX, check });
+  await run({ st, bl, util, geo, common, mods, views, open, head, read, INDEX, check });
 }
 
 await vite.close();

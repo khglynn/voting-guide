@@ -3,7 +3,7 @@
    because the save link and saved picks depend on it. */
 import type { Contest, Item } from './types';
 import { S, persist, forgetLast, emptyBallotState, type View } from './state';
-import { status, sectionOf, decisionItems, rankMax, ordinal, chosenIds, type SectionKey } from './ballot';
+import { status, sectionOf, rankMax, ordinal, chosenIds, type SectionKey } from './ballot';
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
 import { render, renderRow, renderSection, renderSummaries, renderLens, renderBallot, renderAddr, rowEl, scrollRowIntoView, anchored, $ } from './render';
 import { openBallot, go, openReader, runAddress } from './app';
@@ -14,6 +14,7 @@ import { courtGroup } from './model/labels';
 import { basisWords, LEANS } from './views/common';
 import { cheatText, shareURL } from './views/cheat';
 import { messages } from './views/pass';
+import { pageOrder } from './views/ledger';
 
 export type Act = (d: DOMStringMap, el: HTMLElement) => void | Promise<void>;
 export const A: Record<string, Act> = {};
@@ -49,34 +50,52 @@ A.row = (d) => {
   renderRow(key, false);
   scrollRowIntoView(key);
 };
-A.goto = (d) => {
-  const id = d.id!;
-  const it = B().byId.get(id);
+/* The item behind a row key: an item id, or "q:<group key>" (its first district's race). */
+const itemOfKey = (key: string): Item | undefined => {
+  const b = B();
+  if (!key.startsWith('q:')) return b.byId.get(key);
+  const g = b.groups.find((x) => `q:${x.key}` === key);
+  return g ? b.byId.get(g.members[0]) : undefined;
+};
+/* Open one row on the ballot from anywhere (a cheat-sheet line, a judge's name, the bar): an item
+   id, or "q:<group key>" for a district question. Its section and court group unfold, and the row
+   that was open closes, so a jump never leaves a trail of open rows behind it. */
+function openAt(key: string): void {
+  const it = itemOfKey(key);
   if (!it) return;
   if (S.ui.view !== 'ballot') go('ballot');
   const sec = sectionOf(it);
   S.ui.folded.delete(sec);
   S.ui.unfolded.add(sec);
   if (it.kind === 'contest') S.ui.unfolded.add(`${sec}|${courtGroup(it)}`); // its court group, if the section folds into groups
-  S.ui.row = id;
+  const prev = S.ui.row;
+  S.ui.row = key;
+  const prevIt = prev && prev !== key ? itemOfKey(prev) : undefined;
+  if (prevIt && sectionOf(prevIt) !== sec) renderSection(sectionOf(prevIt));
   renderSection(sec);
-  scrollRowIntoView(id, true);
-  $(`[data-fk="row-${CSS.escape(id)}"]`)?.focus({ preventScroll: true });
-};
+  scrollRowIntoView(key, true);
+  $(`[data-fk="row-${CSS.escape(key.startsWith('q:') ? rowEl(key)?.id || '' : key)}"]`)?.focus({ preventScroll: true });
+}
+A.goto = (d) => { openAt(d.q ? `q:${d.q}` : d.id!); };
+/* "N of M decided": the next undecided row or district question after where you are, in the
+   order the page draws them, wrapping to the first. "Where you are" is the last row at or above
+   the reading line (just under the lens bar while it sticks), and never before the row you have
+   open, so a row parked under a tall bar is not picked again. The closed "Other school districts"
+   fold says "Open only if one of them is yours", so the walk skips its races; only when nothing
+   else is left does it open the first of them. */
 A.next = () => {
-  const items = decisionItems().filter((i) => !i.done);
-  if (!items.length) return;
-  const b = B();
-  // The first undecided below the current scroll position, else the first one.
-  const pick = items.find((i) => { const el = rowEl(i.id); return el && el.getBoundingClientRect().top > 80; }) || items[0];
-  const id = pick.question ? b.groups.find((g) => `q:${g.key}` === pick.id)!.members[0] : pick.id;
-  const sec = sectionOf(b.byId.get(id)!);
-  S.ui.folded.delete(sec);
-  if (!pick.question) { A.goto({ id } as DOMStringMap, document.body); return; }
-  S.ui.row = pick.id;
-  renderSection(sec);
-  scrollRowIntoView(pick.id, true);
-  $(`[data-fk="row-${CSS.escape(rowEl(pick.id)?.id || '')}"]`)?.focus({ preventScroll: true });
+  const all = pageOrder();
+  const order = all.filter((x) => !x.folded);
+  const left = order.filter((x) => !x.done);
+  if (!left.length) { const f = all.find((x) => !x.done); if (f) openAt(f.key); return; }
+  const lens = $('#lensbar');
+  const lr = lens ? lens.getBoundingClientRect() : null;
+  const line = (lens && lr && getComputedStyle(lens).position === 'sticky' && lr.top <= 1 ? lr.bottom : 0) + 8;
+  let at = -1;
+  order.forEach((x, i) => { const el = rowEl(x.key); if (el && el.getClientRects().length && el.getBoundingClientRect().top <= line) at = i; });
+  if (S.ui.row) at = Math.max(at, order.findIndex((x) => x.key === S.ui.row));
+  const pick = order.find((x, i) => i > at && !x.done) || left.find((x) => x.key !== S.ui.row) || left[0];
+  openAt(pick.key);
 };
 A.page = (d) => { S.ui.page[d.id!] = Number(d.v); renderRow(d.id!); $(`[data-fk="pg-${CSS.escape(d.id!)}"]`)?.focus({ preventScroll: true }); };
 A.others = (d) => { const k = d.id!; S.ui.others.has(k) ? S.ui.others.delete(k) : S.ui.others.add(k); renderRow(k); };

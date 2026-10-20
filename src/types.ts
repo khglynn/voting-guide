@@ -133,6 +133,11 @@ export interface Endorser {
   paywall_note_ok?: false;
   /* This source's own wording for the note, when the data gives one; otherwise the app's. */
   paywall_note?: string;
+  /* The place ids in the source's own geography, when it names any (a regional paper, even one that
+     also picks statewide races, or a county party). Absent when it names none, and for a party or
+     group whose geography names its state (a statewide group). "Not checked yet" on a district race
+     needs the ballot's place in here. */
+  home_places?: string[];
 }
 
 export interface Endorsement {
@@ -144,6 +149,9 @@ export interface Endorsement {
   date: string | null;
   conf: Confidence;
   both?: boolean;
+  /* A not_found row whose record says the source's page couldn't be read (a paywall or an access
+     block). A paywalled paper's row then shows its paywall note instead of "No endorsements found". */
+  unreadable?: true;
 }
 
 export interface Deadline { method?: string; date: string | null; rule: string; source?: string; time?: string | null }

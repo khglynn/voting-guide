@@ -4,7 +4,7 @@
 import type { Index, PlaceBundle, StateBundle, Contest } from './types';
 import { S, emptyBallotState, persist, savedBallot, parseShareHead, decodeShare, normalizeRanks, type BallotState, type View } from './state';
 import { buildBallot, contestDistrict, entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, rankMax } from './ballot';
-import { zipState, censusLookup, placeFromGeo, type GeoResult } from './geo';
+import { zipState, censusLookup, placeFromGeo, withPlace, type GeoResult } from './geo';
 import { toast, hideToast, plural } from './util';
 import { render, renderBallot, renderAddr, $ } from './render';
 import { setInvolved, type GetInvolved } from './views/pass';
@@ -163,8 +163,16 @@ export async function runAddress(addr: string): Promise<void> {
   if (!b && !choosing) return;
   if (addr.trim().length < 6) { S.ui.addrMsg = 'Enter a street address with the city or ZIP.'; renderAddr(); return; }
   S.ui.addrBusy = true; S.ui.addrMsg = null; renderAddr();
+  // Add the state and ZIP we already know; if that finds nothing (a typo in the ZIP, or an
+  // address across a ZIP line), try once more with exactly what they typed.
+  const st = choosing && S.zipChoice ? S.index!.places[S.zipChoice.placeIds[0]]?.state || null : b!.st;
+  const zip = choosing && S.zipChoice ? S.zipChoice.zip : S.b.zip || null;
+  const full = withPlace(addr, st, zip);
   let r: GeoResult | null;
-  try { r = await censusLookup(addr.trim()); }
+  try {
+    r = await censusLookup(full);
+    if (!r && full !== addr.trim()) r = await censusLookup(addr.trim());
+  }
   catch { S.ui.addrBusy = false; S.ui.addrMsg = 'The Census lookup didn’t answer. Try again, or pick your districts yourself.'; renderAddr(); return; }
   S.ui.addrBusy = false;
   if (!r) { S.ui.addrMsg = 'The Census lookup couldn’t find that address. Try adding the city and ZIP.'; renderAddr(); return; }

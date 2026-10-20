@@ -3,31 +3,45 @@
    on is its own step after it. Test hooks: #cheat and #r-print tables, tr[data-cs] rows. */
 import type { Contest, Item } from '../types';
 import { S, encodeShare } from '../state';
-import { SECTIONS, entriesBySection, status, isDecision, isMultiJudge, isRCV, ranksOf, ordinal } from '../ballot';
+import { SECTIONS, entriesBySection, status, decisionItems, isMultiJudge, isRCV, isMaybe, ranksOf, ordinal } from '../ballot';
 import { esc, fmtDate } from '../util';
 import { cheatTitle, pickLabel } from '../model/labels';
 import { nextStep } from '../model/plan';
-import { sectionTitle } from './ledger';
+import { sectionTitle, otherSchools, othOpen } from './ledger';
 
-interface Line { sec: string; it: Item | null; title: string; label: string | null; note: string; unopposed: boolean; question?: boolean }
+/* maybe: a pick on a race the ballot marks "Maybe on your ballot", so the sheet says "if it's on
+   your ballot" instead of presenting it as certain. */
+interface Line { sec: string; it: Item | null; title: string; label: string | null; note: string; unopposed: boolean; question?: boolean; q?: string; maybe?: boolean }
 
 const rankedList = (it: Item | null): string[] => (it && it.kind === 'contest' && isRCV(it) && S.b.picks[it.id] !== 'SKIP' ? ranksOf(it.id) : []);
 const rankNote = (it: Contest): string => `Ranked choice: rank up to ${it.rank_up_to}`;
+
+const MAYBE = 'If it’s on your ballot';
+/* An unanswered district question: the ballot's own words, and a tap that takes you to it. */
+const Q_SUB = 'Depends on your district';
+const Q_ACT = 'Pick your district';
 
 function lines(): Line[] {
   const b = S.ballot!;
   const by = entriesBySection();
   const out: Line[] = [];
+  // Races folded under "Other school districts that touch ..." stay off the sheet, as on the
+  // ballot, unless you decided one, wrote a note on it, or opened that row as yours.
+  const oth = otherSchools(by.get('school') || []);
+  const hidden = new Set(othOpen(oth) ? [] : oth.map((e) => (e as { id: string }).id));
   for (const [k] of SECTIONS) {
     const label = sectionTitle(k);
     for (const e of by.get(k) || []) {
-      if (e.t === 'question') { out.push({ sec: label, it: null, title: e.group.office, label: null, note: 'Depends on your district. Pick it in the guide or check your sample ballot.', unopposed: false, question: true }); continue; }
+      if (e.t === 'question') { out.push({ sec: label, it: null, title: e.group.office, label: null, note: '', unopposed: false, question: true, q: e.group.key }); continue; }
       if (e.t !== 'item') continue;
       const it = b.byId.get(e.id)!;
       const s = status(it);
       if (s === 'info') continue;
+      const note = (S.b.notes[it.id] || '').trim();
       const unopposed = s === 'unopposed';
-      out.push({ sec: label, it, title: cheatTitle(it), label: unopposed && it.kind === 'contest' ? `${it.candidates[0].name} (unopposed)` : pickLabel(it), note: (S.b.notes[it.id] || '').trim(), unopposed });
+      const pick = unopposed ? null : pickLabel(it);
+      if (hidden.has(it.id) && !pick && !note) continue;
+      out.push({ sec: label, it, title: cheatTitle(it), label: unopposed && it.kind === 'contest' ? `${it.candidates[0].name} (unopposed)` : pick, note, unopposed, maybe: !!pick && s !== 'skipped' && isMaybe(it.id) });
     }
   }
   return out;
@@ -58,13 +72,14 @@ export function cheatText(): string {
     const it = l.it;
     const ranks = rankedList(it);
     if (ranks.length) {
-      out.push(`${l.title} (${rankNote(it as Contest).toLowerCase()}):`);
+      out.push(`${l.title} (${rankNote(it as Contest).toLowerCase()})${l.maybe ? ` (${MAYBE.toLowerCase()})` : ''}:`);
       ranks.forEach((n, i) => out.push(`  ${ordinal(i + 1)}: ${n}`));
       if (l.note) out.push(`  Note: ${l.note}`);
       continue;
     }
+    if (l.question) { out.push(`${l.title}: ____ (${Q_SUB.toLowerCase()})`); continue; }
     const short = it && it.kind === 'measure' && it.short_title ? ` (${it.short_title})` : '';
-    out.push(`${l.title}${short}: ${l.label || '____'}`);
+    out.push(`${l.title}${short}: ${l.label || '____'}${l.maybe ? ` (${MAYBE.toLowerCase()})` : ''}`);
     if (it && it.kind === 'contest' && isMultiJudge(it)) {
       it.candidates.forEach((c) => { const v = S.b.picks[`${it.id}|${c.name}`]; out.push(`  ${c.name}: ${v === 'YES' ? 'Yes' : v === 'NO' ? 'No' : '____'}`); });
     }
@@ -81,29 +96,38 @@ function tableHTML(forPrint: boolean): string {
   for (const l of lines()) {
     if (l.unopposed && !forPrint) continue;
     if (l.sec !== sec) { sec = l.sec; rows.push(`<tr class="cs-sec"><th colspan="2" scope="colgroup">${esc(sec)}</th></tr>`); }
+    if (l.question) {
+      // The line goes back to the ballot with that question open, like every other line.
+      const qgo = forPrint ? '' : ` data-act="goto" data-q="${esc(l.q!)}"`;
+      rows.push(`<tr class="cs-q"${qgo}><th scope="row">${esc(l.title)}<span class="cs-sub">${Q_SUB}</span>${qgo ? `<button class="cs-go"${qgo}>${Q_ACT}<span class="vh"> for ${esc(l.title)}</span></button>` : ''}</th><td class="undecided">${forPrint ? '________________' : Q_ACT}</td></tr>`);
+      continue;
+    }
     const it = l.it;
     const go = it && !forPrint ? ` data-act="goto" data-id="${esc(it.id)}"` : '';
     const ranks = rankedList(it);
     // The title stays a plain text node (tests read it that way). The whole line is the tap
     // target; the "Change" button stays for keyboards and screen readers, shown only on focus.
     const short = it && it.kind === 'measure' && it.short_title ? `<span class="cs-sub">${esc(it.short_title)}</span>` : '';
+    const maybe = l.maybe ? `<span class="cs-sub cs-if">${MAYBE}</span>` : '';
     const title = (extra = '') => `<th scope="row">${esc(l.title)}${short}${extra}${l.note ? `<span class="cs-note">Note: ${esc(l.note)}</span>` : ''}${go ? `<button class="cs-go"${go}>Change<span class="vh"> ${esc(l.title)}</span></button>` : ''}</th>`;
     if (it && it.kind === 'contest' && isRCV(it) && (ranks.length || !l.label)) {
       const body = ranks.length ? `<ol class="cs-ranks">${ranks.map((n, i) => `<li><span class="cs-rk">${ordinal(i + 1)}</span> ${esc(n)}</li>`).join('')}</ol>` : blank;
-      rows.push(`<tr data-cs="${esc(it.id)}"${go}>${title(`<span class="cs-sub">${esc(rankNote(it))}</span>`)}<td class="${ranks.length ? '' : 'undecided'}">${body}</td></tr>`);
+      rows.push(`<tr data-cs="${esc(it.id)}"${go}>${title(`<span class="cs-sub">${esc(rankNote(it))}</span>`)}<td class="${ranks.length ? '' : 'undecided'}">${body}${maybe}</td></tr>`);
       continue;
     }
     const multi = !!it && it.kind === 'contest' && isMultiJudge(it);
     const sub = it && it.kind === 'contest' && multi ? `<ul class="cs-judges">${it.candidates.map((c) => { const v = S.b.picks[`${it.id}|${c.name}`]; return `<li>${esc(c.name)}: <strong>${v === 'YES' ? 'Yes' : v === 'NO' ? 'No' : '<span class="print-only">____</span><span class="screen-only">not decided</span>'}</strong></li>`; }).join('')}</ul>` : '';
-    rows.push(`<tr${it ? ` data-cs="${esc(it.id)}"` : ''}${go}>${title()}<td class="${l.label ? '' : 'undecided'}">${l.label ? esc(l.label) : blank}${sub}</td></tr>`);
+    rows.push(`<tr${it ? ` data-cs="${esc(it.id)}"` : ''}${go}>${title()}<td class="${l.label ? '' : 'undecided'}">${l.label ? esc(l.label) : blank}${maybe}${sub}</td></tr>`);
   }
   return `<table class="cs-table"><tbody>${rows.join('')}</tbody></table>`;
 }
 
 export function cheatHTML(forPrint = false): string {
   const b = S.ballot!;
-  const all = lines().filter((l) => !l.it || isDecision(status(l.it)));
-  const done = all.filter((l) => l.label).length;
+  // The bar's own count: choices only (a district question is setup, not a choice), decided the
+  // same way, so the sheet and the bar never give two totals for one ballot.
+  const all = decisionItems().filter((i) => !i.question);
+  const done = all.filter((i) => i.done).length;
   const where = b.places.length ? b.places.map((p) => p.label).join(' or ') : b.stateName;
   // On screen the sheet is paper torn off a pad: a rendered top and a fill that continues its light.
   return `<div class="cheat">${forPrint ? '' : '<span class="sheet-top" aria-hidden="true"></span><span class="sheet-fill" aria-hidden="true"></span>'}

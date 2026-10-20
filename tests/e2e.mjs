@@ -767,8 +767,11 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
     States: [{ STATE: fips }], 'Incorporated Places': [{ BASENAME: place }], '119th Congressional Districts': [{ BASENAME: String(cd) }],
     '2024 State Legislative Districts - Upper': [{ BASENAME: String(upper) }] } }] } });
   const answer = geoFor('17', 'Aurora', 14, 25);
+  const asked = [];
   await page.route('https://geocoding.geo.census.gov/**', (route) => {
-    const cb = new URL(route.request().url()).searchParams.get('callback');
+    const u = new URL(route.request().url());
+    asked.push(u.searchParams.get('address') || '');
+    const cb = u.searchParams.get('callback');
     return route.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify(answer)})` });
   });
   await openZip(page, '80247');
@@ -780,6 +783,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   const msg = await text(page, 'form[data-form="addr"] [role="status"]');
   check('Address: a Census match in Aurora, Illinois does not open Aurora, Colorado', /outside Colorado/.test(msg) && !(await page.$('#plan')), msg);
   check('Address: what you typed stays in the box after a miss', (await page.inputValue('#addr-in').catch(() => '')) === 'a test lookup');
+  check('Address: the lookup adds the state and ZIP you entered', asked[0] === 'a test lookup, CO 80247', asked.join(' | '));
   noErrors(page, 'Address in the wrong state');
   await ctx.close();
 }
@@ -815,6 +819,76 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await page.waitForSelector('#plan', { timeout: 15000 });
   check('Address: Aurora, Colorado opens its ballot and answers its districts', /Aurora/.test(await text(page, '.place')) && /Filled in \d+ districts? from your address/.test(await text(page, '.toast')), await text(page, '.toast'));
   noErrors(page, 'Address');
+  await ctx.close();
+}
+
+// Nav review, Oct 20: "N of M decided" walks the page in its own order, from the first thing on it
+// (LA's U.S. House question), one row open at a time, and never sticks on a row parked under a tall
+// sticky lens bar (the wrapped chips of wide screens make it 117px).
+for (const width of [380, 1280]) {
+  const { ctx, page } = await newPage({ viewport: { width, height: 900 } });
+  await openBallot(page, '90004');
+  if (width > 600) await page.addStyleTag({ content: '#lensbar .chips { flex-wrap: wrap; }' });
+  const all = await page.evaluate(() => [...document.querySelectorAll('.ledger .row[data-item], .ledger .row[data-q]')].map((e) => e.id));
+  await page.evaluate(() => window.scrollTo(0, 0));
+  const opened = [];
+  let oneAtATime = true;
+  for (let i = 0; i < 8; i++) {
+    await tap(page, '[data-act="next"]');
+    const open = await page.$$eval('.ledger .row.is-open', (els) => els.map((e) => e.id));
+    if (open.length !== 1) oneAtATime = false;
+    opened.push(open[open.length - 1] || '');
+  }
+  const idx = opened.map((id) => all.indexOf(id));
+  check(`Next at ${width}px: starts at the first thing on the page, the U.S. House question`, /^q-/.test(opened[0]) && (await page.evaluate((id) => !!document.querySelector(`#${id}[data-q^="federal|"]`), opened[0])), opened[0]);
+  check(`Next at ${width}px: eight taps open eight different rows, in page order`, new Set(opened).size === 8 && idx.every((v, i) => v >= 0 && (!i || v > idx[i - 1])), opened.join(' > '));
+  check(`Next at ${width}px: a jump closes the row that was open`, oneAtATime);
+  // A jump into another section from the cheat sheet closes the row left open here, too.
+  await tap(page, '[data-act="cheat"]');
+  await page.waitForSelector('#cheat');
+  const mLine = await page.evaluate(() => { const r = document.querySelector('#cheat tr[data-cs^="ca-prop"]'); return r && r.dataset.cs; });
+  if (mLine) await tap(page, `#cheat tr[data-cs="${mLine}"]`);
+  const after = await page.$$eval('.ledger .row.is-open', (els) => els.map((e) => e.id));
+  check(`Next at ${width}px: a cheat-sheet jump to a measure leaves only that row open`, !!mLine && after.length === 1 && after[0] === `i-${mLine}`, after.join(', '));
+  noErrors(page, `Next at ${width}px`);
+  await ctx.close();
+}
+
+// Review, Oct 20: on Austin, Next opened the folded "Other school districts that touch Austin" races
+// one by one (seven taps through Round Rock, Pflugerville and Leander ISD). The fold says "Open only
+// if one of them is yours", so Next passes it by while it is closed and goes on to the measures.
+{
+  const { ctx, page } = await newPage();
+  await openBallot(page, '78704');
+  await page.evaluate(() => window.scrollTo(0, 0));
+  const opened = [];
+  for (let i = 0; i < 45; i++) {
+    await tap(page, '[data-act="next"]');
+    const o = await page.$$eval('.ledger .row.is-open', (els) => els.map((e) => `${e.dataset.fold ? 'fold:' : ''}${e.dataset.item || `q:${e.dataset.q}`}`));
+    opened.push(o.join('+'));
+    if (o.some((k) => /^tx-austin-prop/.test(k))) break;
+  }
+  const inFold = opened.filter((k) => k.startsWith('fold:'));
+  check('Next on Austin: never opens a race inside the closed "Other school districts" fold', inFold.length === 0, inFold.join(', '));
+  check('Next on Austin: goes on past the fold to the measures', opened.some((k) => /^tx-austin-prop/.test(k)) && !(await page.$('.grp.oth [aria-expanded="true"]')), opened.slice(-4).join(' > '));
+  noErrors(page, 'Next on Austin');
+  await ctx.close();
+}
+
+// Walks, Oct 20: a cheat-sheet line for an unanswered district question was dead. It now goes back
+// to the ballot with that question open.
+{
+  const { ctx, page } = await newPage();
+  await openBallot(page, '32801');
+  await tap(page, '[data-act="cheat"]');
+  await page.waitForSelector('#cheat');
+  const key = await page.evaluate(() => { const r = document.querySelector('#cheat tr[data-q]'); return r && r.dataset.q; });
+  check('Orlando cheat sheet: an unanswered district line is a tap ("Pick your district")', !!key && /Pick your district/.test(await text(page, `#cheat tr[data-q="${key}"]`)) && (await page.getAttribute(`#cheat tr[data-q="${key}"]`, 'data-act')) === 'goto', key || 'no line');
+  if (key) {
+    await tap(page, `#cheat tr[data-q="${key}"]`);
+    check('Orlando cheat sheet: tapping it reopens that question on the ballot', !(await page.$('#cheat')) && !!(await page.$(`.row[data-q="${key}"].is-open`)));
+  }
+  noErrors(page, 'Cheat sheet district line');
   await ctx.close();
 }
 

@@ -1,6 +1,6 @@
 /* Model checks for the ledger's own modules (lens, verdict, bulk fills, judges, plan, labels).
    Run by tests/model.mjs, which loads the TypeScript and hands over `check`. */
-export async function run({ st, bl, geo, common, mods, open, head, read, INDEX, check }) {
+export async function run({ st, bl, geo, common, mods, views, open, head, read, INDEX, check }) {
   const { lens, tally, bulk, judges, labels } = mods;
   const plan = mods.plan;
   const S = st.S;
@@ -45,6 +45,224 @@ export async function run({ st, bl, geo, common, mods, open, head, read, INDEX, 
     check('may apply: ACC\'s Pflugerville measure (area not already in ACC) may apply', pf.mayApply.has('tx-acc-prop-a-pflugerville'));
     const lk = open('CO', ['lakewood-co']);
     check('may apply: Jeffco schools cover Lakewood', lk.items.filter((x) => x.kind === 'measure' && /Jeffco/.test(x.jurisdiction)).every((x) => !lk.mayApply.has(x.id)));
+  }
+
+  /* ---------- one source, one endorsement state per row (Orlando and LA walks, Oct 20) ----------
+     "No endorsements found: Orlando Sentinel" sat above "Orlando Sentinel: behind a paywall, so we
+     couldn't read its endorsements here" in the same row. Each source now gets exactly one state in a
+     row, and its record decides which: a paywalled paper's checked "not found" record (the Sentinel
+     read its slate: "No November endorsement for this race was listed") is "No endorsements found";
+     one marked `unreadable` (the Herald: "The current slate could not be read") or no record at all
+     gets only the paywall note, never "Not checked yet" as well (review, Oct 20). */
+  {
+    const pwNote = (e) => e.paywall === true && e.paywall_note_ok !== false;
+    const stateLists = (h) => {
+      const t = h.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+      const grab = (re) => [...t.matchAll(re)].flatMap((m) => m[1].split(/,\s*/)).map((x) => x.trim()).filter(Boolean);
+      return { nf: grab(/No endorsements? found(?: from)?:? ([^.]*)\./g), nc: grab(/Not checked yet: ([^.]*)\./g), pw: grab(/([^.:]*): behind a paywall/g), ns: grab(/([^.]*) took no stand\./g) };
+    };
+    let pwRows = 0, nfRows = 0;
+    for (const [stc, pid] of [['FL', 'orlando-fl'], ['CA', 'los-angeles-ca'], ['IL', 'chicago-il']]) {
+      const b = open(stc, [pid]);
+      S.ui.row = null;
+      tally.clearLineups();
+      const twice = [], wrong = [];
+      for (const it of b.items) {
+        const l = tally.lineup(it);
+        const rec = (e) => (b.ends[it.id] || {})[e.id];
+        // The lineup: a paywalled paper's record decides its state; with no record, only the note.
+        for (const e of l.paywalled) if (rec(e) && !rec(e).unreadable) wrong.push(`${it.id}: ${e.short} was read but reads "behind a paywall"`);
+        for (const e of l.notFound) if (pwNote(e) && rec(e).unreadable) wrong.push(`${it.id}: ${e.short} couldn't be read but reads "No endorsements found"`);
+        for (const e of l.notChecked) if (pwNote(e)) wrong.push(`${it.id}: ${e.short} reads "Not checked yet" beside its paywall note`);
+        for (const e of l.notFound) if (pwNote(e)) nfRows++;
+        // The open row: no source named in two states.
+        const s = stateLists(views.open.openHTML(it));
+        if (s.pw.length) pwRows++;
+        const all = [...s.nf, ...s.nc, ...s.pw, ...s.ns];
+        const dup = [...new Set(all.filter((n, i) => all.indexOf(n) !== i))];
+        if (dup.length) twice.push(`${it.id}: ${dup.join(', ')}`);
+      }
+      check(`one state: ${pid} names every source in exactly one state per row`, twice.length === 0, twice.slice(0, 3).join(' | '));
+      check(`one state: ${pid} reads a paywalled paper's state from its record`, wrong.length === 0, wrong.slice(0, 3).join(' | '));
+    }
+    check('one state: these ballots have paywall notes and read paywalled "not found" records to check', pwRows > 0 && nfRows > 0, `${pwRows} notes, ${nfRows} records`);
+    // The Orlando Clerk row: the Sentinel read its slate and found no pick, so "No endorsements found".
+    const orl = open('FL', ['orlando-fl']);
+    S.ui.row = null;
+    tally.clearLineups();
+    const clerk = orl.byId.get('fl-orange-clerk');
+    const cv = tally.verdict(clerk);
+    const ch = views.open.openHTML(clerk).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+    check('one state: Orlando Clerk reads "No endorsements found" from the Sentinel, as its record says', cv.main === 'No endorsements found' && cv.why === 'not_found' && /No endorsements? found(?: from)?:? Orlando Sentinel/.test(ch) && !/Orlando Sentinel: behind a paywall/.test(ch), `${cv.main} | ${ch.slice(0, 160)}`);
+    const la = open('CA', ['los-angeles-ca']);
+    S.ui.row = null;
+    tally.clearLineups();
+    const lh = views.open.openHTML(la.byId.get('ca-lt-governor')).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+    check('one state: LA Lt. Governor names the Sacramento Bee as "No endorsements found", never "couldn\'t read"', /No endorsements? found[^.]*Sacramento Bee/.test(lh) && !/Sacramento Bee[^.]*: behind a paywall/.test(lh), lh.slice(0, 200));
+    // A record that says the page couldn't be read (Miami Herald, Florida's U.S. Senate race) is the
+    // paywall note alone.
+    open('FL', ['orlando-fl']);
+    S.ui.row = null;
+    tally.clearLineups();
+    const sen = st.S.ballot.byId.get('fl-us-senate-special');
+    const sh = views.open.openHTML(sen).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+    check('one state: Florida\'s Senate race names the Miami Herald, which couldn\'t be read, only in the paywall note', st.S.ballot.ends['fl-us-senate-special']['miami-herald-eb'].unreadable === true && /Miami Herald[^.]*: behind a paywall/.test(sh) && !/No endorsements? found[^.]*Miami Herald/.test(sh), sh.slice(0, 240));
+    // The verdict: a row whose only covering source is a paywalled paper with no record there reads
+    // "Behind a paywall"; beside a source that found nothing, it is mixed and counts only that one.
+    const b = open('FL', ['orlando-fl']);
+    const pws = b.endorsers.filter(pwNote);
+    let hit = null;
+    for (const e of pws) {
+      S.b.sources = [e.id];
+      tally.clearLineups();
+      const it = b.items.find((x) => tally.lineup(x).paywalled.length === 1);
+      if (it) { hit = { e, it }; break; }
+    }
+    check('one state: Orlando has a row where a paywalled paper has no readable record', !!hit);
+    if (hit) {
+      S.b.sources = [hit.e.id];
+      tally.clearLineups();
+      let v = tally.verdict(hit.it);
+      check('one state: a row whose only source is paywalled with no readable record reads "Behind a paywall"', v.kind === 'none' && v.main === 'Behind a paywall' && v.why === 'paywall', JSON.stringify(v));
+      const plain = b.endorsers.find((e) => !pwNote(e) && !e.paywall && (hit.it.kind === 'measure' ? e.endorses_measures : e.endorses_candidates));
+      const keep = b.ends[hit.it.id];
+      b.ends[hit.it.id] = { ...(keep || {}), [plain.id]: { s: 'not_found', c: null } };
+      S.b.sources = [hit.e.id, plain.id];
+      tally.clearLineups();
+      v = tally.verdict(hit.it);
+      check('one state: one found nothing and one is paywalled is mixed, counting only the one that found nothing', v.why === 'mixed' && v.sub === 'nothing found for 1', JSON.stringify(v));
+      if (keep) b.ends[hit.it.id] = keep; else delete b.ends[hit.it.id];
+    }
+    S.b.sources = null;
+    tally.clearLineups();
+  }
+
+  /* ---------- "Not checked yet" only where a source speaks (data review, Oct 20) ----------
+     "Not checked yet: San Antonio Express-News" showed on 16 Austin district races (CD-37 and on):
+     its picks in the two districts Austin shares with San Antonio made it "cover" every one. */
+  {
+    const LOCAL = ['county', 'city', 'school', 'special_district'];
+    const district = (it) => it.kind === 'contest' && !it.every && !LOCAL.includes(it.level);
+    const au = open('TX', ['austin-tx']);
+    const en = au.eById.get('san-antonio-express-news-eb');
+    check('geography: the Express-News names San Antonio as its home', !!en && JSON.stringify(en.home_places) === '["san-antonio-tx"]', en && JSON.stringify(en.home_places));
+    const outside = [];
+    let regional = 0;
+    for (const pid of Object.keys(INDEX.places)) {
+      const b = open(INDEX.places[pid].state, [pid]);
+      S.b.sources = b.endorsers.map((e) => e.id);
+      tally.clearLineups();
+      for (const it of b.items) {
+        if (!district(it)) continue;
+        const l = tally.lineup(it);
+        for (const e of [...l.notChecked, ...l.paywalled]) {
+          if (!e.home_places) continue;
+          regional++;
+          if (!e.home_places.includes(pid)) outside.push(`${pid} ${it.id}: ${e.short}`);
+        }
+      }
+    }
+    check('geography: a regional source reads "Not checked yet" on district races at home', regional > 0, String(regional));
+    check('geography: and never on another place\'s district races', outside.length === 0, `${outside.length}: ${outside.slice(0, 3).join(' | ')}`);
+    // Statewide groups, which name no place, still cover every district in their state.
+    const a2 = open('TX', ['austin-tx']);
+    S.b.sources = ['equality-texas'];
+    tally.clearLineups();
+    check('geography: a statewide group (Equality Texas) still reads "Not checked yet" on an Austin district it has no row on', tally.lineup(a2.byId.get('tx-us-house-37')).notChecked.some((e) => e.id === 'equality-texas'));
+    // Review, Oct 20: a statewide party whose geography lists its state and the places it was
+    // researched for (["CO", "boulder-co"], ["CO", "denver-co"]) is not a regional source. A county
+    // party, which names only its places, still is.
+    S.b.sources = ['bexar-county-gop'];
+    tally.clearLineups();
+    check('geography: a county party (Bexar County GOP) never reads "Not checked yet" on an Austin district', !tally.lineup(a2.byId.get('tx-us-house-37')).notChecked.length && !!a2.eById.get('bexar-county-gop')?.home_places?.length);
+    const aur = open('CO', ['aurora-co']);
+    S.b.sources = ['co-wfp'];
+    tally.clearLineups();
+    check('geography: the Colorado Working Families Party (statewide) has no home places', !aur.eById.get('co-wfp').home_places, JSON.stringify(aur.eById.get('co-wfp').home_places));
+    check('geography: and still reads "Not checked yet" on Aurora\'s HD-36', tally.lineup(aur.byId.get('co-hd-36')).notChecked.some((e) => e.id === 'co-wfp'));
+    const md = open('MD', []);
+    S.b.sources = ['md-democratic-party', 'md-republican-party'];
+    tally.clearLineups();
+    check('geography: Maryland\'s state parties still read "Not checked yet" on a statewide-only ballot\'s district judge', tally.lineup(md.byId.get('md-retention-killough')).notChecked.length === 2);
+    S.b.sources = null;
+    tally.clearLineups();
+  }
+
+  /* ---------- place notes speak to voters, not to researchers (blockers review, Oct 20) ----------
+     "Notes for Pflugerville" said "Kevin's friends ...", Round Rock's "not in this file; see the
+     memo", San Marcos's "the county site blocked automated checks". */
+  {
+    const meta = /\bKevin\b|this file|the memo|automated|research(er)?s?\b|agent/i;
+    const bad = Object.keys(INDEX.places).map((p) => [p, read(`place-${p}.json`).notes || '']).filter(([, n]) => meta.test(n) || /—/.test(n));
+    check('place notes: no internal research talk or em dashes in any "Notes for" text', bad.length === 0, bad.map(([p, n]) => `${p}: ${(n.match(meta) || ['—'])[0]}`).join(' | '));
+    const pf = read('place-pflugerville-tx.json').notes;
+    check('place notes: Pflugerville keeps its facts (office, address, phone, vote in your county)', /Williamson County Elections, 301 SE Inner Loop, Georgetown, 512-943-1630/.test(pf) && /county of registration/.test(pf));
+    const rr = read('place-round-rock-tx.json').notes;
+    check('place notes: Round Rock keeps the Leander ISD places and the Georgetown ISD tax election', /Leander ISD trustee races \(Places 1, 2, 6 and 7\)/.test(rr) && /Georgetown ISD tax election/.test(rr) && /sample ballot/.test(rr));
+    const sm = read('place-san-marcos-tx.json').notes;
+    check('place notes: San Marcos keeps the site, the measures it looked for and the sample ballot', /120 Stagecoach Trail/.test(sm) && /San Marcos CISD or Hays CISD bond or tax measure/.test(sm) && /Hays sample ballot/.test(sm));
+  }
+
+  /* ---------- no shouting: "A NO vote means" reads like "A yes vote" (Austin walk, Oct 20) ---------- */
+  {
+    const d = common.deshout;
+    check('deshout: "A NO vote means" comes out lower case', d('A NO vote means the city cannot sell these bonds; the projects wait.') === 'A no vote means the city cannot sell these bonds; the projects wait.', d('A NO vote means the city cannot sell these bonds; the projects wait.'));
+    check('deshout: "A YES vote" still does', d('A YES vote lets the city sell bonds.') === 'A yes vote lets the city sell bonds.');
+    check('deshout: NO at the start of a clause is "No"', d('Special taxes need two-thirds. NO means they still need a simple majority.') === 'Special taxes need two-thirds. No means they still need a simple majority.');
+    check('deshout: real acronyms and quoted ballot words stay', d('A NO vote keeps the ACC tax; the US rate and "NO on Prop A" stay as written.') === 'A no vote keeps the ACC tax; the US rate and "NO on Prop A" stay as written.');
+    // Review, Oct 20: the LA County GOP's "Explicit NO recommendation" (a pick to remove a justice)
+    // came out "Explicit no recommendation", which reads as no stand at all.
+    const gop = 'The party’s public lookup lists this choice. Its source label is: Explicit NO recommendation for every named justice in this record.';
+    check('deshout: "NO recommendation" (a pick of no) never becomes "no recommendation"', d(gop) === gop, d(gop));
+    check('deshout: NO before position, endorsement or stand stays too, even beside a shouted word', d('NOTE: the board gave a NO endorsement and a NO position.') === 'Note: the board gave a NO endorsement and a NO position.', d('NOTE: the board gave a NO endorsement and a NO position.'));
+    check('deshout: a vote of no still reads "no" ("Recommends NO on", "Measure FD: NO.")', d('Recommends NO on all seven questions.') === 'Recommends no on all seven questions.' && d('Its lookup lists Measure FD: NO.') === 'Its lookup lists Measure FD: No.', `${d('Recommends NO on all seven questions.')} | ${d('Its lookup lists Measure FD: NO.')}`);
+    // Every measure on every ballot: its yes and no meanings never shout YES or NO.
+    const QUOTED = /“[^”]*”|"[^"]*"|(^|[\s(])'[^']*'(?=[\s.,;:)!?]|$)/g;
+    const shouts = [];
+    for (const f of [...Object.keys(INDEX.places).map((p) => `place-${p}.json`), ...Object.keys(INDEX.states).map((s) => `state-${s}.json`)]) {
+      for (const m of read(f).items) {
+        if (m.kind !== 'measure') continue;
+        for (const t of [m.yes_means, m.no_means]) if (t && /\b(YES|NO)\b/.test(d(t).replace(QUOTED, ''))) shouts.push(`${m.id}: ${d(t).slice(0, 50)}`);
+      }
+    }
+    check('deshout: no measure\'s yes or no meaning shouts YES or NO', shouts.length === 0, `${shouts.length}: ${shouts.slice(0, 2).join(' | ')}`);
+  }
+
+  /* ---------- a neighborhood's own district never covers the whole place (Orlando walk, Oct 20) ---------- */
+  {
+    const orl = open('FL', ['orlando-fl']);
+    check('may apply: Vista Lakes Community Development District is a maybe on an Orlando ballot', orl.mayApply.has('fl-vista-lakes-cdd-3'));
+    const ch = open('IL', ['chicago-il']);
+    const sub = ch.items.filter((x) => /^il-cook-subcircuit-/.test(x.id));
+    check('may apply: every Cook County judicial subcircuit race is a maybe on a Chicago ballot', sub.length > 0 && sub.every((x) => ch.mayApply.has(x.id)), sub.filter((x) => !ch.mayApply.has(x.id)).map((x) => x.id).join(', '));
+    // Guards against a wider pattern: districts that hold the whole place stay certain.
+    check('may apply: the 1st DCA, which holds all of Tallahassee and Pensacola, stays certain where its scope names their counties', ['tallahassee-fl', 'pensacola-fl'].every((p) => !open('FL', [p]).mayApply.has('fl-retention-1dca-lewis')));
+    const en = open('CO', ['englewood-co']);
+    check('may apply: Arapahoe County races stay certain in Englewood', en.items.filter((x) => /^arapahoe-/.test(x.id) && x.kind === 'contest').every((x) => !en.mayApply.has(x.id)));
+    const se = open('WA', ['seattle-wa']);
+    check('may apply: the King County District Court West district (all of Seattle) stays certain', se.items.filter((x) => /^kc-district-court-west/.test(x.id)).every((x) => !se.mayApply.has(x.id)));
+    // Review, Oct 20: "Ward 6" matched as a district inside the place, so DC Ward 6's own council and
+    // school board races ("Only Ward 6 voters") were maybes on the Ward 6 ballot, and the party fill
+    // left Ward 6 Council blank. A ward's own race covers its ward; the ANC race stays a maybe.
+    const own = [];
+    for (const w of [1, 3, 5, 6]) {
+      const dc = open('DC', [`dc-ward-${w}`]);
+      own.push(...[`dc-ward-${w}-council`, `dc-ward-${w}-sboe`].filter((id) => !dc.items.some((x) => x.id === id) || dc.mayApply.has(id)));
+      if (!dc.mayApply.has(`dc-ward-${w}-anc`)) own.push(`dc-ward-${w}-anc (should stay a maybe)`);
+    }
+    check('may apply: a DC ward\'s own council and school board races are sure things on its ballot; its ANC race is not', own.length === 0, own.join(', '));
+    open('DC', ['dc-ward-6']);
+    check('may apply: the Democratic fill on Ward 6 includes the Ward 6 Council race', bulk.planParty('Democratic').fills.some((f) => f.id === 'dc-ward-6-council'));
+  }
+
+  /* ---------- Board of Equalization District 3 is all of LA County (LA walk, Oct 20) ---------- */
+  {
+    const la = open('CA', ['los-angeles-ca']);
+    check('may apply: BOE District 3 is a sure thing on an LA ballot, as its scope says', la.items.some((x) => x.id === 'ca-boe-3') && !la.mayApply.has('ca-boe-3'));
+    check('may apply: BOE District 3 is still not every Californian\'s race', !la.byId.get('ca-boe-3').every);
+    const ca = open('CA', []);
+    check('may apply: a statewide-only California ballot still asks which BOE district', ca.groups.some((g) => g.members.includes('ca-boe-3') && g.members.length === 4));
+    check('may apply: other places\' BOE races are unchanged', ['fullerton-ca', 'san-diego-ca'].every((p) => open('CA', [p]).mayApply.has('ca-boe-4')) && !open('CA', ['fullerton-ca']).items.some((x) => x.id === 'ca-boe-3'));
   }
 
   /* ---------- the seat rule ---------- */
@@ -271,6 +489,186 @@ export async function run({ st, bl, geo, common, mods, open, head, read, INDEX, 
     check('party fill: skips races where the party has two candidates (top-two)', lap.skippedTwo > 0 && lap.fills.every((f) => {
       const c = la.byId.get(f.id); return c.candidates.filter((k) => k.parties.includes('Democratic')).length === 1 || c.vote_for > 1;
     }), `${lap.skippedTwo} skipped`);
+  }
+
+  /* ---------- fills never pick a race the row calls "Maybe on your ballot" (walks, Oct 20) ----------
+     Austin's fill picked SBOE 5 and Senate 21; after "Not sure" on U.S. Rep it filled six House
+     races; LA 90012 with "Not sure" everywhere filled 35. The rule is the row tag's own. */
+  {
+    const maybe = (b, id) => (b.mayApply.has(id) && !S.b.notMine.includes(id)) || (!!b.groupOf[id] && S.b.districts[b.groupOf[id]] === '*');
+    // A maybe race whose sources all agree: the old fill took it.
+    const agreeable = (b) => b.items.filter((it) => maybe(b, it.id) && bl.status(it) === 'open' && !(it.kind === 'contest' && (it.ranked_choice || (it.is_retention && it.candidates.length > 1)))).filter((it) => { const l = tally.lineup(it); return l.groups.length === 1 && !l.both.length && l.groups[0].choices.length; });
+    for (const [stc, pid] of [['TX', 'austin-tx'], ['CA', 'los-angeles-ca'], ['FL', 'orlando-fl']]) {
+      const b = open(stc, [pid]);
+      tally.clearLineups();
+      const fresh = bulk.planAgree().fills.map((f) => f.id);
+      const freshParty = bulk.planParty('Democratic').fills.map((f) => f.id);
+      check(`fills: ${pid} has maybe races its sources agree on, so the rule is tested`, agreeable(b).length > 0, String(agreeable(b).length));
+      check(`fills: ${pid} agree fill leaves every "Maybe on your ballot" race alone`, fresh.every((id) => !maybe(b, id)), fresh.filter((id) => maybe(b, id)).join(', '));
+      b.groups.forEach((g) => { S.b.districts[g.key] = '*'; });
+      const agree = bulk.planAgree().fills.map((f) => f.id);
+      const party = bulk.planParty('Democratic').fills.map((f) => f.id);
+      check(`fills: ${pid} with "Not sure" on every district, the agree fill still skips them all`, agree.every((id) => !maybe(b, id)) && agree.length === fresh.length, `${fresh.length} then ${agree.length}: ${agree.filter((id) => maybe(b, id)).slice(0, 6).join(', ')}`);
+      check(`fills: ${pid} with "Not sure" on every district, the party fill count stays the same`, party.every((id) => !maybe(b, id)) && party.length === freshParty.length, `${freshParty.length} then ${party.length}`);
+    }
+    // A hidden "may apply" race stays out, and one the voter brings back is still a maybe.
+    const au = open('TX', ['austin-tx']);
+    check('fills: Austin\'s SBOE 5 and Senate 21 are maybes, never filled', ['tx-sboe-5', 'tx-senate-21'].every((id) => au.mayApply.has(id)) && !bulk.planAgree().fills.some((f) => ['tx-sboe-5', 'tx-senate-21'].includes(f.id)));
+    // Review, Oct 20: the judges' "Keep all" fill still took maybes. On the Aurora and Denver ballot
+    // (80247) it kept 22 judges tagged "Only in Denver"; on Aurora with "Not sure" on the judge
+    // questions it went from 7 to 32, three counties' judges. Its button counts what it fills.
+    for (const [name, pids, unsure] of [['Aurora and Denver', ['aurora-co', 'denver-co'], false], ['Aurora, "Not sure" on every district', ['aurora-co'], true]]) {
+      const b = open('CO', pids);
+      if (unsure) b.groups.forEach((g) => { S.b.districts[g.key] = '*'; });
+      tally.clearLineups();
+      const jb = judges.judgeBatch();
+      const fills = bulk.planJudges().fills;
+      const maybes = b.items.filter((it) => it.kind === 'contest' && it.is_retention && maybe(b, it.id) && bl.status(it) === 'open');
+      check(`fills: ${name} has judges tagged "Maybe on your ballot", so the rule is tested`, maybes.length > 0, String(maybes.length));
+      check(`fills: ${name}, the judges' fill never keeps a maybe`, !!jb && fills.length > 0 && fills.every((f) => !maybe(b, f.id)) && jb.targets.every((t) => !maybe(b, t.id)), fills.filter((f) => maybe(b, f.id)).slice(0, 4).map((f) => f.id).join(', '));
+      check(`fills: ${name}, the button's count is the judges it keeps`, !!jb && new RegExp(`\\b${jb.targets.length}\\b`).test(jb.label), jb && `${jb.label} / ${jb.targets.length}`);
+    }
+  }
+
+  /* ---------- "N of M decided" walks the page's own order (nav review, Oct 20) ----------
+     It walked printed-ballot order, so LA never reached the U.S. House question, the Sheriff, the
+     Mayor or the council question, and Austin never reached its city and school sections. */
+  {
+    const { ledger } = views;
+    const secIdx = Object.fromEntries(bl.SECTIONS.map(([k], i) => [k, i]));
+    for (const [stc, pid] of [['CA', 'los-angeles-ca'], ['TX', 'austin-tx'], ['FL', 'orlando-fl']]) {
+      const b = open(stc, [pid]);
+      const po = typeof ledger.pageOrder === 'function' ? ledger.pageOrder() : [];
+      const secOf = (k) => bl.sectionOf(b.byId.get(k.startsWith('q:') ? b.groups.find((g) => `q:${g.key}` === k).members[0] : k));
+      const idx = po.map((x) => secIdx[secOf(x.key)]);
+      check(`next: ${pid} walks sections in the order the page draws them`, po.length > 0 && idx.every((v, i) => !i || v >= idx[i - 1]), idx.join(','));
+      const want = bl.decisionItems().map((x) => x.id).sort().join();
+      const got = po.map((x) => x.key).sort().join();
+      check(`next: ${pid} walks every choice and every district question, once`, want === got && b.groups.every((g) => po.some((x) => x.key === `q:${g.key}`)));
+      check(`next: ${pid} starts with the first thing the page shows`, po.length > 0 && po[0].key === bl.SECTIONS.map(([k]) => (bl.entriesBySection().get(k) || []).find((e) => e.t === 'question' || (e.t === 'item' && bl.isDecision(bl.status(b.byId.get(e.id)))))).filter(Boolean).map((e) => (e.t === 'question' ? `q:${e.group.key}` : e.id))[0], po[0] && po[0].key);
+    }
+    // Review, Oct 20: the walk opened Round Rock, Pflugerville and Leander ISD seats one by one on
+    // an Austin ballot, though their fold is closed and says "Open only if one of them is yours".
+    // Closed, the fold's races are marked folded (A.next skips them); open, they are walked.
+    open('TX', ['austin-tx']);
+    S.ui.row = null; S.ui.keep = null; S.ui.unfolded.delete(ledger.OTH_KEY);
+    const oth = ledger.otherSchools(bl.entriesBySection().get('school') || []).map((e) => e.id);
+    const shut = ledger.pageOrder();
+    check('next: Austin\'s closed "Other school districts" fold has races to skip', oth.length >= 3 && oth.includes('tx-rrisd-trustee-3'), oth.join(', '));
+    check('next: while that fold is closed, the walk passes every one of its races by', shut.filter((x) => x.folded).map((x) => x.key).sort().join() === [...oth].sort().join() && shut.filter((x) => !x.folded).every((x) => !oth.includes(x.key)));
+    S.ui.unfolded.add(ledger.OTH_KEY);
+    check('next: opened, the fold\'s races are walked in place', ledger.pageOrder().every((x) => !x.folded) && oth.every((id) => ledger.pageOrder().some((x) => x.key === id)));
+    S.ui.unfolded.delete(ledger.OTH_KEY);
+  }
+
+  /* ---------- the sources sheet counts your ballot, not every district (walks, Oct 20) ----------
+     LA's sheet said "Knock LA: Endorsed in 59 of your races and measures" on a 46-item ballot. */
+  {
+    for (const [stc, pid] of [['CA', 'los-angeles-ca'], ['FL', 'orlando-fl'], ['TX', 'austin-tx']]) {
+      for (const notSure of [false, true]) {
+        const b = open(stc, [pid]);
+        if (notSure) b.groups.forEach((g) => { S.b.districts[g.key] = '*'; });
+        const M = bl.decisionItems().filter((x) => !x.question).length;
+        const h = views.lens.sourcesSheetHTML();
+        const ns = [...h.matchAll(/Endorsed in (\d+) of your races and measures/g)].map((m) => +m[1]);
+        const rows = h.split('<li class="srow">').slice(1);
+        const two = rows.filter((r) => /No endorsements found/.test(r) && /class="pw-note"/.test(r)).length;
+        check(`sources sheet: ${pid}${notSure ? ' with "Not sure" answered' : ''} never counts more races than the bar's ${M}`, ns.length > 0 && Math.max(...ns) <= M, `max ${Math.max(...ns)} of ${M}`);
+        check(`sources sheet: ${pid}${notSure ? ' with "Not sure" answered' : ''} never shows a paper as both "No endorsements found" and paywalled`, two === 0, String(two));
+      }
+    }
+  }
+
+  /* ---------- a folded section's summary starts with a capital (Orlando walk, Oct 20) ---------- */
+  {
+    const b = open('FL', ['orlando-fl']);
+    S.ui.view = 'ballot'; S.ui.row = null; S.ui.keep = null; S.ui.unfolded = new Set(); S.ui.folded = new Set(); S.ui.onlyUndecided = false;
+    S.b.picks['fl-retention-muniz'] = 'NO';
+    S.b.picks['fl-9th-circuit-group-1'] = b.byId.get('fl-9th-circuit-group-1').candidates[0].name;
+    const html = views.ledger.sectionHTML('judicial', bl.entriesBySection().get('judicial') || []);
+    const sub = ((html.match(/<span class="sec-sub">([^<]*)<\/span>/) || [])[1] || '').trim();
+    check('fold summary: "Remove 1, Hampton-Johnson", never "remove 1, ..."', /folded/.test(html) && /^Remove 1, /.test(sub), sub);
+    S.b.picks['fl-retention-muniz'] = 'YES';
+    const sub2 = ((views.ledger.sectionHTML('judicial', bl.entriesBySection().get('judicial') || []).match(/<span class="sec-sub">([^<]*)<\/span>/) || [])[1] || '').trim();
+    check('fold summary: "Keep 1, ..." still reads the same', /^Keep 1, /.test(sub2), sub2);
+  }
+
+  /* ---------- a fill from one source names it (LA walk, Oct 20) ----------
+     A row filled from Knock LA alone read "Filled from your sources", the same as five agreeing. */
+  {
+    const b = open('CA', ['los-angeles-ca']);
+    tally.clearLineups();
+    const plan = bulk.planAgree();
+    const one = plan.fills.find((f) => f.single);
+    const many = plan.fills.find((f) => !f.single);
+    check('fill names: LA has a one-source fill and a several-source fill to check', !!one && !!many);
+    bulk.applyFills(plan.fills);
+    if (one) {
+      const src = tally.weighedIn(tally.lineup(b.byId.get(one.id)))[0];
+      const v = tally.verdict(b.byId.get(one.id));
+      check('fill names: a pick filled from one source says "Filled from" that source', v.sub === `Filled from ${src.short}`, `${one.id}: ${v.sub}`);
+    }
+    if (many) check('fill names: a pick several sources agreed on still says "Filled from your sources"', tally.verdict(b.byId.get(many.id)).sub === 'Filled from your sources', tally.verdict(b.byId.get(many.id)).sub);
+    // A single source whose name holds a comma or the word "Party" is still named, not "your party".
+    const it = b.items.find((x) => x.kind === 'measure');
+    const party = b.endorsers.find((e) => /party/i.test(e.short) && e.endorses_measures);
+    if (party) {
+      S.b.picks[it.id] = 'YES';
+      S.b.auto[it.id] = `Filled in from your sources: ${party.short}`;
+      check('fill names: an agree fill from one party organization names it, not "your party"', tally.verdict(it).sub === `Filled from ${party.short}`, tally.verdict(it).sub);
+    }
+    const comma = b.endorsers.find((e) => /, /.test(e.short));
+    if (comma) {
+      S.b.auto[it.id] = `Filled in from your sources: ${comma.short}`;
+      check('fill names: a source whose name has a comma is still one source', tally.verdict(it).sub === `Filled from ${comma.short}`, tally.verdict(it).sub);
+    }
+    bulk.undoFills();
+  }
+
+  /* ---------- the cheat sheet lists what the ballot shows, with the bar's count (walks, Oct 20) ----------
+     Austin's sheet listed seven Round Rock, Pflugerville and Leander ISD seats the ballot folds
+     away, listed six House picks as certain, and said "28 of 56" beside a bar's "28 of 50". */
+  {
+    const { cheat, ledger } = views;
+    const resetUI = () => { S.ui.view = 'ballot'; S.ui.row = null; S.ui.keep = null; S.ui.unfolded = new Set(); S.ui.folded = new Set(); };
+    const has = (h, id) => h.includes(`data-cs="${id}"`);
+    const rowOf = (h, id) => (h.match(new RegExp(`<tr data-cs="${id}"[\\s\\S]*?</tr>`)) || [''])[0];
+    const sheetCount = (h) => (h.match(/(\d+) of (\d+) decided/) || []).slice(1).join(' of ');
+    const barCount = () => (ledger.barHTML().match(/<b>(\d+)<\/b> of (\d+)/) || []).slice(1).join(' of ');
+    const au = open('TX', ['austin-tx']);
+    resetUI();
+    const oth = au.items.filter((it) => it.kind === 'contest' && it.level === 'school' && au.mayApply.has(it.id) && !au.groupOf[it.id] && it.candidates.length > 1);
+    check('cheat sheet: Austin folds three or more other school districts\' races', oth.length >= 3, String(oth.length));
+    let html = cheat.cheatHTML(false);
+    check('cheat sheet: the folded other school districts\' races stay off it while undecided', oth.every((it) => !has(html, it.id)), oth.filter((it) => has(html, it.id)).map((it) => it.id).join(', '));
+    check('cheat sheet: an unanswered district question is still a line', /Depends on your district/.test(html));
+    // Every unanswered question's line is a tap back to that question, with "Pick your district".
+    const qLines = au.groups.map((g) => (html.match(new RegExp(`<tr[^>]*data-q="${g.key.replace(/[|()]/g, '\\$&')}"[\\s\\S]*?</tr>`)) || [''])[0]);
+    check('cheat sheet: each district line goes back to its question ("Pick your district")', au.groups.length > 0 && qLines.every((l) => /data-act="goto"/.test(l) && /Pick your district/.test(l)), qLines.filter((l) => !/data-act="goto"/.test(l)).length + ' dead');
+    check('cheat sheet: printed district lines stay plain', !/data-act/.test(cheat.cheatHTML(true).match(/<tr class="cs-q"[\s\S]*?<\/tr>/)?.[0] || 'data-act'));
+    check('cheat sheet: "N of M decided" is the bar\'s count, district questions left out', !!sheetCount(html) && sheetCount(html) === barCount(), `${sheetCount(html)} vs bar ${barCount()}`);
+    S.b.picks[oth[0].id] = oth[0].candidates[0].name;
+    S.b.picks['tx-sboe-5'] = au.byId.get('tx-sboe-5').candidates[0].name;
+    const gov = au.byId.get('tx-governor');
+    S.b.picks[gov.id] = gov.candidates[0].name;
+    html = cheat.cheatHTML(false);
+    check('cheat sheet: an other-district race you picked is listed, the rest stay off', has(html, oth[0].id) && oth.slice(1).every((it) => !has(html, it.id)));
+    check('cheat sheet: a pick on a maybe race says "If it’s on your ballot"', /If it’s on your ballot/.test(rowOf(html, 'tx-sboe-5')) && /If it’s on your ballot/.test(rowOf(html, oth[0].id)), rowOf(html, 'tx-sboe-5').slice(0, 200));
+    check('cheat sheet: a pick on a race that is surely yours has no such note', has(html, gov.id) && !/If it’s on your ballot/.test(rowOf(html, gov.id)));
+    check('cheat sheet: copied text carries the note too', /\(if it’s on your ballot\)/.test(cheat.cheatText().split('\n').find((x) => x.includes(au.byId.get('tx-sboe-5').candidates[0].name)) || ''));
+    check('cheat sheet: the count still matches the bar after picks', sheetCount(html) === barCount(), `${sheetCount(html)} vs bar ${barCount()}`);
+    // "Not sure" on U.S. Rep: every district shows on the ballot as a maybe; a pick in one is marked.
+    const usr = au.groups.find((g) => g.kind === 'cd');
+    S.b.districts[usr.key] = '*';
+    S.b.picks[usr.members[0]] = au.byId.get(usr.members[0]).candidates[0].name;
+    html = cheat.cheatHTML(false);
+    check('cheat sheet: a House pick under "Not sure" says "If it’s on your ballot"', /If it’s on your ballot/.test(rowOf(html, usr.members[0])));
+    check('cheat sheet: the count matches the bar with "Not sure" answered', sheetCount(html) === barCount(), `${sheetCount(html)} vs bar ${barCount()}`);
+    // Opening the fold on the ballot ("Open only if one of them is yours") lists them all again.
+    S.ui.unfolded.add('school|oth');
+    html = cheat.cheatHTML(false);
+    check('cheat sheet: with the other-districts row opened, every one of them is listed', oth.every((it) => has(html, it.id)));
+    resetUI();
   }
 
   /* ---------- judges ---------- */

@@ -412,7 +412,9 @@ for (const [id, vers] of endorserVersions) {
     lean_note: leanKeys.length > 1 ? `Our research passes rated this source differently: ${leanKeys.map((k) => LEAN_WORD[k]).join(' and ')}. We show ${LEAN_WORD[lean]}.` : null,
     guide_url: safeUrl(newest.guide_url),
     // SCHEMA rule: publications and nonpartisan civic groups start on; everything else is opt-in.
-    default_on: type === 'publication' || type === 'civic_nonpartisan',
+    // A publication whose lean comes only from its own stated mission (Knock LA) is an advocate
+    // and starts off with the groups (Kevin, Oct 20; src/model/lens.ts sidedByMission).
+    default_on: (type === 'publication' && !(newest.lean_basis_kind === 'mission' && ['left', 'lean_left', 'lean_right', 'right'].includes(lean))) || type === 'civic_nonpartisan',
     endorses_candidates: vers.some((v) => v.rec.endorses_candidates === true),
     endorses_measures: vers.some((v) => v.rec.endorses_measures === true),
     // Which party a party organization speaks for ("Democratic", "Working Families"), and how its
@@ -427,6 +429,18 @@ for (const [id, vers] of endorserVersions) {
       paywall: vers.some((v) => v.rec.paywall === true) ? true : null,
       paywall_note_ok: vers.some((v) => v.rec.paywall === true) && newest.paywall_note_ok === false ? false : null,
       paywall_note: vers.some((v) => v.rec.paywall === true) ? str(newest.paywall_note) : null,
+      // The places in its own `geography` (across every file that defines it), when it names any:
+      // a regional source (the San Antonio Express-News, ["TX", "san-antonio-tx"]). The app reads
+      // "not checked yet" on a district race only from sources whose places include the ballot's,
+      // or that have none. A paper's places are its home even when it names its state too (it picks
+      // statewide races from its city). A party or group that names its state speaks statewide, as
+      // endorserHome below reads it (the Colorado Working Families Party, ["CO", "denver-co"]), so it
+      // has none. Unknown place ids are dropped.
+      home_places: (() => {
+        const geo = vers.flatMap((v) => (Array.isArray(v.rec.geography) ? v.rec.geography : [])).filter(isStr).map((g) => g.trim());
+        if (type !== 'publication' && geo.some((g) => /^[A-Z]{2}$/.test(g))) return null;
+        return [...new Set(geo.filter((g) => places.has(g)))].sort();
+      })(),
     }),
   });
 }
@@ -488,6 +502,10 @@ for (const f of listJson('').filter((x) => /^endorsements-.*\.json$/.test(path.b
     }
     const rec = {
       s: r.status, c: choices, note, why: str(r.why), url: safeUrl(r.url), date: str(r.date), conf: conf(r.confidence), f,
+      // A "not found" whose record says the source's page couldn't be read (a paywall or an access
+      // block): the app names a paywalled paper there by its paywall note, not "No endorsements
+      // found". Only a literal true on a not_found row counts.
+      ...(r.unreadable === true && r.status === 'not_found' ? { unreadable: true } : {}),
     };
     const key = `${eid}|${target.id}`;
     const prev = endorsementByKey.get(key);

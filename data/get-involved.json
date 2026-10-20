@@ -114,10 +114,10 @@
         "items": [
           {
             "id": "poll-worker",
-            "label": "Become a poll worker",
+            "label": "Work the polls",
             "kind": "election_service",
             "lean": "neutral",
-            "action": "Use the official lookup to find your local election office. Check its requirements, training and sign-up dates.",
+            "action": "Sign-ups and training for Nov 3 have closed in many counties. Ask yours if it still needs help, or sign up for the next election.",
             "url": "https://www.helpamericavote.gov/",
             "lean_basis_kind": null,
             "mission_quote": null,
@@ -345,9 +345,9 @@
       "title": "Nonpartisan",
       "items": [
         {
-          "label": "Become a poll worker",
+          "label": "Work the polls",
           "url": "https://www.helpamericavote.gov/",
-          "note": "Use the official lookup to find your local election office. Check its requirements, training and sign-up dates."
+          "note": "Sign-ups and training for Nov 3 have closed in many counties. Ask yours if it still needs help, or sign up for the next election."
         },
         {
           "label": "Help someone get to the polls",

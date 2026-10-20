@@ -1019,11 +1019,11 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     ah = views.mast.addrHTML(true);
     check('go check: on the first page: Try again, nothing to pick', /addr-retry/.test(ah) && !/addr-pick/.test(ah));
     S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.addrFail = ''; S.view = keep.view;
-    // The registration alert's button (register_url comes with the data track).
+    // The registration alert's button: every state file carries its vote.gov register link.
     const txr = read('state-TX.json').howto;
-    const withUrl = { ...txr, registration: { ...txr.registration, register_url: 'https://vote.gov/register/texas' } };
-    check('go check: "Register now" before the deadline, "Register for next time" after', plan.registerAction(withUrl, '2026-10-01').label === 'Register now' && plan.registerAction(withUrl, '2026-10-20').label === 'Register for next time' && plan.registerAction(withUrl, '2026-10-01').url === 'https://vote.gov/register/texas');
-    check('go check: no button without a register link', plan.registerAction(txr, '2026-10-01') === null);
+    check('go check: "Register now" before the deadline, "Register for next time" after', plan.registerAction(txr, '2026-10-01').label === 'Register now' && plan.registerAction(txr, '2026-10-20').label === 'Register for next time' && plan.registerAction(txr, '2026-10-01').url === 'https://vote.gov/register/texas');
+    const { register_url, ...noUrl } = txr.registration;
+    check('go check: no button without a register link', plan.registerAction({ ...txr, registration: noUrl }, '2026-10-01') === null);
   }
 
   /* ---------- flow, Oct 20: My plan ---------- */
@@ -1256,6 +1256,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const txEp = read('state-TX.json').howto.early_in_person;
     check('hours: Austin and Orlando carry a one-line early voting hours note', au.places[0].early_in_person.hours_short === 'Travis County sites are open 7 AM to 7 PM every day.' && open('FL', ['orlando-fl']).places[0].early_in_person.hours_short === 'Orange County sites are open 8 AM to 8 PM every day.');
     check('hours: Austin keeps the state window, hours note and lookup in the plan', au.howto.early_in_person.start === txEp.start && au.howto.early_in_person.end === txEp.end && au.howto.early_in_person.hours_note === txEp.hours_note && au.howto.early_in_person.lookup_url === txEp.lookup_url);
+    }
 
     // A statewide-only ballot's sample ballot link: the state's own, else a source, else the lookup.
     open('WA', []);

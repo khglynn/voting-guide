@@ -118,7 +118,8 @@ const SHOUT = new Set(('NOT ONE TWO THREE ANY YOUR ONLY MORE LESS AFTER BEFORE N
 const PROPER = new Set('ORANGE LEON ESCAMBIA CHICAGO SUBURBAN COOK COLLAR'.split(' '));
 const QUOTED = /“[^”]*”|"[^"]*"|(^|[\s(])('[^']*')(?=[\s.,;:)!?]|$)/g;
 export function deshout(text: string): string {
-  if (!text || !/[A-Z]{3}/.test(text)) return text;
+  // NO is the one two-letter word on the list ("A NO vote means..."), so it needs its own check.
+  if (!text || !/[A-Z]{3}|\bNO\b/.test(text)) return text;
   const fix = (seg: string, atStart: boolean) => seg.replace(/\b[A-Z]{2,}\b/g, (w, i: number) => {
     if ((!SHOUT.has(w) && !PROPER.has(w)) || seg[i - 1] === '-' || seg[i + w.length] === '-') return w;
     const lower = w.toLowerCase();

@@ -47,6 +47,25 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('may apply: Jeffco schools cover Lakewood', lk.items.filter((x) => x.kind === 'measure' && /Jeffco/.test(x.jurisdiction)).every((x) => !lk.mayApply.has(x.id)));
   }
 
+  /* ---------- no shouting: "A NO vote means" reads like "A yes vote" (Austin walk, Oct 20) ---------- */
+  {
+    const d = common.deshout;
+    check('deshout: "A NO vote means" comes out lower case', d('A NO vote means the city cannot sell these bonds; the projects wait.') === 'A no vote means the city cannot sell these bonds; the projects wait.', d('A NO vote means the city cannot sell these bonds; the projects wait.'));
+    check('deshout: "A YES vote" still does', d('A YES vote lets the city sell bonds.') === 'A yes vote lets the city sell bonds.');
+    check('deshout: NO at the start of a clause is "No"', d('Special taxes need two-thirds. NO means they still need a simple majority.') === 'Special taxes need two-thirds. No means they still need a simple majority.');
+    check('deshout: real acronyms and quoted ballot words stay', d('A NO vote keeps the ACC tax; the US rate and "NO on Prop A" stay as written.') === 'A no vote keeps the ACC tax; the US rate and "NO on Prop A" stay as written.');
+    // Every measure on every ballot: its yes and no meanings never shout YES or NO.
+    const QUOTED = /“[^”]*”|"[^"]*"|(^|[\s(])'[^']*'(?=[\s.,;:)!?]|$)/g;
+    const shouts = [];
+    for (const f of [...Object.keys(INDEX.places).map((p) => `place-${p}.json`), ...Object.keys(INDEX.states).map((s) => `state-${s}.json`)]) {
+      for (const m of read(f).items) {
+        if (m.kind !== 'measure') continue;
+        for (const t of [m.yes_means, m.no_means]) if (t && /\b(YES|NO)\b/.test(d(t).replace(QUOTED, ''))) shouts.push(`${m.id}: ${d(t).slice(0, 50)}`);
+      }
+    }
+    check('deshout: no measure\'s yes or no meaning shouts YES or NO', shouts.length === 0, `${shouts.length}: ${shouts.slice(0, 2).join(' | ')}`);
+  }
+
   /* ---------- a neighborhood's own district never covers the whole place (Orlando walk, Oct 20) ---------- */
   {
     const orl = open('FL', ['orlando-fl']);

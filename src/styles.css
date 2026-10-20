@@ -183,6 +183,9 @@ b, strong { font-weight: 600; }
 .door-place { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 44px; margin-top: 6px; font-size: 16px; color: var(--ink-2); }
 .door-place b { color: var(--ink); }
 .door-place .linkbtn { margin: 0; flex: none; }
+.door-found { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; column-gap: 12px; margin-top: 2px; font-size: 15.5px; color: var(--ink-2); }
+.door-found b { color: var(--ink); }
+.door-found .linkbtn { margin: 0; flex: none; }
 .door-picks { margin-top: 18px; padding-top: 4px; border-top: 1px solid var(--rule); }
 .door .bigbtn { margin-top: 16px; }
 .door-foot { margin-top: 14px; }
@@ -281,6 +284,10 @@ b, strong { font-weight: 600; }
 .addrbox > p { font-size: 16px; }
 .addrbox > p b { font-weight: 600; }
 .addrbox .addr { margin-top: 8px; padding: 0; border: 0; background: none; }
+/* After a lookup: what the Census found (this visit only), what it set, what's left. */
+.addrbox > p + p { margin-top: 8px; }
+.addrbox .addr-found .linkbtn { margin: -12px 0; padding: 0; }
+.addrbox .addr-set { color: var(--ink-2); }
 .bhead .statewide-note { margin-top: 12px; font-size: 14.5px; color: var(--ink-2); }
 
 /* ---------- sections ---------- */

@@ -14,6 +14,7 @@ import { esc, hash, plural } from '../util';
 import { rowTitle, measureTag, courtGroup, cleanOffice, optionLabel } from '../model/labels';
 import { verdict, type Verdict } from '../model/tally';
 import { canUndo } from '../model/bulk';
+import { FOUND_ONLY } from '../model/address';
 import { judgeBatch, judicialReview, judgesLead, judgesRule } from '../model/judges';
 import { ext, sampleBallot, isOpen, escP, leadRest, reportURL, HIDE } from './common';
 import { lensSummary } from './lens';
@@ -449,8 +450,7 @@ export function sectionHTML(sec: SectionKey, entries: Entry[]): string {
 
 /* ---------- the ballot head ----------
    Whose picks you see, in one line with Edit (the sheet holds step 2's controls); after a fill
-   from your sources, how many it filled and Undo, while that Undo lasts; then, while some races
-   depend on your address, how many, with the address lookup and your sample ballot. */
+   from your sources, how many it filled and Undo, while that Undo lasts; then the address box. */
 /* Races that depend on your address: each district question still to answer, each one answered
    "Not sure", and each other row tagged "Maybe on your ballot" that the count includes. */
 export function addressCount(): number {
@@ -483,17 +483,37 @@ export function addressHelps(): boolean {
     return !!it && it.kind === 'contest' && censusSettles(it);
   });
 }
+/* The address box. Before a lookup, while races depend on your address: how many, with the lookup
+   ("Use my address" leads while it can settle something) and your sample ballot. After one: what
+   the Census found, for this visit only ("Found: ..." with "Not it? Try again"); what it set, which
+   the ballot keeps (S.b.addrNote, never the address); and how many the sample ballot still has to
+   settle. A reload shows the last two. */
+function addrBoxHTML(): string {
+  const n = addressCount();
+  const note = S.b.addrNote;
+  const sb = sampleBallot();
+  const sbLink = (dark: boolean): string => (sb ? `<a class="mini${dark ? ' dark' : ''}" href="${esc(sb.url)}" target="_blank" rel="noopener">See my sample ballot</a>` : '');
+  if (!note) {
+    if (!n) return '';
+    const look = addressHelps();
+    return `<div class="addrbox"><p class="addr-n"><b>${n === 1 ? '1 race depends' : `${n} races depend`} on your address.</b></p>
+      ${S.ui.addrOpen ? addrHTML() : `<div class="row-btns">${look ? '<button class="mini dark" data-act="addr-open" data-fk="addr-open">Use my address</button>' : ''}${sbLink(!look)}</div>`}</div>`;
+  }
+  const found = S.ui.addrFound && !S.ui.addrOpen
+    ? `<p class="addr-found" tabindex="-1" data-fk="addr-found"><b>Found:</b> ${esc(S.ui.addrFound)} <button class="linkbtn" data-act="addr-again" data-fk="addr-again">Not it? Try again</button></p>` : '';
+  const none = note === FOUND_ONLY;
+  const left = none ? '<p class="addr-n">Found your address. Your sample ballot shows the rest.</p>'
+    : n ? `<p class="addr-n"><b>${n === 1 ? '1 still depends' : `${n} still depend`} on your address.</b> Your sample ballot shows ${n === 1 ? 'it' : 'them'}.</p>` : '';
+  const after = S.ui.addrOpen ? addrHTML() : (none || n) && sb ? `<div class="row-btns">${sbLink(true)}</div>` : '';
+  return `<div class="addrbox">${found}${none ? '' : `<p class="addr-set">${esc(note)}</p>`}${left}${after}</div>`;
+}
 export function ballotHeadHTML(): string {
   const b = S.ballot!;
   const sb = sampleBallot();
   const statewideOnly = !b.places.length;
-  const n = addressCount();
   const filled = S.ui.bulk && canUndo()
     ? `<p class="filled">${esc(S.ui.bulk)} filled in. <button class="linkbtn" data-act="undo-bulk" data-fk="filled-undo">Undo</button></p>` : '';
-  // "Use my address" leads while the lookup can settle something; after that, the sample ballot.
-  const look = n > 0 && addressHelps();
-  const addr = n ? `<div class="addrbox"><p><b>${n === 1 ? '1 race depends' : `${n} races depend`} on your address.</b></p>
-      ${S.ui.addrOpen ? addrHTML() : `<div class="row-btns">${look ? '<button class="mini dark" data-act="addr-open" data-fk="addr-open">Use my address</button>' : ''}${sb ? `<a class="mini${look ? '' : ' dark'}" href="${esc(sb.url)}" target="_blank" rel="noopener">See my sample ballot</a>` : ''}</div>`}</div>` : '';
+  const addr = addrBoxHTML();
   return `<div class="bhead"><h2 class="step su-h bal-h" id="ballot-h"><span class="step-n" aria-hidden="true">3</span>Your ballot</h2>
       <p class="picks-line"><span>Picks: ${esc(lensSummary())}</span><button class="mini" data-act="picks" data-fk="picks-edit">Edit</button></p>
       ${filled}${addr}

@@ -637,11 +637,13 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   noErrors(page, 'Go check');
   await ctx.close();
 }
-// The address box after a lookup that works: "Use my address" goes once the Census has answered
-// all it can, and the sample ballot leads (review, Oct 20). Census is answered here.
+// The address box after a lookup that works (Kevin, Oct 20: "it should show you what's up"): what
+// the Census found, with "Not it? Try again"; what it set; what's left for the sample ballot, which
+// leads now that "Use my address" has answered all it can. Census is answered here, with a made-up
+// address. A reload keeps what was set and never the address.
 {
   const { ctx, page } = await newPage();
-  const answer = { result: { addressMatches: [{ matchedAddress: 'TEST', geographies: {
+  const answer = { result: { addressMatches: [{ matchedAddress: 'TEST ONE, AUSTIN, TX, 78704', geographies: {
     States: [{ STATE: '48' }], 'Incorporated Places': [{ BASENAME: 'Austin' }], '119th Congressional Districts': [{ BASENAME: '37' }],
     '2024 State Legislative Districts - Upper': [{ BASENAME: '14' }], '2024 State Legislative Districts - Lower': [{ BASENAME: '49' }] } }] } };
   await page.route('https://geocoding.geo.census.gov/**', (route) => {
@@ -649,24 +651,48 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
     return route.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify(answer)})` });
   });
   await openBallot(page, '78704');
+  const before = await text(page, '.addrbox .addr-n');
+  check('Address box before a lookup: "{n} races depend on your address."', /^\d+ races depend on your address\.$/.test(before), before);
   await tap(page, '.addrbox [data-act="addr-open"]');
   await page.fill('#addr-in', 'a test lookup');
   await page.locator('form[data-form="addr"] button[type=submit]').tap();
-  await page.waitForSelector('.toast', { timeout: 8000 }).catch(() => {});
-  const said = await text(page, '.toast');
+  await page.waitForSelector('.addrbox .addr-found', { timeout: 8000 }).catch(() => {});
   await page.waitForTimeout(200);
+  check('Address box after a lookup: "Found:" and the Census’s address, tidied, with Not it? Try again', (await text(page, '.addrbox .addr-found')) === 'Found: Test One, Austin, TX 78704 Not it? Try again', await text(page, '.addrbox .addr-found'));
+  check('Address box after a lookup: focus lands on what was found', (await focusedFk(page)) === 'addr-found', await focusedFk(page));
+  const setLine = 'Set from your address: U.S. Representative, District 37 · State Senator, District 14 · State Representative, District 49.';
+  check('Address box after a lookup: what it set, by office', (await text(page, '.addrbox .addr-set')) === setLine, await text(page, '.addrbox .addr-set'));
+  const left = await text(page, '.addrbox .addr-n');
+  const nLeft = Number((left.match(/^(\d+)/) || [])[1]);
+  check('Address box after a lookup: the rest counted, for the sample ballot', /^\d+ still depend on your address\. Your sample ballot shows them\.$/.test(left) && nLeft < Number((before.match(/^(\d+)/) || [])[1]), `${before} then ${left}`);
   const btns = await page.$$eval('.addrbox .row-btns > *', (els) => els.map((e) => `${e.textContent.trim()}${e.classList.contains('dark') ? ' (dark)' : ''}`));
-  check('Address box after a lookup: the races left are the sample ballot’s, and it leads', /^Filled in 3 districts from your address\.$/.test(said) && /^\d+ races depend on your address\.$/.test(await text(page, '.addrbox > p')) && btns.join('|') === 'See my sample ballot (dark)', `${said} | ${await text(page, '.addrbox > p')} | ${btns.join('|')}`);
+  check('Address box after a lookup: the sample ballot leads', btns.join('|') === 'See my sample ballot (dark)', btns.join('|'));
   check('Address box after a lookup: no question left offers Use my address', !(await page.$('.ledger [data-act="addr-open"]')));
+  check('Address box after a lookup: no toast, and nothing in the masthead', !/address/i.test(await text(page, '.toast')) && !/Set from|districts/i.test(await text(page, '.mast')), `${await text(page, '.toast')} | ${await text(page, '.mast')}`);
+  await shot(page, '04d-address-found');
+  // Not it? Try again: the form, with what was typed; Cancel brings the result back.
+  await tap(page, '.addrbox [data-act="addr-again"]');
+  check('Address box: Not it? Try again reopens the form with what you typed, focused', !!(await page.$('.addrbox form[data-form="addr"]')) && (await page.inputValue('#addr-in')) === 'a test lookup' && await page.evaluate(() => document.activeElement && document.activeElement.id === 'addr-in'));
+  await tap(page, '.addrbox [data-act="addr-close"]');
+  check('Address box: Cancel brings back what was found', (await text(page, '.addrbox .addr-found')) === 'Found: Test One, Austin, TX 78704 Not it? Try again' && (await focusedFk(page)) === 'addr-again', await focusedFk(page));
+  // A reload: what was set stays; the address doesn't, anywhere.
+  await page.waitForTimeout(400);
+  await page.reload();
+  await page.waitForSelector('#plan', { timeout: 15000 });
+  await page.waitForTimeout(150);
+  const street = /test one|a test lookup/i;
+  const stored = (await savedVG(page)) || '';
+  check('Address after a reload: what was set stays in the box, the address is gone', (await text(page, '.addrbox .addr-set')) === setLine && !(await page.$('.addr-found')) && !street.test(await text(page, 'body')), await text(page, '.addrbox'));
+  check('Address after a reload: never in saved state, the page’s address or its history', !street.test(stored) && /Set from your address/.test(stored) && !street.test(page.url()) && !street.test(JSON.stringify(await page.evaluate(() => history.state))), page.url());
   noErrors(page, 'Address box after a lookup');
   await ctx.close();
 }
 // Statewide Florida (Miami): the only races that depend on your address are appeals judges, which
-// the Census can't settle, so the box leads with the sample ballot; from the first page, the
-// lookup's toast says to check them there rather than "Nothing on this ballot depends on it".
+// the Census can't settle, so the box leads with the sample ballot; from the first page, the lookup
+// shows what it found under the place line, and the box says the sample ballot shows the rest.
 {
   const { ctx, page } = await newPage();
-  const answer = { result: { addressMatches: [{ matchedAddress: 'TEST', geographies: {
+  const answer = { result: { addressMatches: [{ matchedAddress: 'TEST TWO, MIAMI, FL, 33101', geographies: {
     States: [{ STATE: '12' }], 'Incorporated Places': [{ BASENAME: 'Miami' }], 'ZIP Code Tabulation Areas': [{ ZCTA5: '33101' }],
     '119th Congressional Districts': [{ BASENAME: '24' }], '2024 State Legislative Districts - Upper': [{ BASENAME: '38' }] } }] } };
   await page.route('https://geocoding.geo.census.gov/**', (route) => {
@@ -683,8 +709,12 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await page.fill('#addr-in', 'a test lookup');
   await page.locator('form[data-form="addr"] button[type=submit]').tap();
   await page.waitForSelector('.door-place', { timeout: 15000 });
-  const said = await text(page, '.toast');
-  check('Statewide Florida from the first page: the toast sends you to the sample ballot', said === 'Found your address. Check the rest with your sample ballot.', said);
+  check('Statewide Florida from the first page: what was found shows under the place line', (await text(page, '.door-found')) === 'Found: Test Two, Miami, FL 33101 Not it? Try again' && !(await page.$('.front [data-act="addr-open"]')), await text(page, '.door-found'));
+  await tap(page, SETUP);
+  await page.waitForSelector('#plan', { timeout: 15000 });
+  const fbtns = await page.$$eval('.addrbox .row-btns > *', (els) => els.map((e) => `${e.textContent.trim()}${e.classList.contains('dark') ? ' (dark)' : ''}`));
+  check('Statewide Florida: nothing here turns on Congress, so the box sends you to the sample ballot', (await text(page, '.addrbox .addr-n')) === 'Found your address. Your sample ballot shows the rest.' && !(await page.$('.addrbox .addr-set')) && fbtns.join('|') === 'See my sample ballot (dark)', `${await text(page, '.addrbox')} | ${fbtns.join('|')}`);
+  check('Statewide Florida: the box still shows what was found', (await text(page, '.addrbox .addr-found')) === 'Found: Test Two, Miami, FL 33101 Not it? Try again', await text(page, '.addrbox .addr-found'));
   noErrors(page, 'Statewide Florida address');
   await ctx.close();
 }
@@ -2102,17 +2132,18 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
   await page.fill('#addr-in', 'a test lookup');
   await page.locator('form[data-form="addr"] button[type=submit]').tap();
   await page.waitForSelector('.door-place', { timeout: 15000 });
-  const said = await text(page, '.toast');
+  const found = await text(page, '.door-found');
   await throughSetup(page);
-  check('Address: Aurora, Colorado opens its ballot and answers its districts', /Aurora/.test(await text(page, '.place')) && /Filled in \d+ districts? from your address/.test(said), said);
+  check('Address: Aurora, Colorado opens its ballot and answers its districts', /Aurora/.test(await text(page, '.place')) && found === 'Found: Test Not it? Try again' && /^Set from your address: .*State Senate, District 28\.$/.test(await text(page, '.addrbox .addr-set')), `${found} | ${await text(page, '.addrbox .addr-set')}`);
   noErrors(page, 'Address');
   await ctx.close();
 }
 
-// The first page's "Use my street address instead": no ZIP and no ballot yet. Census is answered here.
+// The first page's "Use my address for exact local races": no ZIP and no ballot yet. Census is answered
+// here, with made-up addresses.
 {
   const { ctx, page } = await newPage();
-  const geoFor = (fips, place, cd, upper) => ({ result: { addressMatches: [{ matchedAddress: 'TEST', geographies: {
+  const geoFor = (fips, place, cd, upper, matched = 'TEST') => ({ result: { addressMatches: [{ matchedAddress: matched, geographies: {
     States: [{ STATE: fips }], 'Incorporated Places': place ? [{ BASENAME: place }] : [], '119th Congressional Districts': [{ BASENAME: String(cd) }],
     '2024 State Legislative Districts - Upper': [{ BASENAME: String(upper) }] } }] } });
   let answer = geoFor('08', 'Nowhere', 6, 28);
@@ -2137,15 +2168,30 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
   await lookUp();
   check('Address on the first page: a state we don’t cover says so', /We don’t cover Massachusetts yet/.test(await text(page, '.notice')), await text(page, '.notice'));
   await tap(page, '.front [data-act="addr-open"]');
-  answer = geoFor('08', 'Aurora', 6, 28);
+  answer = geoFor('08', 'Aurora', 6, 28, 'TEST THREE, AURORA, CO, 80247');
   await lookUp();
   await page.waitForSelector('.door-place', { timeout: 15000 });
-  const said = await text(page, '.toast');
-  check('Address on the first page: Aurora, Colorado shows under the ZIP box, its districts answered', /^Aurora, Colorado/.test(await text(page, '.door-place span')) && /Filled in \d+ districts? from your address/.test(said), `${await text(page, '.door-place span')} | ${said}`);
+  const found = 'Found: Test Three, Aurora, CO 80247 Not it? Try again';
+  check('Address on the first page: Aurora, Colorado shows under the ZIP box, then what the Census found', /^Aurora, Colorado/.test(await text(page, '.door-place span')) && (await text(page, '.door-found')) === found, `${await text(page, '.door-place span')} | ${await text(page, '.door-found')}`);
+  check('Address on the first page: no toast; the address link steps aside', !/address|district/i.test(await text(page, '.toast')) && !(await page.$('.front [data-act="addr-open"]')), await text(page, '.toast'));
   check('Address on the first page: focus moves on to step 2', (await focusedFk(page)) === 'su-h', await focusedFk(page));
+  await shot(page, '00e-address-found');
+  // Not it? Try again: the form with what was typed, and the lookup again from there.
+  await tap(page, '.front [data-act="addr-again"]');
+  check('Address on the first page: Not it? Try again reopens the form with what you typed', (await page.inputValue('#addr-in').catch(() => '')) === 'a test lookup' && !(await page.$('.door-found')));
+  const n0 = asked.length;
+  await page.locator('form[data-form="addr"] button[type=submit]').tap();
+  await page.waitForSelector('.door-found', { timeout: 15000 }).catch(() => {});
+  check('Address on the first page: and asks the Census again', asked.length > n0 && (await text(page, '.door-found')) === found, `${n0} then ${asked.length}`);
+  const cov = Number(((await text(page, '.su-cov')).match(/of your (\d+) races?/) || [])[1]);
   await tap(page, SETUP);
   await page.waitForSelector('#plan', { timeout: 15000 });
-  check('Address on the first page: the ballot keeps the districts', /Your districts: Congressional District 6/.test(await text(page, '.mast')), await text(page, '.mast .fine'));
+  const m = Number(((await text(page, '.bar-txt')).match(/of (\d+)/) || [])[1]);
+  check('Address on the first page: step 2’s count was the ballot’s, districts set', cov > 0 && cov === m, `${cov} vs ${m}`);
+  const kept = await text(page, '.addrbox .addr-set');
+  check('Address on the first page: the ballot keeps what was set, in the address box', /^Set from your address: U\.S\. House of Representatives, District 6 · .*State Senate, District 28\.$/.test(kept) && !/Set from|districts/i.test(await text(page, '.mast')), kept);
+  check('Address on the first page: the box still shows what was found this visit', (await text(page, '.addrbox .addr-found')) === found);
+  check('Address on the first page: District 6 puts Aurora’s U.S. House race on the ballot, no longer a maybe', !!(await page.$('#i-co-us-house-6')) && !/Maybe on your ballot/.test(await text(page, '#i-co-us-house-6')), await text(page, '#i-co-us-house-6'));
   noErrors(page, 'Address on the first page');
   await ctx.close();
 }

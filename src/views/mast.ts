@@ -76,7 +76,6 @@ export function mastHTML(): string {
       <h1 class="place">${esc(name)}</h1>
       ${note && !/county\)?$/i.test(note) ? `<p class="where-note">${esc(note.charAt(0).toUpperCase() + note.slice(1))}</p>` : ''}
       <p class="where"><span>${esc(where)} ·</span> <button class="linkbtn chg" data-act="change-place" data-fk="change-place">Change</button></p>
-      ${S.b.addrNote ? `<p class="fine">${esc(S.b.addrNote)}</p>` : ''}
     </header>`;
   }
   return doorHTML();
@@ -139,8 +138,11 @@ function whereHTML(): string {
       <p>Want this for your city? <a href="${esc(ask)}" target="_blank" rel="noopener" data-ask-kevin>Ask Kevin</a>.</p></div>`;
   }
   // "Use my address for exact local races" opens the address form right here. The place question has its
-  // own link, so this one steps aside while it shows.
-  const addr = S.zipChoice ? '' : S.ui.addrOpen ? addrHTML(true) : '<p class="addr-cta"><button class="linkbtn" data-act="addr-open" data-fk="addr-open">Use my address for exact local races</button></p>';
+  // own link, so this one steps aside while it shows. After a lookup, what the Census found takes its
+  // place, for this visit only, with "Not it? Try again" (the form again, with what you typed).
+  const found = b && S.ui.addrFound
+    ? `<p class="door-found" role="status"><span><b>Found:</b> ${esc(S.ui.addrFound)}</span> <button class="linkbtn" data-act="addr-again" data-fk="addr-again">Not it? Try again</button></p>` : '';
+  const addr = S.zipChoice ? '' : S.ui.addrOpen ? addrHTML(true) : found || '<p class="addr-cta"><button class="linkbtn" data-act="addr-open" data-fk="addr-open">Use my address for exact local races</button></p>';
   return `${err}
     ${S.view === 'loading' ? '<p class="small" role="status">Loading your ballot...</p>' : ''}
     ${S.loadErr ? `<p class="zip-err" role="alert">${esc(S.loadErr)}</p>${retryHTML()}` : ''}

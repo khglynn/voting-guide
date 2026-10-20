@@ -4,11 +4,10 @@
 import type { Index, PlaceBundle, StateBundle } from './types';
 import { S, emptyBallotState, persist, forgetLast, savedBallot, parseShareHead, decodeShare, normalizeRanks, type BallotState, type View } from './state';
 import { buildBallot, entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, rankMax, decisionItems, chosenIds, type Ballot } from './ballot';
-import { zipState, censusLookup, placeFromGeo, settleAddress, withPlace, type GeoResult } from './geo';
-import { toast, hideToast, plural } from './util';
+import { zipState, censusLookup, placeFromGeo, settleAddress, withPlace, tidyAddress, type GeoResult } from './geo';
+import { toast, hideToast } from './util';
 import { render, renderBallot, renderAddr, anchored, $ } from './render';
 import { setInvolved, type GetInvolved } from './views/pass';
-import { addressCount } from './views/ledger';
 import { planAgree, applyFills, planParty, planSetup, forgetUndo } from './model/bulk';
 import { setFromAddress, addrSummary } from './model/address';
 import { partiesOnBallot, toggleChip, setSources, setParty, chipMembers, chipState, doorNone, noEndorsements, CHIPS } from './model/lens';
@@ -46,7 +45,7 @@ export async function loadInvolved(): Promise<void> {
 export function resetUI(): void {
   const u = S.ui;
   u.view = 'ballot'; u.row = null; u.page = {}; u.others.clear(); u.folded.clear(); u.unfolded.clear(); u.reveal.clear(); u.keep = null; u.beat = null;
-  u.noteOpen.clear(); u.reader = null; u.sheet = null; u.sheetFrom = null; u.sheetBack = null; u.addrOpen = false; u.addrMsg = null; u.addrFail = ''; u.saveOpen = false; u.copyFallback = null; u.bulk = null;
+  u.noteOpen.clear(); u.reader = null; u.sheet = null; u.sheetFrom = null; u.sheetBack = null; u.addrOpen = false; u.addrMsg = null; u.addrFail = ''; u.addrFound = null; u.addrWhich = null; u.saveOpen = false; u.copyFallback = null; u.bulk = null;
   u.resume = false;
   u.open.delete('voted');
 }
@@ -76,7 +75,7 @@ export function toDoor(): void {
   forgetLast();
   cancelLoad();
   S.view = 'start'; S.ballot = null; S.zipChoice = null; S.picked = null; S.coverage = null; S.pending = null; S.loadErr = null; S.retry = null; S.zipErr = '';
-  S.ui.view = 'ballot'; S.ui.reader = null; S.ui.sheet = null; S.ui.sheetBack = null; S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.addrFail = ''; S.ui.resume = false;
+  S.ui.view = 'ballot'; S.ui.reader = null; S.ui.sheet = null; S.ui.sheetBack = null; S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.addrFail = ''; S.ui.addrFound = null; S.ui.addrWhich = null; S.ui.resume = false;
   forgetUndo();
   hideToast();
   render();
@@ -372,7 +371,20 @@ function addrFailed(msg: string, fail: 'down' | 'miss'): void {
   S.ui.addrBusy = false; S.ui.addrMsg = msg; S.ui.addrFail = fail;
   renderAddr();
 }
+/* What was typed into the address box last, in memory only: "Not it? Try again" puts it back in
+   the box. Never saved, logged or put in the page's address. */
+let typedAddr = '';
+export function reopenAddr(): void {
+  S.ui.addrOpen = true; S.ui.addrMsg = null; S.ui.addrFail = ''; S.ui.addrWhich = null;
+  renderAddr();
+  const i = $('#addr-in') as HTMLInputElement | null;
+  if (!i) return;
+  if (!i.value) i.value = typedAddr;
+  i.scrollIntoView({ block: 'center' });
+  i.focus({ preventScroll: true });
+}
 export async function runAddress(addr: string): Promise<void> {
+  typedAddr = addr;
   const choosing = S.view !== 'ballot' && S.zipChoice;
   const b = S.view === 'ballot' ? S.ballot : null;
   const door = !b && !choosing;
@@ -447,20 +459,25 @@ export async function runAddress(addr: string): Promise<void> {
   applyGeo(r);
 }
 /* The districts a Census match settles on this ballot (model/address.ts), and the line that names
-   them, which the ballot keeps. The address itself is never kept. */
+   them, which the ballot keeps. What the Census found shows back in the address box (on the first
+   page, under the place line) until a reload or another ballot; the address itself is never kept. */
 export function applyGeo(r: GeoResult): void {
   const b = S.ballot!;
-  const set = setFromAddress(b, S.b, r);
-  const answered = set.length;
-  S.b.addrNote = addrSummary(set);
+  S.b.addrNote = addrSummary(setFromAddress(b, S.b, r));
+  S.ui.addrFound = tidyAddress(r.matched) || null;
   S.ui.addrOpen = false;
   S.ui.addrMsg = null;
   S.ui.addrFail = '';
+  S.ui.addrWhich = null;
   render();
   persist();
-  toast(answered ? `Filled in ${plural(answered, 'district')} from your address.`
-    : b.groups.some((g) => !S.b.districts[g.key]) ? 'Found your address, but it doesn’t answer the district questions here. Use the finder links in each one.'
-      : addressCount() > 0 ? 'Found your address. Check the rest with your sample ballot.' : 'Found your address. Nothing on this ballot depends on it.');
+  // On a ballot, focus goes to what was found, in the box where the form was.
+  if (S.view !== 'ballot') return;
+  const f = $('[data-fk="addr-found"]') || $('.addrbox');
+  if (!f) return;
+  const r0 = f.getBoundingClientRect();
+  if (r0.top < 0 || r0.bottom > window.innerHeight) f.scrollIntoView({ block: 'center' });
+  if (f.matches('[tabindex]')) f.focus({ preventScroll: true });
 }
 
 /* ---------- "try as": scenarios for feeling the guide, never saved ---------- */

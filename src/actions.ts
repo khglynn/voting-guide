@@ -8,7 +8,7 @@ import { toast, hideToast, copyText, announce, hash, plural } from './util';
 import { render, renderRow, renderSection, renderSummaries, renderLens, flushLens, markBehind, renderBallot, renderAddr, rowEl, scrollRowIntoView, rowTop, holdRow, opensLow, anchored, $ } from './render';
 import { growOpen, inkRow, followFold, glideTo, land, stopGlide, grow, shrinkAway, collapseRow, finishCollapse } from './motion';
 import { HOW_K } from './views/trust';
-import { openBallot, openChosen, go, openReader, runAddress, toDoor, showBallot, rechoose } from './app';
+import { openBallot, openChosen, go, openReader, runAddress, reopenAddr, toDoor, showBallot, rechoose } from './app';
 import { judgeBatch } from './model/judges';
 import { planAgree, planParty, planJudges, planSetup, applyFills, undoFills, emptyPlan, touchUndo, type Plan } from './model/bulk';
 import { toggleChip, setParty, setSources, noEndorsements, doorNone, type ChipKey } from './model/lens';
@@ -743,7 +743,9 @@ A['setup-done'] = async () => {
 /* "Change" on the place line, after the place question: ask it again. */
 A.rechoose = () => { rechoose(); };
 A['addr-open'] = () => { S.ui.addrOpen = true; S.ui.addrMsg = null; S.ui.addrFail = ''; renderAddr(); const i = $('#addr-in'); if (i) { i.scrollIntoView({ block: 'center' }); i.focus({ preventScroll: true }); } };
-A['addr-close'] = () => { S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.addrFail = ''; renderAddr(); focusFk('addr-open'); };
+A['addr-close'] = () => { S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.addrFail = ''; S.ui.addrWhich = null; renderAddr(); focusFk($('[data-fk="addr-again"]') ? 'addr-again' : 'addr-open'); };
+/* "Not it? Try again" beside what the Census found: the form again, with what you typed. */
+A['addr-again'] = () => { reopenAddr(); };
 /* After a lookup went wrong: the same address again, or close the form and answer the first
    district question by hand. */
 A['addr-retry'] = () => { void runAddress((($('#addr-in') as HTMLInputElement | null)?.value) || ''); };

@@ -147,12 +147,14 @@ function whereHTML(): string {
     after = `<div class="notice" role="status"><p><b>We don’t cover ${name ? esc(name) : 'that area'} yet.</b> ${ext('https://vote.gov/', 'Vote.gov')} has official info for every state.</p>
       <p>Want this for your city? <a href="${esc(ask)}" target="_blank" rel="noopener" data-ask-kevin>Ask Kevin</a>.</p></div>`;
   }
-  // "Use my address for exact local races" opens the address form right here. The place question has its
-  // own link, so this one steps aside while it shows. After a lookup, what the Census found takes its
-  // place, for this visit only, with "Not it? Try again" (the form again, with what you typed).
+  // "Use my address for the most accurate local results" (Kevin's words, Oct 20: the Census settles
+  // Congress and the legislature, not every local race) opens the address form right here. The place
+  // question has its own link, so this one steps aside while it shows. After a lookup, what the
+  // Census found takes its place, for this visit only, with "Not it? Try again" (the form again,
+  // with what you typed).
   const found = b && S.ui.addrFound
     ? `<p class="door-found" role="status"><span><b>Found:</b> ${esc(S.ui.addrFound)}</span> <button class="linkbtn" data-act="addr-again" data-fk="addr-again">Not it? Try again</button></p>` : '';
-  const addr = S.zipChoice ? '' : S.ui.addrOpen ? addrHTML(true) : found || '<p class="addr-cta"><button class="linkbtn" data-act="addr-open" data-fk="addr-open">Use my address for exact local races</button></p>';
+  const addr = S.zipChoice ? '' : S.ui.addrOpen ? addrHTML(true) : found || '<p class="addr-cta"><button class="linkbtn" data-act="addr-open" data-fk="addr-open">Use my address for the most accurate local results</button></p>';
   return `${err}
     ${S.view === 'loading' ? '<p class="small" role="status">Loading your ballot...</p>' : ''}
     ${S.loadErr ? `<p class="zip-err" role="alert">${esc(S.loadErr)}</p>${retryHTML()}` : ''}

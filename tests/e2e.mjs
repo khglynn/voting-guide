@@ -167,7 +167,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('First page: the switches read "Fill in my ballot with their picks" and "Hide races I’ve decided", both off', (await text(page, '[data-act="setup-fill"] b')) === 'Fill in my ballot with their picks' && (await text(page, '[data-act="setup-only"] b')) === 'Hide races I’ve decided'
     && (await page.getAttribute('[data-act="setup-fill"]', 'aria-checked')) === 'false' && (await page.getAttribute('[data-act="setup-only"]', 'aria-checked')) === 'false');
   check('First page: before a ZIP, the fill switch says what it does', (await text(page, '[data-act="setup-fill"] small')) === 'Fills the races where they agree. Races where picks split stay open.', await text(page, '[data-act="setup-fill"] small'));
-  check('First page: "Use my address for exact local races"', (await text(page, '.front [data-act="addr-open"]')) === 'Use my address for exact local races', await text(page, '.front [data-act="addr-open"]'));
+  check('First page: "Use my address for the most accurate local results"', (await text(page, '.front [data-act="addr-open"]')) === 'Use my address for the most accurate local results', await text(page, '.front [data-act="addr-open"]'));
   const fine = await page.$$eval('.front .door-foot > .fine', (els) => els.map((e) => e.textContent.replace(/\s+/g, ' ').trim()));
   const cities = new Set(Object.entries(await page.evaluate(() => fetch('/data/index.json').then((r) => r.json()).then((i) => i.places))).map(([id, p]) => (p.state === 'DC' ? 'DC' : /^nyc-/.test(id) ? 'NYC' : id))).size;
   check('First page: the small print counts cities from the index (DC and NYC count once), and the credit runs on in the same paragraph', fine.length === 1 && fine[0] === `Covers ${cities} cities where Kevin’s friends live. Ask for yours · Made by Kevin · kevinhg.com · Buy him a coffee`, `${fine.join(' / ')} (index says ${cities})`);
@@ -2139,8 +2139,8 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
   await ctx.close();
 }
 
-// The first page's "Use my address for exact local races": no ZIP and no ballot yet. Census is answered
-// here, with made-up addresses.
+// The first page's "Use my address for the most accurate local results": no ZIP and no ballot yet.
+// Census is answered here, with made-up addresses.
 {
   const { ctx, page } = await newPage();
   const geoFor = (fips, place, cd, upper, matched = 'TEST') => ({ result: { addressMatches: [{ matchedAddress: matched, geographies: {

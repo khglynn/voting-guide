@@ -69,10 +69,16 @@ function endBeat(fold = false): void {
   if (sectionFolded(sec, entriesBySection().get(sec) || [])) { foldDone(sec); refocus(); return; }
   collapseRow(el, () => { anchored(() => renderSection(sec)); refocus(); });
 }
-/* Focus on a row that leaves (a keyboard pick) goes on to the row that takes its place, or to its
-   section's band. */
+/* Focus on a row that leaves after a keyboard pick goes on to the row that takes its place, or to
+   its section's band. After a tap it just goes with the row, so no focus ring lands on a row you
+   didn't touch. */
+let keyed = false;
+if (typeof document !== 'undefined') {
+  document.addEventListener('keydown', () => { keyed = true; }, true);
+  document.addEventListener('pointerdown', () => { keyed = false; }, true);
+}
 function focusAfter(el: HTMLElement | null, sec: SectionKey): () => void {
-  if (!el || !el.contains(document.activeElement)) return () => {};
+  if (!keyed || !el || !el.contains(document.activeElement)) return () => {};
   let n = el.nextElementSibling;
   while (n && !n.querySelector(':scope > [data-fk]')) n = n.nextElementSibling;
   const fk = n?.querySelector<HTMLElement>(':scope > [data-fk]')?.dataset.fk || `sec-${sec}`;

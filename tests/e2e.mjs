@@ -1929,7 +1929,6 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
   const mid = s.filter((x) => x.husk && x.tops[1] !== null && x.tops[1] < before - 2 && x.tops[1] > after + 2).length;
   check('Beat: the row under it slides up into its place, not in one jump', before !== null && after < before - 40 && mid >= 2, `${before} to ${after}, ${mid} frames between`);
   check('Beat: gone, and the band still says so', !(await page.$(`#i-${ids[0]}`)) && /^1 of \d+ decided Show$/.test(await text(page, '#sec-measures .sec-r')), await text(page, '#sec-measures .sec-r'));
-  check('Beat: focus goes on to the row that took its place', (await focusedFk(page)) === `row-${ids[1]}`, await focusedFk(page));
   // Another row opened in the beat: the decided one goes at once and the tapped header holds still.
   await openRow(page, ids[1]);
   await settle(page);
@@ -1984,6 +1983,30 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
   check('Beat: a section\'s last race folds the section to its band, "1 of 1 decided" with Show', !!(await page.$('#sec-city.folded')) && !(await page.$('#sec-city .row')) && (await text(page, '#sec-city .sec-r')) === '1 of 1 decided Show', await text(page, '#sec-city .sec-r'));
   check('Beat: the band holds still as the section folds under it', ct.length === sc.length && Math.max(...ct) - Math.min(...ct) <= 1 && sc.some((x) => x.husk), `${Math.min(...ct)} to ${Math.max(...ct)}`);
   noErrors(page, 'Beat and counts');
+  await ctx.close();
+}
+{
+  // A keyboard pick: when its row folds away, focus goes on to the row that took its place.
+  const { ctx, page } = await newPage({ hasTouch: false, isMobile: false });
+  await openBallot(page, '80205');
+  await page.click('.foot [data-act="toc"]');
+  await page.waitForSelector('.sheet-panel.toc');
+  await page.click('.sheet-panel [data-act="only"]');
+  await page.keyboard.press('Escape');
+  await settle(page);
+  const [k0, k1] = await page.evaluate(() => [...document.querySelectorAll('#sec-measures .row[data-item][data-undecided]')].slice(0, 2).map((r) => r.dataset.item));
+  // (A click within 650ms of the last tap is the tap's own follow-up, main.ts: wait it out.)
+  await page.waitForTimeout(700);
+  await page.focus(`#i-${k0} > [data-act="row"]`);
+  await page.keyboard.press('Enter');
+  await settle(page);
+  await page.waitForTimeout(700);
+  await page.focus(`#i-${k0} [data-act="pick"][data-v="YES"]`);
+  await page.keyboard.press('Enter');
+  check('Beat, keyboard: the pick waits its beat with focus on its row', !!(await page.$(`#i-${k0}[data-beat]`)) && (await focusedFk(page)) === `row-${k0}`, await focusedFk(page));
+  await settle(page);
+  check('Beat, keyboard: once it folds away, focus is on the row that took its place', !(await page.$(`#i-${k0}`)) && (await focusedFk(page)) === `row-${k1}`, await focusedFk(page));
+  noErrors(page, 'Beat, keyboard');
   await ctx.close();
 }
 {

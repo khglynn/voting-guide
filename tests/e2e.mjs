@@ -1987,7 +1987,7 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
 }
 {
   // A keyboard pick: when its row folds away, focus goes on to the row that took its place.
-  const { ctx, page } = await newPage({ hasTouch: false, isMobile: false });
+  const { ctx, page } = await newPage();
   await openBallot(page, '80205');
   await page.click('.foot [data-act="toc"]');
   await page.waitForSelector('.sheet-panel.toc');

@@ -2,7 +2,8 @@
 
     <venv>/bin/python scripts/paper/render.py OUT_DIR JOB[,JOB...] [SAMPLES]
 
-Jobs: plan, strip-a, strip-b, strip-c, strip-d, sheet, crowd (envelope is kept as an example of a two-piece prop).
+Jobs: plan, strip-a, strip-b, strip-c, strip-d, sheet, crowd, states (envelope is kept as an example of a two-piece
+prop). The states job reads its outlines from the GeoJSON file named by the STATES environment variable.
 Each job writes OUT_DIR/<job>.png: the paper in its final color with its cast shadow, on a transparent
 background (the ground is a Cycles shadow catcher), ready to lay on the page. Every piece is lit by the
 same sun from the upper left, so they all sit on one desk.
@@ -135,14 +136,18 @@ def person_outline(seed, hw=0.44, hair='short', lean=0.0, sx=1.0, drop=0.0, tilt
     cs = measure.find_contours(s, 0.0)
     c = max(cs, key=len)
     P = np.stack([xs[0] + c[:, 1] * step, ys[0] + c[:, 0] * step], 1)
+    return scissor_recut(P, r)
+
+def scissor_recut(P, r, snip=(.035, .07), jitter=.0015):
+    """Re-cut a traced outline in scissor snips: straight segments `snip` units long, a hair of jitter at each
+    joint, then densified so the mesh and the edge lift have points to hold. Returns a counterclockwise outline."""
     if np.sum(P[:-1, 0] * P[1:, 1] - P[1:, 0] * P[:-1, 1]) < 0: P = P[::-1]
-    # re-cut in scissor snips: straight segments 0.035 to 0.07 units long, a hair of jitter at each joint
     seg = np.r_[0, np.cumsum(np.hypot(*np.diff(P, axis=0).T))]
     total = seg[-1]; marks = [0.0]
-    while marks[-1] < total: marks.append(marks[-1] + r.uniform(.035, .07))
+    while marks[-1] < total: marks.append(marks[-1] + r.uniform(*snip))
     marks = np.array(marks[:-1])
     V = np.stack([np.interp(marks, seg, P[:, 0]), np.interp(marks, seg, P[:, 1])], 1)
-    V += r.normal(0, .0015, V.shape)
+    V += r.normal(0, jitter, V.shape)
     dense = []
     for i in range(len(V)):
         a, b = V[i], V[(i + 1) % len(V)]; m = max(2, int(np.linalg.norm(b - a) / .008))
@@ -352,6 +357,80 @@ def job_crowd():
               crumple=(.008, 1.8), lift=.003, lift_fade=.08, spacing=.025, seed=100 + i)
     render(sc, 'crowd')
 
+# ---------------------------------------------------------------- the covered states
+
+STATES_SRC = os.environ.get('STATES', '')   # Natural Earth admin-1 states with lakes cut out (public domain); see README
+_GEO = {}
+
+def _area(P):
+    return .5 * float(np.sum(P[:-1, 0] * P[1:, 1] - P[1:, 0] * P[:-1, 1]))
+
+def _albers(lon, lat, lon0, lat0, p1=29.5, p2=45.5):
+    """Albers equal-area conic on a sphere, the usual projection for maps of the US, centered on one state so
+    the state stands upright the way it is drawn on its own."""
+    p1, p2, l0 = math.radians(p1), math.radians(p2), math.radians(lat0)
+    n = (math.sin(p1) + math.sin(p2)) / 2; C = math.cos(p1) ** 2 + 2 * n * math.sin(p1)
+    rho0 = math.sqrt(C - 2 * n * math.sin(l0)) / n
+    th = n * np.radians(lon - lon0); rho = np.sqrt(C - 2 * n * np.sin(np.radians(lat))) / n
+    return rho * np.sin(th), rho0 - rho * np.cos(th)
+
+def state_rings(code, keep=.02):
+    """One state's outer rings, projected, largest first. Islands under `keep` of the largest piece are left
+    out (Long Island stays; the Channel Islands, the Keys and Padre Island go)."""
+    if not _GEO:
+        import json
+        assert STATES_SRC, 'set STATES to the Natural Earth admin-1 GeoJSON (see scripts/paper/README.md)'
+        for f in json.load(open(STATES_SRC, encoding='utf-8'))['features']:
+            if f['properties'].get('adm0_a3') == 'USA': _GEO[f['properties']['postal']] = f['geometry']
+    g = _GEO[code]; polys = g['coordinates'] if g['type'] == 'MultiPolygon' else [g['coordinates']]
+    rings = [np.array(p[0], float) for p in polys]
+    lo = np.concatenate(rings).min(0); hi = np.concatenate(rings).max(0); lon0, lat0 = (lo + hi) / 2
+    out = sorted((np.stack(_albers(R[:, 0], R[:, 1], lon0, lat0), 1) for R in rings), key=lambda P: -abs(_area(P)))
+    return [P for P in out if abs(_area(P)) >= keep * abs(_area(out[0]))]
+
+# A loose row, west to east, the way the crowd stands: x, y of the state's middle, a turn in degrees, paper.
+# DC is a small punched dot on Maryland's edge, about where it sits on a map.
+STATE_ROW = [
+    ('WA', -2.67, .34, -4, 'deep'), ('OR', -2.27, -.36, 3, 'tint'), ('CA', -1.81, .22, -2, 'green'),
+    ('CO', -1.37, -.38, 4, 'cream'), ('TX', -0.91, .30, -3, 'deep'), ('MO', -0.41, -.34, 4, 'tint'),
+    ('IL', 0.01, .30, -5, 'green'), ('AL', 0.41, -.34, 3, 'deep'), ('GA', 0.85, .32, -2, 'tint'),
+    ('FL', 1.33, -.32, 4, 'green'), ('PA', 1.75, .40, -3, 'cream'), ('MD', 2.23, -.30, 5, 'deep'),
+    ('DC', 2.25, -.40, 0, 'cream'), ('NY', 2.53, .40, -4, 'tint'),
+]
+STATE_SIZE, STATE_EVEN = .52, .12   # the square root of a state's area is about STATE_SIZE * (its area over the median's) ** STATE_EVEN
+
+def states_layout(seed=300):
+    """Each covered state as scissor-cut outlines in place: [(code, [outline, ...], paper)], back to front."""
+    sizes = {c: sum(abs(_area(P)) for P in state_rings(c)) for c, *_ in STATE_ROW if c != 'DC'}
+    med = float(np.median(list(sizes.values())))
+    out = []
+    for i, (code, x, y, turn, col) in enumerate(STATE_ROW):
+        r = np.random.default_rng(seed + i)
+        if code == 'DC':
+            t = np.linspace(0, 2 * math.pi, 90, endpoint=False); rings = [np.stack([.065 * np.cos(t), .065 * np.sin(t)], 1)]
+            k, snip = 1.0, (.012, .02)
+        else:
+            rings = state_rings(code); allp = np.concatenate(rings); mid = (allp.min(0) + allp.max(0)) / 2
+            rings = [P - mid for P in rings]
+            k = STATE_SIZE * (sizes[code] / med) ** STATE_EVEN / math.sqrt(sizes[code]); snip = (.022, .045)
+        th = math.radians(turn); R = np.array([[math.cos(th), -math.sin(th)], [math.sin(th), math.cos(th)]])
+        cuts = [scissor_recut(np.ascontiguousarray(P * k @ R.T + np.array([x, y])), r, snip=snip, jitter=.0008)[0] for P in rings]
+        out.append((code, cuts, col))
+    return out
+
+def job_states():
+    """A footer for the first page: the outlines of the states the guide covers, cut from the crowd's papers and
+    laid in a loose row, west to east."""
+    fw, fh = 6.4, 1.7                   # room on the right for the shadows, so none is cut by the frame
+    sc = scene(fw, fh)
+    rim = paper_mat('rim', PAPER['core'], sss=.4)
+    for i, (code, cuts, col) in enumerate(states_layout()):
+        face = paper_mat('s%d' % i, CROWD_PAPER[col])
+        for j, P in enumerate(cuts):
+            piece('%s%d' % (code, j), P, np.zeros(len(P), bool), face, rim, z=.004 * i, thick=.006,
+                  crumple=(.006, 1.8), lift=.003, lift_fade=.06, spacing=.02, seed=300 + i)
+    render(sc, 'states')
+
 def job_envelope():
     """A plain white envelope, flap hinged at the top edge and lifting a little."""
     fw, fh = 2.2, 1.7
@@ -369,6 +448,6 @@ def job_envelope():
 
 TABLE = {'plan': job_plan, 'strip-a': lambda: job_strip(23, 'strip-a', -.3, .97), 'strip-b': lambda: job_strip(51, 'strip-b', .25, 1.04),
          'strip-c': lambda: job_strip(67, 'strip-c', -.15, 1.0), 'strip-d': lambda: job_strip(83, 'strip-d', .3, .99),
-         'sheet': job_sheet, 'crowd': job_crowd, 'envelope': job_envelope}
+         'sheet': job_sheet, 'crowd': job_crowd, 'states': job_states, 'envelope': job_envelope}
 for j in [j for j in JOBS if j]:
     print('job', j, flush=True); TABLE[j]()

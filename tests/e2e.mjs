@@ -542,7 +542,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   const { ctx, page } = await newPage({ colorScheme: 'dark' });
   await openBallot(page, '80226');
   const bg = await page.evaluate(() => getComputedStyle(document.body).backgroundColor);
-  check('Dark mode: the page goes dark', bg === 'rgb(28, 25, 21)', bg);
+  check('Dark mode: the page goes dark', bg === 'rgb(22, 29, 26)', bg);
   await noSideScroll(page, 'Dark mode');
   await shot(page, '07-dark');
   await ctx.close();

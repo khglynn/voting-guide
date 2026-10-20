@@ -1,5 +1,5 @@
-/* The plan strip (dusk): the next step and its date, one short line, the main button,
-   "Am I registered?", "What if..." and "I already voted". Behind "What if..." sit the
+/* The plan strip (green paper): the next step and its date, one short line, the main button,
+   "Am I registered?", "What if..." and "I already voted". Behind "What if...", on the same paper, sit the
    situations, the gotchas, the key dates and the rules for ID and the booth: everything the
    v2 plan card held, one tap away. Every date is read from the state file. */
 import type { HowTo } from '../types';
@@ -28,10 +28,10 @@ export function planHTML(): string {
       ${reg ? `<p class="plan-reg">${esc(reg)}</p>` : ''}
       <div class="plan-acts">${step.primary ? `<a class="pbtn gold" href="${esc(step.primary.url)}" target="_blank" rel="noopener">${esc(step.primary.label)}</a>` : ''}
         ${check ? `<a class="pbtn line" href="${esc(check)}" target="_blank" rel="noopener">Check my registration</a>` : ''}</div>
-      <div class="plan-row"><button class="whatif-tog" data-act="open" data-k="whatif" aria-expanded="${open}" data-fk="whatif"><span>Dates, ID, and if you moved or lost your ballot</span><svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+      <div class="plan-row"><button class="whatif-tog" data-act="open" data-k="whatif" aria-expanded="${open}" data-fk="whatif"><span>Dates, ID, and if you moved or lost <span class="nw">your ballot<svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span></span></button>
         <button class="voted" data-act="view" data-v="pass" data-voted="1" data-fk="voted">I already voted</button></div>
-    </div></section>
-    ${open ? whatIfHTML(h) : ''}`;
+      ${open ? whatIfHTML(h) : ''}
+    </div></section>`;
 }
 
 interface Row { date: string; label: string; detail: string | null; source: string | null; key: string }
@@ -81,10 +81,10 @@ function whatIfHTML(h: HowTo): string {
     h.model_plain ? disc('bx-how', `How voting works in ${b.stateName}`, bulletsHTML(h.model_plain)) : '',
     ...b.places.filter((p) => p.notes).map((p) => disc(`bx-n-${p.id}`, `Notes for ${p.label}`, bulletsHTML(p.notes))),
   ].join('');
-  return `<section class="whatifs" aria-label="Dates, ID, rules and common problems"><div class="wrap">
+  return `<div class="whatifs" role="region" aria-label="Dates, ID, rules and common problems">
     ${sits.length ? `<h3 class="wi-h">Common problems and what to do</h3><p class="wi-sub">Answers come from ${ext(h.official_site.url, h.official_site.name)}.</p><ul class="wi-list">${sitList}</ul>` : ''}
     ${h.gotchas.length ? `<h3 class="wi-h">Common mistakes in ${esc(b.stateName)}</h3>${leadBulletsHTML(h.gotchas, 'bul bul-lead gotchas')}` : ''}
     <h3 class="wi-h">Dates, ID and voting rules</h3><ul class="wi-list">${basics}</ul>
     <p class="meta">Checked ${esc(h.last_verified || '')}. Official info: ${ext(h.official_site.url, h.official_site.name)}.</p>
-  </div></section>`;
+  </div>`;
 }

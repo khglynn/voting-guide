@@ -30,6 +30,7 @@ scripts/ship.sh --gates-only       # all local gates in one go
 - Poll times are local: `plan.ts` keeps each state's time zones, the main one first. A new place in a state's other zone (Pensacola is Central in Eastern Florida) needs a line in `PLACE_ZONE`, or its "polls closed" moment is an hour off.
 - `src/views/`: string templates. `render.ts` paints regions and single rows; `actions.ts` holds every `data-act`; `app.ts` the flows; `main.ts` boot and the tap handler (tuned on phones; keep it).
 - `tests/`: `model.mjs` + `model-ledger.mjs`, `e2e.mjs`, `sweep.mjs`, `perf.mjs`, `shots.mjs`.
+- The look is three materials: paper (Blender renders in `public/paper/`, made by `scripts/paper/`; its README says how to regenerate, and `bake.py` writes the block between `paper:start` and `paper:end` in `src/styles.css`, so don't hand-edit it), one printed green ink for headings (Archivo, with a speck mask), and pen for rules, boxes and ticks. Print and dark mode swap through tokens.
 
 ## How changes ship
 

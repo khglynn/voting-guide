@@ -1,5 +1,6 @@
 /* Motion, small and calm ("subtle, delightful"; the paper skin's rule: real but not loud).
-   - A row opens downward from its header and folds back up into it. The header never moves.
+   - A row opens downward from its header and folds back up into it. The header stays where you
+     tapped it, unless its panel would open out of sight: then it glides up to the top as it opens.
    - A pick draws its tick in the box and settles its verdict in gold.
    - A jump (the menu, Next up, My plan's lines, a section band) glides to where it goes and marks
      where it landed, so the eye finds it.

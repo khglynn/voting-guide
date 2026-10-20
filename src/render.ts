@@ -267,6 +267,14 @@ export function rowTop(key: string): number | null {
   const r = el.getBoundingClientRect();
   return r.bottom > 0 && r.top < window.innerHeight ? r.top : null;
 }
+/* An open row whose panel starts too low to read: below 60% of the screen, or just above the bar. */
+export function opensLow(key: string): boolean {
+  const hd = rowEl(key)?.querySelector<HTMLElement>(':scope > .row-hd');
+  if (!hd) return false;
+  const bar = $('.foot');
+  const floor = bar ? bar.getBoundingClientRect().top : window.innerHeight;
+  return hd.getBoundingClientRect().bottom > Math.min(window.innerHeight * 0.6, floor - 80);
+}
 /* Put a row's header back at `top` on screen, in the same frame, after content above it changed. */
 export function holdRow(key: string, top: number): void {
   const el = rowEl(key);

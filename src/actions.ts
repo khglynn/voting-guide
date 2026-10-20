@@ -5,7 +5,7 @@ import type { Contest, Item } from './types';
 import { S, persist, emptyBallotState, type View } from './state';
 import { status, sectionOf, rankMax, ordinal, chosenIds, entriesBySection, pageWalk, OTH_KEY, type SectionKey } from './ballot';
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
-import { render, renderRow, renderSection, renderSummaries, renderLens, flushLens, markBehind, renderBallot, renderAddr, rowEl, scrollRowIntoView, rowTop, holdRow, anchored, $ } from './render';
+import { render, renderRow, renderSection, renderSummaries, renderLens, flushLens, markBehind, renderBallot, renderAddr, rowEl, scrollRowIntoView, rowTop, holdRow, opensLow, anchored, $ } from './render';
 import { growOpen, inkRow, followFold, glideTo, land, stopGlide, grow, shrinkAway } from './motion';
 import { HOW_K } from './views/trust';
 import { openBallot, openChosen, go, openReader, runAddress, toDoor, showBallot, rechoose } from './app';
@@ -48,8 +48,9 @@ function afterPick(id: string, close = true): void {
 /* ---------- rows ---------- */
 /* A tapped header stays exactly where it is on screen: closing, its panel folds up into it; opening,
    the row that was open closes at once (above it, the page scrolls by what it lost, in the same
-   frame) and this one's panel grows open beneath it. A header out of view (a keyboard, a script)
-   comes to the top first, as before. */
+   frame) and this one's panel grows open beneath it. A header tapped low on the screen, whose panel
+   would open mostly out of sight, glides up to the top as the panel grows. A header out of view (a
+   keyboard, a script) comes to the top first, as before. */
 A.row = (d) => {
   const key = d.id!;
   const prev = S.ui.row;
@@ -62,9 +63,13 @@ A.row = (d) => {
   if (prev) renderRow(prev, false);
   if (prevKeep && prevKeep !== key && S.ui.onlyUndecided) renderRow(prevKeep);
   renderRow(key, false);
-  if (top === null) { const el = rowEl(key); if (el) window.scrollBy(0, el.getBoundingClientRect().top - 4); }
-  else holdRow(key, top);
-  growOpen(rowEl(key));
+  const el = rowEl(key);
+  if (top === null) { if (el) window.scrollBy(0, el.getBoundingClientRect().top - 4); }
+  else {
+    holdRow(key, top);
+    if (opensLow(key)) glideTo(el, 4);
+  }
+  growOpen(el);
 };
 /* The item behind a row key: an item id, or "q:<group key>" (its first district's race). */
 const itemOfKey = (key: string): Item | undefined => {

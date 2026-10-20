@@ -936,6 +936,17 @@ const placeAt = (page, sel, y) => page.evaluate(([s, y]) => window.scrollBy(0, d
   await page.locator(`${B} > [data-act="row"]`).tap();
   f = await reel(page);
   check('Motion: closing it, the header stays put and the panel folds up into it, then is gone', drift(f, 300) <= 2 && Math.abs(f[f.length - 1][1] - h0) <= 1 && between(f) >= 2 && !(await page.$('.ob-gone')), `drift ${drift(f, 300).toFixed(1)}px, ${between(f)} frames between`);
+  // Tapped low on the screen, a header whose panel would open mostly out of sight glides up to the
+  // top as the panel grows (review, Oct 20: at 700px only 16px of the panel showed).
+  await placeAt(page, B, 640);
+  await film(page, B);
+  await page.locator(`${B} > [data-act="row"]`).tap();
+  f = await reel(page);
+  const lowEnd = f[f.length - 1][0];
+  const lowSteps = new Set(f.map(([t]) => Math.round(t))).size;
+  check('Motion: a header tapped low on the screen glides up to the top as its panel grows', !!(await page.$(`${B}.is-open`)) && lowEnd >= 0 && lowEnd <= 8 && lowSteps >= 5 && between(f) >= 3, `640px to ${Math.round(lowEnd)}px over ${lowSteps} positions`);
+  await page.locator(`${B} > [data-act="row"]`).tap();
+  await settle(page);
   // A row open above it: that one closes at once and the page makes up the difference in the same frame.
   await openRow(page, a);
   await settle(page);
@@ -1017,6 +1028,12 @@ const placeAt = (page, sel, y) => page.evaluate(([s, y]) => window.scrollBy(0, d
   await page.locator(`${B} > [data-act="row"]`).tap();
   f = await reel(page);
   check('Reduced motion: and closes at once, nothing folding away', [...new Set(f.map(([, h]) => Math.round(h)))].length <= 2 && drift(f, 300) <= 2 && !(await page.$('.ob-gone')));
+  await placeAt(page, B, 640);
+  await film(page, B);
+  await page.locator(`${B} > [data-act="row"]`).tap();
+  f = await reel(page);
+  check('Reduced motion: a header tapped low on the screen is at the top at once, open', !!(await page.$(`${B}.is-open`)) && new Set(f.map(([t]) => Math.round(t))).size <= 2 && f[f.length - 1][0] >= 0 && f[f.length - 1][0] <= 8, [...new Set(f.map(([t]) => Math.round(t)))].join(', '));
+  await page.locator(`${B} > [data-act="row"]`).tap();
   await openRow(page, b);
   await page.locator(`${B} [data-act="pick"]`).first().tap();
   check('Reduced motion: a pick shows its tick and gold at once, nothing drawn', !!(await page.$(`${B} .vd.done`)) && !(await page.$(`${B} .ink`)) && !(await page.$(`${B}.flash`)) && !(await page.$('.ob-gone')));

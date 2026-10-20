@@ -120,8 +120,13 @@ export function mastHTML(): string {
     <hr class="door-rule">
     ${coverHTML()}
     <p class="fine">Made by Kevin · ${ext(KEVIN_URL, 'kevinhg.com')}${coffee}</p>
+    ${STATES_STRIP}
   </header>`;
 }
+
+/* The states the guide covers, cut from paper (scripts/paper renders it). Decoration: empty alt, lazy, and
+   its width and height hold the space so nothing shifts when it loads. Dark mode gets its own render. */
+const STATES_STRIP = '<picture class="states"><source srcset="/paper/dark/states.webp" media="(prefers-color-scheme: dark)"><img src="/paper/states.webp" alt="" width="1152" height="306" loading="lazy" decoding="async"></picture>';
 
 /* The small print: how many cities, each one a tap away (the list opens below), and a way to ask
    for yours through the report form, prefilled with the ZIP in the box. */

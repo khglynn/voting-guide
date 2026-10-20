@@ -31,8 +31,9 @@ export function censusSettles(c: Contest): boolean {
    stays as a quiet extra. */
 function mayHTML(it: Item, scope: string, same: number, allLabel: string): string {
   const sb = sampleBallot();
-  // The form opens in the address box at the top, which shows while any race depends on your address.
-  const addr = it.kind === 'contest' && censusSettles(it) && addressCount() > 0;
+  // The form opens in the address box at the top, which shows while any race depends on your
+  // address. Once a lookup has run on this ballot, it has answered all it can.
+  const addr = it.kind === 'contest' && censusSettles(it) && !S.b.addrNote && addressCount() > 0;
   const btns = [
     addr ? `<button class="mini dark" data-act="addr-open" data-fk="ma-${esc(it.id)}">Check with my address</button>` : '',
     sb ? `<a class="mini${addr ? '' : ' dark'}" href="${esc(sb.url)}" target="_blank" rel="noopener">See my sample ballot</a>` : '',

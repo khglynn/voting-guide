@@ -947,6 +947,30 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       /Only on some ballots\./.test(sd) && at('>Check with my address<') > 0 && at('>Check with my address<') < at('>See my sample ballot<') && at('>See my sample ballot<') < at('>It’s not on my ballot<'), strip(sd).slice(0, 200));
     check('go check: its address button opens the address form', /data-act="addr-open"[^>]*>Check with my address/.test(sd));
     check('go check: "It’s not on my ballot" keeps the notmine action', /data-act="notmine" data-id="tx-senate-21"[^>]*>It’s not on my ballot/.test(sd));
+    // The address box leads with "Use my address" only while the lookup can settle something:
+    // Congress and the state legislature, before a lookup has run on this ballot.
+    const btns = (h) => [...((h.match(/<div class="addrbox">[\s\S]*?<\/div><\/div>/) || [''])[0]).matchAll(/class="mini( dark)?"[^>]*>([^<]+)</g)].map((m) => `${m[2]}${m[1] ? ' (dark)' : ''}`).join('|');
+    check('address box: Austin, fresh, offers Use my address first, then the sample ballot', btns(ledger.ballotHeadHTML()) === 'Use my address (dark)|See my sample ballot' && ledger.addressHelps(), btns(ledger.ballotHeadHTML()));
+    // What the lookup answers (Congress, the state Senate and House, and the maybe rows for them).
+    for (const g of au.groups) if (g.kind) S.b.districts[g.key] = g.members[0];
+    for (const id of au.mayApply) { const c = au.byId.get(id); if (c.kind === 'contest' && views.open.censusSettles(c)) S.b.notMine.push(id); }
+    const left = ledger.addressCount();
+    check('address box: with only council, county and school questions left, the sample ballot leads and Use my address goes', left > 0 && !ledger.addressHelps() && btns(ledger.ballotHeadHTML()) === 'See my sample ballot (dark)' && new RegExp(`${left} races depend on your address`).test(ledger.ballotHeadHTML()), `${left} | ${btns(ledger.ballotHeadHTML())}`);
+    S.b.districts = {}; S.b.notMine = [];
+    S.b.addrNote = 'Your districts: Congressional District 37. We didn’t save your address. Double-check with your sample ballot.';
+    check('address box: once a lookup has run, it offers only the sample ballot', !ledger.addressHelps() && btns(ledger.ballotHeadHTML()) === 'See my sample ballot (dark)', btns(ledger.ballotHeadHTML()));
+    const sd2 = views.open.openHTML(au.byId.get('tx-senate-21'));
+    check('address box: and a maybe row no longer offers Check with my address', !/Check with my address/.test(sd2) && /class="mini dark"[^>]*>See my sample ballot/.test(sd2));
+    S.ui.row = `q:${au.groups.find((x) => x.kind === 'cd').key}`;
+    check('address box: nor does a district question', !/data-fk="dq-addr"/.test(ledger.sectionHTML('federal', bl.entriesBySection().get('federal'))));
+    S.ui.row = null;
+    S.b.addrNote = null;
+    S.ui.row = `q:${au.groups.find((x) => x.kind === 'cd').key}`;
+    check('address box: before a lookup, a Congress question offers Use my address', /data-fk="dq-addr"/.test(ledger.sectionHTML('federal', bl.entriesBySection().get('federal'))));
+    S.ui.row = null;
+    open('FL', []);
+    check('address box: statewide Florida (appeals judges only) leads with the sample ballot, no Use my address', ledger.addressCount() > 0 && btns(ledger.ballotHeadHTML()) === 'See my sample ballot (dark)', `${ledger.addressCount()} | ${btns(ledger.ballotHeadHTML())}`);
+    open('TX', ['austin-tx']);
     const dv = views.open.openHTML(au.byId.get('tx-dvisd-prop-a'));
     check('go check: a maybe measure has no address button (the Census doesn’t settle school districts)', !/Check with my address/.test(dv) && /See my sample ballot/.test(dv) && /It’s not on my ballot/.test(dv));
     const fake = (district) => ({ kind: 'contest', district });

@@ -512,6 +512,57 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   noErrors(page, 'Go check');
   await ctx.close();
 }
+// The address box after a lookup that works: "Use my address" goes once the Census has answered
+// all it can, and the sample ballot leads (review, Oct 20). Census is answered here.
+{
+  const { ctx, page } = await newPage();
+  const answer = { result: { addressMatches: [{ matchedAddress: 'TEST', geographies: {
+    States: [{ STATE: '48' }], 'Incorporated Places': [{ BASENAME: 'Austin' }], '119th Congressional Districts': [{ BASENAME: '37' }],
+    '2024 State Legislative Districts - Upper': [{ BASENAME: '14' }], '2024 State Legislative Districts - Lower': [{ BASENAME: '49' }] } }] } };
+  await page.route('https://geocoding.geo.census.gov/**', (route) => {
+    const cb = new URL(route.request().url()).searchParams.get('callback');
+    return route.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify(answer)})` });
+  });
+  await openBallot(page, '78704');
+  await tap(page, '.addrbox [data-act="addr-open"]');
+  await page.fill('#addr-in', 'a test lookup');
+  await page.locator('form[data-form="addr"] button[type=submit]').tap();
+  await page.waitForSelector('.toast', { timeout: 8000 }).catch(() => {});
+  const said = await text(page, '.toast');
+  await page.waitForTimeout(200);
+  const btns = await page.$$eval('.addrbox .row-btns > *', (els) => els.map((e) => `${e.textContent.trim()}${e.classList.contains('dark') ? ' (dark)' : ''}`));
+  check('Address box after a lookup: the races left are the sample ballot’s, and it leads', /^Filled in 3 districts from your address\.$/.test(said) && /^\d+ races depend on your address\.$/.test(await text(page, '.addrbox > p')) && btns.join('|') === 'See my sample ballot (dark)', `${said} | ${await text(page, '.addrbox > p')} | ${btns.join('|')}`);
+  check('Address box after a lookup: no question left offers Use my address', !(await page.$('.ledger [data-act="addr-open"]')));
+  noErrors(page, 'Address box after a lookup');
+  await ctx.close();
+}
+// Statewide Florida (Miami): the only races that depend on your address are appeals judges, which
+// the Census can't settle, so the box leads with the sample ballot; from the first page, the
+// lookup's toast says to check them there rather than "Nothing on this ballot depends on it".
+{
+  const { ctx, page } = await newPage();
+  const answer = { result: { addressMatches: [{ matchedAddress: 'TEST', geographies: {
+    States: [{ STATE: '12' }], 'Incorporated Places': [{ BASENAME: 'Miami' }], 'ZIP Code Tabulation Areas': [{ ZCTA5: '33101' }],
+    '119th Congressional Districts': [{ BASENAME: '24' }], '2024 State Legislative Districts - Upper': [{ BASENAME: '38' }] } }] } };
+  await page.route('https://geocoding.geo.census.gov/**', (route) => {
+    const cb = new URL(route.request().url()).searchParams.get('callback');
+    return route.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify(answer)})` });
+  });
+  await openBallot(page, '33101');
+  const btns = await page.$$eval('.addrbox .row-btns > *', (els) => els.map((e) => `${e.textContent.trim()}${e.classList.contains('dark') ? ' (dark)' : ''}`));
+  check('Statewide Florida: the address box leads with the sample ballot, no Use my address', /races? depends? on your address\.$/.test(await text(page, '.addrbox > p')) && btns.join('|') === 'See my sample ballot (dark)', `${await text(page, '.addrbox > p')} | ${btns.join('|')}`);
+  await page.evaluate(() => localStorage.clear());
+  await page.goto(`${BASE}/?today=${TODAY}`);
+  await page.waitForSelector('#zip');
+  await tap(page, '.front [data-act="addr-open"]');
+  await page.fill('#addr-in', 'a test lookup');
+  await page.locator('form[data-form="addr"] button[type=submit]').tap();
+  await page.waitForSelector('[data-act="setup-done"], #plan', { timeout: 15000 });
+  const said = await text(page, '.toast');
+  check('Statewide Florida from the first page: the toast sends you to the sample ballot', said === 'Found your address. Check the rest with your sample ballot.', said);
+  noErrors(page, 'Statewide Florida address');
+  await ctx.close();
+}
 {
   // A ballot that won't load: Try again, with the ZIP still in the box. Then the guide's data itself.
   const { ctx, page } = await newPage();

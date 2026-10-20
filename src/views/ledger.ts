@@ -18,7 +18,7 @@ import { judgeBatch, judicialReview, judgesLead, judgesRule } from '../model/jud
 import { ext, sampleBallot, isOpen, escP, leadRest, reportURL } from './common';
 import { lensSummary } from './lens';
 import { addrHTML } from './mast';
-import { openHTML } from './open';
+import { openHTML, censusSettles } from './open';
 
 /* ---------- names ---------- */
 export function countyName(p: PlaceBundle): string {
@@ -154,7 +154,7 @@ function questionBodyHTML(g: Group): string {
   return `<div class="ob dq">
     <h3 class="dq-h">Pick your ${esc(cleanOffice(g.office))} district</h3>
     <p class="ob-lede">${esc(where())} has ${members.length} of these districts. Your sample ballot lists yours.</p>
-    <div class="opts">${g.kind ? '<button class="opt opt-addr" data-act="addr-open" data-fk="dq-addr"><b>Use my address</b><small>The Census lookup finds it for you</small></button>' : ''}${members.map((c) => { const [l, sub] = optionLabel(c); return `<button class="opt" data-act="district" data-g="${esc(g.key)}" data-v="${esc(c.id)}" data-fk="d-${esc(c.id)}"><b>${esc(l)}</b>${sub ? `<small>${esc(sub)}</small>` : ''}</button>`; }).join('')}
+    <div class="opts">${censusSettles(members[0]) && !S.b.addrNote ? '<button class="opt opt-addr" data-act="addr-open" data-fk="dq-addr"><b>Use my address</b><small>The Census lookup finds it for you</small></button>' : ''}${members.map((c) => { const [l, sub] = optionLabel(c); return `<button class="opt" data-act="district" data-g="${esc(g.key)}" data-v="${esc(c.id)}" data-fk="d-${esc(c.id)}"><b>${esc(l)}</b>${sub ? `<small>${esc(sub)}</small>` : ''}</button>`; }).join('')}
       <button class="opt opt-unsure" data-act="district" data-g="${esc(g.key)}" data-v="*" data-fk="d-${hash(g.key)}-x"><b>Not sure? Skip for now</b><small>Show all ${members.length}, each marked “Maybe on your ballot”</small></button>
       <button class="opt opt-unsure" data-act="district" data-g="${esc(g.key)}" data-v="none" data-fk="d-${hash(g.key)}-n"><b>${esc(noneLabel(g))}</b></button></div>
     <p class="dq-help">${[...finders.map((f) => ext(f.url, f.label)), sb ? ext(sb.url, sb.label) : ''].filter(Boolean).join('<span class="dot" aria-hidden="true"> · </span>')}</p>
@@ -444,6 +444,23 @@ export function addressCount(): number {
   }
   return n;
 }
+/* Whether "Use my address" can still settle one of them. The Census answers Congress and the
+   state legislature only (open.censusSettles), so a question or "maybe" row for anything else
+   (a council seat, a school district, a judge) is the sample ballot's to settle. And once a
+   lookup has run on this ballot (its addrNote), it has answered all it can. */
+export function addressHelps(): boolean {
+  const b = S.ballot!;
+  if (S.b.addrNote) return false;
+  return decisionItems().some((x) => {
+    if (x.question) {
+      const g = b.groups.find((gr) => `q:${gr.key}` === x.id);
+      return !!g && censusSettles(b.byId.get(g.members[0]) as Contest);
+    }
+    if (!isMaybe(x.id)) return false;
+    const it = b.byId.get(x.id);
+    return !!it && it.kind === 'contest' && censusSettles(it);
+  });
+}
 export function ballotHeadHTML(): string {
   const b = S.ballot!;
   const sb = sampleBallot();
@@ -451,8 +468,10 @@ export function ballotHeadHTML(): string {
   const n = addressCount();
   const filled = S.ui.bulk && canUndo()
     ? `<p class="filled">${esc(S.ui.bulk)} filled in. <button class="linkbtn" data-act="undo-bulk" data-fk="filled-undo">Undo</button></p>` : '';
+  // "Use my address" leads while the lookup can settle something; after that, the sample ballot.
+  const look = n > 0 && addressHelps();
   const addr = n ? `<div class="addrbox"><p><b>${n === 1 ? '1 race depends' : `${n} races depend`} on your address.</b></p>
-      ${S.ui.addrOpen ? addrHTML() : `<div class="row-btns"><button class="mini dark" data-act="addr-open" data-fk="addr-open">Use my address</button>${sb ? `<a class="mini" href="${esc(sb.url)}" target="_blank" rel="noopener">See my sample ballot</a>` : ''}</div>`}</div>` : '';
+      ${S.ui.addrOpen ? addrHTML() : `<div class="row-btns">${look ? '<button class="mini dark" data-act="addr-open" data-fk="addr-open">Use my address</button>' : ''}${sb ? `<a class="mini${look ? '' : ' dark'}" href="${esc(sb.url)}" target="_blank" rel="noopener">See my sample ballot</a>` : ''}</div>`}</div>` : '';
   return `<div class="bhead"><h2 class="vh" id="ballot-h">Your ballot</h2>
       <p class="picks-line"><span>Picks: ${esc(lensSummary())}</span><button class="mini" data-act="picks" data-fk="picks-edit">Edit</button></p>
       ${filled}${addr}

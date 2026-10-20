@@ -8,6 +8,7 @@ import { zipState, censusLookup, placeFromGeo, settleAddress, withPlace, type Ge
 import { toast, hideToast, plural } from './util';
 import { render, renderBallot, renderAddr, anchored, $ } from './render';
 import { setInvolved, type GetInvolved } from './views/pass';
+import { addressCount } from './views/ledger';
 import { planAgree, applyFills, planParty, forgetUndo } from './model/bulk';
 import { partiesOnBallot, toggleChip } from './model/lens';
 
@@ -334,7 +335,9 @@ export function applyGeo(r: { cd: number | null; upper: number | null; lower: nu
   S.ui.addrFail = '';
   render();
   persist();
-  toast(answered ? `Filled in ${plural(answered, 'district')} from your address.` : (b.groups.some((g) => !S.b.districts[g.key]) ? 'Found your address, but it doesn’t answer the district questions here. Use the finder links in each one.' : 'Found your address. Nothing on this ballot depends on it.'));
+  toast(answered ? `Filled in ${plural(answered, 'district')} from your address.`
+    : b.groups.some((g) => !S.b.districts[g.key]) ? 'Found your address, but it doesn’t answer the district questions here. Use the finder links in each one.'
+      : addressCount() > 0 ? 'Found your address. Check the rest with your sample ballot.' : 'Found your address. Nothing on this ballot depends on it.');
 }
 
 /* ---------- "try as": scenarios for feeling the guide, never saved ---------- */

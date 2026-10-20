@@ -8,15 +8,36 @@
      "Set from your address: U.S. Representative, District 37 · State Representative, District 49."
      An office it took off (a question answered "none", a race moved to notMine) isn't named, so
      the line never names a race you can't find: its row already says "Not on your ballot".
-   DC's "upper" layer is its ward, which the place already settles, so it sets nothing there. */
-import type { Contest } from '../types';
+   DC's "upper" layer is its ward, which the place already settles, so it sets nothing there.
+   The Census also names your school district (Kevin, Oct 20), so a race or measure for one school
+   district goes on or off by it: "Round Rock ISD Trustee, Place 3" and an ISD's bond on, or off when
+   you're in another district; a trustee question for a district you're not in answers "none". A
+   trustee district inside your own school district still needs the sample ballot: the Census
+   doesn't have those. */
+import type { Contest, Item } from '../types';
 import type { Ballot } from '../ballot';
 import type { BallotState } from '../state';
 import { contestDistrict } from '../ballot';
 import { cleanOffice } from './labels';
 
-export interface Districts { cd: number | null; upper: number | null; lower: number | null }
-type Kind = keyof Districts;
+export interface Districts { cd: number | null; upper: number | null; lower: number | null; schools?: string[] }
+
+/* A school district's name in the Census's words and ours, made comparable: Texas's "Independent
+   School District" is our "ISD"; "No." and punctuation drop. */
+const sdKey = (s: string): string => s.toLowerCase().replace(/consolidated independent school district/g, 'cisd').replace(/independent school district/g, 'isd')
+  .replace(/\bno\.\s*/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
+/* The school district a race or measure belongs to, when its scope names one the way the Census
+   does ("Round Rock ISD voters (...)", "Del Valle ISD (southeast Travis County)", "San Diego Unified
+   School District (...)"), and whether every voter there votes on it. A college district, "Public
+   Schools" or anything else stays with the sample ballot. */
+export function schoolOf(c: Item): { name: string; key: string; whole: boolean } | null {
+  const t = (c.kind === 'contest' ? c.scope_plain : c.jurisdiction) || '';
+  const m = t.match(/^(?:Every |Voters in (?:the )?)?((?:[A-Z][\w.'-]*\s)+?(?:C?ISD|Unified School District))\b(.*)$/);
+  if (!m) return null;
+  const rest = m[2].split('(')[0];
+  return { name: m[1], key: sdKey(m[1]), whole: !/district \d|single.member|trustee district|subdistrict|area \d|precinct|zone/i.test(rest) };
+}
+type Kind = 'cd' | 'upper' | 'lower';
 const KINDS: Kind[] = ['cd', 'upper', 'lower'];
 
 /* Sets what the address settles on `s` and returns the races it put on the ballot, "{office},
@@ -35,6 +56,39 @@ export function setFromAddress(b: Ballot, s: BallotState, r: Districts): string[
     if (hit) name(g.kind, g.office);
   }
   if (!s.mine) s.mine = [];
+  // School districts: only when the Census named at least one, so a missing layer changes nothing.
+  const sds = new Set((r.schools || []).map(sdKey));
+  const schoolsNamed: string[] = [];
+  if (sds.size) {
+    for (const g of b.groups) {
+      if (g.kind || s.districts[g.key]) continue;
+      const each = g.members.map((id) => schoolOf(b.byId.get(id)!));
+      const one = each[0];
+      if (!one || each.some((x) => !x || x.key !== one.key) || sds.has(one.key)) continue;
+      s.districts[g.key] = 'none'; // a trustee question for a school district you're not in
+      s.addrSet = [...(s.addrSet || []).filter((k) => k !== g.key), g.key];
+    }
+    for (const id of b.mayApply) {
+      const it = b.byId.get(id);
+      const sd = it ? schoolOf(it) : null;
+      if (!sd) continue;
+      const on = sds.has(sd.key);
+      if (on && !sd.whole) continue; // yours, but which trustee district is the sample ballot's to say
+      s.notMine = s.notMine.filter((x) => x !== id);
+      s.mine = s.mine.filter((x) => x !== id);
+      (on ? s.mine : s.notMine).push(id);
+      if (on && !schoolsNamed.includes(sd.name)) schoolsNamed.push(sd.name);
+    }
+    // A school district's race a whole city sees (Austin ISD's at-large seat, for all of Austin) comes
+    // off when your school district is another one, the way a "may apply" row does.
+    for (const it of b.items) {
+      if (b.mayApply.has(it.id) || b.groupOf[it.id] || b.statewide.has(it.id)) continue;
+      const sd = schoolOf(it);
+      if (!sd || !sd.whole) continue;
+      s.notMine = s.notMine.filter((x) => x !== it.id);
+      if (!sds.has(sd.key)) s.notMine.push(it.id);
+    }
+  }
   for (const id of b.mayApply) {
     const c = b.byId.get(id);
     if (!c || c.kind !== 'contest') continue;
@@ -47,7 +101,7 @@ export function setFromAddress(b: Ballot, s: BallotState, r: Districts): string[
     (on ? s.mine : s.notMine).push(id);
     if (on) name(d.kind, c.office);
   }
-  return KINDS.flatMap((k) => named[k].map((o) => `${o}, District ${num(k)}`));
+  return [...KINDS.flatMap((k) => named[k].map((o) => `${o}, District ${num(k)}`)), ...schoolsNamed];
 }
 
 /* What the address box keeps (S.b.addrNote): the line naming what was set, or, when the lookup

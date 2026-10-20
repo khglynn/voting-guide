@@ -1055,7 +1055,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('address box: statewide Florida (appeals judges only) leads with the sample ballot, no Use my address', ledger.addressCount() > 0 && btns(ledger.ballotHeadHTML()) === 'See my sample ballot (dark)', `${ledger.addressCount()} | ${btns(ledger.ballotHeadHTML())}`);
     open('TX', ['austin-tx']);
     const dv = views.open.openHTML(au.byId.get('tx-dvisd-prop-a'));
-    check('go check: a maybe measure has no address button (the Census doesn’t settle school districts)', !/Check with my address/.test(dv) && /See my sample ballot/.test(dv) && /It’s not on my ballot/.test(dv));
+    check('go check: a school district’s measure offers Check with my address (the Census names your school district)', /Check with my address/.test(dv) && /See my sample ballot/.test(dv) && /It’s not on my ballot/.test(dv));
     const fake = (district) => ({ kind: 'contest', district });
     check('go check: the Census settles CD, SD and HD races, nothing else', views.open.censusSettles(fake('CD-10')) && views.open.censusSettles(fake('SD-21')) && views.open.censusSettles(fake('HD-49')) && !views.open.censusSettles(fake('Precinct 2')) && !views.open.censusSettles(fake('District 3')));
     open('DC', ['dc-ward-1']);
@@ -1455,6 +1455,12 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('address: one Census match is one result, with its districts and ZIP', one.length === 1 && one[0].state === 'TX' && one[0].place === 'Austin' && one[0].cd === 37 && one[0].upper === 14 && one[0].lower === 49 && one[0].zip === '78704', JSON.stringify(one));
     const two = geo.parseCensus({ result: { addressMatches: [g('TEST ONE, AUSTIN, TX, 78704', 37, 14, 49), g('TEST ONE, AUSTIN, TX, 78704', 37, 14, 49), g('TEST TWO, AUSTIN, TX, 78745', 35, 21, 50)] } });
     check('address: several matches are all kept, the same address once', two.length === 2 && two[1].matched === 'TEST TWO, AUSTIN, TX, 78745' && two[1].upper === 21, JSON.stringify(two.map((x) => x.matched)));
+    // layers=all: the newest Congress and legislature maps win whatever order they come in, and school districts come along.
+    const all = geo.parseCensus({ result: { addressMatches: [{ matchedAddress: 'TEST ONE, AUSTIN, TX, 78704', geographies: {
+      States: [{ STATE: '48' }], '119th Congressional Districts': [{ BASENAME: '35' }], '120th Congressional Districts': [{ BASENAME: '37' }],
+      '2024 State Legislative Districts - Upper': [{ BASENAME: '21' }], '2026 State Legislative Districts - Upper': [{ BASENAME: '14' }], '2026 State Legislative Districts - Lower': [{ BASENAME: '49' }],
+      'Unified School Districts': [{ NAME: 'Round Rock Independent School District', BASENAME: 'Round Rock Independent School District' }] } }] } });
+    check('address: with every layer, the 120th Congress and the 2026 legislature, and the school district', all[0].cd === 37 && all[0].upper === 14 && all[0].lower === 49 && all[0].schools.join() === 'Round Rock Independent School District', JSON.stringify(all[0]));
     check('address: no match, or a broken answer, is none', geo.parseCensus({ result: { addressMatches: [] } }).length === 0 && geo.parseCensus(null).length === 0 && geo.parseCensus({}).length === 0);
 
     // Austin: Congress and the state House are questions; the one state Senate race (SD-21) may apply.
@@ -1519,6 +1525,25 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     S.b.districts['state|State Representative'] = 'wa-hd-36-2';
     const by36 = (bl.entriesBySection().get('state') || []).filter((e) => e.t === 'item' && /^wa-hd/.test(e.id)).map((e) => e.id);
     check('districts: answering with either seat of a two-seat district shows both', by36.join() === 'wa-hd-36-1,wa-hd-36-2', by36.join());
+
+    // School districts (Kevin, Oct 20): the Census names yours, so one district's races go on or off by it.
+    const rr = open('TX', ['austin-tx']);
+    const rset = address.setFromAddress(rr, S.b, { cd: 37, upper: 14, lower: 49, schools: ['Round Rock Independent School District'] });
+    check('school districts: in Round Rock ISD, its four trustee seats go on the ballot and the line names it', ['tx-rrisd-trustee-3', 'tx-rrisd-trustee-4', 'tx-rrisd-trustee-5', 'tx-rrisd-trustee-6'].every((id) => S.b.mine.includes(id)) && /Round Rock ISD\.$/.test(address.addrSummary(rset)), address.addrSummary(rset));
+    const oth = bl.otherSchools(bl.entriesBySection().get('school') || []).map((e) => e.id);
+    check('school districts: Round Rock’s seats leave the "Other school districts" fold and stand as rows', !oth.some((id) => /rrisd/.test(id)) && (bl.entriesBySection().get('school') || []).some((e) => e.t === 'item' && e.id === 'tx-rrisd-trustee-3'), oth.join());
+    check('school districts: Pflugerville, Leander and Del Valle’s races go off', ['tx-pfisd-trustee-6', 'tx-lisd-trustee-1', 'tx-dvisd-prop-a'].every((id) => S.b.notMine.includes(id)), JSON.stringify(S.b.notMine));
+    check('school districts: the Austin ISD and Del Valle ISD trustee questions answer "none"', S.b.districts['school|Austin ISD Trustee'] === 'none' && S.b.districts['school|Del Valle ISD Trustee'] === 'none', JSON.stringify(S.b.districts));
+    check('school districts: Austin ISD’s at-large seat, shown to all of Austin, comes off for a Round Rock ISD address', S.b.notMine.includes('tx-aisd-at-large-9') && (bl.entriesBySection().get('school') || []).some((e) => e.t === 'notmine' && e.id === 'tx-aisd-at-large-9'));
+    const rrLink = st.decodeShare(rr, head(st.encodeShare(rr, S.b)));
+    check('school districts: and a save link keeps it off', !!rrLink && rrLink.state.notMine.includes('tx-aisd-at-large-9') && rrLink.state.notMine.includes('tx-pfisd-trustee-6'), JSON.stringify(rrLink && rrLink.state.notMine));
+    const ai = open('TX', ['austin-tx']);
+    address.setFromAddress(ai, S.b, { cd: 37, upper: 14, lower: 49, schools: ['Austin Independent School District'] });
+    check('school districts: in Austin ISD, its trustee question stays for the sample ballot; Del Valle’s answers "none"; the at-large seat stays', !S.b.districts['school|Austin ISD Trustee'] && S.b.districts['school|Del Valle ISD Trustee'] === 'none' && S.b.notMine.includes('tx-rrisd-trustee-3') && !S.b.notMine.includes('tx-aisd-at-large-9'), JSON.stringify(S.b.districts));
+    const nos = open('TX', ['austin-tx']);
+    address.setFromAddress(nos, S.b, { cd: 37, upper: 14, lower: 49 });
+    check('school districts: a lookup with no school layer changes no school race', !S.b.mine.some((id) => /isd/.test(id)) && !S.b.notMine.some((id) => /isd/.test(id)) && !S.b.districts['school|Austin ISD Trustee']);
+    check('school districts: only one school district’s whole races count as settled; trustee districts and college districts don’t', views.open.censusSettles(nos.byId.get('tx-rrisd-trustee-3')) && !views.open.censusSettles(nos.byId.get('tx-aisd-district-1')) && !views.open.censusSettles(nos.byId.get('tx-acc-trustee-1')));
 
     // The address box: before, after (this visit, with what was found), after a reload (no address).
     const strip = (h) => h.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();

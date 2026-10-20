@@ -19,7 +19,7 @@ export interface BallotState {
   noAuto: string[];                  // contests the user un-did; never auto-pick again
   notes: Record<string, string>;
   districts: Record<string, string>; // group key -> contest id | "*" (not sure) | "none"
-  notMine: string[];                 // "may apply" races the user said aren't on their ballot
+  notMine: string[];                 // "may apply" races the user said aren't on their ballot, or an address took off
   sources: string[] | null;          // null = the defaults
   planSeen: boolean;
   offerDismissed: string | null;     // v2 only; kept so old saved state reads cleanly
@@ -286,7 +286,9 @@ export function decodeShare(ballot: Ballot, head: ShareHead): { state: BallotSta
     }
   }
   if (notMine) {
-    const mayByHash = new Map([...ballot.mayApply].map((id) => [hash(id), id]));
+    // "May apply" races, and the few school-district races an address can take off (model/address.ts);
+    // a "may apply" race wins a shared hash, as before.
+    const mayByHash = new Map([...ballot.items.filter((it) => !ballot.mayApply.has(it.id)).map((it) => it.id), ...ballot.mayApply].map((id) => [hash(id), id]));
     st.notMine = notMine.split('.').map((h) => mayByHash.get(h)).filter((x): x is string => !!x);
   }
   st.planSeen = true;

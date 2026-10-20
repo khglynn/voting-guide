@@ -10,6 +10,7 @@ import { seatLabel, cheatTitle, thresholdLabel } from '../model/labels';
 import { picksOnBallot } from '../model/lens';
 import { sourceLean, leanHTML, ext, clampP, escP, sampleBallot, isOpen, leadRest, wordsSrc, reportURL, paywallRowHTML } from './common';
 import { headsUp, headsHTML, addressCount } from './ledger';
+import { schoolOf } from '../model/address';
 
 /* "Report a problem" on a row: the form (see common.reportURL) prefilled with this row. */
 export const reportLink = (it: Item): string => reportURL(`${cheatTitle(it)} [${it.id}]`);
@@ -21,10 +22,12 @@ const PAGE = 3;
 
 /* ---------- the top of an open row: where it applies ---------- */
 /* The Census lookup answers Congress and the state legislature (DC's "upper" is a ward, which it
-   doesn't), so only those rows offer to check with your address. */
-export function censusSettles(c: Contest): boolean {
+   doesn't), and a race or measure every voter in one school district votes on (model/address.ts),
+   so only those rows offer to check with your address. */
+export function censusSettles(c: Item): boolean {
+  if (c.kind !== 'contest') return !!schoolOf(c)?.whole;
   const k = contestDistrict(c).kind;
-  return !!k && !(S.ballot!.st === 'DC' && k === 'upper');
+  return (!!k && !(S.ballot!.st === 'DC' && k === 'upper')) || !!schoolOf(c)?.whole;
 }
 /* "Only on some ballots": who votes on it, then a way to find out: your address (where the Census
    settles it), your sample ballot, or "It's not on my ballot". Hiding every one like it at once
@@ -33,7 +36,7 @@ function mayHTML(it: Item, scope: string, same: number, allLabel: string): strin
   const sb = sampleBallot();
   // The form opens in the address box at the top, which shows while any race depends on your
   // address. Once a lookup has run on this ballot, it has answered all it can.
-  const addr = it.kind === 'contest' && censusSettles(it) && !S.b.addrNote && addressCount() > 0;
+  const addr = censusSettles(it) && !S.b.addrNote && addressCount() > 0;
   const btns = [
     addr ? `<button class="mini dark" data-act="addr-open" data-fk="ma-${esc(it.id)}">Check with my address</button>` : '',
     sb ? `<a class="mini${addr ? '' : ' dark'}" href="${esc(sb.url)}" target="_blank" rel="noopener">See my sample ballot</a>` : '',

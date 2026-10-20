@@ -303,7 +303,8 @@ function computeEntries(b: Ballot): Map<SectionKey, Entry[]> {
       if (ans === '*' || ans === it.id || (ans !== 'none' && sameSeat(b.byId.get(ans), it))) push(sec, { t: 'item', id: it.id });
       continue;
     }
-    if (b.mayApply.has(it.id) && S.b.notMine.includes(it.id)) { push(sec, { t: 'notmine', id: it.id }); continue; }
+    // A "may apply" race you said isn't yours, or one school district's race your address took off.
+    if (S.b.notMine.includes(it.id)) { push(sec, { t: 'notmine', id: it.id }); continue; }
     push(sec, { t: 'item', id: it.id });
   }
   return out;
@@ -330,11 +331,12 @@ export function isMaybe(id: string): boolean {
    - the races folded under "Other school districts that touch ..." count only once you claim
      one: open the fold, or pick or note one of them. */
 /* Other school districts' races: "may apply" school races outside any district question. Three
-   or more fold into one row on the ballot ("Other school districts that touch Austin"). */
+   or more fold into one row on the ballot ("Other school districts that touch Austin"). One your
+   address put on your ballot (S.b.mine) is yours, so it stands as its own row. */
 export const OTH_KEY = 'school|oth';
 export function otherSchools(entries: Entry[]): Entry[] {
   const b = S.ballot!;
-  const oth = entries.filter((e) => (e.t === 'item' || e.t === 'notmine') && b.mayApply.has(e.id) && b.byId.get(e.id)!.kind === 'contest' && !b.groupOf[e.id] && status(b.byId.get(e.id)!) !== 'unopposed');
+  const oth = entries.filter((e) => (e.t === 'item' || e.t === 'notmine') && b.mayApply.has(e.id) && b.byId.get(e.id)!.kind === 'contest' && !b.groupOf[e.id] && status(b.byId.get(e.id)!) !== 'unopposed' && !(S.b.mine || []).includes(e.id));
   return oth.length >= 3 ? oth : [];
 }
 export const othOpen = (oth: Entry[]): boolean => S.ui.unfolded.has(OTH_KEY) || oth.some((e) => e.t === 'item' && (e.id === S.ui.row || e.id === S.ui.keep));

@@ -9,7 +9,7 @@
    A lawyer preference poll (bar_poll) is a vote count, not a rating: it never gets a tone. */
 import type { Candidate, Contest, Evaluation, JudicialReview, SurveyRow } from '../types';
 import { S } from '../state';
-import { entriesBySection, status, isMultiJudge } from '../ballot';
+import { entriesBySection, status, isMultiJudge, isMaybe } from '../ballot';
 
 export type EvalState = 'yes' | 'no' | 'declined' | 'unrated' | 'mixed';
 const DID_NOT_TAKE_PART = /declin|did not (participate|take part|appear)|failed to appear|not participate|chose not to (participate|be screened)|automatic/i;
@@ -260,12 +260,15 @@ export interface JudgeBatch {
   readFirst: { id: string; name: string; why: string }[];   // split votes, concerns, groups that said no or did not rate
   left: number;                                            // judges the batch leaves alone
 }
+/* Never a judge whose row says "Maybe on your ballot" ("Only in Denver" on an Aurora and Denver
+   ballot, or a county's judges with the judicial district question answered "Not sure"): the
+   same rule as the other fills, so "Keep all N" counts only judges the voter surely has. */
 export function judgeBatch(): JudgeBatch | null {
   const b = S.ballot!;
   const open: { it: Contest; c: Candidate; key: string }[] = [];
   for (const [, entries] of entriesBySection()) {
     for (const e of entries) {
-      if (e.t !== 'item') continue;
+      if (e.t !== 'item' || isMaybe(e.id)) continue;
       const it = b.byId.get(e.id);
       if (!it || it.kind !== 'contest' || !it.is_retention) continue;
       if (isMultiJudge(it)) { it.candidates.forEach((c) => { if (!S.b.picks[`${it.id}|${c.name}`] && S.b.picks[it.id] !== 'SKIP') open.push({ it, c, key: `${it.id}|${c.name}` }); }); }

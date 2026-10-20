@@ -460,6 +460,20 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     // A hidden "may apply" race stays out, and one the voter brings back is still a maybe.
     const au = open('TX', ['austin-tx']);
     check('fills: Austin\'s SBOE 5 and Senate 21 are maybes, never filled', ['tx-sboe-5', 'tx-senate-21'].every((id) => au.mayApply.has(id)) && !bulk.planAgree().fills.some((f) => ['tx-sboe-5', 'tx-senate-21'].includes(f.id)));
+    // Review, Oct 20: the judges' "Keep all" fill still took maybes. On the Aurora and Denver ballot
+    // (80247) it kept 22 judges tagged "Only in Denver"; on Aurora with "Not sure" on the judge
+    // questions it went from 7 to 32, three counties' judges. Its button counts what it fills.
+    for (const [name, pids, unsure] of [['Aurora and Denver', ['aurora-co', 'denver-co'], false], ['Aurora, "Not sure" on every district', ['aurora-co'], true]]) {
+      const b = open('CO', pids);
+      if (unsure) b.groups.forEach((g) => { S.b.districts[g.key] = '*'; });
+      tally.clearLineups();
+      const jb = judges.judgeBatch();
+      const fills = bulk.planJudges().fills;
+      const maybes = b.items.filter((it) => it.kind === 'contest' && it.is_retention && maybe(b, it.id) && bl.status(it) === 'open');
+      check(`fills: ${name} has judges tagged "Maybe on your ballot", so the rule is tested`, maybes.length > 0, String(maybes.length));
+      check(`fills: ${name}, the judges' fill never keeps a maybe`, !!jb && fills.length > 0 && fills.every((f) => !maybe(b, f.id)) && jb.targets.every((t) => !maybe(b, t.id)), fills.filter((f) => maybe(b, f.id)).slice(0, 4).map((f) => f.id).join(', '));
+      check(`fills: ${name}, the button's count is the judges it keeps`, !!jb && new RegExp(`\\b${jb.targets.length}\\b`).test(jb.label), jb && `${jb.label} / ${jb.targets.length}`);
+    }
   }
 
   /* ---------- "N of M decided" walks the page's own order (nav review, Oct 20) ----------

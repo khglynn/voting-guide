@@ -168,7 +168,7 @@ export interface HowTo {
   model_plain: string | null;
   registration: {
     check_url: string | null;
-    /* where to register for next time (vote.gov's page for this state), and where that pattern is confirmed */
+    /* vote.gov's register page for this state, and the vote.gov page that confirms the pattern */
     register_url?: string;
     register_url_source?: string;
     deadlines: { method: string; date: string | null; rule: string; source: string | null }[];

@@ -10,6 +10,8 @@
   "model_plain": "Every registered voter gets a ballot in the mail. Sign the envelope and put it in an official drop box by 8:00 PM on Election Day, or mail it (no stamp needed) more than a week early so it's postmarked by Election Day.",
   "registration": {
     "check_url": "https://voter.votewa.gov/",
+    "register_url": "https://vote.gov/register/washington",
+    "register_url_source": "https://vote.gov/register",
     "deadlines": [
       {
         "method": "online",

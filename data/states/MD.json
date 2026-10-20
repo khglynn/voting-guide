@@ -10,6 +10,8 @@
   "model_plain": "You vote in person (early or on Election Day) unless you ask for a mail-in ballot. Anyone can ask for one, no excuse needed, but you have to request it.",
   "registration": {
     "check_url": "https://voterservices.elections.maryland.gov/VoterSearch",
+    "register_url": "https://vote.gov/register/maryland",
+    "register_url_source": "https://vote.gov/register",
     "deadlines": [
       {
         "method": "online",

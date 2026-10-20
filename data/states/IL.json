@@ -10,6 +10,8 @@
   "model_plain": "You can vote three ways: early in person (through Monday, Nov. 2; any Chicago voter can use any Chicago site), by mail (anyone can ask for a ballot, no excuse needed, apply by Oct. 29), or at the polls on Tuesday, November 3. City of Chicago voters deal with the Chicago Board of Elections; suburban Cook County voters deal with the Cook County Clerk.",
   "registration": {
     "check_url": "https://ova.elections.il.gov/RegistrationLookup.aspx",
+    "register_url": "https://vote.gov/register/illinois",
+    "register_url_source": "https://vote.gov/register",
     "deadlines": [
       {
         "method": "mail",

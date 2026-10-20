@@ -10,6 +10,8 @@
   "model_plain": "Every active registered voter already got a ballot in the mail (counties mailed them by October 5; LA County mailed October 1). Fill it out at home, sign the envelope, and drop it in any official drop box, any vote center, or the mail. Or skip the mail ballot and vote in person at a vote center from October 24 (LA, Orange and San Diego counties) or at your polling place on Election Day (San Francisco).",
   "registration": {
     "check_url": "https://voterstatus.sos.ca.gov/",
+    "register_url": "https://vote.gov/register/california",
+    "register_url_source": "https://vote.gov/register",
     "deadlines": [
       {
         "method": "online",

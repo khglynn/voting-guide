@@ -10,6 +10,8 @@
   "model_plain": "Every registered DC voter is mailed a ballot automatically. Mail it back (postage is prepaid), put it in a drop box, or skip it and vote in person at any Vote Center in the District. Most contests are ranked-choice this year: you rank candidates instead of picking one.",
   "registration": {
     "check_url": "https://apps.dcboe.org/VRS",
+    "register_url": "https://vote.gov/register/district-of-columbia",
+    "register_url_source": "https://vote.gov/register",
     "deadlines": [
       {
         "method": "online",

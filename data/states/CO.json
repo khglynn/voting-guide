@@ -10,6 +10,8 @@
   "model_plain": "Every registered voter gets a ballot in the mail. Fill it out, sign the envelope, and drop it in a drop box or mail it back early. You can also vote in person at any vote center in your county.",
   "registration": {
     "check_url": "https://www.govotecolorado.gov/",
+    "register_url": "https://vote.gov/register/colorado",
+    "register_url_source": "https://vote.gov/register",
     "deadlines": [
       {
         "method": "online",

@@ -10,6 +10,8 @@
   "model_plain": "Most Floridians vote in person, either early (any early voting site in your county) or on Election Day (your assigned precinct only). Anyone can vote by mail, but you have to ask for a mail ballot each election cycle; nobody is sent one automatically.",
   "registration": {
     "check_url": "https://registration.elections.myflorida.com/CheckVoterStatus",
+    "register_url": "https://vote.gov/register/florida",
+    "register_url_source": "https://vote.gov/register",
     "deadlines": [
       {
         "method": "online",

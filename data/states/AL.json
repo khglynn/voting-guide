@@ -10,6 +10,8 @@
   "model_plain": "Most people vote in person at their assigned polling place on Election Day, Tuesday, November 3, 7 AM to 7 PM. Alabama has no early voting. If you can't be there that day and have one of the legal excuses, you can vote absentee by mail or in person at your county's absentee office.",
   "registration": {
     "check_url": "https://myinfo.alabamavotes.gov/voterview",
+    "register_url": "https://vote.gov/register/alabama",
+    "register_url_source": "https://vote.gov/register",
     "deadlines": [
       {
         "method": "online",

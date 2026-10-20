@@ -10,6 +10,8 @@
   "model_plain": "Most people vote in person on Election Day, 7 AM to 8 PM. Anyone can vote by mail instead, but you have to ask for a mail ballot by 5 PM on Tuesday, October 27, and your county must HAVE it back by 8 PM on November 3. There is no early voting in Pennsylvania; the closest thing is voting a mail ballot in one visit at your county election office or a satellite office.",
   "registration": {
     "check_url": "https://www.pavoterservices.pa.gov/Pages/voterregistrationstatus.aspx",
+    "register_url": "https://vote.gov/register/pennsylvania",
+    "register_url_source": "https://vote.gov/register",
     "deadlines": [
       {
         "method": "online",

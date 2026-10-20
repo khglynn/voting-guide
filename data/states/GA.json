@@ -10,6 +10,8 @@
   "model_plain": "Most Georgians vote in person, either during three weeks of early voting (any early voting site in your county) or on Election Day at your assigned precinct. Anyone can also vote by mail, but you have to ask for that ballot by October 23, and the drop boxes go away when early voting ends on October 30.",
   "registration": {
     "check_url": "https://mvp.sos.ga.gov/",
+    "register_url": "https://vote.gov/register/georgia",
+    "register_url_source": "https://vote.gov/register",
     "deadlines": [
       {
         "method": "online",

@@ -10,6 +10,8 @@
   "model_plain": "Every registered voter gets a ballot in the mail. Fill it out at home, sign the envelope, and put it in any official drop box in Oregon by 8:00 PM on November 3, or mail it so it's postmarked by Election Day. There are no polling places.",
   "registration": {
     "check_url": "https://sos.oregon.gov/elections/Pages/myvote.aspx",
+    "register_url": "https://vote.gov/register/oregon",
+    "register_url_source": "https://vote.gov/register",
     "deadlines": [
       {
         "method": "online",

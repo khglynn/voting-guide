@@ -10,6 +10,8 @@
   "model_plain": "Most Missourians vote in person, either on Election Day or during the two weeks of no-excuse absentee voting right before it (Oct 20 to Nov 2). A ballot by mail is only for people with one of six legal reasons, and it usually has to be notarized.",
   "registration": {
     "check_url": "https://voteroutreach.sos.mo.gov/portal/",
+    "register_url": "https://vote.gov/register/missouri",
+    "register_url_source": "https://vote.gov/register",
     "deadlines": [
       {
         "method": "online",

@@ -412,7 +412,9 @@ for (const [id, vers] of endorserVersions) {
     lean_note: leanKeys.length > 1 ? `Our research passes rated this source differently: ${leanKeys.map((k) => LEAN_WORD[k]).join(' and ')}. We show ${LEAN_WORD[lean]}.` : null,
     guide_url: safeUrl(newest.guide_url),
     // SCHEMA rule: publications and nonpartisan civic groups start on; everything else is opt-in.
-    default_on: type === 'publication' || type === 'civic_nonpartisan',
+    // A publication whose lean comes only from its own stated mission (Knock LA) is an advocate
+    // and starts off with the groups (Kevin, Oct 20; src/model/lens.ts sidedByMission).
+    default_on: (type === 'publication' && !(newest.lean_basis_kind === 'mission' && ['left', 'lean_left', 'lean_right', 'right'].includes(lean))) || type === 'civic_nonpartisan',
     endorses_candidates: vers.some((v) => v.rec.endorses_candidates === true),
     endorses_measures: vers.some((v) => v.rec.endorses_measures === true),
     // Which party a party organization speaks for ("Democratic", "Working Families"), and how its

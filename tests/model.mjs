@@ -68,6 +68,17 @@ const head = (link) => st.parseShareHead(link);
   check('Address: trailing commas and spaces are trimmed', w('2 Main St, ', 'CO', '80205') === '2 Main St, CO 80205');
 }
 
+/* ---------- 0b. a publication sided only by its own mission sits with the groups, off by default ---------- */
+{
+  const lens = await load('/src/model/lens.ts');
+  const b = open('CA', ['los-angeles-ca']);
+  const knock = b.endorsers.find((e) => e.id === 'knock-la');
+  const ids = (k) => lens.chipMembers(b, k).map((e) => e.id);
+  check('Lens: Knock LA is off by default', !!knock && knock.default_on === false, JSON.stringify(knock && { d: knock.default_on, k: knock.lean_basis_kind }));
+  check('Lens: Knock LA is a progressive group, not a newspaper', ids('progressive').includes('knock-la') && !ids('papers').includes('knock-la'));
+  check('Lens: papers rated from outside stay in the default', ['la-times-eb', 'sac-bee-eb'].some((id) => ids('papers').includes(id)), ids('papers').join(','));
+}
+
 /* ---------- 1. the pinned v1 link from the live site (DC Ward 1, before ranked choice) ---------- */
 {
   const OLD = '#v1~DC~dc-ward-1~20010~l0g49h8j.it941rdf.3z3i9P.ik2ysP.1rq6ag1n~~l0g49T2xkIGxpbmsgbm90ZQ~';

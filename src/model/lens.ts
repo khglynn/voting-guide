@@ -13,8 +13,12 @@ const RIGHT = ['lean_right', 'right'];
 
 /* Newspapers and guides: newsrooms and nonpartisan civic groups. These are the defaults
    (Kevin's founding rule: neutral by default, partisan by choice). */
-export const isPaper = (e: Endorser): boolean => e.type === 'publication' || e.type === 'civic_nonpartisan';
-const isGroup = (e: Endorser): boolean => e.type !== 'party' && e.type !== 'publication';
+/* A publication whose lean comes only from its own stated mission (Knock LA: "a voice to the
+   left") is an advocate, not a newsroom rated from outside, so it sits with the groups on its side
+   and starts off (Kevin, Oct 20). build-data's default_on follows the same rule. */
+export const sidedByMission = (e: Endorser): boolean => e.type === 'publication' && e.lean_basis_kind === 'mission' && !!e.lean && [...LEFT, ...RIGHT].includes(e.lean);
+export const isPaper = (e: Endorser): boolean => (e.type === 'publication' && !sidedByMission(e)) || e.type === 'civic_nonpartisan';
+const isGroup = (e: Endorser): boolean => e.type !== 'party' && (e.type !== 'publication' || sidedByMission(e));
 /* A source that never picks anything (an explainer: Colorado Sun, CalMatters, VOTE411). */
 export const explainsOnly = (e: Endorser): boolean => !e.endorses_candidates && !e.endorses_measures;
 /* A paper whose endorsements sit behind a paywall we couldn't read, with its note on (Kevin, Oct 19). */

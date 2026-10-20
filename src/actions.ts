@@ -3,10 +3,10 @@
    because the save link and saved picks depend on it. */
 import type { Contest, Item } from './types';
 import { S, persist, emptyBallotState, type View } from './state';
-import { status, sectionOf, rankMax, ordinal, chosenIds, decisionItems, entriesBySection, pageWalk, OTH_KEY, type SectionKey } from './ballot';
+import { status, sectionOf, rankMax, ordinal, chosenIds, entriesBySection, pageWalk, OTH_KEY, type SectionKey } from './ballot';
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
-import { render, renderRow, renderSection, renderSummaries, renderLens, flushLens, markBehind, renderBallot, renderAddr, rowEl, scrollRowIntoView, anchored, $, type Region } from './render';
-import { openBallot, openChosen, go, openReader, runAddress, toDoor } from './app';
+import { render, renderRow, renderSection, renderSummaries, renderLens, flushLens, markBehind, renderBallot, renderAddr, rowEl, scrollRowIntoView, anchored, $ } from './render';
+import { openBallot, openChosen, go, openReader, runAddress, toDoor, showBallot, rechoose } from './app';
 import { judgeBatch } from './model/judges';
 import { planAgree, planParty, planJudges, planSetup, applyFills, undoFills, emptyPlan, touchUndo, type Plan } from './model/bulk';
 import { toggleChip, setParty, setSources, chipState, type ChipKey } from './model/lens';
@@ -323,15 +323,36 @@ A['notmine-undo'] = (d) => { S.b.notMine = S.b.notMine.filter((x) => x !== d.id)
 /* ---------- the lens ----------
    Chips and sources apply as you tap. On the ballot they live in the Edit sheet, and the ballot
    behind it repaints when the sheet closes (render.ts flushLens). */
+/* On the first page a chip is a choice kept in memory (S.door) and, once the ZIP has found a ballot,
+   that ballot's sources too, so its counts follow. */
+const doorBallot = (): boolean => S.view === 'setup' && !!S.ballot;
 A.chip = (d) => {
-  const on = toggleChip(B(), d.k as ChipKey);
+  const k = d.k as ChipKey;
+  if (S.view !== 'ballot') {
+    const on = doorBallot() ? toggleChip(B(), k) : !S.door.chips[k];
+    S.door.chips[k] = on;
+    render(['mast']);
+    announce(on ? 'Turned on.' : 'Turned off.');
+    return;
+  }
+  const on = toggleChip(B(), k);
   renderLens(); persist();
   announce(on ? 'Turned on.' : 'Turned off.');
 };
-A['party-off'] = () => { setParty(B(), null); renderLens(); persist(); };
+A['party-off'] = () => {
+  if (S.view !== 'ballot') { S.door.party = null; if (doorBallot()) setParty(B(), null); render(['mast']); return; }
+  setParty(B(), null); renderLens(); persist();
+};
 A['party-set'] = (d) => {
+  if (S.view !== 'ballot') {
+    S.door.party = d.p!;
+    if (doorBallot()) setParty(B(), d.p!);
+    S.ui.open.delete('su-party');
+    render(['mast']);
+    focusFk('chip-party');
+    return;
+  }
   setParty(B(), d.p!);
-  if (S.view === 'setup') { S.ui.open.delete('su-party'); renderLens(); focusFk('chip-party'); return; }
   persist();
   // Chosen from the Edit sheet: back to it, with the party on.
   if (S.ui.sheetBack !== null) { backToPicks(true); return; }
@@ -502,8 +523,17 @@ A.open = (d, el) => {
 };
 
 /* ---------- places, address, restore ---------- */
-A['choose-place'] = (d) => { void openChosen(d.ids!.split('+'), S.zipChoice ? S.zipChoice.zip : ''); };
-A['choose-state'] = (d) => { void openBallot(d.st!, [], '', { door: true }); };
+/* A place from the place question (its ZIP comes along), or from the list of cities (no ZIP: the
+   box empties, and the list closes so the place line above is what changed). */
+A['choose-place'] = (d) => {
+  const browse = d.from === 'browse';
+  if (browse) S.ui.open.delete('browse');
+  void openChosen(d.ids!.split('+'), !browse && S.zipChoice ? S.zipChoice.zip : '');
+};
+A['choose-state'] = (d) => {
+  S.ui.open.delete('browse');
+  void openBallot(d.st!, [], '', { door: true }).then((ok) => { if (ok) { const l = $('.door-place'); if (l) l.scrollIntoView({ block: 'start' }); focusFk('su-h'); } });
+};
 /* "Change" (the ballot's masthead, step 2's place line): back to the first page. When the first
    page is the history entry just behind this one, go back to it, so the phone's Back button then
    leaves the site instead of landing on the first page twice. */
@@ -513,28 +543,22 @@ A['change-place'] = () => {
 };
 
 /* ---------- step 2: pick by endorsements or party ---------- */
-/* Step 2's two switches, and the Edit sheet's: each repaints where it lives. */
-const switchRegion = (): Region => (S.ui.sheet === 'picks' ? 'sheet' : 'mast');
-A['setup-fill'] = () => { S.ui.setupFill = !S.ui.setupFill; render([switchRegion()]); };
-A['setup-only'] = () => { S.ui.setupOnly = !S.ui.setupOnly; render([switchRegion()]); };
-/* "Show my ballot": one batch of fills (the party's candidates, then where your sources agree), so
-   one Undo takes it all back; the "Hide races I've decided" filter when something is left; then the
-   ballot, saved for the first time. */
-A['setup-done'] = () => {
-  if (S.view !== 'setup' || !S.ballot) return;
-  const plan = S.ui.setupFill ? planSetup(S.b.party) : null;
-  const n = plan && plan.fills.length ? applyFills(plan.fills) : 0;
-  S.ui.onlyUndecided = S.ui.setupOnly && decisionItems().some((i) => !i.done);
-  S.ui.row = null; S.ui.keep = null;
-  S.ui.bulk = n ? String(n) : null;
-  S.b.setupDone = true;
-  S.view = 'ballot';
-  render();
-  persist(true);
-  window.scrollTo(0, 0);
-  if (!n || !plan) return;
-  fillToast(fillHead(n, plan), setupPlan(plan));
+/* Step 2's two switches on the first page, and the Edit sheet's: each repaints where it lives. */
+A['setup-fill'] = () => {
+  if (S.ui.sheet === 'picks') { S.ui.setupFill = !S.ui.setupFill; render(['sheet']); return; }
+  S.door.fill = !S.door.fill; render(['mast']);
 };
+A['setup-only'] = () => {
+  if (S.ui.sheet === 'picks') { S.ui.setupOnly = !S.ui.setupOnly; render(['sheet']); return; }
+  S.door.only = !S.door.only; render(['mast']);
+};
+/* "Show my ballot" (and Enter in the ZIP box): app.ts showBallot, then the fill's toast with Undo. */
+A['setup-done'] = async () => {
+  const r = await showBallot();
+  if (r) fillToast(fillHead(r.n, r.plan), setupPlan(r.plan));
+};
+/* "Change" on the place line, after the place question: ask it again. */
+A.rechoose = () => { rechoose(); };
 A['addr-open'] = () => { S.ui.addrOpen = true; S.ui.addrMsg = null; S.ui.addrFail = ''; renderAddr(); const i = $('#addr-in'); if (i) { i.scrollIntoView({ block: 'center' }); i.focus({ preventScroll: true }); } };
 A['addr-close'] = () => { S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.addrFail = ''; renderAddr(); focusFk('addr-open'); };
 /* After a lookup went wrong: the same address again, or close the form and answer the first

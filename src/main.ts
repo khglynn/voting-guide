@@ -4,7 +4,7 @@ import { S, readSaved, persist, parseShareHead } from './state';
 import { stepKey, planKey } from './views/planstrip';
 import { render } from './render';
 import { RAIL_AT } from './views/ledger';
-import { ensureIndex, openBallot, submitZip, offerResume, dismissResume } from './app';
+import { ensureIndex, openBallot, zipTyped, offerResume, dismissResume } from './app';
 import { A, runAddress } from './actions';
 import { askCityURL } from './views/common';
 
@@ -61,7 +61,8 @@ document.addEventListener('click', (e) => {
 document.addEventListener('submit', (e) => {
   e.preventDefault();
   const f = e.target as HTMLFormElement;
-  if (f.dataset.form === 'zip') void submitZip((f.querySelector('input') as HTMLInputElement).value);
+  // Enter in the ZIP box does what "Show my ballot" does.
+  if (f.dataset.form === 'zip') { S.zip = (f.querySelector('input') as HTMLInputElement).value.replace(/\D/g, '').slice(0, 5); void A['setup-done']({}, f); }
   if (f.dataset.form === 'addr') { const i = f.querySelector('input') as HTMLInputElement; void runAddress(i.value); }
 });
 document.addEventListener('input', (e) => {
@@ -71,6 +72,7 @@ document.addEventListener('input', (e) => {
     // "Ask for yours" carries whatever ZIP is in the box.
     const ask = document.querySelector<HTMLAnchorElement>('a[data-ask]');
     if (ask) ask.href = askCityURL(S.zip);
+    zipTyped(S.zip);
   }
   if (t.matches('textarea[data-note]')) { const ta = t as HTMLTextAreaElement; S.b.notes[ta.dataset.note!] = ta.value; persist(); }
 });

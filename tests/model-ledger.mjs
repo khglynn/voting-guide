@@ -639,7 +639,9 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       const n = [...html.matchAll(/<span class="nv-n">(\d+) left<\/span>/g)].reduce((a, m) => a + +m[1], 0);
       const items = bl.decisionItems();
       check(`menu: ${pid} the sections' "N left" add up to the bar`, n === items.filter((x) => !x.done).length, `${n} vs ${items.filter((x) => !x.done).length}`);
-      check(`menu: ${pid} "Next up" leads, then the switch, then the rows, ending with My plan`, html.indexOf('data-act="next"') < html.indexOf('data-act="only"') && html.indexOf('data-act="only"') < html.indexOf('data-to="plan"') && /My plan<\/span><span class="nv-n"><\/span><i class="nv-a" aria-hidden="true">›<\/i><\/button><\/li><\/ul>$/.test(html.trim()));
+      const at = (x) => html.indexOf(x);
+      check(`menu: ${pid} "Next up" leads, then your next step and Quick picks, then the switch right above the sections, ending with My plan`, at('data-act="next"') < at('data-to="plan"') && at('data-to="plan"') < at('data-act="picks"') && at('data-act="picks"') < at('data-act="only"')
+        && at('data-act="only"') < at('data-act="jump" data-to="federal"') && /My plan<\/span><span class="nv-n"><\/span><i class="nv-a" aria-hidden="true">›<\/i><\/button><\/li><\/ul>$/.test(html.trim()));
       // Everything decided: answer every question, leave every race blank on purpose.
       b.groups.forEach((g) => { S.b.districts[g.key] = g.members[0]; });
       for (const x of bl.decisionItems()) S.b.picks[x.id] = 'SKIP';
@@ -895,6 +897,30 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('step 2: finishing it never changes the save link', st.encodeShare(au, b) === before);
     check('first page: the city count counts DC\'s wards and New York City\'s boroughs once', views.mast.cityCount(INDEX) === Object.keys(INDEX.places).length - (Object.keys(INDEX.places).filter((id) => id.startsWith('dc-ward-')).length - 1) - (Object.keys(INDEX.places).filter((id) => id.startsWith('nyc-')).length - 1), String(views.mast.cityCount(INDEX)));
     check('step 2: the place line reads like the mock-up', views.setup.placeLine(au) === 'Austin, Texas' && views.setup.placeLine(open('DC', ['dc-ward-1'])) === 'Ward 1, Washington, DC' && views.setup.placeLine(open('NY', ['nyc-brooklyn-ny'])) === 'Brooklyn, New York' && views.setup.placeLine(open('WA', [])) === 'Washington');
+
+    // Round 3 (Oct 20): the fill switch's words, the first page before a ZIP, and the parties it offers.
+    open('TX', ['austin-tx']);
+    tally.clearLineups();
+    const a0 = bulk.planSetup(null).agree;
+    check('fill line: no party, "{n} races where they agree ({k} from just one source). Races where they split stay open."', views.setup.fillLine(null) === `${a0.fills.length} races where they agree${a0.single ? ` (${a0.single} from just one source)` : ''}. Races where they split stay open.`, views.setup.fillLine(null));
+    lens.setParty(S.ballot, 'Republican');
+    tally.clearLineups();
+    const pr = bulk.planSetup('Republican');
+    const want = [pr.party.fills.length ? `${pr.party.fills.length} from the Republican Party` : '', pr.agree.fills.length ? `${pr.agree.fills.length} where your other sources agree` : ''].filter(Boolean).join(' and ');
+    check('fill line: with a party, "{p} from the {Party} Party and {a} where your other sources agree.", zero parts dropped', views.setup.fillLine('Republican') === `${want}.` && !/\b0 /.test(views.setup.fillLine('Republican')), views.setup.fillLine('Republican'));
+    lens.setParty(S.ballot, null);
+    tally.clearLineups();
+    const view0 = S.view; const idx0 = S.index;
+    S.view = 'start'; S.index = INDEX;
+    const door = views.setup.pickControlsHTML();
+    check('first page before a ZIP: the chips from memory, no counts, the fill switch says what it does', /data-k="papers" aria-pressed="true"/.test(door) && /data-k="progressive" aria-pressed="false"/.test(door) && !/su-cov/.test(door)
+      && door.includes('Fill in my ballot with their picks') && door.includes('Fills the races where they agree. Races where they split stay open.') && door.includes('Hide races I’ve decided'));
+    S.ui.open.add('su-party');
+    const listed = [...views.setup.pickControlsHTML().matchAll(/data-act="party-set" data-p="([^"]+)"/g)].map((m) => m[1]);
+    S.ui.open.delete('su-party');
+    check('first page before a ZIP: "A party" lists every party the guide covers', listed.length > 2 && JSON.stringify(listed) === JSON.stringify(INDEX.parties), listed.join(', '));
+    S.view = view0; S.index = idx0;
+    check('index: the parties the guide covers, A to Z, each with its own party organization in the data', Array.isArray(INDEX.parties) && INDEX.parties.includes('Democratic') && INDEX.parties.includes('Republican') && JSON.stringify([...INDEX.parties].sort()) === JSON.stringify(INDEX.parties), (INDEX.parties || []).join(', '));
   }
 
   /* ---------- UX re-walk: the survey in plain words ---------- */

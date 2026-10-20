@@ -162,7 +162,7 @@ b, strong { font-weight: 600; }
 .addr label { display: block; font-size: 15px; margin-bottom: 6px; }
 .addr input { width: 100%; min-height: 46px; padding: 0 10px; border: 1.5px solid var(--ink); background: var(--bone); border-radius: 2px; }
 
-/* The first page: step 1, where you vote, and step 2, whose picks (Oct 20). Pen ticks and step
+/* The first page: step 1, where you vote, and step 2, whose picks, together. Pen ticks and step
    numbers in the one green ink; nothing new in color. */
 .front .mast-top .dateline { padding: 4px 0; line-height: 1.35; }
 .ticks { margin-top: 14px; display: grid; gap: 6px; font-size: 17px; color: var(--ink-2); }
@@ -171,16 +171,19 @@ b, strong { font-weight: 600; }
 .ticks i::after { content: ""; position: absolute; left: -1px; top: -9px; width: 26px; height: 24px; background: var(--ink); -webkit-mask: var(--pen-tick) center / contain no-repeat; mask: var(--pen-tick) center / contain no-repeat; }
 .step { display: flex; align-items: center; gap: 9px; }
 .step-n { width: 24px; height: 24px; border-radius: 50%; background: var(--paper-green); color: var(--on-dusk); display: inline-flex; align-items: center; justify-content: center; flex: none; font-family: var(--f-display); font-weight: 800; font-size: 14px; font-variation-settings: "wdth" 84; line-height: 1; }
-.front .zipform { margin-top: 20px; }
-.zipform label.step { display: flex; font-size: 16px; margin-bottom: 10px; }
+.front.mast { padding-bottom: 28px; }
+.door { margin-top: 22px; }
+.zipform label.zip-h { display: flex; margin: 0 0 12px; font-size: 22px; font-weight: 800; }
+.zip-h { --mx: 9px; --my: 27px; }
 .front .addr-cta { margin-top: 10px; font-size: 15.5px; }
-.door-rule { border: 0; border-top: 1px solid var(--rule-2); margin: 18px 0 2px; }
+.door-place { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 44px; margin-top: 6px; font-size: 16px; color: var(--ink-2); }
+.door-place b { color: var(--ink); }
+.door-place .linkbtn { margin: 0; flex: none; }
+.door-picks { margin-top: 18px; padding-top: 4px; border-top: 1px solid var(--rule); }
+.door .bigbtn { margin-top: 16px; }
+.door-foot { margin-top: 14px; }
 .front .fine .linkbtn { margin: -12px 0; padding: 0; }
-.su-done { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 44px; border-bottom: 1px solid var(--rule-2); font-size: 15.5px; color: var(--ink-2); }
-.su-done b { color: var(--ink); }
-.su-done .linkbtn { margin: 0; flex: none; }
-.su-h { margin-top: 16px; font-family: var(--f-display); font-size: 24px; font-weight: 800; line-height: 1.05; font-variation-settings: "wdth" 78; color: var(--print); }
-.su-h .step-n { -webkit-mask: none; mask: none; }
+.su-h { margin-top: 16px; font-family: var(--f-display); font-size: 22px; font-weight: 800; line-height: 1.05; font-variation-settings: "wdth" 78; color: var(--print); }
 .su-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 .su-parties { margin-top: 8px; }
 .su-cov { margin-top: 12px; padding-bottom: 14px; border-bottom: 1px solid var(--rule-2); font-size: 14.5px; color: var(--muted); }
@@ -190,7 +193,6 @@ b, strong { font-weight: 600; }
 .su-sw .tg { height: 26px; justify-content: flex-end; }
 .su-sw[aria-checked="true"] .tg span { background: var(--paper-green); border-color: var(--paper-green); }
 .su-sw[aria-checked="true"] .tg span::after { left: 23px; background: var(--on-dusk); }
-.setup .bigbtn { margin-top: 12px; }
 
 /* option cards: district questions, the place question, the party chooser */
 .opts { display: grid; gap: 8px; margin-top: 12px; }

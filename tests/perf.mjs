@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-/* Performance on the biggest ballots, at 4x CPU throttle (a mid phone): time from the ZIP box to
-   step 2, and time for a tap (a step 2 chip or switch, open a row, make a pick, open the Edit sheet
+/* Performance on the biggest ballots, at 4x CPU throttle (a mid phone): time from typing the ZIP to
+   step 2's counts, and time for a tap (a step 2 chip or switch, open a row, make a pick, open the Edit sheet
    and tap a chip there, open the menu) to paint; then a row and a pick at 1280px, with the rail;
    then a returning visitor's "Pick up where I left off".
    BASE=http://localhost:4173 node tests/perf.mjs     Targets (v2's): open about 1s, taps under 250ms. */
@@ -16,12 +16,11 @@ for (const [name, zip] of [['Chicago', '60614'], ['Houston', '77002'], ['Aurora 
   await page.waitForSelector('#zip');
   await page.evaluate(() => fetch('/data/index.json'));
   await cdp.send('Emulation.setCPUThrottlingRate', { rate: 4 });
-  await page.fill('#zip', zip);
+  // Steps 1 and 2 share the first page: "open" times the typed ZIP (and the place picked) to step 2's counts.
   const t0 = Date.now();
-  await page.locator('button[type=submit]').click();
+  await page.fill('#zip', zip);
   if (zip === '80247') await page.locator('[data-act="choose-place"][data-ids="aurora-co+denver-co"]').click();
-  // A fresh device opens on step 2 ("Pick by endorsements or party"): "open" times the ZIP to step 2.
-  await page.waitForSelector('[data-act="setup-done"]');
+  await page.waitForSelector('.su-cov');
   await page.evaluate(() => new Promise((r) => requestAnimationFrame(() => setTimeout(r, 0))));
   const open = Date.now() - t0;
   // A tap: input to the next paint.
@@ -64,7 +63,6 @@ for (const [name, zip] of [['Chicago', '60614'], ['Houston', '77002']]) {
   const cdp = await ctx.newCDPSession(page);
   await page.goto(`${BASE}/?today=2026-10-19`);
   await page.fill('#zip', zip);
-  await page.locator('button[type=submit]').click();
   await page.locator('[data-act="setup-done"]').click();
   await page.waitForSelector('.rail');
   await cdp.send('Emulation.setCPUThrottlingRate', { rate: 4 });
@@ -90,7 +88,6 @@ for (const [name, zip] of [['Chicago', '60614']]) {
   const cdp = await ctx.newCDPSession(page);
   await page.goto(`${BASE}/?today=2026-10-19`);
   await page.fill('#zip', zip);
-  await page.locator('button[type=submit]').click();
   await page.locator('[data-act="setup-done"]').click();
   await page.waitForSelector('#plan');
   const id = await page.evaluate(() => document.querySelector('#sec-measures .row[data-item]').dataset.item);

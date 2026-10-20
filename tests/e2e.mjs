@@ -41,16 +41,17 @@ async function newPage(opts = {}) {
 }
 const shot = (page, name) => page.screenshot({ path: path.join(SHOTS, `${name}.png`) });
 const tap = async (page, sel) => { const l = page.locator(sel).first(); await l.scrollIntoViewIfNeeded(); await l.tap(); await page.waitForTimeout(140); };
+/* The first page: steps 1 and 2 together. A complete ZIP looks itself up as it's typed. */
 async function openZip(page, zip, query = '') {
   await page.goto(`${BASE}/?today=${TODAY}${query}`);
+  await page.waitForSelector('#zip');
   await page.fill('#zip', zip);
-  await page.locator('button[type=submit]').tap();
 }
-/* A ballot this device has nothing for opens on step 2 ("Pick by endorsements or party") first;
-   "Show my ballot", with both switches off, shows the ballot as it always was. */
+/* "Show my ballot", with both switches off, shows the ballot as it always was (it waits for the
+   ZIP's lookup itself). A ballot already showing needs nothing. */
 async function throughSetup(page) {
   await page.waitForSelector('#plan, [data-act="setup-done"]', { timeout: 15000 });
-  if (await page.$('[data-act="setup-done"]')) await tap(page, '[data-act="setup-done"]');
+  if (!(await page.$('#plan'))) await tap(page, '[data-act="setup-done"]');
   await page.waitForSelector('#plan', { timeout: 15000 });
 }
 async function openBallot(page, zip, query = '') {
@@ -114,122 +115,159 @@ const noErrors = (page, label) => check(`${label}: no console errors`, page.erro
 const small44 = (page, scope) => page.$$eval(`${scope} button`, (els) => els.filter((e) => { const r = e.getBoundingClientRect(); return r.width && r.height && r.height < 43.5; }).map((e) => `${e.dataset.act || e.className}:${Math.round(e.getBoundingClientRect().height)}`));
 
 /* ---------- the front door ---------- */
-{
-  const { ctx, page } = await newPage();
-  await page.goto(`${BASE}/?today=${TODAY}`);
-  await page.waitForSelector('#zip');
-  await shot(page, '00-start');
-  await page.fill('#zip', '802');
-  await page.locator('button[type=submit]').tap();
-  check('Start: a short ZIP says what is wrong', /5 digits/.test(await text(page, '.zip-err')));
-  await noSideScroll(page, 'Start');
-  noErrors(page, 'Start');
-  await ctx.close();
-}
-
-/* ---------- the first page (flow, Oct 20): step 1, step 2, and Back ---------- */
 const SETUP = '[data-act="setup-done"]';
 const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
 {
   const { ctx, page } = await newPage();
   await page.goto(`${BASE}/?today=${TODAY}`);
   await page.waitForSelector('#zip');
+  await shot(page, '00-start');
+  await page.fill('#zip', '802');
+  await tap(page, SETUP);
+  check('Start: a short ZIP says what is wrong', /5 digits/.test(await text(page, '.zip-err')) && (await focusedFk(page)) === 'zip', `${await text(page, '.zip-err')} / ${await focusedFk(page)}`);
+  await page.fill('#zip', '8020');
+  check('Start: typing again takes the message away', !(await page.$('.zip-err')));
+  await noSideScroll(page, 'Start');
+  noErrors(page, 'Start');
+  await ctx.close();
+}
+
+/* ---------- the first page (Oct 20, round 3): steps 1 and 2 together from the start ---------- */
+{
+  const { ctx, page } = await newPage();
+  await page.goto(`${BASE}/?today=${TODAY}`);
+  await page.waitForSelector('#zip');
   await page.evaluate(() => document.fonts.ready);
+  await page.waitForFunction(() => /\d+ cities/.test(document.querySelector('[data-fk="browse"]')?.textContent || ''), null, { timeout: 15000 });
   await shot(page, '00b-first-page');
   check('First page: the kicker says voting is underway, with Election Day from the data', (await text(page, '.front .dateline')) === 'Voting is underway in every state. Election Day is Tue, Nov 3.', await text(page, '.front .dateline'));
   check('First page: the headline is Kevin’s line', (await text(page, '.front h1')) === 'Quickly make your voting plan.');
   const ticks = await page.$$eval('.ticks li', (els) => els.map((e) => e.textContent.trim()));
   check('First page: three ticked lines', ticks.join('|') === 'Plain English|Full local details|Pick by endorsements or party', ticks.join('|'));
-  check('First page: step 1 asks where you vote, with Next', (await text(page, 'label[for="zip"]')) === '1Where do you vote?' && (await text(page, 'form[data-form="zip"] button[type=submit]')) === 'Next', await text(page, 'label[for="zip"]'));
+  check('First page: steps 1 and 2 show together before any ZIP, with one "Show my ballot" and no Next', (await text(page, 'label[for="zip"]')) === '1Where do you vote?' && (await text(page, '#su-h')) === '2Pick by endorsements or party'
+    && (await text(page, SETUP)) === 'Show my ballot' && (await page.$$('.front button.bigbtn')).length === 1 && !(await page.$('form[data-form="zip"] button')), `${await text(page, 'label[for="zip"]')} | ${await text(page, '#su-h')}`);
+  const pressed = (k) => page.getAttribute(`#setup [data-act="chip"][data-k="${k}"]`, 'aria-pressed');
+  check('First page: before a ZIP, Newspapers and guides is on, the groups off, no party, no counts', (await pressed('papers')) === 'true' && (await pressed('progressive')) === 'false' && (await pressed('conservative')) === 'false'
+    && (await text(page, '#setup [data-fk="chip-party"]')) === 'A party' && !(await page.$('.su-cov')));
+  check('First page: the switches read "Fill in my ballot with their picks" and "Hide races I’ve decided", both off', (await text(page, '[data-act="setup-fill"] b')) === 'Fill in my ballot with their picks' && (await text(page, '[data-act="setup-only"] b')) === 'Hide races I’ve decided'
+    && (await page.getAttribute('[data-act="setup-fill"]', 'aria-checked')) === 'false' && (await page.getAttribute('[data-act="setup-only"]', 'aria-checked')) === 'false');
+  check('First page: before a ZIP, the fill switch says what it does', (await text(page, '[data-act="setup-fill"] small')) === 'Fills the races where they agree. Races where they split stay open.', await text(page, '[data-act="setup-fill"] small'));
   check('First page: "Use my street address instead"', (await text(page, '.front [data-act="addr-open"]')) === 'Use my street address instead');
-  const fine = await page.$$eval('.front > .fine', (els) => els.map((e) => e.textContent.replace(/\s+/g, ' ').trim()));
+  const fine = await page.$$eval('.front .door-foot > .fine', (els) => els.map((e) => e.textContent.replace(/\s+/g, ' ').trim()));
   const cities = new Set(Object.entries(await page.evaluate(() => fetch('/data/index.json').then((r) => r.json()).then((i) => i.places))).map(([id, p]) => (p.state === 'DC' ? 'DC' : /^nyc-/.test(id) ? 'NYC' : id))).size;
   check('First page: the small print counts cities from the index (DC and NYC count once), and the credit runs on in the same paragraph', fine.length === 1 && fine[0] === `Covers ${cities} cities where Kevin’s friends live. Ask for yours · Made by Kevin · kevinhg.com · Buy me a coffee`, `${fine.join(' / ')} (index says ${cities})`);
-  check('First page: kevinhg.com and Buy me a coffee link out', !!(await page.$('.front > .fine a[href="https://kevinhg.com"]')) && !!(await page.$('.front > .fine a[href="https://buymeacoffee.com/kevinhg"]')));
-  await page.fill('#zip', '02139');
-  const ask = new URL(await page.getAttribute('a[data-ask]', 'href'));
-  check('First page: Ask for yours opens the report form with "Please add my city" and the ZIP in the box', ask.host === 'docs.google.com' && ask.searchParams.get('entry.90887649') === 'Please add my city' && ask.searchParams.get('entry.628621310') === '02139', ask.search);
+  check('First page: kevinhg.com and Buy me a coffee link out', !!(await page.$('.door-foot .fine a[href="https://kevinhg.com"]')) && !!(await page.$('.door-foot .fine a[href="https://buymeacoffee.com/kevinhg"]')));
   check('First page: nothing in all caps', (await upperCased(page)).length === 0);
   await noSideScroll(page, 'First page');
   await tap(page, '[data-fk="browse"]');
   check('First page: the city count opens the list of places', (await page.$$('.browse-list [data-act="choose-place"]')).length > 30);
   await tap(page, '[data-fk="browse"]');
 
-  // A fresh ZIP: step 2, papers on, no party, both switches off, nothing saved yet.
-  await page.fill('#zip', '78704');
-  await page.locator('button[type=submit]').tap();
-  await page.waitForSelector(SETUP, { timeout: 15000 });
-  await shot(page, '00c-step-2');
-  check('Step 2: a fresh ZIP shows step 2, not the ballot', !(await page.$('#plan')) && !(await page.$('.foot')) && !(await page.$('#zip')));
-  check('Step 2: the place line names the place and ZIP, with Change', (await text(page, '.su-done span')) === 'Austin, Texas · 78704' && !!(await page.$('.su-done [data-act="change-place"]')), await text(page, '.su-done'));
-  check('Step 2: "Pick by endorsements or party"', (await text(page, '#su-h')) === '2Pick by endorsements or party');
-  check('Step 2: Newspapers and guides is on and no party is chosen', (await page.getAttribute(`#setup [data-act="chip"][data-k="papers"]`, 'aria-pressed')) === 'true' && (await text(page, '#setup [data-fk="chip-party"]')) === 'A party' && (await page.getAttribute('#setup [data-fk="chip-party"]', 'aria-pressed')) !== 'true');
-  check('Step 2: both switches start off', (await page.getAttribute('[data-act="setup-fill"]', 'aria-checked')) === 'false' && (await page.getAttribute('[data-act="setup-only"]', 'aria-checked')) === 'false');
-  check('Step 2: "Picks in N of your M races."', /^Picks in \d+ of your \d+ races\.$/.test(await text(page, '.su-cov')), await text(page, '.su-cov'));
-  check('Step 2: the fill switch says how many races they agree on', /^\d+ races? where they agree( \(\d+ from just one source\))?\. Races where they split stay open\.$/.test(await text(page, '[data-act="setup-fill"] small')), await text(page, '[data-act="setup-fill"] small'));
-  check('Step 2: nothing is saved before "Show my ballot"', (await savedVG(page)) === null);
+  // Choices before a ZIP: a chip, a party from every party the guide covers, the fill switch.
+  await tap(page, '#setup [data-act="chip"][data-k="progressive"]');
+  check('Before a ZIP: a chip turns on', (await pressed('progressive')) === 'true');
+  await tap(page, '#setup [data-fk="chip-party"]');
+  const pre = await page.$$eval('#setup [data-act="party-set"]', (els) => els.map((e) => e.dataset.p));
+  const covered = await page.evaluate(() => fetch('/data/index.json').then((r) => r.json()).then((i) => i.parties));
+  check('Before a ZIP: "A party" lists the parties the guide covers', pre.length > 2 && JSON.stringify(pre) === JSON.stringify(covered) && pre.includes('Working Families') && pre.includes('Republican'), pre.join(', '));
+  await tap(page, '#setup [data-act="party-set"][data-p="Working Families"]');
+  check('Before a ZIP: a party turns on', (await text(page, '#setup [data-fk="chip-party"]')) === 'Working Families Party' && (await page.getAttribute('#setup [data-fk="chip-party"]', 'aria-pressed')) === 'true');
+  await tap(page, '[data-act="setup-fill"]');
+  check('Before a ZIP: the fill switch turns on', (await page.getAttribute('[data-act="setup-fill"]', 'aria-checked')) === 'true');
+  check('Before a ZIP: nothing is saved', (await savedVG(page)) === null);
+
+  // The fifth digit finds the place and the counts; the choices carry over.
+  await page.locator('#zip').focus();
+  await page.fill('#zip', '7870');
+  check('Four digits: no place yet', !(await page.$('.door-place')) && !(await page.$('.su-cov')));
+  await page.keyboard.type('4');
+  await page.waitForSelector('.su-cov', { timeout: 15000 });
+  await shot(page, '00c-steps-1-2');
+  check('Five digits: the place shows under the ZIP box', (await text(page, '.door-place')) === 'Austin, Texas · 78704' && !(await page.$('.door-place [data-act]')), await text(page, '.door-place'));
+  check('Five digits: and the counts in step 2', /^Picks in \d+ of your \d+ races\.$/.test(await text(page, '.su-cov')), await text(page, '.su-cov'));
+  check('Five digits: the ZIP box keeps focus and its caret at the end', (await focusedFk(page)) === 'zip' && (await page.evaluate(() => document.getElementById('zip').selectionStart)) === 5);
+  check('Five digits: the chips chosen before carry over', (await pressed('papers')) === 'true' && (await pressed('progressive')) === 'true' && (await page.getAttribute('[data-act="setup-fill"]', 'aria-checked')) === 'true');
+  check('Five digits: a party this ballot doesn’t have drops out, quietly', (await text(page, '#setup [data-fk="chip-party"]')) === 'A party' && !(await page.$('.zip-err')));
+  check('Five digits: the fill switch counts the races where they agree', /^\d+ races? where they agree( \(\d+ from just one source\))?\. Races where they split stay open\.$/.test(await text(page, '[data-act="setup-fill"] small')), await text(page, '[data-act="setup-fill"] small'));
+  await tap(page, '#setup [data-fk="chip-party"]');
+  const post = await page.$$eval('#setup [data-act="party-set"]', (els) => els.map((e) => e.dataset.p));
+  check('After the ZIP: "A party" lists only the parties on this ballot', post.includes('Republican') && !post.includes('Working Families'), post.join(', '));
+  await tap(page, '#setup [data-act="party-set"][data-p="Republican"]');
+  check('After the ZIP: with a party, the fill line counts its candidates first', /^(\d+ from the Republican Party( and \d+ where your other sources agree)?|\d+ where your other sources agree)\.$/.test(await text(page, '[data-act="setup-fill"] small')) && (await text(page, '#setup [data-fk="chip-party"]')) === 'Republican Party', await text(page, '[data-act="setup-fill"] small'));
+  await tap(page, '#setup [data-act="party-off"]');
+  check('After the ZIP: tapping the party again turns it off', (await text(page, '#setup [data-fk="chip-party"]')) === 'A party');
   // The counts repaint in place: coverage, or the fill line when the new sources pick only in
   // races already covered (Austin's progressive groups).
   const cov1 = `${await text(page, '.su-cov')} | ${await text(page, '[data-act="setup-fill"] small')}`;
   await tap(page, '#setup [data-act="chip"][data-k="progressive"]');
   const cov2 = `${await text(page, '.su-cov')} | ${await text(page, '[data-act="setup-fill"] small')}`;
-  check('Step 2: a chip changes the counts in place', (await page.getAttribute('#setup [data-act="chip"][data-k="progressive"]', 'aria-pressed')) === 'true' && cov2 !== cov1, `${cov1} -> ${cov2}`);
+  check('After the ZIP: a chip changes the counts in place', (await pressed('progressive')) === 'false' && cov2 !== cov1, `${cov1} -> ${cov2}`);
   await tap(page, '#setup [data-act="chip"][data-k="progressive"]');
-  await tap(page, '#setup [data-fk="chip-party"]');
-  check('Step 2: "A party" opens the party list right there, not a sheet', (await page.$$('#setup [data-act="party-set"]')).length >= 2 && !(await page.$('.sheet-panel')));
-  await tap(page, '#setup [data-act="party-set"][data-p="Republican"]');
-  check('Step 2: with a party, the fill line counts its candidates first', /^(\d+ from the Republican Party( and \d+ where your other sources agree)?|\d+ where your other sources agree)\.$/.test(await text(page, '[data-act="setup-fill"] small')) && (await text(page, '#setup [data-fk="chip-party"]')) === 'Republican Party', await text(page, '[data-act="setup-fill"] small'));
-  await tap(page, '#setup [data-act="party-off"]');
-  check('Step 2: tapping the party again turns it off', (await text(page, '#setup [data-fk="chip-party"]')) === 'A party');
-  check('Step 2: nothing in all caps', (await upperCased(page)).length === 0);
-  await noSideScroll(page, 'Step 2');
-
-  // Back after a ZIP returns to the first page, with the ZIP still in the box.
-  await page.goBack();
-  await page.waitForSelector('#zip');
-  check('Back from step 2: returns to the first page, ZIP still in the box', !(await page.$(SETUP)) && (await page.inputValue('#zip')) === '78704');
-  check('Back from step 2: still nothing saved', (await savedVG(page)) === null);
-  await page.locator('button[type=submit]').tap();
-  await page.waitForSelector(SETUP, { timeout: 15000 });
+  check('After the ZIP: nothing is saved yet', (await savedVG(page)) === null);
+  check('After the ZIP: nothing in all caps', (await upperCased(page)).length === 0);
+  await noSideScroll(page, 'Steps 1 and 2');
+  // Editing the ZIP takes the place and the counts back; the choices stay.
+  await page.fill('#zip', '7870');
+  check('Editing the ZIP: the place and the counts go', !(await page.$('.door-place')) && !(await page.$('.su-cov')) && (await pressed('progressive')) === 'true');
+  await page.fill('#zip', '78704');
+  await page.waitForSelector('.su-cov', { timeout: 15000 });
+  await tap(page, '[data-act="setup-fill"]');
   await tap(page, SETUP);
   await page.waitForSelector('#plan', { timeout: 15000 });
-  check('Step 2: "Show my ballot" shows the ballot, nothing filled', !!(await page.$('#plan')) && /^0 of \d+ decided$/.test(await text(page, '.bar-txt')) && !(await page.$('.toast:not([hidden])')), await text(page, '.bar-txt'));
-  check('Step 2: the ballot is saved once it shows', /austin-tx/.test((await savedVG(page)) || ''));
+  check('"Show my ballot": the ballot, nothing filled with the switch off', /^0 of \d+ decided$/.test(await text(page, '.bar-txt')) && !(await page.$('.toast:not([hidden])')), await text(page, '.bar-txt'));
+  check('"Show my ballot": the sources chosen on the first page', (await text(page, '.picks-line span')) === 'Picks: Newspapers and guides, progressive groups', await text(page, '.picks-line span'));
+  check('"Show my ballot": the ballot is saved once it shows', /austin-tx/.test((await savedVG(page)) || ''));
   check('How this guide works: names the source for "Voting is underway in every state"', /“Voting is underway in every state”: Center for Election Innovation & Research\./.test(await text(page, '#how')) && !!(await page.$('#how a[href="https://electioninnovation.org/research/dates-for-2026-early-in-person-and-mail-voting/"]')));
   await page.goBack();
   await page.waitForSelector('#zip');
-  check('Back from the ballot: returns to the first page', !(await page.$('#plan')) && !(await page.$('.foot')) && (await page.inputValue('#zip')) === '78704');
-  await page.locator('button[type=submit]').tap();
-  await page.waitForSelector('#plan, [data-act="setup-done"]', { timeout: 15000 });
-  check('The same ZIP again: a ballot finished on this device skips step 2', !!(await page.$('#plan')) && !(await page.$(SETUP)));
+  await page.waitForSelector('.door-place', { timeout: 15000 });
+  check('Back from the ballot: the first page, with the ZIP and its place again', !(await page.$('#plan')) && !(await page.$('.foot')) && (await page.inputValue('#zip')) === '78704' && (await text(page, '.door-place')) === 'Austin, Texas · 78704');
+  check('Back from the ballot: step 2 shows that ballot’s own sources', (await pressed('progressive')) === 'true');
+  await page.locator('#zip').press('Enter');
+  await page.waitForSelector('#plan', { timeout: 15000 });
+  check('Enter in the ZIP box: shows the ballot once the ZIP has found it', !!(await page.$('#plan')) && !(await page.$('#zip')));
   noErrors(page, 'First page');
   await ctx.close();
 }
 {
-  // "Change" (step 2's place line, the ballot's masthead) goes back the way Back does, so the first
-  // page never sits in history twice and one more Back leaves the site.
+  // A city from the list of places: its place line with no ZIP (the box empties), and the list closes.
+  const { ctx, page } = await newPage();
+  await page.goto(`${BASE}/?today=${TODAY}`);
+  await page.waitForSelector('#zip');
+  await page.fill('#zip', '802');
+  await tap(page, '[data-fk="browse"]');
+  await tap(page, '.browse-list [data-act="choose-place"][data-ids="denver-co"]');
+  await page.waitForSelector('.door-place', { timeout: 15000 });
+  check('A city from the list: its place line, the ZIP box emptied, the list closed, focus on step 2', (await text(page, '.door-place')) === 'Denver, Colorado' && (await page.inputValue('#zip')) === '' && !(await page.$('.browse-list')) && (await focusedFk(page)) === 'su-h' && !!(await page.$('.su-cov')),
+    `${await text(page, '.door-place')} / ${await page.inputValue('#zip')} / ${await focusedFk(page)}`);
+  await throughSetup(page);
+  check('A city from the list: "Show my ballot" opens it', /Denver/.test(await text(page, '.place')));
+  noErrors(page, 'A city from the list');
+  await ctx.close();
+}
+{
+  // "Change" (the ballot's masthead) goes back the way Back does, so the first page never sits in
+  // history twice and one more Back leaves the site.
   const { ctx, page } = await newPage();
   await openZip(page, '78704');
-  await page.waitForSelector(SETUP, { timeout: 15000 });
-  const depth = await page.evaluate(() => history.length);
-  await tap(page, '.su-done [data-act="change-place"]');
-  await page.waitForSelector('#zip');
-  check('Change on step 2: back to the first page, ZIP still in the box', !(await page.$(SETUP)) && (await page.inputValue('#zip')) === '78704' && (await page.evaluate(() => history.state && history.state.vg)) === 'start');
-  await page.locator('button[type=submit]').tap();
   await throughSetup(page);
-  await tap(page, '.mast [data-act="change-place"]');
-  await page.waitForSelector('#zip');
-  await page.locator('button[type=submit]').tap();
-  await page.waitForSelector('#plan', { timeout: 15000 });
+  const depth = await page.evaluate(() => history.length);
+  for (let i = 0; i < 2; i++) {
+    await tap(page, '.mast [data-act="change-place"]');
+    await page.waitForSelector('.door-place', { timeout: 15000 });
+    if (!i) check('Change: back to the first page, ZIP still in the box', (await page.inputValue('#zip')) === '78704' && (await page.evaluate(() => history.state && history.state.vg)) === 'start');
+    await tap(page, SETUP);
+    await page.waitForSelector('#plan', { timeout: 15000 });
+  }
   check('Change: the first page is in history once, however often you change', (await page.evaluate(() => history.length)) === depth, `${depth} then ${await page.evaluate(() => history.length)}`);
   noErrors(page, 'Change');
   await ctx.close();
 }
 {
-  // The fill switch fills, Undo undoes; then a reload, a save link and ?try all skip step 2.
+  // The fill switch fills, Undo undoes; then a reload, a save link and ?try all skip the first page.
   const { ctx, page } = await newPage();
   await openZip(page, '78704');
-  await page.waitForSelector(SETUP, { timeout: 15000 });
+  await page.waitForSelector('.su-cov', { timeout: 15000 });
   await tap(page, '[data-act="setup-fill"]');
   const n = Number(((await text(page, '[data-act="setup-fill"] small')).match(/^(\d+)/) || [])[1] || 0);
   check('Step 2: the fill switch turns on', (await page.getAttribute('[data-act="setup-fill"]', 'aria-checked')) === 'true' && n > 0, String(n));
@@ -248,22 +286,23 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await tap(page, '.toast [data-act="undo-bulk"]');
   check('Step 2 fill: Undo takes every filled pick back', /^0 of /.test(await text(page, '.bar-txt')), await text(page, '.bar-txt'));
   await page.reload();
-  await page.waitForSelector('#plan, [data-act="setup-done"]', { timeout: 15000 });
-  check('Reload: the ballot opens straight away, no step 2', !!(await page.$('#plan')) && !(await page.$(SETUP)));
+  await page.waitForSelector('#plan', { timeout: 15000 });
+  check('Reload: the ballot opens straight away, no first page', !!(await page.$('#plan')) && !(await page.$('#zip')));
   await tap(page, '[data-act="cheat"]');
   await tap(page, '[data-act="save-open"]');
   const link = await page.inputValue('.save-url');
   const fresh = await newPage();
   await fresh.page.goto(linkHere(link));
-  await fresh.page.waitForSelector('#plan, [data-act="setup-done"]', { timeout: 15000 });
-  check('Save link: a fresh device opens the ballot, no step 2', !!(await fresh.page.$('#plan')) && !(await fresh.page.$(SETUP)));
-  noErrors(fresh.page, 'Save link skips step 2');
+  await fresh.page.waitForSelector('#plan', { timeout: 15000 });
+  check('Save link: a fresh device opens the ballot, no first page', !!(await fresh.page.$('#plan')) && !(await fresh.page.$('#zip')));
+  noErrors(fresh.page, 'Save link skips the first page');
   await fresh.ctx.close();
   const demo = await newPage();
   await openZip(demo.page, '78704', '&try=fresh');
-  await demo.page.waitForSelector('#plan, [data-act="setup-done"]', { timeout: 15000 });
-  check('Try as: ?try skips step 2', !!(await demo.page.$('#plan')) && !(await demo.page.$(SETUP)));
-  noErrors(demo.page, 'Try as skips step 2');
+  check('Try as: the first page asks only where you vote', !(await demo.page.$('#su-h')) && !(await demo.page.$('[data-act="setup-fill"]')));
+  await throughSetup(demo.page);
+  check('Try as: "Show my ballot" opens the scenario', !!(await demo.page.$('#plan')) && /^0 of /.test(await text(demo.page, '.bar-txt')));
+  noErrors(demo.page, 'Try as');
   await demo.ctx.close();
   noErrors(page, 'Step 2 fill');
   await ctx.close();
@@ -560,7 +599,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await tap(page, '.front [data-act="addr-open"]');
   await page.fill('#addr-in', 'a test lookup');
   await page.locator('form[data-form="addr"] button[type=submit]').tap();
-  await page.waitForSelector('[data-act="setup-done"], #plan', { timeout: 15000 });
+  await page.waitForSelector('.door-place', { timeout: 15000 });
   const said = await text(page, '.toast');
   check('Statewide Florida from the first page: the toast sends you to the sample ballot', said === 'Found your address. Check the rest with your sample ballot.', said);
   noErrors(page, 'Statewide Florida address');
@@ -575,8 +614,8 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('Load error: says so, with Try again and the ZIP in the box', /couldn’t load that ballot/.test(await text(page, '.zip-err')) && (await text(page, '[data-act="retry"]')) === 'Try again' && (await page.inputValue('#zip')) === '78704');
   await page.unroute('**/data/place-austin-tx.json');
   await tap(page, '[data-act="retry"]');
-  await page.waitForSelector(SETUP, { timeout: 15000 }).catch(() => {});
-  check('Load error: Try again opens the same ballot', /Austin, Texas · 78704/.test(await text(page, '.su-done')), await text(page, '.su-done'));
+  await page.waitForSelector('.door-place', { timeout: 15000 }).catch(() => {});
+  check('Load error: Try again finds the same place', /Austin, Texas · 78704/.test(await text(page, '.door-place')), await text(page, '.door-place'));
   await ctx.close();
   const two = await newPage();
   await two.page.route('**/data/index.json', (route) => route.fulfill({ status: 503, body: 'down' }));
@@ -872,6 +911,9 @@ for (const [zip, label, id, btn, href, full] of [
   await openZip(page, '02139');
   await page.waitForSelector('.notice');
   check('Uncovered: names Vote.gov', /Vote\.gov/.test(await text(page, '.notice')));
+  check('Uncovered: the notice sits under the ZIP box, step 2 stays with no counts', !!(await page.$('.door .door-where .notice')) && !!(await page.$('#su-h')) && !(await page.$('.su-cov')) && !(await page.$('.door-place')));
+  await tap(page, SETUP);
+  check('Uncovered: "Show my ballot" stays on the first page', !(await page.$('#plan')) && (await focusedFk(page)) === 'zip');
   const ask = new URL((await page.getAttribute('.notice a[data-ask-kevin]', 'href')) || 'about:blank');
   check('Uncovered: "Want this for your city? Ask Kevin." opens the form with the state and ZIP', /Want this for your city\? Ask Kevin\./.test(await text(page, '.notice')) && ask.searchParams.get('entry.628621310') === 'Massachusetts, 02139', ask.search);
   await ctx.close();
@@ -882,7 +924,17 @@ for (const [zip, label, id, btn, href, full] of [
   await page.waitForSelector('[data-act="choose-place"]');
   check('80247: asks which place, with "I’m not sure"', (await page.$$('[data-act="choose-place"]')).length === 3 && /I’m not sure/.test(await text(page, '.choose')));
   check('80247: offers the address lookup to pick', !!(await page.$('.choose [data-act="addr-open"]')));
+  check('80247: the place question sits under the ZIP box, step 2 beside it with no counts yet', !!(await page.$('.door .door-where .choose')) && !!(await page.$('#su-h')) && !(await page.$('.su-cov')));
+  await tap(page, SETUP);
+  check('80247: "Show my ballot" before a pick goes to the first place to pick', (await focusedFk(page)) === 'cp-aurora-co' && !(await page.$('#plan')), await focusedFk(page));
+  await tap(page, '[data-act="choose-place"][data-ids="aurora-co"]');
+  await page.waitForSelector('.door-place', { timeout: 15000 });
+  check('80247: the place picked shows under the ZIP box, with Change, and step 2 counts it', (await text(page, '.door-place span')) === 'Aurora, Colorado · 80247' && !!(await page.$('.door-place [data-act="rechoose"]')) && !!(await page.$('.su-cov')), await text(page, '.door-place'));
+  await tap(page, '.door-place [data-act="rechoose"]');
+  check('80247: Change asks again', (await page.$$('[data-act="choose-place"]')).length === 3 && !(await page.$('.door-place')) && (await focusedFk(page)) === 'cp-aurora-co');
   await tap(page, '[data-act="choose-place"][data-ids="aurora-co+denver-co"]');
+  await page.waitForSelector('.door-place', { timeout: 15000 });
+  check('80247 not sure: the place line names both', (await text(page, '.door-place span')) === 'Aurora or Denver, Colorado · 80247', await text(page, '.door-place span'));
   await throughSetup(page);
   check('80247 not sure: both places, items marked "Only in"', /Aurora or Denver/.test(await text(page, '.place')) && (await page.$$('.tag')).length > 10);
   await noSideScroll(page, '80247 not sure');
@@ -1146,7 +1198,6 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   const { ctx, page } = await newPage();
   await page.goto(`${BASE}/?today=${day}&now=10:00`);
   await page.fill('#zip', '80226');
-  await page.locator('button[type=submit]').tap();
   await throughSetup(page);
   check(`Plan on ${day}: ${want}`, want.test(await text(page, '.plan-h')), await text(page, '.plan-h'));
   await ctx.close();
@@ -1294,7 +1345,6 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   const { ctx, page } = await newPage();
   await page.goto(`${BASE}/?today=2026-11-03&now=19:05`);
   await page.fill('#zip', '77002');
-  await page.locator('button[type=submit]').tap();
   await throughSetup(page);
   const head = await text(page, '.plan-h');
   check('Houston 7:05 PM on Election Day: polls closed, stay in line', /^Polls closed at 7 PM\. Already in line\? Stay in line\.$/.test(head), head);
@@ -1307,7 +1357,6 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await page.clock.install({ time: new Date('2026-11-04T00:58:00Z') });
   await page.goto(`${BASE}/?today=2026-11-03`);
   await page.fill('#zip', '78702');
-  await page.locator('button[type=submit]').tap();
   await throughSetup(page);
   const before = await text(page, '.plan-h');
   await page.clock.runFor(3 * 60_000);
@@ -1445,7 +1494,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await tap(page, '.choose [data-act="addr-open"]');
   await page.fill('#addr-in', 'a test lookup');
   await page.locator('form[data-form="addr"] button[type=submit]').tap();
-  await page.waitForSelector('[data-act="setup-done"]', { timeout: 15000 });
+  await page.waitForSelector('.door-place', { timeout: 15000 });
   const said = await text(page, '.toast');
   await throughSetup(page);
   check('Address: Aurora, Colorado opens its ballot and answers its districts', /Aurora/.test(await text(page, '.place')) && /Filled in \d+ districts? from your address/.test(said), said);
@@ -1472,7 +1521,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   const lookUp = async () => {
     await page.fill('#addr-in', 'a test lookup');
     await page.locator('form[data-form="addr"] button[type=submit]').tap();
-    await page.waitForSelector('form[data-form="addr"] [role="status"], [data-act="setup-done"], .notice', { timeout: 8000 }).catch(() => {});
+    await page.waitForSelector('form[data-form="addr"] [role="status"], .door-place, .notice', { timeout: 8000 }).catch(() => {});
   };
   await lookUp();
   check('Address on the first page: a place it can’t settle says so in one line and keeps the ZIP box', (await text(page, 'form[data-form="addr"] [role="status"]')) === 'We couldn’t tell which place that is. Try your ZIP.' && !!(await page.$('#zip')), await text(page, 'form[data-form="addr"] [role="status"]'));
@@ -1483,9 +1532,10 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await tap(page, '.front [data-act="addr-open"]');
   answer = geoFor('08', 'Aurora', 6, 28);
   await lookUp();
-  await page.waitForSelector(SETUP, { timeout: 15000 });
+  await page.waitForSelector('.door-place', { timeout: 15000 });
   const said = await text(page, '.toast');
-  check('Address on the first page: Aurora, Colorado opens its step 2 with its districts answered', /^Aurora, Colorado/.test(await text(page, '.su-done span')) && /Filled in \d+ districts? from your address/.test(said), `${await text(page, '.su-done span')} | ${said}`);
+  check('Address on the first page: Aurora, Colorado shows under the ZIP box, its districts answered', /^Aurora, Colorado/.test(await text(page, '.door-place span')) && /Filled in \d+ districts? from your address/.test(said), `${await text(page, '.door-place span')} | ${said}`);
+  check('Address on the first page: focus moves on to step 2', (await focusedFk(page)) === 'su-h', await focusedFk(page));
   await tap(page, SETUP);
   await page.waitForSelector('#plan', { timeout: 15000 });
   check('Address on the first page: the ballot keeps the districts', /Your districts: Congressional District 6/.test(await text(page, '.mast')), await text(page, '.mast .fine'));

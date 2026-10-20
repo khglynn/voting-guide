@@ -1,11 +1,12 @@
-/* Step 2 on the first page, after a ZIP: whose picks to see, and whether to fill them in. The
-   ballot is loaded (the chips and counts need it) but not shown, and nothing is saved until
-   "Show my ballot". The chips reuse the lens's actions; "A party" opens its list right here. */
+/* Step 2, whose picks to see and whether to fill them in: on the first page beside step 1, and in
+   the ballot's Edit sheet. On the first page the choices start in memory and become the ballot's
+   once a ZIP finds it; it's loaded for the counts but not shown, and nothing is saved until "Show
+   my ballot". The chips reuse the lens's actions; "A party" opens its list right here. */
 import type { Ballot } from '../ballot';
 import { S } from '../state';
 import { esc, plural } from '../util';
 import { chipsHTML, TICK } from './lens';
-import { partiesOnBallot } from '../model/lens';
+import { partiesOnBallot, CHIPS } from '../model/lens';
 import { coverage } from '../model/tally';
 import { planSetup } from '../model/bulk';
 import { isOpen, FILL, HIDE } from './common';
@@ -34,12 +35,14 @@ const sw = (act: string, on: boolean, label: string, sub = ''): string =>
   `<button class="su-sw" role="switch" aria-checked="${on}" data-act="${act}" data-fk="${act}"><span class="su-l"><b>${esc(label)}</b>${sub ? `<small>${esc(sub)}</small>` : ''}</span><span class="tg" aria-hidden="true"><span></span></span></button>`;
 
 /* Step 2's controls, shared with the ballot's Edit sheet: the chips and "A party", the coverage
-   line, and the two switches. In step 2 "A party" opens its list right there; in the Edit sheet it
-   opens the party sheet, and "See all sources" opens every source. */
+   line, and the two switches. On the first page "A party" opens its list right there; in the Edit
+   sheet it opens the party sheet, and "See all sources" opens every source. Before a ZIP has found a
+   ballot the first page shows the choices kept so far (S.door), every party the guide covers, and
+   no counts. */
 export function pickControlsHTML(inSheet = false): string {
-  const b = S.ballot!;
-  const party = S.b.party;
-  const parties = partiesOnBallot(b);
+  const b = inSheet || S.view === 'setup' ? S.ballot : null;
+  const party = b ? S.b.party : S.door.party;
+  const parties = b ? partiesOnBallot(b).map((p) => p.party) : S.index?.parties || [];
   const listOpen = !inSheet && !party && isOpen('su-party');
   const partyChip = !parties.length ? '' : party
     ? `<button class="chip" data-act="party-off" aria-pressed="true" data-fk="chip-party">${TICK}${esc(party)} Party</button>`
@@ -48,26 +51,24 @@ export function pickControlsHTML(inSheet = false): string {
       : `<button class="chip" data-act="open" data-k="su-party" aria-expanded="${listOpen}" data-fk="chip-party">A party</button>`;
   const more = inSheet ? '<button class="chip all-src" data-act="sheet" data-s="sources" aria-haspopup="dialog" data-fk="chip-more">See all sources</button>' : '';
   const list = listOpen
-    ? `<div class="su-chips su-parties" role="group" aria-label="A party">${parties.map((p) => `<button class="chip" data-act="party-set" data-p="${esc(p.party)}" data-fk="pty-${esc(p.party)}">${esc(p.party)}</button>`).join('')}</div>`
+    ? `<div class="su-chips su-parties" role="group" aria-label="A party">${parties.map((p) => `<button class="chip" data-act="party-set" data-p="${esc(p)}" data-fk="pty-${esc(p)}">${esc(p)}</button>`).join('')}</div>`
     : '';
-  const cov = coverage();
-  return `<div class="su-chips" role="group" aria-labelledby="${inSheet ? 'sh-h' : 'su-h'}">${chipsHTML()}${partyChip}${more}</div>
+  const chips = b ? chipsHTML()
+    : CHIPS.map((c) => `<button class="chip" data-act="chip" data-k="${c.key}" aria-pressed="${S.door.chips[c.key]}" data-fk="chip-${c.key}">${TICK}${esc(c.label)}</button>`).join('');
+  const cov = b ? coverage() : null;
+  return `<div class="su-chips" role="group" aria-labelledby="${inSheet ? 'sh-h' : 'su-h'}">${chips}${partyChip}${more}</div>
     ${list}
-    <p class="su-cov">Picks in ${cov.picked} of your ${plural(cov.total, 'race')}.</p>
+    ${cov ? `<p class="su-cov">Picks in ${cov.picked} of your ${plural(cov.total, 'race')}.</p>` : ''}
     <div class="su-sws">
-      ${sw('setup-fill', S.ui.setupFill, FILL, fillLine(party))}
-      ${sw('setup-only', S.ui.setupOnly, HIDE)}
+      ${sw('setup-fill', inSheet ? S.ui.setupFill : S.door.fill, FILL, b ? fillLine(party) : 'Fills the races where they agree. Races where they split stay open.')}
+      ${sw('setup-only', inSheet ? S.ui.setupOnly : S.door.only, HIDE)}
     </div>`;
 }
 
-export function setupHTML(): string {
-  const b = S.ballot!;
-  return `<header class="mast front setup wrap" id="setup">
-    <p class="su-done"><span><b>${esc(placeLine(b))}</b>${S.b.zip ? ` · ${esc(S.b.zip)}` : ''}</span><button class="linkbtn" data-act="change-place" data-fk="change-place">Change</button></p>
-    <h1 class="step su-h" id="su-h" tabindex="-1" data-fk="su-h"><span class="step-n" aria-hidden="true">2</span>Pick by endorsements or party</h1>
-    ${pickControlsHTML()}
-    <button class="bigbtn" data-act="setup-done" data-fk="setup-done">Show my ballot</button>
-  </header>`;
+/* Step 2 on the first page. */
+export function doorPicksHTML(): string {
+  return `<h2 class="step su-h" id="su-h" tabindex="-1" data-fk="su-h"><span class="step-n" aria-hidden="true">2</span>Pick by endorsements or party</h2>
+    ${pickControlsHTML()}`;
 }
 
 /* The ballot's Edit sheet ("Picks: Newspapers and guides · Edit", and "Quick picks" in the menu):

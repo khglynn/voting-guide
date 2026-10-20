@@ -5,7 +5,7 @@ import { S } from '../state';
 import { esc, fmtDate, todayISO } from '../util';
 import { ext, isOpen, askCityURL, formURL, BUY_ME_A_COFFEE_URL, KEVIN_URL } from './common';
 import { countyName } from './ledger';
-import { setupHTML } from './setup';
+import { doorPicksHTML, placeLine } from './setup';
 import { stateName } from '../geo';
 import { pageWalk, decisionItems } from '../ballot';
 
@@ -60,7 +60,6 @@ function addrNextHTML(): string {
 const retryHTML = (): string => (S.retry ? '<p class="row-btns"><button class="mini dark" data-act="retry" data-fk="retry">Try again</button></p>' : '');
 
 export function mastHTML(): string {
-  const idx = S.index;
   if (S.view === 'ballot' && S.ballot) {
     const b = S.ballot;
     // "Brooklyn (Kings County)": the name up top, the note in parentheses on the line below.
@@ -80,10 +79,43 @@ export function mastHTML(): string {
       ${S.b.addrNote ? `<p class="fine">${esc(S.b.addrNote)}</p>` : ''}
     </header>`;
   }
-  if (S.view === 'setup' && S.ballot) return setupHTML();
+  return doorHTML();
+}
+
+/* The first page: Kevin's line and the three ticks, then steps 1 and 2 together, with "Show my
+   ballot" at their foot. The parts marked data-part repaint on their own (render.ts), so the ZIP box
+   keeps its caret while the place line and the counts change under it. */
+function doorHTML(): string {
+  const ticks = ['Plain English', 'Full local details', 'Pick by endorsements or party'];
+  return `<header class="mast front wrap">${tryBanner()}
+    <div class="mast-top" data-part="kicker"><p class="dateline">${esc(kicker())}</p></div>
+    <h1 class="place">Quickly make your voting plan.</h1>
+    <ul class="ticks">${ticks.map((t) => `<li><i aria-hidden="true"></i>${esc(t)}</li>`).join('')}</ul>
+    <div class="door" id="door">
+      <form class="zipform" data-form="zip" novalidate>
+        <label for="zip" class="step su-h zip-h"><span class="step-n" aria-hidden="true">1</span>Where do you vote?</label>
+        <div class="zip-row"><input class="zip-input" id="zip" name="zip" data-fk="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="ZIP code" value="${esc(S.zip)}" ${S.zipErr ? 'aria-describedby="zip-err" aria-invalid="true"' : ''}></div>
+      </form>
+      <div class="door-where" data-part="where">${whereHTML()}</div>
+      <div class="door-picks" id="setup" data-part="picks">${S.tryMode ? '' : doorPicksHTML()}</div>
+      <button class="bigbtn" data-act="setup-done" data-fk="setup-done">Show my ballot</button>
+    </div>
+    <div class="door-foot" data-part="fine">${creditsHTML()}</div>
+  </header>`;
+}
+
+/* Under the ZIP box: what the ZIP found (the place, the place question, a state we don't cover),
+   or what's wrong with it, and the address lookup. */
+function whereHTML(): string {
+  const idx = S.index;
+  const b = S.view === 'setup' ? S.ballot : null;
   const err = S.zipErr ? `<p class="zip-err" role="alert" id="zip-err">${esc(S.zipErr)}</p>` : '';
   let after = '';
-  if (S.zipChoice && idx) {
+  if (b) {
+    // "Austin, Texas · 78704". After the place question, Change asks it again.
+    const zip = S.b.zip ? ` · ${esc(S.b.zip)}` : '';
+    after = `<p class="door-place" role="status"><span><b>${esc(placeLine(b))}</b>${zip}</span>${S.picked ? '<button class="linkbtn" data-act="rechoose" data-fk="rechoose">Change</button>' : ''}</p>`;
+  } else if (S.zipChoice && idx) {
     after = `<div class="choose" role="group" aria-labelledby="which-h">
       ${(() => { const dc = S.zipChoice.placeIds.every((id) => idx.places[id].state === 'DC'); const n = S.zipChoice.placeIds.length;
         return dc ? `<h2 id="which-h">${esc(S.zipChoice.zip)} covers ${n} wards. Pick yours.</h2><p class="small">It’s on your voter registration card.</p>`
@@ -98,27 +130,14 @@ export function mastHTML(): string {
     after = `<div class="notice" role="status"><p><b>We don’t cover ${name ? esc(name) : 'that area'} yet.</b> ${ext('https://vote.gov/', 'Vote.gov')} has official info for every state.</p>
       <p>Want this for your city? <a href="${esc(ask)}" target="_blank" rel="noopener" data-ask-kevin>Ask Kevin</a>.</p></div>`;
   }
-  // "Use my street address instead" opens the address form right here, before any ZIP. The place
-  // question has its own link, so this one steps aside while it shows.
+  // "Use my street address instead" opens the address form right here. The place question has its
+  // own link, so this one steps aside while it shows.
   const addr = S.zipChoice ? '' : S.ui.addrOpen ? addrHTML(true) : '<p class="addr-cta"><button class="linkbtn" data-act="addr-open" data-fk="addr-open">Use my street address instead</button></p>';
-  const ticks = ['Plain English', 'Full local details', 'Pick by endorsements or party'];
-  return `<header class="mast front wrap">${tryBanner()}
-    <div class="mast-top"><p class="dateline">${esc(kicker())}</p></div>
-    <h1 class="place">Quickly make your voting plan.</h1>
-    <ul class="ticks">${ticks.map((t) => `<li><i aria-hidden="true"></i>${esc(t)}</li>`).join('')}</ul>
-    <form class="zipform" data-form="zip" novalidate>
-      <label for="zip" class="step"><span class="step-n" aria-hidden="true">1</span>Where do you vote?</label>
-      <div class="zip-row"><input class="zip-input" id="zip" name="zip" data-fk="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="ZIP code" value="${esc(S.zip)}" ${S.zipErr ? 'aria-describedby="zip-err" aria-invalid="true"' : ''}>
-      <button class="mini dark" type="submit">Next</button></div>
-      ${err}
-    </form>
+  return `${err}
     ${S.view === 'loading' ? '<p class="small" role="status">Loading your ballot...</p>' : ''}
     ${S.loadErr ? `<p class="zip-err" role="alert">${esc(S.loadErr)}</p>${retryHTML()}` : ''}
     ${after}
-    ${addr}
-    <hr class="door-rule">
-    ${creditsHTML()}
-  </header>`;
+    ${addr}`;
 }
 
 /* The small print, one paragraph: how many cities, each one a tap away (the list opens below), a
@@ -138,8 +157,8 @@ function browseHTML(): string {
   const idx = S.index!;
   const states = Object.entries(idx.states).sort((a, b) => a[1].name.localeCompare(b[1].name));
   return `<ul class="browse-list">${states.map(([st, s]) => `<li><b>${esc(s.name)}</b>
-      ${s.places.map((id) => `<button class="linkbtn" data-act="choose-place" data-ids="${esc(id)}">${esc(idx.places[id].label)}</button>`).join('')}
-      <button class="linkbtn" data-act="choose-state" data-st="${esc(st)}">${s.places.length ? 'Elsewhere in the state: statewide races only' : 'Statewide races'}</button></li>`).join('')}</ul>`;
+      ${s.places.map((id) => `<button class="linkbtn" data-act="choose-place" data-from="browse" data-ids="${esc(id)}">${esc(idx.places[id].label)}</button>`).join('')}
+      <button class="linkbtn" data-act="choose-state" data-from="browse" data-st="${esc(st)}">${s.places.length ? 'Elsewhere in the state: statewide races only' : 'Statewide races'}</button></li>`).join('')}</ul>`;
 }
 
 /* "Welcome back", above the plan on a returning visitor's started ballot (app.ts offerResume):

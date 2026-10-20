@@ -16,8 +16,8 @@ import { readerHTML } from './views/reader';
 
 export type Region = 'mast' | 'restore' | 'plan' | 'ballot' | 'cheat' | 'pass' | 'trust' | 'bar' | 'sheet' | 'print';
 export const ALL: Region[] = ['mast', 'restore', 'plan', 'ballot', 'cheat', 'pass', 'trust', 'bar', 'sheet'];
-/* The ballot's regions paint only once the ballot is showing: during step 2 (S.view 'setup') the
-   ballot is loaded for its counts, and only the first page shows. */
+/* The ballot's regions paint only once the ballot is showing: on the first page (S.view 'setup')
+   the ballot is loaded for its place line and counts, and only the first page shows. */
 const shown = (): boolean => !!S.ballot && S.view === 'ballot';
 const html: Record<Region, () => string> = {
   mast: mastHTML,
@@ -76,11 +76,34 @@ export function anchored(fn: () => void, anchorId?: string): void {
   if (Math.abs(d) > 1) window.scrollBy(0, d);
 }
 
+/* The first page, repainted in parts: everything marked data-part is replaced and the ZIP box is
+   left alone, so typing never loses its caret or the phone's keyboard. False when the first page
+   isn't up yet (or is leaving), and the region paints whole. */
+function patchDoor(el: HTMLElement): boolean {
+  if (S.view === 'ballot') return false;
+  const zip = el.querySelector<HTMLInputElement>('.front #zip');
+  if (!zip) return false;
+  const t = document.createElement('template');
+  t.innerHTML = mastHTML();
+  const parts = t.content.querySelectorAll<HTMLElement>('[data-part]');
+  if (!t.content.querySelector('#zip') || !parts.length) return false;
+  const typed = (el.querySelector('#addr-in') as HTMLInputElement | null)?.value || '';
+  // A part that hasn't changed stays as it is (the place line is a live region: no repeats).
+  parts.forEach((p) => { const cur = el.querySelector(`[data-part="${p.dataset.part}"]`); if (cur && cur.outerHTML !== p.outerHTML) cur.replaceWith(p); });
+  const addr = el.querySelector('#addr-in') as HTMLInputElement | null;
+  if (addr && typed && !addr.value) addr.value = typed;
+  if (zip.value !== S.zip) zip.value = S.zip;
+  if (S.zipErr) { zip.setAttribute('aria-describedby', 'zip-err'); zip.setAttribute('aria-invalid', 'true'); }
+  else { zip.removeAttribute('aria-describedby'); zip.removeAttribute('aria-invalid'); }
+  return true;
+}
+
 export function render(regions: Region[] = ALL): void {
   withFocusKept(() => {
     for (const r of regions) {
       const el = $(`#r-${r}`);
       if (!el) continue;
+      if (r === 'mast' && patchDoor(el)) continue;
       el.innerHTML = html[r]();
     }
     document.body.classList.toggle('has-bar', shown());
@@ -163,7 +186,7 @@ export function renderAddr(): void {
 /* The parts that summarize the whole ballot: the bar (and its menu), then the ballot head. */
 let lazyTimer: number | undefined;
 export function renderSummaries(): void {
-  if (S.view === 'setup') { render(['mast']); return; }
+  if (S.view !== 'ballot') { render(['mast']); return; }
   render(['bar']);
   if (S.ui.sheet === 'toc') render(['sheet']);
   window.clearTimeout(lazyTimer);
@@ -176,12 +199,12 @@ export function renderSummaries(): void {
     });
   }, 60);
 }
-/* Whose picks you see changed. Step 2's chips live in the first page's masthead. While a sheet is
+/* Whose picks you see changed. The first page's chips live in its masthead. While a sheet is
    open (the Edit sheet, all sources, a party) only the sheet repaints: the ballot behind it follows
    when the sheet closes (flushLens), so a chip tap stays quick on a 200-row ballot. */
 let lensDirty = false;
 export function renderLens(): void {
-  if (S.view === 'setup') { render(['mast']); return; }
+  if (S.view !== 'ballot') { render(['mast']); return; }
   if (S.ui.sheet) { render(['sheet']); lensDirty = true; return; }
   anchored(() => render(['ballot', 'bar']));
 }

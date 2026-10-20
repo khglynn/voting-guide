@@ -29,18 +29,16 @@ async function open(b, query = '') {
   const page = await ctx.newPage();
   await page.addInitScript(PRESS);
   await page.goto(`${BASE}/?today=${TODAY}${query}`);
+  await page.waitForSelector('#zip');
   await page.fill('#zip', b.zip);
-  await page.locator('button[type=submit]').click();
   if (b.choose) await page.locator(`[data-act="choose-place"][data-ids="${b.choose}"]`).click();
-  // A fresh device opens on step 2 first: shoot it once per ballot, then "Show my ballot".
-  await page.waitForSelector('#plan, [data-act="setup-done"]', { timeout: 15000 });
-  if (await page.$('[data-act="setup-done"]')) {
-    if (!query) {
-      await page.evaluate(() => Promise.race([document.fonts.ready, new Promise((r) => setTimeout(r, 3000))]));
-      await shot(page, `${b.name}-0-step-2`);
-    }
-    await page.locator('[data-act="setup-done"]').click();
+  // The first page, steps 1 and 2 with the place found: shoot it once per ballot, then "Show my ballot".
+  await page.waitForSelector('.door-place', { timeout: 15000 });
+  if (!query) {
+    await page.evaluate(() => Promise.race([document.fonts.ready, new Promise((r) => setTimeout(r, 3000))]));
+    await shot(page, `${b.name}-0-steps-1-2`);
   }
+  await page.locator('[data-act="setup-done"]').click();
   await page.waitForSelector('#plan', { timeout: 15000 });
   await page.evaluate(() => Promise.race([document.fonts.ready, new Promise((r) => setTimeout(r, 3000))]));
   await page.waitForTimeout(200);

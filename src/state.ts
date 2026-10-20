@@ -1,6 +1,7 @@
 /* App state, saved state and the save-my-picks link. */
 import type { Index } from './types';
 import type { Ballot } from './ballot';
+import type { ChipKey } from './model/lens';
 import { load, save, hash, b64urlEncode, b64urlDecode } from './util';
 
 export interface Prefs {
@@ -65,13 +66,22 @@ export interface UI {
    instead of quietly calling them "your" picks. */
 export interface Pending { kind: 'restore' | 'shared'; key: string; incoming: BallotState; summary: string }
 
+/* The first page's step 2 as chosen so far: the chips, a party, and the two switches. In memory
+   only. Before a ZIP they are all there is; once a ballot this device has nothing for loads, they
+   become its sources and party (app.ts applyDoor), and the switches apply on "Show my ballot". */
+export interface Door { chips: Record<ChipKey, boolean>; party: string | null; fill: boolean; only: boolean }
+
 export const S = {
   index: null as Index | null,
-  /* setup: step 2 on the first page, with the ballot loaded but not shown and nothing saved yet. */
+  /* The first page shows for start, loading and setup. setup: a ballot is loaded for the first page's
+     place line and counts, not shown, and nothing is saved until "Show my ballot". */
   view: 'start' as 'start' | 'loading' | 'setup' | 'ballot',
   zip: '',
   zipErr: '' as string,
   zipChoice: null as null | { zip: string; placeIds: string[] },
+  /* The place question just answered (its ZIP and places), so the place line's Change can ask again. */
+  picked: null as null | { zip: string; placeIds: string[] },
+  door: { chips: { papers: true, progressive: false, conservative: false }, party: null, fill: false, only: false } as Door,
   coverage: null as null | { kind: 'not_covered'; state: string | null; zip: string },
   ballot: null as Ballot | null,
   b: emptyBallotState(),
@@ -106,9 +116,9 @@ export function savedBallot(key: string): BallotState | null {
 let saveTimer: number | undefined;
 export function persist(now = false): void {
   if (S.tryMode) return; // a "try as" scenario never touches the real saved picks
-  // Step 2 saves nothing: someone who leaves before "Show my ballot" finds the first page again.
+  // The first page saves nothing: someone who leaves before "Show my ballot" finds it again.
   const run = () => {
-    if (S.view === 'setup') return;
+    if (S.view !== 'ballot') return;
     const s = readSaved();
     s.prefs = S.prefs;
     if (S.ballot) {

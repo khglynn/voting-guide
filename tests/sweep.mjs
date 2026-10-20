@@ -407,18 +407,18 @@ async function open(browser, ballot, R) {
     page.on('response', (r) => { if (r.url().startsWith(ORIGIN) && r.status() >= 400) page.errs.push(`HTTP ${r.status()}: ${r.url()}`); });
     await page.goto(`${BASE}/?today=${TODAY}`, { waitUntil: 'domcontentloaded' });
     await page.waitForSelector('#zip');
-    if (ballot.combo) { // a multi-place ZIP only exists behind the ZIP box
+    if (ballot.combo) { // a multi-place ZIP only exists behind the ZIP box: it asks as soon as it's typed
       await page.fill('#zip', ballot.zip);
-      await page.locator('button[type=submit]').click();
       await page.locator(`[data-act="choose-place"][data-ids="${ballot.placeIds.join('+')}"]`).click();
     } else {
       await page.locator('[data-fk="browse"]').click(); // "Covers N cities": the list of places
       const sel = ballot.placeIds.length ? `[data-act="choose-place"][data-ids="${ballot.placeIds.join('+')}"]` : `[data-act="choose-state"][data-st="${ballot.st}"]`;
       await page.locator(sel).first().click();
     }
-    // A fresh device opens on step 2 first; "Show my ballot" with both switches off shows the ballot as is.
-    await page.waitForSelector('#plan, [data-act="setup-done"]', { timeout: 20000 });
-    if (await page.$('[data-act="setup-done"]')) await page.locator('[data-act="setup-done"]').click();
+    // The first page names the place under the ZIP box; "Show my ballot" with both switches off
+    // shows the ballot as is.
+    await page.waitForSelector('.door-place', { timeout: 20000 });
+    await page.locator('[data-act="setup-done"]').click();
     await page.waitForSelector('#plan', { timeout: 20000 });
     await page.evaluate(() => Promise.race([document.fonts.ready, new Promise((r) => setTimeout(r, 4000))])); // real font metrics, but never wait long
     await page.waitForTimeout(150);

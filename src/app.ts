@@ -3,14 +3,14 @@
    "try as" scenarios. */
 import type { Index, PlaceBundle, StateBundle, Contest } from './types';
 import { S, emptyBallotState, persist, forgetLast, savedBallot, parseShareHead, decodeShare, normalizeRanks, type BallotState, type View } from './state';
-import { buildBallot, contestDistrict, entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, rankMax, decisionItems } from './ballot';
+import { buildBallot, contestDistrict, entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, rankMax, decisionItems, chosenIds, type Ballot } from './ballot';
 import { zipState, censusLookup, placeFromGeo, settleAddress, withPlace, type GeoResult } from './geo';
 import { toast, hideToast, plural } from './util';
 import { render, renderBallot, renderAddr, anchored, $ } from './render';
 import { setInvolved, type GetInvolved } from './views/pass';
 import { addressCount } from './views/ledger';
-import { planAgree, applyFills, planParty, forgetUndo } from './model/bulk';
-import { partiesOnBallot, toggleChip } from './model/lens';
+import { planAgree, applyFills, planParty, planSetup, forgetUndo } from './model/bulk';
+import { partiesOnBallot, toggleChip, setSources, setParty, chipMembers, chipState, CHIPS } from './model/lens';
 
 /* ---------- data ---------- */
 const BASE = import.meta.env.BASE_URL || '/';
@@ -71,14 +71,18 @@ export function openReader(id: string, push = true): void {
    so does "Change". Picks already saved stay saved; the guide just stops reopening that ballot. */
 export function toDoor(): void {
   if (S.view === 'ballot') persist(true);
+  if (S.view === 'ballot' && S.b.zip) S.zip = S.b.zip;
   forgetLast();
-  S.view = 'start'; S.ballot = null; S.zipChoice = null; S.coverage = null; S.pending = null; S.loadErr = null; S.retry = null;
+  cancelLoad();
+  S.view = 'start'; S.ballot = null; S.zipChoice = null; S.picked = null; S.coverage = null; S.pending = null; S.loadErr = null; S.retry = null; S.zipErr = '';
   S.ui.view = 'ballot'; S.ui.reader = null; S.ui.sheet = null; S.ui.sheetBack = null; S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.addrFail = ''; S.ui.resume = false;
   forgetUndo();
   hideToast();
   render();
   window.scrollTo(0, 0);
   $('#zip')?.focus({ preventScroll: true });
+  // The ZIP still in the box finds its place again (from the cache): the place line and the counts.
+  if (/^\d{5}$/.test(S.zip)) void lookZip(S.zip);
 }
 /* Leaving the first page for a ballot (a ZIP, a place picked, an address): the entry we leave
    becomes the first page, so the phone's Back button returns to it instead of leaving the site. */
@@ -106,25 +110,54 @@ window.addEventListener('popstate', (e) => {
    place is picked, so its districts come along. */
 let chooserGeo: { zip: string; r: GeoResult } | null = null;
 const countPicks = (b: BallotState): number => Object.keys(b.picks).length + Object.keys(b.ranks || {}).filter((k) => !(k in b.picks)).length;
-/* Step 2 ("Pick by endorsements or party") is for a ballot this device has nothing for yet: no
-   picks, the default sources, no party, and step 2 never finished. Save links, ballots with picks
-   and "try as" go straight to the ballot. */
+/* A ballot this device has nothing for yet: no picks, the default sources, no party, and the first
+   page never finished. The first page's choices become its sources and party. */
 const needsSetup = (b: BallotState | null): boolean => !b || (!b.setupDone && countPicks(b) === 0 && b.sources === null && b.party === null);
-/* Resolves true once the ballot (or its step 2) is open, false when it couldn't load (the start
-   view then shows why, with "Try again"). `door`: opened from the first page, so Back returns there.
-   `noSetup`: the voter is already on a ballot (an address narrowing "Aurora or Denver" to Aurora),
-   so step 2 would only interrupt. `after`: what to do once it's open (an address's districts), on
-   the first try or on "Try again". */
+/* The first page's chips and party, onto a ballot that has nothing yet: each chip on or off as
+   chosen (a group with no picks here stays out, as its chip does), then the party if it is on
+   this ballot. A party it doesn't have just drops out. */
+function applyDoor(b: Ballot): void {
+  let ids = chosenIds();
+  for (const c of CHIPS) {
+    if (c.key !== 'papers' && chipState(b, c.key) === 'empty') continue;
+    const members = chipMembers(b, c.key).map((e) => e.id);
+    ids = S.door.chips[c.key] ? [...ids, ...members] : ids.filter((id) => !members.includes(id));
+  }
+  setSources(b, ids);
+  const p = S.door.party;
+  if (p && partiesOnBallot(b).some((x) => x.party === p)) setParty(b, p);
+}
+/* Loads race: a ZIP typed again, or cleared, while the last one was still loading. Only the newest
+   load lands; `previewing` is the one the first page waits on when "Show my ballot" comes early. */
+let loadSeq = 0;
+let previewing: Promise<boolean> | null = null;
+let lookingUp: string | null = null; // the ZIP lookZip is loading, so the same ZIP again doesn't start over
+export function cancelLoad(): void { loadSeq++; previewing = null; lookingUp = null; }
+/* Resolves true once the ballot is open (on the first page or shown), false when it couldn't load
+   (the first page then shows why, with "Try again") or a newer load took over.
+   `door`: for the first page. The ballot loads for the place line and step 2's counts and isn't
+   shown until "Show my ballot". A ballot this device has nothing for takes the first page's choices;
+   one it has keeps its own. Reopening a ballot from boot that has nothing yet goes there too.
+   `noSetup`: the voter is already on a ballot (an address narrowing "Aurora or Denver" to Aurora).
+   `after`: what to do once it's open (an address's districts), on the first try or on "Try again". */
 type OpenOpts = { share?: ReturnType<typeof parseShareHead>; door?: boolean; noSetup?: boolean; after?: () => void };
-export async function openBallot(st: string, placeIds: string[], zip: string, opts: OpenOpts = {}): Promise<boolean> {
+export function openBallot(st: string, placeIds: string[], zip: string, opts: OpenOpts = {}): Promise<boolean> {
+  const p = loadBallot(st, placeIds, zip, opts);
+  previewing = p;
+  return p;
+}
+async function loadBallot(st: string, placeIds: string[], zip: string, opts: OpenOpts): Promise<boolean> {
+  const seq = ++loadSeq;
   if (S.ballot && S.view === 'ballot') persist(true); // a pick made just now lands on its own ballot
   S.view = 'loading';
   S.loadErr = null;
   S.retry = null;
+  if (opts.door) { S.zip = zip; S.zipErr = ''; S.zipChoice = null; S.coverage = null; }
   render(['mast']);
   try {
     await ensureIndex();
     const [sb, ...pbs] = await Promise.all([getJSON<StateBundle>(`state-${st}.json`), ...placeIds.map((id) => getJSON<PlaceBundle>(`place-${id}.json`))]);
+    if (seq !== loadSeq) return false;
     const ballot = buildBallot(sb, pbs);
     S.ballot = ballot;
     forgetUndo();
@@ -157,23 +190,23 @@ export async function openBallot(st: string, placeIds: string[], zip: string, op
       try { history.replaceState(null, '', location.pathname + location.search); } catch { /* ignore */ }
     }
     if (S.tryMode) applyScenario(S.tryMode);
-    const setup = !opts.share && !opts.noSetup && !S.tryMode && needsSetup(existing);
-    S.view = setup ? 'setup' : 'ballot';
+    const door = !opts.share && !opts.noSetup && (!!opts.door || (!S.tryMode && needsSetup(existing)));
+    if (door && !S.tryMode && needsSetup(existing)) applyDoor(ballot);
+    if (door) S.zip = zip;
+    S.view = door ? 'setup' : 'ballot';
     S.zipChoice = null;
     S.coverage = null;
     resetUI();
-    if (setup) { S.ui.setupFill = false; S.ui.setupOnly = false; S.ui.open.delete('su-party'); }
-    else S.b.setupDone = true; // a ballot this device has shown never asks step 2 again
-    if (opts.door) leftDoor();
+    if (!door) S.b.setupDone = true; // a ballot this device has shown never goes back to the first page on its own
     render();
-    persist(true); // saves nothing during step 2
-    window.scrollTo(0, 0);
+    persist(true); // saves nothing on the first page
+    if (!door) window.scrollTo(0, 0);
     if (S.pending) $('[data-fk="restore-yes"]')?.focus();
-    if (setup) $('[data-fk="su-h"]')?.focus({ preventScroll: true });
     // What the caller does next (an address's districts) can't turn a loaded ballot into a load error.
     if (opts.after) { try { opts.after(); } catch (e) { console.error(e); } }
     return true;
   } catch (e) {
+    if (seq !== loadSeq) return false;
     console.warn('Could not load ballot', e);
     S.view = 'start';
     S.ballot = null;
@@ -186,26 +219,88 @@ export async function openBallot(st: string, placeIds: string[], zip: string, op
   }
 }
 
-export async function submitZip(raw: string): Promise<void> {
-  const v = String(raw || '').replace(/\D/g, '');
-  if (S.view === 'setup') { S.ballot = null; S.view = 'start'; }
+/* ---------- the first page: steps 1 and 2 together ---------- */
+/* What a complete ZIP finds, as soon as it's typed: its ballot, loaded for the place line and
+   step 2's counts (from the cache when it's been opened before); the place question when it covers
+   several places; or why not (an unknown ZIP, one we don't cover). Nothing is shown or saved. */
+export async function lookZip(v: string): Promise<void> {
+  if (S.view === 'setup' && S.ballot && S.b.zip === v) return; // already showing this ZIP's place
+  if ((S.zipChoice && S.zipChoice.zip === v) || (S.coverage && S.coverage.zip === v)) return;
+  if (S.view === 'loading' && lookingUp === v) return;
+  cancelLoad();
+  lookingUp = v;
   chooserGeo = null;
-  S.zip = v; S.zipErr = ''; S.zipChoice = null; S.coverage = null; S.loadErr = null; S.retry = null;
-  if (v.length !== 5) { S.zipErr = 'Enter all 5 digits, like 80205.'; render(['mast']); $('#zip')?.focus(); return; }
+  S.view = 'start'; S.ballot = null;
+  S.zip = v; S.zipErr = ''; S.zipChoice = null; S.picked = null; S.coverage = null; S.loadErr = null; S.retry = null;
   let idx: Index;
   try { idx = await ensureIndex(); } catch {
     S.loadErr = 'We couldn’t reach the guide’s data. Check your connection.';
-    S.retry = () => { void submitZip(v); };
+    S.retry = () => { void lookZip(v); };
     render(['mast']); return;
   }
+  if (S.zip !== v) return; // typed on meanwhile
   const places = idx.zips[v] || [];
   if (places.length === 1) { await openBallot(idx.places[places[0]].state, places, v, { door: true }); return; }
-  if (places.length > 1) { S.zipChoice = { zip: v, placeIds: places }; S.ui.addrOpen = false; render(['mast']); $(`[data-fk="cp-${CSS.escape(places[0])}"]`)?.focus(); return; }
+  if (places.length > 1) { S.zipChoice = { zip: v, placeIds: places }; S.ui.addrOpen = false; render(['mast']); return; }
   const st = zipState(v);
   if (st && idx.states[st]) { await openBallot(st, [], v, { door: true }); return; }
-  if (!st) { S.zipErr = 'We couldn’t find that ZIP. Check the digits and try again.'; render(['mast']); $('#zip')?.focus(); return; }
+  if (!st) { S.zipErr = 'We couldn’t find that ZIP. Check the digits and try again.'; render(['mast']); return; }
   S.coverage = { kind: 'not_covered', state: st, zip: v };
   render(['mast']);
+}
+/* The ZIP box changed. Five digits look the ZIP up; anything less takes back what the last ZIP
+   found (its place, its counts, a message about it), so the page never names a place for a ZIP
+   that isn't in the box. */
+export function zipTyped(v: string): void {
+  if (v.length === 5) { void lookZip(v); return; }
+  if (S.view === 'start' && !S.zipChoice && !S.coverage && !S.zipErr && !S.loadErr) return;
+  cancelLoad();
+  chooserGeo = null;
+  S.view = 'start'; S.ballot = null;
+  S.zipErr = ''; S.zipChoice = null; S.picked = null; S.coverage = null; S.loadErr = null; S.retry = null;
+  render(['mast']);
+}
+/* After a place is picked on the first page (the place question, the list of cities, an address):
+   the place line comes into view and focus moves on to step 2. */
+function doorFocus(): void {
+  if (S.view !== 'setup') return;
+  const line = $('.door-place');
+  if (line && line.getBoundingClientRect().top < 0) line.scrollIntoView({ block: 'start' });
+  $('[data-fk="su-h"]')?.focus({ preventScroll: true });
+}
+/* "Show my ballot", and Enter in the ZIP box. With the ballot found: one batch of fills (the
+   party's candidates, then where your sources agree), so one Undo takes it all back; the "Hide
+   races I've decided" filter when something is left; then the ballot, saved for the first time,
+   with the first page one Back away. Before that, it finishes what the ZIP box started: waits for a
+   load, looks up a complete ZIP, or says what's missing. */
+export async function showBallot(): Promise<{ n: number; plan: ReturnType<typeof planSetup> } | null> {
+  if (S.view === 'ballot') return null;
+  if (S.view === 'start' && !S.zipChoice && !S.coverage && !S.retry) {
+    if (!/^\d{5}$/.test(S.zip)) { S.zipErr = 'Enter all 5 digits, like 80205.'; render(['mast']); $('#zip')?.focus(); return null; }
+    await lookZip(S.zip);
+  }
+  if (S.view === 'loading' && previewing) await previewing;
+  if (S.view !== 'setup' || !S.ballot) {
+    // The place question still needs an answer, or the ZIP box has something to fix.
+    const first = S.zipChoice ? $('.choose [data-act="choose-place"]') : null;
+    if (first) first.focus(); else if (S.retry) $('[data-fk="retry"]')?.focus(); else $('#zip')?.focus();
+    return null;
+  }
+  const plan = S.door.fill && !S.tryMode ? planSetup(S.b.party) : null;
+  const n = plan && plan.fills.length ? applyFills(plan.fills) : 0;
+  // A fill runs once: back on the first page later, the switch is off, so it can't refill races
+  // you've since cleared.
+  if (plan) S.door.fill = false;
+  S.ui.onlyUndecided = S.door.only && !S.tryMode && decisionItems().some((i) => !i.done);
+  S.ui.row = null; S.ui.keep = null;
+  S.ui.bulk = n ? String(n) : null;
+  S.b.setupDone = true;
+  S.view = 'ballot';
+  leftDoor();
+  render();
+  persist(true);
+  window.scrollTo(0, 0);
+  return plan && n ? { n, plan } : null;
 }
 
 /* "Welcome back. You've decided 12 of 43.": a returning visitor's started ballot, reopened from this
@@ -235,7 +330,22 @@ export async function openChosen(ids: string[], zip: string): Promise<void> {
   const g = chooserGeo && chooserGeo.zip === zip ? chooserGeo.r : null;
   chooserGeo = null;
   const st = S.index!.places[ids[0]].state;
-  await openBallot(st, ids, zip, { door: true, after: g && g.state === st ? () => applyGeo(g) : undefined });
+  const asked = S.zipChoice && S.zipChoice.zip === zip ? S.zipChoice : null;
+  if (await openBallot(st, ids, zip, { door: true, after: g && g.state === st ? () => applyGeo(g) : undefined })) {
+    S.picked = asked;
+    if (asked) render(['mast']);
+    doorFocus();
+  }
+}
+/* "Change" on a place picked from the place question: ask it again. */
+export function rechoose(): void {
+  const p = S.picked;
+  if (!p) return;
+  cancelLoad();
+  S.view = 'start'; S.ballot = null; S.picked = null;
+  S.zip = p.zip; S.zipChoice = p;
+  render(['mast']);
+  $(`[data-fk="cp-${CSS.escape(p.placeIds[0])}"]`)?.focus();
 }
 /* A lookup that went wrong: one line, and what to do next. `down`: the Census didn't answer, so
    "Try again"; `miss`: it answered with nothing we can use. On a ballot, either way, "Pick them
@@ -245,7 +355,6 @@ function addrFailed(msg: string, fail: 'down' | 'miss'): void {
   renderAddr();
 }
 export async function runAddress(addr: string): Promise<void> {
-  if (S.view === 'setup' || S.view === 'loading') return;
   const choosing = S.view !== 'ballot' && S.zipChoice;
   const b = S.view === 'ballot' ? S.ballot : null;
   const door = !b && !choosing;
@@ -274,15 +383,23 @@ export async function runAddress(addr: string): Promise<void> {
     if (hit.kind === 'none') { S.ui.addrMsg = 'We couldn’t tell which place that is. Try your ZIP.'; renderAddr(); return; }
     S.ui.addrOpen = false; S.ui.addrMsg = null; S.zipErr = '';
     if (hit.zip) S.zip = hit.zip;
-    if (hit.kind === 'out') { S.coverage = { kind: 'not_covered', state: hit.st, zip: hit.zip }; render(['mast']); return; }
+    if (hit.kind === 'out') {
+      cancelLoad();
+      S.view = 'start'; S.ballot = null; S.picked = null; S.zipChoice = null;
+      S.coverage = { kind: 'not_covered', state: hit.st, zip: hit.zip };
+      render(['mast']);
+      return;
+    }
     if (hit.kind === 'choose') {
+      cancelLoad();
+      S.view = 'start'; S.ballot = null; S.picked = null;
       chooserGeo = { zip: hit.zip, r };
       S.zipChoice = { zip: hit.zip, placeIds: hit.ids };
       render(['mast']);
       $(`[data-fk="cp-${CSS.escape(hit.ids[0])}"]`)?.focus();
       return;
     }
-    await openBallot(hit.st, hit.ids, hit.zip, { door: true, after: () => applyGeo(geo) });
+    if (await openBallot(hit.st, hit.ids, hit.zip, { door: true, after: () => applyGeo(geo) })) doorFocus();
     return;
   }
   if (choosing && S.zipChoice) {
@@ -297,8 +414,9 @@ export async function runAddress(addr: string): Promise<void> {
       renderAddr(); return;
     }
     const zip = S.zipChoice.zip;
+    const asked = S.zipChoice;
     S.ui.addrOpen = false;
-    await openBallot(idx.places[hit].state, [hit], zip, { door: true, after: () => applyGeo(geo) });
+    if (await openBallot(idx.places[hit].state, [hit], zip, { door: true, after: () => applyGeo(geo) })) { S.picked = asked; render(['mast']); doorFocus(); }
     return;
   }
   if (!b) return;

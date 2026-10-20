@@ -212,7 +212,8 @@ function foldSummary(entries: Entry[]): string {
     const v = verdict(it);
     if (v.kind === 'mine') bits.push(v.main);
   }
-  if (keep || remove) bits.unshift([keep ? `Keep ${keep}` : '', remove ? `remove ${remove}` : ''].filter(Boolean).join(', '));
+  // The summary starts with a capital: "Keep 2, remove 1", or "Remove 1" when nothing is kept.
+  if (keep || remove) bits.unshift([keep ? `Keep ${keep}` : '', remove ? `${keep ? 'remove' : 'Remove'} ${remove}` : ''].filter(Boolean).join(', '));
   return bits.join(', ');
 }
 

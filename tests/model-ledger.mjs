@@ -463,6 +463,20 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     }
   }
 
+  /* ---------- a folded section's summary starts with a capital (Orlando walk, Oct 20) ---------- */
+  {
+    const b = open('FL', ['orlando-fl']);
+    S.ui.view = 'ballot'; S.ui.row = null; S.ui.keep = null; S.ui.unfolded = new Set(); S.ui.folded = new Set(); S.ui.onlyUndecided = false;
+    S.b.picks['fl-retention-muniz'] = 'NO';
+    S.b.picks['fl-9th-circuit-group-1'] = b.byId.get('fl-9th-circuit-group-1').candidates[0].name;
+    const html = views.ledger.sectionHTML('judicial', bl.entriesBySection().get('judicial') || []);
+    const sub = ((html.match(/<span class="sec-sub">([^<]*)<\/span>/) || [])[1] || '').trim();
+    check('fold summary: "Remove 1, Hampton-Johnson", never "remove 1, ..."', /folded/.test(html) && /^Remove 1, /.test(sub), sub);
+    S.b.picks['fl-retention-muniz'] = 'YES';
+    const sub2 = ((views.ledger.sectionHTML('judicial', bl.entriesBySection().get('judicial') || []).match(/<span class="sec-sub">([^<]*)<\/span>/) || [])[1] || '').trim();
+    check('fold summary: "Keep 1, ..." still reads the same', /^Keep 1, /.test(sub2), sub2);
+  }
+
   /* ---------- the cheat sheet lists what the ballot shows, with the bar's count (walks, Oct 20) ----------
      Austin's sheet listed seven Round Rock, Pflugerville and Leander ISD seats the ballot folds
      away, listed six House picks as certain, and said "28 of 56" beside a bar's "28 of 50". */

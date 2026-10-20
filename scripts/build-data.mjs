@@ -427,6 +427,11 @@ for (const [id, vers] of endorserVersions) {
       paywall: vers.some((v) => v.rec.paywall === true) ? true : null,
       paywall_note_ok: vers.some((v) => v.rec.paywall === true) && newest.paywall_note_ok === false ? false : null,
       paywall_note: vers.some((v) => v.rec.paywall === true) ? str(newest.paywall_note) : null,
+      // The places in its own `geography` (across every file that defines it), when it names any:
+      // a regional source (the San Antonio Express-News, ["TX", "san-antonio-tx"]). The app reads
+      // "not checked yet" on a district race only from sources whose places include the ballot's,
+      // or that name none (statewide groups). Unknown place ids are dropped.
+      home_places: [...new Set(vers.flatMap((v) => (Array.isArray(v.rec.geography) ? v.rec.geography : [])).filter(isStr).map((g) => g.trim()).filter((g) => places.has(g)))].sort(),
     }),
   });
 }

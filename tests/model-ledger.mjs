@@ -98,6 +98,42 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     tally.clearLineups();
   }
 
+  /* ---------- "Not checked yet" only where a source speaks (data review, Oct 20) ----------
+     "Not checked yet: San Antonio Express-News" showed on 16 Austin district races (CD-37 and on):
+     its picks in the two districts Austin shares with San Antonio made it "cover" every one. */
+  {
+    const LOCAL = ['county', 'city', 'school', 'special_district'];
+    const district = (it) => it.kind === 'contest' && !it.every && !LOCAL.includes(it.level);
+    const au = open('TX', ['austin-tx']);
+    const en = au.eById.get('san-antonio-express-news-eb');
+    check('geography: the Express-News names San Antonio as its home', !!en && JSON.stringify(en.home_places) === '["san-antonio-tx"]', en && JSON.stringify(en.home_places));
+    const outside = [];
+    let regional = 0;
+    for (const pid of Object.keys(INDEX.places)) {
+      const b = open(INDEX.places[pid].state, [pid]);
+      S.b.sources = b.endorsers.map((e) => e.id);
+      tally.clearLineups();
+      for (const it of b.items) {
+        if (!district(it)) continue;
+        const l = tally.lineup(it);
+        for (const e of [...l.notChecked, ...l.paywalled]) {
+          if (!e.home_places) continue;
+          regional++;
+          if (!e.home_places.includes(pid)) outside.push(`${pid} ${it.id}: ${e.short}`);
+        }
+      }
+    }
+    check('geography: a regional source reads "Not checked yet" on district races at home', regional > 0, String(regional));
+    check('geography: and never on another place\'s district races', outside.length === 0, `${outside.length}: ${outside.slice(0, 3).join(' | ')}`);
+    // Statewide groups, which name no place, still cover every district in their state.
+    const a2 = open('TX', ['austin-tx']);
+    S.b.sources = ['equality-texas'];
+    tally.clearLineups();
+    check('geography: a statewide group (Equality Texas) still reads "Not checked yet" on an Austin district it has no row on', tally.lineup(a2.byId.get('tx-us-house-37')).notChecked.some((e) => e.id === 'equality-texas'));
+    S.b.sources = null;
+    tally.clearLineups();
+  }
+
   /* ---------- no shouting: "A NO vote means" reads like "A yes vote" (Austin walk, Oct 20) ---------- */
   {
     const d = common.deshout;

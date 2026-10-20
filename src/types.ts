@@ -133,6 +133,9 @@ export interface Endorser {
   paywall_note_ok?: false;
   /* This source's own wording for the note, when the data gives one; otherwise the app's. */
   paywall_note?: string;
+  /* The place ids in the source's own geography, when it names any (a regional paper). Absent for
+     a statewide source. "Not checked yet" on a district race needs the ballot's place in here. */
+  home_places?: string[];
 }
 
 export interface Endorsement {

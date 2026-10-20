@@ -25,7 +25,14 @@ export interface Lineup {
 /* Does a source cover this item's area? It has a row on some item of the same kind here
    (statewide races, statewide judges, statewide measures, or local items at the same level).
    Without this, a Boulder paper with one row on a shared rail measure would read as
-   "not checked" on every Lakewood race. */
+   "not checked" on every Lakewood race.
+   A district race (a U.S. House, legislative, state board or appeals-court district) also needs
+   the source's own geography to include this ballot's place, when the source names places at all.
+   Without this, the San Antonio Express-News, with picks in the two districts Austin shares with
+   San Antonio, read "not checked yet" on every other Austin district. Statewide groups, which
+   name no place, still cover every district in their state. */
+const LOCAL_LEVELS = new Set(['county', 'city', 'school', 'special_district']);
+const districtRace = (it: Item): boolean => it.kind === 'contest' && !it.every && !LOCAL_LEVELS.has(it.level);
 const areaCache = new WeakMap<Ballot, Map<string, Set<string>>>();
 const areaKey = (b: Ballot, it: Item): string => {
   const sw = b.statewide.has(it.id);
@@ -45,7 +52,9 @@ function covers(b: Ballot, e: Endorser, it: Item): boolean {
     }
     areaCache.set(b, m);
   }
-  return !!m.get(e.id)?.has(areaKey(b, it));
+  if (!m.get(e.id)?.has(areaKey(b, it))) return false;
+  const home = e.home_places;
+  return !districtRace(it) || !home || !home.length || b.places.some((p) => home.includes(p.id));
 }
 const makesKind = (e: Endorser, it: Item): boolean => (it.kind === 'measure' ? e.endorses_measures : e.endorses_candidates);
 const en = (b: Ballot, it: Item, e: Endorser): Endorsement | null => (b.ends[it.id] || {})[e.id] || null;

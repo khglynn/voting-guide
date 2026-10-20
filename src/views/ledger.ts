@@ -662,7 +662,7 @@ export function menuHTML(where: 'toc' | 'rail'): string {
   const row = (attrs: string, fk: string, label: string, right = '', cls = '') =>
     `<li><button class="nv${cls}" ${attrs} data-fk="${where}-${fk}"><span class="nv-t">${esc(label)}</span><span class="nv-n">${esc(right)}</span>${ARROW}</button></li>`;
   const secs = SECTIONS.map(([k]) => {
-    const entries = by.get(k) || [];
+    const entries = (by.get(k) || []).filter((e) => !offEntry(e)); // what the ballot draws (sectionHTML)
     if (!entries.length || !sectionShows(entries)) return '';
     const t = sectionTally(entries);
     return row(`data-act="jump" data-to="${k}"`, k, sectionTitle(k), !t.total ? '' : t.done === t.total ? 'Done' : `${t.total - t.done} left`);

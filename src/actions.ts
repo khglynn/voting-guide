@@ -16,7 +16,7 @@ import { courtGroup } from './model/labels';
 import { basisWords, LEANS } from './views/common';
 import { cheatText, shareURL } from './views/cheat';
 import { messages, shareData } from './views/pass';
-import { nextUp, sectionTally, sectionFolded, hiddenByOnly } from './views/ledger';
+import { nextUp, sectionTally, sectionFolded, hiddenByOnly, qId } from './views/ledger';
 
 export type Act = (d: DOMStringMap, el: HTMLElement) => void | Promise<void>;
 export const A: Record<string, Act> = {};
@@ -445,7 +445,7 @@ A.district = (d) => {
   renderSummaries();
   persist();
   if (one) scrollRowIntoView(d.v!);
-  else if (d.v === 'none') toast('Moved to “Not on your ballot” at the bottom.');
+  else if (d.v === 'none') { toast('Moved to “Not on your ballot” at the bottom.'); focusFk('off'); }
 };
 A['district-change'] = (d) => {
   const g = B().groups.find((x) => x.key === d.g)!;
@@ -467,6 +467,7 @@ A['district-change'] = (d) => {
   renderSummaries();
   persist();
   scrollRowIntoView(`q:${g.key}`);
+  focusFk(`row-${qId(g)}`); // its Change, or the bottom list's button, is gone: the question it asks again
 };
 A.notmine = (d) => {
   const b = B();
@@ -498,10 +499,14 @@ A['notmine-oth'] = () => {
 /* "It's on my ballot", from the "Not on your ballot" list: back in its section, where the page goes. */
 A['notmine-undo'] = (d) => {
   S.b.notMine = S.b.notMine.filter((x) => x !== d.id);
-  renderSection(sectionOf(B().byId.get(d.id!)!));
+  const sec = sectionOf(B().byId.get(d.id!)!);
+  // Back among the other school districts' races, their fold stays open so the race doesn't vanish.
+  if (sec === 'school') S.ui.unfolded.add(OTH_KEY);
+  renderSection(sec);
   renderSummaries();
   persist();
   scrollRowIntoView(d.id!);
+  focusFk(`row-${d.id}`);
 };
 
 /* ---------- the lens ----------

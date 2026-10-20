@@ -61,10 +61,17 @@ export function setFromAddress(b: Ballot, s: BallotState, r: Districts): string[
   const schoolsNamed: string[] = [];
   if (sds.size) {
     for (const g of b.groups) {
-      if (g.kind || s.districts[g.key]) continue;
+      if (g.kind) continue;
+      const byAddr = (s.addrSet || []).includes(g.key);
+      if (s.districts[g.key] && !byAddr) continue; // your own answer stands
       const each = g.members.map((id) => schoolOf(b.byId.get(id)!));
       const one = each[0];
-      if (!one || each.some((x) => !x || x.key !== one.key) || sds.has(one.key)) continue;
+      if (!one || each.some((x) => !x || x.key !== one.key)) continue;
+      if (sds.has(one.key)) {
+        // Yours after all (a second lookup, the first one the wrong address): the question comes back.
+        if (byAddr) { delete s.districts[g.key]; s.addrSet = (s.addrSet || []).filter((k) => k !== g.key); }
+        continue;
+      }
       s.districts[g.key] = 'none'; // a trustee question for a school district you're not in
       s.addrSet = [...(s.addrSet || []).filter((k) => k !== g.key), g.key];
     }

@@ -1545,6 +1545,20 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const ai = open('TX', ['austin-tx']);
     address.setFromAddress(ai, S.b, { cd: 37, upper: 14, lower: 49, schools: ['Austin Independent School District'] });
     check('school districts: in Austin ISD, its trustee question stays for the sample ballot; Del Valle’s answers "none"; the at-large seat stays', !S.b.districts['school|Austin ISD Trustee'] && S.b.districts['school|Del Valle ISD Trustee'] === 'none' && S.b.notMine.includes('tx-rrisd-trustee-3') && !S.b.notMine.includes('tx-aisd-at-large-9'), JSON.stringify(S.b.districts));
+    // Review, Oct 20: a second lookup (the first was the wrong address) brings back a trustee question the first answered "none".
+    const re = open('TX', ['austin-tx']);
+    address.setFromAddress(re, S.b, { cd: 37, upper: 14, lower: 49, schools: ['Round Rock Independent School District'] });
+    address.setFromAddress(re, S.b, { cd: 37, upper: 14, lower: 49, schools: ['Austin Independent School District'] });
+    check('school districts: a second lookup in Austin ISD brings its trustee question back; Round Rock’s seats go off', !S.b.districts['school|Austin ISD Trustee'] && !(S.b.addrSet || []).includes('school|Austin ISD Trustee') && S.b.notMine.includes('tx-rrisd-trustee-3') && !S.b.notMine.includes('tx-aisd-at-large-9'), JSON.stringify(S.b.districts));
+    S.b.districts['school|Del Valle ISD Trustee'] = 'tx-dvisd-trustee-3'; S.b.addrSet = (S.b.addrSet || []).filter((k) => k !== 'school|Del Valle ISD Trustee');
+    address.setFromAddress(re, S.b, { cd: 37, upper: 14, lower: 49, schools: ['Austin Independent School District'] });
+    check('school districts: an answer you gave yourself stands', S.b.districts['school|Del Valle ISD Trustee'] === 'tx-dvisd-trustee-3');
+    // The menu lists only the sections the ballot draws.
+    const hou = open('TX', ['houston-tx']);
+    address.setFromAddress(hou, S.b, { cd: 18, upper: 13, lower: 147, schools: ['Houston Independent School District'] });
+    const drawn = ledger.ballotHTML();
+    const menu = ledger.tocSheetHTML ? ledger.tocSheetHTML() : '';
+    check('menu: a section the ballot doesn’t draw isn’t in the menu', [...menu.matchAll(/data-to="([a-z_]+)"/g)].map((m) => m[1]).filter((k) => !['plan', 'how'].includes(k)).every((k) => drawn.includes(`id="sec-${k}"`)), [...menu.matchAll(/data-to="([a-z_]+)"/g)].map((m) => m[1]).join());
     const nos = open('TX', ['austin-tx']);
     address.setFromAddress(nos, S.b, { cd: 37, upper: 14, lower: 49 });
     check('school districts: a lookup with no school layer changes no school race', !S.b.mine.some((id) => /isd/.test(id)) && !S.b.notMine.some((id) => /isd/.test(id)) && !S.b.districts['school|Austin ISD Trustee']);

@@ -3,7 +3,7 @@
    "try as" scenarios. */
 import type { Index, PlaceBundle, StateBundle } from './types';
 import { S, emptyBallotState, noSections, persist, leaveLast, leftBallot, savedBallot, parseShareHead, decodeShare, normalizeRanks, type BallotState, type View } from './state';
-import { buildBallot, entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, rankMax, decisionItems, chosenIds, sectionOf, type Ballot } from './ballot';
+import { buildBallot, entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, rankMax, decisionItems, chosenIds, sectionOf, sameSeat, type Ballot } from './ballot';
 import { zipState, censusLookup, placeFromGeo, settleAddress, withPlace, tidyAddress, type GeoResult } from './geo';
 import { toast, hideToast } from './util';
 import { render, renderBallot, renderAddr, anchored, $ } from './render';
@@ -76,7 +76,8 @@ export function toDoor(): void {
   if (S.view === 'ballot') persist(true);
   if (S.view === 'ballot' && S.b.zip) S.zip = S.b.zip;
   leaveLast();
-  S.doorSaved = leftBallot();
+  // Counted the way the bar counts, while the ballot is still here (rankings count, hidden races don't).
+  S.doorSaved = leftBallot(S.view === 'ballot' && S.ballot ? decisionItems().filter((x) => x.done).length : undefined);
   cancelLoad();
   S.view = 'start'; S.ballot = null; S.zipChoice = null; S.picked = null; S.coverage = null; S.pending = null; S.loadErr = null; S.retry = null; S.zipErr = '';
   S.ui.view = 'ballot'; S.ui.reader = null; S.ui.sheet = null; S.ui.sheetBack = null; S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.addrFail = ''; S.ui.addrFound = null; S.ui.addrWhich = null; S.ui.resume = false;
@@ -130,6 +131,8 @@ const needsSetup = (b: BallotState | null): boolean => !b || (!b.setupDone && co
    chosen (a group with no picks here stays out, as its chip does), then the party if it is on
    this ballot. A party it doesn't have just drops out. */
 function applyDoor(b: Ballot): void {
+  // "Fill in my ballot with their picks" starts on for a new ballot (Kevin, Oct 20) unless you set it.
+  if (!S.door.fillSet) S.door.fill = true;
   if (doorNone()) { S.b.sources = []; S.b.party = null; return; } // "Don’t show endorsements"
   let ids = chosenIds();
   for (const c of CHIPS) {
@@ -146,6 +149,8 @@ function applyDoor(b: Ballot): void {
    of that kind made picks here) keeps what it was. */
 function doorFromBallot(b: Ballot): void {
   S.door.only = S.b.hideDecided;
+  // A ballot this device has shown starts with the fill off, so it can't refill races you cleared.
+  if (!S.door.fillSet) S.door.fill = false;
   if (noEndorsements()) { S.door.chips = { papers: false, progressive: false, conservative: false }; S.door.party = null; return; }
   for (const c of CHIPS) {
     const st = chipState(b, c.key);
@@ -191,6 +196,10 @@ async function loadBallot(st: string, placeIds: string[], zip: string, opts: Ope
     const reopened = existing ? normalizeRanks(ballot, existing) : 0;
     S.b = existing || emptyBallotState(zip);
     if (zip) S.b.zip = zip;
+    // Back on the first page after a reload, the saved line's count, now by the bar's rule.
+    if (S.doorSaved && S.doorSaved.key === ballot.key && !opts.share) {
+      S.doorSaved = { ...S.doorSaved, n: decisionItems().filter((x) => x.done).length };
+    }
     S.pending = null;
     if (reopened && !opts.share) toast(`${reopened === 1 ? 'A race you marked is' : `${reopened} races you marked are`} ranked choice now. Rank your picks there again.`);
     if (opts.share && !S.tryMode) {
@@ -336,8 +345,8 @@ export async function showBallot(): Promise<{ n: number; plan: ReturnType<typeof
   const plan = S.door.fill && !S.tryMode ? planSetup(S.b.party) : null;
   const n = plan && plan.fills.length ? applyFills(plan.fills) : 0;
   // A fill runs once: back on the first page later, the switch is off, so it can't refill races
-  // you've since cleared.
-  if (plan) S.door.fill = false;
+  // you've since cleared. A new ZIP's ballot starts with it on again.
+  if (plan) { S.door.fill = false; S.door.fillSet = false; }
   // Saved with the ballot, so a reload, a save link or a later visit on this device keeps it.
   S.b.hideDecided = S.door.only && !S.tryMode;
   S.ui.row = null; S.ui.keep = null;
@@ -531,6 +540,8 @@ export function applyGeo(r: GeoResult): void {
       ...Object.entries(S.b.districts).filter(([k, v]) => v !== was.districts[k] && v !== 'none' && v !== '*').map(([, v]) => v),
       ...(S.b.mine || []).filter((id) => !was.mine.includes(id)),
     ]);
+    // One answer can show two races (a Washington district's two House seats): both are new.
+    for (const id of [...added]) for (const g of b.groups) for (const m of g.members) if (sameSeat(b.byId.get(id), b.byId.get(m))) added.add(m);
     const plan = planSetup(S.b.party);
     const fills = plan.fills.filter((f) => added.has(f.id));
     const live = canUndo();
@@ -540,7 +551,10 @@ export function applyGeo(r: GeoResult): void {
       const from = p === n ? `with ${S.b.party} candidates` : p ? `from your party and your sources` : 'from your sources';
       S.ui.addrFilled = `Filled ${n === 1 ? (added.size === 1 ? 'it' : '1 of them') : n === added.size ? (n === 2 ? 'both' : `all ${n}`) : `${n} of them`} ${from}.`;
       S.ui.bulk = String((live && S.ui.bulk ? Number(S.ui.bulk) : 0) + n);
-      if (!live || (S.ui.bulkWhy || '').startsWith(':')) S.ui.bulkWhy = p ? null : ' from your sources'; // a party breakdown's counts no longer add up
+      // The head's line names your sources only when no party candidate is in its total: a party
+      // breakdown's counts no longer add up after this, and a party fill isn't your sources' pick.
+      const before = live ? S.ui.bulkWhy || '' : ' from your sources';
+      S.ui.bulkWhy = p || before !== ' from your sources' ? null : ' from your sources';
     }
   }
   S.ui.addrFound = tidyAddress(r.matched) || null;

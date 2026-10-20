@@ -47,11 +47,20 @@ async function openZip(page, zip, query = '') {
   await page.waitForSelector('#zip');
   await page.fill('#zip', zip);
 }
+/* The fill switch starts on for a new ballot (Kevin, Oct 20). Checks that aren't about the fill turn it
+   off first, so they see the ballot as it always was. */
+async function fillOff(page) {
+  if ((await page.getAttribute('#setup [data-act="setup-fill"]', 'aria-checked').catch(() => null)) === 'true') await tap(page, '#setup [data-act="setup-fill"]');
+}
 /* "Show my ballot", with both switches off, shows the ballot as it always was (it waits for the
    ZIP's lookup itself). A ballot already showing needs nothing. */
+async function plainSetup(page) {
+  await fillOff(page);
+  await tap(page, '[data-act="setup-done"]');
+}
 async function throughSetup(page) {
   await page.waitForSelector('#plan, [data-act="setup-done"]', { timeout: 15000 });
-  if (!(await page.$('#plan'))) await tap(page, '[data-act="setup-done"]');
+  if (!(await page.$('#plan'))) await plainSetup(page);
   await page.waitForSelector('#plan', { timeout: 15000 });
 }
 async function openBallot(page, zip, query = '') {
@@ -166,8 +175,8 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   const pressed = (k) => page.getAttribute(`#setup [data-act="chip"][data-k="${k}"]`, 'aria-pressed');
   check('First page: before a ZIP, Newspapers and guides is on, the groups off, no party, no counts', (await pressed('papers')) === 'true' && (await pressed('progressive')) === 'false' && (await pressed('conservative')) === 'false'
     && (await text(page, '#setup [data-fk="chip-party"]')) === 'A party' && !(await page.$('.su-cov')));
-  check('First page: the switches read "Fill in my ballot with their picks" and "Hide races I’ve decided", both off', (await text(page, '[data-act="setup-fill"] b')) === 'Fill in my ballot with their picks' && (await text(page, '[data-act="setup-only"] b')) === 'Hide races I’ve decided'
-    && (await page.getAttribute('[data-act="setup-fill"]', 'aria-checked')) === 'false' && (await page.getAttribute('[data-act="setup-only"]', 'aria-checked')) === 'false');
+  check('First page: the switches read "Fill in my ballot with their picks" (on to start) and "Hide races I’ve decided" (off)', (await text(page, '[data-act="setup-fill"] b')) === 'Fill in my ballot with their picks' && (await text(page, '[data-act="setup-only"] b')) === 'Hide races I’ve decided'
+    && (await page.getAttribute('[data-act="setup-fill"]', 'aria-checked')) === 'true' && (await page.getAttribute('[data-act="setup-only"]', 'aria-checked')) === 'false');
   check('First page: before a ZIP, the fill switch says what it does', (await text(page, '[data-act="setup-fill"] small')) === 'Fills the races where they agree. Races where picks split stay open.', await text(page, '[data-act="setup-fill"] small'));
   check('First page: "Use my address for a more exact ballot", on one line at phone width', (await text(page, '.front [data-act="addr-open"]')) === 'Use my address for a more exact ballot'
     && (await page.$eval('.front [data-act="addr-open"]', (e) => { const r = document.createRange(); r.selectNodeContents(e); return new Set([...r.getClientRects()].map((x) => Math.round(x.top))).size; })) === 1, await text(page, '.front [data-act="addr-open"]'));
@@ -201,8 +210,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('Before a ZIP: "A party" lists the parties the guide covers', pre.length > 2 && JSON.stringify(pre) === JSON.stringify(covered) && pre.includes('Working Families') && pre.includes('Republican'), pre.join(', '));
   await tap(page, '#setup [data-act="party-set"][data-p="Working Families"]');
   check('Before a ZIP: a party turns on', (await text(page, '#setup [data-fk="chip-party"]')) === 'Working Families Party' && (await page.getAttribute('#setup [data-fk="chip-party"]', 'aria-pressed')) === 'true');
-  await tap(page, '[data-act="setup-fill"]');
-  check('Before a ZIP: the fill switch turns on', (await page.getAttribute('[data-act="setup-fill"]', 'aria-checked')) === 'true');
+  check('Before a ZIP: the fill switch is on', (await page.getAttribute('[data-act="setup-fill"]', 'aria-checked')) === 'true');
   check('Before a ZIP: nothing is saved', (await savedVG(page)) === null);
 
   // The fifth digit finds the place and the counts; the choices carry over.
@@ -305,7 +313,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
     await tap(page, '.mast [data-act="change-place"]');
     await page.waitForSelector('.door-place', { timeout: 15000 });
     if (!i) check('Change: back to the first page, ZIP still in the box', (await page.inputValue('#zip')) === '78704' && (await page.evaluate(() => history.state && history.state.vg)) === 'start');
-    await tap(page, SETUP);
+    await plainSetup(page);
     await page.waitForSelector('#plan', { timeout: 15000 });
   }
   check('Change: the first page is in history once, however often you change', (await page.evaluate(() => history.length)) === depth, `${depth} then ${await page.evaluate(() => history.length)}`);
@@ -342,9 +350,8 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   const { ctx, page } = await newPage();
   await openZip(page, '78704');
   await page.waitForSelector('.su-cov', { timeout: 15000 });
-  await tap(page, '[data-act="setup-fill"]');
   const n = Number(((await text(page, '[data-act="setup-fill"] small')).match(/^(\d+)/) || [])[1] || 0);
-  check('Step 2: the fill switch turns on', (await page.getAttribute('[data-act="setup-fill"]', 'aria-checked')) === 'true' && n > 0, String(n));
+  check('Step 2: the fill switch is on for a new ballot', (await page.getAttribute('[data-act="setup-fill"]', 'aria-checked')) === 'true' && n > 0, String(n));
   await tap(page, '[data-act="setup-only"]');
   await tap(page, SETUP);
   await page.waitForSelector('#plan', { timeout: 15000 });
@@ -389,7 +396,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await openZip(page, '80205');
   await page.waitForSelector('.su-cov', { timeout: 15000 });
   await tap(page, '[data-act="setup-only"]');
-  await tap(page, SETUP);
+  await plainSetup(page);
   await page.waitForSelector('#plan', { timeout: 15000 });
   const [id, id2] = await page.evaluate(() => [...document.querySelectorAll('#sec-measures .row[data-item][data-undecided]')].slice(0, 2).map((r) => r.dataset.item));
   await openRow(page, id);
@@ -750,7 +757,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await page.locator('form[data-form="addr"] button[type=submit]').tap();
   await page.waitForSelector('.door-place', { timeout: 15000 });
   check('Statewide Florida from the first page: what was found shows under the place line', (await text(page, '.door-found')) === 'Found: Test Two, Miami, FL 33101 Not it? Try again' && !(await page.$('.front [data-act="addr-open"]')), await text(page, '.door-found'));
-  await tap(page, SETUP);
+  await plainSetup(page);
   await page.waitForSelector('#plan', { timeout: 15000 });
   const fbtns = await page.$$eval('.addrbox .row-btns > *', (els) => els.map((e) => `${e.textContent.trim()}${e.classList.contains('dark') ? ' (dark)' : ''}`));
   check('Statewide Florida: nothing here turns on Congress, so the box sends you to the sample ballot', /^\d+ races? needs? your sample ballot\./.test(await text(page, '.addrbox .addr-n')) && !(await page.$('.addrbox .addr-set')) && fbtns.join('|') === 'See my sample ballot (dark)', `${await text(page, '.addrbox')} | ${fbtns.join('|')}`);
@@ -1362,7 +1369,7 @@ const touchAt = async (page, sel) => {
   await page.waitForFunction(() => /Denver/.test(document.querySelector('.door-place')?.textContent || ''), null, { timeout: 15000 });
   await tap(page, '#setup [data-act="ends"]');
   check('Show endorsements: on a saved ballot\'s first page, one tap turns it on and the newspapers come back', (await none()) === 'false' && (await papers()) === 'true', `${await none()} ${await papers()}`);
-  await tap(page, SETUP);
+  await plainSetup(page);
   await page.waitForSelector('#plan', { timeout: 15000 });
   check('Show endorsements: and the ballot shows the newspapers\' picks', /Newspapers and guides/.test(await text(page, '.picks-line span')), await text(page, '.picks-line span'));
   // The other way: turned off before the ZIP, then a ZIP whose saved ballot uses the newspapers.
@@ -2281,7 +2288,7 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
   await page.waitForSelector('.door-found', { timeout: 15000 }).catch(() => {});
   check('Address on the first page: and asks the Census again', asked.length > n0 && (await text(page, '.door-found')) === found, `${n0} then ${asked.length}`);
   const cov = Number(((await text(page, '.su-cov')).match(/of your (\d+) races?/) || [])[1]);
-  await tap(page, SETUP);
+  await plainSetup(page);
   await page.waitForSelector('#plan', { timeout: 15000 });
   const m = Number(((await text(page, '.bar-txt')).match(/of (\d+)/) || [])[1]);
   check('Address on the first page: step 2’s count was the ballot’s, districts set', cov > 0 && cov === m, `${cov} vs ${m}`);
@@ -2314,7 +2321,7 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
   await page.fill('#addr-in', 'a test lookup');
   await page.locator('form[data-form="addr"] button[type=submit]').tap();
   await page.waitForSelector('.door-found', { timeout: 15000 });
-  await tap(page, SETUP);
+  await plainSetup(page);
   await page.waitForSelector('#plan', { timeout: 15000 });
   const found = 'Found: Test Four, Washington, DC 20016 Not it? Try again';
   check('DC ward: after a lookup, the box holds only what was found, no "the rest"', (await text(page, '.addrbox')) === found && !(await page.$('.addrbox .addr-n, .addrbox .addr-set, .addrbox .row-btns')), await text(page, '.addrbox'));

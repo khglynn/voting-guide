@@ -419,8 +419,10 @@ async function open(browser, ballot, R) {
       await page.locator(sel).first().click();
     }
     // The first page names the place under the ZIP box; "Show my ballot" with both switches off
-    // shows the ballot as is.
+    // shows the ballot as is (the fill switch starts on, so it goes off first).
     await page.waitForSelector('.door-place', { timeout: 20000 });
+    const fill = page.locator('#setup [data-act="setup-fill"][aria-checked="true"]');
+    if (await fill.count()) await fill.click();
     await page.locator('[data-act="setup-done"]').click();
     await page.waitForSelector('#plan', { timeout: 20000 });
     await page.evaluate(() => Promise.race([document.fonts.ready, new Promise((r) => setTimeout(r, 4000))])); // real font metrics, but never wait long

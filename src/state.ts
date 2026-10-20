@@ -86,7 +86,7 @@ export interface Pending { kind: 'restore' | 'shared'; key: string; incoming: Ba
 /* The first page's step 2 as chosen so far: the chips, a party, and the two switches. In memory
    only. Before a ZIP they are all there is; once a ballot this device has nothing for loads, they
    become its sources and party (app.ts applyDoor), and the switches apply on "Show my ballot". */
-export interface Door { chips: Record<ChipKey, boolean>; party: string | null; fill: boolean; only: boolean }
+export interface Door { chips: Record<ChipKey, boolean>; party: string | null; fill: boolean; only: boolean; fillSet?: boolean }
 
 export const S = {
   index: null as Index | null,
@@ -98,7 +98,7 @@ export const S = {
   zipChoice: null as null | { zip: string; placeIds: string[] },
   /* The place question just answered (its ZIP and places), so the place line's Change can ask again. */
   picked: null as null | { zip: string; placeIds: string[] },
-  door: { chips: { papers: true, progressive: false, conservative: false }, party: null, fill: false, only: false } as Door,
+  door: { chips: { papers: true, progressive: false, conservative: false }, party: null, fill: true, only: false } as Door,
   coverage: null as null | { kind: 'not_covered'; state: string | null; zip: string },
   ballot: null as Ballot | null,
   b: emptyBallotState(),
@@ -172,13 +172,20 @@ export function leaveLast(): void {
   save(KEY, s);
 }
 /* The ballot to offer on the first page: the one you left, while it has picks. */
-export function leftBallot(): { key: string; zip: string; n: number } | null {
+export function leftBallot(count?: number): { key: string; zip: string; n: number } | null {
   if (S.tryMode) return null;
   const s = readSaved();
   if (!s.last || !s.last.left) return null;
   const b = s.ballots[s.last.key];
-  const n = b ? new Set(Object.keys(b.picks || {}).map((k) => k.split('|')[0])).size : 0; // races with a choice saved
-  return n ? { key: s.last.key, zip: s.last.zip, n } : null;
+  // Without the ballot loaded (a reload), races with a choice or a ranking saved, less the ones you
+  // hid; app.ts recounts by the bar's rule once the ballot loads, and passes that count when it has it.
+  if (!b) return null;
+  const ranked = Object.keys(b.ranks || {}).filter((k) => (b.ranks[k] || []).length);
+  const noted = Object.values(b.notes || {}).some((t) => !!t && !!String(t).trim());
+  if (!Object.keys(b.picks || {}).length && !ranked.length && !noted) return null; // nothing saved to point to
+  const hid = new Set(b.notMine || []);
+  const ids = [...Object.keys(b.picks || {}), ...ranked].map((k) => k.split('|')[0]).filter((id) => !hid.has(id));
+  return { key: s.last.key, zip: s.last.zip, n: count ?? new Set(ids).size };
 }
 
 /* ---------- the save link ----------

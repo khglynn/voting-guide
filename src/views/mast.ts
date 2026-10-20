@@ -117,7 +117,8 @@ function doorHTML(): string {
   </header>`;
 }
 
-/* The ballot you went back to the first page from, while it has picks: saved, and a tap away. */
+/* The ballot you went back to the first page from, while anything on it is saved (a pick, a ranking
+   not finished yet, a note): saved, and a tap away, with how many races are decided when some are. */
 function savedLineHTML(): string {
   const d = S.doorSaved;
   const idx = S.index;
@@ -125,7 +126,7 @@ function savedLineHTML(): string {
   const [st, placesStr] = d.key.split('|');
   const places = placesStr === '-' ? [] : placesStr.split('+').filter((p) => idx.places[p]);
   const where = places.length ? places.map((p) => idx.places[p].label.replace(/\s*\(.*\)$/, '')).join(' or ') : idx.states[st]?.name || '';
-  return `<div class="door-saved" role="status"><p>Your ${esc(where)} ballot is saved, ${d.n === 1 ? '1 race' : `${d.n} races`} decided.</p><button class="mini dark" data-act="saved-open" data-fk="saved-open">Open my ballot</button></div>`;
+  return `<div class="door-saved" role="status"><p>Your ${esc(where)} ballot is saved${d.n ? `, ${d.n === 1 ? '1 race' : `${d.n} races`} decided` : ''}.</p><button class="mini dark" data-act="saved-open" data-fk="saved-open">Open my ballot</button></div>`;
 }
 
 /* The states the guide covers, cut from paper and piled up at the foot of the first page (scripts/paper

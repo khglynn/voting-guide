@@ -3,7 +3,7 @@
    because the save link and saved picks depend on it. */
 import type { Contest, Item } from './types';
 import { S, persist, emptyBallotState, type View } from './state';
-import { status, sectionOf, rankMax, ordinal, chosenIds, entriesBySection, pageWalk, OTH_KEY, type SectionKey } from './ballot';
+import { status, sectionOf, rankMax, ordinal, chosenIds, entriesBySection, pageWalk, sameSeat, OTH_KEY, type SectionKey } from './ballot';
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
 import { render, renderRow, renderSection, renderSummaries, renderLens, flushLens, markBehind, renderBallot, renderAddr, rowEl, scrollRowIntoView, rowTop, holdRow, opensLow, anchored, $ } from './render';
 import { growOpen, inkRow, followFold, glideTo, land, stopGlide, grow, shrinkAway, collapseRow, finishCollapse } from './motion';
@@ -452,7 +452,16 @@ A['district-change'] = (d) => {
   const ans = S.b.districts[g.key];
   delete S.b.districts[g.key];
   S.b.addrSet = (S.b.addrSet || []).filter((k) => k !== g.key);
-  if (ans && ans !== '*' && ans !== 'none') { delete S.b.picks[ans]; delete S.b.ranks[ans]; delete S.b.auto[ans]; touchUndo(ans); }
+  if (ans && ans !== '*' && ans !== 'none') {
+    // Everything the answer showed: a Washington district's two House seats come from one answer.
+    const a = B().byId.get(ans);
+    for (const id of [ans, ...g.members.filter((m) => sameSeat(a, B().byId.get(m)))]) {
+      for (const k of Object.keys(S.b.picks)) if (k === id || k.startsWith(`${id}|`)) delete S.b.picks[k];
+      for (const k of Object.keys(S.b.auto)) if (k === id || k.startsWith(`${id}|`)) delete S.b.auto[k];
+      delete S.b.ranks[id];
+      touchUndo(id);
+    }
+  }
   S.ui.row = `q:${g.key}`;
   renderSection(sectionOf(B().byId.get(g.members[0])!));
   renderSummaries();
@@ -550,6 +559,7 @@ A.ends = () => {
     S.door.chips = { papers: !off, progressive: false, conservative: false };
     S.door.party = null;
     if (off) S.door.fill = false;
+    else if (!S.door.fillSet) S.door.fill = !(doorBallot() && S.b.setupDone); // back to its default
     S.ui.open.delete('su-party');
     if (doorBallot()) { S.b.sources = off ? [] : null; S.b.party = null; }
     render(['mast']);
@@ -740,7 +750,7 @@ A['change-place'] = () => {
 /* Step 2's two switches on the first page, and the Edit sheet's: each repaints where it lives. */
 A['setup-fill'] = () => {
   if (S.ui.sheet === 'picks') { S.ui.setupFill = !S.ui.setupFill; render(['sheet']); return; }
-  S.door.fill = !S.door.fill; render(['mast']);
+  S.door.fill = !S.door.fill; S.door.fillSet = true; render(['mast']);
 };
 A['setup-only'] = () => {
   if (S.ui.sheet === 'picks') { S.ui.setupOnly = !S.ui.setupOnly; render(['sheet']); return; }

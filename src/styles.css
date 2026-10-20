@@ -449,8 +449,8 @@ b, strong { font-weight: 600; }
 .grid.grid-yn .cand .nm { font-size: 18px; }
 .grid tbody th { text-align: left; font-weight: 600; font-size: 13.5px; line-height: 1.16; padding: 7px 6px 7px 0; border-bottom: 1px solid var(--rule); vertical-align: middle; overflow-wrap: anywhere; }
 .grid tbody th .sn { display: block; }
-/* A source's name opens its page for this race: a quiet underline, the ink it already had. */
-.grid tbody th a.sn, .others a.o-n { color: inherit; text-decoration: underline; text-decoration-color: var(--rule-2); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+/* A source's name opens its page for this race: underlined like every other link, in the ink it already had. */
+.grid tbody th a.sn, .others a.o-n { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .grid tbody th .lean { margin-top: 3px; }
 .grid td { text-align: center; border-bottom: 1px solid var(--rule); border-left: 1px solid var(--rule); padding: 4px 2px; vertical-align: middle; }
 .grid td.col-me, .grid th.col-me { background: var(--gold-wash); }

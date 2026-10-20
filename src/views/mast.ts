@@ -82,8 +82,9 @@ export function mastHTML(): string {
   return doorHTML();
 }
 
-/* The first page: Kevin's line and the three ticks, then steps 1 and 2 together, with "Show my
-   ballot" at their foot. The parts marked data-part repaint on their own (render.ts), so the ZIP box
+/* The first page: Kevin's line and the three ticks, then steps 1 and 2 on one sheet torn off the
+   pad My plan is written on, so the plan you start here is the sheet you finish with; "Show my
+   ballot" at its foot. The parts marked data-part repaint on their own (render.ts), so the ZIP box
    keeps its caret while the place line and the counts change under it. */
 function doorHTML(): string {
   const ticks = ['Plain English', 'Full local details', 'Pick by endorsements or party'];
@@ -91,7 +92,8 @@ function doorHTML(): string {
     <div class="mast-top" data-part="kicker"><p class="dateline">${esc(kicker())}</p></div>
     <h1 class="place">Quickly make your voting plan.</h1>
     <ul class="ticks">${ticks.map((t) => `<li><i aria-hidden="true"></i>${esc(t)}</li>`).join('')}</ul>
-    <div class="door" id="door">
+    <div class="pad door" id="door">
+      <span class="sheet-top" aria-hidden="true"></span><span class="sheet-fill" aria-hidden="true"></span>
       <form class="zipform" data-form="zip" novalidate>
         <label for="zip" class="step su-h zip-h"><span class="step-n" aria-hidden="true">1</span>Where do you vote?</label>
         <div class="zip-row"><input class="zip-input" id="zip" name="zip" data-fk="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="ZIP code" value="${esc(S.zip)}" ${S.zipErr ? 'aria-describedby="zip-err" aria-invalid="true"' : ''}></div>

@@ -146,6 +146,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('First page: three ticked lines', ticks.join('|') === 'Plain English|Full local details|Pick by endorsements or party', ticks.join('|'));
   check('First page: steps 1 and 2 show together before any ZIP, with one "Show my ballot" and no Next', (await text(page, 'label[for="zip"]')) === '1Where do you vote?' && (await text(page, '#su-h')) === '2Pick by endorsements or party'
     && (await text(page, SETUP)) === 'Show my ballot' && (await page.$$('.front button.bigbtn')).length === 1 && !(await page.$('form[data-form="zip"] button')), `${await text(page, 'label[for="zip"]')} | ${await text(page, '#su-h')}`);
+  check('First page: steps 1 and 2 sit on the pad’s sheet, with "Show my ballot" at its foot', !!(await page.$('.pad.door > .sheet-top')) && !!(await page.$('.pad.door #zip')) && !!(await page.$('.pad.door #su-h')) && !!(await page.$(`.pad.door > ${SETUP}`)));
   const pressed = (k) => page.getAttribute(`#setup [data-act="chip"][data-k="${k}"]`, 'aria-pressed');
   check('First page: before a ZIP, Newspapers and guides is on, the groups off, no party, no counts', (await pressed('papers')) === 'true' && (await pressed('progressive')) === 'false' && (await pressed('conservative')) === 'false'
     && (await text(page, '#setup [data-fk="chip-party"]')) === 'A party' && !(await page.$('.su-cov')));
@@ -227,6 +228,17 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await page.waitForSelector('#plan', { timeout: 15000 });
   check('Enter in the ZIP box: shows the ballot once the ZIP has found it', !!(await page.$('#plan')) && !(await page.$('#zip')));
   noErrors(page, 'First page');
+  await ctx.close();
+}
+{
+  // Dark mode: the sheet stays light paper, as My plan's does, so its ink and controls stay dark.
+  const { ctx, page } = await newPage({ colorScheme: 'dark' });
+  await openZip(page, '78704');
+  await page.waitForSelector('.su-cov', { timeout: 15000 });
+  const ink = await page.evaluate(() => [getComputedStyle(document.querySelector('.pad.door')).color, getComputedStyle(document.querySelector('.pad.door .su-cov')).color, getComputedStyle(document.getElementById('zip')).backgroundColor, getComputedStyle(document.body).color]);
+  check('First page in dark mode: the sheet keeps dark ink and a light ZIP box on its light paper', ink[0] === 'rgb(31, 38, 35)' && ink[1] === 'rgb(74, 82, 77)' && ink[2] === 'rgb(247, 243, 232)' && ink[3] !== ink[0], ink.join(' | '));
+  await shot(page, '00d-steps-1-2-dark');
+  noErrors(page, 'First page in dark mode');
   await ctx.close();
 }
 {

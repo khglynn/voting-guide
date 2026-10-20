@@ -162,8 +162,9 @@ b, strong { font-weight: 600; }
 .addr label { display: block; font-size: 15px; margin-bottom: 6px; }
 .addr input { width: 100%; min-height: 46px; padding: 0 10px; border: 1.5px solid var(--ink); background: var(--bone); border-radius: 2px; }
 
-/* The first page: step 1, where you vote, and step 2, whose picks, together. Pen ticks and step
-   numbers in the one green ink; nothing new in color. */
+/* The first page: step 1, where you vote, and step 2, whose picks, together on one sheet torn off
+   the pad My plan is written on (the sheet's own rules are with My plan's below). Pen ticks and
+   step numbers in the one green ink; nothing new in color. */
 .front .mast-top .dateline { padding: 4px 0; line-height: 1.35; }
 .ticks { margin-top: 14px; display: grid; gap: 6px; font-size: 17px; color: var(--ink-2); }
 .ticks li { display: flex; align-items: center; gap: 10px; }
@@ -172,7 +173,6 @@ b, strong { font-weight: 600; }
 .step { display: flex; align-items: center; gap: 9px; }
 .step-n { width: 24px; height: 24px; border-radius: 50%; background: var(--paper-green); color: var(--on-dusk); display: inline-flex; align-items: center; justify-content: center; flex: none; font-family: var(--f-display); font-weight: 800; font-size: 14px; font-variation-settings: "wdth" 84; line-height: 1; }
 .front.mast { padding-bottom: 28px; }
-.door { margin-top: 22px; }
 .zipform label.zip-h { display: flex; margin: 0 0 12px; font-size: 22px; font-weight: 800; }
 .zip-h { --mx: 9px; --my: 27px; }
 .front .addr-cta { margin-top: 10px; font-size: 15.5px; }
@@ -646,15 +646,22 @@ b, strong { font-weight: 600; }
 
 /* ---------- cheat sheet ---------- */
 .back { min-height: 44px; display: inline-flex; align-items: center; gap: 6px; font-size: 14.5px; text-decoration: underline; text-underline-offset: 3px; margin-top: 8px; }
-#cheat .cheat { position: relative; isolation: isolate; margin-top: 0; padding: 40px 18px 20px; color: var(--ink);
+/* The pad's sheet, for My plan and the first page's steps 1 and 2: the rendered top, a fill that
+   continues its light, and ink that stays dark because the paper stays light in dark mode. */
+#cheat .cheat, .pad { position: relative; isolation: isolate; margin-top: 0; padding: 40px 18px 20px; color: var(--ink);
   --ink: #1F2623; --ink-2: #3B433F; --muted: #5C645F; --faint: #6E756F; --rule: rgba(31, 38, 35, .16); --print: #2E5A50; --gold-ink: #855F06; --dusk: #2E5A50; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) #cheat .cheat { --muted: #4A524D; --faint: #535B56; --gold-ink: #6E4F05; } }
-:root[data-theme="dark"] #cheat .cheat { --muted: #4A524D; --faint: #535B56; --gold-ink: #6E4F05; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) #cheat .cheat, :root:not([data-theme="light"]) .pad { --muted: #4A524D; --faint: #535B56; --gold-ink: #6E4F05; } }
+:root[data-theme="dark"] #cheat .cheat, :root[data-theme="dark"] .pad { --muted: #4A524D; --faint: #535B56; --gold-ink: #6E4F05; }
+/* The first page's controls on the sheet: the light-mode tokens they read, so a dark-mode page keeps
+   them legible on the light paper. */
+.pad { --rule-2: rgba(31, 38, 35, .3); --paper: #F7F3E8; --bone: #EFE9DA; --paper-green: #416E62; --dusk-2: #4F7C6F; --dusk-ink: #2E5A50; --dusk-tint: #DEE6DF;
+  --clay: #8E4C2C; --gold-wash: #F4EACB; color-scheme: light; }
+.pad.door { margin-top: 14px; }
 #cheat .cs-table td.undecided { color: var(--muted); }
-#cheat .sheet-top, #cheat .sheet-fill { position: absolute; left: 0; right: 0; pointer-events: none; }
-#cheat .sheet-top { top: 0; height: 100px; overflow: hidden; overflow: clip; z-index: -1; }
-#cheat .sheet-top::before { content: ""; position: absolute; left: 50%; top: 0; width: 640px; height: 100px; margin-left: -320px; background: var(--r-sheet) center / 640px 100px no-repeat; }
-#cheat .sheet-fill { top: 30px; bottom: 0; z-index: -2; background: var(--sheet-fill) center / 640px 100% no-repeat, var(--sheet-paper); box-shadow: var(--lie); clip-path: inset(0 -6px -6px -6px); }
+#cheat .sheet-top, #cheat .sheet-fill, .pad > .sheet-top, .pad > .sheet-fill { position: absolute; left: 0; right: 0; pointer-events: none; }
+#cheat .sheet-top, .pad > .sheet-top { top: 0; height: 100px; overflow: hidden; overflow: clip; z-index: -1; }
+#cheat .sheet-top::before, .pad > .sheet-top::before { content: ""; position: absolute; left: 50%; top: 0; width: 640px; height: 100px; margin-left: -320px; background: var(--r-sheet) center / 640px 100px no-repeat; }
+#cheat .sheet-fill, .pad > .sheet-fill { top: 30px; bottom: 0; z-index: -2; background: var(--sheet-fill) center / 640px 100% no-repeat, var(--sheet-paper); box-shadow: var(--lie); clip-path: inset(0 -6px -6px -6px); }
 .cheat-head { padding: 6px 0 14px; }
 .cheat-head .kick { text-wrap: balance; }
 .cheat-head h2 { font-family: var(--f-display); font-size: 38px; font-weight: 800; line-height: .98; letter-spacing: -.006em; font-variation-settings: "wdth" 78; color: var(--print); margin-top: 4px; }

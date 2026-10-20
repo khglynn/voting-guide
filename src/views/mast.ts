@@ -147,7 +147,7 @@ function whereHTML(): string {
     after = `<div class="notice" role="status"><p><b>We don’t cover ${name ? esc(name) : 'that area'} yet.</b> ${ext('https://vote.gov/', 'Vote.gov')} has official info for every state.</p>
       <p>Want this for your city? <a href="${esc(ask)}" target="_blank" rel="noopener" data-ask-kevin>Ask Kevin</a>.</p></div>`;
   }
-  // "Use my address for a more exact ballot" (Kevin, Oct 21: shorter than "for the most accurate
+  // "Use my address for a more exact ballot" (Kevin, Oct 20: shorter than "for the most accurate
   // local results", and still true, since the Census settles Congress and the legislature, not every
   // local race) opens the address form right here. The place
   // question has its own link, so this one steps aside while it shows. After a lookup, what the
@@ -164,7 +164,7 @@ function whereHTML(): string {
 }
 
 /* The small print, one paragraph: how many cities, each one a tap away (the list opens below), whose
-   friends they are (his name links to his site; Kevin, Oct 21: name him once), a way to ask for yours
+   friends they are (his name links to his site; Kevin, Oct 20: name him once), a way to ask for yours
    through the report form (prefilled with the ZIP in the box), and the coffee link. */
 function creditsHTML(): string {
   const idx = S.index;

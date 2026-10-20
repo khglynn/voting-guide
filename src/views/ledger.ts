@@ -100,7 +100,8 @@ export function rowHTML(it: Item): string {
   const open = S.ui.row === it.id;
   const decided = s === 'decided' || s === 'auto' || s === 'skipped';
   let vd: string;
-  if (s === 'info') vd = '<span class="vd none"><span class="m">Depends on your address</span></span>';
+  // The candidates depend on your exact address, so they aren't in this guide: your sample ballot has them.
+  if (s === 'info') vd = '<span class="vd none"><span class="m">On your sample ballot</span></span>';
   else vd = verdictHTML(verdict(it));
   const tags: string[] = [];
   if (b.onlyIn[it.id]) tags.push(`Only in ${b.onlyIn[it.id].join(', ')}`);
@@ -113,11 +114,15 @@ export function rowHTML(it: Item): string {
   </li>`;
 }
 export const qId = (g: Group): string => `q-${hash(g.key)}`;
+/* A district question's line under its title: "Depends on your address" while "Use my address" can
+   still answer it; otherwise the sample ballot is what settles it (Kevin, Oct 20: after a lookup,
+   "depends on your address" on every row it couldn't settle read as "your address wasn't enough"). */
+const qSub = (g: Group): string => (!S.b.addrNote && censusSettles(S.ballot!.byId.get(g.members[0]) as Contest) ? 'Depends on your address' : 'Your sample ballot shows which');
 function questionHTML(g: Group): string {
   const open = S.ui.row === `q:${g.key}`;
   return `<li class="row is-q${open ? ' is-open' : ''}" id="${qId(g)}" data-q="${esc(g.key)}" data-undecided>
     <button class="row-hd" data-act="row" data-id="${esc(`q:${g.key}`)}" aria-expanded="${open}" data-fk="row-${qId(g)}">
-      <span class="mk" aria-hidden="true"><i></i></span><span class="ttl"><span class="t"><b>${esc(cleanOffice(g.office))}</b><small>Depends on your address</small></span></span>
+      <span class="mk" aria-hidden="true"><i></i></span><span class="ttl"><span class="t"><b>${esc(cleanOffice(g.office))}</b><small>${qSub(g)}</small></span></span>
       ${qVerdict('Pick your district')}${CHEV}</button>
     ${open ? questionBodyHTML(g) : ''}
   </li>`;
@@ -176,7 +181,7 @@ function notMineHTML(it: Item): string {
   const r = rowTitle(it);
   return `<li class="row is-off" id="i-${esc(it.id)}" data-item="${esc(it.id)}"><div class="row-hd as-div">
       <span class="mk" aria-hidden="true"><i></i></span><span class="ttl"><span class="t"><b>${esc(r.title)}</b>${r.sub ? `<small>${esc(r.sub)}</small>` : ''}</span></span>
-      <span class="vd off"><span class="m">Not on your ballot</span><button class="linkbtn" data-act="notmine-undo" data-id="${esc(it.id)}">Undo</button></span></div></li>`;
+      <span class="vd off"><span class="m">Not on your ballot</span><button class="linkbtn" data-act="notmine-undo" data-id="${esc(it.id)}">Put it back</button></span></div></li>`;
 }
 function unoppHTML(sec: SectionKey, list: Contest[]): string {
   if (!list.length) return '';
@@ -468,14 +473,14 @@ export function addressCount(): number {
 }
 /* The races still depending on your address, each counted once as addressCount counts them: a
    district question by its first race, a "maybe" row by itself. */
-function addressRaces(): Contest[] {
+function addressEntries(): { c: Contest; act: string; name: string }[] {
   const b = S.ballot!;
   const groups = new Set<string>();
-  const out: Contest[] = [];
+  const out: { c: Contest; act: string; name: string }[] = [];
   for (const x of decisionItems()) {
     if (x.question) {
       const g = b.groups.find((gr) => `q:${gr.key}` === x.id);
-      if (g) out.push(b.byId.get(g.members[0]) as Contest);
+      if (g) out.push({ c: b.byId.get(g.members[0]) as Contest, act: `data-q="${esc(g.key)}"`, name: cleanOffice(g.office) });
       continue;
     }
     if (!isMaybe(x.id)) continue;
@@ -483,10 +488,12 @@ function addressRaces(): Contest[] {
     const g = b.groupOf[x.id];
     if (g && groups.has(g)) continue;
     if (g) groups.add(g);
-    if (it && it.kind === 'contest') out.push(it);
+    if (it && it.kind === 'contest') out.push({ c: it, act: `data-id="${esc(it.id)}"`, name: rowTitle(it).title });
   }
   return out;
 }
+const addressRaces = (): Contest[] => addressEntries().map((x) => x.c);
+const andList = (xs: string[]): string => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} and ${xs[xs.length - 1]}`);
 /* Whether "Use my address" can still settle one of them. The Census answers Congress and the
    state legislature only (open.censusSettles), so a question or "maybe" row for anything else
    (a council seat, a school district, a judge) is the sample ballot's to settle. And once a
@@ -507,11 +514,15 @@ function addrBoxHTML(): string {
   const note = S.b.addrNote;
   const sb = sampleBallot();
   const sbLink = (dark: boolean): string => (sb ? `<a class="mini${dark ? ' dark' : ''}" href="${esc(sb.url)}" target="_blank" rel="noopener">See my sample ballot</a>` : '');
-  // What's left for the sample ballot, and why, in a voter's words (Kevin, Oct 21: "N still depend on
+  // What's left for the sample ballot, and why, in a voter's words (Kevin, Oct 20: "N still depend on
   // your address" read as a contradiction right after typing one).
   const kinds = addressKinds(addressRaces().filter((c) => !censusSettles(c)).map((c) => c.office)).slice(0, 2);
   const why = kinds.length ? ` The address lookup doesn’t cover races like ${kinds.join(' or ')}.` : '';
-  const rest = (k: number): string => `<p class="addr-n"><b>${k === 1 ? '1 race needs' : `${k} races need`} your sample ballot.</b>${why}</p>`;
+  // Three or fewer left: name each, a tap away, instead of describing them.
+  const left3 = addressEntries();
+  const named = left3.length && left3.length <= 3 && left3.length === n
+    ? ` ${andList(left3.map((x) => `<button class="linkbtn" data-act="goto" ${x.act}>${esc(x.name)}</button>`))}.` : '';
+  const rest = (k: number): string => `<p class="addr-n"><b>${k === 1 ? '1 race needs' : `${k} races need`} your sample ballot${named ? ':' : '.'}</b>${named || why}</p>`;
   if (!note) {
     if (!n) return '';
     const look = addressHelps();
@@ -526,8 +537,9 @@ function addrBoxHTML(): string {
   const none = note === FOUND_ONLY;
   if (none && !n) return found || S.ui.addrOpen ? `<div class="addrbox">${found}${S.ui.addrOpen ? addrHTML() : ''}</div>` : '';
   const left = n ? rest(n) : '';
+  const filledLine = S.ui.addrFilled ? `<p class="addr-fill">${esc(S.ui.addrFilled)}</p>` : '';
   const after = S.ui.addrOpen ? addrHTML() : (none || n) && sb ? `<div class="row-btns">${sbLink(true)}</div>` : '';
-  return `<div class="addrbox">${found}${none ? '' : `<p class="addr-set">${esc(note)}</p>`}${left}${after}</div>`;
+  return `<div class="addrbox">${found}${none ? '' : `<p class="addr-set">${esc(note)}</p>`}${filledLine}${left}${after}</div>`;
 }
 export function ballotHeadHTML(): string {
   const b = S.ballot!;

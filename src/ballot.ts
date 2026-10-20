@@ -42,7 +42,7 @@ export interface Ballot {
 
 /* Which Census district a race is for, read from its district: Congress (cd), the state senate
    (upper) or the state house or assembly (lower), with its number. The research mostly writes "CD-37",
-   "SD-14", "HD-49" or "AD-51", and a few places another way (Oct 21): a U.S. House seat as "GA-5" or
+   "SD-14", "HD-49" or "AD-51", and a few places another way (Oct 20): a U.S. House seat as "GA-5" or
    "NY-13", a legislature seat spelled out ("Senate District 35", "House District 53"), and Washington's
    legislative districts, which elect one senator each ("LD-32"). Washington's two representatives
    per district ("LD-32 Position 1" and "Position 2") stay unread: one district answer shows one race,

@@ -785,7 +785,7 @@ b, strong { font-weight: 600; }
    render drawn at 640 by 150). The first page is at least a screen tall, and the band sits on its bottom
    edge, as wide as the page; the heap is drawn at its own size in the middle, so a phone sees it run off
    both sides and a wider screen sees all of it, ending in bare desk. Every piece along the bottom runs
-   off the render's edge, so no desk shows under the heap (Kevin, Oct 21); the bottom 5px are cut off,
+   off the render's edge, so no desk shows under the heap (Kevin, Oct 20); the bottom 5px are cut off,
    where the bake's softening leaves the edge a little see-through and two pieces' lifted edges can
    leave a sliver of desk. Decoration only. */
 .front.mast { position: relative; min-height: 100vh; min-height: 100svh; padding-bottom: 163px; }

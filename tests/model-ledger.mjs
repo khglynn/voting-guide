@@ -784,7 +784,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('cheat sheet: Austin folds three or more other school districts\' races', oth.length >= 3, String(oth.length));
     let html = cheat.cheatHTML(false);
     check('cheat sheet: the folded other school districts\' races stay off it while undecided', oth.every((it) => !has(html, it.id)), oth.filter((it) => has(html, it.id)).map((it) => it.id).join(', '));
-    check('cheat sheet: an unanswered district question is still a line', /Depends on your district/.test(html));
+    check('cheat sheet: an unanswered district question is still a line, pointing to the sample ballot', /Your sample ballot shows which/.test(html));
     // Every unanswered question's line is a tap back to that question, with "Pick your district".
     const qLines = au.groups.map((g) => (html.match(new RegExp(`<tr[^>]*data-q="${g.key.replace(/[|()]/g, '\\$&')}"[\\s\\S]*?</tr>`)) || [''])[0]);
     check('cheat sheet: each district line goes back to its question ("Pick your district")', au.groups.length > 0 && qLines.every((l) => /data-act="goto"/.test(l) && /Pick your district/.test(l)), qLines.filter((l) => !/data-act="goto"/.test(l)).length + ' dead');
@@ -1493,7 +1493,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const lset = address.setFromAddress(lk, S.b, { cd: 7, upper: 22, lower: 24 });
     check('address: Lakewood names each office District 7 set', lset.filter((x) => /District 7$/.test(x)).length === 3 && ['co-us-house-7', 'co-sboe-7', 'co-cu-regent-7'].every((id) => S.b.mine.includes(id) && !bl.isMaybe(id)), lset.join(' | '));
 
-    // The other ways the research writes Census districts (Oct 21): each is read, so an address settles
+    // The other ways the research writes Census districts (Oct 20): each is read, so an address settles
     // the House and legislature in Atlanta, Seattle, Chicago, Portland and New York too. Washington's
     // two representatives per district stay unread: one answer would show only one of the two.
     const kd = (office, district) => { const r = bl.contestDistrict({ office, district }); return `${r.kind}:${r.n}`; };
@@ -1526,8 +1526,8 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     open('FL', []);
     S.b.addrNote = address.addrSummary(address.setFromAddress(S.ballot, S.b, { cd: 24, upper: 38, lower: null }));
     check('address box: nothing set, what is left for the sample ballot', /^\d+ races? needs? your sample ballot\.( The address lookup doesn’t cover races like [a-zA-Z .]+( or [a-zA-Z .]+)?\.)? See my sample ballot$/.test(box()), box());
-    check('address: the kinds of race the lookup can’t settle, most common first', address.addressKinds(['Austin City Council Member', 'Austin ISD Trustee', 'Round Rock ISD Trustee, Place 3', 'Travis County Commissioner', 'Mayor of Kyle', 'U.S. Representative']).join('|') === 'school board|city council|county board|city office|U.S. House');
-    // A source's name opens its page for the race, at the pick where the browser can (Kevin, Oct 21).
+    check('address: the kinds of race the lookup can’t settle, most common first, and never the ones it answers', address.addressKinds(['Austin City Council Member', 'Austin ISD Trustee', 'Round Rock ISD Trustee, Place 3', 'Travis County Commissioner', 'Mayor of Kyle', 'U.S. Representative', 'State Representative']).join('|') === 'school board|city council|county board|city office');
+    // A source's name opens its page for the race, at the pick where the browser can (Kevin, Oct 20).
     {
       const ab = open('TX', ['austin-tx']);
       const chron = ab.eById.get('austin-chronicle-eb');

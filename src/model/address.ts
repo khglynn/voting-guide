@@ -31,6 +31,7 @@ export function setFromAddress(b: Ballot, s: BallotState, r: Districts): string[
     if (!g.kind || n == null) continue;
     const hit = g.members.find((id) => contestDistrict(b.byId.get(id) as Contest).n === n);
     s.districts[g.key] = hit || 'none';
+    s.addrSet = [...(s.addrSet || []).filter((k) => k !== g.key), g.key];
     if (hit) name(g.kind, g.office);
   }
   if (!s.mine) s.mine = [];
@@ -76,9 +77,9 @@ const OFFICE_KINDS: [RegExp, string][] = [
   [/development district/i, 'development district'],
   [/town|highway|village/i, 'town office'],
   [/mayor|city commission/i, 'city office'],
-  [/state (representative|senator|house|senate)|assembly|delegate/i, 'state legislature'],
-  [/u\.?\s?s\.?\s|congress/i, 'U.S. House'],
 ];
+/* Congress and the legislature have no kind: the lookup answers them, so one left after it (Washington's
+   two representative seats per district) is the guide's own gap, and the line doesn't blame the lookup. */
 export function addressKinds(offices: string[]): string[] {
   const n = new Map<string, number>();
   for (const o of offices) {

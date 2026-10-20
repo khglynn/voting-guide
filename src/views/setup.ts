@@ -8,7 +8,7 @@ import { esc, plural } from '../util';
 import { chipsHTML, TICK } from './lens';
 import { partiesOnBallot, CHIPS, noEndorsements, doorNone } from '../model/lens';
 import { coverage } from '../model/tally';
-import { planSetup } from '../model/bulk';
+import { planSetup, fillStands } from '../model/bulk';
 import { isOpen, FILL, HIDE, SHOW_ENDS } from './common';
 
 /* "Austin, Texas", "Aurora or Denver, Colorado", "Ward 1, Washington, DC", or the state alone for
@@ -22,13 +22,15 @@ export function placeLine(b: Ballot): string {
 
 /* What the fill switch would do on this ballot: the party's candidates first, then the races where
    the rest of your sources agree; a part with nothing in it drops out. */
-export function fillLine(party: string | null): string {
+export function fillLine(party: string | null, more = false): string {
   const plan = planSetup(party);
   const a = plan.agree.fills.length;
   const p = plan.party ? plan.party.fills.length : 0;
-  if (plan.party && (p || a)) return `${[p ? `${p} from the ${party} Party` : '', a ? `${a} where your other sources agree` : ''].filter(Boolean).join(' and ')}.`;
+  // After the fill has run once (the Edit sheet), what's left to fill is "more".
+  const m = more ? ' more' : '';
+  if (plan.party && (p || a)) return `${[p ? `${p}${m} from the ${party} Party` : '', a ? `${a}${m} where your other sources agree` : ''].filter(Boolean).join(' and ')}.`;
   const one = plan.agree.single;
-  return `${plural(a, 'race')} where they agree${one ? ` (${one} from just one source)` : ''}. Races where picks split stay open.`;
+  return `${a}${m} ${a === 1 ? 'race' : 'races'} where they agree${one ? ` (${one} from just one source)` : ''}. Races where picks split stay open.`;
 }
 
 const sw = (act: string, on: boolean, label: string, sub = ''): string =>
@@ -55,22 +57,30 @@ export function pickControlsHTML(inSheet = false): string {
     : '';
   const chips = b ? chipsHTML()
     : CHIPS.map((c) => `<button class="chip" data-act="chip" data-k="${c.key}" aria-pressed="${S.door.chips[c.key]}" data-fk="chip-${c.key}">${TICK}${esc(c.label)}</button>`).join('');
-  // "Show endorsements" leads the step as a switch like the two below it, on to start (Kevin, Oct 21:
+  // "Show endorsements" leads the step as a switch like the two below it, on to start (Kevin, Oct 20:
   // say it the affirmative way). Off, every row shows just the choices: no source on and no party, so
   // the chips, "A party", the coverage line and the fill switch, which only matter with endorsements,
-  // step aside. On again, newspapers and guides come back.
+  // step aside. On again, newspapers and guides come back. Turning the last chip off by hand is a
+  // different thing (swapping one for another): the chips stay, with the switch on and nothing to
+  // fill or count until you choose again.
   const none = b ? noEndorsements() : doorNone();
-  const ends = `<div class="su-sws su-ends">${sw('ends', !none, SHOW_ENDS)}</div>`;
+  const off = none && !S.ui.lensEmptied;
+  const ends = `<div class="su-sws su-ends">${sw('ends', !off, SHOW_ENDS)}</div>`;
+  // In the Edit sheet once the fill has run: it offers only what's new ("2 more races"), and with
+  // nothing new it steps aside (the ballot head's Undo takes the fill back).
+  const ran = inSheet && !!b && fillStands();
+  const fillSw = none || (ran && !planSetup(party).fills.length) ? ''
+    : sw('setup-fill', inSheet ? S.ui.setupFill : S.door.fill, FILL, b ? fillLine(party, ran) : 'Fills the races where they agree. Races where picks split stay open.');
   const only = sw('setup-only', inSheet ? S.ui.setupOnly : S.door.only, HIDE);
-  if (none) return `${ends}
+  if (off) return `${ends}
     <div class="su-sws">${only}</div>`;
-  const cov = b ? coverage() : null;
+  const cov = b && !none ? coverage() : null;
   return `${ends}
     <div class="su-chips" role="group" aria-labelledby="${inSheet ? 'sh-h' : 'su-h'}">${chips}${partyChip}${more}</div>
     ${list}
     ${cov ? `<p class="su-cov">Picks in ${cov.picked} of your ${plural(cov.total, 'race')}.</p>` : ''}
     <div class="su-sws">
-      ${sw('setup-fill', inSheet ? S.ui.setupFill : S.door.fill, FILL, b ? fillLine(party) : 'Fills the races where they agree. Races where picks split stay open.')}
+      ${fillSw}
       ${only}
     </div>`;
 }

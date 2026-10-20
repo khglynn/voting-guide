@@ -129,8 +129,10 @@ export function fillFits(f: Fill): boolean {
 type Was = string | undefined;
 interface Batch { picks: Map<string, [Was, string]>; auto: Map<string, [Was, string]> }
 let last: Batch | null = null;
-export function applyFills(fills: Fill[]): number {
-  const batch: Batch = { picks: new Map(), auto: new Map() };
+/* With join, the fills go into the Undo still waiting, if one is, so one Undo takes back the whole
+   fill (a lookup's races filled after "Show my ballot" filled the rest). */
+export function applyFills(fills: Fill[], join = false): number {
+  const batch: Batch = join && last ? last : { picks: new Map(), auto: new Map() };
   let n = 0;
   for (const f of fills) {
     if (!fillFits(f)) continue;
@@ -142,9 +144,12 @@ export function applyFills(fills: Fill[]): number {
     S.b.auto[f.id] = f.why;
     n++;
   }
-  last = n ? batch : null;
+  last = n ? batch : join ? last : null;
   return n;
 }
+/* "Fill in my ballot with their picks" filled this ballot and still stands: a pick it filled from
+   your sources or your party is still in place (an Undo took them all back). */
+export const fillStands = (): boolean => Object.values(S.b.auto).some((w) => w.startsWith(FILL_SOURCES) || /^Filled in with the .+ candidate/.test(w));
 export function undoFills(): boolean {
   if (!last) return false;
   const put = (o: Record<string, string>, k: string, was: Was) => { if (was === undefined) delete o[k]; else o[k] = was; };

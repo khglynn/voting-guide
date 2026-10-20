@@ -55,7 +55,8 @@ function whereHTML(it: Item): string {
   if (g) {
     const ans = S.b.districts[g];
     const grp = b.groups.find((x) => x.key === g)!;
-    if (ans === it.id) return `<p class="ob-meta">You said you’re in ${esc(seatLabel(it) || 'this district')}. <button class="linkbtn" data-act="district-change" data-g="${esc(g)}">Change</button></p>`;
+    // Who chose the district: the address lookup, or you.
+    if (ans === it.id) return `<p class="ob-meta">${(S.b.addrSet || []).includes(g) ? 'Your address puts you in' : 'You said you’re in'} ${esc(seatLabel(it) || 'this district')}. <button class="linkbtn" data-act="district-change" data-g="${esc(g)}">Change</button></p>`;
     return `<p class="ob-meta"><b>Maybe on your ballot.</b> You weren’t sure of your ${esc(grp.office)} district, so all ${grp.members.length} show. ${escP(it.scope_plain)} <button class="linkbtn" data-act="district-change" data-g="${esc(g)}">Choose one</button></p>`;
   }
   if (b.onlyIn[it.id]) return `<p class="ob-meta">Only on ballots in ${esc(b.onlyIn[it.id].join(', '))}. <button class="linkbtn" data-act="notmine" data-id="${esc(it.id)}">Not on my ballot</button></p>`;
@@ -88,7 +89,7 @@ function quietLines(l: Lineup, it: Item, picked = true): string {
   const pw = paywallRowHTML(l.paywalled, cheatTitle(it));
   return `${out.length ? `<p class="gridnote">${out.join(' ')}</p>` : ''}${pw}`;
 }
-/* Where a source's word on this race lives (Kevin, Oct 21: let people click through to the source):
+/* Where a source's word on this race lives (Kevin, Oct 20: let people click through to the source):
    the page its pick, or its "no stand", came from, else its guide. A pick opens at the pick where
    the browser can, through a text fragment for the candidate's full name, then last name, or the
    measure's number ("Proposition A", "Prop A"); a browser without them, or a page that words it

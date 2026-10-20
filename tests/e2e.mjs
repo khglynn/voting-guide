@@ -170,7 +170,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
     && (await page.getAttribute('[data-act="setup-fill"]', 'aria-checked')) === 'false' && (await page.getAttribute('[data-act="setup-only"]', 'aria-checked')) === 'false');
   check('First page: before a ZIP, the fill switch says what it does', (await text(page, '[data-act="setup-fill"] small')) === 'Fills the races where they agree. Races where picks split stay open.', await text(page, '[data-act="setup-fill"] small'));
   check('First page: "Use my address for a more exact ballot", on one line at phone width', (await text(page, '.front [data-act="addr-open"]')) === 'Use my address for a more exact ballot'
-    && (await page.$eval('.front [data-act="addr-open"]', (e) => e.getClientRects().length)) === 1, await text(page, '.front [data-act="addr-open"]'));
+    && (await page.$eval('.front [data-act="addr-open"]', (e) => { const r = document.createRange(); r.selectNodeContents(e); return new Set([...r.getClientRects()].map((x) => Math.round(x.top))).size; })) === 1, await text(page, '.front [data-act="addr-open"]'));
   const fine = await page.$$eval('.front .door-foot > .fine', (els) => els.map((e) => e.textContent.replace(/\s+/g, ' ').trim()));
   const cities = new Set(Object.entries(await page.evaluate(() => fetch('/data/index.json').then((r) => r.json()).then((i) => i.places))).map(([id, p]) => (p.state === 'DC' ? 'DC' : /^nyc-/.test(id) ? 'NYC' : id))).size;
   check('First page: the small print counts cities from the index (DC and NYC count once) and names Kevin once, with the coffee link in the same paragraph', fine.length === 1 && fine[0] === `Covers ${cities} cities where Kevin HG’s friends live. Ask for yours · Buy Kevin a thank-you coffee`, `${fine.join(' / ')} (index says ${cities})`);
@@ -715,7 +715,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   });
   await openBallot(page, '33101');
   const btns = await page.$$eval('.addrbox .row-btns > *', (els) => els.map((e) => `${e.textContent.trim()}${e.classList.contains('dark') ? ' (dark)' : ''}`));
-  check('Statewide Florida: the address box leads with the sample ballot, no Use my address', /races? depends? on your address\.$/.test(await text(page, '.addrbox > p')) && btns.join('|') === 'See my sample ballot (dark)', `${await text(page, '.addrbox > p')} | ${btns.join('|')}`);
+  check('Statewide Florida: the address box leads with the sample ballot, no Use my address', /races? depends? on your address\. Your sample ballot shows which are yours\.$/.test(await text(page, '.addrbox > p')) && btns.join('|') === 'See my sample ballot (dark)', `${await text(page, '.addrbox > p')} | ${btns.join('|')}`);
   await page.evaluate(() => localStorage.clear());
   await page.goto(`${BASE}/?today=${TODAY}`);
   await page.waitForSelector('#zip');
@@ -1250,7 +1250,7 @@ const touchAt = async (page, sel) => {
   await ctx.close();
 }
 
-/* ---------- "Show endorsements" (Kevin, Oct 21): a switch that leads step 2, on to start. Off, every row
+/* ---------- "Show endorsements" (Kevin, Oct 20): a switch that leads step 2, on to start. Off, every row
    shows just the choices and the controls that only matter with endorsements step aside ---------- */
 {
   const { ctx, page } = await newPage();
@@ -2019,7 +2019,7 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
   await page.reload();
   await page.waitForSelector('#plan', { timeout: 15000 });
   await page.waitForTimeout(150);
-  check('Counts: what a count showed lasts the visit; after a reload the filter hides them again', !(await page.$(`#i-${ids[0]}`)) && /^4 of \d+ decided Show$/.test(await text(page, '#sec-measures .sec-r')), await text(page, '#sec-measures .sec-r'));
+  check('Counts: what a count showed is saved with the ballot; after a reload they still show', !!(await page.$(`#i-${ids[0]}`)) && /^4 of \d+ decided Hide$/.test(await text(page, '#sec-measures .sec-r')), await text(page, '#sec-measures .sec-r'));
   // The section's last race: the section folds to its band, the band holding still.
   const cid = await page.evaluate(() => document.querySelector('#sec-city .row[data-item][data-undecided]')?.dataset.item);
   await page.evaluate((id) => { const r = document.getElementById(`i-${id}`); window.scrollBy(0, r.getBoundingClientRect().top - 260); }, cid);
@@ -2096,7 +2096,7 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
   check('Beat under a band: tapping its count ends the beat and the band stays where it was', c.beat && c.gone && Math.abs(c.b1 - c.b0) <= 1 && (await text(page, '#sec-measures .sec-edit')) === 'Hide', `beat ${c.beat}, ${c.b0} then ${c.b1}`);
   const f = await held('city', '#sec-city [data-act="sec"]');
   check('Beat under a band: tapping a folded band’s title does the same', f.beat && f.gone && Math.abs(f.b1 - f.b0) <= 1 && !(await page.$('#sec-city.folded')), `beat ${f.beat}, ${f.b0} then ${f.b1}`);
-  // What you showed under the filter is still showing after a reload (Kevin, Oct 21).
+  // What you showed under the filter is still showing after a reload (Kevin, Oct 20).
   const shownBefore = await page.$$eval('#sec-measures .row[data-item]:not([data-undecided])', (els) => els.length);
   await page.reload();
   await page.waitForSelector('#plan', { timeout: 15000 });

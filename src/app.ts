@@ -8,7 +8,7 @@ import { zipState, censusLookup, placeFromGeo, settleAddress, withPlace, tidyAdd
 import { toast, hideToast } from './util';
 import { render, renderBallot, renderAddr, anchored, $ } from './render';
 import { setInvolved, type GetInvolved } from './views/pass';
-import { planAgree, applyFills, planParty, planSetup, forgetUndo } from './model/bulk';
+import { planAgree, applyFills, planParty, planSetup, forgetUndo, fillStands, canUndo } from './model/bulk';
 import { setFromAddress, addrSummary } from './model/address';
 import { partiesOnBallot, toggleChip, setSources, setParty, chipMembers, chipState, doorNone, noEndorsements, CHIPS } from './model/lens';
 
@@ -48,7 +48,7 @@ export function resetUI(): void {
   // The sections as you left them on this ballot (S.b.secs, saved with it).
   const secs = S.b.secs || noSections();
   u.folded = new Set(secs.folded); u.unfolded = new Set(secs.unfolded); u.reveal = new Set(secs.reveal);
-  u.noteOpen.clear(); u.reader = null; u.sheet = null; u.sheetFrom = null; u.sheetBack = null; u.addrOpen = false; u.addrMsg = null; u.addrFail = ''; u.addrFound = null; u.addrWhich = null; u.saveOpen = false; u.copyFallback = null; u.bulk = null;
+  u.noteOpen.clear(); u.reader = null; u.sheet = null; u.sheetFrom = null; u.sheetBack = null; u.addrOpen = false; u.addrMsg = null; u.addrFail = ''; u.addrFound = null; u.addrWhich = null; u.saveOpen = false; u.copyFallback = null; u.bulk = null; u.addrFilled = null; u.lensEmptied = false;
   u.resume = false;
   u.open.delete('voted');
 }
@@ -489,7 +489,28 @@ export async function useMatch(r: GeoResult): Promise<void> {
    page, under the place line) until a reload or another ballot; the address itself is never kept. */
 export function applyGeo(r: GeoResult): void {
   const b = S.ballot!;
+  const was = { districts: { ...S.b.districts }, mine: [...(S.b.mine || [])] };
   S.b.addrNote = addrSummary(setFromAddress(b, S.b, r));
+  // The fill ran on this ballot: the races the address just put on it get it too, by the same rules
+  // (the party's candidates, then where your sources agree), in the same Undo, so the order you did
+  // things in doesn't leave Congress blank (UX walk, Oct 20).
+  S.ui.addrFilled = null;
+  if (S.view === 'ballot' && fillStands()) {
+    const added = new Set([
+      ...Object.entries(S.b.districts).filter(([k, v]) => v !== was.districts[k] && v !== 'none' && v !== '*').map(([, v]) => v),
+      ...(S.b.mine || []).filter((id) => !was.mine.includes(id)),
+    ]);
+    const plan = planSetup(S.b.party);
+    const fills = plan.fills.filter((f) => added.has(f.id));
+    const live = canUndo();
+    const n = fills.length ? applyFills(fills, true) : 0;
+    if (n) {
+      const p = plan.party ? fills.filter((f) => plan.party!.fills.includes(f)).length : 0;
+      const from = p === n ? `with ${S.b.party} candidates` : p ? `from your party and your sources` : 'from your sources';
+      S.ui.addrFilled = `Filled ${n === 1 ? (added.size === 1 ? 'it' : '1 of them') : n === added.size ? (n === 2 ? 'both' : `all ${n}`) : `${n} of them`} ${from}.`;
+      S.ui.bulk = String((live && S.ui.bulk ? Number(S.ui.bulk) : 0) + n);
+    }
+  }
   S.ui.addrFound = tidyAddress(r.matched) || null;
   S.ui.addrOpen = false;
   S.ui.addrMsg = null;

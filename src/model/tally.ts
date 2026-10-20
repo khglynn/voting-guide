@@ -237,7 +237,7 @@ function lineupUnderPick(l: Lineup, it: Item): string {
   return named ? `${named}: ${lab}` : `all ${w.length}: ${lab}`;
 }
 
-/* How a filled row's verdict names its fill, in the few words the column has room for (Kevin, Oct 21:
+/* How a filled row's verdict names its fill, in the few words the column has room for (Kevin, Oct 20:
    "Filled from your sources" ran long beside the pick): "From your sources" when two or more agreed,
    the one source's name when it was one ("From Knock LA"), so a single paper's pick never reads like
    the agreement of several. The saved reason lists the sources by short name, and a list that is

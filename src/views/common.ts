@@ -28,7 +28,7 @@ export const HIDE = 'Hide races I’ve decided';
 export const SHOW_ENDS = 'Show endorsements';
 
 /* The credit: Kevin's name, linked to his site, and a thank-you coffee while that has a link (Kevin,
-   Oct 21: "Buy Kevin a thank-you coffee", the whole line the link). The first page names him in its
+   Oct 20: "Buy Kevin a thank-you coffee", the whole line the link). The first page names him in its
    small print ("where Kevin HG’s friends live"); "How this guide works" ends with "Made by Kevin HG",
    so its coffee line says "him". */
 export const BUY_ME_A_COFFEE_URL = 'https://buymeacoffee.com/kevinhg';

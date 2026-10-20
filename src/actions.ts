@@ -435,6 +435,7 @@ A.note = (d) => { S.ui.noteOpen.add(d.id!); renderRow(d.id!); $(`[data-note="${C
 A.district = (d) => {
   const g = B().groups.find((x) => x.key === d.g)!;
   S.b.districts[g.key] = d.v!;
+  S.b.addrSet = (S.b.addrSet || []).filter((k) => k !== g.key); // your answer now, not the address's
   // Answering swaps the question for that district's race, opened, in the same place. "Not sure"
   // shows them all; "Not in any of these" leaves one line saying so, with Change.
   const one = d.v !== '*' && d.v !== 'none';
@@ -450,6 +451,7 @@ A['district-change'] = (d) => {
   const g = B().groups.find((x) => x.key === d.g)!;
   const ans = S.b.districts[g.key];
   delete S.b.districts[g.key];
+  S.b.addrSet = (S.b.addrSet || []).filter((k) => k !== g.key);
   if (ans && ans !== '*' && ans !== 'none') { delete S.b.picks[ans]; delete S.b.ranks[ans]; delete S.b.auto[ans]; touchUndo(ans); }
   S.ui.row = `q:${g.key}`;
   renderSection(sectionOf(B().byId.get(g.members[0])!));
@@ -496,19 +498,23 @@ A.chip = (d) => {
   if (S.view !== 'ballot') {
     const on = doorBallot() ? toggleChip(B(), k) : !S.door.chips[k];
     S.door.chips[k] = on;
+    S.ui.lensEmptied = !on; // the chips stay on screen even when that was the last one
     render(['mast']);
     announce(on ? 'Turned on.' : 'Turned off.');
     return;
   }
   const on = toggleChip(B(), k);
+  S.ui.lensEmptied = !on;
   renderLens(); persist();
   announce(on ? 'Turned on.' : 'Turned off.');
 };
 A['party-off'] = () => {
+  S.ui.lensEmptied = true;
   if (S.view !== 'ballot') { S.door.party = null; if (doorBallot()) setParty(B(), null); render(['mast']); return; }
   setParty(B(), null); renderLens(); persist();
 };
 A['party-set'] = (d) => {
+  S.ui.lensEmptied = false;
   if (S.view !== 'ballot') {
     S.door.party = d.p!;
     if (doorBallot()) setParty(B(), d.p!);
@@ -537,6 +543,7 @@ A['src-default'] = () => { S.b.sources = null; S.b.party = null; persist(); rend
    every row shows just the choices; the save link carries it as an empty source list. On again, the
    newspapers and guides come back. */
 A.ends = () => {
+  S.ui.lensEmptied = false;
   if (S.view !== 'ballot') {
     // With a ballot found, the switch shows that ballot's choice (it may have its own): turn that over.
     const off = doorBallot() ? !noEndorsements() : !doorNone();

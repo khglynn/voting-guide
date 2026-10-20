@@ -30,15 +30,16 @@ export interface BallotState {
   hideDecided: boolean;              // "Hide races I've decided", on this device; never in the save link
   mine: string[];                    // "may apply" races an address lookup put on your ballot; never in the save link
   secs: SectionsShown;               // the sections and court groups you folded, opened or showed decided rows in, on this device; never in the save link
+  addrSet: string[];                 // district questions an address lookup answered (group keys), so the race says so; never the address, never in the save link
 }
 /* What you did to the ballot's sections, kept with it so a reload looks the way you left it (Kevin,
-   Oct 21): the UI's folded, unfolded and reveal sets. */
+   Oct 20): the UI's folded, unfolded and reveal sets. */
 export interface SectionsShown { folded: string[]; unfolded: string[]; reveal: string[] }
 export const noSections = (): SectionsShown => ({ folded: [], unfolded: [], reveal: [] });
 export const emptyBallotState = (zip = ''): BallotState => ({
   zip, picks: {}, ranks: {}, auto: {}, noAuto: [], notes: {}, districts: {}, notMine: [], sources: null,
   planSeen: false, offerDismissed: null, addrNote: null, party: null, ticks: [], setupDone: false, hideDecided: false, mine: [],
-  secs: noSections(),
+  secs: noSections(), addrSet: [],
 });
 
 /* View state for the ledger. Nothing here is saved, except the section sets, which persist() copies to
@@ -46,6 +47,8 @@ export const emptyBallotState = (zip = ''): BallotState => ({
 export type View = 'ballot' | 'cheat' | 'pass';
 export interface UI {
   view: View;
+  addrFilled: string | null;  // after a lookup on a filled ballot, what the fill did with the races it added ("Filled both from your sources."), for this visit
+  lensEmptied: boolean;       // you turned your last chip or party off by hand, not "Show endorsements": the chips stay so you can choose again
   open: Set<string>;          // generic disclosures ("More", what-ifs, lean basis)
   row: string | null;         // the one open row: an item id or "q:<group key>"
   page: Record<string, number>; // candidate pager per race (3 per page)
@@ -101,7 +104,7 @@ export const S = {
   prefs: { parties: null, endorsedOnly: false, foldDecided: true, autoPick: false } as Prefs,
   ui: {
     view: 'ballot', open: new Set(), row: null, page: {}, others: new Set(), folded: new Set(), unfolded: new Set(), reveal: new Set(), keep: null, beat: null,
-    noteOpen: new Set(), reader: null, sheet: null, sheetFrom: null, sheetBack: null, addrOpen: false, addrBusy: false, addrMsg: null, addrFail: '', addrFound: null, addrWhich: null, saveOpen: false, copyFallback: null, bulk: null,
+    noteOpen: new Set(), reader: null, sheet: null, sheetFrom: null, sheetBack: null, addrOpen: false, addrBusy: false, addrMsg: null, addrFail: '', addrFound: null, addrWhich: null, saveOpen: false, copyFallback: null, bulk: null, addrFilled: null, lensEmptied: false,
     setupFill: false, setupOnly: false, resume: false,
   } as UI,
   /* ?try=fresh|aunt|straight|sources: a scenario on whatever ballot opens, never saved. */
@@ -127,6 +130,7 @@ export function savedBallot(key: string): BallotState | null {
   return b ? { ...emptyBallotState(), ...b, ranks: { ...(b.ranks || {}) }, secs: { ...noSections(), ...(b.secs || {}) } } : null;
 }
 let saveTimer: number | undefined;
+let savePending = false;
 export function persist(now = false): void {
   if (S.tryMode) return; // a "try as" scenario never touches the real saved picks
   // The first page saves nothing: someone who leaves before "Show my ballot" finds it again.
@@ -142,7 +146,15 @@ export function persist(now = false): void {
     save(KEY, s);
   };
   window.clearTimeout(saveTimer);
-  if (now) run(); else saveTimer = window.setTimeout(run, 250);
+  savePending = !now;
+  if (now) run(); else saveTimer = window.setTimeout(() => { savePending = false; run(); }, 250);
+}
+/* A save still waiting when the page goes away (a reload, a closed tab, a phone switching apps) is
+   written right then, so a section folded or a pick made just before isn't lost. */
+if (typeof window !== 'undefined') {
+  const flush = () => { if (savePending) persist(true); };
+  window.addEventListener('pagehide', flush);
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') flush(); });
 }
 export function forgetLast(): void {
   if (S.tryMode) return;

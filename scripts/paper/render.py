@@ -393,7 +393,7 @@ def state_rings(code, keep=.02):
 # The pile at the foot of the first page: the same states, cut from the crowd's papers and dropped in a heap
 # that runs off the bottom of the frame and, on a phone, off both sides; on a wide screen it ends in bare desk.
 # Back to front: x, y of the state's middle, its size (the square root of its area), a turn in degrees, paper.
-# The places came from a scratch search (Oct 21, after Kevin saw the first heap crowd the left of a phone and
+# The places came from a scratch search (Oct 20, after Kevin saw the first heap crowd the left of a phone and
 # leave desk under its right side), kept out of the repo: simulated annealing over each piece's place, size
 # (within 8% of its old one) and turn, and the order they fall in, toward paper on every column of the frame's
 # bottom edge, even cover across a phone's middle 390 px with the same paper left and right of center, no desk

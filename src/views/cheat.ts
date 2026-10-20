@@ -18,8 +18,8 @@ const rankedList = (it: Item | null): string[] => (it && it.kind === 'contest' &
 const rankNote = (it: Contest): string => `Ranked choice: rank up to ${it.rank_up_to}`;
 
 const MAYBE = 'If it’s on your ballot';
-/* An unanswered district question: the ballot's own words, and a tap that takes you to it. */
-const Q_SUB = 'Depends on your district';
+/* An unanswered district question: where to find the answer, and a tap that takes you to it. */
+const Q_SUB = 'Your sample ballot shows which';
 const Q_ACT = 'Pick your district';
 
 function lines(): Line[] {

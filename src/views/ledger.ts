@@ -273,7 +273,7 @@ function entryHTML(e: Entry): string {
 /* "Hide races I've decided" hides a row once it is decided, except the one you just decided (kept
    until your next move) and the open one. render.ts uses the same rule for one-row repaints. */
 export const hiddenByOnly = (e: Entry): boolean => {
-  if (!S.ui.onlyUndecided) return false;
+  if (!S.b.hideDecided) return false;
   if (e.t === 'question') return false;
   if (e.t !== 'item') return true;
   if (e.id === S.ui.keep || e.id === S.ui.row) return false;
@@ -416,7 +416,7 @@ export function sectionHTML(sec: SectionKey, entries: Entry[]): string {
   const folded = sectionFolded(sec, entries);
   const count = sectionCount(entries);
   const done = sectionDone(entries);
-  if (folded && S.ui.onlyUndecided) return '';
+  if (folded && S.b.hideDecided) return '';
   const title = sectionTitle(sec);
   const sub = folded ? foldSummary(entries) : sectionSub(sec);
   const tools = !folded && sec === 'judicial' ? judgeToolsHTML() : !folded ? `${headsUp(`section:${sec}`).length ? `<div class="sec-tools">${headsHTML(headsUp(`section:${sec}`))}</div>` : ''}${quietNoteHTML(entries)}` : '';
@@ -486,7 +486,7 @@ export function ballotHeadHTML(): string {
 export function ballotHTML(): string {
   const by = entriesBySection();
   const secs = SECTIONS.map(([k]) => sectionHTML(k, by.get(k) || [])).join('');
-  const empty = S.ui.onlyUndecided && !decisionItems().some((i) => !i.done)
+  const empty = S.b.hideDecided && !decisionItems().some((i) => !i.done)
     ? `<p class="empty"><b>Nothing left to decide here.</b> Turn off “${HIDE}” to see everything.</p>` : '';
   return `<div class="wrap-led">${ballotHeadHTML()}</div><div class="ledger" aria-labelledby="ballot-h">${secs}${empty}</div>
     <div class="endcap wrap"><h3>That’s your whole ballot.</h3><p>Next, save your plan.</p>
@@ -543,7 +543,7 @@ export function menuHTML(where: 'toc' | 'rail'): string {
   const by = entriesBySection();
   const up = nextUp();
   const next = up ? `<button class="nv-next" data-act="next" data-k="${esc(up.key)}" data-fk="${where}-next"><span>Next up: ${esc(up.title)}</span>${ARROW}</button>` : '';
-  const only = `<button class="su-sw nv-sw" role="switch" aria-checked="${S.ui.onlyUndecided}" data-act="only" data-fk="${where}-only"><span class="su-l"><b>${HIDE}</b></span><span class="tg" aria-hidden="true"><span></span></span></button>`;
+  const only = `<button class="su-sw nv-sw" role="switch" aria-checked="${S.b.hideDecided}" data-act="only" data-fk="${where}-only"><span class="su-l"><b>${HIDE}</b></span><span class="tg" aria-hidden="true"><span></span></span></button>`;
   const row = (attrs: string, fk: string, label: string, right = '', cls = '') =>
     `<li><button class="nv${cls}" ${attrs} data-fk="${where}-${fk}"><span class="nv-t">${esc(label)}</span><span class="nv-n">${esc(right)}</span>${ARROW}</button></li>`;
   const secs = SECTIONS.map(([k]) => {

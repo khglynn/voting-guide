@@ -26,10 +26,11 @@ export interface BallotState {
   party: string | null;              // the party chosen in "A party" (for its sources and its candidates in the fill)
   ticks: string[];                   // Help your friends vote: who you've texted
   setupDone: boolean;                // step 2 ("Pick by endorsements or party") finished on this device
+  hideDecided: boolean;              // "Hide races I've decided", on this device; never in the save link
 }
 export const emptyBallotState = (zip = ''): BallotState => ({
   zip, picks: {}, ranks: {}, auto: {}, noAuto: [], notes: {}, districts: {}, notMine: [], sources: null,
-  planSeen: false, offerDismissed: null, addrNote: null, party: null, ticks: [], setupDone: false,
+  planSeen: false, offerDismissed: null, addrNote: null, party: null, ticks: [], setupDone: false, hideDecided: false,
 });
 
 /* View state for the ledger. Nothing here is saved. */
@@ -42,7 +43,6 @@ export interface UI {
   others: Set<string>;        // rows showing sources outside your lens
   folded: Set<string>;        // sections or court groups the voter folded
   unfolded: Set<string>;      // decided sections and long groups the voter opened
-  onlyUndecided: boolean;
   keep: string | null;        // a row just decided stays visible under "Hide races I've decided" until another opens
   noteOpen: Set<string>;
   reader: string | null;      // the "Full details" sheet, by item id
@@ -57,7 +57,7 @@ export interface UI {
   copyFallback: string | null;
   bulk: string | null;        // how many races the last fill from your sources filled, while its Undo is live
   setupFill: boolean;         // "Fill in my ballot with their picks" in the Edit sheet
-  setupOnly: boolean;         // "Hide races I've decided" in the Edit sheet, applied when it closes
+  setupOnly: boolean;         // "Hide races I've decided" in the Edit sheet, applied when it closes (to S.b.hideDecided)
   resume: boolean;            // "Welcome back" above the plan: once per visit to a started ballot, until any tap
 }
 
@@ -87,7 +87,7 @@ export const S = {
   b: emptyBallotState(),
   prefs: { parties: null, endorsedOnly: false, foldDecided: true, autoPick: false } as Prefs,
   ui: {
-    view: 'ballot', open: new Set(), row: null, page: {}, others: new Set(), folded: new Set(), unfolded: new Set(), onlyUndecided: false, keep: null,
+    view: 'ballot', open: new Set(), row: null, page: {}, others: new Set(), folded: new Set(), unfolded: new Set(), keep: null,
     noteOpen: new Set(), reader: null, sheet: null, sheetFrom: null, sheetBack: null, addrOpen: false, addrBusy: false, addrMsg: null, addrFail: '', saveOpen: false, copyFallback: null, bulk: null,
     setupFill: false, setupOnly: false, resume: false,
   } as UI,

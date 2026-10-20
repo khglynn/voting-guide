@@ -61,7 +61,7 @@ A.row = (d) => {
   S.ui.row = key;
   const top = rowTop(key);
   if (prev) renderRow(prev, false);
-  if (prevKeep && prevKeep !== key && S.ui.onlyUndecided) renderRow(prevKeep);
+  if (prevKeep && prevKeep !== key && S.b.hideDecided) renderRow(prevKeep);
   renderRow(key, false);
   const el = rowEl(key);
   if (top === null) { if (el) window.scrollBy(0, el.getBoundingClientRect().top - 4); }
@@ -145,10 +145,10 @@ A.jump = (d) => {
   const entries = entriesBySection().get(sec) || [];
   const t = sectionTally(entries);
   const wasFolded = !!$(`#sec-${sec}.folded`);
-  const unfilter = S.ui.onlyUndecided && t.total > 0 && t.done === t.total;
+  const unfilter = S.b.hideDecided && t.total > 0 && t.done === t.total;
   S.ui.folded.delete(sec);
   S.ui.unfolded.add(sec);
-  if (unfilter) { S.ui.onlyUndecided = false; S.ui.keep = null; renderBallot(); render(['bar']); }
+  if (unfilter) { S.b.hideDecided = false; S.ui.keep = null; renderBallot(); render(['bar']); persist(); }
   else if (wasFolded || !$(`#sec-${sec}`)) renderSection(sec);
   glideTo($(`#sec-${sec}`), 0, () => land($(`#sec-${sec}`)));
   focusFk(`sec-${sec}`);
@@ -457,7 +457,7 @@ A.picks = (_d, el) => {
   S.ui.sheetFrom = S.ui.sheet === 'toc' ? 'bar-menu' : el.dataset.fk || null;
   S.ui.sheetBack = null;
   S.ui.setupFill = false;
-  S.ui.setupOnly = S.ui.onlyUndecided;
+  S.ui.setupOnly = S.b.hideDecided;
   S.ui.sheet = 'picks';
   render(['sheet']);
   focusFk('sheet-x');
@@ -472,8 +472,8 @@ function closePicks(): void {
   render(['sheet']);
   const n = plan && plan.fills.length ? applyFills(plan.fills) : 0;
   if (n) { S.ui.bulk = String(n); S.ui.row = null; S.ui.keep = null; }
-  const onlyChanged = only !== S.ui.onlyUndecided;
-  if (onlyChanged) { S.ui.onlyUndecided = only; S.ui.keep = null; }
+  const onlyChanged = only !== S.b.hideDecided;
+  if (onlyChanged) { S.b.hideDecided = only; S.ui.keep = null; }
   flushLens(!!n || onlyChanged);
   persist();
   if (S.ui.sheetFrom) focusFk(S.ui.sheetFrom);
@@ -552,10 +552,12 @@ A.view = (d) => {
 };
 A.cheat = () => go('cheat');
 /* "Hide races I've decided", in the menu. In the rail the ballot repaints right away; under the menu
-   sheet it repaints when the sheet closes, so the switch answers at once on a 200-row ballot. */
+   sheet it repaints when the sheet closes, so the switch answers at once on a 200-row ballot. It is
+   saved with the ballot (S.b.hideDecided), so it is still on after a reload. */
 A.only = (_d, el) => {
-  S.ui.onlyUndecided = !S.ui.onlyUndecided;
+  S.b.hideDecided = !S.b.hideDecided;
   S.ui.keep = null;
+  persist();
   if (S.ui.sheet === 'toc') { markBehind(); render(['sheet', 'bar']); }
   else { renderBallot(); render(['bar']); }
   focusFk(el.dataset.fk || '');
@@ -642,7 +644,7 @@ A.basis = (d) => {
   toast(e.lean ? `${e.short}: ${LEANS[e.lean][1]}, ${how || 'basis not recorded'}. Tap “See all sources” for details.` : `${e.short}: not rated for lean.`);
 };
 A['shared-keep'] = () => { S.pending = null; render(['restore']); toast('Using the picks from your link. Change any pick as you go.'); };
-A['shared-fresh'] = () => { const zip = S.b.zip; S.b = emptyBallotState(zip); S.pending = null; render(); persist(true); toast('Started fresh. The shared picks are cleared on this device.'); };
+A['shared-fresh'] = () => { const zip = S.b.zip; const hide = S.b.hideDecided; S.b = emptyBallotState(zip); S.b.hideDecided = hide; S.pending = null; render(); persist(true); toast('Started fresh. The shared picks are cleared on this device.'); };
 A['restore-no'] = () => { S.pending = null; render(['restore']); toast('Kept the picks on this device.'); };
 
 /* ---------- cheat sheet, save link, pass it on ---------- */

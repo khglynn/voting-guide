@@ -571,7 +571,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
   {
     const { ledger } = views;
     const tally = mods.tally;
-    const reset = () => { S.ui.view = 'ballot'; S.ui.row = null; S.ui.keep = null; S.ui.unfolded = new Set(); S.ui.folded = new Set(); S.ui.onlyUndecided = false; };
+    const reset = () => { S.ui.view = 'ballot'; S.ui.row = null; S.ui.keep = null; S.ui.unfolded = new Set(); S.ui.folded = new Set(); S.b.hideDecided = false; };
     const barM = () => { const m = ledger.barHTML().match(/<span class="bar-txt"><b>(\d+)<\/b> of (\d+)/); return m ? [+m[1], +m[2]] : null; };
     const bandSum = () => bl.SECTIONS.reduce((n, [k]) => { const t = ledger.sectionTally(bl.entriesBySection().get(k) || []); return [n[0] + t.done, n[1] + t.total]; }, [0, 0]);
     const cheatM = () => { const m = views.cheat.cheatHTML(false).match(/(\d+) of (\d+) decided\./); return m ? [+m[1], +m[2]] : null; };
@@ -624,7 +624,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
      count includes is left there is no "Next up" and every row says "Done". */
   {
     const { ledger } = views;
-    const reset = () => { S.ui.view = 'ballot'; S.ui.row = null; S.ui.keep = null; S.ui.unfolded = new Set(); S.ui.folded = new Set(); S.ui.onlyUndecided = false; };
+    const reset = () => { S.ui.view = 'ballot'; S.ui.row = null; S.ui.keep = null; S.ui.unfolded = new Set(); S.ui.folded = new Set(); S.b.hideDecided = false; };
     for (const [stc, pid] of [['TX', 'austin-tx'], ['CA', 'los-angeles-ca']]) {
       const b = open(stc, [pid]);
       reset();
@@ -674,7 +674,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
   /* ---------- a folded section's summary starts with a capital (Orlando walk, Oct 20) ---------- */
   {
     const b = open('FL', ['orlando-fl']);
-    S.ui.view = 'ballot'; S.ui.row = null; S.ui.keep = null; S.ui.unfolded = new Set(); S.ui.folded = new Set(); S.ui.onlyUndecided = false;
+    S.ui.view = 'ballot'; S.ui.row = null; S.ui.keep = null; S.ui.unfolded = new Set(); S.ui.folded = new Set(); S.b.hideDecided = false;
     S.b.picks['fl-retention-muniz'] = 'NO';
     S.b.picks['fl-9th-circuit-group-1'] = b.byId.get('fl-9th-circuit-group-1').candidates[0].name;
     const html = views.ledger.sectionHTML('judicial', bl.entriesBySection().get('judicial') || []);

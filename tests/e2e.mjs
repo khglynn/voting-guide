@@ -340,6 +340,63 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   noErrors(page, 'Step 2 fill');
   await ctx.close();
 }
+{
+  // "Hide races I've decided" sticks (Kevin, Oct 20: "I closed the page, I reopened the page, and
+  // they were showing all the races again"). It is saved with the ballot on this device, never in
+  // the save link.
+  const { ctx, page } = await newPage();
+  await openZip(page, '80205');
+  await page.waitForSelector('.su-cov', { timeout: 15000 });
+  await tap(page, '[data-act="setup-only"]');
+  await tap(page, SETUP);
+  await page.waitForSelector('#plan', { timeout: 15000 });
+  const [id, id2] = await page.evaluate(() => [...document.querySelectorAll('#sec-measures .row[data-item][data-undecided]')].slice(0, 2).map((r) => r.dataset.item));
+  await openRow(page, id);
+  await tap(page, `#i-${id} [data-act="pick"][data-v="YES"]`);
+  await openRow(page, id2);
+  await settle(page);
+  check('Hide races sticks: a decided row leaves the page', !(await page.$(`#i-${id}`)) && !!(await page.$(`#i-${id2}.is-open`)));
+  const saved = JSON.parse((await savedVG(page)) || '{}');
+  check('Hide races sticks: saved with the ballot', Object.values(saved.ballots || {}).some((b) => b.hideDecided === true), JSON.stringify(Object.values(saved.ballots || {}).map((b) => b.hideDecided)));
+  await page.reload();
+  await page.waitForSelector('#plan', { timeout: 15000 });
+  await page.waitForTimeout(150);
+  check('Hide races sticks: after a reload the decided row is still hidden', !(await page.$(`#i-${id}`)) && !(await page.$('.ledger .row[data-item]:not([data-undecided])')) && /^1 of /.test(await text(page, '.bar-txt')), await text(page, '.bar-txt'));
+  await menu(page);
+  check('Hide races sticks: after a reload the menu\'s switch is on', (await page.getAttribute('.sheet-panel [data-act="only"]', 'aria-checked')) === 'true');
+  await tap(page, '.sheet-panel [data-fk="sheet-x"]');
+  await edit(page);
+  check('Hide races sticks: and so is the Edit sheet\'s', (await page.getAttribute('.sheet-panel [data-act="setup-only"]', 'aria-checked')) === 'true');
+  await tap(page, '.sheet-panel [data-fk="sheet-x"]');
+  await settle(page);
+  // A save link opened on this device keeps this device's setting; on a fresh device it starts off.
+  await tap(page, '.foot [data-act="cheat"]');
+  await tap(page, '[data-act="save-open"]');
+  const link = await page.inputValue('.save-url');
+  check('Hide races sticks: the save link carries no new field', /^[^#]*#v[12]~CO~denver-co~80205~[^~]*~[^~]*~[^~]*~[^~]*$/.test(link), link.replace(/^[^#]*/, ''));
+  await page.goto(linkHere(link));
+  await page.waitForSelector('#plan', { timeout: 15000 });
+  await page.waitForTimeout(150);
+  check('Hide races sticks: your own save link on this device keeps it on', !(await page.$(`#i-${id}`)));
+  const fresh = await newPage();
+  await fresh.page.goto(linkHere(link));
+  await fresh.page.waitForSelector('#plan', { timeout: 15000 });
+  await fresh.page.waitForTimeout(150);
+  check('Hide races sticks: on a fresh device the link opens with it off', !!(await fresh.page.$(`#i-${id}`)));
+  noErrors(fresh.page, 'Hide races sticks, fresh device');
+  await fresh.ctx.close();
+  // Turned off from the menu, it stays off after a reload too.
+  await menu(page);
+  await tap(page, '.sheet-panel [data-act="only"]');
+  await tap(page, '.sheet-panel [data-fk="sheet-x"]');
+  await settle(page);
+  await page.reload();
+  await page.waitForSelector('#plan', { timeout: 15000 });
+  await page.waitForTimeout(150);
+  check('Hide races sticks: turned off in the menu, it stays off after a reload', !!(await page.$(`#i-${id}`)));
+  noErrors(page, 'Hide races sticks');
+  await ctx.close();
+}
 
 /* ---------- Denver 80205: the plan strip, the lens, rows, picks, fills, the save link ---------- */
 {

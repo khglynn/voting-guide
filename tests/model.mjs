@@ -178,6 +178,38 @@ function roundTrip(name, stCode, places, mutate) {
   check('golden: the v1 link is byte for byte what v2 wrote', got === GOLD, got);
   b.notMine = [];
   check('golden: an empty notMine adds nothing to the link', st.encodeShare(ballot, b) === GOLD);
+  // "Hide races I've decided" (Oct 20) is saved on this device only: the link is the same either way.
+  b.hideDecided = true;
+  check('golden: "Hide races I\'ve decided" adds nothing to the link', st.encodeShare(ballot, b) === GOLD);
+  check('hideDecided: a link never brings it, so a new ballot from a link starts with it off', st.decodeShare(ballot, head(GOLD)).state.hideDecided === false);
+}
+
+/* ---------- 2b. saved state: a field added since a save is back-filled; the new one is kept ---------- */
+{
+  // A tiny localStorage for util.load and util.save (the model has no browser).
+  const mem = new Map();
+  const had = Object.getOwnPropertyDescriptor(globalThis, 'window');
+  Object.defineProperty(globalThis, 'window', { configurable: true, writable: true, value: { localStorage: { getItem: (k) => (mem.has(k) ? mem.get(k) : null), setItem: (k, v) => { mem.set(k, String(v)); } }, setTimeout, clearTimeout } });
+  try {
+    // A ballot saved before hideDecided existed (the live site's shape on Oct 19).
+    const old = { zip: '80226', picks: { 'co-amendment-81': 'NO' }, ranks: {}, auto: {}, noAuto: [], notes: {}, districts: {}, notMine: [], sources: null, planSeen: true, offerDismissed: null, addrNote: null, party: null, ticks: [], setupDone: true };
+    mem.set('vg2', JSON.stringify({ v: 1, last: { key: 'CO|lakewood-co', zip: '80226' }, prefs: st.S.prefs, ballots: { 'CO|lakewood-co': old } }));
+    const back = st.savedBallot('CO|lakewood-co');
+    check('hideDecided: an older save reads it as off, with every pick kept', !!back && back.hideDecided === false && back.picks['co-amendment-81'] === 'NO' && back.setupDone === true, JSON.stringify(back));
+    // Turned on, it is saved with that ballot and comes back on.
+    const ballot = open('CO', ['lakewood-co'], back);
+    const view = st.S.view;
+    st.S.view = 'ballot';
+    st.S.b.hideDecided = true;
+    st.persist(true);
+    st.S.view = view;
+    const again = st.savedBallot(ballot.key);
+    check('hideDecided: turned on, it is saved with the ballot and reads back on', !!again && again.hideDecided === true && again.picks['co-amendment-81'] === 'NO', JSON.stringify(again && again.hideDecided));
+    check('hideDecided: the save link from that ballot is unchanged', st.encodeShare(ballot, again) === st.encodeShare(ballot, { ...again, hideDecided: false }));
+  } finally {
+    if (had) Object.defineProperty(globalThis, 'window', had); else delete globalThis.window;
+    st.S.b = st.emptyBallotState('');
+  }
 }
 
 /* ---------- 3. normalizeRanks ---------- */

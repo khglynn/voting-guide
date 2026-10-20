@@ -132,6 +132,7 @@ function applyDoor(b: Ballot): void {
    choices kept for the next new ZIP become the ones on screen. A chip this ballot hides (no group
    of that kind made picks here) keeps what it was. */
 function doorFromBallot(b: Ballot): void {
+  S.door.only = S.b.hideDecided;
   if (noEndorsements()) { S.door.chips = { papers: false, progressive: false, conservative: false }; S.door.party = null; return; }
   for (const c of CHIPS) {
     const st = chipState(b, c.key);
@@ -182,6 +183,8 @@ async function loadBallot(st: string, placeIds: string[], zip: string, opts: Ope
     if (opts.share && !S.tryMode) {
       const { state, dropped } = decodeShare(ballot, opts.share);
       state.setupDone = true; // a ballot that came from a link never asks step 2, even after a reload
+      // "Hide races I've decided" isn't in the link: a link opened on this device keeps this device's.
+      state.hideDecided = !!existing && existing.hideDecided;
       normalizeRanks(ballot, state);
       const n = countPicks(state);
       const m = existing ? countPicks(existing) : 0;
@@ -304,7 +307,8 @@ export async function showBallot(): Promise<{ n: number; plan: ReturnType<typeof
   // A fill runs once: back on the first page later, the switch is off, so it can't refill races
   // you've since cleared.
   if (plan) S.door.fill = false;
-  S.ui.onlyUndecided = S.door.only && !S.tryMode && decisionItems().some((i) => !i.done);
+  // Saved with the ballot, so a reload, a save link or a later visit on this device keeps it.
+  S.b.hideDecided = S.door.only && !S.tryMode;
   S.ui.row = null; S.ui.keep = null;
   S.ui.bulk = n ? String(n) : null;
   S.b.setupDone = true;

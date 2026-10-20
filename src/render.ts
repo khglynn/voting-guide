@@ -13,6 +13,7 @@ import { cheatSectionHTML, cheatHTML } from './views/cheat';
 import { passHTML } from './views/pass';
 import { trustHTML } from './views/trust';
 import { readerHTML } from './views/reader';
+import { foldAway, glideTo, sheetIn, sheetOut, land } from './motion';
 
 export type Region = 'mast' | 'restore' | 'plan' | 'ballot' | 'cheat' | 'pass' | 'trust' | 'bar' | 'sheet' | 'print';
 export const ALL: Region[] = ['mast', 'restore', 'plan', 'ballot', 'cheat', 'pass', 'trust', 'bar', 'sheet'];
@@ -98,12 +99,23 @@ function patchDoor(el: HTMLElement): boolean {
   return true;
 }
 
+/* Only a sheet coming up over the page, or going away, moves (motion.ts). A repaint of the open one,
+   or one sheet swapped for another (the Edit sheet and all sources), stays still. */
+function paintSheet(el: HTMLElement): void {
+  const was = !!el.firstElementChild;
+  const next = html.sheet();
+  if (was && !next) sheetOut(el);
+  el.innerHTML = next;
+  if (next && !was) sheetIn(el);
+}
+
 export function render(regions: Region[] = ALL): void {
   withFocusKept(() => {
     for (const r of regions) {
       const el = $(`#r-${r}`);
       if (!el) continue;
       if (r === 'mast' && patchDoor(el)) continue;
+      if (r === 'sheet') { paintSheet(el); continue; }
       el.innerHTML = html[r]();
     }
     document.body.classList.toggle('has-bar', shown());
@@ -136,35 +148,53 @@ export function renderSection(sec: SectionKey): void {
 }
 export function renderBallot(): void { anchored(() => render(['ballot'])); }
 
-/* One row (an item or a district question), in place; its section's count follows. */
-export function renderRow(key: string | null, counts = true): void {
-  if (!key || S.ui.view !== 'ballot') return;
+/* One row (an item or a district question), in place; its section's count follows. `shut`: the
+   row was open and now closes, so its old panel folds away under the header (motion.ts), and the
+   fold's animation comes back for whatever moves with it. */
+export function renderRow(key: string | null, counts = true, shut = false): Animation | null {
+  if (!key || S.ui.view !== 'ballot') return null;
   const b = S.ballot!;
+  const old = shut ? rowEl(key)?.querySelector<HTMLElement>(':scope > .ob') || null : null;
+  const h = old ? old.getBoundingClientRect().height : 0;
+  const fold = (): Animation | null => { const el = rowEl(key); return old && el && !el.classList.contains('is-open') ? foldAway(el, old, h) : null; };
   if (key.startsWith('q:')) {
     const g = b.groups.find((x) => `q:${x.key}` === key);
     if (g) renderSection(sectionOf(b.byId.get(g.members[0])!));
-    return;
+    return fold();
   }
   const it = b.byId.get(key);
-  if (!it) return;
+  if (!it) return null;
   // Under "Only undecided", a row that is now decided leaves: repaint its section with the
   // same filter the full render uses, held in place.
-  if (hiddenByOnly({ t: 'item', id: key })) { anchored(() => renderSection(sectionOf(it))); return; }
+  if (hiddenByOnly({ t: 'item', id: key })) { anchored(() => renderSection(sectionOf(it))); return null; }
   const el = $(`#i-${CSS.escape(key)}`);
-  if (!el || !el.classList.contains('row') || el.classList.contains('is-off')) { renderSection(sectionOf(it)); return; }
+  if (!el || !el.classList.contains('row') || el.classList.contains('is-off')) { renderSection(sectionOf(it)); return fold(); }
   withFocusKept(() => { el.outerHTML = rowHTML(it); });
-  if (!counts) return;
+  if (!counts) return fold();
   const sec = sectionOf(it);
   const entries = entriesBySection().get(sec) || [];
-  // Fold state changed (the section is now complete, say): repaint the section, held in place.
+  // Fold state changed (the section is now complete, say): repaint the section. A section that
+  // just finished folds to its band; a band that had scrolled off the top comes back to the top,
+  // so you see the section done and what comes next, and the band is marked.
   const isFolded = !!document.querySelector(`#sec-${sec}.folded`);
-  if (sectionFolded(sec, entries) !== isFolded) { anchored(() => renderSection(sec), `sec-${sec}`); return; }
+  if (sectionFolded(sec, entries) !== isFolded) {
+    const band = $(`#sec-${sec}`);
+    const top = band ? band.getBoundingClientRect().top : 0;
+    anchored(() => renderSection(sec), `sec-${sec}`);
+    const now = $(`#sec-${sec}`);
+    if (now && now.classList.contains('folded')) {
+      if (top < 0) window.scrollBy(0, now.getBoundingClientRect().top);
+      land(now);
+    }
+    return null;
+  }
   const count = document.querySelector(`#sec-${sec} .sec-count`);
   if (count) count.textContent = sectionCount(entries);
   for (const [k, c] of groupCounts(sec)) {
     const g = document.querySelector(`#sec-${sec} [data-act="grp"][data-g="${CSS.escape(k)}"] .grp-ct`);
     if (g) g.textContent = c;
   }
+  return fold();
 }
 export const rowEl = (key: string): HTMLElement | null => {
   if (key.startsWith('q:')) { const g = S.ballot!.groups.find((x) => `q:${x.key}` === key); return g ? $(`#${qId(g)}`) : null; }
@@ -216,10 +246,26 @@ export function flushLens(force = false): void {
   if (S.ballot && S.view === 'ballot') anchored(() => render(['ballot', 'bar']));
 }
 
-/* Bring a row into view near the top. Nothing sticks at the top of the page. */
-export function scrollRowIntoView(key: string, force = false): void {
+/* Bring a row into view near the top, gliding there (motion.ts); `then` runs where it lands.
+   Nothing sticks at the top of the page. */
+export function scrollRowIntoView(key: string, force = false, then?: () => void): void {
   const el = rowEl(key);
   if (!el) return;
   const r = el.getBoundingClientRect();
-  if (force || r.top < 0 || r.top > window.innerHeight * 0.4) window.scrollBy(0, r.top - 4);
+  if (force || r.top < 0 || r.top > window.innerHeight * 0.4) glideTo(el, 4, then);
+  else then?.();
+}
+/* Where a row's header is on screen, while any of it is in view; null when it isn't. */
+export function rowTop(key: string): number | null {
+  const el = rowEl(key);
+  if (!el) return null;
+  const r = el.getBoundingClientRect();
+  return r.bottom > 0 && r.top < window.innerHeight ? r.top : null;
+}
+/* Put a row's header back at `top` on screen, in the same frame, after content above it changed. */
+export function holdRow(key: string, top: number): void {
+  const el = rowEl(key);
+  if (!el) return;
+  const d = el.getBoundingClientRect().top - top;
+  if (Math.abs(d) >= 0.5) window.scrollBy(0, d);
 }

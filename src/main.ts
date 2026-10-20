@@ -26,9 +26,10 @@ function fire(el: HTMLElement): void {
   lastTap = Date.now();
 }
 /* After a tap has fired, cancel the touch's follow-up mouse events: the page may have
-   re-rendered under the finger, and a stray mousedown there would pull focus away. */
+   re-rendered under the finger, and a stray mousedown there would pull focus away. A control the
+   tap moved into a closing sheet or panel (motion.ts, [data-husk]) counts as the control it was. */
 const cancelFollowUp = (e: Event): void => {
-  if (Date.now() - lastTap < 80 && (e.target as HTMLElement).closest('[data-act]')) e.preventDefault();
+  if (Date.now() - lastTap < 80 && (e.target as HTMLElement).closest('[data-act], [data-husk]')) e.preventDefault();
 };
 document.addEventListener('pointerdown', (e) => {
   if (e.button !== 0) return;

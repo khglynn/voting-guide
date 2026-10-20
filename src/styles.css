@@ -370,8 +370,21 @@ b, strong { font-weight: 600; }
 .vd.off .linkbtn { font-size: 13px; margin: -12px 0; }
 .vd.done .m { background: var(--gold); color: #1F2623; padding: 2px 7px 1px; border-radius: 1px; }
 .vd.done .s { color: var(--muted); }
-.row.flash .vd.done .m { animation: press .45s ease-out; }
-@keyframes press { 0% { transform: scale(1.08); box-shadow: 0 3px 6px rgba(31, 38, 35, .25); } 100% { transform: none; box-shadow: none; } }
+/* Motion (motion.ts), quiet: a pick that closes its row draws its tick in the box with the pen and
+   settles the verdict in gold. Nothing bounces. */
+.mk .ink { position: absolute; left: -1px; top: -9px; width: 26px; height: 24px; overflow: visible; color: var(--tick); pointer-events: none; }
+.mk .ink path { stroke-dasharray: 29; stroke-dashoffset: 29; animation: ink .25s cubic-bezier(.4, 0, .2, 1) .03s forwards; }
+.row.flash .mk i::after { visibility: hidden; }
+.row.flash .vd.done .m { animation: settle .28s cubic-bezier(.33, 1, .68, 1); }
+@keyframes ink { to { stroke-dashoffset: 0; } }
+@keyframes settle { from { opacity: 0; transform: translateY(-3px); } }
+/* Where a jump lands (the menu, Next up, My plan's lines, a band): a short wash that fades. */
+.row.land > .row-hd { position: relative; isolation: isolate; }
+.row.land > .row-hd::before { content: ""; position: absolute; top: 0; bottom: 0; left: -6px; right: -6px; z-index: -1; background: var(--dusk-tint); opacity: 0; animation: land 1s ease-out; pointer-events: none; }
+.sec.land > .sec-h::after { content: ""; position: absolute; top: 0; bottom: 0; right: 0; width: 640px; background: var(--on-dusk); opacity: 0; pointer-events: none;
+  -webkit-mask: var(--strip) right center / 100% 100% no-repeat; mask: var(--strip) right center / 100% 100% no-repeat; animation: land-band 1s ease-out; }
+@keyframes land { 15% { opacity: 1; } to { opacity: 0; } }
+@keyframes land-band { 15% { opacity: .2; } to { opacity: 0; } }
 .row.is-open { border-bottom: 1.5px solid var(--ink); }
 .row.is-open > .row-hd { border-bottom: 1px solid var(--rule); }
 .subhd small { display: block; font-style: normal; font-size: 13px; color: var(--muted); margin-top: 1px; }
@@ -387,7 +400,10 @@ b, strong { font-weight: 600; }
 .py { color: var(--muted); font-size: 13px; }
 
 /* ---------- open row ---------- */
-.ob { padding: 6px 0 20px; }
+.ob, .ob-gone { padding: 6px 0 20px; }
+/* A panel growing open, and the one folding away under a header that just closed (motion.ts). */
+.ob.moving, .ob-gone { overflow: hidden; overflow: clip; overflow-anchor: none; }
+.ob-gone { pointer-events: none; }
 .ob-lede { font-size: 15.5px; color: var(--ink-2); line-height: 1.45; }
 .ob-lede + .ob-lede { margin-top: 6px; }
 .ob-meta { font-size: 14px; color: var(--muted); margin-top: 8px; line-height: 1.45; }
@@ -502,7 +518,7 @@ b, strong { font-weight: 600; }
 .deeper b { display: block; font-family: var(--f-display); font-size: 19px; font-weight: 800; font-variation-settings: "wdth" 78; color: var(--print); }
 .deeper small { display: block; font-size: 13px; color: var(--muted); line-height: 1.3; }
 .deeper svg { width: 18px; height: 18px; flex: none; }
-.ob > .deeper:last-child { border-bottom: 0; margin-bottom: -20px; }
+.ob > .deeper:last-child, .ob-gone > .deeper:last-child { border-bottom: 0; margin-bottom: -20px; }
 .dq-h { font-family: var(--f-display); font-size: 22px; font-weight: 800; line-height: 1.06; color: var(--print); font-variation-settings: "wdth" 78; }
 .dq .ob-lede { margin-top: 4px; }
 .dq-help { font-size: 14px; color: var(--muted); margin-top: 10px; }
@@ -578,9 +594,11 @@ b, strong { font-weight: 600; }
 .toast button { min-height: 44px; padding: 0 12px; color: var(--on-dusk); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; flex: none; }
 
 /* ---------- sheets: more sources, party chooser ---------- */
-.scrim { position: fixed; inset: 0; background: var(--scrim); z-index: 60; }
-.sheet-panel { position: fixed; left: 0; right: 0; bottom: 0; max-height: 88vh; z-index: 61; background-color: var(--bone); background-image: var(--tile); background-size: 256px; background-blend-mode: var(--tile-blend); border-top: 2px solid var(--ink); display: flex; flex-direction: column; max-width: 640px; margin: 0 auto; padding-bottom: env(safe-area-inset-bottom, 0px); }
-.sheet-panel.short { max-height: 70vh; }
+.scrim, .scrim-gone { position: fixed; inset: 0; background: var(--scrim); z-index: 60; }
+/* A sheet on its way out (motion.ts sheetOut) keeps its look under another name, out of reach. */
+.sheet-ghost { pointer-events: none; }
+.sheet-panel, .sheet-gone { position: fixed; left: 0; right: 0; bottom: 0; max-height: 88vh; z-index: 61; background-color: var(--bone); background-image: var(--tile); background-size: 256px; background-blend-mode: var(--tile-blend); border-top: 2px solid var(--ink); display: flex; flex-direction: column; max-width: 640px; margin: 0 auto; padding-bottom: env(safe-area-inset-bottom, 0px); }
+.sheet-panel.short, .sheet-gone.short { max-height: 70vh; }
 .sheet-hd { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 16px; border-bottom: 1px solid var(--rule-2); }
 .sheet-hd h2 { font-family: var(--f-display); font-size: 22px; font-weight: 800; line-height: 1.05; font-variation-settings: "wdth" 78; color: var(--print); }
 .sheet-bd { overflow-y: auto; padding: 12px 16px 24px; overscroll-behavior: contain; }
@@ -601,7 +619,7 @@ b, strong { font-weight: 600; }
 .tg[aria-checked="true"] span::after { left: 23px; background: var(--on-dusk); }
 
 /* ---------- full read ---------- */
-.reader { position: fixed; inset: 0; z-index: 70; background-color: var(--bone); background-image: var(--tile); background-size: 256px; background-blend-mode: var(--tile-blend); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+.reader, .reader-gone { position: fixed; inset: 0; z-index: 70; background-color: var(--bone); background-image: var(--tile); background-size: 256px; background-blend-mode: var(--tile-blend); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
 .reader-bar { position: sticky; top: 0; z-index: 2; background-color: var(--bone); background-image: var(--tile); background-size: 256px; background-blend-mode: var(--tile-blend); border-bottom: 1px solid var(--rule-2); display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 0 16px; min-height: 56px; }
 .crumb { font-size: 13.5px; color: var(--muted); }
 .rd { padding-top: 22px; padding-bottom: 56px; }
@@ -752,7 +770,7 @@ body:not(.v-ballot) #r-trust { display: none; }
 @media (min-width: 700px) {
   .plan::before { width: 680px; margin-left: -340px; }
   .sec-h { overflow: visible; }
-  .sec-h::before { right: -20px; width: 680px; }
+  .sec-h::before, .sec.land > .sec-h::after { right: -20px; width: 680px; }
 }
 @media (max-width: 359px) {
   .row-hd { grid-template-columns: 26px minmax(0, 1fr) 108px 14px; }
@@ -764,7 +782,10 @@ body:not(.v-ballot) #r-trust { display: none; }
   .ends .fcta { min-width: 0; font-size: 16px; }
   .menu-btn { padding: 0 12px 0 10px; gap: 9px; }
 }
-@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; scroll-behavior: auto !important; } }
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+  .mk .ink path { stroke-dashoffset: 0; }
+}
 
 /* ---------- print: the cheat sheet, black on white ---------- */
 @media print {

@@ -5,7 +5,8 @@ import type { Contest, Item } from './types';
 import { S, persist, emptyBallotState, type View } from './state';
 import { status, sectionOf, rankMax, ordinal, chosenIds, entriesBySection, pageWalk, OTH_KEY, type SectionKey } from './ballot';
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
-import { render, renderRow, renderSection, renderSummaries, renderLens, flushLens, markBehind, renderBallot, renderAddr, rowEl, scrollRowIntoView, anchored, $ } from './render';
+import { render, renderRow, renderSection, renderSummaries, renderLens, flushLens, markBehind, renderBallot, renderAddr, rowEl, scrollRowIntoView, rowTop, holdRow, anchored, $ } from './render';
+import { growOpen, inkRow, followFold, glideTo, land, stopGlide } from './motion';
 import { openBallot, openChosen, go, openReader, runAddress, toDoor, showBallot, rechoose } from './app';
 import { judgeBatch } from './model/judges';
 import { planAgree, planParty, planJudges, planSetup, applyFills, undoFills, emptyPlan, touchUndo, type Plan } from './model/bulk';
@@ -21,34 +22,47 @@ export const A: Record<string, Act> = {};
 const B = () => S.ballot!;
 
 /* ---------- after a decision ---------- */
+/* A pick that closes its row: the panel folds up into the header, which stays where it is (or,
+   when it had scrolled off the top, comes down into view as the panel folds, motion.followFold),
+   and the tick draws itself in the box. */
 function afterPick(id: string, close = true): void {
   touchUndo(id);
-  const was = S.ui.row;
-  if (close && S.ui.row === id) { S.ui.row = null; S.ui.keep = id; }
-  renderRow(id);
+  const shut = close && S.ui.row === id;
+  if (shut) { S.ui.row = null; S.ui.keep = id; }
+  const box = shut ? rowEl(id)?.getBoundingClientRect() : undefined;
+  const fold = renderRow(id, true, shut);
   const it = B().byId.get(id);
   if (it && it.kind === 'measure') it.links.forEach((l) => renderRow(l));
   renderSummaries();
   persist();
-  if (close && was === id) {
+  if (shut) {
     const el = rowEl(id);
-    if (el) { el.classList.add('flash'); window.setTimeout(() => el.classList.remove('flash'), 900); }
+    if (el && box) followFold(el, box, fold);
+    inkRow(el);
     $(`[data-fk="row-${CSS.escape(id)}"]`)?.focus({ preventScroll: true });
   }
 }
 
 /* ---------- rows ---------- */
+/* A tapped header stays exactly where it is on screen: closing, its panel folds up into it; opening,
+   the row that was open closes at once (above it, the page scrolls by what it lost, in the same
+   frame) and this one's panel grows open beneath it. A header out of view (a keyboard, a script)
+   comes to the top first, as before. */
 A.row = (d) => {
   const key = d.id!;
   const prev = S.ui.row;
   const prevKeep = S.ui.keep;
   S.ui.keep = null;
-  if (prev === key) { S.ui.row = null; renderRow(key, false); return; }
+  stopGlide();
+  if (prev === key) { S.ui.row = null; renderRow(key, false, true); return; }
   S.ui.row = key;
+  const top = rowTop(key);
   if (prev) renderRow(prev, false);
   if (prevKeep && prevKeep !== key && S.ui.onlyUndecided) renderRow(prevKeep);
   renderRow(key, false);
-  scrollRowIntoView(key);
+  if (top === null) { const el = rowEl(key); if (el) window.scrollBy(0, el.getBoundingClientRect().top - 4); }
+  else holdRow(key, top);
+  growOpen(rowEl(key));
 };
 /* The item behind a row key: an item id, or "q:<group key>" (its first district's race). */
 const itemOfKey = (key: string): Item | undefined => {
@@ -74,7 +88,8 @@ function openAt(key: string): void {
   if (prevIt && sectionOf(prevIt) !== sec) renderSection(sectionOf(prevIt));
   renderSection(sec);
   render(['bar']); // a race opened inside the other school districts' fold claims it, so the count may change
-  scrollRowIntoView(key, true);
+  // Glide there and mark it, so the eye lands on it.
+  scrollRowIntoView(key, true, () => land(rowEl(key)));
   $(`[data-fk="row-${CSS.escape(key.startsWith('q:') ? rowEl(key)?.id || '' : key)}"]`)?.focus({ preventScroll: true });
 }
 A.goto = (d) => { openAt(d.q ? `q:${d.q}` : d.id!); };
@@ -109,7 +124,7 @@ A.jump = (d) => {
   closeMenu();
   if (S.ui.view !== 'ballot') go('ballot');
   if (d.to === 'plan') {
-    $('#plan')?.scrollIntoView({ block: 'start' });
+    glideTo($('#plan'), 12);
     focusFk('plan-k');
     return;
   }
@@ -122,7 +137,7 @@ A.jump = (d) => {
   S.ui.unfolded.add(sec);
   if (unfilter) { S.ui.onlyUndecided = false; S.ui.keep = null; renderBallot(); render(['bar']); }
   else if (wasFolded || !$(`#sec-${sec}`)) renderSection(sec);
-  $(`#sec-${sec}`)?.scrollIntoView({ block: 'start' });
+  glideTo($(`#sec-${sec}`), 0, () => land($(`#sec-${sec}`)));
   focusFk(`sec-${sec}`);
 };
 A.page = (d) => { S.ui.page[d.id!] = Number(d.v); renderRow(d.id!); $(`[data-fk="pg-${CSS.escape(d.id!)}"]`)?.focus({ preventScroll: true }); };
@@ -136,9 +151,10 @@ A.sec = (d) => {
   if (!folded && el && el.querySelector('.row[data-undecided], .row[data-q]')) {
     const next = el.querySelector<HTMLElement>('.row[data-undecided], .row[data-q]')!;
     if (next.dataset.item) { A.goto({ id: next.dataset.item }, next); return; }
-    S.ui.row = `q:${next.dataset.q}`;
+    const key = `q:${next.dataset.q}`;
+    S.ui.row = key;
     anchored(() => renderSection(s), `sec-${s}`);
-    scrollRowIntoView(S.ui.row, true);
+    scrollRowIntoView(key, true, () => land(rowEl(key)));
     return;
   }
   if (folded) { S.ui.folded.delete(s); S.ui.unfolded.add(s); } else { S.ui.unfolded.delete(s); S.ui.folded.add(s); if (S.ui.row && B().byId.get(S.ui.row) && sectionOf(B().byId.get(S.ui.row)!) === s) S.ui.row = null; }

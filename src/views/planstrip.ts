@@ -53,9 +53,12 @@ function planSub(step: Step): string[] {
   return [...runs, hours, ...id];
 }
 /* A place's early-voting hours in one line (its `hours_short`, else an `hours_note` that already
-   fits), when every place on the ballot gives the same one. */
+   fits), when every place on the ballot gives the same one and lies in one county. One county's
+   hours can't speak for a place across county lines: Austin reaches into Williamson and Hays,
+   and in Texas you vote early only in your own county. */
 function hoursLine(step: Step): string {
   if (step.phase !== 'early_before' && step.phase !== 'early_open') return '';
+  if (S.ballot!.places.some((p) => p.counties.length !== 1)) return '';
   const line = (e: PlaceEarly | undefined): string => {
     const n = (e?.hours_note || '').trim();
     return (e?.hours_short || '').trim() || (n && wordCount(n) <= 12 && sentences(n).length === 1 ? n : '');

@@ -1264,12 +1264,16 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
         const subOf = (h) => (h.match(/<p class="plan-sub">([^<]*)<\/p>/) || [])[1] || '';
         open('TX', ['austin-tx']);
         let sub = subOf(ps.planHTML());
+        // Austin reaches into Williamson and Hays, so Travis County's hours can't speak for it.
+        check('hours: Austin, across three counties, names no one county\'s hours and keeps "in your county"', !/Travis County sites/.test(sub) && /any early voting location in your county\./.test(sub) && /Bring a photo ID\.$/.test(sub), sub);
         // The hours line stands in for the step's own lines ("any early voting location", "Or vote on
         // Election Day"), so the strip reads two short sentences.
-        check('hours: Austin\'s next step says when Travis County sites are open, then to bring a photo ID, and nothing else', sub === 'Travis County sites are open 7 AM to 7 PM every day. Bring a photo ID.', sub);
-        open('FL', ['orlando-fl']);
+        const orl = open('FL', ['orlando-fl']);
         sub = subOf(ps.planHTML());
         check('hours: Orlando\'s next step says when Orange County sites are open, then to bring a photo ID, and nothing else', sub === 'Orange County sites are open 8 AM to 8 PM every day. Bring a photo ID.', sub);
+        orl.places[0] = { ...orl.places[0], counties: ['Orange', 'Seminole'] };
+        sub = subOf(ps.planHTML());
+        check('hours: the same place across two counties drops the hours line', !/Orange County sites/.test(sub) && /Bring a photo ID\.$/.test(sub), sub);
         // Without an hours line the step keeps its own lines, then the ID.
         open('FL', ['pensacola-fl']);
         sub = subOf(ps.planHTML());

@@ -900,4 +900,71 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     }
     check(`titles: every cheat-sheet title is unique on all ${views.length} ballots`, dups.length === 0, dups.slice(0, 4).join(' | '));
   }
+
+  /* ---------- common questions: quick answers with buttons (Kevin, Oct 20) ----------
+     "They should be quick answers with things that you can do." Each situation's short answer is
+     one line with up to two official buttons; the full answer, steps and source sit behind "More".
+     A state file without the short lines shows its questions as before. */
+  {
+    const ps = views.planstrip;
+    const n = (t) => String(t || '').trim().split(/\s+/).filter(Boolean).length;
+    const bad = [];
+    let shorts = 0;
+    let buttons = 0;
+    for (const s of Object.keys(INDEX.states)) {
+      const h = read(`state-${s}.json`).howto;
+      for (const x of h.situations || []) {
+        if (x.short) { shorts++; if (n(x.short) > 20) bad.push(`${s} ${x.id}: ${n(x.short)} words`); }
+        const acts = x.actions || [];
+        buttons += acts.length;
+        if (acts.length > 2 || acts.some((a) => !a.label || !/^https:\/\//.test(a.url))) bad.push(`${s} ${x.id}: buttons`);
+      }
+      const gs = h.gotcha_shorts;
+      if (gs && (gs.length !== h.gotchas.length || gs.some((g) => g && n(g) > 15))) bad.push(`${s}: gotcha_shorts`);
+      if (h.registration.register_url && !/^https:\/\/vote\.gov\/register\/[a-z-]+$/.test(h.registration.register_url)) bad.push(`${s}: register_url`);
+    }
+    check(`common questions: ${shorts} quick answers and ${buttons} buttons in the bundles, each within its limits`, bad.length === 0 && shorts > 0, bad.slice(0, 5).join(' | '));
+    const tx = read('state-TX.json').howto;
+    check('common questions: every Texas and California question and mistake has its short line', ['TX', 'CA'].every((s) => { const h = read(`state-${s}.json`).howto; return h.situations.every((x) => x.short) && h.gotcha_shorts && h.gotcha_shorts.every(Boolean); }));
+    check('common questions: Texas registers for next time at vote.gov', tx.registration.register_url === 'https://vote.gov/register/texas' && tx.situations.find((x) => x.id === 'not_registered').actions.some((a) => a.label === 'Register for next time' && a.url === tx.registration.register_url));
+
+    const saved = st.S.ui.open;
+    open('TX', ['austin-tx']);
+    st.S.ui.open = new Set(['whatif', 'wi-not_registered']);
+    let html = ps.planHTML();
+    // One question's markup: from its button to the next question's.
+    const sit = (h, id) => { const i = h.indexOf(`data-k="wi-${id}"`); if (i < 0) return ''; const j = h.indexOf('<button class="wi-q"', i); return h.slice(i, j < 0 ? undefined : j); };
+    let q = sit(html, 'not_registered');
+    check('common questions: an opened question shows its quick answer and two buttons', /class="wi-short"/.test(q) && (q.match(/class="pbtn line"/g) || []).length === 2 && /href="https:\/\/vote\.gov\/register\/texas"/.test(q) && />Register for next time</.test(q), q.slice(0, 300));
+    check('common questions: its full answer waits behind "More"', !/sorry: the Texas deadline/.test(q) && /data-k="wim-not_registered"[^>]*aria-expanded="false"[^>]*>More</.test(q));
+    st.S.ui.open.add('wim-not_registered');
+    q = sit(ps.planHTML(), 'not_registered');
+    check('common questions: "More" shows the full answer, the steps and the source', /sorry: the Texas deadline/.test(q) && /<ol>/.test(q) && /class="src"/.test(q) && />Less</.test(q));
+    html = ps.planHTML();
+    check('common mistakes: each shows its one-line fix, the full text behind its own "More"', (html.match(/class="g-short"/g) || []).length === tx.gotchas.length && !/Election Code 61\.014/.test(html) && /data-k="gm-2"/.test(html));
+    st.S.ui.open.add('gm-2');
+    check('common mistakes: "More" shows that mistake in full', /Election Code 61\.014/.test(ps.planHTML()));
+    // A state file with no short lines keeps today's display.
+    const b = open('TX', ['austin-tx']);
+    b.howto = { ...b.howto, situations: b.howto.situations.map(({ short, actions, ...r }) => r), gotcha_shorts: undefined };
+    st.S.ui.open = new Set(['whatif', 'wi-not_registered']);
+    html = ps.planHTML();
+    q = sit(html, 'not_registered');
+    check('common questions: without short lines, a question opens to its full answer as before', /sorry: the Texas deadline/.test(q) && !/wi-short|wim-/.test(q) && !/g-short/.test(html) && /<strong>Registration is closed\.<\/strong>/.test(html));
+    st.S.ui.open = saved;
+
+    // The places' one-line hours, and Austin's window adds nothing else to the plan.
+    const au = open('TX', ['austin-tx']);
+    const txEp = read('state-TX.json').howto.early_in_person;
+    check('hours: Austin and Orlando carry a one-line early voting hours note', au.places[0].early_in_person.hours_short === 'Travis County sites are open 7 AM to 7 PM every day.' && open('FL', ['orlando-fl']).places[0].early_in_person.hours_short === 'Orange County sites are open 8 AM to 8 PM every day.');
+    check('hours: Austin keeps the state window, hours note and lookup in the plan', au.howto.early_in_person.start === txEp.start && au.howto.early_in_person.end === txEp.end && au.howto.early_in_person.hours_note === txEp.hours_note && au.howto.early_in_person.lookup_url === txEp.lookup_url);
+
+    // A statewide-only ballot's sample ballot link: the state's own, else a source, else the lookup.
+    open('WA', []);
+    check('sample ballot: statewide Washington goes to VoteWA, not one county', common.sampleBallot().url === 'https://voter.votewa.gov/');
+    open('TX', ['austin-tx']);
+    check('sample ballot: a place\'s own link still wins', common.sampleBallot().url === au.places[0].sample_ballot_url);
+    open('CA', []);
+    check('sample ballot: a state with none keeps the old fallback', !!common.sampleBallot() && !read('state-CA.json').howto.sample_ballot_url);
+  }
 }

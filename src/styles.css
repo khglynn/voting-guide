@@ -191,6 +191,13 @@ b, strong { font-weight: 600; }
 .front .fine .linkbtn { margin: -12px 0; padding: 0; }
 .su-h { margin-top: 16px; font-family: var(--f-display); font-size: 22px; font-weight: 800; line-height: 1.05; font-variation-settings: "wdth" 78; color: var(--print); }
 .su-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+/* "Don't show endorsements" heads the group as a pen tick box on its own line, like the first page's
+   ticks: lighter than a chip, so the choices after it carry the weight. The whole line is the tap. */
+.su-none { flex: 1 0 100%; min-height: 40px; margin: -6px 0 -2px; display: flex; align-items: center; gap: 10px; font-size: 15px; color: var(--ink-2); text-align: left; }
+.su-none i { width: 16px; height: 16px; border: 1.3px solid var(--ink-2); border-radius: 1.5px; flex: none; position: relative; }
+.su-none[aria-pressed="true"] { color: var(--ink); }
+.su-none[aria-pressed="true"] i { border-color: var(--ink); }
+.su-none[aria-pressed="true"] i::after { content: ""; position: absolute; left: -1px; top: -9px; width: 25px; height: 23px; background: var(--ink); -webkit-mask: var(--pen-tick) center / contain no-repeat; mask: var(--pen-tick) center / contain no-repeat; }
 .su-parties { margin-top: 8px; }
 .su-cov { margin-top: 12px; padding-bottom: 14px; border-bottom: 1px solid var(--rule-2); font-size: 14.5px; color: var(--muted); }
 .su-sw { width: 100%; min-height: 52px; display: grid; grid-template-columns: minmax(0, 1fr) 52px; gap: 12px; align-items: start; padding: 12px 0 6px; text-align: left; }
@@ -685,7 +692,8 @@ b, strong { font-weight: 600; }
 /* ---------- cheat sheet ---------- */
 .back { min-height: 44px; display: inline-flex; align-items: center; gap: 6px; font-size: 14.5px; text-decoration: underline; text-underline-offset: 3px; margin-top: 8px; }
 /* The pad's sheet, for My plan and the first page's steps 1 and 2: the rendered top, a fill that
-   continues its light, and ink that stays dark because the paper stays light in dark mode. */
+   continues its light, the desk's grain over both, and ink that stays dark because the paper stays
+   light in dark mode. */
 #cheat .cheat, .pad { position: relative; isolation: isolate; margin-top: 0; padding: 40px 18px 20px; color: var(--ink);
   --ink: #1F2623; --ink-2: #3B433F; --muted: #5C645F; --faint: #6E756F; --rule: rgba(31, 38, 35, .16); --print: #2E5A50; --gold-ink: #855F06; --dusk: #2E5A50; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) #cheat .cheat, :root:not([data-theme="light"]) .pad { --muted: #4A524D; --faint: #535B56; --gold-ink: #6E4F05; } }
@@ -700,6 +708,13 @@ b, strong { font-weight: 600; }
 #cheat .sheet-top, .pad > .sheet-top { top: 0; height: 100px; overflow: hidden; overflow: clip; z-index: -1; }
 #cheat .sheet-top::before, .pad > .sheet-top::before { content: ""; position: absolute; left: 50%; top: 0; width: 640px; height: 100px; margin-left: -320px; background: var(--r-sheet) center / 640px 100px no-repeat; }
 #cheat .sheet-fill, .pad > .sheet-fill { top: 30px; bottom: 0; z-index: -2; background: var(--sheet-fill) center / 640px 100% no-repeat, var(--sheet-paper); box-shadow: var(--lie); clip-path: inset(0 -6px -6px -6px); }
+/* The desk's paper grain over the whole sheet, its torn top cut to the render's outline and the fill
+   below it, as one layer so both darken alike and no seam shows where they meet. The light stock in
+   both modes, since the sheet stays light paper. */
+#cheat .cheat::after, .pad::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: url(/paper/stock.webp) 0 0 / 256px; mix-blend-mode: multiply;
+  -webkit-mask: var(--r-sheet) center top / 640px 100px no-repeat, linear-gradient(#000 0 0) 0 100px / 100% calc(100% - 100px) no-repeat;
+  mask: var(--r-sheet) center top / 640px 100px no-repeat, linear-gradient(#000 0 0) 0 100px / 100% calc(100% - 100px) no-repeat; }
+@media print { #cheat .cheat::after, .pad::after { display: none; } }
 .cheat-head { padding: 6px 0 14px; }
 .cheat-head .kick { text-wrap: balance; }
 .cheat-head h2 { font-family: var(--f-display); font-size: 38px; font-weight: 800; line-height: .98; letter-spacing: -.006em; font-variation-settings: "wdth" 78; color: var(--print); margin-top: 4px; }
@@ -770,10 +785,12 @@ b, strong { font-weight: 600; }
 /* The covered states cut from paper and piled up at the foot of the first page (pile.webp: 1920x450, a 3x
    render drawn at 640 by 150). The first page is at least a screen tall, and the band sits on its bottom
    edge, as wide as the page; the heap is drawn at its own size in the middle, so a phone sees it run off
-   both sides and a wider screen sees all of it, ending in bare desk. Decoration only. */
-.front.mast { position: relative; min-height: 100vh; min-height: 100svh; padding-bottom: 168px; }
-.pile { position: absolute; left: 0; right: 0; bottom: 0; height: 150px; overflow: hidden; overflow: clip; pointer-events: none; }
-.pile img { position: absolute; left: 50%; bottom: 0; width: 640px; height: 150px; max-width: none; margin-left: -320px; }
+   both sides and a wider screen sees all of it, ending in bare desk. The render's bottom 18px are cut
+   off: some bottom pieces stop up to 16px short of its edge, and the heap should run off the page with
+   no desk under it (Kevin, Oct 21). Decoration only. */
+.front.mast { position: relative; min-height: 100vh; min-height: 100svh; padding-bottom: 150px; }
+.pile { position: absolute; left: 0; right: 0; bottom: 0; height: 132px; overflow: hidden; overflow: clip; pointer-events: none; }
+.pile img { position: absolute; left: 50%; bottom: -18px; width: 640px; height: 150px; max-width: none; margin-left: -320px; }
 @media print { .pile { display: none; } }
 .voted-head .kick { font-family: var(--f-display); font-size: 22px; font-weight: 800; font-variation-settings: "wdth" 78; color: var(--gold-ink); margin-top: 6px; }
 

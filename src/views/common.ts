@@ -27,11 +27,14 @@ export const HIDE = 'Hide races I’ve decided';
    reads "No endorsements shown". */
 export const NO_ENDS = 'Don’t show endorsements';
 
-/* The credit, on the first page and at the end of "How this guide works". Buy him a coffee shows
-   while this has a link. */
+/* The credit: Kevin's name, linked to his site, and Buy him a coffee while that has a link. The first
+   page names him in its small print ("where Kevin HG’s friends live"); "How this guide works" ends
+   with "Made by Kevin HG". */
 export const BUY_ME_A_COFFEE_URL = 'https://buymeacoffee.com/kevinhg';
 export const KEVIN_URL = 'https://kevinhg.com';
-export const creditHTML = (): string => ['Made by Kevin', ext(KEVIN_URL, 'kevinhg.com'), BUY_ME_A_COFFEE_URL ? ext(BUY_ME_A_COFFEE_URL, 'Buy him a coffee') : ''].filter(Boolean).join(' · ');
+export const kevinLink = (): string => ext(KEVIN_URL, 'Kevin HG');
+export const coffeeLink = (): string => (BUY_ME_A_COFFEE_URL ? ext(BUY_ME_A_COFFEE_URL, 'Buy him a coffee') : '');
+export const creditHTML = (): string => [`Made by ${kevinLink()}`, coffeeLink()].filter(Boolean).join(' · ');
 
 /* ---------- paywalled sources (Kevin, Oct 19) ----------
    A paper whose endorsements sit behind a paywall we couldn't read: the picks we only saw

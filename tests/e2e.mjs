@@ -169,12 +169,15 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('First page: the switches read "Fill in my ballot with their picks" and "Hide races I’ve decided", both off', (await text(page, '[data-act="setup-fill"] b')) === 'Fill in my ballot with their picks' && (await text(page, '[data-act="setup-only"] b')) === 'Hide races I’ve decided'
     && (await page.getAttribute('[data-act="setup-fill"]', 'aria-checked')) === 'false' && (await page.getAttribute('[data-act="setup-only"]', 'aria-checked')) === 'false');
   check('First page: before a ZIP, the fill switch says what it does', (await text(page, '[data-act="setup-fill"] small')) === 'Fills the races where they agree. Races where picks split stay open.', await text(page, '[data-act="setup-fill"] small'));
-  check('First page: "Use my address for the most accurate local results"', (await text(page, '.front [data-act="addr-open"]')) === 'Use my address for the most accurate local results', await text(page, '.front [data-act="addr-open"]'));
+  check('First page: "Use my address for a more exact ballot", on one line at phone width', (await text(page, '.front [data-act="addr-open"]')) === 'Use my address for a more exact ballot'
+    && (await page.$eval('.front [data-act="addr-open"]', (e) => e.getClientRects().length)) === 1, await text(page, '.front [data-act="addr-open"]'));
   const fine = await page.$$eval('.front .door-foot > .fine', (els) => els.map((e) => e.textContent.replace(/\s+/g, ' ').trim()));
   const cities = new Set(Object.entries(await page.evaluate(() => fetch('/data/index.json').then((r) => r.json()).then((i) => i.places))).map(([id, p]) => (p.state === 'DC' ? 'DC' : /^nyc-/.test(id) ? 'NYC' : id))).size;
-  check('First page: the small print counts cities from the index (DC and NYC count once), and the credit runs on in the same paragraph', fine.length === 1 && fine[0] === `Covers ${cities} cities where Kevin’s friends live. Ask for yours · Made by Kevin · kevinhg.com · Buy him a coffee`, `${fine.join(' / ')} (index says ${cities})`);
-  check('First page: kevinhg.com and Buy him a coffee link out', !!(await page.$('.door-foot .fine a[href="https://kevinhg.com"]')) && !!(await page.$('.door-foot .fine a[href="https://buymeacoffee.com/kevinhg"]')));
+  check('First page: the small print counts cities from the index (DC and NYC count once) and names Kevin once, with the coffee link in the same paragraph', fine.length === 1 && fine[0] === `Covers ${cities} cities where Kevin HG’s friends live. Ask for yours · Buy him a coffee`, `${fine.join(' / ')} (index says ${cities})`);
+  check('First page: Kevin HG links to kevinhg.com, and Buy him a coffee links out', (await text(page, '.door-foot .fine a[href="https://kevinhg.com"]')) === 'Kevin HG' && !!(await page.$('.door-foot .fine a[href="https://buymeacoffee.com/kevinhg"]')));
   check('First page: nothing in all caps', (await upperCased(page)).length === 0);
+  const pile = await page.$eval('.pile', (p) => { const b = p.getBoundingClientRect(), i = p.querySelector('img').getBoundingClientRect(); return { band: Math.round(b.bottom + scrollY), img: Math.round(i.bottom + scrollY), page: document.documentElement.scrollHeight }; });
+  check('First page: the paper states sit on the bottom edge and run off it, with no desk under them', pile.band === pile.page && pile.img >= pile.band + 16, JSON.stringify(pile));
   await noSideScroll(page, 'First page');
   await tap(page, '[data-fk="browse"]');
   check('First page: the city count opens the list of places', (await page.$$('.browse-list [data-act="choose-place"]')).length > 30);
@@ -239,7 +242,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await settle(page);
   check('How this guide works: its row opens it, focus kept on the row', (await page.getAttribute('#how [data-act="open"][data-k="how"]', 'aria-expanded')) === 'true' && (await focusedFk(page)) === 'how', await focusedFk(page));
   check('How this guide works: names the source for "Voting is underway in every state"', /“Voting is underway in every state”: Center for Election Innovation & Research\./.test(await text(page, '#how')) && !!(await page.$('#how a[href="https://electioninnovation.org/research/dates-for-2026-early-in-person-and-mail-voting/"]')));
-  check('How this guide works: ends with the credit and Buy him a coffee', (await text(page, '#how .how-bd > :last-child')) === 'Made by Kevin · kevinhg.com · Buy him a coffee' && !!(await page.$('#how .how-credit a[href="https://buymeacoffee.com/kevinhg"]')), await text(page, '#how .how-bd > :last-child'));
+  check('How this guide works: ends with the credit, Kevin HG linked to his site, and Buy him a coffee', (await text(page, '#how .how-bd > :last-child')) === 'Made by Kevin HG · Buy him a coffee' && (await text(page, '#how .how-credit a[href="https://kevinhg.com"]')) === 'Kevin HG' && !!(await page.$('#how .how-credit a[href="https://buymeacoffee.com/kevinhg"]')), await text(page, '#how .how-bd > :last-child'));
   await tap(page, '#how [data-act="open"][data-k="how"]');
   await settle(page);
   check('How this guide works: the row closes it again', !(await page.$('#how .how-bd')) && !(await page.$('.trust .gone')) && (await page.getAttribute('#how [data-act="open"][data-k="how"]', 'aria-expanded')) === 'false');
@@ -1243,8 +1246,10 @@ const touchAt = async (page, sel) => {
   const { ctx, page } = await newPage();
   await page.goto(`${BASE}/?today=${TODAY}`);
   await page.waitForSelector('#zip');
-  check('No endorsements: a chip in step 2 that reads "Don’t show endorsements", off to start', (await page.getAttribute('#setup [data-act="no-ends"]', 'aria-pressed')) === 'false' && (await text(page, '#setup [data-act="no-ends"]')) === 'Don’t show endorsements' && (await page.getAttribute('#setup [data-act="chip"][data-k="papers"]', 'aria-pressed')) === 'true', await text(page, '#setup [data-act="no-ends"]'));
-  check('No endorsements: it leads the chip row, with newspapers and guides still on after it', (await page.$eval('#setup .su-chips', (r) => r.firstElementChild && r.firstElementChild.dataset.act)) === 'no-ends' && (await page.$eval('#setup .su-chips', (r) => r.children[1] && r.children[1].dataset.k)) === 'papers');
+  check('No endorsements: a tick box in step 2 that reads "Don’t show endorsements", off to start, and not a chip', (await page.getAttribute('#setup [data-act="no-ends"]', 'aria-pressed')) === 'false' && (await text(page, '#setup [data-act="no-ends"]')) === 'Don’t show endorsements' && (await page.getAttribute('#setup [data-act="chip"][data-k="papers"]', 'aria-pressed')) === 'true'
+    && !(await page.$('#setup .chip[data-act="no-ends"]')), await text(page, '#setup [data-act="no-ends"]'));
+  check('No endorsements: it leads the group on its own line, with newspapers and guides still on after it', (await page.$eval('#setup .su-chips', (r) => r.firstElementChild && r.firstElementChild.dataset.act)) === 'no-ends' && (await page.$eval('#setup .su-chips', (r) => r.children[1] && r.children[1].dataset.k)) === 'papers'
+    && (await page.$eval('#setup .su-chips', (r) => r.children[0].getBoundingClientRect().bottom <= r.children[1].getBoundingClientRect().top + 1)));
   await tap(page, '#setup [data-act="no-ends"]');
   check('No endorsements: choosing it turns the other chips off and hides the fill switch', (await page.getAttribute('#setup [data-act="no-ends"]', 'aria-pressed')) === 'true' && (await page.getAttribute('#setup [data-act="chip"][data-k="papers"]', 'aria-pressed')) === 'false' && !(await page.$('#setup [data-act="setup-fill"]')) && !!(await page.$('#setup [data-act="setup-only"]')));
   await page.fill('#zip', '80205');
@@ -2183,7 +2188,7 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
   await ctx.close();
 }
 
-// The first page's "Use my address for the most accurate local results": no ZIP and no ballot yet.
+// The first page's "Use my address for a more exact ballot": no ZIP and no ballot yet.
 // Census is answered here, with made-up addresses.
 {
   const { ctx, page } = await newPage();

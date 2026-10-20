@@ -56,11 +56,11 @@ export function pickControlsHTML(inSheet = false): string {
   const chips = b ? chipsHTML()
     : CHIPS.map((c) => `<button class="chip" data-act="chip" data-k="${c.key}" aria-pressed="${S.door.chips[c.key]}" data-fk="chip-${c.key}">${TICK}${esc(c.label)}</button>`).join('');
   // "Don't show endorsements": every row shows just the choices. With it on there is nothing to fill
-  // and nothing to count, so the fill switch and the coverage line step aside. It leads the row
-  // (Kevin, Oct 20), so the chips that open more choices come after it; newspapers and guides stay
-  // the default.
+  // and nothing to count, so the fill switch and the coverage line step aside. It leads the group
+  // (Kevin, Oct 20), but as a small pen tick box on its own line rather than a chip, so it doesn't
+  // outweigh the choices after it (Kevin, Oct 21); newspapers and guides stay the default.
   const none = b ? noEndorsements() : doorNone();
-  const noneChip = `<button class="chip" data-act="no-ends" aria-pressed="${none}" data-fk="chip-none">${TICK}${NO_ENDS}</button>`;
+  const noneChip = `<button class="su-none" data-act="no-ends" aria-pressed="${none}" data-fk="chip-none"><i aria-hidden="true"></i>${NO_ENDS}</button>`;
   const cov = b && !none ? coverage() : null;
   return `<div class="su-chips" role="group" aria-labelledby="${inSheet ? 'sh-h' : 'su-h'}">${noneChip}${chips}${partyChip}${more}</div>
     ${list}

@@ -424,6 +424,17 @@ b, strong { font-weight: 600; }
 .unopp .disc::after { content: "Show"; margin-left: .3em; font-style: normal; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; color: var(--ink-2); }
 .unopp .disc[aria-expanded="true"]::after { content: "Hide"; }
 .unopp-list { padding: 0 0 10px; display: grid; gap: 4px; font-size: 14.5px; }
+/* "Not on your ballot: ..." at the bottom of the ballot, quiet like the unopposed line. */
+.offlist { padding-top: 18px; }
+.offlist .disc { width: 100%; min-height: 48px; padding: 8px 0; text-align: left; font-size: 14.5px; line-height: 1.4; color: var(--muted); border-top: 1px solid var(--rule); }
+.offlist .disc b { color: var(--ink-2); }
+.offlist .disc::after { content: "Show"; margin-left: .3em; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; color: var(--ink-2); }
+.offlist .disc[aria-expanded="true"]::after { content: "Hide"; }
+.off-list { display: grid; padding-bottom: 6px; }
+.off-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 48px; padding: 6px 0; border-top: 1px dashed var(--rule); font-size: 15px; }
+.off-t { display: grid; color: var(--muted); }
+.off-t small { font-size: 13px; }
+.off-row .linkbtn { flex: none; }
 .u-t { color: var(--muted); }
 .py { color: var(--muted); font-size: 13px; }
 

@@ -336,7 +336,7 @@ export function isMaybe(id: string): boolean {
 export const OTH_KEY = 'school|oth';
 export function otherSchools(entries: Entry[]): Entry[] {
   const b = S.ballot!;
-  const oth = entries.filter((e) => (e.t === 'item' || e.t === 'notmine') && b.mayApply.has(e.id) && b.byId.get(e.id)!.kind === 'contest' && !b.groupOf[e.id] && status(b.byId.get(e.id)!) !== 'unopposed' && !(S.b.mine || []).includes(e.id));
+  const oth = entries.filter((e) => e.t === 'item' && b.mayApply.has(e.id) && b.byId.get(e.id)!.kind === 'contest' && !b.groupOf[e.id] && status(b.byId.get(e.id)!) !== 'unopposed' && !(S.b.mine || []).includes(e.id));
   return oth.length >= 3 ? oth : [];
 }
 export const othOpen = (oth: Entry[]): boolean => S.ui.unfolded.has(OTH_KEY) || oth.some((e) => e.t === 'item' && (e.id === S.ui.row || e.id === S.ui.keep));

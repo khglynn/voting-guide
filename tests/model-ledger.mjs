@@ -1078,7 +1078,12 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     S.b.districts[dvg.key] = 'none';
     const sch = ledger.sectionHTML('school', bl.entriesBySection().get('school'));
     check('go check: answered "none", the question leaves the count and no race takes its place', bl.decisionItems().length === m0 - 1 && !dvg.members.some((id) => sch.includes(`id="i-${id}"`)), `${m0} then ${bl.decisionItems().length}`);
-    check('go check: its line says "Not on your ballot", with Change', /Del Valle ISD Trustee: Not on your ballot/.test(strip(sch)) && /data-act="district-change" data-g="[^"]*Del Valle/.test(sch));
+    // Kevin, Oct 20: a race that isn't yours leaves its section for one line at the bottom of the ballot.
+    const off = ledger.offHTML();
+    check('go check: it leaves its section for "Not on your ballot" at the bottom', !/Del Valle ISD Trustee/.test(strip(sch)) && /Not on your ballot: .*Del Valle ISD Trustee/.test(strip(off)), strip(off));
+    S.ui.open.add('off');
+    check('go check: opened, the list gives it "It’s on my ballot", which asks the question again', /data-act="district-change" data-g="[^"]*Del Valle[^"]*"[^>]*>It’s on my ballot/.test(ledger.offHTML()));
+    S.ui.open.delete('off');
     const back = st.decodeShare(a2, head(st.encodeShare(a2, S.b))).state;
     check('go check: "none" travels in the save link', back.districts[dvg.key] === 'none');
     // "No endorsements" (Kevin, Oct 20): an option, never the default. Every source off and no party;

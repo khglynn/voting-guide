@@ -5,7 +5,7 @@ import type { Contest, Item } from './types';
 import { S, persist, emptyBallotState, type View } from './state';
 import { status, sectionOf, rankMax, ordinal, chosenIds, entriesBySection, pageWalk, sameSeat, OTH_KEY, type SectionKey } from './ballot';
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
-import { render, renderRow, renderSection, renderSummaries, renderLens, flushLens, markBehind, renderBallot, renderAddr, rowEl, scrollRowIntoView, rowTop, holdRow, opensLow, anchored, $ } from './render';
+import { render, renderRow, renderSection, renderSummaries, renderOff, renderLens, flushLens, markBehind, renderBallot, renderAddr, rowEl, scrollRowIntoView, rowTop, holdRow, opensLow, anchored, $ } from './render';
 import { growOpen, inkRow, followFold, glideTo, land, stopGlide, grow, shrinkAway, collapseRow, finishCollapse } from './motion';
 import { HOW_K } from './views/trust';
 import { openBallot, openChosen, go, openReader, runAddress, reopenAddr, useMatch, toDoor, showBallot, rechoose, openSaved, fillWhy } from './app';
@@ -16,7 +16,7 @@ import { courtGroup } from './model/labels';
 import { basisWords, LEANS } from './views/common';
 import { cheatText, shareURL } from './views/cheat';
 import { messages, shareData } from './views/pass';
-import { nextUp, sectionTally, sectionFolded, hiddenByOnly, qId } from './views/ledger';
+import { nextUp, sectionTally, sectionFolded, hiddenByOnly } from './views/ledger';
 
 export type Act = (d: DOMStringMap, el: HTMLElement) => void | Promise<void>;
 export const A: Record<string, Act> = {};
@@ -445,7 +445,7 @@ A.district = (d) => {
   renderSummaries();
   persist();
   if (one) scrollRowIntoView(d.v!);
-  else if (d.v === 'none') focusFk(`dc-${qId(g)}`);
+  else if (d.v === 'none') toast('Moved to “Not on your ballot” at the bottom.');
 };
 A['district-change'] = (d) => {
   const g = B().groups.find((x) => x.key === d.g)!;
@@ -480,7 +480,8 @@ A.notmine = (d) => {
   anchored(() => renderSection(sectionOf(it)));
   renderSummaries();
   persist();
-  if (ids.length > 1) toast(`Took ${ids.length} ${it.kind === 'measure' ? 'measures' : 'races'} off your list.`);
+  // It leaves its section for the list at the bottom: say where it went.
+  toast(ids.length > 1 ? `Moved ${ids.length} ${it.kind === 'measure' ? 'measures' : 'races'} to “Not on your ballot” at the bottom.` : 'Moved to “Not on your ballot” at the bottom.');
 };
 /* "None of these are on my ballot" for the other school districts' races, all at once. */
 A['notmine-oth'] = () => {
@@ -492,9 +493,16 @@ A['notmine-oth'] = () => {
   anchored(() => renderSection('school'));
   renderSummaries();
   persist();
-  toast(`Took ${plural(ids.length, 'race')} off your list. Open the line to bring one back.`);
+  toast(`Moved ${plural(ids.length, 'race')} to “Not on your ballot” at the bottom.`);
 };
-A['notmine-undo'] = (d) => { S.b.notMine = S.b.notMine.filter((x) => x !== d.id); anchored(() => renderSection(sectionOf(B().byId.get(d.id!)!))); renderSummaries(); persist(); };
+/* "It's on my ballot", from the "Not on your ballot" list: back in its section, where the page goes. */
+A['notmine-undo'] = (d) => {
+  S.b.notMine = S.b.notMine.filter((x) => x !== d.id);
+  renderSection(sectionOf(B().byId.get(d.id!)!));
+  renderSummaries();
+  persist();
+  scrollRowIntoView(d.id!);
+};
 
 /* ---------- the lens ----------
    Chips and sources apply as you tap. On the ballot they live in the Edit sheet, and the ballot
@@ -719,6 +727,7 @@ A.open = (d, el) => {
   const k = d.k!;
   if (k === HOW_K) { toggleHow(); return; }
   S.ui.open.has(k) ? S.ui.open.delete(k) : S.ui.open.add(k);
+  if (k === 'off') { renderOff(); return; }
   const row = el.closest<HTMLElement>('.row[data-item]');
   if (row && S.ui.view === 'ballot') { renderRow(row.dataset.item!); return; }
   const region = el.closest<HTMLElement>('[id^="r-"]');

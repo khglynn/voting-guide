@@ -675,15 +675,21 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('District question: the last answer is "I’m not in Del Valle ISD"', last === 'I’m not in Del Valle ISD', last);
   const m0 = Number(((await text(page, '.bar-txt')).match(/of (\d+)/) || [])[1]);
   await tap(page, `.row[data-q="${dv}"] [data-act="district"][data-v="none"]`);
-  check('District question: "I’m not in Del Valle ISD" leaves one line and takes the race off the count', /Del Valle ISD Trustee: Not on your ballot/.test(await text(page, '#sec-school')) && Number(((await text(page, '.bar-txt')).match(/of (\d+)/) || [])[1]) === m0 - 1);
-  check('District question: focus lands on its Change', /^dc-/.test(await focusedFk(page)), await focusedFk(page));
+  // Kevin, Oct 20: what isn't on your ballot leaves its section for one line at the bottom.
+  check('District question: "I’m not in Del Valle ISD" moves it to "Not on your ballot" at the bottom and off the count', !/Del Valle ISD Trustee/.test(await text(page, '#sec-school')) && /^Not on your ballot: .*Del Valle ISD Trustee/.test(await text(page, '#off .disc')) && Number(((await text(page, '.bar-txt')).match(/of (\d+)/) || [])[1]) === m0 - 1, await text(page, '#off .disc'));
+  check('District question: a toast says where it went', /Moved to “Not on your ballot” at the bottom/.test(await text(page, '.toast')), await text(page, '.toast'));
+  await tap(page, '#off [data-act="open"][data-k="off"]');
+  check('Not on your ballot: opened, it lists the race with "It’s on my ballot"', /It’s on my ballot/.test(await text(page, `#off [data-act="district-change"][data-g="${dv}"]`)));
+  await tap(page, `#off [data-act="district-change"][data-g="${dv}"]`);
+  check('Not on your ballot: "It’s on my ballot" asks the question again in its section', !!(await page.$(`#sec-school .row[data-q="${dv}"]`)) && !(await page.$(`#off [data-g="${dv}"]`)));
+  await tap(page, `.row[data-q="${dv}"] [data-act="district"][data-v="none"]`).catch(async () => { await openRow(page, `q:${dv}`); await tap(page, `.row[data-q="${dv}"] [data-act="district"][data-v="none"]`); });
   const council = await page.evaluate(() => [...document.querySelectorAll('.row[data-q]')].map((r) => r.dataset.q).find((k) => /City Council/.test(k)));
   await openRow(page, `q:${council}`);
   check('District question: with no one district to name, "Not in any of these"', (await text(page, `.row[data-q="${council}"] [data-act="district"][data-v="none"]`)) === 'Not in any of these');
   // "It's not on my ballot" hides the race.
   await openRow(page, 'tx-senate-21');
   await tap(page, '#i-tx-senate-21 [data-act="notmine"]:not([data-all])');
-  check('Maybe box: It’s not on my ballot hides the race', /Not on your ballot/.test(await text(page, '#i-tx-senate-21')));
+  check('Maybe box: It’s not on my ballot moves the race to the list at the bottom', !(await page.$('#i-tx-senate-21')) && !!(await page.$('#off-tx-senate-21')), await text(page, '#off .disc'));
   check('Go check: nothing in all caps', (await upperCased(page)).length === 0);
   await noSideScroll(page, 'Go check');
   page.errors = page.errors.filter((e) => !/Failed to load resource|ERR_FAILED/.test(e));
@@ -1503,7 +1509,7 @@ for (const [zip, label, id, btn, href, full] of [
   await openRow(page, 'tx-kleinisd-trustee-1');
   check('Houston: a "May apply" race can hide every seat that shares its scope', !!(await page.$('#i-tx-kleinisd-trustee-1 [data-act="notmine"][data-all="1"]')));
   await tap(page, '#i-tx-kleinisd-trustee-1 [data-act="notmine"][data-all="1"]');
-  check('Houston: both Klein ISD seats now say "Not on your ballot"', !!(await page.$('#i-tx-kleinisd-trustee-1.is-off')) && !!(await page.$('#i-tx-kleinisd-trustee-2.is-off')));
+  check('Houston: both Klein ISD seats leave the ballot for "Not on your ballot"', !(await page.$('#i-tx-kleinisd-trustee-1')) && !(await page.$('#i-tx-kleinisd-trustee-2')) && /Klein ISD Trustee/.test(await text(page, '#off .disc')), await text(page, '#off .disc'));
   await tap(page, '[data-act="cheat"]');
   await tap(page, '[data-act="save-open"]');
   const link = await page.inputValue('.save-url');
@@ -1511,8 +1517,7 @@ for (const [zip, label, id, btn, href, full] of [
   const fresh = await newPage();
   await fresh.page.goto(linkHere(link));
   await fresh.page.waitForSelector('#plan', { timeout: 15000 });
-  if (await fresh.page.$('#sec-school .grp.oth [data-act="grp"][aria-expanded="false"]')) await tap(fresh.page, '#sec-school .grp.oth [data-act="grp"]');
-  check('Houston link: those races come back as not on your ballot', !!(await fresh.page.$('#i-tx-kleinisd-trustee-1.is-off')));
+  check('Houston link: those races come back in "Not on your ballot"', !(await fresh.page.$('#i-tx-kleinisd-trustee-1')) && /Klein ISD Trustee/.test(await text(fresh.page, '#off .disc')), await text(fresh.page, '#off .disc'));
   await fresh.ctx.close();
   noErrors(page, 'Houston');
   await ctx.close();
@@ -1797,7 +1802,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   // Counting (Oct 20): the fold's races count only once you claim them, and opening it does.
   check('Austin: opening the fold adds its races to the bar\'s count', (await barM()) === m0 + shown, `${m0} then ${await barM()} with ${shown} shown`);
   await tap(page, '[data-act="notmine-oth"]');
-  check('Austin: "None of these" takes them all off and folds the line', /none on your ballot/.test(await text(page, '#sec-school .grp.oth')), await text(page, '#sec-school .grp.oth'));
+  check('Austin: "None of these" moves them all to "Not on your ballot" and the line goes', !(await page.$('#sec-school .grp.oth')) && /^Not on your ballot: /.test(await text(page, '#off .disc')), await text(page, '#off .disc'));
   check('Austin: and the bar\'s count drops back', (await barM()) === m0, `${m0} vs ${await barM()}`);
   noErrors(page, 'Austin pass and fold');
   await ctx.close();

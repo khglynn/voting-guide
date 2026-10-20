@@ -6,7 +6,7 @@ import { S } from './state';
 import { entriesBySection, sectionOf, type SectionKey } from './ballot';
 import { mastHTML, restoreHTML } from './views/mast';
 import { planHTML } from './views/planstrip';
-import { ballotHTML, sectionHTML, rowHTML, barHTML, qId, ballotHeadHTML, sectionFolded, countHTML, groupCounts, hiddenByOnly, tocSheetHTML } from './views/ledger';
+import { ballotHTML, sectionHTML, rowHTML, barHTML, qId, ballotHeadHTML, sectionFolded, countHTML, groupCounts, hiddenByOnly, tocSheetHTML, offHTML } from './views/ledger';
 import { sourcesSheetHTML, partySheetHTML } from './views/lens';
 import { picksSheetHTML } from './views/setup';
 import { cheatSectionHTML, cheatHTML } from './views/cheat';
@@ -220,9 +220,15 @@ export function renderAddr(): void {
 
 /* The parts that summarize the whole ballot: the bar (and its menu), then the ballot head. */
 let lazyTimer: number | undefined;
+/* The "Not on your ballot" line at the bottom of the ballot. */
+export function renderOff(): void {
+  const el = $('#r-off');
+  if (el && S.ui.view === 'ballot') withFocusKept(() => { el.innerHTML = offHTML(); });
+}
 export function renderSummaries(): void {
   if (S.view !== 'ballot') { render(['mast']); return; }
   render(['bar']);
+  renderOff();
   if (S.ui.sheet === 'toc') render(['sheet']);
   window.clearTimeout(lazyTimer);
   lazyTimer = window.setTimeout(() => {

@@ -193,11 +193,35 @@ function glineHTML(g: Group): string {
   return `<li class="row gline" id="${qId(g)}"><div class="gl-in"><span class="gl-t">${esc(cleanOffice(g.office))}: <b>${esc(v)}</b></span>
     <button class="linkbtn" data-act="district-change" data-g="${esc(g.key)}" data-fk="dc-${qId(g)}">Change</button></div></li>`;
 }
-function notMineHTML(it: Item): string {
-  const r = rowTitle(it);
-  return `<li class="row is-off" id="i-${esc(it.id)}" data-item="${esc(it.id)}"><div class="row-hd as-div">
-      <span class="mk" aria-hidden="true"><i></i></span><span class="ttl"><span class="t"><b>${esc(r.title)}</b>${r.sub ? `<small>${esc(r.sub)}</small>` : ''}</span></span>
-      <span class="vd off"><span class="m">Not on your ballot</span><button class="linkbtn" data-act="notmine-undo" data-id="${esc(it.id)}">Put it back</button></span></div></li>`;
+/* Races the guide knows aren't on your ballot: a "may apply" race you or your address took off, or a
+   district question answered "none". They leave their sections (Kevin, Oct 20: "if they're not on
+   their ballot, we just shouldn't show them") for one line at the bottom of the ballot (offHTML). */
+export const offEntry = (e: Entry): boolean => e.t === 'notmine' || (e.t === 'groupline' && S.b.districts[e.group.key] === 'none');
+/* "Not on your ballot: Pflugerville ISD Trustee, Leander ISD Trustee and 2 more." Open, each has
+   "It's on my ballot", the other half of the "It's not on my ballot" that took it off. */
+export function offHTML(): string {
+  const b = S.ballot;
+  if (!b) return '';
+  const rows: { name: string; html: string }[] = [];
+  const by = entriesBySection();
+  for (const [sec] of SECTIONS) for (const e of by.get(sec) || []) {
+    if (e.t === 'notmine') {
+      const it = b.byId.get(e.id)!;
+      const r = rowTitle(it);
+      rows.push({ name: it.kind === 'contest' ? cleanOffice(it.office) : r.title, html: `<li class="off-row" id="off-${esc(it.id)}"><span class="off-t">${esc(r.title)}${r.sub ? `<small>${esc(r.sub)}</small>` : ''}</span><button class="linkbtn" data-act="notmine-undo" data-id="${esc(it.id)}" data-fk="on-${esc(it.id)}">It’s on my ballot</button></li>` });
+    } else if (e.t === 'groupline' && S.b.districts[e.group.key] === 'none') {
+      const g = e.group;
+      const name = cleanOffice(g.office);
+      rows.push({ name, html: `<li class="off-row" id="off-${qId(g)}"><span class="off-t">${esc(name)}<small>${g.members.length} districts</small></span><button class="linkbtn" data-act="district-change" data-g="${esc(g.key)}" data-fk="dc-${qId(g)}">It’s on my ballot</button></li>` });
+    }
+  }
+  if (!rows.length) return '';
+  // One name per office: "Leander ISD Trustee", not each of its places.
+  const names = [...new Set(rows.map((r) => r.name.replace(/,\s*(Place|Position|Seat|District|Precinct)\s+\S+$/i, '')))];
+  const list = names.length > 3 ? `${names.slice(0, 3).join(', ')} and ${names.length - 3} more` : andList(names);
+  const open = isOpen('off');
+  return `<section class="offlist wrap" id="off" aria-label="Not on your ballot"><button class="disc" data-act="open" data-k="off" aria-expanded="${open}" data-fk="off"><b>Not on your ballot:</b> ${esc(list)}.</button>
+    ${open ? `<ul class="off-list">${rows.map((r) => r.html).join('')}</ul>` : ''}</section>`;
 }
 function unoppHTML(sec: SectionKey, list: Contest[]): string {
   if (!list.length) return '';
@@ -309,7 +333,7 @@ function entryHTML(e: Entry): string {
   const b = S.ballot!;
   if (e.t === 'question') return questionHTML(e.group);
   if (e.t === 'groupline') return glineHTML(e.group);
-  if (e.t === 'notmine') return notMineHTML(b.byId.get(e.id)!);
+  if (e.t === 'notmine') return ''; // at the bottom (offHTML)
   return rowHTML(b.byId.get(e.id)!);
 }
 /* "Hide races I've decided" hides a row once it is decided, except the open one, the one in its beat
@@ -455,7 +479,8 @@ export function sectionShows(entries: Entry[]): boolean {
   const b = S.ballot!;
   return entries.some((e) => { if (e.t !== 'item') return true; const s = status(b.byId.get(e.id)!); return isDecision(s) || s === 'unopposed' || s === 'info'; });
 }
-export function sectionHTML(sec: SectionKey, entries: Entry[]): string {
+export function sectionHTML(sec: SectionKey, all: Entry[]): string {
+  const entries = all.filter((e) => !offEntry(e)); // those wait at the bottom (offHTML)
   if (!entries.length || !sectionShows(entries)) return '';
   const folded = sectionFolded(sec, entries);
   const done = sectionDone(entries);
@@ -578,6 +603,7 @@ export function ballotHTML(): string {
   const empty = S.b.hideDecided && !decisionItems().some((i) => !i.done)
     ? `<p class="empty"><b>Nothing left to decide here.</b> Turn off “${HIDE}” to see everything.</p>` : '';
   return `<div class="wrap-led">${ballotHeadHTML()}</div><div class="ledger" aria-labelledby="ballot-h">${secs}${empty}</div>
+    <div id="r-off">${offHTML()}</div>
     <div class="endcap wrap"><h3>That’s your whole ballot.</h3><p>Next, save your plan.</p>
       <button class="bigbtn" data-act="cheat" data-fk="endcap-cheat">Open my plan</button></div>`;
 }

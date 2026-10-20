@@ -467,8 +467,8 @@ export function ballotHTML(): string {
   const empty = S.ui.onlyUndecided && !decisionItems().some((i) => !i.done)
     ? '<p class="empty"><b>Nothing left to decide here.</b> Turn off “Show only what’s left” to see everything.</p>' : '';
   return `<div class="wrap-led">${ballotHeadHTML()}</div><div class="ledger" aria-labelledby="ballot-h">${secs}${empty}</div>
-    <div class="endcap wrap"><h3>That’s your whole ballot.</h3><p>Your picks save on this device as you go.</p>
-      <button class="bigbtn" data-act="cheat" data-fk="endcap-cheat">Open your cheat sheet</button></div>`;
+    <div class="endcap wrap"><h3>That’s your whole ballot.</h3><p>Next, save your plan.</p>
+      <button class="bigbtn" data-act="cheat" data-fk="endcap-cheat">Open my plan</button></div>`;
 }
 
 /* ---------- the bottom bar ----------

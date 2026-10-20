@@ -1026,6 +1026,27 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('go check: no button without a register link', plan.registerAction(txr, '2026-10-01') === null);
   }
 
+  /* ---------- flow, Oct 20: My plan ---------- */
+  {
+    const cheat = views.cheat;
+    open('TX', ['austin-tx']);
+    const sc = cheat.cheatHTML(false);
+    check('My plan: titled "Your voting plan", on screen and in print', /<h2 id="cs-h">Your voting plan<\/h2>/.test(sc) && /<h2 id="cs-p">Your voting plan<\/h2>/.test(cheat.cheatHTML(true)) && !/cheat sheet/i.test(sc));
+    check('My plan: Texas bans phones in the voting room, so "print it or write it down"', cheat.saveLine('2026-10-20') === 'Phones aren’t allowed in the voting room in Texas, so print it or write it down.' && /<b>Save it before you go\.<\/b> Phones aren’t allowed in the voting room in Texas, so print it or write it down\./.test(sc.replace(/&#39;/g, '’')));
+    check('My plan: the save line sits under the reminder, on screen only', sc.indexOf('class="remind"') < sc.indexOf('save-go') && !/save-go/.test(cheat.cheatHTML(true)));
+    check('My plan: in person, the reminder keeps the booth rules', cheat.essentials('2026-10-20').some((x) => /^In the booth:/.test(x)));
+    check('My plan: once voting has closed, no save line', cheat.saveLine('2026-11-04') === null);
+    open('CA', ['los-angeles-ca']);
+    check('My plan: where phones are allowed, "Print it, copy it, or take a screenshot."', cheat.saveLine('2026-10-20') === 'Print it, copy it, or take a screenshot.');
+    const la = cheat.essentials('2026-10-20');
+    check('My plan: a mail phase leads with the mail steps and drops the booth line', /^Mail your ballot by/.test(la[0]) && la.some((x) => /drop box/.test(x)) && !la.some((x) => /In the booth/.test(x)), la.join(' | '));
+    open('NY', ['nyc-manhattan-ny']);
+    check('My plan: where phones are restricted, "Print it or copy it."', cheat.saveLine('2026-10-20') === 'Print it or copy it.');
+    open('TX', ['austin-tx']);
+    const end = views.ledger.ballotHTML();
+    check('My plan: the ballot ends "That’s your whole ballot. Next, save your plan." with "Open my plan"', /That’s your whole ballot\.<\/h3><p>Next, save your plan\.<\/p>/.test(end) && /data-act="cheat" data-fk="endcap-cheat">Open my plan</.test(end));
+  }
+
   /* ---------- plan strip ---------- */
   {
     const tx = read('state-TX.json').howto;

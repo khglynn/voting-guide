@@ -550,6 +550,34 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await ctx.close();
 }
 
+/* ---------- My plan (flow, Oct 20): the cheat sheet, renamed, with "Save it before you go" ---------- */
+{
+  const { ctx, page } = await newPage();
+  await openBallot(page, '78704');
+  const endcap = await page.$$eval('.endcap > *', (els) => els.map((e) => e.textContent.trim()));
+  check('Ballot end: "That’s your whole ballot. Next, save your plan." with "Open my plan"', endcap.join('|') === 'That’s your whole ballot.|Next, save your plan.|Open my plan', endcap.join('|'));
+  await tap(page, '.endcap [data-act="cheat"]');
+  await page.waitForSelector('#cheat');
+  await page.evaluate(() => document.fonts.ready);
+  await shot(page, '05b-my-plan');
+  check('My plan: titled "Your voting plan"', (await text(page, '#cs-h')) === 'Your voting plan');
+  check('My plan: Texas says save it, and print it or write it down', (await text(page, '#cheat .save-go')) === 'Save it before you go. Phones aren’t allowed in the voting room in Texas, so print it or write it down.', await text(page, '#cheat .save-go'));
+  check('My plan: in person, the reminder keeps the booth line', /In the booth:/.test(await text(page, '#cheat .remind')));
+  check('My plan: the print sheet has the title but no save line', /Your voting plan/.test(await text(page, '#r-print')) && !(await page.$('#r-print .save-go')));
+  check('My plan: nothing in all caps', (await upperCased(page)).length === 0);
+  noErrors(page, 'My plan');
+  await ctx.close();
+  const la = await newPage();
+  await openBallot(la.page, '90012');
+  await tap(la.page, '.foot [data-act="cheat"]');
+  await la.page.waitForSelector('#cheat');
+  const rem = await la.page.$$eval('#cheat .remind p', (els) => els.map((e) => e.textContent.trim()));
+  check('My plan in a mail state: the reminder leads with the mail steps, no booth line', /^Mail your ballot by/.test(rem[0] || '') && !rem.some((x) => /In the booth/.test(x)), rem.join(' | '));
+  check('My plan in California: "Print it, copy it, or take a screenshot."', (await text(la.page, '#cheat .save-go')) === 'Save it before you go. Print it, copy it, or take a screenshot.');
+  noErrors(la.page, 'My plan in a mail state');
+  await la.ctx.close();
+}
+
 /* ---------- the bar and the menu (flow, Oct 20) ---------- */
 {
   const { ctx, page } = await newPage();

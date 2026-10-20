@@ -173,11 +173,20 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
     && (await page.$eval('.front [data-act="addr-open"]', (e) => e.getClientRects().length)) === 1, await text(page, '.front [data-act="addr-open"]'));
   const fine = await page.$$eval('.front .door-foot > .fine', (els) => els.map((e) => e.textContent.replace(/\s+/g, ' ').trim()));
   const cities = new Set(Object.entries(await page.evaluate(() => fetch('/data/index.json').then((r) => r.json()).then((i) => i.places))).map(([id, p]) => (p.state === 'DC' ? 'DC' : /^nyc-/.test(id) ? 'NYC' : id))).size;
-  check('First page: the small print counts cities from the index (DC and NYC count once) and names Kevin once, with the coffee link in the same paragraph', fine.length === 1 && fine[0] === `Covers ${cities} cities where Kevin HG’s friends live. Ask for yours · Buy him a coffee`, `${fine.join(' / ')} (index says ${cities})`);
-  check('First page: Kevin HG links to kevinhg.com, and Buy him a coffee links out', (await text(page, '.door-foot .fine a[href="https://kevinhg.com"]')) === 'Kevin HG' && !!(await page.$('.door-foot .fine a[href="https://buymeacoffee.com/kevinhg"]')));
+  check('First page: the small print counts cities from the index (DC and NYC count once) and names Kevin once, with the coffee link in the same paragraph', fine.length === 1 && fine[0] === `Covers ${cities} cities where Kevin HG’s friends live. Ask for yours · Buy Kevin a thank-you coffee`, `${fine.join(' / ')} (index says ${cities})`);
+  check('First page: Kevin HG links to kevinhg.com, and the whole coffee line links out', (await text(page, '.door-foot .fine a[href="https://kevinhg.com"]')) === 'Kevin HG' && (await text(page, '.door-foot .fine a[href="https://buymeacoffee.com/kevinhg"]')) === 'Buy Kevin a thank-you coffee');
   check('First page: nothing in all caps', (await upperCased(page)).length === 0);
-  const pile = await page.$eval('.pile', (p) => { const b = p.getBoundingClientRect(), i = p.querySelector('img').getBoundingClientRect(); return { band: Math.round(b.bottom + scrollY), img: Math.round(i.bottom + scrollY), page: document.documentElement.scrollHeight }; });
-  check('First page: the paper states sit on the bottom edge and run off it, with no desk under them', pile.band === pile.page && pile.img >= pile.band + 16, JSON.stringify(pile));
+  const pile = await page.$eval('.pile', async (p) => {
+    const img = p.querySelector('img'); img.loading = 'eager'; await img.decode().catch(() => {});
+    const b = p.getBoundingClientRect(), i = img.getBoundingClientRect();
+    // The bottom row the band shows, read from the image: how many of the columns on screen are bare desk.
+    const k = img.naturalWidth / i.width, c = document.createElement('canvas'); c.width = img.naturalWidth; c.height = img.naturalHeight;
+    const g = c.getContext('2d'); g.drawImage(img, 0, 0);
+    const y = Math.floor((b.bottom - i.top) * k) - 1, x0 = Math.max(0, Math.round((b.left - i.left) * k)), x1 = Math.min(c.width, Math.round((b.right - i.left) * k));
+    const row = g.getImageData(x0, y, x1 - x0, 1).data; let bare = 0; for (let x = 0; x < x1 - x0; x++) if (row[x * 4 + 3] < 200) bare++;
+    return { band: Math.round(b.bottom + scrollY), page: document.documentElement.scrollHeight, bare, cols: x1 - x0 };
+  });
+  check('First page: the paper states sit on the bottom edge and run off it, with no desk under them', pile.band === pile.page && pile.cols > 1000 && pile.bare === 0, JSON.stringify(pile));
   await noSideScroll(page, 'First page');
   await tap(page, '[data-fk="browse"]');
   check('First page: the city count opens the list of places', (await page.$$('.browse-list [data-act="choose-place"]')).length > 30);
@@ -242,7 +251,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await settle(page);
   check('How this guide works: its row opens it, focus kept on the row', (await page.getAttribute('#how [data-act="open"][data-k="how"]', 'aria-expanded')) === 'true' && (await focusedFk(page)) === 'how', await focusedFk(page));
   check('How this guide works: names the source for "Voting is underway in every state"', /“Voting is underway in every state”: Center for Election Innovation & Research\./.test(await text(page, '#how')) && !!(await page.$('#how a[href="https://electioninnovation.org/research/dates-for-2026-early-in-person-and-mail-voting/"]')));
-  check('How this guide works: ends with the credit, Kevin HG linked to his site, and Buy him a coffee', (await text(page, '#how .how-bd > :last-child')) === 'Made by Kevin HG · Buy him a coffee' && (await text(page, '#how .how-credit a[href="https://kevinhg.com"]')) === 'Kevin HG' && !!(await page.$('#how .how-credit a[href="https://buymeacoffee.com/kevinhg"]')), await text(page, '#how .how-bd > :last-child'));
+  check('How this guide works: ends with the credit, Kevin HG linked to his site, and a thank-you coffee', (await text(page, '#how .how-bd > :last-child')) === 'Made by Kevin HG · Buy him a thank-you coffee' && (await text(page, '#how .how-credit a[href="https://kevinhg.com"]')) === 'Kevin HG' && !!(await page.$('#how .how-credit a[href="https://buymeacoffee.com/kevinhg"]')), await text(page, '#how .how-bd > :last-child'));
   await tap(page, '#how [data-act="open"][data-k="how"]');
   await settle(page);
   check('How this guide works: the row closes it again', !(await page.$('#how .how-bd')) && !(await page.$('.trust .gone')) && (await page.getAttribute('#how [data-act="open"][data-k="how"]', 'aria-expanded')) === 'false');
@@ -1241,46 +1250,48 @@ const touchAt = async (page, sel) => {
   await ctx.close();
 }
 
-/* ---------- "No endorsements" (Kevin, Oct 20): an option, never the default; tight rows ---------- */
+/* ---------- "Show endorsements" (Kevin, Oct 21): a switch that leads step 2, on to start. Off, every row
+   shows just the choices and the controls that only matter with endorsements step aside ---------- */
 {
   const { ctx, page } = await newPage();
   await page.goto(`${BASE}/?today=${TODAY}`);
   await page.waitForSelector('#zip');
-  check('No endorsements: a tick box in step 2 that reads "Don’t show endorsements", off to start, and not a chip', (await page.getAttribute('#setup [data-act="no-ends"]', 'aria-pressed')) === 'false' && (await text(page, '#setup [data-act="no-ends"]')) === 'Don’t show endorsements' && (await page.getAttribute('#setup [data-act="chip"][data-k="papers"]', 'aria-pressed')) === 'true'
-    && !(await page.$('#setup .chip[data-act="no-ends"]')), await text(page, '#setup [data-act="no-ends"]'));
-  check('No endorsements: it leads the group on its own line, with newspapers and guides still on after it', (await page.$eval('#setup .su-chips', (r) => r.firstElementChild && r.firstElementChild.dataset.act)) === 'no-ends' && (await page.$eval('#setup .su-chips', (r) => r.children[1] && r.children[1].dataset.k)) === 'papers'
-    && (await page.$eval('#setup .su-chips', (r) => r.children[0].getBoundingClientRect().bottom <= r.children[1].getBoundingClientRect().top + 1)));
-  await tap(page, '#setup [data-act="no-ends"]');
-  check('No endorsements: choosing it turns the other chips off and hides the fill switch', (await page.getAttribute('#setup [data-act="no-ends"]', 'aria-pressed')) === 'true' && (await page.getAttribute('#setup [data-act="chip"][data-k="papers"]', 'aria-pressed')) === 'false' && !(await page.$('#setup [data-act="setup-fill"]')) && !!(await page.$('#setup [data-act="setup-only"]')));
+  const ends = (p = page, where = '#setup') => p.getAttribute(`${where} [data-act="ends"]`, 'aria-checked');
+  const leads = (where) => page.$eval(where, (s) => { const sw = s.querySelector('[data-act="ends"]'); const rest = s.querySelectorAll('[data-act="chip"], [data-act="setup-fill"], [data-act="setup-only"]');
+    return !!sw && [...rest].every((e) => !!(sw.compareDocumentPosition(e) & Node.DOCUMENT_POSITION_FOLLOWING)); });
+  check('Show endorsements: a switch in step 2 that reads "Show endorsements", on to start, ahead of the chips and the other switches', (await ends()) === 'true' && (await page.getAttribute('#setup [data-act="ends"]', 'role')) === 'switch'
+    && (await text(page, '#setup [data-act="ends"] b')) === 'Show endorsements' && (await leads('#setup')) && (await page.getAttribute('#setup [data-act="chip"][data-k="papers"]', 'aria-pressed')) === 'true', await text(page, '#setup [data-act="ends"]'));
+  await tap(page, '#setup [data-act="ends"]');
+  check('Show endorsements: off, the chips, "A party" and the fill switch step aside, and "Hide races I’ve decided" stays', (await ends()) === 'false' && !(await page.$('#setup .su-chips, #setup [data-act="chip"], #setup [data-fk="chip-party"], #setup [data-act="setup-fill"]')) && !!(await page.$('#setup [data-act="setup-only"]')));
   await page.fill('#zip', '80205');
   await page.waitForSelector('.door-place', { timeout: 15000 });
-  check('No endorsements: with the ZIP found, still on, and no picks count to read', (await page.getAttribute('#setup [data-act="no-ends"]', 'aria-pressed')) === 'true' && !(await page.$('#setup .su-cov')));
+  check('Show endorsements: with the ZIP found, still off, and no picks count to read', (await ends()) === 'false' && !(await page.$('#setup .su-cov')));
   await tap(page, SETUP);
   await page.waitForSelector('#plan', { timeout: 15000 });
   await page.waitForTimeout(150);
-  check('No endorsements: the ballot says "Picks: No endorsements shown"', (await text(page, '.picks-line span')) === 'Picks: No endorsements shown', await text(page, '.picks-line span'));
+  check('Show endorsements off: the ballot says "Picks: No endorsements shown"', (await text(page, '.picks-line span')) === 'Picks: No endorsements shown', await text(page, '.picks-line span'));
   const vds = await page.$$eval('.ledger .row[data-item][data-undecided]:not(.is-info) .vd', (els) => els.map((e) => [e.className, e.textContent.trim()]));
   const blank = vds.filter(([c, t]) => /\bblank\b/.test(c) && t === '');
   const words = vds.filter(([c]) => !/\b(blank|review)\b/.test(c));
-  check('No endorsements: the verdict column is empty and quiet on every undecided row (judges keep their official review)', blank.length > 20 && words.length === 0, `${blank.length} empty, others: ${words.slice(0, 3).map(([, t]) => t).join(' | ')}`);
+  check('Show endorsements off: the verdict column is empty and quiet on every undecided row (judges keep their official review)', blank.length > 20 && words.length === 0, `${blank.length} empty, others: ${words.slice(0, 3).map(([, t]) => t).join(' | ')}`);
   const race = await page.evaluate(() => { const r = [...document.querySelectorAll('#sec-state .row[data-item][data-undecided]')][0]; return r && r.dataset.item; });
   const R = `#i-${race}`;
   await openRow(page, race);
   await shot(page, '12-no-endorsements-row');
   const tight = await page.evaluate((s) => document.querySelector(s).getBoundingClientRect().height, R);
   const n = await page.$$eval(`${R} .clist [data-act="pick"]`, (els) => els.length);
-  check('No endorsements: an open race is tight: the candidates with Pick, no grid, no source lines, no other sources', n >= 2 && !(await page.$(`${R} .grid, ${R} .none-line, ${R} .gridnote, ${R} .others-wrap, ${R} .by`)) && !!(await page.$(`${R} .ob-acts`)), `${n} candidates`);
+  check('Show endorsements off: an open race is tight: the candidates with Pick, no grid, no source lines, no other sources', n >= 2 && !(await page.$(`${R} .grid, ${R} .none-line, ${R} .gridnote, ${R} .others-wrap, ${R} .by`)) && !!(await page.$(`${R} .ob-acts`)), `${n} candidates`);
   await edit(page);
-  check('No endorsements: the Edit sheet has it on, first in its chip row, with no fill switch', (await page.getAttribute('.sheet-panel [data-act="no-ends"]', 'aria-pressed')) === 'true' && !(await page.$('.sheet-panel [data-act="setup-fill"]'))
-    && (await page.$eval('.sheet-panel .su-chips', (r) => r.firstElementChild && r.firstElementChild.dataset.act)) === 'no-ends' && (await text(page, '.sheet-panel [data-act="no-ends"]')) === 'Don’t show endorsements');
-  await tap(page, '.sheet-panel [data-act="chip"][data-k="papers"]');
-  check('No endorsements: any other chip turns it off, and the fill switch is back', (await page.getAttribute('.sheet-panel [data-act="no-ends"]', 'aria-pressed')) === 'false' && !!(await page.$('.sheet-panel [data-act="setup-fill"]')));
+  check('Show endorsements: the Edit sheet leads with it, off, with no chips and no fill switch', (await ends(page, '.sheet-panel')) === 'false' && (await leads('.sheet-panel .sheet-bd'))
+    && !(await page.$('.sheet-panel .su-chips, .sheet-panel [data-act="chip"], .sheet-panel [data-act="setup-fill"]')) && !!(await page.$('.sheet-panel [data-act="setup-only"]')));
+  await tap(page, '.sheet-panel [data-act="ends"]');
+  check('Show endorsements: on again, newspapers and guides are back with the fill switch', (await ends(page, '.sheet-panel')) === 'true' && (await page.getAttribute('.sheet-panel [data-act="chip"][data-k="papers"]', 'aria-pressed')) === 'true' && !!(await page.$('.sheet-panel [data-act="setup-fill"]')));
   await tap(page, '.sheet-panel [data-fk="sheet-x"]');
   await settle(page);
   const full = await page.evaluate((s) => document.querySelector(s).getBoundingClientRect().height, R);
-  check('No endorsements: the same open race is taller with sources on', full > tight + 40, `${Math.round(tight)}px vs ${Math.round(full)}px`);
+  check('Show endorsements: the same open race is taller with sources on', full > tight + 40, `${Math.round(tight)}px vs ${Math.round(full)}px`);
   await edit(page);
-  await tap(page, '.sheet-panel [data-act="no-ends"]');
+  await tap(page, '.sheet-panel [data-act="ends"]');
   await tap(page, '.sheet-panel [data-fk="sheet-x"]');
   await settle(page);
   await page.locator(`${R} [data-act="pick"]`).first().tap();
@@ -1289,57 +1300,57 @@ const touchAt = async (page, sel) => {
   await page.waitForSelector('#cheat');
   await tap(page, '[data-act="save-open"]');
   const link = await page.inputValue('.save-url');
-  check('No endorsements: the save link carries it as an empty source list', link.split('#')[1].split('~')[7] === '0', link.split('#')[1].split('~')[7]);
-  noErrors(page, 'No endorsements');
+  check('Show endorsements off: the save link carries it as an empty source list', link.split('#')[1].split('~')[7] === '0', link.split('#')[1].split('~')[7]);
+  noErrors(page, 'Show endorsements');
   const fresh = await newPage();
   await fresh.page.goto(linkHere(link));
   await fresh.page.waitForSelector('#plan', { timeout: 15000 });
   await fresh.page.waitForTimeout(250);
   if (await fresh.page.$('[data-act="shared-keep"]')) await tap(fresh.page, '[data-act="shared-keep"]');
   await edit(fresh.page);
-  check('No endorsements: it comes back from the save link, chip on', (await text(fresh.page, '.picks-line span')) === 'Picks: No endorsements shown' && (await fresh.page.getAttribute('.sheet-panel [data-act="no-ends"]', 'aria-pressed')) === 'true', await text(fresh.page, '.picks-line span'));
-  noErrors(fresh.page, 'No endorsements link');
+  check('Show endorsements: off comes back from the save link', (await text(fresh.page, '.picks-line span')) === 'Picks: No endorsements shown' && (await ends(fresh.page, '.sheet-panel')) === 'false', await text(fresh.page, '.picks-line span'));
+  noErrors(fresh.page, 'Show endorsements link');
   await fresh.ctx.close();
   await ctx.close();
 }
 
-/* "No endorsements" on the first page with a ballot that has choices of its own (review, Oct 20):
-   the chip shows the ballot's choice, so a tap turns that over; and the next new ZIP takes what the
-   page showed. */
+/* "Show endorsements" on the first page with a ballot that has choices of its own (review, Oct 20):
+   the switch shows the ballot's choice, so a tap turns that over; and the next new ZIP takes what the
+   page showed. With it off, the chips aren't there at all. */
 {
   const { ctx, page } = await newPage();
-  const none = () => page.getAttribute('#setup [data-act="no-ends"]', 'aria-pressed');
-  const papers = () => page.getAttribute('#setup [data-act="chip"][data-k="papers"]', 'aria-pressed');
+  const none = async () => ((await page.getAttribute('#setup [data-act="ends"]', 'aria-checked')) === 'true' ? 'false' : 'true');
+  const papers = async () => ((await page.$('#setup [data-act="chip"][data-k="papers"]')) ? page.getAttribute('#setup [data-act="chip"][data-k="papers"]', 'aria-pressed') : 'hidden');
   await openBallot(page, '80205');
   await edit(page);
-  await tap(page, '.sheet-panel [data-act="no-ends"]');
+  await tap(page, '.sheet-panel [data-act="ends"]');
   await tap(page, '.sheet-panel [data-fk="sheet-x"]');
   await settle(page);
   await tap(page, '[data-act="change-place"]');
   await page.waitForSelector('.door-place', { timeout: 15000 });
-  check('No endorsements, back on the first page: the chip shows the ballot\'s choice', (await none()) === 'true' && (await papers()) === 'false');
+  check('Show endorsements, back on the first page: the switch shows the ballot\'s choice', (await none()) === 'true' && (await papers()) === 'hidden');
   await page.fill('#zip', '78704');
   await page.waitForFunction(() => /Austin/.test(document.querySelector('.door-place')?.textContent || ''), null, { timeout: 15000 });
-  check('No endorsements: a new ZIP from there keeps what the page showed', (await none()) === 'true' && (await papers()) === 'false', `${await none()} ${await papers()}`);
+  check('Show endorsements: a new ZIP from there keeps what the page showed', (await none()) === 'true' && (await papers()) === 'hidden', `${await none()} ${await papers()}`);
   await page.fill('#zip', '80205');
   await page.waitForFunction(() => /Denver/.test(document.querySelector('.door-place')?.textContent || ''), null, { timeout: 15000 });
-  await tap(page, '#setup [data-act="no-ends"]');
-  check('No endorsements: on a saved ballot\'s first page, one tap turns it off and the newspapers come back', (await none()) === 'false' && (await papers()) === 'true', `${await none()} ${await papers()}`);
+  await tap(page, '#setup [data-act="ends"]');
+  check('Show endorsements: on a saved ballot\'s first page, one tap turns it on and the newspapers come back', (await none()) === 'false' && (await papers()) === 'true', `${await none()} ${await papers()}`);
   await tap(page, SETUP);
   await page.waitForSelector('#plan', { timeout: 15000 });
-  check('No endorsements: and the ballot shows the newspapers\' picks', /Newspapers and guides/.test(await text(page, '.picks-line span')), await text(page, '.picks-line span'));
-  // The other way: chosen before the ZIP, then a ZIP whose saved ballot uses the newspapers.
+  check('Show endorsements: and the ballot shows the newspapers\' picks', /Newspapers and guides/.test(await text(page, '.picks-line span')), await text(page, '.picks-line span'));
+  // The other way: turned off before the ZIP, then a ZIP whose saved ballot uses the newspapers.
   await tap(page, '[data-act="change-place"]');
   await page.waitForSelector('.door-place', { timeout: 15000 });
   await page.fill('#zip', '');
   await page.waitForFunction(() => !document.querySelector('.door-place'));
-  if ((await none()) !== 'true') await tap(page, '#setup [data-act="no-ends"]');
+  if ((await none()) !== 'true') await tap(page, '#setup [data-act="ends"]');
   await page.fill('#zip', '80205');
   await page.waitForFunction(() => /Denver/.test(document.querySelector('.door-place')?.textContent || ''), null, { timeout: 15000 });
   const shown = await none();
-  await tap(page, '#setup [data-act="no-ends"]');
-  check('No endorsements: chosen before a ZIP whose ballot uses the newspapers, the chip shows off, and one tap turns it on', shown === 'false' && (await none()) === 'true' && (await papers()) === 'false', `${shown}, then ${await none()} ${await papers()}`);
-  noErrors(page, 'No endorsements, first page');
+  await tap(page, '#setup [data-act="ends"]');
+  check('Show endorsements: off before a ZIP whose ballot uses the newspapers, the switch shows on, and one tap turns it off', shown === 'false' && (await none()) === 'true' && (await papers()) === 'hidden', `${shown}, then ${await none()} ${await papers()}`);
+  noErrors(page, 'Show endorsements, first page');
   await ctx.close();
 }
 

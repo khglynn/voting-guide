@@ -40,14 +40,30 @@ export interface Ballot {
   hasLocal: boolean;
 }
 
+/* Which Census district a race is for, read from its district: Congress (cd), the state senate
+   (upper) or the state house or assembly (lower), with its number. The research mostly writes "CD-37",
+   "SD-14", "HD-49" or "AD-51", and a few places another way (Oct 21): a U.S. House seat as "GA-5" or
+   "NY-13", a legislature seat spelled out ("Senate District 35", "House District 53"), and Washington's
+   legislative districts, which elect one senator each ("LD-32"). Washington's two representatives
+   per district ("LD-32 Position 1" and "Position 2") stay unread: one district answer shows one race,
+   and both are on that district's ballot. Anything else is no Census district. */
+const US_HOUSE = /\bU\.?\s?S\.?\s+(?:House|Representative)|\bCongress/i;
 const districtNum = (c: Contest): { kind: Group['kind']; n: number | null } => {
-  const d = c.district || '';
+  const d = (c.district || '').trim();
   let m = d.match(/^CD-?\s*(\d+)/i);
   if (m) return { kind: 'cd', n: +m[1] };
   m = d.match(/^SD-?\s*(\d+)/i);
   if (m) return { kind: 'upper', n: +m[1] };
   m = d.match(/^(?:HD|AD)-?\s*(\d+)/i);
   if (m) return { kind: 'lower', n: +m[1] };
+  m = d.match(/^[A-Z]{2}-(\d+)$/);
+  if (m && US_HOUSE.test(c.office)) return { kind: 'cd', n: +m[1] };
+  m = d.match(/^(?:State )?Senate District (\d+)$/i);
+  if (m) return { kind: 'upper', n: +m[1] };
+  m = d.match(/^(?:State )?(?:House|Assembly) District (\d+)$/i);
+  if (m) return { kind: 'lower', n: +m[1] };
+  m = d.match(/^LD-?\s*(\d+)$/i);
+  if (m && /senat/i.test(c.office)) return { kind: 'upper', n: +m[1] };
   return { kind: null, n: null };
 };
 export const contestDistrict = districtNum;

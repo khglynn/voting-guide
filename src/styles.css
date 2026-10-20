@@ -191,13 +191,10 @@ b, strong { font-weight: 600; }
 .front .fine .linkbtn { margin: -12px 0; padding: 0; }
 .su-h { margin-top: 16px; font-family: var(--f-display); font-size: 22px; font-weight: 800; line-height: 1.05; font-variation-settings: "wdth" 78; color: var(--print); }
 .su-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
-/* "Don't show endorsements" heads the group as a pen tick box on its own line, like the first page's
-   ticks: lighter than a chip, so the choices after it carry the weight. The whole line is the tap. */
-.su-none { flex: 1 0 100%; min-height: 40px; margin: -6px 0 -2px; display: flex; align-items: center; gap: 10px; font-size: 15px; color: var(--ink-2); text-align: left; }
-.su-none i { width: 16px; height: 16px; border: 1.3px solid var(--ink-2); border-radius: 1.5px; flex: none; position: relative; }
-.su-none[aria-pressed="true"] { color: var(--ink); }
-.su-none[aria-pressed="true"] i { border-color: var(--ink); }
-.su-none[aria-pressed="true"] i::after { content: ""; position: absolute; left: -1px; top: -9px; width: 25px; height: 23px; background: var(--ink); -webkit-mask: var(--pen-tick) center / contain no-repeat; mask: var(--pen-tick) center / contain no-repeat; }
+/* "Show endorsements" leads step 2, right under its heading; the chips it governs follow. */
+.su-ends { margin-top: 2px; }
+.su-ends .su-sw { min-height: 44px; padding: 8px 0 0; }
+.su-ends + .su-chips { margin-top: 6px; }
 .su-parties { margin-top: 8px; }
 .su-cov { margin-top: 12px; padding-bottom: 14px; border-bottom: 1px solid var(--rule-2); font-size: 14.5px; color: var(--muted); }
 .su-sw { width: 100%; min-height: 52px; display: grid; grid-template-columns: minmax(0, 1fr) 52px; gap: 12px; align-items: start; padding: 12px 0 6px; text-align: left; }
@@ -785,12 +782,12 @@ b, strong { font-weight: 600; }
 /* The covered states cut from paper and piled up at the foot of the first page (pile.webp: 1920x450, a 3x
    render drawn at 640 by 150). The first page is at least a screen tall, and the band sits on its bottom
    edge, as wide as the page; the heap is drawn at its own size in the middle, so a phone sees it run off
-   both sides and a wider screen sees all of it, ending in bare desk. The render's bottom 18px are cut
-   off: some bottom pieces stop up to 16px short of its edge, and the heap should run off the page with
-   no desk under it (Kevin, Oct 21). Decoration only. */
-.front.mast { position: relative; min-height: 100vh; min-height: 100svh; padding-bottom: 150px; }
-.pile { position: absolute; left: 0; right: 0; bottom: 0; height: 132px; overflow: hidden; overflow: clip; pointer-events: none; }
-.pile img { position: absolute; left: 50%; bottom: -18px; width: 640px; height: 150px; max-width: none; margin-left: -320px; }
+   both sides and a wider screen sees all of it, ending in bare desk. Every piece along the bottom runs
+   off the render's edge, so no desk shows under the heap (Kevin, Oct 21); the bottom 3px are cut off,
+   where the bake's softening leaves the edge a little see-through. Decoration only. */
+.front.mast { position: relative; min-height: 100vh; min-height: 100svh; padding-bottom: 165px; }
+.pile { position: absolute; left: 0; right: 0; bottom: 0; height: 147px; overflow: hidden; overflow: clip; pointer-events: none; }
+.pile img { position: absolute; left: 50%; bottom: -3px; width: 640px; height: 150px; max-width: none; margin-left: -320px; }
 @media print { .pile { display: none; } }
 .voted-head .kick { font-family: var(--f-display); font-size: 22px; font-weight: 800; font-variation-settings: "wdth" 78; color: var(--gold-ink); margin-top: 6px; }
 

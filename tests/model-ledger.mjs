@@ -970,7 +970,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       && door.includes('Fill in my ballot with their picks') && door.includes('Fills the races where they agree. Races where picks split stay open.') && door.includes('Hide races I’ve decided'));
     S.door.chips = { papers: false, progressive: false, conservative: false };
     const doorNone = views.setup.pickControlsHTML();
-    check('first page before a ZIP: every chip off is "No endorsements", with no fill switch', lens.doorNone() && /data-act="no-ends" aria-pressed="true"/.test(doorNone) && !/setup-fill/.test(doorNone));
+    check('first page before a ZIP: every chip off is "Show endorsements" off, with no chips and no fill switch', lens.doorNone() && /data-act="ends" data-fk="ends"/.test(doorNone) && /role="switch" aria-checked="false" data-act="ends"/.test(doorNone) && !/data-act="chip"/.test(doorNone) && !/setup-fill/.test(doorNone));
     S.door.chips = { papers: true, progressive: false, conservative: false };
     S.ui.open.add('su-party');
     const listed = [...views.setup.pickControlsHTML().matchAll(/data-act="party-set" data-p="([^"]+)"/g)].map((m) => m[1]);
@@ -1084,12 +1084,12 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     // "No endorsements" (Kevin, Oct 20): an option, never the default. Every source off and no party;
     // the rows stay tight: what it is, the choices with Pick, and the foot.
     const dn = open('CO', ['denver-co']);
-    check('no endorsements: off by default', !lens.noEndorsements() && /data-act="no-ends" aria-pressed="false"/.test(views.setup.pickControlsHTML(true)));
+    check('no endorsements: off by default, "Show endorsements" on', !lens.noEndorsements() && /role="switch" aria-checked="true" data-act="ends"/.test(views.setup.pickControlsHTML(true)));
     S.b.sources = [];
     tally.clearLineups();
     check('no endorsements: an empty source list is it, and the line says so', lens.noEndorsements() && views.lens.lensSummary() === 'No endorsements shown');
     const sh = views.setup.pickControlsHTML(true);
-    check('no endorsements: its chip is on, the fill switch and the counts step aside, the filter stays', /data-act="no-ends" aria-pressed="true"[^>]*>.*Don’t show endorsements<\/button>/.test(sh) && !/setup-fill/.test(sh) && !/su-cov/.test(sh) && /setup-only/.test(sh));
+    check('no endorsements: "Show endorsements" is off, the chips, the fill switch and the counts step aside, the filter stays', /role="switch" aria-checked="false" data-act="ends"[^>]*>.*Show endorsements.*<\/button>/.test(sh) && !/data-act="chip"|data-act="party|all-src/.test(sh) && !/setup-fill/.test(sh) && !/su-cov/.test(sh) && /setup-only/.test(sh));
     const m81 = views.open.openHTML(dn.byId.get('co-amendment-81'));
     check('no endorsements: a measure is tight, yes and no with no source lines', /A yes vote means/.test(m81) && /data-act="pick"[^>]*data-v="YES"/.test(m81) && !/none-line|gridnote|papers-on|others-wrap|class="grid/.test(m81), strip(m81).slice(0, 120));
     const race = dn.items.find((x) => x.kind === 'contest' && !x.is_retention && x.candidates.length > 1 && x.candidates.length <= 6 && !x.ranked_choice && bl.status(x) === 'open');
@@ -1103,7 +1103,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     S.b.party = null;
     S.b.sources = null;
     tally.clearLineups();
-    check('no endorsements: with sources on, the rows say whose picks they are again', /data-act="no-ends" aria-pressed="false"/.test(views.setup.pickControlsHTML(true)) && /setup-fill/.test(views.setup.pickControlsHTML(true)));
+    check('no endorsements: with sources on, the rows say whose picks they are again', /role="switch" aria-checked="true" data-act="ends"/.test(views.setup.pickControlsHTML(true)) && /setup-fill/.test(views.setup.pickControlsHTML(true)));
     // Statewide-only: the state's sample ballot (its own sample_ballot_url first) and "Ask for your city".
     const wa = open('WA', []);
     const hd = ledger.ballotHeadHTML();
@@ -1488,6 +1488,21 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const lk = open('CO', ['lakewood-co']);
     const lset = address.setFromAddress(lk, S.b, { cd: 7, upper: 22, lower: 24 });
     check('address: Lakewood names each office District 7 set', lset.filter((x) => /District 7$/.test(x)).length === 3 && ['co-us-house-7', 'co-sboe-7', 'co-cu-regent-7'].every((id) => S.b.mine.includes(id) && !bl.isMaybe(id)), lset.join(' | '));
+
+    // The other ways the research writes Census districts (Oct 21): each is read, so an address settles
+    // the House and legislature in Atlanta, Seattle, Chicago, Portland and New York too. Washington's
+    // two representatives per district stay unread: one answer would show only one of the two.
+    const kd = (office, district) => { const r = bl.contestDistrict({ office, district }); return `${r.kind}:${r.n}`; };
+    const kinds = [kd('U.S. Representative', 'CD-37'), kd('U.S. House of Representatives', 'GA-5'), kd('U.S. Representative', 'NY-13'), kd('Georgia State Senate', 'Senate District 35'),
+      kd('Georgia House of Representatives', 'House District 53'), kd('State Senator', 'LD-32'), kd('House of Delegates', 'HD-43A'),
+      kd('State Representative', 'LD-32 Position 1'), kd('County Commissioner', 'TX-3'), kd('State Board of Education', 'District 5')];
+    check('address: districts written other ways are read, and nothing else is', kinds.join() === 'cd:37,cd:5,cd:13,upper:35,lower:53,upper:32,lower:43,null:null,null:null,null:null', kinds.join());
+    open('GA', ['atlanta-ga']);
+    const atl = address.setFromAddress(S.ballot, S.b, { cd: 5, upper: 35, lower: 53 });
+    check('address: Atlanta settles Congress, the state senate and the state house', S.b.districts['federal|U.S. House of Representatives'] === 'ga-us-house-5' && S.b.districts['state|Georgia State Senate'] === 'ga-sd-35' && S.b.districts['state|Georgia House of Representatives'] === 'ga-hd-53' && atl.length === 3, atl.join(' | '));
+    open('WA', ['seattle-wa']);
+    const sea = address.setFromAddress(S.ballot, S.b, { cd: 7, upper: 32, lower: 32 });
+    check('address: Seattle settles Congress and the state senator, and leaves the two representative seats to the voter', S.b.districts['federal|U.S. Representative'] === 'wa-us-house-7' && S.b.districts['state|State Senator'] === 'wa-sd-32' && S.b.districts['state|State Representative'] === undefined, sea.join(' | '));
 
     // The address box: before, after (this visit, with what was found), after a reload (no address).
     const strip = (h) => h.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();

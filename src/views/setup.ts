@@ -9,7 +9,7 @@ import { chipsHTML, TICK } from './lens';
 import { partiesOnBallot, CHIPS, noEndorsements, doorNone } from '../model/lens';
 import { coverage } from '../model/tally';
 import { planSetup } from '../model/bulk';
-import { isOpen, FILL, HIDE, NO_ENDS } from './common';
+import { isOpen, FILL, HIDE, SHOW_ENDS } from './common';
 
 /* "Austin, Texas", "Aurora or Denver, Colorado", "Ward 1, Washington, DC", or the state alone for
    statewide races. */
@@ -34,11 +34,11 @@ export function fillLine(party: string | null): string {
 const sw = (act: string, on: boolean, label: string, sub = ''): string =>
   `<button class="su-sw" role="switch" aria-checked="${on}" data-act="${act}" data-fk="${act}"><span class="su-l"><b>${esc(label)}</b>${sub ? `<small>${esc(sub)}</small>` : ''}</span><span class="tg" aria-hidden="true"><span></span></span></button>`;
 
-/* Step 2's controls, shared with the ballot's Edit sheet: the chips and "A party", the coverage
-   line, and the two switches. On the first page "A party" opens its list right there; in the Edit
-   sheet it opens the party sheet, and "See all sources" opens every source. Before a ZIP has found a
-   ballot the first page shows the choices kept so far (S.door), every party the guide covers, and
-   no counts. */
+/* Step 2's controls, shared with the ballot's Edit sheet: "Show endorsements", the chips and "A
+   party", the coverage line, and the two switches. On the first page "A party" opens its list right
+   there; in the Edit sheet it opens the party sheet, and "See all sources" opens every source. Before
+   a ZIP has found a ballot the first page shows the choices kept so far (S.door), every party the
+   guide covers, and no counts. */
 export function pickControlsHTML(inSheet = false): string {
   const b = inSheet || S.view === 'setup' ? S.ballot : null;
   const party = b ? S.b.party : S.door.party;
@@ -55,19 +55,23 @@ export function pickControlsHTML(inSheet = false): string {
     : '';
   const chips = b ? chipsHTML()
     : CHIPS.map((c) => `<button class="chip" data-act="chip" data-k="${c.key}" aria-pressed="${S.door.chips[c.key]}" data-fk="chip-${c.key}">${TICK}${esc(c.label)}</button>`).join('');
-  // "Don't show endorsements": every row shows just the choices. With it on there is nothing to fill
-  // and nothing to count, so the fill switch and the coverage line step aside. It leads the group
-  // (Kevin, Oct 20), but as a small pen tick box on its own line rather than a chip, so it doesn't
-  // outweigh the choices after it (Kevin, Oct 21); newspapers and guides stay the default.
+  // "Show endorsements" leads the step as a switch like the two below it, on to start (Kevin, Oct 21:
+  // say it the affirmative way). Off, every row shows just the choices: no source on and no party, so
+  // the chips, "A party", the coverage line and the fill switch, which only matter with endorsements,
+  // step aside. On again, newspapers and guides come back.
   const none = b ? noEndorsements() : doorNone();
-  const noneChip = `<button class="su-none" data-act="no-ends" aria-pressed="${none}" data-fk="chip-none"><i aria-hidden="true"></i>${NO_ENDS}</button>`;
-  const cov = b && !none ? coverage() : null;
-  return `<div class="su-chips" role="group" aria-labelledby="${inSheet ? 'sh-h' : 'su-h'}">${noneChip}${chips}${partyChip}${more}</div>
+  const ends = `<div class="su-sws su-ends">${sw('ends', !none, SHOW_ENDS)}</div>`;
+  const only = sw('setup-only', inSheet ? S.ui.setupOnly : S.door.only, HIDE);
+  if (none) return `${ends}
+    <div class="su-sws">${only}</div>`;
+  const cov = b ? coverage() : null;
+  return `${ends}
+    <div class="su-chips" role="group" aria-labelledby="${inSheet ? 'sh-h' : 'su-h'}">${chips}${partyChip}${more}</div>
     ${list}
     ${cov ? `<p class="su-cov">Picks in ${cov.picked} of your ${plural(cov.total, 'race')}.</p>` : ''}
     <div class="su-sws">
-      ${none ? '' : sw('setup-fill', inSheet ? S.ui.setupFill : S.door.fill, FILL, b ? fillLine(party) : 'Fills the races where they agree. Races where picks split stay open.')}
-      ${sw('setup-only', inSheet ? S.ui.setupOnly : S.door.only, HIDE)}
+      ${sw('setup-fill', inSheet ? S.ui.setupFill : S.door.fill, FILL, b ? fillLine(party) : 'Fills the races where they agree. Races where picks split stay open.')}
+      ${only}
     </div>`;
 }
 

@@ -23,18 +23,19 @@ export const askCityURL = (zip: string): string => formURL('Please add my city',
 /* The two switches, the same words wherever they show (step 2, the Edit sheet, the menu, the rail). */
 export const FILL = 'Fill in my ballot with their picks';
 export const HIDE = 'Hide races I’ve decided';
-/* The chip that turns every source off (step 2 and the Edit sheet); the ballot's Picks line then
-   reads "No endorsements shown". */
-export const NO_ENDS = 'Don’t show endorsements';
+/* The switch that leads step 2 and the Edit sheet, on to start; off turns every source off and the
+   ballot's Picks line reads "No endorsements shown". */
+export const SHOW_ENDS = 'Show endorsements';
 
-/* The credit: Kevin's name, linked to his site, and Buy him a coffee while that has a link. The first
-   page names him in its small print ("where Kevin HG’s friends live"); "How this guide works" ends
-   with "Made by Kevin HG". */
+/* The credit: Kevin's name, linked to his site, and a thank-you coffee while that has a link (Kevin,
+   Oct 21: "Buy Kevin a thank-you coffee", the whole line the link). The first page names him in its
+   small print ("where Kevin HG’s friends live"); "How this guide works" ends with "Made by Kevin HG",
+   so its coffee line says "him". */
 export const BUY_ME_A_COFFEE_URL = 'https://buymeacoffee.com/kevinhg';
 export const KEVIN_URL = 'https://kevinhg.com';
 export const kevinLink = (): string => ext(KEVIN_URL, 'Kevin HG');
-export const coffeeLink = (): string => (BUY_ME_A_COFFEE_URL ? ext(BUY_ME_A_COFFEE_URL, 'Buy him a coffee') : '');
-export const creditHTML = (): string => [`Made by ${kevinLink()}`, coffeeLink()].filter(Boolean).join(' · ');
+export const coffeeLink = (who = 'Kevin'): string => (BUY_ME_A_COFFEE_URL ? ext(BUY_ME_A_COFFEE_URL, `Buy ${who} a thank-you coffee`) : '');
+export const creditHTML = (): string => [`Made by ${kevinLink()}`, coffeeLink('him')].filter(Boolean).join(' · ');
 
 /* ---------- paywalled sources (Kevin, Oct 19) ----------
    A paper whose endorsements sit behind a paywall we couldn't read: the picks we only saw

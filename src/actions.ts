@@ -530,28 +530,28 @@ A.src = (d) => {
   renderLens();
 };
 A['src-default'] = () => { S.b.sources = null; S.b.party = null; persist(); renderLens(); };
-/* "Don’t show endorsements" (step 2 and the Edit sheet): every source off and no party, so every row shows
-   just the choices; the save link carries it as an empty source list. Tapped again, the newspapers
-   and guides come back. Any other chip, or a party, ends it on its own. */
-A['no-ends'] = () => {
+/* "Show endorsements" (step 2 and the Edit sheet), on to start. Off: every source off and no party, so
+   every row shows just the choices; the save link carries it as an empty source list. On again, the
+   newspapers and guides come back. */
+A.ends = () => {
   if (S.view !== 'ballot') {
-    // With a ballot found, the chip shows that ballot's choice (it may have its own): turn that over.
-    const on = doorBallot() ? !noEndorsements() : !doorNone();
-    S.door.chips = { papers: !on, progressive: false, conservative: false };
+    // With a ballot found, the switch shows that ballot's choice (it may have its own): turn that over.
+    const off = doorBallot() ? !noEndorsements() : !doorNone();
+    S.door.chips = { papers: !off, progressive: false, conservative: false };
     S.door.party = null;
-    if (on) S.door.fill = false;
+    if (off) S.door.fill = false;
     S.ui.open.delete('su-party');
-    if (doorBallot()) { S.b.sources = on ? [] : null; S.b.party = null; }
+    if (doorBallot()) { S.b.sources = off ? [] : null; S.b.party = null; }
     render(['mast']);
-    announce(on ? 'Turned on.' : 'Turned off.');
+    announce(off ? 'Turned off.' : 'Turned on.');
     return;
   }
-  const on = !noEndorsements();
-  S.b.sources = on ? [] : null;
+  const off = !noEndorsements();
+  S.b.sources = off ? [] : null;
   S.b.party = null;
-  if (on) S.ui.setupFill = false;
+  if (off) S.ui.setupFill = false;
   renderLens(); persist();
-  announce(on ? 'Turned on.' : 'Turned off.');
+  announce(off ? 'Turned off.' : 'Turned on.');
 };
 A['src-none'] = () => { S.b.sources = []; S.b.party = null; persist(); renderLens(); };
 /* All sources or a party. Opened from the Edit sheet, it goes back there when it closes. */

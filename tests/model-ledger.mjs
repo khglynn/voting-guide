@@ -1264,10 +1264,16 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
         const subOf = (h) => (h.match(/<p class="plan-sub">([^<]*)<\/p>/) || [])[1] || '';
         open('TX', ['austin-tx']);
         let sub = subOf(ps.planHTML());
-        check('hours: Austin\'s next step says when Travis County sites are open, then to bring a photo ID', /Travis County sites are open 7 AM to 7 PM every day\. Bring a photo ID\.$/.test(sub), sub);
+        // The hours line stands in for the step's own lines ("any early voting location", "Or vote on
+        // Election Day"), so the strip reads two short sentences.
+        check('hours: Austin\'s next step says when Travis County sites are open, then to bring a photo ID, and nothing else', sub === 'Travis County sites are open 7 AM to 7 PM every day. Bring a photo ID.', sub);
         open('FL', ['orlando-fl']);
         sub = subOf(ps.planHTML());
-        check('hours: Orlando\'s next step says when Orange County sites are open', /Orange County sites are open 8 AM to 8 PM every day\. Bring a photo ID\.$/.test(sub), sub);
+        check('hours: Orlando\'s next step says when Orange County sites are open, then to bring a photo ID, and nothing else', sub === 'Orange County sites are open 8 AM to 8 PM every day. Bring a photo ID.', sub);
+        // Without an hours line the step keeps its own lines, then the ID.
+        open('FL', ['pensacola-fl']);
+        sub = subOf(ps.planHTML());
+        check('hours: a place with no one-line hours keeps the step\'s own lines, then the ID', /in your county\./.test(sub) && /Or vote on Election Day/.test(sub) && /Bring a photo ID\.$/.test(sub), sub);
       } finally {
         if (had) Object.defineProperty(globalThis, 'location', had); else delete globalThis.location;
       }

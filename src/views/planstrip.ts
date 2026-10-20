@@ -22,7 +22,7 @@ export function planHTML(): string {
   const regBtn = reg ? registerAction(h) : null;
   const open = isOpen('whatif');
   const check = h.registration.check_url;
-  const sub = [...step.sub, ...inPerson(step)];
+  const sub = planSub(step);
   return `<section class="plan" id="plan" aria-labelledby="plan-h"><div class="wrap plan-in">
       <h2 class="vh" id="plan-k" tabindex="-1" data-fk="plan-k">Your next step</h2>
       <p class="plan-h" id="plan-h">${head}</p>
@@ -36,26 +36,32 @@ export function planHTML(): string {
     </div></section>`;
 }
 
-/* While you can vote in person (not in a mail state): a place's early-voting hours in one line
-   (its `hours_short`, else an `hours_note` that already fits: "Travis County sites are open 7 AM
-   to 7 PM every day."), when every place on the ballot gives the same one, and "Bring a photo
-   ID." where the state asks for one. The rest stays behind "Dates, ID, ...". */
+/* The line under the next step. While you can vote in person (not in a mail state), "Bring a
+   photo ID." ends it where the state asks for one. During early voting, when the place gives its
+   sites' hours in one line, that line stands in for the step's own lines (under "Early voting is
+   open through Sun, Nov 1.": "Orange County sites are open 8 AM to 8 PM every day. Bring a photo
+   ID."); before it opens, the date it runs through stays first. The rest stays behind "Dates,
+   ID, ...". */
 const IN_PERSON: Step['phase'][] = ['early_before', 'early_open', 'election_day', 'election_day_next'];
-function inPerson(step: Step): string[] {
-  const b = S.ballot!;
-  const h = b.howto;
-  if (isMailState(h) || !IN_PERSON.includes(step.phase)) return [];
-  const out: string[] = [];
-  if (step.phase === 'early_before' || step.phase === 'early_open') {
-    const line = (e: PlaceEarly | undefined): string => {
-      const n = (e?.hours_note || '').trim();
-      return (e?.hours_short || '').trim() || (n && wordCount(n) <= 12 && sentences(n).length === 1 ? n : '');
-    };
-    const lines = [...new Set(b.places.map((p) => line(p.early_in_person)))];
-    if (lines.length === 1 && lines[0]) out.push(lines[0]);
-  }
-  if (h.id_rules.required === 'photo') out.push('Bring a photo ID.');
-  return out;
+function planSub(step: Step): string[] {
+  const h = S.ballot!.howto;
+  if (isMailState(h) || !IN_PERSON.includes(step.phase)) return step.sub;
+  const id = h.id_rules.required === 'photo' ? ['Bring a photo ID.'] : [];
+  const hours = hoursLine(step);
+  if (!hours) return [...step.sub, ...id];
+  const runs = step.phase === 'early_before' ? step.sub.filter((s) => /^It runs through /.test(s)) : [];
+  return [...runs, hours, ...id];
+}
+/* A place's early-voting hours in one line (its `hours_short`, else an `hours_note` that already
+   fits), when every place on the ballot gives the same one. */
+function hoursLine(step: Step): string {
+  if (step.phase !== 'early_before' && step.phase !== 'early_open') return '';
+  const line = (e: PlaceEarly | undefined): string => {
+    const n = (e?.hours_note || '').trim();
+    return (e?.hours_short || '').trim() || (n && wordCount(n) <= 12 && sentences(n).length === 1 ? n : '');
+  };
+  const lines = [...new Set(S.ballot!.places.map((p) => line(p.early_in_person)))];
+  return lines.length === 1 ? lines[0] : '';
 }
 
 interface Row { date: string; label: string; detail: string | null; source: string | null; key: string }

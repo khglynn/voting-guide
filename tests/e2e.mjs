@@ -441,7 +441,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await tap(page, '[data-act="open"][data-k="whatif"]');
   check('Ballot top: "Your election office" is in the plan’s details', /Your election office/.test(await text(page, '.whatifs')));
   await tap(page, '[data-act="open"][data-k="whatif"]');
-  check('Ballot top: in Austin the next step gives the sites\' hours, then says to bring a photo ID', /Travis County sites are open 7 AM to 7 PM every day\. Bring a photo ID\.$/.test(await text(page, '.plan-sub')), await text(page, '.plan-sub'));
+  check('Ballot top: in Austin the next step gives the sites\' hours, then says to bring a photo ID, and nothing else', (await text(page, '.plan-sub')) === 'Travis County sites are open 7 AM to 7 PM every day. Bring a photo ID.', await text(page, '.plan-sub'));
   const box = await text(page, '.addrbox > p');
   check('Ballot top: the address box says how many races depend on your address', /^\d+ races depend on your address\.$/.test(box), box);
   check('Ballot top: with "Use my address" and "See my sample ballot"', (await text(page, '.addrbox [data-act="addr-open"]')) === 'Use my address' && (await text(page, '.addrbox a')) === 'See my sample ballot' && /^https:/.test((await page.getAttribute('.addrbox a', 'href')) || ''));

@@ -3,10 +3,11 @@
 import type { Index } from '../types';
 import { S } from '../state';
 import { esc, fmtDate, todayISO } from '../util';
-import { ext, isOpen, askCityURL, BUY_ME_A_COFFEE_URL, KEVIN_URL } from './common';
+import { ext, isOpen, askCityURL, formURL, BUY_ME_A_COFFEE_URL, KEVIN_URL } from './common';
 import { countyName } from './ledger';
 import { setupHTML } from './setup';
 import { stateName } from '../geo';
+import { pageWalk } from '../ballot';
 
 function electionDate(): string {
   if (S.ballot) return S.ballot.howto.election_date;
@@ -40,9 +41,23 @@ export function addrHTML(forPlaces = false): string {
     <div class="row-btns"><button class="mini dark" type="submit" ${S.ui.addrBusy ? 'disabled' : ''}>${S.ui.addrBusy ? 'Looking up...' : forPlaces ? 'Find my ballot' : 'Find my districts'}</button>
       <button class="mini quiet" type="button" data-act="addr-close">Cancel</button></div>
     <p class="fine">We send your address only to the U.S. Census Bureau’s free lookup to find your districts, and we never store it. Double-check with your official sample ballot.</p>
-    ${S.ui.addrMsg ? `<p class="small" role="status">${esc(S.ui.addrMsg)}</p>` : ''}
+    ${S.ui.addrMsg ? `<p class="small" role="status">${esc(S.ui.addrMsg)}</p>${addrNextHTML()}` : ''}
   </form>`;
 }
+/* After a lookup that went wrong: "Try again" when the Census didn't answer, and on a ballot with a
+   district question left, "Pick them myself" (it opens the first one). */
+function addrNextHTML(): string {
+  const f = S.ui.addrFail;
+  if (!f || S.ui.addrBusy) return '';
+  const pick = S.view === 'ballot' && S.ballot && pageWalk().some((x) => x.question);
+  const btns = [
+    f === 'down' ? '<button class="mini dark" type="button" data-act="addr-retry" data-fk="addr-retry">Try again</button>' : '',
+    pick ? '<button class="mini" type="button" data-act="addr-pick" data-fk="addr-pick">Pick them myself</button>' : '',
+  ].join('');
+  return btns ? `<div class="row-btns addr-next">${btns}</div>` : '';
+}
+/* "Try again" under a load error: the same ZIP, ballot or first visit again. */
+const retryHTML = (): string => (S.retry ? '<p class="row-btns"><button class="mini dark" data-act="retry" data-fk="retry">Try again</button></p>' : '');
 
 export function mastHTML(): string {
   const idx = S.index;
@@ -77,7 +92,10 @@ export function mastHTML(): string {
       ${S.ui.addrOpen ? addrHTML(true) : '<p class="addr-cta"><button class="linkbtn" data-act="addr-open" data-fk="addr-open">Use my address instead</button></p>'}</div>`;
   } else if (S.coverage && S.coverage.kind === 'not_covered') {
     const name = S.coverage.state ? (S.coverage.state in (idx?.states || {}) ? idx!.states[S.coverage.state].name : stateName(S.coverage.state)) : null;
-    after = `<div class="notice" role="status"><p><b>We don’t cover ${name ? esc(name) : 'that area'} yet.</b> This guide covers where Kevin’s friends and family vote. ${ext('https://vote.gov/', 'Vote.gov')} has official info for every state.</p></div>`;
+    // Vote.gov for now, and the report form (prefilled with the state and ZIP) to ask for the city.
+    const ask = formURL('Please add my city', [name, S.coverage.zip].filter(Boolean).join(', '));
+    after = `<div class="notice" role="status"><p><b>We don’t cover ${name ? esc(name) : 'that area'} yet.</b> ${ext('https://vote.gov/', 'Vote.gov')} has official info for every state.</p>
+      <p>Want this for your city? <a href="${esc(ask)}" target="_blank" rel="noopener" data-ask-kevin>Ask Kevin</a>.</p></div>`;
   }
   // "Use my street address instead" opens the address form right here, before any ZIP. The place
   // question has its own link, so this one steps aside while it shows.
@@ -95,7 +113,7 @@ export function mastHTML(): string {
       ${err}
     </form>
     ${S.view === 'loading' ? '<p class="small" role="status">Loading your ballot...</p>' : ''}
-    ${S.loadErr ? `<p class="zip-err" role="alert">${esc(S.loadErr)}</p>` : ''}
+    ${S.loadErr ? `<p class="zip-err" role="alert">${esc(S.loadErr)}</p>${retryHTML()}` : ''}
     ${after}
     ${addr}
     <hr class="door-rule">

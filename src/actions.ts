@@ -9,12 +9,12 @@ import { render, renderRow, renderSection, renderSummaries, renderLens, flushLen
 import { openBallot, openChosen, go, openReader, runAddress, toDoor } from './app';
 import { judgeBatch } from './model/judges';
 import { planAgree, planParty, planJudges, planSetup, applyFills, undoFills, emptyPlan, touchUndo, type Plan } from './model/bulk';
-import { toggleChip, setParty, setSources, type ChipKey } from './model/lens';
+import { toggleChip, setParty, setSources, chipState, type ChipKey } from './model/lens';
 import { courtGroup } from './model/labels';
 import { basisWords, LEANS } from './views/common';
 import { cheatText, shareURL } from './views/cheat';
 import { messages } from './views/pass';
-import { nextUp, sectionTally } from './views/ledger';
+import { nextUp, sectionTally, qId } from './views/ledger';
 
 export type Act = (d: DOMStringMap, el: HTMLElement) => void | Promise<void>;
 export const A: Record<string, Act> = {};
@@ -271,13 +271,16 @@ A.note = (d) => { S.ui.noteOpen.add(d.id!); renderRow(d.id!); $(`[data-note="${C
 A.district = (d) => {
   const g = B().groups.find((x) => x.key === d.g)!;
   S.b.districts[g.key] = d.v!;
-  // Answering swaps the question for that district's race, opened, in the same place.
-  S.ui.row = d.v === '*' ? null : d.v!;
+  // Answering swaps the question for that district's race, opened, in the same place. "Not sure"
+  // shows them all; "Not in any of these" leaves one line saying so, with Change.
+  const one = d.v !== '*' && d.v !== 'none';
+  S.ui.row = one ? d.v! : null;
   const sec = sectionOf(B().byId.get(g.members[0])!);
-  anchored(() => renderSection(sec), d.v === '*' ? undefined : undefined);
+  anchored(() => renderSection(sec));
   renderSummaries();
   persist();
-  if (d.v !== '*') scrollRowIntoView(d.v!);
+  if (one) scrollRowIntoView(d.v!);
+  else if (d.v === 'none') focusFk(`dc-${qId(g)}`);
 };
 A['district-change'] = (d) => {
   const g = B().groups.find((x) => x.key === d.g)!;
@@ -344,6 +347,14 @@ A.src = (d) => {
   renderLens();
 };
 A['src-default'] = () => { S.b.sources = null; S.b.party = null; persist(); renderLens(); };
+/* "No sources on" in an open row: turn the newspapers and guides back on, and stay on that row. */
+A['papers-on'] = (d) => {
+  const b = B();
+  if (chipState(b, 'papers') !== 'on') toggleChip(b, 'papers');
+  persist();
+  renderLens();
+  if (d.id) focusFk(`row-${d.id}`);
+};
 A['src-none'] = () => { S.b.sources = []; S.b.party = null; persist(); renderLens(); };
 /* All sources or a party. Opened from the Edit sheet, it goes back there when it closes. */
 A.sheet = (d, el) => {
@@ -524,8 +535,19 @@ A['setup-done'] = () => {
   if (!n || !plan) return;
   fillToast(fillHead(n, plan), setupPlan(plan));
 };
-A['addr-open'] = () => { S.ui.addrOpen = true; S.ui.addrMsg = null; renderAddr(); const i = $('#addr-in'); if (i) { i.scrollIntoView({ block: 'center' }); i.focus({ preventScroll: true }); } };
-A['addr-close'] = () => { S.ui.addrOpen = false; renderAddr(); focusFk('addr-open'); };
+A['addr-open'] = () => { S.ui.addrOpen = true; S.ui.addrMsg = null; S.ui.addrFail = ''; renderAddr(); const i = $('#addr-in'); if (i) { i.scrollIntoView({ block: 'center' }); i.focus({ preventScroll: true }); } };
+A['addr-close'] = () => { S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.addrFail = ''; renderAddr(); focusFk('addr-open'); };
+/* After a lookup went wrong: the same address again, or close the form and answer the first
+   district question by hand. */
+A['addr-retry'] = () => { void runAddress((($('#addr-in') as HTMLInputElement | null)?.value) || ''); };
+A['addr-pick'] = () => {
+  const q = pageWalk().find((x) => x.question);
+  S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.addrFail = '';
+  renderAddr();
+  if (q) openAt(q.key);
+};
+/* "Try again" under a load error. */
+A.retry = () => { const f = S.retry; S.retry = null; if (f) f(); };
 A['restore-yes'] = () => { if (S.pending) { S.b = S.pending.incoming; S.pending = null; render(); persist(true); toast('Using the picks from your link.'); } };
 /* A grid's lean dots, tapped: how that lean was placed, in a few words. */
 A.basis = (d) => {

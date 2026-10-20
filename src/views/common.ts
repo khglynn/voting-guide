@@ -97,13 +97,15 @@ export const ext = (url: string | null | undefined, text: string, cls = ''): str
 export const srcLink = (url: string | null | undefined): string =>
   url ? `<a class="src" href="${esc(url)}" target="_blank" rel="noopener">${esc(host(url))}</a>` : '';
 
-/* The official place to see your exact ballot: the place file's lookup, then any
-   state source named like a sample ballot, then the state's registration lookup. */
+/* The official place to see your exact ballot: the place file's lookup, then the state file's
+   own sample_ballot_url, then any state source named like a sample ballot, then the state's
+   registration lookup. */
 export function sampleBallot(): { url: string; label: string } | null {
   const b = S.ballot;
   if (!b) return null;
   const p = b.places.find((x) => x.sample_ballot_url);
   if (p && p.sample_ballot_url) return { url: p.sample_ballot_url, label: 'See your official sample ballot' };
+  if (b.howto.sample_ballot_url) return { url: b.howto.sample_ballot_url, label: 'See official sample ballots' };
   const src = b.howto.sources.find((s) => /sample ballot/i.test(s.name));
   if (src) return { url: src.url, label: 'See official sample ballots' };
   const look = b.howto.sources.find((s) => /voter lookup|my voter|myvote|voterview|my vote/i.test(s.name));

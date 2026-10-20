@@ -5,7 +5,7 @@
 import type { HowTo } from '../types';
 import { S } from '../state';
 import { esc, fmtDate, todayISO, host } from '../util';
-import { nextStep, registrationAlert, isMailState, type Step } from '../model/plan';
+import { nextStep, registrationAlert, registerAction, isMailState, type Step } from '../model/plan';
 import { ext, isOpen, bulletsHTML, leadBulletsHTML, escP, srcLink, sentences, telHTML, wordCount } from './common';
 
 /* What the strip last showed, so main.ts can repaint it when the step changes while the page
@@ -19,6 +19,7 @@ export function planHTML(): string {
   planKey = `${step.phase}|${step.head.map((p) => p[0]).join('')}`;
   const head = step.head.map(([t, em]) => (em ? `<span class="d">${esc(t)}</span>` : esc(t))).join('');
   const reg = registrationAlert(h);
+  const regBtn = reg ? registerAction(h) : null;
   const open = isOpen('whatif');
   const check = h.registration.check_url;
   const sub = [...step.sub, ...inPerson(step)];
@@ -26,7 +27,7 @@ export function planHTML(): string {
       <h2 class="vh" id="plan-k" tabindex="-1" data-fk="plan-k">Your next step</h2>
       <p class="plan-h" id="plan-h">${head}</p>
       ${sub.length ? `<p class="plan-sub">${esc(sub.join(' '))}</p>` : ''}
-      ${reg ? `<p class="plan-reg">${esc(reg)}</p>` : ''}
+      ${reg ? `<div class="plan-reg"><p>${esc(reg)}</p>${regBtn ? `<a class="pbtn line" href="${esc(regBtn.url)}" target="_blank" rel="noopener" data-fk="plan-register">${esc(regBtn.label)}</a>` : ''}</div>` : ''}
       <div class="plan-acts">${step.primary ? `<a class="pbtn gold" href="${esc(step.primary.url)}" target="_blank" rel="noopener">${esc(step.primary.label)}</a>` : ''}
         ${check ? `<a class="pbtn line" href="${esc(check)}" target="_blank" rel="noopener">Check my registration</a>` : ''}</div>
       <div class="plan-row"><button class="whatif-tog" data-act="open" data-k="whatif" aria-expanded="${open}" data-fk="whatif"><span>Dates, ID, and if you moved or lost <span class="nw">your ballot<svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span></span></button>

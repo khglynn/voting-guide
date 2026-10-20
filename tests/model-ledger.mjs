@@ -935,6 +935,97 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('judges batch: Colorado reads "Keep all N judges the review says meet standards"', !!cb && /^Keep all \d+ judges the review says meet standards$/.test(cb.label), cb && cb.label);
   }
 
+  /* ---------- flow, Oct 20: every "go check" gets a button ---------- */
+  {
+    const ledger = views.ledger;
+    const strip = (h) => h.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+    const au = open('TX', ['austin-tx']);
+    // "Only on some ballots": the address (Congress and the state legislature only), the sample ballot, "It's not on my ballot".
+    const sd = views.open.openHTML(au.byId.get('tx-senate-21'));
+    const at = (t) => sd.indexOf(t);
+    check('go check: a maybe state senate race offers Check with my address, See my sample ballot, It’s not on my ballot, in that order',
+      /Only on some ballots\./.test(sd) && at('>Check with my address<') > 0 && at('>Check with my address<') < at('>See my sample ballot<') && at('>See my sample ballot<') < at('>It’s not on my ballot<'), strip(sd).slice(0, 200));
+    check('go check: its address button opens the address form', /data-act="addr-open"[^>]*>Check with my address/.test(sd));
+    check('go check: "It’s not on my ballot" keeps the notmine action', /data-act="notmine" data-id="tx-senate-21"[^>]*>It’s not on my ballot/.test(sd));
+    const dv = views.open.openHTML(au.byId.get('tx-dvisd-prop-a'));
+    check('go check: a maybe measure has no address button (the Census doesn’t settle school districts)', !/Check with my address/.test(dv) && /See my sample ballot/.test(dv) && /It’s not on my ballot/.test(dv));
+    const fake = (district) => ({ kind: 'contest', district });
+    check('go check: the Census settles CD, SD and HD races, nothing else', views.open.censusSettles(fake('CD-10')) && views.open.censusSettles(fake('SD-21')) && views.open.censusSettles(fake('HD-49')) && !views.open.censusSettles(fake('Precinct 2')) && !views.open.censusSettles(fake('District 3')));
+    open('DC', ['dc-ward-1']);
+    check('go check: in DC an "upper" district is a ward, which the Census doesn’t settle', !views.open.censusSettles(fake('SD-1')) && views.open.censusSettles(fake('CD-0')));
+    // District questions: a last answer for a district you're not in.
+    check('go check: districtEntity names school and utility districts only', ledger.districtEntity('Del Valle ISD Trustee') === 'Del Valle ISD' && ledger.districtEntity('Trustee, Somerset ISD') === 'Somerset ISD'
+      && ledger.districtEntity('Fullerton Joint Union High School District Governing Board') === 'Fullerton Joint Union High School District' && ledger.districtEntity('San Diego Unified School District Board of Education') === 'San Diego Unified School District'
+      && ledger.districtEntity('Rockwood Water People\'s Utility District Director') === 'Rockwood Water People\'s Utility District'
+      && [ 'U.S. Representative', 'Austin City Council Member', 'School Board', 'Member of the Chicago Board of Education (nonpartisan)', 'Soil and Water Conservation District Supervisor', 'RTD Board of Directors'].every((o) => ledger.districtEntity(o) === null));
+    const a2 = open('TX', ['austin-tx']);
+    const g = (re) => a2.groups.find((x) => re.test(x.office));
+    check('go check: Austin’s questions end "I’m not in Del Valle ISD", "I’m not in Austin ISD", "Not in any of these"', ledger.noneLabel(g(/Del Valle/)) === 'I’m not in Del Valle ISD' && ledger.noneLabel(g(/Austin ISD/)) === 'I’m not in Austin ISD' && ledger.noneLabel(g(/City Council/)) === 'Not in any of these' && ledger.noneLabel(g(/U\.S\. Rep/)) === 'Not in any of these');
+    const dvg = g(/Del Valle/);
+    S.ui.row = `q:${dvg.key}`;
+    const qh = ledger.sectionHTML('school', bl.entriesBySection().get('school'));
+    const opts = [...qh.matchAll(/data-act="district"[^>]*data-v="([^"]+)"/g)].map((m) => m[1]);
+    check('go check: "I’m not in Del Valle ISD" is the question’s last answer, after "Not sure"', opts[opts.length - 1] === 'none' && opts[opts.length - 2] === '*' && /I’m not in Del Valle ISD/.test(qh), opts.join(','));
+    S.ui.row = null;
+    const m0 = bl.decisionItems().length;
+    S.b.districts[dvg.key] = 'none';
+    const sch = ledger.sectionHTML('school', bl.entriesBySection().get('school'));
+    check('go check: answered "none", the question leaves the count and no race takes its place', bl.decisionItems().length === m0 - 1 && !dvg.members.some((id) => sch.includes(`id="i-${id}"`)), `${m0} then ${bl.decisionItems().length}`);
+    check('go check: its line says "Not on your ballot", with Change', /Del Valle ISD Trustee: Not on your ballot/.test(strip(sch)) && /data-act="district-change" data-g="[^"]*Del Valle/.test(sch));
+    const back = st.decodeShare(a2, head(st.encodeShare(a2, S.b))).state;
+    check('go check: "none" travels in the save link', back.districts[dvg.key] === 'none');
+    // "No sources on": a button that turns the newspapers and guides back on.
+    open('CO', ['denver-co']);
+    S.b.sources = [];
+    const m81 = views.open.openHTML(S.ballot.byId.get('co-amendment-81'));
+    check('go check: "No sources on." with "Turn on newspapers and guides", no "at the top"', /No sources on\./.test(m81) && /data-act="papers-on" data-id="co-amendment-81"[^>]*>Turn on newspapers and guides/.test(m81) && !/at the top/.test(m81));
+    S.b.sources = null;
+    check('go check: with sources on, no such button', !/papers-on/.test(views.open.openHTML(S.ballot.byId.get('co-amendment-81'))));
+    // Statewide-only: the state's sample ballot (its own sample_ballot_url first) and "Ask for your city".
+    const wa = open('WA', []);
+    const hd = ledger.ballotHeadHTML();
+    const ask = (hd.match(/href="([^"]+)"[^>]*>Ask for your city</) || [])[1] || '';
+    check('go check: a statewide ballot says so, with See my sample ballot and Ask for your city', /We only have statewide races for your area so far\./.test(hd) && /href="https:[^"]+"[^>]*>See my sample ballot</.test(hd) && /docs\.google\.com/.test(ask), strip(hd).slice(0, 160));
+    const askQ = new URLSearchParams(ask.replace(/&amp;/g, '&').split('?')[1] || '');
+    check('go check: Ask for your city prefills "Please add my city" and the state', askQ.get('entry.90887649') === 'Please add my city' && /Washington/.test(askQ.get('entry.628621310') || ''), askQ.toString());
+    wa.howto = { ...wa.howto, sample_ballot_url: 'https://sos.example.gov/sample' };
+    check('go check: a state’s own sample_ballot_url wins on a statewide ballot', common.sampleBallot().url === 'https://sos.example.gov/sample');
+    const au3 = open('TX', ['austin-tx']);
+    au3.howto = { ...au3.howto, sample_ballot_url: 'https://sos.example.gov/sample' };
+    check('go check: a place’s own sample ballot still wins over the state’s', common.sampleBallot().url === au3.places[0].sample_ballot_url);
+    // Not covered: Vote.gov, then "Want this for your city? Ask Kevin." with the form prefilled.
+    const keep = { view: S.view, ballot: S.ballot, index: S.index, coverage: S.coverage };
+    S.view = 'start'; S.ballot = null; S.index = INDEX; S.coverage = { kind: 'not_covered', state: 'MA', zip: '02139' };
+    const nc = views.mast.mastHTML();
+    const kevin = ((nc.match(/href="([^"]+)"[^>]*data-ask-kevin/) || [])[1] || '').replace(/&amp;/g, '&');
+    check('go check: not covered says "We don’t cover Massachusetts yet. Vote.gov has official info for every state."', /We don’t cover Massachusetts yet\. Vote\.gov has official info for every state\./.test(strip(nc)) && !/friends and family vote/.test(nc), strip(nc).slice(0, 300));
+    check('go check: then "Want this for your city? Ask Kevin." to the form, prefilled with the state and ZIP', /Want this for your city\? Ask Kevin \./.test(strip(nc)) && new URLSearchParams(kevin.split('?')[1]).get('entry.628621310') === 'Massachusetts, 02139' && new URLSearchParams(kevin.split('?')[1]).get('entry.90887649') === 'Please add my city', kevin);
+    // A load error gets "Try again".
+    S.coverage = null; S.loadErr = 'We couldn’t load that ballot. Check your connection.'; S.retry = () => {};
+    check('go check: a load error gets "Try again"', /data-act="retry"[^>]*>Try again</.test(views.mast.mastHTML()));
+    S.retry = null;
+    check('go check: no Try again without something to retry', !/data-act="retry"/.test(views.mast.mastHTML()));
+    S.loadErr = null;
+    Object.assign(S, keep);
+    // A lookup that went wrong: "Try again" when the Census didn't answer; "Pick them myself" on a ballot with a question left.
+    open('TX', ['austin-tx']);
+    S.view = 'ballot'; S.ui.addrOpen = true; S.ui.addrMsg = 'The Census lookup didn’t answer.'; S.ui.addrFail = 'down';
+    let ah = views.mast.addrHTML();
+    check('go check: Census down on a ballot: Try again and Pick them myself', /data-act="addr-retry"[^>]*>Try again</.test(ah) && /data-act="addr-pick"[^>]*>Pick them myself</.test(ah) && /type="button" data-act="addr-retry"/.test(ah));
+    S.ui.addrFail = 'miss';
+    ah = views.mast.addrHTML();
+    check('go check: a miss on a ballot: only Pick them myself', !/addr-retry/.test(ah) && /addr-pick/.test(ah));
+    S.view = 'start'; S.ui.addrFail = 'down';
+    ah = views.mast.addrHTML(true);
+    check('go check: on the first page: Try again, nothing to pick', /addr-retry/.test(ah) && !/addr-pick/.test(ah));
+    S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.addrFail = ''; S.view = keep.view;
+    // The registration alert's button (register_url comes with the data track).
+    const txr = read('state-TX.json').howto;
+    const withUrl = { ...txr, registration: { ...txr.registration, register_url: 'https://vote.gov/register/texas' } };
+    check('go check: "Register now" before the deadline, "Register for next time" after', plan.registerAction(withUrl, '2026-10-01').label === 'Register now' && plan.registerAction(withUrl, '2026-10-20').label === 'Register for next time' && plan.registerAction(withUrl, '2026-10-01').url === 'https://vote.gov/register/texas');
+    check('go check: no button without a register link', plan.registerAction(txr, '2026-10-01') === null);
+  }
+
   /* ---------- plan strip ---------- */
   {
     const tx = read('state-TX.json').howto;

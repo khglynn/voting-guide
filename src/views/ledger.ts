@@ -15,7 +15,7 @@ import { rowTitle, measureTag, courtGroup, cleanOffice, optionLabel } from '../m
 import { verdict, type Verdict } from '../model/tally';
 import { canUndo } from '../model/bulk';
 import { judgeBatch, judicialReview, judgesLead, judgesRule } from '../model/judges';
-import { ext, sampleBallot, isOpen, escP, leadRest } from './common';
+import { ext, sampleBallot, isOpen, escP, leadRest, reportURL } from './common';
 import { lensSummary } from './lens';
 import { addrHTML } from './mast';
 import { openHTML } from './open';
@@ -131,6 +131,19 @@ export function findersFor(g: Group): { label: string; url: string }[] {
   }
   return out;
 }
+/* The district a question's races all belong to, when its office names one a voter may live
+   outside of entirely: a school district ("Del Valle ISD Trustee") or a utility district. Null for
+   offices every voter here has one of (U.S. Representative, City Council). */
+const ENTITY = /([A-Z][\w.'’-]*(?:\s+[A-Z][\w.'’-]*)*?\s+(?:C?ISD|Independent School District|Unified School District|Union High School District|School District|Community College District|People['’]s Utility District))\b/;
+export function districtEntity(office: string): string | null {
+  const m = office.match(ENTITY);
+  return m ? m[1].trim() : null;
+}
+/* The question's last answer: none of its districts is yours. */
+export const noneLabel = (g: Group): string => {
+  const e = districtEntity(g.office);
+  return e ? `I’m not in ${e}` : 'Not in any of these';
+};
 function questionBodyHTML(g: Group): string {
   const b = S.ballot!;
   // The count is the whole place's, not your ZIP's: say so ("Houston has 24 of these").
@@ -142,14 +155,16 @@ function questionBodyHTML(g: Group): string {
     <h3 class="dq-h">Pick your ${esc(cleanOffice(g.office))} district</h3>
     <p class="ob-lede">${esc(where())} has ${members.length} of these districts. Your sample ballot lists yours.</p>
     <div class="opts">${g.kind ? '<button class="opt opt-addr" data-act="addr-open" data-fk="dq-addr"><b>Use my address</b><small>The Census lookup finds it for you</small></button>' : ''}${members.map((c) => { const [l, sub] = optionLabel(c); return `<button class="opt" data-act="district" data-g="${esc(g.key)}" data-v="${esc(c.id)}" data-fk="d-${esc(c.id)}"><b>${esc(l)}</b>${sub ? `<small>${esc(sub)}</small>` : ''}</button>`; }).join('')}
-      <button class="opt opt-unsure" data-act="district" data-g="${esc(g.key)}" data-v="*" data-fk="d-${hash(g.key)}-x"><b>Not sure? Skip for now</b><small>Show all ${members.length}, each marked “Maybe on your ballot”</small></button></div>
+      <button class="opt opt-unsure" data-act="district" data-g="${esc(g.key)}" data-v="*" data-fk="d-${hash(g.key)}-x"><b>Not sure? Skip for now</b><small>Show all ${members.length}, each marked “Maybe on your ballot”</small></button>
+      <button class="opt opt-unsure" data-act="district" data-g="${esc(g.key)}" data-v="none" data-fk="d-${hash(g.key)}-n"><b>${esc(noneLabel(g))}</b></button></div>
     <p class="dq-help">${[...finders.map((f) => ext(f.url, f.label)), sb ? ext(sb.url, sb.label) : ''].filter(Boolean).join('<span class="dot" aria-hidden="true"> · </span>')}</p>
   </div>`;
 }
 function glineHTML(g: Group): string {
   const b = S.ballot!;
   const ans = S.b.districts[g.key];
-  const v = ans === '*' ? `showing all ${g.members.length} districts` : ans === 'none' ? 'None on your ballot (from your address)' : (() => { const c = b.byId.get(ans) as Contest | undefined; return c ? optionLabel(c)[0] : ''; })();
+  // "none": you said none of them is yours, or your address matched none of them.
+  const v = ans === '*' ? `showing all ${g.members.length} districts` : ans === 'none' ? 'Not on your ballot' : (() => { const c = b.byId.get(ans) as Contest | undefined; return c ? optionLabel(c)[0] : ''; })();
   return `<li class="row gline" id="${qId(g)}"><div class="gl-in"><span class="gl-t">${esc(cleanOffice(g.office))}: <b>${esc(v)}</b></span>
     <button class="linkbtn" data-act="district-change" data-g="${esc(g.key)}" data-fk="dc-${qId(g)}">Change</button></div></li>`;
 }
@@ -441,7 +456,8 @@ export function ballotHeadHTML(): string {
   return `<div class="bhead"><h2 class="vh" id="ballot-h">Your ballot</h2>
       <p class="picks-line"><span>Picks: ${esc(lensSummary())}</span><button class="mini" data-act="picks" data-fk="picks-edit">Edit</button></p>
       ${filled}${addr}
-      ${statewideOnly ? `<p class="statewide-note">We only have statewide races for your area so far. For local races: ${sb ? ext(sb.url, sb.label) : ''}</p>` : ''}
+      ${statewideOnly ? `<div class="statewide-note"><p>We only have statewide races for your area so far.</p>
+        <p class="row-btns">${sb ? `<a class="mini dark" href="${esc(sb.url)}" target="_blank" rel="noopener">See my sample ballot</a>` : ''}<a class="mini" href="${esc(reportURL('Please add my city'))}" target="_blank" rel="noopener">Ask for your city</a></p></div>` : ''}
     </div>
     ${headsHTML(headsUp('ballot'))}`;
 }

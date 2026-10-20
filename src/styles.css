@@ -208,6 +208,7 @@ b, strong { font-weight: 600; }
 .plan-sub { margin-top: 6px; font-size: 14.5px; color: var(--on-dusk-2); line-height: 1.4; text-wrap: pretty; }
 .plan-reg { margin-top: 8px; font-size: 14px; line-height: 1.38; padding: 4px 0 4px 12px; border-left: 3px solid var(--gold-on-dusk); }
 .plan-reg a { color: var(--on-dusk); }
+.plan-reg .pbtn { display: inline-flex; margin-top: 8px; padding: 0 14px; min-height: 44px; }
 .plan-acts { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; }
 .pbtn { display: flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 10px; font-weight: 600; font-size: 15px; text-decoration: none; border-radius: 2px; text-align: center; line-height: 1.2; }
 .pbtn.gold { background: #F3EDDD; color: #1F2623; box-shadow: var(--lie); }

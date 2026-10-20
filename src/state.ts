@@ -51,6 +51,7 @@ export interface UI {
   addrOpen: boolean;
   addrBusy: boolean;
   addrMsg: string | null;
+  addrFail: '' | 'down' | 'miss'; // the lookup didn't answer (Try again) or matched nothing usable
   saveOpen: boolean;
   copyFallback: string | null;
   bulk: string | null;        // how many races the last fill from your sources filled, while its Undo is live
@@ -76,13 +77,15 @@ export const S = {
   prefs: { parties: null, endorsedOnly: false, foldDecided: true, autoPick: false } as Prefs,
   ui: {
     view: 'ballot', open: new Set(), row: null, page: {}, others: new Set(), folded: new Set(), unfolded: new Set(), onlyUndecided: false, keep: null,
-    noteOpen: new Set(), reader: null, sheet: null, sheetFrom: null, sheetBack: null, addrOpen: false, addrBusy: false, addrMsg: null, saveOpen: false, copyFallback: null, bulk: null,
+    noteOpen: new Set(), reader: null, sheet: null, sheetFrom: null, sheetBack: null, addrOpen: false, addrBusy: false, addrMsg: null, addrFail: '', saveOpen: false, copyFallback: null, bulk: null,
     setupFill: false, setupOnly: false,
   } as UI,
   /* ?try=fresh|aunt|straight|sources: a scenario on whatever ballot opens, never saved. */
   tryMode: null as string | null,
   pending: null as Pending | null,
   loadErr: null as string | null,
+  /* What "Try again" under a load error does: the same ZIP, ballot or first visit again. */
+  retry: null as null | (() => void),
 };
 
 /* ---------- saved state (localStorage, per ballot) ---------- */

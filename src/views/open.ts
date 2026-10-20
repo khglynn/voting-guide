@@ -2,12 +2,12 @@
    the buttons to decide. One tap deeper ("Full details") is the reader. */
 import type { Candidate, Contest, Endorser, Item, Measure } from '../types';
 import { S } from '../state';
-import { status, isRCV, isMultiSeat, isMultiJudge, isPartisan, rankMax, ranksOf, ordinal, chosen, chosenIds } from '../ballot';
+import { status, isRCV, isMultiSeat, isMultiJudge, isPartisan, rankMax, ranksOf, ordinal, chosen, chosenIds, contestDistrict } from '../ballot';
 import { esc, hash, plural, host } from '../util';
 import { lineup, weighedIn, orderCandidates, type Lineup } from '../model/tally';
 import { candidateReview, judicialReview, judgesLead, surveyLines, surveySentence, pollsFor, raceRatings, hasRatings, type Review } from '../model/judges';
 import { seatLabel, cheatTitle, thresholdLabel } from '../model/labels';
-import { picksOnBallot } from '../model/lens';
+import { picksOnBallot, chipMembers } from '../model/lens';
 import { sourceLean, leanHTML, ext, clampP, escP, sampleBallot, isOpen, leadRest, srcLink, reportURL, paywallRowHTML } from './common';
 import { headsUp, headsHTML } from './ledger';
 
@@ -20,6 +20,26 @@ const ARROW = '<svg viewBox="0 0 18 18" aria-hidden="true" focusable="false"><pa
 const PAGE = 3;
 
 /* ---------- the top of an open row: where it applies ---------- */
+/* The Census lookup answers Congress and the state legislature (DC's "upper" is a ward, which it
+   doesn't), so only those rows offer to check with your address. */
+export function censusSettles(c: Contest): boolean {
+  const k = contestDistrict(c).kind;
+  return !!k && !(S.ballot!.st === 'DC' && k === 'upper');
+}
+/* "Only on some ballots": who votes on it, then a way to find out: your address (where the Census
+   settles it), your sample ballot, or "It's not on my ballot". Hiding every one like it at once
+   stays as a quiet extra. */
+function mayHTML(it: Item, scope: string, same: number, allLabel: string): string {
+  const sb = sampleBallot();
+  const addr = it.kind === 'contest' && censusSettles(it);
+  const btns = [
+    addr ? `<button class="mini dark" data-act="addr-open" data-fk="ma-${esc(it.id)}">Check with my address</button>` : '',
+    sb ? `<a class="mini${addr ? '' : ' dark'}" href="${esc(sb.url)}" target="_blank" rel="noopener">See my sample ballot</a>` : '',
+    `<button class="mini" data-act="notmine" data-id="${esc(it.id)}" data-fk="nm-${esc(it.id)}">It’s not on my ballot</button>`,
+  ].join('');
+  return `<div class="may"><p><b>Only on some ballots.</b> ${escP(scope)}</p>
+    <p class="may-acts">${btns}</p>${same ? `<p class="may-acts"><button class="mini quiet" data-act="notmine" data-id="${esc(it.id)}" data-all="1">${esc(allLabel.replace('N', String(same + 1)))}</button></p>` : ''}</div>`;
+}
 function whereHTML(it: Item): string {
   const b = S.ballot!;
   if (it.kind !== 'contest') {
@@ -27,8 +47,7 @@ function whereHTML(it: Item): string {
     if (!b.mayApply.has(it.id)) return '';
     // Another district's measure: who votes on it, and a way to clear every one like it at once.
     const same = [...b.mayApply].filter((id) => id !== it.id && !S.b.notMine.includes(id) && (b.byId.get(id) as Measure | undefined)?.jurisdiction === it.jurisdiction);
-    return `<div class="may"><p><b>Only on some ballots.</b> ${escP(it.jurisdiction)}</p>
-      <p class="may-acts"><button class="mini" data-act="notmine" data-id="${esc(it.id)}" data-fk="nm-${esc(it.id)}">Not on my ballot</button>${same.length ? `<button class="mini quiet" data-act="notmine" data-id="${esc(it.id)}" data-all="1">Hide all ${same.length + 1} for this area</button>` : ''}</p></div>`;
+    return mayHTML(it, it.jurisdiction, same.length, 'Hide all N for this area');
   }
   const g = b.groupOf[it.id];
   if (g) {
@@ -40,8 +59,7 @@ function whereHTML(it: Item): string {
   if (b.onlyIn[it.id]) return `<p class="ob-meta">Only on ballots in ${esc(b.onlyIn[it.id].join(', '))}. <button class="linkbtn" data-act="notmine" data-id="${esc(it.id)}">Not on my ballot</button></p>`;
   if (b.mayApply.has(it.id)) {
     const same = [...b.mayApply].filter((id) => id !== it.id && !S.b.notMine.includes(id) && (b.byId.get(id) as Contest | undefined)?.scope_plain === it.scope_plain);
-    return `<div class="may"><p><b>Only on some ballots.</b> ${escP(it.scope_plain)}</p>
-      <p class="may-acts"><button class="mini" data-act="notmine" data-id="${esc(it.id)}" data-fk="nm-${esc(it.id)}">Not on my ballot</button>${same.length ? `<button class="mini quiet" data-act="notmine" data-id="${esc(it.id)}" data-all="1">Hide all ${same.length + 1} like this</button>` : ''}</p></div>`;
+    return mayHTML(it, it.scope_plain, same.length, 'Hide all N like this');
   }
   return '';
 }
@@ -102,8 +120,13 @@ function gridHTML(it: Item, l: Lineup, cols: { key: string; head: string; sub: s
 /* When none of your sources weighed in: one calm line instead of an empty table. */
 function noneLineHTML(it: Item, l: Lineup): string {
   const parts: string[] = [];
-  if (!chosen().length) parts.push('No sources on. Turn some on at the top.');
-  else if (!l.relevant.length) parts.push(`None of your sources cover this ${it.kind === 'measure' ? 'measure' : 'race'}.`);
+  // No sources on: one tap turns the newspapers and guides back on, right here.
+  if (!chosen().length) {
+    const on = chipMembers(S.ballot!, 'papers').length
+      ? `<p class="row-btns"><button class="mini" data-act="papers-on" data-id="${esc(it.id)}" data-fk="pon-${esc(it.id)}">Turn on newspapers and guides</button></p>` : '';
+    return `<p class="none-line">No sources on.</p>${on}`;
+  }
+  if (!l.relevant.length) parts.push(`None of your sources cover this ${it.kind === 'measure' ? 'measure' : 'race'}.`);
   else {
     if (l.noStand.length) parts.push(`${l.noStand.map((e) => e.short).join(', ')} took no stand.`);
     if (l.notFound.length) parts.push(`No endorsement found from ${l.notFound.map((e) => e.short).join(', ')}.`);

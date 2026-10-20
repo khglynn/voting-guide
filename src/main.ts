@@ -125,7 +125,11 @@ async function boot(): Promise<void> {
   } catch { /* ignore */ }
   render();
   const head = parseShareHead(location.hash);
-  try { await ensureIndex(); } catch { S.loadErr = 'We couldn’t reach the guide’s data. Check your connection and reload.'; render(); return; }
+  try { await ensureIndex(); } catch {
+    S.loadErr = 'We couldn’t reach the guide’s data. Check your connection.';
+    S.retry = () => { S.loadErr = null; void boot(); };
+    render(); return;
+  }
   if (head && S.index!.states[head.st]) {
     const places = head.places.filter((p) => S.index!.places[p]);
     await openBallot(head.st, places, head.zip, { share: head });

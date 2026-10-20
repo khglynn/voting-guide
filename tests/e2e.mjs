@@ -454,6 +454,102 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await ctx.close();
 }
 
+/* ---------- every "go check" gets a button (flow, Oct 20) ---------- */
+{
+  const { ctx, page } = await newPage();
+  let asked = 0;
+  await page.route('https://geocoding.geo.census.gov/**', (route) => { asked++; return route.abort(); });
+  await openBallot(page, '78704');
+  // "Only on some ballots": the address (a state Senate race, so the Census can settle it), the sample ballot, "It's not on my ballot".
+  await openRow(page, 'tx-senate-21');
+  const may = await page.$$eval('#i-tx-senate-21 .may .may-acts > *', (els) => els.map((e) => e.textContent.trim()));
+  check('Maybe box: Check with my address, See my sample ballot, It’s not on my ballot', may.join('|') === 'Check with my address|See my sample ballot|It’s not on my ballot', may.join('|'));
+  check('Maybe box: the sample ballot is an official link', /^https:/.test((await page.getAttribute('#i-tx-senate-21 .may a', 'href')) || ''));
+  await shot(page, '04b-maybe-box');
+  await tap(page, '#i-tx-senate-21 .may [data-act="addr-open"]');
+  check('Maybe box: Check with my address opens the address form, focused', !!(await page.$('.addrbox form[data-form="addr"]')) && await page.evaluate(() => document.activeElement && document.activeElement.id === 'addr-in'));
+  // The Census doesn't answer: Try again, or pick them yourself.
+  await page.fill('#addr-in', 'a test lookup');
+  await page.locator('form[data-form="addr"] button[type=submit]').tap();
+  await page.waitForSelector('[data-act="addr-retry"]', { timeout: 8000 }).catch(() => {});
+  check('Lookup down: one line, then Try again and Pick them myself', (await text(page, 'form[data-form="addr"] [role="status"]')) === 'The Census lookup didn’t answer.' && (await page.$$eval('.addrbox .addr-next button', (els) => els.map((e) => e.textContent.trim()))).join('|') === 'Try again|Pick them myself', await text(page, '.addrbox'));
+  await shot(page, '04c-lookup-down');
+  const before = asked;
+  await tap(page, '[data-act="addr-retry"]');
+  await page.waitForSelector('[data-act="addr-retry"]', { timeout: 8000 }).catch(() => {});
+  check('Lookup down: Try again asks the Census again with what you typed', asked > before && (await page.inputValue('#addr-in')) === 'a test lookup', `${before} then ${asked}`);
+  const firstQ = await page.evaluate(() => document.querySelector('.ledger .row[data-q]').dataset.q);
+  await tap(page, '[data-act="addr-pick"]');
+  check('Lookup down: Pick them myself closes the form and opens the first district question', !(await page.$('form[data-form="addr"]')) && !!(await page.$(`.row[data-q="${firstQ}"].is-open`)), firstQ);
+  // A district question has a last answer for a district you're not in.
+  const dv = await page.evaluate(() => [...document.querySelectorAll('.row[data-q]')].map((r) => r.dataset.q).find((k) => /Del Valle/.test(k)));
+  await openRow(page, `q:${dv}`);
+  const last = await page.$$eval(`.row[data-q="${dv}"] .opts .opt`, (els) => els.map((e) => e.textContent.replace(/\s+/g, ' ').trim()).pop());
+  check('District question: the last answer is "I’m not in Del Valle ISD"', last === 'I’m not in Del Valle ISD', last);
+  const m0 = Number(((await text(page, '.bar-txt')).match(/of (\d+)/) || [])[1]);
+  await tap(page, `.row[data-q="${dv}"] [data-act="district"][data-v="none"]`);
+  check('District question: "I’m not in Del Valle ISD" leaves one line and takes the race off the count', /Del Valle ISD Trustee: Not on your ballot/.test(await text(page, '#sec-school')) && Number(((await text(page, '.bar-txt')).match(/of (\d+)/) || [])[1]) === m0 - 1);
+  check('District question: focus lands on its Change', /^dc-/.test(await focusedFk(page)), await focusedFk(page));
+  const council = await page.evaluate(() => [...document.querySelectorAll('.row[data-q]')].map((r) => r.dataset.q).find((k) => /City Council/.test(k)));
+  await openRow(page, `q:${council}`);
+  check('District question: with no one district to name, "Not in any of these"', (await text(page, `.row[data-q="${council}"] [data-act="district"][data-v="none"]`)) === 'Not in any of these');
+  // "It's not on my ballot" hides the race.
+  await openRow(page, 'tx-senate-21');
+  await tap(page, '#i-tx-senate-21 [data-act="notmine"]:not([data-all])');
+  check('Maybe box: It’s not on my ballot hides the race', /Not on your ballot/.test(await text(page, '#i-tx-senate-21')));
+  // "No sources on" gets a button.
+  await edit(page);
+  await tap(page, '.sheet-panel [data-act="chip"][data-k="papers"]');
+  await tap(page, '.sheet-panel [data-fk="sheet-x"]');
+  const mid = await page.evaluate(() => document.querySelector('#sec-measures .row[data-item]').dataset.item);
+  await openRow(page, mid);
+  check('No sources on: the open row offers "Turn on newspapers and guides"', (await text(page, `#i-${mid} .none-line`)) === 'No sources on.' && (await text(page, `#i-${mid} [data-act="papers-on"]`)) === 'Turn on newspapers and guides');
+  await tap(page, `#i-${mid} [data-act="papers-on"]`);
+  check('No sources on: one tap turns them back on and stays on the row', /^Picks: Newspapers and guides/.test(await text(page, '.picks-line')) && !(await page.$('[data-act="papers-on"]')) && !!(await page.$(`#i-${mid}.is-open`)) && (await focusedFk(page)) === `row-${mid}`, await text(page, '.picks-line'));
+  check('Go check: nothing in all caps', (await upperCased(page)).length === 0);
+  await noSideScroll(page, 'Go check');
+  page.errors = page.errors.filter((e) => !/Failed to load resource|ERR_FAILED/.test(e));
+  noErrors(page, 'Go check');
+  await ctx.close();
+}
+{
+  // A ballot that won't load: Try again, with the ZIP still in the box. Then the guide's data itself.
+  const { ctx, page } = await newPage();
+  await page.route('**/data/place-austin-tx.json', (route) => route.fulfill({ status: 503, body: 'down' }));
+  await openZip(page, '78704');
+  await page.waitForSelector('[data-act="retry"]', { timeout: 15000 });
+  check('Load error: says so, with Try again and the ZIP in the box', /couldn’t load that ballot/.test(await text(page, '.zip-err')) && (await text(page, '[data-act="retry"]')) === 'Try again' && (await page.inputValue('#zip')) === '78704');
+  await page.unroute('**/data/place-austin-tx.json');
+  await tap(page, '[data-act="retry"]');
+  await page.waitForSelector(SETUP, { timeout: 15000 }).catch(() => {});
+  check('Load error: Try again opens the same ballot', /Austin, Texas · 78704/.test(await text(page, '.su-done')), await text(page, '.su-done'));
+  await ctx.close();
+  const two = await newPage();
+  await two.page.route('**/data/index.json', (route) => route.fulfill({ status: 503, body: 'down' }));
+  await two.page.goto(`${BASE}/?today=${TODAY}`);
+  await two.page.waitForSelector('[data-act="retry"]', { timeout: 15000 });
+  check('Load error: the guide’s data down on the first visit, with Try again', /couldn’t reach the guide’s data/.test(await text(two.page, '.zip-err')));
+  await two.page.unroute('**/data/index.json');
+  await tap(two.page, '[data-act="retry"]');
+  await two.page.waitForFunction(() => !document.querySelector('.zip-err') && /\d+ cities/.test(document.querySelector('[data-fk="browse"]')?.textContent || ''), null, { timeout: 15000 }).catch(() => {});
+  check('Load error: Try again loads the first page', !(await two.page.$('.zip-err')) && !!(await two.page.$('[data-fk="browse"]')));
+  await two.ctx.close();
+}
+{
+  // The registration alert gets a button (the state's register page comes with the data track; mocked here).
+  const { ctx, page } = await newPage();
+  await page.route('**/data/state-CO.json', async (route) => {
+    const r = await route.fetch();
+    const j = await r.json();
+    j.howto.registration.register_url = 'https://vote.gov/register/colorado';
+    return route.fulfill({ response: r, json: j });
+  });
+  await openBallot(page, '80205');
+  check('Registration alert: "Register now" to the state’s register page', /^Not registered\?/.test(await text(page, '.plan-reg p')) && (await text(page, '.plan-reg a')) === 'Register now' && (await page.getAttribute('.plan-reg a', 'href')) === 'https://vote.gov/register/colorado', await text(page, '.plan-reg'));
+  noErrors(page, 'Registration alert');
+  await ctx.close();
+}
+
 /* ---------- the bar and the menu (flow, Oct 20) ---------- */
 {
   const { ctx, page } = await newPage();
@@ -560,6 +656,8 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await noSideScroll(page, 'Spokane');
   check('Spokane: says we only have statewide races so far', /We only have statewide races for your area so far\./.test(await text(page, '.bhead')));
   check('Spokane: links an official ballot lookup', !!(await page.$('.bhead .statewide-note a[href^="http"]')));
+  check('Spokane: See my sample ballot and Ask for your city', (await page.$$eval('.statewide-note .row-btns a', (els) => els.map((e) => e.textContent.trim()))).join('|') === 'See my sample ballot|Ask for your city'
+    && /docs\.google\.com/.test((await page.getAttribute('.statewide-note a:last-child', 'href')) || ''));
   check('Spokane: no city or county sections', !(await page.$('.sec[data-sec="city"], .sec[data-sec="county"]')));
   noErrors(page, 'Spokane');
   await ctx.close();
@@ -570,6 +668,8 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await openZip(page, '02139');
   await page.waitForSelector('.notice');
   check('Uncovered: names Vote.gov', /Vote\.gov/.test(await text(page, '.notice')));
+  const ask = new URL((await page.getAttribute('.notice a[data-ask-kevin]', 'href')) || 'about:blank');
+  check('Uncovered: "Want this for your city? Ask Kevin." opens the form with the state and ZIP', /Want this for your city\? Ask Kevin\./.test(await text(page, '.notice')) && ask.searchParams.get('entry.628621310') === 'Massachusetts, 02139', ask.search);
   await ctx.close();
 }
 {

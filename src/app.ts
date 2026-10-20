@@ -44,7 +44,7 @@ export async function loadInvolved(): Promise<void> {
 export function resetUI(): void {
   const u = S.ui;
   u.view = 'ballot'; u.row = null; u.page = {}; u.others.clear(); u.folded.clear(); u.unfolded.clear(); u.keep = null;
-  u.noteOpen.clear(); u.reader = null; u.sheet = null; u.sheetFrom = null; u.sheetBack = null; u.addrOpen = false; u.addrMsg = null; u.saveOpen = false; u.copyFallback = null; u.bulk = null;
+  u.noteOpen.clear(); u.reader = null; u.sheet = null; u.sheetFrom = null; u.sheetBack = null; u.addrOpen = false; u.addrMsg = null; u.addrFail = ''; u.saveOpen = false; u.copyFallback = null; u.bulk = null;
   u.open.delete('voted');
 }
 export function go(view: View, push = true): void {
@@ -70,8 +70,8 @@ export function openReader(id: string, push = true): void {
 export function toDoor(): void {
   if (S.view === 'ballot') persist(true);
   forgetLast();
-  S.view = 'start'; S.ballot = null; S.zipChoice = null; S.coverage = null; S.pending = null; S.loadErr = null;
-  S.ui.view = 'ballot'; S.ui.reader = null; S.ui.sheet = null; S.ui.sheetBack = null; S.ui.addrOpen = false; S.ui.addrMsg = null;
+  S.view = 'start'; S.ballot = null; S.zipChoice = null; S.coverage = null; S.pending = null; S.loadErr = null; S.retry = null;
+  S.ui.view = 'ballot'; S.ui.reader = null; S.ui.sheet = null; S.ui.sheetBack = null; S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.addrFail = '';
   forgetUndo();
   hideToast();
   render();
@@ -109,13 +109,16 @@ const countPicks = (b: BallotState): number => Object.keys(b.picks).length + Obj
    and "try as" go straight to the ballot. */
 const needsSetup = (b: BallotState | null): boolean => !b || (!b.setupDone && countPicks(b) === 0 && b.sources === null && b.party === null);
 /* Resolves true once the ballot (or its step 2) is open, false when it couldn't load (the start
-   view then shows why). Callers that do more after opening check it. `door`: opened from the first
-   page, so Back returns there. `noSetup`: the voter is already on a ballot (an address narrowing
-   "Aurora or Denver" to Aurora), so step 2 would only interrupt. */
-export async function openBallot(st: string, placeIds: string[], zip: string, opts: { share?: ReturnType<typeof parseShareHead>; door?: boolean; noSetup?: boolean } = {}): Promise<boolean> {
+   view then shows why, with "Try again"). `door`: opened from the first page, so Back returns there.
+   `noSetup`: the voter is already on a ballot (an address narrowing "Aurora or Denver" to Aurora),
+   so step 2 would only interrupt. `after`: what to do once it's open (an address's districts), on
+   the first try or on "Try again". */
+type OpenOpts = { share?: ReturnType<typeof parseShareHead>; door?: boolean; noSetup?: boolean; after?: () => void };
+export async function openBallot(st: string, placeIds: string[], zip: string, opts: OpenOpts = {}): Promise<boolean> {
   if (S.ballot && S.view === 'ballot') persist(true); // a pick made just now lands on its own ballot
   S.view = 'loading';
   S.loadErr = null;
+  S.retry = null;
   render(['mast']);
   try {
     await ensureIndex();
@@ -165,12 +168,16 @@ export async function openBallot(st: string, placeIds: string[], zip: string, op
     window.scrollTo(0, 0);
     if (S.pending) $('[data-fk="restore-yes"]')?.focus();
     if (setup) $('[data-fk="su-h"]')?.focus({ preventScroll: true });
+    if (opts.after) opts.after();
     return true;
   } catch (e) {
     console.warn('Could not load ballot', e);
     S.view = 'start';
     S.ballot = null;
-    S.loadErr = 'We couldn’t load that ballot. Check your connection and try again.';
+    // "Try again" opens the same ballot, and the ZIP box holds its ZIP meanwhile.
+    if (zip) S.zip = zip;
+    S.loadErr = 'We couldn’t load that ballot. Check your connection.';
+    S.retry = () => { void openBallot(st, placeIds, zip, opts); };
     render();
     return false;
   }
@@ -180,10 +187,14 @@ export async function submitZip(raw: string): Promise<void> {
   const v = String(raw || '').replace(/\D/g, '');
   if (S.view === 'setup') { S.ballot = null; S.view = 'start'; }
   chooserGeo = null;
-  S.zip = v; S.zipErr = ''; S.zipChoice = null; S.coverage = null; S.loadErr = null;
+  S.zip = v; S.zipErr = ''; S.zipChoice = null; S.coverage = null; S.loadErr = null; S.retry = null;
   if (v.length !== 5) { S.zipErr = 'Enter all 5 digits, like 80205.'; render(['mast']); $('#zip')?.focus(); return; }
   let idx: Index;
-  try { idx = await ensureIndex(); } catch { S.loadErr = 'We couldn’t reach the guide’s data. Check your connection and try again.'; render(['mast']); return; }
+  try { idx = await ensureIndex(); } catch {
+    S.loadErr = 'We couldn’t reach the guide’s data. Check your connection.';
+    S.retry = () => { void submitZip(v); };
+    render(['mast']); return;
+  }
   const places = idx.zips[v] || [];
   if (places.length === 1) { await openBallot(idx.places[places[0]].state, places, v, { door: true }); return; }
   if (places.length > 1) { S.zipChoice = { zip: v, placeIds: places }; S.ui.addrOpen = false; render(['mast']); $(`[data-fk="cp-${CSS.escape(places[0])}"]`)?.focus(); return; }
@@ -204,13 +215,21 @@ export async function openChosen(ids: string[], zip: string): Promise<void> {
   const g = chooserGeo && chooserGeo.zip === zip ? chooserGeo.r : null;
   chooserGeo = null;
   const st = S.index!.places[ids[0]].state;
-  if (await openBallot(st, ids, zip, { door: true }) && g && g.state === st) applyGeo(g);
+  await openBallot(st, ids, zip, { door: true, after: g && g.state === st ? () => applyGeo(g) : undefined });
+}
+/* A lookup that went wrong: one line, and what to do next. `down`: the Census didn't answer, so
+   "Try again"; `miss`: it answered with nothing we can use. On a ballot, either way, "Pick them
+   myself" goes to the first district question. */
+function addrFailed(msg: string, fail: 'down' | 'miss'): void {
+  S.ui.addrBusy = false; S.ui.addrMsg = msg; S.ui.addrFail = fail;
+  renderAddr();
 }
 export async function runAddress(addr: string): Promise<void> {
   if (S.view === 'setup' || S.view === 'loading') return;
   const choosing = S.view !== 'ballot' && S.zipChoice;
   const b = S.view === 'ballot' ? S.ballot : null;
   const door = !b && !choosing;
+  S.ui.addrFail = '';
   if (addr.trim().length < 6) { S.ui.addrMsg = 'Enter a street address with the city or ZIP.'; renderAddr(); return; }
   S.ui.addrBusy = true; S.ui.addrMsg = null; renderAddr();
   // Add the state and ZIP we already know; if that finds nothing (a typo in the ZIP, or an
@@ -224,12 +243,13 @@ export async function runAddress(addr: string): Promise<void> {
     r = await censusLookup(full);
     if (!r && full !== addr.trim()) r = await censusLookup(addr.trim());
   }
-  catch { S.ui.addrBusy = false; S.ui.addrMsg = door ? 'The Census lookup didn’t answer. Try again, or use your ZIP.' : 'The Census lookup didn’t answer. Try again, or pick your districts yourself.'; renderAddr(); return; }
+  catch { addrFailed('The Census lookup didn’t answer.', 'down'); return; }
   S.ui.addrBusy = false;
-  if (!r) { S.ui.addrMsg = 'The Census lookup couldn’t find that address. Try adding the city and ZIP.'; renderAddr(); return; }
+  if (!r) { addrFailed('The Census lookup couldn’t find that address. Try adding the city and ZIP.', 'miss'); return; }
+  const geo = r;
   if (door) {
     let idx: Index;
-    try { idx = await ensureIndex(); } catch { S.ui.addrMsg = 'We couldn’t reach the guide’s data. Check your connection and try again.'; renderAddr(); return; }
+    try { idx = await ensureIndex(); } catch { addrFailed('We couldn’t reach the guide’s data. Check your connection.', 'down'); return; }
     const hit = settleAddress(idx, r);
     if (hit.kind === 'none') { S.ui.addrMsg = 'We couldn’t tell which place that is. Try your ZIP.'; renderAddr(); return; }
     S.ui.addrOpen = false; S.ui.addrMsg = null; S.zipErr = '';
@@ -242,7 +262,7 @@ export async function runAddress(addr: string): Promise<void> {
       $(`[data-fk="cp-${CSS.escape(hit.ids[0])}"]`)?.focus();
       return;
     }
-    if (await openBallot(hit.st, hit.ids, hit.zip, { door: true })) applyGeo(r);
+    await openBallot(hit.st, hit.ids, hit.zip, { door: true, after: () => applyGeo(geo) });
     return;
   }
   if (choosing && S.zipChoice) {
@@ -258,14 +278,14 @@ export async function runAddress(addr: string): Promise<void> {
     }
     const zip = S.zipChoice.zip;
     S.ui.addrOpen = false;
-    if (await openBallot(idx.places[hit].state, [hit], zip, { door: true })) applyGeo(r);
+    await openBallot(idx.places[hit].state, [hit], zip, { door: true, after: () => applyGeo(geo) });
     return;
   }
   if (!b) return;
-  if (r.state && r.state !== b.st) { S.ui.addrMsg = `That address is outside ${b.stateName}. Change your ZIP first.`; renderAddr(); return; }
+  if (r.state && r.state !== b.st) { addrFailed(`That address is outside ${b.stateName}. Change your ZIP first.`, 'miss'); return; }
   if (b.places.length > 1) {
     const hit = placeFromGeo(S.index!.places, b.places.map((p) => p.id), r);
-    if (hit) { if (await openBallot(b.st, [hit], S.b.zip, { noSetup: true })) applyGeo(r); return; }
+    if (hit) { await openBallot(b.st, [hit], S.b.zip, { noSetup: true, after: () => applyGeo(geo) }); return; }
   }
   applyGeo(r);
 }
@@ -292,6 +312,7 @@ export function applyGeo(r: { cd: number | null; upper: number | null; lower: nu
   S.b.addrNote = parts.length ? `Your districts: ${parts.join(', ')}. We didn’t save your address. Double-check with your sample ballot.` : null;
   S.ui.addrOpen = false;
   S.ui.addrMsg = null;
+  S.ui.addrFail = '';
   render();
   persist();
   toast(answered ? `Filled in ${plural(answered, 'district')} from your address.` : (b.groups.some((g) => !S.b.districts[g.key]) ? 'Found your address, but it doesn’t answer the district questions here. Use the finder links in each one.' : 'Found your address. Nothing on this ballot depends on it.'));

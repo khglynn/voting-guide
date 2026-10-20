@@ -168,6 +168,9 @@ export interface HowTo {
   model_plain: string | null;
   registration: {
     check_url: string | null;
+    /* vote.gov's register page for this state, and the vote.gov page that confirms the pattern */
+    register_url?: string;
+    register_url_source?: string;
     deadlines: { method: string; date: string | null; rule: string; source: string | null }[];
     same_day_registration: boolean | null;
     same_day_notes: string | null;
@@ -211,6 +214,8 @@ export interface HowTo {
   };
   gotchas: string[];
   situations?: { id: string; question: string; answer: string; steps: string[] | null; deadline: string | null; source: string | null; confidence: Confidence }[];
+  /* a better official sample-ballot lookup than any source named like one, for a statewide-only ballot */
+  sample_ballot_url?: string;
   sources: Src[];
   heads_up?: HeadsUp[];
   judicial_review?: JudicialReview | null;

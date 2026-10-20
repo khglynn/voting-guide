@@ -84,9 +84,16 @@ function measureCovers(m: Measure, places: PlaceBundle[]): boolean {
    southeast Orange County"). Naming the county only to say where such a district sits never
    makes it cover the place. */
 const DISTRICTISH = /precinct|ward\b|trustee area|congressional|\bseat\b|\bplace \d|district\s*(?:\d|[a-z]\b)|\b(?:CD|SD|HD|AD)-\d|\bsubcircuit\s*\d|community development district/i;
+/* A ward's own race on that ward's ballot: "Only Ward 6 voters" on "DC Ward 6" covers it. An ANC
+   race ("You vote in one ANC race") names its ward too, but stays a maybe: each voter has one of
+   many single-member districts. */
+const OWN_WARD = /^only ward (\d+) voters\b/i;
+const placeWard = (p: PlaceBundle): string | null => (p.label.match(/\bward (\d+)$/i) || [])[1] || null;
 function coversPlace(c: Contest, places: PlaceBundle[]): boolean {
   if (!places.length || !places.every((p) => p.order.includes(c.id))) return false;
   const scope = c.scope_plain || '';
+  const ward = (scope.match(OWN_WARD) || [])[1];
+  if (ward && places.every((p) => placeWard(p) === ward)) return true;
   if (DISTRICTISH.test(scope)) return false;
   return places.every((p) => p.counties.some((county) => {
     const name = county.replace(/\s*\(.*\)\s*/, '').replace(/\s+County$/i, '').trim();

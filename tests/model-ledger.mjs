@@ -181,6 +181,18 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('may apply: Arapahoe County races stay certain in Englewood', en.items.filter((x) => /^arapahoe-/.test(x.id) && x.kind === 'contest').every((x) => !en.mayApply.has(x.id)));
     const se = open('WA', ['seattle-wa']);
     check('may apply: the King County District Court West district (all of Seattle) stays certain', se.items.filter((x) => /^kc-district-court-west/.test(x.id)).every((x) => !se.mayApply.has(x.id)));
+    // Review, Oct 20: "Ward 6" matched as a district inside the place, so DC Ward 6's own council and
+    // school board races ("Only Ward 6 voters") were maybes on the Ward 6 ballot, and the party fill
+    // left Ward 6 Council blank. A ward's own race covers its ward; the ANC race stays a maybe.
+    const own = [];
+    for (const w of [1, 3, 5, 6]) {
+      const dc = open('DC', [`dc-ward-${w}`]);
+      own.push(...[`dc-ward-${w}-council`, `dc-ward-${w}-sboe`].filter((id) => !dc.items.some((x) => x.id === id) || dc.mayApply.has(id)));
+      if (!dc.mayApply.has(`dc-ward-${w}-anc`)) own.push(`dc-ward-${w}-anc (should stay a maybe)`);
+    }
+    check('may apply: a DC ward\'s own council and school board races are sure things on its ballot; its ANC race is not', own.length === 0, own.join(', '));
+    open('DC', ['dc-ward-6']);
+    check('may apply: the Democratic fill on Ward 6 includes the Ward 6 Council race', bulk.planParty('Democratic').fills.some((f) => f.id === 'dc-ward-6-council'));
   }
 
   /* ---------- Board of Equalization District 3 is all of LA County (LA walk, Oct 20) ---------- */

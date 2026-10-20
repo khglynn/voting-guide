@@ -2237,6 +2237,43 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
   noErrors(page, 'Address on the first page');
   await ctx.close();
 }
+// A DC ward's ZIP: nothing on the ballot turns on the address, so there is no address box before a
+// lookup; after one from the first page, the box holds only what was found, this visit; after a
+// reload there is no box again. Census is answered here, with a made-up address.
+{
+  const { ctx, page } = await newPage();
+  const answer = { result: { addressMatches: [{ matchedAddress: 'TEST FOUR, WASHINGTON, DC, 20016', geographies: {
+    States: [{ STATE: '11' }], 'Incorporated Places': [{ BASENAME: 'Washington' }], '119th Congressional Districts': [{ BASENAME: '98' }],
+    '2024 State Legislative Districts - Upper': [{ BASENAME: '3' }] } }] } };
+  await page.route('https://geocoding.geo.census.gov/**', (route) => {
+    const cb = new URL(route.request().url()).searchParams.get('callback');
+    return route.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify(answer)})` });
+  });
+  await openBallot(page, '20016');
+  check('DC ward: before a lookup, no address box', !(await page.$('.addrbox')), await text(page, '.addrbox'));
+  await page.evaluate(() => localStorage.clear());
+  await openZip(page, '20016');
+  await page.waitForSelector('.door-place', { timeout: 15000 });
+  await tap(page, '.front [data-act="addr-open"]');
+  await page.fill('#addr-in', 'a test lookup');
+  await page.locator('form[data-form="addr"] button[type=submit]').tap();
+  await page.waitForSelector('.door-found', { timeout: 15000 });
+  await tap(page, SETUP);
+  await page.waitForSelector('#plan', { timeout: 15000 });
+  const found = 'Found: Test Four, Washington, DC 20016 Not it? Try again';
+  check('DC ward: after a lookup, the box holds only what was found, no "the rest"', (await text(page, '.addrbox')) === found && !(await page.$('.addrbox .addr-n, .addrbox .addr-set, .addrbox .row-btns')), await text(page, '.addrbox'));
+  await tap(page, '.addrbox [data-act="addr-again"]');
+  check('DC ward: Not it? Try again opens the form in the box', !!(await page.$('.addrbox form[data-form="addr"]')) && (await page.inputValue('#addr-in')) === 'a test lookup');
+  await tap(page, '.addrbox [data-act="addr-close"]');
+  check('DC ward: Cancel brings back what was found', (await text(page, '.addrbox')) === found, await text(page, '.addrbox'));
+  await page.waitForTimeout(400);
+  await page.reload();
+  await page.waitForSelector('#plan', { timeout: 15000 });
+  await page.waitForTimeout(150);
+  check('DC ward: after a reload, no address box, as before the lookup', !(await page.$('.addrbox')) && !/test four|a test lookup/i.test((await savedVG(page)) || ''), await text(page, '.addrbox'));
+  noErrors(page, 'DC ward address');
+  await ctx.close();
+}
 
 // Several Census matches (Kevin, Oct 20: "did I select the right address?"): "Which one is yours?",
 // one button each, and the one tapped is the one applied. A miss says so, with what you typed kept.

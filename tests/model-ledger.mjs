@@ -1507,6 +1507,17 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     open('FL', []);
     S.b.addrNote = address.addrSummary(address.setFromAddress(S.ballot, S.b, { cd: 24, upper: 38, lower: null }));
     check('address box: nothing set, "Found your address. Your sample ballot shows the rest."', /^Found your address\. Your sample ballot shows the rest\. See my sample ballot$/.test(box()), box());
+    // A DC ward: nothing turns on the address, so after a lookup only what was found, and no "the rest".
+    open('DC', ['dc-ward-1']);
+    const hasBox = () => /class="addrbox"/.test(ledger.ballotHeadHTML());
+    check('address box: a DC ward has no box before a lookup', ledger.addressCount() === 0 && !hasBox());
+    S.b.addrNote = address.addrSummary(address.setFromAddress(S.ballot, S.b, { cd: 98, upper: 1, lower: null }));
+    S.ui.addrFound = 'Test Four, Washington, DC 20001';
+    check('address box: a DC ward after a lookup holds only what was found', box() === 'Found: Test Four, Washington, DC 20001 Not it? Try again', box());
+    S.ui.addrOpen = true;
+    check('address box: and Not it? Try again keeps the box, with the form', /<div class="addrbox">[\s\S]*data-form="addr"/.test(ledger.ballotHeadHTML()) && !/the rest/.test(ledger.ballotHeadHTML()));
+    S.ui.addrOpen = false; S.ui.addrFound = null;
+    check('address box: a DC ward after a reload has no box', !hasBox(), box());
     S.view = view0; S.ui.addrFound = null;
   }
 }

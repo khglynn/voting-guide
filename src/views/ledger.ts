@@ -487,7 +487,9 @@ export function addressHelps(): boolean {
    ("Use my address" leads while it can settle something) and your sample ballot. After one: what
    the Census found, for this visit only ("Found: ..." with "Not it? Try again"); what it set, which
    the ballot keeps (S.b.addrNote, never the address); and how many the sample ballot still has to
-   settle. A reload shows the last two. */
+   settle. A reload shows the last two. When it put no race on the ballot and nothing is left for
+   the sample ballot either (a DC ward's), the box holds only what was found, or the form again
+   after "Not it? Try again", and after a reload there is no box, as before the lookup. */
 function addrBoxHTML(): string {
   const n = addressCount();
   const note = S.b.addrNote;
@@ -502,6 +504,7 @@ function addrBoxHTML(): string {
   const found = S.ui.addrFound && !S.ui.addrOpen
     ? `<p class="addr-found" tabindex="-1" data-fk="addr-found"><b>Found:</b> ${esc(S.ui.addrFound)} <button class="linkbtn" data-act="addr-again" data-fk="addr-again">Not it? Try again</button></p>` : '';
   const none = note === FOUND_ONLY;
+  if (none && !n) return found || S.ui.addrOpen ? `<div class="addrbox">${found}${S.ui.addrOpen ? addrHTML() : ''}</div>` : '';
   const left = none ? '<p class="addr-n">Found your address. Your sample ballot shows the rest.</p>'
     : n ? `<p class="addr-n"><b>${n === 1 ? '1 still depends' : `${n} still depend`} on your address.</b> Your sample ballot shows ${n === 1 ? 'it' : 'them'}.</p>` : '';
   const after = S.ui.addrOpen ? addrHTML() : (none || n) && sb ? `<div class="row-btns">${sbLink(true)}</div>` : '';

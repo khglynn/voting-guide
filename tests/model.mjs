@@ -41,7 +41,7 @@ for (const m of ['lens', 'tally', 'bulk', 'judges', 'labels', 'plan']) {
 }
 /* The string views the ledger paints (no DOM needed to build their HTML). */
 const views = {};
-for (const v of ['ledger', 'cheat', 'open', 'lens', 'mast']) views[v] = await load(`/src/views/${v}.ts`);
+for (const v of ['ledger', 'cheat', 'open', 'lens', 'mast', 'setup']) views[v] = await load(`/src/views/${v}.ts`);
 
 const results = [];
 const check = (name, ok, extra = '') => { results.push({ name, ok }); console.log(`${ok ? 'PASS' : 'FAIL'}  ${name}${!ok && extra ? `  (${extra})` : ''}`); };

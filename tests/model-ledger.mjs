@@ -765,7 +765,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('address: a Maryland "Ward 2" never picks DC Ward 2', geo.placeFromGeo(INDEX.places, dc, r('MD', null, 2)) === null);
   }
 
-  /* ---------- the first page (flow, Oct 20): an address before any ZIP, the city count ---------- */
+  /* ---------- the first page (flow, Oct 20): an address before any ZIP, step 2, the city count ---------- */
   {
     const r = (state, place, extra = {}) => ({ matched: '', state, county: null, place, cd: null, upper: null, lower: null, zip: null, ...extra });
     const go = (x) => JSON.stringify(geo.settleAddress(INDEX, x));
@@ -780,7 +780,33 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('first-page address: a state we don\'t cover says so', geo.settleAddress(INDEX, r('MA', 'Cambridge', { zip: '02139' })).kind === 'out');
     check('first-page address: no ZIP and no place we know is "none"', geo.settleAddress(INDEX, r('TX', 'Waco')).kind === 'none' && geo.settleAddress(INDEX, r(null, 'Austin')).kind === 'none');
 
+    const au = open('TX', ['austin-tx']);
+    tally.clearLineups();
+    const agree = bulk.planAgree();
+    const solo = bulk.planSetup(null);
+    check('step 2: with no party, the fill is the agree fill', solo.fills.map((f) => f.id).join() === agree.fills.map((f) => f.id).join() && !solo.party && solo.agree.single === agree.single);
+    lens.setParty(au, 'Democratic');
+    tally.clearLineups();
+    const both2 = bulk.planSetup('Democratic');
+    const pids = both2.party.fills.map((f) => f.id);
+    const ids = both2.fills.map((f) => f.id);
+    check('step 2: with a party, its candidates come first, then agree in the races it left', pids.length > 0 && ids.slice(0, pids.length).join() === pids.join() && both2.agree.fills.every((f) => !pids.includes(f.id)), `${pids.length} party, ${both2.agree.fills.length} agree`);
+    check('step 2: one batch, no race twice', new Set(ids).size === ids.length);
+    const n = bulk.applyFills(both2.fills);
+    check('step 2: the batch lands whole', n === ids.length, `${n} of ${ids.length}`);
+    bulk.undoFills();
+    check('step 2: one Undo takes all of it back', Object.keys(S.b.picks).length === 0 && Object.keys(S.b.auto).length === 0, JSON.stringify(S.b.picks).slice(0, 120));
+    lens.setParty(au, null);
+
+    const old = { zip: '78704', picks: { 'tx-us-senate': 'X' }, ranks: {}, auto: {}, noAuto: [], notes: {}, districts: {}, notMine: [], sources: null, planSeen: false, offerDismissed: null, addrNote: null, party: null, ticks: [] };
+    check('step 2: a save from before step 2 back-fills setupDone as false', ({ ...st.emptyBallotState(), ...old }).setupDone === false);
+    const b = st.emptyBallotState('78704');
+    b.picks['tx-us-senate'] = au.byId.get('tx-us-senate').candidates[0].name;
+    const before = st.encodeShare(au, b);
+    b.setupDone = true;
+    check('step 2: finishing it never changes the save link', st.encodeShare(au, b) === before);
     check('first page: the city count counts DC\'s wards and New York City\'s boroughs once', views.mast.cityCount(INDEX) === Object.keys(INDEX.places).length - (Object.keys(INDEX.places).filter((id) => id.startsWith('dc-ward-')).length - 1) - (Object.keys(INDEX.places).filter((id) => id.startsWith('nyc-')).length - 1), String(views.mast.cityCount(INDEX)));
+    check('step 2: the place line reads like the mock-up', views.setup.placeLine(au) === 'Austin, Texas' && views.setup.placeLine(open('DC', ['dc-ward-1'])) === 'Ward 1, Washington, DC' && views.setup.placeLine(open('NY', ['nyc-brooklyn-ny'])) === 'Brooklyn, New York' && views.setup.placeLine(open('WA', [])) === 'Washington');
   }
 
   /* ---------- UX re-walk: the survey in plain words ---------- */

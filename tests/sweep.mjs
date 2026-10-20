@@ -414,6 +414,9 @@ async function open(browser, ballot, R) {
       const sel = ballot.placeIds.length ? `[data-act="choose-place"][data-ids="${ballot.placeIds.join('+')}"]` : `[data-act="choose-state"][data-st="${ballot.st}"]`;
       await page.locator(sel).first().click();
     }
+    // A fresh device opens on step 2 first; "Show my ballot" with both switches off shows the ballot as is.
+    await page.waitForSelector('#plan, [data-act="setup-done"]', { timeout: 20000 });
+    if (await page.$('[data-act="setup-done"]')) await page.locator('[data-act="setup-done"]').click();
     await page.waitForSelector('#plan', { timeout: 20000 });
     await page.evaluate(() => Promise.race([document.fonts.ready, new Promise((r) => setTimeout(r, 4000))])); // real font metrics, but never wait long
     await page.waitForTimeout(150);

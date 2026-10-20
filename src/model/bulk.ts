@@ -92,6 +92,17 @@ export function planParty(party: string): Plan {
   return { fills, single: 0, skippedTwo, skippedRanked, skippedPartial };
 }
 
+/* Step 2's "Fill in their picks": the party's candidates first (when a party is chosen), then
+   where your sources agree in the races the party left open, as one batch for one Undo. Plan it
+   after the party is set: the agree lineup includes the party's own sources. */
+export function planSetup(party: string | null): { party: Plan | null; agree: Plan; fills: Fill[] } {
+  const p = party ? planParty(party) : null;
+  const a = planAgree();
+  const taken = new Set(p ? p.fills.map((f) => f.id) : []);
+  const rest = a.fills.filter((f) => !taken.has(f.id));
+  return { party: p, agree: { ...a, fills: rest, single: rest.filter((f) => f.single).length }, fills: [...(p ? p.fills : []), ...rest] };
+}
+
 export function planJudges(): Plan {
   const jb = judgeBatch();
   if (!jb) return emptyPlan();

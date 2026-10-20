@@ -8,20 +8,26 @@ import { CHIPS, chipState, chipMembers, withPicks, partiesOnBallot, picksOnBallo
 import { coverage } from '../model/tally';
 import { leanHTML, sourceLean, ext, isOpen, paywallSourceHTML, hasPaywallNote } from './common';
 
-const TICK = '<svg class="tick" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 6.3l2.6 2.6L10 3.3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>';
+export const TICK = '<svg class="tick" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 6.3l2.6 2.6L10 3.3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>';
 const TYPE_WORD: Record<string, string> = {
   publication: 'Newspaper or newsroom', civic_nonpartisan: 'Nonpartisan civic group', party: 'Political party', advocacy: 'Issue group',
   labor: 'Union', business: 'Business group', elected_official: 'Officeholder', other: 'Other',
 };
 
-export function lensBarHTML(): string {
+/* The three preset chips. A group chip with no picks on this ballot stays out of the way. Step 2
+   on the first page uses the same chips. */
+export function chipsHTML(): string {
   const b = S.ballot!;
-  const chips = CHIPS.map((c) => {
+  return CHIPS.map((c) => {
     const st = chipState(b, c.key);
     if (st === 'empty' && c.key !== 'papers') return '';
     const on = st === 'on' || st === 'some';
     return `<button class="chip${st === 'some' ? ' some' : ''}" data-act="chip" data-k="${c.key}" aria-pressed="${on}" data-fk="chip-${c.key}">${TICK}${esc(c.label)}</button>`;
   }).join('');
+}
+export function lensBarHTML(): string {
+  const b = S.ballot!;
+  const chips = chipsHTML();
   const party = S.b.party;
   const parties = partiesOnBallot(b);
   const partyChip = parties.length ? `<button class="chip" data-act="${party ? 'party-off' : 'sheet'}" data-s="party" aria-pressed="${!!party}" data-fk="chip-party">${TICK}${party ? `${esc(party)} Party` : 'Pick a party'}</button>` : '';

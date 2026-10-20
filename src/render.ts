@@ -15,15 +15,18 @@ import { readerHTML } from './views/reader';
 
 export type Region = 'mast' | 'restore' | 'plan' | 'ballot' | 'cheat' | 'pass' | 'trust' | 'bar' | 'sheet' | 'print';
 export const ALL: Region[] = ['mast', 'restore', 'plan', 'ballot', 'cheat', 'pass', 'trust', 'bar', 'sheet'];
+/* The ballot's regions paint only once the ballot is showing: during step 2 (S.view 'setup') the
+   ballot is loaded for its counts, and only the first page shows. */
+const shown = (): boolean => !!S.ballot && S.view === 'ballot';
 const html: Record<Region, () => string> = {
   mast: mastHTML,
   restore: restoreHTML,
-  plan: () => (S.ballot && S.ui.view === 'ballot' ? planHTML() : ''),
-  ballot: () => (S.ballot && S.ui.view === 'ballot' ? ballotHTML() : ''),
-  cheat: () => (S.ballot && S.ui.view === 'cheat' ? cheatSectionHTML() : ''),
-  pass: () => (S.ballot && S.ui.view === 'pass' ? passHTML() : ''),
+  plan: () => (shown() && S.ui.view === 'ballot' ? planHTML() : ''),
+  ballot: () => (shown() && S.ui.view === 'ballot' ? ballotHTML() : ''),
+  cheat: () => (shown() && S.ui.view === 'cheat' ? cheatSectionHTML() : ''),
+  pass: () => (shown() && S.ui.view === 'pass' ? passHTML() : ''),
   trust: () => (S.ui.view === 'ballot' ? trustHTML() : ''),
-  bar: barHTML,
+  bar: () => (shown() ? barHTML() : ''),
   sheet: () => {
     if (!S.ballot) return '';
     if (S.ui.reader) return readerHTML(S.ui.reader);
@@ -31,7 +34,7 @@ const html: Record<Region, () => string> = {
     if (S.ui.sheet === 'party') return partySheetHTML();
     return '';
   },
-  print: () => (S.ballot ? cheatHTML(true) : ''),
+  print: () => (shown() ? cheatHTML(true) : ''),
 };
 export const $ = (sel: string): HTMLElement | null => document.querySelector(sel) as HTMLElement | null;
 
@@ -79,10 +82,10 @@ export function render(regions: Region[] = ALL): void {
       if (!el) continue;
       el.innerHTML = html[r]();
     }
-    document.body.classList.toggle('has-bar', !!S.ballot);
+    document.body.classList.toggle('has-bar', shown());
     document.body.classList.toggle('sheet-open', !!(S.ui.sheet || S.ui.reader));
     setModal(!!(S.ui.sheet || S.ui.reader));
-    ['ballot', 'cheat', 'pass'].forEach((v) => document.body.classList.toggle(`v-${v}`, !!S.ballot && S.ui.view === v));
+    ['ballot', 'cheat', 'pass'].forEach((v) => document.body.classList.toggle(`v-${v}`, shown() && S.ui.view === v));
   });
 }
 
@@ -159,6 +162,7 @@ export function renderAddr(): void {
 /* The parts that summarize the whole ballot: the lens coverage line, the bulk counts, the bar. */
 let lazyTimer: number | undefined;
 export function renderSummaries(): void {
+  if (S.view === 'setup') { render(['mast']); return; }
   render(['bar']);
   window.clearTimeout(lazyTimer);
   lazyTimer = window.setTimeout(() => {
@@ -173,6 +177,8 @@ export function renderSummaries(): void {
   }, 60);
 }
 export function renderLens(): void {
+  // Step 2's chips live in the first page's masthead.
+  if (S.view === 'setup') { render(['mast']); return; }
   anchored(() => {
     withFocusKept(() => {
       const bar = $('#lensbar');

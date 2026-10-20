@@ -66,7 +66,7 @@ export function openReader(id: string, push = true): void {
   ($('[data-fk="reader-x"]'))?.focus({ preventScroll: true });
 }
 window.addEventListener('popstate', (e) => {
-  if (!S.ballot) return;
+  if (!S.ballot || S.view !== 'ballot') return;
   const st = (e.state || {}) as { vg?: View; reader?: string };
   const view = st.vg || 'ballot';
   const fromReader = S.ui.reader;
@@ -82,9 +82,16 @@ window.addEventListener('popstate', (e) => {
    place is picked, so its districts come along. */
 let chooserGeo: { zip: string; r: GeoResult } | null = null;
 const countPicks = (b: BallotState): number => Object.keys(b.picks).length + Object.keys(b.ranks || {}).filter((k) => !(k in b.picks)).length;
-/* Resolves true once the ballot is open, false when it couldn't load (the start view then
-   shows why). Callers that do more after opening check it. */
-export async function openBallot(st: string, placeIds: string[], zip: string, opts: { share?: ReturnType<typeof parseShareHead> } = {}): Promise<boolean> {
+/* Step 2 ("Pick by endorsements or party") is for a ballot this device has nothing for yet: no
+   picks, the default sources, no party, and step 2 never finished. Save links, ballots with picks
+   and "try as" go straight to the ballot. */
+const needsSetup = (b: BallotState | null): boolean => !b || (!b.setupDone && countPicks(b) === 0 && b.sources === null && b.party === null);
+/* Resolves true once the ballot (or its step 2) is open, false when it couldn't load (the start
+   view then shows why). Callers that do more after opening check it. `noSetup`: the voter is
+   already on a ballot (an address narrowing "Aurora or Denver" to Aurora), so step 2 would only
+   interrupt. */
+export async function openBallot(st: string, placeIds: string[], zip: string, opts: { share?: ReturnType<typeof parseShareHead>; noSetup?: boolean } = {}): Promise<boolean> {
+  if (S.ballot && S.view === 'ballot') persist(true); // a pick made just now lands on its own ballot
   S.view = 'loading';
   S.loadErr = null;
   render(['mast']);
@@ -102,6 +109,7 @@ export async function openBallot(st: string, placeIds: string[], zip: string, op
     if (reopened && !opts.share) toast(`${reopened === 1 ? 'A race you marked is' : `${reopened} races you marked are`} ranked choice now. Rank your picks there again.`);
     if (opts.share && !S.tryMode) {
       const { state, dropped } = decodeShare(ballot, opts.share);
+      state.setupDone = true; // a ballot that came from a link never asks step 2, even after a reload
       normalizeRanks(ballot, state);
       const n = countPicks(state);
       const m = existing ? countPicks(existing) : 0;
@@ -122,14 +130,18 @@ export async function openBallot(st: string, placeIds: string[], zip: string, op
       try { history.replaceState(null, '', location.pathname + location.search); } catch { /* ignore */ }
     }
     if (S.tryMode) applyScenario(S.tryMode);
-    S.view = 'ballot';
+    const setup = !opts.share && !opts.noSetup && !S.tryMode && needsSetup(existing);
+    S.view = setup ? 'setup' : 'ballot';
     S.zipChoice = null;
     S.coverage = null;
     resetUI();
+    if (setup) { S.ui.setupFill = false; S.ui.setupOnly = false; S.ui.open.delete('su-party'); }
+    else S.b.setupDone = true; // a ballot this device has shown never asks step 2 again
     render();
-    persist(true);
+    persist(true); // saves nothing during step 2
     window.scrollTo(0, 0);
     if (S.pending) $('[data-fk="restore-yes"]')?.focus();
+    if (setup) $('[data-fk="su-h"]')?.focus({ preventScroll: true });
     return true;
   } catch (e) {
     console.warn('Could not load ballot', e);
@@ -143,6 +155,7 @@ export async function openBallot(st: string, placeIds: string[], zip: string, op
 
 export async function submitZip(raw: string): Promise<void> {
   const v = String(raw || '').replace(/\D/g, '');
+  if (S.view === 'setup') { S.ballot = null; S.view = 'start'; }
   chooserGeo = null;
   S.zip = v; S.zipErr = ''; S.zipChoice = null; S.coverage = null; S.loadErr = null;
   if (v.length !== 5) { S.zipErr = 'Enter all 5 digits, like 80205.'; render(['mast']); $('#zip')?.focus(); return; }
@@ -171,7 +184,7 @@ export async function openChosen(ids: string[], zip: string): Promise<void> {
   if (await openBallot(st, ids, zip) && g && g.state === st) applyGeo(g);
 }
 export async function runAddress(addr: string): Promise<void> {
-  if (S.view === 'loading') return;
+  if (S.view === 'setup' || S.view === 'loading') return;
   const choosing = S.view !== 'ballot' && S.zipChoice;
   const b = S.view === 'ballot' ? S.ballot : null;
   const door = !b && !choosing;
@@ -229,7 +242,7 @@ export async function runAddress(addr: string): Promise<void> {
   if (r.state && r.state !== b.st) { S.ui.addrMsg = `That address is outside ${b.stateName}. Change your ZIP first.`; renderAddr(); return; }
   if (b.places.length > 1) {
     const hit = placeFromGeo(S.index!.places, b.places.map((p) => p.id), r);
-    if (hit) { if (await openBallot(b.st, [hit], S.b.zip)) applyGeo(r); return; }
+    if (hit) { if (await openBallot(b.st, [hit], S.b.zip, { noSetup: true })) applyGeo(r); return; }
   }
   applyGeo(r);
 }

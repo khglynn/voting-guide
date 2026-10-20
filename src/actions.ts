@@ -3,12 +3,12 @@
    because the save link and saved picks depend on it. */
 import type { Contest, Item } from './types';
 import { S, persist, forgetLast, emptyBallotState, type View } from './state';
-import { status, sectionOf, rankMax, ordinal, chosenIds, type SectionKey } from './ballot';
+import { status, sectionOf, rankMax, ordinal, chosenIds, decisionItems, type SectionKey } from './ballot';
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
 import { render, renderRow, renderSection, renderSummaries, renderLens, renderBallot, renderAddr, rowEl, scrollRowIntoView, anchored, $ } from './render';
 import { openBallot, openChosen, go, openReader, runAddress } from './app';
 import { judgeBatch } from './model/judges';
-import { planAgree, planParty, planJudges, applyFills, undoFills, emptyPlan, touchUndo, type Plan } from './model/bulk';
+import { planAgree, planParty, planJudges, planSetup, applyFills, undoFills, emptyPlan, touchUndo, type Plan } from './model/bulk';
 import { toggleChip, setParty, setSources, type ChipKey } from './model/lens';
 import { courtGroup } from './model/labels';
 import { basisWords, LEANS } from './views/common';
@@ -296,6 +296,7 @@ A.chip = (d) => {
 A['party-off'] = () => { setParty(B(), null); renderLens(); persist(); };
 A['party-set'] = (d) => {
   setParty(B(), d.p!);
+  if (S.view === 'setup') { S.ui.open.delete('su-party'); renderLens(); focusFk('chip-party'); return; }
   S.ui.sheet = null;
   render(['sheet']); renderLens(); persist();
   const n = planParty(d.p!).fills.length;
@@ -325,6 +326,17 @@ A['sheet-close'] = () => {
 };
 
 /* ---------- bulk fills, each undone as a batch ---------- */
+/* The toast after a fill: what landed, what was skipped and why, and Undo. The ballot head's
+   buttons and step 2's "Show my ballot" share it. */
+function fillToast(head: string, plan: Plan): void {
+  const extra = [
+    plan.single ? `${plan.single} of those come from just one source.` : '',
+    plan.skippedTwo ? `Skipped ${plural(plan.skippedTwo, 'race')} where the party has more than one candidate.` : '',
+    plan.skippedRanked ? `Skipped ${plural(plan.skippedRanked, 'ranked-choice race')}; rank those yourself.` : '',
+    plan.skippedPartial ? `Left ${plural(plan.skippedPartial, 'race')} you started for you to finish.` : '',
+  ].filter(Boolean).join(' ');
+  toast(`${head} ${extra}`.trim(), { label: 'Undo', act: 'undo-bulk' });
+}
 A.bulk = (d) => {
   const k = d.k!;
   let plan: Plan;
@@ -341,15 +353,9 @@ A.bulk = (d) => {
   render(['bar']);
   persist();
   const what = k === 'judges' ? plural(plan.fills.reduce((x, f) => x + Object.keys(f.set).length, 0), 'judge') : plural(n, 'pick');
-  const extra = [
-    plan.single ? `${plan.single} of those come from just one source.` : '',
-    plan.skippedTwo ? `Skipped ${plural(plan.skippedTwo, 'race')} where the party has more than one candidate.` : '',
-    plan.skippedRanked ? `Skipped ${plural(plan.skippedRanked, 'ranked-choice race')}; rank those yourself.` : '',
-    plan.skippedPartial ? `Left ${plural(plan.skippedPartial, 'race')} you started for you to finish.` : '',
-  ].filter(Boolean).join(' ');
   const head = k === 'judges' ? `Marked ${jb && jb.left === 0 ? 'all ' : ''}${what} keep.${flagged ? ` The review flagged ${flagged}; see “Read these first.”` : ''}`
     : `Filled ${what}${k === 'agree' ? ' where your sources agree' : k === 'party' ? ` with ${S.b.party} candidates` : ''}.`;
-  toast(`${head} ${extra}`.trim(), { label: 'Undo', act: 'undo-bulk' });
+  fillToast(head, plan);
 };
 A['undo-bulk'] = () => {
   if (!undoFills()) return;
@@ -403,6 +409,31 @@ A['change-place'] = () => {
   render();
   window.scrollTo(0, 0);
   $('#zip')?.focus();
+};
+
+/* ---------- step 2: pick by endorsements or party ---------- */
+A['setup-fill'] = () => { S.ui.setupFill = !S.ui.setupFill; render(['mast']); };
+A['setup-only'] = () => { S.ui.setupOnly = !S.ui.setupOnly; render(['mast']); };
+/* "Show my ballot": one batch of fills (the party's candidates, then where your sources agree), so
+   one Undo takes it all back; the "only what's left" filter when something is left; then the
+   ballot, saved for the first time. */
+A['setup-done'] = () => {
+  if (S.view !== 'setup' || !S.ballot) return;
+  const plan = S.ui.setupFill ? planSetup(S.b.party) : null;
+  const n = plan && plan.fills.length ? applyFills(plan.fills) : 0;
+  S.ui.onlyUndecided = S.ui.setupOnly && decisionItems().some((i) => !i.done);
+  S.ui.row = null; S.ui.keep = null;
+  S.b.setupDone = true;
+  S.view = 'ballot';
+  render();
+  persist(true);
+  window.scrollTo(0, 0);
+  if (!n || !plan) return;
+  const p = plan.party ? plan.party.fills.length : 0;
+  const a = plan.agree.fills.length;
+  const head = `Filled ${plural(n, 'pick')}${p ? ` with ${S.b.party} candidates` : ''}${p && a ? ' and' : ''}${a ? ' where your sources agree' : ''}.`;
+  const pp = plan.party || emptyPlan();
+  fillToast(head, { fills: plan.fills, single: plan.agree.single, skippedTwo: pp.skippedTwo, skippedRanked: pp.skippedRanked, skippedPartial: pp.skippedPartial + plan.agree.skippedPartial });
 };
 A['addr-open'] = () => { S.ui.addrOpen = true; S.ui.addrMsg = null; renderAddr(); const i = $('#addr-in'); if (i) { i.scrollIntoView({ block: 'center' }); i.focus({ preventScroll: true }); } };
 A['addr-close'] = () => { S.ui.addrOpen = false; renderAddr(); focusFk('addr-open'); };

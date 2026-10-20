@@ -5,6 +5,7 @@ import { S } from '../state';
 import { esc, fmtDate, todayISO } from '../util';
 import { ext, isOpen, telHTML, askCityURL, BUY_ME_A_COFFEE_URL, KEVIN_URL } from './common';
 import { countyName } from './ledger';
+import { setupHTML } from './setup';
 import { stateName } from '../geo';
 
 function electionDate(): string {
@@ -67,6 +68,7 @@ export function mastHTML(): string {
       ${S.b.addrNote ? `<p class="fine">${esc(S.b.addrNote)}</p>` : ''}
     </header>`;
   }
+  if (S.view === 'setup' && S.ballot) return setupHTML();
   const err = S.zipErr ? `<p class="zip-err" role="alert" id="zip-err">${esc(S.zipErr)}</p>` : '';
   let after = '';
   if (S.zipChoice && idx) {

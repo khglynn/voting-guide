@@ -96,10 +96,11 @@ b, strong { font-weight: 600; }
 .pbtn, .chip, .mini, .pick, .ftog, .fcta, .cbtn, .bigbtn, .closebtn, .pfm .act, .retain-all > span { font-family: var(--f-display); font-weight: 600; font-variation-settings: "wdth" 84; letter-spacing: .015em; }
 /* Printed headings: one green ink with a few specks where it missed. Each heading sits on its own patch of the
    plate (--mx, --my), so no two show the same specks. The padding keeps descenders inside the mask. */
-.place, .bhead h2, .lens-head h2, .cheat-head h2, .pass h2, .endcap h3, .rd h2 {
+.place, .su-h, .bhead h2, .lens-head h2, .cheat-head h2, .pass h2, .endcap h3, .rd h2 {
   padding-bottom: .16em; margin-bottom: -.16em;
   -webkit-mask: var(--press) var(--mx, 0) var(--my, 0) / 2.4em 2.4em repeat; mask: var(--press) var(--mx, 0) var(--my, 0) / 2.4em 2.4em repeat; }
 .place { --mx: 11px; --my: 7px; }
+.su-h { --mx: 33px; --my: 11px; }
 .lens-head h2 { --mx: 23px; --my: 4px; }
 .bhead h2 { --mx: 41px; --my: 19px; }
 .cheat-head h2 { --mx: 7px; --my: 31px; }
@@ -157,8 +158,8 @@ b, strong { font-weight: 600; }
 .addr label { display: block; font-size: 15px; margin-bottom: 6px; }
 .addr input { width: 100%; min-height: 46px; padding: 0 10px; border: 1.5px solid var(--ink); background: var(--bone); border-radius: 2px; }
 
-/* The first page: step 1, where you vote (Oct 20). Pen ticks and step numbers in the one green
-   ink; nothing new in color. */
+/* The first page: step 1, where you vote, and step 2, whose picks (Oct 20). Pen ticks and step
+   numbers in the one green ink; nothing new in color. */
 .front .mast-top .dateline { padding: 4px 0; line-height: 1.35; }
 .ticks { margin-top: 14px; display: grid; gap: 6px; font-size: 17px; color: var(--ink-2); }
 .ticks li { display: flex; align-items: center; gap: 10px; }
@@ -171,6 +172,21 @@ b, strong { font-weight: 600; }
 .front .addr-cta { margin-top: 10px; font-size: 15.5px; }
 .door-rule { border: 0; border-top: 1px solid var(--rule-2); margin: 18px 0 2px; }
 .front .fine .linkbtn { margin: -12px 0; padding: 0; }
+.su-done { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 44px; border-bottom: 1px solid var(--rule-2); font-size: 15.5px; color: var(--ink-2); }
+.su-done b { color: var(--ink); }
+.su-done .linkbtn { margin: 0; flex: none; }
+.su-h { margin-top: 16px; font-family: var(--f-display); font-size: 24px; font-weight: 800; line-height: 1.05; font-variation-settings: "wdth" 78; color: var(--print); }
+.su-h .step-n { -webkit-mask: none; mask: none; }
+.su-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.su-parties { margin-top: 8px; }
+.su-cov { margin-top: 12px; padding-bottom: 14px; border-bottom: 1px solid var(--rule-2); font-size: 14.5px; color: var(--muted); }
+.su-sw { width: 100%; min-height: 52px; display: grid; grid-template-columns: minmax(0, 1fr) 52px; gap: 12px; align-items: start; padding: 12px 0 6px; text-align: left; }
+.su-l b { display: block; font-size: 17px; line-height: 1.3; }
+.su-l small { display: block; margin-top: 2px; font-size: 14.5px; line-height: 1.4; color: var(--muted); }
+.su-sw .tg { height: 26px; justify-content: flex-end; }
+.su-sw[aria-checked="true"] .tg span { background: var(--paper-green); border-color: var(--paper-green); }
+.su-sw[aria-checked="true"] .tg span::after { left: 23px; background: var(--on-dusk); }
+.setup .bigbtn { margin-top: 12px; }
 
 /* option cards: district questions, the place question, the party chooser */
 .opts { display: grid; gap: 8px; margin-top: 12px; }

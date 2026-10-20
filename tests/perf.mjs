@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-/* Performance on the biggest ballots, at 4x CPU throttle (a mid phone): time to open a ballot
-   from the ZIP box, and time for a tap (open a row, make a pick) to paint.
+/* Performance on the biggest ballots, at 4x CPU throttle (a mid phone): time from the ZIP box to
+   step 2, and time for a tap (a step 2 chip or switch, open a row, make a pick) to paint.
    BASE=http://localhost:4173 node tests/perf.mjs     Targets (v2's): open about 1s, taps under 250ms. */
 const { chromium } = await import(process.env.PW_PATH || 'playwright');
 const BASE = (process.env.BASE || 'http://localhost:4173').replace(/\/$/, '');
@@ -18,24 +18,34 @@ for (const [name, zip] of [['Chicago', '60614'], ['Houston', '77002'], ['Aurora 
   const t0 = Date.now();
   await page.locator('button[type=submit]').click();
   if (zip === '80247') await page.locator('[data-act="choose-place"][data-ids="aurora-co+denver-co"]').click();
-  await page.waitForSelector('#plan');
+  // A fresh device opens on step 2 ("Pick by endorsements or party"): "open" times the ZIP to step 2.
+  await page.waitForSelector('[data-act="setup-done"]');
   await page.evaluate(() => new Promise((r) => requestAnimationFrame(() => setTimeout(r, 0))));
   const open = Date.now() - t0;
-  // A tap: open a row in the measures section, then pick, timing input to the next paint.
+  // A tap: input to the next paint.
   const tapTime = (sel) => page.evaluate((s) => new Promise((resolve) => {
     const el = document.querySelector(s);
     const t = performance.now();
     el.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true, button: 0, pointerType: 'mouse' }));
     requestAnimationFrame(() => setTimeout(() => resolve(Math.round(performance.now() - t)), 0));
   }), sel);
+  // Step 2's chips and switches repaint its counts (the fills and coverage) on every tap.
+  const setupChip = await tapTime('#setup [data-act="chip"][data-k="papers"]');
+  await tapTime('#setup [data-act="chip"][data-k="papers"]');
+  const setupFill = await tapTime('[data-act="setup-fill"]');
+  await tapTime('[data-act="setup-fill"]');
+  // "Show my ballot" paints the whole ballot (not a tap budget: it is the ballot opening).
+  const show = await tapTime('[data-act="setup-done"]');
+  await page.waitForSelector('#plan');
+  // Open a row in the measures section, then pick.
   const id = await page.evaluate(() => document.querySelector('#sec-measures .row[data-item]').dataset.item);
   const openRow = await tapTime(`#i-${id} [data-act="row"]`);
   const pick = await tapTime(`#i-${id} [data-act="pick"]`);
   const chip = await tapTime('[data-act="chip"][data-k="progressive"]');
-  out.push({ name, open, openRow, pick, chip });
+  out.push({ name, open, setupChip, setupFill, show, openRow, pick, chip });
   await ctx.close();
 }
 await browser.close();
-for (const r of out) console.log(`${r.name}: open ${r.open}ms, open a row ${r.openRow}ms, pick ${r.pick}ms, change the lens ${r.chip}ms (4x CPU throttle)`);
-const slow = out.filter((r) => r.openRow > 250 || r.pick > 250);
+for (const r of out) console.log(`${r.name}: open to step 2 ${r.open}ms, step 2 chip ${r.setupChip}ms, step 2 switch ${r.setupFill}ms, show my ballot ${r.show}ms, open a row ${r.openRow}ms, pick ${r.pick}ms, change the lens ${r.chip}ms (4x CPU throttle)`);
+const slow = out.filter((r) => r.openRow > 250 || r.pick > 250 || r.setupChip > 250 || r.setupFill > 250);
 process.exit(slow.length ? 1 : 0);

@@ -24,10 +24,11 @@ export interface BallotState {
   addrNote: string | null;           // "Matched from your address" summary, no address kept
   party: string | null;              // the party chosen in "A party" (for its sources and "Fill in my party")
   ticks: string[];                   // Help your friends vote: who you've texted
+  setupDone: boolean;                // step 2 ("Pick by endorsements or party") finished on this device
 }
 export const emptyBallotState = (zip = ''): BallotState => ({
   zip, picks: {}, ranks: {}, auto: {}, noAuto: [], notes: {}, districts: {}, notMine: [], sources: null,
-  planSeen: false, offerDismissed: null, addrNote: null, party: null, ticks: [],
+  planSeen: false, offerDismissed: null, addrNote: null, party: null, ticks: [], setupDone: false,
 });
 
 /* View state for the ledger. Nothing here is saved. */
@@ -52,6 +53,8 @@ export interface UI {
   saveOpen: boolean;
   copyFallback: string | null;
   bulk: string | null;        // label of the last bulk fill, while its Undo is live
+  setupFill: boolean;         // step 2's "Fill in their picks" switch
+  setupOnly: boolean;         // step 2's "Show only what's left" switch
 }
 
 /* restore: this device has other picks for the ballot, so ask which to keep. shared: a link
@@ -61,7 +64,8 @@ export interface Pending { kind: 'restore' | 'shared'; key: string; incoming: Ba
 
 export const S = {
   index: null as Index | null,
-  view: 'start' as 'start' | 'loading' | 'ballot',
+  /* setup: step 2 on the first page, with the ballot loaded but not shown and nothing saved yet. */
+  view: 'start' as 'start' | 'loading' | 'setup' | 'ballot',
   zip: '',
   zipErr: '' as string,
   zipChoice: null as null | { zip: string; placeIds: string[] },
@@ -72,6 +76,7 @@ export const S = {
   ui: {
     view: 'ballot', open: new Set(), row: null, page: {}, others: new Set(), folded: new Set(), unfolded: new Set(), onlyUndecided: false, keep: null,
     noteOpen: new Set(), reader: null, sheet: null, sheetFrom: null, addrOpen: false, addrBusy: false, addrMsg: null, saveOpen: false, copyFallback: null, bulk: null,
+    setupFill: false, setupOnly: false,
   } as UI,
   /* ?try=fresh|aunt|straight|sources: a scenario on whatever ballot opens, never saved. */
   tryMode: null as string | null,
@@ -96,7 +101,9 @@ export function savedBallot(key: string): BallotState | null {
 let saveTimer: number | undefined;
 export function persist(now = false): void {
   if (S.tryMode) return; // a "try as" scenario never touches the real saved picks
+  // Step 2 saves nothing: someone who leaves before "Show my ballot" finds the first page again.
   const run = () => {
+    if (S.view === 'setup') return;
     const s = readSaved();
     s.prefs = S.prefs;
     if (S.ballot) {
@@ -111,6 +118,7 @@ export function persist(now = false): void {
 export function forgetLast(): void {
   if (S.tryMode) return;
   const s = readSaved();
+  if (!s.last) return; // nothing to forget, so nothing to write
   s.last = null;
   save(KEY, s);
 }

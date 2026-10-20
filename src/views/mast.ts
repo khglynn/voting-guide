@@ -102,7 +102,6 @@ export function mastHTML(): string {
   // question has its own link, so this one steps aside while it shows.
   const addr = S.zipChoice ? '' : S.ui.addrOpen ? addrHTML(true) : '<p class="addr-cta"><button class="linkbtn" data-act="addr-open" data-fk="addr-open">Use my street address instead</button></p>';
   const ticks = ['Plain English', 'Full local details', 'Pick by endorsements or party'];
-  const coffee = BUY_ME_A_COFFEE_URL ? ` · ${ext(BUY_ME_A_COFFEE_URL, 'Buy me a coffee')}` : '';
   return `<header class="mast front wrap">${tryBanner()}
     <div class="mast-top"><p class="dateline">${esc(kicker())}</p></div>
     <h1 class="place">Quickly make your voting plan.</h1>
@@ -118,21 +117,21 @@ export function mastHTML(): string {
     ${after}
     ${addr}
     <hr class="door-rule">
-    ${coverHTML()}
-    <p class="fine">Made by Kevin · ${ext(KEVIN_URL, 'kevinhg.com')}${coffee}</p>
+    ${creditsHTML()}
   </header>`;
 }
 
-/* The small print: how many cities, each one a tap away (the list opens below), and a way to ask
-   for yours through the report form, prefilled with the ZIP in the box. */
-function coverHTML(): string {
+/* The small print, one paragraph: how many cities, each one a tap away (the list opens below), a
+   way to ask for yours through the report form (prefilled with the ZIP in the box), and the credit. */
+function creditsHTML(): string {
   const idx = S.index;
   const ask = `<a href="${esc(askCityURL(S.zip))}" target="_blank" rel="noopener" data-ask>Ask for yours</a>`;
-  if (!idx) return `<p class="fine">${ask}</p>`;
   const k = 'browse';
-  const n = cityCount(idx);
-  return `<p class="fine">Covers <button class="linkbtn" data-act="open" data-k="${k}" aria-expanded="${isOpen(k)}" data-fk="browse">${n} ${n === 1 ? 'city' : 'cities'}</button> where Kevin’s friends live. ${ask}</p>
-    ${isOpen(k) ? browseHTML() : ''}`;
+  const n = idx ? cityCount(idx) : 0;
+  const cover = idx ? `Covers <button class="linkbtn" data-act="open" data-k="${k}" aria-expanded="${isOpen(k)}" data-fk="browse">${n} ${n === 1 ? 'city' : 'cities'}</button> where Kevin’s friends live. ` : '';
+  const credit = ['Made by Kevin', ext(KEVIN_URL, 'kevinhg.com'), BUY_ME_A_COFFEE_URL ? ext(BUY_ME_A_COFFEE_URL, 'Buy me a coffee') : ''].filter(Boolean).join(' · ');
+  return `<p class="fine credits">${cover}${ask} · ${credit}</p>
+    ${idx && isOpen(k) ? browseHTML() : ''}`;
 }
 
 function browseHTML(): string {

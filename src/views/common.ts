@@ -24,8 +24,8 @@ export const askCityURL = (zip: string): string => formURL('Please add my city',
 export const FILL = 'Fill in my ballot with their picks';
 export const HIDE = 'Hide races I’ve decided';
 
-/* The credit line on the first page. Buy me a coffee shows only once this has a link. */
-export const BUY_ME_A_COFFEE_URL = '';
+/* The credit on the first page. Buy me a coffee shows while this has a link. */
+export const BUY_ME_A_COFFEE_URL = 'https://buymeacoffee.com/kevinhg';
 export const KEVIN_URL = 'https://kevinhg.com';
 
 /* ---------- paywalled sources (Kevin, Oct 19) ----------

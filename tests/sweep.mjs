@@ -410,7 +410,7 @@ async function open(browser, ballot, R) {
       await page.locator('button[type=submit]').click();
       await page.locator(`[data-act="choose-place"][data-ids="${ballot.placeIds.join('+')}"]`).click();
     } else {
-      await page.locator('[data-fk="browse"]').click(); // "Or pick a place from the list"
+      await page.locator('[data-fk="browse"]').click(); // "Covers N cities": the list of places
       const sel = ballot.placeIds.length ? `[data-act="choose-place"][data-ids="${ballot.placeIds.join('+')}"]` : `[data-act="choose-state"][data-st="${ballot.st}"]`;
       await page.locator(sel).first().click();
     }

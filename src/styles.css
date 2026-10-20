@@ -157,6 +157,21 @@ b, strong { font-weight: 600; }
 .addr label { display: block; font-size: 15px; margin-bottom: 6px; }
 .addr input { width: 100%; min-height: 46px; padding: 0 10px; border: 1.5px solid var(--ink); background: var(--bone); border-radius: 2px; }
 
+/* The first page: step 1, where you vote (Oct 20). Pen ticks and step numbers in the one green
+   ink; nothing new in color. */
+.front .mast-top .dateline { padding: 4px 0; line-height: 1.35; }
+.ticks { margin-top: 14px; display: grid; gap: 6px; font-size: 17px; color: var(--ink-2); }
+.ticks li { display: flex; align-items: center; gap: 10px; }
+.ticks i { width: 17px; height: 17px; border: 1.3px solid var(--ink); border-radius: 1.5px; flex: none; position: relative; }
+.ticks i::after { content: ""; position: absolute; left: -1px; top: -9px; width: 26px; height: 24px; background: var(--ink); -webkit-mask: var(--pen-tick) center / contain no-repeat; mask: var(--pen-tick) center / contain no-repeat; }
+.step { display: flex; align-items: center; gap: 9px; }
+.step-n { width: 24px; height: 24px; border-radius: 50%; background: var(--paper-green); color: var(--on-dusk); display: inline-flex; align-items: center; justify-content: center; flex: none; font-family: var(--f-display); font-weight: 800; font-size: 14px; font-variation-settings: "wdth" 84; line-height: 1; }
+.front .zipform { margin-top: 20px; }
+.zipform label.step { display: flex; font-size: 16px; margin-bottom: 10px; }
+.front .addr-cta { margin-top: 10px; font-size: 15.5px; }
+.door-rule { border: 0; border-top: 1px solid var(--rule-2); margin: 18px 0 2px; }
+.front .fine .linkbtn { margin: -12px 0; padding: 0; }
+
 /* option cards: district questions, the place question, the party chooser */
 .opts { display: grid; gap: 8px; margin-top: 12px; }
 .opt { display: block; width: 100%; border: 1.25px solid var(--dusk-2); border-radius: 2px; padding: 10px 12px; min-height: 52px; text-align: left; }

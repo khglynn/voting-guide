@@ -5,6 +5,7 @@ import { stepKey, planKey } from './views/planstrip';
 import { render } from './render';
 import { ensureIndex, openBallot, submitZip } from './app';
 import { A, runAddress } from './actions';
+import { askCityURL } from './views/common';
 
 /* ---------- taps: pointerdown for mouse and pen; touch fires on a still pointerup so a
    scroll never counts as a tap; click covers the keyboard. Tuned on phones in v2.1; the e2e
@@ -56,7 +57,12 @@ document.addEventListener('submit', (e) => {
 });
 document.addEventListener('input', (e) => {
   const t = e.target as HTMLElement;
-  if (t.matches('.zip-input')) { const i = t as HTMLInputElement; i.value = i.value.replace(/\D/g, '').slice(0, 5); S.zip = i.value; }
+  if (t.matches('.zip-input')) {
+    const i = t as HTMLInputElement; i.value = i.value.replace(/\D/g, '').slice(0, 5); S.zip = i.value;
+    // "Ask for yours" carries whatever ZIP is in the box.
+    const ask = document.querySelector<HTMLAnchorElement>('a[data-ask]');
+    if (ask) ask.href = askCityURL(S.zip);
+  }
   if (t.matches('textarea[data-note]')) { const ta = t as HTMLTextAreaElement; S.b.notes[ta.dataset.note!] = ta.value; persist(); }
 });
 document.addEventListener('keydown', (e) => {

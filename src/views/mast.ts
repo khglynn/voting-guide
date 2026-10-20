@@ -1,8 +1,9 @@
 /* The front door (ZIP, the place question, browse, not covered) and the ballot masthead:
    a forwarded friend must know in five seconds whose ballot this is and how to change it. */
+import type { Index } from '../types';
 import { S } from '../state';
-import { esc, fmtDate } from '../util';
-import { ext, isOpen, telHTML } from './common';
+import { esc, fmtDate, todayISO } from '../util';
+import { ext, isOpen, telHTML, askCityURL, BUY_ME_A_COFFEE_URL, KEVIN_URL } from './common';
 import { countyName } from './ledger';
 import { stateName } from '../geo';
 
@@ -13,6 +14,18 @@ function electionDate(): string {
   return Object.entries(counts).sort((a, b) => b[1] - a[1])[0]?.[0] || '';
 }
 const dateline = (): string => { const d = electionDate(); return d ? `General election, ${fmtDate(d)}` : 'General election'; };
+/* The first page's opening line: about voting right now, not about the guide. Its source is in
+   "How this guide works". Once Election Day has passed, the plain dateline again. */
+function kicker(): string {
+  const d = electionDate();
+  return d && todayISO() <= d ? `Voting is underway in every state. Election Day is ${fmtDate(d)}.` : dateline();
+}
+
+/* How many cities the guide covers, for the first page: each place counts once, except that DC's
+   wards are one city and New York City's boroughs are one. */
+export function cityCount(idx: Pick<Index, 'places'>): number {
+  return new Set(Object.entries(idx.places).map(([id, p]) => (p.state === 'DC' ? 'DC' : /^nyc-/.test(id) ? 'NYC' : id))).size;
+}
 
 function tryBanner(): string {
   return S.tryMode ? `<p class="trybar" role="status">Demo: “${esc(S.tryMode)}”. Nothing here is saved. <a href="${esc(location.pathname)}">Exit demo</a></p>` : '';
@@ -68,32 +81,49 @@ export function mastHTML(): string {
     const name = S.coverage.state ? (S.coverage.state in (idx?.states || {}) ? idx!.states[S.coverage.state].name : stateName(S.coverage.state)) : null;
     after = `<div class="notice" role="status"><p><b>We don’t cover ${name ? esc(name) : 'that area'} yet.</b> This guide covers where Kevin’s friends and family vote. ${ext('https://vote.gov/', 'Vote.gov')} has official info for every state.</p></div>`;
   }
+  // "Use my street address instead" opens the address form right here, before any ZIP. The place
+  // question has its own link, so this one steps aside while it shows.
+  const addr = S.zipChoice ? '' : S.ui.addrOpen ? addrHTML(true) : '<p class="addr-cta"><button class="linkbtn" data-act="addr-open" data-fk="addr-open">Use my street address instead</button></p>';
+  const ticks = ['Plain English', 'Full local details', 'Pick by endorsements or party'];
+  const coffee = BUY_ME_A_COFFEE_URL ? ` · ${ext(BUY_ME_A_COFFEE_URL, 'Buy me a coffee')}` : '';
   return `<header class="mast front wrap">${tryBanner()}
-    <div class="mast-top"><span class="dateline">${esc(dateline())}</span></div>
-    <h1 class="place">Your ballot, explained</h1>
-    <p class="lede">Enter your ZIP to see how and by when to vote, every race and measure in plain words, and who endorsed whom.</p>
+    <div class="mast-top"><p class="dateline">${esc(kicker())}</p></div>
+    <h1 class="place">Quickly make your voting plan.</h1>
+    <ul class="ticks">${ticks.map((t) => `<li><i aria-hidden="true"></i>${esc(t)}</li>`).join('')}</ul>
     <form class="zipform" data-form="zip" novalidate>
-      <label for="zip">Your ZIP code</label>
-      <div class="zip-row"><input class="zip-input" id="zip" name="zip" data-fk="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="80205" value="${esc(S.zip)}" ${S.zipErr ? 'aria-describedby="zip-err" aria-invalid="true"' : ''}>
-      <button class="mini dark" type="submit">Show my ballot</button></div>
+      <label for="zip" class="step"><span class="step-n" aria-hidden="true">1</span>Where do you vote?</label>
+      <div class="zip-row"><input class="zip-input" id="zip" name="zip" data-fk="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="ZIP code" value="${esc(S.zip)}" ${S.zipErr ? 'aria-describedby="zip-err" aria-invalid="true"' : ''}>
+      <button class="mini dark" type="submit">Next</button></div>
       ${err}
     </form>
     ${S.view === 'loading' ? '<p class="small" role="status">Loading your ballot...</p>' : ''}
     ${S.loadErr ? `<p class="zip-err" role="alert">${esc(S.loadErr)}</p>` : ''}
     ${after}
-    ${browseHTML()}
+    ${addr}
+    <hr class="door-rule">
+    ${coverHTML()}
+    <p class="fine">Made by Kevin · ${ext(KEVIN_URL, 'kevinhg.com')}${coffee}</p>
   </header>`;
 }
 
-function browseHTML(): string {
+/* The small print: how many cities, each one a tap away (the list opens below), and a way to ask
+   for yours through the report form, prefilled with the ZIP in the box. */
+function coverHTML(): string {
   const idx = S.index;
-  if (!idx) return '';
+  const ask = `<a href="${esc(askCityURL(S.zip))}" target="_blank" rel="noopener" data-ask>Ask for yours</a>`;
+  if (!idx) return `<p class="fine">${ask}</p>`;
   const k = 'browse';
+  const n = cityCount(idx);
+  return `<p class="fine">Covers <button class="linkbtn" data-act="open" data-k="${k}" aria-expanded="${isOpen(k)}" data-fk="browse">${n} ${n === 1 ? 'city' : 'cities'}</button> where Kevin’s friends live. ${ask}</p>
+    ${isOpen(k) ? browseHTML() : ''}`;
+}
+
+function browseHTML(): string {
+  const idx = S.index!;
   const states = Object.entries(idx.states).sort((a, b) => a[1].name.localeCompare(b[1].name));
-  return `<div class="browse"><button class="linkbtn" data-act="open" data-k="${k}" aria-expanded="${isOpen(k)}" data-fk="browse">Or browse the places we cover</button>
-    ${isOpen(k) ? `<ul class="browse-list">${states.map(([st, s]) => `<li><b>${esc(s.name)}</b>
+  return `<ul class="browse-list">${states.map(([st, s]) => `<li><b>${esc(s.name)}</b>
       ${s.places.map((id) => `<button class="linkbtn" data-act="choose-place" data-ids="${esc(id)}">${esc(idx.places[id].label)}</button>`).join('')}
-      <button class="linkbtn" data-act="choose-state" data-st="${esc(st)}">${s.places.length ? 'Elsewhere in the state: statewide races only' : 'Statewide races'}</button></li>`).join('')}</ul>` : ''}</div>`;
+      <button class="linkbtn" data-act="choose-state" data-st="${esc(st)}">${s.places.length ? 'Elsewhere in the state: statewide races only' : 'Statewide races'}</button></li>`).join('')}</ul>`;
 }
 
 export function restoreHTML(): string {

@@ -43,6 +43,7 @@ export interface GeoResult {
   cd: number | null;         // congressional district
   upper: number | null;      // state senate
   lower: number | null;      // state house
+  zip?: string | null;       // the ZIP Census matched (its ZCTA layer, else the end of the matched address)
 }
 
 const STATE_FIPS: Record<string, string> = {
@@ -63,6 +64,42 @@ export function placeFromGeo(places: Record<string, { label: string; state: stri
   if (r.state === 'DC' && r.upper != null) return inState.find((id) => places[id].label === `DC Ward ${r.upper}`) || null;
   if (!r.place) return null;
   return inState.find((id) => places[id].label.toLowerCase() === r.place!.toLowerCase()) || null;
+}
+
+/* An address typed on the first page, before any ZIP: which ballot it opens. The place Census
+   names wins when it is one we cover in that state (matched as placeFromGeo does, then without the
+   label's note, "Los Angeles (city)", and for New York City by borough county). Otherwise the ZIP
+   Census matched goes through the same index the ZIP box uses: one place opens, several ask. A
+   covered state with no matching place gets its statewide ballot, as a ZIP there would. "none"
+   means we couldn't tell, and the page says so. */
+export type AddressHit =
+  | { kind: 'open'; st: string; ids: string[]; zip: string }
+  | { kind: 'choose'; zip: string; ids: string[] }
+  | { kind: 'out'; st: string; zip: string }
+  | { kind: 'none' };
+interface IndexLike { places: Record<string, { label: string; state: string }>; zips: Record<string, string[]>; states: Record<string, unknown> }
+export function settleAddress(idx: IndexLike, r: GeoResult): AddressHit {
+  const st = r.state;
+  if (!st) return { kind: 'none' };
+  const zip = r.zip && /^\d{5}$/.test(r.zip) ? r.zip : '';
+  const inState = Object.keys(idx.places).filter((id) => idx.places[id].state === st);
+  const bare = (l: string) => l.replace(/\s*\(.*\)$/, '').toLowerCase();
+  const byName = (): string | null => {
+    if (!r.place) return null;
+    const name = r.place.toLowerCase();
+    if (name === 'new york' && r.county) {
+      const nyc = inState.find((id) => (idx.places[id].label.match(/\(([^)]*) County\)$/) || [])[1] === r.county);
+      if (nyc) return nyc;
+    }
+    return inState.find((id) => bare(idx.places[id].label) === name) || null;
+  };
+  const hit = placeFromGeo(idx.places, inState, r) || byName();
+  if (hit) return { kind: 'open', st, ids: [hit], zip };
+  const ids = zip ? (idx.zips[zip] || []).filter((id) => inState.includes(id)) : [];
+  if (ids.length === 1) return { kind: 'open', st, ids, zip };
+  if (ids.length > 1) return { kind: 'choose', zip, ids };
+  if (!(st in idx.states)) return { kind: 'out', st, zip };
+  return zip ? { kind: 'open', st, ids: [], zip } : { kind: 'none' };
 }
 
 /* Most people type just the street ("2 Main St"), and the Census geocoder can't place a street
@@ -99,6 +136,8 @@ export function censusLookup(address: string, timeoutMs = 15000): Promise<GeoRes
         const st = layer(/^States$/);
         const county = layer(/^Counties$/);
         const place = layer(/Incorporated Places/);
+        const zcta = layer(/ZIP Code Tabulation/);
+        const zipAt = String(m.matchedAddress || '').match(/(\d{5})(?:-\d{4})?\s*$/);
         resolve({
           matched: String(m.matchedAddress || ''),
           state: st ? STATE_FIPS[String(st.STATE)] || null : null,
@@ -107,6 +146,7 @@ export function censusLookup(address: string, timeoutMs = 15000): Promise<GeoRes
           cd: num(layer(/Congressional Districts/)),
           upper: num(layer(/State Legislative Districts - Upper/)),
           lower: num(layer(/State Legislative Districts - Lower/)),
+          zip: zcta && /^\d{5}$/.test(String(zcta.ZCTA5 || zcta.BASENAME || '')) ? String(zcta.ZCTA5 || zcta.BASENAME) : zipAt ? zipAt[1] : null,
         });
       } catch (e) { reject(e); }
     };

@@ -7,12 +7,22 @@ import { hasPaywallNote } from '../model/lens';
 /* "Report a problem" goes to a Google Form in Kevin's personal account (picked Oct 16).
    The two entry ids prefill "Which race or measure?" (`what`) and "Where are you voting?". */
 const REPORT_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdTJFFXbh5ZlZzDmoqvbD5uGEKopuk2zy-nsl4dqmjNA65bOQ/viewform';
-export function reportURL(what: string): string {
-  const b = S.ballot!;
-  const where = [b.places.map((p) => p.label).join(' / ') || b.stateName, S.b.zip].filter(Boolean).join(', ');
+/* The form, prefilled, reading no state: the first page has no ballot yet. */
+export function formURL(what: string, where: string): string {
   const q = new URLSearchParams({ usp: 'pp_url', 'entry.90887649': what, 'entry.628621310': where });
   return `${REPORT_URL}?${q.toString()}`;
 }
+export function reportURL(what: string): string {
+  const b = S.ballot!;
+  const where = [b.places.map((p) => p.label).join(' / ') || b.stateName, S.b.zip].filter(Boolean).join(', ');
+  return formURL(what, where);
+}
+/* "Ask for yours" on the first page: the same form, with whatever ZIP is in the box. */
+export const askCityURL = (zip: string): string => formURL('Please add my city', zip);
+
+/* The credit line on the first page. Buy me a coffee shows only once this has a link. */
+export const BUY_ME_A_COFFEE_URL = '';
+export const KEVIN_URL = 'https://kevinhg.com';
 
 /* ---------- paywalled sources (Kevin, Oct 19) ----------
    A paper whose endorsements sit behind a paywall we couldn't read: the picks we only saw

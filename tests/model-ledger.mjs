@@ -765,6 +765,24 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('address: a Maryland "Ward 2" never picks DC Ward 2', geo.placeFromGeo(INDEX.places, dc, r('MD', null, 2)) === null);
   }
 
+  /* ---------- the first page (flow, Oct 20): an address before any ZIP, the city count ---------- */
+  {
+    const r = (state, place, extra = {}) => ({ matched: '', state, county: null, place, cd: null, upper: null, lower: null, zip: null, ...extra });
+    const go = (x) => JSON.stringify(geo.settleAddress(INDEX, x));
+    check('first-page address: Austin, Texas opens Austin', go(r('TX', 'Austin', { zip: '78704' })) === JSON.stringify({ kind: 'open', st: 'TX', ids: ['austin-tx'], zip: '78704' }), go(r('TX', 'Austin', { zip: '78704' })));
+    check('first-page address: Census "Los Angeles" finds "Los Angeles (city)"', geo.settleAddress(INDEX, r('CA', 'Los Angeles')).ids?.join() === 'los-angeles-ca');
+    check('first-page address: Census "New York" in Kings County finds Brooklyn', geo.settleAddress(INDEX, r('NY', 'New York', { county: 'Kings' })).ids?.join() === 'nyc-brooklyn-ny');
+    check('first-page address: DC picks the ward from the upper layer', geo.settleAddress(INDEX, r('DC', 'Washington', { upper: 6 })).ids?.join() === 'dc-ward-6');
+    check('first-page address: Aurora, Illinois never opens Aurora, Colorado', geo.settleAddress(INDEX, r('IL', 'Aurora')).kind === 'none');
+    const both = geo.settleAddress(INDEX, r('CO', null, { zip: '80247' }));
+    check('first-page address: no place name and a ZIP with several places asks which', both.kind === 'choose' && both.ids.includes('aurora-co') && both.ids.includes('denver-co'), JSON.stringify(both));
+    check('first-page address: a covered state outside our places gets its statewide ballot', go(r('TX', 'Waco', { zip: '76701' })) === JSON.stringify({ kind: 'open', st: 'TX', ids: [], zip: '76701' }), go(r('TX', 'Waco', { zip: '76701' })));
+    check('first-page address: a state we don\'t cover says so', geo.settleAddress(INDEX, r('MA', 'Cambridge', { zip: '02139' })).kind === 'out');
+    check('first-page address: no ZIP and no place we know is "none"', geo.settleAddress(INDEX, r('TX', 'Waco')).kind === 'none' && geo.settleAddress(INDEX, r(null, 'Austin')).kind === 'none');
+
+    check('first page: the city count counts DC\'s wards and New York City\'s boroughs once', views.mast.cityCount(INDEX) === Object.keys(INDEX.places).length - (Object.keys(INDEX.places).filter((id) => id.startsWith('dc-ward-')).length - 1) - (Object.keys(INDEX.places).filter((id) => id.startsWith('nyc-')).length - 1), String(views.mast.cityCount(INDEX)));
+  }
+
   /* ---------- UX re-walk: the survey in plain words ---------- */
   {
     const ev = (attorneys, non) => ({ kind: 'official_commission', by: 'C', by_short: 'C', rating: 'Meets Performance Standards', verdict: 'favorable', vote: '9-0', vote_note: null, survey_note: null, noted_strength: null, noted_concern: null, url: 'https://example.org', verified_on: null, confidence: 'verified',

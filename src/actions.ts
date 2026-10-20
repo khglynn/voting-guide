@@ -6,7 +6,7 @@ import { S, persist, forgetLast, emptyBallotState, type View } from './state';
 import { status, sectionOf, rankMax, ordinal, chosenIds, type SectionKey } from './ballot';
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
 import { render, renderRow, renderSection, renderSummaries, renderLens, renderBallot, renderAddr, rowEl, scrollRowIntoView, anchored, $ } from './render';
-import { openBallot, go, openReader, runAddress } from './app';
+import { openBallot, openChosen, go, openReader, runAddress } from './app';
 import { judgeBatch } from './model/judges';
 import { planAgree, planParty, planJudges, applyFills, undoFills, emptyPlan, touchUndo, type Plan } from './model/bulk';
 import { toggleChip, setParty, setSources, type ChipKey } from './model/lens';
@@ -394,7 +394,7 @@ A.open = (d, el) => {
 };
 
 /* ---------- places, address, restore ---------- */
-A['choose-place'] = (d) => { const ids = d.ids!.split('+'); const idx = S.index!; void openBallot(idx.places[ids[0]].state, ids, S.zipChoice ? S.zipChoice.zip : ''); };
+A['choose-place'] = (d) => { void openChosen(d.ids!.split('+'), S.zipChoice ? S.zipChoice.zip : ''); };
 A['choose-state'] = (d) => { void openBallot(d.st!, [], ''); };
 A['change-place'] = () => {
   S.view = 'start'; S.ballot = null; S.zipChoice = null; S.coverage = null; S.pending = null;

@@ -102,6 +102,35 @@ const small44 = (page, scope) => page.$$eval(`${scope} button`, (els) => els.fil
   await ctx.close();
 }
 
+/* ---------- the first page (flow, Oct 20): step 1 ---------- */
+{
+  const { ctx, page } = await newPage();
+  await page.goto(`${BASE}/?today=${TODAY}`);
+  await page.waitForSelector('#zip');
+  await page.evaluate(() => document.fonts.ready);
+  await shot(page, '00b-first-page');
+  check('First page: the kicker says voting is underway, with Election Day from the data', (await text(page, '.front .dateline')) === 'Voting is underway in every state. Election Day is Tue, Nov 3.', await text(page, '.front .dateline'));
+  check('First page: the headline is Kevin’s line', (await text(page, '.front h1')) === 'Quickly make your voting plan.');
+  const ticks = await page.$$eval('.ticks li', (els) => els.map((e) => e.textContent.trim()));
+  check('First page: three ticked lines', ticks.join('|') === 'Plain English|Full local details|Pick by endorsements or party', ticks.join('|'));
+  check('First page: step 1 asks where you vote, with Next', (await text(page, 'label[for="zip"]')) === '1Where do you vote?' && (await text(page, 'form[data-form="zip"] button[type=submit]')) === 'Next', await text(page, 'label[for="zip"]'));
+  check('First page: "Use my street address instead"', (await text(page, '.front [data-act="addr-open"]')) === 'Use my street address instead');
+  const fine = await page.$$eval('.front > .fine', (els) => els.map((e) => e.textContent.replace(/\s+/g, ' ').trim()));
+  const cities = new Set(Object.entries(await page.evaluate(() => fetch('/data/index.json').then((r) => r.json()).then((i) => i.places))).map(([id, p]) => (p.state === 'DC' ? 'DC' : /^nyc-/.test(id) ? 'NYC' : id))).size;
+  check('First page: the small print counts cities from the index (DC and NYC count once)', fine[0] === `Covers ${cities} cities where Kevin’s friends live. Ask for yours`, `${fine[0]} (index says ${cities})`);
+  check('First page: the credit line, with no coffee link until there is one', fine[1] === 'Made by Kevin · kevinhg.com' && (await page.getAttribute('.front > .fine a[href="https://kevinhg.com"]', 'href')) === 'https://kevinhg.com', fine[1]);
+  await page.fill('#zip', '02139');
+  const ask = new URL(await page.getAttribute('a[data-ask]', 'href'));
+  check('First page: Ask for yours opens the report form with "Please add my city" and the ZIP in the box', ask.host === 'docs.google.com' && ask.searchParams.get('entry.90887649') === 'Please add my city' && ask.searchParams.get('entry.628621310') === '02139', ask.search);
+  check('First page: nothing in all caps', (await upperCased(page)).length === 0);
+  await noSideScroll(page, 'First page');
+  await tap(page, '[data-fk="browse"]');
+  check('First page: the city count opens the list of places', (await page.$$('.browse-list [data-act="choose-place"]')).length > 30);
+  await tap(page, '[data-fk="browse"]');
+  noErrors(page, 'First page');
+  await ctx.close();
+}
+
 /* ---------- Denver 80205: the plan strip, the lens, rows, picks, fills, the save link ---------- */
 {
   const { ctx, page } = await newPage();
@@ -819,6 +848,43 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await page.waitForSelector('#plan', { timeout: 15000 });
   check('Address: Aurora, Colorado opens its ballot and answers its districts', /Aurora/.test(await text(page, '.place')) && /Filled in \d+ districts? from your address/.test(await text(page, '.toast')), await text(page, '.toast'));
   noErrors(page, 'Address');
+  await ctx.close();
+}
+
+// The first page's "Use my street address instead": no ZIP and no ballot yet. Census is answered here.
+{
+  const { ctx, page } = await newPage();
+  const geoFor = (fips, place, cd, upper) => ({ result: { addressMatches: [{ matchedAddress: 'TEST', geographies: {
+    States: [{ STATE: fips }], 'Incorporated Places': place ? [{ BASENAME: place }] : [], '119th Congressional Districts': [{ BASENAME: String(cd) }],
+    '2024 State Legislative Districts - Upper': [{ BASENAME: String(upper) }] } }] } });
+  let answer = geoFor('08', 'Nowhere', 6, 28);
+  const asked = [];
+  await page.route('https://geocoding.geo.census.gov/**', (route) => {
+    const u = new URL(route.request().url());
+    asked.push(u.searchParams.get('address') || '');
+    return route.fulfill({ status: 200, contentType: 'application/javascript', body: `${u.searchParams.get('callback')}(${JSON.stringify(answer)})` });
+  });
+  await page.goto(`${BASE}/?today=${TODAY}`);
+  await page.waitForSelector('#zip');
+  await tap(page, '.front [data-act="addr-open"]');
+  const lookUp = async () => {
+    await page.fill('#addr-in', 'a test lookup');
+    await page.locator('form[data-form="addr"] button[type=submit]').tap();
+    await page.waitForSelector('form[data-form="addr"] [role="status"], #plan, .notice', { timeout: 8000 }).catch(() => {});
+  };
+  await lookUp();
+  check('Address on the first page: a place it can’t settle says so in one line and keeps the ZIP box', (await text(page, 'form[data-form="addr"] [role="status"]')) === 'We couldn’t tell which place that is. Try your ZIP.' && !!(await page.$('#zip')), await text(page, 'form[data-form="addr"] [role="status"]'));
+  check('Address on the first page: with no ZIP typed, the address goes as typed', asked[0] === 'a test lookup', asked.join(' | '));
+  answer = geoFor('25', 'Cambridge', 7, 2);
+  await lookUp();
+  check('Address on the first page: a state we don’t cover says so', /We don’t cover Massachusetts yet/.test(await text(page, '.notice')), await text(page, '.notice'));
+  await tap(page, '.front [data-act="addr-open"]');
+  answer = geoFor('08', 'Aurora', 6, 28);
+  await lookUp();
+  await page.waitForSelector('#plan', { timeout: 15000 });
+  check('Address on the first page: Aurora, Colorado opens its ballot and answers its districts', /Aurora/.test(await text(page, '.place')) && /Filled in \d+ districts? from your address/.test(await text(page, '.toast')), await text(page, '.toast'));
+  check('Address on the first page: the ballot keeps the districts', /Your districts: Congressional District 6/.test(await text(page, '.mast')), await text(page, '.mast .fine'));
+  noErrors(page, 'Address on the first page');
   await ctx.close();
 }
 

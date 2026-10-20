@@ -4,7 +4,7 @@
 import type { Index, PlaceBundle, StateBundle, Contest } from './types';
 import { S, emptyBallotState, persist, savedBallot, parseShareHead, decodeShare, normalizeRanks, type BallotState, type View } from './state';
 import { buildBallot, contestDistrict, entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, rankMax } from './ballot';
-import { zipState, censusLookup, placeFromGeo, withPlace, type GeoResult } from './geo';
+import { zipState, censusLookup, placeFromGeo, settleAddress, withPlace, type GeoResult } from './geo';
 import { toast, hideToast, plural } from './util';
 import { render, renderBallot, renderAddr, $ } from './render';
 import { setInvolved, type GetInvolved } from './views/pass';
@@ -78,6 +78,9 @@ window.addEventListener('popstate', (e) => {
 });
 
 /* ---------- opening a ballot ---------- */
+/* An address on the first page that matched a ZIP with several places: kept in memory until a
+   place is picked, so its districts come along. */
+let chooserGeo: { zip: string; r: GeoResult } | null = null;
 const countPicks = (b: BallotState): number => Object.keys(b.picks).length + Object.keys(b.ranks || {}).filter((k) => !(k in b.picks)).length;
 /* Resolves true once the ballot is open, false when it couldn't load (the start view then
    shows why). Callers that do more after opening check it. */
@@ -140,6 +143,7 @@ export async function openBallot(st: string, placeIds: string[], zip: string, op
 
 export async function submitZip(raw: string): Promise<void> {
   const v = String(raw || '').replace(/\D/g, '');
+  chooserGeo = null;
   S.zip = v; S.zipErr = ''; S.zipChoice = null; S.coverage = null; S.loadErr = null;
   if (v.length !== 5) { S.zipErr = 'Enter all 5 digits, like 80205.'; render(['mast']); $('#zip')?.focus(); return; }
   let idx: Index;
@@ -156,26 +160,55 @@ export async function submitZip(raw: string): Promise<void> {
 
 /* ---------- address lookup ----------
    The address goes only to the Census geocoder and is never stored. Picking a place from the
-   result lives in geo.ts (placeFromGeo), where the state must match before anything else. */
+   result lives in geo.ts (placeFromGeo, settleAddress), where the state must match before
+   anything else. Three places ask: the first page before any ZIP, the place question, a ballot. */
+/* A place picked on the place question. If an address brought the question up, its districts
+   come along. */
+export async function openChosen(ids: string[], zip: string): Promise<void> {
+  const g = chooserGeo && chooserGeo.zip === zip ? chooserGeo.r : null;
+  chooserGeo = null;
+  const st = S.index!.places[ids[0]].state;
+  if (await openBallot(st, ids, zip) && g && g.state === st) applyGeo(g);
+}
 export async function runAddress(addr: string): Promise<void> {
+  if (S.view === 'loading') return;
   const choosing = S.view !== 'ballot' && S.zipChoice;
-  const b = S.ballot;
-  if (!b && !choosing) return;
+  const b = S.view === 'ballot' ? S.ballot : null;
+  const door = !b && !choosing;
   if (addr.trim().length < 6) { S.ui.addrMsg = 'Enter a street address with the city or ZIP.'; renderAddr(); return; }
   S.ui.addrBusy = true; S.ui.addrMsg = null; renderAddr();
   // Add the state and ZIP we already know; if that finds nothing (a typo in the ZIP, or an
   // address across a ZIP line), try once more with exactly what they typed.
-  const st = choosing && S.zipChoice ? S.index!.places[S.zipChoice.placeIds[0]]?.state || null : b!.st;
-  const zip = choosing && S.zipChoice ? S.zipChoice.zip : S.b.zip || null;
+  const typedZip = /^\d{5}$/.test(S.zip) ? S.zip : null;
+  const st = door ? (typedZip ? zipState(typedZip) : null) : choosing && S.zipChoice ? S.index!.places[S.zipChoice.placeIds[0]]?.state || null : b!.st;
+  const zip = door ? typedZip : choosing && S.zipChoice ? S.zipChoice.zip : S.b.zip || null;
   const full = withPlace(addr, st, zip);
   let r: GeoResult | null;
   try {
     r = await censusLookup(full);
     if (!r && full !== addr.trim()) r = await censusLookup(addr.trim());
   }
-  catch { S.ui.addrBusy = false; S.ui.addrMsg = 'The Census lookup didn’t answer. Try again, or pick your districts yourself.'; renderAddr(); return; }
+  catch { S.ui.addrBusy = false; S.ui.addrMsg = door ? 'The Census lookup didn’t answer. Try again, or use your ZIP.' : 'The Census lookup didn’t answer. Try again, or pick your districts yourself.'; renderAddr(); return; }
   S.ui.addrBusy = false;
   if (!r) { S.ui.addrMsg = 'The Census lookup couldn’t find that address. Try adding the city and ZIP.'; renderAddr(); return; }
+  if (door) {
+    let idx: Index;
+    try { idx = await ensureIndex(); } catch { S.ui.addrMsg = 'We couldn’t reach the guide’s data. Check your connection and try again.'; renderAddr(); return; }
+    const hit = settleAddress(idx, r);
+    if (hit.kind === 'none') { S.ui.addrMsg = 'We couldn’t tell which place that is. Try your ZIP.'; renderAddr(); return; }
+    S.ui.addrOpen = false; S.ui.addrMsg = null; S.zipErr = '';
+    if (hit.zip) S.zip = hit.zip;
+    if (hit.kind === 'out') { S.coverage = { kind: 'not_covered', state: hit.st, zip: hit.zip }; render(['mast']); return; }
+    if (hit.kind === 'choose') {
+      chooserGeo = { zip: hit.zip, r };
+      S.zipChoice = { zip: hit.zip, placeIds: hit.ids };
+      render(['mast']);
+      $(`[data-fk="cp-${CSS.escape(hit.ids[0])}"]`)?.focus();
+      return;
+    }
+    if (await openBallot(hit.st, hit.ids, hit.zip)) applyGeo(r);
+    return;
+  }
   if (choosing && S.zipChoice) {
     const idx = S.index!;
     const ids = S.zipChoice.placeIds;

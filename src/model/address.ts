@@ -4,8 +4,10 @@
      isn't one of them;
    - each "may apply" race for one of those offices goes on your ballot (S.b.mine) or off it
      (S.b.notMine);
-   - and the line the address box keeps names what was set, office by office:
-     "Set from your address: U.S. Representative, District 37 · State Senator, District 14."
+   - and the line the address box keeps names the races it put on your ballot, office by office:
+     "Set from your address: U.S. Representative, District 37 · State Representative, District 49."
+     An office it took off (a question answered "none", a race moved to notMine) isn't named, so
+     the line never names a race you can't find: its row already says "Not on your ballot".
    DC's "upper" layer is its ward, which the place already settles, so it sets nothing there. */
 import type { Contest } from '../types';
 import type { Ballot } from '../ballot';
@@ -17,8 +19,9 @@ export interface Districts { cd: number | null; upper: number | null; lower: num
 type Kind = keyof Districts;
 const KINDS: Kind[] = ['cd', 'upper', 'lower'];
 
-/* Sets what the address settles on `s` and returns what it set, "{office}, District {n}" each,
-   Congress first, then the state senate, then the state house; empty when nothing here was set. */
+/* Sets what the address settles on `s` and returns the races it put on the ballot, "{office},
+   District {n}" each, Congress first, then the state senate, then the state house; empty when it
+   put none there (nothing here turns on it, or it only took races off). */
 export function setFromAddress(b: Ballot, s: BallotState, r: Districts): string[] {
   const num = (k: Kind): number | null => (b.st === 'DC' && k === 'upper' ? null : r[k]);
   const named: Record<Kind, string[]> = { cd: [], upper: [], lower: [] };
@@ -28,7 +31,7 @@ export function setFromAddress(b: Ballot, s: BallotState, r: Districts): string[
     if (!g.kind || n == null) continue;
     const hit = g.members.find((id) => contestDistrict(b.byId.get(id) as Contest).n === n);
     s.districts[g.key] = hit || 'none';
-    name(g.kind, g.office);
+    if (hit) name(g.kind, g.office);
   }
   if (!s.mine) s.mine = [];
   for (const id of b.mayApply) {
@@ -39,13 +42,14 @@ export function setFromAddress(b: Ballot, s: BallotState, r: Districts): string[
     if (!d.kind || n == null) continue;
     s.notMine = s.notMine.filter((x) => x !== id);
     s.mine = s.mine.filter((x) => x !== id);
-    (d.n === n ? s.mine : s.notMine).push(id);
-    name(d.kind, c.office);
+    const on = d.n === n;
+    (on ? s.mine : s.notMine).push(id);
+    if (on) name(d.kind, c.office);
   }
   return KINDS.flatMap((k) => named[k].map((o) => `${o}, District ${num(k)}`));
 }
 
 /* What the address box keeps (S.b.addrNote): the line naming what was set, or, when the lookup
-   found the address but nothing on this ballot turns on it, FOUND_ONLY. Never the address. */
+   found the address but put no race on this ballot, FOUND_ONLY. Never the address. */
 export const FOUND_ONLY = 'Found your address.';
 export const addrSummary = (set: string[]): string => (set.length ? `Set from your address: ${set.join(' · ')}.` : FOUND_ONLY);

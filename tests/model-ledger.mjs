@@ -1454,15 +1454,17 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const au = open('TX', ['austin-tx']);
     const before = ledger.addressCount();
     const set = address.setFromAddress(au, S.b, { cd: 37, upper: 14, lower: 49 });
-    check('address: Austin names what it set, Congress, then the Senate, then the House', set.join(' | ') === 'U.S. Representative, District 37 | State Senator, District 14 | State Representative, District 49', set.join(' | '));
-    check('address: the line the ballot keeps is Kevin’s, word for word', address.addrSummary(set) === 'Set from your address: U.S. Representative, District 37 · State Senator, District 14 · State Representative, District 49.', address.addrSummary(set));
+    check('address: Austin names the races it put on the ballot, Congress, then the House', set.join(' | ') === 'U.S. Representative, District 37 | State Representative, District 49', set.join(' | '));
+    check('address: the line the ballot keeps is Kevin’s, word for word', address.addrSummary(set) === 'Set from your address: U.S. Representative, District 37 · State Representative, District 49.', address.addrSummary(set));
+    check('address: Senate District 14 isn’t named, since no District 14 race is on this ballot (the SD-21 row says "Not on your ballot")', !/Senator/.test(set.join(' ')), set.join(' | '));
     const cdq = au.groups.find((x) => x.kind === 'cd');
     check('address: the Congress question gets its race', S.b.districts[cdq.key] === 'tx-us-house-37' || /37/.test(au.byId.get(S.b.districts[cdq.key])?.district || ''), S.b.districts[cdq.key]);
     check('address: Senate District 14 takes the SD-21 race off the ballot', S.b.notMine.includes('tx-senate-21') && !S.b.mine.includes('tx-senate-21') && !bl.isMaybe('tx-senate-21'));
     const after = ledger.addressCount();
     check('address: fewer races depend on your address after it', after < before, `${before} then ${after}`);
     // Not it: a second address in SD-21 puts the race back, on the ballot for sure now.
-    address.setFromAddress(au, S.b, { cd: 35, upper: 21, lower: 50 });
+    const set2 = address.setFromAddress(au, S.b, { cd: 35, upper: 21, lower: 50 });
+    check('address: a district with no race here ("none") isn’t named; the race it put on is', S.b.districts[cdq.key] === 'none' && !/Representative, District 35/.test(set2.join(' ')) && set2.includes('State Senator, District 21'), set2.join(' | '));
     check('address: a second lookup moves the race to "on your ballot", no longer a maybe', S.b.mine.includes('tx-senate-21') && !S.b.notMine.includes('tx-senate-21') && !bl.isMaybe('tx-senate-21'), JSON.stringify({ mine: S.b.mine, notMine: S.b.notMine }));
     check('address: so it no longer counts as depending on your address', ledger.addressCount() === after, `${ledger.addressCount()} vs ${after}`);
     const row = views.open.openHTML(au.byId.get('tx-senate-21'));
@@ -1498,7 +1500,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     S.b.addrNote = address.addrSummary(address.setFromAddress(S.ballot, S.b, { cd: 37, upper: 14, lower: 49 }));
     S.ui.addrFound = 'Test One, Austin, TX 78704';
     const n1 = ledger.addressCount();
-    check('address box: after one, what was found, what it set, and the rest counted', box() === `Found: Test One, Austin, TX 78704 Not it? Try again Set from your address: U.S. Representative, District 37 · State Senator, District 14 · State Representative, District 49. ${n1} still depend on your address. Your sample ballot shows them. See my sample ballot`, box());
+    check('address box: after one, what was found, what it set, and the rest counted', box() === `Found: Test One, Austin, TX 78704 Not it? Try again Set from your address: U.S. Representative, District 37 · State Representative, District 49. ${n1} still depend on your address. Your sample ballot shows them. See my sample ballot`, box());
     check('address box: the masthead no longer carries it', !/Set from|Your districts/.test(views.mast.mastHTML()));
     S.ui.addrFound = null;
     check('address box: after a reload, what it set without the address', !/Found:|Test One/.test(box()) && /^Set from your address: /.test(box()), box());

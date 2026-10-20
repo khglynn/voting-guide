@@ -660,7 +660,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await page.waitForTimeout(200);
   check('Address box after a lookup: "Found:" and the Census’s address, tidied, with Not it? Try again', (await text(page, '.addrbox .addr-found')) === 'Found: Test One, Austin, TX 78704 Not it? Try again', await text(page, '.addrbox .addr-found'));
   check('Address box after a lookup: focus lands on what was found', (await focusedFk(page)) === 'addr-found', await focusedFk(page));
-  const setLine = 'Set from your address: U.S. Representative, District 37 · State Senator, District 14 · State Representative, District 49.';
+  const setLine = 'Set from your address: U.S. Representative, District 37 · State Representative, District 49.';
   check('Address box after a lookup: what it set, by office', (await text(page, '.addrbox .addr-set')) === setLine, await text(page, '.addrbox .addr-set'));
   const left = await text(page, '.addrbox .addr-n');
   const nLeft = Number((left.match(/^(\d+)/) || [])[1]);

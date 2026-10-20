@@ -18,7 +18,7 @@ from mathutils.geometry import delaunay_2d_cdt
 OUT = sys.argv[1]; os.makedirs(OUT, exist_ok=True)
 JOBS = sys.argv[2].split(',')
 SAMPLES = int(sys.argv[3]) if len(sys.argv) > 3 else 48
-PX = 200   # render pixels per scene unit; one unit is 100 CSS px on a 2x screen
+PX = float(os.environ.get('PX', 200))   # render pixels per scene unit; 200 = one unit is 100 CSS px on a 2x screen, 300 = 3x
 SUN, LAMP, WORLD = float(os.environ.get('SUN', 1.04)), float(os.environ.get('LAMP', 18100)), float(os.environ.get('WORLD', .174))
 
 def lin(h):
@@ -271,7 +271,7 @@ def scene(fw, fh, catcher=True):
     sc.render.resolution_x = int(round(fw * PX)); sc.render.resolution_y = int(round(fh * PX)); sc.render.resolution_percentage = 100
     cd = bpy.data.cameras.new('cam'); cd.type = 'ORTHO'; cd.ortho_scale = max(fw, fh)
     cam = bpy.data.objects.new('cam', cd); bpy.context.collection.objects.link(cam); cam.location = (0, 0, 10); sc.camera = cam
-    sun = bpy.data.lights.new('sun', 'SUN'); sun.energy = SUN; sun.angle = math.radians(20)
+    sun = bpy.data.lights.new('sun', 'SUN'); sun.energy = SUN; sun.angle = math.radians(float(os.environ.get('SUN_ANGLE', 20)))
     so = bpy.data.objects.new('sun', sun); bpy.context.collection.objects.link(so)
     d = Vector((-.45, .55, .8)).normalized(); so.rotation_euler = (-d).to_track_quat('-Z', 'Y').to_euler()
     # a long strip light far to the left: light falls off across the page, not down it
@@ -307,13 +307,16 @@ def job_strip(seed, name, tilt_deg=-.3, k=1.0):
     P, torn = rect_outline(6.2, .6, seed, torn=())
     left = P[:, 0] < P[:, 0].min() + .02
     right = P[:, 0] > P[:, 0].max() - .02
-    P[left, 0] += P[left, 1] * .11                      # the ends are cut at a slant, not square
-    P[right, 0] -= P[right, 1] * .05
+    P[left, 0] += P[left, 1] * .03                      # the ends are cut at a slight slant, not square; this end
+    P[right, 0] -= P[right, 1] * .05                    # becomes the visible one after the mirror below, so it is
+                                                        # the gentler cut (a steep slant steps on phone screens)
     P[:, 0] += -3.12 + 3.1                              # left end sits about 8 CSS px in from the page edge
     P[:, 0] = -P[:, 0]; P = P[::-1].copy(); torn = torn[::-1]   # mirrored: enters from the left, cut end on the right
     th = math.radians(tilt_deg); R = np.array([[math.cos(th), -math.sin(th)], [math.sin(th), math.cos(th)]])
     P = np.ascontiguousarray(P @ R.T)
-    piece(name, P, torn, paper_mat('g', TONE(PAPER['green'], k)), paper_mat('gr', TONE(PAPER['worn'], k), sss=.3), crumple=(.018, 1.3), crumple_fade=.12, lift=.006, lift_fade=.12, spacing=.03, seed=seed)
+    # Pressed flat on the page (Kevin, Oct 20: "paper pressed against the paper"): thin stock, no lifted edges,
+    # barely any crumple, so the shadow is a faint contact line instead of a cast shadow.
+    piece(name, P, torn, paper_mat('g', TONE(PAPER['green'], k)), paper_mat('gr', TONE(PAPER['worn'], k), sss=.3), thick=.004, crumple=(.004, 1.3), crumple_fade=.12, lift=0, lift_fade=.12, spacing=.03, seed=seed)
     render(sc, name)
 
 def job_sheet():

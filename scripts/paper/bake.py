@@ -96,9 +96,10 @@ def flat_rows(a, y0, y1, name):
 def hexc(c): return '#%02X%02X%02X' % tuple(int(round(v)) for v in c)
 def gradient(a, row, k=(1, 1, 1)):
     stops = []
-    for x in range(0, a.shape[1], 40):
+    d = a.shape[1] / 640                                  # device px per CSS px: 2 for a 2x render, 3 for 3x
+    for x in range(0, a.shape[1], int(20 * d)):
         px = a[row - 3:row + 4, max(0, x - 6):x + 7]; px = px[px[..., 3] == 255][:, :3]
-        if len(px): stops.append('%s %dpx' % (hexc(np.median(px, 0) * np.array(k)), x // 2))
+        if len(px): stops.append('%s %dpx' % (hexc(np.median(px, 0) * np.array(k)), round(x / d)))
     return 'linear-gradient(90deg, %s)' % ', '.join(stops)
 
 kb = {}
@@ -109,7 +110,7 @@ kb['plan-top'] = save(a[:200], os.path.join(OUT, 'plan-top.webp')); save(ad[:200
 kb['plan-bot'] = save(a[-200:], os.path.join(OUT, 'plan-bot.webp')); save(ad[-200:], os.path.join(OUTD, 'plan-bot.webp'))
 light['--plan-fill'] = gradient(a, mid); dark['--plan-fill'] = gradient(ad, mid)
 for n in ('strip-a', 'strip-b', 'strip-c', 'strip-d'):
-    a = soft_contact(soften(defringe(load(n)))); flat_rows(a, 80, 120, n)
+    a = soft_contact(soften(defringe(load(n))))           # scaled whole, so no flat-middle check
     kb[n] = save(a, os.path.join(OUT, n + '.webp')); save(darken(a, GREEN_K, GREEN_CORE), os.path.join(OUTD, n + '.webp'))
 a = soft_contact(soften(defringe(load('sheet')))); row = 180
 light['--sheet-fill'] = gradient(a, row); dark['--sheet-fill'] = gradient(a, row, SHEET_K)

@@ -103,6 +103,7 @@ function doorHTML(): string {
     <ul class="ticks">${ticks.map((t) => `<li><i aria-hidden="true"></i>${esc(t)}</li>`).join('')}</ul>
     <div class="pad door" id="door">
       <span class="sheet-top" aria-hidden="true"></span><span class="sheet-fill" aria-hidden="true"></span>
+      <div data-part="saved">${savedLineHTML()}</div>
       <form class="zipform" data-form="zip" novalidate>
         <label for="zip" class="step su-h zip-h"><span class="step-n" aria-hidden="true">1</span>Where do you vote?</label>
         <div class="zip-row"><input class="zip-input" id="zip" name="zip" data-fk="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="ZIP code" value="${esc(S.zip)}" ${S.zipErr ? 'aria-describedby="zip-err" aria-invalid="true"' : ''}></div>
@@ -114,6 +115,17 @@ function doorHTML(): string {
     <div class="door-foot" data-part="fine">${creditsHTML()}</div>
     ${PILE}
   </header>`;
+}
+
+/* The ballot you went back to the first page from, while it has picks: saved, and a tap away. */
+function savedLineHTML(): string {
+  const d = S.doorSaved;
+  const idx = S.index;
+  if (!d || !idx) return '';
+  const [st, placesStr] = d.key.split('|');
+  const places = placesStr === '-' ? [] : placesStr.split('+').filter((p) => idx.places[p]);
+  const where = places.length ? places.map((p) => idx.places[p].label.replace(/\s*\(.*\)$/, '')).join(' or ') : idx.states[st]?.name || '';
+  return `<div class="door-saved" role="status"><p>Your ${esc(where)} ballot is saved, ${d.n === 1 ? '1 race' : `${d.n} races`} decided.</p><button class="mini dark" data-act="saved-open" data-fk="saved-open">Open my ballot</button></div>`;
 }
 
 /* The states the guide covers, cut from paper and piled up at the foot of the first page (scripts/paper

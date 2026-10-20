@@ -1087,7 +1087,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('no endorsements: off by default, "Show endorsements" on', !lens.noEndorsements() && /role="switch" aria-checked="true" data-act="ends"/.test(views.setup.pickControlsHTML(true)));
     S.b.sources = [];
     tally.clearLineups();
-    check('no endorsements: an empty source list is it, and the line says so', lens.noEndorsements() && views.lens.lensSummary() === 'No endorsements shown');
+    check('no endorsements: an empty source list is it, and the line says so', lens.noEndorsements() && views.lens.lensSummary() === 'Off');
     const sh = views.setup.pickControlsHTML(true);
     check('no endorsements: "Show endorsements" is off, the chips, the fill switch and the counts step aside, the filter stays', /role="switch" aria-checked="false" data-act="ends"[^>]*>.*Show endorsements.*<\/button>/.test(sh) && !/data-act="chip"|data-act="party|all-src/.test(sh) && !/setup-fill/.test(sh) && !/su-cov/.test(sh) && /setup-only/.test(sh));
     const m81 = views.open.openHTML(dn.byId.get('co-amendment-81'));
@@ -1096,7 +1096,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     S.ui.row = race.id;
     const rh = ledger.rowHTML(race);
     S.ui.row = null;
-    check('no endorsements: a race lists its candidates with Pick, no grid, no source lines', /class="clist"/.test(rh) && (rh.match(/data-act="pick"/g) || []).length === race.candidates.length && !/class="grid|class="by"|none-line|gridnote|others-wrap/.test(rh), race.id);
+    check('no endorsements: a race lists its candidates with Pick, no grid, no source lines', /class="clist( full)?"/.test(rh) && (rh.match(/data-act="pick"/g) || []).length === race.candidates.length && !/class="grid|class="by"|none-line|gridnote|others-wrap/.test(rh), race.id);
     check('no endorsements: the verdict column is empty', /<span class="vd none blank"><\/span>/.test(ledger.rowHTML(race)) && !/No sources on/.test(ledger.rowHTML(race)));
     S.b.party = 'Democratic';
     check('no endorsements: a party ends it', !lens.noEndorsements());
@@ -1158,6 +1158,13 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('My plan: Texas bans phones in the voting room, so "print it or write it down"', cheat.saveLine('2026-10-20') === 'Print it or write it down.' && /<b>Save it before you go\.<\/b> Print it or write it down\./.test(sc.replace(/&#39;/g, '’')));
     check('My plan: the save line sits under the reminder, on screen only', sc.indexOf('class="remind"') < sc.indexOf('save-go') && !/save-go/.test(cheat.cheatHTML(true)));
     check('My plan: in person, the reminder keeps the booth rules', cheat.essentials('2026-10-20').some((x) => /^In the booth:/.test(x)));
+    {
+      // The plan you carry: the sites' hours, Election Day, the ID rule, and a plain phone rule (UX walk, Oct 20).
+      open('FL', ['orlando-fl']);
+      const or = cheat.essentials('2026-10-21');
+      check('My plan: Orlando keeps the hours, Election Day and the photo ID', or.some((x) => /open \d+ AM to \d+ PM/.test(x)) && or.some((x) => /^Or vote on Election Day, Tue, Nov 3/.test(x)) && or.includes('Bring a photo ID.'), or.join(' / '));
+      check('My plan: a "restricted" phone rule is the state’s own line, not the bare word', or.includes('In the booth: notes are allowed. You can read your plan on your phone; the only photo allowed is of your own ballot.') && !or.some((x) => /restricted/.test(x)), or.join(' / '));
+    }
     check('My plan: once voting has closed, no save line', cheat.saveLine('2026-11-04') === null);
     open('CA', ['los-angeles-ca']);
     check('My plan: where phones are allowed, "Print it, copy it, or take a screenshot."', cheat.saveLine('2026-10-20') === 'Print it, copy it, or take a screenshot.');

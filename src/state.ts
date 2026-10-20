@@ -72,6 +72,7 @@ export interface UI {
   saveOpen: boolean;
   copyFallback: string | null;
   bulk: string | null;        // how many races the last fill from your sources filled, while its Undo is live
+  bulkWhy: string | null;     // what that fill drew on, for the head's line (" from your sources")
   setupFill: boolean;         // "Fill in my ballot with their picks" in the Edit sheet
   setupOnly: boolean;         // "Hide races I've decided" in the Edit sheet, applied when it closes (to S.b.hideDecided)
   resume: boolean;            // "Welcome back" above the plan: once per visit to a started ballot, until any tap
@@ -104,7 +105,7 @@ export const S = {
   prefs: { parties: null, endorsedOnly: false, foldDecided: true, autoPick: false } as Prefs,
   ui: {
     view: 'ballot', open: new Set(), row: null, page: {}, others: new Set(), folded: new Set(), unfolded: new Set(), reveal: new Set(), keep: null, beat: null,
-    noteOpen: new Set(), reader: null, sheet: null, sheetFrom: null, sheetBack: null, addrOpen: false, addrBusy: false, addrMsg: null, addrFail: '', addrFound: null, addrWhich: null, saveOpen: false, copyFallback: null, bulk: null, addrFilled: null, lensEmptied: false,
+    noteOpen: new Set(), reader: null, sheet: null, sheetFrom: null, sheetBack: null, addrOpen: false, addrBusy: false, addrMsg: null, addrFail: '', addrFound: null, addrWhich: null, saveOpen: false, copyFallback: null, bulk: null, bulkWhy: null, addrFilled: null, lensEmptied: false,
     setupFill: false, setupOnly: false, resume: false,
   } as UI,
   /* ?try=fresh|aunt|straight|sources: a scenario on whatever ballot opens, never saved. */
@@ -113,11 +114,16 @@ export const S = {
   loadErr: null as string | null,
   /* What "Try again" under a load error does: the same ZIP, ballot or first visit again. */
   retry: null as null | (() => void),
+  /* The ballot you left for the first page (Back or Change), while it has picks: the first page says
+     it's saved and opens it again in one tap. */
+  doorSaved: null as null | { key: string; zip: string; n: number },
 };
 
 /* ---------- saved state (localStorage, per ballot) ---------- */
 const KEY = 'vg2';
-interface Saved { v: 1; last: { key: string; zip: string } | null; prefs: Prefs; ballots: Record<string, BallotState> }
+/* last: the ballot this device opened last, which boot opens again; left: you went back to the first
+   page from it, so boot shows the first page instead, with a way back to it. */
+interface Saved { v: 1; last: { key: string; zip: string; left?: true } | null; prefs: Prefs; ballots: Record<string, BallotState> }
 const blank = (): Saved => ({ v: 1, last: null, prefs: S.prefs, ballots: {} });
 
 export function readSaved(): Saved {
@@ -156,12 +162,23 @@ if (typeof window !== 'undefined') {
   window.addEventListener('pagehide', flush);
   document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') flush(); });
 }
-export function forgetLast(): void {
+/* Back or Change on a ballot: boot shows the first page next time, but the ballot stays remembered,
+   so the first page can offer it (UX walk, Oct 20: forgetting it made saved picks look gone). */
+export function leaveLast(): void {
   if (S.tryMode) return;
   const s = readSaved();
-  if (!s.last) return; // nothing to forget, so nothing to write
-  s.last = null;
+  if (!s.last || s.last.left) return; // nothing to mark, so nothing to write
+  s.last = { ...s.last, left: true };
   save(KEY, s);
+}
+/* The ballot to offer on the first page: the one you left, while it has picks. */
+export function leftBallot(): { key: string; zip: string; n: number } | null {
+  if (S.tryMode) return null;
+  const s = readSaved();
+  if (!s.last || !s.last.left) return null;
+  const b = s.ballots[s.last.key];
+  const n = b ? new Set(Object.keys(b.picks || {}).map((k) => k.split('|')[0])).size : 0; // races with a choice saved
+  return n ? { key: s.last.key, zip: s.last.zip, n } : null;
 }
 
 /* ---------- the save link ----------

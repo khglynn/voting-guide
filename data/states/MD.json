@@ -96,6 +96,7 @@
   "in_the_booth": {
     "phones": "restricted",
     "phones_detail": "SBE: 'You cannot use your cell phone, pager, camera, and computer equipment in an early voting center or at a polling place,' except to 'use as a translation device, provide proof of residency or ID, review election information,' or to 'record a digital image of your marked ballot prior to casting for personal use.' So you may look at your notes or this guide on your phone; don't make calls or send texts. Paper notes are the simplest option. Source: https://elections.maryland.gov/voting/election_day_questions.html",
+    "phones_short": "You can read your plan on your phone; don't make calls or send texts.",
     "notes_allowed": "allowed",
     "notes_detail": "SBE: 'You can bring any printed material - including your marked specimen ballot - to help you vote.' Print your picks from this guide and take them in. Source: https://elections.maryland.gov/voting/election_day_questions.html",
     "ballot_selfies": "allowed",

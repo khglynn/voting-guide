@@ -59,7 +59,7 @@ async function openBallot(page, zip, query = '') {
   await throughSetup(page);
   await page.waitForTimeout(150);
 }
-/* The ballot's Edit sheet ("Picks: ... · Edit"): step 2's controls. Its Done (data-fk sheet-x) applies
+/* The ballot's Edit sheet ("Endorsements: ... · Edit"): step 2's controls. Its Done (data-fk sheet-x) applies
    the two switches. */
 async function edit(page) { await tap(page, '[data-act="picks"]'); await page.waitForSelector('.sheet-panel.picks'); }
 async function editFill(page) {
@@ -214,7 +214,8 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await shot(page, '00c-steps-1-2');
   check('Five digits: the place shows under the ZIP box', (await text(page, '.door-place')) === 'Austin, Texas · 78704' && !(await page.$('.door-place [data-act]')), await text(page, '.door-place'));
   check('Five digits: and the counts in step 2', /^Picks in \d+ of your \d+ races\.$/.test(await text(page, '.su-cov')), await text(page, '.su-cov'));
-  check('Five digits: the ZIP box keeps focus and its caret at the end', (await focusedFk(page)) === 'zip' && (await page.evaluate(() => document.getElementById('zip').selectionStart)) === 5);
+  // On a phone the number pad steps aside once the ZIP finds its ballot, so step 2 and "Show my ballot" show.
+  check('Five digits: on a touch screen the keypad drops and focus goes on to step 2', (await focusedFk(page)) === 'su-h' && (await page.inputValue('#zip')) === '78704', String(await focusedFk(page)));
   check('Five digits: the chips chosen before carry over', (await pressed('papers')) === 'true' && (await pressed('progressive')) === 'true' && (await page.getAttribute('[data-act="setup-fill"]', 'aria-checked')) === 'true');
   check('Five digits: a party this ballot doesn’t have drops out, quietly', (await text(page, '#setup [data-fk="chip-party"]')) === 'A party' && !(await page.$('.zip-err')));
   check('Five digits: the fill switch counts the races where they agree', /^\d+ races? where they agree( \(\d+ from just one source\))?\. Races where picks split stay open\.$/.test(await text(page, '[data-act="setup-fill"] small')), await text(page, '[data-act="setup-fill"] small'));
@@ -244,7 +245,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await tap(page, SETUP);
   await page.waitForSelector('#plan', { timeout: 15000 });
   check('"Show my ballot": the ballot, nothing filled with the switch off', /^0 of \d+ decided$/.test(await text(page, '.bar-txt')) && !(await page.$('.toast:not([hidden])')), await text(page, '.bar-txt'));
-  check('"Show my ballot": the sources chosen on the first page', (await text(page, '.picks-line span')) === 'Picks: Newspapers and guides, progressive groups', await text(page, '.picks-line span'));
+  check('"Show my ballot": the sources chosen on the first page', (await text(page, '.picks-line span')) === 'Endorsements: Newspapers and guides, progressive groups', await text(page, '.picks-line span'));
   check('"Show my ballot": the ballot is saved once it shows', /austin-tx/.test((await savedVG(page)) || ''));
   check('How this guide works: one folded row at the bottom of the ballot', (await text(page, '#how')) === 'How this guide works' && (await page.getAttribute('#how [data-act="open"][data-k="how"]', 'aria-expanded')) === 'false' && !(await page.$('#how .how-bd')), await text(page, '#how'));
   await tap(page, '#how [data-act="open"][data-k="how"]');
@@ -312,6 +313,31 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await ctx.close();
 }
 {
+  // Back or Change from a ballot with picks: the first page says it's saved and opens it in one tap,
+  // and so does the next visit (UX walk, Oct 20: forgetting it made the picks look gone).
+  const { ctx, page } = await newPage();
+  await openBallot(page, '80205');
+  const id = await page.evaluate(() => document.querySelector('#sec-measures .row[data-item][data-undecided]').dataset.item);
+  await openRow(page, id);
+  await page.locator(`#i-${id} [data-act="pick"][data-v="YES"]`).first().tap();
+  await page.waitForTimeout(400);
+  await tap(page, '.mast [data-act="change-place"]');
+  await page.waitForSelector('#zip');
+  check('Change: the first page says the ballot is saved, with a way back', /^Your Denver ballot is saved, 1 race decided\./.test(await text(page, '.door-saved')) && !!(await page.$('.door-saved [data-act="saved-open"]')), await text(page, '.door-saved'));
+  await page.reload();
+  await page.waitForSelector('#zip');
+  await page.waitForSelector('.door-place', { timeout: 15000 });
+  check('Next visit: the first page again, its ZIP in the box and the saved ballot offered', !(await page.$('#plan')) && (await page.inputValue('#zip')) === '80205' && /saved/.test(await text(page, '.door-saved')), await text(page, '.door-saved'));
+  await tap(page, '[data-act="saved-open"]');
+  await page.waitForSelector('#plan', { timeout: 15000 });
+  check('Open my ballot: the ballot as you left it', (await page.getAttribute(`#i-${id}`, 'data-undecided')) === null && !(await page.$('.door-saved')));
+  await page.goBack();
+  await page.waitForSelector('#zip');
+  check('Open my ballot: Back returns to the first page', !(await page.$('#plan')));
+  noErrors(page, 'Saved ballot on the first page');
+  await ctx.close();
+}
+{
   // The fill switch fills, Undo undoes; then a reload, a save link and ?try all skip the first page.
   const { ctx, page } = await newPage();
   await openZip(page, '78704');
@@ -323,15 +349,15 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await tap(page, SETUP);
   await page.waitForSelector('#plan', { timeout: 15000 });
   const bar = await text(page, '.bar-txt');
-  const t = await text(page, '.toast');
   check('Step 2 fill: "Show my ballot" fills the races where your sources agree', bar.startsWith(`${n} of `), `${bar} (switch said ${n})`);
-  check('Step 2 fill: one toast says so, with Undo', new RegExp(`^Filled ${n} picks? where your sources agree\\.`).test(t) && !!(await page.$('.toast [data-act="undo-bulk"]')), t);
-  check('Step 2 fill: the ballot says "N filled in. Undo"', (await text(page, '.filled')) === `${n} filled in. Undo`, await text(page, '.filled'));
+  // The ballot's own line says it once; a toast on top of it said the same thing twice (UX walk, Oct 20).
+  check('Step 2 fill: no toast on top of the ballot\'s line', !(await page.$('.toast')));
+  check('Step 2 fill: the ballot says "N filled in from your sources. Undo"', (await text(page, '.filled')) === `${n} filled in from your sources. Undo`, await text(page, '.filled'));
   check('Step 2: "Hide races I’ve decided" turns the filter on, so no decided row shows', !(await page.$('.ledger .row[data-item]:not([data-undecided])')));
   await menu(page);
   check('Step 2: the menu’s "Hide races I’ve decided" switch shows it on', (await page.getAttribute('.sheet-panel [data-act="only"]', 'aria-checked')) === 'true');
   await tap(page, '.sheet-panel [data-fk="sheet-x"]');
-  await tap(page, '.toast [data-act="undo-bulk"]');
+  await tap(page, '.filled [data-act="undo-bulk"]');
   check('Step 2 fill: Undo takes every filled pick back', /^0 of /.test(await text(page, '.bar-txt')), await text(page, '.bar-txt'));
   await page.reload();
   await page.waitForSelector('#plan', { timeout: 15000 });
@@ -437,7 +463,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   // controls in a sheet, with every source and the party list a tap further in.
   const fk = () => page.evaluate(() => document.activeElement && document.activeElement.dataset.fk);
   check('Denver: no "Show endorsements from" block, chip bar or fill buttons on the ballot', !(await page.$('#lens')) && !(await page.$('#lensbar')) && !(await page.$('.pfm')) && !(await page.$('#r-ballot [data-act="chip"]')));
-  check('Denver: the ballot says whose picks show, with Edit', (await text(page, '.picks-line span')) === 'Picks: Newspapers and guides' && (await text(page, '.picks-line [data-act="picks"]')) === 'Edit', await text(page, '.picks-line'));
+  check('Denver: the ballot says whose picks show, with Edit', (await text(page, '.picks-line span')) === 'Endorsements: Newspapers and guides' && (await text(page, '.picks-line [data-act="picks"]')) === 'Edit', await text(page, '.picks-line'));
   await edit(page);
   check('Denver: Edit opens step 2’s controls, Newspapers and guides on, both switches off', (await text(page, '.sheet-panel #sh-h')) === 'Pick by endorsements or party' && (await page.getAttribute('.sheet-panel [data-act="chip"][data-k="papers"]', 'aria-pressed')) === 'true'
     && (await page.getAttribute('.sheet-panel [data-act="setup-fill"]', 'aria-checked')) === 'false' && (await page.getAttribute('.sheet-panel [data-act="setup-only"]', 'aria-checked')) === 'false');
@@ -463,7 +489,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await page.keyboard.press('Escape');
   await page.waitForTimeout(150);
   check('Denver: Escape closes the Edit sheet, focus back on Edit', !(await page.$('.sheet-panel')) && (await fk()) === 'picks-edit', await fk());
-  check('Denver: the line still says Newspapers and guides', (await text(page, '.picks-line span')) === 'Picks: Newspapers and guides', await text(page, '.picks-line span'));
+  check('Denver: the line still says Newspapers and guides', (await text(page, '.picks-line span')) === 'Endorsements: Newspapers and guides', await text(page, '.picks-line span'));
 
   // A race: open it, see your sources, pick, and the row closes with your pick in gold.
   const raceId = await page.evaluate(() => { const r = document.querySelector('.row[data-item]:has(.vd.agree)'); return r && r.dataset.item; });
@@ -498,7 +524,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   if (n) {
     const t = await text(page, '.toast');
     check('Denver: Done fills them and says how many, with Undo', new RegExp(`^Filled ${n} picks? where your sources agree`).test(t) && !!(await page.$('.toast [data-act="undo-bulk"]')), t);
-    check('Denver: the ballot says "N filled in. Undo"', (await text(page, '.filled')) === `${n} filled in. Undo`, await text(page, '.filled'));
+    check('Denver: the ballot says "N filled in from your sources. Undo"', (await text(page, '.filled')) === `${n} filled in from your sources. Undo`, await text(page, '.filled'));
     check('Denver: the bar counts the filled picks', (await text(page, '.bar-txt')) !== before);
     await tap(page, '.filled [data-act="undo-bulk"]');
     check('Denver: Undo puts every pick back, and the line goes', (await text(page, '.bar-txt')) === before && !(await page.$('.filled')), `${before} vs ${await text(page, '.bar-txt')}`);
@@ -1269,7 +1295,7 @@ const touchAt = async (page, sel) => {
   await tap(page, SETUP);
   await page.waitForSelector('#plan', { timeout: 15000 });
   await page.waitForTimeout(150);
-  check('Show endorsements off: the ballot says "Picks: No endorsements shown"', (await text(page, '.picks-line span')) === 'Picks: No endorsements shown', await text(page, '.picks-line span'));
+  check('Show endorsements off: the ballot says "Endorsements: Off"', (await text(page, '.picks-line span')) === 'Endorsements: Off', await text(page, '.picks-line span'));
   const vds = await page.$$eval('.ledger .row[data-item][data-undecided]:not(.is-info) .vd', (els) => els.map((e) => [e.className, e.textContent.trim()]));
   const blank = vds.filter(([c, t]) => /\bblank\b/.test(c) && t === '');
   const words = vds.filter(([c]) => !/\b(blank|review)\b/.test(c));
@@ -1278,9 +1304,8 @@ const touchAt = async (page, sel) => {
   const R = `#i-${race}`;
   await openRow(page, race);
   await shot(page, '12-no-endorsements-row');
-  const tight = await page.evaluate((s) => document.querySelector(s).getBoundingClientRect().height, R);
   const n = await page.$$eval(`${R} .clist [data-act="pick"]`, (els) => els.length);
-  check('Show endorsements off: an open race is tight: the candidates with Pick, no grid, no source lines, no other sources', n >= 2 && !(await page.$(`${R} .grid, ${R} .none-line, ${R} .gridnote, ${R} .others-wrap, ${R} .by`)) && !!(await page.$(`${R} .ob-acts`)), `${n} candidates`);
+  check('Show endorsements off: an open race is the candidates with Pick, their words in full, no grid, no source lines, no other sources', n >= 2 && !!(await page.$(`${R} .clist.full`)) && !(await page.$(`${R} .grid, ${R} .none-line, ${R} .gridnote, ${R} .others-wrap, ${R} .by`)) && !!(await page.$(`${R} .ob-acts`)), `${n} candidates`);
   await edit(page);
   check('Show endorsements: the Edit sheet leads with it, off, with no chips and no fill switch', (await ends(page, '.sheet-panel')) === 'false' && (await leads('.sheet-panel .sheet-bd'))
     && !(await page.$('.sheet-panel .su-chips, .sheet-panel [data-act="chip"], .sheet-panel [data-act="setup-fill"]')) && !!(await page.$('.sheet-panel [data-act="setup-only"]')));
@@ -1288,8 +1313,9 @@ const touchAt = async (page, sel) => {
   check('Show endorsements: on again, newspapers and guides are back with the fill switch', (await ends(page, '.sheet-panel')) === 'true' && (await page.getAttribute('.sheet-panel [data-act="chip"][data-k="papers"]', 'aria-pressed')) === 'true' && !!(await page.$('.sheet-panel [data-act="setup-fill"]')));
   await tap(page, '.sheet-panel [data-fk="sheet-x"]');
   await settle(page);
-  const full = await page.evaluate((s) => document.querySelector(s).getBoundingClientRect().height, R);
-  check('Show endorsements: the same open race is taller with sources on', full > tight + 40, `${Math.round(tight)}px vs ${Math.round(full)}px`);
+  // With no grid to read, the candidates' own words show in full (UX walk, Oct 20), so height no longer tells
+  // the two apart: the grid coming back does.
+  check('Show endorsements: the same open race has its sources back, words clamped again', !!(await page.$(`${R} .grid, ${R} .none-line`)) && !(await page.$(`${R} .clist.full`)));
   await edit(page);
   await tap(page, '.sheet-panel [data-act="ends"]');
   await tap(page, '.sheet-panel [data-fk="sheet-x"]');
@@ -1308,7 +1334,7 @@ const touchAt = async (page, sel) => {
   await fresh.page.waitForTimeout(250);
   if (await fresh.page.$('[data-act="shared-keep"]')) await tap(fresh.page, '[data-act="shared-keep"]');
   await edit(fresh.page);
-  check('Show endorsements: off comes back from the save link', (await text(fresh.page, '.picks-line span')) === 'Picks: No endorsements shown' && (await ends(fresh.page, '.sheet-panel')) === 'false', await text(fresh.page, '.picks-line span'));
+  check('Show endorsements: off comes back from the save link', (await text(fresh.page, '.picks-line span')) === 'Endorsements: Off' && (await ends(fresh.page, '.sheet-panel')) === 'false', await text(fresh.page, '.picks-line span'));
   noErrors(fresh.page, 'Show endorsements link');
   await fresh.ctx.close();
   await ctx.close();

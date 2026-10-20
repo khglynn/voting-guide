@@ -8,7 +8,7 @@ import { lineup, weighedIn, orderCandidates, type Lineup } from '../model/tally'
 import { candidateReview, judicialReview, judgesLead, surveyLines, surveySentence, pollsFor, raceRatings, hasRatings, type Review } from '../model/judges';
 import { seatLabel, cheatTitle, thresholdLabel } from '../model/labels';
 import { picksOnBallot } from '../model/lens';
-import { sourceLean, leanHTML, ext, clampP, escP, sampleBallot, isOpen, leadRest, srcLink, reportURL, paywallRowHTML } from './common';
+import { sourceLean, leanHTML, ext, clampP, escP, sampleBallot, isOpen, leadRest, wordsSrc, reportURL, paywallRowHTML } from './common';
 import { headsUp, headsHTML, addressCount } from './ledger';
 
 /* "Report a problem" on a row: the form (see common.reportURL) prefilled with this row. */
@@ -260,11 +260,13 @@ function listHTML(c: Contest, l: Lineup): string {
       <span class="cl-n"><b>${esc(k.name)}</b><span class="py">${esc([partyText(c, k), k.incumbent ? 'incumbent' : ''].filter(Boolean).join(', '))}</span>${backedBy(c, k, l)}${wordsLine(k)}</span>
       ${pickBtn(c, k, 'pick cl-b')}</li>`;
   const wi = cands.filter((k) => isWriteIn(k) && !chosen(k));
-  if (wi.length < 2) return `<ol class="clist">${cands.map(row).join('')}</ol>`;
+  // With endorsements off there's no grid, so each candidate's own words show in full (UX walk, Oct 20).
+  const cls = chosenIds().length ? 'clist' : 'clist full';
+  if (wi.length < 2) return `<ol class="${cls}">${cands.map(row).join('')}</ol>`;
   const k = `wi-${c.id}`;
   const open = isOpen(k);
   const last = (n: string) => n.replace(/\s*'[^']*'\s*/, ' ').trim().split(/\s+/).pop() || n;
-  return `<ol class="clist">${cands.filter((x) => !wi.includes(x)).map(row).join('')}
+  return `<ol class="${cls}">${cands.filter((x) => !wi.includes(x)).map(row).join('')}
     <li class="cl wi-fold"><span class="cl-n">${wi.length} write-in candidates: ${esc(wi.map((x) => last(x.name)).join(', '))}.</span><button class="linkbtn" data-act="open" data-k="${esc(k)}" aria-expanded="${open}">${open ? 'Hide' : 'Show'}</button></li>
     ${open ? wi.map(row).join('') : ''}</ol>`;
 }
@@ -276,7 +278,7 @@ function voicesHTML(c: Contest, cands: Candidate[]): string {
     if (o) {
       const quote = o.is_quote;
       return `<figure class="pq${quote ? '' : ' para'}"><blockquote class="clamp">${quote ? (/["“”]/.test(o.text) ? esc(o.text) : `“${esc(o.text)}”`) : escP(o.text)}</blockquote>
-        <figcaption><b>${esc(k.short)}</b>${quote ? '' : ', paraphrased by us'}${o.source ? `. ${srcLink(o.source)}` : ''}</figcaption></figure>`;
+        <figcaption><b>${esc(k.short)}</b>${quote ? '' : ', paraphrased by us'}${o.source ? `. ${wordsSrc(o)}` : ''}</figcaption></figure>`;
     }
     if (k.own_words_status === 'none_found') {
       const ch = k.own_words_checked;
@@ -357,7 +359,9 @@ function reviewHTML(r: Review | null, c: Candidate): string {
     ${r.links.length ? `<p class="fl">${r.links.map((x) => ext(x.url, x.label)).join(' · ')}</p>` : ''}</div>`;
 }
 /* Ratings in a contested judicial race: lawyer polls with every candidate's count side by side,
-   then each candidate's bar ratings. No tone color on either. */
+   then each candidate's bar ratings. No tone color on either. With polls, their one-line lede says
+   what they are, so the state's note on what a rating means doesn't say it again under them (UX
+   walk, Oct 20: Texas read the same caveat four times before the Pick buttons). */
 export function raceRatingsHTML(c: Contest): string {
   if (!hasRatings(c)) return '';
   const polls = pollsFor(c);
@@ -369,7 +373,7 @@ export function raceRatingsHTML(c: Contest): string {
   return `<div class="ratings">
     ${polls.length ? `<h4>Lawyer preference polls</h4><p class="fine">A count of which candidate responding lawyers prefer. Not an endorsement or a job review.</p><ul>${pollHTML}</ul>` : ''}
     ${groups.length ? `<h4>Bar association ratings</h4><ul>${groupHTML}</ul>${groups.some((g) => g.review.concerns.length) ? `<button class="linkbtn" data-act="open" data-k="${esc(k)}" aria-expanded="${isOpen(k)}">${isOpen(k) ? 'Hide the reasons' : 'Show the reasons they gave'}</button>` : ''}` : ''}
-    ${jr && jr.what_the_rating_means ? `<p class="fine">${escP(leadRest(jr.what_the_rating_means, 30)[0])}</p>` : ''}
+    ${jr && jr.what_the_rating_means && !polls.length ? `<p class="fine">${escP(leadRest(jr.what_the_rating_means, 30)[0])}</p>` : ''}
   </div>`;
 }
 function meansLineHTML(): string {
@@ -416,7 +420,7 @@ function multiJudgeHTML(c: Contest): string {
           <button class="mini${v === 'YES' ? ' on' : ''}" data-act="jpick" data-k="${esc(key)}" data-v="YES" aria-pressed="${v === 'YES'}" data-fk="jp-${hash(key)}-y">Keep</button>
           <button class="mini${v === 'NO' ? ' on' : ''}" data-act="jpick" data-k="${esc(key)}" data-v="NO" aria-pressed="${v === 'NO'}" data-fk="jp-${hash(key)}-n">Remove</button></span></div>
         ${r || k.background || k.own_words.length ? `<button class="linkbtn" data-act="open" data-k="${esc(bk)}" aria-expanded="${isOpen(bk)}">${isOpen(bk) ? 'Less' : 'About this judge'}</button>` : ''}
-        ${isOpen(bk) ? `<div class="j-more">${reviewHTML(r, k)}${k.background ? `<p class="small">${escP(k.background)}</p>` : ''}${!r && k.own_words[0] ? `<p class="small">${escP(k.own_words[0].text)} ${srcLink(k.own_words[0].source)}</p>` : ''}</div>` : ''}</li>`;
+        ${isOpen(bk) ? `<div class="j-more">${reviewHTML(r, k)}${k.background ? `<p class="small">${escP(k.background)}</p>` : ''}${!r && k.own_words[0] ? `<p class="small">${escP(k.own_words[0].text)} ${wordsSrc(k.own_words[0])}</p>` : ''}</div>` : ''}</li>`;
     }).join('')}</ul>${pwOnly(c)}`;
 }
 /* A row whose sources made no readable pick still names its paywalled ones, once (Kevin, Oct 19). */

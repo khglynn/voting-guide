@@ -8,7 +8,7 @@ import { toast, hideToast, copyText, announce, hash, plural } from './util';
 import { render, renderRow, renderSection, renderSummaries, renderLens, flushLens, markBehind, renderBallot, renderAddr, rowEl, scrollRowIntoView, rowTop, holdRow, opensLow, anchored, $ } from './render';
 import { growOpen, inkRow, followFold, glideTo, land, stopGlide, grow, shrinkAway, collapseRow, finishCollapse } from './motion';
 import { HOW_K } from './views/trust';
-import { openBallot, openChosen, go, openReader, runAddress, reopenAddr, useMatch, toDoor, showBallot, rechoose } from './app';
+import { openBallot, openChosen, go, openReader, runAddress, reopenAddr, useMatch, toDoor, showBallot, rechoose, openSaved, fillWhy } from './app';
 import { judgeBatch } from './model/judges';
 import { planAgree, planParty, planJudges, planSetup, applyFills, undoFills, emptyPlan, touchUndo, type Plan } from './model/bulk';
 import { toggleChip, setParty, setSources, noEndorsements, doorNone, type ChipKey } from './model/lens';
@@ -580,7 +580,7 @@ function backToPicks(lensChanged = false): void {
   if (lensChanged) renderLens(); else render(['sheet']);
   if (from) focusFk(from);
 }
-/* "Picks: ... · Edit" and the menu's "Quick picks": step 2's controls in a sheet. The fill switch
+/* "Endorsements: ... · Edit" and the menu's "Quick picks": step 2's controls in a sheet. The fill switch
    starts off each time; "Hide races I've decided" shows where the ballot is now. */
 A.picks = (_d, el) => {
   S.ui.sheetFrom = S.ui.sheet === 'toc' ? 'bar-menu' : el.dataset.fk || null;
@@ -600,7 +600,7 @@ function closePicks(): void {
   S.ui.setupFill = false;
   render(['sheet']);
   const n = plan && plan.fills.length ? applyFills(plan.fills) : 0;
-  if (n) { S.ui.bulk = String(n); S.ui.row = null; S.ui.keep = null; }
+  if (n) { S.ui.bulk = String(n); S.ui.bulkWhy = plan ? fillWhy(plan) : null; S.ui.row = null; S.ui.keep = null; }
   if (n || only !== S.b.hideDecided) dropBeat();
   const onlyChanged = only !== S.b.hideDecided;
   if (onlyChanged) { S.b.hideDecided = only; S.ui.keep = null; }
@@ -747,12 +747,12 @@ A['setup-only'] = () => {
   S.door.only = !S.door.only; render(['mast']);
 };
 /* "Show my ballot" (and Enter in the ZIP box): app.ts showBallot, then the fill's toast with Undo. */
-A['setup-done'] = async () => {
-  const r = await showBallot();
-  if (r) fillToast(fillHead(r.n, r.plan), setupPlan(r.plan));
-};
+/* "Show my ballot". What a fill did is the ballot head's own line ("20 filled in from your sources.
+   Undo"), not a toast over the next step (UX walk, Oct 20). */
+A['setup-done'] = async () => { await showBallot(); };
 /* "Change" on the place line, after the place question: ask it again. */
 A.rechoose = () => { rechoose(); };
+A['saved-open'] = () => { openSaved(); };
 A['addr-open'] = () => { S.ui.addrOpen = true; S.ui.addrMsg = null; S.ui.addrFail = ''; S.ui.addrWhich = null; renderAddr(); const i = $('#addr-in'); if (i) { i.scrollIntoView({ block: 'center' }); i.focus({ preventScroll: true }); } };
 A['addr-close'] = () => { S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.addrFail = ''; S.ui.addrWhich = null; renderAddr(); focusFk($('[data-fk="addr-again"]') ? 'addr-again' : 'addr-open'); };
 /* "Not it? Try again" beside what the Census found, and "None of these" under several matches: the

@@ -2,8 +2,8 @@
    the ZIP box, the Census address lookup, views and the browser's Back button, and the hidden
    "try as" scenarios. */
 import type { Index, PlaceBundle, StateBundle } from './types';
-import { S, emptyBallotState, noSections, persist, forgetLast, savedBallot, parseShareHead, decodeShare, normalizeRanks, type BallotState, type View } from './state';
-import { buildBallot, entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, rankMax, decisionItems, chosenIds, type Ballot } from './ballot';
+import { S, emptyBallotState, noSections, persist, leaveLast, leftBallot, savedBallot, parseShareHead, decodeShare, normalizeRanks, type BallotState, type View } from './state';
+import { buildBallot, entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, rankMax, decisionItems, chosenIds, sectionOf, type Ballot } from './ballot';
 import { zipState, censusLookup, placeFromGeo, settleAddress, withPlace, tidyAddress, type GeoResult } from './geo';
 import { toast, hideToast } from './util';
 import { render, renderBallot, renderAddr, anchored, $ } from './render';
@@ -48,7 +48,7 @@ export function resetUI(): void {
   // The sections as you left them on this ballot (S.b.secs, saved with it).
   const secs = S.b.secs || noSections();
   u.folded = new Set(secs.folded); u.unfolded = new Set(secs.unfolded); u.reveal = new Set(secs.reveal);
-  u.noteOpen.clear(); u.reader = null; u.sheet = null; u.sheetFrom = null; u.sheetBack = null; u.addrOpen = false; u.addrMsg = null; u.addrFail = ''; u.addrFound = null; u.addrWhich = null; u.saveOpen = false; u.copyFallback = null; u.bulk = null; u.addrFilled = null; u.lensEmptied = false;
+  u.noteOpen.clear(); u.reader = null; u.sheet = null; u.sheetFrom = null; u.sheetBack = null; u.addrOpen = false; u.addrMsg = null; u.addrFail = ''; u.addrFound = null; u.addrWhich = null; u.saveOpen = false; u.copyFallback = null; u.bulk = null; u.bulkWhy = null; u.addrFilled = null; u.lensEmptied = false;
   u.resume = false;
   u.open.delete('voted');
 }
@@ -75,7 +75,8 @@ export function openReader(id: string, push = true): void {
 export function toDoor(): void {
   if (S.view === 'ballot') persist(true);
   if (S.view === 'ballot' && S.b.zip) S.zip = S.b.zip;
-  forgetLast();
+  leaveLast();
+  S.doorSaved = leftBallot();
   cancelLoad();
   S.view = 'start'; S.ballot = null; S.zipChoice = null; S.picked = null; S.coverage = null; S.pending = null; S.loadErr = null; S.retry = null; S.zipErr = '';
   S.ui.view = 'ballot'; S.ui.reader = null; S.ui.sheet = null; S.ui.sheetBack = null; S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.addrFail = ''; S.ui.addrFound = null; S.ui.addrWhich = null; S.ui.resume = false;
@@ -87,9 +88,18 @@ export function toDoor(): void {
   // The ZIP still in the box finds its place again (from the cache): the place line and the counts.
   if (/^\d{5}$/.test(S.zip)) void lookZip(S.zip);
 }
+/* "Open my ballot" on the first page: the ballot you left, as you left it. */
+export async function openSaved(): Promise<void> {
+  const d = S.doorSaved;
+  if (!d || !S.index) return;
+  const [st, placesStr] = d.key.split('|');
+  const places = placesStr === '-' ? [] : placesStr.split('+').filter((p) => S.index!.places[p]);
+  if (S.index.states[st] && await openBallot(st, places, d.zip, { noSetup: true })) leftDoor(); // Back returns here
+}
 /* Leaving the first page for a ballot (a ZIP, a place picked, an address): the entry we leave
    becomes the first page, so the phone's Back button returns to it instead of leaving the site. */
 function leftDoor(): void {
+  S.doorSaved = null;
   try {
     history.replaceState({ vg: 'start' }, '', location.pathname + location.search);
     history.pushState({ vg: 'ballot', door: 1 }, '', location.pathname + location.search);
@@ -244,6 +254,15 @@ async function loadBallot(st: string, placeIds: string[], zip: string, opts: Ope
 /* What a complete ZIP finds, as soon as it's typed: its ballot, loaded for the place line and
    step 2's counts (from the cache when it's been opened before); the place question when it covers
    several places; or why not (an unknown ZIP, one we don't cover). Nothing is shown or saved. */
+/* A ZIP that found its ballot: on a touch screen the number pad drops, so step 2 and "Show my ballot"
+   come into view (UX walk, Oct 20). Focus moves to step 2's heading rather than nowhere, so a screen
+   reader goes on from there. A keyboard keeps its place in the ZIP box. */
+function dropKeypad(): void {
+  const z = document.activeElement as HTMLElement | null;
+  if (!z || z.id !== 'zip' || !window.matchMedia('(pointer: coarse)').matches) return;
+  const h = document.getElementById('su-h');
+  if (h) h.focus({ preventScroll: true }); else z.blur();
+}
 export async function lookZip(v: string): Promise<void> {
   if (S.view === 'setup' && S.ballot && S.b.zip === v) return; // already showing this ZIP's place
   if ((S.zipChoice && S.zipChoice.zip === v) || (S.coverage && S.coverage.zip === v)) return;
@@ -261,10 +280,10 @@ export async function lookZip(v: string): Promise<void> {
   }
   if (S.zip !== v) return; // typed on meanwhile
   const places = idx.zips[v] || [];
-  if (places.length === 1) { await openBallot(idx.places[places[0]].state, places, v, { door: true }); return; }
+  if (places.length === 1) { if (await openBallot(idx.places[places[0]].state, places, v, { door: true })) dropKeypad(); return; }
   if (places.length > 1) { S.zipChoice = { zip: v, placeIds: places }; S.ui.addrOpen = false; render(['mast']); return; }
   const st = zipState(v);
-  if (st && idx.states[st]) { await openBallot(st, [], v, { door: true }); return; }
+  if (st && idx.states[st]) { if (await openBallot(st, [], v, { door: true })) dropKeypad(); return; }
   if (!st) { S.zipErr = 'We couldn’t find that ZIP. Check the digits and try again.'; render(['mast']); return; }
   S.coverage = { kind: 'not_covered', state: st, zip: v };
   render(['mast']);
@@ -294,6 +313,13 @@ function doorFocus(): void {
    races I've decided" filter when something is left; then the ballot, saved for the first time,
    with the first page one Back away. Before that, it finishes what the ZIP box started: waits for a
    load, looks up a complete ZIP, or says what's missing. */
+/* What the head's "N filled in" line says the fill drew on: "from your sources", or each part with a
+   party ("6 from the Democratic Party, 17 from your sources"). */
+export function fillWhy(plan: ReturnType<typeof planSetup>): string {
+  const p = plan.party ? plan.party.fills.length : 0;
+  const a = plan.agree.fills.length;
+  return p ? `: ${[`${p} from the ${S.b.party} Party`, a ? `${a} from your sources` : ''].filter(Boolean).join(', ')}` : ' from your sources';
+}
 export async function showBallot(): Promise<{ n: number; plan: ReturnType<typeof planSetup> } | null> {
   if (S.view === 'ballot') return null;
   if (S.view === 'start' && !S.zipChoice && !S.coverage && !S.retry) {
@@ -316,6 +342,11 @@ export async function showBallot(): Promise<{ n: number; plan: ReturnType<typeof
   S.b.hideDecided = S.door.only && !S.tryMode;
   S.ui.row = null; S.ui.keep = null;
   S.ui.bulk = n ? String(n) : null;
+  S.ui.bulkWhy = n && plan ? fillWhy(plan) : null;
+  // What the fill filled shows on this first look, even a section it finished (UX walk, Oct 20:
+  // finished sections arrived folded, so the friend never saw the picks they agreed to). Under
+  // "Hide races I've decided" the filter does what you asked.
+  if (n && plan && !S.b.hideDecided) for (const f of plan.fills) { const it = S.ballot!.byId.get(f.id); if (it) S.ui.unfolded.add(sectionOf(it)); }
   S.b.setupDone = true;
   S.view = 'ballot';
   leftDoor();
@@ -509,6 +540,7 @@ export function applyGeo(r: GeoResult): void {
       const from = p === n ? `with ${S.b.party} candidates` : p ? `from your party and your sources` : 'from your sources';
       S.ui.addrFilled = `Filled ${n === 1 ? (added.size === 1 ? 'it' : '1 of them') : n === added.size ? (n === 2 ? 'both' : `all ${n}`) : `${n} of them`} ${from}.`;
       S.ui.bulk = String((live && S.ui.bulk ? Number(S.ui.bulk) : 0) + n);
+      if (!live || (S.ui.bulkWhy || '').startsWith(':')) S.ui.bulkWhy = p ? null : ' from your sources'; // a party breakdown's counts no longer add up
     }
   }
   S.ui.addrFound = tidyAddress(r.matched) || null;

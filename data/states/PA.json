@@ -96,6 +96,7 @@
   "in_the_booth": {
     "phones": "restricted",
     "phones_detail": "No state law bans phones in a Pennsylvania polling place, and using one to read your notes or sample ballot is fine. The judge of elections can set reasonable rules inside the room, and photographing other voters or the poll book is not allowed. Keep it in your hand, keep it quiet, and don't point the camera at anyone else. Sources: 25 P.S. 3060 (the judge of elections controls the polling room) and past DOS guidance as reported by NBC10 (2020): avoid capturing other voters, don't reveal others' selections, and don't post until you leave. The DOS 'Rules at the Polls' page was not opened in this pass.",
+    "phones_short": "You can read your plan on your phone; don't photograph other voters.",
     "notes_allowed": "allowed",
     "notes_detail": "Yes. Bring a printed or handwritten list, a marked-up sample ballot, or this guide. Nothing in the Election Code prohibits it. Just don't hand campaign material to other people inside the polling place or within 10 feet of the entrance (25 P.S. 3060(c), electioneering).",
     "ballot_selfies": "allowed",

@@ -8,7 +8,7 @@ import { esc, host } from '../util';
 import { rowTitle, courtOf, choiceShort } from '../model/labels';
 import { judicialReview, evalState, surveyLines, surveySentence, strengthOf, hasRatings } from '../model/judges';
 import { explainsOnly } from '../model/lens';
-import { ext, escP, sourceLean, srcLink, confLabel } from './common';
+import { ext, escP, sourceLean, srcLink, confLabel, wordsSrc } from './common';
 import { sectionTitle } from './ledger';
 import { rcvURL, reportLink, raceRatingsHTML } from './open';
 import { sectionOf } from '../ballot';
@@ -25,7 +25,7 @@ function ownWords(c: Candidate): string {
     return '<p class="fine">We haven’t looked up their own words yet.</p>';
   }
   return c.own_words.map((o) => `<figure class="pq${o.is_quote ? '' : ' para'}"><blockquote>${o.is_quote ? (/["“”]/.test(o.text) ? esc(o.text) : `“${esc(o.text)}”`) : escP(o.text)}</blockquote>
-    <figcaption>${o.is_quote ? 'In their words' : 'Paraphrased by us'}${o.source ? `. ${srcLink(o.source)}` : ''}</figcaption></figure>`).join('');
+    <figcaption>${o.is_quote ? 'In their words' : 'Paraphrased by us'}${o.source ? `. ${wordsSrc(o)}` : ''}</figcaption></figure>`).join('');
 }
 function backers(it: Item, name: string): { mine: Endorser[]; others: Endorser[] } {
   const b = S.ballot!;

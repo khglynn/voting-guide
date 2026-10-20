@@ -225,7 +225,8 @@ function normContest(c, file) {
       // Research notes like "No statement collected yet" are not the candidate's words: drop them so
       // the card shows its empty state instead of a fake bullet under "In their own words".
       own_words: (Array.isArray(k.own_words) ? k.own_words : []).filter((o) => o && isStr(o.text))
-        .map((o) => ({ text: o.is_quote === true ? o.text.trim() : stripNotes(o.text.trim()), is_quote: !!o.is_quote, source: safeUrl(o.source) }))
+        // source_label names a source whose link says nothing about it (a voter guide's PDF on Google Drive).
+        .map((o) => ({ text: o.is_quote === true ? o.text.trim() : stripNotes(o.text.trim()), is_quote: !!o.is_quote, source: safeUrl(o.source), ...optional({ source_label: helpShort(o.source_label, `${file}: ${c.id} own_words.source_label`) }) }))
         .filter((o) => o.text.length > 0),
       lwv_status: str(k.lwv_status),
       lwv_url: safeUrl(k.lwv_url),
@@ -657,6 +658,8 @@ for (const [st, s] of states) {
   // keep file order: contests first then measures as they appear
   const ordered = [...contests.values(), ...measures.values()].filter((i) => ids.includes(i.id)).map((i) => i.id);
   const b = bundleFor(ordered);
+  // Where phones are "restricted", My plan prints the state's one-line rule (phones_short), if it is one plain line.
+  if (s.in_the_booth && s.in_the_booth.phones_short != null) s.in_the_booth.phones_short = helpShort(s.in_the_booth.phones_short, `${st} in_the_booth.phones_short`);
   const bundle = { state: st, name: CONFIG.stateNames[st] || st, howto: s, order: ordered, ...b };
   sizes[`state-${st}.json`] = write(`state-${st}.json`, bundle);
   index.states[st] = {

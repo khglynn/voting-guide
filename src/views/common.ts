@@ -24,7 +24,7 @@ export const askCityURL = (zip: string): string => formURL('Please add my city',
 export const FILL = 'Fill in my ballot with their picks';
 export const HIDE = 'Hide races I’ve decided';
 /* The switch that leads step 2 and the Edit sheet, on to start; off turns every source off and the
-   ballot's Picks line reads "No endorsements shown". */
+   ballot's head reads "Endorsements: Off". */
 export const SHOW_ENDS = 'Show endorsements';
 
 /* The credit: Kevin's name, linked to his site, and a thank-you coffee while that has a link (Kevin,
@@ -109,6 +109,10 @@ export const ext = (url: string | null | undefined, text: string, cls = ''): str
 
 export const srcLink = (url: string | null | undefined): string =>
   url ? `<a class="src" href="${esc(url)}" target="_blank" rel="noopener">${esc(host(url))}</a>` : '';
+/* A candidate's own words' source: its name where the data gives one (the LWV Texas voter guide is a
+   PDF on Google Drive, and "drive.google.com" says nothing; UX walk, Oct 20), else its site. */
+export const wordsSrc = (o: { source: string | null; source_label?: string | null }): string =>
+  o.source && o.source_label ? `<a class="src" href="${esc(o.source)}" target="_blank" rel="noopener">${esc(o.source_label)}</a>` : srcLink(o.source);
 
 /* The official place to see your exact ballot: the place file's lookup, then the state file's
    own sample_ballot_url, then any state source named like a sample ballot, then the state's

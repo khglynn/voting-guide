@@ -3,8 +3,9 @@
    family and public posts that links the guide, since public sharing is fine (Kevin, Oct 20); one
    for work, school and neighborhood groups with official links only, never the guide), a
    list of good spots to post (ticks stay on this device), and, from data/get-involved.json, the message templates, the
-   texting study with its caveats and ways to get involved. Every link in the official-links
-   message is a statewide one from the state file, or this place's own where-to-vote page. */
+   ways to get involved, and last the texting study with its caveats (the reasons come after the
+   things to do). Every link in the official-links message is a statewide one from the state file,
+   or this place's own where-to-vote page. */
 import { S } from '../state';
 import { esc, fmtDate, todayISO } from '../util';
 import { clock, isMailState, nextStep } from '../model/plan';
@@ -203,7 +204,7 @@ export function passHTML(): string {
     <div class="msgs pub"><h4>For work, school and neighborhood groups</h4><p class="rule">Official links only. No link to this guide, so it stays nonpartisan.</p>${msg('pub', m.pub)}</div>
     <h3>Good spots to post</h3>
     <ul class="checks">${WHO_ORDER.map((i) => who[i]).map(([k, l]) => { const on = S.b.ticks.includes(k); return `<li><button data-act="tick" data-k="${k}" aria-pressed="${on}" data-fk="tick-${k}"><span class="bx" aria-hidden="true"></span><span class="lb">${esc(l)}</span></button></li>`; }).join('')}</ul>
-    ${studyHTML()}
     ${waysHTML()}
+    ${studyHTML()}
   </div><div class="crowd" aria-hidden="true"></div></section>`;
 }

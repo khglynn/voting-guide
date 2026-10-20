@@ -151,6 +151,19 @@ export const noneLabel = (g: Group): string => {
   const e = districtEntity(g.office);
   return e ? `I’m not in ${e}` : 'Not in any of these';
 };
+/* Under a district question: the sample ballot first (it settles every race), then the district
+   finders, each page once (UX walk, Oct 20: five links in a row, two of them the same page, the one
+   most people need last). When the sample ballot is one county's finder, that finder leads instead,
+   with its county's name, since a place across county lines has one finder per county. */
+function dqHelpHTML(finders: { url: string; label: string }[], sb: { url: string; label: string } | null): string {
+  const seen = new Set<string>();
+  const once = finders.filter((f) => !seen.has(f.url) && !!seen.add(f.url));
+  const inFinders = !!sb && seen.has(sb.url);
+  const list = inFinders ? [...once.filter((f) => f.url === sb!.url), ...once.filter((f) => f.url !== sb!.url)] : once;
+  const btn = sb && !inFinders ? `<p class="row-btns"><a class="mini dark" href="${esc(sb.url)}" target="_blank" rel="noopener">See my sample ballot</a></p>` : '';
+  const links = list.length ? `<p class="dq-help">${list.map((f) => ext(f.url, f.label)).join('<span class="dot" aria-hidden="true"> · </span>')}</p>` : '';
+  return btn + links;
+}
 function questionBodyHTML(g: Group): string {
   const b = S.ballot!;
   // The count is the whole place's, not your ZIP's: say so ("Houston has 24 of these").
@@ -169,7 +182,7 @@ function questionBodyHTML(g: Group): string {
     <div class="opts">${censusSettles(members[0]) && !S.b.addrNote ? '<button class="opt opt-addr" data-act="addr-open" data-fk="dq-addr"><b>Use my address</b><small>The Census lookup finds it for you</small></button>' : ''}${choices.map((c) => { const [l, sub] = optionLabel(c); return `<button class="opt" data-act="district" data-g="${esc(g.key)}" data-v="${esc(c.id)}" data-fk="d-${esc(c.id)}"><b>${esc(choices.length < members.length ? seatless(l) : l)}</b>${sub ? `<small>${esc(sub)}</small>` : ''}</button>`; }).join('')}
       <button class="opt opt-unsure" data-act="district" data-g="${esc(g.key)}" data-v="*" data-fk="d-${hash(g.key)}-x"><b>Not sure? Skip for now</b><small>Show all ${members.length}, each marked “Maybe on your ballot”</small></button>
       <button class="opt opt-unsure" data-act="district" data-g="${esc(g.key)}" data-v="none" data-fk="d-${hash(g.key)}-n"><b>${esc(noneLabel(g))}</b></button></div>
-    <p class="dq-help">${[...finders.map((f) => ext(f.url, f.label)), sb ? ext(sb.url, sb.label) : ''].filter(Boolean).join('<span class="dot" aria-hidden="true"> · </span>')}</p>
+    ${dqHelpHTML(finders, sb)}
   </div>`;
 }
 function glineHTML(g: Group): string {
@@ -549,10 +562,10 @@ export function ballotHeadHTML(): string {
   const sb = sampleBallot();
   const statewideOnly = !b.places.length;
   const filled = S.ui.bulk && canUndo()
-    ? `<p class="filled">${esc(S.ui.bulk)} filled in. <button class="linkbtn" data-act="undo-bulk" data-fk="filled-undo">Undo</button></p>` : '';
+    ? `<p class="filled">${esc(S.ui.bulk)} filled in${esc(S.ui.bulkWhy || '')}. <button class="linkbtn" data-act="undo-bulk" data-fk="filled-undo">Undo</button></p>` : '';
   const addr = addrBoxHTML();
   return `<div class="bhead"><h2 class="step su-h bal-h" id="ballot-h"><span class="step-n" aria-hidden="true">3</span>Your ballot</h2>
-      <p class="picks-line"><span>Picks: ${esc(lensSummary())}</span><button class="mini" data-act="picks" data-fk="picks-edit">Edit</button></p>
+      <p class="picks-line"><span>Endorsements: ${esc(lensSummary())}</span><button class="mini" data-act="picks" data-fk="picks-edit">Edit</button></p>
       ${filled}${addr}
       ${statewideOnly ? `<div class="statewide-note"><p>We only have statewide races for your area so far.</p>
         <p class="row-btns">${sb ? `<a class="mini dark" href="${esc(sb.url)}" target="_blank" rel="noopener">See my sample ballot</a>` : ''}<a class="mini" href="${esc(reportURL('Please add my city'))}" target="_blank" rel="noopener">Ask for your city</a></p></div>` : ''}

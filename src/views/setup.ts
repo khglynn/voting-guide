@@ -91,7 +91,7 @@ export function doorPicksHTML(): string {
     ${pickControlsHTML()}`;
 }
 
-/* The ballot's Edit sheet ("Picks: Newspapers and guides · Edit", and "Quick picks" in the menu):
+/* The ballot's Edit sheet ("Endorsements: Newspapers and guides · Edit", and "Quick picks" in the menu):
    step 2's controls again. Chips apply as you tap; the two switches apply when it closes. */
 export function picksSheetHTML(): string {
   return `<div class="scrim screen-only" data-act="sheet-close"></div>

@@ -130,6 +130,8 @@ const small44 = (page, scope) => page.$$eval(`${scope} button`, (els) => els.fil
 
 /* ---------- the front door ---------- */
 const SETUP = '[data-act="setup-done"]';
+/* What a lookup in Congress District 6 and Senate District 28 sets on Aurora's ballot (the mocks below). */
+const AURORA_SET = 'Set from your address: U.S. House of Representatives, District 6 · Regent of the University of Colorado, District 6.';
 const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
 {
   const { ctx, page } = await newPage();
@@ -2176,7 +2178,7 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
   await page.waitForSelector('.door-place', { timeout: 15000 });
   const found = await text(page, '.door-found');
   await throughSetup(page);
-  check('Address: Aurora, Colorado opens its ballot and answers its districts', /Aurora/.test(await text(page, '.place')) && found === 'Found: Test Not it? Try again' && /^Set from your address: .*State Senate, District 28\.$/.test(await text(page, '.addrbox .addr-set')), `${found} | ${await text(page, '.addrbox .addr-set')}`);
+  check('Address: Aurora, Colorado opens its ballot and answers its districts', /Aurora/.test(await text(page, '.place')) && found === 'Found: Test Not it? Try again' && (await text(page, '.addrbox .addr-set')) === AURORA_SET, `${found} | ${await text(page, '.addrbox .addr-set')}`);
   noErrors(page, 'Address');
   await ctx.close();
 }
@@ -2231,7 +2233,8 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
   const m = Number(((await text(page, '.bar-txt')).match(/of (\d+)/) || [])[1]);
   check('Address on the first page: step 2’s count was the ballot’s, districts set', cov > 0 && cov === m, `${cov} vs ${m}`);
   const kept = await text(page, '.addrbox .addr-set');
-  check('Address on the first page: the ballot keeps what was set, in the address box', /^Set from your address: U\.S\. House of Representatives, District 6 · .*State Senate, District 28\.$/.test(kept) && !/Set from|districts/i.test(await text(page, '.mast')), kept);
+  // Senate District 28 isn't one of Aurora's (SD-27, SD-29), so that question reads "Not on your ballot" and the line doesn't name it.
+  check('Address on the first page: the ballot keeps what was set, in the address box, naming only races it put on the ballot', kept === AURORA_SET && !/Set from|districts/i.test(await text(page, '.mast')), kept);
   check('Address on the first page: the box still shows what was found this visit', (await text(page, '.addrbox .addr-found')) === found);
   check('Address on the first page: District 6 puts Aurora’s U.S. House race on the ballot, no longer a maybe', !!(await page.$('#i-co-us-house-6')) && !/Maybe on your ballot/.test(await text(page, '#i-co-us-house-6')), await text(page, '#i-co-us-house-6'));
   noErrors(page, 'Address on the first page');
@@ -2316,7 +2319,7 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
   await page.waitForSelector('.addrbox .addr-found', { timeout: 8000 }).catch(() => {});
   await page.waitForTimeout(150);
   check('Several matches: the one tapped is the one found', (await text(page, '.addrbox .addr-found')) === 'Found: Test Two, Austin, TX 78745 Not it? Try again', await text(page, '.addrbox .addr-found'));
-  check('Several matches: and its districts are the ones set', (await text(page, '.addrbox .addr-set')) === 'Set from your address: U.S. Representative, District 35 · State Senator, District 21 · State Representative, District 50.', await text(page, '.addrbox .addr-set'));
+  check('Several matches: and its districts are the ones set', (await text(page, '.addrbox .addr-set')) === 'Set from your address: State Senator, District 21 · State Representative, District 50.', await text(page, '.addrbox .addr-set'));
   check('Several matches: Senate District 21 puts that race on the ballot, no longer a maybe', !!(await page.$('#i-tx-senate-21')) && !/Maybe on your ballot/.test(await text(page, '#i-tx-senate-21')), await text(page, '#i-tx-senate-21'));
   await page.waitForTimeout(400);
   check('Several matches: neither address is saved', !/test (one|two)|a test lookup/i.test((await savedVG(page)) || ''));

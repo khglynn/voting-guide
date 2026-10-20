@@ -1486,5 +1486,25 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const lk = open('CO', ['lakewood-co']);
     const lset = address.setFromAddress(lk, S.b, { cd: 7, upper: 22, lower: 24 });
     check('address: Lakewood names each office District 7 set', lset.filter((x) => /District 7$/.test(x)).length === 3 && ['co-us-house-7', 'co-sboe-7', 'co-cu-regent-7'].every((id) => S.b.mine.includes(id) && !bl.isMaybe(id)), lset.join(' | '));
+
+    // The address box: before, after (this visit, with what was found), after a reload (no address).
+    const strip = (h) => h.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+    const box = () => strip((ledger.ballotHeadHTML().match(/<div class="addrbox">[\s\S]*?<\/div>(?=\s*(?:<div class="statewide-note"|<\/div>))/) || [''])[0]);
+    open('TX', ['austin-tx']);
+    const view0 = S.view;
+    S.view = 'ballot'; S.ui.addrOpen = false; S.ui.addrFound = null;
+    const n0 = ledger.addressCount();
+    check('address box: before a lookup, "{n} races depend on your address."', box().startsWith(`${n0} races depend on your address.`), box());
+    S.b.addrNote = address.addrSummary(address.setFromAddress(S.ballot, S.b, { cd: 37, upper: 14, lower: 49 }));
+    S.ui.addrFound = 'Test One, Austin, TX 78704';
+    const n1 = ledger.addressCount();
+    check('address box: after one, what was found, what it set, and the rest counted', box() === `Found: Test One, Austin, TX 78704 Not it? Try again Set from your address: U.S. Representative, District 37 · State Senator, District 14 · State Representative, District 49. ${n1} still depend on your address. Your sample ballot shows them. See my sample ballot`, box());
+    check('address box: the masthead no longer carries it', !/Set from|Your districts/.test(views.mast.mastHTML()));
+    S.ui.addrFound = null;
+    check('address box: after a reload, what it set without the address', !/Found:|Test One/.test(box()) && /^Set from your address: /.test(box()), box());
+    open('FL', []);
+    S.b.addrNote = address.addrSummary(address.setFromAddress(S.ballot, S.b, { cd: 24, upper: 38, lower: null }));
+    check('address box: nothing set, "Found your address. Your sample ballot shows the rest."', /^Found your address\. Your sample ballot shows the rest\. See my sample ballot$/.test(box()), box());
+    S.view = view0; S.ui.addrFound = null;
   }
 }

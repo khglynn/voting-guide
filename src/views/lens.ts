@@ -6,7 +6,7 @@ import { chosenIds, decisionItems } from '../ballot';
 import { esc, plural } from '../util';
 import { CHIPS, chipState, chipMembers, withPicks, partiesOnBallot, picksOnBallot, explainsOnly } from '../model/lens';
 import { coverage } from '../model/tally';
-import { leanHTML, sourceLean, ext, isOpen, paywallSourceHTML } from './common';
+import { leanHTML, sourceLean, ext, isOpen, paywallSourceHTML, hasPaywallNote } from './common';
 
 const TICK = '<svg class="tick" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 6.3l2.6 2.6L10 3.3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>';
 const TYPE_WORD: Record<string, string> = {
@@ -58,9 +58,10 @@ function srcRow(e: Endorser): string {
   const on = chosenIds().includes(e.id);
   const k = `basis-${e.id}`;
   const n = picksOnBallot(b, e.id);
-  const what = explainsOnly(e) ? 'Explains, doesn’t endorse' : n ? `Endorsed in ${n} of your races and measures` : 'No endorsements found';
+  // A paywalled paper with no readable pick here is named once, by its paywall note below.
+  const what = explainsOnly(e) ? 'Explains, doesn’t endorse' : n ? `Endorsed in ${n} of your races and measures` : hasPaywallNote(e) ? '' : 'No endorsements found';
   return `<li class="srow">
-    <div class="s-main"><span class="s-n" id="sn-${esc(e.id)}">${esc(e.name)}</span><span class="s-d">${esc(TYPE_WORD[e.type] || e.type)}. ${esc(what)}.</span>
+    <div class="s-main"><span class="s-n" id="sn-${esc(e.id)}">${esc(e.name)}</span><span class="s-d">${esc(TYPE_WORD[e.type] || e.type)}.${what ? ` ${esc(what)}.` : ''}</span>
       <span class="s-l">${sourceLean(e)}<button class="linkbtn" data-act="open" data-k="${esc(k)}" aria-expanded="${isOpen(k)}">Why this lean</button></span>
       ${isOpen(k) ? `<p class="s-b">${e.lean_basis_kind ? `<b>${esc(BASIS_KIND[e.lean_basis_kind])}.</b> ` : ''}${esc(e.lean_basis || 'No basis recorded, so we show it as not rated.')}${e.lean_note ? ` ${esc(e.lean_note)}` : ''}${e.guide_url ? ` ${ext(e.guide_url, 'Their guide')}` : ''}</p>` : ''}
       ${paywallSourceHTML(e)}</div>

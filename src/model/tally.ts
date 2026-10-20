@@ -7,7 +7,7 @@ import type { Ballot } from '../ballot';
 import { S } from '../state';
 import { chosen, status, entriesBySection, isDecision, isRCV } from '../ballot';
 import { choiceShort, pickShort } from './labels';
-import { explainsOnly } from './lens';
+import { explainsOnly, hasPaywallNote } from './lens';
 import { judgeReview } from './judges';
 
 export interface LGroup { key: string; label: string; choices: string[]; sources: Endorser[] }
@@ -17,6 +17,7 @@ export interface Lineup {
   noStand: Endorser[];       // looked, took no position
   notFound: Endorser[];      // looked, found nothing
   notChecked: Endorser[];    // covers this kind of item here, no row yet
+  paywalled: Endorser[];     // its endorsements sit behind a paywall we couldn't read; only the paywall note names it
   guides: Endorser[];        // explain without picking (this kind of item)
   relevant: Endorser[];      // everyone above except guides
 }
@@ -77,20 +78,22 @@ export function lineup(it: Item, sources?: Endorser[]): Lineup {
 export const clearLineups = (): void => { lineCache = null; };
 function computeLineup(it: Item, sources: Endorser[]): Lineup {
   const b = S.ballot!;
-  const out: Lineup = { groups: [], both: [], noStand: [], notFound: [], notChecked: [], guides: [], relevant: [] };
+  const out: Lineup = { groups: [], both: [], noStand: [], notFound: [], notChecked: [], paywalled: [], guides: [], relevant: [] };
   const groups = new Map<string, LGroup>();
   for (const e of sources) {
     const r = en(b, it, e);
     const picks = makesKind(e, it);
     if (!r) {
       if (!picks || explainsOnly(e)) { if (covers(b, e, it) || explainsOnly(e)) out.guides.push(e); continue; }
-      if (covers(b, e, it)) { out.notChecked.push(e); out.relevant.push(e); }
+      if (covers(b, e, it)) { (hasPaywallNote(e) ? out.paywalled : out.notChecked).push(e); out.relevant.push(e); }
       continue;
     }
     if (r.s !== 'endorsed' && (explainsOnly(e) || !picks)) { out.guides.push(e); continue; }
     out.relevant.push(e);
     if (r.s === 'no_position') { out.noStand.push(e); continue; }
-    if (r.s === 'not_found') { out.notFound.push(e); continue; }
+    // A paywalled paper with no readable pick here is one state, "behind a paywall", never also
+    // "No endorsements found" or "Not checked yet".
+    if (r.s === 'not_found') { (hasPaywallNote(e) ? out.paywalled : out.notFound).push(e); continue; }
     if (r.both) { out.both.push(e); continue; }
     // Two sources naming the same candidates in a different order agree. In a ranked-choice
     // race a source's list is a ranking, so sources are grouped by their first choice ("Novick
@@ -173,13 +176,13 @@ export function tally(l: Lineup): string {
 }
 
 export type VKind = 'mine' | 'agree' | 'split' | 'none' | 'review';
-export type NoneWhy = 'no_stand' | 'not_found' | 'not_checked' | 'no_cover' | 'no_sources' | 'both' | 'mixed';
+export type NoneWhy = 'no_stand' | 'not_found' | 'not_checked' | 'paywall' | 'no_cover' | 'no_sources' | 'both' | 'mixed';
 /* shade: 'one' when a single source weighed in (one group is not a consensus), 'lean' for a
    lopsided split (2 to 1 or wider), 'even' for a close one. The view styles each differently. */
 export interface Verdict { kind: VKind; main: string; sub: string; why?: NoneWhy; filled?: boolean; tone?: 'fav' | 'unfav' | 'mixed' | 'none'; shade?: 'one' | 'lean' | 'even' }
 
 export const NONE_WORDS: Record<NoneWhy, string> = {
-  no_stand: 'Took no stand', not_found: 'No endorsements found', not_checked: 'Not checked yet',
+  no_stand: 'Took no stand', not_found: 'No endorsements found', not_checked: 'Not checked yet', paywall: 'Behind a paywall',
   // The common case on local races: a quiet invitation on the row, said once on the section band.
   no_cover: 'Not covered by your sources', no_sources: 'No sources on', both: 'Listed both sides',
   mixed: 'No endorsements',
@@ -193,6 +196,7 @@ export function noneWhy(l: Lineup, anyChosen: boolean): NoneWhy {
   if (l.noStand.length) states.push('no_stand');
   if (l.notFound.length) states.push('not_found');
   if (l.notChecked.length) states.push('not_checked');
+  if (l.paywalled.length) states.push('paywall');
   if (l.both.length) states.push('both');
   return states.length === 1 ? states[0] : 'mixed';
 }
@@ -204,6 +208,7 @@ export function noneCounts(l: Lineup): string {
     l.notFound.length ? `nothing found for ${l.notFound.length}` : '',
     l.notChecked.length ? `${l.notChecked.length} not checked yet` : '',
     l.both.length ? `${l.both.length} listed both sides` : '',
+    l.paywalled.length ? `${l.paywalled.length} behind a paywall` : '',
   ].filter(Boolean)[0] || '';
 }
 
@@ -237,7 +242,7 @@ export function verdict(it: Item): Verdict {
     const why = noneWhy(l, chosen().length > 0);
     // A judge with no review in our data yet and no source picks: point to what the row holds.
     // (A wording choice only: no fact is read out of the prose.)
-    if (it.kind === 'contest' && it.is_retention && (why === 'no_cover' || why === 'not_checked')) {
+    if (it.kind === 'contest' && it.is_retention && (why === 'no_cover' || why === 'not_checked' || why === 'paywall')) {
       const reviewed = /commission|evaluat|review|rated|recommend|bar association|poll/i.test(`${it.why_it_matters || ''} ${it.candidates.map((c) => c.own_words.map((o) => o.text).join(' ')).join(' ')}`);
       return { kind: 'none', main: reviewed ? 'See the review' : 'Keep or remove?', sub: '', why };
     }

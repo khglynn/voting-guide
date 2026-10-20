@@ -63,7 +63,7 @@ function quietLines(l: Lineup, it: Item, picked = true): string {
   }
   // Called once per open row, so a chosen paywalled source with no readable pick here gets its
   // note once (Kevin, Oct 19).
-  const pw = paywallRowHTML([...l.notFound, ...l.notChecked], cheatTitle(it));
+  const pw = paywallRowHTML(l.paywalled, cheatTitle(it));
   return `${out.length ? `<p class="gridnote">${out.join(' ')}</p>` : ''}${pw}`;
 }
 function srcCell(e: Endorser): string {
@@ -108,7 +108,8 @@ function noneLineHTML(it: Item, l: Lineup): string {
     if (l.notFound.length) parts.push(`No endorsement found from ${l.notFound.map((e) => e.short).join(', ')}.`);
     if (l.notChecked.length) parts.push(`Not checked yet: ${l.notChecked.map((e) => e.short).join(', ')}.`);
   }
-  return `<p class="none-line">${esc(parts.join(' '))}</p>`;
+  // A row whose only sources are paywalled says so once, in the paywall note under it.
+  return parts.length ? `<p class="none-line">${esc(parts.join(' '))}</p>` : '';
 }
 /* Sources outside your lens that did pick here, marked as such. */
 function othersHTML(it: Item): string {
@@ -367,7 +368,7 @@ function multiJudgeHTML(c: Contest): string {
     }).join('')}</ul>${pwOnly(c)}`;
 }
 /* A row whose sources made no readable pick still names its paywalled ones, once (Kevin, Oct 19). */
-const pwOnly = (it: Item): string => { const l = lineup(it); return paywallRowHTML([...l.notFound, ...l.notChecked], cheatTitle(it)); };
+const pwOnly = (it: Item): string => paywallRowHTML(lineup(it).paywalled, cheatTitle(it));
 /* Sources' yes/no on a measure or a judge, as a two-column grid. */
 function sourcesYesNo(it: Item): string {
   const l = lineup(it);

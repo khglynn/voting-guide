@@ -2,6 +2,7 @@
 import type { Endorser, Lean } from '../types';
 import { S } from '../state';
 import { esc, host } from '../util';
+import { hasPaywallNote } from '../model/lens';
 
 /* "Report a problem" goes to a Google Form in Kevin's personal account (picked Oct 16).
    The two entry ids prefill "Which race or measure?" (`what`) and "Where are you voting?". */
@@ -18,7 +19,7 @@ export function reportURL(what: string): string {
    secondhand are out of the data, and a short note asks a subscriber to send a PDF or the
    picks through the report form, prefilled with the source's name. The words come from the
    copy table. */
-export const hasPaywallNote = (e: Endorser): boolean => e.paywall === true && e.paywall_note_ok !== false;
+export { hasPaywallNote };
 /* The form's "Which race or measure?" line for a source's picks, so the report names the paper. */
 export const reportSourceLink = (e: Endorser, where = ''): string => reportURL(`${e.name}: picks${where ? ` on ${where}` : ''} [${e.id}]`);
 const PW_NOTE = 'Behind a paywall, so we couldn’t read its endorsements. Have a login? We’d love a PDF or the list.';

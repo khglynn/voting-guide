@@ -17,6 +17,8 @@ export const isPaper = (e: Endorser): boolean => e.type === 'publication' || e.t
 const isGroup = (e: Endorser): boolean => e.type !== 'party' && e.type !== 'publication';
 /* A source that never picks anything (an explainer: Colorado Sun, CalMatters, VOTE411). */
 export const explainsOnly = (e: Endorser): boolean => !e.endorses_candidates && !e.endorses_measures;
+/* A paper whose endorsements sit behind a paywall we couldn't read, with its note on (Kevin, Oct 19). */
+export const hasPaywallNote = (e: Endorser): boolean => e.paywall === true && e.paywall_note_ok !== false;
 
 export const CHIPS: { key: ChipKey; label: string; empty: string }[] = [
   { key: 'papers', label: 'Newspapers and guides', empty: 'None of the newspapers here made endorsements on this ballot. Try another group.' },

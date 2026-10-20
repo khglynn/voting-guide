@@ -6,7 +6,7 @@ import type { HowTo, HelpAction } from '../types';
 import { S } from '../state';
 import { esc, fmtDate, todayISO, host } from '../util';
 import { nextStep, registrationAlert, isMailState } from '../model/plan';
-import { ext, isOpen, bulletsHTML, leadBulletsHTML, escP, srcLink, sentences, telHTML } from './common';
+import { ext, isOpen, bulletsHTML, leadBulletsHTML, escP, srcLink, sentences, telHTML, deshout } from './common';
 
 /* What the strip last showed, so main.ts can repaint it when the step changes while the page
    sits open (the polls close, midnight passes). */
@@ -60,12 +60,14 @@ const RULE: Record<string, string> = { allowed: 'allowed', restricted: 'restrict
    short answer in the data shows the full answer as before. */
 type Situation = NonNullable<HowTo['situations']>[number];
 const moreBtn = (k: string, label: string): string => `<button class="pd-more" data-act="open" data-k="${esc(k)}" data-fk="${esc(k)}" aria-expanded="${isOpen(k)}" aria-label="${esc(isOpen(k) ? `Less: ${label}` : `More: ${label}`)}">${isOpen(k) ? 'Less' : 'More'}</button>`;
+/* A short line with any phone number in it tappable. */
+const shortHTML = (s: string): string => telHTML(deshout(s));
 const actsHTML = (acts: HelpAction[] | undefined): string => (acts && acts.length ? `<div class="plan-acts wi-acts">${acts.map((a) => `<a class="pbtn line" href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.label)}</a>`).join('')}</div>` : '');
 function sitBody(x: Situation): string {
   const full = `<p>${escP(x.answer)}</p>${x.steps && x.steps.length ? `<ol>${x.steps.map((s) => `<li>${escP(s)}</li>`).join('')}</ol>` : ''}${x.source ? `<p class="meta">Source: ${srcLink(x.source)}${x.confidence === 'unverified' ? '. Not yet confirmed' : ''}</p>` : ''}`;
   if (!x.short) return full;
   const k = `wim-${x.id}`;
-  return `<p class="wi-short">${escP(x.short)}</p>${actsHTML(x.actions)}<p class="meta wi-more">${moreBtn(k, x.question)}</p>${isOpen(k) ? `<div class="wi-full">${full}</div>` : ''}`;
+  return `<p class="wi-short">${shortHTML(x.short)}</p>${actsHTML(x.actions)}<p class="meta wi-more">${moreBtn(k, x.question)}</p>${isOpen(k) ? `<div class="wi-full">${full}</div>` : ''}`;
 }
 /* "Common mistakes": each one's fix in a line, the full text behind its "More". A mistake with
    no short line in the data shows as before. */
@@ -76,7 +78,7 @@ function gotchasHTML(h: HowTo): string {
     const sh = shorts[i];
     if (!sh) { const ss = sentences(t); return `<li><strong>${escP(ss[0] || t)}</strong>${ss.length > 1 ? ` <span class="bul-rest">${escP(ss.slice(1).join(' '))}</span>` : ''}</li>`; }
     const k = `gm-${i}`;
-    return `<li class="g-short">${escP(sh)} ${moreBtn(k, sh)}${isOpen(k) ? `<span class="pd-x">${escP(t)}</span>` : ''}</li>`;
+    return `<li class="g-short">${shortHTML(sh)} ${moreBtn(k, sh)}${isOpen(k) ? `<span class="pd-x">${escP(t)}</span>` : ''}</li>`;
   }).join('')}</ul>`;
 }
 

@@ -155,8 +155,8 @@ export function toggleChip(b: Ballot, key: ChipKey): boolean {
   setSources(b, turnOn ? [...cur, ...members] : cur.filter((id) => !members.includes(id)));
   return turnOn;
 }
-/* The party lens: turning a party on adds its sources (and remembers the party for
-   "Fill in my party"); off removes them. */
+/* The party lens: turning a party on adds its sources (and remembers the party, whose candidates
+   "Fill in my ballot with their picks" fills first); off removes them. */
 export function setParty(b: Ballot, party: string | null): void {
   const prev = S.b.party;
   const cur = chosenIds();

@@ -164,7 +164,7 @@ export function renderRow(key: string | null, counts = true, shut = false): Anim
   }
   const it = b.byId.get(key);
   if (!it) return null;
-  // Under "Only undecided", a row that is now decided leaves: repaint its section with the
+  // Under "Hide races I've decided", a row that is now decided leaves: repaint its section with the
   // same filter the full render uses, held in place.
   if (hiddenByOnly({ t: 'item', id: key })) { anchored(() => renderSection(sectionOf(it))); return null; }
   const el = $(`#i-${CSS.escape(key)}`);

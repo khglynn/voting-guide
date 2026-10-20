@@ -1658,7 +1658,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   noErrors(page, 'Focus trap');
   await ctx.close();
 }
-// #10: "Only undecided" drops a decided row on the next move, even on a one-row repaint.
+// #10: "Hide races I've decided" drops a decided row on the next move, even on a one-row repaint.
 {
   const { ctx, page } = await newPage();
   await openBallot(page, '80205');
@@ -1668,10 +1668,10 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   const ids = await page.evaluate(() => [...document.querySelectorAll('#sec-measures .row[data-item]')].slice(0, 2).map((r) => r.dataset.item));
   await openRow(page, ids[0]);
   await tap(page, `#i-${ids[0]} [data-act="pick"][data-v="YES"]`);
-  check('Only undecided: the row you just decided stays for a moment', !!(await page.$(`#i-${ids[0]}`)));
+  check('Hide races I’ve decided: the row you just decided stays for a moment', !!(await page.$(`#i-${ids[0]}`)));
   await openRow(page, ids[1]);
-  check('Only undecided: opening the next row drops the decided one', !(await page.$(`#i-${ids[0]}`)) && !!(await page.$(`#i-${ids[1]}.is-open`)));
-  noErrors(page, 'Only undecided');
+  check('Hide races I’ve decided: opening the next row drops the decided one', !(await page.$(`#i-${ids[0]}`)) && !!(await page.$(`#i-${ids[1]}.is-open`)));
+  noErrors(page, 'Hide races I’ve decided');
   await ctx.close();
 }
 // #2 and #11: the address lookup checks the state, and a ballot that fails to load after a

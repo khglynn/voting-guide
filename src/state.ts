@@ -23,7 +23,7 @@ export interface BallotState {
   planSeen: boolean;
   offerDismissed: string | null;     // v2 only; kept so old saved state reads cleanly
   addrNote: string | null;           // "Matched from your address" summary, no address kept
-  party: string | null;              // the party chosen in "A party" (for its sources and "Fill in my party")
+  party: string | null;              // the party chosen in "A party" (for its sources and its candidates in the fill)
   ticks: string[];                   // Help your friends vote: who you've texted
   setupDone: boolean;                // step 2 ("Pick by endorsements or party") finished on this device
 }
@@ -43,7 +43,7 @@ export interface UI {
   folded: Set<string>;        // sections or court groups the voter folded
   unfolded: Set<string>;      // decided sections and long groups the voter opened
   onlyUndecided: boolean;
-  keep: string | null;        // a row just decided stays visible under "Only undecided" until another opens
+  keep: string | null;        // a row just decided stays visible under "Hide races I've decided" until another opens
   noteOpen: Set<string>;
   reader: string | null;      // the "Full details" sheet, by item id
   sheet: null | 'sources' | 'party' | 'whatif' | 'picks' | 'toc';  // picks: the ballot's Edit sheet; toc: the menu

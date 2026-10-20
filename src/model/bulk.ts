@@ -1,8 +1,9 @@
-/* The one-tap fills, each with an Undo for the whole batch:
-   - "Use their picks where they agree": undecided rows where every chosen source that weighed in
+/* The fills, each with an Undo for the whole batch. "Fill in my ballot with their picks" (step 2
+   and the Edit sheet) is the first two together, the party's candidates first (planSetup):
+   - Where your sources agree: undecided rows where every chosen source that weighed in
      made the same pick. Never ranked-choice races (a pick is not a ranking), never a multi-seat
      race unless the sources name the same full set, never anything already decided.
-   - "Fill in my party": partisan races by the ballot's normalized `parties` labels (never the
+   - The party's candidates: partisan races by the ballot's normalized `parties` labels (never the
      display text). Skips races where the party has two candidates (top-two) and ranked races.
    - "Keep every judge the review favors": from the judges module.
    Filled picks are marked in S.b.auto so the row can say where the pick came from.

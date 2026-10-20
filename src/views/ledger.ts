@@ -270,7 +270,7 @@ function entryHTML(e: Entry): string {
   if (e.t === 'notmine') return notMineHTML(b.byId.get(e.id)!);
   return rowHTML(b.byId.get(e.id)!);
 }
-/* "Only undecided" hides a row once it is decided, except the one you just decided (kept
+/* "Hide races I've decided" hides a row once it is decided, except the one you just decided (kept
    until your next move) and the open one. render.ts uses the same rule for one-row repaints. */
 export const hiddenByOnly = (e: Entry): boolean => {
   if (!S.ui.onlyUndecided) return false;

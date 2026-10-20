@@ -75,7 +75,7 @@ export function verdictHTML(v: Verdict): string {
 const qVerdict = (main: string, sub = ''): string => `<span class="vd q"><span class="m">${esc(main)}</span>${sub ? `<span class="s">${esc(sub)}</span>` : ''}</span>`;
 
 /* ---------- rows ---------- */
-function titleHTML(it: Item): string {
+function titleHTML(it: Item, tags = ''): string {
   const r = rowTitle(it);
   if (it.kind === 'measure') {
     // The number, then the measure's short name ("Park bonds"); a long summary is cut to a lead.
@@ -83,11 +83,11 @@ function titleHTML(it: Item): string {
     const name = it.short_title ? it.short_title : leadRest(r.sub || r.title, 40)[0];
     // A short title is a name, so it is never clipped; a summary lead still is.
     const named = it.short_title ? ' named' : '';
-    if (tag && tag.length <= 4) return `<span class="ttl is-m"><span class="num">${esc(tag)}</span><span class="t"><span class="t-sum${named}">${esc(name)}</span></span></span>`;
+    if (tag && tag.length <= 4) return `<span class="ttl is-m"><span class="num">${esc(tag)}</span><span class="t"><span class="t-sum${named}">${esc(name)}</span>${tags}</span></span>`;
     const sub = it.short_title || (r.sub ? leadRest(r.sub, 40)[0] : '');
-    return `<span class="ttl is-m-long"><span class="t"><b>${esc(r.title)}</b>${sub ? `<small class="t-sum${named}">${esc(sub)}</small>` : ''}</span></span>`;
+    return `<span class="ttl is-m-long"><span class="t"><b>${esc(r.title)}</b>${sub ? `<small class="t-sum${named}">${esc(sub)}</small>` : ''}${tags}</span></span>`;
   }
-  return `<span class="ttl"><span class="t"><b>${esc(r.title)}</b>${r.sub ? `<small>${esc(r.sub)}</small>` : ''}</span></span>`;
+  return `<span class="ttl"><span class="t"><b>${esc(r.title)}</b>${r.sub ? `<small>${esc(r.sub)}</small>` : ''}${tags}</span></span>`;
 }
 /* The chevron column: a row opens and closes in place. */
 const CHEV = '<span class="cv" aria-hidden="true"><svg class="chev" viewBox="0 0 14 14"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span>';
@@ -105,8 +105,7 @@ export function rowHTML(it: Item): string {
   const cls = ['row', decided ? 'is-done' : '', open ? 'is-open' : '', s === 'info' ? 'is-info' : '', S.ui.keep === it.id ? 'just' : ''].filter(Boolean).join(' ');
   return `<li class="${cls}" id="i-${esc(it.id)}" data-item="${esc(it.id)}"${s === 'open' ? ' data-undecided' : ''}>
     <button class="row-hd" data-act="row" data-id="${esc(it.id)}" aria-expanded="${open}" data-fk="row-${esc(it.id)}">
-      <span class="mk" aria-hidden="true"><i></i></span>${titleHTML(it)}${vd}${CHEV}</button>
-    ${tags.length ? `<span class="tag-line">${tags.map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</span>` : ''}
+      <span class="mk" aria-hidden="true"><i></i></span>${titleHTML(it, tags.length ? `<span class="tags">${tags.map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</span>` : '')}${vd}${CHEV}</button>
     ${open ? openHTML(it) : ''}
   </li>`;
 }

@@ -134,8 +134,12 @@ b, strong { font-weight: 600; }
 .where { margin-top: 8px; font-size: 15.5px; color: var(--ink-2); display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 6px; }
 .phone a, a[href^="tel:"] { white-space: nowrap; }
 .where-note { font-size: 14.5px; color: var(--muted); margin-top: 4px; }
-.office { font-size: 14.5px; color: var(--muted); margin-top: 4px; }
-.office a { color: var(--ink-2); }
+.where .chg { color: var(--muted); text-decoration: none; padding: 0; gap: .28em; }
+.where .chg u { color: var(--ink-2); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.office { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--rule-2); display: grid; gap: 2px; font-size: 15px; color: var(--ink-2); line-height: 1.35; }
+.office-k { font-family: var(--f-display); font-weight: 600; font-variation-settings: "wdth" 88; letter-spacing: .015em; font-size: 13px; color: var(--muted); }
+.office-v { display: flex; flex-wrap: wrap; column-gap: 16px; row-gap: 2px; }
+.office a { color: var(--ink-2); text-decoration-color: var(--rule-2); text-underline-offset: 3px; }
 .addr-cta { margin-top: 6px; font-size: 14.5px; }
 .lede { font-size: 17px; line-height: 1.45; color: var(--ink-2); margin-top: 10px; }
 .zipform { margin-top: 16px; }
@@ -180,13 +184,18 @@ b, strong { font-weight: 600; }
 .whatif-tog { min-height: 46px; display: flex; align-items: center; font-size: 15px; color: var(--on-dusk); text-align: left; }
 /* The arrow follows the last word, so it never floats in the middle of a wrapped line. */
 .whatif-tog .nw { white-space: nowrap; }
-.whatif-tog .chev { display: inline-block; vertical-align: -1px; margin-left: 6px; }
+.whatif-tog .chev { display: inline-block; vertical-align: -1px; margin-left: 9px; }
 .whatif-tog[aria-expanded="true"] .chev { transform: rotate(180deg); }
 .chev { width: 14px; height: 14px; flex: none; transition: transform .2s ease; }
 [aria-expanded="true"] > .chev { transform: rotate(180deg); }
 .voted { color: var(--on-dusk); font-size: 15px; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; min-height: 46px; display: inline-flex; align-items: center; white-space: nowrap; }
-.whatifs { border-bottom: 1px solid var(--rule-2); }
-.whatifs .wrap { padding-top: 16px; padding-bottom: 18px; }
+/* "Dates, ID, and if you moved..." opens inside the green paper, in the paper's own inks. */
+.plan .whatifs { margin-top: 6px; padding-top: 16px; border-top: 1px solid var(--dusk-rule); color: var(--on-dusk); }
+.plan .whatifs .wi-h { color: var(--on-dusk); }
+.plan .whatifs .wi-sub, .plan .whatifs .meta, .plan .whatifs .wi-a, .plan .whatifs .pd-x, .plan .whatifs .bul-rest, .plan .whatifs .pdates li.past { color: var(--on-dusk-2); }
+.plan .whatifs .wi-list, .plan .whatifs .wi-list > li, .plan .whatifs .pdates li { border-color: var(--dusk-rule); }
+.plan .whatifs a, .plan .whatifs .pd-more { color: var(--on-dusk); }
+.plan .whatifs .host, .plan .whatifs .dot { color: var(--on-dusk-2); }
 .wi-h { font-family: var(--f-display); font-size: 22px; font-weight: 800; line-height: 1.08; font-variation-settings: "wdth" 78; color: var(--print); margin-top: 16px; }
 .wi-h:first-child { margin-top: 0; }
 .wi-sub { font-size: 14px; color: var(--muted); margin-top: 2px; }
@@ -338,9 +347,8 @@ b, strong { font-weight: 600; }
 .row.is-open { border-bottom: 1.5px solid var(--ink); }
 .row.is-open > .row-hd { border-bottom: 1px solid var(--rule); }
 .subhd small { display: block; font-style: normal; font-size: 13px; color: var(--muted); margin-top: 1px; }
-.tag-line { position: absolute; left: 30px; bottom: 3px; pointer-events: none; }
 .tag { font-size: 11.5px; color: var(--dusk-ink); border: 1px dashed var(--dusk-2); padding: 0 5px; border-radius: 2px; white-space: nowrap; }
-.row:has(.tag-line) > .row-hd .ttl { padding-bottom: 20px; }
+.ttl .tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 5px; }
 .gl-in { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 4px 0; min-height: 44px; font-size: 14.5px; color: var(--muted); }
 .gl-in b { color: var(--ink-2); }
 .unopp .disc { width: 100%; min-height: 48px; padding: 8px 0; text-align: left; font-size: 14.5px; color: var(--muted); font-style: italic; }

@@ -43,13 +43,14 @@ export function mastHTML(): string {
     const county = b.places.length === 1 && b.st !== 'DC' ? countyName(b.places[0]) : '';
     const where = [b.places.length ? (county && county !== b.stateName ? `${county}, ${b.stateName}` : b.stateName) : 'Statewide races', S.b.zip ? `ZIP ${S.b.zip}` : ''].filter(Boolean).join('. ');
     const office = b.places.map((p) => p.county_election_office).find(Boolean);
-    const officeName = office ? office.name.split(/[,:]\s*\d/)[0].trim() : '';
+    // The office's short name: before its address, first office only, no asides or building names.
+    const officeName = office ? office.name.replace(/\s*\([^)]*\)/g, '').split(/[,:]\s*\d/)[0].split(/;|\.\s/)[0].replace(/,\s*(?:City Hall|[^,]*\bBuilding\b)[\s\S]*$/i, '').trim() : '';
     return `<header class="mast wrap">${tryBanner()}
       <div class="mast-top"><span class="dateline">${esc(dateline())}</span></div>
       <h1 class="place">${esc(name)}</h1>
       ${note && !/county\)?$/i.test(note) ? `<p class="where-note">${esc(note.charAt(0).toUpperCase() + note.slice(1))}</p>` : ''}
-      <p class="where"><span>${esc(where)}.</span> <button class="linkbtn" data-act="change-place" data-fk="change-place">Not your ballot? Change</button></p>
-      ${office ? `<p class="office">${office.url ? ext(office.url, officeName) : esc(officeName)}${office.phone ? `, ${telHTML(office.phone)}` : ''}</p>` : ''}
+      <p class="where"><span>${esc(where)}.</span> <button class="linkbtn chg" data-act="change-place" data-fk="change-place">Not your ballot? <u>Change</u></button></p>
+      ${office ? `<p class="office"><span class="office-k">Your election office</span><span class="office-v"><span>${office.url ? ext(office.url, officeName) : esc(officeName)}</span>${office.phone ? `<span>${telHTML(office.phone)}</span>` : ''}</span></p>` : ''}
       ${S.b.addrNote ? `<p class="fine">${esc(S.b.addrNote)}</p>` : ''}
     </header>`;
   }

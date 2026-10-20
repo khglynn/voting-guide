@@ -49,8 +49,14 @@ async function openZip(page, zip, query = '') {
 }
 /* The fill switch starts on for a new ballot (Kevin, Oct 20). Checks that aren't about the fill turn it
    off first, so they see the ballot as it always was. */
+const FILL_SW = '#setup [data-act="setup-fill"]';
 async function fillOff(page) {
-  if ((await page.getAttribute('#setup [data-act="setup-fill"]', 'aria-checked').catch(() => null)) === 'true') await tap(page, '#setup [data-act="setup-fill"]');
+  // A ZIP still looking itself up repaints step 2 when it lands, which can swap the switch out from under
+  // a tap (CI, Oct 20): try again until it reads off.
+  for (let i = 0; i < 4; i++) {
+    if ((await page.getAttribute(FILL_SW, 'aria-checked').catch(() => null)) !== 'true') return;
+    await tap(page, FILL_SW).catch(() => page.waitForTimeout(200));
+  }
 }
 /* "Show my ballot", with both switches off, shows the ballot as it always was (it waits for the
    ZIP's lookup itself). A ballot already showing needs nothing. */

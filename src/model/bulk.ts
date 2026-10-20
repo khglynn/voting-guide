@@ -92,9 +92,9 @@ export function planParty(party: string): Plan {
   return { fills, single: 0, skippedTwo, skippedRanked, skippedPartial };
 }
 
-/* Step 2's "Fill in their picks": the party's candidates first (when a party is chosen), then
-   where your sources agree in the races the party left open, as one batch for one Undo. Plan it
-   after the party is set: the agree lineup includes the party's own sources. */
+/* Step 2's "Fill in my ballot with their picks": the party's candidates first (when a party is
+   chosen), then where your sources agree in the races the party left open, as one batch for one
+   Undo. Plan it after the party is set: the agree lineup includes the party's own sources. */
 export function planSetup(party: string | null): { party: Plan | null; agree: Plan; fills: Fill[] } {
   const p = party ? planParty(party) : null;
   const a = planAgree();

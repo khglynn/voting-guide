@@ -55,8 +55,8 @@ export interface UI {
   saveOpen: boolean;
   copyFallback: string | null;
   bulk: string | null;        // how many races the last fill from your sources filled, while its Undo is live
-  setupFill: boolean;         // "Fill in their picks" in step 2 and the Edit sheet
-  setupOnly: boolean;         // "Show only what's left" in step 2 and the Edit sheet, applied when they close
+  setupFill: boolean;         // "Fill in my ballot with their picks" in the Edit sheet
+  setupOnly: boolean;         // "Hide races I've decided" in the Edit sheet, applied when it closes
   resume: boolean;            // "Welcome back" above the plan: once per visit to a started ballot, until any tap
 }
 

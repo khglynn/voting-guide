@@ -104,7 +104,7 @@ function closeMenu(): void {
   flushLens();
 }
 /* A menu row: your next step, or a section. The section unfolds, comes to the top and takes focus.
-   Under "Show only what's left" a finished section isn't on the page, so the filter turns off. */
+   Under "Hide races I've decided" a finished section isn't on the page, so the filter turns off. */
 A.jump = (d) => {
   closeMenu();
   if (S.ui.view !== 'ballot') go('ballot');
@@ -373,7 +373,7 @@ function backToPicks(lensChanged = false): void {
   if (from) focusFk(from);
 }
 /* "Picks: ... · Edit" and the menu's "Quick picks": step 2's controls in a sheet. The fill switch
-   starts off each time; "Show only what's left" shows where the ballot is now. */
+   starts off each time; "Hide races I've decided" shows where the ballot is now. */
 A.picks = (_d, el) => {
   S.ui.sheetFrom = S.ui.sheet === 'toc' ? 'bar-menu' : el.dataset.fk || null;
   S.ui.sheetBack = null;
@@ -472,7 +472,7 @@ A.view = (d) => {
   go(d.v as View);
 };
 A.cheat = () => go('cheat');
-/* "Show only what's left", in the menu. In the rail the ballot repaints right away; under the menu
+/* "Hide races I've decided", in the menu. In the rail the ballot repaints right away; under the menu
    sheet it repaints when the sheet closes, so the switch answers at once on a 200-row ballot. */
 A.only = (_d, el) => {
   S.ui.onlyUndecided = !S.ui.onlyUndecided;
@@ -518,7 +518,7 @@ const switchRegion = (): Region => (S.ui.sheet === 'picks' ? 'sheet' : 'mast');
 A['setup-fill'] = () => { S.ui.setupFill = !S.ui.setupFill; render([switchRegion()]); };
 A['setup-only'] = () => { S.ui.setupOnly = !S.ui.setupOnly; render([switchRegion()]); };
 /* "Show my ballot": one batch of fills (the party's candidates, then where your sources agree), so
-   one Undo takes it all back; the "only what's left" filter when something is left; then the
+   one Undo takes it all back; the "Hide races I've decided" filter when something is left; then the
    ballot, saved for the first time. */
 A['setup-done'] = () => {
   if (S.view !== 'setup' || !S.ballot) return;

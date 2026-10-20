@@ -20,6 +20,10 @@ export function reportURL(what: string): string {
 /* "Ask for yours" on the first page: the same form, with whatever ZIP is in the box. */
 export const askCityURL = (zip: string): string => formURL('Please add my city', zip);
 
+/* The two switches, the same words wherever they show (step 2, the Edit sheet, the menu, the rail). */
+export const FILL = 'Fill in my ballot with their picks';
+export const HIDE = 'Hide races I’ve decided';
+
 /* The credit line on the first page. Buy me a coffee shows only once this has a link. */
 export const BUY_ME_A_COFFEE_URL = '';
 export const KEVIN_URL = 'https://kevinhg.com';

@@ -15,7 +15,7 @@ import { rowTitle, measureTag, courtGroup, cleanOffice, optionLabel } from '../m
 import { verdict, type Verdict } from '../model/tally';
 import { canUndo } from '../model/bulk';
 import { judgeBatch, judicialReview, judgesLead, judgesRule } from '../model/judges';
-import { ext, sampleBallot, isOpen, escP, leadRest, reportURL } from './common';
+import { ext, sampleBallot, isOpen, escP, leadRest, reportURL, HIDE } from './common';
 import { lensSummary } from './lens';
 import { addrHTML } from './mast';
 import { openHTML, censusSettles } from './open';
@@ -404,7 +404,7 @@ function quietNoteHTML(entries: Entry[]): string {
   return `<p class="sec-note">Your sources made no endorsements in these ${m ? 'measures' : 'races'}. Open one to ${m ? 'read both sides' : 'compare the candidates in their own words'}, or <button class="linkbtn" data-act="sheet" data-s="sources" data-fk="sec-more">add sources</button>.</p>`;
 }
 /* A section shows on the page when it has anything to show: a question, a choice, an unopposed
-   race or an information row. (Under "Show only what's left" a finished one hides; the menu still
+   race or an information row. (Under "Hide races I've decided" a finished one hides; the menu still
    lists it, as "Done".) */
 export function sectionShows(entries: Entry[]): boolean {
   const b = S.ballot!;
@@ -486,7 +486,7 @@ export function ballotHTML(): string {
   const by = entriesBySection();
   const secs = SECTIONS.map(([k]) => sectionHTML(k, by.get(k) || [])).join('');
   const empty = S.ui.onlyUndecided && !decisionItems().some((i) => !i.done)
-    ? '<p class="empty"><b>Nothing left to decide here.</b> Turn off “Show only what’s left” to see everything.</p>' : '';
+    ? `<p class="empty"><b>Nothing left to decide here.</b> Turn off “${HIDE}” to see everything.</p>` : '';
   return `<div class="wrap-led">${ballotHeadHTML()}</div><div class="ledger" aria-labelledby="ballot-h">${secs}${empty}</div>
     <div class="endcap wrap"><h3>That’s your whole ballot.</h3><p>Next, save your plan.</p>
       <button class="bigbtn" data-act="cheat" data-fk="endcap-cheat">Open my plan</button></div>`;
@@ -520,8 +520,9 @@ export function barHTML(): string {
 }
 
 /* ---------- the menu: a sheet under 1180px, a rail from there ----------
-   "Next up" first, the "Show only what's left" switch, then rows that go somewhere: your next
-   step, Quick picks (the Edit sheet), each section on the page with what's left, and My plan. */
+   "Next up" first, then rows that go somewhere: your next step, Quick picks (the Edit sheet), the
+   "Hide races I've decided" switch right above the sections it filters, each section on the page
+   with what's left, and My plan. */
 /* The next undecided race or question after the one you're on (open, or just decided), in page
    order, wrapping to the first; null when nothing the count includes is left. The menu names it
    and its button opens it, so the two never disagree. */
@@ -541,7 +542,7 @@ export function menuHTML(where: 'toc' | 'rail'): string {
   const by = entriesBySection();
   const up = nextUp();
   const next = up ? `<button class="nv-next" data-act="next" data-k="${esc(up.key)}" data-fk="${where}-next"><span>Next up: ${esc(up.title)}</span>${ARROW}</button>` : '';
-  const only = `<button class="su-sw nv-sw" role="switch" aria-checked="${S.ui.onlyUndecided}" data-act="only" data-fk="${where}-only"><span class="su-l"><b>Show only what’s left</b></span><span class="tg" aria-hidden="true"><span></span></span></button>`;
+  const only = `<button class="su-sw nv-sw" role="switch" aria-checked="${S.ui.onlyUndecided}" data-act="only" data-fk="${where}-only"><span class="su-l"><b>${HIDE}</b></span><span class="tg" aria-hidden="true"><span></span></span></button>`;
   const row = (attrs: string, fk: string, label: string, right = '', cls = '') =>
     `<li><button class="nv${cls}" ${attrs} data-fk="${where}-${fk}"><span class="nv-t">${esc(label)}</span><span class="nv-n">${esc(right)}</span>${ARROW}</button></li>`;
   const secs = SECTIONS.map(([k]) => {
@@ -550,9 +551,10 @@ export function menuHTML(where: 'toc' | 'rail'): string {
     const t = sectionTally(entries);
     return row(`data-act="jump" data-to="${k}"`, k, sectionTitle(k), !t.total ? '' : t.done === t.total ? 'Done' : `${t.total - t.done} left`);
   }).join('');
-  return `${next}${only}<ul class="nv-list">
+  return `${next}<ul class="nv-list">
     ${row('data-act="jump" data-to="plan"', 'plan', 'Your next step')}
-    ${row('data-act="picks"', 'picks', 'Quick picks')}
+    ${row('data-act="picks"', 'picks', 'Quick picks')}</ul>
+    ${only}<ul class="nv-list nv-secs">
     ${secs}
     ${row('data-act="cheat"', 'cheat', 'My plan', '', ' nv-plan')}</ul>`;
 }

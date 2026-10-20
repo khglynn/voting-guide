@@ -545,6 +545,8 @@ b, strong { font-weight: 600; }
 /* ---------- the menu: a sheet, and from 1180px a rail in the left margin ---------- */
 .nv-next { width: 100%; min-height: 48px; padding: 8px 14px; background: var(--paper-green); color: var(--on-dusk); box-shadow: var(--lie); border-radius: 2px; display: flex; align-items: center; justify-content: space-between; gap: 10px; font-family: var(--f-display); font-weight: 600; font-variation-settings: "wdth" 84; letter-spacing: .015em; font-size: 16px; line-height: 1.2; text-align: left; }
 .nv-sw.su-sw { align-items: center; padding: 8px 0 4px; }
+/* The switch heads the section rows it filters, ruled off from the rows above. */
+.nv-list + .nv-sw { margin-top: 6px; border-top: 1px solid var(--rule-2); }
 .nv-sw .su-l b { font-weight: 400; }
 .nv-list { margin-top: 2px; }
 .nv-list li { border-bottom: 1px solid var(--rule); }

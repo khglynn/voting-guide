@@ -8,7 +8,7 @@ import { chipsHTML, TICK } from './lens';
 import { partiesOnBallot } from '../model/lens';
 import { coverage } from '../model/tally';
 import { planSetup } from '../model/bulk';
-import { isOpen } from './common';
+import { isOpen, FILL, HIDE } from './common';
 
 /* "Austin, Texas", "Aurora or Denver, Colorado", "Ward 1, Washington, DC", or the state alone for
    statewide races. */
@@ -17,6 +17,17 @@ export function placeLine(b: Ballot): string {
   if (!b.places.length) return b.stateName;
   if (b.st === 'DC') return b.places.length === 1 ? `${b.places[0].label.replace(/^DC /, '')}, ${b.stateName}` : b.stateName;
   return `${b.places.map((p) => bare(p.label)).join(' or ')}, ${b.stateName}`;
+}
+
+/* What the fill switch would do on this ballot: the party's candidates first, then the races where
+   the rest of your sources agree; a part with nothing in it drops out. */
+export function fillLine(party: string | null): string {
+  const plan = planSetup(party);
+  const a = plan.agree.fills.length;
+  const p = plan.party ? plan.party.fills.length : 0;
+  if (plan.party && (p || a)) return `${[p ? `${p} from the ${party} Party` : '', a ? `${a} where your other sources agree` : ''].filter(Boolean).join(' and ')}.`;
+  const one = plan.agree.single;
+  return `${plural(a, 'race')} where they agree${one ? ` (${one} from just one source)` : ''}. Races where they split stay open.`;
 }
 
 const sw = (act: string, on: boolean, label: string, sub = ''): string =>
@@ -40,18 +51,12 @@ export function pickControlsHTML(inSheet = false): string {
     ? `<div class="su-chips su-parties" role="group" aria-label="A party">${parties.map((p) => `<button class="chip" data-act="party-set" data-p="${esc(p.party)}" data-fk="pty-${esc(p.party)}">${esc(p.party)}</button>`).join('')}</div>`
     : '';
   const cov = coverage();
-  const plan = planSetup(party);
-  const a = plan.agree.fills.length;
-  const one = plan.agree.single;
-  const fillSub = plan.party
-    ? `${plan.party.fills.length} from the ${party} Party, ${a} more where your sources agree.`
-    : `${plural(a, 'race')} where they agree${one ? ` (${one} from just one source)` : ''}. Skips the ones where they split.`;
   return `<div class="su-chips" role="group" aria-labelledby="${inSheet ? 'sh-h' : 'su-h'}">${chipsHTML()}${partyChip}${more}</div>
     ${list}
     <p class="su-cov">Picks in ${cov.picked} of your ${plural(cov.total, 'race')}.</p>
     <div class="su-sws">
-      ${sw('setup-fill', S.ui.setupFill, 'Fill in their picks', fillSub)}
-      ${sw('setup-only', S.ui.setupOnly, 'Show only what’s left')}
+      ${sw('setup-fill', S.ui.setupFill, FILL, fillLine(party))}
+      ${sw('setup-only', S.ui.setupOnly, HIDE)}
     </div>`;
 }
 

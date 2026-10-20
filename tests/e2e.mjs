@@ -166,7 +166,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('Step 2: Newspapers and guides is on and no party is chosen', (await page.getAttribute(`#setup [data-act="chip"][data-k="papers"]`, 'aria-pressed')) === 'true' && (await text(page, '#setup [data-fk="chip-party"]')) === 'A party' && (await page.getAttribute('#setup [data-fk="chip-party"]', 'aria-pressed')) !== 'true');
   check('Step 2: both switches start off', (await page.getAttribute('[data-act="setup-fill"]', 'aria-checked')) === 'false' && (await page.getAttribute('[data-act="setup-only"]', 'aria-checked')) === 'false');
   check('Step 2: "Picks in N of your M races."', /^Picks in \d+ of your \d+ races\.$/.test(await text(page, '.su-cov')), await text(page, '.su-cov'));
-  check('Step 2: the fill switch says how many races they agree on', /^\d+ races? where they agree( \(\d+ from just one source\))?\. Skips the ones where they split\.$/.test(await text(page, '[data-act="setup-fill"] small')), await text(page, '[data-act="setup-fill"] small'));
+  check('Step 2: the fill switch says how many races they agree on', /^\d+ races? where they agree( \(\d+ from just one source\))?\. Races where they split stay open\.$/.test(await text(page, '[data-act="setup-fill"] small')), await text(page, '[data-act="setup-fill"] small'));
   check('Step 2: nothing is saved before "Show my ballot"', (await savedVG(page)) === null);
   // The counts repaint in place: coverage, or the fill line when the new sources pick only in
   // races already covered (Austin's progressive groups).
@@ -178,7 +178,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await tap(page, '#setup [data-fk="chip-party"]');
   check('Step 2: "A party" opens the party list right there, not a sheet', (await page.$$('#setup [data-act="party-set"]')).length >= 2 && !(await page.$('.sheet-panel')));
   await tap(page, '#setup [data-act="party-set"][data-p="Republican"]');
-  check('Step 2: with a party, the fill line counts its candidates first', /^\d+ from the Republican Party, \d+ more where your sources agree\.$/.test(await text(page, '[data-act="setup-fill"] small')) && (await text(page, '#setup [data-fk="chip-party"]')) === 'Republican Party', await text(page, '[data-act="setup-fill"] small'));
+  check('Step 2: with a party, the fill line counts its candidates first', /^(\d+ from the Republican Party( and \d+ where your other sources agree)?|\d+ where your other sources agree)\.$/.test(await text(page, '[data-act="setup-fill"] small')) && (await text(page, '#setup [data-fk="chip-party"]')) === 'Republican Party', await text(page, '[data-act="setup-fill"] small'));
   await tap(page, '#setup [data-act="party-off"]');
   check('Step 2: tapping the party again turns it off', (await text(page, '#setup [data-fk="chip-party"]')) === 'A party');
   check('Step 2: nothing in all caps', (await upperCased(page)).length === 0);
@@ -241,9 +241,9 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('Step 2 fill: "Show my ballot" fills the races where your sources agree', bar.startsWith(`${n} of `), `${bar} (switch said ${n})`);
   check('Step 2 fill: one toast says so, with Undo', new RegExp(`^Filled ${n} picks? where your sources agree\\.`).test(t) && !!(await page.$('.toast [data-act="undo-bulk"]')), t);
   check('Step 2 fill: the ballot says "N filled in. Undo"', (await text(page, '.filled')) === `${n} filled in. Undo`, await text(page, '.filled'));
-  check('Step 2: "Show only what’s left" turns the filter on, so no decided row shows', !(await page.$('.ledger .row[data-item]:not([data-undecided])')));
+  check('Step 2: "Hide races I’ve decided" turns the filter on, so no decided row shows', !(await page.$('.ledger .row[data-item]:not([data-undecided])')));
   await menu(page);
-  check('Step 2: the menu’s "Show only what’s left" switch shows it on', (await page.getAttribute('.sheet-panel [data-act="only"]', 'aria-checked')) === 'true');
+  check('Step 2: the menu’s "Hide races I’ve decided" switch shows it on', (await page.getAttribute('.sheet-panel [data-act="only"]', 'aria-checked')) === 'true');
   await tap(page, '.sheet-panel [data-fk="sheet-x"]');
   await tap(page, '.toast [data-act="undo-bulk"]');
   check('Step 2 fill: Undo takes every filled pick back', /^0 of /.test(await text(page, '.bar-txt')), await text(page, '.bar-txt'));
@@ -344,7 +344,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await next(page);
   check('Denver: Next up opens an undecided row', !!(await page.$('.row.is-open[data-undecided]')));
 
-  // "Fill in their picks" from the Edit sheet: fills on Done, says so, and undoes as one batch.
+  // "Fill in my ballot with their picks" from the Edit sheet: fills on Done, says so, and undoes as one batch.
   const before = await text(page, '.bar-txt');
   const n = await editFill(page);
   check('Denver: the Edit sheet’s fill switch has races to fill on the default lens', n > 0, String(n));
@@ -731,8 +731,9 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await menu(page);
   await shot(page, '08-menu');
   check('Menu: "Your ballot" with Close, focus on Close', (await text(page, '.sheet-panel #sh-h')) === 'Your ballot' && (await text(page, '.sheet-panel [data-fk="sheet-x"]')) === 'Close' && (await focusedFk(page)) === 'sheet-x');
-  const order = await page.$$eval('.sheet-panel .sheet-bd button', (els) => els.map((e) => e.dataset.act));
-  check('Menu: Next up first, then the switch, then the rows', order[0] === 'next' && order[1] === 'only' && order[2] === 'jump', order.slice(0, 4).join());
+  const order = await page.$$eval('.sheet-panel .sheet-bd button', (els) => els.map((e) => `${e.dataset.act}${e.dataset.to ? `:${e.dataset.to}` : ''}`));
+  check('Menu: Next up first, then your next step and Quick picks, then the switch right above the sections', order.slice(0, 5).join() === 'next,jump:plan,picks,only,jump:federal', order.slice(0, 5).join());
+  check('Menu: the switch reads "Hide races I’ve decided"', (await text(page, '.sheet-panel [data-act="only"]')) === 'Hide races I’ve decided', await text(page, '.sheet-panel [data-act="only"]'));
   const rows = await page.$$eval('.sheet-panel .nv', (els) => els.map((e) => [e.querySelector('.nv-t').textContent.trim(), e.querySelector('.nv-n').textContent.trim()]));
   const names = rows.map((r) => r[0]);
   check('Menu: your next step, Quick picks, each section on the page, then My plan', names[0] === 'Your next step' && names[1] === 'Quick picks' && names[names.length - 1] === 'My plan'
@@ -774,13 +775,13 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await ctx.close();
 }
 {
-  // Under "Show only what's left" a finished section isn't on the page: the menu says "Done", and
+  // Under "Hide races I've decided" a finished section isn't on the page: the menu says "Done", and
   // jumping there turns the filter off. ("Try as aunt" decides everything but the measures.)
   const { ctx, page } = await newPage();
   await openBallot(page, '78704', '&try=aunt');
   await menu(page);
   await tap(page, '.sheet-panel [data-act="only"]');
-  check('Menu: the switch turns "Show only what’s left" on', (await page.getAttribute('.sheet-panel [data-act="only"]', 'aria-checked')) === 'true');
+  check('Menu: the switch turns "Hide races I’ve decided" on', (await page.getAttribute('.sheet-panel [data-act="only"]', 'aria-checked')) === 'true');
   check('Menu: a finished section reads "Done"', (await text(page, '.sheet-panel [data-to="federal"] .nv-n')) === 'Done');
   await tap(page, '.sheet-panel [data-fk="sheet-x"]');
   check('Menu: closed, the ballot shows only what’s left', !(await page.$('#sec-federal')) && !(await page.$('.ledger .row[data-item]:not([data-undecided])')));

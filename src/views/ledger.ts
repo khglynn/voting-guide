@@ -523,7 +523,7 @@ export function barHTML(): string {
 /* ---------- the menu: a sheet under 1180px, a rail from there ----------
    "Next up" first, then rows that go somewhere: your next step, Quick picks (the Edit sheet), the
    "Hide races I've decided" switch right above the sections it filters, each section on the page
-   with what's left, and My plan. */
+   with what's left, My plan, and last, ruled off, "How this guide works". */
 /* The next undecided race or question after the one you're on (open, or just decided), in page
    order, wrapping to the first; null when nothing the count includes is left. The menu names it
    and its button opens it, so the two never disagree. */
@@ -557,7 +557,8 @@ export function menuHTML(where: 'toc' | 'rail'): string {
     ${row('data-act="picks"', 'picks', 'Quick picks')}</ul>
     ${only}<ul class="nv-list nv-secs">
     ${secs}
-    ${row('data-act="cheat"', 'cheat', 'My plan', '', ' nv-plan')}</ul>`;
+    ${row('data-act="cheat"', 'cheat', 'My plan', '', ' nv-plan')}</ul>
+    <ul class="nv-list nv-end">${row('data-act="jump" data-to="how"', 'how', 'How this guide works', '', ' nv-how')}</ul>`;
 }
 export function tocSheetHTML(): string {
   return `<div class="scrim screen-only" data-act="sheet-close"></div>

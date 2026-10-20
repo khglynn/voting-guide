@@ -87,7 +87,7 @@ const settle = (page) => page.evaluate(() => new Promise((res) => {
   const t0 = performance.now();
   const f = () => {
     const y = window.scrollY;
-    same = y === last && !document.querySelector('.sheet-ghost, .ob-gone') ? same + 1 : 0;
+    same = y === last && !document.querySelector('.sheet-ghost, .ob-gone, .trust .gone') ? same + 1 : 0;
     last = y;
     if (same >= 4 || performance.now() - t0 > 4000) res(); else requestAnimationFrame(f);
   };
@@ -231,7 +231,15 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('"Show my ballot": the ballot, nothing filled with the switch off', /^0 of \d+ decided$/.test(await text(page, '.bar-txt')) && !(await page.$('.toast:not([hidden])')), await text(page, '.bar-txt'));
   check('"Show my ballot": the sources chosen on the first page', (await text(page, '.picks-line span')) === 'Picks: Newspapers and guides, progressive groups', await text(page, '.picks-line span'));
   check('"Show my ballot": the ballot is saved once it shows', /austin-tx/.test((await savedVG(page)) || ''));
+  check('How this guide works: one folded row at the bottom of the ballot', (await text(page, '#how')) === 'How this guide works' && (await page.getAttribute('#how [data-act="open"][data-k="how"]', 'aria-expanded')) === 'false' && !(await page.$('#how .how-bd')), await text(page, '#how'));
+  await tap(page, '#how [data-act="open"][data-k="how"]');
+  await settle(page);
+  check('How this guide works: its row opens it, focus kept on the row', (await page.getAttribute('#how [data-act="open"][data-k="how"]', 'aria-expanded')) === 'true' && (await focusedFk(page)) === 'how', await focusedFk(page));
   check('How this guide works: names the source for "Voting is underway in every state"', /“Voting is underway in every state”: Center for Election Innovation & Research\./.test(await text(page, '#how')) && !!(await page.$('#how a[href="https://electioninnovation.org/research/dates-for-2026-early-in-person-and-mail-voting/"]')));
+  check('How this guide works: ends with the credit and Buy me a coffee', (await text(page, '#how .how-bd > :last-child')) === 'Made by Kevin · kevinhg.com · Buy me a coffee' && !!(await page.$('#how .how-credit a[href="https://buymeacoffee.com/kevinhg"]')), await text(page, '#how .how-bd > :last-child'));
+  await tap(page, '#how [data-act="open"][data-k="how"]');
+  await settle(page);
+  check('How this guide works: the row closes it again', !(await page.$('#how .how-bd')) && !(await page.$('.trust .gone')) && (await page.getAttribute('#how [data-act="open"][data-k="how"]', 'aria-expanded')) === 'false');
   await page.goBack();
   await page.waitForSelector('#zip');
   await page.waitForSelector('.door-place', { timeout: 15000 });
@@ -794,8 +802,8 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('Menu: the switch reads "Hide races I’ve decided"', (await text(page, '.sheet-panel [data-act="only"]')) === 'Hide races I’ve decided', await text(page, '.sheet-panel [data-act="only"]'));
   const rows = await page.$$eval('.sheet-panel .nv', (els) => els.map((e) => [e.querySelector('.nv-t').textContent.trim(), e.querySelector('.nv-n').textContent.trim()]));
   const names = rows.map((r) => r[0]);
-  check('Menu: your next step, Quick picks, each section on the page, then My plan', names[0] === 'Your next step' && names[1] === 'Quick picks' && names[names.length - 1] === 'My plan'
-    && JSON.stringify(names.slice(2, -1)) === JSON.stringify(await page.$$eval('.ledger .sec .sec-t', (els) => els.map((e) => e.textContent.trim()))), names.join(' | '));
+  check('Menu: your next step, Quick picks, each section on the page, My plan, then How this guide works', names[0] === 'Your next step' && names[1] === 'Quick picks' && names.slice(-2).join() === 'My plan,How this guide works'
+    && JSON.stringify(names.slice(2, -2)) === JSON.stringify(await page.$$eval('.ledger .sec .sec-t', (els) => els.map((e) => e.textContent.trim()))), names.join(' | '));
   const left = rows.reduce((n, [, r]) => n + Number((r.match(/^(\d+) left$/) || [])[1] || 0), 0);
   check('Menu: what each section has left adds up to the bar', left === m0 - n0 && rows.every(([, r]) => r === '' || r === 'Done' || /^\d+ left$/.test(r)), `${left} vs ${m0 - n0}`);
   const first = await page.evaluate(() => { const r = document.querySelector('.ledger .row[data-undecided]'); return r && (r.dataset.item || `q:${r.dataset.q}`); });
@@ -808,6 +816,11 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await tap(page, '.sheet-panel [data-act="jump"][data-to="plan"]');
   await settle(page);
   check('Menu: "Your next step" goes back to the plan', (await focusedFk(page)) === 'plan-k' && (await page.evaluate(() => Math.round(document.getElementById('plan').getBoundingClientRect().top))) < 60);
+  await menu(page);
+  await tap(page, '.sheet-panel [data-act="jump"][data-to="how"]');
+  await settle(page);
+  const howTop = await page.evaluate(() => Math.round(document.getElementById('how').getBoundingClientRect().top));
+  check('Menu: "How this guide works" goes there and opens it, focused', !(await page.$('.sheet-panel')) && !!(await page.$('#how .how-bd')) && (await page.getAttribute('#how [data-act="open"][data-k="how"]', 'aria-expanded')) === 'true' && (await focusedFk(page)) === 'how' && howTop >= 0 && howTop < 60, `top ${howTop}, focus ${await focusedFk(page)}`);
   await menu(page);
   await tap(page, '.sheet-panel [data-act="picks"]');
   check('Menu: "Quick picks" opens the Edit sheet', !!(await page.$('.sheet-panel.picks')));
@@ -958,6 +971,20 @@ const placeAt = (page, sel, y) => page.evaluate(([s, y]) => window.scrollBy(0, d
   await settle(page);
   const up = await page.evaluate(() => { const r = document.querySelector('.ledger .row.is-open'); return r ? [Math.round(r.getBoundingClientRect().top), r.classList.contains('land')] : null; });
   check('Motion: Next up glides to its row, near the top, and marks it', !!up && up[0] >= 0 && up[0] <= 8 && up[1], JSON.stringify(up));
+  // "How this guide works" grows open under its row and folds back up into it; the row stays put.
+  await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight));
+  await settle(page);
+  const hy = await topOf(page, '#how');
+  await film(page, '#how');
+  await page.locator('#how [data-act="open"][data-k="how"]').tap();
+  f = await reel(page);
+  const g0 = f[0][1], g1 = f[f.length - 1][1];
+  const mid = (fr) => fr.filter(([, h]) => h > g0 + 4 && h < g1 - 4).length;
+  check('Motion: "How this guide works" grows open under its row, the row in place', drift(f, hy) <= 2 && g1 > g0 + 200 && mid(f) >= 3, `drift ${drift(f, hy).toFixed(1)}px, ${Math.round(g0)} to ${Math.round(g1)}px over ${mid(f)} frames`);
+  await film(page, '#how');
+  await page.locator('#how [data-act="open"][data-k="how"]').tap();
+  f = await reel(page);
+  check('Motion: and folds back up into it, then is gone', drift(f, hy) <= 2 && Math.abs(f[f.length - 1][1] - g0) <= 1 && mid(f) >= 2 && !(await page.$('.trust .gone')), `drift ${drift(f, hy).toFixed(1)}px, ${mid(f)} frames between`);
   check('Motion: nothing in all caps', (await upperCased(page)).length === 0);
   noErrors(page, 'Motion');
   await ctx.close();
@@ -989,6 +1016,11 @@ const placeAt = (page, sel, y) => page.evaluate(([s, y]) => window.scrollBy(0, d
   await page.waitForTimeout(550);
   const ys = await page.evaluate(() => window.__ys);
   check('Reduced motion: the menu is up at once and its jump lands at once, sheet gone, no mark', t === 'none' && new Set(ys.map((v) => Math.round(v))).size <= 2 && Math.abs(await topOf(page, '#sec-judicial')) <= 2 && !(await page.$('.sheet-panel, .sheet-ghost, .land')), `${t}, ${new Set(ys.map((v) => Math.round(v))).size} positions`);
+  await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight));
+  await film(page, '#how');
+  await page.locator('#how [data-act="open"][data-k="how"]').tap();
+  f = await reel(page);
+  check('Reduced motion: "How this guide works" opens at once', [...new Set(f.map(([, h]) => Math.round(h)))].length <= 2 && !!(await page.$('#how .how-bd')), [...new Set(f.map(([, h]) => Math.round(h)))].join(', '));
   noErrors(page, 'Reduced motion');
   await ctx.close();
 }

@@ -6,7 +6,8 @@ import { S, persist, emptyBallotState, type View } from './state';
 import { status, sectionOf, rankMax, ordinal, chosenIds, entriesBySection, pageWalk, OTH_KEY, type SectionKey } from './ballot';
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
 import { render, renderRow, renderSection, renderSummaries, renderLens, flushLens, markBehind, renderBallot, renderAddr, rowEl, scrollRowIntoView, rowTop, holdRow, anchored, $ } from './render';
-import { growOpen, inkRow, followFold, glideTo, land, stopGlide } from './motion';
+import { growOpen, inkRow, followFold, glideTo, land, stopGlide, grow, shrinkAway } from './motion';
+import { HOW_K } from './views/trust';
 import { openBallot, openChosen, go, openReader, runAddress, toDoor, showBallot, rechoose } from './app';
 import { judgeBatch } from './model/judges';
 import { planAgree, planParty, planJudges, planSetup, applyFills, undoFills, emptyPlan, touchUndo, type Plan } from './model/bulk';
@@ -128,6 +129,12 @@ A.jump = (d) => {
     focusFk('plan-k');
     return;
   }
+  if (d.to === 'how') {
+    if (!S.ui.open.has(HOW_K)) toggleHow(true, false);
+    glideTo($('#how'), 12, () => land($('#how')));
+    focusFk('how');
+    return;
+  }
   const sec = d.to as SectionKey;
   const entries = entriesBySection().get(sec) || [];
   const t = sectionTally(entries);
@@ -140,6 +147,19 @@ A.jump = (d) => {
   glideTo($(`#sec-${sec}`), 0, () => land($(`#sec-${sec}`)));
   focusFk(`sec-${sec}`);
 };
+/* "How this guide works", folded at the bottom of the ballot: its row opens it in place and closes
+   it, the button staying where it is. From the menu (jump "how") it opens at once, so the glide
+   knows how far the page now goes, and the glide and the mark are the motion. */
+function toggleHow(open = !S.ui.open.has(HOW_K), move = true): void {
+  const old = $('#how .how-bd');
+  const h = old ? old.offsetHeight : 0;
+  if (open) S.ui.open.add(HOW_K); else S.ui.open.delete(HOW_K);
+  render(['trust']);
+  if (!move) return;
+  focusFk('how');
+  if (open) grow($('#how .how-bd'));
+  else shrinkAway($('#how .how-h'), old, h);
+}
 A.page = (d) => { S.ui.page[d.id!] = Number(d.v); renderRow(d.id!); $(`[data-fk="pg-${CSS.escape(d.id!)}"]`)?.focus({ preventScroll: true }); };
 A.others = (d) => { const k = d.id!; S.ui.others.has(k) ? S.ui.others.delete(k) : S.ui.others.add(k); renderRow(k); };
 A.sec = (d) => {
@@ -544,6 +564,7 @@ A['reader-close'] = () => {
 };
 A.open = (d, el) => {
   const k = d.k!;
+  if (k === HOW_K) { toggleHow(); return; }
   S.ui.open.has(k) ? S.ui.open.delete(k) : S.ui.open.add(k);
   const row = el.closest<HTMLElement>('.row[data-item]');
   if (row && S.ui.view === 'ballot') { renderRow(row.dataset.item!); return; }

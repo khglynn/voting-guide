@@ -24,9 +24,11 @@ export const askCityURL = (zip: string): string => formURL('Please add my city',
 export const FILL = 'Fill in my ballot with their picks';
 export const HIDE = 'Hide races I’ve decided';
 
-/* The credit on the first page. Buy me a coffee shows while this has a link. */
+/* The credit, on the first page and at the end of "How this guide works". Buy me a coffee shows
+   while this has a link. */
 export const BUY_ME_A_COFFEE_URL = 'https://buymeacoffee.com/kevinhg';
 export const KEVIN_URL = 'https://kevinhg.com';
+export const creditHTML = (): string => ['Made by Kevin', ext(KEVIN_URL, 'kevinhg.com'), BUY_ME_A_COFFEE_URL ? ext(BUY_ME_A_COFFEE_URL, 'Buy me a coffee') : ''].filter(Boolean).join(' · ');
 
 /* ---------- paywalled sources (Kevin, Oct 19) ----------
    A paper whose endorsements sit behind a paywall we couldn't read: the picks we only saw

@@ -87,6 +87,35 @@ export function inkRow(row: HTMLElement | null): void {
   window.setTimeout(() => { row.classList.remove('flash'); box?.querySelector('.ink')?.remove(); }, 700);
 }
 
+/* ---------- a disclosure off the ballot ("How this guide works") ----------
+   The same open and fold as a row's panel: its body grows down from its button, and a body that
+   just closed folds back up into it. */
+export function grow(el: HTMLElement | null): void {
+  if (!canAnimate(el)) return;
+  const h = el.offsetHeight;
+  if (h < 2) return;
+  el.classList.add('moving');
+  const a = el.animate([{ height: '0px' }, { height: `${h}px` }], { duration: OPEN_MS, easing: OUT });
+  el.animate([{ opacity: 0 }, { opacity: 1 }], { duration: OPEN_MS * 0.7, easing: 'linear' });
+  const done = (): void => el.classList.remove('moving');
+  a.onfinish = done;
+  a.oncancel = done;
+}
+/* `old` (the body as it was, `h` tall) goes back in after `at` as a husk and folds away. */
+export function shrinkAway(at: HTMLElement | null, old: HTMLElement | null, h: number): void {
+  if (!at || !canAnimate(old) || h < 2) return;
+  old.getAnimations?.().forEach((x) => x.cancel());
+  husk(old);
+  old.classList.remove('moving');
+  old.classList.add('gone');
+  at.after(old);
+  const a = old.animate([{ height: `${h}px` }, { height: '0px' }], { duration: SHUT_MS, easing: OUT, fill: 'forwards' });
+  old.animate([{ opacity: 1 }, { opacity: 0 }], { duration: SHUT_MS, easing: 'cubic-bezier(.4, 0, 1, 1)', fill: 'forwards' });
+  const end = (): void => old.remove();
+  a.onfinish = end;
+  a.oncancel = end;
+}
+
 /* ---------- scrolling ---------- */
 let tween = 0;
 let unhook: (() => void) | null = null;

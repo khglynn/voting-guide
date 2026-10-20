@@ -3,7 +3,7 @@
 import type { Index } from '../types';
 import { S } from '../state';
 import { esc, fmtDate, todayISO } from '../util';
-import { ext, isOpen, askCityURL, formURL, BUY_ME_A_COFFEE_URL, KEVIN_URL } from './common';
+import { ext, isOpen, askCityURL, formURL, creditHTML } from './common';
 import { countyName } from './ledger';
 import { doorPicksHTML, placeLine } from './setup';
 import { stateName } from '../geo';
@@ -150,8 +150,7 @@ function creditsHTML(): string {
   const k = 'browse';
   const n = idx ? cityCount(idx) : 0;
   const cover = idx ? `Covers <button class="linkbtn" data-act="open" data-k="${k}" aria-expanded="${isOpen(k)}" data-fk="browse">${n} ${n === 1 ? 'city' : 'cities'}</button> where Kevin’s friends live. ` : '';
-  const credit = ['Made by Kevin', ext(KEVIN_URL, 'kevinhg.com'), BUY_ME_A_COFFEE_URL ? ext(BUY_ME_A_COFFEE_URL, 'Buy me a coffee') : ''].filter(Boolean).join(' · ');
-  return `<p class="fine credits">${cover}${ask} · ${credit}</p>
+  return `<p class="fine credits">${cover}${ask} · ${creditHTML()}</p>
     ${idx && isOpen(k) ? browseHTML() : ''}`;
 }
 

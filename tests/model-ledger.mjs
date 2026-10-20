@@ -640,8 +640,9 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       const items = bl.decisionItems();
       check(`menu: ${pid} the sections' "N left" add up to the bar`, n === items.filter((x) => !x.done).length, `${n} vs ${items.filter((x) => !x.done).length}`);
       const at = (x) => html.indexOf(x);
-      check(`menu: ${pid} "Next up" leads, then your next step and Quick picks, then the switch right above the sections, ending with My plan`, at('data-act="next"') < at('data-to="plan"') && at('data-to="plan"') < at('data-act="picks"') && at('data-act="picks"') < at('data-act="only"')
-        && at('data-act="only"') < at('data-act="jump" data-to="federal"') && /My plan<\/span><span class="nv-n"><\/span><i class="nv-a" aria-hidden="true">›<\/i><\/button><\/li><\/ul>$/.test(html.trim()));
+      check(`menu: ${pid} "Next up" leads, then your next step and Quick picks, then the switch right above the sections, then My plan, ending with How this guide works`, at('data-act="next"') < at('data-to="plan"') && at('data-to="plan"') < at('data-act="picks"') && at('data-act="picks"') < at('data-act="only"')
+        && at('data-act="only"') < at('data-act="jump" data-to="federal"') && at('data-act="jump" data-to="federal"') < at('data-act="cheat"')
+        && /My plan<\/span><span class="nv-n"><\/span><i class="nv-a" aria-hidden="true">›<\/i><\/button><\/li><\/ul>\s*<ul class="nv-list nv-end"><li><button class="nv nv-how" data-act="jump" data-to="how"[^>]*><span class="nv-t">How this guide works<\/span><span class="nv-n"><\/span><i class="nv-a" aria-hidden="true">›<\/i><\/button><\/li><\/ul>$/.test(html.trim()));
       // Everything decided: answer every question, leave every race blank on purpose.
       b.groups.forEach((g) => { S.b.districts[g.key] = g.members[0]; });
       for (const x of bl.decisionItems()) S.b.picks[x.id] = 'SKIP';

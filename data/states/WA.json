@@ -6,6 +6,7 @@
     "name": "VoteWA (Washington Secretary of State)",
     "url": "https://voter.votewa.gov/"
   },
+  "sample_ballot_url": "https://voter.votewa.gov/",
   "voting_model": "all_mail",
   "model_plain": "Every registered voter gets a ballot in the mail. Sign the envelope and put it in an official drop box by 8:00 PM on Election Day, or mail it (no stamp needed) more than a week early so it's postmarked by Election Day.",
   "registration": {

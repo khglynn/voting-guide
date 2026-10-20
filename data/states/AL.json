@@ -6,6 +6,7 @@
     "name": "Alabama Votes (Alabama Secretary of State)",
     "url": "https://www.sos.alabama.gov/alabama-votes"
   },
+  "sample_ballot_url": "https://www.sos.alabama.gov/alabama-votes/2026-general-election-sample-ballots",
   "voting_model": "in_person_first",
   "model_plain": "Most people vote in person at their assigned polling place on Election Day, Tuesday, November 3, 7 AM to 7 PM. Alabama has no early voting. If you can't be there that day and have one of the legal excuses, you can vote absentee by mail or in person at your county's absentee office.",
   "registration": {

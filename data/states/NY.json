@@ -6,6 +6,7 @@
     "name": "New York State Board of Elections",
     "url": "https://elections.ny.gov/"
   },
+  "sample_ballot_url": "https://voterlookup.elections.ny.gov/",
   "voting_model": "in_person_first",
   "model_plain": "Most New Yorkers vote in person, either during nine days of early voting (Sat Oct 24 to Sun Nov 1) or on Election Day (Tue Nov 3, 6 AM to 9 PM). Anyone can also ask for a mail ballot, but you must request one; nothing is mailed to you automatically.",
   "registration": {

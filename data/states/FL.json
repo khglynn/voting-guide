@@ -6,6 +6,7 @@
     "name": "Florida Division of Elections (Florida Department of State)",
     "url": "https://dos.fl.gov/elections/"
   },
+  "sample_ballot_url": "https://dos.fl.gov/elections/contacts/supervisor-of-elections/",
   "voting_model": "in_person_first",
   "model_plain": "Most Floridians vote in person, either early (any early voting site in your county) or on Election Day (your assigned precinct only). Anyone can vote by mail, but you have to ask for a mail ballot each election cycle; nobody is sent one automatically.",
   "registration": {

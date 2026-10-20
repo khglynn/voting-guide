@@ -6,6 +6,7 @@
     "name": "VoteTexas.gov (Texas Secretary of State)",
     "url": "https://www.votetexas.gov/"
   },
+  "sample_ballot_url": "https://content.govdelivery.com/attachments/TXSOS/2026/08/28/file_attachments/3762824/2026%20Sample%20Ballot-final.pdf",
   "voting_model": "in_person_first",
   "model_plain": "Most Texans vote in person, either during early voting (Oct. 19 to 30) or on Election Day (Nov. 3). Mail ballots are only for people who qualify: 65 or older, sick or disabled, out of the county, expecting a baby, or in jail.",
   "registration": {

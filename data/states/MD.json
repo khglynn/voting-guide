@@ -6,6 +6,7 @@
     "name": "Maryland State Board of Elections: 2026 General Election",
     "url": "https://elections.maryland.gov/elections/2026/vote2026/"
   },
+  "sample_ballot_url": "https://elections.maryland.gov/elections/2026/index.html",
   "voting_model": "in_person_first",
   "model_plain": "You vote in person (early or on Election Day) unless you ask for a mail-in ballot. Anyone can ask for one, no excuse needed, but you have to request it.",
   "registration": {

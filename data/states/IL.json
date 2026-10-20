@@ -6,6 +6,7 @@
     "name": "Illinois State Board of Elections (statewide) and Chicago Board of Election Commissioners (city of Chicago)",
     "url": "https://www.elections.il.gov/"
   },
+  "sample_ballot_url": "https://www.elections.il.gov/ElectionOperations/ElectionAuthorities.aspx",
   "voting_model": "in_person_first",
   "model_plain": "You can vote three ways: early in person (through Monday, Nov. 2; any Chicago voter can use any Chicago site), by mail (anyone can ask for a ballot, no excuse needed, apply by Oct. 29), or at the polls on Tuesday, November 3. City of Chicago voters deal with the Chicago Board of Elections; suburban Cook County voters deal with the Cook County Clerk.",
   "registration": {

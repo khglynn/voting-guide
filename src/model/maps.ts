@@ -119,26 +119,37 @@ export function edgeDistance(fc: FeatureCollection, lon: number, lat: number): n
 /* ---------- the two witnesses ---------- */
 export interface LonLat { lon: number; lat: number }
 export interface Witnesses { point?: LonLat | null; block?: LonLat | null }
-/* in: the map answers (props of the feature, and which witness decided). near: the address is at a
-   line and the witnesses disagree, so the map doesn't guess. out: the map doesn't cover the address. */
-export type MapAnswer = { at: 'in'; props: Record<string, string>; by: 'both' | 'block' | 'point' } | { at: 'near' } | { at: 'out' };
+/* in: the map answers (props of the feature, and which witness decided). near: the map doesn't guess,
+   either because the address sits within nearM of a line and the witnesses don't settle it ('line'),
+   or because they disagree with no line near the address, or the map overlaps itself there
+   ('unsure'). out: the map doesn't cover the address.
+   `edge`: what the map's outer edge is. A county's ('blocks') is a redistricting line drawn from whole
+   2020 blocks, so at the edge the block's answer stands as it does inside. A city's ('cuts') moves
+   with annexations and cuts blocks (Austin's was edited Sep 30, 2026; the Oct 21 review found 6 of
+   220 points near it given a council district the city's own layer puts outside Austin), so where
+   one witness is inside the city and the other outside, no guess. The default is the careful one. */
+export type MapAnswer = { at: 'in'; props: Record<string, string>; by: 'both' | 'block' | 'point' } | { at: 'near'; why: 'line' | 'unsure' } | { at: 'out' };
 export const NEAR_M = 30;
-export function answerAt(fc: FeatureCollection, w: Witnesses, nearM = NEAR_M): MapAnswer {
+export function answerAt(fc: FeatureCollection, w: Witnesses, opts: { edge?: 'blocks' | 'cuts'; nearM?: number } = {}): MapAnswer {
+  const nearM = opts.nearM ?? NEAR_M;
   const A = w.point ? featuresAt(fc, w.point.lon, w.point.lat) : null;
   const B = w.block ? featuresAt(fc, w.block.lon, w.block.lat) : null;
-  if ((A && A.length > 1) || (B && B.length > 1)) return { at: 'near' };
+  if ((A && A.length > 1) || (B && B.length > 1)) return { at: 'near', why: 'unsure' };
   const a = A ? A[0] || null : undefined, b = B ? B[0] || null : undefined;
   const near = (): boolean => !!w.point && edgeDistance(fc, w.point.lon, w.point.lat) < nearM;
   if (a !== undefined && b !== undefined) {
     if (a && a === b) return { at: 'in', props: a.properties, by: 'both' };
     if (!a && !b) return { at: 'out' };
+    if ((!a || !b) && opts.edge !== 'blocks') return { at: 'near', why: near() ? 'line' : 'unsure' };
     if (near()) return b ? { at: 'in', props: b.properties, by: 'block' } : { at: 'out' };
-    return { at: 'near' };
+    return { at: 'near', why: 'unsure' };
   }
-  if (a !== undefined) return a ? (near() ? { at: 'near' } : { at: 'in', props: a.properties, by: 'point' }) : (near() ? { at: 'near' } : { at: 'out' });
+  if (a !== undefined) return a ? (near() ? { at: 'near', why: 'line' } : { at: 'in', props: a.properties, by: 'point' }) : (near() ? { at: 'near', why: 'line' } : { at: 'out' });
   if (b !== undefined) return b ? { at: 'in', props: b.properties, by: 'block' } : { at: 'out' };
   return { at: 'out' };
 }
+/* How a map's outer edge behaves, from its record: one county's map follows that county's line. */
+export const edgeOf = (meta: { county: string | null }): 'blocks' | 'cuts' => (meta.county ? 'blocks' : 'cuts');
 
 /* ---------- what a map settles ---------- */
 /* "District {label}" with a feature's properties: "District 9". Null when a named property is
@@ -170,6 +181,16 @@ export function ballotMaps(b: Ballot): { place: string; meta: MapMeta }[] {
   const out: { place: string; meta: MapMeta }[] = [];
   for (const p of b.places) for (const m of p.maps || []) if (!out.some((x) => x.meta.file === m.file)) out.push({ place: p.id, meta: m });
   return out;
+}
+/* The county whose map claims this race by a rule scoped to that county (Travis's commissioner, JP
+   and constable races on the Austin ballot), so a list of races that aren't yours can say whose they
+   are. Null for anything else. */
+export function mapCounty(b: Ballot, c: Item): string | null {
+  for (const { meta } of ballotMaps(b)) {
+    if (!meta.county) continue;
+    if (meta.settles.some((r) => !!r.scope && re(r.scope)?.test(`${meta.county} County`) && ruleMatches(r, c))) return meta.county;
+  }
+  return null;
 }
 /* Whether one of this ballot's maps settles the race. */
 export function mapSettles(b: Ballot, c: Item): boolean {

@@ -257,7 +257,7 @@ for (const layer of manifest.layers) {
   // 3. Public buildings: the site's two-witness answer, the server's own, and any pinned answer.
   const tested = [];
   for (const p of points) {
-    const ans = maps.answerAt(shipped, { point: { lon: p.point[0], lat: p.point[1] }, block: p.block ? { lon: p.block[0], lat: p.block[1] } : null });
+    const ans = maps.answerAt(shipped, { point: { lon: p.point[0], lat: p.point[1] }, block: p.block ? { lon: p.block[0], lat: p.block[1] } : null }, { edge: layer.county ? 'blocks' : 'cuts' });
     const [sp, sb] = await Promise.all([serverAt(layer.source_url, p.point), p.block ? serverAt(layer.source_url, p.block) : Promise.resolve(null)]);
     const lab = (list) => { const ls = (list || []).map((x) => pick(x, layer.label)).filter((x) => x != null); return ls.length === 1 ? ls[0] : ls.length ? `several (${ls.join(', ')})` : null; };
     const atPoint = lab(sp), atBlock = sb ? lab(sb) : null;

@@ -315,7 +315,7 @@ function roundTrip(name, stCode, places, mutate) {
   // The shipped maps, end to end at Austin City Hall (its point and its block, as the Census gave them).
   const hall = { point: { lon: -97.746669, lat: 30.26496 }, block: { lon: -97.7472987, lat: 30.2646818 } };
   const au = open('TX', ['austin-tx']);
-  const answers = au.places[0].maps.map((meta) => ({ meta, a: maps.answerAt(maps.fromTopo(JSON.parse(fs.readFileSync(path.join(DATA, meta.file), 'utf8'))), hall) })).filter((x) => x.a.at === 'in').map((x) => ({ meta: x.meta, props: x.a.props }));
+  const answers = au.places[0].maps.map((meta) => ({ meta, a: maps.answerAt(maps.fromTopo(JSON.parse(fs.readFileSync(path.join(DATA, meta.file), 'utf8'))), hall, { edge: maps.edgeOf(meta) }) })).filter((x) => x.a.at === 'in').map((x) => ({ meta: x.meta, props: x.a.props }));
   const by = Object.fromEntries(answers.map((x) => [x.meta.kind, x.props]));
   check('maps: City Hall on the shipped maps: council 9, AISD 5, precinct 301 (commissioner 3, JP 5, SBOE 5)', by.council?.label === '9' && by['aisd-trustee']?.label === '5' && by.precincts?.label === '301' && by.precincts.commissioner === '3' && by.precincts.jp === '5' && by.precincts.sboe === '5' && !by['dvisd-trustee'], JSON.stringify(by));
   const line = address.addrSummary(address.setFromAddress(au, st.S.b, { cd: 10, upper: 14, lower: 49, schools: ['Austin Independent School District'], county: 'Travis' }, answers));
@@ -342,7 +342,7 @@ function roundTrip(name, stCode, places, mutate) {
       st.S.b.districts['city|Austin City Council Member'] === undefined && st.S.b.districts['county|County Commissioner'] === undefined && st.S.b.districts['judicial|Justice of the Peace'] === undefined
       && !st.S.b.notMine.includes('tx-travis-constable-4') && !st.S.b.mine.includes('tx-sboe-5') && st.S.b.districts['federal|U.S. Representative'] === 'tx-us-house-10' && st.S.b.districts['school|Austin ISD Trustee'] === undefined,
       JSON.stringify([st.S.b.districts, st.S.b.mine, st.S.b.notMine]));
-    const nearAll = au2.places[0].maps.map((meta) => ({ meta, answer: meta.kind === 'dvisd-trustee' ? { at: 'out' } : { at: 'near' } }));
+    const nearAll = au2.places[0].maps.map((meta) => ({ meta, answer: meta.kind === 'dvisd-trustee' ? { at: 'out' } : { at: 'near', why: 'line' } }));
     const notes = address.mapNotes(au2, st.S.b, cityHall, nearAll);
     check('maps, corrected: and the box names the maps it couldn’t settle', notes.join(' ') === 'Your address is right at a council district, Austin ISD trustee district and county precinct line, so we didn’t guess. Your official sample ballot shows which are yours.', notes.join(' | '));
     // The voter's own answers survive a correction: a trustee district picked by hand, and "It's on my
@@ -367,6 +367,65 @@ function roundTrip(name, stCode, places, mutate) {
       address.mapNotes(au2, st.S.b, cityHall, failedCouncil).join(' ') === 'We couldn’t check your council district just now. Your official sample ballot shows it.'
       && (() => { st.S.b.districts['city|Austin City Council Member'] = 'tx-austin-council-1'; return !address.mapNotes(au2, st.S.b, cityHall, failedCouncil).length; })()
       && address.mapNotes(au2, st.S.b, cityHall, [], true).join('|') === address.CHECKING);
+    st.S.b = st.emptyBallotState('');
+  }
+  // The Oct 21 adversarial review (maps-austin-review.md), findings 2 to 9.
+  {
+    const au3 = open('TX', ['austin-tx']);
+    const cityHall = { cd: 10, upper: 14, lower: 49, schools: ['Austin Independent School District'], county: 'Travis' };
+    const meta = (kind) => au3.places[0].maps.find((m) => m.kind === kind);
+    // 2. A city's limits cut blocks: one witness outside the city and one inside is no guess. A county's
+    // line follows blocks, so there the block's answer still stands.
+    const city = fc(poly('C', sq(-97.75, 30.26, -97.74, 30.27)));
+    const edgeCase = { point: { lon: -97.73995, lat: 30.265 }, block: { lon: -97.745, lat: 30.265 } }; // the point about 5 m outside, its block inside
+    const farCase = { point: { lon: -97.735, lat: 30.265 }, block: { lon: -97.745, lat: 30.265 } }; // the point 480 m outside
+    const c1 = maps.answerAt(city, edgeCase, { edge: 'cuts' }), c2 = maps.answerAt(city, edgeCase, { edge: 'blocks' }), c3 = maps.answerAt(city, farCase, { edge: 'cuts' });
+    check('maps: at a city’s limits, a point outside with its block inside is no guess; at a county’s line the block stands', c1.at === 'near' && c1.why === 'line' && c2.at === 'in' && c2.by === 'block' && c3.at === 'near' && c3.why === 'unsure', JSON.stringify([c1, c2, c3]));
+    check('maps: a map with no county is a city’s (its edge cuts blocks); a county’s follows them', maps.edgeOf(meta('council')) === 'cuts' && maps.edgeOf(meta('precincts')) === 'blocks');
+    // 4. The voter's own answers stand against the maps: council 3 and SBOE "not on my ballot" by hand
+    // (out of addrSet, as their actions leave them), then a City Hall lookup. "Not sure" is no answer.
+    st.S.b = st.emptyBallotState('');
+    st.S.b.districts['city|Austin City Council Member'] = 'tx-austin-council-3';
+    st.S.b.districts['judicial|Justice of the Peace'] = '*';
+    st.S.b.notMine.push('tx-sboe-5');
+    address.setFromAddress(au3, st.S.b, cityHall, answers);
+    check('maps: a council district and an SBOE "not on my ballot" the voter gave stand; their "Not sure" gets the map’s answer',
+      st.S.b.districts['city|Austin City Council Member'] === 'tx-austin-council-3' && st.S.b.notMine.includes('tx-sboe-5') && !st.S.b.mine.includes('tx-sboe-5') && st.S.b.districts['judicial|Justice of the Peace'] === 'tx-travis-jp-5' && !st.S.b.addrSet.includes('city|Austin City Council Member'),
+      JSON.stringify([st.S.b.districts, st.S.b.mine, st.S.b.notMine]));
+    // 3. Williamson-side Austin: the Travis races are off, named as Travis's, and the box says whose
+    // county races are the voter's.
+    st.S.b = st.emptyBallotState('');
+    const wil = { cd: 11, upper: 24, lower: 136, schools: ['Round Rock Independent School District'], county: 'Williamson' };
+    address.setFromAddress(au3, st.S.b, wil, []);
+    const stripH = (h) => h.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+    const off = stripH(views.ledger.offHTML());
+    st.S.ui.open.add('off');
+    const offOpen = stripH(views.ledger.offHTML());
+    st.S.ui.open.delete('off');
+    check('maps: Williamson-side Austin: the off list names the Travis races as Travis County’s', /Travis County Commissioner/.test(off) && /Travis County Justice of the Peace/.test(off) && !/(^|[:,] )(Justice of the Peace|County Commissioner)\b/.test(off) && /Travis County Constable/.test(offOpen), `${off} || ${offOpen}`);
+    const wnotes = address.mapNotes(au3, st.S.b, wil, au3.places[0].maps.map((m) => ({ meta: m, answer: m.kind === 'council' ? { at: 'in', props: { label: '6' }, by: 'both' } : { at: 'out' } })));
+    check('maps: and the box says the voter’s county races are Williamson County’s', wnotes[0] === 'Your county races are Williamson County’s. This guide lists Travis County’s; your official sample ballot shows yours.' && wnotes.length === 1, wnotes.join(' | '));
+    check('maps: a Travis address gets no such line', !address.mapNotes(au3, st.S.b, cityHall, []).some((t) => /Your county races/.test(t)));
+    // 5. The precinct number shows only when both witnesses agree.
+    const pr = (by) => [{ meta: meta('precincts'), answer: { at: 'in', props: { label: '349', commissioner: '2', jp: '2', sboe: '5' }, by } }];
+    check('maps: the voting precinct shows when both witnesses agree, not when the block alone decided', address.mapNotes(au3, st.S.b, cityHall, pr('both')).includes('Your voting precinct: 349 (Travis County).') && !address.mapNotes(au3, st.S.b, cityHall, pr('block')).some((t) => /voting precinct/.test(t)));
+    // 6. Witnesses that disagree away from a line: "couldn't tell", not "right at a line".
+    st.S.b = st.emptyBallotState('');
+    address.setFromAddress(au3, st.S.b, cityHall, []);
+    const unsureCouncil = [{ meta: meta('council'), answer: { at: 'near', why: 'unsure' } }];
+    const atAisd = address.mapNotes(au3, st.S.b, cityHall, [{ meta: meta('aisd-trustee'), answer: { at: 'near', why: 'line' } }]);
+    check('maps: "an Austin ISD trustee district line", not "a Austin"', atAisd.join(' ') === 'Your address is right at an Austin ISD trustee district line, so we didn’t guess. Your official sample ballot shows yours.', atAisd.join(' | '));
+    check('maps: witnesses that disagree with no line near say "We couldn’t tell"', address.mapNotes(au3, st.S.b, cityHall, unsureCouncil).join(' ') === 'We couldn’t tell your council district from your address. Your official sample ballot shows it.', address.mapNotes(au3, st.S.b, cityHall, unsureCouncil).join(' | '));
+    // 8. The AISD district question answered "none" (City Hall's district 5 isn't up) while the at-large
+    // seat is still on the ballot: the off list calls it the district seats.
+    st.S.b = st.emptyBallotState('');
+    st.S.b.districts['school|Austin ISD Trustee'] = 'none';
+    const offHall = stripH(views.ledger.offHTML());
+    check('maps: the off list calls the AISD district question its district seats, beside the at-large seat still on the ballot', offHall === 'Not on your ballot: Austin ISD Trustee (district seats).', offHall);
+    st.S.b.districts = { 'city|Austin City Council Member': 'none' };
+    check('maps: an office with no other race on the ballot keeps its plain name', stripH(views.ledger.offHTML()) === 'Not on your ballot: Austin City Council Member.', stripH(views.ledger.offHTML()));
+    // 9. The index lists each place's maps, so the first page can start them with the place's bundle.
+    check('maps: the index names Austin’s maps', JSON.stringify(INDEX.places['austin-tx'].maps) === JSON.stringify(au3.places[0].maps.map((m) => m.file)) && !INDEX.places['dallas-tx'].maps);
     st.S.b = st.emptyBallotState('');
   }
   // The Census answer keeps the point and the block's interior point, for the maps only.

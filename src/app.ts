@@ -10,7 +10,7 @@ import { render, renderBallot, renderAddr, anchored, $ } from './render';
 import { setInvolved, type GetInvolved } from './views/pass';
 import { planAgree, applyFills, planParty, planSetup, forgetUndo, fillStands, canUndo } from './model/bulk';
 import { setFromAddress, addrSummary, localAnswers, mapNotes, type MapResult } from './model/address';
-import { ballotMaps, fromTopo, answerAt, type FeatureCollection, type Topology } from './model/maps';
+import { ballotMaps, fromTopo, answerAt, edgeOf, type FeatureCollection, type Topology } from './model/maps';
 import { partiesOnBallot, toggleChip, setSources, setParty, chipMembers, chipState, doorNone, noEndorsements, CHIPS } from './model/lens';
 
 /* ---------- data ---------- */
@@ -53,6 +53,8 @@ export function loadMap(file: string, timeoutMs = MAP_TIMEOUT_MS): Promise<Featu
   return maps.get(file)!;
 }
 const warmMaps = (b: Ballot | null): void => { if (b) for (const { meta } of ballotMaps(b)) loadMap(meta.file).catch(() => { /* counted when it's needed */ }); };
+/* On the first page or the place question, before the ballot opens: the places' maps, from the index. */
+const warmPlaces = (idx: Index | null, ids: string[]): void => { for (const id of ids) for (const f of (idx && idx.places[id]?.maps) || []) loadMap(f).catch(() => { /* counted when it's needed */ }); };
 
 /* Optional: ways to get involved, from the data track. A missing file is normal. */
 let involvedTried = false;
@@ -505,6 +507,7 @@ export async function useMatch(r: GeoResult): Promise<void> {
     let idx: Index;
     try { idx = await ensureIndex(); } catch { addrFailed('We couldn’t reach the guide’s data. Check your connection.', 'down'); return; }
     const hit = settleAddress(idx, r);
+    if (hit.kind === 'open' || hit.kind === 'choose') warmPlaces(idx, hit.ids);
     if (hit.kind === 'none') { S.ui.addrMsg = 'We couldn’t tell which place that is. Try your ZIP.'; paintAddr(); return; }
     S.ui.addrOpen = false; S.ui.addrMsg = null; S.zipErr = '';
     if (hit.zip) S.zip = hit.zip;
@@ -531,6 +534,7 @@ export async function useMatch(r: GeoResult): Promise<void> {
     const idx = S.index!;
     const ids = S.zipChoice.placeIds;
     const hit = placeFromGeo(idx.places, ids, r);
+    if (hit) warmPlaces(idx, [hit]);
     if (!hit) {
       const st = idx.places[ids[0]]?.state;
       S.ui.addrMsg = r.state && st && ids.every((id) => idx.places[id].state !== r.state)
@@ -572,12 +576,12 @@ export async function applyGeo(r: GeoResult): Promise<void> {
   // Maps already in hand answer in the first pass, the rest as they come.
   const ready = list.filter(({ meta }) => mapsLoaded.has(meta.file));
   const waiting = list.filter((m) => !ready.includes(m));
-  for (const { meta } of ready) results.push({ meta, answer: answerAt(await loadMap(meta.file), at) });
+  for (const { meta } of ready) results.push({ meta, answer: answerAt(await loadMap(meta.file), at, { edge: edgeOf(meta) }) });
   if (!still()) return;
   settleGeo(b, r, results, waiting.length > 0, fill, true);
   void Promise.all(waiting.map(async ({ meta }) => {
     let answer = null;
-    try { answer = answerAt(await loadMap(meta.file), at); } catch { /* didn't load: mapNotes says so */ }
+    try { answer = answerAt(await loadMap(meta.file), at, { edge: edgeOf(meta) }); } catch { /* didn't load: mapNotes says so */ }
     if (!still()) return;
     results.push({ meta, answer });
     settleGeo(b, r, results, results.length < list.length, fill, false);

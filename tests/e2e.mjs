@@ -687,7 +687,7 @@ async function mapsSettled(page, timeout = 10000) {
   check('Ballot top: in Austin (Travis, Williamson and Hays) the next step names no one county\'s hours, then says to bring a photo ID', !/Travis County sites/.test(await text(page, '.plan-sub')) && /in your county\..*Bring a photo ID\.$/.test(await text(page, '.plan-sub')), await text(page, '.plan-sub'));
   const box = await text(page, '.addrbox > p');
   // Austin's district maps cover every one of them now (Oct 21), so the address finds them all.
-  check('Ballot top: the address box says how many races depend on your address, and what the address can do', /^(\d+) races depend on your address\. Your address finds all \1\.$/.test(box), box);
+  check('Ballot top: the address box says how many races depend on your address, and what the address can do', /^(\d+) races depend on your address\. Your address can find all \1\.$/.test(box), box);
   check('Ballot top: with "Use my address" and "Official sample ballot"', (await text(page, '.addrbox [data-act="addr-open"]')) === 'Use my address' && (await text(page, '.addrbox a')) === 'Official sample ballot' && /^https:/.test((await page.getAttribute('.addrbox a', 'href')) || ''));
   check('Ballot top: the old head lines are gone', !/in the same order as your ballot/.test(await text(page, '#r-ballot')) && !(await page.$('.bhead .sb')));
   await tap(page, '.addrbox [data-act="addr-open"]');
@@ -768,7 +768,7 @@ async function mapsSettled(page, timeout = 10000) {
   });
   await openBallot(page, '78704');
   const before = await text(page, '.addrbox .addr-n');
-  check('Address box before a lookup: "{n} races depend on your address." and how many the address finds', /^(\d+) races depend on your address\. Your address finds all \1\./.test(before), before);
+  check('Address box before a lookup: "{n} races depend on your address." and how many the address finds', /^(\d+) races depend on your address\. Your address can find all \1\./.test(before), before);
   await tap(page, '.addrbox [data-act="addr-open"]');
   await page.fill('#addr-in', 'a test lookup');
   await page.locator('form[data-form="addr"] button[type=submit]').tap();
@@ -824,7 +824,7 @@ async function mapsSettled(page, timeout = 10000) {
   await openBallot(page, '78701');
   check('Maps: none load before a lookup', mapsAsked.length === 0, mapsAsked.join(' '));
   const before = await text(page, '.addrbox .addr-n');
-  check('Maps: before a lookup, the address finds every race that depends on it', /^(\d+) races depend on your address\. Your address finds all \1\.$/.test(before), before);
+  check('Maps: before a lookup, the address finds every race that depends on it', /^(\d+) races depend on your address\. Your address can find all \1\.$/.test(before), before);
   await tap(page, '.addrbox [data-act="addr-open"]');
   await page.fill('#addr-in', 'a test lookup');
   await page.locator('form[data-form="addr"] button[type=submit]').tap();
@@ -892,7 +892,7 @@ async function mapsSettled(page, timeout = 10000) {
   const saved3 = JSON.parse((await savedVG(three.page)) || '{}');
   const s3 = Object.values(saved3.ballots || {}).find((x) => x && x.districts && x.districts['federal|U.S. Representative']) || {};
   check('Maps, corrected: the council, commissioner and JP questions are open again, the constable race a maybe again', s3.districts && s3.districts['city|Austin City Council Member'] === undefined && s3.districts['county|County Commissioner'] === undefined && s3.districts['judicial|Justice of the Peace'] === undefined && !(s3.notMine || []).includes('tx-travis-constable-4'), JSON.stringify([s3.districts, s3.notMine]));
-  check('Maps, corrected: and the box says the address sits at a line', (await text(three.page, '.addrbox .addr-map')) === 'Your address is right at a council district, Austin ISD trustee district and county precinct line, so we didn’t guess. Your official sample ballot shows which are yours.', await text(three.page, '.addrbox .addr-map'));
+  check('Maps, corrected: and the box says it couldn’t tell (the witnesses disagree with no line near the address)', (await text(three.page, '.addrbox .addr-map')) === 'We couldn’t tell your council district, Austin ISD trustee district and county precinct from your address. Your official sample ballot shows them.', await text(three.page, '.addrbox .addr-map'));
   noErrors(three.page, 'Maps at a line');
   await three.ctx.close();
   // A map that hangs (Codex review of #17): the Census's answers and the quick maps show at once, the
@@ -927,6 +927,25 @@ async function mapsSettled(page, timeout = 10000) {
   four.page.errors = four.page.errors.filter((e) => !/Failed to load resource|abort/i.test(e));
   noErrors(four.page, 'Maps with one hanging');
   await four.ctx.close();
+  // From the first page, the maps start as soon as the Census names the place, beside its bundle
+  // (Oct 21 review): with the bundle slowed down, a map is already on its way before it arrives.
+  const five = await newPage();
+  await five.page.route('https://geocoding.geo.census.gov/**', (route) => {
+    const cb = new URL(route.request().url()).searchParams.get('callback');
+    return route.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify(answer)})` });
+  });
+  let mapAt = 0, bundleAt = 0;
+  five.page.on('request', (r) => { if (/\/data\/maps\//.test(r.url()) && !mapAt) mapAt = Date.now(); });
+  await five.page.route('**/data/place-austin-tx.json', async (route) => { await new Promise((res) => setTimeout(res, 1500)); bundleAt = Date.now(); return route.continue(); });
+  await five.page.goto(`${BASE}/?today=${TODAY}`);
+  await five.page.waitForSelector('#zip');
+  await tap(five.page, '.front [data-act="addr-open"]');
+  await five.page.fill('#addr-in', 'a test lookup');
+  await five.page.locator('form[data-form="addr"] button[type=submit]').tap();
+  await five.page.waitForSelector('.door-place', { timeout: 15000 }).catch(() => {});
+  check('Maps, first page: a map starts loading before the place’s bundle arrives', mapAt > 0 && bundleAt > 0 && mapAt < bundleAt, `map ${mapAt ? mapAt - bundleAt : 'never'} ms after the bundle`);
+  noErrors(five.page, 'Maps from the first page');
+  await five.ctx.close();
 }
 // Statewide Florida (Miami): the only races that depend on your address are appeals judges, which
 // the Census can't settle, so the box leads with the sample ballot; from the first page, the lookup

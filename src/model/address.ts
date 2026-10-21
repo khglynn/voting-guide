@@ -138,22 +138,33 @@ export interface MapResult { meta: MapMeta; answer: MapAnswer | null }
 /* The answers setFromAddress takes: the maps that found the address, in the Census's county. */
 export const localAnswers = (results: MapResult[], r: Districts): LocalAnswer[] =>
   results.flatMap((x) => (x.answer && x.answer.at === 'in' && inCounty(x.meta, r.county) ? [{ meta: x.meta, props: x.answer.props }] : []));
-/* What the address box says about the maps beyond the races they set, for this visit: the voting
-   precinct (from a map the Census's county agrees with), then, only while a race they'd settle is
-   still open on `s`, a line they didn't guess at and a map that didn't load. Call it after
-   setFromAddress. `pending`: maps still on their way. */
+/* What the address box says about the maps beyond the races they set, for this visit:
+   - when the Census puts you in another county than a county map's, that its county races aren't
+     yours and this guide doesn't list yours ("Your county races are Williamson County's...");
+   - the voting precinct, from a map the Census's county agrees with, and only when both witnesses
+     agree (the precinct number is what a voter types into a county finder, and where the block alone
+     decided, the Oct 21 review found it wrong about as often as right);
+   - only while a race they'd settle is still open on `s`: a line they didn't guess at, witnesses
+     they couldn't reconcile, a map that didn't load.
+   Call it after setFromAddress. `pending`: maps still on their way. */
 export function mapNotes(b: Ballot, s: BallotState, r: Districts, results: MapResult[], pending = false): string[] {
+  const claims = (rule: SettleRule): boolean => b.groups.some((g) => !g.kind && g.members.some((id) => ruleMatches(rule, b.byId.get(id)!))) || [...b.mayApply].some((id) => ruleMatches(rule, b.byId.get(id)!));
   const open = (m: MapMeta): boolean => inCounty(m, r.county) && m.settles.some((rule) =>
     b.groups.some((g) => !g.kind && s.districts[g.key] === undefined && g.members.some((id) => ruleMatches(rule, b.byId.get(id)!)))
     || [...b.mayApply].some((id) => ruleMatches(rule, b.byId.get(id)!) && !s.notMine.includes(id) && !(s.mine || []).includes(id)));
   const names = (keep: (x: MapResult) => boolean): string[] => [...new Set(results.filter((x) => keep(x) && open(x.meta)).map((x) => x.meta.name))];
   const and = (xs: string[]): string => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} and ${xs[xs.length - 1]}`);
-  const shows = results.flatMap((x) => (x.answer && x.answer.at === 'in' && x.meta.shows && inCounty(x.meta, r.county) ? [fillTemplate(x.meta.shows, x.answer.props)] : [])).filter((t): t is string => !!t);
-  const near = names((x) => !!x.answer && x.answer.at === 'near');
+  const elsewhere = r.county ? [...new Set(ballotMaps(b).filter(({ meta }) => meta.county && !inCounty(meta, r.county)
+    && meta.settles.some((rule) => !!rule.scope && scopeNames(rule.scope, `${meta.county} County`) && claims(rule))).map(({ meta }) => meta.county!))] : [];
+  const shows = results.flatMap((x) => (x.answer && x.answer.at === 'in' && x.answer.by === 'both' && x.meta.shows && inCounty(x.meta, r.county) ? [fillTemplate(x.meta.shows, x.answer.props)] : [])).filter((t): t is string => !!t);
+  const why = (w: 'line' | 'unsure') => names((x) => !!x.answer && x.answer.at === 'near' && x.answer.why === w);
+  const line = why('line'), unsure = why('unsure');
   const failed = names((x) => !x.answer);
   return [
+    ...(elsewhere.length ? [`Your county races are ${r.county} County’s. This guide lists ${and(elsewhere)} County’s; your official sample ballot shows yours.`] : []),
     ...shows,
-    ...(near.length ? [`Your address is right at a ${and(near)} line, so we didn’t guess. Your official sample ballot shows ${near.length > 1 ? 'which are yours' : 'yours'}.`] : []),
+    ...(line.length ? [`Your address is right at ${/^[aeiou]/i.test(line[0]) ? 'an' : 'a'} ${and(line)} line, so we didn’t guess. Your official sample ballot shows ${line.length > 1 ? 'which are yours' : 'yours'}.`] : []),
+    ...(unsure.length ? [`We couldn’t tell your ${and(unsure)} from your address. Your official sample ballot shows ${unsure.length > 1 ? 'them' : 'it'}.`] : []),
     ...(failed.length ? [`We couldn’t check your ${and(failed)} just now. Your official sample ballot shows ${failed.length > 1 ? 'them' : 'it'}.`] : []),
     ...(pending ? [CHECKING] : []),
   ];
@@ -187,7 +198,7 @@ function otherCounty(c: Contest, county: string): boolean {
 function settleFromMaps(b: Ballot, s: BallotState, r: Districts, all: LocalAnswer[], sds: Set<string>, moved: (id: string) => void): string[] {
   const on: Contest[] = [];
   const local = all.filter((x) => inCounty(x.meta, r.county));
-  const answered = new Set(local.map((x) => x.meta.file));
+  const heard = new Set(local.map((x) => x.meta.file));
   const schoolElsewhere = (c: Contest): boolean => { const sd = schoolOf(c); return !!sd && sds.size > 0 && !sds.has(sd.key); };
   const officeOnly = (rule: SettleRule, c: Contest): boolean => ruleMatches({ office: rule.office, district: rule.district }, c);
   const sets: { meta: MapMeta; rule: SettleRule; props: Record<string, string> | null }[] = [];
@@ -196,13 +207,20 @@ function settleFromMaps(b: Ballot, s: BallotState, r: Districts, all: LocalAnswe
   // never a statewide one or a school district's.
   if (r.county) {
     for (const { meta } of ballotMaps(b)) {
-      if (!meta.county || answered.has(meta.file) || meta.county.toLowerCase() === r.county.toLowerCase()) continue;
+      if (!meta.county || heard.has(meta.file) || meta.county.toLowerCase() === r.county.toLowerCase()) continue;
       for (const rule of meta.settles) if (rule.scope && scopeNames(rule.scope, `${meta.county} County`)) sets.push({ meta, rule, props: null });
     }
   }
+  // The voter's own answer stands, as it does in the school code: the last lookup's answers were
+  // undone at the top, so an answer or a "not on my ballot" still here that this lookup didn't make
+  // is theirs, and usually came from their official sample ballot, which outranks our maps. "Not
+  // sure" is no answer: the address is how they meant to find out.
+  const own = (k: string): boolean => !(s.addrSet || []).includes(k);
+  const answered = (key: string): boolean => s.districts[key] !== undefined && s.districts[key] !== '*' && own(key);
+  const placed = (id: string): boolean => (s.mine.includes(id) || s.notMine.includes(id)) && own(id);
   for (const { meta, rule, props } of sets) {
     for (const g of b.groups) {
-      if (g.kind) continue; // the Census's
+      if (g.kind || answered(g.key)) continue; // the Census's, or the voter's
       const members = g.members.map((id) => b.byId.get(id)).filter((c): c is Contest => !!c && c.kind === 'contest');
       const mine = members.filter((c) => ruleMatches(rule, c));
       if (!mine.length) continue;
@@ -218,7 +236,7 @@ function settleFromMaps(b: Ballot, s: BallotState, r: Districts, all: LocalAnswe
     }
     for (const id of b.mayApply) {
       const c = b.byId.get(id);
-      if (!c || c.kind !== 'contest' || !ruleMatches(rule, c) || schoolElsewhere(c)) continue;
+      if (!c || c.kind !== 'contest' || !ruleMatches(rule, c) || schoolElsewhere(c) || placed(id)) continue;
       const yes = !!props && ruleIs(rule, c, props);
       s.notMine = s.notMine.filter((x) => x !== id);
       s.mine = (s.mine || []).filter((x) => x !== id);

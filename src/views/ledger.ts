@@ -20,6 +20,7 @@ import { ext, sampleBallot, isOpen, escP, leadRest, reportAttrs, HIDE } from './
 import { lensSummary } from './lens';
 import { addrHTML } from './mast';
 import { openHTML, censusSettles, addressSettles } from './open';
+import { mapCounty } from '../model/maps';
 
 /* ---------- names ---------- */
 export function countyName(p: PlaceBundle): string {
@@ -204,15 +205,24 @@ export function offHTML(): string {
   if (!b) return '';
   const rows: { name: string; html: string }[] = [];
   const by = entriesBySection();
+  // Whose race it is, when a county's district map claims it: "Travis County Justice of the Peace", so
+  // a voter in another county isn't told they have no JP race (Oct 21 review).
+  const whose = (name: string, c: Item): string => {
+    const k = mapCounty(b, c);
+    if (!k || new RegExp(`\\b${k}\\b`, 'i').test(name)) return name;
+    return /^County\b/.test(name) ? `${k} ${name}` : `${k} County ${name}`;
+  };
+  // An office that still has a race on the ballot (Austin ISD's at-large seat) is named as its district seats.
+  const shown = new Set(b.items.filter((it) => it.kind === 'contest' && !b.groupOf[it.id] && !S.b.notMine.includes(it.id)).map((it) => cleanOffice((it as Contest).office)));
   for (const [sec] of SECTIONS) for (const e of by.get(sec) || []) {
     if (e.t === 'notmine') {
       const it = b.byId.get(e.id)!;
       const r = rowTitle(it);
-      rows.push({ name: it.kind === 'contest' ? cleanOffice(it.office) : r.title, html: `<li class="off-row" id="off-${esc(it.id)}"><span class="off-t">${esc(r.title)}${r.sub ? `<small>${esc(r.sub)}</small>` : ''}</span><button class="linkbtn" data-act="notmine-undo" data-id="${esc(it.id)}" data-fk="on-${esc(it.id)}">It’s on my ballot</button></li>` });
+      rows.push({ name: it.kind === 'contest' ? whose(cleanOffice(it.office), it) : r.title, html: `<li class="off-row" id="off-${esc(it.id)}"><span class="off-t">${esc(whose(r.title, it))}${r.sub ? `<small>${esc(r.sub)}</small>` : ''}</span><button class="linkbtn" data-act="notmine-undo" data-id="${esc(it.id)}" data-fk="on-${esc(it.id)}">It’s on my ballot</button></li>` });
     } else if (e.t === 'groupline' && S.b.districts[e.group.key] === 'none') {
       const g = e.group;
-      const name = cleanOffice(g.office);
-      rows.push({ name, html: `<li class="off-row" id="off-${qId(g)}"><span class="off-t">${esc(name)}<small>${g.members.length} districts</small></span><button class="linkbtn" data-act="district-change" data-g="${esc(g.key)}" data-fk="dc-${qId(g)}">It’s on my ballot</button></li>` });
+      const name = whose(cleanOffice(g.office), b.byId.get(g.members[0])!);
+      rows.push({ name: shown.has(cleanOffice(g.office)) ? `${name} (district seats)` : name, html: `<li class="off-row" id="off-${qId(g)}"><span class="off-t">${esc(name)}<small>${g.members.length} districts</small></span><button class="linkbtn" data-act="district-change" data-g="${esc(g.key)}" data-fk="dc-${qId(g)}">It’s on my ballot</button></li>` });
     }
   }
   if (!rows.length) return '';
@@ -569,7 +579,7 @@ function addrBoxHTML(): string {
     const look = addressHelps();
     // Before a lookup, what it can and can't do, so what's left after it is no surprise.
     const k = look ? addressRaces().filter((c) => addressSettles(c)).length : 0;
-    const tail = !look ? ' Your official sample ballot shows which are yours.' : k < n ? ` Your address finds ${k} of them. Your official sample ballot shows all ${n}.` : n > 1 ? ` Your address finds ${n === 2 ? 'both' : `all ${n}`}.` : '';
+    const tail = !look ? ' Your official sample ballot shows which are yours.' : k < n ? ` Your address can find ${k} of them. Your official sample ballot shows all ${n}.` : n > 1 ? ` Your address can find ${n === 2 ? 'both' : `all ${n}`}.` : '';
     return `<div class="addrbox"><p class="addr-n"><b>${n === 1 ? '1 race depends' : `${n} races depend`} on your address.</b>${tail}</p>
       ${S.ui.addrOpen ? addrHTML() : `<div class="row-btns">${look ? '<button class="mini dark" data-act="addr-open" data-fk="addr-open">Use my address</button>' : ''}${sbLink(!look)}</div>`}</div>`;
   }

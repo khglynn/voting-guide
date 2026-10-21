@@ -749,7 +749,9 @@ for (const [id, p] of places) {
   const pm = placeMaps.get(id) || [];
   const bundle = { ...p, file: undefined, local, ...b, ...(pm.length ? { maps: pm } : {}) };
   sizes[`place-${id}.json`] = write(`place-${id}.json`, bundle);
-  index.places[id] = { label: p.label, state: p.state, counties: p.counties, local_count: local.length };
+  // The place's map files too, so an address typed on the first page can start them loading as soon
+  // as the Census names the place, beside its bundle.
+  index.places[id] = { label: p.label, state: p.state, counties: p.counties, local_count: local.length, ...(pm.length ? { maps: pm.map((m) => m.file) } : {}) };
   index.states[p.state].places.push(id);
   for (const z of p.zips) {
     (index.zips[z] = index.zips[z] || []);

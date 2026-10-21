@@ -145,8 +145,12 @@ function otherCounty(c: Contest, county: string): boolean {
      another school district.
    A map of one county whose county isn't yours (the Census says so) answers "none" for the races its
    county-scoped rules claim, without looking at the map. Returns the races it put on the ballot. */
-function settleFromMaps(b: Ballot, s: BallotState, r: Districts, local: LocalAnswer[], sds: Set<string>): string[] {
+function settleFromMaps(b: Ballot, s: BallotState, r: Districts, all: LocalAnswer[], sds: Set<string>): string[] {
   const on: Contest[] = [];
+  // A county map that answers for an address the Census puts in another county (a point at the county
+  // line) is set aside: the Census's county decides which county's ballot you get.
+  const inCounty = (m: MapMeta): boolean => !(m.county && r.county && m.county.toLowerCase() !== r.county.toLowerCase());
+  const local = all.filter((x) => inCounty(x.meta));
   const answered = new Set(local.map((x) => x.meta.file));
   const schoolElsewhere = (c: Contest): boolean => { const sd = schoolOf(c); return !!sd && sds.size > 0 && !sds.has(sd.key); };
   const officeOnly = (rule: SettleRule, c: Contest): boolean => ruleMatches({ office: rule.office, district: rule.district }, c);
@@ -167,7 +171,9 @@ function settleFromMaps(b: Ballot, s: BallotState, r: Districts, local: LocalAns
       const mine = members.filter((c) => ruleMatches(rule, c));
       if (!mine.length) continue;
       const rest = members.filter((c) => !mine.includes(c));
-      if (rest.length && !(meta.county && rest.every((c) => officeOnly(rule, c) && otherCounty(c, meta.county!)))) continue;
+      // The rest must be another county's races of the same office, ruled out because the map says you
+      // are in this county. With no answer (you're in another county), the rest may be yours: leave it.
+      if (rest.length && (!props || !(meta.county && rest.every((c) => officeOnly(rule, c) && otherCounty(c, meta.county!))))) continue;
       if (mine.some(schoolElsewhere)) continue;
       const hit = props ? mine.find((c) => ruleIs(rule, c, props)) : undefined;
       s.districts[g.key] = hit ? hit.id : 'none';

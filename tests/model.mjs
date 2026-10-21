@@ -305,6 +305,12 @@ function roundTrip(name, stCode, places, mutate) {
   const pmap = pf.places[0].maps.find((m) => m.kind === 'precincts');
   address.setFromAddress(pf, st.S.b, { ...none, county: 'Travis' }, [{ meta: pmap, props: { label: '172', commissioner: '1', jp: '2', sboe: '5' } }]);
   check('maps: Pflugerville, Travis side: a Travis precinct answers the questions that mix both counties’ races', st.S.b.districts['county|County Commissioner'] === 'none' && st.S.b.districts['judicial|Justice of the Peace'] === 'tx-travis-jp-2', JSON.stringify(st.S.b.districts));
+  st.S.b = st.emptyBallotState('');
+  address.setFromAddress(pf, st.S.b, { ...none, county: 'Williamson' }, []);
+  check('maps: Pflugerville, Williamson side: those mixed questions stay open (their Williamson races may be yours), the Travis constable race goes off', st.S.b.districts['county|County Commissioner'] === undefined && st.S.b.districts['judicial|Justice of the Peace'] === undefined && st.S.b.notMine.includes('tx-travis-constable-4'), JSON.stringify(st.S.b.districts));
+  st.S.b = st.emptyBallotState('');
+  address.setFromAddress(ballot, st.S.b, { ...none, county: 'Williamson' }, [{ meta: pm, props: { label: '1', commissioner: '4', jp: '4', sboe: '5' } }]);
+  check('maps: a Travis map answering for an address the Census puts in Williamson is set aside', st.S.b.districts['county|County Commissioner'] === 'none' && !st.S.b.mine.includes('tx-sboe-5'), JSON.stringify(st.S.b.districts));
 
   // The shipped maps, end to end at Austin City Hall (its point and its block, as the Census gave them).
   const hall = { point: { lon: -97.746669, lat: 30.26496 }, block: { lon: -97.7472987, lat: 30.2646818 } };

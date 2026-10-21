@@ -3,6 +3,6 @@
   "private": true,
   "description": "Tools for scripts/maps/pull.mjs only, kept out of the site's own install (see pull.mjs).",
   "devDependencies": {
-    "mapshaper": "0.7.79"
+    "mapshaper": "0.7.82"
   }
 }

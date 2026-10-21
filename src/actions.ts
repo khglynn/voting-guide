@@ -713,9 +713,11 @@ export function reportInput(el: HTMLInputElement | HTMLTextAreaElement): void {
 }
 /* Send: the one required question first, then a POST to the form's own submit address. The answer is
    opaque (no-cors: Google doesn't let a page read it), so "sent" means the request went out, which
-   is reliable in practice; a request that fails or hangs past 15 seconds says so and offers the form
-   in a new tab, prefilled with what you typed. No cookies go with it. While it's out the button reads
-   "Sending..." and does nothing. A sheet closed mid-send says how it went in a toast. */
+   is reliable in practice. A request refused outright says "That didn't send."; one with no answer in
+   15 seconds says "Couldn't confirm it sent." (it may have arrived). Both offer the form in a new
+   tab, prefilled with what you typed, and Send again. No cookies go with it. While it's out the
+   button reads "Sending...", the fields are read-only and sending again does nothing. A sheet closed
+   mid-send says how it went in a toast. */
 const SEND_MS = 15_000;
 export async function sendReport(): Promise<void> {
   const r = S.ui.report;
@@ -734,14 +736,19 @@ export async function sendReport(): Promise<void> {
   r.state = 'sending';
   render(['sheet']);
   const ctl = new AbortController();
-  const timer = window.setTimeout(() => ctl.abort(), SEND_MS);
+  let late = false;
+  const timer = window.setTimeout(() => { late = true; ctl.abort(); }, SEND_MS);
   let ok = true;
   try {
     await fetch(FORM.post, { method: 'POST', mode: 'no-cors', credentials: 'omit', referrerPolicy: 'no-referrer', body: new URLSearchParams(reportBody(r)), signal: ctl.signal });
   } catch { ok = false; }
   window.clearTimeout(timer);
-  if (S.ui.report !== r || S.ui.sheet !== 'report') { toast(ok ? 'Sent. Kevin reads every one.' : 'That didn’t send. Try again in a moment.'); return; }
-  r.state = ok ? 'sent' : 'failed';
+  const state = ok ? 'sent' : late ? 'unsure' : 'failed';
+  if (S.ui.report !== r || S.ui.sheet !== 'report') {
+    toast(state === 'sent' ? 'Sent. Kevin reads every one.' : state === 'unsure' ? 'Couldn’t confirm your report sent.' : 'That didn’t send. Try again in a moment.');
+    return;
+  }
+  r.state = state;
   render(['sheet']);
   focusFk(ok ? 'report-done' : 'report-send');
 }

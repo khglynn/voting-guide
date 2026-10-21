@@ -87,7 +87,7 @@ export interface Report {
   what0: string;              // "Which race or measure?" as it was prefilled
   tag: string;                // the item or source id the sheet was opened from, sent after the race while it still reads as prefilled
   hint: string;               // 'paywall': opened from a paywalled source's "Send it to us"
-  state: 'edit' | 'sending' | 'sent' | 'failed';
+  state: 'edit' | 'sending' | 'sent' | 'failed' | 'unsure'; // failed: the request was refused outright; unsure: no answer in time, so it may or may not have gone
   err: boolean;               // Send was tapped with the one required field empty
   fk: string;                 // the control that opened it, focused again when it closes
   back: { sheet: UI['sheet']; from: string | null; back: string | null } | null; // the sheet it was opened over, to go back to

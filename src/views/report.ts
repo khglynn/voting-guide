@@ -4,7 +4,8 @@
    Kevin approves, an agent adds the city or makes the fix. Nothing new runs anywhere.
    What you type lives only in this sheet while it is open (S.ui.report, in memory): never in
    localStorage or the save link. The form in a new tab, prefilled with what you typed, is always one
-   tap away, and it's what a failed send offers. */
+   tap away, and it's what a failed send offers. While a send is out the fields are read-only, so
+   nothing typed then is lost when "Sent" takes the form's place (Codex, Oct 21). */
 import { S, type Report } from '../state';
 import { esc } from '../util';
 import { FORM, formURL } from './common';
@@ -59,11 +60,13 @@ const altLink = (r: Report, text = 'Open the form in a new tab instead'): string
 
 function fieldHTML(r: Report, f: Field): string {
   const id = `rf-${f.k}`;
+  // Read-only, not disabled, while it sends: a field you pressed Enter in keeps the focus.
+  const busy = r.state === 'sending' ? ' readonly' : '';
   const val = r.f[f.k] || '';
   const bad = r.err && f.k === requiredOf(r);
   const hint = f.k === 'wrong' && r.hint === 'paywall' ? PAYWALL_HINT : f.hint;
   const desc = [hint ? `${id}-h` : '', bad ? 'rf-err' : ''].filter(Boolean).join(' ');
-  const attrs = `id="${id}" name="${f.k}" data-rf="${f.k}" data-fk="${id}" maxlength="${f.max}"${f.required ? ' aria-required="true"' : ''}${desc ? ` aria-describedby="${desc}"` : ''}${bad ? ' aria-invalid="true"' : ''}${f.ph ? ` placeholder="${esc(f.ph)}"` : ''}${f.auto ? ` autocomplete="${f.auto}"` : ''}`;
+  const attrs = `id="${id}" name="${f.k}" data-rf="${f.k}" data-fk="${id}" maxlength="${f.max}"${f.required ? ' aria-required="true"' : ''}${desc ? ` aria-describedby="${desc}"` : ''}${bad ? ' aria-invalid="true"' : ''}${f.ph ? ` placeholder="${esc(f.ph)}"` : ''}${f.auto ? ` autocomplete="${f.auto}"` : ''}${busy}`;
   const input = f.type === 'area' ? `<textarea ${attrs} rows="4">${esc(val)}</textarea>`
     : f.type === 'zip' ? `<input ${attrs} inputmode="numeric" pattern="[0-9]*" autocomplete="postal-code" value="${esc(val)}">`
       : `<input ${attrs} type="${f.type === 'url' ? 'url' : 'text'}"${f.type === 'url' ? ' inputmode="url" autocapitalize="off"' : ''} value="${esc(val)}">`;
@@ -78,16 +81,19 @@ export function reportSheetHTML(): string {
   const title = r.kind === 'city' ? 'Request a city' : 'Report a problem';
   const sent = r.state === 'sent';
   const sending = r.state === 'sending';
+  // Refused outright ("That didn't send.") or no answer in 15 seconds ("Couldn't confirm it sent.": it
+  // may have arrived, so it doesn't say it didn't).
+  const missed = r.state === 'failed' || r.state === 'unsure';
   // Sent: the form gives way to the answer, in place, and Done closes the sheet.
   const body = sent
     ? `<div class="rp-sent" role="status"><p><b>Sent.</b> Kevin reads every one.</p>
         <button class="bigbtn" data-act="sheet-close" data-fk="report-done">Done</button></div>`
-    : `<form class="rp-form" data-form="report" novalidate>
+    : `<form class="rp-form" data-form="report" novalidate${sending ? ' aria-busy="true"' : ''}>
         ${fieldsOf(r).map((f) => fieldHTML(r, f)).join('')}
         <p class="fine rp-fine">Goes to Kevin’s Google Form. Nothing you type here is saved in the guide.</p>
-        ${r.state === 'failed' ? `<p class="rp-fail" role="alert">That didn’t send. ${altLink(r)}.</p>` : ''}
+        ${missed ? `<p class="rp-fail" role="alert">${r.state === 'unsure' ? 'Couldn’t confirm it sent.' : 'That didn’t send.'} ${altLink(r)}.</p>` : ''}
         <button class="bigbtn" type="submit" data-fk="report-send"${sending ? ' aria-disabled="true"' : ''}>${sending ? 'Sending...' : 'Send'}</button>
-        ${r.state === 'failed' ? '' : `<p class="fine rp-alt">${altLink(r)}</p>`}
+        ${missed ? '' : `<p class="fine rp-alt">${altLink(r)}</p>`}
       </form>`;
   return `<div class="scrim report screen-only" data-act="sheet-close"></div>
   <div class="sheet-panel report screen-only" role="dialog" aria-modal="true" aria-labelledby="sh-h" data-kind="${r.kind}">

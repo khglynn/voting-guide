@@ -147,7 +147,8 @@ const noErrors = (page, label) => check(`${label}: no console errors`, page.erro
 const small44 = (page, scope) => page.$$eval(`${scope} button`, (els) => els.filter((e) => { const r = e.getBoundingClientRect(); return r.width && r.height && r.height < 43.5; }).map((e) => `${e.dataset.act || e.className}:${Math.round(e.getBoundingClientRect().height)}`));
 /* The report sheet (Oct 21) posts into Kevin's Google Form. Its checks catch the post here, so nothing is
    ever sent: `fail` makes the next one fail like a dropped connection, holdNext() keeps the next one out
-   until release(). */
+   until release() (held past 15 seconds, the page gives up on it, and answering it then just fails
+   quietly here). */
 const FORM_IDS = ['entry.90887649', 'entry.628621310', 'entry.780704302', 'entry.1986493507', 'entry.2040687555'];
 async function catchForm(page) {
   const c = { list: [], fail: false, hold: null, release: () => {} };
@@ -155,8 +156,10 @@ async function catchForm(page) {
   await page.route('https://docs.google.com/forms/**/formResponse*', async (route) => {
     c.list.push(new URLSearchParams(route.request().postData() || ''));
     if (c.hold) { await c.hold; c.hold = null; }
-    if (c.fail) return route.abort('internetdisconnected');
-    return route.fulfill({ status: 200, contentType: 'text/html', body: '' });
+    try {
+      if (c.fail) await route.abort('internetdisconnected');
+      else await route.fulfill({ status: 200, contentType: 'text/html', body: '' });
+    } catch { /* the page already gave up on it */ }
   });
   return c;
 }
@@ -1019,6 +1022,11 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   posts.holdNext();
   await tap(page, SEND);
   check('Report sheet: while sending, the button reads Sending... and is off', (await text(page, SEND)) === 'Sending...' && (await page.getAttribute(SEND, 'aria-disabled')) === 'true');
+  // Typing while it's out can't be lost when "Sent" takes the form's place: the fields are read-only
+  // until it settles (Codex, Oct 21).
+  await page.focus('#rf-reach');
+  await page.keyboard.type('Ask for Sam');
+  check('Report sheet: while sending, the fields are read-only, so nothing typed then is lost', (await page.$$eval('.sheet-panel.report [data-rf]', (els) => els.every((e) => e.readOnly))) && (await page.inputValue('#rf-reach')) === '' && (await focusedFk(page)) === 'rf-reach', `${await page.inputValue('#rf-reach')} ${await focusedFk(page)}`);
   await page.press('#rf-link', 'Enter');
   await page.waitForTimeout(150);
   posts.release();
@@ -1088,10 +1096,18 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   const alt = new URL((await page.getAttribute('.rp-fail a', 'href')) || 'about:blank');
   check('Report sheet: a send that fails says so, with the form in a new tab carrying what you typed', (await text(page, '.rp-fail')) === 'That didn’t send. Open the form in a new tab instead.' && alt.searchParams.get('entry.780704302') === 'One write-in is missing.' && alt.searchParams.get('entry.90887649') === 'Governor, the write-ins'
     && (await text(page, SEND)) === 'Send' && (await focusedFk(page)) === 'report-send', `${await text(page, '.rp-fail')} | ${alt.search}`);
+  check('Report sheet: after a failed send the fields can be edited again', await page.$$eval('.sheet-panel.report [data-rf]', (els) => els.length === 5 && els.every((e) => !e.readOnly)));
+  // No answer in 15 seconds: it may have arrived, so the sheet says it couldn't confirm, not that it failed.
   posts.fail = false;
+  posts.holdNext();
+  await tap(page, SEND);
+  await page.waitForFunction(() => /Couldn’t confirm/.test(document.querySelector('.rp-fail')?.textContent || ''), null, { timeout: 25000 });
+  check('Report sheet: no answer in 15 seconds says it couldn’t confirm it sent, offering the form in a new tab', (await text(page, '.rp-fail')) === 'Couldn’t confirm it sent. Open the form in a new tab instead.' && (await text(page, SEND)) === 'Send'
+    && await page.$$eval('.sheet-panel.report [data-rf]', (els) => els.every((e) => !e.readOnly)), await text(page, '.rp-fail'));
+  posts.release();
   await tap(page, SEND);
   await page.waitForSelector('.rp-sent');
-  check('Report sheet: it can try again, and a race you changed goes without the id', posts.list.length === 5 && posts.list[4].get('entry.90887649') === 'Governor, the write-ins', posts.list.at(-1)?.get('entry.90887649'));
+  check('Report sheet: it can try again, and a race you changed goes without the id', posts.list.length === 6 && posts.list[5].get('entry.90887649') === 'Governor, the write-ins', posts.list.at(-1)?.get('entry.90887649'));
   await tap(page, '.sheet-panel.report [data-fk="sheet-x"]');
   await settle(page);
   check('Report sheet: closing it leaves Full details as it was, back at its Report a problem', !!(await page.$('#r-sheet > .reader:not([inert])')) && !(await page.$('.sheet-panel.report')) && (await focusedFk(page)) === 'rd-rp-tx-governor', await focusedFk(page));

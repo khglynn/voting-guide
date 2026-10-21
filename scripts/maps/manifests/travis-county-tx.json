@@ -1,0 +1,163 @@
+{
+  "area": "travis-county-tx",
+  "about": "Travis County's layers (the Tax Office, which registers voters, and the city's copy of the county's precincts). Pull with: node scripts/maps/pull.mjs travis-county-tx",
+  "simplify_m": 10,
+  "layers": [
+    {
+      "kind": "precincts",
+      "name": "county precinct",
+      "title": "Travis County voting precincts, with each precinct's commissioner, justice of the peace and constable, and State Board of Education districts",
+      "places": [
+        "austin-tx",
+        "pflugerville-tx"
+      ],
+      "county": "Travis",
+      "source_url": "https://maps.austintexas.gov/arcgis/rest/services/Shared/VoterPrecincts/MapServer/0",
+      "source_org": "City of Austin, from Travis County's voting precincts",
+      "plan": "Travis County's voting precincts for 2026, redrawn after the 2025 congressional map. Every precinct carries the districts the county builds its ballots from.",
+      "dated_field": "LASTEDITED",
+      "label": {
+        "field": "PRECINCT",
+        "match": "^0*(\\d+)$"
+      },
+      "unique": true,
+      "props": {
+        "commissioner": {
+          "field": "COMMISSION",
+          "match": "^P0*(\\d+)$"
+        },
+        "jp": {
+          "field": "JPCONSTABL",
+          "match": "^J0*(\\d+)$"
+        },
+        "sboe": {
+          "field": "STATEBOARD",
+          "match": "^B0*(\\d+)$"
+        }
+      },
+      "settles": [
+        {
+          "office": "^County Commissioner$",
+          "scope": "\\bTravis County\\b",
+          "district": "Precinct {commissioner}"
+        },
+        {
+          "office": "^Justice of the Peace$",
+          "scope": "\\bTravis County\\b",
+          "district": "Precinct {jp}"
+        },
+        {
+          "office": "^Constable$",
+          "scope": "\\bTravis County\\b",
+          "district": "Precinct {jp}"
+        },
+        {
+          "office": "State Board of Education",
+          "district": "SBOE District {sboe}"
+        }
+      ],
+      "shows": "Your voting precinct: {label} (Travis County).",
+      "agree": [
+        {
+          "what": "the Tax Office's copy of the same precincts (the county's voter registrar)",
+          "source_url": "https://taxmaps.traviscountytx.gov/arcgis/rest/services/Precincts/MapServer/0",
+          "label": {
+            "field": "Precinct",
+            "match": "^0*(\\d+)$"
+          },
+          "props": {
+            "commissioner": {
+              "field": "Commissioner",
+              "match": "^P0*(\\d+)$"
+            },
+            "jp": {
+              "field": "JPConstable",
+              "match": "^J0*(\\d+)$"
+            },
+            "sboe": {
+              "field": "StateBoardOfEducation",
+              "match": "^B0*(\\d+)$"
+            }
+          }
+        },
+        {
+          "what": "the county's commissioner precincts (2022 plan)",
+          "source_url": "https://gis.traviscountytx.gov/server1/rest/services/Boundaries_and_Jurisdictions/Travis_County_Commissioner_Precincts/MapServer/0",
+          "label": {
+            "field": "PRECINCT",
+            "match": "^0*(\\d+)$"
+          },
+          "compare": "commissioner"
+        },
+        {
+          "what": "the county's justice of the peace and constable precincts (2022 plan)",
+          "source_url": "https://gis.traviscountytx.gov/server1/rest/services/Boundaries_and_Jurisdictions/Travis_County_Judge_and_Constable_Precincts/MapServer/0",
+          "label": {
+            "field": "PRECINCT",
+            "match": "^0*(\\d+)$"
+          },
+          "compare": "jp"
+        }
+      ],
+      "expect": {
+        "Austin City Hall": {
+          "label": "301",
+          "commissioner": "3",
+          "jp": "5",
+          "sboe": "5"
+        }
+      }
+    },
+    {
+      "kind": "aisd-trustee",
+      "name": "Austin ISD trustee district",
+      "title": "Austin ISD trustee single-member districts",
+      "places": [
+        "austin-tx"
+      ],
+      "county": "Travis",
+      "source_url": "https://taxmaps.traviscountytx.gov/arcgis/rest/services/SchoolSMD/MapServer/0",
+      "source_org": "Travis County Tax Office",
+      "plan": "Austin ISD's single-member districts, redrawn in 2022. The layer carries no edit date.",
+      "label": {
+        "field": "SMD",
+        "match": "^AISD SMD (\\d+)$"
+      },
+      "unique": true,
+      "settles": [
+        {
+          "office": "^Austin ISD Trustee$",
+          "district": "District {label}"
+        }
+      ],
+      "expect": {
+        "Austin City Hall": "5"
+      }
+    },
+    {
+      "kind": "dvisd-trustee",
+      "name": "Del Valle ISD trustee district",
+      "title": "Del Valle ISD trustee single-member districts",
+      "places": [
+        "austin-tx"
+      ],
+      "county": "Travis",
+      "source_url": "https://taxmaps.traviscountytx.gov/arcgis/rest/services/SchoolSMD/MapServer/0",
+      "source_org": "Travis County Tax Office",
+      "plan": "Del Valle ISD's nine single-member districts, the map the district itself links voters to (dvisd.net, election information, read Oct 21, 2026). The layer's tenth polygon, \"SMD 0\", is no district on the board, so it is left out and an address there settles nothing.",
+      "plan_source": "https://www.dvisd.net/about-us/board-of-trustees/election-information",
+      "label": {
+        "field": "SMD",
+        "match": "^Del Valle ISD SMD ([1-9])$"
+      },
+      "unique": true,
+      "settles": [
+        {
+          "office": "^Del Valle ISD Trustee$",
+          "district": "Single Member District {label}"
+        }
+      ]
+    }
+  ],
+  "test_points": "test-points.json"
+}

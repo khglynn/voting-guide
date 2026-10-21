@@ -1,0 +1,198 @@
+{
+  "kind": "precincts",
+  "name": "county precinct",
+  "title": "Travis County voting precincts, with each precinct's commissioner, justice of the peace and constable, and State Board of Education districts",
+  "places": [
+    "austin-tx",
+    "pflugerville-tx"
+  ],
+  "county": "Travis",
+  "source_url": "https://maps.austintexas.gov/arcgis/rest/services/Shared/VoterPrecincts/MapServer/0",
+  "source_org": "City of Austin, from Travis County's voting precincts",
+  "plan": "Travis County's voting precincts for 2026, redrawn after the 2025 congressional map. Every precinct carries the districts the county builds its ballots from.",
+  "layer_dated": "2025-12-18",
+  "layer_dated_from": "newest LASTEDITED in the layer",
+  "fetched": "2026-10-21",
+  "license": "none stated",
+  "label_property": "PRECINCT",
+  "props": {
+    "commissioner": "COMMISSION",
+    "jp": "JPCONSTABL",
+    "sboe": "STATEBOARD"
+  },
+  "features": 308,
+  "simplified": "Douglas-Peucker to 10 m, TopoJSON quantized to 100000 steps across the map",
+  "bytes": 131660,
+  "checked": {
+    "on": "2026-10-21",
+    "simplified_vs_original": {
+      "points": 2910,
+      "agree": 2910,
+      "more_than_m_from_a_line": 12
+    },
+    "agrees_with": [
+      {
+        "what": "the Tax Office's copy of the same precincts (the county's voter registrar)",
+        "source_url": "https://taxmaps.traviscountytx.gov/arcgis/rest/services/Precincts/MapServer/0",
+        "features_checked": 308,
+        "agree": 308
+      },
+      {
+        "what": "the county's commissioner precincts (2022 plan)",
+        "source_url": "https://gis.traviscountytx.gov/server1/rest/services/Boundaries_and_Jurisdictions/Travis_County_Commissioner_Precincts/MapServer/0",
+        "features_checked": 308,
+        "agree": 308
+      },
+      {
+        "what": "the county's justice of the peace and constable precincts (2022 plan)",
+        "source_url": "https://gis.traviscountytx.gov/server1/rest/services/Boundaries_and_Jurisdictions/Travis_County_Judge_and_Constable_Precincts/MapServer/0",
+        "features_checked": 308,
+        "agree": 308
+      }
+    ],
+    "public_buildings": [
+      {
+        "name": "Austin City Hall",
+        "answer": "301",
+        "by": "both"
+      },
+      {
+        "name": "Travis County courthouse",
+        "answer": "300",
+        "by": "both"
+      },
+      {
+        "name": "Austin Central Library",
+        "answer": "300",
+        "by": "both"
+      },
+      {
+        "name": "Texas State Capitol",
+        "answer": "300",
+        "by": "both"
+      },
+      {
+        "name": "Carver Branch Library",
+        "answer": "100",
+        "by": "both"
+      },
+      {
+        "name": "Ruiz Branch Library",
+        "answer": "423",
+        "by": "both"
+      },
+      {
+        "name": "Southeast Branch Library",
+        "answer": "463",
+        "by": "both"
+      },
+      {
+        "name": "Pleasant Hill Branch Library",
+        "answer": "448",
+        "by": "both"
+      },
+      {
+        "name": "Manchaca Road Branch Library",
+        "answer": "430",
+        "by": "block"
+      },
+      {
+        "name": "Twin Oaks Branch Library",
+        "answer": "410",
+        "by": "both"
+      },
+      {
+        "name": "North Village Branch Library",
+        "answer": "226",
+        "by": "both"
+      },
+      {
+        "name": "Little Walnut Creek Branch Library",
+        "answer": "240",
+        "by": "both"
+      },
+      {
+        "name": "St. John Branch Library",
+        "answer": "130",
+        "by": "both"
+      },
+      {
+        "name": "Windsor Park Branch Library",
+        "answer": "113",
+        "by": "both"
+      },
+      {
+        "name": "University Hills Branch Library",
+        "answer": "111",
+        "by": "both"
+      },
+      {
+        "name": "Cepeda Branch Library",
+        "answer": "403",
+        "by": "both"
+      },
+      {
+        "name": "Terrazas Branch Library",
+        "answer": "401",
+        "by": "both"
+      },
+      {
+        "name": "Old Quarry Branch Library",
+        "answer": "234",
+        "by": "both"
+      },
+      {
+        "name": "Milwood Branch Library",
+        "answer": "264",
+        "by": "both"
+      },
+      {
+        "name": "Hampton Branch Library at Oak Hill",
+        "answer": "358",
+        "by": "both"
+      },
+      {
+        "name": "Howson Branch Library",
+        "answer": "231",
+        "by": "both"
+      },
+      {
+        "name": "Willie Mae Kirk Branch Library",
+        "answer": "403",
+        "by": "both"
+      },
+      {
+        "name": "Travis County Clerk elections office",
+        "answer": "215",
+        "by": "both"
+      },
+      {
+        "name": "Pflugerville City Hall",
+        "answer": "172",
+        "by": "both"
+      }
+    ]
+  },
+  "settles": [
+    {
+      "office": "^County Commissioner$",
+      "scope": "\\bTravis County\\b",
+      "district": "Precinct {commissioner}"
+    },
+    {
+      "office": "^Justice of the Peace$",
+      "scope": "\\bTravis County\\b",
+      "district": "Precinct {jp}"
+    },
+    {
+      "office": "^Constable$",
+      "scope": "\\bTravis County\\b",
+      "district": "Precinct {jp}"
+    },
+    {
+      "office": "State Board of Education",
+      "district": "SBOE District {sboe}"
+    }
+  ],
+  "shows": "Your voting precinct: {label} (Travis County)."
+}

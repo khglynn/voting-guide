@@ -1,0 +1,54 @@
+{
+  "kind": "dvisd-trustee",
+  "name": "Del Valle ISD trustee district",
+  "title": "Del Valle ISD trustee single-member districts",
+  "places": [
+    "austin-tx"
+  ],
+  "county": "Travis",
+  "source_url": "https://taxmaps.traviscountytx.gov/arcgis/rest/services/SchoolSMD/MapServer/0",
+  "source_org": "Travis County Tax Office",
+  "plan": "Del Valle ISD's nine single-member districts, the map the district itself links voters to (dvisd.net, election information, read Oct 21, 2026). The layer's tenth polygon, \"SMD 0\", is no district on the board, so it is left out and an address there settles nothing.",
+  "plan_source": "https://www.dvisd.net/about-us/board-of-trustees/election-information",
+  "layer_dated": null,
+  "fetched": "2026-10-21",
+  "license": "none stated",
+  "label_property": "SMD",
+  "features": 9,
+  "left_out": [
+    "Elgin ISD SMD 4",
+    "Elgin ISD SMD 5",
+    "Elgin ISD SMD 6",
+    "AISD SMD 1",
+    "AISD SMD 2",
+    "AISD SMD 3",
+    "AISD SMD 4",
+    "AISD SMD 5",
+    "AISD SMD 6",
+    "AISD SMD 7",
+    "Del Valle ISD SMD 0"
+  ],
+  "simplified": "Douglas-Peucker to 10 m, TopoJSON quantized to 100000 steps across the map",
+  "bytes": 8702,
+  "checked": {
+    "on": "2026-10-21",
+    "simplified_vs_original": {
+      "points": 524,
+      "agree": 524,
+      "more_than_m_from_a_line": 12
+    },
+    "public_buildings": [
+      {
+        "name": "Ruiz Branch Library",
+        "answer": "2",
+        "by": "both"
+      }
+    ]
+  },
+  "settles": [
+    {
+      "office": "^Del Valle ISD Trustee$",
+      "district": "Single Member District {label}"
+    }
+  ]
+}

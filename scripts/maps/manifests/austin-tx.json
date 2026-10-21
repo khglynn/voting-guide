@@ -1,0 +1,33 @@
+{
+  "area": "austin-tx",
+  "about": "The City of Austin's own layers. Pull with: node scripts/maps/pull.mjs austin-tx",
+  "simplify_m": 10,
+  "layers": [
+    {
+      "kind": "council",
+      "name": "council district",
+      "title": "Austin City Council districts",
+      "places": [
+        "austin-tx"
+      ],
+      "source_url": "https://maps.austintexas.gov/arcgis/rest/services/Shared/CouncilDistrictsFill/MapServer/0",
+      "source_org": "City of Austin",
+      "plan": "The 2021 Independent Citizens Redistricting Commission map, in use since 2022. Lines along the city limits are edited as land is annexed.",
+      "dated_field": "MODIFIED_DATE",
+      "label": {
+        "field": "COUNCIL_DISTRICT",
+        "match": "^(\\d+)$"
+      },
+      "settles": [
+        {
+          "office": "^Austin City Council Member$",
+          "district": "District {label}"
+        }
+      ],
+      "expect": {
+        "Austin City Hall": "9"
+      }
+    }
+  ],
+  "test_points": "test-points.json"
+}

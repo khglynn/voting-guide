@@ -1,0 +1,155 @@
+{
+  "kind": "council",
+  "name": "council district",
+  "title": "Austin City Council districts",
+  "places": [
+    "austin-tx"
+  ],
+  "source_url": "https://maps.austintexas.gov/arcgis/rest/services/Shared/CouncilDistrictsFill/MapServer/0",
+  "source_org": "City of Austin",
+  "plan": "The 2021 Independent Citizens Redistricting Commission map, in use since 2022. Lines along the city limits are edited as land is annexed.",
+  "layer_dated": "2026-10-01",
+  "layer_dated_from": "newest MODIFIED_DATE in the layer",
+  "fetched": "2026-10-21",
+  "license": "none stated",
+  "label_property": "COUNCIL_DISTRICT",
+  "features": 10,
+  "simplified": "Douglas-Peucker to 10 m, TopoJSON quantized to 100000 steps across the map",
+  "bytes": 70977,
+  "checked": {
+    "on": "2026-10-21",
+    "simplified_vs_original": {
+      "points": 585,
+      "agree": 585,
+      "more_than_m_from_a_line": 12
+    },
+    "public_buildings": [
+      {
+        "name": "Austin City Hall",
+        "answer": "9",
+        "by": "both"
+      },
+      {
+        "name": "Travis County courthouse",
+        "answer": "9",
+        "by": "both"
+      },
+      {
+        "name": "Austin Central Library",
+        "answer": "9",
+        "by": "both"
+      },
+      {
+        "name": "Texas State Capitol",
+        "answer": "9",
+        "by": "both"
+      },
+      {
+        "name": "Carver Branch Library",
+        "answer": "1",
+        "by": "both"
+      },
+      {
+        "name": "Ruiz Branch Library",
+        "answer": "3",
+        "by": "both"
+      },
+      {
+        "name": "Southeast Branch Library",
+        "answer": "2",
+        "by": "both"
+      },
+      {
+        "name": "Pleasant Hill Branch Library",
+        "answer": "2",
+        "by": "both"
+      },
+      {
+        "name": "Manchaca Road Branch Library",
+        "answer": "5",
+        "by": "both"
+      },
+      {
+        "name": "Twin Oaks Branch Library",
+        "answer": "9",
+        "by": "both"
+      },
+      {
+        "name": "North Village Branch Library",
+        "answer": "7",
+        "by": "both"
+      },
+      {
+        "name": "Little Walnut Creek Branch Library",
+        "answer": "4",
+        "by": "both"
+      },
+      {
+        "name": "St. John Branch Library",
+        "answer": "4",
+        "by": "both"
+      },
+      {
+        "name": "Windsor Park Branch Library",
+        "answer": "4",
+        "by": "both"
+      },
+      {
+        "name": "University Hills Branch Library",
+        "answer": "1",
+        "by": "both"
+      },
+      {
+        "name": "Cepeda Branch Library",
+        "answer": "3",
+        "by": "both"
+      },
+      {
+        "name": "Terrazas Branch Library",
+        "answer": "3",
+        "by": "both"
+      },
+      {
+        "name": "Old Quarry Branch Library",
+        "answer": "10",
+        "by": "both"
+      },
+      {
+        "name": "Spicewood Springs Branch Library",
+        "answer": "6",
+        "by": "both"
+      },
+      {
+        "name": "Milwood Branch Library",
+        "answer": "7",
+        "by": "both"
+      },
+      {
+        "name": "Hampton Branch Library at Oak Hill",
+        "answer": "8",
+        "by": "both"
+      },
+      {
+        "name": "Howson Branch Library",
+        "answer": "10",
+        "by": "both"
+      },
+      {
+        "name": "Willie Mae Kirk Branch Library",
+        "answer": "3",
+        "by": "both"
+      },
+      {
+        "name": "Travis County Clerk elections office",
+        "answer": "4",
+        "by": "both"
+      }
+    ]
+  },
+  "settles": [
+    {
+      "office": "^Austin City Council Member$",
+      "district": "District {label}"
+    }
+  ]
+}

@@ -730,6 +730,16 @@ A['reader-close'] = () => {
   document.body.classList.remove('sheet-open');
   focusFk(`rd-${id}`);
 };
+/* "Try your name these ways" under Check my registration: the plan's details, open at that question. */
+A['whatif-sit'] = (d) => {
+  const k = `wi-${d.k}`;
+  S.ui.open.add('whatif'); S.ui.open.add(k);
+  render(['plan']);
+  // Opened at once, like the menu's jump to "How this guide works", so the glide knows how far the
+  // page now goes; the glide and the mark are the motion.
+  const el = $(`[data-fk="${CSS.escape(k)}"]`);
+  if (el) { glideTo(el, 12, () => land(el.closest('li') || el)); el.focus({ preventScroll: true }); }
+};
 A.open = (d, el) => {
   const k = d.k!;
   if (k === HOW_K || k === HELP_K) { toggleFold(k); return; }

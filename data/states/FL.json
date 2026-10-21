@@ -10,7 +10,7 @@
   "voting_model": "in_person_first",
   "model_plain": "Most Floridians vote in person, either early (any early voting site in your county) or on Election Day (your assigned precinct only). Anyone can vote by mail, but you have to ask for a mail ballot each election cycle; nobody is sent one automatically.",
   "registration": {
-    "check_url": "https://registration.elections.myflorida.com/CheckVoterStatus",
+    "check_url": "https://registration.dos.fl.gov/CheckVoterStatus",
     "register_url": "https://vote.gov/register/florida",
     "register_url_source": "https://vote.gov/register",
     "deadlines": [
@@ -59,7 +59,7 @@
     ],
     "postage": "Varies by county. Leon County prepays return postage ('you do not need to use a stamp'). Orange and Escambia: not confirmed in this run, so read your return envelope; if it is not marked prepaid, use one Forever stamp (two if thick). Dropping it at an intake station or the office is always free.",
     "signature_witness_rules": "Sign the Voter's Certificate on the back of the return envelope. No witness or notary. Your signature is compared to the one on your voter record. If your signature has changed, update it with a new voter registration application before you return your ballot. An unsigned or mismatched envelope is not counted unless you cure it (see cure_process). Picking up ballots for others: a designee may pick up ballots for no more than 2 other voters per election (immediate family excluded) and must sign Form DS-DE 162.",
-    "tracking_url": "https://registration.elections.myflorida.com/CheckVoterStatus",
+    "tracking_url": "https://registration.dos.fl.gov/CheckVoterStatus",
     "cure_process": "If your signature is missing or does not match, the supervisor must notify you. You fix it by submitting the Vote-by-Mail Ballot Cure Affidavit (Form DS-DE 139) plus a copy of an ID. Official deadline: 'no later than 5 p.m. (local time) on the 2nd day after an election,' which is Thursday, November 5, 2026. Return the form and ID by mail, email, fax, or in person. Acceptable ID copies include a Florida driver license, Florida ID, U.S. passport, debit/credit card, military/student/retirement center/neighborhood association/public assistance/veteran health ID, concealed weapon license, government employee ID; or, if none of those, a current utility bill, bank statement, government check, paycheck, or other government document showing your name and address.",
     "mail_cutoff_advice": "Postmarks do not count. The state's own page: the ballot 'must be received, regardless of postmark, by the Supervisor of Elections' office no later than 7:00 pm (local time) on Election Day.' USPS recommends mailing at least 7 days out, so mail by about Tuesday, October 27. From then on, hand it to an intake station at an early voting site or the supervisor's office. Overseas voters are the only exception: a 10-day extension if postmarked by Election Day.",
     "drop_box_lookup_url": "https://dos.fl.gov/elections/for-voters/voting/early-voting/",
@@ -80,7 +80,7 @@
     "polls_close": "7:00 PM",
     "in_line_rule": "Official: 'The polls are open on Election Day, from 7 a.m. until 7 p.m. (local time).' 'Any voters waiting in line at 7:00 p.m. will have the opportunity to cast a ballot.' On Election Day you 'must vote at his or her assigned precinct/polling location.' Orlando and Tallahassee are on Eastern Time; Pensacola and the western Panhandle are on Central Time.",
     "vote_centers": false,
-    "lookup_url": "https://registration.elections.myflorida.com/CheckVoterStatus",
+    "lookup_url": "https://registration.dos.fl.gov/CheckVoterStatus",
     "confidence": "verified"
   },
   "id_rules": {
@@ -147,7 +147,7 @@
       "actions": [
         {
           "label": "Check my registration",
-          "url": "https://registration.elections.myflorida.com/CheckVoterStatus"
+          "url": "https://registration.dos.fl.gov/CheckVoterStatus"
         },
         {
           "label": "Find early voting places",
@@ -190,7 +190,7 @@
       "actions": [
         {
           "label": "Check my registration",
-          "url": "https://registration.elections.myflorida.com/CheckVoterStatus"
+          "url": "https://registration.dos.fl.gov/CheckVoterStatus"
         },
         {
           "label": "Register for next time",
@@ -208,13 +208,32 @@
       "confidence": "verified"
     },
     {
+      "id": "lookup_cant_find",
+      "question": "The lookup can’t find me.",
+      "short": "The lookup needs your name exactly as registered: try your last name with the hyphen, a space, and joined.",
+      "actions": [
+        {
+          "label": "Check my registration",
+          "url": "https://registration.dos.fl.gov/CheckVoterStatus"
+        }
+      ],
+      "answer": "Florida’s lookup asks for your name and birth date and says they “must be entered as it appears in your registration record”. The name boxes accept hyphens and apostrophes.",
+      "steps": [
+        "Try your last name with the hyphen, with a space instead, and run together, and leave out any middle name or suffix.",
+        "Still nothing? Call your county election office. A failed search doesn’t mean you’re not registered; records can lag."
+      ],
+      "deadline": null,
+      "source": "https://registration.dos.fl.gov/CheckVoterStatus",
+      "confidence": "sourced"
+    },
+    {
       "id": "wrong_polling_place",
       "question": "I went to the wrong polling place.",
       "short": "Early voting works at any site in your county; on Election Day, go to your assigned precinct.",
       "actions": [
         {
           "label": "Find my precinct",
-          "url": "https://registration.elections.myflorida.com/CheckVoterStatus"
+          "url": "https://registration.dos.fl.gov/CheckVoterStatus"
         },
         {
           "label": "Find early voting places",
@@ -238,7 +257,7 @@
       "actions": [
         {
           "label": "Track my ballot",
-          "url": "https://registration.elections.myflorida.com/CheckVoterStatus"
+          "url": "https://registration.dos.fl.gov/CheckVoterStatus"
         },
         {
           "label": "Find early voting places",
@@ -281,7 +300,7 @@
       "actions": [
         {
           "label": "Track my ballot",
-          "url": "https://registration.elections.myflorida.com/CheckVoterStatus"
+          "url": "https://registration.dos.fl.gov/CheckVoterStatus"
         }
       ],
       "answer": "Once the supervisor's office receives your mail ballot, it counts as your vote and you can't vote again. If you haven't sent it yet, bring it to the polls, turn it in, and vote a regular ballot.",
@@ -314,7 +333,7 @@
       "actions": [
         {
           "label": "Check my registration",
-          "url": "https://registration.elections.myflorida.com/CheckVoterStatus"
+          "url": "https://registration.dos.fl.gov/CheckVoterStatus"
         }
       ],
       "answer": "You can still vote. At the polls, sign a short name change form (or fill out a voter registration application with your new name) and vote.",
@@ -333,7 +352,7 @@
       "actions": [
         {
           "label": "Check my registration",
-          "url": "https://registration.elections.myflorida.com/CheckVoterStatus"
+          "url": "https://registration.dos.fl.gov/CheckVoterStatus"
         },
         {
           "label": "Find my county office",
@@ -398,7 +417,7 @@
         },
         {
           "label": "Track my ballot",
-          "url": "https://registration.elections.myflorida.com/CheckVoterStatus"
+          "url": "https://registration.dos.fl.gov/CheckVoterStatus"
         }
       ],
       "answer": "You can fix it. Send your supervisor of elections the Vote-by-Mail Ballot Cure Affidavit plus a copy of your ID by 5 PM on Thursday, November 5.",
@@ -432,7 +451,7 @@
       "actions": [
         {
           "label": "Track my ballot",
-          "url": "https://registration.elections.myflorida.com/CheckVoterStatus"
+          "url": "https://registration.dos.fl.gov/CheckVoterStatus"
         }
       ],
       "answer": "For a mail ballot, use the state's voter status lookup, which shows whether your ballot was received. For a provisional ballot, use your supervisor of elections' free lookup described in the instructions you got at the polls.",
@@ -442,7 +461,7 @@
         "Provisional ballot results are posted within 30 days of the election."
       ],
       "deadline": "2026-11-05",
-      "source": "https://registration.elections.myflorida.com/CheckVoterStatus",
+      "source": "https://registration.dos.fl.gov/CheckVoterStatus",
       "confidence": "verified"
     }
   ],
@@ -469,7 +488,7 @@
     },
     {
       "name": "Florida Division of Elections: Check Your Voter Status, Precinct, and Vote-by-Mail Status",
-      "url": "https://registration.elections.myflorida.com/CheckVoterStatus"
+      "url": "https://registration.dos.fl.gov/CheckVoterStatus"
     },
     {
       "name": "RegisterToVoteFlorida.gov (online registration and updates)",

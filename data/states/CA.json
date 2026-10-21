@@ -194,6 +194,25 @@
       "confidence": "verified"
     },
     {
+      "id": "lookup_cant_find",
+      "question": "The lookup can’t find me.",
+      "short": "The lookup needs your name exactly as registered: try your last name with the hyphen, a space, and joined.",
+      "actions": [
+        {
+          "label": "Check my registration",
+          "url": "https://voterstatus.sos.ca.gov/"
+        }
+      ],
+      "answer": "California’s My Voter Status asks for your name, birth date, and your driver license or ID number or the last four digits of your Social Security number. The page says an exact match needs one of those numbers.",
+      "steps": [
+        "Try your last name with the hyphen, with a space instead, and run together, and leave out any middle name or suffix.",
+        "Still nothing? Call your county election office. A failed search doesn’t mean you’re not registered; records can lag."
+      ],
+      "deadline": null,
+      "source": "https://voterstatus.sos.ca.gov/",
+      "confidence": "sourced"
+    },
+    {
       "id": "wrong_polling_place",
       "question": "I went to the wrong polling place.",
       "short": "In LA and Orange counties, you can vote at any vote center in the county where you're registered.",

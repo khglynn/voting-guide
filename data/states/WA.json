@@ -196,6 +196,25 @@
       "confidence": "verified"
     },
     {
+      "id": "lookup_cant_find",
+      "question": "The lookup can’t find me.",
+      "short": "The lookup needs your name exactly as registered: try your last name with the hyphen, a space, and joined.",
+      "actions": [
+        {
+          "label": "Check my registration",
+          "url": "https://voter.votewa.gov/"
+        }
+      ],
+      "answer": "VoteWA asks for your name and birth date as registered. Its own mismatch message: “If you are registered to vote, please contact your county’s Elections Office.”",
+      "steps": [
+        "Try your last name with the hyphen, with a space instead, and run together, and leave out any middle name or suffix.",
+        "Still nothing? Call your county election office. A failed search doesn’t mean you’re not registered; records can lag."
+      ],
+      "deadline": null,
+      "source": "https://voter.votewa.gov/",
+      "confidence": "sourced"
+    },
+    {
       "id": "wrong_polling_place",
       "question": "Where's my polling place?",
       "short": "No polling places: return your ballot to any county drop box or voting center by 8 PM Nov 3.",

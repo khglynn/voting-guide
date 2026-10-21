@@ -1037,8 +1037,17 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     // What the lookup answers (Congress, the state Senate and House, and the maybe rows for them).
     for (const g of au.groups) if (g.kind) S.b.districts[g.key] = g.members[0];
     for (const id of au.mayApply) { const c = au.byId.get(id); if (c.kind === 'contest' && views.open.censusSettles(c)) S.b.notMine.push(id); }
+    // Austin has district maps (council, trustees, county precincts), so its council, county and school
+    // questions are the address's to answer too, and Use my address stays.
+    check('address box: Austin, with the Census’s races answered, still offers Use my address: its maps answer the council, county and trustee questions', ledger.addressCount() > 0 && ledger.addressHelps() && btns(ledger.ballotHeadHTML()) === 'Use my address (dark)|Official sample ballot', btns(ledger.ballotHeadHTML()));
+    S.b.districts = {}; S.b.notMine = [];
+    // A ballot with no maps (Dallas): once only council, county and school questions are left, the sample ballot leads.
+    const da = open('TX', ['dallas-tx']);
+    for (const g of da.groups) if (g.kind) S.b.districts[g.key] = g.members[0];
+    for (const id of da.mayApply) { const c = da.byId.get(id); if (c.kind === 'contest' && views.open.censusSettles(c)) S.b.notMine.push(id); }
     const left = ledger.addressCount();
     check('address box: with only council, county and school questions left, the sample ballot leads and Use my address goes', left > 0 && !ledger.addressHelps() && btns(ledger.ballotHeadHTML()) === 'Official sample ballot (dark)' && new RegExp(`${left} races depend on your address`).test(ledger.ballotHeadHTML()), `${left} | ${btns(ledger.ballotHeadHTML())}`);
+    open('TX', ['austin-tx']);
     S.b.districts = {}; S.b.notMine = [];
     S.b.addrNote = 'Your districts: Congressional District 37. We didn’t save your address. Double-check with your sample ballot.';
     check('address box: once a lookup has run, it offers only the sample ballot', !ledger.addressHelps() && btns(ledger.ballotHeadHTML()) === 'Official sample ballot (dark)', btns(ledger.ballotHeadHTML()));
@@ -1575,7 +1584,8 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     S.b.addrNote = address.addrSummary(address.setFromAddress(S.ballot, S.b, { cd: 37, upper: 14, lower: 49 }));
     S.ui.addrFound = 'Test One, Austin, TX 78704';
     const n1 = ledger.addressCount();
-    check('address box: after one, what was found, what it set, and the rest counted', box() === `Found: Test One, Austin, TX 78704 Not it? Try again Set from your address: U.S. Representative, District 37 · State Representative, District 49. ${n1} races need your official sample ballot. The address lookup doesn’t cover races like school board or state board of education. Official sample ballot`, box());
+    // (A lookup with no point for the maps, so the races they'd settle are left; the line doesn't blame the lookup for them.)
+    check('address box: after one, what was found, what it set, and the rest counted', box() === `Found: Test One, Austin, TX 78704 Not it? Try again Set from your address: U.S. Representative, District 37 · State Representative, District 49. ${n1} races need your official sample ballot. Official sample ballot`, box());
     check('address box: the masthead no longer carries it', !/Set from|Your districts/.test(views.mast.mastHTML()));
     S.ui.addrFound = null;
     check('address box: after a reload, what it set without the address', !/Found:|Test One/.test(box()) && /^Set from your address: /.test(box()), box());

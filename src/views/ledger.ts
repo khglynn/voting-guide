@@ -19,7 +19,7 @@ import { judgeBatch, judicialReview, judgesLead, judgesRule } from '../model/jud
 import { ext, sampleBallot, isOpen, escP, leadRest, reportURL, HIDE } from './common';
 import { lensSummary } from './lens';
 import { addrHTML } from './mast';
-import { openHTML, censusSettles } from './open';
+import { openHTML, censusSettles, addressSettles } from './open';
 
 /* ---------- names ---------- */
 export function countyName(p: PlaceBundle): string {
@@ -117,7 +117,7 @@ export const qId = (g: Group): string => `q-${hash(g.key)}`;
 /* A district question's line under its title: "Depends on your address" while "Use my address" can
    still answer it; otherwise the sample ballot is what settles it (Kevin, Oct 20: after a lookup,
    "depends on your address" on every row it couldn't settle read as "your address wasn't enough"). */
-const qSub = (g: Group): string => (!S.b.addrNote && censusSettles(S.ballot!.byId.get(g.members[0]) as Contest) ? 'Depends on your address' : 'Your official sample ballot shows which');
+const qSub = (g: Group): string => (!S.b.addrNote && addressSettles(S.ballot!.byId.get(g.members[0]) as Contest) ? 'Depends on your address' : 'Your official sample ballot shows which');
 function questionHTML(g: Group): string {
   const open = S.ui.row === `q:${g.key}`;
   return `<li class="row is-q${open ? ' is-open' : ''}" id="${qId(g)}" data-q="${esc(g.key)}" data-undecided>
@@ -179,7 +179,7 @@ function questionBodyHTML(g: Group): string {
   return `<div class="ob dq">
     <h3 class="dq-h">Pick your ${esc(cleanOffice(g.office))} district</h3>
     <p class="ob-lede">${esc(where())} has ${members.length} of these districts. Your official sample ballot lists yours.</p>
-    <div class="opts">${censusSettles(members[0]) && !S.b.addrNote ? '<button class="opt opt-addr" data-act="addr-open" data-fk="dq-addr"><b>Use my address</b><small>The Census lookup finds it for you</small></button>' : ''}${choices.map((c) => { const [l, sub] = optionLabel(c); return `<button class="opt" data-act="district" data-g="${esc(g.key)}" data-v="${esc(c.id)}" data-fk="d-${esc(c.id)}"><b>${esc(choices.length < members.length ? seatless(l) : l)}</b>${sub ? `<small>${esc(sub)}</small>` : ''}</button>`; }).join('')}
+    <div class="opts">${addressSettles(members[0]) && !S.b.addrNote ? `<button class="opt opt-addr" data-act="addr-open" data-fk="dq-addr"><b>Use my address</b><small>${censusSettles(members[0]) ? 'The Census lookup finds it for you' : 'Your address finds it on the official map'}</small></button>` : ''}${choices.map((c) => { const [l, sub] = optionLabel(c); return `<button class="opt" data-act="district" data-g="${esc(g.key)}" data-v="${esc(c.id)}" data-fk="d-${esc(c.id)}"><b>${esc(choices.length < members.length ? seatless(l) : l)}</b>${sub ? `<small>${esc(sub)}</small>` : ''}</button>`; }).join('')}
       <button class="opt opt-unsure" data-act="district" data-g="${esc(g.key)}" data-v="*" data-fk="d-${hash(g.key)}-x"><b>Not sure? Skip for now</b><small>Show all ${members.length}, each marked “Maybe on your ballot”</small></button>
       <button class="opt opt-unsure" data-act="district" data-g="${esc(g.key)}" data-v="none" data-fk="d-${hash(g.key)}-n"><b>${esc(noneLabel(g))}</b></button></div>
     ${dqHelpHTML(finders, sb)}
@@ -535,13 +535,13 @@ function addressEntries(): { c: Contest; act: string; name: string }[] {
 }
 const addressRaces = (): Contest[] => addressEntries().map((x) => x.c);
 const andList = (xs: string[]): string => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} and ${xs[xs.length - 1]}`);
-/* Whether "Use my address" can still settle one of them. The Census answers Congress and the
-   state legislature only (open.censusSettles), so a question or "maybe" row for anything else
-   (a council seat, a school district, a judge) is the sample ballot's to settle. And once a
-   lookup has run on this ballot (its addrNote), it has answered all it can. */
+/* Whether "Use my address" can still settle one of them. The Census answers Congress, the state
+   legislature and whole school districts, and a place's district maps answer the races they name
+   (open.addressSettles); anything else (a judge, a utility district) is the sample ballot's to
+   settle. And once a lookup has run on this ballot (its addrNote), it has answered all it can. */
 export function addressHelps(): boolean {
   if (S.b.addrNote) return false;
-  return addressRaces().some((c) => censusSettles(c));
+  return addressRaces().some((c) => addressSettles(c));
 }
 /* The address box. Before a lookup, while races depend on your address: how many, with the lookup
    ("Use my address" leads while it can settle something) and your sample ballot. After one: what
@@ -557,7 +557,7 @@ function addrBoxHTML(): string {
   const sbLink = (dark: boolean): string => (sb ? `<a class="mini${dark ? ' dark' : ''}" href="${esc(sb.url)}" target="_blank" rel="noopener">Official sample ballot</a>` : '');
   // What's left for the sample ballot, and why, in a voter's words (Kevin, Oct 20: "N still depend on
   // your address" read as a contradiction right after typing one).
-  const kinds = addressKinds(addressRaces().filter((c) => !censusSettles(c)).map((c) => c.office)).slice(0, 2);
+  const kinds = addressKinds(addressRaces().filter((c) => !addressSettles(c)).map((c) => c.office)).slice(0, 2);
   const why = kinds.length ? ` The address lookup doesn’t cover races like ${kinds.join(' or ')}.` : '';
   // Three or fewer left: name each, a tap away, instead of describing them.
   const left3 = addressEntries();
@@ -568,7 +568,7 @@ function addrBoxHTML(): string {
     if (!n) return '';
     const look = addressHelps();
     // Before a lookup, what it can and can't do, so what's left after it is no surprise.
-    const k = look ? addressRaces().filter((c) => censusSettles(c)).length : 0;
+    const k = look ? addressRaces().filter((c) => addressSettles(c)).length : 0;
     const tail = !look ? ' Your official sample ballot shows which are yours.' : k < n ? ` Your address finds ${k} of them. Your official sample ballot shows all ${n}.` : '';
     return `<div class="addrbox"><p class="addr-n"><b>${n === 1 ? '1 race depends' : `${n} races depend`} on your address.</b>${tail}</p>
       ${S.ui.addrOpen ? addrHTML() : `<div class="row-btns">${look ? '<button class="mini dark" data-act="addr-open" data-fk="addr-open">Use my address</button>' : ''}${sbLink(!look)}</div>`}</div>`;
@@ -576,11 +576,14 @@ function addrBoxHTML(): string {
   const found = S.ui.addrFound && !S.ui.addrOpen
     ? `<p class="addr-found" tabindex="-1" data-fk="addr-found"><b>Found:</b> ${esc(S.ui.addrFound)} <button class="linkbtn" data-act="addr-again" data-fk="addr-again">Not it? Try again</button></p>` : '';
   const none = note === FOUND_ONLY;
-  if (none && !n) return found || S.ui.addrOpen ? `<div class="addrbox">${found}${S.ui.addrOpen ? addrHTML() : ''}</div>` : '';
+  // What the district maps said beyond the races they set, for this visit: the voting precinct, a line
+  // they didn't guess at, a map that didn't load (S.ui.addrMaps).
+  const mapLines = S.ui.addrMaps.map((t) => `<p class="addr-map">${esc(t)}</p>`).join('');
+  if (none && !n) return found || mapLines || S.ui.addrOpen ? `<div class="addrbox">${found}${mapLines}${S.ui.addrOpen ? addrHTML() : ''}</div>` : '';
   const left = n ? rest(n) : '';
   const filledLine = S.ui.addrFilled ? `<p class="addr-fill">${esc(S.ui.addrFilled)}</p>` : '';
   const after = S.ui.addrOpen ? addrHTML() : (none || n) && sb ? `<div class="row-btns">${sbLink(true)}</div>` : '';
-  return `<div class="addrbox">${found}${none ? '' : `<p class="addr-set">${esc(note)}</p>`}${filledLine}${left}${after}</div>`;
+  return `<div class="addrbox">${found}${none ? '' : `<p class="addr-set">${esc(note)}</p>`}${mapLines}${filledLine}${left}${after}</div>`;
 }
 export function ballotHeadHTML(): string {
   const b = S.ballot!;

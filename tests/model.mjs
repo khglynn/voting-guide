@@ -236,6 +236,93 @@ function roundTrip(name, stCode, places, mutate) {
   check('districts: "not sure" shows every member', g.members.every((m) => all.includes(m)));
 }
 
+/* ---------- 5. district maps (model/maps.ts, Oct 21) ---------- */
+{
+  const maps = await load('/src/model/maps.ts');
+  const address = mods.address;
+  const fc = (...features) => ({ type: 'FeatureCollection', features });
+  const poly = (label, ...rings) => ({ type: 'Feature', properties: { label }, geometry: { type: 'Polygon', coordinates: rings } });
+  const sq = (x0, y0, x1, y1) => [[x0, y0], [x1, y0], [x1, y1], [x0, y1], [x0, y0]];
+  // pointIn: a square, a square with a hole, a MultiPolygon, and a map that overlaps itself.
+  const unit = fc(poly('A', sq(0, 0, 1, 1)));
+  check('maps: a point inside a unit square gets its label, one outside gets none', maps.pointIn(unit, 0.5, 0.5) === 'A' && maps.pointIn(unit, 1.5, 0.5) === null && maps.pointIn(unit, 0.5, -0.1) === null);
+  const holed = fc(poly('H', sq(0, 0, 4, 4), sq(1, 1, 3, 3)));
+  check('maps: a hole subtracts', maps.pointIn(holed, 0.5, 0.5) === 'H' && maps.pointIn(holed, 2, 2) === null && maps.pointIn(holed, 3.5, 2) === 'H');
+  const multi = fc({ type: 'Feature', properties: { label: 'M' }, geometry: { type: 'MultiPolygon', coordinates: [[sq(0, 0, 1, 1)], [sq(2, 0, 3, 1)]] } });
+  check('maps: a MultiPolygon answers in each of its parts, not between them', maps.pointIn(multi, 0.5, 0.5) === 'M' && maps.pointIn(multi, 2.5, 0.5) === 'M' && maps.pointIn(multi, 1.5, 0.5) === null);
+  check('maps: where a map overlaps itself, it answers nothing', maps.pointIn(fc(poly('X', sq(0, 0, 2, 2)), poly('Y', sq(1, 1, 3, 3))), 1.5, 1.5) === null);
+  // fromTopo: two squares sharing one arc, quantized and delta-encoded, the right one reading it backwards.
+  const topo = { type: 'Topology', transform: { scale: [1, 1], translate: [0, 0] },
+    arcs: [[[1, 0], [0, 1]], [[1, 1], [-1, 0], [0, -1], [1, 0]], [[1, 0], [1, 0], [0, 1], [-1, 0]]],
+    objects: { t: { type: 'GeometryCollection', geometries: [{ type: 'Polygon', arcs: [[1, 0]], properties: { label: 'L' } }, { type: 'Polygon', arcs: [[-1, 2]], properties: { label: 'R', n: 7 } }] } } };
+  const tf = maps.fromTopo(topo);
+  check('maps: TopoJSON decodes, shared border and all', tf.features.length === 2 && maps.pointIn(tf, 0.5, 0.5) === 'L' && maps.pointIn(tf, 1.5, 0.5) === 'R' && maps.pointIn(tf, 2.5, 0.5) === null && tf.features[1].properties.n === '7', JSON.stringify(tf.features.map((f) => f.geometry.coordinates)));
+  // Two witnesses, on two squares about a kilometre wide in Austin, the line between them at lon -97.74.
+  const two = fc(poly('W', sq(-97.75, 30.26, -97.74, 30.27)), poly('E', sq(-97.74, 30.26, -97.73, 30.27)));
+  const at = (pt, bk) => maps.answerAt(two, { point: { lon: pt[0], lat: pt[1] }, block: bk ? { lon: bk[0], lat: bk[1] } : null });
+  const deepE = [-97.735, 30.265];
+  const a1 = at([-97.7451, 30.265], [-97.746, 30.2655]);
+  check('maps: both witnesses in one district: that district', a1.at === 'in' && a1.props.label === 'W' && a1.by === 'both');
+  const a2 = at([-97.74005, 30.265], deepE); // the address point about 5 m west of the line, its block deep in E
+  check('maps: the address point at a line, its block across it: the block’s district', a2.at === 'in' && a2.props.label === 'E' && a2.by === 'block', JSON.stringify(a2));
+  const a3 = at([-97.742, 30.265], deepE); // 190 m from the line, and the block says otherwise
+  check('maps: the witnesses disagree away from any line: no guess', a3.at === 'near', JSON.stringify(a3));
+  check('maps: one witness near a line: no guess; well inside: its district', at([-97.74005, 30.265]).at === 'near' && at([-97.745, 30.265]).at === 'in');
+  check('maps: an address outside every district: out', at([-97.8, 30.265], [-97.8001, 30.2651]).at === 'out');
+  check('maps: edge distance is in metres', Math.abs(maps.edgeDistance(two, -97.7405, 30.265) - 48) < 1, String(maps.edgeDistance(two, -97.7405, 30.265)));
+  check('maps: a template fills from a feature, and a missing property fills nothing', maps.fillTemplate('Precinct {jp}', { jp: '5' }) === 'Precinct 5' && maps.fillTemplate('Precinct {jp}', {}) === null);
+  check('maps: "Precinct 4 (unexpired term)" is Precinct 4', maps.normDistrict('Precinct 4 (unexpired term)') === maps.normDistrict('Precinct 4'));
+
+  // setFromAddress with a fake council map, on and off.
+  const ballot = open('TX', ['austin-tx']);
+  const council = ballot.groups.find((x) => x.office === 'Austin City Council Member');
+  const fake = { kind: 'council', file: 'maps/test/council.topo.json', bytes: 1, name: 'council district', title: 'test', county: null, shows: null, source_url: 'https://example.org', source_org: 'test', layer_dated: null, fetched: '2026-10-21',
+    settles: [{ office: '^Austin City Council Member$', district: 'District {label}' }] };
+  const none = { cd: null, upper: null, lower: null };
+  let set = address.setFromAddress(ballot, st.S.b, none, [{ meta: fake, props: { label: '3' } }]);
+  check('maps: a council map answering 3 answers the council question, and the line names it', st.S.b.districts[council.key] === 'tx-austin-council-3' && st.S.b.addrSet.includes(council.key) && set.join('|') === 'Austin City Council, District 3', set.join('|'));
+  set = address.setFromAddress(ballot, st.S.b, none, [{ meta: fake, props: { label: '2' } }]);
+  check('maps: a district with no race this year answers "none", and the line names nothing', st.S.b.districts[council.key] === 'none' && !set.length, set.join('|'));
+  // A "may apply" race, on and off: Travis's one constable race, from the precinct map's JP code.
+  const pm = ballot.places[0].maps.find((m) => m.kind === 'precincts');
+  set = address.setFromAddress(ballot, st.S.b, none, [{ meta: pm, props: { label: '1', commissioner: '4', jp: '4', sboe: '5' } }]);
+  check('maps: the precinct map puts the constable race on in its precinct, with commissioner, JP and SBOE', st.S.b.mine.includes('tx-travis-constable-4') && st.S.b.mine.includes('tx-sboe-5')
+    && st.S.b.districts['county|County Commissioner'] === 'tx-travis-commissioner-4' && st.S.b.districts['judicial|Justice of the Peace'] === 'tx-travis-jp-4'
+    && set.join(' · ') === 'State Board of Education, District 5 · County Commissioner, Precinct 4 · Justice of the Peace, Precinct 4 · Constable, Precinct 4', set.join(' · '));
+  address.setFromAddress(ballot, st.S.b, none, [{ meta: pm, props: { label: '2', commissioner: '3', jp: '5', sboe: '10' } }]);
+  check('maps: and off everywhere else', st.S.b.notMine.includes('tx-travis-constable-4') && !st.S.b.mine.includes('tx-travis-constable-4') && st.S.b.notMine.includes('tx-sboe-5') && st.S.b.districts['county|County Commissioner'] === 'none');
+  // The Census puts you in Williamson County: the Travis map's county races are off without looking.
+  st.S.b = st.emptyBallotState('');
+  address.setFromAddress(ballot, st.S.b, { ...none, county: 'Williamson' }, []);
+  check('maps: another county’s address takes a county map’s own races off, and leaves SBOE alone', st.S.b.districts['county|County Commissioner'] === 'none' && st.S.b.districts['judicial|Justice of the Peace'] === 'none' && st.S.b.notMine.includes('tx-travis-constable-4') && !st.S.b.notMine.includes('tx-sboe-5') && st.S.b.districts['city|Austin City Council Member'] === undefined);
+  // A trustee map stays out of a school district the Census says isn't yours.
+  st.S.b = st.emptyBallotState('');
+  const dv = ballot.places[0].maps.find((m) => m.kind === 'dvisd-trustee');
+  address.setFromAddress(ballot, st.S.b, { ...none, schools: ['Austin Independent School District'] }, [{ meta: dv, props: { label: '7' } }]);
+  check('maps: a Del Valle trustee map can’t put an Austin ISD address in Del Valle', st.S.b.districts['school|Del Valle ISD Trustee'] === 'none', JSON.stringify(st.S.b.districts));
+  // Pflugerville's commissioner question mixes Travis and Williamson races: a Travis answer settles it.
+  const pf = open('TX', ['pflugerville-tx']);
+  const pmap = pf.places[0].maps.find((m) => m.kind === 'precincts');
+  address.setFromAddress(pf, st.S.b, { ...none, county: 'Travis' }, [{ meta: pmap, props: { label: '172', commissioner: '1', jp: '2', sboe: '5' } }]);
+  check('maps: Pflugerville, Travis side: a Travis precinct answers the questions that mix both counties’ races', st.S.b.districts['county|County Commissioner'] === 'none' && st.S.b.districts['judicial|Justice of the Peace'] === 'tx-travis-jp-2', JSON.stringify(st.S.b.districts));
+
+  // The shipped maps, end to end at Austin City Hall (its point and its block, as the Census gave them).
+  const hall = { point: { lon: -97.746669, lat: 30.26496 }, block: { lon: -97.7472987, lat: 30.2646818 } };
+  const au = open('TX', ['austin-tx']);
+  const answers = au.places[0].maps.map((meta) => ({ meta, a: maps.answerAt(maps.fromTopo(JSON.parse(fs.readFileSync(path.join(DATA, meta.file), 'utf8'))), hall) })).filter((x) => x.a.at === 'in').map((x) => ({ meta: x.meta, props: x.a.props }));
+  const by = Object.fromEntries(answers.map((x) => [x.meta.kind, x.props]));
+  check('maps: City Hall on the shipped maps: council 9, AISD 5, precinct 301 (commissioner 3, JP 5, SBOE 5)', by.council?.label === '9' && by['aisd-trustee']?.label === '5' && by.precincts?.label === '301' && by.precincts.commissioner === '3' && by.precincts.jp === '5' && by.precincts.sboe === '5' && !by['dvisd-trustee'], JSON.stringify(by));
+  const line = address.addrSummary(address.setFromAddress(au, st.S.b, { cd: 10, upper: 14, lower: 49, schools: ['Austin Independent School District'], county: 'Travis' }, answers));
+  check('maps: City Hall’s line names every race the address put on', line === 'Set from your address: U.S. Representative, District 10 · State Representative, District 49 · State Board of Education, District 5 · Justice of the Peace, Precinct 5 · Austin City Council, District 9.', line);
+  check('maps: and nothing on City Hall’s ballot still depends on the address', views.ledger.addressCount() === 0, String(views.ledger.addressCount()));
+  // The Census answer keeps the point and the block's interior point, for the maps only.
+  const g = geo.parseCensus({ result: { addressMatches: [{ matchedAddress: 'TEST CITY HALL, AUSTIN, TX, 78701', coordinates: { x: -97.746669, y: 30.26496 }, geographies: { States: [{ STATE: '48' }], '2020 Census Blocks': [{ INTPTLAT: '+30.2646818', INTPTLON: '-097.7472987' }] } }] } })[0];
+  check('maps: parseCensus keeps the point and the block’s interior point', g.point.lon === -97.746669 && g.point.lat === 30.26496 && g.block.lon === -97.7472987 && g.block.lat === 30.2646818, JSON.stringify([g.point, g.block]));
+  const g0 = geo.parseCensus({ result: { addressMatches: [{ matchedAddress: 'TEST', geographies: {} }] } })[0];
+  check('maps: and none when the Census sends none', g0.point === null && g0.block === null);
+  st.S.b = st.emptyBallotState('');
+}
+
 /* ---------- extension points: run when the ledger's model modules exist ---------- */
 const extra = path.join(ROOT, 'tests', 'model-ledger.mjs');
 if (fs.existsSync(extra)) {

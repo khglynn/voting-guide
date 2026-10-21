@@ -11,6 +11,7 @@ import { picksOnBallot } from '../model/lens';
 import { sourceLean, leanHTML, ext, clampP, escP, sampleBallot, isOpen, leadRest, wordsSrc, reportURL, paywallRowHTML } from './common';
 import { headsUp, headsHTML, addressCount } from './ledger';
 import { schoolOf } from '../model/address';
+import { mapSettles } from '../model/maps';
 
 /* "Report a problem" on a row: the form (see common.reportURL) prefilled with this row. */
 export const reportLink = (it: Item): string => reportURL(`${cheatTitle(it)} [${it.id}]`);
@@ -29,6 +30,11 @@ export function censusSettles(c: Item): boolean {
   const k = contestDistrict(c).kind;
   return (!!k && !(S.ballot!.st === 'DC' && k === 'upper')) || !!schoolOf(c)?.whole;
 }
+/* What a lookup can settle on this ballot: the Census's races, and the races one of the ballot's
+   district maps names (a council seat, a trustee district, a county precinct's offices). */
+export function addressSettles(c: Item): boolean {
+  return censusSettles(c) || mapSettles(S.ballot!, c);
+}
 /* "Only on some ballots": who votes on it, then a way to find out: your address (where the Census
    settles it), your sample ballot, or "It's not on my ballot". Hiding every one like it at once
    stays as a quiet extra. */
@@ -36,7 +42,7 @@ function mayHTML(it: Item, scope: string, same: number, allLabel: string): strin
   const sb = sampleBallot();
   // The form opens in the address box at the top, which shows while any race depends on your
   // address. Once a lookup has run on this ballot, it has answered all it can.
-  const addr = censusSettles(it) && !S.b.addrNote && addressCount() > 0;
+  const addr = addressSettles(it) && !S.b.addrNote && addressCount() > 0;
   const btns = [
     addr ? `<button class="mini dark" data-act="addr-open" data-fk="ma-${esc(it.id)}">Check with my address</button>` : '',
     sb ? `<a class="mini${addr ? '' : ' dark'}" href="${esc(sb.url)}" target="_blank" rel="noopener">Official sample ballot</a>` : '',

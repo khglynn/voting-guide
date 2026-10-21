@@ -13,14 +13,23 @@
    district goes on or off by it: "Round Rock ISD Trustee, Place 3" and an ISD's bond on, or off when
    you're in another district; a trustee question for a district you're not in answers "none". A
    trustee district inside your own school district still needs the sample ballot: the Census
-   doesn't have those. */
-import type { Contest, Item } from '../types';
+   doesn't have those, but a district map can (below).
+   District maps (model/maps.ts, Oct 21): where a place ships its city's or county's boundaries, the
+   features at your address settle each district question and "may apply" race a map's rule names
+   (council, trustee, commissioner, justice of the peace, constable, State Board of Education), the
+   same way: on (mine) or off (notMine), the question answered, and named in the line ("Austin City
+   Council, District 9"). A map that covers one county also rules out its races when the Census puts
+   you in another county. */
+import type { Contest, Item, MapMeta, SettleRule } from '../types';
 import type { Ballot } from '../ballot';
 import type { BallotState } from '../state';
 import { contestDistrict } from '../ballot';
 import { cleanOffice } from './labels';
+import { ballotMaps, ruleMatches, ruleIs } from './maps';
 
-export interface Districts { cd: number | null; upper: number | null; lower: number | null; schools?: string[] }
+export interface Districts { cd: number | null; upper: number | null; lower: number | null; schools?: string[]; county?: string | null }
+/* A district map that answered at this address: its record and the feature's properties. */
+export interface LocalAnswer { meta: MapMeta; props: Record<string, string> }
 
 /* A school district's name in the Census's words and ours, made comparable: Texas's "Independent
    School District" is our "ISD"; "No." and punctuation drop. */
@@ -41,9 +50,10 @@ type Kind = 'cd' | 'upper' | 'lower';
 const KINDS: Kind[] = ['cd', 'upper', 'lower'];
 
 /* Sets what the address settles on `s` and returns the races it put on the ballot, "{office},
-   District {n}" each, Congress first, then the state senate, then the state house; empty when it
-   put none there (nothing here turns on it, or it only took races off). */
-export function setFromAddress(b: Ballot, s: BallotState, r: Districts): string[] {
+   District {n}" each, Congress first, then the state senate, then the state house, then school
+   districts, then what the district maps put on, in ballot order; empty when it put none there
+   (nothing here turns on it, or it only took races off). */
+export function setFromAddress(b: Ballot, s: BallotState, r: Districts, local: LocalAnswer[] = []): string[] {
   const num = (k: Kind): number | null => (b.st === 'DC' && k === 'upper' ? null : r[k]);
   const named: Record<Kind, string[]> = { cd: [], upper: [], lower: [] };
   const name = (k: Kind, office: string) => { const o = cleanOffice(office); if (!named[k].includes(o)) named[k].push(o); };
@@ -108,7 +118,74 @@ export function setFromAddress(b: Ballot, s: BallotState, r: Districts): string[
     (on ? s.mine : s.notMine).push(id);
     if (on) name(d.kind, c.office);
   }
-  return [...KINDS.flatMap((k) => named[k].map((o) => `${o}, District ${num(k)}`)), ...schoolsNamed];
+  const localNamed = settleFromMaps(b, s, r, local, sds);
+  return [...KINDS.flatMap((k) => named[k].map((o) => `${o}, District ${num(k)}`)), ...schoolsNamed, ...localNamed];
+}
+
+/* A race a map put on your ballot, as the line names it: "Austin City Council, District 9",
+   "Justice of the Peace, Precinct 5", "State Board of Education, District 5". */
+const localName = (c: Contest): string => {
+  const office = cleanOffice(c.office).replace(/^Member,\s*/i, '').replace(/\s+Member$/i, '');
+  const seat = (c.district || '').replace(/\([^)]*\)/g, ' ').replace(/\s+/g, ' ').trim().replace(/^[A-Z]{2,6}\s+(?=District\b)/, '');
+  return seat ? `${office}, ${seat}` : office;
+};
+/* Whether a race's scope names a county other than this one, and not this one: a Williamson County
+   commissioner's race, to a map of Travis County. */
+const COUNTY = /\b([A-Z][a-z]+(?:\s[A-Z][a-z]+)?) County\b/g;
+const scopeNames = (scope: string, text: string): boolean => { try { return new RegExp(scope, 'i').test(text); } catch { return false; } };
+function otherCounty(c: Contest, county: string): boolean {
+  const named = [...(c.scope_plain || '').matchAll(COUNTY)].map((m) => m[1].toLowerCase());
+  return named.length > 0 && !named.includes(county.toLowerCase());
+}
+/* What the district maps settle. For each rule of each map that answered:
+   - a district question whose races the rule claims (every one, or the rest are another county's
+     races of the same office, which a map of this county rules out) gets its race, or "none";
+   - a "may apply" race the rule claims goes on or off;
+   - a school district's trustee race stays with the school logic above when the Census put you in
+     another school district.
+   A map of one county whose county isn't yours (the Census says so) answers "none" for the races its
+   county-scoped rules claim, without looking at the map. Returns the races it put on the ballot. */
+function settleFromMaps(b: Ballot, s: BallotState, r: Districts, local: LocalAnswer[], sds: Set<string>): string[] {
+  const on: Contest[] = [];
+  const answered = new Set(local.map((x) => x.meta.file));
+  const schoolElsewhere = (c: Contest): boolean => { const sd = schoolOf(c); return !!sd && sds.size > 0 && !sds.has(sd.key); };
+  const officeOnly = (rule: SettleRule, c: Contest): boolean => ruleMatches({ office: rule.office, district: rule.district }, c);
+  const sets: { meta: MapMeta; rule: SettleRule; props: Record<string, string> | null }[] = [];
+  for (const x of local) for (const rule of x.meta.settles) sets.push({ meta: x.meta, rule, props: x.props });
+  // Another county: only the rules about that county's own races (their scope names the county),
+  // never a statewide one or a school district's.
+  if (r.county) {
+    for (const { meta } of ballotMaps(b)) {
+      if (!meta.county || answered.has(meta.file) || meta.county.toLowerCase() === r.county.toLowerCase()) continue;
+      for (const rule of meta.settles) if (rule.scope && scopeNames(rule.scope, `${meta.county} County`)) sets.push({ meta, rule, props: null });
+    }
+  }
+  for (const { meta, rule, props } of sets) {
+    for (const g of b.groups) {
+      if (g.kind) continue; // the Census's
+      const members = g.members.map((id) => b.byId.get(id)).filter((c): c is Contest => !!c && c.kind === 'contest');
+      const mine = members.filter((c) => ruleMatches(rule, c));
+      if (!mine.length) continue;
+      const rest = members.filter((c) => !mine.includes(c));
+      if (rest.length && !(meta.county && rest.every((c) => officeOnly(rule, c) && otherCounty(c, meta.county!)))) continue;
+      if (mine.some(schoolElsewhere)) continue;
+      const hit = props ? mine.find((c) => ruleIs(rule, c, props)) : undefined;
+      s.districts[g.key] = hit ? hit.id : 'none';
+      s.addrSet = [...(s.addrSet || []).filter((k) => k !== g.key), g.key];
+      if (hit && !on.includes(hit)) on.push(hit);
+    }
+    for (const id of b.mayApply) {
+      const c = b.byId.get(id);
+      if (!c || c.kind !== 'contest' || !ruleMatches(rule, c) || schoolElsewhere(c)) continue;
+      const yes = !!props && ruleIs(rule, c, props);
+      s.notMine = s.notMine.filter((x) => x !== id);
+      s.mine = (s.mine || []).filter((x) => x !== id);
+      (yes ? s.mine : s.notMine).push(id);
+      if (yes && !on.includes(c)) on.push(c);
+    }
+  }
+  const at = (c: Contest) => b.order.indexOf(c.id);
+  return on.sort((x, y) => at(x) - at(y)).map(localName);
 }
 
 /* What the address box keeps (S.b.addrNote): the line naming what was set, or, when the lookup

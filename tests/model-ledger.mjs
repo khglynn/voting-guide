@@ -1044,7 +1044,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     // A ballot with no maps (Dallas): once only council, county and school questions are left, the sample ballot leads.
     const da = open('TX', ['dallas-tx']);
     for (const g of da.groups) if (g.kind) S.b.districts[g.key] = g.members[0];
-    for (const id of da.mayApply) { const c = da.byId.get(id); if (c.kind === 'contest' && views.open.censusSettles(c)) S.b.notMine.push(id); }
+    for (const id of da.mayApply) { if (views.open.censusSettles(da.byId.get(id))) S.b.notMine.push(id); } // races and school measures alike
     const left = ledger.addressCount();
     check('address box: with only council, county and school questions left, the sample ballot leads and Use my address goes', left > 0 && !ledger.addressHelps() && btns(ledger.ballotHeadHTML()) === 'Official sample ballot (dark)' && new RegExp(`${left} races depend on your address`).test(ledger.ballotHeadHTML()), `${left} | ${btns(ledger.ballotHeadHTML())}`);
     open('TX', ['austin-tx']);
@@ -1587,6 +1587,13 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     // (A lookup with no point for the maps, so the races they'd settle are left; the line doesn't blame the lookup for them.)
     check('address box: after one, what was found, what it set, and the rest counted', box() === `Found: Test One, Austin, TX 78704 Not it? Try again Set from your address: U.S. Representative, District 37 · State Representative, District 49. ${n1} races need your official sample ballot. Official sample ballot`, box());
     check('address box: the masthead no longer carries it', !/Set from|Your districts/.test(views.mast.mastHTML()));
+    // A ballot with no district maps (Dallas): what's left is named by kind, since the lookup doesn't cover it.
+    open('TX', ['dallas-tx']);
+    S.b.addrNote = address.addrSummary(address.setFromAddress(S.ballot, S.b, { cd: 30, upper: 23, lower: 100 }));
+    check('address box: where no map covers them, the kinds of race the lookup doesn’t cover', /races need your official sample ballot\. The address lookup doesn’t cover races like [a-z ]+( or [a-z ]+)?\./.test(box()), box());
+    open('TX', ['austin-tx']);
+    S.b.addrNote = address.addrSummary(address.setFromAddress(S.ballot, S.b, { cd: 37, upper: 14, lower: 49 }));
+    S.ui.addrFound = 'Test One, Austin, TX 78704';
     S.ui.addrFound = null;
     check('address box: after a reload, what it set without the address', !/Found:|Test One/.test(box()) && /^Set from your address: /.test(box()), box());
     open('FL', []);

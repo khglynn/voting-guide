@@ -513,11 +513,11 @@ export function addressCount(): number {
   return n;
 }
 /* The races still depending on your address, each counted once as addressCount counts them: a
-   district question by its first race, a "maybe" row by itself. */
-function addressEntries(): { c: Contest; act: string; name: string }[] {
+   district question by its first race, a "maybe" row (a race or a measure) by itself. */
+function addressEntries(): { c: Item; act: string; name: string }[] {
   const b = S.ballot!;
   const groups = new Set<string>();
-  const out: { c: Contest; act: string; name: string }[] = [];
+  const out: { c: Item; act: string; name: string }[] = [];
   for (const x of decisionItems()) {
     if (x.question) {
       const g = b.groups.find((gr) => `q:${gr.key}` === x.id);
@@ -529,11 +529,11 @@ function addressEntries(): { c: Contest; act: string; name: string }[] {
     const g = b.groupOf[x.id];
     if (g && groups.has(g)) continue;
     if (g) groups.add(g);
-    if (it && it.kind === 'contest') out.push({ c: it, act: `data-id="${esc(it.id)}"`, name: rowTitle(it).title });
+    if (it) out.push({ c: it, act: `data-id="${esc(it.id)}"`, name: rowTitle(it).title });
   }
   return out;
 }
-const addressRaces = (): Contest[] => addressEntries().map((x) => x.c);
+const addressRaces = (): Item[] => addressEntries().map((x) => x.c);
 const andList = (xs: string[]): string => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} and ${xs[xs.length - 1]}`);
 /* Whether "Use my address" can still settle one of them. The Census answers Congress, the state
    legislature and whole school districts, and a place's district maps answer the races they name
@@ -557,7 +557,7 @@ function addrBoxHTML(): string {
   const sbLink = (dark: boolean): string => (sb ? `<a class="mini${dark ? ' dark' : ''}" href="${esc(sb.url)}" target="_blank" rel="noopener">Official sample ballot</a>` : '');
   // What's left for the sample ballot, and why, in a voter's words (Kevin, Oct 20: "N still depend on
   // your address" read as a contradiction right after typing one).
-  const kinds = addressKinds(addressRaces().filter((c) => !addressSettles(c)).map((c) => c.office)).slice(0, 2);
+  const kinds = addressKinds(addressRaces().filter((c): c is Contest => c.kind === 'contest' && !addressSettles(c)).map((c) => c.office)).slice(0, 2);
   const why = kinds.length ? ` The address lookup doesn’t cover races like ${kinds.join(' or ')}.` : '';
   // Three or fewer left: name each, a tap away, instead of describing them.
   const left3 = addressEntries();
@@ -569,7 +569,7 @@ function addrBoxHTML(): string {
     const look = addressHelps();
     // Before a lookup, what it can and can't do, so what's left after it is no surprise.
     const k = look ? addressRaces().filter((c) => addressSettles(c)).length : 0;
-    const tail = !look ? ' Your official sample ballot shows which are yours.' : k < n ? ` Your address finds ${k} of them. Your official sample ballot shows all ${n}.` : '';
+    const tail = !look ? ' Your official sample ballot shows which are yours.' : k < n ? ` Your address finds ${k} of them. Your official sample ballot shows all ${n}.` : n > 1 ? ` Your address finds ${n === 2 ? 'both' : `all ${n}`}.` : '';
     return `<div class="addrbox"><p class="addr-n"><b>${n === 1 ? '1 race depends' : `${n} races depend`} on your address.</b>${tail}</p>
       ${S.ui.addrOpen ? addrHTML() : `<div class="row-btns">${look ? '<button class="mini dark" data-act="addr-open" data-fk="addr-open">Use my address</button>' : ''}${sbLink(!look)}</div>`}</div>`;
   }

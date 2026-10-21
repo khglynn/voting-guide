@@ -674,6 +674,29 @@ b, strong { font-weight: 600; }
 .tg[aria-checked="true"] span { background: var(--paper-green); border-color: var(--paper-green); }
 .tg[aria-checked="true"] span::after { left: 23px; background: var(--on-dusk); }
 
+/* ---------- Report a problem, Request a city (views/report.ts) ----------
+   The address form's fields in a sheet. It can come up over Full details, so it sits above the
+   reader, scrim and all. Inputs are 16px so a phone doesn't zoom in on them. */
+.scrim.report, .scrim-gone.report { z-index: 71; }
+.sheet-panel.report, .sheet-gone.report { z-index: 72; }
+.rp-form { display: grid; gap: 16px; }
+.rp-f label { display: block; font-size: 15px; line-height: 1.3; }
+.rp-opt { font-size: 13.5px; color: var(--muted); }
+.rp-h { font-size: 13.5px; color: var(--muted); line-height: 1.4; margin-top: 2px; }
+.rp-f input, .rp-f textarea { display: block; width: 100%; margin-top: 6px; min-height: 46px; padding: 0 10px; border: 1.5px solid var(--ink); background: var(--bone); border-radius: 2px; font-size: 16px; }
+.rp-f textarea { min-height: 104px; padding: 9px 10px; line-height: 1.4; resize: vertical; }
+.rp-f [aria-invalid="true"] { border-color: var(--clay); }
+.rp-form .rp-fine { margin-top: -4px; }
+.rp-form .bigbtn { margin-top: 0; }
+.rp-form .bigbtn[aria-disabled="true"] { opacity: .65; cursor: progress; }
+.rp-f [readonly] { color: var(--muted); border-color: var(--rule-2); }
+.rp-form .rp-alt { margin-top: -6px; text-align: center; }
+.rp-fail { padding: 8px 12px; background: var(--paper); border-left: 3px solid var(--clay); font-size: 14.5px; line-height: 1.45; }
+.rp-sent { padding: 6px 0 4px; font-size: 17px; }
+/* Where a sentence opens the sheet ("Send it to us.", "Ask Kevin.", Full details' "Report a problem
+   with this page."), the button reads as the link it replaced: inline, wrapping, no padding. */
+.pw-note .linkbtn, .notice .linkbtn, .rd .report .linkbtn { display: inline; min-height: 0; margin: 0; padding: 0; }
+
 /* ---------- full read ---------- */
 .reader, .reader-gone { position: fixed; inset: 0; z-index: 70; background-color: var(--bone); background-image: var(--tile); background-size: 256px; background-blend-mode: var(--tile-blend); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
 .reader-bar { position: sticky; top: 0; z-index: 2; background-color: var(--bone); background-image: var(--tile); background-size: 256px; background-blend-mode: var(--tile-blend); border-bottom: 1px solid var(--rule-2); display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 0 16px; min-height: 56px; }
@@ -840,7 +863,6 @@ b, strong { font-weight: 600; }
 .foot-acts { margin-top: 2px; }
 .how-bd > p { margin-top: 8px; }
 .how-bd > :first-child { margin-top: 12px; }
-.nv-report { text-decoration: none; }
 /* Its body growing open, and the one folding away (motion.ts grow, shrinkAway). */
 .how-bd.moving, .trust .gone { overflow: hidden; overflow: clip; overflow-anchor: none; }
 .gliding { overflow: hidden; overflow: clip; overflow-anchor: none; }

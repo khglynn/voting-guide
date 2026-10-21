@@ -16,7 +16,7 @@ import { verdict, type Verdict } from '../model/tally';
 import { canUndo } from '../model/bulk';
 import { FOUND_ONLY, addressKinds } from '../model/address';
 import { judgeBatch, judicialReview, judgesLead, judgesRule } from '../model/judges';
-import { ext, sampleBallot, isOpen, escP, leadRest, reportURL, HIDE } from './common';
+import { ext, sampleBallot, isOpen, escP, leadRest, reportAttrs, HIDE } from './common';
 import { lensSummary } from './lens';
 import { addrHTML } from './mast';
 import { openHTML, censusSettles } from './open';
@@ -593,7 +593,7 @@ export function ballotHeadHTML(): string {
       <p class="picks-line"><span>Endorsements: ${esc(lensSummary())}</span><button class="mini" data-act="picks" data-fk="picks-edit">Edit</button></p>
       ${filled}${addr}
       ${statewideOnly ? `<div class="statewide-note"><p>We only have statewide races for your area so far.</p>
-        <p class="row-btns">${sb ? `<a class="mini dark" href="${esc(sb.url)}" target="_blank" rel="noopener">Official sample ballot</a>` : ''}<a class="mini" href="${esc(reportURL('Please add my city'))}" target="_blank" rel="noopener">Ask for your city</a></p></div>` : ''}
+        <p class="row-btns">${sb ? `<a class="mini dark" href="${esc(sb.url)}" target="_blank" rel="noopener">Official sample ballot</a>` : ''}<button class="mini" ${reportAttrs({ city: true, fk: 'ask-city' })}>Ask for your city</button></p></div>` : ''}
     </div>
     ${headsHTML(headsUp('ballot'))}`;
 }
@@ -675,7 +675,7 @@ export function menuHTML(where: 'toc' | 'rail'): string {
     ${only}<ul class="nv-list nv-secs">
     ${secs}
     ${row('data-act="cheat"', 'cheat', 'My plan', '', ' nv-plan')}</ul>
-    <ul class="nv-list nv-end"><li><a class="nv nv-report" href="${esc(reportURL('The ballot page'))}" target="_blank" rel="noopener" data-fk="${where}-report"><span class="nv-t">Report a problem</span><span class="nv-n"></span>${ARROW}</a></li>
+    <ul class="nv-list nv-end"><li><button class="nv nv-report" ${reportAttrs({ what: 'The ballot page', fk: `${where}-report` })}><span class="nv-t">Report a problem</span><span class="nv-n"></span>${ARROW}</button></li>
     ${row('data-act="jump" data-to="how"', 'how', 'How this guide works', '', ' nv-how')}</ul>`;
 }
 export function tocSheetHTML(): string {

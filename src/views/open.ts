@@ -8,12 +8,13 @@ import { lineup, weighedIn, orderCandidates, type Lineup } from '../model/tally'
 import { candidateReview, judicialReview, judgesLead, surveyLines, surveySentence, pollsFor, raceRatings, hasRatings, type Review } from '../model/judges';
 import { seatLabel, cheatTitle, thresholdLabel } from '../model/labels';
 import { picksOnBallot } from '../model/lens';
-import { sourceLean, leanHTML, ext, clampP, escP, sampleBallot, isOpen, leadRest, wordsSrc, reportURL, paywallRowHTML } from './common';
+import { sourceLean, leanHTML, ext, clampP, escP, sampleBallot, isOpen, leadRest, wordsSrc, reportAttrs, paywallRowHTML } from './common';
 import { headsUp, headsHTML, addressCount } from './ledger';
 import { schoolOf } from '../model/address';
 
-/* "Report a problem" on a row: the form (see common.reportURL) prefilled with this row. */
-export const reportLink = (it: Item): string => reportURL(`${cheatTitle(it)} [${it.id}]`);
+/* "Report a problem" on a row and in its Full details: the report sheet, prefilled with this row (its
+   title, and its id for the form). */
+export const reportRowAttrs = (it: Item, fk: string): string => reportAttrs({ what: cheatTitle(it), tag: it.id, fk });
 
 // A pen tick, drawn rather than typeset (the same stroke as --pen-tick in styles.css).
 const CHECK = '<svg viewBox="0 0 26 24" aria-hidden="true" focusable="false"><path d="M4 13.6c1.6 1.1 3 2.8 4.1 5C11 12 15.4 6.6 22.4 2.6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
@@ -537,7 +538,7 @@ function footHTML(it: Item): string {
     s !== 'info' ? `<button class="mini quiet" data-act="skip" data-id="${esc(it.id)}" aria-pressed="${s === 'skipped'}" data-fk="sk-${esc(it.id)}">${s === 'skipped' ? 'Left blank. Undo' : 'Leave blank'}</button>` : '',
     decided && s !== 'skipped' ? `<button class="mini quiet" data-act="clear" data-id="${esc(it.id)}" data-fk="cl-${esc(it.id)}">${rcv ? 'Clear my ranking' : 'Clear my pick'}</button>` : '',
     noteOpen ? '' : `<button class="mini quiet" data-act="note" data-id="${esc(it.id)}">Add a note</button>`,
-    `<a class="mini quiet" href="${esc(reportLink(it))}" target="_blank" rel="noopener">Report a problem</a>`,
+    `<button class="mini quiet" ${reportRowAttrs(it, `rp-${it.id}`)}>Report a problem</button>`,
   ].filter(Boolean).join('');
   const auto = S.b.auto[it.id] && decided ? `<p class="filled">${esc(S.b.auto[it.id])}. <button class="linkbtn" data-act="clear" data-id="${esc(it.id)}">Clear it</button></p>` : '';
   return `${auto}<div class="ob-acts">${acts}</div>

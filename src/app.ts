@@ -184,7 +184,9 @@ async function loadBallot(st: string, placeIds: string[], zip: string, opts: Ope
   S.loadErr = null;
   S.retry = null;
   if (opts.door) { S.zip = zip; S.zipErr = ''; S.zipChoice = null; S.coverage = null; }
-  render(['mast']);
+  // Every region, not just the masthead: a ballot that was open (a save link pasted into its tab)
+  // leaves with its foot and bar, so the first page's own How row isn't painted beside them (Codex, Oct 21).
+  render();
   try {
     await ensureIndex();
     const [sb, ...pbs] = await Promise.all([getJSON<StateBundle>(`state-${st}.json`), ...placeIds.map((id) => getJSON<PlaceBundle>(`place-${id}.json`))]);

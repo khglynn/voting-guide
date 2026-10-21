@@ -270,7 +270,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await settle(page);
   check('How this guide works: its row opens it, focus kept on the row', (await page.getAttribute('#how [data-act="open"][data-k="how"]', 'aria-expanded')) === 'true' && (await focusedFk(page)) === 'how', await focusedFk(page));
   check('How this guide works: names the source for "Voting is underway in every state"', /“Voting is underway in every state”: Center for Election Innovation & Research\./.test(await text(page, '#how')) && !!(await page.$('#how a[href="https://electioninnovation.org/research/dates-for-2026-early-in-person-and-mail-voting/"]')));
-  check('How this guide works: ends with the build date, and points at the report row for mistakes', /^Data built \d{4}-\d{2}-\d{2}\. Not affiliated/.test(await text(page, '#how .how-bd > :last-child')) && /tap “Report a problem”, or use the row below\./.test(await text(page, '#how .how-bd')), await text(page, '#how .how-bd > :last-child'));
+  check('How this guide works: ends with the build date', /^Data built \d{4}-\d{2}-\d{2}\. Not affiliated/.test(await text(page, '#how .how-bd > :last-child')) && /tap “Report a problem”\./.test(await text(page, '#how .how-bd')), await text(page, '#how .how-bd > :last-child'));
   await tap(page, '#how [data-act="open"][data-k="how"]');
   await settle(page);
   check('How this guide works: the row closes it again', !(await page.$('#how .how-bd')) && !(await page.$('.trust .gone')) && (await page.getAttribute('#how [data-act="open"][data-k="how"]', 'aria-expanded')) === 'false');

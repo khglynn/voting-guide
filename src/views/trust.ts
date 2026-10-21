@@ -1,6 +1,6 @@
 /* The foot of every page, two quiet lines, the same wherever you are (Kevin, Oct 21: the first
-   cut had two heavy rows and a first page that differed; "less loud", one design): how many
-   cities and whose friends, with the coffee; then "How this guide works" (its text opens below,
+   cut had two heavy rows and a first page that differed; "less loud", one design): who it's built
+   for and in how many cities, with the coffee; then "How this guide works" (its text opens below,
    folded), the report form prefilled with the page and the place, and the same form to ask for
    a city. On the ballot and My plan the foot is its own region (#r-trust); on the share page it
    sits above the crowd (pass.ts); on the first page it is the small print under the pad (mast.ts),
@@ -27,7 +27,9 @@ export function trustHTML(inDoor = false): string {
   // The city count opens the list of places on the first page, where a new ballot starts; on a ballot
   // it is plain text (a place picked there would start over at the first page, as Change does).
   const count = `${n} ${n === 1 ? 'city' : 'cities'}`;
-  const cover = idx ? `Covers ${inDoor ? `<button class="linkbtn" data-act="open" data-k="${BROWSE_K}" aria-expanded="${isOpen(BROWSE_K)}" data-fk="browse">${count}</button>` : count} where ${kevinLink()}’s friends live.` : '';
+  // "Built for family and friends", not "where Kevin HG's friends live": the coffee right after names
+  // him already (Kevin, Oct 21, 3:10pm). The How text's "Made by Kevin HG" keeps the link to his site.
+  const cover = idx ? `Built for family and friends in ${inDoor ? `<button class="linkbtn" data-act="open" data-k="${BROWSE_K}" aria-expanded="${isOpen(BROWSE_K)}" data-fk="browse">${count}</button>` : count}.` : '';
   // The first page names itself even once a ZIP has loaded its ballot for the place line.
   const page = inDoor ? 'First page' : S.ui.view === 'cheat' ? 'My plan page' : S.ui.view === 'pass' ? 'Help friends vote page' : 'The ballot page';
   const report = b && !inDoor ? reportURL(page) : formURL(page, [b ? placeNames(b) : '', S.zip].filter(Boolean).join(', '));

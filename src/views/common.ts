@@ -28,9 +28,8 @@ export const HIDE = 'Hide races I’ve decided';
 export const SHOW_ENDS = 'Show endorsements';
 
 /* The credit: Kevin's name, linked to his site, and a thank-you coffee while that has a link. The
-   first page names him in its small print ("where Kevin HG’s friends live"); every other page ends
-   "Made by Kevin HG · Buy Kevin a thank-you coffee", the same words as the first page's (Kevin,
-   Oct 21), with only the coffee as the link. */
+   foot of every page ends its first line "Buy Kevin a thank-you coffee", with only the coffee as the
+   link; "How this guide works" ends "Made by Kevin HG", linked to his site (Kevin, Oct 21). */
 export const BUY_ME_A_COFFEE_URL = 'https://buymeacoffee.com/kevinhg';
 export const KEVIN_URL = 'https://kevinhg.com';
 export const kevinLink = (): string => ext(KEVIN_URL, 'Kevin HG');

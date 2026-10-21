@@ -627,12 +627,14 @@ export function barHTML(): string {
   const done = items.filter((i) => i.done).length;
   const pct = items.length ? Math.round((done / items.length) * 100) : 0;
   const rail = wide() ? `<nav class="rail screen-only" aria-label="Your ballot" data-keep="rail">${menuHTML('rail')}</nav>` : '';
+  // The gold of what you've decided runs along the bottom edge of the screen (Kevin, Oct 21: under
+  // the bar's torn top it hung in the air).
   return `${rail}<div class="foot screen-only" role="region" aria-label="Your progress">
-    <div class="bar" aria-hidden="true"><i style="width:${pct}%"></i></div>
     <div class="foot-in ends">
       <button class="menu-btn" data-act="toc" aria-haspopup="dialog" data-fk="bar-menu">${BURGER}<span class="bar-txt"><b>${done}</b> of ${items.length}<span class="vh"> decided</span></span></button>
       <button class="fcta" data-act="cheat" data-fk="bar-cheat">My plan</button>
-    </div></div>`;
+    </div>
+    <div class="bar" aria-hidden="true"><i style="width:${pct}%"></i></div></div>`;
 }
 
 /* ---------- the menu: a sheet under 1180px, a rail from there ----------
@@ -673,7 +675,8 @@ export function menuHTML(where: 'toc' | 'rail'): string {
     ${only}<ul class="nv-list nv-secs">
     ${secs}
     ${row('data-act="cheat"', 'cheat', 'My plan', '', ' nv-plan')}</ul>
-    <ul class="nv-list nv-end">${row('data-act="jump" data-to="how"', 'how', 'How this guide works', '', ' nv-how')}</ul>`;
+    <ul class="nv-list nv-end"><li><a class="nv nv-report" href="${esc(reportURL('The ballot page'))}" target="_blank" rel="noopener" data-fk="${where}-report"><span class="nv-t">Report a problem</span><span class="nv-n"></span>${ARROW}</a></li>
+    ${row('data-act="jump" data-to="how"', 'how', 'How this guide works', '', ' nv-how')}</ul>`;
 }
 export function tocSheetHTML(): string {
   return `<div class="scrim screen-only" data-act="sheet-close"></div>

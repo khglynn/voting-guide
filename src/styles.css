@@ -598,7 +598,9 @@ b, strong { font-weight: 600; }
    rising over the page; the bar's drop shadow follows the tear. */
 .foot::before { content: ""; position: absolute; left: 0; right: 0; top: -22px; height: 24px; pointer-events: none; background: inherit; background-blend-mode: inherit; background-position: 0 22px;
   -webkit-mask: var(--r-sheet) center top / 640px 100px repeat-x; mask: var(--r-sheet) center top / 640px 100px repeat-x; -webkit-mask-position: center -8px; mask-position: center -8px; }
-.foot .bar { height: 3px; } /* only the gold of what you've decided: no ruled track under the torn edge */
+/* Only the gold of what you've decided, no ruled track, along the bottom edge of the screen (Kevin,
+   Oct 21: under the torn top it hung in the air). The row of buttons keeps its safe-area room above it. */
+.foot .bar { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; }
 .foot .bar i { display: block; height: 100%; background: var(--gold); transition: width .3s ease; }
 .foot-in { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 8px; min-height: 64px; padding: 0 16px; max-width: 640px; margin: 0 auto; }
 .foot-in.two { grid-template-columns: 1fr 1fr; }
@@ -835,7 +837,11 @@ b, strong { font-weight: 600; }
   font-family: var(--f-display); font-size: 18px; font-weight: 600; line-height: 1.15; font-variation-settings: "wdth" 84; letter-spacing: .015em; color: var(--ink); }
 .how-bd > p { margin-top: 8px; }
 .how-bd > :first-child { margin-top: 10px; }
-.how-credit { margin-top: 6px; }
+.how-credit { margin-top: 10px; }
+/* The first page's How row sits inside its foot, over the small print. */
+.door-trust { padding-top: 4px; padding-bottom: 0; }
+.help-bd .row-btns { margin-top: 10px; }
+.nv-report { text-decoration: none; }
 /* Its body growing open, and the one folding away (motion.ts grow, shrinkAway). */
 .how-bd.moving, .trust .gone { overflow: hidden; overflow: clip; overflow-anchor: none; }
 .gliding { overflow: hidden; overflow: clip; overflow-anchor: none; }
@@ -847,7 +853,6 @@ b, strong { font-weight: 600; }
 
 /* ---------- views ---------- */
 body.v-cheat .plan, body.v-pass .plan, body.v-cheat #r-mast, body.v-pass #r-mast { display: none; }
-body:not(.v-ballot) #r-trust { display: none; }
 
 @media (min-width: 600px) {
   .place { font-size: 64px; }

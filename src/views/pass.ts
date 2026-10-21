@@ -10,6 +10,7 @@ import { S } from '../state';
 import { esc, fmtDate, todayISO } from '../util';
 import { clock, isMailState, nextStep } from '../model/plan';
 import { ext, isOpen } from './common';
+import { trustHTML } from './trust';
 
 /* Optional data from data/get-involved.json. Read defensively: any field may be missing. */
 interface GiItem { id?: string; label?: string; action?: string; url?: string; mission_quote?: { text?: string; source?: string } | null }
@@ -206,5 +207,5 @@ export function passHTML(): string {
     <ul class="checks">${WHO_ORDER.map((i) => who[i]).map(([k, l]) => { const on = S.b.ticks.includes(k); return `<li><button data-act="tick" data-k="${k}" aria-pressed="${on}" data-fk="tick-${k}"><span class="bx" aria-hidden="true"></span><span class="lb">${esc(l)}</span></button></li>`; }).join('')}</ul>
     ${waysHTML()}
     ${studyHTML()}
-  </div><div class="crowd" aria-hidden="true"></div></section>`;
+  </div>${trustHTML()}<div class="crowd" aria-hidden="true"></div></section>`;
 }

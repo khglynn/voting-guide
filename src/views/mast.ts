@@ -4,6 +4,7 @@ import type { Index } from '../types';
 import { S } from '../state';
 import { esc, fmtDate, todayISO } from '../util';
 import { ext, isOpen, askCityURL, formURL, kevinLink, coffeeLink } from './common';
+import { howRowHTML } from './trust';
 import { countyName } from './ledger';
 import { doorPicksHTML, placeLine } from './setup';
 import { stateName, tidyAddress } from '../geo';
@@ -176,16 +177,20 @@ function whereHTML(): string {
     ${addr}`;
 }
 
-/* The small print, one paragraph: how many cities, each one a tap away (the list opens below), whose
+/* The page's foot: the same "How this guide works" row every page ends with (trust.ts), over the
+   small print, one paragraph: how many cities, each one a tap away (the list opens below), whose
    friends they are (his name links to his site; Kevin, Oct 20: name him once), a way to ask for yours
-   through the report form (prefilled with the ZIP in the box), and the coffee link. */
+   through the report form (prefilled with the ZIP in the box), and the coffee link. The small print
+   already asks for your city, so the other pages' "Report a problem or request a city" row isn't
+   repeated here. */
 function creditsHTML(): string {
   const idx = S.index;
   const ask = `<a href="${esc(askCityURL(S.zip))}" target="_blank" rel="noopener" data-ask>Ask for yours</a>`;
   const k = 'browse';
   const n = idx ? cityCount(idx) : 0;
   const cover = idx ? `Covers <button class="linkbtn" data-act="open" data-k="${k}" aria-expanded="${isOpen(k)}" data-fk="browse">${n} ${n === 1 ? 'city' : 'cities'}</button> where ${kevinLink()}’s friends live. ` : '';
-  return `<p class="fine credits">${cover}${[ask, coffeeLink()].filter(Boolean).join(' · ')}</p>
+  return `<div class="trust door-trust" id="how">${howRowHTML()}</div>
+    <p class="fine credits">${cover}${[ask, coffeeLink()].filter(Boolean).join(' · ')}</p>
     ${idx && isOpen(k) ? browseHTML() : ''}`;
 }
 

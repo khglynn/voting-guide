@@ -27,15 +27,15 @@ export const HIDE = 'Hide races I’ve decided';
    ballot's head reads "Endorsements: Off". */
 export const SHOW_ENDS = 'Show endorsements';
 
-/* The credit: Kevin's name, linked to his site, and a thank-you coffee while that has a link (Kevin,
-   Oct 20: "Buy Kevin a thank-you coffee", the whole line the link). The first page names him in its
-   small print ("where Kevin HG’s friends live"); "How this guide works" ends with "Made by Kevin HG",
-   so its coffee line says "him". */
+/* The credit: Kevin's name, linked to his site, and a thank-you coffee while that has a link. The
+   first page names him in its small print ("where Kevin HG’s friends live"); every other page ends
+   "Made by Kevin HG · Buy Kevin a thank-you coffee", the same words as the first page's (Kevin,
+   Oct 21), with only the coffee as the link. */
 export const BUY_ME_A_COFFEE_URL = 'https://buymeacoffee.com/kevinhg';
 export const KEVIN_URL = 'https://kevinhg.com';
 export const kevinLink = (): string => ext(KEVIN_URL, 'Kevin HG');
-export const coffeeLink = (who = 'Kevin'): string => (BUY_ME_A_COFFEE_URL ? `Buy ${who} a ${ext(BUY_ME_A_COFFEE_URL, 'thank-you coffee')}` : ''); // only the coffee is the link (Kevin, Oct 21)
-export const creditHTML = (): string => [`Made by ${kevinLink()}`, coffeeLink('him')].filter(Boolean).join(' · ');
+export const coffeeLink = (): string => (BUY_ME_A_COFFEE_URL ? `Buy Kevin a ${ext(BUY_ME_A_COFFEE_URL, 'thank-you coffee')}` : '');
+export const creditHTML = (): string => [`Made by ${kevinLink()}`, coffeeLink()].filter(Boolean).join(' · ');
 
 /* ---------- paywalled sources (Kevin, Oct 19) ----------
    A paper whose endorsements sit behind a paywall we couldn't read: the picks we only saw

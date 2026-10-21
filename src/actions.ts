@@ -7,7 +7,7 @@ import { status, sectionOf, rankMax, ordinal, chosenIds, entriesBySection, pageW
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
 import { render, renderRow, renderSection, renderSummaries, renderOff, renderLens, flushLens, markBehind, renderBallot, renderAddr, rowEl, scrollRowIntoView, rowTop, holdRow, opensLow, anchored, $ } from './render';
 import { growOpen, inkRow, followFold, glideTo, land, stopGlide, grow, shrinkAway, collapseRow, finishCollapse, glide } from './motion';
-import { HOW_K } from './views/trust';
+import { HOW_K, HELP_K } from './views/trust';
 import { openBallot, openChosen, go, openReader, runAddress, reopenAddr, useMatch, toDoor, showBallot, rechoose, openSaved, fillWhy } from './app';
 import { judgeBatch } from './model/judges';
 import { planAgree, planParty, planJudges, planSetup, applyFills, undoFills, emptyPlan, touchUndo, type Plan } from './model/bulk';
@@ -227,7 +227,7 @@ A.jump = (d) => {
     return;
   }
   if (d.to === 'how') {
-    if (!S.ui.open.has(HOW_K)) toggleHow(true, false);
+    if (!S.ui.open.has(HOW_K)) toggleFold(HOW_K, true, false);
     glideTo($('#how'), 12, () => land($('#how')));
     focusFk('how');
     return;
@@ -243,18 +243,19 @@ A.jump = (d) => {
   glideTo($(`#sec-${sec}`), 0, () => land($(`#sec-${sec}`)));
   focusFk(`sec-${sec}`);
 };
-/* "How this guide works", folded at the bottom of the ballot: its row opens it in place and closes
-   it, the button staying where it is. From the menu (jump "how") it opens at once, so the glide
-   knows how far the page now goes, and the glide and the mark are the motion. */
-function toggleHow(open = !S.ui.open.has(HOW_K), move = true): void {
-  const old = $('#how .how-bd');
+/* The foot's folded rows ("How this guide works", "Report a problem or request a city"): a row opens
+   its body in place and closes it, the button staying where it is. From the menu (jump "how") it
+   opens at once, so the glide knows how far the page now goes, and the glide and the mark are the
+   motion. The foot lives in a different region on each page (trust.ts), so repaint that one. */
+function toggleFold(k: string, open = !S.ui.open.has(k), move = true): void {
+  const old = $(`#${k}-bd`);
   const h = old ? old.offsetHeight : 0;
-  if (open) S.ui.open.add(HOW_K); else S.ui.open.delete(HOW_K);
-  render(['trust']);
+  if (open) S.ui.open.add(k); else S.ui.open.delete(k);
+  render([S.view !== 'ballot' ? 'mast' : S.ui.view === 'pass' ? 'pass' : 'trust']);
   if (!move) return;
-  focusFk('how');
-  if (open) grow($('#how .how-bd'));
-  else shrinkAway($('#how .how-h'), old, h);
+  focusFk(k);
+  if (open) grow($(`#${k}-bd`));
+  else shrinkAway($(`#${k}-h`), old, h);
 }
 A.page = (d) => { S.ui.page[d.id!] = Number(d.v); renderRow(d.id!); $(`[data-fk="pg-${CSS.escape(d.id!)}"]`)?.focus({ preventScroll: true }); };
 A.others = (d) => { const k = d.id!; S.ui.others.has(k) ? S.ui.others.delete(k) : S.ui.others.add(k); renderRow(k); };
@@ -731,7 +732,7 @@ A['reader-close'] = () => {
 };
 A.open = (d, el) => {
   const k = d.k!;
-  if (k === HOW_K) { toggleHow(); return; }
+  if (k === HOW_K || k === HELP_K) { toggleFold(k); return; }
   S.ui.open.has(k) ? S.ui.open.delete(k) : S.ui.open.add(k);
   if (k === 'off') { glide(['#r-off'], () => renderOff()); return; }
   const row = el.closest<HTMLElement>('.row[data-item]');

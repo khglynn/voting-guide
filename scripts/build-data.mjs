@@ -430,6 +430,78 @@ for (const f of listJson('places')) {
   });
 }
 
+/* ---------- district maps ----------
+   data/maps/{area}/{kind}.topojson, the boundaries (written by scripts/maps/pull.mjs), and
+   {kind}.json, its record: source, dates, the places whose ballots read it, and what it settles.
+   A map that fails a check here is skipped and reported like any other file; the app never asks
+   for one that isn't listed. Each place bundle lists its maps (`maps`), and the boundaries are
+   copied to public/data/maps/{area}/{kind}.topo.json (a .json name, so the host compresses it),
+   fetched only after an address lookup on that ballot. */
+const MAP_FIELDS = ['kind', 'name', 'title', 'places', 'source_url', 'source_org', 'fetched', 'settles', 'features'];
+const placeMaps = new Map(); // place id -> [bundle entries]
+const mapCopies = []; // [source path, published path]
+const okRegex = (s) => { try { new RegExp(s, 'i'); return true; } catch { return false; } };
+function checkMap(area, kind, meta, topo) {
+  const miss = MAP_FIELDS.filter((k) => meta[k] == null);
+  if (miss.length) return `missing ${miss.join(', ')}`;
+  if (meta.kind !== kind) return `kind is "${meta.kind}" in a file named ${kind}`;
+  if (!/^[a-z0-9-]+$/.test(kind) || !/^[a-z0-9-]+$/.test(area)) return 'area and kind must be lowercase letters, digits and dashes';
+  if (!isStr(meta.name) || !isStr(meta.title) || !isStr(meta.source_org)) return 'name, title and source_org must be text';
+  if (!safeUrl(meta.source_url)) return 'source_url is not an http(s) URL';
+  if (!isDate(meta.fetched)) return `fetched "${meta.fetched}" is not a YYYY-MM-DD date`;
+  if (meta.layer_dated != null && !isDate(meta.layer_dated)) return `layer_dated "${meta.layer_dated}" is not a YYYY-MM-DD date`;
+  if (!Array.isArray(meta.places) || !meta.places.length || !meta.places.every(isStr)) return 'places must list at least one place id';
+  if (!Array.isArray(meta.settles)) return 'settles must be a list of rules';
+  if (!meta.settles.length && !isStr(meta.shows)) return 'settles nothing and shows nothing';
+  for (const r of meta.settles) {
+    if (!r || !isStr(r.office) || !okRegex(r.office)) return `a rule's office is not a usable regex: ${JSON.stringify(r)}`;
+    if (r.scope != null && (!isStr(r.scope) || !okRegex(r.scope))) return `a rule's scope is not a usable regex: ${JSON.stringify(r)}`;
+    if (!isStr(r.district) || !/\{\w+\}/.test(r.district)) return `a rule's district names no property to fill in: ${JSON.stringify(r)}`;
+  }
+  if (meta.shows != null && !isStr(meta.shows)) return 'shows must be text';
+  // The boundaries: one TopoJSON object named for the kind, one polygon per feature, each with a
+  // label and every property a rule or the shows line fills in.
+  if (!topo || topo.type !== 'Topology' || !Array.isArray(topo.arcs) || !topo.objects || !topo.objects[kind]) return `the .topojson has no "${kind}" object`;
+  const geoms = topo.objects[kind].geometries || [];
+  if (geoms.length !== meta.features) return `the record says ${meta.features} features, the map has ${geoms.length}`;
+  const want = new Set(['label', ...[...meta.settles.map((r) => r.district), meta.shows || ''].flatMap((t) => [...t.matchAll(/\{(\w+)\}/g)].map((m) => m[1]))]);
+  for (const g of geoms) {
+    if (g.type !== 'Polygon' && g.type !== 'MultiPolygon') return `a feature is a ${g.type}, not a polygon`;
+    const p = g.properties || {};
+    const gone = [...want].filter((k) => p[k] == null || String(p[k]).trim() === '');
+    if (gone.length) return `feature ${p.label ?? '(no label)'} has no ${gone.join(', ')}`;
+  }
+  return null;
+}
+const MAPS_DIR = path.join(DATA, 'maps');
+if (fs.existsSync(MAPS_DIR)) {
+  for (const area of fs.readdirSync(MAPS_DIR).sort()) {
+    if (!fs.statSync(path.join(MAPS_DIR, area)).isDirectory()) continue;
+    for (const f of listJson(path.join('maps', area))) {
+      const kind = path.basename(f, '.json');
+      const meta = readJson(f);
+      if (!meta) continue;
+      const topoRel = path.join('maps', area, `${kind}.topojson`);
+      let topo = null;
+      try { topo = JSON.parse(fs.readFileSync(path.join(DATA, topoRel), 'utf8')); } catch (e) { report.skippedFiles.push({ file: topoRel, why: `missing or not valid JSON: ${e.message.slice(0, 120)}` }); continue; }
+      const why = checkMap(area, kind, meta, topo);
+      if (why) { report.skippedFiles.push({ file: f, why: `district map: ${why}` }); continue; }
+      const unknown = meta.places.filter((id) => !places.has(id));
+      if (unknown.length) { report.skippedFiles.push({ file: f, why: `district map names places the guide doesn't have: ${unknown.join(', ')}` }); continue; }
+      const file = `maps/${area}/${kind}.topo.json`;
+      const bytes = fs.statSync(path.join(DATA, topoRel)).size;
+      mapCopies.push([topoRel, file]);
+      const entry = {
+        kind, file, bytes, name: meta.name.trim(), title: meta.title.trim(), county: str(meta.county),
+        settles: meta.settles.map((r) => ({ office: r.office, ...(r.scope ? { scope: r.scope } : {}), district: r.district })),
+        shows: str(meta.shows), source_url: safeUrl(meta.source_url), source_org: meta.source_org.trim(),
+        layer_dated: meta.layer_dated || null, fetched: meta.fetched,
+      };
+      for (const id of meta.places) placeMaps.set(id, [...(placeMaps.get(id) || []), entry]);
+    }
+  }
+}
+
 /* ---------- endorsers ---------- */
 const alias = (id) => CONFIG.endorserAliases[id] || id;
 const endorserVersions = new Map(); // id -> [{rec, file}]
@@ -674,7 +746,8 @@ for (const [id, p] of places) {
   const sw = statewideFileIds.get(p.state) || new Set();
   const local = p.order.filter((x) => !sw.has(x));
   const b = bundleFor(local, id);
-  const bundle = { ...p, file: undefined, local, ...b };
+  const pm = placeMaps.get(id) || [];
+  const bundle = { ...p, file: undefined, local, ...b, ...(pm.length ? { maps: pm } : {}) };
   sizes[`place-${id}.json`] = write(`place-${id}.json`, bundle);
   index.places[id] = { label: p.label, state: p.state, counties: p.counties, local_count: local.length };
   index.states[p.state].places.push(id);
@@ -699,9 +772,19 @@ if (fs.existsSync(path.join(DATA, 'get-involved.json'))) {
   else warn('get-involved.json is not an object; skipped it');
 }
 
+// The district maps, each once however many places read it.
+for (const [from, to] of mapCopies) {
+  fs.mkdirSync(path.dirname(path.join(OUT, to)), { recursive: true });
+  fs.copyFileSync(path.join(DATA, from), path.join(OUT, to));
+  sizes[to] = fs.statSync(path.join(OUT, to)).size;
+}
+// What each place's ballot reads after a lookup, and its total, for the size budget (about 150 KB a place).
+report.maps = Object.fromEntries([...placeMaps].map(([id, ms]) => [id, { maps: ms.map((m) => m.file), bytes: ms.reduce((a, m) => a + m.bytes, 0) }]));
+
 report.counts = {
   states: states.size, places: places.size, contests: contests.size, measures: measures.size,
   endorsers: endorsers.size, endorsements: endorsementByKey.size, zips: Object.keys(index.zips).length,
+  maps: mapCopies.length,
 };
 report.sizes = sizes;
 fs.writeFileSync(path.join(OUT, 'build-report.json'), JSON.stringify(report, null, 2));
@@ -711,6 +794,7 @@ const kb = (n) => `${(n / 1024).toFixed(0)}KB`;
 console.log(`build-data: ${Object.entries(report.counts).map(([k, v]) => `${v} ${k}`).join(', ')}`);
 console.log(`  bundles: ${Object.entries(sizes).map(([k, v]) => `${k} ${kb(v)}`).join(', ')}`);
 console.log(`  linked measures: ${report.linkedMeasures.map((g) => g.join(' + ')).join('; ') || 'none'}`);
+if (Object.keys(report.maps).length) console.log(`  district maps: ${Object.entries(report.maps).map(([id, m]) => `${id} ${m.maps.length} (${kb(m.bytes)})`).join(', ')}`);
 if (report.skippedFiles.length) { console.log(`  SKIPPED FILES (${report.skippedFiles.length}):`); report.skippedFiles.forEach((s) => console.log(`    ${s.file}: ${s.why}`)); }
 if (report.skippedRecords.length) console.log(`  skipped records: ${report.skippedRecords.length} (see public/data/build-report.json)`);
 if (report.warnings.length) console.log(`  warnings: ${report.warnings.length} (see public/data/build-report.json)`);

@@ -154,6 +154,7 @@
   "settles": [
     {
       "office": "^Austin ISD Trustee$",
+      "scope": "\\btrustee District \\d",
       "district": "District {label}"
     }
   ]

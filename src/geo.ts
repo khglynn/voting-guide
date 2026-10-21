@@ -45,6 +45,11 @@ export interface GeoResult {
   lower: number | null;      // state house
   zip?: string | null;       // the ZIP Census matched (its ZCTA layer, else the end of the matched address)
   schools?: string[];        // its school districts, as the Census names them ("Austin Independent School District")
+  /* Where the Census put the address, and its 2020 block's interior point: the two witnesses the
+     district maps are checked at (model/maps.ts). Kept in memory for this lookup only, never stored,
+     never sent anywhere. */
+  point?: { lon: number; lat: number } | null;
+  block?: { lon: number; lat: number } | null;
 }
 
 const STATE_FIPS: Record<string, string> = {
@@ -149,6 +154,9 @@ export function parseCensus(data: any): GeoResult[] {
     const place = layer(/Incorporated Places/);
     const zcta = layer(/ZIP Code Tabulation/);
     const matched = String((m && m.matchedAddress) || '');
+    // A lon/lat pair the maps can use: finite, and on the planet.
+    const ll = (x: unknown, y: unknown) => { const lon = Number(x), lat = Number(y); return Number.isFinite(lon) && Number.isFinite(lat) && Math.abs(lon) <= 180 && Math.abs(lat) <= 90 && (lon !== 0 || lat !== 0) ? { lon, lat } : null; };
+    const blk = layer(/^2020 Census Blocks$/) || layer(/Census Blocks/);
     const zipAt = matched.match(/(\d{5})(?:-\d{4})?\s*$/);
     const r: GeoResult = {
       matched,
@@ -161,6 +169,8 @@ export function parseCensus(data: any): GeoResult[] {
       // Unified, or elementary and secondary where a state splits them.
       schools: Object.keys(g).filter((k) => /School Districts/.test(k)).flatMap((k) => (g[k] || []).map((x: any) => String(x.NAME || x.BASENAME || ''))).filter(Boolean),
       zip: zcta && /^\d{5}$/.test(String(zcta.ZCTA5 || zcta.BASENAME || '')) ? String(zcta.ZCTA5 || zcta.BASENAME) : zipAt ? zipAt[1] : null,
+      point: m && m.coordinates ? ll(m.coordinates.x, m.coordinates.y) : null,
+      block: blk ? ll(blk.INTPTLON, blk.INTPTLAT) : null,
     };
     if (!out.some((x) => tidyAddress(x.matched) === tidyAddress(r.matched))) out.push(r);
   }

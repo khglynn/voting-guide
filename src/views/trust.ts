@@ -19,21 +19,26 @@ export function cityCount(idx: Pick<Index, 'places'>): number {
   return new Set(Object.entries(idx.places).map(([id, p]) => (p.state === 'DC' ? 'DC' : /^nyc-/.test(id) ? 'NYC' : id))).size;
 }
 
+const placeNames = (b: NonNullable<typeof S.ballot>): string => (b.places.length ? b.places.map((p) => p.label).join(' / ') : b.stateName);
 export function trustHTML(inDoor = false): string {
   const idx = S.index;
   const b = S.ballot;
   const n = idx ? cityCount(idx) : 0;
-  const cover = idx ? `Covers <button class="linkbtn" data-act="open" data-k="${BROWSE_K}" aria-expanded="${isOpen(BROWSE_K)}" data-fk="browse">${n} ${n === 1 ? 'city' : 'cities'}</button> where ${kevinLink()}’s friends live.` : '';
-  const page = !b ? 'First page' : S.ui.view === 'cheat' ? 'My plan page' : S.ui.view === 'pass' ? 'Help friends vote page' : 'The ballot page';
-  const report = b ? reportURL(page) : formURL(page, S.zip);
+  // The city count opens the list of places on the first page, where a new ballot starts; on a ballot
+  // it is plain text (a place picked there would start over at the first page, as Change does).
+  const count = `${n} ${n === 1 ? 'city' : 'cities'}`;
+  const cover = idx ? `Covers ${inDoor ? `<button class="linkbtn" data-act="open" data-k="${BROWSE_K}" aria-expanded="${isOpen(BROWSE_K)}" data-fk="browse">${count}</button>` : count} where ${kevinLink()}’s friends live.` : '';
+  // The first page names itself even once a ZIP has loaded its ballot for the place line.
+  const page = inDoor ? 'First page' : S.ui.view === 'cheat' ? 'My plan page' : S.ui.view === 'pass' ? 'Help friends vote page' : 'The ballot page';
+  const report = b && !inDoor ? reportURL(page) : formURL(page, [b ? placeNames(b) : '', S.zip].filter(Boolean).join(', '));
   const links = [
     `<button class="linkbtn" id="how-h" data-act="open" data-k="${HOW_K}" aria-expanded="${isOpen(HOW_K)}" data-fk="how">How this guide works</button>`,
     `<a href="${esc(report)}" target="_blank" rel="noopener" data-fk="help-report">Report a problem</a>`,
-    `<a href="${esc(askCityURL(b ? S.b.zip : S.zip))}" target="_blank" rel="noopener" data-fk="help-city">Request a city</a>`,
+    `<a href="${esc(askCityURL(b && !inDoor ? S.b.zip : S.zip))}" target="_blank" rel="noopener" data-fk="help-city"${inDoor ? ' data-ask' : ''}>Request a city</a>`,
     coffeeLink(),
   ].filter(Boolean).join(' · ');
   return `<footer class="trust${inDoor ? '' : ' wrap'}" id="how"><p class="fine foot-line">${[cover, links].filter(Boolean).join(' ')}</p>
-    ${idx && isOpen(BROWSE_K) ? browseHTML(idx) : ''}
+    ${inDoor && idx && isOpen(BROWSE_K) ? browseHTML(idx) : ''}
     ${isOpen(HOW_K) ? `<div class="how-bd" id="how-bd">${howBodyHTML()}</div>` : ''}
   </footer>`;
 }

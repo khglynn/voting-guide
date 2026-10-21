@@ -27,7 +27,8 @@ const html: Record<Region, () => string> = {
   ballot: () => (shown() && S.ui.view === 'ballot' ? ballotHTML() : ''),
   cheat: () => (shown() && S.ui.view === 'cheat' ? cheatSectionHTML() : ''),
   pass: () => (shown() && S.ui.view === 'pass' ? passHTML() : ''),
-  trust: () => (S.ui.view === 'ballot' ? trustHTML() : ''),
+  // The foot of the ballot and of My plan; the share page draws it above its crowd (pass.ts).
+  trust: () => (shown() && S.ui.view !== 'pass' ? trustHTML() : ''),
   bar: () => (shown() ? barHTML() : ''),
   sheet: () => {
     if (!S.ballot) return '';

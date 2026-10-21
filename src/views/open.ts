@@ -256,8 +256,8 @@ function wordsLine(k: Candidate): string {
 /* Write-in candidates fold into one line when there are two or more, so the real choice isn't
    pushed off the screen; one you picked always stays in view. */
 const isWriteIn = (k: Candidate): boolean => k.parties.includes('Write-in') || /^write-?in$/i.test(k.party || '');
-function listHTML(c: Contest, l: Lineup): string {
-  const cands = orderCandidates(c, l);
+function listHTML(c: Contest, l: Lineup, only?: Candidate[]): string {
+  const cands = only || orderCandidates(c, l);
   const chosen = (k: Candidate) => (isRCV(c) ? ranksOf(c.id).includes(k.name) : isMultiSeat(c) ? S.b.picks[`${c.id}|${k.name}`] === 'PICK' : S.b.picks[c.id] === k.name);
   const row = (k: Candidate) => `<li class="cl${chosen(k) ? ' on' : ''}">
       <span class="cl-n"><b>${esc(k.name)}</b><span class="py">${esc([partyText(c, k), k.incumbent ? 'incumbent' : ''].filter(Boolean).join(', '))}</span>${backedBy(c, k, l)}${wordsLine(k)}</span>
@@ -298,11 +298,16 @@ function raceHTML(c: Contest): string {
   const w = weighedIn(l);
   const rcv = isRCV(c);
   const multi = isMultiSeat(c);
-  const useGrid = !rcv && w.length > 0 && c.candidates.length <= 6;
+  // Write-ins don't take up the grid's room: Texas's governor and senate races are three names and
+  // four write-ins each, and read as a list while every other race read as the grid (Kevin, Oct 21).
+  // The write-ins fold under the grid as they do under a list.
+  const real = c.candidates.filter((k) => !isWriteIn(k));
+  const useGrid = !rcv && w.length > 0 && real.length > 0 && real.length <= 6;
   let body = '';
   let shown: Candidate[] = c.candidates;
   if (useGrid) {
-    const cands = orderCandidates(c, l);
+    const ordered = orderCandidates(c, l);
+    const cands = ordered.filter((k) => !isWriteIn(k));
     const pages = Math.ceil(cands.length / PAGE);
     const mineIdx = cands.findIndex((k) => (multi ? S.b.picks[`${c.id}|${k.name}`] === 'PICK' : S.b.picks[c.id] === k.name));
     const page = Math.min(S.ui.page[c.id] ?? (mineIdx >= 0 ? Math.floor(mineIdx / PAGE) : 0), pages - 1);
@@ -315,6 +320,8 @@ function raceHTML(c: Contest): string {
       const others = cands.slice(next * PAGE, next * PAGE + PAGE);
       body += `<button class="pager" data-act="page" data-id="${esc(c.id)}" data-v="${next}" data-fk="pg-${esc(c.id)}">${ARROW_LEFT_OR_RIGHT(next > page)}<span>${next > page ? `See the other ${others.length}: ${esc(listNames(others))}` : `Back to ${esc(listNames(others))}`}</span></button>`;
     }
+    const wi = ordered.filter(isWriteIn);
+    if (wi.length) body += listHTML(c, l, wi);
   } else {
     if (!w.length) body += noneLineHTML(c, l);
     if (rcv) body += rankPanelHTML(c);

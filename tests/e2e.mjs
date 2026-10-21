@@ -190,6 +190,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   const cities = new Set(Object.entries(await page.evaluate(() => fetch('/data/index.json').then((r) => r.json()).then((i) => i.places))).map(([id, p]) => (p.state === 'DC' ? 'DC' : /^nyc-/.test(id) ? 'NYC' : id))).size;
   check('First page: the small print counts cities from the index (DC and NYC count once) and names Kevin once, with the coffee link in the same paragraph', fine.length === 1 && fine[0] === `Covers ${cities} cities where Kevin HG’s friends live. Ask for yours · Buy Kevin a thank-you coffee`, `${fine.join(' / ')} (index says ${cities})`);
   check('First page: Kevin HG links to kevinhg.com, and only "thank-you coffee" links out (Kevin, Oct 21)', (await text(page, '.door-foot .fine a[href="https://kevinhg.com"]')) === 'Kevin HG' && (await text(page, '.door-foot .fine a[href="https://buymeacoffee.com/kevinhg"]')) === 'thank-you coffee');
+  check('First page: the same "How this guide works" row sits over the small print, folded', (await text(page, '.door-foot #how-h')) === 'How this guide works' && (await page.getAttribute('.door-foot [data-k="how"]', 'aria-expanded')) === 'false' && !(await page.$('.door-foot #help-h')));
   check('First page: nothing in all caps', (await upperCased(page)).length === 0);
   const pile = await page.$eval('.pile', async (p) => {
     const img = p.querySelector('img'); img.loading = 'eager'; await img.decode().catch(() => {});
@@ -261,15 +262,38 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('"Show my ballot": the ballot, nothing filled with the switch off', /^0 of \d+ decided$/.test(await text(page, '.bar-txt')) && !(await page.$('.toast:not([hidden])')), await text(page, '.bar-txt'));
   check('"Show my ballot": the sources chosen on the first page', (await text(page, '.picks-line span')) === 'Endorsements: Newspapers and guides, progressive groups', await text(page, '.picks-line span'));
   check('"Show my ballot": the ballot is saved once it shows', /austin-tx/.test((await savedVG(page)) || ''));
-  check('How this guide works: one folded row at the bottom of the ballot', (await text(page, '#how')) === 'How this guide works' && (await page.getAttribute('#how [data-act="open"][data-k="how"]', 'aria-expanded')) === 'false' && !(await page.$('#how .how-bd')), await text(page, '#how'));
+  check('How this guide works: one folded row at the bottom of the ballot', (await text(page, '#how-h')) === 'How this guide works' && (await page.getAttribute('#how [data-act="open"][data-k="how"]', 'aria-expanded')) === 'false' && !(await page.$('#how .how-bd')), await text(page, '#how-h'));
+  check('The foot: the report row and the credit sit under it, the credit worded as the first page’s, with only the coffee linked (Kevin, Oct 21)', (await text(page, '#help-h')) === 'Report a problem or request a city' && (await text(page, '#how .how-credit')) === 'Made by Kevin HG · Buy Kevin a thank-you coffee'
+    && (await text(page, '#how .how-credit a[href="https://kevinhg.com"]')) === 'Kevin HG' && (await text(page, '#how .how-credit a[href="https://buymeacoffee.com/kevinhg"]')) === 'thank-you coffee' && (await page.$$('#how .how-credit a')).length === 2, `${await text(page, '#help-h')} | ${await text(page, '#how .how-credit')}`);
+  check('The bar: the gold line runs along its bottom edge', (await page.$eval('.foot', (e) => e.lastElementChild && e.lastElementChild.className)) === 'bar');
   await tap(page, '#how [data-act="open"][data-k="how"]');
   await settle(page);
   check('How this guide works: its row opens it, focus kept on the row', (await page.getAttribute('#how [data-act="open"][data-k="how"]', 'aria-expanded')) === 'true' && (await focusedFk(page)) === 'how', await focusedFk(page));
   check('How this guide works: names the source for "Voting is underway in every state"', /“Voting is underway in every state”: Center for Election Innovation & Research\./.test(await text(page, '#how')) && !!(await page.$('#how a[href="https://electioninnovation.org/research/dates-for-2026-early-in-person-and-mail-voting/"]')));
-  check('How this guide works: ends with the credit, Kevin HG linked to his site, and a thank-you coffee', (await text(page, '#how .how-bd > :last-child')) === 'Made by Kevin HG · Buy him a thank-you coffee' && (await text(page, '#how .how-credit a[href="https://kevinhg.com"]')) === 'Kevin HG' && !!(await page.$('#how .how-credit a[href="https://buymeacoffee.com/kevinhg"]')), await text(page, '#how .how-bd > :last-child'));
+  check('How this guide works: ends with the build date', /^Data built \d{4}-\d{2}-\d{2}\. Not affiliated/.test(await text(page, '#how .how-bd > :last-child')) && /tap “Report a problem”\./.test(await text(page, '#how .how-bd')), await text(page, '#how .how-bd > :last-child'));
   await tap(page, '#how [data-act="open"][data-k="how"]');
   await settle(page);
   check('How this guide works: the row closes it again', !(await page.$('#how .how-bd')) && !(await page.$('.trust .gone')) && (await page.getAttribute('#how [data-act="open"][data-k="how"]', 'aria-expanded')) === 'false');
+  // The report row: the form prefilled with this page and this ballot's place, and the same form to ask for a city.
+  await tap(page, '#how [data-act="open"][data-k="help"]');
+  await settle(page);
+  const helpReport = (await page.getAttribute('[data-fk="help-report"]', 'href')) || '';
+  const helpCity = (await page.getAttribute('[data-fk="help-city"]', 'href')) || '';
+  check('Report a problem or request a city: opens in place with the form prefilled for this page and place, and the city form with the ZIP', (await focusedFk(page)) === 'help' && /entry\.90887649=The\+ballot\+page/.test(helpReport) && /entry\.628621310=Austin%2C\+78704/.test(helpReport) && /entry\.90887649=Please\+add\+my\+city/.test(helpCity) && /entry\.628621310=78704/.test(helpCity), `${helpReport.slice(-80)} | ${helpCity.slice(-60)}`);
+  await tap(page, '#how [data-act="open"][data-k="help"]');
+  await settle(page);
+  check('Report a problem or request a city: the row closes it again', !(await page.$('#help-bd')) && (await page.getAttribute('#how [data-act="open"][data-k="help"]', 'aria-expanded')) === 'false');
+  // The menu names it too, right above "How this guide works".
+  await menu(page);
+  check('The menu: "Report a problem" is a link to the form, right above "How this guide works"', /viewform\?/.test((await page.getAttribute('.sheet-panel .nv-report', 'href')) || '') && (await page.$eval('.sheet-panel .nv-end', (ul) => [...ul.querySelectorAll('.nv-t')].map((e) => e.textContent).join('|'))) === 'Report a problem|How this guide works');
+  await tap(page, '.sheet-panel [data-fk="sheet-x"]');
+  await settle(page);
+  // Texas's governor race: three names and four write-ins read as the grid, the write-ins folded under it (Kevin, Oct 21).
+  await tap(page, '#i-tx-governor .row-hd');
+  await settle(page);
+  check('Governor (TX): the grid, with the write-ins folded under it', !!(await page.$('#i-tx-governor .grid.c3')) && /^\d+ write-in candidates:/.test(await text(page, '#i-tx-governor .wi-fold')) && (await page.$$('#i-tx-governor .clist > li')).length === 1, await text(page, '#i-tx-governor .wi-fold'));
+  await tap(page, '#i-tx-governor .row-hd');
+  await settle(page);
   await page.goBack();
   await page.waitForSelector('#zip');
   await page.waitForSelector('.door-place', { timeout: 15000 });
@@ -547,6 +571,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await page.waitForSelector('#cheat');
   check('Denver: the cheat sheet keeps the note', /Read the Blue Book first/.test(await text(page, '#cheat')));
   check('Denver: the cheat sheet ends, then offers Help friends vote as its own step', !(await page.$('#pass')) && !!(await page.$('#cheat [data-act="view"][data-v="pass"]')));
+  check('My plan: ends with the same foot as the ballot', (await text(page, '#r-trust #how-h')) === 'How this guide works' && (await text(page, '#r-trust #help-h')) === 'Report a problem or request a city' && (await text(page, '#r-trust .how-credit')) === 'Made by Kevin HG · Buy Kevin a thank-you coffee');
   await page.emulateMedia({ media: 'print' });
   const vis = await page.evaluate(() => ({ app: getComputedStyle(document.getElementById('app')).display, print: getComputedStyle(document.getElementById('r-print')).display, rows: document.querySelectorAll('#r-print tbody tr').length }));
   check('Denver: print shows only the cheat sheet', vis.app === 'none' && vis.print !== 'none' && vis.rows > 10, JSON.stringify(vis));
@@ -852,6 +877,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await tap(page, '.foot [data-act="cheat"]');
   await tap(page, '.foot [data-act="view"][data-v="pass"]');
   await page.waitForSelector('#pass');
+  check('Share page: the same foot sits above the crowd', (await text(page, '#pass #how-h')) === 'How this guide works' && (await page.$eval('#pass .trust', (e) => e.nextElementSibling && e.nextElementSibling.className)) === 'crowd' && !(await page.$('#r-trust .trust')));
   await shot(page, '10b-share');
   check('Share page: the lede asks you to make the message your own', (await text(page, '#pass .lede')) === 'Copy a message, make it your own, and send it. Ask each person to text three more.', await text(page, '#pass .lede'));
   check('Share page: "Share the guide" comes right after the lede', (await page.$eval('#pass .lede', (e) => e.nextElementSibling && e.nextElementSibling.dataset.act)) === 'share-guide' && (await text(page, '[data-act="share-guide"]')) === 'Share the guide');
@@ -962,8 +988,8 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('Menu: the switch reads "Hide races I’ve decided"', (await text(page, '.sheet-panel [data-act="only"]')) === 'Hide races I’ve decided', await text(page, '.sheet-panel [data-act="only"]'));
   const rows = await page.$$eval('.sheet-panel .nv', (els) => els.map((e) => [e.querySelector('.nv-t').textContent.trim(), e.querySelector('.nv-n').textContent.trim()]));
   const names = rows.map((r) => r[0]);
-  check('Menu: your next step, Quick picks, each section on the page, My plan, then How this guide works', names[0] === 'Your next step' && names[1] === 'Quick picks' && names.slice(-2).join() === 'My plan,How this guide works'
-    && JSON.stringify(names.slice(2, -2)) === JSON.stringify(await page.$$eval('.ledger .sec .sec-t', (els) => els.map((e) => e.textContent.trim()))), names.join(' | '));
+  check('Menu: your next step, Quick picks, each section on the page, My plan, Report a problem, then How this guide works', names[0] === 'Your next step' && names[1] === 'Quick picks' && names.slice(-3).join() === 'My plan,Report a problem,How this guide works'
+    && JSON.stringify(names.slice(2, -3)) === JSON.stringify(await page.$$eval('.ledger .sec .sec-t', (els) => els.map((e) => e.textContent.trim()))), names.join(' | '));
   const left = rows.reduce((n, [, r]) => n + Number((r.match(/^(\d+) left$/) || [])[1] || 0), 0);
   check('Menu: what each section has left adds up to the bar', left === m0 - n0 && rows.every(([, r]) => r === '' || r === 'Done' || /^\d+ left$/.test(r)), `${left} vs ${m0 - n0}`);
   const first = await page.evaluate(() => { const r = document.querySelector('.ledger .row[data-undecided]'); return r && (r.dataset.item || `q:${r.dataset.q}`); });

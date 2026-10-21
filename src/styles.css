@@ -23,7 +23,7 @@
   --pen-tick: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 24'%3E%3Cpath d='M4 13.6c1.6 1.1 3 2.8 4.1 5C11 12 15.4 6.6 22.4 2.6' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   --press: url(data:image/png;base64,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);
   --tile: url(/paper/stock.webp); --tile-blend: multiply;
-  --r-plan-top: url(/paper/plan-top.webp); --r-plan-bot: url(/paper/plan-bot.webp); --r-sheet: url(/paper/sheet.webp); --r-crowd: url(/paper/crowd.webp);
+  --r-plan-top: url(/paper/plan-top.webp); --r-plan-bot: url(/paper/plan-bot.webp); --r-sheet: url(/paper/sheet.webp); --r-sheet-bot: url(/paper/sheet-bot.webp); --r-crowd: url(/paper/crowd.webp);
   --r-strip-a: url(/paper/strip-a.webp); --r-strip-b: url(/paper/strip-b.webp); --r-strip-c: url(/paper/strip-c.webp); --r-strip-d: url(/paper/strip-d.webp);
   --scrim: rgba(31, 38, 35, .45);
   --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", sans-serif;
@@ -42,7 +42,7 @@
     --paper-green: #385C52; --print: #A9CBB9; --tick: #E2B444;
     --lie: 0 .5px 0 rgba(0, 0, 0, .45), 0 1.5px 2px rgba(0, 0, 0, .3);
     --tile: url(/paper/stock-dark.webp); --tile-blend: overlay;
-    --r-plan-top: url(/paper/dark/plan-top.webp); --r-plan-bot: url(/paper/dark/plan-bot.webp); --r-sheet: url(/paper/dark/sheet.webp); --r-crowd: url(/paper/dark/crowd.webp);
+    --r-plan-top: url(/paper/dark/plan-top.webp); --r-plan-bot: url(/paper/dark/plan-bot.webp); --r-sheet: url(/paper/dark/sheet.webp); --r-sheet-bot: url(/paper/dark/sheet-bot.webp); --r-crowd: url(/paper/dark/crowd.webp);
     --r-strip-a: url(/paper/dark/strip-a.webp); --r-strip-b: url(/paper/dark/strip-b.webp); --r-strip-c: url(/paper/dark/strip-c.webp); --r-strip-d: url(/paper/dark/strip-d.webp);
     --scrim: rgba(0, 0, 0, .6); color-scheme: dark;
   }
@@ -56,7 +56,7 @@
   --paper-green: #385C52; --print: #A9CBB9; --tick: #E2B444;
   --lie: 0 .5px 0 rgba(0, 0, 0, .45), 0 1.5px 2px rgba(0, 0, 0, .3);
   --tile: url(/paper/stock-dark.webp); --tile-blend: overlay;
-  --r-plan-top: url(/paper/dark/plan-top.webp); --r-plan-bot: url(/paper/dark/plan-bot.webp); --r-sheet: url(/paper/dark/sheet.webp); --r-crowd: url(/paper/dark/crowd.webp);
+  --r-plan-top: url(/paper/dark/plan-top.webp); --r-plan-bot: url(/paper/dark/plan-bot.webp); --r-sheet: url(/paper/dark/sheet.webp); --r-sheet-bot: url(/paper/dark/sheet-bot.webp); --r-crowd: url(/paper/dark/crowd.webp);
   --r-strip-a: url(/paper/dark/strip-a.webp); --r-strip-b: url(/paper/dark/strip-b.webp); --r-strip-c: url(/paper/dark/strip-c.webp); --r-strip-d: url(/paper/dark/strip-d.webp);
   --scrim: rgba(0, 0, 0, .6); color-scheme: dark;
 }
@@ -70,7 +70,7 @@
 /* The page keeps its own place when rows open, close and repaint (render.ts anchored, holdRow).
    The browser's own scroll anchoring loses its anchor when a row is rebuilt, then follows something
    below and throws the page hundreds of pixels, so it is off. */
-html { -webkit-text-size-adjust: 100%; scroll-padding-top: 12px; overflow-anchor: none; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 12px; overflow-anchor: none; overscroll-behavior-y: none; }
 html, body { margin: 0; }
 body {
   background-color: var(--bone); background-image: var(--tile); background-size: 256px; background-blend-mode: var(--tile-blend); color: var(--ink);
@@ -236,7 +236,7 @@ b, strong { font-weight: 600; }
 .pbtn.gold { background: #F3EDDD; color: #1F2623; box-shadow: var(--lie); }
 .pbtn.line { border: 1.25px solid var(--on-dusk-2); color: var(--on-dusk); }
 .plan-acts .pbtn:only-child { grid-column: 1 / -1; }
-.plan-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; margin-top: 8px; border-top: 1px solid var(--dusk-rule); }
+.plan-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; margin-top: 18px; border-top: 1px solid var(--dusk-rule); }
 .whatif-tog { min-height: 46px; display: flex; align-items: center; font-size: 15px; color: var(--on-dusk); text-align: left; }
 /* The arrow follows the last word, so it never floats in the middle of a wrapped line. */
 .whatif-tog .nw { white-space: nowrap; }
@@ -592,8 +592,13 @@ b, strong { font-weight: 600; }
 .empty b { color: var(--ink); }
 
 /* ---------- bottom bar ---------- */
-.foot { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; background-color: var(--bone); background-image: var(--tile); background-size: 256px; background-blend-mode: var(--tile-blend); border-top: 1.5px solid var(--ink); padding-bottom: env(safe-area-inset-bottom, 0px); }
-.foot .bar { height: 3px; background: var(--rule); }
+.foot { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; background-color: var(--bone); background-image: var(--tile); background-size: 256px; background-blend-mode: var(--tile-blend); padding-bottom: env(safe-area-inset-bottom, 0px);
+  filter: drop-shadow(0 -1px 1.5px rgba(31, 38, 35, .22)); }
+/* Its top edge is torn paper like the sheets' (Kevin, Oct 21), cut from the same render's outline and
+   rising over the page; the bar's drop shadow follows the tear. */
+.foot::before { content: ""; position: absolute; left: 0; right: 0; top: -22px; height: 24px; pointer-events: none; background: inherit; background-blend-mode: inherit; background-position: 0 22px;
+  -webkit-mask: var(--r-sheet) center top / 640px 100px repeat-x; mask: var(--r-sheet) center top / 640px 100px repeat-x; -webkit-mask-position: center -8px; mask-position: center -8px; }
+.foot .bar { height: 3px; } /* only the gold of what you've decided: no ruled track under the torn edge */
 .foot .bar i { display: block; height: 100%; background: var(--gold); transition: width .3s ease; }
 .foot-in { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 8px; min-height: 64px; padding: 0 16px; max-width: 640px; margin: 0 auto; }
 .foot-in.two { grid-template-columns: 1fr 1fr; }
@@ -714,7 +719,7 @@ b, strong { font-weight: 600; }
 /* The pad's sheet, for My plan and the first page's steps 1 and 2: the rendered top, a fill that
    continues its light, the desk's grain over both, and ink that stays dark because the paper stays
    light in dark mode. */
-#cheat .cheat, .pad { position: relative; isolation: isolate; margin-top: 0; padding: 40px 18px 20px; color: var(--ink);
+#cheat .cheat, .pad { position: relative; isolation: isolate; margin-top: 0; padding: 40px 18px 46px; color: var(--ink);
   --ink: #1F2623; --ink-2: #3B433F; --muted: #5C645F; --faint: #6E756F; --rule: rgba(31, 38, 35, .16); --print: #2E5A50; --gold-ink: #855F06; --dusk: #2E5A50; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) #cheat .cheat, :root:not([data-theme="light"]) .pad { --muted: #4A524D; --faint: #535B56; --gold-ink: #6E4F05; } }
 :root[data-theme="dark"] #cheat .cheat, :root[data-theme="dark"] .pad { --muted: #4A524D; --faint: #535B56; --gold-ink: #6E4F05; }
@@ -724,16 +729,21 @@ b, strong { font-weight: 600; }
   --clay: #8E4C2C; --gold-wash: #F4EACB; color-scheme: light; }
 .pad.door { margin-top: 14px; }
 #cheat .cs-table td.undecided { color: var(--muted); }
-#cheat .sheet-top, #cheat .sheet-fill, .pad > .sheet-top, .pad > .sheet-fill { position: absolute; left: 0; right: 0; pointer-events: none; }
+#cheat .sheet-top, #cheat .sheet-fill, #cheat .sheet-bot, .pad > .sheet-top, .pad > .sheet-fill, .pad > .sheet-bot { position: absolute; left: 0; right: 0; pointer-events: none; }
 #cheat .sheet-top, .pad > .sheet-top { top: 0; height: 100px; overflow: hidden; overflow: clip; z-index: -1; }
 #cheat .sheet-top::before, .pad > .sheet-top::before { content: ""; position: absolute; left: 50%; top: 0; width: 640px; height: 100px; margin-left: -320px; background: var(--r-sheet) center / 640px 100px no-repeat; }
-#cheat .sheet-fill, .pad > .sheet-fill { top: 30px; bottom: 0; z-index: -2; background: var(--sheet-fill) center / 640px 100% no-repeat, var(--sheet-paper); box-shadow: var(--lie); clip-path: inset(0 -6px -6px -6px); }
+#cheat .sheet-fill, .pad > .sheet-fill { top: 30px; bottom: 30px; z-index: -2; background: var(--sheet-fill) center / 640px 100% no-repeat, var(--sheet-paper); box-shadow: var(--lie); clip-path: inset(0 -6px -6px -6px); }
+/* The sheet's torn bottom (Kevin, Oct 21: "just a straight line"): the same render turned over
+   (sheet-bot.webp, sheet.webp flipped top to bottom so its light still meets the fill), with a soft
+   shadow under the tear. */
+#cheat .sheet-bot, .pad > .sheet-bot { bottom: 0; height: 100px; overflow: hidden; overflow: clip; z-index: -1; }
+#cheat .sheet-bot::before, .pad > .sheet-bot::before { content: ""; position: absolute; left: 50%; bottom: 0; width: 640px; height: 100px; margin-left: -320px; background: var(--r-sheet-bot) center / 640px 100px no-repeat; filter: drop-shadow(0 1.5px 1.5px rgba(31, 38, 35, .16)); }
 /* The desk's paper grain over the whole sheet, its torn top cut to the render's outline and the fill
    below it, as one layer so both darken alike and no seam shows where they meet. The light stock in
    both modes, since the sheet stays light paper. */
 #cheat .cheat::after, .pad::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: url(/paper/stock.webp) 0 0 / 256px; mix-blend-mode: multiply;
-  -webkit-mask: var(--r-sheet) center top / 640px 100px no-repeat, linear-gradient(#000 0 0) 0 100px / 100% calc(100% - 100px) no-repeat;
-  mask: var(--r-sheet) center top / 640px 100px no-repeat, linear-gradient(#000 0 0) 0 100px / 100% calc(100% - 100px) no-repeat; }
+  -webkit-mask: var(--r-sheet) center top / 640px 100px no-repeat, linear-gradient(#000 0 0) 0 100px / 100% calc(100% - 200px) no-repeat, var(--r-sheet-bot) center bottom / 640px 100px no-repeat;
+  mask: var(--r-sheet) center top / 640px 100px no-repeat, linear-gradient(#000 0 0) 0 100px / 100% calc(100% - 200px) no-repeat, var(--r-sheet-bot) center bottom / 640px 100px no-repeat; }
 @media print { #cheat .cheat::after, .pad::after { display: none; } }
 .cheat-head { padding: 6px 0 14px; }
 .cheat-head .kick { text-wrap: balance; }
@@ -742,6 +752,8 @@ b, strong { font-weight: 600; }
 /* Step 4: the same marker as the first page's steps, beside the title and clear of its ink specks. */
 .cs-step { margin-top: 4px; }
 .cs-step h2 { margin-top: 0; }
+.pass-step { margin-top: 8px; align-items: baseline; } /* the badge with the heading's first line when it wraps */
+.pass-step h2 { margin-top: 0; }
 .remind { margin-top: 12px; padding: 10px 12px; background: var(--dusk); color: var(--on-dusk); font-size: 14.5px; line-height: 1.4; border-radius: 2px; display: grid; gap: 4px; }
 /* On the sheet's own paper, which stays light in dark mode: no fill of its own, the sheet's dusk rule. */
 .cheat-head .save-go { margin-top: 8px; padding: 6px 12px; font-size: 14.5px; line-height: 1.4; background: none; border-left-color: var(--dusk); }
@@ -826,6 +838,7 @@ b, strong { font-weight: 600; }
 .how-credit { margin-top: 6px; }
 /* Its body growing open, and the one folding away (motion.ts grow, shrinkAway). */
 .how-bd.moving, .trust .gone { overflow: hidden; overflow: clip; overflow-anchor: none; }
+.gliding { overflow: hidden; overflow: clip; overflow-anchor: none; }
 .trust .gone { pointer-events: none; }
 #how.land .how-h { position: relative; isolation: isolate; }
 #how.land .how-h::before { content: ""; position: absolute; top: 0; bottom: 0; left: -6px; right: -6px; z-index: -1; background: var(--dusk-tint); opacity: 0; animation: land 1s ease-out; pointer-events: none; }

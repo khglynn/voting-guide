@@ -40,3 +40,5 @@ How it is used in CSS:
 - Print hides all of it.
 
 The method, what failed on the way, and the design rules behind it (paper, one printed ink, pen) are written up in the workbench repo: `claude-plans/2026-10-19-paper-skin/METHOD.md` and the `real-materials` skill.
+
+**The sheet's torn bottom** (`sheet-bot.webp`, light and dark, Oct 21) is `sheet.webp` flipped top to bottom, not a render of its own, so its light still meets the fill: `python3 -c "from PIL import Image; [Image.open(f'public/paper/{d}sheet.webp').transpose(Image.FLIP_TOP_BOTTOM).save(f'public/paper/{d}sheet-bot.webp', 'WEBP', quality=90, method=6) for d in ('', 'dark/')]"`. Rerun it after re-rendering the sheet.

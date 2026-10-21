@@ -7,7 +7,7 @@ import { status, sectionOf, rankMax, ordinal, chosenIds, entriesBySection, pageW
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
 import { render, renderRow, renderSection, renderSummaries, renderOff, renderLens, flushLens, markBehind, renderBallot, renderAddr, rowEl, scrollRowIntoView, rowTop, holdRow, opensLow, anchored, $ } from './render';
 import { growOpen, inkRow, followFold, glideTo, land, stopGlide, grow, shrinkAway, collapseRow, finishCollapse, glide } from './motion';
-import { HOW_K, HELP_K } from './views/trust';
+import { HOW_K } from './views/trust';
 import { openBallot, openChosen, go, openReader, runAddress, reopenAddr, useMatch, toDoor, showBallot, rechoose, openSaved, fillWhy } from './app';
 import { judgeBatch } from './model/judges';
 import { planAgree, planParty, planJudges, planSetup, applyFills, undoFills, emptyPlan, touchUndo, type Plan } from './model/bulk';
@@ -243,8 +243,8 @@ A.jump = (d) => {
   glideTo($(`#sec-${sec}`), 0, () => land($(`#sec-${sec}`)));
   focusFk(`sec-${sec}`);
 };
-/* The foot's folded rows ("How this guide works", "Report a problem or request a city"): a row opens
-   its body in place and closes it, the button staying where it is. From the menu (jump "how") it
+/* The foot's "How this guide works": its link opens the text in place and closes it, the link
+   staying where it is. From the menu (jump "how") it
    opens at once, so the glide knows how far the page now goes, and the glide and the mark are the
    motion. The foot lives in a different region on each page (trust.ts), so repaint that one. */
 function toggleFold(k: string, open = !S.ui.open.has(k), move = true): void {
@@ -255,7 +255,8 @@ function toggleFold(k: string, open = !S.ui.open.has(k), move = true): void {
   if (!move) return;
   focusFk(k);
   if (open) grow($(`#${k}-bd`));
-  else shrinkAway($(`#${k}-h`), old, h);
+  // The husk folds away right where the body was: after the list of places when it is open, else after the foot's line.
+  else shrinkAway($(`#${k} .browse-list`) || $(`#${k}-h`)?.closest<HTMLElement>('.foot-line') || $(`#${k}-h`), old, h);
 }
 A.page = (d) => { S.ui.page[d.id!] = Number(d.v); renderRow(d.id!); $(`[data-fk="pg-${CSS.escape(d.id!)}"]`)?.focus({ preventScroll: true }); };
 A.others = (d) => { const k = d.id!; S.ui.others.has(k) ? S.ui.others.delete(k) : S.ui.others.add(k); renderRow(k); };
@@ -742,7 +743,7 @@ A['whatif-sit'] = (d) => {
 };
 A.open = (d, el) => {
   const k = d.k!;
-  if (k === HOW_K || k === HELP_K) { toggleFold(k); return; }
+  if (k === HOW_K) { toggleFold(k); return; }
   S.ui.open.has(k) ? S.ui.open.delete(k) : S.ui.open.add(k);
   if (k === 'off') { glide(['#r-off'], () => renderOff()); return; }
   const row = el.closest<HTMLElement>('.row[data-item]');

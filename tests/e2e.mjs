@@ -186,11 +186,11 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('First page: before a ZIP, the fill switch says what it does', (await text(page, '[data-act="setup-fill"] small')) === 'Fills the races where they agree. Races where picks split stay open.', await text(page, '[data-act="setup-fill"] small'));
   check('First page: "Use my address for a more exact ballot", on one line at phone width', (await text(page, '.front [data-act="addr-open"]')) === 'Use my address for a more exact ballot'
     && (await page.$eval('.front [data-act="addr-open"]', (e) => { const r = document.createRange(); r.selectNodeContents(e); return new Set([...r.getClientRects()].map((x) => Math.round(x.top))).size; })) === 1, await text(page, '.front [data-act="addr-open"]'));
-  const fine = await page.$$eval('.front .door-foot > .fine', (els) => els.map((e) => e.textContent.replace(/\s+/g, ' ').trim()));
+  const fine = await page.$$eval('.front .door-foot .foot-line', (els) => els.map((e) => e.textContent.replace(/\s+/g, ' ').trim()));
   const cities = new Set(Object.entries(await page.evaluate(() => fetch('/data/index.json').then((r) => r.json()).then((i) => i.places))).map(([id, p]) => (p.state === 'DC' ? 'DC' : /^nyc-/.test(id) ? 'NYC' : id))).size;
-  check('First page: the small print counts cities from the index (DC and NYC count once) and names Kevin once, with the coffee link in the same paragraph', fine.length === 1 && fine[0] === `Covers ${cities} cities where Kevin HG’s friends live. Ask for yours · Buy Kevin a thank-you coffee`, `${fine.join(' / ')} (index says ${cities})`);
+  check('First page: the small print is two lines: the cities and the coffee, then the three things you can do (Kevin, Oct 21)', fine.length === 2 && fine[0] === `Covers ${cities} cities where Kevin HG’s friends live. Buy Kevin a thank-you coffee.` && fine[1] === 'How this guide works · Report a problem · Request a city', `${fine.join(' / ')} (index says ${cities})`);
   check('First page: Kevin HG links to kevinhg.com, and only "thank-you coffee" links out (Kevin, Oct 21)', (await text(page, '.door-foot .fine a[href="https://kevinhg.com"]')) === 'Kevin HG' && (await text(page, '.door-foot .fine a[href="https://buymeacoffee.com/kevinhg"]')) === 'thank-you coffee');
-  check('First page: the same "How this guide works" row sits over the small print, folded', (await text(page, '.door-foot #how-h')) === 'How this guide works' && (await page.getAttribute('.door-foot [data-k="how"]', 'aria-expanded')) === 'false' && !(await page.$('.door-foot #help-h')));
+  check('First page: "How this guide works" is folded in the same line, and the two forms are plain links', (await text(page, '.door-foot #how-h')) === 'How this guide works' && (await page.getAttribute('.door-foot [data-k="how"]', 'aria-expanded')) === 'false' && /entry\.90887649=First\+page/.test((await page.getAttribute('.door-foot [data-fk="help-report"]', 'href')) || '') && /Please\+add\+my\+city/.test((await page.getAttribute('.door-foot [data-fk="help-city"]', 'href')) || ''));
   check('First page: nothing in all caps', (await upperCased(page)).length === 0);
   const pile = await page.$eval('.pile', async (p) => {
     const img = p.querySelector('img'); img.loading = 'eager'; await img.decode().catch(() => {});
@@ -263,26 +263,21 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('"Show my ballot": the sources chosen on the first page', (await text(page, '.picks-line span')) === 'Endorsements: Newspapers and guides, progressive groups', await text(page, '.picks-line span'));
   check('"Show my ballot": the ballot is saved once it shows', /austin-tx/.test((await savedVG(page)) || ''));
   check('How this guide works: one folded row at the bottom of the ballot', (await text(page, '#how-h')) === 'How this guide works' && (await page.getAttribute('#how [data-act="open"][data-k="how"]', 'aria-expanded')) === 'false' && !(await page.$('#how .how-bd')), await text(page, '#how-h'));
-  check('The foot: the report row and the credit sit under it, the credit worded as the first page’s, with only the coffee linked (Kevin, Oct 21)', (await text(page, '#help-h')) === 'Report a problem or request a city' && (await text(page, '#how .how-credit')) === 'Made by Kevin HG · Buy Kevin a thank-you coffee'
-    && (await text(page, '#how .how-credit a[href="https://kevinhg.com"]')) === 'Kevin HG' && (await text(page, '#how .how-credit a[href="https://buymeacoffee.com/kevinhg"]')) === 'thank-you coffee' && (await page.$$('#how .how-credit a')).length === 2, `${await text(page, '#help-h')} | ${await text(page, '#how .how-credit')}`);
+  check('The foot: one quiet line, the first page’s words, with Kevin HG and only the coffee linked out (Kevin, Oct 21)', /^Covers \d+ cities where Kevin HG’s friends live\. Buy Kevin a thank-you coffee\. How this guide works · Report a problem · Request a city$/.test((await page.$$eval('#how .foot-line', (els) => els.map((e) => e.textContent.replace(/\s+/g, ' ').trim()))).join(' '))
+    && (await text(page, '#how .foot-line a[href="https://kevinhg.com"]')) === 'Kevin HG' && (await text(page, '#how .foot-line a[href="https://buymeacoffee.com/kevinhg"]')) === 'thank-you coffee' && (await page.$$('#how .foot-line a')).length === 4, await text(page, '#how'));
   check('The bar: the gold line runs along its bottom edge', (await page.$eval('.foot', (e) => e.lastElementChild && e.lastElementChild.className)) === 'bar');
   await tap(page, '#how [data-act="open"][data-k="how"]');
   await settle(page);
   check('How this guide works: its row opens it, focus kept on the row', (await page.getAttribute('#how [data-act="open"][data-k="how"]', 'aria-expanded')) === 'true' && (await focusedFk(page)) === 'how', await focusedFk(page));
   check('How this guide works: names the source for "Voting is underway in every state"', /“Voting is underway in every state”: Center for Election Innovation & Research\./.test(await text(page, '#how')) && !!(await page.$('#how a[href="https://electioninnovation.org/research/dates-for-2026-early-in-person-and-mail-voting/"]')));
-  check('How this guide works: ends with the build date', /^Data built \d{4}-\d{2}-\d{2}\. Not affiliated/.test(await text(page, '#how .how-bd > :last-child')) && /tap “Report a problem”\./.test(await text(page, '#how .how-bd')), await text(page, '#how .how-bd > :last-child'));
+  check('How this guide works: ends with the build date and the maker', /^Data built \d{4}-\d{2}-\d{2}\. Made by Kevin HG\. Not affiliated/.test(await text(page, '#how .how-bd > :last-child')) && /tap “Report a problem”\./.test(await text(page, '#how .how-bd')), await text(page, '#how .how-bd > :last-child'));
   await tap(page, '#how [data-act="open"][data-k="how"]');
   await settle(page);
   check('How this guide works: the row closes it again', !(await page.$('#how .how-bd')) && !(await page.$('.trust .gone')) && (await page.getAttribute('#how [data-act="open"][data-k="how"]', 'aria-expanded')) === 'false');
-  // The report row: the form prefilled with this page and this ballot's place, and the same form to ask for a city.
-  await tap(page, '#how [data-act="open"][data-k="help"]');
-  await settle(page);
-  const helpReport = (await page.getAttribute('[data-fk="help-report"]', 'href')) || '';
-  const helpCity = (await page.getAttribute('[data-fk="help-city"]', 'href')) || '';
-  check('Report a problem or request a city: opens in place with the form prefilled for this page and place, and the city form with the ZIP', (await focusedFk(page)) === 'help' && /entry\.90887649=The\+ballot\+page/.test(helpReport) && /entry\.628621310=Austin%2C\+78704/.test(helpReport) && /entry\.90887649=Please\+add\+my\+city/.test(helpCity) && /entry\.628621310=78704/.test(helpCity), `${helpReport.slice(-80)} | ${helpCity.slice(-60)}`);
-  await tap(page, '#how [data-act="open"][data-k="help"]');
-  await settle(page);
-  check('Report a problem or request a city: the row closes it again', !(await page.$('#help-bd')) && (await page.getAttribute('#how [data-act="open"][data-k="help"]', 'aria-expanded')) === 'false');
+  // The two forms, plain links: prefilled with this page and this ballot's place, and the city form with the ZIP.
+  const helpReport = (await page.getAttribute('#how [data-fk="help-report"]', 'href')) || '';
+  const helpCity = (await page.getAttribute('#how [data-fk="help-city"]', 'href')) || '';
+  check('Report a problem and Request a city: the form prefilled for this page and place, and the city form with the ZIP', /entry\.90887649=The\+ballot\+page/.test(helpReport) && /entry\.628621310=Austin%2C\+78704/.test(helpReport) && /entry\.90887649=Please\+add\+my\+city/.test(helpCity) && /entry\.628621310=78704/.test(helpCity), `${helpReport.slice(-80)} | ${helpCity.slice(-60)}`);
   // The menu names it too, right above "How this guide works".
   await menu(page);
   check('The menu: "Report a problem" is a link to the form, right above "How this guide works"', /viewform\?/.test((await page.getAttribute('.sheet-panel .nv-report', 'href')) || '') && (await page.$eval('.sheet-panel .nv-end', (ul) => [...ul.querySelectorAll('.nv-t')].map((e) => e.textContent).join('|'))) === 'Report a problem|How this guide works');
@@ -577,7 +572,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await page.waitForSelector('#cheat');
   check('Denver: the cheat sheet keeps the note', /Read the Blue Book first/.test(await text(page, '#cheat')));
   check('Denver: the cheat sheet ends, then offers Help friends vote as its own step', !(await page.$('#pass')) && !!(await page.$('#cheat [data-act="view"][data-v="pass"]')));
-  check('My plan: ends with the same foot as the ballot', (await text(page, '#r-trust #how-h')) === 'How this guide works' && (await text(page, '#r-trust #help-h')) === 'Report a problem or request a city' && (await text(page, '#r-trust .how-credit')) === 'Made by Kevin HG · Buy Kevin a thank-you coffee');
+  check('My plan: ends with the same foot as the ballot', (await text(page, '#r-trust #how-h')) === 'How this guide works' && /entry\.90887649=My\+plan\+page/.test((await page.getAttribute('#r-trust [data-fk="help-report"]', 'href')) || '') && /Buy Kevin a thank-you coffee\.$/.test(await text(page, '#r-trust .foot-line')));
   await page.emulateMedia({ media: 'print' });
   const vis = await page.evaluate(() => ({ app: getComputedStyle(document.getElementById('app')).display, print: getComputedStyle(document.getElementById('r-print')).display, rows: document.querySelectorAll('#r-print tbody tr').length }));
   check('Denver: print shows only the cheat sheet', vis.app === 'none' && vis.print !== 'none' && vis.rows > 10, JSON.stringify(vis));

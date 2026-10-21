@@ -14,7 +14,7 @@ import { esc, hash, plural } from '../util';
 import { rowTitle, measureTag, courtGroup, cleanOffice, optionLabel } from '../model/labels';
 import { verdict, type Verdict } from '../model/tally';
 import { canUndo } from '../model/bulk';
-import { FOUND_ONLY, addressKinds } from '../model/address';
+import { FOUND_ONLY, CHECKING, addressKinds } from '../model/address';
 import { judgeBatch, judicialReview, judgesLead, judgesRule } from '../model/judges';
 import { ext, sampleBallot, isOpen, escP, leadRest, reportAttrs, HIDE } from './common';
 import { lensSummary } from './lens';
@@ -578,9 +578,10 @@ function addrBoxHTML(): string {
   const none = note === FOUND_ONLY;
   // What the district maps said beyond the races they set, for this visit: the voting precinct, a line
   // they didn't guess at, a map that didn't load (S.ui.addrMaps).
-  const mapLines = S.ui.addrMaps.map((t) => `<p class="addr-map">${esc(t)}</p>`).join('');
+  const mapLines = S.ui.addrMaps.map((t) => `<p class="addr-map"${t === CHECKING ? ' data-pending' : ''}>${esc(t)}</p>`).join('');
   if (none && !n) return found || mapLines || S.ui.addrOpen ? `<div class="addrbox">${found}${mapLines}${S.ui.addrOpen ? addrHTML() : ''}</div>` : '';
-  const left = n ? rest(n) : '';
+  // While the maps are still on their way, the races they'll settle aren't the sample ballot's yet.
+  const left = n && !S.ui.addrMapsPending ? rest(n) : '';
   const filledLine = S.ui.addrFilled ? `<p class="addr-fill">${esc(S.ui.addrFilled)}</p>` : '';
   const after = S.ui.addrOpen ? addrHTML() : (none || n) && sb ? `<div class="row-btns">${sbLink(true)}</div>` : '';
   return `<div class="addrbox">${found}${none ? '' : `<p class="addr-set">${esc(note)}</p>`}${mapLines}${filledLine}${left}${after}</div>`;

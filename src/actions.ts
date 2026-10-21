@@ -480,6 +480,7 @@ A.notmine = (d) => {
   // A race your address put on your ballot stays (model/address.ts).
   const ids = d.all ? [...b.mayApply].filter((id) => scope(b.byId.get(id)) === scope(it) && !(S.b.mine || []).includes(id)) : [d.id!];
   ids.forEach((id) => { if (!S.b.notMine.includes(id)) S.b.notMine.push(id); });
+  S.b.addrSet = (S.b.addrSet || []).filter((k) => !ids.includes(k)); // yours now, not the address's
   if (S.ui.row && ids.includes(S.ui.row)) S.ui.row = null;
   const sec = sectionOf(it);
   glide([`#sec-${sec}`, '#r-off'], () => anchored(() => renderSection(sec)));
@@ -493,6 +494,7 @@ A['notmine-oth'] = () => {
   const b = B();
   const ids = [...b.mayApply].filter((id) => { const it = b.byId.get(id); return !!it && it.kind === 'contest' && sectionOf(it) === 'school' && !b.groupOf[id]; });
   ids.forEach((id) => { if (!S.b.notMine.includes(id)) S.b.notMine.push(id); });
+  S.b.addrSet = (S.b.addrSet || []).filter((k) => !ids.includes(k));
   if (S.ui.row && ids.includes(S.ui.row)) S.ui.row = null;
   S.ui.unfolded.delete('school|oth');
   anchored(() => renderSection('school'));
@@ -503,6 +505,7 @@ A['notmine-oth'] = () => {
 /* "It's on my ballot", from the "Not on your ballot" list: back in its section, where the page goes. */
 A['notmine-undo'] = (d) => {
   S.b.notMine = S.b.notMine.filter((x) => x !== d.id);
+  S.b.addrSet = (S.b.addrSet || []).filter((k) => k !== d.id); // your answer now: a corrected address leaves it be
   const sec = sectionOf(B().byId.get(d.id!)!);
   // Back among the other school districts' races, their fold stays open so the race doesn't vanish.
   if (sec === 'school') S.ui.unfolded.add(OTH_KEY);

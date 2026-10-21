@@ -9,8 +9,8 @@ import { toast, hideToast } from './util';
 import { render, renderBallot, renderAddr, anchored, $ } from './render';
 import { setInvolved, type GetInvolved } from './views/pass';
 import { planAgree, applyFills, planParty, planSetup, forgetUndo, fillStands, canUndo } from './model/bulk';
-import { setFromAddress, addrSummary, type LocalAnswer } from './model/address';
-import { ballotMaps, fromTopo, answerAt, fillTemplate, ruleMatches, type FeatureCollection, type Topology } from './model/maps';
+import { setFromAddress, addrSummary, localAnswers, mapNotes, type MapResult } from './model/address';
+import { ballotMaps, fromTopo, answerAt, type FeatureCollection, type Topology } from './model/maps';
 import { partiesOnBallot, toggleChip, setSources, setParty, chipMembers, chipState, doorNone, noEndorsements, CHIPS } from './model/lens';
 
 /* ---------- data ---------- */
@@ -33,48 +33,26 @@ export async function ensureIndex(): Promise<Index> {
 }
 /* A district map's boundaries (model/maps.ts), once per visit. Fetched only after an address
    lookup on a ballot whose places list it, or while that lookup is out with the Census. A map that
-   doesn't answer in a few seconds counts as not loaded: the lookup goes on without it. */
+   doesn't answer in a few seconds counts as not loaded: its request is aborted and forgotten, so a
+   second lookup asks again instead of waiting on the same stuck request. Not through getJSON, whose
+   cache would keep the stuck request. */
 const maps = new Map<string, Promise<FeatureCollection>>();
-export function loadMap(file: string, timeoutMs = 6000): Promise<FeatureCollection> {
+const mapsLoaded = new Set<string>();
+export const MAP_TIMEOUT_MS = 6000;
+export function loadMap(file: string, timeoutMs = MAP_TIMEOUT_MS): Promise<FeatureCollection> {
   if (!maps.has(file)) {
-    let timer = 0;
-    const p = Promise.race([
-      getJSON<Topology>(file).then((t) => fromTopo(t)),
-      new Promise<never>((_, reject) => { timer = window.setTimeout(() => reject(new Error(`timeout for ${file}`)), timeoutMs); }),
-    ]).finally(() => window.clearTimeout(timer));
-    p.catch(() => maps.delete(file));
+    const stop = new AbortController();
+    const timer = window.setTimeout(() => stop.abort(), timeoutMs);
+    const p = fetch(`${BASE}data/${file}`, { cache: 'no-cache', signal: stop.signal })
+      .then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status} for ${file}`); return r.json() as Promise<Topology>; })
+      .then((t) => { const fc = fromTopo(t); mapsLoaded.add(file); return fc; })
+      .finally(() => window.clearTimeout(timer));
+    p.catch(() => { maps.delete(file); });
     maps.set(file, p);
   }
   return maps.get(file)!;
 }
 const warmMaps = (b: Ballot | null): void => { if (b) for (const { meta } of ballotMaps(b)) loadMap(meta.file).catch(() => { /* counted when it's needed */ }); };
-/* What this ballot's maps say at the address: the answers for setFromAddress, and the lines the
-   address box shows for this visit (the voting precinct; a line the maps didn't guess at; a map
-   that didn't load), the last two only while a race they'd settle is still open. */
-async function mapsAt(b: Ballot, r: GeoResult): Promise<{ answers: LocalAnswer[]; shows: string[]; near: string[]; failed: string[] }> {
-  const out = { answers: [] as LocalAnswer[], shows: [] as string[], near: [] as string[], failed: [] as string[] };
-  const list = ballotMaps(b);
-  if (!list.length || !r.point) return out;
-  const got = await Promise.all(list.map(async ({ meta }) => { try { return { meta, fc: await loadMap(meta.file) }; } catch { return { meta, fc: null }; } }));
-  for (const { meta, fc } of got) {
-    if (!fc) { out.failed.push(meta.name); continue; }
-    const a = answerAt(fc, { point: r.point, block: r.block });
-    if (a.at === 'near') out.near.push(meta.name);
-    if (a.at !== 'in') continue;
-    out.answers.push({ meta, props: a.props });
-    const line = meta.shows ? fillTemplate(meta.shows, a.props) : null;
-    if (line) out.shows.push(line);
-  }
-  return out;
-}
-/* The names of the maps whose races are still open on this ballot: a question unanswered, or a
-   "may apply" race still a maybe. */
-function stillOpen(b: Ballot, names: string[]): string[] {
-  return names.filter((name, i) => names.indexOf(name) === i && ballotMaps(b).some(({ meta }) => meta.name === name && meta.settles.some((rule) =>
-    b.groups.some((g) => !g.kind && S.b.districts[g.key] === undefined && g.members.some((id) => ruleMatches(rule, b.byId.get(id)!)))
-    || [...b.mayApply].some((id) => ruleMatches(rule, b.byId.get(id)!) && !S.b.notMine.includes(id) && !(S.b.mine || []).includes(id)))));
-}
-const andWords = (xs: string[]): string => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} and ${xs[xs.length - 1]}`);
 
 /* Optional: ways to get involved, from the data track. A missing file is normal. */
 let involvedTried = false;
@@ -94,7 +72,7 @@ export function resetUI(): void {
   // The sections as you left them on this ballot (S.b.secs, saved with it).
   const secs = S.b.secs || noSections();
   u.folded = new Set(secs.folded); u.unfolded = new Set(secs.unfolded); u.reveal = new Set(secs.reveal);
-  u.noteOpen.clear(); u.reader = null; u.sheet = null; u.sheetFrom = null; u.sheetBack = null; u.addrOpen = false; u.addrMsg = null; u.addrFail = ''; u.addrFound = null; u.addrWhich = null; u.addrMaps = []; u.saveOpen = false; u.copyFallback = null; u.bulk = null; u.bulkWhy = null; u.addrFilled = null; u.lensEmptied = false;
+  u.noteOpen.clear(); u.reader = null; u.sheet = null; u.sheetFrom = null; u.sheetBack = null; u.addrOpen = false; u.addrMsg = null; u.addrFail = ''; u.addrFound = null; u.addrWhich = null; u.addrMaps = []; u.addrMapsPending = false; u.saveOpen = false; u.copyFallback = null; u.bulk = null; u.bulkWhy = null; u.addrFilled = null; u.lensEmptied = false;
   u.resume = false;
   u.open.delete('voted');
 }
@@ -576,24 +554,47 @@ export async function useMatch(r: GeoResult): Promise<void> {
 }
 /* The districts a Census match settles on this ballot (model/address.ts), and the line that names
    them, which the ballot keeps. What the Census found shows back in the address box (on the first
-   page, under the place line) until a reload or another ballot; the address itself is never kept. */
+   page, under the place line) until a reload or another ballot; the address itself is never kept.
+   The Census's answers land first; the ballot's district maps fold in as each one arrives (usually
+   at once: they load while the Census answers), so a slow or stuck map never holds up Congress.
+   Each fold settles everything again from this address (setFromAddress undoes the last pass first),
+   and a newer lookup, or another ballot, makes an older one's late maps change nothing. It returns
+   once the first pass is painted, so nothing waits on a slow map ("Show my ballot" included). */
+let geoSeq = 0;
 export async function applyGeo(r: GeoResult): Promise<void> {
   const b = S.ballot!;
-  // The district maps first (a moment: they're small, and usually loaded while the Census answered).
-  const local = await mapsAt(b, r);
-  if (S.ballot !== b) return; // the voter moved on meanwhile
+  const seq = ++geoSeq;
+  const list = r.point ? ballotMaps(b) : [];
+  const at = { point: r.point!, block: r.block };
+  const results: MapResult[] = [];
+  const fill = { n: 0, added: new Set<string>() };
+  const still = (): boolean => seq === geoSeq && S.ballot === b;
+  // Maps already in hand answer in the first pass, the rest as they come.
+  const ready = list.filter(({ meta }) => mapsLoaded.has(meta.file));
+  const waiting = list.filter((m) => !ready.includes(m));
+  for (const { meta } of ready) results.push({ meta, answer: answerAt(await loadMap(meta.file), at) });
+  if (!still()) return;
+  settleGeo(b, r, results, waiting.length > 0, fill, true);
+  void Promise.all(waiting.map(async ({ meta }) => {
+    let answer = null;
+    try { answer = answerAt(await loadMap(meta.file), at); } catch { /* didn't load: mapNotes says so */ }
+    if (!still()) return;
+    results.push({ meta, answer });
+    settleGeo(b, r, results, results.length < list.length, fill, false);
+  }));
+}
+/* One pass: settle from the Census and the maps so far, fill what that put on the ballot (the fill
+   ran here), and paint. `first`: the pass that closes the form and moves focus to what was found. */
+function settleGeo(b: Ballot, r: GeoResult, results: MapResult[], pending: boolean, fill: { n: number; added: Set<string> }, first: boolean): void {
   const was = { districts: { ...S.b.districts }, mine: [...(S.b.mine || [])] };
-  S.b.addrNote = addrSummary(setFromAddress(b, S.b, r, local.answers));
-  const near = stillOpen(b, local.near), failed = stillOpen(b, local.failed);
-  S.ui.addrMaps = [
-    ...local.shows,
-    ...(near.length ? [`Your address is right at a ${andWords(near)} line, so we didn’t guess. Your official sample ballot shows ${near.length > 1 ? 'which are yours' : 'yours'}.`] : []),
-    ...(failed.length ? [`We couldn’t check your ${andWords(failed)} just now. Your official sample ballot shows ${failed.length > 1 ? 'them' : 'it'}.`] : []),
-  ];
+  S.b.addrNote = addrSummary(setFromAddress(b, S.b, r, localAnswers(results, r)));
+  S.ui.addrMaps = mapNotes(b, S.b, r, results, pending);
+  S.ui.addrMapsPending = pending;
   // The fill ran on this ballot: the races the address just put on it get it too, by the same rules
   // (the party's candidates, then where your sources agree), in the same Undo, so the order you did
-  // things in doesn't leave Congress blank (UX walk, Oct 20).
-  S.ui.addrFilled = null;
+  // things in doesn't leave Congress blank (UX walk, Oct 20). Each pass fills only what it added; the
+  // line counts every pass of this lookup.
+  if (first) S.ui.addrFilled = null;
   if (S.view === 'ballot' && fillStands()) {
     const added = new Set([
       ...Object.entries(S.b.districts).filter(([k, v]) => v !== was.districts[k] && v !== 'none' && v !== '*').map(([, v]) => v),
@@ -601,20 +602,31 @@ export async function applyGeo(r: GeoResult): Promise<void> {
     ]);
     // One answer can show two races (a Washington district's two House seats): both are new.
     for (const id of [...added]) for (const g of b.groups) for (const m of g.members) if (sameSeat(b.byId.get(id), b.byId.get(m))) added.add(m);
+    added.forEach((id) => fill.added.add(id));
     const plan = planSetup(S.b.party);
     const fills = plan.fills.filter((f) => added.has(f.id));
     const live = canUndo();
     const n = fills.length ? applyFills(fills, true) : 0;
     if (n) {
+      fill.n += n;
       const p = plan.party ? fills.filter((f) => plan.party!.fills.includes(f)).length : 0;
       const from = p === n ? `with ${S.b.party} candidates` : p ? `from your party and your sources` : 'from your sources';
-      S.ui.addrFilled = `Filled ${n === 1 ? (added.size === 1 ? 'it' : '1 of them') : n === added.size ? (n === 2 ? 'both' : `all ${n}`) : `${n} of them`} ${from}.`;
+      const t = fill.n, all = fill.added.size;
+      S.ui.addrFilled = `Filled ${t === 1 ? (all === 1 ? 'it' : '1 of them') : t === all ? (t === 2 ? 'both' : `all ${t}`) : `${t} of them`} ${from}.`;
       S.ui.bulk = String((live && S.ui.bulk ? Number(S.ui.bulk) : 0) + n);
       // The head's line names your sources only when no party candidate is in its total: a party
       // breakdown's counts no longer add up after this, and a party fill isn't your sources' pick.
       const before = live ? S.ui.bulkWhy || '' : ' from your sources';
       S.ui.bulkWhy = p || before !== ' from your sources' ? null : ' from your sources';
     }
+  }
+  if (!first) {
+    // A later pass repaints in place: the page doesn't jump, and focus stays where it was.
+    const fk = (document.activeElement as HTMLElement | null)?.dataset?.fk;
+    anchored(() => render());
+    persist();
+    if (fk) $(`[data-fk="${CSS.escape(fk)}"]`)?.focus({ preventScroll: true });
+    return;
   }
   S.ui.addrFound = tidyAddress(r.matched) || null;
   S.ui.addrOpen = false;

@@ -30,7 +30,7 @@ export interface BallotState {
   hideDecided: boolean;              // "Hide races I've decided", on this device; never in the save link
   mine: string[];                    // "may apply" races an address lookup put on your ballot; never in the save link
   secs: SectionsShown;               // the sections and court groups you folded, opened or showed decided rows in, on this device; never in the save link
-  addrSet: string[];                 // district questions an address lookup answered (group keys), so the race says so; never the address, never in the save link
+  addrSet: string[];                 // what the last address lookup settled and the voter hasn't changed since: district questions (group keys), so the race says so, and the "may apply" races it moved (item ids), so a corrected address can undo them; never the address, never in the save link
 }
 /* What you did to the ballot's sections, kept with it so a reload looks the way you left it (Kevin,
    Oct 20): the UI's folded, unfolded and reveal sets. */
@@ -71,6 +71,7 @@ export interface UI {
   addrFound: string | null;   // the address the Census matched, tidied, shown back until a reload or another ballot ("Found: ...")
   addrWhich: GeoResult[] | null; // the Census matched several addresses: "Which one is yours?"
   addrMaps: string[];         // after a lookup, what the district maps said beyond the races they set, for this visit only: the voting precinct, a line they didn't guess at, a map that didn't load
+  addrMapsPending: boolean;   // the lookup's district maps are still on their way (the Census's answers are in)
   saveOpen: boolean;
   copyFallback: string | null;
   bulk: string | null;        // how many races the last fill from your sources filled, while its Undo is live
@@ -121,7 +122,7 @@ export const S = {
   prefs: { parties: null, endorsedOnly: false, foldDecided: true, autoPick: false } as Prefs,
   ui: {
     view: 'ballot', open: new Set(), row: null, page: {}, others: new Set(), folded: new Set(), unfolded: new Set(), reveal: new Set(), keep: null, beat: null,
-    noteOpen: new Set(), reader: null, sheet: null, report: null, sheetFrom: null, sheetBack: null, addrOpen: false, addrBusy: false, addrMsg: null, addrFail: '', addrFound: null, addrWhich: null, addrMaps: [], saveOpen: false, copyFallback: null, bulk: null, bulkWhy: null, addrFilled: null, lensEmptied: false,
+    noteOpen: new Set(), reader: null, sheet: null, report: null, sheetFrom: null, sheetBack: null, addrOpen: false, addrBusy: false, addrMsg: null, addrFail: '', addrFound: null, addrWhich: null, addrMaps: [], addrMapsPending: false, saveOpen: false, copyFallback: null, bulk: null, bulkWhy: null, addrFilled: null, lensEmptied: false,
     setupFill: false, setupOnly: false, resume: false,
   } as UI,
   /* ?try=fresh|aunt|straight|sources: a scenario on whatever ballot opens, never saved. */

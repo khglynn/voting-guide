@@ -25,7 +25,7 @@ import type { Ballot } from '../ballot';
 import type { BallotState } from '../state';
 import { contestDistrict } from '../ballot';
 import { cleanOffice } from './labels';
-import { ballotMaps, ruleMatches, ruleIs } from './maps';
+import { ballotMaps, ruleMatches, ruleIs, fillTemplate, type MapAnswer } from './maps';
 
 export interface Districts { cd: number | null; upper: number | null; lower: number | null; schools?: string[]; county?: string | null }
 /* A district map that answered at this address: its record and the feature's properties. */
@@ -54,6 +54,17 @@ const KINDS: Kind[] = ['cd', 'upper', 'lower'];
    districts, then what the district maps put on, in ballot order; empty when it put none there
    (nothing here turns on it, or it only took races off). */
 export function setFromAddress(b: Ballot, s: BallotState, r: Districts, local: LocalAnswer[] = []): string[] {
+  // A lookup replaces the one before it (a corrected address, "Not it? Try again", the maps folding
+  // in after the Census): what the last one settled, and the voter hasn't changed since (addrSet),
+  // goes back to unsettled first, so this address never keeps an answer it can't give itself. The
+  // voter's own answers aren't in addrSet (actions.ts takes them out), so they stay.
+  if (!s.mine) s.mine = [];
+  for (const k of s.addrSet || []) {
+    if (b.groups.some((g) => g.key === k)) delete s.districts[k];
+    else { s.mine = s.mine.filter((x) => x !== k); s.notMine = s.notMine.filter((x) => x !== k); }
+  }
+  s.addrSet = [];
+  const moved = (id: string): void => { if (!s.addrSet.includes(id)) s.addrSet.push(id); };
   const num = (k: Kind): number | null => (b.st === 'DC' && k === 'upper' ? null : r[k]);
   const named: Record<Kind, string[]> = { cd: [], upper: [], lower: [] };
   const name = (k: Kind, office: string) => { const o = cleanOffice(office); if (!named[k].includes(o)) named[k].push(o); };
@@ -62,28 +73,23 @@ export function setFromAddress(b: Ballot, s: BallotState, r: Districts, local: L
     if (!g.kind || n == null) continue;
     const hit = g.members.find((id) => contestDistrict(b.byId.get(id) as Contest).n === n);
     s.districts[g.key] = hit || 'none';
-    s.addrSet = [...(s.addrSet || []).filter((k) => k !== g.key), g.key];
+    moved(g.key);
     if (hit) name(g.kind, g.office);
   }
-  if (!s.mine) s.mine = [];
   // School districts: only when the Census named at least one, so a missing layer changes nothing.
   const sds = new Set((r.schools || []).map(sdKey));
   const schoolsNamed: string[] = [];
   if (sds.size) {
     for (const g of b.groups) {
       if (g.kind) continue;
-      const byAddr = (s.addrSet || []).includes(g.key);
-      if (s.districts[g.key] && !byAddr) continue; // your own answer stands
+      // Your own answer stands (the last lookup's answers were cleared above, so any left is yours).
+      if (s.districts[g.key]) continue;
       const each = g.members.map((id) => schoolOf(b.byId.get(id)!));
       const one = each[0];
       if (!one || each.some((x) => !x || x.key !== one.key)) continue;
-      if (sds.has(one.key)) {
-        // Yours after all (a second lookup, the first one the wrong address): the question comes back.
-        if (byAddr) { delete s.districts[g.key]; s.addrSet = (s.addrSet || []).filter((k) => k !== g.key); }
-        continue;
-      }
+      if (sds.has(one.key)) continue; // yours: which trustee district is a map's or the sample ballot's to say
       s.districts[g.key] = 'none'; // a trustee question for a school district you're not in
-      s.addrSet = [...(s.addrSet || []).filter((k) => k !== g.key), g.key];
+      moved(g.key);
     }
     for (const id of b.mayApply) {
       const it = b.byId.get(id);
@@ -94,6 +100,7 @@ export function setFromAddress(b: Ballot, s: BallotState, r: Districts, local: L
       s.notMine = s.notMine.filter((x) => x !== id);
       s.mine = s.mine.filter((x) => x !== id);
       (on ? s.mine : s.notMine).push(id);
+      moved(id);
       if (on && !schoolsNamed.includes(sd.name)) schoolsNamed.push(sd.name);
     }
     // A school district's race a whole city sees (Austin ISD's at-large seat, for all of Austin) comes
@@ -102,8 +109,8 @@ export function setFromAddress(b: Ballot, s: BallotState, r: Districts, local: L
       if (b.mayApply.has(it.id) || b.groupOf[it.id] || b.statewide.has(it.id)) continue;
       const sd = schoolOf(it);
       if (!sd || !sd.whole) continue;
-      s.notMine = s.notMine.filter((x) => x !== it.id);
-      if (!sds.has(sd.key)) s.notMine.push(it.id);
+      // (The last lookup's move was undone above; a "not on my ballot" of your own stays.)
+      if (!sds.has(sd.key) && !s.notMine.includes(it.id)) { s.notMine.push(it.id); moved(it.id); }
     }
   }
   for (const id of b.mayApply) {
@@ -116,11 +123,43 @@ export function setFromAddress(b: Ballot, s: BallotState, r: Districts, local: L
     s.mine = s.mine.filter((x) => x !== id);
     const on = d.n === n;
     (on ? s.mine : s.notMine).push(id);
+    moved(id);
     if (on) name(d.kind, c.office);
   }
-  const localNamed = settleFromMaps(b, s, r, local, sds);
+  const localNamed = settleFromMaps(b, s, r, local, sds, moved);
   return [...KINDS.flatMap((k) => named[k].map((o) => `${o}, District ${num(k)}`)), ...schoolsNamed, ...localNamed];
 }
+
+/* A county map answering for an address the Census puts in another county (a point at the county
+   line) is set aside: the Census's county decides which county's ballot you get. */
+export const inCounty = (m: MapMeta, county: string | null | undefined): boolean => !(m.county && county && m.county.toLowerCase() !== county.toLowerCase());
+/* What each of the ballot's maps said at the address: its answer, or null when it didn't load. */
+export interface MapResult { meta: MapMeta; answer: MapAnswer | null }
+/* The answers setFromAddress takes: the maps that found the address, in the Census's county. */
+export const localAnswers = (results: MapResult[], r: Districts): LocalAnswer[] =>
+  results.flatMap((x) => (x.answer && x.answer.at === 'in' && inCounty(x.meta, r.county) ? [{ meta: x.meta, props: x.answer.props }] : []));
+/* What the address box says about the maps beyond the races they set, for this visit: the voting
+   precinct (from a map the Census's county agrees with), then, only while a race they'd settle is
+   still open on `s`, a line they didn't guess at and a map that didn't load. Call it after
+   setFromAddress. `pending`: maps still on their way. */
+export function mapNotes(b: Ballot, s: BallotState, r: Districts, results: MapResult[], pending = false): string[] {
+  const open = (m: MapMeta): boolean => inCounty(m, r.county) && m.settles.some((rule) =>
+    b.groups.some((g) => !g.kind && s.districts[g.key] === undefined && g.members.some((id) => ruleMatches(rule, b.byId.get(id)!)))
+    || [...b.mayApply].some((id) => ruleMatches(rule, b.byId.get(id)!) && !s.notMine.includes(id) && !(s.mine || []).includes(id)));
+  const names = (keep: (x: MapResult) => boolean): string[] => [...new Set(results.filter((x) => keep(x) && open(x.meta)).map((x) => x.meta.name))];
+  const and = (xs: string[]): string => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} and ${xs[xs.length - 1]}`);
+  const shows = results.flatMap((x) => (x.answer && x.answer.at === 'in' && x.meta.shows && inCounty(x.meta, r.county) ? [fillTemplate(x.meta.shows, x.answer.props)] : [])).filter((t): t is string => !!t);
+  const near = names((x) => !!x.answer && x.answer.at === 'near');
+  const failed = names((x) => !x.answer);
+  return [
+    ...shows,
+    ...(near.length ? [`Your address is right at a ${and(near)} line, so we didn’t guess. Your official sample ballot shows ${near.length > 1 ? 'which are yours' : 'yours'}.`] : []),
+    ...(failed.length ? [`We couldn’t check your ${and(failed)} just now. Your official sample ballot shows ${failed.length > 1 ? 'them' : 'it'}.`] : []),
+    ...(pending ? [CHECKING] : []),
+  ];
+}
+/* While the maps are on their way, after the Census has answered. */
+export const CHECKING = 'Checking the district maps…';
 
 /* A race a map put on your ballot, as the line names it: "Austin City Council, District 9",
    "Justice of the Peace, Precinct 5", "State Board of Education, District 5". */
@@ -145,12 +184,9 @@ function otherCounty(c: Contest, county: string): boolean {
      another school district.
    A map of one county whose county isn't yours (the Census says so) answers "none" for the races its
    county-scoped rules claim, without looking at the map. Returns the races it put on the ballot. */
-function settleFromMaps(b: Ballot, s: BallotState, r: Districts, all: LocalAnswer[], sds: Set<string>): string[] {
+function settleFromMaps(b: Ballot, s: BallotState, r: Districts, all: LocalAnswer[], sds: Set<string>, moved: (id: string) => void): string[] {
   const on: Contest[] = [];
-  // A county map that answers for an address the Census puts in another county (a point at the county
-  // line) is set aside: the Census's county decides which county's ballot you get.
-  const inCounty = (m: MapMeta): boolean => !(m.county && r.county && m.county.toLowerCase() !== r.county.toLowerCase());
-  const local = all.filter((x) => inCounty(x.meta));
+  const local = all.filter((x) => inCounty(x.meta, r.county));
   const answered = new Set(local.map((x) => x.meta.file));
   const schoolElsewhere = (c: Contest): boolean => { const sd = schoolOf(c); return !!sd && sds.size > 0 && !sds.has(sd.key); };
   const officeOnly = (rule: SettleRule, c: Contest): boolean => ruleMatches({ office: rule.office, district: rule.district }, c);
@@ -177,7 +213,7 @@ function settleFromMaps(b: Ballot, s: BallotState, r: Districts, all: LocalAnswe
       if (mine.some(schoolElsewhere)) continue;
       const hit = props ? mine.find((c) => ruleIs(rule, c, props)) : undefined;
       s.districts[g.key] = hit ? hit.id : 'none';
-      s.addrSet = [...(s.addrSet || []).filter((k) => k !== g.key), g.key];
+      moved(g.key);
       if (hit && !on.includes(hit)) on.push(hit);
     }
     for (const id of b.mayApply) {
@@ -187,6 +223,7 @@ function settleFromMaps(b: Ballot, s: BallotState, r: Districts, all: LocalAnswe
       s.notMine = s.notMine.filter((x) => x !== id);
       s.mine = (s.mine || []).filter((x) => x !== id);
       (yes ? s.mine : s.notMine).push(id);
+      moved(id);
       if (yes && !on.includes(c)) on.push(c);
     }
   }

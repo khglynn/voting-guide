@@ -171,6 +171,12 @@ const SETUP = '[data-act="setup-done"]';
 /* What a lookup in Congress District 6 and Senate District 28 sets on Aurora's ballot (the mocks below). */
 const AURORA_SET = 'Set from your address: U.S. House of Representatives, District 6 · Regent of the University of Colorado, District 6.';
 const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
+/* After an address lookup on a ballot with district maps: the Census's answers, then every map folded in. */
+async function mapsSettled(page, timeout = 10000) {
+  await page.waitForSelector('.addrbox .addr-set', { timeout }).catch(() => {});
+  await page.waitForFunction(() => !document.querySelector('.addrbox [data-pending]'), null, { timeout }).catch(() => {});
+  await page.waitForTimeout(100);
+}
 {
   const { ctx, page } = await newPage();
   await page.goto(`${BASE}/?today=${TODAY}`);
@@ -822,8 +828,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await tap(page, '.addrbox [data-act="addr-open"]');
   await page.fill('#addr-in', 'a test lookup');
   await page.locator('form[data-form="addr"] button[type=submit]').tap();
-  await page.waitForSelector('.addrbox .addr-set', { timeout: 10000 }).catch(() => {});
-  await page.waitForTimeout(200);
+  await mapsSettled(page);
   const set = await text(page, '.addrbox .addr-set');
   check('Maps: City Hall: "Set from your address" names the council seat and the county races', set === 'Set from your address: U.S. Representative, District 10 · State Representative, District 49 · State Board of Education, District 5 · Justice of the Peace, Precinct 5 · Austin City Council, District 9.', set);
   check('Maps: City Hall: the voting precinct, for this visit', (await text(page, '.addrbox .addr-map')) === 'Your voting precinct: 301 (Travis County).', await text(page, '.addrbox .addr-map'));
@@ -852,8 +857,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await tap(two.page, '.addrbox [data-act="addr-open"]');
   await two.page.fill('#addr-in', 'a test lookup');
   await two.page.locator('form[data-form="addr"] button[type=submit]').tap();
-  await two.page.waitForSelector('.addrbox .addr-set', { timeout: 10000 }).catch(() => {});
-  await two.page.waitForTimeout(200);
+  await mapsSettled(two.page);
   const set2 = await text(two.page, '.addrbox .addr-set');
   check('Maps: with the precinct map down, the council map still answers', /Austin City Council, District 9/.test(set2) && !/Justice of the Peace/.test(set2), set2);
   check('Maps: and the box says what it couldn’t check', (await text(two.page, '.addrbox .addr-map')) === 'We couldn’t check your county precinct just now. Your official sample ballot shows it.' && /^\d+ races? needs? your official sample ballot/.test(await text(two.page, '.addrbox .addr-n')), await text(two.page, '.addrbox'));
@@ -861,25 +865,68 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   noErrors(two.page, 'Maps with one down');
   await two.ctx.close();
   // Witnesses that disagree away from any line (a block the lines cut through): the maps don't guess.
-  // Made up: City Hall's point with the Carver Branch Library's block, across town.
+  // Made up: City Hall's point with the Carver Branch Library's block, across town. It comes as a
+  // correction ("Not it? Try again") after City Hall itself, so what City Hall set has to go.
   const three = await newPage();
   const split = JSON.parse(JSON.stringify(answer));
   split.result.addressMatches[0].geographies['2020 Census Blocks'] = [{ INTPTLAT: '+30.2702525', INTPTLON: '-097.7223505' }];
+  let reply = answer;
   await three.page.route('https://geocoding.geo.census.gov/**', (route) => {
     const cb = new URL(route.request().url()).searchParams.get('callback');
-    return route.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify(split)})` });
+    return route.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify(reply)})` });
   });
   await openBallot(three.page, '78701');
   await tap(three.page, '.addrbox [data-act="addr-open"]');
   await three.page.fill('#addr-in', 'a test lookup');
   await three.page.locator('form[data-form="addr"] button[type=submit]').tap();
-  await three.page.waitForSelector('.addrbox .addr-set', { timeout: 10000 }).catch(() => {});
-  await three.page.waitForTimeout(200);
+  await mapsSettled(three.page);
+  check('Maps, corrected: first City Hall', /Austin City Council, District 9/.test(await text(three.page, '.addrbox .addr-set')), await text(three.page, '.addrbox .addr-set'));
+  reply = split;
+  await tap(three.page, '.addrbox [data-act="addr-again"]');
+  await three.page.locator('form[data-form="addr"] button[type=submit]').tap();
+  await three.page.waitForFunction(() => !/Austin City Council/.test(document.querySelector('.addrbox .addr-set')?.textContent || ''), null, { timeout: 10000 }).catch(() => {});
+  await mapsSettled(three.page);
   const set3 = await text(three.page, '.addrbox .addr-set');
-  check('Maps: witnesses that disagree settle nothing from the maps', set3 === 'Set from your address: U.S. Representative, District 10 · State Representative, District 49.', set3);
-  check('Maps: and the box says the address sits at a line', (await text(three.page, '.addrbox .addr-map')) === 'Your address is right at a council district, Austin ISD trustee district and county precinct line, so we didn’t guess. Your official sample ballot shows which are yours.', await text(three.page, '.addrbox .addr-map'));
+  check('Maps, corrected: witnesses that disagree settle nothing from the maps, and keep nothing from City Hall', set3 === 'Set from your address: U.S. Representative, District 10 · State Representative, District 49.', set3);
+  await three.page.waitForTimeout(300);
+  const saved3 = JSON.parse((await savedVG(three.page)) || '{}');
+  const s3 = Object.values(saved3.ballots || {}).find((x) => x && x.districts && x.districts['federal|U.S. Representative']) || {};
+  check('Maps, corrected: the council, commissioner and JP questions are open again, the constable race a maybe again', s3.districts && s3.districts['city|Austin City Council Member'] === undefined && s3.districts['county|County Commissioner'] === undefined && s3.districts['judicial|Justice of the Peace'] === undefined && !(s3.notMine || []).includes('tx-travis-constable-4'), JSON.stringify([s3.districts, s3.notMine]));
+  check('Maps, corrected: and the box says the address sits at a line', (await text(three.page, '.addrbox .addr-map')) === 'Your address is right at a council district, Austin ISD trustee district and county precinct line, so we didn’t guess. Your official sample ballot shows which are yours.', await text(three.page, '.addrbox .addr-map'));
   noErrors(three.page, 'Maps at a line');
   await three.ctx.close();
+  // A map that hangs (Codex review of #17): the Census's answers and the quick maps show at once, the
+  // stuck one gives up after a few seconds, and the next lookup asks for it again and gets it.
+  const four = await newPage();
+  await four.page.route('https://geocoding.geo.census.gov/**', (route) => {
+    const cb = new URL(route.request().url()).searchParams.get('callback');
+    return route.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify(answer)})` });
+  });
+  const PRECINCTS = '**/data/maps/travis-county-tx/precincts.topo.json';
+  let asks = 0;
+  four.page.on('request', (r) => { if (/precincts\.topo\.json/.test(r.url())) asks++; });
+  await four.page.route(PRECINCTS, () => { /* never answers */ });
+  await openBallot(four.page, '78701');
+  await tap(four.page, '.addrbox [data-act="addr-open"]');
+  await four.page.fill('#addr-in', 'a test lookup');
+  const t0 = Date.now();
+  await four.page.locator('form[data-form="addr"] button[type=submit]').tap();
+  await four.page.waitForFunction(() => /Austin City Council, District 9/.test(document.querySelector('.addrbox .addr-set')?.textContent || ''), null, { timeout: 4000 }).catch(() => {});
+  const quick = Date.now() - t0;
+  const set4 = await text(four.page, '.addrbox .addr-set');
+  check('Maps, one hanging: Congress and the council show at once, before the stuck map gives up', /^Set from your address: U\.S\. Representative, District 10 · State Representative, District 49 · Austin City Council, District 9\.$/.test(set4) && quick < 4000, `${quick}ms: ${set4}`);
+  check('Maps, one hanging: the box says it is still checking, and doesn’t send the precinct’s races to the sample ballot yet', !!(await four.page.$('.addrbox [data-pending]')) && !(await four.page.$('.addrbox .addr-n')), await text(four.page, '.addrbox'));
+  await mapsSettled(four.page, 12000);
+  check('Maps, one hanging: it gives up and says so', (await text(four.page, '.addrbox .addr-map')) === 'We couldn’t check your county precinct just now. Your official sample ballot shows it.', await text(four.page, '.addrbox .addr-map'));
+  await four.page.unroute(PRECINCTS);
+  await tap(four.page, '.addrbox [data-act="addr-again"]');
+  await four.page.locator('form[data-form="addr"] button[type=submit]').tap();
+  await four.page.waitForFunction(() => /Justice of the Peace/.test(document.querySelector('.addrbox .addr-set')?.textContent || ''), null, { timeout: 10000 }).catch(() => {});
+  await mapsSettled(four.page);
+  check('Maps, one hanging: the next lookup asks again and gets it', asks === 2 && (await text(four.page, '.addrbox .addr-map')) === 'Your voting precinct: 301 (Travis County).' && /Justice of the Peace, Precinct 5/.test(await text(four.page, '.addrbox .addr-set')), `${asks} asks | ${await text(four.page, '.addrbox')}`);
+  four.page.errors = four.page.errors.filter((e) => !/Failed to load resource|abort/i.test(e));
+  noErrors(four.page, 'Maps with one hanging');
+  await four.ctx.close();
 }
 // Statewide Florida (Miami): the only races that depend on your address are appeals judges, which
 // the Census can't settle, so the box leads with the sample ballot; from the first page, the lookup

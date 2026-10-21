@@ -321,6 +321,54 @@ function roundTrip(name, stCode, places, mutate) {
   const line = address.addrSummary(address.setFromAddress(au, st.S.b, { cd: 10, upper: 14, lower: 49, schools: ['Austin Independent School District'], county: 'Travis' }, answers));
   check('maps: City Hall’s line names every race the address put on', line === 'Set from your address: U.S. Representative, District 10 · State Representative, District 49 · State Board of Education, District 5 · Justice of the Peace, Precinct 5 · Austin City Council, District 9.', line);
   check('maps: and nothing on City Hall’s ballot still depends on the address', views.ledger.addressCount() === 0, String(views.ledger.addressCount()));
+  // Correcting an address (Codex review of #17, Oct 21): a new lookup undoes what the last one settled
+  // before it settles anything, so a corrected address never keeps an answer it can't give itself.
+  {
+    const pf2 = open('TX', ['pflugerville-tx']);
+    const pm2 = pf2.places[0].maps.find((m) => m.kind === 'precincts');
+    address.setFromAddress(pf2, st.S.b, { ...none, county: 'Travis' }, [{ meta: pm2, props: { label: '172', commissioner: '1', jp: '2', sboe: '5' } }]);
+    const first = JSON.stringify([st.S.b.districts, st.S.b.mine]);
+    address.setFromAddress(pf2, st.S.b, { ...none, county: 'Williamson' }, []);
+    check('maps, corrected: Pflugerville, Travis then Williamson: the Travis answers go, the mixed questions open again, SBOE is a maybe again',
+      st.S.b.districts['county|County Commissioner'] === undefined && st.S.b.districts['judicial|Justice of the Peace'] === undefined && !st.S.b.mine.includes('tx-sboe-5') && !st.S.b.notMine.includes('tx-sboe-5') && st.S.b.notMine.includes('tx-travis-constable-4'),
+      `${first} then ${JSON.stringify([st.S.b.districts, st.S.b.mine, st.S.b.notMine])}`);
+    // City Hall, then the same Census answer with witnesses that disagree (no map answers): council,
+    // commissioner, JP and the constable race open again, Congress stays, and the box names the maps.
+    const au2 = open('TX', ['austin-tx']);
+    const cityHall = { cd: 10, upper: 14, lower: 49, schools: ['Austin Independent School District'], county: 'Travis' };
+    address.setFromAddress(au2, st.S.b, cityHall, answers);
+    address.setFromAddress(au2, st.S.b, cityHall, []);
+    check('maps, corrected: City Hall, then witnesses that disagree: what the maps set opens again, what the Census set stays',
+      st.S.b.districts['city|Austin City Council Member'] === undefined && st.S.b.districts['county|County Commissioner'] === undefined && st.S.b.districts['judicial|Justice of the Peace'] === undefined
+      && !st.S.b.notMine.includes('tx-travis-constable-4') && !st.S.b.mine.includes('tx-sboe-5') && st.S.b.districts['federal|U.S. Representative'] === 'tx-us-house-10' && st.S.b.districts['school|Austin ISD Trustee'] === undefined,
+      JSON.stringify([st.S.b.districts, st.S.b.mine, st.S.b.notMine]));
+    const nearAll = au2.places[0].maps.map((meta) => ({ meta, answer: meta.kind === 'dvisd-trustee' ? { at: 'out' } : { at: 'near' } }));
+    const notes = address.mapNotes(au2, st.S.b, cityHall, nearAll);
+    check('maps, corrected: and the box names the maps it couldn’t settle', notes.join(' ') === 'Your address is right at a council district, Austin ISD trustee district and county precinct line, so we didn’t guess. Your official sample ballot shows which are yours.', notes.join(' | '));
+    // The voter's own answers survive a correction: a trustee district picked by hand, and "It's on my
+    // ballot" on a race the address took off (each as its action leaves the state: out of addrSet).
+    st.S.b = st.emptyBallotState('');
+    address.setFromAddress(au2, st.S.b, cityHall, answers);
+    st.S.b.districts['school|Austin ISD Trustee'] = 'tx-aisd-district-4'; st.S.b.addrSet = st.S.b.addrSet.filter((k) => k !== 'school|Austin ISD Trustee'); // A.district
+    st.S.b.notMine = st.S.b.notMine.filter((x) => x !== 'tx-travis-constable-4'); st.S.b.addrSet = st.S.b.addrSet.filter((k) => k !== 'tx-travis-constable-4'); // A['notmine-undo']
+    st.S.b.notMine.push('tx-sboe-5'); st.S.b.mine = st.S.b.mine.filter((x) => x !== 'tx-sboe-5'); st.S.b.addrSet = st.S.b.addrSet.filter((k) => k !== 'tx-sboe-5'); // the voter's own "not on my ballot"
+    address.setFromAddress(au2, st.S.b, cityHall, []);
+    check('maps, corrected: the voter’s own answers stay', st.S.b.districts['school|Austin ISD Trustee'] === 'tx-aisd-district-4' && !st.S.b.notMine.includes('tx-travis-constable-4') && st.S.b.notMine.includes('tx-sboe-5'), JSON.stringify([st.S.b.districts, st.S.b.notMine]));
+    // The precinct line follows the same county rule as the answers.
+    const hit = au2.places[0].maps.map((meta) => ({ meta, answer: meta.kind === 'precincts' ? { at: 'in', props: { label: '301', commissioner: '3', jp: '5', sboe: '5' }, by: 'both' } : { at: 'out' } }));
+    st.S.b = st.emptyBallotState('');
+    address.setFromAddress(au2, st.S.b, { ...cityHall, county: 'Williamson' }, address.localAnswers(hit, { ...cityHall, county: 'Williamson' }));
+    check('maps: a Travis precinct the Census’s county rejects names no precinct', !address.mapNotes(au2, st.S.b, { ...cityHall, county: 'Williamson' }, hit).some((t) => /voting precinct/.test(t)) && address.localAnswers(hit, { ...cityHall, county: 'Williamson' }).length === 0);
+    st.S.b = st.emptyBallotState('');
+    address.setFromAddress(au2, st.S.b, cityHall, address.localAnswers(hit, cityHall));
+    check('maps: and one it agrees with does', address.mapNotes(au2, st.S.b, cityHall, hit).includes('Your voting precinct: 301 (Travis County).'));
+    const failedCouncil = au2.places[0].maps.map((meta) => ({ meta, answer: meta.kind === 'council' ? null : { at: 'out' } }));
+    check('maps: a map that didn’t load is named while its races are open, and not once they’re answered, and the pending line comes last',
+      address.mapNotes(au2, st.S.b, cityHall, failedCouncil).join(' ') === 'We couldn’t check your council district just now. Your official sample ballot shows it.'
+      && (() => { st.S.b.districts['city|Austin City Council Member'] = 'tx-austin-council-1'; return !address.mapNotes(au2, st.S.b, cityHall, failedCouncil).length; })()
+      && address.mapNotes(au2, st.S.b, cityHall, [], true).join('|') === address.CHECKING);
+    st.S.b = st.emptyBallotState('');
+  }
   // The Census answer keeps the point and the block's interior point, for the maps only.
   const g = geo.parseCensus({ result: { addressMatches: [{ matchedAddress: 'TEST CITY HALL, AUSTIN, TX, 78701', coordinates: { x: -97.746669, y: 30.26496 }, geographies: { States: [{ STATE: '48' }], '2020 Census Blocks': [{ INTPTLAT: '+30.2646818', INTPTLON: '-097.7472987' }] } }] } })[0];
   check('maps: parseCensus keeps the point and the block’s interior point', g.point.lon === -97.746669 && g.point.lat === 30.26496 && g.block.lon === -97.7472987 && g.block.lat === 30.2646818, JSON.stringify([g.point, g.block]));

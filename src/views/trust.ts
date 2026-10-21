@@ -1,8 +1,8 @@
-/* The foot of every page, one quiet line, the same wherever you are (Kevin, Oct 21: the first
+/* The foot of every page, two quiet lines, the same wherever you are (Kevin, Oct 21: the first
    cut had two heavy rows and a first page that differed; "less loud", one design): how many
-   cities and whose friends, then "How this guide works" (its text opens below, folded), the
-   report form prefilled with the page and the place, the same form to ask for a city, and the
-   coffee. On the ballot and My plan the foot is its own region (#r-trust); on the share page it
+   cities and whose friends, with the coffee; then "How this guide works" (its text opens below,
+   folded), the report form prefilled with the page and the place, and the same form to ask for
+   a city. On the ballot and My plan the foot is its own region (#r-trust); on the share page it
    sits above the crowd (pass.ts); on the first page it is the small print under the pad (mast.ts),
    where the city count also opens the list of places. */
 import type { Index } from '../types';
@@ -35,9 +35,10 @@ export function trustHTML(inDoor = false): string {
     `<button class="linkbtn" id="how-h" data-act="open" data-k="${HOW_K}" aria-expanded="${isOpen(HOW_K)}" data-fk="how">How this guide works</button>`,
     `<a href="${esc(report)}" target="_blank" rel="noopener" data-fk="help-report">Report a problem</a>`,
     `<a href="${esc(askCityURL(b && !inDoor ? S.b.zip : S.zip))}" target="_blank" rel="noopener" data-fk="help-city"${inDoor ? ' data-ask' : ''}>Request a city</a>`,
-    coffeeLink(),
-  ].filter(Boolean).join(' · ');
-  return `<footer class="trust${inDoor ? '' : ' wrap'}" id="how"><p class="fine foot-line">${[cover, links].filter(Boolean).join(' ')}</p>
+  ].join(' · ');
+  // Two lines (Kevin, Oct 21): who it's for and the coffee, then the three things you can do.
+  return `<footer class="trust${inDoor ? '' : ' wrap'}" id="how"><p class="fine foot-line">${[cover, coffeeLink() ? `${coffeeLink()}.` : ''].filter(Boolean).join(' ')}</p>
+    <p class="fine foot-line foot-acts">${links}</p>
     ${inDoor && idx && isOpen(BROWSE_K) ? browseHTML(idx) : ''}
     ${isOpen(HOW_K) ? `<div class="how-bd" id="how-bd">${howBodyHTML()}</div>` : ''}
   </footer>`;

@@ -197,6 +197,25 @@
       "confidence": "verified"
     },
     {
+      "id": "lookup_cant_find",
+      "question": "The lookup can’t find me.",
+      "short": "The lookup needs your name exactly as registered: try your last name with the hyphen, a space, and joined.",
+      "actions": [
+        {
+          "label": "Check my registration",
+          "url": "https://myinfo.alabamavotes.gov/voterview"
+        }
+      ],
+      "answer": "Alabama’s lookup asks for your name and birth date. Its only failure message is “No Matching Registrants”, so try the spellings below one at a time.",
+      "steps": [
+        "Try your last name with the hyphen, with a space instead, and run together, and leave out any middle name or suffix.",
+        "Still nothing? Call your county election office. A failed search doesn’t mean you’re not registered; records can lag."
+      ],
+      "deadline": null,
+      "source": "https://myinfo.alabamavotes.gov/voterview",
+      "confidence": "sourced"
+    },
+    {
       "id": "wrong_polling_place",
       "question": "I went to the wrong polling place.",
       "short": "Go to your assigned polling place; a provisional ballot cast at the wrong one won't count.",

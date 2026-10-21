@@ -1,5 +1,6 @@
 /* The plan strip (green paper): the next step and its date, one short line, the main button,
-   "Am I registered?", "Dates, ID, ..." and "I already voted". Behind "Dates, ID, ...", on the same
+   "Check my registration" (with "Lookup can't find you?" under it, since state lookups match names
+   exactly and a failed search reads as "I've been purged"; Kevin, Oct 20), "Dates, ID, ..." and "I already voted". Behind "Dates, ID, ...", on the same
    paper, sit the key dates and the rules for ID and the booth, the gotchas, and what to do if
    something goes wrong: everything the v2 plan card held, one tap away. Every date is read from the state file. */
 import type { HowTo, HelpAction, PlaceEarly } from '../types';
@@ -30,6 +31,7 @@ export function planHTML(): string {
       ${reg ? `<div class="plan-reg"><p>${esc(reg)}</p>${regBtn ? `<a class="pbtn line" href="${esc(regBtn.url)}" target="_blank" rel="noopener" data-fk="plan-register">${esc(regBtn.label)}</a>` : ''}</div>` : ''}
       <div class="plan-acts">${step.primary ? `<a class="pbtn gold" href="${esc(step.primary.url)}" target="_blank" rel="noopener">${esc(step.primary.label)}</a>` : ''}
         ${check ? `<a class="pbtn line" href="${esc(check)}" target="_blank" rel="noopener">Check my registration</a>` : ''}</div>
+      ${check && (h.situations || []).some((x) => x.id === 'lookup_cant_find') ? `<p class="plan-hint">Lookup can’t find you? <button class="linkbtn" data-act="whatif-sit" data-k="lookup_cant_find" data-fk="plan-cant-find">Try your name these ways</button></p>` : ''}
       <div class="plan-row"><button class="whatif-tog" data-act="open" data-k="whatif" aria-expanded="${open}" data-fk="whatif"><span>Dates, ID, and if you moved or lost <span class="nw">your ballot<svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span></span></button>
         <button class="voted" data-act="view" data-v="pass" data-voted="1" data-fk="voted">I already voted</button></div>
       ${open ? whatIfHTML(h) : ''}

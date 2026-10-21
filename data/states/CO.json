@@ -9,7 +9,7 @@
   "voting_model": "all_mail",
   "model_plain": "Every registered voter gets a ballot in the mail. Fill it out, sign the envelope, and drop it in a drop box or mail it back early. You can also vote in person at any vote center in your county.",
   "registration": {
-    "check_url": "https://www.govotecolorado.gov/",
+    "check_url": "https://www.coloradosos.gov/voter/pages/pub/olvr/findVoterReg.xhtml",
     "register_url": "https://vote.gov/register/colorado",
     "register_url_source": "https://vote.gov/register",
     "deadlines": [
@@ -190,7 +190,7 @@
       "actions": [
         {
           "label": "Check my registration",
-          "url": "https://www.govotecolorado.gov/"
+          "url": "https://www.coloradosos.gov/voter/pages/pub/olvr/findVoterReg.xhtml"
         },
         {
           "label": "Register to vote",
@@ -205,6 +205,26 @@
       ],
       "deadline": "2026-10-26",
       "source": "https://www.coloradosos.gov/pubs/elections/FAQs/VoterRegistrationFAQ.html",
+      "confidence": "verified"
+    },
+    {
+      "id": "lookup_cant_find",
+      "question": "The lookup can’t find me.",
+      "short": "The lookup needs your name exactly as registered: try your last name with the hyphen, a space, and joined.",
+      "actions": [
+        {
+          "label": "Check my registration",
+          "url": "https://www.coloradosos.gov/voter/pages/pub/olvr/findVoterReg.xhtml"
+        }
+      ],
+      "answer": "The state’s lookup asks for your name, ZIP and birth date, entered “as it is currently shown on your voter registration record”. If you’ve moved, use your old ZIP.",
+      "steps": [
+        "Try your last name with the hyphen, with a space instead, and run together, and leave out any middle name or suffix.",
+        "If you’ve moved, try the ZIP code where you were registered before.",
+        "Still nothing? Call your county election office. A failed search doesn’t mean you’re not registered; records can lag."
+      ],
+      "deadline": null,
+      "source": "https://www.coloradosos.gov/voter/pages/pub/olvr/findVoterReg.xhtml",
       "confidence": "verified"
     },
     {

@@ -294,6 +294,12 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('Governor (TX): the grid, with the write-ins folded under it', !!(await page.$('#i-tx-governor .grid.c3')) && /^\d+ write-in candidates:/.test(await text(page, '#i-tx-governor .wi-fold')) && (await page.$$('#i-tx-governor .clist > li')).length === 1, await text(page, '#i-tx-governor .wi-fold'));
   await tap(page, '#i-tx-governor .row-hd');
   await settle(page);
+  // "Lookup can't find you?" under Check my registration opens the plan's details at that question (Kevin, Oct 20: friends read a failed search as being purged).
+  await tap(page, '[data-fk="plan-cant-find"]');
+  await settle(page);
+  check('Plan: "Try your name these ways" opens the details at "The lookup can’t find me", with Texas’s own no-match words', (await page.getAttribute('[data-fk="wi-lookup_cant_find"]', 'aria-expanded')) === 'true' && (await focusedFk(page)) === 'wi-lookup_cant_find' && /exactly as registered/.test(await text(page, '.whatifs')) && !!(await page.$('.whatifs a[href="https://goelect.txelections.civixapps.com/ivis-mvp-ui/#/login"]')), (await text(page, '.wi-short')).slice(0, 80));
+  await tap(page, '[data-act="open"][data-k="whatif"]');
+  await settle(page);
   await page.goBack();
   await page.waitForSelector('#zip');
   await page.waitForSelector('.door-place', { timeout: 15000 });

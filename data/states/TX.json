@@ -10,7 +10,7 @@
   "voting_model": "in_person_first",
   "model_plain": "Most Texans vote in person, either during early voting (Oct. 19 to 30) or on Election Day (Nov. 3). Mail ballots are only for people who qualify: 65 or older, sick or disabled, out of the county, expecting a baby, or in jail.",
   "registration": {
-    "check_url": "https://teamrv-mvp.sos.texas.gov/MVP/mvp.do",
+    "check_url": "https://goelect.txelections.civixapps.com/ivis-mvp-ui/#/login",
     "register_url": "https://vote.gov/register/texas",
     "register_url_source": "https://vote.gov/register",
     "deadlines": [
@@ -140,7 +140,7 @@
       "actions": [
         {
           "label": "Check my registration",
-          "url": "https://teamrv-mvp.sos.texas.gov/MVP/mvp.do"
+          "url": "https://goelect.txelections.civixapps.com/ivis-mvp-ui/#/login"
         },
         {
           "label": "Find voting places",
@@ -183,7 +183,7 @@
       "actions": [
         {
           "label": "Check my registration",
-          "url": "https://teamrv-mvp.sos.texas.gov/MVP/mvp.do"
+          "url": "https://goelect.txelections.civixapps.com/ivis-mvp-ui/#/login"
         },
         {
           "label": "Register for next time",
@@ -199,6 +199,26 @@
       "deadline": "2026-10-05",
       "source": "https://www.votetexas.gov/faq/index.html",
       "confidence": "verified"
+    },
+    {
+      "id": "lookup_cant_find",
+      "question": "The lookup can’t find me.",
+      "short": "The lookup needs your name exactly as registered: try your last name with the hyphen, a space, and joined.",
+      "actions": [
+        {
+          "label": "Check my registration",
+          "url": "https://goelect.txelections.civixapps.com/ivis-mvp-ui/#/login"
+        }
+      ],
+      "answer": "The My Voter Portal asks for your name, birth date, and either your ZIP and county, your voter ID number, or your driver license number. Its own no-match message says: “This does not necessarily mean you are not a registered voter.” Try the spellings below, or search by your driver license number instead of your name.",
+      "steps": [
+        "Try your last name with the hyphen, with a space instead, and run together, and leave out any middle name or suffix.",
+        "If you’ve moved, try the ZIP code where you were registered before.",
+        "Still nothing? Call your county election office. A failed search doesn’t mean you’re not registered; records can lag."
+      ],
+      "deadline": null,
+      "source": "https://goelect.txelections.civixapps.com/ivis-mvp-ui/#/login",
+      "confidence": "sourced"
     },
     {
       "id": "wrong_polling_place",
@@ -307,7 +327,7 @@
       "actions": [
         {
           "label": "Check my registration",
-          "url": "https://teamrv-mvp.sos.texas.gov/MVP/mvp.do"
+          "url": "https://goelect.txelections.civixapps.com/ivis-mvp-ui/#/login"
         }
       ],
       "answer": "You can still vote. If the name on your ID doesn't exactly match the voter list, workers check whether it's substantially similar (they also look at your address and birth date), and if it is, you sign a short affidavit and vote.",
@@ -326,7 +346,7 @@
       "actions": [
         {
           "label": "Check my registration",
-          "url": "https://teamrv-mvp.sos.texas.gov/MVP/mvp.do"
+          "url": "https://goelect.txelections.civixapps.com/ivis-mvp-ui/#/login"
         },
         {
           "label": "Find voting places",
@@ -488,7 +508,7 @@
     },
     {
       "name": "Texas SOS: My Voter Portal (Am I registered? Where do I vote?)",
-      "url": "https://teamrv-mvp.sos.texas.gov/MVP/mvp.do"
+      "url": "https://goelect.txelections.civixapps.com/ivis-mvp-ui/#/login"
     },
     {
       "name": "Texas SOS: Ballot by Mail Tracker login",

@@ -668,8 +668,20 @@ A.report = (d, el) => {
   render(['sheet']);
   // A keyboard or a mouse lands in the box to type in; a touch lands on the sheet's Cancel, so the
   // phone's keyboard doesn't jump up over the sheet as it slides in.
-  focusFk(document.documentElement.classList.contains('touch') ? 'sheet-x' : `rf-${requiredOf(r)}`);
+  focusSoon(document.documentElement.classList.contains('touch') ? 'sheet-x' : `rf-${requiredOf(r)}`, '#r-sheet');
 };
+/* Focus a control now, and again just after this tap if it didn't hold: a mouse's pointerdown fires the
+   action, and the mousedown after it moves focus to the control under the pointer, which the sheet
+   has just made inert (or taken away), so focus would fall to the page. `inside`: it held if focus is
+   anywhere in there. */
+function focusSoon(fk: string, inside = ''): void {
+  focusFk(fk);
+  window.setTimeout(() => {
+    const a = document.activeElement;
+    const held = a && a !== document.body && (inside ? !!a.closest(inside) : (a as HTMLElement).dataset?.fk === fk);
+    if (!held) focusFk(fk);
+  }, 0);
+}
 /* Cancel, Done, the scrim or Escape: what you typed goes with the sheet. */
 function closeReport(): void {
   const r = S.ui.report;
@@ -679,7 +691,7 @@ function closeReport(): void {
   if (back) { S.ui.sheetFrom = back.from; S.ui.sheetBack = back.back; }
   render(['sheet']);
   if (!S.ui.sheet && !S.ui.reader) flushLens();
-  if (r && r.fk) focusFk(r.fk);
+  if (r && r.fk) focusSoon(r.fk);
 }
 /* Typing: kept with the open sheet (a repaint mustn't lose it), the fallback link follows it, and the
    "say what's wrong first" line goes once there is something. The ZIP takes digits only. */
@@ -709,7 +721,15 @@ export async function sendReport(): Promise<void> {
   const r = S.ui.report;
   if (!r || r.state === 'sending' || r.state === 'sent') return;
   const need = requiredOf(r);
-  if (!(r.f[need] || '').trim()) { r.err = true; render(['sheet']); focusFk(`rf-${need}`); return; }
+  if (!(r.f[need] || '').trim()) {
+    // Send sits at the bottom of a sheet you may have scrolled: bring the box and its line back into view.
+    r.err = true;
+    render(['sheet']);
+    const box = document.getElementById(`rf-${need}`);
+    box?.focus({ preventScroll: true });
+    box?.closest('.rp-f')?.scrollIntoView({ block: 'nearest' });
+    return;
+  }
   r.err = false;
   r.state = 'sending';
   render(['sheet']);

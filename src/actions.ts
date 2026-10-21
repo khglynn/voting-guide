@@ -2,7 +2,7 @@
    v2's pick vocabulary byte for byte (YES/NO/SKIP/DONE/PICK, candidate names, "id|name" keys),
    because the save link and saved picks depend on it. */
 import type { Contest, Item } from './types';
-import { S, persist, emptyBallotState, type View } from './state';
+import { S, persist, emptyBallotState, type View, type Report } from './state';
 import { status, sectionOf, rankMax, ordinal, chosenIds, entriesBySection, pageWalk, sameSeat, OTH_KEY, type SectionKey } from './ballot';
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
 import { render, renderRow, renderSection, renderSummaries, renderOff, renderLens, flushLens, markBehind, renderBallot, renderAddr, rowEl, scrollRowIntoView, rowTop, holdRow, opensLow, anchored, $ } from './render';
@@ -13,7 +13,8 @@ import { judgeBatch } from './model/judges';
 import { planAgree, planParty, planJudges, planSetup, applyFills, undoFills, emptyPlan, touchUndo, type Plan } from './model/bulk';
 import { toggleChip, setParty, setSources, noEndorsements, doorNone, type ChipKey } from './model/lens';
 import { courtGroup } from './model/labels';
-import { basisWords, LEANS } from './views/common';
+import { basisWords, LEANS, FORM, reportWhere } from './views/common';
+import { reportBody, reportFallbackURL, requiredOf } from './views/report';
 import { cheatText, shareURL } from './views/cheat';
 import { messages, shareData } from './views/pass';
 import { nextUp, sectionTally, sectionFolded, hiddenByOnly, qId } from './views/ledger';
@@ -637,6 +638,7 @@ function closePicks(): void {
 }
 A['sheet-close'] = () => {
   const was = S.ui.sheet;
+  if (was === 'report') { closeReport(); return; }
   if (was === 'picks') { closePicks(); return; }
   if ((was === 'sources' || was === 'party') && S.ui.sheetBack !== null) { backToPicks(); return; }
   S.ui.sheet = null;
@@ -644,6 +646,85 @@ A['sheet-close'] = () => {
   flushLens();
   if (S.ui.sheetFrom) focusFk(S.ui.sheetFrom);
 };
+
+/* ---------- Report a problem, Request a city (views/report.ts) ----------
+   One sheet from every place that offers it: the foot, the menu, an open row and its Full details, a
+   paywalled source's "Send it to us", the statewide-only note and the first page's "not covered". It
+   opens over the sheet it came from (all sources) and goes back to it; from the menu it takes the
+   menu's place, as Quick picks does; over Full details, which waits behind it. */
+A.report = (d, el) => {
+  const city = d.kind === 'city';
+  const from = S.ui.sheet;
+  const r: Report = {
+    kind: city ? 'city' : 'report',
+    f: city ? { city: '', zip: S.ballot && S.view === 'ballot' ? S.b.zip : S.zip || S.coverage?.zip || '', reach: '' }
+      : { wrong: '', what: d.what || '', where: reportWhere(), link: '', reach: '' },
+    what0: d.what || '', tag: d.tag || '', hint: d.hint || '', state: 'edit', err: false,
+    fk: from === 'toc' ? 'bar-menu' : el.dataset.fk || '',
+    back: from && from !== 'toc' && from !== 'report' ? { sheet: from, from: S.ui.sheetFrom, back: S.ui.sheetBack } : null,
+  };
+  S.ui.report = r;
+  S.ui.sheet = 'report';
+  render(['sheet']);
+  // A keyboard or a mouse lands in the box to type in; a touch lands on the sheet's Cancel, so the
+  // phone's keyboard doesn't jump up over the sheet as it slides in.
+  focusFk(document.documentElement.classList.contains('touch') ? 'sheet-x' : `rf-${requiredOf(r)}`);
+};
+/* Cancel, Done, the scrim or Escape: what you typed goes with the sheet. */
+function closeReport(): void {
+  const r = S.ui.report;
+  S.ui.report = null;
+  const back = r && r.back;
+  S.ui.sheet = back ? back.sheet : null;
+  if (back) { S.ui.sheetFrom = back.from; S.ui.sheetBack = back.back; }
+  render(['sheet']);
+  if (!S.ui.sheet && !S.ui.reader) flushLens();
+  if (r && r.fk) focusFk(r.fk);
+}
+/* Typing: kept with the open sheet (a repaint mustn't lose it), the fallback link follows it, and the
+   "say what's wrong first" line goes once there is something. The ZIP takes digits only. */
+export function reportInput(el: HTMLInputElement | HTMLTextAreaElement): void {
+  const r = S.ui.report;
+  const k = el.dataset.rf;
+  if (!r || !k) return;
+  if (k === 'zip') el.value = el.value.replace(/\D/g, '').slice(0, 5);
+  r.f[k] = el.value;
+  const url = reportFallbackURL(r);
+  document.querySelectorAll<HTMLAnchorElement>('#r-sheet a[data-rp-alt]').forEach((a) => { a.href = url; });
+  if (r.err && k === requiredOf(r) && el.value.trim()) {
+    r.err = false;
+    document.getElementById('rf-err')?.remove();
+    el.removeAttribute('aria-invalid');
+    const desc = (el.getAttribute('aria-describedby') || '').replace('rf-err', '').trim();
+    if (desc) el.setAttribute('aria-describedby', desc); else el.removeAttribute('aria-describedby');
+  }
+}
+/* Send: the one required question first, then a POST to the form's own submit address. The answer is
+   opaque (no-cors: Google doesn't let a page read it), so "sent" means the request went out, which
+   is reliable in practice; a request that fails or hangs past 15 seconds says so and offers the form
+   in a new tab, prefilled with what you typed. No cookies go with it. While it's out the button reads
+   "Sending..." and does nothing. A sheet closed mid-send says how it went in a toast. */
+const SEND_MS = 15_000;
+export async function sendReport(): Promise<void> {
+  const r = S.ui.report;
+  if (!r || r.state === 'sending' || r.state === 'sent') return;
+  const need = requiredOf(r);
+  if (!(r.f[need] || '').trim()) { r.err = true; render(['sheet']); focusFk(`rf-${need}`); return; }
+  r.err = false;
+  r.state = 'sending';
+  render(['sheet']);
+  const ctl = new AbortController();
+  const timer = window.setTimeout(() => ctl.abort(), SEND_MS);
+  let ok = true;
+  try {
+    await fetch(FORM.post, { method: 'POST', mode: 'no-cors', credentials: 'omit', referrerPolicy: 'no-referrer', body: new URLSearchParams(reportBody(r)), signal: ctl.signal });
+  } catch { ok = false; }
+  window.clearTimeout(timer);
+  if (S.ui.report !== r || S.ui.sheet !== 'report') { toast(ok ? 'Sent. Kevin reads every one.' : 'That didn’t send. Try again in a moment.'); return; }
+  r.state = ok ? 'sent' : 'failed';
+  render(['sheet']);
+  focusFk(ok ? 'report-done' : 'report-send');
+}
 
 /* ---------- bulk fills, each undone as a batch ---------- */
 /* The toast after a fill: what landed, what was skipped and why, and Undo. Step 2's "Show my

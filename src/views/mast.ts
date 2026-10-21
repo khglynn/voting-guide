@@ -2,7 +2,7 @@
    a forwarded friend must know in five seconds whose ballot this is and how to change it. */
 import { S } from '../state';
 import { esc, fmtDate, todayISO } from '../util';
-import { ext, formURL } from './common';
+import { ext, reportAttrs } from './common';
 import { trustHTML } from './trust';
 export { cityCount } from './trust';
 import { countyName } from './ledger';
@@ -150,10 +150,9 @@ function whereHTML(): string {
       ${S.ui.addrOpen ? addrHTML(true) : '<p class="addr-cta"><button class="linkbtn" data-act="addr-open" data-fk="addr-open">Use my address instead</button></p>'}</div>`;
   } else if (S.coverage && S.coverage.kind === 'not_covered') {
     const name = S.coverage.state ? (S.coverage.state in (idx?.states || {}) ? idx!.states[S.coverage.state].name : stateName(S.coverage.state)) : null;
-    // Vote.gov for now, and the report form (prefilled with the state and ZIP) to ask for the city.
-    const ask = formURL('Please add my city', [name, S.coverage.zip].filter(Boolean).join(', '));
+    // Vote.gov for now, and "Request a city" (the report sheet, its ZIP from the box) to ask for the city.
     after = `<div class="notice" role="status"><p><b>We don’t cover ${name ? esc(name) : 'that area'} yet.</b> ${ext('https://vote.gov/', 'Vote.gov')} has official info for every state.</p>
-      <p>Want this for your city? <a href="${esc(ask)}" target="_blank" rel="noopener" data-ask-kevin>Ask Kevin</a>.</p></div>`;
+      <p>Want this for your city? <button class="linkbtn" ${reportAttrs({ city: true, fk: 'ask-kevin' })} data-ask-kevin>Ask Kevin</button>.</p></div>`;
   }
   // "Use my address for a more exact ballot" (Kevin, Oct 20: shorter than "for the most accurate
   // local results", and still true, since the Census settles Congress and the legislature, not every

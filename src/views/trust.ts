@@ -1,14 +1,14 @@
 /* The foot of every page, two quiet lines, the same wherever you are (Kevin, Oct 21: the first
    cut had two heavy rows and a first page that differed; "less loud", one design): who it's built
    for and in how many cities, with the coffee; then "How this guide works" (its text opens below,
-   folded), the report form prefilled with the page and the place, and the same form to ask for
-   a city. On the ballot and My plan the foot is its own region (#r-trust); on the share page it
+   folded), "Report a problem" (the report sheet, views/report.ts, prefilled with the page and the
+   place) and "Request a city" (the same sheet, asking for a city). On the ballot and My plan the foot is its own region (#r-trust); on the share page it
    sits above the crowd (pass.ts); on the first page it is the small print under the pad (mast.ts),
    where the city count also opens the list of places. */
 import type { Index } from '../types';
 import { S } from '../state';
 import { esc } from '../util';
-import { ext, isOpen, kevinLink, coffeeLink, reportURL, formURL, askCityURL } from './common';
+import { ext, isOpen, kevinLink, coffeeLink, reportAttrs } from './common';
 
 export const HOW_K = 'how';
 const BROWSE_K = 'browse';
@@ -19,10 +19,8 @@ export function cityCount(idx: Pick<Index, 'places'>): number {
   return new Set(Object.entries(idx.places).map(([id, p]) => (p.state === 'DC' ? 'DC' : /^nyc-/.test(id) ? 'NYC' : id))).size;
 }
 
-const placeNames = (b: NonNullable<typeof S.ballot>): string => (b.places.length ? b.places.map((p) => p.label).join(' / ') : b.stateName);
 export function trustHTML(inDoor = false): string {
   const idx = S.index;
-  const b = S.ballot;
   const n = idx ? cityCount(idx) : 0;
   // The city count opens the list of places on the first page, where a new ballot starts; on a ballot
   // it is plain text (a place picked there would start over at the first page, as Change does).
@@ -32,11 +30,10 @@ export function trustHTML(inDoor = false): string {
   const cover = idx ? `Built for family and friends in ${inDoor ? `<button class="linkbtn" data-act="open" data-k="${BROWSE_K}" aria-expanded="${isOpen(BROWSE_K)}" data-fk="browse">${count}</button>` : count}.` : '';
   // The first page names itself even once a ZIP has loaded its ballot for the place line.
   const page = inDoor ? 'First page' : S.ui.view === 'cheat' ? 'My plan page' : S.ui.view === 'pass' ? 'Help friends vote page' : 'The ballot page';
-  const report = b && !inDoor ? reportURL(page) : formURL(page, [b ? placeNames(b) : '', S.zip].filter(Boolean).join(', '));
   const links = [
     `<button class="linkbtn" id="how-h" data-act="open" data-k="${HOW_K}" aria-expanded="${isOpen(HOW_K)}" data-fk="how">How this guide works</button>`,
-    `<a href="${esc(report)}" target="_blank" rel="noopener" data-fk="help-report">Report a problem</a>`,
-    `<a href="${esc(askCityURL(b && !inDoor ? S.b.zip : S.zip))}" target="_blank" rel="noopener" data-fk="help-city"${inDoor ? ' data-ask' : ''}>Request a city</a>`,
+    `<button class="linkbtn" ${reportAttrs({ what: page, fk: 'help-report' })}>Report a problem</button>`,
+    `<button class="linkbtn" ${reportAttrs({ city: true, fk: 'help-city' })}>Request a city</button>`,
   ].join(' · ');
   // Two lines (Kevin, Oct 21): who it's for and the coffee, then the three things you can do.
   return `<footer class="trust${inDoor ? '' : ' wrap'}" id="how"><p class="fine foot-line">${[cover, coffeeLink() ? `${coffeeLink()}.` : ''].filter(Boolean).join(' ')}</p>

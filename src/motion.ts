@@ -257,21 +257,22 @@ export function land(el: HTMLElement | null): void {
 
 /* ---------- sheets ---------- */
 /* A sheet (or Full details) that just came up over the page slides up as its scrim fades in. */
-export function sheetIn(region: HTMLElement): void {
-  const panel = region.querySelector<HTMLElement>('.sheet-panel, .reader');
+export function sheetIn(region: HTMLElement, panel = region.querySelector<HTMLElement>('.sheet-panel, .reader')): void {
   if (!canAnimate(panel)) return;
   panel.animate([{ transform: 'translateY(100%)' }, { transform: 'none' }], { duration: SHEET_MS, easing: OUT });
   region.querySelector<HTMLElement>('.scrim')?.animate([{ opacity: 0 }, { opacity: 1 }], { duration: SHEET_MS, easing: 'linear' });
 }
 /* The sheet that is closing: its nodes move out of the region (which then repaints empty, as the
-   state says) into a husk that slides down, the scrim fading, and is removed. */
-export function sheetOut(region: HTMLElement): void {
-  const panel = region.querySelector<HTMLElement>('.sheet-panel, .reader');
+   state says) into a husk that slides down, the scrim fading, and is removed. `only`: just these
+   nodes go (the report sheet leaving Full details, which stays). */
+export function sheetOut(region: HTMLElement, only?: HTMLElement[]): void {
+  const panel = only ? only.find((x) => x.classList.contains('sheet-panel')) : region.querySelector<HTMLElement>('.sheet-panel, .reader');
   if (!canAnimate(panel)) return;
-  const scrolled = [...region.querySelectorAll<HTMLElement>('.sheet-bd, .reader')].map((x) => [x, x.scrollTop] as const);
+  const scrolled = [...(only || [region]).flatMap((x) => [x, ...x.querySelectorAll<HTMLElement>('.sheet-bd, .reader')])].filter((x) => x.matches('.sheet-bd, .reader')).map((x) => [x, x.scrollTop] as const);
   const g = document.createElement('div');
   g.className = 'sheet-ghost screen-only';
-  while (region.firstChild) g.appendChild(region.firstChild);
+  if (only) only.forEach((x) => g.appendChild(x));
+  else while (region.firstChild) g.appendChild(region.firstChild);
   husk(g);
   panel.classList.replace('sheet-panel', 'sheet-gone');
   panel.classList.replace('reader', 'reader-gone');

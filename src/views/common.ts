@@ -4,21 +4,42 @@ import { S } from '../state';
 import { esc, host } from '../util';
 import { hasPaywallNote } from '../model/lens';
 
-/* "Report a problem" goes to a Google Form in Kevin's personal account (picked Oct 16).
-   The two entry ids prefill "Which race or measure?" (`what`) and "Where are you voting?". */
-const REPORT_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdTJFFXbh5ZlZzDmoqvbD5uGEKopuk2zy-nsl4dqmjNA65bOQ/viewform';
-/* The form, prefilled, reading no state: the first page has no ballot yet. */
-export function formURL(what: string, where: string): string {
-  const q = new URLSearchParams({ usp: 'pp_url', 'entry.90887649': what, 'entry.628621310': where });
-  return `${REPORT_URL}?${q.toString()}`;
+/* "Report a problem" and "Request a city" go to a Google Form in Kevin's personal account (picked
+   Oct 16). Since Oct 21 they open a sheet in the guide (views/report.ts) that posts straight into the
+   form, so its response sheet stays the one queue the city and fix pipeline reads. The address and
+   the five field ids live here, read from the form's own page on Oct 21. */
+const FORM_AT = 'https://docs.google.com/forms/d/e/1FAIpQLSdTJFFXbh5ZlZzDmoqvbD5uGEKopuk2zy-nsl4dqmjNA65bOQ';
+export const FORM = {
+  view: `${FORM_AT}/viewform`,
+  post: `${FORM_AT}/formResponse`,
+  what: 'entry.90887649',     // Which race or measure?
+  where: 'entry.628621310',   // Where are you voting?
+  wrong: 'entry.780704302',   // What's wrong? (the form's one required question)
+  link: 'entry.1986493507',   // A link that shows the right info (optional)
+  reach: 'entry.2040687555',  // Your name or a way to reach you (optional)
+} as const;
+export type FormField = 'what' | 'where' | 'wrong' | 'link' | 'reach';
+/* The form in a new tab, prefilled: the race and the place always, anything else given. The sheet's
+   fallback, "Open the form in a new tab instead", carries what you typed. */
+export function formURL(what: string, where: string, more: Partial<Record<FormField, string>> = {}): string {
+  const q = new URLSearchParams({ usp: 'pp_url', [FORM.what]: what, [FORM.where]: where });
+  for (const k of ['wrong', 'link', 'reach'] as const) if (more[k]) q.set(FORM[k], more[k]!);
+  return `${FORM.view}?${q.toString()}`;
 }
-export function reportURL(what: string): string {
-  const b = S.ballot!;
-  const where = [b.places.map((p) => p.label).join(' / ') || b.stateName, S.b.zip].filter(Boolean).join(', ');
-  return formURL(what, where);
+/* "Where are you voting?": the ballot's places (or its state) and the ZIP. On the first page, the ZIP
+   in the box. */
+export function reportWhere(): string {
+  const b = S.ballot;
+  const zip = b && S.view === 'ballot' ? S.b.zip : S.zip;
+  return [b ? b.places.map((p) => p.label).join(' / ') || b.stateName : '', zip].filter(Boolean).join(', ');
 }
-/* "Ask for yours" on the first page: the same form, with whatever ZIP is in the box. */
-export const askCityURL = (zip: string): string => formURL('Please add my city', zip);
+/* What a control needs to open the sheet (actions.ts A.report): a report names the race or the page it
+   came from (`what`, and `tag`, the item or source id the form gets after it); a city request names
+   nothing. `fk` is where focus goes back when the sheet closes. */
+export function reportAttrs(o: { city?: boolean; what?: string; tag?: string; hint?: 'paywall'; fk: string }): string {
+  return ['data-act="report"', o.city ? 'data-kind="city"' : '', o.what ? `data-what="${esc(o.what)}"` : '', o.tag ? `data-tag="${esc(o.tag)}"` : '',
+    o.hint ? `data-hint="${o.hint}"` : '', 'aria-haspopup="dialog"', `data-fk="${esc(o.fk)}"`].filter(Boolean).join(' ');
+}
 
 /* The two switches, the same words wherever they show (step 2, the Edit sheet, the menu, the rail). */
 export const FILL = 'Fill in my ballot with their picks';
@@ -38,12 +59,14 @@ export const creditHTML = (): string => [`Made by ${kevinLink()}`, coffeeLink()]
 
 /* ---------- paywalled sources (Kevin, Oct 19) ----------
    A paper whose endorsements sit behind a paywall we couldn't read: the picks we only saw
-   secondhand are out of the data, and a short note asks a subscriber to send a PDF or the
-   picks through the report form, prefilled with the source's name. The words come from the
+   secondhand are out of the data, and a short note asks a subscriber to send the picks (or a link
+   to a PDF) through the report sheet, prefilled with the source's name. The words come from the
    copy table. */
 export { hasPaywallNote };
-/* The form's "Which race or measure?" line for a source's picks, so the report names the paper. */
-export const reportSourceLink = (e: Endorser, where = ''): string => reportURL(`${e.name}: picks${where ? ` on ${where}` : ''} [${e.id}]`);
+/* The sheet's "Which race or measure?" for a source's picks, so the report names the paper; its id
+   goes along as the tag. */
+const reportSource = (e: Endorser, label: string, fk: string, where = ''): string =>
+  `<button class="linkbtn" ${reportAttrs({ what: `${e.name}: picks${where ? ` on ${where}` : ''}`, tag: e.id, hint: 'paywall', fk })}>${esc(label)}</button>`;
 const PW_NOTE = 'Behind a paywall, so we couldn’t read its endorsements. Have a login? We’d love a PDF or the list.';
 const PW_LINK = 'Send it to us';
 /* The row's form: lower case after the source names, its or their by count. */
@@ -51,14 +74,14 @@ const PW_ROW = (n: number): string => `behind a paywall, so we couldn’t read $
 /* In the sources sheet, under one paywalled source. */
 export function paywallSourceHTML(e: Endorser): string {
   if (!hasPaywallNote(e)) return '';
-  return `<p class="pw-note">${esc(e.paywall_note || PW_NOTE)} ${ext(reportSourceLink(e), PW_LINK)}.</p>`;
+  return `<p class="pw-note">${esc(e.paywall_note || PW_NOTE)} ${reportSource(e, PW_LINK, `pw-${e.id}`)}.</p>`;
 }
 /* In an open row, once, when chosen paywalled sources have no readable pick there. `what` is
    the row's title for the form. */
 export function paywallRowHTML(list: Endorser[], what: string): string {
   const pw = list.filter(hasPaywallNote);
   if (!pw.length) return '';
-  const links = pw.map((e) => ext(reportSourceLink(e, what), `${PW_LINK} (${e.short})`)).join(', ');
+  const links = pw.map((e) => reportSource(e, `${PW_LINK} (${e.short})`, `pwr-${e.id}`, what)).join(', ');
   return `<p class="pw-note">${esc(pw.map((e) => e.short).join(', '))}: ${esc(PW_ROW(pw.length))} ${links}.</p>`;
 }
 

@@ -34,7 +34,7 @@ export const SHOW_ENDS = 'Show endorsements';
 export const BUY_ME_A_COFFEE_URL = 'https://buymeacoffee.com/kevinhg';
 export const KEVIN_URL = 'https://kevinhg.com';
 export const kevinLink = (): string => ext(KEVIN_URL, 'Kevin HG');
-export const coffeeLink = (who = 'Kevin'): string => (BUY_ME_A_COFFEE_URL ? ext(BUY_ME_A_COFFEE_URL, `Buy ${who} a thank-you coffee`) : '');
+export const coffeeLink = (who = 'Kevin'): string => (BUY_ME_A_COFFEE_URL ? `Buy ${who} a ${ext(BUY_ME_A_COFFEE_URL, 'thank-you coffee')}` : ''); // only the coffee is the link (Kevin, Oct 21)
 export const creditHTML = (): string => [`Made by ${kevinLink()}`, coffeeLink('him')].filter(Boolean).join(' · ');
 
 /* ---------- paywalled sources (Kevin, Oct 19) ----------

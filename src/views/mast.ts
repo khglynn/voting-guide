@@ -102,7 +102,7 @@ function doorHTML(): string {
     <h1 class="place">Quickly make your voting plan.</h1>
     <ul class="ticks">${ticks.map((t) => `<li><i aria-hidden="true"></i>${esc(t)}</li>`).join('')}</ul>
     <div class="pad door" id="door">
-      <span class="sheet-top" aria-hidden="true"></span><span class="sheet-fill" aria-hidden="true"></span>
+      <span class="sheet-top" aria-hidden="true"></span><span class="sheet-fill" aria-hidden="true"></span><span class="sheet-bot" aria-hidden="true"></span>
       <div data-part="saved">${savedLineHTML()}</div>
       <form class="zipform" data-form="zip" novalidate>
         <label for="zip" class="step su-h zip-h"><span class="step-n" aria-hidden="true">1</span>Where do you vote?</label>

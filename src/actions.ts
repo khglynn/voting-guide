@@ -6,7 +6,7 @@ import { S, persist, emptyBallotState, type View } from './state';
 import { status, sectionOf, rankMax, ordinal, chosenIds, entriesBySection, pageWalk, sameSeat, OTH_KEY, type SectionKey } from './ballot';
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
 import { render, renderRow, renderSection, renderSummaries, renderOff, renderLens, flushLens, markBehind, renderBallot, renderAddr, rowEl, scrollRowIntoView, rowTop, holdRow, opensLow, anchored, $ } from './render';
-import { growOpen, inkRow, followFold, glideTo, land, stopGlide, grow, shrinkAway, collapseRow, finishCollapse } from './motion';
+import { growOpen, inkRow, followFold, glideTo, land, stopGlide, grow, shrinkAway, collapseRow, finishCollapse, glide } from './motion';
 import { HOW_K } from './views/trust';
 import { openBallot, openChosen, go, openReader, runAddress, reopenAddr, useMatch, toDoor, showBallot, rechoose, openSaved, fillWhy } from './app';
 import { judgeBatch } from './model/judges';
@@ -278,7 +278,7 @@ A.sec = (d, btn) => {
     return;
   }
   if (folded) { S.ui.folded.delete(s); S.ui.unfolded.add(s); } else { S.ui.unfolded.delete(s); S.ui.folded.add(s); if (S.ui.row && B().byId.get(S.ui.row) && sectionOf(B().byId.get(S.ui.row)!) === s) S.ui.row = null; }
-  anchored(() => renderSection(s), `sec-${s}`);
+  glide([`#sec-${s}`, `#sec-${s} > .sec-h`], () => anchored(() => renderSection(s), `sec-${s}`));
   persist(); // the sections as you left them come back after a reload
 };
 /* A band's count ("2 of 5 decided", ledger countHTML): under "Hide races I've decided" it shows or
@@ -301,7 +301,7 @@ A['sec-count'] = (d) => {
     const open = S.ui.row ? itemOfKey(S.ui.row) : undefined;
     if (open && sectionOf(open) === s) S.ui.row = null;
   }
-  anchored(() => renderSection(s), `sec-${s}`);
+  glide([`#sec-${s}`, `#sec-${s} > .sec-h`], () => anchored(() => renderSection(s), `sec-${s}`));
   // The other school districts' fold may have opened or closed with it: the counts follow.
   renderSummaries();
   persist();
@@ -312,7 +312,7 @@ A.grp = (d) => {
   const open = el?.getAttribute('aria-expanded') === 'true';
   if (open) S.ui.unfolded.delete(k); else S.ui.unfolded.add(k);
   const s = k.split('|')[0] as SectionKey;
-  anchored(() => renderSection(s), `sec-${s}`);
+  glide([`#sec-${s}`, `#sec-${s} > .sec-h`], () => anchored(() => renderSection(s), `sec-${s}`));
   // Opening the other school districts' fold claims its races, so the count changes.
   if (k === OTH_KEY) renderSummaries();
   persist();
@@ -478,7 +478,8 @@ A.notmine = (d) => {
   const ids = d.all ? [...b.mayApply].filter((id) => scope(b.byId.get(id)) === scope(it) && !(S.b.mine || []).includes(id)) : [d.id!];
   ids.forEach((id) => { if (!S.b.notMine.includes(id)) S.b.notMine.push(id); });
   if (S.ui.row && ids.includes(S.ui.row)) S.ui.row = null;
-  anchored(() => renderSection(sectionOf(it)));
+  const sec = sectionOf(it);
+  glide([`#sec-${sec}`, '#r-off'], () => anchored(() => renderSection(sec)));
   renderSummaries();
   persist();
   // It leaves its section for the list at the bottom: say where it went.
@@ -575,7 +576,7 @@ A.ends = () => {
     else if (!S.door.fillSet) S.door.fill = !(doorBallot() && S.b.setupDone); // back to its default
     S.ui.open.delete('su-party');
     if (doorBallot()) { S.b.sources = off ? [] : null; S.b.party = null; }
-    render(['mast']);
+    glide(['#setup'], () => render(['mast']));
     announce(off ? 'Turned off.' : 'Turned on.');
     return;
   }
@@ -732,12 +733,12 @@ A.open = (d, el) => {
   const k = d.k!;
   if (k === HOW_K) { toggleHow(); return; }
   S.ui.open.has(k) ? S.ui.open.delete(k) : S.ui.open.add(k);
-  if (k === 'off') { renderOff(); return; }
+  if (k === 'off') { glide(['#r-off'], () => renderOff()); return; }
   const row = el.closest<HTMLElement>('.row[data-item]');
-  if (row && S.ui.view === 'ballot') { renderRow(row.dataset.item!); return; }
+  if (row && S.ui.view === 'ballot') { const id = row.dataset.item!; glide([`#i-${CSS.escape(id)}`], () => renderRow(id)); return; }
   const region = el.closest<HTMLElement>('[id^="r-"]');
-  if (region && region.id === 'r-ballot') { const sec = el.closest<HTMLElement>('.sec'); if (sec) { anchored(() => renderSection(sec.dataset.sec as SectionKey), sec.id); return; } }
-  if (region) render([region.id.slice(2) as never]);
+  if (region && region.id === 'r-ballot') { const sec = el.closest<HTMLElement>('.sec'); if (sec) { const id = sec.id; glide([`#${id}`], () => anchored(() => renderSection(sec.dataset.sec as SectionKey), id)); return; } }
+  if (region) { const id = region.id; glide([`#${id}`], () => render([id.slice(2) as never])); }
 };
 
 /* ---------- places, address, restore ---------- */
@@ -777,8 +778,8 @@ A['setup-done'] = async () => { await showBallot(); };
 /* "Change" on the place line, after the place question: ask it again. */
 A.rechoose = () => { rechoose(); };
 A['saved-open'] = () => { openSaved(); };
-A['addr-open'] = () => { S.ui.addrOpen = true; S.ui.addrMsg = null; S.ui.addrFail = ''; S.ui.addrWhich = null; renderAddr(); const i = $('#addr-in'); if (i) { i.scrollIntoView({ block: 'center' }); i.focus({ preventScroll: true }); } };
-A['addr-close'] = () => { S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.addrFail = ''; S.ui.addrWhich = null; renderAddr(); focusFk($('[data-fk="addr-again"]') ? 'addr-again' : 'addr-open'); };
+A['addr-open'] = () => { S.ui.addrOpen = true; S.ui.addrMsg = null; S.ui.addrFail = ''; S.ui.addrWhich = null; glide(['.addrbox', '.door-where'], () => renderAddr()); const i = $('#addr-in'); if (i) { i.scrollIntoView({ block: 'center' }); i.focus({ preventScroll: true }); } };
+A['addr-close'] = () => { S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.addrFail = ''; S.ui.addrWhich = null; glide(['.addrbox', '.door-where'], () => renderAddr()); focusFk($('[data-fk="addr-again"]') ? 'addr-again' : 'addr-open'); };
 /* "Not it? Try again" beside what the Census found, and "None of these" under several matches: the
    form again, with what you typed. */
 A['addr-again'] = () => { reopenAddr(); };

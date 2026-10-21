@@ -119,6 +119,31 @@ export function shrinkAway(at: HTMLElement | null, old: HTMLElement | null, h: n
   a.oncancel = end;
 }
 
+/* ---------- anything else a tap opens or closes in place ----------
+   A section folding under its band (the band's paper with it), a "Show" line, the plan's details,
+   the address form, the first page's switches: each box named in `sels` glides from the height it
+   had to the one it has, clipped while it moves, instead of snapping (Kevin, Oct 21: "any time a
+   click causes a change in state it should transition gracefully"). The selectors find each box
+   before and after `change`, since a repaint may replace it. */
+export function glide(sels: string[], change: () => void): void {
+  const find = (sel: string): HTMLElement | null => document.querySelector<HTMLElement>(sel);
+  const before = sels.map((sel) => find(sel)?.offsetHeight ?? null);
+  change();
+  if (still()) return;
+  sels.forEach((sel, i) => {
+    const el = find(sel);
+    const h0 = before[i];
+    if (h0 == null || !canAnimate(el)) return;
+    const h1 = el.offsetHeight;
+    if (Math.abs(h1 - h0) < 2) return;
+    el.classList.add('gliding');
+    const a = el.animate([{ height: `${h0}px` }, { height: `${h1}px` }], { duration: h1 > h0 ? OPEN_MS : SHUT_MS, easing: OUT });
+    const done = (): void => el.classList.remove('gliding');
+    a.onfinish = done;
+    a.oncancel = done;
+  });
+}
+
 /* ---------- a decided row leaving ("Hide races I've decided") ----------
    The row, in place, folds to nothing and fades: its height (and its rule) go to zero, so the rows
    under it slide up into its place while everything above stays still; the page doesn't scroll.

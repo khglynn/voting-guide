@@ -117,7 +117,7 @@ export const qId = (g: Group): string => `q-${hash(g.key)}`;
 /* A district question's line under its title: "Depends on your address" while "Use my address" can
    still answer it; otherwise the sample ballot is what settles it (Kevin, Oct 20: after a lookup,
    "depends on your address" on every row it couldn't settle read as "your address wasn't enough"). */
-const qSub = (g: Group): string => (!S.b.addrNote && censusSettles(S.ballot!.byId.get(g.members[0]) as Contest) ? 'Depends on your address' : 'Your sample ballot shows which');
+const qSub = (g: Group): string => (!S.b.addrNote && censusSettles(S.ballot!.byId.get(g.members[0]) as Contest) ? 'Depends on your address' : 'Your official sample ballot shows which');
 function questionHTML(g: Group): string {
   const open = S.ui.row === `q:${g.key}`;
   return `<li class="row is-q${open ? ' is-open' : ''}" id="${qId(g)}" data-q="${esc(g.key)}" data-undecided>
@@ -160,7 +160,7 @@ function dqHelpHTML(finders: { url: string; label: string }[], sb: { url: string
   const once = finders.filter((f) => !seen.has(f.url) && !!seen.add(f.url));
   const inFinders = !!sb && seen.has(sb.url);
   const list = inFinders ? [...once.filter((f) => f.url === sb!.url), ...once.filter((f) => f.url !== sb!.url)] : once;
-  const btn = sb && !inFinders ? `<p class="row-btns"><a class="mini dark" href="${esc(sb.url)}" target="_blank" rel="noopener">See my sample ballot</a></p>` : '';
+  const btn = sb && !inFinders ? `<p class="row-btns"><a class="mini dark" href="${esc(sb.url)}" target="_blank" rel="noopener">Official sample ballot</a></p>` : '';
   const links = list.length ? `<p class="dq-help">${list.map((f) => ext(f.url, f.label)).join('<span class="dot" aria-hidden="true"> · </span>')}</p>` : '';
   return btn + links;
 }
@@ -178,7 +178,7 @@ function questionBodyHTML(g: Group): string {
   const sb = sampleBallot();
   return `<div class="ob dq">
     <h3 class="dq-h">Pick your ${esc(cleanOffice(g.office))} district</h3>
-    <p class="ob-lede">${esc(where())} has ${members.length} of these districts. Your sample ballot lists yours.</p>
+    <p class="ob-lede">${esc(where())} has ${members.length} of these districts. Your official sample ballot lists yours.</p>
     <div class="opts">${censusSettles(members[0]) && !S.b.addrNote ? '<button class="opt opt-addr" data-act="addr-open" data-fk="dq-addr"><b>Use my address</b><small>The Census lookup finds it for you</small></button>' : ''}${choices.map((c) => { const [l, sub] = optionLabel(c); return `<button class="opt" data-act="district" data-g="${esc(g.key)}" data-v="${esc(c.id)}" data-fk="d-${esc(c.id)}"><b>${esc(choices.length < members.length ? seatless(l) : l)}</b>${sub ? `<small>${esc(sub)}</small>` : ''}</button>`; }).join('')}
       <button class="opt opt-unsure" data-act="district" data-g="${esc(g.key)}" data-v="*" data-fk="d-${hash(g.key)}-x"><b>Not sure? Skip for now</b><small>Show all ${members.length}, each marked “Maybe on your ballot”</small></button>
       <button class="opt opt-unsure" data-act="district" data-g="${esc(g.key)}" data-v="none" data-fk="d-${hash(g.key)}-n"><b>${esc(noneLabel(g))}</b></button></div>
@@ -554,7 +554,7 @@ function addrBoxHTML(): string {
   const n = addressCount();
   const note = S.b.addrNote;
   const sb = sampleBallot();
-  const sbLink = (dark: boolean): string => (sb ? `<a class="mini${dark ? ' dark' : ''}" href="${esc(sb.url)}" target="_blank" rel="noopener">See my sample ballot</a>` : '');
+  const sbLink = (dark: boolean): string => (sb ? `<a class="mini${dark ? ' dark' : ''}" href="${esc(sb.url)}" target="_blank" rel="noopener">Official sample ballot</a>` : '');
   // What's left for the sample ballot, and why, in a voter's words (Kevin, Oct 20: "N still depend on
   // your address" read as a contradiction right after typing one).
   const kinds = addressKinds(addressRaces().filter((c) => !censusSettles(c)).map((c) => c.office)).slice(0, 2);
@@ -563,13 +563,13 @@ function addrBoxHTML(): string {
   const left3 = addressEntries();
   const named = left3.length && left3.length <= 3 && left3.length === n
     ? ` ${andList(left3.map((x) => `<button class="linkbtn" data-act="goto" ${x.act}>${esc(x.name)}</button>`))}.` : '';
-  const rest = (k: number): string => `<p class="addr-n"><b>${k === 1 ? '1 race needs' : `${k} races need`} your sample ballot${named ? ':' : '.'}</b>${named || why}</p>`;
+  const rest = (k: number): string => `<p class="addr-n"><b>${k === 1 ? '1 race needs' : `${k} races need`} your official sample ballot${named ? ':' : '.'}</b>${named || why}</p>`;
   if (!note) {
     if (!n) return '';
     const look = addressHelps();
     // Before a lookup, what it can and can't do, so what's left after it is no surprise.
     const k = look ? addressRaces().filter((c) => censusSettles(c)).length : 0;
-    const tail = !look ? ' Your sample ballot shows which are yours.' : k < n ? ` Your address finds ${k} of them. Your sample ballot shows all ${n}.` : '';
+    const tail = !look ? ' Your official sample ballot shows which are yours.' : k < n ? ` Your address finds ${k} of them. Your official sample ballot shows all ${n}.` : '';
     return `<div class="addrbox"><p class="addr-n"><b>${n === 1 ? '1 race depends' : `${n} races depend`} on your address.</b>${tail}</p>
       ${S.ui.addrOpen ? addrHTML() : `<div class="row-btns">${look ? '<button class="mini dark" data-act="addr-open" data-fk="addr-open">Use my address</button>' : ''}${sbLink(!look)}</div>`}</div>`;
   }
@@ -593,7 +593,7 @@ export function ballotHeadHTML(): string {
       <p class="picks-line"><span>Endorsements: ${esc(lensSummary())}</span><button class="mini" data-act="picks" data-fk="picks-edit">Edit</button></p>
       ${filled}${addr}
       ${statewideOnly ? `<div class="statewide-note"><p>We only have statewide races for your area so far.</p>
-        <p class="row-btns">${sb ? `<a class="mini dark" href="${esc(sb.url)}" target="_blank" rel="noopener">See my sample ballot</a>` : ''}<a class="mini" href="${esc(reportURL('Please add my city'))}" target="_blank" rel="noopener">Ask for your city</a></p></div>` : ''}
+        <p class="row-btns">${sb ? `<a class="mini dark" href="${esc(sb.url)}" target="_blank" rel="noopener">Official sample ballot</a>` : ''}<a class="mini" href="${esc(reportURL('Please add my city'))}" target="_blank" rel="noopener">Ask for your city</a></p></div>` : ''}
     </div>
     ${headsHTML(headsUp('ballot'))}`;
 }

@@ -255,7 +255,8 @@ function toggleFold(k: string, open = !S.ui.open.has(k), move = true): void {
   if (!move) return;
   focusFk(k);
   if (open) grow($(`#${k}-bd`));
-  else shrinkAway($(`#${k}-h`)?.closest<HTMLElement>('.foot-line') || $(`#${k}-h`), old, h);
+  // The husk folds away right where the body was: after the list of places when it is open, else after the foot's line.
+  else shrinkAway($(`#${k} .browse-list`) || $(`#${k}-h`)?.closest<HTMLElement>('.foot-line') || $(`#${k}-h`), old, h);
 }
 A.page = (d) => { S.ui.page[d.id!] = Number(d.v); renderRow(d.id!); $(`[data-fk="pg-${CSS.escape(d.id!)}"]`)?.focus({ preventScroll: true }); };
 A.others = (d) => { const k = d.id!; S.ui.others.has(k) ? S.ui.others.delete(k) : S.ui.others.add(k); renderRow(k); };

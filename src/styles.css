@@ -692,6 +692,9 @@ b, strong { font-weight: 600; }
 .rp-form .rp-alt { margin-top: -6px; text-align: center; }
 .rp-fail { padding: 8px 12px; background: var(--paper); border-left: 3px solid var(--clay); font-size: 14.5px; line-height: 1.45; }
 .rp-sent { padding: 6px 0 4px; font-size: 17px; }
+/* Where a sentence opens the sheet ("Send it to us.", "Ask Kevin.", Full details' "Report a problem
+   with this page."), the button reads as the link it replaced: inline, wrapping, no padding. */
+.pw-note .linkbtn, .notice .linkbtn, .rd .report .linkbtn { display: inline; min-height: 0; margin: 0; padding: 0; }
 
 /* ---------- full read ---------- */
 .reader, .reader-gone { position: fixed; inset: 0; z-index: 70; background-color: var(--bone); background-image: var(--tile); background-size: 256px; background-blend-mode: var(--tile-blend); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }

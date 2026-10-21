@@ -32,6 +32,9 @@ async function newPage(opts = {}) {
   const ctx = await browser.newContext({ viewport: { width: W, height: 820 }, deviceScaleFactor: 2, hasTouch: true, isMobile: true, ...opts });
   // The bypass header goes only to the site under test, never to fonts or the Census lookup.
   if (BYPASS) await ctx.route((u) => u.origin === new URL(BASE).origin, (route) => route.continue({ headers: { ...route.request().headers(), 'x-vercel-protection-bypass': BYPASS } }));
+  // Nothing a check does may land in Kevin's form: its response sheet is the pipeline's queue. The report
+  // sheet's own checks catch the post with page.route, which comes before this.
+  await ctx.route('https://docs.google.com/forms/**/formResponse*', (route) => route.abort());
   const page = await ctx.newPage();
   page.errors = [];
   // Only our own origin counts: a slow Google Fonts request is not a bug in the guide.
@@ -142,6 +145,26 @@ const noSideScroll = async (page, label) => {
 };
 const noErrors = (page, label) => check(`${label}: no console errors`, page.errors.length === 0, page.errors.slice(0, 3).join(' | '));
 const small44 = (page, scope) => page.$$eval(`${scope} button`, (els) => els.filter((e) => { const r = e.getBoundingClientRect(); return r.width && r.height && r.height < 43.5; }).map((e) => `${e.dataset.act || e.className}:${Math.round(e.getBoundingClientRect().height)}`));
+/* The report sheet (Oct 21) posts into Kevin's Google Form. Its checks catch the post here, so nothing is
+   ever sent: `fail` makes the next one fail like a dropped connection, holdNext() keeps the next one out
+   until release() (held past 15 seconds, the page gives up on it, and answering it then just fails
+   quietly here). */
+const FORM_IDS = ['entry.90887649', 'entry.628621310', 'entry.780704302', 'entry.1986493507', 'entry.2040687555'];
+async function catchForm(page) {
+  const c = { list: [], fail: false, hold: null, release: () => {} };
+  c.holdNext = () => { c.hold = new Promise((res) => { c.release = res; }); };
+  await page.route('https://docs.google.com/forms/**/formResponse*', async (route) => {
+    c.list.push(new URLSearchParams(route.request().postData() || ''));
+    if (c.hold) { await c.hold; c.hold = null; }
+    try {
+      if (c.fail) await route.abort('internetdisconnected');
+      else await route.fulfill({ status: 200, contentType: 'text/html', body: '' });
+    } catch { /* the page already gave up on it */ }
+  });
+  return c;
+}
+const rfVals = (page) => page.$$eval('.sheet-panel.report [data-rf]', (els) => Object.fromEntries(els.map((e) => [e.dataset.rf, e.value])));
+const SEND = '.sheet-panel.report button[type="submit"]';
 
 /* ---------- the front door ---------- */
 const SETUP = '[data-act="setup-done"]';
@@ -186,11 +209,12 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('First page: before a ZIP, the fill switch says what it does', (await text(page, '[data-act="setup-fill"] small')) === 'Fills the races where they agree. Races where picks split stay open.', await text(page, '[data-act="setup-fill"] small'));
   check('First page: "Use my address for a more exact ballot", on one line at phone width', (await text(page, '.front [data-act="addr-open"]')) === 'Use my address for a more exact ballot'
     && (await page.$eval('.front [data-act="addr-open"]', (e) => { const r = document.createRange(); r.selectNodeContents(e); return new Set([...r.getClientRects()].map((x) => Math.round(x.top))).size; })) === 1, await text(page, '.front [data-act="addr-open"]'));
-  const fine = await page.$$eval('.front .door-foot > .fine', (els) => els.map((e) => e.textContent.replace(/\s+/g, ' ').trim()));
+  const fine = await page.$$eval('.front .door-foot .foot-line', (els) => els.map((e) => e.textContent.replace(/\s+/g, ' ').trim()));
   const cities = new Set(Object.entries(await page.evaluate(() => fetch('/data/index.json').then((r) => r.json()).then((i) => i.places))).map(([id, p]) => (p.state === 'DC' ? 'DC' : /^nyc-/.test(id) ? 'NYC' : id))).size;
-  check('First page: the small print counts cities from the index (DC and NYC count once) and names Kevin once, with the coffee link in the same paragraph', fine.length === 1 && fine[0] === `Covers ${cities} cities where Kevin HG’s friends live. Ask for yours · Buy Kevin a thank-you coffee`, `${fine.join(' / ')} (index says ${cities})`);
+  check('First page: the small print is two lines: the cities and the coffee, then the three things you can do (Kevin, Oct 21)', fine.length === 2 && fine[0] === `Covers ${cities} cities where Kevin HG’s friends live. Buy Kevin a thank-you coffee.` && fine[1] === 'How this guide works · Report a problem · Request a city', `${fine.join(' / ')} (index says ${cities})`);
   check('First page: Kevin HG links to kevinhg.com, and only "thank-you coffee" links out (Kevin, Oct 21)', (await text(page, '.door-foot .fine a[href="https://kevinhg.com"]')) === 'Kevin HG' && (await text(page, '.door-foot .fine a[href="https://buymeacoffee.com/kevinhg"]')) === 'thank-you coffee');
-  check('First page: the same "How this guide works" row sits over the small print, folded', (await text(page, '.door-foot #how-h')) === 'How this guide works' && (await page.getAttribute('.door-foot [data-k="how"]', 'aria-expanded')) === 'false' && !(await page.$('.door-foot #help-h')));
+  check('First page: "How this guide works" is folded in the same line, and the two forms open the report sheet (Oct 21)', (await text(page, '.door-foot #how-h')) === 'How this guide works' && (await page.getAttribute('.door-foot [data-k="how"]', 'aria-expanded')) === 'false'
+    && (await page.getAttribute('.door-foot button[data-fk="help-report"]', 'data-what')) === 'First page' && (await page.getAttribute('.door-foot button[data-fk="help-city"]', 'data-kind')) === 'city');
   check('First page: nothing in all caps', (await upperCased(page)).length === 0);
   const pile = await page.$eval('.pile', async (p) => {
     const img = p.querySelector('img'); img.loading = 'eager'; await img.decode().catch(() => {});
@@ -263,29 +287,24 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('"Show my ballot": the sources chosen on the first page', (await text(page, '.picks-line span')) === 'Endorsements: Newspapers and guides, progressive groups', await text(page, '.picks-line span'));
   check('"Show my ballot": the ballot is saved once it shows', /austin-tx/.test((await savedVG(page)) || ''));
   check('How this guide works: one folded row at the bottom of the ballot', (await text(page, '#how-h')) === 'How this guide works' && (await page.getAttribute('#how [data-act="open"][data-k="how"]', 'aria-expanded')) === 'false' && !(await page.$('#how .how-bd')), await text(page, '#how-h'));
-  check('The foot: the report row and the credit sit under it, the credit worded as the first page’s, with only the coffee linked (Kevin, Oct 21)', (await text(page, '#help-h')) === 'Report a problem or request a city' && (await text(page, '#how .how-credit')) === 'Made by Kevin HG · Buy Kevin a thank-you coffee'
-    && (await text(page, '#how .how-credit a[href="https://kevinhg.com"]')) === 'Kevin HG' && (await text(page, '#how .how-credit a[href="https://buymeacoffee.com/kevinhg"]')) === 'thank-you coffee' && (await page.$$('#how .how-credit a')).length === 2, `${await text(page, '#help-h')} | ${await text(page, '#how .how-credit')}`);
+  check('The foot: one quiet line, the first page’s words, with Kevin HG and only the coffee linked out (Kevin, Oct 21)', /^Covers \d+ cities where Kevin HG’s friends live\. Buy Kevin a thank-you coffee\. How this guide works · Report a problem · Request a city$/.test((await page.$$eval('#how .foot-line', (els) => els.map((e) => e.textContent.replace(/\s+/g, ' ').trim()))).join(' '))
+    && (await text(page, '#how .foot-line a[href="https://kevinhg.com"]')) === 'Kevin HG' && (await text(page, '#how .foot-line a[href="https://buymeacoffee.com/kevinhg"]')) === 'thank-you coffee' && (await page.$$('#how .foot-line a')).length === 2, await text(page, '#how'));
   check('The bar: the gold line runs along its bottom edge', (await page.$eval('.foot', (e) => e.lastElementChild && e.lastElementChild.className)) === 'bar');
   await tap(page, '#how [data-act="open"][data-k="how"]');
   await settle(page);
   check('How this guide works: its row opens it, focus kept on the row', (await page.getAttribute('#how [data-act="open"][data-k="how"]', 'aria-expanded')) === 'true' && (await focusedFk(page)) === 'how', await focusedFk(page));
+  check('How this guide works: opens "Built for family and friends.", since the line above names Kevin (Oct 21)', /^Built for family and friends\. It never tells you how to vote\./.test(await text(page, '#how .how-bd > p:first-child')), await text(page, '#how .how-bd > p:first-child'));
   check('How this guide works: names the source for "Voting is underway in every state"', /“Voting is underway in every state”: Center for Election Innovation & Research\./.test(await text(page, '#how')) && !!(await page.$('#how a[href="https://electioninnovation.org/research/dates-for-2026-early-in-person-and-mail-voting/"]')));
-  check('How this guide works: ends with the build date', /^Data built \d{4}-\d{2}-\d{2}\. Not affiliated/.test(await text(page, '#how .how-bd > :last-child')) && /tap “Report a problem”\./.test(await text(page, '#how .how-bd')), await text(page, '#how .how-bd > :last-child'));
+  check('How this guide works: ends with the build date and the maker', /^Data built \d{4}-\d{2}-\d{2}\. Made by Kevin HG\. Not affiliated/.test(await text(page, '#how .how-bd > :last-child')) && /tap “Report a problem”\./.test(await text(page, '#how .how-bd')), await text(page, '#how .how-bd > :last-child'));
   await tap(page, '#how [data-act="open"][data-k="how"]');
   await settle(page);
   check('How this guide works: the row closes it again', !(await page.$('#how .how-bd')) && !(await page.$('.trust .gone')) && (await page.getAttribute('#how [data-act="open"][data-k="how"]', 'aria-expanded')) === 'false');
-  // The report row: the form prefilled with this page and this ballot's place, and the same form to ask for a city.
-  await tap(page, '#how [data-act="open"][data-k="help"]');
-  await settle(page);
-  const helpReport = (await page.getAttribute('[data-fk="help-report"]', 'href')) || '';
-  const helpCity = (await page.getAttribute('[data-fk="help-city"]', 'href')) || '';
-  check('Report a problem or request a city: opens in place with the form prefilled for this page and place, and the city form with the ZIP', (await focusedFk(page)) === 'help' && /entry\.90887649=The\+ballot\+page/.test(helpReport) && /entry\.628621310=Austin%2C\+78704/.test(helpReport) && /entry\.90887649=Please\+add\+my\+city/.test(helpCity) && /entry\.628621310=78704/.test(helpCity), `${helpReport.slice(-80)} | ${helpCity.slice(-60)}`);
-  await tap(page, '#how [data-act="open"][data-k="help"]');
-  await settle(page);
-  check('Report a problem or request a city: the row closes it again', !(await page.$('#help-bd')) && (await page.getAttribute('#how [data-act="open"][data-k="help"]', 'aria-expanded')) === 'false');
+  // The two forms open the report sheet (Oct 21; the sheet's own block below checks what it prefills and sends).
+  check('Report a problem and Request a city: buttons that open the report sheet, for this page and for a city', (await page.getAttribute('#how button[data-fk="help-report"]', 'data-what')) === 'The ballot page' && (await page.getAttribute('#how button[data-fk="help-city"]', 'data-kind')) === 'city'
+    && (await page.getAttribute('#how [data-fk="help-report"]', 'aria-haspopup')) === 'dialog');
   // The menu names it too, right above "How this guide works".
   await menu(page);
-  check('The menu: "Report a problem" is a link to the form, right above "How this guide works"', /viewform\?/.test((await page.getAttribute('.sheet-panel .nv-report', 'href')) || '') && (await page.$eval('.sheet-panel .nv-end', (ul) => [...ul.querySelectorAll('.nv-t')].map((e) => e.textContent).join('|'))) === 'Report a problem|How this guide works');
+  check('The menu: "Report a problem" opens the report sheet, right above "How this guide works"', (await page.getAttribute('.sheet-panel button.nv-report', 'data-act')) === 'report' && (await page.$eval('.sheet-panel .nv-end', (ul) => [...ul.querySelectorAll('.nv-t')].map((e) => e.textContent).join('|'))) === 'Report a problem|How this guide works');
   await tap(page, '.sheet-panel [data-fk="sheet-x"]');
   await settle(page);
   // Texas's governor race: three names and four write-ins read as the grid, the write-ins folded under it (Kevin, Oct 21).
@@ -541,7 +560,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
     await openRow(page, raceId);
     await shot(page, '02-denver-race-open');
     check('Denver: the open race shows your sources side by side', !!(await page.$(`#i-${raceId} .grid`)) || !!(await page.$(`#i-${raceId} .clist`)));
-    check('Denver: the open race links Report a problem', !!(await page.$(`#i-${raceId} a[href*="docs.google.com/forms"]`)));
+    check('Denver: the open race has Report a problem, for that race', (await page.getAttribute(`#i-${raceId} [data-act="report"]`, 'data-tag')) === raceId);
     await tap(page, `#i-${raceId} [data-act="pick"]`);
     check('Denver: a pick closes the row and shows your pick in gold', !(await page.$(`#i-${raceId}.is-open`)) && !!(await page.$(`#i-${raceId} .vd.done`)) && !(await page.$(`#i-${raceId}[data-undecided]`)));
   }
@@ -577,7 +596,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await page.waitForSelector('#cheat');
   check('Denver: the cheat sheet keeps the note', /Read the Blue Book first/.test(await text(page, '#cheat')));
   check('Denver: the cheat sheet ends, then offers Help friends vote as its own step', !(await page.$('#pass')) && !!(await page.$('#cheat [data-act="view"][data-v="pass"]')));
-  check('My plan: ends with the same foot as the ballot', (await text(page, '#r-trust #how-h')) === 'How this guide works' && (await text(page, '#r-trust #help-h')) === 'Report a problem or request a city' && (await text(page, '#r-trust .how-credit')) === 'Made by Kevin HG · Buy Kevin a thank-you coffee');
+  check('My plan: ends with the same foot as the ballot', (await text(page, '#r-trust #how-h')) === 'How this guide works' && (await page.getAttribute('#r-trust [data-fk="help-report"]', 'data-what')) === 'My plan page' && /^Covers \d+ cities where Kevin HG’s friends live\. Buy Kevin a thank-you coffee\.$/.test(await text(page, '#r-trust .foot-line')), await text(page, '#r-trust .foot-line'));
   await page.emulateMedia({ media: 'print' });
   const vis = await page.evaluate(() => ({ app: getComputedStyle(document.getElementById('app')).display, print: getComputedStyle(document.getElementById('r-print')).display, rows: document.querySelectorAll('#r-print tbody tr').length }));
   check('Denver: print shows only the cheat sheet', vis.app === 'none' && vis.print !== 'none' && vis.rows > 10, JSON.stringify(vis));
@@ -1058,6 +1077,157 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await fresh.page.waitForSelector('#plan');
   check('Resume: a save link never says "Welcome back"', !(await fresh.page.$('.resume')));
   await fresh.ctx.close();
+}
+
+/* ---------- the report sheet (Kevin, Oct 21: "Let's move the report and request forms into the web app") ----------
+   Every "Report a problem" and "Request a city" opens one sheet that posts into Kevin's Google Form, whose
+   response sheet is the pipeline's queue. The post is caught (catchForm), never sent. */
+{
+  const { ctx, page } = await newPage();
+  const posts = await catchForm(page);
+  await openBallot(page, '78704');
+  // The foot's Report a problem: this page and this place, nothing typed yet.
+  await tap(page, '#how [data-fk="help-report"]');
+  await page.waitForSelector('.sheet-panel.report');
+  await settle(page);
+  let v = await rfVals(page);
+  check('Report sheet: the foot opens Report a problem, prefilled with the page and the place', (await text(page, '.sheet-panel.report #sh-h')) === 'Report a problem' && v.what === 'The ballot page' && v.where === 'Austin, 78704' && v.wrong === '' && v.link === '' && v.reach === '', JSON.stringify(v));
+  check('Report sheet: its questions in the guide’s words', (await page.$$eval('.sheet-panel.report .rp-f label b', (els) => els.map((e) => e.textContent))).join('|') === 'What’s wrong?|Which race or measure?|Where are you voting?|A link that shows the right info|How can Kevin reach you?');
+  check('Report sheet: one fine line says where it goes', (await text(page, '.sheet-panel.report .rp-fine')) === 'Goes to Kevin’s Google Form. Nothing you type here is saved in the guide.');
+  check('Report sheet: a touch lands on Cancel, not in a box, so no keyboard jumps over the sheet', (await focusedFk(page)) === 'sheet-x' && (await text(page, '.sheet-panel.report [data-fk="sheet-x"]')) === 'Cancel', await focusedFk(page));
+  check('Report sheet: the page behind is out of reach', !!(await page.$('#app[inert]')));
+  // Send with the one required box empty: nothing goes, and it says so at the box.
+  await tap(page, SEND);
+  check('Report sheet: Send with "What’s wrong?" empty sends nothing and says so at the box', posts.list.length === 0 && (await text(page, '#rf-err')) === 'Say what’s wrong first.' && (await page.getAttribute('#rf-wrong', 'aria-invalid')) === 'true' && (await focusedFk(page)) === 'rf-wrong', await focusedFk(page));
+  await page.fill('#rf-wrong', 'Sunday early voting hours look off.');
+  check('Report sheet: typing takes the line away, and the new-tab link carries what you typed', !(await page.$('#rf-err')) && (await text(page, '.sheet-panel.report a[data-rp-alt]')) === 'Open the form in a new tab instead'
+    && new URL((await page.getAttribute('.sheet-panel.report a[data-rp-alt]', 'href')) || 'about:blank').searchParams.get('entry.780704302') === 'Sunday early voting hours look off.');
+  // While it's out, the button says so and sending again does nothing. (Enter in a box is the other way
+  // to send; a tap would wait for the button, which reads as off.)
+  posts.holdNext();
+  await tap(page, SEND);
+  check('Report sheet: while sending, the button reads Sending... and is off', (await text(page, SEND)) === 'Sending...' && (await page.getAttribute(SEND, 'aria-disabled')) === 'true');
+  // Typing while it's out can't be lost when "Sent" takes the form's place: the fields are read-only
+  // until it settles (Codex, Oct 21).
+  await page.focus('#rf-reach');
+  await page.keyboard.type('Ask for Sam');
+  check('Report sheet: while sending, the fields are read-only, so nothing typed then is lost', (await page.$$eval('.sheet-panel.report [data-rf]', (els) => els.every((e) => e.readOnly))) && (await page.inputValue('#rf-reach')) === '' && (await focusedFk(page)) === 'rf-reach', `${await page.inputValue('#rf-reach')} ${await focusedFk(page)}`);
+  await page.press('#rf-link', 'Enter');
+  await page.waitForTimeout(150);
+  posts.release();
+  await page.waitForSelector('.rp-sent');
+  const p = posts.list[0];
+  check('Report sheet: one post, with all five of the form’s ids and what you typed', posts.list.length === 1 && FORM_IDS.every((k) => p.has(k)) && p.get('entry.90887649') === 'The ballot page' && p.get('entry.628621310') === 'Austin, 78704' && p.get('entry.780704302') === 'Sunday early voting hours look off.' && p.get('entry.2040687555') === '', `${posts.list.length}: ${p}`);
+  check('Report sheet: Sent, in place, with Done', (await text(page, '.rp-sent p')) === 'Sent. Kevin reads every one.' && (await focusedFk(page)) === 'report-done' && !(await page.$('.sheet-panel.report form')), await text(page, '.rp-sent'));
+  check('Report sheet: nothing typed is saved in the guide or in its link', !/Sunday early voting/.test((await savedVG(page)) || '') && !/Sunday/.test(await page.evaluate(() => decodeURIComponent(location.href))));
+  await tap(page, '[data-fk="report-done"]');
+  await settle(page);
+  check('Report sheet: Done closes it, focus back on Report a problem', !(await page.$('.sheet-panel.report')) && !(await page.$('#app[inert]')) && (await focusedFk(page)) === 'help-report', await focusedFk(page));
+  // Request a city: which city (required), the ZIP, and how to reach you.
+  await tap(page, '#how [data-fk="help-city"]');
+  await page.waitForSelector('.sheet-panel.report[data-kind="city"]');
+  v = await rfVals(page);
+  check('Request a city: which city, the ballot’s ZIP, and how to reach you', (await text(page, '.sheet-panel.report #sh-h')) === 'Request a city' && v.city === '' && v.zip === '78704' && v.reach === '' && Object.keys(v).length === 3, JSON.stringify(v));
+  await tap(page, SEND);
+  check('Request a city: Send with no city sends nothing and says so', posts.list.length === 1 && (await text(page, '#rf-err')) === 'Type the city first.', await text(page, '#rf-err'));
+  await page.fill('#rf-city', 'Round Rock');
+  await page.fill('#rf-zip', '78664x');
+  check('Request a city: the ZIP takes digits only', (await page.inputValue('#rf-zip')) === '78664', await page.inputValue('#rf-zip'));
+  await tap(page, SEND);
+  await page.waitForSelector('.rp-sent');
+  const c = posts.list[1];
+  check('Request a city: posts as the city form always has, the city after "Please add "', !!c && FORM_IDS.every((k) => c.has(k)) && c.get('entry.90887649') === 'Please add my city' && c.get('entry.628621310') === '78664' && c.get('entry.780704302') === 'Please add Round Rock' && c.get('entry.1986493507') === '', c ? c.toString() : 'no post');
+  await page.keyboard.press('Escape');
+  await settle(page);
+  check('Request a city: Escape closes it', !(await page.$('.sheet-panel.report')) && (await focusedFk(page)) === 'help-city', await focusedFk(page));
+  // The menu's Report a problem takes the menu's place, as Quick picks does; closing goes back to the bar.
+  await menu(page);
+  await tap(page, '.sheet-panel button.nv-report');
+  await page.waitForSelector('.sheet-panel.report');
+  check('Report sheet: the menu’s Report a problem opens it for the ballot page, in the menu’s place', (await page.inputValue('#rf-what')) === 'The ballot page' && !(await page.$('.sheet-panel.toc')));
+  await tap(page, '.sheet-panel.report [data-fk="sheet-x"]');
+  await settle(page);
+  check('Report sheet: Cancel from the menu’s goes back to the bar’s menu button', !(await page.$('.sheet-panel')) && (await focusedFk(page)) === 'bar-menu', await focusedFk(page));
+  // An open row's Report a problem names the race, and sends its id after it.
+  await openRow(page, 'tx-governor');
+  const title = await page.getAttribute('#i-tx-governor [data-act="report"]', 'data-what');
+  await tap(page, '#i-tx-governor [data-act="report"]');
+  await page.waitForSelector('.sheet-panel.report');
+  check('Report sheet: a row’s Report a problem names that race', !!title && (await page.inputValue('#rf-what')) === title && !/\[/.test(title), title);
+  await page.fill('#rf-wrong', 'A candidate is missing.');
+  await tap(page, SEND);
+  await page.waitForSelector('.rp-sent');
+  check('Report sheet: a row’s report sends the race with its id after it', posts.list[2]?.get('entry.90887649') === `${title} [tx-governor]`, posts.list[2]?.get('entry.90887649'));
+  await tap(page, '[data-fk="report-done"]');
+  await settle(page);
+  check('Report sheet: Done goes back to the row’s Report a problem', (await focusedFk(page)) === 'rp-tx-governor', await focusedFk(page));
+  // Full details: the sheet comes up over it; Full details waits behind, inert, and is there again after.
+  await tap(page, '#i-tx-governor [data-act="reader"]');
+  await page.waitForSelector('.reader');
+  await tap(page, '.reader [data-act="report"]');
+  await page.waitForSelector('.sheet-panel.report');
+  await settle(page);
+  check('Report sheet: from Full details it opens on top, Full details inert behind it', !!(await page.$('#r-sheet > .reader[inert]')) && (await page.inputValue('#rf-what')) === title
+    && await page.evaluate(() => { const s = document.querySelector('.sheet-panel.report'); const r = s.getBoundingClientRect(); return document.elementFromPoint(r.left + 24, r.top + 24)?.closest('.sheet-panel.report') === s; }));
+  await page.focus('#rf-reach');
+  for (let i = 0; i < 4; i++) await page.keyboard.press('Tab');
+  check('Report sheet: Tab stays in the sheet over Full details', await page.evaluate(() => !!document.activeElement?.closest('.sheet-panel.report')));
+  // A failed send says so and offers the form in a new tab with what you typed; then it can try again.
+  await page.fill('#rf-what', 'Governor, the write-ins');
+  await page.fill('#rf-wrong', 'One write-in is missing.');
+  posts.fail = true;
+  await tap(page, SEND);
+  await page.waitForSelector('.rp-fail');
+  const alt = new URL((await page.getAttribute('.rp-fail a', 'href')) || 'about:blank');
+  check('Report sheet: a send that fails says so, with the form in a new tab carrying what you typed', (await text(page, '.rp-fail')) === 'That didn’t send. Open the form in a new tab instead.' && alt.searchParams.get('entry.780704302') === 'One write-in is missing.' && alt.searchParams.get('entry.90887649') === 'Governor, the write-ins'
+    && (await text(page, SEND)) === 'Send' && (await focusedFk(page)) === 'report-send', `${await text(page, '.rp-fail')} | ${alt.search}`);
+  check('Report sheet: after a failed send the fields can be edited again', await page.$$eval('.sheet-panel.report [data-rf]', (els) => els.length === 5 && els.every((e) => !e.readOnly)));
+  // No answer in 15 seconds: it may have arrived, so the sheet says it couldn't confirm, not that it failed.
+  posts.fail = false;
+  posts.holdNext();
+  await tap(page, SEND);
+  await page.waitForFunction(() => /Couldn’t confirm/.test(document.querySelector('.rp-fail')?.textContent || ''), null, { timeout: 25000 });
+  check('Report sheet: no answer in 15 seconds says it couldn’t confirm it sent, offering the form in a new tab', (await text(page, '.rp-fail')) === 'Couldn’t confirm it sent. Open the form in a new tab instead.' && (await text(page, SEND)) === 'Send'
+    && await page.$$eval('.sheet-panel.report [data-rf]', (els) => els.every((e) => !e.readOnly)), await text(page, '.rp-fail'));
+  posts.release();
+  await tap(page, SEND);
+  await page.waitForSelector('.rp-sent');
+  check('Report sheet: it can try again, and a race you changed goes without the id', posts.list.length === 6 && posts.list[5].get('entry.90887649') === 'Governor, the write-ins', posts.list.at(-1)?.get('entry.90887649'));
+  await tap(page, '.sheet-panel.report [data-fk="sheet-x"]');
+  await settle(page);
+  check('Report sheet: closing it leaves Full details as it was, back at its Report a problem', !!(await page.$('#r-sheet > .reader:not([inert])')) && !(await page.$('.sheet-panel.report')) && (await focusedFk(page)) === 'rd-rp-tx-governor', await focusedFk(page));
+  await noSideScroll(page, 'Report sheet');
+  noErrors(page, 'Report sheet');
+  await ctx.close();
+}
+/* The first page: the sheet before there is any ballot, and with a ZIP in the box. A mouse lands in the box to type in. */
+{
+  const { ctx, page } = await newPage();
+  await page.goto(`${BASE}/?today=${TODAY}`);
+  await page.waitForSelector('#zip');
+  await page.click('.door-foot [data-fk="help-report"]');
+  await page.waitForSelector('.sheet-panel.report');
+  await settle(page);
+  let v = await rfVals(page);
+  check('Report sheet on the first page: opens before any ballot, for the first page, a mouse landing in "What’s wrong?"', v.what === 'First page' && v.where === '' && (await focusedFk(page)) === 'rf-wrong', `${JSON.stringify(v)} ${await focusedFk(page)}`);
+  await page.keyboard.press('Escape');
+  await settle(page);
+  await page.fill('#zip', '78704');
+  await page.waitForSelector('.door-place', { timeout: 15000 });
+  await tap(page, '.door-foot [data-fk="help-report"]');
+  await page.waitForSelector('.sheet-panel.report');
+  v = await rfVals(page);
+  check('Report sheet on the first page: with a ZIP, the place and the ZIP', v.where === 'Austin, 78704', v.where);
+  await tap(page, '.sheet-panel.report [data-fk="sheet-x"]');
+  await settle(page);
+  await tap(page, '.door-foot [data-fk="help-city"]');
+  await page.waitForSelector('.sheet-panel.report[data-kind="city"]');
+  check('Request a city on the first page: the ZIP in the box', (await page.inputValue('#rf-zip')) === '78704');
+  await tap(page, '.sheet-panel.report [data-fk="sheet-x"]');
+  await settle(page);
+  check('Request a city on the first page: Cancel, and the first page is as you left it', (await page.inputValue('#zip')) === '78704' && !(await page.$('.sheet-panel')) && !!(await page.$('.door-place')));
+  noErrors(page, 'Report sheet on the first page');
+  await ctx.close();
 }
 
 /* ---------- the bar and the menu (flow, Oct 20) ---------- */
@@ -1556,8 +1726,13 @@ for (const [zip, label, id, btn, href, full] of [
   await noSideScroll(page, 'Spokane');
   check('Spokane: says we only have statewide races so far', /We only have statewide races for your area so far\./.test(await text(page, '.bhead')));
   check('Spokane: links an official ballot lookup', !!(await page.$('.bhead .statewide-note a[href^="http"]')));
-  check('Spokane: Official sample ballot and Ask for your city', (await page.$$eval('.statewide-note .row-btns a', (els) => els.map((e) => e.textContent.trim()))).join('|') === 'Official sample ballot|Ask for your city'
-    && /docs\.google\.com/.test((await page.getAttribute('.statewide-note a:last-child', 'href')) || ''));
+  check('Spokane: Official sample ballot and Ask for your city', (await page.$$eval('.statewide-note .row-btns > *', (els) => els.map((e) => e.textContent.trim()))).join('|') === 'Official sample ballot|Ask for your city'
+    && (await page.getAttribute('.statewide-note .row-btns > :last-child', 'data-kind')) === 'city');
+  await tap(page, '.statewide-note [data-act="report"]');
+  await page.waitForSelector('.sheet-panel.report');
+  check('Spokane: Ask for your city opens Request a city with the ZIP', (await text(page, '.sheet-panel.report #sh-h')) === 'Request a city' && (await page.inputValue('#rf-zip')) === '99201' && (await page.inputValue('#rf-city')) === '');
+  await tap(page, '.sheet-panel.report [data-fk="sheet-x"]');
+  await settle(page);
   check('Spokane: the sample ballot link is the state lookup, not one county\'s PDF', /^https:\/\/voter\.votewa\.gov\//.test((await page.getAttribute('.bhead .statewide-note a[href^="http"]', 'href')) || ''));
   check('Spokane: no city or county sections', !(await page.$('.sec[data-sec="city"], .sec[data-sec="county"]')));
   noErrors(page, 'Spokane');
@@ -1572,8 +1747,21 @@ for (const [zip, label, id, btn, href, full] of [
   check('Uncovered: the notice sits under the ZIP box, step 2 stays with no counts', !!(await page.$('.door .door-where .notice')) && !!(await page.$('#su-h')) && !(await page.$('.su-cov')) && !(await page.$('.door-place')));
   await tap(page, SETUP);
   check('Uncovered: "Show my ballot" stays on the first page', !(await page.$('#plan')) && (await focusedFk(page)) === 'zip');
-  const ask = new URL((await page.getAttribute('.notice a[data-ask-kevin]', 'href')) || 'about:blank');
-  check('Uncovered: "Want this for your city? Ask Kevin." opens the form with the state and ZIP', /Want this for your city\? Ask Kevin\./.test(await text(page, '.notice')) && ask.searchParams.get('entry.628621310') === 'Massachusetts, 02139', ask.search);
+  check('Uncovered: "Want this for your city? Ask Kevin."', /Want this for your city\? Ask Kevin\./.test(await text(page, '.notice')) && (await page.getAttribute('.notice [data-ask-kevin]', 'data-kind')) === 'city');
+  // Ask Kevin opens Request a city on the first page, before there is any ballot, with the ZIP from the box.
+  const posts = await catchForm(page);
+  await tap(page, '.notice [data-ask-kevin]');
+  await page.waitForSelector('.sheet-panel.report');
+  check('Uncovered: Ask Kevin opens Request a city with the ZIP from the box', (await text(page, '.sheet-panel.report #sh-h')) === 'Request a city' && (await page.inputValue('#rf-zip')) === '02139' && !!(await page.$('#app[inert]')));
+  await page.fill('#rf-city', 'Cambridge');
+  await tap(page, '.sheet-panel.report button[type="submit"]');
+  await page.waitForSelector('.rp-sent');
+  const p0 = posts.list[0];
+  check('Uncovered: the request goes in with the ZIP and "Please add Cambridge"', posts.list.length === 1 && FORM_IDS.every((k) => p0.has(k)) && p0.get('entry.628621310') === '02139' && p0.get('entry.780704302') === 'Please add Cambridge' && p0.get('entry.90887649') === 'Please add my city', p0 ? p0.toString() : 'no post');
+  await tap(page, '[data-fk="report-done"]');
+  await settle(page);
+  check('Uncovered: Done closes it, back on the first page at Ask Kevin', !(await page.$('.sheet-panel.report')) && (await focusedFk(page)) === 'ask-kevin', await focusedFk(page));
+  noErrors(page, 'Uncovered');
   await ctx.close();
 }
 {
@@ -1652,10 +1840,19 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
   const pw = await page.evaluate(() => {
     const row = [...document.querySelectorAll('.sheet-panel .srow')].find((r) => r.querySelector('.pw-note'));
     if (!row) return null;
-    const a = row.querySelector('.pw-note a');
-    return { name: row.querySelector('.s-n').textContent.trim(), note: row.querySelector('.pw-note').textContent.replace(/\s+/g, ' ').trim(), href: a ? a.href : '' };
+    const a = row.querySelector('.pw-note [data-act="report"]');
+    return { name: row.querySelector('.s-n').textContent.trim(), note: row.querySelector('.pw-note').textContent.replace(/\s+/g, ' ').trim(), what: a ? a.dataset.what : '', fk: a ? a.dataset.fk : '' };
   });
-  check('Portland: a paywalled paper in See all sources carries the note, linking the report form with its name', !!pw && PW_NOTE_RE.test(pw.note) && pw.href.includes('docs.google.com/forms') && new URL(pw.href).searchParams.get('entry.90887649').includes(pw.name), pw ? `${pw.name}: ${pw.note}` : 'no paywalled source on this ballot');
+  check('Portland: a paywalled paper in See all sources carries the note, with "Send it to us" naming it', !!pw && PW_NOTE_RE.test(pw.note) && pw.what.includes(pw.name), pw ? `${pw.name}: ${pw.note}` : 'no paywalled source on this ballot');
+  if (pw) {
+    // It opens the report sheet over all sources, asking for the picks, and Cancel goes back there.
+    await tap(page, `.sheet-panel [data-fk="${pw.fk}"]`);
+    await page.waitForSelector('.sheet-panel.report');
+    check('Portland: Send it to us opens Report a problem, naming the paper and asking for its picks', (await page.inputValue('#rf-what')) === `${pw.name}: picks` && /Paste their picks here/.test(await text(page, '.sheet-panel.report')), await page.inputValue('#rf-what'));
+    await tap(page, '.sheet-panel.report [data-fk="sheet-x"]');
+    await page.waitForSelector('.sheet-panel .sgrp');
+    check('Portland: Cancel goes back to all sources, at Send it to us', !(await page.$('.sheet-panel.report')) && (await focusedFk(page)) === pw.fk, await focusedFk(page));
+  }
   await tap(page, '[data-act="sheet-close"][data-fk="sheet-x"]');
   await tap(page, '[data-act="sheet-close"][data-fk="sheet-x"]');
   const key = await page.evaluate(() => [...document.querySelectorAll('.row[data-q]')].map((r) => r.dataset.q).find((k) => /Portland City Council/.test(k)));
@@ -1672,8 +1869,8 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
   check('Portland: no em dashes in the ranked race', !/—/.test(await text(page, card)));
   // Paywalled papers (Kevin, Oct 19): the Oregonian's picks we only saw secondhand are out, so
   // this race says once why, with a link that opens the report form naming the paper.
-  const pwRow = await page.evaluate((c) => { const n = document.querySelector(`${c} .pw-note`); return n ? { n: document.querySelectorAll(`${c} .pw-note`).length, note: n.textContent.replace(/\s+/g, ' ').trim(), href: (n.querySelector('a') || {}).href || '' } : null; }, card);
-  check('Portland: the race notes the paywalled Oregonian once, linking the report form with its name', !!pwRow && pwRow.n === 1 && /Oregonian/.test(pwRow.note) && PW_NOTE_RE.test(pwRow.note) && new URL(pwRow.href).searchParams.get('entry.90887649').includes('Oregonian'), pwRow ? pwRow.note : 'no note');
+  const pwRow = await page.evaluate((c) => { const n = document.querySelector(`${c} .pw-note`); return n ? { n: document.querySelectorAll(`${c} .pw-note`).length, note: n.textContent.replace(/\s+/g, ' ').trim(), what: (n.querySelector('[data-act="report"]') || { dataset: {} }).dataset.what || '' } : null; }, card);
+  check('Portland: the race notes the paywalled Oregonian once, with Send it to us naming the paper and the race', !!pwRow && pwRow.n === 1 && /Oregonian/.test(pwRow.note) && PW_NOTE_RE.test(pwRow.note) && /Oregonian.*: picks on Portland City Council, District 3$/.test(pwRow.what), pwRow ? `${pwRow.note} | ${pwRow.what}` : 'no note');
   await tap(page, `${card} [data-act="rank"][data-v="Steve Novick"]`);
   await tap(page, `${card} [data-act="rank"][data-v="Tiffany Koyama Lane"]`);
   const nextLabel = await text(page, `${card} [data-act="rank"][data-v="Kellie Torres"]`);

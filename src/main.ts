@@ -5,8 +5,7 @@ import { stepKey, planKey } from './views/planstrip';
 import { render, anchored } from './render';
 import { RAIL_AT } from './views/ledger';
 import { ensureIndex, openBallot, zipTyped, offerResume, dismissResume, lookZip } from './app';
-import { A, runAddress } from './actions';
-import { askCityURL } from './views/common';
+import { A, runAddress, sendReport, reportInput } from './actions';
 
 /* ---------- taps: pointerdown for mouse and pen; touch fires on a still pointerup so a
    scroll never counts as a tap; click covers the keyboard. Tuned on phones in v2.1; the e2e
@@ -65,22 +64,22 @@ document.addEventListener('submit', (e) => {
   // Enter in the ZIP box does what "Show my ballot" does.
   if (f.dataset.form === 'zip') { S.zip = (f.querySelector('input') as HTMLInputElement).value.replace(/\D/g, '').slice(0, 5); void A['setup-done']({}, f); }
   if (f.dataset.form === 'addr') { const i = f.querySelector('input') as HTMLInputElement; void runAddress(i.value); }
+  if (f.dataset.form === 'report') void sendReport();
 });
 document.addEventListener('input', (e) => {
   const t = e.target as HTMLElement;
   if (t.matches('.zip-input')) {
     const i = t as HTMLInputElement; i.value = i.value.replace(/\D/g, '').slice(0, 5); S.zip = i.value;
-    // "Ask for yours" carries whatever ZIP is in the box.
-    const ask = document.querySelector<HTMLAnchorElement>('a[data-ask]');
-    if (ask) ask.href = askCityURL(S.zip);
     zipTyped(S.zip);
   }
   if (t.matches('textarea[data-note]')) { const ta = t as HTMLTextAreaElement; S.b.notes[ta.dataset.note!] = ta.value; persist(); }
+  if (t.matches('[data-rf]')) reportInput(t as HTMLInputElement);
 });
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Tab' && (S.ui.reader || S.ui.sheet)) {
-    // Keep Tab inside the open dialog: from the last control back to the first, and back.
-    const dlg = document.querySelector<HTMLElement>('#r-sheet [role="dialog"]');
+    // Keep Tab inside the open dialog: from the last control back to the first, and back. (Full details
+    // behind the report sheet is inert, so the sheet is the one.)
+    const dlg = document.querySelector<HTMLElement>('#r-sheet [role="dialog"]:not([inert])');
     if (!dlg) return;
     const all = [...dlg.querySelectorAll<HTMLElement>('a[href], button:not([disabled]), input:not([disabled]), textarea, select, [tabindex]:not([tabindex="-1"])')].filter((x) => x.offsetParent !== null || x === document.activeElement);
     if (!all.length) return;
@@ -91,7 +90,8 @@ document.addEventListener('keydown', (e) => {
     return;
   }
   if (e.key !== 'Escape') return;
-  if (S.ui.reader) A['reader-close']({}, document.body);
+  if (S.ui.sheet === 'report') A['sheet-close']({}, document.body);
+  else if (S.ui.reader) A['reader-close']({}, document.body);
   else if (S.ui.sheet) A['sheet-close']({}, document.body);
 });
 window.addEventListener('beforeprint', () => render(['print']));

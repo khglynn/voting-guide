@@ -694,7 +694,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       const at = (x) => html.indexOf(x);
       check(`menu: ${pid} "Next up" leads, then your next step and Quick picks, then the switch right above the sections, then My plan, then Report a problem, ending with How this guide works`, at('data-act="next"') < at('data-to="plan"') && at('data-to="plan"') < at('data-act="picks"') && at('data-act="picks"') < at('data-act="only"')
         && at('data-act="only"') < at('data-act="jump" data-to="federal"') && at('data-act="jump" data-to="federal"') < at('data-act="cheat"')
-        && /My plan<\/span><span class="nv-n"><\/span><i class="nv-a" aria-hidden="true">›<\/i><\/button><\/li><\/ul>\s*<ul class="nv-list nv-end"><li><a class="nv nv-report" href="https:\/\/docs\.google\.com\/forms\/[^"]+entry\.90887649=The\+ballot\+page[^"]*" target="_blank" rel="noopener" data-fk="toc-report"><span class="nv-t">Report a problem<\/span><span class="nv-n"><\/span><i class="nv-a" aria-hidden="true">›<\/i><\/a><\/li>\s*<li><button class="nv nv-how" data-act="jump" data-to="how"[^>]*><span class="nv-t">How this guide works<\/span><span class="nv-n"><\/span><i class="nv-a" aria-hidden="true">›<\/i><\/button><\/li><\/ul>$/.test(html.trim()));
+        && /My plan<\/span><span class="nv-n"><\/span><i class="nv-a" aria-hidden="true">›<\/i><\/button><\/li><\/ul>\s*<ul class="nv-list nv-end"><li><button class="nv nv-report" data-act="report" data-what="The ballot page" aria-haspopup="dialog" data-fk="toc-report"><span class="nv-t">Report a problem<\/span><span class="nv-n"><\/span><i class="nv-a" aria-hidden="true">›<\/i><\/button><\/li>\s*<li><button class="nv nv-how" data-act="jump" data-to="how"[^>]*><span class="nv-t">How this guide works<\/span><span class="nv-n"><\/span><i class="nv-a" aria-hidden="true">›<\/i><\/button><\/li><\/ul>$/.test(html.trim()));
       // Everything decided: answer every question, leave every race blank on purpose.
       b.groups.forEach((g) => { S.b.districts[g.key] = g.members[0]; });
       for (const x of bl.decisionItems()) S.b.picks[x.id] = 'SKIP';
@@ -1121,10 +1121,9 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     // Statewide-only: the state's sample ballot (its own sample_ballot_url first) and "Ask for your city".
     const wa = open('WA', []);
     const hd = ledger.ballotHeadHTML();
-    const ask = (hd.match(/href="([^"]+)"[^>]*>Ask for your city</) || [])[1] || '';
-    check('go check: a statewide ballot says so, with Official sample ballot and Ask for your city', /We only have statewide races for your area so far\./.test(hd) && /href="https:[^"]+"[^>]*>Official sample ballot</.test(hd) && /docs\.google\.com/.test(ask), strip(hd).slice(0, 160));
-    const askQ = new URLSearchParams(ask.replace(/&amp;/g, '&').split('?')[1] || '');
-    check('go check: Ask for your city prefills "Please add my city" and the state', askQ.get('entry.90887649') === 'Please add my city' && /Washington/.test(askQ.get('entry.628621310') || ''), askQ.toString());
+    const ask = (hd.match(/<button ([^>]*)>Ask for your city</) || [])[1] || '';
+    check('go check: a statewide ballot says so, with Official sample ballot and Ask for your city', /We only have statewide races for your area so far\./.test(hd) && /href="https:[^"]+"[^>]*>Official sample ballot</.test(hd) && !!ask, strip(hd).slice(0, 160));
+    check('go check: Ask for your city opens the city request sheet (Oct 21)', /data-act="report"/.test(ask) && /data-kind="city"/.test(ask) && /aria-haspopup="dialog"/.test(ask), ask);
     wa.howto = { ...wa.howto, sample_ballot_url: 'https://sos.example.gov/sample' };
     check('go check: a state’s own sample_ballot_url wins on a statewide ballot', common.sampleBallot().url === 'https://sos.example.gov/sample');
     const au3 = open('TX', ['austin-tx']);
@@ -1134,9 +1133,9 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const keep = { view: S.view, ballot: S.ballot, index: S.index, coverage: S.coverage };
     S.view = 'start'; S.ballot = null; S.index = INDEX; S.coverage = { kind: 'not_covered', state: 'MA', zip: '02139' };
     const nc = views.mast.mastHTML();
-    const kevin = ((nc.match(/href="([^"]+)"[^>]*data-ask-kevin/) || [])[1] || '').replace(/&amp;/g, '&');
+    const kevin = (nc.match(/<button ([^>]*data-ask-kevin[^>]*)>Ask Kevin</) || [])[1] || '';
     check('go check: not covered says "We don’t cover Massachusetts yet. Vote.gov has official info for every state."', /We don’t cover Massachusetts yet\. Vote\.gov has official info for every state\./.test(strip(nc)) && !/friends and family vote/.test(nc), strip(nc).slice(0, 300));
-    check('go check: then "Want this for your city? Ask Kevin." to the form, prefilled with the state and ZIP', /Want this for your city\? Ask Kevin \./.test(strip(nc)) && new URLSearchParams(kevin.split('?')[1]).get('entry.628621310') === 'Massachusetts, 02139' && new URLSearchParams(kevin.split('?')[1]).get('entry.90887649') === 'Please add my city', kevin);
+    check('go check: then "Want this for your city? Ask Kevin.", which opens the city request sheet (Oct 21)', /Want this for your city\? Ask Kevin \./.test(strip(nc)) && /data-act="report"/.test(kevin) && /data-kind="city"/.test(kevin), kevin);
     // A load error gets "Try again".
     S.coverage = null; S.loadErr = 'We couldn’t load that ballot. Check your connection.'; S.retry = () => {};
     check('go check: a load error gets "Try again"', /data-act="retry"[^>]*>Try again</.test(views.mast.mastHTML()));
@@ -1630,5 +1629,24 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     S.ui.addrOpen = false; S.ui.addrFound = null;
     check('address box: a DC ward after a reload has no box', !hasBox(), box());
     S.view = view0; S.ui.addrFound = null;
+  }
+
+  /* ---------- the report sheet (Oct 21): what goes into Kevin's Google Form ----------
+     The form's response sheet is the queue the city and fix pipeline reads, so the five ids and the
+     city request's wording are a contract. */
+  {
+    const { report } = views;
+    const ids = ['entry.90887649', 'entry.628621310', 'entry.780704302', 'entry.1986493507', 'entry.2040687555'];
+    const base = { what0: '', tag: '', hint: '', state: 'edit', err: false, fk: '', back: null };
+    const rep = { ...base, kind: 'report', f: { wrong: ' A wrong date. ', what: 'Governor', where: 'Austin, 78704', link: 'https://example.org/x', reach: '' }, what0: 'Governor', tag: 'tx-governor' };
+    const body = report.reportBody(rep);
+    check('report sheet: the post carries all five of the form’s ids, the empty ones too', ids.every((k) => k in body) && body['entry.2040687555'] === '' && body.fvv === '1' && body.pageHistory === '0', JSON.stringify(body));
+    check('report sheet: a row’s report sends its id after the race while the race reads as prefilled, trimmed', body['entry.90887649'] === 'Governor [tx-governor]' && body['entry.780704302'] === 'A wrong date.' && body['entry.628621310'] === 'Austin, 78704' && body['entry.1986493507'] === 'https://example.org/x', JSON.stringify(body));
+    check('report sheet: change the race and only your words go', report.reportBody({ ...rep, f: { ...rep.f, what: 'Lieutenant Governor' } })['entry.90887649'] === 'Lieutenant Governor');
+    const city = report.reportBody({ ...base, kind: 'city', f: { city: ' Round Rock ', zip: '78664', reach: 'kev@example.org' } });
+    check('report sheet: a city request goes in as the city form always has, the city after "Please add "', ids.every((k) => k in city) && city['entry.90887649'] === 'Please add my city' && city['entry.628621310'] === '78664' && city['entry.780704302'] === 'Please add Round Rock' && city['entry.1986493507'] === '' && city['entry.2040687555'] === 'kev@example.org', JSON.stringify(city));
+    const alt = new URL(report.reportFallbackURL({ ...base, kind: 'city', f: { city: 'Round Rock', zip: '78664', reach: '' } }));
+    check('report sheet: "Open the form in a new tab instead" is the form prefilled with what you typed', /\/viewform$/.test(alt.pathname) && alt.searchParams.get('usp') === 'pp_url' && alt.searchParams.get('entry.780704302') === 'Please add Round Rock' && alt.searchParams.get('entry.628621310') === '78664' && !alt.searchParams.has('entry.2040687555'), alt.search);
+    check('report sheet: it posts to the same form the link opens', common.FORM.post.replace(/formResponse$/, 'viewform') === common.FORM.view);
   }
 }

@@ -10,7 +10,7 @@ import { judicialReview, evalState, surveyLines, surveySentence, strengthOf, has
 import { explainsOnly } from '../model/lens';
 import { ext, escP, sourceLean, srcLink, confLabel, wordsSrc } from './common';
 import { sectionTitle } from './ledger';
-import { rcvURL, reportLink, raceRatingsHTML } from './open';
+import { rcvURL, reportRowAttrs, raceRatingsHTML } from './open';
 import { sectionOf } from '../ballot';
 
 const sec = (title: string, body: string, sub = ''): string => (body ? `<section class="rd-sec"><h3>${esc(title)}</h3>${sub ? `<p class="sub">${esc(sub)}</p>` : ''}${body}</section>` : '');
@@ -146,11 +146,12 @@ function judgeRead(c: Contest): string {
     ${sec('Official and source links', links(c.sources))}`;
 }
 
-export function readerHTML(id: string): string {
+/* `behind`: the report sheet is open over it, so it is inert until that closes. */
+export function readerHTML(id: string, behind = false): string {
   const it = S.ballot!.byId.get(id);
   if (!it) return '';
   const body = it.kind === 'measure' ? measureRead(it) : it.is_retention ? judgeRead(it) : raceRead(it);
-  return `<div class="reader screen-only" role="dialog" aria-modal="true" aria-label="Full details" data-keep="reader">
+  return `<div class="reader screen-only" role="dialog" aria-modal="true" aria-label="Full details" data-keep="reader"${behind ? ' inert' : ''}>
     <div class="reader-bar"><span class="crumb">Full details</span><button class="closebtn" data-act="reader-close" data-fk="reader-x">Back to my ballot</button></div>
-    <article class="rd wrap">${body}<p class="fine report">${ext(reportLink(it), 'Report a problem with this page')}. It’s a short form, no sign-in needed.</p></article></div>`;
+    <article class="rd wrap">${body}<p class="fine report"><button class="linkbtn" ${reportRowAttrs(it, `rd-rp-${it.id}`)}>Report a problem with this page</button>. It’s a short form, no sign-in needed.</p></article></div>`;
 }

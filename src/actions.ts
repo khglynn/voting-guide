@@ -2,18 +2,19 @@
    v2's pick vocabulary byte for byte (YES/NO/SKIP/DONE/PICK, candidate names, "id|name" keys),
    because the save link and saved picks depend on it. */
 import type { Contest, Item } from './types';
-import { S, persist, emptyBallotState, type View } from './state';
+import { S, persist, emptyBallotState, type View, type Report } from './state';
 import { status, sectionOf, rankMax, ordinal, chosenIds, entriesBySection, pageWalk, sameSeat, OTH_KEY, type SectionKey } from './ballot';
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
 import { render, renderRow, renderSection, renderSummaries, renderOff, renderLens, flushLens, markBehind, renderBallot, renderAddr, rowEl, scrollRowIntoView, rowTop, holdRow, opensLow, anchored, $ } from './render';
 import { growOpen, inkRow, followFold, glideTo, land, stopGlide, grow, shrinkAway, collapseRow, finishCollapse, glide } from './motion';
-import { HOW_K, HELP_K } from './views/trust';
+import { HOW_K } from './views/trust';
 import { openBallot, openChosen, go, openReader, runAddress, reopenAddr, useMatch, toDoor, showBallot, rechoose, openSaved, fillWhy } from './app';
 import { judgeBatch } from './model/judges';
 import { planAgree, planParty, planJudges, planSetup, applyFills, undoFills, emptyPlan, touchUndo, type Plan } from './model/bulk';
 import { toggleChip, setParty, setSources, noEndorsements, doorNone, type ChipKey } from './model/lens';
 import { courtGroup } from './model/labels';
-import { basisWords, LEANS } from './views/common';
+import { basisWords, LEANS, FORM, reportWhere } from './views/common';
+import { reportBody, reportFallbackURL, requiredOf } from './views/report';
 import { cheatText, shareURL } from './views/cheat';
 import { messages, shareData } from './views/pass';
 import { nextUp, sectionTally, sectionFolded, hiddenByOnly, qId } from './views/ledger';
@@ -243,8 +244,8 @@ A.jump = (d) => {
   glideTo($(`#sec-${sec}`), 0, () => land($(`#sec-${sec}`)));
   focusFk(`sec-${sec}`);
 };
-/* The foot's folded rows ("How this guide works", "Report a problem or request a city"): a row opens
-   its body in place and closes it, the button staying where it is. From the menu (jump "how") it
+/* The foot's "How this guide works": its link opens the text in place and closes it, the link
+   staying where it is. From the menu (jump "how") it
    opens at once, so the glide knows how far the page now goes, and the glide and the mark are the
    motion. The foot lives in a different region on each page (trust.ts), so repaint that one. */
 function toggleFold(k: string, open = !S.ui.open.has(k), move = true): void {
@@ -255,7 +256,8 @@ function toggleFold(k: string, open = !S.ui.open.has(k), move = true): void {
   if (!move) return;
   focusFk(k);
   if (open) grow($(`#${k}-bd`));
-  else shrinkAway($(`#${k}-h`), old, h);
+  // The husk folds away right where the body was: after the list of places when it is open, else after the foot's line.
+  else shrinkAway($(`#${k} .browse-list`) || $(`#${k}-h`)?.closest<HTMLElement>('.foot-line') || $(`#${k}-h`), old, h);
 }
 A.page = (d) => { S.ui.page[d.id!] = Number(d.v); renderRow(d.id!); $(`[data-fk="pg-${CSS.escape(d.id!)}"]`)?.focus({ preventScroll: true }); };
 A.others = (d) => { const k = d.id!; S.ui.others.has(k) ? S.ui.others.delete(k) : S.ui.others.add(k); renderRow(k); };
@@ -636,6 +638,7 @@ function closePicks(): void {
 }
 A['sheet-close'] = () => {
   const was = S.ui.sheet;
+  if (was === 'report') { closeReport(); return; }
   if (was === 'picks') { closePicks(); return; }
   if ((was === 'sources' || was === 'party') && S.ui.sheetBack !== null) { backToPicks(); return; }
   S.ui.sheet = null;
@@ -643,6 +646,112 @@ A['sheet-close'] = () => {
   flushLens();
   if (S.ui.sheetFrom) focusFk(S.ui.sheetFrom);
 };
+
+/* ---------- Report a problem, Request a city (views/report.ts) ----------
+   One sheet from every place that offers it: the foot, the menu, an open row and its Full details, a
+   paywalled source's "Send it to us", the statewide-only note and the first page's "not covered". It
+   opens over the sheet it came from (all sources) and goes back to it; from the menu it takes the
+   menu's place, as Quick picks does; over Full details, which waits behind it. */
+A.report = (d, el) => {
+  const city = d.kind === 'city';
+  const from = S.ui.sheet;
+  const r: Report = {
+    kind: city ? 'city' : 'report',
+    f: city ? { city: '', zip: S.ballot && S.view === 'ballot' ? S.b.zip : S.zip || S.coverage?.zip || '', reach: '' }
+      : { wrong: '', what: d.what || '', where: reportWhere(), link: '', reach: '' },
+    what0: d.what || '', tag: d.tag || '', hint: d.hint || '', state: 'edit', err: false,
+    fk: from === 'toc' ? 'bar-menu' : el.dataset.fk || '',
+    back: from && from !== 'toc' && from !== 'report' ? { sheet: from, from: S.ui.sheetFrom, back: S.ui.sheetBack } : null,
+  };
+  S.ui.report = r;
+  S.ui.sheet = 'report';
+  render(['sheet']);
+  // A keyboard or a mouse lands in the box to type in; a touch lands on the sheet's Cancel, so the
+  // phone's keyboard doesn't jump up over the sheet as it slides in.
+  focusSoon(document.documentElement.classList.contains('touch') ? 'sheet-x' : `rf-${requiredOf(r)}`, '#r-sheet');
+};
+/* Focus a control now, and again just after this tap if it didn't hold: a mouse's pointerdown fires the
+   action, and the mousedown after it moves focus to the control under the pointer, which the sheet
+   has just made inert (or taken away), so focus would fall to the page. `inside`: it held if focus is
+   anywhere in there. */
+function focusSoon(fk: string, inside = ''): void {
+  focusFk(fk);
+  window.setTimeout(() => {
+    const a = document.activeElement;
+    const held = a && a !== document.body && (inside ? !!a.closest(inside) : (a as HTMLElement).dataset?.fk === fk);
+    if (!held) focusFk(fk);
+  }, 0);
+}
+/* Cancel, Done, the scrim or Escape: what you typed goes with the sheet. */
+function closeReport(): void {
+  const r = S.ui.report;
+  S.ui.report = null;
+  const back = r && r.back;
+  S.ui.sheet = back ? back.sheet : null;
+  if (back) { S.ui.sheetFrom = back.from; S.ui.sheetBack = back.back; }
+  render(['sheet']);
+  if (!S.ui.sheet && !S.ui.reader) flushLens();
+  if (r && r.fk) focusSoon(r.fk);
+}
+/* Typing: kept with the open sheet (a repaint mustn't lose it), the fallback link follows it, and the
+   "say what's wrong first" line goes once there is something. The ZIP takes digits only. */
+export function reportInput(el: HTMLInputElement | HTMLTextAreaElement): void {
+  const r = S.ui.report;
+  const k = el.dataset.rf;
+  if (!r || !k) return;
+  if (k === 'zip') el.value = el.value.replace(/\D/g, '').slice(0, 5);
+  r.f[k] = el.value;
+  const url = reportFallbackURL(r);
+  document.querySelectorAll<HTMLAnchorElement>('#r-sheet a[data-rp-alt]').forEach((a) => { a.href = url; });
+  if (r.err && k === requiredOf(r) && el.value.trim()) {
+    r.err = false;
+    document.getElementById('rf-err')?.remove();
+    el.removeAttribute('aria-invalid');
+    const desc = (el.getAttribute('aria-describedby') || '').replace('rf-err', '').trim();
+    if (desc) el.setAttribute('aria-describedby', desc); else el.removeAttribute('aria-describedby');
+  }
+}
+/* Send: the one required question first, then a POST to the form's own submit address. The answer is
+   opaque (no-cors: Google doesn't let a page read it), so "sent" means the request went out, which
+   is reliable in practice. A request refused outright says "That didn't send."; one with no answer in
+   15 seconds says "Couldn't confirm it sent." (it may have arrived). Both offer the form in a new
+   tab, prefilled with what you typed, and Send again. No cookies go with it. While it's out the
+   button reads "Sending...", the fields are read-only and sending again does nothing. A sheet closed
+   mid-send says how it went in a toast. */
+const SEND_MS = 15_000;
+export async function sendReport(): Promise<void> {
+  const r = S.ui.report;
+  if (!r || r.state === 'sending' || r.state === 'sent') return;
+  const need = requiredOf(r);
+  if (!(r.f[need] || '').trim()) {
+    // Send sits at the bottom of a sheet you may have scrolled: bring the box and its line back into view.
+    r.err = true;
+    render(['sheet']);
+    const box = document.getElementById(`rf-${need}`);
+    box?.focus({ preventScroll: true });
+    box?.closest('.rp-f')?.scrollIntoView({ block: 'nearest' });
+    return;
+  }
+  r.err = false;
+  r.state = 'sending';
+  render(['sheet']);
+  const ctl = new AbortController();
+  let late = false;
+  const timer = window.setTimeout(() => { late = true; ctl.abort(); }, SEND_MS);
+  let ok = true;
+  try {
+    await fetch(FORM.post, { method: 'POST', mode: 'no-cors', credentials: 'omit', referrerPolicy: 'no-referrer', body: new URLSearchParams(reportBody(r)), signal: ctl.signal });
+  } catch { ok = false; }
+  window.clearTimeout(timer);
+  const state = ok ? 'sent' : late ? 'unsure' : 'failed';
+  if (S.ui.report !== r || S.ui.sheet !== 'report') {
+    toast(state === 'sent' ? 'Sent. Kevin reads every one.' : state === 'unsure' ? 'Couldn’t confirm your report sent.' : 'That didn’t send. Try again in a moment.');
+    return;
+  }
+  r.state = state;
+  render(['sheet']);
+  focusFk(ok ? 'report-done' : 'report-send');
+}
 
 /* ---------- bulk fills, each undone as a batch ---------- */
 /* The toast after a fill: what landed, what was skipped and why, and Undo. Step 2's "Show my
@@ -742,7 +851,7 @@ A['whatif-sit'] = (d) => {
 };
 A.open = (d, el) => {
   const k = d.k!;
-  if (k === HOW_K || k === HELP_K) { toggleFold(k); return; }
+  if (k === HOW_K) { toggleFold(k); return; }
   S.ui.open.has(k) ? S.ui.open.delete(k) : S.ui.open.add(k);
   if (k === 'off') { glide(['#r-off'], () => renderOff()); return; }
   const row = el.closest<HTMLElement>('.row[data-item]');

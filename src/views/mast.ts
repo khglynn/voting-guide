@@ -1,10 +1,10 @@
 /* The front door (ZIP, the place question, browse, not covered) and the ballot masthead:
    a forwarded friend must know in five seconds whose ballot this is and how to change it. */
-import type { Index } from '../types';
 import { S } from '../state';
 import { esc, fmtDate, todayISO } from '../util';
-import { ext, isOpen, askCityURL, formURL, kevinLink, coffeeLink } from './common';
-import { howRowHTML } from './trust';
+import { ext, reportAttrs } from './common';
+import { trustHTML } from './trust';
+export { cityCount } from './trust';
 import { countyName } from './ledger';
 import { doorPicksHTML, placeLine } from './setup';
 import { stateName, tidyAddress } from '../geo';
@@ -22,12 +22,6 @@ const dateline = (): string => { const d = electionDate(); return d ? `General e
 function kicker(): string {
   const d = electionDate();
   return d && todayISO() <= d ? `Voting is underway in every state. Election Day is ${fmtDate(d)}.` : dateline();
-}
-
-/* How many cities the guide covers, for the first page: each place counts once, except that DC's
-   wards are one city and New York City's boroughs are one. */
-export function cityCount(idx: Pick<Index, 'places'>): number {
-  return new Set(Object.entries(idx.places).map(([id, p]) => (p.state === 'DC' ? 'DC' : /^nyc-/.test(id) ? 'NYC' : id))).size;
 }
 
 function tryBanner(): string {
@@ -113,7 +107,7 @@ function doorHTML(): string {
       <div class="door-picks" id="setup" data-part="picks">${S.tryMode ? '' : doorPicksHTML()}</div>
       <button class="bigbtn" data-act="setup-done" data-fk="setup-done">Show my ballot</button>
     </div>
-    <div class="door-foot" data-part="fine">${creditsHTML()}</div>
+    <div class="door-foot" data-part="fine">${trustHTML(true)}</div>
     ${PILE}
   </header>`;
 }
@@ -156,10 +150,9 @@ function whereHTML(): string {
       ${S.ui.addrOpen ? addrHTML(true) : '<p class="addr-cta"><button class="linkbtn" data-act="addr-open" data-fk="addr-open">Use my address instead</button></p>'}</div>`;
   } else if (S.coverage && S.coverage.kind === 'not_covered') {
     const name = S.coverage.state ? (S.coverage.state in (idx?.states || {}) ? idx!.states[S.coverage.state].name : stateName(S.coverage.state)) : null;
-    // Vote.gov for now, and the report form (prefilled with the state and ZIP) to ask for the city.
-    const ask = formURL('Please add my city', [name, S.coverage.zip].filter(Boolean).join(', '));
+    // Vote.gov for now, and "Request a city" (the report sheet, its ZIP from the box) to ask for the city.
     after = `<div class="notice" role="status"><p><b>We don’t cover ${name ? esc(name) : 'that area'} yet.</b> ${ext('https://vote.gov/', 'Vote.gov')} has official info for every state.</p>
-      <p>Want this for your city? <a href="${esc(ask)}" target="_blank" rel="noopener" data-ask-kevin>Ask Kevin</a>.</p></div>`;
+      <p>Want this for your city? <button class="linkbtn" ${reportAttrs({ city: true, fk: 'ask-kevin' })} data-ask-kevin>Ask Kevin</button>.</p></div>`;
   }
   // "Use my address for a more exact ballot" (Kevin, Oct 20: shorter than "for the most accurate
   // local results", and still true, since the Census settles Congress and the legislature, not every
@@ -175,31 +168,6 @@ function whereHTML(): string {
     ${S.loadErr ? `<p class="zip-err" role="alert">${esc(S.loadErr)}</p>${retryHTML()}` : ''}
     ${after}
     ${addr}`;
-}
-
-/* The page's foot: the same "How this guide works" row every page ends with (trust.ts), over the
-   small print, one paragraph: how many cities, each one a tap away (the list opens below), whose
-   friends they are (his name links to his site; Kevin, Oct 20: name him once), a way to ask for yours
-   through the report form (prefilled with the ZIP in the box), and the coffee link. The small print
-   already asks for your city, so the other pages' "Report a problem or request a city" row isn't
-   repeated here. */
-function creditsHTML(): string {
-  const idx = S.index;
-  const ask = `<a href="${esc(askCityURL(S.zip))}" target="_blank" rel="noopener" data-ask>Ask for yours</a>`;
-  const k = 'browse';
-  const n = idx ? cityCount(idx) : 0;
-  const cover = idx ? `Covers <button class="linkbtn" data-act="open" data-k="${k}" aria-expanded="${isOpen(k)}" data-fk="browse">${n} ${n === 1 ? 'city' : 'cities'}</button> where ${kevinLink()}’s friends live. ` : '';
-  return `<div class="trust door-trust" id="how">${howRowHTML()}</div>
-    <p class="fine credits">${cover}${[ask, coffeeLink()].filter(Boolean).join(' · ')}</p>
-    ${idx && isOpen(k) ? browseHTML() : ''}`;
-}
-
-function browseHTML(): string {
-  const idx = S.index!;
-  const states = Object.entries(idx.states).sort((a, b) => a[1].name.localeCompare(b[1].name));
-  return `<ul class="browse-list">${states.map(([st, s]) => `<li><b>${esc(s.name)}</b>
-      ${s.places.map((id) => `<button class="linkbtn" data-act="choose-place" data-from="browse" data-ids="${esc(id)}">${esc(idx.places[id].label)}</button>`).join('')}
-      <button class="linkbtn" data-act="choose-state" data-from="browse" data-st="${esc(st)}">${s.places.length ? 'Elsewhere in the state: statewide races only' : 'Statewide races'}</button></li>`).join('')}</ul>`;
 }
 
 /* "Welcome back", above the plan on a returning visitor's started ballot (app.ts offerResume):

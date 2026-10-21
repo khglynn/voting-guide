@@ -60,7 +60,8 @@ export interface UI {
   beat: string | null;        // under "Hide races I've decided", the row just decided, showing its pick for a beat before it folds away
   noteOpen: Set<string>;
   reader: string | null;      // the "Full details" sheet, by item id
-  sheet: null | 'sources' | 'party' | 'whatif' | 'picks' | 'toc';  // picks: the ballot's Edit sheet; toc: the menu
+  sheet: null | 'sources' | 'party' | 'whatif' | 'picks' | 'toc' | 'report';  // picks: the ballot's Edit sheet; toc: the menu; report: Report a problem or Request a city
+  report: Report | null;      // that sheet's fields while it is open (views/report.ts), in memory only
   sheetFrom: string | null;   // data-fk to focus when a sheet closes
   sheetBack: string | null;   // all sources or a party, opened from the Edit sheet: its sheetFrom, kept to go back to it
   addrOpen: boolean;
@@ -77,6 +78,20 @@ export interface UI {
   setupFill: boolean;         // "Fill in my ballot with their picks" in the Edit sheet
   setupOnly: boolean;         // "Hide races I've decided" in the Edit sheet, applied when it closes (to S.b.hideDecided)
   resume: boolean;            // "Welcome back" above the plan: once per visit to a started ballot, until any tap
+}
+
+/* "Report a problem" or "Request a city" while its sheet is open: what you typed, kept here only so a
+   repaint can't lose it, and dropped when the sheet closes. Never saved, never in the save link. */
+export interface Report {
+  kind: 'report' | 'city';
+  f: Record<string, string>;  // the fields by name: wrong, what, where, link, reach (a report); city, zip, reach (a city)
+  what0: string;              // "Which race or measure?" as it was prefilled
+  tag: string;                // the item or source id the sheet was opened from, sent after the race while it still reads as prefilled
+  hint: string;               // 'paywall': opened from a paywalled source's "Send it to us"
+  state: 'edit' | 'sending' | 'sent' | 'failed' | 'unsure'; // failed: the request was refused outright; unsure: no answer in time, so it may or may not have gone
+  err: boolean;               // Send was tapped with the one required field empty
+  fk: string;                 // the control that opened it, focused again when it closes
+  back: { sheet: UI['sheet']; from: string | null; back: string | null } | null; // the sheet it was opened over, to go back to
 }
 
 /* restore: this device has other picks for the ballot, so ask which to keep. shared: a link
@@ -106,7 +121,7 @@ export const S = {
   prefs: { parties: null, endorsedOnly: false, foldDecided: true, autoPick: false } as Prefs,
   ui: {
     view: 'ballot', open: new Set(), row: null, page: {}, others: new Set(), folded: new Set(), unfolded: new Set(), reveal: new Set(), keep: null, beat: null,
-    noteOpen: new Set(), reader: null, sheet: null, sheetFrom: null, sheetBack: null, addrOpen: false, addrBusy: false, addrMsg: null, addrFail: '', addrFound: null, addrWhich: null, addrMaps: [], saveOpen: false, copyFallback: null, bulk: null, bulkWhy: null, addrFilled: null, lensEmptied: false,
+    noteOpen: new Set(), reader: null, sheet: null, report: null, sheetFrom: null, sheetBack: null, addrOpen: false, addrBusy: false, addrMsg: null, addrFail: '', addrFound: null, addrWhich: null, addrMaps: [], saveOpen: false, copyFallback: null, bulk: null, bulkWhy: null, addrFilled: null, lensEmptied: false,
     setupFill: false, setupOnly: false, resume: false,
   } as UI,
   /* ?try=fresh|aunt|straight|sources: a scenario on whatever ballot opens, never saved. */

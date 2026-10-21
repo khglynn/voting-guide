@@ -599,7 +599,7 @@ b, strong { font-weight: 600; }
 /* Its top edge is torn paper like the sheets' (Kevin, Oct 21), cut from the same render's outline and
    rising over the page; the bar's drop shadow follows the tear. */
 .foot::before { content: ""; position: absolute; left: 0; right: 0; top: -22px; height: 24px; pointer-events: none; background: inherit; background-blend-mode: inherit; background-position: 0 22px;
-  -webkit-mask: var(--r-sheet) center top / 640px 100px repeat-x; mask: var(--r-sheet) center top / 640px 100px repeat-x; -webkit-mask-position: center -8px; mask-position: center -8px; }
+  -webkit-mask: var(--r-sheet) center top / max(640px, 100%) 100px no-repeat; mask: var(--r-sheet) center top / max(640px, 100%) 100px no-repeat; -webkit-mask-position: center -8px; mask-position: center -8px; }
 /* Only the gold of what you've decided, no ruled track, along the bottom edge of the screen (Kevin,
    Oct 21: under the torn top it hung in the air). The row of buttons keeps its safe-area room above it. */
 .foot .bar { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; }
@@ -832,24 +832,20 @@ b, strong { font-weight: 600; }
 @media print { .pile { display: none; } }
 .voted-head .kick { font-family: var(--f-display); font-size: 22px; font-weight: 800; font-variation-settings: "wdth" 78; color: var(--gold-ink); margin-top: 6px; }
 
-/* ---------- how this guide works: one row, folded until you open it ---------- */
-.trust { padding-top: 30px; padding-bottom: 12px; font-size: 15px; }
-.how-h { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
-.how-tog { width: 100%; min-height: 48px; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 0; text-align: left;
-  font-family: var(--f-display); font-size: 18px; font-weight: 600; line-height: 1.15; font-variation-settings: "wdth" 84; letter-spacing: .015em; color: var(--ink); }
+/* ---------- the foot: one quiet line, "How this guide works" folded under it ---------- */
+.trust { padding-top: 28px; padding-bottom: 12px; font-size: 15px; }
+.door-foot .trust { padding-top: 0; padding-bottom: 0; }
+.foot-line { line-height: 1.65; text-wrap: pretty; }
+.foot-line .linkbtn { min-height: 0; padding: 0; }
 .how-bd > p { margin-top: 8px; }
-.how-bd > :first-child { margin-top: 10px; }
-.how-credit { margin-top: 10px; }
-/* The first page's How row sits inside its foot, over the small print. */
-.door-trust { padding-top: 4px; padding-bottom: 0; }
-.help-bd .row-btns { margin-top: 10px; }
+.how-bd > :first-child { margin-top: 12px; }
 .nv-report { text-decoration: none; }
 /* Its body growing open, and the one folding away (motion.ts grow, shrinkAway). */
 .how-bd.moving, .trust .gone { overflow: hidden; overflow: clip; overflow-anchor: none; }
 .gliding { overflow: hidden; overflow: clip; overflow-anchor: none; }
 .trust .gone { pointer-events: none; }
-#how.land .how-h { position: relative; isolation: isolate; }
-#how.land .how-h::before { content: ""; position: absolute; top: 0; bottom: 0; left: -6px; right: -6px; z-index: -1; background: var(--dusk-tint); opacity: 0; animation: land 1s ease-out; pointer-events: none; }
+#how.land .foot-line { position: relative; isolation: isolate; }
+#how.land .foot-line::before { content: ""; position: absolute; top: 0; bottom: 0; left: -6px; right: -6px; z-index: -1; background: var(--dusk-tint); opacity: 0; animation: land 1s ease-out; pointer-events: none; }
 .trust-list { margin-top: 10px; display: grid; gap: 8px; list-style: disc; padding-left: 20px; font-size: 14.5px; }
 .asof { font-size: 14px; margin-top: 6px; display: grid; gap: 2px; }
 

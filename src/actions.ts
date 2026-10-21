@@ -735,8 +735,10 @@ A['whatif-sit'] = (d) => {
   const k = `wi-${d.k}`;
   S.ui.open.add('whatif'); S.ui.open.add(k);
   render(['plan']);
+  // Opened at once, like the menu's jump to "How this guide works", so the glide knows how far the
+  // page now goes; the glide and the mark are the motion.
   const el = $(`[data-fk="${CSS.escape(k)}"]`);
-  if (el) { glideTo(el, 12); el.focus({ preventScroll: true }); }
+  if (el) { glideTo(el, 12, () => land(el.closest('li') || el)); el.focus({ preventScroll: true }); }
 };
 A.open = (d, el) => {
   const k = d.k!;

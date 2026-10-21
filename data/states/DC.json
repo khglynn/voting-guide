@@ -200,7 +200,7 @@
       "answer": "DC’s lookup asks for your name, birth date, and the last four digits of your Social Security number, DMV ID or voter ID. If none of those fit, the Board of Elections says to call 202-727-2525.",
       "steps": [
         "Try your last name with the hyphen, with a space instead, and run together, and leave out any middle name or suffix.",
-        "Still nothing? Call your county election office. A failed search doesn’t mean you’re not registered; records can lag."
+        "Still nothing? Call the DC Board of Elections at 202-727-2525. A failed search doesn’t mean you’re not registered; records can lag."
       ],
       "deadline": null,
       "source": "https://apps.dcboe.org/VRS",

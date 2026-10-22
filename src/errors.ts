@@ -21,7 +21,7 @@ const CENSUS = /geocoding\.geo\.census\.gov/i;
    everything after the first "?" or "#" goes, to the end of the string. A save link's own words
    ("v1~TX~...") go wherever they stand. Run before anything is cut short, so no part of a URL is
    ever left behind a cut. */
-const URL_START = /\b(?:https?|blob|file):\/\//;
+const URL_START = /\b(?:https?|blob|file):\/\//i;
 export function bareURLs(s: string): string {
   let out = s;
   const at = out.search(URL_START);
@@ -29,7 +29,7 @@ export function bareURLs(s: string): string {
     const q = out.slice(at).search(/[?#]/);
     if (q >= 0) out = out.slice(0, at + q);
   }
-  return out.replace(/\bv[12]~\S*/g, '[save link]');
+  return out.replace(/\bv[12]~\S*/gi, '[save link]');
 }
 /* A script's URL as its file name ("index-Bx9.js"), from the path alone: never its query or hash. */
 function fileOf(u: string): string {
@@ -40,7 +40,7 @@ function fileOf(u: string): string {
 const clock = (d: Date): string => `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
 /* Where an Error was thrown, from its stack's first line that names a file. */
 function whereFrom(e: Error): [string, number, number] {
-  const m = (e.stack || '').match(/((?:https?|blob|file):\/\/[^\s)]+?):(\d+):(\d+)/);
+  const m = (e.stack || '').match(/((?:https?|blob|file):\/\/[^\s)]+?):(\d+):(\d+)/i);
   return m ? [m[1], Number(m[2]), Number(m[3])] : ['', 0, 0];
 }
 const words = (x: unknown): string => {

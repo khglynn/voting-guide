@@ -1682,6 +1682,13 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     thrown.stack = "Error: boom\n    at f (https://example.test/assets/i-B9.js?address=12%20O'Test%20Lane#v1~PRIVATE:7:9)\n    at g (https://example.test/?address=(rear):1:1)";
     errs.note(thrown);
     check('errors: a file read from a stack is its file name only', !PRIV.test(newest().at) && !PRIV.test(newest().msg) && newest().msg === 'Error: boom', JSON.stringify(newest()));
+    // Codex, Oct 21, round 2: a scheme in capitals is still a URL.
+    errs.note('Failed HTTPS://example.test/a?secret=PRIVATE#tail');
+    check('errors: an uppercase scheme is still a URL', newest().msg === 'Failed HTTPS://example.test/a', JSON.stringify(newest()));
+    const shouted = new Error('loud');
+    shouted.stack = "Error: loud\n    at f (hTtPs://example.test/assets/i-B9.js?address=12%20Main#v1~PRIVATE:7:9)";
+    errs.note(shouted);
+    check('errors: and so is a mixed-case one in a stack', newest().at === 'i-B9.js:7:9' && !PRIV.test(newest().at), JSON.stringify(newest()));
     errs.note('Saved link v1~TX~austin-tx~78704~zz9 did not open');
     check('errors: a save link’s own words go wherever they stand', newest().msg === 'Saved link [save link] did not open', JSON.stringify(newest()));
     const census = new Error('script failed');

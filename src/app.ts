@@ -96,6 +96,7 @@ export function leaveBallot(): void {
   persist(true);
   leaveLast();
   S.doorSaved = leftBallot(decisionItems().filter((x) => x.done).length);
+  S.view = 'start'; // off the ballot now, so the place's load doesn't save this one again as the one to reopen
 }
 /* "Open my ballot" on the first page: the ballot you left, as you left it. */
 export async function openSaved(): Promise<void> {

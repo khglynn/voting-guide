@@ -681,6 +681,7 @@ b, strong { font-weight: 600; }
 .sheet-panel.shelf, .sheet-gone.shelf { z-index: 72; }
 .sh-lede, .rp-intro { font-size: 15.5px; line-height: 1.4; }
 .sheet-panel.shelf .browse-list { font-size: 15px; }
+.sheet-panel.shelf .how-bd { font-size: 15px; }
 .sheet-panel.shelf .how-bd > :first-child { margin-top: 0; }
 .rp-form { display: grid; gap: 16px; }
 .rp-f label { display: block; font-size: 15px; line-height: 1.3; }

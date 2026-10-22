@@ -858,7 +858,7 @@ A.open = (d, el) => {
   const k = d.k!;
   S.ui.open.has(k) ? S.ui.open.delete(k) : S.ui.open.add(k);
   // Inside the shelf ("When each state was last checked"): the sheet repaints, its height gliding.
-  if (el.closest('#r-sheet > .sheet-panel.shelf')) { glide(['#r-sheet > .sheet-panel.shelf'], () => render(['sheet'])); return; }
+  if (el.closest('#r-sheet > .sheet-panel.shelf')) { glide(['#r-sheet > .sheet-panel.shelf'], () => render(['sheet'])); if (el.dataset.fk) focusFk(el.dataset.fk); return; }
   if (k === 'off') { glide(['#r-off'], () => renderOff()); return; }
   const row = el.closest<HTMLElement>('.row[data-item]');
   if (row && S.ui.view === 'ballot') { const id = row.dataset.item!; glide([`#i-${CSS.escape(id)}`], () => renderRow(id)); return; }

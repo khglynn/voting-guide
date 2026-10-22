@@ -692,9 +692,9 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       const items = bl.decisionItems();
       check(`menu: ${pid} the sections' "N left" add up to the bar`, n === items.filter((x) => !x.done).length, `${n} vs ${items.filter((x) => !x.done).length}`);
       const at = (x) => html.indexOf(x);
-      check(`menu: ${pid} "Next up" leads, then your next step and Quick picks, then the switch right above the sections, then My plan, then Report a problem, ending with How this guide works`, at('data-act="next"') < at('data-to="plan"') && at('data-to="plan"') < at('data-act="picks"') && at('data-act="picks"') < at('data-act="only"')
+      check(`menu: ${pid} "Next up" leads, then your next step and Quick picks, then the switch right above the sections, then My plan, then Report a problem, ending with How this guide works, both opening the shelf`, at('data-act="next"') < at('data-to="plan"') && at('data-to="plan"') < at('data-act="picks"') && at('data-act="picks"') < at('data-act="only"')
         && at('data-act="only"') < at('data-act="jump" data-to="federal"') && at('data-act="jump" data-to="federal"') < at('data-act="cheat"')
-        && /My plan<\/span><span class="nv-n"><\/span><i class="nv-a" aria-hidden="true">›<\/i><\/button><\/li><\/ul>\s*<ul class="nv-list nv-end"><li><button class="nv nv-report" data-act="report" data-what="The ballot page" aria-haspopup="dialog" data-fk="toc-report"><span class="nv-t">Report a problem<\/span><span class="nv-n"><\/span><i class="nv-a" aria-hidden="true">›<\/i><\/button><\/li>\s*<li><button class="nv nv-how" data-act="jump" data-to="how"[^>]*><span class="nv-t">How this guide works<\/span><span class="nv-n"><\/span><i class="nv-a" aria-hidden="true">›<\/i><\/button><\/li><\/ul>$/.test(html.trim()));
+        && /My plan<\/span><span class="nv-n"><\/span><i class="nv-a" aria-hidden="true">›<\/i><\/button><\/li><\/ul>\s*<ul class="nv-list nv-end"><li><button class="nv nv-report" data-act="shelf" data-kind="report" aria-haspopup="dialog" data-fk="toc-report"><span class="nv-t">Report a problem<\/span><span class="nv-n"><\/span><i class="nv-a" aria-hidden="true">›<\/i><\/button><\/li>\s*<li><button class="nv nv-how" data-act="shelf" data-kind="how" aria-haspopup="dialog" data-fk="toc-how"><span class="nv-t">How this guide works<\/span><span class="nv-n"><\/span><i class="nv-a" aria-hidden="true">›<\/i><\/button><\/li><\/ul>$/.test(html.trim()));
       // Everything decided: answer every question, leave every race blank on purpose.
       b.groups.forEach((g) => { S.b.districts[g.key] = g.members[0]; });
       for (const x of bl.decisionItems()) S.b.picks[x.id] = 'SKIP';
@@ -1114,7 +1114,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const hd = ledger.ballotHeadHTML();
     const ask = (hd.match(/<button ([^>]*)>Ask for your city</) || [])[1] || '';
     check('go check: a statewide ballot says so, with Official sample ballot and Ask for your city', /We only have statewide races for your area so far\./.test(hd) && /href="https:[^"]+"[^>]*>Official sample ballot</.test(hd) && !!ask, strip(hd).slice(0, 160));
-    check('go check: Ask for your city opens the city request sheet (Oct 21)', /data-act="report"/.test(ask) && /data-kind="city"/.test(ask) && /aria-haspopup="dialog"/.test(ask), ask);
+    check('go check: Ask for your city opens the city request sheet (Oct 21)', /data-act="shelf"/.test(ask) && /data-kind="city"/.test(ask) && /aria-haspopup="dialog"/.test(ask), ask);
     wa.howto = { ...wa.howto, sample_ballot_url: 'https://sos.example.gov/sample' };
     check('go check: a state’s own sample_ballot_url wins on a statewide ballot', common.sampleBallot().url === 'https://sos.example.gov/sample');
     const au3 = open('TX', ['austin-tx']);
@@ -1126,7 +1126,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const nc = views.mast.mastHTML();
     const kevin = (nc.match(/<button ([^>]*data-ask-kevin[^>]*)>Ask Kevin</) || [])[1] || '';
     check('go check: not covered says "We don’t cover Massachusetts yet. Vote.gov has official info for every state."', /We don’t cover Massachusetts yet\. Vote\.gov has official info for every state\./.test(strip(nc)) && !/friends and family vote/.test(nc), strip(nc).slice(0, 300));
-    check('go check: then "Want this for your city? Ask Kevin.", which opens the city request sheet (Oct 21)', /Want this for your city\? Ask Kevin \./.test(strip(nc)) && /data-act="report"/.test(kevin) && /data-kind="city"/.test(kevin), kevin);
+    check('go check: then "Want this for your city? Ask Kevin.", which opens the city request sheet (Oct 21)', /Want this for your city\? Ask Kevin \./.test(strip(nc)) && /data-act="shelf"/.test(kevin) && /data-kind="city"/.test(kevin), kevin);
     // A load error gets "Try again".
     S.coverage = null; S.loadErr = 'We couldn’t load that ballot. Check your connection.'; S.retry = () => {};
     check('go check: a load error gets "Try again"', /data-act="retry"[^>]*>Try again</.test(views.mast.mastHTML()));
@@ -1614,22 +1614,53 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     S.view = view0; S.ui.addrFound = null;
   }
 
-  /* ---------- the report sheet (Oct 21): what goes into Kevin's Google Form ----------
+  /* ---------- the shelf's two forms (Oct 21): what goes into Kevin's Google Form ----------
      The form's response sheet is the queue the city and fix pipeline reads, so the five ids and the
-     city request's wording are a contract. */
+     city request's wording are a contract. The forms ask for a note and a way back; the rest is what
+     the page sends along by itself, and the person sees it word for word before it goes. */
   {
-    const { report } = views;
+    const { shelf, errors: errs } = views;
     const ids = ['entry.90887649', 'entry.628621310', 'entry.780704302', 'entry.1986493507', 'entry.2040687555'];
-    const base = { what0: '', tag: '', hint: '', state: 'edit', err: false, fk: '', back: null };
-    const rep = { ...base, kind: 'report', f: { wrong: ' A wrong date. ', what: 'Governor', where: 'Austin, 78704', link: 'https://example.org/x', reach: '' }, what0: 'Governor', tag: 'tx-governor' };
-    const body = report.reportBody(rep);
-    check('report sheet: the post carries all five of the form’s ids, the empty ones too', ids.every((k) => k in body) && body['entry.2040687555'] === '' && body.fvv === '1' && body.pageHistory === '0', JSON.stringify(body));
-    check('report sheet: a row’s report sends its id after the race while the race reads as prefilled, trimmed', body['entry.90887649'] === 'Governor [tx-governor]' && body['entry.780704302'] === 'A wrong date.' && body['entry.628621310'] === 'Austin, 78704' && body['entry.1986493507'] === 'https://example.org/x', JSON.stringify(body));
-    check('report sheet: change the race and only your words go', report.reportBody({ ...rep, f: { ...rep.f, what: 'Lieutenant Governor' } })['entry.90887649'] === 'Lieutenant Governor');
-    const city = report.reportBody({ ...base, kind: 'city', f: { city: ' Round Rock ', zip: '78664', reach: 'kev@example.org' } });
-    check('report sheet: a city request goes in as the city form always has, the city after "Please add "', ids.every((k) => k in city) && city['entry.90887649'] === 'Please add my city' && city['entry.628621310'] === '78664' && city['entry.780704302'] === 'Please add Round Rock' && city['entry.1986493507'] === '' && city['entry.2040687555'] === 'kev@example.org', JSON.stringify(city));
-    const alt = new URL(report.reportFallbackURL({ ...base, kind: 'city', f: { city: 'Round Rock', zip: '78664', reach: '' } }));
-    check('report sheet: "Open the form in a new tab instead" is the form prefilled with what you typed', /\/viewform$/.test(alt.pathname) && alt.searchParams.get('usp') === 'pp_url' && alt.searchParams.get('entry.780704302') === 'Please add Round Rock' && alt.searchParams.get('entry.628621310') === '78664' && !alt.searchParams.has('entry.2040687555'), alt.search);
-    check('report sheet: it posts to the same form the link opens', common.FORM.post.replace(/formResponse$/, 'viewform') === common.FORM.view);
+    const along = { page: 'Your ballot', where: 'Austin, 78704', url: 'https://vote.kevinhg.com/', data: '2026-10-21 19:04 UTC', build: 'abc1234', device: 'Safari 18 on iPhone, 390px wide', errors: [] };
+    const base = { what: '', tag: '', hint: '', along, state: 'edit', err: false, fk: '', back: null };
+    const rep = { ...base, kind: 'report', f: { wrong: ' A wrong date. ', reach: '' }, what: 'Governor', tag: 'tx-governor' };
+    const body = shelf.reportBody(rep);
+    check('shelf: a report posts all five of the form’s ids, the empty ones too', ids.every((k) => k in body) && body['entry.2040687555'] === '' && body.fvv === '1' && body.pageHistory === '0' && Object.keys(body).length === 7, JSON.stringify(body));
+    check('shelf: a row’s report names the race with its id, and the place and ZIP', body['entry.90887649'] === 'Governor [tx-governor]' && body['entry.628621310'] === 'Austin, 78704', JSON.stringify(body));
+    check('shelf: "What’s wrong?" is your note, a blank line, then "Sent along:" and the list, word for word', body['entry.780704302'] === 'A wrong date.\n\nSent along:\nPage: Your ballot\nPlace: Austin, 78704\nAbout: Governor\nGuide: data from 2026-10-21 19:04 UTC, build abc1234\nBrowser: Safari 18 on iPhone, 390px wide', body['entry.780704302']);
+    check('shelf: the link question gets the page’s address and the build', body['entry.1986493507'] === 'https://vote.kevinhg.com/ (build abc1234)', body['entry.1986493507']);
+    const foot = shelf.reportBody({ ...base, kind: 'report', f: { wrong: 'Hours look off.', reach: 'kev@example.org' }, along: { ...along, page: 'My plan' } });
+    check('shelf: from the foot or the menu, the race question gets the page, and no "About" line', foot['entry.90887649'] === 'My plan' && !/About:/.test(foot['entry.780704302']) && foot['entry.2040687555'] === 'kev@example.org', JSON.stringify(foot));
+    const err = shelf.reportBody({ ...rep, along: { ...along, errors: ['TypeError: x is undefined (index-Bx9.js:1:2345) at 19:05'] } });
+    check('shelf: an error the page caught goes last in the list', /\nError the page caught: TypeError: x is undefined \(index-Bx9\.js:1:2345\) at 19:05$/.test(err['entry.780704302']), err['entry.780704302']);
+    check('shelf: the list the sheet shows is the list that goes', shelf.alongLines(rep).join('\n') === body['entry.780704302'].split('Sent along:\n')[1]);
+    const city = shelf.reportBody({ ...base, kind: 'city', f: { city: ' Round Rock ', zip: '78664', reach: 'kev@example.org' } });
+    check('shelf: a city request goes in as the city form always has, then a shorter "Sent along:" (no browser)', ids.every((k) => k in city) && city['entry.90887649'] === 'Please add my city' && city['entry.628621310'] === '78664'
+      && city['entry.780704302'] === 'Please add Round Rock\n\nSent along:\nPage: Your ballot\nPlace: Austin, 78704\nGuide: data from 2026-10-21 19:04 UTC, build abc1234' && city['entry.2040687555'] === 'kev@example.org', JSON.stringify(city));
+    const alt = new URL(shelf.reportFallbackURL({ ...base, kind: 'city', f: { city: 'Round Rock', zip: '78664', reach: '' } }));
+    check('shelf: "Open the form in a new tab instead" is the form prefilled with the same answers', /\/viewform$/.test(alt.pathname) && alt.searchParams.get('usp') === 'pp_url' && /^Please add Round Rock\n\nSent along:/.test(alt.searchParams.get('entry.780704302')) && alt.searchParams.get('entry.628621310') === '78664' && !alt.searchParams.has('entry.2040687555'), alt.search);
+    check('shelf: it posts to the same form the link opens', common.FORM.post.replace(/formResponse$/, 'viewform') === common.FORM.view);
+    // The page's address: never its hash (the save link), only the test settings of its query.
+    check('shelf: the page’s address drops the hash and any query but ?today, ?now and ?try', shelf.pageURL({ origin: 'https://vote.kevinhg.com', pathname: '/', search: '?today=2026-10-19&q=12+Main+St&try=aunt' }) === 'https://vote.kevinhg.com/?today=2026-10-19&try=aunt'
+      && shelf.pageURL({ origin: 'https://vote.kevinhg.com', pathname: '/', search: '' }) === 'https://vote.kevinhg.com/');
+    // The browser in a few words.
+    const dw = (ua, w = 390, t = 0) => shelf.deviceWords(ua, w, t);
+    const iphone = 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Mobile/15E148 Safari/604.1';
+    check('shelf: the browser in a few words', dw(iphone) === 'Safari 18 on iPhone, 390px wide'
+      && dw('Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Mobile Safari/537.36', 412) === 'Chrome 130 on Android, 412px wide'
+      && dw('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15', 1024, 5) === 'Safari 18 on iPad, 1024px wide'
+      && dw('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0', 1280) === 'Edge 130 on Windows, 1280px wide'
+      && dw('Mozilla/5.0 (iPhone; CPU iPhone OS 18_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) FxiOS/132.0 Mobile/15E148 Safari/605.1.15') === 'Firefox 132 on iPhone, 390px wide'
+      && dw(`${iphone.replace(' Safari/604.1', '')} Instagram 350.0.0.0`) === 'Instagram app on iPhone, 390px wide', dw(iphone));
+    // errors.ts: the last three, newest first, URLs without query or hash, the Census lookup never.
+    errs.note(new Error('first'), 'https://vote.kevinhg.com/assets/index-Bx9.js?v=1#x', 10, 4);
+    errs.note('Failed: https://vote.kevinhg.com/data/state-TX.json?x=1#v1~TX~austin-tx', '', 0, 0);
+    errs.note('Script error at https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=12+Main+St', '', 0, 0);
+    errs.note(new TypeError('second'), 'https://vote.kevinhg.com/assets/index-Bx9.js', 20, 8);
+    errs.note('third', '', 0, 0);
+    const last = errs.lastErrors();
+    check('errors: keeps the last three, newest first, never one that names the Census lookup', last.length === 3 && last[0].msg === 'third' && last[1].msg === 'TypeError: second' && last[1].at === 'index-Bx9.js:20:8' && last.every((e) => !/census|Main/i.test(e.msg)), JSON.stringify(last));
+    check('errors: a URL in a message loses its query and hash (the save link lives in the hash)', last[2].msg === 'Failed: https://vote.kevinhg.com/data/state-TX.json' && /^\d{2}:\d{2}$/.test(last[2].time), JSON.stringify(last[2]));
   }
+
 }

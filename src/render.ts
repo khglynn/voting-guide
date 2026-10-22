@@ -13,7 +13,7 @@ import { cheatSectionHTML, cheatHTML } from './views/cheat';
 import { passHTML } from './views/pass';
 import { trustHTML } from './views/trust';
 import { readerHTML } from './views/reader';
-import { reportSheetHTML } from './views/report';
+import { shelfHTML } from './views/shelf';
 import { foldAway, glideTo, sheetIn, sheetOut, land, nudgeGlide } from './motion';
 
 export type Region = 'mast' | 'restore' | 'plan' | 'ballot' | 'cheat' | 'pass' | 'trust' | 'bar' | 'sheet' | 'print';
@@ -32,11 +32,11 @@ const html: Record<Region, () => string> = {
   trust: () => (shown() && S.ui.view !== 'pass' ? trustHTML() : ''),
   bar: () => (shown() ? barHTML() : ''),
   sheet: () => {
-    // Report a problem or Request a city: on the first page too, before there is a ballot, and over
-    // Full details, which stays behind it (inert) and comes back when it closes.
-    const report = S.ui.sheet === 'report' ? reportSheetHTML() : '';
-    if (S.ui.reader && S.ballot) return readerHTML(S.ui.reader, !!report) + report;
-    if (report || !S.ballot) return report;
+    // The shelf (views/shelf.ts): on the first page too, before there is a ballot, and over Full
+    // details, which stays behind it (inert) and comes back when it closes.
+    const shelf = S.ui.sheet === 'shelf' ? shelfHTML() : '';
+    if (S.ui.reader && S.ballot) return readerHTML(S.ui.reader, !!shelf) + shelf;
+    if (shelf || !S.ballot) return shelf;
     if (S.ui.sheet === 'sources') return sourcesSheetHTML();
     if (S.ui.sheet === 'party') return partySheetHTML();
     if (S.ui.sheet === 'picks') return picksSheetHTML();
@@ -108,19 +108,19 @@ function patchDoor(el: HTMLElement): boolean {
 }
 
 /* Only a sheet coming up over the page, or going away, moves (motion.ts). A repaint of the open one,
-   or one sheet swapped for another (the Edit sheet and all sources), stays still. The report sheet
-   over Full details slides up and away on its own, the reader staying put behind it. */
+   or one sheet swapped for another (the Edit sheet and all sources), stays still. The shelf over Full
+   details slides up and away on its own, the reader staying put behind it. */
 function paintSheet(el: HTMLElement): void {
   const was = !!el.firstElementChild;
   const next = html.sheet();
   const overReader = !!S.ui.reader && was && !!next;
-  const repWas = el.querySelector<HTMLElement>(':scope > .sheet-panel.report');
-  const repNow = S.ui.sheet === 'report' && !!S.ui.report;
+  const repWas = el.querySelector<HTMLElement>(':scope > .sheet-panel.shelf');
+  const repNow = S.ui.sheet === 'shelf' && !!S.ui.report;
   if (was && !next) sheetOut(el);
-  else if (overReader && repWas && !repNow) sheetOut(el, [...el.querySelectorAll<HTMLElement>(':scope > .report')]);
+  else if (overReader && repWas && !repNow) sheetOut(el, [...el.querySelectorAll<HTMLElement>(':scope > .shelf')]);
   el.innerHTML = next;
   if (next && !was) sheetIn(el);
-  else if (overReader && !repWas && repNow) sheetIn(el, el.querySelector<HTMLElement>(':scope > .sheet-panel.report'));
+  else if (overReader && !repWas && repNow) sheetIn(el, el.querySelector<HTMLElement>(':scope > .sheet-panel.shelf'));
 }
 
 export function render(regions: Region[] = ALL): void {

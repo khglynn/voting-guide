@@ -60,8 +60,8 @@ export interface UI {
   beat: string | null;        // under "Hide races I've decided", the row just decided, showing its pick for a beat before it folds away
   noteOpen: Set<string>;
   reader: string | null;      // the "Full details" sheet, by item id
-  sheet: null | 'sources' | 'party' | 'whatif' | 'picks' | 'toc' | 'report';  // picks: the ballot's Edit sheet; toc: the menu; report: Report a problem or Request a city
-  report: Report | null;      // that sheet's fields while it is open (views/report.ts), in memory only
+  sheet: null | 'sources' | 'party' | 'whatif' | 'picks' | 'toc' | 'shelf';  // picks: the ballot's Edit sheet; toc: the menu; shelf: the foot's sheet (views/shelf.ts)
+  report: Shelf | null;       // the shelf while it is open: which opening, and a form's fields (in memory only; named before it had five openings)
   sheetFrom: string | null;   // data-fk to focus when a sheet closes
   sheetBack: string | null;   // all sources or a party, opened from the Edit sheet: its sheetFrom, kept to go back to it
   addrOpen: boolean;
@@ -79,14 +79,31 @@ export interface UI {
   resume: boolean;            // "Welcome back" above the plan: once per visit to a started ballot, until any tap
 }
 
-/* "Report a problem" or "Request a city" while its sheet is open: what you typed, kept here only so a
-   repaint can't lose it, and dropped when the sheet closes. Never saved, never in the save link. */
-export interface Report {
-  kind: 'report' | 'city';
-  f: Record<string, string>;  // the fields by name: wrong, what, where, link, reach (a report); city, zip, reach (a city)
-  what0: string;              // "Which race or measure?" as it was prefilled
-  tag: string;                // the item or source id the sheet was opened from, sent after the race while it still reads as prefilled
+/* The shelf: one sheet from the bottom with five openings (Kevin, Oct 21: "let's use that for all of
+   them"): the list of cities, How this guide works, Report a problem, Request a city, Support. A form's
+   fields live here only so a repaint can't lose them, and go when the sheet closes. Never saved, never
+   in the save link. */
+export type ShelfKind = 'cities' | 'how' | 'report' | 'city' | 'support';
+/* What a report or a city request collects by itself and shows under "We'll send along" before it
+   goes (Kevin, Oct 21: "everything else to just be collected programmatically, and then maybe they
+   can see what we're sending"). Never the address typed in the address box, the save link or
+   anything from the page's hash (it carries picks), or the Census's map point. */
+export interface Along {
+  page: string;               // "Your ballot", "My plan", "Help friends vote", "First page"; ", Full details" when it was open
+  where: string;              // the ballot's places and the ZIP ("Austin, 78704"), or ""
+  url: string;                // the page's address without its hash, and only the test settings of its query (?today, ?now, ?try)
+  data: string;               // when the guide's data was built (index.generated, "2026-10-21 19:04 UTC")
+  build: string;              // the site's short commit, from the build
+  device: string;             // "Safari 18 on iPhone, 390px wide"
+  errors: string[];           // the last errors the page caught (errors.ts), newest first
+}
+export interface Shelf {
+  kind: ShelfKind;
+  f: Record<string, string>;  // a form's fields by name: wrong and reach (a report); city, zip and reach (a city)
+  what: string;               // the race, measure or source it was opened from, or the page
+  tag: string;                // that item or source id, sent after it so a fix can find the record
   hint: string;               // 'paywall': opened from a paywalled source's "Send it to us"
+  along: Along;               // what a form sends along by itself, read when it opened (views/shelf.ts)
   state: 'edit' | 'sending' | 'sent' | 'failed' | 'unsure'; // failed: the request was refused outright; unsure: no answer in time, so it may or may not have gone
   err: boolean;               // Send was tapped with the one required field empty
   fk: string;                 // the control that opened it, focused again when it closes

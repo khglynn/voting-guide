@@ -41,7 +41,8 @@ for (const m of ['lens', 'tally', 'bulk', 'judges', 'labels', 'plan', 'address']
 }
 /* The string views the ledger paints (no DOM needed to build their HTML). */
 const views = {};
-for (const v of ['ledger', 'cheat', 'open', 'lens', 'mast', 'setup', 'pass', 'planstrip', 'report']) views[v] = await load(`/src/views/${v}.ts`);
+for (const v of ['ledger', 'cheat', 'open', 'lens', 'mast', 'setup', 'pass', 'planstrip', 'shelf', 'trust']) views[v] = await load(`/src/views/${v}.ts`);
+views.errors = await load('/src/errors.ts'); // not a view: the errors a problem report sends along (the shelf reads it)
 
 const results = [];
 const check = (name, ok, extra = '') => { results.push({ name, ok }); console.log(`${ok ? 'PASS' : 'FAIL'}  ${name}${!ok && extra ? `  (${extra})` : ''}`); };

@@ -675,8 +675,8 @@ export function menuHTML(where: 'toc' | 'rail'): string {
     ${only}<ul class="nv-list nv-secs">
     ${secs}
     ${row('data-act="cheat"', 'cheat', 'My plan', '', ' nv-plan')}</ul>
-    <ul class="nv-list nv-end"><li><button class="nv nv-report" ${reportAttrs({ what: 'The ballot page', fk: `${where}-report` })}><span class="nv-t">Report a problem</span><span class="nv-n"></span>${ARROW}</button></li>
-    ${row('data-act="jump" data-to="how"', 'how', 'How this guide works', '', ' nv-how')}</ul>`;
+    <ul class="nv-list nv-end"><li><button class="nv nv-report" ${reportAttrs({ fk: `${where}-report` })}><span class="nv-t">Report a problem</span><span class="nv-n"></span>${ARROW}</button></li>
+    ${row('data-act="shelf" data-kind="how" aria-haspopup="dialog"', 'how', 'How this guide works', '', ' nv-how')}</ul>`;
 }
 export function tocSheetHTML(): string {
   return `<div class="scrim screen-only" data-act="sheet-close"></div>

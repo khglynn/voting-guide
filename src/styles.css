@@ -159,7 +159,6 @@ b, strong { font-weight: 600; }
 .zip-err { color: var(--clay); font-size: 14.5px; margin-top: 8px; }
 .choose { margin-top: 18px; }
 .choose h2 { font-family: var(--f-display); font-size: 22px; font-weight: 800; line-height: 1.12; font-variation-settings: "wdth" 78; color: var(--print); }
-.browse { margin-top: 18px; }
 .browse-list { margin-top: 10px; border-top: 1px solid var(--rule); }
 .browse-list li { padding: 10px 0; border-bottom: 1px solid var(--rule); display: flex; flex-wrap: wrap; column-gap: 12px; row-gap: 2px; align-items: baseline; }
 .browse-list b { width: 100%; }
@@ -674,17 +673,22 @@ b, strong { font-weight: 600; }
 .tg[aria-checked="true"] span { background: var(--paper-green); border-color: var(--paper-green); }
 .tg[aria-checked="true"] span::after { left: 23px; background: var(--on-dusk); }
 
-/* ---------- Report a problem, Request a city (views/report.ts) ----------
-   The address form's fields in a sheet. It can come up over Full details, so it sits above the
-   reader, scrim and all. Inputs are 16px so a phone doesn't zoom in on them. */
-.scrim.report, .scrim-gone.report { z-index: 71; }
-.sheet-panel.report, .sheet-gone.report { z-index: 72; }
+/* ---------- the shelf (views/shelf.ts): the list of cities, How this guide works, the two forms, Support ----------
+   The other sheets' paper and title row. It can come up over Full details, so it sits above the
+   reader, scrim and all. Its body scrolls inside the sheet (.sheet-bd). Inputs are 16px so a phone
+   doesn't zoom in on them. */
+.scrim.shelf, .scrim-gone.shelf { z-index: 71; }
+.sheet-panel.shelf, .sheet-gone.shelf { z-index: 72; }
+.sh-lede, .rp-intro { font-size: 15.5px; line-height: 1.4; }
+.sheet-panel.shelf .browse-list { font-size: 15px; }
+.sheet-panel.shelf .how-bd { font-size: 15px; }
+.sheet-panel.shelf .how-bd > :first-child { margin-top: 0; }
 .rp-form { display: grid; gap: 16px; }
 .rp-f label { display: block; font-size: 15px; line-height: 1.3; }
 .rp-opt { font-size: 13.5px; color: var(--muted); }
 .rp-h { font-size: 13.5px; color: var(--muted); line-height: 1.4; margin-top: 2px; }
 .rp-f input, .rp-f textarea { display: block; width: 100%; margin-top: 6px; min-height: 46px; padding: 0 10px; border: 1.5px solid var(--ink); background: var(--bone); border-radius: 2px; font-size: 16px; }
-.rp-f textarea { min-height: 104px; padding: 9px 10px; line-height: 1.4; resize: vertical; }
+.rp-f textarea { min-height: 84px; padding: 9px 10px; line-height: 1.4; resize: vertical; }
 .rp-f [aria-invalid="true"] { border-color: var(--clay); }
 .rp-form .rp-fine { margin-top: -4px; }
 .rp-form .bigbtn { margin-top: 0; }
@@ -693,6 +697,18 @@ b, strong { font-weight: 600; }
 .rp-form .rp-alt { margin-top: -6px; text-align: center; }
 .rp-fail { padding: 8px 12px; background: var(--paper); border-left: 3px solid var(--clay); font-size: 14.5px; line-height: 1.45; }
 .rp-sent { padding: 6px 0 4px; font-size: 17px; }
+/* "We'll send along": the fine print, ruled off in pen, so it reads as what the page adds and not as
+   more to fill in. */
+.rp-along { padding: 10px 0 2px; border-top: 1px solid var(--rule-2); font-size: 13.5px; line-height: 1.45; color: var(--muted); }
+.rp-along b { color: var(--ink-2); font-weight: 600; }
+.rp-along ul { margin-top: 4px; list-style: disc; padding-left: 18px; display: grid; gap: 1px; overflow-wrap: anywhere; }
+.rp-along > p:last-child { margin-top: 6px; }
+/* Support: a few words and the coffee in the guide's own button. */
+.sp p { font-size: 15.5px; line-height: 1.45; }
+.sp p + p { margin-top: 8px; }
+.sp .bigbtn { margin-top: 16px; text-decoration: none; }
+.sp .sp-share { margin-top: 14px; font-size: 15px; text-align: center; }
+.sp .sp-share .linkbtn { display: inline; min-height: 0; margin: 0; padding: 0; }
 /* Where a sentence opens the sheet ("Send it to us.", "Ask Kevin.", Full details' "Report a problem
    with this page."), the button reads as the link it replaced: inline, wrapping, no padding. */
 .pw-note .linkbtn, .notice .linkbtn, .rd .report .linkbtn { display: inline; min-height: 0; margin: 0; padding: 0; }
@@ -855,20 +871,19 @@ b, strong { font-weight: 600; }
 @media print { .pile { display: none; } }
 .voted-head .kick { font-family: var(--f-display); font-size: 22px; font-weight: 800; font-variation-settings: "wdth" 78; color: var(--gold-ink); margin-top: 6px; }
 
-/* ---------- the foot: one quiet line, "How this guide works" folded under it ---------- */
+/* ---------- the foot: two quiet lines, each link opening the shelf ---------- */
 .trust { padding-top: 28px; padding-bottom: 12px; font-size: 15px; }
 .door-foot .trust { padding-top: 0; padding-bottom: 0; }
 .foot-line { line-height: 1.65; text-wrap: pretty; }
 .foot-line .linkbtn { min-height: 0; padding: 0; }
 .foot-acts { margin-top: 2px; }
+/* A link's words stay together: on a phone the line breaks between links, at a dot. */
+.foot-acts .linkbtn { white-space: nowrap; }
+/* How this guide works, in the shelf. */
 .how-bd > p { margin-top: 8px; }
 .how-bd > :first-child { margin-top: 12px; }
-/* Its body growing open, and the one folding away (motion.ts grow, shrinkAway). */
-.how-bd.moving, .trust .gone { overflow: hidden; overflow: clip; overflow-anchor: none; }
+/* A box gliding between heights (motion.ts glide). */
 .gliding { overflow: hidden; overflow: clip; overflow-anchor: none; }
-.trust .gone { pointer-events: none; }
-#how.land .foot-line { position: relative; isolation: isolate; }
-#how.land .foot-line::before { content: ""; position: absolute; top: 0; bottom: 0; left: -6px; right: -6px; z-index: -1; background: var(--dusk-tint); opacity: 0; animation: land 1s ease-out; pointer-events: none; }
 .trust-list { margin-top: 10px; display: grid; gap: 8px; list-style: disc; padding-left: 20px; font-size: 14.5px; }
 .asof { font-size: 14px; margin-top: 6px; display: grid; gap: 2px; }
 

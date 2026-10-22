@@ -2,21 +2,20 @@
    v2's pick vocabulary byte for byte (YES/NO/SKIP/DONE/PICK, candidate names, "id|name" keys),
    because the save link and saved picks depend on it. */
 import type { Contest, Item } from './types';
-import { S, persist, emptyBallotState, type View, type Report } from './state';
+import { S, persist, emptyBallotState, type View, type Shelf, type ShelfKind } from './state';
 import { status, sectionOf, rankMax, ordinal, chosenIds, entriesBySection, pageWalk, sameSeat, OTH_KEY, type SectionKey } from './ballot';
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
 import { render, renderRow, renderSection, renderSummaries, renderOff, renderLens, flushLens, markBehind, renderBallot, renderAddr, rowEl, scrollRowIntoView, rowTop, holdRow, opensLow, anchored, $ } from './render';
-import { growOpen, inkRow, followFold, glideTo, land, stopGlide, grow, shrinkAway, collapseRow, finishCollapse, glide } from './motion';
-import { HOW_K } from './views/trust';
-import { openBallot, openChosen, go, openReader, runAddress, reopenAddr, useMatch, toDoor, showBallot, rechoose, openSaved, fillWhy } from './app';
+import { growOpen, inkRow, followFold, glideTo, land, stopGlide, shrinkAway, collapseRow, finishCollapse, glide } from './motion';
+import { openBallot, openChosen, go, openReader, runAddress, reopenAddr, useMatch, toDoor, showBallot, rechoose, openSaved, fillWhy, leaveBallot } from './app';
 import { judgeBatch } from './model/judges';
 import { planAgree, planParty, planJudges, planSetup, applyFills, undoFills, emptyPlan, touchUndo, type Plan } from './model/bulk';
 import { toggleChip, setParty, setSources, noEndorsements, doorNone, type ChipKey } from './model/lens';
 import { courtGroup } from './model/labels';
-import { basisWords, LEANS, FORM, reportWhere } from './views/common';
-import { reportBody, reportFallbackURL, requiredOf } from './views/report';
+import { basisWords, LEANS, FORM } from './views/common';
+import { reportBody, reportFallbackURL, requiredOf, isForm, collectAlong } from './views/shelf';
 import { cheatText, shareURL } from './views/cheat';
-import { messages, shareData } from './views/pass';
+import { messages, shareData, GUIDE_URL, SHARE_TITLE } from './views/pass';
 import { nextUp, sectionTally, sectionFolded, hiddenByOnly, qId } from './views/ledger';
 
 export type Act = (d: DOMStringMap, el: HTMLElement) => void | Promise<void>;
@@ -218,19 +217,15 @@ function closeMenu(): void {
 /* A menu row: your next step, or a section. The section unfolds, comes to the top and takes focus.
    Under "Hide races I've decided" a finished section opens with its decided rows showing, as its
    count does; the filter stays on. */
-A.jump = (d) => {
+A.jump = (d, el) => {
+  // "How this guide works" opens the shelf (Kevin, Oct 21), in the menu's place when it came from there.
+  if (d.to === 'how') { A.shelf({ kind: 'how' }, el); return; }
   closeMenu();
   endBeat();
   if (S.ui.view !== 'ballot') go('ballot');
   if (d.to === 'plan') {
     glideTo($('#plan'), 12);
     focusFk('plan-k');
-    return;
-  }
-  if (d.to === 'how') {
-    if (!S.ui.open.has(HOW_K)) toggleFold(HOW_K, true, false);
-    glideTo($('#how'), 12, () => land($('#how')));
-    focusFk('how');
     return;
   }
   const sec = d.to as SectionKey;
@@ -244,21 +239,6 @@ A.jump = (d) => {
   glideTo($(`#sec-${sec}`), 0, () => land($(`#sec-${sec}`)));
   focusFk(`sec-${sec}`);
 };
-/* The foot's "How this guide works": its link opens the text in place and closes it, the link
-   staying where it is. From the menu (jump "how") it
-   opens at once, so the glide knows how far the page now goes, and the glide and the mark are the
-   motion. The foot lives in a different region on each page (trust.ts), so repaint that one. */
-function toggleFold(k: string, open = !S.ui.open.has(k), move = true): void {
-  const old = $(`#${k}-bd`);
-  const h = old ? old.offsetHeight : 0;
-  if (open) S.ui.open.add(k); else S.ui.open.delete(k);
-  render([S.view !== 'ballot' ? 'mast' : S.ui.view === 'pass' ? 'pass' : 'trust']);
-  if (!move) return;
-  focusFk(k);
-  if (open) grow($(`#${k}-bd`));
-  // The husk folds away right where the body was: after the list of places when it is open, else after the foot's line.
-  else shrinkAway($(`#${k} .browse-list`) || $(`#${k}-h`)?.closest<HTMLElement>('.foot-line') || $(`#${k}-h`), old, h);
-}
 A.page = (d) => { S.ui.page[d.id!] = Number(d.v); renderRow(d.id!); $(`[data-fk="pg-${CSS.escape(d.id!)}"]`)?.focus({ preventScroll: true }); };
 A.others = (d) => { const k = d.id!; S.ui.others.has(k) ? S.ui.others.delete(k) : S.ui.others.add(k); renderRow(k); };
 A.sec = (d, btn) => {
@@ -638,7 +618,7 @@ function closePicks(): void {
 }
 A['sheet-close'] = () => {
   const was = S.ui.sheet;
-  if (was === 'report') { closeReport(); return; }
+  if (was === 'shelf') { closeShelf(); return; }
   if (was === 'picks') { closePicks(); return; }
   if ((was === 'sources' || was === 'party') && S.ui.sheetBack !== null) { backToPicks(); return; }
   S.ui.sheet = null;
@@ -647,29 +627,34 @@ A['sheet-close'] = () => {
   if (S.ui.sheetFrom) focusFk(S.ui.sheetFrom);
 };
 
-/* ---------- Report a problem, Request a city (views/report.ts) ----------
+/* ---------- the shelf (views/shelf.ts): the list of cities, How this guide works, Report a problem,
+   Request a city, Support ----------
    One sheet from every place that offers it: the foot, the menu, an open row and its Full details, a
    paywalled source's "Send it to us", the statewide-only note and the first page's "not covered". It
    opens over the sheet it came from (all sources) and goes back to it; from the menu it takes the
    menu's place, as Quick picks does; over Full details, which waits behind it. */
-A.report = (d, el) => {
-  const city = d.kind === 'city';
+A.shelf = (d, el) => {
   const from = S.ui.sheet;
-  const r: Report = {
-    kind: city ? 'city' : 'report',
-    f: city ? { city: '', zip: S.ballot && S.view === 'ballot' ? S.b.zip : S.zip || S.coverage?.zip || '', reach: '' }
-      : { wrong: '', what: d.what || '', where: reportWhere(), link: '', reach: '' },
-    what0: d.what || '', tag: d.tag || '', hint: d.hint || '', state: 'edit', err: false,
-    fk: from === 'toc' ? 'bar-menu' : el.dataset.fk || '',
-    back: from && from !== 'toc' && from !== 'report' ? { sheet: from, from: S.ui.sheetFrom, back: S.ui.sheetBack } : null,
+  openShelf((d.kind || 'report') as ShelfKind, d, from === 'toc' ? 'bar-menu' : el.dataset.fk || '',
+    from && from !== 'toc' && from !== 'shelf' ? { sheet: from, from: S.ui.sheetFrom, back: S.ui.sheetBack } : null);
+};
+function openShelf(kind: ShelfKind, d: DOMStringMap, fk: string, back: Shelf['back']): void {
+  const form = isForm(kind);
+  const r: Shelf = {
+    kind,
+    f: kind === 'city' ? { city: '', zip: S.ballot && S.view === 'ballot' ? S.b.zip : S.zip || S.coverage?.zip || '', reach: '' } : kind === 'report' ? { wrong: '', reach: '' } : {},
+    what: d.what || '', tag: d.tag || '', hint: d.hint || '',
+    // What a form sends along is read now, from the page it was opened on (never the address box or the hash).
+    along: form ? collectAlong() : { page: '', where: '', url: '', data: '', build: '', device: '', errors: [] },
+    state: 'edit', err: false, fk, back,
   };
   S.ui.report = r;
-  S.ui.sheet = 'report';
+  S.ui.sheet = 'shelf';
   render(['sheet']);
-  // A keyboard or a mouse lands in the box to type in; a touch lands on the sheet's Cancel, so the
-  // phone's keyboard doesn't jump up over the sheet as it slides in.
-  focusSoon(document.documentElement.classList.contains('touch') ? 'sheet-x' : `rf-${requiredOf(r)}`, '#r-sheet');
-};
+  // In a form, a keyboard or a mouse lands in the box to type in; a touch lands on the sheet's Cancel,
+  // so the phone's keyboard doesn't jump up over the sheet as it slides in. Elsewhere, on Close.
+  focusSoon(form && !document.documentElement.classList.contains('touch') ? `rf-${requiredOf(r)}` : 'sheet-x', '#r-sheet');
+}
 /* Focus a control now, and again just after this tap if it didn't hold: a mouse's pointerdown fires the
    action, and the mousedown after it moves focus to the control under the pointer, which the sheet
    has just made inert (or taken away), so focus would fall to the page. `inside`: it held if focus is
@@ -682,8 +667,8 @@ function focusSoon(fk: string, inside = ''): void {
     if (!held) focusFk(fk);
   }, 0);
 }
-/* Cancel, Done, the scrim or Escape: what you typed goes with the sheet. */
-function closeReport(): void {
+/* Cancel, Close, Done, the scrim or Escape: what you typed goes with the sheet. */
+function closeShelf(): void {
   const r = S.ui.report;
   S.ui.report = null;
   const back = r && r.back;
@@ -698,7 +683,7 @@ function closeReport(): void {
 export function reportInput(el: HTMLInputElement | HTMLTextAreaElement): void {
   const r = S.ui.report;
   const k = el.dataset.rf;
-  if (!r || !k) return;
+  if (!r || !k || !isForm(r.kind)) return;
   if (k === 'zip') el.value = el.value.replace(/\D/g, '').slice(0, 5);
   r.f[k] = el.value;
   const url = reportFallbackURL(r);
@@ -721,7 +706,7 @@ export function reportInput(el: HTMLInputElement | HTMLTextAreaElement): void {
 const SEND_MS = 15_000;
 export async function sendReport(): Promise<void> {
   const r = S.ui.report;
-  if (!r || r.state === 'sending' || r.state === 'sent') return;
+  if (!r || !isForm(r.kind) || r.state === 'sending' || r.state === 'sent') return;
   const need = requiredOf(r);
   if (!(r.f[need] || '').trim()) {
     // Send sits at the bottom of a sheet you may have scrolled: bring the box and its line back into view.
@@ -744,7 +729,7 @@ export async function sendReport(): Promise<void> {
   } catch { ok = false; }
   window.clearTimeout(timer);
   const state = ok ? 'sent' : late ? 'unsure' : 'failed';
-  if (S.ui.report !== r || S.ui.sheet !== 'report') {
+  if (S.ui.report !== r || S.ui.sheet !== 'shelf') {
     toast(state === 'sent' ? 'Sent. Kevin reads every one.' : state === 'unsure' ? 'Couldn’t confirm your report sent.' : 'That didn’t send. Try again in a moment.');
     return;
   }
@@ -752,6 +737,26 @@ export async function sendReport(): Promise<void> {
   render(['sheet']);
   focusFk(ok ? 'report-done' : 'report-send');
 }
+
+/* Support's "send the guide to a friend": Help friends vote when a ballot is showing (the shelf gives
+   way to it); elsewhere the guide's own link, through the phone's share sheet or copied. */
+A['shelf-share'] = async () => {
+  if (S.ballot && S.view === 'ballot') {
+    S.ui.report = null;
+    S.ui.sheet = null;
+    if (S.ui.view !== 'pass') { go('pass'); return; }
+    render(['sheet']);
+    glideTo($('#pass'), 0);
+    focusFk('share-guide');
+    return;
+  }
+  const nav = navigator as Navigator & { share?: (d: ShareData) => Promise<void> };
+  if (typeof nav.share === 'function') {
+    try { await nav.share({ title: SHARE_TITLE, url: GUIDE_URL }); return; } catch (e) { if (e && (e as Error).name === 'AbortError') return; }
+  }
+  if (await copyText(GUIDE_URL)) toast('Link copied. Send it to a friend.');
+  else toast(`Copy didn’t work here. The guide’s link is ${GUIDE_URL}`);
+};
 
 /* ---------- bulk fills, each undone as a batch ---------- */
 /* The toast after a fill: what landed, what was skipped and why, and Undo. Step 2's "Show my
@@ -851,8 +856,9 @@ A['whatif-sit'] = (d) => {
 };
 A.open = (d, el) => {
   const k = d.k!;
-  if (k === HOW_K) { toggleFold(k); return; }
   S.ui.open.has(k) ? S.ui.open.delete(k) : S.ui.open.add(k);
+  // Inside the shelf ("When each state was last checked"): the sheet repaints, its height gliding.
+  if (el.closest('#r-sheet > .sheet-panel.shelf')) { glide(['#r-sheet > .sheet-panel.shelf'], () => render(['sheet'])); if (el.dataset.fk) focusFk(el.dataset.fk); return; }
   if (k === 'off') { glide(['#r-off'], () => renderOff()); return; }
   const row = el.closest<HTMLElement>('.row[data-item]');
   if (row && S.ui.view === 'ballot') { const id = row.dataset.item!; glide([`#i-${CSS.escape(id)}`], () => renderRow(id)); return; }
@@ -866,13 +872,20 @@ A.open = (d, el) => {
    box empties, and the list closes so the place line above is what changed). */
 A['choose-place'] = (d) => {
   const browse = d.from === 'browse';
-  if (browse) S.ui.open.delete('browse');
+  if (browse) fromList();
   void openChosen(d.ids!.split('+'), !browse && S.zipChoice ? S.zipChoice.zip : '');
 };
 A['choose-state'] = (d) => {
-  S.ui.open.delete('browse');
+  fromList();
   void openBallot(d.st!, [], '', { door: true }).then((ok) => { if (ok) { const l = $('.door-place'); if (l) l.scrollIntoView({ block: 'start' }); focusFk('su-h'); } });
 };
+/* A place from the shelf's list of cities: the shelf goes, and from a ballot the ballot is left the way
+   Change leaves it (saved, and offered on the first page the place opens on). */
+function fromList(): void {
+  S.ui.report = null;
+  if (S.ui.sheet === 'shelf') S.ui.sheet = null;
+  leaveBallot();
+}
 /* "Change" (the ballot's masthead, step 2's place line): back to the first page. When the first
    page is the history entry just behind this one, go back to it, so the phone's Back button then
    leaves the site instead of landing on the first page twice. */

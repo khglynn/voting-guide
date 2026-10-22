@@ -1625,18 +1625,23 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const base = { what: '', tag: '', hint: '', along, state: 'edit', err: false, fk: '', back: null };
     const rep = { ...base, kind: 'report', f: { wrong: ' A wrong date. ', reach: '' }, what: 'Governor', tag: 'tx-governor' };
     const body = shelf.reportBody(rep);
+    // Codex, Oct 21: every value the page fills in, not only the "Sent along:" block, is on the list word for word.
+    const filled = (b, lines) => ['entry.90887649', 'entry.628621310', 'entry.1986493507'].every((k) => !b[k] || lines.some((l) => l.endsWith(`: ${b[k]}`)));
     check('shelf: a report posts all five of the form’s ids, the empty ones too', ids.every((k) => k in body) && body['entry.2040687555'] === '' && body.fvv === '1' && body.pageHistory === '0' && Object.keys(body).length === 7, JSON.stringify(body));
     check('shelf: a row’s report names the race with its id, and the place and ZIP', body['entry.90887649'] === 'Governor [tx-governor]' && body['entry.628621310'] === 'Austin, 78704', JSON.stringify(body));
-    check('shelf: "What’s wrong?" is your note, a blank line, then "Sent along:" and the list, word for word', body['entry.780704302'] === 'A wrong date.\n\nSent along:\nPage: Your ballot\nPlace: Austin, 78704\nAbout: Governor\nGuide: data from 2026-10-21 19:04 UTC, build abc1234\nBrowser: Safari 18 on iPhone, 390px wide', body['entry.780704302']);
+    check('shelf: "What’s wrong?" is your note, a blank line, then "Sent along:" and the list, word for word', body['entry.780704302'] === 'A wrong date.\n\nSent along:\nPage: Your ballot\nPlace: Austin, 78704\nAbout: Governor [tx-governor]\nPage address: https://vote.kevinhg.com/ (build abc1234)\nData built: 2026-10-21 19:04 UTC\nBrowser: Safari 18 on iPhone, 390px wide', body['entry.780704302']);
     check('shelf: the link question gets the page’s address and the build', body['entry.1986493507'] === 'https://vote.kevinhg.com/ (build abc1234)', body['entry.1986493507']);
     const foot = shelf.reportBody({ ...base, kind: 'report', f: { wrong: 'Hours look off.', reach: 'kev@example.org' }, along: { ...along, page: 'My plan' } });
-    check('shelf: from the foot or the menu, the race question gets the page, and no "About" line', foot['entry.90887649'] === 'My plan' && !/About:/.test(foot['entry.780704302']) && foot['entry.2040687555'] === 'kev@example.org', JSON.stringify(foot));
+    check('shelf: from the foot or the menu, the race question gets the page, and no "About" line', foot['entry.90887649'] === 'My plan' && !/About:/.test(foot['entry.780704302']) && foot['entry.2040687555'] === 'kev@example.org'
+      && filled(foot, shelf.alongLines({ ...base, kind: 'report', along: { ...along, page: 'My plan' } })), JSON.stringify(foot));
     const err = shelf.reportBody({ ...rep, along: { ...along, errors: ['TypeError: x is undefined (index-Bx9.js:1:2345) at 19:05'] } });
     check('shelf: an error the page caught goes last in the list', /\nError the page caught: TypeError: x is undefined \(index-Bx9\.js:1:2345\) at 19:05$/.test(err['entry.780704302']), err['entry.780704302']);
     check('shelf: the list the sheet shows is the list that goes', shelf.alongLines(rep).join('\n') === body['entry.780704302'].split('Sent along:\n')[1]);
+    check('shelf: the race with its record id, the place and the page’s address are each on the list as posted', filled(body, shelf.alongLines(rep)), shelf.alongLines(rep).join(' | '));
     const city = shelf.reportBody({ ...base, kind: 'city', f: { city: ' Round Rock ', zip: '78664', reach: 'kev@example.org' } });
     check('shelf: a city request goes in as the city form always has, then a shorter "Sent along:" (no browser)', ids.every((k) => k in city) && city['entry.90887649'] === 'Please add my city' && city['entry.628621310'] === '78664'
-      && city['entry.780704302'] === 'Please add Round Rock\n\nSent along:\nPage: Your ballot\nPlace: Austin, 78704\nGuide: data from 2026-10-21 19:04 UTC, build abc1234' && city['entry.2040687555'] === 'kev@example.org', JSON.stringify(city));
+      && city['entry.780704302'] === 'Please add Round Rock\n\nSent along:\nPage: Your ballot\nPlace: Austin, 78704\nPage address: https://vote.kevinhg.com/ (build abc1234)\nData built: 2026-10-21 19:04 UTC' && city['entry.2040687555'] === 'kev@example.org'
+      && city['entry.1986493507'] === 'https://vote.kevinhg.com/ (build abc1234)', JSON.stringify(city));
     const alt = new URL(shelf.reportFallbackURL({ ...base, kind: 'city', f: { city: 'Round Rock', zip: '78664', reach: '' } }));
     check('shelf: "Open the form in a new tab instead" is the form prefilled with the same answers', /\/viewform$/.test(alt.pathname) && alt.searchParams.get('usp') === 'pp_url' && /^Please add Round Rock\n\nSent along:/.test(alt.searchParams.get('entry.780704302')) && alt.searchParams.get('entry.628621310') === '78664' && !alt.searchParams.has('entry.2040687555'), alt.search);
     check('shelf: it posts to the same form the link opens', common.FORM.post.replace(/formResponse$/, 'viewform') === common.FORM.view);
@@ -1661,6 +1666,28 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const last = errs.lastErrors();
     check('errors: keeps the last three, newest first, never one that names the Census lookup', last.length === 3 && last[0].msg === 'third' && last[1].msg === 'TypeError: second' && last[1].at === 'index-Bx9.js:20:8' && last.every((e) => !/census|Main/i.test(e.msg)), JSON.stringify(last));
     check('errors: a URL in a message loses its query and hash (the save link lives in the hash)', last[2].msg === 'Failed: https://vote.kevinhg.com/data/state-TX.json' && /^\d{2}:\d{2}$/.test(last[2].time), JSON.stringify(last[2]));
+    // Codex, Oct 21: a query can hold an apostrophe, a paren or a space, so the whole tail goes, in the message,
+    // in a file the event names, and in a file read from a stack.
+    const PRIV = /Test|Lane|rear|Main|PRIVATE|v1~|address=/;
+    const newest = () => errs.lastErrors()[0];
+    errs.note("Failed: https://example.test/?address=12%20O'Test%20Lane#v1~PRIVATE");
+    check('errors: an apostrophe in a query doesn’t end the cut', newest().msg === 'Failed: https://example.test/', JSON.stringify(newest()));
+    errs.note('Bad (https://example.test/a.js?address=12%20Main%20(rear)#v1~PRIVATE) and more');
+    check('errors: nor does a paren', newest().msg === 'Bad (https://example.test/a.js' && !PRIV.test(newest().msg), JSON.stringify(newest()));
+    errs.note('Load failed https://example.test/a.js?address=12 Main St#v1~PRIVATE');
+    check('errors: nor a space', !PRIV.test(newest().msg), JSON.stringify(newest()));
+    errs.note('x', "https://example.test/assets/i-B9.js?address=12%20O'Test%20Lane#v1~PRIVATE", 3, 4);
+    check('errors: a file the event names is its file name only', newest().at === 'i-B9.js:3:4', JSON.stringify(newest()));
+    const thrown = new Error('boom');
+    thrown.stack = "Error: boom\n    at f (https://example.test/assets/i-B9.js?address=12%20O'Test%20Lane#v1~PRIVATE:7:9)\n    at g (https://example.test/?address=(rear):1:1)";
+    errs.note(thrown);
+    check('errors: a file read from a stack is its file name only', !PRIV.test(newest().at) && !PRIV.test(newest().msg) && newest().msg === 'Error: boom', JSON.stringify(newest()));
+    errs.note('Saved link v1~TX~austin-tx~78704~zz9 did not open');
+    check('errors: a save link’s own words go wherever they stand', newest().msg === 'Saved link [save link] did not open', JSON.stringify(newest()));
+    const census = new Error('script failed');
+    census.stack = 'Error: script failed\n    at s.onerror (https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=12+Main:1:1)';
+    errs.note(census);
+    check('errors: one whose stack names the Census lookup is still dropped whole', newest().msg !== 'Error: script failed', JSON.stringify(newest()));
   }
 
 }

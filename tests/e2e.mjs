@@ -1087,8 +1087,9 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('Report a problem: its two questions in the guide’s words, the way back marked optional', (await page.$$eval('.sheet-panel.shelf .rp-f label', (els) => els.map((e) => e.textContent.replace(/\s+/g, ' ').trim()))).join('|') === 'What’s wrong?|Want a reply? optional'
     && (await text(page, '#rf-reach-h')) === 'An email or phone, only if you’d like one back.' && (await page.getAttribute('#rf-wrong', 'aria-required')) === 'true' && !(await page.getAttribute('#rf-reach', 'aria-required')));
   const along = await alongOf(page);
-  check('Report a problem: "We’ll send along" names the page, the place and ZIP, the guide’s data and build, and the browser', (await text(page, '.rp-along > p:first-child')) === 'We’ll send along' && along.length === 4 && along[0] === 'Page: Your ballot' && along[1] === 'Place: Austin, 78704'
-    && /^Guide: data from \d{4}-\d{2}-\d{2} \d{2}:\d{2} UTC, build ([0-9a-f]{7}|dev)$/.test(along[2]) && /^Browser: .+, 380px wide$/.test(along[3]) && (await text(page, '.rp-along > p:last-child')) === 'Add anything else in your note.', along.join(' | '));
+  check('Report a problem: "We’ll send along" names the page, the place and ZIP, the page’s address with the build, the data date, and the browser', (await text(page, '.rp-along > p:first-child')) === 'We’ll send along' && along.length === 5 && along[0] === 'Page: Your ballot' && along[1] === 'Place: Austin, 78704'
+    && new RegExp(`^Page address: ${BASE.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/\\?today=${TODAY} \\(build ([0-9a-f]{7}|dev)\\)$`).test(along[2]) && /^Data built: \d{4}-\d{2}-\d{2} \d{2}:\d{2} UTC$/.test(along[3]) && /^Browser: .+, 380px wide$/.test(along[4])
+    && (await text(page, '.rp-along > p:last-child')) === 'Add anything else in your note.', along.join(' | '));
   check('Report a problem: the list never shows the address or the page’s hash', !NEVER.test(await text(page, '.sheet-panel.shelf')), await text(page, '.rp-along'));
   check('Report a problem: one fine line says where it goes', (await text(page, '.sheet-panel.shelf .rp-fine')) === 'Goes to Kevin’s Google Form. Nothing you type here is saved in the guide.');
   check('Report a problem: a touch lands on Cancel, not in a box, so no keyboard jumps over the sheet', (await focusedFk(page)) === 'sheet-x' && (await text(page, '.sheet-panel.shelf [data-fk="sheet-x"]')) === 'Cancel', await focusedFk(page));
@@ -1117,6 +1118,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   const p = posts.list[0];
   check('Report a problem: one post, with all five of the form’s ids: the page, the place, your note with the list under it, the page’s address with the build', posts.list.length === 1 && FORM_IDS.every((k) => p.has(k)) && p.get('entry.90887649') === 'Your ballot' && p.get('entry.628621310') === 'Austin, 78704'
     && p.get('entry.780704302') === `Sunday early voting hours look off.\n\nSent along:\n${along.join('\n')}` && (p.get('entry.1986493507') || '').startsWith(`${BASE}/?today=${TODAY} (build `) && p.get('entry.2040687555') === '', `${posts.list.length}: ${p}`);
+  check('Report a problem: every value the page filled in is on the list as it was posted (Codex, Oct 21)', along.includes(`Page: ${p.get('entry.90887649')}`) && along.includes(`Place: ${p.get('entry.628621310')}`) && along.includes(`Page address: ${p.get('entry.1986493507')}`), along.join(' | '));
   check('Report a problem: the post never carries the address typed, the address found, or the save link’s hash', !NEVER.test(postText(p)), postText(p).replace(/\n/g, ' / '));
   check('Report a problem: Sent, in place, with Done', (await text(page, '.rp-sent p')) === 'Sent. Kevin reads every one.' && (await focusedFk(page)) === 'report-done' && !(await page.$('.sheet-panel.shelf form')) && (await text(page, '.sheet-panel.shelf [data-fk="sheet-x"]')) === 'Close', await text(page, '.rp-sent'));
   check('Report a problem: nothing typed is saved in the guide or in its link', !/Sunday early voting/.test((await savedVG(page)) || '') && !/Sunday/.test(await page.evaluate(() => decodeURIComponent(location.href))));
@@ -1130,7 +1132,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('Request a city: one line, which city, the ballot’s ZIP and a way back, the last two marked optional', (await text(page, '.sheet-panel.shelf #sh-h')) === 'Request a city' && (await text(page, '.sheet-panel.shelf .rp-intro')) === 'Tell Kevin which city to add next.' && v.city === '' && v.zip === '78704' && v.reach === '' && Object.keys(v).length === 3
     && (await page.$$eval('.sheet-panel.shelf .rp-f label', (els) => els.map((e) => e.textContent.replace(/\s+/g, ' ').trim()))).join('|') === 'Which city or town?|ZIP optional|Want to hear when it’s up? optional', JSON.stringify(v));
   const cityAlong = await alongOf(page);
-  check('Request a city: a shorter list: the page, the place and the guide', cityAlong.length === 3 && cityAlong[0] === 'Page: Your ballot' && cityAlong[1] === 'Place: Austin, 78704' && /^Guide: /.test(cityAlong[2]), cityAlong.join(' | '));
+  check('Request a city: a shorter list: the page, the place, the page’s address and the data date', cityAlong.length === 4 && cityAlong[0] === 'Page: Your ballot' && cityAlong[1] === 'Place: Austin, 78704' && /^Page address: /.test(cityAlong[2]) && /^Data built: /.test(cityAlong[3]), cityAlong.join(' | '));
   await tap(page, SEND);
   check('Request a city: Send with no city sends nothing and says so', posts.list.length === 1 && (await text(page, '#rf-err')) === 'Type the city first.', await text(page, '#rf-err'));
   await page.fill('#rf-city', 'Round Rock');
@@ -1140,7 +1142,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await page.waitForSelector('.rp-sent');
   const c = posts.list[1];
   check('Request a city: posts as the city form always has, the city after "Please add ", the list under it', !!c && FORM_IDS.every((k) => c.has(k)) && c.get('entry.90887649') === 'Please add my city' && c.get('entry.628621310') === '78664'
-    && c.get('entry.780704302') === `Please add Round Rock\n\nSent along:\n${cityAlong.join('\n')}` && !NEVER.test(postText(c)), c ? c.toString() : 'no post');
+    && c.get('entry.780704302') === `Please add Round Rock\n\nSent along:\n${cityAlong.join('\n')}` && cityAlong.includes(`Page address: ${c.get('entry.1986493507')}`) && !NEVER.test(postText(c)), c ? c.toString() : 'no post');
   await page.keyboard.press('Escape');
   await settle(page);
   check('Request a city: Escape closes it', !(await page.$('.sheet-panel.shelf')) && (await focusedFk(page)) === 'help-city', await focusedFk(page));
@@ -1158,11 +1160,12 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   const title = await page.getAttribute(RP, 'data-what');
   await tap(page, RP);
   await page.waitForSelector('.sheet-panel.shelf[data-kind="report"]');
-  check('Report a problem from a row: the list names that race', !!title && !/\[/.test(title) && (await alongOf(page)).includes(`About: ${title}`), (await alongOf(page)).join(' | '));
+  const rowAlong = await alongOf(page);
+  check('Report a problem from a row: the list names that race with its record id', !!title && !/\[/.test(title) && rowAlong.includes(`About: ${title} [tx-governor]`), rowAlong.join(' | '));
   await page.fill('#rf-wrong', 'A candidate is missing.');
   await tap(page, SEND);
   await page.waitForSelector('.rp-sent');
-  check('Report a problem from a row: sends the race with its id after it', posts.list[2]?.get('entry.90887649') === `${title} [tx-governor]` && posts.list[2]?.get('entry.780704302').includes(`\nAbout: ${title}\n`), posts.list[2]?.get('entry.90887649'));
+  check('Report a problem from a row: sends the race with its id after it, as the list showed it', posts.list[2]?.get('entry.90887649') === `${title} [tx-governor]` && rowAlong.includes(`About: ${posts.list[2]?.get('entry.90887649')}`) && posts.list[2]?.get('entry.780704302').includes(`\nAbout: ${title} [tx-governor]\n`), posts.list[2]?.get('entry.90887649'));
   await tap(page, '[data-fk="report-done"]');
   await settle(page);
   check('Report a problem from a row: Done goes back to the row’s Report a problem', (await focusedFk(page)) === 'rp-tx-governor', await focusedFk(page));
@@ -1173,7 +1176,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await page.waitForSelector('.sheet-panel.shelf');
   await settle(page);
   const rdAlong = await alongOf(page);
-  check('Report a problem from Full details: opens on top, Full details inert behind it, the list saying where it came from', !!(await page.$('#r-sheet > .reader[inert]')) && rdAlong[0] === 'Page: Your ballot, Full details' && rdAlong.includes(`About: ${title}`)
+  check('Report a problem from Full details: opens on top, Full details inert behind it, the list saying where it came from', !!(await page.$('#r-sheet > .reader[inert]')) && rdAlong[0] === 'Page: Your ballot, Full details' && rdAlong.includes(`About: ${title} [tx-governor]`)
     && await page.evaluate(() => { const s = document.querySelector('.sheet-panel.shelf'); const r = s.getBoundingClientRect(); return document.elementFromPoint(r.left + 24, r.top + 24)?.closest('.sheet-panel.shelf') === s; }), rdAlong.join(' | '));
   await page.focus('#rf-reach');
   for (let i = 0; i < 4; i++) await page.keyboard.press('Tab');
@@ -1203,14 +1206,15 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('Report a problem: closing it leaves Full details as it was, back at its Report a problem', !!(await page.$('#r-sheet > .reader:not([inert])')) && !(await page.$('.sheet-panel.shelf')) && (await focusedFk(page)) === 'rd-rp-tx-governor', await focusedFk(page));
   await tap(page, '[data-act="reader-close"]');
   await settle(page);
-  // An error the page caught goes along, last, its URL without query or hash (errors.ts).
-  await page.evaluate(() => { setTimeout(() => { throw new Error('A test error, on purpose: https://example.test/p?q=1#v1~zz9pick'); }, 0); });
+  // An error the page caught goes along, last, its URL without query or hash (errors.ts), even when the query
+  // holds an apostrophe (Codex, Oct 21: "12 O'Test Lane" kept its tail).
+  await page.evaluate(() => { setTimeout(() => { throw new Error("A test error, on purpose: https://example.test/p?address=12%20O'Test%20Lane#v1~zz9pick"); }, 0); });
   await page.waitForTimeout(100);
   page.errors = page.errors.filter((e) => !/on purpose/.test(e));
   await tap(page, '#r-trust [data-fk="help-report"]');
   await page.waitForSelector('.sheet-panel.shelf[data-kind="report"]');
   const errAlong = await alongOf(page);
-  check('Report a problem: the last error the page caught goes along, its URL cut at the query', /^Error the page caught: Error: A test error, on purpose: https:\/\/example\.test\/p( \(.*\))? at \d{2}:\d{2}$/.test(errAlong.at(-1) || '') && !NEVER.test(errAlong.join('\n')), errAlong.at(-1));
+  check('Report a problem: the last error the page caught goes along, its URL cut at the query', /^Error the page caught: Error: A test error, on purpose: https:\/\/example\.test\/p( \(.*\))? at \d{2}:\d{2}$/.test(errAlong.at(-1) || '') && !NEVER.test(errAlong.join('\n')) && !/Lane|address=/.test(errAlong.join('\n')), errAlong.at(-1));
   await tap(page, '.sheet-panel.shelf [data-fk="sheet-x"]');
   await settle(page);
   await noSideScroll(page, 'Report a problem');
@@ -1873,7 +1877,7 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
     // It opens the report sheet over all sources, asking for the picks, and Cancel goes back there.
     await tap(page, `.sheet-panel [data-fk="${pw.fk}"]`);
     await page.waitForSelector('.sheet-panel.shelf[data-kind="report"]');
-    check('Portland: Send it to us opens Report a problem, naming the paper and asking for its picks', (await alongOf(page)).includes(`About: ${pw.name}: picks`) && (await text(page, '.sheet-panel.shelf .rp-intro')) === 'Have a login? Send Kevin their picks.' && (await text(page, 'label[for="rf-wrong"]')) === 'Their picks, or a link to a PDF', (await alongOf(page)).join(' | '));
+    check('Portland: Send it to us opens Report a problem, naming the paper and asking for its picks', (await alongOf(page)).some((l) => l.startsWith(`About: ${pw.name}: picks [`)) && (await text(page, '.sheet-panel.shelf .rp-intro')) === 'Have a login? Send Kevin their picks.' && (await text(page, 'label[for="rf-wrong"]')) === 'Their picks, or a link to a PDF', (await alongOf(page)).join(' | '));
     await tap(page, '.sheet-panel.shelf [data-fk="sheet-x"]');
     await page.waitForSelector('.sheet-panel .sgrp');
     check('Portland: Cancel goes back to all sources, at Send it to us', !(await page.$('.sheet-panel.shelf')) && (await focusedFk(page)) === pw.fk, await focusedFk(page));

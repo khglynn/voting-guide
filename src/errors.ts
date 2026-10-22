@@ -15,10 +15,28 @@ const MAX = 160;
 const caught: Caught[] = [];
 const CENSUS = /geocoding\.geo\.census\.gov/i;
 
-/* Every URL in a string, without its query or hash. */
-export const bareURLs = (s: string): string => s.replace(/\b(?:https?|blob|file):\/\/[^\s"'<>)]+/g, (u) => u.replace(/[?#].*$/, ''));
-/* A script's URL as its file name ("index-Bx9.js"). */
-const fileOf = (u: string): string => bareURLs(u).split('/').pop() || '';
+/* A string with every URL's query and hash gone, whole. Where a URL ends can't be told from its
+   characters (an address in a query can hold an apostrophe, a paren or even a space: "12 O'Test Lane"
+   kept its tail when the cut stopped at the apostrophe; Codex, Oct 21), so from the first URL on,
+   everything after the first "?" or "#" goes, to the end of the string. A save link's own words
+   ("v1~TX~...") go wherever they stand. Run before anything is cut short, so no part of a URL is
+   ever left behind a cut. */
+const URL_START = /\b(?:https?|blob|file):\/\//;
+export function bareURLs(s: string): string {
+  let out = s;
+  const at = out.search(URL_START);
+  if (at >= 0) {
+    const q = out.slice(at).search(/[?#]/);
+    if (q >= 0) out = out.slice(0, at + q);
+  }
+  return out.replace(/\bv[12]~\S*/g, '[save link]');
+}
+/* A script's URL as its file name ("index-Bx9.js"), from the path alone: never its query or hash. */
+function fileOf(u: string): string {
+  let path = '';
+  try { path = new URL(u).pathname; } catch { path = u.split(/[?#]/)[0]; }
+  return bareURLs(path.split('/').filter(Boolean).pop() || '');
+}
 const clock = (d: Date): string => `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
 /* Where an Error was thrown, from its stack's first line that names a file. */
 function whereFrom(e: Error): [string, number, number] {

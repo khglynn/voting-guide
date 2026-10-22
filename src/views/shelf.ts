@@ -81,24 +81,24 @@ export function collectAlong(): Along {
     errors: lastErrors().map((e) => `${e.msg}${e.at ? ` (${e.at})` : ''} at ${e.time}`),
   };
 }
-/* The "We'll send along" list, word for word what goes into the form after "Sent along:". A city
-   request's is shorter: where you were and which guide. */
+/* The values the page fills in itself. One place, so the list and the post can't drift apart. */
+const aboutOf = (r: Pick<Shelf, 'what' | 'tag'>): string => (r.tag && r.what ? `${r.what} [${r.tag}]` : '');
+const linkOf = (a: Along): string => `${a.url} (build ${a.build || 'dev'})`;
+/* The "We'll send along" list. Every value the page fills in is on it word for word (Codex, Oct 21:
+   "you can see what we send" has to hold): the page (or, from a row, the race with its record id), the
+   place and ZIP, the page's address with the build, the data date, the browser and the errors caught.
+   It also goes into "What's wrong?" after "Sent along:". A city request's is shorter. */
 export function alongLines(r: Pick<Shelf, 'kind' | 'what' | 'tag' | 'along'>): string[] {
   const a = r.along;
-  const guide = `Guide: data from ${a.data || 'unknown'}, build ${a.build || 'dev'}`;
-  if (r.kind === 'city') return [`Page: ${a.page}`, a.where ? `Place: ${a.where}` : '', guide].filter(Boolean);
-  return [
-    `Page: ${a.page}`,
-    a.where ? `Place: ${a.where}` : '',
-    r.tag && r.what ? `About: ${r.what}` : '',
-    guide,
-    `Browser: ${a.device}`,
-    ...a.errors.map((e) => `Error the page caught: ${e}`),
-  ].filter(Boolean);
+  const head = [`Page: ${a.page}`, a.where ? `Place: ${a.where}` : ''];
+  const tail = [`Page address: ${linkOf(a)}`, `Data built: ${a.data || 'unknown'}`];
+  if (r.kind === 'city') return [...head, ...tail].filter(Boolean);
+  const about = aboutOf(r);
+  return [...head, about ? `About: ${about}` : '', ...tail, `Browser: ${a.device}`, ...a.errors.map((e) => `Error the page caught: ${e}`)].filter(Boolean);
 }
 
 /* What the form gets, by its ids (Kevin's sheet keeps its five questions). A report: the race or
-   measure it came from with its id after it (or the page), the place and ZIP, your note with "Sent
+   measure it came from with its record id (or the page), the place and ZIP, your note with "Sent
    along:" under it, the page's address with the build, and how to reach you. A city request goes in as
    the city form always has ("Please add my city" for the race, the ZIP for the place, "Please add
    {city}" first in "What's wrong?"). fvv and pageHistory are the two hidden fields the form's own page
@@ -109,10 +109,10 @@ export function reportBody(r: Shelf): Record<string, string> {
   const note = city ? (v('city') ? `Please add ${v('city')}` : '') : v('wrong');
   const sent = `Sent along:\n${alongLines(r).join('\n')}`;
   return {
-    [FORM.what]: city ? 'Please add my city' : r.tag && r.what ? `${r.what} [${r.tag}]` : r.what || r.along.page,
+    [FORM.what]: city ? 'Please add my city' : aboutOf(r) || r.along.page,
     [FORM.where]: city ? v('zip') : r.along.where,
     [FORM.wrong]: [note, sent].filter(Boolean).join('\n\n'),
-    [FORM.link]: `${r.along.url} (build ${r.along.build || 'dev'})`,
+    [FORM.link]: linkOf(r.along),
     [FORM.reach]: v('reach'),
     fvv: '1',
     pageHistory: '0',

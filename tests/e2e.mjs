@@ -870,7 +870,8 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   });
   await openBallot(page, '33101');
   const btns = await page.$$eval('.addrbox .row-btns > *', (els) => els.map((e) => `${e.textContent.trim()}${e.classList.contains('dark') ? ' (dark)' : ''}`));
-  check('Statewide Florida: the address box leads with the sample ballot, no Use my address', /races? depends? on your address\. Your official sample ballot shows which are yours\.$/.test(await text(page, '.addrbox > p')) && btns.join('|') === 'Official sample ballot (dark)', `${await text(page, '.addrbox > p')} | ${btns.join('|')}`);
+  // Statewide-only (Kevin, Oct 25): the address box and the statewide line are one notice, one row of buttons.
+  check('Statewide Florida: one notice leads with the sample ballot, no Use my address, then the city', /^We only have Florida’s statewide races for your area so far\.$/.test(await text(page, '.addrbox.statewide-note .sw-line')) && /races? depends? on your address\. Your official sample ballot shows which are yours\.$/.test(await text(page, '.addrbox .addr-n')) && btns.join('|') === 'Official sample ballot (dark)|Add my city for me', `${await text(page, '.addrbox .addr-n')} | ${btns.join('|')}`);
   await page.evaluate(() => localStorage.clear());
   await page.goto(`${BASE}/?today=${TODAY}`);
   await page.waitForSelector('#zip');
@@ -882,7 +883,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await plainSetup(page);
   await page.waitForSelector('#plan', { timeout: 15000 });
   const fbtns = await page.$$eval('.addrbox .row-btns > *', (els) => els.map((e) => `${e.textContent.trim()}${e.classList.contains('dark') ? ' (dark)' : ''}`));
-  check('Statewide Florida: nothing here turns on Congress, so the box sends you to the sample ballot', /^\d+ races? needs? your official sample ballot\./.test(await text(page, '.addrbox .addr-n')) && !(await page.$('.addrbox .addr-set')) && fbtns.join('|') === 'Official sample ballot (dark)', `${await text(page, '.addrbox')} | ${fbtns.join('|')}`);
+  check('Statewide Florida: nothing here turns on Congress, so the box sends you to the sample ballot', /^\d+ races? needs? your official sample ballot\./.test(await text(page, '.addrbox .addr-n')) && !(await page.$('.addrbox .addr-set')) && fbtns.join('|') === 'Official sample ballot (dark)|Add my city for me', `${await text(page, '.addrbox')} | ${fbtns.join('|')}`);
   check('Statewide Florida: the box still shows what was found', (await text(page, '.addrbox .addr-found')) === 'Found: Test Two, Miami, FL 33101 Not it? Try again', await text(page, '.addrbox .addr-found'));
   noErrors(page, 'Statewide Florida address');
   await ctx.close();
@@ -1748,20 +1749,107 @@ for (const [zip, label, id, btn, href, full] of [
   await ctx.close();
 }
 
+/* ---------- coverage (Oct 25): how many sources, a thin place, one tap ----------
+   Kevin: "St. Louis doesn't have very many sources and I don't think the site should pretend we can show
+   picks if we haven't fully scraped for that one yet." The counts come from index.json (build-data). */
+const INDEX_JSON = await (await fetch(`${BASE}/data/index.json`, { headers: BYPASS ? { 'x-vercel-protection-bypass': BYPASS } : {} })).json();
+{
+  const { ctx, page } = await newPage();
+  await openZip(page, '60601');
+  await page.waitForSelector('.su-src', { timeout: 15000 });
+  const p = INDEX_JSON.places['chicago-il'];
+  check('Coverage: Chicago’s first page says how many sources, how many picked, and when', (await text(page, '#setup .su-src')) === `${p.sources} sources for Chicago, ${p.with_picks} with picks. Last checked ${new Date(`${p.checked}T00:00:00Z`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' })}.`, await text(page, '#setup .su-src'));
+  check('Coverage: under "Picks in N of your M races", inside step 2', !!(await page.$('#setup .su-stat .su-cov + .su-src')) && !(await page.$('#setup .cov-note')));
+  await plainSetup(page);
+  await page.waitForSelector('#plan', { timeout: 15000 });
+  check('Coverage: the ballot’s head says it shorter, under the picks line', new RegExp(`^${p.sources} sources, ${p.with_picks} with picks\\. Last checked [A-Z][a-z]{2} \\d+\\.$`).test(await text(page, '.bhead .picks-line + .picks-cov')), await text(page, '.bhead .picks-cov'));
+  noErrors(page, 'Coverage Chicago');
+  await ctx.close();
+}
+{
+  // St. Louis City (63110): a ZIP in Missouri the guide has no city for, so the statewide races. Kevin's
+  // case: say so, and "just kick off" the request in one tap.
+  const { ctx, page } = await newPage();
+  const posts = await catchForm(page);
+  await openZip(page, '63110');
+  await page.waitForSelector('#setup .cov-note', { timeout: 15000 });
+  check('St. Louis City: the first page says we only have Missouri’s statewide races, with the counts', /^We only have Missouri’s statewide races for your area so far\. \d+ sources for them, \d+ with picks\. Last checked [A-Z][a-z]{2} \d+\. Add my city for me$/.test(await text(page, '#setup .cov-note')), await text(page, '#setup .cov-note'));
+  // A send that fails says so, with the form in a new tab, and the button stays.
+  posts.fail = true;
+  await tap(page, '#setup [data-act="cov-ask"]');
+  await page.waitForSelector('#setup .cov-note .rp-fail', { timeout: 15000 });
+  check('St. Louis City: a send that fails says so, with the form in a new tab, and Add my city again', /^That didn’t send\. Open the form in a new tab instead\.$/.test(await text(page, '#setup .cov-note .rp-fail')) && /viewform\?/.test((await page.getAttribute('#setup .cov-note a[data-rp-alt]', 'href')) || '') && !!(await page.$('#setup [data-act="cov-ask"]')), await text(page, '#setup .cov-note'));
+  posts.fail = false;
+  await tap(page, '#setup [data-act="cov-ask"]');
+  await page.waitForSelector('#setup .cov-note[role="status"]', { timeout: 15000 });
+  const p = posts.list[posts.list.length - 1];
+  check('St. Louis City: one tap posts the five answers, nothing typed', posts.list.length === 2 && FORM_IDS.every((k) => p.has(k)) && p.get('entry.90887649') === 'Please add my city' && p.get('entry.628621310') === 'Missouri, 63110'
+    && /^Please add the city for ZIP 63110 in Missouri \(one-tap from the page\)\n\nSent along:\nPage: First page\nPlace: Missouri, 63110\nPage address: /.test(p.get('entry.780704302')) && p.get('entry.2040687555') === '' && !/Browser:/.test(p.get('entry.780704302')), p ? p.toString() : 'no post');
+  check('St. Louis City: then "We’re adding your city", about a day, statewide races now, and focus on Want to hear', (await text(page, '#setup .cov-note')) === 'We’re adding your city. It usually takes about a day. You can use Missouri’s statewide races now. Want to hear when it’s in?' && (await focusedFk(page)) === 'cov-hear', `${await text(page, '#setup .cov-note')} / ${await focusedFk(page)}`);
+  const asked = await page.evaluate(() => [localStorage.getItem('vg-asked'), localStorage.getItem('vg2')]);
+  check('St. Louis City: remembered on this device under its own key, not in the saved ballots', /"z:63110":"\d{4}-\d{2}-\d{2}"/.test(asked[0] || '') && !/63110/.test(asked[1] || ''), asked.join(' | '));
+  await tap(page, '#setup [data-fk="cov-hear"]');
+  await page.waitForSelector('.sheet-panel.shelf[data-kind="city"]');
+  check('St. Louis City: Want to hear opens Request a city with the ZIP, for an email or phone', (await page.inputValue('#rf-zip')) === '63110' && (await page.inputValue('#rf-city')) === '' && /^Kevin has your request\. Leave an email or phone and he’ll tell you when it’s in\.$/.test(await text(page, '.rp-intro')), await text(page, '.rp-intro'));
+  await tap(page, '.sheet-panel.shelf [data-fk="sheet-x"]');
+  await settle(page);
+  // A reload keeps it on this device.
+  await page.reload();
+  await page.waitForSelector('#zip');
+  await page.fill('#zip', '63110');
+  await page.waitForSelector('#setup .cov-note', { timeout: 15000 });
+  check('St. Louis City: after a reload, still "We’re adding your city"', /^We’re adding your city\./.test(await text(page, '#setup .cov-note')), await text(page, '#setup .cov-note'));
+  await plainSetup(page);
+  await page.waitForSelector('#plan', { timeout: 15000 });
+  check('St. Louis City: the ballot’s one notice says so too, with one sample ballot and Want to hear', /^We’re adding your city\. It usually takes about a day\./.test(await text(page, '.bhead .statewide-note .sw-line'))
+    && (await page.$$('.bhead .statewide-note')).length === 1 && (await page.$$eval('.bhead a, .bhead button', (els) => els.filter((e) => e.textContent.trim() === 'Official sample ballot').length)) === 1
+    && (await text(page, '.bhead .statewide-note .row-btns > :last-child')) === 'Want to hear when it’s in?', await text(page, '.bhead .statewide-note'));
+  check('St. Louis City: nothing posted on its own after the tap', posts.list.length === 2);
+  await noSideScroll(page, 'St. Louis City');
+  noErrors(page, 'St. Louis City');
+  await ctx.close();
+}
+{
+  // A thin place: none of its own sources has picks and some of its races have none from anyone (model/coverage.ts).
+  // Whichever place that is in today's data (Pensacola on Oct 25), through a ZIP that is only that place's.
+  const thin = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_picks === 0 && p.local_races_with_picks < p.local_races)
+    .map(([id, p]) => ({ id, p, zip: Object.entries(INDEX_JSON.zips).find(([, ids]) => ids.length === 1 && ids[0] === id)?.[0] })).find((x) => x.zip && x.p.state !== 'DC');
+  if (!thin) check('Thin place: none in today’s data, so nothing to show', true);
+  else {
+    const name = thin.p.label.replace(/\s*\(.*\)$/, '');
+    const { ctx, page } = await newPage();
+    const posts = await catchForm(page);
+    await openZip(page, thin.zip);
+    await page.waitForSelector('#setup .cov-note', { timeout: 15000 });
+    check(`Thin place (${name}): the first page says so honestly, with its one tap`, new RegExp(`^We don’t have endorsements from ${name}’s local sources yet\\. \\d+ sources checked, \\d+ with picks\\. Last checked [A-Z][a-z]{2} \\d+\\. Add ${name}’s endorsements for me$`).test(await text(page, '#setup .cov-note')), await text(page, '#setup .cov-note'));
+    await tap(page, '#setup [data-act="cov-ask"]');
+    await page.waitForSelector('#setup .cov-note[role="status"]', { timeout: 15000 });
+    const p = posts.list[0];
+    check(`Thin place (${name}): one tap posts "Gather endorsements", the place and ZIP, nothing typed`, posts.list.length === 1 && FORM_IDS.every((k) => p.has(k)) && p.get('entry.90887649') === `Gather endorsements: ${name}` && p.get('entry.628621310') === `${thin.p.label}, ${thin.zip}`
+      && p.get('entry.780704302').startsWith(`Please gather local endorsements for ${name} (one-tap from the page)\n\nSent along:\nPage: First page\n`) && p.get('entry.2040687555') === '', p ? p.toString() : 'no post');
+    check(`Thin place (${name}): then "We’re gathering", about a day, never minutes`, (await text(page, '#setup .cov-note')) === `We’re gathering ${name}’s endorsements. It usually takes about a day. Your ballot works now, and local picks show up when they’re in. Want to hear when it’s in?` && !/minute/.test(await text(page, '#setup')), await text(page, '#setup .cov-note'));
+    await plainSetup(page);
+    await page.waitForSelector('#plan', { timeout: 15000 });
+    check(`Thin place (${name}): the head says it in one quiet line under the picks line, no second box`, (await text(page, '.bhead .picks-cov')) === `Gathering ${name}’s endorsements, usually about a day. Want to hear when it’s in?` && !(await page.$('.bhead .cov-note')), await text(page, '.bhead .picks-cov'));
+    await tap(page, '.bhead [data-fk="hd-hear"]');
+    await page.waitForSelector('.sheet-panel.shelf[data-kind="city"]');
+    check(`Thin place (${name}): Want to hear opens Request a city with the place and ZIP filled in`, (await page.inputValue('#rf-city')) === name && (await page.inputValue('#rf-zip')) === thin.zip);
+    noErrors(page, `Thin place (${name})`);
+    await ctx.close();
+  }
+}
+
 /* ---------- statewide-only, uncovered, shared ZIPs ---------- */
 {
   const { ctx, page } = await newPage();
   await openBallot(page, '99201');
   await noSideScroll(page, 'Spokane');
-  check('Spokane: says we only have statewide races so far', /We only have statewide races for your area so far\./.test(await text(page, '.bhead')));
+  check('Spokane: says we only have Washington’s statewide races so far', /We only have Washington’s statewide races for your area so far\./.test(await text(page, '.bhead')));
   check('Spokane: links an official ballot lookup', !!(await page.$('.bhead .statewide-note a[href^="http"]')));
-  check('Spokane: Official sample ballot and Ask for your city', (await page.$$eval('.statewide-note .row-btns > *', (els) => els.map((e) => e.textContent.trim()))).join('|') === 'Official sample ballot|Ask for your city'
-    && (await page.getAttribute('.statewide-note .row-btns > :last-child', 'data-kind')) === 'city');
-  await tap(page, '.statewide-note [data-act="shelf"][data-kind="city"]');
-  await page.waitForSelector('.sheet-panel.shelf[data-kind="city"]');
-  check('Spokane: Ask for your city opens Request a city with the ZIP', (await text(page, '.sheet-panel.shelf #sh-h')) === 'Request a city' && (await page.inputValue('#rf-zip')) === '99201' && (await page.inputValue('#rf-city')) === '');
-  await tap(page, '.sheet-panel.shelf [data-fk="sheet-x"]');
-  await settle(page);
+  // Kevin, Oct 25 ("this double button stack ... we shouldn't do that here or elsewhere"): one notice, one sample ballot.
+  check('Spokane: one notice in the head, with Official sample ballot once and the one-tap city request', (await page.$$('.bhead .statewide-note')).length === 1 && (await page.$$('.bhead .addrbox')).length <= 1
+    && (await page.$$eval('.statewide-note .row-btns > *', (els) => els.map((e) => e.textContent.trim()))).join('|') === 'Official sample ballot|Add my city for me', await text(page, '.statewide-note'));
+  check('Spokane: exactly one "Official sample ballot" in the head', (await page.$$eval('.bhead a, .bhead button', (els) => els.filter((e) => e.textContent.trim() === 'Official sample ballot').length)) === 1);
   check('Spokane: the sample ballot link is the state lookup, not one county\'s PDF', /^https:\/\/voter\.votewa\.gov\//.test((await page.getAttribute('.bhead .statewide-note a[href^="http"]', 'href')) || ''));
   check('Spokane: no city or county sections', !(await page.$('.sec[data-sec="city"], .sec[data-sec="county"]')));
   noErrors(page, 'Spokane');
@@ -1776,12 +1864,13 @@ for (const [zip, label, id, btn, href, full] of [
   check('Uncovered: the notice sits under the ZIP box, step 2 stays with no counts', !!(await page.$('.door .door-where .notice')) && !!(await page.$('#su-h')) && !(await page.$('.su-cov')) && !(await page.$('.door-place')));
   await tap(page, SETUP);
   check('Uncovered: "Show my ballot" stays on the first page', !(await page.$('#plan')) && (await focusedFk(page)) === 'zip');
-  check('Uncovered: "Want this for your city? Ask Kevin."', /Want this for your city\? Ask Kevin\./.test(await text(page, '.notice')) && (await page.getAttribute('.notice [data-ask-kevin]', 'data-kind')) === 'city');
-  // Ask Kevin opens Request a city on the first page, before there is any ballot, with the ZIP from the box.
+  // Kevin, Oct 25: say what they get (Vote.gov) and what they can ask for, with no "Ask Kevin" (the sheet names him).
+  check('Uncovered: what they get and one action, "Ask for my city"', /^We don’t cover Massachusetts yet\. Vote\.gov has official info for every state\. Ask for my city$/.test(await text(page, '.notice')) && (await page.getAttribute('.notice [data-ask-kevin]', 'data-kind')) === 'city' && !/Ask Kevin/.test(await text(page, '.notice')), await text(page, '.notice'));
+  // Ask for my city opens Request a city on the first page, before there is any ballot, with the ZIP from the box.
   const posts = await catchForm(page);
   await tap(page, '.notice [data-ask-kevin]');
   await page.waitForSelector('.sheet-panel.shelf[data-kind="city"]');
-  check('Uncovered: Ask Kevin opens Request a city with the ZIP from the box', (await text(page, '.sheet-panel.shelf #sh-h')) === 'Request a city' && (await page.inputValue('#rf-zip')) === '02139' && !!(await page.$('#app[inert]')));
+  check('Uncovered: Ask for my city opens Request a city with the ZIP from the box', (await text(page, '.sheet-panel.shelf #sh-h')) === 'Request a city' && (await page.inputValue('#rf-zip')) === '02139' && !!(await page.$('#app[inert]')));
   await page.fill('#rf-city', 'Cambridge');
   await tap(page, SEND);
   await page.waitForSelector('.rp-sent');
@@ -1789,7 +1878,7 @@ for (const [zip, label, id, btn, href, full] of [
   check('Uncovered: the request goes in with the ZIP and "Please add Cambridge"', posts.list.length === 1 && FORM_IDS.every((k) => p0.has(k)) && p0.get('entry.628621310') === '02139' && /^Please add Cambridge\n\nSent along:\nPage: First page\n/.test(p0.get('entry.780704302')) && p0.get('entry.90887649') === 'Please add my city', p0 ? p0.toString() : 'no post');
   await tap(page, '[data-fk="report-done"]');
   await settle(page);
-  check('Uncovered: Done closes it, back on the first page at Ask Kevin', !(await page.$('.sheet-panel.shelf')) && (await focusedFk(page)) === 'ask-kevin', await focusedFk(page));
+  check('Uncovered: Done closes it, back on the first page at Ask for my city', !(await page.$('.sheet-panel.shelf')) && (await focusedFk(page)) === 'ask-kevin', await focusedFk(page));
   noErrors(page, 'Uncovered');
   await ctx.close();
 }

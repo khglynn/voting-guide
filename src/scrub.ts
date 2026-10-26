@@ -84,11 +84,9 @@ function texts(v: unknown, out: string[] = []): string[] {
   else if (v && typeof v === 'object') for (const [k, x] of Object.entries(v)) { out.push(k); texts(x, out); }
   return out;
 }
-/* Must this never leave: does it name the Census lookup, or hold the address? */
-const forbidden = (all: string[], ctx: ScrubContext): boolean => {
-  const joined = all.join('\n');
-  return CENSUS.test(joined) || ctx.mentions(joined);
-};
+/* Must this never leave: does any one of its strings name the Census lookup, or hold the address? Each
+   string is judged on its own, so a bad escape in one can't hide the address in another. */
+const forbidden = (all: string[], ctx: ScrubContext): boolean => all.some((s) => CENSUS.test(s) || ctx.mentions(s));
 
 /* Thrown by someone else's script: in any of the event's exceptions, the newest frame that names a
    script names one that isn't on our origin. Frames that name no script (eval, native code) don't

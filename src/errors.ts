@@ -107,23 +107,39 @@ export function privateWords(): string[] {
 /* The text with JSON's escapes undone (\t, \n, \", \u00e9). */
 const unJSON = (s: string): string => s.replace(/\\u([0-9a-f]{4})/gi, (_, h: string) => String.fromCharCode(parseInt(h, 16)))
   .replace(/\\[nrtbf]/g, ' ').replace(/\\(["\\/])/g, '$1');
-/* The text with URL encoding undone: "+" as a space, then %XX, all at once when it is well formed, else
-   only the plain ASCII escapes. */
+/* The text with URL encoding undone: "+" as a space, and every run of %XX escapes read as UTF-8 bytes
+   (a bad byte becomes a replacement character rather than an error). Never throws. */
 function unURL(s: string): string {
-  const t = s.replace(/\+/g, ' ');
-  try { return decodeURIComponent(t); } catch { return t.replace(/%([0-9a-f]{2})/gi, (m, h: string) => (parseInt(h, 16) < 128 ? String.fromCharCode(parseInt(h, 16)) : m)); }
+  return s.replace(/\+/g, ' ').replace(/(?:%[0-9a-f]{2})+/gi, (run) => {
+    const bytes = new Uint8Array(run.length / 3);
+    for (let i = 0; i < bytes.length; i++) bytes[i] = parseInt(run.slice(i * 3 + 1, i * 3 + 3), 16);
+    return new TextDecoder().decode(bytes);
+  });
 }
+/* Holds %XX escapes the browser itself wouldn't decode (bad UTF-8, a Latin-1 "%F1", a stray "%" beside
+   real escapes): we can't be sure what it says. */
+function undecodable(s: string): boolean {
+  if (!/%[0-9a-f]{2}/i.test(s)) return false;
+  try { decodeURIComponent(s.replace(/\+/g, ' ')); return false; } catch { return true; }
+}
+/* A private string as a URL may carry it: all escaped, or only its non-ASCII letters escaped. */
+const encodings = (w: string): string[] => [squash(encodeURIComponent(w)), squash(w.replace(/[^\x00-\x7f]/g, (c) => encodeURIComponent(c)))];
 /* Does this text hold a private string, however it is written: in any case, with any run of spaces,
-   tabs or line breaks between the words, JSON-escaped, URL-encoded (once or twice), or any mix of
-   those? (Codex, Oct 25: a tab, written "\t" by JSON, got an address past an earlier version.) */
+   tabs or line breaks between the words, JSON-escaped, URL-encoded (once or twice, all of it or only its
+   accented letters), or any mix of those? (Codex, Oct 25: a tab, written "\t" by JSON, got an address
+   past an earlier version.) Decoding goes run by run and never gives up, so one bad escape can't hide
+   the address elsewhere in the text. And when there is something private to protect and any line holds
+   escapes the browser itself wouldn't decode, the answer is yes: when in doubt, send nothing (security
+   review, Oct 25: an accented street, encoded, beside a stray "%", got past an earlier version). Lines
+   are judged one at a time for that, so an ordinary "100%" on one line doesn't condemn good escapes on
+   another; the match itself runs across lines, so an address broken over two still counts. */
 export function mentionsPrivate(text: string, words: string[] = privateWords()): boolean {
   if (!words.length || !text) return false;
+  if (text.split(/[\r\n]+/).some((line) => { const p = unJSON(line); return undecodable(p) || undecodable(unURL(p)); })) return true;
   const plain = unJSON(text);
-  const hay = [text, plain, unURL(plain), unURL(unURL(plain))].map(squash);
-  return words.some((w) => {
-    const enc = squash(encodeURIComponent(w));
-    return hay.some((h) => h.includes(w) || h.includes(enc));
-  });
+  const once = unURL(plain);
+  const hay = [text, plain, once, unURL(once)].map(squash);
+  return words.some((w) => [w, ...encodings(w)].some((x) => !!x && hay.some((h) => h.includes(x))));
 }
 /* Every hash this page has had. A save link carries picks in it, and the app clears it from the
    address bar once the link has opened (app.ts openBallot), so each one is kept from the first moment

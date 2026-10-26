@@ -1770,6 +1770,20 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     // The last check, on the bytes: an envelope's lines of JSON.
     const env = (item) => [JSON.stringify({ event_id: 'e1', sent_at: 'now', sdk: { name: 'sentry.javascript.browser' } }), JSON.stringify({ type: 'event' }), JSON.stringify(item)].join('\n');
     check('crash reports: the envelope check lets a clean report by', scrub.envelopeAllowed(env(out), ctx()));
+    // Accented letters, encoded (security review, Oct 25): a stray "%" in the same text made the decoder give up on
+    // the whole of it, so "Pe%C3%B1a+St" was never read as "peña st". Now each line and each string is read on its
+    // own, %XX runs are read as UTF-8, and escapes that won't decode count as private: when in doubt, send nothing.
+    const PENA = ['12 peña st'];
+    const mp = (t, w = PENA) => errs.mentionsPrivate(t, w);
+    check('crash reports: an accented address, encoded, is found even beside a stray "%" or a bad escape in the same text', mp('q=12+Pe%C3%B1a+St and 100% sure') && mp('q=12%20Pe%C3%B1a%20St, then %E0%A4') && mp('12 Pe%C3%B1a St') && mp('q=12%2520Pe%25C3%25B1a%2520St'));
+    check('crash reports: escapes the browser wouldn’t decode (a Latin-1 "%F1") count as private when there is an address to protect', mp('q=12+Pe%F1a+St') && !errs.mentionsPrivate('q=12+Pe%F1a+St', []));
+    check('crash reports: ordinary text with a "%" or with good escapes isn’t taken for the address', !mp('progress 100% done') && !mp('q=caf%C3%A9+au+lait') && !mp('12 Peña Road') && !mp('{"m":"50%25 off"}'));
+    const split = ev(); split.exception.values[0].value = 'progress 100% done'; split.exception.values[1].value = 'lookup q=12+Pe%C3%B1a+St failed';
+    check('crash reports: one string’s stray "%" can’t hide the address in another string of the same report', scrub.scrubEvent(split, ctx({ words: PENA })) === null
+      && !scrub.envelopeAllowed(env({ a: 'progress 100% done', b: 'q=12+Pe%C3%B1a+St' }), ctx({ words: PENA })));
+    const plain = ev(); plain.exception.values[0].value = 'progress 100% done';
+    check('crash reports: and a report whose only "%" is ordinary text still goes', scrub.scrubEvent(plain, ctx({ words: PENA })) !== null);
+
     check('crash reports: and holds back one with the address (even JSON-escaped with a tab), the Census lookup, a save link’s hash or words', !scrub.envelopeAllowed(env({ value: '12\tTesting Lane' }), ctx())
       && !scrub.envelopeAllowed(env({ u: 'https://geocoding.geo.census.gov/x' }), ctx()) && !scrub.envelopeAllowed(env({ v: 'notes-PRIVHASH9' }), ctx()) && !scrub.envelopeAllowed(env({ v: 'x v1~DC~a' }), ctx())
       && !scrub.envelopeAllowed('not json at all: 12 testing lane', ctx()));

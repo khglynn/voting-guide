@@ -3312,11 +3312,11 @@
   {
     "endorser_id": "la-daily-news-eb",
     "target_id": "ca-coa-2d-retention",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming. Checked again on Oct 25, 2026; still no pick on this page.",
-    "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-    "date": "2026-10-25",
+    "status": "endorsed",
+    "choice": "NO on retaining Justices Armen Tamzarian and Audra M. Mori (no view on the other 16)",
+    "why": "The board says Tamzarian wrote, and Mori signed, the opinion upholding Los Angeles's Measure ULA without a two-thirds vote, and that a no vote tells courts taxpayer protections can't be erased by judicial opinions. It takes no position on the other justices.",
+    "url": "https://www.dailynews.com/2026/10/07/endorsement-vote-no-on-retaining-justices-tamzarian-and-mori/",
+    "date": "2026-10-07",
     "confidence": "verified"
   },
   {

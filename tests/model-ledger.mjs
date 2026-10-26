@@ -1798,6 +1798,14 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     let threw = false; let lone = null;
     try { lone = [errs.mentionsPrivate('nothing here', ['12 test \ud800 lane']), errs.mentionsPrivate('at 12 Test \ud800 Lane', ['12 test \ud800 lane'])]; } catch { threw = true; }
     check('crash reports: a lone surrogate in the address doesn’t break the check', !threw && lone[0] === false && lone[1] === true, JSON.stringify(lone));
+    // Text from the address box counts as whole words, number or not (security review, Oct 25: a street typed without
+    // its number went unprotected); and field names aren't judged, so a box that said "Trace" doesn't silence every report.
+    const box = (t) => [{ text: t, whole: true }];
+    check('crash reports: a street typed without its number is private, as whole words, written any way', errs.mentionsPrivate('lookup Shoal Creek Blvd broke', box('shoal creek blvd')) && errs.mentionsPrivate('q=Shoal+Creek+Blvd&x=1', box('shoal creek blvd'))
+      && errs.mentionsPrivate('a\tSHOAL\nCreek Blvd', box('shoal creek blvd')) && !errs.mentionsPrivate('ShoalCreekBlvd2', box('shoal creek blvd')));
+    check('crash reports: a half-typed word from the box matches only as a word', errs.mentionsPrivate('no stack trace here', box('trace')) && !errs.mentionsPrivate('stacktraces', box('trace')) && !errs.mentionsPrivate('retraced', box('trace')));
+    check('crash reports: field names aren’t judged, so a box that said "Trace" lets an ordinary report go (every report has a "trace" field)', scrub.scrubEvent(ev(), ctx({ mentions: (t) => errs.mentionsPrivate(t, box('trace')) })) !== null
+      && (() => { const e = ev(); e.exception.values[1].value = 'lost the trace'; return scrub.scrubEvent(e, ctx({ mentions: (t) => errs.mentionsPrivate(t, box('trace')) })); })() === null);
     // The shape layer: no digits, nothing quoted but a plain name from the code, a type that is a name.
     const said = (value, type = 'TypeError') => { const o = scrub.scrubEvent({ exception: { values: [{ type, value, stacktrace: { frames: [frame(`${O}/assets/index-Bx9.js`, 'Object.f [as g]'), frame(`${O}/assets/index-Bx9.js`, 'evil(); code')] } }] } }, ctx()); return o && o.exception.values[0]; };
     const shaped = ["Cannot read properties of undefined (reading 'dataset')", 'Unexpected token \'x\', "{"picks":{"a":"Jane"}}" is not valid JSON', "Failed: '#i-tx-gov' is not a valid selector.", 'lookup 12 Elm, 78704 failed', "undefined is not an object (evaluating 'a.b.c')", 'Can’t find variable: foo', `cause: ${O}/data/state-TX.json`, 'Save failed for [save link]'].map((v) => said(v).value);
@@ -1811,7 +1819,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       && !scrub.envelopeAllowed('not json at all: 12 testing lane', ctx()));
     // errors.ts: what counts as private, and the problem report's list follows the same rule.
     errs.keepPrivate('12 Quartz Way, Springfield, IL 62701', 'Springfield, IL', null, '  ', '12\tQuartz\nWay');
-    const words = errs.privateWords();
+    const words = errs.privateWords().map((w) => w.text);
     check('crash reports: an address and its street line are kept to compare against; a bare city has no street line to keep', words.includes('12 quartz way, springfield, il 62701') && words.includes('12 quartz way') && words.includes('springfield, il') && !words.includes('springfield'), words.join(' | '));
     check('crash reports: mentionsPrivate finds them however they’re written', errs.mentionsPrivate('Failed: 12 QUARTZ   WAY') && errs.mentionsPrivate('?a=12%20Quartz%20Way') && errs.mentionsPrivate('?a=12+quartz+way') && errs.mentionsPrivate('{"m":"12\\tQuartz\\nWay"}') && errs.mentionsPrivate('12%2520Quartz%2520Way') && !errs.mentionsPrivate('Quartz is a mineral'));
     const was = JSON.stringify(errs.lastErrors()[0]);

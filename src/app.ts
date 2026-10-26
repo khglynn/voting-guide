@@ -447,12 +447,15 @@ export function reopenAddr(): void {
 }
 export async function runAddress(addr: string): Promise<void> {
   typedAddr = addr;
-  keepPrivate(addr); // a crash report that mentions it never leaves (errors.ts)
   const choosing = S.view !== 'ballot' && S.zipChoice;
   const b = S.view === 'ballot' ? S.ballot : null;
   const door = !b && !choosing;
   S.ui.addrFail = '';
   if (addr.trim().length < 6) { S.ui.addrMsg = 'Enter a street address with the city or ZIP.'; paintAddr(); return; }
+  // A crash report that mentions it never leaves (errors.ts). Only once it passes as an address: a short
+  // word turned away here stays covered as whole words while it sits in the box, and doesn't silence
+  // every later report that happens to contain it (Codex, Oct 25).
+  keepPrivate(addr);
   S.ui.addrBusy = true; S.ui.addrMsg = null; paintAddr();
   // Add the state and ZIP we already know; if that finds nothing (a typo in the ZIP, or an
   // address across a ZIP line), try once more with exactly what they typed.

@@ -126,13 +126,13 @@ function texts(v: unknown, out: string[] = [], values = false): string[] {
   else if (v && typeof v === 'object') for (const [k, x] of Object.entries(v)) { if (!values) out.push(k); texts(x, out, values); }
   return out;
 }
-/* Must this never leave: does any of its strings, read every way, name the Census lookup, or hold the
-   address? Each string (key or value) is judged on its own, so a bad escape in one can't hide the address
-   in another; and the values together, in order, so an address split between two neighbouring fields
-   still counts (security review, Oct 25). Keys are left out of that join: one always sits between two
-   values, and would keep the halves apart. */
-const forbidden = (all: string[], vals: string[], ctx: ScrubContext): boolean =>
-  all.some((s) => ctx.readings(s).some((r) => CENSUS.test(r)) || ctx.mentions(s)) || ctx.mentions(vals.join('\n'));
+/* Must this never leave: does any of its values, read every way, name the Census lookup, or hold the
+   address? Each value is judged on its own, so a bad escape in one can't hide the address in another; and
+   the values together, in order, so an address split between two neighbouring fields still counts
+   (security review, Oct 25). Keys aren't judged: those that leave are fixed field names (KEEP below), and
+   a field name like "trace" must not match a half-typed word from the box. */
+const forbidden = (vals: string[], ctx: ScrubContext): boolean =>
+  vals.some((s) => ctx.readings(s).some((r) => CENSUS.test(r)) || ctx.mentions(s)) || ctx.mentions(vals.join('\n'));
 /* Does it still hold a save link: a saved hash, or a save link's own words, in any reading? */
 const linked = (s: string, forms: string[], ctx: ScrubContext): boolean => ctx.readings(s).some((r) => SAVE_LINK.test(r) || forms.some((f) => r.includes(f)));
 
@@ -181,7 +181,7 @@ export function scrubEvent<T extends object>(event: T, ctx: ScrubContext): T | n
   } catch { return null; }
   // Judged on everything the event holds, even the parts that wouldn't leave: an event that touched the
   // address or the Census lookup anywhere is not one to send.
-  if (forbidden(texts(ev), texts(ev, [], true), ctx)) return null;
+  if (forbidden(texts(ev, [], true), ctx)) return null;
   if (fromElsewhere(ev as Ev, ctx.origin)) return null;
   const e = ev as Ev;
   if ((e.exception?.values || []).some((x) => SCRIPT_ERROR.test((x.value || '').trim())) || SCRIPT_ERROR.test(String(e.message ?? '').trim())) return null;
@@ -210,7 +210,7 @@ export function envelopeAllowed(body: string, ctx: ScrubContext): boolean {
     if (!line.trim()) continue;
     try { const o = JSON.parse(line); texts(o, all); texts(o, vals, true); } catch { all.push(line); vals.push(line); }
   }
-  if (forbidden(all, vals, ctx)) return false;
+  if (forbidden(vals, ctx)) return false;
   const forms = hashForms(ctx.hashes);
   return !all.some((s) => linked(s, forms, ctx));
 }

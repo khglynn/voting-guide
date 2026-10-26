@@ -15,14 +15,15 @@ import {
   globalHandlersIntegration, dedupeIntegration, linkedErrorsIntegration,
 } from '@sentry/browser';
 import { scrubEvent, envelopeAllowed, type ScrubContext } from './scrub';
+import type { Secret } from './errors'; // a type only: nothing of errors.ts is in this chunk
 
 /* What errors.ts hands over, so this chunk never imports from the page's own bundle (a crash while that
    bundle starts up leaves it unusable to any module that imports it, and that crash is the one we most
    want to hear about). */
 export interface Deps {
-  words: () => string[];                                   // the address, typed or matched (privateWords)
+  words: () => Secret[];                                   // the address, typed or matched (privateWords)
   hashes: () => string[];                                  // every hash the page has had (seenHashes)
-  mentions: (text: string, words: string[]) => boolean;    // mentionsPrivate
+  mentions: (text: string, words: Secret[]) => boolean;    // mentionsPrivate
   bare: (s: string) => string;                             // bareURLs
   readings: (s: string) => string[];                       // readings
 }

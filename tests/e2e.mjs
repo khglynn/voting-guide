@@ -3045,27 +3045,39 @@ const ADDRESS = /testing lane|testing%20lane|testing\+lane|test one/i;
   noErrors(page, 'Crash reports, an address never looked up');
   await ctx.close();
 }
-// A half-typed word in the box ("Trace") is no address: crashes before and after it still go. (Codex, Oct
-// 25: once kept, it silenced every report after it, since every report has a "trace" field.)
+// Text in the address box, never looked up: a street without its number ("Shoal Creek Blvd") is private, so
+// a crash that mentions it never goes (security review, Oct 25); a half-typed word ("Trace") counts only as a
+// word, so it never silences the reports around it (Codex, Oct 25: every report has a "trace" field).
 {
   const { ctx, page } = await newPage();
   const crash = await catchCrash(page);
   const ready = watchCrashClient(page);
   await openBallot(page, '78704');
-  if (!(await ready)) noCrashClient('Crash reports, a half-typed word');
+  if (!(await ready)) noCrashClient('Crash reports, text in the box');
   else {
     await tap(page, '.addrbox [data-act="addr-open"]');
-    await page.fill('#addr-in', 'Trace');
-    await throwOnPage(page, 'On purpose: while the box said Trace');
+    await page.fill('#addr-in', 'Shoal Creek Blvd');
+    await throwOnPage(page, 'On purpose: the lookup for Shoal Creek Blvd broke');
     await page.waitForTimeout(300);
     await page.fill('#addr-in', '');
     await throwOnPage(page, 'On purpose: after the box was cleared');
+    await throwOnPage(page, 'On purpose: again, shoal creek blvd, after it was cleared');
+    await page.fill('#addr-in', 'Trace');
+    await throwOnPage(page, 'On purpose: while the box said Trace');
+    await page.waitForTimeout(300);
+    // Submitted, it's turned away as too short; it must not then count against every later report.
+    await page.locator('form[data-form="addr"] button[type=submit]').tap();
+    await page.waitForTimeout(300);
+    await page.fill('#addr-in', '');
+    await throwOnPage(page, 'On purpose: the last one, a stacktrace');
     await until(() => crash.length >= 2);
-    await page.waitForTimeout(500);
-    check('Crash reports: a half-typed word in the address box doesn’t silence the reports around it', crash.length === 2, crash.map((c) => c.event.exception?.values?.[0]?.value).join(' | '));
+    await page.waitForTimeout(800);
+    const got = crash.map((c) => c.event.exception?.values?.[0]?.value);
+    check('Crash reports: a street typed without its number never goes, even after the box is cleared', !crash.some((c) => /shoal|creek/i.test(c.body)), got.join(' | '));
+    check('Crash reports: a half-typed word in the box, even submitted and turned away, doesn’t silence the reports around it', JSON.stringify(got) === JSON.stringify(['On purpose: after the box was cleared', 'On purpose: the last one, a stacktrace']), got.join(' | '));
   }
   forgive(page);
-  noErrors(page, 'Crash reports, a half-typed word');
+  noErrors(page, 'Crash reports, text in the box');
   await ctx.close();
 }
 // A promise rejected with an object that holds picks and a note: the report says an object was thrown and

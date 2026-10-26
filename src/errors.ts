@@ -78,16 +78,18 @@ export const lastErrors = (): Caught[] => caught.slice().reverse();
    (app.ts runAddress). Never shown or sent, only compared: a note here, or a crash report (scrub.ts),
    that mentions any of it is dropped whole. A full address's street line counts on its own too, when
    it has a number in it, since that is the part that says where someone lives. Lowercased, with runs
-   of spaces as one. */
-const secrets = new Set<string>();
+   of spaces as one. A secret marked `whole` (text from the box, maybe half typed) counts only as whole
+   words, so a box that says "Trace" doesn't match "stacktrace"; the rest count anywhere. */
+export interface Secret { text: string; whole?: boolean }
+const secrets = new Map<string, boolean>(); // text -> whole words only
 const squash = (s: string): string => s.replace(/\s+/g, ' ').trim().toLowerCase();
 export function keepPrivate(...xs: (string | null | undefined)[]): void {
   for (const x of xs) {
     const s = squash(x || '');
     if (s.length < 5) continue;
-    secrets.add(s);
+    secrets.set(s, false);
     const street = s.split(',')[0].trim();
-    if (street !== s && street.length >= 5 && /\d/.test(street)) secrets.add(street);
+    if (street !== s && street.length >= 5 && /\d/.test(street)) secrets.set(street, false);
   }
 }
 /* What is in the address box right now: typed, maybe never looked up. */
@@ -95,18 +97,18 @@ const inBox = (): string => {
   const box = typeof document === 'undefined' ? null : document.getElementById('addr-in') as HTMLInputElement | null;
   return box ? box.value : '';
 };
-/* Something typed in the box that could be an address: six characters or more with a number in it. A
-   half-typed word ("Trace") is not kept: every report has a "trace" field, and keeping it would silence
-   every report after it (Codex, Oct 25). */
-const addressish = (s: string): boolean => s.length >= 6 && /\d/.test(s);
-/* Whatever is in the box when an error is caught is kept too, so an error that waits for the client
-   (or a report written later) is still checked against it after the box has been cleared or has gone
-   (Codex, Oct 25). */
-const keepBox = (): void => { const v = squash(inBox()); if (addressish(v)) keepPrivate(v); };
-/* Every private string, with whatever is in the address box right now when it could be an address. */
-export function privateWords(): string[] {
+/* Whatever is in the box when an error is caught is kept too (five characters or more, number or not: a
+   street typed without its number is still where someone lives; security review, Oct 25), so an error
+   that waits for the client, or a report written later, is still checked against it after the box has
+   been cleared or has gone (Codex, Oct 25). As whole words: a half-typed "Trace" then silences only a
+   report that says "trace", not every report after it. */
+const keepBox = (): void => { const v = squash(inBox()); if (v.length >= 5 && !secrets.has(v)) secrets.set(v, true); };
+/* Every private string, with whatever is in the address box right now. */
+export function privateWords(): Secret[] {
+  const out = [...secrets].map(([text, whole]) => ({ text, whole }));
   const live = squash(inBox());
-  return addressish(live) ? [...new Set([...secrets, live])] : [...secrets];
+  if (live.length >= 5 && !secrets.has(live)) out.push({ text: live, whole: true });
+  return out;
 }
 /* The text with JSON's escapes undone (\t, \n, \", \u00e9). */
 const unJSON = (s: string): string => s.replace(/\\u([0-9a-f]{4})/gi, (_, h: string) => String.fromCharCode(parseInt(h, 16)))
@@ -158,12 +160,24 @@ export function readings(text: string): string[] {
    past an earlier version). Lines are judged one at a time for that, so an ordinary "100%" on one line
    doesn't condemn good escapes on another; the match itself runs across lines, so an address broken
    over two still counts. */
-export function mentionsPrivate(text: string, words: string[] = privateWords()): boolean {
+export function mentionsPrivate(text: string, words: (string | Secret)[] = privateWords()): boolean {
   if (!words.length || !text) return false;
   const rs = readings(text);
   if (rs.some((r) => r.split(/[\r\n]+/).some(undecodable))) return true;
   const hay = rs.map(squash);
-  return words.some((w) => encodings(w).some((x) => !!x && hay.some((h) => h.includes(x))));
+  return words.some((w) => {
+    const { text: t, whole } = typeof w === 'string' ? { text: w, whole: false } : w;
+    return encodings(t).some((x) => !!x && hay.some((h) => (whole ? wholeIn(h, x) : h.includes(x))));
+  });
+}
+/* Is x in h as whole words: no letter or digit right before or after it? */
+function wholeIn(h: string, x: string): boolean {
+  for (let i = h.indexOf(x); i >= 0; i = h.indexOf(x, i + 1)) {
+    const before = h.slice(0, i).slice(-1);
+    const after = h.charAt(i + x.length);
+    if (!/[\p{L}\p{N}]/u.test(before) && !/[\p{L}\p{N}]/u.test(after)) return true;
+  }
+  return false;
 }
 /* Every hash this page has had. A save link carries picks in it, and the app clears it from the
    address bar once the link has opened (app.ts openBallot), so each one is kept from the first moment

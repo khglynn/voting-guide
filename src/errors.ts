@@ -90,20 +90,39 @@ export function keepPrivate(...xs: (string | null | undefined)[]): void {
     if (street !== s && street.length >= 5 && /\d/.test(street)) secrets.add(street);
   }
 }
-/* Every private string, with whatever is in the address box right now (typed, maybe never looked up). */
-export function privateWords(): string[] {
+/* What is in the address box right now: typed, maybe never looked up. */
+const inBox = (): string => {
   const box = typeof document === 'undefined' ? null : document.getElementById('addr-in') as HTMLInputElement | null;
-  const live = squash(box ? box.value : '');
+  return box ? box.value : '';
+};
+/* Whatever is in the box when an error is caught is kept too, so an error that waits for the client
+   (or a report written later) is still checked against it after the box has been cleared or has gone
+   (Codex, Oct 25). */
+const keepBox = (): void => keepPrivate(inBox());
+/* Every private string, with whatever is in the address box right now. */
+export function privateWords(): string[] {
+  const live = squash(inBox());
   return live.length >= 5 ? [...new Set([...secrets, live])] : [...secrets];
 }
-/* Does this text hold a private string: as typed, URL-encoded (a space as %20 or +), or escaped the
-   way JSON writes it? Case and spacing don't matter. */
+/* The text with JSON's escapes undone (\t, \n, \", \u00e9). */
+const unJSON = (s: string): string => s.replace(/\\u([0-9a-f]{4})/gi, (_, h: string) => String.fromCharCode(parseInt(h, 16)))
+  .replace(/\\[nrtbf]/g, ' ').replace(/\\(["\\/])/g, '$1');
+/* The text with URL encoding undone: "+" as a space, then %XX, all at once when it is well formed, else
+   only the plain ASCII escapes. */
+function unURL(s: string): string {
+  const t = s.replace(/\+/g, ' ');
+  try { return decodeURIComponent(t); } catch { return t.replace(/%([0-9a-f]{2})/gi, (m, h: string) => (parseInt(h, 16) < 128 ? String.fromCharCode(parseInt(h, 16)) : m)); }
+}
+/* Does this text hold a private string, however it is written: in any case, with any run of spaces,
+   tabs or line breaks between the words, JSON-escaped, URL-encoded (once or twice), or any mix of
+   those? (Codex, Oct 25: a tab, written "\t" by JSON, got an address past an earlier version.) */
 export function mentionsPrivate(text: string, words: string[] = privateWords()): boolean {
-  if (!words.length) return false;
-  const t = squash(text);
+  if (!words.length || !text) return false;
+  const plain = unJSON(text);
+  const hay = [text, plain, unURL(plain), unURL(unURL(plain))].map(squash);
   return words.some((w) => {
-    const enc = encodeURIComponent(w);
-    return [w, enc, enc.replace(/%20/g, '+'), JSON.stringify(w).slice(1, -1)].some((f) => t.includes(f.toLowerCase()));
+    const enc = squash(encodeURIComponent(w));
+    return hay.some((h) => h.includes(w) || h.includes(enc));
   });
 }
 /* Every hash this page has had. A save link carries picks in it, and the app clears it from the
@@ -127,18 +146,22 @@ const hold = (e: unknown): void => { if (early.length < EARLY) early.push(e); };
 /* A crash the page caught itself (main.ts fire(): a control's own error): kept for a problem report,
    and sent as a crash report, now or once the client has loaded. */
 export function reportError(e: unknown): void {
+  keepBox();
   note(e);
   if (send) send(e); else hold(e);
 }
 /* The id of the last crash report Sentry took in, for the problem report's list (views/shelf.ts). */
 export const lastErrorId = (): string | undefined => lastId();
 
+/* The chunk imports nothing from the page's own bundle: everything it needs from here is handed to it.
+   So a crash while the page's bundle itself starts up (which leaves that bundle unusable to any other
+   module) still gets reported (Codex, Oct 25). */
 function startCrashReports(): void {
   import('./sentry')
     .then((m) => {
       // Sentry's own window handlers go on inside start(), in the same task that turns ours off for
       // it, so no error falls between them.
-      send = m.start(early.splice(0));
+      send = m.start(early.splice(0), { words: privateWords, hashes: seenHashes, mentions: mentionsPrivate, bare: bareURLs });
       lastId = m.lastSentId;
     })
     .catch(() => { /* an ad blocker or a dropped connection ate the chunk: the guide works the same, we just hear nothing */ });
@@ -153,10 +176,12 @@ if (typeof window !== 'undefined') {
   window.addEventListener('error', (e) => {
     // A resource that failed to load (an image) is no script error.
     if (!(e instanceof ErrorEvent)) return;
+    keepBox();
     note(e.error instanceof Error ? e.error : e.message, e.filename, e.lineno, e.colno);
     if (!send) hold(e.error ?? e.message);
   });
   window.addEventListener('unhandledrejection', (e) => {
+    keepBox();
     note(e.reason instanceof Error ? e.reason : `Unhandled: ${words(e.reason)}`);
     if (!send) hold(e.reason);
   });

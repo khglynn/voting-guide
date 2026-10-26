@@ -2913,12 +2913,13 @@ const ADDRESS = /testing lane|testing%20lane|testing\+lane|test one/i;
     await throwOnPage(page, 'On purpose: the lookup for 12 Testing Lane broke');
     await throwOnPage(page, 'On purpose: Found Test One, Austin, TX 78704');
     await throwOnPage(page, 'On purpose: q=12%20Testing%20Lane&benchmark=Public_AR_Current');
+    await throwOnPage(page, 'On purpose: 12\tTesting\tLane, with tabs');
     await page.waitForTimeout(800);
     const none = crash.length;
     await throwOnPage(page, 'On purpose: a plain crash');
     await until(() => crash.length > none);
     await page.waitForTimeout(800);
-    check('Crash reports: an error that mentions the address, as typed, as the Census found it or URL-encoded, sends nothing', none === 0, crash.map((c) => c.event.exception?.values?.[0]?.value).join(' | '));
+    check('Crash reports: an error that mentions the address, as typed, as the Census found it, URL-encoded or with tabs, sends nothing', none === 0, crash.map((c) => c.event.exception?.values?.[0]?.value).join(' | '));
     const c = crash[0] || { body: '', event: {} };
     check('Crash reports: then a plain error sends exactly one report, with no address and no "census" in it', crash.length === 1 && /On purpose: a plain crash/.test(c.body) && !ADDRESS.test(c.body) && !/census/i.test(c.body), `${crash.length}: ${c.body.slice(0, 300)}`);
     const ev = c.event;
@@ -3010,6 +3011,83 @@ const ADDRESS = /testing lane|testing%20lane|testing\+lane|test one/i;
   }
   forgive(page);
   noErrors(page, 'Crash reports, a tap');
+  await ctx.close();
+}
+// An address typed but never looked up, an error that mentions it while the client is still on its way,
+// then the box cleared and closed: once the client arrives, that waiting error still never goes (Codex,
+// Oct 25: it went, when the box was only read at sending time).
+{
+  const { ctx, page } = await newPage();
+  const crash = await catchCrash(page);
+  let release = () => {};
+  const gate = new Promise((r) => { release = r; });
+  await page.route(CRASH_CHUNK, async (route) => { await gate; await route.continue().catch(() => {}); });
+  const asked = page.waitForRequest((r) => CRASH_CHUNK.test(r.url()), { timeout: 15000 }).then(() => true).catch(() => false);
+  const ready = watchCrashClient(page);
+  await openBallot(page, '78704');
+  if (!(await asked)) { release(); noCrashClient('Crash reports, an address never looked up'); }
+  else {
+    await tap(page, '.addrbox [data-act="addr-open"]');
+    await page.fill('#addr-in', '12 Testing Lane');
+    await throwOnPage(page, 'On purpose: still typing 12 Testing Lane');
+    await page.waitForTimeout(300);
+    await page.fill('#addr-in', '');
+    await tap(page, '.addrbox [data-act="addr-close"]');
+    const gone = !(await page.$('#addr-in'));
+    release();
+    await ready;
+    await throwOnPage(page, 'On purpose: a plain crash after');
+    await until(() => crash.length >= 1);
+    await page.waitForTimeout(800);
+    check('Crash reports: an error that waited for the client, mentioning an address typed but never looked up, never goes, even after the box is cleared and gone', gone && crash.length === 1 && /a plain crash after/.test(crash[0].body) && !ADDRESS.test(crash[0].body), `${gone} ${crash.length}: ${crash.map((c) => c.event.exception?.values?.[0]?.value).join(' | ')}`);
+  }
+  forgive(page);
+  noErrors(page, 'Crash reports, an address never looked up');
+  await ctx.close();
+}
+// A promise rejected with an object that holds picks and a note: the report says an object was thrown and
+// never what it held (Codex, Oct 25: Sentry put the whole object in the report).
+{
+  const { ctx, page } = await newPage();
+  const crash = await catchCrash(page);
+  const ready = watchCrashClient(page);
+  await openBallot(page, '78704');
+  if (!(await ready)) noCrashClient('Crash reports, a thrown object');
+  else {
+    await page.addScriptTag({ content: 'Promise.reject({ picks: { "tx-governor": "Jane Q Purposeful" }, notes: { "tx-governor": "my private note" } });' });
+    await until(() => crash.length >= 1);
+    await page.waitForTimeout(500);
+    const c = crash[0] || { body: '', event: {} };
+    check('Crash reports: a rejected object holding picks and a note sends neither, only that an object was thrown', crash.length === 1 && !/Jane Q|private note|__serialized__/.test(c.body)
+      && (c.event.exception?.values?.[0]?.value || '') === 'Object captured as promise rejection with keys: [not sent]' && !('extra' in c.event), c.body.slice(0, 400));
+  }
+  page.errors = page.errors.filter((e) => !/Jane Q|private note|Object|object/.test(e));
+  noErrors(page, 'Crash reports, a thrown object');
+  await ctx.close();
+}
+// The page's own code crashes while it starts up (here: wiring its taps throws), which leaves the page's
+// bundle unusable to anything that imports it. The client imports nothing from it, so that crash, the
+// worst kind, still arrives (Codex, Oct 25: it never did).
+{
+  const { ctx, page } = await newPage();
+  const crash = await catchCrash(page);
+  await page.addInitScript(() => {
+    const add = Document.prototype.addEventListener;
+    Document.prototype.addEventListener = function (type, ...rest) {
+      if (type === 'pointerdown') { Document.prototype.addEventListener = add; throw new Error('On purpose: the page broke while starting'); }
+      return add.call(this, type, ...rest);
+    };
+  });
+  const ready = watchCrashClient(page);
+  await page.goto(`${BASE}/?today=${TODAY}`);
+  if (!(await ready)) noCrashClient('Crash reports, a crash at start-up');
+  else {
+    await until(() => crash.length >= 1);
+    await page.waitForTimeout(300);
+    check('Crash reports: a crash while the page’s own code starts up still arrives', crash.some((c) => (c.event.exception?.values || []).some((v) => v.value === 'On purpose: the page broke while starting')) && !(await page.$('#zip')), crash.map((c) => c.event.exception?.values?.[0]?.value).join(' | '));
+  }
+  forgive(page);
+  noErrors(page, 'Crash reports, a crash at start-up');
   await ctx.close();
 }
 // An error before the page has loaded waits for the client and goes once it starts; and a page load sends

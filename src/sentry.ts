@@ -14,20 +14,43 @@ import {
   BrowserClient, defaultStackParser, makeFetchTransport, setCurrentClient, captureException,
   globalHandlersIntegration, dedupeIntegration, linkedErrorsIntegration,
 } from '@sentry/browser';
-import { scrubEvent } from './scrub';
-import { privateWords, seenHashes } from './errors';
+import { scrubEvent, envelopeAllowed, type ScrubContext } from './scrub';
+
+/* What errors.ts hands over, so this chunk never imports from the page's own bundle (a crash while that
+   bundle starts up leaves it unusable to any module that imports it, and that crash is the one we most
+   want to hear about). */
+export interface Deps {
+  words: () => string[];                                   // the address, typed or matched (privateWords)
+  hashes: () => string[];                                  // every hash the page has had (seenHashes)
+  mentions: (text: string, words: string[]) => boolean;    // mentionsPrivate
+  bare: (s: string) => string;                             // bareURLs
+}
 
 const PER_LOAD = 5;
 let sent = 0;
 let lastSent: string | undefined;
 
 /* Starts the client, sends the errors that waited for it, and hands back the way to send the next one. */
-export function start(early: unknown[]): (e: unknown) => void {
+export function start(early: unknown[], deps: Deps): (e: unknown) => void {
+  const ctx = (): ScrubContext => {
+    const words = deps.words();
+    return { origin: location.origin, path: location.pathname, hashes: deps.hashes(), mentions: (t) => deps.mentions(t, words), bare: deps.bare, ua: navigator.userAgent };
+  };
+  // The last look, at the very bytes about to leave: anything that still names the Census lookup, holds
+  // the address or a save link never goes, whichever way the SDK built it.
+  const guarded = (url: string, init?: RequestInit): Promise<Response> => {
+    const body = init && init.body;
+    const text = typeof body === 'string' ? body : body instanceof Uint8Array ? new TextDecoder().decode(body) : '';
+    let ok = false;
+    try { ok = envelopeAllowed(text, ctx()); } catch { /* a check that failed sends nothing */ }
+    if (!ok) return Promise.reject(new Error('Crash report held back by the privacy check'));
+    return fetch(url, init);
+  };
   const client = new BrowserClient({
     dsn: import.meta.env.VITE_SENTRY_DSN,
     release: import.meta.env.VITE_BUILD || undefined,
     environment: import.meta.env.VITE_VERCEL_ENV || 'local',
-    transport: makeFetchTransport,
+    transport: (options) => makeFetchTransport(options, guarded),
     stackParser: defaultStackParser,
     // Uncaught errors and rejections; the same error twice in a row once; an error's `cause` chain.
     integrations: [globalHandlersIntegration(), dedupeIntegration(), linkedErrorsIntegration()],
@@ -41,7 +64,7 @@ export function start(early: unknown[]): (e: unknown) => void {
     beforeSend(event) {
       try {
         if (sent >= PER_LOAD) return null;
-        const out = scrubEvent(event, { origin: location.origin, path: location.pathname, hashes: seenHashes(), secrets: privateWords(), ua: navigator.userAgent });
+        const out = scrubEvent(event, ctx());
         if (out) sent++;
         return out;
       } catch {

@@ -1975,6 +1975,12 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('sources: a paywalled paper with picks here stays in its lean group with a switch', !!trib && lens.picksOnBallot(ch, trib.id) > 0 && !box.includes('chicago-tribune-eb') && /data-act="src" data-id="chicago-tribune-eb"/.test(sh));
     check('sources: none of the couldn’t-read ones has a switch anywhere in the sheet', unread.every((e) => !sh.includes(`data-act="src" data-id="${e.id}"`)));
     check('sources: Add a source ends the sheet', /class="s-add"[\s\S]*data-act="shelf" data-kind="source"[^>]*data-fk="src-add"[^>]*>Add a source</.test(sh) && sh.lastIndexOf('Add a source') > sh.lastIndexOf('Couldn’t read'));
+    // A paywalled paper that endorses nothing (the Pensacola News Journal) isn't "couldn't read": it stays
+    // in its group as an explainer.
+    const pen2 = open('FL', ['pensacola-fl']);
+    const pnj = pen2.eById.get('pensacola-news-journal-eb');
+    const psh = views.lens.sourcesSheetHTML();
+    check('sources: a paywalled paper that doesn’t endorse stays in its group as an explainer, not under Couldn’t read', !!pnj && pnj.paywall === true && lens.explainsOnly(pnj) && !(psh.match(/<section class="sgrp unread">[\s\S]*?<\/section>/) || [''])[0].includes('pensacola-news-journal-eb') && /data-act="src" data-id="pensacola-news-journal-eb"/.test(psh));
     // A bot-checked source with picks from an earlier read keeps them, and says why it can't be checked again.
     const mo = open('MO', []);
     const smo = mo.eById.get('sierra-club-mo');

@@ -58,8 +58,10 @@ function srcRow(e: Endorser, shown: ReturnType<typeof picksShown>): string {
 /* "Couldn't read" (Kevin, Oct 25: "show what sources we tried but couldn't access (paywalls and stuff)"):
    a source behind a paywall or a bot check with no pick on this ballot, so there is nothing of its to
    turn on. Its reason in one line and "Send it to us", no switch. One with picks from a free page or an
-   earlier read stays in its lean group, its note under its name. */
-const unreadHere = (b: NonNullable<typeof S.ballot>, e: Endorser): boolean => cantRead(e) && !picksOnBallot(b, e.id);
+   earlier read stays in its lean group, its note under its name, and so does a paywalled paper that
+   doesn't endorse at all (the Pensacola News Journal: "Explains, doesn't endorse"), since there are no
+   endorsements of its we failed to read. */
+const unreadHere = (b: NonNullable<typeof S.ballot>, e: Endorser): boolean => cantRead(e) && !explainsOnly(e) && !picksOnBallot(b, e.id);
 function unreadHTML(list: Endorser[]): string {
   if (!list.length) return '';
   return `<section class="sgrp unread"><h3>Couldn’t read (${list.length})</h3><ul>${list.map((e) => `<li class="srow" data-unread="${esc(e.id)}">

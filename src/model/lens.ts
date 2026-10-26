@@ -57,6 +57,10 @@ export function picksOnBallot(b: Ballot, eid: string): number {
   return m.get(eid) || 0;
 }
 export const withPicks = (b: Ballot, list: Endorser[]): Endorser[] => list.filter((e) => picksOnBallot(b, e.id) > 0);
+/* Behind a paywall or a bot check, with endorsements to read but none read on this ballot: nothing of its to
+   turn on, so the sources sheet lists it under "Couldn't read" with no switch (views/lens.ts). A paywalled
+   paper that doesn't endorse at all stays an explainer. */
+export const unreadHere = (b: Ballot, e: Endorser): boolean => cantRead(e) && !explainsOnly(e) && !picksOnBallot(b, e.id);
 /* How many of the choices your ballot shows each source endorsed in: the same choices the bar's
    "N of M decided" counts (no district variants you haven't picked, no races you hid), so the
    sources sheet never says "Endorsed in 59" on a 46-item ballot. `unopposed` counts its picks in

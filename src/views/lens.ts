@@ -5,7 +5,7 @@ import type { Contest, Endorser } from '../types';
 import { S } from '../state';
 import { chosenIds, decisionItems } from '../ballot';
 import { esc, plural } from '../util';
-import { CHIPS, chipState, partiesOnBallot, picksOnBallot, picksShown, explainsOnly, noEndorsements, cantRead } from '../model/lens';
+import { CHIPS, chipState, partiesOnBallot, picksOnBallot, picksShown, explainsOnly, noEndorsements, unreadHere } from '../model/lens';
 import { leanHTML, sourceLean, ext, isOpen, paywallSourceHTML, hasPaywallNote, blockedSourceHTML, unreadWhy, unreadLinkHTML, shelfAttrs } from './common';
 
 export const TICK = '<svg class="tick" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 6.3l2.6 2.6L10 3.3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>';
@@ -57,11 +57,9 @@ function srcRow(e: Endorser, shown: ReturnType<typeof picksShown>): string {
 }
 /* "Couldn't read" (Kevin, Oct 25: "show what sources we tried but couldn't access (paywalls and stuff)"):
    a source behind a paywall or a bot check with no pick on this ballot, so there is nothing of its to
-   turn on. Its reason in one line and "Send it to us", no switch. One with picks from a free page or an
-   earlier read stays in its lean group, its note under its name, and so does a paywalled paper that
-   doesn't endorse at all (the Pensacola News Journal: "Explains, doesn't endorse"), since there are no
-   endorsements of its we failed to read. */
-const unreadHere = (b: NonNullable<typeof S.ballot>, e: Endorser): boolean => cantRead(e) && !explainsOnly(e) && !picksOnBallot(b, e.id);
+   turn on (model/lens.ts unreadHere). Its reason in one line and "Send it to us", no switch. One with picks
+   from a free page or an earlier read stays in its lean group, its note under its name, and so does a
+   paywalled paper that doesn't endorse at all (the Pensacola News Journal: "Explains, doesn't endorse"). */
 function unreadHTML(list: Endorser[]): string {
   if (!list.length) return '';
   return `<section class="sgrp unread"><h3>Couldn’t read (${list.length})</h3><ul>${list.map((e) => `<li class="srow" data-unread="${esc(e.id)}">

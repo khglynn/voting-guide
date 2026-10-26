@@ -1944,6 +1944,51 @@ for (const [zip, label, id, btn, href, full] of [
   await ctx.close();
 }
 
+{
+  // Codex, Oct 26: a sheet that takes its own opener away (the source count goes with the last source) sends
+  // focus to "Show endorsements" instead of losing it.
+  const { ctx, page } = await newPage();
+  await openZip(page, '60601');
+  await page.waitForSelector('#setup [data-fk="cov-src"]', { timeout: 15000 });
+  await fillOff(page);
+  await tap(page, '#setup [data-fk="cov-src"]');
+  await page.waitForSelector('.sheet-panel #sh-h');
+  await tap(page, '.sheet-panel [data-act="src-none"]');
+  check('Sources: Turn all off takes the count away behind the sheet', !(await page.$('#setup [data-fk="cov-src"]')));
+  await tap(page, '.sheet-panel [data-fk="sheet-x"]');
+  await settle(page);
+  check('Sources: after Turn all off, Done puts focus on Show endorsements', !(await page.$('.sheet-panel')) && (await focusedFk(page)) === 'ends', await focusedFk(page));
+  // On again, then every switch off one at a time, then Escape.
+  await tap(page, '#setup [data-act="ends"]');
+  await page.waitForSelector('#setup [data-fk="cov-src"]', { timeout: 15000 });
+  await tap(page, '#setup [data-fk="cov-src"]');
+  await page.waitForSelector('.sheet-panel #sh-h');
+  for (let n = 0; n < 80; n++) {
+    const id = await page.evaluate(() => document.querySelector('.sheet-panel [data-act="src"][aria-checked="true"]')?.dataset.id || '');
+    if (!id) break;
+    await tap(page, `.sheet-panel [data-fk="tg-${id}"]`);
+  }
+  check('Sources: the last switch off takes the count away too', !(await page.$('.sheet-panel [data-act="src"][aria-checked="true"]')) && !(await page.$('#setup [data-fk="cov-src"]')));
+  await page.keyboard.press('Escape');
+  await settle(page);
+  check('Sources: then Escape puts focus on Show endorsements', !(await page.$('.sheet-panel')) && (await focusedFk(page)) === 'ends', await focusedFk(page));
+  // The ballot's Edit sheet: its count opens the sheet over it; Turn all off, then Done goes back to the Edit
+  // sheet with focus on its own "Show endorsements".
+  await tap(page, '#setup [data-act="ends"]');
+  await page.waitForSelector('#setup [data-fk="cov-src"]', { timeout: 15000 });
+  await tap(page, SETUP);
+  await page.waitForSelector('#plan', { timeout: 15000 });
+  await edit(page);
+  await tap(page, '.sheet-panel.picks [data-fk="cov-src"]');
+  await page.waitForSelector('.sheet-panel:not(.picks) #sh-h');
+  await tap(page, '.sheet-panel [data-act="src-none"]');
+  await tap(page, '.sheet-panel [data-fk="sheet-x"]');
+  await settle(page);
+  check('Sources: from the Edit sheet, Turn all off then Done goes back there, focus on its Show endorsements', !!(await page.$('.sheet-panel.picks')) && (await focusedFk(page)) === 'ends' && !!(await page.evaluate(() => document.activeElement?.closest('.sheet-panel.picks'))), await focusedFk(page));
+  noErrors(page, 'Sources focus');
+  await ctx.close();
+}
+
 /* ---------- coverage (Oct 25, then the copy pass): one card that owns the action, quiet lines elsewhere ----------
    Kevin: "St. Louis doesn't have very many sources and I don't think the site should pretend we can show
    picks if we haven't fully scraped for that one yet." After his phone test: "It reads as a standard header,

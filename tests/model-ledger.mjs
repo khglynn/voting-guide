@@ -1708,7 +1708,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const SECRETS = ['12 testing lane'];
     const ctx = (over = {}) => {
       const words = over.words || SECRETS;
-      return { origin: O, path: '/', hashes: [HASH, 'notes-PRIVHASH9'], mentions: (t) => errs.mentionsPrivate(t, words), bare: errs.bareURLs, ua: 'TestAgent/1.0', ...over };
+      return { origin: O, path: '/', hashes: [HASH, 'notes-PRIVHASH9'], mentions: (t) => errs.mentionsPrivate(t, words), bare: errs.bareURLs, readings: errs.readings, ua: 'TestAgent/1.0', ...over };
     };
     const frame = (filename, fn = 'f') => ({ filename, function: fn, lineno: 1, colno: 2, in_app: true });
     const ev = () => ({
@@ -1781,6 +1781,28 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const split = ev(); split.exception.values[0].value = 'progress 100% done'; split.exception.values[1].value = 'lookup q=12+Pe%C3%B1a+St failed';
     check('crash reports: one string’s stray "%" can’t hide the address in another string of the same report', scrub.scrubEvent(split, ctx({ words: PENA })) === null
       && !scrub.envelopeAllowed(env({ a: 'progress 100% done', b: 'q=12+Pe%C3%B1a+St' }), ctx({ words: PENA })));
+    // Codex round 2, Oct 25: escapes inside encodings; an address split between two fields (security review);
+    // fixed words for a thrown non-Error; a save link with its "~" encoded; a lone surrogate.
+    check('crash reports: an escape inside an encoding unwinds too ("%5Ct", "%5Cu0020")', mp('12%5CtTesting%5CtLane', SECRETS) && mp('12%5Cu0020Testing%5Cu0020Lane', SECRETS) && mp('12\\u0020Testing\\u0020Lane', SECRETS) && mp('12%255Ct%2520Testing Lane', SECRETS));
+    const halves = ev(); halves.exception.values[1].value = "lookup failed for 12 O'Test"; halves.exception.values[1].stacktrace.frames[0].filename = 'Lane';
+    check('crash reports: an address split between two fields still counts', scrub.scrubEvent(halves, ctx({ words: ["12 o'test lane"] })) === null
+      && !scrub.envelopeAllowed(env({ a: "for 12 O'Test", b: 'Lane is wrong' }), ctx({ words: ["12 o'test lane"] })));
+    const wrapped = (value, type = 'Error') => scrub.scrubEvent({ exception: { values: [{ type, value, mechanism: { type: 'auto.browser.global_handlers.onunhandledrejection', handled: false, synthetic: true } }] } }, ctx());
+    check('crash reports: a thrown non-Error gets fixed words, never a prefix the page wrote', wrapped('Private choice Jane Q Purposeful with value: secret tail').exception.values[0].value === 'A thrown value that isn’t an Error: [not sent]'
+      && wrapped('Object captured as exception with keys: picks').exception.values[0].value === 'Object captured as exception with keys: [not sent]'
+      && wrapped('Event `ErrorEvent` captured as promise rejection with message `Jane`').exception.values[0].value === 'An event object captured as promise rejection: [not sent]'
+      && wrapped('Non-Error promise rejection captured with value: Jane', 'UnhandledRejection').exception.values[0].value === 'Non-Error promise rejection captured with value: [not sent]');
+    const tilde = (v) => { const e = ev(); e.exception.values[1].value = v; return scrub.scrubEvent(e, ctx()); };
+    check('crash reports: a save link with its "~" encoded, once or twice, or JSON-escaped, never leaves', tilde(`see ${HASH.replace(/~/g, '%7E')}`) === null && tilde(`see ${HASH.replace(/~/g, '%257E')}`) === null && tilde('x v1%7EDC%7Edc-ward-1') === null && tilde('x v1\\u007EDC') === null
+      && !scrub.envelopeAllowed(env({ v: HASH.replace(/~/g, '%7E') }), ctx()));
+    let threw = false; let lone = null;
+    try { lone = [errs.mentionsPrivate('nothing here', ['12 test \ud800 lane']), errs.mentionsPrivate('at 12 Test \ud800 Lane', ['12 test \ud800 lane'])]; } catch { threw = true; }
+    check('crash reports: a lone surrogate in the address doesn’t break the check', !threw && lone[0] === false && lone[1] === true, JSON.stringify(lone));
+    // The shape layer: no digits, nothing quoted but a plain name from the code, a type that is a name.
+    const said = (value, type = 'TypeError') => { const o = scrub.scrubEvent({ exception: { values: [{ type, value, stacktrace: { frames: [frame(`${O}/assets/index-Bx9.js`, 'Object.f [as g]'), frame(`${O}/assets/index-Bx9.js`, 'evil(); code')] } }] } }, ctx()); return o && o.exception.values[0]; };
+    const shaped = ["Cannot read properties of undefined (reading 'dataset')", 'Unexpected token \'x\', "{"picks":{"a":"Jane"}}" is not valid JSON', "Failed: '#i-tx-gov' is not a valid selector.", 'lookup 12 Elm, 78704 failed', "undefined is not an object (evaluating 'a.b.c')", 'Can’t find variable: foo', `cause: ${O}/data/state-TX.json`, 'Save failed for [save link]'].map((v) => said(v).value);
+    check('crash reports: a message keeps plain words, names from the code and cut URLs; a number, a JSON snippet or a quoted selector becomes "…"', JSON.stringify(shaped) === JSON.stringify(["Cannot read properties of undefined (reading 'dataset')", "Unexpected token 'x', … is not valid JSON", 'Failed: … is not a valid selector.', 'lookup … Elm, … failed', "undefined is not an object (evaluating 'a.b.c')", 'Can’t find variable: foo', `cause: ${O}/data/state-TX.json`, 'Save failed for [save link]']), JSON.stringify(shaped));
+    check('crash reports: a type that isn’t a name becomes "Error", and a frame’s function that isn’t a name becomes "?"', said('x', 'Jane Q Doe').type === 'Error' && said('x').stacktrace.frames[0].function === 'Object.f [as g]' && said('x').stacktrace.frames[1].function === '?');
     const plain = ev(); plain.exception.values[0].value = 'progress 100% done';
     check('crash reports: and a report whose only "%" is ordinary text still goes', scrub.scrubEvent(plain, ctx({ words: PENA })) !== null);
 

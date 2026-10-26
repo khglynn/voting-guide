@@ -95,14 +95,18 @@ const inBox = (): string => {
   const box = typeof document === 'undefined' ? null : document.getElementById('addr-in') as HTMLInputElement | null;
   return box ? box.value : '';
 };
+/* Something typed in the box that could be an address: six characters or more with a number in it. A
+   half-typed word ("Trace") is not kept: every report has a "trace" field, and keeping it would silence
+   every report after it (Codex, Oct 25). */
+const addressish = (s: string): boolean => s.length >= 6 && /\d/.test(s);
 /* Whatever is in the box when an error is caught is kept too, so an error that waits for the client
    (or a report written later) is still checked against it after the box has been cleared or has gone
    (Codex, Oct 25). */
-const keepBox = (): void => keepPrivate(inBox());
-/* Every private string, with whatever is in the address box right now. */
+const keepBox = (): void => { const v = squash(inBox()); if (addressish(v)) keepPrivate(v); };
+/* Every private string, with whatever is in the address box right now when it could be an address. */
 export function privateWords(): string[] {
   const live = squash(inBox());
-  return live.length >= 5 ? [...new Set([...secrets, live])] : [...secrets];
+  return addressish(live) ? [...new Set([...secrets, live])] : [...secrets];
 }
 /* The text with JSON's escapes undone (\t, \n, \", \u00e9). */
 const unJSON = (s: string): string => s.replace(/\\u([0-9a-f]{4})/gi, (_, h: string) => String.fromCharCode(parseInt(h, 16)))
@@ -122,24 +126,44 @@ function undecodable(s: string): boolean {
   if (!/%[0-9a-f]{2}/i.test(s)) return false;
   try { decodeURIComponent(s.replace(/\+/g, ' ')); return false; } catch { return true; }
 }
-/* A private string as a URL may carry it: all escaped, or only its non-ASCII letters escaped. */
-const encodings = (w: string): string[] => [squash(encodeURIComponent(w)), squash(w.replace(/[^\x00-\x7f]/g, (c) => encodeURIComponent(c)))];
+/* A private string as a URL may carry it: all escaped, or only its non-ASCII letters escaped. A string
+   that can't be encoded (a lone surrogate) is compared as it is (Codex, Oct 25: it used to throw and
+   silence every report after it). */
+function encodings(w: string): string[] {
+  const out = [w];
+  try { out.push(squash(encodeURIComponent(w))); } catch { /* compared as it is */ }
+  try { out.push(squash(w.replace(/[^\x00-\x7f]/g, (c) => encodeURIComponent(c)))); } catch { /* compared as it is */ }
+  return out;
+}
+/* Every way to read a text: as it is, then with JSON's escapes and URL encoding undone in turn, round
+   after round (at most four), so an escape inside an encoding ("%5Ct", "%5Cu0020") unwinds too (Codex,
+   Oct 25). The address check and the save-link check both read text this way (scrub.ts). */
+export function readings(text: string): string[] {
+  const out = [text];
+  let cur = text;
+  for (let i = 0; i < 4; i++) {
+    const next = unURL(unJSON(cur));
+    if (next === cur) break;
+    out.push(next);
+    cur = next;
+  }
+  return out;
+}
 /* Does this text hold a private string, however it is written: in any case, with any run of spaces,
-   tabs or line breaks between the words, JSON-escaped, URL-encoded (once or twice, all of it or only its
-   accented letters), or any mix of those? (Codex, Oct 25: a tab, written "\t" by JSON, got an address
-   past an earlier version.) Decoding goes run by run and never gives up, so one bad escape can't hide
-   the address elsewhere in the text. And when there is something private to protect and any line holds
-   escapes the browser itself wouldn't decode, the answer is yes: when in doubt, send nothing (security
-   review, Oct 25: an accented street, encoded, beside a stray "%", got past an earlier version). Lines
-   are judged one at a time for that, so an ordinary "100%" on one line doesn't condemn good escapes on
-   another; the match itself runs across lines, so an address broken over two still counts. */
+   tabs or line breaks between the words, JSON-escaped, URL-encoded (all of it or only its accented
+   letters), or escapes inside encodings? Decoding goes run by run and never gives up, so one bad escape
+   can't hide the address elsewhere in the text. When there is something private to protect and any
+   line of any reading holds escapes the browser itself wouldn't decode, the answer is yes: when in
+   doubt, send nothing (security review, Oct 25: an accented street, encoded, beside a stray "%", got
+   past an earlier version). Lines are judged one at a time for that, so an ordinary "100%" on one line
+   doesn't condemn good escapes on another; the match itself runs across lines, so an address broken
+   over two still counts. */
 export function mentionsPrivate(text: string, words: string[] = privateWords()): boolean {
   if (!words.length || !text) return false;
-  if (text.split(/[\r\n]+/).some((line) => { const p = unJSON(line); return undecodable(p) || undecodable(unURL(p)); })) return true;
-  const plain = unJSON(text);
-  const once = unURL(plain);
-  const hay = [text, plain, once, unURL(once)].map(squash);
-  return words.some((w) => [w, ...encodings(w)].some((x) => !!x && hay.some((h) => h.includes(x))));
+  const rs = readings(text);
+  if (rs.some((r) => r.split(/[\r\n]+/).some(undecodable))) return true;
+  const hay = rs.map(squash);
+  return words.some((w) => encodings(w).some((x) => !!x && hay.some((h) => h.includes(x))));
 }
 /* Every hash this page has had. A save link carries picks in it, and the app clears it from the
    address bar once the link has opened (app.ts openBallot), so each one is kept from the first moment
@@ -177,7 +201,7 @@ function startCrashReports(): void {
     .then((m) => {
       // Sentry's own window handlers go on inside start(), in the same task that turns ours off for
       // it, so no error falls between them.
-      send = m.start(early.splice(0), { words: privateWords, hashes: seenHashes, mentions: mentionsPrivate, bare: bareURLs });
+      send = m.start(early.splice(0), { words: privateWords, hashes: seenHashes, mentions: mentionsPrivate, bare: bareURLs, readings });
       lastId = m.lastSentId;
     })
     .catch(() => { /* an ad blocker or a dropped connection ate the chunk: the guide works the same, we just hear nothing */ });

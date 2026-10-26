@@ -24,6 +24,7 @@ export interface Deps {
   hashes: () => string[];                                  // every hash the page has had (seenHashes)
   mentions: (text: string, words: string[]) => boolean;    // mentionsPrivate
   bare: (s: string) => string;                             // bareURLs
+  readings: (s: string) => string[];                       // readings
 }
 
 const PER_LOAD = 5;
@@ -34,7 +35,7 @@ let lastSent: string | undefined;
 export function start(early: unknown[], deps: Deps): (e: unknown) => void {
   const ctx = (): ScrubContext => {
     const words = deps.words();
-    return { origin: location.origin, path: location.pathname, hashes: deps.hashes(), mentions: (t) => deps.mentions(t, words), bare: deps.bare, ua: navigator.userAgent };
+    return { origin: location.origin, path: location.pathname, hashes: deps.hashes(), mentions: (t) => deps.mentions(t, words), bare: deps.bare, readings: deps.readings, ua: navigator.userAgent };
   };
   // The last look, at the very bytes about to leave: anything that still names the Census lookup, holds
   // the address or a save link never goes, whichever way the SDK built it.

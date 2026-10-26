@@ -12,7 +12,11 @@
    - Only known fields go (KEEP below): the error's type, message and stack, which SDK sent it, the
      release, the environment, the trace ids and the source map ids. Nothing the SDK adds about a thrown
      value that isn't an Error goes: its contents (an object could hold a ballot's picks) are never sent,
-     only that one was thrown (Codex, Oct 25).
+     only that one was thrown, in fixed words (Codex, Oct 25).
+   - Shaped: an error's message keeps only words of known shapes (plain words, names from the code, URLs
+     already cut); a number (a house number, a ZIP), a JSON snippet or a selector a browser quoted back
+     becomes "…". This layer doesn't depend on recognizing anything, so it holds where a new way of writing
+     an address would slip past the checks above (three review rounds found three such ways).
    - Replaced: every hash the page has had (a save link carries picks there) becomes "[save link]",
      wherever it shows up; so do a save link's own words ("v1~TX~...").
    - Cut: every URL loses its query and hash, to the end of the string (errors.ts bareURLs).
@@ -30,6 +34,7 @@ export interface ScrubContext {
   hashes: string[];                     // every hash the page has had, without "#" (errors.ts seenHashes)
   mentions: (text: string) => boolean;  // does it hold the address, typed or matched (errors.ts mentionsPrivate)
   bare: (s: string) => string;          // every URL without its query and hash (errors.ts bareURLs)
+  readings: (s: string) => string[];    // the text with JSON and URL escapes undone, round by round (errors.ts readings)
   ua?: string;                          // navigator.userAgent
 }
 type Obj = Record<string, unknown>;
@@ -38,13 +43,46 @@ interface Exc { type?: string; value?: string; stacktrace?: { frames?: Frame[] }
 interface Ev { exception?: { values?: Exc[] }; message?: unknown }
 
 const CENSUS = /census\.gov/i;
+const TYPE = /^[A-Za-z_$][\w$.]{0,60}$/;                    // an error's type is a name from code
+const FN = /^[\w$.<>[\] /-]{0,120}$/;                     // a frame's function: "HTMLDocument.<anonymous>", "Object.f [as g]"
+const SAVE_LINK = /v[12]~/i;                               // a save link's own words, however they were encoded
+/* The SDK's words for a thrown value that isn't an Error, as fixed text: only its known openings are
+   recognized, so nothing the page wrote can ride along in front of "[not sent]" (Codex, Oct 25). */
+function nonError(v: string): string {
+  const obj = v.match(/^Object captured as (exception|promise rejection) with keys:/);
+  if (obj) return `Object captured as ${obj[1]} with keys: [not sent]`;
+  if (v.startsWith('Non-Error promise rejection captured with value:')) return 'Non-Error promise rejection captured with value: [not sent]';
+  const ev = v.match(/^Event `\w+`.* captured as (exception|promise rejection)/);
+  if (ev) return `An event object captured as ${ev[1]}: [not sent]`;
+  return 'A thrown value that isn’t an Error: [not sent]';
+}
+/* A message shaped so it can't carry what a person typed or chose, by keeping only words of known shapes:
+   a plain word ("Cannot", "isn’t", "Non-Error"), a name from the code, bare, dotted or in quotes ("x.map",
+   "'dataset'"), and a URL already cut to its path. Anything else, a number (a house number, a ZIP), a JSON
+   snippet or a selector a browser quoted back, becomes "…". So "Unexpected token 'x', "{"picks":...}" is
+   not valid JSON" goes as "Unexpected token 'x', … is not valid JSON". Long ones are cut. */
+const WORD = /^\p{L}+(?:['’-]\p{L}+)*$/u;
+const NAME = /^[A-Za-z_$][\w$]*(?:\.[A-Za-z_$][\w$]*)*(?:\(\))?$/;
+const URLISH = /^[a-z][a-z0-9+.-]*:\/\/[\w.:-]+(?:\/[\w.\-/]*)?$/i;
+const EDGE_IN = /^[(\[{]+/;
+const EDGE_OUT = /[)\]},.:;!?]+$/;
+function plainToken(t: string): boolean {
+  const core = t.replace(EDGE_IN, '').replace(EDGE_OUT, '');
+  if (!core) return true;
+  const q = core.match(/^(['"`‘“])(.*)(['"`’”])$/);
+  const inner = q ? q[2] : core;
+  return q ? NAME.test(inner) : WORD.test(inner) || NAME.test(inner) || URLISH.test(inner);
+}
+const shape = (msg: string): string => msg.split(/\s+/).filter(Boolean)
+  .map((t) => (plainToken(t) ? t : '…'))
+  .join(' ').replace(/…(?: …)+/g, '…').slice(0, 300);
 const SCRIPT_ERROR = /^Script error\.?$/i;
 const SCHEME = /^[a-z][a-z0-9+.-]*:\/\//i;
 
 /* The fields that may leave, by level. Anything else on the event is left behind. */
 const KEEP_EVENT = ['event_id', 'timestamp', 'platform', 'level', 'environment', 'release', 'dist', 'type', 'exception', 'sdk', 'contexts', 'debug_meta'];
-const KEEP_EXC = ['type', 'value', 'module', 'stacktrace', 'mechanism'];
-const KEEP_FRAME = ['filename', 'abs_path', 'function', 'module', 'lineno', 'colno', 'in_app'];
+const KEEP_EXC = ['type', 'value', 'stacktrace', 'mechanism'];
+const KEEP_FRAME = ['filename', 'abs_path', 'function', 'lineno', 'colno', 'in_app'];
 const KEEP_MECHANISM = ['type', 'handled', 'synthetic', 'source', 'exception_id', 'parent_id', 'is_exception_group'];
 const KEEP_SDK = ['name', 'version', 'integrations', 'packages', 'settings'];
 const pick = (o: unknown, keys: string[]): Obj => {
@@ -59,15 +97,18 @@ function allowed(ev: Obj): Obj {
       values: values.map((x) => {
         const e = pick(x, KEEP_EXC);
         const st = e.stacktrace as Obj | undefined;
-        if (st) e.stacktrace = { frames: ((st.frames as unknown[]) || []).map((f) => pick(f, KEEP_FRAME)) };
-        if (e.mechanism) e.mechanism = pick(e.mechanism, KEEP_MECHANISM);
-        // A thrown value that isn't an Error (an object, a string): the SDK's own words for it stay, never
-        // what it held. "Object captured as promise rejection with keys: picks, notes" -> "...keys: [not sent]".
-        if ((e.mechanism as Exc['mechanism'])?.synthetic || e.type === 'UnhandledRejection') {
-          const v = typeof e.value === 'string' ? e.value : '';
-          const lead = v.match(/^.*? with (?:keys|value):/);
-          e.value = lead ? `${lead[0]} [not sent]` : 'A thrown value that isn’t an Error: [not sent]';
+        if (st) {
+          e.stacktrace = { frames: ((st.frames as unknown[]) || []).map((f) => {
+            const fr = pick(f, KEEP_FRAME);
+            if (typeof fr.function === 'string' && !FN.test(fr.function)) fr.function = '?';
+            return fr;
+          }) };
         }
+        if (e.mechanism) e.mechanism = pick(e.mechanism, KEEP_MECHANISM);
+        if (typeof e.type !== 'string' || !TYPE.test(e.type)) e.type = 'Error';
+        // A thrown value that isn't an Error (an object, a string): only the SDK's own words for it, as fixed
+        // text, never what it held: "Object captured as promise rejection with keys: [not sent]".
+        if ((e.mechanism as Exc['mechanism'])?.synthetic || e.type === 'UnhandledRejection') e.value = nonError(typeof e.value === 'string' ? e.value : '');
         return e;
       }),
     };
@@ -77,16 +118,23 @@ function allowed(ev: Obj): Obj {
   return out;
 }
 
-/* Every key and string in it, as text, decoded (so JSON's escapes are already undone). */
-function texts(v: unknown, out: string[] = []): string[] {
+/* Every string in it, in order, as text, decoded (so JSON's escapes are already undone); with its keys too
+   unless `values` is set. */
+function texts(v: unknown, out: string[] = [], values = false): string[] {
   if (typeof v === 'string') out.push(v);
-  else if (Array.isArray(v)) for (const x of v) texts(x, out);
-  else if (v && typeof v === 'object') for (const [k, x] of Object.entries(v)) { out.push(k); texts(x, out); }
+  else if (Array.isArray(v)) for (const x of v) texts(x, out, values);
+  else if (v && typeof v === 'object') for (const [k, x] of Object.entries(v)) { if (!values) out.push(k); texts(x, out, values); }
   return out;
 }
-/* Must this never leave: does any one of its strings name the Census lookup, or hold the address? Each
-   string is judged on its own, so a bad escape in one can't hide the address in another. */
-const forbidden = (all: string[], ctx: ScrubContext): boolean => all.some((s) => CENSUS.test(s) || ctx.mentions(s));
+/* Must this never leave: does any of its strings, read every way, name the Census lookup, or hold the
+   address? Each string (key or value) is judged on its own, so a bad escape in one can't hide the address
+   in another; and the values together, in order, so an address split between two neighbouring fields
+   still counts (security review, Oct 25). Keys are left out of that join: one always sits between two
+   values, and would keep the halves apart. */
+const forbidden = (all: string[], vals: string[], ctx: ScrubContext): boolean =>
+  all.some((s) => ctx.readings(s).some((r) => CENSUS.test(r)) || ctx.mentions(s)) || ctx.mentions(vals.join('\n'));
+/* Does it still hold a save link: a saved hash, or a save link's own words, in any reading? */
+const linked = (s: string, forms: string[], ctx: ScrubContext): boolean => ctx.readings(s).some((r) => SAVE_LINK.test(r) || forms.some((f) => r.includes(f)));
 
 /* Thrown by someone else's script: in any of the event's exceptions, the newest frame that names a
    script names one that isn't on our origin. Frames that name no script (eval, native code) don't
@@ -133,7 +181,7 @@ export function scrubEvent<T extends object>(event: T, ctx: ScrubContext): T | n
   } catch { return null; }
   // Judged on everything the event holds, even the parts that wouldn't leave: an event that touched the
   // address or the Census lookup anywhere is not one to send.
-  if (forbidden(texts(ev), ctx)) return null;
+  if (forbidden(texts(ev), texts(ev, [], true), ctx)) return null;
   if (fromElsewhere(ev as Ev, ctx.origin)) return null;
   const e = ev as Ev;
   if ((e.exception?.values || []).some((x) => SCRIPT_ERROR.test((x.value || '').trim())) || SCRIPT_ERROR.test(String(e.message ?? '').trim())) return null;
@@ -145,6 +193,10 @@ export function scrubEvent<T extends object>(event: T, ctx: ScrubContext): T | n
     return ctx.bare(out);
   };
   const out = walk(allowed(ev), fix) as Obj;
+  // A save link written some way the replacement above didn't know (its "~" encoded, say): the report
+  // doesn't go at all. Judged before the messages are shaped, which could hide the encoding from the check.
+  if (texts(out).some((s) => linked(s, forms, ctx))) return null;
+  for (const x of ((out.exception as Obj).values as Obj[])) if (typeof x.value === 'string') x.value = shape(x.value);
   out.request = { url: ctx.bare(ctx.origin + ctx.path), ...(ctx.ua ? { headers: { 'User-Agent': ctx.ua } } : {}) };
   return out as T;
 }
@@ -153,11 +205,12 @@ export function scrubEvent<T extends object>(event: T, ctx: ScrubContext): T | n
    Census lookup, holds the address, or still holds a save link's hash. */
 export function envelopeAllowed(body: string, ctx: ScrubContext): boolean {
   const all: string[] = [];
+  const vals: string[] = [];
   for (const line of body.split('\n')) {
     if (!line.trim()) continue;
-    try { texts(JSON.parse(line), all); } catch { all.push(line); }
+    try { const o = JSON.parse(line); texts(o, all); texts(o, vals, true); } catch { all.push(line); vals.push(line); }
   }
-  if (forbidden(all, ctx)) return false;
+  if (forbidden(all, vals, ctx)) return false;
   const forms = hashForms(ctx.hashes);
-  return !all.some((s) => forms.some((f) => s.includes(f)) || /\bv[12]~/i.test(s));
+  return !all.some((s) => linked(s, forms, ctx));
 }

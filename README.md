@@ -4,7 +4,8 @@ A one-page guide to the Nov 3, 2026 general election for Kevin's friends and fam
 Enter a ZIP, see your next step and its date, read your ballot as a calm list of rows
 with the picks of the sources you trust beside each one, decide, and take a cheat sheet
 to the polls. The layout is "the ledger" (v3, Oct 19 2026); agent notes are in `AGENTS.md`. Static site: Vite + vanilla TypeScript, no framework, no analytics,
-no accounts. Live at https://vote.kevinhg.com.
+no accounts. If the page breaks it sends a scrubbed crash report to Sentry (no address, no picks, no IP;
+`src/scrub.ts`). Live at https://vote.kevinhg.com.
 
 ## Run it
 

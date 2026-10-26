@@ -214,6 +214,9 @@ for (const e of all.endorsers) {
   if (e.paywall != null && typeof e.paywall !== 'boolean') err('paywall-shape', `${id}: paywall must be true or false, got ${JSON.stringify(e.paywall)}`);
   if (e.paywall_note_ok != null && typeof e.paywall_note_ok !== 'boolean') err('paywall-shape', `${id}: paywall_note_ok must be true or false, got ${JSON.stringify(e.paywall_note_ok)}`);
   if (e.paywall_note != null && !isStr(e.paywall_note)) err('paywall-shape', `${id}: paywall_note must be text`);
+  if (e.blocked != null && typeof e.blocked !== 'boolean') err('blocked-shape', `${id}: blocked must be true or false, got ${JSON.stringify(e.blocked)}`);
+  if (e.blocked_note != null && (!isStr(e.blocked_note) || /\n/.test(e.blocked_note) || e.blocked_note.length > 200)) err('blocked-shape', `${id}: blocked_note must be one plain line of text`);
+  if (e.blocked_note != null && e.blocked !== true) err('blocked-shape', `${id}: blocked_note without blocked: true`);
 }
 for (const [id, vs] of byEndorser) {
   const leans = [...new Set(vs.map((v) => v.lean ?? 'null'))];

@@ -23,6 +23,11 @@ const isGroup = (e: Endorser): boolean => e.type !== 'party' && (e.type !== 'pub
 export const explainsOnly = (e: Endorser): boolean => !e.endorses_candidates && !e.endorses_measures;
 /* A paper whose endorsements sit behind a paywall we couldn't read, with its note on (Kevin, Oct 19). */
 export const hasPaywallNote = (e: Endorser): boolean => e.paywall === true && e.paywall_note_ok !== false;
+/* A source whose site shows a bot check to anything that isn't a browser (Oct 25): read like a paywall. */
+export const isBlocked = (e: Endorser): boolean => e.blocked === true;
+/* Behind a paywall or a bot check: the sources sheet lists it under "Couldn't read" when it has no pick
+   on the ballot, since there is nothing of its to turn on. */
+export const cantRead = (e: Endorser): boolean => e.paywall === true || isBlocked(e);
 
 export const CHIPS: { key: ChipKey; label: string; empty: string }[] = [
   { key: 'papers', label: 'Newspapers and guides', empty: 'None of the newspapers here made endorsements on this ballot. Try another group.' },

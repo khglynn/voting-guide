@@ -86,7 +86,7 @@ export interface UI {
    them"): the list of cities, How this guide works, Report a problem, Request a city, Support. A form's
    fields live here only so a repaint can't lose them, and go when the sheet closes. Never saved, never
    in the save link. */
-export type ShelfKind = 'cities' | 'how' | 'report' | 'city' | 'support';
+export type ShelfKind = 'cities' | 'how' | 'report' | 'city' | 'support' | 'source';
 /* What a report or a city request collects by itself and shows under "We'll send along" before it
    goes (Kevin, Oct 21: "everything else to just be collected programmatically, and then maybe they
    can see what we're sending"). Never the address typed in the address box, the save link or
@@ -102,10 +102,10 @@ export interface Along {
 }
 export interface Shelf {
   kind: ShelfKind;
-  f: Record<string, string>;  // a form's fields by name: wrong and reach (a report); city, zip and reach (a city)
+  f: Record<string, string>;  // a form's fields by name: wrong and reach (a report); city, zip and reach (a city); src, where, picks and reach (a source)
   what: string;               // the race, measure or source it was opened from, or the page
   tag: string;                // that item or source id, sent after it so a fix can find the record
-  hint: string;               // 'paywall': opened from a paywalled source's "Send it to us"; 'follow': from "Want to hear when it's in?"
+  hint: string;               // 'paywall' or 'blocked': from a source's "Send it to us"; 'follow': from "Want to hear when it's in?"
   along: Along;               // what a form sends along by itself, read when it opened (views/shelf.ts)
   state: 'edit' | 'sending' | 'sent' | 'failed' | 'unsure'; // failed: the request was refused outright; unsure: no answer in time, so it may or may not have gone
   err: boolean;               // Send was tapped with the one required field empty

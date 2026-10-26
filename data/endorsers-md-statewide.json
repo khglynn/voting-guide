@@ -164,6 +164,8 @@
       "MD"
     ],
     "guide_url": "https://www.plannedparenthoodaction.org/planned-parenthood-maryland-action-fund",
+    "blocked": true,
+    "blocked_note": "Its endorsement page shows a bot check to anything that isn’t a browser, so we couldn’t read its endorsements.",
     "default_on": false,
     "endorses_candidates": true,
     "endorses_measures": false,

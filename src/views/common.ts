@@ -2,7 +2,7 @@
 import type { Endorser, Lean } from '../types';
 import { S, type ShelfKind } from '../state';
 import { esc, host } from '../util';
-import { hasPaywallNote } from '../model/lens';
+import { hasPaywallNote, isBlocked } from '../model/lens';
 
 /* "Report a problem" and "Request a city" go to a Google Form in Kevin's personal account (picked
    Oct 16). Since Oct 21 they open the shelf in the guide (views/shelf.ts), which posts straight into the
@@ -37,14 +37,15 @@ export function reportWhere(): string {
 /* What a control needs to open the shelf (actions.ts A.shelf): its opening, and for a report the race,
    measure or source it came from (`what`, and `tag`, the item or source id the form gets after it).
    `fk` is where focus goes back when the sheet closes. */
-/* `hint`: 'paywall' from a paywalled source's "Send it to us", 'follow' from the coverage card's "Tell me when
-   it's in" (a follow-up to its one-tap request, shelf.ts followHTML). */
-export function shelfAttrs(o: { kind: ShelfKind; what?: string; tag?: string; hint?: 'paywall' | 'follow'; fk: string }): string {
+/* `hint`: 'paywall' from a paywalled source's "Send it to us", 'blocked' from a bot-checked one's, 'follow'
+   from the coverage card's "Tell me when it's in" (a follow-up to its one-tap request, shelf.ts followHTML). */
+export type ShelfHint = 'paywall' | 'blocked' | 'follow';
+export function shelfAttrs(o: { kind: ShelfKind; what?: string; tag?: string; hint?: ShelfHint; fk: string }): string {
   return ['data-act="shelf"', `data-kind="${o.kind}"`, o.what ? `data-what="${esc(o.what)}"` : '', o.tag ? `data-tag="${esc(o.tag)}"` : '',
     o.hint ? `data-hint="${o.hint}"` : '', 'aria-haspopup="dialog"', `data-fk="${esc(o.fk)}"`].filter(Boolean).join(' ');
 }
 /* "Report a problem" (from a row, Full details, a paywalled source) or "Request a city". */
-export const reportAttrs = (o: { city?: boolean; what?: string; tag?: string; hint?: 'paywall'; fk: string }): string =>
+export const reportAttrs = (o: { city?: boolean; what?: string; tag?: string; hint?: ShelfHint; fk: string }): string =>
   shelfAttrs({ kind: o.city ? 'city' : 'report', what: o.what, tag: o.tag, hint: o.hint, fk: o.fk });
 
 /* The two switches, the same words wherever they show (step 2, the Edit sheet, the menu, the rail). */
@@ -70,7 +71,7 @@ export { hasPaywallNote };
 /* The sheet's "Which race or measure?" for a source's picks, so the report names the paper; its id
    goes along as the tag. */
 const reportSource = (e: Endorser, label: string, fk: string, where = ''): string =>
-  `<button class="linkbtn" ${reportAttrs({ what: `${e.name}: picks${where ? ` on ${where}` : ''}`, tag: e.id, hint: 'paywall', fk })}>${esc(label)}</button>`;
+  `<button class="linkbtn" ${reportAttrs({ what: `${e.name}: picks${where ? ` on ${where}` : ''}`, tag: e.id, hint: e.paywall === true ? 'paywall' : 'blocked', fk })}>${esc(label)}</button>`;
 const PW_NOTE = 'Behind a paywall, so we couldn’t read its endorsements. Have a login? We’d love a PDF or the list.';
 const PW_LINK = 'Send it to us';
 /* The row's form: lower case after the source names, its or their by count. */
@@ -87,6 +88,27 @@ export function paywallRowHTML(list: Endorser[], what: string): string {
   if (!pw.length) return '';
   const links = pw.map((e) => reportSource(e, `${PW_LINK} (${e.short})`, `pwr-${e.id}`, what)).join(', ');
   return `<p class="pw-note">${esc(pw.map((e) => e.short).join(', '))}: ${esc(PW_ROW(pw.length))} ${links}.</p>`;
+}
+
+/* ---------- sources behind a bot check (Oct 25) ----------
+   The Oct 21 re-check couldn't read a few sources' pages: they show a bot check to anything that isn't a
+   browser. Read like a paywall: the note says so and asks anyone who can see the picks to send them. */
+const BL_NOTE = 'Its site shows a bot check to anything that isn’t a browser, so we couldn’t read its endorsements.';
+const BL_ROW = (n: number): string => `${n === 1 ? 'its' : 'their'} site shows a bot check to anything that isn’t a browser, so we couldn’t read ${n === 1 ? 'its' : 'their'} endorsements here. Can you see them? We’d love the list.`;
+/* Why we couldn't read a source, in one line: its own note, else the app's. */
+export const unreadWhy = (e: Endorser): string => (isBlocked(e) ? e.blocked_note || BL_NOTE : e.paywall_note || PW_NOTE);
+/* In the sources sheet, under a bot-checked source that has picks from an earlier read. */
+export function blockedSourceHTML(e: Endorser): string {
+  if (!isBlocked(e) || hasPaywallNote(e)) return '';
+  return `<p class="pw-note">${esc(unreadWhy(e))} ${reportSource(e, PW_LINK, `bl-${e.id}`)}.</p>`;
+}
+/* "Couldn't read" in the sources sheet: the reason and "Send it to us", no switch. */
+export const unreadLinkHTML = (e: Endorser): string => reportSource(e, PW_LINK, `ur-${e.id}`);
+/* In an open row, once, when chosen bot-checked sources have no readable record there. */
+export function blockedRowHTML(list: Endorser[], what: string): string {
+  if (!list.length) return '';
+  const links = list.map((e) => reportSource(e, `${PW_LINK} (${e.short})`, `blr-${e.id}`, what)).join(', ');
+  return `<p class="pw-note">${esc(list.map((e) => e.short).join(', '))}: ${esc(BL_ROW(list.length))} ${links}.</p>`;
 }
 
 export const LEANS: Record<Lean, [number, string]> = {

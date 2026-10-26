@@ -2114,6 +2114,63 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
   }
 }
 
+/* ---------- every source in reach from the first page (Oct 25) ----------
+   Kevin: "show a count and a way to expand to see all sources and then individually check and uncheck within
+   that list ... also show what sources we tried but couldn't access ... and then the option to add their own
+   source". */
+{
+  const { ctx, page } = await newPage();
+  const posts = await catchForm(page);
+  await openZip(page, '60601');
+  await page.waitForSelector('#setup [data-fk="cov-src"]', { timeout: 15000 });
+  await fillOff(page);
+  const papersOn = () => page.evaluate(() => { const c = document.querySelector('#setup [data-act="chip"][data-k="papers"]'); return c ? `${c.getAttribute('aria-pressed')}${c.classList.contains('some') ? ' some' : ''}` : ''; });
+  check('Sources: before, Newspapers and guides is on', (await papersOn()) === 'true');
+  await tap(page, '#setup [data-fk="cov-src"]');
+  await page.waitForSelector('.sheet-panel #sh-h');
+  check('Sources: the count opens "Every source on your ballot" on the first page', (await text(page, '.sheet-panel #sh-h')) === 'Every source on your ballot' && !!(await page.$('#app[inert]')));
+  check('Sources: its first line says what’s on to start', (await text(page, '.sheet-panel .s-legend')) === 'On by default: newspapers and nonpartisan guides. Tap a switch to add or drop one.');
+  // Turn one newspaper off: its switch flips, and the chip behind the sheet follows ("some").
+  const paper = await page.evaluate(() => [...document.querySelectorAll('.sheet-panel .sgrp:not(.unread) [data-act="src"][aria-checked="true"]')].map((t) => t.dataset.id)[0]);
+  await tap(page, `.sheet-panel [data-fk="tg-${paper}"]`);
+  check('Sources: a switch turns one source off', (await page.getAttribute(`.sheet-panel [data-fk="tg-${paper}"]`, 'aria-checked')) === 'false', paper);
+  check('Sources: and the chip behind the sheet follows', (await papersOn()) === 'true some', await papersOn());
+  await tap(page, `.sheet-panel [data-fk="tg-${paper}"]`);
+  check('Sources: on again, the chip is whole again', (await papersOn()) === 'true' && (await page.getAttribute(`.sheet-panel [data-fk="tg-${paper}"]`, 'aria-checked')) === 'true');
+  // "Couldn't read": paywalled or bot-checked sources with nothing here, no switches.
+  const unread = await page.$$eval('.sheet-panel .sgrp.unread .srow', (els) => els.map((e) => e.dataset.unread));
+  check('Sources: "Couldn’t read (N)" lists the paywalled and bot-checked sources, Crain’s and the Sierra Club among them', (await text(page, '.sheet-panel .sgrp.unread h3')) === `Couldn’t read (${unread.length})` && ['crains-chicago-eb', 'sierra-club-il'].every((id) => unread.includes(id)), unread.join());
+  check('Sources: with no switches, each with its reason and Send it to us', !(await page.$('.sheet-panel .sgrp.unread .tg')) && (await page.$$('.sheet-panel .sgrp.unread [data-act="shelf"]')).length === unread.length && /bot check/.test(await text(page, '.sheet-panel .sgrp.unread')));
+  // Add a source, over the sheet: a link and a pasted list go in as the form's five answers.
+  await tap(page, '.sheet-panel [data-fk="src-add"]');
+  await page.waitForSelector('.sheet-panel.shelf[data-kind="source"]');
+  check('Sources: Add a source opens its form, where you vote filled in', (await text(page, '.sheet-panel.shelf #sh-h')) === 'Add a source' && (await page.inputValue('#rf-where')) === 'Chicago, 60601' && (await page.inputValue('#rf-src')) === '');
+  await tap(page, SEND);
+  check('Sources: it asks for the source first', /Type its name or a link first\./.test(await text(page, '#rf-err')) && posts.list.length === 0);
+  await page.fill('#rf-src', 'https://example.org/our-guide');
+  await page.fill('#rf-picks', 'Mayor: A. Person\nProp 1: Yes');
+  await tap(page, SEND);
+  await page.waitForSelector('.rp-sent');
+  const p = posts.list[0];
+  check('Sources: Add a source posts the five answers, the pasted picks in What’s wrong', posts.list.length === 1 && FORM_IDS.every((k) => p.has(k)) && p.get('entry.90887649') === 'Add source: https://example.org/our-guide' && p.get('entry.1986493507') === 'https://example.org/our-guide'
+    && p.get('entry.628621310') === 'Chicago, 60601' && /^Mayor: A\. Person\nProp 1: Yes\n\nSent along:\nPage: First page\n/.test(p.get('entry.780704302')), p ? p.toString() : 'no post');
+  check('Sources: sent, a source usually shows up within a day', (await text(page, '.rp-sent p')) === 'Sent. Kevin reads every one; a source usually shows up within a day.');
+  await tap(page, '[data-fk="report-done"]');
+  await settle(page);
+  check('Sources: Done goes back to the sources sheet', (await text(page, '.sheet-panel #sh-h')) === 'Every source on your ballot');
+  await tap(page, `.sheet-panel [data-fk="tg-${paper}"]`);
+  await tap(page, '.sheet-panel [data-fk="sheet-x"]');
+  await settle(page);
+  check('Sources: Done closes it, back on step 2 at the count, the chip as the switches left it', !(await page.$('.sheet-panel')) && (await focusedFk(page)) === 'cov-src' && (await papersOn()) === 'true some', `${await focusedFk(page)} ${await papersOn()}`);
+  await tap(page, SETUP);
+  await page.waitForSelector('#plan', { timeout: 15000 });
+  await edit(page);
+  check('Sources: the ballot keeps that choice, and the Edit sheet has the same count and Add a source', /some newspapers and guides/i.test(await text(page, '.picks-line')) && !!(await page.$('.sheet-panel.picks [data-fk="cov-src"]')) && (await text(page, '.sheet-panel.picks [data-act="shelf"][data-kind="source"]')) === 'Add a source', await text(page, '.picks-line'));
+  await noSideScroll(page, 'Sources');
+  noErrors(page, 'Sources');
+  await ctx.close();
+}
+
 /* ---------- statewide-only, uncovered, shared ZIPs ---------- */
 {
   const { ctx, page } = await newPage();

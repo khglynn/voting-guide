@@ -5,8 +5,8 @@ import type { Contest, Endorser } from '../types';
 import { S } from '../state';
 import { chosenIds, decisionItems } from '../ballot';
 import { esc, plural } from '../util';
-import { CHIPS, chipState, partiesOnBallot, picksOnBallot, picksShown, explainsOnly, noEndorsements } from '../model/lens';
-import { leanHTML, sourceLean, ext, isOpen, paywallSourceHTML, hasPaywallNote } from './common';
+import { CHIPS, chipState, partiesOnBallot, picksOnBallot, picksShown, explainsOnly, noEndorsements, cantRead } from '../model/lens';
+import { leanHTML, sourceLean, ext, isOpen, paywallSourceHTML, hasPaywallNote, blockedSourceHTML, unreadWhy, unreadLinkHTML, shelfAttrs } from './common';
 
 export const TICK = '<svg class="tick" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 6.3l2.6 2.6L10 3.3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>';
 const TYPE_WORD: Record<string, string> = {
@@ -46,22 +46,34 @@ function srcRow(e: Endorser, shown: ReturnType<typeof picksShown>): string {
   // A paywalled paper with no readable pick here is named once, by its paywall note below.
   // A source whose picks are all in unopposed races, or in races your ballot doesn't show yet (a
   // district you haven't picked, a race you hid), says so, never "No endorsements found".
-  const what = explainsOnly(e) ? 'Explains, doesn’t endorse' : n ? `Endorsed in ${n} of your races and measures` : hasPaywallNote(e) ? ''
+  const what = explainsOnly(e) ? 'Explains, doesn’t endorse' : n ? `Endorsed in ${n} of your races and measures` : hasPaywallNote(e) || e.blocked ? ''
     : shown.unopposed.get(e.id) ? 'Endorsed only in unopposed races' : picksOnBallot(b, e.id) ? 'Endorsed only in races that depend on your address' : 'No endorsements found';
   return `<li class="srow">
     <div class="s-main"><span class="s-n" id="sn-${esc(e.id)}">${esc(e.name)}</span><span class="s-d">${esc(TYPE_WORD[e.type] || e.type)}.${what ? ` ${esc(what)}.` : ''}</span>
       <span class="s-l">${sourceLean(e)}<button class="linkbtn" data-act="open" data-k="${esc(k)}" aria-expanded="${isOpen(k)}">Why this lean</button></span>
       ${isOpen(k) ? `<p class="s-b">${e.lean_basis_kind ? `<b>${esc(BASIS_KIND[e.lean_basis_kind])}.</b> ` : ''}${esc(e.lean_basis || 'No basis recorded, so we show it as not rated.')}${e.lean_note ? ` ${esc(e.lean_note)}` : ''}${e.guide_url ? ` ${ext(e.guide_url, 'Their guide')}` : ''}</p>` : ''}
-      ${paywallSourceHTML(e)}</div>
+      ${paywallSourceHTML(e)}${blockedSourceHTML(e)}</div>
     <button class="tg" role="switch" aria-checked="${on}" aria-labelledby="sn-${esc(e.id)}" data-act="src" data-id="${esc(e.id)}" data-fk="tg-${esc(e.id)}"><span></span></button></li>`;
+}
+/* "Couldn't read" (Kevin, Oct 25: "show what sources we tried but couldn't access (paywalls and stuff)"):
+   a source behind a paywall or a bot check with no pick on this ballot, so there is nothing of its to
+   turn on. Its reason in one line and "Send it to us", no switch. One with picks from a free page or an
+   earlier read stays in its lean group, its note under its name. */
+const unreadHere = (b: NonNullable<typeof S.ballot>, e: Endorser): boolean => cantRead(e) && !picksOnBallot(b, e.id);
+function unreadHTML(list: Endorser[]): string {
+  if (!list.length) return '';
+  return `<section class="sgrp unread"><h3>Couldn’t read (${list.length})</h3><ul>${list.map((e) => `<li class="srow" data-unread="${esc(e.id)}">
+    <div class="s-main"><span class="s-n">${esc(e.name)}</span><span class="s-d">${esc(TYPE_WORD[e.type] || e.type)}.</span>
+      <p class="pw-note">${esc(unreadWhy(e))} ${unreadLinkHTML(e)}.</p></div></li>`).join('')}</ul></section>`;
 }
 export function sourcesSheetHTML(): string {
   const b = S.ballot!;
   const shown = picksShown(b);
   const byCount = (a: Endorser, c: Endorser) => (shown.decisions.get(c.id) || 0) - (shown.decisions.get(a.id) || 0) || a.name.localeCompare(c.name);
   const empties = CHIPS.filter((c) => c.key !== 'papers' && chipState(b, c.key) === 'empty').map((c) => c.empty);
+  const unread = b.endorsers.filter((e) => unreadHere(b, e)).sort((a, c) => a.name.localeCompare(c.name));
   const groups = GROUPS.map(([lean, word]) => {
-    const list = b.endorsers.filter((e) => (e.lean || 'none') === lean).sort(byCount);
+    const list = b.endorsers.filter((e) => (e.lean || 'none') === lean && !unreadHere(b, e)).sort(byCount);
     if (!list.length) return '';
     const on = list.filter((e) => chosenIds().includes(e.id)).length;
     return `<section class="sgrp"><h3>${lean === 'none' ? '' : leanHTML(lean as Endorser['lean'], false)} ${esc(word)} <span class="s-ct">${plural(list.length, 'source')}${on ? `, ${on} on` : ''}</span></h3><ul>${list.map((e) => srcRow(e, shown)).join('')}</ul></section>`;
@@ -70,10 +82,13 @@ export function sourcesSheetHTML(): string {
   <div class="sheet-panel screen-only" role="dialog" aria-modal="true" aria-labelledby="sh-h">
     <div class="sheet-hd"><h2 id="sh-h">Every source on your ballot</h2><button class="closebtn" data-act="sheet-close" data-fk="sheet-x">Done</button></div>
     <div class="sheet-bd" data-keep="sheet">
-      <p class="small">Turn on any source to see its endorsements next to each race and measure. Grouped by lean, which comes from outside ratings, the source’s party or the source’s own stated mission, never from whom it endorses.</p>
+      <p class="s-legend">On by default: newspapers and nonpartisan guides. Tap a switch to add or drop one.</p>
+      <p class="small">Grouped by lean, which comes from outside ratings, the source’s party or the source’s own stated mission, never from whom it endorses.</p>
       ${empties.length ? `<p class="small muted">${esc(empties.join(' '))}</p>` : ''}
-      <p class="row-btns"><button class="mini" data-act="src-default">Reset to newspapers and guides</button><button class="mini quiet" data-act="src-none">Turn all off</button></p>
+      <p class="row-btns"><button class="mini" data-act="src-default" data-fk="src-default">Reset to newspapers and guides</button><button class="mini quiet" data-act="src-none" data-fk="src-none">Turn all off</button></p>
       ${groups}
+      ${unreadHTML(unread)}
+      <div class="s-add"><p>Use a source we don’t have?</p><button class="mini" ${shelfAttrs({ kind: 'source', fk: 'src-add' })}>Add a source</button></div>
     </div></div>`;
 }
 

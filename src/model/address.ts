@@ -51,12 +51,17 @@ export function schoolOf(c: Item): { name: string; key: string; whole: boolean }
    open. */
 export const answered = (s: BallotState, key: string): boolean => s.districts[key] !== undefined && s.districts[key] !== '*';
 /* What the voter does by hand (actions.ts calls these, and the tests call the same ones). Each takes
-   what it touches out of addrSet, so from then on it is the voter's: the maps never change it, a
-   later pass of the same lookup leaves it be, and a corrected address doesn't undo it. */
+   what it touches out of addrSet, so from then on it is the voter's: the maps never change it, and a
+   corrected address doesn't undo it. And each is a claim on the lookup still folding maps in, if one
+   is (lookupPasses): its later passes leave the key alone, whatever it was before the claim (answered
+   by the lookup, still open, "Not sure") and whatever the claim was (an answer, Change, "Not sure",
+   on, off). One rule, so there is no case left for a late map to slip through. */
+let claims: Set<string> | null = null;
 export function claimAnswer(s: BallotState, key: string, v: string | null): void {
   if (v == null) delete s.districts[key]; // Change: the question asks again
   else s.districts[key] = v;
   s.addrSet = (s.addrSet || []).filter((k) => k !== key);
+  claims?.add(key);
 }
 /* "It's on my ballot": kept in `mine` (races on your ballot that might not have been), so it stays
    on until the voter says otherwise. */
@@ -65,26 +70,24 @@ export function claimOn(s: BallotState, id: string): void {
   if (!s.mine) s.mine = [];
   if (!s.mine.includes(id)) s.mine.push(id);
   s.addrSet = (s.addrSet || []).filter((k) => k !== id);
+  claims?.add(id);
 }
 /* "It's not on my ballot", for one race or several. */
 export function claimOff(s: BallotState, ids: string[]): void {
   for (const id of ids) if (!s.notMine.includes(id)) s.notMine.push(id);
   s.mine = (s.mine || []).filter((x) => !ids.includes(x));
   s.addrSet = (s.addrSet || []).filter((k) => !ids.includes(k));
+  for (const id of ids) claims?.add(id);
 }
 /* One lookup's passes (app.ts applyGeo): the Census's answers, then again as each district map
-   arrives. Each pass settles everything from the same answers, so what the voter changed between
-   passes (it left addrSet) is kept out of every later pass: a late map never undoes a change made
-   after the box showed the first answers. */
+   arrives. Each pass settles everything from the same answers, and every claim the voter makes from
+   the moment the lookup starts (claimAnswer, claimOn, claimOff) is kept out of every pass after it,
+   Census or map. A new lookup starts its own list, so claims count only against the lookup they were
+   made during; an older lookup's late maps change nothing anyway (applyGeo's sequence check). */
 export function lookupPasses(): (b: Ballot, s: BallotState, r: Districts, local: LocalAnswer[]) => string[] {
-  let left: string[] = [];
   const keep = new Set<string>();
-  return (b, s, r, local) => {
-    for (const k of left) if (!(s.addrSet || []).includes(k)) keep.add(k);
-    const set = setFromAddress(b, s, r, local, keep);
-    left = [...s.addrSet];
-    return set;
-  };
+  claims = keep;
+  return (b, s, r, local) => setFromAddress(b, s, r, local, keep);
 }
 type Kind = 'cd' | 'upper' | 'lower';
 const KINDS: Kind[] = ['cd', 'upper', 'lower'];
@@ -107,8 +110,8 @@ export function setFromAddress(b: Ballot, s: BallotState, r: Districts, local: L
   // What's left now is the voter's: an answer to a question ("Not sure" isn't one) or an on or off
   // of their own. The maps never change it (it usually came from the official sample ballot, which
   // outranks our maps). The Census's answers replace it on a lookup's first pass: they are the
-  // official districts, and asking is how the voter meant to find out. `keep` (lookupPasses): what
-  // the voter changed since this lookup's first pass, which no later pass touches, Census or map.
+  // official districts, and asking is how the voter meant to find out. `keep` (lookupPasses): every
+  // claim the voter made during this lookup, which no pass touches, Census or map.
   const ownQ = new Set(b.groups.map((g) => g.key).filter((k) => answered(s, k)));
   const ownIds = new Set([...s.mine, ...s.notMine]);
   const own = (k: string): boolean => ownQ.has(k) || ownIds.has(k) || keep.has(k);

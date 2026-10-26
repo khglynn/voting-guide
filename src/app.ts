@@ -571,7 +571,7 @@ export async function useMatch(r: GeoResult): Promise<void> {
    The Census's answers land first; the ballot's district maps fold in as each one arrives (usually
    at once: they load while the Census answers), so a slow or stuck map never holds up Congress.
    Each fold settles everything again from this address (setFromAddress undoes the last pass first)
-   but leaves alone what the voter changed since the first pass (lookupPasses), and a newer lookup, or
+   but leaves alone every claim the voter made during the lookup (lookupPasses), and a newer lookup, or
    another ballot, makes an older one's late maps change nothing. It returns
    once the first pass is painted, so nothing waits on a slow map ("Show my ballot" included). */
 let geoSeq = 0;

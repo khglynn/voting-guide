@@ -485,6 +485,35 @@ function roundTrip(name, stCode, places, mutate) {
     check('maps, ownership: and the maps that arrived still answer their own races (JP 5, the constable race off)',
       S().districts['judicial|Justice of the Peace'] === 'tx-travis-jp-5' && S().notMine.includes('tx-travis-constable-4') && S().districts['federal|U.S. Representative'] === 'tx-us-house-11',
       JSON.stringify(S().districts));
+    // Any claim during a lookup counts, whatever the question was before (Codex, Oct 26, the fourth
+    // hole of this kind): the Census answers first with the council map still out, and the voter
+    // answers the still-open council question themselves (District 3), taps Change on it, or says
+    // "Not sure"; then the council map arrives saying 9. Each time the voter's choice stands.
+    const openThenMap = (act) => {
+      st.S.b = st.emptyBallotState('');
+      const p = passes();
+      p(au4, S(), cityHall, []);
+      const wasOpen = S().districts['city|Austin City Council Member'] === undefined;
+      act();
+      p(au4, S(), cityHall, answers);
+      return [wasOpen, S().districts['city|Austin City Council Member']];
+    };
+    const pick3 = openThenMap(() => answer('city|Austin City Council Member', 'tx-austin-council-3'));
+    const change = openThenMap(() => { answer('city|Austin City Council Member', 'tx-austin-council-1'); answer('city|Austin City Council Member', null); });
+    const unsure = openThenMap(() => answer('city|Austin City Council Member', '*'));
+    check('maps, ownership: a claim on a question still open when the voter made it (District 3, Change, "Not sure") survives the late map',
+      pick3[0] && pick3[1] === 'tx-austin-council-3' && change[0] && change[1] === undefined && unsure[0] && unsure[1] === '*',
+      JSON.stringify({ pick3, change, unsure }));
+    // The same for a race the lookup hadn't placed yet: "Not on my ballot" on SBOE before the precinct
+    // map arrives (it would put SBOE on).
+    st.S.b = st.emptyBallotState('');
+    pass = passes();
+    pass(au4, S(), cityHall, councilOnly);
+    const sboeOpen = !S().mine.includes('tx-sboe-5') && !S().notMine.includes('tx-sboe-5');
+    off(['tx-sboe-5']);
+    pass(au4, S(), cityHall, answers);
+    check('maps, ownership: and "Not on my ballot" on a race the lookup hadn’t placed yet survives the map that would place it',
+      sboeOpen && S().notMine.includes('tx-sboe-5') && !S().mine.includes('tx-sboe-5'), JSON.stringify([sboeOpen, S().mine, S().notMine]));
     // A guess made before the lookup is still the lookup's to replace: the Census's districts are the
     // official ones, and asking is how the voter meant to find out (unchanged from before the maps).
     st.S.b = st.emptyBallotState('');

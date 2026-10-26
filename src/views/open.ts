@@ -11,7 +11,7 @@ import { picksOnBallot } from '../model/lens';
 import { sourceLean, leanHTML, ext, clampP, escP, sampleBallot, isOpen, leadRest, wordsSrc, reportAttrs, paywallRowHTML } from './common';
 import { headsUp, headsHTML, addressCount } from './ledger';
 import { schoolOf } from '../model/address';
-import { mapSettles } from '../model/maps';
+import { mapSettles, seatless } from '../model/maps';
 
 /* "Report a problem" on a row and in its Full details: the report sheet, prefilled with this row (its
    title, and its id for the form). */
@@ -67,7 +67,7 @@ function whereHTML(it: Item): string {
     const grp = b.groups.find((x) => x.key === g)!;
     // Who chose the district: the address lookup, or you. A district with two seats is one answer.
     if (ans === it.id || (ans && ans !== '*' && ans !== 'none' && sameSeat(b.byId.get(ans), it))) {
-      const where = (seatLabel(b.byId.get(ans) as Contest) || 'this district').replace(/,\s*Position \d+$/i, '');
+      const where = seatless(seatLabel(b.byId.get(ans) as Contest) || 'this district');
       return `<p class="ob-meta">${(S.b.addrSet || []).includes(g) ? 'Your address puts you in' : 'You said you’re in'} ${esc(where)}. <button class="linkbtn" data-act="district-change" data-g="${esc(g)}">Change</button></p>`;
     }
     return `<p class="ob-meta"><b>Maybe on your ballot.</b> You weren’t sure of your ${esc(grp.office)} district, so all ${grp.members.length} show. ${escP(it.scope_plain)} <button class="linkbtn" data-act="district-change" data-g="${esc(g)}">Choose one</button></p>`;

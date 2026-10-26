@@ -408,7 +408,8 @@ if (fs.existsSync(MAPS_DIR)) {
   const byId = new Map(all.contests.map((c) => [c.id, c]));
   const placeById = new Map(all.places.map((p) => [p.id, p]));
   const fill = (tpl, p) => { let ok = true; const s = tpl.replace(/\{(\w+)\}/g, (_m, k) => { if (p[k] == null || p[k] === '') ok = false; return p[k] ?? ''; }); return ok ? s : null; };
-  const norm = (s) => String(s || '').replace(/\([^)]*\)/g, ' ').replace(/\s+/g, ' ').trim().toLowerCase();
+  // As model/maps.ts compares them: parentheses, case and a seat ("Precinct 1, Place 2") set aside.
+  const norm = (s) => String(s || '').replace(/\([^)]*\)/g, ' ').replace(/\s+/g, ' ').trim().toLowerCase().replace(/,?\s+(?:position|place)\s+\d+$/, '');
   for (const area of fs.readdirSync(MAPS_DIR).sort()) {
     const dir = path.join(MAPS_DIR, area);
     if (!fs.statSync(dir).isDirectory()) continue;

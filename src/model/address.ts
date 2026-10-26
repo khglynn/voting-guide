@@ -25,7 +25,7 @@ import type { Ballot } from '../ballot';
 import type { BallotState } from '../state';
 import { contestDistrict } from '../ballot';
 import { cleanOffice } from './labels';
-import { ballotMaps, ruleMatches, ruleIs, fillTemplate, type MapAnswer } from './maps';
+import { ballotMaps, ruleMatches, ruleIs, fillTemplate, seatless, type MapAnswer } from './maps';
 
 export interface Districts { cd: number | null; upper: number | null; lower: number | null; schools?: string[]; county?: string | null }
 /* A district map that answered at this address: its record and the feature's properties. */
@@ -235,7 +235,8 @@ export const CHECKING = 'Checking the district maps…';
    "Justice of the Peace, Precinct 5", "State Board of Education, District 5". */
 const localName = (c: Contest): string => {
   const office = cleanOffice(c.office).replace(/^Member,\s*/i, '').replace(/\s+Member$/i, '');
-  const seat = (c.district || '').replace(/\([^)]*\)/g, ' ').replace(/\s+/g, ' ').trim().replace(/^[A-Z]{2,6}\s+(?=District\b)/, '');
+  // "Precinct 1", not "Precinct 1, Place 1": the answer shows every place of the precinct.
+  const seat = seatless((c.district || '').replace(/\([^)]*\)/g, ' ').replace(/\s+/g, ' ').trim()).replace(/^[A-Z]{2,6}\s+(?=District\b)/, '');
   return seat ? `${office}, ${seat}` : office;
 };
 /* Whether a race's scope names a county other than this one, and not this one: a Williamson County

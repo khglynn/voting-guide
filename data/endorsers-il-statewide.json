@@ -41,6 +41,8 @@
       "IL"
     ],
     "guide_url": "https://www.chicagobusiness.com/opinion",
+    "blocked": true,
+    "blocked_note": "Behind a paywall, and its site shows a bot check to anything that isn’t a browser, so we couldn’t read its endorsements.",
     "default_on": true,
     "endorses_candidates": true,
     "endorses_measures": false,
@@ -243,6 +245,8 @@
       "IL"
     ],
     "guide_url": "https://www.sierraclub.org/illinois/endorsements",
+    "blocked": true,
+    "blocked_note": "Its endorsement page shows a bot check to anything that isn’t a browser, so we couldn’t read its endorsements.",
     "default_on": false,
     "endorses_candidates": true,
     "endorses_measures": true,

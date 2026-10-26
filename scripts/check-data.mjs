@@ -23,6 +23,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { isThin } from './coverage.mjs';
 
 const ROOT = process.env.VG_ROOT || path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = path.join(ROOT, 'data');
@@ -213,6 +214,9 @@ for (const e of all.endorsers) {
   if (e.paywall != null && typeof e.paywall !== 'boolean') err('paywall-shape', `${id}: paywall must be true or false, got ${JSON.stringify(e.paywall)}`);
   if (e.paywall_note_ok != null && typeof e.paywall_note_ok !== 'boolean') err('paywall-shape', `${id}: paywall_note_ok must be true or false, got ${JSON.stringify(e.paywall_note_ok)}`);
   if (e.paywall_note != null && !isStr(e.paywall_note)) err('paywall-shape', `${id}: paywall_note must be text`);
+  if (e.blocked != null && typeof e.blocked !== 'boolean') err('blocked-shape', `${id}: blocked must be true or false, got ${JSON.stringify(e.blocked)}`);
+  if (e.blocked_note != null && (!isStr(e.blocked_note) || /\n/.test(e.blocked_note) || e.blocked_note.length > 200)) err('blocked-shape', `${id}: blocked_note must be one plain line of text`);
+  if (e.blocked_note != null && e.blocked !== true) err('blocked-shape', `${id}: blocked_note without blocked: true`);
 }
 for (const [id, vs] of byEndorser) {
   const leans = [...new Set(vs.map((v) => v.lean ?? 'null'))];
@@ -316,6 +320,20 @@ else if (report) {
   }
   const onABallot = new Set([...[...statewide.values()].flatMap((s) => [...s]), ...all.places.flatMap((p) => [...list(p.contest_ids), ...list(p.measure_ids)])]);
   for (const [id, x] of rawById) if (!onABallot.has(id)) warn('item-on-no-ballot', `${x._f} ${id}: defined, but no place lists it and it is not statewide`);
+}
+
+/* ---------- 7c. thin places (Oct 25) ----------
+   A place none of whose own sources has a pick (index.json, scripts/coverage.mjs) is reported, never
+   blocking, so a thin city shows in CI output. Where some of its own races also have no pick from
+   anyone, the first page says so and offers to gather its endorsements (src/model/coverage.ts). */
+const INDEX_FILE = path.join(BUNDLES, 'index.json');
+if (fs.existsSync(INDEX_FILE)) {
+  let idx = null;
+  try { idx = JSON.parse(fs.readFileSync(INDEX_FILE, 'utf8')); } catch { err('bundle-unreadable', 'index.json'); }
+  for (const [id, p] of Object.entries((idx && idx.places) || {})) {
+    if (!(p.local_sources > 0 && p.local_with_picks === 0) && !isThin(p)) continue;
+    warn('place-thin', `${id}: ${p.local_sources} local sources, none with picks; ${p.local_races_with_picks} of its ${p.local_races} own races have a pick from anyone${isThin(p) ? '. The first page offers to gather its endorsements.' : ''}`);
+  }
 }
 
 /* ---------- 8. our own words: no em dashes, no shouting ---------- */

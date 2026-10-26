@@ -1,5 +1,5 @@
 {
-  "about": "Public buildings only, never a home: each one's point and its 2020 Census block's interior point, as the Census geocoder returned them for the building's own address on Oct 21, 2026. The pull tests every map at these points with the same two-witness rule the site uses, and asks each map's own server what it says there. The street addresses aren't kept here: the coordinates are enough.",
+  "about": "Public buildings only, never a home: each one's point and its 2020 Census block's interior point, as the Census geocoder returned them for the building's own address on Oct 21, 2026 (Austin) and Oct 26, 2026 (Williamson County and Pflugerville's library). The pull tests every map at these points with the same two-witness rule the site uses, and asks each map's own server what it says there (a map made from a file is checked against the file's own lines). The street addresses aren't kept here: the coordinates are enough.",
   "points": [
     {
       "name": "Austin City Hall",
@@ -150,6 +150,84 @@
       "point": [-97.62035, 30.440786],
       "block": [-97.6197108, 30.4409931],
       "census_county": "Travis"
+    },
+    {
+      "name": "Round Rock City Hall",
+      "point": [-97.677488, 30.508886],
+      "block": [-97.6770501, 30.5085455],
+      "census_county": "Williamson"
+    },
+    {
+      "name": "Round Rock Public Library",
+      "point": [-97.678062, 30.509898],
+      "block": [-97.6777482, 30.5104118],
+      "census_county": "Williamson"
+    },
+    {
+      "name": "Williamson County courthouse",
+      "point": [-97.677113, 30.637338],
+      "block": [-97.6775453, 30.6370307],
+      "census_county": "Williamson"
+    },
+    {
+      "name": "Georgetown Public Library",
+      "point": [-97.679509, 30.636501],
+      "block": [-97.6795012, 30.6361295],
+      "census_county": "Williamson"
+    },
+    {
+      "name": "Cedar Park City Hall",
+      "point": [-97.820279, 30.497507],
+      "block": [-97.8171824, 30.4961075],
+      "census_county": "Williamson"
+    },
+    {
+      "name": "Cedar Park Public Library",
+      "point": [-97.823436, 30.519139],
+      "block": [-97.8237431, 30.5178654],
+      "census_county": "Williamson"
+    },
+    {
+      "name": "Leander City Hall",
+      "point": [-97.854302, 30.5791],
+      "block": [-97.8545756, 30.5785896],
+      "census_county": "Williamson"
+    },
+    {
+      "name": "Hutto City Hall",
+      "point": [-97.55195, 30.544988],
+      "block": [-97.5531857, 30.5439539],
+      "census_county": "Williamson"
+    },
+    {
+      "name": "Taylor City Hall",
+      "point": [-97.408496, 30.570789],
+      "block": [-97.4080511, 30.5712489],
+      "census_county": "Williamson"
+    },
+    {
+      "name": "Williamson County Jester Annex",
+      "point": [-97.668296, 30.538858],
+      "block": [-97.6662521, 30.5391326],
+      "census_county": "Williamson"
+    },
+    {
+      "name": "Pflugerville Public Library",
+      "point": [-97.628822, 30.441654],
+      "block": [-97.629294, 30.4428268],
+      "census_county": "Travis"
+    },
+    {
+      "name": "Brushy Creek Community Center",
+      "point": [-97.734945, 30.49515],
+      "block": [-97.730054, 30.4984965],
+      "census_county": "Williamson"
+    },
+    {
+      "name": "Williamson County Elections office",
+      "point": [-97.679509, 30.606696],
+      "block": [-97.6791808, 30.6163328],
+      "census_county": "Williamson"
     }
   ]
 }

@@ -1,0 +1,121 @@
+{
+  "area": "williamson-county-tx",
+  "about": "Williamson County's voting precincts, and the State Board of Education plan around the county. Pull with: node scripts/maps/pull.mjs williamson-county-tx",
+  "simplify_m": 10,
+  "layers": [
+    {
+      "kind": "precincts",
+      "name": "county precinct",
+      "title": "Williamson County voting precincts, with each precinct's commissioner, justice of the peace and constable precinct",
+      "places": [
+        "pflugerville-tx",
+        "round-rock-tx",
+        "austin-tx"
+      ],
+      "county": "Williamson",
+      "source_url": "https://services.arcgis.com/5ZjkDcAQQjFnTEkh/arcgis/rest/services/Voting_Precincts_2026/FeatureServer/0",
+      "source_org": "Williamson County",
+      "plan": "Williamson County's voting precincts effective Jan 1, 2026, built from whole 2020 Census blocks. The Commissioners Court's resolution creating them (April 2025) places every precinct within the commissioner, constable and justice of the peace precinct of one number, the single map the court adopted for all three in November 2021 (effective Jan 1, 2022). So the precinct's commissioner precinct is its justice of the peace precinct too.",
+      "plan_source": "https://public.destinyhosted.com/wilcodocs/2025/COM/20250429_1899/36748%5FRedistrictingPacket%2Epdf",
+      "dated_field": "last_edited_date",
+      "label": {
+        "field": "VOTER_PRECINCT",
+        "match": "^0*(\\d+)$"
+      },
+      "unique": true,
+      "props": {
+        "commissioner": {
+          "field": "COMMPCT",
+          "match": "^0*([1-4])$"
+        },
+        "jp": {
+          "field": "COMMPCT",
+          "match": "^0*([1-4])$"
+        }
+      },
+      "settles": [
+        {
+          "office": "^County Commissioner$",
+          "scope": "\\bWilliamson County\\b",
+          "district": "Precinct {commissioner}"
+        },
+        {
+          "office": "^Justice of the Peace$",
+          "scope": "\\bWilliamson County\\b",
+          "district": "Precinct {jp}"
+        }
+      ],
+      "shows": "Your voting precinct: {label} (Williamson County).",
+      "agree": [
+        {
+          "what": "the county's commissioner precincts (precinct_public, edited 2023-06-02; it agrees with all 26 precincts the April 2025 resolution names. Current_County_Precincts, edited 2021-11-04, before the map's adoption, disagrees with 9 of them and isn't used)",
+          "source_url": "https://services.arcgis.com/5ZjkDcAQQjFnTEkh/arcgis/rest/services/precinct_public/FeatureServer/0",
+          "label": {
+            "field": "PCT_NUMBER",
+            "match": "^0*([1-4])$"
+          },
+          "compare": "commissioner"
+        }
+      ],
+      "expect": {
+        "Round Rock City Hall": {
+          "commissioner": "1"
+        },
+        "Williamson County courthouse": {
+          "commissioner": "3"
+        }
+      }
+    },
+    {
+      "kind": "sboe",
+      "name": "State Board of Education district",
+      "title": "State Board of Education districts in and around Williamson County",
+      "places": [
+        "pflugerville-tx",
+        "round-rock-tx",
+        "austin-tx"
+      ],
+      "county": "Williamson",
+      "source_format": "shapefile_zip",
+      "source_url": "https://data.capitol.texas.gov/dataset/ad1ae979-6df9-4322-98cf-6771cc67f02d/resource/640a507d-e26e-4b50-861c-7913c152bdc7/download/plane2106.zip",
+      "shapefile": "PLANE2106/PLANE2106.shp",
+      "source_org": "Texas Legislative Council (plan PLANE2106)",
+      "license": "Creative Commons Attribution (data.capitol.texas.gov)",
+      "plan": "The State Board of Education districts in use since 2022, published by the Texas Legislative Council as \"State Board of Education Districts, January 2023\". Williamson County is split between District 10 and District 5 (its southwest corner: far north Austin and Brushy Creek). Williamson's own layers carry no SBOE district.",
+      "plan_source": "https://data.capitol.texas.gov/dataset/plane2106",
+      "layer_dated": "2021-10-19",
+      "layer_dated_from": "the date the Texas Legislative Council published the shapefile",
+      "near": {
+        "source_url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer/55",
+        "where": "GEOID='48491'",
+        "buffer_m": 1500,
+        "what": "Williamson County (the Census's 2020 county line)"
+      },
+      "label": {
+        "field": "District",
+        "match": "^(\\d+)$"
+      },
+      "unique": true,
+      "settles": [
+        {
+          "office": "State Board of Education",
+          "district": "SBOE District {label}"
+        }
+      ],
+      "agree": [
+        {
+          "what": "an independent copy of the same plan on ArcGIS Online (not an agency's)",
+          "source_url": "https://services7.arcgis.com/ZodPOMBKsdAsTqF4/arcgis/rest/services/TX_State_Board_of_Education_Districts_2025/FeatureServer/0",
+          "label": {
+            "field": "District",
+            "match": "^(\\d+)$"
+          }
+        }
+      ],
+      "expect": {
+        "Round Rock City Hall": "10"
+      }
+    }
+  ],
+  "test_points": "test-points.json"
+}

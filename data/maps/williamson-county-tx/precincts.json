@@ -1,0 +1,123 @@
+{
+  "kind": "precincts",
+  "name": "county precinct",
+  "title": "Williamson County voting precincts, with each precinct's commissioner, justice of the peace and constable precinct",
+  "places": [
+    "pflugerville-tx",
+    "round-rock-tx",
+    "austin-tx"
+  ],
+  "county": "Williamson",
+  "source_url": "https://services.arcgis.com/5ZjkDcAQQjFnTEkh/arcgis/rest/services/Voting_Precincts_2026/FeatureServer/0",
+  "source_org": "Williamson County",
+  "plan": "Williamson County's voting precincts effective Jan 1, 2026, built from whole 2020 Census blocks. The Commissioners Court's resolution creating them (April 2025) places every precinct within the commissioner, constable and justice of the peace precinct of one number, the single map the court adopted for all three in November 2021 (effective Jan 1, 2022). So the precinct's commissioner precinct is its justice of the peace precinct too.",
+  "plan_source": "https://public.destinyhosted.com/wilcodocs/2025/COM/20250429_1899/36748%5FRedistrictingPacket%2Epdf",
+  "layer_dated": "2024-01-01",
+  "layer_dated_from": "newest last_edited_date in the layer",
+  "fetched": "2026-10-26",
+  "license": "none stated",
+  "label_property": "VOTER_PRECINCT",
+  "props": {
+    "commissioner": "COMMPCT",
+    "jp": "COMMPCT"
+  },
+  "features": 177,
+  "simplified": "Douglas-Peucker to 10 m, TopoJSON quantized to 100000 steps across the map",
+  "bytes": 83991,
+  "checked": {
+    "on": "2026-10-26",
+    "simplified_vs_original": {
+      "points": 2894,
+      "agree": 2894,
+      "more_than_m_from_a_line": 12
+    },
+    "agrees_with": [
+      {
+        "what": "the county's commissioner precincts (precinct_public, edited 2023-06-02; it agrees with all 26 precincts the April 2025 resolution names. Current_County_Precincts, edited 2021-11-04, before the map's adoption, disagrees with 9 of them and isn't used)",
+        "source_url": "https://services.arcgis.com/5ZjkDcAQQjFnTEkh/arcgis/rest/services/precinct_public/FeatureServer/0",
+        "features_checked": 177,
+        "agree": 177
+      }
+    ],
+    "public_buildings": [
+      {
+        "name": "Spicewood Springs Branch Library",
+        "answer": "175",
+        "by": "both"
+      },
+      {
+        "name": "Round Rock City Hall",
+        "answer": "150",
+        "by": "both"
+      },
+      {
+        "name": "Round Rock Public Library",
+        "answer": "150",
+        "by": "both"
+      },
+      {
+        "name": "Williamson County courthouse",
+        "answer": "314",
+        "by": "both"
+      },
+      {
+        "name": "Georgetown Public Library",
+        "answer": "314",
+        "by": "both"
+      },
+      {
+        "name": "Cedar Park City Hall",
+        "answer": "266",
+        "by": "both"
+      },
+      {
+        "name": "Cedar Park Public Library",
+        "answer": "254",
+        "by": "both"
+      },
+      {
+        "name": "Leander City Hall",
+        "answer": "264",
+        "by": "both"
+      },
+      {
+        "name": "Hutto City Hall",
+        "answer": "405",
+        "by": "both"
+      },
+      {
+        "name": "Taylor City Hall",
+        "answer": "455",
+        "by": "both"
+      },
+      {
+        "name": "Williamson County Jester Annex",
+        "answer": "145",
+        "by": "both"
+      },
+      {
+        "name": "Brushy Creek Community Center",
+        "answer": "360",
+        "by": "both"
+      },
+      {
+        "name": "Williamson County Elections office",
+        "answer": "368",
+        "by": "both"
+      }
+    ]
+  },
+  "settles": [
+    {
+      "office": "^County Commissioner$",
+      "scope": "\\bWilliamson County\\b",
+      "district": "Precinct {commissioner}"
+    },
+    {
+      "office": "^Justice of the Peace$",
+      "scope": "\\bWilliamson County\\b",
+      "district": "Precinct {jp}"
+    }
+  ],
+  "shows": "Your voting precinct: {label} (Williamson County)."
+}

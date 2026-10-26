@@ -7,7 +7,9 @@
  *   node scripts/maps/pull.mjs <area> --kind council   # one layer
  *   node scripts/maps/pull.mjs <area> --cached      # reuse the raw downloads in .tmp/maps/<area>/
  *
- * The manifest is the only hand-written part. Per layer: the ArcGIS REST layer to read, which
+ * The manifest is the only hand-written part. Per layer: the ArcGIS REST layer to read (or, with
+ * "source_format": "shapefile_zip", a zipped shapefile and the .shp inside it, optionally kept to
+ * within "near.buffer_m" metres of an ArcGIS layer's features), which
  * property becomes the `label` (and any other properties a rule reads, each with a regex whose
  * first group is the value), which races it settles, and the places whose ballots read it. The
  * same script runs for every place after Austin: write a manifest, run it, read what it prints.
@@ -20,8 +22,8 @@
  *   - `agree`: other official layers say the same thing at a deep point inside every feature (the
  *     Tax Office's copy of the precincts, the county's own commissioner and JP layers);
  *   - test points (scripts/maps/test-points.json: public buildings only): the two-witness answer the
- *     site gives matches what the layer's own server says there, and `expect` where the manifest
- *     pins one.
+ *     site gives matches what the layer's own server says there (a file has no server, so there its
+ *     own full-precision lines answer), and `expect` where the manifest pins one.
  * It reads src/model/maps.ts through Vite, so the checks run the same code the browser runs.
  *
  * mapshaper is pinned in scripts/maps/package.json with its own lockfile, not in the site's
@@ -79,26 +81,57 @@ async function getJSON(u, tries = 3) {
 }
 const slug = (u) => u.replace(/^https?:\/\//, '').replace(/[^a-z0-9]+/gi, '_').slice(-90);
 /* Every feature of an ArcGIS REST layer as GeoJSON in lon/lat, with the layer's own record. */
-async function fetchLayer(src) {
-  const file = path.join(TMP, `${slug(src)}.raw.json`);
+async function fetchLayer(src, where = '1=1') {
+  const file = path.join(TMP, `${slug(src)}${where === '1=1' ? '' : `_${slug(where)}`}.raw.json`);
   if (CACHED && fs.existsSync(file)) return JSON.parse(fs.readFileSync(file, 'utf8'));
   const info = await getJSON(`${src}?f=json`);
-  const { count } = await getJSON(`${src}/query?where=1%3D1&returnCountOnly=true&f=json`);
+  const { count } = await getJSON(`${src}/query?where=${encodeURIComponent(where)}&returnCountOnly=true&f=json`);
   const page = Math.min(info.maxRecordCount || 1000, 2000);
   const oid = info.objectIdField || (info.fields || []).find((f) => f.type === 'esriFieldTypeOID')?.name || 'OBJECTID';
   const features = [];
   for (let off = 0; off < count; off += page) {
-    const q = new URLSearchParams({ where: '1=1', outFields: '*', returnGeometry: 'true', outSR: '4326', f: 'geojson' });
+    const q = new URLSearchParams({ where, outFields: '*', returnGeometry: 'true', outSR: '4326', f: 'geojson' });
     if (count > page) { q.set('orderByFields', oid); q.set('resultOffset', String(off)); q.set('resultRecordCount', String(page)); }
     const fc = await getJSON(`${src}/query?${q}`);
     features.push(...(fc.features || []));
     if (count <= page) break;
   }
   if (features.length !== count) throw new Error(`${src}: the server lists ${count} features and sent ${features.length}`);
-  const out = { info: { name: info.name, copyrightText: info.copyrightText || '', maxRecordCount: info.maxRecordCount }, fc: { type: 'FeatureCollection', features } };
+  const edited = info.editingInfo ? info.editingInfo.dataLastEditDate || info.editingInfo.lastEditDate || null : null;
+  const out = { info: { name: info.name, copyrightText: info.copyrightText || '', maxRecordCount: info.maxRecordCount, edited }, fc: { type: 'FeatureCollection', features } };
   fs.writeFileSync(file, JSON.stringify(out));
   return out;
 }
+/* A zipped shapefile (the Texas Legislative Council's plans), as GeoJSON in lon/lat. With `near`,
+   only what lies within near.buffer_m metres of an ArcGIS layer's features (a county) is kept: the
+   file's own lines stay whole there, where a clip to an outline drawn by someone else would leave
+   slivers along it. */
+async function fetchShapefile(layer) {
+  const base = path.join(TMP, slug(layer.source_url));
+  const zip = `${base}.zip`;
+  if (!(CACHED && fs.existsSync(zip))) {
+    const r = await fetch(layer.source_url, { signal: AbortSignal.timeout(180000), headers: { 'user-agent': 'voting-guide maps pull (https://vote.kevinhg.com)' } });
+    if (!r.ok) throw new Error(`${layer.source_url}: HTTP ${r.status}`);
+    fs.writeFileSync(zip, Buffer.from(await r.arrayBuffer()));
+  }
+  fs.rmSync(base, { recursive: true, force: true }); // this script's own unzip folder under .tmp
+  execFileSync('unzip', ['-o', '-q', zip, '-d', base]);
+  const shp = path.join(base, layer.shapefile);
+  if (!fs.existsSync(shp)) throw new Error(`${layer.shapefile} isn't in ${layer.source_url}`);
+  const clip = [];
+  if (layer.near) {
+    const near = await fetchLayer(layer.near.source_url, layer.near.where || '1=1');
+    if (!near.fc.features.length) throw new Error(`near: ${layer.near.source_url} has no feature where ${layer.near.where}`);
+    const nearIn = path.join(TMP, `${layer.kind}.near.geojson`), nearOut = path.join(TMP, `${layer.kind}.near-buffer.geojson`);
+    fs.writeFileSync(nearIn, JSON.stringify(near.fc));
+    execFileSync(MS, ['-i', nearIn, '-dissolve', '-buffer', `${layer.near.buffer_m}m`, '-o', nearOut, 'format=geojson'], { stdio: ['ignore', 'ignore', 'pipe'] });
+    clip.push('-clip', nearOut);
+  }
+  const out = path.join(TMP, `${layer.kind}.source.geojson`);
+  execFileSync(MS, ['-i', shp, '-proj', 'wgs84', ...clip, '-o', out, 'format=geojson'], { stdio: ['ignore', 'ignore', 'pipe'] });
+  return { info: { name: layer.title, copyrightText: '', edited: null }, fc: JSON.parse(fs.readFileSync(out, 'utf8')) };
+}
+const FILE = (layer) => layer.source_format === 'shapefile_zip';
 /* What a layer's own server says at a point: the attributes of every feature there. */
 async function serverAt(src, [lon, lat]) {
   const q = new URLSearchParams({ geometry: `${lon},${lat}`, geometryType: 'esriGeometryPoint', inSR: '4326', spatialRel: 'esriSpatialRelIntersects', outFields: '*', returnGeometry: 'false', f: 'json' });
@@ -169,7 +202,7 @@ for (const layer of manifest.layers) {
   const problems = [];
   const note = (s) => console.log(`  ${s}`);
   console.log(`\n== ${area}/${layer.kind}: ${layer.title}`);
-  const raw = await fetchLayer(layer.source_url);
+  const raw = FILE(layer) ? await fetchShapefile(layer) : await fetchLayer(layer.source_url);
   const rawBytes = Buffer.byteLength(JSON.stringify(raw.fc));
   note(`fetched ${raw.fc.features.length} features (${kb(rawBytes)} as full-precision GeoJSON) from ${layer.source_url}`);
 
@@ -189,7 +222,10 @@ for (const layer of manifest.layers) {
     const dup = [...seen].filter(([, n]) => n > 1).map(([l]) => l);
     if (dup.length) problems.push(`labels appear more than once: ${dup.join(', ')}`);
   }
-  const dated = layer.dated_field ? raw.fc.features.map((f) => asDate((f.properties || {})[layer.dated_field])).filter(Boolean).sort().pop() || null : null;
+  // The lines' date: the newest edit in a date field, else the server's last data edit, else the
+  // manifest's own (a file's, from where it is published).
+  const dated = layer.dated_field ? raw.fc.features.map((f) => asDate((f.properties || {})[layer.dated_field])).filter(Boolean).sort().pop() || null
+    : layer.dated_service ? asDate(raw.info.edited) : layer.layer_dated || null;
   const full = { type: 'FeatureCollection', features: kept };
 
   // Simplify with shared borders (TopoJSON), so neighbours keep meeting exactly.
@@ -258,8 +294,10 @@ for (const layer of manifest.layers) {
   const tested = [];
   for (const p of points) {
     const ans = maps.answerAt(shipped, { point: { lon: p.point[0], lat: p.point[1] }, block: p.block ? { lon: p.block[0], lat: p.block[1] } : null }, { edge: layer.county ? 'blocks' : 'cuts' });
-    const [sp, sb] = await Promise.all([serverAt(layer.source_url, p.point), p.block ? serverAt(layer.source_url, p.block) : Promise.resolve(null)]);
-    const lab = (list) => { const ls = (list || []).map((x) => pick(x, layer.label)).filter((x) => x != null); return ls.length === 1 ? ls[0] : ls.length ? `several (${ls.join(', ')})` : null; };
+    const own = ([lon, lat]) => maps.featuresAt(full, lon, lat).map((f) => ({ [layer.label.field]: f.properties.label }));
+    const ask = FILE(layer) ? async (pt) => own(pt) : (pt) => serverAt(layer.source_url, pt);
+    const [sp, sb] = await Promise.all([ask(p.point), p.block ? ask(p.block) : Promise.resolve(null)]);
+    const lab = (list) => { const ls = (list || []).map((x) => (FILE(layer) ? x[layer.label.field] : pick(x, layer.label))).filter((x) => x != null); return ls.length === 1 ? ls[0] : ls.length ? `several (${ls.join(', ')})` : null; };
     const atPoint = lab(sp), atBlock = sb ? lab(sb) : null;
     const ours = ans.at === 'in' ? ans.props.label : ans.at;
     const truth = atBlock ?? atPoint;
@@ -301,7 +339,8 @@ for (const layer of manifest.layers) {
     plan: layer.plan || null,
     ...(layer.plan_source ? { plan_source: layer.plan_source } : {}),
     layer_dated: dated,
-    ...(layer.dated_field ? { layer_dated_from: `newest ${layer.dated_field} in the layer` } : {}),
+    ...(layer.dated_field ? { layer_dated_from: `newest ${layer.dated_field} in the layer` } : layer.dated_service ? { layer_dated_from: 'the layer\'s last data edit, as its server reports it' } : layer.layer_dated_from ? { layer_dated_from: layer.layer_dated_from } : {}),
+    ...(layer.near ? { kept: `within ${layer.near.buffer_m} m of ${layer.near.what}; the map answers only for addresses the Census puts in ${layer.county || 'its area'}` } : {}),
     ...(layer.redistricted ? { redistricted: layer.redistricted } : {}),
     fetched: TODAY,
     license: layer.license || 'none stated',

@@ -29,6 +29,7 @@ REPO="${VG_REPO:-khglynn/voting-guide}"
 REQUIRED_CHECKS="data browser"            # the job names in .github/workflows/ci.yml
 CI_TIMEOUT="${CI_TIMEOUT:-1800}"          # seconds to wait for the required checks
 DEPLOY_TIMEOUT="${DEPLOY_TIMEOUT:-900}"   # seconds to wait for Vercel to build and serve a commit
+TEST_SENTRY_DSN='https://0e2e0e2e0e2e0e2e0e2e0e2e0e2e0e2e@o0.ingest.us.sentry.io/0'   # the gates' build only; see run_gates
 MODE=fast; GATES_ONLY=0; SELF_TEST=0; AFTER_MERGE=""; MSG=""; PATHS=()
 while [ $# -gt 0 ]; do
   case "$1" in
@@ -261,7 +262,9 @@ run_gates() { # $1 folder holding the files to check, $2 label, $3 changed files
     say "Model tests (save-link contract, districts, lenses, verdicts, fills)"
     node tests/model.mjs
     say "Typecheck and production build"
-    npm run build --silent
+    # A test DSN (project 0, which takes nothing): the crash-report client loads as it does on Vercel, and
+    # the e2e catches its reports (SENTRY_E2E=1 makes those checks required). The same value as CI's.
+    VITE_SENTRY_DSN="$TEST_SENTRY_DSN" npm run build --silent
     say "Browser checks against a local preview"
     port="$(python3 -c 'import socket;s=socket.socket();s.bind(("127.0.0.1",0));print(s.getsockname()[1])')"
     npx vite preview --port "$port" --strictPort > .tmp-preview.log 2>&1 &
@@ -269,7 +272,7 @@ run_gates() { # $1 folder holding the files to check, $2 label, $3 changed files
     trap 'kill $pid 2>/dev/null || true; rm -f .tmp-preview.log' EXIT
     for i in $(seq 1 30); do curl -sf "http://localhost:$port/data/index.json" >/dev/null && break; sleep 1; done
     curl -sf "http://localhost:$port/data/index.json" >/dev/null || { cat .tmp-preview.log; die "preview server did not start."; }
-    BASE="http://localhost:$port" SHOTS_DIR=.tmp/e2e-shots node tests/e2e.mjs
+    BASE="http://localhost:$port" SHOTS_DIR=.tmp/e2e-shots SENTRY_E2E=1 node tests/e2e.mjs
     BASE="http://localhost:$port" SHOTS_DIR=.tmp/sweep-shots MODE="$MODE" node tests/sweep.mjs
   )
 }

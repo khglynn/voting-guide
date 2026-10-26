@@ -35,13 +35,13 @@ const util = await load('/src/util.ts');
 const geo = await load('/src/geo.ts');
 const common = await load('/src/views/common.ts');
 const mods = {};
-for (const m of ['lens', 'tally', 'bulk', 'judges', 'labels', 'plan', 'address']) {
+for (const m of ['lens', 'tally', 'bulk', 'judges', 'labels', 'plan', 'address', 'coverage']) {
   const f = path.join(ROOT, 'src', 'model', `${m}.ts`);
   if (fs.existsSync(f)) mods[m] = await load(`/src/model/${m}.ts`);
 }
 /* The string views the ledger paints (no DOM needed to build their HTML). */
 const views = {};
-for (const v of ['ledger', 'cheat', 'open', 'lens', 'mast', 'setup', 'pass', 'planstrip', 'shelf']) views[v] = await load(`/src/views/${v}.ts`);
+for (const v of ['ledger', 'cheat', 'open', 'lens', 'mast', 'setup', 'pass', 'planstrip', 'shelf', 'coverage']) views[v] = await load(`/src/views/${v}.ts`);
 views.errors = await load('/src/errors.ts'); // not a view: the errors a problem report sends along (the shelf reads it)
 
 const results = [];
@@ -628,6 +628,31 @@ function roundTrip(name, stCode, places, mutate) {
     check('maps, Williamson: Williamson-side Austin: SBOE 5 on from the Williamson SBOE map, Travis’s county races off, and the box still says whose',
       e.s.mine.includes('tx-sboe-5') && e.s.districts['county|County Commissioner'] === 'none' && /State Board of Education, District 5/.test(e.line) && /^Your county races are Williamson County’s/.test(e.notes[0] || ''),
       JSON.stringify([e.line, e.s.districts, e.notes]));
+    st.S.b = st.emptyBallotState('');
+  }
+  // A district's seats (Oct 26): Dallas elects two justices of the peace in each precinct ("Precinct 1,
+  // Place 1" and "Place 2"), both on every ballot in that precinct, as Washington elects two
+  // representatives per district ("Position 1" and "Position 2"). One answer must show both.
+  {
+    const da = open('TX', ['dallas-tx']);
+    const jp = da.groups.find((g) => g.key === 'judicial|Justice of the Peace');
+    st.S.ui.row = `q:${jp.key}`;
+    const qh = views.ledger.sectionHTML('judicial', bl.entriesBySection().get('judicial') || []);
+    const picks = [...qh.matchAll(/data-act="district" data-g="judicial\|Justice of the Peace" data-v="(tx-dallas-jp-[^"]+)"[^>]*><b>([^<]*)<\/b>/g)].map((m) => `${m[1]}=${m[2]}`);
+    check('seats: Dallas’s JP question offers each precinct once, by its precinct, and counts 5 districts',
+      picks.join(' | ') === 'tx-dallas-jp-1-1=Precinct 1 | tx-dallas-jp-2-1=Precinct 2 | tx-dallas-jp-3-1=Precinct 3 | tx-dallas-jp-4-1=Precinct 4 | tx-dallas-jp-5-1=Precinct 5' && /Dallas has 5 of these districts\./.test(qh), picks.join(' | '));
+    st.S.ui.row = null;
+    st.S.b.districts[jp.key] = 'tx-dallas-jp-3-1';
+    const shown = (bl.entriesBySection().get('judicial') || []).filter((e) => e.t === 'item' && /dallas-jp/.test(e.id)).map((e) => e.id);
+    check('seats: answering Precinct 3 shows both of its places, and no other precinct’s', shown.join(' ') === 'tx-dallas-jp-3-1 tx-dallas-jp-3-2', shown.join(' '));
+    const gl = views.ledger.sectionHTML('judicial', bl.entriesBySection().get('judicial') || []).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+    check('seats: and the answered question names the precinct, not one place', /Justice of the Peace: Precinct 3 Change/.test(gl), gl.slice(0, 160));
+    check('seats: places of different offices, or of different precincts, aren’t one seat',
+      !bl.sameSeat(da.byId.get('tx-dallas-jp-3-1'), da.byId.get('tx-dallas-jp-4-2')) && bl.sameSeat(da.byId.get('tx-dallas-jp-3-1'), da.byId.get('tx-dallas-jp-3-2')));
+    const se = open('WA', ['seattle-wa']);
+    const hd = se.groups.find((g) => /State Representative/.test(g.office));
+    const a = se.byId.get(hd.members[0]);
+    check('seats: Washington’s two House positions per district are still one seat', hd.members.filter((m) => bl.sameSeat(a, se.byId.get(m))).length === 1, hd.members.join(' '));
     st.S.b = st.emptyBallotState('');
   }
   // The Census answer keeps the point and the block's interior point, for the maps only.

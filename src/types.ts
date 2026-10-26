@@ -133,6 +133,10 @@ export interface Endorser {
   paywall_note_ok?: false;
   /* This source's own wording for the note, when the data gives one; otherwise the app's. */
   paywall_note?: string;
+  /* A source whose site shows a bot check to anything that isn't a browser (Oct 25): read like a paywall,
+     "Couldn't read". blocked_note is its one line; absent, the app's. Absent = not blocked. */
+  blocked?: true;
+  blocked_note?: string;
   /* The place ids in the source's own geography, when it names any (a regional paper, even one that
      also picks statewide races, or a county party). Absent when it names none, and for a party or
      group whose geography names its state (a statewide group). "Not checked yet" on a district race
@@ -299,10 +303,25 @@ export interface MapMeta {
   fetched: string;
 }
 
+/* How covered a ballot is, counted by build-data (scripts/coverage.mjs) over the ballot the app builds for
+   that place, or for the state alone. local_* are the place's own sources (its home_places), or for a
+   state its statewide ones; checked is the newest endorsement row's date. */
+export interface Coverage {
+  sources: number;
+  with_picks: number;
+  local_sources: number;
+  local_with_picks: number;
+  checked: string | null;
+}
+export interface PlaceCoverage extends Coverage {
+  /* the place's own races a voter decides, and how many of them have a pick from anyone */
+  local_races: number;
+  local_races_with_picks: number;
+}
 export interface Index {
   generated: string;
-  states: Record<string, { name: string; as_of: string | null; election_date: string; official_site: Src; places: string[] }>;
-  places: Record<string, { label: string; state: string; counties: string[]; local_count: number; maps?: string[] }>;
+  states: Record<string, { name: string; as_of: string | null; election_date: string; official_site: Src; places: string[] } & Coverage>;
+  places: Record<string, { label: string; state: string; counties: string[]; local_count: number; maps?: string[] } & PlaceCoverage>;
   zips: Record<string, string[]>;
   /* true when data/get-involved.json was bundled (the app never asks for a file that isn't there) */
   involved?: boolean;

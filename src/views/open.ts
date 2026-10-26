@@ -8,10 +8,10 @@ import { lineup, weighedIn, orderCandidates, type Lineup } from '../model/tally'
 import { candidateReview, judicialReview, judgesLead, surveyLines, surveySentence, pollsFor, raceRatings, hasRatings, type Review } from '../model/judges';
 import { seatLabel, cheatTitle, thresholdLabel } from '../model/labels';
 import { picksOnBallot } from '../model/lens';
-import { sourceLean, leanHTML, ext, clampP, escP, sampleBallot, isOpen, leadRest, wordsSrc, reportAttrs, paywallRowHTML } from './common';
+import { sourceLean, leanHTML, ext, clampP, escP, sampleBallot, isOpen, leadRest, wordsSrc, reportAttrs, paywallRowHTML, blockedRowHTML } from './common';
 import { headsUp, headsHTML, addressCount } from './ledger';
 import { schoolOf } from '../model/address';
-import { mapSettles } from '../model/maps';
+import { mapSettles, seatless } from '../model/maps';
 
 /* "Report a problem" on a row and in its Full details: the report sheet, prefilled with this row (its
    title, and its id for the form). */
@@ -46,7 +46,8 @@ function mayHTML(it: Item, scope: string, same: number, allLabel: string): strin
   const addr = addressSettles(it) && !S.b.addrNote && addressCount() > 0;
   const btns = [
     addr ? `<button class="mini dark" data-act="addr-open" data-fk="ma-${esc(it.id)}">Check with my address</button>` : '',
-    sb ? `<a class="mini${addr ? '' : ' dark'}" href="${esc(sb.url)}" target="_blank" rel="noopener">Official sample ballot</a>` : '',
+    // A plain link: the head's notice has the one sample-ballot button on the screen (Kevin, Oct 25).
+    sb ? `<a class="linkbtn" href="${esc(sb.url)}" target="_blank" rel="noopener">Official sample ballot</a>` : '',
     `<button class="mini" data-act="notmine" data-id="${esc(it.id)}" data-fk="nm-${esc(it.id)}">It’s not on my ballot</button>`,
   ].join('');
   return `<div class="may"><p><b>Only on some ballots.</b> ${escP(scope)}</p>
@@ -67,7 +68,7 @@ function whereHTML(it: Item): string {
     const grp = b.groups.find((x) => x.key === g)!;
     // Who chose the district: the address lookup, or you. A district with two seats is one answer.
     if (ans === it.id || (ans && ans !== '*' && ans !== 'none' && sameSeat(b.byId.get(ans), it))) {
-      const where = (seatLabel(b.byId.get(ans) as Contest) || 'this district').replace(/,\s*Position \d+$/i, '');
+      const where = seatless(seatLabel(b.byId.get(ans) as Contest) || 'this district');
       return `<p class="ob-meta">${(S.b.addrSet || []).includes(g) ? 'Your address puts you in' : 'You said you’re in'} ${esc(where)}. <button class="linkbtn" data-act="district-change" data-g="${esc(g)}">Change</button></p>`;
     }
     return `<p class="ob-meta"><b>Maybe on your ballot.</b> You weren’t sure of your ${esc(grp.office)} district, so all ${grp.members.length} show. ${escP(it.scope_plain)} <button class="linkbtn" data-act="district-change" data-g="${esc(g)}">Choose one</button></p>`;
@@ -104,7 +105,7 @@ function quietLines(l: Lineup, it: Item, picked = true): string {
   // Called once per open row, so a chosen paywalled source with no readable record here (none, or
   // one marked unreadable) gets its note once (Kevin, Oct 19). One whose record says it was read is
   // named by that record's state instead.
-  const pw = paywallRowHTML(l.paywalled, cheatTitle(it));
+  const pw = paywallRowHTML(l.paywalled, cheatTitle(it)) + blockedRowHTML(l.blocked, cheatTitle(it));
   return `${out.length ? `<p class="gridnote">${out.join(' ')}</p>` : ''}${pw}`;
 }
 /* Where a source's word on this race lives (Kevin, Oct 20: let people click through to the source):
@@ -445,8 +446,8 @@ function multiJudgeHTML(c: Contest): string {
         ${isOpen(bk) ? `<div class="j-more">${reviewHTML(r, k)}${k.background ? `<p class="small">${escP(k.background)}</p>` : ''}${!r && k.own_words[0] ? `<p class="small">${escP(k.own_words[0].text)} ${wordsSrc(k.own_words[0])}</p>` : ''}</div>` : ''}</li>`;
     }).join('')}</ul>${pwOnly(c)}`;
 }
-/* A row whose sources made no readable pick still names its paywalled ones, once (Kevin, Oct 19). */
-const pwOnly = (it: Item): string => paywallRowHTML(lineup(it).paywalled, cheatTitle(it));
+/* A row whose sources made no readable pick still names its paywalled and bot-checked ones, once (Kevin, Oct 19). */
+const pwOnly = (it: Item): string => { const l = lineup(it); return paywallRowHTML(l.paywalled, cheatTitle(it)) + blockedRowHTML(l.blocked, cheatTitle(it)); };
 /* Sources' yes/no on a measure or a judge, as a two-column grid. */
 function sourcesYesNo(it: Item): string {
   const l = lineup(it);

@@ -6,6 +6,7 @@ import { S, emptyBallotState, noSections, persist, leaveLast, leftBallot, savedB
 import { buildBallot, entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, rankMax, decisionItems, chosenIds, sectionOf, sameSeat, type Ballot } from './ballot';
 import { zipState, censusLookup, placeFromGeo, settleAddress, withPlace, tidyAddress, type GeoResult } from './geo';
 import { toast, hideToast } from './util';
+import { keepPrivate } from './errors';
 import { render, renderBallot, renderAddr, anchored, $ } from './render';
 import { setInvolved, type GetInvolved } from './views/pass';
 import { planAgree, applyFills, planParty, planSetup, forgetUndo, fillStands, canUndo } from './model/bulk';
@@ -446,6 +447,7 @@ export function reopenAddr(): void {
 }
 export async function runAddress(addr: string): Promise<void> {
   typedAddr = addr;
+  keepPrivate(addr); // a crash report that mentions it never leaves (errors.ts)
   const choosing = S.view !== 'ballot' && S.zipChoice;
   const b = S.view === 'ballot' ? S.ballot : null;
   const door = !b && !choosing;
@@ -458,12 +460,15 @@ export async function runAddress(addr: string): Promise<void> {
   const st = door ? (typedZip ? zipState(typedZip) : null) : choosing && S.zipChoice ? S.index!.places[S.zipChoice.placeIds[0]]?.state || null : b!.st;
   const zip = door ? typedZip : choosing && S.zipChoice ? S.zipChoice.zip : S.b.zip || null;
   const full = withPlace(addr, st, zip);
+  keepPrivate(full);
   let list: GeoResult[];
   try {
     list = await censusLookup(full);
     if (!list.length && full !== addr.trim()) list = await censusLookup(addr.trim());
   }
   catch { addrFailed('The Census lookup didn’t answer.', 'down'); return; }
+  // What the Census matched, as it sent it and as the page shows it ("Found:", "Which one is yours?").
+  keepPrivate(...list.flatMap((r) => [r.matched, tidyAddress(r.matched)]));
   S.ui.addrBusy = false;
   if (!list.length) { addrFailed('The Census lookup couldn’t find that address. Try adding the city and ZIP.', 'miss'); return; }
   // Several matches (an address typed without its city can match more than one): "Which one is

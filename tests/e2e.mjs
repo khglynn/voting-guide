@@ -2059,6 +2059,12 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
   for (const zip of ['63110', THIN ? THIN.zip : null].filter(Boolean)) {
     const { ctx, page } = await newPage({ viewport: { width: 390, height: 844 } });
     await openZip(page, zip);
+    // Wait for the ZIP's lookup to land first (its card shows in step 1). On a touch screen a lookup that
+    // lands moves focus from the ZIP box to step 2's heading (app.ts dropKeypad, so the keyboard drops), and
+    // press() is a focus and then a key: on CI's slower runner the lookup landed between the two, the Enter
+    // went to the heading and no ballot opened (Oct 26). A person can't hit that: with focus off the box the
+    // keyboard is gone, and a Go pressed before the lookup lands submits as usual.
+    await page.waitForSelector('#door .cov-card', { timeout: 15000 });
     await page.press('#zip', 'Enter');
     await page.waitForSelector('#plan', { timeout: 15000 });
     await page.waitForTimeout(200);

@@ -275,12 +275,34 @@ export interface PlaceBundle {
   items: Item[];
   endorsers: Endorser[];
   endorsements: Record<string, Record<string, Endorsement>>;
+  /* the district maps this place's ballot reads after an address lookup (data/maps/, model/maps.ts) */
+  maps?: MapMeta[];
+}
+
+/* One rule of a district map: the races it settles (office, and scope when the rule names one, both
+   regexes) and the district a feature's answer names ("Precinct {commissioner}"). */
+export interface SettleRule { office: string; scope?: string; district: string }
+/* A district map as the place bundle lists it (build-data, from data/maps/{area}/{kind}.json). The
+   boundaries themselves (`file`, TopoJSON under /data/) load only after an address lookup. */
+export interface MapMeta {
+  kind: string;
+  file: string;             // "maps/travis-county-tx/precincts.topo.json", under /data/
+  bytes: number;
+  name: string;             // "council district": what the address box calls it
+  title: string;
+  county: string | null;    // the county the map covers, when it is one county's
+  settles: SettleRule[];
+  shows: string | null;     // a line naming the feature itself: "Your voting precinct: {label} (Travis County)."
+  source_url: string;
+  source_org: string;
+  layer_dated: string | null;
+  fetched: string;
 }
 
 export interface Index {
   generated: string;
   states: Record<string, { name: string; as_of: string | null; election_date: string; official_site: Src; places: string[] }>;
-  places: Record<string, { label: string; state: string; counties: string[]; local_count: number }>;
+  places: Record<string, { label: string; state: string; counties: string[]; local_count: number; maps?: string[] }>;
   zips: Record<string, string[]>;
   /* true when data/get-involved.json was bundled (the app never asks for a file that isn't there) */
   involved?: boolean;

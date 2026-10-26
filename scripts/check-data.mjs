@@ -103,7 +103,9 @@ else {
 }
 if (report) {
   // A report older than the data describes some other data. Compare with every input the build reads.
-  const inputs = [...files(DATA), path.join(ROOT, 'scripts', 'build-data.mjs'), path.join(ROOT, 'scripts', 'config.json')].filter((f) => fs.existsSync(f));
+  // The district maps' boundaries are inputs too (.topojson beside each map's .json record).
+  const topos = fs.existsSync(path.join(DATA, 'maps')) ? fs.readdirSync(path.join(DATA, 'maps')).flatMap((a) => { const d = path.join(DATA, 'maps', a); return fs.statSync(d).isDirectory() ? fs.readdirSync(d).filter((x) => x.endsWith('.topojson')).map((x) => path.join(d, x)) : []; }) : [];
+  const inputs = [...files(DATA), ...topos, path.join(ROOT, 'scripts', 'build-data.mjs'), path.join(ROOT, 'scripts', 'config.json')].filter((f) => fs.existsSync(f));
   const newest = inputs.reduce((a, f) => { const t = fs.statSync(f).mtimeMs; return t > a.t ? { t, f } : a; }, { t: 0, f: '' });
   const built = Date.parse(report.generated);
   if (!Number.isFinite(built) || newest.t > built + 1000) err('build-report-stale', `build-report.json (${report.generated}) is older than ${path.relative(ROOT, newest.f)}: run \`npm run data\` again`);
@@ -394,6 +396,44 @@ for (const s of all.states) {
 }
 all.places.forEach((p) => shortOk(p.early_in_person?.hours_short, 20, `places/${p.id} early_in_person.hours_short`));
 all.endorsements.forEach((r) => walk(r, `${r._f} ${r.endorser_id}->${r.target_id}`));
+
+/* ---------- 10. district maps (data/maps/{area}/{kind}.json + .topojson, Oct 21) ----------
+   A map settles races by rule (office, scope, and the district its features name). Every rule must
+   reach a race on one of the map's places' ballots: a rule nobody reads is a lie waiting to happen.
+   And every race a rule claims must be named by some feature, or the map would call that race "not
+   on your ballot" for every voter, hiding it from the ones it belongs to. */
+const MAPS_DIR = path.join(DATA, 'maps');
+const daysBetween = (a, b) => Math.round((Date.parse(`${b}T00:00:00Z`) - Date.parse(`${a}T00:00:00Z`)) / 86400000);
+if (fs.existsSync(MAPS_DIR)) {
+  const byId = new Map(all.contests.map((c) => [c.id, c]));
+  const placeById = new Map(all.places.map((p) => [p.id, p]));
+  const fill = (tpl, p) => { let ok = true; const s = tpl.replace(/\{(\w+)\}/g, (_m, k) => { if (p[k] == null || p[k] === '') ok = false; return p[k] ?? ''; }); return ok ? s : null; };
+  const norm = (s) => String(s || '').replace(/\([^)]*\)/g, ' ').replace(/\s+/g, ' ').trim().toLowerCase();
+  for (const area of fs.readdirSync(MAPS_DIR).sort()) {
+    const dir = path.join(MAPS_DIR, area);
+    if (!fs.statSync(dir).isDirectory()) continue;
+    for (const f of fs.readdirSync(dir).filter((x) => x.endsWith('.json')).sort()) {
+      const where = `maps/${area}/${f}`;
+      const meta = load(path.join(dir, f));
+      if (!meta) continue;
+      const kind = path.basename(f, '.json');
+      let topo = null;
+      try { topo = JSON.parse(fs.readFileSync(path.join(dir, `${kind}.topojson`), 'utf8')); } catch { err('map-unreadable', `${where}: no readable ${kind}.topojson beside it`); continue; }
+      const feats = ((topo.objects || {})[kind] || {}).geometries || [];
+      const ballot = (meta.places || []).flatMap((id) => (placeById.get(id)?.contest_ids || []).map((cid) => byId.get(cid)).filter(Boolean));
+      for (const r of Array.isArray(meta.settles) ? meta.settles : []) {
+        let o, s;
+        try { o = new RegExp(r.office, 'i'); s = r.scope ? new RegExp(r.scope, 'i') : null; } catch { err('map-rule-invalid', `${where}: ${JSON.stringify(r)}`); continue; }
+        const hits = [...new Map(ballot.filter((c) => o.test(c.office || '') && (!s || s.test(c.scope_plain || ''))).map((c) => [c.id, c])).values()];
+        if (!hits.length) { err('map-settles-nothing', `${where}: "${r.office}"${r.scope ? ` in "${r.scope}"` : ''} matches no race on ${(meta.places || []).join(', ')}`); continue; }
+        const named = new Set(feats.map((g) => fill(r.district, g.properties || {})).filter(Boolean).map(norm));
+        for (const c of hits) if (!named.has(norm(c.district))) err('map-race-unreachable', `${where}: ${c.id} (${c.district}) is claimed by "${r.office}", but no feature names "${norm(c.district)}", so the map would take it off every ballot`);
+      }
+      if (isoOk(meta.redistricted) && isoOk(meta.layer_dated) && meta.layer_dated < meta.redistricted) warn('map-older-than-redistricting', `${where}: lines dated ${meta.layer_dated}, last redistricted ${meta.redistricted}`);
+      if (isoOk(meta.fetched) && daysBetween(meta.fetched, TODAY) > 30) warn('map-fetched-long-ago', `${where}: fetched ${meta.fetched}; counties split precincts before elections, so pull it again (node scripts/maps/pull.mjs ${area})`);
+    }
+  }
+}
 
 /* ---------- report with the ratchet ---------- */
 // WARN rules ratchet by count. ERROR rules ratchet by exact finding, so fixing one old problem

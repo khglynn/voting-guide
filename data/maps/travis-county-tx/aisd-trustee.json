@@ -1,0 +1,161 @@
+{
+  "kind": "aisd-trustee",
+  "name": "Austin ISD trustee district",
+  "title": "Austin ISD trustee single-member districts",
+  "places": [
+    "austin-tx"
+  ],
+  "county": "Travis",
+  "source_url": "https://taxmaps.traviscountytx.gov/arcgis/rest/services/SchoolSMD/MapServer/0",
+  "source_org": "Travis County Tax Office",
+  "plan": "Austin ISD's single-member districts, redrawn in 2022. The layer carries no edit date.",
+  "layer_dated": null,
+  "fetched": "2026-10-21",
+  "license": "none stated",
+  "label_property": "SMD",
+  "features": 7,
+  "left_out": [
+    "Elgin ISD SMD 4",
+    "Elgin ISD SMD 5",
+    "Elgin ISD SMD 6",
+    "Del Valle ISD SMD 0",
+    "Del Valle ISD SMD 1",
+    "Del Valle ISD SMD 2",
+    "Del Valle ISD SMD 3",
+    "Del Valle ISD SMD 4",
+    "Del Valle ISD SMD 5",
+    "Del Valle ISD SMD 6",
+    "Del Valle ISD SMD 7",
+    "Del Valle ISD SMD 8",
+    "Del Valle ISD SMD 9"
+  ],
+  "simplified": "Douglas-Peucker to 10 m, TopoJSON quantized to 100000 steps across the map",
+  "bytes": 16909,
+  "checked": {
+    "on": "2026-10-21",
+    "simplified_vs_original": {
+      "points": 415,
+      "agree": 415,
+      "more_than_m_from_a_line": 12
+    },
+    "public_buildings": [
+      {
+        "name": "Austin City Hall",
+        "answer": "5",
+        "by": "both"
+      },
+      {
+        "name": "Travis County courthouse",
+        "answer": "5",
+        "by": "both"
+      },
+      {
+        "name": "Austin Central Library",
+        "answer": "5",
+        "by": "both"
+      },
+      {
+        "name": "Texas State Capitol",
+        "answer": "5",
+        "by": "both"
+      },
+      {
+        "name": "Carver Branch Library",
+        "answer": "1",
+        "by": "both"
+      },
+      {
+        "name": "Southeast Branch Library",
+        "answer": "2",
+        "by": "both"
+      },
+      {
+        "name": "Pleasant Hill Branch Library",
+        "answer": "6",
+        "by": "both"
+      },
+      {
+        "name": "Manchaca Road Branch Library",
+        "answer": "7",
+        "by": "both"
+      },
+      {
+        "name": "Twin Oaks Branch Library",
+        "answer": "5",
+        "by": "both"
+      },
+      {
+        "name": "North Village Branch Library",
+        "answer": "4",
+        "by": "both"
+      },
+      {
+        "name": "Little Walnut Creek Branch Library",
+        "answer": "3",
+        "by": "both"
+      },
+      {
+        "name": "St. John Branch Library",
+        "answer": "1",
+        "by": "both"
+      },
+      {
+        "name": "Windsor Park Branch Library",
+        "answer": "1",
+        "by": "both"
+      },
+      {
+        "name": "University Hills Branch Library",
+        "answer": "1",
+        "by": "both"
+      },
+      {
+        "name": "Cepeda Branch Library",
+        "answer": "2",
+        "by": "both"
+      },
+      {
+        "name": "Terrazas Branch Library",
+        "answer": "2",
+        "by": "both"
+      },
+      {
+        "name": "Old Quarry Branch Library",
+        "answer": "4",
+        "by": "both"
+      },
+      {
+        "name": "Milwood Branch Library",
+        "answer": "4",
+        "by": "both"
+      },
+      {
+        "name": "Hampton Branch Library at Oak Hill",
+        "answer": "7",
+        "by": "both"
+      },
+      {
+        "name": "Howson Branch Library",
+        "answer": "5",
+        "by": "both"
+      },
+      {
+        "name": "Willie Mae Kirk Branch Library",
+        "answer": "1",
+        "by": "both"
+      },
+      {
+        "name": "Travis County Clerk elections office",
+        "answer": "3",
+        "by": "both"
+      }
+    ]
+  },
+  "settles": [
+    {
+      "office": "^Austin ISD Trustee$",
+      "scope": "\\btrustee District \\d",
+      "district": "District {label}"
+    }
+  ]
+}

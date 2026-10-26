@@ -1,0 +1,155 @@
+{
+  "about": "Public buildings only, never a home: each one's point and its 2020 Census block's interior point, as the Census geocoder returned them for the building's own address on Oct 21, 2026. The pull tests every map at these points with the same two-witness rule the site uses, and asks each map's own server what it says there. The street addresses aren't kept here: the coordinates are enough.",
+  "points": [
+    {
+      "name": "Austin City Hall",
+      "point": [-97.746669, 30.26496],
+      "block": [-97.7472987, 30.2646818],
+      "census_county": "Travis"
+    },
+    {
+      "name": "Travis County courthouse",
+      "point": [-97.744938, 30.272841],
+      "block": [-97.7452668, 30.2733857],
+      "census_county": "Travis"
+    },
+    {
+      "name": "Austin Central Library",
+      "point": [-97.751324, 30.265387],
+      "block": [-97.7515482, 30.2658926],
+      "census_county": "Travis"
+    },
+    {
+      "name": "Texas State Capitol",
+      "point": [-97.739754, 30.276442],
+      "block": [-97.7408622, 30.275562],
+      "census_county": "Travis"
+    },
+    {
+      "name": "Carver Branch Library",
+      "point": [-97.724274, 30.268949],
+      "block": [-97.7223505, 30.2702525],
+      "census_county": "Travis"
+    },
+    {
+      "name": "Ruiz Branch Library",
+      "point": [-97.706422, 30.230107],
+      "block": [-97.7074318, 30.2291223],
+      "census_county": "Travis"
+    },
+    {
+      "name": "Southeast Branch Library",
+      "point": [-97.742173, 30.187918],
+      "block": [-97.7377977, 30.1874643],
+      "census_county": "Travis"
+    },
+    {
+      "name": "Pleasant Hill Branch Library",
+      "point": [-97.777471, 30.192572],
+      "block": [-97.7751035, 30.1896988],
+      "census_county": "Travis"
+    },
+    {
+      "name": "Manchaca Road Branch Library",
+      "point": [-97.797184, 30.216054],
+      "block": [-97.7977375, 30.2172959],
+      "census_county": "Travis"
+    },
+    {
+      "name": "Twin Oaks Branch Library",
+      "point": [-97.76156, 30.249203],
+      "block": [-97.7623529, 30.2489598],
+      "census_county": "Travis"
+    },
+    {
+      "name": "North Village Branch Library",
+      "point": [-97.729522, 30.36187],
+      "block": [-97.7313017, 30.360849],
+      "census_county": "Travis"
+    },
+    {
+      "name": "Little Walnut Creek Branch Library",
+      "point": [-97.697753, 30.363332],
+      "block": [-97.6995876, 30.3609344],
+      "census_county": "Travis"
+    },
+    {
+      "name": "St. John Branch Library",
+      "point": [-97.693062, 30.33203],
+      "block": [-97.6952884, 30.3329943],
+      "census_county": "Travis"
+    },
+    {
+      "name": "Windsor Park Branch Library",
+      "point": [-97.690581, 30.311815],
+      "block": [-97.6884627, 30.3101321],
+      "census_county": "Travis"
+    },
+    {
+      "name": "University Hills Branch Library",
+      "point": [-97.666468, 30.309187],
+      "block": [-97.6667924, 30.3082285],
+      "census_county": "Travis"
+    },
+    {
+      "name": "Cepeda Branch Library",
+      "point": [-97.709896, 30.259101],
+      "block": [-97.7089389, 30.2590378],
+      "census_county": "Travis"
+    },
+    {
+      "name": "Terrazas Branch Library",
+      "point": [-97.73354, 30.260154],
+      "block": [-97.7338162, 30.2597885],
+      "census_county": "Travis"
+    },
+    {
+      "name": "Old Quarry Branch Library",
+      "point": [-97.755841, 30.35305],
+      "block": [-97.7551274, 30.3522237],
+      "census_county": "Travis"
+    },
+    {
+      "name": "Spicewood Springs Branch Library",
+      "point": [-97.772843, 30.433284],
+      "block": [-97.7748614, 30.4342692],
+      "census_county": "Williamson"
+    },
+    {
+      "name": "Milwood Branch Library",
+      "point": [-97.715718, 30.421612],
+      "block": [-97.7197523, 30.4239988],
+      "census_county": "Travis"
+    },
+    {
+      "name": "Hampton Branch Library at Oak Hill",
+      "point": [-97.85465, 30.218898],
+      "block": [-97.8559369, 30.2162514],
+      "census_county": "Travis"
+    },
+    {
+      "name": "Howson Branch Library",
+      "point": [-97.767486, 30.298019],
+      "block": [-97.7683386, 30.2988259],
+      "census_county": "Travis"
+    },
+    {
+      "name": "Willie Mae Kirk Branch Library",
+      "point": [-97.700283, 30.273116],
+      "block": [-97.7019194, 30.2716292],
+      "census_county": "Travis"
+    },
+    {
+      "name": "Travis County Clerk elections office",
+      "point": [-97.7127, 30.318766],
+      "block": [-97.710076, 30.3171941],
+      "census_county": "Travis"
+    },
+    {
+      "name": "Pflugerville City Hall",
+      "point": [-97.62035, 30.440786],
+      "block": [-97.6197108, 30.4409931],
+      "census_county": "Travis"
+    }
+  ]
+}

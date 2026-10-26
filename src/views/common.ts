@@ -1,13 +1,14 @@
 /* Small render helpers shared by every view. */
 import type { Endorser, Lean } from '../types';
-import { S } from '../state';
+import { S, type ShelfKind } from '../state';
 import { esc, host } from '../util';
 import { hasPaywallNote } from '../model/lens';
 
 /* "Report a problem" and "Request a city" go to a Google Form in Kevin's personal account (picked
-   Oct 16). Since Oct 21 they open a sheet in the guide (views/report.ts) that posts straight into the
+   Oct 16). Since Oct 21 they open the shelf in the guide (views/shelf.ts), which posts straight into the
    form, so its response sheet stays the one queue the city and fix pipeline reads. The address and
-   the five field ids live here, read from the form's own page on Oct 21. */
+   the five field ids live here, read from the form's own page on Oct 21 (none has a format rule, so
+   any text goes). */
 const FORM_AT = 'https://docs.google.com/forms/d/e/1FAIpQLSdTJFFXbh5ZlZzDmoqvbD5uGEKopuk2zy-nsl4dqmjNA65bOQ';
 export const FORM = {
   view: `${FORM_AT}/viewform`,
@@ -33,13 +34,16 @@ export function reportWhere(): string {
   const zip = b && S.view === 'ballot' ? S.b.zip : S.zip;
   return [b ? b.places.map((p) => p.label).join(' / ') || b.stateName : '', zip].filter(Boolean).join(', ');
 }
-/* What a control needs to open the sheet (actions.ts A.report): a report names the race or the page it
-   came from (`what`, and `tag`, the item or source id the form gets after it); a city request names
-   nothing. `fk` is where focus goes back when the sheet closes. */
-export function reportAttrs(o: { city?: boolean; what?: string; tag?: string; hint?: 'paywall'; fk: string }): string {
-  return ['data-act="report"', o.city ? 'data-kind="city"' : '', o.what ? `data-what="${esc(o.what)}"` : '', o.tag ? `data-tag="${esc(o.tag)}"` : '',
+/* What a control needs to open the shelf (actions.ts A.shelf): its opening, and for a report the race,
+   measure or source it came from (`what`, and `tag`, the item or source id the form gets after it).
+   `fk` is where focus goes back when the sheet closes. */
+export function shelfAttrs(o: { kind: ShelfKind; what?: string; tag?: string; hint?: 'paywall'; fk: string }): string {
+  return ['data-act="shelf"', `data-kind="${o.kind}"`, o.what ? `data-what="${esc(o.what)}"` : '', o.tag ? `data-tag="${esc(o.tag)}"` : '',
     o.hint ? `data-hint="${o.hint}"` : '', 'aria-haspopup="dialog"', `data-fk="${esc(o.fk)}"`].filter(Boolean).join(' ');
 }
+/* "Report a problem" (from a row, Full details, a paywalled source) or "Request a city". */
+export const reportAttrs = (o: { city?: boolean; what?: string; tag?: string; hint?: 'paywall'; fk: string }): string =>
+  shelfAttrs({ kind: o.city ? 'city' : 'report', what: o.what, tag: o.tag, hint: o.hint, fk: o.fk });
 
 /* The two switches, the same words wherever they show (step 2, the Edit sheet, the menu, the rail). */
 export const FILL = 'Fill in my ballot with their picks';
@@ -48,15 +52,12 @@ export const HIDE = 'Hide races I’ve decided';
    ballot's head reads "Endorsements: Off". */
 export const SHOW_ENDS = 'Show endorsements';
 
-/* The credit: Kevin's name, linked to his site, and a thank-you coffee while that has a link. The
-   first page names him in its small print ("where Kevin HG’s friends live"); every other page ends
-   "Made by Kevin HG · Buy Kevin a thank-you coffee", the same words as the first page's (Kevin,
-   Oct 21), with only the coffee as the link. */
+/* Kevin's name, linked to his site (the foot's first line, How this guide works), and the coffee the
+   shelf's Support offers: a plain link, so nothing third-party loads (Kevin, Oct 21: Support replaces
+   the foot's coffee line). */
 export const BUY_ME_A_COFFEE_URL = 'https://buymeacoffee.com/kevinhg';
 export const KEVIN_URL = 'https://kevinhg.com';
 export const kevinLink = (): string => ext(KEVIN_URL, 'Kevin HG');
-export const coffeeLink = (): string => (BUY_ME_A_COFFEE_URL ? `Buy Kevin a ${ext(BUY_ME_A_COFFEE_URL, 'thank-you coffee')}` : '');
-export const creditHTML = (): string => [`Made by ${kevinLink()}`, coffeeLink()].filter(Boolean).join(' · ');
 
 /* ---------- paywalled sources (Kevin, Oct 19) ----------
    A paper whose endorsements sit behind a paywall we couldn't read: the picks we only saw

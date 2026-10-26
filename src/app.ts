@@ -89,6 +89,15 @@ export function toDoor(): void {
   // The ZIP still in the box finds its place again (from the cache): the place line and the counts.
   if (/^\d{5}$/.test(S.zip)) void lookZip(S.zip);
 }
+/* A place picked from the shelf's list of cities while a ballot shows: the ballot is left as Change
+   leaves it (saved, remembered as left, and offered on the first page), before the place opens there. */
+export function leaveBallot(): void {
+  if (S.view !== 'ballot' || !S.ballot) return;
+  persist(true);
+  leaveLast();
+  S.doorSaved = leftBallot(decisionItems().filter((x) => x.done).length);
+  S.view = 'start'; // off the ballot now, so the place's load doesn't save this one again as the one to reopen
+}
 /* "Open my ballot" on the first page: the ballot you left, as you left it. */
 export async function openSaved(): Promise<void> {
   const d = S.doorSaved;

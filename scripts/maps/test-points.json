@@ -1,5 +1,5 @@
 {
-  "about": "Public buildings only, never a home: each one's point and its 2020 Census block's interior point, as the Census geocoder returned them for the building's own address on Oct 21, 2026 (Austin) and Oct 26, 2026 (Williamson County, Pflugerville's library and Dallas County). The pull tests every map at these points with the same two-witness rule the site uses, and asks each map's own server what it says there (a map made from a file is checked against the file's own lines). The street addresses aren't kept here: the coordinates are enough.",
+  "about": "Public buildings only, never a home: each one's point and its 2020 Census block's interior point, as the Census geocoder returned them for the building's own address on Oct 21, 2026 (Austin) and Oct 26, 2026 (Williamson County, Pflugerville's library, Dallas County and the Houston area). The pull tests every map at these points with the same two-witness rule the site uses, and asks each map's own server what it says there (a map made from a file is checked against the file's own lines). The street addresses aren't kept here: the coordinates are enough.",
   "points": [
     {
       "name": "Austin City Hall",
@@ -378,6 +378,144 @@
       "point": [-96.854751, 32.604322],
       "block": [-96.8503753, 32.6053907],
       "census_county": "Dallas"
+    },
+    {
+      "name": "Houston City Hall",
+      "point": [-95.369483, 29.760724],
+      "block": [-95.3689337, 29.7599317],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Harris County Civil Courthouse",
+      "point": [-95.357532, 29.761367],
+      "block": [-95.3574113, 29.7608118],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Harris County Administration Building",
+      "point": [-95.361246, 29.761519],
+      "block": [-95.3605937, 29.761618],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Kendall Neighborhood Library",
+      "point": [-95.621163, 29.771658],
+      "block": [-95.6227875, 29.773565],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Jungman Neighborhood Library",
+      "point": [-95.481794, 29.737967],
+      "block": [-95.4808798, 29.7403812],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Montrose Neighborhood Library",
+      "point": [-95.391208, 29.736109],
+      "block": [-95.3918301, 29.7357317],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Heights Neighborhood Library",
+      "point": [-95.397694, 29.794464],
+      "block": [-95.397138, 29.7953068],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Acres Homes Neighborhood Library",
+      "point": [-95.436713, 29.870768],
+      "block": [-95.437819, 29.8713235],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Kashmere Gardens Neighborhood Library",
+      "point": [-95.316839, 29.806002],
+      "block": [-95.3150285, 29.8067388],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Stanaker Neighborhood Library",
+      "point": [-95.302896, 29.739842],
+      "block": [-95.3037293, 29.7403708],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Freeman Neighborhood Library",
+      "point": [-95.120055, 29.558982],
+      "block": [-95.119339, 29.5579301],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Mancuso Neighborhood Library",
+      "point": [-95.310414, 29.667796],
+      "block": [-95.3103999, 29.6690962],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Moody Neighborhood Library",
+      "point": [-95.362662, 29.847274],
+      "block": [-95.3646541, 29.8470374],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Lakewood Neighborhood Library",
+      "point": [-95.26731, 29.841252],
+      "block": [-95.271766, 29.8387942],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Kingwood Branch Library",
+      "point": [-95.180864, 30.043121],
+      "block": [-95.1833165, 30.0443789],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Tuttle Neighborhood Library",
+      "point": [-95.307465, 29.776423],
+      "block": [-95.30792, 29.7755976],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Melcher Neighborhood Library",
+      "point": [-95.289986, 29.706347],
+      "block": [-95.2894527, 29.7059509],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Collier Regional Library",
+      "point": [-95.4824, 29.840414],
+      "block": [-95.4829993, 29.8410258],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Robinson-Westchase Neighborhood Library",
+      "point": [-95.57159, 29.729198],
+      "block": [-95.5698433, 29.7285324],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Pasadena City Hall",
+      "point": [-95.196168, 29.694149],
+      "block": [-95.1986908, 29.6948517],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Baytown City Hall",
+      "point": [-94.996788, 29.72841],
+      "block": [-94.9938812, 29.7264295],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Bellaire City Hall",
+      "point": [-95.467963, 29.703379],
+      "block": [-95.4692773, 29.7026546],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Missouri City City Hall",
+      "point": [-95.527021, 29.605514],
+      "block": [-95.529511, 29.6041739],
+      "census_county": "Fort Bend"
     }
   ]
 }

@@ -1,0 +1,102 @@
+{
+  "area": "dallas-county-tx",
+  "about": "Dallas County's 2026 voting precincts, merged by the districts each one's ballot is built from. Pull with: node scripts/maps/pull.mjs dallas-county-tx",
+  "simplify_m": 10,
+  "layers": [
+    {
+      "kind": "county-districts",
+      "name": "county precinct",
+      "title": "Dallas County commissioner, justice of the peace and constable, and State Board of Education districts, from the county's 2026 voting precincts",
+      "places": [
+        "dallas-tx"
+      ],
+      "county": "Dallas",
+      "source_url": "https://services3.arcgis.com/zqe2kwz79KUqUvxC/arcgis/rest/services/Election_Precincts_2025/FeatureServer/0",
+      "source_org": "Dallas County",
+      "plan": "Dallas County's 791 voting precincts for 2026, approved by the Commissioners Court in December 2025. Each carries the commissioner, justice of the peace and State Board of Education district the county builds its ballots from; precincts with the same three are merged here, so their outer lines are the precincts' own. Constable precincts are the justice of the peace precincts: the Texas Constitution (art. V, sec. 18) has each justice precinct elect one constable, and the county's justice of the peace layer names precinct N's constable as constable precinct N.",
+      "plan_source": "https://www.dallascountyvotes.org/public-information/precincts-maps/",
+      "dated_service": true,
+      "dissolve": [
+        "Comm",
+        "JP",
+        "SBOE"
+      ],
+      "label": {
+        "field": "JP",
+        "match": "^([1-5])$"
+      },
+      "props": {
+        "commissioner": {
+          "field": "Comm",
+          "match": "^([1-4])$"
+        },
+        "jp": {
+          "field": "JP",
+          "match": "^([1-5])$"
+        },
+        "sboe": {
+          "field": "SBOE",
+          "match": "^(\\d+)$"
+        }
+      },
+      "settles": [
+        {
+          "office": "^County Commissioner$",
+          "scope": "\\bDallas County\\b",
+          "district": "Precinct {commissioner}"
+        },
+        {
+          "office": "^Justice of the Peace$",
+          "scope": "\\bDallas County\\b",
+          "district": "Precinct {jp}"
+        },
+        {
+          "office": "^Constable$",
+          "scope": "\\bDallas County\\b",
+          "district": "Precinct {jp}"
+        },
+        {
+          "office": "State Board of Education",
+          "district": "SBOE District {sboe}"
+        }
+      ],
+      "agree": [
+        {
+          "what": "the county's commissioner precincts (the 2021 plan)",
+          "source_url": "https://services3.arcgis.com/zqe2kwz79KUqUvxC/arcgis/rest/services/COMM/FeatureServer/0",
+          "label": {
+            "field": "DISTRICT",
+            "match": "^([1-4])$"
+          },
+          "compare": "commissioner"
+        },
+        {
+          "what": "the county's justice of the peace and constable precincts (the 2021 plan)",
+          "source_url": "https://services3.arcgis.com/zqe2kwz79KUqUvxC/arcgis/rest/services/JP/FeatureServer/0",
+          "label": {
+            "field": "DISTRICT",
+            "match": "^([1-5])$"
+          },
+          "compare": "jp"
+        },
+        {
+          "what": "the county's copy of the State Board of Education plan",
+          "source_url": "https://services3.arcgis.com/zqe2kwz79KUqUvxC/arcgis/rest/services/SBOE/FeatureServer/0",
+          "label": {
+            "field": "District",
+            "match": "^(\\d+)$"
+          },
+          "compare": "sboe"
+        }
+      ],
+      "expect": {
+        "Old Red Courthouse": {
+          "commissioner": "3",
+          "jp": "1",
+          "sboe": "13"
+        }
+      }
+    }
+  ],
+  "test_points": "test-points.json"
+}

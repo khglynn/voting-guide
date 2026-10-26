@@ -1,5 +1,5 @@
 {
-  "about": "Public buildings only, never a home: each one's point and its 2020 Census block's interior point, as the Census geocoder returned them for the building's own address on Oct 21, 2026 (Austin) and Oct 26, 2026 (Williamson County and Pflugerville's library). The pull tests every map at these points with the same two-witness rule the site uses, and asks each map's own server what it says there (a map made from a file is checked against the file's own lines). The street addresses aren't kept here: the coordinates are enough.",
+  "about": "Public buildings only, never a home: each one's point and its 2020 Census block's interior point, as the Census geocoder returned them for the building's own address on Oct 21, 2026 (Austin) and Oct 26, 2026 (Williamson County, Pflugerville's library and Dallas County). The pull tests every map at these points with the same two-witness rule the site uses, and asks each map's own server what it says there (a map made from a file is checked against the file's own lines). The street addresses aren't kept here: the coordinates are enough.",
   "points": [
     {
       "name": "Austin City Hall",
@@ -228,6 +228,156 @@
       "point": [-97.679509, 30.606696],
       "block": [-97.6791808, 30.6163328],
       "census_county": "Williamson"
+    },
+    {
+      "name": "Dallas City Hall",
+      "point": [-96.795839, 32.776661],
+      "block": [-96.7955378, 32.7761397],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Old Red Courthouse",
+      "point": [-96.807801, 32.778775],
+      "block": [-96.8073148, 32.7785446],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "George Allen Courts Building",
+      "point": [-96.806296, 32.778291],
+      "block": [-96.8061869, 32.7779826],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Dallas Central Library",
+      "point": [-96.794933, 32.778322],
+      "block": [-96.7956504, 32.7786491],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Dallas County Elections office",
+      "point": [-96.879079, 32.837462],
+      "block": [-96.8779238, 32.8361119],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Bachman Lake Branch Library",
+      "point": [-96.857883, 32.861039],
+      "block": [-96.8572957, 32.8624569],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Lochwood Branch Library",
+      "point": [-96.68747, 32.848374],
+      "block": [-96.6888165, 32.8479504],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Oak Lawn Branch Library",
+      "point": [-96.812442, 32.812057],
+      "block": [-96.8123269, 32.8129542],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Pleasant Grove Branch Library",
+      "point": [-96.695765, 32.734157],
+      "block": [-96.6962154, 32.7293589],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Highland Hills Branch Library",
+      "point": [-96.761411, 32.670759],
+      "block": [-96.7537295, 32.6703412],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Fretz Park Branch Library",
+      "point": [-96.784852, 32.949878],
+      "block": [-96.7883392, 32.9470393],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Kleberg-Rylie Branch Library",
+      "point": [-96.600127, 32.686407],
+      "block": [-96.6048743, 32.6865435],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Dallas West Branch Library",
+      "point": [-96.859695, 32.778639],
+      "block": [-96.8591554, 32.7777855],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Polk-Wisdom Branch Library",
+      "point": [-96.841599, 32.661497],
+      "block": [-96.840948, 32.6608617],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "North Oak Cliff Branch Library",
+      "point": [-96.826584, 32.745007],
+      "block": [-96.8273867, 32.7446032],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Preston Royal Branch Library",
+      "point": [-96.813416, 32.89475],
+      "block": [-96.816269, 32.8936344],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Forest Green Branch Library",
+      "point": [-96.748374, 32.909295],
+      "block": [-96.7524826, 32.9118759],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Audelia Road Branch Library",
+      "point": [-96.718016, 32.885276],
+      "block": [-96.7187061, 32.8853462],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Renner Frankford Branch Library",
+      "point": [-96.795109, 32.998108],
+      "block": [-96.7947134, 32.9962986],
+      "census_county": "Collin"
+    },
+    {
+      "name": "Irving City Hall",
+      "point": [-96.936827, 32.812911],
+      "block": [-96.9368868, 32.8134086],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Garland City Hall",
+      "point": [-96.636487, 32.913402],
+      "block": [-96.6350887, 32.9149993],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Mesquite City Hall",
+      "point": [-96.59929, 32.773605],
+      "block": [-96.6001869, 32.7740814],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Grand Prairie City Hall",
+      "point": [-97.005906, 32.745466],
+      "block": [-97.0061817, 32.7457298],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Richardson City Hall",
+      "point": [-96.731202, 32.96066],
+      "block": [-96.7313566, 32.9597021],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "DeSoto Town Center",
+      "point": [-96.854751, 32.604322],
+      "block": [-96.8503753, 32.6053907],
+      "census_county": "Dallas"
     }
   ]
 }

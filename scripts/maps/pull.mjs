@@ -194,6 +194,9 @@ function edgeIndex(fc) {
   };
 }
 
+/* Two features' properties as the site reads them (label and every manifest property), in any order. */
+const sameProps = (a, b) => JSON.stringify(Object.entries(a).sort()) === JSON.stringify(Object.entries(b).sort());
+
 /* ---------- one layer ---------- */
 const points = manifest.test_points ? JSON.parse(fs.readFileSync(path.join(HERE, manifest.test_points), 'utf8')).points : [];
 const kb = (n) => `${(n / 1024).toFixed(1)} KB`;
@@ -274,9 +277,13 @@ for (const layer of manifest.layers) {
       if (d < maps.NEAR_M) near++;
       if (d <= SIMPLIFY + 2) continue;
       samples++;
-      const at = maps.pointIn(shipped, lon, lat);
-      if (at === f.properties.label) agree++;
-      else if (wrong.length < 8) wrong.push(`${f.properties.label} at ${lon.toFixed(5)},${lat.toFixed(5)} (${d.toFixed(0)} m from a line) reads ${at}`);
+      // Every property a rule reads must match, not just the label: a dissolved map's pieces share
+      // labels (one JP precinct holds several commissioner and SBOE pieces), so a label alone could
+      // miss a commissioner or SBOE line moved by the simplifying (Codex on #25).
+      const hits = maps.featuresAt(shipped, lon, lat);
+      const there = hits.length === 1 ? hits[0].properties : null;
+      if (there && sameProps(there, f.properties)) agree++;
+      else if (wrong.length < 8) wrong.push(`${JSON.stringify(f.properties)} at ${lon.toFixed(5)},${lat.toFixed(5)} (${d.toFixed(0)} m from a line) reads ${there ? JSON.stringify(there) : `${hits.length} features`}`);
     }
     if (!got) problems.push(`no sample point landed inside ${f.properties.label}`);
   }

@@ -137,9 +137,12 @@ async function oracle(st, placeIds) {
   const here = pbs.flatMap((p) => [p.label, ...p.counties]).map((x) => x.replace(/\s*\(.*\)$/, '').replace(/\s+County$/i, '').toLowerCase());
   return { items, byId, groups, kinds: Object.fromEntries(items.map((i) => [i.id, kindOf(i)])), titles: sheetTitles(items, here) };
 }
-/* Two seats of one district ("LD-32 Position 1" and "Position 2") are one answer: both show. */
-const seatBase = (o, id) => { const d = (o.byId.get(id)?.district || ''); return /\s+Position\s+\d+$/i.test(d) ? d.replace(/\s+Position\s+\d+$/i, '') : ''; };
-const sameSeat = (o, a, b) => a !== b && !!seatBase(o, a) && seatBase(o, a) === seatBase(o, b);
+/* Two seats of one district are one answer, and both show: "LD-32 Position 1" and "Position 2", a
+   Dallas JP precinct's "Precinct 1, Place 1" and "Place 2". The same rule as the app's (model/maps.ts
+   seatless, ballot.ts sameSeat): a seat suffix, the same district without it, the same office. */
+const SEAT_SUFFIX = /,?\s+(?:position|place)\s+\d+$/i;
+const seatBase = (o, id) => { const d = (o.byId.get(id)?.district || ''); return SEAT_SUFFIX.test(d) ? d.replace(SEAT_SUFFIX, '') : ''; };
+const sameSeat = (o, a, b) => a !== b && (o.byId.get(a)?.office ?? 1) === (o.byId.get(b)?.office ?? 2) && !!seatBase(o, a) && seatBase(o, a) === seatBase(o, b);
 /* What should be on screen for a set of district answers (group key -> member id or '*'). */
 function expected(o, answers) {
   const hidden = new Set();

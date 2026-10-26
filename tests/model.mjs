@@ -552,6 +552,31 @@ function roundTrip(name, stCode, places, mutate) {
     check('maps, ownership: "Not sure" on Del Valle’s trustees, and the Census says Austin ISD: answered "none"', S().districts['school|Del Valle ISD Trustee'] === 'none', JSON.stringify(S().districts));
     st.S.b = st.emptyBallotState('');
   }
+  // A district's seats (Oct 26): Dallas elects two justices of the peace in each precinct ("Precinct 1,
+  // Place 1" and "Place 2"), both on every ballot in that precinct, as Washington elects two
+  // representatives per district ("Position 1" and "Position 2"). One answer must show both.
+  {
+    const da = open('TX', ['dallas-tx']);
+    const jp = da.groups.find((g) => g.key === 'judicial|Justice of the Peace');
+    st.S.ui.row = `q:${jp.key}`;
+    const qh = views.ledger.sectionHTML('judicial', bl.entriesBySection().get('judicial') || []);
+    const picks = [...qh.matchAll(/data-act="district" data-g="judicial\|Justice of the Peace" data-v="(tx-dallas-jp-[^"]+)"[^>]*><b>([^<]*)<\/b>/g)].map((m) => `${m[1]}=${m[2]}`);
+    check('seats: Dallas’s JP question offers each precinct once, by its precinct, and counts 5 districts',
+      picks.join(' | ') === 'tx-dallas-jp-1-1=Precinct 1 | tx-dallas-jp-2-1=Precinct 2 | tx-dallas-jp-3-1=Precinct 3 | tx-dallas-jp-4-1=Precinct 4 | tx-dallas-jp-5-1=Precinct 5' && /Dallas has 5 of these districts\./.test(qh), picks.join(' | '));
+    st.S.ui.row = null;
+    st.S.b.districts[jp.key] = 'tx-dallas-jp-3-1';
+    const shown = (bl.entriesBySection().get('judicial') || []).filter((e) => e.t === 'item' && /dallas-jp/.test(e.id)).map((e) => e.id);
+    check('seats: answering Precinct 3 shows both of its places, and no other precinct’s', shown.join(' ') === 'tx-dallas-jp-3-1 tx-dallas-jp-3-2', shown.join(' '));
+    const gl = views.ledger.sectionHTML('judicial', bl.entriesBySection().get('judicial') || []).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+    check('seats: and the answered question names the precinct, not one place', /Justice of the Peace: Precinct 3 Change/.test(gl), gl.slice(0, 160));
+    check('seats: places of different offices, or of different precincts, aren’t one seat',
+      !bl.sameSeat(da.byId.get('tx-dallas-jp-3-1'), da.byId.get('tx-dallas-jp-4-2')) && bl.sameSeat(da.byId.get('tx-dallas-jp-3-1'), da.byId.get('tx-dallas-jp-3-2')));
+    const se = open('WA', ['seattle-wa']);
+    const hd = se.groups.find((g) => /State Representative/.test(g.office));
+    const a = se.byId.get(hd.members[0]);
+    check('seats: Washington’s two House positions per district are still one seat', hd.members.filter((m) => bl.sameSeat(a, se.byId.get(m))).length === 1, hd.members.join(' '));
+    st.S.b = st.emptyBallotState('');
+  }
   // The Census answer keeps the point and the block's interior point, for the maps only.
   const g = geo.parseCensus({ result: { addressMatches: [{ matchedAddress: 'TEST CITY HALL, AUSTIN, TX, 78701', coordinates: { x: -97.746669, y: 30.26496 }, geographies: { States: [{ STATE: '48' }], '2020 Census Blocks': [{ INTPTLAT: '+30.2646818', INTPTLON: '-097.7472987' }] } }] } })[0];
   check('maps: parseCensus keeps the point and the block’s interior point', g.point.lon === -97.746669 && g.point.lat === 30.26496 && g.block.lon === -97.7472987 && g.block.lat === 30.2646818, JSON.stringify([g.point, g.block]));

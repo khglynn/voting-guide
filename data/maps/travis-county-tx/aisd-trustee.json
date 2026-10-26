@@ -10,7 +10,7 @@
   "source_org": "Travis County Tax Office",
   "plan": "Austin ISD's single-member districts, redrawn in 2022. The layer carries no edit date.",
   "layer_dated": null,
-  "fetched": "2026-10-21",
+  "fetched": "2026-10-26",
   "license": "none stated",
   "label_property": "SMD",
   "features": 7,
@@ -32,7 +32,7 @@
   "simplified": "Douglas-Peucker to 10 m, TopoJSON quantized to 100000 steps across the map",
   "bytes": 16909,
   "checked": {
-    "on": "2026-10-21",
+    "on": "2026-10-26",
     "simplified_vs_original": {
       "points": 415,
       "agree": 415,

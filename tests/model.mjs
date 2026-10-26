@@ -552,6 +552,60 @@ function roundTrip(name, stCode, places, mutate) {
     check('maps, ownership: "Not sure" on Del Valle’s trustees, and the Census says Austin ISD: answered "none"', S().districts['school|Del Valle ISD Trustee'] === 'none', JSON.stringify(S().districts));
     st.S.b = st.emptyBallotState('');
   }
+  // Williamson County (Oct 26): Round Rock, the Williamson side of Pflugerville, and Williamson-side
+  // Austin, on the shipped maps at public buildings (scripts/maps/test-points.json).
+  {
+    const TP = Object.fromEntries(JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts', 'maps', 'test-points.json'), 'utf8')).points.map((p) => [p.name, p]));
+    const w = (name) => ({ point: { lon: TP[name].point[0], lat: TP[name].point[1] }, block: { lon: TP[name].block[0], lat: TP[name].block[1] } });
+    const topo = new Map();
+    const fcOf = (meta) => { if (!topo.has(meta.file)) topo.set(meta.file, maps.fromTopo(JSON.parse(fs.readFileSync(path.join(DATA, meta.file), 'utf8')))); return topo.get(meta.file); };
+    const resultsAt = (ballot, name) => maps.ballotMaps(ballot).map(({ meta }) => ({ meta, answer: maps.answerAt(fcOf(meta), w(name), { edge: maps.edgeOf(meta) }) }));
+    const lookup = (ballot, r, name) => {
+      st.S.b = st.emptyBallotState('');
+      const res = resultsAt(ballot, name);
+      const line = address.addrSummary(address.setFromAddress(ballot, st.S.b, r, address.localAnswers(res, r)));
+      return { line, notes: address.mapNotes(ballot, st.S.b, r, res), s: st.S.b };
+    };
+    const rr = open('TX', ['round-rock-tx']);
+    const pf = open('TX', ['pflugerville-tx']);
+    const au5 = open('TX', ['austin-tx']);
+    const rrHall = { cd: 17, upper: 5, lower: 136, schools: ['Round Rock Independent School District'], county: 'Williamson' };
+    const kinds = (ballot) => maps.ballotMaps(ballot).map(({ meta }) => `${meta.file.split('/')[1]}/${meta.kind}`).sort().join(' ');
+    check('maps, Williamson: Round Rock and Pflugerville read both counties’ precincts and the Williamson SBOE map; Austin adds only the SBOE map',
+      kinds(rr) === 'travis-county-tx/precincts williamson-county-tx/precincts williamson-county-tx/sboe' && kinds(pf) === kinds(rr)
+      && kinds(au5) === 'austin-tx/council travis-county-tx/aisd-trustee travis-county-tx/dvisd-trustee travis-county-tx/precincts williamson-county-tx/sboe', `${kinds(rr)} || ${kinds(au5)}`);
+    // Round Rock City Hall: voting precinct 150, commissioner and JP precinct 1, SBOE District 10.
+    const a = lookup(rr, rrHall, 'Round Rock City Hall');
+    check('maps, Williamson: Round Rock City Hall: JP 1 on, commissioner "none" (precinct 1 isn’t up), SBOE 5 off, and the line names the JP race',
+      a.s.districts['judicial|Justice of the Peace'] === 'tx-wilco-jp-1' && a.s.districts['county|County Commissioner'] === 'none' && a.s.notMine.includes('tx-sboe-5') && /Justice of the Peace, Precinct 1\b/.test(a.line),
+      JSON.stringify([a.line, a.s.districts, a.s.notMine]));
+    check('maps, Williamson: and the box shows its voting precinct, with no "your county races" line', a.notes.join(' | ') === 'Your voting precinct: 150 (Williamson County).', a.notes.join(' | '));
+    // A Williamson building on Pflugerville's ballot, where both counties' races are listed: the
+    // Williamson map answers, the Travis races in the same questions go, and no one is told their
+    // county's races are missing. Pflugerville City Hall (Travis) the other way round.
+    const b = lookup(pf, rrHall, 'Williamson County Jester Annex');
+    check('maps, Williamson: Pflugerville, Williamson side: JP 1 (Williamson’s), commissioner "none", SBOE 5 off, no "your county races" line',
+      b.s.districts['judicial|Justice of the Peace'] === 'tx-wilco-jp-1' && b.s.districts['county|County Commissioner'] === 'none' && b.s.notMine.includes('tx-sboe-5') && !b.notes.some((t) => /Your county races/.test(t)) && b.notes.includes('Your voting precinct: 145 (Williamson County).'),
+      JSON.stringify([b.s.districts, b.notes]));
+    const pfHall = { cd: 10, upper: 14, lower: 50, schools: ['Pflugerville Independent School District'], county: 'Travis' };
+    const c = lookup(pf, pfHall, 'Pflugerville City Hall');
+    check('maps, Williamson: Pflugerville, Travis side: Travis JP 2, SBOE 5 on, and no "your county races" line now that the ballot lists both counties’',
+      c.s.districts['judicial|Justice of the Peace'] === 'tx-travis-jp-2' && c.s.mine.includes('tx-sboe-5') && !c.notes.some((t) => /Your county races/.test(t)),
+      JSON.stringify([c.s.districts, c.notes]));
+    // Travis-side Round Rock (a Travis building stands in): SBOE from the Travis precinct, the
+    // Williamson races off, and the box says whose county races these are.
+    const d = lookup(rr, { ...rrHall, county: 'Travis' }, 'Milwood Branch Library');
+    check('maps, Williamson: Round Rock, Travis side: SBOE 5 on from the Travis precinct, Williamson’s commissioner and JP "none", and the box says so',
+      d.s.mine.includes('tx-sboe-5') && d.s.districts['county|County Commissioner'] === 'none' && d.s.districts['judicial|Justice of the Peace'] === 'none'
+      && d.notes[0] === 'Your county races are Travis County’s. This guide lists Williamson County’s; your official sample ballot shows yours.',
+      JSON.stringify([d.s.districts, d.s.mine, d.notes]));
+    // Williamson-side Austin: the SBOE race settles now (District 5 there), Travis's county races stay off.
+    const e = lookup(au5, { cd: 37, upper: 14, lower: 136, schools: ['Round Rock Independent School District'], county: 'Williamson' }, 'Spicewood Springs Branch Library');
+    check('maps, Williamson: Williamson-side Austin: SBOE 5 on from the Williamson SBOE map, Travis’s county races off, and the box still says whose',
+      e.s.mine.includes('tx-sboe-5') && e.s.districts['county|County Commissioner'] === 'none' && /State Board of Education, District 5/.test(e.line) && /^Your county races are Williamson County’s/.test(e.notes[0] || ''),
+      JSON.stringify([e.line, e.s.districts, e.notes]));
+    st.S.b = st.emptyBallotState('');
+  }
   // The Census answer keeps the point and the block's interior point, for the maps only.
   const g = geo.parseCensus({ result: { addressMatches: [{ matchedAddress: 'TEST CITY HALL, AUSTIN, TX, 78701', coordinates: { x: -97.746669, y: 30.26496 }, geographies: { States: [{ STATE: '48' }], '2020 Census Blocks': [{ INTPTLAT: '+30.2646818', INTPTLON: '-097.7472987' }] } }] } })[0];
   check('maps: parseCensus keeps the point and the block’s interior point', g.point.lon === -97.746669 && g.point.lat === 30.26496 && g.block.lon === -97.7472987 && g.block.lat === 30.2646818, JSON.stringify([g.point, g.block]));

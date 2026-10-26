@@ -9,7 +9,8 @@
       "title": "Travis County voting precincts, with each precinct's commissioner, justice of the peace and constable, and State Board of Education districts",
       "places": [
         "austin-tx",
-        "pflugerville-tx"
+        "pflugerville-tx",
+        "round-rock-tx"
       ],
       "county": "Travis",
       "source_url": "https://maps.austintexas.gov/arcgis/rest/services/Shared/VoterPrecincts/MapServer/0",

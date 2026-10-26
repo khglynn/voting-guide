@@ -193,8 +193,9 @@ export interface MapResult { meta: MapMeta; answer: MapAnswer | null }
 export const localAnswers = (results: MapResult[], r: Districts): LocalAnswer[] =>
   results.flatMap((x) => (x.answer && x.answer.at === 'in' && inCounty(x.meta, r.county) ? [{ meta: x.meta, props: x.answer.props }] : []));
 /* What the address box says about the maps beyond the races they set, for this visit:
-   - when the Census puts you in another county than a county map's, that its county races aren't
-     yours and this guide doesn't list yours ("Your county races are Williamson County's...");
+   - when the Census puts you in another county than a county map's, and this ballot lists no county
+     races of your own county, that its county races aren't yours and this guide doesn't list yours
+     ("Your county races are Williamson County's...");
    - the voting precinct, from a map the Census's county agrees with, and only when both witnesses
      agree (the precinct number is what a voter types into a county finder, and where the block alone
      decided, the Oct 21 review found it wrong about as often as right);
@@ -208,8 +209,12 @@ export function mapNotes(b: Ballot, s: BallotState, r: Districts, results: MapRe
     || [...b.mayApply].some((id) => ruleMatches(rule, b.byId.get(id)!) && !s.notMine.includes(id) && !(s.mine || []).includes(id)));
   const names = (keep: (x: MapResult) => boolean): string[] => [...new Set(results.filter((x) => keep(x) && open(x.meta)).map((x) => x.meta.name))];
   const and = (xs: string[]): string => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} and ${xs[xs.length - 1]}`);
-  const elsewhere = r.county ? [...new Set(ballotMaps(b).filter(({ meta }) => meta.county && !inCounty(meta, r.county)
-    && meta.settles.some((rule) => !!rule.scope && scopeNames(rule.scope, `${meta.county} County`) && claims(rule))).map(({ meta }) => meta.county!))] : [];
+  // County maps whose county races this ballot lists: the voter's own county's, and the others'.
+  const countyRaces = (inside: boolean): string[] => (r.county ? [...new Set(ballotMaps(b).filter(({ meta }) => meta.county && inCounty(meta, r.county) === inside
+    && meta.settles.some((rule) => !!rule.scope && scopeNames(rule.scope, `${meta.county} County`) && claims(rule))).map(({ meta }) => meta.county!))] : []);
+  // Only when the ballot lists no county races of the voter's own county: Pflugerville's lists both
+  // Travis's and Williamson's, so neither side is told its races are missing.
+  const elsewhere = countyRaces(false).length && !countyRaces(true).length ? countyRaces(false) : [];
   const shows = results.flatMap((x) => (x.answer && x.answer.at === 'in' && x.answer.by === 'both' && x.meta.shows && inCounty(x.meta, r.county) ? [fillTemplate(x.meta.shows, x.answer.props)] : [])).filter((t): t is string => !!t);
   const why = (w: 'line' | 'unsure') => names((x) => !!x.answer && x.answer.at === 'near' && x.answer.why === w);
   const line = why('line'), unsure = why('unsure');

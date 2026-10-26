@@ -1771,8 +1771,23 @@ const INDEX_JSON = await (await fetch(`${BASE}/data/index.json`, { headers: BYPA
   // case: say so, and "just kick off" the request in one tap.
   const { ctx, page } = await newPage();
   const posts = await catchForm(page);
+  // An address typed and found first, and a save link's hash in the page's address: neither may go along
+  // with the one tap, the same rule the report flow keeps (Codex, Oct 26).
+  const answer = { result: { addressMatches: [{ matchedAddress: 'TEST ONE, SAINT LOUIS, MO, 63110', geographies: {
+    States: [{ STATE: '29' }], 'Incorporated Places': [{ BASENAME: 'St. Louis' }], 'ZIP Code Tabulation Areas': [{ ZCTA5: '63110' }] } }] } };
+  await page.route('https://geocoding.geo.census.gov/**', (route) => {
+    const cb = new URL(route.request().url()).searchParams.get('callback');
+    return route.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify(answer)})` });
+  });
   await openZip(page, '63110');
   await page.waitForSelector('#setup .cov-note', { timeout: 15000 });
+  await tap(page, '.front [data-act="addr-open"]');
+  await page.fill('#addr-in', '12 Testing Lane');
+  await page.locator('form[data-form="addr"] button[type=submit]').tap();
+  await page.waitForSelector('.door-found', { timeout: 15000 });
+  await page.waitForSelector('#setup .cov-note', { timeout: 15000 });
+  await page.evaluate(() => history.replaceState(history.state, '', `${location.pathname}${location.search}#v1~MO~-~63110~zz9pick`));
+  const NEVER = /testing lane|test one|zz9pick|v1~/i;
   check('St. Louis City: the first page says we only have Missouri’s statewide races, with the counts', /^We only have Missouri’s statewide races for your area so far\. \d+ sources for them, \d+ with picks\. Last checked [A-Z][a-z]{2} \d+\. Add my city for me$/.test(await text(page, '#setup .cov-note')), await text(page, '#setup .cov-note'));
   // A send that fails says so, with the form in a new tab, and the button stays.
   posts.fail = true;
@@ -1785,6 +1800,9 @@ const INDEX_JSON = await (await fetch(`${BASE}/data/index.json`, { headers: BYPA
   const p = posts.list[posts.list.length - 1];
   check('St. Louis City: one tap posts the five answers, nothing typed', posts.list.length === 2 && FORM_IDS.every((k) => p.has(k)) && p.get('entry.90887649') === 'Please add my city' && p.get('entry.628621310') === 'Missouri, 63110'
     && /^Please add the city for ZIP 63110 in Missouri \(one-tap from the page\)\n\nSent along:\nPage: First page\nPlace: Missouri, 63110\nPage address: /.test(p.get('entry.780704302')) && p.get('entry.2040687555') === '' && !/Browser:/.test(p.get('entry.780704302')), p ? p.toString() : 'no post');
+  const sent = postText(p);
+  check('St. Louis City: the one tap never carries the address typed or found, the save link’s hash, any contact, or any query but the test date', !NEVER.test(sent) && p.get('entry.2040687555') === '' && !/#/.test(sent)
+    && [...sent.matchAll(/\?([^\s)]*)/g)].every((m) => /^today=\d{4}-\d{2}-\d{2}$/.test(m[1])) && !/@|\(\d{3}\)|\d{3}-\d{4}/.test(sent.replace(/\d{4}-\d{2}-\d{2}/g, '')), sent.replace(/\n/g, ' / '));
   check('St. Louis City: then "We’re adding your city", about a day, statewide races now, and focus on Want to hear', (await text(page, '#setup .cov-note > p:first-child')) === 'We’re adding your city. It usually takes about a day. You can use Missouri’s statewide races now.' && (await text(page, '#setup [data-fk="cov-hear"]')) === 'Want to hear when it’s in?' && (await focusedFk(page)) === 'cov-hear', `${await text(page, '#setup .cov-note')} / ${await focusedFk(page)}`);
   const asked = await page.evaluate(() => [localStorage.getItem('vg-asked'), localStorage.getItem('vg2')]);
   check('St. Louis City: remembered on this device under its own key, not in the saved ballots', /"z:63110":"\d{4}-\d{2}-\d{2}"/.test(asked[0] || '') && !/63110/.test(asked[1] || ''), asked.join(' | '));
@@ -1793,7 +1811,8 @@ const INDEX_JSON = await (await fetch(`${BASE}/data/index.json`, { headers: BYPA
   check('St. Louis City: Want to hear opens Request a city with the ZIP, for an email or phone', (await page.inputValue('#rf-zip')) === '63110' && (await page.inputValue('#rf-city')) === '' && /^Kevin has your request\. Leave an email or phone and he’ll tell you when it’s in\.$/.test(await text(page, '.rp-intro')), await text(page, '.rp-intro'));
   await tap(page, '.sheet-panel.shelf [data-fk="sheet-x"]');
   await settle(page);
-  // A reload keeps it on this device.
+  // A reload keeps it on this device (without the test's save-link hash, which would open that ballot instead).
+  await page.evaluate(() => history.replaceState(history.state, '', `${location.pathname}${location.search}`));
   await page.reload();
   await page.waitForSelector('#zip');
   await page.fill('#zip', '63110');
@@ -1822,11 +1841,13 @@ const INDEX_JSON = await (await fetch(`${BASE}/data/index.json`, { headers: BYPA
     await openZip(page, thin.zip);
     await page.waitForSelector('#setup .cov-note', { timeout: 15000 });
     check(`Thin place (${name}): the first page says so honestly, with its one tap`, new RegExp(`^We don’t have endorsements from ${name}’s local sources yet\\. \\d+ sources checked, \\d+ with picks\\. Last checked [A-Z][a-z]{2} \\d+\\. Add ${name}’s endorsements for me$`).test(await text(page, '#setup .cov-note')), await text(page, '#setup .cov-note'));
+    await page.evaluate(() => history.replaceState(history.state, '', `${location.pathname}${location.search}#v1~FL~x~00000~zz9pick`));
     await tap(page, '#setup [data-act="cov-ask"]');
     await page.waitForSelector('#setup .cov-note[role="status"]', { timeout: 15000 });
     const p = posts.list[0];
     check(`Thin place (${name}): one tap posts "Gather endorsements", the place and ZIP, nothing typed`, posts.list.length === 1 && FORM_IDS.every((k) => p.has(k)) && p.get('entry.90887649') === `Gather endorsements: ${name}` && p.get('entry.628621310') === `${thin.p.label}, ${thin.zip}`
       && p.get('entry.780704302').startsWith(`Please gather local endorsements for ${name} (one-tap from the page)\n\nSent along:\nPage: First page\n`) && p.get('entry.2040687555') === '', p ? p.toString() : 'no post');
+    check(`Thin place (${name}): the one tap never carries the save link’s hash, any contact, or any query but the test date`, !/zz9pick|v1~|#/.test(postText(p)) && [...postText(p).matchAll(/\?([^\s)]*)/g)].every((m) => /^today=\d{4}-\d{2}-\d{2}$/.test(m[1])), postText(p).replace(/\n/g, ' / '));
     check(`Thin place (${name}): then "We’re gathering", about a day, never minutes`, (await text(page, '#setup .cov-note > p:first-child')) === `We’re gathering ${name}’s endorsements. It usually takes about a day. Your ballot works now, and local picks show up when they’re in.` && (await text(page, '#setup [data-fk="cov-hear"]')) === 'Want to hear when it’s in?' && !/minute/.test(await text(page, '#setup')), await text(page, '#setup .cov-note'));
     await plainSetup(page);
     await page.waitForSelector('#plan', { timeout: 15000 });

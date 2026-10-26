@@ -10,8 +10,8 @@
      city in one tap.
    A one-tap request is remembered on this device (localStorage `vg-asked`, never the save link or
    `vg2`) until its data lands: a place's once its data was checked after the request day, a ZIP's once
-   the ZIP has a place. Three days with nothing landed and the offer comes back, so a request the
-   pipeline turned down never reads "about a day" forever. */
+   the ZIP has a place. Three days with nothing landed (the day sent and the two after) and the offer
+   comes back, so a request the pipeline turned down never reads "about a day" forever. */
 import type { Ballot } from '../ballot';
 import type { Index, PlaceCoverage } from '../types';
 import { daysBetween, load, save, todayISO } from '../util';
@@ -40,18 +40,20 @@ export interface Cov {
 const KEY = 'vg-asked';
 const KEEP_DAYS = 3;
 type Asked = Record<string, string>; // ask key -> the day it was sent, YYYY-MM-DD
-const readAsked = (): Asked => { const a = load<Asked>(KEY, {}); return a && typeof a === 'object' ? a : {}; };
+/* Anything but a plain object (a list or text left by something else) reads as empty: an array would
+   take the new key as a property and drop it when written back (Codex, Oct 26). */
+const readAsked = (): Asked => { const a: unknown = load<unknown>(KEY, {}); return Object.prototype.toString.call(a) === '[object Object]' ? (a as Asked) : {}; };
 /* The day this request went from this device, while it still counts. */
 export function askedOn(key: string, today = todayISO()): string | null {
   const on = readAsked()[key];
   if (typeof on !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(on)) return null;
   const d = daysBetween(on, today);
-  return d >= 0 && d <= KEEP_DAYS ? on : null;
+  return d >= 0 && d < KEEP_DAYS ? on : null;
 }
 /* Sent: remember it, and let go of any older than the window. */
 export function rememberAsk(key: string, today = todayISO()): void {
   const a = readAsked();
-  for (const [k, on] of Object.entries(a)) if (typeof on !== 'string' || daysBetween(on, today) > KEEP_DAYS) delete a[k];
+  for (const [k, on] of Object.entries(a)) if (typeof on !== 'string' || daysBetween(on, today) >= KEEP_DAYS) delete a[k];
   a[key] = today;
   save(KEY, a);
 }

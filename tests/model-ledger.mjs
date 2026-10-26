@@ -1755,6 +1755,10 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('coverage: index.json’s source counts match the ballot the app builds, every place and state', off.length === 0, off.slice(0, 4).join(' | '));
     check('coverage: a place with a local source that picks is never thin', Object.values(INDEX.places).every((p) => p.local_with_picks === 0 || !mc.isThin(p)));
     check('coverage: Chicago isn’t thin', !mc.isThin(INDEX.places['chicago-il']), JSON.stringify(INDEX.places['chicago-il']));
+    // Codex, Oct 26: the Pensacola News Journal is Pensacola's own paper, so it counts as one of its local
+    // sources (5, none with picks); Ballwin's three are the Post-Dispatch (one pick), LWV Metro STL and STLPR.
+    const pn = INDEX.places['pensacola-fl'], bw = INDEX.places['ballwin-mo'];
+    check('coverage: Pensacola’s own paper is a local source; Ballwin has three, one with picks', pn.local_sources === 5 && pn.local_with_picks === 0 && bw.local_sources === 3 && bw.local_with_picks === 1, `${JSON.stringify(pn)} ${JSON.stringify(bw)}`);
 
     // What the app says, from a copy of the index with numbers set.
     const idx = JSON.parse(JSON.stringify(INDEX));
@@ -1787,9 +1791,17 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       check('coverage: data checked after the request day ends it', mc.ballotCoverage(pen, idx, '32501', '2026-10-26').state === 'none');
       idx.places['pensacola-fl'].checked = '2026-10-25';
       check('coverage: data checked the same day doesn’t (the request may have come after it)', mc.ballotCoverage(pen, idx, '32501', '2026-10-25').state === 'asked');
-      check('coverage: after three days with nothing landed, the offer comes back', mc.ballotCoverage(pen, idx, '32501', '2026-10-28').state === 'asked' && mc.ballotCoverage(pen, idx, '32501', '2026-10-29').state === 'none');
-      mc.rememberAsk('z:63110', '2026-10-30');
-      check('coverage: a new request lets go of ones past the window', !('p:pensacola-fl' in JSON.parse(mem['vg-asked'])) && JSON.parse(mem['vg-asked'])['z:63110'] === '2026-10-30');
+      // Codex, Oct 26: three days means three (an Oct 25 request counts on the 25th, 26th and 27th), not four.
+      check('coverage: after three days with nothing landed, the offer comes back', mc.ballotCoverage(pen, idx, '32501', '2026-10-27').state === 'asked' && mc.ballotCoverage(pen, idx, '32501', '2026-10-28').state === 'none');
+      mc.rememberAsk('z:63110', '2026-10-28');
+      check('coverage: a new request lets go of ones past the window, from the third day on', !('p:pensacola-fl' in JSON.parse(mem['vg-asked'])) && JSON.parse(mem['vg-asked'])['z:63110'] === '2026-10-28');
+      // Codex, Oct 26: a record that isn't a plain object (an array left by something else) reads as empty,
+      // so the request is kept and acknowledged instead of vanishing when it's written back.
+      mem['vg-asked'] = '[]';
+      mc.rememberAsk('p:pensacola-fl', '2026-10-25');
+      check('coverage: a vg-asked that is a list is read as empty, and the request sticks', mc.askedOn('p:pensacola-fl', '2026-10-25') === '2026-10-25' && !Array.isArray(JSON.parse(mem['vg-asked'])), mem['vg-asked']);
+      mem['vg-asked'] = '"oops"';
+      check('coverage: and so is one that is text', mc.askedOn('p:pensacola-fl', '2026-10-25') === null);
     } finally { delete globalThis.window; idx.places['pensacola-fl'].checked = '2026-10-19'; }
 
     // The words, on the first page and in the ballot's head.

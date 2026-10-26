@@ -987,6 +987,52 @@ async function mapsSettled(page, timeout = 10000) {
   four.page.errors = four.page.errors.filter((e) => !/Failed to load resource|abort/i.test(e));
   noErrors(four.page, 'Maps with one hanging');
   await four.ctx.close();
+  // Two maps held back (Codex's confirming round, Oct 26): what the voter changes between a lookup's
+  // passes stays theirs. The Census and the quick maps answer; the voter picks Congress 11; the
+  // precinct map arrives (JP 5, SBOE on); the voter takes SBOE off with "Not on my ballot" and puts
+  // the state Senate race the Census took off back with "It's on my ballot"; the Del Valle map
+  // arrives last. No late map undoes any of it.
+  const six = await newPage();
+  await six.page.route('https://geocoding.geo.census.gov/**', (route) => {
+    const cb = new URL(route.request().url()).searchParams.get('callback');
+    return route.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify(answer)})` });
+  });
+  const held = {};
+  for (const kind of ['precincts', 'dvisd-trustee']) {
+    held[kind] = { go: null };
+    const gate = new Promise((res) => { held[kind].go = res; });
+    await six.page.route(`**/data/maps/travis-county-tx/${kind}.topo.json`, async (route) => { await gate; return route.continue(); });
+  }
+  const CD = 'federal|U.S. Representative';
+  const vg6 = async () => { await six.page.waitForTimeout(250); return Object.values(JSON.parse((await savedVG(six.page)) || '{}').ballots || {}).find((x) => x && x.districts && x.districts[CD]) || {}; };
+  await openBallot(six.page, '78701');
+  await tap(six.page, '.addrbox [data-act="addr-open"]');
+  await six.page.fill('#addr-in', 'a test lookup');
+  await six.page.locator('form[data-form="addr"] button[type=submit]').tap();
+  await six.page.waitForFunction(() => /Austin City Council, District 9/.test(document.querySelector('.addrbox .addr-set')?.textContent || ''), null, { timeout: 8000 }).catch(() => {});
+  await openRow(six.page, 'tx-us-house-10');
+  await tap(six.page, `#i-tx-us-house-10 [data-act="district-change"][data-g="${CD}"]`);
+  await tap(six.page, `.row[data-q="${CD}"] [data-act="district"][data-v="tx-us-house-11"]`);
+  const picked = (await vg6()).districts?.[CD];
+  held.precincts.go();
+  await six.page.waitForFunction(() => /Justice of the Peace, Precinct 5/.test(document.querySelector('.addrbox .addr-set')?.textContent || ''), null, { timeout: 8000 }).catch(() => {});
+  const s6a = await vg6();
+  check('Maps, a late map: Congress the voter picked between passes stays theirs', picked === 'tx-us-house-11' && s6a.districts[CD] === 'tx-us-house-11' && s6a.districts['judicial|Justice of the Peace'] === 'tx-travis-jp-5' && (s6a.mine || []).includes('tx-sboe-5'), JSON.stringify([picked, s6a.districts, s6a.mine]));
+  await openRow(six.page, 'tx-sboe-5');
+  check('Maps, a late map: a race the address put on says so, with "Not on my ballot"', /^Your address puts it on your ballot\. Not on my ballot$/.test(await text(six.page, '#i-tx-sboe-5 .ob-meta')), await text(six.page, '#i-tx-sboe-5 .ob-meta'));
+  await tap(six.page, '#i-tx-sboe-5 [data-act="notmine"]');
+  await tap(six.page, '#off [data-act="open"][data-k="off"]');
+  await tap(six.page, '#off-tx-senate-21 [data-act="notmine-undo"]');
+  held['dvisd-trustee'].go();
+  await mapsSettled(six.page);
+  const s6b = await vg6();
+  check('Maps, a late map: "Not on my ballot" and "It’s on my ballot" between passes stand, and so does Congress',
+    (s6b.notMine || []).includes('tx-sboe-5') && !(s6b.mine || []).includes('tx-sboe-5') && (s6b.mine || []).includes('tx-senate-21') && !(s6b.notMine || []).includes('tx-senate-21') && s6b.districts[CD] === 'tx-us-house-11' && !!(await six.page.$('#off-tx-sboe-5')) && !!(await six.page.$('#i-tx-senate-21')),
+    JSON.stringify([s6b.districts[CD], s6b.mine, s6b.notMine]));
+  await openRow(six.page, 'tx-senate-21');
+  check('Maps, a late map: the race put back shows as on your ballot, with the way back and no maybe box', /^On your ballot\. Not on my ballot$/.test(await text(six.page, '#i-tx-senate-21 .ob-meta')) && !(await six.page.$('#i-tx-senate-21 .may')), await text(six.page, '#i-tx-senate-21 .ob-meta'));
+  noErrors(six.page, 'Maps with two held back');
+  await six.ctx.close();
   // From the first page, the maps start as soon as the Census names the place, beside its bundle
   // (Oct 21 review): with the bundle slowed down, a map is already on its way before it arrives.
   const five = await newPage();

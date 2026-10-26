@@ -12,6 +12,7 @@ import { judgeBatch } from './model/judges';
 import { planAgree, planParty, planJudges, planSetup, applyFills, undoFills, emptyPlan, touchUndo, type Plan } from './model/bulk';
 import { toggleChip, setParty, setSources, noEndorsements, doorNone, type ChipKey } from './model/lens';
 import { courtGroup } from './model/labels';
+import { claimAnswer, claimOn, claimOff } from './model/address';
 import { basisWords, LEANS, FORM } from './views/common';
 import { reportBody, reportFallbackURL, requiredOf, isForm, collectAlong } from './views/shelf';
 import { cheatText, shareURL } from './views/cheat';
@@ -417,8 +418,7 @@ A.note = (d) => { S.ui.noteOpen.add(d.id!); renderRow(d.id!); $(`[data-note="${C
 /* ---------- districts and "May apply" ---------- */
 A.district = (d) => {
   const g = B().groups.find((x) => x.key === d.g)!;
-  S.b.districts[g.key] = d.v!;
-  S.b.addrSet = (S.b.addrSet || []).filter((k) => k !== g.key); // your answer now, not the address's
+  claimAnswer(S.b, g.key, d.v!); // your answer now, not the address's (model/address.ts)
   // Answering swaps the question for that district's race, opened, in the same place. "Not sure"
   // shows them all; "Not in any of these" leaves one line saying so, with Change.
   const one = d.v !== '*' && d.v !== 'none';
@@ -433,8 +433,7 @@ A.district = (d) => {
 A['district-change'] = (d) => {
   const g = B().groups.find((x) => x.key === d.g)!;
   const ans = S.b.districts[g.key];
-  delete S.b.districts[g.key];
-  S.b.addrSet = (S.b.addrSet || []).filter((k) => k !== g.key);
+  claimAnswer(S.b, g.key, null); // asked again, by you: a late map of this lookup won't answer it
   if (ans && ans !== '*' && ans !== 'none') {
     // Everything the answer showed: a Washington district's two House seats come from one answer.
     const a = B().byId.get(ans);
@@ -459,8 +458,7 @@ A.notmine = (d) => {
   const scope = (x: Item | undefined) => (!x ? null : x.kind === 'contest' ? `c|${x.scope_plain}` : `m|${x.jurisdiction}`);
   // A race your address put on your ballot stays (model/address.ts).
   const ids = d.all ? [...b.mayApply].filter((id) => scope(b.byId.get(id)) === scope(it) && !(S.b.mine || []).includes(id)) : [d.id!];
-  ids.forEach((id) => { if (!S.b.notMine.includes(id)) S.b.notMine.push(id); });
-  S.b.addrSet = (S.b.addrSet || []).filter((k) => !ids.includes(k)); // yours now, not the address's
+  claimOff(S.b, ids); // yours now, not the address's
   if (S.ui.row && ids.includes(S.ui.row)) S.ui.row = null;
   const sec = sectionOf(it);
   glide([`#sec-${sec}`, '#r-off'], () => anchored(() => renderSection(sec)));
@@ -472,9 +470,9 @@ A.notmine = (d) => {
 /* "None of these are on my ballot" for the other school districts' races, all at once. */
 A['notmine-oth'] = () => {
   const b = B();
-  const ids = [...b.mayApply].filter((id) => { const it = b.byId.get(id); return !!it && it.kind === 'contest' && sectionOf(it) === 'school' && !b.groupOf[id]; });
-  ids.forEach((id) => { if (!S.b.notMine.includes(id)) S.b.notMine.push(id); });
-  S.b.addrSet = (S.b.addrSet || []).filter((k) => !ids.includes(k));
+  // The fold's races: a race on your ballot (`mine`) stands outside it (ballot.ts otherSchools).
+  const ids = [...b.mayApply].filter((id) => { const it = b.byId.get(id); return !!it && it.kind === 'contest' && sectionOf(it) === 'school' && !b.groupOf[id] && !(S.b.mine || []).includes(id); });
+  claimOff(S.b, ids);
   if (S.ui.row && ids.includes(S.ui.row)) S.ui.row = null;
   S.ui.unfolded.delete('school|oth');
   anchored(() => renderSection('school'));
@@ -482,13 +480,13 @@ A['notmine-oth'] = () => {
   persist();
   toast(`Moved ${plural(ids.length, 'race')} to “Not on your ballot” at the bottom.`);
 };
-/* "It's on my ballot", from the "Not on your ballot" list: back in its section, where the page goes. */
+/* "It's on my ballot", from the "Not on your ballot" list: back in its section, where the page goes,
+   as a race on your ballot (`mine`), so no later pass of a lookup or corrected address takes it off
+   again. It stands as its own row, outside the other school districts' fold, with "Not on my ballot"
+   as the way back (views/open.ts). */
 A['notmine-undo'] = (d) => {
-  S.b.notMine = S.b.notMine.filter((x) => x !== d.id);
-  S.b.addrSet = (S.b.addrSet || []).filter((k) => k !== d.id); // your answer now: a corrected address leaves it be
+  claimOn(S.b, d.id!);
   const sec = sectionOf(B().byId.get(d.id!)!);
-  // Back among the other school districts' races, their fold stays open so the race doesn't vanish.
-  if (sec === 'school') S.ui.unfolded.add(OTH_KEY);
   renderSection(sec);
   renderSummaries();
   persist();

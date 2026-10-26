@@ -28,7 +28,7 @@ export interface BallotState {
   ticks: string[];                   // Help your friends vote: who you've texted
   setupDone: boolean;                // step 2 ("Pick by endorsements or party") finished on this device
   hideDecided: boolean;              // "Hide races I've decided", on this device; never in the save link
-  mine: string[];                    // "may apply" races an address lookup put on your ballot; never in the save link
+  mine: string[];                    // races on your ballot that might not have been: put there by an address lookup (then also in addrSet) or by your own "It's on my ballot"; never in the save link
   secs: SectionsShown;               // the sections and court groups you folded, opened or showed decided rows in, on this device; never in the save link
   addrSet: string[];                 // what the last address lookup settled and the voter hasn't changed since: district questions (group keys), so the race says so, and the "may apply" races it moved (item ids), so a corrected address can undo them; never the address, never in the save link
 }

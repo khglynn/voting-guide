@@ -9,7 +9,7 @@ import { toast, hideToast } from './util';
 import { render, renderBallot, renderAddr, anchored, $ } from './render';
 import { setInvolved, type GetInvolved } from './views/pass';
 import { planAgree, applyFills, planParty, planSetup, forgetUndo, fillStands, canUndo } from './model/bulk';
-import { setFromAddress, addrSummary, localAnswers, mapNotes, type MapResult } from './model/address';
+import { addrSummary, localAnswers, mapNotes, lookupPasses, type MapResult } from './model/address';
 import { ballotMaps, fromTopo, answerAt, edgeOf, type FeatureCollection, type Topology } from './model/maps';
 import { partiesOnBallot, toggleChip, setSources, setParty, chipMembers, chipState, doorNone, noEndorsements, CHIPS } from './model/lens';
 
@@ -570,8 +570,9 @@ export async function useMatch(r: GeoResult): Promise<void> {
    page, under the place line) until a reload or another ballot; the address itself is never kept.
    The Census's answers land first; the ballot's district maps fold in as each one arrives (usually
    at once: they load while the Census answers), so a slow or stuck map never holds up Congress.
-   Each fold settles everything again from this address (setFromAddress undoes the last pass first),
-   and a newer lookup, or another ballot, makes an older one's late maps change nothing. It returns
+   Each fold settles everything again from this address (setFromAddress undoes the last pass first)
+   but leaves alone what the voter changed since the first pass (lookupPasses), and a newer lookup, or
+   another ballot, makes an older one's late maps change nothing. It returns
    once the first pass is painted, so nothing waits on a slow map ("Show my ballot" included). */
 let geoSeq = 0;
 export async function applyGeo(r: GeoResult): Promise<void> {
@@ -581,26 +582,27 @@ export async function applyGeo(r: GeoResult): Promise<void> {
   const at = { point: r.point!, block: r.block };
   const results: MapResult[] = [];
   const fill = { n: 0, added: new Set<string>() };
+  const pass = lookupPasses();
   const still = (): boolean => seq === geoSeq && S.ballot === b;
   // Maps already in hand answer in the first pass, the rest as they come.
   const ready = list.filter(({ meta }) => mapsLoaded.has(meta.file));
   const waiting = list.filter((m) => !ready.includes(m));
   for (const { meta } of ready) results.push({ meta, answer: answerAt(await loadMap(meta.file), at, { edge: edgeOf(meta) }) });
   if (!still()) return;
-  settleGeo(b, r, results, waiting.length > 0, fill, true);
+  settleGeo(b, r, results, waiting.length > 0, fill, pass, true);
   void Promise.all(waiting.map(async ({ meta }) => {
     let answer = null;
     try { answer = answerAt(await loadMap(meta.file), at, { edge: edgeOf(meta) }); } catch { /* didn't load: mapNotes says so */ }
     if (!still()) return;
     results.push({ meta, answer });
-    settleGeo(b, r, results, results.length < list.length, fill, false);
+    settleGeo(b, r, results, results.length < list.length, fill, pass, false);
   }));
 }
 /* One pass: settle from the Census and the maps so far, fill what that put on the ballot (the fill
    ran here), and paint. `first`: the pass that closes the form and moves focus to what was found. */
-function settleGeo(b: Ballot, r: GeoResult, results: MapResult[], pending: boolean, fill: { n: number; added: Set<string> }, first: boolean): void {
+function settleGeo(b: Ballot, r: GeoResult, results: MapResult[], pending: boolean, fill: { n: number; added: Set<string> }, pass: ReturnType<typeof lookupPasses>, first: boolean): void {
   const was = { districts: { ...S.b.districts }, mine: [...(S.b.mine || [])] };
-  S.b.addrNote = addrSummary(setFromAddress(b, S.b, r, localAnswers(results, r)));
+  S.b.addrNote = addrSummary(pass(b, S.b, r, localAnswers(results, r)));
   S.ui.addrMaps = mapNotes(b, S.b, r, results, pending);
   S.ui.addrMapsPending = pending;
   // The fill ran on this ballot: the races the address just put on it get it too, by the same rules

@@ -46,6 +46,46 @@ export function schoolOf(c: Item): { name: string; key: string; whole: boolean }
   const rest = m[2].split('(')[0];
   return { name: m[1], key: sdKey(m[1]), whole: !/district \d|single.member|trustee district|subdistrict|area \d|precinct|zone/i.test(rest) };
 }
+/* Whether a district question has an answer. "Not sure" ('*') isn't one: the address is how the
+   voter meant to find out. One rule for what a lookup may settle and for what the box says is still
+   open. */
+export const answered = (s: BallotState, key: string): boolean => s.districts[key] !== undefined && s.districts[key] !== '*';
+/* What the voter does by hand (actions.ts calls these, and the tests call the same ones). Each takes
+   what it touches out of addrSet, so from then on it is the voter's: the maps never change it, a
+   later pass of the same lookup leaves it be, and a corrected address doesn't undo it. */
+export function claimAnswer(s: BallotState, key: string, v: string | null): void {
+  if (v == null) delete s.districts[key]; // Change: the question asks again
+  else s.districts[key] = v;
+  s.addrSet = (s.addrSet || []).filter((k) => k !== key);
+}
+/* "It's on my ballot": kept in `mine` (races on your ballot that might not have been), so it stays
+   on until the voter says otherwise. */
+export function claimOn(s: BallotState, id: string): void {
+  s.notMine = s.notMine.filter((x) => x !== id);
+  if (!s.mine) s.mine = [];
+  if (!s.mine.includes(id)) s.mine.push(id);
+  s.addrSet = (s.addrSet || []).filter((k) => k !== id);
+}
+/* "It's not on my ballot", for one race or several. */
+export function claimOff(s: BallotState, ids: string[]): void {
+  for (const id of ids) if (!s.notMine.includes(id)) s.notMine.push(id);
+  s.mine = (s.mine || []).filter((x) => !ids.includes(x));
+  s.addrSet = (s.addrSet || []).filter((k) => !ids.includes(k));
+}
+/* One lookup's passes (app.ts applyGeo): the Census's answers, then again as each district map
+   arrives. Each pass settles everything from the same answers, so what the voter changed between
+   passes (it left addrSet) is kept out of every later pass: a late map never undoes a change made
+   after the box showed the first answers. */
+export function lookupPasses(): (b: Ballot, s: BallotState, r: Districts, local: LocalAnswer[]) => string[] {
+  let left: string[] = [];
+  const keep = new Set<string>();
+  return (b, s, r, local) => {
+    for (const k of left) if (!(s.addrSet || []).includes(k)) keep.add(k);
+    const set = setFromAddress(b, s, r, local, keep);
+    left = [...s.addrSet];
+    return set;
+  };
+}
 type Kind = 'cd' | 'upper' | 'lower';
 const KINDS: Kind[] = ['cd', 'upper', 'lower'];
 
@@ -53,7 +93,7 @@ const KINDS: Kind[] = ['cd', 'upper', 'lower'];
    District {n}" each, Congress first, then the state senate, then the state house, then school
    districts, then what the district maps put on, in ballot order; empty when it put none there
    (nothing here turns on it, or it only took races off). */
-export function setFromAddress(b: Ballot, s: BallotState, r: Districts, local: LocalAnswer[] = []): string[] {
+export function setFromAddress(b: Ballot, s: BallotState, r: Districts, local: LocalAnswer[] = [], keep: ReadonlySet<string> = new Set()): string[] {
   // A lookup replaces the one before it (a corrected address, "Not it? Try again", the maps folding
   // in after the Census): what the last one settled, and the voter hasn't changed since (addrSet),
   // goes back to unsettled first, so this address never keeps an answer it can't give itself. The
@@ -64,13 +104,21 @@ export function setFromAddress(b: Ballot, s: BallotState, r: Districts, local: L
     else { s.mine = s.mine.filter((x) => x !== k); s.notMine = s.notMine.filter((x) => x !== k); }
   }
   s.addrSet = [];
+  // What's left now is the voter's: an answer to a question ("Not sure" isn't one) or an on or off
+  // of their own. The maps never change it (it usually came from the official sample ballot, which
+  // outranks our maps). The Census's answers replace it on a lookup's first pass: they are the
+  // official districts, and asking is how the voter meant to find out. `keep` (lookupPasses): what
+  // the voter changed since this lookup's first pass, which no later pass touches, Census or map.
+  const ownQ = new Set(b.groups.map((g) => g.key).filter((k) => answered(s, k)));
+  const ownIds = new Set([...s.mine, ...s.notMine]);
+  const own = (k: string): boolean => ownQ.has(k) || ownIds.has(k) || keep.has(k);
   const moved = (id: string): void => { if (!s.addrSet.includes(id)) s.addrSet.push(id); };
   const num = (k: Kind): number | null => (b.st === 'DC' && k === 'upper' ? null : r[k]);
   const named: Record<Kind, string[]> = { cd: [], upper: [], lower: [] };
   const name = (k: Kind, office: string) => { const o = cleanOffice(office); if (!named[k].includes(o)) named[k].push(o); };
   for (const g of b.groups) {
     const n = g.kind ? num(g.kind) : null;
-    if (!g.kind || n == null) continue;
+    if (!g.kind || n == null || keep.has(g.key)) continue;
     const hit = g.members.find((id) => contestDistrict(b.byId.get(id) as Contest).n === n);
     s.districts[g.key] = hit || 'none';
     moved(g.key);
@@ -82,8 +130,7 @@ export function setFromAddress(b: Ballot, s: BallotState, r: Districts, local: L
   if (sds.size) {
     for (const g of b.groups) {
       if (g.kind) continue;
-      // Your own answer stands (the last lookup's answers were cleared above, so any left is yours).
-      if (s.districts[g.key]) continue;
+      if (own(g.key)) continue; // your own answer stands, as it does against the maps
       const each = g.members.map((id) => schoolOf(b.byId.get(id)!));
       const one = each[0];
       if (!one || each.some((x) => !x || x.key !== one.key)) continue;
@@ -97,6 +144,7 @@ export function setFromAddress(b: Ballot, s: BallotState, r: Districts, local: L
       if (!sd) continue;
       const on = sds.has(sd.key);
       if (on && !sd.whole) continue; // yours, but which trustee district is the sample ballot's to say
+      if (keep.has(id)) continue;
       s.notMine = s.notMine.filter((x) => x !== id);
       s.mine = s.mine.filter((x) => x !== id);
       (on ? s.mine : s.notMine).push(id);
@@ -110,7 +158,10 @@ export function setFromAddress(b: Ballot, s: BallotState, r: Districts, local: L
       const sd = schoolOf(it);
       if (!sd || !sd.whole) continue;
       // (The last lookup's move was undone above; a "not on my ballot" of your own stays.)
-      if (!sds.has(sd.key) && !s.notMine.includes(it.id)) { s.notMine.push(it.id); moved(it.id); }
+      if (sds.has(sd.key) || s.notMine.includes(it.id) || keep.has(it.id)) continue;
+      s.mine = s.mine.filter((x) => x !== it.id);
+      s.notMine.push(it.id);
+      moved(it.id);
     }
   }
   for (const id of b.mayApply) {
@@ -118,7 +169,7 @@ export function setFromAddress(b: Ballot, s: BallotState, r: Districts, local: L
     if (!c || c.kind !== 'contest') continue;
     const d = contestDistrict(c);
     const n = d.kind ? num(d.kind) : null;
-    if (!d.kind || n == null) continue;
+    if (!d.kind || n == null || keep.has(id)) continue;
     s.notMine = s.notMine.filter((x) => x !== id);
     s.mine = s.mine.filter((x) => x !== id);
     const on = d.n === n;
@@ -126,7 +177,7 @@ export function setFromAddress(b: Ballot, s: BallotState, r: Districts, local: L
     moved(id);
     if (on) name(d.kind, c.office);
   }
-  const localNamed = settleFromMaps(b, s, r, local, sds, moved);
+  const localNamed = settleFromMaps(b, s, r, local, sds, moved, own);
   return [...KINDS.flatMap((k) => named[k].map((o) => `${o}, District ${num(k)}`)), ...schoolsNamed, ...localNamed];
 }
 
@@ -150,7 +201,7 @@ export const localAnswers = (results: MapResult[], r: Districts): LocalAnswer[] 
 export function mapNotes(b: Ballot, s: BallotState, r: Districts, results: MapResult[], pending = false): string[] {
   const claims = (rule: SettleRule): boolean => b.groups.some((g) => !g.kind && g.members.some((id) => ruleMatches(rule, b.byId.get(id)!))) || [...b.mayApply].some((id) => ruleMatches(rule, b.byId.get(id)!));
   const open = (m: MapMeta): boolean => inCounty(m, r.county) && m.settles.some((rule) =>
-    b.groups.some((g) => !g.kind && s.districts[g.key] === undefined && g.members.some((id) => ruleMatches(rule, b.byId.get(id)!)))
+    b.groups.some((g) => !g.kind && !answered(s, g.key) && g.members.some((id) => ruleMatches(rule, b.byId.get(id)!)))
     || [...b.mayApply].some((id) => ruleMatches(rule, b.byId.get(id)!) && !s.notMine.includes(id) && !(s.mine || []).includes(id)));
   const names = (keep: (x: MapResult) => boolean): string[] => [...new Set(results.filter((x) => keep(x) && open(x.meta)).map((x) => x.meta.name))];
   const and = (xs: string[]): string => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} and ${xs[xs.length - 1]}`);
@@ -195,7 +246,7 @@ function otherCounty(c: Contest, county: string): boolean {
      another school district.
    A map of one county whose county isn't yours (the Census says so) answers "none" for the races its
    county-scoped rules claim, without looking at the map. Returns the races it put on the ballot. */
-function settleFromMaps(b: Ballot, s: BallotState, r: Districts, all: LocalAnswer[], sds: Set<string>, moved: (id: string) => void): string[] {
+function settleFromMaps(b: Ballot, s: BallotState, r: Districts, all: LocalAnswer[], sds: Set<string>, moved: (id: string) => void, own: (k: string) => boolean): string[] {
   const on: Contest[] = [];
   const local = all.filter((x) => inCounty(x.meta, r.county));
   const heard = new Set(local.map((x) => x.meta.file));
@@ -211,16 +262,10 @@ function settleFromMaps(b: Ballot, s: BallotState, r: Districts, all: LocalAnswe
       for (const rule of meta.settles) if (rule.scope && scopeNames(rule.scope, `${meta.county} County`)) sets.push({ meta, rule, props: null });
     }
   }
-  // The voter's own answer stands, as it does in the school code: the last lookup's answers were
-  // undone at the top, so an answer or a "not on my ballot" still here that this lookup didn't make
-  // is theirs, and usually came from their official sample ballot, which outranks our maps. "Not
-  // sure" is no answer: the address is how they meant to find out.
-  const own = (k: string): boolean => !(s.addrSet || []).includes(k);
-  const answered = (key: string): boolean => s.districts[key] !== undefined && s.districts[key] !== '*' && own(key);
-  const placed = (id: string): boolean => (s.mine.includes(id) || s.notMine.includes(id)) && own(id);
+  // The voter's own answer stands (`own`, from setFromAddress).
   for (const { meta, rule, props } of sets) {
     for (const g of b.groups) {
-      if (g.kind || answered(g.key)) continue; // the Census's, or the voter's
+      if (g.kind || own(g.key)) continue; // the Census's, or the voter's
       const members = g.members.map((id) => b.byId.get(id)).filter((c): c is Contest => !!c && c.kind === 'contest');
       const mine = members.filter((c) => ruleMatches(rule, c));
       if (!mine.length) continue;
@@ -236,7 +281,7 @@ function settleFromMaps(b: Ballot, s: BallotState, r: Districts, all: LocalAnswe
     }
     for (const id of b.mayApply) {
       const c = b.byId.get(id);
-      if (!c || c.kind !== 'contest' || !ruleMatches(rule, c) || schoolElsewhere(c) || placed(id)) continue;
+      if (!c || c.kind !== 'contest' || !ruleMatches(rule, c) || schoolElsewhere(c) || own(id)) continue;
       const yes = !!props && ruleIs(rule, c, props);
       s.notMine = s.notMine.filter((x) => x !== id);
       s.mine = (s.mine || []).filter((x) => x !== id);

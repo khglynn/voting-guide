@@ -73,8 +73,13 @@ function whereHTML(it: Item): string {
     return `<p class="ob-meta"><b>Maybe on your ballot.</b> You weren’t sure of your ${esc(grp.office)} district, so all ${grp.members.length} show. ${escP(it.scope_plain)} <button class="linkbtn" data-act="district-change" data-g="${esc(g)}">Choose one</button></p>`;
   }
   if (b.onlyIn[it.id]) return `<p class="ob-meta">Only on ballots in ${esc(b.onlyIn[it.id].join(', '))}. <button class="linkbtn" data-act="notmine" data-id="${esc(it.id)}">Not on my ballot</button></p>`;
-  // A race your address put on your ballot isn't a maybe any more (model/address.ts).
-  if (b.mayApply.has(it.id) && !(S.b.mine || []).includes(it.id)) {
+  // A race your address or your own "It's on my ballot" put on your ballot isn't a maybe any more
+  // (model/address.ts), but it keeps a way back, like a district's Change. Only the address's own is
+  // named as such: a save from before Oct 26 can't tell whose the rest are.
+  if (b.mayApply.has(it.id) && (S.b.mine || []).includes(it.id)) {
+    return `<p class="ob-meta">${(S.b.addrSet || []).includes(it.id) ? 'Your address puts it on your ballot.' : 'On your ballot.'} <button class="linkbtn" data-act="notmine" data-id="${esc(it.id)}" data-fk="nm-${esc(it.id)}">Not on my ballot</button></p>`;
+  }
+  if (b.mayApply.has(it.id)) {
     const same = [...b.mayApply].filter((id) => id !== it.id && !S.b.notMine.includes(id) && !(S.b.mine || []).includes(id) && (b.byId.get(id) as Contest | undefined)?.scope_plain === it.scope_plain);
     return mayHTML(it, it.scope_plain, same.length, 'Hide all N like this');
   }

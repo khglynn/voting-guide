@@ -347,12 +347,12 @@ function roundTrip(name, stCode, places, mutate) {
     const notes = address.mapNotes(au2, st.S.b, cityHall, nearAll);
     check('maps, corrected: and the box names the maps it couldn’t settle', notes.join(' ') === 'Your address is right at a council district, Austin ISD trustee district and county precinct line, so we didn’t guess. Your official sample ballot shows which are yours.', notes.join(' | '));
     // The voter's own answers survive a correction: a trustee district picked by hand, and "It's on my
-    // ballot" on a race the address took off (each as its action leaves the state: out of addrSet).
+    // ballot" on a race the address took off, through the functions their actions call.
     st.S.b = st.emptyBallotState('');
     address.setFromAddress(au2, st.S.b, cityHall, answers);
-    st.S.b.districts['school|Austin ISD Trustee'] = 'tx-aisd-district-4'; st.S.b.addrSet = st.S.b.addrSet.filter((k) => k !== 'school|Austin ISD Trustee'); // A.district
-    st.S.b.notMine = st.S.b.notMine.filter((x) => x !== 'tx-travis-constable-4'); st.S.b.addrSet = st.S.b.addrSet.filter((k) => k !== 'tx-travis-constable-4'); // A['notmine-undo']
-    st.S.b.notMine.push('tx-sboe-5'); st.S.b.mine = st.S.b.mine.filter((x) => x !== 'tx-sboe-5'); st.S.b.addrSet = st.S.b.addrSet.filter((k) => k !== 'tx-sboe-5'); // the voter's own "not on my ballot"
+    address.claimAnswer(st.S.b, 'school|Austin ISD Trustee', 'tx-aisd-district-4'); // A.district
+    address.claimOn(st.S.b, 'tx-travis-constable-4'); // A['notmine-undo']
+    address.claimOff(st.S.b, ['tx-sboe-5']); // A.notmine: the voter's own "not on my ballot"
     address.setFromAddress(au2, st.S.b, cityHall, []);
     check('maps, corrected: the voter’s own answers stay', st.S.b.districts['school|Austin ISD Trustee'] === 'tx-aisd-district-4' && !st.S.b.notMine.includes('tx-travis-constable-4') && st.S.b.notMine.includes('tx-sboe-5'), JSON.stringify([st.S.b.districts, st.S.b.notMine]));
     // The precinct line follows the same county rule as the answers.
@@ -386,9 +386,9 @@ function roundTrip(name, stCode, places, mutate) {
     // 4. The voter's own answers stand against the maps: council 3 and SBOE "not on my ballot" by hand
     // (out of addrSet, as their actions leave them), then a City Hall lookup. "Not sure" is no answer.
     st.S.b = st.emptyBallotState('');
-    st.S.b.districts['city|Austin City Council Member'] = 'tx-austin-council-3';
-    st.S.b.districts['judicial|Justice of the Peace'] = '*';
-    st.S.b.notMine.push('tx-sboe-5');
+    address.claimAnswer(st.S.b, 'city|Austin City Council Member', 'tx-austin-council-3');
+    address.claimAnswer(st.S.b, 'judicial|Justice of the Peace', '*');
+    address.claimOff(st.S.b, ['tx-sboe-5']);
     address.setFromAddress(au3, st.S.b, cityHall, answers);
     check('maps: a council district and an SBOE "not on my ballot" the voter gave stand; their "Not sure" gets the map’s answer',
       st.S.b.districts['city|Austin City Council Member'] === 'tx-austin-council-3' && st.S.b.notMine.includes('tx-sboe-5') && !st.S.b.mine.includes('tx-sboe-5') && st.S.b.districts['judicial|Justice of the Peace'] === 'tx-travis-jp-5' && !st.S.b.addrSet.includes('city|Austin City Council Member'),
@@ -427,6 +427,100 @@ function roundTrip(name, stCode, places, mutate) {
     check('maps: an office with no other race on the ballot keeps its plain name', stripH(views.ledger.offHTML()) === 'Not on your ballot: Austin City Council Member.', stripH(views.ledger.offHTML()));
     // 9. The index lists each place's maps, so the first page can start them with the place's bundle.
     check('maps: the index names Austin’s maps', JSON.stringify(INDEX.places['austin-tx'].maps) === JSON.stringify(au3.places[0].maps.map((m) => m.file)) && !INDEX.places['dallas-tx'].maps);
+    st.S.b = st.emptyBallotState('');
+  }
+  // Codex's confirming round on #17 (Oct 26): who owns an answer across a lookup's passes, and what
+  // the box still warns about. The voter's changes go through the functions the actions call
+  // (model/address.ts claimAnswer, claimOn, claimOff), and a lookup's passes through lookupPasses,
+  // as app.ts applyGeo runs them: the Census and the quick maps first, each late map after.
+  {
+    const au4 = open('TX', ['austin-tx']);
+    const cityHall = { cd: 10, upper: 14, lower: 49, schools: ['Austin Independent School District'], county: 'Travis' };
+    const councilOnly = answers.filter((x) => x.meta.kind === 'council');
+    const on = (id) => address.claimOn(st.S.b, id);
+    const off = (ids) => address.claimOff(st.S.b, ids);
+    const answer = (k, v) => address.claimAnswer(st.S.b, k, v);
+    const passes = () => address.lookupPasses();
+    const S = () => st.S.b;
+    // 1. "It's on my ballot" on a race the maps took off (City Hall is in constable precinct 5, the race
+    // is precinct 4's): it stays on through a late map and through a new lookup at the same address.
+    st.S.b = st.emptyBallotState('');
+    let pass = passes();
+    pass(au4, S(), cityHall, answers);
+    const offAtFirst = S().notMine.includes('tx-travis-constable-4');
+    on('tx-travis-constable-4');
+    pass(au4, S(), cityHall, answers);
+    const afterFold = !S().notMine.includes('tx-travis-constable-4') && S().mine.includes('tx-travis-constable-4');
+    address.setFromAddress(au4, S(), cityHall, answers);
+    check('maps, ownership: "It’s on my ballot" on a race a map took off stays on through a later pass and a new lookup',
+      offAtFirst && afterFold && !S().notMine.includes('tx-travis-constable-4') && S().mine.includes('tx-travis-constable-4') && !S().addrSet.includes('tx-travis-constable-4'),
+      JSON.stringify([offAtFirst, afterFold, S().mine, S().notMine]));
+    // The same for a race the Census took off: the Austin ISD at-large seat for a Round Rock ISD address.
+    st.S.b = st.emptyBallotState('');
+    pass = passes();
+    const rr = { ...cityHall, schools: ['Round Rock Independent School District'] };
+    pass(au4, S(), rr, []);
+    const atLargeOff = S().notMine.includes('tx-aisd-at-large-9');
+    on('tx-aisd-at-large-9');
+    pass(au4, S(), rr, councilOnly);
+    check('maps, ownership: "It’s on my ballot" on the at-large seat the Census took off stays on when a map folds in',
+      atLargeOff && !S().notMine.includes('tx-aisd-at-large-9'), JSON.stringify([atLargeOff, S().notMine]));
+    // 2. A late map after the voter changed things: the Census and the council map answer first; then
+    // the voter picks Congress 11, says the state Senate race (the Census took off) and Del Valle's
+    // Prop A (the school district took off) are on their ballot, and asks the council question again;
+    // then the precinct and trustee maps arrive. Their changes stand; the new maps still answer theirs.
+    st.S.b = st.emptyBallotState('');
+    pass = passes();
+    pass(au4, S(), cityHall, councilOnly);
+    const firstPass = S().districts['federal|U.S. Representative'] === 'tx-us-house-10' && S().notMine.includes('tx-senate-21') && S().notMine.includes('tx-dvisd-prop-a') && S().districts['city|Austin City Council Member'] === 'tx-austin-council-9';
+    answer('federal|U.S. Representative', 'tx-us-house-11');
+    on('tx-senate-21');
+    on('tx-dvisd-prop-a');
+    answer('city|Austin City Council Member', null);
+    pass(au4, S(), cityHall, answers);
+    check('maps, ownership: a late map keeps what the voter changed after the first answers (Congress, a Census race, a school measure, a question asked again)',
+      firstPass && S().districts['federal|U.S. Representative'] === 'tx-us-house-11' && S().mine.includes('tx-senate-21') && !S().notMine.includes('tx-senate-21')
+      && S().mine.includes('tx-dvisd-prop-a') && !S().notMine.includes('tx-dvisd-prop-a') && S().districts['city|Austin City Council Member'] === undefined,
+      JSON.stringify([firstPass, S().districts, S().mine, S().notMine]));
+    check('maps, ownership: and the maps that arrived still answer their own races (JP 5, the constable race off)',
+      S().districts['judicial|Justice of the Peace'] === 'tx-travis-jp-5' && S().notMine.includes('tx-travis-constable-4') && S().districts['federal|U.S. Representative'] === 'tx-us-house-11',
+      JSON.stringify(S().districts));
+    // A guess made before the lookup is still the lookup's to replace: the Census's districts are the
+    // official ones, and asking is how the voter meant to find out (unchanged from before the maps).
+    st.S.b = st.emptyBallotState('');
+    answer('federal|U.S. Representative', 'tx-us-house-37');
+    passes()(au4, S(), cityHall, []);
+    check('maps, ownership: a Congress guess from before the lookup gets the Census’s answer', S().districts['federal|U.S. Representative'] === 'tx-us-house-10', JSON.stringify(S().districts));
+    // "Not on my ballot" takes a race out of `mine` (and so off the ballot) whoever put it there.
+    st.S.b = st.emptyBallotState('');
+    passes()(au4, S(), cityHall, answers);
+    off(['tx-sboe-5']);
+    check('maps, ownership: "Not on my ballot" on a race the address put on takes it off, as the voter’s', S().notMine.includes('tx-sboe-5') && !S().mine.includes('tx-sboe-5') && !S().addrSet.includes('tx-sboe-5'), JSON.stringify([S().mine, S().notMine]));
+    // The way back on a race in `mine`: named as the address's only when the address put it there.
+    const flat = (h) => h.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+    st.S.b = st.emptyBallotState('');
+    passes()(au4, S(), cityHall, answers);
+    const byAddr = views.open.openHTML(au4.byId.get('tx-sboe-5'));
+    on('tx-travis-constable-4');
+    const byYou = views.open.openHTML(au4.byId.get('tx-travis-constable-4'));
+    check('maps, ownership: a race on your ballot keeps "Not on my ballot", saying when it was your address',
+      /Your address puts it on your ballot\. Not on my ballot/.test(flat(byAddr)) && /data-act="notmine" data-id="tx-sboe-5"/.test(byAddr)
+      && /On your ballot\. Not on my ballot/.test(flat(byYou)) && !/Your address puts it/.test(flat(byYou)) && !/Only on some ballots/.test(flat(byYou)),
+      `${flat(byAddr).slice(0, 200)} || ${flat(byYou).slice(0, 200)}`);
+    // 3. "Not sure" ('*') is no answer: the box still says which maps couldn't settle the question,
+    // and the address answers what it can.
+    const council = (answer1) => au4.places[0].maps.map((meta) => ({ meta, answer: meta.kind === 'council' ? answer1 : { at: 'out' } }));
+    const notesFor = (res) => { st.S.b = st.emptyBallotState(''); S().districts['city|Austin City Council Member'] = '*'; address.setFromAddress(au4, S(), cityHall, address.localAnswers(res, cityHall)); return address.mapNotes(au4, S(), cityHall, res).join(' '); };
+    const nFail = notesFor(council(null)), nLine = notesFor(council({ at: 'near', why: 'line' })), nUnsure = notesFor(council({ at: 'near', why: 'unsure' }));
+    check('maps, ownership: with council "Not sure", a council map that didn’t load, sat at a line or couldn’t tell still says so',
+      nFail === 'We couldn’t check your council district just now. Your official sample ballot shows it.'
+      && nLine === 'Your address is right at a council district line, so we didn’t guess. Your official sample ballot shows yours.'
+      && nUnsure === 'We couldn’t tell your council district from your address. Your official sample ballot shows it.',
+      [nFail, nLine, nUnsure].join(' | '));
+    st.S.b = st.emptyBallotState('');
+    S().districts['school|Del Valle ISD Trustee'] = '*';
+    address.setFromAddress(au4, S(), cityHall, []);
+    check('maps, ownership: "Not sure" on Del Valle’s trustees, and the Census says Austin ISD: answered "none"', S().districts['school|Del Valle ISD Trustee'] === 'none', JSON.stringify(S().districts));
     st.S.b = st.emptyBallotState('');
   }
   // The Census answer keeps the point and the block's interior point, for the maps only.

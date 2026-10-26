@@ -15,15 +15,14 @@ import {
   globalHandlersIntegration, dedupeIntegration, linkedErrorsIntegration,
 } from '@sentry/browser';
 import { scrubEvent, envelopeAllowed, type ScrubContext } from './scrub';
-import type { Secret } from './errors'; // a type only: nothing of errors.ts is in this chunk
 
 /* What errors.ts hands over, so this chunk never imports from the page's own bundle (a crash while that
    bundle starts up leaves it unusable to any module that imports it, and that crash is the one we most
    want to hear about). */
 export interface Deps {
-  words: () => Secret[];                                   // the address, typed or matched (privateWords)
+  words: () => string[];                                   // the address, typed or matched (privateWords)
   hashes: () => string[];                                  // every hash the page has had (seenHashes)
-  mentions: (text: string, words: Secret[]) => boolean;    // mentionsPrivate
+  holds: (strings: string[], words: string[], joined: string[]) => boolean;  // the one rule (holdsPrivate)
   bare: (s: string) => string;                             // bareURLs
   readings: (s: string) => string[];                       // readings
 }
@@ -36,7 +35,7 @@ let lastSent: string | undefined;
 export function start(early: unknown[], deps: Deps): (e: unknown) => void {
   const ctx = (): ScrubContext => {
     const words = deps.words();
-    return { origin: location.origin, path: location.pathname, hashes: deps.hashes(), mentions: (t) => deps.mentions(t, words), bare: deps.bare, readings: deps.readings, ua: navigator.userAgent };
+    return { origin: location.origin, path: location.pathname, hashes: deps.hashes(), holds: (ss, joined) => deps.holds(ss, words, joined), bare: deps.bare, readings: deps.readings, ua: navigator.userAgent };
   };
   // The last look, at the very bytes about to leave: anything that still names the Census lookup, holds
   // the address or a save link never goes, whichever way the SDK built it.

@@ -5,10 +5,10 @@
 
    The site's How text (views/shelf.ts) promises: "If the page breaks, it sends us a crash report with no
    address, no picks and no IP." This is where that holds:
-   - Dropped whole: anything that mentions the Census lookup (its script's address carries what the
-     person typed, geo.ts censusLookup), anything that mentions the address typed or the one the Census
-     matched, however it is written (errors.ts keepPrivate, mentionsPrivate), an error thrown by a script
-     that isn't ours (an extension, an injected ad), and a browser's empty "Script error.".
+   - Dropped whole: anything with the Census lookup's host or the address (typed or matched) anywhere in
+     it, keys and values alike, written any way (errors.ts holdsPrivate: one rule, failing closed), an
+     error thrown by a script that isn't ours (an extension, an injected ad), and a browser's empty
+     "Script error."
    - Only known fields go (KEEP below): the error's type, message and stack, which SDK sent it, the
      release, the environment, the trace ids and the source map ids. Nothing the SDK adds about a thrown
      value that isn't an Error goes: its contents (an object could hold a ballot's picks) are never sent,
@@ -32,7 +32,7 @@ export interface ScrubContext {
   origin: string;                       // location.origin
   path: string;                         // location.pathname
   hashes: string[];                     // every hash the page has had, without "#" (errors.ts seenHashes)
-  mentions: (text: string) => boolean;  // does it hold the address, typed or matched (errors.ts mentionsPrivate)
+  holds: (strings: string[], joined: string[]) => boolean; // the one rule: the address or the Census lookup, anywhere (errors.ts holdsPrivate)
   bare: (s: string) => string;          // every URL without its query and hash (errors.ts bareURLs)
   readings: (s: string) => string[];    // the text with JSON and URL escapes undone, round by round (errors.ts readings)
   ua?: string;                          // navigator.userAgent
@@ -42,7 +42,6 @@ interface Frame { filename?: string; abs_path?: string }
 interface Exc { type?: string; value?: string; stacktrace?: { frames?: Frame[] }; mechanism?: { synthetic?: boolean } }
 interface Ev { exception?: { values?: Exc[] }; message?: unknown }
 
-const CENSUS = /census\.gov/i;
 const TYPE = /^[A-Za-z_$][\w$.]{0,60}$/;                    // an error's type is a name from code
 const FN = /^[\w$.<>[\] /-]{0,120}$/;                     // a frame's function: "HTMLDocument.<anonymous>", "Object.f [as g]"
 const SAVE_LINK = /v[12]~/i;                               // a save link's own words, however they were encoded
@@ -118,21 +117,14 @@ function allowed(ev: Obj): Obj {
   return out;
 }
 
-/* Every string in it, in order, as text, decoded (so JSON's escapes are already undone); with its keys too
-   unless `values` is set. */
+/* Every key and string in it, in order, as text, decoded (so JSON's escapes are already undone); the
+   values alone when `values` is set. */
 function texts(v: unknown, out: string[] = [], values = false): string[] {
   if (typeof v === 'string') out.push(v);
   else if (Array.isArray(v)) for (const x of v) texts(x, out, values);
   else if (v && typeof v === 'object') for (const [k, x] of Object.entries(v)) { if (!values) out.push(k); texts(x, out, values); }
   return out;
 }
-/* Must this never leave: does any of its values, read every way, name the Census lookup, or hold the
-   address? Each value is judged on its own, so a bad escape in one can't hide the address in another; and
-   the values together, in order, so an address split between two neighbouring fields still counts
-   (security review, Oct 25). Keys aren't judged: those that leave are fixed field names (KEEP below), and
-   a field name like "trace" must not match a half-typed word from the box. */
-const forbidden = (vals: string[], ctx: ScrubContext): boolean =>
-  vals.some((s) => ctx.readings(s).some((r) => CENSUS.test(r)) || ctx.mentions(s)) || ctx.mentions(vals.join('\n'));
 /* Does it still hold a save link: a saved hash, or a save link's own words, in any reading? */
 const linked = (s: string, forms: string[], ctx: ScrubContext): boolean => ctx.readings(s).some((r) => SAVE_LINK.test(r) || forms.some((f) => r.includes(f)));
 
@@ -181,7 +173,7 @@ export function scrubEvent<T extends object>(event: T, ctx: ScrubContext): T | n
   } catch { return null; }
   // Judged on everything the event holds, even the parts that wouldn't leave: an event that touched the
   // address or the Census lookup anywhere is not one to send.
-  if (forbidden(texts(ev, [], true), ctx)) return null;
+  if (ctx.holds(texts(ev), texts(ev, [], true))) return null;
   if (fromElsewhere(ev as Ev, ctx.origin)) return null;
   const e = ev as Ev;
   if ((e.exception?.values || []).some((x) => SCRIPT_ERROR.test((x.value || '').trim())) || SCRIPT_ERROR.test(String(e.message ?? '').trim())) return null;
@@ -210,7 +202,7 @@ export function envelopeAllowed(body: string, ctx: ScrubContext): boolean {
     if (!line.trim()) continue;
     try { const o = JSON.parse(line); texts(o, all); texts(o, vals, true); } catch { all.push(line); vals.push(line); }
   }
-  if (forbidden(vals, ctx)) return false;
+  if (ctx.holds(all, vals)) return false;
   const forms = hashForms(ctx.hashes);
   return !all.some((s) => linked(s, forms, ctx));
 }

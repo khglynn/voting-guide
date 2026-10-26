@@ -3045,9 +3045,10 @@ const ADDRESS = /testing lane|testing%20lane|testing\+lane|test one/i;
   noErrors(page, 'Crash reports, an address never looked up');
   await ctx.close();
 }
-// Text in the address box, never looked up: a street without its number ("Shoal Creek Blvd") is private, so
-// a crash that mentions it never goes (security review, Oct 25); a half-typed word ("Trace") counts only as a
-// word, so it never silences the reports around it (Codex, Oct 25: every report has a "trace" field).
+// Text in the address box, never looked up, under the one rule (security review, Oct 25): whatever is in the box
+// when a crash happens is private from then on, with its street line, number or not, matched anywhere. So a crash
+// that mentions only the street line, a street without its number, or the whole of a half-typed street never goes;
+// ordinary crashes around them still do. (A common word left in the box can drop reports: accepted.)
 {
   const { ctx, page } = await newPage();
   const crash = await catchCrash(page);
@@ -3056,25 +3057,25 @@ const ADDRESS = /testing lane|testing%20lane|testing\+lane|test one/i;
   if (!(await ready)) noCrashClient('Crash reports, text in the box');
   else {
     await tap(page, '.addrbox [data-act="addr-open"]');
-    await page.fill('#addr-in', 'Shoal Creek Blvd');
-    await throwOnPage(page, 'On purpose: the lookup for Shoal Creek Blvd broke');
+    await page.fill('#addr-in', '500 Shoal Creek Blvd, Austin TX');
+    await throwOnPage(page, 'On purpose: the lookup for 500 Shoal Creek Blvd broke');
     await page.waitForTimeout(300);
     await page.fill('#addr-in', '');
     await throwOnPage(page, 'On purpose: after the box was cleared');
-    await throwOnPage(page, 'On purpose: again, shoal creek blvd, after it was cleared');
-    await page.fill('#addr-in', 'Trace');
-    await throwOnPage(page, 'On purpose: while the box said Trace');
+    await throwOnPage(page, 'On purpose: again, 500 shoal creek blvd, after it was cleared');
+    await page.fill('#addr-in', 'Lamar Bl');
+    await throwOnPage(page, 'On purpose: North Lamar Blvd is long');
     await page.waitForTimeout(300);
-    // Submitted, it's turned away as too short; it must not then count against every later report.
-    await page.locator('form[data-form="addr"] button[type=submit]').tap();
+    await page.fill('#addr-in', 'Barton Springs Rd');
+    await throwOnPage(page, 'On purpose: Barton Springs Rd, no number');
     await page.waitForTimeout(300);
     await page.fill('#addr-in', '');
-    await throwOnPage(page, 'On purpose: the last one, a stacktrace');
+    await throwOnPage(page, 'On purpose: the last one');
     await until(() => crash.length >= 2);
     await page.waitForTimeout(800);
     const got = crash.map((c) => c.event.exception?.values?.[0]?.value);
-    check('Crash reports: a street typed without its number never goes, even after the box is cleared', !crash.some((c) => /shoal|creek/i.test(c.body)), got.join(' | '));
-    check('Crash reports: a half-typed word in the box, even submitted and turned away, doesn’t silence the reports around it', JSON.stringify(got) === JSON.stringify(['On purpose: after the box was cleared', 'On purpose: the last one, a stacktrace']), got.join(' | '));
+    check('Crash reports: text in the box (its street line, a street without its number, a half-typed street) never goes, even after the box is cleared', !crash.some((c) => /shoal|lamar|barton/i.test(c.body)), got.join(' | '));
+    check('Crash reports: and the ordinary crashes around it still go', JSON.stringify(got) === JSON.stringify(['On purpose: after the box was cleared', 'On purpose: the last one']), got.join(' | '));
   }
   forgive(page);
   noErrors(page, 'Crash reports, text in the box');

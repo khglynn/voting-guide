@@ -22,7 +22,6 @@ export interface Caught { msg: string; at: string; time: string }
 const KEEP = 3;
 const MAX = 160;
 const caught: Caught[] = [];
-const CENSUS = /geocoding\.geo\.census\.gov/i;
 
 /* A string with every URL's query and hash gone, whole. Where a URL ends can't be told from its
    characters (an address in a query can hold an apostrophe, a paren or even a space: "12 O'Test Lane"
@@ -63,7 +62,7 @@ export function note(err: unknown, file = '', line = 0, col = 0, when = new Date
     if (err instanceof Error && !file) [file, line, col] = whereFrom(err);
     const stack = err instanceof Error ? err.stack || '' : '';
     const raw = words(err);
-    if (CENSUS.test(raw) || CENSUS.test(file) || CENSUS.test(stack) || mentionsPrivate(`${raw}\n${file}\n${stack}`)) return;
+    if (holdsPrivate([raw, file, stack])) return;
     const msg = bareURLs(raw.replace(/\s+/g, ' ').trim()).slice(0, MAX) || 'Unknown error';
     const at = file ? `${fileOf(file)}${line ? `:${line}${col ? `:${col}` : ''}` : ''}` : '';
     caught.push({ msg, at, time: clock(when) });
@@ -74,110 +73,67 @@ export function note(err: unknown, file = '', line = 0, col = 0, when = new Date
 export const lastErrors = (): Caught[] => caught.slice().reverse();
 
 /* ---------- what never leaves: the address and the save link ---------- */
-/* What the person typed in the address box and what the Census matched, for this page load only
-   (app.ts runAddress). Never shown or sent, only compared: a note here, or a crash report (scrub.ts),
-   that mentions any of it is dropped whole. A full address's street line counts on its own too, when
-   it has a number in it, since that is the part that says where someone lives. Lowercased, with runs
-   of spaces as one. A secret marked `whole` (text from the box, maybe half typed) counts only as whole
-   words, so a box that says "Trace" doesn't match "stacktrace"; the rest count anywhere. */
-export interface Secret { text: string; whole?: boolean }
-const secrets = new Map<string, boolean>(); // text -> whole words only
+/* One rule, failing closed (Oct 25; four review rounds kept finding cases a cleverer matcher missed, so
+   the cases are gone). The private set: everything typed in the address box (looked up or not, from
+   app.ts runAddress and whenever an error is caught) and everything the Census matched, each with its
+   street line (the part before the first comma), each when five characters or more; lowercased, runs of
+   spaces as one; in memory for this page load, never shown or sent, only compared. Anything that holds
+   one of them anywhere, or the Census lookup's host, doesn't leave (holdsPrivate). A common word left in
+   the box ("trace") can then drop every report while it's kept: accepted. A dropped report is fine; a
+   sent address is not. */
+const secrets = new Set<string>();
 const squash = (s: string): string => s.replace(/\s+/g, ' ').trim().toLowerCase();
+const entries = (x: string | null | undefined): string[] => {
+  const s = squash(x || '');
+  return [s, s.split(',')[0].trim()].filter((p) => p.length >= 5);
+};
 export function keepPrivate(...xs: (string | null | undefined)[]): void {
-  for (const x of xs) {
-    const s = squash(x || '');
-    if (s.length < 5) continue;
-    secrets.set(s, false);
-    const street = s.split(',')[0].trim();
-    if (street !== s && street.length >= 5 && /\d/.test(street)) secrets.set(street, false);
-  }
+  for (const x of xs) for (const p of entries(x)) secrets.add(p);
 }
-/* What is in the address box right now: typed, maybe never looked up. */
 const inBox = (): string => {
   const box = typeof document === 'undefined' ? null : document.getElementById('addr-in') as HTMLInputElement | null;
   return box ? box.value : '';
 };
-/* Whatever is in the box when an error is caught is kept too (five characters or more, number or not: a
-   street typed without its number is still where someone lives; security review, Oct 25), so an error
-   that waits for the client, or a report written later, is still checked against it after the box has
-   been cleared or has gone (Codex, Oct 25). As whole words: a half-typed "Trace" then silences only a
-   report that says "trace", not every report after it. */
-const keepBox = (): void => { const v = squash(inBox()); if (v.length >= 5 && !secrets.has(v)) secrets.set(v, true); };
-/* Every private string, with whatever is in the address box right now. */
-export function privateWords(): Secret[] {
-  const out = [...secrets].map(([text, whole]) => ({ text, whole }));
-  const live = squash(inBox());
-  if (live.length >= 5 && !secrets.has(live)) out.push({ text: live, whole: true });
-  return out;
+/* Kept whenever an error is caught, so an error that waits for the client is still checked after the box
+   has been cleared or has gone (Codex, Oct 25). */
+const keepBox = (): void => keepPrivate(inBox());
+/* The private set, with the box as it is right now. */
+export function privateWords(): string[] {
+  return [...new Set([...secrets, ...entries(inBox())])];
 }
-/* The text with JSON's escapes undone (\t, \n, \", \u00e9). */
+/* A text read every way: as it is, then with JSON's escapes (\t, \", \u00e9) and URL encoding ("+", %XX
+   runs read as UTF-8) undone in turn, at most four rounds, so an escape inside an encoding unwinds too. */
 const unJSON = (s: string): string => s.replace(/\\u([0-9a-f]{4})/gi, (_, h: string) => String.fromCharCode(parseInt(h, 16)))
   .replace(/\\[nrtbf]/g, ' ').replace(/\\(["\\/])/g, '$1');
-/* The text with URL encoding undone: "+" as a space, and every run of %XX escapes read as UTF-8 bytes
-   (a bad byte becomes a replacement character rather than an error). Never throws. */
-function unURL(s: string): string {
-  return s.replace(/\+/g, ' ').replace(/(?:%[0-9a-f]{2})+/gi, (run) => {
-    const bytes = new Uint8Array(run.length / 3);
-    for (let i = 0; i < bytes.length; i++) bytes[i] = parseInt(run.slice(i * 3 + 1, i * 3 + 3), 16);
-    return new TextDecoder().decode(bytes);
-  });
-}
-/* Holds %XX escapes the browser itself wouldn't decode (bad UTF-8, a Latin-1 "%F1", a stray "%" beside
-   real escapes): we can't be sure what it says. */
-function undecodable(s: string): boolean {
-  if (!/%[0-9a-f]{2}/i.test(s)) return false;
-  try { decodeURIComponent(s.replace(/\+/g, ' ')); return false; } catch { return true; }
-}
-/* A private string as a URL may carry it: all escaped, or only its non-ASCII letters escaped. A string
-   that can't be encoded (a lone surrogate) is compared as it is (Codex, Oct 25: it used to throw and
-   silence every report after it). */
-function encodings(w: string): string[] {
-  const out = [w];
-  try { out.push(squash(encodeURIComponent(w))); } catch { /* compared as it is */ }
-  try { out.push(squash(w.replace(/[^\x00-\x7f]/g, (c) => encodeURIComponent(c)))); } catch { /* compared as it is */ }
-  return out;
-}
-/* Every way to read a text: as it is, then with JSON's escapes and URL encoding undone in turn, round
-   after round (at most four), so an escape inside an encoding ("%5Ct", "%5Cu0020") unwinds too (Codex,
-   Oct 25). The address check and the save-link check both read text this way (scrub.ts). */
+const unURL = (s: string): string => s.replace(/\+/g, ' ').replace(/(?:%[0-9a-f]{2})+/gi, (run) =>
+  new TextDecoder().decode(Uint8Array.from(run.slice(1).split('%'), (h) => parseInt(h, 16))));
 export function readings(text: string): string[] {
   const out = [text];
-  let cur = text;
-  for (let i = 0; i < 4; i++) {
-    const next = unURL(unJSON(cur));
-    if (next === cur) break;
-    out.push(next);
-    cur = next;
-  }
+  for (let i = 0; i < 4; i++) { const next = unURL(unJSON(out[out.length - 1])); if (next === out[out.length - 1]) break; out.push(next); }
   return out;
 }
-/* Does this text hold a private string, however it is written: in any case, with any run of spaces,
-   tabs or line breaks between the words, JSON-escaped, URL-encoded (all of it or only its accented
-   letters), or escapes inside encodings? Decoding goes run by run and never gives up, so one bad escape
-   can't hide the address elsewhere in the text. When there is something private to protect and any
-   line of any reading holds escapes the browser itself wouldn't decode, the answer is yes: when in
-   doubt, send nothing (security review, Oct 25: an accented street, encoded, beside a stray "%", got
-   past an earlier version). Lines are judged one at a time for that, so an ordinary "100%" on one line
-   doesn't condemn good escapes on another; the match itself runs across lines, so an address broken
-   over two still counts. */
-export function mentionsPrivate(text: string, words: (string | Secret)[] = privateWords()): boolean {
-  if (!words.length || !text) return false;
-  const rs = readings(text);
-  if (rs.some((r) => r.split(/[\r\n]+/).some(undecodable))) return true;
-  const hay = rs.map(squash);
-  return words.some((w) => {
-    const { text: t, whole } = typeof w === 'string' ? { text: w, whole: false } : w;
-    return encodings(t).some((x) => !!x && hay.some((h) => (whole ? wholeIn(h, x) : h.includes(x))));
-  });
-}
-/* Is x in h as whole words: no letter or digit right before or after it? */
-function wholeIn(h: string, x: string): boolean {
-  for (let i = h.indexOf(x); i >= 0; i = h.indexOf(x, i + 1)) {
-    const before = h.slice(0, i).slice(-1);
-    const after = h.charAt(i + x.length);
-    if (!/[\p{L}\p{N}]/u.test(before) && !/[\p{L}\p{N}]/u.test(after)) return true;
-  }
-  return false;
+/* Holds %XX escapes the browser itself wouldn't decode: we can't be sure what it says. */
+const undecodable = (s: string): boolean => {
+  if (!/%[0-9a-f]{2}/i.test(s)) return false;
+  try { decodeURIComponent(s.replace(/\+/g, ' ')); return false; } catch { return true; }
+};
+const CENSUS = /census\.gov/i;
+/* The rule. True when any of these strings (an event's keys and values at every depth, an envelope's
+   lines, an error's message and stack), read every way, holds the Census lookup's host or, as a
+   substring, any private entry; or when, with anything private to protect, one holds escapes that won't
+   decode. `joined` (by default the same strings) is also checked as one text, so an address split
+   between two fields still counts; an event passes its values in order there, since a key always sits
+   between two neighbouring values and would keep the halves apart. */
+export function holdsPrivate(strings: string[], words: string[] = privateWords(), joined: string[] = strings): boolean {
+  const holds = (s: string, whole: boolean): boolean => {
+    const rs = readings(s);
+    if (rs.some((r) => CENSUS.test(r))) return true;
+    if (!words.length) return false;
+    if (whole && rs.some(undecodable)) return true;
+    const hay = rs.map(squash);
+    return words.some((w) => hay.some((h) => h.includes(w)));
+  };
+  return strings.some((s) => holds(s, true)) || holds(joined.join('\n'), false);
 }
 /* Every hash this page has had. A save link carries picks in it, and the app clears it from the
    address bar once the link has opened (app.ts openBallot), so each one is kept from the first moment
@@ -215,7 +171,7 @@ function startCrashReports(): void {
     .then((m) => {
       // Sentry's own window handlers go on inside start(), in the same task that turns ours off for
       // it, so no error falls between them.
-      send = m.start(early.splice(0), { words: privateWords, hashes: seenHashes, mentions: mentionsPrivate, bare: bareURLs, readings });
+      send = m.start(early.splice(0), { words: privateWords, hashes: seenHashes, holds: holdsPrivate, bare: bareURLs, readings });
       lastId = m.lastSentId;
     })
     .catch(() => { /* an ad blocker or a dropped connection ate the chunk: the guide works the same, we just hear nothing */ });

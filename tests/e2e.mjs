@@ -1904,7 +1904,7 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
   await openRow(page, 'portland-26-267');
   const mcard = '#i-portland-26-267';
   const pwRow = await page.evaluate((c) => { const n = document.querySelector(`${c} .pw-note`); return n ? { n: document.querySelectorAll(`${c} .pw-note`).length, note: n.textContent.replace(/\s+/g, ' ').trim(), what: (n.querySelector('[data-act="shelf"][data-kind="report"]') || { dataset: {} }).dataset.what || '' } : null; }, mcard);
-  check('Portland: the measure notes the paywalled Oregonian once, with Send it to us naming the paper and the measure', !!pwRow && pwRow.n === 1 && /Oregonian/.test(pwRow.note) && PW_NOTE_RE.test(pwRow.note) && /Oregonian.*: picks on .*26-267$/.test(pwRow.what), pwRow ? `${pwRow.note} | ${pwRow.what}` : 'no note');
+  check('Portland: the measure notes the paywalled Oregonian once, with Send it to us naming the paper and the measure', !!pwRow && pwRow.n === 1 && /Oregonian/.test(pwRow.note) && PW_NOTE_RE.test(pwRow.note) && /Oregonian.*: picks on Measure 26-267/.test(pwRow.what), pwRow ? `${pwRow.note} | ${pwRow.what}` : 'no note');
   await openRow(page, 'portland-council-3');
   await tap(page, `${card} [data-act="rank"][data-v="Steve Novick"]`);
   await tap(page, `${card} [data-act="rank"][data-v="Tiffany Koyama Lane"]`);

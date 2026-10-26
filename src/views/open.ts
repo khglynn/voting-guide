@@ -46,7 +46,8 @@ function mayHTML(it: Item, scope: string, same: number, allLabel: string): strin
   const addr = addressSettles(it) && !S.b.addrNote && addressCount() > 0;
   const btns = [
     addr ? `<button class="mini dark" data-act="addr-open" data-fk="ma-${esc(it.id)}">Check with my address</button>` : '',
-    sb ? `<a class="mini${addr ? '' : ' dark'}" href="${esc(sb.url)}" target="_blank" rel="noopener">Official sample ballot</a>` : '',
+    // A plain link: the head's notice has the one sample-ballot button on the screen (Kevin, Oct 25).
+    sb ? `<a class="linkbtn" href="${esc(sb.url)}" target="_blank" rel="noopener">Official sample ballot</a>` : '',
     `<button class="mini" data-act="notmine" data-id="${esc(it.id)}" data-fk="nm-${esc(it.id)}">It’s not on my ballot</button>`,
   ].join('');
   return `<div class="may"><p><b>Only on some ballots.</b> ${escP(scope)}</p>

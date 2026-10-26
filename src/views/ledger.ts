@@ -18,6 +18,8 @@ import { FOUND_ONLY, CHECKING, addressKinds } from '../model/address';
 import { judgeBatch, judicialReview, judgesLead, judgesRule } from '../model/judges';
 import { ext, sampleBallot, isOpen, escP, leadRest, reportAttrs, HIDE } from './common';
 import { lensSummary } from './lens';
+import { covOf, cardShows, cardAsks, headCovHTML } from './coverage';
+import { noEndorsements } from '../model/lens';
 import { addrHTML } from './mast';
 import { openHTML, censusSettles, addressSettles } from './open';
 import { mapCounty } from '../model/maps';
@@ -152,8 +154,8 @@ export const noneLabel = (g: Group): string => {
   const e = districtEntity(g.office);
   return e ? `I’m not in ${e}` : 'Not in any of these';
 };
-/* Under a district question: the sample ballot first (it settles every race), then the district
-   finders, each page once (UX walk, Oct 20: five links in a row, two of them the same page, the one
+/* Under a district question, one line of links: the sample ballot first (it settles every race), then
+   the district finders, each page once (UX walk, Oct 20: five links in a row, two of them the same page, the one
    most people need last). When the sample ballot is one county's finder, that finder leads instead,
    with its county's name, since a place across county lines has one finder per county. */
 function dqHelpHTML(finders: { url: string; label: string }[], sb: { url: string; label: string } | null): string {
@@ -161,9 +163,9 @@ function dqHelpHTML(finders: { url: string; label: string }[], sb: { url: string
   const once = finders.filter((f) => !seen.has(f.url) && !!seen.add(f.url));
   const inFinders = !!sb && seen.has(sb.url);
   const list = inFinders ? [...once.filter((f) => f.url === sb!.url), ...once.filter((f) => f.url !== sb!.url)] : once;
-  const btn = sb && !inFinders ? `<p class="row-btns"><a class="mini dark" href="${esc(sb.url)}" target="_blank" rel="noopener">Official sample ballot</a></p>` : '';
-  const links = list.length ? `<p class="dq-help">${list.map((f) => ext(f.url, f.label)).join('<span class="dot" aria-hidden="true"> · </span>')}</p>` : '';
-  return btn + links;
+  // The sample ballot as a plain link, first: the head's notice has the one button for it (Kevin, Oct 25).
+  const all = [...(sb && !inFinders ? [{ url: sb.url, label: 'Official sample ballot' }] : []), ...list];
+  return all.length ? `<p class="dq-help">${all.map((f) => ext(f.url, f.label)).join('<span class="dot" aria-hidden="true"> · </span>')}</p>` : '';
 }
 function questionBodyHTML(g: Group): string {
   const b = S.ballot!;
@@ -559,12 +561,22 @@ export function addressHelps(): boolean {
    the ballot keeps (S.b.addrNote, never the address); and how many the sample ballot still has to
    settle. A reload shows the last two. When it put no race on the ballot and nothing is left for
    the sample ballot either (a DC ward's), the box holds only what was found, or the form again
-   after "Not it? Try again", and after a reload there is no box, as before the lookup. */
-function addrBoxHTML(): string {
+   after "Not it? Try again", and after a reload there is no box, as before the lookup.
+   While a coverage card shows (views/coverage.ts: a statewide ballot, a thin place), the card owns the
+   screen's one dark button (Kevin, Oct 25: "the main CTA being open sample ballot... it's just kind of
+   confounding"): "Official sample ballot" is an outline then, and "Use my address" is too until the
+   card's request is sent. */
+interface AddrParts { lines: string; form: string; btns: string[] }
+const sbLinkHTML = (sb: { url: string } | null, dark: boolean): string => (sb ? `<a class="mini${dark ? ' dark' : ''}" href="${esc(sb.url)}" target="_blank" rel="noopener">Official sample ballot</a>` : '');
+const useAddrHTML = (dark: boolean): string => `<button class="mini${dark ? ' dark' : ''}" data-act="addr-open" data-fk="addr-open">Use my address</button>`;
+function addrParts(): AddrParts | null {
   const n = addressCount();
   const note = S.b.addrNote;
   const sb = sampleBallot();
-  const sbLink = (dark: boolean): string => (sb ? `<a class="mini${dark ? ' dark' : ''}" href="${esc(sb.url)}" target="_blank" rel="noopener">Official sample ballot</a>` : '');
+  const cov = covOf();
+  const card = cardShows(cov);
+  const asks = cardAsks(cov);
+  const form = S.ui.addrOpen ? addrHTML() : '';
   // What's left for the sample ballot, and why, in a voter's words (Kevin, Oct 20: "N still depend on
   // your address" read as a contradiction right after typing one).
   const kinds = addressKinds(addressRaces().filter((c): c is Contest => c.kind === 'contest' && !addressSettles(c)).map((c) => c.office)).slice(0, 2);
@@ -575,13 +587,12 @@ function addrBoxHTML(): string {
     ? ` ${andList(left3.map((x) => `<button class="linkbtn" data-act="goto" ${x.act}>${esc(x.name)}</button>`))}.` : '';
   const rest = (k: number): string => `<p class="addr-n"><b>${k === 1 ? '1 race needs' : `${k} races need`} your official sample ballot${named ? ':' : '.'}</b>${named || why}</p>`;
   if (!note) {
-    if (!n) return '';
+    if (!n) return null;
     const look = addressHelps();
     // Before a lookup, what it can and can't do, so what's left after it is no surprise.
     const k = look ? addressRaces().filter((c) => addressSettles(c)).length : 0;
     const tail = !look ? ' Your official sample ballot shows which are yours.' : k < n ? ` Your address can find ${k} of them. Your official sample ballot shows all ${n}.` : n > 1 ? ` Your address can find ${n === 2 ? 'both' : `all ${n}`}.` : '';
-    return `<div class="addrbox"><p class="addr-n"><b>${n === 1 ? '1 race depends' : `${n} races depend`} on your address.</b>${tail}</p>
-      ${S.ui.addrOpen ? addrHTML() : `<div class="row-btns">${look ? '<button class="mini dark" data-act="addr-open" data-fk="addr-open">Use my address</button>' : ''}${sbLink(!look)}</div>`}</div>`;
+    return { lines: `<p class="addr-n"><b>${n === 1 ? '1 race depends' : `${n} races depend`} on your address.</b>${tail}</p>`, form, btns: form ? [] : [look ? useAddrHTML(!asks) : '', sbLinkHTML(sb, !look && !card)].filter(Boolean) };
   }
   const found = S.ui.addrFound && !S.ui.addrOpen
     ? `<p class="addr-found" tabindex="-1" data-fk="addr-found"><b>Found:</b> ${esc(S.ui.addrFound)} <button class="linkbtn" data-act="addr-again" data-fk="addr-again">Not it? Try again</button></p>` : '';
@@ -589,25 +600,27 @@ function addrBoxHTML(): string {
   // What the district maps said beyond the races they set, for this visit: the voting precinct, a line
   // they didn't guess at, a map that didn't load (S.ui.addrMaps).
   const mapLines = S.ui.addrMaps.map((t) => `<p class="addr-map"${t === CHECKING ? ' data-pending' : ''}>${esc(t)}</p>`).join('');
-  if (none && !n) return found || mapLines || S.ui.addrOpen ? `<div class="addrbox">${found}${mapLines}${S.ui.addrOpen ? addrHTML() : ''}</div>` : '';
+  if (none && !n) return found || mapLines || form ? { lines: found + mapLines, form, btns: [] } : null;
   // While the maps are still on their way, the races they'll settle aren't the sample ballot's yet.
   const left = n && !S.ui.addrMapsPending ? rest(n) : '';
   const filledLine = S.ui.addrFilled ? `<p class="addr-fill">${esc(S.ui.addrFilled)}</p>` : '';
-  const after = S.ui.addrOpen ? addrHTML() : (none || n) && sb ? `<div class="row-btns">${sbLink(true)}</div>` : '';
-  return `<div class="addrbox">${found}${none ? '' : `<p class="addr-set">${esc(note)}</p>`}${mapLines}${filledLine}${left}${after}</div>`;
+  return { lines: `${found}${none ? '' : `<p class="addr-set">${esc(note)}</p>`}${mapLines}${filledLine}${left}`, form, btns: !form && (none || n) && sb ? [sbLinkHTML(sb, !card)] : [] };
 }
+const btnRow = (btns: string[]): string => (btns.length ? `<div class="row-btns">${btns.join('')}</div>` : '');
+function addrBoxHTML(): string {
+  const p = addrParts();
+  return p ? `<div class="addrbox">${p.lines}${p.form}${btnRow(p.btns)}</div>` : '';
+}
+/* The ballot's head. A statewide-only ballot's notice is the coverage card under the masthead now
+   (mast.ts restoreHTML), so the head holds the address box alone, doing its own job, on every ballot. */
 export function ballotHeadHTML(): string {
-  const b = S.ballot!;
-  const sb = sampleBallot();
-  const statewideOnly = !b.places.length;
   const filled = S.ui.bulk && canUndo()
     ? `<p class="filled">${esc(S.ui.bulk)} filled in${esc(S.ui.bulkWhy || '')}. <button class="linkbtn" data-act="undo-bulk" data-fk="filled-undo">Undo</button></p>` : '';
-  const addr = addrBoxHTML();
+  // How many sources, scoped to this ballot, under whose picks you see; nothing while endorsements are off.
+  const cov = noEndorsements() ? '' : headCovHTML();
   return `<div class="bhead"><h2 class="step su-h bal-h" id="ballot-h"><span class="step-n" aria-hidden="true">3</span>Your ballot</h2>
       <p class="picks-line"><span>Endorsements: ${esc(lensSummary())}</span><button class="mini" data-act="picks" data-fk="picks-edit">Edit</button></p>
-      ${filled}${addr}
-      ${statewideOnly ? `<div class="statewide-note"><p>We only have statewide races for your area so far.</p>
-        <p class="row-btns">${sb ? `<a class="mini dark" href="${esc(sb.url)}" target="_blank" rel="noopener">Official sample ballot</a>` : ''}<button class="mini" ${reportAttrs({ city: true, fk: 'ask-city' })}>Ask for your city</button></p></div>` : ''}
+      ${cov}${filled}${addrBoxHTML()}
     </div>
     ${headsHTML(headsUp('ballot'))}`;
 }

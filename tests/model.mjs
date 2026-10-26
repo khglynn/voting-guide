@@ -35,13 +35,13 @@ const util = await load('/src/util.ts');
 const geo = await load('/src/geo.ts');
 const common = await load('/src/views/common.ts');
 const mods = {};
-for (const m of ['lens', 'tally', 'bulk', 'judges', 'labels', 'plan', 'address']) {
+for (const m of ['lens', 'tally', 'bulk', 'judges', 'labels', 'plan', 'address', 'coverage']) {
   const f = path.join(ROOT, 'src', 'model', `${m}.ts`);
   if (fs.existsSync(f)) mods[m] = await load(`/src/model/${m}.ts`);
 }
 /* The string views the ledger paints (no DOM needed to build their HTML). */
 const views = {};
-for (const v of ['ledger', 'cheat', 'open', 'lens', 'mast', 'setup', 'pass', 'planstrip', 'shelf']) views[v] = await load(`/src/views/${v}.ts`);
+for (const v of ['ledger', 'cheat', 'open', 'lens', 'mast', 'setup', 'pass', 'planstrip', 'shelf', 'coverage']) views[v] = await load(`/src/views/${v}.ts`);
 views.errors = await load('/src/errors.ts'); // not a view: the errors a problem report sends along (the shelf reads it)
 
 const results = [];

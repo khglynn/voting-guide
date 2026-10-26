@@ -128,6 +128,19 @@ b, strong { font-weight: 600; }
 .heads p { display: inline; }
 .notice { margin: 12px auto 0; padding: 12px 14px; background: var(--paper); border-left: 3px solid var(--dusk-2); }
 .notice.strong { border-left-color: var(--gold); background: var(--gold-wash); }
+/* The coverage card (views/coverage.ts, Oct 25): the gold callout "Welcome back" uses, in the place slot
+   under the masthead or in step 1. What's missing in bold, what's here and what isn't under it, then the
+   screen's one dark button, the fine print about what a tap sends, and the sample ballot as a link. */
+.cov-card { margin-bottom: 4px; }
+.cov-lead { font-size: 16.5px; line-height: 1.35; }
+.cov-lead b { font-weight: 600; }
+.cov-tick { width: 14px; height: 14px; margin-right: 6px; vertical-align: -1px; color: var(--gold-ink); }
+.cov-here, .cov-miss, .cov-sb { margin-top: 4px; font-size: 15px; line-height: 1.4; color: var(--ink-2); }
+.cov-card .row-btns { margin-top: 10px; }
+.cov-card .rp-fail { margin-top: 8px; }
+.cov-fine { margin-top: 6px; }
+.cov-sb a { text-decoration: underline; text-underline-offset: 3px; }
+.door-where .cov-card { margin: 10px 0 0; }
 /* "Welcome back": one line, "Pick up where I left off", and a small close in the corner. */
 .resume { position: relative; padding-right: 50px; margin-bottom: 18px; }
 .resume .row-btns { margin-top: 8px; }
@@ -200,7 +213,11 @@ b, strong { font-weight: 600; }
 .su-ends .su-sw { min-height: 44px; padding: 8px 0 0; }
 .su-ends + .su-chips { margin-top: 6px; }
 .su-parties { margin-top: 8px; }
-.su-cov { margin-top: 12px; padding-bottom: 14px; border-bottom: 1px solid var(--rule-2); font-size: 14.5px; color: var(--muted); }
+.su-stat { margin-top: 12px; padding-bottom: 14px; border-bottom: 1px solid var(--rule-2); }
+.su-cov { font-size: 14.5px; color: var(--muted); }
+/* How covered the ballot is (views/coverage.ts): a quiet line under "Your sources have picks in N of your
+   M races". The action is the coverage card's, in step 1. */
+.su-src { margin-top: 4px; font-size: 14.5px; color: var(--muted); }
 .su-sw { width: 100%; min-height: 52px; display: grid; grid-template-columns: minmax(0, 1fr) 52px; gap: 12px; align-items: start; padding: 12px 0 6px; text-align: left; }
 .su-l b { display: block; font-size: 17px; line-height: 1.3; }
 .su-l small { display: block; margin-top: 2px; font-size: 14.5px; line-height: 1.4; color: var(--muted); }
@@ -298,7 +315,8 @@ b, strong { font-weight: 600; }
 .addrbox .addr-found .linkbtn { margin: -12px 0; padding: 0; }
 .addrbox .addr-set { color: var(--ink-2); }
 .addrbox .addr-map { color: var(--ink-2); }
-.bhead .statewide-note { margin-top: 12px; font-size: 14.5px; color: var(--ink-2); }
+/* Under the picks line: how many sources, scoped to the ballot. A quiet line, no button. */
+.picks-cov { margin-top: 8px; font-size: 14.5px; line-height: 1.45; color: var(--muted); }
 
 /* ---------- sections ---------- */
 .ledger { max-width: 640px; margin: 0 auto; }
@@ -704,6 +722,10 @@ b, strong { font-weight: 600; }
 .rp-along b { color: var(--ink-2); font-weight: 600; }
 .rp-along ul { margin-top: 4px; list-style: disc; padding-left: 18px; display: grid; gap: 1px; overflow-wrap: anywhere; }
 .rp-along > p:last-child { margin-top: 6px; }
+/* The follow-up sheet (Tell me when it's in): the request as a line, what goes along folded under the button. */
+.rp-req { margin-top: 8px; font-size: 15.5px; line-height: 1.4; }
+details.rp-along { margin-top: 12px; }
+details.rp-along summary { padding: 10px 0; cursor: pointer; color: var(--ink-2); font-weight: 600; }
 /* Support: a few words and the coffee in the guide's own button. */
 .sp p { font-size: 15.5px; line-height: 1.45; }
 .sp p + p { margin-top: 8px; }

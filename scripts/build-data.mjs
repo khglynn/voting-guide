@@ -16,6 +16,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { coverageOf } from './coverage.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = path.join(ROOT, 'data');
@@ -725,6 +726,7 @@ const write = (name, obj) => { fs.writeFileSync(path.join(OUT, name), JSON.strin
 
 const index = { generated: report.generated, states: {}, places: {}, zips: {} };
 const sizes = {};
+const stateBundles = new Map();
 for (const [st, s] of states) {
   const ids = [...(statewideFileIds.get(st) || [])];
   // keep file order: contests first then measures as they appear
@@ -734,12 +736,16 @@ for (const [st, s] of states) {
   if (s.in_the_booth && s.in_the_booth.phones_short != null) s.in_the_booth.phones_short = helpShort(s.in_the_booth.phones_short, `${st} in_the_booth.phones_short`);
   const bundle = { state: st, name: CONFIG.stateNames[st] || st, howto: s, order: ordered, ...b };
   sizes[`state-${st}.json`] = write(`state-${st}.json`, bundle);
+  stateBundles.set(st, bundle);
+  // How many sources a statewide-only ballot has, how many made picks, and when it was last checked
+  // (scripts/coverage.mjs): the first page says so in plain words.
   index.states[st] = {
     name: CONFIG.stateNames[st] || st,
     as_of: s.last_verified || null,
     election_date: s.election_date,
     official_site: s.official_site,
     places: [],
+    ...coverageOf(bundle, []),
   };
 }
 for (const [id, p] of places) {
@@ -750,8 +756,10 @@ for (const [id, p] of places) {
   const bundle = { ...p, file: undefined, local, ...b, ...(pm.length ? { maps: pm } : {}) };
   sizes[`place-${id}.json`] = write(`place-${id}.json`, bundle);
   // The place's map files too, so an address typed on the first page can start them loading as soon
-  // as the Census names the place, beside its bundle.
-  index.places[id] = { label: p.label, state: p.state, counties: p.counties, local_count: local.length, ...(pm.length ? { maps: pm.map((m) => m.file) } : {}) };
+  // as the Census names the place, beside its bundle. And the same coverage numbers for this place's
+  // ballot (statewide races included), plus its own races and how many of them have any pick: a place
+  // none of whose own sources has picks reads as thin.
+  index.places[id] = { label: p.label, state: p.state, counties: p.counties, local_count: local.length, ...(pm.length ? { maps: pm.map((m) => m.file) } : {}), ...coverageOf(stateBundles.get(p.state), [bundle], id) };
   index.states[p.state].places.push(id);
   for (const z of p.zips) {
     (index.zips[z] = index.zips[z] || []);

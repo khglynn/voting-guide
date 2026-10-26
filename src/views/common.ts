@@ -37,7 +37,9 @@ export function reportWhere(): string {
 /* What a control needs to open the shelf (actions.ts A.shelf): its opening, and for a report the race,
    measure or source it came from (`what`, and `tag`, the item or source id the form gets after it).
    `fk` is where focus goes back when the sheet closes. */
-export function shelfAttrs(o: { kind: ShelfKind; what?: string; tag?: string; hint?: 'paywall'; fk: string }): string {
+/* `hint`: 'paywall' from a paywalled source's "Send it to us", 'follow' from the coverage card's "Tell me when
+   it's in" (a follow-up to its one-tap request, shelf.ts followHTML). */
+export function shelfAttrs(o: { kind: ShelfKind; what?: string; tag?: string; hint?: 'paywall' | 'follow'; fk: string }): string {
   return ['data-act="shelf"', `data-kind="${o.kind}"`, o.what ? `data-what="${esc(o.what)}"` : '', o.tag ? `data-tag="${esc(o.tag)}"` : '',
     o.hint ? `data-hint="${o.hint}"` : '', 'aria-haspopup="dialog"', `data-fk="${esc(o.fk)}"`].filter(Boolean).join(' ');
 }

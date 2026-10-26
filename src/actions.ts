@@ -14,7 +14,9 @@ import { toggleChip, setParty, setSources, noEndorsements, doorNone, type ChipKe
 import { courtGroup } from './model/labels';
 import { claimAnswer, claimOn, claimOff } from './model/address';
 import { basisWords, LEANS, FORM } from './views/common';
-import { reportBody, reportFallbackURL, requiredOf, isForm, collectAlong } from './views/shelf';
+import { reportBody, reportFallbackURL, requiredOf, isForm, collectAlong, askBody } from './views/shelf';
+import { covOf } from './views/coverage';
+import { rememberAsk } from './model/coverage';
 import { cheatText, shareURL } from './views/cheat';
 import { messages, shareData, GUIDE_URL, SHARE_TITLE } from './views/pass';
 import { nextUp, sectionTally, sectionFolded, hiddenByOnly, qId } from './views/ledger';
@@ -643,7 +645,7 @@ function openShelf(kind: ShelfKind, d: DOMStringMap, fk: string, back: Shelf['ba
   const form = isForm(kind);
   const r: Shelf = {
     kind,
-    f: kind === 'city' ? { city: '', zip: S.ballot && S.view === 'ballot' ? S.b.zip : S.zip || S.coverage?.zip || '', reach: '' } : kind === 'report' ? { wrong: '', reach: '' } : {},
+    f: kind === 'city' ? (d.hint === 'follow' ? { reach: '' } : { city: '', zip: S.ballot && S.view === 'ballot' ? S.b.zip : S.zip || S.coverage?.zip || '', reach: '' }) : kind === 'report' ? { wrong: '', reach: '' } : {},
     what: d.what || '', tag: d.tag || '', hint: d.hint || '',
     // What a form sends along is read now, from the page it was opened on (never the address box or the hash).
     along: form ? collectAlong() : { page: '', where: '', url: '', data: '', build: '', device: '', errors: [] },
@@ -705,6 +707,17 @@ export function reportInput(el: HTMLInputElement | HTMLTextAreaElement): void {
    button reads "Sending...", the fields are read-only and sending again does nothing. A sheet closed
    mid-send says how it went in a toast. */
 const SEND_MS = 15_000;
+async function postForm(body: Record<string, string>): Promise<'sent' | 'failed' | 'unsure'> {
+  const ctl = new AbortController();
+  let late = false;
+  const timer = window.setTimeout(() => { late = true; ctl.abort(); }, SEND_MS);
+  let ok = true;
+  try {
+    await fetch(FORM.post, { method: 'POST', mode: 'no-cors', credentials: 'omit', referrerPolicy: 'no-referrer', body: new URLSearchParams(body), signal: ctl.signal });
+  } catch { ok = false; }
+  window.clearTimeout(timer);
+  return ok ? 'sent' : late ? 'unsure' : 'failed';
+}
 export async function sendReport(): Promise<void> {
   const r = S.ui.report;
   if (!r || !isForm(r.kind) || r.state === 'sending' || r.state === 'sent') return;
@@ -721,15 +734,8 @@ export async function sendReport(): Promise<void> {
   r.err = false;
   r.state = 'sending';
   render(['sheet']);
-  const ctl = new AbortController();
-  let late = false;
-  const timer = window.setTimeout(() => { late = true; ctl.abort(); }, SEND_MS);
-  let ok = true;
-  try {
-    await fetch(FORM.post, { method: 'POST', mode: 'no-cors', credentials: 'omit', referrerPolicy: 'no-referrer', body: new URLSearchParams(reportBody(r)), signal: ctl.signal });
-  } catch { ok = false; }
-  window.clearTimeout(timer);
-  const state = ok ? 'sent' : late ? 'unsure' : 'failed';
+  const state = await postForm(reportBody(r));
+  const ok = state === 'sent';
   if (S.ui.report !== r || S.ui.sheet !== 'shelf') {
     toast(state === 'sent' ? 'Sent. Kevin reads every one.' : state === 'unsure' ? 'Couldn’t confirm your report sent.' : 'That didn’t send. Try again in a moment.');
     return;
@@ -738,6 +744,31 @@ export async function sendReport(): Promise<void> {
   render(['sheet']);
   focusFk(ok ? 'report-done' : 'report-send');
 }
+
+/* ---------- one tap: "Ask Kevin to add my city", "Ask Kevin to look for local picks" (views/coverage.ts) ----------
+   The coverage card's button posts the form's five answers with nothing typed (shelf.askBody), the way a
+   sent form does. Sent, it's remembered on this device (model/coverage.ts rememberAsk): the card keeps its
+   slot, says "Request sent." with the day, and focus moves to its lead, so the change is heard as well as
+   seen. Refused or unanswered, the button comes back with the form in a new tab under it. The card lives
+   in step 1 on the first page and under the masthead on the ballot, where the quiet line in the head and
+   the address box's weights follow it. */
+function repaintCov(): void {
+  if (S.view !== 'ballot') { render(['mast']); return; }
+  anchored(() => render(['restore']));
+  renderAddr();
+}
+A['cov-ask'] = async () => {
+  const c = covOf();
+  if (!c || !c.ask || c.state !== 'none' || S.ui.covAsk === 'sending') return;
+  const ask = c.ask;
+  S.ui.covAsk = 'sending';
+  repaintCov();
+  const state = await postForm(askBody(ask, collectAlong()));
+  S.ui.covAsk = state === 'sent' ? '' : state;
+  if (state === 'sent') rememberAsk(ask.key);
+  repaintCov();
+  focusFk(state === 'sent' ? 'cov-lead' : 'cov-ask');
+};
 
 /* Support's "send the guide to a friend": Help friends vote when a ballot is showing (the shelf gives
    way to it); elsewhere the guide's own link, through the phone's share sheet or copied. */

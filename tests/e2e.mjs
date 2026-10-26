@@ -1086,6 +1086,40 @@ async function mapsSettled(page, timeout = 10000) {
   noErrors(page, 'Round Rock maps');
   await ctx.close();
 }
+// Dallas County (Oct 26): one map, the county's precincts merged by district, settles commissioner,
+// JP (both places of a precinct), constable and SBOE. The Census is mocked at Dallas City Hall's
+// point and block, with the districts the Census gives the building.
+{
+  const { ctx, page } = await newPage();
+  const answer = { result: { addressMatches: [{ matchedAddress: 'TEST CITY HALL, DALLAS, TX, 75201', coordinates: { x: -96.795839, y: 32.776661 }, geographies: {
+    States: [{ STATE: '48' }], Counties: [{ BASENAME: 'Dallas' }], 'Incorporated Places': [{ BASENAME: 'Dallas' }], '120th Congressional Districts': [{ BASENAME: '33' }],
+    '2026 State Legislative Districts - Upper': [{ BASENAME: '23' }], '2026 State Legislative Districts - Lower': [{ BASENAME: '114' }],
+    'Unified School Districts': [{ NAME: 'Dallas Independent School District' }], '2020 Census Blocks': [{ INTPTLAT: '+32.7761397', INTPTLON: '-096.7955378' }] } }] } };
+  await page.route('https://geocoding.geo.census.gov/**', (route) => {
+    const cb = new URL(route.request().url()).searchParams.get('callback');
+    return route.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify(answer)})` });
+  });
+  const mapsAsked = [];
+  page.on('request', (r) => { if (/\/data\/maps\//.test(r.url())) mapsAsked.push(r.url().replace(/^.*\/data\/maps\//, '')); });
+  await openBallot(page, '75201');
+  const before = await text(page, '.addrbox .addr-n');
+  check('Dallas maps: before a lookup, the address can find every race that depends on it', /^(\d+) races depend on your address\. Your address can find all \1\.$/.test(before), before);
+  await tap(page, '.addrbox [data-act="addr-open"]');
+  await page.fill('#addr-in', 'a test lookup');
+  await page.locator('form[data-form="addr"] button[type=submit]').tap();
+  await mapsSettled(page);
+  const set = await text(page, '.addrbox .addr-set');
+  check('Dallas maps: City Hall: "Set from your address" names SBOE 13, JP Precinct 1 and Constable Precinct 1', /· State Board of Education, District 13 · Justice of the Peace, Precinct 1 · Constable, Precinct 1\.$/.test(set) && !/Place/.test(set), set);
+  check('Dallas maps: City Hall: nothing left for the sample ballot, and the box adds nothing', !(await page.$('.addrbox .addr-n')) && !(await page.$('.addrbox .addr-map')), await text(page, '.addrbox'));
+  check('Dallas maps: both of Precinct 1’s JP places are on the ballot, no other precinct’s', !!(await page.$('#i-tx-dallas-jp-1-1')) && !!(await page.$('#i-tx-dallas-jp-1-2')) && !(await page.$('#i-tx-dallas-jp-2-1')));
+  await page.waitForTimeout(300);
+  const saved = JSON.parse((await savedVG(page)) || '{}');
+  const s = Object.values(saved.ballots || {}).find((x) => x && x.districts && x.districts['judicial|Justice of the Peace']) || {};
+  check('Dallas maps: commissioner "none" (precinct 3 isn’t up), constable 1, SBOE 13', s.districts && s.districts['county|County Commissioner'] === 'none' && s.districts['county|Constable'] === 'tx-dallas-constable-1' && s.districts['state|Member, State Board of Education'] === 'tx-sboe-13', JSON.stringify(s.districts));
+  check('Dallas maps: one map, loaded once after the lookup', mapsAsked.join(' ') === 'dallas-county-tx/county-districts.topo.json', mapsAsked.join(' '));
+  noErrors(page, 'Dallas maps');
+  await ctx.close();
+}
 // Statewide Florida (Miami): the only races that depend on your address are appeals judges, which
 // the Census can't settle, so the box leads with the sample ballot; from the first page, the lookup
 // shows what it found under the place line, and the box says the sample ballot shows the rest.

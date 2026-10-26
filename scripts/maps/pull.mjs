@@ -9,7 +9,9 @@
  *
  * The manifest is the only hand-written part. Per layer: the ArcGIS REST layer to read (or, with
  * "source_format": "shapefile_zip", a zipped shapefile and the .shp inside it, optionally kept to
- * within "near.buffer_m" metres of an ArcGIS layer's features), which
+ * within "near.buffer_m" metres of an ArcGIS layer's features; with "dissolve": [fields], a coded
+ * precinct layer merged into one piece per combination of those codes, so a county's 791 precincts
+ * ship as a few dozen pieces that each carry every district the precinct's ballot is built from), which
  * property becomes the `label` (and any other properties a rule reads, each with a regex whose
  * first group is the value), which races it settles, and the places whose ballots read it. The
  * same script runs for every place after Austin: write a manifest, run it, read what it prints.
@@ -202,9 +204,23 @@ for (const layer of manifest.layers) {
   const problems = [];
   const note = (s) => console.log(`  ${s}`);
   console.log(`\n== ${area}/${layer.kind}: ${layer.title}`);
-  const raw = FILE(layer) ? await fetchShapefile(layer) : await fetchLayer(layer.source_url);
-  const rawBytes = Buffer.byteLength(JSON.stringify(raw.fc));
-  note(`fetched ${raw.fc.features.length} features (${kb(rawBytes)} as full-precision GeoJSON) from ${layer.source_url}`);
+  const fetched = FILE(layer) ? await fetchShapefile(layer) : await fetchLayer(layer.source_url);
+  const rawBytes = Buffer.byteLength(JSON.stringify(fetched.fc));
+  note(`fetched ${fetched.fc.features.length} features (${kb(rawBytes)} as full-precision GeoJSON) from ${layer.source_url}`);
+  // The lines' date: the newest edit in a date field, else the server's last data edit, else the
+  // manifest's own (a file's, from where it is published). Read before any dissolve.
+  const dated = layer.dated_field ? fetched.fc.features.map((f) => asDate((f.properties || {})[layer.dated_field])).filter(Boolean).sort().pop() || null
+    : layer.dated_service ? asDate(fetched.info.edited) : layer.layer_dated || null;
+  let raw = fetched;
+  if (layer.dissolve) {
+    // Precincts with the same codes merge; their shared lines go, every other line stays exactly the
+    // precincts' own (they are built from whole Census blocks).
+    const dIn = path.join(TMP, `${layer.kind}.precincts.geojson`), dOut = path.join(TMP, `${layer.kind}.dissolved.geojson`);
+    fs.writeFileSync(dIn, JSON.stringify(fetched.fc));
+    execFileSync(MS, ['-i', dIn, '-dissolve', layer.dissolve.join(','), '-o', dOut, 'format=geojson'], { stdio: ['ignore', 'ignore', 'pipe'] });
+    raw = { info: fetched.info, fc: JSON.parse(fs.readFileSync(dOut, 'utf8')) };
+    note(`dissolved by ${layer.dissolve.join(', ')}: ${fetched.fc.features.length} features became ${raw.fc.features.length}`);
+  }
 
   // The features as the site reads them; the rest are named and left out.
   const kept = [], dropped = [];
@@ -222,10 +238,6 @@ for (const layer of manifest.layers) {
     const dup = [...seen].filter(([, n]) => n > 1).map(([l]) => l);
     if (dup.length) problems.push(`labels appear more than once: ${dup.join(', ')}`);
   }
-  // The lines' date: the newest edit in a date field, else the server's last data edit, else the
-  // manifest's own (a file's, from where it is published).
-  const dated = layer.dated_field ? raw.fc.features.map((f) => asDate((f.properties || {})[layer.dated_field])).filter(Boolean).sort().pop() || null
-    : layer.dated_service ? asDate(raw.info.edited) : layer.layer_dated || null;
   const full = { type: 'FeatureCollection', features: kept };
 
   // Simplify with shared borders (TopoJSON), so neighbours keep meeting exactly.
@@ -256,8 +268,9 @@ for (const layer of manifest.layers) {
       if (!maps.inGeometry(f.geometry, lon, lat)) continue;
       got++;
       const d = edge(lon, lat);
-      const best = deep.get(f.properties.label);
-      if (!best || d > best.d) deep.set(f.properties.label, { pt: [lon, lat], d, props: f.properties });
+      const key = JSON.stringify(f.properties);
+      const best = deep.get(key);
+      if (!best || d > best.d) deep.set(key, { pt: [lon, lat], d, props: f.properties });
       if (d < maps.NEAR_M) near++;
       if (d <= SIMPLIFY + 2) continue;
       samples++;
@@ -278,7 +291,8 @@ for (const layer of manifest.layers) {
     const ofc = { type: 'FeatureCollection', features: other.fc.features.map((f) => ({ type: 'Feature', geometry: f.geometry, properties: (() => { const p = { label: pick(f.properties || {}, a.label) }; for (const [k, spec] of Object.entries(a.props || {})) p[k] = pick(f.properties || {}, spec); return p; })() })) };
     let n = 0, ok = 0;
     const bad = [];
-    for (const [label, { pt, props }] of deep) {
+    for (const { pt, props } of deep.values()) {
+      const label = Object.entries(props).map(([k, v]) => (k === 'label' ? v : `${k} ${v}`)).join(', ');
       n++;
       const at = maps.featuresAt(ofc, pt[0], pt[1]);
       const o = at.length === 1 ? at[0].properties : null;
@@ -348,6 +362,7 @@ for (const layer of manifest.layers) {
     ...(layer.props ? { props: Object.fromEntries(Object.entries(layer.props).map(([k, s]) => [k, s.field])) } : {}),
     features: shipped.features.length,
     ...(dropped.length ? { left_out: dropped } : {}),
+    ...(layer.dissolve ? { dissolved: `${fetched.fc.features.length} voting precincts merged by ${layer.dissolve.join(', ')}: one piece per combination` } : {}),
     simplified: `Douglas-Peucker to ${SIMPLIFY} m, TopoJSON quantized to ${QUANT} steps across the map`,
     bytes: topoText.length,
     checked: {

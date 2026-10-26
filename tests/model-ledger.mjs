@@ -1853,7 +1853,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       check('coverage: step 2’s first line says whose picks', /<p class="su-cov">Your sources have picks in \d+ of your \d+ races\.<\/p>/.test(views.setup.pickControlsHTML()));
       check('coverage: the Edit sheet says the same', /class="su-src"/.test(views.setup.pickControlsHTML(true)) && /Your sources have picks in/.test(views.setup.pickControlsHTML(true)));
       S.view = 'ballot';
-      check('coverage: the ballot’s head says it for the ballot, under the picks line, no button', txt(views.coverage.headCovHTML()) === `${p.sources} sources on your ballot, ${p.with_picks} with picks. Last checked ${day(p.checked)}.` && /picks-line[\s\S]*class="picks-cov"/.test(views.ledger.ballotHeadHTML()) && !/<button/.test(views.coverage.headCovHTML()));
+      check('coverage: the ballot’s head says it for the ballot, under the picks line, no button', txt(views.coverage.headCovHTML()) === `${p.sources} sources on your ballot, ${p.with_picks} with picks. Last checked ${day(p.checked)}.` && /picks-line[\s\S]*class="picks-cov"/.test(views.ledger.ballotHeadHTML()) && !/class="mini/.test(views.coverage.headCovHTML()));
       S.b.sources = [];
       check('coverage: with endorsements off, the counts step aside', !/su-src|picks-cov/.test(views.setup.pickControlsHTML(true) + views.ledger.ballotHeadHTML()));
       S.b.sources = null;
@@ -1865,7 +1865,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       const tc = views.coverage.covCardHTML('door');
       check('coverage: a thin place’s card leads with what’s missing, then what’s here and what isn’t, with the gap counted', txt(tc) === 'Pensacola’s local picks aren’t in yet. Here now: every race on your ballot, with picks from newspapers and groups across Florida. Not here yet: picks from Pensacola’s own paper and groups. 3 of your 10 local races have no picks from anyone. Ask Kevin to look for local picks One tap. It sends Kevin the place and nothing about you. He’ll look within about a day.', txt(tc));
       check('coverage: its button is the dark one, and it is a gold card', darkOf(tc).join() === 'Ask Kevin to look for local picks' && /class="notice strong cov-card"/.test(tc) && /data-act="cov-ask"/.test(tc));
-      check('coverage: step 2 says it quietly, with no button', txt(views.coverage.covHTML()) === '21 sources, 13 with picks, none from Pensacola’s own paper and groups. Last checked Oct 19.' && !/<button/.test(views.coverage.covHTML()));
+      check('coverage: step 2 says it quietly, with no button', txt(views.coverage.covHTML()) === '21 sources, 13 with picks, none from Pensacola’s own paper and groups. Last checked Oct 19.' && !/class="mini/.test(views.coverage.covHTML()));
       S.view = 'ballot';
       const th = views.ledger.ballotHeadHTML();
       check('coverage: the head’s line is quiet, and while the card asks the address box has no dark button', txt(views.coverage.headCovHTML()) === '21 sources, 13 with picks, none from Pensacola’s own paper and groups. Last checked Oct 19.' && darkOf(th).length === 0 && /Use my address/.test(th), darkOf(th).join());

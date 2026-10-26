@@ -90,21 +90,9 @@ export function inkRow(row: HTMLElement | null): void {
   window.setTimeout(() => { row.classList.remove('flash'); box?.querySelector('.ink')?.remove(); }, 700);
 }
 
-/* ---------- a disclosure off the ballot ("How this guide works") ----------
-   The same open and fold as a row's panel: its body grows down from its button, and a body that
-   just closed folds back up into it. */
-export function grow(el: HTMLElement | null): void {
-  if (!canAnimate(el)) return;
-  const h = el.offsetHeight;
-  if (h < 2) return;
-  el.classList.add('moving');
-  const a = el.animate([{ height: '0px' }, { height: `${h}px` }], { duration: OPEN_MS, easing: OUT });
-  el.animate([{ opacity: 0 }, { opacity: 1 }], { duration: OPEN_MS * 0.7, easing: 'linear' });
-  const done = (): void => el.classList.remove('moving');
-  a.onfinish = done;
-  a.oncancel = done;
-}
-/* `old` (the body as it was, `h` tall) goes back in after `at` as a husk and folds away. */
+/* ---------- a body folding away under what it belongs to ---------- */
+/* `old` (the body as it was, `h` tall) goes back in after `at` as a husk and folds away (a finished
+   section's rows under its band). */
 export function shrinkAway(at: HTMLElement | null, old: HTMLElement | null, h: number, cls = 'gone'): void {
   if (!at || !canAnimate(old) || h < 2) return;
   old.getAnimations?.().forEach((x) => x.cancel());

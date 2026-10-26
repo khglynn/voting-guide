@@ -1,4 +1,5 @@
 /* Boot and input wiring. Flows live in app.ts, controls in actions.ts, drawing in render.ts. */
+import { note } from './errors'; // first, so it hears errors from everything after it
 import './styles.css';
 import { S, readSaved, persist, parseShareHead, leftBallot } from './state';
 import { stepKey, planKey } from './views/planstrip';
@@ -19,7 +20,7 @@ function fire(el: HTMLElement): void {
   el.classList.add('is-pressed');
   window.setTimeout(() => el.classList.remove('is-pressed'), 120);
   dismissResume(); // "Welcome back" lasts until the first tap, whatever it is
-  try { void fn(el.dataset, el); } catch (e) { console.error(e); }
+  try { void fn(el.dataset, el); } catch (e) { console.error(e); note(e); } // a control's own crash, for a problem report (errors.ts)
   // Count the click-dedupe window from when the action finished painting, not when it started:
   // on a slow phone a long repaint could otherwise outlast it and let the follow-up click fire twice.
   lastTap = Date.now();
@@ -78,7 +79,7 @@ document.addEventListener('input', (e) => {
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Tab' && (S.ui.reader || S.ui.sheet)) {
     // Keep Tab inside the open dialog: from the last control back to the first, and back. (Full details
-    // behind the report sheet is inert, so the sheet is the one.)
+    // behind the shelf is inert, so the shelf is the one.)
     const dlg = document.querySelector<HTMLElement>('#r-sheet [role="dialog"]:not([inert])');
     if (!dlg) return;
     const all = [...dlg.querySelectorAll<HTMLElement>('a[href], button:not([disabled]), input:not([disabled]), textarea, select, [tabindex]:not([tabindex="-1"])')].filter((x) => x.offsetParent !== null || x === document.activeElement);
@@ -90,7 +91,7 @@ document.addEventListener('keydown', (e) => {
     return;
   }
   if (e.key !== 'Escape') return;
-  if (S.ui.sheet === 'report') A['sheet-close']({}, document.body);
+  if (S.ui.sheet === 'shelf') A['sheet-close']({}, document.body);
   else if (S.ui.reader) A['reader-close']({}, document.body);
   else if (S.ui.sheet) A['sheet-close']({}, document.body);
 });

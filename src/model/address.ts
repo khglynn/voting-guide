@@ -96,7 +96,8 @@ const KINDS: Kind[] = ['cd', 'upper', 'lower'];
    District {n}" each, Congress first, then the state senate, then the state house, then school
    districts, then what the district maps put on, in ballot order; empty when it put none there
    (nothing here turns on it, or it only took races off). */
-export function setFromAddress(b: Ballot, s: BallotState, r: Districts, local: LocalAnswer[] = [], keep: ReadonlySet<string> = new Set()): string[] {
+export function setFromAddress(b: Ballot, s: BallotState, r0: Districts, local: LocalAnswer[] = [], keep: ReadonlySet<string> = new Set()): string[] {
+  const r = withCounty(r0);
   // A lookup replaces the one before it (a corrected address, "Not it? Try again", the maps folding
   // in after the Census): what the last one settled, and the voter hasn't changed since (addrSet),
   // goes back to unsettled first, so this address never keeps an answer it can't give itself. The
@@ -184,9 +185,16 @@ export function setFromAddress(b: Ballot, s: BallotState, r: Districts, local: L
   return [...KINDS.flatMap((k) => named[k].map((o) => `${o}, District ${num(k)}`)), ...schoolsNamed, ...localNamed];
 }
 
-/* A county map answering for an address the Census puts in another county (a point at the county
-   line) is set aside: the Census's county decides which county's ballot you get. */
-export const inCounty = (m: MapMeta, county: string | null | undefined): boolean => !(m.county && county && m.county.toLowerCase() !== county.toLowerCase());
+/* A county's map answers only for an address the Census puts in that county: the Census's county
+   decides which county's ballot you get. Another county (a point at the county line), or no county
+   at all (a partial answer from the Census), sets it aside, and its races stay with the sample
+   ballot. Williamson's SBOE map reaches 1.5 km past the county on purpose, so this is what keeps it
+   from answering for a Travis or a county-less address (Codex on #23). A map with no county, a
+   city's, answers anywhere it covers. */
+/* The Census's county, or null when it named none (a blank name is none). Read once, so every
+   county rule below agrees on whether there is one. */
+const withCounty = (r: Districts): Districts => ({ ...r, county: (r.county || '').trim() || null });
+export const inCounty = (m: MapMeta, county: string | null | undefined): boolean => !m.county || (!!county && !!county.trim() && m.county.toLowerCase() === county.trim().toLowerCase());
 /* What each of the ballot's maps said at the address: its answer, or null when it didn't load. */
 export interface MapResult { meta: MapMeta; answer: MapAnswer | null }
 /* The answers setFromAddress takes: the maps that found the address, in the Census's county. */
@@ -202,7 +210,8 @@ export const localAnswers = (results: MapResult[], r: Districts): LocalAnswer[] 
    - only while a race they'd settle is still open on `s`: a line they didn't guess at, witnesses
      they couldn't reconcile, a map that didn't load.
    Call it after setFromAddress. `pending`: maps still on their way. */
-export function mapNotes(b: Ballot, s: BallotState, r: Districts, results: MapResult[], pending = false): string[] {
+export function mapNotes(b: Ballot, s: BallotState, r0: Districts, results: MapResult[], pending = false): string[] {
+  const r = withCounty(r0);
   const claims = (rule: SettleRule): boolean => b.groups.some((g) => !g.kind && g.members.some((id) => ruleMatches(rule, b.byId.get(id)!))) || [...b.mayApply].some((id) => ruleMatches(rule, b.byId.get(id)!));
   const open = (m: MapMeta): boolean => inCounty(m, r.county) && m.settles.some((rule) =>
     b.groups.some((g) => !g.kind && !answered(s, g.key) && g.members.some((id) => ruleMatches(rule, b.byId.get(id)!)))

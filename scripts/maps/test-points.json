@@ -1,5 +1,5 @@
 {
-  "about": "Public buildings only, never a home: each one's point and its 2020 Census block's interior point, as the Census geocoder returned them for the building's own address on Oct 21, 2026 (Austin) and Oct 26, 2026 (Williamson County and Pflugerville's library). The pull tests every map at these points with the same two-witness rule the site uses, and asks each map's own server what it says there (a map made from a file is checked against the file's own lines). The street addresses aren't kept here: the coordinates are enough.",
+  "about": "Public buildings only, never a home: each one's point and its 2020 Census block's interior point, as the Census geocoder returned them for the building's own address on Oct 21, 2026 (Austin) and Oct 26, 2026 (Williamson County, Pflugerville's library, and Canyon Vista Middle School, a Travis school inside the Williamson SBOE map's 1.5 km reach). The pull tests every map at these points with the same two-witness rule the site uses, and asks each map's own server what it says there (a map made from a file is checked against the file's own lines). The street addresses aren't kept here: the coordinates are enough.",
   "points": [
     {
       "name": "Austin City Hall",
@@ -228,6 +228,12 @@
       "point": [-97.679509, 30.606696],
       "block": [-97.6791808, 30.6163328],
       "census_county": "Williamson"
+    },
+    {
+      "name": "Canyon Vista Middle School",
+      "point": [-97.778034, 30.431766],
+      "block": [-97.7781786, 30.4331207],
+      "census_county": "Travis"
     }
   ]
 }

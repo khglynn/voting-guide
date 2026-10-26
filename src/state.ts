@@ -77,6 +77,7 @@ export interface UI {
   setupFill: boolean;         // "Fill in my ballot with their picks" in the Edit sheet
   setupOnly: boolean;         // "Hide races I've decided" in the Edit sheet, applied when it closes (to S.b.hideDecided)
   resume: boolean;            // "Welcome back" above the plan: once per visit to a started ballot, until any tap
+  covAsk: '' | 'sending' | 'failed' | 'unsure'; // a one-tap request (views/coverage.ts) on its way, or how it failed; this visit only
 }
 
 /* The shelf: one sheet from the bottom with five openings (Kevin, Oct 21: "let's use that for all of
@@ -102,7 +103,7 @@ export interface Shelf {
   f: Record<string, string>;  // a form's fields by name: wrong and reach (a report); city, zip and reach (a city)
   what: string;               // the race, measure or source it was opened from, or the page
   tag: string;                // that item or source id, sent after it so a fix can find the record
-  hint: string;               // 'paywall': opened from a paywalled source's "Send it to us"
+  hint: string;               // 'paywall': opened from a paywalled source's "Send it to us"; 'follow': from "Want to hear when it's in?"
   along: Along;               // what a form sends along by itself, read when it opened (views/shelf.ts)
   state: 'edit' | 'sending' | 'sent' | 'failed' | 'unsure'; // failed: the request was refused outright; unsure: no answer in time, so it may or may not have gone
   err: boolean;               // Send was tapped with the one required field empty
@@ -138,7 +139,7 @@ export const S = {
   ui: {
     view: 'ballot', open: new Set(), row: null, page: {}, others: new Set(), folded: new Set(), unfolded: new Set(), reveal: new Set(), keep: null, beat: null,
     noteOpen: new Set(), reader: null, sheet: null, report: null, sheetFrom: null, sheetBack: null, addrOpen: false, addrBusy: false, addrMsg: null, addrFail: '', addrFound: null, addrWhich: null, saveOpen: false, copyFallback: null, bulk: null, bulkWhy: null, addrFilled: null, lensEmptied: false,
-    setupFill: false, setupOnly: false, resume: false,
+    setupFill: false, setupOnly: false, resume: false, covAsk: '',
   } as UI,
   /* ?try=fresh|aunt|straight|sources: a scenario on whatever ballot opens, never saved. */
   tryMode: null as string | null,

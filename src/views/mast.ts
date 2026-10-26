@@ -150,9 +150,11 @@ function whereHTML(): string {
       ${S.ui.addrOpen ? addrHTML(true) : '<p class="addr-cta"><button class="linkbtn" data-act="addr-open" data-fk="addr-open">Use my address instead</button></p>'}</div>`;
   } else if (S.coverage && S.coverage.kind === 'not_covered') {
     const name = S.coverage.state ? (S.coverage.state in (idx?.states || {}) ? idx!.states[S.coverage.state].name : stateName(S.coverage.state)) : null;
-    // Vote.gov for now, and "Request a city" (the report sheet, its ZIP from the box) to ask for the city.
+    // A state the guide doesn't cover (a ZIP in a covered state opens that state's statewide races
+    // instead): what they get now, Vote.gov, and what they can ask for, their city (Request a city,
+    // its ZIP from the box; the shelf names Kevin, so the button doesn't).
     after = `<div class="notice" role="status"><p><b>We don’t cover ${name ? esc(name) : 'that area'} yet.</b> ${ext('https://vote.gov/', 'Vote.gov')} has official info for every state.</p>
-      <p>Want this for your city? <button class="linkbtn" ${reportAttrs({ city: true, fk: 'ask-kevin' })} data-ask-kevin>Ask Kevin</button>.</p></div>`;
+      <p class="row-btns"><button class="mini" ${reportAttrs({ city: true, fk: 'ask-kevin' })} data-ask-kevin>Ask for my city</button></p></div>`;
   }
   // "Use my address for a more exact ballot" (Kevin, Oct 20: shorter than "for the most accurate
   // local results", and still true, since the Census settles Congress and the legislature, not every

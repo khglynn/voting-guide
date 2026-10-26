@@ -37,9 +37,11 @@ export function reportWhere(): string {
 /* What a control needs to open the shelf (actions.ts A.shelf): its opening, and for a report the race,
    measure or source it came from (`what`, and `tag`, the item or source id the form gets after it).
    `fk` is where focus goes back when the sheet closes. */
-export function shelfAttrs(o: { kind: ShelfKind; what?: string; tag?: string; hint?: 'paywall'; fk: string }): string {
+/* `hint`: 'paywall' from a paywalled source's "Send it to us", 'follow' from "Want to hear when it's in?"
+   (a city request already sent); `city` fills in Request a city's city. */
+export function shelfAttrs(o: { kind: ShelfKind; what?: string; tag?: string; hint?: 'paywall' | 'follow'; city?: string; fk: string }): string {
   return ['data-act="shelf"', `data-kind="${o.kind}"`, o.what ? `data-what="${esc(o.what)}"` : '', o.tag ? `data-tag="${esc(o.tag)}"` : '',
-    o.hint ? `data-hint="${o.hint}"` : '', 'aria-haspopup="dialog"', `data-fk="${esc(o.fk)}"`].filter(Boolean).join(' ');
+    o.hint ? `data-hint="${o.hint}"` : '', o.city ? `data-city="${esc(o.city)}"` : '', 'aria-haspopup="dialog"', `data-fk="${esc(o.fk)}"`].filter(Boolean).join(' ');
 }
 /* "Report a problem" (from a row, Full details, a paywalled source) or "Request a city". */
 export const reportAttrs = (o: { city?: boolean; what?: string; tag?: string; hint?: 'paywall'; fk: string }): string =>

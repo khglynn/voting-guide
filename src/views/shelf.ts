@@ -12,6 +12,7 @@
    form's place (Codex, Oct 21). */
 import { S, type Shelf, type ShelfKind, type Along } from '../state';
 import type { Index } from '../types';
+import type { Ask } from '../model/coverage';
 import { esc } from '../util';
 import { lastErrors } from '../errors';
 import { FORM, formURL, ext, isOpen, kevinLink, reportWhere, BUY_ME_A_COFFEE_URL } from './common';
@@ -34,6 +35,9 @@ const CITY: Field[] = [
 ];
 /* Opened from a paywalled paper's "Send it to us": the box asks for its picks instead. */
 const PAYWALL = { intro: 'Have a login? Send Kevin their picks.', label: 'Their picks, or a link to a PDF' };
+/* Opened from "Want to hear when it's in?" after a one-tap request (views/coverage.ts): the request is in,
+   so this one is for the way back. The city is filled in when the guide knows it. */
+const FOLLOW = 'Kevin has your request. Leave an email or phone and he’ll tell you when it’s in.';
 const fieldsOf = (r: Shelf): Field[] => (r.kind === 'city' ? CITY : REPORT);
 /* The one question the form requires: the sheet won't send without it. */
 export const requiredOf = (r: Shelf): string => (r.kind === 'city' ? 'city' : 'wrong');
@@ -119,10 +123,22 @@ export function reportBody(r: Shelf): Record<string, string> {
   };
 }
 /* "Open the form in a new tab instead": the same answers, prefilled. */
-export function reportFallbackURL(r: Shelf): string {
-  const b = reportBody(r);
-  return formURL(b[FORM.what], b[FORM.where], { wrong: b[FORM.wrong], link: b[FORM.link], reach: b[FORM.reach] });
+const fallbackOf = (b: Record<string, string>): string => formURL(b[FORM.what], b[FORM.where], { wrong: b[FORM.wrong], link: b[FORM.link], reach: b[FORM.reach] });
+export const reportFallbackURL = (r: Shelf): string => fallbackOf(reportBody(r));
+/* A one-tap request (views/coverage.ts): the same five answers with nothing typed. Its own words for the
+   race and for "What's wrong?", the place and ZIP, and a city request's "Sent along" list. */
+export function askBody(a: Ask, along: Along): Record<string, string> {
+  return {
+    [FORM.what]: a.what,
+    [FORM.where]: along.where,
+    [FORM.wrong]: `${a.wrong}\n\nSent along:\n${alongLines({ kind: 'city', what: a.what, tag: '', along }).join('\n')}`,
+    [FORM.link]: linkOf(along),
+    [FORM.reach]: '',
+    fvv: '1',
+    pageHistory: '0',
+  };
 }
+export const askFallbackURL = (a: Ask): string => fallbackOf(askBody(a, collectAlong()));
 const altLink = (r: Shelf, text = 'Open the form in a new tab instead'): string =>
   `<a href="${esc(reportFallbackURL(r))}" target="_blank" rel="noopener" data-rp-alt>${esc(text)}</a>`;
 
@@ -151,7 +167,7 @@ function formHTML(r: Shelf): string {
   // Refused outright ("That didn't send.") or no answer in 15 seconds ("Couldn't confirm it sent.": it
   // may have arrived, so it doesn't say it didn't).
   const missed = r.state === 'failed' || r.state === 'unsure';
-  const intro = r.kind === 'city' ? 'Tell Kevin which city to add next.' : r.hint === 'paywall' ? PAYWALL.intro : 'Tell Kevin what’s off. A sentence is plenty.';
+  const intro = r.kind === 'city' ? (r.hint === 'follow' ? FOLLOW : 'Tell Kevin which city to add next.') : r.hint === 'paywall' ? PAYWALL.intro : 'Tell Kevin what’s off. A sentence is plenty.';
   return `<form class="rp-form" data-form="report" novalidate${sending ? ' aria-busy="true"' : ''}>
       <p class="rp-intro">${esc(intro)}</p>
       ${fieldsOf(r).map((f) => fieldHTML(r, f)).join('')}

@@ -1032,7 +1032,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('go check: "It’s not on my ballot" keeps the notmine action', /data-act="notmine" data-id="tx-senate-21"[^>]*>It’s not on my ballot/.test(sd));
     // The address box leads with "Use my address" only while the lookup can settle something:
     // Congress and the state legislature, before a lookup has run on this ballot.
-    const btns = (h) => [...((h.match(/<div class="addrbox">[\s\S]*?<\/div><\/div>/) || [''])[0]).matchAll(/class="mini( dark)?"[^>]*>([^<]+)</g)].map((m) => `${m[2]}${m[1] ? ' (dark)' : ''}`).join('|');
+    const btns = (h) => [...((h.match(/<div class="addrbox[^"]*">[\s\S]*?<\/div><\/div>/) || [''])[0]).matchAll(/class="mini( dark)?"[^>]*>([^<]+)</g)].map((m) => `${m[2]}${m[1] ? ' (dark)' : ''}`).join('|');
     check('address box: Austin, fresh, offers Use my address first, then the sample ballot', btns(ledger.ballotHeadHTML()) === 'Use my address (dark)|Official sample ballot' && ledger.addressHelps(), btns(ledger.ballotHeadHTML()));
     // What the lookup answers (Congress, the state Senate and House, and the maybe rows for them).
     for (const g of au.groups) if (g.kind) S.b.districts[g.key] = g.members[0];
@@ -1043,7 +1043,8 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     S.b.addrNote = 'Your districts: Congressional District 37. We didn’t save your address. Double-check with your sample ballot.';
     check('address box: once a lookup has run, it offers only the sample ballot', !ledger.addressHelps() && btns(ledger.ballotHeadHTML()) === 'Official sample ballot (dark)', btns(ledger.ballotHeadHTML()));
     const sd2 = views.open.openHTML(au.byId.get('tx-senate-21'));
-    check('address box: and a maybe row no longer offers Check with my address', !/Check with my address/.test(sd2) && /class="mini dark"[^>]*>Official sample ballot/.test(sd2));
+    // Kevin, Oct 25: one sample-ballot button per screen, the head's; a row's is a plain link.
+    check('address box: and a maybe row no longer offers Check with my address, its sample ballot a plain link', !/Check with my address/.test(sd2) && /class="linkbtn" href="https:[^"]+"[^>]*>Official sample ballot/.test(sd2) && !/class="mini[^"]*"[^>]*>Official sample ballot/.test(sd2));
     S.ui.row = `q:${au.groups.find((x) => x.kind === 'cd').key}`;
     check('address box: nor does a district question', !/data-fk="dq-addr"/.test(ledger.sectionHTML('federal', bl.entriesBySection().get('federal'))));
     S.ui.row = null;
@@ -1052,7 +1053,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('address box: before a lookup, a Congress question offers Use my address', /data-fk="dq-addr"/.test(ledger.sectionHTML('federal', bl.entriesBySection().get('federal'))));
     S.ui.row = null;
     open('FL', []);
-    check('address box: statewide Florida (appeals judges only) leads with the sample ballot, no Use my address', ledger.addressCount() > 0 && btns(ledger.ballotHeadHTML()) === 'Official sample ballot (dark)', `${ledger.addressCount()} | ${btns(ledger.ballotHeadHTML())}`);
+    check('address box: statewide Florida (appeals judges only) leads with the sample ballot, no Use my address, then the city', ledger.addressCount() > 0 && btns(ledger.ballotHeadHTML()) === 'Official sample ballot (dark)|Ask for my city', `${ledger.addressCount()} | ${btns(ledger.ballotHeadHTML())}`);
     open('TX', ['austin-tx']);
     const dv = views.open.openHTML(au.byId.get('tx-dvisd-prop-a'));
     check('go check: a school district’s measure offers Check with my address (the Census names your school district)', /Check with my address/.test(dv) && /Official sample ballot/.test(dv) && /It’s not on my ballot/.test(dv));
@@ -1109,12 +1110,14 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     S.b.sources = null;
     tally.clearLineups();
     check('no endorsements: with sources on, the rows say whose picks they are again', /role="switch" aria-checked="true" data-act="ends"/.test(views.setup.pickControlsHTML(true)) && /setup-fill/.test(views.setup.pickControlsHTML(true)));
-    // Statewide-only: the state's sample ballot (its own sample_ballot_url first) and "Ask for your city".
+    // Statewide-only: the state's sample ballot (its own sample_ballot_url first) and "Ask for my city", in
+    // one notice with the address box (Kevin, Oct 25: no double button stack).
     const wa = open('WA', []);
     const hd = ledger.ballotHeadHTML();
-    const ask = (hd.match(/<button ([^>]*)>Ask for your city</) || [])[1] || '';
-    check('go check: a statewide ballot says so, with Official sample ballot and Ask for your city', /We only have statewide races for your area so far\./.test(hd) && /href="https:[^"]+"[^>]*>Official sample ballot</.test(hd) && !!ask, strip(hd).slice(0, 160));
-    check('go check: Ask for your city opens the city request sheet (Oct 21)', /data-act="shelf"/.test(ask) && /data-kind="city"/.test(ask) && /aria-haspopup="dialog"/.test(ask), ask);
+    const ask = (hd.match(/<button ([^>]*)>Ask for my city</) || [])[1] || '';
+    check('go check: a statewide ballot says so, with Official sample ballot and Ask for my city', /We only have Washington’s statewide races for your area so far\./.test(strip(hd)) && /href="https:[^"]+"[^>]*>Official sample ballot</.test(hd) && !!ask, strip(hd).slice(0, 160));
+    check('go check: Ask for my city opens the city request sheet (Oct 21)', /data-act="shelf"/.test(ask) && /data-kind="city"/.test(ask) && /aria-haspopup="dialog"/.test(ask), ask);
+    check('go check: a statewide ballot’s head has one notice and one sample-ballot button', (hd.match(/>Official sample ballot</g) || []).length === 1 && (hd.match(/class="(?:addrbox ?)?statewide-note"/g) || []).length === 1 && (hd.match(/class="addrbox/g) || []).length <= 1, strip(hd));
     wa.howto = { ...wa.howto, sample_ballot_url: 'https://sos.example.gov/sample' };
     check('go check: a state’s own sample_ballot_url wins on a statewide ballot', common.sampleBallot().url === 'https://sos.example.gov/sample');
     const au3 = open('TX', ['austin-tx']);
@@ -1124,9 +1127,9 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const keep = { view: S.view, ballot: S.ballot, index: S.index, coverage: S.coverage };
     S.view = 'start'; S.ballot = null; S.index = INDEX; S.coverage = { kind: 'not_covered', state: 'MA', zip: '02139' };
     const nc = views.mast.mastHTML();
-    const kevin = (nc.match(/<button ([^>]*data-ask-kevin[^>]*)>Ask Kevin</) || [])[1] || '';
+    const kevin = (nc.match(/<button ([^>]*data-ask-kevin[^>]*)>Ask for my city</) || [])[1] || '';
     check('go check: not covered says "We don’t cover Massachusetts yet. Vote.gov has official info for every state."', /We don’t cover Massachusetts yet\. Vote\.gov has official info for every state\./.test(strip(nc)) && !/friends and family vote/.test(nc), strip(nc).slice(0, 300));
-    check('go check: then "Want this for your city? Ask Kevin.", which opens the city request sheet (Oct 21)', /Want this for your city\? Ask Kevin \./.test(strip(nc)) && /data-act="shelf"/.test(kevin) && /data-kind="city"/.test(kevin), kevin);
+    check('go check: then one action, "Ask for my city", which opens the city request sheet (Oct 25: no "Ask Kevin", the sheet names him)', !/Ask Kevin/.test(nc) && /data-act="shelf"/.test(kevin) && /data-kind="city"/.test(kevin), kevin);
     // A load error gets "Try again".
     S.coverage = null; S.loadErr = 'We couldn’t load that ballot. Check your connection.'; S.retry = () => {};
     check('go check: a load error gets "Try again"', /data-act="retry"[^>]*>Try again</.test(views.mast.mastHTML()));
@@ -1565,7 +1568,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
 
     // The address box: before, after (this visit, with what was found), after a reload (no address).
     const strip = (h) => h.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
-    const box = () => strip((ledger.ballotHeadHTML().match(/<div class="addrbox">[\s\S]*?<\/div>(?=\s*(?:<div class="statewide-note"|<\/div>))/) || [''])[0]);
+    const box = () => strip((ledger.ballotHeadHTML().match(/<div class="addrbox[^"]*">[\s\S]*?<\/div>(?=\s*<\/div>)/) || [''])[0]);
     open('TX', ['austin-tx']);
     const view0 = S.view;
     S.view = 'ballot'; S.ui.addrOpen = false; S.ui.addrFound = null;
@@ -1580,7 +1583,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('address box: after a reload, what it set without the address', !/Found:|Test One/.test(box()) && /^Set from your address: /.test(box()), box());
     open('FL', []);
     S.b.addrNote = address.addrSummary(address.setFromAddress(S.ballot, S.b, { cd: 24, upper: 38, lower: null }));
-    check('address box: nothing set, what is left for the sample ballot', /^\d+ races? needs? your official sample ballot\.( The address lookup doesn’t cover races like [a-zA-Z .]+( or [a-zA-Z .]+)?\.)? Official sample ballot$/.test(box()), box());
+    check('address box: nothing set, what is left for the sample ballot, in the statewide notice', /^We only have Florida’s statewide races for your area so far\. \d+ races? needs? your official sample ballot\.( The address lookup doesn’t cover races like [a-zA-Z .]+( or [a-zA-Z .]+)?\.)? Official sample ballot Ask for my city$/.test(box()), box());
     check('address: the kinds of race the lookup can’t settle, most common first, and never the ones it answers', address.addressKinds(['Austin City Council Member', 'Austin ISD Trustee', 'Round Rock ISD Trustee, Place 3', 'Travis County Commissioner', 'Mayor of Kyle', 'U.S. Representative', 'State Representative']).join('|') === 'school board|city council|county board|city office');
     // A source's name opens its page for the race, at the pick where the browser can (Kevin, Oct 20).
     {
@@ -1695,6 +1698,137 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     census.stack = 'Error: script failed\n    at s.onerror (https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=12+Main:1:1)';
     errs.note(census);
     check('errors: one whose stack names the Census lookup is still dropped whole', newest().msg !== 'Error: script failed', JSON.stringify(newest()));
+  }
+
+  /* ---------- coverage (Oct 25): how many sources a ballot has, a thin place, one tap ----------
+     build-data counts them (scripts/coverage.mjs) over the ballot the app builds; the app says them
+     (model/coverage.ts, views/coverage.ts). */
+  {
+    const cov = await import('../scripts/coverage.mjs');
+    const mc = mods.coverage;
+    const strip = (h) => h.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+    // A fixture: a state with a statewide race, a measure and a district race; a place with two races of its own.
+    const E = (id, extra = {}) => ({ id, name: id, short: id, type: 'publication', lean: null, default_on: true, endorses_candidates: true, endorses_measures: true, ...extra });
+    const row = (s, date, c = null) => ({ s, c, note: null, why: null, url: null, date, conf: 'verified' });
+    const C = (id, n, extra = {}) => ({ kind: 'contest', id, every: false, is_retention: false, candidates: Array.from({ length: n }, (_, i) => ({ name: `${id}-${i}` })), ...extra });
+    const sb = {
+      order: ['gov', 'm1', 'hd-1'],
+      items: [C('gov', 2, { every: true }), { kind: 'measure', id: 'm1' }, C('hd-1', 2)],
+      endorsers: [E('paper'), E('guide'), E('quiet')],
+      endorsements: { gov: { paper: row('endorsed', '2026-10-12'), quiet: row('no_position', '2026-10-14') }, m1: { guide: row('not_found', '2026-10-10') } },
+    };
+    const pb = {
+      order: ['hd-1', 'mayor', 'council'], local: ['mayor', 'council'],
+      items: [C('mayor', 3), C('council', 1)],
+      endorsers: [E('city-paper', { home_places: ['town'] }), E('city-guide', { home_places: ['town'] }), E('far-paper', { home_places: ['elsewhere'] })],
+      endorsements: { mayor: { 'city-paper': row('not_found', '2026-10-20'), 'far-paper': row('endorsed', '2026-10-18') }, 'hd-1': { 'city-guide': row('no_position', '2026-10-16') } },
+    };
+    const sw = cov.coverageOf(sb, []);
+    check('coverage fixture: a statewide ballot counts its sources, the ones with picks, the statewide ones and the newest date',
+      sw.sources === 3 && sw.with_picks === 1 && sw.local_sources === 3 && sw.local_with_picks === 1 && sw.checked === '2026-10-14', JSON.stringify(sw));
+    const pl = cov.coverageOf(sb, [pb], 'town');
+    // On the place's ballot: gov and m1 (every voter), hd-1 and mayor and council (the place lists them).
+    check('coverage fixture: a place counts every source on its ballot, statewide ones too',
+      pl.sources === 6 && pl.with_picks === 2 && pl.checked === '2026-10-20', JSON.stringify(pl));
+    check('coverage fixture: its local sources are the ones whose home is the place, and none has a pick',
+      pl.local_sources === 2 && pl.local_with_picks === 0, JSON.stringify(pl));
+    check('coverage fixture: its own races leave out an unopposed one; the mayor has a pick from a paper elsewhere',
+      pl.local_races === 1 && pl.local_races_with_picks === 1, JSON.stringify(pl));
+    check('coverage fixture: so it isn’t thin (every race of its own has a pick from someone)', !cov.isThin(pl) && !mc.isThin(pl));
+    const thinPl = { ...pl, local_races: 2 };
+    check('coverage fixture: thin once one of its races has no pick from anyone, and not once a local source picks', cov.isThin(thinPl) && mc.isThin(thinPl) && !cov.isThin({ ...thinPl, local_with_picks: 1 }) && !mc.isThin({ ...thinPl, local_with_picks: 1 }));
+    check('coverage fixture: a statewide race outside every-voter isn’t on a place’s ballot unless the place lists it', cov.ballotIds(sb, [{ ...pb, order: ['mayor'] }]).join() === 'gov,m1,mayor');
+
+    // The index's numbers are the app's own ballot's, for every place and every state.
+    const off = [];
+    for (const [id, p] of Object.entries(INDEX.places)) {
+      const b = open(p.state, [id]);
+      const n = b.endorsers.length, w = lens.withPicks(b, b.endorsers).length;
+      if (p.sources !== n || p.with_picks !== w) off.push(`${id}: index ${p.sources}/${p.with_picks}, ballot ${n}/${w}`);
+      if (cov.isThin(p) !== mc.isThin(p)) off.push(`${id}: the two thin rules disagree`);
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(p.checked || '')) off.push(`${id}: checked is ${p.checked}`);
+    }
+    for (const [stc, s2] of Object.entries(INDEX.states)) {
+      const b = open(stc, []);
+      if (s2.sources !== b.endorsers.length || s2.with_picks !== lens.withPicks(b, b.endorsers).length) off.push(`${stc}: index ${s2.sources}/${s2.with_picks}, ballot ${b.endorsers.length}/${lens.withPicks(b, b.endorsers).length}`);
+    }
+    check('coverage: index.json’s source counts match the ballot the app builds, every place and state', off.length === 0, off.slice(0, 4).join(' | '));
+    check('coverage: a place with a local source that picks is never thin', Object.values(INDEX.places).every((p) => p.local_with_picks === 0 || !mc.isThin(p)));
+    check('coverage: Chicago isn’t thin', !mc.isThin(INDEX.places['chicago-il']), JSON.stringify(INDEX.places['chicago-il']));
+
+    // What the app says, from a copy of the index with numbers set.
+    const idx = JSON.parse(JSON.stringify(INDEX));
+    const thinNums = { local_sources: 4, local_with_picks: 0, local_races: 10, local_races_with_picks: 7, checked: '2026-10-19' };
+    idx.places['pensacola-fl'] = { ...idx.places['pensacola-fl'], ...thinNums };
+    const pen = open('FL', ['pensacola-fl']);
+    const c1 = mc.ballotCoverage(pen, idx, '32501', '2026-10-25');
+    check('coverage: a thin place offers to gather its endorsements, in one tap',
+      c1.kind === 'thin' && c1.state === 'none' && c1.name === 'Pensacola' && c1.ask.key === 'p:pensacola-fl' && c1.ask.what === 'Gather endorsements: Pensacola' && c1.ask.wrong === 'Please gather local endorsements for Pensacola (one-tap from the page)', JSON.stringify(c1));
+    idx.places['pensacola-fl'].local_with_picks = 1;
+    check('coverage: the same place with a local source’s pick reads full, with no offer', mc.ballotCoverage(pen, idx, '32501').kind === 'full' && mc.ballotCoverage(pen, idx, '32501').ask === null);
+    idx.places['pensacola-fl'].local_with_picks = 0;
+    const mo = open('MO', []);
+    const c2 = mc.ballotCoverage(mo, idx, '63110', '2026-10-25');
+    check('coverage: a statewide ballot found by its ZIP offers to add the city, the way Request a city asks',
+      c2.kind === 'statewide' && c2.state === 'none' && c2.ask.key === 'z:63110' && c2.ask.what === 'Please add my city' && c2.ask.wrong === 'Please add the city for ZIP 63110 in Missouri (one-tap from the page)' && c2.checked === INDEX.states.MO.checked, JSON.stringify(c2));
+    check('coverage: one picked from the list (no ZIP) can’t ask in one tap', mc.ballotCoverage(mo, idx, '').ask === null);
+    idx.zips['63110'] = ['ballwin-mo'];
+    check('coverage: once its ZIP has a place, it says the city is in', mc.ballotCoverage(mo, idx, '63110').state === 'landed');
+    delete idx.zips['63110'];
+
+    // Remembered on this device, apart from the saved ballots, until the data lands or three days pass.
+    const mem = {};
+    globalThis.window = { localStorage: { getItem: (k) => (k in mem ? mem[k] : null), setItem: (k, v) => { mem[k] = String(v); }, removeItem: (k) => { delete mem[k]; } } };
+    try {
+      mc.rememberAsk('p:pensacola-fl', '2026-10-25');
+      check('coverage: a request is kept under its own key, never vg2', Object.keys(mem).join() === 'vg-asked' && JSON.parse(mem['vg-asked'])['p:pensacola-fl'] === '2026-10-25');
+      check('coverage: asked, the thin place says so the same day and the next', mc.ballotCoverage(pen, idx, '32501', '2026-10-25').state === 'asked' && mc.ballotCoverage(pen, idx, '32501', '2026-10-26').state === 'asked');
+      idx.places['pensacola-fl'].checked = '2026-10-26';
+      check('coverage: data checked after the request day ends it', mc.ballotCoverage(pen, idx, '32501', '2026-10-26').state === 'none');
+      idx.places['pensacola-fl'].checked = '2026-10-25';
+      check('coverage: data checked the same day doesn’t (the request may have come after it)', mc.ballotCoverage(pen, idx, '32501', '2026-10-25').state === 'asked');
+      check('coverage: after three days with nothing landed, the offer comes back', mc.ballotCoverage(pen, idx, '32501', '2026-10-28').state === 'asked' && mc.ballotCoverage(pen, idx, '32501', '2026-10-29').state === 'none');
+      mc.rememberAsk('z:63110', '2026-10-30');
+      check('coverage: a new request lets go of ones past the window', !('p:pensacola-fl' in JSON.parse(mem['vg-asked'])) && JSON.parse(mem['vg-asked'])['z:63110'] === '2026-10-30');
+    } finally { delete globalThis.window; idx.places['pensacola-fl'].checked = '2026-10-19'; }
+
+    // The words, on the first page and in the ballot's head.
+    const keep = { index: S.index, view: S.view };
+    S.index = idx;
+    const ch = open('IL', ['chicago-il']);
+    S.view = 'setup';
+    const p = INDEX.places['chicago-il'];
+    const want = `${p.sources} sources for Chicago, ${p.with_picks} with picks. Last checked Oct 19.`;
+    check('coverage: the first page says how many sources and how many picked, and when', strip(views.coverage.covHTML()) === want && /class="su-src"/.test(views.setup.pickControlsHTML()), strip(views.coverage.covHTML()));
+    S.view = 'ballot';
+    const plain = (h) => h.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+    check('coverage: the ballot’s head says it shorter, under the picks line', plain(views.coverage.headCovHTML()) === want.replace(' for Chicago', '') && /picks-line[\s\S]*class="picks-cov"/.test(views.ledger.ballotHeadHTML()), plain(views.coverage.headCovHTML()));
+    check('coverage: and so does the Edit sheet', /class="su-src"/.test(views.setup.pickControlsHTML(true)));
+    S.b.sources = [];
+    check('coverage: with endorsements off, the counts step aside', !/su-src|picks-cov/.test(views.setup.pickControlsHTML(true) + views.ledger.ballotHeadHTML()));
+    S.b.sources = null;
+    open('FL', ['pensacola-fl']);
+    S.b.zip = '32501';
+    S.view = 'setup';
+    const t1 = strip(views.coverage.covHTML());
+    check('coverage: a thin place, honestly, with its one tap', /^We don’t have endorsements from Pensacola’s local sources yet\. \d+ sources checked, \d+ with picks\. Last checked Oct 19\. Add Pensacola’s endorsements for me$/.test(t1) && /data-act="cov-ask"/.test(views.coverage.covHTML()), t1);
+    S.view = 'ballot';
+    check('coverage: in the head, one quiet line with the tap inline, no second box', strip(views.coverage.headCovHTML()) === 'No endorsements from Pensacola’s local sources yet. Add them for me' && !/cov-note|addrbox/.test(views.coverage.headCovHTML()));
+    open('MO', []);
+    S.b.zip = '63110';
+    S.view = 'setup';
+    check('coverage: a statewide ballot found by ZIP, honestly, with its one tap', /^We only have Missouri’s statewide races for your area so far\. 14 sources for them, \d+ with picks\. Last checked Oct 19\. Add my city for me$/.test(strip(views.coverage.covHTML())), strip(views.coverage.covHTML()));
+    S.view = 'ballot';
+    const swh = views.ledger.ballotHeadHTML();
+    check('coverage: its head’s one notice offers the same tap, beside one sample ballot', /data-act="cov-ask"[^>]*>Add my city for me</.test(swh) && (swh.match(/>Official sample ballot</g) || []).length === 1 && !/Ask for my city/.test(swh), strip(swh));
+    Object.assign(S, keep);
+
+    // One tap sends the form's five answers, its own words, nothing typed.
+    const along = { page: 'First page', where: 'Pensacola, 32501', url: 'https://vote.kevinhg.com/', data: '2026-10-25 12:00 UTC', build: 'abc1234', device: 'Safari 18 on iPhone, 390px wide', errors: ['Error: boom'] };
+    const body = views.shelf.askBody(c1.ask, along);
+    const F = common.FORM;
+    check('coverage: one tap posts the five ids, the place and ZIP, and nothing typed', [F.what, F.where, F.wrong, F.link, F.reach].every((k) => k in body) && body[F.what] === 'Gather endorsements: Pensacola' && body[F.where] === 'Pensacola, 32501' && body[F.reach] === '' && body[F.link] === 'https://vote.kevinhg.com/ (build abc1234)', JSON.stringify(body));
+    check('coverage: "What’s wrong?" is its own sentence and a city request’s "Sent along" (no browser, no errors)', body[F.wrong] === 'Please gather local endorsements for Pensacola (one-tap from the page)\n\nSent along:\nPage: First page\nPlace: Pensacola, 32501\nPage address: https://vote.kevinhg.com/ (build abc1234)\nData built: 2026-10-25 12:00 UTC', body[F.wrong]);
   }
 
 }

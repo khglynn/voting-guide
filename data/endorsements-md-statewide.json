@@ -254,9 +254,9 @@
     "target_id": "md-question-1",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election endorsement for this race or measure was found in the state League’s advocacy page, voter-service policy and targeted 2026 ballot-question searches checked October 19, 2026.",
+    "why": "No 2026 general-election endorsement for this race or measure was found in the state League’s advocacy page, voter-service policy and targeted 2026 ballot-question searches checked October 19, 2026. Checked again on Oct 25, 2026; still no pick on this page.",
     "url": "https://www.lwvmd.org/advocacy",
-    "date": "2026-10-19",
+    "date": "2026-10-25",
     "confidence": "sourced"
   },
   {
@@ -264,9 +264,9 @@
     "target_id": "md-question-2",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election endorsement for this race or measure was found in the state League’s advocacy page, voter-service policy and targeted 2026 ballot-question searches checked October 19, 2026.",
+    "why": "No 2026 general-election endorsement for this race or measure was found in the state League’s advocacy page, voter-service policy and targeted 2026 ballot-question searches checked October 19, 2026. Checked again on Oct 25, 2026; still no pick on this page.",
     "url": "https://www.lwvmd.org/advocacy",
-    "date": "2026-10-19",
+    "date": "2026-10-25",
     "confidence": "sourced"
   },
   {
@@ -274,9 +274,9 @@
     "target_id": "md-question-3",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election endorsement for this race or measure was found in the state League’s advocacy page, voter-service policy and targeted 2026 ballot-question searches checked October 19, 2026.",
+    "why": "No 2026 general-election endorsement for this race or measure was found in the state League’s advocacy page, voter-service policy and targeted 2026 ballot-question searches checked October 19, 2026. Checked again on Oct 25, 2026; still no pick on this page.",
     "url": "https://www.lwvmd.org/advocacy",
-    "date": "2026-10-19",
+    "date": "2026-10-25",
     "confidence": "sourced"
   },
   {
@@ -284,9 +284,9 @@
     "target_id": "md-governor",
     "status": "not_found",
     "choice": null,
-    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Oct 25, 2026; still no pick on this page.",
     "url": "https://www.mddems.org/",
-    "date": null,
+    "date": "2026-10-25",
     "confidence": "sourced"
   },
   {
@@ -294,9 +294,9 @@
     "target_id": "md-comptroller",
     "status": "not_found",
     "choice": null,
-    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Oct 25, 2026; still no pick on this page.",
     "url": "https://www.mddems.org/",
-    "date": null,
+    "date": "2026-10-25",
     "confidence": "sourced"
   },
   {
@@ -304,9 +304,9 @@
     "target_id": "md-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Oct 25, 2026; still no pick on this page.",
     "url": "https://www.mddems.org/",
-    "date": null,
+    "date": "2026-10-25",
     "confidence": "sourced"
   },
   {
@@ -354,9 +354,9 @@
     "target_id": "md-governor",
     "status": "not_found",
     "choice": null,
-    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Oct 25, 2026; still no pick on this page.",
     "url": "https://mdgop.org/",
-    "date": null,
+    "date": "2026-10-25",
     "confidence": "sourced"
   },
   {
@@ -364,9 +364,9 @@
     "target_id": "md-comptroller",
     "status": "not_found",
     "choice": null,
-    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Oct 25, 2026; still no pick on this page.",
     "url": "https://mdgop.org/",
-    "date": null,
+    "date": "2026-10-25",
     "confidence": "sourced"
   },
   {
@@ -374,9 +374,9 @@
     "target_id": "md-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Oct 25, 2026; still no pick on this page.",
     "url": "https://mdgop.org/",
-    "date": null,
+    "date": "2026-10-25",
     "confidence": "sourced"
   },
   {

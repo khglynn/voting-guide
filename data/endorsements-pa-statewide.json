@@ -4,9 +4,9 @@
     "target_id": "pa-governor",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election endorsement for this race or measure was found in the Inquirer editorial index and its October 15 endorsement-method page checked October 19, 2026.",
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Inquirer editorial index and its October 15 endorsement-method page checked October 19, 2026. Checked again on Oct 25, 2026; still no pick on this page.",
     "url": "https://www.inquirer.com/opinion/editorials/",
-    "date": "2026-10-19",
+    "date": "2026-10-25",
     "confidence": "sourced"
   },
   {
@@ -94,9 +94,9 @@
     "target_id": "pa-governor",
     "status": "not_found",
     "choice": null,
-    "why": "CVPA led a five-group environmental endorsement of Shapiro on April 7, 2022. No 2026 endorsement was found on its site or on the City & State tracker (Oct. 13). Likely but unconfirmed.",
+    "why": "CVPA led a five-group environmental endorsement of Shapiro on April 7, 2022. No 2026 endorsement was found on its site or on the City & State tracker (Oct. 13). Likely but unconfirmed. Checked again on Oct 25, 2026; still no pick on this page.",
     "url": "https://www.conservationpa.org/news/leading-pa-environmental-advocates-endorse-josh-shapiro",
-    "date": "2026-10-16",
+    "date": "2026-10-25",
     "confidence": "sourced"
   },
   {

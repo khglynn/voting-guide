@@ -13,7 +13,7 @@
 import { S, type Shelf, type ShelfKind, type Along } from '../state';
 import type { Index } from '../types';
 import { esc } from '../util';
-import { lastErrors } from '../errors';
+import { lastErrors, lastErrorId } from '../errors';
 import { FORM, formURL, ext, isOpen, kevinLink, reportWhere, BUY_ME_A_COFFEE_URL } from './common';
 
 export const SHELF_TITLE: Record<ShelfKind, string> = {
@@ -79,6 +79,7 @@ export function collectAlong(): Along {
     build: import.meta.env.VITE_BUILD || 'dev',
     device: deviceWords(navigator.userAgent, window.innerWidth, navigator.maxTouchPoints || 0),
     errors: lastErrors().map((e) => `${e.msg}${e.at ? ` (${e.at})` : ''} at ${e.time}`),
+    crash: lastErrorId() || '',
   };
 }
 /* The values the page fills in itself. One place, so the list and the post can't drift apart. */
@@ -86,7 +87,8 @@ const aboutOf = (r: Pick<Shelf, 'what' | 'tag'>): string => (r.tag && r.what ? `
 const linkOf = (a: Along): string => `${a.url} (build ${a.build || 'dev'})`;
 /* The "We'll send along" list. Every value the page fills in is on it word for word (Codex, Oct 21:
    "you can see what we send" has to hold): the page (or, from a row, the race with its record id), the
-   place and ZIP, the page's address with the build, the data date, the browser and the errors caught.
+   place and ZIP, the page's address with the build, the data date, the browser, the errors caught, and
+   the id of the crash report the page sent, when Sentry took one in (so a note and its crash meet).
    It also goes into "What's wrong?" after "Sent along:". A city request's is shorter. */
 export function alongLines(r: Pick<Shelf, 'kind' | 'what' | 'tag' | 'along'>): string[] {
   const a = r.along;
@@ -94,7 +96,7 @@ export function alongLines(r: Pick<Shelf, 'kind' | 'what' | 'tag' | 'along'>): s
   const tail = [`Page address: ${linkOf(a)}`, `Data built: ${a.data || 'unknown'}`];
   if (r.kind === 'city') return [...head, ...tail].filter(Boolean);
   const about = aboutOf(r);
-  return [...head, about ? `About: ${about}` : '', ...tail, `Browser: ${a.device}`, ...a.errors.map((e) => `Error the page caught: ${e}`)].filter(Boolean);
+  return [...head, about ? `About: ${about}` : '', ...tail, `Browser: ${a.device}`, ...a.errors.map((e) => `Error the page caught: ${e}`), a.crash ? `Crash report: ${a.crash}` : ''].filter(Boolean);
 }
 
 /* What the form gets, by its ids (Kevin's sheet keeps its five questions). A report: the race or

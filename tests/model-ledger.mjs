@@ -1697,4 +1697,63 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('errors: one whose stack names the Census lookup is still dropped whole', newest().msg !== 'Error: script failed', JSON.stringify(newest()));
   }
 
+  /* ---------- crash reports (scrub.ts, errors.ts): what may leave for Sentry ----------
+     The site's How text says a crash report has no address, no picks and no IP. Every event passes
+     scrubEvent on its way out (sentry.ts); these are its rules on one deeply nested event, without a
+     browser. The e2e checks the same in a real one, on the envelopes themselves. */
+  {
+    const { scrub, errors: errs } = views;
+    const O = 'https://vote.kevinhg.com';
+    const HASH = 'v1~TX~austin-tx~78704~zz9pick';
+    const ctx = (over = {}) => ({ origin: O, path: '/', hashes: [HASH, 'notes-PRIVHASH9'], secrets: ['12 testing lane'], ua: 'TestAgent/1.0', ...over });
+    const frame = (filename, fn = 'f') => ({ filename, function: fn, lineno: 1, colno: 2, in_app: true });
+    const ev = () => ({
+      event_id: 'e0', level: 'error', platform: 'javascript', environment: 'production', release: 'abc1234',
+      exception: { values: [
+        { type: 'TypeError', value: `cause: ${O}/data/state-TX.json?zip=78704#${HASH}`, stacktrace: { frames: [frame(`${O}/assets/index-Bx9.js?v=2#frag`)] }, mechanism: { type: 'chained', parent_id: 0 } },
+        { type: 'Error', value: 'Save failed for notes-PRIVHASH9', stacktrace: { frames: [frame(`${O}/assets/index-Bx9.js`, 'g'), frame('<anonymous>', '?')] }, mechanism: { type: 'generic', handled: true } },
+      ] },
+      extra: { nested: [{ deep: { at: `${O}/?today=2026-10-19#${HASH}`, note: "O'Test (rear) https://x.test/a.js?b=1#c", list: ['plain', `link ${HASH}`] } }] },
+      user: { ip_address: '{{auto}}', id: 'u1' },
+      breadcrumbs: [{ category: 'ui.click', message: 'button[data-act=pick]' }],
+      request: { url: `${O}/?today=1#${HASH}`, headers: { Referer: 'https://elsewhere.test/?q=x' } },
+      sdk: { name: 'sentry.javascript.browser', settings: { infer_ip: 'never' } },
+      sdkProcessingMetadata: { scope: 'not for sending' },
+    });
+    const input = ev();
+    const before = JSON.stringify(input);
+    const out = scrub.scrubEvent(input, ctx());
+    const js = JSON.stringify(out);
+    check('crash reports: a nested event passes, and the one handed in is left as it was', !!out && out !== input && JSON.stringify(input) === before, js);
+    check('crash reports: no save link anywhere, hash or words, and no "#"', !!out && !/zz9pick|PRIVHASH9|v1~|#/.test(js) && out.exception.values[1].value === 'Save failed for [save link]' && out.extra.nested[0].deep.list[1] === 'link [save link]', js);
+    check('crash reports: every URL loses its query and hash, in messages, frames and nested values', !!out && !/today=|zip=|v=2|b=1|frag|\?[^"]/.test(js)
+      && out.exception.values[0].value === `cause: ${O}/data/state-TX.json` && out.exception.values[0].stacktrace.frames[0].filename === `${O}/assets/index-Bx9.js`
+      && out.extra.nested[0].deep.at === `${O}/` && out.extra.nested[0].deep.note === "O'Test (rear) https://x.test/a.js", js);
+    check('crash reports: no user, no breadcrumbs, no SDK bookkeeping; the request is the origin and path with the browser', !!out && !('user' in out) && !('breadcrumbs' in out) && !('sdkProcessingMetadata' in out)
+      && JSON.stringify(out.request) === JSON.stringify({ url: `${O}/`, headers: { 'User-Agent': 'TestAgent/1.0' } }) && !/elsewhere|Referer/.test(js), JSON.stringify(out && out.request));
+    check('crash reports: the rest goes as it came (release, mechanism, the never-infer-IP setting)', !!out && out.release === 'abc1234' && out.sdk.settings.infer_ip === 'never' && out.exception.values[1].mechanism.type === 'generic' && out.exception.values[0].mechanism.parent_id === 0, js);
+    // Dropped whole.
+    const census = ev(); census.extra.nested[0].deep.script = 'https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=1+A+St';
+    const cap = ev(); cap.exception.values[1].value = 'x at GEOCODING.GEO.CENSUS.GOV';
+    check('crash reports: anything that mentions the Census lookup, however deep and in any case, never leaves', scrub.scrubEvent(census, ctx()) === null && scrub.scrubEvent(cap, ctx()) === null);
+    const addr = (v) => { const e = ev(); e.exception.values[1].value = v; return scrub.scrubEvent(e, ctx()); };
+    check('crash reports: anything that mentions the address never leaves: as typed, in capitals, spaced out, URL-encoded either way, or JSON-escaped',
+      addr('Lookup failed for 12 Testing Lane') === null && addr('LOOKUP 12 TESTING  LANE') === null && addr('q=12%20Testing%20Lane') === null && addr('q=12+Testing+Lane') === null
+      && scrub.scrubEvent(ev(), ctx({ secrets: ['12 o"test lane'] })) !== null && (() => { const e = ev(); e.extra.q = '12 O"Test Lane'; return scrub.scrubEvent(e, ctx({ secrets: ['12 o"test lane'] })); })() === null);
+    const elsewhere = (filename) => { const e = ev(); e.exception.values[1].stacktrace.frames.push(frame(filename)); return scrub.scrubEvent(e, ctx()); };
+    check('crash reports: thrown by a script that isn’t ours (an extension, a look-alike host) never leaves', elsewhere('chrome-extension://abcdef/inject.js') === null && elsewhere(`${O}.evil.test/x.js`) === null && elsewhere('https://cdn.example.test/ads.js') === null);
+    check('crash reports: frames that name no script don’t count; the newest one that does decides', elsewhere('[native code]') !== null && (() => { const e = ev(); e.exception.values[1].stacktrace.frames = [frame('https://cdn.example.test/lib.js'), frame(`${O}/assets/index-Bx9.js`), frame('<anonymous>')]; return scrub.scrubEvent(e, ctx()); })() !== null);
+    const empty = ev(); empty.exception.values = [{ type: 'Error', value: 'Script error.' }];
+    check('crash reports: a browser’s empty "Script error." says nothing, so it isn’t sent', scrub.scrubEvent(empty, ctx()) === null);
+    check('crash reports: a short hash is left alone (it can’t be a save link, and replacing it would mangle words)', (() => { const o = scrub.scrubEvent({ message: 'plan view' }, ctx({ hashes: ['plan'] })); return !!o && o.message === 'plan view'; })());
+    // errors.ts: what counts as private, and the problem report's list follows the same rule.
+    errs.keepPrivate('12 Quartz Way, Springfield, IL 62701', 'Springfield, IL', null, '  ');
+    const words = errs.privateWords();
+    check('crash reports: an address and its street line are kept to compare against; a bare city has no street line to keep', words.includes('12 quartz way, springfield, il 62701') && words.includes('12 quartz way') && words.includes('springfield, il') && !words.includes('springfield'), words.join(' | '));
+    check('crash reports: mentionsPrivate finds them however they’re written', errs.mentionsPrivate('Failed: 12 QUARTZ   WAY') && errs.mentionsPrivate('?a=12%20Quartz%20Way') && errs.mentionsPrivate('?a=12+quartz+way') && !errs.mentionsPrivate('Quartz is a mineral'));
+    const was = JSON.stringify(errs.lastErrors()[0]);
+    errs.note(new Error('Lookup failed for 12 Quartz Way'));
+    check('crash reports: the problem report’s list drops an error that mentions the address too', JSON.stringify(errs.lastErrors()[0]) === was, JSON.stringify(errs.lastErrors()[0]));
+  }
+
 }

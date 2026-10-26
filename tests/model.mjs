@@ -43,6 +43,7 @@ for (const m of ['lens', 'tally', 'bulk', 'judges', 'labels', 'plan', 'address']
 const views = {};
 for (const v of ['ledger', 'cheat', 'open', 'lens', 'mast', 'setup', 'pass', 'planstrip', 'shelf']) views[v] = await load(`/src/views/${v}.ts`);
 views.errors = await load('/src/errors.ts'); // not a view: the errors a problem report sends along (the shelf reads it)
+views.scrub = await load('/src/scrub.ts'); // not a view: what a crash report may carry (sentry.ts runs every event through it)
 
 const results = [];
 const check = (name, ok, extra = '') => { results.push({ name, ok }); console.log(`${ok ? 'PASS' : 'FAIL'}  ${name}${!ok && extra ? `  (${extra})` : ''}`); };

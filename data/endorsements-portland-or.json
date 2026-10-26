@@ -282,24 +282,22 @@
   {
     "endorser_id": "oregonian-eb",
     "target_id": "portland-council-3",
-    "status": "not_found",
-    "unreadable": true,
-    "choice": null,
-    "why": "The Oregonian's endorsement page is behind a paywall we couldn't read. We only saw a pick for this secondhand, so we're not showing one. Checked Oct 19, 2026.",
+    "status": "endorsed",
+    "choice": "Kellie Torres, Steve Novick, Angelita Morillo (ranks them 1-2-3)",
+    "why": "Ranks Torres first for the ingenuity and work ethic she showed setting up Safe Rest Villages and streamlining the permit system, Novick second for his wealth of ideas and his independence from the DSA-led caucus, and Morillo third as the most effective voice for the DSA councilors' views, while saying her insults and excuses undermine her potential.",
     "url": "https://www.oregonlive.com/opinion/2026/10/editorial-endorsement-november-2026-change-the-mix-on-city-council-by-electing-these-endorsed-candidates.html",
-    "date": "2026-10-19",
-    "confidence": "sourced"
+    "date": "2026-10-11",
+    "confidence": "verified"
   },
   {
     "endorser_id": "oregonian-eb",
     "target_id": "portland-council-4",
-    "status": "not_found",
-    "unreadable": true,
-    "choice": null,
-    "why": "The Oregonian's endorsement page is behind a paywall we couldn't read. We only saw a pick for this secondhand, so we're not showing one. Checked Oct 19, 2026.",
+    "status": "endorsed",
+    "choice": "Eric Zimmerman, Olivia Clark, Eli Arnold (ranks them 1-2-3)",
+    "why": "Ranks Zimmerman first as the councilor who best shows what a functional council looks like and a voice of pragmatism, Clark second for taking on the city's deteriorating streets, pipes and neglected facilities, and Arnold third for sharing their focus on public safety and basic services, with ideas such as a fareless transit system.",
     "url": "https://www.oregonlive.com/opinion/2026/10/editorial-endorsement-november-2026-change-the-mix-on-city-council-by-electing-these-endorsed-candidates.html",
-    "date": "2026-10-19",
-    "confidence": "sourced"
+    "date": "2026-10-11",
+    "confidence": "verified"
   },
   {
     "endorser_id": "oregonian-eb",

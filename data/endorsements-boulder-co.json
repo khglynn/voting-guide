@@ -104,9 +104,9 @@
     "target_id": "co-rtd-o",
     "status": "not_found",
     "choice": null,
-    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -114,9 +114,9 @@
     "target_id": "co-cu-regent-2",
     "status": "not_found",
     "choice": null,
-    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -124,9 +124,9 @@
     "target_id": "co-us-house-2",
     "status": "not_found",
     "choice": null,
-    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -134,9 +134,9 @@
     "target_id": "co-hd-49",
     "status": "not_found",
     "choice": null,
-    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -264,9 +264,9 @@
     "target_id": "boulder-2l",
     "status": "not_found",
     "choice": null,
-    "why": "Not addressed on PLAN-Boulder County's Sept. 27 ballot-issue page.",
+    "why": "Not addressed on PLAN-Boulder County's Sept. 27 ballot-issue page. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.planboulder.org/2026-ballot-issue-endorsements",
-    "date": null,
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -274,9 +274,9 @@
     "target_id": "boulder-2m",
     "status": "not_found",
     "choice": null,
-    "why": "Not addressed on PLAN-Boulder County's Sept. 27 ballot-issue page.",
+    "why": "Not addressed on PLAN-Boulder County's Sept. 27 ballot-issue page. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.planboulder.org/2026-ballot-issue-endorsements",
-    "date": null,
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -284,9 +284,9 @@
     "target_id": "boulder-county-201",
     "status": "not_found",
     "choice": null,
-    "why": "Not addressed on PLAN-Boulder County's Sept. 27 ballot-issue page.",
+    "why": "Not addressed on PLAN-Boulder County's Sept. 27 ballot-issue page. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.planboulder.org/2026-ballot-issue-endorsements",
-    "date": null,
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -294,9 +294,9 @@
     "target_id": "co-frpr-7a",
     "status": "not_found",
     "choice": null,
-    "why": "Not addressed on PLAN-Boulder County's Sept. 27 ballot-issue page.",
+    "why": "Not addressed on PLAN-Boulder County's Sept. 27 ballot-issue page. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.planboulder.org/2026-ballot-issue-endorsements",
-    "date": null,
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -464,9 +464,9 @@
     "target_id": "co-rtd-o",
     "status": "not_found",
     "choice": null,
-    "why": "As of its Aug. 2 forum recording it had endorsed neither candidate; its separate RTD and ballot-measure endorsement page was not reached.",
+    "why": "As of its Aug. 2 forum recording it had endorsed neither candidate; its separate RTD and ballot-measure endorsement page was not reached. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://better-boulder-pod.castos.com/episodes/004-rtd-director-district-o-candidate-forum",
-    "date": null,
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -682,12 +682,12 @@
   {
     "endorser_id": "open-boulder",
     "target_id": "boulder-mayor",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "Boulder Reporting Lab's listing shows no Open Boulder pick for mayor.",
-    "url": "https://boulderreportinglab.org/2026/08/30/meet-the-19-candidates-running-for-boulder-mayor-and-city-council-in-2026/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "Boulder Reporting Lab's voter guide says Open Boulder declined to endorse for mayor because its board could not reach a consensus.",
+    "url": "https://boulderreportinglab.org/2026/10/07/boulder-2026-voter-guide-what-to-know-before-election-day-nov-3/",
+    "date": "2026-10-18",
+    "confidence": "verified"
   },
   {
     "endorser_id": "boulder-dsa",
@@ -784,9 +784,9 @@
     "target_id": "boulder-mayor",
     "status": "not_found",
     "choice": null,
-    "why": "Boulder Reporting Lab's listing shows no labor council pick for mayor; the council's own 2026 slate was not found.",
+    "why": "Boulder Reporting Lab's listing shows no labor council pick for mayor; the council's own 2026 slate was not found. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://boulderreportinglab.org/2026/08/30/meet-the-19-candidates-running-for-boulder-mayor-and-city-council-in-2026/",
-    "date": null,
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -924,9 +924,9 @@
     "target_id": "co-sd-17",
     "status": "not_found",
     "choice": null,
-    "why": "The party's page lists Democratic nominees race by race but does not list Katie Wallace (SD-17), who is on the ballot as a Democrat.",
+    "why": "The party's page lists Democratic nominees race by race but does not list Katie Wallace (SD-17), who is on the ballot as a Democrat. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.bocodems.org/2026-voter-guide/",
-    "date": null,
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -954,9 +954,9 @@
     "target_id": "boulder-county-1a",
     "status": "not_found",
     "choice": null,
-    "why": "Local measure positions are in the party's Ballot Measures Guide (a SharePoint document) that was not captured; the web page does not show them.",
+    "why": "Local measure positions are in the party's Ballot Measures Guide (a SharePoint document) that was not captured; the web page does not show them. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.bocodems.org/2026-voter-guide/",
-    "date": null,
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -964,9 +964,9 @@
     "target_id": "boulder-county-200",
     "status": "not_found",
     "choice": null,
-    "why": "Local measure positions are in the party's Ballot Measures Guide (a SharePoint document) that was not captured; the web page does not show them.",
+    "why": "Local measure positions are in the party's Ballot Measures Guide (a SharePoint document) that was not captured; the web page does not show them. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.bocodems.org/2026-voter-guide/",
-    "date": null,
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -974,9 +974,9 @@
     "target_id": "boulder-county-201",
     "status": "not_found",
     "choice": null,
-    "why": "Local measure positions are in the party's Ballot Measures Guide (a SharePoint document) that was not captured; the web page does not show them.",
+    "why": "Local measure positions are in the party's Ballot Measures Guide (a SharePoint document) that was not captured; the web page does not show them. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.bocodems.org/2026-voter-guide/",
-    "date": null,
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -984,9 +984,9 @@
     "target_id": "boulder-2j",
     "status": "not_found",
     "choice": null,
-    "why": "Local measure positions are in the party's Ballot Measures Guide (a SharePoint document) that was not captured; the web page does not show them.",
+    "why": "Local measure positions are in the party's Ballot Measures Guide (a SharePoint document) that was not captured; the web page does not show them. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.bocodems.org/2026-voter-guide/",
-    "date": null,
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -994,9 +994,9 @@
     "target_id": "boulder-2k",
     "status": "not_found",
     "choice": null,
-    "why": "Local measure positions are in the party's Ballot Measures Guide (a SharePoint document) that was not captured; the web page does not show them.",
+    "why": "Local measure positions are in the party's Ballot Measures Guide (a SharePoint document) that was not captured; the web page does not show them. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.bocodems.org/2026-voter-guide/",
-    "date": null,
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1004,9 +1004,9 @@
     "target_id": "boulder-2l",
     "status": "not_found",
     "choice": null,
-    "why": "Local measure positions are in the party's Ballot Measures Guide (a SharePoint document) that was not captured; the web page does not show them.",
+    "why": "Local measure positions are in the party's Ballot Measures Guide (a SharePoint document) that was not captured; the web page does not show them. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.bocodems.org/2026-voter-guide/",
-    "date": null,
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1014,9 +1014,9 @@
     "target_id": "boulder-2m",
     "status": "not_found",
     "choice": null,
-    "why": "Local measure positions are in the party's Ballot Measures Guide (a SharePoint document) that was not captured; the web page does not show them.",
+    "why": "Local measure positions are in the party's Ballot Measures Guide (a SharePoint document) that was not captured; the web page does not show them. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.bocodems.org/2026-voter-guide/",
-    "date": null,
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1024,9 +1024,9 @@
     "target_id": "boulder-mayor",
     "status": "not_found",
     "choice": null,
-    "why": "The party's page mentions the nonpartisan city races but lists no picks.",
+    "why": "The party's page mentions the nonpartisan city races but lists no picks. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.bocodems.org/2026-voter-guide/",
-    "date": null,
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1034,9 +1034,9 @@
     "target_id": "boulder-council",
     "status": "not_found",
     "choice": null,
-    "why": "The party's page mentions the nonpartisan city races but lists no picks.",
+    "why": "The party's page mentions the nonpartisan city races but lists no picks. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.bocodems.org/2026-voter-guide/",
-    "date": null,
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1184,9 +1184,9 @@
     "target_id": "boulder-mayor",
     "status": "not_found",
     "choice": null,
-    "why": "The party's voter guide lists no pick in this nonpartisan race.",
+    "why": "The party's voter guide lists no pick in this nonpartisan race. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://bocogop.org/wp-content/uploads/2026/09/BoulderCountyRepublicansVoterGuide2026.pdf",
-    "date": null,
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1194,9 +1194,9 @@
     "target_id": "boulder-council",
     "status": "not_found",
     "choice": null,
-    "why": "The party's voter guide lists no pick in this nonpartisan race.",
+    "why": "The party's voter guide lists no pick in this nonpartisan race. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://bocogop.org/wp-content/uploads/2026/09/BoulderCountyRepublicansVoterGuide2026.pdf",
-    "date": null,
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1204,9 +1204,9 @@
     "target_id": "co-rtd-o",
     "status": "not_found",
     "choice": null,
-    "why": "The party's voter guide lists no pick in this nonpartisan race.",
+    "why": "The party's voter guide lists no pick in this nonpartisan race. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://bocogop.org/wp-content/uploads/2026/09/BoulderCountyRepublicansVoterGuide2026.pdf",
-    "date": null,
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1294,9 +1294,9 @@
     "target_id": "boulder-county-assessor",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1304,9 +1304,9 @@
     "target_id": "boulder-county-clerk",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1314,9 +1314,9 @@
     "target_id": "boulder-county-commissioner-3",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1324,9 +1324,9 @@
     "target_id": "boulder-county-coroner",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1334,9 +1334,9 @@
     "target_id": "boulder-county-sheriff",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1344,9 +1344,9 @@
     "target_id": "boulder-county-surveyor",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1354,9 +1354,9 @@
     "target_id": "boulder-county-treasurer",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1434,9 +1434,9 @@
     "target_id": "co-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1444,9 +1444,9 @@
     "target_id": "co-governor",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1454,9 +1454,9 @@
     "target_id": "co-hd-10",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1464,9 +1464,9 @@
     "target_id": "co-hd-12",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1544,9 +1544,9 @@
     "target_id": "co-retention-brodsky",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1554,9 +1554,9 @@
     "target_id": "co-retention-freyre",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1564,9 +1564,9 @@
     "target_id": "co-retention-haenselman",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1574,9 +1574,9 @@
     "target_id": "co-retention-harris",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1584,9 +1584,9 @@
     "target_id": "co-retention-hood",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1594,9 +1594,9 @@
     "target_id": "co-retention-kotlarczyk",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1604,9 +1604,9 @@
     "target_id": "co-retention-larson-chris",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1614,9 +1614,9 @@
     "target_id": "co-retention-lum",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1624,9 +1624,9 @@
     "target_id": "co-retention-malkinson",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1634,9 +1634,9 @@
     "target_id": "co-retention-moultrie",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1644,9 +1644,9 @@
     "target_id": "co-retention-salomone",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1654,9 +1654,9 @@
     "target_id": "co-retention-schock",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1664,9 +1664,9 @@
     "target_id": "co-retention-sullivan",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1674,9 +1674,9 @@
     "target_id": "co-sd-15",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1684,9 +1684,9 @@
     "target_id": "co-sd-17",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1694,9 +1694,9 @@
     "target_id": "co-secretary-of-state",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1704,9 +1704,9 @@
     "target_id": "co-treasurer",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -1714,9 +1714,9 @@
     "target_id": "co-us-senate",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.dailycamera.com/2026/10/18/colorado-election-propositions-vote-endorsements/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {

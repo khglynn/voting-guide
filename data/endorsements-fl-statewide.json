@@ -64,9 +64,9 @@
     "target_id": "fl-retention-1dca-lewis",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the current general-election slate on October 19. It lists Fifth District appellate retention picks but no First District pick.",
+    "why": "Checked the current general-election slate on October 19. It lists Fifth District appellate retention picks but no First District pick. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.orlandosentinel.com/2026/10/15/list-of-orlando-sentinels-endorsements-recommendations-for-the-november-general-election/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "sourced"
   },
   {
@@ -74,9 +74,9 @@
     "target_id": "fl-retention-1dca-nordby",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the current general-election slate on October 19. It lists Fifth District appellate retention picks but no First District pick.",
+    "why": "Checked the current general-election slate on October 19. It lists Fifth District appellate retention picks but no First District pick. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.orlandosentinel.com/2026/10/15/list-of-orlando-sentinels-endorsements-recommendations-for-the-november-general-election/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "sourced"
   },
   {
@@ -84,9 +84,9 @@
     "target_id": "fl-retention-1dca-osterhaus",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the current general-election slate on October 19. It lists Fifth District appellate retention picks but no First District pick.",
+    "why": "Checked the current general-election slate on October 19. It lists Fifth District appellate retention picks but no First District pick. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.orlandosentinel.com/2026/10/15/list-of-orlando-sentinels-endorsements-recommendations-for-the-november-general-election/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "sourced"
   },
   {
@@ -94,9 +94,9 @@
     "target_id": "fl-retention-1dca-roberts",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the current general-election slate on October 19. It lists Fifth District appellate retention picks but no First District pick.",
+    "why": "Checked the current general-election slate on October 19. It lists Fifth District appellate retention picks but no First District pick. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.orlandosentinel.com/2026/10/15/list-of-orlando-sentinels-endorsements-recommendations-for-the-november-general-election/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "sourced"
   },
   {
@@ -104,9 +104,9 @@
     "target_id": "fl-retention-1dca-treadwell",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the current general-election slate on October 19. It lists Fifth District appellate retention picks but no First District pick.",
+    "why": "Checked the current general-election slate on October 19. It lists Fifth District appellate retention picks but no First District pick. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.orlandosentinel.com/2026/10/15/list-of-orlando-sentinels-endorsements-recommendations-for-the-november-general-election/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "sourced"
   },
   {
@@ -173,24 +173,22 @@
   {
     "endorser_id": "sun-sentinel-eb",
     "target_id": "fl-cfo",
-    "status": "not_found",
-    "unreadable": true,
-    "choice": null,
-    "why": "We could not read the Sun Sentinel's Cabinet and retention picks. Its slate may mirror the Orlando Sentinel's, but that is not confirmed.",
-    "url": "https://www.sun-sentinel.com/opinion/endorsements/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Annette Taddeo",
+    "why": "The board's own endorsement page names Taddeo for chief financial officer. Its full reasoning is behind a subscriber paywall, so the saved page shows only the pick.",
+    "url": "https://www.sun-sentinel.com/2026/10/04/for-the-cabinet-annette-taddeo-joey-atkins-endorsement/",
+    "date": "2026-10-04",
+    "confidence": "verified"
   },
   {
     "endorser_id": "sun-sentinel-eb",
     "target_id": "fl-agriculture-commissioner",
-    "status": "not_found",
-    "unreadable": true,
-    "choice": null,
-    "why": "We could not read the Sun Sentinel's Cabinet and retention picks. Its slate may mirror the Orlando Sentinel's, but that is not confirmed.",
+    "status": "endorsed",
+    "choice": "Joey Mendoza Atkins",
+    "why": "The board's reasons are behind a subscriber paywall. The free part of the October 4 editorial says only that it endorses Joey Mendoza Atkins for agriculture commissioner.",
     "url": "https://www.sun-sentinel.com/opinion/endorsements/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "date": "2026-10-04",
+    "confidence": "verified"
   },
   {
     "endorser_id": "sun-sentinel-eb",
@@ -1159,9 +1157,9 @@
     "target_id": "fl-amendment-1",
     "status": "not_found",
     "choice": null,
-    "why": "LWV Florida's 2026 positions on Amendments 1 and 2 were not found; only the Amendment 3 opposition surfaced. Check lwvfl.org's 2026 voter guide.",
+    "why": "LWV Florida's 2026 positions on Amendments 1 and 2 were not found; only the Amendment 3 opposition surfaced. Check lwvfl.org's 2026 voter guide. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://lwvfl.org/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1169,9 +1167,9 @@
     "target_id": "fl-amendment-2",
     "status": "not_found",
     "choice": null,
-    "why": "LWV Florida's 2026 positions on Amendments 1 and 2 were not found; only the Amendment 3 opposition surfaced. Check lwvfl.org's 2026 voter guide.",
+    "why": "LWV Florida's 2026 positions on Amendments 1 and 2 were not found; only the Amendment 3 opposition surfaced. Check lwvfl.org's 2026 voter guide. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://lwvfl.org/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1329,9 +1327,9 @@
     "target_id": "fl-us-senate-special",
     "status": "not_found",
     "choice": null,
-    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.floridadems.org/",
-    "date": "2026-08-18",
+    "date": "2026-10-21",
     "confidence": "sourced"
   },
   {
@@ -1339,9 +1337,9 @@
     "target_id": "fl-governor",
     "status": "not_found",
     "choice": null,
-    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.floridadems.org/",
-    "date": "2026-08-18",
+    "date": "2026-10-21",
     "confidence": "sourced"
   },
   {
@@ -1349,9 +1347,9 @@
     "target_id": "fl-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.floridadems.org/",
-    "date": "2026-08-18",
+    "date": "2026-10-21",
     "confidence": "sourced"
   },
   {
@@ -1359,9 +1357,9 @@
     "target_id": "fl-cfo",
     "status": "not_found",
     "choice": null,
-    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.floridadems.org/",
-    "date": "2026-08-18",
+    "date": "2026-10-21",
     "confidence": "sourced"
   },
   {
@@ -1369,9 +1367,9 @@
     "target_id": "fl-agriculture-commissioner",
     "status": "not_found",
     "choice": null,
-    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.floridadems.org/",
-    "date": "2026-08-18",
+    "date": "2026-10-21",
     "confidence": "sourced"
   },
   {
@@ -1439,9 +1437,9 @@
     "target_id": "fl-amendment-1",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found.",
+    "why": "No 2026 endorsement found. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.floridadems.org/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1449,9 +1447,9 @@
     "target_id": "fl-amendment-2",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found.",
+    "why": "No 2026 endorsement found. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.floridadems.org/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1649,9 +1647,9 @@
     "target_id": "fl-agriculture-commissioner",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the Florida AFL-CIO's 2026 endorsement list on Oct 16: it names no Agriculture Commissioner endorsement. The page says it is not the full list of races the group considered, so this is not a stated 'no position'.",
+    "why": "Checked the Florida AFL-CIO's 2026 endorsement list on Oct 16: it names no Agriculture Commissioner endorsement. The page says it is not the full list of races the group considered, so this is not a stated 'no position'. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "sourced"
   },
   {
@@ -1719,9 +1717,9 @@
     "target_id": "fl-amendment-1",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found.",
+    "why": "No 2026 endorsement found. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://flaflcio.org/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1729,9 +1727,9 @@
     "target_id": "fl-amendment-2",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found.",
+    "why": "No 2026 endorsement found. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://flaflcio.org/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1739,9 +1737,9 @@
     "target_id": "fl-amendment-3",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found.",
+    "why": "No 2026 endorsement found. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://flaflcio.org/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1759,9 +1757,9 @@
     "target_id": "fl-governor",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found.",
+    "why": "No 2026 endorsement found. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.flchamber.com/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1769,9 +1767,9 @@
     "target_id": "fl-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found.",
+    "why": "No 2026 endorsement found. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.flchamber.com/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1779,9 +1777,9 @@
     "target_id": "fl-cfo",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found.",
+    "why": "No 2026 endorsement found. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.flchamber.com/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1789,9 +1787,9 @@
     "target_id": "fl-agriculture-commissioner",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found.",
+    "why": "No 2026 endorsement found. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.flchamber.com/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1859,9 +1857,9 @@
     "target_id": "fl-amendment-1",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found.",
+    "why": "No 2026 endorsement found. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.flchamber.com/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1869,9 +1867,9 @@
     "target_id": "fl-amendment-2",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found.",
+    "why": "No 2026 endorsement found. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.flchamber.com/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1879,9 +1877,9 @@
     "target_id": "fl-amendment-3",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found.",
+    "why": "No 2026 endorsement found. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.flchamber.com/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1897,42 +1895,42 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "fl-governor",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 endorsement found.",
+    "status": "endorsed",
+    "choice": "Byron Donalds (Lt. Gov.: Bryan Avila)",
+    "why": "The NRA's Florida ratings for the Nov. 3, 2026 election give Donalds an A+ and mark him NRA Endorsed.",
     "url": "https://www.nrapvf.org/grades/florida/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "date": "2026-10-25",
+    "confidence": "verified"
   },
   {
     "endorser_id": "nra-pvf",
     "target_id": "fl-attorney-general",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 endorsement found.",
+    "status": "endorsed",
+    "choice": "James Uthmeier",
+    "why": "The NRA Political Victory Fund gives Uthmeier an A+ grade and marks him NRA Endorsed on its Florida grades page.",
     "url": "https://www.nrapvf.org/grades/florida/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "date": "2026-10-25",
+    "confidence": "verified"
   },
   {
     "endorser_id": "nra-pvf",
     "target_id": "fl-cfo",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found.",
+    "why": "No 2026 endorsement found. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.nrapvf.org/grades/florida/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
     "endorser_id": "nra-pvf",
     "target_id": "fl-agriculture-commissioner",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 endorsement found.",
+    "status": "endorsed",
+    "choice": "Wilton Simpson",
+    "why": "The NRA's Florida grades page for the November 3, 2026 general election gives Simpson an A grade and marks him \"NRA Endorsed.\"",
     "url": "https://www.nrapvf.org/grades/florida/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "date": "2026-10-25",
+    "confidence": "verified"
   },
   {
     "endorser_id": "nra-pvf",
@@ -2169,9 +2167,9 @@
     "target_id": "fl-us-senate-special",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found.",
+    "why": "No 2026 endorsement found. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://feaweb.org/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -2189,9 +2187,9 @@
     "target_id": "fl-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found.",
+    "why": "No 2026 endorsement found. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://feaweb.org/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -2199,9 +2197,9 @@
     "target_id": "fl-cfo",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found.",
+    "why": "No 2026 endorsement found. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://feaweb.org/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -2209,9 +2207,9 @@
     "target_id": "fl-agriculture-commissioner",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found.",
+    "why": "No 2026 endorsement found. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://feaweb.org/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -2279,9 +2277,9 @@
     "target_id": "fl-amendment-1",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found.",
+    "why": "No 2026 endorsement found. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://feaweb.org/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -2289,9 +2287,9 @@
     "target_id": "fl-amendment-2",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found.",
+    "why": "No 2026 endorsement found. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://feaweb.org/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -2299,9 +2297,9 @@
     "target_id": "fl-amendment-3",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found.",
+    "why": "No 2026 endorsement found. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://feaweb.org/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -2319,9 +2317,9 @@
     "target_id": "fl-governor",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found.",
+    "why": "No 2026 endorsement found. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.floridarealtors.org/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -2329,9 +2327,9 @@
     "target_id": "fl-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found.",
+    "why": "No 2026 endorsement found. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.floridarealtors.org/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -2339,9 +2337,9 @@
     "target_id": "fl-cfo",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found.",
+    "why": "No 2026 endorsement found. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.floridarealtors.org/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -2349,9 +2347,9 @@
     "target_id": "fl-agriculture-commissioner",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found.",
+    "why": "No 2026 endorsement found. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.floridarealtors.org/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -2419,9 +2417,9 @@
     "target_id": "fl-amendment-1",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found.",
+    "why": "No 2026 endorsement found. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.floridarealtors.org/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -2429,9 +2427,9 @@
     "target_id": "fl-amendment-2",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found.",
+    "why": "No 2026 endorsement found. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.floridarealtors.org/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -2579,9 +2577,9 @@
     "target_id": "fl-retention-1dca-lewis",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed.",
+    "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://gopguide.online/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "sourced"
   },
   {
@@ -2599,9 +2597,9 @@
     "target_id": "fl-retention-1dca-nordby",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed.",
+    "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://gopguide.online/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "sourced"
   },
   {
@@ -2619,9 +2617,9 @@
     "target_id": "fl-retention-1dca-osterhaus",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed.",
+    "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://gopguide.online/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "sourced"
   },
   {
@@ -2639,9 +2637,9 @@
     "target_id": "fl-retention-1dca-roberts",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed.",
+    "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://gopguide.online/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "sourced"
   },
   {
@@ -2659,9 +2657,9 @@
     "target_id": "fl-retention-1dca-treadwell",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed.",
+    "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://gopguide.online/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "sourced"
   },
   {

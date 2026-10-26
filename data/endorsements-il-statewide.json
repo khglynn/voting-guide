@@ -474,9 +474,9 @@
     "target_id": "il-appellate-1st-hoffman-vacancy",
     "status": "not_found",
     "choice": null,
-    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://chicagolabor.org/wp-content/uploads/CFL-2026-General-Election-Endorsements.pdf",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "sourced"
   },
   {
@@ -484,9 +484,9 @@
     "target_id": "il-appellate-1st-retention-lampkin",
     "status": "not_found",
     "choice": null,
-    "why": "State and county parties do not usually take positions on appellate retention; none found.",
+    "why": "State and county parties do not usually take positions on appellate retention; none found. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://ildems.com/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -634,9 +634,9 @@
     "target_id": "il-appellate-1st-hoffman-vacancy",
     "status": "not_found",
     "choice": null,
-    "why": "The AFL-CIO's statewide list covers executive and legislative races; no judicial positions found.",
+    "why": "The AFL-CIO's statewide list covers executive and legislative races; no judicial positions found. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://labortribune.com/illinois-afl-cio-2026-general-election-endorsements/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -644,9 +644,9 @@
     "target_id": "il-appellate-1st-retention-lampkin",
     "status": "not_found",
     "choice": null,
-    "why": "The AFL-CIO's statewide list covers executive and legislative races; no judicial positions found.",
+    "why": "The AFL-CIO's statewide list covers executive and legislative races; no judicial positions found. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://labortribune.com/illinois-afl-cio-2026-general-election-endorsements/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -744,9 +744,9 @@
     "target_id": "il-governor",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election slate from IFT found. Its primary slate endorsed the Democratic incumbents.",
+    "why": "No 2026 general-election slate from IFT found. Its primary slate endorsed the Democratic incumbents. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.ift-aft.org/post/illinois-federation-of-teachers-announces-slate-of-endorsements-for-2026-primaries",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -764,9 +764,9 @@
     "target_id": "il-secretary-of-state",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election slate from IFT found. Its primary slate endorsed the Democratic incumbents.",
+    "why": "No 2026 general-election slate from IFT found. Its primary slate endorsed the Democratic incumbents. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.ift-aft.org/post/illinois-federation-of-teachers-announces-slate-of-endorsements-for-2026-primaries",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -774,9 +774,9 @@
     "target_id": "il-comptroller",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election slate from IFT found. Its primary slate endorsed the Democratic incumbents.",
+    "why": "No 2026 general-election slate from IFT found. Its primary slate endorsed the Democratic incumbents. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.ift-aft.org/post/illinois-federation-of-teachers-announces-slate-of-endorsements-for-2026-primaries",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -814,9 +814,9 @@
     "target_id": "il-us-senate",
     "status": "not_found",
     "choice": null,
-    "why": "Personal PAC's 2026 general election page lists Governor, Lt. Governor, Attorney General, Secretary of State and Comptroller but not U.S. Senate or Treasurer (it typically endorses only in state races).",
+    "why": "Personal PAC's 2026 general election page lists Governor, Lt. Governor, Attorney General, Secretary of State and Comptroller but not U.S. Senate or Treasurer (it typically endorses only in state races). Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://personalpac.org/elections/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -864,9 +864,9 @@
     "target_id": "il-treasurer",
     "status": "not_found",
     "choice": null,
-    "why": "Personal PAC's 2026 general election page lists Governor, Lt. Governor, Attorney General, Secretary of State and Comptroller but not U.S. Senate or Treasurer (it typically endorses only in state races).",
+    "why": "Personal PAC's 2026 general election page lists Governor, Lt. Governor, Attorney General, Secretary of State and Comptroller but not U.S. Senate or Treasurer (it typically endorses only in state races). Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://personalpac.org/elections/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -874,9 +874,9 @@
     "target_id": "il-appellate-1st-hoffman-vacancy",
     "status": "not_found",
     "choice": null,
-    "why": "No judicial positions listed.",
+    "why": "No judicial positions listed. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://personalpac.org/elections/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -884,9 +884,9 @@
     "target_id": "il-appellate-1st-retention-lampkin",
     "status": "not_found",
     "choice": null,
-    "why": "No judicial positions listed.",
+    "why": "No judicial positions listed. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://personalpac.org/elections/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -974,9 +974,9 @@
     "target_id": "il-us-senate",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election position found as of Oct. 16.",
+    "why": "No 2026 general-election position found as of Oct. 16. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://ima-net.org/advocacy/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -984,9 +984,9 @@
     "target_id": "il-governor",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election position found as of Oct. 16.",
+    "why": "No 2026 general-election position found as of Oct. 16. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://ima-net.org/advocacy/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -994,9 +994,9 @@
     "target_id": "il-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election position found as of Oct. 16.",
+    "why": "No 2026 general-election position found as of Oct. 16. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://ima-net.org/advocacy/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1004,9 +1004,9 @@
     "target_id": "il-secretary-of-state",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election position found as of Oct. 16.",
+    "why": "No 2026 general-election position found as of Oct. 16. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://ima-net.org/advocacy/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1014,9 +1014,9 @@
     "target_id": "il-comptroller",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election position found as of Oct. 16.",
+    "why": "No 2026 general-election position found as of Oct. 16. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://ima-net.org/advocacy/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1024,9 +1024,9 @@
     "target_id": "il-treasurer",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election position found as of Oct. 16.",
+    "why": "No 2026 general-election position found as of Oct. 16. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://ima-net.org/advocacy/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1034,9 +1034,9 @@
     "target_id": "il-appellate-1st-hoffman-vacancy",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election position found as of Oct. 16.",
+    "why": "No 2026 general-election position found as of Oct. 16. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://ima-net.org/advocacy/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1044,9 +1044,9 @@
     "target_id": "il-appellate-1st-retention-lampkin",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election position found as of Oct. 16.",
+    "why": "No 2026 general-election position found as of Oct. 16. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://ima-net.org/advocacy/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1054,9 +1054,9 @@
     "target_id": "il-us-senate",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election position found as of Oct. 16.",
+    "why": "No 2026 general-election position found as of Oct. 16. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.nrapvf.org/grades/illinois",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1064,9 +1064,9 @@
     "target_id": "il-governor",
     "status": "not_found",
     "choice": null,
-    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026.",
+    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.nrapvf.org/grades/Illinois/",
-    "date": "2026-10-19",
+    "date": "2026-10-21",
     "confidence": "sourced"
   },
   {
@@ -1074,9 +1074,9 @@
     "target_id": "il-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election position found as of Oct. 16.",
+    "why": "No 2026 general-election position found as of Oct. 16. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.nrapvf.org/grades/illinois",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1084,9 +1084,9 @@
     "target_id": "il-secretary-of-state",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election position found as of Oct. 16.",
+    "why": "No 2026 general-election position found as of Oct. 16. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.nrapvf.org/grades/illinois",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1094,9 +1094,9 @@
     "target_id": "il-comptroller",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election position found as of Oct. 16.",
+    "why": "No 2026 general-election position found as of Oct. 16. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.nrapvf.org/grades/illinois",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1104,9 +1104,9 @@
     "target_id": "il-treasurer",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election position found as of Oct. 16.",
+    "why": "No 2026 general-election position found as of Oct. 16. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.nrapvf.org/grades/illinois",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1114,9 +1114,9 @@
     "target_id": "il-appellate-1st-hoffman-vacancy",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election position found as of Oct. 16.",
+    "why": "No 2026 general-election position found as of Oct. 16. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.nrapvf.org/grades/illinois",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1124,9 +1124,9 @@
     "target_id": "il-appellate-1st-retention-lampkin",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election position found as of Oct. 16.",
+    "why": "No 2026 general-election position found as of Oct. 16. Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.nrapvf.org/grades/illinois",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1134,9 +1134,9 @@
     "target_id": "il-us-senate",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found. (The State Lodge and Chicago Lodge 7 endorsed Bailey for governor in August 2022.)",
+    "why": "No 2026 endorsement found. (The State Lodge and Chicago Lodge 7 endorsed Bailey for governor in August 2022.) Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.ilfop.org/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1144,9 +1144,9 @@
     "target_id": "il-governor",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found. (The State Lodge and Chicago Lodge 7 endorsed Bailey for governor in August 2022.)",
+    "why": "No 2026 endorsement found. (The State Lodge and Chicago Lodge 7 endorsed Bailey for governor in August 2022.) Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.ilfop.org/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1154,9 +1154,9 @@
     "target_id": "il-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found. (The State Lodge and Chicago Lodge 7 endorsed Bailey for governor in August 2022.)",
+    "why": "No 2026 endorsement found. (The State Lodge and Chicago Lodge 7 endorsed Bailey for governor in August 2022.) Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.ilfop.org/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1164,9 +1164,9 @@
     "target_id": "il-secretary-of-state",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found. (The State Lodge and Chicago Lodge 7 endorsed Bailey for governor in August 2022.)",
+    "why": "No 2026 endorsement found. (The State Lodge and Chicago Lodge 7 endorsed Bailey for governor in August 2022.) Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.ilfop.org/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1174,9 +1174,9 @@
     "target_id": "il-comptroller",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found. (The State Lodge and Chicago Lodge 7 endorsed Bailey for governor in August 2022.)",
+    "why": "No 2026 endorsement found. (The State Lodge and Chicago Lodge 7 endorsed Bailey for governor in August 2022.) Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.ilfop.org/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1184,9 +1184,9 @@
     "target_id": "il-treasurer",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found. (The State Lodge and Chicago Lodge 7 endorsed Bailey for governor in August 2022.)",
+    "why": "No 2026 endorsement found. (The State Lodge and Chicago Lodge 7 endorsed Bailey for governor in August 2022.) Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.ilfop.org/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1194,9 +1194,9 @@
     "target_id": "il-appellate-1st-hoffman-vacancy",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found. (The State Lodge and Chicago Lodge 7 endorsed Bailey for governor in August 2022.)",
+    "why": "No 2026 endorsement found. (The State Lodge and Chicago Lodge 7 endorsed Bailey for governor in August 2022.) Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.ilfop.org/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {
@@ -1204,9 +1204,9 @@
     "target_id": "il-appellate-1st-retention-lampkin",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found. (The State Lodge and Chicago Lodge 7 endorsed Bailey for governor in August 2022.)",
+    "why": "No 2026 endorsement found. (The State Lodge and Chicago Lodge 7 endorsed Bailey for governor in August 2022.) Checked again on Oct 21, 2026; still no pick on this page.",
     "url": "https://www.ilfop.org/",
-    "date": "2026-10-16",
+    "date": "2026-10-21",
     "confidence": "unverified"
   },
   {

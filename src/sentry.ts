@@ -1,5 +1,5 @@
 /* The crash-report client: a chunk of its own, fetched by errors.ts once the page has loaded and gone
-   idle, and only in a production build with VITE_SENTRY_DSN set. About 22 KB gzipped (the real number
+   idle, and only in a production build with VITE_SENTRY_DSN set. About 24 KB gzipped (the real number
    for each build is in the pull request that changed it); first paint never waits for it.
 
    Sentry's trimmed browser client, not Sentry.init(): only the three integrations below, so nothing

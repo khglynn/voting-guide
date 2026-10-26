@@ -192,7 +192,10 @@ function glineHTML(g: Group): string {
   const b = S.ballot!;
   const ans = S.b.districts[g.key];
   // "none": you said none of them is yours, or your address matched none of them.
-  const v = ans === '*' ? `showing all ${g.members.length} districts` : ans === 'none' ? 'Not on your ballot' : (() => { const c = b.byId.get(ans) as Contest | undefined; return c ? (g.members.some((m) => sameSeat(c, b.byId.get(m))) ? seatless(optionLabel(c)[0]) : optionLabel(c)[0]) : ''; })();
+  // "Not sure" shows every race: a district with two seats (a Dallas JP precinct's two places) counts twice,
+  // so the line counts races then, not districts (Codex on #24).
+  const districts = g.members.filter((m, k) => !g.members.slice(0, k).some((x) => sameSeat(b.byId.get(x), b.byId.get(m)))).length;
+  const v = ans === '*' ? `showing all ${g.members.length} ${districts < g.members.length ? 'races' : 'districts'}` : ans === 'none' ? 'Not on your ballot' : (() => { const c = b.byId.get(ans) as Contest | undefined; return c ? (g.members.some((m) => sameSeat(c, b.byId.get(m))) ? seatless(optionLabel(c)[0]) : optionLabel(c)[0]) : ''; })();
   return `<li class="row gline" id="${qId(g)}"><div class="gl-in"><span class="gl-t">${esc(cleanOffice(g.office))}: <b>${esc(v)}</b></span>
     <button class="linkbtn" data-act="district-change" data-g="${esc(g.key)}" data-fk="dc-${qId(g)}">Change</button></div></li>`;
 }

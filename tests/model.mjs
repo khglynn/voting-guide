@@ -647,8 +647,23 @@ function roundTrip(name, stCode, places, mutate) {
     check('seats: answering Precinct 3 shows both of its places, and no other precinct’s', shown.join(' ') === 'tx-dallas-jp-3-1 tx-dallas-jp-3-2', shown.join(' '));
     const gl = views.ledger.sectionHTML('judicial', bl.entriesBySection().get('judicial') || []).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
     check('seats: and the answered question names the precinct, not one place', /Justice of the Peace: Precinct 3 Change/.test(gl), gl.slice(0, 160));
-    check('seats: places of different offices, or of different precincts, aren’t one seat',
+    check('seats: places of different precincts aren’t one seat',
       !bl.sameSeat(da.byId.get('tx-dallas-jp-3-1'), da.byId.get('tx-dallas-jp-4-2')) && bl.sameSeat(da.byId.get('tx-dallas-jp-3-1'), da.byId.get('tx-dallas-jp-3-2')));
+    // Two offices that happen to share a seat ("At-Large Position 1" and "2" of two different boards) aren't
+    // one seat either (Codex on #24: the check above compared only JP races).
+    const seat = (office, district) => ({ kind: 'contest', id: `${office}|${district}`, office, district });
+    check('seats: the same seat of two different offices isn’t one seat; of one office it is',
+      !bl.sameSeat(seat('Board A Director', 'At-Large Position 1'), seat('Board B Director', 'At-Large Position 2'))
+      && bl.sameSeat(seat('Board A Director', 'At-Large Position 1'), seat('Board A Director', 'At-Large Position 2')));
+    // "Not sure" shows every race, so a question whose districts have two seats counts races (Codex on #24).
+    st.S.b.districts[jp.key] = '*';
+    const comm = da.groups.find((g) => g.key === 'county|County Commissioner');
+    st.S.b.districts[comm.key] = '*';
+    const unsure = (sec) => views.ledger.sectionHTML(sec, bl.entriesBySection().get(sec) || []).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+    check('seats: "Not sure" on Dallas’s JP question says "showing all 10 races"; on its commissioner question, "showing all 2 districts"',
+      /Justice of the Peace: showing all 10 races/.test(unsure('judicial')) && /County Commissioner: showing all 2 districts/.test(unsure('county')),
+      `${(unsure('judicial').match(/Justice of the Peace: [^C]*/) || [''])[0]} | ${(unsure('county').match(/County Commissioner: [^C]*/) || [''])[0]}`);
+    st.S.b.districts = {};
     const se = open('WA', ['seattle-wa']);
     const hd = se.groups.find((g) => /State Representative/.test(g.office));
     const a = se.byId.get(hd.members[0]);

@@ -1037,8 +1037,17 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     // What the lookup answers (Congress, the state Senate and House, and the maybe rows for them).
     for (const g of au.groups) if (g.kind) S.b.districts[g.key] = g.members[0];
     for (const id of au.mayApply) { const c = au.byId.get(id); if (c.kind === 'contest' && views.open.censusSettles(c)) S.b.notMine.push(id); }
+    // Austin has district maps (council, trustees, county precincts), so its council, county and school
+    // questions are the address's to answer too, and Use my address stays.
+    check('address box: Austin, with the Census’s races answered, still offers Use my address: its maps answer the council, county and trustee questions', ledger.addressCount() > 0 && ledger.addressHelps() && btns(ledger.ballotHeadHTML()) === 'Use my address (dark)|Official sample ballot', btns(ledger.ballotHeadHTML()));
+    S.b.districts = {}; S.b.notMine = [];
+    // A ballot with no maps (Dallas): once only council, county and school questions are left, the sample ballot leads.
+    const da = open('TX', ['dallas-tx']);
+    for (const g of da.groups) if (g.kind) S.b.districts[g.key] = g.members[0];
+    for (const id of da.mayApply) { if (views.open.censusSettles(da.byId.get(id))) S.b.notMine.push(id); } // races and school measures alike
     const left = ledger.addressCount();
     check('address box: with only council, county and school questions left, the sample ballot leads and Use my address goes', left > 0 && !ledger.addressHelps() && btns(ledger.ballotHeadHTML()) === 'Official sample ballot (dark)' && new RegExp(`${left} races depend on your address`).test(ledger.ballotHeadHTML()), `${left} | ${btns(ledger.ballotHeadHTML())}`);
+    open('TX', ['austin-tx']);
     S.b.districts = {}; S.b.notMine = [];
     S.b.addrNote = 'Your districts: Congressional District 37. We didn’t save your address. Double-check with your sample ballot.';
     check('address box: once a lookup has run, it offers only the sample ballot', !ledger.addressHelps() && btns(ledger.ballotHeadHTML()) === 'Official sample ballot (dark)', btns(ledger.ballotHeadHTML()));
@@ -1585,8 +1594,16 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     S.b.addrNote = address.addrSummary(address.setFromAddress(S.ballot, S.b, { cd: 37, upper: 14, lower: 49 }));
     S.ui.addrFound = 'Test One, Austin, TX 78704';
     const n1 = ledger.addressCount();
-    check('address box: after one, what was found, what it set, and the rest counted', box() === `Found: Test One, Austin, TX 78704 Not it? Try again Set from your address: U.S. Representative, District 37 · State Representative, District 49. ${n1} races need your official sample ballot. The address lookup doesn’t cover races like school board or state board of education. Official sample ballot`, box());
+    // (A lookup with no point for the maps, so the races they'd settle are left; the line doesn't blame the lookup for them.)
+    check('address box: after one, what was found, what it set, and the rest counted', box() === `Found: Test One, Austin, TX 78704 Not it? Try again Set from your address: U.S. Representative, District 37 · State Representative, District 49. ${n1} races need your official sample ballot. Official sample ballot`, box());
     check('address box: the masthead no longer carries it', !/Set from|Your districts/.test(views.mast.mastHTML()));
+    // A ballot with no district maps (Dallas): what's left is named by kind, since the lookup doesn't cover it.
+    open('TX', ['dallas-tx']);
+    S.b.addrNote = address.addrSummary(address.setFromAddress(S.ballot, S.b, { cd: 30, upper: 23, lower: 100 }));
+    check('address box: where no map covers them, the kinds of race the lookup doesn’t cover', /races need your official sample ballot\. The address lookup doesn’t cover races like [a-z ]+( or [a-z ]+)?\./.test(box()), box());
+    open('TX', ['austin-tx']);
+    S.b.addrNote = address.addrSummary(address.setFromAddress(S.ballot, S.b, { cd: 37, upper: 14, lower: 49 }));
+    S.ui.addrFound = 'Test One, Austin, TX 78704';
     S.ui.addrFound = null;
     check('address box: after a reload, what it set without the address', !/Found:|Test One/.test(box()) && /^Set from your address: /.test(box()), box());
     open('FL', []);
@@ -1824,16 +1841,17 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       S.index = idx;
       S.ui.view = 'ballot'; S.pending = null; S.ui.resume = false;
       const darkOf = (h) => [...h.matchAll(/class="mini dark"[^>]*>([^<]+)</g)].map((m) => m[1]);
+      const day = (iso) => new Date(`${iso}T00:00:00Z`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
       // A covered place: no card, scoped counts.
       open('IL', ['chicago-il']);
       const p = INDEX.places['chicago-il'];
       S.view = 'setup';
       check('coverage: a covered place gets no card', views.coverage.covCardHTML('door') === '' && views.coverage.covCardHTML('ballot') === '');
-      check('coverage: step 2 says how many sources on the place’s ballot, how many picked, and when', strip(views.coverage.covHTML()) === `${p.sources} sources on Chicago’s ballot, ${p.with_picks} with picks. Last checked Oct 19.` && /class="su-src"/.test(views.setup.pickControlsHTML()), strip(views.coverage.covHTML()));
+      check('coverage: step 2 says how many sources on the place’s ballot, how many picked, and when', strip(views.coverage.covHTML()) === `${p.sources} sources on Chicago’s ballot, ${p.with_picks} with picks. Last checked ${day(p.checked)}.` && /class="su-src"/.test(views.setup.pickControlsHTML()), strip(views.coverage.covHTML()));
       check('coverage: step 2’s first line says whose picks', /<p class="su-cov">Your sources have picks in \d+ of your \d+ races\.<\/p>/.test(views.setup.pickControlsHTML()));
       check('coverage: the Edit sheet says the same', /class="su-src"/.test(views.setup.pickControlsHTML(true)) && /Your sources have picks in/.test(views.setup.pickControlsHTML(true)));
       S.view = 'ballot';
-      check('coverage: the ballot’s head says it for the ballot, under the picks line, no button', strip(views.coverage.headCovHTML()) === `${p.sources} sources on your ballot, ${p.with_picks} with picks. Last checked Oct 19.` && /picks-line[\s\S]*class="picks-cov"/.test(views.ledger.ballotHeadHTML()) && !/<button/.test(views.coverage.headCovHTML()));
+      check('coverage: the ballot’s head says it for the ballot, under the picks line, no button', strip(views.coverage.headCovHTML()) === `${p.sources} sources on your ballot, ${p.with_picks} with picks. Last checked ${day(p.checked)}.` && /picks-line[\s\S]*class="picks-cov"/.test(views.ledger.ballotHeadHTML()) && !/<button/.test(views.coverage.headCovHTML()));
       S.b.sources = [];
       check('coverage: with endorsements off, the counts step aside', !/su-src|picks-cov/.test(views.setup.pickControlsHTML(true) + views.ledger.ballotHeadHTML()));
       S.b.sources = null;
@@ -1876,7 +1894,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       const sc = views.coverage.covCardHTML('door');
       check('coverage: a statewide ballot’s card leads with the missing races, says the statewide picks are here, and asks Kevin', strip(sc).startsWith(`Your city’s races aren’t in the guide yet. Here now: Missouri’s statewide races, with picks from ${INDEX.states.MO.with_picks} of ${INDEX.states.MO.sources} sources. Not here yet: races for your city, county and districts. Ask Kevin to add my city One tap. It sends Kevin your ZIP and nothing about you. It usually takes about a day. Voting before then? Your official sample ballot lists every race.`) && darkOf(sc).join() === 'Ask Kevin to add my city', strip(sc));
       check('coverage: its sample ballot is a link in a sentence, never a button', /Voting before then\? Your <a href="https:[^"]+"[^>]*>official sample ballot<\/a> lists every race\./.test(sc) && !/class="mini[^"]*"[^>]*>Official sample ballot/.test(sc) && /statewide-note/.test(sc));
-      check('coverage: step 2 says it quietly', strip(views.coverage.covHTML()) === `${INDEX.states.MO.sources} sources for Missouri’s statewide races, ${INDEX.states.MO.with_picks} with picks. Last checked Oct 19.` && /Your sources have picks in \d+ of the \d+ statewide races here\./.test(views.setup.pickControlsHTML()));
+      check('coverage: step 2 says it quietly', strip(views.coverage.covHTML()) === `${INDEX.states.MO.sources} sources for Missouri’s statewide races, ${INDEX.states.MO.with_picks} with picks. Last checked ${day(INDEX.states.MO.checked)}.` && /Your sources have picks in \d+ of the \d+ statewide races here\./.test(views.setup.pickControlsHTML()));
       S.view = 'ballot';
       const sh = views.ledger.ballotHeadHTML();
       check('coverage: the head says "Statewide races only", the address box keeps its own job, and no sample ballot is dark', strip(views.coverage.headCovHTML()).startsWith('Statewide races only: ') && !/cov-ask|Ask Kevin|We only have/.test(sh) && darkOf(sh).length === 0 && (sh.match(/>Official sample ballot</g) || []).length <= 1, strip(sh));

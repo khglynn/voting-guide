@@ -314,6 +314,7 @@ b, strong { font-weight: 600; }
 .addrbox > p + p { margin-top: 8px; }
 .addrbox .addr-found .linkbtn { margin: -12px 0; padding: 0; }
 .addrbox .addr-set { color: var(--ink-2); }
+.addrbox .addr-map { color: var(--ink-2); }
 /* Under the picks line: how many sources, scoped to the ballot. A quiet line, no button. */
 .picks-cov { margin-top: 8px; font-size: 14.5px; line-height: 1.45; color: var(--muted); }
 

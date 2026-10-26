@@ -180,6 +180,8 @@
       "MO"
     ],
     "guide_url": "https://www.sierraclub.org/missouri/thomas-hart-benton/blog/2026/10/missouri-chapter-endorsements-yes-6-no-3-and",
+    "blocked": true,
+    "blocked_note": "Its endorsement page shows a bot check to anything that isn’t a browser, so these picks are from an earlier read and we couldn’t check it for new ones.",
     "default_on": false,
     "endorses_candidates": true,
     "endorses_measures": true,

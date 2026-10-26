@@ -258,16 +258,19 @@ export function renderSummaries(): void {
    when the sheet closes (flushLens), so a chip tap stays quick on a 200-row ballot. */
 let lensDirty = false;
 export function renderLens(): void {
-  if (S.view !== 'ballot') { render(['mast']); return; }
+  // The first page: step 2 and, over it, the sources sheet its count opened (Oct 25), whose switches
+  // and the chips above them read the same list.
+  if (S.view !== 'ballot') { render(S.ui.sheet ? ['mast', 'sheet'] : ['mast']); return; }
   if (S.ui.sheet) { render(['sheet']); lensDirty = true; return; }
-  anchored(() => render(['ballot', 'bar']));
+  // The coverage card under the masthead reads the lens too (a thin place's goes when endorsements do).
+  anchored(() => render(['restore', 'ballot', 'bar']));
 }
 /* Something the ballot shows changed while a sheet covers it (the menu's switch): repaint on close. */
 export function markBehind(): void { lensDirty = true; }
 export function flushLens(force = false): void {
   if (!lensDirty && !force) return;
   lensDirty = false;
-  if (S.ballot && S.view === 'ballot') anchored(() => render(['ballot', 'bar']));
+  if (S.ballot && S.view === 'ballot') anchored(() => render(['restore', 'ballot', 'bar']));
 }
 
 /* Bring a row into view near the top, gliding there (motion.ts); `then` runs where it lands.

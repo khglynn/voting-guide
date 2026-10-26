@@ -106,7 +106,8 @@
     "lean": "neutral",
     "lean_basis": "AllSides rates the Pensacola News Journal Center (independent review, low or initial confidence, as of Oct. 2026). The Gannett paper is not among those offering 2026 recommendations. Rating source: https://www.allsides.com/news-source/pensacola-news-journal-media-bias.",
     "geography": [
-      "FL"
+      "FL",
+      "pensacola-fl"
     ],
     "guide_url": "https://www.pnj.com/opinion/",
     "default_on": true,

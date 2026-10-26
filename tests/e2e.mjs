@@ -899,7 +899,8 @@ async function mapsSettled(page, timeout = 10000) {
   const saved = JSON.parse((await savedVG(page)) || '{}');
   const d = Object.values(saved.ballots || saved).find((x) => x && x.districts && x.districts['city|Austin City Council Member'])?.districts || {};
   check('Maps: commissioner and AISD trustee answered "none" (City Hall is in neither precinct 2 or 4, nor trustee district 1, 4, 6 or 7), JP answered 5', d['county|County Commissioner'] === 'none' && d['school|Austin ISD Trustee'] === 'none' && d['judicial|Justice of the Peace'] === 'tx-travis-jp-5' && d['city|Austin City Council Member'] === 'tx-austin-council-9', JSON.stringify(d));
-  check('Maps: they loaded after the lookup, each once', mapsAsked.length === 4 && new Set(mapsAsked).size === 4, mapsAsked.join(' '));
+  // Austin's five: the council, Travis's precincts and two trustee maps, and Williamson's SBOE map (Oct 26).
+  check('Maps: they loaded after the lookup, each once', mapsAsked.length === 5 && new Set(mapsAsked).size === 5, mapsAsked.join(' '));
   await page.reload();
   await page.waitForSelector('#plan', { timeout: 15000 });
   await page.waitForTimeout(150);
@@ -1049,6 +1050,41 @@ async function mapsSettled(page, timeout = 10000) {
   check('Maps, first page: a map starts loading before the place’s bundle arrives', mapAt > 0 && bundleAt > 0 && mapAt < bundleAt, `map ${mapAt ? mapAt - bundleAt : 'never'} ms after the bundle`);
   noErrors(five.page, 'Maps from the first page');
   await five.ctx.close();
+}
+// Williamson County (Oct 26): Round Rock, with the Census mocked at Round Rock City Hall's point and
+// its block (the districts are the ones the Census gives the building), settles the county races
+// from Williamson's precinct map and SBOE from the Legislative Council's plan.
+{
+  const { ctx, page } = await newPage();
+  const answer = { result: { addressMatches: [{ matchedAddress: 'TEST CITY HALL, ROUND ROCK, TX, 78664', coordinates: { x: -97.677488, y: 30.508886 }, geographies: {
+    States: [{ STATE: '48' }], Counties: [{ BASENAME: 'Williamson' }], 'Incorporated Places': [{ BASENAME: 'Round Rock' }], '120th Congressional Districts': [{ BASENAME: '17' }],
+    '2026 State Legislative Districts - Upper': [{ BASENAME: '5' }], '2026 State Legislative Districts - Lower': [{ BASENAME: '136' }],
+    'Unified School Districts': [{ NAME: 'Round Rock Independent School District' }], '2020 Census Blocks': [{ INTPTLAT: '+30.5085455', INTPTLON: '-097.6770501' }] } }] } };
+  await page.route('https://geocoding.geo.census.gov/**', (route) => {
+    const cb = new URL(route.request().url()).searchParams.get('callback');
+    return route.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify(answer)})` });
+  });
+  const mapsAsked = [];
+  page.on('request', (r) => { if (/\/data\/maps\//.test(r.url())) mapsAsked.push(r.url().replace(/^.*\/data\/maps\//, '')); });
+  await openBallot(page, '78664');
+  const before = await text(page, '.addrbox .addr-n');
+  check('Round Rock maps: before a lookup, the address can find every race that depends on it', /^(\d+) races depend on your address\. Your address can find all \1\.$/.test(before), before);
+  await tap(page, '.addrbox [data-act="addr-open"]');
+  await page.fill('#addr-in', 'a test lookup');
+  await page.locator('form[data-form="addr"] button[type=submit]').tap();
+  await mapsSettled(page);
+  const set = await text(page, '.addrbox .addr-set');
+  check('Round Rock maps: City Hall: "Set from your address" names Williamson’s JP Precinct 1 beside the Census’s races', /^Set from your address: U\.S\. Representative, District 17 · State Senator, District 5 · State Representative, District 136 · .*Justice of the Peace, Precinct 1\.$/.test(set), set);
+  check('Round Rock maps: City Hall: its voting precinct, from Williamson’s map', (await text(page, '.addrbox .addr-map')) === 'Your voting precinct: 150 (Williamson County).', await text(page, '.addrbox .addr-map'));
+  check('Round Rock maps: City Hall: nothing left for the sample ballot', !(await page.$('.addrbox .addr-n')), await text(page, '.addrbox'));
+  await page.waitForTimeout(300);
+  const saved = JSON.parse((await savedVG(page)) || '{}');
+  const s = Object.values(saved.ballots || {}).find((x) => x && x.districts && x.districts['judicial|Justice of the Peace']) || {};
+  check('Round Rock maps: JP answered Precinct 1, commissioner "none" (precinct 1 isn’t up), SBOE 5 off (City Hall is in District 10)',
+    s.districts && s.districts['judicial|Justice of the Peace'] === 'tx-wilco-jp-1' && s.districts['county|County Commissioner'] === 'none' && (s.notMine || []).includes('tx-sboe-5'), JSON.stringify([s.districts, s.notMine]));
+  check('Round Rock maps: the three maps Round Rock reads loaded after the lookup, each once', mapsAsked.length === 3 && new Set(mapsAsked).size === 3 && mapsAsked.every((u) => /^(travis|williamson)-county-tx\//.test(u)), mapsAsked.join(' '));
+  noErrors(page, 'Round Rock maps');
+  await ctx.close();
 }
 // Statewide Florida (Miami): the only races that depend on your address are appeals judges, which
 // the Census can't settle, so the box leads with the sample ballot; from the first page, the lookup

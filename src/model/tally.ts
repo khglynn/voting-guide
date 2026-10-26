@@ -7,7 +7,7 @@ import type { Ballot } from '../ballot';
 import { S } from '../state';
 import { chosen, status, isRCV, decisionItems } from '../ballot';
 import { choiceShort, pickShort } from './labels';
-import { explainsOnly, hasPaywallNote } from './lens';
+import { explainsOnly, hasPaywallNote, isBlocked } from './lens';
 import { judgeReview } from './judges';
 
 export interface LGroup { key: string; label: string; choices: string[]; sources: Endorser[] }
@@ -18,6 +18,7 @@ export interface Lineup {
   notFound: Endorser[];      // looked, found nothing
   notChecked: Endorser[];    // covers this kind of item here, no row yet
   paywalled: Endorser[];     // behind a paywall: no record here, or one that says it couldn't be read; only the paywall note names it
+  blocked: Endorser[];       // behind a bot check (not a paywall), the same way: "Couldn't read", never "Not checked yet"
   guides: Endorser[];        // explain without picking (this kind of item)
   relevant: Endorser[];      // everyone above except guides
 }
@@ -88,14 +89,16 @@ export function lineup(it: Item, sources?: Endorser[]): Lineup {
 export const clearLineups = (): void => { lineCache = null; };
 function computeLineup(it: Item, sources: Endorser[]): Lineup {
   const b = S.ballot!;
-  const out: Lineup = { groups: [], both: [], noStand: [], notFound: [], notChecked: [], paywalled: [], guides: [], relevant: [] };
+  const out: Lineup = { groups: [], both: [], noStand: [], notFound: [], notChecked: [], paywalled: [], blocked: [], guides: [], relevant: [] };
+  // Behind a paywall or a bot check, the source's note says so; a paywall's note wins when it's both.
+  const unread = (e: Endorser): Endorser[] | null => (hasPaywallNote(e) ? out.paywalled : isBlocked(e) ? out.blocked : null);
   const groups = new Map<string, LGroup>();
   for (const e of sources) {
     const r = en(b, it, e);
     const picks = makesKind(e, it);
     if (!r) {
       if (!picks || explainsOnly(e)) { if (covers(b, e, it) || explainsOnly(e)) out.guides.push(e); continue; }
-      if (covers(b, e, it)) { (hasPaywallNote(e) ? out.paywalled : out.notChecked).push(e); out.relevant.push(e); }
+      if (covers(b, e, it)) { (unread(e) || out.notChecked).push(e); out.relevant.push(e); }
       continue;
     }
     if (r.s !== 'endorsed' && (explainsOnly(e) || !picks)) { out.guides.push(e); continue; }
@@ -106,7 +109,7 @@ function computeLineup(it: Item, sources: Endorser[]): Lineup {
     // slate ... No November endorsement for this race was listed"), and only its paywall note when
     // the record says the page couldn't be read (`unreadable`). Never both, and a paywalled paper
     // with no record here gets only the note (above), never "Not checked yet" as well.
-    if (r.s === 'not_found') { (r.unreadable && hasPaywallNote(e) ? out.paywalled : out.notFound).push(e); continue; }
+    if (r.s === 'not_found') { ((r.unreadable && unread(e)) || out.notFound).push(e); continue; }
     if (r.both) { out.both.push(e); continue; }
     // Two sources naming the same candidates in a different order agree. In a ranked-choice
     // race a source's list is a ranking, so sources are grouped by their first choice ("Novick
@@ -189,13 +192,15 @@ export function tally(l: Lineup): string {
 }
 
 export type VKind = 'mine' | 'agree' | 'split' | 'none' | 'review';
-export type NoneWhy = 'no_stand' | 'not_found' | 'not_checked' | 'paywall' | 'no_cover' | 'no_sources' | 'both' | 'mixed';
+export type NoneWhy = 'no_stand' | 'not_found' | 'not_checked' | 'paywall' | 'blocked' | 'no_cover' | 'no_sources' | 'both' | 'mixed';
 /* shade: 'one' when a single source weighed in (one group is not a consensus), 'lean' for a
    lopsided split (2 to 1 or wider), 'even' for a close one. The view styles each differently. */
 export interface Verdict { kind: VKind; main: string; sub: string; why?: NoneWhy; filled?: boolean; tone?: 'fav' | 'unfav' | 'mixed' | 'none'; shade?: 'one' | 'lean' | 'even' }
 
 export const NONE_WORDS: Record<NoneWhy, string> = {
   no_stand: 'Took no stand', not_found: 'No endorsements found', not_checked: 'Not checked yet', paywall: 'Behind a paywall',
+  // A bot check in front of the source's page (Oct 25): we tried and couldn't, which "Not checked yet" would hide.
+  blocked: 'Couldn’t read',
   // The common case on local races: a quiet invitation on the row, said once on the section band.
   // "Don’t show endorsements" chosen: the column stays empty and quiet.
   no_cover: 'Not covered by your sources', no_sources: '', both: 'Listed both sides',
@@ -211,6 +216,7 @@ export function noneWhy(l: Lineup, anyChosen: boolean): NoneWhy {
   if (l.notFound.length) states.push('not_found');
   if (l.notChecked.length) states.push('not_checked');
   if (l.paywalled.length) states.push('paywall');
+  if (l.blocked.length) states.push('blocked');
   if (l.both.length) states.push('both');
   return states.length === 1 ? states[0] : 'mixed';
 }
@@ -223,6 +229,7 @@ export function noneCounts(l: Lineup): string {
     l.notChecked.length ? `${l.notChecked.length} not checked yet` : '',
     l.both.length ? `${l.both.length} listed both sides` : '',
     l.paywalled.length ? `${l.paywalled.length} behind a paywall` : '',
+    l.blocked.length ? `${l.blocked.length} couldn’t be read` : '',
   ].filter(Boolean)[0] || '';
 }
 
@@ -273,7 +280,7 @@ export function verdict(it: Item): Verdict {
     const why = noneWhy(l, chosen().length > 0);
     // A judge with no review in our data yet and no source picks: point to what the row holds.
     // (A wording choice only: no fact is read out of the prose.)
-    if (it.kind === 'contest' && it.is_retention && (why === 'no_cover' || why === 'not_checked' || why === 'paywall')) {
+    if (it.kind === 'contest' && it.is_retention && (why === 'no_cover' || why === 'not_checked' || why === 'paywall' || why === 'blocked')) {
       const reviewed = /commission|evaluat|review|rated|recommend|bar association|poll/i.test(`${it.why_it_matters || ''} ${it.candidates.map((c) => c.own_words.map((o) => o.text).join(' ')).join(' ')}`);
       return { kind: 'none', main: reviewed ? 'See the review' : 'Keep or remove?', sub: '', why };
     }

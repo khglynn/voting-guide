@@ -218,6 +218,9 @@ b, strong { font-weight: 600; }
 /* How covered the ballot is (views/coverage.ts): a quiet line under "Your sources have picks in N of your
    M races". The action is the coverage card's, in step 1. */
 .su-src { margin-top: 4px; font-size: 14.5px; color: var(--muted); }
+/* PR 2: the count is a link that opens every source on the ballot. */
+.su-src .linkbtn, .picks-cov .cov-n { margin: -12px 0; padding: 0; }
+.cov-n { color: var(--ink); }
 .su-sw { width: 100%; min-height: 52px; display: grid; grid-template-columns: minmax(0, 1fr) 52px; gap: 12px; align-items: start; padding: 12px 0 6px; text-align: left; }
 .su-l b { display: block; font-size: 17px; line-height: 1.3; }
 .su-l small { display: block; margin-top: 2px; font-size: 14.5px; line-height: 1.4; color: var(--muted); }
@@ -683,6 +686,15 @@ b, strong { font-weight: 600; }
 .srow { display: grid; grid-template-columns: minmax(0, 1fr) 52px; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--rule); align-items: start; }
 .s-n { display: block; font-weight: 600; font-size: 15px; line-height: 1.25; }
 .s-d { display: block; font-size: 13px; color: var(--muted); }
+/* The sources sheet's first line, and its end (Oct 25): what's on to start, the sources we couldn't read
+   (no switch: nothing of theirs to turn on), and "Add a source". */
+.s-legend { font-size: 15px; line-height: 1.4; color: var(--ink); }
+.s-legend + .small { margin-top: 6px; }
+.sgrp.unread h3 { color: var(--ink-2); border-bottom-style: dashed; }
+.sgrp.unread .srow { grid-template-columns: minmax(0, 1fr); }
+.s-add { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 16px; font-size: 15px; color: var(--ink-2); }
+.s-add p { margin: 0; }
+.s-add .mini { flex: none; }
 .s-l { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 2px; font-size: 13px; }
 .s-l .linkbtn { margin: -12px 0; }
 .s-b { font-size: 13.5px; color: var(--ink-2); margin-top: 4px; line-height: 1.45; }

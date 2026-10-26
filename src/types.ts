@@ -133,6 +133,10 @@ export interface Endorser {
   paywall_note_ok?: false;
   /* This source's own wording for the note, when the data gives one; otherwise the app's. */
   paywall_note?: string;
+  /* A source whose site shows a bot check to anything that isn't a browser (Oct 25): read like a paywall,
+     "Couldn't read". blocked_note is its one line; absent, the app's. Absent = not blocked. */
+  blocked?: true;
+  blocked_note?: string;
   /* The place ids in the source's own geography, when it names any (a regional paper, even one that
      also picks statewide races, or a county party). Absent when it names none, and for a party or
      group whose geography names its state (a statewide group). "Not checked yet" on a district race

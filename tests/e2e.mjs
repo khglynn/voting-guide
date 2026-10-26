@@ -1944,6 +1944,51 @@ for (const [zip, label, id, btn, href, full] of [
   await ctx.close();
 }
 
+{
+  // Codex, Oct 26: a sheet that takes its own opener away (the source count goes with the last source) sends
+  // focus to "Show endorsements" instead of losing it.
+  const { ctx, page } = await newPage();
+  await openZip(page, '60601');
+  await page.waitForSelector('#setup [data-fk="cov-src"]', { timeout: 15000 });
+  await fillOff(page);
+  await tap(page, '#setup [data-fk="cov-src"]');
+  await page.waitForSelector('.sheet-panel #sh-h');
+  await tap(page, '.sheet-panel [data-act="src-none"]');
+  check('Sources: Turn all off takes the count away behind the sheet', !(await page.$('#setup [data-fk="cov-src"]')));
+  await tap(page, '.sheet-panel [data-fk="sheet-x"]');
+  await settle(page);
+  check('Sources: after Turn all off, Done puts focus on Show endorsements', !(await page.$('.sheet-panel')) && (await focusedFk(page)) === 'ends', await focusedFk(page));
+  // On again, then every switch off one at a time, then Escape.
+  await tap(page, '#setup [data-act="ends"]');
+  await page.waitForSelector('#setup [data-fk="cov-src"]', { timeout: 15000 });
+  await tap(page, '#setup [data-fk="cov-src"]');
+  await page.waitForSelector('.sheet-panel #sh-h');
+  for (let n = 0; n < 80; n++) {
+    const id = await page.evaluate(() => document.querySelector('.sheet-panel [data-act="src"][aria-checked="true"]')?.dataset.id || '');
+    if (!id) break;
+    await tap(page, `.sheet-panel [data-fk="tg-${id}"]`);
+  }
+  check('Sources: the last switch off takes the count away too', !(await page.$('.sheet-panel [data-act="src"][aria-checked="true"]')) && !(await page.$('#setup [data-fk="cov-src"]')));
+  await page.keyboard.press('Escape');
+  await settle(page);
+  check('Sources: then Escape puts focus on Show endorsements', !(await page.$('.sheet-panel')) && (await focusedFk(page)) === 'ends', await focusedFk(page));
+  // The ballot's Edit sheet: its count opens the sheet over it; Turn all off, then Done goes back to the Edit
+  // sheet with focus on its own "Show endorsements".
+  await tap(page, '#setup [data-act="ends"]');
+  await page.waitForSelector('#setup [data-fk="cov-src"]', { timeout: 15000 });
+  await tap(page, SETUP);
+  await page.waitForSelector('#plan', { timeout: 15000 });
+  await edit(page);
+  await tap(page, '.sheet-panel.picks [data-fk="cov-src"]');
+  await page.waitForSelector('.sheet-panel:not(.picks) #sh-h');
+  await tap(page, '.sheet-panel [data-act="src-none"]');
+  await tap(page, '.sheet-panel [data-fk="sheet-x"]');
+  await settle(page);
+  check('Sources: from the Edit sheet, Turn all off then Done goes back there, focus on its Show endorsements', !!(await page.$('.sheet-panel.picks')) && (await focusedFk(page)) === 'ends' && !!(await page.evaluate(() => document.activeElement?.closest('.sheet-panel.picks'))), await focusedFk(page));
+  noErrors(page, 'Sources focus');
+  await ctx.close();
+}
+
 /* ---------- coverage (Oct 25, then the copy pass): one card that owns the action, quiet lines elsewhere ----------
    Kevin: "St. Louis doesn't have very many sources and I don't think the site should pretend we can show
    picks if we haven't fully scraped for that one yet." After his phone test: "It reads as a standard header,
@@ -1960,11 +2005,11 @@ const darkIn = (page, sel) => page.$$eval(`${sel} .mini.dark`, (els) => els.filt
   await openZip(page, '60601');
   await page.waitForSelector('.su-src', { timeout: 15000 });
   const p = INDEX_JSON.places['chicago-il'];
-  check('Coverage: Chicago’s step 2 says how many sources on its ballot, how many picked, and when', (await text(page, '#setup .su-src')) === `${p.sources} sources on Chicago’s ballot, ${p.with_picks} with picks. Last checked ${day(p.checked)}.`, await text(page, '#setup .su-src'));
-  check('Coverage: under "Your sources have picks in N of your M races", inside step 2, and no card', !!(await page.$('#setup .su-stat .su-cov + .su-src')) && !(await page.$('.cov-card')) && !(await page.$('#setup .su-stat button')));
+  check('Coverage: Chicago’s step 2 says how many sources on its ballot, how many picked, and when', (await text(page, '#setup .su-src')) === `${p.sources} sources on Chicago’s ballot, ${p.with_picks} with picks. Last checked ${day(p.checked)}. Add a source`, await text(page, '#setup .su-src'));
+  check('Coverage: under "Your sources have picks in N of your M races", inside step 2, and no card', !!(await page.$('#setup .su-stat .su-cov + .su-src')) && !(await page.$('.cov-card')) && !(await page.$('#setup .su-stat .mini')));
   await plainSetup(page);
   await page.waitForSelector('#plan', { timeout: 15000 });
-  check('Coverage: the ballot’s head says it for the ballot, under the picks line, no button', (await text(page, '.bhead .picks-line + .picks-cov')) === `${p.sources} sources on your ballot, ${p.with_picks} with picks. Last checked ${day(p.checked)}.` && !(await page.$('.bhead .picks-cov button')) && !(await page.$('.cov-card')), await text(page, '.bhead .picks-cov'));
+  check('Coverage: the ballot’s head says it for the ballot, under the picks line, no button', (await text(page, '.bhead .picks-line + .picks-cov')) === `${p.sources} sources on your ballot, ${p.with_picks} with picks. Last checked ${day(p.checked)}.` && !(await page.$('.bhead .picks-cov .mini')) && !(await page.$('.cov-card')), await text(page, '.bhead .picks-cov'));
   noErrors(page, 'Coverage Chicago');
   await ctx.close();
 }
@@ -1987,7 +2032,7 @@ const darkIn = (page, sel) => page.$$eval(`${sel} .mini.dark`, (els) => els.filt
   check('St. Louis City: a gold card in step 1 leads with what’s missing, then what’s here and what isn’t', (await partsText(page, '#door .cov-card')) === `Your city’s races aren’t in the guide yet. Here now: Missouri’s statewide races, with picks from ${mo.with_picks} of ${mo.sources} sources. Not here yet: races for your city, county and districts. Ask Kevin to add my city One tap. It sends Kevin your ZIP and nothing about you. It usually takes about a day. Voting before then? Your official sample ballot lists every race.`
     && !!(await page.$('#door .cov-card.notice.strong')) && !!(await page.$('.door-where .door-place + .cov-card')), await partsText(page, '#door .cov-card'));
   check('St. Louis City: its button is the one dark one, and the sample ballot is a link in a sentence', (await darkIn(page, '#door .cov-card')).join('|') === 'Ask Kevin to add my city' && /^https:/.test((await page.getAttribute('#door .cov-card .cov-sb a', 'href')) || ''));
-  check('St. Louis City: step 2 says it quietly, with no button', /^Your sources have picks in \d+ of the \d+ statewide races here\.$/.test(await text(page, '#setup .su-cov')) && (await text(page, '#setup .su-src')) === `${mo.sources} sources for Missouri’s statewide races, ${mo.with_picks} with picks. Last checked ${day(mo.checked)}.` && !(await page.$('#setup .su-stat button')));
+  check('St. Louis City: step 2 says it quietly, with no button', /^Your sources have picks in \d+ of the \d+ statewide races here\.$/.test(await text(page, '#setup .su-cov')) && (await text(page, '#setup .su-src')) === `${mo.sources} sources for Missouri’s statewide races, ${mo.with_picks} with picks. Last checked ${day(mo.checked)}.` && !(await page.$('#setup .su-stat .mini')));
   await tap(page, '.front [data-act="addr-open"]');
   await page.fill('#addr-in', '12 Testing Lane');
   await page.locator('form[data-form="addr"] button[type=submit]').tap();
@@ -2093,7 +2138,7 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
     check(`Thin place (${name}): the card says its own groups’ picks aren’t in, that picks from across the state are, and the gap`, (await text(page, '#door .cov-card .cov-lead')) === `${name}’s local picks aren’t in yet.`
       && (await text(page, '#door .cov-card .cov-miss')) === `Not here yet: picks from ${name}’s own paper and groups. ${gap} of your ${thin.p.local_races} local races ${gap === 1 ? 'has' : 'have'} no picks from anyone.` && /^Here now: every race on your ballot, with picks from newspapers and groups across /.test(await text(page, '#door .cov-card .cov-here'))
       && (await darkIn(page, '#door .cov-card')).join() === 'Ask Kevin to look for local picks', await text(page, '#door .cov-card'));
-    check(`Thin place (${name}): step 2 says whose picks are missing, quietly`, new RegExp(`^\\d+ sources, \\d+ with picks, none from ${name}’s own paper and groups\\. Last checked [A-Z][a-z]{2} \\d+\\.$`).test(await text(page, '#setup .su-src')) && !(await page.$('#setup .su-stat button')), await text(page, '#setup .su-src'));
+    check(`Thin place (${name}): step 2 says whose picks are missing, quietly`, new RegExp(`^\\d+ sources, \\d+ with picks, none from ${name}’s own paper and groups\\. Last checked [A-Z][a-z]{2} \\d+\\.$`).test(await text(page, '#setup .su-src')) && !(await page.$('#setup .su-stat .mini')), await text(page, '#setup .su-src'));
     await page.evaluate(() => history.replaceState(history.state, '', `${location.pathname}${location.search}#v1~FL~x~00000~zz9pick`));
     await tap(page, '#door [data-act="cov-ask"]');
     await page.waitForSelector('#door .cov-card[role="status"]', { timeout: 15000 });
@@ -2105,13 +2150,73 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
     await page.evaluate(() => history.replaceState(history.state, '', `${location.pathname}${location.search}`));
     await plainSetup(page);
     await page.waitForSelector('#plan', { timeout: 15000 });
-    check(`Thin place (${name}): the head says it quietly with the day, under the picks line, no button`, (await text(page, '.bhead .picks-cov')).endsWith('You asked for local picks today.') && !(await page.$('.bhead .picks-cov button')), await text(page, '.bhead .picks-cov'));
+    check(`Thin place (${name}): the head says it quietly with the day, under the picks line, no button`, (await text(page, '.bhead .picks-cov')).endsWith('You asked for local picks today.') && !(await page.$('.bhead .picks-cov .mini')), await text(page, '.bhead .picks-cov'));
     await tap(page, '#r-restore [data-fk="cov-hear"]');
     await page.waitForSelector('.sheet-panel.shelf[data-hint="follow"]');
     check(`Thin place (${name}): Tell me what he finds opens its sheet with the request as text`, (await text(page, '.sheet-panel.shelf #sh-h')) === 'Tell me what he finds' && (await text(page, '.sheet-panel.shelf .rp-req')) === `Your request: local picks for ${name}, ZIP ${thin.zip}. Sent today.`, await text(page, '.sheet-panel.shelf .rp-req'));
     noErrors(page, `Thin place (${name})`);
     await ctx.close();
   }
+}
+
+/* ---------- every source in reach from the first page (Oct 25) ----------
+   Kevin: "show a count and a way to expand to see all sources and then individually check and uncheck within
+   that list ... also show what sources we tried but couldn't access ... and then the option to add their own
+   source". */
+{
+  const { ctx, page } = await newPage();
+  const posts = await catchForm(page);
+  await openZip(page, '60601');
+  await page.waitForSelector('#setup [data-fk="cov-src"]', { timeout: 15000 });
+  await fillOff(page);
+  const papersOn = () => page.evaluate(() => { const c = document.querySelector('#setup [data-act="chip"][data-k="papers"]'); return c ? `${c.getAttribute('aria-pressed')}${c.classList.contains('some') ? ' some' : ''}` : ''; });
+  check('Sources: before, Newspapers and guides is on', (await papersOn()) === 'true');
+  await tap(page, '#setup [data-fk="cov-src"]');
+  await page.waitForSelector('.sheet-panel #sh-h');
+  check('Sources: the count opens "Every source on your ballot" on the first page', (await text(page, '.sheet-panel #sh-h')) === 'Every source on your ballot' && !!(await page.$('#app[inert]')));
+  check('Sources: its first line says what’s on to start', (await text(page, '.sheet-panel .s-legend')) === 'On by default: newspapers and nonpartisan guides. Tap a switch to add or drop one.');
+  // Turn off one newspaper that has picks here (a chip reads only the sources with picks): its switch flips,
+  // and the chip behind the sheet follows ("some").
+  const paper = await page.evaluate(() => [...document.querySelectorAll('.sheet-panel .sgrp:not(.unread) .srow')]
+    .filter((r) => /Endorsed in \d+/.test(r.querySelector('.s-d')?.textContent || '') && r.querySelector('[data-act="src"][aria-checked="true"]'))
+    .map((r) => r.querySelector('[data-act="src"]').dataset.id)[0]);
+  await tap(page, `.sheet-panel [data-fk="tg-${paper}"]`);
+  check('Sources: a switch turns one source off', (await page.getAttribute(`.sheet-panel [data-fk="tg-${paper}"]`, 'aria-checked')) === 'false', paper);
+  check('Sources: and the chip behind the sheet follows', (await papersOn()) === 'true some', await papersOn());
+  await tap(page, `.sheet-panel [data-fk="tg-${paper}"]`);
+  check('Sources: on again, the chip is whole again', (await papersOn()) === 'true' && (await page.getAttribute(`.sheet-panel [data-fk="tg-${paper}"]`, 'aria-checked')) === 'true');
+  // "Couldn't read": paywalled or bot-checked sources with nothing here, no switches.
+  const unread = await page.$$eval('.sheet-panel .sgrp.unread .srow', (els) => els.map((e) => e.dataset.unread));
+  check('Sources: "Couldn’t read (N)" lists the paywalled and bot-checked sources, Crain’s and the Sierra Club among them', (await text(page, '.sheet-panel .sgrp.unread h3')) === `Couldn’t read (${unread.length})` && ['crains-chicago-eb', 'sierra-club-il'].every((id) => unread.includes(id)), unread.join());
+  check('Sources: with no switches, each with its reason and Send it to us', !(await page.$('.sheet-panel .sgrp.unread .tg')) && (await page.$$('.sheet-panel .sgrp.unread [data-act="shelf"]')).length === unread.length && /bot check/.test(await text(page, '.sheet-panel .sgrp.unread')));
+  // Add a source, over the sheet: a link and a pasted list go in as the form's five answers.
+  await tap(page, '.sheet-panel [data-fk="src-add"]');
+  await page.waitForSelector('.sheet-panel.shelf[data-kind="source"]');
+  check('Sources: Add a source opens its form, where you vote filled in', (await text(page, '.sheet-panel.shelf #sh-h')) === 'Add a source' && (await page.inputValue('#rf-where')) === 'Chicago, 60601' && (await page.inputValue('#rf-src')) === '');
+  await tap(page, SEND);
+  check('Sources: it asks for the source first', /Type its name or a link first\./.test(await text(page, '#rf-err')) && posts.list.length === 0);
+  await page.fill('#rf-src', 'https://example.org/our-guide');
+  await page.fill('#rf-picks', 'Mayor: A. Person\nProp 1: Yes');
+  await tap(page, SEND);
+  await page.waitForSelector('.rp-sent');
+  const p = posts.list[0];
+  check('Sources: Add a source posts the five answers, the pasted picks in What’s wrong', posts.list.length === 1 && FORM_IDS.every((k) => p.has(k)) && p.get('entry.90887649') === 'Add source: https://example.org/our-guide' && p.get('entry.1986493507') === 'https://example.org/our-guide'
+    && p.get('entry.628621310') === 'Chicago, 60601' && /^Mayor: A\. Person\nProp 1: Yes\n\nSent along:\nPage: First page\n/.test(p.get('entry.780704302')), p ? p.toString() : 'no post');
+  check('Sources: sent, a source usually shows up within a day', (await text(page, '.rp-sent p')) === 'Sent. Kevin reads every one; a source usually shows up within a day.');
+  await tap(page, '[data-fk="report-done"]');
+  await settle(page);
+  check('Sources: Done goes back to the sources sheet', (await text(page, '.sheet-panel #sh-h')) === 'Every source on your ballot');
+  await tap(page, `.sheet-panel [data-fk="tg-${paper}"]`);
+  await tap(page, '.sheet-panel [data-fk="sheet-x"]');
+  await settle(page);
+  check('Sources: Done closes it, back on step 2 at the count, the chip as the switches left it', !(await page.$('.sheet-panel')) && (await focusedFk(page)) === 'cov-src' && (await papersOn()) === 'true some', `${await focusedFk(page)} ${await papersOn()}`);
+  await tap(page, SETUP);
+  await page.waitForSelector('#plan', { timeout: 15000 });
+  await edit(page);
+  check('Sources: the ballot keeps that choice, and the Edit sheet has the same count and Add a source', /some newspapers and guides/i.test(await text(page, '.picks-line')) && !!(await page.$('.sheet-panel.picks [data-fk="cov-src"]')) && (await text(page, '.sheet-panel.picks [data-act="shelf"][data-kind="source"]')) === 'Add a source', await text(page, '.picks-line'));
+  await noSideScroll(page, 'Sources');
+  noErrors(page, 'Sources');
+  await ctx.close();
 }
 
 /* ---------- statewide-only, uncovered, shared ZIPs ---------- */

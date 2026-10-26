@@ -10,10 +10,10 @@ import { growOpen, inkRow, followFold, glideTo, land, stopGlide, shrinkAway, col
 import { openBallot, openChosen, go, openReader, runAddress, reopenAddr, useMatch, toDoor, showBallot, rechoose, openSaved, fillWhy, leaveBallot } from './app';
 import { judgeBatch } from './model/judges';
 import { planAgree, planParty, planJudges, planSetup, applyFills, undoFills, emptyPlan, touchUndo, type Plan } from './model/bulk';
-import { toggleChip, setParty, setSources, noEndorsements, doorNone, type ChipKey } from './model/lens';
+import { toggleChip, setParty, setSources, noEndorsements, doorNone, chipState, unreadHere, CHIPS, type ChipKey } from './model/lens';
 import { courtGroup } from './model/labels';
 import { claimAnswer, claimOn, claimOff } from './model/address';
-import { basisWords, LEANS, FORM } from './views/common';
+import { basisWords, LEANS, FORM, reportWhere } from './views/common';
 import { reportBody, reportFallbackURL, requiredOf, isForm, collectAlong, askBody } from './views/shelf';
 import { covOf } from './views/coverage';
 import { rememberAsk } from './model/coverage';
@@ -366,6 +366,17 @@ function setRanks(id: string, list: string[]): void {
   afterPick(id, false);
 }
 const focusFk = (fk: string): void => { document.querySelector<HTMLElement>(`[data-fk="${CSS.escape(fk)}"]`)?.focus({ preventScroll: true }); };
+/* Back to the control that opened a sheet, or, when the sheet took it away (the source count goes with the
+   last source turned off, by "Turn all off" or one switch at a time; Codex, Oct 26), to "Show endorsements",
+   which leads step 2 and the Edit sheet, then the ballot head's Edit, then step 2's heading. Never a control
+   behind an open sheet. */
+function focusBack(fk: string | null): void {
+  for (const k of [fk, 'ends', 'picks-edit', 'su-h']) {
+    if (!k) continue;
+    const el = [...document.querySelectorAll<HTMLElement>(`[data-fk="${CSS.escape(k)}"]`)].find((x) => x.getClientRects().length && !x.closest('[inert]'));
+    if (el) { el.focus({ preventScroll: true }); return; }
+  }
+}
 A.rank = (d) => {
   const id = d.id!; const name = d.v!;
   const c = B().byId.get(id) as Contest;
@@ -541,13 +552,28 @@ A['party-set'] = (d) => {
   renderLens();
   toast(`Now showing the ${d.p} Party’s endorsements.`);
 };
+/* On the first page the sources sheet (its count opened it, Oct 25) changes the found ballot's list, and the
+   choices kept for the next ZIP follow the chips that list now makes. */
+function doorFollows(): void {
+  if (!doorBallot()) return;
+  for (const c of CHIPS) S.door.chips[c.key] = ['on', 'some'].includes(chipState(B(), c.key));
+  S.door.party = S.b.party;
+}
 A.src = (d) => {
+  const b = B();
   const cur = chosenIds();
-  setSources(B(), cur.includes(d.id!) ? cur.filter((x) => x !== d.id) : [...cur, d.id!]);
+  let next = cur.includes(d.id!) ? cur.filter((x) => x !== d.id) : [...cur, d.id!];
+  // A source under "Couldn't read" has no switch, so once every switch is off it goes too: all off is off,
+  // not a paywalled paper left on where nobody can see it (Codex, Oct 26).
+  if (!next.some((id) => { const e = b.eById.get(id); return !!e && !unreadHere(b, e); })) next = [];
+  setSources(b, next);
+  // The last one off by hand is choosing again, not "Show endorsements" off: the chips stay.
+  S.ui.lensEmptied = noEndorsements();
+  doorFollows();
   persist();
   renderLens();
 };
-A['src-default'] = () => { S.b.sources = null; S.b.party = null; persist(); renderLens(); };
+A['src-default'] = () => { S.b.sources = null; S.b.party = null; S.ui.lensEmptied = false; doorFollows(); persist(); renderLens(); };
 /* "Show endorsements" (step 2 and the Edit sheet), on to start. Off: every source off and no party, so
    every row shows just the choices; the save link carries it as an empty source list. On again, the
    newspapers and guides come back. */
@@ -573,7 +599,7 @@ A.ends = () => {
   renderLens(); persist();
   announce(off ? 'Turned off.' : 'Turned on.');
 };
-A['src-none'] = () => { S.b.sources = []; S.b.party = null; persist(); renderLens(); };
+A['src-none'] = () => { S.b.sources = []; S.b.party = null; S.ui.lensEmptied = false; doorFollows(); persist(); renderLens(); };
 /* All sources or a party. Opened from the Edit sheet, it goes back there when it closes. */
 A.sheet = (d, el) => {
   S.ui.sheetBack = S.ui.sheet === 'picks' ? S.ui.sheetFrom || '' : null;
@@ -588,7 +614,7 @@ function backToPicks(lensChanged = false): void {
   S.ui.sheetFrom = S.ui.sheetBack || null;
   S.ui.sheetBack = null;
   if (lensChanged) renderLens(); else render(['sheet']);
-  if (from) focusFk(from);
+  if (from) focusBack(from);
 }
 /* "Endorsements: ... · Edit" and the menu's "Quick picks": step 2's controls in a sheet. The fill switch
    starts off each time; "Hide races I've decided" shows where the ballot is now. */
@@ -627,7 +653,7 @@ A['sheet-close'] = () => {
   S.ui.sheet = null;
   render(['sheet']);
   flushLens();
-  if (S.ui.sheetFrom) focusFk(S.ui.sheetFrom);
+  if (S.ui.sheetFrom) focusBack(S.ui.sheetFrom);
 };
 
 /* ---------- the shelf (views/shelf.ts): the list of cities, How this guide works, Report a problem,
@@ -645,7 +671,8 @@ function openShelf(kind: ShelfKind, d: DOMStringMap, fk: string, back: Shelf['ba
   const form = isForm(kind);
   const r: Shelf = {
     kind,
-    f: kind === 'city' ? (d.hint === 'follow' ? { reach: '' } : { city: '', zip: S.ballot && S.view === 'ballot' ? S.b.zip : S.zip || S.coverage?.zip || '', reach: '' }) : kind === 'report' ? { wrong: '', reach: '' } : {},
+    f: kind === 'city' ? (d.hint === 'follow' ? { reach: '' } : { city: '', zip: S.ballot && S.view === 'ballot' ? S.b.zip : S.zip || S.coverage?.zip || '', reach: '' }) : kind === 'report' ? { wrong: '', reach: '' }
+      : kind === 'source' ? { src: '', where: reportWhere(), picks: '', reach: '' } : {},
     what: d.what || '', tag: d.tag || '', hint: d.hint || '',
     // What a form sends along is read now, from the page it was opened on (never the address box or the hash).
     along: form ? collectAlong() : { page: '', where: '', url: '', data: '', build: '', device: '', errors: [] },

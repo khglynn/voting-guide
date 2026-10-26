@@ -1833,6 +1833,8 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     // action; quiet lines with no button in the head, step 2 and the Edit sheet. Today is pinned through
     // ?today (todayISO reads location), and requests live in a stand-in localStorage.
     const keep = { index: S.index, view: S.view, uiView: S.ui.view, pending: S.pending, resume: S.ui.resume };
+    // Text with block ends spaced and inline tags (PR 2's count link) dropped, as a reader sees it.
+    const txt = (h) => h.replace(/<\/(p|div|li|h\d)>|<br\s*\/?>/g, ' ').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
     const store = {};
     globalThis.window = { localStorage: { getItem: (k) => (k in store ? store[k] : null), setItem: (k, v) => { store[k] = String(v); }, removeItem: (k) => { delete store[k]; } } };
     const setToday = (d) => { globalThis.location = { search: `?today=${d}`, origin: 'https://vote.kevinhg.com', pathname: '/' }; };
@@ -1847,11 +1849,11 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       const p = INDEX.places['chicago-il'];
       S.view = 'setup';
       check('coverage: a covered place gets no card', views.coverage.covCardHTML('door') === '' && views.coverage.covCardHTML('ballot') === '');
-      check('coverage: step 2 says how many sources on the place’s ballot, how many picked, and when', strip(views.coverage.covHTML()) === `${p.sources} sources on Chicago’s ballot, ${p.with_picks} with picks. Last checked ${day(p.checked)}.` && /class="su-src"/.test(views.setup.pickControlsHTML()), strip(views.coverage.covHTML()));
+      check('coverage: step 2 says how many sources on the place’s ballot, how many picked, and when', txt(views.coverage.covHTML()) === `${p.sources} sources on Chicago’s ballot, ${p.with_picks} with picks. Last checked ${day(p.checked)}. Add a source` && /class="su-src"/.test(views.setup.pickControlsHTML()), txt(views.coverage.covHTML()));
       check('coverage: step 2’s first line says whose picks', /<p class="su-cov">Your sources have picks in \d+ of your \d+ races\.<\/p>/.test(views.setup.pickControlsHTML()));
       check('coverage: the Edit sheet says the same', /class="su-src"/.test(views.setup.pickControlsHTML(true)) && /Your sources have picks in/.test(views.setup.pickControlsHTML(true)));
       S.view = 'ballot';
-      check('coverage: the ballot’s head says it for the ballot, under the picks line, no button', strip(views.coverage.headCovHTML()) === `${p.sources} sources on your ballot, ${p.with_picks} with picks. Last checked ${day(p.checked)}.` && /picks-line[\s\S]*class="picks-cov"/.test(views.ledger.ballotHeadHTML()) && !/<button/.test(views.coverage.headCovHTML()));
+      check('coverage: the ballot’s head says it for the ballot, under the picks line, no button', txt(views.coverage.headCovHTML()) === `${p.sources} sources on your ballot, ${p.with_picks} with picks. Last checked ${day(p.checked)}.` && /picks-line[\s\S]*class="picks-cov"/.test(views.ledger.ballotHeadHTML()) && !/class="mini/.test(views.coverage.headCovHTML()));
       S.b.sources = [];
       check('coverage: with endorsements off, the counts step aside', !/su-src|picks-cov/.test(views.setup.pickControlsHTML(true) + views.ledger.ballotHeadHTML()));
       S.b.sources = null;
@@ -1861,12 +1863,12 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       S.b.zip = '32501';
       S.view = 'setup';
       const tc = views.coverage.covCardHTML('door');
-      check('coverage: a thin place’s card leads with what’s missing, then what’s here and what isn’t, with the gap counted', strip(tc) === 'Pensacola’s local picks aren’t in yet. Here now: every race on your ballot, with picks from newspapers and groups across Florida. Not here yet: picks from Pensacola’s own paper and groups. 3 of your 10 local races have no picks from anyone. Ask Kevin to look for local picks One tap. It sends Kevin the place and nothing about you. He’ll look within about a day.', strip(tc));
+      check('coverage: a thin place’s card leads with what’s missing, then what’s here and what isn’t, with the gap counted', txt(tc) === 'Pensacola’s local picks aren’t in yet. Here now: every race on your ballot, with picks from newspapers and groups across Florida. Not here yet: picks from Pensacola’s own paper and groups. 3 of your 10 local races have no picks from anyone. Ask Kevin to look for local picks One tap. It sends Kevin the place and nothing about you. He’ll look within about a day.', txt(tc));
       check('coverage: its button is the dark one, and it is a gold card', darkOf(tc).join() === 'Ask Kevin to look for local picks' && /class="notice strong cov-card"/.test(tc) && /data-act="cov-ask"/.test(tc));
-      check('coverage: step 2 says it quietly, with no button', strip(views.coverage.covHTML()) === '21 sources, 13 with picks, none from Pensacola’s own paper and groups. Last checked Oct 19.' && !/<button/.test(views.coverage.covHTML()));
+      check('coverage: step 2 says it quietly, with no button', txt(views.coverage.covHTML()) === '21 sources, 13 with picks, none from Pensacola’s own paper and groups. Last checked Oct 19.' && !/class="mini/.test(views.coverage.covHTML()));
       S.view = 'ballot';
       const th = views.ledger.ballotHeadHTML();
-      check('coverage: the head’s line is quiet, and while the card asks the address box has no dark button', strip(views.coverage.headCovHTML()) === '21 sources, 13 with picks, none from Pensacola’s own paper and groups. Last checked Oct 19.' && darkOf(th).length === 0 && /Use my address/.test(th), darkOf(th).join());
+      check('coverage: the head’s line is quiet, and while the card asks the address box has no dark button', txt(views.coverage.headCovHTML()) === '21 sources, 13 with picks, none from Pensacola’s own paper and groups. Last checked Oct 19.' && darkOf(th).length === 0 && /Use my address/.test(th), darkOf(th).join());
       check('coverage: on the ballot the card sits in the slot under the masthead', /class="notice strong cov-card wrap"/.test(views.mast.restoreHTML()));
       S.pending = { kind: 'shared', key: 'x', incoming: S.b, summary: 'This link brought 2 picks.' };
       check('coverage: under a shared link’s question its button is an outline, so the slot has one dark button', darkOf(views.mast.restoreHTML()).join() === 'Use the link’s picks' && /class="mini" data-act="cov-ask"/.test(views.mast.restoreHTML()), darkOf(views.mast.restoreHTML()).join());
@@ -1880,10 +1882,10 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       // Asked: the card keeps its slot and gold, a tick and "Request sent.", the day, an outline follow-up.
       mc.rememberAsk('p:pensacola-fl', '2026-10-25');
       const ta = views.coverage.covCardHTML('ballot');
-      check('coverage: asked, a thin place’s card says so plainly, may find none, and offers Tell me what he finds', strip(ta) === 'Request sent. Kevin is looking for Pensacola’s local picks. You asked today. It usually takes about a day. He may not find any, since some groups don’t endorse. Your ballot works now. Any local picks he finds will show up here. Tell me what he finds' && /role="status"/.test(ta) && /class="cov-tick"/.test(ta) && darkOf(ta).length === 0 && /class="notice strong cov-card wrap"/.test(ta), strip(ta));
-      check('coverage: asked, the quiet lines add the day', strip(views.coverage.headCovHTML()).endsWith('You asked for local picks today.') && darkOf(views.ledger.ballotHeadHTML()).join() === 'Use my address');
+      check('coverage: asked, a thin place’s card says so plainly, may find none, and offers Tell me what he finds', txt(ta) === 'Request sent. Kevin is looking for Pensacola’s local picks. You asked today. It usually takes about a day. He may not find any, since some groups don’t endorse. Your ballot works now. Any local picks he finds will show up here. Tell me what he finds' && /role="status"/.test(ta) && /class="cov-tick"/.test(ta) && darkOf(ta).length === 0 && /class="notice strong cov-card wrap"/.test(ta), txt(ta));
+      check('coverage: asked, the quiet lines add the day', txt(views.coverage.headCovHTML()).endsWith('You asked for local picks today.') && darkOf(views.ledger.ballotHeadHTML()).join() === 'Use my address');
       setToday('2026-10-26');
-      check('coverage: the next day it reads the date', /You asked Oct 25\. It usually takes about a day\./.test(strip(views.coverage.covCardHTML('ballot'))) && strip(views.coverage.headCovHTML()).endsWith('You asked for local picks Oct 25.'));
+      check('coverage: the next day it reads the date', /You asked Oct 25\. It usually takes about a day\./.test(txt(views.coverage.covCardHTML('ballot'))) && txt(views.coverage.headCovHTML()).endsWith('You asked for local picks Oct 25.'));
       setToday('2026-10-25');
       delete store['vg-asked'];
 
@@ -1892,25 +1894,25 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       S.b.zip = '63110';
       S.view = 'setup';
       const sc = views.coverage.covCardHTML('door');
-      check('coverage: a statewide ballot’s card leads with the missing races, says the statewide picks are here, and asks Kevin', strip(sc).startsWith(`Your city’s races aren’t in the guide yet. Here now: Missouri’s statewide races, with picks from ${INDEX.states.MO.with_picks} of ${INDEX.states.MO.sources} sources. Not here yet: races for your city, county and districts. Ask Kevin to add my city One tap. It sends Kevin your ZIP and nothing about you. It usually takes about a day. Voting before then? Your official sample ballot lists every race.`) && darkOf(sc).join() === 'Ask Kevin to add my city', strip(sc));
+      check('coverage: a statewide ballot’s card leads with the missing races, says the statewide picks are here, and asks Kevin', txt(sc).startsWith(`Your city’s races aren’t in the guide yet. Here now: Missouri’s statewide races, with picks from ${INDEX.states.MO.with_picks} of ${INDEX.states.MO.sources} sources. Not here yet: races for your city, county and districts. Ask Kevin to add my city One tap. It sends Kevin your ZIP and nothing about you. It usually takes about a day. Voting before then? Your official sample ballot lists every race.`) && darkOf(sc).join() === 'Ask Kevin to add my city', txt(sc));
       check('coverage: its sample ballot is a link in a sentence, never a button', /Voting before then\? Your <a href="https:[^"]+"[^>]*>official sample ballot<\/a> lists every race\./.test(sc) && !/class="mini[^"]*"[^>]*>Official sample ballot/.test(sc) && /statewide-note/.test(sc));
-      check('coverage: step 2 says it quietly', strip(views.coverage.covHTML()) === `${INDEX.states.MO.sources} sources for Missouri’s statewide races, ${INDEX.states.MO.with_picks} with picks. Last checked ${day(INDEX.states.MO.checked)}.` && /Your sources have picks in \d+ of the \d+ statewide races here\./.test(views.setup.pickControlsHTML()));
+      check('coverage: step 2 says it quietly', txt(views.coverage.covHTML()) === `${INDEX.states.MO.sources} sources for Missouri’s statewide races, ${INDEX.states.MO.with_picks} with picks. Last checked ${day(INDEX.states.MO.checked)}.` && /Your sources have picks in \d+ of the \d+ statewide races here\./.test(views.setup.pickControlsHTML()));
       S.view = 'ballot';
       const sh = views.ledger.ballotHeadHTML();
-      check('coverage: the head says "Statewide races only", the address box keeps its own job, and no sample ballot is dark', strip(views.coverage.headCovHTML()).startsWith('Statewide races only: ') && !/cov-ask|Ask Kevin|We only have/.test(sh) && darkOf(sh).length === 0 && (sh.match(/>Official sample ballot</g) || []).length <= 1, strip(sh));
+      check('coverage: the head says "Statewide races only", the address box keeps its own job, and no sample ballot is dark', txt(views.coverage.headCovHTML()).startsWith('Statewide races only: ') && !/cov-ask|Ask Kevin|We only have/.test(sh) && darkOf(sh).length === 0 && (sh.match(/>Official sample ballot</g) || []).length <= 1, txt(sh));
       S.b.sources = [];
-      check('coverage: with endorsements off the statewide card stays, without the picks', /Here now: Missouri’s statewide races\./.test(strip(views.coverage.covCardHTML('ballot'))));
+      check('coverage: with endorsements off the statewide card stays, without the picks', /Here now: Missouri’s statewide races\./.test(txt(views.coverage.covCardHTML('ballot'))));
       S.b.sources = null;
       setToday('2026-11-02');
-      check('coverage: two days out, the fine print says it may not land before Election Day', /One tap\. It sends Kevin your ZIP and nothing about you\. Kevin may not get to it before Election Day\./.test(strip(views.coverage.covCardHTML('ballot'))));
+      check('coverage: two days out, the fine print says it may not land before Election Day', /One tap\. It sends Kevin your ZIP and nothing about you\. Kevin may not get to it before Election Day\./.test(txt(views.coverage.covCardHTML('ballot'))));
       setToday('2026-10-25');
       mc.rememberAsk('z:63110', '2026-10-25');
       const sa = views.coverage.covCardHTML('ballot');
-      check('coverage: asked, the statewide card says Request sent, check back tomorrow, and offers Tell me when it’s in', strip(sa) === 'Request sent. Kevin is adding your city. You asked today. It usually takes about a day, so check back tomorrow. Until then, you can pick your statewide races below. Voting before then? Your official sample ballot lists every race. Tell me when it’s in' && darkOf(sa).length === 0, strip(sa));
-      check('coverage: and the quiet lines add the day', strip(views.coverage.headCovHTML()).endsWith('You asked for your city’s races today.'));
+      check('coverage: asked, the statewide card says Request sent, check back tomorrow, and offers Tell me when it’s in', txt(sa) === 'Request sent. Kevin is adding your city. You asked today. It usually takes about a day, so check back tomorrow. Until then, you can pick your statewide races below. Voting before then? Your official sample ballot lists every race. Tell me when it’s in' && darkOf(sa).length === 0, txt(sa));
+      check('coverage: and the quiet lines add the day', txt(views.coverage.headCovHTML()).endsWith('You asked for your city’s races today.'));
       setToday('2026-11-02');
       mc.rememberAsk('z:63110', '2026-11-01');
-      check('coverage: asked two days out, it says it may not be in before you vote', /You asked Nov 1\. It may not be in before you vote\./.test(strip(views.coverage.covCardHTML('ballot'))), strip(views.coverage.covCardHTML('ballot')));
+      check('coverage: asked two days out, it says it may not be in before you vote', /You asked Nov 1\. It may not be in before you vote\./.test(txt(views.coverage.covCardHTML('ballot'))), txt(views.coverage.covCardHTML('ballot')));
       setToday('2026-10-25');
       mc.rememberAsk('z:63110', '2026-10-25');
 
@@ -1919,7 +1921,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       const fa = { page: 'Your ballot', where: 'Missouri, 63110', url: 'https://vote.kevinhg.com/', data: '2026-10-25 12:00 UTC', build: 'abc1234', device: 'x', errors: [] };
       S.ui.report = { kind: 'city', f: { reach: '' }, what: '', tag: '', hint: 'follow', along: fa, state: 'edit', err: false, fk: 'cov-hear', back: null };
       const fh = views.shelf.shelfHTML();
-      check('follow-up: titled Tell me when it’s in, the request shown as text, an email or phone the one field, required', /<h2 id="sh-h">Tell me when it’s in<\/h2>/.test(fh) && /<b>Your request:<\/b> your city’s races, for ZIP 63110 in Missouri\. Sent today\./.test(fh) && (fh.match(/data-rf="/g) || []).length === 1 && /id="rf-reach"[^>]*aria-required="true"/.test(fh) && !/Which city or town/.test(fh) && views.shelf.requiredOf(S.ui.report) === 'reach', strip(fh).slice(0, 300));
+      check('follow-up: titled Tell me when it’s in, the request shown as text, an email or phone the one field, required', /<h2 id="sh-h">Tell me when it’s in<\/h2>/.test(fh) && /<b>Your request:<\/b> your city’s races, for ZIP 63110 in Missouri\. Sent today\./.test(fh) && (fh.match(/data-rf="/g) || []).length === 1 && /id="rf-reach"[^>]*aria-required="true"/.test(fh) && !/Which city or town/.test(fh) && views.shelf.requiredOf(S.ui.report) === 'reach', txt(fh).slice(0, 300));
       check('follow-up: its button says what it does, and what goes along is folded under it', />Tell me when it’s in<\/button>/.test(fh) && /<details class="rp-along"/.test(fh) && fh.indexOf('<details') > fh.indexOf('report-send') && !/Add anything else in your note/.test(fh));
       S.ui.report.f.reach = 'friend@example.org';
       const fb = views.shelf.reportBody(S.ui.report);
@@ -1933,7 +1935,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       mc.rememberAsk('p:pensacola-fl', '2026-10-25');
       S.ui.report = { kind: 'city', f: { reach: '' }, what: '', tag: '', hint: 'follow', along: { ...fa, where: 'Pensacola, 32501' }, state: 'edit', err: false, fk: 'cov-hear', back: null };
       const ph = views.shelf.shelfHTML();
-      check('follow-up: for a thin place, Tell me what he finds, even if it’s nothing', /<h2 id="sh-h">Tell me what he finds<\/h2>/.test(ph) && /what he finds for Pensacola, even if it’s nothing\./.test(ph) && /<b>Your request:<\/b> local picks for Pensacola, ZIP 32501\. Sent today\./.test(ph) && views.shelf.reportBody(S.ui.report)[F2.what] === 'Follow-up: tell me what you find' && views.shelf.reportBody(S.ui.report)[F2.wrong].startsWith('Tell me what you find for Pensacola. Follow-up to the one-tap request from Oct 25.'), strip(ph).slice(0, 300));
+      check('follow-up: for a thin place, Tell me what he finds, even if it’s nothing', /<h2 id="sh-h">Tell me what he finds<\/h2>/.test(ph) && /what he finds for Pensacola, even if it’s nothing\./.test(ph) && /<b>Your request:<\/b> local picks for Pensacola, ZIP 32501\. Sent today\./.test(ph) && views.shelf.reportBody(S.ui.report)[F2.what] === 'Follow-up: tell me what you find' && views.shelf.reportBody(S.ui.report)[F2.wrong].startsWith('Tell me what you find for Pensacola. Follow-up to the one-tap request from Oct 25.'), txt(ph).slice(0, 300));
       S.ui.report = null;
     } finally {
       delete globalThis.window; delete globalThis.location;
@@ -1946,6 +1948,91 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const F = common.FORM;
     check('coverage: one tap posts the five ids, the place and ZIP, and nothing typed', [F.what, F.where, F.wrong, F.link, F.reach].every((k) => k in body) && body[F.what] === 'Gather endorsements: Pensacola' && body[F.where] === 'Pensacola, 32501' && body[F.reach] === '' && body[F.link] === 'https://vote.kevinhg.com/ (build abc1234)', JSON.stringify(body));
     check('coverage: "What’s wrong?" is its own sentence and a city request’s "Sent along" (no browser, no errors)', body[F.wrong] === 'Please gather local endorsements for Pensacola (one-tap from the page)\n\nSent along:\nPage: First page\nPlace: Pensacola, 32501\nPage address: https://vote.kevinhg.com/ (build abc1234)\nData built: 2026-10-25 12:00 UTC', body[F.wrong]);
+  }
+
+  /* ---------- every source in reach (Oct 25): the count opens the sheet, "Couldn't read", "Add a source" ---------- */
+  {
+    const strip = (h) => h.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+    const keep = { index: S.index, view: S.view };
+    S.index = INDEX;
+    const ch = open('IL', ['chicago-il']);
+    S.view = 'setup';
+    // The count is a button that opens the sheet right there, and "Add a source" sits beside it.
+    const door = views.coverage.covHTML();
+    check('sources: on the first page the count opens "Every source on your ballot", with Add a source beside it', /<button class="linkbtn cov-n" data-act="sheet" data-s="sources"[^>]*data-fk="cov-src">\d+ sources<\/button>/.test(door) && /data-act="shelf" data-kind="source"[^>]*>Add a source</.test(door), door);
+    check('sources: the Edit sheet has the same count and the same Add a source', /data-act="sheet" data-s="sources"[^>]*data-fk="cov-src"/.test(views.setup.pickControlsHTML(true)) && /data-kind="source"[^>]*>Add a source</.test(views.setup.pickControlsHTML(true)));
+    S.view = 'ballot';
+    check('sources: the ballot’s head count opens it too', /data-act="sheet" data-s="sources"[^>]*data-fk="hd-src"/.test(views.coverage.headCovHTML()));
+    // The sheet: the legend, the lean groups with switches, "Couldn't read" with none.
+    const sh = views.lens.sourcesSheetHTML();
+    check('sources: the sheet opens with what’s on to start', /On by default: newspapers and nonpartisan guides\. Tap a switch to add or drop one\./.test(strip(sh)) && /data-act="src-default"/.test(sh) && /data-act="src-none"/.test(sh));
+    const unread = ch.endorsers.filter((e) => lens.cantRead(e) && !lens.picksOnBallot(ch, e.id));
+    const box = (sh.match(/<section class="sgrp unread">[\s\S]*?<\/section>/) || [''])[0];
+    check('sources: "Couldn’t read (N)" lists every paywalled or bot-checked source with no pick here', unread.length >= 2 && new RegExp(`<h3>Couldn’t read \\(${unread.length}\\)</h3>`).test(box) && unread.every((e) => box.includes(`data-unread="${e.id}"`)) && ['crains-chicago-eb', 'sierra-club-il'].every((id) => box.includes(`data-unread="${id}"`)), unread.map((e) => e.id).join());
+    check('sources: with no switch, each with its reason and Send it to us', !/data-act="src"/.test(box) && /bot check to anything that isn’t a browser/.test(box) && (box.match(/>Send it to us</g) || []).length === unread.length);
+    check('sources: a bot-checked source’s Send it to us opens the form without asking for a login', /data-unread="sierra-club-il"[\s\S]*?data-hint="blocked"/.test(box) && /data-unread="crains-chicago-eb"[\s\S]*?data-hint="paywall"/.test(box));
+    const trib = ch.endorsers.find((e) => e.id === 'chicago-tribune-eb');
+    check('sources: a paywalled paper with picks here stays in its lean group with a switch', !!trib && lens.picksOnBallot(ch, trib.id) > 0 && !box.includes('chicago-tribune-eb') && /data-act="src" data-id="chicago-tribune-eb"/.test(sh));
+    check('sources: none of the couldn’t-read ones has a switch anywhere in the sheet', unread.every((e) => !sh.includes(`data-act="src" data-id="${e.id}"`)));
+    check('sources: Add a source ends the sheet', /class="s-add"[\s\S]*data-act="shelf" data-kind="source"[^>]*data-fk="src-add"[^>]*>Add a source</.test(sh) && sh.lastIndexOf('Add a source') > sh.lastIndexOf('Couldn’t read'));
+    // A paywalled paper that endorses nothing (the Pensacola News Journal) isn't "couldn't read": it stays
+    // in its group as an explainer.
+    const pen2 = open('FL', ['pensacola-fl']);
+    const pnj = pen2.eById.get('pensacola-news-journal-eb');
+    const psh = views.lens.sourcesSheetHTML();
+    check('sources: a paywalled paper that doesn’t endorse stays in its group as an explainer, not under Couldn’t read', !!pnj && pnj.paywall === true && lens.explainsOnly(pnj) && !(psh.match(/<section class="sgrp unread">[\s\S]*?<\/section>/) || [''])[0].includes('pensacola-news-journal-eb') && /data-act="src" data-id="pensacola-news-journal-eb"/.test(psh));
+    // A bot-checked source with picks from an earlier read keeps them, and says why it can't be checked again.
+    const mo = open('MO', []);
+    const smo = mo.eById.get('sierra-club-mo');
+    check('sources: a bot-checked source with picks stays switchable, its note under its name', !!smo && smo.blocked === true && lens.picksOnBallot(mo, smo.id) > 0 && /data-act="src" data-id="sierra-club-mo"/.test(views.lens.sourcesSheetHTML()) && /earlier read/.test(common.blockedSourceHTML(smo)));
+    Object.assign(S, keep);
+
+    // The row verdict: a bot-checked source with nothing here reads "Couldn't read", never "Not checked yet".
+    const il = open('IL', ['chicago-il']);
+    const sil = il.eById.get('sierra-club-il');
+    S.b.sources = ['sierra-club-il'];
+    // Sierra Club Illinois has a "not found" row on every race it covers here; take one away for a race it
+    // covers with no record.
+    const it = il.items.find((x) => (il.ends[x.id] || {})['sierra-club-il']?.s === 'not_found' && !(x.kind === 'contest' && x.is_retention) && bl.status(x) === 'open');
+    const saved = it ? il.ends[it.id]['sierra-club-il'] : null;
+    if (it) delete il.ends[it.id]['sierra-club-il'];
+    tally.clearLineups();
+    check('sources: a covered race with no record from a bot-checked source lists it as blocked', !!it && !!sil && tally.lineup(it).blocked.some((e) => e.id === 'sierra-club-il') && !tally.lineup(it).notChecked.length);
+    if (it) {
+      const v = tally.verdict(it);
+      check('sources: its verdict is "Couldn’t read"', v.kind === 'none' && v.main === 'Couldn’t read' && v.why === 'blocked' && tally.NONE_WORDS.blocked === 'Couldn’t read', JSON.stringify(v));
+      check('sources: and the open row says why, once, with Send it to us', /shows a bot check to anything that isn’t a browser, so we couldn’t read its endorsements here/.test(strip(views.open.openHTML(it))) && (views.open.openHTML(it).match(/data-hint="blocked"/g) || []).length === 1);
+      il.ends[it.id]['sierra-club-il'] = saved;
+      // A record marked unreadable reads the same way; one that was read stays "No endorsements found".
+      const nf = it;
+      const r = il.ends[nf.id]['sierra-club-il'];
+      tally.clearLineups();
+      check('sources: a bot-checked source’s read "not found" stays "No endorsements found"', tally.lineup(nf).notFound.some((e) => e.id === 'sierra-club-il'));
+      r.unreadable = true;
+      tally.clearLineups();
+      check('sources: one marked unreadable reads "Couldn’t read"', tally.lineup(nf).blocked.some((e) => e.id === 'sierra-club-il') && !tally.lineup(nf).notFound.length);
+      delete r.unreadable;
+      check('sources: a mixed row counts it', tally.noneCounts({ noStand: [], notFound: [], notChecked: [], both: [], paywalled: [], blocked: [sil] }) === '1 couldn’t be read');
+    }
+    S.b.sources = null;
+    tally.clearLineups();
+
+    // Add a source: a name or link, where you vote, the pasted picks; the same five answers.
+    const F = common.FORM;
+    const along = { page: 'First page', where: 'Chicago, 60601', url: 'https://vote.kevinhg.com/', data: '2026-10-25 12:00 UTC', build: 'abc1234', device: 'Safari 18 on iPhone, 390px wide', errors: ['Error: boom'] };
+    const sr = (f) => ({ kind: 'source', f: { src: '', where: 'Chicago, 60601', picks: '', reach: '', ...f }, what: '', tag: '', hint: '', along, state: 'edit', err: false, fk: 'src-add', back: null });
+    const b1 = views.shelf.reportBody(sr({ src: 'https://example.org/guide', picks: 'Mayor: A. Person\nProp 1: Yes' }));
+    check('add a source: a link goes in as the race and the link, the pasted picks in "What’s wrong?"', b1[F.what] === 'Add source: https://example.org/guide' && b1[F.link] === 'https://example.org/guide' && b1[F.where] === 'Chicago, 60601'
+      && b1[F.wrong] === 'Mayor: A. Person\nProp 1: Yes\n\nSent along:\nPage: First page\nPlace: Chicago, 60601\nPage address: https://vote.kevinhg.com/ (build abc1234)\nData built: 2026-10-25 12:00 UTC' && b1[F.reach] === '', JSON.stringify(b1));
+    const b2 = views.shelf.reportBody(sr({ src: 'Chicago Reader', reach: 'me@example.org' }));
+    check('add a source: a name with nothing pasted asks plainly, and the page’s link goes along', b2[F.what] === 'Add source: Chicago Reader' && b2[F.wrong].startsWith('Please add this source\n\nSent along:\n') && b2[F.link] === 'https://vote.kevinhg.com/ (build abc1234)' && b2[F.reach] === 'me@example.org', JSON.stringify(b2));
+    check('add a source: its one required box is the source', views.shelf.requiredOf(sr({})) === 'src' && views.shelf.isForm('source'));
+    S.ui.report = sr({});
+    const form = views.shelf.shelfHTML();
+    check('add a source: the sheet asks which source, where you vote (filled in), and their picks with the paste hint', /Add a source/.test(form) && /id="rf-src"/.test(form) && /id="rf-where"[^>]*value="Chicago, 60601"/.test(form) && /<textarea id="rf-picks"/.test(form) && /Behind a login\? Copy their endorsement list and paste it here\./.test(form));
+    S.ui.report.state = 'sent';
+    check('add a source: sent, it says a source usually shows up within a day', /Sent\.<\/b> Kevin reads every one; a source usually shows up within a day\./.test(views.shelf.shelfHTML()));
+    S.ui.report = null;
   }
 
 }

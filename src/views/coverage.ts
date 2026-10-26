@@ -20,7 +20,14 @@ export const covOf = (): Cov | null => (S.ballot && S.index ? ballotCoverage(S.b
 
 const when = (c: Cov): string => (c.checked ? ` Last checked ${fmtDate(c.checked, { weekday: false })}.` : '');
 const withWord = (c: Cov): string => (c.withPicks === 0 ? 'none with picks' : c.withPicks === c.sources ? 'all with picks' : `${c.withPicks} with picks`);
-const count = (c: Cov): string => (c.sources ? plural(c.sources, 'source') : 'No sources');
+/* The count opens "Every source on your ballot" right where it is (Kevin, Oct 25: "show a count and a way
+   to expand to see all sources and then individually check and uncheck within that list"). It stays a
+   quiet link in the count's own words ("24 sources"), so the lines still carry no action button. */
+const count = (c: Cov, fk: string): string => (c.sources
+  ? `<button class="linkbtn cov-n" data-act="sheet" data-s="sources" aria-haspopup="dialog" data-fk="${fk}">${esc(plural(c.sources, 'source'))}</button>`
+  : '<span class="cov-n">No sources</span>');
+/* "Add a source", the shelf's paste-box form (views/shelf.ts). */
+export const addSourceBtn = (fk: string): string => `<button class="linkbtn" ${shelfAttrs({ kind: 'source', fk })}>Add a source</button>`;
 const askedTail = (c: Cov): string => (c.state === 'asked' ? ` You asked for ${c.kind === 'thin' ? 'local picks' : 'your city’s races'} ${askedWord(c.askedOn)}.` : '');
 
 /* ---------- the card ---------- */
@@ -104,17 +111,21 @@ export function covHTML(): string {
   const c = covOf();
   if (!c) return '';
   const name = esc(c.name);
-  const t = c.kind === 'statewide' ? `${esc(count(c))} for ${name}’s statewide races, ${esc(withWord(c))}.`
-    : c.kind === 'thin' ? `${esc(count(c))}, ${esc(withWord(c))}, none from ${name}’s own paper and groups.`
-      : `${esc(count(c))} on ${c.single ? `${name}’s ballot` : 'your ballot'}, ${esc(withWord(c))}.`;
-  return `<p class="su-src">${t}${esc(when(c))}${esc(askedTail(c))}</p>`;
+  const n = count(c, 'cov-src');
+  const t = c.kind === 'statewide' ? `${n} for ${name}’s statewide races, ${esc(withWord(c))}.`
+    : c.kind === 'thin' ? `${n}, ${esc(withWord(c))}, none from ${name}’s own paper and groups.`
+      : `${n} on ${c.single ? `${name}’s ballot` : 'your ballot'}, ${esc(withWord(c))}.`;
+  // "Add a source" on the line only where no coverage card shows: there the card holds the screen's one
+  // action, and the sources sheet the count opens ends with "Add a source" anyway.
+  return `<p class="su-src">${t}${esc(when(c))}${esc(askedTail(c))}${cardShows(c) ? '' : ` ${addSourceBtn('cov-add')}`}</p>`;
 }
 /* Under the ballot's picks line: the same, for the ballot you're looking at. */
 export function headCovHTML(): string {
   const c = covOf();
   if (!c) return '';
-  const t = c.kind === 'statewide' ? `Statewide races only: ${count(c)}, ${withWord(c)}.`
-    : c.kind === 'thin' ? `${count(c)}, ${withWord(c)}, none from ${c.name}’s own paper and groups.`
-      : `${count(c)} on your ballot, ${withWord(c)}.`;
-  return `<p class="picks-cov">${esc(t + when(c) + askedTail(c))}</p>`;
+  const n = count(c, 'hd-src');
+  const t = c.kind === 'statewide' ? `Statewide races only: ${n}, ${esc(withWord(c))}.`
+    : c.kind === 'thin' ? `${n}, ${esc(withWord(c))}, none from ${esc(c.name)}’s own paper and groups.`
+      : `${n} on your ballot, ${esc(withWord(c))}.`;
+  return `<p class="picks-cov">${t}${esc(when(c) + askedTail(c))}</p>`;
 }

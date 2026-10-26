@@ -258,7 +258,9 @@ export function renderSummaries(): void {
    when the sheet closes (flushLens), so a chip tap stays quick on a 200-row ballot. */
 let lensDirty = false;
 export function renderLens(): void {
-  if (S.view !== 'ballot') { render(['mast']); return; }
+  // The first page: step 2 and, over it, the sources sheet its count opened (Oct 25), whose switches
+  // and the chips above them read the same list.
+  if (S.view !== 'ballot') { render(S.ui.sheet ? ['mast', 'sheet'] : ['mast']); return; }
   if (S.ui.sheet) { render(['sheet']); lensDirty = true; return; }
   // The coverage card under the masthead reads the lens too (a thin place's goes when endorsements do).
   anchored(() => render(['restore', 'ballot', 'bar']));

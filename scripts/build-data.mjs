@@ -556,6 +556,13 @@ for (const [id, vers] of endorserVersions) {
       paywall: vers.some((v) => v.rec.paywall === true) ? true : null,
       paywall_note_ok: vers.some((v) => v.rec.paywall === true) && newest.paywall_note_ok === false ? false : null,
       paywall_note: vers.some((v) => v.rec.paywall === true) ? str(newest.paywall_note) : null,
+      // A source whose site shows a bot check to anything that isn't a browser (the Oct 21 re-check
+      // couldn't read it; Kevin, Oct 25). Like a paywall, only a literal true counts, and blocked_note is
+      // its one line in plain words, from any file that defines it. The app lists it under "Couldn't
+      // read" in the sources sheet when it has no pick on the ballot, and says "Couldn't read" on a row
+      // instead of "Not checked yet".
+      blocked: vers.some((v) => v.rec.blocked === true) ? true : null,
+      blocked_note: vers.some((v) => v.rec.blocked === true) ? str((vers.find((v) => isStr(v.rec.blocked_note)) || { rec: {} }).rec.blocked_note) : null,
       // The places in its own `geography` (across every file that defines it), when it names any:
       // a regional source (the San Antonio Express-News, ["TX", "san-antonio-tx"]). The app reads
       // "not checked yet" on a district race only from sources whose places include the ballot's,

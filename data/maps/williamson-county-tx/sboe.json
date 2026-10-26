@@ -1,0 +1,118 @@
+{
+  "kind": "sboe",
+  "name": "State Board of Education district",
+  "title": "State Board of Education districts in and around Williamson County",
+  "places": [
+    "pflugerville-tx",
+    "round-rock-tx",
+    "austin-tx"
+  ],
+  "county": "Williamson",
+  "source_url": "https://data.capitol.texas.gov/dataset/ad1ae979-6df9-4322-98cf-6771cc67f02d/resource/640a507d-e26e-4b50-861c-7913c152bdc7/download/plane2106.zip",
+  "source_org": "Texas Legislative Council (plan PLANE2106)",
+  "plan": "The State Board of Education districts in use since 2022, published by the Texas Legislative Council as \"State Board of Education Districts, January 2023\". Williamson County is split between District 10 and District 5 (its southwest corner: far north Austin and Brushy Creek). Williamson's own layers carry no SBOE district.",
+  "plan_source": "https://data.capitol.texas.gov/dataset/plane2106",
+  "layer_dated": "2021-10-19",
+  "layer_dated_from": "the date the Texas Legislative Council published the shapefile",
+  "kept": "within 1500 m of Williamson County (the Census's 2020 county line); the map answers only for addresses the Census puts in Williamson",
+  "fetched": "2026-10-26",
+  "license": "Creative Commons Attribution (data.capitol.texas.gov)",
+  "label_property": "District",
+  "features": 2,
+  "simplified": "Douglas-Peucker to 10 m, TopoJSON quantized to 100000 steps across the map",
+  "bytes": 7100,
+  "checked": {
+    "on": "2026-10-26",
+    "simplified_vs_original": {
+      "points": 119,
+      "agree": 119,
+      "more_than_m_from_a_line": 12
+    },
+    "agrees_with": [
+      {
+        "what": "an independent copy of the same plan on ArcGIS Online (not an agency's)",
+        "source_url": "https://services7.arcgis.com/ZodPOMBKsdAsTqF4/arcgis/rest/services/TX_State_Board_of_Education_Districts_2025/FeatureServer/0",
+        "features_checked": 2,
+        "agree": 2
+      }
+    ],
+    "public_buildings": [
+      {
+        "name": "Spicewood Springs Branch Library",
+        "answer": "5",
+        "by": "both"
+      },
+      {
+        "name": "Round Rock City Hall",
+        "answer": "10",
+        "by": "both"
+      },
+      {
+        "name": "Round Rock Public Library",
+        "answer": "10",
+        "by": "both"
+      },
+      {
+        "name": "Williamson County courthouse",
+        "answer": "10",
+        "by": "both"
+      },
+      {
+        "name": "Georgetown Public Library",
+        "answer": "10",
+        "by": "both"
+      },
+      {
+        "name": "Cedar Park City Hall",
+        "answer": "10",
+        "by": "both"
+      },
+      {
+        "name": "Cedar Park Public Library",
+        "answer": "10",
+        "by": "both"
+      },
+      {
+        "name": "Leander City Hall",
+        "answer": "10",
+        "by": "both"
+      },
+      {
+        "name": "Hutto City Hall",
+        "answer": "10",
+        "by": "both"
+      },
+      {
+        "name": "Taylor City Hall",
+        "answer": "10",
+        "by": "both"
+      },
+      {
+        "name": "Williamson County Jester Annex",
+        "answer": "10",
+        "by": "both"
+      },
+      {
+        "name": "Brushy Creek Community Center",
+        "answer": "10",
+        "by": "both"
+      },
+      {
+        "name": "Williamson County Elections office",
+        "answer": "10",
+        "by": "both"
+      },
+      {
+        "name": "Canyon Vista Middle School",
+        "answer": "5",
+        "by": "both"
+      }
+    ]
+  },
+  "settles": [
+    {
+      "office": "State Board of Education",
+      "district": "SBOE District {label}"
+    }
+  ]
+}

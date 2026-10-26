@@ -11,7 +11,7 @@
   "plan": "Del Valle ISD's nine single-member districts, the map the district itself links voters to (dvisd.net, election information, read Oct 21, 2026). The layer's tenth polygon, \"SMD 0\", is no district on the board, so it is left out and an address there settles nothing.",
   "plan_source": "https://www.dvisd.net/about-us/board-of-trustees/election-information",
   "layer_dated": null,
-  "fetched": "2026-10-21",
+  "fetched": "2026-10-26",
   "license": "none stated",
   "label_property": "SMD",
   "features": 9,
@@ -31,7 +31,7 @@
   "simplified": "Douglas-Peucker to 10 m, TopoJSON quantized to 100000 steps across the map",
   "bytes": 8702,
   "checked": {
-    "on": "2026-10-21",
+    "on": "2026-10-26",
     "simplified_vs_original": {
       "points": 524,
       "agree": 524,

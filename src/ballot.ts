@@ -3,6 +3,7 @@
 import type { Contest, Endorsement, Endorser, HowTo, Item, Measure, PlaceBundle, StateBundle } from './types';
 import { S } from './state';
 import { localHowto } from './model/plan';
+import { seatless, hasSeat } from './model/maps';
 
 export type SectionKey = 'federal' | 'state' | 'judicial' | 'county' | 'city' | 'school' | 'special_district' | 'measures';
 export const SECTIONS: [SectionKey, string][] = [
@@ -71,8 +72,8 @@ const districtNum = (c: Contest): { kind: Group['kind']; n: number | null } => {
 /* Two seats of one district in a district question: Washington's "LD-32 Position 1" and "LD-32
    Position 2" are both on every 32nd District ballot, so answering the question with one puts both
    on (review, Oct 20: picking a position hid the other one). */
-const seatBase = (c: Item | undefined): string => (c && c.kind === 'contest' && /\s+Position\s+\d+$/i.test(c.district || '') ? (c.district || '').replace(/\s+Position\s+\d+$/i, '') : '');
-export const sameSeat = (a: Item | undefined, c: Item | undefined): boolean => !!a && !!c && a !== c && !!seatBase(a) && seatBase(a) === seatBase(c);
+const seatBase = (c: Item | undefined): string => (c && c.kind === 'contest' && hasSeat(c.district || '') ? seatless(c.district || '') : '');
+export const sameSeat = (a: Item | undefined, c: Item | undefined): boolean => !!a && !!c && a !== c && a.kind === 'contest' && c.kind === 'contest' && a.office === c.office && !!seatBase(a) && seatBase(a) === seatBase(c);
 export const contestDistrict = districtNum;
 
 /* A single regional race a place's own research listed, whose scope names that place's

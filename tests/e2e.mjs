@@ -1120,6 +1120,38 @@ async function mapsSettled(page, timeout = 10000) {
   noErrors(page, 'Dallas maps');
   await ctx.close();
 }
+// Harris County (Oct 26): Houston's one map settles commissioner, JP (each precinct's Place 2) and
+// SBOE. The Census is mocked at Houston City Hall's point and block, with its real Census districts.
+{
+  const { ctx, page } = await newPage();
+  const answer = { result: { addressMatches: [{ matchedAddress: 'TEST CITY HALL, HOUSTON, TX, 77002', coordinates: { x: -95.369483, y: 29.760724 }, geographies: {
+    States: [{ STATE: '48' }], Counties: [{ BASENAME: 'Harris' }], 'Incorporated Places': [{ BASENAME: 'Houston' }], '120th Congressional Districts': [{ BASENAME: '18' }],
+    '2026 State Legislative Districts - Upper': [{ BASENAME: '13' }], '2026 State Legislative Districts - Lower': [{ BASENAME: '147' }],
+    'Unified School Districts': [{ NAME: 'Houston Independent School District' }], '2020 Census Blocks': [{ INTPTLAT: '+29.7599317', INTPTLON: '-095.3689337' }] } }] } };
+  await page.route('https://geocoding.geo.census.gov/**', (route) => {
+    const cb = new URL(route.request().url()).searchParams.get('callback');
+    return route.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify(answer)})` });
+  });
+  const mapsAsked = [];
+  page.on('request', (r) => { if (/\/data\/maps\//.test(r.url())) mapsAsked.push(r.url().replace(/^.*\/data\/maps\//, '')); });
+  await openBallot(page, '77002');
+  const before = await text(page, '.addrbox .addr-n');
+  check('Houston maps: before a lookup, the address can find every race that depends on it', /^(\d+) races depend on your address\. Your address can find all \1\.$/.test(before), before);
+  await tap(page, '.addrbox [data-act="addr-open"]');
+  await page.fill('#addr-in', 'a test lookup');
+  await page.locator('form[data-form="addr"] button[type=submit]').tap();
+  await mapsSettled(page);
+  const set = await text(page, '.addrbox .addr-set');
+  check('Houston maps: City Hall: "Set from your address" names SBOE 4 and JP Precinct 1', /· State Board of Education, District 4 · Justice of the Peace, Precinct 1\.$/.test(set), set);
+  check('Houston maps: City Hall: nothing left for the sample ballot, and the box adds nothing', !(await page.$('.addrbox .addr-n')) && !(await page.$('.addrbox .addr-map')), await text(page, '.addrbox'));
+  await page.waitForTimeout(300);
+  const saved = JSON.parse((await savedVG(page)) || '{}');
+  const s = Object.values(saved.ballots || {}).find((x) => x && x.districts && x.districts['judicial|Justice of the Peace']) || {};
+  check('Houston maps: JP 1’s Place 2, SBOE 4, commissioner "none" (precinct 1 isn’t up)', s.districts && s.districts['judicial|Justice of the Peace'] === 'tx-harris-jp-1-2' && s.districts['state|Member, State Board of Education'] === 'tx-sboe-4' && s.districts['county|County Commissioner'] === 'none', JSON.stringify(s.districts));
+  check('Houston maps: one map, loaded once after the lookup', mapsAsked.join(' ') === 'harris-county-tx/county-districts.topo.json', mapsAsked.join(' '));
+  noErrors(page, 'Houston maps');
+  await ctx.close();
+}
 // Statewide Florida (Miami): the only races that depend on your address are appeals judges, which
 // the Census can't settle, so the box leads with the sample ballot; from the first page, the lookup
 // shows what it found under the place line, and the box says the sample ballot shows the rest.

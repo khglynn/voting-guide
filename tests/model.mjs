@@ -698,6 +698,32 @@ function roundTrip(name, stCode, places, mutate) {
       JSON.stringify([collin.s.districts, collin.notes]));
     st.S.b = st.emptyBallotState('');
   }
+  // Harris County (Oct 26): Houston's one map, the county's 1,224 precincts merged into 37 pieces by
+  // commissioner, JP and SBOE district. Houston's JP races are each precinct's Place 2 alone.
+  {
+    const TP = Object.fromEntries(JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts', 'maps', 'test-points.json'), 'utf8')).points.map((p) => [p.name, p]));
+    const hou = open('TX', ['houston-tx']);
+    const metas = maps.ballotMaps(hou).map((x) => x.meta);
+    const fc = maps.fromTopo(JSON.parse(fs.readFileSync(path.join(DATA, metas[0].file), 'utf8')));
+    const at = (name) => { const p = TP[name]; return [{ meta: metas[0], answer: maps.answerAt(fc, { point: { lon: p.point[0], lat: p.point[1] }, block: { lon: p.block[0], lat: p.block[1] } }, { edge: maps.edgeOf(metas[0]) }) }]; };
+    const lookup = (r, name) => { st.S.b = st.emptyBallotState(''); const res = at(name); const line = address.addrSummary(address.setFromAddress(hou, st.S.b, r, address.localAnswers(res, r))); return { line, notes: address.mapNotes(hou, st.S.b, r, res), s: st.S.b }; };
+    check('maps, Harris: one map, 37 pieces', metas.length === 1 && metas[0].kind === 'county-districts' && fc.features.length === 37 && metas[0].bytes < 75000, JSON.stringify(metas.map((m) => [m.kind, m.bytes, fc.features.length])));
+    const hall = lookup({ cd: 18, upper: 13, lower: 147, schools: ['Houston Independent School District'], county: 'Harris' }, 'Houston City Hall');
+    check('maps, Harris: City Hall: JP Precinct 1 (its Place 2), SBOE 4 (the unexpired term), commissioner "none" (precinct 1 isn’t up)',
+      hall.s.districts['judicial|Justice of the Peace'] === 'tx-harris-jp-1-2' && hall.s.districts['state|Member, State Board of Education'] === 'tx-sboe-4' && hall.s.districts['county|County Commissioner'] === 'none',
+      JSON.stringify(hall.s.districts));
+    check('maps, Harris: the line names SBOE District 4 and JP Precinct 1, and nothing is left for the sample ballot',
+      /State Board of Education, District 4 · Justice of the Peace, Precinct 1\.$/.test(hall.line) && views.ledger.addressCount() === 0 && hall.notes.length === 0, `${hall.line} | ${views.ledger.addressCount()}`);
+    const pas = lookup({ cd: 9, upper: 6, lower: 144, schools: ['Pasadena Independent School District'], county: 'Harris' }, 'Pasadena City Hall');
+    check('maps, Harris: Pasadena City Hall: commissioner Precinct 2, JP 2', pas.s.districts['county|County Commissioner'] === 'tx-harris-commissioner-2' && pas.s.districts['judicial|Justice of the Peace'] === 'tx-harris-jp-2-2', JSON.stringify(pas.s.districts));
+    // Fort Bend-side Houston: Harris County's races aren't theirs, and the box says so; SBOE stays open.
+    const fb = lookup({ cd: 18, upper: 13, lower: 27, schools: ['Fort Bend Independent School District'], county: 'Fort Bend' }, 'Missouri City City Hall');
+    check('maps, Harris: Fort Bend-side: Harris County’s commissioner and JP "none", SBOE open, and whose county races they are',
+      fb.s.districts['county|County Commissioner'] === 'none' && fb.s.districts['judicial|Justice of the Peace'] === 'none' && fb.s.districts['state|Member, State Board of Education'] === undefined
+      && fb.notes[0] === 'Your county races are Fort Bend County’s. This guide lists Harris County’s; your official sample ballot shows yours.',
+      JSON.stringify([fb.s.districts, fb.notes]));
+    st.S.b = st.emptyBallotState('');
+  }
   // The Census answer keeps the point and the block's interior point, for the maps only.
   const g = geo.parseCensus({ result: { addressMatches: [{ matchedAddress: 'TEST CITY HALL, AUSTIN, TX, 78701', coordinates: { x: -97.746669, y: 30.26496 }, geographies: { States: [{ STATE: '48' }], '2020 Census Blocks': [{ INTPTLAT: '+30.2646818', INTPTLON: '-097.7472987' }] } }] } })[0];
   check('maps: parseCensus keeps the point and the block’s interior point', g.point.lon === -97.746669 && g.point.lat === 30.26496 && g.block.lon === -97.7472987 && g.block.lat === 30.2646818, JSON.stringify([g.point, g.block]));

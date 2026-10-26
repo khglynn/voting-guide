@@ -1,0 +1,178 @@
+{
+  "kind": "county-districts",
+  "name": "county precinct",
+  "title": "Harris County commissioner, justice of the peace and constable, and State Board of Education districts, from the county's 2026 voting precincts",
+  "places": [
+    "houston-tx"
+  ],
+  "county": "Harris",
+  "source_url": "https://services.arcgis.com/su8ic9KbA7PYVxPS/arcgis/rest/services/Tax_votingprecincts_2026/FeatureServer/0",
+  "source_org": "Harris County (Tax Office and Office of County Administration GIS)",
+  "credit": "Harris County Commissioners Court, Harris County Office of County Administration, and Harris County Tax Office",
+  "plan": "Harris County's 1,224 voting precincts effective Jan 1, 2026 (the layer says \"data as of 06/08/2026\"). Each carries the commissioner, justice of the peace and constable, and State Board of Education district the county builds its ballots from; precincts with the same three are merged here, so their outer lines are the precincts' own.",
+  "plan_source": "https://www.arcgis.com/home/item.html?id=7768c6b089d04d4ba74771ece2d24d52",
+  "layer_dated": "2026-07-01",
+  "layer_dated_from": "the layer's last data edit, as its server reports it",
+  "fetched": "2026-10-26",
+  "license": "none stated",
+  "label_property": "JP_Constab",
+  "props": {
+    "commissioner": "CoComm",
+    "jp": "JP_Constab",
+    "sboe": "SBOE_E2106"
+  },
+  "features": 37,
+  "dissolved": "1224 voting precincts merged by CoComm, JP_Constab, SBOE_E2106: one piece per combination",
+  "simplified": "Douglas-Peucker to 10 m, TopoJSON quantized to 100000 steps across the map",
+  "bytes": 70404,
+  "checked": {
+    "on": "2026-10-26",
+    "simplified_vs_original": {
+      "points": 2171,
+      "agree": 2171,
+      "more_than_m_from_a_line": 12
+    },
+    "agrees_with": [
+      {
+        "what": "the county's commissioner precincts (the 2021 plan; the County Attorney's layer, edited 2026-06-12)",
+        "source_url": "https://services.arcgis.com/su8ic9KbA7PYVxPS/arcgis/rest/services/Commissioner_Precinct/FeatureServer/0",
+        "features_checked": 37,
+        "agree": 37
+      },
+      {
+        "what": "the county's December 2025 copy of the 2026 precincts (named \"Proposed\"), all three codes",
+        "source_url": "https://services.arcgis.com/su8ic9KbA7PYVxPS/arcgis/rest/services/HC_Voting_Precinct_2026_Final/FeatureServer/0",
+        "features_checked": 37,
+        "agree": 37
+      }
+    ],
+    "public_buildings": [
+      {
+        "name": "Houston City Hall",
+        "answer": "1",
+        "by": "both"
+      },
+      {
+        "name": "Harris County Civil Courthouse",
+        "answer": "1",
+        "by": "both"
+      },
+      {
+        "name": "Harris County Administration Building",
+        "answer": "1",
+        "by": "both"
+      },
+      {
+        "name": "Kendall Neighborhood Library",
+        "answer": "5",
+        "by": "both"
+      },
+      {
+        "name": "Jungman Neighborhood Library",
+        "answer": "5",
+        "by": "both"
+      },
+      {
+        "name": "Montrose Neighborhood Library",
+        "answer": "1",
+        "by": "both"
+      },
+      {
+        "name": "Heights Neighborhood Library",
+        "answer": "1",
+        "by": "both"
+      },
+      {
+        "name": "Acres Homes Neighborhood Library",
+        "answer": "1",
+        "by": "both"
+      },
+      {
+        "name": "Kashmere Gardens Neighborhood Library",
+        "answer": "1",
+        "by": "both"
+      },
+      {
+        "name": "Stanaker Neighborhood Library",
+        "answer": "6",
+        "by": "both"
+      },
+      {
+        "name": "Freeman Neighborhood Library",
+        "answer": "8",
+        "by": "both"
+      },
+      {
+        "name": "Mancuso Neighborhood Library",
+        "answer": "6",
+        "by": "both"
+      },
+      {
+        "name": "Moody Neighborhood Library",
+        "answer": "1",
+        "by": "both"
+      },
+      {
+        "name": "Lakewood Neighborhood Library",
+        "answer": "3",
+        "by": "both"
+      },
+      {
+        "name": "Kingwood Branch Library",
+        "answer": "4",
+        "by": "both"
+      },
+      {
+        "name": "Tuttle Neighborhood Library",
+        "answer": "6",
+        "by": "both"
+      },
+      {
+        "name": "Melcher Neighborhood Library",
+        "answer": "6",
+        "by": "both"
+      },
+      {
+        "name": "Collier Regional Library",
+        "answer": "1",
+        "by": "both"
+      },
+      {
+        "name": "Robinson-Westchase Neighborhood Library",
+        "answer": "5",
+        "by": "both"
+      },
+      {
+        "name": "Pasadena City Hall",
+        "answer": "2",
+        "by": "both"
+      },
+      {
+        "name": "Baytown City Hall",
+        "answer": "3",
+        "by": "both"
+      },
+      {
+        "name": "Bellaire City Hall",
+        "answer": "1",
+        "by": "both"
+      }
+    ]
+  },
+  "settles": [
+    {
+      "office": "^County Commissioner$",
+      "scope": "\\bHarris County\\b",
+      "district": "Precinct {commissioner}"
+    },
+    {
+      "office": "^Justice of the Peace$",
+      "scope": "\\bHarris County\\b",
+      "district": "Precinct {jp}"
+    },
+    {
+      "office": "State Board of Education",
+      "district": "SBOE District {sboe}"
+    }
+  ]
+}

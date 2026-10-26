@@ -18,7 +18,7 @@ import { FOUND_ONLY, addressKinds } from '../model/address';
 import { judgeBatch, judicialReview, judgesLead, judgesRule } from '../model/judges';
 import { ext, sampleBallot, isOpen, escP, leadRest, reportAttrs, HIDE } from './common';
 import { lensSummary } from './lens';
-import { covOf, askBtn, askFailHTML, hearBtn, headCovHTML } from './coverage';
+import { covOf, cardShows, cardAsks, headCovHTML } from './coverage';
 import { noEndorsements } from '../model/lens';
 import { addrHTML } from './mast';
 import { openHTML, censusSettles } from './open';
@@ -552,15 +552,20 @@ export function addressHelps(): boolean {
    settle. A reload shows the last two. When it put no race on the ballot and nothing is left for
    the sample ballot either (a DC ward's), the box holds only what was found, or the form again
    after "Not it? Try again", and after a reload there is no box, as before the lookup.
-   Its lines, its form and its buttons come apart, so a statewide-only ballot can hold them in one
-   notice with the statewide line (statewideHTML). */
+   While a coverage card shows (views/coverage.ts: a statewide ballot, a thin place), the card owns the
+   screen's one dark button (Kevin, Oct 25: "the main CTA being open sample ballot... it's just kind of
+   confounding"): "Official sample ballot" is an outline then, and "Use my address" is too until the
+   card's request is sent. */
 interface AddrParts { lines: string; form: string; btns: string[] }
 const sbLinkHTML = (sb: { url: string } | null, dark: boolean): string => (sb ? `<a class="mini${dark ? ' dark' : ''}" href="${esc(sb.url)}" target="_blank" rel="noopener">Official sample ballot</a>` : '');
-const USE_ADDR = '<button class="mini dark" data-act="addr-open" data-fk="addr-open">Use my address</button>';
+const useAddrHTML = (dark: boolean): string => `<button class="mini${dark ? ' dark' : ''}" data-act="addr-open" data-fk="addr-open">Use my address</button>`;
 function addrParts(): AddrParts | null {
   const n = addressCount();
   const note = S.b.addrNote;
   const sb = sampleBallot();
+  const c = covOf();
+  const card = cardShows(c);
+  const asks = cardAsks(c);
   const form = S.ui.addrOpen ? addrHTML() : '';
   // What's left for the sample ballot, and why, in a voter's words (Kevin, Oct 20: "N still depend on
   // your address" read as a contradiction right after typing one).
@@ -577,54 +582,30 @@ function addrParts(): AddrParts | null {
     // Before a lookup, what it can and can't do, so what's left after it is no surprise.
     const k = look ? addressRaces().filter((c) => censusSettles(c)).length : 0;
     const tail = !look ? ' Your official sample ballot shows which are yours.' : k < n ? ` Your address finds ${k} of them. Your official sample ballot shows all ${n}.` : '';
-    return { lines: `<p class="addr-n"><b>${n === 1 ? '1 race depends' : `${n} races depend`} on your address.</b>${tail}</p>`, form, btns: form ? [] : [look ? USE_ADDR : '', sbLinkHTML(sb, !look)].filter(Boolean) };
+    return { lines: `<p class="addr-n"><b>${n === 1 ? '1 race depends' : `${n} races depend`} on your address.</b>${tail}</p>`, form, btns: form ? [] : [look ? useAddrHTML(!asks) : '', sbLinkHTML(sb, !look && !card)].filter(Boolean) };
   }
   const found = S.ui.addrFound && !S.ui.addrOpen
     ? `<p class="addr-found" tabindex="-1" data-fk="addr-found"><b>Found:</b> ${esc(S.ui.addrFound)} <button class="linkbtn" data-act="addr-again" data-fk="addr-again">Not it? Try again</button></p>` : '';
   const none = note === FOUND_ONLY;
   if (none && !n) return found || form ? { lines: found, form, btns: [] } : null;
   const filledLine = S.ui.addrFilled ? `<p class="addr-fill">${esc(S.ui.addrFilled)}</p>` : '';
-  return { lines: `${found}${none ? '' : `<p class="addr-set">${esc(note)}</p>`}${filledLine}${n ? rest(n) : ''}`, form, btns: !form && (none || n) && sb ? [sbLinkHTML(sb, true)] : [] };
+  return { lines: `${found}${none ? '' : `<p class="addr-set">${esc(note)}</p>`}${filledLine}${n ? rest(n) : ''}`, form, btns: !form && (none || n) && sb ? [sbLinkHTML(sb, !card)] : [] };
 }
 const btnRow = (btns: string[]): string => (btns.length ? `<div class="row-btns">${btns.join('')}</div>` : '');
 function addrBoxHTML(): string {
   const p = addrParts();
   return p ? `<div class="addrbox">${p.lines}${p.form}${btnRow(p.btns)}</div>` : '';
 }
-/* A statewide-only ballot's one notice (Kevin, Oct 25, on a St. Louis screenshot: "There's this double
-   button stack ... and we shouldn't do that here or elsewhere"): the statewide line and the address box
-   in one block with one row of buttons: "Use my address" while it can settle something, "Official
-   sample ballot" once, and the city: "Add my city for me" in one tap when the ZIP is known (views/
-   coverage.ts), "Ask for my city" (Request a city) when it isn't, "Want to hear when it's in?" once
-   asked, and "Open my city's ballot" once the ZIP has a place. While the address form is open it
-   takes the row's place, as in the address box. */
-function statewideHTML(): string {
-  const b = S.ballot!;
-  const p = addrParts();
-  const c = covOf();
-  const sb = sampleBallot();
-  const st = c ? c.state : 'none';
-  const line = st === 'landed' ? '<b>Your city is in the guide now.</b>'
-    : st === 'asked' ? '<b>We’re adding your city.</b> It usually takes about a day.'
-      : `<b>We only have ${esc(b.stateName)}’s statewide races for your area so far.</b>`;
-  const look = !S.b.addrNote && addressCount() > 0 && addressHelps();
-  const city = st === 'landed' ? '<button class="mini dark" data-act="change-place" data-fk="sw-open">Open my city’s ballot</button>'
-    : st === 'asked' && c ? hearBtn(c, 'mini', 'sw-hear')
-      : c && c.ask ? askBtn(c, 'Add my city for me', 'mini', 'sw-ask')
-        : `<button class="mini" ${reportAttrs({ city: true, fk: 'ask-city' })}>Ask for my city</button>`;
-  const btns = p && p.form ? [] : [look ? USE_ADDR : '', sbLinkHTML(sb, !look && st !== 'landed'), city].filter(Boolean);
-  return `<div class="${p ? 'addrbox ' : ''}statewide-note"><p class="sw-line">${line}</p>${p ? p.lines + p.form : ''}${c ? askFailHTML(c) : ''}${btnRow(btns)}</div>`;
-}
+/* The ballot's head. A statewide-only ballot's notice is the coverage card under the masthead now
+   (mast.ts restoreHTML), so the head holds the address box alone, doing its own job, on every ballot. */
 export function ballotHeadHTML(): string {
-  const b = S.ballot!;
-  const statewideOnly = !b.places.length;
   const filled = S.ui.bulk && canUndo()
     ? `<p class="filled">${esc(S.ui.bulk)} filled in${esc(S.ui.bulkWhy || '')}. <button class="linkbtn" data-act="undo-bulk" data-fk="filled-undo">Undo</button></p>` : '';
-  // How many sources, or a thin place's notice, under whose picks you see; nothing while endorsements are off.
+  // How many sources, scoped to this ballot, under whose picks you see; nothing while endorsements are off.
   const cov = noEndorsements() ? '' : headCovHTML();
   return `<div class="bhead"><h2 class="step su-h bal-h" id="ballot-h"><span class="step-n" aria-hidden="true">3</span>Your ballot</h2>
       <p class="picks-line"><span>Endorsements: ${esc(lensSummary())}</span><button class="mini" data-act="picks" data-fk="picks-edit">Edit</button></p>
-      ${cov}${filled}${statewideOnly ? statewideHTML() : addrBoxHTML()}
+      ${cov}${filled}${addrBoxHTML()}
     </div>
     ${headsHTML(headsUp('ballot'))}`;
 }

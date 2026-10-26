@@ -644,7 +644,7 @@ function openShelf(kind: ShelfKind, d: DOMStringMap, fk: string, back: Shelf['ba
   const form = isForm(kind);
   const r: Shelf = {
     kind,
-    f: kind === 'city' ? { city: d.city || '', zip: S.ballot && S.view === 'ballot' ? S.b.zip : S.zip || S.coverage?.zip || '', reach: '' } : kind === 'report' ? { wrong: '', reach: '' } : {},
+    f: kind === 'city' ? (d.hint === 'follow' ? { reach: '' } : { city: '', zip: S.ballot && S.view === 'ballot' ? S.b.zip : S.zip || S.coverage?.zip || '', reach: '' }) : kind === 'report' ? { wrong: '', reach: '' } : {},
     what: d.what || '', tag: d.tag || '', hint: d.hint || '',
     // What a form sends along is read now, from the page it was opened on (never the address box or the hash).
     along: form ? collectAlong() : { page: '', where: '', url: '', data: '', build: '', device: '', errors: [] },
@@ -744,29 +744,29 @@ export async function sendReport(): Promise<void> {
   focusFk(ok ? 'report-done' : 'report-send');
 }
 
-/* ---------- one tap: "Add Pensacola's endorsements for me", "Add my city for me" (views/coverage.ts) ----------
-   Posts the form's five answers with nothing typed (shelf.askBody), the way a sent form does. Sent, it's
-   remembered on this device (model/coverage.ts rememberAsk), so the notice says "We're gathering..." here
-   until the data lands, and focus goes to its "Want to hear when it's in?". Refused or unanswered, the
-   button comes back with the form in a new tab beside it. Repaints wherever the button was: the first
-   page, the Edit sheet, or the ballot's head. */
-const HEAR_FK: Record<string, string> = { 'cov-ask': 'cov-hear', 'hd-ask': 'hd-hear', 'sw-ask': 'sw-hear' };
+/* ---------- one tap: "Ask Kevin to add my city", "Ask Kevin to look for local picks" (views/coverage.ts) ----------
+   The coverage card's button posts the form's five answers with nothing typed (shelf.askBody), the way a
+   sent form does. Sent, it's remembered on this device (model/coverage.ts rememberAsk): the card keeps its
+   slot, says "Request sent." with the day, and focus moves to its lead, so the change is heard as well as
+   seen. Refused or unanswered, the button comes back with the form in a new tab under it. The card lives
+   in step 1 on the first page and under the masthead on the ballot, where the quiet line in the head and
+   the address box's weights follow it. */
 function repaintCov(): void {
-  if (S.ui.sheet === 'picks') { render(['sheet']); return; }
+  if (S.view !== 'ballot') { render(['mast']); return; }
+  anchored(() => render(['restore']));
   renderAddr();
 }
-A['cov-ask'] = async (_d, el) => {
+A['cov-ask'] = async () => {
   const c = covOf();
   if (!c || !c.ask || c.state !== 'none' || S.ui.covAsk === 'sending') return;
   const ask = c.ask;
-  const fk = el.dataset.fk || 'cov-ask';
   S.ui.covAsk = 'sending';
   repaintCov();
   const state = await postForm(askBody(ask, collectAlong()));
   S.ui.covAsk = state === 'sent' ? '' : state;
   if (state === 'sent') rememberAsk(ask.key);
   repaintCov();
-  focusFk(state === 'sent' ? HEAR_FK[fk] || fk : fk);
+  focusFk(state === 'sent' ? 'cov-lead' : 'cov-ask');
 };
 
 /* Support's "send the guide to a friend": Help friends vote when a ballot is showing (the shelf gives

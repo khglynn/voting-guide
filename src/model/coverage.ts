@@ -14,7 +14,7 @@
    comes back, so a request the pipeline turned down never reads "about a day" forever. */
 import type { Ballot } from '../ballot';
 import type { Index, PlaceCoverage } from '../types';
-import { daysBetween, load, save, todayISO } from '../util';
+import { daysBetween, fmtDate, load, save, todayISO } from '../util';
 import { withPicks } from './lens';
 
 /* The same rule as scripts/coverage.mjs isThin (tests/model.mjs checks they agree on every place). */
@@ -31,9 +31,15 @@ export interface Cov {
   withPicks: number;
   checked: string | null;
   name: string;        // "Chicago", "Aurora or Denver", "Missouri"
+  stateName: string;   // "Florida": the thin card's "picks from newspapers and groups across Florida"
+  single: boolean;     // one place on the ballot ("24 sources on Chicago's ballot")
   zip: string;
   ask: Ask | null;     // what one tap would ask for, when it can
   state: AskState;     // landed: a statewide ballot whose ZIP has a place now
+  askedOn: string | null; // the day this device sent the request, while it counts
+  localRaces: number;  // a thin place's own races a voter decides, and how many have a pick from anyone
+  localRacesWithPicks: number;
+  late: boolean;       // Election Day is two days away or less: say it may not land before you vote
 }
 
 /* ---------- requests remembered on this device ---------- */
@@ -58,11 +64,18 @@ export function rememberAsk(key: string, today = todayISO()): void {
   save(KEY, a);
 }
 
+/* "today" on the day a request was sent, then its date ("Oct 25"), in the card, the quiet lines and the
+   follow-up sheet alike. */
+export const askedWord = (on: string | null, today = todayISO()): string => (!on || on === today ? 'today' : fmtDate(on, { weekday: false }));
+
 const bare = (l: string): string => l.replace(/\s*\(.*\)$/, '');
 
 export function ballotCoverage(b: Ballot, idx: Index, zip: string, today = todayISO()): Cov {
   const sources = b.endorsers.length;
   const picks = withPicks(b, b.endorsers).length;
+  const e = b.howto.election_date;
+  const late = !!e && /^\d{4}-\d{2}-\d{2}$/.test(e) && daysBetween(today, e) <= 2;
+  const base = { sources, withPicks: picks, stateName: b.stateName, zip, late, localRaces: 0, localRacesWithPicks: 0 };
   if (!b.places.length) {
     const st = idx.states[b.st];
     const ask: Ask | null = zip ? {
@@ -70,19 +83,22 @@ export function ballotCoverage(b: Ballot, idx: Index, zip: string, today = today
       wrong: `Please add the city for ZIP ${zip} in ${b.stateName} (one-tap from the page)`,
     } : null;
     const landed = !!zip && (idx.zips[zip] || []).length > 0;
-    return { kind: 'statewide', sources, withPicks: picks, checked: st ? st.checked : null, name: b.stateName, zip, ask,
-      state: landed ? 'landed' : ask && askedOn(ask.key, today) ? 'asked' : 'none' };
+    const on = ask ? askedOn(ask.key, today) : null;
+    return { ...base, kind: 'statewide', checked: st ? st.checked : null, name: b.stateName, single: false, ask,
+      state: landed ? 'landed' : on ? 'asked' : 'none', askedOn: landed ? null : on };
   }
   const ps = b.places.map((p) => idx.places[p.id]).filter(Boolean);
   const checked = ps.map((p) => p.checked).filter((d): d is string => !!d).sort().pop() || null;
   const name = b.places.map((p) => bare(p.label)).join(' or ');
   const one = b.places.length === 1 && ps.length === 1 ? ps[0] : null;
-  if (!one || !isThin(one)) return { kind: 'full', sources, withPicks: picks, checked, name, zip, ask: null, state: 'none' };
+  if (!one || !isThin(one)) return { ...base, kind: 'full', checked, name, single: b.places.length === 1, ask: null, state: 'none', askedOn: null };
   const ask: Ask = {
     key: `p:${b.places[0].id}`, name, what: `Gather endorsements: ${name}`,
     wrong: `Please gather local endorsements for ${name} (one-tap from the page)`,
   };
   const on = askedOn(ask.key, today);
   // Asked, until data checked after the request day comes in: then the place reads as it is.
-  return { kind: 'thin', sources, withPicks: picks, checked, name, zip, ask, state: on && !(checked && checked > on) ? 'asked' : 'none' };
+  const asked = !!on && !(checked && checked > on);
+  return { ...base, kind: 'thin', checked, name, single: true, ask, state: asked ? 'asked' : 'none', askedOn: asked ? on : null,
+    localRaces: one.local_races, localRacesWithPicks: one.local_races_with_picks };
 }

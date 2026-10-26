@@ -7,6 +7,7 @@ import { trustHTML } from './trust';
 export { cityCount } from './trust';
 import { countyName } from './ledger';
 import { doorPicksHTML, placeLine } from './setup';
+import { covCardHTML } from './coverage';
 import { stateName, tidyAddress } from '../geo';
 import { pageWalk, decisionItems } from '../ballot';
 
@@ -137,9 +138,12 @@ function whereHTML(): string {
   const err = S.zipErr ? `<p class="zip-err" role="alert" id="zip-err">${esc(S.zipErr)}</p>` : '';
   let after = '';
   if (b) {
-    // "Austin, Texas · 78704". After the place question, Change asks it again.
+    // "Austin, Texas · 78704", or "Missouri, statewide races only · 63110". After the place question,
+    // Change asks it again. Under it, a statewide ballot's or a thin place's coverage card (views/coverage.ts),
+    // where coverage belongs: with where you vote (Kevin, Oct 25).
     const zip = S.b.zip ? ` · ${esc(S.b.zip)}` : '';
-    after = `<p class="door-place" role="status"><span><b>${esc(placeLine(b))}</b>${zip}</span>${S.picked ? '<button class="linkbtn" data-act="rechoose" data-fk="rechoose">Change</button>' : ''}</p>`;
+    const where = b.places.length ? placeLine(b) : `${b.stateName}, statewide races only`;
+    after = `<p class="door-place" role="status"><span><b>${esc(where)}</b>${zip}</span>${S.picked ? '<button class="linkbtn" data-act="rechoose" data-fk="rechoose">Change</button>' : ''}</p>${covCardHTML('door')}`;
   } else if (S.zipChoice && idx) {
     after = `<div class="choose" role="group" aria-labelledby="which-h">
       ${(() => { const dc = S.zipChoice.placeIds.every((id) => idx.places[id].state === 'DC'); const n = S.zipChoice.placeIds.length;
@@ -183,7 +187,14 @@ function resumeHTML(): string {
     <div class="row-btns"><button class="mini dark" data-act="next" data-fk="resume-go">Pick up where I left off</button></div>
     <button class="ibtn resume-x" data-act="resume-x" data-fk="resume-x" aria-label="Close">${CLOSE}</button></div>`;
 }
+/* The slot under the masthead: a shared link's question or "Welcome back", then the ballot's coverage card
+   (views/coverage.ts), above the next step, so a phone shows it on the first screen (Kevin, Oct 25: "It
+   reads as a standard header, not a callout that you should wait"). */
 export function restoreHTML(): string {
+  const card = S.view === 'ballot' && S.ballot && S.ui.view === 'ballot' ? covCardHTML('ballot') : '';
+  return promptHTML() + card;
+}
+function promptHTML(): string {
   if (!S.pending) return S.ui.resume && S.view === 'ballot' && S.ballot && S.ui.view === 'ballot' ? resumeHTML() : '';
   if (S.pending.kind === 'shared') {
     const where = S.ballot ? (S.ballot.places.length ? S.ballot.places.map((p) => p.label.replace(/\s*\(.*\)$/, '')).join(' or ') : S.ballot.stateName) : '';

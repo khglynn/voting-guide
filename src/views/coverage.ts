@@ -1,67 +1,120 @@
-/* How covered your ballot is (model/coverage.ts), in three spots that say the same thing: step 2 on the
-   first page and in the ballot's Edit sheet (setup.ts pickControlsHTML), and a shorter line under the
-   ballot's "Endorsements: ... Edit" (ledger.ts ballotHeadHTML). A statewide ballot's request lives in
-   its head's one notice instead (ledger.ts statewideHTML). Plain words, counts in words where they
-   read better ("none with picks"), never "minutes": the pipeline runs scouts, a judge and Kevin's
-   review before anything lands, so "about a day" is the honest number. */
+/* How covered your ballot is (model/coverage.ts), from the copy pass after Kevin's phone test (Oct 25:
+   "It reads as a standard header, not a callout that you should wait ... It's especially confusing
+   because there ARE endorsements"; spec: claude-plans/2026-10-21-third-pass/coverage-copy-pass.md).
+   - One gold coverage card per screen, in the place slot: under the place line in step 1 on the first
+     page (mast.ts whereHTML), under the masthead on the ballot page (mast.ts restoreHTML). It leads
+     with what's missing, says what's here, and owns the screen's one action: "Ask Kevin to add my
+     city", "Ask Kevin to look for local picks". After the tap it keeps its slot and its gold, leads
+     with a tick and "Request sent.", and offers "Tell me when it's in".
+   - Everywhere else a quiet line with no button, in the same nouns with the same date: step 2 and the
+     Edit sheet (setup.ts), under the ballot's "Endorsements: ... Edit" (ledger.ts).
+   Never "minutes": the pipeline runs scouts, a judge and Kevin's review, so "about a day" is honest. */
 import { S } from '../state';
 import { esc, fmtDate, plural } from '../util';
-import { ballotCoverage, type Cov } from '../model/coverage';
-import { shelfAttrs } from './common';
+import { ballotCoverage, askedWord, type Cov } from '../model/coverage';
+import { noEndorsements } from '../model/lens';
+import { shelfAttrs, reportAttrs, sampleBallot } from './common';
 import { askFallbackURL } from './shelf';
 
 export const covOf = (): Cov | null => (S.ballot && S.index ? ballotCoverage(S.ballot, S.index, S.b.zip) : null);
 
 const when = (c: Cov): string => (c.checked ? ` Last checked ${fmtDate(c.checked, { weekday: false })}.` : '');
 const withWord = (c: Cov): string => (c.withPicks === 0 ? 'none with picks' : c.withPicks === c.sources ? 'all with picks' : `${c.withPicks} with picks`);
-const count = (c: Cov): string => `<span class="cov-n">${esc(c.sources ? plural(c.sources, 'source') : 'No sources')}</span>`;
-/* "24 sources for Chicago, 12 with picks. Last checked Oct 19." Without the place on the ballot (the
-   masthead names it): "24 sources, 12 with picks. ..." */
-export function countLine(c: Cov, named = true): string {
-  const where = !named ? '' : c.kind === 'statewide' ? ` for ${esc(c.name)}’s statewide races` : ` for ${esc(c.name)}`;
-  return `${count(c)}${where}, ${esc(withWord(c))}.${esc(when(c))}`;
-}
+const count = (c: Cov): string => (c.sources ? plural(c.sources, 'source') : 'No sources');
+const askedTail = (c: Cov): string => (c.state === 'asked' ? ` You asked for ${c.kind === 'thin' ? 'local picks' : 'your city’s races'} ${askedWord(c.askedOn)}.` : '');
+
+/* ---------- the card ---------- */
+/* A statewide ballot always gets the card (missing races matter with endorsements on or off); a thin
+   place only while endorsements show (it is only about picks). Covered places never do. */
+export const cardShows = (c: Cov | null): c is Cov => !!c && (c.kind === 'statewide' || (c.kind === 'thin' && !noEndorsements()));
+/* The card's button is the screen's dark one until the request is sent: the address box's buttons are
+   outlines meanwhile (ledger.ts). */
+export const cardAsks = (c: Cov | null): boolean => cardShows(c) && c.state !== 'asked';
 
 /* The one-tap button, its "Sending..." while the post is out, and what a failed send offers. */
-export function askBtn(c: Cov, label: string, cls = 'mini', fk = 'cov-ask'): string {
+export function askBtn(label: string, cls: string): string {
   const busy = S.ui.covAsk === 'sending';
-  return `<button class="${cls}" data-act="cov-ask" data-fk="${fk}"${busy ? ' aria-disabled="true"' : ''}>${esc(busy ? 'Sending...' : label)}</button>`;
+  return `<button class="${cls}" data-act="cov-ask" data-fk="cov-ask"${busy ? ' aria-disabled="true"' : ''}>${esc(busy ? 'Sending...' : label)}</button>`;
 }
 export function askFailHTML(c: Cov): string {
   const f = S.ui.covAsk;
   if (!c.ask || (f !== 'failed' && f !== 'unsure')) return '';
   return `<p class="rp-fail" role="alert">${f === 'unsure' ? 'Couldn’t confirm it sent.' : 'That didn’t send.'} <a href="${esc(askFallbackURL(c.ask))}" target="_blank" rel="noopener" data-rp-alt>Open the form in a new tab instead</a>.</p>`;
 }
-/* "Want to hear when it's in?": Request a city, with the place (or just the ZIP) filled in, for the
-   optional email or phone. Kevin tells people himself from the queue; nothing is automated. */
-export const hearBtn = (c: Cov, cls = 'linkbtn', fk = 'cov-hear'): string =>
-  `<button class="${cls}" ${shelfAttrs({ kind: 'city', hint: 'follow', city: c.kind === 'thin' ? c.name : '', fk })}>Want to hear when it’s in?</button>`;
+/* "Tell me when it's in" (a statewide ballot) or "Tell me what he finds" (a thin place): the shelf's
+   follow-up form, the request shown as text, an email or phone the one thing to type (shelf.ts). */
+export const hearLabel = (c: Cov): string => (c.kind === 'thin' ? 'Tell me what he finds' : 'Tell me when it’s in');
+export const hearBtn = (c: Cov, cls = 'mini', fk = 'cov-hear'): string =>
+  `<button class="${cls}" ${shelfAttrs({ kind: 'city', hint: 'follow', fk })}>${esc(hearLabel(c))}</button>`;
 
-/* Step 2, under "Picks in N of your M races", once a ballot is found. A full place gets the count line;
-   a thin place, or a statewide ballot found by its ZIP, gets the notice with its one tap. */
+const TICK = '<svg class="cov-tick" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 6.3l2.6 2.6L10 3.3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>';
+const lead = (text: string, tick = false): string => `<p class="cov-lead" id="cov-h" tabindex="-1" data-fk="cov-lead">${tick ? TICK : ''}<b>${esc(text)}</b></p>`;
+const line = (cls: string, html: string): string => `<p class="${cls}">${html}</p>`;
+const row = (html: string): string => `<div class="row-btns">${html}</div>`;
+
+/* `where`: the first page's step 1, or the ballot page under the masthead. There a shared link's
+   question or "Welcome back" may sit above it; its dark button goes first, and the card's is an
+   outline until that is answered, so the slot never holds two dark buttons. */
+export function covCardHTML(where: 'door' | 'ballot'): string {
+  const c = covOf();
+  if (!cardShows(c)) return '';
+  const statewide = c.kind === 'statewide';
+  const dark = where === 'ballot' && (!!S.pending || S.ui.resume) ? 'mini' : 'mini dark';
+  const sb = sampleBallot();
+  const sbLine = sb ? line('cov-sb', `Voting before then? Your <a href="${esc(sb.url)}" target="_blank" rel="noopener">official sample ballot</a> lists every race.`) : '';
+  const name = esc(c.name);
+  let body: string;
+  if (c.state === 'landed') {
+    body = lead('Your city is in the guide now.') + line('cov-here', `This page still shows ${name}’s statewide races only.`)
+      + row(`<button class="${dark}" data-act="change-place" data-fk="cov-open">Open my city’s ballot</button>`);
+  } else if (c.state === 'asked') {
+    const on = askedWord(c.askedOn);
+    body = statewide
+      ? lead('Request sent. Kevin is adding your city.', true)
+        + line('cov-here', esc(c.late ? `You asked ${on}. It may not be in before you vote.` : `You asked ${on}. It usually takes about a day${on === 'today' ? ', so check back tomorrow' : ''}.`))
+        + line('cov-miss', 'Until then, you can pick your statewide races below.') + sbLine + row(hearBtn(c))
+      : lead(`Request sent. Kevin is looking for ${c.name}’s local picks.`, true)
+        + line('cov-here', esc(c.late ? `You asked ${on}. He may not finish before you vote.` : `You asked ${on}. It usually takes about a day. He may not find any, since some groups don’t endorse.`))
+        + line('cov-miss', 'Your ballot works now. Any local picks he finds will show up here.') + row(hearBtn(c));
+  } else if (statewide) {
+    const action = c.ask
+      ? row(askBtn('Ask Kevin to add my city', dark)) + askFailHTML(c)
+        + line('fine cov-fine', c.late ? 'One tap. It sends Kevin your ZIP and nothing about you. Kevin may not get to it before Election Day.' : 'One tap. It sends Kevin your ZIP and nothing about you. It usually takes about a day.')
+      // Picked from the list, so no ZIP is known: the city is typed in Request a city.
+      : row(`<button class="${dark}" ${reportAttrs({ city: true, fk: 'cov-city' })}>Ask for my city</button>`) + line('fine cov-fine', 'Tell Kevin your city and he’ll add it, usually within a day.');
+    body = lead('Your city’s races aren’t in the guide yet.')
+      + line('cov-here', `Here now: ${name}’s statewide races${noEndorsements() ? '' : `, with picks from ${c.withPicks} of ${c.sources} sources`}.`)
+      + line('cov-miss', 'Not here yet: races for your city, county and districts.') + action + sbLine;
+  } else {
+    const gap = c.localRaces - c.localRacesWithPicks;
+    body = lead(`${c.name}’s local picks aren’t in yet.`)
+      + line('cov-here', `Here now: every race on your ballot, with picks from newspapers and groups across ${esc(c.stateName)}.`)
+      + line('cov-miss', `Not here yet: picks from ${name}’s own paper and groups. ${gap} of your ${c.localRaces} local races ${gap === 1 ? 'has' : 'have'} no picks from anyone.`)
+      + row(askBtn('Ask Kevin to look for local picks', dark)) + askFailHTML(c)
+      + line('fine cov-fine', c.late ? 'One tap. It sends Kevin the place and nothing about you. He may not finish before Election Day.' : 'One tap. It sends Kevin the place and nothing about you. He’ll look within about a day.');
+  }
+  // After the tap the card says so to a screen reader too (focus goes to its lead: actions.ts A['cov-ask']).
+  return `<div class="notice strong cov-card${statewide ? ' statewide-note' : ''}${where === 'ballot' ? ' wrap' : ''}" role="${c.state === 'asked' ? 'status' : 'region'}" aria-labelledby="cov-h">${body}</div>`;
+}
+
+/* ---------- the quiet lines ---------- */
+/* Step 2 and the Edit sheet, under "Your sources have picks in N of your M races": every count names its
+   scope ("on Chicago's ballot", "statewide races"), and a thin place says whose picks are missing. */
 export function covHTML(): string {
   const c = covOf();
   if (!c) return '';
-  if (c.kind === 'full' || !c.ask || c.state === 'landed') return `<p class="su-src">${countLine(c)}</p>`;
-  const thin = c.kind === 'thin';
-  if (c.state === 'asked') {
-    const lead = thin ? `We’re gathering ${c.name}’s endorsements.` : 'We’re adding your city.';
-    const rest = thin ? 'It usually takes about a day. Your ballot works now, and local picks show up when they’re in.'
-      : `It usually takes about a day. You can use ${c.name}’s statewide races now.`;
-    return `<div class="su-src cov-note" role="status"><p><b>${esc(lead)}</b> ${esc(rest)}</p><p>${hearBtn(c)}</p></div>`;
-  }
-  const lead = thin ? `We don’t have endorsements from ${c.name}’s local sources yet.` : `We only have ${c.name}’s statewide races for your area so far.`;
-  const rest = thin ? `${count(c)} checked, ${esc(withWord(c))}.${esc(when(c))}` : `${count(c)} for them, ${esc(withWord(c))}.${esc(when(c))}`;
-  return `<div class="su-src cov-note"><p><b>${esc(lead)}</b> ${rest}</p>
-    ${askFailHTML(c)}<p class="row-btns">${askBtn(c, thin ? `Add ${c.name}’s endorsements for me` : 'Add my city for me')}</p></div>`;
+  const name = esc(c.name);
+  const t = c.kind === 'statewide' ? `${esc(count(c))} for ${name}’s statewide races, ${esc(withWord(c))}.`
+    : c.kind === 'thin' ? `${esc(count(c))}, ${esc(withWord(c))}, none from ${name}’s own paper and groups.`
+      : `${esc(count(c))} on ${c.single ? `${name}’s ballot` : 'your ballot'}, ${esc(withWord(c))}.`;
+  return `<p class="su-src">${t}${esc(when(c))}${esc(askedTail(c))}</p>`;
 }
-
-/* Under the ballot's picks line, shorter: the count, or a thin place's notice as one quiet line with its
-   tap inline, so the head still holds one notice (the address box) and one sample-ballot button. */
+/* Under the ballot's picks line: the same, for the ballot you're looking at. */
 export function headCovHTML(): string {
   const c = covOf();
   if (!c) return '';
-  if (c.kind !== 'thin' || !c.ask) return `<p class="picks-cov">${countLine(c, false)}</p>`;
-  if (c.state === 'asked') return `<p class="picks-cov" role="status">Gathering ${esc(c.name)}’s endorsements, usually about a day. ${hearBtn(c, 'linkbtn', 'hd-hear')}</p>`;
-  return `<p class="picks-cov">No endorsements from ${esc(c.name)}’s local sources yet. ${askBtn(c, 'Add them for me', 'linkbtn', 'hd-ask')}</p>${askFailHTML(c)}`;
+  const t = c.kind === 'statewide' ? `Statewide races only: ${count(c)}, ${withWord(c)}.`
+    : c.kind === 'thin' ? `${count(c)}, ${withWord(c)}, none from ${c.name}’s own paper and groups.`
+      : `${count(c)} on your ballot, ${withWord(c)}.`;
+  return `<p class="picks-cov">${esc(t + when(c) + askedTail(c))}</p>`;
 }

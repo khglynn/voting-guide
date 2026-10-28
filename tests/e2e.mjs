@@ -2395,8 +2395,10 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
     await openRow(page, 'tx-austin-prop-a');
     await settle(page);
     check('Add in place: to start, AURA isn’t on Austin’s ballot', !/AURA/.test(await now$(page, '#i-tx-austin-prop-a')));
+    // Add a source lives in the sources sheet since Oct 28: Edit, choose individual sources, Add a source.
     await edit(page);
-    await tap(page, '.sheet-panel.picks [data-act="shelf"][data-kind="source"]');
+    await tap(page, '.sheet-panel.picks [data-fk="cov-src"]');
+    await tap(page, '.sheet-panel [data-fk="src-add"]');
     await page.waitForSelector('.sheet-panel.shelf[data-kind="source"]');
     const along = await alongOf(page);
     const code = (along.at(-1).match(/^Request: ([a-z]{12})$/) || [])[1];
@@ -2411,7 +2413,10 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
     check('Add in place: this device keeps the code and the name under vg-adds, never in vg2', kept.length === 1 && kept[0].code === code && kept[0].name === 'AURA' && Object.keys(kept[0]).sort().join() === 'at,code,name' && !(await savedVG(page)).includes(code), JSON.stringify(kept));
     await tap(page, '[data-fk="report-done"]');
     await settle(page);
-    await tap(page, '.sheet-panel [data-fk="sheet-x"]');
+    // Done on the sources sheet goes back to the Edit sheet, and its Done closes it.
+    await tap(page, '.sheet-panel:not(.picks) [data-fk="sheet-x"]');
+    await settle(page);
+    await tap(page, '.sheet-panel.picks [data-fk="sheet-x"]');
     await settle(page);
     check('Add in place: the banner says the request is in, in one line', (await banner(page)) === 'Request sent for AURA. You can keep going.' && c.statusAsked >= 1, `${await banner(page)} (${c.statusAsked})`);
     c.status[code] = { state: 'checking', name: 'AURA' };

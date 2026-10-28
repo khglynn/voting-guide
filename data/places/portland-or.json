@@ -224,6 +224,10 @@
     {
       "name": "Clackamas County Elections",
       "url": "https://www.clackamas.us/elections/ballot-request"
+    },
+    {
+      "name": "Washington County (OR) Elections: ballot drop sites",
+      "url": "https://washingtoncountyor.gov/elections/ballot-dropsites"
     }
   ]
 }

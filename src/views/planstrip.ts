@@ -148,8 +148,12 @@ const placesNow = () => { const t = todayISO(); return S.ballot!.places.map((p) 
 function officeOf(): { name: string; url: string | null; phone: string | null; addr: string; phone_label?: string; lines: OfficeLine[]; hours?: string } | null {
   const b = S.ballot!;
   const ps = placesNow();
-  const own = b.county ? ps.map((p) => p.by_county?.find((c) => countyKey(c.county) === countyKey(b.county!))?.office).find(Boolean) : undefined;
-  const office = own || ps.map((p) => p.county_election_office).find(Boolean);
+  const known = b.county;
+  const own = known ? ps.map((p) => p.by_county?.find((c) => countyKey(c.county) === countyKey(known))?.office).find(Boolean) : undefined;
+  // A county the place doesn't list (a Caldwell address on San Marcos's ballot) gets no office card, rather
+  // than the wrong county's: the same rule as its links (plan.lookupsFor).
+  const elsewhere = !!known && ps.some((p) => p.by_county && p.by_county.length && !p.by_county.some((c) => countyKey(c.county) === countyKey(known)));
+  const office = own || (elsewhere ? null : ps.map((p) => p.county_election_office).find(Boolean));
   if (!office) return null;
   const m = office.name.match(/^(.*?)[,:]\s*(\d[\s\S]*)$/);
   const [n, a] = m ? [m[1], m[2]] : [sentences(office.name)[0], sentences(office.name).slice(1).join(' ')];

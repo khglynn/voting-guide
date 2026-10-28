@@ -1106,6 +1106,38 @@ function roundTrip(name, stCode, places, mutate) {
   st.S.ui.open = new Set(['whatif', 'bx-office']);
   const office = (ps.planHTML().match(/<p class="office">[\s\S]*?<\/p>/) || [''])[0];
   check('offices: a Williamson address in Pflugerville shows Williamson County\u2019s office', /Williamson County Elections Department/.test(office) && /512-943-1630/.test(office), office.slice(0, 200));
+  // Codex on part B: a button changes only when its label fits the kind of page; a general one follows the phase.
+  const dal = read('place-dallas-tx.json');
+  const dallasBtn = (t) => act(plan.localHowto(tx, [dal], null, t), 'wrong_polling_place', 'Find voting places').url;
+  check('help buttons: Dallas\u2019s "Find voting places" opens the early voting map through Oct 30, then the Election Day map', /views=Early-Voting/.test(dallasBtn('2026-10-28')) && /views=Election-Day/.test(dallasBtn('2026-10-31')), `${dallasBtn('2026-10-28')} / ${dallasBtn('2026-10-31')}`);
+  b = open('IL', ['chicago-il']);
+  const il = read('state-IL.json').howto;
+  const officeBtns = b.howto.situations.flatMap((x) => x.actions || []).filter((a) => /election office/i.test(a.label));
+  check('help buttons: Chicago\u2019s "Find my election office" stays the office directory; "Track my ballot" opens Chicago\u2019s tracker', officeBtns.length > 0 && officeBtns.every((a) => il.situations.some((x) => (x.actions || []).some((y) => y.label === a.label && y.url === a.url))) && b.howto.situations.flatMap((x) => x.actions || []).filter((a) => /track/i.test(a.label)).every((a) => a.url === 'https://chicagoelections.gov/voting/your-voter-information'), JSON.stringify(officeBtns.slice(0, 1)));
+  b = open('CA', ['fullerton-ca']);
+  const vc = b.howto.situations.flatMap((x) => x.actions || []).filter((a) => /vote center/i.test(a.label));
+  check('help buttons: Fullerton\u2019s "Find a vote center" opens Orange County\u2019s vote center list', vc.length > 0 && vc.every((a) => a.url === 'https://ocvote.gov/elections/vote-center-locations'), JSON.stringify(vc.slice(0, 1)));
+  b = open('CA', ['san-francisco-ca']);
+  check('help buttons: San Francisco\u2019s "Find a vote center" opens its City Hall voting page', b.howto.situations.flatMap((x) => x.actions || []).filter((a) => /vote center/i.test(a.label)).every((a) => a.url === 'https://www.sf.gov/vote-in-person'));
+  // A county the place doesn't list gets no office card (the same rule as its links).
+  b = open('TX', ['san-marcos-tx']);
+  bl.localize(b, '78666', 'Caldwell');
+  st.S.ui.open = new Set(['whatif', 'bx-office']);
+  check('offices: a Caldwell address on San Marcos\u2019s ballot shows no Hays office', !/<p class="office">/.test(ps.planHTML()) && !/Hays County Elections Office/.test(ps.planHTML()));
+  // An open page past midnight: localize (what main.ts's refresh calls) re-applies dated text on a new day.
+  const had = Object.getOwnPropertyDescriptor(globalThis, 'location');
+  const on = (d) => Object.defineProperty(globalThis, 'location', { configurable: true, value: { search: `?today=${d}`, origin: 'http://x', pathname: '/' } });
+  try {
+    on('2026-10-30');
+    b = open('TX', ['dallas-tx']);
+    bl.localize(b, '75201', null);
+    const before = b.howto.gotchas[4];
+    on('2026-10-31');
+    bl.localize(b, '75201', null);
+    check('dated: the minute refresh after midnight changes the open ballot\u2019s text (Oct 30 to Oct 31)', /wait times/.test(before) && !/wait times/.test(b.howto.gotchas[4]) && b.howto.day === '2026-10-31', b.howto.gotchas[4]);
+  } finally {
+    if (had) Object.defineProperty(globalThis, 'location', had); else delete globalThis.location;
+  }
   st.S.ballot = keep.ballot; st.S.b = keep.b; st.S.ui.open = keep.open;
 }
 

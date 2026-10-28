@@ -629,6 +629,10 @@
     {
       "name": "Orange County: request a mail ballot",
       "url": "https://voteorangefl.gov/request-a-mail-ballot/"
+    },
+    {
+      "name": "Orange County SOE: 2026 general election sample ballot mailer (PDF)",
+      "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/2026-General-Election-Sample-Ballot-Mailer.pdf"
     }
   ],
   "judicial_review": {

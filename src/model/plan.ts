@@ -80,7 +80,7 @@ const lookupsFor = (p: PlaceBundle, county: string | null): Lookups | undefined 
 export function localHowto(h0: HowTo, places: PlaceBundle[], county: string | null = null, today = todayISO()): HowTo {
   const base = applyDated(h0, h0.dated, today);
   const ps = places.map((p) => (p.dated ? applyDated(p, p.dated, today) : p));
-  return { ...localActions(base, placeHowto(base, ps, county)), day: today };
+  return { ...localActions(base, placeHowto(base, ps, county), today), day: today };
 }
 
 /* Text that changes on its own date (Oct 28): the latest `dated` entry for each slot whose day has come
@@ -112,19 +112,28 @@ export function applyDated<T extends object>(o: T, dated: Dated[] | undefined, t
 
 /* The "If something goes wrong" buttons and links point at the state's where-to-vote and tracking pages;
    on a ballot with the county's own (Oct 28: the checker found this gap eight times), each such button opens
-   the county's. Which kind a button is comes from its URL, and its label when the state uses one URL for two. */
+   the county's. A button changes only when its label says what kind of page it is, since a state can use one
+   page for several jobs (Illinois's election-office directory is also its tracking fallback; New York uses one
+   lookup for all four). A general one ("Find voting places", "Find a vote center") that could be either opens
+   the early voting page while early voting is open, then the Election Day one (Codex on part B). */
 const KINDS = ['early_in_person', 'election_day', 'drop_box', 'tracking'] as const;
-const urlsOf = (x: HowTo): Record<(typeof KINDS)[number], string | null> => ({
+type Kind = (typeof KINDS)[number];
+const urlsOf = (x: HowTo): Record<Kind, string | null> => ({
   early_in_person: x.early_in_person.lookup_url, election_day: x.election_day.lookup_url,
   drop_box: x.mail_ballot.drop_box_lookup_url, tracking: x.mail_ballot.tracking_url,
 });
-const KIND_LABEL: Record<(typeof KINDS)[number], RegExp> = { early_in_person: /early/i, election_day: /where|poll(ing)? (place|site)|vote center|voting (place|location|center)/i, drop_box: /drop/i, tracking: /track|status|counted/i };
-function localActions(base: HowTo, h: HowTo): HowTo {
+const GENERAL = /where|vote center|voting (place|location|center|site)s?|polling|poll site/i;
+const FITS: Record<Kind, RegExp> = { early_in_person: new RegExp(`early|${GENERAL.source}`, 'i'), election_day: GENERAL, drop_box: /drop/i, tracking: /track|status|counted/i };
+const NAMES: Partial<Record<Kind, RegExp>> = { early_in_person: /early/i, election_day: /poll(ing)? (place|site)|election day|precinct/i };
+function localActions(base: HowTo, h: HowTo, today: string): HowTo {
   const was = urlsOf(base), now = urlsOf(h);
   if (KINDS.every((k) => was[k] === now[k]) || !(h.situations || []).some((x) => x.actions && x.actions.length)) return h;
+  const ep = h.early_in_person;
+  const earlyOpen = ep.available && (!ep.end || today <= ep.end);
   const swap = (a: HelpAction): HelpAction => {
-    const kinds = KINDS.filter((k) => was[k] && was[k] === a.url);
-    const k = kinds.length === 1 ? kinds[0] : kinds.find((x) => KIND_LABEL[x].test(a.label));
+    const fits = KINDS.filter((k) => was[k] && was[k] === a.url && FITS[k].test(a.label));
+    let k: Kind | undefined = fits.length === 1 ? fits[0] : fits.find((x) => NAMES[x]?.test(a.label));
+    if (!k && fits.length > 1) k = earlyOpen && fits.includes('early_in_person') ? 'early_in_person' : fits.includes('election_day') ? 'election_day' : fits[0];
     return k && now[k] && now[k] !== a.url ? { ...a, url: now[k]! } : a;
   };
   return { ...h, situations: h.situations!.map((x) => (x.actions && x.actions.length ? { ...x, actions: x.actions.map(swap) } : x)) };

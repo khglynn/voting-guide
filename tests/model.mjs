@@ -733,6 +733,61 @@ function roundTrip(name, stCode, places, mutate) {
   st.S.b = st.emptyBallotState('');
 }
 
+/* ---------- visit counts (Oct 28): what may reach Vercel Web Analytics (src/stats.ts) ---------- */
+{
+  const stats = await load('/src/stats.ts');
+  // Every address is cut to its origin and path: a save link's hash and ?try= never go.
+  check('stats: cleanUrl drops the hash and the query', stats.cleanUrl('https://vote.kevinhg.com/?try=aunt&today=2026-11-03#v1~TX~austin-tx~78704~abc') === 'https://vote.kevinhg.com/');
+  check('stats: cleanUrl passes a plain path as it is', stats.cleanUrl('https://vote.kevinhg.com/') === 'https://vote.kevinhg.com/' && stats.cleanUrl('https://voting-guide-git-analytics-kevinhg.vercel.app/') === 'https://voting-guide-git-analytics-kevinhg.vercel.app/');
+  check('stats: a ZIP in the path, written or encoded, sends nothing', stats.cleanUrl('https://vote.kevinhg.com/78704') === null && stats.cleanUrl('https://vote.kevinhg.com/78%3704') === null);
+  check('stats: an at sign in the path, written or encoded, sends nothing', stats.cleanUrl('https://vote.kevinhg.com/a@b.co') === null && stats.cleanUrl('https://vote.kevinhg.com/a%40b.co') === null);
+  check('stats: a path that won’t decode sends nothing', stats.cleanUrl('https://vote.kevinhg.com/%E0%A4%A') === null);
+  const ev = { type: 'event', url: 'https://vote.kevinhg.com/?try=fresh#v2~CO~aurora-co~80010', payload: { name: 'view', data: { name: 'plan' } } };
+  const sent = stats.beforeSend(ev);
+  check('stats: beforeSend cuts the address and keeps the rest of the event', !!sent && sent.url === 'https://vote.kevinhg.com/' && sent.type === 'event' && sent.payload === ev.payload && ev.url.includes('#'), JSON.stringify(sent));
+  check('stats: beforeSend drops an event whose address still holds a ZIP', stats.beforeSend({ type: 'pageview', url: 'https://vote.kevinhg.com/78704?x=1' }) === null);
+  check('stats: it loads on the guide’s Vercel hosts only', ['vote.kevinhg.com', 'voting-guide-silk.vercel.app', 'voting-guide-git-analytics-kevinhg.vercel.app'].every(stats.onVercel)
+    && !['localhost', '127.0.0.1', 'evilkevinhg.com', 'vote.kevinhg.com.example.org', 'vercel.app.example.org'].some(stats.onVercel));
+  check('stats: event values are short plain tokens, never a ZIP or an at sign', stats.plainData({ place: 'austin-tx', how: 'zip' }) && stats.plainData({ place: 'dc-ward-1+dc-ward-2' }) && stats.plainData({ place: 'MO' })
+    && !stats.plainData({ place: '78704' }) && !stats.plainData({ place: 'austin-tx-78704' }) && !stats.plainData({ kind: 'a@b.co' }) && !stats.plainData({ n: 5 }) && !stats.plainData({ how: 'two words' }) && !stats.plainData({ how: '' }));
+  // Off Vercel, with no queue: nothing happens and nothing throws.
+  const had = Object.getOwnPropertyDescriptor(globalThis, 'window');
+  try {
+    delete globalThis.window;
+    let threw = false;
+    try { stats.track('ballot', { place: 'austin-tx', how: 'zip' }); } catch { threw = true; }
+    check('stats: track with no analytics does nothing and never throws', !threw && typeof globalThis.window === 'undefined');
+    globalThis.window = {};
+    threw = false;
+    try { stats.track('view', { name: 'plan' }); } catch { threw = true; }
+    check('stats: track on a page without Vercel’s queue does nothing', !threw && !('va' in globalThis.window) && !('vaq' in globalThis.window));
+    // With a queue (the package's own window.va): exactly the name and the data, and a ZIP or an at sign drops it.
+    const got = [];
+    globalThis.window = { va: (...a) => got.push(a) };
+    stats.track('ballot', { place: 'austin-tx', how: 'zip' });
+    stats.track('request', { kind: 'city' });
+    stats.track('ballot', { place: '78704', how: 'zip' });
+    stats.track('share', { act: 'a@b.co' });
+    check('stats: with the queue, track hands it the name and data only, and drops a ZIP or an at sign', got.length === 2
+      && JSON.stringify(got) === JSON.stringify([['event', { name: 'ballot', data: { place: 'austin-tx', how: 'zip' } }], ['event', { name: 'request', data: { kind: 'city' } }]]), JSON.stringify(got));
+    globalThis.window = { va: () => { throw new Error('queue broke'); } };
+    threw = false;
+    try { stats.track('view', { name: 'ballot' }); } catch { threw = true; }
+    check('stats: a broken queue never breaks the page', !threw);
+  } finally {
+    if (had) Object.defineProperty(globalThis, 'window', had); else delete globalThis.window;
+  }
+  // The promise the page makes (views/shelf.ts): the How text's privacy item and the Support shelf.
+  const was = st.S.ui.report;
+  st.S.ui.report = { kind: 'how', f: {}, what: '', tag: '', hint: '', along: null, state: 'edit', err: false, fk: '', back: null };
+  const how = st.S.ui.report && views.shelf.shelfHTML();
+  st.S.ui.report = { ...st.S.ui.report, kind: 'support' };
+  const sup = views.shelf.shelfHTML();
+  st.S.ui.report = was;
+  check('stats: the How text says what is counted and what never is', how.includes('<li><b>Your privacy.</b> No accounts, no ads, no cookies. We count visits with Vercel’s cookie-free analytics (pages, rough location, device type), which never sees your address, ZIP, picks or who you are. Your picks stay on your device unless you share your save link. An address you type goes only to the Census Bureau’s lookup, and we never keep it. If the page breaks, it sends us a crash report with no address, no picks and no IP.</li>'));
+  check('stats: no page says "no tracking" any more', !/no tracking/i.test(how) && !/no tracking/i.test(sup) && sup.includes('The guide is free, with no ads and no cookies.'));
+}
+
 /* ---------- extension points: run when the ledger's model modules exist ---------- */
 const extra = path.join(ROOT, 'tests', 'model-ledger.mjs');
 if (fs.existsSync(extra)) {

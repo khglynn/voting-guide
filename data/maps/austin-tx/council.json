@@ -10,14 +10,14 @@
   "plan": "The 2021 Independent Citizens Redistricting Commission map, in use since 2022. Lines along the city limits are edited as land is annexed.",
   "layer_dated": "2026-10-01",
   "layer_dated_from": "newest MODIFIED_DATE in the layer",
-  "fetched": "2026-10-21",
+  "fetched": "2026-10-26",
   "license": "none stated",
   "label_property": "COUNCIL_DISTRICT",
   "features": 10,
   "simplified": "Douglas-Peucker to 10 m, TopoJSON quantized to 100000 steps across the map",
   "bytes": 70977,
   "checked": {
-    "on": "2026-10-21",
+    "on": "2026-10-26",
     "simplified_vs_original": {
       "points": 585,
       "agree": 585,
@@ -142,6 +142,11 @@
       {
         "name": "Travis County Clerk elections office",
         "answer": "4",
+        "by": "both"
+      },
+      {
+        "name": "Canyon Vista Middle School",
+        "answer": "6",
         "by": "both"
       }
     ]

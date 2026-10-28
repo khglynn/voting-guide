@@ -162,6 +162,16 @@ export function fillTemplate(tpl: string, props: Record<string, string>): string
 /* A district as a sample ballot names it, made comparable: "Precinct 4 (unexpired term)" is
    "precinct 4". */
 export const normDistrict = (s: string): string => s.replace(/\([^)]*\)/g, ' ').replace(/\s+/g, ' ').trim().toLowerCase();
+/* A district without the seat a race fills in it: a Washington district's two House seats ("District
+   32, Position 1" and "Position 2"), a Dallas justice of the peace precinct's two places ("Precinct 1,
+   Place 1" and "Place 2"). The same voters elect every seat of one district, so a map that names the
+   district names all of them, and one answer to the district question shows them all (ballot.ts
+   sameSeat). A district that is only a place ("Place 6", an at-large board seat) keeps it. */
+const SEAT = /,?\s+(?:position|place)\s+\d+$/i;
+export const seatless = (s: string): string => s.replace(SEAT, '');
+export const hasSeat = (s: string): boolean => SEAT.test(s);
+/* The district a race and a map name compared on: parentheses, case and the seat set aside. */
+const districtKey = (s: string): string => seatless(normDistrict(s));
 const re = (src: string): RegExp | null => { try { return new RegExp(src, 'i'); } catch { return null; } };
 /* Whether a rule is about this race: its office (and its scope, when the rule names one). */
 export function ruleMatches(rule: SettleRule, c: Item): c is Contest {
@@ -174,7 +184,7 @@ export function ruleMatches(rule: SettleRule, c: Item): c is Contest {
 /* Whether the race is the one this answer names. */
 export function ruleIs(rule: SettleRule, c: Contest, props: Record<string, string>): boolean {
   const want = fillTemplate(rule.district, props);
-  return want != null && normDistrict(c.district || '') === normDistrict(want);
+  return want != null && districtKey(c.district || '') === districtKey(want);
 }
 /* The ballot's maps, across its places, each once. */
 export function ballotMaps(b: Ballot): { place: string; meta: MapMeta }[] {

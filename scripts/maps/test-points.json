@@ -1,5 +1,5 @@
 {
-  "about": "Public buildings only, never a home: each one's point and its 2020 Census block's interior point, as the Census geocoder returned them for the building's own address on Oct 21, 2026. The pull tests every map at these points with the same two-witness rule the site uses, and asks each map's own server what it says there. The street addresses aren't kept here: the coordinates are enough.",
+  "about": "Public buildings only, never a home: each one's point and its 2020 Census block's interior point, as the Census geocoder returned them for the building's own address on Oct 21, 2026 (Austin) and Oct 26, 2026 (Williamson County, Pflugerville's library, Canyon Vista Middle School, a Travis school inside the Williamson SBOE map's 1.5 km reach, Dallas County and the Houston area). The pull tests every map at these points with the same two-witness rule the site uses, and asks each map's own server what it says there (a map made from a file is checked against the file's own lines). The street addresses aren't kept here: the coordinates are enough.",
   "points": [
     {
       "name": "Austin City Hall",
@@ -150,6 +150,378 @@
       "point": [-97.62035, 30.440786],
       "block": [-97.6197108, 30.4409931],
       "census_county": "Travis"
+    },
+    {
+      "name": "Round Rock City Hall",
+      "point": [-97.677488, 30.508886],
+      "block": [-97.6770501, 30.5085455],
+      "census_county": "Williamson"
+    },
+    {
+      "name": "Round Rock Public Library",
+      "point": [-97.678062, 30.509898],
+      "block": [-97.6777482, 30.5104118],
+      "census_county": "Williamson"
+    },
+    {
+      "name": "Williamson County courthouse",
+      "point": [-97.677113, 30.637338],
+      "block": [-97.6775453, 30.6370307],
+      "census_county": "Williamson"
+    },
+    {
+      "name": "Georgetown Public Library",
+      "point": [-97.679509, 30.636501],
+      "block": [-97.6795012, 30.6361295],
+      "census_county": "Williamson"
+    },
+    {
+      "name": "Cedar Park City Hall",
+      "point": [-97.820279, 30.497507],
+      "block": [-97.8171824, 30.4961075],
+      "census_county": "Williamson"
+    },
+    {
+      "name": "Cedar Park Public Library",
+      "point": [-97.823436, 30.519139],
+      "block": [-97.8237431, 30.5178654],
+      "census_county": "Williamson"
+    },
+    {
+      "name": "Leander City Hall",
+      "point": [-97.854302, 30.5791],
+      "block": [-97.8545756, 30.5785896],
+      "census_county": "Williamson"
+    },
+    {
+      "name": "Hutto City Hall",
+      "point": [-97.55195, 30.544988],
+      "block": [-97.5531857, 30.5439539],
+      "census_county": "Williamson"
+    },
+    {
+      "name": "Taylor City Hall",
+      "point": [-97.408496, 30.570789],
+      "block": [-97.4080511, 30.5712489],
+      "census_county": "Williamson"
+    },
+    {
+      "name": "Williamson County Jester Annex",
+      "point": [-97.668296, 30.538858],
+      "block": [-97.6662521, 30.5391326],
+      "census_county": "Williamson"
+    },
+    {
+      "name": "Pflugerville Public Library",
+      "point": [-97.628822, 30.441654],
+      "block": [-97.629294, 30.4428268],
+      "census_county": "Travis"
+    },
+    {
+      "name": "Brushy Creek Community Center",
+      "point": [-97.734945, 30.49515],
+      "block": [-97.730054, 30.4984965],
+      "census_county": "Williamson"
+    },
+    {
+      "name": "Williamson County Elections office",
+      "point": [-97.679509, 30.606696],
+      "block": [-97.6791808, 30.6163328],
+      "census_county": "Williamson"
+    },
+    {
+      "name": "Canyon Vista Middle School",
+      "point": [-97.778034, 30.431766],
+      "block": [-97.7781786, 30.4331207],
+      "census_county": "Travis"
+    },
+    {
+      "name": "Dallas City Hall",
+      "point": [-96.795839, 32.776661],
+      "block": [-96.7955378, 32.7761397],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Old Red Courthouse",
+      "point": [-96.807801, 32.778775],
+      "block": [-96.8073148, 32.7785446],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "George Allen Courts Building",
+      "point": [-96.806296, 32.778291],
+      "block": [-96.8061869, 32.7779826],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Dallas Central Library",
+      "point": [-96.794933, 32.778322],
+      "block": [-96.7956504, 32.7786491],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Dallas County Elections office",
+      "point": [-96.879079, 32.837462],
+      "block": [-96.8779238, 32.8361119],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Bachman Lake Branch Library",
+      "point": [-96.857883, 32.861039],
+      "block": [-96.8572957, 32.8624569],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Lochwood Branch Library",
+      "point": [-96.68747, 32.848374],
+      "block": [-96.6888165, 32.8479504],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Oak Lawn Branch Library",
+      "point": [-96.812442, 32.812057],
+      "block": [-96.8123269, 32.8129542],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Pleasant Grove Branch Library",
+      "point": [-96.695765, 32.734157],
+      "block": [-96.6962154, 32.7293589],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Highland Hills Branch Library",
+      "point": [-96.761411, 32.670759],
+      "block": [-96.7537295, 32.6703412],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Fretz Park Branch Library",
+      "point": [-96.784852, 32.949878],
+      "block": [-96.7883392, 32.9470393],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Kleberg-Rylie Branch Library",
+      "point": [-96.600127, 32.686407],
+      "block": [-96.6048743, 32.6865435],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Dallas West Branch Library",
+      "point": [-96.859695, 32.778639],
+      "block": [-96.8591554, 32.7777855],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Polk-Wisdom Branch Library",
+      "point": [-96.841599, 32.661497],
+      "block": [-96.840948, 32.6608617],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "North Oak Cliff Branch Library",
+      "point": [-96.826584, 32.745007],
+      "block": [-96.8273867, 32.7446032],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Preston Royal Branch Library",
+      "point": [-96.813416, 32.89475],
+      "block": [-96.816269, 32.8936344],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Forest Green Branch Library",
+      "point": [-96.748374, 32.909295],
+      "block": [-96.7524826, 32.9118759],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Audelia Road Branch Library",
+      "point": [-96.718016, 32.885276],
+      "block": [-96.7187061, 32.8853462],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Renner Frankford Branch Library",
+      "point": [-96.795109, 32.998108],
+      "block": [-96.7947134, 32.9962986],
+      "census_county": "Collin"
+    },
+    {
+      "name": "Irving City Hall",
+      "point": [-96.936827, 32.812911],
+      "block": [-96.9368868, 32.8134086],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Garland City Hall",
+      "point": [-96.636487, 32.913402],
+      "block": [-96.6350887, 32.9149993],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Mesquite City Hall",
+      "point": [-96.59929, 32.773605],
+      "block": [-96.6001869, 32.7740814],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Grand Prairie City Hall",
+      "point": [-97.005906, 32.745466],
+      "block": [-97.0061817, 32.7457298],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Richardson City Hall",
+      "point": [-96.731202, 32.96066],
+      "block": [-96.7313566, 32.9597021],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "DeSoto Town Center",
+      "point": [-96.854751, 32.604322],
+      "block": [-96.8503753, 32.6053907],
+      "census_county": "Dallas"
+    },
+    {
+      "name": "Houston City Hall",
+      "point": [-95.369483, 29.760724],
+      "block": [-95.3689337, 29.7599317],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Harris County Civil Courthouse",
+      "point": [-95.357532, 29.761367],
+      "block": [-95.3574113, 29.7608118],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Harris County Administration Building",
+      "point": [-95.361246, 29.761519],
+      "block": [-95.3605937, 29.761618],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Kendall Neighborhood Library",
+      "point": [-95.621163, 29.771658],
+      "block": [-95.6227875, 29.773565],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Jungman Neighborhood Library",
+      "point": [-95.481794, 29.737967],
+      "block": [-95.4808798, 29.7403812],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Montrose Neighborhood Library",
+      "point": [-95.391208, 29.736109],
+      "block": [-95.3918301, 29.7357317],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Heights Neighborhood Library",
+      "point": [-95.397694, 29.794464],
+      "block": [-95.397138, 29.7953068],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Acres Homes Neighborhood Library",
+      "point": [-95.436713, 29.870768],
+      "block": [-95.437819, 29.8713235],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Kashmere Gardens Neighborhood Library",
+      "point": [-95.316839, 29.806002],
+      "block": [-95.3150285, 29.8067388],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Stanaker Neighborhood Library",
+      "point": [-95.302896, 29.739842],
+      "block": [-95.3037293, 29.7403708],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Freeman Neighborhood Library",
+      "point": [-95.120055, 29.558982],
+      "block": [-95.119339, 29.5579301],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Mancuso Neighborhood Library",
+      "point": [-95.310414, 29.667796],
+      "block": [-95.3103999, 29.6690962],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Moody Neighborhood Library",
+      "point": [-95.362662, 29.847274],
+      "block": [-95.3646541, 29.8470374],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Lakewood Neighborhood Library",
+      "point": [-95.26731, 29.841252],
+      "block": [-95.271766, 29.8387942],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Kingwood Branch Library",
+      "point": [-95.180864, 30.043121],
+      "block": [-95.1833165, 30.0443789],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Tuttle Neighborhood Library",
+      "point": [-95.307465, 29.776423],
+      "block": [-95.30792, 29.7755976],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Melcher Neighborhood Library",
+      "point": [-95.289986, 29.706347],
+      "block": [-95.2894527, 29.7059509],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Collier Regional Library",
+      "point": [-95.4824, 29.840414],
+      "block": [-95.4829993, 29.8410258],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Robinson-Westchase Neighborhood Library",
+      "point": [-95.57159, 29.729198],
+      "block": [-95.5698433, 29.7285324],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Pasadena City Hall",
+      "point": [-95.196168, 29.694149],
+      "block": [-95.1986908, 29.6948517],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Baytown City Hall",
+      "point": [-94.996788, 29.72841],
+      "block": [-94.9938812, 29.7264295],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Bellaire City Hall",
+      "point": [-95.467963, 29.703379],
+      "block": [-95.4692773, 29.7026546],
+      "census_county": "Harris"
+    },
+    {
+      "name": "Missouri City City Hall",
+      "point": [-95.527021, 29.605514],
+      "block": [-95.529511, 29.6041739],
+      "census_county": "Fort Bend"
     }
   ]
 }

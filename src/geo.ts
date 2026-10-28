@@ -161,7 +161,7 @@ export function parseCensus(data: any): GeoResult[] {
     const r: GeoResult = {
       matched,
       state: st ? STATE_FIPS[String(st.STATE)] || null : null,
-      county: county ? String(county.BASENAME || '') : null,
+      county: county ? String(county.BASENAME || '').trim() || null : null, // a blank name is no county
       place: place ? String(place.BASENAME || '') : null,
       cd: num(newest(/^(\d+)\w* Congressional Districts/) || layer(/Congressional Districts/)),
       upper: num(newest(/^(\d{4}) State Legislative Districts - Upper/) || layer(/State Legislative Districts - Upper/)),

@@ -195,9 +195,9 @@
     "target_id": "or-us-senate",
     "status": "not_found",
     "choice": null,
-    "why": "Not listed in any Senate candidate's pamphlet statement. Checked again on Oct 25, 2026; still no pick on this page.",
+    "why": "Not listed in any Senate candidate's pamphlet statement. Checked again on Oct 26, 2026; still no pick on this page.",
     "url": "https://www.orcops.org/",
-    "date": "2026-10-25",
+    "date": "2026-10-26",
     "confidence": "sourced"
   },
   {
@@ -235,9 +235,9 @@
     "target_id": "or-us-senate",
     "status": "not_found",
     "choice": null,
-    "why": "Not confirmed. Check ortl.org. Checked again on Oct 25, 2026; still no pick on this page.",
+    "why": "Not confirmed. Check ortl.org. Checked again on Oct 26, 2026; still no pick on this page.",
     "url": "https://www.ortl.org/",
-    "date": "2026-10-25",
+    "date": "2026-10-26",
     "confidence": "sourced"
   },
   {
@@ -245,9 +245,9 @@
     "target_id": "or-governor",
     "status": "not_found",
     "choice": null,
-    "why": "No endorsement confirmed from the Oregon Firearms Federation PAC. Checked again on Oct 25, 2026; still no pick on this page.",
+    "why": "No endorsement confirmed from the Oregon Firearms Federation PAC. Checked again on Oct 26, 2026; still no pick on this page.",
     "url": "https://www.oregonfirearms.org/",
-    "date": "2026-10-25",
+    "date": "2026-10-26",
     "confidence": "sourced"
   },
   {
@@ -255,9 +255,9 @@
     "target_id": "or-us-senate",
     "status": "not_found",
     "choice": null,
-    "why": "No endorsement confirmed from the Oregon Firearms Federation PAC. Checked again on Oct 25, 2026; still no pick on this page.",
+    "why": "No endorsement confirmed from the Oregon Firearms Federation PAC. Checked again on Oct 26, 2026; still no pick on this page.",
     "url": "https://www.oregonfirearms.org/",
-    "date": "2026-10-25",
+    "date": "2026-10-26",
     "confidence": "sourced"
   }
 ]

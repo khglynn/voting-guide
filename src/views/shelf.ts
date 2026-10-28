@@ -1,7 +1,8 @@
 /* The shelf: one sheet from the bottom of the screen for everything the foot offers (Kevin, Oct 21:
    "report a bug and request a state open a shelf from the bottom. I like that paradigm. Let's use that
-   for all of them"). Five openings: the list of cities (the foot's city count), How this guide works,
-   Report a problem, Request a city, and Support.
+   for all of them"). Six openings: the list of cities (the foot's city count), How this guide works,
+   Report a problem, Request a city, Support, and Add a source (Oct 25: from the sources sheet and the
+   coverage line; a paste box for picks behind a login, so nothing needs an upload).
    The two forms post straight into Kevin's Google Form (common.FORM), so its response sheet stays the
    queue the pipeline reads. They ask for one sentence and an optional way back; everything else is
    collected here and shown under "We'll send along" before it goes (Kevin: "much cleaner forms that
@@ -12,14 +13,15 @@
    form's place (Codex, Oct 21). */
 import { S, type Shelf, type ShelfKind, type Along } from '../state';
 import type { Index } from '../types';
-import { esc } from '../util';
+import { ballotCoverage, askedWord, type Ask } from '../model/coverage';
+import { esc, fmtDate } from '../util';
 import { lastErrors, lastErrorId } from '../errors';
 import { FORM, formURL, ext, isOpen, kevinLink, reportWhere, BUY_ME_A_COFFEE_URL } from './common';
 
 export const SHELF_TITLE: Record<ShelfKind, string> = {
-  cities: 'Cities in the guide', how: 'How this guide works', report: 'Report a problem', city: 'Request a city', support: 'Support the guide',
+  cities: 'Cities in the guide', how: 'How this guide works', report: 'Report a problem', city: 'Request a city', support: 'Support the guide', source: 'Add a source',
 };
-export const isForm = (k: ShelfKind): boolean => k === 'report' || k === 'city';
+export const isForm = (k: ShelfKind): boolean => k === 'report' || k === 'city' || k === 'source';
 
 /* ---------- the forms ---------- */
 interface Field { k: string; label: string; type: 'area' | 'text' | 'zip'; required?: boolean; optional?: boolean; hint?: string; auto?: string; max: number }
@@ -32,11 +34,57 @@ const CITY: Field[] = [
   { k: 'zip', label: 'ZIP', type: 'zip', optional: true, max: 5 },
   { k: 'reach', label: 'Want to hear when it’s up?', type: 'text', optional: true, hint: 'An email or phone, only if you’d like a note.', auto: 'off', max: 300 },
 ];
-/* Opened from a paywalled paper's "Send it to us": the box asks for its picks instead. */
+/* Add a source (Kevin, Oct 25: "the option to add their own source (URL, and then if paywalled maybe a
+   clever way they can export a PDF and upload it for us)"): a name or a link, where you vote, and a
+   paste box. A person with a login can select all and paste, so nothing needs an upload endpoint. */
+const SOURCE: Field[] = [
+  { k: 'src', label: 'Which source?', type: 'text', required: true, hint: 'Its name or a link.', auto: 'off', max: 500 },
+  { k: 'where', label: 'Where you vote', type: 'text', optional: true, auto: 'off', max: 200 },
+  { k: 'picks', label: 'Their picks, if you have them', type: 'area', optional: true, hint: 'Behind a login? Copy their endorsement list and paste it here.', max: 5000 },
+  { k: 'reach', label: 'Want a reply?', type: 'text', optional: true, hint: 'An email or phone, only if you’d like one back.', auto: 'off', max: 300 },
+];
+/* Opened from a paywalled paper's "Send it to us": the box asks for its picks instead. A bot-checked
+   source's (Oct 25) the same, without the login. */
 const PAYWALL = { intro: 'Have a login? Send Kevin their picks.', label: 'Their picks, or a link to a PDF' };
-const fieldsOf = (r: Shelf): Field[] => (r.kind === 'city' ? CITY : REPORT);
+const BLOCKED_INTRO = 'Can you see their picks? Send them to Kevin.';
+const unreadHint = (r: Pick<Shelf, 'hint'>): boolean => r.hint === 'paywall' || r.hint === 'blocked';
+/* "Tell me when it's in" / "Tell me what he finds" (the coverage card after its one tap, Oct 25 copy pass:
+   "if we're doing the notify-me button opens the shelf, it should be pre-filled for them"): a follow-up
+   to the request already sent, never a second "Please add my city". The request shows as text; an email
+   or phone is the one thing to type, so it's required here. Everything else is read from the ballot and
+   the request this device remembers (model/coverage.ts). */
+const FOLLOW_FIELDS: Field[] = [
+  { k: 'reach', label: 'Email or phone', type: 'text', required: true, hint: 'Kevin uses it once, to tell you.', auto: 'email', max: 300 },
+];
+interface Follow { title: string; intro: string; request: string; button: string; sent: string; what: string; wrong: string }
+export const isFollow = (r: Pick<Shelf, 'kind' | 'hint'>): boolean => r.kind === 'city' && r.hint === 'follow';
+export function followOf(): Follow {
+  const c = S.ballot && S.index ? ballotCoverage(S.ballot, S.index, S.b.zip) : null;
+  const on = c ? c.askedOn : null;
+  const sentOn = on ? ` Sent ${askedWord(on)}.` : '';
+  const from = on ? `Follow-up to the one-tap request from ${fmtDate(on, { weekday: false })}.` : 'Follow-up to the one-tap request.';
+  if (c && c.kind === 'thin') {
+    return {
+      title: 'Tell me what he finds', button: 'Tell me what he finds', what: 'Follow-up: tell me what you find',
+      intro: `Your request is in. Leave an email or phone number and Kevin will tell you what he finds for ${c.name}, even if it’s nothing.`,
+      request: `local picks for ${c.name}${c.zip ? `, ZIP ${c.zip}` : ''}.${sentOn}`,
+      sent: 'Kevin will tell you what he finds.',
+      wrong: `Tell me what you find for ${c.name}. ${from}`,
+    };
+  }
+  const zip = c ? c.zip : '';
+  const st = S.ballot ? S.ballot.stateName : '';
+  return {
+    title: 'Tell me when it’s in', button: 'Tell me when it’s in', what: 'Follow-up: tell me when it’s in',
+    intro: 'Your request is in. Leave an email or phone number and Kevin will tell you when your city’s races are in the guide.',
+    request: `your city’s races${zip ? `, for ZIP ${zip}` : ''}${st ? ` in ${st}` : ''}.${sentOn}`,
+    sent: 'Kevin will tell you when it’s in.',
+    wrong: `Tell me when the city${zip ? ` for ZIP ${zip}` : ''} is in. ${from}`,
+  };
+}
+const fieldsOf = (r: Shelf): Field[] => (isFollow(r) ? FOLLOW_FIELDS : r.kind === 'city' ? CITY : r.kind === 'source' ? SOURCE : REPORT);
 /* The one question the form requires: the sheet won't send without it. */
-export const requiredOf = (r: Shelf): string => (r.kind === 'city' ? 'city' : 'wrong');
+export const requiredOf = (r: Shelf): string => (isFollow(r) ? 'reach' : r.kind === 'city' ? 'city' : r.kind === 'source' ? 'src' : 'wrong');
 
 /* ---------- what a form sends along by itself ---------- */
 /* The page it was opened on, in the words the guide uses for its pages. */
@@ -94,7 +142,7 @@ export function alongLines(r: Pick<Shelf, 'kind' | 'what' | 'tag' | 'along'>): s
   const a = r.along;
   const head = [`Page: ${a.page}`, a.where ? `Place: ${a.where}` : ''];
   const tail = [`Page address: ${linkOf(a)}`, `Data built: ${a.data || 'unknown'}`];
-  if (r.kind === 'city') return [...head, ...tail].filter(Boolean);
+  if (r.kind === 'city' || r.kind === 'source') return [...head, ...tail].filter(Boolean);
   const about = aboutOf(r);
   return [...head, about ? `About: ${about}` : '', ...tail, `Browser: ${a.device}`, ...a.errors.map((e) => `Error the page caught: ${e}`), a.crash ? `Crash report: ${a.crash}` : ''].filter(Boolean);
 }
@@ -107,6 +155,33 @@ export function alongLines(r: Pick<Shelf, 'kind' | 'what' | 'tag' | 'along'>): s
    sends. */
 export function reportBody(r: Shelf): Record<string, string> {
   const v = (k: string): string => (r.f[k] || '').trim();
+  if (isFollow(r)) {
+    // The follow-up: its own words for the race and for "What's wrong?", the place and ZIP, the email or phone.
+    const f = followOf();
+    return {
+      [FORM.what]: f.what,
+      [FORM.where]: r.along.where,
+      [FORM.wrong]: `${f.wrong}\n\nSent along:\n${alongLines(r).join('\n')}`,
+      [FORM.link]: linkOf(r.along),
+      [FORM.reach]: v('reach'),
+      fvv: '1',
+      pageHistory: '0',
+    };
+  }
+  if (r.kind === 'source') {
+    // Add a source: its name or link for the race, where you vote, the picks you pasted (or a plain ask)
+    // with "Sent along:" under them, and the link itself when you gave one.
+    const src = v('src');
+    return {
+      [FORM.what]: `Add source: ${src}`,
+      [FORM.where]: v('where'),
+      [FORM.wrong]: [v('picks') || 'Please add this source', `Sent along:\n${alongLines(r).join('\n')}`].join('\n\n'),
+      [FORM.link]: /^https?:\/\/\S+$/i.test(src) ? src : linkOf(r.along),
+      [FORM.reach]: v('reach'),
+      fvv: '1',
+      pageHistory: '0',
+    };
+  }
   const city = r.kind === 'city';
   const note = city ? (v('city') ? `Please add ${v('city')}` : '') : v('wrong');
   const sent = `Sent along:\n${alongLines(r).join('\n')}`;
@@ -121,10 +196,22 @@ export function reportBody(r: Shelf): Record<string, string> {
   };
 }
 /* "Open the form in a new tab instead": the same answers, prefilled. */
-export function reportFallbackURL(r: Shelf): string {
-  const b = reportBody(r);
-  return formURL(b[FORM.what], b[FORM.where], { wrong: b[FORM.wrong], link: b[FORM.link], reach: b[FORM.reach] });
+const fallbackOf = (b: Record<string, string>): string => formURL(b[FORM.what], b[FORM.where], { wrong: b[FORM.wrong], link: b[FORM.link], reach: b[FORM.reach] });
+export const reportFallbackURL = (r: Shelf): string => fallbackOf(reportBody(r));
+/* A one-tap request (views/coverage.ts): the same five answers with nothing typed. Its own words for the
+   race and for "What's wrong?", the place and ZIP, and a city request's "Sent along" list. */
+export function askBody(a: Ask, along: Along): Record<string, string> {
+  return {
+    [FORM.what]: a.what,
+    [FORM.where]: along.where,
+    [FORM.wrong]: `${a.wrong}\n\nSent along:\n${alongLines({ kind: 'city', what: a.what, tag: '', along }).join('\n')}`,
+    [FORM.link]: linkOf(along),
+    [FORM.reach]: '',
+    fvv: '1',
+    pageHistory: '0',
+  };
 }
+export const askFallbackURL = (a: Ask): string => fallbackOf(askBody(a, collectAlong()));
 const altLink = (r: Shelf, text = 'Open the form in a new tab instead'): string =>
   `<a href="${esc(reportFallbackURL(r))}" target="_blank" rel="noopener" data-rp-alt>${esc(text)}</a>`;
 
@@ -134,26 +221,50 @@ function fieldHTML(r: Shelf, f: Field): string {
   const busy = r.state === 'sending' ? ' readonly' : '';
   const val = r.f[f.k] || '';
   const bad = r.err && f.k === requiredOf(r);
-  const label = f.k === 'wrong' && r.hint === 'paywall' ? PAYWALL.label : f.label;
+  const label = f.k === 'wrong' && unreadHint(r) ? PAYWALL.label : f.label;
   const desc = [f.hint ? `${id}-h` : '', bad ? 'rf-err' : ''].filter(Boolean).join(' ');
   const attrs = `id="${id}" name="${f.k}" data-rf="${f.k}" data-fk="${id}" maxlength="${f.max}"${f.required ? ' aria-required="true"' : ''}${desc ? ` aria-describedby="${desc}"` : ''}${bad ? ' aria-invalid="true"' : ''}${f.auto ? ` autocomplete="${f.auto}"` : ''}${busy}`;
   const input = f.type === 'area' ? `<textarea ${attrs} rows="3">${esc(val)}</textarea>`
     : f.type === 'zip' ? `<input ${attrs} inputmode="numeric" pattern="[0-9]*" autocomplete="postal-code" value="${esc(val)}">`
       : `<input ${attrs} type="text" value="${esc(val)}">`;
-  const err = bad ? `<p class="zip-err rp-err" id="rf-err">${f.k === 'city' ? 'Type the city first.' : r.hint === 'paywall' ? 'Paste their picks or a link first.' : 'Say what’s wrong first.'}</p>` : '';
+  const err = bad ? `<p class="zip-err rp-err" id="rf-err">${f.k === 'city' ? 'Type the city first.' : f.k === 'reach' ? 'Type an email or phone first.' : f.k === 'src' ? 'Type its name or a link first.' : unreadHint(r) ? 'Paste their picks or a link first.' : 'Say what’s wrong first.'}</p>` : '';
   return `<div class="rp-f"><label for="${id}"><b>${esc(label)}</b>${f.optional ? ' <span class="rp-opt">optional</span>' : ''}</label>
     ${f.hint ? `<p class="rp-h" id="${id}-h">${esc(f.hint)}</p>` : ''}${input}${err}</div>`;
 }
-function formHTML(r: Shelf): string {
+/* The follow-up form: the request as a line of text, the one field, the button, and what goes along folded
+   shut under it. Sent, it never shows the email or phone back (a shared phone would). */
+function followHTML(r: Shelf): string {
+  const f = followOf();
   if (r.state === 'sent') {
-    return `<div class="rp-sent" role="status"><p><b>Sent.</b> Kevin reads every one.</p>
+    return `<div class="rp-sent" role="status"><p><b>Got it.</b> ${esc(f.sent)}</p>
+      <button class="bigbtn" data-act="sheet-close" data-fk="report-done">Done</button></div>`;
+  }
+  const sending = r.state === 'sending';
+  const missed = r.state === 'failed' || r.state === 'unsure';
+  return `<form class="rp-form" data-form="report" novalidate${sending ? ' aria-busy="true"' : ''}>
+      <p class="rp-intro">${esc(f.intro)}</p>
+      <p class="rp-req"><b>Your request:</b> ${esc(f.request)}</p>
+      ${FOLLOW_FIELDS.map((x) => fieldHTML(r, x)).join('')}
+      <p class="fine rp-fine">Goes to Kevin’s Google Form. Nothing you type here is saved in the guide.</p>
+      ${missed ? `<p class="rp-fail" role="alert">${r.state === 'unsure' ? 'Couldn’t confirm it sent.' : 'That didn’t send.'} ${altLink(r)}.</p>` : ''}
+      <button class="bigbtn" type="submit" data-fk="report-send"${sending ? ' aria-disabled="true"' : ''}>${esc(sending ? 'Sending...' : f.button)}</button>
+      ${missed ? '' : `<p class="fine rp-alt">${altLink(r)}</p>`}
+      <details class="rp-along" id="rp-along"><summary>We’ll send along</summary>
+        <ul>${alongLines(r).map((l) => `<li>${esc(l)}</li>`).join('')}</ul></details>
+    </form>`;
+}
+function formHTML(r: Shelf): string {
+  if (isFollow(r)) return followHTML(r);
+  if (r.state === 'sent') {
+    return `<div class="rp-sent" role="status"><p><b>Sent.</b> ${r.kind === 'source' ? 'Kevin reads every one; a source usually shows up within a day.' : 'Kevin reads every one.'}</p>
       <button class="bigbtn" data-act="sheet-close" data-fk="report-done">Done</button></div>`;
   }
   const sending = r.state === 'sending';
   // Refused outright ("That didn't send.") or no answer in 15 seconds ("Couldn't confirm it sent.": it
   // may have arrived, so it doesn't say it didn't).
   const missed = r.state === 'failed' || r.state === 'unsure';
-  const intro = r.kind === 'city' ? 'Tell Kevin which city to add next.' : r.hint === 'paywall' ? PAYWALL.intro : 'Tell Kevin what’s off. A sentence is plenty.';
+  const intro = r.kind === 'city' ? 'Tell Kevin which city to add next.' : r.kind === 'source' ? 'Use a source we don’t have? Tell Kevin which one.'
+    : r.hint === 'paywall' ? PAYWALL.intro : r.hint === 'blocked' ? BLOCKED_INTRO : 'Tell Kevin what’s off. A sentence is plenty.';
   return `<form class="rp-form" data-form="report" novalidate${sending ? ' aria-busy="true"' : ''}>
       <p class="rp-intro">${esc(intro)}</p>
       ${fieldsOf(r).map((f) => fieldHTML(r, f)).join('')}
@@ -217,7 +328,7 @@ export function shelfHTML(): string {
   const form = isForm(r.kind);
   const body = form ? formHTML(r) : r.kind === 'cities' ? (S.index ? citiesHTML(S.index) : '') : r.kind === 'how' ? howHTML() : supportHTML();
   return `<div class="scrim shelf screen-only" data-act="sheet-close"></div>
-  <div class="sheet-panel shelf screen-only" role="dialog" aria-modal="true" aria-labelledby="sh-h" data-kind="${r.kind}">
-    <div class="sheet-hd"><h2 id="sh-h">${SHELF_TITLE[r.kind]}</h2><button class="closebtn" data-act="sheet-close" data-fk="sheet-x">${form && r.state !== 'sent' ? 'Cancel' : 'Close'}</button></div>
+  <div class="sheet-panel shelf screen-only" role="dialog" aria-modal="true" aria-labelledby="sh-h" data-kind="${r.kind}"${isFollow(r) ? ' data-hint="follow"' : ''}>
+    <div class="sheet-hd"><h2 id="sh-h">${esc(isFollow(r) ? followOf().title : SHELF_TITLE[r.kind])}</h2><button class="closebtn" data-act="sheet-close" data-fk="sheet-x">${form && r.state !== 'sent' ? 'Cancel' : 'Close'}</button></div>
     <div class="sheet-bd" data-keep="shelf">${body}</div></div>`;
 }

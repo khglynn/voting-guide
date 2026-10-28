@@ -4,7 +4,8 @@
   "title": "Travis County voting precincts, with each precinct's commissioner, justice of the peace and constable, and State Board of Education districts",
   "places": [
     "austin-tx",
-    "pflugerville-tx"
+    "pflugerville-tx",
+    "round-rock-tx"
   ],
   "county": "Travis",
   "source_url": "https://maps.austintexas.gov/arcgis/rest/services/Shared/VoterPrecincts/MapServer/0",
@@ -12,7 +13,7 @@
   "plan": "Travis County's voting precincts for 2026, redrawn after the 2025 congressional map. Every precinct carries the districts the county builds its ballots from.",
   "layer_dated": "2025-12-18",
   "layer_dated_from": "newest LASTEDITED in the layer",
-  "fetched": "2026-10-21",
+  "fetched": "2026-10-26",
   "license": "none stated",
   "label_property": "PRECINCT",
   "props": {
@@ -24,7 +25,7 @@
   "simplified": "Douglas-Peucker to 10 m, TopoJSON quantized to 100000 steps across the map",
   "bytes": 131660,
   "checked": {
-    "on": "2026-10-21",
+    "on": "2026-10-26",
     "simplified_vs_original": {
       "points": 2910,
       "agree": 2910,
@@ -169,6 +170,16 @@
       {
         "name": "Pflugerville City Hall",
         "answer": "172",
+        "by": "both"
+      },
+      {
+        "name": "Pflugerville Public Library",
+        "answer": "177",
+        "by": "both"
+      },
+      {
+        "name": "Canyon Vista Middle School",
+        "answer": "384",
         "by": "both"
       }
     ]

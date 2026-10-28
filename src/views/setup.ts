@@ -10,6 +10,7 @@ import { partiesOnBallot, CHIPS, noEndorsements, doorNone } from '../model/lens'
 import { coverage } from '../model/tally';
 import { planSetup, fillStands } from '../model/bulk';
 import { isOpen, FILL, HIDE, SHOW_ENDS } from './common';
+import { covHTML } from './coverage';
 
 /* "Austin, Texas", "Aurora or Denver, Colorado", "Ward 1, Washington, DC", or the state alone for
    statewide races. */
@@ -37,7 +38,9 @@ const sw = (act: string, on: boolean, label: string, sub = ''): string =>
   `<button class="su-sw" role="switch" aria-checked="${on}" data-act="${act}" data-fk="${act}"><span class="su-l"><b>${esc(label)}</b>${sub ? `<small>${esc(sub)}</small>` : ''}</span><span class="tg" aria-hidden="true"><span></span></span></button>`;
 
 /* Step 2's controls, shared with the ballot's Edit sheet: "Show endorsements", the chips and "A
-   party", the coverage line, and the two switches. On the first page "A party" opens its list right
+   party", two quiet coverage lines ("Your sources have picks in N of your M races", then how many sources
+   the ballot has, scoped: views/coverage.ts; the action lives in the coverage card in step 1), and the
+   two switches. On the first page "A party" opens its list right
    there; in the Edit sheet it opens the party sheet, and "See all sources" opens every source. Before
    a ZIP has found a ballot the first page shows the choices kept so far (S.door), every party the
    guide covers, and no counts. */
@@ -78,7 +81,7 @@ export function pickControlsHTML(inSheet = false): string {
   return `${ends}
     <div class="su-chips" role="group" aria-labelledby="${inSheet ? 'sh-h' : 'su-h'}">${chips}${partyChip}${more}</div>
     ${list}
-    ${cov ? `<p class="su-cov">Picks in ${cov.picked} of your ${plural(cov.total, 'race')}.</p>` : ''}
+    ${cov ? `<div class="su-stat"><p class="su-cov">Your sources have picks in ${cov.picked} of ${b && !b.places.length ? `the ${plural(cov.total, 'statewide race')} here` : `your ${plural(cov.total, 'race')}`}.</p>${covHTML()}</div>` : ''}
     <div class="su-sws">
       ${fillSw}
       ${only}

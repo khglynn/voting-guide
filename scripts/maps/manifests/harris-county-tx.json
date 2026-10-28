@@ -1,0 +1,97 @@
+{
+  "area": "harris-county-tx",
+  "about": "Harris County's 2026 voting precincts, merged by the districts each one's ballot is built from. Pull with: node scripts/maps/pull.mjs harris-county-tx",
+  "simplify_m": 10,
+  "layers": [
+    {
+      "kind": "county-districts",
+      "name": "county precinct",
+      "title": "Harris County commissioner, justice of the peace and constable, and State Board of Education districts, from the county's 2026 voting precincts",
+      "places": [
+        "houston-tx"
+      ],
+      "county": "Harris",
+      "source_url": "https://services.arcgis.com/su8ic9KbA7PYVxPS/arcgis/rest/services/Tax_votingprecincts_2026/FeatureServer/0",
+      "source_org": "Harris County (Tax Office and Office of County Administration GIS)",
+      "plan": "Harris County's 1,224 voting precincts effective Jan 1, 2026 (the layer says \"data as of 06/08/2026\"). Each carries the commissioner, justice of the peace and constable, and State Board of Education district the county builds its ballots from; precincts with the same three are merged here, so their outer lines are the precincts' own.",
+      "plan_source": "https://www.arcgis.com/home/item.html?id=7768c6b089d04d4ba74771ece2d24d52",
+      "dated_service": true,
+      "dissolve": [
+        "CoComm",
+        "JP_Constab",
+        "SBOE_E2106"
+      ],
+      "label": {
+        "field": "JP_Constab",
+        "match": "^0*([1-8])$"
+      },
+      "props": {
+        "commissioner": {
+          "field": "CoComm",
+          "match": "^0*([1-4])$"
+        },
+        "jp": {
+          "field": "JP_Constab",
+          "match": "^0*([1-8])$"
+        },
+        "sboe": {
+          "field": "SBOE_E2106",
+          "match": "^0*(\\d+)$"
+        }
+      },
+      "settles": [
+        {
+          "office": "^County Commissioner$",
+          "scope": "\\bHarris County\\b",
+          "district": "Precinct {commissioner}"
+        },
+        {
+          "office": "^Justice of the Peace$",
+          "scope": "\\bHarris County\\b",
+          "district": "Precinct {jp}"
+        },
+        {
+          "office": "State Board of Education",
+          "district": "SBOE District {sboe}"
+        }
+      ],
+      "agree": [
+        {
+          "what": "the county's commissioner precincts (the 2021 plan; the County Attorney's layer, edited 2026-06-12)",
+          "source_url": "https://services.arcgis.com/su8ic9KbA7PYVxPS/arcgis/rest/services/Commissioner_Precinct/FeatureServer/0",
+          "label": {
+            "field": "PCT_NO",
+            "match": "^0*([1-4])$"
+          },
+          "compare": "commissioner"
+        },
+        {
+          "what": "the county's December 2025 copy of the 2026 precincts (named \"Proposed\"), all three codes",
+          "source_url": "https://services.arcgis.com/su8ic9KbA7PYVxPS/arcgis/rest/services/HC_Voting_Precinct_2026_Final/FeatureServer/0",
+          "label": {
+            "field": "JP_Constab",
+            "match": "^0*([1-8])$"
+          },
+          "props": {
+            "commissioner": {
+              "field": "Comm__Cour",
+              "match": "^0*([1-4])$"
+            },
+            "sboe": {
+              "field": "SBOE_E2106",
+              "match": "^0*(\\d+)$"
+            }
+          }
+        }
+      ],
+      "expect": {
+        "Houston City Hall": {
+          "commissioner": "1",
+          "jp": "1",
+          "sboe": "4"
+        }
+      }
+    }
+  ],
+  "test_points": "test-points.json"
+}

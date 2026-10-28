@@ -25,7 +25,7 @@ import type { Ballot } from '../ballot';
 import type { BallotState } from '../state';
 import { contestDistrict } from '../ballot';
 import { cleanOffice } from './labels';
-import { ballotMaps, ruleMatches, ruleIs, fillTemplate, type MapAnswer } from './maps';
+import { ballotMaps, ruleMatches, ruleIs, fillTemplate, seatless, type MapAnswer } from './maps';
 
 export interface Districts { cd: number | null; upper: number | null; lower: number | null; schools?: string[]; county?: string | null }
 /* A district map that answered at this address: its record and the feature's properties. */
@@ -96,7 +96,8 @@ const KINDS: Kind[] = ['cd', 'upper', 'lower'];
    District {n}" each, Congress first, then the state senate, then the state house, then school
    districts, then what the district maps put on, in ballot order; empty when it put none there
    (nothing here turns on it, or it only took races off). */
-export function setFromAddress(b: Ballot, s: BallotState, r: Districts, local: LocalAnswer[] = [], keep: ReadonlySet<string> = new Set()): string[] {
+export function setFromAddress(b: Ballot, s: BallotState, r0: Districts, local: LocalAnswer[] = [], keep: ReadonlySet<string> = new Set()): string[] {
+  const r = withCounty(r0);
   // A lookup replaces the one before it (a corrected address, "Not it? Try again", the maps folding
   // in after the Census): what the last one settled, and the voter hasn't changed since (addrSet),
   // goes back to unsettled first, so this address never keeps an answer it can't give itself. The
@@ -184,32 +185,45 @@ export function setFromAddress(b: Ballot, s: BallotState, r: Districts, local: L
   return [...KINDS.flatMap((k) => named[k].map((o) => `${o}, District ${num(k)}`)), ...schoolsNamed, ...localNamed];
 }
 
-/* A county map answering for an address the Census puts in another county (a point at the county
-   line) is set aside: the Census's county decides which county's ballot you get. */
-export const inCounty = (m: MapMeta, county: string | null | undefined): boolean => !(m.county && county && m.county.toLowerCase() !== county.toLowerCase());
+/* A county's map answers only for an address the Census puts in that county: the Census's county
+   decides which county's ballot you get. Another county (a point at the county line), or no county
+   at all (a partial answer from the Census), sets it aside, and its races stay with the sample
+   ballot. Williamson's SBOE map reaches 1.5 km past the county on purpose, so this is what keeps it
+   from answering for a Travis or a county-less address (Codex on #23). A map with no county, a
+   city's, answers anywhere it covers. */
+/* The Census's county, or null when it named none (a blank name is none). Read once, so every
+   county rule below agrees on whether there is one. */
+const withCounty = (r: Districts): Districts => ({ ...r, county: (r.county || '').trim() || null });
+export const inCounty = (m: MapMeta, county: string | null | undefined): boolean => !m.county || (!!county && !!county.trim() && m.county.toLowerCase() === county.trim().toLowerCase());
 /* What each of the ballot's maps said at the address: its answer, or null when it didn't load. */
 export interface MapResult { meta: MapMeta; answer: MapAnswer | null }
 /* The answers setFromAddress takes: the maps that found the address, in the Census's county. */
 export const localAnswers = (results: MapResult[], r: Districts): LocalAnswer[] =>
   results.flatMap((x) => (x.answer && x.answer.at === 'in' && inCounty(x.meta, r.county) ? [{ meta: x.meta, props: x.answer.props }] : []));
 /* What the address box says about the maps beyond the races they set, for this visit:
-   - when the Census puts you in another county than a county map's, that its county races aren't
-     yours and this guide doesn't list yours ("Your county races are Williamson County's...");
+   - when the Census puts you in another county than a county map's, and this ballot lists no county
+     races of your own county, that its county races aren't yours and this guide doesn't list yours
+     ("Your county races are Williamson County's...");
    - the voting precinct, from a map the Census's county agrees with, and only when both witnesses
      agree (the precinct number is what a voter types into a county finder, and where the block alone
      decided, the Oct 21 review found it wrong about as often as right);
    - only while a race they'd settle is still open on `s`: a line they didn't guess at, witnesses
      they couldn't reconcile, a map that didn't load.
    Call it after setFromAddress. `pending`: maps still on their way. */
-export function mapNotes(b: Ballot, s: BallotState, r: Districts, results: MapResult[], pending = false): string[] {
+export function mapNotes(b: Ballot, s: BallotState, r0: Districts, results: MapResult[], pending = false): string[] {
+  const r = withCounty(r0);
   const claims = (rule: SettleRule): boolean => b.groups.some((g) => !g.kind && g.members.some((id) => ruleMatches(rule, b.byId.get(id)!))) || [...b.mayApply].some((id) => ruleMatches(rule, b.byId.get(id)!));
   const open = (m: MapMeta): boolean => inCounty(m, r.county) && m.settles.some((rule) =>
     b.groups.some((g) => !g.kind && !answered(s, g.key) && g.members.some((id) => ruleMatches(rule, b.byId.get(id)!)))
     || [...b.mayApply].some((id) => ruleMatches(rule, b.byId.get(id)!) && !s.notMine.includes(id) && !(s.mine || []).includes(id)));
   const names = (keep: (x: MapResult) => boolean): string[] => [...new Set(results.filter((x) => keep(x) && open(x.meta)).map((x) => x.meta.name))];
   const and = (xs: string[]): string => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} and ${xs[xs.length - 1]}`);
-  const elsewhere = r.county ? [...new Set(ballotMaps(b).filter(({ meta }) => meta.county && !inCounty(meta, r.county)
-    && meta.settles.some((rule) => !!rule.scope && scopeNames(rule.scope, `${meta.county} County`) && claims(rule))).map(({ meta }) => meta.county!))] : [];
+  // County maps whose county races this ballot lists: the voter's own county's, and the others'.
+  const countyRaces = (inside: boolean): string[] => (r.county ? [...new Set(ballotMaps(b).filter(({ meta }) => meta.county && inCounty(meta, r.county) === inside
+    && meta.settles.some((rule) => !!rule.scope && scopeNames(rule.scope, `${meta.county} County`) && claims(rule))).map(({ meta }) => meta.county!))] : []);
+  // Only when the ballot lists no county races of the voter's own county: Pflugerville's lists both
+  // Travis's and Williamson's, so neither side is told its races are missing.
+  const elsewhere = countyRaces(false).length && !countyRaces(true).length ? countyRaces(false) : [];
   const shows = results.flatMap((x) => (x.answer && x.answer.at === 'in' && x.answer.by === 'both' && x.meta.shows && inCounty(x.meta, r.county) ? [fillTemplate(x.meta.shows, x.answer.props)] : [])).filter((t): t is string => !!t);
   const why = (w: 'line' | 'unsure') => names((x) => !!x.answer && x.answer.at === 'near' && x.answer.why === w);
   const line = why('line'), unsure = why('unsure');
@@ -230,7 +244,8 @@ export const CHECKING = 'Checking the district maps…';
    "Justice of the Peace, Precinct 5", "State Board of Education, District 5". */
 const localName = (c: Contest): string => {
   const office = cleanOffice(c.office).replace(/^Member,\s*/i, '').replace(/\s+Member$/i, '');
-  const seat = (c.district || '').replace(/\([^)]*\)/g, ' ').replace(/\s+/g, ' ').trim().replace(/^[A-Z]{2,6}\s+(?=District\b)/, '');
+  // "Precinct 1", not "Precinct 1, Place 1": the answer shows every place of the precinct.
+  const seat = seatless((c.district || '').replace(/\([^)]*\)/g, ' ').replace(/\s+/g, ' ').trim()).replace(/^[A-Z]{2,6}\s+(?=District\b)/, '');
   return seat ? `${office}, ${seat}` : office;
 };
 /* Whether a race's scope names a county other than this one, and not this one: a Williamson County

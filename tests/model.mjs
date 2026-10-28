@@ -35,13 +35,13 @@ const util = await load('/src/util.ts');
 const geo = await load('/src/geo.ts');
 const common = await load('/src/views/common.ts');
 const mods = {};
-for (const m of ['lens', 'tally', 'bulk', 'judges', 'labels', 'plan', 'address']) {
+for (const m of ['lens', 'tally', 'bulk', 'judges', 'labels', 'plan', 'address', 'coverage']) {
   const f = path.join(ROOT, 'src', 'model', `${m}.ts`);
   if (fs.existsSync(f)) mods[m] = await load(`/src/model/${m}.ts`);
 }
 /* The string views the ledger paints (no DOM needed to build their HTML). */
 const views = {};
-for (const v of ['ledger', 'cheat', 'open', 'lens', 'mast', 'setup', 'pass', 'planstrip', 'shelf']) views[v] = await load(`/src/views/${v}.ts`);
+for (const v of ['ledger', 'cheat', 'open', 'lens', 'mast', 'setup', 'pass', 'planstrip', 'shelf', 'coverage']) views[v] = await load(`/src/views/${v}.ts`);
 views.errors = await load('/src/errors.ts'); // not a view: the errors a problem report sends along (the shelf reads it)
 views.scrub = await load('/src/scrub.ts'); // not a view: what a crash report may carry (sentry.ts runs every event through it)
 
@@ -287,11 +287,12 @@ function roundTrip(name, stCode, places, mutate) {
   check('maps: a district with no race this year answers "none", and the line names nothing', st.S.b.districts[council.key] === 'none' && !set.length, set.join('|'));
   // A "may apply" race, on and off: Travis's one constable race, from the precinct map's JP code.
   const pm = ballot.places[0].maps.find((m) => m.kind === 'precincts');
-  set = address.setFromAddress(ballot, st.S.b, none, [{ meta: pm, props: { label: '1', commissioner: '4', jp: '4', sboe: '5' } }]);
+  // (In Travis County, as the Census says: a county's map answers only for its own county's addresses.)
+  set = address.setFromAddress(ballot, st.S.b, { ...none, county: 'Travis' }, [{ meta: pm, props: { label: '1', commissioner: '4', jp: '4', sboe: '5' } }]);
   check('maps: the precinct map puts the constable race on in its precinct, with commissioner, JP and SBOE', st.S.b.mine.includes('tx-travis-constable-4') && st.S.b.mine.includes('tx-sboe-5')
     && st.S.b.districts['county|County Commissioner'] === 'tx-travis-commissioner-4' && st.S.b.districts['judicial|Justice of the Peace'] === 'tx-travis-jp-4'
     && set.join(' · ') === 'State Board of Education, District 5 · County Commissioner, Precinct 4 · Justice of the Peace, Precinct 4 · Constable, Precinct 4', set.join(' · '));
-  address.setFromAddress(ballot, st.S.b, none, [{ meta: pm, props: { label: '2', commissioner: '3', jp: '5', sboe: '10' } }]);
+  address.setFromAddress(ballot, st.S.b, { ...none, county: 'Travis' }, [{ meta: pm, props: { label: '2', commissioner: '3', jp: '5', sboe: '10' } }]);
   check('maps: and off everywhere else', st.S.b.notMine.includes('tx-travis-constable-4') && !st.S.b.mine.includes('tx-travis-constable-4') && st.S.b.notMine.includes('tx-sboe-5') && st.S.b.districts['county|County Commissioner'] === 'none');
   // The Census puts you in Williamson County: the Travis map's county races are off without looking.
   st.S.b = st.emptyBallotState('');
@@ -427,7 +428,7 @@ function roundTrip(name, stCode, places, mutate) {
     st.S.b.districts = { 'city|Austin City Council Member': 'none' };
     check('maps: an office with no other race on the ballot keeps its plain name', stripH(views.ledger.offHTML()) === 'Not on your ballot: Austin City Council Member.', stripH(views.ledger.offHTML()));
     // 9. The index lists each place's maps, so the first page can start them with the place's bundle.
-    check('maps: the index names Austin’s maps', JSON.stringify(INDEX.places['austin-tx'].maps) === JSON.stringify(au3.places[0].maps.map((m) => m.file)) && !INDEX.places['dallas-tx'].maps);
+    check('maps: the index names Austin’s maps', JSON.stringify(INDEX.places['austin-tx'].maps) === JSON.stringify(au3.places[0].maps.map((m) => m.file)) && !INDEX.places['san-antonio-tx'].maps);
     st.S.b = st.emptyBallotState('');
   }
   // Codex's confirming round on #17 (Oct 26): who owns an answer across a lookup's passes, and what
@@ -551,6 +552,177 @@ function roundTrip(name, stCode, places, mutate) {
     S().districts['school|Del Valle ISD Trustee'] = '*';
     address.setFromAddress(au4, S(), cityHall, []);
     check('maps, ownership: "Not sure" on Del Valle’s trustees, and the Census says Austin ISD: answered "none"', S().districts['school|Del Valle ISD Trustee'] === 'none', JSON.stringify(S().districts));
+    st.S.b = st.emptyBallotState('');
+  }
+  // Williamson County (Oct 26): Round Rock, the Williamson side of Pflugerville, and Williamson-side
+  // Austin, on the shipped maps at public buildings (scripts/maps/test-points.json).
+  {
+    const TP = Object.fromEntries(JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts', 'maps', 'test-points.json'), 'utf8')).points.map((p) => [p.name, p]));
+    const w = (name) => ({ point: { lon: TP[name].point[0], lat: TP[name].point[1] }, block: { lon: TP[name].block[0], lat: TP[name].block[1] } });
+    const topo = new Map();
+    const fcOf = (meta) => { if (!topo.has(meta.file)) topo.set(meta.file, maps.fromTopo(JSON.parse(fs.readFileSync(path.join(DATA, meta.file), 'utf8')))); return topo.get(meta.file); };
+    const resultsAt = (ballot, name) => maps.ballotMaps(ballot).map(({ meta }) => ({ meta, answer: maps.answerAt(fcOf(meta), w(name), { edge: maps.edgeOf(meta) }) }));
+    const lookup = (ballot, r, name) => {
+      st.S.b = st.emptyBallotState('');
+      const res = resultsAt(ballot, name);
+      const line = address.addrSummary(address.setFromAddress(ballot, st.S.b, r, address.localAnswers(res, r)));
+      return { line, notes: address.mapNotes(ballot, st.S.b, r, res), s: st.S.b };
+    };
+    const rr = open('TX', ['round-rock-tx']);
+    const pf = open('TX', ['pflugerville-tx']);
+    const au5 = open('TX', ['austin-tx']);
+    const rrHall = { cd: 17, upper: 5, lower: 136, schools: ['Round Rock Independent School District'], county: 'Williamson' };
+    const kinds = (ballot) => maps.ballotMaps(ballot).map(({ meta }) => `${meta.file.split('/')[1]}/${meta.kind}`).sort().join(' ');
+    check('maps, Williamson: Round Rock and Pflugerville read both counties’ precincts and the Williamson SBOE map; Austin adds only the SBOE map',
+      kinds(rr) === 'travis-county-tx/precincts williamson-county-tx/precincts williamson-county-tx/sboe' && kinds(pf) === kinds(rr)
+      && kinds(au5) === 'austin-tx/council travis-county-tx/aisd-trustee travis-county-tx/dvisd-trustee travis-county-tx/precincts williamson-county-tx/sboe', `${kinds(rr)} || ${kinds(au5)}`);
+    // Round Rock City Hall: voting precinct 150, commissioner and JP precinct 1, SBOE District 10.
+    const a = lookup(rr, rrHall, 'Round Rock City Hall');
+    check('maps, Williamson: Round Rock City Hall: JP 1 on, commissioner "none" (precinct 1 isn’t up), SBOE 5 off, and the line names the JP race',
+      a.s.districts['judicial|Justice of the Peace'] === 'tx-wilco-jp-1' && a.s.districts['county|County Commissioner'] === 'none' && a.s.notMine.includes('tx-sboe-5') && /Justice of the Peace, Precinct 1\b/.test(a.line),
+      JSON.stringify([a.line, a.s.districts, a.s.notMine]));
+    check('maps, Williamson: and the box shows its voting precinct, with no "your county races" line', a.notes.join(' | ') === 'Your voting precinct: 150 (Williamson County).', a.notes.join(' | '));
+    // A Williamson building on Pflugerville's ballot, where both counties' races are listed: the
+    // Williamson map answers, the Travis races in the same questions go, and no one is told their
+    // county's races are missing. Pflugerville City Hall (Travis) the other way round.
+    const b = lookup(pf, rrHall, 'Williamson County Jester Annex');
+    check('maps, Williamson: Pflugerville, Williamson side: JP 1 (Williamson’s), commissioner "none", SBOE 5 off, no "your county races" line',
+      b.s.districts['judicial|Justice of the Peace'] === 'tx-wilco-jp-1' && b.s.districts['county|County Commissioner'] === 'none' && b.s.notMine.includes('tx-sboe-5') && !b.notes.some((t) => /Your county races/.test(t)) && b.notes.includes('Your voting precinct: 145 (Williamson County).'),
+      JSON.stringify([b.s.districts, b.notes]));
+    const pfHall = { cd: 10, upper: 14, lower: 50, schools: ['Pflugerville Independent School District'], county: 'Travis' };
+    const c = lookup(pf, pfHall, 'Pflugerville City Hall');
+    check('maps, Williamson: Pflugerville, Travis side: Travis JP 2, SBOE 5 on, and no "your county races" line now that the ballot lists both counties’',
+      c.s.districts['judicial|Justice of the Peace'] === 'tx-travis-jp-2' && c.s.mine.includes('tx-sboe-5') && !c.notes.some((t) => /Your county races/.test(t)),
+      JSON.stringify([c.s.districts, c.notes]));
+    // Travis-side Round Rock (a Travis building stands in): SBOE from the Travis precinct, the
+    // Williamson races off, and the box says whose county races these are.
+    const d = lookup(rr, { ...rrHall, county: 'Travis' }, 'Canyon Vista Middle School');
+    check('maps, Williamson: Round Rock, Travis side: SBOE 5 on from the Travis precinct, Williamson’s commissioner and JP "none", and the box says so',
+      d.s.mine.includes('tx-sboe-5') && d.s.districts['county|County Commissioner'] === 'none' && d.s.districts['judicial|Justice of the Peace'] === 'none'
+      && d.notes[0] === 'Your county races are Travis County’s. This guide lists Williamson County’s; your official sample ballot shows yours.',
+      JSON.stringify([d.s.districts, d.s.mine, d.notes]));
+    // A county's map answers only when the Census names that county (Codex on #23). The SBOE map
+    // reaches 1.5 km past Williamson on purpose; Canyon Vista Middle School sits in Travis close to
+    // the line, inside that reach, so it is the case that matters: the map has an answer there.
+    const sboeMeta = maps.ballotMaps(rr).find(({ meta }) => meta.file.includes('williamson-county-tx/sboe')).meta;
+    const sboeAt = maps.answerAt(fcOf(sboeMeta), w('Canyon Vista Middle School'), { edge: maps.edgeOf(sboeMeta) });
+    const fromWilco = (r, name) => address.localAnswers(resultsAt(rr, name), r).filter((x) => x.meta.county === 'Williamson').map((x) => `${x.meta.kind} ${x.props.label}`);
+    check('maps, Williamson county guard: the SBOE map does answer at Canyon Vista Middle School (Travis, within its 1.5 km reach), so the guard is what keeps it out',
+      sboeAt.at === 'in' && sboeAt.props.label === '5', JSON.stringify(sboeAt));
+    check('maps, Williamson county guard: Williamson’s maps answer for a Williamson address, and for no other county’s',
+      fromWilco(rrHall, 'Round Rock City Hall').join(' ') === 'precincts 150 sboe 10' && fromWilco({ ...rrHall, county: 'Travis' }, 'Canyon Vista Middle School').length === 0, JSON.stringify([fromWilco(rrHall, 'Round Rock City Hall'), fromWilco({ ...rrHall, county: 'Travis' }, 'Canyon Vista Middle School')]));
+    const noCounty = [null, undefined, '', '  '].map((county) => {
+      const x = lookup(rr, { ...rrHall, county }, 'Canyon Vista Middle School');
+      return { county, wilco: fromWilco({ ...rrHall, county }, 'Canyon Vista Middle School').length, sboe: x.s.mine.includes('tx-sboe-5') ? 'on' : x.s.notMine.includes('tx-sboe-5') ? 'off' : 'open', comm: x.s.districts['county|County Commissioner'], jp: x.s.districts['judicial|Justice of the Peace'], notes: x.notes.length };
+    });
+    check('maps, Williamson county guard: when the Census names no county, no county’s map answers: SBOE, commissioner and JP stay for the sample ballot',
+      noCounty.every((x) => x.wilco === 0 && x.sboe === 'open' && x.comm === undefined && x.jp === undefined), JSON.stringify(noCounty));
+    // Hays-side Austin (a Travis building stands in; the Census says Hays): the city's council map still
+    // answers, every county's map is set aside, Travis's county races come off, SBOE stays open.
+    const h = lookup(au5, { cd: 37, upper: 25, lower: 45, schools: ['Austin Independent School District'], county: 'Hays' }, 'Southeast Branch Library');
+    check('maps, Williamson county guard: Hays-side Austin: council from the city’s map, Travis’s county races off, SBOE open, and the box says whose',
+      /^tx-austin-council-\d$|^none$/.test(h.s.districts['city|Austin City Council Member'] || '') && h.s.districts['county|County Commissioner'] === 'none' && h.s.districts['judicial|Justice of the Peace'] === 'none'
+      && !h.s.mine.includes('tx-sboe-5') && !h.s.notMine.includes('tx-sboe-5') && /^Your county races are Hays County’s/.test(h.notes[0] || ''),
+      JSON.stringify([h.s.districts, h.s.mine, h.notes]));
+    // Williamson-side Austin: the SBOE race settles now (District 5 there), Travis's county races stay off.
+    const e = lookup(au5, { cd: 37, upper: 14, lower: 136, schools: ['Round Rock Independent School District'], county: 'Williamson' }, 'Spicewood Springs Branch Library');
+    check('maps, Williamson: Williamson-side Austin: SBOE 5 on from the Williamson SBOE map, Travis’s county races off, and the box still says whose',
+      e.s.mine.includes('tx-sboe-5') && e.s.districts['county|County Commissioner'] === 'none' && /State Board of Education, District 5/.test(e.line) && /^Your county races are Williamson County’s/.test(e.notes[0] || ''),
+      JSON.stringify([e.line, e.s.districts, e.notes]));
+    st.S.b = st.emptyBallotState('');
+  }
+  // A district's seats (Oct 26): Dallas elects two justices of the peace in each precinct ("Precinct 1,
+  // Place 1" and "Place 2"), both on every ballot in that precinct, as Washington elects two
+  // representatives per district ("Position 1" and "Position 2"). One answer must show both.
+  {
+    const da = open('TX', ['dallas-tx']);
+    const jp = da.groups.find((g) => g.key === 'judicial|Justice of the Peace');
+    st.S.ui.row = `q:${jp.key}`;
+    const qh = views.ledger.sectionHTML('judicial', bl.entriesBySection().get('judicial') || []);
+    const picks = [...qh.matchAll(/data-act="district" data-g="judicial\|Justice of the Peace" data-v="(tx-dallas-jp-[^"]+)"[^>]*><b>([^<]*)<\/b>/g)].map((m) => `${m[1]}=${m[2]}`);
+    check('seats: Dallas’s JP question offers each precinct once, by its precinct, and counts 5 districts',
+      picks.join(' | ') === 'tx-dallas-jp-1-1=Precinct 1 | tx-dallas-jp-2-1=Precinct 2 | tx-dallas-jp-3-1=Precinct 3 | tx-dallas-jp-4-1=Precinct 4 | tx-dallas-jp-5-1=Precinct 5' && /Dallas has 5 of these districts\./.test(qh), picks.join(' | '));
+    st.S.ui.row = null;
+    st.S.b.districts[jp.key] = 'tx-dallas-jp-3-1';
+    const shown = (bl.entriesBySection().get('judicial') || []).filter((e) => e.t === 'item' && /dallas-jp/.test(e.id)).map((e) => e.id);
+    check('seats: answering Precinct 3 shows both of its places, and no other precinct’s', shown.join(' ') === 'tx-dallas-jp-3-1 tx-dallas-jp-3-2', shown.join(' '));
+    const gl = views.ledger.sectionHTML('judicial', bl.entriesBySection().get('judicial') || []).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+    check('seats: and the answered question names the precinct, not one place', /Justice of the Peace: Precinct 3 Change/.test(gl), gl.slice(0, 160));
+    check('seats: places of different precincts aren’t one seat',
+      !bl.sameSeat(da.byId.get('tx-dallas-jp-3-1'), da.byId.get('tx-dallas-jp-4-2')) && bl.sameSeat(da.byId.get('tx-dallas-jp-3-1'), da.byId.get('tx-dallas-jp-3-2')));
+    // Two offices that happen to share a seat ("At-Large Position 1" and "2" of two different boards) aren't
+    // one seat either (Codex on #24: the check above compared only JP races).
+    const seat = (office, district) => ({ kind: 'contest', id: `${office}|${district}`, office, district });
+    check('seats: the same seat of two different offices isn’t one seat; of one office it is',
+      !bl.sameSeat(seat('Board A Director', 'At-Large Position 1'), seat('Board B Director', 'At-Large Position 2'))
+      && bl.sameSeat(seat('Board A Director', 'At-Large Position 1'), seat('Board A Director', 'At-Large Position 2')));
+    // "Not sure" shows every race, so a question whose districts have two seats counts races (Codex on #24).
+    st.S.b.districts[jp.key] = '*';
+    const comm = da.groups.find((g) => g.key === 'county|County Commissioner');
+    st.S.b.districts[comm.key] = '*';
+    const unsure = (sec) => views.ledger.sectionHTML(sec, bl.entriesBySection().get(sec) || []).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+    check('seats: "Not sure" on Dallas’s JP question says "showing all 10 races"; on its commissioner question, "showing all 2 districts"',
+      /Justice of the Peace: showing all 10 races/.test(unsure('judicial')) && /County Commissioner: showing all 2 districts/.test(unsure('county')),
+      `${(unsure('judicial').match(/Justice of the Peace: [^C]*/) || [''])[0]} | ${(unsure('county').match(/County Commissioner: [^C]*/) || [''])[0]}`);
+    st.S.b.districts = {};
+    const se = open('WA', ['seattle-wa']);
+    const hd = se.groups.find((g) => /State Representative/.test(g.office));
+    const a = se.byId.get(hd.members[0]);
+    check('seats: Washington’s two House positions per district are still one seat', hd.members.filter((m) => bl.sameSeat(a, se.byId.get(m))).length === 1, hd.members.join(' '));
+    st.S.b = st.emptyBallotState('');
+  }
+  // Dallas County (Oct 26): one map, the county's 791 precincts merged into 28 pieces by commissioner,
+  // JP and SBOE district, settles all four county questions. At public buildings:
+  {
+    const TP = Object.fromEntries(JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts', 'maps', 'test-points.json'), 'utf8')).points.map((p) => [p.name, p]));
+    const da = open('TX', ['dallas-tx']);
+    const metas = maps.ballotMaps(da).map((x) => x.meta);
+    const fc = maps.fromTopo(JSON.parse(fs.readFileSync(path.join(DATA, metas[0].file), 'utf8')));
+    const at = (name) => { const p = TP[name]; return [{ meta: metas[0], answer: maps.answerAt(fc, { point: { lon: p.point[0], lat: p.point[1] }, block: { lon: p.block[0], lat: p.block[1] } }, { edge: maps.edgeOf(metas[0]) }) }]; };
+    const lookup = (r, name) => { st.S.b = st.emptyBallotState(''); const res = at(name); const line = address.addrSummary(address.setFromAddress(da, st.S.b, r, address.localAnswers(res, r))); return { line, notes: address.mapNotes(da, st.S.b, r, res), s: st.S.b }; };
+    check('maps, Dallas: one small map', metas.length === 1 && metas[0].kind === 'county-districts' && metas[0].bytes < 40000 && fc.features.length === 28, JSON.stringify(metas.map((m) => [m.kind, m.bytes, fc.features.length])));
+    const hall = lookup({ cd: 33, upper: 23, lower: 114, schools: ['Dallas Independent School District'], county: 'Dallas' }, 'Dallas City Hall');
+    const jpRows = (bl.entriesBySection().get('judicial') || []).filter((e) => e.t === 'item' && /dallas-jp/.test(e.id)).map((e) => e.id);
+    check('maps, Dallas: City Hall: JP Precinct 1 (both places), Constable 1, SBOE 13, commissioner "none" (precinct 3 isn’t up)',
+      hall.s.districts['judicial|Justice of the Peace'] === 'tx-dallas-jp-1-1' && jpRows.join(' ') === 'tx-dallas-jp-1-1 tx-dallas-jp-1-2' && hall.s.districts['county|Constable'] === 'tx-dallas-constable-1'
+      && hall.s.districts['state|Member, State Board of Education'] === 'tx-sboe-13' && hall.s.districts['county|County Commissioner'] === 'none',
+      JSON.stringify([hall.s.districts, jpRows]));
+    check('maps, Dallas: and the line names the precinct once, not a place', /State Board of Education, District 13 · Justice of the Peace, Precinct 1 · Constable, Precinct 1\.$/.test(hall.line) && !/Place/.test(hall.line), hall.line);
+    check('maps, Dallas: nothing on City Hall’s ballot still depends on the address, and the box adds nothing', views.ledger.addressCount() === 0 && hall.notes.length === 0, `${views.ledger.addressCount()} | ${hall.notes.join(' | ')}`);
+    const irving = lookup({ cd: 33, upper: 9, lower: 105, schools: ['Irving Independent School District'], county: 'Dallas' }, 'Irving City Hall');
+    check('maps, Dallas: Irving City Hall: commissioner Precinct 4, JP 4', irving.s.districts['county|County Commissioner'] === 'tx-dallas-commissioner-4' && irving.s.districts['judicial|Justice of the Peace'] === 'tx-dallas-jp-4-1', JSON.stringify(irving.s.districts));
+    // Collin-side Dallas: Dallas County's races aren't theirs, and the box says so; SBOE stays open.
+    const collin = lookup({ cd: 4, upper: 2, lower: 70, schools: ['Plano Independent School District'], county: 'Collin' }, 'Renner Frankford Branch Library');
+    check('maps, Dallas: Collin-side Dallas: Dallas County’s commissioner, JP and constable "none", SBOE open, and whose county races they are',
+      collin.s.districts['county|County Commissioner'] === 'none' && collin.s.districts['judicial|Justice of the Peace'] === 'none' && collin.s.districts['county|Constable'] === 'none' && collin.s.districts['state|Member, State Board of Education'] === undefined
+      && collin.notes[0] === 'Your county races are Collin County’s. This guide lists Dallas County’s; your official sample ballot shows yours.',
+      JSON.stringify([collin.s.districts, collin.notes]));
+    st.S.b = st.emptyBallotState('');
+  }
+  // Harris County (Oct 26): Houston's one map, the county's 1,224 precincts merged into 37 pieces by
+  // commissioner, JP and SBOE district. Houston's JP races are each precinct's Place 2 alone.
+  {
+    const TP = Object.fromEntries(JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts', 'maps', 'test-points.json'), 'utf8')).points.map((p) => [p.name, p]));
+    const hou = open('TX', ['houston-tx']);
+    const metas = maps.ballotMaps(hou).map((x) => x.meta);
+    const fc = maps.fromTopo(JSON.parse(fs.readFileSync(path.join(DATA, metas[0].file), 'utf8')));
+    const at = (name) => { const p = TP[name]; return [{ meta: metas[0], answer: maps.answerAt(fc, { point: { lon: p.point[0], lat: p.point[1] }, block: { lon: p.block[0], lat: p.block[1] } }, { edge: maps.edgeOf(metas[0]) }) }]; };
+    const lookup = (r, name) => { st.S.b = st.emptyBallotState(''); const res = at(name); const line = address.addrSummary(address.setFromAddress(hou, st.S.b, r, address.localAnswers(res, r))); return { line, notes: address.mapNotes(hou, st.S.b, r, res), s: st.S.b }; };
+    check('maps, Harris: one map, 37 pieces', metas.length === 1 && metas[0].kind === 'county-districts' && fc.features.length === 37 && metas[0].bytes < 75000, JSON.stringify(metas.map((m) => [m.kind, m.bytes, fc.features.length])));
+    const hall = lookup({ cd: 18, upper: 13, lower: 147, schools: ['Houston Independent School District'], county: 'Harris' }, 'Houston City Hall');
+    check('maps, Harris: City Hall: JP Precinct 1 (its Place 2), SBOE 4 (the unexpired term), commissioner "none" (precinct 1 isn’t up)',
+      hall.s.districts['judicial|Justice of the Peace'] === 'tx-harris-jp-1-2' && hall.s.districts['state|Member, State Board of Education'] === 'tx-sboe-4' && hall.s.districts['county|County Commissioner'] === 'none',
+      JSON.stringify(hall.s.districts));
+    check('maps, Harris: the line names SBOE District 4 and JP Precinct 1, and nothing is left for the sample ballot',
+      /State Board of Education, District 4 · Justice of the Peace, Precinct 1\.$/.test(hall.line) && views.ledger.addressCount() === 0 && hall.notes.length === 0, `${hall.line} | ${views.ledger.addressCount()}`);
+    const pas = lookup({ cd: 9, upper: 6, lower: 144, schools: ['Pasadena Independent School District'], county: 'Harris' }, 'Pasadena City Hall');
+    check('maps, Harris: Pasadena City Hall: commissioner Precinct 2, JP 2', pas.s.districts['county|County Commissioner'] === 'tx-harris-commissioner-2' && pas.s.districts['judicial|Justice of the Peace'] === 'tx-harris-jp-2-2', JSON.stringify(pas.s.districts));
+    // Fort Bend-side Houston: Harris County's races aren't theirs, and the box says so; SBOE stays open.
+    const fb = lookup({ cd: 18, upper: 13, lower: 27, schools: ['Fort Bend Independent School District'], county: 'Fort Bend' }, 'Missouri City City Hall');
+    check('maps, Harris: Fort Bend-side: Harris County’s commissioner and JP "none", SBOE open, and whose county races they are',
+      fb.s.districts['county|County Commissioner'] === 'none' && fb.s.districts['judicial|Justice of the Peace'] === 'none' && fb.s.districts['state|Member, State Board of Education'] === undefined
+      && fb.notes[0] === 'Your county races are Fort Bend County’s. This guide lists Harris County’s; your official sample ballot shows yours.',
+      JSON.stringify([fb.s.districts, fb.notes]));
     st.S.b = st.emptyBallotState('');
   }
   // The Census answer keeps the point and the block's interior point, for the maps only.

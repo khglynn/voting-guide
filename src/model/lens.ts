@@ -23,6 +23,11 @@ const isGroup = (e: Endorser): boolean => e.type !== 'party' && (e.type !== 'pub
 export const explainsOnly = (e: Endorser): boolean => !e.endorses_candidates && !e.endorses_measures;
 /* A paper whose endorsements sit behind a paywall we couldn't read, with its note on (Kevin, Oct 19). */
 export const hasPaywallNote = (e: Endorser): boolean => e.paywall === true && e.paywall_note_ok !== false;
+/* A source whose site shows a bot check to anything that isn't a browser (Oct 25): read like a paywall. */
+export const isBlocked = (e: Endorser): boolean => e.blocked === true;
+/* Behind a paywall or a bot check: the sources sheet lists it under "Couldn't read" when it has no pick
+   on the ballot, since there is nothing of its to turn on. */
+export const cantRead = (e: Endorser): boolean => e.paywall === true || isBlocked(e);
 
 export const CHIPS: { key: ChipKey; label: string; empty: string }[] = [
   { key: 'papers', label: 'Newspapers and guides', empty: 'None of the newspapers here made endorsements on this ballot. Try another group.' },
@@ -52,6 +57,10 @@ export function picksOnBallot(b: Ballot, eid: string): number {
   return m.get(eid) || 0;
 }
 export const withPicks = (b: Ballot, list: Endorser[]): Endorser[] => list.filter((e) => picksOnBallot(b, e.id) > 0);
+/* Behind a paywall or a bot check, with endorsements to read but none read on this ballot: nothing of its to
+   turn on, so the sources sheet lists it under "Couldn't read" with no switch (views/lens.ts). A paywalled
+   paper that doesn't endorse at all stays an explainer. */
+export const unreadHere = (b: Ballot, e: Endorser): boolean => cantRead(e) && !explainsOnly(e) && !picksOnBallot(b, e.id);
 /* How many of the choices your ballot shows each source endorsed in: the same choices the bar's
    "N of M decided" counts (no district variants you haven't picked, no races you hid), so the
    sources sheet never says "Endorsed in 59" on a 46-item ballot. `unopposed` counts its picks in

@@ -2444,6 +2444,18 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
     check('Add in place: a chip tapped before the preview answers keeps AURA in your list', ((await austinSaved(page)).sources || []).includes('aura'), JSON.stringify((await austinSaved(page)).sources));
     await page.waitForFunction(() => /AURA/.test(document.getElementById('i-tx-austin-prop-a')?.textContent || ''), null, { timeout: 15000 }).catch(() => {});
     check('Add in place: then it comes back on, quietly', /AURA/.test(await now$(page, '#i-tx-austin-prop-a')) && c.previewAsked > asked && !/is on/.test(await now$(page, '.toast')), await now$(page, '.toast'));
+    // Your own save link, opened while the preview is slow again, keeps it too (Codex, Oct 28).
+    await tap(page, '.foot [data-act="cheat"]');
+    await page.waitForSelector('#cheat');
+    await tap(page, '[data-act="save-open"]');
+    const ownLink = await page.inputValue('.save-url');
+    await page.goto(linkHere(ownLink));
+    await page.waitForSelector('#plan', { timeout: 15000 });
+    await page.waitForTimeout(300);
+    check('Add in place: your own save link, opened before the preview answers, keeps AURA in your list', ((await austinSaved(page)).sources || []).includes('aura'), JSON.stringify((await austinSaved(page)).sources));
+    await openRow(page, 'tx-austin-prop-a');
+    await page.waitForFunction(() => /AURA/.test(document.getElementById('i-tx-austin-prop-a')?.textContent || ''), null, { timeout: 15000 }).catch(() => {});
+    check('Add in place: and once the preview answers, it shows again', /AURA/.test(await now$(page, '#i-tx-austin-prop-a')));
     // A quick preview: it's there from the first paint.
     c.slow = 0;
     await page.reload();

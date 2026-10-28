@@ -4,6 +4,7 @@ import type { Ballot } from './ballot';
 import type { ChipKey } from './model/lens';
 import type { GeoResult } from './geo';
 import { load, save, hash, b64urlEncode, b64urlDecode } from './util';
+import { heldIds } from './model/adds';
 
 export interface Prefs {
   parties: string[] | null;   // null = every party shown
@@ -309,7 +310,10 @@ export function decodeShare(ballot: Ballot, head: ShareHead): { state: BallotSta
   }
   if (src === '0') st.sources = [];
   else if (src) {
-    const eByHash = new Map(ballot.endorsers.map((e) => [hash(e.id), e.id]));
+    // A source this device asked for and holds, which the ballot doesn't have yet (its preview hasn't answered since
+    // a reload, model/adds.ts), is read back too, so your own link can't drop it (Codex, Oct 28). The link is unchanged.
+    const eByHash = new Map([...heldIds()].filter((id) => !ballot.eById.has(id)).map((id) => [hash(id), id]));
+    ballot.endorsers.forEach((e) => eByHash.set(hash(e.id), e.id));
     st.sources = src.split('.').map((h) => eByHash.get(h)).filter((x): x is string => !!x);
   }
   if (head.v >= 2) {

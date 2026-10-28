@@ -905,6 +905,16 @@ function roundTrip(name, stCode, places, mutate) {
     const off = st.S.b.sources;
     mods.lens.toggleChip(liveB, 'papers');
     check('adds: with it held, a chip tap keeps it, off and on again', Array.isArray(off) && off.join() === 'aura' && Array.isArray(st.S.b.sources) && st.S.b.sources.includes('aura') && st.S.b.sources.length === liveB.endorsers.filter((e) => e.default_on).length + 1, `${JSON.stringify(off)} ${JSON.stringify(st.S.b.sources)}`);
+    // A save link opened in the gap (the preview timed out, so the ballot lacks AURA) keeps it (Codex, Oct 28), and
+    // the link itself is the same as ever.
+    const gapState = { ...st.S.b, sources: [...liveB.endorsers.filter((e) => e.default_on).map((e) => e.id), 'aura'] };
+    const gapLink = st.encodeShare(liveB, gapState);
+    const gapBack = st.decodeShare(liveB, head(gapLink)).state.sources;
+    check('adds: a save link opened before the preview answers keeps the held source', Array.isArray(gapBack) && gapBack.includes('aura') && gapBack.length === gapState.sources.length, JSON.stringify(gapBack));
+    mem.set('vg-adds', '[]');
+    check('adds: with nothing held, the link drops a source the ballot lacks, as before', !st.decodeShare(liveB, head(gapLink)).state.sources.includes('aura'));
+    check('adds: and the link’s format is unchanged (the held source is one more hash, as any switch)', gapLink === st.encodeShare(liveB, gapState) && gapLink.split('~')[7].split('.').length === gapState.sources.length);
+    mem.set('vg-adds', JSON.stringify([{ code: 'abcdefghijkl', name: 'AURA', at: Date.now(), ids: ['aura'] }]));
     st.S.ballot = nb;
     mods.lens.setSources(nb, st.S.b.sources.filter((id) => id !== 'aura'));
     check('adds: once the ballot has it, its own switch turns it off', !(st.S.b.sources || []).includes('aura'), JSON.stringify(st.S.b.sources));

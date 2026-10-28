@@ -520,14 +520,17 @@ function heldFound(reads: HeldRead, sb: StateBundle, pbs: PlaceBundle[]): Found 
   for (const { a, got } of reads) {
     if (a.ids!.every((id) => live.has(id))) { forgetAdd(a.code); continue; }
     if (!got) continue;
-    readHere.add(`${a.code}|${plain.key}`);
     const f = pickNew(got, live, plain.byId, plain.order, placesKnown(), a.ids!);
-    if (f.endorsers.length) found = mergeFound(found, f);
+    // Read and not here (a source for another ballot): not read again this visit. Found, the ballot shows it, which
+    // is what the watcher checks; a later load of this ballot whose read times out reads it again.
+    if (f.endorsers.length) found = mergeFound(found, f); else readHere.add(`${a.code}|${plain.key}`);
   }
   return found;
 }
 
-/* `${code}|${ballot key}`: that request's preview, read in full for that ballot this visit. */
+/* `${code}|${ballot key}`: that request's preview, read in full for that ballot this visit and found to have nothing
+   for it. A source it did have shows on the ballot, and that's what the checks look at (a newer load of the same
+   ballot that missed it reads again). */
 const readHere = new Set<string>();
 /* Each request's held preview reads that failed this visit, by code: three, and it stops trying until a load. */
 const heldMisses = new Map<string, number>();
@@ -712,7 +715,6 @@ function tryFolds(): void {
     if (nb !== b) { normalizeRanks(nb, S.b); S.ballot = nb; }
     for (const f of now) {
       if (f.found) {
-        readHere.add(`${f.code}|${nb.key}`);
         if (f.again) continue;
         updateAdd(f.code, { ids: f.found.endorsers.map((e) => e.id), st: 'ready' });
         // The first source a request became goes on, as its switch in the sources sheet would.

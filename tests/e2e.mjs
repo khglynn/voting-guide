@@ -2737,9 +2737,14 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
   const on0 = await onCount();
   await tap(page, '.sheet-panel [data-fk="s-chip-progressive"]');
   check('Sheet: a group picked inside it turns its sources on, and step 2’s chip behind it follows', (await page.getAttribute('.sheet-panel [data-fk="s-chip-progressive"]', 'aria-pressed')) === 'true' && (await onCount()) > on0
-    && (await page.getAttribute('#setup [data-act="chip"][data-k="progressive"]', 'aria-pressed')) === 'true' && (await focusedFk(page)) === 's-chip-progressive', `${on0} -> ${await onCount()}, ${await focusedFk(page)}`);
-  await tap(page, '.sheet-panel [data-fk="s-chip-progressive"]');
-  check('Sheet: and off again', (await onCount()) === on0 && (await page.getAttribute('#setup [data-act="chip"][data-k="progressive"]', 'aria-pressed')) === 'false');
+    && (await page.getAttribute('#setup [data-act="chip"][data-k="progressive"]', 'aria-pressed')) === 'true' && !!(await page.evaluate(() => document.activeElement?.closest('.sheet-panel'))), `${on0} -> ${await onCount()}, ${await focusedFk(page)}`);
+  // With a keyboard: off again, and focus stays on the sheet's own chip, not step 2's behind it (inert).
+  await page.waitForTimeout(700);
+  await page.focus('.sheet-panel [data-fk="s-chip-progressive"]');
+  await page.keyboard.press('Enter');
+  await page.waitForTimeout(150);
+  check('Sheet: and off again, with a keyboard, focus still on the sheet’s chip', (await onCount()) === on0 && (await page.getAttribute('#setup [data-act="chip"][data-k="progressive"]', 'aria-pressed')) === 'false'
+    && (await focusedFk(page)) === 's-chip-progressive' && !!(await page.evaluate(() => document.activeElement?.closest('.sheet-panel'))), await focusedFk(page));
   // The search: filters as you type, by name, keeps the box and its caret, and the sheet keeps its height.
   const h0 = await page.evaluate(() => document.querySelector('.sheet-panel').getBoundingClientRect().height);
   await page.locator('#src-q').tap();

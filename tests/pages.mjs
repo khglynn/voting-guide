@@ -180,33 +180,48 @@ check('page titles and descriptions: no em dashes, no all caps', !bad.copy.lengt
   const builds = ['2026-10-28', '2026-11-03', '2026-11-04'].map((day) => site.allPages(data, A, day));
   check('a place note with any dated text is never on its page, built before, on or after its dates', dn.length > 0 && builds.every((ps) => dn.every((id) => !ps.find((x) => x.path === `/${id}`).html.includes('class="pg-note"'))), dn.join(' '));
   check('Brooklyn built on Election Day: no "today" from its dated note', !textOf(builds[1].find((x) => x.path === '/nyc-brooklyn-ny').html).toLowerCase().includes('poll site today'));
-  // The fixture: every text field of Texas's state file and of Austin's place file holds a marker, and every one is
-  // dated. No marker, before or after its date, may reach either page. A control run, undated, proves the markers
-  // reach the page through the fields the pages render.
-  const fx = JSON.parse(JSON.stringify(data));
-  // Not text: the ballot itself and the names the guide keys on (a dated one means no page; checked below).
+  // One field at a time (Codex's confirming round): every text field of Texas's state data and of Austin's place data,
+  // each on its own, with the real data everywhere else so its row still renders. A marker in that one field; if it
+  // reaches a page, the field is rendered, and dating that field alone must take it off both pages, built before and
+  // after the date. A date field's marker is a real date (Fri, Jan 15, 2027) so its row still sorts and shows.
   const SKIP = /^(items|endorsements|endorsers|order|local|maps|zips|id|label|state|counties|file|dated)(\.|$)|\.zips(\.|$)|^by_county\.\d+\.county$/;
-  let n = 0;
-  const mark = (o, pre, dated) => {
+  const leaves = (o, keys, path, out) => {
     for (const [k, v] of Object.entries(o)) {
-      const key = Array.isArray(o) ? String(k) : k;
       // A situation is named by its id in a dated path (plan.applyDated), not its place in the list.
-      const seg = pre === 'situations' && v && v.id ? v.id : key;
-      const path = pre ? `${pre}.${seg}` : seg;
-      if (SKIP.test(path)) continue;
-      if (typeof v === 'string') { o[k] = `ZQ${++n}QZ`; if (dated) dated.push({ path, from: '2026-11-01', text: `ZN${n}NZ` }); }
-      else if (v && typeof v === 'object') mark(v, path, dated);
+      const seg = path === 'situations' && v && v.id ? v.id : k;
+      const p2 = path ? `${path}.${seg}` : seg;
+      if (SKIP.test(p2)) continue;
+      if (typeof v === 'string') out.push({ keys: [...keys, k], path: p2, date: /^\d{4}-\d{2}-\d{2}$/.test(v) });
+      else if (v && typeof v === 'object') leaves(v, [...keys, k], p2, out);
     }
+    return out;
   };
-  const control = JSON.parse(JSON.stringify(data));
-  mark(control.states.TX.howto, '', null); mark(control.places['austin-tx'], '', null);
-  const reached = (ps) => ps.filter((x) => ['/texas', '/austin-tx'].includes(x.path)).map((x) => x.html.match(/Z[QN]\d+[QN]Z/g) || []).flat();
-  const ctl = new Set(reached(site.allPages(control, A, TODAY)));
-  fx.states.TX.howto.dated = []; fx.places['austin-tx'].dated = [];
-  mark(fx.states.TX.howto, '', fx.states.TX.howto.dated); mark(fx.places['austin-tx'], '', fx.places['austin-tx'].dated);
-  const leaks = ['2026-10-28', '2026-11-05'].flatMap((day) => reached(site.allPages(fx, A, day)));
-  check(`the fixture: undated, the markers reach both pages through ${ctl.size} fields (the control)`, ctl.size >= 25, `${ctl.size} fields`);
-  check('the fixture: every text field of Texas and Austin dated, no marker reaches either page, before or after its date', leaks.length === 0, [...new Set(leaks)].slice(0, 6).join(' '));
+  const setIn = (o, keys, val) => { const c = Array.isArray(o) ? [...o] : { ...o }; c[keys[0]] = keys.length === 1 ? val : setIn(o[keys[0]], keys.slice(1), val); return c; };
+  const variant = (where, keys, val, dated) => {
+    if (where === 'state') {
+      const howto = setIn(data.states.TX.howto, keys, val);
+      return { ...data, states: { ...data.states, TX: { ...data.states.TX, howto: dated ? { ...howto, dated: [...(howto.dated || []), dated] } : howto } } };
+    }
+    const pl = setIn(data.places['austin-tx'], keys, val);
+    return { ...data, places: { ...data.places, 'austin-tx': dated ? { ...pl, dated: [...(pl.dated || []), dated] } : pl } };
+  };
+  const render = (d, where, day) => [site.placePage(d, 'austin-tx', A, day).html, ...(where === 'state' ? [site.statePage(d, 'TX', A, day).html] : [])].join('\n');
+  const fields = [...leaves(data.states.TX.howto, [], '', []).map((f) => ({ ...f, where: 'state' })), ...leaves(data.places['austin-tx'], [], '', []).map((f) => ({ ...f, where: 'place' }))];
+  let rendered = 0;
+  const leaked = [];
+  fields.forEach((f, n) => {
+    const val = f.date ? '2027-01-15' : `ZQ${n}QZ`;
+    const seen = f.date ? 'Fri, Jan 15' : val;
+    if (!render(variant(f.where, f.keys, val, null), f.where, TODAY).includes(seen)) return; // not a field the pages show
+    rendered++;
+    const dated = { path: f.path, from: '2026-11-01', text: f.date ? '2027-01-16' : `ZN${n}NZ` };
+    for (const day of [TODAY, '2026-11-05']) {
+      const html = render(variant(f.where, f.keys, val, dated), f.where, day);
+      if (html.includes(seen) || html.includes(f.date ? 'Sat, Jan 16' : `ZN${n}NZ`)) leaked.push(`${f.where} ${f.path} (${day})`);
+    }
+  });
+  check(`one field at a time: ${rendered} of ${fields.length} text fields of Texas and Austin reach a page undated`, rendered >= 40, String(rendered));
+  check('one field at a time: each of those, dated alone, is on neither page, built before or after its date', leaked.length === 0, leaked.slice(0, 6).join('; '));
   const named = JSON.parse(JSON.stringify(data));
   named.places['austin-tx'].dated = [{ path: 'label', from: '2026-11-01', text: 'x' }];
   let threw = false; try { site.placePage(named, 'austin-tx', A, TODAY); } catch { threw = true; }

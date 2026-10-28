@@ -3,7 +3,7 @@
    exactly and a failed search reads as "I've been purged"; Kevin, Oct 20), "Dates, ID, ..." and "I already voted". Behind "Dates, ID, ...", on the same
    paper, sit the key dates and the rules for ID and the booth, the gotchas, and what to do if
    something goes wrong: everything the v2 plan card held, one tap away. Every date is read from the state file. */
-import type { HowTo, HelpAction, PlaceEarly } from '../types';
+import type { HowTo, HelpAction, OfficeLine, PlaceEarly } from '../types';
 import { S } from '../state';
 import { esc, fmtDate, todayISO, host } from '../util';
 import { nextStep, registrationAlert, registerAction, isMailState, type Step } from '../model/plan';
@@ -30,13 +30,29 @@ export function planHTML(): string {
       <p class="plan-h" id="plan-h">${head}</p>
       ${sub.length ? `<p class="plan-sub">${esc(sub.join(' '))}</p>` : ''}
       ${reg ? `<div class="plan-reg"><p>${esc(reg)}</p>${regBtn ? `<a class="pbtn line" href="${esc(regBtn.url)}" target="_blank" rel="noopener" data-fk="plan-register">${esc(regBtn.label)}</a>` : ''}</div>` : ''}
-      <div class="plan-acts">${step.primary ? `<a class="pbtn gold" href="${esc(step.primary.url)}" target="_blank" rel="noopener">${esc(step.primary.label)}</a>` : ''}
+      ${countyActs(h, step)}
+      <div class="plan-acts">${step.primary && !countyActs(h, step) ? `<a class="pbtn gold" href="${esc(step.primary.url)}" target="_blank" rel="noopener">${esc(step.primary.label)}</a>` : ''}
         ${check ? `<a class="pbtn line" href="${esc(check)}" target="_blank" rel="noopener">Check my registration</a>` : ''}</div>
       ${check && (h.situations || []).some((x) => x.id === 'lookup_cant_find') ? `<p class="plan-hint">Lookup can’t find you? <button class="linkbtn" data-act="whatif-sit" data-k="lookup_cant_find" data-fk="plan-cant-find">Try your name these ways</button></p>` : ''}
       <div class="plan-row"><button class="whatif-tog" data-act="open" data-k="whatif" aria-expanded="${open}" data-fk="whatif"><span>Dates, ID, and if you moved or lost <span class="nw">your ballot<svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span></span></button>
         <button class="voted" data-act="view" data-v="pass" data-voted="1" data-fk="voted">I already voted</button></div>
       ${open ? whatIfHTML(h) : ''}
     </div></section>`;
+}
+
+/* A ballot across county lines whose voter's county the guide doesn't know yet (Austin reaches into Williamson
+   and Hays, and a ZIP can too; Oct 28): the step's where-to-vote button becomes one per county, labeled, the
+   main county's first. In Texas you vote early only in your own county, so a single county's map would be
+   wrong for some. An address lookup, or a ZIP wholly in one county, brings back the one button. */
+function countyActs(h: HowTo, step: Step): string {
+  const links = h.county_links || [];
+  const look = step.primary?.look;
+  if (links.length < 2 || !look) return '';
+  const btns = links.map((l, i) => {
+    const url = l.lookups[look] || (look === 'drop_box' ? l.lookups.election_day : null) || step.primary!.url;
+    return `<a class="pbtn ${i ? 'line' : 'gold'}" href="${esc(url)}" target="_blank" rel="noopener" data-county="${esc(l.county)}">${esc(`${l.county} County`)}</a>`;
+  }).join('');
+  return `<p class="plan-cty">${esc(step.primary!.label)} in your county:</p><div class="plan-acts plan-ctys">${btns}</div>`;
 }
 
 /* The line under the next step. While you can vote in person (not in a mail state), "Bring a
@@ -125,12 +141,19 @@ function gotchasHTML(h: HowTo, only?: { shown: number[]; full: Set<number> }): s
 }
 
 /* The county's election office: its name (linked), phone and address. */
-function officeOf(): { name: string; url: string | null; phone: string | null; addr: string } | null {
+function officeOf(): { name: string; url: string | null; phone: string | null; addr: string; phone_label?: string; lines: OfficeLine[]; hours?: string } | null {
   const office = S.ballot!.places.map((p) => p.county_election_office).find(Boolean);
   if (!office) return null;
   const m = office.name.match(/^(.*?)[,:]\s*(\d[\s\S]*)$/);
   const [n, a] = m ? [m[1], m[2]] : [sentences(office.name)[0], sentences(office.name).slice(1).join(' ')];
-  return { name: n, url: office.url || null, phone: office.phone || null, addr: a };
+  return { name: n, url: office.url || null, phone: office.phone || null, addr: a, phone_label: office.phone_label, lines: office.lines || [], hours: office.hours };
+}
+/* The office card: its name and link, its main phone (labeled when there are direct lines too), each direct
+   line with its label (Oct 28: Orange's vote-by-mail line), the address, then its hours. */
+function officeHTML(o: NonNullable<ReturnType<typeof officeOf>>): string {
+  const phone = o.phone ? `<br>${o.phone_label ? `${esc(o.phone_label)}: ` : ''}${telHTML(o.phone)}` : '';
+  const lines = o.lines.map((l) => `<br>${esc(l.label)}: ${telHTML(l.phone)}${l.hours ? ` (${esc(l.hours)})` : ''}`).join('');
+  return `<p class="office">${officeName(o)}${phone}${lines}${o.addr ? `<br>${esc(o.addr)}` : ''}${o.hours ? `<br>${esc(o.hours)}` : ''}</p>`;
 }
 const officeName = (o: NonNullable<ReturnType<typeof officeOf>>): string => (o.url ? ext(o.url, o.name) : esc(o.name));
 
@@ -163,7 +186,7 @@ function partsOf(h: HowTo): Part[] {
     ['bx-booth', `In the booth: notes ${RULE[booth.notes_allowed] || booth.notes_allowed}, phones ${RULE[booth.phones] || booth.phones}`, `${booth.notes_detail ? `<p><b>Notes and your plan.</b> ${escP(booth.notes_detail)}</p>` : ''}${booth.phones_detail ? `<p><b>Phones.</b> ${escP(booth.phones_detail)}</p>` : ''}${booth.apparel_rule ? `<p><b>What to wear.</b> ${escP(booth.apparel_rule)}</p>` : ''}`, booth.apparel_rule ? 'what to wear' : ''],
     ['bx-mail', isMailState(h) ? 'How voting by mail works' : 'Voting by mail instead', `${bulletsHTML(mail.who_gets_one)}${mail.return_options && mail.return_options.length ? `<ul>${mail.return_options.map((o) => `<li>${escP(o)}</li>`).join('')}</ul>` : ''}${mail.mail_cutoff_advice ? `<p>${escP(mail.mail_cutoff_advice)}</p>` : ''}<p>${[mail.tracking_url ? ext(mail.tracking_url, 'Track your ballot') : '', mail.drop_box_lookup_url ? ext(mail.drop_box_lookup_url, 'Find a drop box') : ''].filter(Boolean).join(' · ')}</p>`, ''],
   ];
-  if (office) basics.push(['bx-office', 'Your election office', `<p>${officeName(office)}${office.phone ? `<br>${telHTML(office.phone)}` : ''}${office.addr ? `<br>${esc(office.addr)}` : ''}</p>`, 'contact call help']);
+  if (office) basics.push(['bx-office', 'Your election office', officeHTML(office), `contact call help ${office.lines.map((l) => l.label).join(' ')}`]);
   if (h.model_plain) basics.push(['bx-how', `How voting works in ${b.stateName}`, bulletsHTML(h.model_plain), '']);
   b.places.filter((p) => p.notes).forEach((p) => basics.push([`bx-n-${p.id}`, `Notes for ${p.label}`, bulletsHTML(p.notes), '']));
   basics.forEach(([k, q, body, extra], i) => (k === 'bx-dates'

@@ -3,7 +3,7 @@
    "try as" scenarios. */
 import type { Index, PlaceBundle, StateBundle } from './types';
 import { S, emptyBallotState, noSections, persist, leaveLast, leftBallot, savedBallot, parseShareHead, decodeShare, normalizeRanks, type BallotState, type View } from './state';
-import { buildBallot, entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, rankMax, decisionItems, chosenIds, sectionOf, sameSeat, type Ballot } from './ballot';
+import { buildBallot, localize, entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, rankMax, decisionItems, chosenIds, sectionOf, sameSeat, type Ballot } from './ballot';
 import { zipState, censusLookup, placeFromGeo, settleAddress, withPlace, tidyAddress, type GeoResult } from './geo';
 import { toast, hideToast } from './util';
 import { keepPrivate } from './errors';
@@ -88,7 +88,7 @@ export function resetUI(): void {
   // The sections as you left them on this ballot (S.b.secs, saved with it).
   const secs = S.b.secs || noSections();
   u.folded = new Set(secs.folded); u.unfolded = new Set(secs.unfolded); u.reveal = new Set(secs.reveal);
-  u.noteOpen.clear(); u.reader = null; u.sheet = null; u.sheetFrom = null; u.sheetBack = null; u.addrOpen = false; u.addrMsg = null; u.addrFail = ''; u.addrFound = null; u.addrWhich = null; u.addrMaps = []; u.addrMapsPending = false; u.saveOpen = false; u.copyFallback = null; u.bulk = null; u.bulkWhy = null; u.addrFilled = null; u.lensEmptied = false;
+  u.noteOpen.clear(); u.reader = null; u.sheet = null; u.sheetFrom = null; u.sheetBack = null; u.addrOpen = false; u.addrMsg = null; u.addrFail = ''; u.addrCounty = null; u.addrFound = null; u.addrWhich = null; u.addrMaps = []; u.addrMapsPending = false; u.saveOpen = false; u.copyFallback = null; u.bulk = null; u.bulkWhy = null; u.addrFilled = null; u.lensEmptied = false;
   u.resume = false; u.covAsk = ''; u.srcQ = ''; u.wiQ = '';
   u.open.delete('voted');
 }
@@ -122,7 +122,7 @@ export function toDoor(): void {
   S.doorSaved = leftBallot(S.view === 'ballot' && S.ballot ? decisionItems().filter((x) => x.done).length : undefined);
   cancelLoad();
   S.view = 'start'; S.ballot = null; S.zipChoice = null; S.picked = null; S.coverage = null; S.pending = null; S.loadErr = null; S.retry = null; S.zipErr = '';
-  S.ui.view = 'ballot'; S.ui.reader = null; S.ui.sheet = null; S.ui.sheetBack = null; S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.addrFail = ''; S.ui.addrFound = null; S.ui.addrWhich = null; S.ui.resume = false;
+  S.ui.view = 'ballot'; S.ui.reader = null; S.ui.sheet = null; S.ui.sheetBack = null; S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.addrFail = ''; S.ui.addrCounty = null; S.ui.addrFound = null; S.ui.addrWhich = null; S.ui.resume = false;
   forgetUndo();
   hideToast();
   render();
@@ -308,6 +308,7 @@ async function loadBallot(st: string, placeIds: string[], zip: string, opts: Ope
     S.zipChoice = null;
     S.coverage = null;
     resetUI();
+    localize(ballot, S.b.zip, null); // a place across county lines: its county's where-to-vote links, when the ZIP names one
     if (!door) S.b.setupDone = true; // a ballot this device has shown never goes back to the first page on its own
     render();
     persist(true); // saves nothing on the first page
@@ -712,7 +713,7 @@ function tryFolds(): void {
   const said: string[] = [];
   const turnOn: string[] = [];
   anchored(() => {
-    if (nb !== b) { normalizeRanks(nb, S.b); S.ballot = nb; }
+    if (nb !== b) { normalizeRanks(nb, S.b); localize(nb, S.b.zip, S.ui.addrCounty); S.ballot = nb; }
     for (const f of now) {
       if (f.found) {
         if (f.again) continue;
@@ -957,6 +958,8 @@ export async function applyGeo(r: GeoResult): Promise<void> {
    ran here), and paint. `first`: the pass that closes the form and moves focus to what was found. */
 function settleGeo(b: Ballot, r: GeoResult, results: MapResult[], pending: boolean, fill: { n: number; added: Set<string> }, pass: ReturnType<typeof lookupPasses>, first: boolean): void {
   const was = { districts: { ...S.b.districts }, mine: [...(S.b.mine || [])] };
+  // The Census's county picks a county's where-to-vote links on a ballot across county lines (this visit only).
+  if (first) { S.ui.addrCounty = r.county || null; localize(b, S.b.zip, S.ui.addrCounty); }
   S.b.addrNote = addrSummary(pass(b, S.b, r, localAnswers(results, r)));
   S.ui.addrMaps = mapNotes(b, S.b, r, results, pending);
   S.ui.addrMapsPending = pending;

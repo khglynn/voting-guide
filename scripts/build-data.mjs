@@ -116,7 +116,58 @@ function placeLookups(x, where) {
   }
   return Object.keys(out).length ? out : null;
 }
-const optional = (o) => Object.fromEntries(Object.entries(o).filter(([, v]) => v != null && !(Array.isArray(v) && !v.length)));
+/* A place that spans counties (Austin: Travis, Williamson and Hays) keeps one set of where-to-vote links per
+   county (Oct 28). `zips` are the place's ZIPs that lie wholly in that county, so a ZIP alone can pick the
+   county; plan.ts uses the voter's county's links when it knows the county, and each county's, labeled, when
+   it doesn't. */
+function placeByCounty(list, p, where) {
+  if (list == null) return null;
+  if (!Array.isArray(list)) { warn(`${where}: by_county is not a list; dropped it`); return null; }
+  const placeZips = new Set((p.zips || []).map(String));
+  const out = [];
+  for (const c of list) {
+    const lookups = c && isStr(c.county) ? placeLookups(c.lookups, `${where} by_county ${c.county}`) : null;
+    if (!lookups || !safeUrl(c.source)) { warn(`${where}: a by_county entry needs a county, lookups and an https source; dropped it`); continue; }
+    const zips = (Array.isArray(c.zips) ? c.zips : []).map(String).filter((z) => {
+      if (placeZips.has(z)) return true;
+      warn(`${where}: by_county ${c.county} lists ZIP ${z}, which the place doesn't; dropped it`);
+      return false;
+    });
+    out.push({ county: c.county.trim(), zips, lookups, source: safeUrl(c.source), confidence: conf(c.confidence) });
+  }
+  if (out.length === 1) { warn(`${where}: by_county needs two counties or more; dropped it`); return null; }
+  return out.length ? out : null;
+}
+/* A county's own answer to one of the state's common questions (Oct 28: Orange County's lost mail ballot,
+   with its own phone line and dates), keyed by the state situation's id. plan.ts uses it when every place on
+   the ballot gives the same one; the state's question and buttons stay. */
+function placeSituations(list, where) {
+  if (list == null) return null;
+  if (!Array.isArray(list)) { warn(`${where}: situations is not a list; dropped it`); return null; }
+  const out = list.filter((x) => {
+    const ok = x && isStr(x.id) && (isStr(x.short) || isStr(x.answer)) && safeUrl(x.source);
+    if (!ok) warn(`${where}: a place situation needs an id, a short or an answer, and an https source; dropped it`);
+    return ok;
+  }).map((x) => ({
+    id: x.id.trim(),
+    ...optional({ short: helpShort(x.short, `${where} situation ${x.id}`), answer: str(x.answer) }),
+    // null is a choice: the county's answer stands alone, without the state's steps
+    ...(x.steps === null ? { steps: null } : Array.isArray(x.steps) ? { steps: x.steps.filter(isStr).map((s) => s.trim()) } : {}),
+    source: safeUrl(x.source), confidence: conf(x.confidence),
+  }));
+  return out.length ? out : null;
+}
+/* The election office's phone lines, labeled ("Vote-by-mail line"), and its hours (Oct 28). */
+function officeLines(o, where) {
+  if (!o) return {};
+  const lines = (Array.isArray(o.lines) ? o.lines : []).filter((l) => {
+    const ok = l && isStr(l.label) && isStr(l.phone);
+    if (!ok) warn(`${where}: an office line needs a label and a phone; dropped it`);
+    return ok;
+  }).map((l) => ({ label: l.label.trim(), phone: l.phone.trim(), ...optional({ hours: str(l.hours) }) }));
+  return optional({ phone_label: str(o.phone_label), lines, hours: str(o.hours), source: safeUrl(o.source) });
+}
+const optional =(o) => Object.fromEntries(Object.entries(o).filter(([, v]) => v != null && !(Array.isArray(v) && !v.length)));
 /* Common questions as quick answers (Oct 20). Each situation may carry `short` (one plain line)
    and `actions` (up to 2 official links, {label, url}); each gotcha may be {text, short} instead
    of plain text. The bundle keeps `gotchas` as plain text and puts the short lines beside it in
@@ -417,6 +468,7 @@ for (const f of listJson('places')) {
     counties: Array.isArray(p.counties) ? p.counties.filter(isStr) : [],
     county_election_office: p.county_election_office && isStr(p.county_election_office.name) ? {
       name: p.county_election_office.name, url: safeUrl(p.county_election_office.url), phone: str(p.county_election_office.phone),
+      ...officeLines(p.county_election_office, f),
     } : null,
     sample_ballot_url: safeUrl(p.sample_ballot_url),
     zips: p.zips.map(String).filter((z) => /^\d{5}$/.test(z)),
@@ -425,7 +477,7 @@ for (const f of listJson('places')) {
     county_label: str(p.county_label),
     district_finders: districtFinders(p.district_finders, f),
     heads_up: headsUp(p.heads_up, f),
-    ...optional({ early_in_person: placeEarly(p.early_in_person, f), lookups: placeLookups(p.lookups, f) }),
+    ...optional({ early_in_person: placeEarly(p.early_in_person, f), lookups: placeLookups(p.lookups, f), by_county: placeByCounty(p.by_county, p, f), situations: placeSituations(p.situations, f) }),
     order: known,
     file: f,
   });

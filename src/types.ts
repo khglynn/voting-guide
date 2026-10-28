@@ -168,6 +168,9 @@ export interface HowTo {
   /* where the polls are, set by plan.localHowto: one zone for a known place, every zone the
      state spans for a statewide-only ballot */
   zones?: string[];
+  /* set by plan.localHowto when the ballot spans counties and the voter's county isn't known: each county's
+     tools, so the plan can offer them labeled (Oct 28) */
+  county_links?: { county: string; lookups: Lookups }[];
   election_date: string;
   last_verified: string | null;
   official_site: Src;
@@ -257,6 +260,15 @@ export interface StateBundle {
 
 export interface HelpAction { label: string; url: string }
 
+export type Lookups = { early_in_person?: string; election_day?: string; drop_box?: string };
+/* One county's where-to-vote tools for a place that spans counties. `zips`: the place's ZIPs that lie wholly
+   in this county (by the Census's ZIP-to-county file and the place's own research both), so a ZIP alone can
+   name the county. */
+export interface CountyLinks { county: string; zips: string[]; lookups: Lookups; source: string; confidence: Confidence }
+/* A county's own answer to a state question: what it gives replaces the state's (steps: null means none). */
+export interface PlaceSituation { id: string; short?: string; answer?: string; steps?: string[] | null; source: string; confidence: Confidence }
+export interface OfficeLine { label: string; phone: string; hours?: string }
+
 /* `hours_short`: the county's early voting hours in one line ("Travis County sites are open 7 AM to 7 PM every day.") */
 export interface PlaceEarly { start: string; end: string; hours_note: string | null; hours_short?: string; lookup_url: string | null; source: string | null; confidence: string }
 
@@ -265,7 +277,8 @@ export interface PlaceBundle {
   label: string;
   state: string;
   counties: string[];
-  county_election_office: { name: string; url: string | null; phone: string | null } | null;
+  /* `phone_label` names the main phone ("General line") when `lines` adds labeled direct ones (Oct 28) */
+  county_election_office: { name: string; url: string | null; phone: string | null; phone_label?: string; lines?: OfficeLine[]; hours?: string; source?: string } | null;
   sample_ballot_url: string | null;
   zips: string[];
   zip_caveats: string | null;
@@ -276,7 +289,12 @@ export interface PlaceBundle {
   /* the county's own early-voting window, when it differs from the state's; plan.ts prefers it */
   early_in_person?: PlaceEarly;
   /* the county's own where-to-vote tools; plan.ts prefers them over the state's */
-  lookups?: { early_in_person?: string; election_day?: string; drop_box?: string };
+  lookups?: Lookups;
+  /* a place across county lines keeps each county's tools (Oct 28): plan.localHowto uses the voter's county's
+     when it knows the county, and lists each county's, labeled, when it doesn't */
+  by_county?: CountyLinks[];
+  /* the county's own answers to the state's common questions, by the state situation's id (Oct 28) */
+  situations?: PlaceSituation[];
   order: string[];
   local: string[];
   items: Item[];

@@ -48,7 +48,8 @@ jobs:
           fetch-depth: 0
       - id: c
         run: |
-          files=$(git diff --name-only "${{ github.event.pull_request.base.sha }}...${{ github.event.pull_request.head.sha }}")
+          # --no-renames: a rename lists both paths, so moving app code onto a source's file name still runs everything.
+          files=$(git diff --no-renames --name-only "${{ github.event.pull_request.base.sha }}...${{ github.event.pull_request.head.sha }}")
           echo "$files"
           if [ -n "$files" ] && ! echo "$files" | grep -qvE '^data/(endorsers|endorsements)-src-[a-z0-9-]+\.json$'; then
             echo "source_only=true" >> "$GITHUB_OUTPUT"
@@ -86,8 +87,10 @@ jobs:
   # Real browser at 380px: the scripted e2e, then the every-ballot sweep.
   browser:
     needs: [changes]
-    # !cancelled(): on a push to main `changes` is skipped, and the browser job must still run.
-    if: ${{ !cancelled() && github.event_name != 'schedule' && needs.changes.outputs.source_only != 'true' }}
+    # Skipped only when `changes` succeeded and found a source-only diff. On a push to main `changes` is skipped, so this
+    # runs; if `changes` fails, this runs. A cancelled run is left cancelled: here that only happens when a newer push
+    # replaces it (the concurrency group above), and the newer run decides.
+    if: ${{ !cancelled() && github.event_name != 'schedule' && !(needs.changes.result == 'success' && needs.changes.outputs.source_only == 'true') }}
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:

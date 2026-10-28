@@ -168,5 +168,11 @@
    "source": "https://www.leonvotes.gov/Voting/Vote-by-Mail",
    "confidence": "verified"
   }
+ ],
+ "sources": [
+  {
+   "name": "Leon County SOE: vote by mail",
+   "url": "https://www.leonvotes.gov/Voting/Vote-by-Mail"
+  }
  ]
 }

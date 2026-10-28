@@ -295,6 +295,8 @@ export interface PlaceBundle {
   by_county?: CountyLinks[];
   /* the county's own answers to the state's common questions, by the state situation's id (Oct 28) */
   situations?: PlaceSituation[];
+  /* the official pages behind the place's own facts (notes, office lines, answers); not shown */
+  sources?: Src[];
   order: string[];
   local: string[];
   items: Item[];

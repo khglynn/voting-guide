@@ -166,5 +166,19 @@
       "source": "https://voteorangefl.gov/request-a-mail-ballot/",
       "confidence": "verified"
     }
+  ],
+  "sources": [
+    {
+      "name": "Orange County SOE: contact",
+      "url": "https://voteorangefl.gov/contact-us/"
+    },
+    {
+      "name": "Orange County SOE: request a mail ballot",
+      "url": "https://voteorangefl.gov/request-a-mail-ballot/"
+    },
+    {
+      "name": "Orange County SOE: drop boxes and office hours",
+      "url": "https://voteorangefl.gov/secure-ballot-intake-stations-drop-boxes/"
+    }
   ]
 }

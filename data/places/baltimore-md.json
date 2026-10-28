@@ -95,5 +95,11 @@
   "lookups": {
     "early_in_person": "https://www.baltimorecity.gov/boe/our-work/election-information/voting-centers",
     "election_day": "https://www.baltimorecity.gov/boe/our-work/election-information/polling-locations"
-  }
+  },
+  "sources": [
+    {
+      "name": "Baltimore City: early voting centers",
+      "url": "https://www.baltimorecity.gov/boe/our-work/election-information/voting-centers"
+    }
+  ]
 }

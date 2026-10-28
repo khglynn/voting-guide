@@ -39,5 +39,15 @@
   "district_finders": [],
   "lookups": {
     "early_in_person": "https://www.sullivanny.gov/Departments/Elections/EarlyVoting"
-  }
+  },
+  "sources": [
+    {
+      "name": "Sullivan County: 2026 general election ballot, Town of Delaware (PDF)",
+      "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sample_Ballots_2026_GE/Town%20of%20Delaware.pdf"
+    },
+    {
+      "name": "Sullivan County: 2026 general election ballot, Town of Callicoon (PDF)",
+      "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sample_Ballots_2026_GE/Town%20of%20Callicoon.pdf"
+    }
+  ]
 }

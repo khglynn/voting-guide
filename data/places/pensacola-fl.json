@@ -122,5 +122,15 @@
       "confidence": "verified"
     }
   ],
-  "notes": "Drop boxes (secure ballot intake stations) are at all 10 early voting sites through Saturday, October 31, 8 AM to 6 PM. After that, hand your mail ballot in at the elections office, 213 Palafox Place, 2nd floor (Monday to Friday, 8 AM to 5 PM), by 7 PM on November 3."
+  "notes": "Drop boxes (secure ballot intake stations) are at all 10 early voting sites through Saturday, October 31, 8 AM to 6 PM. After that, hand your mail ballot in at the elections office, 213 Palafox Place, 2nd floor (Monday to Friday, 8 AM to 5 PM), by 7 PM on November 3.",
+  "sources": [
+    {
+      "name": "Escambia SOE: vote by mail",
+      "url": "https://escambiavotes.gov/vote-by-mail"
+    },
+    {
+      "name": "Escambia SOE: early voting locations and drop boxes",
+      "url": "https://escambiavotes.gov/early-voting-locations"
+    }
+  ]
 }

@@ -394,5 +394,27 @@
       "source": "https://www.wilcotx.gov/elections",
       "confidence": "verified"
     }
+  ],
+  "sources": [
+    {
+      "name": "Travis County: current election (early voting and Election Day maps, limited ballots)",
+      "url": "https://votetravis.gov/current-election-information/current-election/"
+    },
+    {
+      "name": "Travis County: ballot by mail (Election Day hand delivery)",
+      "url": "https://votetravis.gov/voter-information/ballot-by-mail/"
+    },
+    {
+      "name": "Travis County Tax Office: voter registration questions",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "name": "Williamson County Elections",
+      "url": "https://www.wilcotx.gov/elections"
+    },
+    {
+      "name": "City of Pflugerville: election information",
+      "url": "https://www.pflugervilletx.gov/election-information"
+    }
   ]
 }

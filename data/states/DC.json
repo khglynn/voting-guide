@@ -513,6 +513,10 @@
     {
       "name": "DCBOE: Voting by Live Ballot (special ballot proof of residence due 5:00 pm on the Thursday following Election Day)",
       "url": "https://dcboe.org/voters/casting-your-vote/voting-by-live-ballot"
+    },
+    {
+      "name": "DCBOE: mail ballot request",
+      "url": "https://dcboe.org/voters/casting-your-vote/mail-ballot-request"
     }
   ],
   "heads_up": [

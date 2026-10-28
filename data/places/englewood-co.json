@@ -67,5 +67,11 @@
     "early_in_person": "https://www.arapahoeco.gov/your_county/arapahoevotes/voting_locations/index.php",
     "election_day": "https://www.arapahoeco.gov/your_county/arapahoevotes/voting_locations/index.php",
     "drop_box": "https://www.arapahoeco.gov/your_county/arapahoevotes/voting_locations/index.php"
-  }
+  },
+  "sources": [
+    {
+      "name": "Arapahoe County Elections: contact page",
+      "url": "https://www.arapahoeco.gov/your_county/arapahoevotes/contact_us/index.php"
+    }
+  ]
 }

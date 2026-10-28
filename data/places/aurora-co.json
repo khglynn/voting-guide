@@ -241,5 +241,11 @@
       "label": "Check your district on your official ballot",
       "url": "https://myballot.coloradosos.gov/"
     }
+  ],
+  "sources": [
+    {
+      "name": "Arapahoe County Elections: contact page",
+      "url": "https://www.arapahoeco.gov/your_county/arapahoevotes/contact_us/index.php"
+    }
   ]
 }

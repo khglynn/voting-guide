@@ -550,6 +550,22 @@
     {
       "name": "Register to Vote",
       "url": "https://registertovote.ca.gov/"
+    },
+    {
+      "name": "LA County: how to vote by mail",
+      "url": "https://www.lavote.gov/home/voting-elections/voting-options/vote-by-mail/how-to-vote-by-mail"
+    },
+    {
+      "name": "Orange County (CA): vote-by-mail FAQs",
+      "url": "https://ocvote.gov/faqs/vote-by-mail-faqs"
+    },
+    {
+      "name": "San Diego County: replacement ballot",
+      "url": "https://www.sdvote.com/content/rov/en/how-to-vote-by-mail/info-for-replacement-ballot.html"
+    },
+    {
+      "name": "San Francisco: vote by mail",
+      "url": "https://www.sf.gov/vote-by-mail"
     }
   ],
   "judicial_review": {

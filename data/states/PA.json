@@ -538,6 +538,22 @@
     {
       "name": "Pennsylvania DOS: Update My Registration (15-day rule; moved within Pennsylvania without updating: vote at the polling place for your old address for one election; same county vs different county steps)",
       "url": "https://www.pa.gov/agencies/vote/voter-registration/update-my-registration"
+    },
+    {
+      "name": "Philadelphia: ballot replacement and applications",
+      "url": "https://vote.phila.gov/ballot-application-request/"
+    },
+    {
+      "name": "Allegheny County: mail-in and absentee voting",
+      "url": "https://www.alleghenycounty.us/Government/Elections/Mail-in-and-Absentee-Voting"
+    },
+    {
+      "name": "Allegheny County: satellite voting and ballot return",
+      "url": "https://www.alleghenycounty.us/Government/Elections/Satellite-Voting-and-Ballot-Return"
+    },
+    {
+      "name": "Allegheny County: voting events calendar",
+      "url": "https://www.alleghenycounty.us/Government/Elections/Pre-Election-Day-Voting-Options/Voting-Events-Calendar"
     }
   ]
 }

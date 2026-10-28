@@ -532,6 +532,10 @@
     {
       "name": "Maryland SBE: Provisional Voting (proof due before 10 am on the 2nd Wednesday after election day; wrong-place provisional counts only shared contests)",
       "url": "https://elections.maryland.gov/voting/provisional_voting.html"
+    },
+    {
+      "name": "Baltimore City Board of Elections: contact",
+      "url": "https://www.baltimorecity.gov/boe/contact-us"
     }
   ],
   "judicial_review": {

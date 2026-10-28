@@ -477,7 +477,9 @@ for (const f of listJson('places')) {
     county_label: str(p.county_label),
     district_finders: districtFinders(p.district_finders, f),
     heads_up: headsUp(p.heads_up, f),
-    ...optional({ early_in_person: placeEarly(p.early_in_person, f), lookups: placeLookups(p.lookups, f), by_county: placeByCounty(p.by_county, p, f), situations: placeSituations(p.situations, f) }),
+    ...optional({ early_in_person: placeEarly(p.early_in_person, f), lookups: placeLookups(p.lookups, f), by_county: placeByCounty(p.by_county, p, f), situations: placeSituations(p.situations, f),
+      // the official pages behind the place's own facts (its notes, office lines and answers), for the record
+      sources: (Array.isArray(p.sources) ? p.sources : []).filter((x) => x && isStr(x.name) && safeUrl(x.url)).map((x) => ({ name: x.name.trim(), url: safeUrl(x.url) })) }),
     order: known,
     file: f,
   });

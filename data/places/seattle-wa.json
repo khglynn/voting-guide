@@ -220,5 +220,11 @@
     "early_in_person": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/vote-centers",
     "election_day": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/vote-centers",
     "drop_box": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/ballot-drop-boxes"
-  }
+  },
+  "sources": [
+    {
+      "name": "King County Elections: vote centers",
+      "url": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/vote-centers"
+    }
+  ]
 }

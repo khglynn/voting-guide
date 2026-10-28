@@ -585,6 +585,14 @@
     {
       "name": "Fulton County: Request/Return an Absentee Ballot (absentee office contacts; what to do if your ballot hasn't come)",
       "url": "https://www.fultoncountyga.gov/Inside-Fulton-County/Fulton-County-Departments/Registration-and-Elections/Absentee-Voting"
+    },
+    {
+      "name": "Fulton County: absentee voting",
+      "url": "https://fultoncountyga.gov/inside-fulton-county/fulton-county-departments/registration-and-elections/absentee-voting"
+    },
+    {
+      "name": "DeKalb County: voter registration and elections",
+      "url": "https://dekalbcountyga.gov/departments/voter-registration-and-elections"
     }
   ],
   "heads_up": [

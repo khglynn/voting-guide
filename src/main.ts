@@ -129,6 +129,14 @@ async function boot(): Promise<void> {
     const t = new URLSearchParams(location.search).get('try');
     if (t && /^(fresh|aunt|straight|sources)$/.test(t)) S.tryMode = t;
   } catch { /* ignore */ }
+  try {
+    // ?on=<source id>: a "Your source is in" reply's link (the workbench's vg source, Oct 28). Read once, then
+    // out of the address bar, so a reload or a shared link doesn't do it again.
+    const q = new URLSearchParams(location.search);
+    const on = q.get('on');
+    if (on && /^[a-z0-9][a-z0-9-]{1,79}$/.test(on) && !S.tryMode) S.switchOn = on;
+    if (q.has('on')) { q.delete('on'); const rest = q.toString(); history.replaceState(null, '', `${location.pathname}${rest ? `?${rest}` : ''}${location.hash}`); }
+  } catch { /* ignore */ }
   render();
   const head = parseShareHead(location.hash);
   try { await ensureIndex(); } catch {

@@ -344,7 +344,7 @@ async function mapsSettled(page, timeout = 10000) {
   const footKinds = await page.$$eval('#r-trust [data-act="shelf"]', (els) => els.map((e) => `${e.dataset.fk}=${e.dataset.kind}:${e.getAttribute('aria-haspopup')}`));
   check('The foot: the city count and its four links each open the shelf, as a dialog', footKinds.join('|') === 'browse=cities:dialog|help-how=how:dialog|help-report=report:dialog|help-city=city:dialog|help-support=support:dialog', footKinds.join('|'));
   check('The bar: the gold line runs along its bottom edge', (await page.$eval('.foot', (e) => e.lastElementChild && e.lastElementChild.className)) === 'bar');
-  // How this guide works: the shelf, its text, and "When each state was last checked" opening inside it.
+  // How this guide works: the shelf, its text, and "When we last checked each state’s rules" opening inside it.
   await tap(page, '#r-trust [data-fk="help-how"]');
   await page.waitForSelector('.sheet-panel.shelf[data-kind="how"]');
   await settle(page);
@@ -353,12 +353,16 @@ async function mapsSettled(page, timeout = 10000) {
   // Kevin, Oct 28: the privacy promise in sub-bullets, Report a problem a link, the sources numbered, the end grouped.
   check('How this guide works: the source for "Voting is underway in every state" is number 1 in its Sources', (await text(page, '.sheet-panel.shelf .how-src > li#src-1')) === '“Voting is underway in every state”: Center for Election Innovation & Research' && !!(await page.$('.sheet-panel.shelf .how-src a[href="https://electioninnovation.org/research/dates-for-2026-early-in-person-and-mail-voting/"]')), await text(page, '.sheet-panel.shelf .how-src'));
   check('How this guide works: the privacy promise is six short lines under its lead', (await page.$$('.sheet-panel.shelf .how-priv > .how-sub > li')).length === 6 && (await text(page, '.sheet-panel.shelf .how-priv > b')) === 'Your privacy.' && (await text(page, '.sheet-panel.shelf .how-priv > .how-sub > li:first-child')) === 'No accounts, no ads, no cookies.', await text(page, '.sheet-panel.shelf .how-priv'));
-  check('How this guide works: the end goes official links, last checked, the sources, then the build date and the maker', (await page.$$eval('.sheet-panel.shelf .how-end > *', (els) => els.map((e) => e.querySelector('.how-h')?.textContent || e.querySelector('[data-fk="asof"]')?.textContent || e.className))).join(' | ') === 'Official voting info for Texas | When each state was last checked | Sources | fine'
+  // Kevin, Oct 28: "we add a 2 and 3 to sources so it doesn't look so sparse": 2 is when each state was checked,
+  // opening in place, 3 the sources sheet.
+  check('How this guide works: the end goes official links, the numbered sources, then the build date and the maker', (await page.$$eval('.sheet-panel.shelf .how-end > *', (els) => els.map((e) => e.querySelector('.how-h')?.textContent || e.className))).join(' | ') === 'Official voting info for Texas | Sources | fine'
+    && (await page.$$eval('.sheet-panel.shelf .how-src > li', (els) => els.map((e) => e.id))).join() === 'src-1,src-2,src-3'
+    && (await text(page, '.sheet-panel.shelf #src-2')) === 'When we last checked each state’s rules, with links to their official sites.' && (await text(page, '.sheet-panel.shelf #src-3')) === 'Every source on your ballot. Choose whose picks you see.'
     && /^Data built \d{4}-\d{2}-\d{2}\. Made by Kevin HG\. Not affiliated/.test(await text(page, '.sheet-panel.shelf .how-end > .fine')), await text(page, '.sheet-panel.shelf .how-end'));
   check('How this guide works: its text scrolls inside the sheet', await page.$eval('.sheet-panel.shelf .sheet-bd', (e) => e.scrollHeight > e.clientHeight + 40 && getComputedStyle(e).overflowY === 'auto'));
   await tap(page, '.sheet-panel.shelf [data-fk="asof"]');
   await settle(page);
-  check('How this guide works: "When each state was last checked" opens inside the shelf, focus kept on it', (await page.getAttribute('.sheet-panel.shelf [data-fk="asof"]', 'aria-expanded')) === 'true' && (await page.$$('.sheet-panel.shelf .asof li')).length >= 10
+  check('How this guide works: "When we last checked each state’s rules" opens inside the shelf, focus kept on it', (await page.getAttribute('.sheet-panel.shelf [data-fk="asof"]', 'aria-expanded')) === 'true' && (await page.$$('.sheet-panel.shelf .asof li')).length >= 10
     && (await focusedFk(page)) === 'asof' && (await text(page, '.sheet-panel.shelf #sh-h')) === 'How this guide works' && !(await page.$('#app .asof')), await focusedFk(page));
   await tap(page, '.sheet-panel.shelf [data-fk="asof"]');
   await settle(page);
@@ -376,6 +380,15 @@ async function mapsSettled(page, timeout = 10000) {
   await tap(page, '.sheet-panel.shelf [data-fk="sheet-x"]');
   await settle(page);
   check('How this guide works: Cancel there closes it, focus back on the foot’s How link', !(await page.$('.sheet-panel')) && (await focusedFk(page)) === 'help-how', await focusedFk(page));
+  // Source 3 opens the sources sheet in the shelf's place; Done goes back to the foot's link.
+  await tap(page, '#r-trust [data-fk="help-how"]');
+  await page.waitForSelector('.sheet-panel.shelf[data-kind="how"]');
+  await tap(page, '.sheet-panel.shelf [data-fk="how-src"]');
+  await page.waitForSelector('.sheet-panel.srcs .s-cov');
+  check('How this guide works: source 3 opens Every source on your ballot', (await text(page, '.sheet-panel #sh-h')) === 'Every source on your ballot' && !(await page.$('.sheet-panel.shelf')));
+  await tap(page, '.sheet-panel [data-fk="sheet-x"]');
+  await settle(page);
+  check('How this guide works: Done there closes it, focus back on the foot’s How link', !(await page.$('.sheet-panel')) && (await focusedFk(page)) === 'help-how', await focusedFk(page));
   // Support: a few words and the coffee as a plain link in a new tab; nothing from Buy Me a Coffee loads.
   await tap(page, '#r-trust [data-fk="help-support"]');
   await page.waitForSelector('.sheet-panel.shelf[data-kind="support"]');

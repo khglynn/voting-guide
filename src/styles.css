@@ -970,7 +970,8 @@ details.rp-along ul { margin-top: 0; padding-bottom: 6px; }
 .how-end { margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--rule-2); display: grid; gap: 14px; font-size: 14.5px; }
 .how-h { font-family: var(--f-display); font-size: 16px; font-weight: 800; font-variation-settings: "wdth" 78; color: var(--print); }
 .how-ul { margin-top: 4px; display: grid; gap: 2px; }
-.how-src { margin-top: 4px; padding-left: 20px; list-style: decimal; }
+.how-src { margin-top: 4px; padding-left: 20px; list-style: decimal; display: grid; gap: 4px; }
+.how-src .linkbtn { display: inline; min-height: 0; margin: 0; padding: 0; }
 .how-end > .fine { margin-top: 0; }
 /* The first page's one cited claim: a small 1 that links to its source, with room around it to tap. */
 .cite { font-size: .7em; line-height: 0; vertical-align: super; }

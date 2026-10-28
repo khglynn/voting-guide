@@ -664,9 +664,13 @@ A['wi-q-x'] = () => { clearWi(); };
    search starts empty each time it opens (coming back to it from Add a source keeps what was typed). */
 A.sheet = (d, el) => {
   S.ui.sheetBack = S.ui.sheet === 'picks' ? S.ui.sheetFrom || '' : null;
+  // From How this guide works' Sources (Oct 28): the sheet takes the shelf's place, and focus goes back to
+  // whatever opened How when it closes.
+  const fromShelf = S.ui.sheet === 'shelf' ? S.ui.report : null;
+  if (fromShelf) S.ui.report = null;
   S.ui.sheet = d.s as 'sources' | 'party';
   if (d.s === 'sources') S.ui.srcQ = '';
-  S.ui.sheetFrom = el.dataset.fk || null;
+  S.ui.sheetFrom = fromShelf ? fromShelf.fk || null : el.dataset.fk || null;
   render(['sheet']);
   focusFk('sheet-x');
 };
@@ -1008,7 +1012,7 @@ A.open = (d, el) => {
   S.ui.open.has(k) ? S.ui.open.delete(k) : S.ui.open.add(k);
   // "Dates, ID, ..." closed: its search goes with it.
   if (k === 'whatif' && !S.ui.open.has(k)) S.ui.wiQ = '';
-  // Inside the shelf ("When each state was last checked"): the sheet repaints, its height gliding.
+  // Inside the shelf ("When we last checked each state’s rules"): the sheet repaints, its height gliding.
   if (el.closest('#r-sheet > .sheet-panel.shelf')) { glide(['#r-sheet > .sheet-panel.shelf'], () => render(['sheet'])); if (el.dataset.fk) focusFk(el.dataset.fk); return; }
   if (k === 'off') { glide(['#r-off'], () => renderOff()); return; }
   const row = el.closest<HTMLElement>('.row[data-item]');

@@ -330,11 +330,13 @@ function citiesHTML(idx: Index): string {
       <button class="linkbtn" data-act="choose-state" data-from="browse" data-st="${esc(st)}">${s.places.length ? 'Elsewhere in the state: statewide races only' : 'Statewide races'}</button></li>`).join('')}</ul>`;
 }
 /* How this guide works. "Built for family and friends", not "Kevin built this...": the foot line names
-   him already (Kevin, Oct 21). "When each state was last checked" opens in place (actions.ts A.open
+   him already (Kevin, Oct 21). "When we last checked each state’s rules" opens in place (actions.ts A.open
    repaints the sheet). Kevin, Oct 28: "the privacy paragraph ... is a beast ... give it sub-bullets so it's
    easy to skim. Things like 'report a problem' should be linked. Things like sources should use superscript
    numbers. those links at the bottom could be organized more cleanly". Every privacy fact #34 promised is
-   still here, one to a line (model tests pin them). */
+   still here, one to a line (model tests pin them). Then: "we add a 2 and 3 to sources so it doesn't look so
+   sparse. we can move our last checked link and our list of sources (shelf) links in there": 2 opens each
+   state's checked date in place, 3 the sources sheet (once a ballot is found). */
 export const PRIVACY = [
   'No accounts, no ads, no cookies.',
   'We count visits with Vercel’s cookie-free analytics. It records the screens you open, when you send a form (never what’s in it), which state your ballot is for, and the site that sent you here. It also records your rough location, browser, operating system and device type.',
@@ -359,8 +361,9 @@ function howHTML(): string {
     </ul>
     <div class="how-end">
       ${official.length ? `<div class="how-grp"><h3 class="how-h">Official voting info for ${esc(b!.stateName)}</h3><ul class="how-ul">${official.map((a) => `<li>${a}</li>`).join('')}</ul></div>` : ''}
-      ${asOf.length ? `<div class="how-grp"><button class="linkbtn" data-act="open" data-k="asof" data-fk="asof" aria-expanded="${isOpen('asof')}">When each state was last checked</button>${isOpen('asof') ? `<ul class="asof">${asOf.map(([, s]) => `<li>${esc(s.name)}: ${esc(s.as_of || 'unknown')}. ${ext(s.official_site.url, 'Official site')}</li>`).join('')}</ul>` : ''}</div>` : ''}
-      <div class="how-grp"><h3 class="how-h">Sources</h3><ol class="how-src"><li id="src-1">“Voting is underway in every state”: ${ext(UNDERWAY_SRC.url, UNDERWAY_SRC.name)}</li></ol></div>
+      <div class="how-grp"><h3 class="how-h">Sources</h3><ol class="how-src"><li id="src-1">“Voting is underway in every state”: ${ext(UNDERWAY_SRC.url, UNDERWAY_SRC.name)}</li>
+        ${asOf.length ? `<li id="src-2"><button class="linkbtn" data-act="open" data-k="asof" data-fk="asof" aria-expanded="${isOpen('asof')}">When we last checked each state’s rules</button>, with links to their official sites.${isOpen('asof') ? `<ul class="asof">${asOf.map(([, s]) => `<li>${esc(s.name)}: ${esc(s.as_of || 'unknown')}. ${ext(s.official_site.url, 'Official site')}</li>`).join('')}</ul>` : ''}</li>` : ''}
+        ${S.ballot ? '<li id="src-3"><button class="linkbtn" data-act="sheet" data-s="sources" aria-haspopup="dialog" data-fk="how-src">Every source on your ballot</button>. Choose whose picks you see.</li>' : ''}</ol></div>
       <p class="fine">Data built ${esc(idx ? idx.generated.slice(0, 10) : '')}. Made by ${kevinLink()}. Not affiliated with any campaign, party or government office.</p>
     </div></div>`;
 }

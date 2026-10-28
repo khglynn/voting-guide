@@ -2244,8 +2244,16 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     S.ui.report = { ...base, kind: 'how', f: {} };
     const how = views.shelf.shelfHTML();
     check('how: "Report a problem" in Mistakes opens the report form', /<li><b>Mistakes\.<\/b> Open any race or measure and tap <button class="linkbtn" data-act="shelf" data-kind="report"[^>]*data-fk="how-report">Report a problem<\/button>\.<\/li>/.test(how));
-    check('how: the end goes official links, last checked, the numbered sources, then who made it', [how.indexOf('Official voting info for Florida'), how.indexOf('data-fk="asof"'), how.indexOf('<h3 class="how-h">Sources</h3>'), how.indexOf('Data built')].every((x, i, a) => x > 0 && (!i || x > a[i - 1]))
-      && /<ol class="how-src"><li id="src-1">“Voting is underway in every state”: <a[^>]+href="https:\/\/electioninnovation\.org\/research\/dates-for-2026-early-in-person-and-mail-voting\/"/.test(how) && />Check your registration</.test(how) && !/“Voting is underway in every state”: <a[^>]*>Center for Election Innovation &amp; Research<\/a>\.<\/p>/.test(how), strip(how).slice(-400));
+    check('how: the end goes official links, then the numbered sources (1 the claim, 2 when each state was checked, 3 every source on your ballot), then who made it', [how.indexOf('Official voting info for Florida'), how.indexOf('<h3 class="how-h">Sources</h3>'), how.indexOf('id="src-1"'), how.indexOf('id="src-2"'), how.indexOf('id="src-3"'), how.indexOf('Data built')].every((x, i, a) => x > 0 && (!i || x > a[i - 1]))
+      && /<ol class="how-src"><li id="src-1">“Voting is underway in every state”: <a[^>]+href="https:\/\/electioninnovation\.org\/research\/dates-for-2026-early-in-person-and-mail-voting\/"/.test(how) && />Check your registration</.test(how)
+      && /<li id="src-2"><button class="linkbtn" data-act="open" data-k="asof" data-fk="asof" aria-expanded="false">When we last checked each state’s rules<\/button>, with links to their official sites\.<\/li>/.test(how)
+      && /<li id="src-3"><button class="linkbtn" data-act="sheet" data-s="sources" aria-haspopup="dialog" data-fk="how-src">Every source on your ballot<\/button>\. Choose whose picks you see\.<\/li>/.test(how)
+      && (how.match(/data-fk="asof"/g) || []).length === 1, strip(how).slice(-400));
+    const bb = S.ballot;
+    S.ballot = null;
+    const how0 = views.shelf.shelfHTML();
+    S.ballot = bb;
+    check('how: before a ballot is found there is no source 3 (no sheet to open)', !/id="src-3"/.test(how0) && /id="src-2"/.test(how0));
     // The first page's first line: the claim with its 1, linked to the source.
     S.view = 'start';
     const m = views.mast.mastHTML();

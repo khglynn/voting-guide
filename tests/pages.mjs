@@ -19,6 +19,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { spawnSync } from 'node:child_process';
 import { createServer } from 'vite';
 import { changedUrls } from '../scripts/indexnow.mjs';
 
@@ -208,6 +209,10 @@ if (fs.existsSync(path.join(DIST, 'sitemap.xml'))) {
   const visit = js ? fs.readFileSync(path.join(DIST, js), 'utf8') : '';
   check('the visit count is stats.ts: Vercel hosts only, the referrer cut to its origin', /vercel\.app/.test(visit) && /kevinhg\.com/.test(visit) && /referrer/.test(visit) && !/sentry/i.test(visit));
   check('no source map in dist', !(fs.readdirSync(DIST, { recursive: true })).some((f) => String(f).endsWith('.map')));
+  // The repo's own address guard, over every page and file a crawler reads: only allowlisted public offices.
+  const shipped = fs.readdirSync(DIST).filter((f) => /\.(html|txt|xml)$/.test(f)).map((f) => path.join(DIST, f));
+  const guard = spawnSync(process.execPath, [path.join(ROOT, 'scripts', 'check-addresses.mjs'), ...shipped], { encoding: 'utf8' });
+  check('the address guard passes on every built page (only allowlisted public offices)', guard.status === 0, (guard.stdout + guard.stderr).split('\n').filter((l) => /PERSONAL|not allowed/.test(l)).slice(0, 2).join(' | '));
 } else console.log('SKIP  the built site (run `npm run build` first to check dist/)');
 {
   const vj = JSON.parse(fs.readFileSync(path.join(ROOT, 'vercel.json'), 'utf8'));

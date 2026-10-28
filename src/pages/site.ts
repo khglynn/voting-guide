@@ -203,7 +203,9 @@ function whereHTML(h: HowTo, p: PlaceBundle | null): string {
     const [n, a] = m ? [m[1], m[2]] : [office.name, ''];
     officeHTML = `<p class="pg-office"><b>Your election office:</b> ${office.url ? ext(office.url, n) : esc(n)}${office.phone ? `<br>${telHTML(office.phone)}` : ''}${a ? `<br>${esc(a)}` : ''}</p>`;
   }
-  return `<ul class="pg-links">${links.map((l) => `<li>${l}</li>`).join('')}</ul>${officeHTML}${p && p.notes ? `<p class="pg-note">${escP(p.notes)}</p>` : ''}`;
+  // The place's note before the office: an address right before "If you live in ..." reads to the address guard
+  // (scripts/check-addresses.mjs) as someone's home, and tests/pages.mjs runs it over every built page.
+  return `<ul class="pg-links">${links.map((l) => `<li>${l}</li>`).join('')}</ul>${p && p.notes ? `<p class="pg-note">${escP(p.notes)}</p>` : ''}${officeHTML}`;
 }
 /* The rule, and always what to do without an ID (Texas's "Photo ID required" has a way to vote without one); a state
    page also lists what counts. */

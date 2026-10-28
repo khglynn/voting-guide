@@ -5,7 +5,7 @@
    coverage line; a paste box for picks behind a login, so nothing needs an upload).
    The two forms post straight into Kevin's Google Form (common.FORM), so its response sheet stays the
    queue the pipeline reads. They ask for one sentence and an optional way back; everything else is
-   collected here and shown under "We'll send along" before it goes (Kevin: "much cleaner forms that
+   collected here and shown under "What'll be sent" before it goes (Kevin: "much cleaner forms that
    don't feel overwhelming. We want people to send feedback"). What you type lives only in this sheet
    while it is open (S.ui.report, in memory): never in localStorage or the save link. The form in a new
    tab, prefilled with the same answers, is always one tap away, and it's what a failed send offers.
@@ -149,7 +149,7 @@ export function collectAlong(): Along {
 /* The values the page fills in itself. One place, so the list and the post can't drift apart. */
 const aboutOf = (r: Pick<Shelf, 'what' | 'tag'>): string => (r.tag && r.what ? `${r.what} [${r.tag}]` : '');
 const linkOf = (a: Along): string => `${a.url} (build ${a.build || 'dev'})`;
-/* The "We'll send along" list. Every value the page fills in is on it word for word (Codex, Oct 21:
+/* The "What'll be sent" list (folded at the form's foot since Oct 28). Every value the page fills in is on it word for word (Codex, Oct 21:
    "you can see what we send" has to hold): the page (or, from a row, the race with its record id), the
    place and ZIP, the page's address with the build, the data date, the browser, the errors caught, and
    the id of the crash report the page sent, when Sentry took one in (so a note and its crash meet).

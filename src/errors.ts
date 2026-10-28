@@ -2,7 +2,7 @@
 
    The last few errors the page caught, so a "Report a problem" can say what went wrong under the
    hood (Kevin, Oct 21: collect what we can and show it, so a note can stay one sentence). Kept in
-   memory only, read only by the shelf's "We'll send along" list (views/shelf.ts), and gone on a
+   memory only, read only by the shelf's "What'll be sent" list (views/shelf.ts), and gone on a
    reload. Nothing leaves the page that way unless the person sends a report, and they see every line
    first. Three ways in: the window's error and unhandledrejection events, and main.ts's tap handler,
    which catches a control's own crash before the window would see it (reportError).

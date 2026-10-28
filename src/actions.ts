@@ -726,7 +726,10 @@ A['sheet-close'] = () => {
    menu's place, as Quick picks does; over Full details, which waits behind it. */
 A.shelf = (d, el) => {
   const from = S.ui.sheet;
-  openShelf((d.kind || 'report') as ShelfKind, d, from === 'toc' ? 'bar-menu' : el.dataset.fk || '',
+  // Opened from inside the shelf (How this guide works' Report a problem, Oct 28): it takes that shelf's place,
+  // so focus goes back to whatever opened that one.
+  const fk = from === 'toc' ? 'bar-menu' : from === 'shelf' && S.ui.report ? S.ui.report.fk : el.dataset.fk || '';
+  openShelf((d.kind || 'report') as ShelfKind, d, fk,
     from && from !== 'toc' && from !== 'shelf' ? { sheet: from, from: S.ui.sheetFrom, back: S.ui.sheetBack } : null);
 };
 function openShelf(kind: ShelfKind, d: DOMStringMap, fk: string, back: Shelf['back']): void {

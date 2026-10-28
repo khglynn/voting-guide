@@ -90,7 +90,7 @@ export interface UI {
    fields live here only so a repaint can't lose them, and go when the sheet closes. Never saved, never
    in the save link. */
 export type ShelfKind = 'cities' | 'how' | 'report' | 'city' | 'support' | 'source';
-/* What a report or a city request collects by itself and shows under "We'll send along" before it
+/* What a report or a city request collects by itself and shows under "What'll be sent" before it
    goes (Kevin, Oct 21: "everything else to just be collected programmatically, and then maybe they
    can see what we're sending"). Never the address typed in the address box, the save link or
    anything from the page's hash (it carries picks), or the Census's map point. */

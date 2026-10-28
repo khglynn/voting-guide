@@ -244,7 +244,8 @@ async function mapsSettled(page, timeout = 10000) {
   await page.evaluate(() => document.fonts.ready);
   await page.waitForFunction(() => /\d+ cities/.test(document.querySelector('[data-fk="browse"]')?.textContent || ''), null, { timeout: 15000 });
   await shot(page, '00b-first-page');
-  check('First page: the kicker says voting is underway, with Election Day from the data', (await text(page, '.front .dateline')) === 'Voting is underway in every state. Election Day is Tue, Nov 3.', await text(page, '.front .dateline'));
+  check('First page: the kicker says voting is underway, with Election Day from the data, its source a superscript 1', (await text(page, '.front .dateline')) === 'Voting is underway in every state.1 Election Day is Tue, Nov 3.'
+    && (await page.getAttribute('.front .dateline sup.cite a', 'href')) === 'https://electioninnovation.org/research/dates-for-2026-early-in-person-and-mail-voting/' && (await page.getAttribute('.front .dateline sup.cite a', 'aria-label')) === 'Source 1: Center for Election Innovation & Research', await text(page, '.front .dateline'));
   check('First page: the headline is Kevin’s line', (await text(page, '.front h1')) === 'Quickly make your voting plan.');
   const ticks = await page.$$eval('.ticks li', (els) => els.map((e) => e.textContent.trim()));
   check('First page: three ticked lines', ticks.join('|') === 'Plain English|Full local details|Pick by endorsements or party', ticks.join('|'));
@@ -349,8 +350,11 @@ async function mapsSettled(page, timeout = 10000) {
   await settle(page);
   check('How this guide works: opens the shelf, titled, the page behind out of reach', (await text(page, '.sheet-panel.shelf #sh-h')) === 'How this guide works' && (await text(page, '.sheet-panel.shelf [data-fk="sheet-x"]')) === 'Close' && (await focusedFk(page)) === 'sheet-x' && !!(await page.$('#app[inert]')), await focusedFk(page));
   check('How this guide works: opens "Built for family and friends.", since the foot names Kevin (Oct 21)', /^Built for family and friends\. It never tells you how to vote\./.test(await text(page, '.sheet-panel.shelf .how-bd > p:first-child')), await text(page, '.sheet-panel.shelf .how-bd > p:first-child'));
-  check('How this guide works: names the source for "Voting is underway in every state"', /“Voting is underway in every state”: Center for Election Innovation & Research\./.test(await text(page, '.sheet-panel.shelf')) && !!(await page.$('.sheet-panel.shelf a[href="https://electioninnovation.org/research/dates-for-2026-early-in-person-and-mail-voting/"]')));
-  check('How this guide works: ends with the build date and the maker', /^Data built \d{4}-\d{2}-\d{2}\. Made by Kevin HG\. Not affiliated/.test(await text(page, '.sheet-panel.shelf .how-bd > :last-child')) && /tap “Report a problem”\./.test(await text(page, '.sheet-panel.shelf .how-bd')), await text(page, '.sheet-panel.shelf .how-bd > :last-child'));
+  // Kevin, Oct 28: the privacy promise in sub-bullets, Report a problem a link, the sources numbered, the end grouped.
+  check('How this guide works: the source for "Voting is underway in every state" is number 1 in its Sources', (await text(page, '.sheet-panel.shelf .how-src > li#src-1')) === '“Voting is underway in every state”: Center for Election Innovation & Research' && !!(await page.$('.sheet-panel.shelf .how-src a[href="https://electioninnovation.org/research/dates-for-2026-early-in-person-and-mail-voting/"]')), await text(page, '.sheet-panel.shelf .how-src'));
+  check('How this guide works: the privacy promise is six short lines under its lead', (await page.$$('.sheet-panel.shelf .how-priv > .how-sub > li')).length === 6 && (await text(page, '.sheet-panel.shelf .how-priv > b')) === 'Your privacy.' && (await text(page, '.sheet-panel.shelf .how-priv > .how-sub > li:first-child')) === 'No accounts, no ads, no cookies.', await text(page, '.sheet-panel.shelf .how-priv'));
+  check('How this guide works: the end goes official links, last checked, the sources, then the build date and the maker', (await page.$$eval('.sheet-panel.shelf .how-end > *', (els) => els.map((e) => e.querySelector('.how-h')?.textContent || e.querySelector('[data-fk="asof"]')?.textContent || e.className))).join(' | ') === 'Official voting info for Texas | When each state was last checked | Sources | fine'
+    && /^Data built \d{4}-\d{2}-\d{2}\. Made by Kevin HG\. Not affiliated/.test(await text(page, '.sheet-panel.shelf .how-end > .fine')), await text(page, '.sheet-panel.shelf .how-end'));
   check('How this guide works: its text scrolls inside the sheet', await page.$eval('.sheet-panel.shelf .sheet-bd', (e) => e.scrollHeight > e.clientHeight + 40 && getComputedStyle(e).overflowY === 'auto'));
   await tap(page, '.sheet-panel.shelf [data-fk="asof"]');
   await settle(page);
@@ -362,6 +366,16 @@ async function mapsSettled(page, timeout = 10000) {
   await tap(page, '.sheet-panel.shelf [data-fk="sheet-x"]');
   await settle(page);
   check('How this guide works: Close takes the shelf away, focus back on its link', !(await page.$('.sheet-panel')) && !(await page.$('#app[inert]')) && (await focusedFk(page)) === 'help-how', await focusedFk(page));
+  // Its Report a problem is a link now (Kevin, Oct 28): the report form takes the shelf's place, and Cancel goes
+  // back to the foot's link.
+  await tap(page, '#r-trust [data-fk="help-how"]');
+  await page.waitForSelector('.sheet-panel.shelf[data-kind="how"]');
+  await tap(page, '.sheet-panel.shelf [data-fk="how-report"]');
+  await page.waitForSelector('.sheet-panel.shelf[data-kind="report"]');
+  check('How this guide works: Report a problem opens the report form', (await text(page, '.sheet-panel.shelf #sh-h')) === 'Report a problem' && !(await page.$('.sheet-panel.shelf .how-bd')));
+  await tap(page, '.sheet-panel.shelf [data-fk="sheet-x"]');
+  await settle(page);
+  check('How this guide works: Cancel there closes it, focus back on the foot’s How link', !(await page.$('.sheet-panel')) && (await focusedFk(page)) === 'help-how', await focusedFk(page));
   // Support: a few words and the coffee as a plain link in a new tab; nothing from Buy Me a Coffee loads.
   await tap(page, '#r-trust [data-fk="help-support"]');
   await page.waitForSelector('.sheet-panel.shelf[data-kind="support"]');
@@ -372,7 +386,7 @@ async function mapsSettled(page, timeout = 10000) {
   await tap(page, '.sheet-panel.shelf [data-act="shelf-share"]');
   await page.waitForSelector('#pass');
   await settle(page);
-  check('Support: from a ballot, "send the guide to a friend" opens Help friends vote, the shelf gone', !(await page.$('.sheet-panel')) && !!(await page.$('#pass [data-act="share-guide"]')));
+  check('Support: from a ballot, "send the guide to a friend" opens Help friends vote, the shelf gone, focus on its Share the guide', !(await page.$('.sheet-panel')) && !!(await page.$('#pass')) && !!(await page.$('.foot [data-act="share-guide"]')));
   await page.goBack();
   await page.waitForSelector('#plan');
   await settle(page);
@@ -1316,7 +1330,9 @@ async function mapsSettled(page, timeout = 10000) {
   check('Share page: the same foot sits above the crowd', (await text(page, '#pass .trust [data-fk="help-how"]')) === 'How this guide works' && (await page.$eval('#pass .trust', (e) => e.nextElementSibling && e.nextElementSibling.className)) === 'crowd' && !(await page.$('#r-trust .trust')));
   await shot(page, '10b-share');
   check('Share page: the lede asks you to make the message your own', (await text(page, '#pass .lede')) === 'Copy a message, make it your own, and send it. Ask each person to text three more.', await text(page, '#pass .lede'));
-  check('Share page: "Share the guide" comes right after the lede', (await page.$eval('#pass .lede', (e) => e.nextElementSibling && e.nextElementSibling.dataset.act)) === 'share-guide' && (await text(page, '[data-act="share-guide"]')) === 'Share the guide');
+  // Kevin, Oct 28: "let's have the green button be 'share the guide' and the left go back one step to not two".
+  check('Share page: "Share the guide" is the bar’s green button, and the page has no second one', (await text(page, '.foot .fcta[data-act="share-guide"]')) === 'Share the guide' && !(await page.$('#pass [data-act="share-guide"]')));
+  check('Share page: the left button and the top link go back one step, to My plan', (await text(page, '.foot .ftog')) === 'Back to my plan' && (await page.getAttribute('.foot .ftog', 'data-v')) === 'cheat' && (await text(page, '#pass [data-fk="pass-back"]')) === 'Back to my plan' && (await page.getAttribute('#pass [data-fk="pass-back"]', 'data-v')) === 'cheat');
   await tap(page, '[data-act="share-guide"]');
   const shared = await page.evaluate(() => window.__shared || null);
   const fam = await text(page, '#msg-fam');
@@ -1438,11 +1454,15 @@ async function mapsSettled(page, timeout = 10000) {
   check('Report a problem: its two questions in the guide’s words, the way back marked optional', (await page.$$eval('.sheet-panel.shelf .rp-f label', (els) => els.map((e) => e.textContent.replace(/\s+/g, ' ').trim()))).join('|') === 'What’s wrong?|Want a reply? optional'
     && (await text(page, '#rf-reach-h')) === 'An email or phone, only if you’d like one back.' && (await page.getAttribute('#rf-wrong', 'aria-required')) === 'true' && !(await page.getAttribute('#rf-reach', 'aria-required')));
   const along = await alongOf(page);
-  check('Report a problem: "We’ll send along" names the page, the place and ZIP, the page’s address with the build, the data date, and the browser', (await text(page, '.rp-along > p:first-child')) === 'We’ll send along' && along.length === 5 && along[0] === 'Page: Your ballot' && along[1] === 'Place: Austin, 78704'
+  // Kevin, Oct 28: folded, and called something clearer ("what'll be sent"); what's posted doesn't change.
+  check('Report a problem: "What’ll be sent", folded shut at the foot, names the page, the place and ZIP, the page’s address with the build, the data date, and the browser', (await text(page, 'details.rp-along > summary')) === 'What’ll be sent' && !(await page.getAttribute('details.rp-along', 'open')) && !(await page.isVisible('.rp-along li')) && along.length === 5 && along[0] === 'Page: Your ballot' && along[1] === 'Place: Austin, 78704'
     && new RegExp(`^Page address: ${BASE.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/\\?today=${TODAY} \\(build ([0-9a-f]{7}|dev)\\)$`).test(along[2]) && /^Data built: \d{4}-\d{2}-\d{2} \d{2}:\d{2} UTC$/.test(along[3]) && /^Browser: .+, 380px wide$/.test(along[4])
-    && (await text(page, '.rp-along > p:last-child')) === 'Add anything else in your note.', along.join(' | '));
+    && !/Add anything else/.test(await text(page, '.sheet-panel.shelf')), along.join(' | '));
+  await tap(page, 'details.rp-along > summary');
+  check('Report a problem: tapped, What’ll be sent opens to its list', !!(await page.getAttribute('details.rp-along', 'open')) && (await page.isVisible('.rp-along li')));
+  await tap(page, 'details.rp-along > summary');
   check('Report a problem: the list never shows the address or the page’s hash', !NEVER.test(await text(page, '.sheet-panel.shelf')), await text(page, '.rp-along'));
-  check('Report a problem: one fine line says where it goes', (await text(page, '.sheet-panel.shelf .rp-fine')) === 'Goes to Kevin’s Google Form. Nothing you type here is saved in the guide.');
+  check('Report a problem: one fine line says where it goes', (await text(page, '.sheet-panel.shelf .rp-fine')) === 'Your request goes to Kevin’s Google Form. Nothing you type here is saved in the guide.');
   check('Report a problem: a touch lands on Cancel, not in a box, so no keyboard jumps over the sheet', (await focusedFk(page)) === 'sheet-x' && (await text(page, '.sheet-panel.shelf [data-fk="sheet-x"]')) === 'Cancel', await focusedFk(page));
   check('Report a problem: the page behind is out of reach', !!(await page.$('#app[inert]')));
   // Send with the one required box empty: nothing goes, and it says so at the box.
@@ -1671,7 +1691,10 @@ async function mapsSettled(page, timeout = 10000) {
   await page.waitForSelector('#cheat');
   check('Bar on the cheat sheet: Back to the ballot and Help friends vote', (await text(page, '.foot')) === 'Back to the ballot Help friends vote', await text(page, '.foot'));
   await tap(page, '.foot [data-act="view"][data-v="pass"]');
-  check('Bar on Help friends vote: Back to the ballot and My plan', (await text(page, '.foot')) === 'Back to the ballot My plan', await text(page, '.foot'));
+  check('Bar on Help friends vote: Back to my plan and Share the guide', (await text(page, '.foot')) === 'Back to my plan Share the guide', await text(page, '.foot'));
+  await tap(page, '.foot .ftog');
+  await page.waitForSelector('#cheat');
+  check('Bar on Help friends vote: its left button goes back one step, to My plan', !!(await page.$('#cheat')) && !(await page.$('#pass')) && (await text(page, '.foot')) === 'Back to the ballot Help friends vote');
   check('Menu: nothing in all caps', (await upperCased(page)).length === 0);
   noErrors(page, 'Bar and menu');
   await ctx.close();
@@ -2414,7 +2437,7 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
     await page.waitForSelector('.sheet-panel.shelf[data-kind="source"]');
     const along = await alongOf(page);
     const code = (along.at(-1).match(/^Request: ([a-z]{12})$/) || [])[1];
-    check('Add in place: "We’ll send along" ends with the request’s code, 12 letters', !!code, along.join(' | '));
+    check('Add in place: "What’ll be sent" ends with the request’s code, 12 letters', !!code, along.join(' | '));
     await page.fill('#rf-src', 'AURA');
     await tap(page, SEND);
     await page.waitForSelector('.rp-sent');
@@ -2831,6 +2854,52 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
     check('Sheet: a group picked there is on in the Edit sheet once you’re back', !!(await page.$('.sheet-panel.picks')) && (await page.getAttribute('.sheet-panel.picks [data-act="chip"][data-k="conservative"]', 'aria-pressed')) === 'true' && (await focusedFk(page)) === 'cov-src', await focusedFk(page));
   } else check('Sheet: Austin has a Conservative groups chip', false);
   noErrors(page, 'Sheet');
+  await ctx.close();
+}
+
+/* ---------- the dates, ID and what-ifs search (Oct 28) ----------
+   Kevin: "since we're adding search to the sources list, can we add it to the gotchas section too? ... I don't
+   care about search approach, just don't want folks to not find what they're looking for because of some small
+   mismatch". The same matcher as the sources sheet (model/search.ts). */
+{
+  const { ctx, page } = await newPage();
+  await openBallot(page, '32801');
+  await tap(page, '[data-fk="whatif"]');
+  await page.waitForSelector('#plan #wi-q');
+  const asked = () => page.$$eval('#plan .wi-found .wi-rq', (els) => els.map((e) => e.textContent.trim()));
+  const qs0 = await page.$$eval('#plan .wi-q', (els) => els.length);
+  check('What-ifs search: a box leads the panel, empty, its Clear hidden, the questions as always', (await page.inputValue('#wi-q')) === '' && !(await page.isVisible('#plan [data-act="wi-q-x"]')) && qs0 > 10 && (await page.getAttribute('#wi-q', 'placeholder')) === 'Search: lost ballot, ID, moved…', String(qs0));
+  await page.locator('#wi-q').tap();
+  await page.locator('#wi-q').pressSequentially('absentee', { delay: 20 });
+  await page.waitForTimeout(100);
+  const ab = await asked();
+  check('What-ifs search: an everyday word finds the data’s word, as you type: "absentee" finds the mail-ballot answers, open', ab.includes('My mail ballot never came, or I lost it.') && !ab.includes('I’m in line when polls close.') && (await focusedFk(page)) === 'wi-q' && (await page.isVisible('#plan [data-act="wi-q-x"]')) && !(await page.$('#plan .wi-q')), ab.join(' | '));
+  await page.fill('#wi-q', 'provisonal');
+  check('What-ifs search: a typo still finds it: "provisonal"', (await asked()).some((q) => /provisional ballot\?$/.test(q)), (await asked()).join(' | '));
+  await page.fill('#wi-q', 'my ballot never came');
+  check('What-ifs search: a whole question in your own words finds its answer', (await asked()).join(' | ') === 'My mail ballot never came, or I lost it.', (await asked()).join(' | '));
+  // A "More" inside the results opens its full answer, and the search stays.
+  await tap(page, '#plan .wi-found [data-k="wim-no_mail_ballot_or_lost"]');
+  check('What-ifs search: More in a result opens its full answer, the search kept', !!(await page.$('#plan .wi-found .wi-full')) && (await page.inputValue('#wi-q')) === 'my ballot never came');
+  await page.fill('#wi-q', 'felony');
+  await page.waitForTimeout(900);
+  check('What-ifs search: no match says so plainly and names the election office, its phone a link, and a screen reader hears it', /^No answers match “felony”\. Contact your election office: Orange County Supervisor of Elections · 407-836-VOTE \(8683\)\.$/.test(await text(page, '#plan .wi-none')) && !!(await page.$('#plan .wi-none a[href^="tel:"]')) && (await text(page, '#sr-live')) === 'No answers match.', `${await text(page, '#plan .wi-none')} / ${await text(page, '#sr-live')}`);
+  await tap(page, '#plan [data-act="wi-q-x"]');
+  check('What-ifs search: Clear brings every question back, the box empty, you still in it', (await page.inputValue('#wi-q')) === '' && (await page.$$eval('#plan .wi-q', (els) => els.length)) === qs0 && (await focusedFk(page)) === 'wi-q' && !(await page.isVisible('#plan [data-act="wi-q-x"]')));
+  await page.fill('#wi-q', 'moved');
+  await page.locator('#wi-q').focus();
+  await page.keyboard.press('Escape');
+  check('What-ifs search: Escape in the box clears it', (await page.inputValue('#wi-q')) === '' && (await page.$$eval('#plan .wi-q', (els) => els.length)) === qs0);
+  await page.fill('#wi-q', 'moved');
+  await page.keyboard.press('Enter');
+  check('What-ifs search: Enter leaves the box and keeps the answers', (await focusedFk(page)) !== 'wi-q' && (await asked()).length > 0);
+  await tap(page, '[data-fk="whatif"]');
+  await tap(page, '[data-fk="whatif"]');
+  await page.waitForSelector('#plan #wi-q');
+  check('What-ifs search: closed and opened again, it starts empty', (await page.inputValue('#wi-q')) === '' && (await page.$$eval('#plan .wi-q', (els) => els.length)) === qs0);
+  await shot(page, '36-whatifs-search');
+  await noSideScroll(page, 'What-ifs search');
+  noErrors(page, 'What-ifs search');
   await ctx.close();
 }
 

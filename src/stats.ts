@@ -21,9 +21,8 @@ import type { BeforeSendEvent } from '@vercel/analytics';
 
 /* The dashboard's vocabulary. Keep names, keys and values stable. */
 export interface Events {
-  /* A ballot shown: its place ids joined by "+" (the app's own key), or the state code when it's
-     statewide; and how it opened (the ZIP box, an address, a save link, this device's saved ballot, or
-     the list of cities). */
+  /* A ballot shown: its one place id, or the state code (ballotPlace); and how it opened (the ZIP box,
+     an address, a save link, this device's saved ballot, or the list of cities). */
   ballot: { place: string; how: 'zip' | 'address' | 'shared' | 'returning' | 'list' };
   /* A form or one-tap request that went out (actions.ts). */
   request: { kind: 'city' | 'picks' | 'source' | 'report' | 'follow_up' };
@@ -33,6 +32,12 @@ export interface Events {
   share: { act: 'made' | 'opened' };
 }
 export type EventName = keyof Events;
+
+/* The place a ballot event names: its one place id, or the state code when it has none (statewide) or
+   several. Several places together (DC's wards, Aurora and Denver) each come from exactly one ZIP in
+   the index, so the set would name the ZIP. */
+export const ballotPlace = (b: { st: string; places: { id: string }[] }): string =>
+  b.places.length === 1 ? b.places[0].id : b.st;
 
 /* The guide's own hosts on Vercel: production (vote.kevinhg.com) and every *.vercel.app deployment. */
 export const onVercel = (host: string): boolean =>

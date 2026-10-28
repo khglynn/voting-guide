@@ -748,8 +748,15 @@ function roundTrip(name, stCode, places, mutate) {
   check('stats: beforeSend drops an event whose address still holds a ZIP', stats.beforeSend({ type: 'pageview', url: 'https://vote.kevinhg.com/78704?x=1' }) === null);
   check('stats: it loads on the guide’s Vercel hosts only', ['vote.kevinhg.com', 'voting-guide-silk.vercel.app', 'voting-guide-git-analytics-kevinhg.vercel.app'].every(stats.onVercel)
     && !['localhost', '127.0.0.1', 'evilkevinhg.com', 'vote.kevinhg.com.example.org', 'vercel.app.example.org'].some(stats.onVercel));
-  check('stats: event values are short plain tokens, never a ZIP or an at sign', stats.plainData({ place: 'austin-tx', how: 'zip' }) && stats.plainData({ place: 'dc-ward-1+dc-ward-2' }) && stats.plainData({ place: 'MO' })
+  check('stats: event values are short plain tokens, never a ZIP or an at sign', stats.plainData({ place: 'austin-tx', how: 'zip' }) && stats.plainData({ place: 'dc-ward-1' }) && stats.plainData({ place: 'MO' })
     && !stats.plainData({ place: '78704' }) && !stats.plainData({ place: 'austin-tx-78704' }) && !stats.plainData({ kind: 'a@b.co' }) && !stats.plainData({ n: 5 }) && !stats.plainData({ how: 'two words' }) && !stats.plainData({ how: '' }));
+  // The place a ballot counts as: its one place, or its state. Each set of several places in the index belongs
+  // to exactly one ZIP (DC's wards, Aurora and Denver), so every one of them must count as the state.
+  const ballotOf = (s, ids) => bl.buildBallot(read(`state-${s}.json`), ids.map((id) => read(`place-${id}.json`)));
+  const multi = Object.values(INDEX.zips).filter((ids) => ids.length > 1);
+  const counted = multi.map((ids) => { const b = ballotOf(INDEX.places[ids[0]].state, ids); return [ids.join('+'), stats.ballotPlace(b), b.st]; });
+  check('stats: every ballot of several places in the index counts as its state code, never the places', multi.length > 0 && counted.every(([, p, s]) => p === s && /^[A-Z]{2}$/.test(p)), JSON.stringify(counted.filter(([, p, s]) => p !== s)));
+  check('stats: one place counts as its id, a statewide ballot as its state', stats.ballotPlace(ballotOf('TX', ['austin-tx'])) === 'austin-tx' && stats.ballotPlace(ballotOf('TX', [])) === 'TX');
   // Off Vercel, with no queue: nothing happens and nothing throws.
   const had = Object.getOwnPropertyDescriptor(globalThis, 'window');
   try {

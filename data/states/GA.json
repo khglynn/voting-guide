@@ -7,7 +7,7 @@
     "url": "https://mvp.sos.ga.gov/"
   },
   "voting_model": "in_person_first",
-  "model_plain": "Most Georgians vote in person, either during three weeks of early voting (any early voting site in your county) or on Election Day at your assigned precinct. Anyone can also vote by mail, but you have to ask for that ballot by October 23, and the drop boxes go away when early voting ends on October 30.",
+  "model_plain": "Most Georgians vote in person: during three weeks of early voting at any early voting site in your county, or on Election Day at your assigned precinct. Anyone could also vote by mail, but requests closed October 23. Drop boxes close when early voting ends on October 30.",
   "registration": {
     "check_url": "https://mvp.sos.ga.gov/",
     "register_url": "https://vote.gov/register/georgia",
@@ -41,7 +41,7 @@
     "who_gets_one": "Nobody automatically. Any registered Georgia voter can vote by mail without giving a reason, but you must apply for each election. Counties began mailing ballots on Monday, October 5, 2026 (29 days before the election). Apply at the state's absentee portal (securemyabsenteeballot.sos.ga.gov), or send the paper form to your county by mail, email, fax or in person. The application must include your Georgia driver's license or state ID number; if you have neither, you attach a copy of another accepted ID. Voters 65 and older, voters with a disability, and military and overseas voters can file one application that covers the whole election cycle.",
     "request_deadline": {
       "date": "2026-10-23",
-      "rule": "Your county must receive your application by Friday, October 23, 2026 (11 days before the election, O.C.G.A. 21-2-381). The SOS page says: 'First day to request an Absentee by Mail Ballot: August 17th (Last day is October 23rd).' Applying that late is risky: the ballot still has to reach you by mail and get back to the county by 7:00 PM on November 3. If it's after about October 19, consider voting early in person instead.",
+      "rule": "Your county had to receive your application by Friday, October 23, 2026 (11 days before the election, O.C.G.A. 21-2-381). The SOS page says: 'First day to request an Absentee by Mail Ballot: August 17th (Last day is October 23rd).' That deadline has passed, so vote in person.",
       "source": "https://sos.ga.gov/november-3-2026-general-election"
     },
     "return_deadline": {
@@ -60,7 +60,7 @@
     "signature_witness_rules": "No witness, no notary, and since SB 202 there is no signature matching. Instead you sign the oath on the return envelope and write your Georgia driver's license or state ID number and your date of birth. If you have no Georgia license or ID, you write the last four digits of your Social Security number; if you have none of those, you enclose a copy of an accepted ID. Keep the inner privacy sleeve: a ballot returned without the sealed oath envelope can be rejected.",
     "tracking_url": "https://georgia.ballottrax.net/voter/",
     "cure_process": "If your ID number or date of birth is missing or doesn't match, or the oath is unsigned, the county must notify you (by mail, and by phone or email if they have it) and your ballot is held as provisional. You fix it by returning a signed affidavit with a copy of an accepted ID. Georgia's cure window runs until the end of the third day after the election, Friday, November 6, 2026. SB 202 (O.C.G.A. 21-2-386) gives you 'until the end of the period for verifying provisional ballots,' and georgia.gov says provisional issues must be resolved 'within three days.' You can also check status on BallotTrax or My Voter Page.",
-    "mail_cutoff_advice": "Election officials and USPS say to mail at least 7 days before Election Day. In practice: if you still have your ballot after Monday, October 26, don't mail it. Put it in a drop box at an early voting site by close on Friday, October 30, or hand it to your county elections office by 7:00 PM on Tuesday, November 3. If you decide to vote in person instead, bring the mail ballot with you so the poll manager can cancel it. If you never received it, you can still vote in person: georgia.gov says you'll 'sign a document attesting that you are only voting once.' Once you've returned your absentee ballot, you've voted and can't vote in person.",
+    "mail_cutoff_advice": "Election officials and USPS say to mail at least 7 days before Election Day. In practice: if you still have your ballot after Monday, October 26, don't mail it. Put it in a drop box at an early voting site by close on Friday, October 30, or hand it to your county elections office by Tuesday, November 3 (call for hours: Fulton 404-612-7020, DeKalb 404-298-4020). If you decide to vote in person instead, bring the mail ballot with you so the poll manager can cancel it. If you never received it, you can still vote in person: georgia.gov says you'll 'sign a document attesting that you are only voting once.' Once you've returned your absentee ballot, you've voted and can't vote in person.",
     "drop_box_lookup_url": "https://georgia.gov/locate-county-registrars-office",
     "confidence": "verified"
   },
@@ -146,7 +146,7 @@
       "steps": [
         "Still file your new address with your county registrar, online or on paper, so it's right next time.",
         "Moved counties more than 30 days ago and didn't re-register by Oct 5? You can't vote in your old county, and it's too late to register in the new one. Call your county registrar if you're unsure.",
-        "Can't get back to your old county? You can still ask it for an absentee ballot, but the request must arrive by Friday, Oct 23."
+        "Can't get back to your old county? Absentee requests closed Oct 23, so call your old county's elections office about your options."
       ],
       "deadline": "2026-10-23",
       "source": "https://accgov.com/242/Voter-Change-of-Residence",
@@ -342,7 +342,7 @@
     {
       "id": "college_student",
       "question": "I'm a college student.",
-      "short": "Vote where you're registered; if that's home, your absentee application must arrive by Oct 23.",
+      "short": "Vote where you're registered; absentee requests closed Oct 23, so vote in person in that county.",
       "actions": [
         {
           "label": "Check my registration",
@@ -353,9 +353,9 @@
           "url": "https://georgia.gov/locate-county-registrars-office"
         }
       ],
-      "answer": "Registration closed October 5, so you vote where you're already registered. If that's your home county and you're at school in another county, ask for an absentee ballot sent to your school address; your application must arrive by Friday, October 23.",
+      "answer": "Registration closed October 5, so you vote where you're already registered. Absentee requests closed Friday, October 23. Already have your ballot? Use a drop box at an early voting site by Friday, Oct 30, or hand it to your county elections office by Nov 3 (call for hours: Fulton 404-612-7020, DeKalb 404-298-4020).",
       "steps": [
-        "On the application, use the temporary mailing address box for your school address.",
+        "Already have your ballot? Use a drop box at an early voting site by Friday, Oct 30, or hand it to your county elections office by Nov 3 (call for hours: Fulton 404-612-7020, DeKalb 404-298-4020).",
         "A student ID from a Georgia public college (like Georgia State or Georgia Tech) counts as photo ID. Private-college IDs don't.",
         "Registered at school in Fulton? Vote early at any Fulton site through Oct 30."
       ],
@@ -366,18 +366,17 @@
     {
       "id": "away_on_election_day",
       "question": "I'll be away on Election Day.",
-      "short": "Vote early at any site in your county through Oct 30, or request an absentee ballot by Oct 23.",
+      "short": "Vote early at any site in your county through Oct 30, or on Nov 3 at your own precinct.",
       "actions": [
         {
           "label": "Find early voting places",
           "url": "https://mvp.sos.ga.gov/"
         }
       ],
-      "answer": "Vote early: Georgia's early voting runs through Friday, October 30 at any early voting site in your county. Or request an absentee ballot by Friday, October 23 and get it back to your county by 7 PM on November 3.",
+      "answer": "Absentee requests closed Oct 23. You can still vote early in person through Friday, Oct 30 at any site in your county (Fulton or DeKalb), or on Nov 3 at your assigned precinct. Already have your mail ballot? Use a drop box at an early voting site by Friday, Oct 30, or hand it to your county elections office by Nov 3 (call for hours: Fulton 404-612-7020, DeKalb 404-298-4020).",
       "steps": [
-        "Absentee ballots can be mailed to a temporary address outside your county.",
         "Drop boxes are inside early voting sites and close for good on Oct 30.",
-        "After that, mail it early or hand it to your county elections office by 7 PM Nov 3."
+        "After that, hand it to your county elections office by Nov 3 (call for hours: Fulton 404-612-7020, DeKalb 404-298-4020)."
       ],
       "deadline": "2026-10-23",
       "source": "https://georgia.gov/georgia-election-guide",
@@ -586,6 +585,14 @@
     {
       "name": "Fulton County: Request/Return an Absentee Ballot (absentee office contacts; what to do if your ballot hasn't come)",
       "url": "https://www.fultoncountyga.gov/Inside-Fulton-County/Fulton-County-Departments/Registration-and-Elections/Absentee-Voting"
+    },
+    {
+      "name": "Fulton County: absentee voting",
+      "url": "https://fultoncountyga.gov/inside-fulton-county/fulton-county-departments/registration-and-elections/absentee-voting"
+    },
+    {
+      "name": "DeKalb County: voter registration and elections",
+      "url": "https://dekalbcountyga.gov/departments/voter-registration-and-elections"
     }
   ],
   "heads_up": [

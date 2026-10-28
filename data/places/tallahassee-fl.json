@@ -155,5 +155,24 @@
   "early_in_person": "https://www.leonvotes.gov/Voting/Early-Voting",
   "election_day": "https://www.leonvotes.gov/Voting/Election-Day",
   "drop_box": "https://www.leonvotes.gov/Voting/Vote-by-Mail/Secure-Ballot-Intake-Stations"
- }
+ },
+ "situations": [
+  {
+   "id": "no_mail_ballot_or_lost",
+   "short": "Vote in person instead; poll workers can cancel your mail ballot so you can vote.",
+   "answer": "The deadline to have a ballot mailed was October 22, so voting in person is the easiest fix. Early voting is open through Sunday, November 1, at 10 sites. On Election Day, go to your precinct, 7 AM to 7 PM. Still have your mail ballot? Bring it: poll workers can cancel it so you can vote in person.",
+   "steps": [
+    "Questions: Leon County elections office, (850) 606-8683 or VBM@LeonVotes.gov, Monday to Friday, 8 AM to 5 PM, 2990-1 Apalachee Pkwy.",
+    "Can't get to a polling place on Election Day? The Elections Center does emergency voting from 7 AM to 7 PM."
+   ],
+   "source": "https://www.leonvotes.gov/Voting/Vote-by-Mail",
+   "confidence": "verified"
+  }
+ ],
+ "sources": [
+  {
+   "name": "Leon County SOE: vote by mail",
+   "url": "https://www.leonvotes.gov/Voting/Vote-by-Mail"
+  }
+ ]
 }

@@ -10,7 +10,7 @@
   "county_election_office": {
     "name": "Arapahoe County Elections (most of Aurora); Adams County Elections (north Aurora); Douglas County Elections (far southeast Aurora). Your ballot comes from the county you live in.",
     "url": "https://www.arapahoevotes.gov/",
-    "phone": "Arapahoe Clerk and Recorder 303-795-4200; Adams County Elections 720-523-6500; Douglas County Elections 303-660-7444"
+    "phone": "Arapahoe County Elections 303-795-4511 (Monday to Friday, 8 AM to 4 PM); Adams County Elections 720-523-6500; Douglas County Elections 303-660-7444"
   },
   "sample_ballot_url": "https://myballot.coloradosos.gov/",
   "zips": [
@@ -240,6 +240,12 @@
       "office_match": "U.S. House of Representatives",
       "label": "Check your district on your official ballot",
       "url": "https://myballot.coloradosos.gov/"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Arapahoe County Elections: contact page",
+      "url": "https://www.arapahoeco.gov/your_county/arapahoevotes/contact_us/index.php"
     }
   ]
 }

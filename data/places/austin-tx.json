@@ -10,7 +10,23 @@
   "county_election_office": {
     "name": "Travis County Clerk, Elections Division (VoteTravis), 5501 Airport Blvd., Austin 78751",
     "url": "https://votetravis.gov/",
-    "phone": "512-238-VOTE (8683)"
+    "phone": "512-238-VOTE (8683)",
+    "phone_label": "Travis County Elections",
+    "lines": [
+      {
+        "label": "Registration questions (Travis County Tax Office)",
+        "phone": "512-854-9473"
+      },
+      {
+        "label": "Williamson County Elections",
+        "phone": "512-943-1630"
+      },
+      {
+        "label": "Hays County Elections",
+        "phone": "512-393-7310",
+        "hours": "Monday to Friday, 8 AM to 5 PM"
+      }
+    ]
   },
   "sample_ballot_url": "https://votetravis.gov/voter-lookup/",
   "zips": [
@@ -173,7 +189,7 @@
     "tx-austin-prop-j",
     "tx-dvisd-prop-a"
   ],
-  "notes": "Any Travis County voter can use any Travis polling place, early or on Election Day. Seven early-voting sites stay open until 10 PM on Oct 29 and 30. Travis also has a generic consolidated ballot PDF at votetravis.gov showing every contest in the county.",
+  "notes": "Any Travis County voter can use any Travis polling place, early or on Election Day. Seven early-voting sites stay open until 10 PM on Oct 29 and 30. Travis also has a generic consolidated ballot PDF at votetravis.gov showing every contest in the county. Travis County: moved here from another Texas county and didn't re-register? You may be able to vote a limited ballot, but only at the Travis County Elections office, 5501 Airport Blvd., during early voting (through Oct 30); call 512-238-8683 first. Have a Travis mail ballot? On Election Day only, 7 AM to 7 PM, you can hand it in yourself, with photo ID, at 5501 Airport Blvd. Mail ballot questions: ebbm@traviscountytx.gov or 512-238-8683.",
   "district_finders": [
     {
       "office_match": "U.S. Representative",
@@ -742,5 +758,102 @@
     "hours_short": "Travis County sites are open 7 AM to 7 PM every day.",
     "source": "https://votetravis.gov/wp-content/uploads/G26-Early-Voting-Flyer-9.21.pdf",
     "confidence": "verified"
-  }
+  },
+  "by_county": [
+    {
+      "county": "Travis",
+      "lookups": {
+        "early_in_person": "https://www.google.com/maps/d/viewer?mid=1t_vWJgd_BRfKnJn_fQoHE25IV2i_0Jo",
+        "election_day": "https://www.google.com/maps/d/viewer?mid=1Y86BIAffVIw2L_WEkSls_0OWg7NpvX8"
+      },
+      "source": "https://votetravis.gov/current-election-information/current-election/",
+      "confidence": "verified",
+      "zips": [
+        "78701",
+        "78702",
+        "78703",
+        "78704",
+        "78705",
+        "78712",
+        "78719",
+        "78721",
+        "78722",
+        "78723",
+        "78724",
+        "78725",
+        "78726",
+        "78730",
+        "78731",
+        "78732",
+        "78733",
+        "78734",
+        "78735",
+        "78738",
+        "78741",
+        "78742",
+        "78744",
+        "78745",
+        "78746",
+        "78748",
+        "78749",
+        "78751",
+        "78752",
+        "78753",
+        "78754",
+        "78756",
+        "78757",
+        "78758"
+      ]
+    },
+    {
+      "county": "Williamson",
+      "zips": [],
+      "lookups": {
+        "early_in_person": "https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Early%20Voting%20Dashboard.html",
+        "election_day": "https://www.wilcotx.gov/elections"
+      },
+      "source": "https://www.wilcotx.gov/elections",
+      "confidence": "verified"
+    },
+    {
+      "county": "Hays",
+      "zips": [],
+      "lookups": {
+        "early_in_person": "https://updates.electionlink.net/widgets/haystx/2026-11-03/Early%20Voting%20Dashboard.html",
+        "election_day": "https://www.hayscountytx.gov/DocumentCenter/View/5053/Vote-Centers-20261103-General-Election"
+      },
+      "source": "https://www.hayscountytx.gov/873/November-3-2026-General-Election",
+      "confidence": "verified"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Travis County: current election (early voting and Election Day maps, limited ballots)",
+      "url": "https://votetravis.gov/current-election-information/current-election/"
+    },
+    {
+      "name": "Travis County: ballot by mail (Election Day hand delivery)",
+      "url": "https://votetravis.gov/voter-information/ballot-by-mail/"
+    },
+    {
+      "name": "Travis County Tax Office: voter registration questions",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "name": "Williamson County Elections",
+      "url": "https://www.wilcotx.gov/elections"
+    },
+    {
+      "name": "Hays County Elections: office and hours",
+      "url": "https://www.hayscountytx.gov/172/Elections"
+    },
+    {
+      "name": "Hays County: Nov 3, 2026 election",
+      "url": "https://www.hayscountytx.gov/873/November-3-2026-General-Election"
+    },
+    {
+      "name": "Census 2020 ZIP code (ZCTA) to county relationship file",
+      "url": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_county20_natl.txt"
+    }
+  ]
 }

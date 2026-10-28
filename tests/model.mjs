@@ -985,6 +985,67 @@ function roundTrip(name, stCode, places, mutate) {
   }
 }
 
+/* ---------- where to vote (Oct 28): a county's own links, answers and phone lines ----------
+   Kevin: "the page for voting locations in austin we link to is confusing as hell. I know somewhere there's a
+   simple google map." A place across county lines keeps each county's links: the voter's county's when a ZIP
+   wholly in one county or the address lookup names it, each county's, labeled, when it can't tell. */
+{
+  const plan = mods.plan;
+  const ps = views.planstrip;
+  const TRAVIS_EARLY = 'https://www.google.com/maps/d/viewer?mid=1t_vWJgd_BRfKnJn_fQoHE25IV2i_0Jo';
+  const TRAVIS_DAY = 'https://www.google.com/maps/d/viewer?mid=1Y86BIAffVIw2L_WEkSls_0OWg7NpvX8';
+  const WILCO_EARLY = 'https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Early%20Voting%20Dashboard.html';
+  const keep = { ballot: st.S.ballot, b: st.S.b, open: st.S.ui.open };
+  const aus = read('place-austin-tx.json');
+  check('where: Austin keeps Travis, Williamson and Hays links, Travis first', aus.by_county.map((c) => c.county).join('|') === 'Travis|Williamson|Hays');
+  check('where: a ZIP wholly in Travis (78704) names Travis; a split ZIP (78729) names none', plan.voterCounty([aus], '78704', null) === 'Travis' && plan.voterCounty([aus], '78729', null) === null);
+  check('where: the address lookup\u2019s county wins over the ZIP', plan.voterCounty([aus], '78704', 'Williamson') === 'Williamson');
+  check('where: a place in one county is never localized by county', plan.voterCounty([read('place-dallas-tx.json')], '75201', 'Dallas') === null);
+  const tx = read('state-TX.json').howto;
+  let b = open('TX', ['austin-tx']);
+  bl.localize(b, '78704', null);
+  check('where: on a Travis ZIP, the plan\u2019s early voting and Election Day links are Travis\u2019s own maps', b.county === 'Travis' && b.howto.early_in_person.lookup_url === TRAVIS_EARLY && b.howto.election_day.lookup_url === TRAVIS_DAY && !b.howto.county_links, `${b.county} ${b.howto.early_in_person.lookup_url}`);
+  const early = plan.nextStep(b.howto, '2026-10-28');
+  const day = plan.nextStep(b.howto, '2026-11-03', false, 600);
+  check('where: during early voting the button opens the early map, on Election Day the Election Day map', early.primary.url === TRAVIS_EARLY && early.primary.look === 'early_in_person' && day.primary.url === TRAVIS_DAY && day.primary.look === 'election_day', `${early.primary.url} ${day.primary.url}`);
+  b = open('TX', ['austin-tx']);
+  bl.localize(b, '78729', null);
+  check('where: on a split ZIP, the state\u2019s lookup stays and each county\u2019s links are listed', b.county === null && b.howto.early_in_person.lookup_url === tx.early_in_person.lookup_url && (b.howto.county_links || []).map((c) => c.county).join('|') === 'Travis|Williamson|Hays');
+  st.S.ui.open = new Set();
+  const html = ps.planHTML();
+  const btns = [...html.matchAll(/<a class="pbtn (gold|line)" href="([^"]+)"[^>]*data-county="([^"]+)">([^<]+)<\/a>/g)].map((m) => `${m[1]} ${m[3]} ${m[4]}`);
+  check('where: a split ZIP\u2019s plan shows one labeled button per county, Travis first in gold', btns.join('|') === 'gold Travis Travis County|line Williamson Williamson County|line Hays Hays County' && /<p class="plan-cty">Find [a-z ]+ in your county:<\/p>/.test(html), btns.join('|'));
+  bl.localize(b, '78729', 'Williamson');
+  check('where: once the address lookup says Williamson, Williamson\u2019s links, and one button again', b.county === 'Williamson' && b.howto.early_in_person.lookup_url === WILCO_EARLY && b.howto.election_day.lookup_url === 'https://www.wilcotx.gov/elections' && !b.howto.county_links && !/data-county=/.test(ps.planHTML()));
+  b = open('TX', ['pflugerville-tx']);
+  bl.localize(b, '78660', null);
+  check('where: Pflugerville\u2019s 78660 is split, so Travis and Williamson both show', b.county === null && (b.howto.county_links || []).map((c) => c.county).join('|') === 'Travis|Williamson');
+  // A county's own answer: Orange's lost mail ballot, with its own line; the state's question and buttons stay.
+  const fl = read('state-FL.json').howto.situations.find((x) => x.id === 'no_mail_ballot_or_lost');
+  b = open('FL', ['orlando-fl']);
+  const own = b.howto.situations.find((x) => x.id === 'no_mail_ballot_or_lost');
+  check('where: Orlando\u2019s lost-ballot answer is Orange County\u2019s, with its vote-by-mail line', own.question === fl.question && JSON.stringify(own.actions) === JSON.stringify(fl.actions) && /27 sites/.test(own.answer) && own.steps.some((x) => /407-836-8683/.test(x)) && own.source === 'https://voteorangefl.gov/request-a-mail-ballot/', own.short);
+  b = open('FL', ['pensacola-fl']);
+  check('where: Pensacola\u2019s answer stands alone (steps: null) and the state\u2019s other questions are untouched', b.howto.situations.find((x) => x.id === 'no_mail_ballot_or_lost').steps === null && JSON.stringify(b.howto.situations.find((x) => x.id === 'college_student')) === JSON.stringify(read('state-FL.json').howto.situations.find((x) => x.id === 'college_student')));
+  b = open('FL', []);
+  check('where: a statewide Florida ballot keeps the state\u2019s answer', JSON.stringify(b.howto.situations.find((x) => x.id === 'no_mail_ballot_or_lost')) === JSON.stringify(fl));
+  open('FL', ['orlando-fl']);
+  st.S.ui.open = new Set(['whatif', 'bx-office']);
+  const office = (ps.planHTML().match(/<p class="office">[\s\S]*?<\/p>/) || [''])[0];
+  check('where: Orange\u2019s office shows its general line and its vote-by-mail line, labeled, and its hours', /General line: (<span[^>]*>)?<a[^>]*href="tel:4078362070"/.test(office) && /Vote-by-mail line: (<span[^>]*>)?<a[^>]*href="tel:4078368683"/.test(office) && /Monday to Friday, 8 AM to 5 PM/.test(office), office);
+  // No quick answer or mistake's fix still asks you to act by a date that passed before Oct 28 (PR B adds dated text).
+  const late = [];
+  // "If you were registered by Oct 5" is a condition, not a step.
+  const by = /(?<!registered\s)\b(by|before)\s+(about\s+)?((mon|tues|wednes|thurs|fri|satur|sun)day,?\s+)?Oct(ober|\.)?\s+([1-9]|1\d|2[0-7])\b/i;
+  for (const s of Object.keys(INDEX.states)) {
+    const h = read(`state-${s}.json`).howto;
+    for (const x of h.situations || []) if (x.short && by.test(x.short)) late.push(`${s} ${x.id}: ${x.short}`);
+    (h.gotcha_shorts || []).forEach((g, i) => { if (g && by.test(g)) late.push(`${s} gotcha ${i + 1}: ${g}`); });
+  }
+  check('where: no quick answer or mistake\u2019s fix asks you to act by a date before Oct 28', late.length === 0, late.slice(0, 4).join(' | '));
+  st.S.ballot = keep.ballot; st.S.b = keep.b; st.S.ui.open = keep.open;
+}
+
 /* ---------- extension points: run when the ledger's model modules exist ---------- */
 const extra = path.join(ROOT, 'tests', 'model-ledger.mjs');
 if (fs.existsSync(extra)) {

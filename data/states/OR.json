@@ -41,7 +41,7 @@
     "who_gets_one": "Automatic. Every active registered voter is mailed a ballot. No request or excuse needed. Counties began mailing Wednesday, October 14 (Multnomah County ballots started arriving that day) and must finish by October 20. Multnomah says everyone should have a ballot by October 22; the state says call your county if you don't have it by October 30.",
     "request_deadline": {
       "date": "2026-10-28",
-      "rule": "You don't request a ballot; it comes automatically. If yours is lost, damaged, or never arrived, ask your county for a replacement. To have a replacement mailed in Multnomah County, request it by 7:00 PM on Wednesday, October 28 (county replacement page: 'The deadline to request a replacement ballot for the Nov. 3, 2026 General Election mailed to your home is Oct. 28 at 7PM'); the county's fact sheet lists October 29 as the last day it mails a replacement or absentee ballot. After that, get one in person at the Voting Center (1040 SE Morrison St., Portland) or the Voting Center Express (600 NE 8th St., Gresham), through 8:00 PM on Election Day. Phone 503-988-VOTE (8683), email elections@multco.us.",
+      "rule": "You don't request a ballot; it comes automatically. If yours is lost, damaged, or never arrived, ask your county for a replacement. In Multnomah County, mailed replacements end at 7:00 PM on Wednesday, October 28 (county replacement page: 'The deadline to request a replacement ballot for the Nov. 3, 2026 General Election mailed to your home is Oct. 28 at 7PM. After that time, replacement ballots are only available for pick up at will call in person'). To pick one up, order it online or by phone. Wait for the email saying it's ready. Then get it at the Voting Center (1040 SE Morrison St., Portland) or the Voting Center Express (600 NE 8th St., Gresham), through 8:00 PM on Election Day. Phone 503-988-VOTE (8683), email elections@multco.us.",
       "source": "https://multco.us/file/vote-by-mail_facts_-_november_3,_2026_general_election/download"
     },
     "return_deadline": {
@@ -120,7 +120,7 @@
       "short": "Turn in a friend's ballot within 2 days, or by Election Day if sooner."
     },
     {
-      "text": "No ballot by October 22? Multnomah County says call 503-988-VOTE (8683). To get a replacement by mail, ask by 7 PM on Wednesday, October 28; after that, go to 1040 SE Morrison St. in Portland or the Gresham Voting Center Express in person.",
+      "text": "No ballot by October 22? Multnomah County says call 503-988-VOTE (8683). Order a replacement online or by phone, then pick it up in person at 1040 SE Morrison St. in Portland or the Gresham Voting Center Express, by 8 PM on Election Day. Mailed replacements end at 7 PM on Wednesday, October 28.",
       "short": "If your ballot hasn't come, call Multnomah County at 503-988-8683."
     }
   ],
@@ -233,7 +233,7 @@
     {
       "id": "no_mail_ballot_or_lost",
       "question": "My ballot never came, or I lost it.",
-      "short": "Ask your county for a replacement; in Multnomah, ask by 7 PM Oct 28 to get it by mail.",
+      "short": "Ask your county for a replacement; in Multnomah, order one online or by phone and pick it up in person.",
       "actions": [
         {
           "label": "Find my county office",
@@ -244,7 +244,7 @@
           "url": "https://sos.oregon.gov/elections/Pages/myvote.aspx"
         }
       ],
-      "answer": "Ask your county for a replacement. In Multnomah County, request one online or by phone; to have it mailed, ask by 7 PM on Wednesday, October 28, and after that pick it up in person through 8 PM on Election Day.",
+      "answer": "Ask your county for a replacement. In Multnomah County, order one online or by phone, then pick it up in person through 8 PM on Election Day. The deadline to have one mailed to your home is 7 PM on Wednesday, October 28.",
       "steps": [
         "Multnomah: multco.us replacement ballot page, or call 503-988-VOTE (8683).",
         "Pick up at 1040 SE Morrison St. in Portland or the Voting Center Express at 600 NE 8th St. in Gresham.",
@@ -337,8 +337,8 @@
       "answer": "Registered at your Oregon home but away at school? Ask your county to send your ballot to your school address; ballots are never forwarded. If you go to school in Oregon and are already registered here, you can update to your school address.",
       "steps": [
         "Update your mailing address at oregonvotes.gov/myvote, or send the Absentee Ballot Request form (SEL 111).",
-        "Do it now. Multnomah stops mailing replacement ballots after 7 PM on October 28.",
-        "Mail it back by about October 27 if you can; it must be postmarked by November 3 and arrive by November 10."
+        "Multnomah mails replacement ballots only until 7 PM on October 28; after that, you pick one up in person.",
+        "Mailing it back? It must be postmarked by November 3 and arrive by November 10, so send it as soon as you can, or use any official Oregon drop box by 8 PM November 3."
       ],
       "deadline": "2026-10-28",
       "source": "https://multco.us/info/register-vote-or-update-your-registration-here",
@@ -347,7 +347,7 @@
     {
       "id": "away_on_election_day",
       "question": "I'll be away on Election Day.",
-      "short": "Fill out your ballot and use a drop box before you leave, or mail it by Oct 27.",
+      "short": "Fill out your ballot and put it in an official drop box before you leave.",
       "actions": [
         {
           "label": "Find a drop box",
@@ -358,10 +358,10 @@
           "url": "https://sos.oregon.gov/elections/Pages/myvote.aspx"
         }
       ],
-      "answer": "If you have your ballot, fill it out and put it in an official Oregon drop box before you leave, or mail it by October 27. If you will be away before it arrives, ask your county to send it to your travel address. Ballots are not forwarded; if there is too little time for mail, contact the county about getting a replacement in person.",
+      "answer": "If you have your ballot, fill it out and put it in an official Oregon drop box before you leave. Mailing it now is risky: it must be postmarked by November 3 and arrive by November 10. If you will be away before it arrives, ask your county to send it to your travel address. Ballots are not forwarded; if there is too little time for mail, contact the county about getting a replacement in person.",
       "steps": [
         "Update your mailing address at oregonvotes.gov/myvote, or use the Absentee Ballot Request form (SEL 111).",
-        "Mail by Tuesday, October 27, or use a drop box until 8 PM on November 3.",
+        "Use a drop box by 8 PM on November 3. Mailing it now? Ask a post office counter for a hand postmark.",
         "No stamp needed."
       ],
       "deadline": "2026-10-27",

@@ -264,6 +264,9 @@ b, strong { font-weight: 600; }
 .pbtn.gold { background: #F3EDDD; color: #1F2623; box-shadow: var(--lie); }
 .pbtn.line { border: 1.25px solid var(--on-dusk-2); color: var(--on-dusk); }
 .plan-acts .pbtn:only-child { grid-column: 1 / -1; }
+.plan-cty { margin-top: 12px; font-size: 14.5px; color: var(--on-dusk); line-height: 1.35; }
+.plan-ctys { margin-top: 6px; }
+.plan-ctys .pbtn:first-child, .plan-ctys .pbtn:last-child:nth-child(even) { grid-column: 1 / -1; }
 .plan-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; margin-top: 18px; border-top: 1px solid var(--dusk-rule); }
 .whatif-tog { min-height: 46px; display: flex; align-items: center; font-size: 15px; color: var(--on-dusk); text-align: left; }
 /* The arrow follows the last word, so it never floats in the middle of a wrapped line. */

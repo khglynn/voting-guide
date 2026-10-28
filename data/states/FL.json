@@ -115,11 +115,11 @@
   },
   "gotchas": [
     {
-      "text": "Your old mail-ballot request is probably dead. Florida requests expire at the end of every general-election year (official rule: a request covers elections 'through the end of the calendar year' of the next general election). Everything requested in 2023 or 2024 expired December 31, 2024. If you have not re-requested since January 2025, nothing is coming. Request by 5 PM Thursday, October 22 (voteorangefl.gov, leonvotes.gov, escambiavotes.gov), or plan to vote in person.",
-      "short": "If you last requested a mail ballot before 2025, request again by Oct 22."
+      "text": "Your old mail-ballot request has probably expired. Florida requests expire at the end of every general-election year (official rule: a request covers elections 'through the end of the calendar year' of the next general election). All requests made in 2023 or 2024 expired December 31, 2024. If you have not requested again since January 2025, no ballot is coming. The deadline to have one mailed was 5 PM Thursday, October 22, so vote in person.",
+      "short": "If your last mail ballot request was before 2025, none is coming; vote in person."
     },
     {
-      "text": "Mail ballots must be IN the supervisor's office by 7 PM on November 3. Postmarks do not count. Do not mail after about October 27. And do not take it to your Election Day polling place: precincts cannot accept mail ballots. Use a secure ballot intake station at an early voting site (during early voting hours) or the supervisor's main or branch office.",
+      "text": "Mail ballots must reach the supervisor's office by 7 PM on November 3. Postmarks do not count, so don't mail yours now. Do not take it to your Election Day polling place: precincts cannot accept mail ballots. Use a secure ballot intake station at an early voting site (during early voting hours) or the supervisor's main or branch office.",
       "short": "After Oct 27, drop off your mail ballot at early voting or the supervisor's office."
     },
     {
@@ -267,7 +267,7 @@
       "answer": "Just vote in person. The supervisor's office checks that your mail ballot hasn't come back, and then you vote a regular ballot.",
       "steps": [
         "Check whether you even have a mail ballot request on file; requests from 2023 or 2024 expired.",
-        "Want one mailed? Ask your supervisor of elections by 5 PM Thursday, Oct 22.",
+        "It's too late to have one mailed (the deadline was Oct 22). You can pick one up at your supervisor's office. You'll sign a form saying an emergency keeps you from voting in person.",
         "If the office can't confirm whether your ballot came back, you vote a provisional ballot."
       ],
       "deadline": "2026-10-22",
@@ -348,7 +348,7 @@
     {
       "id": "college_student",
       "question": "I'm a college student.",
-      "short": "Vote where you're registered; if that's home, request a mail ballot from that county by 5 PM Oct 22.",
+      "short": "Vote where you're registered; it's too late to have a mail ballot sent, so vote in person there.",
       "actions": [
         {
           "label": "Check my registration",
@@ -359,7 +359,7 @@
           "url": "https://dos.fl.gov/elections/contacts/supervisor-of-elections/"
         }
       ],
-      "answer": "Registration closed October 5, so you vote where you're already registered. If that's your hometown and you're away at school, request a mail ballot from that county by 5 PM Thursday, October 22.",
+      "answer": "Registration closed October 5, so you vote where you're already registered. The deadline to have a mail ballot sent was 5 PM Thursday, October 22. If you already have one, it must reach that county's supervisor of elections by 7 PM on November 3; postmarks don't count.",
       "steps": [
         "Registered at school in Orange County (say, UCF)? Vote early at any Orange County site, Oct 19 to Nov 1.",
         "For this election, a student ID with your photo counts as ID. If it has no signature, bring a second ID that does.",
@@ -372,7 +372,7 @@
     {
       "id": "away_on_election_day",
       "question": "I'll be away on Election Day.",
-      "short": "Vote early at any site in your county, or request a mail ballot by 5 PM Oct 22.",
+      "short": "Vote early at any site in your county; it's too late to have a mail ballot sent.",
       "actions": [
         {
           "label": "Find early voting places",
@@ -383,10 +383,10 @@
           "url": "https://dos.fl.gov/elections/contacts/supervisor-of-elections/"
         }
       ],
-      "answer": "Vote early: Orange County runs early voting Monday, October 19 through Sunday, November 1, at any of its sites. Or request a mail ballot by 5 PM Thursday, October 22 and get it back to the supervisor's office by 7 PM on November 3.",
+      "answer": "Vote early at any site in your county: through Sunday, November 1 in Orange and Leon, and through Saturday, October 31 in Escambia. It's too late to have a mail ballot sent (the deadline was October 22). Already have one? It must reach your supervisor's office by 7 PM on November 3.",
       "steps": [
-        "Request a mail ballot through your supervisor of elections (Orange: voteorangefl.gov).",
-        "Mail it back by about Oct 27, or drop it at a secure ballot intake station at an early voting site (during early voting hours) or your supervisor's office.",
+        "During early voting you can use any site in your county; on Election Day you must use your own precinct.",
+        "Don't mail it now. Drop it at a secure ballot intake station at an early voting site (during early voting hours) or your supervisor's office.",
         "Postmarks don't count. It has to arrive by 7 PM Nov 3."
       ],
       "deadline": "2026-10-22",
@@ -625,6 +625,10 @@
     {
       "name": "Florida Senate: 2026 Florida Statutes 101.045 (change of residence or name at the polls; cross-county movers vote provisional unless the county uses an electronic precinct register)",
       "url": "https://m.flsenate.gov/Statutes/101.045"
+    },
+    {
+      "name": "Orange County: request a mail ballot",
+      "url": "https://voteorangefl.gov/request-a-mail-ballot/"
     }
   ],
   "judicial_review": {

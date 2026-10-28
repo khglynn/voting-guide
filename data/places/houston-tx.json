@@ -8,7 +8,15 @@
   "county_election_office": {
     "name": "Harris County Clerk's Office, Elections Department, 15600 Morales Road, Houston 77032",
     "url": "https://www.harrisvotes.com/",
-    "phone": "(713) 755-6965"
+    "phone": "(713) 755-6965",
+    "phone_label": "General line",
+    "lines": [
+      {
+        "label": "Mail ballot line",
+        "phone": "713-755-3150"
+      }
+    ],
+    "source": "https://www.harrisvotes.com/Voter/Vote-by-Mail"
   },
   "sample_ballot_url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot",
   "zips": [
@@ -270,7 +278,7 @@
     "tx-crosby-isd-prop-a",
     "tx-crosby-isd-prop-b"
   ],
-  "notes": "Harris County uses vote centers: any registered Harris County voter can vote at any Harris County vote center, early or on Election Day. Early voting runs Mon Oct 19 to Fri Oct 30: Monday to Saturday 7 AM to 7 PM, Sunday Oct 25 noon to 7 PM. Election Day, Tue Nov 3, is 7 AM to 7 PM. Bring your printed or handwritten notes into the booth (take them with you when you leave). Phones and other devices cannot be used inside the voting room. Texas has no straight-ticket voting, so you mark every race one by one; the Harris ballot is long (four of five races are judges), and skipping a race is fine. There is no Houston mayor or city council race on this ballot; Prop A is the only City of Houston item.",
+  "notes": "Harris County uses vote centers: any registered Harris County voter can vote at any Harris County vote center, early or on Election Day. Early voting runs Mon Oct 19 to Fri Oct 30: Monday to Saturday 7 AM to 7 PM, Sunday Oct 25 noon to 7 PM. Election Day, Tue Nov 3, is 7 AM to 7 PM. Bring your printed or handwritten notes into the booth (take them with you when you leave). Phones and other devices cannot be used inside the voting room. Texas has no straight-ticket voting, so you mark every race one by one; the Harris ballot is long (four of five races are judges), and skipping a race is fine. There is no Houston mayor or city council race on this ballot; Prop A is the only City of Houston item. Have a mail ballot and want to hand it in? On Election Day only, 7 AM to 7 PM, take it with your photo ID to 1019 Congress St, Houston 77002. Only you can drop off your own ballot. Questions: the mail ballot line, 713-755-3150.",
   "district_finders": [
     {
       "office_match": "U.S. Representative",
@@ -481,5 +489,11 @@
   "lookups": {
     "early_in_person": "https://www.harrisvotes.com/Vote-Centers",
     "election_day": "https://www.harrisvotes.com/Vote-Centers"
-  }
+  },
+  "sources": [
+    {
+      "name": "Harris County: vote by mail (mail ballot line, Election Day drop-off)",
+      "url": "https://www.harrisvotes.com/Voter/Vote-by-Mail"
+    }
+  ]
 }

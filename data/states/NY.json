@@ -35,14 +35,14 @@
     ],
     "same_day_registration": false,
     "same_day_notes": "New York has no same-day registration. If you are not registered by October 24 you cannot vote on November 3. Separate from registration: the deadline to change your ADDRESS on an existing registration was Monday, October 19 (state calendar, Election Law 5-208(3); NYC311: 'Last day to request a change of address on your voter registration' is October 19). If you moved anywhere in New York after that, go to the poll site for your new address and vote by affidavit ballot; it counts and moves your registration. A 2019 law (Chapter 3, amending Election Law 5-208 and 8-302) extended this from moves within a county or NYC to moves anywhere in the state.",
-    "still_possible_now": "You can register until Saturday, October 24. Fastest is online at elections.ny.gov. The address-change deadline is sooner: Monday, October 19. Check whether you're already registered first at voterlookup.elections.ny.gov.",
+    "still_possible_now": "No. Registration for November 3 closed Saturday, October 24, and New York has no same-day registration. Check whether you're already registered at voterlookup.elections.ny.gov (NYC: amiregistered.vote.nyc, or call 1-866-VOTE-NYC).",
     "confidence": "verified"
   },
   "mail_ballot": {
     "who_gets_one": "Only people who ask. New York has two kinds and they work the same once you have one. Early mail ballot: 'Any registered voter may apply,' no reason needed. ABSENTEE ballot: for voters who will be away from their county (or away from NYC's five boroughs) on Election Day, have an illness or disability, are the primary caregiver of someone ill or disabled, are in a VA hospital, or are in jail or prison for anything other than a felony conviction. Same ballot, same deadlines. If you don't have an absentee reason, pick early mail. Apply online at elections.ny.gov/request-ballot (NYC: vote.nyc/RequestBallot), by mail, email or fax to your county board, or in person at your county board. 'Each person must apply for themselves.'",
     "request_deadline": {
       "date": "2026-10-24",
-      "rule": "Online, by email, fax or mail: the county board must receive your application by Saturday, October 24, 2026 (state calendar: 'Last day for board of elections to receive application or letter of application by mail or online portal'). In person at your county board: through Monday, November 2, 2026, the day before the election, and they can hand you the ballot to vote on the spot. This late, use the online portal, not the mail.",
+      "rule": "Online, by email, fax or mail: the county board had to receive your application by Saturday, October 24, 2026 (state calendar: 'Last day for board of elections to receive application or letter of application by mail or online portal'). Apply in person at your county board through Monday, November 2, 2026, the day before the election. They can hand you the ballot to vote on the spot. The online and mail deadline has passed, so apply in person.",
       "source": "https://elections.ny.gov/system/files/documents/2025/12/2026-political-calendar-quad-fold-12.9.2025-final.pdf"
     },
     "return_deadline": {
@@ -106,11 +106,11 @@
   },
   "gotchas": [
     {
-      "text": "Two Saturday deadlines in one: October 24 is the last day to register AND the last day the county board can receive your mail-ballot request. Both are received-by, not postmarked, so don't trust the mail with either this late. Register online; request your ballot online. No same-day registration in New York.",
-      "short": "Register and request a mail ballot online by Oct 24; don't trust the mail."
+      "text": "October 24 was the last day to register and the last day to request a mail ballot online or by mail. Both have passed. You can still apply for a mail ballot in person at your county board through Monday, November 2, or vote early or on Election Day. No same-day registration in New York.",
+      "short": "Registration and online mail-ballot requests closed Oct 24; vote early or on Nov 3."
     },
     {
-      "text": "The deadline to submit an address change is October 19. If you miss it and moved within New York, use the polling place for your new address and ask for an affidavit ballot. Check your poll site before leaving.",
+      "text": "The deadline to submit an address change was October 19. If you moved within New York since, use the polling place for your new address and ask for an affidavit ballot. Check your poll site before leaving.",
       "short": "After Oct 19, vote by affidavit ballot at your new address's poll site."
     },
     {
@@ -137,7 +137,7 @@
           "url": "https://voterlookup.elections.ny.gov/"
         }
       ],
-      "answer": "Update your address by Monday, October 19 at elections.ny.gov or through the DMV. If you miss that, go to the poll site for your new address anywhere in New York and vote by affidavit ballot; it counts and moves your registration.",
+      "answer": "The address-change deadline was October 19. If you moved anywhere in New York since, go to the poll site for your new address and vote by affidavit ballot; it counts and moves your registration.",
       "steps": [
         "Look up the poll site for your new address at voterlookup.elections.ny.gov (NYC: findmypollsite.vote.nyc).",
         "Tell the poll worker you moved and ask for an affidavit ballot.",
@@ -169,7 +169,7 @@
     {
       "id": "not_registered",
       "question": "I'm not registered yet.",
-      "short": "Register online by Oct 24, but check first, because you may already be registered.",
+      "short": "Registration closed Oct 24, but check first, because you may already be registered.",
       "actions": [
         {
           "label": "Check my registration",
@@ -180,11 +180,10 @@
           "url": "https://vote.gov/register/new-york"
         }
       ],
-      "answer": "Register online or deliver your application to your county board by October 24. After that date, new voters cannot register for the November 3 election; New York has no same-day registration. Check your existing registration before assuming you cannot vote.",
+      "answer": "New York's registration deadline for November 3 was October 24, and there's no same-day registration. New voters can't register for this election. Check your existing registration before assuming you can't vote.",
       "steps": [
         "Check first at voterlookup.elections.ny.gov. You may already be registered.",
-        "Register online at elections.ny.gov, or through the DMV if you have a New York license or ID.",
-        "Or hand a form to your county board of elections by October 24 (Sullivan County: 100 North Street, Monticello)."
+        "Not registered? Register now for future elections at elections.ny.gov, or through the DMV if you have a New York license or ID."
       ],
       "deadline": "2026-10-24",
       "source": "https://elections.ny.gov/registration-and-voting-deadlines",
@@ -232,7 +231,7 @@
     {
       "id": "no_mail_ballot_or_lost",
       "question": "My mail ballot never came, or I lost it.",
-      "short": "Request a new one, or vote in person on an affidavit ballot that counts if the first never returns.",
+      "short": "Online requests closed Oct 24; apply in person at your county board by Nov 2, or vote in person.",
       "actions": [
         {
           "label": "Track my ballot",
@@ -242,8 +241,8 @@
       "answer": "Check its status, then ask for a new one or vote in person. In person you'll vote an affidavit ballot, which counts as long as your first mail ballot never comes back.",
       "steps": [
         "Track your ballot at voterlookup.elections.ny.gov.",
-        "Request a replacement online by Saturday, October 24, or in person at your county board through Monday, November 2.",
-        "Or vote in person during early voting (October 24 to November 1) or on Election Day."
+        "Online requests closed Saturday, October 24. You can still apply in person at your county board through Monday, November 2 (Sullivan County: 100 North Street, Monticello).",
+        "Or vote in person during early voting (through Sunday, November 1) or on Election Day, on an affidavit ballot. It counts only if your first ballot never reaches the board."
       ],
       "deadline": "2026-10-24",
       "source": "https://elections.ny.gov/request-ballot",
@@ -256,7 +255,7 @@
       "answer": "At a poll site, tell a poll worker before you scan it and you'll get a fresh ballot, up to three in all. On a mail ballot, ask your county board for a replacement; if both come back, the one with the later postmark counts.",
       "steps": [
         "In person: hand the marked ballot to a poll worker. Don't put it in the scanner.",
-        "By mail: call your county board (NYC: 1-866-VOTE-NYC; Sullivan County: 845-807-0400).",
+        "For a new mail ballot, go to your county board in person by November 2; online requests closed Oct 24 (NYC: 1-866-VOTE-NYC; Sullivan County: 845-807-0400).",
         "Or skip the mail ballot and vote in person by affidavit ballot."
       ],
       "deadline": null,
@@ -308,18 +307,12 @@
     {
       "id": "college_student",
       "question": "I'm a college student.",
-      "short": "Request an early mail ballot online by Oct 24 and have it sent to your school address.",
-      "actions": [
-        {
-          "label": "Request a mail ballot",
-          "url": "https://elections.ny.gov/request-ballot"
-        }
-      ],
-      "answer": "Registered at home but away at school? Request an early mail ballot online by Saturday, October 24 and have it sent to your school address; no reason is needed.",
+      "short": "Online requests closed Oct 24; apply in person at your home county board by Nov 2, or vote early.",
+      "actions": [],
+      "answer": "Registered at home but away at school? Online mail-ballot requests closed Saturday, October 24. You can still apply in person at your home county board through November 2. You can also name someone to deliver your application and pick up your ballot. Or vote early in person through Sunday, November 1.",
       "steps": [
-        "Apply at ballotapplication.elections.ny.gov and give your school mailing address.",
-        "Mail it back by about October 27 in the prepaid envelope.",
-        "Want to vote where you go to school in New York instead? Register there by October 24. You can only be registered in one place."
+        "Already have your ballot? Mail it right away; it must be postmarked by November 3.",
+        "Registering at your school address instead closed October 24, so this year you vote where you're registered."
       ],
       "deadline": "2026-10-24",
       "source": "https://elections.ny.gov/request-ballot",
@@ -328,7 +321,7 @@
     {
       "id": "away_on_election_day",
       "question": "I'll be away on Election Day.",
-      "short": "Vote early, Oct 24 to Nov 1, or request an early mail ballot online by Oct 24.",
+      "short": "Vote early through Nov 1, or apply for a mail ballot in person at your county board by Nov 2.",
       "actions": [
         {
           "label": "Find my early voting site",
@@ -339,11 +332,11 @@
           "url": "https://elections.ny.gov/request-ballot"
         }
       ],
-      "answer": "Vote early in person any day from Saturday, October 24 through Sunday, November 1, or request an early mail ballot online by October 24. You can also apply in person at your county board through November 2 and vote it right there.",
+      "answer": "Vote early in person any day from Saturday, October 24 through Sunday, November 1. Online mail-ballot requests closed October 24, but you can apply in person at your county board through November 2 and vote it right there.",
       "steps": [
         "NYC: check your assigned early voting site at findmypollsite.vote.nyc.",
         "Sullivan County: vote early at either Monticello or Liberty.",
-        "Mailing a ballot? Send it by about October 27 or hand it in at any poll site in your county."
+        "Already have a mail ballot? Don't count on the mail now: hand it in at any early voting site in your county through November 1, any poll site in your county on November 3 until 9 PM, or your county board."
       ],
       "deadline": "2026-10-24",
       "source": "https://elections.ny.gov/request-ballot",

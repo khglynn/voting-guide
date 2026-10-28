@@ -6,7 +6,7 @@
     "King"
   ],
   "county_election_office": {
-    "name": "King County Elections, 919 SW Grady Way, Renton 98057 (Seattle Vote Center: Seattle City Hall, Bertha Knight Landes Room, 600 4th Ave)",
+    "name": "King County Elections, 919 SW Grady Way, Renton 98057 (Seattle vote centers: Seattle City Hall, Bertha Knight Landes Room, 600 4th Ave; and UW Seattle, Student Engagement Hub, Room 160 (Lyceum) and Room 145, 4001 E Stevens Way NE)",
     "url": "https://kingcounty.gov/elections",
     "phone": "206-296-VOTE (8683)"
   },
@@ -220,5 +220,11 @@
     "early_in_person": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/vote-centers",
     "election_day": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/vote-centers",
     "drop_box": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/ballot-drop-boxes"
-  }
+  },
+  "sources": [
+    {
+      "name": "King County Elections: vote centers",
+      "url": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/vote-centers"
+    }
+  ]
 }

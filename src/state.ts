@@ -69,6 +69,7 @@ export interface UI {
   addrBusy: boolean;
   addrMsg: string | null;
   addrFail: '' | 'down' | 'miss'; // the lookup didn't answer (Try again) or matched nothing usable
+  addrCounty: string | null;  // the county the Census put that address in ("Travis"), for this visit only: picks a county's where-to-vote links (ballot.localize)
   addrFound: string | null;   // the address the Census matched, tidied, shown back until a reload or another ballot ("Found: ...")
   addrWhich: GeoResult[] | null; // the Census matched several addresses: "Which one is yours?"
   addrMaps: string[];         // after a lookup, what the district maps said beyond the races they set, for this visit only: the voting precinct, a line they didn't guess at, a map that didn't load
@@ -147,7 +148,7 @@ export const S = {
   prefs: { parties: null, endorsedOnly: false, foldDecided: true, autoPick: false } as Prefs,
   ui: {
     view: 'ballot', open: new Set(), row: null, page: {}, others: new Set(), folded: new Set(), unfolded: new Set(), reveal: new Set(), keep: null, beat: null,
-    noteOpen: new Set(), reader: null, sheet: null, report: null, sheetFrom: null, sheetBack: null, addrOpen: false, addrBusy: false, addrMsg: null, addrFail: '', addrFound: null, addrWhich: null, addrMaps: [], addrMapsPending: false, saveOpen: false, copyFallback: null, bulk: null, bulkWhy: null, addrFilled: null, lensEmptied: false,
+    noteOpen: new Set(), reader: null, sheet: null, report: null, sheetFrom: null, sheetBack: null, addrOpen: false, addrBusy: false, addrMsg: null, addrFail: '', addrCounty: null, addrFound: null, addrWhich: null, addrMaps: [], addrMapsPending: false, saveOpen: false, copyFallback: null, bulk: null, bulkWhy: null, addrFilled: null, lensEmptied: false,
     setupFill: false, setupOnly: false, resume: false, covAsk: '', srcQ: '', wiQ: '',
   } as UI,
   /* ?try=fresh|aunt|straight|sources: a scenario on whatever ballot opens, never saved. */

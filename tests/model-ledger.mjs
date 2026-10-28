@@ -1218,6 +1218,13 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       open('TX', ['austin-tx']);
       let pub = pass.messages().pub || '';
       check('share: Austin during early voting links the state’s early voting sites', /\nFind early voting places: https:\/\/www\.votetexas\.gov\/voting\/where\.html\n/.test(pub), pub);
+      // Never the sender's own county (Oct 28): a Travis ZIP or a Williamson address still sends the link every county shares.
+      for (const [zip, county] of [['78704', null], ['78729', 'Williamson']]) {
+        const ab = open('TX', ['austin-tx']);
+        bl.localize(ab, zip, county);
+        pub = pass.messages().pub || '';
+        check(`share: Austin's group message never uses the sender's county (${county || 'Travis ZIP'})`, ab.county && /\nFind early voting places: https:\/\/www\.votetexas\.gov\/voting\/where\.html\n/.test(pub) && !/google\.com\/maps|electionlink/.test(pub), pub);
+      }
       open('FL', ['orlando-fl']);
       pub = pass.messages().pub || '';
       check('share: Orlando during early voting links Orange County’s early voting page, by name', /Find early voting places in Orlando: https:\/\/voteorangefl\.gov\/event\/early-voting-general-election\//.test(pub) && !/find-your-polling-place/.test(pub), pub);
@@ -1419,7 +1426,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const ny = read('state-NY.json').howto.situations.find((x) => x.id === 'wrong_polling_place');
     check('common questions: New York’s wrong poll site says where an affidavit ballot counts', /county and Assembly district/.test(ny.short) && /county and Assembly district/.test(ny.answer), ny.short);
     const fl = read('state-FL.json').howto;
-    const flMail = fl.gotchas.findIndex((t) => /IN the supervisor's office/.test(t));
+    const flMail = fl.gotchas.findIndex((t) => /supervisor's office by 7 PM on November 3/i.test(t));
     check('common mistakes: Florida’s late mail ballot goes to early voting or the supervisor’s office', flMail >= 0 && /early voting or the supervisor's office/.test(fl.gotcha_shorts[flMail]) && /supervisor's main or branch office/.test(fl.gotchas[flMail]), fl.gotcha_shorts[flMail]);
     st.S.ui.open = saved;
 

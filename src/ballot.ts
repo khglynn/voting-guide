@@ -2,7 +2,7 @@
    rules for filters, statuses and endorsements. Pure functions over S. */
 import type { Contest, Endorsement, Endorser, HowTo, Item, Measure, PlaceBundle, StateBundle } from './types';
 import { S } from './state';
-import { localHowto } from './model/plan';
+import { localHowto, voterCounty } from './model/plan';
 import { seatless, hasSeat } from './model/maps';
 
 export type SectionKey = 'federal' | 'state' | 'judicial' | 'county' | 'city' | 'school' | 'special_district' | 'measures';
@@ -26,6 +26,8 @@ export interface Ballot {
   howto: HowTo;
   /* the state file's own plan facts, before any place override: for text about the whole state */
   stateHowto: HowTo;
+  /* the voter's county `howto` was made for, on a ballot that spans counties (localize); null when unknown */
+  county: string | null;
   places: PlaceBundle[];
   items: Item[];
   byId: Map<string, Item>;
@@ -209,10 +211,19 @@ export function buildBallot(sb: StateBundle, places: PlaceBundle[]): Ballot {
 
   return {
     key: `${sb.state}|${places.map((p) => p.id).join('+') || '-'}`,
-    st: sb.state, stateName: sb.name, howto: localHowto(sb.howto, places), stateHowto: sb.howto, places,
+    st: sb.state, stateName: sb.name, howto: localHowto(sb.howto, places), stateHowto: sb.howto, county: null, places,
     items, byId, order: ids, endorsers, eById, ends, statewide, onlyIn, groups, groupOf, mayApply,
     hasLocal: places.some((p) => p.local.length > 0),
   };
+}
+
+/* The plan facts for this voter's county (Oct 28), on a ballot whose place spans counties: from the address
+   lookup's county (this visit only) or the ZIP. Called when a ballot opens and when a lookup names the county. */
+export function localize(b: Ballot, zip: string | null | undefined, addrCounty: string | null | undefined): void {
+  const county = voterCounty(b.places, zip, addrCounty);
+  if (county === b.county) return;
+  b.county = county;
+  b.howto = localHowto(b.stateHowto, b.places, county);
 }
 
 /* ---------- sections ---------- */

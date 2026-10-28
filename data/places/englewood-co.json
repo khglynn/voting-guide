@@ -8,7 +8,7 @@
   "county_election_office": {
     "name": "Arapahoe County Elections, 5334 S. Prince St., Littleton 80120",
     "url": "https://www.arapahoevotes.gov/",
-    "phone": "303-795-4200 (Arapahoe County Clerk and Recorder main line)"
+    "phone": "303-795-4511 (Arapahoe County Elections, Monday to Friday, 8 AM to 4 PM)"
   },
   "sample_ballot_url": "https://myballot.coloradosos.gov/",
   "zips": [
@@ -67,5 +67,11 @@
     "early_in_person": "https://www.arapahoeco.gov/your_county/arapahoevotes/voting_locations/index.php",
     "election_day": "https://www.arapahoeco.gov/your_county/arapahoevotes/voting_locations/index.php",
     "drop_box": "https://www.arapahoeco.gov/your_county/arapahoevotes/voting_locations/index.php"
-  }
+  },
+  "sources": [
+    {
+      "name": "Arapahoe County Elections: contact page",
+      "url": "https://www.arapahoeco.gov/your_county/arapahoevotes/contact_us/index.php"
+    }
+  ]
 }

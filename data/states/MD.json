@@ -42,7 +42,7 @@
     "who_gets_one": "Only people who ask. Any registered Maryland voter can request a mail-in ballot for any reason. Request online if you have a Maryland driver's license or MVA ID card, or send a paper application, or ask in person at your local board of elections. 'Requests for mail-in ballots may take approximately a week to process.' Voters on the permanent mail-in list get one automatically.",
     "request_deadline": {
       "date": "2026-10-27",
-      "rule": "To have the ballot mailed (or faxed) to you: request by Tuesday, October 27 (SBE calendar: 8 PM for mailed requests, 11:59 PM for fax or email; the SBE page says the request must be 'received, not just mailed'). To get a Print-At-Home ballot delivered over the internet: request by Friday, October 30 (calendar: 5 PM by mail, 11:59 PM by email or fax). Last resort: you or your agent can pick up a mail-in ballot in person at your local board until 8 PM on Election Day, November 3.",
+      "rule": "The deadline to have the ballot mailed (or faxed) was Tuesday, October 27 (SBE calendar: 8 PM for mailed requests, 11:59 PM for fax or email; the SBE page says the request must be 'received, not just mailed'). To get a Print-At-Home ballot delivered over the internet: request by Friday, October 30 (calendar: 5 PM by mail, 11:59 PM by email or fax). Last resort: you or your agent can pick up a mail-in ballot in person at your local board until 8 PM on Election Day, November 3.",
       "source": "https://elections.maryland.gov/elections/2026/2026_Election_Calendar.pdf"
     },
     "return_deadline": {
@@ -113,7 +113,7 @@
       "short": "You can still register and vote in person; bring proof of your address."
     },
     {
-      "text": "Students at a Maryland school: SBE says 'your residential address can be your home address or your school address,' but 'you can only be registered to vote at one address, and you can only vote once in an election.' Pick one. To vote in Baltimore: go to any Baltimore City early voting center October 22 to 29 with a document showing your Baltimore address (bank statement, paycheck, utility bill, lease or housing statement from UMB count as 'other government document' only if issued by a government body, so a bank statement or paycheck is the safest bet), register and vote in one trip. If you were registered in another state, SBE says to 'cancel your registration in that state when you register in Maryland.' If you live in a dorm, 'list your dormitory and room number.' Voting residency is NOT the same as in-state tuition residency. To vote at home instead: 'contact your state's election office to update your registration information and request an absentee ballot.' Do it today; most states' mail-ballot request deadlines fall between October 22 and 27. Source: https://elections.maryland.gov/voter_registration/students.html",
+      "text": "Students at a Maryland school: SBE says 'your residential address can be your home address or your school address,' but 'you can only be registered to vote at one address, and you can only vote once in an election.' Pick one. To vote in Baltimore: go to any Baltimore City early voting center October 22 to 29 with a document showing your Baltimore address (bank statement, paycheck, utility bill, lease or housing statement from UMB count as 'other government document' only if issued by a government body, so a bank statement or paycheck is the safest bet), register and vote in one trip. If you were registered in another state, SBE says to 'cancel your registration in that state when you register in Maryland.' If you live in a dorm, 'list your dormitory and room number.' Voting residency is not the same as in-state tuition residency. To vote at home instead: 'contact your state's election office to update your registration information and request an absentee ballot.' Most states' mail-ballot request deadlines fell between October 22 and 27, so check your home state's rules today. Source: https://elections.maryland.gov/voter_registration/students.html",
       "short": "Students: register at school or home, not both, and cancel any other state's registration."
     },
     {
@@ -353,7 +353,7 @@
     {
       "id": "away_on_election_day",
       "question": "I'll be away on Election Day.",
-      "short": "Vote early at any center in your county, Oct 22 to 29, or request a mail-in ballot by Oct 27.",
+      "short": "Vote early through Oct 29, or pick up a mail-in ballot at your local board through Nov 3.",
       "actions": [
         {
           "label": "Find early voting places",
@@ -364,10 +364,10 @@
           "url": "https://voterservices.elections.maryland.gov/onlinemailinrequest"
         }
       ],
-      "answer": "Vote early at any center in your county, Thursday, October 22 through Thursday, October 29, 7 AM to 8 PM. Or request a mail-in ballot by October 27 to have it mailed, or by October 30 for a Print-At-Home ballot.",
+      "answer": "Vote early at any center in your county, through Thursday, October 29, 7 AM to 8 PM. The deadline to have a mail-in ballot mailed was October 27. You can still get a Print-At-Home ballot online through October 30. Or pick one up in person at your local board through 8 PM on Election Day (Baltimore City: 417 E. Fayette St.). To return a ballot now, use a drop box, an early voting center or the board, by 8 PM on November 3; don't count on the mail.",
       "steps": [
-        "Request online at voterservices.elections.maryland.gov/onlinemailinrequest (needs an MVA license or ID).",
-        "Mail it back by about October 27, or use a drop box by 8 PM on November 3.",
+        "Print-At-Home: request it online at voterservices.elections.maryland.gov/onlinemailinrequest by October 30 (needs an MVA license or ID).",
+        "Don't count on the mail now: use a drop box, an early voting center or your local board by 8 PM on November 3.",
         "Print-At-Home ballots need your own envelope and a stamp."
       ],
       "deadline": "2026-10-27",
@@ -532,6 +532,10 @@
     {
       "name": "Maryland SBE: Provisional Voting (proof due before 10 am on the 2nd Wednesday after election day; wrong-place provisional counts only shared contests)",
       "url": "https://elections.maryland.gov/voting/provisional_voting.html"
+    },
+    {
+      "name": "Baltimore City Board of Elections: contact",
+      "url": "https://www.baltimorecity.gov/boe/contact-us"
     }
   ],
   "judicial_review": {

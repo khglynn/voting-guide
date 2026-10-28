@@ -34,7 +34,7 @@
     ],
     "same_day_registration": true,
     "same_day_notes": "Go to any Voter Service and Polling Center (VSPC) in your county through 7:00 PM on November 3. Bring an acceptable ID (see id_rules). If you register on Election Day without verifiable ID you may vote a provisional ballot that is counted after your eligibility is confirmed. Find VSPCs at GoVoteColorado.gov.",
-    "still_possible_now": "Online registration at GoVoteColorado.gov, with a ballot mailed to you, runs through October 26. After October 26, register and vote in person at a vote center, right up to 7:00 PM on Election Day.",
+    "still_possible_now": "Yes, in person. Registering online to get a ballot in the mail ended October 26. You can still register and vote in person at any vote center in your county, right up to 7:00 PM on Election Day.",
     "confidence": "verified"
   },
   "mail_ballot": {
@@ -53,7 +53,7 @@
     "return_options": [
       "24-hour drop box (any drop box in your county; Denver has 49, open since Oct. 5; statewide minimum open since Oct. 12)",
       "any Voter Service and Polling Center in your county (during its hours)",
-      "mail (USPS) only if you mail by Monday, October 26",
+      "mail (USPS): too late now. The state's last suggested day was Monday, October 26. Use a drop box or a vote center instead (no stamp needed).",
       "county clerk's election office (Denver Elections Division, 200 W. 14th Ave., has a drop box at the NE corner of the building)"
     ],
     "postage": "Drop boxes and vote centers are free: no stamp needed. If you mail it, you pay postage. State law (C.R.S. 1-7.5-107(4)(b)(II)) says 'the elector must provide postage,' and Denver's elections FAQ says 'postage required.' How much depends on the weight of your ballot, so follow the instructions printed on your return envelope; media reports say some Front Range counties recommend two Forever stamps (68 cents) and Jefferson County one. Sources: https://codes.findlaw.com/co/title-1-elections/co-rev-st-sect-1-7-5-107/ and https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Upcoming-Elections/faq",
@@ -138,7 +138,7 @@
     {
       "id": "moved_in_state",
       "question": "I moved to a new address in Colorado.",
-      "short": "Update your address at GoVoteColorado.gov by Oct 26, or at any vote center in your new county and vote there.",
+      "short": "Update your address at any vote center in your new county and vote there by 7 PM Nov 3.",
       "actions": [
         {
           "label": "Update my address",
@@ -149,11 +149,10 @@
           "url": "https://www.sos.state.co.us/pubs/elections/VIP.html"
         }
       ],
-      "answer": "You can still vote where you live now. Update your address at GoVoteColorado.gov by Monday, October 26 and a ballot is mailed to your new home; after that, update it at any vote center in your new county and vote right there, through 7 PM on Election Day.",
+      "answer": "You can still vote where you live now. Bring ID to any vote center in your new county, update your address, and vote there through 7 PM on Election Day. The online deadline to get a ballot mailed was Monday, October 26.",
       "steps": [
-        "Update your address online at GoVoteColorado.gov by Oct 26.",
-        "Moved to a different county? Vote with your new county. Denver, Jefferson, Arapahoe and Boulder each run their own ballots and vote centers.",
-        "Missed Oct 26? Bring ID to a vote center in your new county; you can update your address and vote in one visit."
+        "Bring ID to any vote center in your new county; you can update your address and vote in one visit.",
+        "Moved to a different county? Vote with your new county. Denver, Jefferson, Arapahoe and Boulder each run their own ballots and vote centers."
       ],
       "deadline": "2026-10-26",
       "source": "https://www.coloradosos.gov/pubs/elections/FAQs/VoterRegistrationFAQ.html",
@@ -162,7 +161,7 @@
     {
       "id": "moved_out_of_state",
       "question": "I just moved to Colorado from another state.",
-      "short": "If you've lived here since Oct 12, register online by Oct 26 or at a vote center through Nov 3.",
+      "short": "If you've lived here since Oct 12, register and vote at any vote center by 7 PM Nov 3.",
       "actions": [
         {
           "label": "Register to vote",
@@ -175,8 +174,7 @@
       ],
       "answer": "If you've lived in Colorado for at least 22 days before the election (since October 12), you can register and vote here. If you moved away from Colorado for good, you vote in your new state instead, not Colorado.",
       "steps": [
-        "Register at GoVoteColorado.gov by Oct 26 to get a ballot in the mail.",
-        "After Oct 26, register and vote in person at any vote center in your county, through 7 PM Nov 3.",
+        "Register and vote in person at any vote center in your county, through 7 PM Nov 3.",
         "Bring ID with a Colorado address, like a new Colorado license or a recent utility bill."
       ],
       "deadline": "2026-10-26",
@@ -186,7 +184,7 @@
     {
       "id": "not_registered",
       "question": "I'm not registered to vote.",
-      "short": "You still have time: register online by Oct 26, or register and vote at a vote center through Nov 3.",
+      "short": "You still have time: register and vote at any vote center in your county through 7 PM Nov 3.",
       "actions": [
         {
           "label": "Check my registration",
@@ -197,7 +195,7 @@
           "url": "https://vote.gov/register/colorado"
         }
       ],
-      "answer": "You still have time. Register online at GoVoteColorado.gov by Monday, October 26 to get a ballot in the mail, or register and vote in the same visit at any vote center in your county, up to 7 PM on Election Day.",
+      "answer": "You still have time. Register and vote in one visit at any vote center in your county, up to 7 PM on Election Day. Registering online to get a ballot in the mail ended Monday, October 26.",
       "steps": [
         "Check first: you may already be registered. Look yourself up at GoVoteColorado.gov.",
         "Online registration needs a Colorado driver's license or ID, or the last 4 digits of your Social Security number.",
@@ -250,7 +248,7 @@
     {
       "id": "no_mail_ballot_or_lost",
       "question": "My mail ballot never came, or I lost it.",
-      "short": "Ask your county clerk for a replacement, or vote in person at any vote center in your county.",
+      "short": "It's too late to get one by mail; get a replacement at any vote center in your county.",
       "actions": [
         {
           "label": "Track my ballot",
@@ -261,14 +259,14 @@
           "url": "https://www.sos.state.co.us/pubs/elections/VIP.html"
         }
       ],
-      "answer": "Ask your county clerk for a replacement, or skip it and vote in person at any vote center in your county. Counties mailed ballots October 2 to 9, so if yours hasn't arrived by now, don't wait.",
+      "answer": "It's too late to have a new ballot mailed. Bring ID to any vote center in your county and ask for a replacement, or vote there, through 7 PM on Election Day. Call your county first if you want to check.",
       "steps": [
         "Check BallotTrax or GoVoteColorado.gov to see when it was mailed and to which address.",
-        "Want a new one by mail? Ask soon. Denver's last day to have a replacement mailed is Oct 26.",
-        "After that, get a replacement at a vote center or just vote there, with ID, by 7 PM Nov 3."
+        "Call your county: Denver 720-913-8683 (or text 56003), Boulder 303-413-7740 (closed Fridays), Arapahoe 303-795-4511, Jefferson 303-271-8111, Adams 720-523-6500, Douglas 303-660-7444.",
+        "In Denver, you can send someone else to pick up your replacement."
       ],
       "deadline": "2026-10-26",
-      "source": "https://www.coloradosos.gov/pubs/elections/FAQs/mailBallotsFAQ.html",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Upcoming-Elections",
       "confidence": "verified"
     },
     {
@@ -283,7 +281,7 @@
       ],
       "answer": "No problem. Ask your county clerk for a replacement ballot, or take it to any vote center in your county and vote a fresh ballot there.",
       "steps": [
-        "Call or visit your county clerk and ask for a replacement.",
+        "Go to any vote center in your county and ask for a replacement.",
         "Or vote in person at a vote center with ID. Once you vote in person, the ballot mailed to you won't be counted.",
         "Left a race blank on purpose? That's fine. Your other votes still count."
       ],
@@ -357,7 +355,7 @@
     {
       "id": "college_student",
       "question": "I'm a college student.",
-      "short": "Pick your home or school address, not both; add school as a mailing address by Oct 26.",
+      "short": "Pick your home or school address, not both, and vote at any vote center in that county.",
       "actions": [
         {
           "label": "Update my address",
@@ -366,7 +364,7 @@
       ],
       "answer": "You choose where you vote: at your home address or your school address, but not both. Students from other states can register in Colorado if they've lived here 22 days, or keep voting absentee back home.",
       "steps": [
-        "Keeping your Colorado home address? Add your school address as a mailing address at GoVoteColorado.gov by Oct 26 so the ballot comes to you.",
+        "Keeping your Colorado home address? The last day to have a ballot mailed was Oct 26, so vote at a vote center in your home county or call that county about a replacement.",
         "CU Boulder dorm? Boulder County says to use your mailbox number, not your room number.",
         "A photo student ID from a Colorado college counts as ID at a vote center."
       ],
@@ -377,7 +375,7 @@
     {
       "id": "away_on_election_day",
       "question": "I'll be away on Election Day.",
-      "short": "Vote your ballot and use a drop box before you leave, or mail it by Oct 26.",
+      "short": "Vote your ballot and put it in a drop box in your county before you leave.",
       "actions": [
         {
           "label": "Find a drop box",
@@ -388,10 +386,10 @@
           "url": "https://ballottrax.coloradosos.gov/voter/"
         }
       ],
-      "answer": "If you have your ballot, vote it and use an official drop box before you leave, by 7 PM on November 3, or mail it by October 26. If it has not arrived or you need a replacement before traveling, contact your county clerk or visit a vote center. Do not assume your ballot can be forwarded to a travel address.",
+      "answer": "If you have your ballot, vote it and put it in an official drop box before you leave, by 7 PM on November 3. It's too late to mail it. If it has not arrived or you need a replacement before traveling, visit any vote center in your county. Do not assume your ballot can be forwarded to a travel address.",
       "steps": [
         "Fill it out, sign the envelope, and drop it off before you go.",
-        "Already away without your ballot? Ask your county clerk about a replacement soon; Denver mails replacements requested by Oct 26.",
+        "Already away without your ballot? Mailed replacements ended Oct 26, so call your county clerk about your options.",
         "Mailing it? It must arrive by 7 PM Nov 3. Postmarks don't count."
       ],
       "deadline": "2026-10-26",
@@ -550,6 +548,22 @@
     {
       "name": "2026 State Ballot Information Booklet (Blue Book), Legislative Council Staff",
       "url": "https://content.leg.colorado.gov/sites/default/files/2026-blue-book-en-accessible.pdf"
+    },
+    {
+      "name": "Arapahoe County Elections: contact page",
+      "url": "https://www.arapahoeco.gov/your_county/arapahoevotes/contact_us/index.php"
+    },
+    {
+      "name": "Boulder County Elections: information and hours",
+      "url": "https://bouldercounty.gov/elections/information/"
+    },
+    {
+      "name": "Jefferson County Elections: voting locations and phone",
+      "url": "https://www.jeffco.us/3907/Find-a-Voting-Location"
+    },
+    {
+      "name": "Adams County Elections: 2026 voter service and polling centers",
+      "url": "https://adamscountyco.gov/our-county/elected-officials/clerk-recorder/adams-county-elections/2026-elections/voter-service-polling-center-locations/"
     }
   ],
   "judicial_review": {

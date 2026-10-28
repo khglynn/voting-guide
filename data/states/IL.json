@@ -52,8 +52,8 @@
       "source": "https://dekalbcountyclerkil.gov/wp-content/uploads/2026/08/11032026GeneralElectionImportantDates.pdf"
     },
     "return_options": [
-      "secure drop box: Chicago has them at every early voting site including the Downtown Supersite (137 S. State St.) and the Board office (69 W. Washington); suburban Cook and the collar counties have them at early voting sites and clerk offices. Chicago drop box list: https://chicagoelections.gov/voting/drop-boxes",
-      "hand it in at any early voting site in your election jurisdiction through Nov. 2. On Election Day in Chicago, use the secured drop box at any of the 51 Vote Centers (the Supersite at 137 S. State or any ward early voting site) or return it in person at the Board office, 69 W. Washington, Suite 600, by 7:00 PM. Do NOT bring it to a precinct polling place: the Chicago Board says 'Precinct election judges cannot accept Vote By Mail ballots. Vote By Mail ballots returned at precinct polling places will not be processed.' Outside Chicago, ask your county clerk where ballots can be returned on Election Day.",
+      "secure drop box: Chicago has them at all 50 ward sites on the Board's drop box list (https://chicagoelections.gov/voting/drop-boxes); suburban Cook and the collar counties have them at early voting sites and clerk offices.",
+      "hand it in at any early voting site in your election jurisdiction through Nov. 2. On Election Day in Chicago, use the drop box at any of the 50 ward sites, 6 AM to 7 PM, or return it in person at the Board office, 69 W. Washington, Suite 600, by 7:00 PM. Do not bring it to a precinct polling place: the Chicago Board says 'Precinct election judges cannot accept Vote By Mail ballots. Vote By Mail ballots returned at precinct polling places will not be processed.' Outside Chicago, ask your county clerk where ballots can be returned on Election Day.",
       "mail (USPS): counts if postmarked by Election Day and received by Nov. 17 (10 ILCS 5/19-8; DeKalb County Clerk's official date sheet: 'Tuesday, November 17: Deadline for validating and counting provisional ballots and timely postmarked mail ballots received after Election Day'). But see the gotchas on postmarks.",
       "have someone you trust deliver it (the person carrying it signs the affidavit on the envelope)"
     ],
@@ -61,7 +61,7 @@
     "signature_witness_rules": "Sign the certification envelope. No witness or notary. A panel of three election judges compares your signature to the one on file. Date the certification: under 10 ILCS 5/19-8, if the postmark is missing or unreadable, the date you wrote on the certification can establish that you voted by Election Day.",
     "tracking_url": "https://www.elections.il.gov/ElectionOperations/ElectionAuthorities.aspx",
     "cure_process": "If judges reject your ballot for a missing or mismatched signature, the election authority must notify you (by mail, and by email or phone if they have it) within 2 days, and you have until 14 days after the election, Tuesday, November 17, 2026, to fix it with a signed statement or new signature. Watch your mail and email after you return your ballot. Illinois Election Code 10 ILCS 5/19-8.",
-    "mail_cutoff_advice": "Mail by about October 27, or use an official drop box. USPS says to ask a retail counter clerk for a manual postmark when handing over a ballot; it is free. A mailed ballot counts if it is postmarked by November 3 and arrives by November 17. In Chicago, use an early voting site drop box through November 2, or a designated Election Day vote center drop box by 7 PM on November 3. Ordinary precinct polling places cannot accept completed mail ballots. Follow your own election authority's return instructions outside Chicago.",
+    "mail_cutoff_advice": "Skip the mail now. In Chicago, put your ballot in a drop box at any of the 50 ward sites through Monday, Nov 2 (Monday to Friday 9 AM to 6 PM, Saturday 9 AM to 5 PM, Sunday 10 AM to 4 PM), or on Nov 3 from 6 AM to 7 PM. Do not take it to your precinct polling place: precinct judges can't accept it. USPS says to ask a retail counter clerk for a manual postmark when handing over a ballot; it is free. A mailed ballot counts if it is postmarked by November 3 and arrives by November 17. Follow your own election authority's return instructions outside Chicago.",
     "drop_box_lookup_url": "https://www.elections.il.gov/VotingAndRegistrationSystems/VoteByMailBallotDropBoxLocations.aspx",
     "confidence": "verified"
   },
@@ -110,8 +110,8 @@
       "short": "You can still register in person with two IDs, and vote in the same visit."
     },
     {
-      "text": "The postmark trap. A mailed ballot counts if it's postmarked by Nov. 3 and arrives by Nov. 17, and the Supreme Court upheld that kind of rule in June 2026. The problem is USPS: much mail no longer gets a postmark, and Illinois clerks have been warning all year that an unpostmarked late ballot can be tossed. Your backstop: date the certification on the envelope, because state law counts a late ballot with no postmark if that date is Election Day or earlier (10 ILCS 5/19-8). Mail by about Oct. 27 or get a hand-stamped postmark at the counter. After that, use a drop box at an early voting site, or on Election Day a drop box at any Chicago Vote Center, by 7 PM on Nov. 3. Don't hand a mail ballot to your precinct polling place: Chicago precinct judges can't accept it and it won't be processed.",
-      "short": "Date the envelope certification, and mail by about Oct 27 or use a drop box."
+      "text": "The postmark trap. A mailed ballot counts if it's postmarked by Nov. 3 and arrives by Nov. 17, and the Supreme Court upheld that kind of rule in June 2026. The problem is USPS: much mail no longer gets a postmark, and Illinois clerks have been warning all year that an unpostmarked late ballot can be tossed. Your backstop: date the certification on the envelope, because state law counts a late ballot with no postmark if that date is Election Day or earlier (10 ILCS 5/19-8). Skip the mail now, or get a hand-stamped postmark at the counter. In Chicago, use a drop box at any of the 50 ward sites through Nov. 2, or on Election Day, Nov. 3, from 6 AM to 7 PM. Don't hand a mail ballot to your precinct polling place: Chicago precinct judges can't accept it and it won't be processed.",
+      "short": "Date the envelope certification, and use a drop box instead of the mail now."
     },
     {
       "text": "Requested a mail ballot but want to vote in person? Surrender it to the election judges to vote a regular ballot. If you never received it, or the election office says it never received the ballot you mailed, state law allows an affidavit. If you received it but lost it and cannot surrender it, you can vote a provisional ballot. It counts after officials confirm you are eligible and your mail ballot was not counted. Vote only once.",
@@ -137,9 +137,8 @@
           "url": "https://www.elections.il.gov/VotingAndRegistrationSystems/EarlyVotingLocationsSearch.aspx"
         }
       ],
-      "answer": "Moving means re-registering at your new address. You can do it online through Sunday, October 18 at 11:59 PM, or in person through Election Day at an early voting site or polling place, where you register and vote in one visit with two IDs (one showing your new address).",
+      "answer": "Moving means re-registering at your new address. Online registration ended October 18, so register in person through Election Day at an early voting site or polling place. Bring two IDs (one showing your new address) and register and vote in one visit.",
       "steps": [
-        "Online: ova.elections.il.gov, by Oct 18.",
         "In Chicago, any early voting site (through Nov 2) or any of the 51 Election Day vote centers can do it. Suburban Cook voters: check the Cook County Clerk's sites.",
         "Moved after Oct 4? You haven't lived at the new address 30 days yet, so ask the election judges about voting from your old address."
       ],
@@ -157,7 +156,7 @@
           "url": "https://www.elections.il.gov/VotingAndRegistrationSystems/EarlyVotingLocationsSearch.aspx"
         }
       ],
-      "answer": "You can register if you've lived at your Illinois address for at least 30 days before the election (since October 4). Register online by Sunday, October 18, or in person with two IDs at an early voting site or on Election Day, and vote right then.",
+      "answer": "You can register if you've lived at your Illinois address for at least 30 days before the election (since October 4). Bring two IDs, register in person at an early voting site or on Election Day, and vote right then. Online registration ended October 18.",
       "steps": [
         "Bring two IDs, at least one with your current Illinois address, such as a lease, utility bill or bank statement.",
         "Moved away from Illinois for good? You'd vote in your new state instead."
@@ -180,9 +179,9 @@
           "url": "https://www.elections.il.gov/VotingAndRegistrationSystems/EarlyVotingLocationsSearch.aspx"
         }
       ],
-      "answer": "Online registration closes October 18 at 11:59 PM. After that, you can register and vote in the same visit at a grace-period or early voting site through November 2, or at your polling place on November 3. Bring the required proofs of identity and residence.",
+      "answer": "Online registration closed October 18. You can still register and vote in the same visit at a grace-period or early voting site through November 2, or at your polling place on November 3. Bring the required proofs of identity and residence.",
       "steps": [
-        "Online: ova.elections.il.gov. You can also check there whether you're already registered.",
+        "Check whether you're already registered at ova.elections.il.gov.",
         "In person, bring two IDs, one showing your current address.",
         "Registering in person means voting in person that day; you can't take a mail ballot home."
       ],
@@ -317,7 +316,6 @@
       ],
       "answer": "If you changed your name but didn't move and didn't update your registration, you can still vote in person by filling out an affidavit at the polls. You can't vote by mail under the old record.",
       "steps": [
-        "Easiest: re-register with your new name online by Oct 18.",
         "Changing your name at a Secretary of State facility? Ask them to update your voter registration too."
       ],
       "deadline": "2026-10-18",
@@ -364,7 +362,7 @@
       ],
       "answer": "Vote early: Chicago's sites are open through Monday, November 2, and any Chicago voter can use any site. Or apply for a mail ballot by Thursday, October 29 (in person at your election office through November 2).",
       "steps": [
-        "Mail ballots must be postmarked by Nov 3 and arrive by Nov 17. Mail it by about Oct 27 or ask the post office counter for a hand postmark.",
+        "Mail ballots must be postmarked by Nov 3 and arrive by Nov 17. Skip the mail now: use a drop box, or ask the post office counter for a hand postmark.",
         "Date the certification on the envelope; it can count if the postmark is missing.",
         "Suburban Cook: early voting sites and hours are on the Cook County Clerk's site."
       ],

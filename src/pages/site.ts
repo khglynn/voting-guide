@@ -49,6 +49,7 @@ export interface Page {
   html: string;
   kind: 'home' | 'state' | 'place';
   name: string;      // "Austin, TX", "Texas"
+  summary: string;   // llms.txt's line: "68 races, 11 measures, key dates and where to vote"
 }
 
 /* ---------- names and paths ---------- */
@@ -89,7 +90,7 @@ const IDS: Record<string, string> = { // the same words as My plan's (views/plan
 const candLine = (c: Contest): string => {
   if (!c.candidates.length) return '';
   const names = c.candidates.map((k) => `${esc(k.name)}${k.party ? ` <span class="pg-pty">(${esc(k.party)})</span>` : ''}`);
-  if (c.is_retention) return c.candidates.length > 1 ? `<p class="pg-c">Keep or remove: ${names.join(', ')}</p>` : '';
+  if (c.is_retention) return c.candidates.length > 1 ? `<p class="pg-c">Vote to keep or remove: ${names.join(', ')}</p>` : '';
   return `<p class="pg-c">${c.candidates.length === 1 ? 'Unopposed: ' : ''}${names.join(', ')}</p>`;
 };
 /* "District 46, 47 or 51", "Precinct 1, 2, 3, 4 or 5"; past six, just how many. From each member's own seat label. */
@@ -108,7 +109,7 @@ function ballotRows(b: Ballot, where: string): Map<SectionKey, Row[]> {
   const out = new Map<SectionKey, Row[]>();
   const seen = new Set<string>();
   const add = (sec: SectionKey, html: string, text: string) => out.set(sec, [...(out.get(sec) || []), { html, text }]);
-  const maybe = `<span class="pg-may">Only some ${esc(where)} voters</span>`;
+  const maybe = `<span class="pg-may">Only in parts of ${esc(where)}</span>`;
   for (const it of b.items) {
     const sec = sectionOf(it);
     const g = b.groupOf[it.id];
@@ -117,7 +118,7 @@ function ballotRows(b: Ballot, where: string): Map<SectionKey, Row[]> {
       seen.add(g);
       const grp = b.groups.find((x) => x.key === g)!;
       const t = rowTitle(it).title;
-      add(sec, `<li><b>${esc(t)}</b> <span class="pg-sub">${esc(districtsLine(b, grp.members))}: depends on your address</span></li>`, t);
+      add(sec, `<li><b>${esc(t)}</b> <span class="pg-sub">${esc(districtsLine(b, grp.members))}: your address decides which</span></li>`, t);
       continue;
     }
     const { title, sub } = rowTitle(it);
@@ -154,9 +155,9 @@ function dateRows(h: HowTo, place: PlaceBundle | null): DateRow[] {
     out.push({ date: ep.start, text: `${isMailState(h) ? 'In-person voting' : 'Early voting'}: ${fmtDate(ep.start)} to ${fmtDate(ep.end)}`, detail: place?.early_in_person?.hours_short || null });
   }
   const r = h.mail_ballot.return_deadline;
-  out.push({ date: r.date, text: `Mail ballots must be ${r.rule === 'received_by' ? 'received' : r.rule === 'postmarked_by' ? 'postmarked' : 'returned'} by ${fmtDate(r.date)}`, detail: r.time });
+  out.push({ date: r.date, text: `Your mail ballot must ${r.rule === 'received_by' ? 'arrive' : r.rule === 'postmarked_by' ? 'be postmarked' : 'be returned'} by ${fmtDate(r.date)}`, detail: r.time });
   const open = clock(h.election_day.polls_open), close = clock(h.election_day.polls_close) || h.election_day.polls_close;
-  out.push({ date: h.election_date, text: `Election Day: ${fmtDate(h.election_date)}`, detail: open ? `Polls are open ${open} to ${close}.` : `Polls close at ${close}.` });
+  out.push({ date: h.election_date, text: `Election Day: ${fmtDate(h.election_date)}`, detail: open ? `You can vote from ${open} to ${close}.` : `Polls close at ${close}.` });
   return out.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
 }
 const datesHTML = (rows: DateRow[]): string => `<ul class="pg-dates">${rows.map((r) => `<li><b>${esc(r.text)}</b>${r.detail ? `<span>${escP(r.detail)}</span>` : ''}</li>`).join('')}</ul>`;
@@ -168,10 +169,10 @@ function whereHTML(h: HowTo, p: PlaceBundle | null): string {
   const day = h.election_day.lookup_url;
   if (early && early === day) links.push(ext(early, 'Find where to vote'));
   else {
-    if (early) links.push(ext(early, mail ? 'Find a vote center' : 'Find early voting places'));
+    if (early) links.push(ext(early, mail ? 'Find a vote center' : 'Find early voting locations'));
     if (day) links.push(ext(day, 'Find your Election Day polling place'));
   }
-  if (h.mail_ballot.drop_box_lookup_url) links.push(ext(h.mail_ballot.drop_box_lookup_url, 'Find a drop box'));
+  if (h.mail_ballot.drop_box_lookup_url) links.push(ext(h.mail_ballot.drop_box_lookup_url, 'Find a ballot drop box'));
   if (h.mail_ballot.tracking_url) links.push(ext(h.mail_ballot.tracking_url, 'Track your mail ballot'));
   if (h.registration.check_url) links.push(ext(h.registration.check_url, 'Check your registration'));
   const sample = (p && p.sample_ballot_url) || h.sample_ballot_url;
@@ -283,10 +284,10 @@ ${s.body}
 }
 function footerHTML(d: SiteData, lastmod: string): string {
   const states = Object.keys(d.index.states).sort((a, b) => d.index.states[a].name.localeCompare(d.index.states[b].name));
-  return `<p>Last checked ${esc(year(lastmod))}. In the guide, every fact links to its official source.</p>
+  return `<p>Last checked ${esc(year(lastmod))}. Every fact in the guide links to its source.</p>
 <p>Nonpartisan: the guide never tells you how to vote. Made by ${ext('https://kevinhg.com', 'Kevin HG')}.</p>
-<p>No accounts, no ads, no cookies. We count visits without anything that says who you are.</p>
-<p><b>Every state in the guide:</b></p>
+<p>No account needed. No ads or cookies. We count visits without identifying you.</p>
+<p><b>All states in the guide:</b></p>
 <ul class="pg-places">${states.map((st) => `<li><a href="${esc(statePath(d, st))}">${esc(d.index.states[st].name)}</a></li>`).join('')}</ul>`;
 }
 
@@ -303,15 +304,16 @@ export function placePage(d: SiteData, id: string, a: Assets, today: string): Pa
   const { races, measures } = countItems(b);
   const counties = countiesLine(p);
   const lastmod = newest([sb.howto.last_verified, ix.checked, d.index.states[p.state].checked], today);
-  const title = `${name} ballot guide: ${ELECTION} election`;
-  const description = `What's on the ${short} ballot for ${ELECTION}, in plain English: ${plural(races, 'race')} and ${plural(measures, 'measure')}, plus early voting dates and where to vote.`;
+  const title = `${name} voting guide: your ${ELECTION} ballot`;
+  const summary = `${plural(races, 'race')}, ${plural(measures, 'measure')}, key dates and where to vote`;
+  const description = `Your ${short} ballot for ${ELECTION}, in plain English: ${summary}.`;
   const others = d.index.states[p.state].places.filter((x) => x !== id);
   const body = `
-<p class="pg-lede">Every race and measure on ${esc(short)} ballots, in plain English, with when and where to vote.${counties ? ` Covers ${esc(counties)}.` : ''}</p>
+<p class="pg-lede">See the races and measures on ${esc(short)} ballots, plus when and where to vote, in plain English.${counties ? ` Covers ${esc(counties)}.` : ''}</p>
 <div class="pad">
 <span class="sheet-top" aria-hidden="true"></span><span class="sheet-fill" aria-hidden="true"></span><span class="sheet-bot" aria-hidden="true"></span>
 <a class="bigbtn" href="/?place=${esc(id)}">Open your ${esc(short)} ballot</a>
-<p class="fine">Add your address there to see only your races and make a plan you can print. Your picks stay on your device.${ix.with_picks ? ` You can also see endorsements from ${ix.with_picks} sources side by side, or turn them off.` : ''}</p>
+<p class="fine">Enter your address in the guide to see your races and make a voting plan you can print. Your picks stay on your device.${ix.with_picks ? ` Compare endorsements from ${ix.with_picks} sources side by side, or hide them.` : ''}</p>
 <h2 class="pg-h2" id="dates">Key dates</h2>
 ${datesHTML(dateRows(h, p))}
 <h2 class="pg-h2" id="where">Where to vote</h2>
@@ -319,19 +321,19 @@ ${whereHTML(h, p)}
 <h2 class="pg-h2" id="id">What to bring</h2>
 ${idHTML(h, false)}<p><a href="${esc(statePath(d, p.state))}#id">What counts as ID in ${esc(stName)}</a></p>
 </div>
-<h2 class="pg-h2" id="ballot">What's on the ballot</h2>
-<p>${plural(races, 'race')} and ${plural(measures, 'measure')}.${b.groups.length || b.mayApply.size ? ` Some depend on where you live in ${esc(short)}. The guide sorts them out from your address.` : ''}</p>
+<h2 class="pg-h2" id="ballot">What's on the ballot in ${esc(short)}</h2>
+<p>${plural(races, 'race')} and ${plural(measures, 'measure')} across ${esc(short)}.${b.groups.length || b.mayApply.size ? ' Your address decides which ones are on your ballot. Enter it in the guide to see yours.' : ''}</p>
 ${ballotHTML(b, short)}
 <p style="margin-top:22px"><a class="bigbtn" href="/?place=${esc(id)}">Open your ${esc(short)} ballot</a></p>
 ${others.length ? `<h2 class="pg-h2">Other places in ${esc(stName)}</h2><ul class="pg-places">${others.map((x) => `<li><a href="${esc(placePath(x))}">${esc(shortLabel(d.index.places[x].label))}</a></li>`).join('')}</ul>` : ''}
-<p><a href="${esc(statePath(d, p.state))}">The ${esc(stName)} statewide ballot</a></p>`;
+<p><a href="${esc(statePath(d, p.state))}">See the statewide ballot for ${esc(stName)}</a></p>`;
   const path = placePath(id);
   const html = shell({
-    path, title, description, h1: short, kicker: `${stName} · ${ELECTION} ballot`, lastmod, body,
+    path, title, description, h1: short, kicker: `${stName}: ${ELECTION} ballot`, lastmod, body,
     crumbs: [[SITE_NAME, '/'], [stName, statePath(d, p.state)], [short, null]],
     about: { '@type': 'Place', name, containedInPlace: { '@type': 'AdministrativeArea', name: stName } },
   }, a, footerHTML(d, lastmod));
-  return { path, file: `${id}.html`, title, description, lastmod, html, kind: 'place', name };
+  return { path, file: `${id}.html`, title, description, lastmod, html, kind: 'place', name, summary };
 }
 
 /* ---------- a state ---------- */
@@ -342,15 +344,14 @@ export function statePage(d: SiteData, st: string, a: Assets, today: string): Pa
   const h = b.howto;
   const { races, measures } = countItems(b);
   const lastmod = newest([sb.howto.last_verified, s.checked], today);
-  const cities = s.places.map((id) => shortLabel(d.index.places[id].label));
-  const title = `${s.name} ballot guide: ${ELECTION} election`;
-  const description = `${s.name}'s ${ELECTION} ballot in plain English: statewide races and measures, key dates, ID rules and where to vote, with local guides for ${listWords(cities.slice(0, 4))}${cities.length > 4 ? ' and more' : ''}.`;
+  const title = `${s.name} voting guide: your ${ELECTION} ballot`;
+  const description = `Your ${s.name} ballot for ${ELECTION}, in plain English: statewide races and measures, key dates, ID rules, where to vote and local guides.`;
   const body = `
-<p class="pg-lede">The statewide races and measures on ${esc(s.name)} ballots, with the dates and rules for voting.</p>
+<p class="pg-lede">See the statewide races and measures on ${esc(s.name)} ballots, plus your voting dates and rules.</p>
 <div class="pad">
 <span class="sheet-top" aria-hidden="true"></span><span class="sheet-fill" aria-hidden="true"></span><span class="sheet-bot" aria-hidden="true"></span>
-<a class="bigbtn" href="/?state=${esc(st)}">Open the ${esc(s.name)} ballot</a>
-<p class="fine">Type your ZIP there to add your local races. Your picks stay on your device.</p>
+<a class="bigbtn" href="/?state=${esc(st)}">Open your ${esc(s.name)} ballot</a>
+<p class="fine">Enter your ZIP code in the guide to add your local races. Your picks stay on your device.</p>
 <h2 class="pg-h2">Local guides in ${esc(s.name)}</h2>
 <ul class="pg-places">${s.places.map((id) => `<li><a href="${esc(placePath(id))}">${esc(shortLabel(d.index.places[id].label))}</a></li>`).join('')}</ul>
 <h2 class="pg-h2" id="dates">Key dates</h2>
@@ -361,18 +362,18 @@ ${whereHTML(h, null)}
 <h2 class="pg-h2" id="id">What to bring</h2>
 ${idHTML(h, true)}
 </div>
-<h2 class="pg-h2" id="ballot">On every ${esc(s.name)} ballot</h2>
-<p>${plural(races, 'race')} and ${plural(measures, 'measure')} statewide. Your city adds its own.</p>
+<h2 class="pg-h2" id="ballot">Statewide races and measures</h2>
+<p>${plural(races, 'race')} and ${plural(measures, 'measure')} statewide. Your ballot also has races for where you live.</p>
 ${ballotHTML(b, s.name)}
-<p style="margin-top:22px"><a class="bigbtn" href="/?state=${esc(st)}">Open the ${esc(s.name)} ballot</a></p>
-<p>Official info: ${ext(h.official_site.url, h.official_site.name)}.</p>`;
+<p style="margin-top:22px"><a class="bigbtn" href="/?state=${esc(st)}">Open your ${esc(s.name)} ballot</a></p>
+<p>Official voting info: ${ext(h.official_site.url, h.official_site.name)}.</p>`;
   const path = statePath(d, st);
   const html = shell({
     path, title, description, h1: s.name, kicker: `${ELECTION} ballot`, lastmod, body,
     crumbs: [[SITE_NAME, '/'], [s.name, null]],
     about: { '@type': 'AdministrativeArea', name: s.name },
   }, a, footerHTML(d, lastmod));
-  return { path, file: `${path.slice(1)}.html`, title, description, lastmod, html, kind: 'state', name: s.name };
+  return { path, file: `${path.slice(1)}.html`, title, description, lastmod, html, kind: 'state', name: s.name, summary: 'statewide races and measures, key dates, ID rules and where to vote' };
 }
 
 /* ---------- the home page's additions, the 404, and the files for crawlers ---------- */
@@ -384,19 +385,19 @@ export function homeExtras(d: SiteData): { jsonLd: string; noscript: string } {
     '@context': 'https://schema.org',
     '@graph': [{
       '@type': 'WebSite', '@id': `${ORIGIN}/#site`, url: `${ORIGIN}/`, name: SITE_NAME, inLanguage: 'en-US',
-      description: 'A plain-language, nonpartisan guide to the Nov 3, 2026 general election ballot: how to vote, what is on your ballot, and who endorsed whom.',
+      description: 'A nonpartisan guide to the Nov 3, 2026 general election ballot, in plain English: how to vote, what is on your ballot and who endorsed whom.',
       publisher: { '@type': 'Person', name: 'Kevin HG', url: 'https://kevinhg.com' },
     }],
   }).replace(/</g, '\\u003c');
   const list = byState(d).map((st) => `<li><a href="${esc(statePath(d, st))}">${esc(d.index.states[st].name)}</a>: ${d.index.states[st].places.map((id) => `<a href="${esc(placePath(id))}">${esc(shortLabel(d.index.places[id].label))}</a>`).join(', ')}</li>`).join('');
-  const noscript = `<noscript><div style="padding:16px;font-family:Georgia,serif;max-width:640px"><p>This guide needs JavaScript to build your ballot. Official info for every state is at <a href="https://vote.gov/">vote.gov</a>.</p><p>You can still read what's on the ballot where you live:</p><ul>${list}</ul></div></noscript>`;
+  const noscript = `<noscript><div style="padding:16px;font-family:Georgia,serif;max-width:640px"><p>Turn on JavaScript to build your ballot. Find official voting info for every state at <a href="https://vote.gov/">vote.gov</a>.</p><p>You can still read about the ballot where you live:</p><ul>${list}</ul></div></noscript>`;
   return { jsonLd: ld, noscript };
 }
 export function notFoundPage(d: SiteData, a: Assets, today: string): string {
   return shell({
-    path: '/404', title: `Page not found: ${SITE_NAME}`, description: 'This page is not part of the guide.', h1: 'Page not found', kicker: `${ELECTION} ballot`,
+    path: '/404', title: `Page not found: ${SITE_NAME}`, description: 'We could not find that page in the guide.', h1: 'Page not found', kicker: `${ELECTION} ballot`,
     lastmod: today, crumbs: [[SITE_NAME, '/'], ['Page not found', null]], about: null,
-    body: `<p class="pg-lede">That page isn't part of the guide.</p><p style="margin-top:18px"><a class="bigbtn" href="/">Open the guide</a></p>`,
+    body: `<p class="pg-lede">We couldn't find that page in the guide.</p><p style="margin-top:18px"><a class="bigbtn" href="/">Open the guide</a></p>`,
   }, { ...a, js: null }, footerHTML(d, today)).replace(/<link rel="canonical"[^>]*>\n/, '<meta name="robots" content="noindex">\n').replace(/<script type="application\/ld\+json">[^<]*<\/script>\n/, '');
 }
 export function sitemapXML(pages: Page[]): string {
@@ -426,20 +427,20 @@ export function llmsTXT(d: SiteData, pages: Page[]): string {
   const nStates = Object.keys(d.index.states).filter((s) => s !== 'DC').length;
   return `# ${SITE_NAME}
 
-> A free, nonpartisan guide to the ${ELECTION} U.S. general election ballot for ${places.length} places in ${nStates} states and Washington, DC: every race and measure in plain English, key dates, ID rules, where to vote, and endorsements from newspapers, groups and parties side by side.
+> A free, nonpartisan guide to the ${ELECTION} U.S. general election for ${places.length} places in ${nStates} states and Washington, DC: the races and measures in plain English, key dates, ID rules, where to vote, and endorsements from newspapers, groups and parties side by side.
 
-- The guide never recommends a candidate or a side. It quotes, and it treats every candidate the same way.
-- Every fact in it comes from an official election office or a named source, with a link.
-- The app at ${ORIGIN}/ builds one person's ballot from a ZIP code or address. Picks stay on that person's device.
-- The pages below are the same facts as plain HTML, one per state and one per place.
+- The guide never recommends a candidate or a side. It quotes candidates in their own words and treats every candidate the same way.
+- Every fact links to an official election office or a named source.
+- At ${ORIGIN}/ a voter enters a ZIP code or address to build their own ballot. Their picks stay on their device.
+- The pages below have the same facts as plain HTML, one per state and one per place.
 
 ## States
 
-${states.map((p) => `- [${p.name}](${ORIGIN}${p.path}): statewide races and measures, dates, ID rules, where to vote`).join('\n')}
+${states.map((p) => `- [${p.name}](${ORIGIN}${p.path}): ${p.summary}`).join('\n')}
 
 ## Places
 
-${places.map((p) => `- [${p.name}](${ORIGIN}${p.path}): ${p.description.replace(/^What's on the .*? ballot for [^,]*, in plain English: /, '').replace(/\.$/, '')}`).join('\n')}
+${places.map((p) => `- [${p.name}](${ORIGIN}${p.path}): ${p.summary}`).join('\n')}
 
 ## Optional
 

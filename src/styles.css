@@ -26,6 +26,12 @@
   --r-plan-top: url(/paper/plan-top.webp); --r-plan-bot: url(/paper/plan-bot.webp); --r-sheet: url(/paper/sheet.webp); --r-sheet-bot: url(/paper/sheet-bot.webp); --r-crowd: url(/paper/crowd.webp);
   --r-strip-a: url(/paper/strip-a.webp); --r-strip-b: url(/paper/strip-b.webp); --r-strip-c: url(/paper/strip-c.webp); --r-strip-d: url(/paper/strip-d.webp);
   --scrim: rgba(31, 38, 35, .45);
+  /* Torn paper (Oct 28): a torn render is drawn at its own 640px, or a quarter wider than its piece once
+     the piece is wider than 512px, always centered, so the render's own ends (a flat cut lip before the
+     tear starts, a baked side shadow, a half see-through rim) fall outside the piece. Every layer of a
+     piece uses it, so the piece's own box cuts them all along the same two straight lines and the tear
+     runs the full width (Kevin, Oct 28: "the little notches"). Phones keep 640px. */
+  --tear: max(640px, 125%);
   --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", sans-serif;
   --f-body: "Source Serif 4", "Source Serif Pro", Georgia, serif;
   --g: max(16px, env(safe-area-inset-left, 0px));
@@ -239,9 +245,11 @@ b, strong { font-weight: 600; }
 /* ---------- the plan: a torn sheet of green paper ---------- */
 .plan { margin-top: -10px; position: relative; color: var(--on-dusk); overflow: hidden; overflow: clip; min-height: 230px; }
 /* Two torn bands from the render and, between them, a fill that continues the render's light, so the sheet
-   takes any height. Plain backgrounds, not border-image: Safari scales border-image slices roughly. */
-.plan::before { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 640px; margin-left: -320px; pointer-events: none;
-  background: var(--r-plan-top) center top / 100% 100px no-repeat, var(--r-plan-bot) center bottom / 100% 100px no-repeat, var(--plan-fill) center 60px / calc(100% - 16px) calc(100% - 118px) no-repeat; }
+   takes any height. Plain backgrounds, not border-image: Safari scales border-image slices roughly. All
+   three are drawn at --tear on a box no wider than the screen, so the render's own corners never show
+   and the sides are one straight cut from the top tear to the bottom one. */
+.plan::before { content: ""; position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: min(100%, 640px); margin: 0 auto; pointer-events: none;
+  background: var(--r-plan-top) center top / var(--tear) 100px no-repeat, var(--r-plan-bot) center bottom / var(--tear) 100px no-repeat, var(--plan-fill) center 60px / var(--tear) calc(100% - 118px) no-repeat; }
 .plan-in { position: relative; padding-top: 64px; padding-bottom: 58px; }
 .plan-k { font-size: 13.5px; color: var(--on-dusk-2); }
 .plan-h { font-family: var(--f-display); font-weight: 800; font-size: 31px; color: var(--on-dusk); line-height: 1.02; letter-spacing: -.004em; font-variation-settings: "wdth" 78; text-wrap: balance; margin-top: 2px; }
@@ -620,7 +628,7 @@ b, strong { font-weight: 600; }
 /* Its top edge is torn paper like the sheets' (Kevin, Oct 21), cut from the same render's outline and
    rising over the page; the bar's drop shadow follows the tear. */
 .foot::before { content: ""; position: absolute; left: 0; right: 0; top: -22px; height: 24px; pointer-events: none; background: inherit; background-blend-mode: inherit; background-position: 0 22px;
-  -webkit-mask: var(--r-sheet) center top / max(640px, 100%) 100px no-repeat; mask: var(--r-sheet) center top / max(640px, 100%) 100px no-repeat; -webkit-mask-position: center -8px; mask-position: center -8px; }
+  -webkit-mask: var(--r-sheet) center top / var(--tear) 100px no-repeat; mask: var(--r-sheet) center top / var(--tear) 100px no-repeat; -webkit-mask-position: center -8px; mask-position: center -8px; }
 /* Only the gold of what you've decided, no ruled track, along the bottom edge of the screen (Kevin,
    Oct 21: under the torn top it hung in the air). The row of buttons keeps its safe-area room above it. */
 .foot .bar { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; }
@@ -814,19 +822,19 @@ details.rp-along summary { padding: 10px 0; cursor: pointer; color: var(--ink-2)
 #cheat .cs-table td.undecided { color: var(--muted); }
 #cheat .sheet-top, #cheat .sheet-fill, #cheat .sheet-bot, .pad > .sheet-top, .pad > .sheet-fill, .pad > .sheet-bot { position: absolute; left: 0; right: 0; pointer-events: none; }
 #cheat .sheet-top, .pad > .sheet-top { top: 0; height: 100px; overflow: hidden; overflow: clip; z-index: -1; }
-#cheat .sheet-top::before, .pad > .sheet-top::before { content: ""; position: absolute; left: 50%; top: 0; width: 640px; height: 100px; margin-left: -320px; background: var(--r-sheet) center / 640px 100px no-repeat; }
-#cheat .sheet-fill, .pad > .sheet-fill { top: 30px; bottom: 30px; z-index: -2; background: var(--sheet-fill) center / 640px 100% no-repeat, var(--sheet-paper); box-shadow: var(--lie); clip-path: inset(0 -6px -6px -6px); }
+#cheat .sheet-top::before, .pad > .sheet-top::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 100px; background: var(--r-sheet) center / var(--tear) 100px no-repeat; }
+#cheat .sheet-fill, .pad > .sheet-fill { top: 30px; bottom: 30px; z-index: -2; background: var(--sheet-fill) center / var(--tear) 100% no-repeat, var(--sheet-paper); box-shadow: var(--lie); clip-path: inset(0 -6px -6px -6px); }
 /* The sheet's torn bottom (Kevin, Oct 21: "just a straight line"): the same render turned over
    (sheet-bot.webp, sheet.webp flipped top to bottom so its light still meets the fill), with a soft
    shadow under the tear. */
 #cheat .sheet-bot, .pad > .sheet-bot { bottom: 0; height: 100px; overflow: hidden; overflow: clip; z-index: -1; }
-#cheat .sheet-bot::before, .pad > .sheet-bot::before { content: ""; position: absolute; left: 50%; bottom: 0; width: 640px; height: 100px; margin-left: -320px; background: var(--r-sheet-bot) center / 640px 100px no-repeat; filter: drop-shadow(0 1.5px 1.5px rgba(31, 38, 35, .16)); }
+#cheat .sheet-bot::before, .pad > .sheet-bot::before { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 100px; background: var(--r-sheet-bot) center / var(--tear) 100px no-repeat; filter: drop-shadow(0 1.5px 1.5px rgba(31, 38, 35, .16)); }
 /* The desk's paper grain over the whole sheet, its torn top cut to the render's outline and the fill
    below it, as one layer so both darken alike and no seam shows where they meet. The light stock in
    both modes, since the sheet stays light paper. */
 #cheat .cheat::after, .pad::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: url(/paper/stock.webp) 0 0 / 256px; mix-blend-mode: multiply;
-  -webkit-mask: var(--r-sheet) center top / 640px 100px no-repeat, linear-gradient(#000 0 0) 0 100px / 100% calc(100% - 200px) no-repeat, var(--r-sheet-bot) center bottom / 640px 100px no-repeat;
-  mask: var(--r-sheet) center top / 640px 100px no-repeat, linear-gradient(#000 0 0) 0 100px / 100% calc(100% - 200px) no-repeat, var(--r-sheet-bot) center bottom / 640px 100px no-repeat; }
+  -webkit-mask: var(--r-sheet) center top / var(--tear) 100px no-repeat, linear-gradient(#000 0 0) 0 100px / 100% calc(100% - 200px) no-repeat, var(--r-sheet-bot) center bottom / var(--tear) 100px no-repeat;
+  mask: var(--r-sheet) center top / var(--tear) 100px no-repeat, linear-gradient(#000 0 0) 0 100px / 100% calc(100% - 200px) no-repeat, var(--r-sheet-bot) center bottom / var(--tear) 100px no-repeat; }
 @media print { #cheat .cheat::after, .pad::after { display: none; } }
 .cheat-head { padding: 6px 0 14px; }
 .cheat-head .kick { text-wrap: balance; }
@@ -941,7 +949,7 @@ body.v-cheat .plan, body.v-pass .plan, body.v-cheat #r-mast, body.v-pass #r-mast
   .sec-hd { padding-left: 32px; }
 }
 @media (min-width: 700px) {
-  .plan::before { width: 680px; margin-left: -340px; }
+  .plan::before { width: min(100%, 680px); }
   .sec-h { overflow: visible; }
   .sec-h::before, .sec.land > .sec-h::after { right: -20px; width: 680px; }
 }

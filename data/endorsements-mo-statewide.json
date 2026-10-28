@@ -414,9 +414,9 @@
     "target_id": "mo-state-auditor",
     "status": "not_found",
     "choice": null,
-    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Oct 26, 2026; still no pick on this page.",
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Oct 27, 2026; still no pick on this page.",
     "url": "https://www.missouri.gop/",
-    "date": "2026-10-26",
+    "date": "2026-10-27",
     "confidence": "sourced"
   },
   {
@@ -524,9 +524,9 @@
     "target_id": "mo-prop-a",
     "status": "not_found",
     "choice": null,
-    "why": "The Chamber's election-news archive (checked Oct 16) has no statement on this measure. Checked again on Oct 26, 2026; still no pick on this page.",
+    "why": "The Chamber's election-news archive (checked Oct 16) has no statement on this measure. Checked again on Oct 27, 2026; still no pick on this page.",
     "url": "https://mochamber.com/news-archive/election-news",
-    "date": "2026-10-26",
+    "date": "2026-10-27",
     "confidence": "verified"
   },
   {
@@ -534,9 +534,9 @@
     "target_id": "mo-amendment-3",
     "status": "not_found",
     "choice": null,
-    "why": "The Chamber's election-news archive (checked Oct 16) has no statement on this measure. Checked again on Oct 26, 2026; still no pick on this page.",
+    "why": "The Chamber's election-news archive (checked Oct 16) has no statement on this measure. Checked again on Oct 27, 2026; still no pick on this page.",
     "url": "https://mochamber.com/news-archive/election-news",
-    "date": "2026-10-26",
+    "date": "2026-10-27",
     "confidence": "verified"
   },
   {
@@ -554,9 +554,9 @@
     "target_id": "mo-amendment-7",
     "status": "not_found",
     "choice": null,
-    "why": "The Chamber's election-news archive (checked Oct 16) has no statement on this measure. Checked again on Oct 26, 2026; still no pick on this page.",
+    "why": "The Chamber's election-news archive (checked Oct 16) has no statement on this measure. Checked again on Oct 27, 2026; still no pick on this page.",
     "url": "https://mochamber.com/news-archive/election-news",
-    "date": "2026-10-26",
+    "date": "2026-10-27",
     "confidence": "verified"
   },
   {
@@ -564,9 +564,9 @@
     "target_id": "mo-amendment-8",
     "status": "not_found",
     "choice": null,
-    "why": "The Chamber's election-news archive (checked Oct 16) has no statement on this measure. Checked again on Oct 26, 2026; still no pick on this page.",
+    "why": "The Chamber's election-news archive (checked Oct 16) has no statement on this measure. Checked again on Oct 27, 2026; still no pick on this page.",
     "url": "https://mochamber.com/news-archive/election-news",
-    "date": "2026-10-26",
+    "date": "2026-10-27",
     "confidence": "verified"
   },
   {
@@ -814,9 +814,9 @@
     "target_id": "mo-state-auditor",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 auditor endorsement found. Checked again on Oct 26, 2026; still no pick on this page.",
+    "why": "No 2026 auditor endorsement found. Checked again on Oct 27, 2026; still no pick on this page.",
     "url": "https://abortionactionmissouri.org/",
-    "date": "2026-10-26",
+    "date": "2026-10-27",
     "confidence": "unverified"
   },
   {
@@ -824,9 +824,9 @@
     "target_id": "mo-prop-a",
     "status": "not_found",
     "choice": null,
-    "why": "No position found; the group's 2026 work is focused on Amendment 3. Checked again on Oct 26, 2026; still no pick on this page.",
+    "why": "No position found; the group's 2026 work is focused on Amendment 3. Checked again on Oct 27, 2026; still no pick on this page.",
     "url": "https://abortionactionmissouri.org/",
-    "date": "2026-10-26",
+    "date": "2026-10-27",
     "confidence": "unverified"
   },
   {
@@ -844,9 +844,9 @@
     "target_id": "mo-amendment-6",
     "status": "not_found",
     "choice": null,
-    "why": "No position found; the group's 2026 work is focused on Amendment 3. Checked again on Oct 26, 2026; still no pick on this page.",
+    "why": "No position found; the group's 2026 work is focused on Amendment 3. Checked again on Oct 27, 2026; still no pick on this page.",
     "url": "https://abortionactionmissouri.org/",
-    "date": "2026-10-26",
+    "date": "2026-10-27",
     "confidence": "unverified"
   },
   {
@@ -854,9 +854,9 @@
     "target_id": "mo-amendment-7",
     "status": "not_found",
     "choice": null,
-    "why": "No position found; the group's 2026 work is focused on Amendment 3. Checked again on Oct 26, 2026; still no pick on this page.",
+    "why": "No position found; the group's 2026 work is focused on Amendment 3. Checked again on Oct 27, 2026; still no pick on this page.",
     "url": "https://abortionactionmissouri.org/",
-    "date": "2026-10-26",
+    "date": "2026-10-27",
     "confidence": "unverified"
   },
   {
@@ -864,9 +864,9 @@
     "target_id": "mo-amendment-8",
     "status": "not_found",
     "choice": null,
-    "why": "No position found; the group's 2026 work is focused on Amendment 3. Checked again on Oct 26, 2026; still no pick on this page.",
+    "why": "No position found; the group's 2026 work is focused on Amendment 3. Checked again on Oct 27, 2026; still no pick on this page.",
     "url": "https://abortionactionmissouri.org/",
-    "date": "2026-10-26",
+    "date": "2026-10-27",
     "confidence": "unverified"
   },
   {
@@ -914,9 +914,9 @@
     "target_id": "mo-state-auditor",
     "status": "not_found",
     "choice": null,
-    "why": "NRA-PVF grades Missouri candidates at the linked page; we did not find a 2026 auditor grade. Checked again on Oct 26, 2026; still no pick on this page.",
+    "why": "NRA-PVF grades Missouri candidates at the linked page; we did not find a 2026 auditor grade. Checked again on Oct 27, 2026; still no pick on this page.",
     "url": "https://www.nrapvf.org/grades/missouri",
-    "date": "2026-10-26",
+    "date": "2026-10-27",
     "confidence": "unverified"
   },
   {

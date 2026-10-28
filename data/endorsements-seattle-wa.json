@@ -1,1592 +1,1592 @@
 [
- {
-  "endorser_id": "seattle-times-eb",
-  "target_id": "wa-us-house-7",
-  "status": "endorsed",
-  "choice": "Pramila Jayapal",
-  "why": "Says Jayapal's 'knowledge and tenacity' are what the district and the nation need right now.",
-  "url": "https://www.seattletimes.com/opinion/editorials/seattle-times-endorsements-wa-general-election-2026-7th-congressional-district/",
-  "date": "2026-10-15",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "seattle-times-eb",
-  "target_id": "wa-us-house-9",
-  "status": "endorsed",
-  "choice": "Adam Smith",
-  "why": "Cites his expertise on foreign affairs and military policy, his presence on local issues and his plan to focus on the national debt.",
-  "url": "https://www.seattletimes.com/opinion/editorials/times-editorial-board-recommends-adam-smith-for-9th-congressional-districts/",
-  "date": "2026-10-15",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "seattle-times-eb",
-  "target_id": "wa-sd-32",
-  "status": "endorsed",
-  "choice": "Jesse Salomon",
-  "why": "Praises his 'common sense policy,' especially on public safety, and his independence from the Democratic caucus.",
-  "url": "https://www.seattletimes.com/opinion/editorials/the-times-recommends-jesse-salomon-for-state-senate/",
-  "date": "2026-10-15",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "seattle-times-eb",
-  "target_id": "wa-hd-32-1",
-  "status": "endorsed",
-  "choice": "Keith Scully",
-  "why": "Says he kept Shoreline's social safety net intact without blowing the budget as councilmember and mayor.",
-  "url": "https://www.seattletimes.com/opinion/editorials/seattle-times-endorsements-wa-primary-2026-32nd-legislative-district-position-1/",
-  "date": "2026-10-15",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "seattle-times-eb",
-  "target_id": "wa-hd-32-2",
-  "status": "endorsed",
-  "choice": "Lauren Davis",
-  "why": "Calls her 'a very effective legislator' who has made great strides on behavioral health.",
-  "url": "https://www.seattletimes.com/opinion/editorials/seattle-times-endorsements-wa-general-election-2026-legislative-district-32-position-2/",
-  "date": "2026-10-15",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "seattle-times-eb",
-  "target_id": "wa-hd-34-2",
-  "status": "endorsed",
-  "choice": "Mary Anito",
-  "why": "Says the newcomer 'presents fresh ideas' and sticks to education, housing and healthcare.",
-  "url": "https://www.seattletimes.com/opinion/editorials/seattle-times-endorsements-wa-general-election-2026-legislative-district-34-position-2/",
-  "date": "2026-10-15",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "seattle-times-eb",
-  "target_id": "wa-hd-37-1",
-  "status": "endorsed",
-  "choice": "Kelabe Tewolde",
-  "why": "Calls him 'a much-needed breath of fresh air' on K-12 schools.",
-  "url": "https://www.seattletimes.com/opinion/editorials/seattle-times-endorsements-wa-general-election-2026-legislative-district-37-position-1/",
-  "date": "2026-10-15",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "seattle-times-eb",
-  "target_id": "wa-sd-43",
-  "status": "endorsed",
-  "choice": "Jamie Pedersen",
-  "why": "Says he has represented the district 'ably and honestly' but must better balance progressive demands with more responsible government.",
-  "url": "https://www.seattletimes.com/opinion/editorials/jamie-pedersen-remains-best-choice-for-43rd-legislative-district-state-senate/",
-  "date": "2026-10-15",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "seattle-times-eb",
-  "target_id": "wa-hd-43-1",
-  "status": "endorsed",
-  "choice": "Nicole Macri",
-  "why": "Cites her healthcare expertise and deep community connections.",
-  "url": "https://www.seattletimes.com/opinion/editorials/seattle-times-endorsements-wa-general-election-2026-legislative-district-43-position-1/",
-  "date": "2026-10-15",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "seattle-times-eb",
-  "target_id": "wa-hd-46-1",
-  "status": "endorsed",
-  "choice": "Gerry Pollet",
-  "why": "Says he has ably served the district, focusing on education, the environment and gun violence.",
-  "url": "https://www.seattletimes.com/opinion/editorials/seattle-times-endorsements-wa-primary-2026-46th-legislative-district-position-1/",
-  "date": "2026-10-15",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "seattle-times-eb",
-  "target_id": "wa-hd-46-2",
-  "status": "endorsed",
-  "choice": "Darya Farivar",
-  "why": "Credits her with putting ideology aside and making 'the grocery business a priority' after her district lost a Fred Meyer.",
-  "url": "https://www.seattletimes.com/opinion/editorials/seattle-times-endorsements-wa-general-election-2026-legislative-district-46-position-2/",
-  "date": "2026-10-15",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "seattle-times-eb",
-  "target_id": "king-county-assessor",
-  "status": "endorsed",
-  "choice": "Rob Foxcurran",
-  "why": "Says he is best positioned to bring a fresh perspective to the office and lead it long-term.",
-  "url": "https://www.seattletimes.com/opinion/editorials/foxcurran-is-the-better-choice-for-king-county-assessor/",
-  "date": "2026-10-15",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "seattle-times-eb",
-  "target_id": "king-county-council-2",
-  "status": "endorsed",
-  "choice": "Toshiko Grace Hasegawa",
-  "why": "Says her 'vast experience in various areas of governance' would be an asset. The general roundup links the board's primary-season editorial.",
-  "url": "https://www.seattletimes.com/opinion/editorials/seattle-times-endorsements-wa-primary-20206-metropolitan-king-county-council-district-2/",
-  "date": "2026-10-15",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "seattle-times-eb",
-  "target_id": "king-county-council-8",
-  "status": "endorsed",
-  "choice": "Nick Duda",
-  "why": "Says he would bring 'a fresh approach' to the county's longstanding problems. The general roundup links the board's primary-season editorial.",
-  "url": "https://www.seattletimes.com/opinion/editorials/seattle-times-endorsements-wa-primary-2026-king-county-council-district-8/",
-  "date": "2026-10-15",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "seattle-times-eb",
-  "target_id": "seattle-council-5",
-  "status": "endorsed",
-  "choice": "Julie Kang",
-  "why": "Says voters who want 'an advocate instead of an ideologue' in City Hall should choose Kang.",
-  "url": "https://www.seattletimes.com/opinion/editorials/julie-kang-is-better-choice-for-seattle-city-council-position-5/",
-  "date": "2026-10-15",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "seattle-times-eb",
-  "target_id": "seattle-muni-court-5",
-  "status": "endorsed",
-  "choice": "Garmon Newsom",
-  "why": "Calls him 'the kind of experienced and thoughtful jurist' residents deserve.",
-  "url": "https://www.seattletimes.com/opinion/editorials/the-seattle-times-editorial-board-recommends-garmon-newsom-for-seattle-municipal-court-position-5/",
-  "date": "2026-10-15",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "seattle-times-eb",
-  "target_id": "wa-hd-37-2",
-  "status": "no_position",
-  "choice": null,
-  "why": "Endorsed neither candidate; the board says it disagreed with both on taxes and tort reform.",
-  "url": "https://www.seattletimes.com/opinion/editorials/seattle-times-endorsements-wa-general-election-2026-legislative-district-37-position-2/",
-  "date": "2026-10-15",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "seattle-times-eb",
-  "target_id": "wa-sd-36",
-  "status": "not_found",
-  "choice": null,
-  "why": "The board's Nov. 3 general-election roundup lists no pick in this race.",
-  "url": null,
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "seattle-times-eb",
-  "target_id": "wa-sd-37",
-  "status": "not_found",
-  "choice": null,
-  "why": "The board's Nov. 3 general-election roundup lists no pick in this race.",
-  "url": null,
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "seattle-times-eb",
-  "target_id": "wa-sd-46",
-  "status": "not_found",
-  "choice": null,
-  "why": "The board's Nov. 3 general-election roundup lists no pick in this race.",
-  "url": null,
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "seattle-times-eb",
-  "target_id": "kc-district-court-west-1",
-  "status": "not_found",
-  "choice": null,
-  "why": "The board's Nov. 3 general-election roundup lists no pick in this race.",
-  "url": null,
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "seattle-times-eb",
-  "target_id": "seattle-prop-1",
-  "status": "not_found",
-  "choice": null,
-  "why": "The board's general roundup takes no position on the Seattle Transit Measure, and we found no separate editorial on it.",
-  "url": null,
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "wa-us-house-7",
-  "status": "endorsed",
-  "choice": "Pramila Jayapal",
-  "why": "Calls her 'one of the least compromising people' in Congress and praises her stands on immigration, housing and the Iran war.",
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "date": "2026-10-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "wa-us-house-9",
-  "status": "endorsed",
-  "choice": "Adam Smith",
-  "why": "A reluctant pick: says a Democratic House majority could slow the Trump administration, while criticizing Smith's foreign policy record and donors.",
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "date": "2026-10-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "wa-sd-32",
-  "status": "endorsed",
-  "choice": "Cindy Ryu",
-  "why": "Prefers Ryu's openness to corner stores in residential zones and to farmworker bargaining rights, both of which it says Salomon resisted.",
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "date": "2026-10-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "wa-hd-32-1",
-  "status": "endorsed",
-  "choice": "Keith Scully",
-  "why": "Cites his political experience and command of transportation, taxes and affordability; calls Noble a policy novice.",
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "date": "2026-10-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "wa-hd-32-2",
-  "status": "endorsed",
-  "choice": "Imraan Siddiqi",
-  "why": "Says Davis has 'changed' on youth incarceration and disagrees with her on data centers; backs Siddiqi for his immigration work while calling him untested.",
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "date": "2026-10-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "wa-hd-34-2",
-  "status": "endorsed",
-  "choice": "Joe Fitzgibbon",
-  "why": "Cites his climate and tax record as House majority leader and says it needs him to fight budget cuts.",
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "date": "2026-10-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "wa-sd-36",
-  "status": "endorsed",
-  "choice": "Noel C. Frame",
-  "why": "Calls her a tax policy leader needed to carry out the Millionaires Tax.",
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "date": "2026-10-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "wa-sd-37",
-  "status": "endorsed",
-  "choice": "Chipalo Street",
-  "why": "Calls him a 'predictable progressive vote' who understands the state's budget problems; says Brown 'just doesn't know enough yet.'",
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "date": "2026-10-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "wa-hd-37-1",
-  "status": "endorsed",
-  "choice": "Kelabe Tewolde",
-  "why": "Faults Santos's tenure as House Education chair and a campaign fraud loss; backs Tewolde, a young educator.",
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "date": "2026-10-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "wa-hd-37-2",
-  "status": "endorsed",
-  "choice": "Jaelynn Scott",
-  "why": "Cites her leadership of the Lavender Rights Project and her housing priorities; notes her opponent raised no money.",
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "date": "2026-10-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "wa-sd-43",
-  "status": "endorsed",
-  "choice": "Jamie Pedersen",
-  "why": "Backs Pedersen because he is leading the Millionaires Tax fight; calls Sabio-Howell 'a fine candidate' but says replacing him would hurt progressives.",
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "date": "2026-10-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "wa-hd-43-1",
-  "status": "endorsed",
-  "choice": "Nicole Macri",
-  "why": "Praises her record of 'tight, effective legislation' on long-term care, Medicaid access and health care.",
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "date": "2026-10-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "wa-sd-46",
-  "status": "endorsed",
-  "choice": "Javier Valdez",
-  "why": "Cites his work on gun control, against ICE and on initiative reform.",
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "date": "2026-10-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "wa-hd-46-1",
-  "status": "endorsed",
-  "choice": "Will Dreher",
-  "why": "Backs Dreher's pledge and legal record to rein in the tech industry over Pollet, whom it calls an established moderate.",
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "date": "2026-10-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "wa-hd-46-2",
-  "status": "endorsed",
-  "choice": "Darya Farivar",
-  "why": "Calls her a progressive with an excellent voting record.",
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "date": "2026-10-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "king-county-assessor",
-  "status": "endorsed",
-  "choice": "Rob Foxcurran",
-  "why": "Calls him 'the consummate property assessment nerd' and likes his plans to keep people from being taxed out of their homes; notes Scarimbolo declined to meet.",
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "date": "2026-10-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "king-county-council-2",
-  "status": "endorsed",
-  "choice": "Rebecca Saldaña",
-  "why": "Cites her decade-long Senate record on workers' rights; says Hasegawa 'wouldn't be a bad pick' but has less experience.",
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "date": "2026-10-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "king-county-council-8",
-  "status": "endorsed",
-  "choice": "Teresa Mosqueda",
-  "why": "Cites her housing and workers' rights priorities and her experience; notes Duda did not attend its meeting.",
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "date": "2026-10-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "kc-district-court-west-1",
-  "status": "endorsed",
-  "choice": "Bardi Martin",
-  "why": "Says both candidates were qualified but Martin, a former public defender who favors diversion, had the edge.",
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "date": "2026-10-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "seattle-council-5",
-  "status": "endorsed",
-  "choice": "Nilu Jenks",
-  "why": "'Unenthused' but backs Jenks for her positions on zoning, density and taxes; calls Kang's answers 'mushy.'",
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "date": "2026-10-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "seattle-muni-court-5",
-  "status": "endorsed",
-  "choice": "Gabe Rothstein",
-  "why": "Cites his public defense career and belief in second chances; questions Newsom's defense of Burien's camping ban.",
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "date": "2026-10-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "seattle-prop-1",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Says the measure sustains bus service, adds service hours and that bus service would suffer if it fails.",
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-democrats",
-  "target_id": "wa-us-house-7",
-  "status": "endorsed",
-  "choice": "Pramila Jayapal",
-  "why": null,
-  "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-democrats",
-  "target_id": "wa-us-house-9",
-  "status": "endorsed",
-  "choice": "Adam Smith",
-  "why": null,
-  "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-democrats",
-  "target_id": "wa-sd-32",
-  "status": "endorsed",
-  "choice": "Cindy Ryu",
-  "why": null,
-  "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-democrats",
-  "target_id": "wa-hd-32-1",
-  "status": "endorsed",
-  "choice": "Keith Scully and Danica Noble",
-  "why": "Lists both candidates (a dual endorsement).",
-  "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-democrats",
-  "target_id": "wa-hd-32-2",
-  "status": "endorsed",
-  "choice": "Lauren Davis and Imraan Siddiqi",
-  "why": "Lists both candidates (a dual endorsement).",
-  "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-democrats",
-  "target_id": "wa-sd-34",
-  "status": "endorsed",
-  "choice": "Emily Alvarado",
-  "why": null,
-  "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-democrats",
-  "target_id": "wa-hd-34-2",
-  "status": "endorsed",
-  "choice": "Joe Fitzgibbon",
-  "why": null,
-  "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-democrats",
-  "target_id": "wa-hd-36-1",
-  "status": "endorsed",
-  "choice": "Julia Grant Reed",
-  "why": null,
-  "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-democrats",
-  "target_id": "wa-sd-37",
-  "status": "endorsed",
-  "choice": "Chipalo Street",
-  "why": null,
-  "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-democrats",
-  "target_id": "wa-hd-37-2",
-  "status": "endorsed",
-  "choice": "Jaelynn Scott",
-  "why": null,
-  "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-democrats",
-  "target_id": "wa-sd-43",
-  "status": "endorsed",
-  "choice": "Hannah Sabio-Howell",
-  "why": null,
-  "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-democrats",
-  "target_id": "wa-hd-43-1",
-  "status": "endorsed",
-  "choice": "Nicole Macri",
-  "why": null,
-  "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-democrats",
-  "target_id": "wa-sd-46",
-  "status": "endorsed",
-  "choice": "Javier Valdez",
-  "why": null,
-  "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-democrats",
-  "target_id": "wa-hd-46-1",
-  "status": "endorsed",
-  "choice": "Gerry Pollet",
-  "why": "The party's page lists 'Gerry Pollet, LD 46 Representative Pos. 2'; Pollet is running for Position 1, so we read the label as a typo.",
-  "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
-  "date": null,
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "king-county-democrats",
-  "target_id": "wa-hd-46-2",
-  "status": "endorsed",
-  "choice": "Darya Farivar",
-  "why": null,
-  "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-democrats",
-  "target_id": "king-county-prosecutor",
-  "status": "endorsed",
-  "choice": "Leesa Manion",
-  "why": null,
-  "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-democrats",
-  "target_id": "king-county-assessor",
-  "status": "endorsed",
-  "choice": "Rob Foxcurran",
-  "why": null,
-  "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-democrats",
-  "target_id": "king-county-elections-director",
-  "status": "endorsed",
-  "choice": "Julie Wise",
-  "why": null,
-  "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-democrats",
-  "target_id": "king-county-council-2",
-  "status": "endorsed",
-  "choice": "Rebecca Saldaña",
-  "why": null,
-  "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-democrats",
-  "target_id": "king-county-council-4",
-  "status": "endorsed",
-  "choice": "Jorge L. Barón",
-  "why": null,
-  "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-democrats",
-  "target_id": "king-county-council-8",
-  "status": "endorsed",
-  "choice": "Teresa Mosqueda",
-  "why": null,
-  "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-democrats",
-  "target_id": "kc-district-court-west-1",
-  "status": "endorsed",
-  "choice": "Bardi Martin",
-  "why": null,
-  "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-democrats",
-  "target_id": "seattle-council-5",
-  "status": "endorsed",
-  "choice": "Nilu Jenks",
-  "why": null,
-  "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-democrats",
-  "target_id": "seattle-muni-court-2",
-  "status": "endorsed",
-  "choice": "Katharine Edwards",
-  "why": null,
-  "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-democrats",
-  "target_id": "seattle-muni-court-5",
-  "status": "endorsed",
-  "choice": "Gabe Rothstein",
-  "why": null,
-  "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-democrats",
-  "target_id": "seattle-muni-court-6",
-  "status": "endorsed",
-  "choice": "Shantrice Anderson",
-  "why": null,
-  "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-democrats",
-  "target_id": "seattle-prop-1",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Says the renewal will 'improve transit service at all times of day and increase transit access.'",
-  "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-democrats",
-  "target_id": "wa-sd-36",
-  "status": "not_found",
-  "choice": null,
-  "why": "Neither candidate in this race appears on the party's 2026 endorsement list.",
-  "url": null,
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-democrats",
-  "target_id": "wa-hd-37-1",
-  "status": "not_found",
-  "choice": null,
-  "why": "Neither candidate in this race appears on the party's 2026 endorsement list.",
-  "url": null,
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-republicans",
-  "target_id": "wa-us-house-7",
-  "status": "endorsed",
-  "choice": "Nirav Sheth",
-  "why": "Listed as 'KCGOP Endorsed,' the guide's top tier.",
-  "url": "https://kcgop.org/votersguide/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-republicans",
-  "target_id": "wa-us-house-9",
-  "status": "endorsed",
-  "choice": "Doug Basler",
-  "why": "Listed as 'KCGOP Endorsed,' the guide's top tier.",
-  "url": "https://kcgop.org/votersguide/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-republicans",
-  "target_id": "wa-sd-36",
-  "status": "endorsed",
-  "choice": "Jillian England",
-  "why": "Listed as a 'Best Choice,' the guide's second tier, not 'KCGOP Endorsed.'",
-  "url": "https://kcgop.org/votersguide/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-republicans",
-  "target_id": "wa-sd-46",
-  "status": "endorsed",
-  "choice": "Sandra Stephens",
-  "why": "Listed as 'KCGOP Endorsed,' the guide's top tier.",
-  "url": "https://kcgop.org/votersguide/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-republicans",
-  "target_id": "king-county-assessor",
-  "status": "endorsed",
-  "choice": "Dominique M Scarimbolo",
-  "why": "Listed as a 'Best Choice,' the guide's second tier, not 'KCGOP Endorsed.'",
-  "url": "https://kcgop.org/votersguide/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-republicans",
-  "target_id": "seattle-council-5",
-  "status": "endorsed",
-  "choice": "Julie Kang",
-  "why": "Listed as a 'Best Choice,' the guide's second tier, not 'KCGOP Endorsed.'",
-  "url": "https://kcgop.org/votersguide/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-republicans",
-  "target_id": "wa-sd-32",
-  "status": "no_position",
-  "choice": null,
-  "why": "The guide lists 'No Recommendation' for this race.",
-  "url": "https://kcgop.org/votersguide/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-republicans",
-  "target_id": "wa-hd-32-1",
-  "status": "no_position",
-  "choice": null,
-  "why": "The guide lists 'No Recommendation' for this race.",
-  "url": "https://kcgop.org/votersguide/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-republicans",
-  "target_id": "wa-hd-32-2",
-  "status": "no_position",
-  "choice": null,
-  "why": "The guide lists 'No Recommendation' for this race.",
-  "url": "https://kcgop.org/votersguide/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-republicans",
-  "target_id": "wa-hd-34-2",
-  "status": "no_position",
-  "choice": null,
-  "why": "The guide lists 'No Recommendation' for this race.",
-  "url": "https://kcgop.org/votersguide/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-republicans",
-  "target_id": "wa-sd-37",
-  "status": "no_position",
-  "choice": null,
-  "why": "The guide lists 'No Recommendation' for this race.",
-  "url": "https://kcgop.org/votersguide/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-republicans",
-  "target_id": "wa-hd-37-1",
-  "status": "no_position",
-  "choice": null,
-  "why": "The guide lists 'No Recommendation' for this race.",
-  "url": "https://kcgop.org/votersguide/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-republicans",
-  "target_id": "wa-hd-37-2",
-  "status": "no_position",
-  "choice": null,
-  "why": "The guide lists 'No Recommendation' for this race.",
-  "url": "https://kcgop.org/votersguide/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-republicans",
-  "target_id": "wa-sd-43",
-  "status": "no_position",
-  "choice": null,
-  "why": "The guide lists 'No Recommendation' for this race.",
-  "url": "https://kcgop.org/votersguide/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-republicans",
-  "target_id": "wa-hd-43-1",
-  "status": "no_position",
-  "choice": null,
-  "why": "The guide lists 'No Recommendation' for this race.",
-  "url": "https://kcgop.org/votersguide/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-republicans",
-  "target_id": "wa-hd-46-1",
-  "status": "no_position",
-  "choice": null,
-  "why": "The guide lists 'No Recommendation' for this race.",
-  "url": "https://kcgop.org/votersguide/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-republicans",
-  "target_id": "wa-hd-46-2",
-  "status": "no_position",
-  "choice": null,
-  "why": "The guide lists 'No Recommendation' for this race.",
-  "url": "https://kcgop.org/votersguide/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-republicans",
-  "target_id": "king-county-council-2",
-  "status": "no_position",
-  "choice": null,
-  "why": "The guide lists 'No Recommendation' for this race.",
-  "url": "https://kcgop.org/votersguide/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-republicans",
-  "target_id": "king-county-council-4",
-  "status": "no_position",
-  "choice": null,
-  "why": "The guide lists 'No Recommendation' for this race.",
-  "url": "https://kcgop.org/votersguide/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-republicans",
-  "target_id": "king-county-council-8",
-  "status": "no_position",
-  "choice": null,
-  "why": "The guide lists 'No Recommendation' for this race.",
-  "url": "https://kcgop.org/votersguide/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-republicans",
-  "target_id": "seattle-muni-court-5",
-  "status": "no_position",
-  "choice": null,
-  "why": "The guide lists 'No Recommendation' for this race.",
-  "url": "https://kcgop.org/votersguide/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-republicans",
-  "target_id": "kc-district-court-west-1",
-  "status": "no_position",
-  "choice": null,
-  "why": "The guide lists 'No Recommendation' for this race.",
-  "url": "https://kcgop.org/votersguide/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "king-county-republicans",
-  "target_id": "seattle-prop-1",
-  "status": "endorsed",
-  "choice": "NO",
-  "why": "Says regional transit agencies face 'low ridership and a lack of operational accountability' and taxpayers should insist on transparency first.",
-  "url": "https://kcgop.org/votersguide/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mlk-labor",
-  "target_id": "king-county-assessor",
-  "status": "endorsed",
-  "choice": "Rob Foxcurran",
-  "why": null,
-  "url": "https://www.mlklabor.org/endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mlk-labor",
-  "target_id": "king-county-council-2",
-  "status": "endorsed",
-  "choice": "Rebecca Saldaña",
-  "why": null,
-  "url": "https://www.mlklabor.org/endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mlk-labor",
-  "target_id": "king-county-council-4",
-  "status": "endorsed",
-  "choice": "Jorge L. Barón",
-  "why": null,
-  "url": "https://www.mlklabor.org/endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mlk-labor",
-  "target_id": "king-county-council-8",
-  "status": "endorsed",
-  "choice": "Teresa Mosqueda",
-  "why": null,
-  "url": "https://www.mlklabor.org/endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mlk-labor",
-  "target_id": "seattle-council-5",
-  "status": "endorsed",
-  "choice": "Nilu Jenks",
-  "why": null,
-  "url": "https://www.mlklabor.org/endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mlk-labor",
-  "target_id": "seattle-prop-1",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Lists 'YES on the Seattle Transit Measure campaign.'",
-  "url": "https://www.mlklabor.org/endorsements/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mlk-labor",
-  "target_id": "seattle-muni-court-5",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on MLK Labor's 2026 endorsement page, which lists only county and Seattle council picks and the transit measure.",
-  "url": null,
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mlk-labor",
-  "target_id": "kc-district-court-west-1",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on MLK Labor's 2026 endorsement page, which lists only county and Seattle council picks and the transit measure.",
-  "url": null,
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "seattle-metro-chamber",
-  "target_id": "seattle-prop-1",
-  "status": "not_found",
-  "choice": null,
-  "why": "We found no 2026 endorsements from the Chamber or its CASE PAC. Its About and Advocacy pages list none, and searches turned up only earlier cycles (it backed Seattle's transit measure in 2020).",
-  "url": null,
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "seattle-metro-chamber",
-  "target_id": "seattle-council-5",
-  "status": "not_found",
-  "choice": null,
-  "why": "We found no 2026 endorsements from the Chamber or its CASE PAC. Its About and Advocacy pages list none, and searches turned up only earlier cycles (it backed Seattle's transit measure in 2020).",
-  "url": null,
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "seattle-metro-chamber",
-  "target_id": "king-county-council-2",
-  "status": "not_found",
-  "choice": null,
-  "why": "We found no 2026 endorsements from the Chamber or its CASE PAC. Its About and Advocacy pages list none, and searches turned up only earlier cycles (it backed Seattle's transit measure in 2020).",
-  "url": null,
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "seattle-metro-chamber",
-  "target_id": "king-county-council-8",
-  "status": "not_found",
-  "choice": null,
-  "why": "We found no 2026 endorsements from the Chamber or its CASE PAC. Its About and Advocacy pages list none, and searches turned up only earlier cycles (it backed Seattle's transit measure in 2020).",
-  "url": null,
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "seattle-metro-chamber",
-  "target_id": "king-county-assessor",
-  "status": "not_found",
-  "choice": null,
-  "why": "We found no 2026 endorsements from the Chamber or its CASE PAC. Its About and Advocacy pages list none, and searches turned up only earlier cycles (it backed Seattle's transit measure in 2020).",
-  "url": null,
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "fuse-washington",
-  "target_id": "wa-us-house-7",
-  "status": "endorsed",
-  "choice": "Pramila Jayapal",
-  "why": "Calls her 'a tireless advocate' and recommends re-electing her.",
-  "url": "https://fusewashington.org/news/blog/fuses-2026-general-election-endorsements",
-  "date": "2026-10-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "fuse-washington",
-  "target_id": "wa-us-house-9",
-  "status": "endorsed",
-  "choice": "Adam Smith",
-  "why": "Cites endorsements from its partners and his record on reproductive rights and environmental justice.",
-  "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki1618/county/king",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "fuse-washington",
-  "target_id": "wa-sd-32",
-  "status": "endorsed",
-  "choice": "Cindy Ryu",
-  "why": "Recommends Ryu for her House record and partner endorsements, while noting Salomon has voted for some progressive bills.",
-  "url": "https://fusewashington.org/news/blog/fuses-2026-general-election-endorsements",
-  "date": "2026-10-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "fuse-washington",
-  "target_id": "wa-hd-32-1",
-  "status": "endorsed",
-  "choice": "Danica Noble",
-  "why": "Recommends Noble for her consumer and data protection background and her lead in partner endorsements.",
-  "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki2215/county/king",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "fuse-washington",
-  "target_id": "wa-hd-32-2",
-  "status": "endorsed",
-  "choice": "Imraan Siddiqi or Lauren Davis",
-  "why": "Calls both 'good candidates' with partner endorsements and tells voters to pick by their own priorities.",
-  "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki2215/county/king",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "fuse-washington",
-  "target_id": "wa-sd-34",
-  "status": "endorsed",
-  "choice": "Emily Alvarado",
-  "why": "Says she 'continues to be a progressive champion.'",
-  "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki1474/county/king",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "fuse-washington",
-  "target_id": "wa-hd-34-1",
-  "status": "endorsed",
-  "choice": "Brianna K. Thomas",
-  "why": "Says she has earned another term.",
-  "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki1474/county/king",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "fuse-washington",
-  "target_id": "wa-hd-34-2",
-  "status": "endorsed",
-  "choice": "Joe Fitzgibbon",
-  "why": "Cites his record of advancing progressive legislation.",
-  "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki1474/county/king",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "fuse-washington",
-  "target_id": "wa-sd-36",
-  "status": "endorsed",
-  "choice": "Noel C. Frame",
-  "why": "Recommends re-electing her.",
-  "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki1325/county/king",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "fuse-washington",
-  "target_id": "wa-hd-36-1",
-  "status": "endorsed",
-  "choice": "Julia Grant Reed",
-  "why": "Recommends re-electing her.",
-  "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki1325/county/king",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "fuse-washington",
-  "target_id": "wa-hd-36-2",
-  "status": "endorsed",
-  "choice": "Liz Berry",
-  "why": "Recommends re-electing her.",
-  "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki1325/county/king",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "fuse-washington",
-  "target_id": "wa-sd-37",
-  "status": "endorsed",
-  "choice": "Chipalo Street",
-  "why": "Cites his endorsements from partners and community leaders; says Brown 'makes a great choice' for some voters.",
-  "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki1618/county/king",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "fuse-washington",
-  "target_id": "wa-hd-37-1",
-  "status": "endorsed",
-  "choice": "Kelabe Tewolde",
-  "why": "Recommends Tewolde over the incumbent.",
-  "url": "https://fusewashington.org/news/blog/fuses-2026-general-election-endorsements",
-  "date": "2026-10-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "fuse-washington",
-  "target_id": "wa-hd-37-2",
-  "status": "endorsed",
-  "choice": "Jaelynn Scott",
-  "why": "Cites her advocacy experience and partner endorsements.",
-  "url": "https://fusewashington.org/news/blog/fuses-2026-general-election-endorsements",
-  "date": "2026-10-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "fuse-washington",
-  "target_id": "wa-sd-43",
-  "status": "endorsed",
-  "choice": "Jamie Pedersen",
-  "why": "Cites his role passing the Millionaires Tax; says it appreciates Sabio-Howell's candidacy.",
-  "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki1857/county/king",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "fuse-washington",
-  "target_id": "wa-hd-43-1",
-  "status": "endorsed",
-  "choice": "Nicole Macri",
-  "why": "Says she deserves another term.",
-  "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki1857/county/king",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "fuse-washington",
-  "target_id": "wa-hd-43-2",
-  "status": "endorsed",
-  "choice": "Shaun Scott",
-  "why": "Says he deserves another term.",
-  "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki1857/county/king",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "fuse-washington",
-  "target_id": "wa-sd-46",
-  "status": "endorsed",
-  "choice": "Javier Valdez",
-  "why": "Says he has 'more than earned your vote' for another term.",
-  "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki2328/county/king",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "fuse-washington",
-  "target_id": "wa-hd-46-1",
-  "status": "endorsed",
-  "choice": "Gerry Pollet",
-  "why": "Says Pollet earned the most partner endorsements; calls Dreher a progressive too.",
-  "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki2328/county/king",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "fuse-washington",
-  "target_id": "wa-hd-46-2",
-  "status": "endorsed",
-  "choice": "Darya Farivar",
-  "why": "Cites her record of supporting progress.",
-  "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki2328/county/king",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "fuse-washington",
-  "target_id": "king-county-prosecutor",
-  "status": "endorsed",
-  "choice": "Leesa Manion",
-  "why": "Says she has earned another term even though she is unopposed.",
-  "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki2328/county/king",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "fuse-washington",
-  "target_id": "king-county-assessor",
-  "status": "endorsed",
-  "choice": "Rob Foxcurran",
-  "why": "Says he ran 'a thoughtful and well-informed campaign' focused on housing supply and affordability.",
-  "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki2328/county/king",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "fuse-washington",
-  "target_id": "king-county-elections-director",
-  "status": "endorsed",
-  "choice": "Julie Wise",
-  "why": "Says she has 'more than earned your vote.'",
-  "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki2328/county/king",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "fuse-washington",
-  "target_id": "king-county-council-2",
-  "status": "endorsed",
-  "choice": "Rebecca Saldaña",
-  "why": "Recommends Saldaña while praising Hasegawa's work as port commissioner.",
-  "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki1618/county/king",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "fuse-washington",
-  "target_id": "king-county-council-4",
-  "status": "endorsed",
-  "choice": "Jorge L. Barón",
-  "why": "Says he has earned another term even though he is unopposed.",
-  "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki1325/county/king",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "fuse-washington",
-  "target_id": "king-county-council-8",
-  "status": "endorsed",
-  "choice": "Teresa Mosqueda",
-  "why": "Recommends re-electing her.",
-  "url": "https://fusewashington.org/news/blog/fuses-2026-general-election-endorsements",
-  "date": "2026-10-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "fuse-washington",
-  "target_id": "seattle-council-5",
-  "status": "endorsed",
-  "choice": "Nilu Jenks",
-  "why": "Calls her 'the most progressive choice' and says she swept partner endorsements.",
-  "url": "https://fusewashington.org/news/blog/fuses-2026-general-election-endorsements",
-  "date": "2026-10-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "fuse-washington",
-  "target_id": "seattle-muni-court-5",
-  "status": "endorsed",
-  "choice": "Gabe Rothstein",
-  "why": "Cites 'experienced and compassionate leadership.'",
-  "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki2328/county/king",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "fuse-washington",
-  "target_id": "seattle-prop-1",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "'Vote YES to improve our transit systems.'",
-  "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki2328/county/king",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "fuse-washington",
-  "target_id": "kc-district-court-west-1",
-  "status": "not_found",
-  "choice": null,
-  "why": "The Seattle precinct pages of the Progressive Voters Guide we checked have no District Court section.",
-  "url": null,
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "kc-district-court-west-2",
-  "status": "not_found",
-  "choice": null,
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 26, 2026; still no pick on this page.",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "kc-district-court-west-3",
-  "status": "not_found",
-  "choice": null,
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 26, 2026; still no pick on this page.",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "kc-district-court-west-4",
-  "status": "not_found",
-  "choice": null,
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 26, 2026; still no pick on this page.",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "kc-district-court-west-5",
-  "status": "not_found",
-  "choice": null,
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 26, 2026; still no pick on this page.",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "king-county-council-4",
-  "status": "not_found",
-  "choice": null,
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 26, 2026; still no pick on this page.",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "king-county-elections-director",
-  "status": "not_found",
-  "choice": null,
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 26, 2026; still no pick on this page.",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "king-county-prosecutor",
-  "status": "not_found",
-  "choice": null,
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 26, 2026; still no pick on this page.",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "seattle-muni-court-1",
-  "status": "not_found",
-  "choice": null,
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 26, 2026; still no pick on this page.",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "seattle-muni-court-2",
-  "status": "not_found",
-  "choice": null,
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 26, 2026; still no pick on this page.",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "seattle-muni-court-3",
-  "status": "not_found",
-  "choice": null,
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 26, 2026; still no pick on this page.",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "seattle-muni-court-4",
-  "status": "not_found",
-  "choice": null,
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 26, 2026; still no pick on this page.",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "seattle-muni-court-6",
-  "status": "not_found",
-  "choice": null,
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 26, 2026; still no pick on this page.",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "seattle-muni-court-7",
-  "status": "not_found",
-  "choice": null,
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 26, 2026; still no pick on this page.",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "wa-coa-1-1-pos-5",
-  "status": "not_found",
-  "choice": null,
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 26, 2026; still no pick on this page.",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "wa-coa-1-1-pos-6",
-  "status": "not_found",
-  "choice": null,
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 26, 2026; still no pick on this page.",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "wa-hd-34-1",
-  "status": "not_found",
-  "choice": null,
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 26, 2026; still no pick on this page.",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "wa-hd-36-1",
-  "status": "not_found",
-  "choice": null,
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 26, 2026; still no pick on this page.",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "wa-hd-36-2",
-  "status": "not_found",
-  "choice": null,
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 26, 2026; still no pick on this page.",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "wa-hd-43-2",
-  "status": "not_found",
-  "choice": null,
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 26, 2026; still no pick on this page.",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "the-stranger-eb",
-  "target_id": "wa-sd-34",
-  "status": "not_found",
-  "choice": null,
-  "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 26, 2026; still no pick on this page.",
-  "date": "2026-10-26",
-  "confidence": "verified"
- }
+  {
+    "endorser_id": "seattle-times-eb",
+    "target_id": "wa-us-house-7",
+    "status": "endorsed",
+    "choice": "Pramila Jayapal",
+    "why": "Says Jayapal's 'knowledge and tenacity' are what the district and the nation need right now.",
+    "url": "https://www.seattletimes.com/opinion/editorials/seattle-times-endorsements-wa-general-election-2026-7th-congressional-district/",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seattle-times-eb",
+    "target_id": "wa-us-house-9",
+    "status": "endorsed",
+    "choice": "Adam Smith",
+    "why": "Cites his expertise on foreign affairs and military policy, his presence on local issues and his plan to focus on the national debt.",
+    "url": "https://www.seattletimes.com/opinion/editorials/times-editorial-board-recommends-adam-smith-for-9th-congressional-districts/",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seattle-times-eb",
+    "target_id": "wa-sd-32",
+    "status": "endorsed",
+    "choice": "Jesse Salomon",
+    "why": "Praises his 'common sense policy,' especially on public safety, and his independence from the Democratic caucus.",
+    "url": "https://www.seattletimes.com/opinion/editorials/the-times-recommends-jesse-salomon-for-state-senate/",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seattle-times-eb",
+    "target_id": "wa-hd-32-1",
+    "status": "endorsed",
+    "choice": "Keith Scully",
+    "why": "Says he kept Shoreline's social safety net intact without blowing the budget as councilmember and mayor.",
+    "url": "https://www.seattletimes.com/opinion/editorials/seattle-times-endorsements-wa-primary-2026-32nd-legislative-district-position-1/",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seattle-times-eb",
+    "target_id": "wa-hd-32-2",
+    "status": "endorsed",
+    "choice": "Lauren Davis",
+    "why": "Calls her 'a very effective legislator' who has made great strides on behavioral health.",
+    "url": "https://www.seattletimes.com/opinion/editorials/seattle-times-endorsements-wa-general-election-2026-legislative-district-32-position-2/",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seattle-times-eb",
+    "target_id": "wa-hd-34-2",
+    "status": "endorsed",
+    "choice": "Mary Anito",
+    "why": "Says the newcomer 'presents fresh ideas' and sticks to education, housing and healthcare.",
+    "url": "https://www.seattletimes.com/opinion/editorials/seattle-times-endorsements-wa-general-election-2026-legislative-district-34-position-2/",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seattle-times-eb",
+    "target_id": "wa-hd-37-1",
+    "status": "endorsed",
+    "choice": "Kelabe Tewolde",
+    "why": "Calls him 'a much-needed breath of fresh air' on K-12 schools.",
+    "url": "https://www.seattletimes.com/opinion/editorials/seattle-times-endorsements-wa-general-election-2026-legislative-district-37-position-1/",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seattle-times-eb",
+    "target_id": "wa-sd-43",
+    "status": "endorsed",
+    "choice": "Jamie Pedersen",
+    "why": "Says he has represented the district 'ably and honestly' but must better balance progressive demands with more responsible government.",
+    "url": "https://www.seattletimes.com/opinion/editorials/jamie-pedersen-remains-best-choice-for-43rd-legislative-district-state-senate/",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seattle-times-eb",
+    "target_id": "wa-hd-43-1",
+    "status": "endorsed",
+    "choice": "Nicole Macri",
+    "why": "Cites her healthcare expertise and deep community connections.",
+    "url": "https://www.seattletimes.com/opinion/editorials/seattle-times-endorsements-wa-general-election-2026-legislative-district-43-position-1/",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seattle-times-eb",
+    "target_id": "wa-hd-46-1",
+    "status": "endorsed",
+    "choice": "Gerry Pollet",
+    "why": "Says he has ably served the district, focusing on education, the environment and gun violence.",
+    "url": "https://www.seattletimes.com/opinion/editorials/seattle-times-endorsements-wa-primary-2026-46th-legislative-district-position-1/",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seattle-times-eb",
+    "target_id": "wa-hd-46-2",
+    "status": "endorsed",
+    "choice": "Darya Farivar",
+    "why": "Credits her with putting ideology aside and making 'the grocery business a priority' after her district lost a Fred Meyer.",
+    "url": "https://www.seattletimes.com/opinion/editorials/seattle-times-endorsements-wa-general-election-2026-legislative-district-46-position-2/",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seattle-times-eb",
+    "target_id": "king-county-assessor",
+    "status": "endorsed",
+    "choice": "Rob Foxcurran",
+    "why": "Says he is best positioned to bring a fresh perspective to the office and lead it long-term.",
+    "url": "https://www.seattletimes.com/opinion/editorials/foxcurran-is-the-better-choice-for-king-county-assessor/",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seattle-times-eb",
+    "target_id": "king-county-council-2",
+    "status": "endorsed",
+    "choice": "Toshiko Grace Hasegawa",
+    "why": "Says her 'vast experience in various areas of governance' would be an asset. The general roundup links the board's primary-season editorial.",
+    "url": "https://www.seattletimes.com/opinion/editorials/seattle-times-endorsements-wa-primary-20206-metropolitan-king-county-council-district-2/",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seattle-times-eb",
+    "target_id": "king-county-council-8",
+    "status": "endorsed",
+    "choice": "Nick Duda",
+    "why": "Says he would bring 'a fresh approach' to the county's longstanding problems. The general roundup links the board's primary-season editorial.",
+    "url": "https://www.seattletimes.com/opinion/editorials/seattle-times-endorsements-wa-primary-2026-king-county-council-district-8/",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seattle-times-eb",
+    "target_id": "seattle-council-5",
+    "status": "endorsed",
+    "choice": "Julie Kang",
+    "why": "Says voters who want 'an advocate instead of an ideologue' in City Hall should choose Kang.",
+    "url": "https://www.seattletimes.com/opinion/editorials/julie-kang-is-better-choice-for-seattle-city-council-position-5/",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seattle-times-eb",
+    "target_id": "seattle-muni-court-5",
+    "status": "endorsed",
+    "choice": "Garmon Newsom",
+    "why": "Calls him 'the kind of experienced and thoughtful jurist' residents deserve.",
+    "url": "https://www.seattletimes.com/opinion/editorials/the-seattle-times-editorial-board-recommends-garmon-newsom-for-seattle-municipal-court-position-5/",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seattle-times-eb",
+    "target_id": "wa-hd-37-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "Endorsed neither candidate; the board says it disagreed with both on taxes and tort reform.",
+    "url": "https://www.seattletimes.com/opinion/editorials/seattle-times-endorsements-wa-general-election-2026-legislative-district-37-position-2/",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seattle-times-eb",
+    "target_id": "wa-sd-36",
+    "status": "no_position",
+    "choice": null,
+    "why": "The board put the 36th District Senate race among the races where neither candidate made the grade and it could not give its seal of approval.",
+    "url": "https://www.seattletimes.com/opinion/editorials/unendorseables-these-lawmakers-once-received-times-endorsements-not-this-time/",
+    "date": "2026-10-18",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seattle-times-eb",
+    "target_id": "wa-sd-37",
+    "status": "no_position",
+    "choice": null,
+    "why": "The board lists this among races where neither candidate made the grade. It found Street's budget knowledge and financial priorities lacking, and says Tatiana Brown does not yet have the breadth of understanding to be an effective legislator.",
+    "url": "https://www.seattletimes.com/opinion/editorials/unendorseables-these-lawmakers-once-received-times-endorsements-not-this-time/",
+    "date": "2026-10-18",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seattle-times-eb",
+    "target_id": "wa-sd-46",
+    "status": "no_position",
+    "choice": null,
+    "why": "The board lists this race among those where neither candidate made the grade. It says Javier Valdez should show \"greater independence from his party,\" and that Sandra Stephens did not appear at the endorsement interview.",
+    "url": "https://www.seattletimes.com/opinion/editorials/unendorseables-these-lawmakers-once-received-times-endorsements-not-this-time/",
+    "date": "2026-10-18",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seattle-times-eb",
+    "target_id": "kc-district-court-west-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "The board's Nov. 3 general-election roundup lists no pick in this race.",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seattle-times-eb",
+    "target_id": "seattle-prop-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "The board's general roundup takes no position on the Seattle Transit Measure, and we found no separate editorial on it.",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "wa-us-house-7",
+    "status": "endorsed",
+    "choice": "Pramila Jayapal",
+    "why": "Calls her 'one of the least compromising people' in Congress and praises her stands on immigration, housing and the Iran war.",
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "wa-us-house-9",
+    "status": "endorsed",
+    "choice": "Adam Smith",
+    "why": "A reluctant pick: says a Democratic House majority could slow the Trump administration, while criticizing Smith's foreign policy record and donors.",
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "wa-sd-32",
+    "status": "endorsed",
+    "choice": "Cindy Ryu",
+    "why": "Prefers Ryu's openness to corner stores in residential zones and to farmworker bargaining rights, both of which it says Salomon resisted.",
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "wa-hd-32-1",
+    "status": "endorsed",
+    "choice": "Keith Scully",
+    "why": "Cites his political experience and command of transportation, taxes and affordability; calls Noble a policy novice.",
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "wa-hd-32-2",
+    "status": "endorsed",
+    "choice": "Imraan Siddiqi",
+    "why": "Says Davis has 'changed' on youth incarceration and disagrees with her on data centers; backs Siddiqi for his immigration work while calling him untested.",
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "wa-hd-34-2",
+    "status": "endorsed",
+    "choice": "Joe Fitzgibbon",
+    "why": "Cites his climate and tax record as House majority leader and says it needs him to fight budget cuts.",
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "wa-sd-36",
+    "status": "endorsed",
+    "choice": "Noel C. Frame",
+    "why": "Calls her a tax policy leader needed to carry out the Millionaires Tax.",
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "wa-sd-37",
+    "status": "endorsed",
+    "choice": "Chipalo Street",
+    "why": "Calls him a 'predictable progressive vote' who understands the state's budget problems; says Brown 'just doesn't know enough yet.'",
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "wa-hd-37-1",
+    "status": "endorsed",
+    "choice": "Kelabe Tewolde",
+    "why": "Faults Santos's tenure as House Education chair and a campaign fraud loss; backs Tewolde, a young educator.",
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "wa-hd-37-2",
+    "status": "endorsed",
+    "choice": "Jaelynn Scott",
+    "why": "Cites her leadership of the Lavender Rights Project and her housing priorities; notes her opponent raised no money.",
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "wa-sd-43",
+    "status": "endorsed",
+    "choice": "Jamie Pedersen",
+    "why": "Backs Pedersen because he is leading the Millionaires Tax fight; calls Sabio-Howell 'a fine candidate' but says replacing him would hurt progressives.",
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "wa-hd-43-1",
+    "status": "endorsed",
+    "choice": "Nicole Macri",
+    "why": "Praises her record of 'tight, effective legislation' on long-term care, Medicaid access and health care.",
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "wa-sd-46",
+    "status": "endorsed",
+    "choice": "Javier Valdez",
+    "why": "Cites his work on gun control, against ICE and on initiative reform.",
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "wa-hd-46-1",
+    "status": "endorsed",
+    "choice": "Will Dreher",
+    "why": "Backs Dreher's pledge and legal record to rein in the tech industry over Pollet, whom it calls an established moderate.",
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "wa-hd-46-2",
+    "status": "endorsed",
+    "choice": "Darya Farivar",
+    "why": "Calls her a progressive with an excellent voting record.",
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "king-county-assessor",
+    "status": "endorsed",
+    "choice": "Rob Foxcurran",
+    "why": "Calls him 'the consummate property assessment nerd' and likes his plans to keep people from being taxed out of their homes; notes Scarimbolo declined to meet.",
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "king-county-council-2",
+    "status": "endorsed",
+    "choice": "Rebecca Saldaña",
+    "why": "Cites her decade-long Senate record on workers' rights; says Hasegawa 'wouldn't be a bad pick' but has less experience.",
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "king-county-council-8",
+    "status": "endorsed",
+    "choice": "Teresa Mosqueda",
+    "why": "Cites her housing and workers' rights priorities and her experience; notes Duda did not attend its meeting.",
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "kc-district-court-west-1",
+    "status": "endorsed",
+    "choice": "Bardi Martin",
+    "why": "Says both candidates were qualified but Martin, a former public defender who favors diversion, had the edge.",
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "seattle-council-5",
+    "status": "endorsed",
+    "choice": "Nilu Jenks",
+    "why": "'Unenthused' but backs Jenks for her positions on zoning, density and taxes; calls Kang's answers 'mushy.'",
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "seattle-muni-court-5",
+    "status": "endorsed",
+    "choice": "Gabe Rothstein",
+    "why": "Cites his public defense career and belief in second chances; questions Newsom's defense of Burien's camping ban.",
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "seattle-prop-1",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Says the measure sustains bus service, adds service hours and that bus service would suffer if it fails.",
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-democrats",
+    "target_id": "wa-us-house-7",
+    "status": "endorsed",
+    "choice": "Pramila Jayapal",
+    "why": null,
+    "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-democrats",
+    "target_id": "wa-us-house-9",
+    "status": "endorsed",
+    "choice": "Adam Smith",
+    "why": null,
+    "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-democrats",
+    "target_id": "wa-sd-32",
+    "status": "endorsed",
+    "choice": "Cindy Ryu",
+    "why": null,
+    "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-democrats",
+    "target_id": "wa-hd-32-1",
+    "status": "endorsed",
+    "choice": "Keith Scully and Danica Noble",
+    "why": "Lists both candidates (a dual endorsement).",
+    "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-democrats",
+    "target_id": "wa-hd-32-2",
+    "status": "endorsed",
+    "choice": "Lauren Davis and Imraan Siddiqi",
+    "why": "Lists both candidates (a dual endorsement).",
+    "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-democrats",
+    "target_id": "wa-sd-34",
+    "status": "endorsed",
+    "choice": "Emily Alvarado",
+    "why": null,
+    "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-democrats",
+    "target_id": "wa-hd-34-2",
+    "status": "endorsed",
+    "choice": "Joe Fitzgibbon",
+    "why": null,
+    "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-democrats",
+    "target_id": "wa-hd-36-1",
+    "status": "endorsed",
+    "choice": "Julia Grant Reed",
+    "why": null,
+    "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-democrats",
+    "target_id": "wa-sd-37",
+    "status": "endorsed",
+    "choice": "Chipalo Street",
+    "why": null,
+    "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-democrats",
+    "target_id": "wa-hd-37-2",
+    "status": "endorsed",
+    "choice": "Jaelynn Scott",
+    "why": null,
+    "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-democrats",
+    "target_id": "wa-sd-43",
+    "status": "endorsed",
+    "choice": "Hannah Sabio-Howell",
+    "why": null,
+    "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-democrats",
+    "target_id": "wa-hd-43-1",
+    "status": "endorsed",
+    "choice": "Nicole Macri",
+    "why": null,
+    "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-democrats",
+    "target_id": "wa-sd-46",
+    "status": "endorsed",
+    "choice": "Javier Valdez",
+    "why": null,
+    "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-democrats",
+    "target_id": "wa-hd-46-1",
+    "status": "endorsed",
+    "choice": "Gerry Pollet",
+    "why": "The party's page lists 'Gerry Pollet, LD 46 Representative Pos. 2'; Pollet is running for Position 1, so we read the label as a typo.",
+    "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "king-county-democrats",
+    "target_id": "wa-hd-46-2",
+    "status": "endorsed",
+    "choice": "Darya Farivar",
+    "why": null,
+    "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-democrats",
+    "target_id": "king-county-prosecutor",
+    "status": "endorsed",
+    "choice": "Leesa Manion",
+    "why": null,
+    "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-democrats",
+    "target_id": "king-county-assessor",
+    "status": "endorsed",
+    "choice": "Rob Foxcurran",
+    "why": null,
+    "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-democrats",
+    "target_id": "king-county-elections-director",
+    "status": "endorsed",
+    "choice": "Julie Wise",
+    "why": null,
+    "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-democrats",
+    "target_id": "king-county-council-2",
+    "status": "endorsed",
+    "choice": "Rebecca Saldaña",
+    "why": null,
+    "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-democrats",
+    "target_id": "king-county-council-4",
+    "status": "endorsed",
+    "choice": "Jorge L. Barón",
+    "why": null,
+    "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-democrats",
+    "target_id": "king-county-council-8",
+    "status": "endorsed",
+    "choice": "Teresa Mosqueda",
+    "why": null,
+    "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-democrats",
+    "target_id": "kc-district-court-west-1",
+    "status": "endorsed",
+    "choice": "Bardi Martin",
+    "why": null,
+    "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-democrats",
+    "target_id": "seattle-council-5",
+    "status": "endorsed",
+    "choice": "Nilu Jenks",
+    "why": null,
+    "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-democrats",
+    "target_id": "seattle-muni-court-2",
+    "status": "endorsed",
+    "choice": "Katharine Edwards",
+    "why": null,
+    "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-democrats",
+    "target_id": "seattle-muni-court-5",
+    "status": "endorsed",
+    "choice": "Gabe Rothstein",
+    "why": null,
+    "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-democrats",
+    "target_id": "seattle-muni-court-6",
+    "status": "endorsed",
+    "choice": "Shantrice Anderson",
+    "why": null,
+    "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-democrats",
+    "target_id": "seattle-prop-1",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Says the renewal will 'improve transit service at all times of day and increase transit access.'",
+    "url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-democrats",
+    "target_id": "wa-sd-36",
+    "status": "not_found",
+    "choice": null,
+    "why": "Neither candidate in this race appears on the party's 2026 endorsement list.",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-democrats",
+    "target_id": "wa-hd-37-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Neither candidate in this race appears on the party's 2026 endorsement list.",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-republicans",
+    "target_id": "wa-us-house-7",
+    "status": "endorsed",
+    "choice": "Nirav Sheth",
+    "why": "Listed as 'KCGOP Endorsed,' the guide's top tier.",
+    "url": "https://kcgop.org/votersguide/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-republicans",
+    "target_id": "wa-us-house-9",
+    "status": "endorsed",
+    "choice": "Doug Basler",
+    "why": "Listed as 'KCGOP Endorsed,' the guide's top tier.",
+    "url": "https://kcgop.org/votersguide/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-republicans",
+    "target_id": "wa-sd-36",
+    "status": "endorsed",
+    "choice": "Jillian England",
+    "why": "Listed as a 'Best Choice,' the guide's second tier, not 'KCGOP Endorsed.'",
+    "url": "https://kcgop.org/votersguide/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-republicans",
+    "target_id": "wa-sd-46",
+    "status": "endorsed",
+    "choice": "Sandra Stephens",
+    "why": "Listed as 'KCGOP Endorsed,' the guide's top tier.",
+    "url": "https://kcgop.org/votersguide/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-republicans",
+    "target_id": "king-county-assessor",
+    "status": "endorsed",
+    "choice": "Dominique M Scarimbolo",
+    "why": "Listed as a 'Best Choice,' the guide's second tier, not 'KCGOP Endorsed.'",
+    "url": "https://kcgop.org/votersguide/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-republicans",
+    "target_id": "seattle-council-5",
+    "status": "endorsed",
+    "choice": "Julie Kang",
+    "why": "Listed as a 'Best Choice,' the guide's second tier, not 'KCGOP Endorsed.'",
+    "url": "https://kcgop.org/votersguide/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-republicans",
+    "target_id": "wa-sd-32",
+    "status": "no_position",
+    "choice": null,
+    "why": "The guide lists 'No Recommendation' for this race.",
+    "url": "https://kcgop.org/votersguide/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-republicans",
+    "target_id": "wa-hd-32-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "The guide lists 'No Recommendation' for this race.",
+    "url": "https://kcgop.org/votersguide/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-republicans",
+    "target_id": "wa-hd-32-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "The guide lists 'No Recommendation' for this race.",
+    "url": "https://kcgop.org/votersguide/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-republicans",
+    "target_id": "wa-hd-34-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "The guide lists 'No Recommendation' for this race.",
+    "url": "https://kcgop.org/votersguide/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-republicans",
+    "target_id": "wa-sd-37",
+    "status": "no_position",
+    "choice": null,
+    "why": "The guide lists 'No Recommendation' for this race.",
+    "url": "https://kcgop.org/votersguide/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-republicans",
+    "target_id": "wa-hd-37-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "The guide lists 'No Recommendation' for this race.",
+    "url": "https://kcgop.org/votersguide/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-republicans",
+    "target_id": "wa-hd-37-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "The guide lists 'No Recommendation' for this race.",
+    "url": "https://kcgop.org/votersguide/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-republicans",
+    "target_id": "wa-sd-43",
+    "status": "no_position",
+    "choice": null,
+    "why": "The guide lists 'No Recommendation' for this race.",
+    "url": "https://kcgop.org/votersguide/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-republicans",
+    "target_id": "wa-hd-43-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "The guide lists 'No Recommendation' for this race.",
+    "url": "https://kcgop.org/votersguide/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-republicans",
+    "target_id": "wa-hd-46-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "The guide lists 'No Recommendation' for this race.",
+    "url": "https://kcgop.org/votersguide/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-republicans",
+    "target_id": "wa-hd-46-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "The guide lists 'No Recommendation' for this race.",
+    "url": "https://kcgop.org/votersguide/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-republicans",
+    "target_id": "king-county-council-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "The guide lists 'No Recommendation' for this race.",
+    "url": "https://kcgop.org/votersguide/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-republicans",
+    "target_id": "king-county-council-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "The guide lists 'No Recommendation' for this race.",
+    "url": "https://kcgop.org/votersguide/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-republicans",
+    "target_id": "king-county-council-8",
+    "status": "no_position",
+    "choice": null,
+    "why": "The guide lists 'No Recommendation' for this race.",
+    "url": "https://kcgop.org/votersguide/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-republicans",
+    "target_id": "seattle-muni-court-5",
+    "status": "no_position",
+    "choice": null,
+    "why": "The guide lists 'No Recommendation' for this race.",
+    "url": "https://kcgop.org/votersguide/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-republicans",
+    "target_id": "kc-district-court-west-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "The guide lists 'No Recommendation' for this race.",
+    "url": "https://kcgop.org/votersguide/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "king-county-republicans",
+    "target_id": "seattle-prop-1",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Says regional transit agencies face 'low ridership and a lack of operational accountability' and taxpayers should insist on transparency first.",
+    "url": "https://kcgop.org/votersguide/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mlk-labor",
+    "target_id": "king-county-assessor",
+    "status": "endorsed",
+    "choice": "Rob Foxcurran",
+    "why": null,
+    "url": "https://www.mlklabor.org/endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mlk-labor",
+    "target_id": "king-county-council-2",
+    "status": "endorsed",
+    "choice": "Rebecca Saldaña",
+    "why": null,
+    "url": "https://www.mlklabor.org/endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mlk-labor",
+    "target_id": "king-county-council-4",
+    "status": "endorsed",
+    "choice": "Jorge L. Barón",
+    "why": null,
+    "url": "https://www.mlklabor.org/endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mlk-labor",
+    "target_id": "king-county-council-8",
+    "status": "endorsed",
+    "choice": "Teresa Mosqueda",
+    "why": null,
+    "url": "https://www.mlklabor.org/endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mlk-labor",
+    "target_id": "seattle-council-5",
+    "status": "endorsed",
+    "choice": "Nilu Jenks",
+    "why": null,
+    "url": "https://www.mlklabor.org/endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mlk-labor",
+    "target_id": "seattle-prop-1",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Lists 'YES on the Seattle Transit Measure campaign.'",
+    "url": "https://www.mlklabor.org/endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mlk-labor",
+    "target_id": "seattle-muni-court-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on MLK Labor's 2026 endorsement page, which lists only county and Seattle council picks and the transit measure.",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mlk-labor",
+    "target_id": "kc-district-court-west-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on MLK Labor's 2026 endorsement page, which lists only county and Seattle council picks and the transit measure.",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seattle-metro-chamber",
+    "target_id": "seattle-prop-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "We found no 2026 endorsements from the Chamber or its CASE PAC. Its About and Advocacy pages list none, and searches turned up only earlier cycles (it backed Seattle's transit measure in 2020).",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seattle-metro-chamber",
+    "target_id": "seattle-council-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "We found no 2026 endorsements from the Chamber or its CASE PAC. Its About and Advocacy pages list none, and searches turned up only earlier cycles (it backed Seattle's transit measure in 2020).",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seattle-metro-chamber",
+    "target_id": "king-county-council-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "We found no 2026 endorsements from the Chamber or its CASE PAC. Its About and Advocacy pages list none, and searches turned up only earlier cycles (it backed Seattle's transit measure in 2020).",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seattle-metro-chamber",
+    "target_id": "king-county-council-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "We found no 2026 endorsements from the Chamber or its CASE PAC. Its About and Advocacy pages list none, and searches turned up only earlier cycles (it backed Seattle's transit measure in 2020).",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seattle-metro-chamber",
+    "target_id": "king-county-assessor",
+    "status": "not_found",
+    "choice": null,
+    "why": "We found no 2026 endorsements from the Chamber or its CASE PAC. Its About and Advocacy pages list none, and searches turned up only earlier cycles (it backed Seattle's transit measure in 2020).",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "wa-us-house-7",
+    "status": "endorsed",
+    "choice": "Pramila Jayapal",
+    "why": "Calls her 'a tireless advocate' and recommends re-electing her.",
+    "url": "https://fusewashington.org/news/blog/fuses-2026-general-election-endorsements",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "wa-us-house-9",
+    "status": "endorsed",
+    "choice": "Adam Smith",
+    "why": "Cites endorsements from its partners and his record on reproductive rights and environmental justice.",
+    "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki1618/county/king",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "wa-sd-32",
+    "status": "endorsed",
+    "choice": "Cindy Ryu",
+    "why": "Recommends Ryu for her House record and partner endorsements, while noting Salomon has voted for some progressive bills.",
+    "url": "https://fusewashington.org/news/blog/fuses-2026-general-election-endorsements",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "wa-hd-32-1",
+    "status": "endorsed",
+    "choice": "Danica Noble",
+    "why": "Recommends Noble for her consumer and data protection background and her lead in partner endorsements.",
+    "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki2215/county/king",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "wa-hd-32-2",
+    "status": "endorsed",
+    "choice": "Imraan Siddiqi or Lauren Davis",
+    "why": "Calls both 'good candidates' with partner endorsements and tells voters to pick by their own priorities.",
+    "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki2215/county/king",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "wa-sd-34",
+    "status": "endorsed",
+    "choice": "Emily Alvarado",
+    "why": "Says she 'continues to be a progressive champion.'",
+    "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki1474/county/king",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "wa-hd-34-1",
+    "status": "endorsed",
+    "choice": "Brianna K. Thomas",
+    "why": "Says she has earned another term.",
+    "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki1474/county/king",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "wa-hd-34-2",
+    "status": "endorsed",
+    "choice": "Joe Fitzgibbon",
+    "why": "Cites his record of advancing progressive legislation.",
+    "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki1474/county/king",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "wa-sd-36",
+    "status": "endorsed",
+    "choice": "Noel C. Frame",
+    "why": "Recommends re-electing her.",
+    "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki1325/county/king",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "wa-hd-36-1",
+    "status": "endorsed",
+    "choice": "Julia Grant Reed",
+    "why": "Recommends re-electing her.",
+    "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki1325/county/king",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "wa-hd-36-2",
+    "status": "endorsed",
+    "choice": "Liz Berry",
+    "why": "Recommends re-electing her.",
+    "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki1325/county/king",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "wa-sd-37",
+    "status": "endorsed",
+    "choice": "Chipalo Street",
+    "why": "Cites his endorsements from partners and community leaders; says Brown 'makes a great choice' for some voters.",
+    "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki1618/county/king",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "wa-hd-37-1",
+    "status": "endorsed",
+    "choice": "Kelabe Tewolde",
+    "why": "Recommends Tewolde over the incumbent.",
+    "url": "https://fusewashington.org/news/blog/fuses-2026-general-election-endorsements",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "wa-hd-37-2",
+    "status": "endorsed",
+    "choice": "Jaelynn Scott",
+    "why": "Cites her advocacy experience and partner endorsements.",
+    "url": "https://fusewashington.org/news/blog/fuses-2026-general-election-endorsements",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "wa-sd-43",
+    "status": "endorsed",
+    "choice": "Jamie Pedersen",
+    "why": "Cites his role passing the Millionaires Tax; says it appreciates Sabio-Howell's candidacy.",
+    "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki1857/county/king",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "wa-hd-43-1",
+    "status": "endorsed",
+    "choice": "Nicole Macri",
+    "why": "Says she deserves another term.",
+    "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki1857/county/king",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "wa-hd-43-2",
+    "status": "endorsed",
+    "choice": "Shaun Scott",
+    "why": "Says he deserves another term.",
+    "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki1857/county/king",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "wa-sd-46",
+    "status": "endorsed",
+    "choice": "Javier Valdez",
+    "why": "Says he has 'more than earned your vote' for another term.",
+    "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki2328/county/king",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "wa-hd-46-1",
+    "status": "endorsed",
+    "choice": "Gerry Pollet",
+    "why": "Says Pollet earned the most partner endorsements; calls Dreher a progressive too.",
+    "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki2328/county/king",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "wa-hd-46-2",
+    "status": "endorsed",
+    "choice": "Darya Farivar",
+    "why": "Cites her record of supporting progress.",
+    "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki2328/county/king",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "king-county-prosecutor",
+    "status": "endorsed",
+    "choice": "Leesa Manion",
+    "why": "Says she has earned another term even though she is unopposed.",
+    "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki2328/county/king",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "king-county-assessor",
+    "status": "endorsed",
+    "choice": "Rob Foxcurran",
+    "why": "Says he ran 'a thoughtful and well-informed campaign' focused on housing supply and affordability.",
+    "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki2328/county/king",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "king-county-elections-director",
+    "status": "endorsed",
+    "choice": "Julie Wise",
+    "why": "Says she has 'more than earned your vote.'",
+    "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki2328/county/king",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "king-county-council-2",
+    "status": "endorsed",
+    "choice": "Rebecca Saldaña",
+    "why": "Recommends Saldaña while praising Hasegawa's work as port commissioner.",
+    "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki1618/county/king",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "king-county-council-4",
+    "status": "endorsed",
+    "choice": "Jorge L. Barón",
+    "why": "Says he has earned another term even though he is unopposed.",
+    "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki1325/county/king",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "king-county-council-8",
+    "status": "endorsed",
+    "choice": "Teresa Mosqueda",
+    "why": "Recommends re-electing her.",
+    "url": "https://fusewashington.org/news/blog/fuses-2026-general-election-endorsements",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "seattle-council-5",
+    "status": "endorsed",
+    "choice": "Nilu Jenks",
+    "why": "Calls her 'the most progressive choice' and says she swept partner endorsements.",
+    "url": "https://fusewashington.org/news/blog/fuses-2026-general-election-endorsements",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "seattle-muni-court-5",
+    "status": "endorsed",
+    "choice": "Gabe Rothstein",
+    "why": "Cites 'experienced and compassionate leadership.'",
+    "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki2328/county/king",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "seattle-prop-1",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "'Vote YES to improve our transit systems.'",
+    "url": "https://www.progressivevotersguide.com/washington/2026/general/precinct/ki2328/county/king",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "kc-district-court-west-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Seattle precinct pages of the Progressive Voters Guide we checked have no District Court section.",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "kc-district-court-west-2",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 27, 2026; still no pick on this page.",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "kc-district-court-west-3",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 27, 2026; still no pick on this page.",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "kc-district-court-west-4",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 27, 2026; still no pick on this page.",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "kc-district-court-west-5",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 27, 2026; still no pick on this page.",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "king-county-council-4",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 27, 2026; still no pick on this page.",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "king-county-elections-director",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 27, 2026; still no pick on this page.",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "king-county-prosecutor",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 27, 2026; still no pick on this page.",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "seattle-muni-court-1",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 27, 2026; still no pick on this page.",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "seattle-muni-court-2",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 27, 2026; still no pick on this page.",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "seattle-muni-court-3",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 27, 2026; still no pick on this page.",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "seattle-muni-court-4",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 27, 2026; still no pick on this page.",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "seattle-muni-court-6",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 27, 2026; still no pick on this page.",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "seattle-muni-court-7",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 27, 2026; still no pick on this page.",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "wa-coa-1-1-pos-5",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 27, 2026; still no pick on this page.",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "wa-coa-1-1-pos-6",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 27, 2026; still no pick on this page.",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "wa-hd-34-1",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 27, 2026; still no pick on this page.",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "wa-hd-36-1",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 27, 2026; still no pick on this page.",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "wa-hd-36-2",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 27, 2026; still no pick on this page.",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "wa-hd-43-2",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 27, 2026; still no pick on this page.",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "the-stranger-eb",
+    "target_id": "wa-sd-34",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 27, 2026; still no pick on this page.",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  }
 ]

@@ -1,2622 +1,2622 @@
 [
- {
-  "endorser_id": "sf-chronicle-eb",
-  "target_id": "sf-prop-a",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Says the Charter has become 'an accumulation of commissions, reporting requirements and procedural rules for a San Francisco that no longer exists,' and Prop A would clean it up.",
-  "url": "https://www.sfchronicle.com/opinion/editorials/article/prop-a-san-francisco-22431575.php",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chronicle-eb",
-  "target_id": "sf-prop-b",
-  "status": "endorsed",
-  "choice": "NO",
-  "why": "Calls a public bank 'a noble' idea but says 'good intentions do not automatically make a good institution' and Prop B 'is set up to fail.'",
-  "url": "https://www.sfchronicle.com/opinion/editorials/article/prop-b-bank-san-francisco-22422523.php",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chronicle-eb",
-  "target_id": "sf-prop-c",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Won't solve the housing crisis but provides 'a predictable source of public investment' as building costs rise.",
-  "url": "https://www.sfchronicle.com/opinion/editorials/article/prop-c-housing-san-francisco-22443843.php",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chronicle-eb",
-  "target_id": "sf-prop-d",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Says Prop D 'contains many essential fixes' for San Francisco's long ballots and the bad policies they produce.",
-  "url": "https://www.sfchronicle.com/opinion/editorials/article/prop-d-san-francisco-ballot-22438203.php",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chronicle-eb",
-  "target_id": "sf-prop-e",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Says political oversight of contracting has failed and the city 'has little to lose and much to gain by professionalizing the way it does business.'",
-  "url": "https://www.sfchronicle.com/opinion/editorials/article/prop-e-san-francisco-22413304.php",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chronicle-eb",
-  "target_id": "sf-prop-f",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Says the Charter has too much organizational detail and Prop F gives the mayor management tools 'while preserving review by the Board of Supervisors and the public.'",
-  "url": "https://www.sfchronicle.com/opinion/editorials/article/prop-f-mayor-san-francisco-22469130.php",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chronicle-eb",
-  "target_id": "sf-prop-g",
-  "status": "endorsed",
-  "choice": "NO",
-  "why": "Cites Sunset Dunes' 1.7 million visits and the Controller's $9.8 million cost estimate; it endorsed Prop K in 2024 and still backs the park.",
-  "url": "https://www.sfchronicle.com/opinion/editorials/article/prop-g-sunset-dunes-highway-22443671.php",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chronicle-eb",
-  "target_id": "sf-prop-h",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Cites Muni's $307 million yearly shortfall and possible elimination of 19 bus lines; says Prop H 'would help stem the bleeding.'",
-  "url": "https://www.sfchronicle.com/opinion/editorials/article/prop-h-muni-san-francisco-22456325.php",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chronicle-eb",
-  "target_id": "sf-prop-i",
-  "status": "endorsed",
-  "choice": "NO",
-  "why": "Calls Prop I 'a cocktail of poison pills that will actually make San Francisco's housing crisis worse.'",
-  "url": "https://www.sfchronicle.com/opinion/editorials/article/prop-i-housing-san-francisco-22459341.php",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chronicle-eb",
-  "target_id": "bay-area-rtm",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Agrees a sales tax is regressive and BART needs accountability, but calls it 'a necessary investment in keeping the region's transit system functioning.'",
-  "url": "https://www.sfchronicle.com/opinion/editorials/article/regional-transit-measure-bay-area-22424231.php",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chronicle-eb",
-  "target_id": "sf-prop-j",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "The board says Prop J closes a loophole in the city's transfer tax, and supports it expecting the city to treat the money as temporary and find more targeted ways to get distressed properties back into use.",
-  "url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
-  "date": "2026-10-24",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chronicle-eb",
-  "target_id": "ca-us-house-11",
-  "status": "endorsed",
-  "choice": "Scott Wiener",
-  "why": "Calls Wiener 'the state's most relentless and effective legislator' and says Chan's record is 'as spotty as it is sparse.'",
-  "url": "https://www.sfchronicle.com/opinion/editorials/article/scott-wiener-connie-chan-pelosi-22448323.php",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chronicle-eb",
-  "target_id": "ca-coa-1d-retention",
-  "status": "endorsed",
-  "choice": "YES on all 11 justices",
-  "why": "None of the justices up for retention has been cited for discipline; recommends retaining every one.",
-  "url": "https://www.sfchronicle.com/opinion/editorials/article/supreme-court-judge-california-22431608.php",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chronicle-eb",
-  "target_id": "sf-supervisor-2",
-  "status": "endorsed",
-  "choice": "Stephen Sherrill",
-  "why": "Credits his work with the Lurie administration on Charter reform and spending transparency; 'no reason for District 2 voters to change course.'",
-  "url": "https://www.sfchronicle.com/opinion/editorials/article/stephen-sherrill-supervisor-san-francisco-22477061.php",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chronicle-eb",
-  "target_id": "sf-supervisor-4",
-  "status": "endorsed",
-  "choice": "Alan Wong",
-  "why": "Endorsed him in the special election; says his opponents are 'political novices' without the government experience needed.",
-  "url": "https://www.sfchronicle.com/opinion/editorials/article/alan-wong-sunset-supervisor-22465701.php",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chronicle-eb",
-  "target_id": "sf-supervisor-6",
-  "status": "endorsed",
-  "choice": "Matt Dorsey",
-  "why": "Says Dorsey takes the city's problems seriously and works with colleagues who see things differently, 'his X persona notwithstanding.'",
-  "url": "https://www.sfchronicle.com/opinion/editorials/article/matt-dorsey-alex-behrend-san-francisco-22477293.php",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chronicle-eb",
-  "target_id": "sf-supervisor-8",
-  "status": "not_found",
-  "choice": null,
-  "why": "The Chronicle's endorsement page still says 'Coming Soon' for this one as of its Oct 18, 2026 update. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chronicle-eb",
-  "target_id": "sf-supervisor-10",
-  "status": "endorsed",
-  "choice": "Theo Ellington",
-  "why": "The board says Ellington's roots in the district and his experience and ability to work across economic, social and political lines make him the strongest choice.",
-  "url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
-  "date": "2026-10-24",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chronicle-eb",
-  "target_id": "sf-board-of-education",
-  "status": "not_found",
-  "choice": null,
-  "why": "The Chronicle's endorsement page still says 'Coming Soon' for this one as of its Oct 18, 2026 update. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chronicle-eb",
-  "target_id": "sf-community-college-board",
-  "status": "not_found",
-  "choice": null,
-  "why": "The Chronicle's endorsement page still says 'Coming Soon' for this one as of its Oct 18, 2026 update. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chronicle-eb",
-  "target_id": "ca-us-house-15",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Chronicle's endorsement page as of its Oct 18, 2026 update, and not listed there as coming soon. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chronicle-eb",
-  "target_id": "ca-assembly-17",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Chronicle's endorsement page as of its Oct 18, 2026 update, and not listed there as coming soon. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chronicle-eb",
-  "target_id": "ca-assembly-19",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Chronicle's endorsement page as of its Oct 18, 2026 update, and not listed there as coming soon. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chronicle-eb",
-  "target_id": "sf-community-college-board-partial",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Chronicle's endorsement page as of its Oct 18, 2026 update, and not listed there as coming soon. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chronicle-eb",
-  "target_id": "bart-director-8",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Chronicle's endorsement page as of its Oct 18, 2026 update, and not listed there as coming soon. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chronicle-eb",
-  "target_id": "sf-assessor-recorder",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Chronicle's endorsement page as of its Oct 18, 2026 update, and not listed there as coming soon. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chronicle-eb",
-  "target_id": "sf-public-defender",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Chronicle's endorsement page as of its Oct 18, 2026 update, and not listed there as coming soon. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-democratic-party",
-  "target_id": "sf-prop-a",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": null,
-  "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-democratic-party",
-  "target_id": "sf-prop-b",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": null,
-  "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-democratic-party",
-  "target_id": "sf-prop-c",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": null,
-  "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-democratic-party",
-  "target_id": "sf-prop-d",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": null,
-  "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-democratic-party",
-  "target_id": "sf-prop-e",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": null,
-  "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-democratic-party",
-  "target_id": "sf-prop-f",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": null,
-  "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-democratic-party",
-  "target_id": "sf-prop-g",
-  "status": "endorsed",
-  "choice": "NO",
-  "why": null,
-  "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-democratic-party",
-  "target_id": "sf-prop-h",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": null,
-  "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-democratic-party",
-  "target_id": "sf-prop-i",
-  "status": "endorsed",
-  "choice": "NO",
-  "why": null,
-  "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-democratic-party",
-  "target_id": "sf-prop-j",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": null,
-  "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-democratic-party",
-  "target_id": "bay-area-rtm",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": null,
-  "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-democratic-party",
-  "target_id": "ca-us-house-11",
-  "status": "endorsed",
-  "choice": "Scott Wiener",
-  "why": null,
-  "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-democratic-party",
-  "target_id": "ca-us-house-15",
-  "status": "endorsed",
-  "choice": "Kevin Mullin",
-  "why": null,
-  "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-democratic-party",
-  "target_id": "ca-assembly-17",
-  "status": "endorsed",
-  "choice": "Matt Haney",
-  "why": null,
-  "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-democratic-party",
-  "target_id": "ca-assembly-19",
-  "status": "endorsed",
-  "choice": "Catherine Stefani",
-  "why": null,
-  "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-democratic-party",
-  "target_id": "sf-board-of-education",
-  "status": "endorsed",
-  "choice": "Autumn Brown Garibay, Phil Kim, Tim Tung",
-  "why": null,
-  "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-democratic-party",
-  "target_id": "sf-community-college-board",
-  "status": "endorsed",
-  "choice": "Elijah Ball, Monroe Lace, Erwin Tam",
-  "why": null,
-  "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-democratic-party",
-  "target_id": "sf-community-college-board-partial",
-  "status": "endorsed",
-  "choice": "Ruth Ferguson",
-  "why": null,
-  "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-democratic-party",
-  "target_id": "bart-director-8",
-  "status": "endorsed",
-  "choice": "Sara Barz",
-  "why": null,
-  "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-democratic-party",
-  "target_id": "sf-assessor-recorder",
-  "status": "endorsed",
-  "choice": "Joaquín Torres",
-  "why": null,
-  "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-democratic-party",
-  "target_id": "sf-public-defender",
-  "status": "endorsed",
-  "choice": "Mano Raju",
-  "why": null,
-  "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-democratic-party",
-  "target_id": "sf-supervisor-2",
-  "status": "endorsed",
-  "choice": "Stephen Sherrill",
-  "why": null,
-  "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-democratic-party",
-  "target_id": "sf-supervisor-4",
-  "status": "endorsed",
-  "choice": "Alan Wong",
-  "why": null,
-  "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-democratic-party",
-  "target_id": "sf-supervisor-6",
-  "status": "endorsed",
-  "choice": "Matt Dorsey",
-  "why": null,
-  "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-democratic-party",
-  "target_id": "sf-supervisor-8",
-  "status": "endorsed",
-  "choice": "Gary McCoy",
-  "why": null,
-  "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-democratic-party",
-  "target_id": "sf-supervisor-10",
-  "status": "endorsed",
-  "choice": "Theo Ellington",
-  "why": null,
-  "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-democratic-party",
-  "target_id": "ca-coa-1d-retention",
-  "status": "not_found",
-  "choice": null,
-  "why": "No judicial retention picks on the party's Nov. 3 guide. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-republican-party",
-  "target_id": "sf-prop-a",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Says it streamlines a 'bloated City Charter' and the tangle of oversight committees.",
-  "url": "https://sfgop.org/nov-2026-endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-republican-party",
-  "target_id": "sf-prop-b",
-  "status": "endorsed",
-  "choice": "NO",
-  "why": "Says city government lacks 'the competence, integrity, and incentives to run a bank.'",
-  "url": "https://sfgop.org/nov-2026-endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-republican-party",
-  "target_id": "sf-prop-c",
-  "status": "endorsed",
-  "choice": "NO",
-  "why": "Calls it another budget set-aside during a structural deficit.",
-  "url": "https://sfgop.org/nov-2026-endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-republican-party",
-  "target_id": "sf-prop-d",
-  "status": "endorsed",
-  "choice": "NO",
-  "why": "Opposes quadrupling the signatures for citizen initiatives: 'The initiative process belongs to the people.'",
-  "url": "https://sfgop.org/nov-2026-endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-republican-party",
-  "target_id": "sf-prop-e",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Says it puts accountability for city services where voters can reach it.",
-  "url": "https://sfgop.org/nov-2026-endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-republican-party",
-  "target_id": "sf-prop-f",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Says the Mayor needs authority over departments to be accountable, with the Board able to block changes.",
-  "url": "https://sfgop.org/nov-2026-endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-republican-party",
-  "target_id": "sf-prop-g",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Says Westside families 'were promised a compromise and got a road closure.'",
-  "url": "https://sfgop.org/nov-2026-endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-republican-party",
-  "target_id": "sf-prop-h",
-  "status": "endorsed",
-  "choice": "NO",
-  "why": "Calls it a 15-year tax 'to bail out an agency that refuses to reform itself.'",
-  "url": "https://sfgop.org/nov-2026-endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-republican-party",
-  "target_id": "sf-prop-i",
-  "status": "endorsed",
-  "choice": "NO",
-  "why": "Calls it an earmark gathered largely by DSA and quotes Mayor Lurie calling it 'an unaccountable slush fund.'",
-  "url": "https://sfgop.org/nov-2026-endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-republican-party",
-  "target_id": "sf-prop-j",
-  "status": "endorsed",
-  "choice": "NO",
-  "why": "Says it squeezes property owners 'at their most vulnerable moment.'",
-  "url": "https://sfgop.org/nov-2026-endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-republican-party",
-  "target_id": "bay-area-rtm",
-  "status": "endorsed",
-  "choice": "NO",
-  "why": "Objects that San Francisco would pay 1%, double the other counties, on top of already high sales taxes.",
-  "url": "https://sfgop.org/nov-2026-endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-republican-party",
-  "target_id": "ca-us-house-11",
-  "status": "no_position",
-  "choice": null,
-  "why": "Endorses neither candidate. Its page tells voters not to vote for Scott Wiener, saying he 'wrote the book on overregulation in California.'",
-  "url": "https://sfgop.org/nov-2026-endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-republican-party",
-  "target_id": "ca-us-house-15",
-  "status": "endorsed",
-  "choice": "Charles Hoelter",
-  "why": "Calls him 'a citizen candidate, not a career politician.'",
-  "url": "https://sfgop.org/nov-2026-endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-republican-party",
-  "target_id": "ca-assembly-17",
-  "status": "endorsed",
-  "choice": "Manuel Noris-Barrera",
-  "why": "Credits him with running as a June write-in so east-side voters would have a choice.",
-  "url": "https://sfgop.org/nov-2026-endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-republican-party",
-  "target_id": "ca-assembly-19",
-  "status": "endorsed",
-  "choice": "Philip Louis Wing",
-  "why": "Cites his career as a financial advisor helping families 'live within their means.'",
-  "url": "https://sfgop.org/nov-2026-endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-republican-party",
-  "target_id": "sf-supervisor-2",
-  "status": "endorsed",
-  "choice": "Nicholas Berg",
-  "why": "Full endorsement; Berg is the SF Republican Party's chairman.",
-  "url": "https://sfgop.org/nov-2026-endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-republican-party",
-  "target_id": "sf-supervisor-4",
-  "status": "endorsed",
-  "choice": "Alan Wong (recommended)",
-  "why": "Marked 'Recommended,' not a full endorsement: best positioned 'to stand up for safe streets, functional government.'",
-  "url": "https://sfgop.org/nov-2026-endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-republican-party",
-  "target_id": "sf-supervisor-6",
-  "status": "endorsed",
-  "choice": "Matt Dorsey (recommended)",
-  "why": "Marked 'Recommended,' not a full endorsement.",
-  "url": "https://sfgop.org/nov-2026-endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-republican-party",
-  "target_id": "sf-supervisor-8",
-  "status": "no_position",
-  "choice": null,
-  "why": "'At this time, we are making no endorsements' in District 8.",
-  "url": "https://sfgop.org/nov-2026-endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-republican-party",
-  "target_id": "sf-supervisor-10",
-  "status": "no_position",
-  "choice": null,
-  "why": "'At this time, we are making no endorsements' in District 10.",
-  "url": "https://sfgop.org/nov-2026-endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-republican-party",
-  "target_id": "sf-board-of-education",
-  "status": "endorsed",
-  "choice": "Laurance Lee, Phil Kim, Tim Tung (recommended)",
-  "why": "Marked 'Recommended'; wants schools focused on 'reading, math, and preparing kids for real opportunity.'",
-  "url": "https://sfgop.org/nov-2026-endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-republican-party",
-  "target_id": "sf-community-college-board",
-  "status": "endorsed",
-  "choice": "Elijah Ball (recommended)",
-  "why": "Recommends one candidate for the three seats.",
-  "url": "https://sfgop.org/nov-2026-endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-republican-party",
-  "target_id": "sf-community-college-board-partial",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the party's Nov. 2026 page.",
-  "url": "https://sfgop.org/nov-2026-endorsements",
-  "date": "2026-10-17",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-republican-party",
-  "target_id": "bart-director-8",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the party's Nov. 2026 page.",
-  "url": "https://sfgop.org/nov-2026-endorsements",
-  "date": "2026-10-17",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-republican-party",
-  "target_id": "sf-assessor-recorder",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the party's Nov. 2026 page.",
-  "url": "https://sfgop.org/nov-2026-endorsements",
-  "date": "2026-10-17",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-republican-party",
-  "target_id": "sf-public-defender",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the party's Nov. 2026 page.",
-  "url": "https://sfgop.org/nov-2026-endorsements",
-  "date": "2026-10-17",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-republican-party",
-  "target_id": "ca-coa-1d-retention",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the party's Nov. 2026 page.",
-  "url": "https://sfgop.org/nov-2026-endorsements",
-  "date": "2026-10-17",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "spur",
-  "target_id": "sf-prop-a",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Nearly all changes are technical housekeeping that simplify and modernize the Charter, in line with SPUR's Charter for Change work.",
-  "url": "https://www.spur.org/voter-guide/2026-11/pdf",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "spur",
-  "target_id": "sf-prop-b",
-  "status": "endorsed",
-  "choice": "NO",
-  "why": "Sees promise in a public bank but objects to writing detailed governance and new commissions into the Charter when an ordinance would do.",
-  "url": "https://www.spur.org/voter-guide/2026-11/pdf",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "spur",
-  "target_id": "sf-prop-c",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Affordable housing needs reliable funding; the measure's freeze-and-reduce safeguards ease its concern about set-asides.",
-  "url": "https://www.spur.org/voter-guide/2026-11/pdf",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "spur",
-  "target_id": "sf-prop-d",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Today's paths to the ballot are unusually permissive; benefits outweigh making grassroots initiatives harder, and thresholds stay below most California cities.",
-  "url": "https://www.spur.org/voter-guide/2026-11/pdf",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "spur",
-  "target_id": "sf-prop-e",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Procurement is so fragmented that no one is accountable; the changes are ones SPUR recommended.",
-  "url": "https://www.spur.org/voter-guide/2026-11/pdf",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "spur",
-  "target_id": "sf-prop-f",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Adopts many SPUR recommendations to let the mayor pick and hold department heads accountable, with Board review kept.",
-  "url": "https://www.spur.org/voter-guide/2026-11/pdf",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "spur",
-  "target_id": "sf-prop-g",
-  "status": "endorsed",
-  "choice": "NO",
-  "why": "Would undo a successful coastal climate-adaptation effort and reduce shared open space.",
-  "url": "https://www.spur.org/voter-guide/2026-11/pdf",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "spur",
-  "target_id": "sf-prop-h",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "High-quality transit 'is not optional'; the tax structure is fair and service cuts would hit vulnerable riders first.",
-  "url": "https://www.spur.org/voter-guide/2026-11/pdf",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "spur",
-  "target_id": "sf-prop-i",
-  "status": "endorsed",
-  "choice": "NO",
-  "why": "Permanently diverts General Fund money during a structural deficit and removes the Board's ability to adjust the tax.",
-  "url": "https://www.spur.org/voter-guide/2026-11/pdf",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "spur",
-  "target_id": "sf-prop-j",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Closing the foreclosure loophole raises revenue without hurting homeowners or small landlords.",
-  "url": "https://www.spur.org/voter-guide/2026-11/pdf",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "spur",
-  "target_id": "bay-area-rtm",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Reliable transit funding outweighs concerns about a regressive sales tax.",
-  "url": "https://www.spur.org/voter-guide/2026-11/pdf",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "growsf",
-  "target_id": "sf-prop-a",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Says too many commissions blur responsibility; cites a civil grand jury count of 152 commissions.",
-  "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#prop-a",
-  "date": "2026-10-14",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "growsf",
-  "target_id": "sf-prop-b",
-  "status": "endorsed",
-  "choice": "NO",
-  "why": "Says the city doesn't need a public bank and the measure 'is riddled with errors,' including an FDIC insurance requirement it calls unattainable.",
-  "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#prop-b",
-  "date": "2026-10-14",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "growsf",
-  "target_id": "sf-prop-c",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Prefers funding subsidized housing directly over taxing new construction through inclusionary requirements.",
-  "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#prop-c",
-  "date": "2026-10-14",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "growsf",
-  "target_id": "sf-prop-d",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Says San Francisco votes on too many ballot measures: 10 this year, 24 in 2016.",
-  "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#prop-d",
-  "date": "2026-10-14",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "growsf",
-  "target_id": "sf-prop-e",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Points to the $1.7 million toilet and rules that forced hundreds of waivers; one rulebook with one person in charge.",
-  "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#prop-e",
-  "date": "2026-10-14",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "growsf",
-  "target_id": "sf-prop-f",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "The Mayor can hire and fire only about 6% of department heads; Prop F lets the Mayor fix failing departments and answer to voters.",
-  "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#prop-f",
-  "date": "2026-10-14",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "growsf",
-  "target_id": "sf-prop-g",
-  "status": "endorsed",
-  "choice": "NO",
-  "why": "Voters already decided this twice (2022 and 2024), and G would lock a road schedule into law that only voters could change.",
-  "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#prop-g",
-  "date": "2026-10-14",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "growsf",
-  "target_id": "sf-prop-h",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Muni faces a $307 million deficit after cutting $246 million in costs; without new money it would cut up to 20 routes.",
-  "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#prop-h",
-  "date": "2026-10-14",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "growsf",
-  "target_id": "sf-prop-i",
-  "status": "endorsed",
-  "choice": "NO",
-  "why": "Removes $120 million a year from the General Fund amid a projected deficit and locks in a high transfer tax.",
-  "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#prop-i",
-  "date": "2026-10-14",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "growsf",
-  "target_id": "sf-prop-j",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Investors buying defaulted loans now skip a tax every other seller pays; foreclosure exemptions jumped to $450 million in three years.",
-  "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#prop-j",
-  "date": "2026-10-14",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "growsf",
-  "target_id": "bay-area-rtm",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "BART has no backup if the measure fails; transit agencies have already documented more than $1 billion in savings.",
-  "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#prop-rtm",
-  "date": "2026-10-14",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "growsf",
-  "target_id": "ca-us-house-11",
-  "status": "endorsed",
-  "choice": "Scott Wiener",
-  "why": "Cites his record passing major pro-housing and transit laws.",
-  "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#house-of-representatives-district-11",
-  "date": "2026-10-14",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "growsf",
-  "target_id": "ca-us-house-15",
-  "status": "endorsed",
-  "choice": "Kevin Mullin",
-  "why": "Preliminary endorsement; Mullin did not return its questionnaire.",
-  "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#house-of-representatives-district-15",
-  "date": "2026-10-14",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "growsf",
-  "target_id": "ca-assembly-17",
-  "status": "endorsed",
-  "choice": "Matt Haney",
-  "why": "Cites his office-to-housing law (AB 507) and record of getting bills signed.",
-  "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#state-assemblymember-district-17",
-  "date": "2026-10-14",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "growsf",
-  "target_id": "ca-assembly-19",
-  "status": "endorsed",
-  "choice": "Catherine Stefani",
-  "why": "Cites seven bills signed in 2025; notes some concerns about alignment with Sacramento interest groups.",
-  "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#state-assemblymember-district-19",
-  "date": "2026-10-14",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "growsf",
-  "target_id": "ca-coa-1d-retention",
-  "status": "endorsed",
-  "choice": "YES on all 11 justices",
-  "why": "None appears in the Commission on Judicial Performance's public discipline record.",
-  "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#justice-court-of-appeal-retention",
-  "date": "2026-10-14",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "growsf",
-  "target_id": "sf-board-of-education",
-  "status": "endorsed",
-  "choice": "Autumn Brown Garibay, Phil Kim, Tim Tung",
-  "why": null,
-  "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#board-of-education",
-  "date": "2026-10-14",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "growsf",
-  "target_id": "sf-community-college-board",
-  "status": "endorsed",
-  "choice": "Elijah Ball, Monroe Lace, Erwin Tam",
-  "why": null,
-  "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#community-college-board",
-  "date": "2026-10-14",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "growsf",
-  "target_id": "sf-community-college-board-partial",
-  "status": "endorsed",
-  "choice": "Ruth Ferguson",
-  "why": null,
-  "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#community-college-board-partial-term",
-  "date": "2026-10-14",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "growsf",
-  "target_id": "bart-director-8",
-  "status": "endorsed",
-  "choice": "Sara Barz",
-  "why": "Cites her career on regional transit integration and Clipper fare programs.",
-  "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#bart-board-district-8",
-  "date": "2026-10-14",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "growsf",
-  "target_id": "sf-assessor-recorder",
-  "status": "endorsed",
-  "choice": "Joaquín Torres",
-  "why": "Cites completing the office's technology overhaul and putting recorded documents online for free.",
-  "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#assessor-recorder",
-  "date": "2026-10-14",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "growsf",
-  "target_id": "sf-public-defender",
-  "status": "endorsed",
-  "choice": "Mano Raju",
-  "why": "Calls it 'a weak endorsement,' faulting the office for refusing new cases one day a week and a contempt finding in March 2026.",
-  "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#public-defender",
-  "date": "2026-10-14",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "growsf",
-  "target_id": "sf-supervisor-2",
-  "status": "endorsed",
-  "choice": "Stephen Sherrill",
-  "why": "Cites his focus on public safety, small business and responsive government.",
-  "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#supervisor-district-2",
-  "date": "2026-10-14",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "growsf",
-  "target_id": "sf-supervisor-4",
-  "status": "endorsed",
-  "choice": "Alan Wong",
-  "why": "Cites his votes for the Family Zoning Plan and police funding, and his support for reopening the Great Highway.",
-  "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#supervisor-district-4",
-  "date": "2026-10-14",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "growsf",
-  "target_id": "sf-supervisor-6",
-  "status": "endorsed",
-  "choice": "Matt Dorsey",
-  "why": "Cites his Recovery First and drug-free housing laws and focus on police staffing.",
-  "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#supervisor-district-6",
-  "date": "2026-10-14",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "growsf",
-  "target_id": "sf-supervisor-8",
-  "status": "endorsed",
-  "choice": "Darshini Patel (rank #1)",
-  "why": "Recommends her as voters' first choice for her housing positions and data-driven approach.",
-  "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#supervisor-district-8",
-  "date": "2026-10-14",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "growsf",
-  "target_id": "sf-supervisor-10",
-  "status": "endorsed",
-  "choice": "Theo Ellington",
-  "why": "Cites his plan to get District 10's approved-but-unbuilt homes built and his public safety platform.",
-  "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#supervisor-district-10",
-  "date": "2026-10-14",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sflcv",
-  "target_id": "sf-prop-a",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": null,
-  "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-vote-yes-on-proposition-a-charter-changes-affecting-departments-and-commissions",
-  "date": "2026-09-29",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sflcv",
-  "target_id": "sf-prop-b",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": null,
-  "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-vote-yes-on-prop-b-to-establish-a-municipal-finance-corporation-and-public-bank",
-  "date": "2026-09-29",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sflcv",
-  "target_id": "sf-prop-c",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": null,
-  "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-vote-yes-on-proposition-c-the-housing-trust-fund-charter-amendment",
-  "date": "2026-09-29",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sflcv",
-  "target_id": "sf-prop-d",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": null,
-  "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-vote-yes-on-prop-d-for-hopefully-shorter-ballots",
-  "date": "2026-09-29",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sflcv",
-  "target_id": "sf-prop-e",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": null,
-  "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-vote-yes-on-proposition-e-the-city-administrator-and-city-contracting-reform-charter-amendment",
-  "date": "2026-09-29",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sflcv",
-  "target_id": "sf-prop-f",
-  "status": "no_position",
-  "choice": null,
-  "why": "Listed as 'No Position' on its endorsements page.",
-  "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-no-recommendation-on-prop-f",
-  "date": "2026-09-29",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sflcv",
-  "target_id": "sf-prop-g",
-  "status": "endorsed",
-  "choice": "NO",
-  "why": null,
-  "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-vote-no-on-prop-g-to-protect-sunset-dunes-park-recreation-space-and-san-franciscos-budget",
-  "date": "2026-09-29",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sflcv",
-  "target_id": "sf-prop-h",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": null,
-  "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-vote-yes-on-prop-h-and-rtm",
-  "date": "2026-09-29",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sflcv",
-  "target_id": "sf-prop-i",
-  "status": "no_position",
-  "choice": null,
-  "why": "Listed as 'No Position' on its endorsements page.",
-  "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-no-recommendation-on-prop-i",
-  "date": "2026-09-29",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sflcv",
-  "target_id": "bay-area-rtm",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": null,
-  "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-vote-yes-on-prop-h-and-rtm",
-  "date": "2026-09-29",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sflcv",
-  "target_id": "sf-prop-j",
-  "status": "not_found",
-  "choice": null,
-  "why": "Prop J is not on its November 2026 endorsements list. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.sflcv.org/endorsements",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sflcv",
-  "target_id": "sf-supervisor-2",
-  "status": "endorsed",
-  "choice": "Stephen Sherrill",
-  "why": null,
-  "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-sflcv-endorses-stephen-sherrill-for-district-2-supervisor",
-  "date": "2026-09-29",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sflcv",
-  "target_id": "sf-supervisor-4",
-  "status": "no_position",
-  "choice": null,
-  "why": "Listed as 'No Endorsement' for District 4.",
-  "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-no-endorsement-for-district-4-supervisor",
-  "date": "2026-09-29",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sflcv",
-  "target_id": "sf-supervisor-6",
-  "status": "endorsed",
-  "choice": "Matt Dorsey",
-  "why": null,
-  "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-sflcv-endorses-matt-dorsey-for-district-6-supervisor",
-  "date": "2026-09-29",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sflcv",
-  "target_id": "sf-supervisor-8",
-  "status": "endorsed",
-  "choice": "Gary McCoy",
-  "why": null,
-  "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-sflcv-endorses-gary-mccoy-for-district-8-supervisor",
-  "date": "2026-09-29",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sflcv",
-  "target_id": "sf-supervisor-10",
-  "status": "endorsed",
-  "choice": "Theo Ellington",
-  "why": null,
-  "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-sflcv-endorses-theo-ellington-for-district-10-supervisor",
-  "date": "2026-09-29",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sflcv",
-  "target_id": "bart-director-8",
-  "status": "endorsed",
-  "choice": "Sara Barz",
-  "why": null,
-  "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-sflcv-endorses-sara-barz-for-bart-district-8-director",
-  "date": "2026-09-29",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sflcv",
-  "target_id": "sf-community-college-board",
-  "status": "endorsed",
-  "choice": "Elijah Ball",
-  "why": "Endorses one candidate for the three seats.",
-  "url": "https://www.sflcv.org/endorsements",
-  "date": "2026-09-29",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sflcv",
-  "target_id": "sf-board-of-education",
-  "status": "endorsed",
-  "choice": "Alida Fisher, Phil Kim, Tim Tung",
-  "why": null,
-  "url": "https://www.sflcv.org/endorsements",
-  "date": "2026-09-29",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sflcv",
-  "target_id": "ca-us-house-11",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on its November 2026 endorsements list, which covers local races. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.sflcv.org/endorsements",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sflcv",
-  "target_id": "ca-us-house-15",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on its November 2026 endorsements list, which covers local races. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.sflcv.org/endorsements",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sflcv",
-  "target_id": "ca-assembly-17",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on its November 2026 endorsements list, which covers local races. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.sflcv.org/endorsements",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sflcv",
-  "target_id": "ca-assembly-19",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on its November 2026 endorsements list, which covers local races. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.sflcv.org/endorsements",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sflcv",
-  "target_id": "sf-community-college-board-partial",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on its November 2026 endorsements list, which covers local races. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.sflcv.org/endorsements",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sflcv",
-  "target_id": "sf-assessor-recorder",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on its November 2026 endorsements list, which covers local races. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.sflcv.org/endorsements",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sflcv",
-  "target_id": "sf-public-defender",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on its November 2026 endorsements list, which covers local races. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.sflcv.org/endorsements",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sflcv",
-  "target_id": "ca-coa-1d-retention",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on its November 2026 endorsements list, which covers local races. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.sflcv.org/endorsements",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "alice-b-toklas",
-  "target_id": "sf-prop-a",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": null,
-  "url": "https://alicebtoklas.org/2026endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "alice-b-toklas",
-  "target_id": "sf-prop-b",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": null,
-  "url": "https://alicebtoklas.org/2026endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "alice-b-toklas",
-  "target_id": "sf-prop-c",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": null,
-  "url": "https://alicebtoklas.org/2026endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "alice-b-toklas",
-  "target_id": "sf-prop-d",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": null,
-  "url": "https://alicebtoklas.org/2026endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "alice-b-toklas",
-  "target_id": "sf-prop-e",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": null,
-  "url": "https://alicebtoklas.org/2026endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "alice-b-toklas",
-  "target_id": "sf-prop-f",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": null,
-  "url": "https://alicebtoklas.org/2026endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "alice-b-toklas",
-  "target_id": "sf-prop-g",
-  "status": "endorsed",
-  "choice": "NO",
-  "why": null,
-  "url": "https://alicebtoklas.org/2026endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "alice-b-toklas",
-  "target_id": "sf-prop-h",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": null,
-  "url": "https://alicebtoklas.org/2026endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "alice-b-toklas",
-  "target_id": "sf-prop-i",
-  "status": "endorsed",
-  "choice": "NO",
-  "why": null,
-  "url": "https://alicebtoklas.org/2026endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "alice-b-toklas",
-  "target_id": "sf-prop-j",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": null,
-  "url": "https://alicebtoklas.org/2026endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "alice-b-toklas",
-  "target_id": "bay-area-rtm",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": null,
-  "url": "https://alicebtoklas.org/2026endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "alice-b-toklas",
-  "target_id": "ca-us-house-11",
-  "status": "endorsed",
-  "choice": "Scott Wiener",
-  "why": null,
-  "url": "https://alicebtoklas.org/2026endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "alice-b-toklas",
-  "target_id": "ca-us-house-15",
-  "status": "endorsed",
-  "choice": "Kevin Mullin",
-  "why": null,
-  "url": "https://alicebtoklas.org/2026endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "alice-b-toklas",
-  "target_id": "ca-assembly-17",
-  "status": "endorsed",
-  "choice": "Matt Haney",
-  "why": null,
-  "url": "https://alicebtoklas.org/2026endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "alice-b-toklas",
-  "target_id": "ca-assembly-19",
-  "status": "endorsed",
-  "choice": "Catherine Stefani",
-  "why": null,
-  "url": "https://alicebtoklas.org/2026endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "alice-b-toklas",
-  "target_id": "sf-assessor-recorder",
-  "status": "endorsed",
-  "choice": "Joaquín Torres",
-  "why": null,
-  "url": "https://alicebtoklas.org/2026endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "alice-b-toklas",
-  "target_id": "sf-supervisor-2",
-  "status": "endorsed",
-  "choice": "Stephen Sherrill",
-  "why": null,
-  "url": "https://alicebtoklas.org/2026endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "alice-b-toklas",
-  "target_id": "sf-supervisor-4",
-  "status": "endorsed",
-  "choice": "Alan Wong",
-  "why": null,
-  "url": "https://alicebtoklas.org/2026endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "alice-b-toklas",
-  "target_id": "sf-supervisor-6",
-  "status": "endorsed",
-  "choice": "Matt Dorsey",
-  "why": null,
-  "url": "https://alicebtoklas.org/2026endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "alice-b-toklas",
-  "target_id": "sf-supervisor-8",
-  "status": "endorsed",
-  "choice": "Gary McCoy",
-  "why": null,
-  "url": "https://alicebtoklas.org/2026endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "alice-b-toklas",
-  "target_id": "sf-supervisor-10",
-  "status": "endorsed",
-  "choice": "Theo Ellington",
-  "why": null,
-  "url": "https://alicebtoklas.org/2026endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "alice-b-toklas",
-  "target_id": "sf-board-of-education",
-  "status": "endorsed",
-  "choice": "Phil Kim, Alida Fisher, Autumn Brown Garibay",
-  "why": null,
-  "url": "https://alicebtoklas.org/2026endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "alice-b-toklas",
-  "target_id": "sf-community-college-board",
-  "status": "endorsed",
-  "choice": "Elijah Ball, Monroe Lace, Erwin Tam",
-  "why": null,
-  "url": "https://alicebtoklas.org/2026endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "alice-b-toklas",
-  "target_id": "sf-community-college-board-partial",
-  "status": "endorsed",
-  "choice": "Ruth Ferguson",
-  "why": null,
-  "url": "https://alicebtoklas.org/2026endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "alice-b-toklas",
-  "target_id": "bart-director-8",
-  "status": "endorsed",
-  "choice": "Sara Barz",
-  "why": null,
-  "url": "https://alicebtoklas.org/2026endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "alice-b-toklas",
-  "target_id": "sf-public-defender",
-  "status": "no_position",
-  "choice": null,
-  "why": "The club lists 'No Endorsement for Public Defender.'",
-  "url": "https://alicebtoklas.org/2026endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "alice-b-toklas",
-  "target_id": "ca-coa-1d-retention",
-  "status": "not_found",
-  "choice": null,
-  "why": "No judicial retention picks on the club's page. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://alicebtoklas.org/2026endorsements",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "lwv-sf",
-  "target_id": "sf-prop-a",
-  "status": "endorsed",
-  "choice": "NO",
-  "why": "Says it 'strips too much power from the people,' moving commissions out of the voter-protected Charter and making commissioner qualifications optional.",
-  "url": "https://lwvsf.org/ballot-recommendations",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "lwv-sf",
-  "target_id": "sf-prop-b",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "A public bank keeps public money working for the public good, with guardrails and no spending requirement.",
-  "url": "https://lwvsf.org/ballot-recommendations",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "lwv-sf",
-  "target_id": "sf-prop-c",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Grows funding for a program that works without raising taxes, with pauses allowed in a budget crunch.",
-  "url": "https://lwvsf.org/ballot-recommendations",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "lwv-sf",
-  "target_id": "sf-prop-d",
-  "status": "endorsed",
-  "choice": "NO",
-  "why": "Says it 'locks regular people out of elections' by quadrupling signature requirements.",
-  "url": "https://lwvsf.org/ballot-recommendations",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "lwv-sf",
-  "target_id": "sf-prop-e",
-  "status": "endorsed",
-  "choice": "NO",
-  "why": "Hands broad authority and a 10-year term to an unelected official 'with little accountability to match.'",
-  "url": "https://lwvsf.org/ballot-recommendations",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "lwv-sf",
-  "target_id": "sf-prop-f",
-  "status": "endorsed",
-  "choice": "NO",
-  "why": "Gives the Mayor sweeping power, revives deputy mayors banned in 1991, and removes the Police Commission's power to fire the chief.",
-  "url": "https://lwvsf.org/ballot-recommendations",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "lwv-sf",
-  "target_id": "sf-prop-h",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Muni needs the money; a size-and-type parcel tax fits its positions on progressive taxes, though it dislikes the tenant pass-through.",
-  "url": "https://lwvsf.org/ballot-recommendations",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "lwv-sf",
-  "target_id": "sf-prop-i",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "A dedicated affordable housing source without a tax increase, paid only on sales of $10 million or more.",
-  "url": "https://lwvsf.org/ballot-recommendations",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "lwv-sf",
-  "target_id": "sf-prop-j",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Ends a tax break that let big lenders off the hook, raising $100 million to $150 million a year.",
-  "url": "https://lwvsf.org/ballot-recommendations",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "lwv-sf",
-  "target_id": "sf-prop-g",
-  "status": "no_position",
-  "choice": null,
-  "why": "Neutral. Its write-up says the park fits League positions and flags the cost, but also its concern about the west side's inadequate transit; the board chose neutral after discussion.",
-  "url": "https://lwvsf.org/ballot-recommendations",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "lwv-sf",
-  "target_id": "bay-area-rtm",
-  "status": "not_found",
-  "choice": null,
-  "why": "LWV San Francisco's page covers city propositions only; the regional League (LWV of the Bay Area) supports the RTM. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://lwvsf.org/ballot-recommendations",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "lwv-bay-area",
-  "target_id": "bay-area-rtm",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "'LWVBA Position: Support.' Cites the need for stable transit funding, an independent oversight committee and agency accountability rules. It also signed the official argument in favor.",
-  "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-labor-council",
-  "target_id": "sf-prop-b",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": null,
-  "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-labor-council",
-  "target_id": "sf-prop-d",
-  "status": "endorsed",
-  "choice": "NO",
-  "why": "Its page says 'Oppose'; the council also wrote the official argument against Prop D.",
-  "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-labor-council",
-  "target_id": "sf-prop-g",
-  "status": "no_position",
-  "choice": null,
-  "why": "Listed as 'No Position.'",
-  "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-labor-council",
-  "target_id": "sf-prop-h",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": null,
-  "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-labor-council",
-  "target_id": "sf-prop-i",
-  "status": "no_position",
-  "choice": null,
-  "why": "Listed as 'No Recommendation.'",
-  "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-labor-council",
-  "target_id": "sf-prop-j",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": null,
-  "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-labor-council",
-  "target_id": "bay-area-rtm",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": null,
-  "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-labor-council",
-  "target_id": "sf-prop-a",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on its endorsement page as of Oct. 17, 2026 (the page says more endorsements are coming).",
-  "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
-  "date": "2026-10-17",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-labor-council",
-  "target_id": "sf-prop-c",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on its endorsement page as of Oct. 17, 2026 (the page says more endorsements are coming).",
-  "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
-  "date": "2026-10-17",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-labor-council",
-  "target_id": "sf-prop-e",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on its endorsement page as of Oct. 17, 2026 (the page says more endorsements are coming).",
-  "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
-  "date": "2026-10-17",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-labor-council",
-  "target_id": "sf-prop-f",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on its endorsement page as of Oct. 17, 2026 (the page says more endorsements are coming).",
-  "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
-  "date": "2026-10-17",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-labor-council",
-  "target_id": "sf-supervisor-2",
-  "status": "endorsed",
-  "choice": "Stephen Sherrill",
-  "why": null,
-  "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-labor-council",
-  "target_id": "sf-supervisor-8",
-  "status": "endorsed",
-  "choice": "Gary McCoy",
-  "why": null,
-  "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-labor-council",
-  "target_id": "sf-board-of-education",
-  "status": "endorsed",
-  "choice": "Virginia Cheung, Ryan Hazelton, Reina Tello",
-  "why": null,
-  "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-labor-council",
-  "target_id": "sf-community-college-board",
-  "status": "endorsed",
-  "choice": "Leah LaCroix, Jeremy Lee, Bunny McFadden",
-  "why": null,
-  "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-labor-council",
-  "target_id": "sf-assessor-recorder",
-  "status": "endorsed",
-  "choice": "Joaquín Torres",
-  "why": null,
-  "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-labor-council",
-  "target_id": "sf-public-defender",
-  "status": "endorsed",
-  "choice": "Mano Raju",
-  "why": null,
-  "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-labor-council",
-  "target_id": "ca-assembly-17",
-  "status": "endorsed",
-  "choice": "Matt Haney",
-  "why": null,
-  "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-labor-council",
-  "target_id": "ca-assembly-19",
-  "status": "endorsed",
-  "choice": "Catherine Stefani",
-  "why": null,
-  "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-labor-council",
-  "target_id": "ca-us-house-11",
-  "status": "endorsed",
-  "choice": "Connie Chan",
-  "why": null,
-  "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-labor-council",
-  "target_id": "ca-us-house-15",
-  "status": "endorsed",
-  "choice": "Kevin Mullin",
-  "why": null,
-  "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-labor-council",
-  "target_id": "sf-supervisor-4",
-  "status": "no_position",
-  "choice": null,
-  "why": "Listed as 'No Recommendation.'",
-  "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-labor-council",
-  "target_id": "sf-supervisor-6",
-  "status": "no_position",
-  "choice": null,
-  "why": "Listed as 'No Recommendation.'",
-  "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-labor-council",
-  "target_id": "sf-supervisor-10",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on its endorsement page as of Oct. 17, 2026 (the page says more endorsements are coming).",
-  "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
-  "date": "2026-10-17",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-labor-council",
-  "target_id": "bart-director-8",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on its endorsement page as of Oct. 17, 2026 (the page says more endorsements are coming).",
-  "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
-  "date": "2026-10-17",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-labor-council",
-  "target_id": "sf-community-college-board-partial",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on its endorsement page as of Oct. 17, 2026 (the page says more endorsements are coming).",
-  "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
-  "date": "2026-10-17",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-labor-council",
-  "target_id": "ca-coa-1d-retention",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on its endorsement page as of Oct. 17, 2026 (the page says more endorsements are coming).",
-  "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
-  "date": "2026-10-17",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chamber",
-  "target_id": "sf-prop-a",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Trims outdated bureaucratic language and modernizes operations for 'greater accountability.'",
-  "url": "https://sfchamber.com/november-2026-voter-guide/",
-  "date": "2026-10-08",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chamber",
-  "target_id": "sf-prop-b",
-  "status": "endorsed",
-  "choice": "NO",
-  "why": "Creates a rigid Charter requirement and 'potential fiscal risk to the City.'",
-  "url": "https://sfchamber.com/november-2026-voter-guide/",
-  "date": "2026-10-08",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chamber",
-  "target_id": "sf-prop-c",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Bolsters affordable housing and helps workers stay in the city.",
-  "url": "https://sfchamber.com/november-2026-voter-guide/",
-  "date": "2026-10-08",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chamber",
-  "target_id": "sf-prop-d",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Brings San Francisco in line with other California jurisdictions, where signature thresholds run 5% to 10%.",
-  "url": "https://sfchamber.com/november-2026-voter-guide/",
-  "date": "2026-10-08",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chamber",
-  "target_id": "sf-prop-e",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Simplifying procurement 'can save the city money and produce better outcomes.'",
-  "url": "https://sfchamber.com/november-2026-voter-guide/",
-  "date": "2026-10-08",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chamber",
-  "target_id": "sf-prop-f",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Mayoral powers will 'foster greater coordination' between departments and the executive branch.",
-  "url": "https://sfchamber.com/november-2026-voter-guide/",
-  "date": "2026-10-08",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chamber",
-  "target_id": "sf-prop-h",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Public transit is 'a critical driver of the San Francisco economy.'",
-  "url": "https://sfchamber.com/november-2026-voter-guide/",
-  "date": "2026-10-08",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chamber",
-  "target_id": "sf-prop-i",
-  "status": "endorsed",
-  "choice": "NO",
-  "why": "Carves General Fund money out for narrow programs 'without a requirement that any new affordable housing be built.'",
-  "url": "https://sfchamber.com/november-2026-voter-guide/",
-  "date": "2026-10-08",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chamber",
-  "target_id": "bay-area-rtm",
-  "status": "endorsed",
-  "choice": "YES",
-  "why": "Bay Area transit is an essential service that brings workers and customers to SF businesses.",
-  "url": "https://sfchamber.com/november-2026-voter-guide/",
-  "date": "2026-10-08",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chamber",
-  "target_id": "sf-prop-g",
-  "status": "no_position",
-  "choice": null,
-  "why": "The Chamber 'has abstained from taking a position on Prop G.'",
-  "url": "https://sfchamber.com/november-2026-voter-guide/",
-  "date": "2026-10-08",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "sf-chamber",
-  "target_id": "sf-prop-j",
-  "status": "no_position",
-  "choice": null,
-  "why": "The Chamber 'has abstained from taking a position on Prop J.'",
-  "url": "https://sfchamber.com/november-2026-voter-guide/",
-  "date": "2026-10-08",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mercury-news-eb",
-  "target_id": "bay-area-rtm",
-  "status": "endorsed",
-  "choice": "NO",
-  "why": "'Opposing the initiative is not a vote against public transit. It's a demand for responsible financial management.'",
-  "url": "https://www.mercurynews.com/2026/10/09/endorsement-no-on-measure-rtm-transit-tax-bart-manufactured-crisis-vta-doesnt-have-one/",
-  "date": "2026-10-09",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mercury-news-eb",
-  "target_id": "ca-coa-1d-retention",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mercury-news-eb",
-  "target_id": "bart-director-8",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mercury-news-eb",
-  "target_id": "ca-assembly-17",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mercury-news-eb",
-  "target_id": "ca-assembly-19",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mercury-news-eb",
-  "target_id": "ca-us-house-11",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mercury-news-eb",
-  "target_id": "ca-us-house-15",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mercury-news-eb",
-  "target_id": "sf-assessor-recorder",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mercury-news-eb",
-  "target_id": "sf-board-of-education",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mercury-news-eb",
-  "target_id": "sf-community-college-board",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mercury-news-eb",
-  "target_id": "sf-community-college-board-partial",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mercury-news-eb",
-  "target_id": "sf-public-defender",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mercury-news-eb",
-  "target_id": "sf-supervisor-10",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mercury-news-eb",
-  "target_id": "sf-supervisor-2",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mercury-news-eb",
-  "target_id": "sf-supervisor-4",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mercury-news-eb",
-  "target_id": "sf-supervisor-6",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mercury-news-eb",
-  "target_id": "sf-supervisor-8",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mercury-news-eb",
-  "target_id": "sf-prop-a",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mercury-news-eb",
-  "target_id": "sf-prop-b",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mercury-news-eb",
-  "target_id": "sf-prop-c",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mercury-news-eb",
-  "target_id": "sf-prop-d",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mercury-news-eb",
-  "target_id": "sf-prop-e",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mercury-news-eb",
-  "target_id": "sf-prop-f",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mercury-news-eb",
-  "target_id": "sf-prop-g",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mercury-news-eb",
-  "target_id": "sf-prop-h",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mercury-news-eb",
-  "target_id": "sf-prop-i",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "mercury-news-eb",
-  "target_id": "sf-prop-j",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 26, 2026; still no pick on this page.",
-  "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "ca-republican-party",
-  "target_id": "ca-assembly-19",
-  "status": "endorsed",
-  "choice": "Philip Louis Wing",
-  "url": "https://cagop.org/endorsements/",
-  "why": "Listed in the published November 2026 endorsement guide.",
-  "date": "2026-10-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "ca-republican-party",
-  "target_id": "ca-us-house-15",
-  "status": "endorsed",
-  "choice": "Charles Hoelter",
-  "url": "https://cagop.org/endorsements/",
-  "why": "Listed in the published November 2026 endorsement guide.",
-  "date": "2026-10-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "lwv-bay-area",
-  "target_id": "sf-prop-a",
-  "status": "not_found",
-  "choice": null,
-  "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
-  "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 26, 2026; still no pick on this page.",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "lwv-bay-area",
-  "target_id": "sf-prop-b",
-  "status": "not_found",
-  "choice": null,
-  "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
-  "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 26, 2026; still no pick on this page.",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "lwv-bay-area",
-  "target_id": "sf-prop-c",
-  "status": "not_found",
-  "choice": null,
-  "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
-  "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 26, 2026; still no pick on this page.",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "lwv-bay-area",
-  "target_id": "sf-prop-d",
-  "status": "not_found",
-  "choice": null,
-  "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
-  "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 26, 2026; still no pick on this page.",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "lwv-bay-area",
-  "target_id": "sf-prop-e",
-  "status": "not_found",
-  "choice": null,
-  "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
-  "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 26, 2026; still no pick on this page.",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "lwv-bay-area",
-  "target_id": "sf-prop-f",
-  "status": "not_found",
-  "choice": null,
-  "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
-  "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 26, 2026; still no pick on this page.",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "lwv-bay-area",
-  "target_id": "sf-prop-g",
-  "status": "not_found",
-  "choice": null,
-  "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
-  "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 26, 2026; still no pick on this page.",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "lwv-bay-area",
-  "target_id": "sf-prop-h",
-  "status": "not_found",
-  "choice": null,
-  "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
-  "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 26, 2026; still no pick on this page.",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "lwv-bay-area",
-  "target_id": "sf-prop-i",
-  "status": "not_found",
-  "choice": null,
-  "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
-  "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 26, 2026; still no pick on this page.",
-  "date": "2026-10-26",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "lwv-bay-area",
-  "target_id": "sf-prop-j",
-  "status": "not_found",
-  "choice": null,
-  "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
-  "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 26, 2026; still no pick on this page.",
-  "date": "2026-10-26",
-  "confidence": "verified"
- }
+  {
+    "endorser_id": "sf-chronicle-eb",
+    "target_id": "sf-prop-a",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Says the Charter has become 'an accumulation of commissions, reporting requirements and procedural rules for a San Francisco that no longer exists,' and Prop A would clean it up.",
+    "url": "https://www.sfchronicle.com/opinion/editorials/article/prop-a-san-francisco-22431575.php",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chronicle-eb",
+    "target_id": "sf-prop-b",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Calls a public bank 'a noble' idea but says 'good intentions do not automatically make a good institution' and Prop B 'is set up to fail.'",
+    "url": "https://www.sfchronicle.com/opinion/editorials/article/prop-b-bank-san-francisco-22422523.php",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chronicle-eb",
+    "target_id": "sf-prop-c",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Won't solve the housing crisis but provides 'a predictable source of public investment' as building costs rise.",
+    "url": "https://www.sfchronicle.com/opinion/editorials/article/prop-c-housing-san-francisco-22443843.php",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chronicle-eb",
+    "target_id": "sf-prop-d",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Says Prop D 'contains many essential fixes' for San Francisco's long ballots and the bad policies they produce.",
+    "url": "https://www.sfchronicle.com/opinion/editorials/article/prop-d-san-francisco-ballot-22438203.php",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chronicle-eb",
+    "target_id": "sf-prop-e",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Says political oversight of contracting has failed and the city 'has little to lose and much to gain by professionalizing the way it does business.'",
+    "url": "https://www.sfchronicle.com/opinion/editorials/article/prop-e-san-francisco-22413304.php",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chronicle-eb",
+    "target_id": "sf-prop-f",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Says the Charter has too much organizational detail and Prop F gives the mayor management tools 'while preserving review by the Board of Supervisors and the public.'",
+    "url": "https://www.sfchronicle.com/opinion/editorials/article/prop-f-mayor-san-francisco-22469130.php",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chronicle-eb",
+    "target_id": "sf-prop-g",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Cites Sunset Dunes' 1.7 million visits and the Controller's $9.8 million cost estimate; it endorsed Prop K in 2024 and still backs the park.",
+    "url": "https://www.sfchronicle.com/opinion/editorials/article/prop-g-sunset-dunes-highway-22443671.php",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chronicle-eb",
+    "target_id": "sf-prop-h",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Cites Muni's $307 million yearly shortfall and possible elimination of 19 bus lines; says Prop H 'would help stem the bleeding.'",
+    "url": "https://www.sfchronicle.com/opinion/editorials/article/prop-h-muni-san-francisco-22456325.php",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chronicle-eb",
+    "target_id": "sf-prop-i",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Calls Prop I 'a cocktail of poison pills that will actually make San Francisco's housing crisis worse.'",
+    "url": "https://www.sfchronicle.com/opinion/editorials/article/prop-i-housing-san-francisco-22459341.php",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chronicle-eb",
+    "target_id": "bay-area-rtm",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Agrees a sales tax is regressive and BART needs accountability, but calls it 'a necessary investment in keeping the region's transit system functioning.'",
+    "url": "https://www.sfchronicle.com/opinion/editorials/article/regional-transit-measure-bay-area-22424231.php",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chronicle-eb",
+    "target_id": "sf-prop-j",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "The board says Prop J closes a loophole in the city's transfer tax, and supports it expecting the city to treat the money as temporary and find more targeted ways to get distressed properties back into use.",
+    "url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
+    "date": "2026-10-24",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chronicle-eb",
+    "target_id": "ca-us-house-11",
+    "status": "endorsed",
+    "choice": "Scott Wiener",
+    "why": "Calls Wiener 'the state's most relentless and effective legislator' and says Chan's record is 'as spotty as it is sparse.'",
+    "url": "https://www.sfchronicle.com/opinion/editorials/article/scott-wiener-connie-chan-pelosi-22448323.php",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chronicle-eb",
+    "target_id": "ca-coa-1d-retention",
+    "status": "endorsed",
+    "choice": "YES on all 11 justices",
+    "why": "None of the justices up for retention has been cited for discipline; recommends retaining every one.",
+    "url": "https://www.sfchronicle.com/opinion/editorials/article/supreme-court-judge-california-22431608.php",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chronicle-eb",
+    "target_id": "sf-supervisor-2",
+    "status": "endorsed",
+    "choice": "Stephen Sherrill",
+    "why": "Credits his work with the Lurie administration on Charter reform and spending transparency; 'no reason for District 2 voters to change course.'",
+    "url": "https://www.sfchronicle.com/opinion/editorials/article/stephen-sherrill-supervisor-san-francisco-22477061.php",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chronicle-eb",
+    "target_id": "sf-supervisor-4",
+    "status": "endorsed",
+    "choice": "Alan Wong",
+    "why": "Endorsed him in the special election; says his opponents are 'political novices' without the government experience needed.",
+    "url": "https://www.sfchronicle.com/opinion/editorials/article/alan-wong-sunset-supervisor-22465701.php",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chronicle-eb",
+    "target_id": "sf-supervisor-6",
+    "status": "endorsed",
+    "choice": "Matt Dorsey",
+    "why": "Says Dorsey takes the city's problems seriously and works with colleagues who see things differently, 'his X persona notwithstanding.'",
+    "url": "https://www.sfchronicle.com/opinion/editorials/article/matt-dorsey-alex-behrend-san-francisco-22477293.php",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chronicle-eb",
+    "target_id": "sf-supervisor-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Chronicle's endorsement page still says 'Coming Soon' for this one as of its Oct 18, 2026 update. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chronicle-eb",
+    "target_id": "sf-supervisor-10",
+    "status": "endorsed",
+    "choice": "Theo Ellington",
+    "why": "The board says Ellington's roots in the district and his experience and ability to work across economic, social and political lines make him the strongest choice.",
+    "url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
+    "date": "2026-10-24",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chronicle-eb",
+    "target_id": "sf-board-of-education",
+    "status": "endorsed",
+    "choice": "Phil Kim, Autumn Brown Garibay, Tim Tung",
+    "why": "Says the next school board must help finalize and implement the new system, and that Kim, Brown Garibay and Tung are best suited for the job.",
+    "url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
+    "date": "2026-10-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chronicle-eb",
+    "target_id": "sf-community-college-board",
+    "status": "endorsed",
+    "choice": "Elijah Ball, Monroe Lace, Erwin Tam",
+    "why": "Says recent turmoil makes this election critical for City College and its 43,000 students, and that voters are lucky to have three impressive candidates ready for the challenge.",
+    "url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
+    "date": "2026-10-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chronicle-eb",
+    "target_id": "ca-us-house-15",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Chronicle's endorsement page as of its Oct 18, 2026 update, and not listed there as coming soon. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chronicle-eb",
+    "target_id": "ca-assembly-17",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Chronicle's endorsement page as of its Oct 18, 2026 update, and not listed there as coming soon. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chronicle-eb",
+    "target_id": "ca-assembly-19",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Chronicle's endorsement page as of its Oct 18, 2026 update, and not listed there as coming soon. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chronicle-eb",
+    "target_id": "sf-community-college-board-partial",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Chronicle's endorsement page as of its Oct 18, 2026 update, and not listed there as coming soon. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chronicle-eb",
+    "target_id": "bart-director-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Chronicle's endorsement page as of its Oct 18, 2026 update, and not listed there as coming soon. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chronicle-eb",
+    "target_id": "sf-assessor-recorder",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Chronicle's endorsement page as of its Oct 18, 2026 update, and not listed there as coming soon. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chronicle-eb",
+    "target_id": "sf-public-defender",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Chronicle's endorsement page as of its Oct 18, 2026 update, and not listed there as coming soon. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-democratic-party",
+    "target_id": "sf-prop-a",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": null,
+    "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-democratic-party",
+    "target_id": "sf-prop-b",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": null,
+    "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-democratic-party",
+    "target_id": "sf-prop-c",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": null,
+    "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-democratic-party",
+    "target_id": "sf-prop-d",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": null,
+    "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-democratic-party",
+    "target_id": "sf-prop-e",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": null,
+    "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-democratic-party",
+    "target_id": "sf-prop-f",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": null,
+    "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-democratic-party",
+    "target_id": "sf-prop-g",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": null,
+    "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-democratic-party",
+    "target_id": "sf-prop-h",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": null,
+    "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-democratic-party",
+    "target_id": "sf-prop-i",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": null,
+    "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-democratic-party",
+    "target_id": "sf-prop-j",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": null,
+    "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-democratic-party",
+    "target_id": "bay-area-rtm",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": null,
+    "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-democratic-party",
+    "target_id": "ca-us-house-11",
+    "status": "endorsed",
+    "choice": "Scott Wiener",
+    "why": null,
+    "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-democratic-party",
+    "target_id": "ca-us-house-15",
+    "status": "endorsed",
+    "choice": "Kevin Mullin",
+    "why": null,
+    "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-democratic-party",
+    "target_id": "ca-assembly-17",
+    "status": "endorsed",
+    "choice": "Matt Haney",
+    "why": null,
+    "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-democratic-party",
+    "target_id": "ca-assembly-19",
+    "status": "endorsed",
+    "choice": "Catherine Stefani",
+    "why": null,
+    "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-democratic-party",
+    "target_id": "sf-board-of-education",
+    "status": "endorsed",
+    "choice": "Autumn Brown Garibay, Phil Kim, Tim Tung",
+    "why": null,
+    "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-democratic-party",
+    "target_id": "sf-community-college-board",
+    "status": "endorsed",
+    "choice": "Elijah Ball, Monroe Lace, Erwin Tam",
+    "why": null,
+    "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-democratic-party",
+    "target_id": "sf-community-college-board-partial",
+    "status": "endorsed",
+    "choice": "Ruth Ferguson",
+    "why": null,
+    "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-democratic-party",
+    "target_id": "bart-director-8",
+    "status": "endorsed",
+    "choice": "Sara Barz",
+    "why": null,
+    "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-democratic-party",
+    "target_id": "sf-assessor-recorder",
+    "status": "endorsed",
+    "choice": "Joaquín Torres",
+    "why": null,
+    "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-democratic-party",
+    "target_id": "sf-public-defender",
+    "status": "endorsed",
+    "choice": "Mano Raju",
+    "why": null,
+    "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-democratic-party",
+    "target_id": "sf-supervisor-2",
+    "status": "endorsed",
+    "choice": "Stephen Sherrill",
+    "why": null,
+    "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-democratic-party",
+    "target_id": "sf-supervisor-4",
+    "status": "endorsed",
+    "choice": "Alan Wong",
+    "why": null,
+    "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-democratic-party",
+    "target_id": "sf-supervisor-6",
+    "status": "endorsed",
+    "choice": "Matt Dorsey",
+    "why": null,
+    "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-democratic-party",
+    "target_id": "sf-supervisor-8",
+    "status": "endorsed",
+    "choice": "Gary McCoy",
+    "why": null,
+    "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-democratic-party",
+    "target_id": "sf-supervisor-10",
+    "status": "endorsed",
+    "choice": "Theo Ellington",
+    "why": null,
+    "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-democratic-party",
+    "target_id": "ca-coa-1d-retention",
+    "status": "not_found",
+    "choice": null,
+    "why": "No judicial retention picks on the party's Nov. 3 guide. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-republican-party",
+    "target_id": "sf-prop-a",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Says it streamlines a 'bloated City Charter' and the tangle of oversight committees.",
+    "url": "https://sfgop.org/nov-2026-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-republican-party",
+    "target_id": "sf-prop-b",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Says city government lacks 'the competence, integrity, and incentives to run a bank.'",
+    "url": "https://sfgop.org/nov-2026-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-republican-party",
+    "target_id": "sf-prop-c",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Calls it another budget set-aside during a structural deficit.",
+    "url": "https://sfgop.org/nov-2026-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-republican-party",
+    "target_id": "sf-prop-d",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Opposes quadrupling the signatures for citizen initiatives: 'The initiative process belongs to the people.'",
+    "url": "https://sfgop.org/nov-2026-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-republican-party",
+    "target_id": "sf-prop-e",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Says it puts accountability for city services where voters can reach it.",
+    "url": "https://sfgop.org/nov-2026-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-republican-party",
+    "target_id": "sf-prop-f",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Says the Mayor needs authority over departments to be accountable, with the Board able to block changes.",
+    "url": "https://sfgop.org/nov-2026-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-republican-party",
+    "target_id": "sf-prop-g",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Says Westside families 'were promised a compromise and got a road closure.'",
+    "url": "https://sfgop.org/nov-2026-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-republican-party",
+    "target_id": "sf-prop-h",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Calls it a 15-year tax 'to bail out an agency that refuses to reform itself.'",
+    "url": "https://sfgop.org/nov-2026-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-republican-party",
+    "target_id": "sf-prop-i",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Calls it an earmark gathered largely by DSA and quotes Mayor Lurie calling it 'an unaccountable slush fund.'",
+    "url": "https://sfgop.org/nov-2026-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-republican-party",
+    "target_id": "sf-prop-j",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Says it squeezes property owners 'at their most vulnerable moment.'",
+    "url": "https://sfgop.org/nov-2026-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-republican-party",
+    "target_id": "bay-area-rtm",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Objects that San Francisco would pay 1%, double the other counties, on top of already high sales taxes.",
+    "url": "https://sfgop.org/nov-2026-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-republican-party",
+    "target_id": "ca-us-house-11",
+    "status": "no_position",
+    "choice": null,
+    "why": "Endorses neither candidate. Its page tells voters not to vote for Scott Wiener, saying he 'wrote the book on overregulation in California.'",
+    "url": "https://sfgop.org/nov-2026-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-republican-party",
+    "target_id": "ca-us-house-15",
+    "status": "endorsed",
+    "choice": "Charles Hoelter",
+    "why": "Calls him 'a citizen candidate, not a career politician.'",
+    "url": "https://sfgop.org/nov-2026-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-republican-party",
+    "target_id": "ca-assembly-17",
+    "status": "endorsed",
+    "choice": "Manuel Noris-Barrera",
+    "why": "Credits him with running as a June write-in so east-side voters would have a choice.",
+    "url": "https://sfgop.org/nov-2026-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-republican-party",
+    "target_id": "ca-assembly-19",
+    "status": "endorsed",
+    "choice": "Philip Louis Wing",
+    "why": "Cites his career as a financial advisor helping families 'live within their means.'",
+    "url": "https://sfgop.org/nov-2026-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-republican-party",
+    "target_id": "sf-supervisor-2",
+    "status": "endorsed",
+    "choice": "Nicholas Berg",
+    "why": "Full endorsement; Berg is the SF Republican Party's chairman.",
+    "url": "https://sfgop.org/nov-2026-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-republican-party",
+    "target_id": "sf-supervisor-4",
+    "status": "endorsed",
+    "choice": "Alan Wong (recommended)",
+    "why": "Marked 'Recommended,' not a full endorsement: best positioned 'to stand up for safe streets, functional government.'",
+    "url": "https://sfgop.org/nov-2026-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-republican-party",
+    "target_id": "sf-supervisor-6",
+    "status": "endorsed",
+    "choice": "Matt Dorsey (recommended)",
+    "why": "Marked 'Recommended,' not a full endorsement.",
+    "url": "https://sfgop.org/nov-2026-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-republican-party",
+    "target_id": "sf-supervisor-8",
+    "status": "no_position",
+    "choice": null,
+    "why": "'At this time, we are making no endorsements' in District 8.",
+    "url": "https://sfgop.org/nov-2026-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-republican-party",
+    "target_id": "sf-supervisor-10",
+    "status": "no_position",
+    "choice": null,
+    "why": "'At this time, we are making no endorsements' in District 10.",
+    "url": "https://sfgop.org/nov-2026-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-republican-party",
+    "target_id": "sf-board-of-education",
+    "status": "endorsed",
+    "choice": "Laurance Lee, Phil Kim, Tim Tung (recommended)",
+    "why": "Marked 'Recommended'; wants schools focused on 'reading, math, and preparing kids for real opportunity.'",
+    "url": "https://sfgop.org/nov-2026-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-republican-party",
+    "target_id": "sf-community-college-board",
+    "status": "endorsed",
+    "choice": "Elijah Ball (recommended)",
+    "why": "Recommends one candidate for the three seats.",
+    "url": "https://sfgop.org/nov-2026-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-republican-party",
+    "target_id": "sf-community-college-board-partial",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the party's Nov. 2026 page.",
+    "url": "https://sfgop.org/nov-2026-endorsements",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-republican-party",
+    "target_id": "bart-director-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the party's Nov. 2026 page.",
+    "url": "https://sfgop.org/nov-2026-endorsements",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-republican-party",
+    "target_id": "sf-assessor-recorder",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the party's Nov. 2026 page.",
+    "url": "https://sfgop.org/nov-2026-endorsements",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-republican-party",
+    "target_id": "sf-public-defender",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the party's Nov. 2026 page.",
+    "url": "https://sfgop.org/nov-2026-endorsements",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-republican-party",
+    "target_id": "ca-coa-1d-retention",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the party's Nov. 2026 page.",
+    "url": "https://sfgop.org/nov-2026-endorsements",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "spur",
+    "target_id": "sf-prop-a",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Nearly all changes are technical housekeeping that simplify and modernize the Charter, in line with SPUR's Charter for Change work.",
+    "url": "https://www.spur.org/voter-guide/2026-11/pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "spur",
+    "target_id": "sf-prop-b",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Sees promise in a public bank but objects to writing detailed governance and new commissions into the Charter when an ordinance would do.",
+    "url": "https://www.spur.org/voter-guide/2026-11/pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "spur",
+    "target_id": "sf-prop-c",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Affordable housing needs reliable funding; the measure's freeze-and-reduce safeguards ease its concern about set-asides.",
+    "url": "https://www.spur.org/voter-guide/2026-11/pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "spur",
+    "target_id": "sf-prop-d",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Today's paths to the ballot are unusually permissive; benefits outweigh making grassroots initiatives harder, and thresholds stay below most California cities.",
+    "url": "https://www.spur.org/voter-guide/2026-11/pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "spur",
+    "target_id": "sf-prop-e",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Procurement is so fragmented that no one is accountable; the changes are ones SPUR recommended.",
+    "url": "https://www.spur.org/voter-guide/2026-11/pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "spur",
+    "target_id": "sf-prop-f",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Adopts many SPUR recommendations to let the mayor pick and hold department heads accountable, with Board review kept.",
+    "url": "https://www.spur.org/voter-guide/2026-11/pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "spur",
+    "target_id": "sf-prop-g",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Would undo a successful coastal climate-adaptation effort and reduce shared open space.",
+    "url": "https://www.spur.org/voter-guide/2026-11/pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "spur",
+    "target_id": "sf-prop-h",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "High-quality transit 'is not optional'; the tax structure is fair and service cuts would hit vulnerable riders first.",
+    "url": "https://www.spur.org/voter-guide/2026-11/pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "spur",
+    "target_id": "sf-prop-i",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Permanently diverts General Fund money during a structural deficit and removes the Board's ability to adjust the tax.",
+    "url": "https://www.spur.org/voter-guide/2026-11/pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "spur",
+    "target_id": "sf-prop-j",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Closing the foreclosure loophole raises revenue without hurting homeowners or small landlords.",
+    "url": "https://www.spur.org/voter-guide/2026-11/pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "spur",
+    "target_id": "bay-area-rtm",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Reliable transit funding outweighs concerns about a regressive sales tax.",
+    "url": "https://www.spur.org/voter-guide/2026-11/pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "growsf",
+    "target_id": "sf-prop-a",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Says too many commissions blur responsibility; cites a civil grand jury count of 152 commissions.",
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#prop-a",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "growsf",
+    "target_id": "sf-prop-b",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Says the city doesn't need a public bank and the measure 'is riddled with errors,' including an FDIC insurance requirement it calls unattainable.",
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#prop-b",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "growsf",
+    "target_id": "sf-prop-c",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Prefers funding subsidized housing directly over taxing new construction through inclusionary requirements.",
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#prop-c",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "growsf",
+    "target_id": "sf-prop-d",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Says San Francisco votes on too many ballot measures: 10 this year, 24 in 2016.",
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#prop-d",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "growsf",
+    "target_id": "sf-prop-e",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Points to the $1.7 million toilet and rules that forced hundreds of waivers; one rulebook with one person in charge.",
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#prop-e",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "growsf",
+    "target_id": "sf-prop-f",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "The Mayor can hire and fire only about 6% of department heads; Prop F lets the Mayor fix failing departments and answer to voters.",
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#prop-f",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "growsf",
+    "target_id": "sf-prop-g",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Voters already decided this twice (2022 and 2024), and G would lock a road schedule into law that only voters could change.",
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#prop-g",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "growsf",
+    "target_id": "sf-prop-h",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Muni faces a $307 million deficit after cutting $246 million in costs; without new money it would cut up to 20 routes.",
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#prop-h",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "growsf",
+    "target_id": "sf-prop-i",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Removes $120 million a year from the General Fund amid a projected deficit and locks in a high transfer tax.",
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#prop-i",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "growsf",
+    "target_id": "sf-prop-j",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Investors buying defaulted loans now skip a tax every other seller pays; foreclosure exemptions jumped to $450 million in three years.",
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#prop-j",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "growsf",
+    "target_id": "bay-area-rtm",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "BART has no backup if the measure fails; transit agencies have already documented more than $1 billion in savings.",
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#prop-rtm",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "growsf",
+    "target_id": "ca-us-house-11",
+    "status": "endorsed",
+    "choice": "Scott Wiener",
+    "why": "Cites his record passing major pro-housing and transit laws.",
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#house-of-representatives-district-11",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "growsf",
+    "target_id": "ca-us-house-15",
+    "status": "endorsed",
+    "choice": "Kevin Mullin",
+    "why": "Preliminary endorsement; Mullin did not return its questionnaire.",
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#house-of-representatives-district-15",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "growsf",
+    "target_id": "ca-assembly-17",
+    "status": "endorsed",
+    "choice": "Matt Haney",
+    "why": "Cites his office-to-housing law (AB 507) and record of getting bills signed.",
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#state-assemblymember-district-17",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "growsf",
+    "target_id": "ca-assembly-19",
+    "status": "endorsed",
+    "choice": "Catherine Stefani",
+    "why": "Cites seven bills signed in 2025; notes some concerns about alignment with Sacramento interest groups.",
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#state-assemblymember-district-19",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "growsf",
+    "target_id": "ca-coa-1d-retention",
+    "status": "endorsed",
+    "choice": "YES on all 11 justices",
+    "why": "None appears in the Commission on Judicial Performance's public discipline record.",
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#justice-court-of-appeal-retention",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "growsf",
+    "target_id": "sf-board-of-education",
+    "status": "endorsed",
+    "choice": "Autumn Brown Garibay, Phil Kim, Tim Tung",
+    "why": null,
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#board-of-education",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "growsf",
+    "target_id": "sf-community-college-board",
+    "status": "endorsed",
+    "choice": "Elijah Ball, Monroe Lace, Erwin Tam",
+    "why": null,
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#community-college-board",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "growsf",
+    "target_id": "sf-community-college-board-partial",
+    "status": "endorsed",
+    "choice": "Ruth Ferguson",
+    "why": null,
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#community-college-board-partial-term",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "growsf",
+    "target_id": "bart-director-8",
+    "status": "endorsed",
+    "choice": "Sara Barz",
+    "why": "Cites her career on regional transit integration and Clipper fare programs.",
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#bart-board-district-8",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "growsf",
+    "target_id": "sf-assessor-recorder",
+    "status": "endorsed",
+    "choice": "Joaquín Torres",
+    "why": "Cites completing the office's technology overhaul and putting recorded documents online for free.",
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#assessor-recorder",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "growsf",
+    "target_id": "sf-public-defender",
+    "status": "endorsed",
+    "choice": "Mano Raju",
+    "why": "Calls it 'a weak endorsement,' faulting the office for refusing new cases one day a week and a contempt finding in March 2026.",
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#public-defender",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "growsf",
+    "target_id": "sf-supervisor-2",
+    "status": "endorsed",
+    "choice": "Stephen Sherrill",
+    "why": "Cites his focus on public safety, small business and responsive government.",
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#supervisor-district-2",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "growsf",
+    "target_id": "sf-supervisor-4",
+    "status": "endorsed",
+    "choice": "Alan Wong",
+    "why": "Cites his votes for the Family Zoning Plan and police funding, and his support for reopening the Great Highway.",
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#supervisor-district-4",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "growsf",
+    "target_id": "sf-supervisor-6",
+    "status": "endorsed",
+    "choice": "Matt Dorsey",
+    "why": "Cites his Recovery First and drug-free housing laws and focus on police staffing.",
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#supervisor-district-6",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "growsf",
+    "target_id": "sf-supervisor-8",
+    "status": "endorsed",
+    "choice": "Darshini Patel (rank #1)",
+    "why": "Recommends her as voters' first choice for her housing positions and data-driven approach.",
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#supervisor-district-8",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "growsf",
+    "target_id": "sf-supervisor-10",
+    "status": "endorsed",
+    "choice": "Theo Ellington",
+    "why": "Cites his plan to get District 10's approved-but-unbuilt homes built and his public safety platform.",
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/#supervisor-district-10",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sflcv",
+    "target_id": "sf-prop-a",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": null,
+    "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-vote-yes-on-proposition-a-charter-changes-affecting-departments-and-commissions",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sflcv",
+    "target_id": "sf-prop-b",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": null,
+    "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-vote-yes-on-prop-b-to-establish-a-municipal-finance-corporation-and-public-bank",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sflcv",
+    "target_id": "sf-prop-c",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": null,
+    "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-vote-yes-on-proposition-c-the-housing-trust-fund-charter-amendment",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sflcv",
+    "target_id": "sf-prop-d",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": null,
+    "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-vote-yes-on-prop-d-for-hopefully-shorter-ballots",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sflcv",
+    "target_id": "sf-prop-e",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": null,
+    "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-vote-yes-on-proposition-e-the-city-administrator-and-city-contracting-reform-charter-amendment",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sflcv",
+    "target_id": "sf-prop-f",
+    "status": "no_position",
+    "choice": null,
+    "why": "Listed as 'No Position' on its endorsements page.",
+    "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-no-recommendation-on-prop-f",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sflcv",
+    "target_id": "sf-prop-g",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": null,
+    "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-vote-no-on-prop-g-to-protect-sunset-dunes-park-recreation-space-and-san-franciscos-budget",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sflcv",
+    "target_id": "sf-prop-h",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": null,
+    "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-vote-yes-on-prop-h-and-rtm",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sflcv",
+    "target_id": "sf-prop-i",
+    "status": "no_position",
+    "choice": null,
+    "why": "Listed as 'No Position' on its endorsements page.",
+    "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-no-recommendation-on-prop-i",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sflcv",
+    "target_id": "bay-area-rtm",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": null,
+    "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-vote-yes-on-prop-h-and-rtm",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sflcv",
+    "target_id": "sf-prop-j",
+    "status": "not_found",
+    "choice": null,
+    "why": "Prop J is not on its November 2026 endorsements list. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.sflcv.org/endorsements",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sflcv",
+    "target_id": "sf-supervisor-2",
+    "status": "endorsed",
+    "choice": "Stephen Sherrill",
+    "why": null,
+    "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-sflcv-endorses-stephen-sherrill-for-district-2-supervisor",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sflcv",
+    "target_id": "sf-supervisor-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "Listed as 'No Endorsement' for District 4.",
+    "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-no-endorsement-for-district-4-supervisor",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sflcv",
+    "target_id": "sf-supervisor-6",
+    "status": "endorsed",
+    "choice": "Matt Dorsey",
+    "why": null,
+    "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-sflcv-endorses-matt-dorsey-for-district-6-supervisor",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sflcv",
+    "target_id": "sf-supervisor-8",
+    "status": "endorsed",
+    "choice": "Gary McCoy",
+    "why": null,
+    "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-sflcv-endorses-gary-mccoy-for-district-8-supervisor",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sflcv",
+    "target_id": "sf-supervisor-10",
+    "status": "endorsed",
+    "choice": "Theo Ellington",
+    "why": null,
+    "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-sflcv-endorses-theo-ellington-for-district-10-supervisor",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sflcv",
+    "target_id": "bart-director-8",
+    "status": "endorsed",
+    "choice": "Sara Barz",
+    "why": null,
+    "url": "https://www.sflcv.org/blog/2026/9/29/november-2026-sflcv-endorses-sara-barz-for-bart-district-8-director",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sflcv",
+    "target_id": "sf-community-college-board",
+    "status": "endorsed",
+    "choice": "Elijah Ball",
+    "why": "Endorses one candidate for the three seats.",
+    "url": "https://www.sflcv.org/endorsements",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sflcv",
+    "target_id": "sf-board-of-education",
+    "status": "endorsed",
+    "choice": "Alida Fisher, Phil Kim, Tim Tung",
+    "why": null,
+    "url": "https://www.sflcv.org/endorsements",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sflcv",
+    "target_id": "ca-us-house-11",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on its November 2026 endorsements list, which covers local races. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.sflcv.org/endorsements",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sflcv",
+    "target_id": "ca-us-house-15",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on its November 2026 endorsements list, which covers local races. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.sflcv.org/endorsements",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sflcv",
+    "target_id": "ca-assembly-17",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on its November 2026 endorsements list, which covers local races. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.sflcv.org/endorsements",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sflcv",
+    "target_id": "ca-assembly-19",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on its November 2026 endorsements list, which covers local races. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.sflcv.org/endorsements",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sflcv",
+    "target_id": "sf-community-college-board-partial",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on its November 2026 endorsements list, which covers local races. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.sflcv.org/endorsements",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sflcv",
+    "target_id": "sf-assessor-recorder",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on its November 2026 endorsements list, which covers local races. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.sflcv.org/endorsements",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sflcv",
+    "target_id": "sf-public-defender",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on its November 2026 endorsements list, which covers local races. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.sflcv.org/endorsements",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sflcv",
+    "target_id": "ca-coa-1d-retention",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on its November 2026 endorsements list, which covers local races. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.sflcv.org/endorsements",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "alice-b-toklas",
+    "target_id": "sf-prop-a",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": null,
+    "url": "https://alicebtoklas.org/2026endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "alice-b-toklas",
+    "target_id": "sf-prop-b",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": null,
+    "url": "https://alicebtoklas.org/2026endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "alice-b-toklas",
+    "target_id": "sf-prop-c",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": null,
+    "url": "https://alicebtoklas.org/2026endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "alice-b-toklas",
+    "target_id": "sf-prop-d",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": null,
+    "url": "https://alicebtoklas.org/2026endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "alice-b-toklas",
+    "target_id": "sf-prop-e",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": null,
+    "url": "https://alicebtoklas.org/2026endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "alice-b-toklas",
+    "target_id": "sf-prop-f",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": null,
+    "url": "https://alicebtoklas.org/2026endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "alice-b-toklas",
+    "target_id": "sf-prop-g",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": null,
+    "url": "https://alicebtoklas.org/2026endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "alice-b-toklas",
+    "target_id": "sf-prop-h",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": null,
+    "url": "https://alicebtoklas.org/2026endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "alice-b-toklas",
+    "target_id": "sf-prop-i",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": null,
+    "url": "https://alicebtoklas.org/2026endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "alice-b-toklas",
+    "target_id": "sf-prop-j",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": null,
+    "url": "https://alicebtoklas.org/2026endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "alice-b-toklas",
+    "target_id": "bay-area-rtm",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": null,
+    "url": "https://alicebtoklas.org/2026endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "alice-b-toklas",
+    "target_id": "ca-us-house-11",
+    "status": "endorsed",
+    "choice": "Scott Wiener",
+    "why": null,
+    "url": "https://alicebtoklas.org/2026endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "alice-b-toklas",
+    "target_id": "ca-us-house-15",
+    "status": "endorsed",
+    "choice": "Kevin Mullin",
+    "why": null,
+    "url": "https://alicebtoklas.org/2026endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "alice-b-toklas",
+    "target_id": "ca-assembly-17",
+    "status": "endorsed",
+    "choice": "Matt Haney",
+    "why": null,
+    "url": "https://alicebtoklas.org/2026endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "alice-b-toklas",
+    "target_id": "ca-assembly-19",
+    "status": "endorsed",
+    "choice": "Catherine Stefani",
+    "why": null,
+    "url": "https://alicebtoklas.org/2026endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "alice-b-toklas",
+    "target_id": "sf-assessor-recorder",
+    "status": "endorsed",
+    "choice": "Joaquín Torres",
+    "why": null,
+    "url": "https://alicebtoklas.org/2026endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "alice-b-toklas",
+    "target_id": "sf-supervisor-2",
+    "status": "endorsed",
+    "choice": "Stephen Sherrill",
+    "why": null,
+    "url": "https://alicebtoklas.org/2026endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "alice-b-toklas",
+    "target_id": "sf-supervisor-4",
+    "status": "endorsed",
+    "choice": "Alan Wong",
+    "why": null,
+    "url": "https://alicebtoklas.org/2026endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "alice-b-toklas",
+    "target_id": "sf-supervisor-6",
+    "status": "endorsed",
+    "choice": "Matt Dorsey",
+    "why": null,
+    "url": "https://alicebtoklas.org/2026endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "alice-b-toklas",
+    "target_id": "sf-supervisor-8",
+    "status": "endorsed",
+    "choice": "Gary McCoy",
+    "why": null,
+    "url": "https://alicebtoklas.org/2026endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "alice-b-toklas",
+    "target_id": "sf-supervisor-10",
+    "status": "endorsed",
+    "choice": "Theo Ellington",
+    "why": null,
+    "url": "https://alicebtoklas.org/2026endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "alice-b-toklas",
+    "target_id": "sf-board-of-education",
+    "status": "endorsed",
+    "choice": "Phil Kim, Alida Fisher, Autumn Brown Garibay",
+    "why": null,
+    "url": "https://alicebtoklas.org/2026endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "alice-b-toklas",
+    "target_id": "sf-community-college-board",
+    "status": "endorsed",
+    "choice": "Elijah Ball, Monroe Lace, Erwin Tam",
+    "why": null,
+    "url": "https://alicebtoklas.org/2026endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "alice-b-toklas",
+    "target_id": "sf-community-college-board-partial",
+    "status": "endorsed",
+    "choice": "Ruth Ferguson",
+    "why": null,
+    "url": "https://alicebtoklas.org/2026endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "alice-b-toklas",
+    "target_id": "bart-director-8",
+    "status": "endorsed",
+    "choice": "Sara Barz",
+    "why": null,
+    "url": "https://alicebtoklas.org/2026endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "alice-b-toklas",
+    "target_id": "sf-public-defender",
+    "status": "no_position",
+    "choice": null,
+    "why": "The club lists 'No Endorsement for Public Defender.'",
+    "url": "https://alicebtoklas.org/2026endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "alice-b-toklas",
+    "target_id": "ca-coa-1d-retention",
+    "status": "not_found",
+    "choice": null,
+    "why": "No judicial retention picks on the club's page. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://alicebtoklas.org/2026endorsements",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-sf",
+    "target_id": "sf-prop-a",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Says it 'strips too much power from the people,' moving commissions out of the voter-protected Charter and making commissioner qualifications optional.",
+    "url": "https://lwvsf.org/ballot-recommendations",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-sf",
+    "target_id": "sf-prop-b",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "A public bank keeps public money working for the public good, with guardrails and no spending requirement.",
+    "url": "https://lwvsf.org/ballot-recommendations",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-sf",
+    "target_id": "sf-prop-c",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Grows funding for a program that works without raising taxes, with pauses allowed in a budget crunch.",
+    "url": "https://lwvsf.org/ballot-recommendations",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-sf",
+    "target_id": "sf-prop-d",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Says it 'locks regular people out of elections' by quadrupling signature requirements.",
+    "url": "https://lwvsf.org/ballot-recommendations",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-sf",
+    "target_id": "sf-prop-e",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Hands broad authority and a 10-year term to an unelected official 'with little accountability to match.'",
+    "url": "https://lwvsf.org/ballot-recommendations",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-sf",
+    "target_id": "sf-prop-f",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Gives the Mayor sweeping power, revives deputy mayors banned in 1991, and removes the Police Commission's power to fire the chief.",
+    "url": "https://lwvsf.org/ballot-recommendations",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-sf",
+    "target_id": "sf-prop-h",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Muni needs the money; a size-and-type parcel tax fits its positions on progressive taxes, though it dislikes the tenant pass-through.",
+    "url": "https://lwvsf.org/ballot-recommendations",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-sf",
+    "target_id": "sf-prop-i",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "A dedicated affordable housing source without a tax increase, paid only on sales of $10 million or more.",
+    "url": "https://lwvsf.org/ballot-recommendations",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-sf",
+    "target_id": "sf-prop-j",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Ends a tax break that let big lenders off the hook, raising $100 million to $150 million a year.",
+    "url": "https://lwvsf.org/ballot-recommendations",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-sf",
+    "target_id": "sf-prop-g",
+    "status": "no_position",
+    "choice": null,
+    "why": "Neutral. Its write-up says the park fits League positions and flags the cost, but also its concern about the west side's inadequate transit; the board chose neutral after discussion.",
+    "url": "https://lwvsf.org/ballot-recommendations",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-sf",
+    "target_id": "bay-area-rtm",
+    "status": "not_found",
+    "choice": null,
+    "why": "LWV San Francisco's page covers city propositions only; the regional League (LWV of the Bay Area) supports the RTM. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://lwvsf.org/ballot-recommendations",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-bay-area",
+    "target_id": "bay-area-rtm",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "'LWVBA Position: Support.' Cites the need for stable transit funding, an independent oversight committee and agency accountability rules. It also signed the official argument in favor.",
+    "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "sf-prop-b",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": null,
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "sf-prop-d",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Its page says 'Oppose'; the council also wrote the official argument against Prop D.",
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "sf-prop-g",
+    "status": "no_position",
+    "choice": null,
+    "why": "Listed as 'No Position.'",
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "sf-prop-h",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": null,
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "sf-prop-i",
+    "status": "no_position",
+    "choice": null,
+    "why": "Listed as 'No Recommendation.'",
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "sf-prop-j",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": null,
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "bay-area-rtm",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": null,
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "sf-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on its endorsement page as of Oct. 17, 2026 (the page says more endorsements are coming).",
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "sf-prop-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on its endorsement page as of Oct. 17, 2026 (the page says more endorsements are coming).",
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "sf-prop-e",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on its endorsement page as of Oct. 17, 2026 (the page says more endorsements are coming).",
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "sf-prop-f",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on its endorsement page as of Oct. 17, 2026 (the page says more endorsements are coming).",
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "sf-supervisor-2",
+    "status": "endorsed",
+    "choice": "Stephen Sherrill",
+    "why": null,
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "sf-supervisor-8",
+    "status": "endorsed",
+    "choice": "Gary McCoy",
+    "why": null,
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "sf-board-of-education",
+    "status": "endorsed",
+    "choice": "Virginia Cheung, Ryan Hazelton, Reina Tello",
+    "why": null,
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "sf-community-college-board",
+    "status": "endorsed",
+    "choice": "Leah LaCroix, Jeremy Lee, Bunny McFadden",
+    "why": null,
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "sf-assessor-recorder",
+    "status": "endorsed",
+    "choice": "Joaquín Torres",
+    "why": null,
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "sf-public-defender",
+    "status": "endorsed",
+    "choice": "Mano Raju",
+    "why": null,
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "ca-assembly-17",
+    "status": "endorsed",
+    "choice": "Matt Haney",
+    "why": null,
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "ca-assembly-19",
+    "status": "endorsed",
+    "choice": "Catherine Stefani",
+    "why": null,
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "ca-us-house-11",
+    "status": "endorsed",
+    "choice": "Connie Chan",
+    "why": null,
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "ca-us-house-15",
+    "status": "endorsed",
+    "choice": "Kevin Mullin",
+    "why": null,
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "sf-supervisor-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "Listed as 'No Recommendation.'",
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "sf-supervisor-6",
+    "status": "no_position",
+    "choice": null,
+    "why": "Listed as 'No Recommendation.'",
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "sf-supervisor-10",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on its endorsement page as of Oct. 17, 2026 (the page says more endorsements are coming).",
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "bart-director-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on its endorsement page as of Oct. 17, 2026 (the page says more endorsements are coming).",
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "sf-community-college-board-partial",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on its endorsement page as of Oct. 17, 2026 (the page says more endorsements are coming).",
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "ca-coa-1d-retention",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on its endorsement page as of Oct. 17, 2026 (the page says more endorsements are coming).",
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chamber",
+    "target_id": "sf-prop-a",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Trims outdated bureaucratic language and modernizes operations for 'greater accountability.'",
+    "url": "https://sfchamber.com/november-2026-voter-guide/",
+    "date": "2026-10-08",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chamber",
+    "target_id": "sf-prop-b",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Creates a rigid Charter requirement and 'potential fiscal risk to the City.'",
+    "url": "https://sfchamber.com/november-2026-voter-guide/",
+    "date": "2026-10-08",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chamber",
+    "target_id": "sf-prop-c",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Bolsters affordable housing and helps workers stay in the city.",
+    "url": "https://sfchamber.com/november-2026-voter-guide/",
+    "date": "2026-10-08",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chamber",
+    "target_id": "sf-prop-d",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Brings San Francisco in line with other California jurisdictions, where signature thresholds run 5% to 10%.",
+    "url": "https://sfchamber.com/november-2026-voter-guide/",
+    "date": "2026-10-08",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chamber",
+    "target_id": "sf-prop-e",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Simplifying procurement 'can save the city money and produce better outcomes.'",
+    "url": "https://sfchamber.com/november-2026-voter-guide/",
+    "date": "2026-10-08",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chamber",
+    "target_id": "sf-prop-f",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Mayoral powers will 'foster greater coordination' between departments and the executive branch.",
+    "url": "https://sfchamber.com/november-2026-voter-guide/",
+    "date": "2026-10-08",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chamber",
+    "target_id": "sf-prop-h",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Public transit is 'a critical driver of the San Francisco economy.'",
+    "url": "https://sfchamber.com/november-2026-voter-guide/",
+    "date": "2026-10-08",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chamber",
+    "target_id": "sf-prop-i",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Carves General Fund money out for narrow programs 'without a requirement that any new affordable housing be built.'",
+    "url": "https://sfchamber.com/november-2026-voter-guide/",
+    "date": "2026-10-08",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chamber",
+    "target_id": "bay-area-rtm",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Bay Area transit is an essential service that brings workers and customers to SF businesses.",
+    "url": "https://sfchamber.com/november-2026-voter-guide/",
+    "date": "2026-10-08",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chamber",
+    "target_id": "sf-prop-g",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Chamber 'has abstained from taking a position on Prop G.'",
+    "url": "https://sfchamber.com/november-2026-voter-guide/",
+    "date": "2026-10-08",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-chamber",
+    "target_id": "sf-prop-j",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Chamber 'has abstained from taking a position on Prop J.'",
+    "url": "https://sfchamber.com/november-2026-voter-guide/",
+    "date": "2026-10-08",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mercury-news-eb",
+    "target_id": "bay-area-rtm",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "'Opposing the initiative is not a vote against public transit. It's a demand for responsible financial management.'",
+    "url": "https://www.mercurynews.com/2026/10/09/endorsement-no-on-measure-rtm-transit-tax-bart-manufactured-crisis-vta-doesnt-have-one/",
+    "date": "2026-10-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mercury-news-eb",
+    "target_id": "ca-coa-1d-retention",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mercury-news-eb",
+    "target_id": "bart-director-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mercury-news-eb",
+    "target_id": "ca-assembly-17",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mercury-news-eb",
+    "target_id": "ca-assembly-19",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mercury-news-eb",
+    "target_id": "ca-us-house-11",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mercury-news-eb",
+    "target_id": "ca-us-house-15",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mercury-news-eb",
+    "target_id": "sf-assessor-recorder",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mercury-news-eb",
+    "target_id": "sf-board-of-education",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mercury-news-eb",
+    "target_id": "sf-community-college-board",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mercury-news-eb",
+    "target_id": "sf-community-college-board-partial",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mercury-news-eb",
+    "target_id": "sf-public-defender",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mercury-news-eb",
+    "target_id": "sf-supervisor-10",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mercury-news-eb",
+    "target_id": "sf-supervisor-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mercury-news-eb",
+    "target_id": "sf-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mercury-news-eb",
+    "target_id": "sf-supervisor-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mercury-news-eb",
+    "target_id": "sf-supervisor-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mercury-news-eb",
+    "target_id": "sf-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mercury-news-eb",
+    "target_id": "sf-prop-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mercury-news-eb",
+    "target_id": "sf-prop-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mercury-news-eb",
+    "target_id": "sf-prop-d",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mercury-news-eb",
+    "target_id": "sf-prop-e",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mercury-news-eb",
+    "target_id": "sf-prop-f",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mercury-news-eb",
+    "target_id": "sf-prop-g",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mercury-news-eb",
+    "target_id": "sf-prop-h",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mercury-news-eb",
+    "target_id": "sf-prop-i",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mercury-news-eb",
+    "target_id": "sf-prop-j",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay. Checked again on Oct 27, 2026; still no pick on this page.",
+    "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ca-republican-party",
+    "target_id": "ca-assembly-19",
+    "status": "endorsed",
+    "choice": "Philip Louis Wing",
+    "url": "https://cagop.org/endorsements/",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ca-republican-party",
+    "target_id": "ca-us-house-15",
+    "status": "endorsed",
+    "choice": "Charles Hoelter",
+    "url": "https://cagop.org/endorsements/",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-bay-area",
+    "target_id": "sf-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 27, 2026; still no pick on this page.",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-bay-area",
+    "target_id": "sf-prop-b",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 27, 2026; still no pick on this page.",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-bay-area",
+    "target_id": "sf-prop-c",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 27, 2026; still no pick on this page.",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-bay-area",
+    "target_id": "sf-prop-d",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 27, 2026; still no pick on this page.",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-bay-area",
+    "target_id": "sf-prop-e",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 27, 2026; still no pick on this page.",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-bay-area",
+    "target_id": "sf-prop-f",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 27, 2026; still no pick on this page.",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-bay-area",
+    "target_id": "sf-prop-g",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 27, 2026; still no pick on this page.",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-bay-area",
+    "target_id": "sf-prop-h",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 27, 2026; still no pick on this page.",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-bay-area",
+    "target_id": "sf-prop-i",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 27, 2026; still no pick on this page.",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-bay-area",
+    "target_id": "sf-prop-j",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 27, 2026; still no pick on this page.",
+    "date": "2026-10-27",
+    "confidence": "verified"
+  }
 ]

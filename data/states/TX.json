@@ -57,7 +57,7 @@
       "hand-deliver it yourself, in person, to the county Early Voting Clerk's office, but only on Election Day (Nov. 3) while polls are open, with your photo ID (Election Code 86.006(a-1))",
       "Texas does not use ballot drop boxes"
     ],
-    "postage": "Varies by county; check your return envelope. Harris County says it takes two standard stamps ($1.10) but that a ballot mailed without postage will still be delivered and counted. We did not find a statewide official statement on postage, so treat this as sourced, not verified: https://www.harrisvotes.com/Voter/Voting-FAQ",
+    "postage": "Varies by county; check your return envelope. Dallas County: no stamp needed, the envelope is prepaid. Harris County: two standard stamps ($1.10), but a ballot mailed without postage will still be delivered and counted. Bexar County's page doesn't say. Mailing this late is risky either way.",
     "signature_witness_rules": "Sign the carrier envelope, and write your ID number in the space provided: your Texas driver license, personal ID or Election Identification Certificate number, or the last 4 of your SSN if DPS never issued you one of those. The number must match what's on your voter registration record. No notary. No witness unless you cannot sign; then a witness signs and prints their name and address. If someone helps you mark or mail the ballot, their name, address and signature must go on the envelope too. Election Code 86.006 and VoteTexas carrier envelope page.",
     "tracking_url": "https://www.votetexas.gov/voting-by-mail/track-my-ballot.html",
     "cure_process": "If your mail ballot has an ID, signature or other envelope problem, follow the notice from your county. You can correct an ID number through the Ballot by Mail Tracker if eligible, return the corrective action form, or visit the early voting clerk. The Secretary of State's Nov. 3 election calendar gives Monday, November 9, 2026 as the deadline to correct carrier-envelope defects. Act as soon as you receive a notice. If you switch to voting in person, follow the county's cancellation instructions before voting.",
@@ -124,7 +124,7 @@
       "short": "Close to Nov 3, hand-deliver your mail ballot with photo ID, or vote in person."
     },
     {
-      "text": "Vote centers: in Travis, Williamson, Hays, Dallas, Collin, Tarrant, Harris, Fort Bend and Bexar counties you can vote at ANY polling location in your county, during early voting and on Election Day. You are not tied to a precinct. Pick the one with the shortest line.",
+      "text": "Vote centers: in Travis, Williamson, Hays, Dallas, Collin, Tarrant, Harris, Fort Bend and Bexar counties you can vote at any polling location in your county, during early voting and on Election Day. You are not tied to a precinct. Pick the one with the shortest line: Travis, Williamson, Hays, Harris and Bexar show live early voting wait times on their county maps.",
       "short": "In vote-center counties like Travis and Harris, vote at any location in your county."
     },
     {
@@ -223,14 +223,14 @@
     {
       "id": "wrong_polling_place",
       "question": "I went to the wrong polling place.",
-      "short": "In Travis, Williamson, Hays and Harris, you can vote at any polling place in your county.",
+      "short": "In Dallas, Harris, Bexar, Travis and other big counties, you can vote at any vote center in your county.",
       "actions": [
         {
           "label": "Find voting places",
           "url": "https://www.votetexas.gov/voting/where.html"
         }
       ],
-      "answer": "Travis, Williamson, Hays and Harris counties use vote centers, so you can vote at any polling place in your county, early or on Election Day. Just head to the closest one in the county where you're registered.",
+      "answer": "Dallas, Harris, Bexar, Travis, Williamson, Hays and other big counties use vote centers, so you can vote at any polling place in your county, early or on Election Day. Just head to the closest one in the county where you're registered.",
       "steps": [
         "Find locations (and wait times, in many counties) on your county elections site or the My Voter Portal.",
         "In a different county? Go back to your own county; that's where your ballot is."
@@ -375,7 +375,7 @@
       ],
       "answer": "Vote early in person, Monday, October 19 through Friday, October 30, at any early voting site in your county. The deadline to apply for a mail ballot was Friday, October 23.",
       "steps": [
-        "Check your county's early voting hours (Travis, Williamson, Hays and Harris each post their own).",
+        "Check your county's early voting hours (Dallas, Harris, Bexar, Travis, Williamson and Hays each post their own).",
         "Already have a mail ballot? On Election Day only, you can hand it in yourself at your county's early voting clerk's office, with photo ID.",
         "A mailed ballot must arrive by 7 PM Nov 3, or be postmarked by then and arrive by 5 PM Nov 4."
       ],
@@ -597,6 +597,18 @@
     {
       "name": "Dallas County Elections: Nov 3, 2026 election",
       "url": "https://www.dallascountyvotes.org/voters/election/november-3-2026-general-and-joint-election/"
+    },
+    {
+      "name": "Dallas County Elections: vote by mail FAQs",
+      "url": "https://www.dallascountyvotes.org/vote-by-mail/faqs/"
+    },
+    {
+      "name": "Bexar County Elections: FAQ (Election Day vote centers)",
+      "url": "https://elections.bexar.gov/m/faq"
+    },
+    {
+      "name": "Dallas County Elections: in person",
+      "url": "https://www.dallascountyvotes.org/in-person/"
     }
   ],
   "judicial_review": {
@@ -633,6 +645,13 @@
     {
       "text": "Bring your plan on paper. You may use written notes, but phones and other wireless devices cannot be used within 100 feet of a voting station.",
       "applies_to": "ballot"
+    }
+  ],
+  "dated": [
+    {
+      "path": "gotchas.4.text",
+      "from": "2026-10-31",
+      "text": "Vote centers: in Travis, Williamson, Hays, Dallas, Collin, Tarrant, Harris, Fort Bend and Bexar counties you can vote at any polling location in your county on Election Day. You are not tied to a precinct."
     }
   ]
 }

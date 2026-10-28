@@ -10,7 +10,7 @@
     "url": "https://www.sullivanny.gov/Departments/Elections",
     "phone": "845-807-0400"
   },
-  "sample_ballot_url": "https://voterlookup.elections.ny.gov/",
+  "sample_ballot_url": "https://www.sullivanny.gov/Departments/Elections/SampleBallots",
   "zips": [
     "12723",
     "12745",
@@ -38,7 +38,9 @@
   ],
   "district_finders": [],
   "lookups": {
-    "early_in_person": "https://www.sullivanny.gov/Departments/Elections/EarlyVoting"
+    "early_in_person": "https://www.sullivanny.gov/Departments/Elections/EarlyVoting",
+    "election_day": "https://www.sullivanny.gov/Departments/Elections/VotingTimes",
+    "drop_box": "https://www.sullivanny.gov/Departments/Elections/VotingTimes"
   },
   "sources": [
     {
@@ -48,6 +50,28 @@
     {
       "name": "Sullivan County: 2026 general election ballot, Town of Callicoon (PDF)",
       "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sample_Ballots_2026_GE/Town%20of%20Callicoon.pdf"
+    },
+    {
+      "name": "Sullivan County: voting times and poll sites",
+      "url": "https://www.sullivanny.gov/Departments/Elections/VotingTimes"
+    },
+    {
+      "name": "Sullivan County: sample ballots",
+      "url": "https://www.sullivanny.gov/Departments/Elections/SampleBallots"
+    },
+    {
+      "name": "Sullivan County: early voting",
+      "url": "https://www.sullivanny.gov/Departments/Elections/EarlyVoting"
     }
-  ]
+  ],
+  "notes": "Polls are open 6 AM to 9 PM on Nov 3. Town of Delaware (the hamlet of Callicoon, Hortonville, Kenoza Lake): Delaware Community Center, 8 Creamery Road, Callicoon (district 1), or Kenoza Lake Firehouse, 485 Old Taylor Road (district 2). Town of Callicoon: Youngsville Firehouse, 1822 Shandelee Road (districts 1 and 5); Callicoon Center Firehouse, 1669 Gulf Road (district 2); Callicoon Town Hall, 19 Legion Street, Jeffersonville (districts 3 and 4). Your election district is on your registration; not sure? Call 845-807-0400. Each town has its own sample ballot on the county's page. If you vote early, you can't vote on Election Day.",
+  "early_in_person": {
+    "start": "2026-10-24",
+    "end": "2026-11-01",
+    "hours_note": "Sullivan County early voting at two sites, Monticello (100 North Street) and Liberty (50 Community Lane); you can use either. Thu Oct 29, noon to 8 PM; Fri Oct 30 to Sun Nov 1, 9 AM to 5 PM.",
+    "hours_short": "Early voting ends Sun Nov 1, at Monticello or Liberty; you can use either.",
+    "lookup_url": "https://www.sullivanny.gov/Departments/Elections/EarlyVoting",
+    "source": "https://www.sullivanny.gov/Departments/Elections/EarlyVoting",
+    "confidence": "verified"
+  }
 }

@@ -68,7 +68,7 @@
     "available": true,
     "start": "2026-10-20",
     "end": "2026-11-02",
-    "hours_note": "Missouri calls this 'no-excuse absentee voting in person.' The SOS: 'From the second Tuesday before an election to the day before the election, you may vote a no-excuse absentee ballot in person' at a site your election authority designates, until 5:00 PM the day before the election. For Nov 3 that is Tuesday, October 20 through Monday, November 2, 2026 (STLPR: 'In-person no excuses needed absentee voting begins: Oct. 20'; KCUR: 'Oct. 20-Nov. 2, 2026'). Bring a photo ID. No notary is needed in person. ST. LOUIS county has 21 sites: the Board of Elections HQ (725 Northwest Plaza Dr., St. Ann) plus 20 satellites, including eight county library branches (Cliff Cave, Clark Family, Daniel Boone, Grand Glaize, Grant's View, Lewis & Clark, Mid-County, Thornhill), the St. Louis Galleria, STLCC Meramec, UMSL, Olivette City Center, Wildwood City Hall, North County Rec Complex, Dellwood Rec Center, JFK Community Center, and several churches. Hours per the St. Louis County Democrats' logistics page: weekdays Oct 20 to 30, 8 AM to 4:30 PM; Saturdays Oct 24 and Oct 31, 9 AM to 1 PM; closed Sundays; Monday Nov 2, 8 AM to 5 PM. The county library lists its branches as 8 AM to 5 PM weekdays and Sat Oct 31, 9 AM to 1 PM. Confirm your site's hours with the Board (314-615-1800) or its satellite lookup map. Before October 20 (from September 22), only voters with one of the six excuses could vote absentee in person, at the St. Ann office.",
+    "hours_note": "Missouri calls this 'no-excuse absentee voting in person.' The SOS: 'From the second Tuesday before an election to the day before the election, you may vote a no-excuse absentee ballot in person' at a site your election authority designates, until 5:00 PM the day before the election. For Nov 3 that is Tuesday, October 20 through Monday, November 2, 2026 (STLPR: 'In-person no excuses needed absentee voting begins: Oct. 20'; KCUR: 'Oct. 20-Nov. 2, 2026'). Bring a photo ID. No notary is needed in person. ST. LOUIS county has 21 sites: the Board of Elections HQ (725 Northwest Plaza Dr., St. Ann) plus 20 satellites, including eight county library branches (Cliff Cave, Clark Family, Daniel Boone, Grand Glaize, Grant's View, Lewis & Clark, Mid-County, Thornhill), the St. Louis Galleria, STLCC Meramec, UMSL, Olivette City Center, Wildwood City Hall, North County Rec Complex, Dellwood Rec Center, JFK Community Center, and several churches. Board of Elections hours: weekdays through Oct 30, 8 AM to 4:30 PM; Saturday Oct 31, 9 AM to 1 PM; Monday Nov 2, 8 AM to 5 PM. Satellite sites: the same hours, weekdays since Oct 20. Closed Sundays. Confirm your site's hours with the Board (314-615-1800) or its satellite lookup map. Before October 20 (from September 22), only voters with one of the six excuses could vote absentee in person, at the St. Ann office.",
     "vote_centers": true,
     "lookup_url": "https://www.sos.mo.gov/elections/goVoteMissouri/localelectionauthority",
     "confidence": "verified"
@@ -251,7 +251,7 @@
       "steps": [
         "Vote no-excuse absentee in person at the Board or a satellite site, Oct 20 to Nov 2, with photo ID.",
         "Or vote at any St. Louis County polling place on Nov 3, 6 AM to 7 PM.",
-        "Questions? The absentee desk is 314-615-1833."
+        "Questions? Call the Board of Elections, 314-615-1800, and ask for the absentee desk; 314-615-1833 takes requests for a paper application."
       ],
       "deadline": "2026-11-03",
       "source": "https://extcontent.stlouisco.com/BOE/2026/FAQ.pdf",
@@ -393,7 +393,7 @@
       ],
       "answer": "Missouri law doesn't set up a fix-it process for rejected mail ballots the way some states do, though local election offices may offer one. Call the St. Louis County Board's absentee desk right away to ask what you can do.",
       "steps": [
-        "Call 314-615-1833 or email boecabsentee@stlouiscountymo.gov.",
+        "Call the Board of Elections, 314-615-1800, and ask for the absentee desk (Monday to Friday 8 AM to 4:30 PM, Saturday Oct 31 9 AM to 1 PM, Monday Nov 2 8 AM to 5 PM), or email boecabsentee@stlouiscountymo.gov.",
         "Most envelopes need a notary, a signature and your printed info. Double-check before you send it.",
         "If your ballot hasn't been accepted yet, ask whether you can vote in person instead."
       ],

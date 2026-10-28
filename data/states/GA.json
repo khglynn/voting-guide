@@ -251,9 +251,10 @@
       ],
       "answer": "If your absentee ballot never arrived, you may ask in writing to cancel it and sign a statement that you are voting only once. If it arrived and you then lost it, call your county absentee office before going to vote; we have not confirmed the received-then-lost procedure from an official source. Fulton County's absentee office is 404-612-7060. If you still have the ballot and want to vote in person, bring it to surrender to the poll manager.",
       "steps": [
-        "Check its status on My Voter Page (mvp.sos.ga.gov). Fulton: absentee office, 404-612-7060 or elections.absentee@fultoncountyga.gov. Other counties: your county registrar's office.",
+        "Check its status on My Voter Page (mvp.sos.ga.gov). Fulton: absentee office, 404-612-7060 or elections.absentee@fultoncountyga.gov. DeKalb: 404-298-4020 or absenteeballot@dekalbcountyga.gov. Other counties: your county registrar's office.",
+        "Fulton says if it hasn't come 7 to 10 days after it was mailed, contact the absentee office, or vote in person.",
         "Vote early at any site in your county through Oct 30, or at your own precinct on Nov 3.",
-        "Received it but lost it? Call Fulton absentee voting at 404-612-7060, or your own county registrar, for replacement or cancellation instructions. Tell them whether the ballot was returned. If your completed ballot was already accepted, you cannot vote again."
+        "Received it but lost it? Call your county's absentee office (Fulton 404-612-7060, DeKalb 404-298-4020) before you go, for replacement or cancellation instructions. If your completed ballot was already accepted, you cannot vote again."
       ],
       "deadline": "2026-11-03",
       "source": "https://www.fultoncountyga.gov/inside-fulton-county/fulton-county-departments/registration-and-elections/absentee-voting",

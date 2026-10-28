@@ -63,10 +63,12 @@ export function voterCounty(places: PlaceBundle[], zip: string | null | undefine
   return hits.size === 1 && only ? only : null;
 }
 /* A place's where-to-vote tools for this voter: its county's, when the place spans counties and the county is
-   known, over the place's own. */
+   known, over the place's own. A county the place doesn't list (the address lookup puts you in Caldwell County,
+   and San Marcos lists only Hays) gets none of the place's: the state's links are right for every county. */
 const lookupsFor = (p: PlaceBundle, county: string | null): Lookups | undefined => {
-  const c = county ? p.by_county?.find((x) => countyKey(x.county) === countyKey(county)) : undefined;
-  return c ? { ...(p.lookups || {}), ...c.lookups } : p.lookups;
+  if (!county || !p.by_county || !p.by_county.length) return p.lookups;
+  const c = p.by_county.find((x) => countyKey(x.county) === countyKey(county));
+  return c ? { ...(p.lookups || {}), ...c.lookups } : undefined;
 };
 
 /* A county that runs its own early-voting days (Florida counties choose theirs inside the

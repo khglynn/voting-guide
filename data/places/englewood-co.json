@@ -64,14 +64,27 @@
     }
   ],
   "lookups": {
-    "early_in_person": "https://www.arapahoeco.gov/your_county/arapahoevotes/voting_locations/index.php",
-    "election_day": "https://www.arapahoeco.gov/your_county/arapahoevotes/voting_locations/index.php",
-    "drop_box": "https://www.arapahoeco.gov/your_county/arapahoevotes/voting_locations/index.php"
+    "early_in_person": "https://gisportal.arapahoegov.com/portal/apps/instant/nearby/index.html?appid=5aafba02f9df479c833c476960d1b3ff",
+    "election_day": "https://gisportal.arapahoegov.com/portal/apps/instant/nearby/index.html?appid=5aafba02f9df479c833c476960d1b3ff",
+    "drop_box": "https://www.arapahoeco.gov/your_county/arapahoevotes/voting_locations/ballot_drop_locations.php"
   },
   "sources": [
     {
       "name": "Arapahoe County Elections: contact page",
       "url": "https://www.arapahoeco.gov/your_county/arapahoevotes/contact_us/index.php"
+    },
+    {
+      "name": "Arapahoe County: vote centers",
+      "url": "https://www.arapahoeco.gov/your_county/arapahoevotes/voting_locations/voter_service_polling_centers.php"
+    },
+    {
+      "name": "Arapahoe County: ballot drop locations",
+      "url": "https://www.arapahoeco.gov/your_county/arapahoevotes/voting_locations/ballot_drop_locations.php"
+    },
+    {
+      "name": "Arapahoe County: nearest voting location (map)",
+      "url": "https://www.arapahoeco.gov/your_county/arapahoevotes/voting_locations/nearest_voting_location.php"
     }
-  ]
+  ],
+  "notes": "Closest vote center: Englewood Civic Center, 1000 Englewood Pkwy., open Monday to Friday 8 AM to 5 PM, Saturday Oct 31 8 AM to 5 PM, Monday Nov 2 8 AM to 5 PM, and Nov 3 from 7 AM to 7 PM. Two 24-hour drop boxes in Englewood, open until 7 PM Nov 3: the Civic Center (1000 Englewood Pkwy.) and Arapahoe County Public Health (4857 S. Broadway)."
 }

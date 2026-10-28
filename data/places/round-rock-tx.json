@@ -312,5 +312,61 @@
       "label": "Travis County: find your district and ballot",
       "url": "https://votetravis.gov/voter-lookup/"
     }
+  ],
+  "by_county": [
+    {
+      "county": "Williamson",
+      "zips": [
+        "78665"
+      ],
+      "lookups": {
+        "early_in_person": "https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Early%20Voting%20Dashboard.html",
+        "election_day": "https://www.wilcotx.gov/elections"
+      },
+      "source": "https://www.wilcotx.gov/elections",
+      "confidence": "verified",
+      "office": {
+        "name": "Williamson County Elections Department, 301 SE Inner Loop, Suite 104, Georgetown 78626",
+        "url": "https://www.wilcotx.gov/elections",
+        "phone": "512-943-1630",
+        "source": "https://www.wilcotx.gov/elections"
+      }
+    },
+    {
+      "county": "Travis",
+      "zips": [],
+      "lookups": {
+        "early_in_person": "https://www.google.com/maps/d/viewer?mid=1t_vWJgd_BRfKnJn_fQoHE25IV2i_0Jo",
+        "election_day": "https://www.google.com/maps/d/viewer?mid=1Y86BIAffVIw2L_WEkSls_0OWg7NpvX8"
+      },
+      "source": "https://votetravis.gov/current-election-information/current-election/",
+      "confidence": "verified",
+      "office": {
+        "name": "Travis County Clerk, Elections Division (VoteTravis), 5501 Airport Blvd., Austin 78751",
+        "url": "https://votetravis.gov/",
+        "phone": "512-238-VOTE (8683)",
+        "lines": [
+          {
+            "label": "Registration questions (Travis County Tax Office)",
+            "phone": "512-854-9473"
+          }
+        ],
+        "source": "https://votetravis.gov/current-election-information/current-election/"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "name": "Williamson County Elections",
+      "url": "https://www.wilcotx.gov/elections"
+    },
+    {
+      "name": "Travis County: current election",
+      "url": "https://votetravis.gov/current-election-information/current-election/"
+    },
+    {
+      "name": "Census 2020 ZIP code (ZCTA) to county relationship file",
+      "url": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_county20_natl.txt"
+    }
   ]
 }

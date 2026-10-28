@@ -148,8 +148,42 @@
     }
   ],
   "lookups": {
-    "early_in_person": "https://www.sf.gov/november-3-2026-consolidated-general-election",
-    "election_day": "https://www.sf.gov/november-3-2026-consolidated-general-election",
-    "drop_box": "https://www.sf.gov/november-3-2026-consolidated-general-election"
-  }
+    "early_in_person": "https://www.sf.gov/vote-in-person",
+    "election_day": "https://sfelections.org/tools/map_poll_time/",
+    "drop_box": "https://www.google.com/maps/d/viewer?mid=1LiRzGpYK1HVoJ1yB7lV_WzmPQ1I3yWg&ll=37.75034430815189%2C-122.46331686821289&z=12"
+  },
+  "situations": [
+    {
+      "id": "no_mail_ballot_or_lost",
+      "short": "Go to the City Hall Voting Center, or your polling place on Election Day.",
+      "answer": "San Francisco's last day to ask for a mailed replacement was October 27. Now go to the Voting Center at City Hall, in front of Room 48, or to your polling place on Election Day. Questions? Call (415) 558-6100.",
+      "steps": null,
+      "source": "https://www.sf.gov/vote-by-mail",
+      "confidence": "verified"
+    },
+    {
+      "id": "wrong_polling_place",
+      "short": "Go to your assigned polling place if you can, or vote a regular ballot at City Hall.",
+      "answer": "In San Francisco, go to your assigned polling place if you can; look it up by address. At a different polling place you vote a provisional ballot, and it has all your contests on it. Or vote a regular ballot at the City Hall Voting Center.",
+      "steps": [
+        "Just dropping off a mail ballot? Any polling place or drop box takes it."
+      ],
+      "source": "https://sfelections.org/tools/map_poll_time/",
+      "confidence": "verified"
+    }
+  ],
+  "sources": [
+    {
+      "name": "San Francisco: vote by mail",
+      "url": "https://www.sf.gov/vote-by-mail"
+    },
+    {
+      "name": "San Francisco: vote in person",
+      "url": "https://www.sf.gov/vote-in-person"
+    },
+    {
+      "name": "San Francisco: polling place and wait time tool",
+      "url": "https://sfelections.org/tools/map_poll_time/"
+    }
+  ]
 }

@@ -62,7 +62,7 @@
     "tracking_url": "https://votedc.ballottrax.net/voter/",
     "cure_process": "If DCBOE sends you a notice, return the signed certificate and any requested proof promptly, following the deadline in your letter. You may email, mail or deliver the response to DCBOE. Its FAQ says seven days after Election Day (November 10), but its 2026 calendar lists November 19 for mail-ballot cures. These official dates still conflict as of October 19. Aim to fix a mail ballot by November 10 and call 202-727-2525 if your notice is unclear. Sign up for BallotTrax alerts so you hear about problems. For a special (provisional) ballot, provide requested proof promptly: the special-ballot FAQ says 5 PM on the Thursday after Election Day (November 5), while the 2026 calendar says November 10. Call DCBOE to confirm your deadline; do not wait for the later date.",
     "mail_cutoff_advice": "Postmarks count in DC, but a missing or late postmark is a real risk (DCBOE had to clarify USPS postmark rules during the June primary). Mail by about Tuesday, October 27 at the latest. From then on, use a drop box: 55 of them, open around the clock until 8:00 PM on November 3. A mailed ballot postmarked by November 3 still has to arrive at DCBOE by Friday, November 13. If you mail it, ask a post office counter clerk for a free manual postmark when you hand it over. This does not extend the receipt deadline.",
-    "drop_box_lookup_url": "https://dcboe.org/getContentAsset/5867b486-c4f8-4be6-83b4-60b5c589c97a/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/General-2026-Vote-Centers-and-Drop-Boxes.pdf?language=en",
+    "drop_box_lookup_url": "https://dcboe.org/voters/find-out-where-to-vote/vote-center-locator-tool",
     "confidence": "verified"
   },
   "early_in_person": {
@@ -71,7 +71,7 @@
     "end": "2026-11-01",
     "hours_note": "Monday, October 26 through Sunday, November 1, 2026, every day including the weekend, 8:30 AM to 7:00 PM. 25 Early Vote Centers, two to four per ward (for example Columbia Heights Community Center, MLK Library, Cleveland Park Library, Turkey Thicket, Sherwood Rec, Deanwood Rec; note THEARC is an Election Day-only Vote Center, not an early site). Any DC voter can use any center. All 25 also operate on Election Day. You can register on the spot with proof of residence. Full list at the DCBOE PDF below or earlyvoting.dcboe.org.",
     "vote_centers": true,
-    "lookup_url": "https://dcboe.org/getContentAsset/5867b486-c4f8-4be6-83b4-60b5c589c97a/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/General-2026-Vote-Centers-and-Drop-Boxes.pdf?language=en",
+    "lookup_url": "https://earlyvoting.dcboe.org/",
     "confidence": "verified"
   },
   "election_day": {
@@ -79,7 +79,7 @@
     "polls_close": "8:00 PM",
     "in_line_rule": "DCBOE: 'All voters who are in line at 8:00 p.m. may cast a ballot.' Drop boxes also lock at 8:00 PM, and mailed ballots must be postmarked that day.",
     "vote_centers": true,
-    "lookup_url": "https://dcboe.org/getContentAsset/5867b486-c4f8-4be6-83b4-60b5c589c97a/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/General-2026-Vote-Centers-and-Drop-Boxes.pdf?language=en",
+    "lookup_url": "https://dcboe.org/voters/find-out-where-to-vote/vote-center-locator-tool",
     "confidence": "verified"
   },
   "id_rules": {
@@ -131,7 +131,7 @@
       "actions": [
         {
           "label": "Find a Vote Center",
-          "url": "https://dcboe.org/getContentAsset/5867b486-c4f8-4be6-83b4-60b5c589c97a/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/General-2026-Vote-Centers-and-Drop-Boxes.pdf?language=en"
+          "url": "https://dcboe.org/voters/find-out-where-to-vote/vote-center-locator-tool"
         }
       ],
       "answer": "Update your address at any Vote Center during early voting (October 26 to November 1) or on Election Day. Show proof of your new address, fill out a Registration Update Form, and you'll vote a regular ballot.",
@@ -174,7 +174,7 @@
         },
         {
           "label": "Find a Vote Center",
-          "url": "https://dcboe.org/getContentAsset/5867b486-c4f8-4be6-83b4-60b5c589c97a/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/General-2026-Vote-Centers-and-Drop-Boxes.pdf?language=en"
+          "url": "https://dcboe.org/voters/find-out-where-to-vote/vote-center-locator-tool"
         }
       ],
       "answer": "The October 13 deadline has passed, but DC has same-day registration. Go to any Vote Center during early voting (October 26 to November 1, 8:30 AM to 7 PM) or on Election Day (7 AM to 8 PM), bring proof of your DC address, and you'll register and vote a regular ballot.",
@@ -213,7 +213,7 @@
       "actions": [
         {
           "label": "Find a Vote Center",
-          "url": "https://dcboe.org/getContentAsset/5867b486-c4f8-4be6-83b4-60b5c589c97a/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/General-2026-Vote-Centers-and-Drop-Boxes.pdf?language=en"
+          "url": "https://dcboe.org/voters/find-out-where-to-vote/vote-center-locator-tool"
         }
       ],
       "answer": "There's no wrong Vote Center in DC. You can vote at any Vote Center in the District, early or on Election Day, no matter which ward you live in.",
@@ -237,7 +237,7 @@
         },
         {
           "label": "Find a Vote Center",
-          "url": "https://dcboe.org/getContentAsset/5867b486-c4f8-4be6-83b4-60b5c589c97a/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/General-2026-Vote-Centers-and-Drop-Boxes.pdf?language=en"
+          "url": "https://dcboe.org/voters/find-out-where-to-vote/vote-center-locator-tool"
         }
       ],
       "answer": "Vote in person at any Vote Center instead; DCBOE says if your mail ballot hasn't come 7 days before Election Day, plan to vote in person. If you asked for an absentee ballot because you're away and lost it, call (202) 727-2525 and they'll mail a new one.",
@@ -257,7 +257,7 @@
       "actions": [
         {
           "label": "Find a Vote Center",
-          "url": "https://dcboe.org/getContentAsset/5867b486-c4f8-4be6-83b4-60b5c589c97a/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/General-2026-Vote-Centers-and-Drop-Boxes.pdf?language=en"
+          "url": "https://dcboe.org/voters/find-out-where-to-vote/vote-center-locator-tool"
         }
       ],
       "answer": "At a Vote Center, tell an election worker right away; they'll cancel it and give you a new one, up to three ballots in all. On a mail ballot, call DCBOE at (202) 727-2525 and they'll mail you a new one, or just vote in person instead.",
@@ -273,7 +273,7 @@
       "actions": [
         {
           "label": "Find a Vote Center",
-          "url": "https://dcboe.org/getContentAsset/5867b486-c4f8-4be6-83b4-60b5c589c97a/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/General-2026-Vote-Centers-and-Drop-Boxes.pdf?language=en"
+          "url": "https://dcboe.org/voters/find-out-where-to-vote/vote-center-locator-tool"
         },
         {
           "label": "Track my ballot",
@@ -309,7 +309,7 @@
       "actions": [
         {
           "label": "Find a Vote Center",
-          "url": "https://dcboe.org/getContentAsset/5867b486-c4f8-4be6-83b4-60b5c589c97a/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/General-2026-Vote-Centers-and-Drop-Boxes.pdf?language=en"
+          "url": "https://dcboe.org/voters/find-out-where-to-vote/vote-center-locator-tool"
         }
       ],
       "answer": "Update it at any Vote Center during early voting or on Election Day by filling out a Registration Update Form. You don't need proof of address for a name change, and you'll vote a regular ballot.",
@@ -325,7 +325,7 @@
       "actions": [
         {
           "label": "Find a Vote Center",
-          "url": "https://dcboe.org/getContentAsset/5867b486-c4f8-4be6-83b4-60b5c589c97a/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/General-2026-Vote-Centers-and-Drop-Boxes.pdf?language=en"
+          "url": "https://dcboe.org/voters/find-out-where-to-vote/vote-center-locator-tool"
         },
         {
           "label": "Check my registration",
@@ -349,7 +349,7 @@
       "actions": [
         {
           "label": "Find a drop box",
-          "url": "https://dcboe.org/getContentAsset/5867b486-c4f8-4be6-83b4-60b5c589c97a/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/General-2026-Vote-Centers-and-Drop-Boxes.pdf?language=en"
+          "url": "https://dcboe.org/voters/find-out-where-to-vote/vote-center-locator-tool"
         },
         {
           "label": "Track my ballot",
@@ -517,6 +517,14 @@
     {
       "name": "DCBOE: mail ballot request",
       "url": "https://dcboe.org/voters/casting-your-vote/mail-ballot-request"
+    },
+    {
+      "name": "DCBOE: vote center and drop box locator",
+      "url": "https://dcboe.org/voters/find-out-where-to-vote/vote-center-locator-tool"
+    },
+    {
+      "name": "DCBOE: mail ballot instructions (phones and hours)",
+      "url": "https://dcboe.org/voters/casting-your-vote/mail-ballot-instructions"
     }
   ],
   "heads_up": [

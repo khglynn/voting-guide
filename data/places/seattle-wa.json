@@ -8,7 +8,14 @@
   "county_election_office": {
     "name": "King County Elections, 919 SW Grady Way, Renton 98057 (Seattle vote centers: Seattle City Hall, Bertha Knight Landes Room, 600 4th Ave; and UW Seattle, Student Engagement Hub, Room 160 (Lyceum) and Room 145, 4001 E Stevens Way NE)",
     "url": "https://kingcounty.gov/elections",
-    "phone": "206-296-VOTE (8683)"
+    "phone": "206-296-VOTE (8683)",
+    "lines": [
+      {
+        "label": "Toll free",
+        "phone": "800-325-6165"
+      }
+    ],
+    "hours": "This week: 8:30 AM to 6 PM Monday to Friday, 10 AM to 4 PM Saturday, and 8:30 AM to 8 PM on Election Day."
   },
   "sample_ballot_url": "https://info.kingcounty.gov/kcelections/vote/myvoterinfo.aspx",
   "zips": [
@@ -219,12 +226,33 @@
   "lookups": {
     "early_in_person": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/vote-centers",
     "election_day": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/vote-centers",
-    "drop_box": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/ballot-drop-boxes"
+    "drop_box": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/ballot-drop-boxes",
+    "tracking": "https://info.kingcounty.gov/kcelections/vote/myvoterinfo/ballottracker"
   },
   "sources": [
     {
       "name": "King County Elections: vote centers",
       "url": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/vote-centers"
+    },
+    {
+      "name": "King County Elections: contact",
+      "url": "https://kingcounty.gov/en/dept/elections/about-us/contact-us"
+    },
+    {
+      "name": "King County Elections: ballot tracker",
+      "url": "https://info.kingcounty.gov/kcelections/vote/myvoterinfo/ballottracker"
+    },
+    {
+      "name": "King County Elections: drop boxes",
+      "url": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/ballot-drop-boxes"
+    }
+  ],
+  "notes": "Seattle's vote centers, at City Hall and UW, open Saturday, Oct 31. Before then the only vote center open is King County Elections in Renton, and you can use any of the county's 24-hour drop boxes.",
+  "dated": [
+    {
+      "path": "notes",
+      "from": "2026-10-31",
+      "text": "Seattle's vote centers, at City Hall and UW, are open: Saturday Oct 31, 10 AM to 4 PM; Monday Nov 2, 8:30 AM to 6 PM; Election Day, 8:30 AM to 8 PM. Any of King County's 24-hour drop boxes takes your ballot until 8 PM Nov 3."
     }
   ]
 }

@@ -10,7 +10,7 @@
     "url": "https://multco.us/elections",
     "phone": "503-988-VOTE (8683)"
   },
-  "sample_ballot_url": "https://multco.us/info/sample-ballots-november-2026-general-election",
+  "sample_ballot_url": "https://sos.oregon.gov/elections/Pages/myvote.aspx",
   "zips": [
     "97201",
     "97202",
@@ -199,8 +199,31 @@
     }
   ],
   "lookups": {
-    "early_in_person": "https://multco.us/info/current-and-upcoming-elections-multnomah-county-elections",
-    "election_day": "https://multco.us/info/official-ballot-drop-sites",
-    "drop_box": "https://multco.us/info/official-ballot-drop-sites"
-  }
+    "early_in_person": "https://multco.us/info/extended-office-hours-november-2026-general-election",
+    "election_day": "https://www.google.com/maps/d/viewer?mid=1dFZZ-5j0KhIBiy8ZcHMyRGxBc6EPfmE&ll=45.51686500000002%2C-122.65462900000001&z=12",
+    "drop_box": "https://www.google.com/maps/d/viewer?mid=1dFZZ-5j0KhIBiy8ZcHMyRGxBc6EPfmE&ll=45.51686500000002%2C-122.65462900000001&z=12"
+  },
+  "notes": "If your ballot came from Washington County, call 503-846-5800 and use washingtoncountyor.gov/elections/ballot-dropsites. If it came from Clackamas County, call 503-655-8510 and use clackamas.us/elections/official-ballot-drop-sites. To find your precinct, use the county's precinct map with an address search.",
+  "sources": [
+    {
+      "name": "Multnomah County: extended office hours",
+      "url": "https://multco.us/info/extended-office-hours-november-2026-general-election"
+    },
+    {
+      "name": "Multnomah County: official ballot drop sites",
+      "url": "https://multco.us/info/official-ballot-drop-sites"
+    },
+    {
+      "name": "Multnomah County: sample ballots",
+      "url": "https://multco.us/info/sample-ballots-november-2026-general-election"
+    },
+    {
+      "name": "Multnomah County: precinct map",
+      "url": "https://experience.arcgis.com/experience/9be34438fc404b2494a48f7a668914f2"
+    },
+    {
+      "name": "Clackamas County Elections",
+      "url": "https://www.clackamas.us/elections/ballot-request"
+    }
+  ]
 }

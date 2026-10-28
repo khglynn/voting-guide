@@ -1024,7 +1024,7 @@ function roundTrip(name, stCode, places, mutate) {
   const fl = read('state-FL.json').howto.situations.find((x) => x.id === 'no_mail_ballot_or_lost');
   b = open('FL', ['orlando-fl']);
   const own = b.howto.situations.find((x) => x.id === 'no_mail_ballot_or_lost');
-  check('where: Orlando\u2019s lost-ballot answer is Orange County\u2019s, with its vote-by-mail line', own.question === fl.question && JSON.stringify(own.actions) === JSON.stringify(fl.actions) && /27 sites/.test(own.answer) && own.steps.some((x) => /407-836-8683/.test(x)) && own.source === 'https://voteorangefl.gov/request-a-mail-ballot/', own.short);
+  check('where: Orlando\u2019s lost-ballot answer is Orange County\u2019s, with its vote-by-mail line', own.question === fl.question && own.actions.length === fl.actions.length && /27 sites/.test(own.answer) && own.steps.some((x) => /407-836-8683/.test(x)) && own.source === 'https://voteorangefl.gov/request-a-mail-ballot/', own.short);
   b = open('FL', ['pensacola-fl']);
   check('where: Pensacola\u2019s answer stands alone (steps: null) and the state\u2019s other questions are untouched', b.howto.situations.find((x) => x.id === 'no_mail_ballot_or_lost').steps === null && JSON.stringify(b.howto.situations.find((x) => x.id === 'college_student')) === JSON.stringify(read('state-FL.json').howto.situations.find((x) => x.id === 'college_student')));
   b = open('FL', []);

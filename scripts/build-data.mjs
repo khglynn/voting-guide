@@ -119,7 +119,7 @@ function placeLookups(x, where) {
 /* A place that spans counties (Austin: Travis, Williamson and Hays) keeps one set of where-to-vote links per
    county (Oct 28). `zips` are the place's ZIPs that lie wholly in that county, so a ZIP alone can pick the
    county; plan.ts uses the voter's county's links when it knows the county, and each county's, labeled, when
-   it doesn't. */
+   it doesn't (two counties or more). */
 function placeByCounty(list, p, where) {
   if (list == null) return null;
   if (!Array.isArray(list)) { warn(`${where}: by_county is not a list; dropped it`); return null; }
@@ -137,7 +137,8 @@ function placeByCounty(list, p, where) {
       ? { name: c.office.name.trim(), url: safeUrl(c.office.url), phone: str(c.office.phone), ...officeLines(c.office, `${where} by_county ${c.county}`) } : null;
     out.push({ county: c.county.trim(), zips, lookups, source: safeUrl(c.source), confidence: conf(c.confidence), ...optional({ office }) });
   }
-  if (out.length === 1) { warn(`${where}: by_county needs two counties or more; dropped it`); return null; }
+  // One county is allowed: it names the county the place's own links belong to (San Marcos's are Hays's), so a
+  // voter the address lookup puts in another county gets the state's links instead.
   return out.length ? out : null;
 }
 /* A county's own answer to one of the state's common questions (Oct 28: Orange County's lost mail ballot,

@@ -8,8 +8,16 @@
   ],
   "county_election_office": {
     "name": "DC Board of Elections (DCBOE), 1015 Half Street SE",
-    "url": "https://dcboe.org/",
-    "phone": "1-866-DCVOTES (1-866-328-6837) or 202-727-2525"
+    "url": "https://dcboe.org/voters/find-out-where-to-vote/vote-center-locator-tool",
+    "phone": "1-866-328-6837",
+    "phone_label": "Lost or wrong ballot",
+    "lines": [
+      {
+        "label": "Can't get or cast your ballot in time",
+        "phone": "202-727-2525"
+      }
+    ],
+    "hours": "Monday to Friday, 8:15 AM to 4:45 PM."
   },
   "sample_ballot_url": "https://www.dcboe.org/getContentAsset/0f65365f-8004-406c-9274-29ac244504a5/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/Ward3C.pdf?language=en",
   "zips": [

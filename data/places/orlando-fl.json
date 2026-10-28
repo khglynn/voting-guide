@@ -50,7 +50,7 @@
     "32837",
     "32839"
   ],
-  "zip_caveats": "ZIPs don't map to ballots here, so use the What's On My Ballot lookup with your street address. Two things help. First, there are no City of Orlando races or questions this year (city elections are in odd years), so living inside or outside city limits doesn't change your ballot; only your districts do. Second, every Orange County voter gets the same core: the statewide races and Amendments 1 to 3, the Supreme Court retention question, County Mayor, Clerk of Courts, the 9th Circuit judge runoff and the school-tax question. Downtown and Lake Eola (32801): Congress is District 10, which is not on the ballot (Maxwell Frost is unopposed). Downtown is in County Commission District 6 (Scott vs. Gelzer), but some central addresses fall in Districts 3, 5 or 7, and Districts 3 and 5 have no commission race this year. The state House race for downtown and Lake Eola is District 42; precincts to the northwest (parts of College Park and Pine Hills) are District 40, and some central precincts are in House districts with no race this year. Most of 32801 has no state Senate or school board race. Soil and Water is District 3 or 5. Delaney Park and SoDo (32806): Congress District 10 again (not on the ballot). The precinct that votes at Southside Baptist Church on Lake Margaret Drive (32806) is in County Commission District 3 (no race), state House District 42, School Board District 3 (Moore vs. Peña) and Soil and Water District 3. Other 32806 blocks may be in Commission District 6 and outside School Board District 3. Elsewhere: 32804 (College Park) splits between state House Districts 40 and 42, and parts of it and the Winter Park side vote in state Senate District 10. Southwest ZIPs (32819, 32835, 32836) can be Congress District 10 or 11. South and southeast ZIPs (32809, 32812, 32822, 32824, 32827, 32829, 32832, 32837) can be Congress District 9, 10 or 11 and Commission District 3, 4 or 8, and may include School Board District 3. Vista Lakes residents (near 32829) also vote for a community development district seat. ZIPs near the county line can reach into Osceola or Seminole County, which have different ballots.",
+  "zip_caveats": "ZIPs don't map to ballots here, so use the What's On My Ballot lookup with your street address. Two things help. First, there are no City of Orlando races or questions this year (city elections are in odd years), so living inside or outside city limits doesn't change your ballot; only your districts do. Second, every Orange County voter gets the same core: the statewide races and Amendments 1 to 3, the Supreme Court retention question, County Mayor, Clerk of Courts, the 9th Circuit judge runoff and the school-tax question. Downtown and Lake Eola (32801): Congress is District 10, which is not on the ballot (Maxwell Frost is unopposed). Downtown is in County Commission District 6 (Scott vs. Gelzer), but some central addresses fall in Districts 3, 5 or 7, and Districts 3 and 5 have no commission race this year. The state House race for downtown and Lake Eola is District 42; precincts to the northwest (parts of College Park and Pine Hills) are District 40, and some central precincts are in House districts with no race this year. Most of 32801 has no state Senate or school board race. Soil and Water is District 3 or 5. Delaney Park and SoDo (32806): Congress District 10 again (not on the ballot). The precinct that votes at Southside Baptist Church on Lake Margaret Drive (32806) is in County Commission District 3 (no race), state House District 42, School Board District 3 (Moore vs. Peña) and Soil and Water District 3. Other 32806 blocks may be in Commission District 6 and outside School Board District 3. Elsewhere: 32804 (College Park) splits between state House Districts 40 and 42, and parts of it and the Winter Park side vote in state Senate District 10. Southwest ZIPs (32819, 32835, 32836) can be Congress District 10 or 11. South and southeast ZIPs (32809, 32812, 32822, 32824, 32827, 32829, 32832, 32837) can be Congress District 9, 10 or 11 and Commission District 3, 4 or 8, and may include School Board District 3. Vista Lakes residents (near 32829) also vote for a community development district seat. ZIPs near the county line can reach into Osceola or Seminole County, which have different ballots. If your voter card says Osceola or Seminole County, your elections office is that county's, not Orange.",
   "contest_ids": [
     "fl-us-senate-special",
     "fl-governor",
@@ -145,14 +145,15 @@
     "end": "2026-11-01",
     "hours_note": "Orange County: Monday, October 19 through Sunday, November 1, 8:00 AM to 8:00 PM, at any of 27 early voting sites in the county.",
     "hours_short": "Orange County sites are open 8 AM to 8 PM every day.",
-    "lookup_url": "https://voteorangefl.gov/event/early-voting-general-election/",
-    "source": "https://voteorangefl.gov/event/early-voting-general-election/",
+    "lookup_url": "https://voteorangefl.gov/vote-early/",
+    "source": "https://voteorangefl.gov/vote-early/",
     "confidence": "verified"
   },
   "lookups": {
-    "early_in_person": "https://voteorangefl.gov/event/early-voting-general-election/",
+    "early_in_person": "https://voteorangefl.gov/vote-early/",
     "election_day": "https://voteorangefl.gov/find-your-polling-place/",
-    "drop_box": "https://voteorangefl.gov/secure-ballot-intake-stations-drop-boxes/"
+    "drop_box": "https://voteorangefl.gov/secure-ballot-intake-stations-drop-boxes/",
+    "tracking": "https://floridaorangevotes.ballottrax.net/voter/"
   },
   "situations": [
     {
@@ -179,6 +180,26 @@
     {
       "name": "Orange County SOE: drop boxes and office hours",
       "url": "https://voteorangefl.gov/secure-ballot-intake-stations-drop-boxes/"
+    },
+    {
+      "name": "Orange County SOE: vote early (sites and wait times)",
+      "url": "https://voteorangefl.gov/vote-early/"
+    },
+    {
+      "name": "Orange County SOE: BallotTrax",
+      "url": "https://floridaorangevotes.ballottrax.net/voter/"
+    },
+    {
+      "name": "Orange County SOE: find your polling place",
+      "url": "https://voteorangefl.gov/find-your-polling-place/"
+    }
+  ],
+  "notes": "Early voting sites show their wait times on the county's early voting page. Drop off a mail ballot at any of the 27 early voting sites through Sun, Nov 1, 8 AM to 8 PM; after that, only at the elections office, 119 W. Kaley St.: Mon, Nov 2, 8 AM to 5 PM, and Election Day, 7 AM to 7 PM. Never at a polling place. Looking up your polling place? Type your house number and street name; there is no Enter button.",
+  "dated": [
+    {
+      "path": "notes",
+      "from": "2026-11-02",
+      "text": "Drop off a mail ballot only at the elections office, 119 W. Kaley St.: Mon, Nov 2, 8 AM to 5 PM, and Election Day, 7 AM to 7 PM. Never at a polling place. Looking up your polling place? Type your house number and street name; there is no Enter button."
     }
   ]
 }

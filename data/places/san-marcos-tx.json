@@ -10,9 +10,10 @@
   "county_election_office": {
     "name": "Hays County Elections Office, 120 Stagecoach Trail, San Marcos 78666",
     "url": "https://www.hayscountytx.gov/873/November-3-2026-General-Election",
-    "phone": "512-393-7310"
+    "phone": "512-393-7310",
+    "hours": "Open Monday to Friday, 8 AM to 5 PM. Mail ballot questions: ballotbymail@hayscountytx.gov."
   },
-  "sample_ballot_url": "https://www.hayscountytx.gov/873/November-3-2026-General-Election",
+  "sample_ballot_url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en",
   "zips": [
     "78666",
     "78667"
@@ -149,6 +150,36 @@
       "office_match": "U.S. Representative",
       "label": "Find your precinct and Hays County ballot",
       "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    }
+  ],
+  "lookups": {
+    "early_in_person": "https://updates.electionlink.net/widgets/haystx/2026-11-03/Early%20Voting%20Dashboard.html",
+    "election_day": "https://www.hayscountytx.gov/DocumentCenter/View/5053/Vote-Centers-20261103-General-Election"
+  },
+  "by_county": [
+    {
+      "county": "Hays",
+      "zips": [],
+      "lookups": {
+        "early_in_person": "https://updates.electionlink.net/widgets/haystx/2026-11-03/Early%20Voting%20Dashboard.html",
+        "election_day": "https://www.hayscountytx.gov/DocumentCenter/View/5053/Vote-Centers-20261103-General-Election"
+      },
+      "source": "https://www.hayscountytx.gov/873/November-3-2026-General-Election",
+      "confidence": "verified"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Hays County: Nov 3, 2026 election",
+      "url": "https://www.hayscountytx.gov/873/November-3-2026-General-Election"
+    },
+    {
+      "name": "Hays County Elections: office and hours",
+      "url": "https://www.hayscountytx.gov/172/Elections"
+    },
+    {
+      "name": "Hays County: vote centers (PDF)",
+      "url": "https://www.hayscountytx.gov/DocumentCenter/View/5053/Vote-Centers-20261103-General-Election"
     }
   ]
 }

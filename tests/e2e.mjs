@@ -4438,6 +4438,62 @@ const ADDRESS = /testing lane|testing%20lane|testing\+lane|test one/i;
   await ctx.close();
 }
 
+// Where to vote (Oct 28; Kevin: "I know somewhere there's a simple google map"). A ZIP wholly in Travis gets
+// Travis's own early voting map; a ZIP split across counties gets one labeled button per county until the
+// address lookup names the county (the Census mocked in Williamson, no point, so no district maps); Orlando's
+// lost-ballot answer is Orange County's, with its vote-by-mail line in the office card; Portland's no longer
+// says to ask by 7 PM Oct 28 for a mailed replacement.
+{
+  const TRAVIS_EARLY = 'https://www.google.com/maps/d/viewer?mid=1t_vWJgd_BRfKnJn_fQoHE25IV2i_0Jo';
+  const WILCO_EARLY = 'https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Early%20Voting%20Dashboard.html';
+  const { ctx, page } = await newPage();
+  await openBallot(page, '78704');
+  const gold = await page.getAttribute('#plan .plan-acts a.pbtn.gold', 'href');
+  check('Where to vote: a Travis ZIP\u2019s early voting button opens Travis County\u2019s own map', gold === TRAVIS_EARLY && !(await page.$('#plan [data-county]')), gold);
+  await ctx.close();
+  const two = await newPage();
+  const answer = { result: { addressMatches: [{ matchedAddress: 'TEST NORTH, AUSTIN, TX, 78729', geographies: {
+    States: [{ STATE: '48' }], Counties: [{ BASENAME: 'Williamson' }], 'Incorporated Places': [{ BASENAME: 'Austin' }], '119th Congressional Districts': [{ BASENAME: '31' }],
+    '2024 State Legislative Districts - Upper': [{ BASENAME: '5' }], '2024 State Legislative Districts - Lower': [{ BASENAME: '136' }] } }] } };
+  await two.page.route('https://geocoding.geo.census.gov/**', (route) => {
+    const cb = new URL(route.request().url()).searchParams.get('callback');
+    return route.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify(answer)})` });
+  });
+  await openBallot(two.page, '78729');
+  const counties = await two.page.$$eval('#plan [data-county]', (els) => els.map((e) => `${e.classList.contains('gold') ? 'gold' : 'line'} ${e.textContent.trim()}`));
+  check('Where to vote: a ZIP split across counties shows one labeled button per county, Travis first', counties.join('|') === 'gold Travis County|line Williamson County|line Hays County' && /in your county:$/.test(await text(two.page, '#plan .plan-cty')), `${counties.join('|')} / ${await text(two.page, '#plan .plan-cty')}`);
+  check('Where to vote: the county buttons fit at 380px', (await two.page.evaluate(() => document.documentElement.scrollWidth)) <= 380);
+  await shot(two.page, 'where-to-vote-split-zip');
+  await tap(two.page, '.addrbox [data-act="addr-open"]');
+  await two.page.fill('#addr-in', 'a test lookup');
+  await two.page.locator('form[data-form="addr"] button[type=submit]').tap();
+  await two.page.waitForSelector('.addrbox .addr-found', { timeout: 8000 }).catch(() => {});
+  await two.page.waitForTimeout(250);
+  const wgold = await two.page.getAttribute('#plan .plan-acts a.pbtn.gold', 'href');
+  check('Where to vote: once the address is in Williamson County, one button, to Williamson\u2019s early voting map', wgold === WILCO_EARLY && !(await two.page.$('#plan [data-county]')), wgold);
+  noErrors(two.page, 'Where to vote, a split ZIP');
+  await two.ctx.close();
+  const three = await newPage();
+  await openBallot(three.page, '32801');
+  await tap(three.page, '[data-act="open"][data-k="whatif"]');
+  await tap(three.page, '[data-act="open"][data-k="wi-no_mail_ballot_or_lost"]');
+  const short = await text(three.page, '[data-k="wi-no_mail_ballot_or_lost"] + .wi-a .wi-short');
+  check('Where to vote: Orlando\u2019s lost mail ballot answer is Orange County\u2019s own', /early site through Nov 1/.test(short), short);
+  await tap(three.page, '[data-act="open"][data-k="bx-office"]');
+  const office = await text(three.page, '.whatifs .office');
+  check('Where to vote: Orange\u2019s office card labels its vote-by-mail line', /General line: 407-836-2070/.test(office) && /Vote-by-mail line: 407-836-8683/.test(office), office);
+  noErrors(three.page, 'Where to vote, Orlando');
+  await three.ctx.close();
+  const four = await newPage();
+  await openBallot(four.page, '97214');
+  await tap(four.page, '[data-act="open"][data-k="whatif"]');
+  await tap(four.page, '[data-act="open"][data-k="wi-no_mail_ballot_or_lost"]');
+  const pdx = await text(four.page, '[data-k="wi-no_mail_ballot_or_lost"] + .wi-a .wi-short');
+  check('Where to vote: Portland\u2019s lost-ballot answer no longer says to ask by Oct 28 for a mailed one', /pick it up in person/.test(pdx) && !/Oct 28/.test(pdx), pdx);
+  noErrors(four.page, 'Where to vote, Portland');
+  await four.ctx.close();
+}
+
 await browser.close();
 const failed = results.filter((r) => !r.ok);
 console.log(`\n${results.length - failed.length} of ${results.length} checks passed.`);

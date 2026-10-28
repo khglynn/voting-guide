@@ -115,11 +115,11 @@
   },
   "gotchas": [
     {
-      "text": "Your old mail-ballot request is probably dead. Florida requests expire at the end of every general-election year (official rule: a request covers elections 'through the end of the calendar year' of the next general election). Everything requested in 2023 or 2024 expired December 31, 2024. If you have not re-requested since January 2025, nothing is coming. The deadline to have one mailed was 5 PM Thursday, October 22, so vote in person.",
+      "text": "Your old mail-ballot request has probably expired. Florida requests expire at the end of every general-election year (official rule: a request covers elections 'through the end of the calendar year' of the next general election). All requests made in 2023 or 2024 expired December 31, 2024. If you have not requested again since January 2025, no ballot is coming. The deadline to have one mailed was 5 PM Thursday, October 22, so vote in person.",
       "short": "If your last mail ballot request was before 2025, none is coming; vote in person."
     },
     {
-      "text": "Mail ballots must be in the supervisor's office by 7 PM on November 3. Postmarks do not count, so don't mail it now. And do not take it to your Election Day polling place: precincts cannot accept mail ballots. Use a secure ballot intake station at an early voting site (during early voting hours) or the supervisor's main or branch office.",
+      "text": "Mail ballots must reach the supervisor's office by 7 PM on November 3. Postmarks do not count, so don't mail yours now. Do not take it to your Election Day polling place: precincts cannot accept mail ballots. Use a secure ballot intake station at an early voting site (during early voting hours) or the supervisor's main or branch office.",
       "short": "After Oct 27, drop off your mail ballot at early voting or the supervisor's office."
     },
     {
@@ -267,7 +267,7 @@
       "answer": "Just vote in person. The supervisor's office checks that your mail ballot hasn't come back, and then you vote a regular ballot.",
       "steps": [
         "Check whether you even have a mail ballot request on file; requests from 2023 or 2024 expired.",
-        "It's too late to have one mailed (the deadline was Oct 22). You can pick one up at your supervisor's office, but you'll sign a form saying an emergency keeps you from voting in person.",
+        "It's too late to have one mailed (the deadline was Oct 22). You can pick one up at your supervisor's office. You'll sign a form saying an emergency keeps you from voting in person.",
         "If the office can't confirm whether your ballot came back, you vote a provisional ballot."
       ],
       "deadline": "2026-10-22",

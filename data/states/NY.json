@@ -42,7 +42,7 @@
     "who_gets_one": "Only people who ask. New York has two kinds and they work the same once you have one. Early mail ballot: 'Any registered voter may apply,' no reason needed. ABSENTEE ballot: for voters who will be away from their county (or away from NYC's five boroughs) on Election Day, have an illness or disability, are the primary caregiver of someone ill or disabled, are in a VA hospital, or are in jail or prison for anything other than a felony conviction. Same ballot, same deadlines. If you don't have an absentee reason, pick early mail. Apply online at elections.ny.gov/request-ballot (NYC: vote.nyc/RequestBallot), by mail, email or fax to your county board, or in person at your county board. 'Each person must apply for themselves.'",
     "request_deadline": {
       "date": "2026-10-24",
-      "rule": "Online, by email, fax or mail: the county board had to receive your application by Saturday, October 24, 2026 (state calendar: 'Last day for board of elections to receive application or letter of application by mail or online portal'). In person at your county board: through Monday, November 2, 2026, the day before the election, and they can hand you the ballot to vote on the spot. The online and mail deadline has passed, so apply in person.",
+      "rule": "Online, by email, fax or mail: the county board had to receive your application by Saturday, October 24, 2026 (state calendar: 'Last day for board of elections to receive application or letter of application by mail or online portal'). Apply in person at your county board through Monday, November 2, 2026, the day before the election. They can hand you the ballot to vote on the spot. The online and mail deadline has passed, so apply in person.",
       "source": "https://elections.ny.gov/system/files/documents/2025/12/2026-political-calendar-quad-fold-12.9.2025-final.pdf"
     },
     "return_deadline": {
@@ -180,7 +180,7 @@
           "url": "https://vote.gov/register/new-york"
         }
       ],
-      "answer": "New York's registration deadline for November 3 was October 24, and there's no same-day registration, so new voters can't register for this election. Check your existing registration before assuming you can't vote.",
+      "answer": "New York's registration deadline for November 3 was October 24, and there's no same-day registration. New voters can't register for this election. Check your existing registration before assuming you can't vote.",
       "steps": [
         "Check first at voterlookup.elections.ny.gov. You may already be registered.",
         "Not registered? Register now for future elections at elections.ny.gov, or through the DMV if you have a New York license or ID."
@@ -309,7 +309,7 @@
       "question": "I'm a college student.",
       "short": "Online requests closed Oct 24; apply in person at your home county board by Nov 2, or vote early.",
       "actions": [],
-      "answer": "Registered at home but away at school? Online mail-ballot requests closed Saturday, October 24. You can still apply in person at your home county board through November 2, and you can name someone to deliver your application and pick up your ballot. Or vote early in person through Sunday, November 1.",
+      "answer": "Registered at home but away at school? Online mail-ballot requests closed Saturday, October 24. You can still apply in person at your home county board through November 2. You can also name someone to deliver your application and pick up your ballot. Or vote early in person through Sunday, November 1.",
       "steps": [
         "Already have your ballot? Mail it right away; it must be postmarked by November 3.",
         "Registering at your school address instead closed October 24, so this year you vote where you're registered."

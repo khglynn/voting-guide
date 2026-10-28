@@ -35,7 +35,7 @@
     ],
     "same_day_registration": true,
     "same_day_notes": "Go to your county elections office or any voting center in your county through 8:00 PM on November 3. Bring your Washington driver's license, permit or state ID number, or the last four digits of your Social Security number. You will vote right there. King County Elections: 919 SW Grady Way, Renton; 206-296-VOTE (8683); Vote Centers are also open Sat Oct 31 (10 AM to 4 PM), Mon Nov 2 (8:30 AM to 6 PM) and Election Day (until 8 PM); locations at kingcounty.gov/elections.",
-    "still_possible_now": "Yes, in person. Online registration with a mailed ballot ended Monday, October 26. You can still register and vote in person at your county elections office or a voting center, through 8:00 PM on Election Day.",
+    "still_possible_now": "Yes, in person. Registering online to get a ballot in the mail ended Monday, October 26. You can still register and vote in person at your county elections office or a voting center, through 8:00 PM on Election Day.",
     "confidence": "verified"
   },
   "mail_ballot": {
@@ -142,7 +142,7 @@
           "url": "https://www.sos.wa.gov/elections/voters/voter-registration/drop-box-and-voting-center-locations"
         }
       ],
-      "answer": "Go in person to a voting center or your county elections office by 8 PM on November 3, update your address there and vote. The online deadline to get a ballot mailed to your new address was October 26.",
+      "answer": "Go to a voting center or your county elections office in person by 8 PM on November 3. Update your address there and vote. The online deadline to get a ballot mailed to your new address was October 26.",
       "steps": [
         "Ballots aren't forwarded, so update before your old-address ballot gets lost.",
         "King County: Elections office at 919 SW Grady Way, Renton, or any King County Vote Center (open October 31, November 2 and Election Day).",
@@ -185,7 +185,7 @@
           "url": "https://vote.gov/register/washington"
         }
       ],
-      "answer": "You still have time. Register in person at a voting center or county elections office until 8 PM on Election Day and vote right there. Online registration with a mailed ballot ended October 26.",
+      "answer": "You still have time. Register and vote in person at a voting center or county elections office until 8 PM on Election Day. Registering online to get a ballot in the mail ended October 26.",
       "steps": [
         "Have your Washington license, permit or ID number, or the last four digits of your Social Security number.",
         "King County: 919 SW Grady Way, Renton, or any Vote Center.",
@@ -322,7 +322,7 @@
           "url": "https://voter.votewa.gov/"
         }
       ],
-      "answer": "Update your registration in person by 8 PM on Election Day; the online deadline was October 26. The county checks your envelope signature against the one on file, so if your signature changed too, updating matters.",
+      "answer": "Update your registration in person by 8 PM on Election Day; the online deadline was October 26. The county compares your envelope signature with the one on file. If your signature changed too, updating matters.",
       "steps": [
         "If the county can't match your signature, it will contact you, and you can fix it by November 23."
       ],

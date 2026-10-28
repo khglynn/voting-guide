@@ -34,14 +34,14 @@
     ],
     "same_day_registration": true,
     "same_day_notes": "Go to any vote center in your county (LA, Orange, San Diego) or, in San Francisco, the Department of Elections at City Hall Room 48 or any polling place on Election Day, through 8:00 PM on November 3. You register and vote in one trip. Bring something with your name and address if you have it (driver's license, utility bill, or the sample ballot booklet the county mailed you); first-time voters who registered without a DL or SSN may be asked for ID. Your ballot is held until the county verifies your eligibility, then counted. Find locations at https://caearlyvoting.sos.ca.gov/.",
-    "still_possible_now": "Yes, in person. Online registration with a mailed ballot ended October 19. You can still register and vote in person at any vote center (from October 24 in LA, Orange and San Diego) or at your county elections office, right up to 8:00 PM on Election Day.",
+    "still_possible_now": "Yes, in person. Registering online to get a ballot in the mail ended October 19. You can still register and vote in person at any vote center (from October 24 in LA, Orange and San Diego) or at your county elections office, right up to 8:00 PM on Election Day.",
     "confidence": "verified"
   },
   "mail_ballot": {
     "who_gets_one": "Automatic. Every active registered voter in California is mailed a ballot for every election. No request and no excuse needed. Counties had to begin mailing by October 5, 2026. LA County mailed all ballots on October 1; San Francisco mailed in early October. The Secretary of State confirmed on October 6 that ballots had gone out statewide. If yours never came, get a replacement in person or just vote in person; mailed replacements ended October 27.",
     "request_deadline": {
       "date": "2026-10-27",
-      "rule": "You don't need to request a ballot. If yours is lost, damaged, or never arrived, you can ask your county for a replacement. LA County's last day to request a mailed replacement was Tuesday, October 27 (the state form is at https://elections.cdn.sos.ca.gov/vote-by-mail/pdf/replacement-application.pdf). Now get a replacement in person at any vote center or county elections office, or just vote in person.",
+      "rule": "You don't need to request a ballot. If yours is lost, damaged, or never arrived, ask your county for a replacement. LA County's last day to request a mailed replacement was Tuesday, October 27 (the state form is at https://elections.cdn.sos.ca.gov/vote-by-mail/pdf/replacement-application.pdf). Now get a replacement in person at any vote center or county elections office, or just vote in person.",
       "source": "https://content.lavote.gov/docs/rrcc/documents/media-kit-final.pdf"
     },
     "return_deadline": {
@@ -181,7 +181,7 @@
           "url": "https://caearlyvoting.sos.ca.gov/"
         }
       ],
-      "answer": "You still can. Register and vote the same day at any vote center or your county elections office, through 8 PM on November 3. The online deadline to get a ballot in the mail was October 19.",
+      "answer": "You still can. Register and vote in one visit at any vote center or your county elections office, through 8 PM on November 3. The online deadline to get a ballot in the mail was October 19.",
       "steps": [
         "Check first at voterstatus.sos.ca.gov; you may already be registered.",
         "Same Day Registration ballots are counted once the county verifies your registration.",
@@ -244,7 +244,7 @@
           "url": "https://caearlyvoting.sos.ca.gov/"
         }
       ],
-      "answer": "It's too late to have a replacement mailed: LA, Orange, San Diego and San Francisco counties all stopped mailed requests on October 27. Get one in person instead, or just vote in person: at any vote center in your county, or in San Francisco at the City Hall Voting Center or your polling place on Election Day.",
+      "answer": "It's too late to have a replacement mailed: LA, Orange, San Diego and San Francisco counties all stopped mailed requests on October 27. Get a replacement or vote in person at any vote center in your county. In San Francisco, use the City Hall Voting Center or your polling place on Election Day.",
       "steps": [
         "Check Where's My Ballot to see when and where it was mailed.",
         "Voting in person without your mail ballot? If the vote center can't confirm you haven't already voted, you vote a provisional ballot, counted once the county checks.",
@@ -323,7 +323,7 @@
       ],
       "answer": "Update your registration with your new name and vote the same day at any vote center in your county. The online deadline for this election was October 19.",
       "steps": [
-        "Bring your new name to any vote center in your county; you can update it and vote in one visit.",
+        "Go to any vote center in your county; you can update your name and vote in one visit.",
         "Or use Same Day Registration at a vote center, through 8 PM Nov 3.",
         "Sign your mail ballot envelope the way you sign now, and watch for a notice asking you to confirm your signature."
       ],

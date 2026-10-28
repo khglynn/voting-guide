@@ -7,7 +7,7 @@
     "url": "https://www.pa.gov/agencies/vote/elections/upcoming-elections"
   },
   "voting_model": "in_person_first",
-  "model_plain": "Most people vote in person on Election Day, 7 AM to 8 PM. Applying for a mail ballot closed at 5 PM on Tuesday, October 27. If you already have one, your county must have it back by 8 PM on November 3. There is no early voting in Pennsylvania.",
+  "model_plain": "Most people vote in person on Election Day, 7 AM to 8 PM. Mail ballot applications closed at 5 PM on Tuesday, October 27. If you already have one, your county must receive it by 8 PM on November 3. There is no early voting in Pennsylvania.",
   "registration": {
     "check_url": "https://www.pavoterservices.pa.gov/Pages/voterregistrationstatus.aspx",
     "register_url": "https://vote.gov/register/pennsylvania",
@@ -41,7 +41,7 @@
     "who_gets_one": "You must ask for one. Any registered voter can request a no-excuse mail-in ballot (or an absentee ballot if you'll be away, ill or disabled; same deadlines, same process). Nothing is mailed automatically. If you checked the 'annual mail-in list' box on a past application, the county mailed you an application in early 2026; if you returned it, your ballot should have arrived in October. Not sure? Check the tracking link.",
     "request_deadline": {
       "date": "2026-10-27",
-      "rule": "Your application had to be received by your county election office by 5:00 PM on Tuesday, October 27. The official calendar: 'Last day before the November election on which official applications for mail-in ballots may be received by the county boards of elections, due at 5:00 PM.' That deadline has passed; you can still return a ballot you already have. Emergency absentee ballots (sudden illness or emergency after 5 PM Oct. 27) can be requested until 8 PM on Election Day; ask your county.",
+      "rule": "Your county election office had to receive your application by 5:00 PM on Tuesday, October 27. The official calendar: 'Last day before the November election on which official applications for mail-in ballots may be received by the county boards of elections, due at 5:00 PM.' That deadline has passed; you can still return a ballot you already have. Emergency absentee ballots (sudden illness or emergency after 5 PM Oct. 27) can be requested until 8 PM on Election Day; ask your county.",
       "source": "https://www.pa.gov/content/dam/copapwp-pagov/en/dos/programs/voting-and-elections/running-for-office/2026/2026-general-election-calendar.pdf"
     },
     "return_deadline": {
@@ -117,7 +117,7 @@
       "short": "Get your mail ballot to the county by 8 PM Nov 3; postmarks don't count."
     },
     {
-      "text": "Applying for a mail ballot closed at 5 PM on October 27. You can still return a ballot you already have by 8 PM on November 3. Emergency absentee voting may also be available if you qualify; otherwise vote at your assigned polling place on November 3, 7 AM to 8 PM.",
+      "text": "Mail ballot applications closed at 5 PM on October 27. You can still return a ballot you already have by 8 PM on November 3. Emergency absentee voting may also be available if you qualify; otherwise vote at your assigned polling place on November 3, 7 AM to 8 PM.",
       "short": "Mail ballot applications closed Oct 27; return yours by 8 PM Nov 3."
     },
     {
@@ -262,7 +262,7 @@
           "url": "https://www.pa.gov/services/vote/find-your-local-polling-place"
         }
       ],
-      "answer": "At the polls, ask a poll worker for a new ballot before you scan it. On a mail ballot, don't send it: bring the ballot and its outer return envelope to your polling place to be voided, then vote a regular ballot, or ask your county about a replacement (Philadelphia still replaces ballots at City Hall Room 140 and its satellite offices).",
+      "answer": "At the polls, ask a poll worker for a new ballot before you scan it. If you make a mistake on a mail ballot, don't send it. Bring the ballot and its outer return envelope to your polling place to be voided, then vote a regular ballot. Or ask your county about a replacement (Philadelphia still replaces ballots at City Hall Room 140 and its satellite offices).",
       "steps": null,
       "deadline": null,
       "source": "https://www.pa.gov/agencies/vote/voter-support/mail-in-and-absentee-ballot",
@@ -334,7 +334,7 @@
           "url": "https://www.pavoterservices.pa.gov/Pages/BallotTracking.aspx"
         }
       ],
-      "answer": "Registered at home but away at school? Applying for a mail ballot closed at 5 PM on Tuesday, October 27. If you already have one, your county must receive it by 8 PM on November 3; a postmark doesn't count.",
+      "answer": "Registered at home but away at school? Mail ballot applications closed at 5 PM on Tuesday, October 27. If you already have one, your county must receive it by 8 PM on November 3; a postmark doesn't count.",
       "steps": [
         "Already have your ballot? Mail it right away; it must arrive by 8 PM November 3.",
         "Registering at your school address instead closed October 19, so this year you vote where you're registered."
@@ -348,7 +348,7 @@
       "question": "I'll be away on Election Day.",
       "short": "Mail ballot applications closed Oct 27; a sudden emergency may still qualify you for an emergency absentee ballot.",
       "actions": [],
-      "answer": "Pennsylvania has no early voting, and applying for a mail ballot closed at 5 PM on Tuesday, October 27. A sudden emergency after that, like an unexpected trip or illness? Ask your county for an emergency absentee ballot; it's due back by 8 PM on Election Day.",
+      "answer": "Pennsylvania has no early voting, and mail ballot applications closed at 5 PM on Tuesday, October 27. A sudden emergency after that, like an unexpected trip or illness? Ask your county for an emergency absentee ballot; it's due back by 8 PM on Election Day.",
       "steps": [
         "Philadelphia: City Hall Room 140 plus 10 satellite offices, open seven days a week.",
         "Allegheny: emergency voting is at the County Office Building, 542 Forbes Ave.; call 412-350-4500.",

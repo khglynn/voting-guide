@@ -41,7 +41,7 @@
     "who_gets_one": "Automatic. Every active registered voter is mailed a ballot. No request or excuse needed. Counties began mailing Wednesday, October 14 (Multnomah County ballots started arriving that day) and must finish by October 20. Multnomah says everyone should have a ballot by October 22; the state says call your county if you don't have it by October 30.",
     "request_deadline": {
       "date": "2026-10-28",
-      "rule": "You don't request a ballot; it comes automatically. If yours is lost, damaged, or never arrived, ask your county for a replacement. In Multnomah County, mailed replacements end at 7:00 PM on Wednesday, October 28 (county replacement page: 'The deadline to request a replacement ballot for the Nov. 3, 2026 General Election mailed to your home is Oct. 28 at 7PM. After that time, replacement ballots are only available for pick up at will call in person'). To pick one up, order it online or by phone, wait for the email saying it's ready, then get it at the Voting Center (1040 SE Morrison St., Portland) or the Voting Center Express (600 NE 8th St., Gresham), through 8:00 PM on Election Day. Phone 503-988-VOTE (8683), email elections@multco.us.",
+      "rule": "You don't request a ballot; it comes automatically. If yours is lost, damaged, or never arrived, ask your county for a replacement. In Multnomah County, mailed replacements end at 7:00 PM on Wednesday, October 28 (county replacement page: 'The deadline to request a replacement ballot for the Nov. 3, 2026 General Election mailed to your home is Oct. 28 at 7PM. After that time, replacement ballots are only available for pick up at will call in person'). To pick one up, order it online or by phone. Wait for the email saying it's ready. Then get it at the Voting Center (1040 SE Morrison St., Portland) or the Voting Center Express (600 NE 8th St., Gresham), through 8:00 PM on Election Day. Phone 503-988-VOTE (8683), email elections@multco.us.",
       "source": "https://multco.us/file/vote-by-mail_facts_-_november_3,_2026_general_election/download"
     },
     "return_deadline": {
@@ -244,7 +244,7 @@
           "url": "https://sos.oregon.gov/elections/Pages/myvote.aspx"
         }
       ],
-      "answer": "Ask your county for a replacement. In Multnomah County, order one online or by phone, then pick it up in person through 8 PM on Election Day. Having one mailed to your home ends at 7 PM on Wednesday, October 28.",
+      "answer": "Ask your county for a replacement. In Multnomah County, order one online or by phone, then pick it up in person through 8 PM on Election Day. The deadline to have one mailed to your home is 7 PM on Wednesday, October 28.",
       "steps": [
         "Multnomah: multco.us replacement ballot page, or call 503-988-VOTE (8683).",
         "Pick up at 1040 SE Morrison St. in Portland or the Voting Center Express at 600 NE 8th St. in Gresham.",

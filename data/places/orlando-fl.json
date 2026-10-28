@@ -16,7 +16,7 @@
         "phone": "407-836-8683"
       }
     ],
-    "hours": "Offices are open Monday to Friday, 8 AM to 5 PM: 119 W. Kaley St., Orlando, and the West Oaks Mall office, 9401 W. Colonial Dr., Ocoee.",
+    "hours": "Offices open Monday to Friday, 8 AM to 5 PM: 119 W. Kaley St., Orlando, and the West Oaks Mall office, 9401 W. Colonial Dr., Ocoee.",
     "source": "https://voteorangefl.gov/contact-us/"
   },
   "sample_ballot_url": "https://voteorangefl.gov/whats-on-my-ballot/",
@@ -158,10 +158,10 @@
     {
       "id": "no_mail_ballot_or_lost",
       "short": "Vote in person at any early site through Nov 1, or at your own precinct on Nov 3.",
-      "answer": "The deadline to have a new ballot mailed was October 22, so vote in person. Early voting is open every day through Sunday, November 1, 8 AM to 8 PM, at any of 27 sites. On Election Day, go to your own precinct, 7 AM to 7 PM. Still have the mail ballot? Bring it and trade it for a regular ballot.",
+      "answer": "The deadline to have a new ballot mailed was October 22, so vote in person. Vote early every day through Sunday, November 1, 8 AM to 8 PM, at any of 27 sites. On Election Day, go to your own precinct, 7 AM to 7 PM. Still have the mail ballot? Bring it and trade it for a regular ballot.",
       "steps": [
         "Questions? Call the Orange County vote-by-mail line, 407-836-8683. Offices are open Monday to Friday, 8 AM to 5 PM.",
-        "You can also pick up a mail ballot at the elections office, 119 W. Kaley St., through Election Day, but you'll sign a form saying an emergency keeps you from voting in person."
+        "You can also pick up a mail ballot at the elections office, 119 W. Kaley St., through Election Day. You'll sign a form saying an emergency keeps you from voting in person."
       ],
       "source": "https://voteorangefl.gov/request-a-mail-ballot/",
       "confidence": "verified"

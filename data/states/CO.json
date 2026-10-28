@@ -34,7 +34,7 @@
     ],
     "same_day_registration": true,
     "same_day_notes": "Go to any Voter Service and Polling Center (VSPC) in your county through 7:00 PM on November 3. Bring an acceptable ID (see id_rules). If you register on Election Day without verifiable ID you may vote a provisional ballot that is counted after your eligibility is confirmed. Find VSPCs at GoVoteColorado.gov.",
-    "still_possible_now": "Yes, in person. Online registration with a mailed ballot ended October 26. You can still register and vote in person at any vote center in your county, right up to 7:00 PM on Election Day.",
+    "still_possible_now": "Yes, in person. Registering online to get a ballot in the mail ended October 26. You can still register and vote in person at any vote center in your county, right up to 7:00 PM on Election Day.",
     "confidence": "verified"
   },
   "mail_ballot": {
@@ -149,7 +149,7 @@
           "url": "https://www.sos.state.co.us/pubs/elections/VIP.html"
         }
       ],
-      "answer": "You can still vote where you live now. Go to any vote center in your new county with ID, update your address, and vote right there, through 7 PM on Election Day. Updating online to get a ballot mailed ended Monday, October 26.",
+      "answer": "You can still vote where you live now. Bring ID to any vote center in your new county, update your address, and vote there through 7 PM on Election Day. The online deadline to get a ballot mailed was Monday, October 26.",
       "steps": [
         "Bring ID to any vote center in your new county; you can update your address and vote in one visit.",
         "Moved to a different county? Vote with your new county. Denver, Jefferson, Arapahoe and Boulder each run their own ballots and vote centers."
@@ -195,7 +195,7 @@
           "url": "https://vote.gov/register/colorado"
         }
       ],
-      "answer": "You still have time. Register and vote in the same visit at any vote center in your county, up to 7 PM on Election Day. Online registration with a mailed ballot ended Monday, October 26.",
+      "answer": "You still have time. Register and vote in one visit at any vote center in your county, up to 7 PM on Election Day. Registering online to get a ballot in the mail ended Monday, October 26.",
       "steps": [
         "Check first: you may already be registered. Look yourself up at GoVoteColorado.gov.",
         "Online registration needs a Colorado driver's license or ID, or the last 4 digits of your Social Security number.",
@@ -259,7 +259,7 @@
           "url": "https://www.sos.state.co.us/pubs/elections/VIP.html"
         }
       ],
-      "answer": "It's too late to have a new ballot mailed. Go to any vote center in your county with ID and ask for a replacement, or just vote there, through 7 PM on Election Day. Call your county first if you want to check.",
+      "answer": "It's too late to have a new ballot mailed. Bring ID to any vote center in your county and ask for a replacement, or vote there, through 7 PM on Election Day. Call your county first if you want to check.",
       "steps": [
         "Check BallotTrax or GoVoteColorado.gov to see when it was mailed and to which address.",
         "Call your county: Denver 720-913-8683 (or text 56003), Boulder 303-413-7740 (closed Fridays), Arapahoe 303-795-4511, Jefferson 303-271-8111, Adams 720-523-6500, Douglas 303-660-7444.",

@@ -7,7 +7,7 @@
     "url": "https://mvp.sos.ga.gov/"
   },
   "voting_model": "in_person_first",
-  "model_plain": "Most Georgians vote in person, either during three weeks of early voting (any early voting site in your county) or on Election Day at your assigned precinct. Anyone could also vote by mail, but requests closed October 23, and the drop boxes go away when early voting ends on October 30.",
+  "model_plain": "Most Georgians vote in person: during three weeks of early voting at any early voting site in your county, or on Election Day at your assigned precinct. Anyone could also vote by mail, but requests closed October 23. Drop boxes close when early voting ends on October 30.",
   "registration": {
     "check_url": "https://mvp.sos.ga.gov/",
     "register_url": "https://vote.gov/register/georgia",
@@ -146,7 +146,7 @@
       "steps": [
         "Still file your new address with your county registrar, online or on paper, so it's right next time.",
         "Moved counties more than 30 days ago and didn't re-register by Oct 5? You can't vote in your old county, and it's too late to register in the new one. Call your county registrar if you're unsure.",
-        "Can't get back to your old county? Absentee requests closed Oct 23, so you'll need to vote in person there."
+        "Can't get back to your old county? Absentee requests closed Oct 23, so call your old county's elections office about your options."
       ],
       "deadline": "2026-10-23",
       "source": "https://accgov.com/242/Voter-Change-of-Residence",

@@ -2348,7 +2348,7 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
 /* ---------- visit counts (Oct 28, src/stats.ts) ----------
    Off Vercel's hosts the page loads no script and counts nothing. Here a stubbed window.va (the package's
    own queue, which track() hands every event) stands in, so the checks see exactly what the page would
-   queue: a ballot shown sends its place and how, each screen a view, a save link "made"; never the ZIP. */
+   queue: a ballot shown sends its state and how, each screen a view, a save link "made"; never the ZIP. */
 {
   const { ctx, page } = await newPage();
   await page.addInitScript(() => { window.__va = []; window.va = (...a) => { window.__va.push(JSON.parse(JSON.stringify(a))); }; });
@@ -2366,7 +2366,7 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
   const va = await page.evaluate(() => window.__va);
   const events = va.filter((a) => a[0] === 'event').map((a) => a[1]);
   const ballots = events.filter((e) => e.name === 'ballot');
-  check('Visit counts: a ballot shown queues one ballot event, with only its place and how', ballots.length === 1 && Object.keys(ballots[0].data).sort().join() === 'how,place' && ballots[0].data.place === 'austin-tx' && ballots[0].data.how === 'zip', JSON.stringify(ballots));
+  check('Visit counts: a ballot shown queues one ballot event, with only its state and how', ballots.length === 1 && Object.keys(ballots[0].data).sort().join() === 'how,state' && ballots[0].data.state === 'TX' && ballots[0].data.how === 'zip', JSON.stringify(ballots));
   const screens = events.filter((e) => e.name === 'view').map((e) => e.data.name).join(' > ');
   check('Visit counts: each screen shown queues a view, Back included', screens === 'start > ballot > plan > ballot', screens);
   check('Visit counts: making a save link queues share made, never the link', events.filter((e) => e.name === 'share').map((e) => JSON.stringify(e.data)).join() === '{"act":"made"}');
@@ -2375,21 +2375,43 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
   const vercelBase = /(^|\.)(vercel\.app|kevinhg\.com)$/.test(new URL(BASE).hostname);
   check('Visit counts: Vercel’s script is asked for only on Vercel’s hosts', vercelBase ? asked.length > 0 : asked.length === 0 && !(await page.$('script[src*="_vercel/insights"]')), asked.join());
   noErrors(page, 'Visit counts');
+  // A ballot that won't load (a save link pasted into this tab, its state's file down) leaves you on the first
+  // page, and that screen counts like any other (app.ts loadBallot). After noErrors: the 503 logs an error.
+  await page.route('**/data/state-CO.json', (route) => route.fulfill({ status: 503, body: 'down' }));
+  await page.evaluate(() => { location.hash = '#v1~CO~denver-co~-'; });
+  await page.waitForSelector('[data-act="retry"]', { timeout: 15000 });
+  const failedViews = (await page.evaluate(() => window.__va)).filter((a) => a[0] === 'event' && a[1].name === 'view').map((a) => a[1].data.name).join(' > ');
+  check('Visit counts: a ballot that won’t load counts the first page it leaves you on', failedViews === 'start > ballot > plan > ballot > start', failedViews);
   await ctx.close();
 }
 /* The whole path, served as vote.kevinhg.com: Playwright answers every request to that host from the server
    under test (nothing reaches the real site), and a stand-in for Vercel's script records what the package
-   hands it. So this runs the host check, the idle load, inject() with our beforeSend, and the events that
-   waited for the script (a returning ballot and a save link both open during boot). */
+   hands it. So this runs the host check, the idle load, inject() with our beforeSend, the events that
+   waited for the script (a returning ballot and a save link both open during boot), and the referrer the
+   script would send (__vaSent, built as Vercel's script builds it). */
 {
   const HOST = 'https://vote.kevinhg.com';
   const FAKE = `(() => {
     const q = window.vaq || [];
     let before = null;
     window.__vaSeen = [];
+    window.__vaSent = [];
     window.__vaSdk = document.currentScript ? document.currentScript.dataset.sdkn : '';
-    window.va = (t, p) => { if (t === 'beforeSend') before = p; else window.__vaSeen.push(JSON.parse(JSON.stringify([t, p]))); };
+    /* What Vercel's script sends, built the way it does (va.vercel-scripts.com/v1/script.js, Oct 28): beforeSend
+       first, then document.referrer read as it sends, kept whole as r whenever it isn't this host. */
+    const send = (type, p) => {
+      const e = before ? before({ type, url: location.href, payload: p }) : { url: location.href };
+      if (!e) return;
+      const ref = document.referrer;
+      window.__vaSent.push({ type, o: e.url, ...(ref.includes(location.host) ? {} : { r: ref }), ...(p ? { en: p.name, ed: p.data } : {}) });
+    };
+    window.va = (t, p) => {
+      if (t === 'beforeSend') { before = p; return; }
+      window.__vaSeen.push(JSON.parse(JSON.stringify([t, p])));
+      if (t === 'event') send('event', p);
+    };
     q.forEach(([t, p]) => window.va(t, p));
+    send('pageview');
     window.__vaCut = (url) => (before ? before({ type: 'pageview', url }) : 'no beforeSend');
   })();`;
   const { ctx, page } = await newPage();
@@ -2411,7 +2433,7 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
   await page.fill('#zip', '78704');
   await throughSetup(page);
   await page.waitForFunction(() => (window.__vaSeen || []).some(([t, e]) => t === 'event' && e.name === 'ballot'), null, { timeout: 5000 }).catch(() => {});
-  check('Visit counts, on vote.kevinhg.com: "Show my ballot" counts the ballot, how zip', JSON.stringify(await ballotsOf()) === '[{"place":"austin-tx","how":"zip"}]', JSON.stringify(await ballotsOf()));
+  check('Visit counts, on vote.kevinhg.com: "Show my ballot" counts the ballot, how zip', JSON.stringify(await ballotsOf()) === '[{"state":"TX","how":"zip"}]', JSON.stringify(await ballotsOf()));
   await tap(page, '.foot [data-act="cheat"]');
   await tap(page, '[data-act="save-open"]');
   const link = (await page.inputValue('.save-url')).replace(/^https?:\/\/[^/]+/, HOST).replace('/#', `/?today=${TODAY}&from=link#`);
@@ -2419,14 +2441,24 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
   await page.reload();
   await page.waitForSelector('#plan', { timeout: 15000 });
   await page.waitForFunction(() => (window.__vaSeen || []).some(([t, e]) => t === 'event' && e.name === 'ballot'), null, { timeout: 15000 }).catch(() => {});
-  check('Visit counts, on vote.kevinhg.com: a returning ballot opened during boot is counted once, after the script loads', JSON.stringify(await ballotsOf()) === '[{"place":"austin-tx","how":"returning"}]', JSON.stringify(await ballotsOf()));
+  check('Visit counts, on vote.kevinhg.com: a returning ballot opened during boot is counted once, after the script loads', JSON.stringify(await ballotsOf()) === '[{"state":"TX","how":"returning"}]', JSON.stringify(await ballotsOf()));
   // A save link opened fresh: shared, and the link counted as opened, never its picks or its ZIP.
   await page.goto(link);
   await page.waitForSelector('#plan', { timeout: 15000 });
   await page.waitForFunction(() => (window.__vaSeen || []).some(([t, e]) => t === 'event' && e.name === 'share'), null, { timeout: 15000 }).catch(() => {});
   const all = await seen();
-  check('Visit counts, on vote.kevinhg.com: a save link counts as shared and opened', JSON.stringify(await ballotsOf()) === '[{"place":"austin-tx","how":"shared"}]' && all.filter(([, e]) => e.name === 'share').map(([, e]) => e.data.act).join() === 'opened', JSON.stringify(all));
+  check('Visit counts, on vote.kevinhg.com: a save link counts as shared and opened', JSON.stringify(await ballotsOf()) === '[{"state":"TX","how":"shared"}]' && all.filter(([, e]) => e.name === 'share').map(([, e]) => e.data.act).join() === 'opened', JSON.stringify(all));
   check('Visit counts, on vote.kevinhg.com: nothing handed to Vercel holds a ZIP, five digits in a row or an at sign', all.length > 0 && !/\d{5}|@/.test(JSON.stringify(all)) && /78704/.test(link), JSON.stringify(all));
+  // Sent here by a link whose own address holds a ZIP (the linking site decides how much of it the browser passes
+  // on, and Playwright passes it whole): Vercel's script reads document.referrer as it sends, after beforeSend, so
+  // the page may only ever show it the origin (stats.ts startStats).
+  await page.goto(`${HOST}/?today=${TODAY}`, { referer: 'https://referrer.example/search?zip=78704' });
+  await page.waitForFunction(() => (window.__vaSent || []).some((x) => x.type === 'pageview'), null, { timeout: 15000 }).catch(() => {});
+  const sent = await page.evaluate(() => window.__vaSent || []);
+  const refRead = await page.evaluate(() => document.referrer);
+  check('Visit counts, on vote.kevinhg.com: a referrer with a path and a query reaches Vercel as its origin only', sent.length > 0 && refRead === 'https://referrer.example'
+    && sent.every((x) => !('r' in x) || x.r === 'https://referrer.example') && sent.some((x) => x.r === 'https://referrer.example'), JSON.stringify({ refRead, sent }));
+  check('Visit counts, on vote.kevinhg.com: nothing sent after that referrer holds its ZIP', !JSON.stringify(sent).includes('78704') && sent.every((x) => !/\d{5}|@/.test(JSON.stringify(x))), JSON.stringify(sent));
   noErrors(page, 'Visit counts on vote.kevinhg.com');
   await ctx.close();
 }

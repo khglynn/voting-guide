@@ -7,7 +7,7 @@ import { buildBallot, entriesBySection, status, isRCV, isMultiSeat, isMultiJudge
 import { zipState, censusLookup, placeFromGeo, settleAddress, withPlace, tidyAddress, type GeoResult } from './geo';
 import { toast, hideToast } from './util';
 import { keepPrivate } from './errors';
-import { track, ballotPlace, type Events } from './stats';
+import { track, type Events } from './stats';
 import { render, renderBallot, renderAddr, anchored, $ } from './render';
 import { setInvolved, type GetInvolved } from './views/pass';
 import { planAgree, applyFills, planParty, planSetup, forgetUndo, fillStands, canUndo } from './model/bulk';
@@ -230,9 +230,9 @@ type How = Events['ballot']['how'];
 type OpenOpts = { share?: ReturnType<typeof parseShareHead>; door?: boolean; noSetup?: boolean; how?: How; after?: () => void | Promise<void> };
 /* How the ballot on the first page was found, for when "Show my ballot" shows it. */
 let doorHow: How = 'zip';
-/* A ballot shown, counted: its one place id, or its state code (stats.ts ballotPlace). */
+/* A ballot shown, counted by its state code only (stats.ts Events: a place can name the ZIP typed). */
 function shown(b: Ballot, how: How): void {
-  track('ballot', { place: ballotPlace(b), how });
+  track('ballot', { state: b.st, how });
 }
 export function openBallot(st: string, placeIds: string[], zip: string, opts: OpenOpts = {}): Promise<boolean> {
   const p = loadBallot(st, placeIds, zip, opts);
@@ -323,6 +323,7 @@ async function loadBallot(st: string, placeIds: string[], zip: string, opts: Ope
     S.loadErr = 'We couldn’t load that ballot. Check your connection.';
     S.retry = () => { void openBallot(st, placeIds, zip, opts); };
     render();
+    viewed(); // back on the first page, counted like any other screen
     return false;
   }
 }

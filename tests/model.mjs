@@ -749,21 +749,29 @@ function roundTrip(name, stCode, places, mutate) {
   check('stats: beforeSend drops an event whose address still holds a ZIP', stats.beforeSend({ type: 'pageview', url: 'https://vote.kevinhg.com/78704?x=1' }) === null);
   check('stats: it loads on the guide’s Vercel hosts only', ['vote.kevinhg.com', 'voting-guide-silk.vercel.app', 'voting-guide-git-analytics-kevinhg.vercel.app'].every(stats.onVercel)
     && !['localhost', '127.0.0.1', 'evilkevinhg.com', 'vote.kevinhg.com.example.org', 'vercel.app.example.org'].some(stats.onVercel));
-  check('stats: event values are short plain tokens, never a ZIP or an at sign', stats.plainData({ place: 'austin-tx', how: 'zip' }) && stats.plainData({ place: 'dc-ward-1' }) && stats.plainData({ place: 'MO' })
-    && !stats.plainData({ place: '78704' }) && !stats.plainData({ place: 'austin-tx-78704' }) && !stats.plainData({ kind: 'a@b.co' }) && !stats.plainData({ n: 5 }) && !stats.plainData({ how: 'two words' }) && !stats.plainData({ how: '' }));
-  // The place a ballot counts as: its one place, or its state. Each set of several places in the index belongs
-  // to exactly one ZIP (DC's wards, Aurora and Denver), so every one of them must count as the state.
+  check('stats: event values are short plain tokens, never a ZIP or an at sign', stats.plainData({ state: 'TX', how: 'zip' }) && stats.plainData({ kind: 'follow_up' }) && stats.plainData({ state: 'MO' })
+    && !stats.plainData({ state: '78704' }) && !stats.plainData({ state: 'TX-78704' }) && !stats.plainData({ kind: 'a@b.co' }) && !stats.plainData({ n: 5 }) && !stats.plainData({ how: 'two words' }) && !stats.plainData({ how: '' }));
+  // A ballot counts by its state only (app.ts shown() sends b.st): a place, or a set of places, that only one ZIP
+  // leads to would name the ZIP. Every ballot the index can open, each ZIP's places and each statewide one,
+  // must count as a two-letter state the index covers with a statewide ballot (which any of its ZIPs opens).
   const ballotOf = (s, ids) => bl.buildBallot(read(`state-${s}.json`), ids.map((id) => read(`place-${id}.json`)));
-  const multi = Object.values(INDEX.zips).filter((ids) => ids.length > 1);
-  const counted = multi.map((ids) => { const b = ballotOf(INDEX.places[ids[0]].state, ids); return [ids.join('+'), stats.ballotPlace(b), b.st]; });
-  check('stats: every ballot of several places in the index counts as its state code, never the places', multi.length > 0 && counted.every(([, p, s]) => p === s && /^[A-Z]{2}$/.test(p)), JSON.stringify(counted.filter(([, p, s]) => p !== s)));
-  check('stats: one place counts as its id, a statewide ballot as its state', stats.ballotPlace(ballotOf('TX', ['austin-tx'])) === 'austin-tx' && stats.ballotPlace(ballotOf('TX', [])) === 'TX');
+  const sets = [...new Set(Object.values(INDEX.zips).map((ids) => ids.join('+')))].map((k) => k ? k.split('+') : []);
+  const opens = [...sets.map((ids) => [ids.length ? INDEX.places[ids[0]].state : null, ids]), ...Object.keys(INDEX.states).map((s) => [s, []])].filter(([s]) => s);
+  const odd = opens.filter(([s, ids]) => {
+    const v = ballotOf(s, ids).st;
+    return !(/^[A-Z]{2}$/.test(v) && INDEX.states[v] && stats.plainData({ state: v, how: 'zip' }) && ids.every((id) => INDEX.places[id].state === v));
+  }).map(([s, ids]) => ids.join('+') || s);
+  check('stats: every ballot the index can open counts as its state code, which has a statewide ballot of its own', opens.length > Object.keys(INDEX.states).length && odd.length === 0, JSON.stringify(odd));
+  check('stats: the places one ZIP alone leads to (Ballwin, Clayton, Webster Groves) are in the index, and count as their state', ['ballwin-mo', 'clayton-mo', 'webster-groves-mo'].every((id) => Object.values(INDEX.zips).filter((ids) => ids.includes(id)).length === 1 && ballotOf('MO', [id]).st === 'MO'));
+  // The referring site, as Vercel's script may see it once startStats() has shadowed document.referrer.
+  check('stats: referrerOrigin keeps the origin and drops the path and the query', stats.referrerOrigin('https://referrer.example/search?zip=78704&q=a@b.co#x') === 'https://referrer.example' && stats.referrerOrigin('http://news.example.org:8080/a/b') === 'http://news.example.org:8080' && stats.referrerOrigin('https://me:pw@referrer.example/') === 'https://referrer.example');
+  check('stats: referrerOrigin gives nothing for no referrer or one that isn’t a web address', ['', 'not an address', 'about:blank', 'android-app://com.google.android.gm/', 'javascript:alert(1)', 'file:///etc/hosts', null, undefined].every((r) => stats.referrerOrigin(r) === ''));
   // Off Vercel, with no queue: nothing happens and nothing throws.
   const had = Object.getOwnPropertyDescriptor(globalThis, 'window');
   try {
     delete globalThis.window;
     let threw = false;
-    try { stats.track('ballot', { place: 'austin-tx', how: 'zip' }); } catch { threw = true; }
+    try { stats.track('ballot', { state: 'TX', how: 'zip' }); } catch { threw = true; }
     check('stats: track with no analytics does nothing and never throws', !threw && typeof globalThis.window === 'undefined');
     globalThis.window = {};
     threw = false;
@@ -772,12 +780,12 @@ function roundTrip(name, stCode, places, mutate) {
     // With a queue (the package's own window.va): exactly the name and the data, and a ZIP or an at sign drops it.
     const got = [];
     globalThis.window = { va: (...a) => got.push(a) };
-    stats.track('ballot', { place: 'austin-tx', how: 'zip' });
+    stats.track('ballot', { state: 'TX', how: 'zip' });
     stats.track('request', { kind: 'city' });
-    stats.track('ballot', { place: '78704', how: 'zip' });
+    stats.track('ballot', { state: '78704', how: 'zip' });
     stats.track('share', { act: 'a@b.co' });
     check('stats: with the queue, track hands it the name and data only, and drops a ZIP or an at sign', got.length === 2
-      && JSON.stringify(got) === JSON.stringify([['event', { name: 'ballot', data: { place: 'austin-tx', how: 'zip' } }], ['event', { name: 'request', data: { kind: 'city' } }]]), JSON.stringify(got));
+      && JSON.stringify(got) === JSON.stringify([['event', { name: 'ballot', data: { state: 'TX', how: 'zip' } }], ['event', { name: 'request', data: { kind: 'city' } }]]), JSON.stringify(got));
     globalThis.window = { va: () => { throw new Error('queue broke'); } };
     threw = false;
     try { stats.track('view', { name: 'ballot' }); } catch { threw = true; }
@@ -792,7 +800,7 @@ function roundTrip(name, stCode, places, mutate) {
   st.S.ui.report = { ...st.S.ui.report, kind: 'support' };
   const sup = views.shelf.shelfHTML();
   st.S.ui.report = was;
-  check('stats: the How text says what is counted and what never is', how.includes('<li><b>Your privacy.</b> No accounts, no ads, no cookies. We count visits with Vercel’s cookie-free analytics: the screens you open, the forms you send, the city or state of your ballot, the site that sent you here, and your rough location, browser and device type. It never gets your address, ZIP or picks, doesn’t keep your IP, and can’t tell who you are. Your picks stay on your device unless you share your save link. An address you type goes only to the Census Bureau’s lookup, and we never keep it. If the page breaks, it sends us a crash report with no address, no picks and no IP.</li>'));
+  check('stats: the How text says what is counted and what never is', how.includes('<li><b>Your privacy.</b> No accounts, no ads, no cookies. We count visits with Vercel’s cookie-free analytics: the screens you open, the forms you send, the state of your ballot, the site that sent you here, and your rough location, browser, operating system and device type. It never gets your address, ZIP or picks, doesn’t keep your IP, and can’t tell who you are. Your picks stay on your device unless you share your save link. An address you type goes only to the Census Bureau’s lookup, and we never keep it. If the page breaks, it sends us a crash report with no address, no picks and no IP.</li>'));
   check('stats: no page says "no tracking" any more', !/no tracking/i.test(how) && !/no tracking/i.test(sup) && sup.includes('The guide is free, with no ads and no cookies.'));
 }
 

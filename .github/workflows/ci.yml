@@ -169,10 +169,12 @@ jobs:
             .tmp/sweep-shots
           retention-days: 14
 
-  # The required check. Passes only when every browser part passed; skipped, like them, on a source-only PR.
+  # The required check. Passes only when every browser part passed; skipped, like them, on a source-only PR. always(),
+  # so a run cancelled while the parts ran still reports here as a failure: a skipped required check would count as
+  # passing (Codex, PR #37).
   browser:
     needs: [changes, browser-part]
-    if: ${{ !cancelled() && github.event_name != 'schedule' && !(needs.changes.result == 'success' && needs.changes.outputs.source_only == 'true') }}
+    if: ${{ always() && github.event_name != 'schedule' && !(needs.changes.result == 'success' && needs.changes.outputs.source_only == 'true') }}
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:

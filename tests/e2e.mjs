@@ -2049,7 +2049,7 @@ if (inShard()) {
    "They should be quick answers with things that you can do." An opened question shows one
    short line and its buttons; the full answer, steps and source wait behind "More". Each common
    mistake is one line, its full text behind its own "More". */
-for (const [zip, label, id, btn, href, full] of [
+if (inShard()) for (const [zip, label, id, btn, href, full] of [
   ['78702', 'Austin', 'not_registered', 'Register for next time', /^https:\/\/vote\.gov\/register\/texas$/, /the Texas deadline was October 5/],
   ['90004', 'Los Angeles', 'not_registered', 'Find a vote center', /^https:\/\/caearlyvoting\.sos\.ca\.gov\/$/, /RegisterToVote\.ca\.gov/],
 ]) {
@@ -2836,7 +2836,7 @@ if (inShard()) {
   noErrors(page, 'Lakewood');
   await ctx.close();
 }
-for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close at 7 PM\.$/], ['2026-11-04', /^Voting has closed/]]) {
+if (inShard()) for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close at 7 PM\.$/], ['2026-11-04', /^Voting has closed/]]) {
   const { ctx, page } = await newPage();
   await page.goto(`${BASE}/?today=${day}&now=10:00`);
   await page.fill('#zip', '80226');
@@ -3525,7 +3525,7 @@ if (inShard()) {
 // Nav review, Oct 20: "Next" walks the page in its own order, from the first thing on it (LA's U.S.
 // House question), one row open at a time. Since the flow (Oct 20) it is the menu's "Next up": the
 // sheet's at 380px, the rail's at 1280px.
-for (const width of [380, 1280]) {
+if (inShard()) for (const width of [380, 1280]) {
   const { ctx, page } = await newPage({ viewport: { width, height: 900 } });
   await openBallot(page, '90004');
   const all = await page.evaluate(() => [...document.querySelectorAll('.ledger .row[data-item], .ledger .row[data-q]')].map((e) => e.id));

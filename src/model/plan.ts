@@ -118,7 +118,7 @@ const urlsOf = (x: HowTo): Record<(typeof KINDS)[number], string | null> => ({
   early_in_person: x.early_in_person.lookup_url, election_day: x.election_day.lookup_url,
   drop_box: x.mail_ballot.drop_box_lookup_url, tracking: x.mail_ballot.tracking_url,
 });
-const KIND_LABEL: Record<(typeof KINDS)[number], RegExp> = { early_in_person: /early/i, election_day: /where|polling|vote center|voting (place|location|center)/i, drop_box: /drop/i, tracking: /track|status|counted/i };
+const KIND_LABEL: Record<(typeof KINDS)[number], RegExp> = { early_in_person: /early/i, election_day: /where|poll(ing)? (place|site)|vote center|voting (place|location|center)/i, drop_box: /drop/i, tracking: /track|status|counted/i };
 function localActions(base: HowTo, h: HowTo): HowTo {
   const was = urlsOf(base), now = urlsOf(h);
   if (KINDS.every((k) => was[k] === now[k]) || !(h.situations || []).some((x) => x.actions && x.actions.length)) return h;

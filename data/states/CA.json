@@ -34,14 +34,14 @@
     ],
     "same_day_registration": true,
     "same_day_notes": "Go to any vote center in your county (LA, Orange, San Diego) or, in San Francisco, the Department of Elections at City Hall Room 48 or any polling place on Election Day, through 8:00 PM on November 3. You register and vote in one trip. Bring something with your name and address if you have it (driver's license, utility bill, or the sample ballot booklet the county mailed you); first-time voters who registered without a DL or SSN may be asked for ID. Your ballot is held until the county verifies your eligibility, then counted. Find locations at https://caearlyvoting.sos.ca.gov/.",
-    "still_possible_now": "Until Monday, October 19, you can register online at RegisterToVote.ca.gov and get a ballot mailed to you. If you miss that, you can still register and vote in person at any vote center (from October 24 in LA, Orange and San Diego) or at your county elections office, right up to 8:00 PM on Election Day.",
+    "still_possible_now": "Yes, in person. Online registration with a mailed ballot ended October 19. You can still register and vote in person at any vote center (from October 24 in LA, Orange and San Diego) or at your county elections office, right up to 8:00 PM on Election Day.",
     "confidence": "verified"
   },
   "mail_ballot": {
-    "who_gets_one": "Automatic. Every active registered voter in California is mailed a ballot for every election. No request and no excuse needed. Counties had to begin mailing by October 5, 2026. LA County mailed all ballots on October 1; San Francisco mailed in early October. The Secretary of State confirmed on October 6 that ballots had gone out statewide. If you registered or moved after that, a ballot goes out when your record is updated through October 19. If yours never came, request a replacement from your county (LA County: by Tuesday, October 27) or just vote in person.",
+    "who_gets_one": "Automatic. Every active registered voter in California is mailed a ballot for every election. No request and no excuse needed. Counties had to begin mailing by October 5, 2026. LA County mailed all ballots on October 1; San Francisco mailed in early October. The Secretary of State confirmed on October 6 that ballots had gone out statewide. If yours never came, get a replacement in person or just vote in person; mailed replacements ended October 27.",
     "request_deadline": {
       "date": "2026-10-27",
-      "rule": "You don't need to request a ballot. If yours is lost, damaged, or never arrived, you can ask your county for a replacement. LA County's last day to request a mailed replacement is Tuesday, October 27 (the state form is at https://elections.cdn.sos.ca.gov/vote-by-mail/pdf/replacement-application.pdf). After that, get a replacement in person at any vote center or county elections office, or just vote in person.",
+      "rule": "You don't need to request a ballot. If yours is lost, damaged, or never arrived, you can ask your county for a replacement. LA County's last day to request a mailed replacement was Tuesday, October 27 (the state form is at https://elections.cdn.sos.ca.gov/vote-by-mail/pdf/replacement-application.pdf). Now get a replacement in person at any vote center or county elections office, or just vote in person.",
       "source": "https://content.lavote.gov/docs/rrcc/documents/media-kit-final.pdf"
     },
     "return_deadline": {
@@ -104,7 +104,7 @@
   },
   "gotchas": [
     {
-      "text": "The registration deadline is Monday, October 19. Register online at RegisterToVote.ca.gov by then to get a ballot in the mail. Missed it? You can still register and vote in person, same day, at any vote center or your county elections office through 8 PM on November 3.",
+      "text": "The deadline to register and get a ballot in the mail was Monday, October 19. You can still register and vote in person, same day, at any vote center or your county elections office through 8 PM on November 3.",
       "short": "After Oct 19, register and vote the same day at a vote center."
     },
     {
@@ -139,7 +139,7 @@
           "url": "https://voterstatus.sos.ca.gov/"
         }
       ],
-      "answer": "Re-register at your new address at RegisterToVote.ca.gov by Monday, October 19 and your new county mails you a ballot. After that, you can still update your registration and vote the same day at any vote center in the county you live in now, through 8 PM on Election Day.",
+      "answer": "You can still update your registration and vote the same day at any vote center in the county you live in now, through 8 PM on Election Day. The online deadline to get a ballot mailed to your new address was October 19.",
       "steps": [
         "Moved within the same county (say, within LA County)? At a vote center you can vote a provisional ballot for your new address; it counts once your signature matches.",
         "Moved to a new county (say, LA to Orange)? Use Same Day Registration at a vote center in your new county.",
@@ -159,11 +159,9 @@
           "url": "https://caearlyvoting.sos.ca.gov/"
         }
       ],
-      "answer": "You can register here if California is now where you live. Register online at RegisterToVote.ca.gov by Monday, October 19 to get a ballot in the mail, or register and vote in one trip at any vote center in your county through 8 PM on Election Day.",
+      "answer": "You can register here if California is now where you live. Register and vote in one trip at any vote center in your county through 8 PM on Election Day. The online deadline to get a ballot in the mail was October 19.",
       "steps": [
-        "Register online at RegisterToVote.ca.gov by Oct 19.",
-        "Missed it? Use Same Day Registration at a vote center (LA and Orange counties open them Oct 24).",
-        "Moved away from California for good? You'd vote in your new state instead."
+        "Use Same Day Registration at any vote center in your county, through 8 PM on Election Day."
       ],
       "deadline": "2026-10-19",
       "source": "https://www.sos.ca.gov/elections/voter-registration/same-day-reg",
@@ -183,7 +181,7 @@
           "url": "https://caearlyvoting.sos.ca.gov/"
         }
       ],
-      "answer": "You still can. Register online at RegisterToVote.ca.gov by Monday, October 19 to get a ballot in the mail; after that, register and vote the same day at any vote center or your county elections office, through 8 PM on November 3.",
+      "answer": "You still can. Register and vote the same day at any vote center or your county elections office, through 8 PM on November 3. The online deadline to get a ballot in the mail was October 19.",
       "steps": [
         "Check first at voterstatus.sos.ca.gov; you may already be registered.",
         "Same Day Registration ballots are counted once the county verifies your registration.",
@@ -235,7 +233,7 @@
     {
       "id": "no_mail_ballot_or_lost",
       "question": "My mail ballot never came, or I lost it.",
-      "short": "Ask your county for a replacement or vote in person at any vote center in your county.",
+      "short": "Get a replacement in person, or just vote in person, at a vote center or your county elections office.",
       "actions": [
         {
           "label": "Track my ballot",
@@ -246,11 +244,11 @@
           "url": "https://caearlyvoting.sos.ca.gov/"
         }
       ],
-      "answer": "Ask your county for a replacement, or vote in person at any vote center in your county instead. In LA County, the last day to ask for a replacement by mail is Tuesday, October 27.",
+      "answer": "It's too late to have a replacement mailed: LA, Orange, San Diego and San Francisco counties all stopped mailed requests on October 27. Get one in person instead, or just vote in person: at any vote center in your county, or in San Francisco at the City Hall Voting Center or your polling place on Election Day.",
       "steps": [
         "Check Where's My Ballot to see when and where it was mailed.",
         "Voting in person without your mail ballot? If the vote center can't confirm you haven't already voted, you vote a provisional ballot, counted once the county checks.",
-        "After Oct 27, get a replacement in person at a vote center or your county elections office."
+        "Get a replacement in person at a vote center or your county elections office (San Francisco: the City Hall Voting Center)."
       ],
       "deadline": "2026-10-27",
       "source": "https://content.lavote.gov/docs/rrcc/documents/media-kit-final.pdf",
@@ -270,7 +268,7 @@
       "steps": [
         "In person: tell a worker before you cast your ballot.",
         "Mail ballot: bring it with you to swap it for a fresh one.",
-        "Or ask your county for a replacement by mail (LA County: by Oct 27)."
+        "Mailed replacements ended Oct 27, so get a new one in person at a vote center or your county elections office."
       ],
       "deadline": "2026-11-03",
       "source": "https://voterguide.sos.ca.gov/voter-info/voter-bill-of-rights.htm",
@@ -323,9 +321,9 @@
           "url": "https://caearlyvoting.sos.ca.gov/"
         }
       ],
-      "answer": "Update your registration with your new name at RegisterToVote.ca.gov by Monday, October 19. After that, you can update it and vote the same day at any vote center in your county.",
+      "answer": "Update your registration with your new name and vote the same day at any vote center in your county. The online deadline for this election was October 19.",
       "steps": [
-        "Re-register online with your new name by Oct 19.",
+        "Bring your new name to any vote center in your county; you can update it and vote in one visit.",
         "Or use Same Day Registration at a vote center, through 8 PM Nov 3.",
         "Sign your mail ballot envelope the way you sign now, and watch for a notice asking you to confirm your signature."
       ],
@@ -349,9 +347,9 @@
       ],
       "answer": "You choose: register at your school address or your family's home address, but not both. Every registered voter gets a mail ballot, so make sure it's going where you'll actually be.",
       "steps": [
-        "Update your address at RegisterToVote.ca.gov by Oct 19 so the ballot reaches you.",
+        "The online deadline to update your address was Oct 19, so vote in person or get a replacement at a vote center.",
         "At school in LA or Orange County (UCLA, USC, UCI, CSUF)? You can vote at any vote center in that county once registered there.",
-        "Missed Oct 19? Use Same Day Registration at a vote center in the county where you live."
+        "Use Same Day Registration at a vote center in the county where you live."
       ],
       "deadline": "2026-10-19",
       "source": "https://www.sos.ca.gov/elections/voting-resources/voting-california/students",

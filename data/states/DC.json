@@ -115,7 +115,7 @@
       "short": "Register and vote at any Vote Center; bring proof of your DC address."
     },
     {
-      "text": "Postmarks count, but don't lean on them. Mail by about October 27 or use one of 55 drop boxes (open 24 hours until 8:00 PM on November 3). No stamp needed. Sign and date the oath on the envelope or your ballot won't count. A mailed ballot must also arrive by November 13.",
+      "text": "Postmarks count, but don't lean on them now: use one of 55 drop boxes (open 24 hours until 8:00 PM on November 3). No stamp needed. Sign and date the oath on the envelope or your ballot won't count. A mailed ballot must also arrive by November 13.",
       "short": "Sign and date the envelope oath; after about Oct 27, use a drop box."
     },
     {
@@ -332,9 +332,9 @@
           "url": "https://apps.dcboe.org/VRS"
         }
       ],
-      "answer": "If you go to school in DC, you can register and vote the same day at any Vote Center, using a student housing statement or tuition bill as proof. If you're registered in DC but at school somewhere else, ask for your ballot to be mailed to your school by Monday, October 19.",
+      "answer": "If you go to school in DC, you can register and vote the same day at any Vote Center, using a student housing statement or tuition bill as proof. If you're registered in DC but at school somewhere else, the deadline to have your ballot mailed to your school was October 19; call DCBOE at 202-727-2525 to talk through your options.",
       "steps": [
-        "Use the Mail Ballot Request form on dcboe.org.",
+        "Past the October 19 request deadline? Call DCBOE at 202-727-2525 about your options.",
         "Mail your ballot so it's postmarked by November 3; it must arrive within 10 days.",
         "Track it at votedc.ballottrax.net."
       ],
@@ -356,11 +356,10 @@
           "url": "https://votedc.ballottrax.net/voter/"
         }
       ],
-      "answer": "If you have your mail ballot, fill it out and return it before leaving. Drop boxes accept ballots through 8 PM on November 3. If you need an absentee ballot sent away from your DC residence, request it by October 19. After that deadline, call DCBOE at 202-727-2525 about your options, or vote in person during October 26 to November 1 or on November 3 if you are in DC.",
+      "answer": "If you have your mail ballot, fill it out and return it before leaving. Drop boxes accept ballots through 8 PM on November 3. The deadline to have a ballot sent away from your DC address was October 19; call DCBOE at 202-727-2525 about your options, or vote in person October 26 to November 1 or on November 3 if you are in DC.",
       "steps": [
         "Or vote early in person any day October 26 to November 1, 8:30 AM to 7 PM.",
-        "Mail by about October 27; postage is prepaid.",
-        "The request form is on dcboe.org's Mail Ballot Request page."
+        "Mailing it? It must be postmarked by November 3 and arrive by November 13; postage is prepaid."
       ],
       "deadline": "2026-10-19",
       "source": "https://dcboe.org/voters/casting-your-vote/mail-ballot-request",

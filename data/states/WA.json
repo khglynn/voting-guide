@@ -35,7 +35,7 @@
     ],
     "same_day_registration": true,
     "same_day_notes": "Go to your county elections office or any voting center in your county through 8:00 PM on November 3. Bring your Washington driver's license, permit or state ID number, or the last four digits of your Social Security number. You will vote right there. King County Elections: 919 SW Grady Way, Renton; 206-296-VOTE (8683); Vote Centers are also open Sat Oct 31 (10 AM to 4 PM), Mon Nov 2 (8:30 AM to 6 PM) and Election Day (until 8 PM); locations at kingcounty.gov/elections.",
-    "still_possible_now": "Online registration at VoteWA.gov, with a ballot mailed to you, runs through Monday, October 26. After October 26 you can still register and vote, but only in person at your county elections office or a voting center, through 8:00 PM on Election Day.",
+    "still_possible_now": "Yes, in person. Online registration with a mailed ballot ended Monday, October 26. You can still register and vote in person at your county elections office or a voting center, through 8:00 PM on Election Day.",
     "confidence": "verified"
   },
   "mail_ballot": {
@@ -69,7 +69,7 @@
     "available": true,
     "start": "2026-10-16",
     "end": "2026-11-03",
-    "hours_note": "King County vote centers: Renton, Elections headquarters, 919 SW Grady Way; Bellevue College, Building U, Gary Locke Ballroom, 3000 Landerholm Cir SE; Federal Way, Weyerhaeuser Aquatic Center Banquet Hall, 650 SW Campus Dr; Kenmore City Hall, 18120 68th Ave NE; Kent, Green River College-Kent Campus, Rooms 282 and 283, 417 Ramsay Way; Seattle City Hall, Bertha Knight Landes Room, Floor 1, 600 4th Ave. All six open October 31, 10 AM to 4 PM; November 2, 8:30 AM to 6 PM; November 3, 8:30 AM to 8 PM. Renton also opens weekdays October 14 to 23, 8:30 AM to 4:30 PM, and October 26 to 30, 8:30 AM to 6 PM. Centers offer registration, replacement ballots and accessible voting. Check the live county page before leaving.",
+    "hours_note": "King County vote centers: Renton, Elections headquarters, 919 SW Grady Way; Bellevue College, Building U, Gary Locke Ballroom, 3000 Landerholm Cir SE; Federal Way, Weyerhaeuser Aquatic Center Banquet Hall, 650 SW Campus Dr; Kenmore City Hall, 18120 68th Ave NE; Kent, Green River College-Kent Campus, Rooms 282 and 283, 417 Ramsay Way; UW Seattle, Student Engagement Hub, Room 160 (Lyceum) and Room 145, 4001 E Stevens Way NE; Seattle City Hall, Bertha Knight Landes Room, Floor 1, 600 4th Ave. All seven open October 31, 10 AM to 4 PM; November 2, 8:30 AM to 6 PM; November 3, 8:30 AM to 8 PM. Renton also opens weekdays October 14 to 23, 8:30 AM to 4:30 PM, and October 26 to 30, 8:30 AM to 6 PM. Centers offer registration, replacement ballots and accessible voting. Check the live county page before leaving.",
     "vote_centers": true,
     "lookup_url": "https://www.sos.wa.gov/elections/voters/voter-registration/drop-box-and-voting-center-locations",
     "confidence": "verified"
@@ -104,7 +104,7 @@
   "gotchas": [
     {
       "text": "The postmark trap. If you mail your ballot, it must be postmarked by November 3, and USPS no longer reliably postmarks mail the day you send it. Late-postmark rejections jumped in 2025. The state and King County both say mail it more than a week early (by about October 27), or skip the mailbox and use any of King County's 100 official drop boxes any time before 8:00 PM on November 3. Drop boxes are free and don't depend on a postmark.",
-      "short": "Mail by about Oct 27, or use a drop box before 8 PM Nov 3."
+      "short": "Use a drop box before 8 PM Nov 3; mailing it now is risky."
     },
     {
       "text": "Sign the envelope, and sign the way you sign your driver's license. A missing or mismatched signature is the top reason Washington ballots get challenged. Put your phone number and email on the envelope so the county can reach you. If you get a notice, you have until 4:30 PM on Monday, November 23 to fix it (online is fastest). Check VoteWA.gov until your status says accepted.",
@@ -115,7 +115,7 @@
       "short": "Drop boxes lock at 8 PM sharp on Election Day, so go earlier."
     },
     {
-      "text": "You can still register. Online registration closes Monday, October 26, but you can register and vote in person through 8:00 PM on Election Day at King County Elections (919 SW Grady Way, Renton) or any Vote Center (open Oct 31, Nov 2 and Nov 3; list at kingcounty.gov/elections).",
+      "text": "You can still register. Online registration closed Monday, October 26, but you can register and vote in person through 8:00 PM on Election Day at King County Elections (919 SW Grady Way, Renton) or any Vote Center. In Seattle, the City Hall and UW vote centers open Saturday, October 31 (list at kingcounty.gov/elections).",
       "short": "After Oct 26, register and vote in person at a vote center."
     },
     {
@@ -131,7 +131,7 @@
     {
       "id": "moved_in_state",
       "question": "I moved to a new address in Washington.",
-      "short": "Update your address at VoteWA.gov by Oct 26, or in person at a voting center by 8 PM Nov 3.",
+      "short": "Update your address in person at a voting center or your county elections office by 8 PM Nov 3.",
       "actions": [
         {
           "label": "Update my address",
@@ -142,7 +142,7 @@
           "url": "https://www.sos.wa.gov/elections/voters/voter-registration/drop-box-and-voting-center-locations"
         }
       ],
-      "answer": "Update your address at VoteWA.gov by Monday, October 26 and the county will send a ballot to your new address. After that, go in person to a voting center or your county elections office by 8 PM on November 3, update there and vote.",
+      "answer": "Go in person to a voting center or your county elections office by 8 PM on November 3, update your address there and vote. The online deadline to get a ballot mailed to your new address was October 26.",
       "steps": [
         "Ballots aren't forwarded, so update before your old-address ballot gets lost.",
         "King County: Elections office at 919 SW Grady Way, Renton, or any King County Vote Center (open October 31, November 2 and Election Day).",
@@ -174,7 +174,7 @@
     {
       "id": "not_registered",
       "question": "I'm not registered yet.",
-      "short": "You still have time: register at VoteWA.gov by Oct 26, or in person through 8 PM Election Day.",
+      "short": "You still have time: register and vote in person by 8 PM on Election Day.",
       "actions": [
         {
           "label": "Check my registration",
@@ -185,7 +185,7 @@
           "url": "https://vote.gov/register/washington"
         }
       ],
-      "answer": "You still have time. Register online at VoteWA.gov by Monday, October 26 and a ballot will be mailed to you; after that, register in person at a voting center or county elections office until 8 PM on Election Day and vote right there.",
+      "answer": "You still have time. Register in person at a voting center or county elections office until 8 PM on Election Day and vote right there. Online registration with a mailed ballot ended October 26.",
       "steps": [
         "Have your Washington license, permit or ID number, or the last four digits of your Social Security number.",
         "King County: 919 SW Grady Way, Renton, or any Vote Center.",
@@ -315,14 +315,14 @@
     {
       "id": "name_changed",
       "question": "My name changed since I registered.",
-      "short": "Update your registration at VoteWA.gov by Oct 26, or in person by 8 PM Election Day.",
+      "short": "Update your registration in person at a voting center by 8 PM Election Day.",
       "actions": [
         {
           "label": "Update my registration",
           "url": "https://voter.votewa.gov/"
         }
       ],
-      "answer": "Update your registration at VoteWA.gov by October 26, or in person by 8 PM on Election Day. The county checks your envelope signature against the one on file, so if your signature changed too, updating matters.",
+      "answer": "Update your registration in person by 8 PM on Election Day; the online deadline was October 26. The county checks your envelope signature against the one on file, so if your signature changed too, updating matters.",
       "steps": [
         "If the county can't match your signature, it will contact you, and you can fix it by November 23."
       ],
@@ -343,7 +343,7 @@
       "answer": "Away from home? King County will mail your ballot anywhere, or you can download and print it online. At a Washington public university, look for a Student Engagement Hub on campus, including UW Seattle, UW Bothell and UW Tacoma.",
       "steps": [
         "Print your ballot at King County's online ballot site, or contact King County Elections with your temporary mailing address.",
-        "Not registered yet? Register online by October 26, or in person at a voting center through 8 PM on Election Day.",
+        "Not registered yet? Register in person at a voting center through 8 PM on Election Day.",
         "Use a drop box, or mail it more than a week early; it must be postmarked by November 3."
       ],
       "deadline": "2026-10-26",
@@ -353,7 +353,7 @@
     {
       "id": "away_on_election_day",
       "question": "I'll be away on Election Day.",
-      "short": "Vote your ballot and use a drop box before you leave, or mail it by about Oct 27.",
+      "short": "Vote your ballot and put it in a drop box before you leave.",
       "actions": [
         {
           "label": "Find a drop box",
@@ -364,9 +364,9 @@
           "url": "https://voter.votewa.gov/"
         }
       ],
-      "answer": "If you have your ballot, vote it and use an official drop box before you leave, by 8 PM on November 3, or mail it by about October 27. If you need a replacement while traveling, download and print one from King County Elections online, or ask the county to mail it to your travel address. Allow time to return it.",
+      "answer": "If you have your ballot, vote it and use an official drop box before you leave, by 8 PM on November 3. Mailing it now is risky. If you need a replacement while traveling, download and print one from King County Elections online, or ask the county to mail it to your travel address. Allow time to return it.",
       "steps": [
-        "Mail by about October 27; the postmark must be November 3 or earlier.",
+        "Mailing it now is risky: the postmark must be November 3 or earlier. Ask a post office counter for a hand postmark.",
         "No stamp needed."
       ],
       "deadline": "2026-10-27",

@@ -242,7 +242,7 @@
     {
       "id": "no_mail_ballot_or_lost",
       "question": "My mail ballot never came, or I lost it.",
-      "short": "Vote in person instead, or cancel it in writing and apply for a new one by Oct 23.",
+      "short": "Too late for a new mail ballot: vote in person, and bring the old one if you have it.",
       "actions": [
         {
           "label": "Track my ballot",
@@ -257,7 +257,7 @@
       "steps": [
         "Check the Ballot by Mail Tracker to see whether it was mailed.",
         "To vote in person, sign a cancellation form at the polls. Without the ballot to hand in, you vote a provisional ballot, counted once the county confirms your mail ballot wasn't returned.",
-        "Want a new mail ballot? Send your county's early voting clerk a signed cancellation and a new application. It must arrive by Oct 23."
+        "It's too late to apply for a new mail ballot: applications had to arrive by Oct 23. Vote early in person through Friday, Oct 30, or on Election Day, Nov 3, 7 AM to 7 PM."
       ],
       "deadline": "2026-10-23",
       "source": "https://www.sos.texas.gov/elections/forms/cancellation-of-ballot-by-mail-(2.10.22).pdf",
@@ -342,7 +342,7 @@
     {
       "id": "college_student",
       "question": "I'm a college student.",
-      "short": "Vote where you're registered; if that's home and you'll be away, your mail ballot application must arrive by Oct 23.",
+      "short": "Vote where you're registered; it's too late to apply for a mail ballot, so vote in person there.",
       "actions": [
         {
           "label": "Check my registration",
@@ -353,9 +353,9 @@
           "url": "https://www.votetexas.gov/voting/where.html"
         }
       ],
-      "answer": "Registration closed October 5, so you vote where you're already registered. If that's your family's county and you'll be away at school for all of early voting and on Election Day, you can vote by mail, but your application must arrive by Friday, October 23.",
+      "answer": "Registration closed October 5, so you vote where you're already registered. The deadline to apply for a mail ballot was Friday, October 23, so you'll need to vote in person in that county: early voting through Friday, October 30, or on Election Day, November 3.",
       "steps": [
-        "Get the mail ballot application at VoteTexas.gov and send it to the early voting clerk in your home county.",
+        "Already have a mail ballot from your home county? It must arrive by 7 PM Nov 3, or be postmarked by then and arrive by 5 PM Nov 4.",
         "Registered at school (say, UT in Travis or Texas State in Hays)? Vote at any polling place in that county.",
         "Voting in person? Bring one of the 7 photo IDs. Student IDs don't count in Texas."
       ],
@@ -373,10 +373,10 @@
           "url": "https://www.votetexas.gov/voting/where.html"
         }
       ],
-      "answer": "Vote early in person, Monday, October 19 through Friday, October 30, at any early voting site in your county. If you'll be out of your county for all of early voting and on Election Day, you can vote by mail; your application must arrive by Friday, October 23.",
+      "answer": "Vote early in person, Monday, October 19 through Friday, October 30, at any early voting site in your county. The deadline to apply for a mail ballot was Friday, October 23.",
       "steps": [
         "Check your county's early voting hours (Travis, Williamson, Hays and Harris each post their own).",
-        "Mail ballot: get the form at VoteTexas.gov and send it to your county's early voting clerk.",
+        "Already have a mail ballot? On Election Day only, you can hand it in yourself at your county's early voting clerk's office, with photo ID.",
         "A mailed ballot must arrive by 7 PM Nov 3, or be postmarked by then and arrive by 5 PM Nov 4."
       ],
       "deadline": "2026-10-23",

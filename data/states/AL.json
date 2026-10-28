@@ -35,7 +35,7 @@
     ],
     "same_day_registration": false,
     "same_day_notes": "Alabama has no same-day or Election Day registration. Registration is 'closed during the 14 days prior to an election and on Election Day.' If you are not registered by October 19, you cannot vote in this election. One exception: if you moved within your county and didn't update in time, you can go to your NEW polling place, update your registration there, and cast a provisional ballot.",
-    "still_possible_now": "The deadline is Monday, October 19. Online is fastest if you have an Alabama driver's license or non-driver ID (11:59 PM that day). If you don't, a paper form must be postmarked by October 19, or hand-delivered to the Board of Registrars before close of business that day. Check your status first at myinfo.alabamavotes.gov. If you moved, update your address by the same deadline. After October 19, you can't register for this election.",
+    "still_possible_now": "No. Registration for this election closed Monday, October 19, and Alabama has no same-day registration. Check your status at myinfo.alabamavotes.gov. One exception: if you moved within your county and didn't update in time, go to your new polling place, update there and vote a provisional ballot.",
     "confidence": "verified"
   },
   "mail_ballot": {
@@ -112,12 +112,12 @@
   },
   "gotchas": [
     {
-      "text": "The registration deadline is Monday, October 19, and Alabama has no same-day registration. Online registration (by 11:59 PM) needs an Alabama driver's license or non-driver ID; without one, a paper form must be postmarked by October 19 or hand-delivered before close of business. Moved? Updating your address has the same deadline.",
+      "text": "Registration closed Monday, October 19, and Alabama has no same-day registration. Moved within your county and didn't update in time? Go to your new polling place, update there and vote a provisional ballot.",
       "short": "Alabama has no same-day registration, so the Oct 19 deadline is final."
     },
     {
-      "text": "There is no early voting. If you can't vote on November 3, absentee with an excuse is the only option: your application must REACH the absentee office by Tuesday, October 27 if mailed, or Thursday, October 29 if you bring it in person. In person you can apply and vote in one trip.",
-      "short": "No early voting; with an excuse, vote absentee in person by Oct 29."
+      "text": "There is no early voting. If you can't vote on November 3, absentee with an excuse is the only option. Mailed applications had to arrive by Tuesday, October 27. You can still apply in person at your county's absentee office through Thursday, October 29, and vote right there in the same trip. Bring a copy of your photo ID. Mobile County: Absentee Election Manager, 151 Government St, 251-574-6400. After October 29, only emergency applications are open, until 5 PM Monday, November 2.",
+      "short": "No early voting; with an excuse, apply and vote absentee in person through Oct 29."
     },
     {
       "text": "An absentee ballot has two traps: a copy of your photo ID goes with the application, and the ballot envelope needs a notary or two adult witnesses (remote notarization not allowed). There is no fix-it process. Mail it so it arrives by noon on Election Day (postmarks don't count), or hand-deliver it yourself by 5 PM Monday, November 2. No drop boxes, and nobody can drop it off for you.",
@@ -143,9 +143,9 @@
           "url": "https://myinfo.alabamavotes.gov/voterview"
         }
       ],
-      "answer": "Update your registration by Monday, October 19, online (with an Alabama license or ID) or with a paper form; you can't vote at your old polling place. If you moved within your county and miss that, you can go to your new polling place, update there and vote a provisional ballot.",
+      "answer": "The deadline to update your registration was Monday, October 19, and you can't vote at your old polling place. If you moved within your county, go to your new polling place, update there and vote a provisional ballot.",
       "steps": [
-        "Moved to a different county? Register at your new address by October 19.",
+        "Moved to a different county? Registering there for this election closed October 19.",
         "Find your new polling place at myinfo.alabamavotes.gov, or call your county Board of Registrars (Mobile County: 251-574-8586).",
         "Bring a valid photo ID."
       ],
@@ -186,11 +186,10 @@
           "url": "https://vote.gov/register/alabama"
         }
       ],
-      "answer": "Register by October 19 to vote in the November 3 election. After October 19, new registrations are too late for this election; Alabama has no same-day registration. Check your existing record first.",
+      "answer": "Registration for November 3 closed October 19, and Alabama has no same-day registration. Check your existing record first.",
       "steps": [
-        "Online registration is available through 11:59 PM on October 19 with an Alabama driver's license or non-driver ID.",
-        "Or mail a paper form postmarked by October 19, or hand it in before close of business that day (Mobile County Board of Registrars: 151 Government St, Suite 165).",
-        "Check first at myinfo.alabamavotes.gov in case you're already registered."
+        "Check first at myinfo.alabamavotes.gov in case you're already registered.",
+        "Not registered? Register now for future elections, online or on paper (Mobile County Board of Registrars: 151 Government St, Suite 165)."
       ],
       "deadline": "2026-10-19",
       "source": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026-VoterGuide.pdf",
@@ -323,7 +322,7 @@
           "url": "https://myinfo.alabamavotes.gov/voterview"
         }
       ],
-      "answer": "Update your registration by Monday, October 19, online or with a paper form to the Board of Registrars. If you miss it, call the Board of Registrars before Election Day to ask what to bring.",
+      "answer": "The deadline to update your registration for this election was Monday, October 19. Call the Board of Registrars before Election Day to ask what to bring.",
       "steps": [
         "Mobile County Board of Registrars: 251-574-8586."
       ],
@@ -334,14 +333,14 @@
     {
       "id": "college_student",
       "question": "I'm a college student.",
-      "short": "Being away at school is a valid absentee excuse; a mailed application must reach your county by Oct 27.",
+      "short": "Away at school counts as an absentee excuse; apply in person through Oct 29, since mailed applications closed.",
       "actions": [
         {
           "label": "Find my absentee office",
           "url": "https://www.sos.alabama.gov/city-county-lookup/absentee-election-manager"
         }
       ],
-      "answer": "Registered at home but away at school? Being a student who lives outside your county is a valid excuse to vote absentee, and the application must reach your county by Tuesday, October 27 if mailed.",
+      "answer": "Registered at home but away at school? Being a student who lives outside your county is a valid excuse to vote absentee. Mailed applications had to arrive by Tuesday, October 27. You can still apply in person at your county's absentee office through Thursday, October 29, and vote there in the same visit.",
       "steps": [
         "Send a copy of your photo ID with the application.",
         "The ballot envelope needs a notary or two adult witnesses.",
@@ -354,14 +353,14 @@
     {
       "id": "away_on_election_day",
       "question": "I'll be away on Election Day.",
-      "short": "Vote absentee: mail your application to arrive by Oct 27, or apply and vote in person by Oct 29.",
+      "short": "Apply and vote absentee in person at your county's absentee office through Thursday, Oct 29.",
       "actions": [
         {
           "label": "Find my absentee office",
           "url": "https://www.sos.alabama.gov/city-county-lookup/absentee-election-manager"
         }
       ],
-      "answer": "Alabama has no early voting, but being away from your county is a valid absentee excuse. A mailed application must arrive by Tuesday, October 27; or apply in person at your county's absentee office by Thursday, October 29 and vote right there.",
+      "answer": "Alabama has no early voting, but being away from your county is a valid absentee excuse. Mailed applications had to arrive by Tuesday, October 27. You can still apply in person at your county's absentee office through Thursday, October 29, and vote right there. Bring a copy of your photo ID. After that, only emergency applications are open, for certain emergencies, until 5 PM Monday, November 2.",
       "steps": [
         "Include a copy of your photo ID with the application.",
         "Have the ballot envelope notarized or signed by two adult witnesses.",

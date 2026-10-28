@@ -254,6 +254,26 @@
       "address": "600 4th Ave.",
       "reason": "King County vote center at Seattle City Hall.",
       "source": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/vote-centers"
+    },
+    {
+      "address": "1019 Congress St",
+      "reason": "Harris County Clerk's office where mail voters hand in their own ballot on Election Day.",
+      "source": "https://www.harrisvotes.com/Voter/Vote-by-Mail"
+    },
+    {
+      "address": "9401 W. Colonial Dr.",
+      "reason": "Orange County Supervisor of Elections branch office (West Oaks Mall).",
+      "source": "https://voteorangefl.gov/contact-us/"
+    },
+    {
+      "address": "4001 E Stevens Way NE",
+      "reason": "UW Seattle Student Engagement Hub, a King County vote center.",
+      "source": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/vote-centers"
+    },
+    {
+      "address": "2990-1 Apalachee Pkwy.",
+      "reason": "Leon County Supervisor of Elections office.",
+      "source": "https://www.leonvotes.gov/Voting/Vote-by-Mail"
     }
   ]
 }

@@ -2109,7 +2109,8 @@ const touchAt = async (page, sel) => {
    mistake is one line, its full text behind its own "More". */
 for (const [zip, label, id, btn, href, full] of [
   ['78702', 'Austin', 'not_registered', 'Register for next time', /^https:\/\/vote\.gov\/register\/texas$/, /the Texas deadline was October 5/],
-  ['90004', 'Los Angeles', 'not_registered', 'Find a vote center', /^https:\/\/caearlyvoting\.sos\.ca\.gov\/$/, /RegisterToVote\.ca\.gov/],
+  // Oct 28 (west-mail-25): LA's vote center button opens LA County's own locator, not the statewide form.
+  ['90004', 'Los Angeles', 'not_registered', 'Find a vote center', /^https:\/\/locator\.lavote\.net\/locations\/vc$/, /RegisterToVote\.ca\.gov/],
 ]) {
   const { ctx, page } = await newPage();
   await openBallot(page, zip);

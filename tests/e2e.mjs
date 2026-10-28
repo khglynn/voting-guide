@@ -1390,7 +1390,7 @@ async function mapsSettled(page, timeout = 10000) {
   await tap(orl.page, '.foot [data-act="cheat"]');
   await tap(orl.page, '.foot [data-act="view"][data-v="pass"]');
   const op = await text(orl.page, '#msg-pub');
-  check('Share page: Orlando’s work message links Orange County’s early voting sites', /Find early voting places in Orlando: https:\/\/voteorangefl\.gov\/event\/early-voting-general-election\//.test(op) && !/find-your-polling-place/.test(op), op);
+  check('Share page: Orlando’s work message links Orange County’s early voting sites', /Find early voting places in Orlando: https:\/\/voteorangefl\.gov\/vote-early\//.test(op) && !/find-your-polling-place/.test(op), op);
   await orl.ctx.close();
 }
 

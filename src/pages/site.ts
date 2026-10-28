@@ -146,7 +146,7 @@ function ballotHTML(b: Ballot, where: string): string {
 }
 
 /* ---------- dates, places to vote, the office ---------- */
-interface DateRow { date: string; lead: string; when: string; detail: string | null }
+interface DateRow { date: string; lead: string; when: string; detail: string | null; list?: string[] }
 /* "7:00 AM", "8 PM PT": a time and nothing else. A qualified one ("8:30 AM at the six King County vote centers")
    isn't a statewide opening time, so it never becomes "You can vote from ...". */
 const PLAIN_TIME = /^\s*\d{1,2}(?::\d{2})?\s*[ap]\.?m\.?(?:\s+[A-Z]{2,3})?\s*$/i;
@@ -167,14 +167,16 @@ function dateRows(h: HowTo, place: PlaceBundle | null): DateRow[] {
     out.push({ date: ep.start, lead: `${mail ? 'In-person voting' : 'Early voting'}: `, when: `${fmtDate(ep.start)} to ${fmtDate(ep.end)}`, detail: place?.early_in_person?.hours_short || null });
   }
   const r = h.mail_ballot.return_deadline;
-  out.push({ date: r.date, lead: `Your mail ballot must ${r.rule === 'received_by' ? 'arrive' : r.rule === 'postmarked_by' ? 'be postmarked' : 'be returned'} by `, when: fmtDate(r.date), detail: r.time });
+  // The ways to return it, in the data's words: each has its own rule (Texas takes a USPS ballot postmarked by 7 PM
+  // that arrives the next day; Georgia doesn't count postmarks; Codex round 2), so the heading names none of them.
+  out.push({ date: r.date, lead: 'Mail ballot return deadline: ', when: fmtDate(r.date), detail: r.time, list: h.mail_ballot.return_options || [] });
   const ed = h.election_day;
   const close = clock(ed.polls_close) || ed.polls_close;
   const hours = !mail && PLAIN_TIME.test(ed.polls_open) && PLAIN_TIME.test(ed.polls_close) ? `You can vote from ${clock(ed.polls_open)} to ${close}.` : `Polls close at ${close}.`;
   out.push({ date: h.election_date, lead: 'Election Day: ', when: fmtDate(h.election_date), detail: [hours, ed.in_line_rule].filter(Boolean).join(' ') });
   return out.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
 }
-const datesHTML = (rows: DateRow[]): string => `<ul class="pg-dates">${rows.map((r) => `<li>${r.when ? `${esc(r.lead)}<b>${esc(r.when).replace(/ to /, ' to&nbsp;')}</b>` : `<b>${esc(r.lead)}</b>`}${r.detail ? `<span>${escP(r.detail)}</span>` : ''}</li>`).join('')}</ul>`;
+const datesHTML = (rows: DateRow[]): string => `<ul class="pg-dates">${rows.map((r) => `<li>${r.when ? `${esc(r.lead)}<b>${esc(r.when).replace(/ to /, ' to&nbsp;')}</b>` : `<b>${esc(r.lead)}</b>`}${r.detail ? `<span>${escP(r.detail)}</span>` : ''}${r.list && r.list.length ? `<ul class="pg-bul pg-ways">${r.list.map((x) => `<li>${escP(x)}</li>`).join('')}</ul>` : ''}</li>`).join('')}</ul>`;
 const ext = (url: string, text: string): string => `<a href="${esc(url)}" rel="noopener">${esc(text)}</a>`;
 function whereHTML(h: HowTo, p: PlaceBundle | null): string {
   const links: string[] = [];
@@ -227,7 +229,7 @@ const PAGE_CSS = `
 .pg-dates{display:grid;gap:10px;margin-top:10px}.pg-dates b{white-space:nowrap}.pg-dates span{display:block;font-size:15px;color:var(--ink-2)}
 .pg-links{display:grid;gap:4px;margin-top:10px}.pg-links a{display:inline-flex;min-height:40px;align-items:center}
 .pg-office,.pg-note,.pg p{margin-top:10px}
-.pg-bul{list-style:disc;padding-left:20px;margin-top:8px;display:grid;gap:4px}
+.pg-bul{list-style:disc;padding-left:20px;margin-top:8px;display:grid;gap:4px}.pg-ways{font-size:15px;color:var(--ink-2);margin-top:4px}
 .pg-places{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:10px}.pg-places a{display:inline-flex;min-height:40px;align-items:center}
 .pg-foot{margin-top:36px;padding-top:14px;padding-bottom:40px;border-top:1px solid var(--rule-2)}
 `.replace(/\n/g, '');

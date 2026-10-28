@@ -132,6 +132,19 @@ check('page titles and descriptions: no em dashes, no all caps', !bad.copy.lengt
   check('state pages: every deadline keeps its own rule, a mail-voting state never headlines a request date, and opening hours are said only when plain', !lost.length, lost.join('; '));
   const md = textOf(bodyOf(pages.find((x) => x.path === '/maryland').html));
   const wa = textOf(bodyOf(pages.find((x) => x.path === '/washington').html));
+  // Every way to return a mail ballot, in the data's words, on every state and place page (Codex round 2: Texas's
+  // postmark exception was missing under a heading that said "must arrive by").
+  const ways = [];
+  for (const p of pages) {
+    const st = p.kind === 'state' ? stateCodes.find((x) => site.statePath(data, x) === p.path) : data.places[p.path.slice(1)].state;
+    const text = textOf(bodyOf(p.html));
+    // Case aside: the app's deshout writes the data's "NOT at your polling place" as "not".
+    const gone = (data.states[st].howto.mail_ballot.return_options || []).filter((o) => !text.toLowerCase().includes(norm(o).slice(0, 60).toLowerCase()));
+    const oneRule = /Your mail ballot must/.test(p.html) || !/Mail ballot return deadline: <b>/.test(p.html);
+    if (gone.length || oneRule) ways.push(`${p.path}: ${gone.length} way(s) missing${oneRule ? ', a one-rule heading' : ''}`);
+  }
+  check('every page lists each way to return a mail ballot, and its heading names no single rule', !ways.length, ways.slice(0, 4).join('; '));
+  check('Texas: the USPS postmark exception is on the page', textOf(bodyOf(pages.find((x) => x.path === '/texas').html)).includes('postmarked by 7:00 PM Nov. 3 and arriving by 5:00 PM'));
   check('Maryland: the request deadline says how it depends on delivery (fax or email); Washington: no blanket opening time', /fax or email/.test(md) && !/You can vote from/.test(wa) && /Polls close at 8 PM/.test(wa));
 }
 /* ---------- state pages ---------- */

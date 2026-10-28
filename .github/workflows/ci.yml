@@ -84,15 +84,29 @@ jobs:
       - name: Typecheck and production build
         run: npm run build
 
-  # Real browser at 380px: the scripted e2e, then the every-ballot sweep.
-  browser:
+  # Real browser at 380px, in four parts side by side: the scripted e2e in three slices, and the every-ballot sweep.
+  # In one job the e2e took 11.5 of its 12 minutes (Oct 28), so slicing it is what shortens every PR's wait (Kevin:
+  # "let's split"). Each slice runs every third top-level block of tests/e2e.mjs (SHARD, inShard()). The check a merge
+  # waits for is still the one named "browser": the small job after these passes only if all four parts did.
+  # Skipped only when `changes` succeeded and found a source-only diff. On a push to main `changes` is skipped, so this
+  # runs; if `changes` fails, this runs. A cancelled run is left cancelled: here that only happens when a newer push
+  # replaces it (the concurrency group above), and the newer run decides.
+  browser-part:
     needs: [changes]
-    # Skipped only when `changes` succeeded and found a source-only diff. On a push to main `changes` is skipped, so this
-    # runs; if `changes` fails, this runs. A cancelled run is left cancelled: here that only happens when a newer push
-    # replaces it (the concurrency group above), and the newer run decides.
     if: ${{ !cancelled() && github.event_name != 'schedule' && !(needs.changes.result == 'success' && needs.changes.outputs.source_only == 'true') }}
     runs-on: ubuntu-latest
     timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - part: e2e-1
+            shard: '0/3'
+          - part: e2e-2
+            shard: '1/3'
+          - part: e2e-3
+            shard: '2/3'
+          - part: sweep
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -127,14 +141,17 @@ jobs:
           for i in $(seq 1 30); do curl -sf http://localhost:4173/data/index.json > /dev/null && exit 0; sleep 1; done
           cat .tmp-preview.log; exit 1
 
-      - name: Scripted end-to-end checks
+      - name: Scripted end-to-end checks (one slice)
+        if: matrix.shard
         env:
           BASE: http://localhost:4173
           SHOTS_DIR: .tmp/e2e-shots
           SENTRY_E2E: '1'   # the crash-report checks fail, rather than skip, if the build above lost its DSN
+          SHARD: ${{ matrix.shard }}
         run: node tests/e2e.mjs
 
       - name: Every-ballot sweep (fast on pull requests, full on main and manual runs)
+        if: matrix.part == 'sweep'
         env:
           BASE: http://localhost:4173
           SHOTS_DIR: .tmp/sweep-shots
@@ -146,11 +163,23 @@ jobs:
         if: failure()
         uses: actions/upload-artifact@v7
         with:
-          name: browser-failures
+          name: browser-failures-${{ matrix.part }}
           path: |
             .tmp/e2e-shots
             .tmp/sweep-shots
           retention-days: 14
+
+  # The required check. Passes only when every browser part passed; skipped, like them, on a source-only PR.
+  browser:
+    needs: [changes, browser-part]
+    if: ${{ !cancelled() && github.event_name != 'schedule' && !(needs.changes.result == 'success' && needs.changes.outputs.source_only == 'true') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Every browser part passed
+        run: |
+          echo "browser parts: ${{ needs.browser-part.result }}"
+          [ "${{ needs.browser-part.result }}" = success ]
 
   # The LIVE site, once a day. No checkout of data needed: the sweep reads /data from the URL it tests.
   live:

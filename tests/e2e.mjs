@@ -31,6 +31,12 @@ const isSentry = (u) => /(^|\.)sentry\.io$/i.test(u.hostname);
 
 const results = [];
 const check = (name, ok, extra = '') => { results.push({ name, ok, extra }); console.log(`${ok ? 'PASS' : 'FAIL'}  ${name}${extra ? `  (${extra})` : ''}`); };
+/* CI runs the top-level blocks below in slices side by side (SHARD=0/3, 1/3 and 2/3; .github/workflows/ci.yml), so
+   each block asks inShard() first, by its place in the file. With no SHARD (a local run) every block runs. A new
+   top-level block opens with `if (inShard()) {` too; a plain `{` still works, it just runs in every slice. */
+const [SHARD_I, SHARD_N] = (process.env.SHARD || '0/1').split('/').map(Number);
+let blockN = 0;
+const inShard = () => blockN++ % SHARD_N === SHARD_I;
 
 const browser = await chromium.launch();
 async function newPage(opts = {}) {
@@ -193,7 +199,7 @@ async function mapsSettled(page, timeout = 10000) {
   await page.waitForFunction(() => !document.querySelector('.addrbox [data-pending]'), null, { timeout }).catch(() => {});
   await page.waitForTimeout(100);
 }
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await page.goto(`${BASE}/?today=${TODAY}`);
   await page.waitForSelector('#zip');
@@ -209,7 +215,7 @@ async function mapsSettled(page, timeout = 10000) {
 }
 
 /* ---------- the first page (Oct 20, round 3): steps 1 and 2 together from the start ---------- */
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await page.goto(`${BASE}/?today=${TODAY}`);
   await page.waitForSelector('#zip');
@@ -377,7 +383,7 @@ async function mapsSettled(page, timeout = 10000) {
   noErrors(page, 'First page');
   await ctx.close();
 }
-{
+if (inShard()) {
   // Dark mode: the sheet stays light paper, as My plan's does, so its ink and controls stay dark.
   const { ctx, page } = await newPage({ colorScheme: 'dark' });
   await openZip(page, '78704');
@@ -388,7 +394,7 @@ async function mapsSettled(page, timeout = 10000) {
   noErrors(page, 'First page in dark mode');
   await ctx.close();
 }
-{
+if (inShard()) {
   // A city from the list of places: its place line with no ZIP (the box empties), and the shelf goes.
   const { ctx, page } = await newPage();
   await page.goto(`${BASE}/?today=${TODAY}`);
@@ -406,7 +412,7 @@ async function mapsSettled(page, timeout = 10000) {
   noErrors(page, 'A city from the list');
   await ctx.close();
 }
-{
+if (inShard()) {
   // From a ballot the foot's city count opens the same list (Kevin, Oct 21: "33 cities lost its link and it
   // should use the same shelf"). A place picked there starts over at the first page the way Change does:
   // the ballot you left is saved and offered there, and a reload stays on the first page.
@@ -430,7 +436,7 @@ async function mapsSettled(page, timeout = 10000) {
   noErrors(page, 'City list from a ballot');
   await ctx.close();
 }
-{
+if (inShard()) {
   // "Change" (the ballot's masthead) goes back the way Back does, so the first page never sits in
   // history twice and one more Back leaves the site.
   const { ctx, page } = await newPage();
@@ -448,7 +454,7 @@ async function mapsSettled(page, timeout = 10000) {
   noErrors(page, 'Change');
   await ctx.close();
 }
-{
+if (inShard()) {
   // Back or Change from a ballot with picks: the first page says it's saved and opens it in one tap,
   // and so does the next visit (UX walk, Oct 20: forgetting it made the picks look gone).
   const { ctx, page } = await newPage();
@@ -473,7 +479,7 @@ async function mapsSettled(page, timeout = 10000) {
   noErrors(page, 'Saved ballot on the first page');
   await ctx.close();
 }
-{
+if (inShard()) {
   // The fill switch fills, Undo undoes; then a reload, a save link and ?try all skip the first page.
   const { ctx, page } = await newPage();
   await openZip(page, '78704');
@@ -516,7 +522,7 @@ async function mapsSettled(page, timeout = 10000) {
   noErrors(page, 'Step 2 fill');
   await ctx.close();
 }
-{
+if (inShard()) {
   // "Hide races I've decided" sticks (Kevin, Oct 20: "I closed the page, I reopened the page, and
   // they were showing all the races again"). It is saved with the ballot on this device, never in
   // the save link.
@@ -575,7 +581,7 @@ async function mapsSettled(page, timeout = 10000) {
 }
 
 /* ---------- Denver 80205: the plan strip, the lens, rows, picks, fills, the save link ---------- */
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await openBallot(page, '80205');
   await shot(page, '01-denver-top');
@@ -729,7 +735,7 @@ async function mapsSettled(page, timeout = 10000) {
 }
 
 /* ---------- Austin 78702: district questions, unopposed fold, booth rules ---------- */
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await openBallot(page, '78702');
   await noSideScroll(page, 'Austin');
@@ -759,7 +765,7 @@ async function mapsSettled(page, timeout = 10000) {
 }
 
 /* ---------- the ballot top (flow, Oct 20): the place, the next step, whose picks, the address ---------- */
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await openBallot(page, '78704');
   await page.evaluate(() => document.fonts.ready);
@@ -785,7 +791,7 @@ async function mapsSettled(page, timeout = 10000) {
 }
 
 /* ---------- every "go check" gets a button (flow, Oct 20) ---------- */
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   let asked = 0;
   await page.route('https://geocoding.geo.census.gov/**', (route) => { asked++; return route.abort(); });
@@ -843,7 +849,7 @@ async function mapsSettled(page, timeout = 10000) {
 // the Census found, with "Not it? Try again"; what it set; what's left for the sample ballot, which
 // leads now that "Use my address" has answered all it can. Census is answered here, with a made-up
 // address. A reload keeps what was set and never the address.
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   const answer = { result: { addressMatches: [{ matchedAddress: 'TEST ONE, AUSTIN, TX, 78704', geographies: {
     States: [{ STATE: '48' }], 'Incorporated Places': [{ BASENAME: 'Austin' }], '119th Congressional Districts': [{ BASENAME: '37' }],
@@ -895,7 +901,7 @@ async function mapsSettled(page, timeout = 10000) {
 // block's interior point (a made-up address line; the points are the public building's), and the
 // city's and county's maps settle council, trustee, commissioner, JP, constable and SBOE. The maps load
 // only after the lookup, and one that fails changes nothing but says so.
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   const answer = { result: { addressMatches: [{ matchedAddress: 'TEST CITY HALL, AUSTIN, TX, 78701', coordinates: { x: -97.746669, y: 30.26496 }, geographies: {
     States: [{ STATE: '48' }], Counties: [{ BASENAME: 'Travis' }], 'Incorporated Places': [{ BASENAME: 'Austin' }], '120th Congressional Districts': [{ BASENAME: '10' }],
@@ -1080,7 +1086,7 @@ async function mapsSettled(page, timeout = 10000) {
 // Williamson County (Oct 26): Round Rock, with the Census mocked at Round Rock City Hall's point and
 // its block (the districts are the ones the Census gives the building), settles the county races
 // from Williamson's precinct map and SBOE from the Legislative Council's plan.
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   const answer = { result: { addressMatches: [{ matchedAddress: 'TEST CITY HALL, ROUND ROCK, TX, 78664', coordinates: { x: -97.677488, y: 30.508886 }, geographies: {
     States: [{ STATE: '48' }], Counties: [{ BASENAME: 'Williamson' }], 'Incorporated Places': [{ BASENAME: 'Round Rock' }], '120th Congressional Districts': [{ BASENAME: '17' }],
@@ -1115,7 +1121,7 @@ async function mapsSettled(page, timeout = 10000) {
 // Dallas County (Oct 26): one map, the county's precincts merged by district, settles commissioner,
 // JP (both places of a precinct), constable and SBOE. The Census is mocked at Dallas City Hall's
 // point and block, with the districts the Census gives the building.
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   const answer = { result: { addressMatches: [{ matchedAddress: 'TEST CITY HALL, DALLAS, TX, 75201', coordinates: { x: -96.795839, y: 32.776661 }, geographies: {
     States: [{ STATE: '48' }], Counties: [{ BASENAME: 'Dallas' }], 'Incorporated Places': [{ BASENAME: 'Dallas' }], '120th Congressional Districts': [{ BASENAME: '33' }],
@@ -1148,7 +1154,7 @@ async function mapsSettled(page, timeout = 10000) {
 }
 // Harris County (Oct 26): Houston's one map settles commissioner, JP (each precinct's Place 2) and
 // SBOE. The Census is mocked at Houston City Hall's point and block, with its real Census districts.
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   const answer = { result: { addressMatches: [{ matchedAddress: 'TEST CITY HALL, HOUSTON, TX, 77002', coordinates: { x: -95.369483, y: 29.760724 }, geographies: {
     States: [{ STATE: '48' }], Counties: [{ BASENAME: 'Harris' }], 'Incorporated Places': [{ BASENAME: 'Houston' }], '120th Congressional Districts': [{ BASENAME: '18' }],
@@ -1181,7 +1187,7 @@ async function mapsSettled(page, timeout = 10000) {
 // Statewide Florida (Miami): the only races that depend on your address are appeals judges, which
 // the Census can't settle, so the box leads with the sample ballot; from the first page, the lookup
 // shows what it found under the place line, and the box says the sample ballot shows the rest.
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   const answer = { result: { addressMatches: [{ matchedAddress: 'TEST TWO, MIAMI, FL, 33101', geographies: {
     States: [{ STATE: '12' }], 'Incorporated Places': [{ BASENAME: 'Miami' }], 'ZIP Code Tabulation Areas': [{ ZCTA5: '33101' }],
@@ -1211,7 +1217,7 @@ async function mapsSettled(page, timeout = 10000) {
   noErrors(page, 'Statewide Florida address');
   await ctx.close();
 }
-{
+if (inShard()) {
   // A ballot that won't load: Try again, with the ZIP still in the box. Then the guide's data itself.
   const { ctx, page } = await newPage();
   await page.route('**/data/place-austin-tx.json', (route) => route.fulfill({ status: 503, body: 'down' }));
@@ -1234,7 +1240,7 @@ async function mapsSettled(page, timeout = 10000) {
   check('Load error: Try again loads the first page', !(await two.page.$('.zip-err')) && !!(await two.page.$('[data-fk="browse"]')));
   await two.ctx.close();
 }
-{
+if (inShard()) {
   // The registration alert gets a button (the state's register page comes with the data track; mocked here).
   const { ctx, page } = await newPage();
   await page.route('**/data/state-CO.json', async (route) => {
@@ -1250,7 +1256,7 @@ async function mapsSettled(page, timeout = 10000) {
 }
 
 /* ---------- My plan (flow, Oct 20): the cheat sheet, renamed, with "Save it before you go" ---------- */
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await openBallot(page, '78704');
   const endcap = await page.$$eval('.endcap > *', (els) => els.map((e) => e.textContent.trim()));
@@ -1278,7 +1284,7 @@ async function mapsSettled(page, timeout = 10000) {
 }
 
 /* ---------- the share page (flow, Oct 20): Share the guide, a public post, early voting sites ---------- */
-{
+if (inShard()) {
   // A phone with a share sheet (stubbed: it records what it was handed).
   const { ctx, page } = await newPage();
   await page.addInitScript(() => { Object.defineProperty(navigator, 'share', { configurable: true, value: async (d) => { window.__shared = d; } }); });
@@ -1339,7 +1345,7 @@ async function mapsSettled(page, timeout = 10000) {
 }
 
 /* ---------- resume (flow, Oct 20): "Welcome back" on a started ballot, once per visit ---------- */
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await openBallot(page, '78704');
   check('Resume: not on a first visit', !(await page.$('.resume')));
@@ -1384,7 +1390,7 @@ async function mapsSettled(page, timeout = 10000) {
    Kevin's Google Form, whose response sheet is the pipeline's queue. The post is caught (catchForm), never
    sent. What must never go along: the address typed in the address box (or the one the Census found), and
    anything from the page's hash, where a save link carries picks. */
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   const posts = await catchForm(page);
   const answer = { result: { addressMatches: [{ matchedAddress: 'TEST ONE, AUSTIN, TX, 78704', geographies: {
@@ -1547,7 +1553,7 @@ async function mapsSettled(page, timeout = 10000) {
 }
 /* The first page: the forms before there is any ballot, and with a ZIP in the box; Support's share there is
    the guide's own link. A mouse lands in the box to type in. */
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await page.addInitScript(() => { Object.defineProperty(navigator, 'share', { configurable: true, value: async (d) => { window.__shared = d; } }); });
   await page.goto(`${BASE}/?today=${TODAY}`);
@@ -1586,7 +1592,7 @@ async function mapsSettled(page, timeout = 10000) {
 }
 
 /* ---------- the bar and the menu (flow, Oct 20) ---------- */
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await openBallot(page, '78704');
   const acts = await page.$$eval('.foot button', (els) => els.map((e) => e.dataset.act));
@@ -1649,7 +1655,7 @@ async function mapsSettled(page, timeout = 10000) {
   noErrors(page, 'Bar and menu');
   await ctx.close();
 }
-{
+if (inShard()) {
   // Under "Hide races I've decided" a finished section is just its band, folded, with Show (that's
   // where its races went): the menu says "Done", and jumping there opens it with its decided rows,
   // the filter still on. ("Try as aunt" decides everything but the measures.)
@@ -1690,7 +1696,7 @@ async function mapsSettled(page, timeout = 10000) {
   noErrors(page, 'Menu under the filter');
   await ctx.close();
 }
-{
+if (inShard()) {
   // From 1180px the menu stands as a rail in the left margin, clear of the ballot.
   const { ctx, page } = await newPage({ viewport: { width: 1280, height: 900 }, isMobile: false, deviceScaleFactor: 1 });
   await openBallot(page, '78704');
@@ -1732,7 +1738,7 @@ const reel = async (page) => { await page.waitForTimeout(600); return page.evalu
 const drift = (frames, y) => Math.max(...frames.map(([t]) => Math.abs(t - y)));
 const topOf = (page, sel) => page.evaluate((s) => document.querySelector(s).getBoundingClientRect().top, sel);
 const placeAt = (page, sel, y) => page.evaluate(([s, y]) => window.scrollBy(0, document.querySelector(s).getBoundingClientRect().top - y), [sel, y]);
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await openBallot(page, '80205');
   const ids = await page.evaluate(() => [...document.querySelectorAll('#sec-state .row[data-item][data-undecided]')].map((r) => r.dataset.item));
@@ -1820,7 +1826,7 @@ const placeAt = (page, sel, y) => page.evaluate(([s, y]) => window.scrollBy(0, d
   noErrors(page, 'Motion');
   await ctx.close();
 }
-{
+if (inShard()) {
   // prefers-reduced-motion: the same end states, at once.
   const { ctx, page } = await newPage({ reducedMotion: 'reduce' });
   await openBallot(page, '80205');
@@ -1873,7 +1879,7 @@ const touchAt = async (page, sel) => {
   await page.touchscreen.tap(b.x + Math.min(30, b.width / 2), b.y + b.height / 2);
   await page.waitForTimeout(140);
 };
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await openZip(page, '20001');
   await page.waitForSelector('[data-act="choose-place"]');
@@ -1895,7 +1901,7 @@ const touchAt = async (page, sel) => {
   noErrors(page, 'Place 20001');
   await ctx.close();
 }
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await openBallot(page, '80205');
   const q = await page.evaluate(() => document.querySelector('.ledger .row[data-q]').id);
@@ -1914,7 +1920,7 @@ const touchAt = async (page, sel) => {
   noErrors(page, 'Place 80205');
   await ctx.close();
 }
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await openBallot(page, '60614');
   const G = '[data-act="grp"][data-g="judicial|Circuit Court of Cook County"]';
@@ -1937,7 +1943,7 @@ const touchAt = async (page, sel) => {
 
 /* ---------- "Show endorsements" (Kevin, Oct 20): a switch that leads step 2, on to start. Off, every row
    shows just the choices and the controls that only matter with endorsements step aside ---------- */
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await page.goto(`${BASE}/?today=${TODAY}`);
   await page.waitForSelector('#zip');
@@ -2002,7 +2008,7 @@ const touchAt = async (page, sel) => {
 /* "Show endorsements" on the first page with a ballot that has choices of its own (review, Oct 20):
    the switch shows the ballot's choice, so a tap turns that over; and the next new ZIP takes what the
    page showed. With it off, the chips aren't there at all. */
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   const none = async () => ((await page.getAttribute('#setup [data-act="ends"]', 'aria-checked')) === 'true' ? 'false' : 'true');
   const papers = async () => ((await page.$('#setup [data-act="chip"][data-k="papers"]')) ? page.getAttribute('#setup [data-act="chip"][data-k="papers"]', 'aria-pressed') : 'hidden');
@@ -2072,7 +2078,7 @@ for (const [zip, label, id, btn, href, full] of [
   await ctx.close();
 }
 
-{
+if (inShard()) {
   // Codex, Oct 26: a sheet that takes its own opener away (the source count goes with the last source) sends
   // focus to "Show endorsements" instead of losing it.
   const { ctx, page } = await newPage();
@@ -2127,7 +2133,7 @@ const day = (iso) => new Date(`${iso}T00:00:00Z`).toLocaleDateString('en-US', { 
 /* A card's text with its paragraphs and buttons apart (textContent runs them together). */
 const partsText = (page, sel) => page.$$eval(`${sel} > *`, (els) => els.map((e) => e.textContent.replace(/\s+/g, ' ').trim()).filter(Boolean).join(' ')).catch(() => '');
 const darkIn = (page, sel) => page.$$eval(`${sel} .mini.dark`, (els) => els.filter((e) => e.getClientRects().length).map((e) => e.textContent.trim()));
-{
+if (inShard()) {
   // A covered place: no card, and every count names its scope.
   const { ctx, page } = await newPage();
   await openZip(page, '60601');
@@ -2141,7 +2147,7 @@ const darkIn = (page, sel) => page.$$eval(`${sel} .mini.dark`, (els) => els.filt
   noErrors(page, 'Coverage Chicago');
   await ctx.close();
 }
-{
+if (inShard()) {
   // St. Louis City (63110): a ZIP in Missouri the guide has no city for, so the statewide races. Kevin's case.
   const { ctx, page } = await newPage();
   const posts = await catchForm(page);
@@ -2226,7 +2232,7 @@ const darkIn = (page, sel) => page.$$eval(`${sel} .mini.dark`, (els) => els.filt
 // Whichever place that is in today's data (Pensacola on Oct 25), through a ZIP that is only that place's.
 const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_picks === 0 && p.local_races_with_picks < p.local_races)
   .map(([id, p]) => ({ id, p, zip: Object.entries(INDEX_JSON.zips).find(([, ids]) => ids.length === 1 && ids[0] === id)?.[0] })).find((x) => x.zip && x.p.state !== 'DC');
-{
+if (inShard()) {
   // Pressing Go on a phone (what most phones do with a ZIP) lands on the ballot: the card's lead is on the first
   // screen, and it holds the only dark button there.
   for (const zip of ['63110', THIN ? THIN.zip : null].filter(Boolean)) {
@@ -2248,7 +2254,7 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
     await ctx.close();
   }
 }
-{
+if (inShard()) {
   if (!THIN) check('Thin place: none in today’s data, so nothing to show', true);
   else {
     const thin = THIN;
@@ -2290,7 +2296,7 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
 /* ---------- a "Your source is in" reply switches that source on (Oct 28) ----------
    The workbench's vg source ends a friend's request with a link to ?on=<the source's id>. Once a ballot that has
    it shows, it is switched on, a toast says so, and the address bar loses the ?on= so a reload doesn't redo it. */
-{
+if (inShard()) {
   const id = 'aura'; // an issue group on Austin's ballot, off to start
   const sourcesOf = async (page) => Object.values(JSON.parse((await savedVG(page)) || '{"ballots":{}}').ballots || {}).map((b) => b.sources);
   const { ctx, page } = await newPage();
@@ -2312,7 +2318,7 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
    Kevin: "show a count and a way to expand to see all sources and then individually check and uncheck within
    that list ... also show what sources we tried but couldn't access ... and then the option to add their own
    source". */
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   const posts = await catchForm(page);
   await openZip(page, '60601');
@@ -2384,7 +2390,7 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
    Off Vercel's hosts the page loads no script and counts nothing. Here a stubbed window.va (the package's
    own queue, which track() hands every event) stands in, so the checks see exactly what the page would
    queue: a ballot shown sends its state and how, each screen a view, a save link "made"; never the ZIP. */
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await page.addInitScript(() => { window.__va = []; window.va = (...a) => { window.__va.push(JSON.parse(JSON.stringify(a))); }; });
   const asked = [];
@@ -2424,7 +2430,7 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
    hands it. So this runs the host check, the idle load, inject() with our beforeSend, the events that
    waited for the script (a returning ballot and a save link both open during boot), and the referrer the
    script would send (__vaSent, built as Vercel's script builds it). */
-{
+if (inShard()) {
   const HOST = 'https://vote.kevinhg.com';
   const FAKE = `(() => {
     const q = window.vaq || [];
@@ -2499,7 +2505,7 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
 }
 
 /* ---------- statewide-only, uncovered, shared ZIPs ---------- */
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await openBallot(page, '99201');
   await noSideScroll(page, 'Spokane');
@@ -2513,7 +2519,7 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
   noErrors(page, 'Spokane');
   await ctx.close();
 }
-{
+if (inShard()) {
   // A fresh browser each time: a saved ballot would open instead of the ZIP box.
   const { ctx, page } = await newPage();
   await openZip(page, '02139');
@@ -2540,7 +2546,7 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
   noErrors(page, 'Uncovered');
   await ctx.close();
 }
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await openZip(page, '80247');
   await page.waitForSelector('[data-act="choose-place"]');
@@ -2565,7 +2571,7 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
 }
 
 /* ---------- DC 20001, not sure which ward: the city up top, the wards under it ---------- */
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await openZip(page, '20001');
   await page.waitForSelector('[data-act="choose-place"]');
@@ -2578,7 +2584,7 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
 }
 
 /* ---------- Houston 77002: numbered seats every voter sees are not a question ---------- */
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await openBallot(page, '77002');
   await noSideScroll(page, 'Houston');
@@ -2606,7 +2612,7 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
 
 /* ---------- ranked choice: Portland 97214, City Council District 3 (3 winners, rank up to 6) ---------- */
 const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (els) => els.map((e) => e.textContent.replace(/^\s*\d+(st|nd|rd|th):\s*/, '').trim()));
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await openBallot(page, '97214');
   await noSideScroll(page, 'Portland');
@@ -2724,7 +2730,7 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
 }
 
 /* ---------- ranked choice: DC Ward 1 (20010), four candidates, rank up to 5 ---------- */
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await openBallot(page, '20010');
   await noSideScroll(page, 'DC Ward 1');
@@ -2749,7 +2755,7 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
 }
 
 /* ---------- an old v1 link, saved from the live guide before ranked choice ---------- */
-{
+if (inShard()) {
   const OLD = '#v1~DC~dc-ward-1~20010~l0g49h8j.it941rdf.3z3i9P.ik2ysP.1rq6ag1n~~l0g49T2xkIGxpbmsgbm90ZQ~';
   const { ctx, page } = await newPage();
   await page.goto(`${BASE}/?today=${TODAY}${OLD}`);
@@ -2770,7 +2776,7 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
 }
 
 /* ---------- judges, Full details, Help your friends vote ---------- */
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await openBallot(page, '80226');
   const jId = await page.evaluate(() => document.querySelector('#sec-judicial .row[data-item]').dataset.item);
@@ -2838,7 +2844,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   check(`Plan on ${day}: ${want}`, want.test(await text(page, '.plan-h')), await text(page, '.plan-h'));
   await ctx.close();
 }
-{
+if (inShard()) {
   const { ctx, page } = await newPage({ colorScheme: 'dark' });
   await openBallot(page, '80226');
   const bg = await page.evaluate(() => getComputedStyle(document.body).backgroundColor);
@@ -2851,7 +2857,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   check('Dark mode: My plan’s save line is dark ink on the sheet, no dark fill', sg[0] === 'rgba(0, 0, 0, 0)' && sg[1] === 'rgb(31, 38, 35)', sg.join(' / '));
   await ctx.close();
 }
-{
+if (inShard()) {
   // ?try= never touches the real saved picks.
   const { ctx, page } = await newPage();
   await openBallot(page, '80226');
@@ -2870,7 +2876,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
 }
 
 /* ---------- Help your friends vote in Washington: statewide links only, never King County's page ---------- */
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await openBallot(page, '99201');
   await tap(page, '#plan [data-act="view"][data-v="pass"]');
@@ -2880,7 +2886,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   noErrors(page, 'Spokane pass');
   await ctx.close();
 }
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await openBallot(page, '78702');
   await tap(page, '#plan [data-act="view"][data-v="pass"]');
@@ -2906,7 +2912,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
 
 /* ---------- Codex round 1 fixes, each checked in a real browser ---------- */
 // #5: the key dates keep their fine print, and Orlando uses Orange County's own early voting.
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await openBallot(page, '32801');
   const head = await text(page, '.plan-h');
@@ -2927,7 +2933,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
 }
 // UX re-walk: Amendment 87's open row is one conflict box and a two-line official title; grid
 // cells keep the lean dots and word, with how it was placed one tap away.
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await openBallot(page, '80226');
   await openRow(page, 'co-amendment-87');
@@ -2941,7 +2947,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await ctx.close();
 }
 // UX re-walk: a Chicago judge's open row has one wording and every group by full name, one tap away.
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await openBallot(page, '60601');
   // "Read these first" jumps to Judge Smith (7 of 14 groups say don't keep) and opens her row.
@@ -2960,7 +2966,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await ctx.close();
 }
 // Codex r2 (r1 #3): confirming a filled pick by hand, even with the same value, survives Undo.
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await openBallot(page, '80226');
   await editFill(page);
@@ -2977,7 +2983,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await ctx.close();
 }
 // #12: after the polls close on Election Day.
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await page.goto(`${BASE}/?today=2026-11-03&now=19:05`);
   await page.fill('#zip', '77002');
@@ -2988,7 +2994,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await ctx.close();
 }
 // Codex r2 (r1 #12): an open page turns over at 7 PM Central on its own, whatever the device's zone.
-{
+if (inShard()) {
   const { ctx, page } = await newPage({ timezoneId: 'America/Los_Angeles' });
   await page.clock.install({ time: new Date('2026-11-04T00:58:00Z') });
   await page.goto(`${BASE}/?today=2026-11-03`);
@@ -3004,7 +3010,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await ctx.close();
 }
 // Codex r2: a contested judicial race's Full details keeps each rating as published, with its scope and source.
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await openBallot(page, '11201');
   const id = 'nyc-civil-court-brooklyn-md6';
@@ -3022,7 +3028,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await ctx.close();
 }
 // #9: a sheet and the Full details hold the keyboard; the ballot behind them is inert.
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await openBallot(page, '80205');
   await edit(page);
@@ -3058,7 +3064,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await ctx.close();
 }
 // #10: "Hide races I've decided" drops a decided row on the next move, even on a one-row repaint.
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await openBallot(page, '80205');
   await menu(page);
@@ -3089,7 +3095,7 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
    which shows its pick in gold for about 900ms, then folds away while the rows under it slide up;
    the band above stays still. Opening another row in the beat ends it at once, the tapped header
    held where it was; reopening the row keeps it. */
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await openBallot(page, '80205');
   await menu(page);
@@ -3173,7 +3179,7 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
   noErrors(page, 'Beat and counts');
   await ctx.close();
 }
-{
+if (inShard()) {
   // A keyboard pick: when its row folds away, focus goes on to the row that took its place.
   const { ctx, page } = await newPage();
   await openBallot(page, '80205');
@@ -3197,7 +3203,7 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
   noErrors(page, 'Beat, keyboard');
   await ctx.close();
 }
-{
+if (inShard()) {
   // A band tapped while a row above it is in its beat: the row goes at once, and the band under
   // your finger stays where it was, for its count and for a folded band's title.
   const { ctx, page } = await newPage();
@@ -3246,7 +3252,7 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
   noErrors(page, 'Beat under a band');
   await ctx.close();
 }
-{
+if (inShard()) {
   // Reduced motion: no animation; the row just goes after its beat.
   const { ctx, page } = await newPage({ reducedMotion: 'reduce' });
   await openBallot(page, '80205');
@@ -3262,7 +3268,7 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
   noErrors(page, 'Beat, reduced motion');
   await ctx.close();
 }
-{
+if (inShard()) {
   // Without the filter, a band's count folds and unfolds its section, even one still being decided;
   // the band itself still goes to the next race left. The choice is saved with the ballot.
   const { ctx, page } = await newPage();
@@ -3287,7 +3293,7 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
 }
 // #2 and #11: the address lookup checks the state, and a ballot that fails to load after a
 // Census match fails cleanly. The Census lookup is answered here, never called.
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   const geoFor = (fips, place, cd, upper) => ({ result: { addressMatches: [{ matchedAddress: 'TEST', geographies: {
     States: [{ STATE: fips }], 'Incorporated Places': [{ BASENAME: place }], '119th Congressional Districts': [{ BASENAME: String(cd) }],
@@ -3313,7 +3319,7 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
   noErrors(page, 'Address in the wrong state');
   await ctx.close();
 }
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   const geoFor = (fips, place, cd, upper) => ({ result: { addressMatches: [{ matchedAddress: 'TEST', geographies: {
     States: [{ STATE: fips }], 'Incorporated Places': [{ BASENAME: place }], '119th Congressional Districts': [{ BASENAME: String(cd) }],
@@ -3352,7 +3358,7 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
 
 // The first page's "Use my address for a more exact ballot": no ZIP and no ballot yet.
 // Census is answered here, with made-up addresses.
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   const geoFor = (fips, place, cd, upper, matched = 'TEST') => ({ result: { addressMatches: [{ matchedAddress: matched, geographies: {
     States: [{ STATE: fips }], 'Incorporated Places': place ? [{ BASENAME: place }] : [], '119th Congressional Districts': [{ BASENAME: String(cd) }],
@@ -3410,7 +3416,7 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
 // A DC ward's ZIP: nothing on the ballot turns on the address, so there is no address box before a
 // lookup; after one from the first page, the box holds only what was found, this visit; after a
 // reload there is no box again. Census is answered here, with a made-up address.
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   const answer = { result: { addressMatches: [{ matchedAddress: 'TEST FOUR, WASHINGTON, DC, 20016', geographies: {
     States: [{ STATE: '11' }], 'Incorporated Places': [{ BASENAME: 'Washington' }], '119th Congressional Districts': [{ BASENAME: '98' }],
@@ -3448,7 +3454,7 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
 // Several Census matches (Kevin, Oct 20: "did I select the right address?"): "Which one is yours?",
 // one button each, and the one tapped is the one applied. A miss says so, with what you typed kept.
 // Census is answered here, with made-up addresses.
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   const m = (matched, cd, upper, lower) => ({ matchedAddress: matched, geographies: {
     States: [{ STATE: '48' }], 'Incorporated Places': [{ BASENAME: 'Austin' }], '119th Congressional Districts': [{ BASENAME: String(cd) }],
@@ -3494,7 +3500,7 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
   await ctx.close();
 }
 // The first page, several matches: the list, then the one tapped opens its ballot.
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   const m = (matched, zip, cd) => ({ matchedAddress: matched, geographies: {
     States: [{ STATE: '48' }], 'Incorporated Places': [{ BASENAME: 'Austin' }], 'ZIP Code Tabulation Areas': [{ ZCTA5: zip }], '119th Congressional Districts': [{ BASENAME: String(cd) }] } });
@@ -3550,7 +3556,7 @@ for (const width of [380, 1280]) {
 // Review, Oct 20: on Austin, Next opened the folded "Other school districts that touch Austin" races
 // one by one (seven taps through Round Rock, Pflugerville and Leander ISD). The fold says "Open only
 // if one of them is yours", so Next passes it by while it is closed and goes on to the measures.
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await openBallot(page, '78704');
   await page.evaluate(() => window.scrollTo(0, 0));
@@ -3570,7 +3576,7 @@ for (const width of [380, 1280]) {
 
 // Walks, Oct 20: a cheat-sheet line for an unanswered district question was dead. It now goes back
 // to the ballot with that question open.
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   await openBallot(page, '32801');
   await tap(page, '[data-act="cheat"]');
@@ -3630,7 +3636,7 @@ const ADDRESS = /testing lane|testing%20lane|testing\+lane|test one/i;
 // The address, then errors that mention it (as typed, as the Census found it, URL-encoded): nothing goes.
 // Then a plain error: exactly one report, with nothing about the address or the Census in it, no user, no
 // breadcrumbs, the page as its origin and path, and Sentry told never to fill in the IP.
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   const crash = await catchCrash(page);
   await page.route('https://geocoding.geo.census.gov/**', (route) => {
@@ -3680,7 +3686,7 @@ const ADDRESS = /testing lane|testing%20lane|testing\+lane|test one/i;
 // A save link: the app clears the hash once the link opens, so it is put back here (as on a page that kept
 // it), then errors carry it in their message, in the page's address and in a script's own address. Nothing
 // of the link goes: no "#", none of its text; the page is its origin and path.
-{
+if (inShard()) {
   const OLD = '#v1~DC~dc-ward-1~20010~l0g49h8j.it941rdf.3z3i9P.ik2ysP.1rq6ag1n~~l0g49T2xkIGxpbmsgbm90ZQ~';
   const { ctx, page } = await newPage();
   const crash = await catchCrash(page);
@@ -3706,7 +3712,7 @@ const ADDRESS = /testing lane|testing%20lane|testing\+lane|test one/i;
 }
 // The Census can't be reached: the lookup fails the way it always has, and nothing goes to Sentry; the next
 // plain crash goes alone, with neither the Census nor the address in it.
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   const crash = await catchCrash(page);
   let asked = 0;
@@ -3734,7 +3740,7 @@ const ADDRESS = /testing lane|testing%20lane|testing\+lane|test one/i;
 }
 // A control's own crash: the tap handler catches it (main.ts fire()), so the window never sees it, and it
 // still reaches Sentry; Report a problem then names that crash report by its id.
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   const crash = await catchCrash(page);
   const ready = watchCrashClient(page);
@@ -3762,7 +3768,7 @@ const ADDRESS = /testing lane|testing%20lane|testing\+lane|test one/i;
 // An address typed but never looked up, an error that mentions it while the client is still on its way,
 // then the box cleared and closed: once the client arrives, that waiting error still never goes (Codex,
 // Oct 25: it went, when the box was only read at sending time).
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   const crash = await catchCrash(page);
   let release = () => {};
@@ -3795,7 +3801,7 @@ const ADDRESS = /testing lane|testing%20lane|testing\+lane|test one/i;
 // when a crash happens is private from then on, with its street line, number or not, matched anywhere. So a crash
 // that mentions only the street line, a street without its number, or the whole of a half-typed street never goes;
 // ordinary crashes around them still do. (A common word left in the box can drop reports: accepted.)
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   const crash = await catchCrash(page);
   const ready = watchCrashClient(page);
@@ -3829,7 +3835,7 @@ const ADDRESS = /testing lane|testing%20lane|testing\+lane|test one/i;
 }
 // A promise rejected with an object that holds picks and a note: the report says an object was thrown and
 // never what it held (Codex, Oct 25: Sentry put the whole object in the report).
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   const crash = await catchCrash(page);
   const ready = watchCrashClient(page);
@@ -3850,7 +3856,7 @@ const ADDRESS = /testing lane|testing%20lane|testing\+lane|test one/i;
 // The page's own code crashes while it starts up (here: wiring its taps throws), which leaves the page's
 // bundle unusable to anything that imports it. The client imports nothing from it, so that crash, the
 // worst kind, still arrives (Codex, Oct 25: it never did).
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   const crash = await catchCrash(page);
   await page.addInitScript(() => {
@@ -3874,7 +3880,7 @@ const ADDRESS = /testing lane|testing%20lane|testing\+lane|test one/i;
 }
 // An error before the page has loaded waits for the client and goes once it starts; and a page load sends
 // at most five, so one bad loop can't use up the month's shared quota.
-{
+if (inShard()) {
   const { ctx, page } = await newPage();
   const crash = await catchCrash(page);
   await page.addInitScript(() => { document.addEventListener('DOMContentLoaded', () => { throw new Error('On purpose: before the page loaded'); }); });
@@ -3896,5 +3902,5 @@ const ADDRESS = /testing lane|testing%20lane|testing\+lane|test one/i;
 
 await browser.close();
 const failed = results.filter((r) => !r.ok);
-console.log(`\n${results.length - failed.length} of ${results.length} checks passed.`);
+console.log(`\n${results.length - failed.length} of ${results.length} checks passed${SHARD_N > 1 ? ` (slice ${SHARD_I + 1} of ${SHARD_N}, ${Math.ceil((blockN - SHARD_I) / SHARD_N)} of ${blockN} blocks)` : ''}.`);
 process.exit(failed.length ? 1 : 0);

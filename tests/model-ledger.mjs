@@ -2160,8 +2160,15 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('add a source: a name with nothing pasted asks plainly, and the page’s link goes along', b2[F.what] === 'Add source: Chicago Reader' && b2[F.wrong].startsWith('Please add this source\n\nSent along:\n') && b2[F.link] === 'https://vote.kevinhg.com/ (build abc1234)' && b2[F.reach] === 'me@example.org', JSON.stringify(b2));
     check('add a source: its one required box is the source', views.shelf.requiredOf(sr({})) === 'src' && views.shelf.isForm('source'));
     S.ui.report = sr({});
+    S.ui.open.delete(views.shelf.PICKS_FOLD);
     const form = views.shelf.shelfHTML();
-    check('add a source: the sheet asks which source, where you vote (filled in), and their picks with the paste hint', /Add a source/.test(form) && /id="rf-src"/.test(form) && /id="rf-where"[^>]*value="Chicago, 60601"/.test(form) && /<textarea id="rf-picks"/.test(form) && /Behind a login\? Copy their endorsement list and paste it here\./.test(form));
+    // Kevin, Oct 28: the paste box folds under one row, "Paste in their picks", optional.
+    check('add a source: the sheet asks which source and where you vote (filled in), the paste box folded under "Paste in their picks"', /Add a source/.test(form) && /Tell Kevin which source to add\./.test(form) && /id="rf-src"/.test(form) && /id="rf-where"[^>]*value="Chicago, 60601"/.test(form)
+      && /data-k="rf-picks-fold"[^>]*aria-expanded="false"[^>]*><b>Paste in their picks<\/b> <span class="rp-opt">optional<\/span>/.test(form) && !/id="rf-picks"/.test(form) && !/Behind a login/.test(form));
+    S.ui.open.add(views.shelf.PICKS_FOLD);
+    const opened = views.shelf.shelfHTML();
+    check('add a source: opened, the row shows the paste box with its hint, labelled by the row', /aria-expanded="true" aria-controls="rf-picks"/.test(opened) && /<textarea id="rf-picks" aria-labelledby="rf-picks-b"/.test(opened) && /Behind a login\? Copy their endorsement list and paste it here\./.test(opened));
+    S.ui.open.delete(views.shelf.PICKS_FOLD);
     S.ui.report.state = 'sent';
     check('add a source: sent, it says a source usually shows up within a day', /Sent\.<\/b> Kevin reads every one; a source usually shows up within a day\./.test(views.shelf.shelfHTML()));
     S.ui.report = null;

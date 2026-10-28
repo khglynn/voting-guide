@@ -155,7 +155,7 @@
   "situations": [
     {
       "id": "no_mail_ballot_or_lost",
-      "short": "Go to the City Hall Voting Center, or your polling place on Election Day.",
+      "short": "Go to the City Hall Voting Center or your polling place on Election Day.",
       "answer": "San Francisco's last day to ask for a mailed replacement was October 27. Now go to the Voting Center at City Hall, in front of Room 48, or to your polling place on Election Day. Questions? Call (415) 558-6100.",
       "steps": null,
       "source": "https://www.sf.gov/vote-by-mail",
@@ -164,7 +164,7 @@
     {
       "id": "wrong_polling_place",
       "short": "Go to your assigned polling place if you can, or vote a regular ballot at City Hall.",
-      "answer": "In San Francisco, go to your assigned polling place if you can; look it up by address. At a different polling place you vote a provisional ballot, and it has all your contests on it. Or vote a regular ballot at the City Hall Voting Center.",
+      "answer": "In San Francisco, go to your assigned polling place if you can; look it up by address. At a different polling place, you vote a provisional ballot with all your contests. Or vote a regular ballot at the City Hall Voting Center.",
       "steps": [
         "Just dropping off a mail ballot? Any polling place or drop box takes it."
       ],

@@ -202,7 +202,7 @@
       "answer": "New York’s lookup asks for your name, birth date, county and ZIP, and needs an exact match to your registration record.",
       "steps": [
         "Try your last name with the hyphen, with a space instead, and run together, and leave out any middle name or suffix.",
-        "Still nothing? NYC: try the city's check at amiregistered.vote.nyc, or call 1-866-VOTE-NYC (1-866-868-3692). Sullivan County: call 845-807-0400. A failed search doesn't mean you're not registered; records can lag."
+        "Still nothing? NYC: check amiregistered.vote.nyc or call 1-866-VOTE-NYC (1-866-868-3692). Sullivan County: call 845-807-0400. A failed search doesn't mean you're not registered; records can lag."
       ],
       "deadline": null,
       "source": "https://vote.nyc/page/am-i-registered",

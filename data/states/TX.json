@@ -57,7 +57,7 @@
       "hand-deliver it yourself, in person, to the county Early Voting Clerk's office, but only on Election Day (Nov. 3) while polls are open, with your photo ID (Election Code 86.006(a-1))",
       "Texas does not use ballot drop boxes"
     ],
-    "postage": "Varies by county; check your return envelope. Dallas County: no stamp needed, the envelope is prepaid. Harris County: two standard stamps ($1.10), but a ballot mailed without postage will still be delivered and counted. Bexar County's page doesn't say. Mailing this late is risky either way.",
+    "postage": "Varies by county; check your return envelope. Dallas County: no stamp needed, the envelope is prepaid. Harris County says it takes two standard stamps ($1.10 total postage), but that a ballot mailed without postage will still be delivered and counted. Bexar County's page doesn't say. Mailing this late is risky either way.",
     "signature_witness_rules": "Sign the carrier envelope, and write your ID number in the space provided: your Texas driver license, personal ID or Election Identification Certificate number, or the last 4 of your SSN if DPS never issued you one of those. The number must match what's on your voter registration record. No notary. No witness unless you cannot sign; then a witness signs and prints their name and address. If someone helps you mark or mail the ballot, their name, address and signature must go on the envelope too. Election Code 86.006 and VoteTexas carrier envelope page.",
     "tracking_url": "https://www.votetexas.gov/voting-by-mail/track-my-ballot.html",
     "cure_process": "If your mail ballot has an ID, signature or other envelope problem, follow the notice from your county. You can correct an ID number through the Ballot by Mail Tracker if eligible, return the corrective action form, or visit the early voting clerk. The Secretary of State's Nov. 3 election calendar gives Monday, November 9, 2026 as the deadline to correct carrier-envelope defects. Act as soon as you receive a notice. If you switch to voting in person, follow the county's cancellation instructions before voting.",
@@ -230,7 +230,7 @@
           "url": "https://www.votetexas.gov/voting/where.html"
         }
       ],
-      "answer": "Dallas, Harris, Bexar, Travis, Williamson, Hays and other big counties use vote centers, so you can vote at any polling place in your county, early or on Election Day. Just head to the closest one in the county where you're registered.",
+      "answer": "Dallas, Harris, Bexar, Travis, Williamson, Hays and other big counties use vote centers, so you can vote at any polling place in your county, early or on Election Day. Go to the closest one in the county where you're registered.",
       "steps": [
         "Find locations (and wait times, in many counties) on your county elections site or the My Voter Portal.",
         "In a different county? Go back to your own county; that's where your ballot is."

@@ -132,7 +132,7 @@
   "district_finders": [
     {
       "office_match": "U.S. House of Representatives",
-      "label": "Find your representative by ZIP (a split ZIP asks for your address)",
+      "label": "Find your representative by ZIP (if your ZIP is split, enter your address)",
       "url": "https://www.house.gov/representatives/find-your-representative"
     },
     {

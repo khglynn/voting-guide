@@ -114,7 +114,7 @@
     "drop_box": "https://findmypollsite.vote.nyc/",
     "tracking": "https://requestballot.vote.nyc/tracking"
   },
-  "notes": "Need a mail ballot in person? Go to your borough election office by Monday, Nov 2. Extended hours: Wed Oct 28, 10 AM to 7 PM; Thu Oct 29 and Fri Oct 30, 10 AM to 4 PM; Sat Oct 31, 9 AM to 4 PM; Sun Nov 1, 10 AM to 4 PM; Monday the regular 9 AM to 5 PM. Early voting lines can be long: see the wait at every site on vote.nyc's wait time map.",
+  "notes": "Need a mail ballot in person? Go to your borough election office by Monday, Nov 2. Extended hours: Wed Oct 28, 10 AM to 7 PM; Thu Oct 29 and Fri Oct 30, 10 AM to 4 PM; Sat Oct 31, 9 AM to 4 PM; Sun Nov 1, 10 AM to 4 PM; Monday, regular hours of 9 AM to 5 PM. Early voting lines can be long: check every site's wait on vote.nyc's wait time map.",
   "dated": [
     {
       "path": "notes",
@@ -131,7 +131,7 @@
     "start": "2026-10-24",
     "end": "2026-11-01",
     "hours_note": "NYC early voting: Thu Oct 29, 8 AM to 4 PM; Fri Oct 30 to Sun Nov 1, 9 AM to 5 PM. You must vote at your one assigned early voting site.",
-    "hours_short": "Early voting ends Sun Nov 1, at the one site you're assigned.",
+    "hours_short": "Early voting ends Sun Nov 1 at your one assigned site.",
     "lookup_url": "https://findmypollsite.vote.nyc/",
     "source": "https://www.vote.nyc/elections",
     "confidence": "verified"

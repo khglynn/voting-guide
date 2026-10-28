@@ -17,7 +17,7 @@
         "hours": "call to confirm hours"
       },
       {
-        "label": "Board of Registrars (registration, photo ID cards, provisional follow-up)",
+        "label": "Board of Registrars (registration, photo ID cards, help after a provisional ballot)",
         "phone": "251-574-8586",
         "hours": "Monday to Friday, 8:30 AM to 4:30 PM"
       }
@@ -89,7 +89,7 @@
   "district_finders": [
     {
       "office_match": "Alabama State Senate",
-      "label": "Find your district on your voter record (registered voters)",
+      "label": "Find your district in your voter record (registered voters)",
       "url": "https://myinfo.alabamavotes.gov/voterview"
     },
     {

@@ -136,8 +136,8 @@
  "situations": [
   {
    "id": "no_mail_ballot_or_lost",
-   "short": "Get a replacement at any Orange County vote center, or at the Registrar's office in Santa Ana.",
-   "answer": "Orange County's deadline for a mailed replacement passed on October 27. You can still get a replacement ballot at any Orange County vote center, or at the Registrar's office, 1300 S. Grand Ave., Building C, Santa Ana. Call (714) 567-7600 with questions.",
+   "short": "Get a replacement at any Orange County vote center or at the Registrar's office in Santa Ana.",
+   "answer": "Orange County's deadline for a mailed replacement passed on October 27. You can still get a replacement ballot at any Orange County vote center or at the Registrar's office, 1300 S. Grand Ave., Building C, Santa Ana. Call (714) 567-7600 with questions.",
    "steps": null,
    "source": "https://ocvote.gov/faqs/vote-by-mail-faqs",
    "confidence": "verified"

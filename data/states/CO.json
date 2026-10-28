@@ -68,7 +68,7 @@
     "available": true,
     "start": "2026-10-19",
     "end": "2026-11-02",
-    "hours_note": "State law requires the minimum number of Voter Service and Polling Centers to open by Monday, October 19 (some counties open earlier). Hours depend on your county. Every county this guide covers is open Saturday, Oct 31, 8 AM to 5 PM, and Election Day, 7 AM to 7 PM. Some centers only open in the last week. Adams County is also open Sunday, Nov 1, 10 AM to 2 PM; Arapahoe's centers are closed that Sunday. Use your county's list for your center's hours.",
+    "hours_note": "State law requires the minimum number of Voter Service and Polling Centers to open by Monday, October 19 (some counties open earlier). Hours depend on your county. Every county this guide covers is open Saturday, Oct 31, 8 AM to 5 PM, and Election Day, 7 AM to 7 PM. Some centers only open in the last week. Adams County is also open Sunday, Nov 1, 10 AM to 2 PM; Arapahoe's centers are closed that Sunday. Check your county's list for your center's hours.",
     "vote_centers": true,
     "lookup_url": "https://www.sos.state.co.us/pubs/elections/VIP.html",
     "confidence": "verified"

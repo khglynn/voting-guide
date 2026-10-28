@@ -266,10 +266,10 @@
  "situations": [
   {
    "id": "no_mail_ballot_or_lost",
-   "short": "Get a replacement at any LA County vote center, or just vote there.",
-   "answer": "The last day to ask for a ballot by mail was October 27. You can still get a new one: go to any LA County vote center and ask for a replacement, or vote there in person. Questions? Call (800) 815-2666, press 2, then 3.",
+   "short": "Get a replacement at any LA County vote center or just vote there.",
+   "answer": "The last day to ask for a ballot by mail was October 27. You can still go to any LA County vote center and ask for a replacement or vote there in person. Questions? Call (800) 815-2666, press 2, then 3.",
    "steps": [
-    "Find a vote center near you with the county's locator."
+    "Use the county's locator to find a vote center near you."
    ],
    "source": "https://www.lavote.gov/home/voting-elections/voting-options/vote-by-mail/how-to-vote-by-mail",
    "confidence": "verified"

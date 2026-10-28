@@ -274,6 +274,91 @@
       "address": "2990-1 Apalachee Pkwy.",
       "reason": "Leon County Supervisor of Elections office.",
       "source": "https://www.leonvotes.gov/Voting/Vote-by-Mail"
+    },
+    {
+      "address": "269 Buckhead Ave. NE",
+      "reason": "Buckhead Library, a Fulton County early voting site with a drop box.",
+      "source": "https://fultoncountyga.gov/inside-fulton-county/fulton-county-departments/registration-and-elections/early-voting-locations"
+    },
+    {
+      "address": "3201 Martin Luther King Jr. Dr. SW",
+      "reason": "C.T. Martin Recreation Center, a Fulton County early voting site with a drop box.",
+      "source": "https://fultoncountyga.gov/inside-fulton-county/fulton-county-departments/registration-and-elections/early-voting-locations"
+    },
+    {
+      "address": "130 Peachtree St. SW",
+      "reason": "Fulton County Government Center, county elections office.",
+      "source": "https://fultoncountyga.gov/inside-fulton-county/fulton-county-departments/registration-and-elections/absentee-voting"
+    },
+    {
+      "address": "4380 Memorial Dr.",
+      "reason": "DeKalb County Voter Registration and Elections office.",
+      "source": "https://dekalbcountyga.gov/departments/voter-registration-and-elections"
+    },
+    {
+      "address": "8 Creamery Road",
+      "reason": "Delaware Community Center, a Sullivan County polling place.",
+      "source": "https://www.sullivanny.gov/Departments/Elections/VotingTimes"
+    },
+    {
+      "address": "485 Old Taylor Road",
+      "reason": "Kenoza Lake Firehouse, a Sullivan County polling place.",
+      "source": "https://www.sullivanny.gov/Departments/Elections/VotingTimes"
+    },
+    {
+      "address": "1822 Shandelee Road",
+      "reason": "Youngsville Firehouse, a Sullivan County polling place.",
+      "source": "https://www.sullivanny.gov/Departments/Elections/VotingTimes"
+    },
+    {
+      "address": "1669 Gulf Road",
+      "reason": "Callicoon Center Firehouse, a Sullivan County polling place.",
+      "source": "https://www.sullivanny.gov/Departments/Elections/VotingTimes"
+    },
+    {
+      "address": "19 Legion Street",
+      "reason": "Callicoon Town Hall, a Sullivan County polling place.",
+      "source": "https://www.sullivanny.gov/Departments/Elections/VotingTimes"
+    },
+    {
+      "address": "1460 Round Table Dr.",
+      "reason": "Dallas County's main early voting site, where limited ballots are cast.",
+      "source": "https://www.dallascountyvotes.org/limited-provisional-ballots/"
+    },
+    {
+      "address": "1000 Englewood Pkwy.",
+      "reason": "Englewood Civic Center, an Arapahoe County vote center and drop box.",
+      "source": "https://www.arapahoeco.gov/your_county/arapahoevotes/voting_locations/voter_service_polling_centers.php"
+    },
+    {
+      "address": "1300 S. Grand Ave.",
+      "reason": "Orange County (CA) Registrar of Voters.",
+      "source": "https://ocvote.gov/faqs/vote-by-mail-faqs"
+    },
+    {
+      "address": "353 W. Commonwealth Ave.",
+      "reason": "Fullerton Public Library, an Orange County (CA) vote center.",
+      "source": "https://ocvote.gov/elections/vote-center-locations"
+    },
+    {
+      "address": "555 S. Allison Pkwy.",
+      "reason": "Belmar Library, a Jefferson County vote center.",
+      "source": "https://www.jeffco.us/3907/Find-a-Voting-Location"
+    },
+    {
+      "address": "645 Parfet St.",
+      "reason": "Jefferson County Public Health, a Jefferson County vote center.",
+      "source": "https://www.jeffco.us/3907/Find-a-Voting-Location"
+    },
+    {
+      "address": "151 Government St.",
+      "reason": "Mobile County Absentee Election Office.",
+      "source": "https://www.sos.alabama.gov/city-county-lookup/absentee-election-manager"
+    },
+    {
+      "address": "5600 Overland Ave.",
+      "reason": "San Diego County Registrar of Voters, also a vote center.",
+      "source": "https://www.sdvote.com/content/rov/en/how-to-vote-by-mail/info-for-replacement-ballot.html"
     }
   ]
 }

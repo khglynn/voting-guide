@@ -382,7 +382,19 @@
       },
       "source": "https://votetravis.gov/current-election-information/current-election/",
       "confidence": "verified",
-      "zips": []
+      "zips": [],
+      "office": {
+        "name": "Travis County Clerk, Elections Division (VoteTravis), 5501 Airport Blvd., Austin 78751",
+        "url": "https://votetravis.gov/",
+        "phone": "512-238-VOTE (8683)",
+        "lines": [
+          {
+            "label": "Registration questions (Travis County Tax Office)",
+            "phone": "512-854-9473"
+          }
+        ],
+        "source": "https://votetravis.gov/current-election-information/current-election/"
+      }
     },
     {
       "county": "Williamson",
@@ -392,7 +404,13 @@
         "election_day": "https://www.wilcotx.gov/elections"
       },
       "source": "https://www.wilcotx.gov/elections",
-      "confidence": "verified"
+      "confidence": "verified",
+      "office": {
+        "name": "Williamson County Elections Department, 301 SE Inner Loop, Suite 104, Georgetown 78626",
+        "url": "https://www.wilcotx.gov/elections",
+        "phone": "512-943-1630",
+        "source": "https://www.wilcotx.gov/elections"
+      }
     }
   ],
   "sources": [

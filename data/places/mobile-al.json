@@ -6,9 +6,23 @@
     "Mobile"
   ],
   "county_election_office": {
-    "name": "Mobile County Probate Court, Elections (runs the election and posts sample ballots); Mobile County Board of Registrars handles registration",
+    "name": "Mobile County Probate Court, Elections (runs the election and posts sample ballots)",
     "url": "https://probate.mobilecountyal.gov/elections",
-    "phone": "(251) 574-8586 (Board of Registrars)"
+    "phone": "251-574-6080",
+    "phone_label": "Elections",
+    "lines": [
+      {
+        "label": "Absentee Election Office, 151 Government St.",
+        "phone": "251-574-6400",
+        "hours": "call to confirm hours"
+      },
+      {
+        "label": "Board of Registrars (registration, photo ID cards, help after a provisional ballot)",
+        "phone": "251-574-8586",
+        "hours": "Monday to Friday, 8:30 AM to 4:30 PM"
+      }
+    ],
+    "source": "https://www.mobilecountyal.gov/county-directory"
   },
   "sample_ballot_url": "https://probate.mobilecountyal.gov/elections/sample-ballots",
   "zips": [
@@ -75,28 +89,43 @@
   "district_finders": [
     {
       "office_match": "Alabama State Senate",
-      "label": "Find your district",
-      "url": "https://probate.mobilecountyal.gov/elections/district-maps"
+      "label": "Find your district in your voter record (registered voters)",
+      "url": "https://myinfo.alabamavotes.gov/voterview"
     },
     {
       "office_match": "Alabama House of Representatives",
-      "label": "Find your district",
-      "url": "https://probate.mobilecountyal.gov/elections/district-maps"
+      "label": "Find your district on your voter record (registered voters)",
+      "url": "https://myinfo.alabamavotes.gov/voterview"
     },
     {
       "office_match": "Member, Mobile County Board of Education (Board of School Commissioners)",
-      "label": "Find your district",
-      "url": "https://probate.mobilecountyal.gov/elections/district-maps"
+      "label": "Find your district on your voter record (registered voters)",
+      "url": "https://myinfo.alabamavotes.gov/voterview"
     },
     {
       "office_match": "District Court Judge, Mobile County, Place 3",
-      "label": "Find your district on the official county maps",
-      "url": "https://probate.mobilecountyal.gov/elections/district-maps"
+      "label": "Find your district on your voter record (registered voters)",
+      "url": "https://myinfo.alabamavotes.gov/voterview"
     },
     {
       "office_match": "U.S. House of Representatives",
-      "label": "Find your district on the official county maps",
-      "url": "https://probate.mobilecountyal.gov/elections/district-maps"
+      "label": "Find your district on your voter record (registered voters)",
+      "url": "https://myinfo.alabamavotes.gov/voterview"
+    }
+  ],
+  "notes": "Absentee voting in person is at the Mobile County Absentee Election Office, 151 Government St., Mobile 36602 (251-574-6400; call to confirm hours). To find your polling place, open myinfo.alabamavotes.gov's voter page, scroll down to Polling Place Search and type your address; no birth date needed.",
+  "sources": [
+    {
+      "name": "Mobile County: directory (absentee, elections, registrars)",
+      "url": "https://www.mobilecountyal.gov/county-directory"
+    },
+    {
+      "name": "Alabama SOS: absentee election managers",
+      "url": "https://www.sos.alabama.gov/city-county-lookup/absentee-election-manager"
+    },
+    {
+      "name": "Mobile Probate: voter registration (View Voting Districts)",
+      "url": "https://probate.mobilecountyal.gov/elections/information-for-voters/voter-registration"
     }
   ]
 }

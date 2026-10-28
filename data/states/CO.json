@@ -68,7 +68,7 @@
     "available": true,
     "start": "2026-10-19",
     "end": "2026-11-02",
-    "hours_note": "State law requires the minimum number of Voter Service and Polling Centers to open by Monday, October 19 (some counties open earlier; Denver's main VSPC at the Central Library opened October 12). Hours vary by county and location. Denver's centers open in phases: Oct. 19, Oct. 26, Oct. 30, and Nov. 2. Typical Denver hours are 8 AM to 5 or 6 PM weekdays, with Saturday, Oct. 31, 8 AM to 5 PM; closed Sundays. Check exact hours for your location at GoVoteColorado.gov or your county clerk's site.",
+    "hours_note": "State law requires the minimum number of Voter Service and Polling Centers to open by Monday, October 19 (some counties open earlier). Hours depend on your county. Every county this guide covers is open Saturday, Oct 31, 8 AM to 5 PM, and Election Day, 7 AM to 7 PM. Some centers only open in the last week. Adams County is also open Sunday, Nov 1, 10 AM to 2 PM; Arapahoe's centers are closed that Sunday. Check your county's list for your center's hours.",
     "vote_centers": true,
     "lookup_url": "https://www.sos.state.co.us/pubs/elections/VIP.html",
     "confidence": "verified"
@@ -130,7 +130,7 @@
       "short": "On every measure, yes changes the law and no keeps it as it is."
     },
     {
-      "text": "Ballot Issue 7A was sent to the wrong voters in parts of Adams, Arapahoe, Douglas and Weld counties because the rail district did not share its new boundaries with county clerks. Arapahoe County says you may vote your ballot normally if it includes 7A even though you live outside the rail district; only eligible district votes on 7A count. Some Columbine Valley ballots have the opposite problem: 7A is missing. Those voters are being sent corrected ballots. If that is you, follow the county notice or get a corrected ballot at a vote center through 7 PM on November 3. The corrected ballot replaces the original; only one counts. Questions in Arapahoe County: 303-795-4511. Other affected counties: ask your own clerk.",
+      "text": "Your ballot may have Issue 7A on it even if you live outside the rail district. Arapahoe County says vote it as it is; only eligible votes on 7A are counted. Some Columbine Valley ballots are missing 7A, and those voters are being sent corrected ballots; the corrected one replaces the original. Questions in Arapahoe County: 303-795-4511.",
       "short": "Some ballots wrongly include or miss Issue 7A; follow any notice your county sends."
     }
   ],
@@ -417,6 +417,10 @@
         {
           "label": "Track my ballot",
           "url": "https://ballottrax.coloradosos.gov/voter/"
+        },
+        {
+          "label": "Fix it on your phone",
+          "url": "https://myballot.coloradosos.gov/ecure/app/home"
         }
       ],
       "answer": "You can fix it, and it's quick. Your county mails you a letter (and BallotTrax alerts you if you signed up); you have until 11:59 PM on Thursday, November 12.",
@@ -564,6 +568,14 @@
     {
       "name": "Adams County Elections: 2026 voter service and polling centers",
       "url": "https://adamscountyco.gov/our-county/elected-officials/clerk-recorder/adams-county-elections/2026-elections/voter-service-polling-center-locations/"
+    },
+    {
+      "name": "Colorado SOS: fix a ballot problem online (BallotCure)",
+      "url": "https://myballot.coloradosos.gov/ecure/app/home"
+    },
+    {
+      "name": "Arapahoe County: Issue 7A FAQ",
+      "url": "https://www.arapahoeco.gov/news_detail_votes_T90_R1698.php"
     }
   ],
   "judicial_review": {

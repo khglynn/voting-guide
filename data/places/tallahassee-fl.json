@@ -10,7 +10,7 @@
   "url": "https://www.leonvotes.gov/",
   "phone": "(850) 606-8683"
  },
- "sample_ballot_url": "https://www.leonvotes.gov/Records/Sample-Ballots",
+ "sample_ballot_url": "https://www.leonvotes.gov/Records/Sample-Ballots/Sample-Ballot-By-Address",
  "zips": [
   "32301",
   "32303",
@@ -153,7 +153,7 @@
  },
  "lookups": {
   "early_in_person": "https://www.leonvotes.gov/Voting/Early-Voting",
-  "election_day": "https://www.leonvotes.gov/Voting/Election-Day",
+  "election_day": "https://www.leonvotes.gov/Records/Sample-Ballots/Sample-Ballot-By-Address",
   "drop_box": "https://www.leonvotes.gov/Voting/Vote-by-Mail/Secure-Ballot-Intake-Stations"
  },
  "situations": [
@@ -173,6 +173,22 @@
   {
    "name": "Leon County SOE: vote by mail",
    "url": "https://www.leonvotes.gov/Voting/Vote-by-Mail"
+  },
+  {
+   "name": "Leon County SOE: sample ballot and polling place by address",
+   "url": "https://www.leonvotes.gov/Records/Sample-Ballots/Sample-Ballot-By-Address"
+  },
+  {
+   "name": "Leon County SOE: secure ballot intake stations",
+   "url": "https://www.leonvotes.gov/Voting/Vote-by-Mail/Secure-Ballot-Intake-Stations"
+  }
+ ],
+ "notes": "Drop off a mail ballot at any of the 10 early voting sites through Sun, Nov 1; after that, only at the Elections Center, 2990-1 Apalachee Pkwy.: Mon, 8:30 AM to 5 PM, and Election Day, 7 AM to 7 PM. You can't drop it off at an Election Day polling place.",
+ "dated": [
+  {
+   "path": "notes",
+   "from": "2026-11-02",
+   "text": "Drop off a mail ballot only at the Elections Center, 2990-1 Apalachee Pkwy.: Mon, 8:30 AM to 5 PM, and Election Day, 7 AM to 7 PM. You can't drop it off at an Election Day polling place."
   }
  ]
 }

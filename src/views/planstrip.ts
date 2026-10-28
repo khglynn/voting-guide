@@ -6,7 +6,7 @@
 import type { HowTo, HelpAction, OfficeLine, PlaceEarly } from '../types';
 import { S } from '../state';
 import { esc, fmtDate, todayISO, host } from '../util';
-import { nextStep, registrationAlert, registerAction, isMailState, type Step } from '../model/plan';
+import { nextStep, registrationAlert, registerAction, isMailState, applyDated, countyKey, type Step } from '../model/plan';
 import { ext, isOpen, bulletsHTML, leadBulletsHTML, escP, srcLink, sentences, telHTML, wordCount, deshout } from './common';
 import { queryOf, textOf, best, type Item } from '../model/search';
 
@@ -141,8 +141,19 @@ function gotchasHTML(h: HowTo, only?: { shown: number[]; full: Set<number> }): s
 }
 
 /* The county's election office: its name (linked), phone and address. */
+/* The places on this ballot as of today: text dated to change (their notes, an office's hours) has. */
+const placesNow = () => { const t = todayISO(); return S.ballot!.places.map((p) => (p.dated ? applyDated(p, p.dated, t) : p)); };
+/* The election office: on a ballot across county lines whose voter's county is known, that county's office
+   when the place lists one (Oct 28: Williamson's for north Pflugerville); otherwise the place's. */
 function officeOf(): { name: string; url: string | null; phone: string | null; addr: string; phone_label?: string; lines: OfficeLine[]; hours?: string } | null {
-  const office = S.ballot!.places.map((p) => p.county_election_office).find(Boolean);
+  const b = S.ballot!;
+  const ps = placesNow();
+  const known = b.county;
+  const own = known ? ps.map((p) => p.by_county?.find((c) => countyKey(c.county) === countyKey(known))?.office).find(Boolean) : undefined;
+  // A county the place doesn't list (a Caldwell address on San Marcos's ballot) gets no office card, rather
+  // than the wrong county's: the same rule as its links (plan.lookupsFor).
+  const elsewhere = !!known && ps.some((p) => p.by_county && p.by_county.length && !p.by_county.some((c) => countyKey(c.county) === countyKey(known)));
+  const office = own || (elsewhere ? null : ps.map((p) => p.county_election_office).find(Boolean));
   if (!office) return null;
   const m = office.name.match(/^(.*?)[,:]\s*(\d[\s\S]*)$/);
   const [n, a] = m ? [m[1], m[2]] : [sentences(office.name)[0], sentences(office.name).slice(1).join(' ')];
@@ -188,7 +199,7 @@ function partsOf(h: HowTo): Part[] {
   ];
   if (office) basics.push(['bx-office', 'Your election office', officeHTML(office), `contact call help ${office.lines.map((l) => l.label).join(' ')}`]);
   if (h.model_plain) basics.push(['bx-how', `How voting works in ${b.stateName}`, bulletsHTML(h.model_plain), '']);
-  b.places.filter((p) => p.notes).forEach((p) => basics.push([`bx-n-${p.id}`, `Notes for ${p.label}`, bulletsHTML(p.notes), '']));
+  placesNow().filter((p) => p.notes).forEach((p) => basics.push([`bx-n-${p.id}`, `Notes for ${p.label}`, bulletsHTML(p.notes), '']));
   basics.forEach(([k, q, body, extra], i) => (k === 'bx-dates'
     ? add('basic', i, k, q, extra, body, rows.map((r) => r.detail || '').join(' '), `<ol class="pdates">${dates(true)}</ol>`)
     : add('basic', i, k, q, extra, body)));

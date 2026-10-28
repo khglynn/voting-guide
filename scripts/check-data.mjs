@@ -413,6 +413,13 @@ for (const s of all.states) {
   (s.gotchas || []).forEach((g, i) => { if (g && typeof g === 'object') shortOk(g.short, 15, `${st} gotcha ${i + 1}`); });
 }
 all.places.forEach((p) => shortOk(p.early_in_person?.hours_short, 20, `places/${p.id} early_in_person.hours_short`));
+// A county's own quick answers, and text dated to change on its own date (Oct 28), keep the same limits.
+const datedShort = (d, where) => { if (d && /\.short$/.test(d.path || '')) shortOk(d.text, /^gotchas\./.test(d.path) ? 15 : 20, `${where} dated ${d.path} from ${d.from}`); };
+all.states.forEach((s) => (s.dated || []).forEach((d) => datedShort(d, s.state || s._f)));
+all.places.forEach((p) => {
+  (p.dated || []).forEach((d) => datedShort(d, `places/${p.id}`));
+  (p.situations || []).forEach((x) => x && shortOk(x.short, 20, `places/${p.id} situation ${x.id}`));
+});
 all.endorsements.forEach((r) => walk(r, `${r._f} ${r.endorser_id}->${r.target_id}`));
 
 /* ---------- 10. district maps (data/maps/{area}/{kind}.json + .topojson, Oct 21) ----------

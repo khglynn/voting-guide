@@ -8,7 +8,14 @@
   "county_election_office": {
     "name": "Chicago Board of Election Commissioners (City of Chicago voters), 69 W. Washington St., 6th floor. Suburban Cook voters use the Cook County Clerk instead.",
     "url": "https://chicagoelections.gov/",
-    "phone": "312-269-7900"
+    "phone": "312-269-7900",
+    "phone_label": "General",
+    "lines": [
+      {
+        "label": "Vote by mail questions (votebymail@chicagoelections.gov)",
+        "phone": "312-269-7967"
+      }
+    ]
   },
   "sample_ballot_url": "https://chicagoelections.gov/voting/your-voter-information",
   "zips": [
@@ -467,6 +474,17 @@
   ],
   "lookups": {
     "early_in_person": "https://chicagoelections.gov/voting/early-votingvote-centers",
-    "drop_box": "https://chicagoelections.gov/voting/drop-boxes"
-  }
+    "drop_box": "https://chicagoelections.gov/voting/drop-boxes",
+    "tracking": "https://chicagoelections.gov/voting/your-voter-information"
+  },
+  "sources": [
+    {
+      "name": "Chicago Board of Elections: vote by mail",
+      "url": "https://chicagoelections.gov/voting/vote-mail"
+    },
+    {
+      "name": "Chicago Board of Elections: your voter information",
+      "url": "https://chicagoelections.gov/voting/your-voter-information"
+    }
+  ]
 }

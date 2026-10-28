@@ -251,7 +251,7 @@
       "answer": "You can vote a provisional ballot at your polling place on Election Day if you never got your absentee ballot or didn't send it back. Bring a valid photo ID.",
       "steps": [
         "Check your absentee status at myinfo.alabamavotes.gov.",
-        "Or call your county's Absentee Election Manager (usually the Circuit Clerk) to ask about your options before Election Day."
+        "Or call your county's Absentee Election Manager to ask about your options before Election Day (Mobile County: 251-574-6400)."
       ],
       "deadline": null,
       "source": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026-VoterGuide.pdf",
@@ -267,7 +267,7 @@
           "url": "https://www.sos.alabama.gov/city-county-lookup/absentee-election-manager"
         }
       ],
-      "answer": "At the polls, take the ballot to a poll worker and ask for a replacement; they'll set the old one aside as spoiled. On an absentee ballot, call your county's Absentee Election Manager before you send it.",
+      "answer": "At the polls, take the ballot to a poll worker and ask for a replacement; they'll set the old one aside as spoiled. For an absentee ballot, call your county's Absentee Election Manager (Mobile County: 251-574-6400) before you send it.",
       "steps": null,
       "deadline": null,
       "source": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026-VoterGuide.pdf",
@@ -392,7 +392,7 @@
       ],
       "answer": "Check it twice before you seal it, because Alabama has no general fix-it process. The affidavit envelope must be signed by you and either notarized or signed by two witnesses who are 18 or older; remote notarization isn't allowed.",
       "steps": [
-        "Made a mistake on the envelope? Call your county's Absentee Election Manager before you send it.",
+        "Made a mistake on the envelope? Call your county's Absentee Election Manager before you send it (Mobile County: 251-574-6400).",
         "Forgot the photo ID copy with your application? Get a valid photo ID to the Board of Registrars by 5 PM on Friday, November 6."
       ],
       "deadline": null,

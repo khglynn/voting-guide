@@ -109,7 +109,7 @@ function placeLookups(x, where) {
   if (x == null) return null;
   if (typeof x !== 'object') { warn(`${where}: lookups is not an object; dropped it`); return null; }
   const out = {};
-  for (const k of ['early_in_person', 'election_day', 'drop_box']) {
+  for (const k of ['early_in_person', 'election_day', 'drop_box', 'tracking']) {
     if (x[k] == null) continue;
     const u = safeUrl(x[k]);
     if (u) out[k] = u; else warn(`${where}: lookups.${k} is not an http(s) URL; dropped it`);
@@ -119,7 +119,7 @@ function placeLookups(x, where) {
 /* A place that spans counties (Austin: Travis, Williamson and Hays) keeps one set of where-to-vote links per
    county (Oct 28). `zips` are the place's ZIPs that lie wholly in that county, so a ZIP alone can pick the
    county; plan.ts uses the voter's county's links when it knows the county, and each county's, labeled, when
-   it doesn't. */
+   it doesn't (two counties or more). */
 function placeByCounty(list, p, where) {
   if (list == null) return null;
   if (!Array.isArray(list)) { warn(`${where}: by_county is not a list; dropped it`); return null; }
@@ -133,9 +133,12 @@ function placeByCounty(list, p, where) {
       warn(`${where}: by_county ${c.county} lists ZIP ${z}, which the place doesn't; dropped it`);
       return false;
     });
-    out.push({ county: c.county.trim(), zips, lookups, source: safeUrl(c.source), confidence: conf(c.confidence) });
+    const office = c.office && isStr(c.office.name)
+      ? { name: c.office.name.trim(), url: safeUrl(c.office.url), phone: str(c.office.phone), ...officeLines(c.office, `${where} by_county ${c.county}`) } : null;
+    out.push({ county: c.county.trim(), zips, lookups, source: safeUrl(c.source), confidence: conf(c.confidence), ...optional({ office }) });
   }
-  if (out.length === 1) { warn(`${where}: by_county needs two counties or more; dropped it`); return null; }
+  // One county is allowed: it names the county the place's own links belong to (San Marcos's are Hays's), so a
+  // voter the address lookup puts in another county gets the state's links instead.
   return out.length ? out : null;
 }
 /* A county's own answer to one of the state's common questions (Oct 28: Orange County's lost mail ballot,
@@ -188,6 +191,47 @@ function helpActions(list, where) {
     out.push({ label: a.label.trim(), url: safeUrl(a.url) });
   }
   return out;
+}
+/* Dated text (Oct 28): text that changes on its own date, so a passed deadline can't stay written as a step to
+   take. Each entry names a slot by its path in the source file ("situations.no_mail_ballot_or_lost.short",
+   "gotchas.5.text", "notes", "county_election_office.hours"), the day it takes effect (`from`, the voter's local
+   date) and the text from then on. The app shows the latest entry whose day has come (plan.applyDated). A path
+   that names no text in the file is dropped with a warning, so a typo can't quietly do nothing. */
+function srcPath(o, path) {
+  let cur = o;
+  const seg = path.split('.');
+  for (let i = 0; i < seg.length; i++) {
+    if (cur == null) return undefined;
+    const k = seg[i];
+    if (k === 'situations' && Array.isArray(cur.situations)) { cur = cur.situations.find((x) => x && x.id === seg[i + 1]); i++; continue; }
+    cur = Array.isArray(cur) && /^\d+$/.test(k) ? cur[+k] : cur[k];
+  }
+  return cur;
+}
+function datedList(list, src, where) {
+  if (list == null) return null;
+  if (!Array.isArray(list)) { warn(`${where}: dated is not a list; dropped it`); return null; }
+  const out = [];
+  for (const x of list) {
+    if (!(x && isStr(x.path) && isDate(x.from) && isStr(x.text))) { warn(`${where}: a dated entry needs a path, a from date and text; dropped it`); continue; }
+    if (typeof srcPath(src, x.path.trim()) !== 'string') { warn(`${where}: dated path ${x.path} names no text in the file; dropped it`); continue; }
+    out.push({ path: x.path.trim(), from: x.from, text: x.text.trim() });
+  }
+  return out.length ? out : null;
+}
+/* A state's gotchas become two lists in the bundle (gotchas, gotcha_shorts), and one without text is dropped:
+   its dated paths follow ("gotchas.5.short" in the file is "gotcha_shorts.4" when an earlier one was dropped). */
+function datedGotchas(dated, srcGotchas) {
+  if (!dated) return null;
+  const at = [];
+  let n = 0;
+  for (const g of srcGotchas || []) at.push(isStr(g) || (g && typeof g === 'object' && isStr(g.text)) ? n++ : -1);
+  return dated.map((d) => {
+    const m = d.path.match(/^gotchas\.(\d+)(?:\.(text|short))?$/);
+    if (!m) return d;
+    const i = at[+m[1]];
+    return i < 0 ? null : { ...d, path: m[2] === 'short' ? `gotcha_shorts.${i}` : `gotchas.${i}` };
+  }).filter(Boolean);
 }
 function stateHelp(s, f) {
   if (Array.isArray(s.situations)) {
@@ -435,7 +479,9 @@ for (const f of listJson('states')) {
   if (!s || !validState(s, f)) continue;
   s.state = s.state.toUpperCase();
   s.heads_up = headsUp(s.heads_up, f);
+  const dated = datedGotchas(datedList(s.dated, s, f), s.gotchas);
   stateHelp(s, f);
+  if (dated && dated.length) s.dated = dated; else delete s.dated;
   if (s.judicial_review != null) {
     const jr = s.judicial_review;
     const ok = jr && typeof jr === 'object' && ['what_the_rating_means', 'who_reviews', 'how_judges_get_here'].some((k) => isStr(jr[k]));
@@ -479,7 +525,8 @@ for (const f of listJson('places')) {
     heads_up: headsUp(p.heads_up, f),
     ...optional({ early_in_person: placeEarly(p.early_in_person, f), lookups: placeLookups(p.lookups, f), by_county: placeByCounty(p.by_county, p, f), situations: placeSituations(p.situations, f),
       // the official pages behind the place's own facts (its notes, office lines and answers), for the record
-      sources: (Array.isArray(p.sources) ? p.sources : []).filter((x) => x && isStr(x.name) && safeUrl(x.url)).map((x) => ({ name: x.name.trim(), url: safeUrl(x.url) })) }),
+      sources: (Array.isArray(p.sources) ? p.sources : []).filter((x) => x && isStr(x.name) && safeUrl(x.url)).map((x) => ({ name: x.name.trim(), url: safeUrl(x.url) })),
+      dated: datedList(p.dated, p, f) }),
     order: known,
     file: f,
   });

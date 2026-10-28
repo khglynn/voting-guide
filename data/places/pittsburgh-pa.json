@@ -8,7 +8,8 @@
   "county_election_office": {
     "name": "Allegheny County Elections Division, County Office Building, 542 Forbes Ave., Pittsburgh 15219",
     "url": "https://www.alleghenycounty.us/Government/Elections",
-    "phone": "412-350-4500"
+    "phone": "412-350-4500",
+    "hours": "Monday to Friday, 8:30 AM to 4:30 PM. Sample ballot help: option 8."
   },
   "sample_ballot_url": "https://apps.alleghenycounty.us/website/ElectPollPlace.aspx",
   "zips": [
@@ -70,7 +71,17 @@
   ],
   "lookups": {
     "early_in_person": "https://www.alleghenycounty.us/Government/Elections/Pre-Election-Day-Voting-Options/Voting-Events-Calendar",
-    "election_day": "https://apps.alleghenycounty.us/website/ElectPollPlace.aspx",
+    "election_day": "https://www.pavoterservices.pa.gov/Pages/PollingPlaceInfo.aspx",
     "drop_box": "https://www.alleghenycounty.us/Government/Elections/Pre-Election-Day-Voting-Options/Voting-Events-Calendar"
-  }
+  },
+  "sources": [
+    {
+      "name": "Pennsylvania: find your polling place",
+      "url": "https://www.pavoterservices.pa.gov/Pages/PollingPlaceInfo.aspx"
+    },
+    {
+      "name": "Allegheny County Elections",
+      "url": "https://www.alleghenycounty.us/Government/Elections"
+    }
+  ]
 }

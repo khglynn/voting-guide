@@ -4,6 +4,7 @@ import './styles.css';
 import { S, readSaved, persist, parseShareHead, leftBallot } from './state';
 import { stepKey, planKey } from './views/planstrip';
 import { render, anchored } from './render';
+import { localize } from './ballot';
 import { RAIL_AT } from './views/ledger';
 import { ensureIndex, openBallot, zipTyped, offerResume, dismissResume, lookZip, viewed } from './app';
 import { A, runAddress, sendReport, reportInput, srcSearch, clearSearch, wiSearch, clearWi } from './actions';
@@ -118,7 +119,9 @@ try {
    Check once a minute and whenever the tab comes back; repaint the strip only when it changed. */
 function refreshPlan(): void {
   if (!S.ballot || S.view !== 'ballot') return;
-  if (stepKey(S.ballot.howto) !== planKey) anchored(() => render(['plan']));
+  const day = S.ballot.howto.day;
+  localize(S.ballot, S.b.zip, S.ui.addrCounty); // a new day: text dated to change does (plan.applyDated)
+  if (stepKey(S.ballot.howto) !== planKey || S.ballot.howto.day !== day) anchored(() => render(['plan']));
 }
 document.addEventListener('visibilitychange', () => { if (!document.hidden) refreshPlan(); });
 window.addEventListener('focus', refreshPlan);

@@ -1390,7 +1390,7 @@ async function mapsSettled(page, timeout = 10000) {
   await tap(orl.page, '.foot [data-act="cheat"]');
   await tap(orl.page, '.foot [data-act="view"][data-v="pass"]');
   const op = await text(orl.page, '#msg-pub');
-  check('Share page: Orlando’s work message links Orange County’s early voting sites', /Find early voting places in Orlando: https:\/\/voteorangefl\.gov\/event\/early-voting-general-election\//.test(op) && !/find-your-polling-place/.test(op), op);
+  check('Share page: Orlando’s work message links Orange County’s early voting sites', /Find early voting places in Orlando: https:\/\/voteorangefl\.gov\/vote-early\//.test(op) && !/find-your-polling-place/.test(op), op);
   await orl.ctx.close();
 }
 
@@ -2109,7 +2109,8 @@ const touchAt = async (page, sel) => {
    mistake is one line, its full text behind its own "More". */
 for (const [zip, label, id, btn, href, full] of [
   ['78702', 'Austin', 'not_registered', 'Register for next time', /^https:\/\/vote\.gov\/register\/texas$/, /the Texas deadline was October 5/],
-  ['90004', 'Los Angeles', 'not_registered', 'Find a vote center', /^https:\/\/caearlyvoting\.sos\.ca\.gov\/$/, /RegisterToVote\.ca\.gov/],
+  // Oct 28 (west-mail-25): LA's vote center button opens LA County's own locator, not the statewide form.
+  ['90004', 'Los Angeles', 'not_registered', 'Find a vote center', /^https:\/\/locator\.lavote\.net\/locations\/vc$/, /RegisterToVote\.ca\.gov/],
 ]) {
   const { ctx, page } = await newPage();
   await openBallot(page, zip);
@@ -4492,6 +4493,26 @@ const ADDRESS = /testing lane|testing%20lane|testing\+lane|test one/i;
   check('Where to vote: Portland\u2019s lost-ballot answer no longer says to ask by Oct 28 for a mailed one', /pick it up in person/.test(pdx) && !/Oct 28/.test(pdx), pdx);
   noErrors(four.page, 'Where to vote, Portland');
   await four.ctx.close();
+}
+
+// Where to vote, part B (Oct 28): text dated to change does on its own date, and the "If something goes wrong"
+// buttons open the county's own tools. Orlando on Nov 2 (after early voting): the drop-off note names only
+// the elections office; its "Find early voting places" help button opens Orange County's page, not the state's.
+{
+  const { ctx, page } = await newPage();
+  await page.goto(`${BASE}/?today=2026-11-02`);
+  await page.waitForSelector('#zip');
+  await page.fill('#zip', '32801');
+  await throughSetup(page);
+  await tap(page, '[data-act="open"][data-k="whatif"]');
+  await tap(page, '[data-act="open"][data-k="bx-n-orlando-fl"]');
+  const note = await text(page, '[data-k="bx-n-orlando-fl"] + .wi-a');
+  check('Where to vote B: on Nov 2, Orlando\u2019s drop-off note names only the elections office', /^Drop off a mail ballot only at the elections office/.test(note) && !/27 early voting sites/.test(note), note);
+  await tap(page, '[data-act="open"][data-k="wi-away_on_election_day"]');
+  const btn = await page.getAttribute('[data-k="wi-away_on_election_day"] + .wi-a .wi-acts a', 'href');
+  check('Where to vote B: Orlando\u2019s help button opens Orange County\u2019s early voting page', btn === 'https://voteorangefl.gov/vote-early/', btn);
+  noErrors(page, 'Where to vote B, Orlando');
+  await ctx.close();
 }
 
 await browser.close();

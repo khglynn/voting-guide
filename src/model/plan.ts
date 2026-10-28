@@ -1,7 +1,7 @@
 /* The next step and its date, computed from the state file for every voting model.
    Never a countdown. Dates come only from data/states/{ST}.json; `?today=` overrides the
    clock for testing (util.todayISO). */
-import type { HowTo, Lookups, PlaceBundle } from '../types';
+import type { Dated, HelpAction, HowTo, Lookups, PlaceBundle } from '../types';
 import { fmtDate, todayISO, daysBetween, nowOverride, zonedNow } from '../util';
 
 export type Part = [string, boolean]; // text, emphasized (a date or time)
@@ -63,10 +63,12 @@ export function voterCounty(places: PlaceBundle[], zip: string | null | undefine
   return hits.size === 1 && only ? only : null;
 }
 /* A place's where-to-vote tools for this voter: its county's, when the place spans counties and the county is
-   known, over the place's own. */
+   known, over the place's own. A county the place doesn't list (the address lookup puts you in Caldwell County,
+   and San Marcos lists only Hays) gets none of the place's: the state's links are right for every county. */
 const lookupsFor = (p: PlaceBundle, county: string | null): Lookups | undefined => {
-  const c = county ? p.by_county?.find((x) => countyKey(x.county) === countyKey(county)) : undefined;
-  return c ? { ...(p.lookups || {}), ...c.lookups } : p.lookups;
+  if (!county || !p.by_county || !p.by_county.length) return p.lookups;
+  const c = p.by_county.find((x) => countyKey(x.county) === countyKey(county));
+  return c ? { ...(p.lookups || {}), ...c.lookups } : undefined;
 };
 
 /* A county that runs its own early-voting days (Florida counties choose theirs inside the
@@ -75,7 +77,69 @@ const lookupsFor = (p: PlaceBundle, county: string | null): Lookups | undefined 
    `county` (voterCounty) picks a county's tools on a ballot that spans counties; when it's null there, the
    plan lists each county's (`county_links`). A county's own answer to a common question (a place's
    `situations`) replaces the state's when every place on the ballot gives the same one. */
-export function localHowto(h0: HowTo, places: PlaceBundle[], county: string | null = null): HowTo {
+export function localHowto(h0: HowTo, places: PlaceBundle[], county: string | null = null, today = todayISO()): HowTo {
+  const base = applyDated(h0, h0.dated, today);
+  const ps = places.map((p) => (p.dated ? applyDated(p, p.dated, today) : p));
+  return { ...localActions(base, placeHowto(base, ps, county), today), day: today };
+}
+
+/* Text that changes on its own date (Oct 28): the latest `dated` entry for each slot whose day has come
+   replaces that slot's text. Only the parts a path touches are copied, never a place's ballot. Paths are the
+   bundle's ("situations.<id>.short", "gotchas.4", "gotcha_shorts.4", "notes", "county_election_office.hours"). */
+export function applyDated<T extends object>(o: T, dated: Dated[] | undefined, today: string): T {
+  if (!dated || !dated.length) return o;
+  const pick = new Map<string, Dated>();
+  for (const d of dated) if (d.from <= today && (!pick.has(d.path) || pick.get(d.path)!.from <= d.from)) pick.set(d.path, d);
+  if (!pick.size) return o;
+  const out: Record<string, unknown> = { ...(o as Record<string, unknown>) };
+  const copied = new Set<string>();
+  for (const d of pick.values()) {
+    const seg = d.path.split('.');
+    if (!copied.has(seg[0])) { copied.add(seg[0]); if (out[seg[0]] != null && typeof out[seg[0]] === 'object') out[seg[0]] = JSON.parse(JSON.stringify(out[seg[0]])); }
+    if (seg.length === 1) { if (typeof out[seg[0]] === 'string') out[seg[0]] = d.text; continue; }
+    let cur: any = out[seg[0]]; // eslint-disable-line @typescript-eslint/no-explicit-any
+    let i = 1;
+    if (seg[0] === 'situations' && Array.isArray(cur)) { cur = cur.find((x: { id?: string }) => x && x.id === seg[1]); i = 2; }
+    for (; cur != null && i < seg.length - 1; i++) cur = cur[Array.isArray(cur) ? +seg[i] : seg[i]];
+    const last = seg[seg.length - 1];
+    if (cur != null && i === seg.length - 1) {
+      const k = Array.isArray(cur) ? +last : last;
+      if (typeof cur[k] === 'string') cur[k] = d.text;
+    }
+  }
+  return out as T;
+}
+
+/* The "If something goes wrong" buttons and links point at the state's where-to-vote and tracking pages;
+   on a ballot with the county's own (Oct 28: the checker found this gap eight times), each such button opens
+   the county's. A button changes only when its label says what kind of page it is, since a state can use one
+   page for several jobs (Illinois's election-office directory is also its tracking fallback; New York uses one
+   lookup for all four). A general one ("Find voting places", "Find a vote center") that could be either opens
+   the early voting page while early voting is open, then the Election Day one (Codex on part B). */
+const KINDS = ['early_in_person', 'election_day', 'drop_box', 'tracking'] as const;
+type Kind = (typeof KINDS)[number];
+const urlsOf = (x: HowTo): Record<Kind, string | null> => ({
+  early_in_person: x.early_in_person.lookup_url, election_day: x.election_day.lookup_url,
+  drop_box: x.mail_ballot.drop_box_lookup_url, tracking: x.mail_ballot.tracking_url,
+});
+const GENERAL = /where|vote center|voting (place|location|center|site)s?|polling|poll site/i;
+const FITS: Record<Kind, RegExp> = { early_in_person: new RegExp(`early|${GENERAL.source}`, 'i'), election_day: GENERAL, drop_box: /drop/i, tracking: /track|status|counted/i };
+const NAMES: Partial<Record<Kind, RegExp>> = { early_in_person: /early/i, election_day: /poll(ing)? (place|site)|election day|precinct/i };
+function localActions(base: HowTo, h: HowTo, today: string): HowTo {
+  const was = urlsOf(base), now = urlsOf(h);
+  if (KINDS.every((k) => was[k] === now[k]) || !(h.situations || []).some((x) => x.actions && x.actions.length)) return h;
+  const ep = h.early_in_person;
+  const earlyOpen = ep.available && (!ep.end || today <= ep.end);
+  const swap = (a: HelpAction): HelpAction => {
+    const fits = KINDS.filter((k) => was[k] && was[k] === a.url && FITS[k].test(a.label));
+    let k: Kind | undefined = fits.length === 1 ? fits[0] : fits.find((x) => NAMES[x]?.test(a.label));
+    if (!k && fits.length > 1) k = earlyOpen && fits.includes('early_in_person') ? 'early_in_person' : fits.includes('election_day') ? 'election_day' : fits[0];
+    return k && now[k] && now[k] !== a.url ? { ...a, url: now[k]! } : a;
+  };
+  return { ...h, situations: h.situations!.map((x) => (x.actions && x.actions.length ? { ...x, actions: x.actions.map(swap) } : x)) };
+}
+
+function placeHowto(h0: HowTo, places: PlaceBundle[], county: string | null): HowTo {
   let h = places.length ? { ...h0, zones: zonesFor(h0.state, places) } : h0;
   // The county's own where-to-vote tools win over the state's statewide lookups, when every
   // place on the ballot points to the same one.
@@ -103,13 +167,13 @@ export function localHowto(h0: HowTo, places: PlaceBundle[], county: string | nu
       }),
     };
   }
-  const le = one('early_in_person'), ld = one('election_day'), lb = one('drop_box');
-  if (le || ld || lb) {
+  const le = one('early_in_person'), ld = one('election_day'), lb = one('drop_box'), lt = one('tracking');
+  if (le || ld || lb || lt) {
     h = {
       ...h,
       early_in_person: le ? { ...h.early_in_person, lookup_url: le } : h.early_in_person,
       election_day: ld ? { ...h.election_day, lookup_url: ld } : h.election_day,
-      mail_ballot: lb ? { ...h.mail_ballot, drop_box_lookup_url: lb } : h.mail_ballot,
+      mail_ballot: lb || lt ? { ...h.mail_ballot, ...(lb ? { drop_box_lookup_url: lb } : {}), ...(lt ? { tracking_url: lt } : {}) } : h.mail_ballot,
     };
   }
   const eps = places.map((p) => p.early_in_person);

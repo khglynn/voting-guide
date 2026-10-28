@@ -8,7 +8,8 @@
   "county_election_office": {
     "name": "Boulder County Clerk & Recorder, Elections Division (Clerk Molly Fitzpatrick), 1750 33rd Street, Boulder 80301",
     "url": "https://bouldercounty.gov/elections/",
-    "phone": "303-413-7740"
+    "phone": "303-413-7740",
+    "hours": "Elections Division: Monday to Thursday, 7:30 AM to 5 PM, closed Fridays (on a Friday, go to a vote center instead). Email: vote@bouldercounty.gov."
   },
   "sample_ballot_url": "https://myballot.coloradosos.gov/",
   "zips": [
@@ -93,13 +94,13 @@
     },
     {
       "office_match": "Boulder County Commissioner",
-      "label": "Find your district on the official county maps",
+      "label": "All Boulder County voters vote on this seat; see the county's maps",
       "url": "https://bouldercounty.gov/elections/maps-and-data/maps/"
     },
     {
       "office_match": "RTD Board of Directors",
-      "label": "Find your district on the official county maps",
-      "url": "https://bouldercounty.gov/elections/maps-and-data/maps/"
+      "label": "Look up your RTD district",
+      "url": "https://www.rtd-denver.com/about-rtd/board-of-directors"
     },
     {
       "office_match": "Regent of the University of Colorado",
@@ -118,13 +119,32 @@
     },
     {
       "office_match": "U.S. House of Representatives",
-      "label": "Find your district on the official county maps",
-      "url": "https://bouldercounty.gov/elections/maps-and-data/maps/"
+      "label": "Find your representative by ZIP",
+      "url": "https://www.house.gov/representatives/find-your-representative"
     }
   ],
   "lookups": {
-    "early_in_person": "https://bouldercounty.gov/elections/information/voting-locations/",
-    "election_day": "https://bouldercounty.gov/elections/information/voting-locations/",
-    "drop_box": "https://bouldercounty.gov/elections/information/voting-locations/"
-  }
+    "early_in_person": "https://bouldercounty.gov/elections/information/vote-centers/",
+    "election_day": "https://bouldercounty.gov/elections/information/vote-centers/",
+    "drop_box": "https://bouldercounty.gov/elections/information/ballot-drop-boxes/"
+  },
+  "notes": "Boulder County's 20 drop boxes are open day and night until 7 PM on Nov 3. Vote centers: Monday to Friday 8 AM to 6 PM, Saturday Oct 31 8 AM to 5 PM, and Election Day 7 AM to 7 PM; more open in phases, all by Nov 2, and the county's page shows which are open now.",
+  "sources": [
+    {
+      "name": "Boulder County: ballot drop boxes",
+      "url": "https://bouldercounty.gov/elections/information/ballot-drop-boxes/"
+    },
+    {
+      "name": "Boulder County: vote centers",
+      "url": "https://bouldercounty.gov/elections/information/vote-centers/"
+    },
+    {
+      "name": "Boulder County Elections: information and hours",
+      "url": "https://bouldercounty.gov/elections/information/"
+    },
+    {
+      "name": "Boulder County: about the commissioners",
+      "url": "https://bouldercounty.gov/government/about-boulder-county/about-the-bocc/"
+    }
+  ]
 }

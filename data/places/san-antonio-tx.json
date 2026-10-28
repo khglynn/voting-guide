@@ -8,7 +8,14 @@
   "county_election_office": {
     "name": "Bexar County Elections Department, 1103 S. Frio St., Suite 100, San Antonio 78207",
     "url": "https://elections.bexar.gov/",
-    "phone": "210-335-VOTE (8683)"
+    "phone": "210-335-VOTE (8683)",
+    "phone_label": "Elections questions",
+    "lines": [
+      {
+        "label": "Registration questions",
+        "phone": "210-335-6625"
+      }
+    ]
   },
   "sample_ballot_url": "https://maps.bexar.org/VoterRegSearch/",
   "zips": [
@@ -176,7 +183,7 @@
     "tx-scucisd-prop-a",
     "tx-southsan-isd-prop-a"
   ],
-  "notes": "Bexar County uses vote centers: any registered Bexar County voter can vote at any Bexar County polling place, early or on Election Day. Early voting runs Mon Oct 19 to Fri Oct 30. Most sites: Oct 19 to 23, 8 AM to 6 PM; Sat Oct 24, 7 AM to 7 PM; Sun Oct 25, noon to 6 PM; Oct 26 to 30, 7 AM to 7 PM. The two branch sites (Bexar County Justice Center and Valley Ranch Community Center) are open weekdays 8 AM to 6 PM only. Election Day, Tue Nov 3, is 7 AM to 7 PM. Mail ballot applications must be received by Fri Oct 23. Bring your printed or handwritten notes into the booth (take them with you when you leave). Phones cannot be used inside the voting room. Texas has no straight-ticket voting, so you mark every race one by one; the Bexar ballot is long, mostly judges, and many races have only one name. Skipping a race is fine. On the ballot, each proposition says \"For\" or \"Against\": For means yes, Against means no. There is no San Antonio mayor or city council race this year; Prop A is the only City of San Antonio item.",
+  "notes": "Bexar County uses vote centers: any registered Bexar County voter can vote at any Bexar County polling place, early or on Election Day. Early voting runs Mon Oct 19 to Fri Oct 30. Most sites: Oct 19 to 23, 8 AM to 6 PM; Sat Oct 24, 7 AM to 7 PM; Sun Oct 25, noon to 6 PM; Oct 26 to 30, 7 AM to 7 PM. The two branch sites (Bexar County Justice Center and Valley Ranch Community Center) are open weekdays 8 AM to 6 PM only. Election Day, Tue Nov 3, is 7 AM to 7 PM. Mail ballot applications must be received by Fri Oct 23. Bring your printed or handwritten notes into the booth (take them with you when you leave). Phones cannot be used inside the voting room. Texas has no straight-ticket voting, so you mark every race one by one; the Bexar ballot is long, mostly judges, and many races have only one name. Skipping a race is fine. On the ballot, each proposition says \"For\" or \"Against\": For means yes, Against means no. There is no San Antonio mayor or city council race this year; Prop A is the only City of San Antonio item. Bexar's early voting map shows each site's wait; tap OK on the notice first.",
   "district_finders": [
     {
       "office_match": "U.S. Representative",
@@ -315,7 +322,17 @@
     }
   ],
   "lookups": {
-    "early_in_person": "https://elections.bexar.gov/184/Early-Vote-Information",
-    "election_day": "https://elections.bexar.gov/183/Voter-Registration-Check-Polling-Locatio"
-  }
+    "early_in_person": "https://maps.bexar.org/ElectionWaitTimes/",
+    "election_day": "https://elections.bexar.gov/DocumentCenter/View/1713/Election-Day-Vote-Centers"
+  },
+  "sources": [
+    {
+      "name": "Bexar County Elections: election information (early voting sites and wait times)",
+      "url": "https://elections.bexar.gov/163/Election-Information"
+    },
+    {
+      "name": "Bexar County: directory",
+      "url": "https://elections.bexar.gov/directory.aspx"
+    }
+  ]
 }

@@ -1227,7 +1227,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       }
       open('FL', ['orlando-fl']);
       pub = pass.messages().pub || '';
-      check('share: Orlando during early voting links Orange County’s early voting page, by name', /Find early voting places in Orlando: https:\/\/voteorangefl\.gov\/event\/early-voting-general-election\//.test(pub) && !/find-your-polling-place/.test(pub), pub);
+      check('share: Orlando during early voting links Orange County’s early voting page, by name', /Find early voting places in Orlando: https:\/\/voteorangefl\.gov\/vote-early\//.test(pub) && !/find-your-polling-place/.test(pub), pub);
       on('2026-11-02');
       pub = pass.messages().pub || '';
       check('share: Orlando after early voting links where to vote on Election Day', /Find where to vote in Orlando: https:\/\/voteorangefl\.gov\/find-your-polling-place\//.test(pub), pub);
@@ -1317,13 +1317,15 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     // Final round A: the place's own where-to-vote tool wins over the state's; a statewide ballot
     // never gets one county's page.
     const den = plan.nextStep(open('CO', ['denver-co']).howto, '2026-10-19');
-    check('lookups: Denver\'s drop box button goes to Denver\'s own page', /denvergov\.org/.test((den.primary || {}).url || ''), JSON.stringify(den.primary));
+    // Oct 28 (co-9): Denver's own where-to-vote map, linked from its page, is the drop box button.
+    check('lookups: Denver\'s drop box button goes to Denver\'s own map', (den.primary || {}).url === 'https://experience.arcgis.com/experience/efe6ef1eca984454b5f5c247cdb64f61', JSON.stringify(den.primary));
     const spo = plan.nextStep(open('WA', []).howto, '2026-10-19');
     check('lookups: a statewide Washington ballot never gets King County\'s page', !!spo.primary && !/kingcounty\.gov/.test(spo.primary.url), JSON.stringify(spo.primary));
     const sea = plan.nextStep(open('WA', ['seattle-wa']).howto, '2026-10-19');
     check('lookups: Seattle gets King County\'s drop boxes', /kingcounty\.gov/.test((sea.primary || {}).url || ''), JSON.stringify(sea.primary));
     const pgh = plan.nextStep(open('PA', ['pittsburgh-pa']).howto, '2026-11-03', false, 10 * 60);
-    check('lookups: Pittsburgh on Election Day finds polls through Allegheny County', /alleghenycounty\.us/.test((pgh.primary || {}).url || ''), JSON.stringify(pgh.primary));
+    // Oct 28 (east-5): the address tool Allegheny's own Find Your Polling Place button opens, not its ward-and-district dropdowns.
+    check('lookups: Pittsburgh on Election Day finds polls by address, the tool Allegheny County links', (pgh.primary || {}).url === 'https://www.pavoterservices.pa.gov/Pages/PollingPlaceInfo.aspx', JSON.stringify(pgh.primary));
     // Codex #5: a county's own early-voting window wins over the state's.
     const fl = read('state-FL.json').howto;
     const orl = open('FL', ['orlando-fl']).howto.early_in_person;

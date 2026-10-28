@@ -228,8 +228,8 @@
     },
     {
       "office_match": "Austin ISD Trustee",
-      "label": "Find your trustee district",
-      "url": "https://www.austinisd.org/planning-asset-management/school-maps-gis"
+      "label": "Zoom to your address on the Austin ISD trustee map",
+      "url": "https://www.austinisd.org/modules/custom/schools/maps/trustees.html"
     },
     {
       "office_match": "Del Valle ISD Trustee",

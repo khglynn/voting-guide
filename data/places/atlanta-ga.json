@@ -7,7 +7,7 @@
     "DeKalb (east of Moreland Avenue)"
   ],
   "county_election_office": {
-    "name": "Fulton County Registration and Elections (most of Atlanta; absentee office 404-612-7060). Atlanta voters east of Moreland Avenue use DeKalb County Voter Registration and Elections instead: dekalbvotes.com, 404-298-4020.",
+    "name": "Fulton County Registration and Elections (most of Atlanta; absentee office 404-612-7060). Atlanta voters east of Moreland Avenue use DeKalb County Voter Registration and Elections instead: dekalbcountyga.gov/departments/voter-registration-and-elections, 404-298-4020.",
     "url": "https://www.fultonelections.com",
     "phone": "404-612-7060 (Fulton absentee office); 404-298-4020 (DeKalb)"
   },
@@ -39,7 +39,7 @@
     "30363"
   ],
   "zip_caveats": "An \"Atlanta\" mailing address doesn't mean you live in the City of Atlanta. Sandy Springs (30327, 30328, 30342, 30350), Brookhaven (30319, 30329), unincorporated DeKalb (30316, 30317, 30329, 30345) and East Point, College Park, Hapeville and the city of South Fulton (30331, 30337, 30344, 30349, 30354) all use Atlanta addresses, and those voters get different ballots (Fulton voters outside the city also vote on the TSPLOST renewal and their own city questions). Inside the city, Fulton and DeKalb voters get different ballots: the DeKalb side is roughly everything east of Moreland Avenue (parts of 30306, 30307, 30316, 30317 and Emory's 30322). Every ZIP is also split among U.S. House, state Senate, state House and county commission districts. The list below includes every district that may reach the city, so you'll see more races here than on your ballot; you get only one of each. On the DeKalb side, the northern part (around Little Five Points, Candler Park, Lake Claire and Emory) is in Commission District 2 and the southern part (Edgewood, Kirkwood, East Lake, East Atlanta) is in District 3; Super District 7 reaches only a few blocks south of East Lake. GA-11 and GA-13 are not on any City of Atlanta ballot. See your exact ballot on the Georgia My Voter Page (mvp.sos.ga.gov).",
-  "notes": "Vote early at any early-voting site in your own county (Fulton voters at Fulton sites, DeKalb voters at DeKalb sites) through Friday, Oct 30. Fulton has 32 sites, open Mon-Fri 7 AM to 7 PM, Saturday 9 AM to 5 PM and Sunday noon to 5 PM; in-city sites include the Buckhead, Northside, Ponce de Leon (Joan P. Garner), Mechanicsville, Metropolitan, Adams Park and Northwest at Scotts Crossing libraries, the High Museum, C.T. Martin Recreation Center and Beulah Heights University (three college sites are open only two days). DeKalb has 22 sites, open weekdays 7 AM to 7 PM, Saturdays Oct 17 and 24 from 9 AM to 6 PM and Sundays Oct 18 and 25 from noon to 6 PM; in or near the city are Bessie Branham Recreation Center (Delano Dr), Neighborhood Church (McLendon Ave), Emory University and Greater Piney Grove Church (Glenwood Ave, just outside the city line). Absentee drop boxes are inside some early-voting sites, during voting hours, only through Oct 30: 7 Fulton sites (Fulton hasn't said which on its announcement) and 6 DeKalb sites (Berean Christian Church, Beulah Missionary Baptist Church, the DeKalb elections office at 4380 Memorial Dr, Dunwoody Library, Salem-Panola Library and Tucker Library). After that, hand-deliver an absentee ballot by 7 PM Nov 3 to your county elections office (Fulton: Government Center, 136 Peachtree St, Suite 2186, among others). On Election Day you must vote at your assigned precinct, 7 AM to 7 PM. No judge or school board races are on this ballot; those were decided in May and June. Any race where no one gets a majority goes to a Dec 1 runoff; the Fulton District 4 special is the likeliest.",
+  "notes": "Early voting ends Friday, Oct 30. Vote at any early site in your own county: Fulton voters use Fulton's map, DeKalb voters use DeKalb's. On Nov 3 you must go to your assigned precinct, 7 AM to 7 PM. Mail ballot? Drop boxes are inside early voting sites and close Oct 30: in the city, Fulton's are at Buckhead Library (269 Buckhead Ave. NE) and the C.T. Martin Recreation Center (3201 Martin Luther King Jr. Dr. SW). After that, hand it to your county elections office by Nov 3; call for hours (Fulton 404-612-7020, DeKalb 404-298-4020). You can't return it at your Election Day polling place.",
   "contest_ids": [
     "ga-us-senate",
     "ga-governor",
@@ -113,7 +113,7 @@
     {
       "office_match": "Fulton County Commission",
       "label": "Find your Fulton commission district",
-      "url": "https://fultoncountyga.gov/Maps"
+      "url": "https://fultoncountyga.gov/Commission-District-Finder"
     },
     {
       "office_match": "DeKalb County Commission",
@@ -149,6 +149,103 @@
       "office_match": "Public Service Commission, District 5",
       "label": "Check your district on your official ballot",
       "url": "https://mvp.sos.ga.gov/"
+    }
+  ],
+  "by_county": [
+    {
+      "county": "Fulton",
+      "zips": [
+        "30303",
+        "30305",
+        "30308",
+        "30309",
+        "30310",
+        "30311",
+        "30312",
+        "30313",
+        "30314",
+        "30318",
+        "30326",
+        "30327",
+        "30331",
+        "30332",
+        "30334",
+        "30342",
+        "30363"
+      ],
+      "lookups": {
+        "early_in_person": "https://experience.arcgis.com/experience/847ca4f4304945b2872eeb3bb30891ba",
+        "drop_box": "https://fultoncountyga.gov/inside-fulton-county/fulton-county-departments/registration-and-elections/early-voting-locations"
+      },
+      "source": "https://fultoncountyga.gov/inside-fulton-county/fulton-county-departments/registration-and-elections/early-voting-locations",
+      "confidence": "verified",
+      "office": {
+        "name": "Fulton County Registration and Elections, 130 Peachtree St. SW, Atlanta 30303",
+        "url": "https://fultoncountyga.gov/inside-fulton-county/fulton-county-departments/registration-and-elections/absentee-voting",
+        "phone": "404-612-7020",
+        "lines": [
+          {
+            "label": "Absentee office",
+            "phone": "404-612-7060"
+          }
+        ],
+        "hours": "Standard county business hours; call to confirm hours.",
+        "source": "https://fultoncountyga.gov/inside-fulton-county/fulton-county-departments/registration-and-elections/absentee-voting"
+      }
+    },
+    {
+      "county": "DeKalb",
+      "zips": [],
+      "lookups": {
+        "early_in_person": "https://dcgis.dekalbcountyga.gov/earlyvoting",
+        "drop_box": "https://dekalbcountyga.gov/departments/voter-registration-and-elections"
+      },
+      "source": "https://dekalbcountyga.gov/departments/voter-registration-and-elections",
+      "confidence": "verified",
+      "office": {
+        "name": "DeKalb County Voter Registration and Elections, 4380 Memorial Dr., Decatur",
+        "url": "https://dekalbcountyga.gov/departments/voter-registration-and-elections",
+        "phone": "404-298-4020",
+        "hours": "Monday to Friday, 8 AM to 4:30 PM; longer during early voting and on Election Day.",
+        "source": "https://dekalbcountyga.gov/departments/voter-registration-and-elections"
+      }
+    }
+  ],
+  "dated": [
+    {
+      "path": "notes",
+      "from": "2026-10-31",
+      "text": "Early voting is over. On Nov 3 you must go to your assigned precinct, 7 AM to 7 PM. Mail ballot? Drop boxes closed Oct 30, so hand it to your county elections office by Nov 3; call for hours (Fulton 404-612-7020, DeKalb 404-298-4020). You can't return it at your Election Day polling place."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Fulton County: early voting locations",
+      "url": "https://fultoncountyga.gov/inside-fulton-county/fulton-county-departments/registration-and-elections/early-voting-locations"
+    },
+    {
+      "name": "Fulton County: early voting map",
+      "url": "https://experience.arcgis.com/experience/847ca4f4304945b2872eeb3bb30891ba"
+    },
+    {
+      "name": "DeKalb County: early voting map",
+      "url": "https://dcgis.dekalbcountyga.gov/earlyvoting"
+    },
+    {
+      "name": "DeKalb County: voter registration and elections",
+      "url": "https://dekalbcountyga.gov/departments/voter-registration-and-elections"
+    },
+    {
+      "name": "Fulton County: absentee voting",
+      "url": "https://fultoncountyga.gov/inside-fulton-county/fulton-county-departments/registration-and-elections/absentee-voting"
+    },
+    {
+      "name": "Fulton County: commission district finder",
+      "url": "https://fultoncountyga.gov/Commission-District-Finder"
+    },
+    {
+      "name": "Census 2020 ZIP code (ZCTA) to county relationship file",
+      "url": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_county20_natl.txt"
     }
   ]
 }

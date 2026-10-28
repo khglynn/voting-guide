@@ -1024,7 +1024,7 @@ function roundTrip(name, stCode, places, mutate) {
   const fl = read('state-FL.json').howto.situations.find((x) => x.id === 'no_mail_ballot_or_lost');
   b = open('FL', ['orlando-fl']);
   const own = b.howto.situations.find((x) => x.id === 'no_mail_ballot_or_lost');
-  check('where: Orlando\u2019s lost-ballot answer is Orange County\u2019s, with its vote-by-mail line', own.question === fl.question && JSON.stringify(own.actions) === JSON.stringify(fl.actions) && /27 sites/.test(own.answer) && own.steps.some((x) => /407-836-8683/.test(x)) && own.source === 'https://voteorangefl.gov/request-a-mail-ballot/', own.short);
+  check('where: Orlando\u2019s lost-ballot answer is Orange County\u2019s, with its vote-by-mail line', own.question === fl.question && own.actions.length === fl.actions.length && /27 sites/.test(own.answer) && own.steps.some((x) => /407-836-8683/.test(x)) && own.source === 'https://voteorangefl.gov/request-a-mail-ballot/', own.short);
   b = open('FL', ['pensacola-fl']);
   check('where: Pensacola\u2019s answer stands alone (steps: null) and the state\u2019s other questions are untouched', b.howto.situations.find((x) => x.id === 'no_mail_ballot_or_lost').steps === null && JSON.stringify(b.howto.situations.find((x) => x.id === 'college_student')) === JSON.stringify(read('state-FL.json').howto.situations.find((x) => x.id === 'college_student')));
   b = open('FL', []);
@@ -1043,6 +1043,101 @@ function roundTrip(name, stCode, places, mutate) {
     (h.gotcha_shorts || []).forEach((g, i) => { if (g && by.test(g)) late.push(`${s} gotcha ${i + 1}: ${g}`); });
   }
   check('where: no quick answer or mistake\u2019s fix asks you to act by a date before Oct 28', late.length === 0, late.slice(0, 4).join(' | '));
+  st.S.ballot = keep.ballot; st.S.b = keep.b; st.S.ui.open = keep.open;
+}
+
+/* ---------- where to vote, part B (Oct 28): dated text, county help buttons and trackers, more counties ----------
+   Text dated to change does on its own date (a passed deadline can't come back every cycle); the "If something
+   goes wrong" buttons and the tracking link open the county's tools where the place has them. */
+{
+  const plan = mods.plan;
+  const ps = views.planstrip;
+  const keep = { ballot: st.S.ballot, b: st.S.b, open: st.S.ui.open };
+  const tx = read('state-TX.json').howto;
+  const g4 = (t) => plan.localHowto(tx, [read('place-dallas-tx.json')], null, t).gotchas[4];
+  check('dated: Texas\u2019s vote-center line names the wait-time maps through Oct 30, and drops them from Oct 31', /live early voting wait times/.test(g4('2026-10-30')) && !/wait times/.test(g4('2026-10-31')) && /any polling location in your county on Election Day/.test(g4('2026-11-03')), g4('2026-10-31'));
+  check('dated: the day localHowto applied it for is kept, so a page open past midnight re-applies it', plan.localHowto(tx, [], null, '2026-10-31').day === '2026-10-31');
+  const nyc = read('place-nyc-brooklyn-ny.json');
+  const nyNotes = (t) => plan.applyDated(nyc, nyc.dated, t).notes;
+  check('dated: NYC\u2019s borough-office note lists the extended hours, then says Nov 2 is the last day, then Nov 3 is Election Day', /Extended hours/.test(nyNotes('2026-10-29')) && /Today is the last day/.test(nyNotes('2026-11-02')) && /Vote at your own poll site today/.test(nyNotes('2026-11-03')), nyNotes('2026-11-02'));
+  check('dated: an entry never touches the place\u2019s ballot (only the parts a path names are copied)', plan.applyDated(nyc, nyc.dated, '2026-11-03').items === nyc.items);
+  const pen = read('place-pensacola-fl.json');
+  check('dated: Pensacola\u2019s drop-off note says early voting closed once it has (Nov 1)', /^Drop boxes/.test(plan.applyDated(pen, pen.dated, '2026-10-31').notes) && /^Early voting and its drop boxes closed/.test(plan.applyDated(pen, pen.dated, '2026-11-01').notes));
+  // The help buttons open the county's tools where the place has them (west-mail-25, fl-10, ny-11, south-midwest-19, east-18).
+  const act = (h, sid, label) => ((h.situations.find((x) => x.id === sid) || {}).actions || []).find((a) => a.label === label);
+  let b = open('FL', ['orlando-fl']);
+  check('help buttons: Orlando\u2019s "Find early voting places" opens Orange County\u2019s early voting page', act(b.howto, 'away_on_election_day', 'Find early voting places').url === 'https://voteorangefl.gov/vote-early/', JSON.stringify(act(b.howto, 'away_on_election_day', 'Find early voting places')));
+  check('help buttons: Orlando\u2019s tracking link is Orange County\u2019s BallotTrax', b.howto.mail_ballot.tracking_url === 'https://floridaorangevotes.ballottrax.net/voter/' && act(b.howto, 'no_mail_ballot_or_lost', 'Track my ballot').url === 'https://floridaorangevotes.ballottrax.net/voter/');
+  b = open('FL', ['tallahassee-fl']);
+  check('help buttons: Tallahassee keeps the state\u2019s tracker (Leon\u2019s link is held until someone opens it)', b.howto.mail_ballot.tracking_url === read('state-FL.json').howto.mail_ballot.tracking_url);
+  b = open('FL', []);
+  check('help buttons: a statewide Florida ballot keeps the state\u2019s buttons', JSON.stringify(b.howto.situations) === JSON.stringify(read('state-FL.json').howto.situations));
+  b = open('NY', ['nyc-queens-ny']);
+  const ny = read('state-NY.json').howto;
+  const nyBtns = b.howto.situations.flatMap((x) => x.actions || []).filter((a) => /poll site/i.test(a.label));
+  check('help buttons: NYC\u2019s poll-site buttons open the city\u2019s own finder', nyBtns.length > 0 && nyBtns.every((a) => a.url === 'https://findmypollsite.vote.nyc/'), JSON.stringify(nyBtns.slice(0, 2)));
+  check('help buttons: NYC\u2019s tracker is the city\u2019s', b.howto.mail_ballot.tracking_url === 'https://requestballot.vote.nyc/tracking' && ny.mail_ballot.tracking_url !== b.howto.mail_ballot.tracking_url);
+  b = open('DC', ['dc-ward-6']);
+  const dcBtns = b.howto.situations.flatMap((x) => x.actions || []).filter((a) => /vote center|drop box/i.test(a.label));
+  check('help buttons: DC\u2019s vote center and drop box buttons open the locator, not the PDF', dcBtns.length > 0 && dcBtns.every((a) => /vote-center-locator-tool|earlyvoting\.dcboe\.org/.test(a.url)), JSON.stringify(dcBtns.slice(0, 2)));
+  // More places across county lines.
+  b = open('TX', ['round-rock-tx']);
+  bl.localize(b, '78665', null);
+  check('counties: Round Rock\u2019s 78665 is Williamson\u2019s, with Williamson\u2019s early voting dashboard', b.county === 'Williamson' && /williamsontx/.test(b.howto.early_in_person.lookup_url));
+  b = open('TX', ['round-rock-tx']);
+  bl.localize(b, '78664', null);
+  check('counties: Round Rock\u2019s 78664 crosses into Travis, so both counties\u2019 buttons show, Williamson first', (b.howto.county_links || []).map((c) => c.county).join('|') === 'Williamson|Travis');
+  b = open('CO', ['aurora-co']);
+  bl.localize(b, '80011', null);
+  check('counties: Aurora on a split ZIP lists Arapahoe, Adams and Douglas', (b.howto.county_links || []).map((c) => c.county).join('|') === 'Arapahoe|Adams|Douglas');
+  bl.localize(b, '80011', 'Adams');
+  check('counties: an Adams address gets Adams\u2019s vote centers and drop boxes', /adamscountyco\.gov/.test(b.howto.early_in_person.lookup_url) && /adamscountyco\.gov/.test(b.howto.mail_ballot.drop_box_lookup_url));
+  b = open('GA', ['atlanta-ga']);
+  bl.localize(b, '30318', null);
+  check('counties: an Atlanta ZIP wholly in Fulton gets Fulton\u2019s early voting map', b.county === 'Fulton' && /847ca4f4304945b2872eeb3bb30891ba/.test(b.howto.early_in_person.lookup_url));
+  b = open('TX', ['san-marcos-tx']);
+  bl.localize(b, '78666', null);
+  const smEarly = b.howto.early_in_person.lookup_url;
+  bl.localize(b, '78666', 'Caldwell');
+  check('counties: San Marcos uses Hays\u2019s tools, and a Caldwell address gets the state\u2019s instead', /haystx/.test(smEarly) && b.howto.early_in_person.lookup_url === tx.early_in_person.lookup_url && !b.howto.county_links, `${smEarly} / ${b.howto.early_in_person.lookup_url}`);
+  // A county's own office, when the voter's county is known.
+  b = open('TX', ['pflugerville-tx']);
+  bl.localize(b, '78660', 'Williamson');
+  st.S.ui.open = new Set(['whatif', 'bx-office']);
+  const office = (ps.planHTML().match(/<p class="office">[\s\S]*?<\/p>/) || [''])[0];
+  check('offices: a Williamson address in Pflugerville shows Williamson County\u2019s office', /Williamson County Elections Department/.test(office) && /512-943-1630/.test(office), office.slice(0, 200));
+  // Codex on part B: a button changes only when its label fits the kind of page; a general one follows the phase.
+  const dal = read('place-dallas-tx.json');
+  const dallasBtn = (t) => act(plan.localHowto(tx, [dal], null, t), 'wrong_polling_place', 'Find voting places').url;
+  check('help buttons: Dallas\u2019s "Find voting places" opens the early voting map through Oct 30, then the Election Day map', /views=Early-Voting/.test(dallasBtn('2026-10-28')) && /views=Election-Day/.test(dallasBtn('2026-10-31')), `${dallasBtn('2026-10-28')} / ${dallasBtn('2026-10-31')}`);
+  b = open('IL', ['chicago-il']);
+  const il = read('state-IL.json').howto;
+  const officeBtns = b.howto.situations.flatMap((x) => x.actions || []).filter((a) => /election office/i.test(a.label));
+  check('help buttons: Chicago\u2019s "Find my election office" stays the office directory; "Track my ballot" opens Chicago\u2019s tracker', officeBtns.length > 0 && officeBtns.every((a) => il.situations.some((x) => (x.actions || []).some((y) => y.label === a.label && y.url === a.url))) && b.howto.situations.flatMap((x) => x.actions || []).filter((a) => /track/i.test(a.label)).every((a) => a.url === 'https://chicagoelections.gov/voting/your-voter-information'), JSON.stringify(officeBtns.slice(0, 1)));
+  b = open('CA', ['fullerton-ca']);
+  const vc = b.howto.situations.flatMap((x) => x.actions || []).filter((a) => /vote center/i.test(a.label));
+  check('help buttons: Fullerton\u2019s "Find a vote center" opens Orange County\u2019s vote center list', vc.length > 0 && vc.every((a) => a.url === 'https://ocvote.gov/elections/vote-center-locations'), JSON.stringify(vc.slice(0, 1)));
+  b = open('CA', ['san-francisco-ca']);
+  check('help buttons: San Francisco\u2019s "Find a vote center" opens its City Hall voting page', b.howto.situations.flatMap((x) => x.actions || []).filter((a) => /vote center/i.test(a.label)).every((a) => a.url === 'https://www.sf.gov/vote-in-person'));
+  // A county the place doesn't list gets no office card (the same rule as its links).
+  b = open('TX', ['san-marcos-tx']);
+  bl.localize(b, '78666', 'Caldwell');
+  st.S.ui.open = new Set(['whatif', 'bx-office']);
+  check('offices: a Caldwell address on San Marcos\u2019s ballot shows no Hays office', !/<p class="office">/.test(ps.planHTML()) && !/Hays County Elections Office/.test(ps.planHTML()));
+  // An open page past midnight: localize (what main.ts's refresh calls) re-applies dated text on a new day.
+  const had = Object.getOwnPropertyDescriptor(globalThis, 'location');
+  const on = (d) => Object.defineProperty(globalThis, 'location', { configurable: true, value: { search: `?today=${d}`, origin: 'http://x', pathname: '/' } });
+  try {
+    on('2026-10-30');
+    b = open('TX', ['dallas-tx']);
+    bl.localize(b, '75201', null);
+    const before = b.howto.gotchas[4];
+    on('2026-10-31');
+    bl.localize(b, '75201', null);
+    check('dated: the minute refresh after midnight changes the open ballot\u2019s text (Oct 30 to Oct 31)', /wait times/.test(before) && !/wait times/.test(b.howto.gotchas[4]) && b.howto.day === '2026-10-31', b.howto.gotchas[4]);
+  } finally {
+    if (had) Object.defineProperty(globalThis, 'location', had); else delete globalThis.location;
+  }
   st.S.ballot = keep.ballot; st.S.b = keep.b; st.S.ui.open = keep.open;
 }
 

@@ -55,7 +55,8 @@
       "official ballot drop box: 'your ballot must be in a ballot dropbox by 8pm on Election Day' (list of boxes: https://elections.maryland.gov/elections/2026/2026_General_Drop_Box_Locations.pdf)",
       "mail (USPS): 'your ballot must be postmarked on or before election day'; it then has to reach your local board by 10 AM on November 13",
       "hand delivery to your local board of elections: 'you must deliver your ballot by 8 pm on election day'",
-      "NOT by email, fax, or online: 'You cannot return your voted ballot online, by email, or fax.'"
+      "NOT by email, fax, or online: 'You cannot return your voted ballot online, by email, or fax.'",
+      "hand it in at an early voting center (through October 29) or your polling place on Election Day, by 8 PM"
     ],
     "postage": "Mailed ballot packets: prepaid. SBE's 'Life of a Ballot' guide: 'Voters who received a by mail ballot are provided with a prepaid postage return envelope for their voted ballot.' Print-At-Home ballots: you 'provide your own return envelope' and return 'by mail (requires postage).'",
     "signature_witness_rules": "Sign and date the oath on the return envelope (or the oath page for Print-At-Home). No witness or notary. Do NOT sign the ballot itself: 'Do not sign your name or make any other mark on your ballot.' Montgomery County BOE: 'Ballots without signed oaths will NOT be counted.' If someone helps you, they must complete the Certification of Person Assisting Mail-in Voter and return it with the ballot.",
@@ -253,7 +254,7 @@
       "answer": "Check its status, then ask your local board for a replacement or vote in person. In person you'll vote a provisional ballot, since a mail-in ballot was issued to you, and it counts as long as you haven't already voted.",
       "steps": [
         "Check status at voterservices.elections.maryland.gov/VoterSearch.",
-        "Call your local board for a replacement (Baltimore City: 410-396-5550). You or an agent can also pick one up there until 8 PM on November 3.",
+        "Call your local board for a replacement (Baltimore City's mail-in ballot line: 410-396-5574). You or an agent can also pick one up there until 8 PM on November 3.",
         "Or vote in person during early voting (October 22 to 29) or on Election Day."
       ],
       "deadline": null,

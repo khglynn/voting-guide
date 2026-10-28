@@ -8,7 +8,14 @@
  "county_election_office": {
   "name": "Orange County Registrar of Voters (OCVote.gov), 1300 S. Grand Ave, Bldg C, Santa Ana",
   "url": "https://ocvote.gov",
-  "phone": "(714) 567-7600"
+  "phone": "(714) 567-7600",
+  "lines": [
+   {
+    "label": "Toll free",
+    "phone": "888-628-6837"
+   }
+  ],
+  "hours": "Open 8 AM to 5 PM Monday to Friday, and when vote centers are open."
  },
  "sample_ballot_url": "https://ocvote.gov/vlt/",
  "zips": [
@@ -73,12 +80,12 @@
   {
    "office_match": "U.S. Representative",
    "label": "Find your district",
-   "url": "https://ocvote.gov/maps-and-gis"
+   "url": "https://ocvote.gov/findmydistrict"
   },
   {
    "office_match": "Member of the State Assembly",
    "label": "Find your district",
-   "url": "https://ocvote.gov/maps-and-gis"
+   "url": "https://ocvote.gov/findmydistrict"
   },
   {
    "office_match": "Board of Equalization Member",
@@ -122,8 +129,48 @@
   }
  ],
  "lookups": {
-  "early_in_person": "https://ocvote.gov/voting/voting-and-dropoff-locations-by-election",
-  "election_day": "https://ocvote.gov/voting/voting-and-dropoff-locations-by-election",
-  "drop_box": "https://ocvote.gov/voting/voting-and-dropoff-locations-by-election"
- }
+  "early_in_person": "https://ocvote.gov/elections/vote-center-locations",
+  "election_day": "https://ocvote.gov/elections/vote-center-locations",
+  "drop_box": "https://ocvote.gov/elections/ballot-drop-box-locations"
+ },
+ "situations": [
+  {
+   "id": "no_mail_ballot_or_lost",
+   "short": "Get a replacement at any Orange County vote center or at the Registrar's office in Santa Ana.",
+   "answer": "Orange County's deadline for a mailed replacement passed on October 27. You can still get a replacement ballot at any Orange County vote center or at the Registrar's office, 1300 S. Grand Ave., Building C, Santa Ana. Call (714) 567-7600 with questions.",
+   "steps": null,
+   "source": "https://ocvote.gov/faqs/vote-by-mail-faqs",
+   "confidence": "verified"
+  }
+ ],
+ "notes": "Fullerton has eight vote centers. Through Oct 30 only the Fullerton Public Library drive-thru, 353 W. Commonwealth Ave., is open; the other seven open Oct 31. Fullerton has six drop boxes. The county's map with wait times: ocvote.gov/locate.",
+ "dated": [
+  {
+   "path": "notes",
+   "from": "2026-10-31",
+   "text": "All eight Fullerton vote centers are open, including the Fullerton Public Library drive-thru, 353 W. Commonwealth Ave. Fullerton has six drop boxes. The county's map with wait times: ocvote.gov/locate."
+  }
+ ],
+ "sources": [
+  {
+   "name": "Orange County (CA): vote-by-mail FAQs",
+   "url": "https://ocvote.gov/faqs/vote-by-mail-faqs"
+  },
+  {
+   "name": "Orange County (CA): about (phones and hours)",
+   "url": "https://ocvote.gov/about"
+  },
+  {
+   "name": "Orange County (CA): vote center locations",
+   "url": "https://ocvote.gov/elections/vote-center-locations"
+  },
+  {
+   "name": "Orange County (CA): drop box locations",
+   "url": "https://ocvote.gov/elections/ballot-drop-box-locations"
+  },
+  {
+   "name": "Orange County (CA): find my district",
+   "url": "https://ocvote.gov/findmydistrict"
+  }
+ ]
 }

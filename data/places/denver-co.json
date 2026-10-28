@@ -8,7 +8,17 @@
   "county_election_office": {
     "name": "Denver Elections Division (Clerk and Recorder Paul D. López), 200 W. 14th Ave., Denver 80204",
     "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division",
-    "phone": "720-913-VOTE (8683)"
+    "phone": "720-913-VOTE (8683)",
+    "lines": [
+      {
+        "label": "Text",
+        "phone": "56003"
+      },
+      {
+        "label": "TTY",
+        "phone": "720-913-8657"
+      }
+    ]
   },
   "sample_ballot_url": "https://myballot.coloradosos.gov/",
   "zips": [
@@ -122,8 +132,8 @@
   "district_finders": [
     {
       "office_match": "U.S. House of Representatives",
-      "label": "Find your congressional district",
-      "url": "https://content.leg.colorado.gov/find-your-legislator-0"
+      "label": "Find your representative by ZIP (if your ZIP is split, enter your address)",
+      "url": "https://www.house.gov/representatives/find-your-representative"
     },
     {
       "office_match": "State Senate",
@@ -177,8 +187,22 @@
     }
   ],
   "lookups": {
-    "early_in_person": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Where-to-Vote-in-Denver",
-    "election_day": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Where-to-Vote-in-Denver",
-    "drop_box": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Where-to-Vote-in-Denver"
-  }
+    "early_in_person": "https://experience.arcgis.com/experience/efe6ef1eca984454b5f5c247cdb64f61",
+    "election_day": "https://experience.arcgis.com/experience/efe6ef1eca984454b5f5c247cdb64f61",
+    "drop_box": "https://experience.arcgis.com/experience/efe6ef1eca984454b5f5c247cdb64f61"
+  },
+  "sources": [
+    {
+      "name": "Denver Elections: where to vote map",
+      "url": "https://experience.arcgis.com/experience/efe6ef1eca984454b5f5c247cdb64f61"
+    },
+    {
+      "name": "Denver Elections: upcoming elections (phone, text, TTY)",
+      "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Upcoming-Elections"
+    },
+    {
+      "name": "U.S. House: find your representative",
+      "url": "https://www.house.gov/representatives/find-your-representative"
+    }
+  ]
 }

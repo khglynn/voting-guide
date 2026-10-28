@@ -7,8 +7,9 @@
   ],
   "county_election_office": {
     "name": "NYC Board of Elections, Manhattan borough office: 200 Varick Street, 10th Floor, New York, NY 10014",
-    "url": "https://vote.nyc/",
-    "phone": "1-212-886-2100 (citywide: 1-866-VOTE-NYC)"
+    "url": "https://vote.nyc/page/contact-us",
+    "phone": "1-212-886-2100 (citywide: 1-866-VOTE-NYC)",
+    "hours": "Monday to Friday, 9 AM to 5 PM, except the special hours in Notes for Oct 28 to Nov 1. Citywide: 1-866-VOTE-NYC (1-866-868-3692)."
   },
   "sample_ballot_url": "https://findmypollsite.vote.nyc/",
   "zips": [
@@ -147,6 +148,52 @@
   ],
   "lookups": {
     "early_in_person": "https://findmypollsite.vote.nyc/",
-    "election_day": "https://findmypollsite.vote.nyc/"
-  }
+    "election_day": "https://findmypollsite.vote.nyc/",
+    "drop_box": "https://findmypollsite.vote.nyc/",
+    "tracking": "https://requestballot.vote.nyc/tracking"
+  },
+  "notes": "Need a mail ballot in person? Go to your borough election office by Monday, Nov 2. Extended hours: Wed Oct 28, 10 AM to 7 PM; Thu Oct 29 and Fri Oct 30, 10 AM to 4 PM; Sat Oct 31, 9 AM to 4 PM; Sun Nov 1, 10 AM to 4 PM; Monday, regular hours of 9 AM to 5 PM. Early voting lines can be long: check every site's wait on vote.nyc's wait time map.",
+  "dated": [
+    {
+      "path": "notes",
+      "from": "2026-11-02",
+      "text": "Need a mail ballot in person? Today is the last day: go to your borough election office by 5 PM. Or vote at your poll site on Nov 3, 6 AM to 9 PM."
+    },
+    {
+      "path": "notes",
+      "from": "2026-11-03",
+      "text": "Vote at your own poll site today, 6 AM to 9 PM. Have a mail ballot? Hand it in at any poll site in your borough by 9 PM."
+    }
+  ],
+  "early_in_person": {
+    "start": "2026-10-24",
+    "end": "2026-11-01",
+    "hours_note": "NYC early voting: Thu Oct 29, 8 AM to 4 PM; Fri Oct 30 to Sun Nov 1, 9 AM to 5 PM. You must vote at your one assigned early voting site.",
+    "hours_short": "Early voting ends Sun Nov 1 at your one assigned site.",
+    "lookup_url": "https://findmypollsite.vote.nyc/",
+    "source": "https://www.vote.nyc/elections",
+    "confidence": "verified"
+  },
+  "sources": [
+    {
+      "name": "NYC Board of Elections: extended mail ballot hours",
+      "url": "https://vote.nyc/important-notices/extended-mail-ballot-voting-hours-november-3-2026-general-election"
+    },
+    {
+      "name": "NYC Board of Elections: wait time map",
+      "url": "https://www.vote.nyc/page/wait-time-map"
+    },
+    {
+      "name": "NYC Board of Elections: contact",
+      "url": "https://vote.nyc/page/contact-us"
+    },
+    {
+      "name": "NYC Board of Elections: ballot tracking",
+      "url": "https://requestballot.vote.nyc/tracking"
+    },
+    {
+      "name": "NYC Board of Elections: elections and early voting hours",
+      "url": "https://www.vote.nyc/elections"
+    }
+  ]
 }

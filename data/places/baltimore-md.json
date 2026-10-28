@@ -6,9 +6,20 @@
     "Baltimore City"
   ],
   "county_election_office": {
-    "name": "Baltimore City Board of Elections, 417 E. Fayette St., Baltimore 21202 (Baltimore City is its own jurisdiction, separate from Baltimore County)",
+    "name": "Baltimore City Board of Elections, 417 E. Fayette St., Benton Office Building, Room 129, Baltimore 21202 (Baltimore City is a separate election jurisdiction from Baltimore County)",
     "url": "https://www.baltimorecity.gov/boe/our-work/voter-information",
-    "phone": "410-396-5550"
+    "phone": "410-396-5550",
+    "phone_label": "General line",
+    "lines": [
+      {
+        "label": "Mail-in ballots",
+        "phone": "410-396-5574"
+      },
+      {
+        "label": "Registration",
+        "phone": "410-396-1444"
+      }
+    ]
   },
   "sample_ballot_url": "https://voterservices.elections.maryland.gov/VoterSearch",
   "zips": [
@@ -74,32 +85,48 @@
     "baltimore-question-h",
     "baltimore-question-i"
   ],
-  "notes": "On November 3, vote at your assigned polling place, 7 AM to 8 PM. Use the Maryland polling-place lookup to confirm it; the city has published its final 2026 general-election list. Early voting is October 22 to 29, 7 AM to 8 PM, at any Baltimore City early voting center. The state general-election drop-box list, updated August 26, includes the University of Maryland Engagement Center, 16 S. Poppleton St. Return a mail ballot to an official box by 8 PM on November 3. Baltimore City and Baltimore County are separate election jurisdictions.",
+  "notes": "On November 3, vote at your assigned polling place, 7 AM to 8 PM. Use the Maryland polling-place lookup to confirm it; the city has published its final 2026 general-election list. Early voting is October 22 to 29, 7 AM to 8 PM, at any Baltimore City early voting center. The state general-election drop-box list, updated August 26, includes the University of Maryland Engagement Center, 16 S. Poppleton St. Return a mail ballot by 8 PM on November 3 to an official drop box, an early voting center (through Oct 29), your polling place on Nov 3, or the local board. Baltimore City and Baltimore County are separate election jurisdictions.",
   "district_finders": [
     {
       "office_match": "U.S. Representative",
-      "label": "Find your district on your official voter record",
-      "url": "https://voterservices.elections.maryland.gov/VoterSearch"
+      "label": "Find your district by address",
+      "url": "https://mgaleg.maryland.gov/mgawebsite/Members/District"
     },
     {
       "office_match": "State Senator",
-      "label": "Find your district on your official voter record",
-      "url": "https://voterservices.elections.maryland.gov/VoterSearch"
+      "label": "Find your district by address",
+      "url": "https://mgaleg.maryland.gov/mgawebsite/Members/District"
     },
     {
       "office_match": "House of Delegates",
-      "label": "Find your district on your official voter record",
-      "url": "https://voterservices.elections.maryland.gov/VoterSearch"
+      "label": "Find your district by address",
+      "url": "https://mgaleg.maryland.gov/mgawebsite/Members/District"
     }
   ],
   "lookups": {
     "early_in_person": "https://www.baltimorecity.gov/boe/our-work/election-information/voting-centers",
-    "election_day": "https://www.baltimorecity.gov/boe/our-work/election-information/polling-locations"
+    "election_day": "https://voterservices.elections.maryland.gov/PollingPlaceSearch"
   },
   "sources": [
     {
       "name": "Baltimore City: early voting centers",
       "url": "https://www.baltimorecity.gov/boe/our-work/election-information/voting-centers"
+    },
+    {
+      "name": "Baltimore City Board of Elections: contact",
+      "url": "https://www.baltimorecity.gov/boe/contact-us"
+    },
+    {
+      "name": "Maryland: polling place search",
+      "url": "https://voterservices.elections.maryland.gov/PollingPlaceSearch"
+    },
+    {
+      "name": "Maryland: 2026 election (return options)",
+      "url": "https://elections.maryland.gov/elections/2026/index.html"
+    },
+    {
+      "name": "Maryland General Assembly: find my representatives",
+      "url": "https://mgaleg.maryland.gov/mgawebsite/Members/District"
     }
   ]
 }

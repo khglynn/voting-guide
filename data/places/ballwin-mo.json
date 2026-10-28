@@ -7,7 +7,7 @@
   ],
   "county_election_office": {
     "name": "St. Louis County Board of Elections, 725 Northwest Plaza Dr., St. Ann, MO 63074 (the county board, not the City of St. Louis board downtown). Mon to Fri 8 a.m. to 4:30 p.m.",
-    "url": "https://stlouiscountymo.gov/st-louis-county-government/board-of-elections/",
+    "url": "https://lookup-stlouiscovotes.hub.arcgis.com/",
     "phone": "314-615-1800"
   },
   "sample_ballot_url": "https://stlouiscovotes.maps.arcgis.com/apps/instant/lookup/index.html?appid=4c3116b104af40bea77ebea20aaae275",
@@ -77,5 +77,11 @@
   "lookups": {
     "early_in_person": "https://stlouiscovotes.maps.arcgis.com/apps/instant/nearby/index.html?appid=9301b4594bef4d9c9271778e4648179d",
     "election_day": "https://stlouiscovotes.maps.arcgis.com/apps/instant/nearby/index.html?appid=13fb36e785c84dbdbcc5219f999652ba"
-  }
+  },
+  "sources": [
+    {
+      "name": "St. Louis County Board of Elections: lookups hub",
+      "url": "https://lookup-stlouiscovotes.hub.arcgis.com/"
+    }
+  ]
 }

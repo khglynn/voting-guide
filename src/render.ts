@@ -50,6 +50,8 @@ export const $ = (sel: string): HTMLElement | null => document.querySelector(sel
 export function withFocusKept(fn: () => void): void {
   const a = document.activeElement as HTMLElement | null;
   const fk = a && a.dataset ? a.dataset.fk : undefined;
+  // A search box repainted under the caret (the sources sheet's) gets its caret back where it was.
+  const sel = a instanceof HTMLInputElement && a.type === 'search' ? [a.selectionStart, a.selectionEnd] : null;
   const keep: Record<string, [number, number]> = {};
   document.querySelectorAll<HTMLElement>('[data-keep]').forEach((el) => { keep[el.dataset.keep!] = [el.scrollLeft, el.scrollTop]; });
   fn();
@@ -57,6 +59,7 @@ export function withFocusKept(fn: () => void): void {
   if (fk && (!document.activeElement || document.activeElement === document.body)) {
     const f = document.querySelector<HTMLElement>(`[data-fk="${CSS.escape(fk)}"]`);
     if (f) f.focus({ preventScroll: true });
+    if (sel && f instanceof HTMLInputElement && sel[0] !== null) f.setSelectionRange(sel[0], sel[1]);
   }
 }
 

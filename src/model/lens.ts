@@ -62,6 +62,16 @@ export const withPicks = (b: Ballot, list: Endorser[]): Endorser[] => list.filte
    turn on, so the sources sheet lists it under "Couldn't read" with no switch (views/lens.ts). A paywalled
    paper that doesn't endorse at all stays an explainer. */
 export const unreadHere = (b: Ballot, e: Endorser): boolean => cantRead(e) && !explainsOnly(e) && !picksOnBallot(b, e.id);
+/* The sources sheet's search (Kevin, Oct 28: "add a search to the shelf"): by name, as you type. Every word
+   typed is somewhere in the name, in any order, ignoring case, accents and punctuation, so "chronicle austin"
+   finds The Austin Chronicle and "aflcio" finds the AFL-CIO. Only spaces or punctuation typed is no search. */
+const fold = (s: string): string => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '');
+export const searchWords = (q: string): string[] => q.split(/\s+/).map(fold).filter(Boolean);
+export function nameMatches(e: Endorser, words: string[]): boolean {
+  if (!words.length) return true;
+  const name = fold(e.name);
+  return words.every((w) => name.includes(w));
+}
 /* How many of the choices your ballot shows each source endorsed in: the same choices the bar's
    "N of M decided" counts (no district variants you haven't picked, no races you hid), so the
    sources sheet never says "Endorsed in 59" on a 46-item ballot. `unopposed` counts its picks in

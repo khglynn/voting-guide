@@ -6,8 +6,10 @@
      with what's missing, says what's here, and owns the screen's one action: "Ask Kevin to add my
      city", "Ask Kevin to look for local picks". After the tap it keeps its slot and its gold, leads
      with a tick and "Request sent.", and offers "Tell me when it's in".
-   - Everywhere else a quiet line with no button, in the same nouns with the same date: step 2 and the
-     Edit sheet (setup.ts), under the ballot's "Endorsements: ... Edit" (ledger.ts).
+   - Everywhere else a quiet line with no button, in the same nouns with the same date: at the top of the
+     sources sheet (lens.ts), under the ballot's "Endorsements: ... Edit" (ledger.ts). Step 2 and the Edit
+     sheet say only "Pick a group above, or choose individual sources" (setup.ts; Kevin, Oct 28: the two
+     lines there were "repetative").
    Never "minutes": the pipeline runs scouts, a judge and Kevin's review, so "about a day" is honest. */
 import { S } from '../state';
 import { esc, fmtDate, plural } from '../util';
@@ -20,14 +22,13 @@ export const covOf = (): Cov | null => (S.ballot && S.index ? ballotCoverage(S.b
 
 const when = (c: Cov): string => (c.checked ? ` Last checked ${fmtDate(c.checked, { weekday: false })}.` : '');
 const withWord = (c: Cov): string => (c.withPicks === 0 ? 'none with picks' : c.withPicks === c.sources ? 'all with picks' : `${c.withPicks} with picks`);
-/* The count opens "Every source on your ballot" right where it is (Kevin, Oct 25: "show a count and a way
-   to expand to see all sources and then individually check and uncheck within that list"). It stays a
-   quiet link in the count's own words ("24 sources"), so the lines still carry no action button. */
-const count = (c: Cov, fk: string): string => (c.sources
+/* The ballot head's count opens "Every source on your ballot" right where it is (Kevin, Oct 25: "show a count
+   and a way to expand to see all sources and then individually check and uncheck within that list"). It stays
+   a quiet link in the count's own words ("24 sources"), so the line still carries no action button. In the
+   sheet itself the count is just words. */
+const count = (c: Cov, fk: string | null): string => (!c.sources ? '<span class="cov-n">No sources</span>' : fk
   ? `<button class="linkbtn cov-n" data-act="sheet" data-s="sources" aria-haspopup="dialog" data-fk="${fk}">${esc(plural(c.sources, 'source'))}</button>`
-  : '<span class="cov-n">No sources</span>');
-/* "Add a source", the shelf's paste-box form (views/shelf.ts). */
-export const addSourceBtn = (fk: string): string => `<button class="linkbtn" ${shelfAttrs({ kind: 'source', fk })}>Add a source</button>`;
+  : esc(plural(c.sources, 'source')));
 const askedTail = (c: Cov): string => (c.state === 'asked' ? ` You asked for ${c.kind === 'thin' ? 'local picks' : 'your city’s races'} ${askedWord(c.askedOn)}.` : '');
 
 /* ---------- the card ---------- */
@@ -105,19 +106,18 @@ export function covCardHTML(where: 'door' | 'ballot'): string {
 }
 
 /* ---------- the quiet lines ---------- */
-/* Step 2 and the Edit sheet, under "Your sources have picks in N of your M races": every count names its
-   scope ("on Chicago's ballot", "statewide races"), and a thin place says whose picks are missing. */
-export function covHTML(): string {
+/* The top of the sources sheet (Kevin, Oct 28: "we can put last checked inside the shelf"): how many sources
+   the ballot has and how many picked, scoped ("on Chicago's ballot", "statewide races"), a thin place's
+   missing picks, the date, and a request sent from here. */
+export function sheetCovHTML(): string {
   const c = covOf();
   if (!c) return '';
   const name = esc(c.name);
-  const n = count(c, 'cov-src');
+  const n = count(c, null);
   const t = c.kind === 'statewide' ? `${n} for ${name}’s statewide races, ${esc(withWord(c))}.`
     : c.kind === 'thin' ? `${n}, ${esc(withWord(c))}, none from ${name}’s own paper and groups.`
       : `${n} on ${c.single ? `${name}’s ballot` : 'your ballot'}, ${esc(withWord(c))}.`;
-  // "Add a source" on the line only where no coverage card shows: there the card holds the screen's one
-  // action, and the sources sheet the count opens ends with "Add a source" anyway.
-  return `<p class="su-src">${t}${esc(when(c))}${esc(askedTail(c))}${cardShows(c) ? '' : ` ${addSourceBtn('cov-add')}`}</p>`;
+  return `<p class="s-cov">${t}${esc(when(c))}${esc(askedTail(c))}</p>`;
 }
 /* Under the ballot's picks line: the same, for the ballot you're looking at. */
 export function headCovHTML(): string {

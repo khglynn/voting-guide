@@ -220,11 +220,10 @@ b, strong { font-weight: 600; }
 .su-ends + .su-chips { margin-top: 6px; }
 .su-parties { margin-top: 8px; }
 .su-stat { margin-top: 12px; padding-bottom: 14px; border-bottom: 1px solid var(--rule-2); }
-.su-cov { font-size: 14.5px; color: var(--muted); }
-/* How covered the ballot is (views/coverage.ts): a quiet line under "Your sources have picks in N of your
-   M races". The action is the coverage card's, in step 1. */
-.su-src { margin-top: 4px; font-size: 14.5px; color: var(--muted); }
-/* PR 2: the count is a link that opens every source on the ballot. */
+/* "Pick a group above, or choose individual sources" (views/setup.ts, Oct 28): one quiet line, its link
+   opening every source on the ballot. The counts live in that sheet now. */
+.su-src { font-size: 14.5px; color: var(--muted); }
+.su-src .linkbtn { color: var(--ink); }
 .su-src .linkbtn, .picks-cov .cov-n { margin: -12px 0; padding: 0; }
 .cov-n { color: var(--ink); }
 .su-sw { width: 100%; min-height: 52px; display: grid; grid-template-columns: minmax(0, 1fr) 52px; gap: 12px; align-items: start; padding: 12px 0 6px; text-align: left; }
@@ -307,7 +306,6 @@ b, strong { font-weight: 600; }
 .chip.some[aria-pressed="true"] { background: var(--dusk-tint); color: var(--dusk-ink); border-color: var(--dusk-2); }
 .chip .tick { width: 12px; height: 12px; display: none; }
 .chip[aria-pressed="true"] .tick { display: block; }
-.chip.all-src { border-style: dashed; }
 
 /* ---------- ballot head: whose picks, a fill's Undo, the address ---------- */
 .wrap-led { padding-left: var(--g); padding-right: 16px; max-width: 640px; margin: 0 auto; }
@@ -694,7 +692,23 @@ b, strong { font-weight: 600; }
 .srow { display: grid; grid-template-columns: minmax(0, 1fr) 52px; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--rule); align-items: start; }
 .s-n { display: block; font-weight: 600; font-size: 15px; line-height: 1.25; }
 .s-d { display: block; font-size: 13px; color: var(--muted); }
-/* The sources sheet's first line, and its end (Oct 25): what's on to start, the sources we couldn't read
+/* The sources sheet's top (Oct 28): the counts and the date, what your sources cover, the group chips,
+   Reset and Turn all off, then the search, which stays in view while the list scrolls under it (the box
+   repeats the sheet's own paper so the rows pass behind it). */
+.sheet-panel.srcs, .sheet-gone.srcs { height: 88vh; }
+.s-cov { font-size: 14.5px; line-height: 1.4; color: var(--muted); }
+.s-chips { margin-top: 10px; }
+.s-mine { margin-top: 10px; font-size: 15px; line-height: 1.4; color: var(--ink); }
+.s-top .row-btns { margin-top: 8px; }
+.s-top > .small { margin-top: 8px; }
+.s-find { position: sticky; top: -12px; z-index: 1; display: flex; align-items: center; gap: 12px; margin: 14px -16px 0; padding: 12px 16px 10px; background-color: var(--bone); background-image: var(--tile); background-size: 256px; background-blend-mode: var(--tile-blend); border-bottom: 1px solid var(--rule-2); }
+.s-find input { flex: 1; min-width: 0; min-height: 46px; padding: 0 10px; border: 1.5px solid var(--ink); background: var(--paper); border-radius: 2px; font-size: 16px; -webkit-appearance: none; appearance: none; }
+.s-find input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.s-find input::placeholder { color: var(--faint); opacity: 1; }
+.s-find .linkbtn { flex: none; margin: 0; }
+.s-none { margin-top: 18px; font-size: 15px; color: var(--ink); }
+.s-list > .s-legend { margin-top: 14px; }
+/* The list's first lines, and its end (Oct 25): what's on to start, the sources we couldn't read
    (no switch: nothing of theirs to turn on), and "Add a source". */
 .s-legend { font-size: 15px; line-height: 1.4; color: var(--ink); }
 .s-legend + .small { margin-top: 6px; }

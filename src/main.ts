@@ -6,7 +6,7 @@ import { stepKey, planKey } from './views/planstrip';
 import { render, anchored } from './render';
 import { RAIL_AT } from './views/ledger';
 import { ensureIndex, openBallot, zipTyped, offerResume, dismissResume, lookZip, viewed } from './app';
-import { A, runAddress, sendReport, reportInput } from './actions';
+import { A, runAddress, sendReport, reportInput, srcSearch, clearSearch } from './actions';
 import { startStats } from './stats';
 
 /* ---------- taps: pointerdown for mouse and pen; touch fires on a still pointerup so a
@@ -67,6 +67,8 @@ document.addEventListener('submit', (e) => {
   if (f.dataset.form === 'zip') { S.zip = (f.querySelector('input') as HTMLInputElement).value.replace(/\D/g, '').slice(0, 5); void A['setup-done']({}, f); }
   if (f.dataset.form === 'addr') { const i = f.querySelector('input') as HTMLInputElement; void runAddress(i.value); }
   if (f.dataset.form === 'report') void sendReport();
+  // Enter (the phone's Search key) in the sources sheet's search: the keyboard goes, the matches stay.
+  if (f.dataset.form === 'src-q') (f.querySelector('input') as HTMLInputElement).blur();
 });
 document.addEventListener('input', (e) => {
   const t = e.target as HTMLElement;
@@ -76,6 +78,7 @@ document.addEventListener('input', (e) => {
   }
   if (t.matches('textarea[data-note]')) { const ta = t as HTMLTextAreaElement; S.b.notes[ta.dataset.note!] = ta.value; persist(); }
   if (t.matches('[data-rf]')) reportInput(t as HTMLInputElement);
+  if (t.matches('[data-src-q]')) srcSearch(t as HTMLInputElement);
 });
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Tab' && (S.ui.reader || S.ui.sheet)) {
@@ -92,6 +95,9 @@ document.addEventListener('keydown', (e) => {
     return;
   }
   if (e.key !== 'Escape') return;
+  // Escape in the sources sheet's search clears what's typed first; with nothing typed it closes the sheet.
+  const t = e.target as HTMLElement;
+  if (t.matches?.('[data-src-q]') && (t as HTMLInputElement).value) { e.preventDefault(); clearSearch(); return; }
   if (S.ui.sheet === 'shelf') A['sheet-close']({}, document.body);
   else if (S.ui.reader) A['reader-close']({}, document.body);
   else if (S.ui.sheet) A['sheet-close']({}, document.body);

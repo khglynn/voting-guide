@@ -81,6 +81,7 @@ export interface UI {
   setupOnly: boolean;         // "Hide races I've decided" in the Edit sheet, applied when it closes (to S.b.hideDecided)
   resume: boolean;            // "Welcome back" above the plan: once per visit to a started ballot, until any tap
   covAsk: '' | 'sending' | 'failed' | 'unsure'; // a one-tap request (views/coverage.ts) on its way, or how it failed; this visit only
+  srcQ: string;               // what's typed in the sources sheet's search (views/lens.ts); emptied each time the sheet opens, never saved
 }
 
 /* The shelf: one sheet from the bottom with five openings (Kevin, Oct 21: "let's use that for all of
@@ -146,7 +147,7 @@ export const S = {
   ui: {
     view: 'ballot', open: new Set(), row: null, page: {}, others: new Set(), folded: new Set(), unfolded: new Set(), reveal: new Set(), keep: null, beat: null,
     noteOpen: new Set(), reader: null, sheet: null, report: null, sheetFrom: null, sheetBack: null, addrOpen: false, addrBusy: false, addrMsg: null, addrFail: '', addrFound: null, addrWhich: null, addrMaps: [], addrMapsPending: false, saveOpen: false, copyFallback: null, bulk: null, bulkWhy: null, addrFilled: null, lensEmptied: false,
-    setupFill: false, setupOnly: false, resume: false, covAsk: '',
+    setupFill: false, setupOnly: false, resume: false, covAsk: '', srcQ: '',
   } as UI,
   /* ?try=fresh|aunt|straight|sources: a scenario on whatever ballot opens, never saved. */
   tryMode: null as string | null,

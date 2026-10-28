@@ -2769,8 +2769,12 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
   await ctx.route(`${HOST}/**`, async (route) => {
     const u = new URL(route.request().url());
     if (u.pathname.startsWith('/_vercel/insights/')) return route.fulfill({ status: 200, contentType: 'text/javascript', body: FAKE });
-    const r = await ctx.request.get(`${BASE}${u.pathname}${u.search}`, { headers: BYPASS ? { 'x-vercel-protection-bypass': BYPASS } : {} });
-    return route.fulfill({ response: r });
+    // A request still out when the block closes its context can't be answered then (CI, Oct 28: "Fetch response
+    // has been disposed" ended the whole run after every check had passed).
+    try {
+      const r = await ctx.request.get(`${BASE}${u.pathname}${u.search}`, { headers: BYPASS ? { 'x-vercel-protection-bypass': BYPASS } : {} });
+      return await route.fulfill({ response: r });
+    } catch { /* the context closed meanwhile */ }
   });
   page.on('console', (m) => { if (m.type() === 'error' && (m.location().url || '').startsWith(HOST)) page.errors.push(m.text()); });
   const seen = () => page.evaluate(() => window.__vaSeen || []);

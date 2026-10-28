@@ -5,7 +5,8 @@ import type { Contest, Endorser } from '../types';
 import { S } from '../state';
 import { chosenIds, decisionItems } from '../ballot';
 import { esc, plural } from '../util';
-import { CHIPS, chipState, partiesOnBallot, picksOnBallot, picksShown, explainsOnly, noEndorsements, unreadHere, searchWords, nameMatches } from '../model/lens';
+import { CHIPS, chipState, partiesOnBallot, picksOnBallot, picksShown, explainsOnly, noEndorsements, unreadHere } from '../model/lens';
+import { queryOf, textOf, all as allIn } from '../model/search';
 import { coverage } from '../model/tally';
 import { leanHTML, sourceLean, ext, isOpen, paywallSourceHTML, hasPaywallNote, blockedSourceHTML, unreadWhy, unreadLinkHTML, shelfAttrs } from './common';
 import { ADD_COPY } from './adds';
@@ -79,9 +80,10 @@ function unreadHTML(list: Endorser[], of: number | null): string {
 function listParts(): { html: string; found: number } {
   const b = S.ballot!;
   const shown = picksShown(b);
-  const words = searchWords(S.ui.srcQ);
-  const searching = words.length > 0;
-  const hit = (e: Endorser) => nameMatches(e, words);
+  // The page's one forgiving matcher (model/search.ts), every word typed in the name.
+  const q = queryOf(S.ui.srcQ);
+  const searching = !!q;
+  const hit = (e: Endorser) => allIn(q, textOf(e.name));
   const byCount = (a: Endorser, c: Endorser) => (shown.decisions.get(c.id) || 0) - (shown.decisions.get(a.id) || 0) || a.name.localeCompare(c.name);
   const unreadAll = b.endorsers.filter((e) => unreadHere(b, e)).sort((a, c) => a.name.localeCompare(c.name));
   const unread = unreadAll.filter(hit);

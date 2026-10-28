@@ -2114,10 +2114,13 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const at = (k) => sh.indexOf(k);
     check('sources: the top goes counts, group chips, what they cover, Reset and Turn all off, the search, then the list', [at('class="s-cov"'), at('data-fk="s-chip-papers"'), at('class="s-mine"'), at('data-act="src-default"'), at('data-act="src-none"'), at('id="src-q"'), at('id="s-list"')].every((x, i, a) => x > 0 && (!i || x > a[i - 1])) && !/data-fk="chip-papers"/.test(sh));
     check('sources: the search is a labeled search box, empty to start, its Clear hidden', /<form class="s-find" data-form="src-q" role="search">/.test(sh) && /<label class="vh" for="src-q">Find a source by name<\/label>/.test(sh) && /<input id="src-q" type="search" placeholder="Find a source by name" value=""/.test(sh) && /data-act="src-q-x"[^>]*hidden>Clear</.test(sh));
-    // The search rule (model/lens.ts): every word somewhere in the name, any order, no case, accents or punctuation.
-    const nm = (name, q) => lens.nameMatches({ name }, lens.searchWords(q));
+    // The search rule (model/search.ts, the page's one matcher): every word in the name, any order, no case,
+    // accents or punctuation, run-together words, a typo away.
+    const srch = mods.search;
+    const nm = (name, q) => srch.all(srch.queryOf(q), srch.textOf(name));
     check('sources: search finds words in any order, ignoring case, accents and punctuation', nm('The Austin Chronicle editorial board', 'chronicle AUSTIN') && nm('Texas AFL-CIO', 'aflcio') && nm('Texas AFL-CIO', 'afl-cio') && nm('La Opinión', 'opinion') && nm('Planned Parenthood Texas Votes', '  ') && !nm('The Austin Chronicle editorial board', 'chronicle houston'));
-    check('sources: only spaces or punctuation is no search', lens.searchWords(' - ’ ').length === 0 && lens.searchWords('Sun-Times').join() === 'suntimes');
+    check('sources: as you type, and a typo away', nm('The Austin Chronicle editorial board', 'chron') && nm('The Austin Chronicle editorial board', 'chronical') && nm('Houston Chronicle editorial board', 'housotn') && !nm('Houston Chronicle editorial board', 'zzzz'));
+    check('sources: only spaces or punctuation is no search', srch.queryOf(' - ’ ') === null && nm('Chicago Sun-Times', 'Sun-Times') && nm('Chicago Sun-Times', 'suntimes'));
     S.ui.srcQ = 'tribune';
     const tq = views.lens.sourcesSheetHTML();
     const rows = [...tq.matchAll(/data-act="src" data-id="([^"]+)"/g)].map((m) => m[1]);
@@ -2207,6 +2210,70 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     S.ui.report.watched = true;
     check('add a source: sent and watched, it says it shows up right here', /Sent\.<\/b> If it checks out, it shows up right here\. Keep going\./.test(views.shelf.shelfHTML()));
     S.ui.report = null;
+  }
+
+  /* ---------- Kevin's second batch (Oct 28): step 5's bar, What'll be sent, How this guide works, the what-ifs search ---------- */
+  {
+    const strip = (h) => h.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+    const keep = { index: S.index, view: S.view, uiView: S.ui.view, wiQ: S.ui.wiQ, report: S.ui.report };
+    S.index = INDEX;
+    open('FL', ['orlando-fl']);
+    S.view = 'ballot';
+    // Step 5: the left button goes back one step, and the green one shares the guide; step 4 as it was.
+    S.ui.view = 'pass';
+    const bar5 = views.ledger.barHTML();
+    check('step 5: the bar goes back one step, to My plan, and its green button shares the guide', /<button class="ftog" data-act="view" data-v="cheat" data-fk="bar-back">Back to my plan<\/button>/.test(bar5) && /<button class="fcta" data-act="share-guide" data-fk="bar-share">Share the guide<\/button>/.test(bar5) && !/My plan</.test(bar5.replace('Back to my plan', '')), bar5);
+    const p5 = views.pass.passHTML();
+    check('step 5: its back link goes to My plan too, and the page has no second Share the guide', /data-act="view" data-v="cheat" data-fk="pass-back">Back to my plan</.test(p5) && !/share-guide/.test(p5));
+    S.ui.view = 'cheat';
+    const bar4 = views.ledger.barHTML();
+    check('step 4: back to the ballot, on to Help friends vote', /data-v="ballot" data-fk="bar-back">Back to the ballot</.test(bar4) && /data-v="pass" data-fk="bar-pass">Help friends vote</.test(bar4));
+    S.ui.view = 'ballot';
+    // What'll be sent: folded shut at every form's foot, after Send, with its one summary; the post doesn't change.
+    const along = { page: 'Your ballot', where: 'Orlando, 32801', url: 'https://vote.kevinhg.com/', data: '2026-10-28 12:00 UTC', build: 'abc1234', device: 'Safari 18 on iPhone, 390px wide', errors: [] };
+    const base = { what: '', tag: '', hint: '', along, state: 'edit', err: false, fk: '', back: null };
+    for (const [kind, f] of [['report', { wrong: '', reach: '' }], ['city', { city: '', zip: '', reach: '' }], ['source', { src: '', where: '', picks: '', reach: '' }]]) {
+      S.ui.report = { ...base, kind, f };
+      const fh = views.shelf.shelfHTML();
+      check(`what’ll be sent (${kind}): folded shut after Send, "What’ll be sent", no "Add anything else"`, /<details class="rp-along" id="rp-along"><summary>What’ll be sent<svg class="chev"/.test(fh) && !/<details class="rp-along"[^>]* open/.test(fh) && fh.indexOf('<details') > fh.indexOf('report-send')
+        && !/Add anything else|We’ll send along/.test(fh) && fh.includes('<p class="fine rp-fine">Your request goes to Kevin’s Google Form. Nothing you type here is saved in the guide.</p>'));
+    }
+    S.ui.report = { ...base, kind: 'report', f: { wrong: 'A wrong date.', reach: '' } };
+    check('what’ll be sent: the post still says "Sent along:" and the list, word for word', views.shelf.reportBody(S.ui.report)['entry.780704302'].startsWith('A wrong date.\n\nSent along:\nPage: Your ballot\nPlace: Orlando, 32801\n'));
+    // How this guide works: Report a problem is a link; the end in groups; the one source numbered.
+    S.ui.report = { ...base, kind: 'how', f: {} };
+    const how = views.shelf.shelfHTML();
+    check('how: "Report a problem" in Mistakes opens the report form', /<li><b>Mistakes\.<\/b> Open any race or measure and tap <button class="linkbtn" data-act="shelf" data-kind="report"[^>]*data-fk="how-report">Report a problem<\/button>\.<\/li>/.test(how));
+    check('how: the end goes official links, last checked, the numbered sources, then who made it', [how.indexOf('Official voting info for Florida'), how.indexOf('data-fk="asof"'), how.indexOf('<h3 class="how-h">Sources</h3>'), how.indexOf('Data built')].every((x, i, a) => x > 0 && (!i || x > a[i - 1]))
+      && /<ol class="how-src"><li id="src-1">“Voting is underway in every state”: <a[^>]+href="https:\/\/electioninnovation\.org\/research\/dates-for-2026-early-in-person-and-mail-voting\/"/.test(how) && />Check your registration</.test(how) && !/“Voting is underway in every state”: <a[^>]*>Center for Election Innovation &amp; Research<\/a>\.<\/p>/.test(how), strip(how).slice(-400));
+    // The first page's first line: the claim with its 1, linked to the source.
+    S.view = 'start';
+    const m = views.mast.mastHTML();
+    check('first page: "Voting is underway in every state" carries a superscript 1, linked to its source', /<p class="dateline">Voting is underway in every state\.<sup class="cite"><a href="https:\/\/electioninnovation\.org\/[^"]+" target="_blank" rel="noopener" aria-label="Source 1: Center for Election Innovation &amp; Research">1<\/a><\/sup> Election Day is /.test(m), (m.match(/<p class="dateline">[\s\S]*?<\/p>/) || [''])[0]);
+    S.view = 'ballot';
+    // The what-ifs search (model/search.ts, the same matcher as the sources sheet).
+    const h = S.ballot.howto;
+    const pw = views.planstrip;
+    const found = (q) => { S.ui.wiQ = q; const html = pw.whatIfBody(h); return [...html.matchAll(/<p class="wi-rq">([^<]+)<\/p>/g)].map((x) => x[1]); };
+    S.ui.wiQ = '';
+    check('what-ifs: with nothing typed, the three groups as always, questions to tap', /<button class="wi-q"/.test(pw.whatIfBody(h)) && !/wi-found|wi-none/.test(pw.whatIfBody(h)) && /Gotchas in Florida/.test(pw.whatIfBody(h)));
+    check('what-ifs: "lost ballot" finds the one answer', found('lost ballot').join(' | ') === 'My mail ballot never came, or I lost it.', found('lost ballot').join(' | '));
+    check('what-ifs: an everyday word: "absentee" finds the mail-ballot answers', found('absentee').includes('My mail ballot never came, or I lost it.') && found('absentee').includes('I mailed my ballot but now want to vote in person.') && !found('absentee').includes('I’m in line when polls close.'), found('absentee').join(' | '));
+    check('what-ifs: a typo: "provisonal" finds the provisional ballot', found('provisonal').includes('What&#39;s a provisional ballot?') || found('provisonal').some((q) => /provisional ballot\?/.test(q)), found('provisonal').join(' | '));
+    check('what-ifs: words in any order, a phrase: "out of town" finds being away on Election Day', found('out of town').some((q) => /away on Election Day/.test(q)), found('out of town').join(' | '));
+    check('what-ifs: a word only in a full answer shows that answer’s full text', (() => { S.ui.wiQ = 'drivers licence'; const html = pw.whatIfBody(h); return /wi-found/.test(html); })());
+    S.ui.wiQ = 'felony <b>';
+    const none = pw.whatIfBody(h);
+    check('what-ifs: no match says so plainly and names the election office, with its phone', /<p class="wi-none">No answers match “felony &lt;b&gt;”\. Contact your election office: <a[^>]*>[^<]+<\/a> · <span class="phone"><a href="tel:\d+">/.test(none) && pw.wiMatchWords() === 'No answers match.', strip(none));
+    S.ui.wiQ = 'lost ballot';
+    check('what-ifs: a screen reader hears the count', pw.wiMatchWords() === '1 answer matches.', pw.wiMatchWords());
+    S.ui.open.add('whatif');
+    S.ui.wiQ = '';
+    const plan = views.planstrip.planHTML();
+    check('what-ifs: a labeled search box leads the panel, empty to start, its Clear hidden', /<form class="wi-find" data-form="wi-q" role="search">\s*<label class="vh" for="wi-q">Search voting dates, ID rules and help<\/label>\s*<input id="wi-q" type="search" placeholder="Search: lost ballot, ID, moved…" value=""/.test(plan) && /data-act="wi-q-x"[^>]*hidden>Clear</.test(plan) && plan.indexOf('id="wi-q"') < plan.indexOf('id="wi-res"'));
+    S.ui.open.delete('whatif');
+    Object.assign(S, { index: keep.index, view: keep.view });
+    S.ui.view = keep.uiView; S.ui.wiQ = keep.wiQ; S.ui.report = keep.report;
   }
 
 }

@@ -59,7 +59,19 @@ async function newPage(opts = {}) {
   return { ctx, page };
 }
 const shot = (page, name) => page.screenshot({ path: path.join(SHOTS, `${name}.png`) });
-const tap = async (page, sel) => { const l = page.locator(sel).first(); await l.scrollIntoViewIfNeeded(); await l.tap(); await page.waitForTimeout(140); };
+/* A tap. An element redrawn under it (the page repainting as a lookup or the network answers) is tried again,
+   twice at most: two production runs after #36 crashed here on "not attached" and "not stable" (Oct 28), with
+   every check passing up to the crash. Anything else still fails at once. */
+const tap = async (page, sel) => {
+  for (let i = 0; ; i++) {
+    try { const l = page.locator(sel).first(); await l.scrollIntoViewIfNeeded(); await l.tap(); break; } catch (e) {
+      if (i >= 2 || !/not attached|not stable/.test(String(e))) throw e;
+      console.log(`RETRY  ${sel}: ${String(e).split('\n')[0]}`);
+      await page.waitForTimeout(300);
+    }
+  }
+  await page.waitForTimeout(140);
+};
 /* The first page: steps 1 and 2 together. A complete ZIP looks itself up as it's typed. */
 async function openZip(page, zip, query = '') {
   await page.goto(`${BASE}/?today=${TODAY}${query}`);

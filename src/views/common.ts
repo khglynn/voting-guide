@@ -45,6 +45,9 @@ export function shelfAttrs(o: { kind: ShelfKind; what?: string; tag?: string; hi
     o.hint ? `data-hint="${o.hint}"` : '', 'aria-haspopup="dialog"', `data-fk="${esc(o.fk)}"`].filter(Boolean).join(' ');
 }
 /* "Report a problem" (from a row, Full details, a paywalled source) or "Request a city". */
+/* The guide's one cited claim, "Voting is underway in every state" (the first page's first line, mast.ts),
+   numbered 1 there and in How this guide works' Sources (shelf.ts). */
+export const UNDERWAY_SRC = { url: 'https://electioninnovation.org/research/dates-for-2026-early-in-person-and-mail-voting/', name: 'Center for Election Innovation & Research' };
 export const reportAttrs = (o: { city?: boolean; what?: string; tag?: string; hint?: ShelfHint; fk: string }): string =>
   shelfAttrs({ kind: o.city ? 'city' : 'report', what: o.what, tag: o.tag, hint: o.hint, fk: o.fk });
 

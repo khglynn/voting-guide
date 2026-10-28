@@ -702,10 +702,20 @@ b, strong { font-weight: 600; }
 .s-top .row-btns { margin-top: 8px; }
 .s-top > .small { margin-top: 8px; }
 .s-find { position: sticky; top: -12px; z-index: 1; display: flex; align-items: center; gap: 12px; margin: 14px -16px 0; padding: 12px 16px 10px; background-color: var(--bone); background-image: var(--tile); background-size: 256px; background-blend-mode: var(--tile-blend); border-bottom: 1px solid var(--rule-2); }
-.s-find input { flex: 1; min-width: 0; min-height: 46px; padding: 0 10px; border: 1.5px solid var(--ink); background: var(--paper); border-radius: 2px; font-size: 16px; -webkit-appearance: none; appearance: none; }
-.s-find input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
-.s-find input::placeholder { color: var(--faint); opacity: 1; }
-.s-find .linkbtn { flex: none; margin: 0; }
+.s-find input, .wi-find input { flex: 1; min-width: 0; min-height: 46px; padding: 0 10px; border: 1.5px solid var(--ink); background: var(--paper); border-radius: 2px; font-size: 16px; -webkit-appearance: none; appearance: none; }
+.s-find input::-webkit-search-cancel-button, .wi-find input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.s-find input::placeholder, .wi-find input::placeholder { color: var(--faint); opacity: 1; }
+.s-find .linkbtn, .wi-find .linkbtn { flex: none; margin: 0; }
+/* The plan's dates, ID and what-ifs search (Oct 28): a light box on the green paper, like the ZIP box on the
+   first page; while it's on, what it found shows open, each question as a plain line over its answer. */
+.wi-find { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.plan .wi-find input { background: var(--on-dusk); border-color: var(--on-dusk); color: #1F2623; }
+.plan .wi-find input::placeholder { color: #5C645F; }
+.plan .wi-find .linkbtn { color: var(--on-dusk); }
+.wi-found { padding-top: 10px; }
+.wi-rq { font-size: 15.5px; font-weight: 600; line-height: 1.35; padding-bottom: 4px; }
+.wi-none { font-size: 15px; line-height: 1.45; }
+.plan .whatifs .wi-none a { color: var(--on-dusk); }
 .s-none { margin-top: 18px; font-size: 15px; color: var(--ink); }
 .s-list > .s-legend { margin-top: 14px; }
 /* The list's first lines, and its end (Oct 25): what's on to start, the sources we couldn't read
@@ -755,16 +765,21 @@ b, strong { font-weight: 600; }
 .rp-form .rp-alt { margin-top: -6px; text-align: center; }
 .rp-fail { padding: 8px 12px; background: var(--paper); border-left: 3px solid var(--clay); font-size: 14.5px; line-height: 1.45; }
 .rp-sent { padding: 6px 0 4px; font-size: 17px; }
-/* "We'll send along": the fine print, ruled off in pen, so it reads as what the page adds and not as
-   more to fill in. */
+/* What'll be sent: the fine print, ruled off in pen, so it reads as what the page adds and not as more to
+   fill in. */
 .rp-along { padding: 10px 0 2px; border-top: 1px solid var(--rule-2); font-size: 13.5px; line-height: 1.45; color: var(--muted); }
 .rp-along b { color: var(--ink-2); font-weight: 600; }
 .rp-along ul { margin-top: 4px; list-style: disc; padding-left: 18px; display: grid; gap: 1px; overflow-wrap: anywhere; }
-.rp-along > p:last-child { margin-top: 6px; }
-/* The follow-up sheet (Tell me when it's in): the request as a line, what goes along folded under the button. */
+/* The follow-up sheet (Tell me when it's in): the request as a line. */
 .rp-req { margin-top: 8px; font-size: 15.5px; line-height: 1.4; }
+/* What'll be sent, folded at every form's foot (Oct 28): its row reads like the paste box's, the arrow after
+   its words. */
 details.rp-along { margin-top: 12px; }
-details.rp-along summary { padding: 10px 0; cursor: pointer; color: var(--ink-2); font-weight: 600; }
+details.rp-along summary { display: flex; align-items: center; gap: 4px; min-height: 44px; cursor: pointer; color: var(--ink-2); font-weight: 600; list-style: none; }
+details.rp-along summary::-webkit-details-marker { display: none; }
+details.rp-along summary .chev { margin-left: 6px; }
+details.rp-along[open] summary .chev { transform: rotate(180deg); }
+details.rp-along ul { margin-top: 0; padding-bottom: 6px; }
 /* Support: a few words and the coffee in the guide's own button. */
 .sp p { font-size: 15.5px; line-height: 1.45; }
 .sp p + p { margin-top: 8px; }
@@ -948,6 +963,19 @@ details.rp-along summary { padding: 10px 0; cursor: pointer; color: var(--ink-2)
 .gliding { overflow: hidden; overflow: clip; overflow-anchor: none; }
 .trust-list { margin-top: 10px; display: grid; gap: 8px; list-style: disc; padding-left: 20px; font-size: 14.5px; }
 .asof { font-size: 14px; margin-top: 6px; display: grid; gap: 2px; }
+/* Oct 28: the privacy promise one fact to a line, and the sheet's end in groups: the state's official links,
+   the dates each state was checked, the numbered sources, then who made it. */
+.how-sub { margin-top: 4px; display: grid; gap: 4px; list-style: circle; padding-left: 18px; }
+.trust-list .linkbtn { display: inline; min-height: 0; margin: 0; padding: 0; }
+.how-end { margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--rule-2); display: grid; gap: 14px; font-size: 14.5px; }
+.how-h { font-family: var(--f-display); font-size: 16px; font-weight: 800; font-variation-settings: "wdth" 78; color: var(--print); }
+.how-ul { margin-top: 4px; display: grid; gap: 2px; }
+.how-src { margin-top: 4px; padding-left: 20px; list-style: decimal; }
+.how-end > .fine { margin-top: 0; }
+/* The first page's one cited claim: a small 1 that links to its source, with room around it to tap. */
+.cite { font-size: .7em; line-height: 0; vertical-align: super; margin-left: 1px; }
+.cite a { position: relative; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; padding: 0 2px; }
+.cite a::after { content: ""; position: absolute; inset: -14px -12px; }
 
 /* ---------- views ---------- */
 body.v-cheat .plan, body.v-pass .plan, body.v-cheat #r-mast, body.v-pass #r-mast { display: none; }

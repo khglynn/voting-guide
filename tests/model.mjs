@@ -35,7 +35,7 @@ const util = await load('/src/util.ts');
 const geo = await load('/src/geo.ts');
 const common = await load('/src/views/common.ts');
 const mods = {};
-for (const m of ['lens', 'tally', 'bulk', 'judges', 'labels', 'plan', 'address', 'coverage', 'adds']) {
+for (const m of ['lens', 'tally', 'bulk', 'judges', 'labels', 'plan', 'address', 'coverage', 'adds', 'search']) {
   const f = path.join(ROOT, 'src', 'model', `${m}.ts`);
   if (fs.existsSync(f)) mods[m] = await load(`/src/model/${m}.ts`);
 }
@@ -800,7 +800,11 @@ function roundTrip(name, stCode, places, mutate) {
   st.S.ui.report = { ...st.S.ui.report, kind: 'support' };
   const sup = views.shelf.shelfHTML();
   st.S.ui.report = was;
-  check('stats: the How text says what is counted and what never is', how.includes('<li><b>Your privacy.</b> No accounts, no ads, no cookies. We count visits with Vercel’s cookie-free analytics: the screens you open, the forms you send, the state of your ballot, the site that sent you here, and your rough location, browser, operating system and device type. It never gets your address, ZIP or picks, doesn’t keep your IP, and can’t tell who you are. Your picks stay on your device unless you share your save link. An address you type goes only to the Census Bureau’s lookup, and we never keep it. If the page breaks, it sends us a crash report with no address, no picks and no IP.</li>'));
+  // Oct 28: one fact to a sub-bullet (Kevin: "give it sub-bullets so it's easy to skim"), every one still there.
+  const priv = (how.match(/<li class="how-priv"><b>Your privacy\.<\/b><ul class="how-sub">([\s\S]*?)<\/ul><\/li>/) || [])[1] || '';
+  const facts = ['<li>No accounts, no ads, no cookies.</li>', 'We count visits with Vercel’s cookie-free analytics.', 'the screens you open', 'when you send a form (never what’s in it)', 'which state your ballot is for', 'the site that sent you here', 'your rough location, browser, operating system and device type',
+    'never gets your address, ZIP or picks', 'doesn’t keep your IP address', 'can’t tell who you are', '<li>Your picks stay on your device unless you share your save link.</li>', '<li>An address you type goes only to the Census Bureau’s lookup, and we never keep it.</li>', '<li>If the page breaks, it sends us a crash report with no address, no picks and no IP address.</li>'];
+  check('stats: the How text says what is counted and what never is, one fact to a line', (priv.match(/<li>/g) || []).length === 6 && facts.every((f) => priv.includes(f)), facts.filter((f) => !priv.includes(f)).join(' | ') || priv.slice(0, 200));
   check('stats: no page says "no tracking" any more', !/no tracking/i.test(how) && !/no tracking/i.test(sup) && sup.includes('The guide is free, with no ads and no cookies.'));
 }
 

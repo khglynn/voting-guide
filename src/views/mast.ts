@@ -2,7 +2,7 @@
    a forwarded friend must know in five seconds whose ballot this is and how to change it. */
 import { S } from '../state';
 import { esc, fmtDate, todayISO } from '../util';
-import { ext, reportAttrs } from './common';
+import { ext, reportAttrs, UNDERWAY_SRC } from './common';
 import { trustHTML } from './trust';
 export { cityCount } from './trust';
 import { countyName } from './ledger';
@@ -19,11 +19,14 @@ function electionDate(): string {
   return Object.entries(counts).sort((a, b) => b[1] - a[1])[0]?.[0] || '';
 }
 const dateline = (): string => { const d = electionDate(); return d ? `General election, ${fmtDate(d)}` : 'General election'; };
-/* The first page's opening line: about voting right now, not about the guide. Its source is in
-   "How this guide works". Once Election Day has passed, the plain dateline again. */
-function kicker(): string {
+/* The first page's opening line: about voting right now, not about the guide. Its source is numbered 1, as
+   in "How this guide works" (Kevin, Oct 28: "sources should use superscript numbers"); the 1 links to it.
+   Once Election Day has passed, the plain dateline again. */
+function kickerHTML(): string {
   const d = electionDate();
-  return d && todayISO() <= d ? `Voting is underway in every state. Election Day is ${fmtDate(d)}.` : dateline();
+  if (!(d && todayISO() <= d)) return esc(dateline());
+  const cite = `<sup class="cite"><a href="${esc(UNDERWAY_SRC.url)}" target="_blank" rel="noopener" aria-label="${esc(`Source 1: ${UNDERWAY_SRC.name}`)}">1</a></sup>`;
+  return `Voting is underway in every state.${cite} Election Day is ${esc(fmtDate(d))}.`;
 }
 
 function tryBanner(): string {
@@ -95,7 +98,7 @@ export function mastHTML(): string {
 function doorHTML(): string {
   const ticks = ['Plain English', 'Full local details', 'Pick by endorsements or party'];
   return `<header class="mast front wrap">${tryBanner()}
-    <div class="mast-top" data-part="kicker"><p class="dateline">${esc(kicker())}</p></div>
+    <div class="mast-top" data-part="kicker"><p class="dateline">${kickerHTML()}</p></div>
     <h1 class="place">Quickly make your voting plan.</h1>
     <ul class="ticks">${ticks.map((t) => `<li><i aria-hidden="true"></i>${esc(t)}</li>`).join('')}</ul>
     <div class="pad door" id="door">

@@ -23,6 +23,7 @@ import { cheatText, shareURL } from './views/cheat';
 import { messages, shareData, GUIDE_URL, SHARE_TITLE } from './views/pass';
 import { nextUp, sectionTally, sectionFolded, hiddenByOnly, qId } from './views/ledger';
 import { sourceListHTML, matchWords } from './views/lens';
+import { whatIfBody, wiMatchWords } from './views/planstrip';
 
 export type Act = (d: DOMStringMap, el: HTMLElement) => void | Promise<void>;
 export const A: Record<string, Act> = {};
@@ -636,6 +637,29 @@ export function clearSearch(): void {
   q?.focus({ preventScroll: true });
 }
 A['src-q-x'] = () => { clearSearch(); };
+/* The same for the plan's dates, ID and what-ifs (views/planstrip.ts): only its results repaint as you type. */
+let wiTimer: number | undefined;
+function paintWhatIfs(): void {
+  const res = document.getElementById('wi-res');
+  if (!res || !S.ballot) return;
+  res.innerHTML = whatIfBody(S.ballot.howto);
+  const x = document.querySelector<HTMLElement>('#plan [data-act="wi-q-x"]');
+  if (x) x.hidden = !S.ui.wiQ;
+  window.clearTimeout(wiTimer);
+  wiTimer = window.setTimeout(() => { if (S.ballot && S.ui.wiQ.trim() && document.getElementById('wi-res')) announce(wiMatchWords()); }, 700);
+}
+export function wiSearch(el: HTMLInputElement): void {
+  S.ui.wiQ = el.value;
+  paintWhatIfs();
+}
+export function clearWi(): void {
+  S.ui.wiQ = '';
+  const q = document.querySelector<HTMLInputElement>('#wi-q');
+  if (q) q.value = '';
+  paintWhatIfs();
+  q?.focus({ preventScroll: true });
+}
+A['wi-q-x'] = () => { clearWi(); };
 /* All sources or a party. Opened from the Edit sheet, it goes back there when it closes. The sources sheet's
    search starts empty each time it opens (coming back to it from Add a source keeps what was typed). */
 A.sheet = (d, el) => {
@@ -866,7 +890,7 @@ A['shelf-share'] = async () => {
     if (S.ui.view !== 'pass') { go('pass'); return; }
     render(['sheet']);
     glideTo($('#pass'), 0);
-    focusFk('share-guide');
+    focusFk('bar-share');
     return;
   }
   const nav = navigator as Navigator & { share?: (d: ShareData) => Promise<void> };
@@ -968,6 +992,7 @@ A['reader-close'] = () => {
 A['whatif-sit'] = (d) => {
   const k = `wi-${d.k}`;
   S.ui.open.add('whatif'); S.ui.open.add(k);
+  S.ui.wiQ = ''; // the question in its place, not a search's results
   render(['plan']);
   // Opened at once, like the menu's jump to "How this guide works", so the glide knows how far the
   // page now goes; the glide and the mark are the motion.
@@ -977,6 +1002,8 @@ A['whatif-sit'] = (d) => {
 A.open = (d, el) => {
   const k = d.k!;
   S.ui.open.has(k) ? S.ui.open.delete(k) : S.ui.open.add(k);
+  // "Dates, ID, ..." closed: its search goes with it.
+  if (k === 'whatif' && !S.ui.open.has(k)) S.ui.wiQ = '';
   // Inside the shelf ("When each state was last checked"): the sheet repaints, its height gliding.
   if (el.closest('#r-sheet > .sheet-panel.shelf')) { glide(['#r-sheet > .sheet-panel.shelf'], () => render(['sheet'])); if (el.dataset.fk) focusFk(el.dataset.fk); return; }
   if (k === 'off') { glide(['#r-off'], () => renderOff()); return; }

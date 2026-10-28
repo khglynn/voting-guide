@@ -171,6 +171,9 @@ export interface HowTo {
   /* set by plan.localHowto when the ballot spans counties and the voter's county isn't known: each county's
      tools, so the plan can offer them labeled (Oct 28) */
   county_links?: { county: string; lookups: Lookups }[];
+  /* text that changes on its own date (plan.applyDated), and the day localHowto applied it for */
+  dated?: Dated[];
+  day?: string;
   election_date: string;
   last_verified: string | null;
   official_site: Src;
@@ -260,11 +263,15 @@ export interface StateBundle {
 
 export interface HelpAction { label: string; url: string }
 
-export type Lookups = { early_in_person?: string; election_day?: string; drop_box?: string };
+export type Lookups = { early_in_person?: string; election_day?: string; drop_box?: string; tracking?: string };
+export type Office = { name: string; url: string | null; phone: string | null; phone_label?: string; lines?: OfficeLine[]; hours?: string; source?: string };
+/* Text that changes on its own date (Oct 28): from `from` (the voter's local date) on, the slot at `path`
+   reads `text`. Paths are the bundle's: "situations.<id>.short", "gotchas.4", "gotcha_shorts.4", "notes". */
+export interface Dated { path: string; from: string; text: string }
 /* One county's where-to-vote tools for a place that spans counties. `zips`: the place's ZIPs that lie wholly
    in this county (by the Census's ZIP-to-county file and the place's own research both), so a ZIP alone can
    name the county. */
-export interface CountyLinks { county: string; zips: string[]; lookups: Lookups; source: string; confidence: Confidence }
+export interface CountyLinks { county: string; zips: string[]; lookups: Lookups; source: string; confidence: Confidence; office?: Office }
 /* A county's own answer to a state question: what it gives replaces the state's (steps: null means none). */
 export interface PlaceSituation { id: string; short?: string; answer?: string; steps?: string[] | null; source: string; confidence: Confidence }
 export interface OfficeLine { label: string; phone: string; hours?: string }
@@ -278,7 +285,7 @@ export interface PlaceBundle {
   state: string;
   counties: string[];
   /* `phone_label` names the main phone ("General line") when `lines` adds labeled direct ones (Oct 28) */
-  county_election_office: { name: string; url: string | null; phone: string | null; phone_label?: string; lines?: OfficeLine[]; hours?: string; source?: string } | null;
+  county_election_office: Office | null;
   sample_ballot_url: string | null;
   zips: string[];
   zip_caveats: string | null;
@@ -297,6 +304,7 @@ export interface PlaceBundle {
   situations?: PlaceSituation[];
   /* the official pages behind the place's own facts (notes, office lines, answers); not shown */
   sources?: Src[];
+  dated?: Dated[];
   order: string[];
   local: string[];
   items: Item[];

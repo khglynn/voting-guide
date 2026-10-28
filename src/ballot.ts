@@ -3,6 +3,7 @@
 import type { Contest, Endorsement, Endorser, HowTo, Item, Measure, PlaceBundle, StateBundle } from './types';
 import { S } from './state';
 import { localHowto, voterCounty } from './model/plan';
+import { todayISO } from './util';
 import { seatless, hasSeat } from './model/maps';
 
 export type SectionKey = 'federal' | 'state' | 'judicial' | 'county' | 'city' | 'school' | 'special_district' | 'measures';
@@ -218,10 +219,11 @@ export function buildBallot(sb: StateBundle, places: PlaceBundle[]): Ballot {
 }
 
 /* The plan facts for this voter's county (Oct 28), on a ballot whose place spans counties: from the address
-   lookup's county (this visit only) or the ZIP. Called when a ballot opens and when a lookup names the county. */
+   lookup's county (this visit only) or the ZIP. Called when a ballot opens, when a lookup names the county, and
+   once a minute (main.ts), so text dated to change (plan.applyDated) changes at midnight on an open page. */
 export function localize(b: Ballot, zip: string | null | undefined, addrCounty: string | null | undefined): void {
   const county = voterCounty(b.places, zip, addrCounty);
-  if (county === b.county) return;
+  if (county === b.county && b.howto.day === todayISO()) return;
   b.county = county;
   b.howto = localHowto(b.stateHowto, b.places, county);
 }

@@ -14,7 +14,8 @@ import { toggleChip, setParty, setSources, noEndorsements, doorNone, chipState, 
 import { courtGroup } from './model/labels';
 import { claimAnswer, claimOn, claimOff } from './model/address';
 import { basisWords, LEANS, FORM, reportWhere } from './views/common';
-import { reportBody, reportFallbackURL, requiredOf, isForm, collectAlong, askBody, PICKS_FOLD } from './views/shelf';
+import { reportBody, reportFallbackURL, requiredOf, isForm, isFollow, collectAlong, askBody, PICKS_FOLD } from './views/shelf';
+import { track, type Events } from './stats';
 import { covOf } from './views/coverage';
 import { rememberAsk } from './model/coverage';
 import { cheatText, shareURL } from './views/cheat';
@@ -747,6 +748,10 @@ async function postForm(body: Record<string, string>): Promise<'sent' | 'failed'
   window.clearTimeout(timer);
   return ok ? 'sent' : late ? 'unsure' : 'failed';
 }
+/* Which request went out, for the visit counts (stats.ts "request"): the follow-up to a one-tap request, a
+   city, a source, or a report (a paywalled or bot-checked source's "Send it to us" is the report form). */
+const requestKind = (r: Shelf): Events['request']['kind'] =>
+  isFollow(r) ? 'follow_up' : r.kind === 'city' ? 'city' : r.kind === 'source' ? 'source' : 'report';
 export async function sendReport(): Promise<void> {
   const r = S.ui.report;
   if (!r || !isForm(r.kind) || r.state === 'sending' || r.state === 'sent') return;
@@ -765,6 +770,7 @@ export async function sendReport(): Promise<void> {
   render(['sheet']);
   const state = await postForm(reportBody(r));
   const ok = state === 'sent';
+  if (ok) track('request', { kind: requestKind(r) });
   if (S.ui.report !== r || S.ui.sheet !== 'shelf') {
     toast(state === 'sent' ? 'Sent. Kevin reads every one.' : state === 'unsure' ? 'Couldn’t confirm your report sent.' : 'That didn’t send. Try again in a moment.');
     return;
@@ -794,7 +800,11 @@ A['cov-ask'] = async () => {
   repaintCov();
   const state = await postForm(askBody(ask, collectAlong()));
   S.ui.covAsk = state === 'sent' ? '' : state;
-  if (state === 'sent') rememberAsk(ask.key);
+  if (state === 'sent') {
+    rememberAsk(ask.key);
+    // A ZIP we don't cover asks for its city ("z:"); a thin place asks for local picks ("p:", model/coverage.ts).
+    track('request', { kind: ask.key.startsWith('p:') ? 'picks' : 'city' });
+  }
   repaintCov();
   focusFk(state === 'sent' ? 'cov-lead' : 'cov-ask');
 };
@@ -934,11 +944,11 @@ A.open = (d, el) => {
 A['choose-place'] = (d) => {
   const browse = d.from === 'browse';
   if (browse) fromList();
-  void openChosen(d.ids!.split('+'), !browse && S.zipChoice ? S.zipChoice.zip : '');
+  void openChosen(d.ids!.split('+'), !browse && S.zipChoice ? S.zipChoice.zip : '', browse ? 'list' : undefined);
 };
 A['choose-state'] = (d) => {
   fromList();
-  void openBallot(d.st!, [], '', { door: true }).then((ok) => { if (ok) { const l = $('.door-place'); if (l) l.scrollIntoView({ block: 'start' }); focusFk('su-h'); } });
+  void openBallot(d.st!, [], '', { door: true, how: 'list' }).then((ok) => { if (ok) { const l = $('.door-place'); if (l) l.scrollIntoView({ block: 'start' }); focusFk('su-h'); } });
 };
 /* A place from the shelf's list of cities: the shelf goes, and from a ballot the ballot is left the way
    Change leaves it (saved, and offered on the first page the place opens on). */
@@ -1011,7 +1021,7 @@ A.copy = async () => {
   if (await copyText(text)) { S.ui.copyFallback = null; toast('Copied. Paste it into a note or a text.'); render(['cheat']); }
   else { S.ui.copyFallback = text; render(['cheat']); $('.copy-fallback')?.focus(); ($('.copy-fallback') as HTMLTextAreaElement | null)?.select(); }
 };
-A['save-open'] = () => { S.ui.saveOpen = !S.ui.saveOpen; render(['cheat']); if (S.ui.saveOpen) focusFk('save-url'); };
+A['save-open'] = () => { S.ui.saveOpen = !S.ui.saveOpen; render(['cheat']); if (S.ui.saveOpen) { focusFk('save-url'); track('share', { act: 'made' }); } };
 A['copy-link'] = async () => {
   const url = shareURL();
   if (await copyText(url)) toast('Link copied. Text or email it to yourself.');

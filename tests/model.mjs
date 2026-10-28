@@ -923,7 +923,9 @@ function roundTrip(name, stCode, places, mutate) {
     check('adds: a typed name inside a source’s name, as whole words, matches when it’s the only one', !chron || ad.typedSource(chron.name.replace(/^The\s+/i, '').split(' ').slice(0, 2).join(' '), es)?.id === chron.id, chron ? chron.name : 'no Chronicle on this ballot');
     check('adds: a typed link matches the source whose guide is on that site', ad.typedSource('https://www.aura-atx.org/whatever', es)?.id === 'aura');
     check('adds: part of a word, or a short word, matches nothing', ad.typedSource('aur', es) === null && ad.typedSource('the', es) === null && ad.typedSource('', es) === null);
-    check('adds: a name more than one source shares matches none', ad.typedSource('Democratic', [{ ...es[0], id: 'x1', name: 'Travis County Democratic Party', short: 'Travis Dems' }, { ...es[0], id: 'x2', name: 'Texas Democratic Party', short: 'Texas Dems' }]) === null);
+    const two = [{ ...es[0], id: 'x1', name: 'Travis County Democratic Party', short: 'Travis Dems' }, { ...es[0], id: 'x2', name: 'Texas Democratic Party', short: 'Texas Dems' }];
+    check('adds: a name more than one source shares matches none', ad.typedSource('Democratic', two) === null);
+    check('adds: the status’s id may choose among the ones that match, never add one', ad.typedSource('Democratic', two, 'x2')?.id === 'x2' && ad.typedSource('Democratic', two, 'aura') === null && ad.typedSource('nothing like it', es, 'aura') === null);
     check('adds: the status’s time is kept only in its own shape', ad.readStatus({ ok: true, state: 'live', at: '2026-10-28T18:00:00.000Z' }).at === '2026-10-28T18:00:00.000Z' && ad.readStatus({ ok: true, state: 'live', at: 'yesterday' }).at === null);
 
     // The banner: one request, its line by its status and how long it has waited.

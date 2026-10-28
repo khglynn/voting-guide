@@ -531,15 +531,13 @@ function heldFound(reads: HeldRead, sb: StateBundle, pbs: PlaceBundle[]): Found 
 const readHere = new Set<string>();
 /* Each request's held preview reads that failed this visit, by code: three, and it stops trying until a load. */
 const heldMisses = new Map<string, number>();
-/* Checks of a "live" request that found production on the same build as this page, by code (below). */
-const liveSame = new Map<string, number>();
 /* The 20-second checks a request gets past its first 30 minutes this visit (a ready preview that won't answer, a
    live build that hasn't landed): fifteen, five minutes' worth, then only a load or the tab coming back. */
 const lateTicks = new Map<string, number>();
 const LATE_MAX = 15;
 /* A swap waiting for a free moment: its ballot and load, and either a preview's sources (`found`) or this ballot's
    live bundles read fresh (`fresh`), with what to say once it lands. */
-interface Fold { key: string; seq: number; code: string; found?: Found; again?: true; fresh?: [StateBundle, ...PlaceBundle[]]; status?: AddStatus; sure?: false }
+interface Fold { key: string; seq: number; code: string; found?: Found; again?: true; fresh?: [StateBundle, ...PlaceBundle[]]; status?: AddStatus }
 let folds: Fold[] = [];
 let addsTimer: number | undefined;
 let foldTimer: number | undefined;
@@ -577,7 +575,7 @@ async function checkAdds(why: Why): Promise<void> {
       statusOf.set(a.code, st);
       if (a.st !== st.state) updateAdd(a.code, { st: st.state });
       if (!b) continue;
-      if (st.state === 'ready') await readPreview(a, b);
+      if (st.state === 'ready') await readPreview(a, st, b);
       else if (st.state === 'live') await readLive(a, st, b);
     }
   } finally {
@@ -589,9 +587,11 @@ async function checkAdds(why: Why): Promise<void> {
     if (again) watchAdds(again); else nextCheck();
   }
 }
-/* Ready: the preview's bundles for this ballot, and the sources in them the live data lacks. None (a source the
-   guide already has, with new picks; or one for another ballot) waits for "live". */
-async function readPreview(a: Add, b: Ballot): Promise<void> {
+/* Ready: the preview's bundles for this ballot, and of the sources in them the live data lacks, the one this request
+   became: the id the status names, or with none, the one matching what was typed (Codex, Oct 28: a branch can carry
+   another new source, one since taken out of the guide, and that one must never come along). None (a source the
+   guide already has, with new picks; one for another ballot) waits for "live". */
+async function readPreview(a: Add, st: AddStatus, b: Ballot): Promise<void> {
   const k = `${a.code}|${b.key}`;
   const was = built.get(b);
   if (readHere.has(k) || pendingFor(a.code, b.key) || !was) return;
@@ -601,8 +601,10 @@ async function readPreview(a: Add, b: Ballot): Promise<void> {
   // A source another request already brought counts as here, so it isn't taken twice.
   const live = new Set([...idsIn([was.sb, ...was.pbs]), ...(was.found ? was.found.endorsers.map((e) => e.id) : [])]);
   const plain = buildBallot(was.sb, was.pbs);
-  const found = pickNew(got, live, plain.byId, plain.order, placesKnown());
-  if (!found.endorsers.length) { readHere.add(k); return; }
+  const all = pickNew(got, live, plain.byId, plain.order, placesKnown());
+  const mine = st.id ? all.endorsers.find((e) => e.id === st.id) : typedSource(a.name, all.endorsers);
+  const found = mine ? pickNew(got, live, plain.byId, plain.order, placesKnown(), [mine.id]) : null;
+  if (!found || !found.endorsers.length) { readHere.add(k); return; }
   folds.push({ key: b.key, seq, code: a.code, found });
 }
 /* A request whose sources this device took in, on a ballot that doesn't show them yet (the read at the load
@@ -623,25 +625,17 @@ async function rereadHeld(a: Add, b: Ballot): Promise<void> {
   folds.push({ key: b.key, seq, code: a.code, found, again: true });
 }
 /* Live, and this device never took the source in (it was away while the request ran, or the guide already had
-   the source and this brought new picks): once production is on a newer build than this page (the index's
-   generated moved), this ballot's live bundles are read fresh and swapped in. If this page's build is newer than
-   the status's own time, it has the merge already. Otherwise production may still be deploying: after nine
-   checks on the same build, a source matching what was typed is taken as here; with none, the request waits. */
+   the source and this brought new picks). "Live" is written only once the pipeline has seen the source in
+   production's own bundle (vg-source.mjs), so production has it: if production's index is a newer build than
+   this page's, this ballot's live bundles are read fresh and swapped in; if it's the same build, this page has it
+   already. Either way the request is settled on what the ballot then shows. */
 async function readLive(a: Add, st: AddStatus, b: Ballot): Promise<void> {
   if (pendingFor(a.code, b.key) || !S.index) return;
   const seq = loadSeq;
   let idx: Index | null = null;
   try { idx = await farJSON(`${BASE}data/index.json`, 10_000) as Index; } catch { return; }
   if (!idx || typeof idx.generated !== 'string' || S.ballot !== b || seq !== loadSeq) return;
-  if (idx.generated === S.index.generated) {
-    // This page's build is newer than the "live" word: it has the merge already.
-    if (st.at && S.index.generated > st.at) { folds.push({ key: b.key, seq, code: a.code, status: st }); return; }
-    const n = (liveSame.get(a.code) || 0) + 1;
-    liveSame.set(a.code, n);
-    // Nine checks (three minutes) on the same build: this page has it too, if the source is here to show it.
-    if (n >= 9 && typedSource(a.name, b.endorsers)) folds.push({ key: b.key, seq, code: a.code, status: st, sure: false });
-    return;
-  }
+  if (idx.generated === S.index.generated) { folds.push({ key: b.key, seq, code: a.code, status: st }); return; }
   const got = await bundlesAt(BASE, b.st, b.places.map((p) => p.id), 15_000);
   if (!got || S.ballot !== b || seq !== loadSeq) return;
   // The rest of this visit reads the new build: its index, and these bundles, in place of the ones cached.
@@ -706,9 +700,11 @@ function tryFolds(): void {
   if (!b || !was) return;
   let { sb, pbs, found } = was;
   for (const f of now) {
-    if (f.fresh) { [sb, ...pbs] = f.fresh; found = withoutIds(found, idsIn(f.fresh)); }
+    if (f.fresh) [sb, ...pbs] = f.fresh;
     if (f.found) found = mergeFound(found, f.found);
   }
+  // A source the live bundles have now comes from them, never from an older preview (Codex, Oct 28).
+  found = withoutIds(found, idsIn([sb, ...pbs]));
   const nb = now.some((f) => f.found || f.fresh) ? build(sb, pbs, found) : b;
   const said: string[] = [];
   const turnOn: string[] = [];
@@ -744,8 +740,7 @@ function settleLive(f: Fold, b: Ballot): { on?: string; say?: string } {
   const st = f.status!;
   const a = readAdds().find((x) => x.code === f.code);
   if (!a) return {};
-  const e = typedSource(a.name, b.endorsers);
-  if (!e && f.sure === false) return {}; // not proven here yet: it waits for a load or the tab coming back
+  const e = typedSource(a.name, b.endorsers, st.id);
   forgetAdd(f.code);
   if (!e) return { say: ADD_COPY.elsewhere(addName(a, st)) };
   if (chosenIds().includes(e.id)) return { say: ADD_COPY.newPicks(e.short || e.name) };

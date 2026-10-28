@@ -2320,16 +2320,24 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
 {
   const getJ = async (f) => (await fetch(`${BASE}/data/${f}`, { headers: BYPASS ? { 'x-vercel-protection-bypass': BYPASS } : {} })).json();
   const realAustin = await getJ('place-austin-tx.json');
-  const liveAustin = JSON.parse(JSON.stringify(realAustin));
-  liveAustin.endorsers = liveAustin.endorsers.filter((e) => e.id !== 'aura');
-  for (const t of Object.keys(liveAustin.endorsements)) { delete liveAustin.endorsements[t].aura; if (!Object.keys(liveAustin.endorsements[t]).length) delete liveAustin.endorsements[t]; }
+  /* Austin's bundle without some sources: the live one, before the merge. */
+  const without = (ids) => {
+    const b = JSON.parse(JSON.stringify(realAustin));
+    b.endorsers = b.endorsers.filter((e) => !ids.includes(e.id));
+    for (const t of Object.keys(b.endorsements)) { for (const id of ids) delete b.endorsements[t][id]; if (!Object.keys(b.endorsements[t]).length) delete b.endorsements[t]; }
+    return b;
+  };
+  /* Another source that starts off with picks on Austin's ballot: a branch cut before it left the guide would still
+     carry it, and it must never come along with AURA. */
+  const other = realAustin.endorsers.find((e) => !e.default_on && e.id !== 'aura' && Object.values(realAustin.endorsements).some((r) => r[e.id] && r[e.id].s === 'endorsed'));
   const realIndex = await getJ('index.json');
   const CORS = { 'access-control-allow-origin': '*' };
   const json = (route, body) => route.fulfill({ status: 200, contentType: 'application/json', headers: CORS, body: JSON.stringify(body) });
   /* status: code -> {state, name, note}; up: the preview answers; slow: ms before it does; live: the site's own
      Austin bundle has AURA (the merge landed); bump: the site's index.json says a newer build. */
-  async function fakeAdds(page) {
+  async function fakeAdds(page, drop = ['aura']) {
     const c = { status: {}, up: false, slow: 0, live: false, bump: false, statusAsked: 0, previewAsked: 0 };
+    const liveAustin = without(drop);
     await page.route(`${BASE}/data/place-austin-tx.json`, (route) => json(route, c.live ? realAustin : liveAustin));
     await page.route(`${BASE}/data/index.json`, (route) => json(route, c.bump ? { ...realIndex, generated: '2026-10-28T23:59:00.000Z' } : realIndex));
     await page.route('https://script.google.com/macros/**', (route) => {
@@ -2396,7 +2404,7 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
     // Ready while the menu is open: it waits.
     const rowTop0 = await page.evaluate(() => document.getElementById('i-tx-austin-prop-a').getBoundingClientRect().top);
     await menu(page);
-    c.status[code] = { state: 'ready', name: 'AURA' };
+    c.status[code] = { state: 'ready', name: 'AURA', id: 'aura' };
     c.up = true;
     await poke(page);
     await until(() => c.previewAsked >= 2, 5000);
@@ -2458,7 +2466,7 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
   // 3. It waits for an address lookup, its late maps included, and keeps what the lookup found.
   {
     const { ctx, page } = await newPage();
-    const c = await fakeAdds(page);
+    const c = await fakeAdds(page, ['aura', other.id]);
     await seed(page, { code: 'aaaaaaaaaaaa', name: 'AURA' });
     c.status.aaaaaaaaaaaa = { state: 'checking', name: 'AURA' };
     let release = () => {};
@@ -2486,6 +2494,12 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
     await mapsSettled(page);
     check('Add in place, lookup: once the lookup and its maps are in, AURA goes on', landed, await now$(page, '.toast'));
     check('Add in place, lookup: and the lookup’s results stay: Found, and what it set', /^Found: Test One, Austin, TX 78704/.test(await text(page, '.addrbox .addr-found')) && /^Set from your address: /.test(await text(page, '.addrbox .addr-set')), await text(page, '.addrbox'));
+    await edit(page);
+    await tap(page, '.sheet-panel.picks [data-fk="cov-src"]');
+    await page.waitForSelector('.sheet-panel [data-fk="tg-aura"]');
+    check(`Add in place, lookup: another source the branch carries (${other.id}) never comes along`, !(await page.$(`.sheet-panel [data-fk="tg-${other.id}"]`)));
+    await page.keyboard.press('Escape');
+    await page.keyboard.press('Escape');
     noErrors(page, 'Add in place, lookup');
     await ctx.close();
   }
@@ -2587,7 +2601,7 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
     await seed(page, { code: 'ffffffffffff', name: 'aura' });
     c.status.ffffffffffff = { state: 'checking', name: 'AURA' };
     await openBallot(page, '78704');
-    c.status.ffffffffffff = { state: 'live', name: 'AURA' };
+    c.status.ffffffffffff = { state: 'live', name: 'AURA', id: 'aura' };
     c.live = true;
     c.bump = true;
     await poke(page);

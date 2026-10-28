@@ -122,22 +122,23 @@ export function readStatus(raw: unknown): AddStatus | null {
    Oct 28: the status's own id and name are display text, so a wrong or forged answer can't switch on a source
    nobody asked for). A link matches the source whose guide is on that site; a name matches a source's name or
    short name, or either one inside the other as whole words (five letters at least), once case, "the" and
-   punctuation are set aside. Exactly one source must match, else none does. */
-export function typedSource(typed: string, list: Endorser[]): Endorser | null {
+   punctuation are set aside. Exactly one source must match, else none does, unless the status's id names one of
+   those that match. */
+export function typedSource(typed: string, list: Endorser[], prefer: string | null = null): Endorser | null {
   const t = typed.trim();
+  // Several match: the status's id may choose among them, never add one (Oct 28, the pipeline sends it from ready on).
+  const one = (hits: Endorser[]): Endorser | null => (hits.length === 1 ? hits[0] : (prefer && hits.find((e) => e.id === prefer)) || null);
   const site = (u: string | null): string => { try { return u ? new URL(u).hostname.replace(/^www\./, '').toLowerCase() : ''; } catch { return ''; } };
   if (/^https?:\/\//i.test(t)) {
     const h = site(t);
-    const hits = h ? list.filter((e) => site(e.guide_url) === h) : [];
-    return hits.length === 1 ? hits[0] : null;
+    return one(h ? list.filter((e) => site(e.guide_url) === h) : []);
   }
   const norm = (x: string): string => x.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9 ]/g, ' ').replace(/\bthe\b/g, ' ').replace(/\s+/g, ' ').trim();
   const n = norm(t);
   if (!n) return null;
   // Whole words inside whole words, so "sun" never matches "sunday".
   const within = (a: string, b: string): boolean => a.length >= 5 && ` ${b} `.includes(` ${a} `);
-  const hits = list.filter((e) => [e.name, e.short].map(norm).some((x) => x === n || within(n, x) || within(x, n)));
-  return hits.length === 1 ? hits[0] : null;
+  return one(list.filter((e) => [e.name, e.short].map(norm).some((x) => x === n || within(n, x) || within(x, n))));
 }
 
 /* ---------- what a preview brings ---------- */

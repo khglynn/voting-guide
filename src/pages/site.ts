@@ -23,7 +23,7 @@
 import type { Contest, HowTo, Index, PlaceBundle, StateBundle } from '../types';
 import { buildBallot, sectionOf, SECTIONS, type Ballot, type SectionKey } from '../ballot';
 import { S } from '../state';
-import { rowTitle } from '../model/labels';
+import { cleanOffice, rowTitle } from '../model/labels';
 import { clock, isMailState } from '../model/plan';
 import { esc, fmtDate } from '../util';
 import { escP, telHTML } from '../views/common';
@@ -90,19 +90,20 @@ const IDS: Record<string, string> = { // the same words as My plan's (views/plan
 const candLine = (c: Contest): string => {
   if (!c.candidates.length) return '';
   const names = c.candidates.map((k) => `${esc(k.name)}${k.party ? ` <span class="pg-pty">(${esc(k.party)})</span>` : ''}`);
-  if (c.is_retention) return c.candidates.length > 1 ? `<p class="pg-c">Vote to keep or remove: ${names.join(', ')}</p>` : '';
+  if (c.is_retention) return `<p class="pg-c">${c.candidates.length > 1 ? `Vote to keep or remove: ${names.join(', ')}` : 'Vote to keep or remove this judge.'}</p>`;
   return `<p class="pg-c">${c.candidates.length === 1 ? 'Unopposed: ' : ''}${names.join(', ')}</p>`;
 };
-/* "District 46, 47 or 51", "Precinct 1, 2, 3, 4 or 5"; past six, just how many. From each member's own seat label. */
-function districtsLine(b: Ballot, members: string[]): string {
-  const labels = members.map((id) => rowTitle(b.byId.get(id)!).sub).filter((x): x is string => !!x);
-  if (labels.length !== members.length || members.length > 6) return `${members.length} districts`;
-  const parts = labels.map((l) => l.match(/^(.*?)\s*(\d+[A-Z]?)$/));
-  const prefix = parts[0] ? parts[0][1] : null;
-  if (prefix === null || !parts.every((m) => m && m[1] === prefix)) return labels.join(', ');
-  const nums = parts.map((m) => m![2]);
-  return `${prefix ? `${prefix} ` : ''}${nums.slice(0, -1).join(', ')} or ${nums[nums.length - 1]}`;
+/* A district race's own line inside its group: its district (or court) and its candidates. */
+function memberHTML(c: Contest): string {
+  const { title, sub } = rowTitle(c);
+  // A judges' list is named by its court (rowTitle's title); one judge by name, so the court is its sub.
+  const label = c.is_retention ? (c.candidates.length > 1 ? title : sub || title) : sub || c.district || title;
+  const names = c.candidates.map((k) => `${esc(k.name)}${k.party ? ` <span class="pg-pty">(${esc(k.party)})</span>` : ''}`);
+  const line = !names.length ? '' : c.is_retention ? `Vote to keep or remove: ${names.join(', ')}` : `${c.candidates.length === 1 ? 'Unopposed: ' : ''}${names.join(', ')}`;
+  return `<li><b>${escP(label)}</b>${line ? ` <span class="pg-c">${line}</span>` : ''}</li>`;
 }
+/* Past this many districts a statewide page says how many instead of listing them (Texas has 150 House seats). */
+const LIST_UP_TO = 12;
 interface Row { html: string; text: string }
 function ballotRows(b: Ballot, where: string): Map<SectionKey, Row[]> {
   S.ballot = b; // labels.ts reads the ballot open now (seat labels name its places)
@@ -117,8 +118,10 @@ function ballotRows(b: Ballot, where: string): Map<SectionKey, Row[]> {
       if (seen.has(g)) continue;
       seen.add(g);
       const grp = b.groups.find((x) => x.key === g)!;
-      const t = rowTitle(it).title;
-      add(sec, `<li><b>${esc(t)}</b> <span class="pg-sub">${esc(districtsLine(b, grp.members))}: your address decides which</span></li>`, t);
+      const c = it as Contest; // a district group only ever holds races (ballot.ts)
+      const t = cleanOffice(c.office);
+      const list = b.places.length > 0 || grp.members.length <= LIST_UP_TO;
+      add(sec, `<li><b>${escP(t)}</b> <span class="pg-sub">${list ? 'Your address decides which one is yours.' : `${grp.members.length} districts. Your address decides which one is yours.`}</span>${list ? `<ul class="pg-dist">${grp.members.map((m) => memberHTML(b.byId.get(m) as Contest)).join('')}</ul>` : ''}</li>`, t);
       continue;
     }
     const { title, sub } = rowTitle(it);
@@ -208,6 +211,7 @@ const PAGE_CSS = `
 .pg-list li{padding:9px 0;border-bottom:1px solid var(--rule)}
 .pg-sub,.pg-pty{color:var(--ink-2)}
 .pg-c{font-size:15px;color:var(--ink-2);margin-top:2px}
+.pg-dist{margin-top:4px;padding-left:14px;border-left:2px solid var(--rule)}.pg-dist li{padding:4px 0}.pg-dist .pg-c{display:block}
 .pg-may{display:inline-block;font-size:13px;color:var(--muted);border:1px solid var(--rule-2);border-radius:2px;padding:0 5px;margin-left:4px}
 .pg-dates{display:grid;gap:10px;margin-top:10px}.pg-dates span{display:block;font-size:15px;color:var(--ink-2)}
 .pg-links{display:grid;gap:4px;margin-top:10px}.pg-links a{display:inline-flex;min-height:40px;align-items:center}

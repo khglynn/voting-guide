@@ -1658,7 +1658,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const filled = (b, lines) => ['entry.90887649', 'entry.628621310', 'entry.1986493507'].every((k) => !b[k] || lines.some((l) => l.endsWith(`: ${b[k]}`)));
     check('shelf: a report posts all five of the form’s ids, the empty ones too', ids.every((k) => k in body) && body['entry.2040687555'] === '' && body.fvv === '1' && body.pageHistory === '0' && Object.keys(body).length === 7, JSON.stringify(body));
     check('shelf: a row’s report names the race with its id, and the place and ZIP', body['entry.90887649'] === 'Governor [tx-governor]' && body['entry.628621310'] === 'Austin, 78704', JSON.stringify(body));
-    check('shelf: "What’s wrong?" is your note, a blank line, then "Sent along:" and the list, word for word', body['entry.780704302'] === 'A wrong date.\n\nSent along:\nPage: Your ballot\nPlace: Austin, 78704\nAbout: Governor [tx-governor]\nPage address: https://vote.kevinhg.com/ (build abc1234)\nData built: 2026-10-21 19:04 UTC\nBrowser: Safari 18 on iPhone, 390px wide', body['entry.780704302']);
+    check('shelf: "What’s wrong?" is your note, a blank line, then "Sent along:" and the list, word for word', body['entry.780704302'] === 'A wrong date.\n\nSent along:\nPage: Your ballot\nPlace: Austin, 78704\nAbout: Governor [tx-governor]\nPage link: https://vote.kevinhg.com/ (build abc1234)\nData built: 2026-10-21 19:04 UTC\nBrowser: Safari 18 on iPhone, 390px wide', body['entry.780704302']);
     check('shelf: the link question gets the page’s address and the build', body['entry.1986493507'] === 'https://vote.kevinhg.com/ (build abc1234)', body['entry.1986493507']);
     const foot = shelf.reportBody({ ...base, kind: 'report', f: { wrong: 'Hours look off.', reach: 'kev@example.org' }, along: { ...along, page: 'My plan' } });
     check('shelf: from the foot or the menu, the race question gets the page, and no "About" line', foot['entry.90887649'] === 'My plan' && !/About:/.test(foot['entry.780704302']) && foot['entry.2040687555'] === 'kev@example.org'
@@ -1669,7 +1669,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('shelf: the race with its record id, the place and the page’s address are each on the list as posted', filled(body, shelf.alongLines(rep)), shelf.alongLines(rep).join(' | '));
     const city = shelf.reportBody({ ...base, kind: 'city', f: { city: ' Round Rock ', zip: '78664', reach: 'kev@example.org' } });
     check('shelf: a city request goes in as the city form always has, then a shorter "Sent along:" (no browser)', ids.every((k) => k in city) && city['entry.90887649'] === 'Please add my city' && city['entry.628621310'] === '78664'
-      && city['entry.780704302'] === 'Please add Round Rock\n\nSent along:\nPage: Your ballot\nPlace: Austin, 78704\nPage address: https://vote.kevinhg.com/ (build abc1234)\nData built: 2026-10-21 19:04 UTC' && city['entry.2040687555'] === 'kev@example.org'
+      && city['entry.780704302'] === 'Please add Round Rock\n\nSent along:\nPage: Your ballot\nPlace: Austin, 78704\nPage link: https://vote.kevinhg.com/ (build abc1234)\nData built: 2026-10-21 19:04 UTC' && city['entry.2040687555'] === 'kev@example.org'
       && city['entry.1986493507'] === 'https://vote.kevinhg.com/ (build abc1234)', JSON.stringify(city));
     const alt = new URL(shelf.reportFallbackURL({ ...base, kind: 'city', f: { city: 'Round Rock', zip: '78664', reach: '' } }));
     check('shelf: "Open the form in a new tab instead" is the form prefilled with the same answers', /\/viewform$/.test(alt.pathname) && alt.searchParams.get('usp') === 'pp_url' && /^Please add Round Rock\n\nSent along:/.test(alt.searchParams.get('entry.780704302')) && alt.searchParams.get('entry.628621310') === '78664' && !alt.searchParams.has('entry.2040687555'), alt.search);
@@ -2090,7 +2090,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const body = views.shelf.askBody(c1.ask, along);
     const F = common.FORM;
     check('coverage: one tap posts the five ids, the place and ZIP, and nothing typed', [F.what, F.where, F.wrong, F.link, F.reach].every((k) => k in body) && body[F.what] === 'Gather endorsements: Pensacola' && body[F.where] === 'Pensacola, 32501' && body[F.reach] === '' && body[F.link] === 'https://vote.kevinhg.com/ (build abc1234)', JSON.stringify(body));
-    check('coverage: "What’s wrong?" is its own sentence and a city request’s "Sent along" (no browser, no errors)', body[F.wrong] === 'Please gather local endorsements for Pensacola (one-tap from the page)\n\nSent along:\nPage: First page\nPlace: Pensacola, 32501\nPage address: https://vote.kevinhg.com/ (build abc1234)\nData built: 2026-10-25 12:00 UTC', body[F.wrong]);
+    check('coverage: "What’s wrong?" is its own sentence and a city request’s "Sent along" (no browser, no errors)', body[F.wrong] === 'Please gather local endorsements for Pensacola (one-tap from the page)\n\nSent along:\nPage: First page\nPlace: Pensacola, 32501\nPage link: https://vote.kevinhg.com/ (build abc1234)\nData built: 2026-10-25 12:00 UTC', body[F.wrong]);
   }
 
   /* ---------- every source in reach (Oct 25): the count opens the sheet, "Couldn't read", "Add a source" ---------- */
@@ -2190,7 +2190,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const sr = (f) => ({ kind: 'source', f: { src: '', where: 'Chicago, 60601', picks: '', reach: '', ...f }, what: '', tag: '', hint: '', along, state: 'edit', err: false, fk: 'src-add', back: null });
     const b1 = views.shelf.reportBody(sr({ src: 'https://example.org/guide', picks: 'Mayor: A. Person\nProp 1: Yes' }));
     check('add a source: a link goes in as the race and the link, the pasted picks in "What’s wrong?"', b1[F.what] === 'Add source: https://example.org/guide' && b1[F.link] === 'https://example.org/guide' && b1[F.where] === 'Chicago, 60601'
-      && b1[F.wrong] === 'Mayor: A. Person\nProp 1: Yes\n\nSent along:\nPage: First page\nPlace: Chicago, 60601\nPage address: https://vote.kevinhg.com/ (build abc1234)\nData built: 2026-10-25 12:00 UTC' && b1[F.reach] === '', JSON.stringify(b1));
+      && b1[F.wrong] === 'Mayor: A. Person\nProp 1: Yes\n\nSent along:\nPage: First page\nPlace: Chicago, 60601\nPage link: https://vote.kevinhg.com/ (build abc1234)\nData built: 2026-10-25 12:00 UTC' && b1[F.reach] === '', JSON.stringify(b1));
     const b2 = views.shelf.reportBody(sr({ src: 'Chicago Reader', reach: 'me@example.org' }));
     check('add a source: a name with nothing pasted asks plainly, and the page’s link goes along', b2[F.what] === 'Add source: Chicago Reader' && b2[F.wrong].startsWith('Please add this source\n\nSent along:\n') && b2[F.link] === 'https://vote.kevinhg.com/ (build abc1234)' && b2[F.reach] === 'me@example.org', JSON.stringify(b2));
     check('add a source: its one required box is the source', views.shelf.requiredOf(sr({})) === 'src' && views.shelf.isForm('source'));

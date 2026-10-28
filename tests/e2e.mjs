@@ -1456,7 +1456,7 @@ async function mapsSettled(page, timeout = 10000) {
   const along = await alongOf(page);
   // Kevin, Oct 28: folded, and called something clearer ("what'll be sent"); what's posted doesn't change.
   check('Report a problem: "What’ll be sent", folded shut at the foot, names the page, the place and ZIP, the page’s address with the build, the data date, and the browser', (await text(page, 'details.rp-along > summary')) === 'What’ll be sent' && (await page.getAttribute('details.rp-along', 'open')) === null && !(await page.isVisible('.rp-along li')) && along.length === 5 && along[0] === 'Page: Your ballot' && along[1] === 'Place: Austin, 78704'
-    && new RegExp(`^Page address: ${BASE.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/\\?today=${TODAY} \\(build ([0-9a-f]{7}|dev)\\)$`).test(along[2]) && /^Data built: \d{4}-\d{2}-\d{2} \d{2}:\d{2} UTC$/.test(along[3]) && /^Browser: .+, 380px wide$/.test(along[4])
+    && new RegExp(`^Page link: ${BASE.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/\\?today=${TODAY} \\(build ([0-9a-f]{7}|dev)\\)$`).test(along[2]) && /^Data built: \d{4}-\d{2}-\d{2} \d{2}:\d{2} UTC$/.test(along[3]) && /^Browser: .+, 380px wide$/.test(along[4])
     && !/Add anything else/.test(await text(page, '.sheet-panel.shelf')), along.join(' | '));
   check('Report a problem: the list never shows the address or the page’s hash', !NEVER.test(await text(page, '.sheet-panel.shelf')), await text(page, '.rp-along'));
   check('Report a problem: one fine line says where it goes', (await text(page, '.sheet-panel.shelf .rp-fine')) === 'Your request goes to Kevin’s Google Form. Nothing you type here is saved in the guide.');
@@ -1490,7 +1490,7 @@ async function mapsSettled(page, timeout = 10000) {
   const p = posts.list[0];
   check('Report a problem: one post, with all five of the form’s ids: the page, the place, your note with the list under it, the page’s address with the build', posts.list.length === 1 && FORM_IDS.every((k) => p.has(k)) && p.get('entry.90887649') === 'Your ballot' && p.get('entry.628621310') === 'Austin, 78704'
     && p.get('entry.780704302') === `Sunday early voting hours look off.\n\nSent along:\n${along.join('\n')}` && (p.get('entry.1986493507') || '').startsWith(`${BASE}/?today=${TODAY} (build `) && p.get('entry.2040687555') === '', `${posts.list.length}: ${p}`);
-  check('Report a problem: every value the page filled in is on the list as it was posted (Codex, Oct 21)', along.includes(`Page: ${p.get('entry.90887649')}`) && along.includes(`Place: ${p.get('entry.628621310')}`) && along.includes(`Page address: ${p.get('entry.1986493507')}`), along.join(' | '));
+  check('Report a problem: every value the page filled in is on the list as it was posted (Codex, Oct 21)', along.includes(`Page: ${p.get('entry.90887649')}`) && along.includes(`Place: ${p.get('entry.628621310')}`) && along.includes(`Page link: ${p.get('entry.1986493507')}`), along.join(' | '));
   check('Report a problem: the post never carries the address typed, the address found, or the save link’s hash', !NEVER.test(postText(p)), postText(p).replace(/\n/g, ' / '));
   check('Report a problem: Sent, in place, with Done', (await text(page, '.rp-sent p')) === 'Sent. Kevin reads every one.' && (await focusedFk(page)) === 'report-done' && !(await page.$('.sheet-panel.shelf form')) && (await text(page, '.sheet-panel.shelf [data-fk="sheet-x"]')) === 'Close', await text(page, '.rp-sent'));
   check('Report a problem: nothing typed is saved in the guide or in its link', !/Sunday early voting/.test((await savedVG(page)) || '') && !/Sunday/.test(await page.evaluate(() => decodeURIComponent(location.href))));
@@ -1504,7 +1504,7 @@ async function mapsSettled(page, timeout = 10000) {
   check('Request a city: one line, which city, the ballot’s ZIP and a way back, the last two marked optional', (await text(page, '.sheet-panel.shelf #sh-h')) === 'Request a city' && (await text(page, '.sheet-panel.shelf .rp-intro')) === 'Tell Kevin which city to add next.' && v.city === '' && v.zip === '78704' && v.reach === '' && Object.keys(v).length === 3
     && (await page.$$eval('.sheet-panel.shelf .rp-f label', (els) => els.map((e) => e.textContent.replace(/\s+/g, ' ').trim()))).join('|') === 'Which city or town?|ZIP optional|Want to hear when it’s up? optional', JSON.stringify(v));
   const cityAlong = await alongOf(page);
-  check('Request a city: a shorter list: the page, the place, the page’s address and the data date', cityAlong.length === 4 && cityAlong[0] === 'Page: Your ballot' && cityAlong[1] === 'Place: Austin, 78704' && /^Page address: /.test(cityAlong[2]) && /^Data built: /.test(cityAlong[3]), cityAlong.join(' | '));
+  check('Request a city: a shorter list: the page, the place, the page’s address and the data date', cityAlong.length === 4 && cityAlong[0] === 'Page: Your ballot' && cityAlong[1] === 'Place: Austin, 78704' && /^Page link: /.test(cityAlong[2]) && /^Data built: /.test(cityAlong[3]), cityAlong.join(' | '));
   await tap(page, SEND);
   check('Request a city: Send with no city sends nothing and says so', posts.list.length === 1 && (await text(page, '#rf-err')) === 'Type the city first.', await text(page, '#rf-err'));
   await page.fill('#rf-city', 'Round Rock');
@@ -1514,7 +1514,7 @@ async function mapsSettled(page, timeout = 10000) {
   await page.waitForSelector('.rp-sent');
   const c = posts.list[1];
   check('Request a city: posts as the city form always has, the city after "Please add ", the list under it', !!c && FORM_IDS.every((k) => c.has(k)) && c.get('entry.90887649') === 'Please add my city' && c.get('entry.628621310') === '78664'
-    && c.get('entry.780704302') === `Please add Round Rock\n\nSent along:\n${cityAlong.join('\n')}` && cityAlong.includes(`Page address: ${c.get('entry.1986493507')}`) && !NEVER.test(postText(c)), c ? c.toString() : 'no post');
+    && c.get('entry.780704302') === `Please add Round Rock\n\nSent along:\n${cityAlong.join('\n')}` && cityAlong.includes(`Page link: ${c.get('entry.1986493507')}`) && !NEVER.test(postText(c)), c ? c.toString() : 'no post');
   await page.keyboard.press('Escape');
   await settle(page);
   check('Request a city: Escape closes it', !(await page.$('.sheet-panel.shelf')) && (await focusedFk(page)) === 'help-city', await focusedFk(page));
@@ -2233,7 +2233,7 @@ const darkIn = (page, sel) => page.$$eval(`${sel} .mini.dark`, (els) => els.filt
   await page.waitForSelector('#door .cov-card[role="status"]', { timeout: 15000 });
   const p = posts.list[posts.list.length - 1];
   check('St. Louis City: one tap posts the five answers, nothing typed', posts.list.length === 2 && FORM_IDS.every((k) => p.has(k)) && p.get('entry.90887649') === 'Please add my city' && p.get('entry.628621310') === 'Missouri, 63110'
-    && /^Please add the city for ZIP 63110 in Missouri \(one-tap from the page\)\n\nSent along:\nPage: First page\nPlace: Missouri, 63110\nPage address: /.test(p.get('entry.780704302')) && p.get('entry.2040687555') === '' && !/Browser:/.test(p.get('entry.780704302')), p ? p.toString() : 'no post');
+    && /^Please add the city for ZIP 63110 in Missouri \(one-tap from the page\)\n\nSent along:\nPage: First page\nPlace: Missouri, 63110\nPage link: /.test(p.get('entry.780704302')) && p.get('entry.2040687555') === '' && !/Browser:/.test(p.get('entry.780704302')), p ? p.toString() : 'no post');
   const sent = postText(p);
   check('St. Louis City: the one tap never carries the address typed or found, the save link’s hash, any contact, or any query but the test date', !NEVER.test(sent) && p.get('entry.2040687555') === '' && !/#/.test(sent)
     && [...sent.matchAll(/\?([^\s)]*)/g)].every((m) => /^today=\d{4}-\d{2}-\d{2}$/.test(m[1])) && !/@|\(\d{3}\)|\d{3}-\d{4}/.test(sent.replace(/\d{4}-\d{2}-\d{2}/g, '')), sent.replace(/\n/g, ' / '));

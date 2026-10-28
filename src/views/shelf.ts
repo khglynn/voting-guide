@@ -159,7 +159,7 @@ const linkOf = (a: Along): string => `${a.url} (build ${a.build || 'dev'})`;
 export function alongLines(r: Pick<Shelf, 'kind' | 'what' | 'tag' | 'along'>): string[] {
   const a = r.along;
   const head = [`Page: ${a.page}`, a.where ? `Place: ${a.where}` : ''];
-  const tail = [`Page address: ${linkOf(a)}`, `Data built: ${a.data || 'unknown'}`];
+  const tail = [`Page link: ${linkOf(a)}`, `Data built: ${a.data || 'unknown'}`];
   if (r.kind === 'source') return [...head, ...tail, a.request ? `Request: ${a.request}` : ''].filter(Boolean);
   if (r.kind === 'city') return [...head, ...tail].filter(Boolean);
   const about = aboutOf(r);

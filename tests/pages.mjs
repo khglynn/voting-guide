@@ -114,6 +114,26 @@ check('page titles and descriptions: no em dashes, no all caps', !bad.copy.lengt
   check('Austin: lastmod is the newest date its own facts carry, never after today', p.lastmod === (lastmod > TODAY ? TODAY : lastmod), `${p.lastmod} vs ${lastmod}`);
   check('a date in the data past today never becomes a lastmod in the future', site.allPages(data, A, '2026-10-01').every((x) => x.lastmod <= '2026-10-01'));
 }
+/* ---------- dates say what the data says, qualifications included (Codex, Oct 28) ---------- */
+{
+  const norm = (x) => unesc(String(x || '')).replace(/\s+/g, ' ').trim();
+  const lost = [];
+  for (const st of stateCodes) {
+    const p = pages.find((x) => x.path === site.statePath(data, st));
+    const h = data.states[st].howto;
+    const text = textOf(bodyOf(p.html));
+    const mail = h.voting_model === 'all_mail' || h.voting_model === 'mail_to_all_plus_in_person';
+    const rules = [...h.registration.deadlines.filter((d) => d.date && d.rule).map((d) => d.rule), h.mail_ballot.request_deadline?.date ? h.mail_ballot.request_deadline.rule : null].filter(Boolean);
+    const gone = rules.filter((r) => !text.includes(norm(r).slice(0, 60)));
+    if (gone.length) lost.push(`${st}: ${gone.length} rule(s) missing, like "${norm(gone[0]).slice(0, 50)}"`);
+    if (mail && /Last day to ask for a mail ballot/.test(text)) lost.push(`${st}: a mail-voting state headlines a request deadline`);
+    if ((mail || !/^\s*\d{1,2}(:\d{2})?\s*[ap]\.?m\.?(\s+[A-Z]{2,3})?\s*$/i.test(h.election_day.polls_open)) && /You can vote from/.test(text)) lost.push(`${st}: "You can vote from" from a qualified or mail-state opening time`);
+  }
+  check('state pages: every deadline keeps its own rule, a mail-voting state never headlines a request date, and opening hours are said only when plain', !lost.length, lost.join('; '));
+  const md = textOf(bodyOf(pages.find((x) => x.path === '/maryland').html));
+  const wa = textOf(bodyOf(pages.find((x) => x.path === '/washington').html));
+  check('Maryland: the request deadline says how it depends on delivery (fax or email); Washington: no blanket opening time', /fax or email/.test(md) && !/You can vote from/.test(wa) && /Polls close at 8 PM/.test(wa));
+}
 /* ---------- state pages ---------- */
 {
   const missing = stateCodes.filter((st) => {

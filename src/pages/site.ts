@@ -90,7 +90,7 @@ const IDS: Record<string, string> = { // the same words as My plan's (views/plan
 const candLine = (c: Contest): string => {
   if (!c.candidates.length) return '';
   const names = c.candidates.map((k) => `${esc(k.name)}${k.party ? ` <span class="pg-pty">(${esc(k.party)})</span>` : ''}`);
-  if (c.is_retention) return `<p class="pg-c">${c.candidates.length > 1 ? `Vote to keep or remove: ${names.join(', ')}` : 'Vote to keep or remove this judge.'}</p>`;
+  if (c.is_retention) return `<p class="pg-c">${c.candidates.length > 1 ? `Vote to keep or remove: ${names.join(', ')}` : 'You vote on whether this judge stays in office.'}</p>`;
   return `<p class="pg-c">${c.candidates.length === 1 ? 'Unopposed: ' : ''}${names.join(', ')}</p>`;
 };
 /* A district race's own line inside its group: its district (or court) and its candidates. */
@@ -121,7 +121,7 @@ function ballotRows(b: Ballot, where: string): Map<SectionKey, Row[]> {
       const c = it as Contest; // a district group only ever holds races (ballot.ts)
       const t = cleanOffice(c.office);
       const list = b.places.length > 0 || grp.members.length <= LIST_UP_TO;
-      add(sec, `<li><b>${escP(t)}</b> <span class="pg-sub">${list ? 'Your address decides which one is yours.' : `${grp.members.length} districts. Your address decides which one is yours.`}</span>${list ? `<ul class="pg-dist">${grp.members.map((m) => memberHTML(b.byId.get(m) as Contest)).join('')}</ul>` : ''}</li>`, t);
+      add(sec, `<li><b>${escP(t)}</b> <span class="pg-sub">${list ? 'Your address determines your district.' : `${grp.members.length} districts. Your address determines yours.`}</span>${list ? `<ul class="pg-dist">${grp.members.map((m) => memberHTML(b.byId.get(m) as Contest)).join('')}</ul>` : ''}</li>`, t);
       continue;
     }
     const { title, sub } = rowTitle(it);
@@ -147,23 +147,34 @@ function ballotHTML(b: Ballot, where: string): string {
 
 /* ---------- dates, places to vote, the office ---------- */
 interface DateRow { date: string; lead: string; when: string; detail: string | null }
+/* "7:00 AM", "8 PM PT": a time and nothing else. A qualified one ("8:30 AM at the six King County vote centers")
+   isn't a statewide opening time, so it never becomes "You can vote from ...". */
+const PLAIN_TIME = /^\s*\d{1,2}(?::\d{2})?\s*[ap]\.?m\.?(?:\s+[A-Z]{2,3})?\s*$/i;
+/* The key dates, each with its own rule in the data's words underneath: a headline date alone can drop what the
+   rule qualifies (Maryland's request deadline differs by how the ballot reaches you; Codex, Oct 28). */
 function dateRows(h: HowTo, place: PlaceBundle | null): DateRow[] {
   const out: DateRow[] = [];
+  const mail = isMailState(h);
   const reg: Record<string, string> = { online: 'Last day to register online', mail: 'Last day to register by mail', in_person: 'Last day to register in person' };
-  h.registration.deadlines.forEach((d) => { if (d.date) out.push({ date: d.date, lead: `${reg[d.method] || 'Registration deadline'}: `, when: fmtDate(d.date), detail: null }); });
+  h.registration.deadlines.forEach((d) => { if (d.date) out.push({ date: d.date, lead: `${reg[d.method] || 'Registration deadline'}: `, when: fmtDate(d.date), detail: d.rule || null }); });
   const rq = h.mail_ballot.request_deadline;
-  if (rq && rq.date) out.push({ date: rq.date, lead: 'Last day to ask for a mail ballot: ', when: fmtDate(rq.date), detail: null });
+  // Where every voter gets a ballot in the mail, the "request" date is a replacement's, often one county's: its
+  // rule says so, so it leads without a date of its own.
+  if (rq && rq.date && rq.rule && mail) out.push({ date: rq.date, lead: 'Mail ballot request and replacement dates', when: '', detail: rq.rule });
+  else if (rq && rq.date) out.push({ date: rq.date, lead: 'Last day to ask for a mail ballot: ', when: fmtDate(rq.date), detail: rq.rule || null });
   const ep = h.early_in_person;
   if (ep.available && ep.start && ep.end) {
-    out.push({ date: ep.start, lead: `${isMailState(h) ? 'In-person voting' : 'Early voting'}: `, when: `${fmtDate(ep.start)} to ${fmtDate(ep.end)}`, detail: place?.early_in_person?.hours_short || null });
+    out.push({ date: ep.start, lead: `${mail ? 'In-person voting' : 'Early voting'}: `, when: `${fmtDate(ep.start)} to ${fmtDate(ep.end)}`, detail: place?.early_in_person?.hours_short || null });
   }
   const r = h.mail_ballot.return_deadline;
   out.push({ date: r.date, lead: `Your mail ballot must ${r.rule === 'received_by' ? 'arrive' : r.rule === 'postmarked_by' ? 'be postmarked' : 'be returned'} by `, when: fmtDate(r.date), detail: r.time });
-  const open = clock(h.election_day.polls_open), close = clock(h.election_day.polls_close) || h.election_day.polls_close;
-  out.push({ date: h.election_date, lead: 'Election Day: ', when: fmtDate(h.election_date), detail: open ? `You can vote from ${open} to ${close}.` : `Polls close at ${close}.` });
+  const ed = h.election_day;
+  const close = clock(ed.polls_close) || ed.polls_close;
+  const hours = !mail && PLAIN_TIME.test(ed.polls_open) && PLAIN_TIME.test(ed.polls_close) ? `You can vote from ${clock(ed.polls_open)} to ${close}.` : `Polls close at ${close}.`;
+  out.push({ date: h.election_date, lead: 'Election Day: ', when: fmtDate(h.election_date), detail: [hours, ed.in_line_rule].filter(Boolean).join(' ') });
   return out.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
 }
-const datesHTML = (rows: DateRow[]): string => `<ul class="pg-dates">${rows.map((r) => `<li>${esc(r.lead)}<b>${esc(r.when).replace(/ to /, ' to&nbsp;')}</b>${r.detail ? `<span>${escP(r.detail)}</span>` : ''}</li>`).join('')}</ul>`;
+const datesHTML = (rows: DateRow[]): string => `<ul class="pg-dates">${rows.map((r) => `<li>${r.when ? `${esc(r.lead)}<b>${esc(r.when).replace(/ to /, ' to&nbsp;')}</b>` : `<b>${esc(r.lead)}</b>`}${r.detail ? `<span>${escP(r.detail)}</span>` : ''}</li>`).join('')}</ul>`;
 const ext = (url: string, text: string): string => `<a href="${esc(url)}" rel="noopener">${esc(text)}</a>`;
 function whereHTML(h: HowTo, p: PlaceBundle | null): string {
   const links: string[] = [];

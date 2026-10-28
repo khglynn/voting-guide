@@ -146,6 +146,9 @@ export const S = {
   } as UI,
   /* ?try=fresh|aunt|straight|sources: a scenario on whatever ballot opens, never saved. */
   tryMode: null as string | null,
+  /* ?on=<source id>, from a "Your source is in" reply (Oct 28): switched on once a ballot that has it shows
+     (app.ts switchOnNow), then cleared. Read at boot and taken out of the address bar; never saved. */
+  switchOn: null as string | null,
   pending: null as Pending | null,
   loadErr: null as string | null,
   /* What "Try again" under a load error does: the same ZIP, ballot or first visit again. */

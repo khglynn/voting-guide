@@ -2269,6 +2269,27 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
   }
 }
 
+/* ---------- a "Your source is in" reply switches that source on (Oct 28) ----------
+   The workbench's vg source ends a friend's request with a link to ?on=<the source's id>. Once a ballot that has
+   it shows, it is switched on, a toast says so, and the address bar loses the ?on= so a reload doesn't redo it. */
+{
+  const id = 'aura'; // an issue group on Austin's ballot, off to start
+  const sourcesOf = async (page) => Object.values(JSON.parse((await savedVG(page)) || '{"ballots":{}}').ballots || {}).map((b) => b.sources);
+  const { ctx, page } = await newPage();
+  await openBallot(page, '78704', `&on=${id}`);
+  const toastSaid = await text(page, '.toast');
+  const srcs = await sourcesOf(page);
+  check('?on=: once the ballot shows, the source is on and a toast says so', /^AURA is on\. Its picks show beside your races\.$|is on\. Its picks show beside your races\./.test(toastSaid) && srcs.some((x) => Array.isArray(x) && x.includes(id)), `${toastSaid} | ${JSON.stringify(srcs).slice(0, 160)}`);
+  check('?on=: the link leaves the address bar', !/[?&]on=/.test(page.url()), page.url());
+  check('?on=: the defaults stay on beside it', srcs.some((x) => Array.isArray(x) && x.length > 1));
+  await ctx.close();
+  // A source this ballot doesn't have changes nothing and says nothing.
+  const b = await newPage();
+  await openBallot(b.page, '78704', '&on=no-such-source');
+  check('?on=: a source not on this ballot changes nothing', (await sourcesOf(b.page)).every((x) => x === null) && !/is on\./.test(await text(b.page, '.toast')), JSON.stringify(await sourcesOf(b.page)));
+  await b.ctx.close();
+}
+
 /* ---------- every source in reach from the first page (Oct 25) ----------
    Kevin: "show a count and a way to expand to see all sources and then individually check and uncheck within
    that list ... also show what sources we tried but couldn't access ... and then the option to add their own

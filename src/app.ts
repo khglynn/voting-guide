@@ -278,6 +278,7 @@ async function loadBallot(st: string, placeIds: string[], zip: string, opts: Ope
     if (!door) S.b.setupDone = true; // a ballot this device has shown never goes back to the first page on its own
     render();
     persist(true); // saves nothing on the first page
+    if (!door && !S.pending) switchOnNow();
     if (!door) window.scrollTo(0, 0);
     if (S.pending) $('[data-fk="restore-yes"]')?.focus();
     // What the caller does next (an address's districts) can't turn a loaded ballot into a load error.
@@ -399,8 +400,23 @@ export async function showBallot(): Promise<{ n: number; plan: ReturnType<typeof
   leftDoor();
   render();
   persist(true);
+  switchOnNow();
   window.scrollTo(0, 0);
   return plan && n ? { n, plan } : null;
+}
+/* A "Your source is in" reply links to ?on=<id> (main.ts boot): once a ballot that has that source shows, it is
+   switched on and a toast says so, the same as its switch in the sources sheet (so it is saved, and in the save link,
+   as that switch would be). A ballot without it leaves the ask for the next ballot this visit; a "try as" scenario
+   never takes it. */
+function switchOnNow(): void {
+  const id = S.switchOn;
+  const b = S.ballot;
+  if (!id || !b || S.view !== 'ballot' || S.tryMode) return;
+  const e = b.eById.get(id);
+  if (!e) return;
+  S.switchOn = null;
+  if (!chosenIds().includes(id)) { setSources(b, [...chosenIds(), id]); persist(true); render(); }
+  toast(`${e.short || e.name} is on. Its picks show beside your races.`);
 }
 
 /* "Welcome back. You've decided 12 of 43.": a returning visitor's started ballot, reopened from this

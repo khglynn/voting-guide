@@ -32,6 +32,31 @@ env:
   FORCE_COLOR: '0'
 
 jobs:
+  # A pull request that only adds a requested source's own two files (the workbench's vg source writes
+  # data/endorsers-src-<id>.json and data/endorsements-src-<id>.json) skips the browser job, so a friend's source can
+  # go live in minutes (Kevin, Oct 28: "yes skip them"). The data job still runs every data rule and the model tests on
+  # it, and the browser job runs on main after the merge. Anything else in the diff, or this job failing, runs it all.
+  changes:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      source_only: ${{ steps.c.outputs.source_only }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - id: c
+        run: |
+          # --no-renames: a rename lists both paths, so moving app code onto a source's file name still runs everything.
+          files=$(git diff --no-renames --name-only "${{ github.event.pull_request.base.sha }}...${{ github.event.pull_request.head.sha }}")
+          echo "$files"
+          if [ -n "$files" ] && ! echo "$files" | grep -qvE '^data/(endorsers|endorsements)-src-[a-z0-9-]+\.json$'; then
+            echo "source_only=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "source_only=false" >> "$GITHUB_OUTPUT"
+          fi
+
   # Fast, no browser. The rules from FOUNDATION.md as code, then the build (which includes the typecheck).
   data:
     if: github.event_name != 'schedule'
@@ -61,7 +86,11 @@ jobs:
 
   # Real browser at 380px: the scripted e2e, then the every-ballot sweep.
   browser:
-    if: github.event_name != 'schedule'
+    needs: [changes]
+    # Skipped only when `changes` succeeded and found a source-only diff. On a push to main `changes` is skipped, so this
+    # runs; if `changes` fails, this runs. A cancelled run is left cancelled: here that only happens when a newer push
+    # replaces it (the concurrency group above), and the newer run decides.
+    if: ${{ !cancelled() && github.event_name != 'schedule' && !(needs.changes.result == 'success' && needs.changes.outputs.source_only == 'true') }}
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:

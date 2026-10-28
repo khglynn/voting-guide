@@ -7,7 +7,7 @@ import { status, sectionOf, rankMax, ordinal, chosenIds, entriesBySection, pageW
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
 import { render, renderRow, renderSection, renderSummaries, renderOff, renderLens, flushLens, markBehind, renderBallot, renderAddr, rowEl, scrollRowIntoView, rowTop, holdRow, opensLow, anchored, $ } from './render';
 import { growOpen, inkRow, followFold, glideTo, land, stopGlide, shrinkAway, collapseRow, finishCollapse, glide } from './motion';
-import { openBallot, openChosen, go, openReader, runAddress, reopenAddr, useMatch, toDoor, showBallot, rechoose, openSaved, fillWhy, leaveBallot } from './app';
+import { openBallot, openChosen, go, openReader, runAddress, reopenAddr, useMatch, toDoor, showBallot, rechoose, openSaved, fillWhy, leaveBallot, switchOnNow } from './app';
 import { judgeBatch } from './model/judges';
 import { planAgree, planParty, planJudges, planSetup, applyFills, undoFills, emptyPlan, touchUndo, type Plan } from './model/bulk';
 import { toggleChip, setParty, setSources, noEndorsements, doorNone, chipState, unreadHere, CHIPS, type ChipKey } from './model/lens';
@@ -990,7 +990,7 @@ A['addr-pick'] = () => {
 A['resume-x'] = () => { focusFk('plan-k'); };
 /* "Try again" under a load error. */
 A.retry = () => { const f = S.retry; S.retry = null; if (f) f(); };
-A['restore-yes'] = () => { if (S.pending) { S.b = S.pending.incoming; S.pending = null; render(); persist(true); toast('Using the picks from your link.'); } };
+A['restore-yes'] = () => { if (S.pending) { S.b = S.pending.incoming; S.pending = null; render(); persist(true); if (!switchOnNow('Using the picks from your link.')) toast('Using the picks from your link.'); } };
 /* A grid's lean dots, tapped: how that lean was placed, in a few words. */
 A.basis = (d) => {
   const e = B().eById.get(d.id!);
@@ -998,9 +998,9 @@ A.basis = (d) => {
   const how = basisWords(e);
   toast(e.lean ? `${e.short}: ${LEANS[e.lean][1]}, ${how || 'basis not recorded'}. Tap “See all sources” for details.` : `${e.short}: not rated for lean.`);
 };
-A['shared-keep'] = () => { S.pending = null; render(['restore']); toast('Using the picks from your link. Change any pick as you go.'); };
-A['shared-fresh'] = () => { const zip = S.b.zip; const hide = S.b.hideDecided; const secs = S.b.secs; S.b = emptyBallotState(zip); S.b.hideDecided = hide; S.b.secs = secs; S.pending = null; render(); persist(true); toast('Started fresh. The shared picks are cleared on this device.'); };
-A['restore-no'] = () => { S.pending = null; render(['restore']); toast('Kept the picks on this device.'); };
+A['shared-keep'] = () => { S.pending = null; render(['restore']); if (!switchOnNow('Using the picks from your link.')) toast('Using the picks from your link. Change any pick as you go.'); };
+A['shared-fresh'] = () => { const zip = S.b.zip; const hide = S.b.hideDecided; const secs = S.b.secs; S.b = emptyBallotState(zip); S.b.hideDecided = hide; S.b.secs = secs; S.pending = null; render(); persist(true); if (!switchOnNow('Started fresh.')) toast('Started fresh. The shared picks are cleared on this device.'); };
+A['restore-no'] = () => { S.pending = null; render(['restore']); if (!switchOnNow('Kept the picks on this device.')) toast('Kept the picks on this device.'); };
 
 /* ---------- cheat sheet, save link, pass it on ---------- */
 A.print = () => { render(['print']); window.print(); };

@@ -694,6 +694,15 @@ async function mapsSettled(page, timeout = 10000) {
   check('Denver link: a fresh device says where the picks came from', /This link brought \d+ picks? for Denver/.test(await text(fresh.page, '#r-restore')) && !!(await fresh.page.$('[data-act="shared-fresh"]')), await text(fresh.page, '#r-restore'));
   await tap(fresh.page, '[data-act="shared-keep"]');
   check('Denver link: "Use the link’s picks" clears the banner and keeps the picks', !(await fresh.page.$('[data-act="shared-fresh"]')));
+  // A "Your source is in" link with a share link's picks behind it: the source goes on once the banner is answered.
+  const withOn = await newPage();
+  await withOn.page.goto(linkHere(link).replace('#', '&on=kim-monson-guide#'));
+  await withOn.page.waitForSelector('[data-act="shared-keep"]', { timeout: 15000 });
+  check('?on= with a shared link: nothing switches while the banner asks', !/is on\./.test(await text(withOn.page, '.toast')));
+  await tap(withOn.page, '[data-act="shared-keep"]');
+  const monson = Object.values(JSON.parse((await savedVG(withOn.page)) || '{"ballots":{}}').ballots || {}).some((b) => Array.isArray(b.sources) && b.sources.includes('kim-monson-guide'));
+  check('?on= with a shared link: answering the banner switches it on, and the toast says both', monson && /^Using the picks from your link\. .* is on\. Its picks show beside your races\.$/.test(await text(withOn.page, '.toast')), await text(withOn.page, '.toast'));
+  await withOn.ctx.close();
   await tap(fresh.page, '[data-act="cheat"]');
   check('Denver link: the same decided count and the note come back', (await text(fresh.page, '.cheat-head .sub')) === decided && /Read the Blue Book first/.test(await text(fresh.page, '#cheat')));
   noErrors(fresh.page, 'Denver link');
@@ -707,6 +716,11 @@ async function mapsSettled(page, timeout = 10000) {
   await page.waitForSelector('#plan', { timeout: 15000 });
   await page.waitForTimeout(250);
   check('Denver: a link with different picks asks first', !!(await page.$('[data-act="restore-yes"]')));
+  // The same with ?on=: "Keep mine" answers the prompt, then the source goes on.
+  await page.goto(linkHere(`${h}#${fields.join('~')}`).replace('#', '&on=kim-monson-guide#'));
+  await page.waitForSelector('[data-act="restore-no"]', { timeout: 15000 });
+  await tap(page, '[data-act="restore-no"]');
+  check('?on= with a restore prompt: keeping this device\'s picks still switches it on', /^Kept the picks on this device\. .* is on\./.test(await text(page, '.toast')) && Object.values(JSON.parse((await savedVG(page)) || '{"ballots":{}}').ballots || {}).some((b) => Array.isArray(b.sources) && b.sources.includes('kim-monson-guide')), await text(page, '.toast'));
   await ctx.close();
 }
 

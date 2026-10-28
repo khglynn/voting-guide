@@ -2170,7 +2170,10 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('add a source: opened, the row shows the paste box with its hint, labelled by the row', /aria-expanded="true" aria-controls="rf-picks"/.test(opened) && /<textarea id="rf-picks" aria-labelledby="rf-picks-b"/.test(opened) && /Behind a login\? Copy their endorsement list and paste it here\./.test(opened));
     S.ui.open.delete(views.shelf.PICKS_FOLD);
     S.ui.report.state = 'sent';
-    check('add a source: sent, it says a source usually shows up within a day', /Sent\.<\/b> Kevin reads every one; a source usually shows up within a day\./.test(views.shelf.shelfHTML()));
+    // Oct 28: no time promise. One this device watches for says it shows up right here (model/adds.ts).
+    check('add a source: sent where the device can’t watch for it, the plain line, no time promise', /Sent\.<\/b> Kevin reads every one\.<\/p>/.test(views.shelf.shelfHTML()));
+    S.ui.report.watched = true;
+    check('add a source: sent and watched, it says it shows up right here', /Sent\.<\/b> If it checks out, it shows up right here\. Keep going\./.test(views.shelf.shelfHTML()));
     S.ui.report = null;
   }
 

@@ -57,7 +57,7 @@ const PASTE_FIELDS: Field[] = [
   { k: 'picks', label: 'Paste in their picks', type: 'area', required: true, max: 5000 },
   SOURCE[0], SOURCE[1], SOURCE[3],
 ];
-const PASTE_INTRO = 'Their page blocks us. Paste their picks and we’ll add them.';
+const PASTE_INTRO = 'We can’t read their page. Paste their picks here.';
 export const isPaste = (r: Pick<Shelf, 'kind' | 'hint'>): boolean => r.kind === 'source' && r.hint === 'paste';
 /* Opened from a paywalled paper's "Send it to us": the box asks for its picks instead. A bot-checked
    source's (Oct 25) the same, without the login. */
@@ -289,7 +289,7 @@ function formHTML(r: Shelf): string {
   if (r.state === 'sent') {
     // Add a source this device will watch for (model/adds.ts) says it shows up right here; one it can't (storage
     // blocked, a "try as" scenario) says what it always said.
-    return `<div class="rp-sent" role="status"><p><b>Sent.</b> ${r.kind === 'source' ? (r.watched ? 'We’ll add it to this page when it’s ready. Keep going.' : 'Kevin reads every one; a source usually shows up within a day.') : 'Kevin reads every one.'}</p>
+    return `<div class="rp-sent" role="status"><p><b>Sent.</b> ${r.kind === 'source' ? (r.watched ? 'If it checks out, it shows up right here. Keep going.' : 'Kevin reads every one.') : 'Kevin reads every one.'}</p>
       <button class="bigbtn" data-act="sheet-close" data-fk="report-done">Done</button></div>`;
   }
   const sending = r.state === 'sending';

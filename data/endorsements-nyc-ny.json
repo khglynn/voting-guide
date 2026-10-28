@@ -282,12 +282,12 @@
   {
     "endorser_id": "ny-post-eb",
     "target_id": "nyc-proposal-1",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election endorsement for this race or measure was found in the Post editorial index, opinion page and charter-proposal search checked October 19, 2026. Checked again on Oct 27, 2026; still no pick on this page.",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Says City Hall is unlawfully pushing a yes on the five charter-revision questions this year, so it sees no choice but to recommend a no on them all.",
     "url": "https://nypost.com/tag/editorial/",
     "date": "2026-10-27",
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "lwv-nys",
@@ -362,12 +362,12 @@
   {
     "endorser_id": "ny-post-eb",
     "target_id": "nyc-proposal-2",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election endorsement for this race or measure was found in the Post editorial index, opinion page and charter-proposal search checked October 19, 2026. Checked again on Oct 27, 2026; still no pick on this page.",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Says City Hall is unlawfully pushing a yes on the five charter-revision questions this year, so it sees no choice but to recommend a no on them all.",
     "url": "https://nypost.com/tag/editorial/",
     "date": "2026-10-27",
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "lwv-nys",
@@ -442,12 +442,12 @@
   {
     "endorser_id": "ny-post-eb",
     "target_id": "nyc-proposal-3",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election endorsement for this race or measure was found in the Post editorial index, opinion page and charter-proposal search checked October 19, 2026. Checked again on Oct 27, 2026; still no pick on this page.",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Says City Hall is unlawfully pushing a yes on the five charter-revision questions this year, so it sees no choice but to recommend a no on them all.",
     "url": "https://nypost.com/tag/editorial/",
     "date": "2026-10-27",
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "lwv-nys",
@@ -522,12 +522,12 @@
   {
     "endorser_id": "ny-post-eb",
     "target_id": "nyc-proposal-4",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election endorsement for this race or measure was found in the Post editorial index, opinion page and charter-proposal search checked October 19, 2026. Checked again on Oct 27, 2026; still no pick on this page.",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Says City Hall is unlawfully pushing a yes on the five charter-revision questions this year, so it sees no choice but to recommend a no on them all.",
     "url": "https://nypost.com/tag/editorial/",
     "date": "2026-10-27",
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "lwv-nys",
@@ -602,12 +602,12 @@
   {
     "endorser_id": "ny-post-eb",
     "target_id": "nyc-proposal-5",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election endorsement for this race or measure was found in the Post editorial index, opinion page and charter-proposal search checked October 19, 2026. Checked again on Oct 27, 2026; still no pick on this page.",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Says City Hall is unlawfully pushing a yes on the five charter-revision questions this year, so it sees no choice but to recommend a no on them all.",
     "url": "https://nypost.com/tag/editorial/",
     "date": "2026-10-27",
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "lwv-nys",

@@ -116,7 +116,7 @@
       "short": "Alabama has no same-day registration, so the Oct 19 deadline is final."
     },
     {
-      "text": "There is no early voting. If you can't vote on November 3, absentee voting with an excuse is your only option. Mailed applications had to arrive by Tuesday, October 27. You can still apply in person at your county's absentee office through Thursday, October 29, and vote there in the same trip. Bring a copy of your photo ID. Mobile County: Absentee Election Manager, 151 Government St, 251-574-6400. After October 29, only emergency applications are open, until 5 PM Monday, November 2.",
+      "text": "There is no early voting. If you can't vote on November 3, absentee voting with an excuse is your only option. Mailed applications had to arrive by Tuesday, October 27. You can still apply in person at your county's absentee office through Thursday, October 29, and vote there in the same trip. Bring a copy of your photo ID. Mobile County: Absentee Election Manager, 151 Government St, 251-574-6400. After October 29, only emergency applications are open: for most emergencies until 5 PM Monday, November 2, and for your own medical emergency, with a doctor's certification, the ballot is due by noon on November 3.",
       "short": "No early voting; with an excuse, apply and vote absentee in person through Oct 29."
     },
     {
@@ -360,7 +360,7 @@
           "url": "https://www.sos.alabama.gov/city-county-lookup/absentee-election-manager"
         }
       ],
-      "answer": "Alabama has no early voting, but being away from your county is a valid absentee excuse. Mailed applications had to arrive by Tuesday, October 27. You can still apply in person at your county's absentee office through Thursday, October 29, and vote there. Bring a copy of your photo ID. After that, applications are open only for certain emergencies, until 5 PM Monday, November 2.",
+      "answer": "Alabama has no early voting, but being away from your county is a valid absentee excuse. Mailed applications had to arrive by Tuesday, October 27. You can still apply in person at your county's absentee office through Thursday, October 29, and vote there. Bring a copy of your photo ID. After that, applications are open only for certain emergencies, until 5 PM Monday, November 2 (a medical emergency with a doctor's certification has until noon on November 3).",
       "steps": [
         "Include a copy of your photo ID with the application.",
         "Have the ballot envelope notarized or signed by two adult witnesses.",

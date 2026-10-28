@@ -8,7 +8,7 @@
    or this place's own where-to-vote page. */
 import { S } from '../state';
 import { esc, fmtDate, todayISO } from '../util';
-import { clock, isMailState, nextStep } from '../model/plan';
+import { clock, isMailState, localHowto, nextStep } from '../model/plan';
 import { ext, isOpen } from './common';
 import { trustHTML } from './trust';
 
@@ -126,7 +126,10 @@ export function messages(): { fam: string | null; pub: string | null } {
   let where = '';
   let whereLine = '';
   if (nextStep(b.howto).phase === 'early_open') {
-    where = b.howto.early_in_person.lookup_url || sh.early_in_person.lookup_url || '';
+    // Never the sender's own county (Oct 28): a group message reaches people across county lines, so a place
+    // that spans counties (Austin) gives the links every county shares, as it did before per-county links.
+    const any = b.county ? localHowto(b.stateHowto, b.places, null) : b.howto;
+    where = any.early_in_person.lookup_url || sh.early_in_person.lookup_url || '';
     const own = !!name && where !== sh.early_in_person.lookup_url;
     whereLine = `Find early voting places${own ? ` in ${name}` : ''}: ${where}`;
   } else {

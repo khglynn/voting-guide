@@ -139,7 +139,7 @@
           "url": "https://voterstatus.sos.ca.gov/"
         }
       ],
-      "answer": "You can still update your registration and vote the same day at any vote center in the county you live in now, through 8 PM on Election Day. The online deadline to get a ballot mailed to your new address was October 19.",
+      "answer": "You can still update your registration and vote the same day at any vote center in the county you live in now (in San Francisco, the City Hall Voting Center), through 8 PM on Election Day. The online deadline to get a ballot mailed to your new address was October 19.",
       "steps": [
         "Moved within the same county (say, within LA County)? At a vote center you can vote a provisional ballot for your new address; it counts once your signature matches.",
         "Moved to a new county (say, LA to Orange)? Use Same Day Registration at a vote center in your new county.",
@@ -159,9 +159,9 @@
           "url": "https://caearlyvoting.sos.ca.gov/"
         }
       ],
-      "answer": "You can register here if California is now where you live. Register and vote in one trip at any vote center in your county through 8 PM on Election Day. The online deadline to get a ballot in the mail was October 19.",
+      "answer": "You can register here if California is now where you live. Register and vote in one trip at any vote center in your county (in San Francisco, the City Hall Voting Center) through 8 PM on Election Day. The online deadline to get a ballot in the mail was October 19.",
       "steps": [
-        "Use Same Day Registration at any vote center in your county, through 8 PM on Election Day."
+        "Use Same Day Registration at any vote center in your county (in San Francisco, the City Hall Voting Center), through 8 PM on Election Day."
       ],
       "deadline": "2026-10-19",
       "source": "https://www.sos.ca.gov/elections/voter-registration/same-day-reg",
@@ -181,7 +181,7 @@
           "url": "https://caearlyvoting.sos.ca.gov/"
         }
       ],
-      "answer": "You still can. Register and vote in one visit at any vote center or your county elections office, through 8 PM on November 3. The online deadline to get a ballot in the mail was October 19.",
+      "answer": "You still can. Register and vote in one visit at any vote center or your county elections office, through 8 PM on November 3. The online deadline at RegisterToVote.ca.gov to get a ballot in the mail was October 19.",
       "steps": [
         "Check first at voterstatus.sos.ca.gov; you may already be registered.",
         "Same Day Registration ballots are counted once the county verifies your registration.",
@@ -321,9 +321,9 @@
           "url": "https://caearlyvoting.sos.ca.gov/"
         }
       ],
-      "answer": "Update your registration with your new name and vote the same day at any vote center in your county. The online deadline for this election was October 19.",
+      "answer": "Update your registration with your new name and vote the same day at any vote center in your county (in San Francisco, the City Hall Voting Center). The online deadline for this election was October 19.",
       "steps": [
-        "Go to any vote center in your county; you can update your name and vote in one visit.",
+        "Go to any vote center in your county (in San Francisco, the City Hall Voting Center); you can update your name and vote in one visit.",
         "Or use Same Day Registration at a vote center, through 8 PM Nov 3.",
         "Sign your mail ballot envelope the way you sign now, and watch for a notice asking you to confirm your signature."
       ],
@@ -349,7 +349,7 @@
       "steps": [
         "The online deadline to update your address was Oct 19, so vote in person or get a replacement at a vote center.",
         "At school in LA or Orange County (UCLA, USC, UCI, CSUF)? You can vote at any vote center in that county once registered there.",
-        "Use Same Day Registration at a vote center in the county where you live."
+        "Use Same Day Registration at a vote center in the county where you live (in San Francisco, the City Hall Voting Center)."
       ],
       "deadline": "2026-10-19",
       "source": "https://www.sos.ca.gov/elections/voting-resources/voting-california/students",

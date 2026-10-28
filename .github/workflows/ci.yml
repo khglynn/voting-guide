@@ -32,6 +32,30 @@ env:
   FORCE_COLOR: '0'
 
 jobs:
+  # A pull request that only adds a requested source's own two files (the workbench's vg source writes
+  # data/endorsers-src-<id>.json and data/endorsements-src-<id>.json) skips the browser job, so a friend's source can
+  # go live in minutes (Kevin, Oct 28: "yes skip them"). The data job still runs every data rule and the model tests on
+  # it, and the browser job runs on main after the merge. Anything else in the diff, or this job failing, runs it all.
+  changes:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      source_only: ${{ steps.c.outputs.source_only }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - id: c
+        run: |
+          files=$(git diff --name-only "${{ github.event.pull_request.base.sha }}...${{ github.event.pull_request.head.sha }}")
+          echo "$files"
+          if [ -n "$files" ] && ! echo "$files" | grep -qvE '^data/(endorsers|endorsements)-src-[a-z0-9-]+\.json$'; then
+            echo "source_only=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "source_only=false" >> "$GITHUB_OUTPUT"
+          fi
+
   # Fast, no browser. The rules from FOUNDATION.md as code, then the build (which includes the typecheck).
   data:
     if: github.event_name != 'schedule'
@@ -61,7 +85,9 @@ jobs:
 
   # Real browser at 380px: the scripted e2e, then the every-ballot sweep.
   browser:
-    if: github.event_name != 'schedule'
+    needs: [changes]
+    # !cancelled(): on a push to main `changes` is skipped, and the browser job must still run.
+    if: ${{ !cancelled() && github.event_name != 'schedule' && needs.changes.outputs.source_only != 'true' }}
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:

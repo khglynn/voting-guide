@@ -533,7 +533,7 @@ const heldMisses = new Map<string, number>();
 const liveSame = new Map<string, number>();
 /* A swap waiting for a free moment: its ballot and load, and either a preview's sources (`found`) or this ballot's
    live bundles read fresh (`fresh`), with what to say once it lands. */
-interface Fold { key: string; seq: number; code: string; found?: Found; fresh?: [StateBundle, ...PlaceBundle[]]; status?: AddStatus }
+interface Fold { key: string; seq: number; code: string; found?: Found; again?: true; fresh?: [StateBundle, ...PlaceBundle[]]; status?: AddStatus }
 let folds: Fold[] = [];
 let addsTimer: number | undefined;
 let foldTimer: number | undefined;
@@ -608,7 +608,8 @@ async function rereadHeld(a: Add, b: Ballot): Promise<void> {
   const plain = buildBallot(was.sb, was.pbs);
   const found = pickNew(got, idsIn([was.sb, ...was.pbs]), plain.byId, plain.order, placesKnown(), a.ids!);
   if (!found.endorsers.length) { readHere.add(k); return; }
-  folds.push({ key: b.key, seq, code: a.code, found });
+  // Back as it was: already switched on (or off) by you, so it comes back quietly.
+  folds.push({ key: b.key, seq, code: a.code, found, again: true });
 }
 /* Live, and this device never took the source in (it was away while the request ran, or the guide already had
    the source and this brought new picks): once production is on a newer build than this page (the index's
@@ -696,6 +697,7 @@ function tryFolds(): void {
     for (const f of now) {
       if (f.found) {
         readHere.add(`${f.code}|${nb.key}`);
+        if (f.again) continue;
         updateAdd(f.code, { ids: f.found.endorsers.map((e) => e.id), st: 'ready' });
         // The first source a request became goes on, as its switch in the sources sheet would (switchOnNow).
         S.switchOn = f.found.endorsers[0].id;

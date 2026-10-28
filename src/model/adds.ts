@@ -67,12 +67,15 @@ const clean = (raw: unknown, now: number): Add | null => {
   if (a.quiet === true) out.quiet = true;
   return out;
 };
-/* Every request this device sent in the last three days, newest first. Anything else in the key reads as none. */
+/* Every request this device sent in the last three days, newest first. Anything else in the key reads as none.
+   One past its three days is let go here, the first time it's read after. */
 export function readAdds(now = Date.now()): Add[] {
   const raw: unknown = load<unknown>(KEY, []);
   if (!Array.isArray(raw)) return [];
   const seen = new Set<string>();
-  return raw.map((x) => clean(x, now)).filter((a): a is Add => !!a && !seen.has(a.code) && !!seen.add(a.code)).sort((x, y) => y.at - x.at).slice(0, MAX);
+  const list = raw.map((x) => clean(x, now)).filter((a): a is Add => !!a && !seen.has(a.code) && !!seen.add(a.code)).sort((x, y) => y.at - x.at).slice(0, MAX);
+  if (list.length !== raw.length) save(KEY, list);
+  return list;
 }
 const write = (list: Add[]): boolean => save(KEY, list.slice(0, MAX));
 /* Sent: remember it. False when the device can't keep it (storage blocked), so the page doesn't promise it. */

@@ -47,6 +47,10 @@ async function newPage(opts = {}) {
   // an empty script, so it never fetches the real one (which sends nothing under a test browser anyway), and a
   // 404 before Web Analytics is on can't show up as a console error. The visit-count checks answer it themselves.
   await ctx.route((u) => u.pathname.startsWith('/_vercel/insights/'), (route) => route.fulfill({ status: 200, contentType: 'text/javascript', body: '' }));
+  // Nor Kevin's form script's request status, nor a request's branch preview (src/model/adds.ts): the checks that
+  // read them answer with fixtures (fakeAdds), which come before this.
+  await ctx.route('https://script.google.com/macros/**', (route) => route.abort());
+  await ctx.route(/^https:\/\/voting-guide-git-src-[a-z]{12}-kevinhg\.vercel\.app\//, (route) => route.abort());
   const page = await ctx.newPage();
   page.errors = [];
   // Only our own origin counts: a slow Google Fonts request is not a bug in the guide.
@@ -2308,6 +2312,292 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
   await b.ctx.close();
 }
 
+/* ---------- a source you asked for shows up in place (Oct 28, src/model/adds.ts) ----------
+   Kevin: "load with a banner saying when it's ready and then without losing any other work or steps they've
+   started moving through and then show their source". The form script's status and the request's branch
+   preview are fixtures here (fakeAdds): live Austin without AURA (an issue group, off to start), and the
+   preview with it. A check runs at once when the tab comes back (poke), so nothing waits 20 seconds. */
+{
+  const getJ = async (f) => (await fetch(`${BASE}/data/${f}`, { headers: BYPASS ? { 'x-vercel-protection-bypass': BYPASS } : {} })).json();
+  const realAustin = await getJ('place-austin-tx.json');
+  const liveAustin = JSON.parse(JSON.stringify(realAustin));
+  liveAustin.endorsers = liveAustin.endorsers.filter((e) => e.id !== 'aura');
+  for (const t of Object.keys(liveAustin.endorsements)) { delete liveAustin.endorsements[t].aura; if (!Object.keys(liveAustin.endorsements[t]).length) delete liveAustin.endorsements[t]; }
+  const realIndex = await getJ('index.json');
+  const CORS = { 'access-control-allow-origin': '*' };
+  const json = (route, body) => route.fulfill({ status: 200, contentType: 'application/json', headers: CORS, body: JSON.stringify(body) });
+  /* status: code -> {state, name, note}; up: the preview answers; slow: ms before it does; live: the site's own
+     Austin bundle has AURA (the merge landed); bump: the site's index.json says a newer build. */
+  async function fakeAdds(page) {
+    const c = { status: {}, up: false, slow: 0, live: false, bump: false, statusAsked: 0, previewAsked: 0 };
+    await page.route(`${BASE}/data/place-austin-tx.json`, (route) => json(route, c.live ? realAustin : liveAustin));
+    await page.route(`${BASE}/data/index.json`, (route) => json(route, c.bump ? { ...realIndex, generated: '2026-10-28T23:59:00.000Z' } : realIndex));
+    await page.route('https://script.google.com/macros/**', (route) => {
+      c.statusAsked++;
+      const s = c.status[new URL(route.request().url()).searchParams.get('status')];
+      return json(route, s ? { ok: true, at: '2026-10-28T18:00:00.000Z', ...s } : { ok: false });
+    });
+    await page.route(/^https:\/\/voting-guide-git-src-[a-z]{12}-kevinhg\.vercel\.app\//, async (route) => {
+      c.previewAsked++;
+      if (!c.up) return route.abort('failed'); // the real one 404s without CORS, which a page sees as a failed fetch
+      if (c.slow) await new Promise((r) => setTimeout(r, c.slow));
+      const f = new URL(route.request().url()).pathname.replace(/^\/data\//, '');
+      try { return await json(route, f === 'place-austin-tx.json' ? realAustin : await getJ(f)); } catch { /* the page gave up on it */ }
+    });
+    return c;
+  }
+  const poke = (page) => page.evaluate(() => document.dispatchEvent(new Event('visibilitychange')));
+  const adds = (page) => page.evaluate(() => JSON.parse(localStorage.getItem('vg-adds') || '[]'));
+  const austinSaved = async (page) => (JSON.parse((await savedVG(page)) || '{"ballots":{}}').ballots || {})['TX|austin-tx'] || {};
+  /* What's on the page right now, without waiting for it to appear (text() waits for its selector). */
+  const now$ = (page, sel) => page.evaluate((q) => (document.querySelector(q)?.textContent || '').replace(/\s+/g, ' ').trim(), sel);
+  const banner = (page) => now$(page, '#r-restore .adds p');
+  const toastIs = (page, re, ms = 6000) => page.waitForFunction((src) => new RegExp(src).test((document.querySelector('.toast.show') || {}).textContent || ''), re.source, { timeout: ms }).then(() => true).catch(() => false);
+  /* One request already sent from this device, seeded before the page loads (only once, so a reload keeps
+     what the page wrote). */
+  const seed = (page, o) => page.addInitScript((a) => { if (!localStorage.getItem('vg-adds')) localStorage.setItem('vg-adds', JSON.stringify([{ ...a, at: Date.now() - (a.ago || 60000) }])); }, o);
+  const ON = /^AURA is on\. Only you see it for now\.$/;
+
+  // 1. Sent from the shelf, shown in place, with a pick, an open row and the page where they were.
+  {
+    const { ctx, page } = await newPage();
+    const posts = await catchForm(page);
+    const c = await fakeAdds(page);
+    await openBallot(page, '78704');
+    await tap(page, '#i-tx-austin-prop-b [data-act="row"]');
+    await tap(page, '#i-tx-austin-prop-b [data-act="pick"][data-v="YES"]');
+    await settle(page);
+    await openRow(page, 'tx-austin-prop-a');
+    await settle(page);
+    check('Add in place: to start, AURA isn’t on Austin’s ballot', !/AURA/.test(await now$(page, '#i-tx-austin-prop-a')));
+    await edit(page);
+    await tap(page, '.sheet-panel.picks [data-act="shelf"][data-kind="source"]');
+    await page.waitForSelector('.sheet-panel.shelf[data-kind="source"]');
+    const along = await alongOf(page);
+    const code = (along.at(-1).match(/^Request: ([a-z]{12})$/) || [])[1];
+    check('Add in place: "We’ll send along" ends with the request’s code, 12 letters', !!code, along.join(' | '));
+    await page.fill('#rf-src', 'AURA');
+    await tap(page, SEND);
+    await page.waitForSelector('.rp-sent');
+    const p = posts.list[0];
+    check('Add in place: the post carries the same code, word for word', !!p && p.get('entry.780704302').endsWith(`\nRequest: ${code}`), p ? p.get('entry.780704302').slice(-80) : 'no post');
+    check('Add in place: sent, it says it shows up right here, no time promise', (await text(page, '.rp-sent p')) === 'Sent. If it checks out, it shows up right here. Keep going.', await text(page, '.rp-sent p'));
+    const kept = await adds(page);
+    check('Add in place: this device keeps the code and the name under vg-adds, never in vg2', kept.length === 1 && kept[0].code === code && kept[0].name === 'AURA' && Object.keys(kept[0]).sort().join() === 'at,code,name' && !(await savedVG(page)).includes(code), JSON.stringify(kept));
+    await tap(page, '[data-fk="report-done"]');
+    await settle(page);
+    await tap(page, '.sheet-panel [data-fk="sheet-x"]');
+    await settle(page);
+    check('Add in place: the banner says the request is in, in one line', (await banner(page)) === 'Request sent for AURA. You can keep going.' && c.statusAsked >= 1, `${await banner(page)} (${c.statusAsked})`);
+    c.status[code] = { state: 'checking', name: 'AURA' };
+    await poke(page);
+    await page.waitForFunction(() => /Checking AURA/.test(document.querySelector('#r-restore .adds')?.textContent || ''), null, { timeout: 5000 }).catch(() => {});
+    check('Add in place: being checked, the banner says so', (await banner(page)) === 'Checking AURA’s picks.', await banner(page));
+    // Ready while the menu is open: it waits.
+    const rowTop0 = await page.evaluate(() => document.getElementById('i-tx-austin-prop-a').getBoundingClientRect().top);
+    await menu(page);
+    c.status[code] = { state: 'ready', name: 'AURA' };
+    c.up = true;
+    await poke(page);
+    await until(() => c.previewAsked >= 2, 5000);
+    await page.waitForTimeout(1500);
+    check('Add in place: ready, the preview is read, but nothing moves while a sheet is open', c.previewAsked >= 2 && !/AURA is on/.test(await now$(page, '.toast')) && !(await austinSaved(page)).sources?.includes?.('aura'), `${c.previewAsked} ${await now$(page, '.toast')}`);
+    await page.keyboard.press('Escape');
+    const landed = await toastIs(page, ON);
+    await settle(page);
+    check('Add in place: the sheet closed, AURA goes on, and the toast says only you see it for now', landed, await now$(page, '.toast'));
+    const saved = await austinSaved(page);
+    check('Add in place: switched on for you, saved with your ballot', Array.isArray(saved.sources) && saved.sources.includes('aura'), JSON.stringify(saved.sources));
+    check('Add in place: the pick made before it is still there', saved.picks && saved.picks['tx-austin-prop-b'] === 'YES' && !!(await page.$('#i-tx-austin-prop-b:not([data-undecided])')), JSON.stringify(saved.picks));
+    const rowTop1 = await page.evaluate(() => document.getElementById('i-tx-austin-prop-a').getBoundingClientRect().top);
+    check('Add in place: the open row is still open, where it was, and now shows AURA', !!(await page.$('#i-tx-austin-prop-a.is-open')) && /AURA/.test(await now$(page, '#i-tx-austin-prop-a')) && Math.abs(rowTop1 - rowTop0) < 40, `${rowTop0} -> ${rowTop1}`);
+    check('Add in place: the banner is gone, and the request remembers the source it became', !(await page.$('#r-restore .adds')) && JSON.stringify((await adds(page))[0].ids) === '["aura"]');
+    await edit(page);
+    await tap(page, '.sheet-panel.picks [data-fk="cov-src"]');
+    await page.waitForSelector('.sheet-panel [data-fk="tg-aura"]');
+    check('Add in place: the sources sheet has it on, and says only you see it until it’s checked', (await page.getAttribute('.sheet-panel [data-fk="tg-aura"]', 'aria-checked')) === 'true'
+      && /New\. Only you see it until it’s checked\./.test(await page.evaluate(() => document.querySelector('.sheet-panel [data-fk="tg-aura"]').closest('.srow').textContent)));
+    await page.keyboard.press('Escape');
+    await page.keyboard.press('Escape');
+    await settle(page);
+
+    // 2. The reload gap: the preview is slow after a reload, and a chip tapped meanwhile keeps AURA yours.
+    c.slow = 4000;
+    const asked = c.previewAsked;
+    await page.reload();
+    await page.waitForSelector('#plan', { timeout: 15000 });
+    await openRow(page, 'tx-austin-prop-a');
+    check('Add in place: a slow preview never holds up the ballot after a reload', !/AURA/.test(await now$(page, '#i-tx-austin-prop-a')));
+    await edit(page);
+    await tap(page, '.sheet-panel.picks [data-act="chip"][data-k="papers"]');
+    await tap(page, '.sheet-panel.picks [data-act="chip"][data-k="papers"]');
+    await tap(page, '.sheet-panel.picks [data-fk="sheet-x"]');
+    await settle(page);
+    check('Add in place: a chip tapped before the preview answers keeps AURA in your list', ((await austinSaved(page)).sources || []).includes('aura'), JSON.stringify((await austinSaved(page)).sources));
+    await page.waitForFunction(() => /AURA/.test(document.getElementById('i-tx-austin-prop-a')?.textContent || ''), null, { timeout: 15000 }).catch(() => {});
+    check('Add in place: then it comes back on, quietly', /AURA/.test(await now$(page, '#i-tx-austin-prop-a')) && c.previewAsked > asked && !/is on/.test(await now$(page, '.toast')), await now$(page, '.toast'));
+    // A quick preview: it's there from the first paint.
+    c.slow = 0;
+    await page.reload();
+    await page.waitForSelector('#plan', { timeout: 15000 });
+    await openRow(page, 'tx-austin-prop-a');
+    check('Add in place: with a quick preview, it’s on from the first paint after a reload', /AURA/.test(await now$(page, '#i-tx-austin-prop-a')) && !/is on/.test(await now$(page, '.toast')));
+    // Three days on, the request is gone, and so is the source on this device.
+    await page.evaluate(() => { const a = JSON.parse(localStorage.getItem('vg-adds')); a[0].at -= 3 * 864e5; localStorage.setItem('vg-adds', JSON.stringify(a)); });
+    const before = c.previewAsked;
+    await page.reload();
+    await page.waitForSelector('#plan', { timeout: 15000 });
+    await openRow(page, 'tx-austin-prop-a');
+    await page.waitForTimeout(500);
+    check('Add in place: after three days the request expires: no preview read, no AURA, no banner', c.previewAsked === before && !/AURA/.test(await now$(page, '#i-tx-austin-prop-a')) && !(await page.$('#r-restore .adds')) && (await adds(page)).length === 0, `${c.previewAsked - before}`);
+    await noSideScroll(page, 'Add in place');
+    noErrors(page, 'Add in place');
+    await ctx.close();
+  }
+
+  // 3. It waits for an address lookup, its late maps included, and keeps what the lookup found.
+  {
+    const { ctx, page } = await newPage();
+    const c = await fakeAdds(page);
+    await seed(page, { code: 'aaaaaaaaaaaa', name: 'AURA' });
+    c.status.aaaaaaaaaaaa = { state: 'checking', name: 'AURA' };
+    let release = () => {};
+    const held = new Promise((r) => { release = r; });
+    await page.route('https://geocoding.geo.census.gov/**', async (route) => {
+      await held;
+      const cb = new URL(route.request().url()).searchParams.get('callback');
+      return route.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify({ result: { addressMatches: [{ matchedAddress: 'TEST ONE, AUSTIN, TX, 78704', coordinates: { x: -97.7431, y: 30.2672 }, geographies: {
+        States: [{ STATE: '48' }], 'Incorporated Places': [{ BASENAME: 'Austin' }], '119th Congressional Districts': [{ BASENAME: '37' }],
+        '2024 State Legislative Districts - Upper': [{ BASENAME: '14' }], '2024 State Legislative Districts - Lower': [{ BASENAME: '49' }] } }] } })})` });
+    });
+    await openBallot(page, '78704');
+    check('Add in place, lookup: a request sent earlier shows its banner on the ballot', (await banner(page)) === 'Checking AURA’s picks.', await banner(page));
+    await tap(page, '.addrbox [data-act="addr-open"]');
+    await page.fill('#addr-in', 'a test lookup');
+    await page.locator('form[data-form="addr"] button[type=submit]').tap();
+    c.status.aaaaaaaaaaaa = { state: 'ready', name: 'AURA' };
+    c.up = true;
+    await poke(page);
+    await until(() => c.previewAsked >= 2, 5000);
+    await page.waitForTimeout(1500);
+    check('Add in place, lookup: nothing moves while the Census is looking', !/AURA is on/.test(await now$(page, '.toast')) && !((await austinSaved(page)).sources || []).includes('aura'), await now$(page, '.toast'));
+    release();
+    const landed = await toastIs(page, ON, 10000);
+    await mapsSettled(page);
+    check('Add in place, lookup: once the lookup and its maps are in, AURA goes on', landed, await now$(page, '.toast'));
+    check('Add in place, lookup: and the lookup’s results stay: Found, and what it set', /^Found: Test One, Austin, TX 78704/.test(await text(page, '.addrbox .addr-found')) && /^Set from your address: /.test(await text(page, '.addrbox .addr-set')), await text(page, '.addrbox'));
+    noErrors(page, 'Add in place, lookup');
+    await ctx.close();
+  }
+
+  // 4. It waits for a restore prompt, and goes on once it's answered.
+  {
+    const { ctx, page } = await newPage();
+    const c = await fakeAdds(page);
+    await openBallot(page, '78704');
+    await tap(page, '#i-tx-austin-prop-b [data-act="row"]');
+    await tap(page, '#i-tx-austin-prop-b [data-act="pick"][data-v="YES"]');
+    await settle(page);
+    await tap(page, '.foot [data-act="cheat"]');
+    await page.waitForSelector('#cheat');
+    await tap(page, '[data-act="save-open"]');
+    const link = await page.inputValue('.save-url');
+    await page.goBack();
+    await page.waitForSelector('#plan');
+    await tap(page, '#i-tx-austin-prop-b [data-act="row"]').catch(() => {});
+    await openRow(page, 'tx-austin-prop-b');
+    await tap(page, '#i-tx-austin-prop-b [data-act="pick"][data-v="NO"]');
+    await settle(page);
+    await page.evaluate(() => localStorage.setItem('vg-adds', JSON.stringify([{ code: 'bbbbbbbbbbbb', name: 'AURA', at: Date.now() - 60000 }])));
+    c.status.bbbbbbbbbbbb = { state: 'ready', name: 'AURA' };
+    c.up = true;
+    await page.goto(linkHere(link));
+    await page.waitForSelector('[data-act="restore-no"]', { timeout: 15000 });
+    await until(() => c.previewAsked >= 2, 5000);
+    await page.waitForTimeout(1500);
+    check('Add in place, restore: nothing moves while the link’s question is open', !!(await page.$('[data-act="restore-no"]')) && !/AURA is on/.test(await now$(page, '.toast')), await now$(page, '.toast'));
+    await tap(page, '[data-act="restore-no"]');
+    const landed = await toastIs(page, ON);
+    check('Add in place, restore: answered, AURA goes on, and the picks kept are this device’s', landed && (await austinSaved(page)).picks['tx-austin-prop-b'] === 'NO', `${await now$(page, '.toast')} ${JSON.stringify((await austinSaved(page)).picks)}`);
+    noErrors(page, 'Add in place, restore');
+    await ctx.close();
+  }
+
+  // 5. Blocked: one tap to paste their picks, as a new request.
+  {
+    const { ctx, page } = await newPage();
+    const posts = await catchForm(page);
+    const c = await fakeAdds(page);
+    await seed(page, { code: 'cccccccccccc', name: 'Test Paper', reply: true });
+    c.status.cccccccccccc = { state: 'blocked', name: 'Test Paper', note: 'Their picks are behind a login.' };
+    await openBallot(page, '78704');
+    await page.waitForFunction(() => document.querySelector('#r-restore .adds')?.dataset.state === 'blocked', null, { timeout: 5000 }).catch(() => {});
+    check('Add in place, blocked: the banner asks for a paste, with one button', (await banner(page)) === 'We can’t read Test Paper’s page. Can you paste their picks?' && (await text(page, '#r-restore .adds [data-fk="adds-paste"]')) === 'Paste their picks', await banner(page));
+    await tap(page, '#r-restore [data-fk="adds-paste"]');
+    await page.waitForSelector('.sheet-panel.shelf[data-hint="paste"]');
+    const order = await page.$$eval('.sheet-panel.shelf [data-rf]', (els) => els.map((e) => e.dataset.rf));
+    check('Add in place, blocked: Add a source opens with the paste box first and the source filled in', order[0] === 'picks' && (await page.inputValue('#rf-src')) === 'Test Paper' && (await text(page, '.sheet-panel.shelf .rp-intro')) === 'We can’t read their page. Paste their picks here.', order.join());
+    check('Add in place, blocked: beside the box, what happens to a paste', /We use what you paste only to read their picks\. We never post their writing, and the guide links to their page\./.test(await text(page, '#rf-picks-h')), await text(page, '#rf-picks-h'));
+    await tap(page, SEND);
+    check('Add in place, blocked: it asks for the paste first', (await text(page, '#rf-err')) === 'Paste their picks first.' && posts.list.length === 0);
+    await page.fill('#rf-picks', 'Governor: A. Person\nProp A: Yes');
+    await tap(page, SEND);
+    await page.waitForSelector('.rp-sent');
+    const p = posts.list[0];
+    const code = ((p && p.get('entry.780704302').match(/\nRequest: ([a-z]{12})$/)) || [])[1];
+    check('Add in place, blocked: the paste goes as a new request, with a new code', !!p && p.get('entry.90887649') === 'Add source: Test Paper' && /^Governor: A\. Person\nProp A: Yes\n\nSent along:\n/.test(p.get('entry.780704302')) && !!code && code !== 'cccccccccccc', p ? p.get('entry.780704302') : 'no post');
+    const now = await adds(page);
+    check('Add in place, blocked: the new request takes the blocked one’s place', now.length === 1 && now[0].code === code, JSON.stringify(now));
+    await tap(page, '[data-fk="report-done"]');
+    await settle(page);
+    check('Add in place, blocked: and the banner follows the new one', (await banner(page)) === 'Request sent for Test Paper. You can keep going.', await banner(page));
+    noErrors(page, 'Add in place, blocked');
+    await ctx.close();
+  }
+
+  // 6. Not a source, closed for good; and a long wait.
+  {
+    const { ctx, page } = await newPage();
+    const c = await fakeAdds(page);
+    await seed(page, { code: 'dddddddddddd', name: 'https://example.org/story' });
+    c.status.dddddddddddd = { state: 'not_a_source', name: 'Example News', note: 'It’s a news story about other people’s picks.' };
+    await openBallot(page, '78704');
+    await page.waitForFunction(() => document.querySelector('#r-restore .adds')?.dataset.state === 'not_a_source', null, { timeout: 5000 }).catch(() => {});
+    check('Add in place, not a source: the banner says why, in the pipeline’s plain words', (await banner(page)) === 'We can’t add Example News. It’s a news story about other people’s picks.', await banner(page));
+    await tap(page, '#r-restore [data-act="adds-x"]');
+    check('Add in place, not a source: closed, it’s gone, and focus goes to the next step', !(await page.$('#r-restore .adds')) && (await focusedFk(page)) === 'plan-k', await focusedFk(page));
+    await page.reload();
+    await page.waitForSelector('#plan', { timeout: 15000 });
+    await page.waitForTimeout(400);
+    check('Add in place, not a source: and stays gone after a reload', !(await page.$('#r-restore .adds')));
+    await page.evaluate(() => localStorage.setItem('vg-adds', JSON.stringify([{ code: 'eeeeeeeeeeee', name: 'AURA', at: Date.now() - 21 * 60000 }])));
+    c.status.eeeeeeeeeeee = { state: 'checking', name: 'AURA' };
+    await page.reload();
+    await page.waitForSelector('#plan', { timeout: 15000 });
+    await page.waitForFunction(() => /Still waiting/.test(document.querySelector('#r-restore .adds')?.textContent || ''), null, { timeout: 5000 }).catch(() => {});
+    check('Add in place, a long wait: after 20 minutes, Kevin will take a look (no way to reach you was left)', (await banner(page)) === 'Still waiting on AURA. Kevin will take a look.', await banner(page));
+    noErrors(page, 'Add in place, not a source');
+    await ctx.close();
+  }
+
+  // 7. Live before this device saw it ready (the phone was away): once the site has the new build, AURA goes on.
+  {
+    const { ctx, page } = await newPage();
+    const c = await fakeAdds(page);
+    await seed(page, { code: 'ffffffffffff', name: 'aura' });
+    c.status.ffffffffffff = { state: 'checking', name: 'AURA' };
+    await openBallot(page, '78704');
+    c.status.ffffffffffff = { state: 'live', name: 'AURA' };
+    c.live = true;
+    c.bump = true;
+    await poke(page);
+    const landed = await toastIs(page, /^AURA is on\. Its picks show beside your races\.$/, 8000);
+    check('Add in place, live: read fresh from the new build, AURA goes on, with the usual words', landed && ((await austinSaved(page)).sources || []).includes('aura') && (await adds(page)).length === 0 && c.previewAsked === 0, `${await now$(page, '.toast')} ${c.previewAsked}`);
+    noErrors(page, 'Add in place, live');
+    await ctx.close();
+  }
+}
+
 /* ---------- every source in reach from the first page (Oct 25) ----------
    Kevin: "show a count and a way to expand to see all sources and then individually check and uncheck within
    that list ... also show what sources we tried but couldn't access ... and then the option to add their own
@@ -2352,8 +2642,8 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
   await page.fill('#rf-src', 'https://example.org/our-guide');
   await tap(page, '[data-fk="rf-picks-b"]');
   await page.waitForSelector('#rf-picks');
-  check('Sources: Paste in their picks opens the box in place, with its hint, the source still typed', (await page.getAttribute('[data-fk="rf-picks-b"]', 'aria-expanded')) === 'true'
-    && (await text(page, '#rf-picks-h')) === 'Behind a login? Copy their endorsement list and paste it here.' && (await page.inputValue('#rf-src')) === 'https://example.org/our-guide' && (await focusedFk(page)) === 'rf-picks-b', await focusedFk(page));
+  check('Sources: Paste in their picks opens the box in place, with its hint and what happens to a paste, the source still typed', (await page.getAttribute('[data-fk="rf-picks-b"]', 'aria-expanded')) === 'true'
+    && (await text(page, '#rf-picks-h')) === 'Behind a login? Copy their endorsement list and paste it here. We use what you paste only to read their picks. We never post their writing, and the guide links to their page.' && (await page.inputValue('#rf-src')) === 'https://example.org/our-guide' && (await focusedFk(page)) === 'rf-picks-b', await focusedFk(page));
   await page.fill('#rf-picks', 'Mayor: A. Person\nProp 1: Yes');
   // Folded again before Send, the pasted picks still go (Codex, PR #30): the payload check below pins it.
   await tap(page, '[data-fk="rf-picks-b"]');
@@ -2363,7 +2653,7 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
   const p = posts.list[0];
   check('Sources: Add a source posts the five answers, the pasted picks in What’s wrong', posts.list.length === 1 && FORM_IDS.every((k) => p.has(k)) && p.get('entry.90887649') === 'Add source: https://example.org/our-guide' && p.get('entry.1986493507') === 'https://example.org/our-guide'
     && p.get('entry.628621310') === 'Chicago, 60601' && /^Mayor: A\. Person\nProp 1: Yes\n\nSent along:\nPage: First page\n/.test(p.get('entry.780704302')), p ? p.toString() : 'no post');
-  check('Sources: sent, a source usually shows up within a day', (await text(page, '.rp-sent p')) === 'Sent. Kevin reads every one; a source usually shows up within a day.');
+  check('Sources: sent, it says it shows up right here (this device watches for it, model/adds.ts)', (await text(page, '.rp-sent p')) === 'Sent. If it checks out, it shows up right here. Keep going.', await text(page, '.rp-sent p'));
   await tap(page, '[data-fk="report-done"]');
   await settle(page);
   check('Sources: Done goes back to the sources sheet', (await text(page, '.sheet-panel #sh-h')) === 'Every source on your ballot');

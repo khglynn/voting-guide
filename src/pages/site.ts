@@ -146,24 +146,24 @@ function ballotHTML(b: Ballot, where: string): string {
 }
 
 /* ---------- dates, places to vote, the office ---------- */
-interface DateRow { date: string; text: string; detail: string | null }
+interface DateRow { date: string; lead: string; when: string; detail: string | null }
 function dateRows(h: HowTo, place: PlaceBundle | null): DateRow[] {
   const out: DateRow[] = [];
   const reg: Record<string, string> = { online: 'Last day to register online', mail: 'Last day to register by mail', in_person: 'Last day to register in person' };
-  h.registration.deadlines.forEach((d) => { if (d.date) out.push({ date: d.date, text: `${reg[d.method] || 'Registration deadline'}: ${fmtDate(d.date)}`, detail: null }); });
+  h.registration.deadlines.forEach((d) => { if (d.date) out.push({ date: d.date, lead: `${reg[d.method] || 'Registration deadline'}: `, when: fmtDate(d.date), detail: null }); });
   const rq = h.mail_ballot.request_deadline;
-  if (rq && rq.date) out.push({ date: rq.date, text: `Last day to ask for a mail ballot: ${fmtDate(rq.date)}`, detail: null });
+  if (rq && rq.date) out.push({ date: rq.date, lead: 'Last day to ask for a mail ballot: ', when: fmtDate(rq.date), detail: null });
   const ep = h.early_in_person;
   if (ep.available && ep.start && ep.end) {
-    out.push({ date: ep.start, text: `${isMailState(h) ? 'In-person voting' : 'Early voting'}: ${fmtDate(ep.start)} to ${fmtDate(ep.end)}`, detail: place?.early_in_person?.hours_short || null });
+    out.push({ date: ep.start, lead: `${isMailState(h) ? 'In-person voting' : 'Early voting'}: `, when: `${fmtDate(ep.start)} to ${fmtDate(ep.end)}`, detail: place?.early_in_person?.hours_short || null });
   }
   const r = h.mail_ballot.return_deadline;
-  out.push({ date: r.date, text: `Your mail ballot must ${r.rule === 'received_by' ? 'arrive' : r.rule === 'postmarked_by' ? 'be postmarked' : 'be returned'} by ${fmtDate(r.date)}`, detail: r.time });
+  out.push({ date: r.date, lead: `Your mail ballot must ${r.rule === 'received_by' ? 'arrive' : r.rule === 'postmarked_by' ? 'be postmarked' : 'be returned'} by `, when: fmtDate(r.date), detail: r.time });
   const open = clock(h.election_day.polls_open), close = clock(h.election_day.polls_close) || h.election_day.polls_close;
-  out.push({ date: h.election_date, text: `Election Day: ${fmtDate(h.election_date)}`, detail: open ? `You can vote from ${open} to ${close}.` : `Polls close at ${close}.` });
+  out.push({ date: h.election_date, lead: 'Election Day: ', when: fmtDate(h.election_date), detail: open ? `You can vote from ${open} to ${close}.` : `Polls close at ${close}.` });
   return out.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
 }
-const datesHTML = (rows: DateRow[]): string => `<ul class="pg-dates">${rows.map((r) => `<li><b>${esc(r.text)}</b>${r.detail ? `<span>${escP(r.detail)}</span>` : ''}</li>`).join('')}</ul>`;
+const datesHTML = (rows: DateRow[]): string => `<ul class="pg-dates">${rows.map((r) => `<li>${esc(r.lead)}<b>${esc(r.when).replace(/ to /, ' to&nbsp;')}</b>${r.detail ? `<span>${escP(r.detail)}</span>` : ''}</li>`).join('')}</ul>`;
 const ext = (url: string, text: string): string => `<a href="${esc(url)}" rel="noopener">${esc(text)}</a>`;
 function whereHTML(h: HowTo, p: PlaceBundle | null): string {
   const links: string[] = [];
@@ -199,7 +199,7 @@ function idHTML(h: HowTo, full: boolean): string {
 
 /* ---------- the page around it ---------- */
 const PAGE_CSS = `
-.pg-top{padding-top:14px}
+.pg .pg-top{padding-top:14px}
 .pg-crumbs{font-size:14px;color:var(--muted)}.pg-crumbs a{color:inherit}
 .pg .place{font-size:clamp(38px,12vw,56px);margin-top:10px}
 .pg-lede{margin-top:12px;font-size:18px;color:var(--ink-2)}
@@ -213,7 +213,7 @@ const PAGE_CSS = `
 .pg-c{font-size:15px;color:var(--ink-2);margin-top:2px}
 .pg-dist{margin-top:4px;padding-left:14px;border-left:2px solid var(--rule)}.pg-dist li{padding:4px 0}.pg-dist .pg-c{display:block}
 .pg-may{display:inline-block;font-size:13px;color:var(--muted);border:1px solid var(--rule-2);border-radius:2px;padding:0 5px;margin-left:4px}
-.pg-dates{display:grid;gap:10px;margin-top:10px}.pg-dates span{display:block;font-size:15px;color:var(--ink-2)}
+.pg-dates{display:grid;gap:10px;margin-top:10px}.pg-dates b{white-space:nowrap}.pg-dates span{display:block;font-size:15px;color:var(--ink-2)}
 .pg-links{display:grid;gap:4px;margin-top:10px}.pg-links a{display:inline-flex;min-height:40px;align-items:center}
 .pg-office,.pg-note,.pg p{margin-top:10px}
 .pg-bul{list-style:disc;padding-left:20px;margin-top:8px;display:grid;gap:4px}
@@ -273,7 +273,7 @@ function shell(s: Shell, a: Assets, footer: string): string {
 <script type="application/ld+json">${jsonLd(s)}</script>
 ${a.js ? `<script type="module" src="${esc(a.js)}"></script>\n` : ''}</head>
 <body class="pg">
-<header class="mast front wrap pg-top">
+<header class="mast wrap pg-top">
 <nav class="pg-crumbs" aria-label="Breadcrumb">${crumbs}</nav>
 <p class="dateline" style="margin-top:12px">${esc(s.kicker)}</p>
 <h1 class="place">${esc(s.h1)}</h1>

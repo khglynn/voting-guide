@@ -171,7 +171,7 @@ async function boot(): Promise<void> {
     await openBallot(head.st, places, head.zip, { share: head });
     return;
   }
-  // A save link above wins; then a page's button (an unknown place or state just lands on the first page).
+  // A save link above wins; then a page's button. A place or state the guide doesn't have is ignored, and the guide opens as it would without it.
   const go = entry; entry = null;
   if (go && 'place' in go && S.index!.places[go.place]) { await openChosen([go.place], '', 'page'); return; }
   if (go && 'state' in go && S.index!.states[go.state]) { await openBallot(go.state, [], '', { door: true, how: 'page' }); return; }

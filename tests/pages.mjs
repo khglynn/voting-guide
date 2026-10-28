@@ -174,18 +174,43 @@ check('page titles and descriptions: no em dashes, no all caps', !bad.copy.lengt
     }
   }
   check('every place page keeps a way to find early voting and Election Day places (county\'s or state\'s)', !lost.length, lost.join(' '));
-  // Dated text: shown as it reads on the build date, or, when it changes again before the election, left to the app.
-  const later = placeIds.filter((id) => (data.places[id].dated || []).some((x) => x.path === 'notes' && x.from > TODAY));
-  check('a place note that changes after the build date is left to the app, not shown stale', later.length > 0 && later.every((id) => !pages.find((x) => x.path === `/${id}`).html.includes('class="pg-note"')), later.join(' '));
-  const eday = site.allPages(data, A, '2026-11-03');
-  const nyc = data.places['nyc-brooklyn-ny'];
-  const last = (nyc.dated || []).filter((x) => x.path === 'notes').sort((a, b) => (a.from < b.from ? -1 : 1)).pop();
-  check('built on Election Day, a dated note reads its newest text', !!last && textOf(eday.find((x) => x.path === '/nyc-brooklyn-ny').html).includes(norm0(last.text).slice(0, 60)));
-  // A state slot dated to change later (none today but Texas's gotchas, which no page shows) is left out too.
-  const fake = JSON.parse(JSON.stringify(data));
-  fake.states.TX.howto.dated = [...(fake.states.TX.howto.dated || []), { path: 'mail_ballot.return_options.0', from: '2026-11-01', text: 'x' }];
-  const tx0 = textOf(site.statePage(fake, 'TX', A, TODAY).html).toLowerCase();
-  check('a state rule dated to change later is left to the app (a return option, in a test copy of the data)', !tx0.includes(norm0(data.states.TX.howto.mail_ballot.return_options[0]).slice(0, 50).toLowerCase()) && tx0.includes(norm0(data.states.TX.howto.mail_ballot.return_options[1]).slice(0, 50).toLowerCase()));
+  // Dated text never goes on a page, whatever the build date (Codex on 217e8df): it can say "today", and a page keeps
+  // it until the next deploy. The app shows it as it reads on the day.
+  const dn = placeIds.filter((id) => (data.places[id].dated || []).some((x) => x.path === 'notes'));
+  const builds = ['2026-10-28', '2026-11-03', '2026-11-04'].map((day) => site.allPages(data, A, day));
+  check('a place note with any dated text is never on its page, built before, on or after its dates', dn.length > 0 && builds.every((ps) => dn.every((id) => !ps.find((x) => x.path === `/${id}`).html.includes('class="pg-note"'))), dn.join(' '));
+  check('Brooklyn built on Election Day: no "today" from its dated note', !textOf(builds[1].find((x) => x.path === '/nyc-brooklyn-ny').html).toLowerCase().includes('poll site today'));
+  // The fixture: every text field of Texas's state file and of Austin's place file holds a marker, and every one is
+  // dated. No marker, before or after its date, may reach either page. A control run, undated, proves the markers
+  // reach the page through the fields the pages render.
+  const fx = JSON.parse(JSON.stringify(data));
+  // Not text: the ballot itself and the names the guide keys on (a dated one means no page; checked below).
+  const SKIP = /^(items|endorsements|endorsers|order|local|maps|zips|id|label|state|counties|file|dated)(\.|$)|\.zips(\.|$)|^by_county\.\d+\.county$/;
+  let n = 0;
+  const mark = (o, pre, dated) => {
+    for (const [k, v] of Object.entries(o)) {
+      const key = Array.isArray(o) ? String(k) : k;
+      // A situation is named by its id in a dated path (plan.applyDated), not its place in the list.
+      const seg = pre === 'situations' && v && v.id ? v.id : key;
+      const path = pre ? `${pre}.${seg}` : seg;
+      if (SKIP.test(path)) continue;
+      if (typeof v === 'string') { o[k] = `ZQ${++n}QZ`; if (dated) dated.push({ path, from: '2026-11-01', text: `ZN${n}NZ` }); }
+      else if (v && typeof v === 'object') mark(v, path, dated);
+    }
+  };
+  const control = JSON.parse(JSON.stringify(data));
+  mark(control.states.TX.howto, '', null); mark(control.places['austin-tx'], '', null);
+  const reached = (ps) => ps.filter((x) => ['/texas', '/austin-tx'].includes(x.path)).map((x) => x.html.match(/Z[QN]\d+[QN]Z/g) || []).flat();
+  const ctl = new Set(reached(site.allPages(control, A, TODAY)));
+  fx.states.TX.howto.dated = []; fx.places['austin-tx'].dated = [];
+  mark(fx.states.TX.howto, '', fx.states.TX.howto.dated); mark(fx.places['austin-tx'], '', fx.places['austin-tx'].dated);
+  const leaks = ['2026-10-28', '2026-11-05'].flatMap((day) => reached(site.allPages(fx, A, day)));
+  check(`the fixture: undated, the markers reach both pages through ${ctl.size} fields (the control)`, ctl.size >= 25, `${ctl.size} fields`);
+  check('the fixture: every text field of Texas and Austin dated, no marker reaches either page, before or after its date', leaks.length === 0, [...new Set(leaks)].slice(0, 6).join(' '));
+  const named = JSON.parse(JSON.stringify(data));
+  named.places['austin-tx'].dated = [{ path: 'label', from: '2026-11-01', text: 'x' }];
+  let threw = false; try { site.placePage(named, 'austin-tx', A, TODAY); } catch { threw = true; }
+  check('a place whose name is dated gets no page (build-pages skips it and says so)', threw);
 }
 /* ---------- state pages ---------- */
 {

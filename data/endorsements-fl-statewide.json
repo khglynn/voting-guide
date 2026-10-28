@@ -162,13 +162,12 @@
   {
     "endorser_id": "sun-sentinel-eb",
     "target_id": "fl-attorney-general",
-    "status": "not_found",
-    "unreadable": true,
-    "choice": null,
-    "why": "We could not read the Sun Sentinel's Cabinet and retention picks. Its slate may mirror the Orlando Sentinel's, but that is not confirmed.",
+    "status": "endorsed",
+    "choice": "Jose Javier Rodriguez",
+    "why": "Listed in its complete list of endorsements; its Sept. 12 editorial says he promises to pick up the trail of corruption in the Hope Florida case.",
     "url": "https://www.sun-sentinel.com/opinion/endorsements/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "date": "2026-09-12",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "sun-sentinel-eb",
@@ -193,13 +192,12 @@
   {
     "endorser_id": "sun-sentinel-eb",
     "target_id": "fl-retention-muniz",
-    "status": "not_found",
-    "unreadable": true,
-    "choice": null,
-    "why": "We could not read the Sun Sentinel's Cabinet and retention picks. Its slate may mirror the Orlando Sentinel's, but that is not confirmed.",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its complete list of endorsements; its Sept. 28 editorial is titled \"It's only fair to retire this Florida justice.\"",
     "url": "https://www.sun-sentinel.com/opinion/endorsements/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "date": "2026-09-28",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "sun-sentinel-eb",

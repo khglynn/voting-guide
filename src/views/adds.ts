@@ -30,11 +30,11 @@ export const ADD_COPY = {
   notSource: (n: string, note: string): string => `We can’t add ${n}.${note ? ` ${note}` : ''}`,
   failed: (n: string, reply: boolean): string => `Couldn’t add ${n}. Kevin will ${reply ? 'follow up' : 'take a look'}.`,
   hide: 'Hide request status',
-  /* Toasts: on this device, before the merge; live before this device saw it; a source the guide had, with new
-     picks; live, with no picks on the ballot that's open. */
+  /* Toasts: on this device, before the merge; a source the guide had, with new picks; live, with no source here
+     matching what was typed (on another ballot, or named differently). */
   onEarly: (n: string): string => `${n} is on. Only you see it for now.`,
   newPicks: (n: string): string => `${n}’s new picks are in.`,
-  elsewhere: (n: string): string => `${n} is in the guide now, but not on this ballot.`,
+  elsewhere: (n: string): string => `${n} is in the guide now.`,
   /* The sources sheet, after its type: a source on this device before the merge. */
   sheetNote: 'New. Only you see it until it’s checked.',
 };

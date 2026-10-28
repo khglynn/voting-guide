@@ -14,7 +14,7 @@ import { planAgree, applyFills, planParty, planSetup, forgetUndo, fillStands, ca
 import { addrSummary, localAnswers, mapNotes, lookupPasses, type MapResult } from './model/address';
 import { ballotMaps, fromTopo, answerAt, edgeOf, type FeatureCollection, type Topology } from './model/maps';
 import { partiesOnBallot, toggleChip, setSources, setParty, chipMembers, chipState, doorNone, noEndorsements, CHIPS } from './model/lens';
-import { readAdds, updateAdd, forgetAdd, readStatus, pickNew, mergeFound, withoutIds, withFound, idsIn, settled, POLL_MS, WATCH_MS, type Add, type AddStatus, type Found } from './model/adds';
+import { readAdds, updateAdd, forgetAdd, readStatus, pickNew, mergeFound, withoutIds, withFound, idsIn, settled, typedSource, POLL_MS, WATCH_MS, type Add, type AddStatus, type Found } from './model/adds';
 import { statusOf, addsHTML, addName, ADD_COPY } from './views/adds';
 
 /* ---------- data ---------- */
@@ -533,9 +533,13 @@ const readHere = new Set<string>();
 const heldMisses = new Map<string, number>();
 /* Checks of a "live" request that found production on the same build as this page, by code (below). */
 const liveSame = new Map<string, number>();
+/* The 20-second checks a request gets past its first 30 minutes this visit (a ready preview that won't answer, a
+   live build that hasn't landed): fifteen, five minutes' worth, then only a load or the tab coming back. */
+const lateTicks = new Map<string, number>();
+const LATE_MAX = 15;
 /* A swap waiting for a free moment: its ballot and load, and either a preview's sources (`found`) or this ballot's
    live bundles read fresh (`fresh`), with what to say once it lands. */
-interface Fold { key: string; seq: number; code: string; found?: Found; again?: true; fresh?: [StateBundle, ...PlaceBundle[]]; status?: AddStatus }
+interface Fold { key: string; seq: number; code: string; found?: Found; again?: true; fresh?: [StateBundle, ...PlaceBundle[]]; status?: AddStatus; sure?: false }
 let folds: Fold[] = [];
 let addsTimer: number | undefined;
 let foldTimer: number | undefined;
@@ -563,7 +567,10 @@ async function checkAdds(why: Why): Promise<void> {
     for (const a of readAdds(now)) {
       const b = openBallotNow();
       if (a.ids) { if (b && why !== 'sent') await rereadHeld(a, b); continue; }
-      if (why === 'tick' && !ticking(a, now, b)) continue;
+      if (why === 'tick') {
+        if (!ticking(a, now, b)) continue;
+        if (!a.ids && now - a.at >= WATCH_MS) lateTicks.set(a.code, (lateTicks.get(a.code) || 0) + 1);
+      }
       let st: AddStatus | null = null;
       try { st = readStatus(await farJSON(`${STATUS_URL}?status=${a.code}`, 10_000)); } catch { /* no answer: try next time */ }
       if (!st || !st.state) continue;
@@ -617,9 +624,9 @@ async function rereadHeld(a: Add, b: Ballot): Promise<void> {
 }
 /* Live, and this device never took the source in (it was away while the request ran, or the guide already had
    the source and this brought new picks): once production is on a newer build than this page (the index's
-   generated moved), this ballot's live bundles are read fresh and swapped in. Production may still be on the
-   old build for a minute or two after the merge; if it stays on this page's build for six checks, this page
-   already has the merge and the request is settled with what it shows. */
+   generated moved), this ballot's live bundles are read fresh and swapped in. If this page's build is newer than
+   the status's own time, it has the merge already. Otherwise production may still be deploying: after nine
+   checks on the same build, a source matching what was typed is taken as here; with none, the request waits. */
 async function readLive(a: Add, st: AddStatus, b: Ballot): Promise<void> {
   if (pendingFor(a.code, b.key) || !S.index) return;
   const seq = loadSeq;
@@ -627,9 +634,12 @@ async function readLive(a: Add, st: AddStatus, b: Ballot): Promise<void> {
   try { idx = await farJSON(`${BASE}data/index.json`, 10_000) as Index; } catch { return; }
   if (!idx || typeof idx.generated !== 'string' || S.ballot !== b || seq !== loadSeq) return;
   if (idx.generated === S.index.generated) {
+    // This page's build is newer than the "live" word: it has the merge already.
+    if (st.at && S.index.generated > st.at) { folds.push({ key: b.key, seq, code: a.code, status: st }); return; }
     const n = (liveSame.get(a.code) || 0) + 1;
     liveSame.set(a.code, n);
-    if (n >= 6) folds.push({ key: b.key, seq, code: a.code, status: st });
+    // Nine checks (three minutes) on the same build: this page has it too, if the source is here to show it.
+    if (n >= 9 && typedSource(a.name, b.endorsers)) folds.push({ key: b.key, seq, code: a.code, status: st, sure: false });
     return;
   }
   const got = await bundlesAt(BASE, b.st, b.places.map((p) => p.id), 15_000);
@@ -648,9 +658,9 @@ async function readLive(a: Add, st: AddStatus, b: Ballot): Promise<void> {
 function ticking(a: Add, now: number, b: Ballot | null): boolean {
   if (a.ids) return !!b && !readHere.has(`${a.code}|${b.key}`) && !a.ids.every((id) => b.eById.has(id)) && (heldMisses.get(a.code) || 0) < 3;
   if (settled(a)) return false;
-  if (a.st === 'live') return true;
-  if (a.st === 'ready' && b && !readHere.has(`${a.code}|${b.key}`)) return true;
-  return now - a.at < WATCH_MS;
+  if (now - a.at < WATCH_MS) return true;
+  if ((lateTicks.get(a.code) || 0) >= LATE_MAX) return false;
+  return a.st === 'live' || (a.st === 'ready' && !!b && !readHere.has(`${a.code}|${b.key}`));
 }
 /* Due while anything is ticking; never while the tab is hidden. */
 function nextCheck(): void {
@@ -683,13 +693,17 @@ function foldWaits(): boolean {
 function tryFolds(): void {
   window.clearTimeout(foldTimer);
   foldTimer = undefined;
-  if (!folds.length) return;
-  if (foldWaits()) { foldTimer = window.setTimeout(tryFolds, 1000); return; }
+  // Swaps for a ballot that's gone, a load that was replaced, or a request that expired go first.
   const b = openBallotNow();
+  const open = new Set(readAdds().map((a) => a.code));
+  folds = folds.filter((f) => b && f.key === b.key && f.seq === loadSeq && open.has(f.code));
+  if (!folds.length) return;
+  // Hidden, the next check when the tab comes back runs this again; otherwise once a second until it can.
+  if (foldWaits()) { if (!document.hidden) foldTimer = window.setTimeout(tryFolds, 1000); return; }
   const was = b && built.get(b);
-  const now = folds.filter((f) => b && f.key === b.key && f.seq === loadSeq);
+  const now = folds;
   folds = [];
-  if (!b || !was || !now.length) return;
+  if (!b || !was) return;
   let { sb, pbs, found } = was;
   for (const f of now) {
     if (f.fresh) { [sb, ...pbs] = f.fresh; found = withoutIds(found, idsIn(f.fresh)); }
@@ -697,6 +711,7 @@ function tryFolds(): void {
   }
   const nb = now.some((f) => f.found || f.fresh) ? build(sb, pbs, found) : b;
   const said: string[] = [];
+  const turnOn: string[] = [];
   anchored(() => {
     if (nb !== b) { normalizeRanks(nb, S.b); S.ballot = nb; }
     for (const f of now) {
@@ -704,29 +719,37 @@ function tryFolds(): void {
         readHere.add(`${f.code}|${nb.key}`);
         if (f.again) continue;
         updateAdd(f.code, { ids: f.found.endorsers.map((e) => e.id), st: 'ready' });
-        // The first source a request became goes on, as its switch in the sources sheet would (switchOnNow).
-        S.switchOn = f.found.endorsers[0].id;
-      } else if (f.status) said.push(settleLive(f, nb));
+        // The first source a request became goes on, as its switch in the sources sheet would.
+        turnOn.push(f.found.endorsers[0].id);
+      } else if (f.status) {
+        const r = settleLive(f, nb);
+        if (r.on) turnOn.push(r.on); else if (r.say) said.push(r.say);
+      }
     }
+    // Every request's source goes on; the toast names the last (switchOnNow).
+    const more = turnOn.slice(0, -1).filter((id) => !chosenIds().includes(id));
+    if (more.length) setSources(nb, [...chosenIds(), ...more]);
+    if (turnOn.length) S.switchOn = turnOn[turnOn.length - 1];
     render();
     if (S.switchOn) switchOnNow();
   });
   persist();
-  const line = said.filter(Boolean).pop();
-  if (line && S.view === 'ballot') toast(line);
+  const line = said.pop();
+  if (line && !turnOn.length && S.view === 'ballot') toast(line);
 }
-/* A live request, settled on the ballot as it is now: its source (by the id the status names, else by its exact
-   name) goes on; one already on says its new picks are in; one this ballot doesn't have says it's in the guide. */
-function settleLive(f: Fold, b: Ballot): string {
+/* A live request, settled on the ballot as it is now. Its source is the one matching what was typed (model/adds.ts
+   typedSource; the status's own words never pick it): it goes on, or, already on, says its new picks are in.
+   With none matching, it says the source is in the guide. Settled, it's let go. */
+function settleLive(f: Fold, b: Ballot): { on?: string; say?: string } {
   const st = f.status!;
   const a = readAdds().find((x) => x.code === f.code);
+  if (!a) return {};
+  const e = typedSource(a.name, b.endorsers);
+  if (!e && f.sure === false) return {}; // not proven here yet: it waits for a load or the tab coming back
   forgetAdd(f.code);
-  const name = (n: string) => n.trim().toLowerCase();
-  const e = (st.id && b.endorsers.find((x) => x.id === st.id)) || (st.name ? b.endorsers.filter((x) => name(x.name) === name(st.name) || name(x.short) === name(st.name)) : []).find((_, __, all) => all.length === 1);
-  if (!e) return ADD_COPY.elsewhere(a ? addName(a, st) : st.name || 'Your source');
-  if (chosenIds().includes(e.id)) return ADD_COPY.newPicks(e.short || e.name);
-  S.switchOn = e.id;
-  return '';
+  if (!e) return { say: ADD_COPY.elsewhere(addName(a, st)) };
+  if (chosenIds().includes(e.id)) return { say: ADD_COPY.newPicks(e.short || e.name) };
+  return { on: e.id };
 }
 
 /* "Welcome back. You've decided 12 of 43.": a returning visitor's started ballot, reopened from this

@@ -10,7 +10,7 @@ import { growOpen, inkRow, followFold, glideTo, land, stopGlide, shrinkAway, col
 import { openBallot, openChosen, go, openReader, runAddress, reopenAddr, useMatch, toDoor, showBallot, rechoose, openSaved, fillWhy, leaveBallot, viewed, switchOnNow, watchAdds } from './app';
 import { judgeBatch } from './model/judges';
 import { planAgree, planParty, planJudges, planSetup, applyFills, undoFills, emptyPlan, touchUndo, type Plan } from './model/bulk';
-import { toggleChip, setParty, setSources, noEndorsements, doorNone, chipState, unreadHere, CHIPS, type ChipKey } from './model/lens';
+import { toggleChip, setParty, setSources, noEndorsements, doorNone, chipState, unreadHere, backOn, CHIPS, type ChipKey } from './model/lens';
 import { courtGroup } from './model/labels';
 import { claimAnswer, claimOn, claimOff } from './model/address';
 import { basisWords, LEANS, FORM, reportWhere } from './views/common';
@@ -589,13 +589,13 @@ A.ends = () => {
     if (off) S.door.fill = false;
     else if (!S.door.fillSet) S.door.fill = !(doorBallot() && S.b.setupDone); // back to its default
     S.ui.open.delete('su-party');
-    if (doorBallot()) { S.b.sources = off ? [] : null; S.b.party = null; }
+    if (doorBallot()) { S.b.sources = off ? [] : backOn(B()); S.b.party = null; }
     glide(['#setup'], () => render(['mast']));
     announce(off ? 'Turned off.' : 'Turned on.');
     return;
   }
   const off = !noEndorsements();
-  S.b.sources = off ? [] : null;
+  S.b.sources = off ? [] : backOn(B());
   S.b.party = null;
   if (off) S.ui.setupFill = false;
   renderLens(); persist();

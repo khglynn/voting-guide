@@ -30,7 +30,7 @@ export interface Add {
 }
 /* What the form script says about a request (app.ts reads it): its stage, the source's name as the guide
    will show it, a note in plain words (why it isn't a source), and the source's id when it sends one. */
-export interface AddStatus { state: AddState | null; name: string; note: string; id: string | null }
+export interface AddStatus { state: AddState | null; name: string; note: string; id: string | null; at: string | null }
 
 const KEY = 'vg-adds';
 const MAX = 5;
@@ -115,7 +115,29 @@ export function readStatus(raw: unknown): AddStatus | null {
   const line = (v: unknown, n: number): string => (typeof v === 'string' ? v.replace(/\s+/g, ' ').trim().slice(0, n) : '');
   const state = typeof r.state === 'string' && (ADD_STATES as string[]).includes(r.state) ? r.state as AddState : null;
   const id = typeof r.id === 'string' && SOURCE_ID.test(r.id) ? r.id : null;
-  return { state, name: line(r.name, 120), note: line(r.note, 200), id };
+  const at = typeof r.at === 'string' && /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/.test(r.at) ? r.at : null;
+  return { state, name: line(r.name, 120), note: line(r.note, 200), id, at };
+}
+/* Which source on a ballot is the one this request asked for, judged only by what the requester typed (Codex,
+   Oct 28: the status's own id and name are display text, so a wrong or forged answer can't switch on a source
+   nobody asked for). A link matches the source whose guide is on that site; a name matches a source's name or
+   short name, or either one inside the other as whole words (five letters at least), once case, "the" and
+   punctuation are set aside. Exactly one source must match, else none does. */
+export function typedSource(typed: string, list: Endorser[]): Endorser | null {
+  const t = typed.trim();
+  const site = (u: string | null): string => { try { return u ? new URL(u).hostname.replace(/^www\./, '').toLowerCase() : ''; } catch { return ''; } };
+  if (/^https?:\/\//i.test(t)) {
+    const h = site(t);
+    const hits = h ? list.filter((e) => site(e.guide_url) === h) : [];
+    return hits.length === 1 ? hits[0] : null;
+  }
+  const norm = (x: string): string => x.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9 ]/g, ' ').replace(/\bthe\b/g, ' ').replace(/\s+/g, ' ').trim();
+  const n = norm(t);
+  if (!n) return null;
+  // Whole words inside whole words, so "sun" never matches "sunday".
+  const within = (a: string, b: string): boolean => a.length >= 5 && ` ${b} `.includes(` ${a} `);
+  const hits = list.filter((e) => [e.name, e.short].map(norm).some((x) => x === n || within(n, x) || within(x, n)));
+  return hits.length === 1 ? hits[0] : null;
 }
 
 /* ---------- what a preview brings ---------- */

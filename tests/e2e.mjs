@@ -2303,9 +2303,18 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
   await tap(page, '.sheet-panel [data-fk="src-add"]');
   await page.waitForSelector('.sheet-panel.shelf[data-kind="source"]');
   check('Sources: Add a source opens its form, where you vote filled in', (await text(page, '.sheet-panel.shelf #sh-h')) === 'Add a source' && (await page.inputValue('#rf-where')) === 'Chicago, 60601' && (await page.inputValue('#rf-src')) === '');
+  // Kevin, Oct 28: one line to start, short labels, and the paste box folded under "Paste in their picks".
+  const srcLabels = await page.$$eval('.sheet-panel.shelf .rp-f > label, .sheet-panel.shelf .rp-fold-b', (els) => els.map((e) => e.textContent.replace(/\s+/g, ' ').trim()));
+  check('Sources: the form reads one line, then Which source, Where you vote, Paste in their picks and Want a reply', (await text(page, '.sheet-panel.shelf .rp-intro')) === 'Tell Kevin which source to add.'
+    && srcLabels.join(' | ') === 'Which source? | Where you vote optional | Paste in their picks optional | Want a reply? optional', `${await text(page, '.sheet-panel.shelf .rp-intro')} / ${srcLabels.join(' | ')}`);
+  check('Sources: the paste box starts folded', !(await page.$('#rf-picks')) && (await page.getAttribute('[data-fk="rf-picks-b"]', 'aria-expanded')) === 'false');
   await tap(page, SEND);
   check('Sources: it asks for the source first', /Type its name or a link first\./.test(await text(page, '#rf-err')) && posts.list.length === 0);
   await page.fill('#rf-src', 'https://example.org/our-guide');
+  await tap(page, '[data-fk="rf-picks-b"]');
+  await page.waitForSelector('#rf-picks');
+  check('Sources: Paste in their picks opens the box in place, with its hint, the source still typed', (await page.getAttribute('[data-fk="rf-picks-b"]', 'aria-expanded')) === 'true'
+    && (await text(page, '#rf-picks-h')) === 'Behind a login? Copy their endorsement list and paste it here.' && (await page.inputValue('#rf-src')) === 'https://example.org/our-guide' && (await focusedFk(page)) === 'rf-picks-b', await focusedFk(page));
   await page.fill('#rf-picks', 'Mayor: A. Person\nProp 1: Yes');
   await tap(page, SEND);
   await page.waitForSelector('.rp-sent');

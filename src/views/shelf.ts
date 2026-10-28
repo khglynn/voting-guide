@@ -24,7 +24,7 @@ export const SHELF_TITLE: Record<ShelfKind, string> = {
 export const isForm = (k: ShelfKind): boolean => k === 'report' || k === 'city' || k === 'source';
 
 /* ---------- the forms ---------- */
-interface Field { k: string; label: string; type: 'area' | 'text' | 'zip'; required?: boolean; optional?: boolean; hint?: string; auto?: string; max: number }
+interface Field { k: string; label: string; type: 'area' | 'text' | 'zip'; required?: boolean; optional?: boolean; hint?: string; auto?: string; max: number; fold?: boolean }
 const REPORT: Field[] = [
   { k: 'wrong', label: 'What’s wrong?', type: 'area', required: true, max: 5000 },
   { k: 'reach', label: 'Want a reply?', type: 'text', optional: true, hint: 'An email or phone, only if you’d like one back.', auto: 'off', max: 300 },
@@ -36,13 +36,17 @@ const CITY: Field[] = [
 ];
 /* Add a source (Kevin, Oct 25: "the option to add their own source (URL, and then if paywalled maybe a
    clever way they can export a PDF and upload it for us)"): a name or a link, where you vote, and a
-   paste box. A person with a login can select all and paste, so nothing needs an upload endpoint. */
+   paste box. A person with a login can select all and paste, so nothing needs an upload endpoint.
+   The paste box is folded under one row (Kevin, Oct 28: "collapse the paste-in-their-picks and call it
+   that ... optional, and if you expand it we show it, just so it looks like a more simple form"). */
 const SOURCE: Field[] = [
   { k: 'src', label: 'Which source?', type: 'text', required: true, hint: 'Its name or a link.', auto: 'off', max: 500 },
   { k: 'where', label: 'Where you vote', type: 'text', optional: true, auto: 'off', max: 200 },
-  { k: 'picks', label: 'Their picks, if you have them', type: 'area', optional: true, hint: 'Behind a login? Copy their endorsement list and paste it here.', max: 5000 },
-  { k: 'reach', label: 'Want a reply?', type: 'text', optional: true, hint: 'An email or phone, only if you’d like one back.', auto: 'off', max: 300 },
+  { k: 'picks', label: 'Paste in their picks', type: 'area', optional: true, fold: true, hint: 'Behind a login? Copy their endorsement list and paste it here.', max: 5000 },
+  { k: 'reach', label: 'Want a reply?', type: 'text', optional: true, hint: 'An email or phone.', auto: 'off', max: 300 },
 ];
+/* The fold's key in S.ui.open: shut each time the form opens (actions.ts openShelf). */
+export const PICKS_FOLD = 'rf-picks-fold';
 /* Opened from a paywalled paper's "Send it to us": the box asks for its picks instead. A bot-checked
    source's (Oct 25) the same, without the login. */
 const PAYWALL = { intro: 'Have a login? Send Kevin their picks.', label: 'Their picks, or a link to a PDF' };
@@ -228,7 +232,16 @@ function fieldHTML(r: Shelf, f: Field): string {
     : f.type === 'zip' ? `<input ${attrs} inputmode="numeric" pattern="[0-9]*" autocomplete="postal-code" value="${esc(val)}">`
       : `<input ${attrs} type="text" value="${esc(val)}">`;
   const err = bad ? `<p class="zip-err rp-err" id="rf-err">${f.k === 'city' ? 'Type the city first.' : f.k === 'reach' ? 'Type an email or phone first.' : f.k === 'src' ? 'Type its name or a link first.' : unreadHint(r) ? 'Paste their picks or a link first.' : 'Say what’s wrong first.'}</p>` : '';
-  return `<div class="rp-f"><label for="${id}"><b>${esc(label)}</b>${f.optional ? ' <span class="rp-opt">optional</span>' : ''}</label>
+  const opt = f.optional ? ' <span class="rp-opt">optional</span>' : '';
+  if (f.fold) {
+    // A folded row: its label is the button that opens it, and names the box once it shows. What's typed
+    // in it is kept (and sent) while it's folded.
+    const open = isOpen(PICKS_FOLD);
+    const box = input.replace(`id="${id}"`, `id="${id}" aria-labelledby="${id}-b"`);
+    return `<div class="rp-f rp-fold"><button type="button" class="rp-fold-b" id="${id}-b" data-act="open" data-k="${PICKS_FOLD}" data-fk="${id}-b" aria-expanded="${open}"${open ? ` aria-controls="${id}"` : ''}><b>${esc(label)}</b>${opt}<svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+    ${open ? `${f.hint ? `<p class="rp-h" id="${id}-h">${esc(f.hint)}</p>` : ''}${box}` : ''}</div>`;
+  }
+  return `<div class="rp-f"><label for="${id}"><b>${esc(label)}</b>${opt}</label>
     ${f.hint ? `<p class="rp-h" id="${id}-h">${esc(f.hint)}</p>` : ''}${input}${err}</div>`;
 }
 /* The follow-up form: the request as a line of text, the one field, the button, and what goes along folded
@@ -263,7 +276,7 @@ function formHTML(r: Shelf): string {
   // Refused outright ("That didn't send.") or no answer in 15 seconds ("Couldn't confirm it sent.": it
   // may have arrived, so it doesn't say it didn't).
   const missed = r.state === 'failed' || r.state === 'unsure';
-  const intro = r.kind === 'city' ? 'Tell Kevin which city to add next.' : r.kind === 'source' ? 'Use a source we don’t have? Tell Kevin which one.'
+  const intro = r.kind === 'city' ? 'Tell Kevin which city to add next.' : r.kind === 'source' ? 'Tell Kevin which source to add.'
     : r.hint === 'paywall' ? PAYWALL.intro : r.hint === 'blocked' ? BLOCKED_INTRO : 'Tell Kevin what’s off. A sentence is plenty.';
   return `<form class="rp-form" data-form="report" novalidate${sending ? ' aria-busy="true"' : ''}>
       <p class="rp-intro">${esc(intro)}</p>

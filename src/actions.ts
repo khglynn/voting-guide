@@ -14,7 +14,7 @@ import { toggleChip, setParty, setSources, noEndorsements, doorNone, chipState, 
 import { courtGroup } from './model/labels';
 import { claimAnswer, claimOn, claimOff } from './model/address';
 import { basisWords, LEANS, FORM, reportWhere } from './views/common';
-import { reportBody, reportFallbackURL, requiredOf, isForm, collectAlong, askBody } from './views/shelf';
+import { reportBody, reportFallbackURL, requiredOf, isForm, collectAlong, askBody, PICKS_FOLD } from './views/shelf';
 import { covOf } from './views/coverage';
 import { rememberAsk } from './model/coverage';
 import { cheatText, shareURL } from './views/cheat';
@@ -680,6 +680,8 @@ function openShelf(kind: ShelfKind, d: DOMStringMap, fk: string, back: Shelf['ba
   };
   S.ui.report = r;
   S.ui.sheet = 'shelf';
+  // Add a source opens with its paste box folded, every time.
+  if (kind === 'source') S.ui.open.delete(PICKS_FOLD);
   render(['sheet']);
   // In a form, a keyboard or a mouse lands in the box to type in; a touch lands on the sheet's Cancel,
   // so the phone's keyboard doesn't jump up over the sheet as it slides in. Elsewhere, on Close.

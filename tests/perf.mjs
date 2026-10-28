@@ -18,11 +18,11 @@ for (const [name, zip] of [['Chicago', '60614'], ['Houston', '77002'], ['Aurora 
   await page.waitForSelector('#zip');
   await page.evaluate(() => fetch('/data/index.json'));
   await cdp.send('Emulation.setCPUThrottlingRate', { rate: 4 });
-  // Steps 1 and 2 share the first page: "open" times the typed ZIP (and the place picked) to step 2's counts.
+  // Steps 1 and 2 share the first page: "open" times the typed ZIP (and the place picked) to step 2's line.
   const t0 = Date.now();
   await page.fill('#zip', zip);
   if (zip === '80247') await page.locator('[data-act="choose-place"][data-ids="aurora-co+denver-co"]').click();
-  await page.waitForSelector('.su-cov');
+  await page.waitForSelector('.su-src');
   await page.evaluate(() => new Promise((r) => requestAnimationFrame(() => setTimeout(r, 0))));
   const open = Date.now() - t0;
   // A tap: input to the next paint.

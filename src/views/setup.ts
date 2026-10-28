@@ -4,13 +4,12 @@
    my ballot". The chips reuse the lens's actions; "A party" opens its list right here. */
 import type { Ballot } from '../ballot';
 import { S } from '../state';
-import { esc, plural } from '../util';
+import { esc } from '../util';
 import { chipsHTML, TICK } from './lens';
 import { partiesOnBallot, CHIPS, noEndorsements, doorNone } from '../model/lens';
-import { coverage } from '../model/tally';
 import { planSetup, fillStands } from '../model/bulk';
 import { isOpen, FILL, HIDE, SHOW_ENDS } from './common';
-import { covHTML } from './coverage';
+import { covOf } from './coverage';
 
 /* "Austin, Texas", "Aurora or Denver, Colorado", "Ward 1, Washington, DC", or the state alone for
    statewide races. */
@@ -37,13 +36,23 @@ export function fillLine(party: string | null, more = false): string {
 const sw = (act: string, on: boolean, label: string, sub = ''): string =>
   `<button class="su-sw" role="switch" aria-checked="${on}" data-act="${act}" data-fk="${act}"><span class="su-l"><b>${esc(label)}</b>${sub ? `<small>${esc(sub)}</small>` : ''}</span><span class="tg" aria-hidden="true"><span></span></span></button>`;
 
+/* "Pick a group above, or choose individual sources" (Kevin, Oct 28: the two count lines here were
+   "repetative"; it "should say like 'Select a group of recs above or pick by individual sources'"). The
+   link opens the sources sheet, which now holds the counts, the date, the groups, a search and Turn all off
+   (lens.ts). It shows wherever the chips do once a ballot is found, so a voter who turned the last source
+   off by hand can still get to them. */
+function srcLineHTML(): string {
+  const c = covOf();
+  if (!c) return '';
+  return `<div class="su-stat"><p class="su-src">${c.sources
+    ? 'Pick a group above, or <button class="linkbtn" data-act="sheet" data-s="sources" aria-haspopup="dialog" data-fk="cov-src">choose individual sources</button>.'
+    : 'No sources on this ballot yet.'}</p></div>`;
+}
+
 /* Step 2's controls, shared with the ballot's Edit sheet: "Show endorsements", the chips and "A
-   party", two quiet coverage lines ("Your sources have picks in N of your M races", then how many sources
-   the ballot has, scoped: views/coverage.ts; the action lives in the coverage card in step 1), and the
-   two switches. On the first page "A party" opens its list right
-   there; in the Edit sheet it opens the party sheet, and "See all sources" opens every source. Before
-   a ZIP has found a ballot the first page shows the choices kept so far (S.door), every party the
-   guide covers, and no counts. */
+   party", the one line to the sources sheet, and the two switches. On the first page "A party" opens its
+   list right there; in the Edit sheet it opens the party sheet. Before a ZIP has found a ballot the first
+   page shows the choices kept so far (S.door), every party the guide covers, and no line. */
 export function pickControlsHTML(inSheet = false): string {
   const b = inSheet || S.view === 'setup' ? S.ballot : null;
   const party = b ? S.b.party : S.door.party;
@@ -54,7 +63,6 @@ export function pickControlsHTML(inSheet = false): string {
     : inSheet
       ? '<button class="chip" data-act="sheet" data-s="party" aria-haspopup="dialog" data-fk="chip-party">A party</button>'
       : `<button class="chip" data-act="open" data-k="su-party" aria-expanded="${listOpen}" data-fk="chip-party">A party</button>`;
-  const more = inSheet ? '<button class="chip all-src" data-act="sheet" data-s="sources" aria-haspopup="dialog" data-fk="chip-more">See all sources</button>' : '';
   const list = listOpen
     ? `<div class="su-chips su-parties" role="group" aria-label="A party">${parties.map((p) => `<button class="chip" data-act="party-set" data-p="${esc(p)}" data-fk="pty-${esc(p)}">${esc(p)}</button>`).join('')}</div>`
     : '';
@@ -77,11 +85,10 @@ export function pickControlsHTML(inSheet = false): string {
   const only = sw('setup-only', inSheet ? S.ui.setupOnly : S.door.only, HIDE);
   if (off) return `${ends}
     <div class="su-sws">${only}</div>`;
-  const cov = b && !none ? coverage() : null;
   return `${ends}
-    <div class="su-chips" role="group" aria-labelledby="${inSheet ? 'sh-h' : 'su-h'}">${chips}${partyChip}${more}</div>
+    <div class="su-chips" role="group" aria-labelledby="${inSheet ? 'sh-h' : 'su-h'}">${chips}${partyChip}</div>
     ${list}
-    ${cov ? `<div class="su-stat"><p class="su-cov">Your sources have picks in ${cov.picked} of ${b && !b.places.length ? `the ${plural(cov.total, 'statewide race')} here` : `your ${plural(cov.total, 'race')}`}.</p>${covHTML()}</div>` : ''}
+    ${b ? srcLineHTML() : ''}
     <div class="su-sws">
       ${fillSw}
       ${only}

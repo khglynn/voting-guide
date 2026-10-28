@@ -59,7 +59,19 @@ async function newPage(opts = {}) {
   return { ctx, page };
 }
 const shot = (page, name) => page.screenshot({ path: path.join(SHOTS, `${name}.png`) });
-const tap = async (page, sel) => { const l = page.locator(sel).first(); await l.scrollIntoViewIfNeeded(); await l.tap(); await page.waitForTimeout(140); };
+/* A tap. An element redrawn under it (the page repainting as a lookup or the network answers) is tried again,
+   twice at most: two production runs after #36 crashed here on "not attached" and "not stable" (Oct 28), with
+   every check passing up to the crash. Anything else still fails at once. */
+const tap = async (page, sel) => {
+  for (let i = 0; ; i++) {
+    try { const l = page.locator(sel).first(); await l.scrollIntoViewIfNeeded(); await l.tap(); break; } catch (e) {
+      if (i >= 2 || !/not attached|not stable/.test(String(e))) throw e;
+      console.log(`RETRY  ${sel}: ${String(e).split('\n')[0]}`);
+      await page.waitForTimeout(300);
+    }
+  }
+  await page.waitForTimeout(140);
+};
 /* The first page: steps 1 and 2 together. A complete ZIP looks itself up as it's typed. */
 async function openZip(page, zip, query = '') {
   await page.goto(`${BASE}/?today=${TODAY}${query}`);
@@ -114,6 +126,18 @@ async function next(page) {
 const focusedFk = (page) => page.evaluate(() => document.activeElement && document.activeElement.dataset ? document.activeElement.dataset.fk || '' : '');
 const linkHere = (url) => url.replace(/^https?:\/\/[^/]+/, BASE).replace('/#', `/?today=${TODAY}#`);
 const text = async (page, sel) => ((await page.textContent(sel).catch(() => '')) || '').replace(/\s+/g, ' ').trim();
+/* Step 2's one line (Kevin, Oct 28): its link opens the sources sheet, which holds the counts now. */
+const ONE_LINE = 'Pick a group above, or choose individual sources.';
+/* The top of the sources sheet, opened from step 2's link (or the Edit sheet's): its counts and date, and
+   whose picks; then Escape back. */
+async function sheetTop(page, scope = '#setup') {
+  await tap(page, `${scope} [data-fk="cov-src"]`);
+  await page.waitForSelector('.sheet-panel .s-cov');
+  const top = { cov: await text(page, '.sheet-panel .s-cov'), mine: await text(page, '.sheet-panel .s-mine') };
+  await page.keyboard.press('Escape');
+  await settle(page);
+  return top;
+}
 /* Motion (Oct 20): a jump glides for about a third of a second and a sheet slides away in a fifth;
    under "Hide races I've decided" a decided row waits a beat (data-beat), then folds away.
    Wait until the page has stopped scrolling and nothing is on its way out. */
@@ -220,7 +244,8 @@ async function mapsSettled(page, timeout = 10000) {
   await page.evaluate(() => document.fonts.ready);
   await page.waitForFunction(() => /\d+ cities/.test(document.querySelector('[data-fk="browse"]')?.textContent || ''), null, { timeout: 15000 });
   await shot(page, '00b-first-page');
-  check('First page: the kicker says voting is underway, with Election Day from the data', (await text(page, '.front .dateline')) === 'Voting is underway in every state. Election Day is Tue, Nov 3.', await text(page, '.front .dateline'));
+  check('First page: the kicker says voting is underway, with Election Day from the data, its source a superscript 1', (await text(page, '.front .dateline')) === 'Voting is underway in every state.1 Election Day is Tue, Nov 3.'
+    && (await page.getAttribute('.front .dateline sup.cite a', 'href')) === 'https://electioninnovation.org/research/dates-for-2026-early-in-person-and-mail-voting/' && (await page.getAttribute('.front .dateline sup.cite a', 'aria-label')) === 'Source 1: Center for Election Innovation & Research', await text(page, '.front .dateline'));
   check('First page: the headline is Kevin’s line', (await text(page, '.front h1')) === 'Quickly make your voting plan.');
   const ticks = await page.$$eval('.ticks li', (els) => els.map((e) => e.textContent.trim()));
   check('First page: three ticked lines', ticks.join('|') === 'Plain English|Full local details|Pick by endorsements or party', ticks.join('|'));
@@ -229,7 +254,7 @@ async function mapsSettled(page, timeout = 10000) {
   check('First page: steps 1 and 2 sit on the pad’s sheet, with "Show my ballot" at its foot', !!(await page.$('.pad.door > .sheet-top')) && !!(await page.$('.pad.door #zip')) && !!(await page.$('.pad.door #su-h')) && !!(await page.$(`.pad.door > ${SETUP}`)));
   const pressed = (k) => page.getAttribute(`#setup [data-act="chip"][data-k="${k}"]`, 'aria-pressed');
   check('First page: before a ZIP, Newspapers and guides is on, the groups off, no party, no counts', (await pressed('papers')) === 'true' && (await pressed('progressive')) === 'false' && (await pressed('conservative')) === 'false'
-    && (await text(page, '#setup [data-fk="chip-party"]')) === 'A party' && !(await page.$('.su-cov')));
+    && (await text(page, '#setup [data-fk="chip-party"]')) === 'A party' && !(await page.$('.su-src')));
   check('First page: the switches read "Fill in my ballot with their picks" (on to start) and "Hide races I’ve decided" (off)', (await text(page, '[data-act="setup-fill"] b')) === 'Fill in my ballot with their picks' && (await text(page, '[data-act="setup-only"] b')) === 'Hide races I’ve decided'
     && (await page.getAttribute('[data-act="setup-fill"]', 'aria-checked')) === 'true' && (await page.getAttribute('[data-act="setup-only"]', 'aria-checked')) === 'false');
   check('First page: before a ZIP, the fill switch says what it does', (await text(page, '[data-act="setup-fill"] small')) === 'Fills the races where they agree. Races where picks split stay open.', await text(page, '[data-act="setup-fill"] small'));
@@ -276,12 +301,12 @@ async function mapsSettled(page, timeout = 10000) {
   // The fifth digit finds the place and the counts; the choices carry over.
   await page.locator('#zip').focus();
   await page.fill('#zip', '7870');
-  check('Four digits: no place yet', !(await page.$('.door-place')) && !(await page.$('.su-cov')));
+  check('Four digits: no place yet', !(await page.$('.door-place')) && !(await page.$('.su-src')));
   await page.keyboard.type('4');
-  await page.waitForSelector('.su-cov', { timeout: 15000 });
+  await page.waitForSelector('.su-src', { timeout: 15000 });
   await shot(page, '00c-steps-1-2');
   check('Five digits: the place shows under the ZIP box', (await text(page, '.door-place')) === 'Austin, Texas · 78704' && !(await page.$('.door-place [data-act]')), await text(page, '.door-place'));
-  check('Five digits: and the counts in step 2', /^Your sources have picks in \d+ of your \d+ races\.$/.test(await text(page, '.su-cov')), await text(page, '.su-cov'));
+  check('Five digits: and step 2’s one line, to every source', (await text(page, '#setup .su-src')) === ONE_LINE && !!(await page.$('#setup .su-src [data-fk="cov-src"]')), await text(page, '#setup .su-src'));
   // On a phone the number pad steps aside once the ZIP finds its ballot, so step 2 and "Show my ballot" show.
   check('Five digits: on a touch screen the keypad drops and focus goes on to step 2', (await focusedFk(page)) === 'su-h' && (await page.inputValue('#zip')) === '78704', String(await focusedFk(page)));
   check('Five digits: the chips chosen before carry over', (await pressed('papers')) === 'true' && (await pressed('progressive')) === 'true' && (await page.getAttribute('[data-act="setup-fill"]', 'aria-checked')) === 'true');
@@ -294,11 +319,10 @@ async function mapsSettled(page, timeout = 10000) {
   check('After the ZIP: with a party, the fill line counts its candidates first', /^(\d+ from the Republican Party( and \d+ where your other sources agree)?|\d+ where your other sources agree)\.$/.test(await text(page, '[data-act="setup-fill"] small')) && (await text(page, '#setup [data-fk="chip-party"]')) === 'Republican Party', await text(page, '[data-act="setup-fill"] small'));
   await tap(page, '#setup [data-act="party-off"]');
   check('After the ZIP: tapping the party again turns it off', (await text(page, '#setup [data-fk="chip-party"]')) === 'A party');
-  // The counts repaint in place: coverage, or the fill line when the new sources pick only in
-  // races already covered (Austin's progressive groups).
-  const cov1 = `${await text(page, '.su-cov')} | ${await text(page, '[data-act="setup-fill"] small')}`;
+  // The fill line repaints in place (the coverage count lives in the sources sheet since Oct 28).
+  const cov1 = await text(page, '[data-act="setup-fill"] small');
   await tap(page, '#setup [data-act="chip"][data-k="progressive"]');
-  const cov2 = `${await text(page, '.su-cov')} | ${await text(page, '[data-act="setup-fill"] small')}`;
+  const cov2 = await text(page, '[data-act="setup-fill"] small');
   check('After the ZIP: a chip changes the counts in place', (await pressed('progressive')) === 'false' && cov2 !== cov1, `${cov1} -> ${cov2}`);
   await tap(page, '#setup [data-act="chip"][data-k="progressive"]');
   check('After the ZIP: nothing is saved yet', (await savedVG(page)) === null);
@@ -306,9 +330,9 @@ async function mapsSettled(page, timeout = 10000) {
   await noSideScroll(page, 'Steps 1 and 2');
   // Editing the ZIP takes the place and the counts back; the choices stay.
   await page.fill('#zip', '7870');
-  check('Editing the ZIP: the place and the counts go', !(await page.$('.door-place')) && !(await page.$('.su-cov')) && (await pressed('progressive')) === 'true');
+  check('Editing the ZIP: the place and the line go', !(await page.$('.door-place')) && !(await page.$('.su-src')) && (await pressed('progressive')) === 'true');
   await page.fill('#zip', '78704');
-  await page.waitForSelector('.su-cov', { timeout: 15000 });
+  await page.waitForSelector('.su-src', { timeout: 15000 });
   await tap(page, '[data-act="setup-fill"]');
   await tap(page, SETUP);
   await page.waitForSelector('#plan', { timeout: 15000 });
@@ -320,18 +344,25 @@ async function mapsSettled(page, timeout = 10000) {
   const footKinds = await page.$$eval('#r-trust [data-act="shelf"]', (els) => els.map((e) => `${e.dataset.fk}=${e.dataset.kind}:${e.getAttribute('aria-haspopup')}`));
   check('The foot: the city count and its four links each open the shelf, as a dialog', footKinds.join('|') === 'browse=cities:dialog|help-how=how:dialog|help-report=report:dialog|help-city=city:dialog|help-support=support:dialog', footKinds.join('|'));
   check('The bar: the gold line runs along its bottom edge', (await page.$eval('.foot', (e) => e.lastElementChild && e.lastElementChild.className)) === 'bar');
-  // How this guide works: the shelf, its text, and "When each state was last checked" opening inside it.
+  // How this guide works: the shelf, its text, and "When we last checked each state’s rules" opening inside it.
   await tap(page, '#r-trust [data-fk="help-how"]');
   await page.waitForSelector('.sheet-panel.shelf[data-kind="how"]');
   await settle(page);
   check('How this guide works: opens the shelf, titled, the page behind out of reach', (await text(page, '.sheet-panel.shelf #sh-h')) === 'How this guide works' && (await text(page, '.sheet-panel.shelf [data-fk="sheet-x"]')) === 'Close' && (await focusedFk(page)) === 'sheet-x' && !!(await page.$('#app[inert]')), await focusedFk(page));
   check('How this guide works: opens "Built for family and friends.", since the foot names Kevin (Oct 21)', /^Built for family and friends\. It never tells you how to vote\./.test(await text(page, '.sheet-panel.shelf .how-bd > p:first-child')), await text(page, '.sheet-panel.shelf .how-bd > p:first-child'));
-  check('How this guide works: names the source for "Voting is underway in every state"', /“Voting is underway in every state”: Center for Election Innovation & Research\./.test(await text(page, '.sheet-panel.shelf')) && !!(await page.$('.sheet-panel.shelf a[href="https://electioninnovation.org/research/dates-for-2026-early-in-person-and-mail-voting/"]')));
-  check('How this guide works: ends with the build date and the maker', /^Data built \d{4}-\d{2}-\d{2}\. Made by Kevin HG\. Not affiliated/.test(await text(page, '.sheet-panel.shelf .how-bd > :last-child')) && /tap “Report a problem”\./.test(await text(page, '.sheet-panel.shelf .how-bd')), await text(page, '.sheet-panel.shelf .how-bd > :last-child'));
+  // Kevin, Oct 28: the privacy promise in sub-bullets, Report a problem a link, the sources numbered, the end grouped.
+  check('How this guide works: the source for "Voting is underway in every state" is number 1 in its Sources', (await text(page, '.sheet-panel.shelf .how-src > li#src-1')) === '“Voting is underway in every state”: Center for Election Innovation & Research' && !!(await page.$('.sheet-panel.shelf .how-src a[href="https://electioninnovation.org/research/dates-for-2026-early-in-person-and-mail-voting/"]')), await text(page, '.sheet-panel.shelf .how-src'));
+  check('How this guide works: the privacy promise is six short lines under its lead', (await page.$$('.sheet-panel.shelf .how-priv > .how-sub > li')).length === 6 && (await text(page, '.sheet-panel.shelf .how-priv > b')) === 'Your privacy.' && (await text(page, '.sheet-panel.shelf .how-priv > .how-sub > li:first-child')) === 'No accounts, no ads, no cookies.', await text(page, '.sheet-panel.shelf .how-priv'));
+  // Kevin, Oct 28: "we add a 2 and 3 to sources so it doesn't look so sparse": 2 is when each state was checked,
+  // opening in place, 3 the sources sheet.
+  check('How this guide works: the end goes official links, the numbered sources, then the build date and the maker', (await page.$$eval('.sheet-panel.shelf .how-end > *', (els) => els.map((e) => e.querySelector('.how-h')?.textContent || e.className))).join(' | ') === 'Official voting info for Texas | Sources | fine'
+    && (await page.$$eval('.sheet-panel.shelf .how-src > li', (els) => els.map((e) => e.id))).join() === 'src-1,src-2,src-3'
+    && (await text(page, '.sheet-panel.shelf #src-2')) === 'When we last checked each state’s rules, with links to their official sites.' && (await text(page, '.sheet-panel.shelf #src-3')) === 'Every source on your ballot. Choose whose picks you see.'
+    && /^Data built \d{4}-\d{2}-\d{2}\. Made by Kevin HG\. Not affiliated/.test(await text(page, '.sheet-panel.shelf .how-end > .fine')), await text(page, '.sheet-panel.shelf .how-end'));
   check('How this guide works: its text scrolls inside the sheet', await page.$eval('.sheet-panel.shelf .sheet-bd', (e) => e.scrollHeight > e.clientHeight + 40 && getComputedStyle(e).overflowY === 'auto'));
   await tap(page, '.sheet-panel.shelf [data-fk="asof"]');
   await settle(page);
-  check('How this guide works: "When each state was last checked" opens inside the shelf, focus kept on it', (await page.getAttribute('.sheet-panel.shelf [data-fk="asof"]', 'aria-expanded')) === 'true' && (await page.$$('.sheet-panel.shelf .asof li')).length >= 10
+  check('How this guide works: "When we last checked each state’s rules" opens inside the shelf, focus kept on it', (await page.getAttribute('.sheet-panel.shelf [data-fk="asof"]', 'aria-expanded')) === 'true' && (await page.$$('.sheet-panel.shelf .asof li')).length >= 10
     && (await focusedFk(page)) === 'asof' && (await text(page, '.sheet-panel.shelf #sh-h')) === 'How this guide works' && !(await page.$('#app .asof')), await focusedFk(page));
   await tap(page, '.sheet-panel.shelf [data-fk="asof"]');
   await settle(page);
@@ -339,6 +370,25 @@ async function mapsSettled(page, timeout = 10000) {
   await tap(page, '.sheet-panel.shelf [data-fk="sheet-x"]');
   await settle(page);
   check('How this guide works: Close takes the shelf away, focus back on its link', !(await page.$('.sheet-panel')) && !(await page.$('#app[inert]')) && (await focusedFk(page)) === 'help-how', await focusedFk(page));
+  // Its Report a problem is a link now (Kevin, Oct 28): the report form takes the shelf's place, and Cancel goes
+  // back to the foot's link.
+  await tap(page, '#r-trust [data-fk="help-how"]');
+  await page.waitForSelector('.sheet-panel.shelf[data-kind="how"]');
+  await tap(page, '.sheet-panel.shelf [data-fk="how-report"]');
+  await page.waitForSelector('.sheet-panel.shelf[data-kind="report"]');
+  check('How this guide works: Report a problem opens the report form', (await text(page, '.sheet-panel.shelf #sh-h')) === 'Report a problem' && !(await page.$('.sheet-panel.shelf .how-bd')));
+  await tap(page, '.sheet-panel.shelf [data-fk="sheet-x"]');
+  await settle(page);
+  check('How this guide works: Cancel there closes it, focus back on the foot’s How link', !(await page.$('.sheet-panel')) && (await focusedFk(page)) === 'help-how', await focusedFk(page));
+  // Source 3 opens the sources sheet in the shelf's place; Done goes back to the foot's link.
+  await tap(page, '#r-trust [data-fk="help-how"]');
+  await page.waitForSelector('.sheet-panel.shelf[data-kind="how"]');
+  await tap(page, '.sheet-panel.shelf [data-fk="how-src"]');
+  await page.waitForSelector('.sheet-panel.srcs .s-cov');
+  check('How this guide works: source 3 opens Every source on your ballot', (await text(page, '.sheet-panel #sh-h')) === 'Every source on your ballot' && !(await page.$('.sheet-panel.shelf')));
+  await tap(page, '.sheet-panel [data-fk="sheet-x"]');
+  await settle(page);
+  check('How this guide works: Done there closes it, focus back on the foot’s How link', !(await page.$('.sheet-panel')) && (await focusedFk(page)) === 'help-how', await focusedFk(page));
   // Support: a few words and the coffee as a plain link in a new tab; nothing from Buy Me a Coffee loads.
   await tap(page, '#r-trust [data-fk="help-support"]');
   await page.waitForSelector('.sheet-panel.shelf[data-kind="support"]');
@@ -349,7 +399,7 @@ async function mapsSettled(page, timeout = 10000) {
   await tap(page, '.sheet-panel.shelf [data-act="shelf-share"]');
   await page.waitForSelector('#pass');
   await settle(page);
-  check('Support: from a ballot, "send the guide to a friend" opens Help friends vote, the shelf gone', !(await page.$('.sheet-panel')) && !!(await page.$('#pass [data-act="share-guide"]')));
+  check('Support: from a ballot, "send the guide to a friend" opens Help friends vote, the shelf gone, focus on its Share the guide', !(await page.$('.sheet-panel')) && !!(await page.$('#pass')) && (await focusedFk(page)) === 'bar-share', await focusedFk(page));
   await page.goBack();
   await page.waitForSelector('#plan');
   await settle(page);
@@ -385,8 +435,8 @@ async function mapsSettled(page, timeout = 10000) {
   // Dark mode: the sheet stays light paper, as My plan's does, so its ink and controls stay dark.
   const { ctx, page } = await newPage({ colorScheme: 'dark' });
   await openZip(page, '78704');
-  await page.waitForSelector('.su-cov', { timeout: 15000 });
-  const ink = await page.evaluate(() => [getComputedStyle(document.querySelector('.pad.door')).color, getComputedStyle(document.querySelector('.pad.door .su-cov')).color, getComputedStyle(document.getElementById('zip')).backgroundColor, getComputedStyle(document.body).color]);
+  await page.waitForSelector('.su-src', { timeout: 15000 });
+  const ink = await page.evaluate(() => [getComputedStyle(document.querySelector('.pad.door')).color, getComputedStyle(document.querySelector('.pad.door .su-src')).color, getComputedStyle(document.getElementById('zip')).backgroundColor, getComputedStyle(document.body).color]);
   check('First page in dark mode: the sheet keeps dark ink and a light ZIP box on its light paper', ink[0] === 'rgb(31, 38, 35)' && ink[1] === 'rgb(74, 82, 77)' && ink[2] === 'rgb(247, 243, 232)' && ink[3] !== ink[0], ink.join(' | '));
   await shot(page, '00d-steps-1-2-dark');
   noErrors(page, 'First page in dark mode');
@@ -403,7 +453,7 @@ async function mapsSettled(page, timeout = 10000) {
   await tap(page, '.sheet-panel.shelf .browse-list [data-act="choose-place"][data-ids="denver-co"]');
   await page.waitForSelector('.door-place', { timeout: 15000 });
   await settle(page);
-  check('A city from the list: its place line, the ZIP box emptied, the shelf gone, focus on step 2', (await text(page, '.door-place')) === 'Denver, Colorado' && (await page.inputValue('#zip')) === '' && !(await page.$('.sheet-panel, .browse-list')) && (await focusedFk(page)) === 'su-h' && !!(await page.$('.su-cov')),
+  check('A city from the list: its place line, the ZIP box emptied, the shelf gone, focus on step 2', (await text(page, '.door-place')) === 'Denver, Colorado' && (await page.inputValue('#zip')) === '' && !(await page.$('.sheet-panel, .browse-list')) && (await focusedFk(page)) === 'su-h' && !!(await page.$('.su-src')),
     `${await text(page, '.door-place')} / ${await page.inputValue('#zip')} / ${await focusedFk(page)}`);
   await throughSetup(page);
   check('A city from the list: "Show my ballot" opens it', /Denver/.test(await text(page, '.place')));
@@ -481,7 +531,7 @@ async function mapsSettled(page, timeout = 10000) {
   // The fill switch fills, Undo undoes; then a reload, a save link and ?try all skip the first page.
   const { ctx, page } = await newPage();
   await openZip(page, '78704');
-  await page.waitForSelector('.su-cov', { timeout: 15000 });
+  await page.waitForSelector('.su-src', { timeout: 15000 });
   const n = Number(((await text(page, '[data-act="setup-fill"] small')).match(/^(\d+)/) || [])[1] || 0);
   check('Step 2: the fill switch is on for a new ballot', (await page.getAttribute('[data-act="setup-fill"]', 'aria-checked')) === 'true' && n > 0, String(n));
   await tap(page, '[data-act="setup-only"]');
@@ -526,7 +576,7 @@ async function mapsSettled(page, timeout = 10000) {
   // the save link.
   const { ctx, page } = await newPage();
   await openZip(page, '80205');
-  await page.waitForSelector('.su-cov', { timeout: 15000 });
+  await page.waitForSelector('.su-src', { timeout: 15000 });
   await tap(page, '[data-act="setup-only"]');
   await plainSetup(page);
   await page.waitForSelector('#plan', { timeout: 15000 });
@@ -607,19 +657,19 @@ async function mapsSettled(page, timeout = 10000) {
   check('Denver: Edit opens step 2’s controls, Newspapers and guides on, both switches off', (await text(page, '.sheet-panel #sh-h')) === 'Pick by endorsements or party' && (await page.getAttribute('.sheet-panel [data-act="chip"][data-k="papers"]', 'aria-pressed')) === 'true'
     && (await page.getAttribute('.sheet-panel [data-act="setup-fill"]', 'aria-checked')) === 'false' && (await page.getAttribute('.sheet-panel [data-act="setup-only"]', 'aria-checked')) === 'false');
   check('Denver: the Edit sheet takes focus', (await fk()) === 'sheet-x');
-  const cov1 = `${await text(page, '.sheet-panel .su-cov')} | ${await text(page, '.sheet-panel [data-act="setup-fill"] small')}`;
+  const cov1 = await text(page, '.sheet-panel [data-act="setup-fill"] small');
   await tap(page, '.sheet-panel [data-act="chip"][data-k="progressive"]');
-  const cov2 = `${await text(page, '.sheet-panel .su-cov')} | ${await text(page, '.sheet-panel [data-act="setup-fill"] small')}`;
-  check('Denver: turning on Progressive groups changes the counts in the sheet', cov1 !== cov2 && /^Your sources have picks in \d+ of your \d+ races\./.test(cov2), `${cov1} -> ${cov2}`);
+  const cov2 = await text(page, '.sheet-panel [data-act="setup-fill"] small');
+  check('Denver: turning on Progressive groups changes the fill line in the sheet, which says step 2’s one line', cov1 !== cov2 && (await text(page, '.sheet-panel .su-src')) === ONE_LINE && !(await page.$('.sheet-panel [data-fk="chip-more"]')), `${cov1} -> ${cov2}`);
   await tap(page, '.sheet-panel [data-act="chip"][data-k="progressive"]');
-  check('Denver: and off again', `${await text(page, '.sheet-panel .su-cov')} | ${await text(page, '.sheet-panel [data-act="setup-fill"] small')}` === cov1);
+  check('Denver: and off again', (await text(page, '.sheet-panel [data-act="setup-fill"] small')) === cov1);
   await tap(page, '.sheet-panel [data-act="sheet"][data-s="sources"]');
   await page.waitForSelector('.sheet-panel .sgrp');
-  check('Denver: See all sources lists every source by lean, each with why its lean', (await page.$$('.sgrp')).length >= 2 && /Why this lean/.test(await text(page, '.sheet-panel')));
+  check('Denver: choose individual sources lists every source by lean, each with why its lean', (await page.$$('.sgrp')).length >= 2 && /Why this lean/.test(await text(page, '.sheet-panel')));
   check('Denver: the sheet moves focus to its close button', (await fk()) === 'sheet-x');
   await page.keyboard.press('Escape');
   await page.waitForTimeout(150);
-  check('Denver: Escape goes back to the Edit sheet, focus on See all sources', !!(await page.$('.sheet-panel.picks')) && (await fk()) === 'chip-more', await fk());
+  check('Denver: Escape goes back to the Edit sheet, focus on choose individual sources', !!(await page.$('.sheet-panel.picks')) && (await fk()) === 'cov-src', await fk());
   await tap(page, '.sheet-panel [data-act="sheet"][data-s="party"]');
   await page.waitForSelector('.sheet-panel [data-act="party-set"]');
   await tap(page, '.sheet-panel [data-act="party-set"]');
@@ -1293,7 +1343,9 @@ async function mapsSettled(page, timeout = 10000) {
   check('Share page: the same foot sits above the crowd', (await text(page, '#pass .trust [data-fk="help-how"]')) === 'How this guide works' && (await page.$eval('#pass .trust', (e) => e.nextElementSibling && e.nextElementSibling.className)) === 'crowd' && !(await page.$('#r-trust .trust')));
   await shot(page, '10b-share');
   check('Share page: the lede asks you to make the message your own', (await text(page, '#pass .lede')) === 'Copy a message, make it your own, and send it. Ask each person to text three more.', await text(page, '#pass .lede'));
-  check('Share page: "Share the guide" comes right after the lede', (await page.$eval('#pass .lede', (e) => e.nextElementSibling && e.nextElementSibling.dataset.act)) === 'share-guide' && (await text(page, '[data-act="share-guide"]')) === 'Share the guide');
+  // Kevin, Oct 28: "let's have the green button be 'share the guide' and the left go back one step to not two".
+  check('Share page: "Share the guide" is the bar’s green button, and the page has no second one', (await text(page, '.foot .fcta[data-act="share-guide"]')) === 'Share the guide' && !(await page.$('#pass [data-act="share-guide"]')));
+  check('Share page: the left button and the top link go back one step, to My plan', (await text(page, '.foot .ftog')) === 'Back to my plan' && (await page.getAttribute('.foot .ftog', 'data-v')) === 'cheat' && (await text(page, '#pass [data-fk="pass-back"]')) === 'Back to my plan' && (await page.getAttribute('#pass [data-fk="pass-back"]', 'data-v')) === 'cheat');
   await tap(page, '[data-act="share-guide"]');
   const shared = await page.evaluate(() => window.__shared || null);
   const fam = await text(page, '#msg-fam');
@@ -1415,12 +1467,17 @@ async function mapsSettled(page, timeout = 10000) {
   check('Report a problem: its two questions in the guide’s words, the way back marked optional', (await page.$$eval('.sheet-panel.shelf .rp-f label', (els) => els.map((e) => e.textContent.replace(/\s+/g, ' ').trim()))).join('|') === 'What’s wrong?|Want a reply? optional'
     && (await text(page, '#rf-reach-h')) === 'An email or phone, only if you’d like one back.' && (await page.getAttribute('#rf-wrong', 'aria-required')) === 'true' && !(await page.getAttribute('#rf-reach', 'aria-required')));
   const along = await alongOf(page);
-  check('Report a problem: "We’ll send along" names the page, the place and ZIP, the page’s address with the build, the data date, and the browser', (await text(page, '.rp-along > p:first-child')) === 'We’ll send along' && along.length === 5 && along[0] === 'Page: Your ballot' && along[1] === 'Place: Austin, 78704'
-    && new RegExp(`^Page address: ${BASE.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/\\?today=${TODAY} \\(build ([0-9a-f]{7}|dev)\\)$`).test(along[2]) && /^Data built: \d{4}-\d{2}-\d{2} \d{2}:\d{2} UTC$/.test(along[3]) && /^Browser: .+, 380px wide$/.test(along[4])
-    && (await text(page, '.rp-along > p:last-child')) === 'Add anything else in your note.', along.join(' | '));
+  // Kevin, Oct 28: folded, and called something clearer ("what'll be sent"); what's posted doesn't change.
+  check('Report a problem: "What’ll be sent", folded shut at the foot, names the page, the place and ZIP, the page’s address with the build, the data date, and the browser', (await text(page, 'details.rp-along > summary')) === 'What’ll be sent' && (await page.getAttribute('details.rp-along', 'open')) === null && !(await page.isVisible('.rp-along li')) && along.length === 5 && along[0] === 'Page: Your ballot' && along[1] === 'Place: Austin, 78704'
+    && new RegExp(`^Page link: ${BASE.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/\\?today=${TODAY} \\(build ([0-9a-f]{7}|dev)\\)$`).test(along[2]) && /^Data built: \d{4}-\d{2}-\d{2} \d{2}:\d{2} UTC$/.test(along[3]) && /^Browser: .+, 380px wide$/.test(along[4])
+    && !/Add anything else/.test(await text(page, '.sheet-panel.shelf')), along.join(' | '));
   check('Report a problem: the list never shows the address or the page’s hash', !NEVER.test(await text(page, '.sheet-panel.shelf')), await text(page, '.rp-along'));
-  check('Report a problem: one fine line says where it goes', (await text(page, '.sheet-panel.shelf .rp-fine')) === 'Goes to Kevin’s Google Form. Nothing you type here is saved in the guide.');
+  check('Report a problem: one fine line says where it goes', (await text(page, '.sheet-panel.shelf .rp-fine')) === 'Your request goes to Kevin’s Google Form. Nothing you type here is saved in the guide.');
   check('Report a problem: a touch lands on Cancel, not in a box, so no keyboard jumps over the sheet', (await focusedFk(page)) === 'sheet-x' && (await text(page, '.sheet-panel.shelf [data-fk="sheet-x"]')) === 'Cancel', await focusedFk(page));
+  await tap(page, 'details.rp-along > summary');
+  check('Report a problem: tapped, What’ll be sent opens to its list', (await page.getAttribute('details.rp-along', 'open')) !== null && (await page.isVisible('.rp-along li')));
+  await tap(page, 'details.rp-along > summary');
+  check('Report a problem: and folds shut again', (await page.getAttribute('details.rp-along', 'open')) === null);
   check('Report a problem: the page behind is out of reach', !!(await page.$('#app[inert]')));
   // Send with the one required box empty: nothing goes, and it says so at the box.
   await tap(page, SEND);
@@ -1446,7 +1503,7 @@ async function mapsSettled(page, timeout = 10000) {
   const p = posts.list[0];
   check('Report a problem: one post, with all five of the form’s ids: the page, the place, your note with the list under it, the page’s address with the build', posts.list.length === 1 && FORM_IDS.every((k) => p.has(k)) && p.get('entry.90887649') === 'Your ballot' && p.get('entry.628621310') === 'Austin, 78704'
     && p.get('entry.780704302') === `Sunday early voting hours look off.\n\nSent along:\n${along.join('\n')}` && (p.get('entry.1986493507') || '').startsWith(`${BASE}/?today=${TODAY} (build `) && p.get('entry.2040687555') === '', `${posts.list.length}: ${p}`);
-  check('Report a problem: every value the page filled in is on the list as it was posted (Codex, Oct 21)', along.includes(`Page: ${p.get('entry.90887649')}`) && along.includes(`Place: ${p.get('entry.628621310')}`) && along.includes(`Page address: ${p.get('entry.1986493507')}`), along.join(' | '));
+  check('Report a problem: every value the page filled in is on the list as it was posted (Codex, Oct 21)', along.includes(`Page: ${p.get('entry.90887649')}`) && along.includes(`Place: ${p.get('entry.628621310')}`) && along.includes(`Page link: ${p.get('entry.1986493507')}`), along.join(' | '));
   check('Report a problem: the post never carries the address typed, the address found, or the save link’s hash', !NEVER.test(postText(p)), postText(p).replace(/\n/g, ' / '));
   check('Report a problem: Sent, in place, with Done', (await text(page, '.rp-sent p')) === 'Sent. Kevin reads every one.' && (await focusedFk(page)) === 'report-done' && !(await page.$('.sheet-panel.shelf form')) && (await text(page, '.sheet-panel.shelf [data-fk="sheet-x"]')) === 'Close', await text(page, '.rp-sent'));
   check('Report a problem: nothing typed is saved in the guide or in its link', !/Sunday early voting/.test((await savedVG(page)) || '') && !/Sunday/.test(await page.evaluate(() => decodeURIComponent(location.href))));
@@ -1460,7 +1517,7 @@ async function mapsSettled(page, timeout = 10000) {
   check('Request a city: one line, which city, the ballot’s ZIP and a way back, the last two marked optional', (await text(page, '.sheet-panel.shelf #sh-h')) === 'Request a city' && (await text(page, '.sheet-panel.shelf .rp-intro')) === 'Tell Kevin which city to add next.' && v.city === '' && v.zip === '78704' && v.reach === '' && Object.keys(v).length === 3
     && (await page.$$eval('.sheet-panel.shelf .rp-f label', (els) => els.map((e) => e.textContent.replace(/\s+/g, ' ').trim()))).join('|') === 'Which city or town?|ZIP optional|Want to hear when it’s up? optional', JSON.stringify(v));
   const cityAlong = await alongOf(page);
-  check('Request a city: a shorter list: the page, the place, the page’s address and the data date', cityAlong.length === 4 && cityAlong[0] === 'Page: Your ballot' && cityAlong[1] === 'Place: Austin, 78704' && /^Page address: /.test(cityAlong[2]) && /^Data built: /.test(cityAlong[3]), cityAlong.join(' | '));
+  check('Request a city: a shorter list: the page, the place, the page’s address and the data date', cityAlong.length === 4 && cityAlong[0] === 'Page: Your ballot' && cityAlong[1] === 'Place: Austin, 78704' && /^Page link: /.test(cityAlong[2]) && /^Data built: /.test(cityAlong[3]), cityAlong.join(' | '));
   await tap(page, SEND);
   check('Request a city: Send with no city sends nothing and says so', posts.list.length === 1 && (await text(page, '#rf-err')) === 'Type the city first.', await text(page, '#rf-err'));
   await page.fill('#rf-city', 'Round Rock');
@@ -1470,7 +1527,7 @@ async function mapsSettled(page, timeout = 10000) {
   await page.waitForSelector('.rp-sent');
   const c = posts.list[1];
   check('Request a city: posts as the city form always has, the city after "Please add ", the list under it', !!c && FORM_IDS.every((k) => c.has(k)) && c.get('entry.90887649') === 'Please add my city' && c.get('entry.628621310') === '78664'
-    && c.get('entry.780704302') === `Please add Round Rock\n\nSent along:\n${cityAlong.join('\n')}` && cityAlong.includes(`Page address: ${c.get('entry.1986493507')}`) && !NEVER.test(postText(c)), c ? c.toString() : 'no post');
+    && c.get('entry.780704302') === `Please add Round Rock\n\nSent along:\n${cityAlong.join('\n')}` && cityAlong.includes(`Page link: ${c.get('entry.1986493507')}`) && !NEVER.test(postText(c)), c ? c.toString() : 'no post');
   await page.keyboard.press('Escape');
   await settle(page);
   check('Request a city: Escape closes it', !(await page.$('.sheet-panel.shelf')) && (await focusedFk(page)) === 'help-city', await focusedFk(page));
@@ -1648,7 +1705,10 @@ async function mapsSettled(page, timeout = 10000) {
   await page.waitForSelector('#cheat');
   check('Bar on the cheat sheet: Back to the ballot and Help friends vote', (await text(page, '.foot')) === 'Back to the ballot Help friends vote', await text(page, '.foot'));
   await tap(page, '.foot [data-act="view"][data-v="pass"]');
-  check('Bar on Help friends vote: Back to the ballot and My plan', (await text(page, '.foot')) === 'Back to the ballot My plan', await text(page, '.foot'));
+  check('Bar on Help friends vote: Back to my plan and Share the guide', (await text(page, '.foot')) === 'Back to my plan Share the guide', await text(page, '.foot'));
+  await tap(page, '.foot .ftog');
+  await page.waitForSelector('#cheat');
+  check('Bar on Help friends vote: its left button goes back one step, to My plan', !!(await page.$('#cheat')) && !(await page.$('#pass')) && (await text(page, '.foot')) === 'Back to the ballot Help friends vote');
   check('Menu: nothing in all caps', (await upperCased(page)).length === 0);
   noErrors(page, 'Bar and menu');
   await ctx.close();
@@ -1954,7 +2014,7 @@ const touchAt = async (page, sel) => {
   check('Show endorsements: off, the chips, "A party" and the fill switch step aside, and "Hide races I’ve decided" stays', (await ends()) === 'false' && !(await page.$('#setup .su-chips, #setup [data-act="chip"], #setup [data-fk="chip-party"], #setup [data-act="setup-fill"]')) && !!(await page.$('#setup [data-act="setup-only"]')));
   await page.fill('#zip', '80205');
   await page.waitForSelector('.door-place', { timeout: 15000 });
-  check('Show endorsements: with the ZIP found, still off, and no picks count to read', (await ends()) === 'false' && !(await page.$('#setup .su-cov')));
+  check('Show endorsements: with the ZIP found, still off, and no line to the sources', (await ends()) === 'false' && !(await page.$('#setup .su-src')));
   await tap(page, SETUP);
   await page.waitForSelector('#plan', { timeout: 15000 });
   await page.waitForTimeout(150);
@@ -2086,7 +2146,7 @@ for (const [zip, label, id, btn, href, full] of [
   await tap(page, '#setup [data-fk="cov-src"]');
   await page.waitForSelector('.sheet-panel #sh-h');
   await tap(page, '.sheet-panel [data-act="src-none"]');
-  check('Sources: Turn all off takes the count away behind the sheet', !(await page.$('#setup [data-fk="cov-src"]')));
+  check('Sources: Turn all off takes the line away behind the sheet', !(await page.$('#setup [data-fk="cov-src"]')));
   await tap(page, '.sheet-panel [data-fk="sheet-x"]');
   await settle(page);
   check('Sources: after Turn all off, Done puts focus on Show endorsements', !(await page.$('.sheet-panel')) && (await focusedFk(page)) === 'ends', await focusedFk(page));
@@ -2100,10 +2160,11 @@ for (const [zip, label, id, btn, href, full] of [
     if (!id) break;
     await tap(page, `.sheet-panel [data-fk="tg-${id}"]`);
   }
-  check('Sources: the last switch off takes the count away too', !(await page.$('.sheet-panel [data-act="src"][aria-checked="true"]')) && !(await page.$('#setup [data-fk="cov-src"]')));
+  // The last one off by hand is choosing again: the chips and the line stay (Oct 28), so focus goes back to the line.
+  check('Sources: the last switch off by hand keeps the chips and the line behind the sheet', !(await page.$('.sheet-panel [data-act="src"][aria-checked="true"]')) && !!(await page.$('#setup [data-fk="cov-src"]')) && !!(await page.$('#setup [data-act="chip"]')));
   await page.keyboard.press('Escape');
   await settle(page);
-  check('Sources: then Escape puts focus on Show endorsements', !(await page.$('.sheet-panel')) && (await focusedFk(page)) === 'ends', await focusedFk(page));
+  check('Sources: then Escape puts focus back on the line', !(await page.$('.sheet-panel')) && (await focusedFk(page)) === 'cov-src', await focusedFk(page));
   // The ballot's Edit sheet: its count opens the sheet over it; Turn all off, then Done goes back to the Edit
   // sheet with focus on its own "Show endorsements".
   await tap(page, '#setup [data-act="ends"]');
@@ -2137,8 +2198,9 @@ const darkIn = (page, sel) => page.$$eval(`${sel} .mini.dark`, (els) => els.filt
   await openZip(page, '60601');
   await page.waitForSelector('.su-src', { timeout: 15000 });
   const p = INDEX_JSON.places['chicago-il'];
-  check('Coverage: Chicago’s step 2 says how many sources on its ballot, how many picked, and when', (await text(page, '#setup .su-src')) === `${p.sources} sources on Chicago’s ballot, ${p.with_picks} with picks. Last checked ${day(p.checked)}. Add a source`, await text(page, '#setup .su-src'));
-  check('Coverage: under "Your sources have picks in N of your M races", inside step 2, and no card', !!(await page.$('#setup .su-stat .su-cov + .su-src')) && !(await page.$('.cov-card')) && !(await page.$('#setup .su-stat .mini')));
+  check('Coverage: Chicago’s step 2 says one line, inside step 2, with no button and no card', (await text(page, '#setup .su-src')) === ONE_LINE && !!(await page.$('#setup .su-stat > .su-src:only-child')) && !(await page.$('.cov-card')) && !(await page.$('#setup .su-stat .mini')), await text(page, '#setup .su-src'));
+  const top = await sheetTop(page);
+  check('Coverage: its sources sheet says how many sources on its ballot, how many picked, and when, then whose picks', top.cov === `${p.sources} sources on Chicago’s ballot, ${p.with_picks} with picks. Last checked ${day(p.checked)}.` && /^Your sources have picks in \d+ of your \d+ races\.$/.test(top.mine), `${top.cov} / ${top.mine}`);
   await plainSetup(page);
   await page.waitForSelector('#plan', { timeout: 15000 });
   check('Coverage: the ballot’s head says it for the ballot, under the picks line, no button', (await text(page, '.bhead .picks-line + .picks-cov')) === `${p.sources} sources on your ballot, ${p.with_picks} with picks. Last checked ${day(p.checked)}.` && !(await page.$('.bhead .picks-cov .mini')) && !(await page.$('.cov-card')), await text(page, '.bhead .picks-cov'));
@@ -2164,7 +2226,9 @@ const darkIn = (page, sel) => page.$$eval(`${sel} .mini.dark`, (els) => els.filt
   check('St. Louis City: a gold card in step 1 leads with what’s missing, then what’s here and what isn’t', (await partsText(page, '#door .cov-card')) === `Your city’s races aren’t in the guide yet. Here now: Missouri’s statewide races, with picks from ${mo.with_picks} of ${mo.sources} sources. Not here yet: races for your city, county and districts. Ask Kevin to add my city One tap. It sends Kevin your ZIP and nothing about you. It usually takes about a day. Voting before then? Your official sample ballot lists every race.`
     && !!(await page.$('#door .cov-card.notice.strong')) && !!(await page.$('.door-where .door-place + .cov-card')), await partsText(page, '#door .cov-card'));
   check('St. Louis City: its button is the one dark one, and the sample ballot is a link in a sentence', (await darkIn(page, '#door .cov-card')).join('|') === 'Ask Kevin to add my city' && /^https:/.test((await page.getAttribute('#door .cov-card .cov-sb a', 'href')) || ''));
-  check('St. Louis City: step 2 says it quietly, with no button', /^Your sources have picks in \d+ of the \d+ statewide races here\.$/.test(await text(page, '#setup .su-cov')) && (await text(page, '#setup .su-src')) === `${mo.sources} sources for Missouri’s statewide races, ${mo.with_picks} with picks. Last checked ${day(mo.checked)}.` && !(await page.$('#setup .su-stat .mini')));
+  const moTop = await sheetTop(page);
+  check('St. Louis City: step 2 says its one line with no button, and the sources sheet says it quietly, scoped to the statewide races', (await text(page, '#setup .su-src')) === ONE_LINE && !(await page.$('#setup .su-stat .mini'))
+    && /^Your sources have picks in \d+ of the \d+ statewide races here\.$/.test(moTop.mine) && moTop.cov === `${mo.sources} sources for Missouri’s statewide races, ${mo.with_picks} with picks. Last checked ${day(mo.checked)}.`, `${moTop.cov} / ${moTop.mine}`);
   await tap(page, '.front [data-act="addr-open"]');
   await page.fill('#addr-in', '12 Testing Lane');
   await page.locator('form[data-form="addr"] button[type=submit]').tap();
@@ -2182,14 +2246,15 @@ const darkIn = (page, sel) => page.$$eval(`${sel} .mini.dark`, (els) => els.filt
   await page.waitForSelector('#door .cov-card[role="status"]', { timeout: 15000 });
   const p = posts.list[posts.list.length - 1];
   check('St. Louis City: one tap posts the five answers, nothing typed', posts.list.length === 2 && FORM_IDS.every((k) => p.has(k)) && p.get('entry.90887649') === 'Please add my city' && p.get('entry.628621310') === 'Missouri, 63110'
-    && /^Please add the city for ZIP 63110 in Missouri \(one-tap from the page\)\n\nSent along:\nPage: First page\nPlace: Missouri, 63110\nPage address: /.test(p.get('entry.780704302')) && p.get('entry.2040687555') === '' && !/Browser:/.test(p.get('entry.780704302')), p ? p.toString() : 'no post');
+    && /^Please add the city for ZIP 63110 in Missouri \(one-tap from the page\)\n\nSent along:\nPage: First page\nPlace: Missouri, 63110\nPage link: /.test(p.get('entry.780704302')) && p.get('entry.2040687555') === '' && !/Browser:/.test(p.get('entry.780704302')), p ? p.toString() : 'no post');
   const sent = postText(p);
   check('St. Louis City: the one tap never carries the address typed or found, the save link’s hash, any contact, or any query but the test date', !NEVER.test(sent) && p.get('entry.2040687555') === '' && !/#/.test(sent)
     && [...sent.matchAll(/\?([^\s)]*)/g)].every((m) => /^today=\d{4}-\d{2}-\d{2}$/.test(m[1])) && !/@|\(\d{3}\)|\d{3}-\d{4}/.test(sent.replace(/\d{4}-\d{2}-\d{2}/g, '')), sent.replace(/\n/g, ' / '));
   check('St. Louis City: then the card keeps its slot and gold: a tick, "Request sent.", the day, an outline Tell me when it’s in', (await partsText(page, '#door .cov-card')) === 'Request sent. Kevin is adding your city. You asked today. It usually takes about a day, so check back tomorrow. Until then, you can pick your statewide races below. Voting before then? Your official sample ballot lists every race. Tell me when it’s in'
     && !!(await page.$('#door .cov-card.notice.strong .cov-tick')) && (await darkIn(page, '#door .cov-card')).length === 0, await partsText(page, '#door .cov-card'));
   check('St. Louis City: focus moves to the card’s lead, which a screen reader hears', (await focusedFk(page)) === 'cov-lead', await focusedFk(page));
-  check('St. Louis City: step 2’s quiet line adds the day', (await text(page, '#setup .su-src')).endsWith('You asked for your city’s races today.'), await text(page, '#setup .su-src'));
+  const moAsked = (await sheetTop(page)).cov;
+  check('St. Louis City: the sources sheet’s quiet line adds the day', moAsked.endsWith('You asked for your city’s races today.'), moAsked);
   const asked = await page.evaluate(() => [localStorage.getItem('vg-asked'), localStorage.getItem('vg2')]);
   check('St. Louis City: remembered on this device under its own key, not in the saved ballots', /"z:63110":"\d{4}-\d{2}-\d{2}"/.test(asked[0] || '') && !/63110/.test(asked[1] || ''), asked.join(' | '));
   // "Tell me when it's in": the request shown as text, an email or phone the one field, a follow-up row.
@@ -2270,7 +2335,8 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
     check(`Thin place (${name}): the card says its own groups’ picks aren’t in, that picks from across the state are, and the gap`, (await text(page, '#door .cov-card .cov-lead')) === `${name}’s local picks aren’t in yet.`
       && (await text(page, '#door .cov-card .cov-miss')) === `Not here yet: picks from ${name}’s own paper and groups. ${gap} of your ${thin.p.local_races} local races ${gap === 1 ? 'has' : 'have'} no picks from anyone.` && /^Here now: every race on your ballot, with picks from newspapers and groups across /.test(await text(page, '#door .cov-card .cov-here'))
       && (await darkIn(page, '#door .cov-card')).join() === 'Ask Kevin to look for local picks', await text(page, '#door .cov-card'));
-    check(`Thin place (${name}): step 2 says whose picks are missing, quietly`, new RegExp(`^\\d+ sources, \\d+ with picks, none from ${name}’s own paper and groups\\. Last checked [A-Z][a-z]{2} \\d+\\.$`).test(await text(page, '#setup .su-src')) && !(await page.$('#setup .su-stat .mini')), await text(page, '#setup .su-src'));
+    const thinTop = (await sheetTop(page)).cov;
+    check(`Thin place (${name}): step 2 says its one line, and the sources sheet says whose picks are missing, quietly`, (await text(page, '#setup .su-src')) === ONE_LINE && new RegExp(`^\\d+ sources, \\d+ with picks, none from ${name}’s own paper and groups\\. Last checked [A-Z][a-z]{2} \\d+\\.$`).test(thinTop) && !(await page.$('#setup .su-stat .mini')), thinTop);
     await page.evaluate(() => history.replaceState(history.state, '', `${location.pathname}${location.search}#v1~FL~x~00000~zz9pick`));
     await tap(page, '#door [data-act="cov-ask"]');
     await page.waitForSelector('#door .cov-card[role="status"]', { timeout: 15000 });
@@ -2378,12 +2444,14 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
     await openRow(page, 'tx-austin-prop-a');
     await settle(page);
     check('Add in place: to start, AURA isn’t on Austin’s ballot', !/AURA/.test(await now$(page, '#i-tx-austin-prop-a')));
+    // Add a source lives in the sources sheet since Oct 28: Edit, choose individual sources, Add a source.
     await edit(page);
-    await tap(page, '.sheet-panel.picks [data-act="shelf"][data-kind="source"]');
+    await tap(page, '.sheet-panel.picks [data-fk="cov-src"]');
+    await tap(page, '.sheet-panel [data-fk="src-add"]');
     await page.waitForSelector('.sheet-panel.shelf[data-kind="source"]');
     const along = await alongOf(page);
     const code = (along.at(-1).match(/^Request: ([a-z]{12})$/) || [])[1];
-    check('Add in place: "We’ll send along" ends with the request’s code, 12 letters', !!code, along.join(' | '));
+    check('Add in place: "What’ll be sent" ends with the request’s code, 12 letters', !!code, along.join(' | '));
     await page.fill('#rf-src', 'AURA');
     await tap(page, SEND);
     await page.waitForSelector('.rp-sent');
@@ -2394,7 +2462,10 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
     check('Add in place: this device keeps the code and the name under vg-adds, never in vg2', kept.length === 1 && kept[0].code === code && kept[0].name === 'AURA' && Object.keys(kept[0]).sort().join() === 'at,code,name' && !(await savedVG(page)).includes(code), JSON.stringify(kept));
     await tap(page, '[data-fk="report-done"]');
     await settle(page);
-    await tap(page, '.sheet-panel [data-fk="sheet-x"]');
+    // Done on the sources sheet goes back to the Edit sheet, and its Done closes it.
+    await tap(page, '.sheet-panel:not(.picks) [data-fk="sheet-x"]');
+    await settle(page);
+    await tap(page, '.sheet-panel.picks [data-fk="sheet-x"]');
     await settle(page);
     check('Add in place: the banner says the request is in, in one line', (await banner(page)) === 'Request sent for AURA. You can keep going.' && c.statusAsked >= 1, `${await banner(page)} (${c.statusAsked})`);
     c.status[code] = { state: 'checking', name: 'AURA' };
@@ -2638,8 +2709,8 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
   check('Sources: before, Newspapers and guides is on', (await papersOn()) === 'true');
   await tap(page, '#setup [data-fk="cov-src"]');
   await page.waitForSelector('.sheet-panel #sh-h');
-  check('Sources: the count opens "Every source on your ballot" on the first page', (await text(page, '.sheet-panel #sh-h')) === 'Every source on your ballot' && !!(await page.$('#app[inert]')));
-  check('Sources: its first line says what’s on to start', (await text(page, '.sheet-panel .s-legend')) === 'On by default: newspapers and nonpartisan guides. Tap a switch to add or drop one.');
+  check('Sources: choose individual sources opens "Every source on your ballot" on the first page', (await text(page, '.sheet-panel #sh-h')) === 'Every source on your ballot' && !!(await page.$('#app[inert]')));
+  check('Sources: over the list it says what’s on to start', (await text(page, '.sheet-panel .s-legend')) === 'On by default: newspapers and nonpartisan guides. Tap a switch to turn one on or off.');
   // Turn off one newspaper that has picks here (a chip reads only the sources with picks): its switch flips,
   // and the chip behind the sheet follows ("some").
   const paper = await page.evaluate(() => [...document.querySelectorAll('.sheet-panel .sgrp:not(.unread) .srow')]
@@ -2690,9 +2761,159 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
   await tap(page, SETUP);
   await page.waitForSelector('#plan', { timeout: 15000 });
   await edit(page);
-  check('Sources: the ballot keeps that choice, and the Edit sheet has the same count and Add a source', /some newspapers and guides/i.test(await text(page, '.picks-line')) && !!(await page.$('.sheet-panel.picks [data-fk="cov-src"]')) && (await text(page, '.sheet-panel.picks [data-act="shelf"][data-kind="source"]')) === 'Add a source', await text(page, '.picks-line'));
+  check('Sources: the ballot keeps that choice, and the Edit sheet has the same one line', /some newspapers and guides/i.test(await text(page, '.picks-line')) && !!(await page.$('.sheet-panel.picks [data-fk="cov-src"]')) && (await text(page, '.sheet-panel.picks .su-src')) === ONE_LINE, await text(page, '.picks-line'));
   await noSideScroll(page, 'Sources');
   noErrors(page, 'Sources');
+  await ctx.close();
+}
+
+/* ---------- one line in step 2, and a sources sheet you can search and pick groups in (Oct 28) ----------
+   Kevin: "this footer text here is repetative and it should say like 'Select a group of recs above or pick by
+   individual sources' and we can put last checked inside the shelf and add a search to the shelf plus an
+   unselect all and options to select groups inside that shelf". */
+{
+  const { ctx, page } = await newPage();
+  await openZip(page, '78702');
+  await page.waitForSelector('#setup [data-fk="cov-src"]', { timeout: 15000 });
+  await fillOff(page);
+  check('Sheet: step 2 says one line under the chips, no counts, no date, no Add a source', (await text(page, '#setup .su-src')) === ONE_LINE && !!(await page.$('#setup .su-chips + .su-stat > .su-src:only-child'))
+    && !/Last checked|with picks|Your sources have picks/.test(await text(page, '#setup')) && !(await page.$('#setup [data-kind="source"]')), await text(page, '#setup .su-src'));
+  await tap(page, '#setup [data-fk="cov-src"]');
+  await page.waitForSelector('.sheet-panel .s-cov');
+  const rowsShown = () => page.$$eval('.sheet-panel .srow .s-n', (els) => els.map((e) => e.textContent.trim()));
+  const all = await rowsShown();
+  check('Sheet: its top says the counts and the date, then the group chips, then whose picks', /^\d+ sources on Austin’s ballot, \d+ with picks\. Last checked [A-Z][a-z]{2} \d+\.$/.test(await text(page, '.sheet-panel .s-cov'))
+    && /^Your sources have picks in \d+ of your \d+ races\.$/.test(await text(page, '.sheet-panel .s-mine')) && !!(await page.$('.sheet-panel .s-cov + .s-chips + .s-mine'))
+    && (await page.getAttribute('.sheet-panel [data-fk="s-chip-papers"]', 'aria-pressed')) === 'true', `${await text(page, '.sheet-panel .s-cov')} / ${await text(page, '.sheet-panel .s-mine')}`);
+  check('Sheet: then Reset and Turn all off, then the search, empty, its Clear hidden', !!(await page.$('.sheet-panel .s-top [data-act="src-default"] + [data-act="src-none"]')) && !!(await page.$('.sheet-panel .s-top + .s-find #src-q')) && (await page.inputValue('#src-q')) === '' && !(await page.isVisible('.sheet-panel [data-act="src-q-x"]')));
+  // A group picked inside the sheet: its sources' switches turn on, the chip behind the sheet follows, focus stays.
+  const onCount = () => page.$$eval('.sheet-panel [data-act="src"][aria-checked="true"]', (els) => els.length);
+  const on0 = await onCount();
+  await tap(page, '.sheet-panel [data-fk="s-chip-progressive"]');
+  check('Sheet: a group picked inside it turns its sources on, and step 2’s chip behind it follows', (await page.getAttribute('.sheet-panel [data-fk="s-chip-progressive"]', 'aria-pressed')) === 'true' && (await onCount()) > on0
+    && (await page.getAttribute('#setup [data-act="chip"][data-k="progressive"]', 'aria-pressed')) === 'true' && !!(await page.evaluate(() => document.activeElement?.closest('.sheet-panel'))), `${on0} -> ${await onCount()}, ${await focusedFk(page)}`);
+  // With a keyboard: off again, and focus stays on the sheet's own chip, not step 2's behind it (inert).
+  await page.waitForTimeout(700);
+  await page.focus('.sheet-panel [data-fk="s-chip-progressive"]');
+  await page.keyboard.press('Enter');
+  await page.waitForTimeout(150);
+  check('Sheet: and off again, with a keyboard, focus still on the sheet’s chip', (await onCount()) === on0 && (await page.getAttribute('#setup [data-act="chip"][data-k="progressive"]', 'aria-pressed')) === 'false'
+    && (await focusedFk(page)) === 's-chip-progressive' && !!(await page.evaluate(() => document.activeElement?.closest('.sheet-panel'))), await focusedFk(page));
+  // The search: filters as you type, by name, keeps the box and its caret, and the sheet keeps its height.
+  const h0 = await page.evaluate(() => document.querySelector('.sheet-panel').getBoundingClientRect().height);
+  await page.locator('#src-q').tap();
+  await page.locator('#src-q').pressSequentially('chron', { delay: 20 });
+  await page.waitForTimeout(100);
+  const chron = await rowsShown();
+  check('Sheet: typing filters the list to the names that match, as you type', chron.length >= 2 && chron.length < all.length && chron.every((n) => /chron/i.test(n)) && (await focusedFk(page)) === 'src-q' && (await page.inputValue('#src-q')) === 'chron', chron.join(' | '));
+  check('Sheet: while searching, each group counts its matches, the how-it-works lines step aside, and Clear shows', /^\d+ of \d+ match$/.test(await text(page, '.sheet-panel .sgrp .s-ct')) && !(await page.$('.sheet-panel .s-legend')) && (await page.isVisible('.sheet-panel [data-act="src-q-x"]')));
+  // A switch tapped while searching keeps the search.
+  const hit = await page.$eval('.sheet-panel .srow [data-act="src"]', (e) => [e.dataset.id, e.getAttribute('aria-checked')]);
+  await tap(page, `.sheet-panel [data-fk="tg-${hit[0]}"]`);
+  check('Sheet: a switch tapped while searching flips, and the search stays', (await page.getAttribute(`.sheet-panel [data-fk="tg-${hit[0]}"]`, 'aria-checked')) !== hit[1] && (await page.inputValue('#src-q')) === 'chron' && (await rowsShown()).join() === chron.join());
+  await tap(page, `.sheet-panel [data-fk="tg-${hit[0]}"]`);
+  await page.fill('#src-q', 'chronicle austin');
+  check('Sheet: words match in any order', (await rowsShown()).join() === 'The Austin Chronicle editorial board', (await rowsShown()).join(' | '));
+  await page.fill('#src-q', 'zzzz');
+  await page.waitForTimeout(900);
+  const h1 = await page.evaluate(() => document.querySelector('.sheet-panel').getBoundingClientRect().height);
+  check('Sheet: no match says so plainly, with Add a source right under it, and a screen reader hears it', (await text(page, '.sheet-panel .s-none')) === 'No sources match “zzzz”.' && !(await page.$('.sheet-panel .sgrp')) && (await page.isVisible('.sheet-panel .s-add [data-fk="src-add"]'))
+    && (await text(page, '#sr-live')) === 'No sources match.', `${await text(page, '.sheet-panel .s-none')} / ${await text(page, '#sr-live')}`);
+  check('Sheet: and it keeps its height as matches come and go', Math.abs(h1 - h0) < 2, `${h0} vs ${h1}`);
+  await tap(page, '.sheet-panel [data-act="src-q-x"]');
+  check('Sheet: Clear empties the box, brings the whole list and its lines back, and leaves you in the box', (await page.inputValue('#src-q')) === '' && (await rowsShown()).length === all.length && !!(await page.$('.sheet-panel .s-legend')) && (await focusedFk(page)) === 'src-q' && !(await page.isVisible('.sheet-panel [data-act="src-q-x"]')));
+  // The box stays in view as the list scrolls under it.
+  await page.evaluate(() => { const bd = document.querySelector('.sheet-panel .sheet-bd'); bd.scrollTop = bd.scrollHeight; });
+  await page.waitForTimeout(100);
+  const stuck = await page.evaluate(() => { const bd = document.querySelector('.sheet-panel .sheet-bd').getBoundingClientRect(); const f = document.querySelector('.sheet-panel .s-find').getBoundingClientRect(); return f.top >= bd.top - 1 && f.bottom <= bd.top + 90; });
+  check('Sheet: scrolled to the end, the search box is still at the top', stuck);
+  // Typing from down there brings the first match up under the box.
+  await page.locator('#src-q').tap();
+  await page.locator('#src-q').pressSequentially('chron', { delay: 20 });
+  await page.waitForTimeout(100);
+  const under = await page.evaluate(() => { const f = document.querySelector('.sheet-panel .s-find').getBoundingClientRect(); const r = document.querySelector('.sheet-panel .srow').getBoundingClientRect(); return r.top >= f.bottom - 1 && r.top < f.bottom + 120; });
+  check('Sheet: typing after a scroll puts the first match right under the box', under);
+  // Enter (the phone's Search key) drops the keyboard and keeps the matches; Escape in the box clears it first.
+  await page.keyboard.press('Enter');
+  check('Sheet: Enter leaves the box and keeps the matches', (await focusedFk(page)) !== 'src-q' && (await rowsShown()).join() === chron.join(), await focusedFk(page));
+  await page.locator('#src-q').focus();
+  await page.keyboard.press('Escape');
+  check('Sheet: Escape in the box clears it and keeps the sheet open', (await page.inputValue('#src-q')) === '' && !!(await page.$('.sheet-panel #src-q')) && (await rowsShown()).length === all.length);
+  await page.keyboard.press('Escape');
+  await settle(page);
+  check('Sheet: Escape again closes it, focus back on the line', !(await page.$('.sheet-panel')) && (await focusedFk(page)) === 'cov-src', await focusedFk(page));
+  // Opened again, the search starts empty.
+  await tap(page, '#setup [data-fk="cov-src"]');
+  await page.fill('#src-q', 'chron');
+  await tap(page, '.sheet-panel [data-fk="sheet-x"]');
+  await settle(page);
+  await tap(page, '#setup [data-fk="cov-src"]');
+  await page.waitForSelector('.sheet-panel #src-q');
+  check('Sheet: opened again, the search starts empty', (await page.inputValue('#src-q')) === '' && (await rowsShown()).length === all.length);
+  await shot(page, '35-sources-sheet');
+  await noSideScroll(page, 'Sheet');
+  await page.keyboard.press('Escape');
+  await settle(page);
+  // From the ballot's Edit sheet: a group picked in the sources sheet, then Done, is on in the Edit sheet too.
+  await tap(page, SETUP);
+  await page.waitForSelector('#plan', { timeout: 15000 });
+  await edit(page);
+  check('Sheet: the Edit sheet says the same one line, with no See all sources chip', (await text(page, '.sheet-panel.picks .su-src')) === ONE_LINE && !(await page.$('.sheet-panel.picks .all-src')));
+  await tap(page, '.sheet-panel.picks [data-fk="cov-src"]');
+  await page.waitForSelector('.sheet-panel:not(.picks) .s-chips');
+  if (await page.$('.sheet-panel [data-fk="s-chip-conservative"]')) {
+    await tap(page, '.sheet-panel [data-fk="s-chip-conservative"]');
+    await tap(page, '.sheet-panel [data-fk="sheet-x"]');
+    await settle(page);
+    check('Sheet: a group picked there is on in the Edit sheet once you’re back', !!(await page.$('.sheet-panel.picks')) && (await page.getAttribute('.sheet-panel.picks [data-act="chip"][data-k="conservative"]', 'aria-pressed')) === 'true' && (await focusedFk(page)) === 'cov-src', await focusedFk(page));
+  } else check('Sheet: Austin has a Conservative groups chip', false);
+  noErrors(page, 'Sheet');
+  await ctx.close();
+}
+
+/* ---------- the dates, ID and what-ifs search (Oct 28) ----------
+   Kevin: "since we're adding search to the sources list, can we add it to the gotchas section too? ... I don't
+   care about search approach, just don't want folks to not find what they're looking for because of some small
+   mismatch". The same matcher as the sources sheet (model/search.ts). */
+{
+  const { ctx, page } = await newPage();
+  await openBallot(page, '32801');
+  await tap(page, '[data-fk="whatif"]');
+  await page.waitForSelector('#plan #wi-q');
+  const asked = () => page.$$eval('#plan .wi-found .wi-rq', (els) => els.map((e) => e.textContent.trim()));
+  const qs0 = await page.$$eval('#plan .wi-q', (els) => els.length);
+  check('What-ifs search: a box leads the panel, empty, its Clear hidden, the questions as always', (await page.inputValue('#wi-q')) === '' && !(await page.isVisible('#plan [data-act="wi-q-x"]')) && qs0 > 10 && (await page.getAttribute('#wi-q', 'placeholder')) === 'Search: lost ballot, ID, moved…', String(qs0));
+  await page.locator('#wi-q').tap();
+  await page.locator('#wi-q').pressSequentially('absentee', { delay: 20 });
+  await page.waitForTimeout(100);
+  const ab = await asked();
+  check('What-ifs search: an everyday word finds the data’s word, as you type: "absentee" finds the mail-ballot answers, open', ab.includes('My mail ballot never came, or I lost it.') && !ab.includes('I’m in line when polls close.') && (await focusedFk(page)) === 'wi-q' && (await page.isVisible('#plan [data-act="wi-q-x"]')) && !(await page.$('#plan .wi-q')), ab.join(' | '));
+  await page.fill('#wi-q', 'provisonal');
+  check('What-ifs search: a typo still finds it: "provisonal"', (await asked()).some((q) => /provisional ballot\?$/.test(q)), (await asked()).join(' | '));
+  await page.fill('#wi-q', 'my ballot never came');
+  check('What-ifs search: a whole question in your own words finds its answer', (await asked()).join(' | ') === 'My mail ballot never came, or I lost it.', (await asked()).join(' | '));
+  // A "More" inside the results opens its full answer, and the search stays.
+  await tap(page, '#plan .wi-found [data-k="wim-no_mail_ballot_or_lost"]');
+  check('What-ifs search: More in a result opens its full answer, the search kept', !!(await page.$('#plan .wi-found .wi-full')) && (await page.inputValue('#wi-q')) === 'my ballot never came');
+  await page.fill('#wi-q', 'felony');
+  await page.waitForTimeout(900);
+  check('What-ifs search: no match says so plainly and names the election office, its phone a link, and a screen reader hears it', /^No answers match “felony”\. Contact your election office: Orange County Supervisor of Elections · 407-836-VOTE \(8683\)\.$/.test(await text(page, '#plan .wi-none')) && !!(await page.$('#plan .wi-none a[href^="tel:"]')) && (await text(page, '#sr-live')) === 'No answers match.', `${await text(page, '#plan .wi-none')} / ${await text(page, '#sr-live')}`);
+  await tap(page, '#plan [data-act="wi-q-x"]');
+  check('What-ifs search: Clear brings every question back, the box empty, you still in it', (await page.inputValue('#wi-q')) === '' && (await page.$$eval('#plan .wi-q', (els) => els.length)) === qs0 && (await focusedFk(page)) === 'wi-q' && !(await page.isVisible('#plan [data-act="wi-q-x"]')));
+  await page.fill('#wi-q', 'moved');
+  await page.locator('#wi-q').focus();
+  await page.keyboard.press('Escape');
+  check('What-ifs search: Escape in the box clears it', (await page.inputValue('#wi-q')) === '' && (await page.$$eval('#plan .wi-q', (els) => els.length)) === qs0);
+  await page.fill('#wi-q', 'moved');
+  await page.keyboard.press('Enter');
+  check('What-ifs search: Enter leaves the box and keeps the answers', (await focusedFk(page)) !== 'wi-q' && (await asked()).length > 0);
+  await tap(page, '[data-fk="whatif"]');
+  await tap(page, '[data-fk="whatif"]');
+  await page.waitForSelector('#plan #wi-q');
+  check('What-ifs search: closed and opened again, it starts empty', (await page.inputValue('#wi-q')) === '' && (await page.$$eval('#plan .wi-q', (els) => els.length)) === qs0);
+  await shot(page, '36-whatifs-search');
+  await noSideScroll(page, 'What-ifs search');
+  noErrors(page, 'What-ifs search');
   await ctx.close();
 }
 
@@ -2839,7 +3060,7 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
   await openZip(page, '02139');
   await page.waitForSelector('.notice');
   check('Uncovered: names Vote.gov', /Vote\.gov/.test(await text(page, '.notice')));
-  check('Uncovered: the notice sits under the ZIP box, step 2 stays with no counts', !!(await page.$('.door .door-where .notice')) && !!(await page.$('#su-h')) && !(await page.$('.su-cov')) && !(await page.$('.door-place')));
+  check('Uncovered: the notice sits under the ZIP box, step 2 stays with no counts', !!(await page.$('.door .door-where .notice')) && !!(await page.$('#su-h')) && !(await page.$('.su-src')) && !(await page.$('.door-place')));
   await tap(page, SETUP);
   check('Uncovered: "Show my ballot" stays on the first page', !(await page.$('#plan')) && (await focusedFk(page)) === 'zip');
   // Kevin, Oct 25: say what they get (Vote.gov) and what they can ask for, with no "Ask Kevin" (the sheet names him).
@@ -2866,12 +3087,12 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
   await page.waitForSelector('[data-act="choose-place"]');
   check('80247: asks which place, with "I’m not sure"', (await page.$$('[data-act="choose-place"]')).length === 3 && /I’m not sure/.test(await text(page, '.choose')));
   check('80247: offers the address lookup to pick', !!(await page.$('.choose [data-act="addr-open"]')));
-  check('80247: the place question sits under the ZIP box, step 2 beside it with no counts yet', !!(await page.$('.door .door-where .choose')) && !!(await page.$('#su-h')) && !(await page.$('.su-cov')));
+  check('80247: the place question sits under the ZIP box, step 2 beside it with no counts yet', !!(await page.$('.door .door-where .choose')) && !!(await page.$('#su-h')) && !(await page.$('.su-src')));
   await tap(page, SETUP);
   check('80247: "Show my ballot" before a pick goes to the first place to pick', (await focusedFk(page)) === 'cp-aurora-co' && !(await page.$('#plan')), await focusedFk(page));
   await tap(page, '[data-act="choose-place"][data-ids="aurora-co"]');
   await page.waitForSelector('.door-place', { timeout: 15000 });
-  check('80247: the place picked shows under the ZIP box, with Change, and step 2 counts it', (await text(page, '.door-place span')) === 'Aurora, Colorado · 80247' && !!(await page.$('.door-place [data-act="rechoose"]')) && !!(await page.$('.su-cov')), await text(page, '.door-place'));
+  check('80247: the place picked shows under the ZIP box, with Change, and step 2 counts it', (await text(page, '.door-place span')) === 'Aurora, Colorado · 80247' && !!(await page.$('.door-place [data-act="rechoose"]')) && !!(await page.$('.su-src')), await text(page, '.door-place'));
   await tap(page, '.door-place [data-act="rechoose"]');
   check('80247: Change asks again', (await page.$$('[data-act="choose-place"]')).length === 3 && !(await page.$('.door-place')) && (await focusedFk(page)) === 'cp-aurora-co');
   await tap(page, '[data-act="choose-place"][data-ids="aurora-co+denver-co"]');
@@ -3207,6 +3428,9 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await page.waitForSelector('#msg-pub');
   const pub = await text(page, '#msg-pub');
   check('Austin: the public message says Election Day and the early-voting dates', /Election Day in Texas is Tue, Nov 3\./.test(pub) && /Early voting (in Austin )?runs Mon, Oct 19 through Fri, Oct 30\./.test(pub), pub.slice(0, 140));
+  // Step 5 goes back one step, to My plan, and My plan back to the ballot (Kevin, Oct 28).
+  await tap(page, '.foot .ftog');
+  await page.waitForSelector('#cheat');
   await tap(page, '[data-act="view"][data-v="ballot"]');
   const oth = await text(page, '#sec-school .grp.oth');
   check('Austin: other school districts’ races fold into one line', /Other school districts that touch Austin/.test(oth) && !(await page.$('#sec-school [data-fold]')), oth.slice(0, 120));
@@ -3714,11 +3938,11 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
   await page.locator('form[data-form="addr"] button[type=submit]').tap();
   await page.waitForSelector('.door-found', { timeout: 15000 }).catch(() => {});
   check('Address on the first page: and asks the Census again', asked.length > n0 && (await text(page, '.door-found')) === found, `${n0} then ${asked.length}`);
-  const cov = Number(((await text(page, '.su-cov')).match(/of your (\d+) races?/) || [])[1]);
+  const cov = Number(((await sheetTop(page)).mine.match(/of your (\d+) races?/) || [])[1]);
   await plainSetup(page);
   await page.waitForSelector('#plan', { timeout: 15000 });
   const m = Number(((await text(page, '.bar-txt')).match(/of (\d+)/) || [])[1]);
-  check('Address on the first page: step 2’s count was the ballot’s, districts set', cov > 0 && cov === m, `${cov} vs ${m}`);
+  check('Address on the first page: the sources sheet’s count was the ballot’s, districts set', cov > 0 && cov === m, `${cov} vs ${m}`);
   const kept = await text(page, '.addrbox .addr-set');
   // Senate District 28 isn't one of Aurora's (SD-27, SD-29), so that question reads "Not on your ballot" and the line doesn't name it.
   check('Address on the first page: the ballot keeps what was set, in the address box, naming only races it put on the ballot', kept === AURORA_SET && !/Set from|districts/i.test(await text(page, '.mast')), kept);

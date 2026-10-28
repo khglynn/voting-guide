@@ -5,7 +5,7 @@
    coverage line; a paste box for picks behind a login, so nothing needs an upload).
    The two forms post straight into Kevin's Google Form (common.FORM), so its response sheet stays the
    queue the pipeline reads. They ask for one sentence and an optional way back; everything else is
-   collected here and shown under "We'll send along" before it goes (Kevin: "much cleaner forms that
+   collected here and shown under "What'll be sent" before it goes (Kevin: "much cleaner forms that
    don't feel overwhelming. We want people to send feedback"). What you type lives only in this sheet
    while it is open (S.ui.report, in memory): never in localStorage or the save link. The form in a new
    tab, prefilled with the same answers, is always one tap away, and it's what a failed send offers.
@@ -16,7 +16,7 @@ import type { Index } from '../types';
 import { ballotCoverage, askedWord, type Ask } from '../model/coverage';
 import { esc, fmtDate } from '../util';
 import { lastErrors, lastErrorId } from '../errors';
-import { FORM, formURL, ext, isOpen, kevinLink, reportWhere, BUY_ME_A_COFFEE_URL } from './common';
+import { FORM, formURL, ext, isOpen, kevinLink, reportWhere, BUY_ME_A_COFFEE_URL, UNDERWAY_SRC, shelfAttrs } from './common';
 
 export const SHELF_TITLE: Record<ShelfKind, string> = {
   cities: 'Cities in the guide', how: 'How this guide works', report: 'Report a problem', city: 'Request a city', support: 'Support the guide', source: 'Add a source',
@@ -149,7 +149,7 @@ export function collectAlong(): Along {
 /* The values the page fills in itself. One place, so the list and the post can't drift apart. */
 const aboutOf = (r: Pick<Shelf, 'what' | 'tag'>): string => (r.tag && r.what ? `${r.what} [${r.tag}]` : '');
 const linkOf = (a: Along): string => `${a.url} (build ${a.build || 'dev'})`;
-/* The "We'll send along" list. Every value the page fills in is on it word for word (Codex, Oct 21:
+/* The "What'll be sent" list (folded at the form's foot since Oct 28). Every value the page fills in is on it word for word (Codex, Oct 21:
    "you can see what we send" has to hold): the page (or, from a row, the race with its record id), the
    place and ZIP, the page's address with the build, the data date, the browser, the errors caught, and
    the id of the crash report the page sent, when Sentry took one in (so a note and its crash meet).
@@ -159,7 +159,7 @@ const linkOf = (a: Along): string => `${a.url} (build ${a.build || 'dev'})`;
 export function alongLines(r: Pick<Shelf, 'kind' | 'what' | 'tag' | 'along'>): string[] {
   const a = r.along;
   const head = [`Page: ${a.page}`, a.where ? `Place: ${a.where}` : ''];
-  const tail = [`Page address: ${linkOf(a)}`, `Data built: ${a.data || 'unknown'}`];
+  const tail = [`Page link: ${linkOf(a)}`, `Data built: ${a.data || 'unknown'}`];
   if (r.kind === 'source') return [...head, ...tail, a.request ? `Request: ${a.request}` : ''].filter(Boolean);
   if (r.kind === 'city') return [...head, ...tail].filter(Boolean);
   const about = aboutOf(r);
@@ -262,6 +262,15 @@ function fieldHTML(r: Shelf, f: Field): string {
   return `<div class="rp-f"><label for="${id}"><b>${esc(label)}</b>${opt}</label>
     ${hint ? `<p class="rp-h" id="${id}-h">${esc(hint)}</p>` : ''}${input}${err}</div>`;
 }
+/* What goes along with a request, folded shut at the form's foot (Kevin, Oct 28: "I don't think we need the what
+   we're sending footer on these but if we do have it let's collapse it. and call it something more clear").
+   Kept, folded, because the site makes privacy promises and this is the proof. Display only: what is posted
+   ("Sent along:" and its lines, reportBody) doesn't change. */
+const ALONG_SUM = 'What’ll be sent';
+export const FINE = 'Your request goes to Kevin’s Google Form. Nothing you type here is saved in the guide.';
+const CHEV = '<svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>';
+const alongHTML = (r: Shelf): string => `<details class="rp-along" id="rp-along"><summary>${esc(ALONG_SUM)}${CHEV}</summary>
+        <ul>${alongLines(r).map((l) => `<li>${esc(l)}</li>`).join('')}</ul></details>`;
 /* The follow-up form: the request as a line of text, the one field, the button, and what goes along folded
    shut under it. Sent, it never shows the email or phone back (a shared phone would). */
 function followHTML(r: Shelf): string {
@@ -276,12 +285,11 @@ function followHTML(r: Shelf): string {
       <p class="rp-intro">${esc(f.intro)}</p>
       <p class="rp-req"><b>Your request:</b> ${esc(f.request)}</p>
       ${FOLLOW_FIELDS.map((x) => fieldHTML(r, x)).join('')}
-      <p class="fine rp-fine">Goes to Kevin’s Google Form. Nothing you type here is saved in the guide.</p>
+      <p class="fine rp-fine">${esc(FINE)}</p>
       ${missed ? `<p class="rp-fail" role="alert">${r.state === 'unsure' ? 'Couldn’t confirm it sent.' : 'That didn’t send.'} ${altLink(r)}.</p>` : ''}
       <button class="bigbtn" type="submit" data-fk="report-send"${sending ? ' aria-disabled="true"' : ''}>${esc(sending ? 'Sending...' : f.button)}</button>
       ${missed ? '' : `<p class="fine rp-alt">${altLink(r)}</p>`}
-      <details class="rp-along" id="rp-along"><summary>We’ll send along</summary>
-        <ul>${alongLines(r).map((l) => `<li>${esc(l)}</li>`).join('')}</ul></details>
+      ${alongHTML(r)}
     </form>`;
 }
 function formHTML(r: Shelf): string {
@@ -301,13 +309,11 @@ function formHTML(r: Shelf): string {
   return `<form class="rp-form" data-form="report" novalidate${sending ? ' aria-busy="true"' : ''}>
       <p class="rp-intro">${esc(intro)}</p>
       ${fieldsOf(r).map((f) => fieldHTML(r, f)).join('')}
-      <div class="rp-along" id="rp-along"><p><b>We’ll send along</b></p>
-        <ul>${alongLines(r).map((l) => `<li>${esc(l)}</li>`).join('')}</ul>
-        <p>Add anything else in your note.</p></div>
-      <p class="fine rp-fine">Goes to Kevin’s Google Form. Nothing you type here is saved in the guide.</p>
+      <p class="fine rp-fine">${esc(FINE)}</p>
       ${missed ? `<p class="rp-fail" role="alert">${r.state === 'unsure' ? 'Couldn’t confirm it sent.' : 'That didn’t send.'} ${altLink(r)}.</p>` : ''}
       <button class="bigbtn" type="submit" data-fk="report-send"${sending ? ' aria-disabled="true"' : ''}>${sending ? 'Sending...' : 'Send'}</button>
       ${missed ? '' : `<p class="fine rp-alt">${altLink(r)}</p>`}
+      ${alongHTML(r)}
     </form>`;
 }
 
@@ -324,25 +330,42 @@ function citiesHTML(idx: Index): string {
       <button class="linkbtn" data-act="choose-state" data-from="browse" data-st="${esc(st)}">${s.places.length ? 'Elsewhere in the state: statewide races only' : 'Statewide races'}</button></li>`).join('')}</ul>`;
 }
 /* How this guide works. "Built for family and friends", not "Kevin built this...": the foot line names
-   him already (Kevin, Oct 21). "When each state was last checked" opens in place (actions.ts A.open
-   repaints the sheet). */
+   him already (Kevin, Oct 21). "When we last checked each state’s rules" opens in place (actions.ts A.open
+   repaints the sheet). Kevin, Oct 28: "the privacy paragraph ... is a beast ... give it sub-bullets so it's
+   easy to skim. Things like 'report a problem' should be linked. Things like sources should use superscript
+   numbers. those links at the bottom could be organized more cleanly". Every privacy fact #34 promised is
+   still here, one to a line (model tests pin them). Then: "we add a 2 and 3 to sources so it doesn't look so
+   sparse. we can move our last checked link and our list of sources (shelf) links in there": 2 opens each
+   state's checked date in place, 3 the sources sheet (once a ballot is found). */
+export const PRIVACY = [
+  'No accounts, no ads, no cookies.',
+  'We count visits with Vercel’s cookie-free analytics. It records the screens you open, when you send a form (never what’s in it), which state your ballot is for, and the site that sent you here. It also records your rough location, browser, operating system and device type.',
+  'Vercel’s analytics never gets your address, ZIP or picks, doesn’t keep your IP address, and can’t tell who you are.',
+  'Your picks stay on your device unless you share your save link.',
+  'An address you type goes only to the Census Bureau’s lookup, and we never keep it.',
+  'If the page breaks, it sends us a crash report with no address, no picks and no IP address.',
+];
 function howHTML(): string {
   const b = S.ballot;
   const idx = S.index;
   const asOf = idx ? Object.entries(idx.states).sort((x, y) => x[1].name.localeCompare(y[1].name)) : [];
+  const official = b ? [ext(b.howto.official_site.url, b.howto.official_site.name), b.howto.registration.check_url ? ext(b.howto.registration.check_url, 'Check your registration') : ''].filter(Boolean) : [];
   return `<div class="how-bd"><p>Built for family and friends. It never tells you how to vote. It shows what’s on your ballot in plain words, candidates in their own words, and who endorsed whom, with a source link for every claim.</p>
     <ul class="trust-list">
       <li><b>Neutral by default.</b> Newspapers and nonpartisan guides start on. Groups and parties stay off until you turn them on.</li>
       <li><b>Lean labels.</b> Each source sits on a five-step scale from left to right, set by outside ratings, its party or its stated mission, never by whom it endorses. Tap “Why this lean” to see the basis.</li>
       <li><b>Honest gaps.</b> “Took no stand” means a source looked and chose not to endorse. “No endorsement found” means we looked and found none. “Not checked yet” means we haven’t looked. We never fill gaps to look balanced.</li>
       <li><b>Judges.</b> A review comes from the official body or bar association that wrote it, worded as their rating, not ours.</li>
-      <li><b>Your privacy.</b> No accounts, no ads, no cookies. We count visits with Vercel’s cookie-free analytics: the screens you open, the forms you send, the state of your ballot, the site that sent you here, and your rough location, browser, operating system and device type. It never gets your address, ZIP or picks, doesn’t keep your IP, and can’t tell who you are. Your picks stay on your device unless you share your save link. An address you type goes only to the Census Bureau’s lookup, and we never keep it. If the page breaks, it sends us a crash report with no address, no picks and no IP.</li>
-      <li><b>Mistakes.</b> Open any race or measure and tap “Report a problem”.</li>
+      <li class="how-priv"><b>Your privacy.</b><ul class="how-sub">${PRIVACY.map((t) => `<li>${esc(t)}</li>`).join('')}</ul></li>
+      <li><b>Mistakes.</b> Open any race or measure and tap <button class="linkbtn" ${shelfAttrs({ kind: 'report', fk: 'how-report' })}>Report a problem</button>.</li>
     </ul>
-    <p class="small">“Voting is underway in every state”: ${ext('https://electioninnovation.org/research/dates-for-2026-early-in-person-and-mail-voting/', 'Center for Election Innovation & Research')}.</p>
-    ${b ? `<p class="small">Official info for ${esc(b.stateName)}: ${ext(b.howto.official_site.url, b.howto.official_site.name)}${b.howto.registration.check_url ? `. Check your registration: ${ext(b.howto.registration.check_url, 'official lookup')}` : ''}.</p>` : ''}
-    ${asOf.length ? `<button class="linkbtn" data-act="open" data-k="asof" data-fk="asof" aria-expanded="${isOpen('asof')}">When each state was last checked</button>${isOpen('asof') ? `<ul class="asof">${asOf.map(([, s]) => `<li>${esc(s.name)}: ${esc(s.as_of || 'unknown')}. ${ext(s.official_site.url, 'Official site')}</li>`).join('')}</ul>` : ''}` : ''}
-    <p class="fine">Data built ${esc(idx ? idx.generated.slice(0, 10) : '')}. Made by ${kevinLink()}. Not affiliated with any campaign, party or government office.</p></div>`;
+    <div class="how-end">
+      ${official.length ? `<div class="how-grp"><h3 class="how-h">Official voting info for ${esc(b!.stateName)}</h3><ul class="how-ul">${official.map((a) => `<li>${a}</li>`).join('')}</ul></div>` : ''}
+      <div class="how-grp"><h3 class="how-h">Sources</h3><ol class="how-src"><li id="src-1">“Voting is underway in every state”: ${ext(UNDERWAY_SRC.url, UNDERWAY_SRC.name)}</li>
+        ${asOf.length ? `<li id="src-2"><button class="linkbtn" data-act="open" data-k="asof" data-fk="asof" aria-expanded="${isOpen('asof')}">When we last checked each state’s rules</button>, with links to their official sites.${isOpen('asof') ? `<ul class="asof">${asOf.map(([, s]) => `<li>${esc(s.name)}: ${esc(s.as_of || 'unknown')}. ${ext(s.official_site.url, 'Official site')}</li>`).join('')}</ul>` : ''}</li>` : ''}
+        ${S.ballot ? '<li id="src-3"><button class="linkbtn" data-act="sheet" data-s="sources" aria-haspopup="dialog" data-fk="how-src">Every source on your ballot</button>. Choose whose picks you see.</li>' : ''}</ol></div>
+      <p class="fine">Data built ${esc(idx ? idx.generated.slice(0, 10) : '')}. Made by ${kevinLink()}. Not affiliated with any campaign, party or government office.</p>
+    </div></div>`;
 }
 /* Support (Kevin, Oct 21: "support ... uses that shelf with buy me a coffee embedded there"): a few
    words and one button in the guide's own style. Only a link: no Buy Me a Coffee script, nothing

@@ -21,6 +21,7 @@ import { lensSummary } from './lens';
 import { covOf, cardShows, cardAsks, headCovHTML } from './coverage';
 import { noEndorsements } from '../model/lens';
 import { addrHTML } from './mast';
+import { messages } from './pass';
 import { openHTML, censusSettles, addressSettles } from './open';
 import { mapCounty, seatless } from '../model/maps';
 
@@ -647,10 +648,16 @@ export const RAIL_AT = '(min-width: 1180px)';
 const wide = (): boolean => typeof window !== 'undefined' && typeof window.matchMedia === 'function' && window.matchMedia(RAIL_AT).matches;
 export function barHTML(): string {
   if (!S.ballot) return '';
+  // My plan (4) and Help friends vote (5): the left button goes back one step, always (Kevin, Oct 28: "the left
+  // button always goes back one step"); the green one goes on, and on the last step shares the guide, the
+  // step's own action (actions.ts A['share-guide']).
   if (S.ui.view !== 'ballot') {
+    const last = S.ui.view === 'pass';
+    const go = last ? (messages().fam ? '<button class="fcta" data-act="share-guide" data-fk="bar-share">Share the guide</button>' : '')
+      : '<button class="fcta" data-act="view" data-v="pass" data-fk="bar-pass">Help friends vote</button>';
     return `<div class="foot screen-only" role="region" aria-label="Navigation"><div class="foot-in two">
-      <button class="ftog" data-act="view" data-v="ballot" data-fk="bar-back">Back to the ballot</button>
-      ${S.ui.view === 'cheat' ? '<button class="fcta" data-act="view" data-v="pass" data-fk="bar-pass">Help friends vote</button>' : '<button class="fcta" data-act="view" data-v="cheat" data-fk="bar-cheat">My plan</button>'}</div></div>`;
+      <button class="ftog" data-act="view" data-v="${last ? 'cheat' : 'ballot'}" data-fk="bar-back">${last ? 'Back to my plan' : 'Back to the ballot'}</button>
+      ${go}</div></div>`;
   }
   // The one counting rule (ballot.ts): a district question is one race until it's answered.
   const items = decisionItems();

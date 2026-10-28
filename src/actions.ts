@@ -22,6 +22,8 @@ import { newCode, rememberAdd, forgetAdd, updateAdd } from './model/adds';
 import { cheatText, shareURL } from './views/cheat';
 import { messages, shareData, GUIDE_URL, SHARE_TITLE } from './views/pass';
 import { nextUp, sectionTally, sectionFolded, hiddenByOnly, qId } from './views/ledger';
+import { sourceListHTML, matchWords } from './views/lens';
+import { whatIfBody, wiMatchWords } from './views/planstrip';
 
 export type Act = (d: DOMStringMap, el: HTMLElement) => void | Promise<void>;
 export const A: Record<string, Act> = {};
@@ -521,7 +523,8 @@ A.chip = (d) => {
     const on = doorBallot() ? toggleChip(B(), k) : !S.door.chips[k];
     S.door.chips[k] = on;
     S.ui.lensEmptied = !on; // the chips stay on screen even when that was the last one
-    render(['mast']);
+    // Tapped in the sources sheet over step 2 (Oct 28): the sheet's switches and counts follow too.
+    render(S.ui.sheet ? ['mast', 'sheet'] : ['mast']);
     announce(on ? 'Turned on.' : 'Turned off.');
     return;
   }
@@ -602,11 +605,72 @@ A.ends = () => {
   announce(off ? 'Turned off.' : 'Turned on.');
 };
 A['src-none'] = () => { S.b.sources = []; S.b.party = null; S.ui.lensEmptied = false; doorFollows(); persist(); renderLens(); };
-/* All sources or a party. Opened from the Edit sheet, it goes back there when it closes. */
+/* The sources sheet's search (Oct 28): as you type, only the list repaints (views/lens.ts sourceListHTML), so
+   the box keeps its caret and the phone its keyboard. If the list was scrolled past the box, it goes back to
+   the box, so the first match is right under it. A screen reader hears the count once typing pauses. */
+let matchTimer: number | undefined;
+function paintSourceList(): void {
+  const list = document.getElementById('s-list');
+  const bd = list?.closest<HTMLElement>('.sheet-bd');
+  if (!list || !bd) return;
+  list.innerHTML = sourceListHTML();
+  const x = document.querySelector<HTMLElement>('#r-sheet [data-act="src-q-x"]');
+  if (x) x.hidden = !S.ui.srcQ;
+  const top = document.querySelector<HTMLElement>('#r-sheet .s-top');
+  // Where the box sits in the list's scroll before it sticks (offsets count from the panel, under its head).
+  const at = top ? top.offsetTop + top.offsetHeight - bd.offsetTop : 0;
+  if (bd.scrollTop > at) bd.scrollTop = at;
+  window.clearTimeout(matchTimer);
+  matchTimer = window.setTimeout(() => { if (S.ui.sheet === 'sources' && S.ui.srcQ.trim()) announce(matchWords()); }, 700);
+}
+export function srcSearch(el: HTMLInputElement): void {
+  if (S.ui.sheet !== 'sources' || !S.ballot) return;
+  S.ui.srcQ = el.value;
+  paintSourceList();
+}
+/* Clear (and Escape in the box): the whole list again, the box ready to type in. */
+export function clearSearch(): void {
+  S.ui.srcQ = '';
+  const q = document.querySelector<HTMLInputElement>('#src-q');
+  if (q) q.value = '';
+  paintSourceList();
+  q?.focus({ preventScroll: true });
+}
+A['src-q-x'] = () => { clearSearch(); };
+/* The same for the plan's dates, ID and what-ifs (views/planstrip.ts): only its results repaint as you type. */
+let wiTimer: number | undefined;
+function paintWhatIfs(): void {
+  const res = document.getElementById('wi-res');
+  if (!res || !S.ballot) return;
+  res.innerHTML = whatIfBody(S.ballot.howto);
+  const x = document.querySelector<HTMLElement>('#plan [data-act="wi-q-x"]');
+  if (x) x.hidden = !S.ui.wiQ;
+  window.clearTimeout(wiTimer);
+  wiTimer = window.setTimeout(() => { if (S.ballot && S.ui.wiQ.trim() && document.getElementById('wi-res')) announce(wiMatchWords()); }, 700);
+}
+export function wiSearch(el: HTMLInputElement): void {
+  S.ui.wiQ = el.value;
+  paintWhatIfs();
+}
+export function clearWi(): void {
+  S.ui.wiQ = '';
+  const q = document.querySelector<HTMLInputElement>('#wi-q');
+  if (q) q.value = '';
+  paintWhatIfs();
+  q?.focus({ preventScroll: true });
+}
+A['wi-q-x'] = () => { clearWi(); };
+/* All sources or a party. Opened from the Edit sheet, it goes back there when it closes. The sources sheet's
+   search starts empty each time it opens (coming back to it from Add a source keeps what was typed). */
 A.sheet = (d, el) => {
   S.ui.sheetBack = S.ui.sheet === 'picks' ? S.ui.sheetFrom || '' : null;
+  // From How this guide works' Sources (Oct 28): the sheet takes the shelf's place, and focus goes back to
+  // whatever opened How when it closes.
+  const fromShelf = S.ui.sheet === 'shelf' ? S.ui.report : null;
+  if (fromShelf) S.ui.report = null;
   S.ui.sheet = d.s as 'sources' | 'party';
-  S.ui.sheetFrom = el.dataset.fk || null;
+  if (d.s === 'sources') S.ui.srcQ = '';
+  S.ui.sheetFrom = fromShelf ? fromShelf.fk || null : el.dataset.fk || null;
   render(['sheet']);
   focusFk('sheet-x');
 };
@@ -666,7 +730,10 @@ A['sheet-close'] = () => {
    menu's place, as Quick picks does; over Full details, which waits behind it. */
 A.shelf = (d, el) => {
   const from = S.ui.sheet;
-  openShelf((d.kind || 'report') as ShelfKind, d, from === 'toc' ? 'bar-menu' : el.dataset.fk || '',
+  // Opened from inside the shelf (How this guide works' Report a problem, Oct 28): it takes that shelf's place,
+  // so focus goes back to whatever opened that one.
+  const fk = from === 'toc' ? 'bar-menu' : from === 'shelf' && S.ui.report ? S.ui.report.fk : el.dataset.fk || '';
+  openShelf((d.kind || 'report') as ShelfKind, d, fk,
     from && from !== 'toc' && from !== 'shelf' ? { sheet: from, from: S.ui.sheetFrom, back: S.ui.sheetBack } : null);
 };
 function openShelf(kind: ShelfKind, d: DOMStringMap, fk: string, back: Shelf['back']): void {
@@ -827,10 +894,11 @@ A['shelf-share'] = async () => {
   if (S.ballot && S.view === 'ballot') {
     S.ui.report = null;
     S.ui.sheet = null;
-    if (S.ui.view !== 'pass') { go('pass'); return; }
+    // Focus lands on the bar's Share the guide either way (Codex, Oct 28: the usual path left it behind).
+    if (S.ui.view !== 'pass') { go('pass'); focusFk('bar-share'); return; }
     render(['sheet']);
     glideTo($('#pass'), 0);
-    focusFk('share-guide');
+    focusFk('bar-share');
     return;
   }
   const nav = navigator as Navigator & { share?: (d: ShareData) => Promise<void> };
@@ -932,6 +1000,7 @@ A['reader-close'] = () => {
 A['whatif-sit'] = (d) => {
   const k = `wi-${d.k}`;
   S.ui.open.add('whatif'); S.ui.open.add(k);
+  S.ui.wiQ = ''; // the question in its place, not a search's results
   render(['plan']);
   // Opened at once, like the menu's jump to "How this guide works", so the glide knows how far the
   // page now goes; the glide and the mark are the motion.
@@ -941,7 +1010,9 @@ A['whatif-sit'] = (d) => {
 A.open = (d, el) => {
   const k = d.k!;
   S.ui.open.has(k) ? S.ui.open.delete(k) : S.ui.open.add(k);
-  // Inside the shelf ("When each state was last checked"): the sheet repaints, its height gliding.
+  // "Dates, ID, ..." closed: its search goes with it.
+  if (k === 'whatif' && !S.ui.open.has(k)) S.ui.wiQ = '';
+  // Inside the shelf ("When we last checked each state’s rules"): the sheet repaints, its height gliding.
   if (el.closest('#r-sheet > .sheet-panel.shelf')) { glide(['#r-sheet > .sheet-panel.shelf'], () => render(['sheet'])); if (el.dataset.fk) focusFk(el.dataset.fk); return; }
   if (k === 'off') { glide(['#r-off'], () => renderOff()); return; }
   const row = el.closest<HTMLElement>('.row[data-item]');

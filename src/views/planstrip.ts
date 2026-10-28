@@ -8,6 +8,7 @@ import { S } from '../state';
 import { esc, fmtDate, todayISO, host } from '../util';
 import { nextStep, registrationAlert, registerAction, isMailState, type Step } from '../model/plan';
 import { ext, isOpen, bulletsHTML, leadBulletsHTML, escP, srcLink, sentences, telHTML, wordCount, deshout } from './common';
+import { queryOf, textOf, best, type Item } from '../model/search';
 
 /* What the strip last showed, so main.ts can repaint it when the step changes while the page
    sits open (the polls close, midnight passes). */
@@ -98,57 +99,128 @@ const moreBtn = (k: string, label: string): string => `<button class="pd-more" d
 /* A short line with any phone number in it tappable. */
 const shortHTML = (s: string): string => telHTML(deshout(s));
 const actsHTML = (acts: HelpAction[] | undefined): string => (acts && acts.length ? `<div class="plan-acts wi-acts">${acts.map((a) => `<a class="pbtn line" href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.label)}</a>`).join('')}</div>` : '');
-function sitBody(x: Situation): string {
+function sitBody(x: Situation, showFull = false): string {
   const full = `<p>${escP(x.answer)}</p>${x.steps && x.steps.length ? `<ol>${x.steps.map((s) => `<li>${escP(s)}</li>`).join('')}</ol>` : ''}${x.source ? `<p class="meta">Source: ${srcLink(x.source)}${x.confidence === 'unverified' ? '. Not yet confirmed' : ''}</p>` : ''}`;
   if (!x.short) return full;
   const k = `wim-${x.id}`;
+  // Found by a search in its full text: the full text shows, with no More to tap.
+  if (showFull) return `<p class="wi-short">${shortHTML(x.short)}</p>${actsHTML(x.actions)}<div class="wi-full">${full}</div>`;
   // An answer we haven't confirmed says so beside its quick answer, not only behind "More".
   return `<p class="wi-short">${shortHTML(x.short)}</p>${actsHTML(x.actions)}<p class="meta wi-more">${x.confidence === 'unverified' ? 'Not yet confirmed. ' : ''}${moreBtn(k, x.question)}</p>${isOpen(k) ? `<div class="wi-full">${full}</div>` : ''}`;
 }
-/* "Gotchas": each one's fix in a line, the full text behind its "More". A gotcha with
-   no short line in the data shows as before. */
-function gotchasHTML(h: HowTo): string {
+/* "Gotchas": each one's fix in a line, the full text behind its "More". A gotcha with no short line in the
+   data shows as before. `only`: while searching, the gotchas found, and which of them show their full text. */
+function gotchaLi(h: HowTo, i: number, full = false): string {
+  const t = h.gotchas[i];
+  const sh = (h.gotcha_shorts || [])[i];
+  if (!sh) { const ss = sentences(t); return `<li><strong>${escP(ss[0] || t)}</strong>${ss.length > 1 ? ` <span class="bul-rest">${escP(ss.slice(1).join(' '))}</span>` : ''}</li>`; }
+  const k = `gm-${i}`;
+  return `<li class="g-short">${shortHTML(sh)}${full ? ` <span class="pd-x">${escP(t)}</span>` : ` ${moreBtn(k, sh)}${isOpen(k) ? `<span class="pd-x">${escP(t)}</span>` : ''}`}</li>`;
+}
+function gotchasHTML(h: HowTo, only?: { shown: number[]; full: Set<number> }): string {
   const shorts = h.gotcha_shorts || [];
-  if (!shorts.some(Boolean)) return leadBulletsHTML(h.gotchas, 'bul bul-lead gotchas');
-  return `<ul class="bul bul-lead gotchas">${h.gotchas.map((t, i) => {
-    const sh = shorts[i];
-    if (!sh) { const ss = sentences(t); return `<li><strong>${escP(ss[0] || t)}</strong>${ss.length > 1 ? ` <span class="bul-rest">${escP(ss.slice(1).join(' '))}</span>` : ''}</li>`; }
-    const k = `gm-${i}`;
-    return `<li class="g-short">${shortHTML(sh)} ${moreBtn(k, sh)}${isOpen(k) ? `<span class="pd-x">${escP(t)}</span>` : ''}</li>`;
-  }).join('')}</ul>`;
+  if (!only && !shorts.some(Boolean)) return leadBulletsHTML(h.gotchas, 'bul bul-lead gotchas');
+  const list = only ? only.shown : h.gotchas.map((_, i) => i);
+  return `<ul class="bul bul-lead gotchas">${list.map((i) => gotchaLi(h, i, !!only && only.full.has(i))).join('')}</ul>`;
 }
 
-function whatIfHTML(h: HowTo): string {
+/* The county's election office: its name (linked), phone and address. */
+function officeOf(): { name: string; url: string | null; phone: string | null; addr: string } | null {
+  const office = S.ballot!.places.map((p) => p.county_election_office).find(Boolean);
+  if (!office) return null;
+  const m = office.name.match(/^(.*?)[,:]\s*(\d[\s\S]*)$/);
+  const [n, a] = m ? [m[1], m[2]] : [sentences(office.name)[0], sentences(office.name).slice(1).join(' ')];
+  return { name: n, url: office.url || null, phone: office.phone || null, addr: a };
+}
+const officeName = (o: NonNullable<ReturnType<typeof officeOf>>): string => (o.url ? ext(o.url, o.name) : esc(o.name));
+
+/* Everything behind "Dates, ID, ...", as the search reads it: each piece's heading (its question, or what it's
+   about, and its quick answer) and its body (the full text behind "More", the dates, the ID list). */
+type Part = { sec: 'basic' | 'gotcha' | 'sit'; i: number; k: string; q: string; body: string; full: string; item: Item };
+const strip = (html: string): string => html.replace(/<[^>]+>/g, ' ').replace(/&[a-z#0-9]+;/gi, ' ');
+function partsOf(h: HowTo): Part[] {
   const b = S.ballot!;
   const t = todayISO();
-  const sits = (h.situations || []).filter((x) => x && x.question && x.answer);
-  const disc = (k: string, q: string, body: string) => `<li><button class="wi-q" data-act="open" data-k="${esc(k)}" data-fk="${esc(k)}" aria-expanded="${isOpen(k)}"><span>${esc(q)}</span><svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>${isOpen(k) ? `<div class="wi-a">${body}</div>` : ''}</li>`;
-  const sitList = sits.map((x) => disc(`wi-${x.id}`, x.question, sitBody(x))).join('');
-  // Each date keeps its fine print (the rule, the hours, the noon cutoff) one tap away.
-  const dates = dateRows(h).map((r) => {
+  const out: Part[] = [];
+  // `full`: what a piece shows when a search found it behind its "More" or "Details" (Codex, Oct 28: a word only
+  // in a date's fine print showed "Key dates" with that fine print folded away).
+  const add = (sec: Part['sec'], i: number, k: string, q: string, head: string, body: string, bodyText = strip(body), full = body) => out.push({ sec, i, k, q, body, full, item: { head: textOf(`${q} ${head}`), body: textOf(bodyText) } });
+  const rows = dateRows(h);
+  // Each date keeps its fine print (the rule, the hours, the noon cutoff) one tap away; `all` shows every one.
+  const dates = (all: boolean) => rows.map((r) => {
     const k = `kd-${r.key}`;
-    const open = !!r.detail && isOpen(k);
-    const more = r.detail ? ` <button class="pd-more" data-act="open" data-k="${k}" data-fk="${k}" aria-expanded="${open}" aria-label="${esc(open ? `Hide details: ${r.label}` : `Details: ${r.label}`)}">${open ? 'Hide details' : 'Details'}</button>` : '';
+    const open = !!r.detail && (all || isOpen(k));
+    const more = r.detail && !all ? ` <button class="pd-more" data-act="open" data-k="${k}" data-fk="${k}" aria-expanded="${open}" aria-label="${esc(open ? `Hide details: ${r.label}` : `Details: ${r.label}`)}">${open ? 'Hide details' : 'Details'}</button>` : '';
     return `<li class="${r.date < t ? 'past' : ''}"><span class="pd-d">${esc(fmtDate(r.date))}</span><span class="pd-l">${esc(r.label)}${r.date < t ? ' <span class="passed">passed</span>' : ''}${r.source ? ` ${ext(r.source, host(r.source))}` : ''}${more}${open ? `<span class="pd-x">${escP(r.detail)}</span>` : ''}</span></li>`;
   }).join('');
   const idr = h.id_rules;
   const booth = h.in_the_booth;
-  const office = b.places.map((p) => p.county_election_office).find(Boolean);
   const mail = h.mail_ballot;
-  const basics = [
-    disc('bx-dates', 'Key dates', `<ol class="pdates">${dates}</ol>`),
-    disc('bx-id', `What to bring: ${IDS[idr.required] || idr.required}`, `${idr.accepted.length ? `<ul>${idr.accepted.map((a) => `<li>${escP(a)}</li>`).join('')}</ul>` : ''}${idr.no_id_option ? `<p><b>No ID?</b> ${escP(idr.no_id_option)}</p>` : ''}`),
-    disc('bx-booth', `In the booth: notes ${RULE[booth.notes_allowed] || booth.notes_allowed}, phones ${RULE[booth.phones] || booth.phones}`, `${booth.notes_detail ? `<p><b>Notes and your plan.</b> ${escP(booth.notes_detail)}</p>` : ''}${booth.phones_detail ? `<p><b>Phones.</b> ${escP(booth.phones_detail)}</p>` : ''}${booth.apparel_rule ? `<p><b>What to wear.</b> ${escP(booth.apparel_rule)}</p>` : ''}`),
-    disc('bx-mail', isMailState(h) ? 'How voting by mail works' : 'Voting by mail instead', `${bulletsHTML(mail.who_gets_one)}${mail.return_options && mail.return_options.length ? `<ul>${mail.return_options.map((o) => `<li>${escP(o)}</li>`).join('')}</ul>` : ''}${mail.mail_cutoff_advice ? `<p>${escP(mail.mail_cutoff_advice)}</p>` : ''}<p>${[mail.tracking_url ? ext(mail.tracking_url, 'Track your ballot') : '', mail.drop_box_lookup_url ? ext(mail.drop_box_lookup_url, 'Find a drop box') : ''].filter(Boolean).join(' · ')}</p>`),
-    office ? disc('bx-office', 'Your election office', (() => { const m = office.name.match(/^(.*?)[,:]\s*(\d[\s\S]*)$/); const [n, a] = m ? [m[1], m[2]] : [sentences(office.name)[0], sentences(office.name).slice(1).join(' ')]; return `<p>${office.url ? ext(office.url, n) : esc(n)}${office.phone ? `<br>${telHTML(office.phone)}` : ''}${a ? `<br>${esc(a)}` : ''}</p>`; })()) : '',
-    h.model_plain ? disc('bx-how', `How voting works in ${b.stateName}`, bulletsHTML(h.model_plain)) : '',
-    ...b.places.filter((p) => p.notes).map((p) => disc(`bx-n-${p.id}`, `Notes for ${p.label}`, bulletsHTML(p.notes))),
-  ].join('');
-  // Dates and ID first, then the state's gotchas, then what to do if something goes wrong (Kevin, Oct 20).
+  const office = officeOf();
+  const basics: [string, string, string, string][] = [
+    ['bx-dates', 'Key dates', `<ol class="pdates">${dates(false)}</ol>`, `deadline ${rows.map((r) => r.label).join(' ')}`],
+    ['bx-id', `What to bring: ${IDS[idr.required] || idr.required}`, `${idr.accepted.length ? `<ul>${idr.accepted.map((a) => `<li>${escP(a)}</li>`).join('')}</ul>` : ''}${idr.no_id_option ? `<p><b>No ID?</b> ${escP(idr.no_id_option)}</p>` : ''}`, ''],
+    ['bx-booth', `In the booth: notes ${RULE[booth.notes_allowed] || booth.notes_allowed}, phones ${RULE[booth.phones] || booth.phones}`, `${booth.notes_detail ? `<p><b>Notes and your plan.</b> ${escP(booth.notes_detail)}</p>` : ''}${booth.phones_detail ? `<p><b>Phones.</b> ${escP(booth.phones_detail)}</p>` : ''}${booth.apparel_rule ? `<p><b>What to wear.</b> ${escP(booth.apparel_rule)}</p>` : ''}`, booth.apparel_rule ? 'what to wear' : ''],
+    ['bx-mail', isMailState(h) ? 'How voting by mail works' : 'Voting by mail instead', `${bulletsHTML(mail.who_gets_one)}${mail.return_options && mail.return_options.length ? `<ul>${mail.return_options.map((o) => `<li>${escP(o)}</li>`).join('')}</ul>` : ''}${mail.mail_cutoff_advice ? `<p>${escP(mail.mail_cutoff_advice)}</p>` : ''}<p>${[mail.tracking_url ? ext(mail.tracking_url, 'Track your ballot') : '', mail.drop_box_lookup_url ? ext(mail.drop_box_lookup_url, 'Find a drop box') : ''].filter(Boolean).join(' · ')}</p>`, ''],
+  ];
+  if (office) basics.push(['bx-office', 'Your election office', `<p>${officeName(office)}${office.phone ? `<br>${telHTML(office.phone)}` : ''}${office.addr ? `<br>${esc(office.addr)}` : ''}</p>`, 'contact call help']);
+  if (h.model_plain) basics.push(['bx-how', `How voting works in ${b.stateName}`, bulletsHTML(h.model_plain), '']);
+  b.places.filter((p) => p.notes).forEach((p) => basics.push([`bx-n-${p.id}`, `Notes for ${p.label}`, bulletsHTML(p.notes), '']));
+  basics.forEach(([k, q, body, extra], i) => (k === 'bx-dates'
+    ? add('basic', i, k, q, extra, body, rows.map((r) => r.detail || '').join(' '), `<ol class="pdates">${dates(true)}</ol>`)
+    : add('basic', i, k, q, extra, body)));
+  h.gotchas.forEach((g, i) => { const sh = (h.gotcha_shorts || [])[i]; add('gotcha', i, `gm-${i}`, sh || g, '', sh ? g : ''); });
+  sitsOf(h).forEach((x, i) => add('sit', i, `wi-${x.id}`, x.question, x.short || '', `${x.answer} ${(x.steps || []).join(' ')}`));
+  return out;
+}
+const sitsOf = (h: HowTo): Situation[] => (h.situations || []).filter((x) => x && x.question && x.answer);
+
+/* The three groups: dates and ID, then the state's gotchas, then what to do if something goes wrong (Kevin,
+   Oct 20). While a search is on (Kevin, Oct 28: "can we add it to the gotchas section too?"), only what it
+   found, each answer showing (the full text too when that's where the words were), and no match says so and
+   names the election office, which answers what the guide doesn't. Repainted alone as you type (actions.ts). */
+const discHTML = (k: string, q: string, body: string) => `<li><button class="wi-q" data-act="open" data-k="${esc(k)}" data-fk="${esc(k)}" aria-expanded="${isOpen(k)}"><span>${esc(q)}</span><svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>${isOpen(k) ? `<div class="wi-a">${body}</div>` : ''}</li>`;
+const foundHTML = (q: string, body: string) => `<li class="wi-found"><p class="wi-rq">${esc(q)}</p><div class="wi-a">${body}</div></li>`;
+function partsFound(h: HowTo): { parts: Part[]; shown: Part[] | null; full: Set<string> } {
+  const parts = partsOf(h);
+  const q = queryOf(S.ui.wiQ);
+  if (!q) return { parts, shown: null, full: new Set() };
+  const r = best(q, parts.map((p) => p.item));
+  return { parts, shown: r.shown.map((i) => parts[i]), full: new Set([...r.inBody].map((i) => parts[i].k)) };
+}
+export function whatIfBody(h: HowTo): string {
+  const b = S.ballot!;
+  const { parts, shown, full } = partsFound(h);
+  const sits = sitsOf(h);
+  const pick = (sec: Part['sec']) => (shown || parts).filter((p) => p.sec === sec);
+  const basics = pick('basic').map((p) => (shown ? foundHTML(p.q, full.has(p.k) ? p.full : p.body) : discHTML(p.k, p.q, p.body))).join('');
+  const gotchas = pick('gotcha');
+  const sitParts = pick('sit');
+  const sitList = sitParts.map((p) => { const x = sits[p.i]; return shown ? foundHTML(x.question, sitBody(x, full.has(p.k))) : discHTML(p.k, x.question, sitBody(x)); }).join('');
+  if (shown && !shown.length) {
+    const o = officeOf();
+    const who = o ? `Contact your election office: ${officeName(o)}${o.phone ? ` · ${telHTML(o.phone)}` : ''}.` : `Contact ${ext(h.official_site.url, h.official_site.name)}.`;
+    return `<p class="wi-none">No answers match “${esc(S.ui.wiQ.trim())}”. ${who}</p>`;
+  }
+  return `${basics ? `<h3 class="wi-h">Dates, ID and voting rules</h3><ul class="wi-list">${basics}</ul>` : ''}
+    ${gotchas.length ? `<h3 class="wi-h">Gotchas in ${esc(b.stateName)}</h3>${gotchasHTML(h, shown ? { shown: gotchas.map((p) => p.i), full: new Set(gotchas.filter((p) => full.has(p.k)).map((p) => p.i)) } : undefined)}` : ''}
+    ${sitList ? `<h3 class="wi-h">If something goes wrong</h3><p class="wi-sub">Answers come from ${ext(h.official_site.url, h.official_site.name)}.</p><ul class="wi-list">${sitList}</ul>` : ''}`;
+}
+/* How many answers the search found, for a screen reader once typing pauses. */
+export function wiMatchWords(): string {
+  const { shown } = partsFound(S.ballot!.howto);
+  const n = shown ? shown.length : 0;
+  return n ? `${n} ${n === 1 ? 'answer matches' : 'answers match'}.` : 'No answers match.';
+}
+function whatIfHTML(h: HowTo): string {
+  const q = S.ui.wiQ;
   return `<div class="whatifs" role="region" aria-label="Dates, ID, gotchas and what to do">
-    <h3 class="wi-h">Dates, ID and voting rules</h3><ul class="wi-list">${basics}</ul>
-    ${h.gotchas.length ? `<h3 class="wi-h">Gotchas in ${esc(b.stateName)}</h3>${gotchasHTML(h)}` : ''}
-    ${sits.length ? `<h3 class="wi-h">If something goes wrong</h3><p class="wi-sub">Answers come from ${ext(h.official_site.url, h.official_site.name)}.</p><ul class="wi-list">${sitList}</ul>` : ''}
+    <form class="wi-find" data-form="wi-q" role="search">
+      <label class="vh" for="wi-q">Search voting dates, ID rules and help</label>
+      <input id="wi-q" type="search" placeholder="Search: lost ballot, ID, moved…" value="${esc(q)}" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="search" data-wi-q data-fk="wi-q">
+      <button type="button" class="linkbtn s-q-x" data-act="wi-q-x" data-fk="wi-q-x" aria-label="Clear search"${q ? '' : ' hidden'}>Clear</button>
+    </form>
+    <div class="wi-res" id="wi-res">${whatIfBody(h)}</div>
     <p class="meta">Checked ${esc(h.last_verified || '')}. Official info: ${ext(h.official_site.url, h.official_site.name)}.</p>
   </div>`;
 }

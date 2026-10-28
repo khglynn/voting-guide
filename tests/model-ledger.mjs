@@ -966,7 +966,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const view0 = S.view; const idx0 = S.index;
     S.view = 'start'; S.index = INDEX;
     const door = views.setup.pickControlsHTML();
-    check('first page before a ZIP: the chips from memory, no counts, the fill switch says what it does', /data-k="papers" aria-pressed="true"/.test(door) && /data-k="progressive" aria-pressed="false"/.test(door) && !/su-cov/.test(door)
+    check('first page before a ZIP: the chips from memory, no counts, the fill switch says what it does', /data-k="papers" aria-pressed="true"/.test(door) && /data-k="progressive" aria-pressed="false"/.test(door) && !/su-src|data-s="sources"/.test(door)
       && door.includes('Fill in my ballot with their picks') && door.includes('Fills the races where they agree. Races where picks split stay open.') && door.includes('Hide races I’ve decided'));
     S.door.chips = { papers: false, progressive: false, conservative: false };
     const doorNone = views.setup.pickControlsHTML();
@@ -1109,7 +1109,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     tally.clearLineups();
     check('no endorsements: an empty source list is it, and the line says so', lens.noEndorsements() && views.lens.lensSummary() === 'Off');
     const sh = views.setup.pickControlsHTML(true);
-    check('no endorsements: "Show endorsements" is off, the chips, the fill switch and the counts step aside, the filter stays', /role="switch" aria-checked="false" data-act="ends"[^>]*>.*Show endorsements.*<\/button>/.test(sh) && !/data-act="chip"|data-act="party|all-src/.test(sh) && !/setup-fill/.test(sh) && !/su-cov/.test(sh) && /setup-only/.test(sh));
+    check('no endorsements: "Show endorsements" is off, the chips, the fill switch and the counts step aside, the filter stays', /role="switch" aria-checked="false" data-act="ends"[^>]*>.*Show endorsements.*<\/button>/.test(sh) && !/data-act="chip"|data-act="party|all-src/.test(sh) && !/setup-fill/.test(sh) && !/su-src/.test(sh) && /setup-only/.test(sh));
     const m81 = views.open.openHTML(dn.byId.get('co-amendment-81'));
     check('no endorsements: a measure is tight, yes and no with no source lines', /A yes vote means/.test(m81) && /data-act="pick"[^>]*data-v="YES"/.test(m81) && !/none-line|gridnote|papers-on|others-wrap|class="grid/.test(m81), strip(m81).slice(0, 120));
     const race = dn.items.find((x) => x.kind === 'contest' && !x.is_retention && x.candidates.length > 1 && x.candidates.length <= 6 && !x.ranked_choice && bl.status(x) === 'open');
@@ -1658,7 +1658,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const filled = (b, lines) => ['entry.90887649', 'entry.628621310', 'entry.1986493507'].every((k) => !b[k] || lines.some((l) => l.endsWith(`: ${b[k]}`)));
     check('shelf: a report posts all five of the form’s ids, the empty ones too', ids.every((k) => k in body) && body['entry.2040687555'] === '' && body.fvv === '1' && body.pageHistory === '0' && Object.keys(body).length === 7, JSON.stringify(body));
     check('shelf: a row’s report names the race with its id, and the place and ZIP', body['entry.90887649'] === 'Governor [tx-governor]' && body['entry.628621310'] === 'Austin, 78704', JSON.stringify(body));
-    check('shelf: "What’s wrong?" is your note, a blank line, then "Sent along:" and the list, word for word', body['entry.780704302'] === 'A wrong date.\n\nSent along:\nPage: Your ballot\nPlace: Austin, 78704\nAbout: Governor [tx-governor]\nPage address: https://vote.kevinhg.com/ (build abc1234)\nData built: 2026-10-21 19:04 UTC\nBrowser: Safari 18 on iPhone, 390px wide', body['entry.780704302']);
+    check('shelf: "What’s wrong?" is your note, a blank line, then "Sent along:" and the list, word for word', body['entry.780704302'] === 'A wrong date.\n\nSent along:\nPage: Your ballot\nPlace: Austin, 78704\nAbout: Governor [tx-governor]\nPage link: https://vote.kevinhg.com/ (build abc1234)\nData built: 2026-10-21 19:04 UTC\nBrowser: Safari 18 on iPhone, 390px wide', body['entry.780704302']);
     check('shelf: the link question gets the page’s address and the build', body['entry.1986493507'] === 'https://vote.kevinhg.com/ (build abc1234)', body['entry.1986493507']);
     const foot = shelf.reportBody({ ...base, kind: 'report', f: { wrong: 'Hours look off.', reach: 'kev@example.org' }, along: { ...along, page: 'My plan' } });
     check('shelf: from the foot or the menu, the race question gets the page, and no "About" line', foot['entry.90887649'] === 'My plan' && !/About:/.test(foot['entry.780704302']) && foot['entry.2040687555'] === 'kev@example.org'
@@ -1669,7 +1669,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('shelf: the race with its record id, the place and the page’s address are each on the list as posted', filled(body, shelf.alongLines(rep)), shelf.alongLines(rep).join(' | '));
     const city = shelf.reportBody({ ...base, kind: 'city', f: { city: ' Round Rock ', zip: '78664', reach: 'kev@example.org' } });
     check('shelf: a city request goes in as the city form always has, then a shorter "Sent along:" (no browser)', ids.every((k) => k in city) && city['entry.90887649'] === 'Please add my city' && city['entry.628621310'] === '78664'
-      && city['entry.780704302'] === 'Please add Round Rock\n\nSent along:\nPage: Your ballot\nPlace: Austin, 78704\nPage address: https://vote.kevinhg.com/ (build abc1234)\nData built: 2026-10-21 19:04 UTC' && city['entry.2040687555'] === 'kev@example.org'
+      && city['entry.780704302'] === 'Please add Round Rock\n\nSent along:\nPage: Your ballot\nPlace: Austin, 78704\nPage link: https://vote.kevinhg.com/ (build abc1234)\nData built: 2026-10-21 19:04 UTC' && city['entry.2040687555'] === 'kev@example.org'
       && city['entry.1986493507'] === 'https://vote.kevinhg.com/ (build abc1234)', JSON.stringify(city));
     const alt = new URL(shelf.reportFallbackURL({ ...base, kind: 'city', f: { city: 'Round Rock', zip: '78664', reach: '' } }));
     check('shelf: "Open the form in a new tab instead" is the form prefilled with the same answers', /\/viewform$/.test(alt.pathname) && alt.searchParams.get('usp') === 'pp_url' && /^Please add Round Rock\n\nSent along:/.test(alt.searchParams.get('entry.780704302')) && alt.searchParams.get('entry.628621310') === '78664' && !alt.searchParams.has('entry.2040687555'), alt.search);
@@ -1981,13 +1981,24 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       const p = INDEX.places['chicago-il'];
       S.view = 'setup';
       check('coverage: a covered place gets no card', views.coverage.covCardHTML('door') === '' && views.coverage.covCardHTML('ballot') === '');
-      check('coverage: step 2 says how many sources on the place’s ballot, how many picked, and when', txt(views.coverage.covHTML()) === `${p.sources} sources on Chicago’s ballot, ${p.with_picks} with picks. Last checked ${day(p.checked)}. Add a source` && /class="su-src"/.test(views.setup.pickControlsHTML()), txt(views.coverage.covHTML()));
-      check('coverage: step 2’s first line says whose picks', /<p class="su-cov">Your sources have picks in \d+ of your \d+ races\.<\/p>/.test(views.setup.pickControlsHTML()));
-      check('coverage: the Edit sheet says the same', /class="su-src"/.test(views.setup.pickControlsHTML(true)) && /Your sources have picks in/.test(views.setup.pickControlsHTML(true)));
+      // Kevin, Oct 28: step 2's two count lines were "repetative"; one line now, and the counts in the sources sheet.
+      const lineOf = (h) => txt((h.match(/<p class="su-src">[\s\S]*?<\/p>/) || [''])[0]);
+      const one = 'Pick a group above, or choose individual sources.';
+      const door2 = views.setup.pickControlsHTML();
+      check('coverage: step 2 says one line, its link opening every source, and no counts, date or Add a source', lineOf(door2) === one && /<button class="linkbtn" data-act="sheet" data-s="sources" aria-haspopup="dialog" data-fk="cov-src">choose individual sources<\/button>/.test(door2)
+        && !/sources on|with picks|Last checked|Your sources have picks|data-kind="source"|su-cov/.test(door2), lineOf(door2));
+      check('coverage: the Edit sheet says the same one line, with no "See all sources" chip beside it', lineOf(views.setup.pickControlsHTML(true)) === one && !/See all sources|chip-more|Last checked/.test(views.setup.pickControlsHTML(true)));
+      const srcSh = views.lens.sourcesSheetHTML();
+      check('coverage: the sources sheet says how many sources on the place’s ballot, how many picked, and when, at its top', txt(views.coverage.sheetCovHTML()) === `${p.sources} sources on Chicago’s ballot, ${p.with_picks} with picks. Last checked ${day(p.checked)}.` && srcSh.indexOf('class="s-cov"') > 0 && srcSh.indexOf('class="s-cov"') < srcSh.indexOf('data-act="chip"') && !/class="mini|data-act="sheet"/.test(views.coverage.sheetCovHTML()), txt(views.coverage.sheetCovHTML()));
+      check('coverage: and whose picks, under its group chips', /<p class="s-mine">Your sources have picks in \d+ of your \d+ races\.<\/p>/.test(srcSh) && srcSh.indexOf('class="s-mine"') > srcSh.indexOf('data-act="chip"'));
       S.view = 'ballot';
       check('coverage: the ballot’s head says it for the ballot, under the picks line, no button', txt(views.coverage.headCovHTML()) === `${p.sources} sources on your ballot, ${p.with_picks} with picks. Last checked ${day(p.checked)}.` && /picks-line[\s\S]*class="picks-cov"/.test(views.ledger.ballotHeadHTML()) && !/class="mini/.test(views.coverage.headCovHTML()));
       S.b.sources = [];
-      check('coverage: with endorsements off, the counts step aside', !/su-src|picks-cov/.test(views.setup.pickControlsHTML(true) + views.ledger.ballotHeadHTML()));
+      check('coverage: with endorsements off, the line and the counts step aside', !/su-src|picks-cov/.test(views.setup.pickControlsHTML(true) + views.ledger.ballotHeadHTML()));
+      check('coverage: with every source off, the sheet says so and how to choose again', /<p class="s-mine">All sources are off\. Pick a group or turn one on\.<\/p>/.test(views.lens.sourcesSheetHTML()));
+      S.ui.lensEmptied = true;
+      check('coverage: the last one off by hand, the chips and the line stay, so you can choose again', lineOf(views.setup.pickControlsHTML(true)) === one && /data-act="chip"/.test(views.setup.pickControlsHTML(true)));
+      S.ui.lensEmptied = false;
       S.b.sources = null;
 
       // A thin place: the card says what's missing and what's here, and owns the one dark button.
@@ -1997,7 +2008,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       const tc = views.coverage.covCardHTML('door');
       check('coverage: a thin place’s card leads with what’s missing, then what’s here and what isn’t, with the gap counted', txt(tc) === 'Pensacola’s local picks aren’t in yet. Here now: every race on your ballot, with picks from newspapers and groups across Florida. Not here yet: picks from Pensacola’s own paper and groups. 3 of your 10 local races have no picks from anyone. Ask Kevin to look for local picks One tap. It sends Kevin the place and nothing about you. He’ll look within about a day.', txt(tc));
       check('coverage: its button is the dark one, and it is a gold card', darkOf(tc).join() === 'Ask Kevin to look for local picks' && /class="notice strong cov-card"/.test(tc) && /data-act="cov-ask"/.test(tc));
-      check('coverage: step 2 says it quietly, with no button', txt(views.coverage.covHTML()) === '21 sources, 13 with picks, none from Pensacola’s own paper and groups. Last checked Oct 19.' && !/class="mini/.test(views.coverage.covHTML()));
+      check('coverage: the sources sheet says it quietly, with no button, and step 2 has its one line', txt(views.coverage.sheetCovHTML()) === '21 sources, 13 with picks, none from Pensacola’s own paper and groups. Last checked Oct 19.' && !/class="mini/.test(views.coverage.sheetCovHTML()) && lineOf(views.setup.pickControlsHTML()) === one, txt(views.coverage.sheetCovHTML()));
       S.view = 'ballot';
       const th = views.ledger.ballotHeadHTML();
       check('coverage: the head’s line is quiet, and while the card asks the address box has no dark button', txt(views.coverage.headCovHTML()) === '21 sources, 13 with picks, none from Pensacola’s own paper and groups. Last checked Oct 19.' && darkOf(th).length === 0 && /Use my address/.test(th), darkOf(th).join());
@@ -2015,7 +2026,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       mc.rememberAsk('p:pensacola-fl', '2026-10-25');
       const ta = views.coverage.covCardHTML('ballot');
       check('coverage: asked, a thin place’s card says so plainly, may find none, and offers Tell me what he finds', txt(ta) === 'Request sent. Kevin is looking for Pensacola’s local picks. You asked today. It usually takes about a day. He may not find any, since some groups don’t endorse. Your ballot works now. Any local picks he finds will show up here. Tell me what he finds' && /role="status"/.test(ta) && /class="cov-tick"/.test(ta) && darkOf(ta).length === 0 && /class="notice strong cov-card wrap"/.test(ta), txt(ta));
-      check('coverage: asked, the quiet lines add the day', txt(views.coverage.headCovHTML()).endsWith('You asked for local picks today.') && darkOf(views.ledger.ballotHeadHTML()).join() === 'Use my address');
+      check('coverage: asked, the quiet lines add the day', txt(views.coverage.headCovHTML()).endsWith('You asked for local picks today.') && txt(views.coverage.sheetCovHTML()).endsWith('You asked for local picks today.') && darkOf(views.ledger.ballotHeadHTML()).join() === 'Use my address');
       setToday('2026-10-26');
       check('coverage: the next day it reads the date', /You asked Oct 25\. It usually takes about a day\./.test(txt(views.coverage.covCardHTML('ballot'))) && txt(views.coverage.headCovHTML()).endsWith('You asked for local picks Oct 25.'));
       setToday('2026-10-25');
@@ -2028,7 +2039,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       const sc = views.coverage.covCardHTML('door');
       check('coverage: a statewide ballot’s card leads with the missing races, says the statewide picks are here, and asks Kevin', txt(sc).startsWith(`Your city’s races aren’t in the guide yet. Here now: Missouri’s statewide races, with picks from ${INDEX.states.MO.with_picks} of ${INDEX.states.MO.sources} sources. Not here yet: races for your city, county and districts. Ask Kevin to add my city One tap. It sends Kevin your ZIP and nothing about you. It usually takes about a day. Voting before then? Your official sample ballot lists every race.`) && darkOf(sc).join() === 'Ask Kevin to add my city', txt(sc));
       check('coverage: its sample ballot is a link in a sentence, never a button', /Voting before then\? Your <a href="https:[^"]+"[^>]*>official sample ballot<\/a> lists every race\./.test(sc) && !/class="mini[^"]*"[^>]*>Official sample ballot/.test(sc) && /statewide-note/.test(sc));
-      check('coverage: step 2 says it quietly', txt(views.coverage.covHTML()) === `${INDEX.states.MO.sources} sources for Missouri’s statewide races, ${INDEX.states.MO.with_picks} with picks. Last checked ${day(INDEX.states.MO.checked)}.` && /Your sources have picks in \d+ of the \d+ statewide races here\./.test(views.setup.pickControlsHTML()));
+      check('coverage: the sources sheet says it quietly, scoped to the statewide races, and step 2 has its one line', txt(views.coverage.sheetCovHTML()) === `${INDEX.states.MO.sources} sources for Missouri’s statewide races, ${INDEX.states.MO.with_picks} with picks. Last checked ${day(INDEX.states.MO.checked)}.` && /Your sources have picks in \d+ of the \d+ statewide races here\./.test(views.lens.sourcesSheetHTML()) && lineOf(views.setup.pickControlsHTML()) === one, txt(views.coverage.sheetCovHTML()));
       S.view = 'ballot';
       const sh = views.ledger.ballotHeadHTML();
       check('coverage: the head says "Statewide races only", the address box keeps its own job, and no sample ballot is dark', txt(views.coverage.headCovHTML()).startsWith('Statewide races only: ') && !/cov-ask|Ask Kevin|We only have/.test(sh) && darkOf(sh).length === 0 && (sh.match(/>Official sample ballot</g) || []).length <= 1, txt(sh));
@@ -2041,7 +2052,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       mc.rememberAsk('z:63110', '2026-10-25');
       const sa = views.coverage.covCardHTML('ballot');
       check('coverage: asked, the statewide card says Request sent, check back tomorrow, and offers Tell me when it’s in', txt(sa) === 'Request sent. Kevin is adding your city. You asked today. It usually takes about a day, so check back tomorrow. Until then, you can pick your statewide races below. Voting before then? Your official sample ballot lists every race. Tell me when it’s in' && darkOf(sa).length === 0, txt(sa));
-      check('coverage: and the quiet lines add the day', txt(views.coverage.headCovHTML()).endsWith('You asked for your city’s races today.'));
+      check('coverage: and the quiet lines add the day', txt(views.coverage.headCovHTML()).endsWith('You asked for your city’s races today.') && txt(views.coverage.sheetCovHTML()).endsWith('You asked for your city’s races today.'));
       setToday('2026-11-02');
       mc.rememberAsk('z:63110', '2026-11-01');
       check('coverage: asked two days out, it says it may not be in before you vote', /You asked Nov 1\. It may not be in before you vote\./.test(txt(views.coverage.covCardHTML('ballot'))), txt(views.coverage.covCardHTML('ballot')));
@@ -2079,7 +2090,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const body = views.shelf.askBody(c1.ask, along);
     const F = common.FORM;
     check('coverage: one tap posts the five ids, the place and ZIP, and nothing typed', [F.what, F.where, F.wrong, F.link, F.reach].every((k) => k in body) && body[F.what] === 'Gather endorsements: Pensacola' && body[F.where] === 'Pensacola, 32501' && body[F.reach] === '' && body[F.link] === 'https://vote.kevinhg.com/ (build abc1234)', JSON.stringify(body));
-    check('coverage: "What’s wrong?" is its own sentence and a city request’s "Sent along" (no browser, no errors)', body[F.wrong] === 'Please gather local endorsements for Pensacola (one-tap from the page)\n\nSent along:\nPage: First page\nPlace: Pensacola, 32501\nPage address: https://vote.kevinhg.com/ (build abc1234)\nData built: 2026-10-25 12:00 UTC', body[F.wrong]);
+    check('coverage: "What’s wrong?" is its own sentence and a city request’s "Sent along" (no browser, no errors)', body[F.wrong] === 'Please gather local endorsements for Pensacola (one-tap from the page)\n\nSent along:\nPage: First page\nPlace: Pensacola, 32501\nPage link: https://vote.kevinhg.com/ (build abc1234)\nData built: 2026-10-25 12:00 UTC', body[F.wrong]);
   }
 
   /* ---------- every source in reach (Oct 25): the count opens the sheet, "Couldn't read", "Add a source" ---------- */
@@ -2089,15 +2100,39 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     S.index = INDEX;
     const ch = open('IL', ['chicago-il']);
     S.view = 'setup';
-    // The count is a button that opens the sheet right there, and "Add a source" sits beside it.
-    const door = views.coverage.covHTML();
-    check('sources: on the first page the count opens "Every source on your ballot", with Add a source beside it', /<button class="linkbtn cov-n" data-act="sheet" data-s="sources"[^>]*data-fk="cov-src">\d+ sources<\/button>/.test(door) && /data-act="shelf" data-kind="source"[^>]*>Add a source</.test(door), door);
-    check('sources: the Edit sheet has the same count and the same Add a source', /data-act="sheet" data-s="sources"[^>]*data-fk="cov-src"/.test(views.setup.pickControlsHTML(true)) && /data-kind="source"[^>]*>Add a source</.test(views.setup.pickControlsHTML(true)));
+    // Step 2's one line opens the sheet right there (Oct 28; Add a source lives in the sheet).
+    const door = views.setup.pickControlsHTML();
+    check('sources: on the first page "choose individual sources" opens "Every source on your ballot"', /<button class="linkbtn" data-act="sheet" data-s="sources"[^>]*data-fk="cov-src">choose individual sources<\/button>/.test(door), door);
+    check('sources: the Edit sheet has the same link', /data-act="sheet" data-s="sources"[^>]*data-fk="cov-src">choose individual sources</.test(views.setup.pickControlsHTML(true)));
     S.view = 'ballot';
     check('sources: the ballot’s head count opens it too', /data-act="sheet" data-s="sources"[^>]*data-fk="hd-src"/.test(views.coverage.headCovHTML()));
     // The sheet: the legend, the lean groups with switches, "Couldn't read" with none.
     const sh = views.lens.sourcesSheetHTML();
-    check('sources: the sheet opens with what’s on to start', /On by default: newspapers and nonpartisan guides\. Tap a switch to add or drop one\./.test(strip(sh)) && /data-act="src-default"/.test(sh) && /data-act="src-none"/.test(sh));
+    check('sources: the sheet says what’s on to start, over the list', /On by default: newspapers and nonpartisan guides\. Tap a switch to turn one on or off\./.test(strip(sh)) && sh.indexOf('class="s-legend"') > sh.indexOf('id="s-list"') && /data-act="src-default"/.test(sh) && /data-act="src-none"/.test(sh));
+    // Its top, in Kevin's order (Oct 28): the counts, the group chips (their own focus names), what they cover,
+    // Reset and Turn all off, then the search; then the list.
+    const at = (k) => sh.indexOf(k);
+    check('sources: the top goes counts, group chips, what they cover, Reset and Turn all off, the search, then the list', [at('class="s-cov"'), at('data-fk="s-chip-papers"'), at('class="s-mine"'), at('data-act="src-default"'), at('data-act="src-none"'), at('id="src-q"'), at('id="s-list"')].every((x, i, a) => x > 0 && (!i || x > a[i - 1])) && !/data-fk="chip-papers"/.test(sh));
+    check('sources: the search is a labeled search box, empty to start, its Clear hidden', /<form class="s-find" data-form="src-q" role="search">/.test(sh) && /<label class="vh" for="src-q">Find a source by name<\/label>/.test(sh) && /<input id="src-q" type="search" placeholder="Find a source by name" value=""/.test(sh) && /data-act="src-q-x"[^>]*hidden>Clear</.test(sh));
+    // The search rule (model/search.ts, the page's one matcher): every word in the name, any order, no case,
+    // accents or punctuation, run-together words, a typo away.
+    const srch = mods.search;
+    const nm = (name, q) => srch.all(srch.queryOf(q), srch.textOf(name));
+    check('sources: search finds words in any order, ignoring case, accents and punctuation', nm('The Austin Chronicle editorial board', 'chronicle AUSTIN') && nm('Texas AFL-CIO', 'aflcio') && nm('Texas AFL-CIO', 'afl-cio') && nm('La Opinión', 'opinion') && nm('Planned Parenthood Texas Votes', '  ') && !nm('The Austin Chronicle editorial board', 'chronicle houston'));
+    check('sources: as you type, and a typo away', nm('The Austin Chronicle editorial board', 'chron') && nm('The Austin Chronicle editorial board', 'chronical') && nm('Houston Chronicle editorial board', 'housotn') && !nm('Houston Chronicle editorial board', 'zzzz'));
+    check('sources: only spaces or punctuation is no search', srch.queryOf(' - ’ ') === null && nm('Chicago Sun-Times', 'Sun-Times') && nm('Chicago Sun-Times', 'suntimes'));
+    S.ui.srcQ = 'tribune';
+    const tq = views.lens.sourcesSheetHTML();
+    const rows = [...tq.matchAll(/data-act="src" data-id="([^"]+)"/g)].map((m) => m[1]);
+    const want = ch.endorsers.filter((e) => /tribune/i.test(e.name) && !lens.unreadHere(ch, e)).map((e) => e.id).sort();
+    check('sources: a search keeps only the sources it names, each group counting its matches, the how-it-works lines aside', rows.length > 0 && rows.slice().sort().join() === want.join() && /class="s-ct">\d+ of \d+ match</.test(tq) && !/class="s-legend"/.test(tq) && /value="tribune"/.test(tq) && !/data-act="src-q-x"[^>]*hidden/.test(tq), rows.join());
+    check('sources: the screen reader hears the count', views.lens.matchWords() === `${rows.length === 1 ? '1 source matches' : `${rows.length} sources match`}.`, views.lens.matchWords());
+    S.ui.srcQ = 'crain';
+    check('sources: Couldn’t read is searched too, counting its matches', /<h3>Couldn’t read <span class="s-ct">1 of \d+ match<\/span><\/h3>/.test(views.lens.sourcesSheetHTML()) && /data-unread="crains-chicago-eb"/.test(views.lens.sourcesSheetHTML()));
+    S.ui.srcQ = 'zzzz <b>';
+    const nq = views.lens.sourcesSheetHTML();
+    check('sources: nothing found says so plainly, escaped, with Add a source right under it', /<p class="s-none">No sources match “zzzz &lt;b&gt;”\.<\/p>/.test(nq) && !/class="sgrp/.test(nq) && nq.indexOf('class="s-none"') < nq.indexOf('data-fk="src-add"') && views.lens.matchWords() === 'No sources match.');
+    S.ui.srcQ = '';
     const unread = ch.endorsers.filter((e) => lens.cantRead(e) && !lens.picksOnBallot(ch, e.id));
     const box = (sh.match(/<section class="sgrp unread">[\s\S]*?<\/section>/) || [''])[0];
     check('sources: "Couldn’t read (N)" lists every paywalled or bot-checked source with no pick here', unread.length >= 2 && new RegExp(`<h3>Couldn’t read \\(${unread.length}\\)</h3>`).test(box) && unread.every((e) => box.includes(`data-unread="${e.id}"`)) && ['crains-chicago-eb', 'sierra-club-il'].every((id) => box.includes(`data-unread="${id}"`)), unread.map((e) => e.id).join());
@@ -2155,7 +2190,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const sr = (f) => ({ kind: 'source', f: { src: '', where: 'Chicago, 60601', picks: '', reach: '', ...f }, what: '', tag: '', hint: '', along, state: 'edit', err: false, fk: 'src-add', back: null });
     const b1 = views.shelf.reportBody(sr({ src: 'https://example.org/guide', picks: 'Mayor: A. Person\nProp 1: Yes' }));
     check('add a source: a link goes in as the race and the link, the pasted picks in "What’s wrong?"', b1[F.what] === 'Add source: https://example.org/guide' && b1[F.link] === 'https://example.org/guide' && b1[F.where] === 'Chicago, 60601'
-      && b1[F.wrong] === 'Mayor: A. Person\nProp 1: Yes\n\nSent along:\nPage: First page\nPlace: Chicago, 60601\nPage address: https://vote.kevinhg.com/ (build abc1234)\nData built: 2026-10-25 12:00 UTC' && b1[F.reach] === '', JSON.stringify(b1));
+      && b1[F.wrong] === 'Mayor: A. Person\nProp 1: Yes\n\nSent along:\nPage: First page\nPlace: Chicago, 60601\nPage link: https://vote.kevinhg.com/ (build abc1234)\nData built: 2026-10-25 12:00 UTC' && b1[F.reach] === '', JSON.stringify(b1));
     const b2 = views.shelf.reportBody(sr({ src: 'Chicago Reader', reach: 'me@example.org' }));
     check('add a source: a name with nothing pasted asks plainly, and the page’s link goes along', b2[F.what] === 'Add source: Chicago Reader' && b2[F.wrong].startsWith('Please add this source\n\nSent along:\n') && b2[F.link] === 'https://vote.kevinhg.com/ (build abc1234)' && b2[F.reach] === 'me@example.org', JSON.stringify(b2));
     check('add a source: its one required box is the source', views.shelf.requiredOf(sr({})) === 'src' && views.shelf.isForm('source'));
@@ -2175,6 +2210,86 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     S.ui.report.watched = true;
     check('add a source: sent and watched, it says it shows up right here', /Sent\.<\/b> If it checks out, it shows up right here\. Keep going\./.test(views.shelf.shelfHTML()));
     S.ui.report = null;
+  }
+
+  /* ---------- Kevin's second batch (Oct 28): step 5's bar, What'll be sent, How this guide works, the what-ifs search ---------- */
+  {
+    const strip = (h) => h.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+    const keep = { index: S.index, view: S.view, uiView: S.ui.view, wiQ: S.ui.wiQ, report: S.ui.report };
+    S.index = INDEX;
+    open('FL', ['orlando-fl']);
+    S.view = 'ballot';
+    // Step 5: the left button goes back one step, and the green one shares the guide; step 4 as it was.
+    S.ui.view = 'pass';
+    const bar5 = views.ledger.barHTML();
+    check('step 5: the bar goes back one step, to My plan, and its green button shares the guide', /<button class="ftog" data-act="view" data-v="cheat" data-fk="bar-back">Back to my plan<\/button>/.test(bar5) && /<button class="fcta" data-act="share-guide" data-fk="bar-share">Share the guide<\/button>/.test(bar5) && !/My plan</.test(bar5.replace('Back to my plan', '')), bar5);
+    const p5 = views.pass.passHTML();
+    check('step 5: its back link goes to My plan too, and the page has no second Share the guide', /data-act="view" data-v="cheat" data-fk="pass-back">Back to my plan</.test(p5) && !/share-guide/.test(p5));
+    S.ui.view = 'cheat';
+    const bar4 = views.ledger.barHTML();
+    check('step 4: back to the ballot, on to Help friends vote', /data-v="ballot" data-fk="bar-back">Back to the ballot</.test(bar4) && /data-v="pass" data-fk="bar-pass">Help friends vote</.test(bar4));
+    S.ui.view = 'ballot';
+    // What'll be sent: folded shut at every form's foot, after Send, with its one summary; the post doesn't change.
+    const along = { page: 'Your ballot', where: 'Orlando, 32801', url: 'https://vote.kevinhg.com/', data: '2026-10-28 12:00 UTC', build: 'abc1234', device: 'Safari 18 on iPhone, 390px wide', errors: [] };
+    const base = { what: '', tag: '', hint: '', along, state: 'edit', err: false, fk: '', back: null };
+    for (const [kind, f] of [['report', { wrong: '', reach: '' }], ['city', { city: '', zip: '', reach: '' }], ['source', { src: '', where: '', picks: '', reach: '' }]]) {
+      S.ui.report = { ...base, kind, f };
+      const fh = views.shelf.shelfHTML();
+      check(`what’ll be sent (${kind}): folded shut after Send, "What’ll be sent", no "Add anything else"`, /<details class="rp-along" id="rp-along"><summary>What’ll be sent<svg class="chev"/.test(fh) && !/<details class="rp-along"[^>]* open/.test(fh) && fh.indexOf('<details') > fh.indexOf('report-send')
+        && !/Add anything else|We’ll send along/.test(fh) && fh.includes('<p class="fine rp-fine">Your request goes to Kevin’s Google Form. Nothing you type here is saved in the guide.</p>'));
+    }
+    S.ui.report = { ...base, kind: 'report', f: { wrong: 'A wrong date.', reach: '' } };
+    check('what’ll be sent: the post still says "Sent along:" and the list, word for word', views.shelf.reportBody(S.ui.report)['entry.780704302'].startsWith('A wrong date.\n\nSent along:\nPage: Your ballot\nPlace: Orlando, 32801\n'));
+    // How this guide works: Report a problem is a link; the end in groups; the one source numbered.
+    S.ui.report = { ...base, kind: 'how', f: {} };
+    const how = views.shelf.shelfHTML();
+    check('how: "Report a problem" in Mistakes opens the report form', /<li><b>Mistakes\.<\/b> Open any race or measure and tap <button class="linkbtn" data-act="shelf" data-kind="report"[^>]*data-fk="how-report">Report a problem<\/button>\.<\/li>/.test(how));
+    check('how: the end goes official links, then the numbered sources (1 the claim, 2 when each state was checked, 3 every source on your ballot), then who made it', [how.indexOf('Official voting info for Florida'), how.indexOf('<h3 class="how-h">Sources</h3>'), how.indexOf('id="src-1"'), how.indexOf('id="src-2"'), how.indexOf('id="src-3"'), how.indexOf('Data built')].every((x, i, a) => x > 0 && (!i || x > a[i - 1]))
+      && /<ol class="how-src"><li id="src-1">“Voting is underway in every state”: <a[^>]+href="https:\/\/electioninnovation\.org\/research\/dates-for-2026-early-in-person-and-mail-voting\/"/.test(how) && />Check your registration</.test(how)
+      && /<li id="src-2"><button class="linkbtn" data-act="open" data-k="asof" data-fk="asof" aria-expanded="false">When we last checked each state’s rules<\/button>, with links to their official sites\.<\/li>/.test(how)
+      && /<li id="src-3"><button class="linkbtn" data-act="sheet" data-s="sources" aria-haspopup="dialog" data-fk="how-src">Every source on your ballot<\/button>\. Choose whose picks you see\.<\/li>/.test(how)
+      && (how.match(/data-fk="asof"/g) || []).length === 1, strip(how).slice(-400));
+    const bb = S.ballot;
+    S.ballot = null;
+    const how0 = views.shelf.shelfHTML();
+    S.ballot = bb;
+    check('how: before a ballot is found there is no source 3 (no sheet to open)', !/id="src-3"/.test(how0) && /id="src-2"/.test(how0));
+    // The first page's first line: the claim with its 1, linked to the source.
+    S.view = 'start';
+    const m = views.mast.mastHTML();
+    check('first page: "Voting is underway in every state" carries a superscript 1, linked to its source', /<p class="dateline">Voting is underway in every state\.<sup class="cite"><a href="https:\/\/electioninnovation\.org\/[^"]+" target="_blank" rel="noopener" aria-label="Source 1: Center for Election Innovation &amp; Research">1<\/a><\/sup> Election Day is /.test(m), (m.match(/<p class="dateline">[\s\S]*?<\/p>/) || [''])[0]);
+    S.view = 'ballot';
+    // The what-ifs search (model/search.ts, the same matcher as the sources sheet).
+    const h = S.ballot.howto;
+    const pw = views.planstrip;
+    const found = (q) => { S.ui.wiQ = q; const html = pw.whatIfBody(h); return [...html.matchAll(/<p class="wi-rq">([^<]+)<\/p>/g)].map((x) => x[1]); };
+    S.ui.wiQ = '';
+    check('what-ifs: with nothing typed, the three groups as always, questions to tap', /<button class="wi-q"/.test(pw.whatIfBody(h)) && !/wi-found|wi-none/.test(pw.whatIfBody(h)) && /Gotchas in Florida/.test(pw.whatIfBody(h)));
+    check('what-ifs: "lost ballot" finds the one answer', found('lost ballot').join(' | ') === 'My mail ballot never came, or I lost it.', found('lost ballot').join(' | '));
+    check('what-ifs: an everyday word: "absentee" finds the mail-ballot answers', found('absentee').includes('My mail ballot never came, or I lost it.') && found('absentee').includes('I mailed my ballot but now want to vote in person.') && !found('absentee').includes('I’m in line when polls close.'), found('absentee').join(' | '));
+    check('what-ifs: a typo: "provisonal" finds the provisional ballot', found('provisonal').includes('What&#39;s a provisional ballot?') || found('provisonal').some((q) => /provisional ballot\?/.test(q)), found('provisonal').join(' | '));
+    check('what-ifs: words in any order, a phrase: "out of town" finds being away on Election Day', found('out of town').some((q) => /away on Election Day/.test(q)), found('out of town').join(' | '));
+    // A word only in a full answer (Florida's Western Panhandle is on Central time) shows that answer's full text;
+    // one only in a date's fine print shows the dates with their fine print open (Codex, Oct 28).
+    S.ui.wiQ = 'panhandle';
+    const pan = pw.whatIfBody(h);
+    check('what-ifs: a word only in a full answer shows that answer, its full text open', found('panhandle').some((q) => /in line when polls close/.test(q)) && /<div class="wi-full">[\s\S]*Panhandle/.test(pan) && !/data-k="wim-in_line_at_close"/.test(pan), found('panhandle').join(' | '));
+    // "library": only in Florida's in-person registration fine print ("...a driver license office, or a library").
+    S.ui.wiQ = 'library';
+    const kd = pw.whatIfBody(h);
+    check('what-ifs: a word only in a date’s fine print shows Key dates with the fine print open', /<p class="wi-rq">Key dates<\/p>/.test(kd) && /<span class="pd-x">[^<]*library/.test(kd) && !/data-k="kd-reg2"/.test(kd) && found('library').join() === 'Key dates', `${found('library').join(' | ')}: ${strip(kd).slice(0, 160)}`);
+    S.ui.wiQ = 'felony <b>';
+    const none = pw.whatIfBody(h);
+    check('what-ifs: no match says so plainly and names the election office, with its phone', /<p class="wi-none">No answers match “felony &lt;b&gt;”\. Contact your election office: <a[^>]*>[^<]+<\/a> · <span class="phone"><a href="tel:\d+">/.test(none) && pw.wiMatchWords() === 'No answers match.', strip(none));
+    S.ui.wiQ = 'lost ballot';
+    check('what-ifs: a screen reader hears the count', pw.wiMatchWords() === '1 answer matches.', pw.wiMatchWords());
+    S.ui.open.add('whatif');
+    S.ui.wiQ = '';
+    const plan = views.planstrip.planHTML();
+    check('what-ifs: a labeled search box leads the panel, empty to start, its Clear hidden', /<form class="wi-find" data-form="wi-q" role="search">\s*<label class="vh" for="wi-q">Search voting dates, ID rules and help<\/label>\s*<input id="wi-q" type="search" placeholder="Search: lost ballot, ID, moved…" value=""/.test(plan) && /data-act="wi-q-x"[^>]*hidden>Clear</.test(plan) && plan.indexOf('id="wi-q"') < plan.indexOf('id="wi-res"'));
+    S.ui.open.delete('whatif');
+    Object.assign(S, { index: keep.index, view: keep.view });
+    S.ui.view = keep.uiView; S.ui.wiQ = keep.wiQ; S.ui.report = keep.report;
   }
 
 }

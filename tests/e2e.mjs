@@ -386,7 +386,7 @@ async function mapsSettled(page, timeout = 10000) {
   await tap(page, '.sheet-panel.shelf [data-act="shelf-share"]');
   await page.waitForSelector('#pass');
   await settle(page);
-  check('Support: from a ballot, "send the guide to a friend" opens Help friends vote, the shelf gone, focus on its Share the guide', !(await page.$('.sheet-panel')) && !!(await page.$('#pass')) && !!(await page.$('.foot [data-act="share-guide"]')));
+  check('Support: from a ballot, "send the guide to a friend" opens Help friends vote, the shelf gone, focus on its Share the guide', !(await page.$('.sheet-panel')) && !!(await page.$('#pass')) && (await focusedFk(page)) === 'bar-share', await focusedFk(page));
   await page.goBack();
   await page.waitForSelector('#plan');
   await settle(page);
@@ -1455,15 +1455,16 @@ async function mapsSettled(page, timeout = 10000) {
     && (await text(page, '#rf-reach-h')) === 'An email or phone, only if you’d like one back.' && (await page.getAttribute('#rf-wrong', 'aria-required')) === 'true' && !(await page.getAttribute('#rf-reach', 'aria-required')));
   const along = await alongOf(page);
   // Kevin, Oct 28: folded, and called something clearer ("what'll be sent"); what's posted doesn't change.
-  check('Report a problem: "What’ll be sent", folded shut at the foot, names the page, the place and ZIP, the page’s address with the build, the data date, and the browser', (await text(page, 'details.rp-along > summary')) === 'What’ll be sent' && !(await page.getAttribute('details.rp-along', 'open')) && !(await page.isVisible('.rp-along li')) && along.length === 5 && along[0] === 'Page: Your ballot' && along[1] === 'Place: Austin, 78704'
+  check('Report a problem: "What’ll be sent", folded shut at the foot, names the page, the place and ZIP, the page’s address with the build, the data date, and the browser', (await text(page, 'details.rp-along > summary')) === 'What’ll be sent' && (await page.getAttribute('details.rp-along', 'open')) === null && !(await page.isVisible('.rp-along li')) && along.length === 5 && along[0] === 'Page: Your ballot' && along[1] === 'Place: Austin, 78704'
     && new RegExp(`^Page address: ${BASE.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/\\?today=${TODAY} \\(build ([0-9a-f]{7}|dev)\\)$`).test(along[2]) && /^Data built: \d{4}-\d{2}-\d{2} \d{2}:\d{2} UTC$/.test(along[3]) && /^Browser: .+, 380px wide$/.test(along[4])
     && !/Add anything else/.test(await text(page, '.sheet-panel.shelf')), along.join(' | '));
-  await tap(page, 'details.rp-along > summary');
-  check('Report a problem: tapped, What’ll be sent opens to its list', !!(await page.getAttribute('details.rp-along', 'open')) && (await page.isVisible('.rp-along li')));
-  await tap(page, 'details.rp-along > summary');
   check('Report a problem: the list never shows the address or the page’s hash', !NEVER.test(await text(page, '.sheet-panel.shelf')), await text(page, '.rp-along'));
   check('Report a problem: one fine line says where it goes', (await text(page, '.sheet-panel.shelf .rp-fine')) === 'Your request goes to Kevin’s Google Form. Nothing you type here is saved in the guide.');
   check('Report a problem: a touch lands on Cancel, not in a box, so no keyboard jumps over the sheet', (await focusedFk(page)) === 'sheet-x' && (await text(page, '.sheet-panel.shelf [data-fk="sheet-x"]')) === 'Cancel', await focusedFk(page));
+  await tap(page, 'details.rp-along > summary');
+  check('Report a problem: tapped, What’ll be sent opens to its list', (await page.getAttribute('details.rp-along', 'open')) !== null && (await page.isVisible('.rp-along li')));
+  await tap(page, 'details.rp-along > summary');
+  check('Report a problem: and folds shut again', (await page.getAttribute('details.rp-along', 'open')) === null);
   check('Report a problem: the page behind is out of reach', !!(await page.$('#app[inert]')));
   // Send with the one required box empty: nothing goes, and it says so at the box.
   await tap(page, SEND);
@@ -3414,6 +3415,9 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await page.waitForSelector('#msg-pub');
   const pub = await text(page, '#msg-pub');
   check('Austin: the public message says Election Day and the early-voting dates', /Election Day in Texas is Tue, Nov 3\./.test(pub) && /Early voting (in Austin )?runs Mon, Oct 19 through Fri, Oct 30\./.test(pub), pub.slice(0, 140));
+  // Step 5 goes back one step, to My plan, and My plan back to the ballot (Kevin, Oct 28).
+  await tap(page, '.foot .ftog');
+  await page.waitForSelector('#cheat');
   await tap(page, '[data-act="view"][data-v="ballot"]');
   const oth = await text(page, '#sec-school .grp.oth');
   check('Austin: other school districts’ races fold into one line', /Other school districts that touch Austin/.test(oth) && !(await page.$('#sec-school [data-fold]')), oth.slice(0, 120));

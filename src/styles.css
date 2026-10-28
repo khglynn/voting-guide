@@ -973,8 +973,8 @@ details.rp-along ul { margin-top: 0; padding-bottom: 6px; }
 .how-src { margin-top: 4px; padding-left: 20px; list-style: decimal; }
 .how-end > .fine { margin-top: 0; }
 /* The first page's one cited claim: a small 1 that links to its source, with room around it to tap. */
-.cite { font-size: .7em; line-height: 0; vertical-align: super; margin-left: 1px; }
-.cite a { position: relative; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; padding: 0 2px; }
+.cite { font-size: .7em; line-height: 0; vertical-align: super; }
+.cite a { position: relative; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; padding-right: 1px; }
 .cite a::after { content: ""; position: absolute; inset: -14px -12px; }
 
 /* ---------- views ---------- */

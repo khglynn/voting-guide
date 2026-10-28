@@ -890,7 +890,8 @@ A['shelf-share'] = async () => {
   if (S.ballot && S.view === 'ballot') {
     S.ui.report = null;
     S.ui.sheet = null;
-    if (S.ui.view !== 'pass') { go('pass'); return; }
+    // Focus lands on the bar's Share the guide either way (Codex, Oct 28: the usual path left it behind).
+    if (S.ui.view !== 'pass') { go('pass'); focusFk('bar-share'); return; }
     render(['sheet']);
     glideTo($('#pass'), 0);
     focusFk('bar-share');

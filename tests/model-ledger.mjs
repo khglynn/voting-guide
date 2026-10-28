@@ -2261,7 +2261,15 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('what-ifs: an everyday word: "absentee" finds the mail-ballot answers', found('absentee').includes('My mail ballot never came, or I lost it.') && found('absentee').includes('I mailed my ballot but now want to vote in person.') && !found('absentee').includes('I’m in line when polls close.'), found('absentee').join(' | '));
     check('what-ifs: a typo: "provisonal" finds the provisional ballot', found('provisonal').includes('What&#39;s a provisional ballot?') || found('provisonal').some((q) => /provisional ballot\?/.test(q)), found('provisonal').join(' | '));
     check('what-ifs: words in any order, a phrase: "out of town" finds being away on Election Day', found('out of town').some((q) => /away on Election Day/.test(q)), found('out of town').join(' | '));
-    check('what-ifs: a word only in a full answer shows that answer’s full text', (() => { S.ui.wiQ = 'drivers licence'; const html = pw.whatIfBody(h); return /wi-found/.test(html); })());
+    // A word only in a full answer (Florida's Western Panhandle is on Central time) shows that answer's full text;
+    // one only in a date's fine print shows the dates with their fine print open (Codex, Oct 28).
+    S.ui.wiQ = 'panhandle';
+    const pan = pw.whatIfBody(h);
+    check('what-ifs: a word only in a full answer shows that answer, its full text open', found('panhandle').some((q) => /in line when polls close/.test(q)) && /<div class="wi-full">[\s\S]*Panhandle/.test(pan) && !/data-k="wim-in_line_at_close"/.test(pan), found('panhandle').join(' | '));
+    // "library": only in Florida's in-person registration fine print ("...a driver license office, or a library").
+    S.ui.wiQ = 'library';
+    const kd = pw.whatIfBody(h);
+    check('what-ifs: a word only in a date’s fine print shows Key dates with the fine print open', /<p class="wi-rq">Key dates<\/p>/.test(kd) && /<span class="pd-x">[^<]*library/.test(kd) && !/data-k="kd-reg2"/.test(kd) && found('library').join() === 'Key dates', `${found('library').join(' | ')}: ${strip(kd).slice(0, 160)}`);
     S.ui.wiQ = 'felony <b>';
     const none = pw.whatIfBody(h);
     check('what-ifs: no match says so plainly and names the election office, with its phone', /<p class="wi-none">No answers match “felony &lt;b&gt;”\. Contact your election office: <a[^>]*>[^<]+<\/a> · <span class="phone"><a href="tel:\d+">/.test(none) && pw.wiMatchWords() === 'No answers match.', strip(none));

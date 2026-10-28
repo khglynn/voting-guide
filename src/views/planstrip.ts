@@ -136,26 +136,29 @@ const officeName = (o: NonNullable<ReturnType<typeof officeOf>>): string => (o.u
 
 /* Everything behind "Dates, ID, ...", as the search reads it: each piece's heading (its question, or what it's
    about, and its quick answer) and its body (the full text behind "More", the dates, the ID list). */
-type Part = { sec: 'basic' | 'gotcha' | 'sit'; i: number; k: string; q: string; body: string; item: Item };
+type Part = { sec: 'basic' | 'gotcha' | 'sit'; i: number; k: string; q: string; body: string; full: string; item: Item };
 const strip = (html: string): string => html.replace(/<[^>]+>/g, ' ').replace(/&[a-z#0-9]+;/gi, ' ');
 function partsOf(h: HowTo): Part[] {
   const b = S.ballot!;
   const t = todayISO();
   const out: Part[] = [];
-  const add = (sec: Part['sec'], i: number, k: string, q: string, head: string, body: string) => out.push({ sec, i, k, q, body, item: { head: textOf(`${q} ${head}`), body: textOf(strip(body)) } });
-  const dates = dateRows(h).map((r) => {
+  // `full`: what a piece shows when a search found it behind its "More" or "Details" (Codex, Oct 28: a word only
+  // in a date's fine print showed "Key dates" with that fine print folded away).
+  const add = (sec: Part['sec'], i: number, k: string, q: string, head: string, body: string, bodyText = strip(body), full = body) => out.push({ sec, i, k, q, body, full, item: { head: textOf(`${q} ${head}`), body: textOf(bodyText) } });
+  const rows = dateRows(h);
+  // Each date keeps its fine print (the rule, the hours, the noon cutoff) one tap away; `all` shows every one.
+  const dates = (all: boolean) => rows.map((r) => {
     const k = `kd-${r.key}`;
-    const open = !!r.detail && isOpen(k);
-    const more = r.detail ? ` <button class="pd-more" data-act="open" data-k="${k}" data-fk="${k}" aria-expanded="${open}" aria-label="${esc(open ? `Hide details: ${r.label}` : `Details: ${r.label}`)}">${open ? 'Hide details' : 'Details'}</button>` : '';
+    const open = !!r.detail && (all || isOpen(k));
+    const more = r.detail && !all ? ` <button class="pd-more" data-act="open" data-k="${k}" data-fk="${k}" aria-expanded="${open}" aria-label="${esc(open ? `Hide details: ${r.label}` : `Details: ${r.label}`)}">${open ? 'Hide details' : 'Details'}</button>` : '';
     return `<li class="${r.date < t ? 'past' : ''}"><span class="pd-d">${esc(fmtDate(r.date))}</span><span class="pd-l">${esc(r.label)}${r.date < t ? ' <span class="passed">passed</span>' : ''}${r.source ? ` ${ext(r.source, host(r.source))}` : ''}${more}${open ? `<span class="pd-x">${escP(r.detail)}</span>` : ''}</span></li>`;
   }).join('');
-  const dateWords = dateRows(h).map((r) => `${r.label} ${r.detail || ''}`).join(' ');
   const idr = h.id_rules;
   const booth = h.in_the_booth;
   const mail = h.mail_ballot;
   const office = officeOf();
   const basics: [string, string, string, string][] = [
-    ['bx-dates', 'Key dates', `<ol class="pdates">${dates}</ol>`, `deadline ${dateWords}`],
+    ['bx-dates', 'Key dates', `<ol class="pdates">${dates(false)}</ol>`, `deadline ${rows.map((r) => r.label).join(' ')}`],
     ['bx-id', `What to bring: ${IDS[idr.required] || idr.required}`, `${idr.accepted.length ? `<ul>${idr.accepted.map((a) => `<li>${escP(a)}</li>`).join('')}</ul>` : ''}${idr.no_id_option ? `<p><b>No ID?</b> ${escP(idr.no_id_option)}</p>` : ''}`, ''],
     ['bx-booth', `In the booth: notes ${RULE[booth.notes_allowed] || booth.notes_allowed}, phones ${RULE[booth.phones] || booth.phones}`, `${booth.notes_detail ? `<p><b>Notes and your plan.</b> ${escP(booth.notes_detail)}</p>` : ''}${booth.phones_detail ? `<p><b>Phones.</b> ${escP(booth.phones_detail)}</p>` : ''}${booth.apparel_rule ? `<p><b>What to wear.</b> ${escP(booth.apparel_rule)}</p>` : ''}`, booth.apparel_rule ? 'what to wear' : ''],
     ['bx-mail', isMailState(h) ? 'How voting by mail works' : 'Voting by mail instead', `${bulletsHTML(mail.who_gets_one)}${mail.return_options && mail.return_options.length ? `<ul>${mail.return_options.map((o) => `<li>${escP(o)}</li>`).join('')}</ul>` : ''}${mail.mail_cutoff_advice ? `<p>${escP(mail.mail_cutoff_advice)}</p>` : ''}<p>${[mail.tracking_url ? ext(mail.tracking_url, 'Track your ballot') : '', mail.drop_box_lookup_url ? ext(mail.drop_box_lookup_url, 'Find a drop box') : ''].filter(Boolean).join(' · ')}</p>`, ''],
@@ -163,7 +166,9 @@ function partsOf(h: HowTo): Part[] {
   if (office) basics.push(['bx-office', 'Your election office', `<p>${officeName(office)}${office.phone ? `<br>${telHTML(office.phone)}` : ''}${office.addr ? `<br>${esc(office.addr)}` : ''}</p>`, 'contact call help']);
   if (h.model_plain) basics.push(['bx-how', `How voting works in ${b.stateName}`, bulletsHTML(h.model_plain), '']);
   b.places.filter((p) => p.notes).forEach((p) => basics.push([`bx-n-${p.id}`, `Notes for ${p.label}`, bulletsHTML(p.notes), '']));
-  basics.forEach(([k, q, body, extra], i) => add('basic', i, k, q, extra, body));
+  basics.forEach(([k, q, body, extra], i) => (k === 'bx-dates'
+    ? add('basic', i, k, q, extra, body, rows.map((r) => r.detail || '').join(' '), `<ol class="pdates">${dates(true)}</ol>`)
+    : add('basic', i, k, q, extra, body)));
   h.gotchas.forEach((g, i) => { const sh = (h.gotcha_shorts || [])[i]; add('gotcha', i, `gm-${i}`, sh || g, '', sh ? g : ''); });
   sitsOf(h).forEach((x, i) => add('sit', i, `wi-${x.id}`, x.question, x.short || '', `${x.answer} ${(x.steps || []).join(' ')}`));
   return out;
@@ -188,7 +193,7 @@ export function whatIfBody(h: HowTo): string {
   const { parts, shown, full } = partsFound(h);
   const sits = sitsOf(h);
   const pick = (sec: Part['sec']) => (shown || parts).filter((p) => p.sec === sec);
-  const basics = pick('basic').map((p) => (shown ? foundHTML(p.q, p.body) : discHTML(p.k, p.q, p.body))).join('');
+  const basics = pick('basic').map((p) => (shown ? foundHTML(p.q, full.has(p.k) ? p.full : p.body) : discHTML(p.k, p.q, p.body))).join('');
   const gotchas = pick('gotcha');
   const sitParts = pick('sit');
   const sitList = sitParts.map((p) => { const x = sits[p.i]; return shown ? foundHTML(x.question, sitBody(x, full.has(p.k))) : discHTML(p.k, x.question, sitBody(x)); }).join('');

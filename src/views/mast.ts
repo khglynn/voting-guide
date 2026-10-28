@@ -10,6 +10,7 @@ import { doorPicksHTML, placeLine } from './setup';
 import { covCardHTML } from './coverage';
 import { stateName, tidyAddress } from '../geo';
 import { pageWalk, decisionItems } from '../ballot';
+import { addsHTML } from './adds';
 
 function electionDate(): string {
   if (S.ballot) return S.ballot.howto.election_date;
@@ -187,12 +188,13 @@ function resumeHTML(): string {
     <div class="row-btns"><button class="mini dark" data-act="next" data-fk="resume-go">Pick up where I left off</button></div>
     <button class="ibtn resume-x" data-act="resume-x" data-fk="resume-x" aria-label="Close">${CLOSE}</button></div>`;
 }
-/* The slot under the masthead: a shared link's question or "Welcome back", then the ballot's coverage card
-   (views/coverage.ts), above the next step, so a phone shows it on the first screen (Kevin, Oct 25: "It
-   reads as a standard header, not a callout that you should wait"). */
+/* The slot under the masthead: a shared link's question, or a source you asked for (views/adds.ts), or "Welcome
+   back", one at a time in that order; then the ballot's coverage card (views/coverage.ts), above the next step,
+   so a phone shows it on the first screen (Kevin, Oct 25: "It reads as a standard header, not a callout that
+   you should wait"). */
 export function restoreHTML(): string {
   const card = S.view === 'ballot' && S.ballot && S.ui.view === 'ballot' ? covCardHTML('ballot') : '';
-  return promptHTML() + card;
+  return (S.pending ? promptHTML() : addsHTML() || promptHTML()) + card;
 }
 function promptHTML(): string {
   if (!S.pending) return S.ui.resume && S.view === 'ballot' && S.ballot && S.ui.view === 'ballot' ? resumeHTML() : '';

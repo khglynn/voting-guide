@@ -47,6 +47,18 @@ const SOURCE: Field[] = [
 ];
 /* The fold's key in S.ui.open: shut each time the form opens (actions.ts openShelf). */
 export const PICKS_FOLD = 'rf-picks-fold';
+/* What happens to a pasted list, beside the paste box whenever it shows (Kevin, Oct 28: a pasted list's picks go to
+   everyone as facts with a link to the source's page, the way news sites report a paper's endorsements; the pasted
+   text itself is never published). One constant, so its exact words change in one place. */
+export const PASTE_POLICY = 'We use what you paste only to read their picks. We never post their writing, and the guide links to their page.';
+/* Add a source again from the request banner's "Paste their picks" (views/adds.ts), when the source's page blocks
+   our reader: the paste box first and open, the source's name already in its box. A new request, with a new code. */
+const PASTE_FIELDS: Field[] = [
+  { k: 'picks', label: 'Paste in their picks', type: 'area', required: true, max: 5000 },
+  SOURCE[0], SOURCE[1], SOURCE[3],
+];
+const PASTE_INTRO = 'Their page blocks us. Paste their picks and we’ll add them.';
+export const isPaste = (r: Pick<Shelf, 'kind' | 'hint'>): boolean => r.kind === 'source' && r.hint === 'paste';
 /* Opened from a paywalled paper's "Send it to us": the box asks for its picks instead. A bot-checked
    source's (Oct 25) the same, without the login. */
 const PAYWALL = { intro: 'Have a login? Send Kevin their picks.', label: 'Their picks, or a link to a PDF' };
@@ -86,9 +98,9 @@ export function followOf(): Follow {
     wrong: `Tell me when the city${zip ? ` for ZIP ${zip}` : ''} is in. ${from}`,
   };
 }
-const fieldsOf = (r: Shelf): Field[] => (isFollow(r) ? FOLLOW_FIELDS : r.kind === 'city' ? CITY : r.kind === 'source' ? SOURCE : REPORT);
+const fieldsOf = (r: Shelf): Field[] => (isFollow(r) ? FOLLOW_FIELDS : r.kind === 'city' ? CITY : isPaste(r) ? PASTE_FIELDS : r.kind === 'source' ? SOURCE : REPORT);
 /* The one question the form requires: the sheet won't send without it. */
-export const requiredOf = (r: Shelf): string => (isFollow(r) ? 'reach' : r.kind === 'city' ? 'city' : r.kind === 'source' ? 'src' : 'wrong');
+export const requiredOf = (r: Shelf): string => (isFollow(r) ? 'reach' : r.kind === 'city' ? 'city' : isPaste(r) ? 'picks' : r.kind === 'source' ? 'src' : 'wrong');
 
 /* ---------- what a form sends along by itself ---------- */
 /* The page it was opened on, in the words the guide uses for its pages. */
@@ -141,12 +153,15 @@ const linkOf = (a: Along): string => `${a.url} (build ${a.build || 'dev'})`;
    "you can see what we send" has to hold): the page (or, from a row, the race with its record id), the
    place and ZIP, the page's address with the build, the data date, the browser, the errors caught, and
    the id of the crash report the page sent, when Sentry took one in (so a note and its crash meet).
-   It also goes into "What's wrong?" after "Sent along:". A city request's is shorter. */
+   It also goes into "What's wrong?" after "Sent along:". A city request's is shorter. Add a source's ends with
+   "Request: <code>", the random code the workbench's vg source names the request's branch after, so this device
+   can show the source as soon as it's ready (model/adds.ts). */
 export function alongLines(r: Pick<Shelf, 'kind' | 'what' | 'tag' | 'along'>): string[] {
   const a = r.along;
   const head = [`Page: ${a.page}`, a.where ? `Place: ${a.where}` : ''];
   const tail = [`Page address: ${linkOf(a)}`, `Data built: ${a.data || 'unknown'}`];
-  if (r.kind === 'city' || r.kind === 'source') return [...head, ...tail].filter(Boolean);
+  if (r.kind === 'source') return [...head, ...tail, a.request ? `Request: ${a.request}` : ''].filter(Boolean);
+  if (r.kind === 'city') return [...head, ...tail].filter(Boolean);
   const about = aboutOf(r);
   return [...head, about ? `About: ${about}` : '', ...tail, `Browser: ${a.device}`, ...a.errors.map((e) => `Error the page caught: ${e}`), a.crash ? `Crash report: ${a.crash}` : ''].filter(Boolean);
 }
@@ -226,12 +241,15 @@ function fieldHTML(r: Shelf, f: Field): string {
   const val = r.f[f.k] || '';
   const bad = r.err && f.k === requiredOf(r);
   const label = f.k === 'wrong' && unreadHint(r) ? PAYWALL.label : f.label;
-  const desc = [f.hint ? `${id}-h` : '', bad ? 'rf-err' : ''].filter(Boolean).join(' ');
+  // A box for pasted picks says what happens to a paste, every time it shows.
+  const pasted = f.k === 'picks' || (f.k === 'wrong' && unreadHint(r));
+  const hint = pasted ? [f.hint, PASTE_POLICY].filter(Boolean).join(' ') : f.hint;
+  const desc = [hint ? `${id}-h` : '', bad ? 'rf-err' : ''].filter(Boolean).join(' ');
   const attrs = `id="${id}" name="${f.k}" data-rf="${f.k}" data-fk="${id}" maxlength="${f.max}"${f.required ? ' aria-required="true"' : ''}${desc ? ` aria-describedby="${desc}"` : ''}${bad ? ' aria-invalid="true"' : ''}${f.auto ? ` autocomplete="${f.auto}"` : ''}${busy}`;
   const input = f.type === 'area' ? `<textarea ${attrs} rows="3">${esc(val)}</textarea>`
     : f.type === 'zip' ? `<input ${attrs} inputmode="numeric" pattern="[0-9]*" autocomplete="postal-code" value="${esc(val)}">`
       : `<input ${attrs} type="text" value="${esc(val)}">`;
-  const err = bad ? `<p class="zip-err rp-err" id="rf-err">${f.k === 'city' ? 'Type the city first.' : f.k === 'reach' ? 'Type an email or phone first.' : f.k === 'src' ? 'Type its name or a link first.' : unreadHint(r) ? 'Paste their picks or a link first.' : 'Say what’s wrong first.'}</p>` : '';
+  const err = bad ? `<p class="zip-err rp-err" id="rf-err">${f.k === 'city' ? 'Type the city first.' : f.k === 'reach' ? 'Type an email or phone first.' : f.k === 'src' ? 'Type its name or a link first.' : f.k === 'picks' ? 'Paste their picks first.' : unreadHint(r) ? 'Paste their picks or a link first.' : 'Say what’s wrong first.'}</p>` : '';
   const opt = f.optional ? ' <span class="rp-opt">optional</span>' : '';
   if (f.fold) {
     // A folded row: its label is the button that opens it, and names the box once it shows. What's typed
@@ -239,10 +257,10 @@ function fieldHTML(r: Shelf, f: Field): string {
     const open = isOpen(PICKS_FOLD);
     const box = input.replace(`id="${id}"`, `id="${id}" aria-labelledby="${id}-b"`);
     return `<div class="rp-f rp-fold"><button type="button" class="rp-fold-b" id="${id}-b" data-act="open" data-k="${PICKS_FOLD}" data-fk="${id}-b" aria-expanded="${open}"${open ? ` aria-controls="${id}"` : ''}><b>${esc(label)}</b>${opt}<svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
-    ${open ? `${f.hint ? `<p class="rp-h" id="${id}-h">${esc(f.hint)}</p>` : ''}${box}` : ''}</div>`;
+    ${open ? `${hint ? `<p class="rp-h" id="${id}-h">${esc(hint)}</p>` : ''}${box}` : ''}</div>`;
   }
   return `<div class="rp-f"><label for="${id}"><b>${esc(label)}</b>${opt}</label>
-    ${f.hint ? `<p class="rp-h" id="${id}-h">${esc(f.hint)}</p>` : ''}${input}${err}</div>`;
+    ${hint ? `<p class="rp-h" id="${id}-h">${esc(hint)}</p>` : ''}${input}${err}</div>`;
 }
 /* The follow-up form: the request as a line of text, the one field, the button, and what goes along folded
    shut under it. Sent, it never shows the email or phone back (a shared phone would). */
@@ -269,14 +287,16 @@ function followHTML(r: Shelf): string {
 function formHTML(r: Shelf): string {
   if (isFollow(r)) return followHTML(r);
   if (r.state === 'sent') {
-    return `<div class="rp-sent" role="status"><p><b>Sent.</b> ${r.kind === 'source' ? 'Kevin reads every one; a source usually shows up within a day.' : 'Kevin reads every one.'}</p>
+    // Add a source this device will watch for (model/adds.ts) says it shows up right here; one it can't (storage
+    // blocked, a "try as" scenario) says what it always said.
+    return `<div class="rp-sent" role="status"><p><b>Sent.</b> ${r.kind === 'source' ? (r.watched ? 'We’ll add it to this page when it’s ready. Keep going.' : 'Kevin reads every one; a source usually shows up within a day.') : 'Kevin reads every one.'}</p>
       <button class="bigbtn" data-act="sheet-close" data-fk="report-done">Done</button></div>`;
   }
   const sending = r.state === 'sending';
   // Refused outright ("That didn't send.") or no answer in 15 seconds ("Couldn't confirm it sent.": it
   // may have arrived, so it doesn't say it didn't).
   const missed = r.state === 'failed' || r.state === 'unsure';
-  const intro = r.kind === 'city' ? 'Tell Kevin which city to add next.' : r.kind === 'source' ? 'Tell Kevin which source to add.'
+  const intro = r.kind === 'city' ? 'Tell Kevin which city to add next.' : isPaste(r) ? PASTE_INTRO : r.kind === 'source' ? 'Tell Kevin which source to add.'
     : r.hint === 'paywall' ? PAYWALL.intro : r.hint === 'blocked' ? BLOCKED_INTRO : 'Tell Kevin what’s off. A sentence is plenty.';
   return `<form class="rp-form" data-form="report" novalidate${sending ? ' aria-busy="true"' : ''}>
       <p class="rp-intro">${esc(intro)}</p>
@@ -341,7 +361,7 @@ export function shelfHTML(): string {
   const form = isForm(r.kind);
   const body = form ? formHTML(r) : r.kind === 'cities' ? (S.index ? citiesHTML(S.index) : '') : r.kind === 'how' ? howHTML() : supportHTML();
   return `<div class="scrim shelf screen-only" data-act="sheet-close"></div>
-  <div class="sheet-panel shelf screen-only" role="dialog" aria-modal="true" aria-labelledby="sh-h" data-kind="${r.kind}"${isFollow(r) ? ' data-hint="follow"' : ''}>
+  <div class="sheet-panel shelf screen-only" role="dialog" aria-modal="true" aria-labelledby="sh-h" data-kind="${r.kind}"${isFollow(r) ? ' data-hint="follow"' : isPaste(r) ? ' data-hint="paste"' : ''}>
     <div class="sheet-hd"><h2 id="sh-h">${esc(isFollow(r) ? followOf().title : SHELF_TITLE[r.kind])}</h2><button class="closebtn" data-act="sheet-close" data-fk="sheet-x">${form && r.state !== 'sent' ? 'Cancel' : 'Close'}</button></div>
     <div class="sheet-bd" data-keep="shelf">${body}</div></div>`;
 }

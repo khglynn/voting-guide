@@ -6,6 +6,7 @@ import type { Endorser } from '../types';
 import type { Ballot } from '../ballot';
 import { S } from '../state';
 import { chosenIds, isPartisan, entriesBySection, status, isDecision, unclaimed } from '../ballot';
+import { heldIds } from './adds';
 
 export type ChipKey = 'papers' | 'progressive' | 'conservative';
 const LEFT = ['left', 'lean_left'];
@@ -145,11 +146,15 @@ export function chipState(b: Ballot, key: ChipKey): ChipState {
 }
 const defaultIds = (b: Ballot): string[] => b.endorsers.filter((e) => e.default_on).map((e) => e.id);
 /* Write a list back, as null when it is exactly the defaults, so a link stays short and new
-   default sources join on their own. */
+   default sources join on their own. A source you asked for that this ballot doesn't have right now (its
+   preview hasn't answered since a reload, model/adds.ts heldIds) stays in your list, so a chip tapped
+   meanwhile can't switch it off for you (the judge's "reload gap", Oct 28). */
 export function setSources(b: Ballot, ids: string[]): void {
   const uniq = [...new Set(ids)].filter((id) => b.eById.has(id));
+  const held = heldIds();
+  const kept = held.size ? (S.b.sources || []).filter((id) => !b.eById.has(id) && held.has(id)) : [];
   const def = defaultIds(b);
-  S.b.sources = uniq.length === def.length && def.every((id) => uniq.includes(id)) ? null : uniq;
+  S.b.sources = !kept.length && uniq.length === def.length && def.every((id) => uniq.includes(id)) ? null : [...uniq, ...kept];
 }
 /* "Don’t show endorsements": no source on and no party, so every row shows just the choices. An option,
    never the default (Kevin, Oct 20); turning on any chip or a party ends it. On the first page

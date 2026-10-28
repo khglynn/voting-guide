@@ -39,7 +39,7 @@ export function reportWhere(): string {
    `fk` is where focus goes back when the sheet closes. */
 /* `hint`: 'paywall' from a paywalled source's "Send it to us", 'blocked' from a bot-checked one's, 'follow'
    from the coverage card's "Tell me when it's in" (a follow-up to its one-tap request, shelf.ts followHTML). */
-export type ShelfHint = 'paywall' | 'blocked' | 'follow';
+export type ShelfHint = 'paywall' | 'blocked' | 'follow' | 'paste';
 export function shelfAttrs(o: { kind: ShelfKind; what?: string; tag?: string; hint?: ShelfHint; fk: string }): string {
   return ['data-act="shelf"', `data-kind="${o.kind}"`, o.what ? `data-what="${esc(o.what)}"` : '', o.tag ? `data-tag="${esc(o.tag)}"` : '',
     o.hint ? `data-hint="${o.hint}"` : '', 'aria-haspopup="dialog"', `data-fk="${esc(o.fk)}"`].filter(Boolean).join(' ');

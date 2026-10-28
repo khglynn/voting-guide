@@ -163,13 +163,15 @@ function dateRows(h: HowTo, place: PlaceBundle | null): DateRow[] {
   if (rq && rq.date && rq.rule && mail) out.push({ date: rq.date, lead: 'Mail ballot request and replacement dates', when: '', detail: rq.rule });
   else if (rq && rq.date) out.push({ date: rq.date, lead: 'Last day to ask for a mail ballot: ', when: fmtDate(rq.date), detail: rq.rule || null });
   const ep = h.early_in_person;
+  // The window with its note: Florida's is a state minimum, Colorado's counties may open sooner, Oregon has no early
+  // voting as such. A place's own one-line hours stand in when it has them; where there's no window, the note alone.
   if (ep.available && ep.start && ep.end) {
-    out.push({ date: ep.start, lead: `${mail ? 'In-person voting' : 'Early voting'}: `, when: `${fmtDate(ep.start)} to ${fmtDate(ep.end)}`, detail: place?.early_in_person?.hours_short || null });
-  }
+    out.push({ date: ep.start, lead: `${mail ? 'In-person voting' : 'Early voting'}: `, when: `${fmtDate(ep.start)} to ${fmtDate(ep.end)}`, detail: place?.early_in_person?.hours_short || ep.hours_note || null });
+  } else if (ep.hours_note) out.push({ date: ep.end || ep.start || h.election_date, lead: 'Can you vote before Election Day?', when: '', detail: ep.hours_note });
   const r = h.mail_ballot.return_deadline;
   // The ways to return it, in the data's words: each has its own rule (Texas takes a USPS ballot postmarked by 7 PM
   // that arrives the next day; Georgia doesn't count postmarks; Codex round 2), so the heading names none of them.
-  out.push({ date: r.date, lead: 'Mail ballot return deadline: ', when: fmtDate(r.date), detail: r.time, list: h.mail_ballot.return_options || [] });
+  out.push({ date: r.date, lead: 'Mail ballot deadline: ', when: fmtDate(r.date), detail: r.time, list: h.mail_ballot.return_options || [] });
   const ed = h.election_day;
   const close = clock(ed.polls_close) || ed.polls_close;
   const hours = !mail && PLAIN_TIME.test(ed.polls_open) && PLAIN_TIME.test(ed.polls_close) ? `You can vote from ${clock(ed.polls_open)} to ${close}.` : `Polls close at ${close}.`;
@@ -203,11 +205,12 @@ function whereHTML(h: HowTo, p: PlaceBundle | null): string {
   }
   return `<ul class="pg-links">${links.map((l) => `<li>${l}</li>`).join('')}</ul>${officeHTML}${p && p.notes ? `<p class="pg-note">${escP(p.notes)}</p>` : ''}`;
 }
+/* The rule, and always what to do without an ID (Texas's "Photo ID required" has a way to vote without one); a state
+   page also lists what counts. */
 function idHTML(h: HowTo, full: boolean): string {
   const idr = h.id_rules;
-  const head = `<p><b>${esc(IDS[idr.required] || idr.required)}.</b></p>`;
-  if (!full) return head;
-  return `${head}${idr.accepted.length ? `<ul class="pg-bul">${idr.accepted.map((a) => `<li>${escP(a)}</li>`).join('')}</ul>` : ''}${idr.no_id_option ? `<p><b>No ID?</b> ${escP(idr.no_id_option)}</p>` : ''}`;
+  const none = idr.no_id_option ? `<p><b>No ID?</b> ${escP(idr.no_id_option)}</p>` : '';
+  return `<p><b>${esc(IDS[idr.required] || idr.required)}.</b></p>${full && idr.accepted.length ? `<ul class="pg-bul">${idr.accepted.map((a) => `<li>${escP(a)}</li>`).join('')}</ul>` : ''}${none}`;
 }
 
 /* ---------- the page around it ---------- */
@@ -299,9 +302,10 @@ ${s.body}
 </html>
 `;
 }
-function footerHTML(d: SiteData, lastmod: string): string {
+/* `checked`: when the state's dates and rules were last verified (its last_verified), the facts most of a page is. */
+function footerHTML(d: SiteData, checked: string | null): string {
   const states = Object.keys(d.index.states).sort((a, b) => d.index.states[a].name.localeCompare(d.index.states[b].name));
-  return `<p>Last checked ${esc(year(lastmod))}. Every fact in the guide links to its source.</p>
+  return `${checked ? `<p>Your state's voting dates and rules last checked: ${esc(year(checked))}. Every fact in the guide links to its source.</p>` : '<p>Every fact in the guide links to its source.</p>'}
 <p>Nonpartisan: the guide never tells you how to vote. Made by ${ext('https://kevinhg.com', 'Kevin HG')}.</p>
 <p>No account needed. No ads or cookies. We count visits without identifying you.</p>
 <p><b>All states in the guide:</b></p>
@@ -349,7 +353,7 @@ ${others.length ? `<h2 class="pg-h2">Other places in ${esc(stName)}</h2><ul clas
     path, title, description, h1: short, kicker: `${stName}: ${ELECTION} ballot`, lastmod, body,
     crumbs: [[SITE_NAME, '/'], [stName, statePath(d, p.state)], [short, null]],
     about: { '@type': 'Place', name, containedInPlace: { '@type': 'AdministrativeArea', name: stName } },
-  }, a, footerHTML(d, lastmod));
+  }, a, footerHTML(d, sb.howto.last_verified));
   return { path, file: `${id}.html`, title, description, lastmod, html, kind: 'place', name, summary };
 }
 
@@ -389,7 +393,7 @@ ${ballotHTML(b, s.name)}
     path, title, description, h1: s.name, kicker: `${ELECTION} ballot`, lastmod, body,
     crumbs: [[SITE_NAME, '/'], [s.name, null]],
     about: { '@type': 'AdministrativeArea', name: s.name },
-  }, a, footerHTML(d, lastmod));
+  }, a, footerHTML(d, sb.howto.last_verified));
   return { path, file: `${path.slice(1)}.html`, title, description, lastmod, html, kind: 'state', name: s.name, summary: 'statewide races and measures, key dates, ID rules and where to vote' };
 }
 
@@ -415,7 +419,7 @@ export function notFoundPage(d: SiteData, a: Assets, today: string): string {
     path: '/404', title: `Page not found: ${SITE_NAME}`, description: 'We could not find that page in the guide.', h1: 'Page not found', kicker: `${ELECTION} ballot`,
     lastmod: today, crumbs: [[SITE_NAME, '/'], ['Page not found', null]], about: null,
     body: `<p class="pg-lede">We couldn't find that page in the guide.</p><p style="margin-top:18px"><a class="bigbtn" href="/">Open the guide</a></p>`,
-  }, { ...a, js: null }, footerHTML(d, today)).replace(/<link rel="canonical"[^>]*>\n/, '<meta name="robots" content="noindex">\n').replace(/<script type="application\/ld\+json">[^<]*<\/script>\n/, '');
+  }, { ...a, js: null }, footerHTML(d, null)).replace(/<link rel="canonical"[^>]*>\n/, '<meta name="robots" content="noindex">\n').replace(/<script type="application\/ld\+json">[^<]*<\/script>\n/, '');
 }
 export function sitemapXML(pages: Page[]): string {
   return `<?xml version="1.0" encoding="UTF-8"?>

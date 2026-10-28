@@ -40,6 +40,7 @@ const st8 = await vite.ssrLoadModule('/src/state.ts');
 const results = [];
 const check = (name, ok, extra = '') => { results.push({ name, ok }); console.log(`${ok ? 'PASS' : 'FAIL'}  ${name}${!ok && extra ? `  (${extra})` : ''}`); };
 const TODAY = '2026-10-28';
+const norm0 = (x) => String(x || '').replace(/\s+/g, ' ').trim();
 const A = site.PLACEHOLDER;
 const unesc = (s) => s.replace(/&#39;/g, "'").replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
 const textOf = (html) => unesc(html.replace(/<script[\s\S]*?<\/script>/g, ' ').replace(/<style[\s\S]*?<\/style>/g, ' ').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ');
@@ -107,7 +108,8 @@ check('page titles and descriptions: no em dashes, no all caps', !bad.copy.lengt
 // The walls, worded: a statement of fact on every page, never a recommendation.
 {
   const p = pages.find((x) => x.path === '/austin-tx');
-  check('Austin: the nonpartisan line, the privacy line and the last-checked date are on the page', /never tells you how to vote/.test(p.html) && /We count visits without identifying you/.test(p.html) && /Last checked [A-Z][a-z]{2} \d{1,2}, 2026/.test(p.html));
+  check('Austin: the nonpartisan line, the privacy line and when Texas\'s dates and rules were last checked (its last_verified)', /never tells you how to vote/.test(p.html) && /We count visits without identifying you/.test(p.html) && unesc(p.html).includes(`Your state's voting dates and rules last checked: ${new Date(`${data.states.TX.howto.last_verified}T12:00:00Z`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' })}.`));
+  check('Austin: what to do without a photo ID is on the page, not only that one is required', textOf(bodyOf(p.html)).includes(norm0(data.states.TX.howto.id_rules.no_id_option).slice(0, 60)));
   check('Austin: Kevin\'s ZIP note (zip_caveats) is not on the page', !/Kevin’s|Kevin's|78702 is split/.test(textOf(bodyOf(p.html))));
   check('Austin: its election office and its early voting hours, from the data', p.html.includes('Travis County Clerk') && p.html.includes(data.places['austin-tx'].early_in_person?.hours_short || '(none)'));
   const lastmod = [data.states.TX.howto.last_verified, index.places['austin-tx'].checked, index.states.TX.checked].filter(Boolean).sort().pop();
@@ -140,11 +142,13 @@ check('page titles and descriptions: no em dashes, no all caps', !bad.copy.lengt
     const text = textOf(bodyOf(p.html));
     // Case aside: the app's deshout writes the data's "NOT at your polling place" as "not".
     const gone = (data.states[st].howto.mail_ballot.return_options || []).filter((o) => !text.toLowerCase().includes(norm(o).slice(0, 60).toLowerCase()));
-    const oneRule = /Your mail ballot must/.test(p.html) || !/Mail ballot return deadline: <b>/.test(p.html);
+    const oneRule = /Your mail ballot must/.test(p.html) || !/Mail ballot deadline: <b>/.test(p.html);
     if (gone.length || oneRule) ways.push(`${p.path}: ${gone.length} way(s) missing${oneRule ? ', a one-rule heading' : ''}`);
   }
   check('every page lists each way to return a mail ballot, and its heading names no single rule', !ways.length, ways.slice(0, 4).join('; '));
   check('Texas: the USPS postmark exception is on the page', textOf(bodyOf(pages.find((x) => x.path === '/texas').html)).includes('postmarked by 7:00 PM Nov. 3 and arriving by 5:00 PM'));
+  const early = stateCodes.filter((st) => { const n = data.states[st].howto.early_in_person.hours_note; const text = textOf(bodyOf(pages.find((x) => x.path === site.statePath(data, st)).html)).toLowerCase(); return n && !text.includes(norm(n).slice(0, 60).toLowerCase()); });
+  check('state pages: the early voting note, in the data\'s words, even where there is no window (Alabama, Pennsylvania)', !early.length, early.join(' '));
   check('Maryland: the request deadline says how it depends on delivery (fax or email); Washington: no blanket opening time', /fax or email/.test(md) && !/You can vote from/.test(wa) && /Polls close at 8 PM/.test(wa));
 }
 /* ---------- state pages ---------- */

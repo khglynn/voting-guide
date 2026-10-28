@@ -403,6 +403,9 @@ async function open(browser, ballot, R) {
   const ctx = await browser.newContext({ viewport: { width: W, height: 820 }, deviceScaleFactor: 1, hasTouch: true, isMobile: true });
   try {
     if (BYPASS) await ctx.route((u) => u.origin === ORIGIN, (route) => route.continue({ headers: { ...route.request().headers(), 'x-vercel-protection-bypass': BYPASS } }));
+    // Vercel's visit counts (src/stats.ts) load on a Vercel preview or production: an empty script stands in, so a
+    // sweep never fetches the real one or counts as a visit, and a 404 before Web Analytics is on isn't an error.
+    await ctx.route((u) => u.pathname.startsWith('/_vercel/insights/'), (route) => route.fulfill({ status: 200, contentType: 'text/javascript', body: '' }));
     const page = await ctx.newPage();
     await page.addInitScript(PRESS);
     page.errs = [];

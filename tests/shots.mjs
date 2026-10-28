@@ -26,6 +26,7 @@ const PRESS = `window.__press = (el) => el && el.dispatchEvent(new PointerEvent(
 const browser = await chromium.launch();
 async function open(b, query = '') {
   const ctx = await browser.newContext({ viewport: { width: 380, height: 820 }, deviceScaleFactor: 2, hasTouch: true, isMobile: true });
+  await ctx.route((u) => u.pathname.startsWith('/_vercel/insights/'), (route) => route.fulfill({ status: 200, contentType: 'text/javascript', body: '' })); // Vercel's visit counts never load here (src/stats.ts)
   const page = await ctx.newPage();
   await page.addInitScript(PRESS);
   await page.goto(`${BASE}/?today=${TODAY}${query}`);

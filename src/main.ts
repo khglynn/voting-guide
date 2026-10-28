@@ -5,8 +5,9 @@ import { S, readSaved, persist, parseShareHead, leftBallot } from './state';
 import { stepKey, planKey } from './views/planstrip';
 import { render, anchored } from './render';
 import { RAIL_AT } from './views/ledger';
-import { ensureIndex, openBallot, zipTyped, offerResume, dismissResume, lookZip } from './app';
+import { ensureIndex, openBallot, zipTyped, offerResume, dismissResume, lookZip, viewed } from './app';
 import { A, runAddress, sendReport, reportInput } from './actions';
+import { startStats } from './stats';
 
 /* ---------- taps: pointerdown for mouse and pen; touch fires on a still pointerup so a
    scroll never counts as a tap; click covers the keyboard. Tuned on phones in v2.1; the e2e
@@ -152,12 +153,13 @@ async function boot(): Promise<void> {
   if (last && !last.left) {
     const [st, placesStr] = last.key.split('|');
     const places = placesStr === '-' ? [] : placesStr.split('+').filter((p) => S.index!.places[p]);
-    if (S.index!.states[st]) { if (await openBallot(st, places, last.zip)) offerResume(); return; }
+    if (S.index!.states[st]) { if (await openBallot(st, places, last.zip, { how: 'returning' })) offerResume(); return; }
   }
   // You went back to the first page from a ballot: the first page again, its ZIP in the box and the
   // saved ballot a tap away.
   if (last && last.left) { S.zip = last.zip; S.doorSaved = leftBallot(); }
   render();
+  viewed();
   if (/^\d{5}$/.test(S.zip)) void lookZip(S.zip);
 }
 /* Focus rings are for keyboards. After a touch, the focus a repaint puts back (a band, the "Found:" line,
@@ -166,3 +168,5 @@ async function boot(): Promise<void> {
 document.addEventListener('pointerdown', (e) => { if (e.pointerType === 'touch') document.documentElement.classList.add('touch'); }, { capture: true, passive: true });
 document.addEventListener('keydown', () => { document.documentElement.classList.remove('touch'); }, { capture: true });
 void boot();
+/* Visit counts (stats.ts): on the guide's Vercel hosts only, once the page has loaded and gone idle. */
+startStats();

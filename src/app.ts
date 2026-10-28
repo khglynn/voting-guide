@@ -7,6 +7,7 @@ import { buildBallot, entriesBySection, status, isRCV, isMultiSeat, isMultiJudge
 import { zipState, censusLookup, placeFromGeo, settleAddress, withPlace, tidyAddress, type GeoResult } from './geo';
 import { toast, hideToast } from './util';
 import { keepPrivate } from './errors';
+import { track, type Events } from './stats';
 import { render, renderBallot, renderAddr, anchored, $ } from './render';
 import { setInvolved, type GetInvolved } from './views/pass';
 import { planAgree, applyFills, planParty, planSetup, forgetUndo, fillStands, canUndo } from './model/bulk';
@@ -69,6 +70,16 @@ export async function loadInvolved(): Promise<void> {
 }
 
 /* ---------- views and the Back button ---------- */
+/* Each screen the page shows, counted once each time it changes (stats.ts "view"): the first page, the
+   ballot, My plan, Help friends vote, Full details. */
+let lastView = '';
+export function viewed(): void {
+  if (S.view === 'loading') return;
+  const name: Events['view']['name'] = S.view !== 'ballot' ? 'start' : S.ui.reader ? 'reader' : S.ui.view === 'cheat' ? 'plan' : S.ui.view === 'pass' ? 'share' : 'ballot';
+  if (name === lastView) return;
+  lastView = name;
+  track('view', { name });
+}
 export function resetUI(): void {
   const u = S.ui;
   u.view = 'ballot'; u.row = null; u.page = {}; u.others.clear(); u.keep = null; u.beat = null;
@@ -86,6 +97,7 @@ export function go(view: View, push = true): void {
   hideToast(); // a toast belongs to the view it was raised on
   if (push) { try { history.pushState({ vg: view }, '', location.pathname + location.search); } catch { /* ignore */ } }
   render();
+  viewed();
   if (view === 'cheat') render(['print']);
   window.scrollTo(0, 0);
   if (view === 'pass') void loadInvolved().then(() => { if (S.ui.view === 'pass') render(['pass']); });
@@ -94,6 +106,7 @@ export function openReader(id: string, push = true): void {
   S.ui.reader = id;
   if (push) { try { history.pushState({ vg: S.ui.view, reader: id }, '', location.pathname + location.search); } catch { /* ignore */ } }
   render(['sheet']);
+  viewed();
   document.body.classList.add('sheet-open');
   ($('[data-fk="reader-x"]'))?.focus({ preventScroll: true });
 }
@@ -111,6 +124,7 @@ export function toDoor(): void {
   forgetUndo();
   hideToast();
   render();
+  viewed();
   window.scrollTo(0, 0);
   $('#zip')?.focus({ preventScroll: true });
   // The ZIP still in the box finds its place again (from the cache): the place line and the counts.
@@ -131,7 +145,7 @@ export async function openSaved(): Promise<void> {
   if (!d || !S.index) return;
   const [st, placesStr] = d.key.split('|');
   const places = placesStr === '-' ? [] : placesStr.split('+').filter((p) => S.index!.places[p]);
-  if (S.index.states[st] && await openBallot(st, places, d.zip, { noSetup: true })) leftDoor(); // Back returns here
+  if (S.index.states[st] && await openBallot(st, places, d.zip, { noSetup: true, how: 'returning' })) leftDoor(); // Back returns here
 }
 /* Leaving the first page for a ballot (a ZIP, a place picked, an address): the entry we leave
    becomes the first page, so the phone's Back button returns to it instead of leaving the site. */
@@ -141,6 +155,7 @@ function leftDoor(): void {
     history.replaceState({ vg: 'start' }, '', location.pathname + location.search);
     history.pushState({ vg: 'ballot', door: 1 }, '', location.pathname + location.search);
   } catch { /* ignore */ }
+  viewed();
 }
 window.addEventListener('popstate', (e) => {
   const st = (e.state || {}) as { vg?: View | 'start'; reader?: string };
@@ -152,6 +167,7 @@ window.addEventListener('popstate', (e) => {
   S.ui.sheet = null; S.ui.sheetBack = null;
   if (view !== S.ui.view) { S.ui.view = view; render(); window.scrollTo(0, 0); }
   else render(['sheet']);
+  viewed();
   if (fromReader && !S.ui.reader) document.querySelector<HTMLElement>(`[data-fk="rd-${CSS.escape(fromReader)}"]`)?.focus({ preventScroll: true });
 });
 
@@ -206,8 +222,18 @@ export function cancelLoad(): void { loadSeq++; previewing = null; lookingUp = n
    shown until "Show my ballot". A ballot this device has nothing for takes the first page's choices;
    one it has keeps its own. Reopening a ballot from boot that has nothing yet goes there too.
    `noSetup`: the voter is already on a ballot (an address narrowing "Aurora or Denver" to Aurora).
-   `after`: what to do once it's open (an address's districts), on the first try or on "Try again". */
-type OpenOpts = { share?: ReturnType<typeof parseShareHead>; door?: boolean; noSetup?: boolean; after?: () => void | Promise<void> };
+   `after`: what to do once it's open (an address's districts), on the first try or on "Try again".
+   `how`: how the voter got here, counted when the ballot shows (stats.ts "ballot"); a save link counts as
+   "shared" by itself. A first-page ballot counts when "Show my ballot" shows it (showBallot). None: it
+   isn't a new ballot (an address narrowing the one already open), so nothing is counted. */
+type How = Events['ballot']['how'];
+type OpenOpts = { share?: ReturnType<typeof parseShareHead>; door?: boolean; noSetup?: boolean; how?: How; after?: () => void | Promise<void> };
+/* How the ballot on the first page was found, for when "Show my ballot" shows it. */
+let doorHow: How = 'zip';
+/* A ballot shown, counted by its state code only (stats.ts Events: a place can name the ZIP typed). */
+function shown(b: Ballot, how: How): void {
+  track('ballot', { state: b.st, how });
+}
 export function openBallot(st: string, placeIds: string[], zip: string, opts: OpenOpts = {}): Promise<boolean> {
   const p = loadBallot(st, placeIds, zip, opts);
   previewing = p;
@@ -278,6 +304,10 @@ async function loadBallot(st: string, placeIds: string[], zip: string, opts: Ope
     if (!door) S.b.setupDone = true; // a ballot this device has shown never goes back to the first page on its own
     render();
     persist(true); // saves nothing on the first page
+    viewed();
+    if (door) doorHow = opts.how || 'zip';
+    else if (opts.share || opts.how) shown(ballot, opts.share ? 'shared' : opts.how!);
+    if (opts.share) track('share', { act: 'opened' });
     if (!door) switchOnNow();
     if (!door) window.scrollTo(0, 0);
     if (S.pending) $('[data-fk="restore-yes"]')?.focus();
@@ -294,6 +324,7 @@ async function loadBallot(st: string, placeIds: string[], zip: string, opts: Ope
     S.loadErr = 'We couldn’t load that ballot. Check your connection.';
     S.retry = () => { void openBallot(st, placeIds, zip, opts); };
     render();
+    viewed(); // back on the first page, counted like any other screen
     return false;
   }
 }
@@ -328,10 +359,10 @@ export async function lookZip(v: string): Promise<void> {
   }
   if (S.zip !== v) return; // typed on meanwhile
   const places = idx.zips[v] || [];
-  if (places.length === 1) { if (await openBallot(idx.places[places[0]].state, places, v, { door: true })) dropKeypad(); return; }
+  if (places.length === 1) { if (await openBallot(idx.places[places[0]].state, places, v, { door: true, how: 'zip' })) dropKeypad(); return; }
   if (places.length > 1) { S.zipChoice = { zip: v, placeIds: places }; S.ui.addrOpen = false; render(['mast']); return; }
   const st = zipState(v);
-  if (st && idx.states[st]) { if (await openBallot(st, [], v, { door: true })) dropKeypad(); return; }
+  if (st && idx.states[st]) { if (await openBallot(st, [], v, { door: true, how: 'zip' })) dropKeypad(); return; }
   if (!st) { S.zipErr = 'We couldn’t find that ZIP. Check the digits and try again.'; render(['mast']); return; }
   S.coverage = { kind: 'not_covered', state: st, zip: v };
   render(['mast']);
@@ -400,6 +431,7 @@ export async function showBallot(): Promise<{ n: number; plan: ReturnType<typeof
   leftDoor();
   render();
   persist(true);
+  shown(S.ballot!, doorHow);
   switchOnNow();
   window.scrollTo(0, 0);
   return plan && n ? { n, plan } : null;
@@ -444,13 +476,13 @@ export function dismissResume(): void {
    result lives in geo.ts (placeFromGeo, settleAddress), where the state must match before
    anything else. Three places ask: the first page before any ZIP, the place question, a ballot. */
 /* A place picked on the place question. If an address brought the question up, its districts
-   come along. */
-export async function openChosen(ids: string[], zip: string): Promise<void> {
+   come along. `how`: "list" from the shelf's list of cities; otherwise the ZIP or address that asked. */
+export async function openChosen(ids: string[], zip: string, how?: How): Promise<void> {
   const g = chooserGeo && chooserGeo.zip === zip ? chooserGeo.r : null;
   chooserGeo = null;
   const st = S.index!.places[ids[0]].state;
   const asked = S.zipChoice && S.zipChoice.zip === zip ? S.zipChoice : null;
-  if (await openBallot(st, ids, zip, { door: true, after: g && g.state === st ? () => applyGeo(g) : undefined })) {
+  if (await openBallot(st, ids, zip, { door: true, how: how || (g ? 'address' : 'zip'), after: g && g.state === st ? () => applyGeo(g) : undefined })) {
     S.picked = asked;
     if (asked) render(['mast']);
     doorFocus();
@@ -564,7 +596,7 @@ export async function useMatch(r: GeoResult): Promise<void> {
       $(`[data-fk="cp-${CSS.escape(hit.ids[0])}"]`)?.focus();
       return;
     }
-    if (await openBallot(hit.st, hit.ids, hit.zip, { door: true, after: () => applyGeo(geo) })) doorFocus();
+    if (await openBallot(hit.st, hit.ids, hit.zip, { door: true, how: 'address', after: () => applyGeo(geo) })) doorFocus();
     return;
   }
   if (choosing && S.zipChoice) {
@@ -582,7 +614,7 @@ export async function useMatch(r: GeoResult): Promise<void> {
     const zip = S.zipChoice.zip;
     const asked = S.zipChoice;
     S.ui.addrOpen = false;
-    if (await openBallot(idx.places[hit].state, [hit], zip, { door: true, after: () => applyGeo(geo) })) { S.picked = asked; render(['mast']); doorFocus(); }
+    if (await openBallot(idx.places[hit].state, [hit], zip, { door: true, how: 'address', after: () => applyGeo(geo) })) { S.picked = asked; render(['mast']); doorFocus(); }
     return;
   }
   if (!b) return;

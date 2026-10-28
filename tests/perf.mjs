@@ -11,6 +11,7 @@ const browser = await chromium.launch();
 const out = [];
 for (const [name, zip] of [['Chicago', '60614'], ['Houston', '77002'], ['Aurora or Denver', '80247']]) {
   const ctx = await browser.newContext({ viewport: { width: 380, height: 820 }, hasTouch: true, isMobile: true });
+  await ctx.route((u) => u.pathname.startsWith('/_vercel/insights/'), (route) => route.fulfill({ status: 200, contentType: 'text/javascript', body: '' })); // Vercel's visit counts never load here (src/stats.ts)
   const page = await ctx.newPage();
   const cdp = await ctx.newCDPSession(page);
   await page.goto(`${BASE}/?today=2026-10-19`);
@@ -83,6 +84,7 @@ for (const [name, zip] of [['Chicago', '60614'], ['Houston', '77002'], ['Aurora 
 const wide = [];
 for (const [name, zip] of [['Chicago', '60614'], ['Houston', '77002']]) {
   const ctx = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+  await ctx.route((u) => u.pathname.startsWith('/_vercel/insights/'), (route) => route.fulfill({ status: 200, contentType: 'text/javascript', body: '' })); // Vercel's visit counts never load here (src/stats.ts)
   const page = await ctx.newPage();
   const cdp = await ctx.newCDPSession(page);
   await page.goto(`${BASE}/?today=2026-10-19`);
@@ -108,6 +110,7 @@ for (const [name, zip] of [['Chicago', '60614'], ['Houston', '77002']]) {
 const resume = [];
 for (const [name, zip] of [['Chicago', '60614']]) {
   const ctx = await browser.newContext({ viewport: { width: 380, height: 820 }, hasTouch: true, isMobile: true });
+  await ctx.route((u) => u.pathname.startsWith('/_vercel/insights/'), (route) => route.fulfill({ status: 200, contentType: 'text/javascript', body: '' })); // Vercel's visit counts never load here (src/stats.ts)
   const page = await ctx.newPage();
   const cdp = await ctx.newCDPSession(page);
   await page.goto(`${BASE}/?today=2026-10-19`);

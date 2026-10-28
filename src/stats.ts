@@ -9,12 +9,16 @@
      page has loaded and gone idle, from a chunk of its own, the way the crash reports do (errors.ts).
      Local dev, vite preview and every test run never load it.
    - Every address it sends is cut to its origin and path (cleanUrl): no hash, where a save link's picks
-     ride, and no query (?try=). One that still holds five digits in a row (a ZIP) or an at sign isn't
-     sent at all.
+     ride, and no query (?try=). One whose path still holds five digits in a row (a ZIP) or an at sign
+     isn't sent at all. beforeSend can't trim the referrer: Vercel's script adds another site's referrer
+     after it, as the browser gives it (usually just that site's domain).
    - A few events (track), each a fixed name with coarse, finite values: the place, how a ballot opened,
      which form posted, which screen showed, a save link made or opened. Never a ZIP, an address, a Census
      answer, a pick, a contact or anything typed. A value that isn't a short plain token, or that holds
      five digits in a row, drops the whole event.
+   - Only va('event') goes out, through track(). Never call identify, group or enableCookie: they write
+     the browser's storage or a cookie. The script itself is Vercel's, served from /_vercel/insights and
+     not pinned (only the loader package is); beforeSend is the guard.
    The How text's "Your privacy" item (views/shelf.ts) promises this: read it before changing anything here.
    Off switch: turn Web Analytics off for the project in Vercel, or take startStats() out of main.ts. */
 import type { BeforeSendEvent } from '@vercel/analytics';
@@ -28,7 +32,8 @@ export interface Events {
   request: { kind: 'city' | 'picks' | 'source' | 'report' | 'follow_up' };
   /* A screen shown: the first page, the ballot, My plan, Help friends vote, Full details. */
   view: { name: 'start' | 'ballot' | 'plan' | 'share' | 'reader' };
-  /* A save link made ("Save a link to my picks") or opened. */
+  /* made: the "Save a link to my picks" panel opened, showing the link (each time it opens); opened: a
+     save link opened a ballot. */
   share: { act: 'made' | 'opened' };
 }
 export type EventName = keyof Events;
@@ -44,13 +49,15 @@ export const onVercel = (host: string): boolean =>
   host === 'kevinhg.com' || host.endsWith('.kevinhg.com') || host.endsWith('.vercel.app');
 
 const ZIPLIKE = /\d{5}/;
-/* An event's address, cut to its origin and path: the hash and the query go. Null (don't send it) when
-   what's left, as written or decoded, holds five digits in a row or an at sign, or won't decode. */
+/* An event's address, cut to its origin and path: the hash, the query and any user name go. Null (don't
+   send it) when the path, as written or decoded, holds five digits in a row or an at sign, or the address
+   won't parse or decode. Only the path is checked: a preview's host can hold five digits in a row
+   (voting-guide-a12345bcd-kevinhg.vercel.app), and a host is the same for every visitor. */
 export function cleanUrl(url: string): string | null {
-  const bare = String(url).split(/[?#]/)[0];
+  let u: URL;
   let read: string;
-  try { read = decodeURIComponent(bare); } catch { return null; }
-  return [bare, read].some((s) => ZIPLIKE.test(s) || s.includes('@')) ? null : bare;
+  try { u = new URL(String(url)); read = decodeURIComponent(u.pathname); } catch { return null; }
+  return [u.pathname, read].some((s) => ZIPLIKE.test(s) || s.includes('@')) ? null : u.origin + u.pathname;
 }
 /* What Vercel's script runs on every page view and event before sending it: the address cut down, or
    nothing sent. Everything else on the event passes through as it came. */

@@ -741,7 +741,8 @@ function roundTrip(name, stCode, places, mutate) {
   check('stats: cleanUrl passes a plain path as it is', stats.cleanUrl('https://vote.kevinhg.com/') === 'https://vote.kevinhg.com/' && stats.cleanUrl('https://voting-guide-git-analytics-kevinhg.vercel.app/') === 'https://voting-guide-git-analytics-kevinhg.vercel.app/');
   check('stats: a ZIP in the path, written or encoded, sends nothing', stats.cleanUrl('https://vote.kevinhg.com/78704') === null && stats.cleanUrl('https://vote.kevinhg.com/78%3704') === null);
   check('stats: an at sign in the path, written or encoded, sends nothing', stats.cleanUrl('https://vote.kevinhg.com/a@b.co') === null && stats.cleanUrl('https://vote.kevinhg.com/a%40b.co') === null);
-  check('stats: a path that won’t decode sends nothing', stats.cleanUrl('https://vote.kevinhg.com/%E0%A4%A') === null);
+  check('stats: a path that won’t decode, or an address that won’t parse, sends nothing', stats.cleanUrl('https://vote.kevinhg.com/%E0%A4%A') === null && stats.cleanUrl('not an address') === null);
+  check('stats: only the path is checked: a preview host with five digits in a row still counts, and a user name goes', stats.cleanUrl('https://voting-guide-a12345bcd-kevinhg.vercel.app/?try=aunt') === 'https://voting-guide-a12345bcd-kevinhg.vercel.app/' && stats.cleanUrl('https://me@vote.kevinhg.com/') === 'https://vote.kevinhg.com/');
   const ev = { type: 'event', url: 'https://vote.kevinhg.com/?try=fresh#v2~CO~aurora-co~80010', payload: { name: 'view', data: { name: 'plan' } } };
   const sent = stats.beforeSend(ev);
   check('stats: beforeSend cuts the address and keeps the rest of the event', !!sent && sent.url === 'https://vote.kevinhg.com/' && sent.type === 'event' && sent.payload === ev.payload && ev.url.includes('#'), JSON.stringify(sent));
@@ -791,7 +792,7 @@ function roundTrip(name, stCode, places, mutate) {
   st.S.ui.report = { ...st.S.ui.report, kind: 'support' };
   const sup = views.shelf.shelfHTML();
   st.S.ui.report = was;
-  check('stats: the How text says what is counted and what never is', how.includes('<li><b>Your privacy.</b> No accounts, no ads, no cookies. We count visits with Vercel’s cookie-free analytics (pages, rough location, device type), which never sees your address, ZIP, picks or who you are. Your picks stay on your device unless you share your save link. An address you type goes only to the Census Bureau’s lookup, and we never keep it. If the page breaks, it sends us a crash report with no address, no picks and no IP.</li>'));
+  check('stats: the How text says what is counted and what never is', how.includes('<li><b>Your privacy.</b> No accounts, no ads, no cookies. We count visits with Vercel’s cookie-free analytics: the screens you open, the forms you send, the city or state of your ballot, the site that sent you here, and your rough location, browser and device type. It never gets your address, ZIP or picks, doesn’t keep your IP, and can’t tell who you are. Your picks stay on your device unless you share your save link. An address you type goes only to the Census Bureau’s lookup, and we never keep it. If the page breaks, it sends us a crash report with no address, no picks and no IP.</li>'));
   check('stats: no page says "no tracking" any more', !/no tracking/i.test(how) && !/no tracking/i.test(sup) && sup.includes('The guide is free, with no ads and no cookies.'));
 }
 

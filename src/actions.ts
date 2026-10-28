@@ -7,7 +7,7 @@ import { status, sectionOf, rankMax, ordinal, chosenIds, entriesBySection, pageW
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
 import { render, renderRow, renderSection, renderSummaries, renderOff, renderLens, flushLens, markBehind, renderBallot, renderAddr, rowEl, scrollRowIntoView, rowTop, holdRow, opensLow, anchored, $ } from './render';
 import { growOpen, inkRow, followFold, glideTo, land, stopGlide, shrinkAway, collapseRow, finishCollapse, glide } from './motion';
-import { openBallot, openChosen, go, openReader, runAddress, reopenAddr, useMatch, toDoor, showBallot, rechoose, openSaved, fillWhy, leaveBallot } from './app';
+import { openBallot, openChosen, go, openReader, runAddress, reopenAddr, useMatch, toDoor, showBallot, rechoose, openSaved, fillWhy, leaveBallot, viewed } from './app';
 import { judgeBatch } from './model/judges';
 import { planAgree, planParty, planJudges, planSetup, applyFills, undoFills, emptyPlan, touchUndo, type Plan } from './model/bulk';
 import { toggleChip, setParty, setSources, noEndorsements, doorNone, chipState, unreadHere, CHIPS, type ChipKey } from './model/lens';
@@ -912,6 +912,7 @@ A['reader-close'] = () => {
   if (history.state && history.state.reader) { history.back(); return; }
   S.ui.reader = null;
   render(['sheet']);
+  viewed();
   document.body.classList.remove('sheet-open');
   focusFk(`rd-${id}`);
 };

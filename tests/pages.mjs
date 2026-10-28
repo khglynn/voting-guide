@@ -152,6 +152,41 @@ check('page titles and descriptions: no em dashes, no all caps', !bad.copy.lengt
   check('state pages: the early voting note, in the data\'s words, even where there is no window (Alabama, Pennsylvania)', !early.length, early.join(' '));
   check('Maryland: the request deadline says how it depends on delivery (fax or email); Washington: no blanket opening time', /fax or email/.test(md) && !/You can vote from/.test(wa) && /Polls close at 8 PM/.test(wa));
 }
+/* ---------- per-county links and dated text (main's where-to-vote parts A and B, Oct 28) ---------- */
+{
+  const austin = pages.find((x) => x.path === '/austin-tx').html;
+  const ac = data.places['austin-tx'].by_county || [];
+  check('Austin: each county\'s own where-to-vote links, labeled by county (Travis\'s maps, Williamson\'s, Hays\'s)', ac.length === 3 && ac.every((c) => austin.includes(`<b>${c.county} County</b>`) && Object.values(c.lookups).every((u) => austin.includes(`href="${u.replace(/&/g, '&amp;')}"`))));
+  check('Austin: the office\'s direct lines for all three counties', (data.places['austin-tx'].county_election_office.lines || []).every((l) => austin.includes(l.label.replace(/&/g, '&amp;')) && austin.includes(l.phone)));
+  // Every link kind: each county's own where it has one, else the state's, so no page loses a way to find where to vote.
+  const lost = [];
+  for (const id of placeIds) {
+    const pb = data.places[id];
+    const h = bl.buildBallot(data.states[pb.state], [pb]).howto;
+    const html = pages.find((x) => x.path === `/${id}`).html;
+    for (const k of ['early_in_person', 'election_day']) {
+      const st = k === 'early_in_person' ? data.states[pb.state].howto.early_in_person.lookup_url : data.states[pb.state].howto.election_day.lookup_url;
+      const cl = (pb.by_county || []).length > 1 ? pb.by_county : null;
+      const has = cl ? cl.every((c) => c.lookups[k]) : false;
+      const want = has ? cl.map((c) => c.lookups[k]) : [h[k].lookup_url || st].filter(Boolean);
+      if (k === 'early_in_person' && !h.early_in_person.available) continue;
+      if (want.some((u) => !html.includes(`href="${String(u).replace(/&/g, '&amp;')}"`))) lost.push(`${id} ${k}`);
+    }
+  }
+  check('every place page keeps a way to find early voting and Election Day places (county\'s or state\'s)', !lost.length, lost.join(' '));
+  // Dated text: shown as it reads on the build date, or, when it changes again before the election, left to the app.
+  const later = placeIds.filter((id) => (data.places[id].dated || []).some((x) => x.path === 'notes' && x.from > TODAY));
+  check('a place note that changes after the build date is left to the app, not shown stale', later.length > 0 && later.every((id) => !pages.find((x) => x.path === `/${id}`).html.includes('class="pg-note"')), later.join(' '));
+  const eday = site.allPages(data, A, '2026-11-03');
+  const nyc = data.places['nyc-brooklyn-ny'];
+  const last = (nyc.dated || []).filter((x) => x.path === 'notes').sort((a, b) => (a.from < b.from ? -1 : 1)).pop();
+  check('built on Election Day, a dated note reads its newest text', !!last && textOf(eday.find((x) => x.path === '/nyc-brooklyn-ny').html).includes(norm0(last.text).slice(0, 60)));
+  // A state slot dated to change later (none today but Texas's gotchas, which no page shows) is left out too.
+  const fake = JSON.parse(JSON.stringify(data));
+  fake.states.TX.howto.dated = [...(fake.states.TX.howto.dated || []), { path: 'mail_ballot.return_options.0', from: '2026-11-01', text: 'x' }];
+  const tx0 = textOf(site.statePage(fake, 'TX', A, TODAY).html).toLowerCase();
+  check('a state rule dated to change later is left to the app (a return option, in a test copy of the data)', !tx0.includes(norm0(data.states.TX.howto.mail_ballot.return_options[0]).slice(0, 50).toLowerCase()) && tx0.includes(norm0(data.states.TX.howto.mail_ballot.return_options[1]).slice(0, 50).toLowerCase()));
+}
 /* ---------- state pages ---------- */
 {
   const missing = stateCodes.filter((st) => {

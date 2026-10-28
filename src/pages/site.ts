@@ -20,11 +20,11 @@
    went through the workbench's GPT pass (claude-plans/2026-10-21-third-pass/discovery-log.md).
 
    scripts/build-pages.mjs loads this module through Vite's SSR loader, as tests/model.mjs loads the model. */
-import type { Contest, HowTo, Index, PlaceBundle, StateBundle } from '../types';
+import type { Contest, Dated, HowTo, Index, Lookups, PlaceBundle, StateBundle } from '../types';
 import { buildBallot, sectionOf, SECTIONS, type Ballot, type SectionKey } from '../ballot';
 import { S } from '../state';
 import { cleanOffice, rowTitle } from '../model/labels';
-import { clock, isMailState } from '../model/plan';
+import { applyDated, clock, isMailState, localHowto } from '../model/plan';
 import { esc, fmtDate } from '../util';
 import { escP, telHTML } from '../views/common';
 
@@ -152,67 +152,90 @@ interface DateRow { date: string; lead: string; when: string; detail: string | n
 const PLAIN_TIME = /^\s*\d{1,2}(?::\d{2})?\s*[ap]\.?m\.?(?:\s+[A-Z]{2,3})?\s*$/i;
 /* The key dates, each with its own rule in the data's words underneath: a headline date alone can drop what the
    rule qualifies (Maryland's request deadline differs by how the ballot reaches you; Codex, Oct 28). */
-function dateRows(h: HowTo, place: PlaceBundle | null): DateRow[] {
+function dateRows(h: HowTo, place: PlaceBundle | null, pending: Pending): DateRow[] {
   const out: DateRow[] = [];
+  const now = (slot: string, text: string | null | undefined): string | null => (text && !pending(slot) ? text : null);
   const mail = isMailState(h);
   const reg: Record<string, string> = { online: 'Last day to register online', mail: 'Last day to register by mail', in_person: 'Last day to register in person' };
-  h.registration.deadlines.forEach((d) => { if (d.date) out.push({ date: d.date, lead: `${reg[d.method] || 'Registration deadline'}: `, when: fmtDate(d.date), detail: d.rule || null }); });
+  h.registration.deadlines.forEach((d, i) => { if (d.date) out.push({ date: d.date, lead: `${reg[d.method] || 'Registration deadline'}: `, when: fmtDate(d.date), detail: now(`registration.deadlines.${i}.rule`, d.rule) }); });
   const rq = h.mail_ballot.request_deadline;
   // Where every voter gets a ballot in the mail, the "request" date is a replacement's, often one county's: its
   // rule says so, so it leads without a date of its own.
-  if (rq && rq.date && rq.rule && mail) out.push({ date: rq.date, lead: 'Mail ballot request and replacement dates', when: '', detail: rq.rule });
-  else if (rq && rq.date) out.push({ date: rq.date, lead: 'Last day to ask for a mail ballot: ', when: fmtDate(rq.date), detail: rq.rule || null });
+  const rqRule = now('mail_ballot.request_deadline.rule', rq && rq.rule);
+  if (rq && rq.date && rqRule && mail) out.push({ date: rq.date, lead: 'Mail ballot request and replacement dates', when: '', detail: rqRule });
+  else if (rq && rq.date && !mail) out.push({ date: rq.date, lead: 'Last day to ask for a mail ballot: ', when: fmtDate(rq.date), detail: rqRule });
   const ep = h.early_in_person;
   // The window with its note: Florida's is a state minimum, Colorado's counties may open sooner, Oregon has no early
   // voting as such. A place's own one-line hours stand in when it has them; where there's no window, the note alone.
   if (ep.available && ep.start && ep.end) {
-    out.push({ date: ep.start, lead: `${mail ? 'In-person voting' : 'Early voting'}: `, when: `${fmtDate(ep.start)} to ${fmtDate(ep.end)}`, detail: place?.early_in_person?.hours_short || ep.hours_note || null });
-  } else if (ep.hours_note) out.push({ date: ep.end || ep.start || h.election_date, lead: 'Can you vote before Election Day?', when: '', detail: ep.hours_note });
+    out.push({ date: ep.start, lead: `${mail ? 'In-person voting' : 'Early voting'}: `, when: `${fmtDate(ep.start)} to ${fmtDate(ep.end)}`, detail: place?.early_in_person?.hours_short || now('early_in_person.hours_note', ep.hours_note) });
+  } else if (now('early_in_person.hours_note', ep.hours_note)) out.push({ date: ep.end || ep.start || h.election_date, lead: 'Can you vote before Election Day?', when: '', detail: ep.hours_note });
   const r = h.mail_ballot.return_deadline;
   // The ways to return it, in the data's words: each has its own rule (Texas takes a USPS ballot postmarked by 7 PM
   // that arrives the next day; Georgia doesn't count postmarks; Codex round 2), so the heading names none of them.
-  out.push({ date: r.date, lead: 'Mail ballot deadline: ', when: fmtDate(r.date), detail: r.time, list: h.mail_ballot.return_options || [] });
+  out.push({ date: r.date, lead: 'Mail ballot deadline: ', when: fmtDate(r.date), detail: now('mail_ballot.return_deadline.time', r.time), list: (h.mail_ballot.return_options || []).filter((_, i) => !pending(`mail_ballot.return_options.${i}`)) });
   const ed = h.election_day;
   const close = clock(ed.polls_close) || ed.polls_close;
   const hours = !mail && PLAIN_TIME.test(ed.polls_open) && PLAIN_TIME.test(ed.polls_close) ? `You can vote from ${clock(ed.polls_open)} to ${close}.` : `Polls close at ${close}.`;
-  out.push({ date: h.election_date, lead: 'Election Day: ', when: fmtDate(h.election_date), detail: [hours, ed.in_line_rule].filter(Boolean).join(' ') });
+  out.push({ date: h.election_date, lead: 'Election Day: ', when: fmtDate(h.election_date), detail: [hours, now('election_day.in_line_rule', ed.in_line_rule)].filter(Boolean).join(' ') });
   return out.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
 }
 const datesHTML = (rows: DateRow[]): string => `<ul class="pg-dates">${rows.map((r) => `<li>${r.when ? `${esc(r.lead)}<b>${esc(r.when).replace(/ to /, ' to&nbsp;')}</b>` : `<b>${esc(r.lead)}</b>`}${r.detail ? `<span>${escP(r.detail)}</span>` : ''}${r.list && r.list.length ? `<ul class="pg-bul pg-ways">${r.list.map((x) => `<li>${escP(x)}</li>`).join('')}</ul>` : ''}</li>`).join('')}</ul>`;
 const ext = (url: string, text: string): string => `<a href="${esc(url)}" rel="noopener">${esc(text)}</a>`;
-function whereHTML(h: HowTo, p: PlaceBundle | null): string {
+/* A slot whose text the data changes on a date still to come (`dated`, plan.applyDated): a static page would keep
+   the old text until the next deploy, so it's left out and left to the app, which applies it on the day. Text whose
+   last change has come is shown as it reads on the build date. */
+export const pendingIn = (dated: Dated[] | undefined, today: string) => {
+  const paths = (dated || []).filter((x) => x.from > today).map((x) => x.path);
+  return (slot: string): boolean => paths.some((x) => x === slot || x.startsWith(`${slot}.`) || slot.startsWith(`${x}.`));
+};
+type Pending = (slot: string) => boolean;
+const LOOK_LABEL: [keyof Lookups, string][] = [['early_in_person', 'Early voting locations'], ['election_day', 'Election Day locations'], ['drop_box', 'Ballot drop boxes'], ['tracking', 'Track your mail ballot']];
+function whereHTML(h: HowTo, p: PlaceBundle | null, pending: Pending): string {
   const links: string[] = [];
   const mail = isMailState(h);
   const early = h.early_in_person.available ? h.early_in_person.lookup_url : null;
   const day = h.election_day.lookup_url;
-  if (early && early === day) links.push(ext(early, 'Find where to vote'));
+  // A place across county lines (Austin: Travis, Williamson, Hays): each county's own tools, labeled, as My plan
+  // shows them before it knows your county; the state's statewide lookup stands in for none of them.
+  const counties = h.county_links && h.county_links.length > 1 ? h.county_links : [];
+  const byCounty = counties.length ? `<p class="pg-cty"><b>Find your county’s voting places:</b></p><ul class="pg-ctys">${counties.map((c) => `<li><b>${esc(`${c.county} County`)}</b> ${LOOK_LABEL.filter(([k]) => c.lookups[k]).map(([k, l]) => ext(c.lookups[k]!, l)).join(' · ')}</li>`).join('')}</ul>` : '';
+  // The state's lookup stays for any kind not every county has (Atlanta's counties list no Election Day page).
+  const own = (k: keyof Lookups): boolean => counties.length > 0 && counties.every((c) => !!c.lookups[k]);
+  const e = own('early_in_person') ? null : early, dd = own('election_day') ? null : day;
+  if (e && e === dd) links.push(ext(e, 'Find where to vote'));
   else {
-    if (early) links.push(ext(early, mail ? 'Find a vote center' : 'Find early voting locations'));
-    if (day) links.push(ext(day, 'Find your Election Day polling place'));
+    if (e) links.push(ext(e, mail ? 'Find a vote center' : 'Find early voting locations'));
+    if (dd) links.push(ext(dd, 'Find your Election Day polling place'));
   }
   if (h.mail_ballot.drop_box_lookup_url) links.push(ext(h.mail_ballot.drop_box_lookup_url, 'Find a ballot drop box'));
   if (h.mail_ballot.tracking_url) links.push(ext(h.mail_ballot.tracking_url, 'Track your mail ballot'));
   if (h.registration.check_url) links.push(ext(h.registration.check_url, 'Check your registration'));
   const sample = (p && p.sample_ballot_url) || h.sample_ballot_url;
   if (sample) links.push(ext(sample, p && p.sample_ballot_url ? 'See your official sample ballot' : 'See official sample ballots'));
-  const office = p?.county_election_office;
+  const office = p && !pending('county_election_office') ? p.county_election_office : null;
   let officeHTML = '';
   if (office) {
-    // "Travis County Clerk, Elections Division (VoteTravis), 5501 Airport Blvd., Austin 78751": the name, then its address.
+    // "Travis County Clerk, Elections Division (VoteTravis), 5501 Airport Blvd., Austin 78751": the name, then its
+    // address. Then its main phone (labeled when there are direct lines too), each direct line, its hours: My plan's card.
     const m = office.name.match(/^(.*?)[,:]\s*(\d[\s\S]*)$/);
     const [n, a] = m ? [m[1], m[2]] : [office.name, ''];
-    officeHTML = `<p class="pg-office"><b>Your election office:</b> ${office.url ? ext(office.url, n) : esc(n)}${office.phone ? `<br>${telHTML(office.phone)}` : ''}${a ? `<br>${esc(a)}` : ''}</p>`;
+    const phone = office.phone ? `<br>${office.phone_label ? `${esc(office.phone_label)}: ` : ''}${telHTML(office.phone)}` : '';
+    const lines = (office.lines || []).map((l) => `<br>${esc(l.label)}: ${telHTML(l.phone)}${l.hours ? ` (${esc(l.hours)})` : ''}`).join('');
+    officeHTML = `<p class="pg-office"><b>Your election office:</b> ${office.url ? ext(office.url, n) : esc(n)}${phone}${lines}${a ? `<br>${esc(a)}` : ''}${office.hours ? `<br>${esc(office.hours)}` : ''}</p>`;
   }
   // The place's note before the office: an address right before "If you live in ..." reads to the address guard
   // (scripts/check-addresses.mjs) as someone's home, and tests/pages.mjs runs it over every built page.
-  return `<ul class="pg-links">${links.map((l) => `<li>${l}</li>`).join('')}</ul>${p && p.notes ? `<p class="pg-note">${escP(p.notes)}</p>` : ''}${officeHTML}`;
+  const note = p && p.notes && !pending('notes') ? `<p class="pg-note">${escP(p.notes)}</p>` : '';
+  return `${byCounty}<ul class="pg-links">${links.map((l) => `<li>${l}</li>`).join('')}</ul>${note}${officeHTML}`;
 }
 /* The rule, and always what to do without an ID (Texas's "Photo ID required" has a way to vote without one); a state
    page also lists what counts. */
-function idHTML(h: HowTo, full: boolean): string {
+function idHTML(h: HowTo, full: boolean, pending: Pending): string {
   const idr = h.id_rules;
-  const none = idr.no_id_option ? `<p><b>No ID?</b> ${escP(idr.no_id_option)}</p>` : '';
-  return `<p><b>${esc(IDS[idr.required] || idr.required)}.</b></p>${full && idr.accepted.length ? `<ul class="pg-bul">${idr.accepted.map((a) => `<li>${escP(a)}</li>`).join('')}</ul>` : ''}${none}`;
+  const none = idr.no_id_option && !pending('id_rules.no_id_option') ? `<p><b>No ID?</b> ${escP(idr.no_id_option)}</p>` : '';
+  const ok = idr.accepted.filter((_, i) => !pending(`id_rules.accepted.${i}`));
+  return `<p><b>${esc(IDS[idr.required] || idr.required)}.</b></p>${full && ok.length ? `<ul class="pg-bul">${ok.map((a) => `<li>${escP(a)}</li>`).join('')}</ul>` : ''}${none}`;
 }
 
 /* ---------- the page around it ---------- */
@@ -234,6 +257,7 @@ const PAGE_CSS = `
 .pg-dates{display:grid;gap:10px;margin-top:10px}.pg-dates b{white-space:nowrap}.pg-dates span{display:block;font-size:15px;color:var(--ink-2)}
 .pg-links{display:grid;gap:4px;margin-top:10px}.pg-links a{display:inline-flex;min-height:40px;align-items:center}
 .pg-office,.pg-note,.pg p{margin-top:10px}
+.pg-ctys{display:grid;gap:6px;margin-top:6px}.pg-ctys a{display:inline-flex;min-height:40px;align-items:center}
 .pg-bul{list-style:disc;padding-left:20px;margin-top:8px;display:grid;gap:4px}.pg-ways{font-size:15px;color:var(--ink-2);margin-top:4px}
 .pg-places{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:10px}.pg-places a{display:inline-flex;min-height:40px;align-items:center}
 .pg-foot{margin-top:36px;padding-top:14px;padding-bottom:40px;border-top:1px solid var(--rule-2)}
@@ -316,10 +340,16 @@ function footerHTML(d: SiteData, checked: string | null): string {
 
 /* ---------- a place ---------- */
 export function placePage(d: SiteData, id: string, a: Assets, today: string): Page {
-  const p = d.places[id];
-  const sb = d.states[p.state];
+  const p0 = d.places[id];
+  const sb = d.states[p0.state];
   const ix = d.index.places[id];
-  const b = buildBallot(sb, [p]);
+  const b = buildBallot(sb, [p0]);
+  // The plan as of the build date, for the whole place (no voter's county), with the place's own text as it reads
+  // that day; text still to change is left to the app (pendingIn).
+  b.howto = localHowto(sb.howto, [p0], null, today);
+  const p = p0.dated ? applyDated(p0, p0.dated, today) : p0;
+  const pendState = pendingIn(sb.howto.dated, today), pendPlace = pendingIn(p0.dated, today);
+  const pending: Pending = (slot) => pendState(slot) || pendPlace(slot);
   const h = b.howto;
   const name = placeName(p);
   const short = shortLabel(p.label);
@@ -338,11 +368,11 @@ export function placePage(d: SiteData, id: string, a: Assets, today: string): Pa
 <a class="bigbtn" href="/?place=${esc(id)}">Open your ${esc(short)} ballot</a>
 <p class="fine">Enter your address in the guide to see your races and make a voting plan you can print. Your picks stay on your device.${ix.with_picks ? ` Compare endorsements from ${ix.with_picks} sources side by side, or hide them.` : ''}</p>
 <h2 class="pg-h2" id="dates">Key dates</h2>
-${datesHTML(dateRows(h, p))}
+${datesHTML(dateRows(h, p, pending))}
 <h2 class="pg-h2" id="where">Where to vote</h2>
-${whereHTML(h, p)}
+${whereHTML(h, p, pending)}
 <h2 class="pg-h2" id="id">What to bring</h2>
-${idHTML(h, false)}<p><a href="${esc(statePath(d, p.state))}#id">What counts as ID in ${esc(stName)}</a></p>
+${idHTML(h, false, pending)}<p><a href="${esc(statePath(d, p.state))}#id">What counts as ID in ${esc(stName)}</a></p>
 </div>
 <h2 class="pg-h2" id="ballot">What's on the ballot in ${esc(short)}</h2>
 <p>${plural(races, 'race')} and ${plural(measures, 'measure')} across ${esc(short)}.${b.groups.length || b.mayApply.size ? ' Your address decides which ones are on your ballot. Enter it in the guide to see yours.' : ''}</p>
@@ -364,7 +394,9 @@ export function statePage(d: SiteData, st: string, a: Assets, today: string): Pa
   const sb = d.states[st];
   const s = d.index.states[st];
   const b = buildBallot(sb, []);
+  b.howto = localHowto(sb.howto, [], null, today); // as of the build date
   const h = b.howto;
+  const pending = pendingIn(sb.howto.dated, today);
   const { races, measures } = countItems(b);
   const lastmod = newest([sb.howto.last_verified, s.checked], today);
   const title = `${s.name} voting guide: your ${ELECTION} ballot`;
@@ -378,12 +410,12 @@ export function statePage(d: SiteData, st: string, a: Assets, today: string): Pa
 <h2 class="pg-h2">Local guides in ${esc(s.name)}</h2>
 <ul class="pg-places">${s.places.map((id) => `<li><a href="${esc(placePath(id))}">${esc(shortLabel(d.index.places[id].label))}</a></li>`).join('')}</ul>
 <h2 class="pg-h2" id="dates">Key dates</h2>
-${datesHTML(dateRows(h, null))}
-${h.model_plain ? `<h2 class="pg-h2">How voting works in ${esc(s.name)}</h2><p>${escP(h.model_plain)}</p>` : ''}
+${datesHTML(dateRows(h, null, pending))}
+${h.model_plain && !pending('model_plain') ? `<h2 class="pg-h2">How voting works in ${esc(s.name)}</h2><p>${escP(h.model_plain)}</p>` : ''}
 <h2 class="pg-h2" id="where">Where to vote</h2>
-${whereHTML(h, null)}
+${whereHTML(h, null, pending)}
 <h2 class="pg-h2" id="id">What to bring</h2>
-${idHTML(h, true)}
+${idHTML(h, true, pending)}
 </div>
 <h2 class="pg-h2" id="ballot">Statewide races and measures</h2>
 <p>${plural(races, 'race')} and ${plural(measures, 'measure')} statewide. Your ballot also has races for where you live.</p>

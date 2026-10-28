@@ -99,6 +99,7 @@ export interface Along {
   build: string;              // the site's short commit, from the build
   device: string;             // "Safari 18 on iPhone, 390px wide"
   errors: string[];           // the last errors the page caught (errors.ts), newest first
+  crash?: string;             // the id of the last crash report Sentry took in (errors.ts lastErrorId), so a note links to it
 }
 export interface Shelf {
   kind: ShelfKind;

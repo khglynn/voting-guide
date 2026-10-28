@@ -1726,6 +1726,137 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('errors: one whose stack names the Census lookup is still dropped whole', newest().msg !== 'Error: script failed', JSON.stringify(newest()));
   }
 
+  /* ---------- crash reports (scrub.ts, errors.ts): what may leave for Sentry ----------
+     The site's How text says a crash report has no address, no picks and no IP. Every event passes
+     scrubEvent on its way out, and every envelope envelopeAllowed (sentry.ts); these are their rules on
+     deeply nested events, without a browser. The e2e checks the same in a real one, on the envelopes. */
+  {
+    const { scrub, errors: errs } = views;
+    const O = 'https://vote.kevinhg.com';
+    const HASH = 'v1~TX~austin-tx~78704~zz9pick';
+    const SECRETS = ['12 testing lane'];
+    const ctx = (over = {}) => {
+      const words = over.words || SECRETS;
+      return { origin: O, path: '/', hashes: [HASH, 'notes-PRIVHASH9'], holds: (ss, joined) => errs.holdsPrivate(ss, words, joined), bare: errs.bareURLs, readings: errs.readings, ua: 'TestAgent/1.0', ...over };
+    };
+    const frame = (filename, fn = 'f') => ({ filename, function: fn, lineno: 1, colno: 2, in_app: true });
+    const ev = () => ({
+      event_id: 'e0', level: 'error', platform: 'javascript', environment: 'production', release: 'abc1234', timestamp: 1,
+      exception: { values: [
+        { type: 'TypeError', value: `cause: ${O}/data/state-TX.json?zip=78704#${HASH}`, stacktrace: { frames: [frame(`${O}/assets/index-Bx9.js?v=2#frag`)] }, mechanism: { type: 'chained', parent_id: 0, data: { target: 'x' } } },
+        { type: 'Error', value: 'Save failed for notes-PRIVHASH9', stacktrace: { frames: [frame(`${O}/assets/index-Bx9.js`, 'g'), frame('<anonymous>', '?')] }, mechanism: { type: 'generic', handled: true } },
+      ] },
+      contexts: { trace: { trace_id: 't1', span_id: 's1' }, app: { at: `${O}/?today=1#${HASH}` } },
+      debug_meta: { images: [{ type: 'sourcemap', code_file: `${O}/assets/index-Bx9.js?v=2#${HASH}`, debug_id: 'd1' }] },
+      extra: { nested: [{ deep: { at: `${O}/?today=2026-10-19#${HASH}`, note: "O'Test (rear) https://x.test/a.js?b=1#c" } }] },
+      tags: { mood: 'fine' }, modules: { x: '1' }, message: 'm',
+      user: { ip_address: '{{auto}}', id: 'u1' },
+      breadcrumbs: [{ category: 'ui.click', message: 'button[data-act=pick]' }],
+      request: { url: `${O}/?today=1#${HASH}`, headers: { Referer: 'https://elsewhere.test/?q=x' } },
+      sdk: { name: 'sentry.javascript.browser', version: '11.8.0', integrations: ['GlobalHandlers'], settings: { infer_ip: 'never' }, extra: 'gone' },
+      sdkProcessingMetadata: { scope: 'not for sending' },
+    });
+    const input = ev();
+    const before = JSON.stringify(input);
+    const out = scrub.scrubEvent(input, ctx());
+    const js = JSON.stringify(out);
+    check('crash reports: a nested event passes, and the one handed in is left as it was', !!out && out !== input && JSON.stringify(input) === before, js);
+    check('crash reports: no save link anywhere, hash or words, and no "#"', !!out && !/zz9pick|PRIVHASH9|v1~|#/.test(js) && out.exception.values[1].value === 'Save failed for [save link]', js);
+    check('crash reports: every URL loses its query and hash, in messages, frames and source map ids', !!out && !/today=|zip=|v=2|frag|\?[^"]/.test(js)
+      && out.exception.values[0].value === `cause: ${O}/data/state-TX.json` && out.exception.values[0].stacktrace.frames[0].filename === `${O}/assets/index-Bx9.js`
+      && out.debug_meta.images[0].code_file === `${O}/assets/index-Bx9.js` && out.debug_meta.images[0].debug_id === 'd1', js);
+    check('crash reports: only known fields go: no user, breadcrumbs, extra, tags, modules, message, SDK bookkeeping, mechanism data, or contexts but the trace', !!out
+      && ['user', 'breadcrumbs', 'extra', 'tags', 'modules', 'message', 'sdkProcessingMetadata'].every((k) => !(k in out))
+      && JSON.stringify(out.contexts) === '{"trace":{"trace_id":"t1","span_id":"s1"}}' && !('data' in out.exception.values[0].mechanism) && !('extra' in out.sdk) && !/elsewhere|Referer|O'Test/.test(js), js);
+    check('crash reports: the request is the origin and path with the browser; the rest goes as it came (release, mechanism, the never-infer-IP setting)', !!out
+      && JSON.stringify(out.request) === JSON.stringify({ url: `${O}/`, headers: { 'User-Agent': 'TestAgent/1.0' } })
+      && out.release === 'abc1234' && out.sdk.settings.infer_ip === 'never' && out.exception.values[1].mechanism.type === 'generic' && out.exception.values[0].mechanism.parent_id === 0, js);
+    // A thrown value that isn't an Error: the SDK's words for it stay, what it held never goes (Codex, Oct 25:
+    // a rejected {picks, notes} went out whole in extra.__serialized__).
+    const obj = { exception: { values: [{ type: 'UnhandledRejection', value: 'Object captured as promise rejection with keys: notes, picks', mechanism: { type: 'auto.browser.global_handlers.onunhandledrejection', handled: false, synthetic: true } }] },
+      extra: { __serialized__: { picks: { 'tx-governor': 'Jane Q Candidate' }, notes: { 'tx-governor': 'my own words' } } }, sdk: {} };
+    const objOut = scrub.scrubEvent(obj, ctx());
+    const str = scrub.scrubEvent({ exception: { values: [{ type: 'UnhandledRejection', value: 'Non-Error promise rejection captured with value: Jane Q Candidate' }] } }, ctx());
+    const bare = scrub.scrubEvent({ exception: { values: [{ type: 'Error', value: 'Jane Q Candidate', mechanism: { type: 'generic', synthetic: true } }] } }, ctx());
+    check('crash reports: a thrown object or string never sends what it held, only that one was thrown', !!objOut && !/Jane|my own words|__serialized__|picks\W*:/.test(JSON.stringify(objOut))
+      && objOut.exception.values[0].value === 'Object captured as promise rejection with keys: [not sent]' && str.exception.values[0].value === 'Non-Error promise rejection captured with value: [not sent]'
+      && bare.exception.values[0].value === 'A thrown value that isn’t an Error: [not sent]', `${JSON.stringify(objOut)} | ${JSON.stringify(str)}`);
+    // Dropped whole.
+    const census = ev(); census.extra.nested[0].deep.script = 'https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=1+A+St';
+    const cap = ev(); cap.exception.values[1].value = 'x at GEOCODING.GEO.CENSUS.GOV';
+    check('crash reports: anything that mentions the Census lookup, however deep (even in a part that wouldn’t go) and in any case, never leaves', scrub.scrubEvent(census, ctx()) === null && scrub.scrubEvent(cap, ctx()) === null);
+    const addr = (v, words) => { const e = ev(); e.exception.values[1].value = v; return scrub.scrubEvent(e, ctx(words ? { words } : {})); };
+    check('crash reports: anything that mentions the address never leaves: as typed, in capitals, spaced out, URL-encoded either way', addr('Lookup failed for 12 Testing Lane') === null && addr('LOOKUP 12 TESTING  LANE') === null && addr('q=12%20Testing%20Lane') === null && addr('q=12+Testing+Lane') === null);
+    check('crash reports: nor with tabs or line breaks between its words, repeated encoded spaces, or encoded twice (Codex, Oct 25)', addr('a 12\tTesting\tLane b') === null && addr('12\nTesting\r\nLane') === null && addr('q=12%20%20Testing%09Lane') === null && addr('q=12%2520Testing%2520Lane') === null
+      && (() => { const e = ev(); e.extra.q = '12\tTesting Lane'; return scrub.scrubEvent(e, ctx()); })() === null, 'one got through');
+    check('crash reports: nor with a quote in it, as JSON writes it', (() => { const e = ev(); e.extra.q = 'see "12 O"Test Lane"'; return scrub.scrubEvent(e, ctx({ words: ['12 o"test lane'] })); })() === null && addr('12 O\\"Test Lane', ['12 o"test lane']) === null);
+    const elsewhere = (filename) => { const e = ev(); e.exception.values[1].stacktrace.frames.push(frame(filename)); return scrub.scrubEvent(e, ctx()); };
+    check('crash reports: thrown by a script that isn’t ours (an extension, a look-alike host) never leaves', elsewhere('chrome-extension://abcdef/inject.js') === null && elsewhere(`${O}.evil.test/x.js`) === null && elsewhere('https://cdn.example.test/ads.js') === null);
+    check('crash reports: frames that name no script don’t count; the newest one that does decides', elsewhere('[native code]') !== null && (() => { const e = ev(); e.exception.values[1].stacktrace.frames = [frame('https://cdn.example.test/lib.js'), frame(`${O}/assets/index-Bx9.js`), frame('<anonymous>')]; return scrub.scrubEvent(e, ctx()); })() !== null);
+    const empty = ev(); empty.exception.values = [{ type: 'Error', value: 'Script error.' }];
+    check('crash reports: a browser’s empty "Script error." says nothing, so it isn’t sent; nor is an event with no error in it', scrub.scrubEvent(empty, ctx()) === null && scrub.scrubEvent({ message: 'hello' }, ctx()) === null);
+    check('crash reports: a short hash is left alone (it can’t be a save link, and replacing it would mangle words)', (() => { const o = scrub.scrubEvent({ exception: { values: [{ type: 'Error', value: 'plan view' }] } }, ctx({ hashes: ['plan'] })); return !!o && o.exception.values[0].value === 'plan view'; })());
+    // The last check, on the bytes: an envelope's lines of JSON.
+    const env = (item) => [JSON.stringify({ event_id: 'e1', sent_at: 'now', sdk: { name: 'sentry.javascript.browser' } }), JSON.stringify({ type: 'event' }), JSON.stringify(item)].join('\n');
+    check('crash reports: the envelope check lets a clean report by', scrub.envelopeAllowed(env(out), ctx()));
+    // Accented letters, encoded (security review, Oct 25): a stray "%" in the same text made the decoder give up on
+    // the whole of it, so "Pe%C3%B1a+St" was never read as "peña st". Now each line and each string is read on its
+    // own, %XX runs are read as UTF-8, and escapes that won't decode count as private: when in doubt, send nothing.
+    const PENA = ['12 peña st'];
+    const mp = (t, w = PENA) => errs.holdsPrivate([t], w);
+    check('crash reports: an accented address, encoded, is found even beside a stray "%" or a bad escape in the same text', mp('q=12+Pe%C3%B1a+St and 100% sure') && mp('q=12%20Pe%C3%B1a%20St, then %E0%A4') && mp('12 Pe%C3%B1a St') && mp('q=12%2520Pe%25C3%25B1a%2520St'));
+    check('crash reports: escapes the browser wouldn’t decode (a Latin-1 "%F1") count as private when there is an address to protect', mp('q=12+Pe%F1a+St') && !errs.holdsPrivate(['q=12+Pe%F1a+St'], []));
+    check('crash reports: ordinary text with a "%" or with good escapes isn’t taken for the address', !mp('progress 100% done') && !mp('q=caf%C3%A9+au+lait') && !mp('12 Peña Road') && !mp('{"m":"50%25 off"}'));
+    const split = ev(); split.exception.values[0].value = 'progress 100% done'; split.exception.values[1].value = 'lookup q=12+Pe%C3%B1a+St failed';
+    check('crash reports: one string’s stray "%" can’t hide the address in another string of the same report', scrub.scrubEvent(split, ctx({ words: PENA })) === null
+      && !scrub.envelopeAllowed(env({ a: 'progress 100% done', b: 'q=12+Pe%C3%B1a+St' }), ctx({ words: PENA })));
+    // Codex round 2, Oct 25: escapes inside encodings; an address split between two fields (security review);
+    // fixed words for a thrown non-Error; a save link with its "~" encoded; a lone surrogate.
+    check('crash reports: an escape inside an encoding unwinds too ("%5Ct", "%5Cu0020")', mp('12%5CtTesting%5CtLane', SECRETS) && mp('12%5Cu0020Testing%5Cu0020Lane', SECRETS) && mp('12\\u0020Testing\\u0020Lane', SECRETS) && mp('12%255Ct%2520Testing Lane', SECRETS));
+    const halves = ev(); halves.exception.values[1].value = "lookup failed for 12 O'Test"; halves.exception.values[1].stacktrace.frames[0].filename = 'Lane';
+    check('crash reports: an address split between two fields still counts', scrub.scrubEvent(halves, ctx({ words: ["12 o'test lane"] })) === null
+      && !scrub.envelopeAllowed(env({ a: "for 12 O'Test", b: 'Lane is wrong' }), ctx({ words: ["12 o'test lane"] })));
+    const wrapped = (value, type = 'Error') => scrub.scrubEvent({ exception: { values: [{ type, value, mechanism: { type: 'auto.browser.global_handlers.onunhandledrejection', handled: false, synthetic: true } }] } }, ctx());
+    check('crash reports: a thrown non-Error gets fixed words, never a prefix the page wrote', wrapped('Private choice Jane Q Purposeful with value: secret tail').exception.values[0].value === 'A thrown value that isn’t an Error: [not sent]'
+      && wrapped('Object captured as exception with keys: picks').exception.values[0].value === 'Object captured as exception with keys: [not sent]'
+      && wrapped('Event `ErrorEvent` captured as promise rejection with message `Jane`').exception.values[0].value === 'An event object captured as promise rejection: [not sent]'
+      && wrapped('Non-Error promise rejection captured with value: Jane', 'UnhandledRejection').exception.values[0].value === 'Non-Error promise rejection captured with value: [not sent]');
+    const tilde = (v) => { const e = ev(); e.exception.values[1].value = v; return scrub.scrubEvent(e, ctx()); };
+    check('crash reports: a save link with its "~" encoded, once or twice, or JSON-escaped, never leaves', tilde(`see ${HASH.replace(/~/g, '%7E')}`) === null && tilde(`see ${HASH.replace(/~/g, '%257E')}`) === null && tilde('x v1%7EDC%7Edc-ward-1') === null && tilde('x v1\\u007EDC') === null
+      && !scrub.envelopeAllowed(env({ v: HASH.replace(/~/g, '%7E') }), ctx()));
+    let threw = false; let lone = null;
+    try { lone = [errs.holdsPrivate(['nothing here'], ['12 test \ud800 lane']), errs.holdsPrivate(['at 12 Test \ud800 Lane'], ['12 test \ud800 lane'])]; } catch { threw = true; }
+    check('crash reports: a lone surrogate in the address doesn’t break the check', !threw && lone[0] === false && lone[1] === true, JSON.stringify(lone));
+    // Round four (security review, Oct 25): one rule, failing closed. Box text is private at five characters, number or
+    // not, as a substring, with its street line; keys are judged as well as values; a common word in the box drops reports.
+    const hp = (t, w) => errs.holdsPrivate([t], w);
+    check('crash reports: a street typed without its number is private, written any way', hp('lookup Shoal Creek Blvd broke', ['shoal creek blvd']) && hp('q=Shoal+Creek+Blvd&x=1', ['shoal creek blvd']) && hp('a\tSHOAL\nCreek Blvd', ['shoal creek blvd']));
+    check('crash reports: box text counts as a substring, so a half-typed street is found inside the whole one', hp('On purpose: Shoal Creek Blvd is long', ['shoal creek bl']) && hp('x12 testing lanes', SECRETS));
+    check('crash reports: keys are judged as well as values: a key holding the address drops the report', (() => { const e = ev(); e.extra['12 Testing Lane'] = 1; return scrub.scrubEvent(e, ctx()); })() === null && !scrub.envelopeAllowed(env({ '12 Testing Lane': 'x' }), ctx()));
+    check('crash reports: a common word left in the box ("trace") drops even an ordinary report, by design: a dropped report is fine, a sent address is not', scrub.scrubEvent(ev(), ctx({ words: ['trace'] })) === null);
+    errs.keepPrivate('500 Shoal Creek Blvd, Austin TX', 'Shoal Ridge Way, Austin');
+    check('crash reports: a box’s street line is kept too, with or without a number', errs.privateWords().includes('500 shoal creek blvd') && errs.privateWords().includes('shoal ridge way'), errs.privateWords().join(' | '));
+    // The shape layer: no digits, nothing quoted but a plain name from the code, a type that is a name.
+    const said = (value, type = 'TypeError') => { const o = scrub.scrubEvent({ exception: { values: [{ type, value, stacktrace: { frames: [frame(`${O}/assets/index-Bx9.js`, 'Object.f [as g]'), frame(`${O}/assets/index-Bx9.js`, 'evil(); code')] } }] } }, ctx()); return o && o.exception.values[0]; };
+    const shaped = ["Cannot read properties of undefined (reading 'dataset')", 'Unexpected token \'x\', "{"picks":{"a":"Jane"}}" is not valid JSON', "Failed: '#i-tx-gov' is not a valid selector.", 'lookup 12 Elm, 78704 failed', "undefined is not an object (evaluating 'a.b.c')", 'Can’t find variable: foo', `cause: ${O}/data/state-TX.json`, 'Save failed for [save link]'].map((v) => said(v).value);
+    check('crash reports: a message keeps plain words, names from the code and cut URLs; a number, a JSON snippet or a quoted selector becomes "…"', JSON.stringify(shaped) === JSON.stringify(["Cannot read properties of undefined (reading 'dataset')", "Unexpected token 'x', … is not valid JSON", 'Failed: … is not a valid selector.', 'lookup … Elm, … failed', "undefined is not an object (evaluating 'a.b.c')", 'Can’t find variable: foo', `cause: ${O}/data/state-TX.json`, 'Save failed for [save link]']), JSON.stringify(shaped));
+    check('crash reports: a type that isn’t a name becomes "Error", and a frame’s function that isn’t a name becomes "?"', said('x', 'Jane Q Doe').type === 'Error' && said('x').stacktrace.frames[0].function === 'Object.f [as g]' && said('x').stacktrace.frames[1].function === '?');
+    const plain = ev(); plain.exception.values[0].value = 'progress 100% done';
+    check('crash reports: and a report whose only "%" is ordinary text still goes', scrub.scrubEvent(plain, ctx({ words: PENA })) !== null);
+
+    check('crash reports: and holds back one with the address (even JSON-escaped with a tab), the Census lookup, a save link’s hash or words', !scrub.envelopeAllowed(env({ value: '12\tTesting Lane' }), ctx())
+      && !scrub.envelopeAllowed(env({ u: 'https://geocoding.geo.census.gov/x' }), ctx()) && !scrub.envelopeAllowed(env({ v: 'notes-PRIVHASH9' }), ctx()) && !scrub.envelopeAllowed(env({ v: 'x v1~DC~a' }), ctx())
+      && !scrub.envelopeAllowed('not json at all: 12 testing lane', ctx()));
+    // errors.ts: what counts as private, and the problem report's list follows the same rule.
+    errs.keepPrivate('12 Quartz Way, Springfield, IL 62701', 'Springfield, IL', null, '  ', '12\tQuartz\nWay');
+    const words = errs.privateWords();
+    check('crash reports: an address and its street line are kept to compare against, number or not (a bare city keeps its name: a dropped report is fine)', words.includes('12 quartz way, springfield, il 62701') && words.includes('12 quartz way') && words.includes('springfield, il') && words.includes('springfield'), words.join(' | '));
+    check('crash reports: the rule finds them however they’re written', [['Failed: 12 QUARTZ   WAY'], ['?a=12%20Quartz%20Way'], ['?a=12+quartz+way'], ['{"m":"12\\tQuartz\\nWay"}'], ['12%2520Quartz%2520Way']].every((x) => errs.holdsPrivate(x)) && !errs.holdsPrivate(['Quartz is a mineral']));
+    const was = JSON.stringify(errs.lastErrors()[0]);
+    errs.note(new Error('Lookup failed for 12 Quartz Way'));
+    check('crash reports: the problem report’s list drops an error that mentions the address too', JSON.stringify(errs.lastErrors()[0]) === was, JSON.stringify(errs.lastErrors()[0]));
+  }
+
   /* ---------- coverage (Oct 25): how many sources a ballot has, a thin place, one tap ----------
      build-data counts them (scripts/coverage.mjs) over the ballot the app builds; the app says them
      (model/coverage.ts, views/coverage.ts). */

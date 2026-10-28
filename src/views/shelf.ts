@@ -15,7 +15,7 @@ import { S, type Shelf, type ShelfKind, type Along } from '../state';
 import type { Index } from '../types';
 import { ballotCoverage, askedWord, type Ask } from '../model/coverage';
 import { esc, fmtDate } from '../util';
-import { lastErrors } from '../errors';
+import { lastErrors, lastErrorId } from '../errors';
 import { FORM, formURL, ext, isOpen, kevinLink, reportWhere, BUY_ME_A_COFFEE_URL } from './common';
 
 export const SHELF_TITLE: Record<ShelfKind, string> = {
@@ -127,6 +127,7 @@ export function collectAlong(): Along {
     build: import.meta.env.VITE_BUILD || 'dev',
     device: deviceWords(navigator.userAgent, window.innerWidth, navigator.maxTouchPoints || 0),
     errors: lastErrors().map((e) => `${e.msg}${e.at ? ` (${e.at})` : ''} at ${e.time}`),
+    crash: lastErrorId() || '',
   };
 }
 /* The values the page fills in itself. One place, so the list and the post can't drift apart. */
@@ -134,7 +135,8 @@ const aboutOf = (r: Pick<Shelf, 'what' | 'tag'>): string => (r.tag && r.what ? `
 const linkOf = (a: Along): string => `${a.url} (build ${a.build || 'dev'})`;
 /* The "We'll send along" list. Every value the page fills in is on it word for word (Codex, Oct 21:
    "you can see what we send" has to hold): the page (or, from a row, the race with its record id), the
-   place and ZIP, the page's address with the build, the data date, the browser and the errors caught.
+   place and ZIP, the page's address with the build, the data date, the browser, the errors caught, and
+   the id of the crash report the page sent, when Sentry took one in (so a note and its crash meet).
    It also goes into "What's wrong?" after "Sent along:". A city request's is shorter. */
 export function alongLines(r: Pick<Shelf, 'kind' | 'what' | 'tag' | 'along'>): string[] {
   const a = r.along;
@@ -142,7 +144,7 @@ export function alongLines(r: Pick<Shelf, 'kind' | 'what' | 'tag' | 'along'>): s
   const tail = [`Page address: ${linkOf(a)}`, `Data built: ${a.data || 'unknown'}`];
   if (r.kind === 'city' || r.kind === 'source') return [...head, ...tail].filter(Boolean);
   const about = aboutOf(r);
-  return [...head, about ? `About: ${about}` : '', ...tail, `Browser: ${a.device}`, ...a.errors.map((e) => `Error the page caught: ${e}`)].filter(Boolean);
+  return [...head, about ? `About: ${about}` : '', ...tail, `Browser: ${a.device}`, ...a.errors.map((e) => `Error the page caught: ${e}`), a.crash ? `Crash report: ${a.crash}` : ''].filter(Boolean);
 }
 
 /* What the form gets, by its ids (Kevin's sheet keeps its five questions). A report: the race or
@@ -301,7 +303,7 @@ function howHTML(): string {
       <li><b>Lean labels.</b> Each source sits on a five-step scale from left to right, set by outside ratings, its party or its stated mission, never by whom it endorses. Tap “Why this lean” to see the basis.</li>
       <li><b>Honest gaps.</b> “Took no stand” means a source looked and chose not to endorse. “No endorsement found” means we looked and found none. “Not checked yet” means we haven’t looked. We never fill gaps to look balanced.</li>
       <li><b>Judges.</b> A review comes from the official body or bar association that wrote it, worded as their rating, not ours.</li>
-      <li><b>Your privacy.</b> No accounts, no ads, no tracking. Your picks stay on your device unless you share your save link. An address you type goes only to the Census Bureau’s lookup, and we never keep it.</li>
+      <li><b>Your privacy.</b> No accounts, no ads, no tracking. Your picks stay on your device unless you share your save link. An address you type goes only to the Census Bureau’s lookup, and we never keep it. If the page breaks, it sends us a crash report with no address, no picks and no IP.</li>
       <li><b>Mistakes.</b> Open any race or measure and tap “Report a problem”.</li>
     </ul>
     <p class="small">“Voting is underway in every state”: ${ext('https://electioninnovation.org/research/dates-for-2026-early-in-person-and-mail-voting/', 'Center for Election Innovation & Research')}.</p>

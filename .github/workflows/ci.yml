@@ -71,7 +71,12 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           cache: npm
       - run: npm ci
+      # With a test DSN (project 0, which takes nothing), so the crash-report client loads here the way it does
+      # on Vercel, and the e2e catches its reports (tests/e2e.mjs, "crash reports"). Every e2e page aborts
+      # Sentry's ingest otherwise, so nothing a check does is ever filed.
       - run: npm run build
+        env:
+          VITE_SENTRY_DSN: https://0e2e0e2e0e2e0e2e0e2e0e2e0e2e0e2e@o0.ingest.us.sentry.io/0
 
       # Playwright's own CI guide says caching browsers rarely beats downloading them. We cache only the
       # headless shell (about 100MB) keyed on the exact Playwright version; OS libraries are installed every run.
@@ -97,6 +102,7 @@ jobs:
         env:
           BASE: http://localhost:4173
           SHOTS_DIR: .tmp/e2e-shots
+          SENTRY_E2E: '1'   # the crash-report checks fail, rather than skip, if the build above lost its DSN
         run: node tests/e2e.mjs
 
       - name: Every-ballot sweep (fast on pull requests, full on main and manual runs)

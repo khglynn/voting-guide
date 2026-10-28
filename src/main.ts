@@ -1,5 +1,5 @@
 /* Boot and input wiring. Flows live in app.ts, controls in actions.ts, drawing in render.ts. */
-import { note } from './errors'; // first, so it hears errors from everything after it
+import { reportError } from './errors'; // first, so it hears errors from everything after it
 import './styles.css';
 import { S, readSaved, persist, parseShareHead, leftBallot } from './state';
 import { stepKey, planKey } from './views/planstrip';
@@ -20,7 +20,7 @@ function fire(el: HTMLElement): void {
   el.classList.add('is-pressed');
   window.setTimeout(() => el.classList.remove('is-pressed'), 120);
   dismissResume(); // "Welcome back" lasts until the first tap, whatever it is
-  try { void fn(el.dataset, el); } catch (e) { console.error(e); note(e); } // a control's own crash, for a problem report (errors.ts)
+  try { void fn(el.dataset, el); } catch (e) { console.error(e); reportError(e); } // a control's own crash: for a problem report, and a crash report (errors.ts)
   // Count the click-dedupe window from when the action finished painting, not when it started:
   // on a slow phone a long repaint could otherwise outlast it and let the follow-up click fire twice.
   lastTap = Date.now();

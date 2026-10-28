@@ -6,6 +6,7 @@ import { S, emptyBallotState, noSections, persist, leaveLast, leftBallot, savedB
 import { buildBallot, entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, rankMax, decisionItems, chosenIds, sectionOf, sameSeat, type Ballot } from './ballot';
 import { zipState, censusLookup, placeFromGeo, settleAddress, withPlace, tidyAddress, type GeoResult } from './geo';
 import { toast, hideToast } from './util';
+import { keepPrivate } from './errors';
 import { render, renderBallot, renderAddr, anchored, $ } from './render';
 import { setInvolved, type GetInvolved } from './views/pass';
 import { planAgree, applyFills, planParty, planSetup, forgetUndo, fillStands, canUndo } from './model/bulk';
@@ -477,6 +478,10 @@ export async function runAddress(addr: string): Promise<void> {
   const door = !b && !choosing;
   S.ui.addrFail = '';
   if (addr.trim().length < 6) { S.ui.addrMsg = 'Enter a street address with the city or ZIP.'; paintAddr(); return; }
+  // A crash report that mentions it never leaves (errors.ts). Only once it passes as an address: a short
+  // word turned away here stays covered as whole words while it sits in the box, and doesn't silence
+  // every later report that happens to contain it (Codex, Oct 25).
+  keepPrivate(addr);
   S.ui.addrBusy = true; S.ui.addrMsg = null; paintAddr();
   // This ballot's district maps load while the Census answers (they never load before a lookup).
   warmMaps(b);
@@ -486,12 +491,16 @@ export async function runAddress(addr: string): Promise<void> {
   const st = door ? (typedZip ? zipState(typedZip) : null) : choosing && S.zipChoice ? S.index!.places[S.zipChoice.placeIds[0]]?.state || null : b!.st;
   const zip = door ? typedZip : choosing && S.zipChoice ? S.zipChoice.zip : S.b.zip || null;
   const full = withPlace(addr, st, zip);
+  keepPrivate(full);
   let list: GeoResult[];
   try {
     list = await censusLookup(full);
     if (!list.length && full !== addr.trim()) list = await censusLookup(addr.trim());
   }
   catch { addrFailed('The Census lookup didn’t answer.', 'down'); return; }
+  // What the Census matched, as it sent it and as the page shows it ("Found:", "Which one is yours?"),
+  // and where it is: its point and its block's, as numbers written out.
+  keepPrivate(...list.flatMap((r) => [r.matched, tidyAddress(r.matched), ...[r.point, r.block].flatMap((p) => (p ? [String(p.lon), String(p.lat)] : []))]));
   S.ui.addrBusy = false;
   if (!list.length) { addrFailed('The Census lookup couldn’t find that address. Try adding the city and ZIP.', 'miss'); return; }
   // Several matches (an address typed without its city can match more than one): "Which one is

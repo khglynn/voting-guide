@@ -3,6 +3,8 @@
    BASE=https://<deploy>.vercel.app node tests/e2e.mjs  (a Vercel preview or production)
    SHOTS_DIR=...   where screenshots go (default .tmp/e2e-shots, gitignored; shots/ holds the committed reference set)
    VERCEL_AUTOMATION_BYPASS_SECRET=...  only if Deployment Protection is on for the deployment under test
+   SENTRY_E2E=1   the crash-report checks fail, rather than skip, when the build has no VITE_SENTRY_DSN (CI
+                  and scripts/ship.sh set it and build with a test DSN; Vercel's builds carry the real one)
    Exits non-zero on any failed check or console error.
 
    Rewritten Oct 19 2026 for the ledger. The model contracts (link formats, restore results,
@@ -24,6 +26,9 @@ const BYPASS = process.env.VERCEL_AUTOMATION_BYPASS_SECRET || '';
 /* The copy pass (Oct 19): the paywall note's words, from the copy table. */
 const PW_NOTE_RE = /behind a paywall, so we couldn’t read/i;
 
+/* Sentry's ingest, the real DSN's host or the test one's (o0.ingest.us.sentry.io). */
+const isSentry = (u) => /(^|\.)sentry\.io$/i.test(u.hostname);
+
 const results = [];
 const check = (name, ok, extra = '') => { results.push({ name, ok, extra }); console.log(`${ok ? 'PASS' : 'FAIL'}  ${name}${extra ? `  (${extra})` : ''}`); };
 
@@ -35,6 +40,9 @@ async function newPage(opts = {}) {
   // Nothing a check does may land in Kevin's form: its response sheet is the pipeline's queue. The report
   // sheet's own checks catch the post with page.route, which comes before this.
   await ctx.route('https://docs.google.com/forms/**/formResponse*', (route) => route.abort());
+  // Nor in Kevin's Sentry: a check that throws on purpose must never file a crash report there. The crash
+  // report checks catch the envelopes with page.route (catchCrash), which comes before this.
+  await ctx.route(isSentry, (route) => route.abort());
   const page = await ctx.newPage();
   page.errors = [];
   // Only our own origin counts: a slow Google Fonts request is not a bug in the guide.
@@ -3405,6 +3413,315 @@ for (const width of [380, 1280]) {
     check('Orlando cheat sheet: tapping it reopens that question on the ballot', !(await page.$('#cheat')) && !!(await page.$(`.row[data-q="${key}"].is-open`)));
   }
   noErrors(page, 'Cheat sheet district line');
+  await ctx.close();
+}
+
+/* ---------- crash reports (Kevin, Oct 21: "I would love error logging") ----------
+   A production build with VITE_SENTRY_DSN fetches Sentry's client (sentry.ts) once the page has loaded and
+   gone idle. These checks catch its envelopes before they leave (catchCrash) and read them. What must never
+   go: the address typed or the one the Census found, anything about the Census lookup, a save link (hash
+   or words), the IP, breadcrumbs. scrub.ts holds the rules; tests/model-ledger.mjs checks them without a
+   browser. A build without the DSN has no client: then these skip, unless SENTRY_E2E=1 (CI, ship.sh). */
+const CRASH_CHUNK = /\/assets\/sentry-[\w-]+\.js(?:\?|$)/;
+const NEED_CRASH = process.env.SENTRY_E2E === '1';
+let crashSkipSaid = false;
+/* Catch every envelope, answer 200 (so the page counts it as received) and keep its three lines. */
+async function catchCrash(page) {
+  const list = [];
+  await page.route(isSentry, (route) => {
+    const body = route.request().postData() || '';
+    const lines = body.split('\n').filter(Boolean).map((l) => { try { return JSON.parse(l); } catch { return null; } });
+    list.push({ body, head: lines[0] || {}, event: lines[2] || {} });
+    return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ id: (lines[0] || {}).event_id || '' }) });
+  });
+  return list;
+}
+/* Before a page loads: resolves true once the client's chunk has arrived (and had a moment to start),
+   false when this build never asks for it. */
+const watchCrashClient = (page) => page.waitForRequest((r) => CRASH_CHUNK.test(r.url()), { timeout: 15000 })
+  .then(async (r) => { await r.response(); await page.waitForTimeout(500); return true; })
+  .catch(() => false);
+function noCrashClient(label) {
+  if (NEED_CRASH) { check(`${label}: the build loads its crash-report client`, false, 'no sentry chunk was fetched: build with VITE_SENTRY_DSN set (CI and ship.sh use a test DSN)'); return; }
+  if (!crashSkipSaid) console.log('SKIP  Crash reports: this build has no VITE_SENTRY_DSN, so no client to check (CI and scripts/ship.sh build with a test one; SENTRY_E2E=1 makes this a failure)');
+  crashSkipSaid = true;
+}
+/* An uncaught error, thrown from the page itself. Every message says "On purpose", so noErrors can let it by. */
+const throwOnPage = (page, msg) => page.addScriptTag({ content: `setTimeout(function () { throw new Error(${JSON.stringify(msg)}); }, 0);` });
+const forgive = (page) => { page.errors = page.errors.filter((e) => !/On purpose/.test(e)); };
+async function until(fn, ms = 8000) {
+  const t0 = Date.now();
+  while (Date.now() - t0 < ms) { if (fn()) return true; await new Promise((r) => setTimeout(r, 100)); }
+  return fn();
+}
+const TEST_ONE = { result: { addressMatches: [{ matchedAddress: 'TEST ONE, AUSTIN, TX, 78704', coordinates: { x: -97.7431, y: 30.2672 }, geographies: {
+  States: [{ STATE: '48' }], 'Incorporated Places': [{ BASENAME: 'Austin' }], '119th Congressional Districts': [{ BASENAME: '37' }],
+  '2024 State Legislative Districts - Upper': [{ BASENAME: '14' }], '2024 State Legislative Districts - Lower': [{ BASENAME: '49' }] } }] } };
+const ADDRESS = /testing lane|testing%20lane|testing\+lane|test one/i;
+// The address, then errors that mention it (as typed, as the Census found it, URL-encoded): nothing goes.
+// Then a plain error: exactly one report, with nothing about the address or the Census in it, no user, no
+// breadcrumbs, the page as its origin and path, and Sentry told never to fill in the IP.
+{
+  const { ctx, page } = await newPage();
+  const crash = await catchCrash(page);
+  await page.route('https://geocoding.geo.census.gov/**', (route) => {
+    const cb = new URL(route.request().url()).searchParams.get('callback');
+    return route.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify(TEST_ONE)})` });
+  });
+  const ready = watchCrashClient(page);
+  await openBallot(page, '78704');
+  if (!(await ready)) noCrashClient('Crash reports');
+  else {
+    const html = await (await page.request.get(`${BASE}/`)).text();
+    const main = ((html.match(/<script[^>]+src="([^"]+)"/) || [])[1]) || '';
+    const mainJS = main ? await (await page.request.get(new URL(main, `${BASE}/`).href)).text() : '';
+    check('Crash reports: nothing about Sentry in the page itself; its client is a chunk of its own', !!mainJS && !/sentry/i.test(html) && !/sentry\.javascript\.browser/.test(mainJS) && /import\("\.\/sentry-[\w-]+\.js"\)/.test(mainJS), main);
+    const t = await page.evaluate(() => {
+      const nav = performance.getEntriesByType('navigation')[0];
+      const r = performance.getEntriesByType('resource').find((e) => /\/assets\/sentry-/.test(e.name));
+      return { load: nav ? nav.loadEventEnd : 0, chunk: r ? r.startTime : -1 };
+    });
+    check('Crash reports: the client is fetched only after the page’s load event', t.chunk > 0 && t.load > 0 && t.chunk >= t.load, JSON.stringify(t));
+    await tap(page, '.addrbox [data-act="addr-open"]');
+    await page.fill('#addr-in', '12 Testing Lane');
+    await page.locator('form[data-form="addr"] button[type=submit]').tap();
+    await page.waitForSelector('.addrbox .addr-found', { timeout: 8000 });
+    await throwOnPage(page, 'On purpose: the lookup for 12 Testing Lane broke');
+    await throwOnPage(page, 'On purpose: Found Test One, Austin, TX 78704');
+    await throwOnPage(page, 'On purpose: q=12%20Testing%20Lane&benchmark=Public_AR_Current');
+    await throwOnPage(page, 'On purpose: 12\tTesting\tLane, with tabs');
+    await throwOnPage(page, 'On purpose: the point was 30.2672');
+    await page.waitForTimeout(800);
+    const none = crash.length;
+    await throwOnPage(page, 'On purpose: a plain crash');
+    await until(() => crash.length > none);
+    await page.waitForTimeout(800);
+    check('Crash reports: an error that mentions the address (as typed, as the Census found it, URL-encoded, with tabs) or where it is, sends nothing', none === 0, crash.map((c) => c.event.exception?.values?.[0]?.value).join(' | '));
+    const c = crash[0] || { body: '', event: {} };
+    check('Crash reports: then a plain error sends exactly one report, with no address and no "census" in it', crash.length === 1 && /On purpose: a plain crash/.test(c.body) && !ADDRESS.test(c.body) && !/census/i.test(c.body), `${crash.length}: ${c.body.slice(0, 300)}`);
+    const ev = c.event;
+    check('Crash reports: no user, no IP, no breadcrumbs; the page is its origin and path; Sentry is told never to fill in the IP', !('user' in ev) && !('breadcrumbs' in ev) && !/ip_address|\{\{auto\}\}/.test(c.body)
+      && ev.request && ev.request.url === `${BASE}/` && ev.sdk && ev.sdk.settings && ev.sdk.settings.infer_ip === 'never', JSON.stringify(ev.request));
+    check('Crash reports: only the three integrations, and the build’s release', ev.sdk && JSON.stringify(ev.sdk.integrations) === '["GlobalHandlers","Dedupe","LinkedErrors"]' && /^([0-9a-f]{7}|dev)$/.test(ev.release || ''), `${JSON.stringify(ev.sdk && ev.sdk.integrations)} ${ev.release}`);
+  }
+  forgive(page);
+  noErrors(page, 'Crash reports, the address');
+  await ctx.close();
+}
+// A save link: the app clears the hash once the link opens, so it is put back here (as on a page that kept
+// it), then errors carry it in their message, in the page's address and in a script's own address. Nothing
+// of the link goes: no "#", none of its text; the page is its origin and path.
+{
+  const OLD = '#v1~DC~dc-ward-1~20010~l0g49h8j.it941rdf.3z3i9P.ik2ysP.1rq6ag1n~~l0g49T2xkIGxpbmsgbm90ZQ~';
+  const { ctx, page } = await newPage();
+  const crash = await catchCrash(page);
+  await page.route(`${BASE}/crash-probe.js*`, (route) => route.fulfill({ status: 200, contentType: 'application/javascript', body: 'setTimeout(function () { throw new Error("On purpose: from a script with a save link in its address"); }, 0);' }));
+  const ready = watchCrashClient(page);
+  await page.goto(`${BASE}/?today=${TODAY}${OLD}`);
+  await page.waitForSelector('#plan', { timeout: 15000 });
+  if (!(await ready)) noCrashClient('Crash reports, a save link');
+  else {
+    await page.evaluate((h) => history.replaceState(history.state, '', `${location.pathname}${location.search}${h}`), OLD);
+    await throwOnPage(page, `On purpose: could not read ${OLD.slice(1)}`);
+    await throwOnPage(page, 'On purpose: at ' + `${BASE}/?today=${TODAY}${OLD}`);
+    await page.addScriptTag({ url: `/crash-probe.js?today=${TODAY}${OLD}` });
+    await until(() => crash.length >= 3);
+    await page.waitForTimeout(500);
+    const all = crash.map((c) => c.body).join('\n');
+    check('Crash reports: a save link in the message, the page’s address or a script’s address: the reports carry no "#" and none of its text', crash.length === 3 && !/#|v1~|dc-ward-1~|l0g49|T2xk|today=/.test(all), all.slice(0, 400));
+    check('Crash reports: the link’s words become "[save link]", and each report’s page is the origin and path', crash.some((c) => /could not read \[save link\]/.test(c.event.exception?.values?.[0]?.value || '')) && crash.every((c) => c.event.request && c.event.request.url === `${BASE}/`), crash.map((c) => c.event.exception?.values?.[0]?.value).join(' | '));
+  }
+  forgive(page);
+  noErrors(page, 'Crash reports, a save link');
+  await ctx.close();
+}
+// The Census can't be reached: the lookup fails the way it always has, and nothing goes to Sentry; the next
+// plain crash goes alone, with neither the Census nor the address in it.
+{
+  const { ctx, page } = await newPage();
+  const crash = await catchCrash(page);
+  let asked = 0;
+  await page.route('https://geocoding.geo.census.gov/**', (route) => { asked++; return route.abort(); });
+  const ready = watchCrashClient(page);
+  await openBallot(page, '78704');
+  if (!(await ready)) noCrashClient('Crash reports, the Census down');
+  else {
+    await tap(page, '.addrbox [data-act="addr-open"]');
+    await page.fill('#addr-in', '12 Testing Lane');
+    await page.locator('form[data-form="addr"] button[type=submit]').tap();
+    await page.waitForSelector('.addrbox .addr-next', { timeout: 20000 });
+    await page.waitForTimeout(800);
+    const none = crash.length;
+    await throwOnPage(page, 'On purpose: after the lookup failed');
+    await until(() => crash.length > none);
+    await page.waitForTimeout(500);
+    check('Crash reports: with the Census unreachable, the lookup fails as before and sends nothing', asked > 0 && none === 0 && (await text(page, 'form[data-form="addr"] [role="status"]')) === 'The Census lookup didn’t answer.', `${asked} asked, ${none} sent`);
+    check('Crash reports: the next plain crash goes alone, without the Census or the address', crash.length === 1 && !/census/i.test(crash[0].body) && !ADDRESS.test(crash[0].body), crash.map((c) => c.body.slice(0, 200)).join(' | '));
+  }
+  page.errors = page.errors.filter((e) => !/Failed to load resource|ERR_FAILED/.test(e));
+  forgive(page);
+  noErrors(page, 'Crash reports, the Census down');
+  await ctx.close();
+}
+// A control's own crash: the tap handler catches it (main.ts fire()), so the window never sees it, and it
+// still reaches Sentry; Report a problem then names that crash report by its id.
+{
+  const { ctx, page } = await newPage();
+  const crash = await catchCrash(page);
+  const ready = watchCrashClient(page);
+  await openBallot(page, '78704');
+  if (!(await ready)) noCrashClient('Crash reports, a tap');
+  else {
+    await page.addScriptTag({ content: 'window.print = function () { throw new Error("On purpose: printing broke"); };' });
+    await tap(page, '[data-act="cheat"]');
+    await page.waitForSelector('#cheat');
+    await tap(page, '#cheat [data-act="print"]');
+    await until(() => crash.length > 0);
+    await page.waitForTimeout(300);
+    const ex = ((crash[0] || { event: {} }).event.exception?.values || []).at(-1) || {};
+    check('Crash reports: a crash inside a tap, caught by the tap handler, still reaches Sentry', crash.length === 1 && ex.value === 'On purpose: printing broke' && ex.mechanism && ex.mechanism.type === 'generic' && ex.mechanism.handled === true, JSON.stringify(ex).slice(0, 300));
+    await tap(page, '#r-trust [data-fk="help-report"]');
+    await page.waitForSelector('.sheet-panel.shelf[data-kind="report"]');
+    const along = await alongOf(page);
+    const id = (crash[0] || { head: {} }).head.event_id || 'none';
+    check('Crash reports: Report a problem lists the error and names the crash report it sent, by its id', along.at(-1) === `Crash report: ${id}` && along.some((l) => /^Error the page caught: Error: On purpose: printing broke/.test(l)), along.slice(-2).join(' | '));
+  }
+  forgive(page);
+  noErrors(page, 'Crash reports, a tap');
+  await ctx.close();
+}
+// An address typed but never looked up, an error that mentions it while the client is still on its way,
+// then the box cleared and closed: once the client arrives, that waiting error still never goes (Codex,
+// Oct 25: it went, when the box was only read at sending time).
+{
+  const { ctx, page } = await newPage();
+  const crash = await catchCrash(page);
+  let release = () => {};
+  const gate = new Promise((r) => { release = r; });
+  await page.route(CRASH_CHUNK, async (route) => { await gate; await route.continue().catch(() => {}); });
+  const asked = page.waitForRequest((r) => CRASH_CHUNK.test(r.url()), { timeout: 15000 }).then(() => true).catch(() => false);
+  const ready = watchCrashClient(page);
+  await openBallot(page, '78704');
+  if (!(await asked)) { release(); noCrashClient('Crash reports, an address never looked up'); }
+  else {
+    await tap(page, '.addrbox [data-act="addr-open"]');
+    await page.fill('#addr-in', '12 Testing Lane');
+    await throwOnPage(page, 'On purpose: still typing 12 Testing Lane');
+    await page.waitForTimeout(300);
+    await page.fill('#addr-in', '');
+    await tap(page, '.addrbox [data-act="addr-close"]');
+    const gone = !(await page.$('#addr-in'));
+    release();
+    await ready;
+    await throwOnPage(page, 'On purpose: a plain crash after');
+    await until(() => crash.length >= 1);
+    await page.waitForTimeout(800);
+    check('Crash reports: an error that waited for the client, mentioning an address typed but never looked up, never goes, even after the box is cleared and gone', gone && crash.length === 1 && /a plain crash after/.test(crash[0].body) && !ADDRESS.test(crash[0].body), `${gone} ${crash.length}: ${crash.map((c) => c.event.exception?.values?.[0]?.value).join(' | ')}`);
+  }
+  forgive(page);
+  noErrors(page, 'Crash reports, an address never looked up');
+  await ctx.close();
+}
+// Text in the address box, never looked up, under the one rule (security review, Oct 25): whatever is in the box
+// when a crash happens is private from then on, with its street line, number or not, matched anywhere. So a crash
+// that mentions only the street line, a street without its number, or the whole of a half-typed street never goes;
+// ordinary crashes around them still do. (A common word left in the box can drop reports: accepted.)
+{
+  const { ctx, page } = await newPage();
+  const crash = await catchCrash(page);
+  const ready = watchCrashClient(page);
+  await openBallot(page, '78704');
+  if (!(await ready)) noCrashClient('Crash reports, text in the box');
+  else {
+    await tap(page, '.addrbox [data-act="addr-open"]');
+    await page.fill('#addr-in', '500 Shoal Creek Blvd, Austin TX');
+    await throwOnPage(page, 'On purpose: the lookup for 500 Shoal Creek Blvd broke');
+    await page.waitForTimeout(300);
+    await page.fill('#addr-in', '');
+    await throwOnPage(page, 'On purpose: after the box was cleared');
+    await throwOnPage(page, 'On purpose: again, 500 shoal creek blvd, after it was cleared');
+    await page.fill('#addr-in', 'Lamar Bl');
+    await throwOnPage(page, 'On purpose: North Lamar Blvd is long');
+    await page.waitForTimeout(300);
+    await page.fill('#addr-in', 'Barton Springs Rd');
+    await throwOnPage(page, 'On purpose: Barton Springs Rd, no number');
+    await page.waitForTimeout(300);
+    await page.fill('#addr-in', '');
+    await throwOnPage(page, 'On purpose: the last one');
+    await until(() => crash.length >= 2);
+    await page.waitForTimeout(800);
+    const got = crash.map((c) => c.event.exception?.values?.[0]?.value);
+    check('Crash reports: text in the box (its street line, a street without its number, a half-typed street) never goes, even after the box is cleared', !crash.some((c) => /shoal|lamar|barton/i.test(c.body)), got.join(' | '));
+    check('Crash reports: and the ordinary crashes around it still go', JSON.stringify(got) === JSON.stringify(['On purpose: after the box was cleared', 'On purpose: the last one']), got.join(' | '));
+  }
+  forgive(page);
+  noErrors(page, 'Crash reports, text in the box');
+  await ctx.close();
+}
+// A promise rejected with an object that holds picks and a note: the report says an object was thrown and
+// never what it held (Codex, Oct 25: Sentry put the whole object in the report).
+{
+  const { ctx, page } = await newPage();
+  const crash = await catchCrash(page);
+  const ready = watchCrashClient(page);
+  await openBallot(page, '78704');
+  if (!(await ready)) noCrashClient('Crash reports, a thrown object');
+  else {
+    await page.addScriptTag({ content: 'Promise.reject({ picks: { "tx-governor": "Jane Q Purposeful" }, notes: { "tx-governor": "my private note" } });' });
+    await until(() => crash.length >= 1);
+    await page.waitForTimeout(500);
+    const c = crash[0] || { body: '', event: {} };
+    check('Crash reports: a rejected object holding picks and a note sends neither, only that an object was thrown', crash.length === 1 && !/Jane Q|private note|__serialized__/.test(c.body)
+      && (c.event.exception?.values?.[0]?.value || '') === 'Object captured as promise rejection with keys: [not sent]' && !('extra' in c.event), c.body.slice(0, 400));
+  }
+  page.errors = page.errors.filter((e) => !/Jane Q|private note|Object|object/.test(e));
+  noErrors(page, 'Crash reports, a thrown object');
+  await ctx.close();
+}
+// The page's own code crashes while it starts up (here: wiring its taps throws), which leaves the page's
+// bundle unusable to anything that imports it. The client imports nothing from it, so that crash, the
+// worst kind, still arrives (Codex, Oct 25: it never did).
+{
+  const { ctx, page } = await newPage();
+  const crash = await catchCrash(page);
+  await page.addInitScript(() => {
+    const add = Document.prototype.addEventListener;
+    Document.prototype.addEventListener = function (type, ...rest) {
+      if (type === 'pointerdown') { Document.prototype.addEventListener = add; throw new Error('On purpose: the page broke while starting'); }
+      return add.call(this, type, ...rest);
+    };
+  });
+  const ready = watchCrashClient(page);
+  await page.goto(`${BASE}/?today=${TODAY}`);
+  if (!(await ready)) noCrashClient('Crash reports, a crash at start-up');
+  else {
+    await until(() => crash.length >= 1);
+    await page.waitForTimeout(300);
+    check('Crash reports: a crash while the page’s own code starts up still arrives', crash.some((c) => (c.event.exception?.values || []).some((v) => v.value === 'On purpose: the page broke while starting')) && !(await page.$('#zip')), crash.map((c) => c.event.exception?.values?.[0]?.value).join(' | '));
+  }
+  forgive(page);
+  noErrors(page, 'Crash reports, a crash at start-up');
+  await ctx.close();
+}
+// An error before the page has loaded waits for the client and goes once it starts; and a page load sends
+// at most five, so one bad loop can't use up the month's shared quota.
+{
+  const { ctx, page } = await newPage();
+  const crash = await catchCrash(page);
+  await page.addInitScript(() => { document.addEventListener('DOMContentLoaded', () => { throw new Error('On purpose: before the page loaded'); }); });
+  const ready = watchCrashClient(page);
+  await page.goto(`${BASE}/?today=${TODAY}`);
+  await page.waitForSelector('#zip');
+  if (!(await ready)) noCrashClient('Crash reports, early and the cap');
+  else {
+    await until(() => crash.length >= 1);
+    check('Crash reports: an error from before the load event waits, and goes once the client starts', crash.length === 1 && crash[0].event.exception?.values?.[0]?.value === 'On purpose: before the page loaded', crash.map((c) => c.event.exception?.values?.[0]?.value).join(' | '));
+    await page.addScriptTag({ content: 'for (var i = 1; i <= 10; i++) (function (n) { setTimeout(function () { throw new Error("On purpose: number " + n); }, n * 20); })(i);' });
+    await page.waitForTimeout(2500);
+    check('Crash reports: ten more errors in a row, and the page sends five in all', crash.length === 5, `${crash.length}: ${crash.map((c) => c.event.exception?.values?.[0]?.value).join(' | ')}`);
+  }
+  forgive(page);
+  noErrors(page, 'Crash reports, early and the cap');
   await ctx.close();
 }
 

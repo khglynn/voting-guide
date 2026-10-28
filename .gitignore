@@ -6,3 +6,4 @@ shots/*.pdf
 .vercel
 .tmp/
 .tmp-preview.log
+.env*

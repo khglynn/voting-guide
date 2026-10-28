@@ -6,7 +6,7 @@ import { stepKey, planKey } from './views/planstrip';
 import { render, anchored } from './render';
 import { localize } from './ballot';
 import { RAIL_AT } from './views/ledger';
-import { ensureIndex, openBallot, zipTyped, offerResume, dismissResume, lookZip, viewed } from './app';
+import { ensureIndex, openBallot, openChosen, zipTyped, offerResume, dismissResume, lookZip, viewed } from './app';
 import { A, runAddress, sendReport, reportInput, srcSearch, clearSearch, wiSearch, clearWi } from './actions';
 import { startStats } from './stats';
 
@@ -134,6 +134,9 @@ window.addEventListener('hashchange', () => {
 });
 
 /* ---------- boot ---------- */
+/* ?place=<place id> or ?state=<ST>: the "Open your ... ballot" button on a place's or a state's own page
+   (src/pages/site.ts, Oct 28). Opens the first page with that place chosen, the way the list of cities does. */
+let entry: { place: string } | { state: string } | null = null;
 async function boot(): Promise<void> {
   try { const saved = readSaved(); S.prefs = { ...S.prefs, ...saved.prefs }; } catch { /* defaults */ }
   try {
@@ -148,6 +151,14 @@ async function boot(): Promise<void> {
     if (on && /^[a-z0-9][a-z0-9-]{1,79}$/.test(on) && !S.tryMode) S.switchOn = on;
     if (q.has('on')) { q.delete('on'); const rest = q.toString(); history.replaceState(null, '', `${location.pathname}${rest ? `?${rest}` : ''}${location.hash}`); }
   } catch { /* ignore */ }
+  try {
+    // Read once, then out of the address bar like ?on=, so a reload or a copied link doesn't keep it.
+    const q = new URLSearchParams(location.search);
+    const place = q.get('place'), st = q.get('state');
+    if (place && /^[a-z0-9][a-z0-9-]{1,79}$/.test(place)) entry = { place };
+    else if (st && /^[A-Z]{2}$/.test(st)) entry = { state: st };
+    if (q.has('place') || q.has('state')) { q.delete('place'); q.delete('state'); const rest = q.toString(); history.replaceState(null, '', `${location.pathname}${rest ? `?${rest}` : ''}${location.hash}`); }
+  } catch { /* ignore */ }
   render();
   const head = parseShareHead(location.hash);
   try { await ensureIndex(); } catch {
@@ -160,6 +171,10 @@ async function boot(): Promise<void> {
     await openBallot(head.st, places, head.zip, { share: head });
     return;
   }
+  // A save link above wins; then a page's button (an unknown place or state just lands on the first page).
+  const go = entry; entry = null;
+  if (go && 'place' in go && S.index!.places[go.place]) { await openChosen([go.place], '', 'page'); return; }
+  if (go && 'state' in go && S.index!.states[go.state]) { await openBallot(go.state, [], '', { door: true, how: 'page' }); return; }
   const last = S.tryMode ? null : readSaved().last;
   if (last && !last.left) {
     const [st, placesStr] = last.key.split('|');

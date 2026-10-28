@@ -1,0 +1,2082 @@
+[
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-us-house-3",
+    "status": "endorsed",
+    "choice": "Delia Ramirez",
+    "why": "Says she has been one of the most ardent supporters of Palestine in Congress, the only congressional candidate who meets its test this year.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-governor",
+    "status": "endorsed",
+    "choice": "JB Pritzker and Christian Mitchell",
+    "why": "Listed in its guide's summary of picks, with no further reason given.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-attorney-general",
+    "status": "endorsed",
+    "choice": "Kwame Raoul",
+    "why": "Says he has been very solid in office, citing his suits against the Trump administration, a new worker protection division and his defense of reproductive and gender affirming care.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-secretary-of-state",
+    "status": "endorsed",
+    "choice": "Alexi Giannoulias",
+    "why": "Says he has been a very good Secretary of State who modernized the office, though it objects to him running for mayor at the same time.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-comptroller",
+    "status": "no_position",
+    "choice": null,
+    "why": "Says it cannot back either candidate in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-treasurer",
+    "status": "endorsed",
+    "choice": "Michael W. Frerichs",
+    "why": "Says he has been an excellent Treasurer with no scandals, while objecting to his Israel Bonds holdings; it also endorses write-in Green candidate Timothea Papas for readers who will not vote for him.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-sd-8",
+    "status": "endorsed",
+    "choice": "Ram Villivalam",
+    "why": "Cites his bills on rideshare drivers' right to unionize, lower auto insurance premiums and e-bike safety standards.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-sd-9",
+    "status": "endorsed",
+    "choice": "Patrick Hanley",
+    "why": "Notes his Sierra Club and Planned Parenthood Action endorsements and its own support for him in the primary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-sd-14",
+    "status": "endorsed",
+    "choice": "Emil Jones, III",
+    "why": "A reluctant pick: it cites his ethics history but says a Democrat is better than the Republican running.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-sd-17",
+    "status": "endorsed",
+    "choice": "Elgie R. Sims, Jr.",
+    "why": "Calls him a solid progressive on criminal justice reform who played a leading role in passing the SAFE-T Act.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-12",
+    "status": "endorsed",
+    "choice": "Paul Kendrick",
+    "why": "A reluctant pick: it says he reads as pro-business but the district could do worse than him over the Republican.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-13",
+    "status": "endorsed",
+    "choice": "Demerike \"Demi\" Palecek",
+    "why": "Says she is the only progressive in the race, citing her platform and her advocacy for immigrants.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-18",
+    "status": "endorsed",
+    "choice": "Robyn Gabel",
+    "why": "Cites her leadership on gun safety, health coverage and the environment, and says she still runs a real campaign.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-19",
+    "status": "endorsed",
+    "choice": "Lindsey LaPointe",
+    "why": "Cites her mental health laws, including universal screenings for kids in public schools, and her work on progressive revenue.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-21",
+    "status": "endorsed",
+    "choice": "Abdelnasser Rashid",
+    "why": "Calls him one of the most progressive members of the House, citing his PFAS ban and his push to repeal the state's anti-BDS law.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-25",
+    "status": "endorsed",
+    "choice": "Curtis J. Tarver II",
+    "why": "A reluctant pick: it says he is a moderate who has opposed progressive bills, but is better than a Republican.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-35",
+    "status": "endorsed",
+    "choice": "Mary Gill",
+    "why": "Says her platform on technical education and disability rights is solid, though it objects to her pro-police positions.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-36",
+    "status": "endorsed",
+    "choice": "Rick Ryan",
+    "why": "Cites his bills expanding the capacity of public defenders, and calls him the obvious choice over his opponent.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-39",
+    "status": "endorsed",
+    "choice": "Will Guzzardi",
+    "why": "Cites his work on progressive revenue in the budget, limits on ICE detention centers and the X gender marker law.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-55",
+    "status": "endorsed",
+    "choice": "Justin Cochran",
+    "why": "Says he shows up for his community, but a later note criticizes his stance on Palestine and the BDS movement.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-78",
+    "status": "endorsed",
+    "choice": "Camille Lilly",
+    "why": "Says she is from the district and has long experience in healthcare and community work, against a Republican with no campaign presence.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-mwrd-6yr",
+    "status": "endorsed",
+    "choice": "Eira Lizeth Corral Sepúlveda, Precious Brady-Davis, Beth McElroy Kirkwood",
+    "why": "Strongly backs Corral Sepúlveda and Brady-Davis for their records at the district; for McElroy Kirkwood it says to either skip the third vote or reluctantly vote for her rather than a Republican.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-board-president",
+    "status": "endorsed",
+    "choice": "Toni Preckwinkle",
+    "why": "Listed in its guide's summary of picks; the heading says her opponent only technically exists.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-assessor",
+    "status": "endorsed",
+    "choice": "Pat Hynes",
+    "why": "A reluctant pick: it objects to his real estate and tax appeal donors but endorses him over the Libertarian, whose property tax cap it says would hurt the county.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-commissioner-5",
+    "status": "endorsed",
+    "choice": "Kisha E. McCaskill",
+    "why": "A reluctant pick: it cites her double-dipping scandals but says it will not back the Republican.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-commissioner-8",
+    "status": "endorsed",
+    "choice": "Jessica Vasquez",
+    "why": "Calls her a progressive with the experience to back it up, citing the Northwest Side Rapid Response Team she co-chairs.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-commissioner-9",
+    "status": "endorsed",
+    "choice": "Maggie Trevor",
+    "why": "Cites her coal tar sealant ban, suburban transit expansion and the best attendance record on the board.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-commissioner-11",
+    "status": "endorsed",
+    "choice": "John P. Daley",
+    "why": "A reluctant pick: it calls him a machine insider but endorses him as the Democrat against a Republican with no real campaign.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-commissioner-12",
+    "status": "endorsed",
+    "choice": "Elizabeth Granato",
+    "why": "Calls her an experienced progressive with over a decade in government and a long list of progressive endorsements.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-commissioner-13",
+    "status": "endorsed",
+    "choice": "Josina Morita",
+    "why": "Cites over $40 million she brought to the district, wider language access and the county's first environmental justice policy.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cps-board-president",
+    "status": "no_position",
+    "choice": null,
+    "why": "Says each remaining candidate has at least one significant issue that rules them out.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cps-board-1a",
+    "status": "endorsed",
+    "choice": "Ed Bannon",
+    "why": "Cites his progressive platform, his vote against the advance pension payment and his backing from both CTU and SEIU.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cps-board-1b",
+    "status": "endorsed",
+    "choice": "Claudia Peralta",
+    "why": "Gives her its Golden Shrug, citing her plans for disabled, immigrant and LGBTQ+ students and her broad coalition of support.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cps-board-2a",
+    "status": "endorsed",
+    "choice": "Ebony DeBerry",
+    "why": "Calls her a strong independent progressive incumbent, citing her push for a licensed CPS chief and her plans for universal pre-K.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cps-board-2b",
+    "status": "endorsed",
+    "choice": "Deborah \"Debby\" Pope",
+    "why": "Says the choice comes down to experience: three decades in classrooms and in the school system, plus a comprehensive platform.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cps-board-3a",
+    "status": "endorsed",
+    "choice": "Norma Rios Sierra",
+    "why": "Gives her its strongest endorsement and a Golden Shrug, citing her work protecting students from ICE and holding charter networks accountable.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cps-board-3b",
+    "status": "endorsed",
+    "choice": "Jason Dónes",
+    "why": "Cites his decade of teaching in Chicago classrooms and his backing from labor and community groups rather than wealthy donors.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cps-board-4a",
+    "status": "endorsed",
+    "choice": "Karen Zaccor",
+    "why": "Calls her close to an ideal board member, citing decades of work for public schools and her push to remove police from school buildings.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cps-board-5a",
+    "status": "endorsed",
+    "choice": "Aaron \"Jitu\" Brown",
+    "why": "Calls him the most qualified and progressive candidate, citing his lifelong education activism.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cps-board-5b",
+    "status": "endorsed",
+    "choice": "Michilla \"Kyla\" Blaise",
+    "why": "Says her backing lines up better with progressive values than her opponent's charter-linked money, though it wants a clearer list of her priorities.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cps-board-6a",
+    "status": "endorsed",
+    "choice": "Brenda Lee Anderson",
+    "why": "Gives Anderson its Golden Shrug, citing their education policy expertise, lived experience and a platform that includes auditing CPS vendor contracts.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cps-board-6b",
+    "status": "endorsed",
+    "choice": "Michael L. Neal",
+    "why": "Cites his record in community engagement, literacy work and youth mentorship.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cps-board-7a",
+    "status": "no_position",
+    "choice": null,
+    "why": "Says it would back Emma Lozano for her activism but cannot because her campaign has no visible presence, and it objects to her opponent's backers.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cps-board-7b",
+    "status": "endorsed",
+    "choice": "Yesenia Lopez",
+    "why": "Says she appears to be the more progressive candidate, though it faults both campaigns for little effort.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cps-board-9b",
+    "status": "endorsed",
+    "choice": "Katherine S. Dunneback",
+    "why": "Picks her because it objects to her opponent's backing from billionaires and pro-charter groups.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cps-board-10b",
+    "status": "endorsed",
+    "choice": "Connie Anderson",
+    "why": "Cites her support from neighborhood and public school groups and her student robotics work, and objects to her opponent taking the FOP endorsement.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-appellate-1st-retention-lampkin",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-lewis-nixon",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-kerry-m-kennedy",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Says he threatened a teenage rape survivor with contempt and has had rulings overturned on appeal, as reported by Injustice Watch.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-joan-e-powell",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-maureen-ward-kirby",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-edward-a-arce",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-thomas-j-byrne",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Cites 16 reversed rulings this term, as reported by Injustice Watch, and courtwatching data showing worse treatment of Black and Latine defendants.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-diana-l-kenworthy",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-kristyna-colleen-ryan",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-ursula-walowski",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Cites 25 reversed rulings, more than any other criminal judge on the ballot, and courtwatching data showing worse treatment of Black and Latine defendants.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-anthony-c-tony-kyriakopoulos",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-caroline-kate-moreland",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-thomas-j-carroll",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-andrea-m-buford",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-john-michael-allegretti",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-kristal-r-rivers",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-steven-g-watkins",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-abbey-fishman-romanek",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-judith-c-rice",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-patrick-kevin-coughlin",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-megan-elizabeth-goldish",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Cites lawsuits over her role as a prosecutor in two wrongful convictions that settled for $2.5 million, and later reports about her conduct in court.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-anjana-m-j-hansen",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-robert-d-kuzas",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-maritza-martinez",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Cites litigants' testimony, reported by Injustice Watch, that she was insensitive and biased in domestic violence cases, and attorneys' accounts of her yelling in court.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-terrence-j-mcguire",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-bridget-anne-mitchell",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-james-p-pieczonka",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-patricia-o-brien-sheahan",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-michael-a-forti",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-nichole-c-patton",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-sondra-n-denmark",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-gerardo-tristan-jr",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-lynn-weaver-boyle",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-daniel-edward-maloney",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-thomas-m-cushing",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-john-g-mulroe",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-tyria-b-walton",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-erin-haggerty-antonietti",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-teresa-molina-gonzalez",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-patricia-maria-fallon",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-sheree-d-henry",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-celestia-l-mays",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-levander-smith-jr",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-julie-bess-aimen",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-laura-ayala-gonzalez",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-krista-d-butler",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-marie-aileen-dempsey",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-jamie-guerra-dickler",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-jonathan-clark-green",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-mary-catherine-marubio",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-regina-a-mescall",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-lorraine-mary-murphy",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-eileen-marie-o-connor",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-jill-rose-quinn",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-pamela-reaves-harris",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-tiesha-l-smith",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-chris-stacey",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-perla-tirado",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-elizabeth-anne-walsh",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-retention-maura-mcmahon-zeller",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its judicial retention list, which it gives with no commentary.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-millionaire-amendment-advisory",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Says taxing the wealthy fairly is a necessity, and the money would go to property tax relief and school funding.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-chicago-gunshot-detection-advisory",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Says the technology does not measurably improve safety, citing the MacArthur Justice Center and the city's Inspector General, and that 911 response times improved after it ended.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-chicago-festival-space-advisory",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Says festivals close streets and parks, and a permanent space could help, while urging voters to watch the details on cost.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-chicago-ice-cost-recovery-advisory",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Says the city is in a fiscal crisis and the federal ICE operation cost it millions in revenue and services.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cps-millionaire-surcharge-advisory",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Supports a millionaire's tax that funds schools, though it calls this question a redundant copy of the county measure.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cps-vacant-property-charge-advisory",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Says a charge on long-vacant lots would mean more money for schools and lower property taxes for everyone else.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-chicago-mid-northside-mental-health-program",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Says the city needs more mental health clinics and these programs have worked, though it would rather the money come from the police budget.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-chicago-mid-northside-mental-health-2027-levy",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Covers this levy together with the program question and says the clinics need the money to function.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-chicago-far-southwest-side-mental-health-program",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Uses the same reasoning as for the Mid-Northside program: the city needs more mental health clinics.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-chicago-far-southwest-side-mental-health-2027-levy",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Covers this levy together with the program question, for the same reasons as the Mid-Northside measures.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-chicago-ward-4-jackson-statue-advisory",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Says Jesse Jackson deserves a statue and expects private donors to pay for it, though it doubts the 2027 timeline.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-chicago-ward-26-shared-housing-advisory",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Says limiting short-term rentals like Airbnb would put more homes back on the rental market and ease rents.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-chicago-lakefront-national-park-advisory",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Says a national park would hand the lakefront to federal control, and it does not trust the federal government with it.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-chicago-south-works-remediation-advisory",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Says the former steel mill site is contaminated and must be cleaned up whatever is built there later.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-chicago-south-works-quantum-spending-advisory",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Opposes public money for the campus, citing data centers' environmental harm, unproven technology and planned defense-linked tenants.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-chicago-corporate-tax-youth-jobs-advisory",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Supports taxing large corporations to fund youth jobs and mental health care, and says studies show businesses do not leave over small tax increases.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-chicago-ward-21-precinct-10-liquor-local-option",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Weighs food insecurity in the precinct against the jobs that alcohol sales bring, and closes with 'Vote YES for growth and opportunity.'",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-us-senate",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-appellate-1st-hoffman-vacancy",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-us-house-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-us-house-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-us-house-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-us-house-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-us-house-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-us-house-7",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-us-house-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-us-house-9",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-sd-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-sd-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-sd-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-sd-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-sd-11",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-sd-12",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-sd-15",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-sd-18",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-sd-20",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-sd-39",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-9",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-10",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-11",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-14",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-15",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-16",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-20",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-22",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-23",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-24",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-26",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-27",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-28",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-29",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-31",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-32",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-33",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-34",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-hd-40",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-clerk",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-sheriff",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-treasurer",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-commissioner-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-commissioner-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-commissioner-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-commissioner-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-commissioner-7",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-commissioner-10",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-commissioner-16",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-bor-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-bor-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-mwrd-2yr",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-circuit-burke-vacancy",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-circuit-cobbs-vacancy",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-circuit-coghlan-vacancy",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-circuit-hooks-vacancy",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-circuit-karkula-vacancy",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-subcircuit-1-balanoff-vacancy",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-subcircuit-1-walker-vacancy",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-subcircuit-3-murphy-vacancy",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-subcircuit-3-sherlock-vacancy",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-subcircuit-5-ross-vacancy",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-subcircuit-8-gamrath-vacancy",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-subcircuit-8-mikva-vacancy",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-subcircuit-11-mclean-meyerson-vacancy",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-subcircuit-11-roberts-vacancy",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-subcircuit-16-baird-vacancy",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-subcircuit-16-mendoza-vacancy",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-subcircuit-17-brooks-vacancy",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-subcircuit-17-carroll-vacancy",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-subcircuit-19-fairman-vacancy",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-subcircuit-19-kane-vacancy",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-subcircuit-20-haracz-vacancy",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cook-subcircuit-20-miller-vacancy",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cps-board-4b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cps-board-8a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cps-board-8b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cps-board-9a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stephanie-skora-guide",
+    "target_id": "il-cps-board-10a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 28, 2026: the source's page names no pick in this race.",
+    "url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "date": "2026-10-28",
+    "confidence": "verified"
+  }
+]

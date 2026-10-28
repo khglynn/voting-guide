@@ -1,0 +1,18 @@
+[
+  {
+    "id": "stephanie-skora-guide",
+    "name": "Girl, I Guess Progressive Voter Guide",
+    "short": "Girl, I Guess",
+    "type": "other",
+    "lean": "left",
+    "lean_basis": "Describes itself as 'dedicated to helping members of the Chicago and Cook County community navigate a confusing ballot and identify the most progressive candidates' on its About page (https://www.girliguess.com/about). No AllSides or Ad Fontes rating found; lean reflects its stated mission.",
+    "lean_basis_kind": "mission",
+    "geography": [
+      "chicago-il"
+    ],
+    "guide_url": "https://docs.google.com/document/d/1AdM-KgR_o6cC-cUvquLJ0ItQT4EFdbB085a7H35LVuI/view",
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "default_on": false
+  }
+]

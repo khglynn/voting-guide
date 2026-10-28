@@ -258,7 +258,9 @@ async function loadBallot(st: string, placeIds: string[], zip: string, opts: Ope
     const held = heldRead(st, placeIds);
     const [sb, ...pbs] = await Promise.all([getJSON<StateBundle>(`state-${st}.json`), ...placeIds.map((id) => getJSON<PlaceBundle>(`place-${id}.json`))]);
     if (seq !== loadSeq) return false;
-    const ballot = build(sb, pbs, held ? heldFound(await held, sb, pbs) : null);
+    const found = held ? heldFound(await held, sb, pbs) : null;
+    if (seq !== loadSeq) return false;
+    const ballot = build(sb, pbs, found);
     S.ballot = ballot;
     forgetUndo();
     const existing = S.tryMode ? null : savedBallot(ballot.key);
@@ -550,6 +552,8 @@ export function watchAdds(why: Why = 'tick'): void {
   void checkAdds(why);
 }
 document.addEventListener('visibilitychange', () => { if (!document.hidden) watchAdds('back'); else window.clearTimeout(addsTimer); });
+/* A ballot loaded: shown, or on the first page waiting for "Show my ballot" (a preview read then is ready the moment
+   it shows). */
 const openBallotNow = (): Ballot | null => (S.ballot && (S.view === 'ballot' || S.view === 'setup') ? S.ballot : null);
 const pendingFor = (code: string, key: string): boolean => folds.some((f) => f.code === code && f.key === key);
 async function checkAdds(why: Why): Promise<void> {
@@ -665,10 +669,11 @@ function paintAdds(): void {
   addsSaid = h;
   if (S.view === 'ballot' && S.ballot && S.ui.view === 'ballot') anchored(() => render(['restore']));
 }
-/* Not now: something is open or moving that a repaint of the ballot would disturb. */
+/* Not now: something is open or moving that a repaint of the ballot would disturb. On the first page it waits
+   for "Show my ballot", so the source goes on, and says so, where you'll see it. */
 function foldWaits(): boolean {
   const u = S.ui;
-  if (document.hidden || S.view === 'loading' || S.pending || u.sheet || u.reader || u.beat || u.addrOpen || u.addrBusy || u.addrMapsPending || u.addrWhich) return true;
+  if (document.hidden || S.view !== 'ballot' || S.pending || u.sheet || u.reader || u.beat || u.addrOpen || u.addrBusy || u.addrMapsPending || u.addrWhich) return true;
   const f = document.activeElement as HTMLElement | null;
   if (f && f.matches('input, textarea, select, [contenteditable="true"]')) return true;
   return !!document.querySelector('.toast.show [data-act]'); // an Undo toast, which a new toast would cut short

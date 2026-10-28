@@ -4,12 +4,13 @@ import { S, type ShelfKind } from '../state';
 import { esc, host } from '../util';
 import { hasPaywallNote, isBlocked } from '../model/lens';
 
-/* "Report a problem" and "Request a city" go to a Google Form in Kevin's personal account (picked
-   Oct 16). Since Oct 21 they open the shelf in the guide (views/shelf.ts), which posts straight into the
-   form, so its response sheet stays the one queue the city and fix pipeline reads. The address and
-   the five field ids live here, read from the form's own page on Oct 21 (none has a format rule, so
-   any text goes). */
-const FORM_AT = 'https://docs.google.com/forms/d/e/1FAIpQLSdTJFFXbh5ZlZzDmoqvbD5uGEKopuk2zy-nsl4dqmjNA65bOQ';
+/* "Report a problem" and "Request a city" go to a Google Form in Kevin's kevin@trimm.co account (moved
+   Oct 28 from a personal Gmail account; Google can't transfer a form's ownership into Workspace, so it's a
+   copy with the same questions and the same five field ids). Since Oct 21 they open the shelf in the guide
+   (views/shelf.ts), which posts straight into the form, and the form's script is the one queue the request
+   pipeline reads; it still reads the first form too, for pages loaded before the move. The field ids were
+   read from the form's own page on Oct 21 (none has a format rule, so any text goes). */
+const FORM_AT = 'https://docs.google.com/forms/d/e/1FAIpQLSdXDbOT77VNmPpln7S79yoxpcuy14Z0L6KVxBgRR6QZezOqAQ';
 export const FORM = {
   view: `${FORM_AT}/viewform`,
   post: `${FORM_AT}/formResponse`,

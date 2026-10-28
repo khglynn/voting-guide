@@ -23,6 +23,7 @@
     "vite": "^6.4.3"
   },
   "dependencies": {
-    "@sentry/browser": "11.8.0"
+    "@sentry/browser": "11.8.0",
+    "@vercel/analytics": "2.0.1"
   }
 }

@@ -7,10 +7,10 @@ import { status, sectionOf, rankMax, ordinal, chosenIds, entriesBySection, pageW
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
 import { render, renderRow, renderSection, renderSummaries, renderOff, renderLens, flushLens, markBehind, renderBallot, renderAddr, rowEl, scrollRowIntoView, rowTop, holdRow, opensLow, anchored, $ } from './render';
 import { growOpen, inkRow, followFold, glideTo, land, stopGlide, shrinkAway, collapseRow, finishCollapse, glide } from './motion';
-import { openBallot, openChosen, go, openReader, runAddress, reopenAddr, useMatch, toDoor, showBallot, rechoose, openSaved, fillWhy, leaveBallot, viewed, switchOnNow } from './app';
+import { openBallot, openChosen, go, openReader, runAddress, reopenAddr, useMatch, toDoor, showBallot, rechoose, openSaved, fillWhy, leaveBallot, viewed, switchOnNow, watchAdds } from './app';
 import { judgeBatch } from './model/judges';
 import { planAgree, planParty, planJudges, planSetup, applyFills, undoFills, emptyPlan, touchUndo, type Plan } from './model/bulk';
-import { toggleChip, setParty, setSources, noEndorsements, doorNone, chipState, unreadHere, CHIPS, type ChipKey } from './model/lens';
+import { toggleChip, setParty, setSources, noEndorsements, doorNone, chipState, unreadHere, backOn, CHIPS, type ChipKey } from './model/lens';
 import { courtGroup } from './model/labels';
 import { claimAnswer, claimOn, claimOff } from './model/address';
 import { basisWords, LEANS, FORM, reportWhere } from './views/common';
@@ -18,6 +18,7 @@ import { reportBody, reportFallbackURL, requiredOf, isForm, isFollow, collectAlo
 import { track, type Events } from './stats';
 import { covOf } from './views/coverage';
 import { rememberAsk } from './model/coverage';
+import { newCode, rememberAdd, forgetAdd, updateAdd } from './model/adds';
 import { cheatText, shareURL } from './views/cheat';
 import { messages, shareData, GUIDE_URL, SHARE_TITLE } from './views/pass';
 import { nextUp, sectionTally, sectionFolded, hiddenByOnly, qId } from './views/ledger';
@@ -588,13 +589,13 @@ A.ends = () => {
     if (off) S.door.fill = false;
     else if (!S.door.fillSet) S.door.fill = !(doorBallot() && S.b.setupDone); // back to its default
     S.ui.open.delete('su-party');
-    if (doorBallot()) { S.b.sources = off ? [] : null; S.b.party = null; }
+    if (doorBallot()) { S.b.sources = off ? [] : backOn(B()); S.b.party = null; }
     glide(['#setup'], () => render(['mast']));
     announce(off ? 'Turned off.' : 'Turned on.');
     return;
   }
   const off = !noEndorsements();
-  S.b.sources = off ? [] : null;
+  S.b.sources = off ? [] : backOn(B());
   S.b.party = null;
   if (off) S.ui.setupFill = false;
   renderLens(); persist();
@@ -673,11 +674,14 @@ function openShelf(kind: ShelfKind, d: DOMStringMap, fk: string, back: Shelf['ba
   const r: Shelf = {
     kind,
     f: kind === 'city' ? (d.hint === 'follow' ? { reach: '' } : { city: '', zip: S.ballot && S.view === 'ballot' ? S.b.zip : S.zip || S.coverage?.zip || '', reach: '' }) : kind === 'report' ? { wrong: '', reach: '' }
-      : kind === 'source' ? { src: '', where: reportWhere(), picks: '', reach: '' } : {},
+      // From the request banner's "Paste their picks": the source as they typed it the first time.
+      : kind === 'source' ? { src: d.hint === 'paste' ? d.src || '' : '', where: reportWhere(), picks: '', reach: '' } : {},
     what: d.what || '', tag: d.tag || '', hint: d.hint || '',
     // What a form sends along is read now, from the page it was opened on (never the address box or the hash).
-    along: form ? collectAlong() : { page: '', where: '', url: '', data: '', build: '', device: '', errors: [] },
+    // Add a source gets its request's code too (model/adds.ts), new each time the sheet opens.
+    along: form ? { ...collectAlong(), ...(kind === 'source' ? { request: newCode() } : {}) } : { page: '', where: '', url: '', data: '', build: '', device: '', errors: [] },
     state: 'edit', err: false, fk, back,
+    ...(kind === 'source' && d.hint === 'paste' && d.code ? { prev: d.code } : {}),
   };
   S.ui.report = r;
   S.ui.sheet = 'shelf';
@@ -771,6 +775,14 @@ export async function sendReport(): Promise<void> {
   const state = await postForm(reportBody(r));
   const ok = state === 'sent';
   if (ok) track('request', { kind: requestKind(r) });
+  // Add a source, sent: this device watches for it and puts it on the ballot when it's ready (model/adds.ts,
+  // app.ts watchAdds). A paste sent from a blocked request's banner takes that request's place. Never in a
+  // "try as" scenario, which saves nothing.
+  if (ok && r.kind === 'source' && r.along.request && !S.tryMode) {
+    r.watched = rememberAdd(r.along.request, r.f.src || '', !!(r.f.reach || '').trim());
+    if (r.watched && r.prev) forgetAdd(r.prev);
+    if (r.watched) watchAdds('sent');
+  }
   if (S.ui.report !== r || S.ui.sheet !== 'shelf') {
     toast(state === 'sent' ? 'Sent. Kevin reads every one.' : state === 'unsure' ? 'Couldn’t confirm your report sent.' : 'That didn’t send. Try again in a moment.');
     return;
@@ -1001,6 +1013,13 @@ A['addr-pick'] = () => {
 };
 /* "Welcome back"'s close: the tap itself took the line away (main.ts); focus goes on to the plan. */
 A['resume-x'] = () => { focusFk('plan-k'); };
+/* The request banner's close (views/adds.ts): hidden for good on this device; the source still goes on when it's
+   ready. Focus goes where "Welcome back"'s close sends it. */
+A['adds-x'] = (d) => {
+  if (d.code) updateAdd(d.code, { quiet: true });
+  anchored(() => render(['restore']));
+  focusFk('plan-k');
+};
 /* "Try again" under a load error. */
 A.retry = () => { const f = S.retry; S.retry = null; if (f) f(); };
 A['restore-yes'] = () => { if (S.pending) { S.b = S.pending.incoming; S.pending = null; render(); persist(true); if (!switchOnNow('Using the picks from your link.')) toast('Using the picks from your link.'); } };

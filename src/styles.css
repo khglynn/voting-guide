@@ -148,8 +148,8 @@ b, strong { font-weight: 600; }
 .cov-sb a { text-decoration: underline; text-underline-offset: 3px; }
 .door-where .cov-card { margin: 10px 0 0; }
 /* "Welcome back": one line, "Pick up where I left off", and a small close in the corner. */
-.resume { position: relative; padding-right: 50px; margin-bottom: 18px; }
-.resume .row-btns { margin-top: 8px; }
+.resume, .adds { position: relative; padding-right: 50px; margin-bottom: 18px; }
+.resume .row-btns, .adds .row-btns { margin-top: 8px; }
 .resume-x { position: absolute; top: 2px; right: 2px; color: var(--ink-2); }
 .trybar { margin: 6px 0 0; padding: 6px 10px; background: var(--dusk-tint); color: var(--dusk-ink); font-size: 13.5px; }
 

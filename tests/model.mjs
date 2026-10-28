@@ -35,13 +35,13 @@ const util = await load('/src/util.ts');
 const geo = await load('/src/geo.ts');
 const common = await load('/src/views/common.ts');
 const mods = {};
-for (const m of ['lens', 'tally', 'bulk', 'judges', 'labels', 'plan', 'address', 'coverage']) {
+for (const m of ['lens', 'tally', 'bulk', 'judges', 'labels', 'plan', 'address', 'coverage', 'adds']) {
   const f = path.join(ROOT, 'src', 'model', `${m}.ts`);
   if (fs.existsSync(f)) mods[m] = await load(`/src/model/${m}.ts`);
 }
 /* The string views the ledger paints (no DOM needed to build their HTML). */
 const views = {};
-for (const v of ['ledger', 'cheat', 'open', 'lens', 'mast', 'setup', 'pass', 'planstrip', 'shelf', 'coverage']) views[v] = await load(`/src/views/${v}.ts`);
+for (const v of ['ledger', 'cheat', 'open', 'lens', 'mast', 'setup', 'pass', 'planstrip', 'shelf', 'coverage', 'adds']) views[v] = await load(`/src/views/${v}.ts`);
 views.errors = await load('/src/errors.ts'); // not a view: the errors a problem report sends along (the shelf reads it)
 views.scrub = await load('/src/scrub.ts'); // not a view: what a crash report may carry (sentry.ts runs every event through it)
 
@@ -802,6 +802,183 @@ function roundTrip(name, stCode, places, mutate) {
   st.S.ui.report = was;
   check('stats: the How text says what is counted and what never is', how.includes('<li><b>Your privacy.</b> No accounts, no ads, no cookies. We count visits with Vercel’s cookie-free analytics: the screens you open, the forms you send, the state of your ballot, the site that sent you here, and your rough location, browser, operating system and device type. It never gets your address, ZIP or picks, doesn’t keep your IP, and can’t tell who you are. Your picks stay on your device unless you share your save link. An address you type goes only to the Census Bureau’s lookup, and we never keep it. If the page breaks, it sends us a crash report with no address, no picks and no IP.</li>'));
   check('stats: no page says "no tracking" any more', !/no tracking/i.test(how) && !/no tracking/i.test(sup) && sup.includes('The guide is free, with no ads and no cookies.'));
+}
+
+/* ---------- a source you asked for, on your ballot before the merge (Oct 28, model/adds.ts) ----------
+   The request's code, the vg-adds store (never vg2 or the link), the form script's status read strictly, and
+   what a branch preview may bring: only sources the live data lacks, each record and row rebuilt the way
+   build-data writes them, off for everyone else. A source this device holds survives a chip tap before its
+   preview answers (the judge's reload gap). */
+{
+  const ad = mods.adds;
+  const mem = new Map();
+  const had = Object.getOwnPropertyDescriptor(globalThis, 'window');
+  Object.defineProperty(globalThis, 'window', { configurable: true, writable: true, value: { localStorage: { getItem: (k) => (mem.has(k) ? mem.get(k) : null), setItem: (k, v) => { mem.set(k, String(v)); } }, setTimeout, clearTimeout } });
+  const keep = { b: st.S.b, ballot: st.S.ballot, view: st.S.view, uiView: st.S.ui.view, tryMode: st.S.tryMode, index: st.S.index };
+  try {
+    // The code: 12 letters, every letter as likely as any other (bytes from 234 up are thrown back).
+    const codes = Array.from({ length: 400 }, () => ad.newCode());
+    check('adds: a request code is 12 lowercase letters, and 400 of them are all different', codes.every((c) => /^[a-z]{12}$/.test(c)) && new Set(codes).size === 400);
+    let calls = 0;
+    const fixed = (n) => { calls++; const a = new Uint8Array(n); a.fill(calls === 1 ? 255 : 0); if (calls === 1) { a[0] = 0; a[1] = 233; a[2] = 234; a[3] = 25; } return a; };
+    check('adds: a byte from 234 up is thrown back, so there is no lean toward early letters', ad.newCode(fixed) === 'azzaaaaaaaaa', ad.newCode(() => new Uint8Array(16)));
+    // The store.
+    const T = Date.UTC(2026, 9, 28, 18);
+    check('adds: remembered under vg-adds only, with whether a reply was asked, never the contact', ad.rememberAdd('abcdefghijkl', ' AURA ', true, T) && [...mem.keys()].join() === 'vg-adds'
+      && JSON.stringify(JSON.parse(mem.get('vg-adds'))) === JSON.stringify([{ code: 'abcdefghijkl', name: 'AURA', at: T, reply: true }]), mem.get('vg-adds'));
+    check('adds: a code that isn’t 12 letters is never kept', !ad.rememberAdd('ABCDEFGHIJKL', 'x', false, T) && !ad.rememberAdd('abc', 'x', false, T) && ad.readAdds(T).length === 1);
+    ad.rememberAdd('bbbbbbbbbbbb', 'Second', false, T + 1000);
+    check('adds: newest first', ad.readAdds(T + 2000).map((a) => a.code).join() === 'bbbbbbbbbbbb,abcdefghijkl');
+    ad.updateAdd('abcdefghijkl', { st: 'ready', ids: ['aura'] }, T + 2000);
+    check('adds: an update keeps the status word and the ids', JSON.stringify(ad.readAdds(T + 2000).find((a) => a.code === 'abcdefghijkl')) === JSON.stringify({ code: 'abcdefghijkl', name: 'AURA', at: T, reply: true, st: 'ready', ids: ['aura'] }));
+    check('adds: the ids a device holds', [...ad.heldIds(T + 2000)].join() === 'aura');
+    check('adds: gone after three days', ad.readAdds(T + 3 * 864e5 - 1).length === 2 && ad.readAdds(T + 3 * 864e5).map((a) => a.code).join() === 'bbbbbbbbbbbb' && ad.readAdds(T + 3 * 864e5 + 1000).length === 0);
+    for (let i = 0; i < 7; i++) ad.rememberAdd(`cccccccccc${String.fromCharCode(97 + i)}${String.fromCharCode(97 + i)}`, `n${i}`, false, T + 5000 + i);
+    check('adds: five at most, the newest kept', ad.readAdds(T + 9000).length === 5 && ad.readAdds(T + 9000)[0].code === 'ccccccccccgg');
+    ad.forgetAdd('ccccccccccgg', T + 9000);
+    check('adds: forgotten', !ad.readAdds(T + 9000).some((a) => a.code === 'ccccccccccgg'));
+    mem.set('vg-adds', JSON.stringify({ code: 'abcdefghijkl' }));
+    check('adds: anything but a list reads as none', ad.readAdds(T).length === 0);
+    mem.set('vg-adds', JSON.stringify([{ code: 'abcdefghijkl', name: 'A', at: T, ids: ['ok-id', 'Bad Id', 7], st: 'nonsense', quiet: 'yes', email: 'a@b.co' }, { code: 'x', at: T }, null, 'abc']));
+    const back = ad.readAdds(T);
+    check('adds: a stored entry is read field by field: a bad id, state or flag drops, nothing else rides along', back.length === 1 && JSON.stringify(back[0]) === JSON.stringify({ code: 'abcdefghijkl', name: 'A', at: T, ids: ['ok-id'] }), JSON.stringify(back));
+    mem.clear();
+    // The status, strictly.
+    check('adds: no answer, ok false or nonsense is "nothing yet"', ad.readStatus(null) === null && ad.readStatus({ ok: false }) === null && ad.readStatus('ready') === null && ad.readStatus([1]) === null);
+    const rs = ad.readStatus({ ok: true, state: 'not_a_source', name: '  The   Paper ', note: 'x'.repeat(400), id: 'the-paper', extra: '<b>' });
+    check('adds: a status keeps its word, a one-line name, a note cut at 200, and an id in the shape of one', rs.state === 'not_a_source' && rs.name === 'The Paper' && rs.note.length === 200 && rs.id === 'the-paper' && !('extra' in rs), JSON.stringify(rs).slice(0, 120));
+    check('adds: a state the page doesn’t know is "still working", and a bad id is none', ad.readStatus({ ok: true, state: 'launching', id: '../x' }).state === null && ad.readStatus({ ok: true, state: 'ready', id: '../x' }).id === null);
+
+    // What a preview brings: Austin's live bundle without AURA, and the real one as the preview.
+    const sbx = read('state-TX.json');
+    const real = read('place-austin-tx.json');
+    const liveP = JSON.parse(JSON.stringify(real));
+    liveP.endorsers = liveP.endorsers.filter((e) => e.id !== 'aura');
+    for (const t of Object.keys(liveP.endorsements)) { delete liveP.endorsements[t].aura; if (!Object.keys(liveP.endorsements[t]).length) delete liveP.endorsements[t]; }
+    const before = JSON.stringify([sbx, liveP]);
+    const liveB = bl.buildBallot(sbx, [liveP]);
+    const places = new Set(Object.keys(INDEX.places));
+    const live = ad.idsIn([sbx, liveP]);
+    const f = ad.pickNew([sbx, real], live, liveB.byId, liveB.order, places);
+    const auraRows = Object.entries(real.endorsements).filter(([t, r]) => r.aura && liveB.byId.has(t));
+    check('adds: a preview brings only the source the live data lacks', f.endorsers.map((e) => e.id).join() === 'aura', f.endorsers.map((e) => e.id).join());
+    const ae = f.endorsers[0];
+    check('adds: its record starts off for everyone, is marked as a preview, and keeps its fields', ae.default_on === false && ae.preview === true && ae.name === 'AURA' && ae.type === 'advocacy' && ae.lean === 'lean_left' && ae.lean_basis_kind === 'mission' && ae.guide_url === real.endorsers.find((e) => e.id === 'aura').guide_url && ae.home_places.join() === 'austin-tx', JSON.stringify(ae).slice(0, 200));
+    const same = (a, b) => ['s', 'c', 'note', 'why', 'url', 'date', 'conf'].every((k) => JSON.stringify(a[k] ?? null) === JSON.stringify(b[k] ?? null));
+    check('adds: every one of its rows on this ballot comes along, as the data has it', auraRows.length > 10 && Object.keys(f.rows).length === auraRows.length && auraRows.every(([t, r]) => f.rows[t] && same(f.rows[t].aura, r.aura)), `${Object.keys(f.rows).length} of ${auraRows.length}`);
+    const nb = bl.buildBallot(ad.withFound(sbx, f), [liveP]);
+    const realB = bl.buildBallot(sbx, [real]);
+    check('adds: the ballot it builds has the source and its rows, as the real data would', nb.eById.has('aura') && nb.endorsers.some((e) => e.id === 'aura') && auraRows.every(([t]) => !!nb.ends[t].aura)
+      && nb.order.join() === realB.order.join() && nb.endorsers.length === realB.endorsers.length, `${nb.endorsers.length} vs ${realB.endorsers.length}`);
+    check('adds: the live bundles are left exactly as they came', JSON.stringify([sbx, liveP]) === before);
+    check('adds: a source the live data already has is never taken again', ad.pickNew([sbx, real], ad.idsIn([sbx, real]), realB.byId, realB.order, places).endorsers.length === 0);
+    check('adds: only the ids a request became, once it has some', ad.pickNew([sbx, real], live, liveB.byId, liveB.order, places, ['someone-else']).endorsers.length === 0 && ad.pickNew([sbx, real], live, liveB.byId, liveB.order, places, ['aura']).endorsers.length === 1);
+    // Anything that doesn't check out is left out.
+    const race = liveB.items.find((it) => it.kind === 'contest' && !it.is_retention && it.candidates.length > 1 && liveB.order.includes(it.id));
+    const meas = liveB.items.find((it) => it.kind === 'measure' && liveB.order.includes(it.id));
+    const mk = (rows, e = {}) => ({ state: 'TX', endorsers: [{ id: 'new-src', name: 'New Source', short: 'New', type: 'advocacy', lean: null, guide_url: 'https://example.org/g', default_on: true, endorses_candidates: true, endorses_measures: true, ...e }], endorsements: rows });
+    const row = (o) => ({ s: 'endorsed', c: null, note: null, why: null, url: 'https://example.org/g', date: '2026-10-28', conf: 'verified', ...o });
+    const got = ad.pickNew([mk({
+      [race.id]: { 'new-src': row({ c: [race.candidates[0].name] }) },
+      [meas.id]: { 'new-src': row({ c: ['MAYBE'] }) },
+      'no-such-race': { 'new-src': row({ c: ['YES'] }) },
+    }, { guide_url: 'javascript:alert(1)', onclick: 'x', default_on: true, lean_basis_kind: 'mission' })], live, liveB.byId, liveB.order, places);
+    const g = got.endorsers[0];
+    check('adds: a row naming a candidate on the race is kept; a measure row that isn’t YES or NO, and a race the ballot lacks, are dropped', !!got.rows[race.id] && !got.rows[meas.id] && !got.rows['no-such-race'], JSON.stringify(Object.keys(got.rows)));
+    check('adds: a record is rebuilt field by field: no stray field, no script link, off for everyone, no basis kind without a lean', !!g && !('onclick' in g) && g.guide_url === null && g.default_on === false && !('lean_basis_kind' in g), JSON.stringify(g));
+    check('adds: a choice that isn’t a candidate on the race drops the row', ad.cleanRow(row({ c: ['Not A Candidate'] }), race) === null && ad.cleanRow(row({ c: [race.candidates[0].name, race.candidates[0].name] }), race) === null && !!ad.cleanRow(row({ c: [race.candidates[0].name] }), race));
+    check('adds: a row with a bad status, confidence or a choice on a non-pick is dropped; a bad link or date is cleared', ad.cleanRow(row({ s: 'maybe' }), race) === null && ad.cleanRow(row({ conf: 'sure' }), race) === null && ad.cleanRow(row({ s: 'not_found', c: ['YES'] }), meas) === null
+      && ad.cleanRow(row({ c: ['YES'], url: 'http://example.org', date: 'Oct 28' }), meas).url === null && ad.cleanRow(row({ c: ['YES'], date: 'Oct 28' }), meas).date === null);
+    check('adds: a source with no row on this ballot doesn’t count', ad.pickNew([mk({ 'no-such-race': { 'new-src': row({ c: ['YES'] }) } })], live, liveB.byId, liveB.order, places).endorsers.length === 0);
+    const four = { state: 'TX', endorsers: ['n-a', 'n-b', 'n-c', 'n-d'].map((id) => ({ id, name: id, type: 'other' })), endorsements: { [race.id]: Object.fromEntries(['n-a', 'n-b', 'n-c', 'n-d'].map((id) => [id, row({ c: [race.candidates[0].name] })])) } };
+    check('adds: more than three new sources (an old branch) takes none', ad.pickNew([four], live, liveB.byId, liveB.order, places).endorsers.length === 0);
+    check('adds: two reads together, and without the ones now live', ad.mergeFound(f, got).endorsers.map((e) => e.id).sort().join() === 'aura,new-src' && ad.withoutIds(ad.mergeFound(f, got), new Set(['aura'])).endorsers.map((e) => e.id).join() === 'new-src' && ad.withoutIds(f, new Set(['aura'])) === null);
+
+    // The reload gap: a held source this ballot lacks right now stays in your list through a chip tap.
+    st.S.ballot = liveB; st.S.b = st.emptyBallotState('78704');
+    st.S.b.sources = [...liveB.endorsers.filter((e) => e.default_on).map((e) => e.id), 'aura'];
+    mods.lens.toggleChip(liveB, 'papers'); mods.lens.toggleChip(liveB, 'papers');
+    check('adds: without a held request, a chip tap drops a source the ballot doesn’t have (as before)', st.S.b.sources === null, JSON.stringify(st.S.b.sources));
+    mem.set('vg-adds', JSON.stringify([{ code: 'abcdefghijkl', name: 'AURA', at: Date.now(), ids: ['aura'] }]));
+    st.S.b.sources = [...liveB.endorsers.filter((e) => e.default_on).map((e) => e.id), 'aura'];
+    mods.lens.toggleChip(liveB, 'papers');
+    const off = st.S.b.sources;
+    mods.lens.toggleChip(liveB, 'papers');
+    check('adds: with it held, a chip tap keeps it, off and on again', Array.isArray(off) && off.join() === 'aura' && Array.isArray(st.S.b.sources) && st.S.b.sources.includes('aura') && st.S.b.sources.length === liveB.endorsers.filter((e) => e.default_on).length + 1, `${JSON.stringify(off)} ${JSON.stringify(st.S.b.sources)}`);
+    // A save link opened in the gap (the preview timed out, so the ballot lacks AURA) keeps it (Codex, Oct 28), and
+    // the link itself is the same as ever.
+    const gapState = { ...st.S.b, sources: [...liveB.endorsers.filter((e) => e.default_on).map((e) => e.id), 'aura'] };
+    const gapLink = st.encodeShare(liveB, gapState);
+    const gapBack = st.decodeShare(liveB, head(gapLink)).state.sources;
+    check('adds: a save link opened before the preview answers keeps the held source', Array.isArray(gapBack) && gapBack.includes('aura') && gapBack.length === gapState.sources.length, JSON.stringify(gapBack));
+    mem.set('vg-adds', '[]');
+    check('adds: with nothing held, the link drops a source the ballot lacks, as before', !st.decodeShare(liveB, head(gapLink)).state.sources.includes('aura'));
+    check('adds: and the link’s format is unchanged (the held source is one more hash, as any switch)', gapLink === st.encodeShare(liveB, gapState) && gapLink.split('~')[7].split('.').length === gapState.sources.length);
+    mem.set('vg-adds', JSON.stringify([{ code: 'abcdefghijkl', name: 'AURA', at: Date.now(), ids: ['aura'] }]));
+    st.S.ballot = nb;
+    mods.lens.setSources(nb, st.S.b.sources.filter((id) => id !== 'aura'));
+    check('adds: once the ballot has it, its own switch turns it off', !(st.S.b.sources || []).includes('aura'), JSON.stringify(st.S.b.sources));
+
+    // "Show endorsements" back on keeps a held source too (Codex, Oct 28), and is the defaults otherwise.
+    st.S.ballot = liveB;
+    st.S.b.sources = ['aura'];
+    const on2 = mods.lens.backOn(liveB);
+    check('adds: "Show endorsements" back on, with only a held source in the list, keeps it beside the defaults', Array.isArray(on2) && on2.includes('aura') && on2.length === liveB.endorsers.filter((e) => e.default_on).length + 1, JSON.stringify(on2));
+    mem.clear();
+    check('adds: and with nothing held, back on is the defaults (null)', mods.lens.backOn(liveB) === null);
+    // Which source a live request became: only what the requester typed decides (Codex, Oct 28).
+    const es = realB.endorsers;
+    check('adds: a typed name matches its source exactly, short or long', ad.typedSource('AURA', es)?.id === 'aura' && ad.typedSource('  aura ', es)?.id === 'aura');
+    const chron = es.find((e) => /chronicle/i.test(e.name));
+    check('adds: a typed name inside a source’s name, as whole words, matches when it’s the only one', !chron || ad.typedSource(chron.name.replace(/^The\s+/i, '').split(' ').slice(0, 2).join(' '), es)?.id === chron.id, chron ? chron.name : 'no Chronicle on this ballot');
+    check('adds: a typed link matches the source whose guide is on that site', ad.typedSource('https://www.aura-atx.org/whatever', es)?.id === 'aura');
+    check('adds: part of a word, or a short word, matches nothing', ad.typedSource('aur', es) === null && ad.typedSource('the', es) === null && ad.typedSource('', es) === null);
+    const two = [{ ...es[0], id: 'x1', name: 'Travis County Democratic Party', short: 'Travis Dems' }, { ...es[0], id: 'x2', name: 'Texas Democratic Party', short: 'Texas Dems' }];
+    check('adds: a name more than one source shares matches none', ad.typedSource('Democratic', two) === null);
+    check('adds: the status’s id may choose among the ones that match, never add one', ad.typedSource('Democratic', two, 'x2')?.id === 'x2' && ad.typedSource('Democratic', two, 'aura') === null && ad.typedSource('nothing like it', es, 'aura') === null);
+    check('adds: the status’s time is kept only in its own shape', ad.readStatus({ ok: true, state: 'live', at: '2026-10-28T18:00:00.000Z' }).at === '2026-10-28T18:00:00.000Z' && ad.readStatus({ ok: true, state: 'live', at: 'yesterday' }).at === null);
+
+    // The banner: one request, its line by its status and how long it has waited.
+    const va = views.adds;
+    const now = Date.now();
+    const A = (o) => ({ code: 'abcdefghijkl', name: 'https://www.aura-atx.org/guide', at: now - 60e3, ...o });
+    va.statusOf.clear();
+    check('adds banner: a link reads as its site', va.addName(A({})) === 'aura-atx.org' && va.addName(A({ name: 'x'.repeat(80) })).length === 60);
+    const line = (o, s0) => { va.statusOf.clear(); if (s0) va.statusOf.set('abcdefghijkl', { state: s0, name: 'AURA', note: s0 === 'not_a_source' ? 'It’s a news story about other people’s picks.' : '', id: null }); return va.addLine(A(o), now); };
+    check('adds banner: each status has its line', line({}) === 'Request sent for aura-atx.org. You can keep going.' && line({}, 'reading') === 'Reading AURA’s page.' && line({}, 'checking') === 'Checking AURA’s picks.'
+      && line({}, 'held') === 'Kevin is checking AURA himself. If he adds it, it shows up here.' && line({}, 'blocked') === 'We can’t read AURA’s page. Can you paste their picks?'
+      && line({}, 'not_a_source') === 'We can’t add AURA. It’s a news story about other people’s picks.' && line({ reply: true }, 'failed') === 'Couldn’t add AURA. Kevin will follow up.' && line({}, 'failed') === 'Couldn’t add AURA. Kevin will take a look.', line({}, 'held'));
+    check('adds banner: after 20 minutes, still waiting says Kevin will follow up (or take a look, with no way to reach you)', line({ at: now - 20 * 60e3, reply: true }, 'checking') === 'Still waiting on AURA. Kevin will follow up.' && line({ at: now - 21 * 60e3 }) === 'Still waiting on aura-atx.org. Kevin will take a look.');
+    check('adds banner: the last word saved shows before this visit reads one', line({ st: 'blocked' }) === 'We can’t read aura-atx.org’s page. Can you paste their picks?');
+    check('adds banner: the newest open request speaks; a closed, folded in or live one doesn’t', ad.bannerAdd([A({ code: 'bbbbbbbbbbbb', quiet: true }), A({ code: 'cccccccccccc', ids: ['aura'] }), A({ code: 'dddddddddddd', st: 'live' }), A({})]).code === 'abcdefghijkl' && ad.bannerAdd([A({ quiet: true })]) === null);
+    va.statusOf.clear();
+    mem.set('vg-adds', JSON.stringify([A({ st: 'blocked', name: 'The <b>Paper</b>' })]));
+    st.S.view = 'ballot'; st.S.ui.view = 'ballot'; st.S.tryMode = null;
+    const bh = va.addsHTML(now);
+    check('adds banner: blocked offers the paste, opening Add a source with the name as typed, escaped', /data-state="blocked"/.test(bh) && /data-act="shelf" data-kind="source" data-hint="paste"/.test(bh) && /data-src="The &lt;b&gt;Paper&lt;\/b&gt;"/.test(bh) && /data-act="adds-x"/.test(bh) && !/<b>Paper/.test(bh), bh);
+    st.S.tryMode = 'fresh';
+    check('adds banner: never in a "try as" scenario', va.addsHTML(now) === '');
+    st.S.tryMode = null;
+
+    // The shelf: the code goes along, word for word, for Add a source only.
+    const along = { page: 'Your ballot', where: 'Austin, 78704', url: 'https://vote.kevinhg.com/', data: '2026-10-28 18:00 UTC', build: 'abc1234', device: 'x', errors: [], request: 'abcdefghijkl' };
+    const src = { kind: 'source', f: { src: 'AURA', where: 'Austin, 78704', picks: '', reach: '' }, what: '', tag: '', hint: '', along, state: 'edit', err: false, fk: '', back: null };
+    const sb2 = views.shelf.reportBody(src);
+    check('adds shelf: Add a source sends "Request: <code>" last in Sent along, and the list shows it', views.shelf.alongLines(src).at(-1) === 'Request: abcdefghijkl' && sb2[common.FORM.wrong].endsWith('\nRequest: abcdefghijkl'), sb2[common.FORM.wrong]);
+    check('adds shelf: a city request never carries one', !views.shelf.alongLines({ ...src, kind: 'city' }).some((l) => /^Request:/.test(l)));
+    const keepRep = st.S.ui.report;
+    st.S.ui.report = { ...src, hint: 'paste', prev: 'bbbbbbbbbbbb', f: { ...src.f, src: 'The Paper' } };
+    const ph = views.shelf.shelfHTML();
+    check('adds shelf: from the banner, the paste box comes first and open, required, with the policy beside it, the source filled in', ph.indexOf('id="rf-picks"') > 0 && ph.indexOf('id="rf-picks"') < ph.indexOf('id="rf-src"') && /id="rf-picks"[^>]*aria-required="true"/.test(ph) && ph.includes(views.shelf.PASTE_POLICY) && /id="rf-src"[^>]*value="The Paper"/.test(ph) && /data-hint="paste"/.test(ph) && views.shelf.requiredOf(st.S.ui.report) === 'picks', ph.slice(0, 200));
+    st.S.ui.report = { ...src, state: 'sent', watched: true };
+    check('adds shelf: sent and watched, it says it shows up here', /<b>Sent\.<\/b> If it checks out, it shows up right here\. Keep going\./.test(views.shelf.shelfHTML()), views.shelf.shelfHTML().slice(0, 160));
+    st.S.ui.report = { ...src, state: 'sent' };
+    check('adds shelf: sent where the device can’t watch, the plain line', /<b>Sent\.<\/b> Kevin reads every one\.<\/p>/.test(views.shelf.shelfHTML()), views.shelf.shelfHTML().slice(0, 160));
+    st.S.ui.report = keepRep;
+  } finally {
+    if (had) Object.defineProperty(globalThis, 'window', had); else delete globalThis.window;
+    st.S.b = keep.b; st.S.ballot = keep.ballot; st.S.view = keep.view; st.S.ui.view = keep.uiView; st.S.tryMode = keep.tryMode; st.S.index = keep.index;
+  }
 }
 
 /* ---------- extension points: run when the ledger's model modules exist ---------- */

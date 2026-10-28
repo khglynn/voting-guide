@@ -4,6 +4,7 @@ import type { Ballot } from './ballot';
 import type { ChipKey } from './model/lens';
 import type { GeoResult } from './geo';
 import { load, save, hash, b64urlEncode, b64urlDecode } from './util';
+import { heldIds } from './model/adds';
 
 export interface Prefs {
   parties: string[] | null;   // null = every party shown
@@ -100,13 +101,16 @@ export interface Along {
   device: string;             // "Safari 18 on iPhone, 390px wide"
   errors: string[];           // the last errors the page caught (errors.ts), newest first
   crash?: string;             // the id of the last crash report Sentry took in (errors.ts lastErrorId), so a note links to it
+  request?: string;           // Add a source only: the request's random code (model/adds.ts), sent as "Request: <code>"
 }
 export interface Shelf {
   kind: ShelfKind;
   f: Record<string, string>;  // a form's fields by name: wrong and reach (a report); city, zip and reach (a city); src, where, picks and reach (a source)
   what: string;               // the race, measure or source it was opened from, or the page
   tag: string;                // that item or source id, sent after it so a fix can find the record
-  hint: string;               // 'paywall' or 'blocked': from a source's "Send it to us"; 'follow': from "Want to hear when it's in?"
+  hint: string;               // 'paywall' or 'blocked': from a source's "Send it to us"; 'follow': from "Want to hear when it's in?"; 'paste': Add a source from the request banner's "Paste their picks"
+  prev?: string;              // 'paste' only: the code of the request this one follows (model/adds.ts), let go once this one is sent
+  watched?: boolean;          // Add a source, sent: this device will add it to the ballot when it's ready (so the sent line can say so)
   along: Along;               // what a form sends along by itself, read when it opened (views/shelf.ts)
   state: 'edit' | 'sending' | 'sent' | 'failed' | 'unsure'; // failed: the request was refused outright; unsure: no answer in time, so it may or may not have gone
   err: boolean;               // Send was tapped with the one required field empty
@@ -306,7 +310,10 @@ export function decodeShare(ballot: Ballot, head: ShareHead): { state: BallotSta
   }
   if (src === '0') st.sources = [];
   else if (src) {
-    const eByHash = new Map(ballot.endorsers.map((e) => [hash(e.id), e.id]));
+    // A source this device asked for and holds, which the ballot doesn't have yet (its preview hasn't answered since
+    // a reload, model/adds.ts), is read back too, so your own link can't drop it (Codex, Oct 28). The link is unchanged.
+    const eByHash = new Map([...heldIds()].filter((id) => !ballot.eById.has(id)).map((id) => [hash(id), id]));
+    ballot.endorsers.forEach((e) => eByHash.set(hash(e.id), e.id));
     st.sources = src.split('.').map((h) => eByHash.get(h)).filter((x): x is string => !!x);
   }
   if (head.v >= 2) {

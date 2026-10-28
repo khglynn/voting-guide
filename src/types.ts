@@ -142,6 +142,9 @@ export interface Endorser {
      group whose geography names its state (a statewide group). "Not checked yet" on a district race
      needs the ballot's place in here. */
   home_places?: string[];
+  /* In memory only, never in the data (model/adds.ts, Oct 28): a source this device took in from its request's
+     branch preview before the merge. The sources sheet says it's new here and still being checked. */
+  preview?: true;
 }
 
 export interface Endorsement {

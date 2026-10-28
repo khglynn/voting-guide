@@ -14,6 +14,8 @@ import { planAgree, applyFills, planParty, planSetup, forgetUndo, fillStands, ca
 import { addrSummary, localAnswers, mapNotes, lookupPasses, type MapResult } from './model/address';
 import { ballotMaps, fromTopo, answerAt, edgeOf, type FeatureCollection, type Topology } from './model/maps';
 import { partiesOnBallot, toggleChip, setSources, setParty, chipMembers, chipState, doorNone, noEndorsements, CHIPS } from './model/lens';
+import { readAdds, updateAdd, forgetAdd, readStatus, pickNew, mergeFound, withoutIds, withFound, idsIn, settled, typedSource, POLL_MS, WATCH_MS, type Add, type AddStatus, type Found } from './model/adds';
+import { statusOf, addsHTML, addName, ADD_COPY } from './views/adds';
 
 /* ---------- data ---------- */
 const BASE = import.meta.env.BASE_URL || '/';
@@ -251,9 +253,14 @@ async function loadBallot(st: string, placeIds: string[], zip: string, opts: Ope
   render();
   try {
     await ensureIndex();
+    // A source this device asked for and already has (model/adds.ts) is read again from its preview beside the
+    // live bundles, so it's back before anything can switch it off (the judge's "reload gap", Oct 28).
+    const held = heldRead(st, placeIds);
     const [sb, ...pbs] = await Promise.all([getJSON<StateBundle>(`state-${st}.json`), ...placeIds.map((id) => getJSON<PlaceBundle>(`place-${id}.json`))]);
     if (seq !== loadSeq) return false;
-    const ballot = buildBallot(sb, pbs);
+    const found = held ? heldFound(await held, sb, pbs) : null;
+    if (seq !== loadSeq) return false;
+    const ballot = build(sb, pbs, found);
     S.ballot = ballot;
     forgetUndo();
     const existing = S.tryMode ? null : savedBallot(ballot.key);
@@ -311,6 +318,7 @@ async function loadBallot(st: string, placeIds: string[], zip: string, opts: Ope
     if (!door) switchOnNow();
     if (!door) window.scrollTo(0, 0);
     if (S.pending) $('[data-fk="restore-yes"]')?.focus();
+    watchAdds('load');
     // What the caller does next (an address's districts) can't turn a loaded ballot into a load error.
     if (opts.after) { try { await opts.after(); } catch (e) { console.error(e); } }
     return true;
@@ -450,8 +458,295 @@ export function switchOnNow(lead = ''): boolean {
   if (!e) return false;
   S.switchOn = null;
   if (!chosenIds().includes(id)) { setSources(b, [...chosenIds(), id]); persist(true); render(); }
-  toast(`${lead ? `${lead} ` : ''}${e.short || e.name} is on. Its picks show beside your races.`);
+  // A source you asked for, here before it's in the guide for everyone (model/adds.ts), says so.
+  toast(`${lead ? `${lead} ` : ''}${e.preview ? ADD_COPY.onEarly(e.short || e.name) : `${e.short || e.name} is on. Its picks show beside your races.`}`);
   return true;
+}
+
+/* ---------- a source you asked for, on your ballot once it's ready (Oct 28) ----------
+   model/adds.ts has the store, the checks and the why. Here: the form script's status, read every 20 seconds
+   while a request is waiting and the tab is visible, for 30 minutes from the send, and once more at each ballot
+   load and each time the tab comes back; the branch's preview read once the status says ready; and the swap
+   that puts the new source on the ballot in place. The swap never calls resetUI or loadBallot: your picks, ranks,
+   notes and districts (S.b) and the open row, folds and Undo (S.ui) stay as they are. It rebuilds from the same
+   live bundles, checks the ballot and its load are the ones it read for, brings rankings in line, and paints
+   inside anchored(), so what you're looking at stays put. It waits while a sheet, Full details, a restore
+   prompt, a row's beat, the address form or a lookup's late maps (applyGeo's still() compares S.ballot), a
+   field you're typing in, or an Undo toast is up. */
+export const STATUS_URL = 'https://script.google.com/macros/s/AKfycbwrtOS4YWpooN9_sapbs98g1m-AvyK_-XtLVCHavDysAuRkK9O-ojmP1v9Zj_-12RLlag/exec';
+/* The request's branch preview on Vercel, built about 15 seconds after the pipeline pushes src-<code>. */
+export const previewHost = (code: string): string => `https://voting-guide-git-src-${code}-kevinhg.vercel.app`;
+/* What each ballot was built from: the live bundles as they came, and the sources requests added. */
+const built = new WeakMap<Ballot, { sb: StateBundle; pbs: PlaceBundle[]; found: Found | null }>();
+function build(sb: StateBundle, pbs: PlaceBundle[], found: Found | null): Ballot {
+  const b = buildBallot(withFound(sb, found), pbs);
+  built.set(b, { sb, pbs, found });
+  return b;
+}
+/* Another site's JSON (the status, a preview), or ours fresh: no cookies, no referrer, never the browser's cache. */
+async function farJSON(url: string, ms: number): Promise<unknown> {
+  const stop = new AbortController();
+  const timer = window.setTimeout(() => stop.abort(), ms);
+  try {
+    const r = await fetch(url, { cache: 'no-store', credentials: 'omit', referrerPolicy: 'no-referrer', signal: stop.signal });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    return await r.json();
+  } finally { window.clearTimeout(timer); }
+}
+/* One ballot's bundles from a host (a preview, or this site fresh), all or nothing: a source's local rows are in
+   the place bundle, so half a read could show it with half its picks. */
+async function bundlesAt(base: string, st: string, placeIds: string[], ms: number): Promise<[StateBundle, ...PlaceBundle[]] | null> {
+  try {
+    const all = await Promise.all([farJSON(`${base}data/state-${st}.json`, ms), ...placeIds.map((id) => farJSON(`${base}data/place-${id}.json`, ms))]);
+    const [sb, ...pbs] = all as [StateBundle, ...PlaceBundle[]];
+    if (!sb || sb.state !== st || pbs.some((p, i) => !p || p.id !== placeIds[i])) return null;
+    return [sb, ...pbs];
+  } catch { return null; }
+}
+const placesKnown = (): Set<string> => new Set(Object.keys(S.index ? S.index.places : {}));
+/* At a load: the requests whose sources this device took in, read from their previews while the live bundles
+   load (2.5 seconds at most, so a slow preview never holds up the ballot; the watcher reads it again after). */
+type HeldRead = { a: Add; got: [StateBundle, ...PlaceBundle[]] | null }[];
+function heldRead(st: string, placeIds: string[]): Promise<HeldRead> | null {
+  const held = S.tryMode ? [] : readAdds().filter((a) => a.ids);
+  return held.length ? Promise.all(held.map(async (a) => ({ a, got: await bundlesAt(`${previewHost(a.code)}/`, st, placeIds, 2500) }))) : null;
+}
+/* What those reads bring to this ballot. A request whose sources the live bundles now have is merged: it's let go.
+   A read that came back counts as read for this ballot this visit. */
+function heldFound(reads: HeldRead, sb: StateBundle, pbs: PlaceBundle[]): Found | null {
+  const live = idsIn([sb, ...pbs]);
+  const plain = buildBallot(sb, pbs);
+  let found: Found | null = null;
+  for (const { a, got } of reads) {
+    if (a.ids!.every((id) => live.has(id))) { forgetAdd(a.code); continue; }
+    if (!got) continue;
+    const f = pickNew(got, live, plain.byId, plain.order, placesKnown(), a.ids!);
+    // Read and not here (a source for another ballot): not read again this visit. Found, the ballot shows it, which
+    // is what the watcher checks; a later load of this ballot whose read times out reads it again.
+    if (f.endorsers.length) found = mergeFound(found, f); else readHere.add(`${a.code}|${plain.key}`);
+  }
+  return found;
+}
+
+/* `${code}|${ballot key}`: that request's preview, read in full for that ballot this visit and found to have nothing
+   for it. A source it did have shows on the ballot, and that's what the checks look at (a newer load of the same
+   ballot that missed it reads again). */
+const readHere = new Set<string>();
+/* Each request's held preview reads that failed this visit, by code: three, and it stops trying until a load. */
+const heldMisses = new Map<string, number>();
+/* The 20-second checks a request gets past its first 30 minutes this visit (a ready preview that won't answer, a
+   live build that hasn't landed): fifteen, five minutes' worth, then only a load or the tab coming back. */
+const lateTicks = new Map<string, number>();
+const LATE_MAX = 15;
+/* A swap waiting for a free moment: its ballot and load, and either a preview's sources (`found`) or this ballot's
+   live bundles read fresh (`fresh`), with what to say once it lands. */
+interface Fold { key: string; seq: number; code: string; found?: Found; again?: true; fresh?: [StateBundle, ...PlaceBundle[]]; status?: AddStatus }
+let folds: Fold[] = [];
+let addsTimer: number | undefined;
+let foldTimer: number | undefined;
+let checking = false;
+let checkAgain: Why | null = null;
+type Why = 'load' | 'tick' | 'back' | 'sent';
+/* Start a check now. `tick`: the 20-second check, only for requests in their first 30 minutes; any other reason
+   checks every request this device is waiting on once. */
+export function watchAdds(why: Why = 'tick'): void {
+  if (S.tryMode) return;
+  window.clearTimeout(addsTimer);
+  addsTimer = undefined;
+  if (checking) { checkAgain = checkAgain && checkAgain !== 'tick' ? checkAgain : why; return; }
+  void checkAdds(why);
+}
+document.addEventListener('visibilitychange', () => { if (!document.hidden) watchAdds('back'); else window.clearTimeout(addsTimer); });
+/* A ballot loaded: shown, or on the first page waiting for "Show my ballot" (a preview read then is ready the moment
+   it shows). */
+const openBallotNow = (): Ballot | null => (S.ballot && (S.view === 'ballot' || S.view === 'setup') ? S.ballot : null);
+const pendingFor = (code: string, key: string): boolean => folds.some((f) => f.code === code && f.key === key);
+async function checkAdds(why: Why): Promise<void> {
+  checking = true;
+  try {
+    const now = Date.now();
+    for (const a of readAdds(now)) {
+      const b = openBallotNow();
+      if (a.ids) { if (b && why !== 'sent') await rereadHeld(a, b); continue; }
+      if (why === 'tick') {
+        if (!ticking(a, now, b)) continue;
+        if (!a.ids && now - a.at >= WATCH_MS) lateTicks.set(a.code, (lateTicks.get(a.code) || 0) + 1);
+      }
+      let st: AddStatus | null = null;
+      try { st = readStatus(await farJSON(`${STATUS_URL}?status=${a.code}`, 10_000)); } catch { /* no answer: try next time */ }
+      if (!st || !st.state) continue;
+      statusOf.set(a.code, st);
+      if (a.st !== st.state) updateAdd(a.code, { st: st.state });
+      if (!b) continue;
+      if (st.state === 'ready') await readPreview(a, st, b);
+      else if (st.state === 'live') await readLive(a, st, b);
+    }
+  } finally {
+    checking = false;
+    paintAdds();
+    tryFolds();
+    const again = checkAgain;
+    checkAgain = null;
+    if (again) watchAdds(again); else nextCheck();
+  }
+}
+/* Ready: the preview's bundles for this ballot, and of the sources in them the live data lacks, the one this request
+   became: the id the status names, or with none, the one matching what was typed (Codex, Oct 28: a branch can carry
+   another new source, one since taken out of the guide, and that one must never come along). None (a source the
+   guide already has, with new picks; one for another ballot) waits for "live". */
+async function readPreview(a: Add, st: AddStatus, b: Ballot): Promise<void> {
+  const k = `${a.code}|${b.key}`;
+  const was = built.get(b);
+  if (readHere.has(k) || pendingFor(a.code, b.key) || !was) return;
+  const seq = loadSeq;
+  const got = await bundlesAt(`${previewHost(a.code)}/`, b.st, b.places.map((p) => p.id), 15_000);
+  if (!got || S.ballot !== b || seq !== loadSeq) return;
+  // A source another request already brought counts as here, so it isn't taken twice.
+  const live = new Set([...idsIn([was.sb, ...was.pbs]), ...(was.found ? was.found.endorsers.map((e) => e.id) : [])]);
+  const plain = buildBallot(was.sb, was.pbs);
+  const all = pickNew(got, live, plain.byId, plain.order, placesKnown());
+  const mine = st.id ? all.endorsers.find((e) => e.id === st.id) : typedSource(a.name, all.endorsers);
+  const found = mine ? pickNew(got, live, plain.byId, plain.order, placesKnown(), [mine.id]) : null;
+  if (!found || !found.endorsers.length) { readHere.add(k); return; }
+  folds.push({ key: b.key, seq, code: a.code, found });
+}
+/* A request whose sources this device took in, on a ballot that doesn't show them yet (the read at the load
+   timed out): read its preview again, three times at most this visit. */
+async function rereadHeld(a: Add, b: Ballot): Promise<void> {
+  const k = `${a.code}|${b.key}`;
+  if (readHere.has(k) || pendingFor(a.code, b.key) || a.ids!.every((id) => b.eById.has(id)) || (heldMisses.get(a.code) || 0) >= 3) return;
+  const was = built.get(b);
+  if (!was) return;
+  const seq = loadSeq;
+  const got = await bundlesAt(`${previewHost(a.code)}/`, b.st, b.places.map((p) => p.id), 15_000);
+  if (S.ballot !== b || seq !== loadSeq) return;
+  if (!got) { heldMisses.set(a.code, (heldMisses.get(a.code) || 0) + 1); return; }
+  const plain = buildBallot(was.sb, was.pbs);
+  const found = pickNew(got, idsIn([was.sb, ...was.pbs]), plain.byId, plain.order, placesKnown(), a.ids!);
+  if (!found.endorsers.length) { readHere.add(k); return; }
+  // Back as it was: already switched on (or off) by you, so it comes back quietly.
+  folds.push({ key: b.key, seq, code: a.code, found, again: true });
+}
+/* Live, and this device never took the source in (it was away while the request ran, or the guide already had
+   the source and this brought new picks). "Live" is written only once the pipeline has seen the source in
+   production's own bundle (vg-source.mjs), so production has it: if production's index is a newer build than
+   this page's, this ballot's live bundles are read fresh and swapped in; if it's the same build, this page has it
+   already. Either way the request is settled on what the ballot then shows. */
+async function readLive(a: Add, st: AddStatus, b: Ballot): Promise<void> {
+  if (pendingFor(a.code, b.key) || !S.index) return;
+  const seq = loadSeq;
+  let idx: Index | null = null;
+  try { idx = await farJSON(`${BASE}data/index.json`, 10_000) as Index; } catch { return; }
+  if (!idx || typeof idx.generated !== 'string' || S.ballot !== b || seq !== loadSeq) return;
+  if (idx.generated === S.index.generated) { folds.push({ key: b.key, seq, code: a.code, status: st }); return; }
+  const got = await bundlesAt(BASE, b.st, b.places.map((p) => p.id), 15_000);
+  if (!got || S.ballot !== b || seq !== loadSeq) return;
+  // The rest of this visit reads the new build: its index, and these bundles, in place of the ones cached.
+  cache.clear();
+  cache.set('index.json', Promise.resolve(idx));
+  cache.set(`state-${b.st}.json`, Promise.resolve(got[0]));
+  b.places.forEach((p, i) => cache.set(`place-${p.id}.json`, Promise.resolve(got[i + 1])));
+  S.index = idx;
+  folds.push({ key: b.key, seq, code: a.code, fresh: got, status: st });
+}
+/* What the 20-second check looks at: a request in its first 30 minutes that hasn't finished (blocked, not a
+   source, failed); one that's ready or live until this page has settled it, however old (Kevin's own look can
+   take hours); and one whose source this device holds, until its preview is read for this ballot. */
+function ticking(a: Add, now: number, b: Ballot | null): boolean {
+  if (a.ids) return !!b && !readHere.has(`${a.code}|${b.key}`) && !a.ids.every((id) => b.eById.has(id)) && (heldMisses.get(a.code) || 0) < 3;
+  if (settled(a)) return false;
+  if (now - a.at < WATCH_MS) return true;
+  if ((lateTicks.get(a.code) || 0) >= LATE_MAX) return false;
+  return a.st === 'live' || (a.st === 'ready' && !!b && !readHere.has(`${a.code}|${b.key}`));
+}
+/* Due while anything is ticking; never while the tab is hidden. */
+function nextCheck(): void {
+  window.clearTimeout(addsTimer);
+  addsTimer = undefined;
+  if (S.tryMode || document.hidden) return;
+  const now = Date.now();
+  const b = openBallotNow();
+  if (readAdds(now).some((a) => ticking(a, now, b))) addsTimer = window.setTimeout(() => watchAdds('tick'), POLL_MS);
+}
+/* The banner, repainted only when what it says changed, so a screen reader hears it once. */
+let addsSaid = '';
+function paintAdds(): void {
+  const h = addsHTML();
+  if (h === addsSaid) return;
+  addsSaid = h;
+  if (S.view === 'ballot' && S.ballot && S.ui.view === 'ballot') anchored(() => render(['restore']));
+}
+/* Not now: something is open or moving that a repaint of the ballot would disturb. On the first page it waits
+   for "Show my ballot", so the source goes on, and says so, where you'll see it. */
+function foldWaits(): boolean {
+  const u = S.ui;
+  if (document.hidden || S.view !== 'ballot' || S.pending || u.sheet || u.reader || u.beat || u.addrOpen || u.addrBusy || u.addrMapsPending || u.addrWhich) return true;
+  const f = document.activeElement as HTMLElement | null;
+  if (f && f.matches('input, textarea, select, [contenteditable="true"]')) return true;
+  return !!document.querySelector('.toast.show [data-act]'); // an Undo toast, which a new toast would cut short
+}
+/* The swaps waiting, for this ballot and this load, in one rebuild; then the source goes on and a toast says so.
+   Swaps for a ballot that's gone, or a load that was replaced, are dropped (the next check reads again). */
+function tryFolds(): void {
+  window.clearTimeout(foldTimer);
+  foldTimer = undefined;
+  // Swaps for a ballot that's gone, a load that was replaced, or a request that expired go first.
+  const b = openBallotNow();
+  const open = new Set(readAdds().map((a) => a.code));
+  folds = folds.filter((f) => b && f.key === b.key && f.seq === loadSeq && open.has(f.code));
+  if (!folds.length) return;
+  // Hidden, the next check when the tab comes back runs this again; otherwise once a second until it can.
+  if (foldWaits()) { if (!document.hidden) foldTimer = window.setTimeout(tryFolds, 1000); return; }
+  const was = b && built.get(b);
+  const now = folds;
+  folds = [];
+  if (!b || !was) return;
+  let { sb, pbs, found } = was;
+  for (const f of now) {
+    if (f.fresh) [sb, ...pbs] = f.fresh;
+    if (f.found) found = mergeFound(found, f.found);
+  }
+  // A source the live bundles have now comes from them, never from an older preview (Codex, Oct 28).
+  found = withoutIds(found, idsIn([sb, ...pbs]));
+  const nb = now.some((f) => f.found || f.fresh) ? build(sb, pbs, found) : b;
+  const said: string[] = [];
+  const turnOn: string[] = [];
+  anchored(() => {
+    if (nb !== b) { normalizeRanks(nb, S.b); S.ballot = nb; }
+    for (const f of now) {
+      if (f.found) {
+        if (f.again) continue;
+        updateAdd(f.code, { ids: f.found.endorsers.map((e) => e.id), st: 'ready' });
+        // The first source a request became goes on, as its switch in the sources sheet would.
+        turnOn.push(f.found.endorsers[0].id);
+      } else if (f.status) {
+        const r = settleLive(f, nb);
+        if (r.on) turnOn.push(r.on); else if (r.say) said.push(r.say);
+      }
+    }
+    // Every request's source goes on; the toast names the last (switchOnNow).
+    const more = turnOn.slice(0, -1).filter((id) => !chosenIds().includes(id));
+    if (more.length) setSources(nb, [...chosenIds(), ...more]);
+    if (turnOn.length) S.switchOn = turnOn[turnOn.length - 1];
+    render();
+    if (S.switchOn) switchOnNow();
+  });
+  persist();
+  const line = said.pop();
+  if (line && !turnOn.length && S.view === 'ballot') toast(line);
+}
+/* A live request, settled on the ballot as it is now. Its source is the one matching what was typed (model/adds.ts
+   typedSource; the status's own words never pick it): it goes on, or, already on, says its new picks are in.
+   With none matching, it says the source is in the guide. Settled, it's let go. */
+function settleLive(f: Fold, b: Ballot): { on?: string; say?: string } {
+  const st = f.status!;
+  const a = readAdds().find((x) => x.code === f.code);
+  if (!a) return {};
+  const e = typedSource(a.name, b.endorsers, st.id);
+  forgetAdd(f.code);
+  if (!e) return { say: ADD_COPY.elsewhere(addName(a, st)) };
+  if (chosenIds().includes(e.id)) return { say: ADD_COPY.newPicks(e.short || e.name) };
+  return { on: e.id };
 }
 
 /* "Welcome back. You've decided 12 of 43.": a returning visitor's started ballot, reopened from this

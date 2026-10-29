@@ -171,7 +171,7 @@ jobs:
     # Also after every push to main (a merged city or data PR), once production serves that commit.
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref == 'refs/heads/main')
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25   # setup, up to 8 minutes waiting for the deploy, and two sweeps
     steps:
       - uses: actions/checkout@v7
         with:
@@ -182,18 +182,22 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npx playwright install --with-deps --only-shell chromium
-      # After a push, wait until production serves it (Vercel builds in about a minute), up to 10 minutes; a later
+      # After a push, wait until production serves it (Vercel builds in about a minute), up to 8 minutes; a later
       # push that already includes it counts too. Not served by then: say so and sweep what's live.
       - name: Wait for production to serve this push
         if: github.event_name == 'push'
         run: |
-          for i in $(seq 1 40); do
-            c=$(curl -sf --max-time 15 https://vote.kevinhg.com/data/build-report.json | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{console.log(JSON.parse(s).commit||"")}catch{console.log("")}})')
+          end=$((SECONDS + 480))
+          while [ "$SECONDS" -lt "$end" ]; do
+            c=$(curl -sf --max-time 10 https://vote.kevinhg.com/data/build-report.json | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{console.log(JSON.parse(s).commit||"")}catch{console.log("")}})')
             if [ "$c" = "$GITHUB_SHA" ]; then echo "production serves ${c:0:12}"; exit 0; fi
-            if [ -n "$c" ] && git merge-base --is-ancestor "$GITHUB_SHA" "$c" 2>/dev/null; then echo "production serves ${c:0:12}, which includes this push"; exit 0; fi
+            if [ -n "$c" ]; then
+              git cat-file -e "$c^{commit}" 2>/dev/null || git fetch -q origin main 2>/dev/null || true
+              if git merge-base --is-ancestor "$GITHUB_SHA" "$c" 2>/dev/null; then echo "production serves ${c:0:12}, which includes this push"; exit 0; fi
+            fi
             sleep 15
           done
-          echo "::warning::Production didn't serve ${GITHUB_SHA:0:12} within 10 minutes; sweeping what's live."
+          echo "::warning::Production didn't serve ${GITHUB_SHA:0:12} within 8 minutes; sweeping what's live."
       # Fails (and GitHub emails the repo owner) only when the sweep fails twice, a minute apart. The
       # sweep exits non-zero for real failures (missing items, console errors, sideways scroll, broken
       # data), never for its warnings, so one slow response from the host does not wake anyone up.

@@ -106,10 +106,25 @@
     "start": "2026-10-20",
     "end": "2026-11-02",
     "hours_note": "City of St. Louis: no-excuse absentee voting in person, Tuesday, October 20 through Monday, November 2, with photo ID, at eight sites. The Election Board, 300 N. Tucker Blvd., is open Monday to Friday, 8 AM to 5 PM, and Saturday, Oct 31, 9 AM to 1 PM. Six library branches (Buder, Carpenter, Julia Davis, Kingshighway, Schlafly and Walnut Park) are open Monday 1 to 4 PM, Tuesday 11 AM to 5 PM, Wednesday and Thursday 11 AM to 5 PM (to 7 PM at Buder, Schlafly and Julia Davis), and Friday and Saturday 11 AM to 4:30 PM, closed Sundays. St. Joan of Arc's gym is open Oct 27 to Nov 2 with the longer hours (to 7 PM Wednesday and Thursday). Call the library to confirm its hours.",
-    "hours_short": "Libraries open 11 AM most days (1 PM Mondays), closed Sundays; the Board is open weekdays 8 to 5.",
+    "hours_short": "Libraries open 11 AM most days, 1 PM Mondays; Board weekdays 8 to 5, Sat Oct 31 9 to 1.",
     "lookup_url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/voter/polling-places/index.cfm",
     "source": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/voter/polling-places/index.cfm",
     "confidence": "verified"
+  },
+  "mail_ballot": {
+    "return_options": [
+      "Mail it to the Board of Election Commissioners, 300 N. Tucker Blvd., St. Louis, MO 63101. It must arrive by 7 PM on Nov 3. A postmark doesn't count. You get no confirmation unless you send it by certified mail.",
+      "Return it in person at the Board, 300 N. Tucker Blvd., Monday to Friday, 8 AM to 5 PM. A relative or guardian bringing it for you must come in person and sign a form saying how you're related. State law (RSMo 115.291) allows only close relatives: a spouse, parent, child, grandparent, grandchild, brother, sister, or a parent- or child-in-law. Friends and neighbors can't.",
+      "Questions: the City's Absentee Department, 314-622-3230 or 314-622-3319.",
+      "Military and overseas voters: separate rules; see the Secretary of State's military and overseas page."
+    ],
+    "source": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/voter/absentee/absentee-ballot-and-voting.cfm",
+    "confidence": "verified",
+    "request_deadline": {
+      "date": "2026-10-21",
+      "rule": "Your application for a ballot by mail had to reach the City Election Board by 5 PM on Wednesday, October 21. That deadline has passed. You can vote absentee in person through Monday, November 2, or at your polling place on Election Day.",
+      "source": "https://www.sos.mo.gov/elections/goVoteMissouri/howtovote"
+    }
   },
   "lookups": {
     "early_in_person": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/voter/polling-places/index.cfm",
@@ -278,6 +293,11 @@
       "path": "situations.away_on_election_day.answer",
       "from": "2026-11-03",
       "text": "Early voting ended Monday, November 2, and the deadline to ask for a mail ballot was October 21. If you already have a mail ballot, it must reach the City Election Board, 300 N. Tucker Blvd., by 7 PM today."
+    },
+    {
+      "path": "early_in_person.hours_short",
+      "from": "2026-11-01",
+      "text": "Libraries open at 1 PM Monday, Nov 2. The Board is open 8 AM to 5 PM."
     }
   ]
 }

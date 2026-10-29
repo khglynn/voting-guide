@@ -121,14 +121,40 @@ const DISTRICTISH = /precinct|ward\b|trustee area|congressional|\bseat\b|\bplace
    many single-member districts. */
 const OWN_WARD = /^only ward (\d+) voters\b/i;
 const placeWard = (p: PlaceBundle): string | null => (p.label.match(/\bward (\d+)$/i) || [])[1] || null;
+/* A scope that says the whole place is inside the race's area: "which includes all of Fullerton",
+   "all of Lakewood, Golden ...", or one "all of ... counties" list that names every county the place
+   is in ("All of Imperial, Orange, Riverside and San Diego counties vote in Board of Equalization
+   District 4"). Read before DISTRICTISH, so a race named by its own district number still covers a
+   place that is wholly in it (audit, Oct 29: BOE District 4 read "Maybe on your ballot" on every
+   Orange County and San Diego ballot, though both counties are all in it). "Almost all of", "all of
+   Portland west of the river", "all of Lakewood's ..." and a county list with "part of" inside it say
+   nothing about the whole place. */
+const escRe = (s: string): string => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const NOT_WHOLE = String.raw`(?<!\b(?:almost|nearly|virtually|not)\s)`;
+const QUALIFIED = String.raw`(?!\s*['’]s\b|\s+(?:west|east|north|south|except|outside|inside|but|between|along|above|below|beyond)\b)`;
+const placeName = (p: PlaceBundle): string => p.label.replace(/\s*\(.*\)$/, '').trim();
+const countyName = (county: string): string => county.replace(/\s*\(.*\)\s*/, '').replace(/\s+County$/i, '').trim();
+function wholePlace(scope: string, p: PlaceBundle): boolean {
+  const name = placeName(p);
+  if (name.length > 2 && new RegExp(String.raw`${NOT_WHOLE}\ball of (?:the )?(?:city of )?${escRe(name)}\b${QUALIFIED}`, 'i').test(scope)) return true;
+  const counties = p.counties.map(countyName).filter((x) => x.length > 2);
+  if (!counties.length) return false;
+  for (const m of scope.matchAll(new RegExp(String.raw`${NOT_WHOLE}\ball of ([^.;:()]*?)\bcount(?:y|ies)\b`, 'gi'))) {
+    const list = m[1];
+    if (/\b(?:part|parts|most|much|half)\s+of\b/i.test(list)) continue;
+    if (counties.every((c) => new RegExp(String.raw`\b${escRe(c)}\b`, 'i').test(list))) return true;
+  }
+  return false;
+}
 function coversPlace(c: Contest, places: PlaceBundle[]): boolean {
   if (!places.length || !places.every((p) => p.order.includes(c.id))) return false;
   const scope = c.scope_plain || '';
   const ward = (scope.match(OWN_WARD) || [])[1];
   if (ward && places.every((p) => placeWard(p) === ward)) return true;
+  if (places.every((p) => wholePlace(scope, p))) return true;
   if (DISTRICTISH.test(scope)) return false;
   return places.every((p) => p.counties.some((county) => {
-    const name = county.replace(/\s*\(.*\)\s*/, '').replace(/\s+County$/i, '').trim();
+    const name = countyName(county);
     return name.length > 2 && scope.toLowerCase().includes(name.toLowerCase());
   }));
 }

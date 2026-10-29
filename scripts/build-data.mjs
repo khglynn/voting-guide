@@ -189,6 +189,35 @@ function placeSituations(list, where) {
   }));
   return out.length ? out : null;
 }
+/* A county's own mail-ballot facts, where they differ from the state's (Oct 29, after the audit of the newest
+   places): the City of St. Louis takes ballots back only at its own Board, not at St. Louis County's office in the
+   state's list, and Orange County's replacement deadline is on its own page, not LA County's. plan.ts uses them when
+   every place on the ballot gives the same ones. */
+function placeMail(x, where) {
+  if (x == null) return null;
+  const rq = x && x.request_deadline;
+  const rqOk = rq == null || (typeof rq === 'object' && (rq.date == null || isDate(rq.date)) && isStr(rq.rule) && safeUrl(rq.source));
+  const opts = x && x.return_options;
+  const optsOk = opts == null || (Array.isArray(opts) && opts.length && opts.every(isStr));
+  if (!x || typeof x !== 'object' || !rqOk || !optsOk || (rq == null && opts == null) || !safeUrl(x.source)) {
+    warn(`${where}: mail_ballot needs a request_deadline (a date or null, a rule, an https source) or return_options (a list of strings), and an https source; dropped it`);
+    return null;
+  }
+  return {
+    ...optional({ request_deadline: rq ? { date: rq.date || null, rule: rq.rule.trim(), source: safeUrl(rq.source) } : null, return_options: opts ? opts.map((o) => o.trim()) : null }),
+    source: safeUrl(x.source), confidence: conf(x.confidence),
+  };
+}
+/* A county's own Election Day opening time, a plain time ("7:00 AM"), where the state's is not one (Tennessee's
+   counties each set their own). */
+function placeElectionDay(x, where) {
+  if (x == null) return null;
+  if (!x || typeof x !== 'object' || !/^\d{1,2}:\d{2} [AP]M$/.test(String(x.polls_open || '').trim()) || !safeUrl(x.source)) {
+    warn(`${where}: election_day needs polls_open as a plain time ("7:00 AM") and an https source; dropped it`);
+    return null;
+  }
+  return { polls_open: x.polls_open.trim(), source: safeUrl(x.source), confidence: conf(x.confidence) };
+}
 /* The election office's phone lines, labeled ("Vote-by-mail line"), and its hours (Oct 28). */
 function officeLines(o, where) {
   if (!o) return {};
@@ -553,6 +582,7 @@ for (const f of listJson('places')) {
     district_finders: districtFinders(p.district_finders, f),
     heads_up: headsUp(p.heads_up, f),
     ...optional({ early_in_person: placeEarly(p.early_in_person, f), lookups: placeLookups(p.lookups, f), by_county: placeByCounty(p.by_county, p, f), situations: placeSituations(p.situations, f),
+      mail_ballot: placeMail(p.mail_ballot, f), election_day: placeElectionDay(p.election_day, f),
       county_fips: placeCountyFips(p.county_fips, f), zip_outside: placeZipOutside(p.zip_outside, p, f),
       // the official pages behind the place's own facts (its notes, office lines and answers), for the record
       sources: (Array.isArray(p.sources) ? p.sources : []).filter((x) => x && isStr(x.name) && safeUrl(x.url)).map((x) => ({ name: x.name.trim(), url: safeUrl(x.url) })),

@@ -272,7 +272,47 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('may apply: BOE District 3 is still not every Californian\'s race', !la.byId.get('ca-boe-3').every);
     const ca = open('CA', []);
     check('may apply: a statewide-only California ballot still asks which BOE district', ca.groups.some((g) => g.members.includes('ca-boe-3') && g.members.length === 4));
-    check('may apply: other places\' BOE races are unchanged', ['fullerton-ca', 'san-diego-ca'].every((p) => open('CA', [p]).mayApply.has('ca-boe-4')) && !open('CA', ['fullerton-ca']).items.some((x) => x.id === 'ca-boe-3'));
+    check('may apply: Fullerton never gets LA\'s BOE race', !open('CA', ['fullerton-ca']).items.some((x) => x.id === 'ca-boe-3'));
+  }
+
+  /* ---------- a scope that says the whole place is in (audit, Oct 29) ---------- */
+  // BOE District 4 read "Maybe on your ballot" on every Orange County and San Diego ballot: its scope
+  // named "District 4", which reads as part of a place. A scope that says all of the place, or all of
+  // every county it's in, is in the race's area wins over that; "almost all of", "all of X west of"
+  // and a county list with "part of" in it don't.
+  {
+    const sure = [['CA', 'dana-point-ca', 'ca-boe-4'], ['CA', 'fullerton-ca', 'ca-boe-4'], ['CA', 'san-diego-ca', 'ca-boe-4'], ['CA', 'san-francisco-ca', 'ca-boe-2'],
+      ['CA', 'fullerton-ca', 'oc-supervisor-4'], ['CO', 'lakewood-co', 'co-us-house-7'], ['CO', 'lakewood-co', 'co-sboe-7'], ['CO', 'englewood-co', 'co-hd-3'],
+      ['NY', 'callicoon-ny', 'ny-us-house-19'], ['NY', 'callicoon-ny', 'ny-sd-51'], ['NY', 'nyc-staten-island-ny', 'ny-us-house-11'], ['TX', 'san-marcos-tx', 'tx-senate-21']];
+    const off = sure.filter(([s, p, id]) => { const b = open(s, [p]); return !b.items.some((x) => x.id === id) || b.mayApply.has(id) || b.groupOf[id]; });
+    check('may apply: a race whose scope says all of the place (or all of its county) is a sure thing there', off.length === 0, off.map((x) => x.join(' ')).join(', '));
+    const maybe = [['CO', 'aurora-co', 'co-us-house-6'], ['CO', 'englewood-co', 'co-us-house-6'], ['TX', 'austin-tx', 'tx-senate-21'], ['GA', 'atlanta-ga', 'fulton-commission-4-special'], ['NY', 'callicoon-ny', 'ny-ad-100'], ['FL', 'tallahassee-fl', 'fl-tallahassee-mayor']];
+    const on = maybe.filter(([s, p, id]) => !open(s, [p]).mayApply.has(id));
+    check('may apply: a scope that names part of the place, or another place\'s "all of", stays a maybe', on.length === 0, on.map((x) => x.join(' ')).join(', '));
+    const dp = open('CA', ['dana-point-ca']);
+    check('may apply: BOE District 4 is on a Dana Point ballot and never every Californian\'s race', dp.items.some((x) => x.id === 'ca-boe-4') && !dp.byId.get('ca-boe-4').every && !open('CA', ['los-angeles-ca']).items.some((x) => x.id === 'ca-boe-4'));
+    // The rule itself, on scopes no place has yet (a made-up race on Lakewood's ballot).
+    const lk = read('place-lakewood-co.json');
+    const sb = read('state-CO.json');
+    const fake = (scope) => {
+      const c = { ...lk.items.find((x) => x.id === 'co-us-house-7'), id: 'zz-test', office: 'Zz Test Office', scope_plain: scope };
+      const b = bl.buildBallot(sb, [{ ...lk, items: [...lk.items, c], order: [...lk.order, 'zz-test'] }]);
+      return !b.mayApply.has('zz-test');
+    };
+    const cases = [['Voters in District 9, which includes all of Lakewood.', true], ['Almost all of Lakewood votes in District 9.', false], ['All of Lakewood west of Wadsworth.', false],
+      ['All of Lakewood\'s south side, in District 9.', false], ['All of Jefferson and Adams counties vote in District 9.', true], ['All of Adams and part of Jefferson counties, District 9.', false],
+      ['Voters in District 9: all of Golden and Arvada.', false], ['Not all of Lakewood is in District 9.', false]];
+    const wrong = cases.filter(([s, want]) => fake(s) !== want);
+    check('may apply: the whole-place rule reads "all of" and nothing looser', wrong.length === 0, wrong.map((x) => x[0]).join(' | '));
+    // Dana Point's precinct 41818 votes in CD-49 and SD-38 (the county's precinct maps): both are questions there,
+    // and an address answers them.
+    const dpb = open('CA', ['dana-point-ca']);
+    const q = (a, c) => dpb.groups.some((g) => g.members.includes(a) && g.members.includes(c) && g.members.length === 2);
+    check('Dana Point: U.S. House (47 or 49) and State Senate (36 or 38) are district questions', q('ca-us-house-47', 'ca-us-house-49') && q('ca-state-senate-36', 'ca-state-senate-38'));
+    const dset = mods.address.setFromAddress(dpb, S.b, { cd: 49, upper: 38, lower: 74 });
+    const gk = (id) => dpb.groupOf[id];
+    check('Dana Point: an address in precinct 41818 puts CD-49 and SD-38 on the ballot', S.b.districts[gk('ca-us-house-49')] === 'ca-us-house-49' && S.b.districts[gk('ca-state-senate-38')] === 'ca-state-senate-38', dset.join(' | '));
+    check('Dana Point: CD-47\'s scope no longer says all of Dana Point', /^Almost all of Dana Point/.test(dpb.byId.get('ca-us-house-47').scope_plain) && /precinct 41818/.test(dpb.byId.get('ca-us-house-49').scope_plain));
   }
 
   /* ---------- the seat rule ---------- */
@@ -1243,6 +1283,36 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('go check: "Register now" before the deadline, "Register for next time" after', plan.registerAction(txr, '2026-10-01').label === 'Register now' && plan.registerAction(txr, '2026-10-20').label === 'Register for next time' && plan.registerAction(txr, '2026-10-01').url === 'https://vote.gov/register/texas');
     const { register_url, ...noUrl } = txr.registration;
     check('go check: no button without a register link', plan.registerAction({ ...txr, registration: noUrl }, '2026-10-01') === null);
+    // California after its online deadline (audit, Oct 29): same-day registration is in person, so the button opens
+    // where you can do it (the county's vote centers on an Orange County ballot), and the line says so.
+    const dpH = plan.localHowto(read('state-CA.json').howto, [read('place-dana-point-ca.json')], null, '2026-10-29');
+    const ra = plan.registerAction(dpH, '2026-10-29');
+    check('go check: in person is the only way left, so the button finds where to register and vote', ra && ra.label === 'Find where to register and vote' && ra.url === 'https://ocvote.gov/elections/vote-center-locations', JSON.stringify(ra));
+    check('go check: and the line says you can still register in person and vote', plan.registrationAlert(dpH, '2026-10-29') === 'Not registered? You can still register in person and vote through Tue, Nov 3.' && plan.registrationAlert(dpH, '2026-11-03') === 'Not registered? You can still register in person and vote today.', plan.registrationAlert(dpH, '2026-10-29'));
+    check('go check: before the online deadline it is still "Register now"', plan.registerAction(dpH, '2026-10-15').label === 'Register now');
+  }
+
+  /* ---------- a county's own mail-ballot facts and opening time (audit, Oct 29) ---------- */
+  {
+    const moH = read('state-MO.json').howto;
+    const city = plan.localHowto(moH, [read('place-st-louis-city-mo.json')], null, '2026-10-29');
+    const wg = plan.localHowto(moH, [read('place-webster-groves-mo.json')], null, '2026-10-29');
+    check('place mail: the City of St. Louis lists only its own ways back, never the County office', city.mail_ballot.return_options.length > 0 && city.mail_ballot.return_options.every((o) => !/Northwest Plaza|St\. Ann/.test(o)) && city.mail_ballot.return_options.some((o) => /300 N\. Tucker/.test(o)));
+    check('place mail: a County ballot keeps the state\'s list', JSON.stringify(wg.mail_ballot.return_options) === JSON.stringify(moH.mail_ballot.return_options));
+    check('place mail: the City\'s request line is its own, the deadline unchanged', city.mail_ballot.request_deadline.date === moH.mail_ballot.request_deadline.date && /City Election Board/.test(city.mail_ballot.request_deadline.rule));
+    const caH = read('state-CA.json').howto;
+    const dp = plan.localHowto(caH, [read('place-dana-point-ca.json')], null, '2026-10-29');
+    const la = plan.localHowto(caH, [read('place-los-angeles-ca.json')], null, '2026-10-29');
+    check('place mail: Orange County\'s replacement deadline cites the county, LA\'s still LA\'s', /ocvote\.gov/.test(dp.mail_ballot.request_deadline.source) && /Orange County/.test(dp.mail_ballot.request_deadline.rule) && la.mail_ballot.request_deadline.source === caH.mail_ballot.request_deadline.source);
+    check('place early: Orange County\'s in-person voting starts Oct 24, the state\'s Oct 5 stays elsewhere', dp.early_in_person.start === '2026-10-24' && la.early_in_person.start === caH.early_in_person.start);
+    const tnH = read('state-TN.json').howto;
+    const nash = plan.localHowto(tnH, [read('place-nashville-tn.json')], null, '2026-10-30');
+    const col = plan.localHowto(tnH, [read('place-columbia-tn.json')], null, '2026-10-30');
+    const sub = (h) => plan.nextStep(h, '2026-10-30', false, null).sub.join(' ');
+    check('place polls: Nashville says polls are open 7 AM to 7 PM; Columbia, whose county hasn\'t posted, only the close', /Polls are open 7 AM to 7 PM\./.test(sub(nash)) && /Polls close at 7 PM\./.test(sub(col)) && !/Polls are open/.test(sub(col)), `${sub(nash)} | ${sub(col)}`);
+    // Two places that disagree keep the state's (a Nashville and a Columbia ballot together never happens, but the rule holds).
+    const both = plan.localHowto(moH, [read('place-st-louis-city-mo.json'), read('place-webster-groves-mo.json')], null, '2026-10-29');
+    check('place mail: places that disagree keep the state\'s list', JSON.stringify(both.mail_ballot.return_options) === JSON.stringify(moH.mail_ballot.return_options));
   }
 
   /* ---------- flow, Oct 20: My plan ---------- */
@@ -1619,10 +1689,15 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     // DC: the "upper" layer is the ward, which the place already settles.
     const dc = open('DC', ['dc-ward-1']);
     check('address: DC sets nothing from its ward layer', address.setFromAddress(dc, S.b, { cd: null, upper: 1, lower: null }).length === 0);
-    // Lakewood: three races by congressional district may apply; District 7 puts them on the ballot.
+    // Englewood: two races by congressional district may apply; District 6 puts them on the ballot. (Lakewood's
+    // three District 7 races were this check until Oct 29: their scopes say all of Lakewood is in District 7,
+    // so they are sure things there and no address moves them.)
+    const ew = open('CO', ['englewood-co']);
+    const eset = address.setFromAddress(ew, S.b, { cd: 6, upper: 26, lower: 3 });
+    check('address: Englewood names each office District 6 set', eset.filter((x) => /District 6$/.test(x)).length === 2 && ['co-us-house-6', 'co-cu-regent-6'].every((id) => S.b.mine.includes(id) && !bl.isMaybe(id)), eset.join(' | '));
     const lk = open('CO', ['lakewood-co']);
-    const lset = address.setFromAddress(lk, S.b, { cd: 7, upper: 22, lower: 24 });
-    check('address: Lakewood names each office District 7 set', lset.filter((x) => /District 7$/.test(x)).length === 3 && ['co-us-house-7', 'co-sboe-7', 'co-cu-regent-7'].every((id) => S.b.mine.includes(id) && !bl.isMaybe(id)), lset.join(' | '));
+    const lset = address.setFromAddress(lk, S.b, { cd: 8, upper: 22, lower: 24 });
+    check('address: Lakewood\'s District 7 races stay on for any address, since all of Lakewood is District 7', ['co-us-house-7', 'co-sboe-7', 'co-cu-regent-7'].every((id) => lk.items.some((x) => x.id === id) && !S.b.notMine.includes(id) && !bl.isMaybe(id)), lset.join(' | '));
 
     // The other ways the research writes Census districts (Oct 20): each is read, so an address settles
     // the House and legislature in Atlanta, Seattle, Chicago, Portland and New York too. Washington's

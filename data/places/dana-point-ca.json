@@ -22,7 +22,7 @@
   "92629",
   "92624"
  ],
- "zip_caveats": "92629 is Dana Point; it touches the edge of Laguna Beach, but no one lives in that sliver (2020 Census blocks). 92624 is Capistrano Beach, which is part of Dana Point; at its eastern edge two 2020 Census residents live in San Juan Capistrano, which votes in CD-49 and SD-38. All of Dana Point is in CD-47, SD-36, AD-74 and Orange County Supervisor District 5 (2020 Census blocks against the current district lines). Dana Point's three council seats up this year (Districts 1, 2 and 3) had one candidate each, so the council appointed them and canceled the election. Only part of Dana Point votes for South Orange County Community College District Trustee Area 4 (11 of the city's 35 precincts on the county's district maps) and for Moulton Niguel Water District (6 of 35); most of the city is served by South Coast Water District, whose seats are not on this ballot. Capistrano Unified's Areas 4, 6 and 7 and the Municipal Water District of Orange County's Division 2 share no precincts with Dana Point. There is no Dana Point city measure; Orange County Measures A through O are all for other cities or school districts. Use the address lookup at ocvote.gov/vlt to see your exact ballot.",
+ "zip_caveats": "92629 is Dana Point; it touches the edge of Laguna Beach, but no one lives in that sliver (2020 Census blocks). 92624 is Capistrano Beach, which is part of Dana Point; at its eastern edge two 2020 Census residents live in San Juan Capistrano, which votes in CD-49 and SD-38. All of Dana Point is in AD-74 and Orange County Supervisor District 5. Almost all of it is in CD-47 and SD-36, but the county's precinct maps put one small area, east of San Juan Creek and north of Pacific Coast Highway near Doheny Park Road in Capistrano Beach (precinct 41818, in 92624), in CD-49 and SD-38 instead (the county's maps, checked Oct 29, 2026). So the guide asks which U.S. House and State Senate district you're in, and an address lookup answers it. Dana Point's three council seats up this year (Districts 1, 2 and 3) had one candidate each, so the council appointed them and canceled the election. Only part of Dana Point votes for South Orange County Community College District Trustee Area 4 (11 of the city's 35 precincts on the county's district maps) and for Moulton Niguel Water District (6 of 35); most of the city is served by South Coast Water District, whose seats are not on this ballot. Capistrano Unified's Areas 4, 6 and 7 and the Municipal Water District of Orange County's Division 2 share no precincts with Dana Point. There is no Dana Point city measure; Orange County Measures A through O are all for other cities or school districts. Use the address lookup at ocvote.gov/vlt to see your exact ballot.",
  "contest_ids": [
   "ca-governor",
   "ca-lt-governor",
@@ -51,7 +51,9 @@
   "ca-prop-44",
   "ca-prop-45",
   "ca-us-house-47",
+  "ca-us-house-49",
   "ca-state-senate-36",
+  "ca-state-senate-38",
   "ca-assembly-74",
   "oc-supervisor-5",
   "socccd-area-4",
@@ -78,12 +80,50 @@
    "office_match": "Moulton Niguel Water District",
    "label": "Check your OC sample ballot",
    "url": "https://ocvote.gov/vlt/"
+  },
+  {
+   "office_match": "U.S. Representative",
+   "label": "Find your district on the registrar’s map",
+   "url": "https://ocvote.gov/findmydistrict"
+  },
+  {
+   "office_match": "U.S. Representative",
+   "label": "Check your OC sample ballot",
+   "url": "https://ocvote.gov/vlt/"
+  },
+  {
+   "office_match": "State Senator",
+   "label": "Find your district on the registrar’s map",
+   "url": "https://ocvote.gov/findmydistrict"
+  },
+  {
+   "office_match": "State Senator",
+   "label": "Check your OC sample ballot",
+   "url": "https://ocvote.gov/vlt/"
   }
  ],
  "lookups": {
   "early_in_person": "https://ocvote.gov/elections/vote-center-locations",
   "election_day": "https://ocvote.gov/elections/vote-center-locations",
   "drop_box": "https://ocvote.gov/elections/ballot-drop-box-locations"
+ },
+ "early_in_person": {
+  "start": "2026-10-24",
+  "end": "2026-11-02",
+  "hours_note": "Some Orange County vote centers are open Saturday, October 24 to Friday, October 30. Every center is open October 31 to November 2. Hours on those dates are 10 AM to 6 PM. On Election Day, November 3, every center is open 7 AM to 8 PM. You can use any vote center in Orange County.",
+  "hours_short": "Orange County vote centers are open 10 AM to 6 PM every day.",
+  "lookup_url": "https://ocvote.gov/elections/vote-center-locations",
+  "source": "https://ocvote.gov/elections/vote-center-locations",
+  "confidence": "verified"
+ },
+ "mail_ballot": {
+  "request_deadline": {
+   "date": "2026-10-27",
+   "rule": "You don't need to ask for a ballot: every voter gets one in the mail. Orange County's last day to mail you a replacement was Tuesday, October 27 (7 days before Election Day). You can now get a replacement at any Orange County vote center or at the Registrar's office, 1300 S. Grand Ave., Building C, Santa Ana. You can also vote in person.",
+   "source": "https://ocvote.gov/faqs/vote-by-mail-faqs"
+  },
+  "source": "https://ocvote.gov/faqs/vote-by-mail-faqs",
+  "confidence": "verified"
  },
  "situations": [
   {
@@ -159,6 +199,22 @@
   {
    "name": "Orange County (CA): find my district",
    "url": "https://ocvote.gov/findmydistrict"
+  },
+  {
+   "name": "Orange County (CA): 47th Congressional District precinct map",
+   "url": "https://ocvote.gov/bin/maps/pdf/Congressional/Map_47th%20Congressional%20District.pdf"
+  },
+  {
+   "name": "Orange County (CA): 49th Congressional District precinct map",
+   "url": "https://ocvote.gov/bin/maps/pdf/Congressional/Map_49th%20Congressional%20District.pdf"
+  },
+  {
+   "name": "Orange County (CA): 36th Senate District precinct map",
+   "url": "https://ocvote.gov/bin/maps/pdf/StateSenate/Map_36th%20Senate%20District.pdf"
+  },
+  {
+   "name": "Orange County (CA): 38th Senate District precinct map",
+   "url": "https://ocvote.gov/bin/maps/pdf/StateSenate/Map_38th%20Senate%20District.pdf"
   }
  ]
 }

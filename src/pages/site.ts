@@ -20,7 +20,7 @@
    went through the workbench's GPT pass (claude-plans/2026-10-21-third-pass/discovery-log.md).
 
    scripts/build-pages.mjs loads this module through Vite's SSR loader, as tests/model.mjs loads the model. */
-import type { Contest, Dated, HowTo, Index, Lookups, PlaceBundle, StateBundle } from '../types';
+import type { Contest, Dated, HowTo, Index, Item, Lookups, PlaceBundle, StateBundle } from '../types';
 import { buildBallot, sectionOf, SECTIONS, type Ballot, type SectionKey } from '../ballot';
 import { S } from '../state';
 import { cleanOffice, rowTitle } from '../model/labels';
@@ -104,6 +104,12 @@ function memberHTML(c: Contest): string {
   const line = !names.length ? '' : c.is_retention ? `Vote to keep or remove: ${names.join(', ')}` : `${c.candidates.length === 1 ? 'Unopposed: ' : ''}${names.join(', ')}`;
   return `<li><b>${escP(label)}</b>${line ? ` <span class="pg-c">${line}</span>` : ''}</li>`;
 }
+/* Why a race is on only some of a place's ballots, in the few words a page row has room for. A city's own race
+   that the whole city votes in, on a place whose ZIPs reach past the city (Columbia's mayor, for ZIP 38401), is
+   "Only inside city limits": "Only in parts of Columbia" read as if some of the city didn't get it (audit, Oct 29). */
+const CITY_LIMITS = /\binside\b[^.;]*\bcity limits\b/i;
+export const mayLabel = (it: Item, where: string): string =>
+  it.level === 'city' && CITY_LIMITS.test(it.kind === 'contest' ? it.scope_plain || '' : it.jurisdiction || '') ? 'Only inside city limits' : `Only in parts of ${where}`;
 /* Past this many districts a statewide page says how many instead of listing them (Texas has 150 House seats). */
 const LIST_UP_TO = 12;
 interface Row { html: string; text: string }
@@ -112,7 +118,7 @@ function ballotRows(b: Ballot, where: string): Map<SectionKey, Row[]> {
   const out = new Map<SectionKey, Row[]>();
   const seen = new Set<string>();
   const add = (sec: SectionKey, html: string, text: string) => out.set(sec, [...(out.get(sec) || []), { html, text }]);
-  const maybe = `<span class="pg-may">Only in parts of ${esc(where)}</span>`;
+  const maybe = (it: Item) => `<span class="pg-may">${esc(mayLabel(it, where))}</span>`;
   for (const it of b.items) {
     const sec = sectionOf(it);
     const g = b.groupOf[it.id];
@@ -127,7 +133,7 @@ function ballotRows(b: Ballot, where: string): Map<SectionKey, Row[]> {
       continue;
     }
     const { title, sub } = rowTitle(it);
-    const may = b.mayApply.has(it.id) ? ` ${maybe}` : '';
+    const may = b.mayApply.has(it.id) ? ` ${maybe(it)}` : '';
     if (it.kind === 'measure') {
       add(sec, `<li><b>${escP(title)}</b>${sub && sub !== title ? `<span class="pg-sub">: ${escP(sub)}</span>` : ''}${may}</li>`, `${title}${sub ? `: ${sub}` : ''}`);
     } else {
@@ -190,7 +196,8 @@ function dateRows(h: HowTo, place: PlaceBundle | null): DateRow[] {
   if (r && r.date) out.push({ date: r.date, lead: 'Mail ballot deadline: ', when: fmtDate(r.date), detail: r.time || null, list: (h.mail_ballot.return_options || []).filter(Boolean) });
   const ed = h.election_day;
   const { close } = closeOf(ed.polls_close, zonesFor(h.state, place ? [place] : []));
-  const hours = !close ? '' : !mail && PLAIN_TIME.test(ed.polls_open || '') && PLAIN_TIME.test(ed.polls_close || '') ? `You can vote from ${clock(ed.polls_open)} to ${close}.` : `Polls close at ${close}.`;
+  // A place's own opening time (Nashville's 7 AM, Oct 29) pairs with its own zone's close; a state's two-zone close never does.
+  const hours = !close ? '' : !mail && PLAIN_TIME.test(ed.polls_open || '') && (PLAIN_TIME.test(ed.polls_close || '') || !!place?.election_day) ? `You can vote from ${clock(ed.polls_open)} to ${close}.` : `Polls close at ${close}.`;
   if (h.election_date) out.push({ date: h.election_date, lead: 'Election Day: ', when: fmtDate(h.election_date), detail: [hours, ed.in_line_rule].filter(Boolean).join(' ') || null });
   return out.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
 }

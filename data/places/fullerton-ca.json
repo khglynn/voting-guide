@@ -88,11 +88,6 @@
    "url": "https://ocvote.gov/findmydistrict"
   },
   {
-   "office_match": "Board of Equalization Member",
-   "label": "Find your district on the registrar’s map",
-   "url": "https://ocvote.gov/findmydistrict"
-  },
-  {
    "office_match": "Fullerton City Council",
    "label": "Check your district on your OC sample ballot",
    "url": "https://ocvote.gov/vlt/"
@@ -132,6 +127,24 @@
   "early_in_person": "https://ocvote.gov/elections/vote-center-locations",
   "election_day": "https://ocvote.gov/elections/vote-center-locations",
   "drop_box": "https://ocvote.gov/elections/ballot-drop-box-locations"
+ },
+ "early_in_person": {
+  "start": "2026-10-24",
+  "end": "2026-11-02",
+  "hours_note": "Some Orange County vote centers are open Saturday, October 24 to Friday, October 30. Every center is open October 31 to November 2. Hours on those dates are 10 AM to 6 PM. On Election Day, November 3, every center is open 7 AM to 8 PM. You can use any vote center in Orange County.",
+  "hours_short": "Orange County vote centers are open 10 AM to 6 PM every day.",
+  "lookup_url": "https://ocvote.gov/elections/vote-center-locations",
+  "source": "https://ocvote.gov/elections/vote-center-locations",
+  "confidence": "verified"
+ },
+ "mail_ballot": {
+  "request_deadline": {
+   "date": "2026-10-27",
+   "rule": "You don't need to ask for a ballot: every voter gets one in the mail. Orange County's last day to mail you a replacement was Tuesday, October 27 (7 days before Election Day). You can now get a replacement at any Orange County vote center or at the Registrar's office, 1300 S. Grand Ave., Building C, Santa Ana. You can also vote in person.",
+   "source": "https://ocvote.gov/faqs/vote-by-mail-faqs"
+  },
+  "source": "https://ocvote.gov/faqs/vote-by-mail-faqs",
+  "confidence": "verified"
  },
  "situations": [
   {

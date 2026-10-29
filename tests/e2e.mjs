@@ -3155,6 +3155,30 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
   await ctx.close();
 }
 
+/* ---------- the newest places' labels (audit, Oct 29) ----------
+   All of Orange County is in Board of Equalization District 4, so it's on every Dana Point ballot, never a maybe.
+   Columbia's mayor stays a maybe in the app (ZIP 38401 reaches outside city limits), and its page says why. */
+{
+  const { ctx, page } = await newPage();
+  await openBallot(page, '92629');
+  const boe = await text(page, '#i-ca-boe-4');
+  check('Dana Point: BOE District 4 is on the ballot, not "Maybe on your ballot"', !!boe && !/Maybe on your ballot/.test(boe), boe.slice(0, 120));
+  check('Dana Point: U.S. House and State Senate ask which district (precinct 41818 is CD-49 and SD-38)', !!(await page.$('[data-q*="U.S. Representative"]')) && !!(await page.$('[data-q*="State Senator"]')));
+  noErrors(page, 'Dana Point');
+  await ctx.close();
+}
+{
+  const { ctx, page } = await newPage();
+  await openBallot(page, '38401');
+  const mayor = await text(page, '#i-columbia-tn-mayor');
+  check('Columbia: the mayor\'s race is still a maybe in the app (38401 reaches past city limits)', /Maybe on your ballot/.test(mayor), mayor.slice(0, 120));
+  await page.goto(`${BASE}/columbia-tn`);
+  const pg = await text(page, 'body');
+  check('Columbia page: the city\'s own races say "Only inside city limits", never "Only in parts of Columbia"', /Only inside city limits/.test(pg) && !/Only in parts of Columbia/.test(pg));
+  noErrors(page, 'Columbia');
+  await ctx.close();
+}
+
 /* ---------- ranked choice: Portland 97214, City Council District 3 (3 winners, rank up to 6) ---------- */
 const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (els) => els.map((e) => e.textContent.replace(/^\s*\d+(st|nd|rd|th):\s*/, '').trim()));
 {

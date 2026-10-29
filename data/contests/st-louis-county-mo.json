@@ -520,23 +520,6 @@
     "is_retention": false,
     "candidates": [
       {
-        "name": "Wesley Bell",
-        "party": "Democratic",
-        "incumbent": true,
-        "website": "https://www.bell4mo.com/",
-        "website_confidence": "sourced",
-        "background": "Finishing his first term in the U.S. House; previously St. Louis County prosecuting attorney and a Ferguson City Council member.",
-        "own_words": [
-          {
-            "text": "Every family in St. Louis deserves a safe and affordable home.",
-            "is_quote": true,
-            "source": "https://www.bell4mo.com/issues/"
-          }
-        ],
-        "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/mo-lwvstl"
-      },
-      {
         "name": "Paul Berry III",
         "party": "Republican",
         "incumbent": false,
@@ -548,6 +531,23 @@
             "text": "We are taking a definitive stand to protect Missouri families and push back against oppressive public policy.",
             "is_quote": true,
             "source": "https://www.momadmaga.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Wesley Bell",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.bell4mo.com/",
+        "website_confidence": "sourced",
+        "background": "Finishing his first term in the U.S. House; previously St. Louis County prosecuting attorney and a Ferguson City Council member.",
+        "own_words": [
+          {
+            "text": "Every family in St. Louis deserves a safe and affordable home.",
+            "is_quote": true,
+            "source": "https://www.bell4mo.com/issues/"
           }
         ],
         "lwv_status": "unknown",
@@ -591,6 +591,10 @@
       {
         "name": "Missouri Secretary of State: Statement from Secretary Hoskins, Sept. 10, 2026 (local election authorities to use the 2022 map)",
         "url": "https://www.sos.mo.gov/default.aspx?PageId=10670"
+      },
+      {
+        "name": "City of St. Louis Board of Election Commissioners: Nov 3, 2026 sample ballot, all races (candidate order)",
+        "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf"
       }
     ],
     "confidence": "sourced"

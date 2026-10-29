@@ -16,13 +16,13 @@
       {
         "method": "online",
         "date": "2026-10-05",
-        "rule": "The Secretary of State's 2026 election calendar lists Monday, October 5, 2026 as the voter registration deadline for the November 3 general election, 30 days before. The state FAQ: the online deadline is the same as for other ways to register ('you must register at least 30 days before Election Day').",
+        "rule": "Registration closed Monday, October 5, 2026, 30 days before Election Day. That was the deadline online, by mail and in person.",
         "source": "https://sos.tn.gov/elections/calendar"
       },
       {
         "method": "mail",
         "date": "2026-10-05",
-        "rule": "Mailed registration forms had to be postmarked by October 5, 2026. Anyone who registered by mail (or online) and has never voted in their county must vote in person the first time, with a few exceptions.",
+        "rule": "Mailed forms had to be postmarked by October 5, 2026. If you registered by mail or online and have never voted in your county, you must vote in person the first time, with a few exceptions.",
         "source": "https://sos.tn.gov/elections/guides/how-to-register-to-vote"
       },
       {
@@ -41,7 +41,7 @@
     "who_gets_one": "Nobody gets one automatically. You must ask, and you must fit one of the reasons on the Secretary of State's list: you're 60 or older; you'll be outside your county during all of early voting and all day on Election Day; you're hospitalized, ill or physically disabled, or you care for someone who is; you or your spouse are a full-time student at a college outside your county; you live in a nursing home, assisted living facility or home for the aged outside your county; you're a candidate; a religious holiday keeps you from voting in person during early voting and on Election Day; you're an Election Day official or work for the election commission; jury duty; you have a disability and your polling place isn't accessible; you or your spouse hold a commercial driver's license (CDL) or a Transportation Worker Identification Credential (TWIC card) and will be working outside the county or state during early voting and Election Day with no address to get mail; or you're in the military or overseas. No reason on the list? Vote in person.",
     "request_deadline": {
       "date": "2026-10-24",
-      "rule": "Requests had to be received by your county election commission by Saturday, October 24, 2026, ten days before the election. The SOS absentee guide: 'the application must be received by the election commission no later than ten (10) days before the election.' Requests went by mail or by email with a scanned signature.",
+      "rule": "Requests had to reach your county election commission by Saturday, October 24, 2026, 10 days before the election. That deadline has passed.",
       "source": "https://sos.tn.gov/elections/guides/guide-to-absentee-voting"
     },
     "return_deadline": {
@@ -51,9 +51,9 @@
       "source": "https://sos.tn.gov/elections/guides/guide-to-absentee-voting"
     },
     "return_options": [
-      "mail only (USPS, FedEx, UPS or another carrier). The SOS: 'You must mail your ballot in time for your county election commission to receive it no later than the close of polls on Election Day.' Polls close at 7:00 PM Central, 8:00 PM Eastern. Postmarks don't count.",
-      "No hand delivery. The SOS: 'Hand delivery or handing it to a poll worker during early voting or on Election Day is not permitted.'",
-      "military and overseas voters: separate rules, and they can get the ballot by email; see the SOS FAQ for military and overseas voters"
+      "Return it by mail only (USPS, FedEx, UPS or another carrier). Your county election commission must get it by the time polls close on Election Day: 7 PM Central, 8 PM Eastern. A postmark doesn't count.",
+      "You can't hand it in at the office or give it to a poll worker during early voting or on Election Day.",
+      "Military and overseas voters: separate rules, and they can get the ballot by email; see the Secretary of State's FAQ for military and overseas voters."
     ],
     "postage": null,
     "signature_witness_rules": "Follow the instructions that come with your ballot and sign where it asks. The state's absentee guide describes no notary or witness step. First-time voters who registered by mail or online must vote in person the first time unless they're on the permanent absentee list, enrolled in the Safe at Home program, or have voted in the county before (SOS FAQ).",
@@ -73,7 +73,7 @@
     "confidence": "verified"
   },
   "election_day": {
-    "polls_open": "7:00 AM in Davidson County (Nashville); each county sets its own opening time",
+    "polls_open": "Each county sets its own opening time",
     "polls_close": "7:00 PM Central (8:00 PM Eastern)",
     "in_line_rule": "All Tennessee polls close at 7 PM Central time, which is 8 PM Eastern (Knoxville, Chattanooga and the rest of East Tennessee). If you're in line when the polls close, you'll be allowed to vote. Opening times vary by county: check yours in the GoVoteTN app.",
     "vote_centers": false,

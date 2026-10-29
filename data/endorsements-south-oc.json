@@ -396,7 +396,7 @@
     "choice": "Chris Duncan",
     "why": "On Sierra Club California's 2026 endorsements page for the state legislature (read Oct 21, 2026).",
     "url": "https://www.sierraclub.org/california/2026-endorsements-scc-political-committee",
-    "date": null,
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -406,7 +406,7 @@
     "choice": "Sergio Farias",
     "why": "On Sierra Club California's 2026 endorsements page for the state legislature (read Oct 21, 2026).",
     "url": "https://www.sierraclub.org/california/2026-endorsements-scc-political-committee",
-    "date": null,
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -547,6 +547,246 @@
     "why": "The fund's guide lists one water district pick (Mesa Water) and none for Moulton Niguel Water District (checked Oct 28, 2026). Checked again on Oct 29, 2026; still no pick on this page.",
     "url": "https://www.plannedparenthoodaction.org/community-action-fund-planned-parenthood-orange-and-san-bernardi/elections/2026-midterm-election-voter-guide",
     "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-gop",
+    "target_id": "socccd-area-4",
+    "status": "endorsed",
+    "choice": "John Black",
+    "why": "In the Republican Party of Orange County's 2026 voter guide, linked from its endorsements page (read Oct 29, 2026).",
+    "url": "https://linkjar.to/_/pdf/aa0dc48e-a2ea-40c8-8408-d58668b90d0b/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-gop",
+    "target_id": "mnwd-directors",
+    "status": "endorsed",
+    "choice": "Patricia \"Trish\" Kelley",
+    "why": "The Republican Party of Orange County's 2026 voter guide, linked from its endorsements page, lists her as Trish Kelly for Moulton Niguel Water District director. The guide names one candidate for the three full-term seats (read Oct 29, 2026).",
+    "url": "https://linkjar.to/_/pdf/aa0dc48e-a2ea-40c8-8408-d58668b90d0b/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-gop",
+    "target_id": "mnwd-short-term",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Republican Party of Orange County's 2026 voter guide names one Moulton Niguel Water District director and no pick for the short-term seat (read Oct 29, 2026).",
+    "url": "https://linkjar.to/_/pdf/aa0dc48e-a2ea-40c8-8408-d58668b90d0b/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-gop",
+    "target_id": "ca-us-house-49",
+    "status": "endorsed",
+    "choice": "Armen Kurdian",
+    "why": "In the Republican Party of Orange County's 2026 voter guide, linked from its endorsements page (read Oct 29, 2026).",
+    "url": "https://linkjar.to/_/pdf/aa0dc48e-a2ea-40c8-8408-d58668b90d0b/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-dems",
+    "target_id": "ca-us-house-49",
+    "status": "endorsed",
+    "choice": "Mike Levin",
+    "why": "Listed on the Democratic Party of Orange County's endorsement page (checked Oct 29, 2026).",
+    "url": "https://orangecountydemocrats.com/statewide-endorsements",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ca-democratic-party",
+    "target_id": "ca-us-house-49",
+    "status": "endorsed",
+    "choice": "Mike Levin",
+    "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+    "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+    "date": "2026-08-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ca-labor-fed",
+    "target_id": "ca-us-house-49",
+    "status": "endorsed",
+    "choice": "Mike Levin",
+    "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+    "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "equality-california",
+    "target_id": "ca-us-house-49",
+    "status": "endorsed",
+    "choice": "Mike Levin",
+    "why": "Listed on Equality California's 2026 Election Center endorsements (checked Oct 29, 2026).",
+    "url": "https://www.eqca.org/elections/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "cta",
+    "target_id": "ca-us-house-49",
+    "status": "endorsed",
+    "choice": "Mike Levin",
+    "why": "On CTA's 2026 candidate recommendations list (checked Oct 29, 2026).",
+    "url": "https://www.cta.org/document/2026-candidate-recommendations",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ca-envirovoters",
+    "target_id": "ca-us-house-49",
+    "status": "endorsed",
+    "choice": "Mike Levin",
+    "why": "On California Environmental Voters' 2026 endorsements page for the November 3 election (checked Oct 29, 2026).",
+    "url": "https://envirovoters.org/2026-endorsements/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-labor-fed",
+    "target_id": "ca-us-house-49",
+    "status": "endorsed",
+    "choice": "Mike Levin",
+    "why": "On the Orange County Labor Federation's 2026 general election COPE endorsement list (checked Oct 29, 2026).",
+    "url": "https://oclabor.org/cope-endorsements-2026/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pp-oc-sb-caf",
+    "target_id": "ca-us-house-49",
+    "status": "endorsed",
+    "choice": "Mike Levin",
+    "why": "On the Community Action Fund's 2026 voter guide, which says Planned Parenthood Action Fund endorsed its federal candidates on the fund's recommendation (checked Oct 29, 2026).",
+    "url": "https://www.plannedparenthoodaction.org/community-action-fund-planned-parenthood-orange-and-san-bernardi/elections/2026-midterm-election-voter-guide",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-gop",
+    "target_id": "ca-state-senate-38",
+    "status": "endorsed",
+    "choice": "Laura Bassett",
+    "why": "In the Republican Party of Orange County's 2026 voter guide, linked from its endorsements page (read Oct 29, 2026).",
+    "url": "https://linkjar.to/_/pdf/aa0dc48e-a2ea-40c8-8408-d58668b90d0b/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-dems",
+    "target_id": "ca-state-senate-38",
+    "status": "endorsed",
+    "choice": "Catherine S. Blakespear",
+    "why": "Listed on the Democratic Party of Orange County's endorsement page (checked Oct 29, 2026).",
+    "url": "https://orangecountydemocrats.com/statewide-endorsements",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ca-democratic-party",
+    "target_id": "ca-state-senate-38",
+    "status": "endorsed",
+    "choice": "Catherine S. Blakespear",
+    "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+    "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+    "date": "2026-08-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ca-labor-fed",
+    "target_id": "ca-state-senate-38",
+    "status": "endorsed",
+    "choice": "Catherine S. Blakespear",
+    "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+    "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "equality-california",
+    "target_id": "ca-state-senate-38",
+    "status": "endorsed",
+    "choice": "Catherine S. Blakespear",
+    "why": "Listed on Equality California's 2026 Election Center endorsements (checked Oct 29, 2026).",
+    "url": "https://www.eqca.org/elections/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "cta",
+    "target_id": "ca-state-senate-38",
+    "status": "endorsed",
+    "choice": "Catherine S. Blakespear",
+    "why": "On CTA's 2026 candidate recommendations list (checked Oct 29, 2026).",
+    "url": "https://www.cta.org/document/2026-candidate-recommendations",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ca-envirovoters",
+    "target_id": "ca-state-senate-38",
+    "status": "endorsed",
+    "choice": "Catherine S. Blakespear",
+    "why": "On California Environmental Voters' 2026 endorsements page for the November 3 election (checked Oct 29, 2026).",
+    "url": "https://envirovoters.org/2026-endorsements/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-labor-fed",
+    "target_id": "ca-state-senate-38",
+    "status": "endorsed",
+    "choice": "Catherine S. Blakespear",
+    "why": "On the Orange County Labor Federation's 2026 general election COPE endorsement list (checked Oct 29, 2026).",
+    "url": "https://oclabor.org/cope-endorsements-2026/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pp-oc-sb-caf",
+    "target_id": "ca-state-senate-38",
+    "status": "endorsed",
+    "choice": "Catherine S. Blakespear",
+    "why": "On the Community Action Fund's 2026 voter guide of endorsed candidates (checked Oct 29, 2026).",
+    "url": "https://www.plannedparenthoodaction.org/community-action-fund-planned-parenthood-orange-and-san-bernardi/elections/2026-midterm-election-voter-guide",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-register-eb",
+    "target_id": "ca-us-house-49",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Southern California News Group editorial board's endorsement list, last updated Oct 20 and checked Oct 29, 2026. The board says the list 'will be constantly updated.'",
+    "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-register-eb",
+    "target_id": "ca-state-senate-38",
+    "status": "endorsed",
+    "choice": "Laura Bassett",
+    "why": "On the Southern California News Group editorial board's endorsement list under Orange County: 'Senate District 38: Laura Bassett' (list last updated Oct 20, checked Oct 29, 2026).",
+    "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sierra-club-ca",
+    "target_id": "ca-state-senate-38",
+    "status": "endorsed",
+    "choice": "Catherine S. Blakespear",
+    "why": "On Sierra Club California's 2026 endorsements page for the state legislature (read Oct 21, 2026).",
+    "url": "https://www.sierraclub.org/california/2026-endorsements-scc-political-committee",
+    "date": "2026-10-21",
     "confidence": "verified"
   }
 ]

@@ -379,6 +379,16 @@
       "address": "33501 Stonehill Dr.",
       "reason": "Gloria Dei Lutheran Church, an Orange County (CA) vote center (the same address at the end of a sentence).",
       "source": "https://ocvote.gov/elections/vote-center-locations"
+    },
+    {
+      "address": "1281 Murfreesboro Pike",
+      "reason": "Davidson County (TN) Election Commission office.",
+      "source": "https://www.nashville.gov/departments/elections/contact-us"
+    },
+    {
+      "address": "700 President Ronald Reagan Way.",
+      "reason": "Howard Office Building, a Metro Nashville government building and the Nov 3, 2026 Election Day polling place for District 19, Precinct 5 (moved from the Downtown Library).",
+      "source": "https://www.nashville.gov/sites/default/files/2026-09/Election_Day_Voting_Location_Change_November_3_2026.pdf?ct=1790351444"
     }
   ]
 }

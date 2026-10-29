@@ -1,0 +1,653 @@
+[
+  {
+    "id": "tn-hd-50",
+    "state": "TN",
+    "level": "state",
+    "office": "Tennessee House of Representatives",
+    "district": "HD-50",
+    "scope_plain": "Part of Davidson County (House District 50).",
+    "office_explainer": "One of 99 state representatives. Writes Tennessee laws and votes on the state budget.",
+    "why_it_matters": "Unopposed: incumbent Bo Mitchell is the only name on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Bo Mitchell",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Bo Mitchell",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "State representative since 2013; before that, two terms on the Metro Council. Ran in the 2025 Democratic primary for the 7th Congressional District special election.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-29",
+          "where": [
+            "Web searches: Bo Mitchell campaign site and 2026 platform",
+            "Tennessee Democratic Party candidate list (no link)",
+            "Wikipedia biography"
+          ]
+        }
+      }
+    ],
+    "sources": [
+      {
+        "name": "Tennessee Secretary of State: candidates for Tennessee House of Representatives, Nov 3, 2026 general election",
+        "url": "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+      },
+      {
+        "name": "Nashville Scene: Who's Who in the Midterms, breaking down the Nov. 3 ballot",
+        "url": "https://www.nashvillescene.com/news/coverstory/who-s-who-in-the-midterms-breaking-down-the-nov-3-ballot/article_e342be74-36b4-4344-b832-dbf1dec6ad24.html"
+      },
+      {
+        "name": "Wikipedia: Bo Mitchell",
+        "url": "https://en.wikipedia.org/wiki/Bo_Mitchell"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tn-hd-51",
+    "state": "TN",
+    "level": "state",
+    "office": "Tennessee House of Representatives",
+    "district": "HD-51",
+    "scope_plain": "Part of Davidson County (House District 51).",
+    "office_explainer": "One of 99 state representatives. Writes Tennessee laws and votes on the state budget.",
+    "why_it_matters": "Unopposed: incumbent Aftyn Behn is the only name on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Aftyn Behn",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Aftyn Behn",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.aftynbehn.com/",
+        "website_confidence": "verified",
+        "background": "State representative since a 2023 special election. Licensed social worker and community organizer. The Democratic nominee in the December 2025 special election for the 7th Congressional District.",
+        "own_words": [
+          {
+            "text": "Campaign site: \"Taking on corporate greed and corruption. Building a government that works for all of us.\"",
+            "is_quote": true,
+            "source": "https://www.aftynbehn.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Tennessee Secretary of State: candidates for Tennessee House of Representatives, Nov 3, 2026 general election",
+        "url": "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+      },
+      {
+        "name": "Nashville Scene: Who's Who in the Midterms, breaking down the Nov. 3 ballot",
+        "url": "https://www.nashvillescene.com/news/coverstory/who-s-who-in-the-midterms-breaking-down-the-nov-3-ballot/article_e342be74-36b4-4344-b832-dbf1dec6ad24.html"
+      },
+      {
+        "name": "Aftyn Behn campaign site",
+        "url": "https://www.aftynbehn.com/"
+      },
+      {
+        "name": "BallotReady: Aftyn Behn",
+        "url": "https://www.ballotready.org/people/aftyn-behn"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tn-hd-52",
+    "state": "TN",
+    "level": "state",
+    "office": "Tennessee House of Representatives",
+    "district": "HD-52",
+    "scope_plain": "Part of Davidson County (House District 52).",
+    "office_explainer": "One of 99 state representatives. Writes Tennessee laws and votes on the state budget.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Justin Jones",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Michele Vetter",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.mvetterforall.com/",
+        "website_confidence": "verified",
+        "background": "Founder of the Priest Lake Peninsula Neighborhood Network, her campaign says. Has worked in admissions at Daymar Institute. Ran for Metro Council District 29 in 2023.",
+        "own_words": [
+          {
+            "text": "Campaign site: \"a stronger, safer, greener community for all District 52 residents.\"",
+            "is_quote": true,
+            "source": "https://www.mvetterforall.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Justin Jones",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.votejustinjones.com/",
+        "website_confidence": "verified",
+        "background": "Elected in 2022. The House expelled him in April 2023 after a gun-control protest on the House floor; the Metro Council reappointed him, and he won the seat back in an August 2023 special election and again in 2024. Fisk University graduate.",
+        "own_words": [
+          {
+            "text": "Campaign site: \"We Are Building a Movement for the South to Rise Anew.\"",
+            "is_quote": true,
+            "source": "https://www.votejustinjones.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Martez Coleman",
+        "party": "Independent",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Senior mortgage banker at Renasant Mortgage Lending and a deacon at Rural Hill Church of Christ. Lipscomb University graduate. Ran for Metro Council in 2019 and 2023.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-29",
+          "where": [
+            "Web searches: Martez Coleman campaign site and House District 52 platform",
+            "BallotReady profile (work history only)"
+          ]
+        }
+      }
+    ],
+    "sources": [
+      {
+        "name": "Tennessee Secretary of State: candidates for Tennessee House of Representatives, Nov 3, 2026 general election",
+        "url": "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+      },
+      {
+        "name": "Nashville Scene: Who's Who in the Midterms, breaking down the Nov. 3 ballot",
+        "url": "https://www.nashvillescene.com/news/coverstory/who-s-who-in-the-midterms-breaking-down-the-nov-3-ballot/article_e342be74-36b4-4344-b832-dbf1dec6ad24.html"
+      },
+      {
+        "name": "BallotReady: Michele Vetter",
+        "url": "https://www.ballotready.org/people/michele-vetter"
+      },
+      {
+        "name": "Michele Vetter campaign site",
+        "url": "https://www.mvetterforall.com/"
+      },
+      {
+        "name": "Justin Jones campaign site",
+        "url": "https://www.votejustinjones.com/"
+      },
+      {
+        "name": "Wikipedia: Justin Jones",
+        "url": "https://en.wikipedia.org/wiki/Justin_Jones_(Tennessee_politician)"
+      },
+      {
+        "name": "BallotReady: Martez Coleman",
+        "url": "https://www.ballotready.org/people/martez-coleman"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tn-hd-53",
+    "state": "TN",
+    "level": "state",
+    "office": "Tennessee House of Representatives",
+    "district": "HD-53",
+    "scope_plain": "Part of Davidson County (House District 53).",
+    "office_explainer": "One of 99 state representatives. Writes Tennessee laws and votes on the state budget.",
+    "why_it_matters": "Unopposed: incumbent Jason L Powell is the only name on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Jason L Powell",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jason L Powell",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "State representative since 2013, per BallotReady. Director of business development at Freeman Webb Companies.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-29",
+          "where": [
+            "BallotReady profile",
+            "powellfortennessee.com (not found, Oct 29)",
+            "Web searches: Jason Powell 2026 platform"
+          ]
+        }
+      }
+    ],
+    "sources": [
+      {
+        "name": "Tennessee Secretary of State: candidates for Tennessee House of Representatives, Nov 3, 2026 general election",
+        "url": "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+      },
+      {
+        "name": "Nashville Scene: Who's Who in the Midterms, breaking down the Nov. 3 ballot",
+        "url": "https://www.nashvillescene.com/news/coverstory/who-s-who-in-the-midterms-breaking-down-the-nov-3-ballot/article_e342be74-36b4-4344-b832-dbf1dec6ad24.html"
+      },
+      {
+        "name": "BallotReady: Jason L. Powell",
+        "url": "https://www.ballotready.org/people/jason-l-powell"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tn-hd-54",
+    "state": "TN",
+    "level": "state",
+    "office": "Tennessee House of Representatives",
+    "district": "HD-54",
+    "scope_plain": "Part of Davidson County (House District 54).",
+    "office_explainer": "One of 99 state representatives. Writes Tennessee laws and votes on the state budget.",
+    "why_it_matters": "Unopposed: incumbent Vincent Dixie is the only name on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Vincent Dixie",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Vincent Dixie",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "State representative since 2019. Owns a bail bonding business; accounting degree and MBA from Tennessee State University. Also ran in the Democratic primaries for the 7th Congressional District in 2025 and August 2026.",
+        "own_words": [
+          {
+            "text": "Congressional campaign site, on guns: \"we must address gun violence in all its forms.\"",
+            "is_quote": true,
+            "source": "https://dixie4tn.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Tennessee Secretary of State: candidates for Tennessee House of Representatives, Nov 3, 2026 general election",
+        "url": "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+      },
+      {
+        "name": "Nashville Scene: Who's Who in the Midterms, breaking down the Nov. 3 ballot",
+        "url": "https://www.nashvillescene.com/news/coverstory/who-s-who-in-the-midterms-breaking-down-the-nov-3-ballot/article_e342be74-36b4-4344-b832-dbf1dec6ad24.html"
+      },
+      {
+        "name": "BallotReady: Vincent Dixie",
+        "url": "https://www.ballotready.org/people/vincent-dixie"
+      },
+      {
+        "name": "Wikipedia: Vincent B. Dixie",
+        "url": "https://en.wikipedia.org/wiki/Vincent_B._Dixie"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tn-hd-55",
+    "state": "TN",
+    "level": "state",
+    "office": "Tennessee House of Representatives",
+    "district": "HD-55",
+    "scope_plain": "Part of Davidson County (House District 55).",
+    "office_explainer": "One of 99 state representatives. Writes Tennessee laws and votes on the state budget.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "John Ray Clemmons",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jayla Thomas",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.jaylat4tennessee.com/",
+        "website_confidence": "verified",
+        "background": "Business consultant who helps small business owners start and grow, her campaign says. Born and raised in Las Vegas.",
+        "own_words": [
+          {
+            "text": "Campaign site: \"District 55 doesn’t need another career politician. It needs someone who listens, collaborates, and gets results.\"",
+            "is_quote": true,
+            "source": "https://www.jaylat4tennessee.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "John Ray Clemmons",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "State representative since 2015 and chair of the House Democratic Caucus. Civil litigation attorney. Finished fourth in the 2019 race for Nashville mayor.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-29",
+          "where": [
+            "Web searches: John Ray Clemmons campaign site and 2026 platform",
+            "Wikipedia biography"
+          ]
+        }
+      }
+    ],
+    "sources": [
+      {
+        "name": "Tennessee Secretary of State: candidates for Tennessee House of Representatives, Nov 3, 2026 general election",
+        "url": "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+      },
+      {
+        "name": "Nashville Scene: Who's Who in the Midterms, breaking down the Nov. 3 ballot",
+        "url": "https://www.nashvillescene.com/news/coverstory/who-s-who-in-the-midterms-breaking-down-the-nov-3-ballot/article_e342be74-36b4-4344-b832-dbf1dec6ad24.html"
+      },
+      {
+        "name": "Jayla Thomas campaign site",
+        "url": "https://www.jaylat4tennessee.com/"
+      },
+      {
+        "name": "Heartland Journal interview with Jayla Thomas",
+        "url": "https://heartlandjournal.substack.com/p/jayla-thomas-candidate-for-state"
+      },
+      {
+        "name": "Wikipedia: John Ray Clemmons",
+        "url": "https://en.wikipedia.org/wiki/John_Ray_Clemmons"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tn-hd-56",
+    "state": "TN",
+    "level": "state",
+    "office": "Tennessee House of Representatives",
+    "district": "HD-56",
+    "scope_plain": "Part of Davidson County (House District 56).",
+    "office_explainer": "One of 99 state representatives. Writes Tennessee laws and votes on the state budget.",
+    "why_it_matters": "Unopposed: incumbent Bob Freeman is the only name on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Bob Freeman",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Bob Freeman",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://votebobfreeman.com/",
+        "website_confidence": "verified",
+        "background": "State representative since 2019. President of Freeman Webb, a real estate company. Construction management degree from Middle Tennessee State University.",
+        "own_words": [
+          {
+            "text": "On schools: \"Funding for our public schools should not be used to subsidize private education.\"",
+            "is_quote": true,
+            "source": "https://votebobfreeman.com/issues/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Tennessee Secretary of State: candidates for Tennessee House of Representatives, Nov 3, 2026 general election",
+        "url": "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+      },
+      {
+        "name": "Nashville Scene: Who's Who in the Midterms, breaking down the Nov. 3 ballot",
+        "url": "https://www.nashvillescene.com/news/coverstory/who-s-who-in-the-midterms-breaking-down-the-nov-3-ballot/article_e342be74-36b4-4344-b832-dbf1dec6ad24.html"
+      },
+      {
+        "name": "Bob Freeman campaign site: issues",
+        "url": "https://votebobfreeman.com/issues/"
+      },
+      {
+        "name": "BallotReady: Bob Freeman",
+        "url": "https://www.ballotready.org/people/bob-freeman"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tn-hd-58",
+    "state": "TN",
+    "level": "state",
+    "office": "Tennessee House of Representatives",
+    "district": "HD-58",
+    "scope_plain": "Part of Davidson County (House District 58).",
+    "office_explainer": "One of 99 state representatives. Writes Tennessee laws and votes on the state budget.",
+    "why_it_matters": "Unopposed: incumbent Harold M. Love, Jr. is the only name on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Harold M. Love, Jr.",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Harold M. Love, Jr.",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "State representative since 2013. His father, Harold M. Love Sr., also served in the state House.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-29",
+          "where": [
+            "Web searches: Harold Love campaign site and 2026 platform",
+            "Wikipedia biography"
+          ]
+        }
+      }
+    ],
+    "sources": [
+      {
+        "name": "Tennessee Secretary of State: candidates for Tennessee House of Representatives, Nov 3, 2026 general election",
+        "url": "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+      },
+      {
+        "name": "Nashville Scene: Who's Who in the Midterms, breaking down the Nov. 3 ballot",
+        "url": "https://www.nashvillescene.com/news/coverstory/who-s-who-in-the-midterms-breaking-down-the-nov-3-ballot/article_e342be74-36b4-4344-b832-dbf1dec6ad24.html"
+      },
+      {
+        "name": "Wikipedia: Harold M. Love Jr.",
+        "url": "https://en.wikipedia.org/wiki/Harold_M._Love_Jr."
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tn-hd-59",
+    "state": "TN",
+    "level": "state",
+    "office": "Tennessee House of Representatives",
+    "district": "HD-59",
+    "scope_plain": "Part of Davidson County (House District 59).",
+    "office_explainer": "One of 99 state representatives. Writes Tennessee laws and votes on the state budget.",
+    "why_it_matters": "Open seat: Rep. Caleb Hemmer (D) is not running again. He first won it narrowly in 2022.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Bill Hancock",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.billhancockfortn.com/",
+        "website_confidence": "verified",
+        "background": "Health care executive and real estate broker who grew up in West Meade, his campaign says. Son and grandson of Metro school teachers. First run for office.",
+        "own_words": [
+          {
+            "text": "Campaign site: someone who can \"work with the super majority in the legislature to get bills passed that will benefit all Tennesseans.\"",
+            "is_quote": true,
+            "source": "https://www.billhancockfortn.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Mark Proctor",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.markproctortn.com/",
+        "website_confidence": "verified",
+        "background": "Former Tennessee Highway Patrol officer; his campaign says he spent more than 25 years in law enforcement and oversaw the state's gun permitting division. Small business owner. First run for office; Rep. Caleb Hemmer, who holds the seat now, backed him in the primary.",
+        "own_words": [
+          {
+            "text": "On schools: \"I will always fight for strong public schools, responsible investment in education, and accountability for every taxpayer dollar.\"",
+            "is_quote": true,
+            "source": "https://www.markproctortn.com/issues"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Tennessee Secretary of State: candidates for Tennessee House of Representatives, Nov 3, 2026 general election",
+        "url": "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+      },
+      {
+        "name": "Nashville Scene: Who's Who in the Midterms, breaking down the Nov. 3 ballot",
+        "url": "https://www.nashvillescene.com/news/coverstory/who-s-who-in-the-midterms-breaking-down-the-nov-3-ballot/article_e342be74-36b4-4344-b832-dbf1dec6ad24.html"
+      },
+      {
+        "name": "Nashville Scene: House District 59 field takes shape",
+        "url": "https://www.nashvillescene.com/news/pithinthewind/house-district-59-field-takes-shape/article_c912fff8-5be1-4e42-8b13-46848ab316b9.html"
+      },
+      {
+        "name": "Bill Hancock campaign site",
+        "url": "https://www.billhancockfortn.com/"
+      },
+      {
+        "name": "BallotReady: Bill Hancock",
+        "url": "https://www.ballotready.org/people/bill-hancock-5a35365e-b0a1-4110-8486-36f9a76c5d6c"
+      },
+      {
+        "name": "Mark Proctor campaign site: issues",
+        "url": "https://www.markproctortn.com/issues"
+      },
+      {
+        "name": "BallotReady: Mark Proctor",
+        "url": "https://www.ballotready.org/people/mark-proctor-d4a87364-1d8a-45e2-aed1-a67050072fc2"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tn-hd-60",
+    "state": "TN",
+    "level": "state",
+    "office": "Tennessee House of Representatives",
+    "district": "HD-60",
+    "scope_plain": "Part of Davidson County (House District 60).",
+    "office_explainer": "One of 99 state representatives. Writes Tennessee laws and votes on the state budget.",
+    "why_it_matters": "Brooks won this seat in 2024 with 53.8% of the vote.",
+    "vote_for": 1,
+    "incumbent": "Shaundelle Brooks",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Eva Angelina Romero",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://electevaromero.com/",
+        "website_confidence": "verified",
+        "background": "Real estate broker and business owner; appointed by Gov. Bill Lee to the Tennessee Housing Development Agency. Former high school history teacher, her campaign says. Lives in Old Hickory.",
+        "own_words": [
+          {
+            "text": "On property taxes: \"Your home is yours. No government should ever be able to take it from you through excessive taxation.\"",
+            "is_quote": true,
+            "source": "https://electevaromero.com/issues/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Shaundelle Brooks",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.brooksforstatehouse.com/",
+        "website_confidence": "verified",
+        "background": "Elected in 2024. Former parole officer; degree in law and criminal justice from John Jay College. Her son Akilah DaSilva was killed in the 2018 Waffle House shooting in Nashville; she has pushed for what she calls Akilah's Law.",
+        "own_words": [
+          {
+            "text": "Campaign site: \"I'm going to support everything I can to make people safer.\"",
+            "is_quote": true,
+            "source": "https://www.brooksforstatehouse.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Tennessee Secretary of State: candidates for Tennessee House of Representatives, Nov 3, 2026 general election",
+        "url": "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+      },
+      {
+        "name": "Nashville Scene: Who's Who in the Midterms, breaking down the Nov. 3 ballot",
+        "url": "https://www.nashvillescene.com/news/coverstory/who-s-who-in-the-midterms-breaking-down-the-nov-3-ballot/article_e342be74-36b4-4344-b832-dbf1dec6ad24.html"
+      },
+      {
+        "name": "WSMV: State House District 60 nominees turn sights on November",
+        "url": "https://www.wsmv.com/2026/09/30/after-bruising-primary-fights-state-house-district-60-nominees-turn-sights-november-election-night-battle/"
+      },
+      {
+        "name": "Eva Romero campaign site: issues",
+        "url": "https://electevaromero.com/issues/"
+      },
+      {
+        "name": "Shaundelle Brooks campaign site",
+        "url": "https://www.brooksforstatehouse.com/"
+      },
+      {
+        "name": "BallotReady: Shaundelle Brooks",
+        "url": "https://www.ballotready.org/people/shaundelle-brooks"
+      }
+    ],
+    "confidence": "verified"
+  }
+]

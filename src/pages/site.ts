@@ -24,7 +24,7 @@ import type { Contest, Dated, HowTo, Index, Lookups, PlaceBundle, StateBundle } 
 import { buildBallot, sectionOf, SECTIONS, type Ballot, type SectionKey } from '../ballot';
 import { S } from '../state';
 import { cleanOffice, rowTitle } from '../model/labels';
-import { applyDated, clock, isMailState, localHowto } from '../model/plan';
+import { applyDated, clock, closeOf, isMailState, localHowto, PLAIN_TIME, zonesFor } from '../model/plan';
 import { esc, fmtDate } from '../util';
 import { escP, telHTML } from '../views/common';
 
@@ -147,9 +147,6 @@ function ballotHTML(b: Ballot, where: string): string {
 
 /* ---------- dates, places to vote, the office ---------- */
 interface DateRow { date: string; lead: string; when: string; detail: string | null; list?: string[] }
-/* "7:00 AM", "8 PM PT": a time and nothing else. A qualified one ("8:30 AM at the six King County vote centers")
-   isn't a statewide opening time, so it never becomes "You can vote from ...". */
-const PLAIN_TIME = /^\s*\d{1,2}(?::\d{2})?\s*[ap]\.?m\.?(?:\s+[A-Z]{2,3})?\s*$/i;
 
 /* Text the data dates to change (`dated`, plan.applyDated) never goes on a static page, whatever the build date
    (Codex, Oct 28): it can say "today" or "tomorrow", and a page keeps what it says until the next deploy. So before
@@ -190,7 +187,7 @@ function dateRows(h: HowTo, place: PlaceBundle | null): DateRow[] {
   // that arrives the next day; Georgia doesn't count postmarks; Codex round 2), so the heading names none of them.
   if (r && r.date) out.push({ date: r.date, lead: 'Mail ballot deadline: ', when: fmtDate(r.date), detail: r.time || null, list: (h.mail_ballot.return_options || []).filter(Boolean) });
   const ed = h.election_day;
-  const close = clock(ed.polls_close) || ed.polls_close;
+  const { close } = closeOf(ed.polls_close, zonesFor(h.state, place ? [place] : []));
   const hours = !close ? '' : !mail && PLAIN_TIME.test(ed.polls_open || '') && PLAIN_TIME.test(ed.polls_close || '') ? `You can vote from ${clock(ed.polls_open)} to ${close}.` : `Polls close at ${close}.`;
   if (h.election_date) out.push({ date: h.election_date, lead: 'Election Day: ', when: fmtDate(h.election_date), detail: [hours, ed.in_line_rule].filter(Boolean).join(' ') || null });
   return out.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));

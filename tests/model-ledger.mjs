@@ -36,6 +36,12 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('may apply: Denver Public Schools measures cover Denver', dn.items.filter((x) => x.kind === 'measure' && /Denver Public Schools/.test(x.jurisdiction)).every((x) => !dn.mayApply.has(x.id)));
     const ch = open('IL', ['chicago-il']);
     check('may apply: Chicago Public Schools covers every Chicago voter; the mental health areas may apply', ch.items.filter((x) => x.kind === 'measure' && /Chicago Public Schools/.test(x.jurisdiction)).every((x) => !ch.mayApply.has(x.id)) && ch.items.filter((x) => x.kind === 'measure' && /Mental Health/.test(x.jurisdiction)).every((x) => ch.mayApply.has(x.id)));
+    // A city question for one ward or a few precincts ("City of Chicago, 4th Ward only") may apply; one for every Chicago voter doesn't.
+    const wards = ch.items.filter((x) => x.kind === 'measure' && x.level === 'city' && /\b(ward|precinct)/i.test(x.jurisdiction));
+    const whole = ch.items.filter((x) => x.kind === 'measure' && x.level === 'city' && /every Chicago voter/.test(x.jurisdiction));
+    check('may apply: Chicago\'s ward and precinct questions may apply; its citywide ones are on every ballot', wards.length >= 7 && wards.every((x) => ch.mayApply.has(x.id)) && whole.length >= 3 && whole.every((x) => !ch.mayApply.has(x.id)), [...wards.filter((x) => !ch.mayApply.has(x.id)), ...whole.filter((x) => ch.mayApply.has(x.id))].map((x) => x.id).join(', '));
+    // A small city's own question inside a county-wide place: Goodlettsville's sales tax on a Nashville ballot.
+    check('may apply: Goodlettsville\'s sales tax (city voters only) may apply on a Nashville ballot', open('TN', ['nashville-tn']).mayApply.has('goodlettsville-sales-tax'));
     // Codex r3: restrictive notes win over a place-name match.
     const au = open('CO', ['aurora-co']);
     check('may apply: Aurora\'s 17th Judicial District measure (Adams County only) may apply', au.mayApply.has('adams-broomfield-da-7e'));

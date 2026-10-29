@@ -1,0 +1,777 @@
+[
+  {
+    "id": "ca-us-house-47",
+    "state": "CA",
+    "level": "federal",
+    "office": "U.S. Representative",
+    "district": "CD-47 (all of Dana Point; Irvine, Laguna Beach, Laguna Niguel, Aliso Viejo, Laguna Hills, Laguna Woods, Lake Forest, Tustin, parts of Newport Beach and Mission Viejo)",
+    "scope_plain": "All of Dana Point votes in this race. California's 47th District, on the new map voters approved with Prop 50, runs along the Orange County coast and inland: Dana Point, Irvine, Laguna Beach, Laguna Niguel, Aliso Viejo, Lake Forest, Tustin and parts of Newport Beach and Mission Viejo. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+    "office_explainer": "One of 435 House members. Writes federal laws and votes on the budget and taxes. Two-year term.",
+    "why_it_matters": "A first-term Democrat against a Republican business owner, in a seat Prop 50 redrew: Min's campaign says about 60% of the district is new to him, Dana Point included. In June, Min led a field of nine with 45.4%; Le Roux was second with 25.0%.",
+    "vote_for": 1,
+    "incumbent": "Dave Min",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Dave Min",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://davemin.com",
+        "website_confidence": "verified",
+        "background": "In Congress since January 2025; state senator before that (elected 2020). Former securities fraud attorney at the SEC and UC Irvine law professor. Son of Korean immigrants; Harvard law degree. Ballot designation: United States Representative/Father. First in June with 45.4%.",
+        "own_words": [
+          {
+            "text": "“I can’t be bought and I’m hell bent on cleaning up the corruption and rot in Washington, DC.”",
+            "is_quote": true,
+            "source": "https://davemin.com/"
+          },
+          {
+            "text": "In his official statement, says he takes no corporate PAC money, chairs the Anti-Corruption Task Force and sponsored a bill to end stock trading by members of Congress. Says he has voted against ICE funding.",
+            "is_quote": false,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/1185-1.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Jenny Rae Le Roux",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Business owner and investor, age 46; executive director of CAL DOGE, a group that looks for government waste and fraud (Maggie's List). Mother of children in public school. Ballot designation: Entrepreneur/Investor. Second in June with 25.0%. No campaign website found.",
+        "own_words": [
+          {
+            "text": "“I’m not a politician. I’m an outsider fighting to restore accountability to Congress.”",
+            "is_quote": true,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/1185-2.pdf"
+          },
+          {
+            "text": "In her official statement, says she leads a fraud task force that has exposed over $2 billion in government waste, and lists safe communities, secure borders, schools and the economy.",
+            "is_quote": false,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/1185-2.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "OC Registrar: contests qualified for the Nov 3, 2026 ballot",
+        "url": "https://ocvote.gov/elections/contests-qualified-for-the-ballot-for-the-2026-general-election"
+      },
+      {
+        "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+        "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+      },
+      {
+        "name": "CA Secretary of State Statement of Vote, June 2, 2026 primary",
+        "url": "https://elections.cdn.sos.ca.gov/sov/2026-primary/sov/complete-sov.pdf"
+      },
+      {
+        "name": "Statewide Database: AB 604 (Prop 50) city splits report",
+        "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
+      },
+      {
+        "name": "OC Registrar candidate statements (Min, Le Roux)",
+        "url": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/1185-1.pdf"
+      },
+      {
+        "name": "OC Registrar candidate log",
+        "url": "https://ocvote.gov/fileadmin/user_upload/data/candlog/GEN2026/candlog.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "ca-state-senate-36",
+    "state": "CA",
+    "level": "state",
+    "office": "State Senator",
+    "district": "SD-36 (all of Dana Point; the Orange County coast north to Seal Beach, inland Orange County cities and a few in Los Angeles County)",
+    "scope_plain": "All of Dana Point votes in this race. Besides Dana Point, the senator's office lists San Clemente, Laguna Beach, Newport Beach, Huntington Beach, Seal Beach, Fountain Valley, Westminster, Garden Grove, Stanton, Cypress, Buena Park, La Palma, Los Alamitos and Rossmoor in Orange County, and Cerritos, Artesia and Hawaiian Gardens in Los Angeles County. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+    "office_explainer": "One of 40 state senators. Writes California laws and passes the state budget. Four-year term.",
+    "why_it_matters": "The Republican incumbent, who won this seat in a 2025 special election, faces a Democratic San Clemente councilmember. Only these two ran in June: Strickland 53.4%, Duncan 46.6%.",
+    "vote_for": 1,
+    "incumbent": "Tony Strickland",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Chris Duncan",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.votechrisduncan.com",
+        "website_confidence": "sourced",
+        "background": "San Clemente City Councilmember and former mayor. Former federal prosecutor: over 16 years as a lawyer for U.S. Customs and Border Protection and the Justice Department; now an attorney challenging federal tariffs. Ran against Laurie Davies for the Assembly in earlier elections (OC Register). Georgetown law degree. Ballot designation: Anti-Tariff Attorney. Second in June with 46.6%.",
+        "own_words": [
+          {
+            "text": "“I’m running for State Senate to make California more affordable, cut red tape, and fight for our region’s fair share.”",
+            "is_quote": true,
+            "source": "https://www.votechrisduncan.com/"
+          },
+          {
+            "text": "Lists tougher gun safety laws, full funding for police and homeless programs, lower taxes, utility bills and insurance premiums, and protecting reproductive rights.",
+            "is_quote": false,
+            "source": "https://www.votechrisduncan.com/about"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Tony Strickland",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://www.stricklandforsenate.com",
+        "website_confidence": "sourced",
+        "background": "State senator since a 2025 special election. Earlier served in the Assembly (elected 1998) and the State Senate (elected 2008), then on the Huntington Beach City Council and as mayor. Whittier College. Ballot designation: State Senator/Businessman. First in June with 53.4%.",
+        "own_words": [
+          {
+            "text": "Campaign site: “Senator Tony Strickland has spent three decades fighting for California families.”",
+            "is_quote": true,
+            "source": "https://www.stricklandforsenate.com/"
+          },
+          {
+            "text": "Lists his bill to end the state gas tax (SB 94), cutting off money for high-speed rail, and full state funding for Prop 36. Says he co-wrote the California Voter ID initiative.",
+            "is_quote": false,
+            "source": "https://www.stricklandforsenate.com/issues"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "OC Registrar: contests qualified for the Nov 3, 2026 ballot",
+        "url": "https://ocvote.gov/elections/contests-qualified-for-the-ballot-for-the-2026-general-election"
+      },
+      {
+        "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+        "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+      },
+      {
+        "name": "CA Secretary of State Statement of Vote, June 2, 2026 primary",
+        "url": "https://elections.cdn.sos.ca.gov/sov/2026-primary/sov/complete-sov.pdf"
+      },
+      {
+        "name": "Sen. Tony Strickland: district map and cities",
+        "url": "https://sr36.senate.ca.gov/issue/district-map"
+      },
+      {
+        "name": "Senate Republican Caucus: Strickland wins the SD-36 special election",
+        "url": "https://sr36.senate.ca.gov/content/leader-jones-congratulates-republican-senator-elect-tony-strickland-his-victory-senate"
+      },
+      {
+        "name": "OC Registrar candidate log",
+        "url": "https://ocvote.gov/fileadmin/user_upload/data/candlog/GEN2026/candlog.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "ca-assembly-74",
+    "state": "CA",
+    "level": "state",
+    "office": "Member of the State Assembly",
+    "district": "AD-74 (all of Dana Point; Laguna Niguel, San Clemente, San Juan Capistrano, and Oceanside, Vista, Camp Pendleton and part of Fallbrook in San Diego County)",
+    "scope_plain": "All of Dana Point votes in this race. The 74th Assembly District spans south Orange County and north San Diego County: Dana Point, Laguna Niguel, San Clemente and San Juan Capistrano, and Oceanside, Vista, Camp Pendleton and part of Fallbrook. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+    "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
+    "why_it_matters": "CalMatters rates the district competitive: registration is 35% Democratic, 35% Republican and 22% no party preference. The Republican incumbent against a Democratic San Juan Capistrano councilmember. Only these two ran in June: Davies 52.3%, Farias 47.7%.",
+    "vote_for": 1,
+    "incumbent": "Laurie Davies",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Sergio Farias",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.sergiofarias.com",
+        "website_confidence": "sourced",
+        "background": "San Juan Capistrano City Councilmember and former mayor; business owner. Ballot designation: City Councilmember/Businessman. Second in June with 47.7%.",
+        "own_words": [
+          {
+            "text": "“I’ve worked full-time since I was 16 and I’ll work full-time for our communities.”",
+            "is_quote": true,
+            "source": "https://www.sergiofarias.com/why-running/"
+          },
+          {
+            "text": "Told the OC Register editorial board he supports Prop 13 and a free market in insurance, doesn't support the proposed wealth tax, and gives Gov. Newsom an “F” on homelessness.",
+            "is_quote": false,
+            "source": "https://www.ocregister.com/2026/09/27/endorsement-laurie-davies-for-assembly-district-74/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Laurie Davies",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://www.daviesforca.com",
+        "website_confidence": "sourced",
+        "background": "In the Assembly since 2020. Laguna Niguel City Council from 2012, including mayor; served on the Orange County Fire Authority board. Has run a wedding and events business since 2000. Cal State Long Beach. Ballot designation: Assemblywoman/Business Owner. First in June with 52.3%.",
+        "own_words": [
+          {
+            "text": "“I support the biggest middle class tax cut in California history, and I oppose any new or higher taxes.”",
+            "is_quote": true,
+            "source": "https://www.daviesforca.com/the-issues"
+          },
+          {
+            "text": "Wants San Onofre's stored nuclear waste moved away from the coast, more emergency shelters with services for homeless people, and public, nonpartisan audits of every state department.",
+            "is_quote": false,
+            "source": "https://www.daviesforca.com/the-issues"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "OC Registrar: contests qualified for the Nov 3, 2026 ballot",
+        "url": "https://ocvote.gov/elections/contests-qualified-for-the-ballot-for-the-2026-general-election"
+      },
+      {
+        "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+        "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+      },
+      {
+        "name": "CA Secretary of State Statement of Vote, June 2, 2026 primary",
+        "url": "https://elections.cdn.sos.ca.gov/sov/2026-primary/sov/complete-sov.pdf"
+      },
+      {
+        "name": "CalMatters voter guide: State Assembly",
+        "url": "https://calmatters.org/california-voter-guide-2026/state-assembly/"
+      },
+      {
+        "name": "Laurie Davies campaign: the district",
+        "url": "https://www.daviesforca.com/the-district"
+      },
+      {
+        "name": "OC Registrar candidate log",
+        "url": "https://ocvote.gov/fileadmin/user_upload/data/candlog/GEN2026/candlog.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "oc-supervisor-5",
+    "state": "CA",
+    "level": "county",
+    "office": "Orange County Board of Supervisors",
+    "district": "District 5 (Costa Mesa to San Clemente, including all of Dana Point)",
+    "scope_plain": "All of Dana Point votes in this race: the whole city is in Orange County's 5th Supervisorial District, which runs from Costa Mesa to San Clemente. Nonpartisan on the ballot, though the parties have each endorsed. No one won a majority in June, so the top two meet in a runoff.",
+    "office_explainer": "One of five supervisors who set an $11 billion county budget: sheriff, jails, public health, CalOptima, roads in unincorporated areas.",
+    "why_it_matters": "Democrats hold a 3-2 majority on the board, and this seat and District 4 could change that. Republicans have a five-point registration edge in District 5 (37.7% to 32.7%). The county owns Dana Point Harbor, now being rebuilt with two new hotels, so this supervisor helps oversee it.",
+    "vote_for": 1,
+    "incumbent": "Katrina Foley",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Diane Dixon",
+        "party": null,
+        "incumbent": false,
+        "website": "https://dixonforoc.com/",
+        "website_confidence": "sourced",
+        "background": "State Assemblymember for District 72 since 2022; former Newport Beach mayor and councilmember. Before politics, a communications executive at Avery Dennison; member of the bipartisan Problem Solvers Caucus. Registered Republican. Ballot designation: California State Assemblywoman.",
+        "own_words": [
+          {
+            "text": "“I’ll oppose tax and fee increases, promote policies that help local businesses grow and thrive and work to improve housing affordability.”",
+            "is_quote": true,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/4005-1.pdf"
+          },
+          {
+            "text": "“I’ll require competitive bidding for contracts, full public disclosure of spending, strict conflict-of-interest rules”",
+            "is_quote": true,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/4005-1.pdf"
+          },
+          {
+            "text": "Says she will make sure deputy sheriffs and first responders have the resources they need, and will oppose conventional pesticide use near schools, parks and waterways.",
+            "is_quote": false,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/4005-1.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Katrina Foley",
+        "party": null,
+        "incumbent": true,
+        "website": "https://www.katrinafoley.com/",
+        "website_confidence": "verified",
+        "background": "Supervisor since a 2021 special election and the board’s vice chair. Former Costa Mesa mayor (its first directly elected one), councilmember and Newport-Mesa school board member. Employment lawyer with her own Newport Beach firm since 2009. Age 59. Registered Democrat. Ballot designation: Orange County Supervisor/Businessowner.",
+        "own_words": [
+          {
+            "text": "“We must move Dana Point Harbor revitalization forward as a tourism and jobs engine ahead of the 2028 Olympics”",
+            "is_quote": true,
+            "source": "https://laist.com/news/politics/voter-guides/2026-election-california-general-orange-county-supervisors-district-5"
+          },
+          {
+            "text": "Top priority: “protecting our quality of life as our communities face growing pressures from wildfire risk, coastal erosion, infrastructure demands and economic change.”",
+            "is_quote": true,
+            "source": "https://laist.com/news/politics/voter-guides/2026-election-california-general-orange-county-supervisors-district-5"
+          },
+          {
+            "text": "Her statement points to funding public safety, clearing homeless encampments from parks and flood channels, ethics reforms after another supervisor’s corruption scandal, and restoring eroded beaches.",
+            "is_quote": false,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/4005-2.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "OC Registrar: contests qualified for the Nov 3, 2026 ballot",
+        "url": "https://ocvote.gov/elections/contests-qualified-for-the-ballot-for-the-2026-general-election"
+      },
+      {
+        "name": "OC Registrar candidate log (Nov 3, 2026)",
+        "url": "https://ocvote.gov/fileadmin/user_upload/data/candlog/GEN2026/candlog.pdf"
+      },
+      {
+        "name": "OC Registrar precinct map: 5th Supervisorial District",
+        "url": "https://ocvote.gov/bin/maps/pdf/OCBOS/Map_5th%20Supervisorial%20District.pdf"
+      },
+      {
+        "name": "LAist: OC Supervisor District 5",
+        "url": "https://laist.com/news/politics/voter-guides/2026-election-california-general-orange-county-supervisors-district-5"
+      },
+      {
+        "name": "OC Registrar candidate statements (4005)",
+        "url": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/4005-1.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "socccd-area-4",
+    "state": "CA",
+    "level": "special_district",
+    "office": "South Orange County Community College District Board of Trustees",
+    "district": "Trustee Area 4 (east Dana Point, plus parts of San Clemente and San Juan Capistrano)",
+    "scope_plain": "Only voters in Trustee Area 4. In Dana Point, that is roughly the part east of San Juan Creek: Capistrano Beach and the Doheny Village area along Doheny Park Road. A thin strip on the creek’s east bank, north of Pacific Coast Highway, is left out. Most of Dana Point, west of the creek, is in trustee areas that are not voting this year. The district runs Saddleback College and Irvine Valley College. Nonpartisan; most votes wins. Check your sample ballot.",
+    "office_explainer": "Trustees oversee Saddleback College and Irvine Valley College: budget, programs, campus plans and hiring the chancellor.",
+    "why_it_matters": "Open seat: the incumbent, Terri Whitt, is not running, so the filing period was extended. None of the four candidates has served on this board: a Capistrano Unified trustee, a Marine officer and two community college deans.",
+    "vote_for": 1,
+    "incumbent": "Terri Whitt (not running)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Gila Jones",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Capistrano Unified School District trustee for twelve years; says she pushed for a Capistrano Unified academy on the Saddleback College campus where students can earn high school and college diplomas. Ballot designation: Board Member, Capistrano Unified School District.",
+        "own_words": [
+          {
+            "text": "“I’ll urgently advocate for coursework in emerging fields, as well as high-demand careers with apprenticeship options”",
+            "is_quote": true,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/3061-4.pdf"
+          },
+          {
+            "text": "Faults the current board’s vote to accept “a $750,000 developer inducement tied to a potentially hazardous Battery Energy Storage System”",
+            "is_quote": true,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/3061-4.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "John Black",
+        "party": null,
+        "incumbent": false,
+        "website": "https://www.johnblack4collegeboard.com",
+        "website_confidence": "verified",
+        "background": "U.S. Marine Corps lieutenant colonel; senior emergency management program coordinator at the Orange County Health Care Agency. Has taught as adjunct faculty and was a distinguished fellow at MIT. Lives in San Clemente. Ballot designation: Military Officer/Educator.",
+        "own_words": [
+          {
+            "text": "“South Orange County's community colleges should open doors to good careers, four-year universities, skilled trades, military, public service, and entrepreneurship.”",
+            "is_quote": true,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/3061-3.pdf"
+          },
+          {
+            "text": "“I will focus on student success, academic excellence, workforce partnerships, safe campuses, and transparent governance.”",
+            "is_quote": true,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/3061-3.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Narges Rakin",
+        "party": null,
+        "incumbent": false,
+        "website": "https://www.therakin.org",
+        "website_confidence": "verified",
+        "background": "Community college dean; nearly 30 years in California’s community colleges, including as a tenured professor and faculty union negotiator. Age 56. Ballot designation: College Dean/Educator.",
+        "own_words": [
+          {
+            "text": "“I will push for open, plain-language budget reporting that any parent or taxpayer can actually read.”",
+            "is_quote": true,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/3061-1.pdf"
+          },
+          {
+            "text": "Would look first to outside grants and workforce money to grow programs, using the general fund only as a last resort.",
+            "is_quote": false,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/3061-1.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Karima Feldhus",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Executive Dean of Extended Learning at Saddleback College, one of the district’s two colleges; has also been a dean at Irvine Valley College. More than 30 years in public higher education. Age 62. Ballot designation (county candidate list): College Administrator/Educator.",
+        "own_words": [
+          {
+            "text": "“As your trustee, I will promote academic excellence, student success, fiscal responsibility, and accountability.”",
+            "is_quote": true,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/3061-2.pdf"
+          },
+          {
+            "text": "Says she has managed multimillion-dollar budgets, won grants and built partnerships that prepare students for local jobs.",
+            "is_quote": false,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/3061-2.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "OC Registrar: contests qualified for the Nov 3, 2026 ballot",
+        "url": "https://ocvote.gov/elections/contests-qualified-for-the-ballot-for-the-2026-general-election"
+      },
+      {
+        "name": "OC Registrar candidate log (Nov 3, 2026)",
+        "url": "https://ocvote.gov/fileadmin/user_upload/data/candlog/GEN2026/candlog.pdf"
+      },
+      {
+        "name": "OC Registrar precinct map: SOCCCD Trustee Area 4",
+        "url": "https://ocvote.gov/bin/maps/pdf/School/Map_South%20Orange%20County%20Community%20College%20District%20-%20Trustee%20Area%204.pdf"
+      },
+      {
+        "name": "OC Registrar precinct map: City of Dana Point",
+        "url": "https://ocvote.gov/bin/maps/pdf/City/Map_Dana%20Point.pdf"
+      },
+      {
+        "name": "OC Registrar candidate statements (3061)",
+        "url": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/3061-1.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "mnwd-directors",
+    "state": "CA",
+    "level": "special_district",
+    "office": "Moulton Niguel Water District Board of Directors (full term)",
+    "district": null,
+    "scope_plain": "Only voters inside the Moulton Niguel Water District, which mostly serves Laguna Niguel and Aliso Viejo. In Dana Point, the county’s maps put it only along the city’s northern edge next to Laguna Niguel, near Camino del Avion and Pacific Island Drive, and they don’t show exactly which streets. Most of Dana Point gets its water from South Coast Water District, which has no race this year. A hint: if your water bill comes from Moulton Niguel, you are probably in. Vote for up to 3; the top three win. Nonpartisan. Check your sample ballot.",
+    "office_explainer": "One of seven directors who set rates and oversee drinking water and sewer service.",
+    "why_it_matters": "Seven candidates for three seats. Two of the three directors whose terms end, Diane Rifkin and Donald Froelich, are not running. Director Bill Moorhead is, and so is Brian Parker, who was appointed to the board to fill a vacancy.",
+    "vote_for": 3,
+    "incumbent": "William \"Bill\" Moorhead; appointed director Brian Parker",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Patricia \"Trish\" Kelley",
+        "party": null,
+        "incumbent": false,
+        "website": "https://trishkelley.com",
+        "website_confidence": "verified",
+        "background": "City councilmember (her statement does not name the city); has lived in the area since 1977. Former PTA president at three schools and a Saddleback College Foundation governor. Ballot designation: City Councilmember.",
+        "own_words": [
+          {
+            "text": "Would “Protect our water supply,” “Maintain low water rates” and “Expand our local water storage.”",
+            "is_quote": true,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/6177-5.pdf"
+          },
+          {
+            "text": "Would pay down pension debt and improve efficiency; points to her city using recycled water and drip irrigation for 90% of its own watering.",
+            "is_quote": false,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/6177-5.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Michael Cruikshank",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Ballot designation: Hydrogeologist. No candidate statement was posted on the county’s site when we checked on Oct 28.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Brian Parker",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Appointed to the board to fill a vacancy (county candidate list). Longtime Laguna Niguel resident with 30+ years in business; served on the 2023-24 Orange County Grand Jury and co-wrote its report on South County water and wastewater systems. Ballot designation: Appointed Moulton Niguel Water District Director.",
+        "own_words": [
+          {
+            "text": "Committed to “Safeguarding our vital water resources,” “Maintaining the lowest rates possible” and “Ensuring financial accountability.”",
+            "is_quote": true,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/6177-4.pdf"
+          },
+          {
+            "text": "Says his grand jury work laid the groundwork for regional changes that save taxpayers money.",
+            "is_quote": false,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/6177-4.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Kurt Lind",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Water Business Manager at Mesa Water District, where he oversees its independent audits. Former member of the district’s Citizens Advisory Committee and Aliso Viejo planning commissioner; longtime Aliso Viejo resident. Age 61. Ballot designation: Water Business Manager.",
+        "own_words": [
+          {
+            "text": "“Water-supply reliability through a strong portfolio of supply options”",
+            "is_quote": true,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/6177-7.pdf"
+          },
+          {
+            "text": "“Strong fiscal oversight to protect ratepayers and keep service affordable”",
+            "is_quote": true,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/6177-7.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Leena Ray",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Aliso Viejo resident for more than 22 years; more than 20 years in corporate marketing, digital strategy and business consulting; now a full-time family caregiver. Ballot designation: Family Caregiver.",
+        "own_words": [
+          {
+            "text": "“I will advocate for transparency, fiscal responsibility, and meaningful community engagement.”",
+            "is_quote": true,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/6177-9.pdf"
+          },
+          {
+            "text": "Wants residents to understand water quality, infrastructure spending and how ratepayer dollars are spent.",
+            "is_quote": false,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/6177-9.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Jennifer Engle",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Mechanical engineering degree from the California Maritime Academy; more than a decade in construction management, including water, sewer and gas projects. Age 38. Ballot designation: Utility Project Manager.",
+        "own_words": [
+          {
+            "text": "“You can count on me to keep our water clean, safe, reliable and affordable”",
+            "is_quote": true,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/6177-3.pdf"
+          },
+          {
+            "text": "Points to years of keeping complex projects on schedule and on budget.",
+            "is_quote": false,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/6177-3.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "William \"Bill\" Moorhead",
+        "party": null,
+        "incumbent": true,
+        "website": "https://www.moorheadforwater.com",
+        "website_confidence": "verified",
+        "background": "Director for 8 years. Retired principal water engineer for the City of Anaheim and a registered civil engineer; past president of the OC Water Association. District customer for 36 years. Ballot designation: Director, Moulton Niguel Water District.",
+        "own_words": [
+          {
+            "text": "“Infrastructure. Interagency relationships. Reliability. Water quality. Fire protection. Low monthly bills.”",
+            "is_quote": true,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/6177-2.pdf"
+          },
+          {
+            "text": "Says he voted against director pay raises and declined one himself.",
+            "is_quote": false,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/6177-2.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "OC Registrar: contests qualified for the Nov 3, 2026 ballot",
+        "url": "https://ocvote.gov/elections/contests-qualified-for-the-ballot-for-the-2026-general-election"
+      },
+      {
+        "name": "OC Registrar candidate log (Nov 3, 2026)",
+        "url": "https://ocvote.gov/fileadmin/user_upload/data/candlog/GEN2026/candlog.pdf"
+      },
+      {
+        "name": "OC Registrar precinct map: Moulton Niguel Water District",
+        "url": "https://ocvote.gov/bin/maps/pdf/Water/Map_Moulton%20Niguel%20Water%20District.pdf"
+      },
+      {
+        "name": "OC Registrar precinct map: City of Dana Point",
+        "url": "https://ocvote.gov/bin/maps/pdf/City/Map_Dana%20Point.pdf"
+      },
+      {
+        "name": "OC Registrar precinct map: South Coast Water District",
+        "url": "https://ocvote.gov/bin/maps/pdf/Water/Map_South%20Coast%20Water%20District.pdf"
+      },
+      {
+        "name": "OC Registrar candidate statements (6177)",
+        "url": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/6177-2.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "mnwd-short-term",
+    "state": "CA",
+    "level": "special_district",
+    "office": "Moulton Niguel Water District Board of Directors (short term)",
+    "district": null,
+    "scope_plain": "The same voters as the full-term water board race: only those inside the Moulton Niguel Water District. In Dana Point that is only along the city’s northern edge next to Laguna Niguel, near Camino del Avion and Pacific Island Drive. This is a separate race for the rest of an unfinished term; vote for 1. Nonpartisan. Check your sample ballot.",
+    "office_explainer": "One of seven directors who set rates and oversee drinking water and sewer service.",
+    "why_it_matters": "Fills the rest of a term already under way. None of the three candidates sits on this board now: a retired cybersecurity professional, a former state senator and county supervisor, and a former South Coast Water District director.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "David Petty",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "More than 25 years in cyber operations, cybersecurity and digital forensics; has managed residential real estate for 10 years. Bachelor’s from UC Irvine, master’s in cybersecurity from Fordham. Ballot designation: Retired Cybersecurity Professional.",
+        "own_words": [
+          {
+            "text": "“safeguarding critical systems from cyber threats is an important part of protecting reliable public services”",
+            "is_quote": true,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/6178-3.pdf"
+          },
+          {
+            "text": "Will focus on protecting taxpayer resources, transparency and long-term water reliability.",
+            "is_quote": false,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/6178-3.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Patricia C. \"Pat\" Bates",
+        "party": null,
+        "incumbent": false,
+        "website": "https://votepatbates.com",
+        "website_confidence": "verified",
+        "background": "Laguna Niguel’s first mayor; later an Orange County supervisor, state Assemblymember and state senator. A director of the Howard Jarvis Taxpayers Association and president of the Laguna Niguel Historical Society. Ballot designation: Water Policy Advisor.",
+        "own_words": [
+          {
+            "text": "“As your Moulton Niguel Water District director, water quality and safety will always be my first priority.”",
+            "is_quote": true,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/6178-2.pdf"
+          },
+          {
+            "text": "“I will invest in the pipes, pumps, and reservoirs that keep water flowing through drought and emergencies”",
+            "is_quote": true,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/6178-2.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Joel Bishop",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Laguna Niguel resident for 14 years. Was an elected South Coast Water District director for ten years, three terms as board president; volunteers with the city and the Orange County Sheriff’s Department. Ballot designation: Business Owner/Consultant.",
+        "own_words": [
+          {
+            "text": "“provide excellent, reliable service while keeping rates in check”",
+            "is_quote": true,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/6178-4.pdf"
+          },
+          {
+            "text": "“safeguard our critical infrastructure against cyberattacks and physical threats”",
+            "is_quote": true,
+            "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/6178-4.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "OC Registrar: contests qualified for the Nov 3, 2026 ballot",
+        "url": "https://ocvote.gov/elections/contests-qualified-for-the-ballot-for-the-2026-general-election"
+      },
+      {
+        "name": "OC Registrar candidate log (Nov 3, 2026)",
+        "url": "https://ocvote.gov/fileadmin/user_upload/data/candlog/GEN2026/candlog.pdf"
+      },
+      {
+        "name": "OC Registrar precinct map: Moulton Niguel Water District",
+        "url": "https://ocvote.gov/bin/maps/pdf/Water/Map_Moulton%20Niguel%20Water%20District.pdf"
+      },
+      {
+        "name": "OC Registrar candidate statements (6178)",
+        "url": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/6178-2.pdf"
+      }
+    ],
+    "confidence": "verified"
+  }
+]

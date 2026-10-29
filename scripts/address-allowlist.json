@@ -359,6 +359,26 @@
       "address": "5600 Overland Ave.",
       "reason": "San Diego County Registrar of Voters, also a vote center.",
       "source": "https://www.sdvote.com/content/rov/en/how-to-vote-by-mail/info-for-replacement-ballot.html"
+    },
+    {
+      "address": "33282 Golden Lantern St",
+      "reason": "Dana Point City Hall, an Orange County (CA) vote center and drop box.",
+      "source": "https://ocvote.gov/elections/vote-center-locations"
+    },
+    {
+      "address": "33841 Niguel Rd",
+      "reason": "Dana Point Library, an Orange County (CA) vote center and drop box.",
+      "source": "https://ocvote.gov/elections/vote-center-locations"
+    },
+    {
+      "address": "33501 Stonehill Dr",
+      "reason": "Gloria Dei Lutheran Church, an Orange County (CA) vote center.",
+      "source": "https://ocvote.gov/elections/vote-center-locations"
+    },
+    {
+      "address": "33501 Stonehill Dr.",
+      "reason": "Gloria Dei Lutheran Church, an Orange County (CA) vote center (the same address at the end of a sentence).",
+      "source": "https://ocvote.gov/elections/vote-center-locations"
     }
   ]
 }

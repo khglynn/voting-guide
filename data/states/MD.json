@@ -578,5 +578,12 @@
       "text": "Some House of Delegates races let you choose up to three candidates. Check the limit for your district.",
       "applies_to": "section:state"
     }
+  ],
+  "dated": [
+    {
+      "path": "mail_ballot.mail_cutoff_advice",
+      "from": "2026-10-28",
+      "text": "A mailed ballot still counts if it's postmarked by November 3 and arrives by 10 AM on Friday, November 13. But SBE warns: 'Putting your ballot in a mailbox on election day does not mean it is postmarked that day.' SBE also issued a release in 2026 about a USPS postmarking policy change. The safest way now is a drop box, open until exactly 8 PM on November 3, or handing it in. If you mail it, ask a post office counter clerk for a free manual postmark when you hand it over."
+    }
   ]
 }

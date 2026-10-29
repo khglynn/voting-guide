@@ -53,7 +53,7 @@
     "return_options": [
       "any official ballot drop box anywhere in Oregon, by 8:00 PM Nov. 3 (even one in another county; it gets forwarded)",
       "any county elections office, by 8:00 PM Nov. 3 (Multnomah: 1040 SE Morrison St., Portland, or Voting Center Express, 600 NE 8th St., Gresham)",
-      "mail (USPS), no stamp needed. The state and Multnomah County say mail by Tuesday, October 27. After that, use a drop box, or ask a post office counter for a hand postmark."
+      "mail (USPS), no stamp needed. It counts if it's postmarked by November 3 and reaches the county by November 10, but mail is slow now: the state says use a drop box, or ask a post office counter for a hand postmark."
     ],
     "postage": "prepaid. The state pamphlet says: 'No postage needed. Use the return envelope provided with your ballot.'",
     "signature_witness_rules": "Sign the back of the return envelope. No witness, notary, or ID copy. Election workers compare your signature to the one in your voter registration record (often your DMV signature). The state pamphlet: 'You're the only person who can sign your ballot return envelope. Power of Attorney documents do not apply to voting.' If you can't sign your name, you may use a signature stamp or other indicator; contact the county first. The secrecy sleeve is optional.",
@@ -100,8 +100,8 @@
   },
   "gotchas": [
     {
-      "text": "Oregon counts mailed ballots postmarked by November 3, but only if they reach the county by November 10. The state says mail by Tuesday, October 27. After that, use a drop box (any official one in Oregon) or ask a post office counter for a hand postmark. Drop boxes close at 8:00 PM sharp on November 3.",
-      "short": "After Oct 27, skip the mail and use any official drop box."
+      "text": "Oregon counts mailed ballots postmarked by November 3, but only if they reach the county by November 10. Mail is slow, so the state now says to use a drop box (any official one in Oregon) or ask a post office counter for a hand postmark. Drop boxes close at 8:00 PM sharp on November 3.",
+      "short": "Skip the mail now: use any official drop box by 8 PM Nov 3."
     },
     {
       "text": "Sign the envelope, in your normal signature. A missing or mismatched signature is the top reason Oregon ballots don't count. Nobody can sign for you, not even with power of attorney. If the county flags your signature, you have until November 24 to fix it. Sign up for text or email ballot alerts (multnomah.ballottrax.net) so you hear about a problem right away.",
@@ -120,7 +120,7 @@
       "short": "Turn in a friend's ballot within 2 days, or by Election Day if sooner."
     },
     {
-      "text": "No ballot by October 22? Multnomah County says call 503-988-VOTE (8683). Order a replacement online or by phone, then pick it up in person at 1040 SE Morrison St. in Portland or the Gresham Voting Center Express, by 8 PM on Election Day. Mailed replacements end at 7 PM on Wednesday, October 28.",
+      "text": "Still no ballot? Multnomah County says call 503-988-VOTE (8683). Order a replacement online or by phone, then pick it up in person at 1040 SE Morrison St. in Portland or the Gresham Voting Center Express, by 8 PM on Election Day. Mailed replacements ended on Wednesday, October 28.",
       "short": "If your ballot hasn't come, call Multnomah County at 503-988-8683."
     }
   ],
@@ -526,5 +526,12 @@
         "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
       }
     ]
-  }
+  },
+  "dated": [
+    {
+      "path": "mail_ballot.mail_cutoff_advice",
+      "from": "2026-10-28",
+      "text": "Oregon counts a mailed ballot postmarked by November 3 only if it reaches the county by November 10, and a state test in October found USPS delivery as slow as 11 days. The Secretary of State's advice from October 27 on: 'use a drop box or go directly to a post office and ask for a manual postmark before you place it in a collection box.' Drop boxes close at 8:00 PM sharp on November 3. Sources: the 2026 State Voters' Pamphlet and https://oregoncapitalchronicle.com/2026/10/13/oregon-elections-chief-urges-early-voting-as-test-of-usps-service-shows-slow-mail-service/"
+    }
+  ]
 }

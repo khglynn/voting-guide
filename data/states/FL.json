@@ -666,5 +666,12 @@
       "text": "State constitutional amendments need at least 60 percent yes votes to pass. That rule does not apply to every local question.",
       "applies_to": "section:measures"
     }
+  ],
+  "dated": [
+    {
+      "path": "mail_ballot.mail_cutoff_advice",
+      "from": "2026-10-28",
+      "text": "It's too late to count on the mail. Postmarks don't count: the state's own page says the ballot 'must be received, regardless of postmark, by the Supervisor of Elections' office no later than 7:00 pm (local time) on Election Day.' Hand it to an intake station at an early voting site or the supervisor's office instead. Overseas voters are the only exception: a 10-day extension if postmarked by Election Day."
+    }
   ]
 }

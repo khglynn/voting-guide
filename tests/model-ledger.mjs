@@ -1334,8 +1334,18 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('My plan: once voting has closed, no save line', cheat.saveLine('2026-11-04') === null);
     open('CA', ['los-angeles-ca']);
     check('My plan: where phones are allowed, "Print it, copy it, or take a screenshot."', cheat.saveLine('2026-10-20') === 'Print it, copy it, or take a screenshot.');
+    // The state's text as it read on that day: its mail-by advice changes on Oct 28 (dated), so the ballot's howto is
+    // made for Oct 20 here, not for the day the tests run.
+    S.ballot.howto = plan.localHowto(S.ballot.stateHowto, S.ballot.places, null, '2026-10-20');
     const la = cheat.essentials('2026-10-20');
     check('My plan: a mail phase leads with the mail steps and drops the booth line', /^Mail your ballot by/.test(la[0]) && la.some((x) => /drop box/.test(x)) && !la.some((x) => /In the booth/.test(x)), la.join(' | '));
+    // From Oct 28 the mail-by advice says what's true now, by each state's own rule (stale-date check, Oct 29): a
+    // postmark state still counts a ballot postmarked by Nov 3; a receipt state's ballot must arrive by Election Day.
+    const adv = (x, d) => plan.localHowto(read(`state-${x}.json`).howto, [], null, d).mail_ballot.mail_cutoff_advice || '';
+    const pm = ['CA', 'DC', 'MD', 'NY', 'OR', 'WA'].filter((x) => !/postmark/i.test(adv(x, '2026-10-29')) || !/Nov(ember)? 3/.test(adv(x, '2026-10-29')) || /by (about )?(Tuesday, )?October 27/.test(adv(x, '2026-10-29')));
+    check('mail advice, Oct 29: postmark states say a ballot postmarked by Nov 3 still counts, and no "mail by Oct 27"', pm.length === 0, pm.join(' '));
+    check('mail advice, Oct 29: receipt states (Florida, Pennsylvania) say not to count on the mail', ['FL', 'PA'].every((x) => /too late to count on the mail/.test(adv(x, '2026-10-29'))));
+    check('mail advice, Oct 20: the suggested mail-by day still reads, so the plan says mail by Oct 27', plan.mailBy(plan.localHowto(read('state-CA.json').howto, [], null, '2026-10-20'))?.date === '2026-10-27');
     open('NY', ['nyc-manhattan-ny']);
     check('My plan: where phones are restricted, "Print it or copy it."', cheat.saveLine('2026-10-20') === 'Print it or copy it.');
     open('TX', ['austin-tx']);

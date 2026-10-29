@@ -623,5 +623,12 @@
       "text": "Props 40, 41 and 42 can conflict. If 41 or 42 gets more yes votes than 40, a court could block 40 even if it passes.",
       "applies_to": "item:ca-prop-42"
     }
+  ],
+  "dated": [
+    {
+      "path": "mail_ballot.mail_cutoff_advice",
+      "from": "2026-10-28",
+      "text": "A mailed ballot still counts if it's postmarked by November 3 and arrives by November 10. But the Secretary of State says to mail it at least a week ahead, so the safest way now is a drop box or any vote center, by 8:00 PM on November 3. If you do mail it, hand it to a clerk inside a post office and ask for a hand-stamped postmark: a ballot dropped in a blue box late on November 3 may not get postmarked that day, and then it wouldn't count."
+    }
   ]
 }

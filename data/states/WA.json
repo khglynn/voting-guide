@@ -103,7 +103,7 @@
   },
   "gotchas": [
     {
-      "text": "The postmark trap. If you mail your ballot, it must be postmarked by November 3, and USPS no longer reliably postmarks mail the day you send it. Late-postmark rejections jumped in 2025. The state and King County both say mail it more than a week early (by about October 27), or skip the mailbox and use any of King County's 100 official drop boxes any time before 8:00 PM on November 3. Drop boxes are free and don't depend on a postmark.",
+      "text": "The postmark trap. If you mail your ballot, it must be postmarked by November 3, and USPS no longer reliably postmarks mail the day you send it. Late-postmark rejections jumped in 2025. The state and King County both said to mail it more than a week early. Now, skip the mailbox and use any of King County's 100 official drop boxes any time before 8:00 PM on November 3. Drop boxes are free and don't depend on a postmark.",
       "short": "Use a drop box before 8 PM Nov 3; mailing it now is risky."
     },
     {
@@ -571,6 +571,13 @@
     {
       "text": "On IP26-645, yes repeals the 9.9 percent tax on income over $1 million and bans state and local income taxes. No keeps the tax law as passed.",
       "applies_to": "item:wa-initiative-645"
+    }
+  ],
+  "dated": [
+    {
+      "path": "mail_ballot.mail_cutoff_advice",
+      "from": "2026-10-28",
+      "text": "A mailed ballot still counts if it's postmarked by November 3, but putting it in a mailbox doesn't guarantee a same-day postmark. The safest way now is an official drop box by 8 PM on November 3. If you must mail it, ask the post office counter for a free manual postmark when you hand it over."
     }
   ]
 }

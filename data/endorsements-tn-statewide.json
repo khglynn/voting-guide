@@ -611,5 +611,65 @@
     "url": "https://nashvillebanner.com/2026-voters-guide/",
     "date": "2026-10-29",
     "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-local-429",
+    "target_id": "tn-governor",
+    "status": "endorsed",
+    "choice": "Jerri Green",
+    "why": "Its Aug 26 post says “The AFL-CIO has come out with their list of candidates that they (we) are endorsing for Tennessee elections” and lists “GOVERNOR: Jerri Green (D)”.",
+    "url": "https://www.ibew429.org/viewStory/?active=1&story=93&cat=1",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-local-429",
+    "target_id": "tn-us-senate",
+    "status": "endorsed",
+    "choice": "Marquita Bradshaw",
+    "why": "Its Aug 26 post says “The AFL-CIO has come out with their list of candidates that they (we) are endorsing for Tennessee elections” and lists “UNITED STATES SENATE: Marquita Bradshaw (D)”.",
+    "url": "https://www.ibew429.org/viewStory/?active=1&story=93&cat=1",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tirrc-votes",
+    "target_id": "tn-governor",
+    "status": "endorsed",
+    "choice": "Jerri Green",
+    "why": "“TIRRC Votes announces its endorsement of Jerri Green in the race for Tennessee Governor.”",
+    "url": "https://www.tirrcvotes.org/tn-governor-jerri-green",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tirrc-votes",
+    "target_id": "tn-us-senate",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 list of endorsed Tennessee candidates names two: Justin J. Pearson in the 9th Congressional District and Jerri Green for governor (checked Oct 29, 2026).",
+    "url": "https://www.tirrcvotes.org/2026-tn-state-endorsed-candidates",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "equity-alliance-fund",
+    "target_id": "tn-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 endorsements page names five candidates, none in this race (checked Oct 29, 2026).",
+    "url": "https://www.theequityalliancefund.org/endorsements",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "equity-alliance-fund",
+    "target_id": "tn-us-senate",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 endorsements page names five candidates, none in this race (checked Oct 29, 2026).",
+    "url": "https://www.theequityalliancefund.org/endorsements",
+    "date": "2026-10-29",
+    "confidence": "verified"
   }
 ]

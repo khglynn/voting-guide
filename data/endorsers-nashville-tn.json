@@ -14,5 +14,21 @@
     "endorses_candidates": false,
     "endorses_measures": false,
     "lean_basis_kind": "mission"
+  },
+  {
+    "id": "ibew-local-429",
+    "name": "IBEW Local 429 (Nashville electricians’ union)",
+    "short": "IBEW Local 429",
+    "type": "labor",
+    "lean": "lean_left",
+    "lean_basis": "Electricians’ union local that has served Nashville and Middle Tennessee for over 100 years. Its about page says “The IBEW represents workers’ rights in all areas of the electrical and telecommunications industry” (https://www.ibew429.org/aboutus/). No outside rating found; lean reflects its stated mission.",
+    "geography": [
+      "nashville-tn"
+    ],
+    "guide_url": "https://www.ibew429.org/viewStory/?active=1&story=93&cat=1",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   }
 ]

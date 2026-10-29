@@ -478,5 +478,85 @@
     "url": "https://tennesseelookout.com/voter-guides/2026-midterm-general-election/",
     "date": "2026-10-29",
     "confidence": "verified"
+  },
+  {
+    "endorser_id": "tirrc-votes",
+    "target_id": "tn-us-house-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 list of endorsed Tennessee candidates names two: Justin J. Pearson in the 9th Congressional District and Jerri Green for governor (checked Oct 29, 2026).",
+    "url": "https://www.tirrcvotes.org/2026-tn-state-endorsed-candidates",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tirrc-votes",
+    "target_id": "tn-us-house-9",
+    "status": "endorsed",
+    "choice": "Justin J. Pearson",
+    "why": "Its page “Vote for Our 2026 Tennessee State Endorsed Candidates!” lists “TN-09: Justin J. Pearson”.",
+    "url": "https://www.tirrcvotes.org/2026-tn-state-endorsed-candidates",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tirrc-votes",
+    "target_id": "tn-hd-64",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 list of endorsed Tennessee candidates names two: Justin J. Pearson in the 9th Congressional District and Jerri Green for governor (checked Oct 29, 2026).",
+    "url": "https://www.tirrcvotes.org/2026-tn-state-endorsed-candidates",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tirrc-votes",
+    "target_id": "tn-hd-71",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 list of endorsed Tennessee candidates names two: Justin J. Pearson in the 9th Congressional District and Jerri Green for governor (checked Oct 29, 2026).",
+    "url": "https://www.tirrcvotes.org/2026-tn-state-endorsed-candidates",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "equity-alliance-fund",
+    "target_id": "tn-us-house-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 endorsements page names five candidates, none in this race (checked Oct 29, 2026).",
+    "url": "https://www.theequityalliancefund.org/endorsements",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "equity-alliance-fund",
+    "target_id": "tn-us-house-9",
+    "status": "endorsed",
+    "choice": "Justin J. Pearson",
+    "why": "Its endorsements page says “This year, we are proud to announce our 2026 Tennessee candidate endorsements” and lists Justin J. Pearson, “Candidate for U.S. Congress, Tennessee District 9”.",
+    "url": "https://www.theequityalliancefund.org/endorsements",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "equity-alliance-fund",
+    "target_id": "tn-hd-64",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 endorsements page names five candidates, none in this race (checked Oct 29, 2026).",
+    "url": "https://www.theequityalliancefund.org/endorsements",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "equity-alliance-fund",
+    "target_id": "tn-hd-71",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 endorsements page names five candidates, none in this race (checked Oct 29, 2026).",
+    "url": "https://www.theequityalliancefund.org/endorsements",
+    "date": "2026-10-29",
+    "confidence": "verified"
   }
 ]

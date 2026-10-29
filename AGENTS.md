@@ -14,7 +14,7 @@ npm run build                      # data bundles + typecheck + production build
 npx vite preview --port 4173       # then, against it:
 npm run test:model                 # contracts, no browser: save links, districts, lenses, verdicts, fills (~1s)
 npm run test:e2e                   # scripted taps at 380px (~2 min)
-npm run sweep                      # every ballot the guide can show (71) checked against the data; MODE=full for every district variant
+npm run sweep                      # every ballot the guide can show (73) checked against the data; MODE=full for every district variant
 node tests/perf.mjs                # biggest ballots at 4x CPU throttle: taps must paint under 250ms
 npm run shots                      # review screenshots of the test ballots into .tmp/shots/ledger/
 node tests/pages.mjs               # the pages for search engines, no browser (after npm run build, dist/ too)

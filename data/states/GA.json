@@ -601,5 +601,22 @@
       "text": "If no candidate gets more than half the votes, the top two go to a Dec. 1 runoff.",
       "applies_to": "ballot"
     }
+  ],
+  "dated": [
+    {
+      "path": "mail_ballot.mail_cutoff_advice",
+      "from": "2026-10-31",
+      "text": "Election officials and USPS say to mail at least 7 days before Election Day. Don't mail it now. The drop boxes at early voting sites closed with early voting on Friday, October 30, so hand it to your county elections office by 7 PM on Tuesday, November 3 (call for hours: Fulton 404-612-7020, DeKalb 404-298-4020). If you decide to vote in person instead, bring the mail ballot with you so the poll manager can cancel it. If you never received it, you can still vote in person: georgia.gov says you'll 'sign a document attesting that you are only voting once.' Once you've returned your absentee ballot, you've voted and can't vote in person."
+    },
+    {
+      "path": "gotchas.4.text",
+      "from": "2026-11-03",
+      "text": "Georgia makes you win a majority. If no candidate gets more than 50 percent, the top two meet in a runoff on Tuesday, December 1, 2026 (four weeks later). This year that is unlikely in the statewide races: the Libertarian Party failed to collect the roughly 70,000 signatures it needed, so every statewide race is a straight two-candidate contest (write-ins exist for Senate and governor but rarely move the number). If a runoff does happen anywhere, the early voting window is tiny: counties must offer it no later than Monday, November 23 through Wednesday, November 25 (georgia.gov: 'abbreviated due to the Thanksgiving holiday'), and some start sooner; Fulton lists Saturday, November 21 through Wednesday, November 25. Registration for a runoff closed November 2 for federal races (U.S. Senate, U.S. House); state and local runoffs kept the October 5 deadline. If you vote by mail, you would need to apply again, by Friday, November 20 (Fulton and Gordon County calendars), unless you are 65+, disabled, or military/overseas."
+    },
+    {
+      "path": "registration.still_possible_now",
+      "from": "2026-11-03",
+      "text": "Not for November 3. The deadline was Monday, October 5, 2026. If you think you registered, confirm it now at mvp.sos.ga.gov; if your record is wrong or missing, call your county elections office before you go vote. One exception worth knowing: if a federal race (U.S. Senate or U.S. House) goes to a December 1 runoff, registration for that runoff closed Monday, November 2 (Fulton County listed 'Voter Registration Deadline (Federal races): Monday, November 2'). For a runoff in a state or local race, the October 5 deadline still applies. If you moved within the same county after October 5, you can still vote (go to your old precinct, or update your address at the registrar's office and vote in the new one). If you moved to a different Georgia county within 30 days of the election (on or after October 4), vote in your old county. If you moved counties before that and didn't re-register there by October 5, call your county registrar; you may not be eligible this time (O.C.G.A. 21-2-218)."
+    }
   ]
 }

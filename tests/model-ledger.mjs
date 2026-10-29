@@ -1346,6 +1346,20 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('mail advice, Oct 29: postmark states say a ballot postmarked by Nov 3 still counts, and no "mail by Oct 27"', pm.length === 0, pm.join(' '));
     check('mail advice, Oct 29: receipt states (Florida, Pennsylvania) say not to count on the mail', ['FL', 'PA'].every((x) => /too late to count on the mail/.test(adv(x, '2026-10-29'))));
     check('mail advice, Oct 20: the suggested mail-by day still reads, so the plan says mail by Oct 27', plan.mailBy(plan.localHowto(read('state-CA.json').howto, [], null, '2026-10-20'))?.date === '2026-10-27');
+    // Lines that go stale before Nov 3 flip on their own (dated, Oct 29): each says what's true from the day after.
+    const hw = (x, d) => plan.localHowto(read(`state-${x}.json`).howto, [], null, d);
+    const sit = (h, id) => h.situations.find((x) => x.id === id);
+    const flips = [
+      ['AL Oct 30', /only for emergencies/.test(hw('AL', '2026-10-30').gotcha_shorts[1]) && /regular applications have closed/.test(hw('AL', '2026-10-30').gotchas[1])],
+      ['AL Nov 3', /applications have closed/.test(hw('AL', '2026-11-03').gotchas[1]) && !/until 5 PM Monday/.test(hw('AL', '2026-11-03').gotchas[1])],
+      ['IL Oct 30', /closed Thursday, October 29/.test(sit(hw('IL', '2026-10-30'), 'away_on_election_day').answer) && !/apply by Oct/.test(hw('IL', '2026-10-30').model_plain)],
+      ['MD Oct 31', /closed October 30/.test(sit(hw('MD', '2026-10-31'), 'away_on_election_day').steps[0])],
+      ['NY Nov 3', /hand in a mail ballot/.test(sit(hw('NY', '2026-11-03'), 'away_on_election_day').short)],
+      ['TX Oct 31', /ended Oct 30/.test(sit(hw('TX', '2026-10-31'), 'moved_in_state').short)],
+      ['GA Oct 31', /closed with early voting/.test(hw('GA', '2026-10-31').mail_ballot.mail_cutoff_advice)],
+      ['Oct 29 unchanged', /apply by Oct\. 29/.test(hw('IL', '2026-10-29').model_plain) && /through Oct 29/.test(hw('AL', '2026-10-29').gotcha_shorts[1])],
+    ].filter(([, ok]) => !ok).map(([n]) => n);
+    check('stale lines: each flips to what is true the day after its deadline, and not before', flips.length === 0, flips.join(', '));
     open('NY', ['nyc-manhattan-ny']);
     check('My plan: where phones are restricted, "Print it or copy it."', cheat.saveLine('2026-10-20') === 'Print it or copy it.');
     open('TX', ['austin-tx']);

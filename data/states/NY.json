@@ -567,6 +567,31 @@
       "path": "mail_ballot.mail_cutoff_advice",
       "from": "2026-11-02",
       "text": "Postmarks count, but USPS warns that a ballot dropped after the last pickup on Election Day 'will not be postmarked until the following business day,' which would miss the deadline. The safest way is to hand your ballot in: at your county board, or any poll site in your county on Nov 3 by 9 PM."
+    },
+    {
+      "path": "situations.away_on_election_day.answer",
+      "from": "2026-11-02",
+      "text": "Early voting ended Sunday, November 1. Online mail-ballot requests closed October 24, but you can apply in person at your county board through today, November 2, and vote it right there."
+    },
+    {
+      "path": "situations.away_on_election_day.short",
+      "from": "2026-11-02",
+      "text": "Early voting is over; apply for a mail ballot at your county board today, Nov 2, and vote it there."
+    },
+    {
+      "path": "situations.away_on_election_day.steps.2",
+      "from": "2026-11-02",
+      "text": "Already have a mail ballot? Don't count on the mail now: hand it in at any poll site in your county on November 3 until 9 PM, or at your county board."
+    },
+    {
+      "path": "situations.away_on_election_day.answer",
+      "from": "2026-11-03",
+      "text": "Early voting ended Sunday, November 1, and the last day to apply for a mail ballot in person was November 2. If you already have a mail ballot, hand it in at any poll site in your county by 9 PM today, or at your county board."
+    },
+    {
+      "path": "situations.away_on_election_day.short",
+      "from": "2026-11-03",
+      "text": "Early voting is over; hand in a mail ballot you have at any poll site by 9 PM."
     }
   ]
 }

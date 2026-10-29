@@ -582,5 +582,37 @@
       "text": "In a yes-or-no retention vote, a judge needs at least 60 percent yes to stay. Only votes on that judge’s question count.",
       "applies_to": "section:judicial"
     }
+  ],
+  "dated": [
+    {
+      "path": "model_plain",
+      "from": "2026-10-30",
+      "text": "You can vote three ways: early in person (through Monday, Nov. 2; any Chicago voter can use any Chicago site), by mail (anyone can ask, no excuse needed; online and mailed applications closed Oct. 29, but you can still apply in person at your election office through Nov. 2), or at the polls on Tuesday, November 3. City of Chicago voters deal with the Chicago Board of Elections; suburban Cook County voters deal with the Cook County Clerk."
+    },
+    {
+      "path": "situations.away_on_election_day.answer",
+      "from": "2026-10-30",
+      "text": "Vote early: Chicago's sites are open through Monday, November 2, and any Chicago voter can use any site. Online and mailed applications for a mail ballot closed Thursday, October 29, but you can still apply in person at your election office through November 2."
+    },
+    {
+      "path": "situations.away_on_election_day.short",
+      "from": "2026-10-30",
+      "text": "Vote early through Nov 2, or apply for a mail ballot in person at your election office by Nov 2."
+    },
+    {
+      "path": "situations.college_student.answer",
+      "from": "2026-10-30",
+      "text": "You can vote from your home address, or register at your school address if you've lived there 30 days. Online and mailed applications for a mail ballot closed Thursday, October 29 (you can still apply in person at your home election office through November 2). Or register in person at school with two IDs and vote the same day."
+    },
+    {
+      "path": "situations.college_student.short",
+      "from": "2026-10-30",
+      "text": "Register and vote at school with two IDs, or apply in person for a home mail ballot by Nov 2."
+    },
+    {
+      "path": "situations.college_student.steps.0",
+      "from": "2026-10-31",
+      "text": "Chicago's campus early voting sites closed Oct 30. Same-day registration is open at every Chicago early voting site through Nov 2, and at 51 vote centers on Election Day."
+    }
   ]
 }

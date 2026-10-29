@@ -123,6 +123,37 @@
     "lean_basis_kind": "mission"
   },
   {
+    "id": "tirrc-votes",
+    "name": "TIRRC Votes",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Immigrant-led political group based in Nashville whose mission page calls it “the leading organization in Tennessee capable of building a new electorate and mobilizing the state’s progressive base voters” (https://www.tirrcvotes.org/mission). No outside rating found; lean reflects its stated mission.",
+    "geography": [
+      "TN"
+    ],
+    "guide_url": "https://www.tirrcvotes.org/2026-tn-state-endorsed-candidates",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
+  },
+  {
+    "id": "equity-alliance-fund",
+    "name": "The Equity Alliance Fund",
+    "short": "Equity Alliance Fund",
+    "type": "advocacy",
+    "lean": null,
+    "lean_basis": "Not rated. The Nashville-based Equity Alliance’s 501(c)(4) arm, which says it “encourages Black voters to support policies and candidates who will invest in overlooked and underserved communities of color.” No outside rating was found, and this mission does not place it on the political scale. Source: https://www.theequityalliancefund.org/endorsements.",
+    "geography": [
+      "TN"
+    ],
+    "guide_url": "https://www.theequityalliancefund.org/endorsements",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
+  },
+  {
     "id": "everytown-action-fund-tn",
     "name": "Everytown for Gun Safety Action Fund",
     "type": "advocacy",

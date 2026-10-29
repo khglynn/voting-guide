@@ -45,6 +45,10 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('may apply: ACC\'s Pflugerville measure (area not already in ACC) may apply', pf.mayApply.has('tx-acc-prop-a-pflugerville'));
     const lk = open('CO', ['lakewood-co']);
     check('may apply: Jeffco schools cover Lakewood', lk.items.filter((x) => x.kind === 'measure' && /Jeffco/.test(x.jurisdiction)).every((x) => !lk.mayApply.has(x.id)));
+    // Codex, Oct 29: the City's county is "St. Louis City", so a scope that says only "City of St. Louis" left
+    // MO-1 and the three Eastern District judges as maybes. Only Senate District 4 splits the City.
+    const stl = open('MO', ['st-louis-city-mo']);
+    check('may apply: on a City of St. Louis ballot only Senate District 4 may apply', [...stl.mayApply].join() === 'mo-sd-4', [...stl.mayApply].join(', '));
   }
 
   /* ---------- one source, one endorsement state per row (Orlando and LA walks, Oct 20) ----------

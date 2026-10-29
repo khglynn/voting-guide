@@ -536,5 +536,12 @@
       "text": "Two at-large council members win, but your ballot counts for one candidate at a time. Rank candidates rather than choosing two equal first choices.",
       "applies_to": "item:dc-council-at-large"
     }
+  ],
+  "dated": [
+    {
+      "path": "mail_ballot.mail_cutoff_advice",
+      "from": "2026-10-28",
+      "text": "Your ballot counts in DC if it's postmarked by November 3 and reaches DCBOE by Friday, November 13. But a missing or late postmark is a real risk. DCBOE had to clarify USPS postmark rules during the June primary. The safest way is one of the 55 drop boxes, open around the clock until 8:00 PM on November 3. If you mail it, ask a post office counter clerk for a free manual postmark when you hand it over."
+    }
   ]
 }

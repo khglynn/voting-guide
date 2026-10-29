@@ -522,5 +522,52 @@
       "text": "Judges have party labels. A straight-party mark covers partisan races; ballot measures still need separate votes.",
       "applies_to": "ballot"
     }
+  ],
+  "dated": [
+    {
+      "path": "gotchas.1.short",
+      "from": "2026-10-30",
+      "text": "No early voting; absentee applications are open only for emergencies now."
+    },
+    {
+      "path": "gotchas.1.text",
+      "from": "2026-10-30",
+      "text": "There is no early voting. If you can't vote on November 3, absentee voting with an excuse was the only other way. Regular applications closed October 27 by mail and October 29 in person. Only emergency applications are open now. For most emergencies, the deadline is 5 PM Monday, November 2. For your own medical emergency, with a doctor's certification, the ballot is due by noon on November 3. Mobile County: Absentee Election Manager, 151 Government St, 251-574-6400."
+    },
+    {
+      "path": "situations.away_on_election_day.answer",
+      "from": "2026-10-30",
+      "text": "Alabama has no early voting. Being away from your county is a valid absentee excuse, but regular applications closed October 27 by mail and October 29 in person. Applications are open now only for certain emergencies, until 5 PM Monday, November 2. A medical emergency with a doctor's certification has until noon on November 3."
+    },
+    {
+      "path": "situations.away_on_election_day.short",
+      "from": "2026-10-30",
+      "text": "Absentee applications are open only for certain emergencies now, until 5 PM Monday, Nov 2."
+    },
+    {
+      "path": "gotchas.1.text",
+      "from": "2026-11-03",
+      "text": "There is no early voting, and absentee applications have closed. The one exception is your own medical emergency. With a doctor's certification, the ballot is due by noon today, November 3. Mobile County: Absentee Election Manager, 151 Government St, 251-574-6400."
+    },
+    {
+      "path": "gotchas.2.text",
+      "from": "2026-11-03",
+      "text": "An absentee ballot has two requirements: send a copy of your photo ID with the application, and have a notary or two adult witnesses sign the ballot envelope. Remote notarization is not allowed. There is no way to fix errors. A mailed ballot counts only if it reaches your county's absentee office by noon today, Election Day. Postmarks don't count. Hand delivery ended at 5 PM Monday, November 2. There are no drop boxes, and nobody can drop it off for you."
+    },
+    {
+      "path": "situations.away_on_election_day.answer",
+      "from": "2026-11-03",
+      "text": "Alabama has no early voting, and absentee applications have closed. The one exception is your own medical emergency. With a doctor's certification, the ballot is due by noon today, November 3."
+    },
+    {
+      "path": "situations.away_on_election_day.short",
+      "from": "2026-11-03",
+      "text": "Absentee applications have closed, except for your own medical emergency (ballot due by noon today)."
+    },
+    {
+      "path": "situations.away_on_election_day.steps.2",
+      "from": "2026-11-03",
+      "text": "Mailed ballots must arrive by noon today, November 3. Hand delivery ended at 5 PM on Monday, November 2."
+    }
   ]
 }

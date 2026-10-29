@@ -272,7 +272,38 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('may apply: BOE District 3 is still not every Californian\'s race', !la.byId.get('ca-boe-3').every);
     const ca = open('CA', []);
     check('may apply: a statewide-only California ballot still asks which BOE district', ca.groups.some((g) => g.members.includes('ca-boe-3') && g.members.length === 4));
-    check('may apply: other places\' BOE races are unchanged', ['fullerton-ca', 'san-diego-ca'].every((p) => open('CA', [p]).mayApply.has('ca-boe-4')) && !open('CA', ['fullerton-ca']).items.some((x) => x.id === 'ca-boe-3'));
+    check('may apply: Fullerton never gets LA\'s BOE race', !open('CA', ['fullerton-ca']).items.some((x) => x.id === 'ca-boe-3'));
+  }
+
+  /* ---------- a scope that says the whole place is in (audit, Oct 29) ---------- */
+  // BOE District 4 read "Maybe on your ballot" on every Orange County and San Diego ballot: its scope
+  // named "District 4", which reads as part of a place. A scope that says all of the place, or all of
+  // every county it's in, is in the race's area wins over that; "almost all of", "all of X west of"
+  // and a county list with "part of" in it don't.
+  {
+    const sure = [['CA', 'dana-point-ca', 'ca-boe-4'], ['CA', 'fullerton-ca', 'ca-boe-4'], ['CA', 'san-diego-ca', 'ca-boe-4'], ['CA', 'san-francisco-ca', 'ca-boe-2'],
+      ['CA', 'fullerton-ca', 'oc-supervisor-4'], ['CO', 'lakewood-co', 'co-us-house-7'], ['CO', 'lakewood-co', 'co-sboe-7'], ['CO', 'englewood-co', 'co-hd-3'],
+      ['NY', 'callicoon-ny', 'ny-us-house-19'], ['NY', 'callicoon-ny', 'ny-sd-51'], ['NY', 'nyc-staten-island-ny', 'ny-us-house-11'], ['TX', 'san-marcos-tx', 'tx-senate-21']];
+    const off = sure.filter(([s, p, id]) => { const b = open(s, [p]); return !b.items.some((x) => x.id === id) || b.mayApply.has(id) || b.groupOf[id]; });
+    check('may apply: a race whose scope says all of the place (or all of its county) is a sure thing there', off.length === 0, off.map((x) => x.join(' ')).join(', '));
+    const maybe = [['CO', 'aurora-co', 'co-us-house-6'], ['CO', 'englewood-co', 'co-us-house-6'], ['TX', 'austin-tx', 'tx-senate-21'], ['GA', 'atlanta-ga', 'fulton-commission-4-special'], ['NY', 'callicoon-ny', 'ny-ad-100'], ['FL', 'tallahassee-fl', 'fl-tallahassee-mayor']];
+    const on = maybe.filter(([s, p, id]) => !open(s, [p]).mayApply.has(id));
+    check('may apply: a scope that names part of the place, or another place\'s "all of", stays a maybe', on.length === 0, on.map((x) => x.join(' ')).join(', '));
+    const dp = open('CA', ['dana-point-ca']);
+    check('may apply: BOE District 4 is on a Dana Point ballot and never every Californian\'s race', dp.items.some((x) => x.id === 'ca-boe-4') && !dp.byId.get('ca-boe-4').every && !open('CA', ['los-angeles-ca']).items.some((x) => x.id === 'ca-boe-4'));
+    // The rule itself, on scopes no place has yet (a made-up race on Lakewood's ballot).
+    const lk = read('place-lakewood-co.json');
+    const sb = read('state-CO.json');
+    const fake = (scope) => {
+      const c = { ...lk.items.find((x) => x.id === 'co-us-house-7'), id: 'zz-test', office: 'Zz Test Office', scope_plain: scope };
+      const b = bl.buildBallot(sb, [{ ...lk, items: [...lk.items, c], order: [...lk.order, 'zz-test'] }]);
+      return !b.mayApply.has('zz-test');
+    };
+    const cases = [['Voters in District 9, which includes all of Lakewood.', true], ['Almost all of Lakewood votes in District 9.', false], ['All of Lakewood west of Wadsworth.', false],
+      ['All of Lakewood\'s south side, in District 9.', false], ['All of Jefferson and Adams counties vote in District 9.', true], ['All of Adams and part of Jefferson counties, District 9.', false],
+      ['Voters in District 9: all of Golden and Arvada.', false], ['Not all of Lakewood is in District 9.', false]];
+    const wrong = cases.filter(([s, want]) => fake(s) !== want);
+    check('may apply: the whole-place rule reads "all of" and nothing looser', wrong.length === 0, wrong.map((x) => x[0]).join(' | '));
   }
 
   /* ---------- the seat rule ---------- */
@@ -1619,10 +1650,15 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     // DC: the "upper" layer is the ward, which the place already settles.
     const dc = open('DC', ['dc-ward-1']);
     check('address: DC sets nothing from its ward layer', address.setFromAddress(dc, S.b, { cd: null, upper: 1, lower: null }).length === 0);
-    // Lakewood: three races by congressional district may apply; District 7 puts them on the ballot.
+    // Englewood: two races by congressional district may apply; District 6 puts them on the ballot. (Lakewood's
+    // three District 7 races were this check until Oct 29: their scopes say all of Lakewood is in District 7,
+    // so they are sure things there and no address moves them.)
+    const ew = open('CO', ['englewood-co']);
+    const eset = address.setFromAddress(ew, S.b, { cd: 6, upper: 26, lower: 3 });
+    check('address: Englewood names each office District 6 set', eset.filter((x) => /District 6$/.test(x)).length === 2 && ['co-us-house-6', 'co-cu-regent-6'].every((id) => S.b.mine.includes(id) && !bl.isMaybe(id)), eset.join(' | '));
     const lk = open('CO', ['lakewood-co']);
-    const lset = address.setFromAddress(lk, S.b, { cd: 7, upper: 22, lower: 24 });
-    check('address: Lakewood names each office District 7 set', lset.filter((x) => /District 7$/.test(x)).length === 3 && ['co-us-house-7', 'co-sboe-7', 'co-cu-regent-7'].every((id) => S.b.mine.includes(id) && !bl.isMaybe(id)), lset.join(' | '));
+    const lset = address.setFromAddress(lk, S.b, { cd: 8, upper: 22, lower: 24 });
+    check('address: Lakewood\'s District 7 races stay on for any address, since all of Lakewood is District 7', ['co-us-house-7', 'co-sboe-7', 'co-cu-regent-7'].every((id) => lk.items.some((x) => x.id === id) && !S.b.notMine.includes(id) && !bl.isMaybe(id)), lset.join(' | '));
 
     // The other ways the research writes Census districts (Oct 20): each is read, so an address settles
     // the House and legislature in Atlanta, Seattle, Chicago, Portland and New York too. Washington's

@@ -117,6 +117,26 @@ check('page titles and descriptions: no em dashes, no all caps', !bad.copy.lengt
   check('Austin: lastmod is the newest date its own facts carry, never after today', p.lastmod === (lastmod > TODAY ? TODAY : lastmod), `${p.lastmod} vs ${lastmod}`);
   check('a date in the data past today never becomes a lastmod in the future', site.allPages(data, A, '2026-10-01').every((x) => x.lastmod <= '2026-10-01'));
 }
+/* ---------- why a race is only on some ballots (audit, Oct 29) ---------- */
+// A city's own race the whole city votes in reads "Only inside city limits", never "Only in parts of Columbia";
+// a race for part of the place keeps "Only in parts of"; a race the scope puts on all of the place has no label.
+{
+  const rowOf = (path, place, item) => {
+    const p = pages.find((x) => x.path === path);
+    const b = bl.buildBallot(data.states[data.places[place].state], [data.places[place]]);
+    const t = labels.rowTitle(b.byId.get(item)).title;
+    const i = p ? p.html.indexOf(`<b>${t}</b>`) : -1;
+    return i < 0 ? '' : p.html.slice(i, p.html.indexOf('</li>', i));
+  };
+  const at = [['/columbia-tn', 'columbia-tn', 'columbia-tn-mayor'], ['/columbia-tn', 'columbia-tn', 'columbia-tn-vice-mayor'], ['/mount-pleasant-tn', 'mount-pleasant-tn', 'mount-pleasant-tn-commission'], ['/tallahassee-fl', 'tallahassee-fl', 'fl-tallahassee-mayor']]
+    .map(([path, place, item]) => [path, item, rowOf(path, place, item)]);
+  const wrongAt = at.filter(([, , r]) => !/Only inside city limits/.test(r) || /Only in parts of/.test(r));
+  check('pages: a city\'s own at-large race says "Only inside city limits", not "Only in parts of"', wrongAt.length === 0, wrongAt.map(([p, i, r]) => `${p} ${i}: ${r.slice(0, 120) || '(no row)'}`).join(' | '));
+  const part = rowOf('/nashville-tn', 'nashville-tn', 'belle-meade-city-commission');
+  check('pages: a small city\'s race inside a bigger place keeps "Only in parts of"', /Only in parts of Nashville/.test(part), part.slice(0, 160));
+  const boe = rowOf('/dana-point-ca', 'dana-point-ca', 'ca-boe-4');
+  check('pages: BOE District 4 on the Dana Point page has no "Only in parts of" (all of Orange County is in it)', !!boe && !/pg-may/.test(boe), boe.slice(0, 160));
+}
 /* ---------- dates say what the data says, qualifications included (Codex, Oct 28) ---------- */
 {
   const norm = (x) => unesc(String(x || '')).replace(/\s+/g, ' ').trim();

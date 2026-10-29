@@ -5,6 +5,9 @@
   "counties": [
     "Queens"
   ],
+  "county_fips": [
+    "36081"
+  ],
   "county_election_office": {
     "name": "NYC Board of Elections, Queens borough office: 118-35 Queens Boulevard, 11th Floor, Forest Hills, NY 11375",
     "url": "https://vote.nyc/page/contact-us",
@@ -204,6 +207,10 @@
     {
       "name": "NYC Board of Elections: elections and early voting hours",
       "url": "https://www.vote.nyc/elections"
+    },
+    {
+      "name": "U.S. Census Bureau: county codes (Queens County is 36081)",
+      "url": "https://www.census.gov/library/reference/code-lists/ansi.html"
     }
   ]
 }

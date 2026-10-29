@@ -142,19 +142,30 @@ function whereHTML(): string {
   const err = S.zipErr ? `<p class="zip-err" role="alert" id="zip-err">${esc(S.zipErr)}</p>` : '';
   let after = '';
   if (b) {
-    // "Austin, Texas · 78704", or "Missouri, statewide races only · 63110". After the place question,
+    // "Austin, Texas · 78704", or "Missouri, statewide races only · 65806". After the place question,
     // Change asks it again. Under it, a statewide ballot's or a thin place's coverage card (views/coverage.ts),
     // where coverage belongs: with where you vote (Kevin, Oct 25).
     const zip = S.b.zip ? ` · ${esc(S.b.zip)}` : '';
     const where = b.places.length ? placeLine(b) : `${b.stateName}, statewide races only`;
-    after = `<p class="door-place" role="status"><span><b>${esc(where)}</b>${zip}</span>${S.picked ? '<button class="linkbtn" data-act="rechoose" data-fk="rechoose">Change</button>' : ''}</p>${covCardHTML('door')}`;
+    after = `<p class="door-place" role="status"><span><b>${esc(where)}</b>${zip}</span>${S.picked ? '<button class="linkbtn" data-act="rechoose" data-fk="rechoose">Change</button>' : ''}</p>${S.ui.addrMoved ? `<p class="addr-moved">${esc(S.ui.addrMoved)}</p>` : ''}${covCardHTML('door')}`;
   } else if (S.zipChoice && idx) {
+    // A ZIP that also reaches a town the guide doesn't cover (zip_outside: 63120 is the City of St. Louis and
+    // Pine Lawn) offers that town too, with the state's races, and "I'm not sure" starts there as well: every
+    // place's races together could put another county's on the ballot as if they were yours (Oct 29).
+    const zc = S.zipChoice;
+    const outside = [...new Set(zc.placeIds.map((id) => (idx.places[id].zip_outside || {})[zc.zip]).filter((x): x is string => !!x))];
+    const st = idx.places[zc.placeIds[0]].state;
+    const stName = idx.states[st]?.name || st;
+    const unsure = outside.length
+      ? `<button class="opt opt-unsure" data-act="choose-outside" data-fk="cp-unsure"><b>I’m not sure</b><small>Start with ${esc(stName)}’s statewide races</small></button>`
+      : `<button class="opt opt-unsure" data-act="choose-place" data-ids="${esc(zc.placeIds.join('+'))}" data-fk="cp-unsure"><b>I’m not sure</b><small>Show everything that might be on my ballot</small></button>`;
     after = `<div class="choose" role="group" aria-labelledby="which-h">
-      ${(() => { const dc = S.zipChoice.placeIds.every((id) => idx.places[id].state === 'DC'); const n = S.zipChoice.placeIds.length;
-        return dc ? `<h2 id="which-h">${esc(S.zipChoice.zip)} covers ${n} wards. Pick yours.</h2><p class="small">It’s on your voter registration card.</p>`
-          : `<h2 id="which-h">${esc(S.zipChoice.zip)} covers more than one city. Pick yours.</h2><p class="small">It’s on your voter registration or your ballot envelope.</p>`; })()}
-      <div class="opts">${S.zipChoice.placeIds.map((id) => { const p = idx.places[id]; return `<button class="opt" data-act="choose-place" data-ids="${esc(id)}" data-fk="cp-${esc(id)}"><b>${esc(p.label)}</b><small>${esc(p.counties.join(', '))}</small></button>`; }).join('')}
-        <button class="opt opt-unsure" data-act="choose-place" data-ids="${esc(S.zipChoice.placeIds.join('+'))}" data-fk="cp-unsure"><b>I’m not sure</b><small>Show everything that might be on my ballot</small></button></div>
+      ${(() => { const dc = zc.placeIds.every((id) => idx.places[id].state === 'DC'); const n = zc.placeIds.length;
+        return dc ? `<h2 id="which-h">${esc(zc.zip)} covers ${n} wards. Pick yours.</h2><p class="small">It’s on your voter registration card.</p>`
+          : `<h2 id="which-h">${esc(zc.zip)} covers more than one city. Pick yours.</h2><p class="small">It’s on your voter registration or your ballot envelope.</p>`; })()}
+      <div class="opts">${zc.placeIds.map((id) => { const p = idx.places[id]; return `<button class="opt" data-act="choose-place" data-ids="${esc(id)}" data-fk="cp-${esc(id)}"><b>${esc(p.label)}</b><small>${esc(p.counties.join(', '))}</small></button>`; }).join('')}
+        ${outside.map((o, i) => `<button class="opt" data-act="choose-outside" data-away="1" data-fk="cp-outside${i ? `-${i}` : ''}"><b>${esc(o)}</b><small>${esc(stName)}’s statewide races only, for now</small></button>`).join('')}
+        ${unsure}</div>
       ${S.ui.addrOpen ? addrHTML(true) : '<p class="addr-cta"><button class="linkbtn" data-act="addr-open" data-fk="addr-open">Use my address instead</button></p>'}</div>`;
   } else if (S.coverage && S.coverage.kind === 'not_covered') {
     const name = S.coverage.state ? (S.coverage.state in (idx?.states || {}) ? idx!.states[S.coverage.state].name : stateName(S.coverage.state)) : null;

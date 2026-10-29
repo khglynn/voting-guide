@@ -51,6 +51,10 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('may apply: ACC\'s Pflugerville measure (area not already in ACC) may apply', pf.mayApply.has('tx-acc-prop-a-pflugerville'));
     const lk = open('CO', ['lakewood-co']);
     check('may apply: Jeffco schools cover Lakewood', lk.items.filter((x) => x.kind === 'measure' && /Jeffco/.test(x.jurisdiction)).every((x) => !lk.mayApply.has(x.id)));
+    // Codex, Oct 29: the City's county is "St. Louis City", so a scope that says only "City of St. Louis" left
+    // MO-1 and the three Eastern District judges as maybes. Only Senate District 4 splits the City.
+    const stl = open('MO', ['st-louis-city-mo']);
+    check('may apply: on a City of St. Louis ballot only Senate District 4 may apply', [...stl.mayApply].join() === 'mo-sd-4', [...stl.mayApply].join(', '));
   }
 
   /* ---------- one source, one endorsement state per row (Orlando and LA walks, Oct 20) ----------
@@ -912,6 +916,67 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const dc = Object.keys(INDEX.places).filter((id) => id.startsWith('dc-ward-'));
     check('address: DC still picks a ward from the upper layer', geo.placeFromGeo(INDEX.places, dc, r('DC', null, 2)) === 'dc-ward-2');
     check('address: a Maryland "Ward 2" never picks DC Ward 2', geo.placeFromGeo(INDEX.places, dc, r('MD', null, 2)) === null);
+  }
+
+  /* ---------- the City of St. Louis and St. Louis County (review of #46, Oct 29) ----------
+     The Census names both "St. Louis"; only the county code tells them apart (29510 the City, 29189 the
+     County). 63120 is the City's and Pine Lawn's (County), and eight more ZIPs are mostly County with a few
+     City blocks. No County address may open the City's ballot, whatever its ZIP. Made-up addresses only. */
+  {
+    const CITY = 'st-louis-city-mo';
+    const r = (place, countyId, zip) => ({ matched: '', state: 'MO', county: 'St. Louis', countyId, countyName: countyId === '29510' ? 'the City of St. Louis' : countyId ? 'St. Louis County' : null, place, cd: null, upper: null, lower: null, zip });
+    const go = (x) => geo.settleAddress(INDEX, x);
+    const city = INDEX.places[CITY];
+    check('St. Louis: the City carries its county code and marks 63120 as shared with Pine Lawn', city.county_fips.join() === '29510' && /Pine Lawn/.test(city.zip_outside['63120']), JSON.stringify([city.county_fips, city.zip_outside]));
+    check('St. Louis: 63120 alone is never sure, so the first page asks', geo.zipPlaces(INDEX, '63120').sure === false && geo.zipPlaces(INDEX, '63120').ids.join() === CITY);
+    check('St. Louis: 63110 is all City, so it opens', geo.zipPlaces(INDEX, '63110').sure === true);
+    const pine = go(r('Pine Lawn', '29189', '63120'));
+    check('St. Louis: a Pine Lawn address in 63120 gets Missouri’s statewide races, never the City', pine.kind === 'open' && pine.ids.length === 0 && pine.zip === '63120', JSON.stringify(pine));
+    const uninc = go(r(null, '29189', '63120'));
+    check('St. Louis: a County address in 63120 with no town named does too', uninc.kind === 'open' && uninc.ids.length === 0, JSON.stringify(uninc));
+    const nocode = go(r('Pine Lawn', null, '63120'));
+    check('St. Louis: with no county code, 63120 asks rather than opening the City', nocode.kind === 'choose' && nocode.ids.join() === CITY, JSON.stringify(nocode));
+    for (const zip of ['63120', '63110', '63143', '63117', '63130', '63136', '63137', '63133', '63119', '63123']) {
+      const c = go(r('St. Louis', '29510', zip));
+      check(`St. Louis: a City address in ${zip} opens the City`, c.kind === 'open' && c.ids.join() === CITY, JSON.stringify(c));
+    }
+    // The eight edge ZIPs, with the County towns in them and unincorporated County: never the City.
+    const edge = { 63143: 'Maplewood', 63117: 'Richmond Heights', 63130: 'University City', 63136: 'Jennings', 63137: 'Bellefontaine Neighbors', 63133: 'Pagedale', 63119: 'Webster Groves', 63123: null };
+    for (const [zip, town] of Object.entries(edge)) {
+      for (const place of [town, 'St. Louis', null]) {
+        const c = go(r(place, '29189', zip));
+        check(`St. Louis: a County address in ${zip}${place ? ` (${place})` : ''} never opens the City`, c.kind !== 'none' && !(c.ids || []).includes(CITY), JSON.stringify(c));
+      }
+    }
+    check('St. Louis: a County address in 63119 still opens Webster Groves', go(r('Webster Groves', '29189', '63119')).ids?.join() === 'webster-groves-mo');
+    check('St. Louis: whichPlace never names a place the county code rules out', geo.whichPlace(INDEX.places, [CITY], r('St. Louis', '29189', '63120')) === null && geo.whichPlace(INDEX.places, [CITY], r('St. Louis', '29510', '63120')) === CITY);
+    check('St. Louis: no county code rules nothing out', !geo.outsideOf(city, r('St. Louis', null, '63120')) && geo.outsideOf(city, r('St. Louis', '29189', '63120')) && !geo.outsideOf({ state: 'MO', label: 'x' }, r(null, '29189', '63120')));
+    check('St. Louis: the City’s name reads "the City of St. Louis"; Baltimore City keeps its own', geo.placeName(city) === 'the City of St. Louis' && geo.placeName(INDEX.places['baltimore-md']) === 'Baltimore City' && geo.placeName(INDEX.places['webster-groves-mo']) === 'Webster Groves');
+    const layer = (GEOID, NAME) => geo.parseCensus({ result: { addressMatches: [{ matchedAddress: 'TEST, ST LOUIS, MO, 63120', geographies: {
+      States: [{ STATE: '29' }], Counties: [{ GEOID, STATE: '29', COUNTY: GEOID.slice(2), NAME, BASENAME: 'St. Louis' }] } }] } })[0];
+    const a = layer('29510', 'St. Louis city'), b = layer('29189', 'St. Louis County');
+    check('St. Louis: parseCensus keeps the county code and its full name', a.countyId === '29510' && a.countyName === 'the City of St. Louis' && b.countyId === '29189' && b.countyName === 'St. Louis County' && a.county === b.county, JSON.stringify([a, b]));
+    // Every place with county codes: each covers the counties it lists, so a place's own address never reads outside it.
+    for (const [id, p] of Object.entries(INDEX.places)) if (p.county_fips) check(`St. Louis: ${id}’s own Census county opens it`, geo.whichPlace(INDEX.places, [id], { state: p.state, place: p.label.replace(/\s*\(.*\)$/, ''), county: null, countyId: p.county_fips[0], cd: null, upper: null, lower: null }) === id, JSON.stringify(p.county_fips));
+    // An address on a ballot already open (app.ts useMatch, through ballotFor): null stays, `to` [] is the state's races.
+    const on = (here, x) => JSON.stringify(geo.ballotFor(INDEX, here, x));
+    const moves = (here, x, want) => on(here, x) === JSON.stringify(want);
+    check('St. Louis: on the City’s ballot, a Pine Lawn address moves to Missouri’s statewide races', moves([CITY], r('Pine Lawn', '29189', '63120'), { to: [], out: true }), on([CITY], r('Pine Lawn', '29189', '63120')));
+    check('St. Louis: on the City’s ballot, a County address in an edge ZIP moves too', moves([CITY], r('University City', '29189', '63130'), { to: [], out: true }), on([CITY], r('University City', '29189', '63130')));
+    check('St. Louis: on the City’s ballot, a City address stays', on([CITY], r('St. Louis', '29510', '63120')) === 'null');
+    check('St. Louis: on Webster Groves’s ballot, a City address in 63119 moves to the City', moves(['webster-groves-mo'], r('St. Louis', '29510', '63119'), { to: [CITY], out: true }), on(['webster-groves-mo'], r('St. Louis', '29510', '63119')));
+    check('St. Louis: on Missouri’s statewide races, a City address opens the City', moves([], r('St. Louis', '29510', '63120'), { to: [CITY], out: false }), on([], r('St. Louis', '29510', '63120')));
+    check('St. Louis: on Missouri’s statewide races, a County address stays there', on([], r('Pine Lawn', '29189', '63120')) === 'null' && on([], r('St. Louis', '29189', '63143')) === 'null' && on([], r(null, '29189', '63123')) === 'null');
+  }
+
+  /* ---------- an address on a ballot already open, elsewhere (review of #46, Oct 29) ---------- */
+  {
+    const at = (state, place, countyId) => ({ matched: '', state, county: null, countyId, countyName: null, place, cd: null, upper: null, lower: null, zip: null });
+    const on = (here, x) => JSON.stringify(geo.ballotFor(INDEX, here, x));
+    check('address on a ballot: the state’s races never open a place without county codes (Portland reaches past Multnomah)', on([], at('OR', 'Portland', '41067')) === 'null' && on([], at('TX', 'Austin', '48453')) === 'null', on([], at('OR', 'Portland', '41067')));
+    check('address on a ballot: Aurora and Denver narrow to Aurora', on(['aurora-co', 'denver-co'], at('CO', 'Aurora', '08005')) === JSON.stringify({ to: ['aurora-co'], out: false }), on(['aurora-co', 'denver-co'], at('CO', 'Aurora', '08005')));
+    check('address on a ballot: Denver’s, with an Aurora address in Arapahoe County, moves to Aurora', on(['denver-co'], at('CO', 'Aurora', '08005')) === JSON.stringify({ to: ['aurora-co'], out: true }), on(['denver-co'], at('CO', 'Aurora', '08005')));
+    check('address on a ballot: one place, its own address, stays (no county code rules nothing out)', on(['austin-tx'], at('TX', 'Austin', '48491')) === 'null' && on(['denver-co'], at('CO', 'Denver', '08031')) === 'null');
   }
 
   /* ---------- the first page (flow, Oct 20): an address before any ZIP, step 2, the city count ---------- */
@@ -1957,13 +2022,21 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('coverage: the same place with a local source’s pick reads full, with no offer', mc.ballotCoverage(pen, idx, '32501').kind === 'full' && mc.ballotCoverage(pen, idx, '32501').ask === null);
     idx.places['pensacola-fl'].local_with_picks = 0;
     const mo = open('MO', []);
-    const c2 = mc.ballotCoverage(mo, idx, '63110', '2026-10-25');
+    const c2 = mc.ballotCoverage(mo, idx, '65806', '2026-10-25');
     check('coverage: a statewide ballot found by its ZIP offers to add the city, the way Request a city asks',
-      c2.kind === 'statewide' && c2.state === 'none' && c2.ask.key === 'z:63110' && c2.ask.what === 'Please add my city' && c2.ask.wrong === 'Please add the city for ZIP 63110 in Missouri (one-tap from the page)' && c2.checked === INDEX.states.MO.checked, JSON.stringify(c2));
+      c2.kind === 'statewide' && c2.state === 'none' && c2.ask.key === 'z:65806' && c2.ask.what === 'Please add my city' && c2.ask.wrong === 'Please add the city for ZIP 65806 in Missouri (one-tap from the page)' && c2.checked === INDEX.states.MO.checked, JSON.stringify(c2));
     check('coverage: one picked from the list (no ZIP) can’t ask in one tap', mc.ballotCoverage(mo, idx, '').ask === null);
-    idx.zips['63110'] = ['ballwin-mo'];
-    check('coverage: once its ZIP has a place, it says the city is in', mc.ballotCoverage(mo, idx, '63110').state === 'landed');
-    delete idx.zips['63110'];
+    idx.zips['65806'] = ['ballwin-mo'];
+    check('coverage: once its ZIP has a place, it says the city is in', mc.ballotCoverage(mo, idx, '65806').state === 'landed');
+    delete idx.zips['65806'];
+    // Review of #46, Oct 29: 63120 is the City of St. Louis and Pine Lawn. Its statewide ballot never says the
+    // city is in (Pine Lawn's isn't); not sure which, it says the ZIP is split; from Pine Lawn (away), it asks as usual.
+    const unsure = mc.ballotCoverage(mo, idx, '63120', '2026-10-29');
+    check('coverage: a split ZIP’s statewide ballot isn’t "landed" and names both sides', unsure.state === 'none' && unsure.shared?.place === 'the City of St. Louis' && /Pine Lawn/.test(unsure.shared.outside), JSON.stringify(unsure));
+    const pine = mc.ballotCoverage(mo, idx, '63120', '2026-10-29', ['st-louis-city-mo']);
+    check('coverage: from outside the City (away), it offers to add the city, without the split', pine.state === 'none' && pine.shared === null && pine.ask?.key === 'z:63120', JSON.stringify(pine));
+    check('coverage: a place-only ZIP still lands', mc.ballotCoverage(mo, idx, '63110').state === 'landed' && mc.ballotCoverage(mo, idx, '63110').shared === null);
+    check('coverage: a ZIP whose only place is away doesn’t', mc.ballotCoverage(mo, idx, '63110', undefined, ['st-louis-city-mo']).state !== 'landed');
 
     // Remembered on this device, apart from the saved ballots, until the data lands or three days pass.
     const mem = {};
@@ -1978,8 +2051,8 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       check('coverage: data checked the same day doesn’t (the request may have come after it)', mc.ballotCoverage(pen, idx, '32501', '2026-10-25').state === 'asked');
       // Codex, Oct 26: three days means three (an Oct 25 request counts on the 25th, 26th and 27th), not four.
       check('coverage: after three days with nothing landed, the offer comes back', mc.ballotCoverage(pen, idx, '32501', '2026-10-27').state === 'asked' && mc.ballotCoverage(pen, idx, '32501', '2026-10-28').state === 'none');
-      mc.rememberAsk('z:63110', '2026-10-28');
-      check('coverage: a new request lets go of ones past the window, from the third day on', !('p:pensacola-fl' in JSON.parse(mem['vg-asked'])) && JSON.parse(mem['vg-asked'])['z:63110'] === '2026-10-28');
+      mc.rememberAsk('z:65806', '2026-10-28');
+      check('coverage: a new request lets go of ones past the window, from the third day on', !('p:pensacola-fl' in JSON.parse(mem['vg-asked'])) && JSON.parse(mem['vg-asked'])['z:65806'] === '2026-10-28');
       // Codex, Oct 26: a record that isn't a plain object (an array left by something else) reads as empty,
       // so the request is kept and acknowledged instead of vanishing when it's written back.
       mem['vg-asked'] = '[]';
@@ -2060,9 +2133,9 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       setToday('2026-10-25');
       delete store['vg-asked'];
 
-      // A statewide ballot found by ZIP (St. Louis City).
+      // A statewide ballot found by ZIP (Springfield, Missouri).
       open('MO', []);
-      S.b.zip = '63110';
+      S.b.zip = '65806';
       S.view = 'setup';
       const sc = views.coverage.covCardHTML('door');
       check('coverage: a statewide ballot’s card leads with the missing races, says the statewide picks are here, and asks Kevin', txt(sc).startsWith(`Your city’s races aren’t in the guide yet. Here now: Missouri’s statewide races, with picks from ${INDEX.states.MO.with_picks} of ${INDEX.states.MO.sources} sources. Not here yet: races for your city, county and districts. Ask Kevin to add my city One tap. It sends Kevin your ZIP and nothing about you. It usually takes about a day. Voting before then? Your official sample ballot lists every race.`) && darkOf(sc).join() === 'Ask Kevin to add my city', txt(sc));
@@ -2077,27 +2150,27 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       setToday('2026-11-02');
       check('coverage: two days out, the fine print says it may not land before Election Day', /One tap\. It sends Kevin your ZIP and nothing about you\. Kevin may not get to it before Election Day\./.test(txt(views.coverage.covCardHTML('ballot'))));
       setToday('2026-10-25');
-      mc.rememberAsk('z:63110', '2026-10-25');
+      mc.rememberAsk('z:65806', '2026-10-25');
       const sa = views.coverage.covCardHTML('ballot');
       check('coverage: asked, the statewide card says Request sent, check back tomorrow, and offers Tell me when it’s in', txt(sa) === 'Request sent. Kevin is adding your city. You asked today. It usually takes about a day, so check back tomorrow. Until then, you can pick your statewide races below. Voting before then? Your official sample ballot lists every race. Tell me when it’s in' && darkOf(sa).length === 0, txt(sa));
       check('coverage: and the quiet lines add the day', txt(views.coverage.headCovHTML()).endsWith('You asked for your city’s races today.') && txt(views.coverage.sheetCovHTML()).endsWith('You asked for your city’s races today.'));
       setToday('2026-11-02');
-      mc.rememberAsk('z:63110', '2026-11-01');
+      mc.rememberAsk('z:65806', '2026-11-01');
       check('coverage: asked two days out, it says it may not be in before you vote', /You asked Nov 1\. It may not be in before you vote\./.test(txt(views.coverage.covCardHTML('ballot'))), txt(views.coverage.covCardHTML('ballot')));
       setToday('2026-10-25');
-      mc.rememberAsk('z:63110', '2026-10-25');
+      mc.rememberAsk('z:65806', '2026-10-25');
 
       // "Tell me when it's in": a follow-up, never a second "Please add my city".
       const F2 = common.FORM;
-      const fa = { page: 'Your ballot', where: 'Missouri, 63110', url: 'https://vote.kevinhg.com/', data: '2026-10-25 12:00 UTC', build: 'abc1234', device: 'x', errors: [] };
+      const fa = { page: 'Your ballot', where: 'Missouri, 65806', url: 'https://vote.kevinhg.com/', data: '2026-10-25 12:00 UTC', build: 'abc1234', device: 'x', errors: [] };
       S.ui.report = { kind: 'city', f: { reach: '' }, what: '', tag: '', hint: 'follow', along: fa, state: 'edit', err: false, fk: 'cov-hear', back: null };
       const fh = views.shelf.shelfHTML();
-      check('follow-up: titled Tell me when it’s in, the request shown as text, an email or phone the one field, required', /<h2 id="sh-h">Tell me when it’s in<\/h2>/.test(fh) && /<b>Your request:<\/b> your city’s races, for ZIP 63110 in Missouri\. Sent today\./.test(fh) && (fh.match(/data-rf="/g) || []).length === 1 && /id="rf-reach"[^>]*aria-required="true"/.test(fh) && !/Which city or town/.test(fh) && views.shelf.requiredOf(S.ui.report) === 'reach', txt(fh).slice(0, 300));
+      check('follow-up: titled Tell me when it’s in, the request shown as text, an email or phone the one field, required', /<h2 id="sh-h">Tell me when it’s in<\/h2>/.test(fh) && /<b>Your request:<\/b> your city’s races, for ZIP 65806 in Missouri\. Sent today\./.test(fh) && (fh.match(/data-rf="/g) || []).length === 1 && /id="rf-reach"[^>]*aria-required="true"/.test(fh) && !/Which city or town/.test(fh) && views.shelf.requiredOf(S.ui.report) === 'reach', txt(fh).slice(0, 300));
       check('follow-up: its button says what it does, and what goes along is folded under it', />Tell me when it’s in<\/button>/.test(fh) && /<details class="rp-along"/.test(fh) && fh.indexOf('<details') > fh.indexOf('report-send') && !/Add anything else in your note/.test(fh));
       S.ui.report.f.reach = 'friend@example.org';
       const fb = views.shelf.reportBody(S.ui.report);
-      check('follow-up: it posts a follow-up with the place, ZIP and request day, never "Please add my city"', fb[F2.what] === 'Follow-up: tell me when it’s in' && fb[F2.where] === 'Missouri, 63110' && fb[F2.reach] === 'friend@example.org'
-        && fb[F2.wrong].startsWith('Tell me when the city for ZIP 63110 is in. Follow-up to the one-tap request from Oct 25.\n\nSent along:\n') && !/Please add/.test(Object.values(fb).join('\n')), JSON.stringify(fb));
+      check('follow-up: it posts a follow-up with the place, ZIP and request day, never "Please add my city"', fb[F2.what] === 'Follow-up: tell me when it’s in' && fb[F2.where] === 'Missouri, 65806' && fb[F2.reach] === 'friend@example.org'
+        && fb[F2.wrong].startsWith('Tell me when the city for ZIP 65806 is in. Follow-up to the one-tap request from Oct 25.\n\nSent along:\n') && !/Please add/.test(Object.values(fb).join('\n')), JSON.stringify(fb));
       S.ui.report.state = 'sent';
       check('follow-up: sent, "Got it." and never the email or phone back', /<b>Got it\.<\/b> Kevin will tell you when it’s in\./.test(views.shelf.shelfHTML()) && !/friend@example\.org/.test(views.shelf.shelfHTML()));
       S.ui.report = null;

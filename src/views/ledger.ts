@@ -600,15 +600,17 @@ function addrParts(): AddrParts | null {
   }
   const found = S.ui.addrFound && !S.ui.addrOpen
     ? `<p class="addr-found" tabindex="-1" data-fk="addr-found"><b>Found:</b> ${esc(S.ui.addrFound)} <button class="linkbtn" data-act="addr-again" data-fk="addr-again">Not it? Try again</button></p>` : '';
+  // Why this is another ballot than the one the address was typed on (app.ts movedWhy), for this visit.
+  const moved = S.ui.addrMoved ? `<p class="addr-moved">${esc(S.ui.addrMoved)}</p>` : '';
   const none = note === FOUND_ONLY;
   // What the district maps said beyond the races they set, for this visit: the voting precinct, a line
   // they didn't guess at, a map that didn't load (S.ui.addrMaps).
   const mapLines = S.ui.addrMaps.map((t) => `<p class="addr-map"${t === CHECKING ? ' data-pending' : ''}>${esc(t)}</p>`).join('');
-  if (none && !n) return found || mapLines || form ? { lines: found + mapLines, form, btns: [] } : null;
+  if (none && !n) return found || moved || mapLines || form ? { lines: found + moved + mapLines, form, btns: [] } : null;
   // While the maps are still on their way, the races they'll settle aren't the sample ballot's yet.
   const left = n && !S.ui.addrMapsPending ? rest(n) : '';
   const filledLine = S.ui.addrFilled ? `<p class="addr-fill">${esc(S.ui.addrFilled)}</p>` : '';
-  return { lines: `${found}${none ? '' : `<p class="addr-set">${esc(note)}</p>`}${mapLines}${filledLine}${left}`, form, btns: !form && (none || n) && sb ? [sbLinkHTML(sb, !card)] : [] };
+  return { lines: `${found}${moved}${none ? '' : `<p class="addr-set">${esc(note)}</p>`}${mapLines}${filledLine}${left}`, form, btns: !form && (none || n) && sb ? [sbLinkHTML(sb, !card)] : [] };
 }
 const btnRow = (btns: string[]): string => (btns.length ? `<div class="row-btns">${btns.join('')}</div>` : '');
 function addrBoxHTML(): string {

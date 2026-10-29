@@ -1,0 +1,1280 @@
+[
+  {
+    "id": "mo-hd-76",
+    "state": "MO",
+    "level": "state",
+    "office": "Missouri House of Representatives",
+    "district": "HD-76",
+    "scope_plain": "Voters in House District 76, in St. Louis City: all of ZIP 63147 and parts of 63102, 63104, 63107, 63111, 63115, 63118 and 63120.",
+    "office_explainer": "One of 163 state representatives. Writes state laws and the state budget in Jefferson City.",
+    "why_it_matters": "Unopposed.",
+    "vote_for": 1,
+    "incumbent": "Marlon Anderson",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Marlon Anderson",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Sitting state representative for District 76.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      { "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)", "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf" },
+      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
+      { "name": "Missouri House of Representatives: 2026 member roster", "url": "https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R" },
+      { "name": "U.S. Census Bureau TIGERweb: current Missouri House districts and 2020 census blocks (the ZIP codes each district reaches)", "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "mo-hd-77",
+    "state": "MO",
+    "level": "state",
+    "office": "Missouri House of Representatives",
+    "district": "HD-77",
+    "scope_plain": "Voters in House District 77, in St. Louis City: parts of ZIPs 63107, 63108, 63110, 63113 and 63115.",
+    "office_explainer": "One of 163 state representatives. Writes state laws and the state budget in Jefferson City.",
+    "why_it_matters": "Collins, the sitting representative, faces a Libertarian; no Republican filed.",
+    "vote_for": 1,
+    "incumbent": "Kimberly-Ann Collins",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Kimberly-Ann Collins",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Sitting state representative for District 77.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Michael Corey",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      { "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)", "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf" },
+      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
+      { "name": "Missouri House of Representatives: 2026 member roster", "url": "https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R" },
+      { "name": "U.S. Census Bureau TIGERweb: current Missouri House districts and 2020 census blocks (the ZIP codes each district reaches)", "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "mo-hd-78",
+    "state": "MO",
+    "level": "state",
+    "office": "Missouri House of Representatives",
+    "district": "HD-78",
+    "scope_plain": "Voters in House District 78, in St. Louis City: all of ZIP 63101 and parts of 63102, 63103, 63104, 63106, 63107 and 63118.",
+    "office_explainer": "One of 163 state representatives. Writes state laws and the state budget in Jefferson City.",
+    "why_it_matters": "Unopposed.",
+    "vote_for": 1,
+    "incumbent": "Marty Joe Murray",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Marty Joe Murray",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Sitting state representative for District 78.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      { "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)", "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf" },
+      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
+      { "name": "Missouri House of Representatives: 2026 member roster", "url": "https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R" },
+      { "name": "U.S. Census Bureau TIGERweb: current Missouri House districts and 2020 census blocks (the ZIP codes each district reaches)", "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "mo-hd-79",
+    "state": "MO",
+    "level": "state",
+    "office": "Missouri House of Representatives",
+    "district": "HD-79",
+    "scope_plain": "Voters in House District 79, in St. Louis City: parts of ZIPs 63103, 63104, 63106, 63107, 63108, 63110, 63113, 63115 and 63118.",
+    "office_explainer": "One of 163 state representatives. Writes state laws and the state budget in Jefferson City.",
+    "why_it_matters": "Open seat: Rep. LaKeySha Bosley is not on the ballot.",
+    "vote_for": 1,
+    "incumbent": "LaKeySha Bosley (not on the ballot)",
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Mike Hebron",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Rachel D'Souza",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      { "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)", "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf" },
+      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
+      { "name": "Missouri House of Representatives: 2026 member roster", "url": "https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R" },
+      { "name": "U.S. Census Bureau TIGERweb: current Missouri House districts and 2020 census blocks (the ZIP codes each district reaches)", "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "mo-hd-80",
+    "state": "MO",
+    "level": "state",
+    "office": "Missouri House of Representatives",
+    "district": "HD-80",
+    "scope_plain": "Voters in House District 80, in St. Louis City: parts of ZIPs 63109, 63110, 63111, 63116, 63118 and 63139.",
+    "office_explainer": "One of 163 state representatives. Writes state laws and the state budget in Jefferson City.",
+    "why_it_matters": "Fuchs, the sitting representative, faces a Republican.",
+    "vote_for": 1,
+    "incumbent": "Elizabeth (Lilly) Fuchs",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jennie Drag",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Elizabeth (Lilly) Fuchs",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Sitting state representative for District 80.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      { "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)", "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf" },
+      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
+      { "name": "Missouri House of Representatives: 2026 member roster", "url": "https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R" },
+      { "name": "U.S. Census Bureau TIGERweb: current Missouri House districts and 2020 census blocks (the ZIP codes each district reaches)", "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "mo-hd-81",
+    "state": "MO",
+    "level": "state",
+    "office": "Missouri House of Representatives",
+    "district": "HD-81",
+    "scope_plain": "Voters in House District 81, in St. Louis City: parts of ZIPs 63109, 63111, 63116 and 63118.",
+    "office_explainer": "One of 163 state representatives. Writes state laws and the state budget in Jefferson City.",
+    "why_it_matters": "Unopposed; no Republican filed. Open seat: Rep. Steve Butz is not on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Steve Butz (not on the ballot)",
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "James (Jimmy) Lappe",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      { "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)", "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf" },
+      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
+      { "name": "Missouri House of Representatives: 2026 member roster", "url": "https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R" },
+      { "name": "U.S. Census Bureau TIGERweb: current Missouri House districts and 2020 census blocks (the ZIP codes each district reaches)", "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "mo-hd-82",
+    "state": "MO",
+    "level": "state",
+    "office": "Missouri House of Representatives",
+    "district": "HD-82",
+    "scope_plain": "Voters in House District 82, in St. Louis City: parts of ZIPs 63109, 63110, 63116 and 63139.",
+    "office_explainer": "One of 163 state representatives. Writes state laws and the state budget in Jefferson City.",
+    "why_it_matters": "Unopposed.",
+    "vote_for": 1,
+    "incumbent": "Nick Kimble",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Nick Kimble",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Sitting state representative for District 82.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      { "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)", "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf" },
+      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
+      { "name": "Missouri House of Representatives: 2026 member roster", "url": "https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R" },
+      { "name": "U.S. Census Bureau TIGERweb: current Missouri House districts and 2020 census blocks (the ZIP codes each district reaches)", "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "mo-hd-84",
+    "state": "MO",
+    "level": "state",
+    "office": "Missouri House of Representatives",
+    "district": "HD-84",
+    "scope_plain": "Voters in House District 84, in St. Louis City: all of ZIP 63112 and parts of 63108, 63110, 63113, 63115, 63120 and 63139.",
+    "office_explainer": "One of 163 state representatives. Writes state laws and the state budget in Jefferson City.",
+    "why_it_matters": "Taylor, the sitting representative, faces a Republican.",
+    "vote_for": 1,
+    "incumbent": "Del Taylor",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Robert Vroman",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Del Taylor",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Sitting state representative for District 84.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      { "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)", "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf" },
+      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
+      { "name": "Missouri House of Representatives: 2026 member roster", "url": "https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R" },
+      { "name": "U.S. Census Bureau TIGERweb: current Missouri House districts and 2020 census blocks (the ZIP codes each district reaches)", "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "stlcity-collector-revenue",
+    "state": "MO",
+    "level": "city",
+    "office": "St. Louis City Collector of Revenue",
+    "district": null,
+    "scope_plain": "Every St. Louis City voter (the City of St. Louis, not St. Louis County)",
+    "office_explainer": "Collects the City's real estate and personal property taxes, the earnings tax, and water and trash bills.",
+    "why_it_matters": "Unopposed.",
+    "vote_for": 1,
+    "incumbent": "Gregory F.X. Daly",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Gregory F.X. Daly",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Sitting Collector of Revenue.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
+      { "name": "City of St. Louis: Collector of Revenue's office", "url": "https://www.stlouis-mo.gov/government/departments/collector/index.cfm" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "stlcity-license-collector",
+    "state": "MO",
+    "level": "city",
+    "office": "St. Louis City License Collector",
+    "district": null,
+    "scope_plain": "Every St. Louis City voter (the City of St. Louis, not St. Louis County)",
+    "office_explainer": "Issues the City's business licenses and collects the taxes and fees that come with them.",
+    "why_it_matters": "Unopposed.",
+    "vote_for": 1,
+    "incumbent": "Mavis \"Tessa\" Thompson",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Mavis \"Tessa\" Thompson",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Sitting License Collector.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
+      { "name": "City of St. Louis: License Collector's office", "url": "https://www.stlouis-mo.gov/government/departments/license/index.cfm" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "stlcity-recorder-deeds",
+    "state": "MO",
+    "level": "city",
+    "office": "St. Louis City Recorder of Deeds",
+    "district": null,
+    "scope_plain": "Every St. Louis City voter (the City of St. Louis, not St. Louis County)",
+    "office_explainer": "Keeps the City's birth, death, marriage and property records, and issues marriage licenses.",
+    "why_it_matters": "Open seat: Recorder Michael Butler chose not to seek a third term.",
+    "vote_for": 1,
+    "incumbent": "Michael Butler (not running)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Shane Cohn",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "3rd Ward alderman since 2009; before that, served on the boards of Dutchtown neighborhood groups. His professional background is in human resources.",
+        "own_words": [
+          {
+            "text": "Sees the recorder's office as a force for social change when needed (St. Louis Public Radio's summary).",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          },
+          {
+            "text": "Wants to make records easier to get for residents hit by the tornado, and to partner with law clinics on basic estate planning (St. Louis Public Radio's summary).",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Jerome H. Bauer",
+        "party": "Green",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Former manuscript librarian who taught at several St. Louis-area universities. Has run for several offices as a Green Party candidate, including recorder of deeds in 2022.",
+        "own_words": [
+          {
+            "text": "Would work to make the recorder's office, and the city as a whole, more accessible for people with disabilities (St. Louis Public Radio's summary).",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          },
+          {
+            "text": "Pledges an office run with compassion (St. Louis Public Radio's summary).",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
+      { "name": "St. Louis Public Radio: St. Louis Voter Guide, Nov. 2026 (read Oct. 29)", "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois" },
+      { "name": "City of St. Louis: Recorder of Deeds and Vital Records Registrar", "url": "https://www.stlouis-mo.gov/government/departments/recorder/index.cfm" }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "stlcity-retention-wright",
+    "state": "MO",
+    "level": "judicial",
+    "office": "22nd Judicial Circuit (City of St. Louis), Circuit Judge, Division 2: retain Judge Clinton Robert Wright?",
+    "district": "22nd Judicial Circuit (City of St. Louis)",
+    "scope_plain": "Every St. Louis City voter. (St. Louis County voters decide on 21st Circuit judges instead.)",
+    "office_explainer": "Trial judge for the City of St. Louis: felonies, big lawsuits, family and probate cases. Yes keeps; no removes.",
+    "why_it_matters": "Yes/no question with no opponent; the judge stays if more people vote yes than no. If a judge loses, the governor picks a replacement from a nominating commission's list. The Missouri Bar's Judicial Performance Review Committee majority recommends retaining Judge Wright; it recommended retaining all 13 City of St. Louis judges on the 2026 ballot.",
+    "vote_for": 1,
+    "incumbent": "Clinton Robert Wright",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Clinton Robert Wright",
+        "party": null,
+        "incumbent": true,
+        "website": "https://yourmissourijudges.org/judges/2026-clinton-wright/",
+        "website_confidence": "verified",
+        "background": "Circuit Judge, Division 2, 22nd Judicial Circuit (City of St. Louis), seeking retention.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Missouri Judicial Performance Review Committee",
+            "by_short": "Review committee",
+            "kind": "official_commission",
+            "rating": "Majority recommendation: retain",
+            "verdict": "favorable",
+            "vote": null,
+            "vote_note": "The committee publishes only its majority recommendation, not a vote count.",
+            "survey": null,
+            "survey_note": "Missouri's lawyer survey uses 1-to-5 ratings on many questions, with no single yes-or-no question, so there is no one number to show. The full results are on the judge's page.",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://yourmissourijudges.org/judges/2026-clinton-wright/",
+            "verified_on": "2026-10-29",
+            "confidence": "verified"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
+      { "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges", "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/" },
+      { "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)", "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf" },
+      { "name": "The Missouri Bar: 2026 review of Judge Clinton Wright", "url": "https://yourmissourijudges.org/judges/2026-clinton-wright/" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "stlcity-retention-hogan",
+    "state": "MO",
+    "level": "judicial",
+    "office": "22nd Judicial Circuit (City of St. Louis), Circuit Judge, Division 3: retain Judge Elizabeth Byrne Hogan?",
+    "district": "22nd Judicial Circuit (City of St. Louis)",
+    "scope_plain": "Every St. Louis City voter. (St. Louis County voters decide on 21st Circuit judges instead.)",
+    "office_explainer": "Trial judge for the City of St. Louis: felonies, big lawsuits, family and probate cases. Yes keeps; no removes.",
+    "why_it_matters": "Yes/no question with no opponent; the judge stays if more people vote yes than no. If a judge loses, the governor picks a replacement from a nominating commission's list. The Missouri Bar's Judicial Performance Review Committee majority recommends retaining Judge Hogan; it recommended retaining all 13 City of St. Louis judges on the 2026 ballot.",
+    "vote_for": 1,
+    "incumbent": "Elizabeth Byrne Hogan",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Elizabeth Byrne Hogan",
+        "party": null,
+        "incumbent": true,
+        "website": "https://yourmissourijudges.org/judges/2026-elizabeth-hogan/",
+        "website_confidence": "verified",
+        "background": "Circuit Judge, Division 3, 22nd Judicial Circuit (City of St. Louis), seeking retention.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Missouri Judicial Performance Review Committee",
+            "by_short": "Review committee",
+            "kind": "official_commission",
+            "rating": "Majority recommendation: retain",
+            "verdict": "favorable",
+            "vote": null,
+            "vote_note": "The committee publishes only its majority recommendation, not a vote count.",
+            "survey": null,
+            "survey_note": "Missouri's lawyer survey uses 1-to-5 ratings on many questions, with no single yes-or-no question, so there is no one number to show. The full results are on the judge's page.",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://yourmissourijudges.org/judges/2026-elizabeth-hogan/",
+            "verified_on": "2026-10-29",
+            "confidence": "verified"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
+      { "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges", "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/" },
+      { "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)", "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf" },
+      { "name": "The Missouri Bar: 2026 review of Judge Elizabeth Hogan", "url": "https://yourmissourijudges.org/judges/2026-elizabeth-hogan/" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "stlcity-retention-fowler",
+    "state": "MO",
+    "level": "judicial",
+    "office": "22nd Judicial Circuit (City of St. Louis), Circuit Judge, Division 4: retain Judge Katherine M. Fowler?",
+    "district": "22nd Judicial Circuit (City of St. Louis)",
+    "scope_plain": "Every St. Louis City voter. (St. Louis County voters decide on 21st Circuit judges instead.)",
+    "office_explainer": "Trial judge for the City of St. Louis: felonies, big lawsuits, family and probate cases. Yes keeps; no removes.",
+    "why_it_matters": "Yes/no question with no opponent; the judge stays if more people vote yes than no. If a judge loses, the governor picks a replacement from a nominating commission's list. The Missouri Bar's Judicial Performance Review Committee majority recommends retaining Judge Fowler; it recommended retaining all 13 City of St. Louis judges on the 2026 ballot.",
+    "vote_for": 1,
+    "incumbent": "Katherine M. Fowler",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Katherine M. Fowler",
+        "party": null,
+        "incumbent": true,
+        "website": "https://yourmissourijudges.org/judges/2026-katherine-fowler/",
+        "website_confidence": "verified",
+        "background": "Circuit Judge, Division 4, 22nd Judicial Circuit (City of St. Louis), seeking retention.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Missouri Judicial Performance Review Committee",
+            "by_short": "Review committee",
+            "kind": "official_commission",
+            "rating": "Majority recommendation: retain",
+            "verdict": "favorable",
+            "vote": null,
+            "vote_note": "The committee publishes only its majority recommendation, not a vote count.",
+            "survey": null,
+            "survey_note": "Missouri's lawyer survey uses 1-to-5 ratings on many questions, with no single yes-or-no question, so there is no one number to show. The full results are on the judge's page.",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://yourmissourijudges.org/judges/2026-katherine-fowler/",
+            "verified_on": "2026-10-29",
+            "confidence": "verified"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
+      { "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges", "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/" },
+      { "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)", "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf" },
+      { "name": "The Missouri Bar: 2026 review of Judge Katherine Fowler", "url": "https://yourmissourijudges.org/judges/2026-katherine-fowler/" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "stlcity-retention-llewellyn",
+    "state": "MO",
+    "level": "judicial",
+    "office": "22nd Judicial Circuit (City of St. Louis), Circuit Judge, Division 5: retain Judge Annette Llewellyn?",
+    "district": "22nd Judicial Circuit (City of St. Louis)",
+    "scope_plain": "Every St. Louis City voter. (St. Louis County voters decide on 21st Circuit judges instead.)",
+    "office_explainer": "Trial judge for the City of St. Louis: felonies, big lawsuits, family and probate cases. Yes keeps; no removes.",
+    "why_it_matters": "Yes/no question with no opponent; the judge stays if more people vote yes than no. If a judge loses, the governor picks a replacement from a nominating commission's list. The Missouri Bar's Judicial Performance Review Committee majority recommends retaining Judge Llewellyn; it recommended retaining all 13 City of St. Louis judges on the 2026 ballot.",
+    "vote_for": 1,
+    "incumbent": "Annette Llewellyn",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Annette Llewellyn",
+        "party": null,
+        "incumbent": true,
+        "website": "https://yourmissourijudges.org/judges/2026-annette-llewellyn/",
+        "website_confidence": "verified",
+        "background": "Circuit Judge, Division 5, 22nd Judicial Circuit (City of St. Louis), seeking retention.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Missouri Judicial Performance Review Committee",
+            "by_short": "Review committee",
+            "kind": "official_commission",
+            "rating": "Majority recommendation: retain",
+            "verdict": "favorable",
+            "vote": null,
+            "vote_note": "The committee publishes only its majority recommendation, not a vote count.",
+            "survey": null,
+            "survey_note": "Missouri's lawyer survey uses 1-to-5 ratings on many questions, with no single yes-or-no question, so there is no one number to show. The full results are on the judge's page.",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://yourmissourijudges.org/judges/2026-annette-llewellyn/",
+            "verified_on": "2026-10-29",
+            "confidence": "verified"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
+      { "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges", "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/" },
+      { "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)", "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf" },
+      { "name": "The Missouri Bar: 2026 review of Judge Annette Llewellyn", "url": "https://yourmissourijudges.org/judges/2026-annette-llewellyn/" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "stlcity-retention-whyte",
+    "state": "MO",
+    "level": "judicial",
+    "office": "22nd Judicial Circuit (City of St. Louis), Circuit Judge, Division 7: retain Judge Joseph P. Whyte?",
+    "district": "22nd Judicial Circuit (City of St. Louis)",
+    "scope_plain": "Every St. Louis City voter. (St. Louis County voters decide on 21st Circuit judges instead.)",
+    "office_explainer": "Trial judge for the City of St. Louis: felonies, big lawsuits, family and probate cases. Yes keeps; no removes.",
+    "why_it_matters": "Yes/no question with no opponent; the judge stays if more people vote yes than no. If a judge loses, the governor picks a replacement from a nominating commission's list. The Missouri Bar's Judicial Performance Review Committee majority recommends retaining Judge Whyte; it recommended retaining all 13 City of St. Louis judges on the 2026 ballot.",
+    "vote_for": 1,
+    "incumbent": "Joseph P. Whyte",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Joseph P. Whyte",
+        "party": null,
+        "incumbent": true,
+        "website": "https://yourmissourijudges.org/judges/2026-joseph-whyte/",
+        "website_confidence": "verified",
+        "background": "Circuit Judge, Division 7, 22nd Judicial Circuit (City of St. Louis), seeking retention.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Missouri Judicial Performance Review Committee",
+            "by_short": "Review committee",
+            "kind": "official_commission",
+            "rating": "Majority recommendation: retain",
+            "verdict": "favorable",
+            "vote": null,
+            "vote_note": "The committee publishes only its majority recommendation, not a vote count.",
+            "survey": null,
+            "survey_note": "Missouri's lawyer survey uses 1-to-5 ratings on many questions, with no single yes-or-no question, so there is no one number to show. The full results are on the judge's page.",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://yourmissourijudges.org/judges/2026-joseph-whyte/",
+            "verified_on": "2026-10-29",
+            "confidence": "verified"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
+      { "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges", "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/" },
+      { "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)", "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf" },
+      { "name": "The Missouri Bar: 2026 review of Judge Joseph Whyte", "url": "https://yourmissourijudges.org/judges/2026-joseph-whyte/" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "stlcity-retention-boyer",
+    "state": "MO",
+    "level": "judicial",
+    "office": "22nd Judicial Circuit (City of St. Louis), Circuit Judge, Division 8: retain Judge Timothy J. Boyer?",
+    "district": "22nd Judicial Circuit (City of St. Louis)",
+    "scope_plain": "Every St. Louis City voter. (St. Louis County voters decide on 21st Circuit judges instead.)",
+    "office_explainer": "Trial judge for the City of St. Louis: felonies, big lawsuits, family and probate cases. Yes keeps; no removes.",
+    "why_it_matters": "Yes/no question with no opponent; the judge stays if more people vote yes than no. If a judge loses, the governor picks a replacement from a nominating commission's list. The Missouri Bar's Judicial Performance Review Committee majority recommends retaining Judge Boyer; it recommended retaining all 13 City of St. Louis judges on the 2026 ballot.",
+    "vote_for": 1,
+    "incumbent": "Timothy J. Boyer",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Timothy J. Boyer",
+        "party": null,
+        "incumbent": true,
+        "website": "https://yourmissourijudges.org/judges/2026-timothy-boyer/",
+        "website_confidence": "verified",
+        "background": "Circuit Judge, Division 8, 22nd Judicial Circuit (City of St. Louis), seeking retention.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Missouri Judicial Performance Review Committee",
+            "by_short": "Review committee",
+            "kind": "official_commission",
+            "rating": "Majority recommendation: retain",
+            "verdict": "favorable",
+            "vote": null,
+            "vote_note": "The committee publishes only its majority recommendation, not a vote count.",
+            "survey": null,
+            "survey_note": "Missouri's lawyer survey uses 1-to-5 ratings on many questions, with no single yes-or-no question, so there is no one number to show. The full results are on the judge's page.",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://yourmissourijudges.org/judges/2026-timothy-boyer/",
+            "verified_on": "2026-10-29",
+            "confidence": "verified"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
+      { "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges", "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/" },
+      { "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)", "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf" },
+      { "name": "The Missouri Bar: 2026 review of Judge Timothy Boyer", "url": "https://yourmissourijudges.org/judges/2026-timothy-boyer/" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "stlcity-retention-millikan",
+    "state": "MO",
+    "level": "judicial",
+    "office": "22nd Judicial Circuit (City of St. Louis), Circuit Judge, Division 9: retain Judge Scott A. Millikan?",
+    "district": "22nd Judicial Circuit (City of St. Louis)",
+    "scope_plain": "Every St. Louis City voter. (St. Louis County voters decide on 21st Circuit judges instead.)",
+    "office_explainer": "Trial judge for the City of St. Louis: felonies, big lawsuits, family and probate cases. Yes keeps; no removes.",
+    "why_it_matters": "Yes/no question with no opponent; the judge stays if more people vote yes than no. If a judge loses, the governor picks a replacement from a nominating commission's list. The Missouri Bar's Judicial Performance Review Committee majority recommends retaining Judge Millikan; it recommended retaining all 13 City of St. Louis judges on the 2026 ballot.",
+    "vote_for": 1,
+    "incumbent": "Scott A. Millikan",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Scott A. Millikan",
+        "party": null,
+        "incumbent": true,
+        "website": "https://yourmissourijudges.org/judges/2026-scott-millikan/",
+        "website_confidence": "verified",
+        "background": "Circuit Judge, Division 9, 22nd Judicial Circuit (City of St. Louis), seeking retention.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Missouri Judicial Performance Review Committee",
+            "by_short": "Review committee",
+            "kind": "official_commission",
+            "rating": "Majority recommendation: retain",
+            "verdict": "favorable",
+            "vote": null,
+            "vote_note": "The committee publishes only its majority recommendation, not a vote count.",
+            "survey": null,
+            "survey_note": "Missouri's lawyer survey uses 1-to-5 ratings on many questions, with no single yes-or-no question, so there is no one number to show. The full results are on the judge's page.",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://yourmissourijudges.org/judges/2026-scott-millikan/",
+            "verified_on": "2026-10-29",
+            "confidence": "verified"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
+      { "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges", "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/" },
+      { "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)", "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf" },
+      { "name": "The Missouri Bar: 2026 review of Judge Scott Millikan", "url": "https://yourmissourijudges.org/judges/2026-scott-millikan/" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "stlcity-retention-stovall-reid",
+    "state": "MO",
+    "level": "judicial",
+    "office": "22nd Judicial Circuit (City of St. Louis), Circuit Judge, Division 10: retain Judge Calea Stovall-Reid?",
+    "district": "22nd Judicial Circuit (City of St. Louis)",
+    "scope_plain": "Every St. Louis City voter. (St. Louis County voters decide on 21st Circuit judges instead.)",
+    "office_explainer": "Trial judge for the City of St. Louis: felonies, big lawsuits, family and probate cases. Yes keeps; no removes.",
+    "why_it_matters": "Yes/no question with no opponent; the judge stays if more people vote yes than no. If a judge loses, the governor picks a replacement from a nominating commission's list. The Missouri Bar's Judicial Performance Review Committee majority recommends retaining Judge Stovall-Reid; it recommended retaining all 13 City of St. Louis judges on the 2026 ballot.",
+    "vote_for": 1,
+    "incumbent": "Calea Stovall-Reid",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Calea Stovall-Reid",
+        "party": null,
+        "incumbent": true,
+        "website": "https://yourmissourijudges.org/judges/2026-calea-stovall-reid/",
+        "website_confidence": "verified",
+        "background": "Circuit Judge, Division 10, 22nd Judicial Circuit (City of St. Louis), seeking retention.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Missouri Judicial Performance Review Committee",
+            "by_short": "Review committee",
+            "kind": "official_commission",
+            "rating": "Majority recommendation: retain",
+            "verdict": "favorable",
+            "vote": null,
+            "vote_note": "The committee publishes only its majority recommendation, not a vote count.",
+            "survey": null,
+            "survey_note": "Missouri's lawyer survey uses 1-to-5 ratings on many questions, with no single yes-or-no question, so there is no one number to show. The full results are on the judge's page.",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://yourmissourijudges.org/judges/2026-calea-stovall-reid/",
+            "verified_on": "2026-10-29",
+            "confidence": "verified"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
+      { "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges", "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/" },
+      { "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)", "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf" },
+      { "name": "The Missouri Bar: 2026 review of Judge Calea Stovall-Reid", "url": "https://yourmissourijudges.org/judges/2026-calea-stovall-reid/" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "stlcity-retention-connolly",
+    "state": "MO",
+    "level": "judicial",
+    "office": "22nd Judicial Circuit (City of St. Louis), Circuit Judge, Division 12: retain Judge Madeline Orling Connolly?",
+    "district": "22nd Judicial Circuit (City of St. Louis)",
+    "scope_plain": "Every St. Louis City voter. (St. Louis County voters decide on 21st Circuit judges instead.)",
+    "office_explainer": "Trial judge for the City of St. Louis: felonies, big lawsuits, family and probate cases. Yes keeps; no removes.",
+    "why_it_matters": "Yes/no question with no opponent; the judge stays if more people vote yes than no. If a judge loses, the governor picks a replacement from a nominating commission's list. The Missouri Bar's Judicial Performance Review Committee majority recommends retaining Judge Connolly; it recommended retaining all 13 City of St. Louis judges on the 2026 ballot.",
+    "vote_for": 1,
+    "incumbent": "Madeline Orling Connolly",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Madeline Orling Connolly",
+        "party": null,
+        "incumbent": true,
+        "website": "https://yourmissourijudges.org/judges/2026-madeline-connolly/",
+        "website_confidence": "verified",
+        "background": "Circuit Judge, Division 12, 22nd Judicial Circuit (City of St. Louis), seeking retention.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Missouri Judicial Performance Review Committee",
+            "by_short": "Review committee",
+            "kind": "official_commission",
+            "rating": "Majority recommendation: retain",
+            "verdict": "favorable",
+            "vote": null,
+            "vote_note": "The committee publishes only its majority recommendation, not a vote count.",
+            "survey": null,
+            "survey_note": "Missouri's lawyer survey uses 1-to-5 ratings on many questions, with no single yes-or-no question, so there is no one number to show. The full results are on the judge's page.",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://yourmissourijudges.org/judges/2026-madeline-connolly/",
+            "verified_on": "2026-10-29",
+            "confidence": "verified"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
+      { "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges", "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/" },
+      { "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)", "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf" },
+      { "name": "The Missouri Bar: 2026 review of Judge Madeline Connolly", "url": "https://yourmissourijudges.org/judges/2026-madeline-connolly/" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "stlcity-retention-hays",
+    "state": "MO",
+    "level": "judicial",
+    "office": "22nd Judicial Circuit (City of St. Louis), Circuit Judge, Division 14: retain Judge Heather J. Hays?",
+    "district": "22nd Judicial Circuit (City of St. Louis)",
+    "scope_plain": "Every St. Louis City voter. (St. Louis County voters decide on 21st Circuit judges instead.)",
+    "office_explainer": "Trial judge for the City of St. Louis: felonies, big lawsuits, family and probate cases. Yes keeps; no removes.",
+    "why_it_matters": "Yes/no question with no opponent; the judge stays if more people vote yes than no. If a judge loses, the governor picks a replacement from a nominating commission's list. The Missouri Bar's Judicial Performance Review Committee majority recommends retaining Judge Hays; it recommended retaining all 13 City of St. Louis judges on the 2026 ballot.",
+    "vote_for": 1,
+    "incumbent": "Heather J. Hays",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Heather J. Hays",
+        "party": null,
+        "incumbent": true,
+        "website": "https://yourmissourijudges.org/judges/2026-heather-hays/",
+        "website_confidence": "verified",
+        "background": "Circuit Judge, Division 14, 22nd Judicial Circuit (City of St. Louis), seeking retention.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Missouri Judicial Performance Review Committee",
+            "by_short": "Review committee",
+            "kind": "official_commission",
+            "rating": "Majority recommendation: retain",
+            "verdict": "favorable",
+            "vote": null,
+            "vote_note": "The committee publishes only its majority recommendation, not a vote count.",
+            "survey": null,
+            "survey_note": "Missouri's lawyer survey uses 1-to-5 ratings on many questions, with no single yes-or-no question, so there is no one number to show. The full results are on the judge's page.",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://yourmissourijudges.org/judges/2026-heather-hays/",
+            "verified_on": "2026-10-29",
+            "confidence": "verified"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
+      { "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges", "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/" },
+      { "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)", "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf" },
+      { "name": "The Missouri Bar: 2026 review of Judge Heather Hays", "url": "https://yourmissourijudges.org/judges/2026-heather-hays/" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "stlcity-retention-roither",
+    "state": "MO",
+    "level": "judicial",
+    "office": "22nd Judicial Circuit (City of St. Louis), Circuit Judge, Division 15: retain Judge David A. Roither?",
+    "district": "22nd Judicial Circuit (City of St. Louis)",
+    "scope_plain": "Every St. Louis City voter. (St. Louis County voters decide on 21st Circuit judges instead.)",
+    "office_explainer": "Trial judge for the City of St. Louis: felonies, big lawsuits, family and probate cases. Yes keeps; no removes.",
+    "why_it_matters": "Yes/no question with no opponent; the judge stays if more people vote yes than no. If a judge loses, the governor picks a replacement from a nominating commission's list. The Missouri Bar's Judicial Performance Review Committee majority recommends retaining Judge Roither; it recommended retaining all 13 City of St. Louis judges on the 2026 ballot.",
+    "vote_for": 1,
+    "incumbent": "David A. Roither",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "David A. Roither",
+        "party": null,
+        "incumbent": true,
+        "website": "https://yourmissourijudges.org/judges/2026-david-roither/",
+        "website_confidence": "verified",
+        "background": "Circuit Judge, Division 15, 22nd Judicial Circuit (City of St. Louis), seeking retention.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Missouri Judicial Performance Review Committee",
+            "by_short": "Review committee",
+            "kind": "official_commission",
+            "rating": "Majority recommendation: retain",
+            "verdict": "favorable",
+            "vote": null,
+            "vote_note": "The committee publishes only its majority recommendation, not a vote count.",
+            "survey": null,
+            "survey_note": "Missouri's lawyer survey uses 1-to-5 ratings on many questions, with no single yes-or-no question, so there is no one number to show. The full results are on the judge's page.",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://yourmissourijudges.org/judges/2026-david-roither/",
+            "verified_on": "2026-10-29",
+            "confidence": "verified"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
+      { "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges", "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/" },
+      { "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)", "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf" },
+      { "name": "The Missouri Bar: 2026 review of Judge David Roither", "url": "https://yourmissourijudges.org/judges/2026-david-roither/" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "stlcity-retention-stelzer",
+    "state": "MO",
+    "level": "judicial",
+    "office": "22nd Judicial Circuit (City of St. Louis), Circuit Judge, Division 30: retain Judge Michael F. Stelzer?",
+    "district": "22nd Judicial Circuit (City of St. Louis)",
+    "scope_plain": "Every St. Louis City voter. (St. Louis County voters decide on 21st Circuit judges instead.)",
+    "office_explainer": "Trial judge for the City of St. Louis: felonies, big lawsuits, family and probate cases. Yes keeps; no removes.",
+    "why_it_matters": "Yes/no question with no opponent; the judge stays if more people vote yes than no. If a judge loses, the governor picks a replacement from a nominating commission's list. The Missouri Bar's Judicial Performance Review Committee majority recommends retaining Judge Stelzer; it recommended retaining all 13 City of St. Louis judges on the 2026 ballot.",
+    "vote_for": 1,
+    "incumbent": "Michael F. Stelzer",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Michael F. Stelzer",
+        "party": null,
+        "incumbent": true,
+        "website": "https://yourmissourijudges.org/judges/2026-michael-stelzer/",
+        "website_confidence": "verified",
+        "background": "Circuit Judge, Division 30, 22nd Judicial Circuit (City of St. Louis), seeking retention.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Missouri Judicial Performance Review Committee",
+            "by_short": "Review committee",
+            "kind": "official_commission",
+            "rating": "Majority recommendation: retain",
+            "verdict": "favorable",
+            "vote": null,
+            "vote_note": "The committee publishes only its majority recommendation, not a vote count.",
+            "survey": null,
+            "survey_note": "Missouri's lawyer survey uses 1-to-5 ratings on many questions, with no single yes-or-no question, so there is no one number to show. The full results are on the judge's page.",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://yourmissourijudges.org/judges/2026-michael-stelzer/",
+            "verified_on": "2026-10-29",
+            "confidence": "verified"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
+      { "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges", "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/" },
+      { "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)", "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf" },
+      { "name": "The Missouri Bar: 2026 review of Judge Michael Stelzer", "url": "https://yourmissourijudges.org/judges/2026-michael-stelzer/" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "stlcity-retention-dauphin",
+    "state": "MO",
+    "level": "judicial",
+    "office": "22nd Judicial Circuit (City of St. Louis), Associate Circuit Judge, Division 28: retain Judge Michael R. Dauphin?",
+    "district": "22nd Judicial Circuit (City of St. Louis)",
+    "scope_plain": "Every St. Louis City voter. (St. Louis County voters decide on 21st Circuit judges instead.)",
+    "office_explainer": "Trial judge for misdemeanors, traffic, small claims, evictions and smaller lawsuits. Yes keeps; no removes.",
+    "why_it_matters": "Yes/no question with no opponent; the judge stays if more people vote yes than no. If a judge loses, the governor picks a replacement from a nominating commission's list. The Missouri Bar's Judicial Performance Review Committee majority recommends retaining Judge Dauphin; it recommended retaining all 13 City of St. Louis judges on the 2026 ballot.",
+    "vote_for": 1,
+    "incumbent": "Michael R. Dauphin",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Michael R. Dauphin",
+        "party": null,
+        "incumbent": true,
+        "website": "https://yourmissourijudges.org/judges/2026-michael-dauphin/",
+        "website_confidence": "verified",
+        "background": "Associate Circuit Judge, Division 28, 22nd Judicial Circuit (City of St. Louis), seeking retention.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Missouri Judicial Performance Review Committee",
+            "by_short": "Review committee",
+            "kind": "official_commission",
+            "rating": "Majority recommendation: retain",
+            "verdict": "favorable",
+            "vote": null,
+            "vote_note": "The committee publishes only its majority recommendation, not a vote count.",
+            "survey": null,
+            "survey_note": "Missouri's lawyer survey uses 1-to-5 ratings on many questions, with no single yes-or-no question, so there is no one number to show. The full results are on the judge's page.",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://yourmissourijudges.org/judges/2026-michael-dauphin/",
+            "verified_on": "2026-10-29",
+            "confidence": "verified"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
+      { "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges", "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/" },
+      { "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)", "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf" },
+      { "name": "The Missouri Bar: 2026 review of Judge Michael Dauphin", "url": "https://yourmissourijudges.org/judges/2026-michael-dauphin/" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "slps-board",
+    "state": "MO",
+    "level": "school",
+    "office": "St. Louis Board of Education (St. Louis Public Schools)",
+    "district": null,
+    "scope_plain": "Every St. Louis City voter: St. Louis Public Schools covers the whole city.",
+    "office_explainer": "The elected board that runs St. Louis Public Schools: hires the superintendent, sets the budget and votes on plans like school closures.",
+    "why_it_matters": "Two seats; you can vote for up to two. The board plans to vote Nov. 10 on the Future Ready plan, which would close schools; a newly elected member likely won't be seated in time for that vote (St. Louis Public Radio).",
+    "vote_for": 2,
+    "incumbent": "Donna R. Jones and Emily Hubbard",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Donna R. Jones",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "On the board since 2006. Lives in Walnut Park; a graduate of the district who sent her seven children to its schools. Endorsed by the teachers' union, AFT Local 420.",
+        "own_words": [
+          {
+            "text": "Against closing schools as laid out in the district's Future Ready plan, and against state intervention in the district or more charter schools in the city (St. Louis Public Radio's summary).",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          },
+          {
+            "text": "Wants more career and technical education and more financial literacy classes (St. Louis Public Radio's summary).",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Wendy Goss",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Career educator in St. Louis Public Schools and the Ferguson-Florissant district; now works for the education nonprofit PreventEd. Lives in Princeton Heights. Endorsed by the teachers' union, AFT Local 420.",
+        "own_words": [
+          {
+            "text": "Would support delaying the vote on the Future Ready plan for more community input; does not support shutting down the district's magnet and gifted programs (St. Louis Public Radio's summary).",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          },
+          {
+            "text": "Her two priorities: helping the district regain full accreditation and building trust in it (St. Louis Public Radio's summary).",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Emily Hubbard",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "On the board since 2022, running for a second term. Lives in Carondelet; a graduate assistant at Saint Louis University finishing a Ph.D. in education policy and equity. Four children in the district.",
+        "own_words": [
+          {
+            "text": "Supports the Future Ready plan and says the district must close schools to spread its resources better (St. Louis Public Radio's summary).",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          },
+          {
+            "text": "Wants more certified teachers and better student literacy over time (St. Louis Public Radio's summary).",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Aneetra Williams Jones",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "A graduate of St. Louis Public Schools, a chaplain and founder of the nonprofit Ankh Life; her children have attended the district. Lives in St. Louis Place.",
+        "own_words": [
+          {
+            "text": "Does not support closing schools or winding down the magnet program as the Future Ready plan lays out (St. Louis Public Radio's summary).",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          },
+          {
+            "text": "Wants more career, technical and workforce programs, so more students finish school with certifications (St. Louis Public Radio's summary).",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Zach Davis",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Social studies teacher at Cardinal Ritter College Prep, a pastor and an adjunct professor at Harris-Stowe State University. Lives in Jeff-Vander-Lou; his granddaughter is in the district. Ran for the board in 2025 and lost. (St. Louis Public Radio spells his name Zacheriah.)",
+        "own_words": [
+          {
+            "text": "Would like the board to delay its vote on the school closures plan, so families have more time to see how their schools are affected (St. Louis Public Radio's summary).",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          },
+          {
+            "text": "Wants high academic achievement across the district and better recruiting of qualified teachers (St. Louis Public Radio's summary).",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
+      { "name": "St. Louis Public Radio: St. Louis Voter Guide, Nov. 2026 (read Oct. 29)", "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois" }
+    ],
+    "confidence": "sourced"
+  }
+]

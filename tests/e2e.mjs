@@ -2218,87 +2218,87 @@ const darkIn = (page, sel) => page.$$eval(`${sel} .mini.dark`, (els) => els.filt
   await ctx.close();
 }
 {
-  // St. Louis City (63110): a ZIP in Missouri the guide has no city for, so the statewide races. Kevin's case.
+  // Springfield (65806): a ZIP in Missouri the guide has no city for, so the statewide races (St. Louis City, Kevin's first case, was this test until Oct 29, when it got its own ballot).
   const { ctx, page } = await newPage();
   const posts = await catchForm(page);
   // An address typed and found first, and a save link's hash in the page's address: neither may go along
   // with the one tap, the same rule the report flow keeps (Codex, Oct 26).
-  const answer = { result: { addressMatches: [{ matchedAddress: 'TEST ONE, SAINT LOUIS, MO, 63110', geographies: {
-    States: [{ STATE: '29' }], 'Incorporated Places': [{ BASENAME: 'St. Louis' }], 'ZIP Code Tabulation Areas': [{ ZCTA5: '63110' }] } }] } };
+  const answer = { result: { addressMatches: [{ matchedAddress: 'TEST ONE, SPRINGFIELD, MO, 65806', geographies: {
+    States: [{ STATE: '29' }], 'Incorporated Places': [{ BASENAME: 'Springfield' }], 'ZIP Code Tabulation Areas': [{ ZCTA5: '65806' }] } }] } };
   await page.route('https://geocoding.geo.census.gov/**', (route) => {
     const cb = new URL(route.request().url()).searchParams.get('callback');
     return route.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify(answer)})` });
   });
-  await openZip(page, '63110');
+  await openZip(page, '65806');
   await page.waitForSelector('#door .cov-card', { timeout: 15000 });
   const mo = INDEX_JSON.states.MO;
-  check('St. Louis City: the place line says statewide races only', (await text(page, '.door-place')) === 'Missouri, statewide races only · 63110', await text(page, '.door-place'));
-  check('St. Louis City: a gold card in step 1 leads with what’s missing, then what’s here and what isn’t', (await partsText(page, '#door .cov-card')) === `Your city’s races aren’t in the guide yet. Here now: Missouri’s statewide races, with picks from ${mo.with_picks} of ${mo.sources} sources. Not here yet: races for your city, county and districts. Ask Kevin to add my city One tap. It sends Kevin your ZIP and nothing about you. It usually takes about a day. Voting before then? Your official sample ballot lists every race.`
+  check('Springfield: the place line says statewide races only', (await text(page, '.door-place')) === 'Missouri, statewide races only · 65806', await text(page, '.door-place'));
+  check('Springfield: a gold card in step 1 leads with what’s missing, then what’s here and what isn’t', (await partsText(page, '#door .cov-card')) === `Your city’s races aren’t in the guide yet. Here now: Missouri’s statewide races, with picks from ${mo.with_picks} of ${mo.sources} sources. Not here yet: races for your city, county and districts. Ask Kevin to add my city One tap. It sends Kevin your ZIP and nothing about you. It usually takes about a day. Voting before then? Your official sample ballot lists every race.`
     && !!(await page.$('#door .cov-card.notice.strong')) && !!(await page.$('.door-where .door-place + .cov-card')), await partsText(page, '#door .cov-card'));
-  check('St. Louis City: its button is the one dark one, and the sample ballot is a link in a sentence', (await darkIn(page, '#door .cov-card')).join('|') === 'Ask Kevin to add my city' && /^https:/.test((await page.getAttribute('#door .cov-card .cov-sb a', 'href')) || ''));
+  check('Springfield: its button is the one dark one, and the sample ballot is a link in a sentence', (await darkIn(page, '#door .cov-card')).join('|') === 'Ask Kevin to add my city' && /^https:/.test((await page.getAttribute('#door .cov-card .cov-sb a', 'href')) || ''));
   const moTop = await sheetTop(page);
-  check('St. Louis City: step 2 says its one line with no button, and the sources sheet says it quietly, scoped to the statewide races', (await text(page, '#setup .su-src')) === ONE_LINE && !(await page.$('#setup .su-stat .mini'))
+  check('Springfield: step 2 says its one line with no button, and the sources sheet says it quietly, scoped to the statewide races', (await text(page, '#setup .su-src')) === ONE_LINE && !(await page.$('#setup .su-stat .mini'))
     && /^Your sources have picks in \d+ of the \d+ statewide races here\.$/.test(moTop.mine) && moTop.cov === `${mo.sources} sources for Missouri’s statewide races, ${mo.with_picks} with picks. Last checked ${day(mo.checked)}.`, `${moTop.cov} / ${moTop.mine}`);
   await tap(page, '.front [data-act="addr-open"]');
   await page.fill('#addr-in', '12 Testing Lane');
   await page.locator('form[data-form="addr"] button[type=submit]').tap();
   await page.waitForSelector('.door-found', { timeout: 15000 });
   await page.waitForSelector('#door .cov-card', { timeout: 15000 });
-  await page.evaluate(() => history.replaceState(history.state, '', `${location.pathname}${location.search}#v1~MO~-~63110~zz9pick`));
+  await page.evaluate(() => history.replaceState(history.state, '', `${location.pathname}${location.search}#v1~MO~-~65806~zz9pick`));
   const NEVER = /testing lane|test one|zz9pick|v1~/i;
   // A send that fails says so under the button, with the form in a new tab, and the button stays.
   posts.fail = true;
   await tap(page, '#door [data-act="cov-ask"]');
   await page.waitForSelector('#door .cov-card .rp-fail', { timeout: 15000 });
-  check('St. Louis City: a send that fails says so, with the form in a new tab, and Ask Kevin again', /^That didn’t send\. Open the form in a new tab instead\.$/.test(await text(page, '#door .cov-card .rp-fail')) && /viewform\?/.test((await page.getAttribute('#door .cov-card a[data-rp-alt]', 'href')) || '') && !!(await page.$('#door [data-act="cov-ask"]')), await text(page, '#door .cov-card'));
+  check('Springfield: a send that fails says so, with the form in a new tab, and Ask Kevin again', /^That didn’t send\. Open the form in a new tab instead\.$/.test(await text(page, '#door .cov-card .rp-fail')) && /viewform\?/.test((await page.getAttribute('#door .cov-card a[data-rp-alt]', 'href')) || '') && !!(await page.$('#door [data-act="cov-ask"]')), await text(page, '#door .cov-card'));
   posts.fail = false;
   await tap(page, '#door [data-act="cov-ask"]');
   await page.waitForSelector('#door .cov-card[role="status"]', { timeout: 15000 });
   const p = posts.list[posts.list.length - 1];
-  check('St. Louis City: one tap posts the five answers, nothing typed', posts.list.length === 2 && FORM_IDS.every((k) => p.has(k)) && p.get('entry.90887649') === 'Please add my city' && p.get('entry.628621310') === 'Missouri, 63110'
-    && /^Please add the city for ZIP 63110 in Missouri \(one-tap from the page\)\n\nSent along:\nPage: First page\nPlace: Missouri, 63110\nPage link: /.test(p.get('entry.780704302')) && p.get('entry.2040687555') === '' && !/Browser:/.test(p.get('entry.780704302')), p ? p.toString() : 'no post');
+  check('Springfield: one tap posts the five answers, nothing typed', posts.list.length === 2 && FORM_IDS.every((k) => p.has(k)) && p.get('entry.90887649') === 'Please add my city' && p.get('entry.628621310') === 'Missouri, 65806'
+    && /^Please add the city for ZIP 65806 in Missouri \(one-tap from the page\)\n\nSent along:\nPage: First page\nPlace: Missouri, 65806\nPage link: /.test(p.get('entry.780704302')) && p.get('entry.2040687555') === '' && !/Browser:/.test(p.get('entry.780704302')), p ? p.toString() : 'no post');
   const sent = postText(p);
-  check('St. Louis City: the one tap never carries the address typed or found, the save link’s hash, any contact, or any query but the test date', !NEVER.test(sent) && p.get('entry.2040687555') === '' && !/#/.test(sent)
+  check('Springfield: the one tap never carries the address typed or found, the save link’s hash, any contact, or any query but the test date', !NEVER.test(sent) && p.get('entry.2040687555') === '' && !/#/.test(sent)
     && [...sent.matchAll(/\?([^\s)]*)/g)].every((m) => /^today=\d{4}-\d{2}-\d{2}$/.test(m[1])) && !/@|\(\d{3}\)|\d{3}-\d{4}/.test(sent.replace(/\d{4}-\d{2}-\d{2}/g, '')), sent.replace(/\n/g, ' / '));
-  check('St. Louis City: then the card keeps its slot and gold: a tick, "Request sent.", the day, an outline Tell me when it’s in', (await partsText(page, '#door .cov-card')) === 'Request sent. Kevin is adding your city. You asked today. It usually takes about a day, so check back tomorrow. Until then, you can pick your statewide races below. Voting before then? Your official sample ballot lists every race. Tell me when it’s in'
+  check('Springfield: then the card keeps its slot and gold: a tick, "Request sent.", the day, an outline Tell me when it’s in', (await partsText(page, '#door .cov-card')) === 'Request sent. Kevin is adding your city. You asked today. It usually takes about a day, so check back tomorrow. Until then, you can pick your statewide races below. Voting before then? Your official sample ballot lists every race. Tell me when it’s in'
     && !!(await page.$('#door .cov-card.notice.strong .cov-tick')) && (await darkIn(page, '#door .cov-card')).length === 0, await partsText(page, '#door .cov-card'));
-  check('St. Louis City: focus moves to the card’s lead, which a screen reader hears', (await focusedFk(page)) === 'cov-lead', await focusedFk(page));
+  check('Springfield: focus moves to the card’s lead, which a screen reader hears', (await focusedFk(page)) === 'cov-lead', await focusedFk(page));
   const moAsked = (await sheetTop(page)).cov;
-  check('St. Louis City: the sources sheet’s quiet line adds the day', moAsked.endsWith('You asked for your city’s races today.'), moAsked);
+  check('Springfield: the sources sheet’s quiet line adds the day', moAsked.endsWith('You asked for your city’s races today.'), moAsked);
   const asked = await page.evaluate(() => [localStorage.getItem('vg-asked'), localStorage.getItem('vg2')]);
-  check('St. Louis City: remembered on this device under its own key, not in the saved ballots', /"z:63110":"\d{4}-\d{2}-\d{2}"/.test(asked[0] || '') && !/63110/.test(asked[1] || ''), asked.join(' | '));
+  check('Springfield: remembered on this device under its own key, not in the saved ballots', /"z:65806":"\d{4}-\d{2}-\d{2}"/.test(asked[0] || '') && !/65806/.test(asked[1] || ''), asked.join(' | '));
   // "Tell me when it's in": the request shown as text, an email or phone the one field, a follow-up row.
   await tap(page, '#door [data-fk="cov-hear"]');
   await page.waitForSelector('.sheet-panel.shelf[data-hint="follow"]');
-  check('St. Louis City: Tell me when it’s in opens its own sheet, the request as text, an email or phone the one required field', (await text(page, '.sheet-panel.shelf #sh-h')) === 'Tell me when it’s in'
-    && (await text(page, '.sheet-panel.shelf .rp-req')) === 'Your request: your city’s races, for ZIP 63110 in Missouri. Sent today.' && JSON.stringify(await rfVals(page)) === '{"reach":""}' && (await page.getAttribute('#rf-reach', 'aria-required')) === 'true'
+  check('Springfield: Tell me when it’s in opens its own sheet, the request as text, an email or phone the one required field', (await text(page, '.sheet-panel.shelf #sh-h')) === 'Tell me when it’s in'
+    && (await text(page, '.sheet-panel.shelf .rp-req')) === 'Your request: your city’s races, for ZIP 65806 in Missouri. Sent today.' && JSON.stringify(await rfVals(page)) === '{"reach":""}' && (await page.getAttribute('#rf-reach', 'aria-required')) === 'true'
     && (await text(page, '.rp-intro')) === 'Your request is in. Leave an email or phone number and Kevin will tell you when your city’s races are in the guide.' && (await text(page, SEND)) === 'Tell me when it’s in', `${JSON.stringify(await rfVals(page))} ${await text(page, '.rp-req')}`);
   await tap(page, SEND);
-  check('St. Louis City: it asks for the email or phone first', (await text(page, '#rf-err')) === 'Type an email or phone first.' && posts.list.length === 2);
+  check('Springfield: it asks for the email or phone first', (await text(page, '#rf-err')) === 'Type an email or phone first.' && posts.list.length === 2);
   await page.fill('#rf-reach', 'friend@example.org');
   await tap(page, SEND);
   await page.waitForSelector('.rp-sent');
   const f = posts.list[posts.list.length - 1];
-  check('St. Louis City: it posts a follow-up, never a second "Please add my city"', posts.list.length === 3 && FORM_IDS.every((k) => f.has(k)) && f.get('entry.90887649') === 'Follow-up: tell me when it’s in' && f.get('entry.628621310') === 'Missouri, 63110'
-    && f.get('entry.780704302').startsWith(`Tell me when the city for ZIP 63110 is in. Follow-up to the one-tap request from ${day(TODAY)}.\n\nSent along:\n`) && f.get('entry.2040687555') === 'friend@example.org' && !/Please add/.test(postText(f)) && !NEVER.test(postText(f)), f ? f.toString() : 'no post');
-  check('St. Louis City: sent, "Got it." and the email never shown back', (await text(page, '.rp-sent p')) === 'Got it. Kevin will tell you when it’s in.' && !/friend@example/.test(await text(page, '.sheet-panel.shelf')));
+  check('Springfield: it posts a follow-up, never a second "Please add my city"', posts.list.length === 3 && FORM_IDS.every((k) => f.has(k)) && f.get('entry.90887649') === 'Follow-up: tell me when it’s in' && f.get('entry.628621310') === 'Missouri, 65806'
+    && f.get('entry.780704302').startsWith(`Tell me when the city for ZIP 65806 is in. Follow-up to the one-tap request from ${day(TODAY)}.\n\nSent along:\n`) && f.get('entry.2040687555') === 'friend@example.org' && !/Please add/.test(postText(f)) && !NEVER.test(postText(f)), f ? f.toString() : 'no post');
+  check('Springfield: sent, "Got it." and the email never shown back', (await text(page, '.rp-sent p')) === 'Got it. Kevin will tell you when it’s in.' && !/friend@example/.test(await text(page, '.sheet-panel.shelf')));
   await tap(page, '[data-fk="report-done"]');
   await settle(page);
   // A reload keeps it on this device (without the test's save-link hash, which would open that ballot instead).
   await page.evaluate(() => history.replaceState(history.state, '', `${location.pathname}${location.search}`));
   await page.reload();
   await page.waitForSelector('#zip');
-  await page.fill('#zip', '63110');
+  await page.fill('#zip', '65806');
   await page.waitForSelector('#door .cov-card', { timeout: 15000 });
-  check('St. Louis City: after a reload, the card still says Request sent', (await text(page, '#door .cov-card .cov-lead')) === 'Request sent. Kevin is adding your city.', await text(page, '#door .cov-card'));
+  check('Springfield: after a reload, the card still says Request sent', (await text(page, '#door .cov-card .cov-lead')) === 'Request sent. Kevin is adding your city.', await text(page, '#door .cov-card'));
   await plainSetup(page);
   await page.waitForSelector('#plan', { timeout: 15000 });
-  check('St. Louis City: on the ballot the card sits under the masthead, above the next step', (await text(page, '#r-restore .cov-card .cov-lead')) === 'Request sent. Kevin is adding your city.' && (await text(page, '#r-restore .cov-card .row-btns')) === 'Tell me when it’s in', await text(page, '#r-restore'));
-  check('St. Louis City: the head’s quiet line says statewide races only and the day, and no sample ballot is dark', (await text(page, '.bhead .picks-cov')).startsWith('Statewide races only: ') && (await text(page, '.bhead .picks-cov')).endsWith('You asked for your city’s races today.')
+  check('Springfield: on the ballot the card sits under the masthead, above the next step', (await text(page, '#r-restore .cov-card .cov-lead')) === 'Request sent. Kevin is adding your city.' && (await text(page, '#r-restore .cov-card .row-btns')) === 'Tell me when it’s in', await text(page, '#r-restore'));
+  check('Springfield: the head’s quiet line says statewide races only and the day, and no sample ballot is dark', (await text(page, '.bhead .picks-cov')).startsWith('Statewide races only: ') && (await text(page, '.bhead .picks-cov')).endsWith('You asked for your city’s races today.')
     && !(await page.$$eval('a.mini.dark', (els) => els.some((e) => /sample ballot/i.test(e.textContent)))), await text(page, '.bhead .picks-cov'));
-  check('St. Louis City: nothing posted on its own after that', posts.list.length === 3);
-  await noSideScroll(page, 'St. Louis City');
-  noErrors(page, 'St. Louis City');
+  check('Springfield: nothing posted on its own after that', posts.list.length === 3);
+  await noSideScroll(page, 'Springfield');
+  noErrors(page, 'Springfield');
   await ctx.close();
 }
 // A thin place: none of its own sources has picks and some of its races have none from anyone (model/coverage.ts).
@@ -2308,7 +2308,7 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
 {
   // Pressing Go on a phone (what most phones do with a ZIP) lands on the ballot: the card's lead is on the first
   // screen, and it holds the only dark button there.
-  for (const zip of ['63110', THIN ? THIN.zip : null].filter(Boolean)) {
+  for (const zip of ['65806', THIN ? THIN.zip : null].filter(Boolean)) {
     const { ctx, page } = await newPage({ viewport: { width: 390, height: 844 } });
     await openZip(page, zip);
     // Wait for the ZIP's lookup to land first (its card shows in step 1). On a touch screen a lookup that
@@ -3960,6 +3960,83 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
   check('Address on the first page: District 6 puts Aurora’s U.S. House race on the ballot, no longer a maybe', !!(await page.$('#i-co-us-house-6')) && !/Maybe on your ballot/.test(await text(page, '#i-co-us-house-6')), await text(page, '#i-co-us-house-6'));
   noErrors(page, 'Address on the first page');
   await ctx.close();
+}
+// 63120 is the City of St. Louis and Pine Lawn, in St. Louis County (review of #46, Oct 29). The ZIP alone asks
+// which; an address settles it by the Census's county code (29510 the City, 29189 the County, both "St. Louis"),
+// on the first page and on a City ballot, which moves to Missouri's statewide races with the picks they share.
+// Census is answered here, with made-up addresses.
+{
+  const stl = (city) => ({ result: { addressMatches: [{ matchedAddress: city ? 'TEST ONE, ST LOUIS, MO, 63120' : 'TEST TWO, PINE LAWN, MO, 63120', geographies: {
+    States: [{ STATE: '29' }], 'Incorporated Places': [{ BASENAME: city ? 'St. Louis' : 'Pine Lawn' }], '119th Congressional Districts': [{ BASENAME: '1' }],
+    Counties: [city ? { GEOID: '29510', STATE: '29', COUNTY: '510', NAME: 'St. Louis city', BASENAME: 'St. Louis' } : { GEOID: '29189', STATE: '29', COUNTY: '189', NAME: 'St. Louis County', BASENAME: 'St. Louis' }] } }] } });
+  const route = async (page, box) => page.route('https://geocoding.geo.census.gov/**', (r) => {
+    const cb = new URL(r.request().url()).searchParams.get('callback');
+    return r.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify(box.answer)})` });
+  });
+  const lookUp = async (page, open) => {
+    await tap(page, open);
+    await page.fill('#addr-in', 'a test lookup');
+    await page.locator('form[data-form="addr"] button[type=submit]').tap();
+  };
+  const OUT = 'Your address is in St. Louis County, outside the City of St. Louis, so here are Missouri’s statewide races.';
+  {
+    // The ZIP alone: the City, Pine Lawn (the state's races) or not sure (the same, saying the ZIP is split).
+    const { ctx, page } = await newPage();
+    const box = { answer: stl(true) };
+    await route(page, box);
+    await openZip(page, '63120');
+    await page.waitForSelector('[data-fk="cp-outside"]', { timeout: 15000 });
+    check('St. Louis 63120: the ZIP asks between the City and Pine Lawn, never opening the City', !!(await page.$('[data-fk="cp-st-louis-city-mo"]')) && (await partsText(page, '[data-fk="cp-outside"]')) === 'Pine Lawn, in St. Louis County Missouri’s statewide races only, for now' && !(await page.$('.door-place')), await text(page, '.choose'));
+    check('St. Louis 63120: "I’m not sure" starts with the statewide races', /Start with Missouri’s statewide races/.test(await text(page, '[data-fk="cp-unsure"]')), await text(page, '[data-fk="cp-unsure"]'));
+    await tap(page, '[data-fk="cp-unsure"]');
+    await page.waitForSelector('#door .cov-card', { timeout: 15000 });
+    const card = await partsText(page, '#door .cov-card');
+    check('St. Louis 63120: not sure, the card says the ZIP is split and offers the address, never "your city is in"', /^Missouri, statewide races only/.test(await text(page, '.door-place')) && /^63120 is split between the City of St\. Louis and Pine Lawn, in St\. Louis County\. Here now: Missouri’s statewide races, the same for both, with picks from \d+ of \d+ sources\. Live in the City of St\. Louis\? Use your address and we’ll open its ballot\. Use my address/.test(card) && !/guide now|Ask Kevin/.test(card), card);
+    await lookUp(page, '#door [data-fk="cov-addr"]');
+    await page.waitForSelector('.door-found', { timeout: 15000 });
+    check('St. Louis 63120: a City address from there opens the City', /^St\. Louis/.test(await text(page, '.door-place span')) && !(await page.$('.addr-moved')), await text(page, '.door-place'));
+    noErrors(page, 'St. Louis 63120 not sure');
+    await ctx.close();
+  }
+  {
+    // From the place question, a Pine Lawn address: the statewide races, saying why, and the card asks for the town.
+    const { ctx, page } = await newPage();
+    const box = { answer: stl(false) };
+    await route(page, box);
+    await openZip(page, '63120');
+    await page.waitForSelector('[data-fk="cp-outside"]', { timeout: 15000 });
+    await lookUp(page, '.choose [data-act="addr-open"]');
+    await page.waitForSelector('.door-found', { timeout: 15000 });
+    check('St. Louis 63120: a County address from the place question gets the statewide races and says why', /^Missouri, statewide races only/.test(await text(page, '.door-place')) && (await text(page, '.door-where .addr-moved')) === OUT, `${await text(page, '.door-place')} | ${await text(page, '.addr-moved')}`);
+    check('St. Louis 63120: its card asks for the town, not "split" or "your city is in"', /^Your city’s races aren’t in the guide yet\./.test(await partsText(page, '#door .cov-card')) && !!(await page.$('#door [data-act="cov-ask"]')), await partsText(page, '#door .cov-card'));
+    noErrors(page, 'St. Louis 63120 County address');
+    await ctx.close();
+  }
+  {
+    // A City ballot, then a Pine Lawn address: the ballot moves to the statewide races, keeping the pick they share.
+    const { ctx, page } = await newPage();
+    const box = { answer: stl(false) };
+    await route(page, box);
+    await openZip(page, '63120');
+    await page.waitForSelector('[data-fk="cp-st-louis-city-mo"]', { timeout: 15000 });
+    await tap(page, '[data-fk="cp-st-louis-city-mo"]');
+    await throughSetup(page);
+    check('St. Louis 63120: picking the City opens its ballot', !!(await page.$('#i-stlcity-recorder-deeds')), await text(page, '.mast'));
+    await openRow(page, 'mo-amendment-3');
+    await tap(page, '#i-mo-amendment-3 [data-act="pick"][data-v="YES"]');
+    await lookUp(page, '.addrbox [data-act="addr-open"]');
+    await page.waitForSelector('.addrbox .addr-moved', { timeout: 15000 });
+    check('St. Louis 63120: a County address moves the ballot to the statewide races and says why, with the pick kept', (await text(page, '.addrbox .addr-moved')) === `${OUT} We kept your pick for a race on both ballots.`
+      && !(await page.$('#i-stlcity-recorder-deeds')) && !(await page.$('#i-mo-us-house-1')) && /Missouri/.test(await text(page, '.mast .place')), `${await text(page, '.addrbox .addr-moved')} | ${await text(page, '.mast .place')}`);
+    check('St. Louis 63120: the moved ballot still shows what the Census found, this visit', /^Found: TEST TWO, PINE LAWN/i.test(await text(page, '.addrbox .addr-found')), await text(page, '.addrbox .addr-found'));
+    check('St. Louis 63120: the shared pick came along', !(await page.$('#i-mo-amendment-3[data-undecided]')) && !!(await page.$('#i-mo-amendment-3')), await text(page, '#i-mo-amendment-3'));
+    check('St. Louis 63120: the moved ballot’s card asks for the town, never "your city is in"', /^Your city’s races aren’t in the guide yet\./.test(await partsText(page, '#r-restore .cov-card')), await partsText(page, '#r-restore .cov-card'));
+    await page.reload();
+    await page.waitForSelector('#plan', { timeout: 15000 });
+    check('St. Louis 63120: after a reload it stays the statewide ballot, still not "your city is in"', !(await page.$('#i-stlcity-recorder-deeds')) && /^Your city’s races aren’t in the guide yet\./.test(await partsText(page, '#r-restore .cov-card')) && !(await page.$('.addr-moved')), await partsText(page, '#r-restore .cov-card'));
+    noErrors(page, 'St. Louis 63120 moved ballot');
+    await ctx.close();
+  }
 }
 // A DC ward's ZIP: nothing on the ballot turns on the address, so there is no address box before a
 // lookup; after one from the first page, the box holds only what was found, this visit; after a

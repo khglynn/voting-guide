@@ -5,6 +5,9 @@
   "counties": [
     "Davidson"
   ],
+  "county_fips": [
+    "47037"
+  ],
   "county_election_office": {
     "name": "Davidson County Election Commission, 1281 Murfreesboro Pike, Third Floor, Nashville",
     "url": "https://www.nashville.gov/departments/elections",
@@ -201,6 +204,10 @@
     {
       "name": "Tennessee Secretary of State: voter ID requirements",
       "url": "https://sos.tn.gov/elections/voter-id-requirements"
+    },
+    {
+      "name": "U.S. Census Bureau: county codes (Davidson County is 47037)",
+      "url": "https://www.census.gov/library/reference/code-lists/ansi.html"
     }
   ],
   "notes": "Today, Thursday, October 29, is the last day of early voting: any of 15 sites, 8 AM to 7 PM. On Election Day, Tuesday, November 3, polls are open 7 AM to 7 PM, and you must vote at your assigned polling place. One change this year: voters assigned to the Downtown Library (District 19, Precinct 5) vote at the Howard Office Building, 700 President Ronald Reagan Way. Bring a Tennessee or federal photo ID; it can be expired, but college IDs and out-of-state licenses don't count. Absentee ballots go back by mail only and must arrive by 7 PM on November 3. Your U.S. House district may be new this year: the state redrew the lines in May 2026, and your yellow voter card from June shows the new one.",

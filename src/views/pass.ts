@@ -10,6 +10,7 @@ import { S } from '../state';
 import { esc, fmtDate, todayISO } from '../util';
 import { clock, isMailState, localHowto, nextStep } from '../model/plan';
 import { ext, isOpen } from './common';
+import { countyName } from './ledger';
 import { trustHTML } from './trust';
 
 /* Optional data from data/get-involved.json. Read defensively: any field may be missing. */
@@ -113,7 +114,7 @@ export function messages(): { fam: string | null; pub: string | null } {
     const vary = (sh.early_in_person as { counties_vary?: 'minimum' | 'varies' }).counties_vary;
     if (sh.early_in_person.available && ep.start && ep.end && ep.end >= todayISO()) {
       const span = `${fmtDate(ep.start)} through ${fmtDate(ep.end)}`;
-      const county = own && place!.counties && place!.counties.length === 1 ? `${place!.counties[0]} County` : place ? place.label.replace(/\s*\(.*\)$/, '') : '';
+      const county = own && place!.counties && place!.counties.length === 1 ? countyName(place!) : place ? place.label.replace(/\s*\(.*\)$/, '') : '';
       dates.push(own ? `Early voting in ${county} runs ${span}.`
         : vary === 'minimum' ? `Every ${b.stateName} county offers early voting ${span}. Some counties start earlier or finish later; check yours.`
         : vary === 'varies' ? `Early voting dates vary by county and run through ${fmtDate(ep.end)}; check yours.`

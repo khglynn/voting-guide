@@ -1,0 +1,283 @@
+{
+  "id": "st-louis-city-mo",
+  "label": "St. Louis (the City of St. Louis, not St. Louis County)",
+  "state": "MO",
+  "counties": [
+    "St. Louis City"
+  ],
+  "county_label": "City of St. Louis",
+  "county_fips": [
+    "29510"
+  ],
+  "county_election_office": {
+    "name": "Board of Election Commissioners for the City of St. Louis, 300 N. Tucker Blvd., St. Louis, MO 63101 (the City board downtown, not the St. Louis County board in St. Ann)",
+    "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/index.cfm",
+    "phone": "314-622-4336",
+    "phone_label": "General line",
+    "lines": [
+      {
+        "label": "Absentee Department",
+        "phone": "314-622-3230",
+        "hours": "Monday to Friday, 8 AM to 5 PM. Also 314-622-3319, or email stlcityabsentee@stlouis-mo.gov."
+      }
+    ],
+    "hours": "Monday to Friday, 8 AM to 5 PM, and Saturday, Oct 31, 9 AM to 1 PM, for absentee voting in person.",
+    "source": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/voter/absentee/absentee-ballot-and-voting.cfm"
+  },
+  "sample_ballot_url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf",
+  "zips": [
+    "63101",
+    "63102",
+    "63103",
+    "63104",
+    "63106",
+    "63107",
+    "63108",
+    "63109",
+    "63110",
+    "63111",
+    "63112",
+    "63113",
+    "63115",
+    "63116",
+    "63118",
+    "63120",
+    "63139",
+    "63147"
+  ],
+  "zip_caveats": "Every voter in the City gets the same City offices, the 22nd Circuit judges, the St. Louis Public Schools board race and City Propositions 1 and B. The whole City is in Missouri's 1st U.S. House district. Only the state legislature splits it: the City has eight state House districts on the ballot (76 to 82 and 84), and most ZIPs reach into two or more of them (63110 alone touches four). Part of the City is in state Senate District 5, which has no race this year; the rest is District 4. Your address settles all three. One ZIP here crosses the City line: in 63120, a corner of the ZIP is Pine Lawn, in St. Louis County, which votes on the County's ballot, so the guide asks which one you live in (zip_outside) and gives Pine Lawn Missouri's statewide races. A few blocks of the City have ZIPs that are mostly St. Louis County (63117, 63119, 63123, 63130, 63133, 63136, 63137 and 63143): those ZIPs alone open Missouri's statewide races (63119 opens Webster Groves), and an address lookup moves a City address to this ballot. If you live in the City with one of those ZIPs, this is your ballot, and your elections office is the City's board on Tucker, not the County's in St. Ann. The Census's county code tells the City (29510) from St. Louis County (29189), whose names it gives alike (county_fips).",
+  "zip_outside": {
+    "63120": "Pine Lawn, in St. Louis County"
+  },
+  "contest_ids": [
+    "mo-state-auditor",
+    "mo-retention-wilson",
+    "mo-retention-lay",
+    "mo-retention-navarro-mckelvey",
+    "mo-retention-quigless",
+    "mo-us-house-1",
+    "mo-sd-4",
+    "mo-hd-76",
+    "mo-hd-77",
+    "mo-hd-78",
+    "mo-hd-79",
+    "mo-hd-80",
+    "mo-hd-81",
+    "mo-hd-82",
+    "mo-hd-84",
+    "stlcity-collector-revenue",
+    "stlcity-license-collector",
+    "stlcity-recorder-deeds",
+    "stlcity-retention-wright",
+    "stlcity-retention-hogan",
+    "stlcity-retention-fowler",
+    "stlcity-retention-llewellyn",
+    "stlcity-retention-whyte",
+    "stlcity-retention-boyer",
+    "stlcity-retention-millikan",
+    "stlcity-retention-stovall-reid",
+    "stlcity-retention-connolly",
+    "stlcity-retention-hays",
+    "stlcity-retention-roither",
+    "stlcity-retention-stelzer",
+    "stlcity-retention-dauphin",
+    "slps-board",
+    "mo-prop-a",
+    "mo-amendment-3",
+    "mo-amendment-6",
+    "mo-amendment-7",
+    "mo-amendment-8",
+    "stlcity-prop-1",
+    "stlcity-prop-b"
+  ],
+  "district_finders": [
+    {
+      "office_match": "Missouri State Senate",
+      "label": "Look yourself up on the state's voter lookup",
+      "url": "https://s1.sos.mo.gov/elections/voterlookup/"
+    },
+    {
+      "office_match": "Missouri House of Representatives",
+      "label": "Look yourself up on the state's voter lookup",
+      "url": "https://s1.sos.mo.gov/elections/voterlookup/"
+    }
+  ],
+  "early_in_person": {
+    "start": "2026-10-20",
+    "end": "2026-11-02",
+    "hours_note": "City of St. Louis: no-excuse absentee voting in person, Tuesday, October 20 through Monday, November 2, with photo ID, at eight sites. The Election Board, 300 N. Tucker Blvd., is open Monday to Friday, 8 AM to 5 PM, and Saturday, Oct 31, 9 AM to 1 PM. Six library branches (Buder, Carpenter, Julia Davis, Kingshighway, Schlafly and Walnut Park) are open Monday 1 to 4 PM, Tuesday 11 AM to 5 PM, Wednesday and Thursday 11 AM to 5 PM (to 7 PM at Buder, Schlafly and Julia Davis), and Friday and Saturday 11 AM to 4:30 PM, closed Sundays. St. Joan of Arc's gym is open Oct 27 to Nov 2 with the longer hours (to 7 PM Wednesday and Thursday). Call the library to confirm its hours.",
+    "hours_short": "Libraries open 11 AM most days (1 PM Mondays), closed Sundays; the Board is open weekdays 8 to 5.",
+    "lookup_url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/voter/polling-places/index.cfm",
+    "source": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/voter/polling-places/index.cfm",
+    "confidence": "verified"
+  },
+  "lookups": {
+    "early_in_person": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/voter/polling-places/index.cfm",
+    "election_day": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/voter/polling-places/index.cfm",
+    "tracking": "https://voteroutreach.sos.mo.gov/portal/"
+  },
+  "situations": [
+    {
+      "id": "moved_in_state",
+      "short": "You can still vote: if you moved within the City, update your address at a City polling place.",
+      "answer": "If you're registered in Missouri, you can still vote even though the registration deadline passed. If you moved from one City of St. Louis address to another, change your address on Election Day at a City polling place.",
+      "steps": [
+        "Moved here from another Missouri county? If your old registration is still active, file a change of address in person at the City Election Board, 300 N. Tucker Blvd., up through Election Day.",
+        "Remember: the City of St. Louis and St. Louis County are separate election offices."
+      ],
+      "source": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/voter/name-change.cfm",
+      "confidence": "verified"
+    },
+    {
+      "id": "moved_out_of_state",
+      "short": "Missouri's deadline was Oct 7, so register with the City Election Board now for next time.",
+      "steps": [
+        "Register through the Secretary of State online, or in person at the City Election Board, 300 N. Tucker Blvd.",
+        "Get a Missouri driver or nondriver license; an out-of-state license doesn't count as voter ID here.",
+        "Moved away from Missouri for good? You'd vote in your new state instead."
+      ],
+      "source": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/voter/voter-registration.cfm",
+      "confidence": "sourced"
+    },
+    {
+      "id": "not_registered",
+      "short": "Check first, since you may be registered already: the City Election Board is 314-622-4336.",
+      "steps": [
+        "Look yourself up on the state's voter lookup, or call the City Election Board at 314-622-4336, Monday to Friday, 8 AM to 5 PM.",
+        "Registered but moved within Missouri? You can still vote; see the moving question.",
+        "Truly not registered? Register now so you're set for next time."
+      ],
+      "source": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/voter/check-registration.cfm",
+      "confidence": "verified"
+    },
+    {
+      "id": "wrong_polling_place",
+      "short": "In the City, any of its 57 polling places works for any City voter.",
+      "answer": "Any voter registered at an address in the City of St. Louis can vote at any of the City's 57 polling places on Election Day, so you're probably fine where you are, as long as it's a City site.",
+      "steps": [
+        "Make sure you're at a City of St. Louis site, not a St. Louis County one.",
+        "Voting at Machacek Library? It has moved across the street to Storyline Church, which shares the parking lot."
+      ],
+      "source": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/voter/polling-places/index.cfm",
+      "confidence": "verified"
+    },
+    {
+      "id": "no_mail_ballot_or_lost",
+      "short": "Just vote in person, at an early site through Nov 2 or any City polling place on Nov 3.",
+      "steps": [
+        "Vote no-excuse absentee in person through Monday, Nov 2, with photo ID, at the City Election Board, 300 N. Tucker Blvd., or one of its library sites.",
+        "Or vote at any of the City's 57 polling places on Nov 3, 6 AM to 7 PM.",
+        "Questions? Call the City's Absentee Department, 314-622-3230 or 314-622-3319, Monday to Friday, 8 AM to 5 PM, or email stlcityabsentee@stlouis-mo.gov."
+      ],
+      "source": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/voter/absentee/absentee-ballot-and-voting.cfm",
+      "confidence": "verified"
+    },
+    {
+      "id": "name_changed",
+      "short": "You can still vote: tell the election judges, then update your name with the City Election Board.",
+      "steps": [
+        "Bring your photo ID.",
+        "Update your record afterward with the City Election Board, 300 N. Tucker Blvd., or by mail with the voter registration form, box 3 checked for a name change."
+      ],
+      "source": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/voter/name-change.cfm",
+      "confidence": "verified"
+    },
+    {
+      "id": "college_student",
+      "answer": "Registration closed October 7, so you vote where you're already registered. The mail ballot request deadline was October 21. If you already have a mail ballot, it must reach the Board of Elections by 7 PM Nov 3. Postmarks do not count, so hand it in or send a close relative. If you do not have one, you can still vote in person: no-excuse absentee voting through Monday, Nov 2, or at any City polling place on Nov 3. Bring a photo ID.",
+      "source": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/voter/absentee/absentee-ballot-and-voting.cfm",
+      "confidence": "sourced"
+    },
+    {
+      "id": "away_on_election_day",
+      "answer": "Vote early in person with no excuse needed: Tuesday, October 20 through Monday, November 2, at the City Election Board, 300 N. Tucker Blvd., or one of its library sites. The deadline to ask for a mail ballot was 5 PM Wednesday, October 21.",
+      "steps": [
+        "In person, bring photo ID. No notary needed.",
+        "Mail ballot already in hand? Being away from the City counts as a reason, but the envelope usually needs a notary.",
+        "Mailed ballots must arrive by 7 PM Nov 3."
+      ],
+      "source": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/voter/absentee/no-excuse-absentee.cfm",
+      "confidence": "verified"
+    },
+    {
+      "id": "signature_problem",
+      "short": "Call the City's Absentee Department right away, 314-622-3230, to ask what you can do.",
+      "answer": "Missouri law doesn't set up a fix-it process for rejected mail ballots the way some states do, though local election offices may offer one. Call the City Election Board's Absentee Department right away to ask what you can do.",
+      "steps": [
+        "Call 314-622-3230 or 314-622-3319, Monday to Friday, 8 AM to 5 PM, or email stlcityabsentee@stlouis-mo.gov.",
+        "Most envelopes need a notary, a signature and your printed info. Double-check before you send it.",
+        "If your ballot hasn't been accepted yet, ask whether you can vote in person instead."
+      ],
+      "source": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/voter/absentee/absentee-ballot-and-voting.cfm",
+      "confidence": "sourced"
+    },
+    {
+      "id": "check_ballot_counted",
+      "short": "Check absentee status on the state's voter portal; voted absentee in person, use your receipt's ballot track ID.",
+      "steps": [
+        "Use voteroutreach.sos.mo.gov.",
+        "Voted absentee in person? Your receipt has a ballot track ID.",
+        "Questions? Call the City Election Board at 314-622-4336."
+      ],
+      "source": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/voter/absentee/absentee-ballot-and-voting.cfm",
+      "confidence": "verified"
+    }
+  ],
+  "sources": [
+    {
+      "name": "City of St. Louis Board of Election Commissioners",
+      "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/index.cfm"
+    },
+    {
+      "name": "City Election Board: polling places and no-excuse absentee sites",
+      "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/voter/polling-places/index.cfm"
+    },
+    {
+      "name": "City Election Board: absentee ballots and voting",
+      "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/voter/absentee/absentee-ballot-and-voting.cfm"
+    },
+    {
+      "name": "City Election Board: no-excuse absentee voting",
+      "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/voter/absentee/no-excuse-absentee.cfm"
+    },
+    {
+      "name": "City Election Board: November 3, 2026 sample ballot, all races",
+      "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf"
+    },
+    {
+      "name": "City Election Board: update your name or address",
+      "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/voter/name-change.cfm"
+    },
+    {
+      "name": "U.S. Census Bureau: county codes (the City of St. Louis is 29510, St. Louis County 29189)",
+      "url": "https://www.census.gov/library/reference/code-lists/ansi.html"
+    },
+    {
+      "name": "U.S. Census Bureau: 2020 ZIP Code Tabulation Areas to places (63120 reaches the City and Pine Lawn)",
+      "url": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_place20_natl.txt"
+    }
+  ],
+  "notes": "Hand in a mail ballot at the City Election Board, 300 N. Tucker Blvd., during office hours, or mail it there; it must arrive by 7 PM Nov 3, and postmarks don't count. A mailed ballot gets no confirmation unless you send it certified. Voting at Machacek Library? It has moved across the street to Storyline Church, which shares the parking lot.",
+  "dated": [
+    {
+      "path": "situations.no_mail_ballot_or_lost.short",
+      "from": "2026-11-03",
+      "text": "Just vote in person today at any City polling place, 6 AM to 7 PM."
+    },
+    {
+      "path": "situations.no_mail_ballot_or_lost.steps.0",
+      "from": "2026-11-03",
+      "text": "Early voting is over, so vote at any of the City's 57 polling places today."
+    },
+    {
+      "path": "situations.no_mail_ballot_or_lost.steps.1",
+      "from": "2026-11-03",
+      "text": "Polls are open 6 AM to 7 PM. In line by 7 PM? You can still vote."
+    },
+    {
+      "path": "situations.away_on_election_day.answer",
+      "from": "2026-11-03",
+      "text": "Early voting ended Monday, November 2, and the deadline to ask for a mail ballot was October 21. If you already have a mail ballot, it must reach the City Election Board, 300 N. Tucker Blvd., by 7 PM today."
+    }
+  ]
+}

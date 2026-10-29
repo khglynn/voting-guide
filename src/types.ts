@@ -289,6 +289,12 @@ export interface PlaceBundle {
   sample_ballot_url: string | null;
   zips: string[];
   zip_caveats: string | null;
+  /* the Census county codes its voters all live in (Oct 29: the City of St. Louis is 29510); an address in
+     another county is never this place's (geo.ts outsideOf) */
+  county_fips?: string[];
+  /* a ZIP that also reaches a town the guide doesn't cover, named for the chooser ("Pine Lawn, in St. Louis
+     County"): it never opens the place by itself (app.ts lookZip, geo.ts settleAddress) */
+  zip_outside?: Record<string, string>;
   notes: string | null;
   county_label?: string | null;
   district_finders?: { office_match: string; label: string; url: string }[];
@@ -352,7 +358,8 @@ export interface PlaceCoverage extends Coverage {
 export interface Index {
   generated: string;
   states: Record<string, { name: string; as_of: string | null; election_date: string; official_site: Src; places: string[] } & Coverage>;
-  places: Record<string, { label: string; state: string; counties: string[]; local_count: number; maps?: string[] } & PlaceCoverage>;
+  /* county_fips and zip_outside as in PlaceBundle, so the first page can use them before a bundle loads */
+  places: Record<string, { label: string; state: string; counties: string[]; local_count: number; maps?: string[]; county_fips?: string[]; zip_outside?: Record<string, string> } & PlaceCoverage>;
   zips: Record<string, string[]>;
   /* true when data/get-involved.json was bundled (the app never asks for a file that isn't there) */
   involved?: boolean;

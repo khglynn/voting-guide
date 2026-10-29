@@ -5,6 +5,9 @@
   "counties": [
     "St. Louis County"
   ],
+  "county_fips": [
+    "29189"
+  ],
   "county_election_office": {
     "name": "St. Louis County Board of Elections, 725 Northwest Plaza Dr., St. Ann, MO 63074 (the county board, not the City of St. Louis board downtown). Mon to Fri 8 a.m. to 4:30 p.m.",
     "url": "https://lookup-stlouiscovotes.hub.arcgis.com/",
@@ -84,6 +87,10 @@
     {
       "name": "St. Louis County Board of Elections: lookups hub",
       "url": "https://lookup-stlouiscovotes.hub.arcgis.com/"
+    },
+    {
+      "name": "U.S. Census Bureau: county codes (St. Louis County is 29189)",
+      "url": "https://www.census.gov/library/reference/code-lists/ansi.html"
     }
   ]
 }

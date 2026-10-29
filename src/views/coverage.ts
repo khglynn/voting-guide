@@ -18,7 +18,7 @@ import { noEndorsements } from '../model/lens';
 import { shelfAttrs, reportAttrs, sampleBallot } from './common';
 import { askFallbackURL } from './shelf';
 
-export const covOf = (): Cov | null => (S.ballot && S.index ? ballotCoverage(S.ballot, S.index, S.b.zip) : null);
+export const covOf = (): Cov | null => (S.ballot && S.index ? ballotCoverage(S.ballot, S.index, S.b.zip, undefined, Array.isArray(S.b.away) ? S.b.away : []) : null);
 
 const when = (c: Cov): string => (c.checked ? ` Last checked ${fmtDate(c.checked, { weekday: false })}.` : '');
 const withWord = (c: Cov): string => (c.withPicks === 0 ? 'none with picks' : c.withPicks === c.sources ? 'all with picks' : `${c.withPicks} with picks`);
@@ -84,6 +84,13 @@ export function covCardHTML(where: 'door' | 'ballot'): string {
       : lead(`Request sent. Kevin is looking for ${c.name}’s local picks.`, true)
         + line('cov-here', esc(c.late ? `You asked ${on}. He may not finish before you vote.` : `You asked ${on}. It usually takes about a day. He may not find any, since some groups don’t endorse.`))
         + line('cov-miss', 'Your ballot works now. Any local picks he finds will show up here.') + row(hearBtn(c));
+  } else if (statewide && c.shared) {
+    // A ZIP split with a town the guide doesn't cover, the voter not sure which side: the statewide races fit
+    // both, and the address settles it (app.ts useMatch moves a City address to the City's ballot).
+    body = lead(`${c.zip} is split between ${c.shared.place} and ${c.shared.outside}.`)
+      + line('cov-here', `Here now: ${name}’s statewide races, the same for both${noEndorsements() ? '' : `, with picks from ${c.withPicks} of ${c.sources} sources`}.`)
+      + line('cov-miss', `Live in ${esc(c.shared.place)}? Use your address and we’ll open its ballot.`)
+      + row(`<button class="${dark}" data-act="addr-open" data-fk="cov-addr">Use my address</button>`) + sbLine;
   } else if (statewide) {
     const action = c.ask
       ? row(askBtn('Ask Kevin to add my city', dark)) + askFailHTML(c)

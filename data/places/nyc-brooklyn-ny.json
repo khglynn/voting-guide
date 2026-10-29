@@ -5,6 +5,9 @@
   "counties": [
     "Kings"
   ],
+  "county_fips": [
+    "36047"
+  ],
   "county_election_office": {
     "name": "NYC Board of Elections, Brooklyn borough office: 345 Adams Street, 4th Floor, Brooklyn, NY 11201",
     "url": "https://vote.nyc/page/contact-us",
@@ -190,6 +193,10 @@
     {
       "name": "NYC Board of Elections: elections and early voting hours",
       "url": "https://www.vote.nyc/elections"
+    },
+    {
+      "name": "U.S. Census Bureau: county codes (Kings County is 36047)",
+      "url": "https://www.census.gov/library/reference/code-lists/ansi.html"
     }
   ]
 }

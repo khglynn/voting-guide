@@ -75,7 +75,7 @@ const FOLLOW_FIELDS: Field[] = [
 interface Follow { title: string; intro: string; request: string; button: string; sent: string; what: string; wrong: string }
 export const isFollow = (r: Pick<Shelf, 'kind' | 'hint'>): boolean => r.kind === 'city' && r.hint === 'follow';
 export function followOf(): Follow {
-  const c = S.ballot && S.index ? ballotCoverage(S.ballot, S.index, S.b.zip) : null;
+  const c = S.ballot && S.index ? ballotCoverage(S.ballot, S.index, S.b.zip, undefined, Array.isArray(S.b.away) ? S.b.away : []) : null;
   const on = c ? c.askedOn : null;
   const sentOn = on ? ` Sent ${askedWord(on)}.` : '';
   const from = on ? `Follow-up to the one-tap request from ${fmtDate(on, { weekday: false })}.` : 'Follow-up to the one-tap request.';

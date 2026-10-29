@@ -204,6 +204,8 @@ b, strong { font-weight: 600; }
 .door-found { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; column-gap: 12px; margin-top: 2px; font-size: 15.5px; color: var(--ink-2); }
 .door-found b { color: var(--ink); }
 .door-found .linkbtn { margin: 0; flex: none; }
+/* Why an address opened the state's races and not the place its ZIP opens (app.ts movedWhy). */
+.door-place + .addr-moved { margin-top: 4px; font-size: 15.5px; color: var(--ink-2); }
 .door-picks { margin-top: 18px; padding-top: 4px; border-top: 1px solid var(--rule); }
 /* The ballot you left, saved: one line above step 1 with the way back. */
 .door-saved { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: -6px 0 18px; padding: 10px 12px; border-left: 3px solid var(--gold); background: var(--gold-wash); font-size: 15px; line-height: 1.35; }

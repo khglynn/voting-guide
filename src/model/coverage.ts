@@ -5,7 +5,7 @@
    - full: "24 sources for Chicago, 12 with picks. Last checked Oct 19."
    - thin: a place none of whose own sources has a pick, with some of its own races unpicked: say so,
      and offer to gather its endorsements in one tap.
-   - statewide: no place (a ZIP in a covered state the guide has no city for, like St. Louis City, or a
+   - statewide: no place (a ZIP in a covered state the guide has no city for, like Springfield, Missouri, or a
      state picked from the list): say we only have the statewide races, and with a ZIP offer to add the
      city in one tap.
    A one-tap request is remembered on this device (localStorage `vg-asked`, never the save link or
@@ -16,6 +16,7 @@ import type { Ballot } from '../ballot';
 import type { Index, PlaceCoverage } from '../types';
 import { daysBetween, fmtDate, load, save, todayISO } from '../util';
 import { withPicks } from './lens';
+import { placeName } from '../geo';
 
 /* The same rule as scripts/coverage.mjs isThin (tests/model.mjs checks they agree on every place). */
 export const isThin = (p: PlaceCoverage): boolean => p.local_with_picks === 0 && p.local_races_with_picks < p.local_races;
@@ -40,6 +41,9 @@ export interface Cov {
   localRaces: number;  // a thin place's own races a voter decides, and how many have a pick from anyone
   localRacesWithPicks: number;
   late: boolean;       // Election Day is two days away or less: say it may not land before you vote
+  /* A statewide ballot from a ZIP split between a place and a town the guide doesn't cover (zip_outside), when
+     the voter didn't say which they live in ("I'm not sure"): the card says so and offers the address. */
+  shared: { place: string; outside: string } | null;
 }
 
 /* ---------- requests remembered on this device ---------- */
@@ -70,22 +74,31 @@ export const askedWord = (on: string | null, today = todayISO()): string => (!on
 
 const bare = (l: string): string => l.replace(/\s*\(.*\)$/, '');
 
-export function ballotCoverage(b: Ballot, idx: Index, zip: string, today = todayISO()): Cov {
+/* `away`: the places the voter isn't in, kept with the ballot (BallotState.away): a statewide ballot never
+   reads them as the voter's city landing. */
+export function ballotCoverage(b: Ballot, idx: Index, zip: string, today = todayISO(), away: string[] = []): Cov {
   const sources = b.endorsers.length;
   const picks = withPicks(b, b.endorsers).length;
   const e = b.howto.election_date;
   const late = !!e && /^\d{4}-\d{2}-\d{2}$/.test(e) && daysBetween(today, e) <= 2;
-  const base = { sources, withPicks: picks, stateName: b.stateName, zip, late, localRaces: 0, localRacesWithPicks: 0 };
+  const base = { sources, withPicks: picks, stateName: b.stateName, zip, late, localRaces: 0, localRacesWithPicks: 0, shared: null };
   if (!b.places.length) {
     const st = idx.states[b.st];
     const ask: Ask | null = zip ? {
       key: `z:${zip}`, name: 'your city', what: 'Please add my city',
       wrong: `Please add the city for ZIP ${zip} in ${b.stateName} (one-tap from the page)`,
     } : null;
-    const landed = !!zip && (idx.zips[zip] || []).length > 0;
+    // The ZIP has a place now, unless the voter isn't in it (away) or it only shares the ZIP with a town the
+    // guide doesn't cover (zip_outside: 63120 is the City of St. Louis and Pine Lawn), where the place may not be
+    // theirs: "Your city is in the guide now" would send a Pine Lawn voter to the City's ballot (Oct 29).
+    const inZip = zip ? (idx.zips[zip] || []).filter((id) => idx.places[id] && !away.includes(id)) : [];
+    const outside = (id: string): string | undefined => (idx.places[id].zip_outside || {})[zip];
+    const landed = inZip.some((id) => !outside(id));
+    const split = landed ? undefined : inZip.find(outside);
+    const shared = split ? { place: placeName(idx.places[split]), outside: outside(split)! } : null;
     const on = ask ? askedOn(ask.key, today) : null;
     return { ...base, kind: 'statewide', checked: st ? st.checked : null, name: b.stateName, single: false, ask,
-      state: landed ? 'landed' : on ? 'asked' : 'none', askedOn: landed ? null : on };
+      state: landed ? 'landed' : on ? 'asked' : 'none', askedOn: landed ? null : on, shared };
   }
   const ps = b.places.map((p) => idx.places[p.id]).filter(Boolean);
   const checked = ps.map((p) => p.checked).filter((d): d is string => !!d).sort().pop() || null;

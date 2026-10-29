@@ -33,7 +33,7 @@
       }
     ],
     "same_day_registration": false,
-    "same_day_notes": "None. Missouri does not allow registration during absentee voting or on Election Day. If you moved within Missouri after the deadline, call your new election authority: Missouri lets registered voters who moved update their address and vote (RSMo 115.165). St. Louis County Board of Elections: 314-615-1800.",
+    "same_day_notes": "None. Missouri does not allow registration during absentee voting or on Election Day. If you moved within Missouri after the deadline, call your new election authority: Missouri lets registered voters who moved update their address and vote (RSMo 115.165). St. Louis County Board of Elections: 314-615-1800. City of St. Louis Board of Election Commissioners: 314-622-4336.",
     "still_possible_now": "No. The October 7 deadline has passed. If you think you registered, check at voteroutreach.sos.mo.gov. If you are registered in Missouri but moved within the state, you can still fix your address and vote; call your county election authority first.",
     "confidence": "verified"
   },
@@ -41,7 +41,7 @@
     "who_gets_one": "Nobody gets one automatically. You must apply, and you must have one of six legal reasons (RSMo 115.277, listed on the SOS 'How to Vote' page): (1) you'll be away from your election jurisdiction (for most people, your county) on Election Day; (2) illness or physical disability, including being the primary caregiver of someone with that condition at your address; (3) religious belief or practice; (4) you work for an election authority, or as a first responder, health care worker or law enforcement officer, away from your polling place; (5) you're incarcerated but still eligible to vote; (6) you're a certified participant in the address confidentiality program. Missouri's no-excuse 'mail-in ballot' from 2020 expired and no longer exists. No excuse? Vote in person during no-excuse absentee voting (Oct 20 to Nov 2) or on Election Day.",
     "request_deadline": {
       "date": "2026-10-21",
-      "rule": "Applications for a ballot to be mailed to you must be received by your election authority by 5:00 PM on Wednesday, October 21, 2026. The SOS 'How to Vote' page: mail or fax requests 'must be received by the election authority no later than the 5:00 p.m. on the second Wednesday prior to any election.' STLPR, KCUR and the St. Louis County Democrats' logistics page all list Oct 21. St. Louis County absentee desk: 314-615-1833, boecabsentee@stlouiscountymo.gov. Relatives within the second degree (spouse, parents, children) may complete the application for you, in person.",
+      "rule": "Applications for a ballot to be mailed to you must be received by your election authority by 5:00 PM on Wednesday, October 21, 2026. The SOS 'How to Vote' page: mail or fax requests 'must be received by the election authority no later than the 5:00 p.m. on the second Wednesday prior to any election.' STLPR, KCUR and the St. Louis County Democrats' logistics page all list Oct 21. St. Louis County absentee desk: 314-615-1833, boecabsentee@stlouiscountymo.gov. City of St. Louis Absentee Department: 314-622-3230, stlcityabsentee@stlouis-mo.gov. Relatives within the second degree (spouse, parents, children) may complete the application for you, in person.",
       "source": "https://www.sos.mo.gov/elections/goVoteMissouri/howtovote"
     },
     "return_deadline": {
@@ -54,6 +54,7 @@
       "mail (USPS); it must arrive at the election authority by 7:00 PM on Nov 3 (St. Louis County: 'must be received by the Board of Elections by 7 pm on Election Day'). Postmarks do not count.",
       "hand-deliver to the election authority office. State law (RSMo 115.291) limits who may deliver another voter's ballot to a relative within the second degree (spouse, parent, child, grandparent, grandchild, sibling). Friends and neighbors may not.",
       "St. Louis County: the Board of Elections office at 725 Northwest Plaza Dr., St. Ann, during business hours (Mon to Fri 8:00 AM to 4:30 PM). On Election Day, absentee ballots can only be turned in at the Board of Elections office, not at polling places (Board FAQ, April 2026 election). In April the Board also took returned absentee ballots at satellite sites during satellite hours; confirm for November with the absentee desk (314-615-1833).",
+      "City of St. Louis: the Board of Election Commissioners office at 300 N. Tucker Blvd., Mon to Fri 8:00 AM to 5:00 PM. A relative or guardian returning a ballot for you must bring it there in person and sign a form saying how you're related. Absentee Department: 314-622-3230 or 314-622-3319.",
       "military and overseas voters: separate rules; see the SOS military/overseas page"
     ],
     "postage": null,
@@ -106,15 +107,15 @@
   },
   "gotchas": [
     {
-      "text": "St. Louis County is NOT the City of St. Louis. Webster Groves, Ballwin, Clayton, Kirkwood and the rest of the county vote through the St. Louis County Board of Election Commissioners (725 Northwest Plaza Dr., St. Ann; 314-615-1800; absentee desk 314-615-1833). The City has its own board downtown (300 N. Tucker Blvd.; 314-622-4336). Different sites, different ballots. Going to the wrong one wastes the trip.",
-      "short": "County towns like Webster Groves vote with St. Louis County, not the City."
+      "text": "St. Louis County is not the City of St. Louis. Webster Groves, Ballwin, Clayton, Kirkwood and the rest of the county vote through the St. Louis County Board of Election Commissioners (725 Northwest Plaza Dr., St. Ann; 314-615-1800; absentee desk 314-615-1833). The City has its own Board of Election Commissioners downtown (300 N. Tucker Blvd.; 314-622-4336; Absentee Department 314-622-3230). Different sites, different ballots. Going to the wrong one wastes the trip.",
+      "short": "The City of St. Louis and St. Louis County have separate election offices and ballots."
     },
     {
       "text": "Registration closed October 7. There is no same-day registration in Missouri. If you're not on the rolls, you can't vote this time, but check voteroutreach.sos.mo.gov before you assume. If you moved within the state, you can still update your address and vote.",
       "short": "Check your registration before you go; the Oct 7 deadline has passed."
     },
     {
-      "text": "Two different 'absentee' systems. In person, Oct 20 to Nov 2: no excuse, no notary, just a photo ID, at any of 21 St. Louis County sites. By mail: you need one of six legal reasons, you had to ask by 5 PM Oct 21, and the envelope usually must be notarized (free). Mailed ballots must arrive by 7 PM Nov 3; postmarks don't count; only you or a close relative can hand-deliver it.",
+      "text": "Two different 'absentee' systems. In person, Oct 20 to Nov 2: no excuse, no notary, just a photo ID, at any of 21 St. Louis County sites for County voters or 8 City of St. Louis sites for City voters. By mail: you need one of six legal reasons, you had to ask by 5 PM Oct 21, and the envelope usually must be notarized (free). Mailed ballots must arrive by 7 PM Nov 3; postmarks don't count; only you or a close relative can hand-deliver it.",
       "short": "Voting early in person needs no excuse or notary, just photo ID."
     },
     {
@@ -122,8 +123,8 @@
       "short": "Bring a Missouri or federal photo ID; student IDs and out-of-state licenses don't count."
     },
     {
-      "text": "On Election Day, St. Louis County voters can use ANY county polling place (the county runs vote centers; every county library branch is one). Polls are open 6 AM to 7 PM. That flexibility applies only inside the county; it doesn't let you vote at a City of St. Louis site.",
-      "short": "St. Louis County voters can use any county polling place on Election Day."
+      "text": "On Election Day, St. Louis County voters can use any county polling place (the county runs vote centers; every county library branch is one), and City of St. Louis voters can use any of the City's 57 polling places. Polls are open 6 AM to 7 PM. Neither crosses the line: County voters can't vote at a City site, and City voters can't vote at a County one.",
+      "short": "Election Day: County voters can use any County polling place, City voters any City one."
     }
   ],
   "situations": [
@@ -545,7 +546,7 @@
     }
   ],
   "judicial_review": {
-    "how_judges_get_here": "For the Supreme Court, appeals courts and St. Louis County trial courts in this guide, the governor appoints from three nominees. Judges later face a yes-or-no retention vote. Other Missouri trial courts can use partisan elections.",
+    "how_judges_get_here": "For the Supreme Court, appeals courts and the St. Louis County and City of St. Louis trial courts in this guide, the governor appoints from three nominees. Judges later face a yes-or-no retention vote. Other Missouri trial courts can use partisan elections.",
     "who_reviews": "The Judicial Performance Review Committee includes lawyers, non-lawyers and retired judges. It reads lawyer and juror surveys and sample decisions, then votes on whether each judge meets performance standards.",
     "what_the_rating_means": "A majority of the committee found that the judge substantially meets overall judicial performance standards and recommends keeping the judge.",
     "what_it_doesnt_mean": "The finding does not endorse the judge’s rulings or predict how you would fare in court. The published recommendation does not include the committee’s vote count.",

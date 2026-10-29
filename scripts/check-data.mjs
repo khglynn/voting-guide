@@ -244,6 +244,8 @@ for (const r of all.endorsements) {
 
 /* ---------- 7. places ---------- */
 const stateIds = new Set(all.states.map((s) => s.state));
+// The Census's state codes, the first two digits of a county's: the states the guide covers.
+const STATE_FIPS = { AL: '01', CA: '06', CO: '08', DC: '11', FL: '12', GA: '13', IL: '17', MD: '24', MO: '29', NY: '36', OR: '41', PA: '42', TN: '47', TX: '48', WA: '53' };
 for (const p of all.places) {
   if (!stateIds.has(p.state)) err('place-state', `${p._f}: no states/${p.state}.json`);
   if (!Array.isArray(p.zips) || !p.zips.length) err('place-zips', `${p._f}: no ZIPs`);
@@ -251,6 +253,18 @@ for (const p of all.places) {
   for (const id of [...(p.contest_ids || []), ...(p.measure_ids || [])]) if (!targets.has(id)) err('place-dangling', `${p._f}: lists ${id}, which no file defines`);
   const ids = [...(p.contest_ids || []), ...(p.measure_ids || [])];
   if (new Set(ids).size !== ids.length) warn('place-duplicate-ids', `${p._f}: lists an id twice`);
+  // Oct 29: a city that is its own county names its Census county code, and a ZIP that also reaches a town
+  // the guide doesn't cover names that town for the first page's question (build-data would drop either).
+  if (p.county_fips != null && (!Array.isArray(p.county_fips) || !p.county_fips.length || p.county_fips.some((c) => !/^\d{5}$/.test(String(c))))) err('place-county-fips', `${p._f}: county_fips must be a list of 5-digit Census county codes`);
+  // A code from another state would put every address in the place outside it (geo.ts outsideOf).
+  else if (p.county_fips && p.county_fips.some((c) => String(c).slice(0, 2) !== STATE_FIPS[p.state])) err('place-county-fips', `${p._f}: county_fips ${p.county_fips.join(', ')} must start with ${p.state}'s code, ${STATE_FIPS[p.state] || '(add it to STATE_FIPS)'}`);
+  if (p.zip_outside != null) {
+    if (typeof p.zip_outside !== 'object' || Array.isArray(p.zip_outside)) err('place-zip-outside', `${p._f}: zip_outside must be an object of ZIP to name`);
+    else for (const [z, name] of Object.entries(p.zip_outside)) {
+      if (!(p.zips || []).map(String).includes(z)) err('place-zip-outside', `${p._f}: zip_outside lists ${z}, which isn't one of its ZIPs`);
+      if (!isStr(name) || name.trim().length > 80) err('place-zip-outside', `${p._f}: zip_outside ${z} needs a short name (80 characters at most)`);
+    }
+  }
 }
 
 /* ---------- 7b. what the build wrote, bundle by bundle ----------
@@ -379,6 +393,8 @@ all.contests.forEach((c) => walk(c, `${c._f} ${c.id}`));
 all.measures.forEach((m) => walk(m, `${m._f} ${m.id}`));
 all.states.forEach((s) => walk(s, `states/${s.state}`));
 all.places.forEach((p) => walk(p, `places/${p.id}`));
+// The first page shows these names as written ("Pine Lawn, in St. Louis County"), keyed by ZIP, so walk skips them.
+all.places.forEach((p) => Object.entries(p.zip_outside && typeof p.zip_outside === 'object' ? p.zip_outside : {}).forEach(([z, name]) => scanCopy(name, `places/${p.id}.zip_outside.${z}`)));
 all.endorsers.forEach((e) => walk(e, `${e._f} ${e.id}`));
 
 /* ---------- 9. common questions: quick answers and their buttons (Oct 20) ---------- */

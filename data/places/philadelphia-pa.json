@@ -5,6 +5,9 @@
   "counties": [
     "Philadelphia"
   ],
+  "county_fips": [
+    "42101"
+  ],
   "county_election_office": {
     "name": "Philadelphia County Board of Elections (the City Commissioners), City Hall, Room 142, 1400 John F. Kennedy Blvd., Philadelphia, PA 19107",
     "url": "https://vote.phila.gov/",
@@ -141,6 +144,10 @@
     {
       "name": "Philadelphia: problem mail ballots and ID verification",
       "url": "https://vote.phila.gov/news/2026/09/24/2026-general-election-unverifiable-identification-undeliverable-and-or-potentially-flawed-ballots/"
+    },
+    {
+      "name": "U.S. Census Bureau: county codes (Philadelphia County is 42101)",
+      "url": "https://www.census.gov/library/reference/code-lists/ansi.html"
     }
   ]
 }

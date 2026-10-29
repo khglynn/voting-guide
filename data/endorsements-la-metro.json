@@ -2352,132 +2352,92 @@
  {
   "endorser_id": "oc-dems",
   "target_id": "ca-us-house-45",
-  "status": "not_found",
-  "choice": null,
-  "why": "The county party's local page lists county, city and school races; its state and federal endorsements are on a separate page that was not opened. Checked again on Oct 28, 2026; still no pick on this page.",
-  "url": "https://orangecountydemocrats.com/oc-endorsements-2",
+  "status": "endorsed",
+  "choice": "Derek Tran",
+  "why": "Listed on the Democratic Party of Orange County's state and federal endorsements page (checked Oct 28, 2026).",
+  "url": "https://orangecountydemocrats.com/statewide-endorsements",
   "date": "2026-10-28",
-  "confidence": "unverified"
+  "confidence": "verified"
  },
  {
   "endorser_id": "oc-dems",
   "target_id": "ca-state-senate-34",
-  "status": "not_found",
-  "choice": null,
-  "why": "The county party's local page lists county, city and school races; its state and federal endorsements are on a separate page that was not opened. Checked again on Oct 28, 2026; still no pick on this page.",
-  "url": "https://orangecountydemocrats.com/oc-endorsements-2",
+  "status": "endorsed",
+  "choice": "Avelino Valencia",
+  "why": "Listed on the Democratic Party of Orange County's state and federal endorsements page (checked Oct 28, 2026).",
+  "url": "https://orangecountydemocrats.com/statewide-endorsements",
   "date": "2026-10-28",
-  "confidence": "unverified"
+  "confidence": "verified"
  },
  {
   "endorser_id": "oc-dems",
   "target_id": "ca-assembly-67",
-  "status": "not_found",
-  "choice": null,
-  "why": "The county party's local page lists county, city and school races; its state and federal endorsements are on a separate page that was not opened. Checked again on Oct 28, 2026; still no pick on this page.",
-  "url": "https://orangecountydemocrats.com/oc-endorsements-2",
+  "status": "endorsed",
+  "choice": "Mark Pulido",
+  "why": "Listed on the Democratic Party of Orange County's state and federal endorsements page (checked Oct 28, 2026).",
+  "url": "https://orangecountydemocrats.com/statewide-endorsements",
   "date": "2026-10-28",
-  "confidence": "unverified"
+  "confidence": "verified"
  },
  {
   "endorser_id": "oc-gop",
   "target_id": "oc-supervisor-4",
   "status": "endorsed",
   "choice": "Tim Shaw",
-  "why": "LAist lists the Republican Party of Orange County among Shaw's notable endorsements.",
-  "url": "https://laist.com/news/politics/voter-guides/2026-election-california-general-orange-county-supervisor-district-4",
-  "date": "2026-10-16",
-  "confidence": "sourced"
+  "why": "In the Republican Party of Orange County's 2026 voter guide, linked from its endorsements page (read Oct 21, 2026).",
+  "url": "https://ocgop.org/endorsements/",
+  "date": "2026-10-21",
+  "confidence": "verified"
  },
  {
   "endorser_id": "oc-gop",
   "target_id": "ca-state-senate-34",
   "status": "endorsed",
   "choice": "Rhonda Shader",
-  "why": "Shader's campaign press release announces the Republican Party of Orange County endorsement.",
-  "url": "https://shaderforsenate.com/republican-party-of-orange-county-endorses-challengers-and-incumbent-legislators-ahead-of-2026/",
-  "date": "2026-10-16",
-  "confidence": "sourced"
+  "why": "In the Republican Party of Orange County's 2026 voter guide, linked from its endorsements page (read Oct 21, 2026).",
+  "url": "https://ocgop.org/endorsements/",
+  "date": "2026-10-21",
+  "confidence": "verified"
  },
  {
   "endorser_id": "oc-gop",
   "target_id": "fullerton-council-3",
   "status": "not_found",
   "choice": null,
-  "why": "No 2026 endorsement list was found on the Republican Party of Orange County website (checked Oct 17, 2026). Checked again on Oct 28, 2026; still no pick on this page.",
-  "url": "https://ocgop.org/",
-  "date": "2026-10-28",
-  "confidence": "unverified"
+  "why": "The party's 2026 voter guide lists city council picks for other Orange County cities, but none for Fullerton (read Oct 21, 2026).",
+  "url": "https://ocgop.org/endorsements/",
+  "date": "2026-10-21",
+  "confidence": "verified"
  },
  {
   "endorser_id": "oc-gop",
   "target_id": "fullerton-council-5",
   "status": "not_found",
   "choice": null,
-  "why": "No 2026 endorsement list was found on the Republican Party of Orange County website (checked Oct 17, 2026). Checked again on Oct 28, 2026; still no pick on this page.",
-  "url": "https://ocgop.org/",
-  "date": "2026-10-28",
-  "confidence": "unverified"
- },
- {
-  "endorser_id": "oc-gop",
-  "target_id": "fullerton-fsd-area-3",
-  "status": "not_found",
-  "choice": null,
-  "why": "No 2026 endorsement list was found on the Republican Party of Orange County website (checked Oct 17, 2026). Checked again on Oct 28, 2026; still no pick on this page.",
-  "url": "https://ocgop.org/",
-  "date": "2026-10-28",
-  "confidence": "unverified"
- },
- {
-  "endorser_id": "oc-gop",
-  "target_id": "fullerton-fjuhsd-area-1",
-  "status": "not_found",
-  "choice": null,
-  "why": "No 2026 endorsement list was found on the Republican Party of Orange County website (checked Oct 17, 2026). Checked again on Oct 28, 2026; still no pick on this page.",
-  "url": "https://ocgop.org/",
-  "date": "2026-10-28",
-  "confidence": "unverified"
- },
- {
-  "endorser_id": "oc-gop",
-  "target_id": "fullerton-fjuhsd-area-5",
-  "status": "not_found",
-  "choice": null,
-  "why": "No 2026 endorsement list was found on the Republican Party of Orange County website (checked Oct 17, 2026). Checked again on Oct 28, 2026; still no pick on this page.",
-  "url": "https://ocgop.org/",
-  "date": "2026-10-28",
-  "confidence": "unverified"
- },
- {
-  "endorser_id": "oc-gop",
-  "target_id": "nocccd-area-6",
-  "status": "not_found",
-  "choice": null,
-  "why": "No 2026 endorsement list was found on the Republican Party of Orange County website (checked Oct 17, 2026). Checked again on Oct 28, 2026; still no pick on this page.",
-  "url": "https://ocgop.org/",
-  "date": "2026-10-28",
-  "confidence": "unverified"
+  "why": "The party's 2026 voter guide lists city council picks for other Orange County cities, but none for Fullerton (read Oct 21, 2026).",
+  "url": "https://ocgop.org/endorsements/",
+  "date": "2026-10-21",
+  "confidence": "verified"
  },
  {
   "endorser_id": "oc-gop",
   "target_id": "ca-us-house-45",
-  "status": "not_found",
-  "choice": null,
-  "why": "No 2026 endorsement list was found on the Republican Party of Orange County website (checked Oct 17, 2026). Checked again on Oct 28, 2026; still no pick on this page.",
-  "url": "https://ocgop.org/",
-  "date": "2026-10-28",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "Chuong V. Vo",
+  "why": "In the Republican Party of Orange County's 2026 voter guide, linked from its endorsements page (read Oct 21, 2026).",
+  "url": "https://ocgop.org/endorsements/",
+  "date": "2026-10-21",
+  "confidence": "verified"
  },
  {
   "endorser_id": "oc-gop",
   "target_id": "ca-assembly-67",
-  "status": "not_found",
-  "choice": null,
-  "why": "No 2026 endorsement list was found on the Republican Party of Orange County website (checked Oct 17, 2026). Checked again on Oct 28, 2026; still no pick on this page.",
-  "url": "https://ocgop.org/",
-  "date": "2026-10-28",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "Paulo Morales",
+  "why": "In the Republican Party of Orange County's 2026 voter guide, linked from its endorsements page (read Oct 21, 2026).",
+  "url": "https://ocgop.org/endorsements/",
+  "date": "2026-10-21",
+  "confidence": "verified"
  },
  {
   "endorser_id": "la-fed",

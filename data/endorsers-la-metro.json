@@ -39,6 +39,7 @@
   "lean_basis": "AllSides rates the Orange County Register Lean Right (2.00; independent review, low or initial confidence, as of Oct. 2026). One Southern California News Group board writes the editorials for the Register, the LA Daily News and nine sister papers. Rating source: https://www.allsides.com/news-source/orange-county-register-media-bias.",
   "geography": [
    "fullerton-ca",
+   "dana-point-ca",
    "CA"
   ],
   "guide_url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
@@ -147,7 +148,8 @@
   "lean": "left",
   "lean_basis": "Official county Democratic Party organization.",
   "geography": [
-   "fullerton-ca"
+   "fullerton-ca",
+   "dana-point-ca"
   ],
   "guide_url": "https://orangecountydemocrats.com/oc-endorsements-2",
   "default_on": false,
@@ -161,16 +163,49 @@
   "name": "Republican Party of Orange County",
   "type": "party",
   "lean": "right",
-  "lean_basis": "Official county Republican Party organization. No 2026 endorsement list was found on its website on Oct 17, 2026; positions below come from LAist and candidate pages.",
+  "lean_basis": "Official county Republican Party organization. Its 2026 voter guide, linked from its endorsements page, lists its Nov 3 picks (read Oct 21, 2026).",
   "geography": [
-   "fullerton-ca"
+   "fullerton-ca",
+   "dana-point-ca"
   ],
-  "guide_url": "https://ocgop.org/",
+  "guide_url": "https://ocgop.org/endorsements/",
   "default_on": false,
   "endorses_candidates": true,
   "endorses_measures": true,
   "party": "Republican",
   "lean_basis_kind": "party"
+ },
+ {
+  "id": "oc-labor-fed",
+  "name": "Orange County Labor Federation, AFL-CIO",
+  "type": "labor",
+  "lean": "lean_left",
+  "lean_basis": "Federation of more than ninety local unions in Orange County that says it 'strives to better the lives of all workers' (https://www.oclabor.org/about-oclf/). No outside rating found; lean reflects its stated mission.",
+  "geography": [
+   "dana-point-ca"
+  ],
+  "guide_url": "https://oclabor.org/cope-endorsements-2026/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "lean_basis_kind": "mission",
+  "short": "OC Labor Federation"
+ },
+ {
+  "id": "pp-oc-sb-caf",
+  "name": "Community Action Fund of Planned Parenthood of Orange and San Bernardino Counties",
+  "type": "advocacy",
+  "lean": "left",
+  "lean_basis": "Political arm of Planned Parenthood of Orange and San Bernardino Counties. It says its voter guide 'helps voters elect pro–reproductive health care candidates at every level of government' (https://www.plannedparenthoodaction.org/community-action-fund-planned-parenthood-orange-and-san-bernardi/elections/2026-midterm-election-voter-guide). No outside rating found; lean reflects its stated mission.",
+  "geography": [
+   "dana-point-ca"
+  ],
+  "guide_url": "https://www.plannedparenthoodaction.org/community-action-fund-planned-parenthood-orange-and-san-bernardi/elections/2026-midterm-election-voter-guide",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "lean_basis_kind": "mission",
+  "short": "Planned Parenthood OC & SB Action Fund"
  },
  {
   "id": "la-fed",

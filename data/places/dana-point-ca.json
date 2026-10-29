@@ -1,0 +1,164 @@
+{
+ "id": "dana-point-ca",
+ "label": "Dana Point",
+ "state": "CA",
+ "counties": [
+  "Orange"
+ ],
+ "county_election_office": {
+  "name": "Orange County Registrar of Voters (OCVote.gov), 1300 S. Grand Ave, Bldg C, Santa Ana",
+  "url": "https://ocvote.gov",
+  "phone": "(714) 567-7600",
+  "lines": [
+   {
+    "label": "Toll free",
+    "phone": "888-628-6837"
+   }
+  ],
+  "hours": "Open 8 AM to 5 PM Monday to Friday, and when vote centers are open."
+ },
+ "sample_ballot_url": "https://ocvote.gov/vlt/",
+ "zips": [
+  "92629",
+  "92624"
+ ],
+ "zip_caveats": "92629 is Dana Point; it touches the edge of Laguna Beach, but no one lives in that sliver (2020 Census blocks). 92624 is Capistrano Beach, which is part of Dana Point; at its eastern edge two 2020 Census residents live in San Juan Capistrano, which votes in CD-49 and SD-38. All of Dana Point is in CD-47, SD-36, AD-74 and Orange County Supervisor District 5 (2020 Census blocks against the current district lines). Dana Point's three council seats up this year (Districts 1, 2 and 3) had one candidate each, so the council appointed them and canceled the election. Only part of Dana Point votes for South Orange County Community College District Trustee Area 4 (11 of the city's 35 precincts on the county's district maps) and for Moulton Niguel Water District (6 of 35); most of the city is served by South Coast Water District, whose seats are not on this ballot. Capistrano Unified's Areas 4, 6 and 7 and the Municipal Water District of Orange County's Division 2 share no precincts with Dana Point. There is no Dana Point city measure; Orange County Measures A through O are all for other cities or school districts. Use the address lookup at ocvote.gov/vlt to see your exact ballot.",
+ "contest_ids": [
+  "ca-governor",
+  "ca-lt-governor",
+  "ca-secretary-of-state",
+  "ca-controller",
+  "ca-treasurer",
+  "ca-attorney-general",
+  "ca-insurance-commissioner",
+  "ca-superintendent",
+  "ca-boe-4",
+  "ca-supreme-court-evans",
+  "ca-supreme-court-groban",
+  "ca-coa-4d-retention",
+  "ca-prop-1",
+  "ca-prop-2",
+  "ca-prop-3",
+  "ca-prop-4",
+  "ca-prop-5",
+  "ca-prop-37",
+  "ca-prop-38",
+  "ca-prop-39",
+  "ca-prop-40",
+  "ca-prop-41",
+  "ca-prop-42",
+  "ca-prop-43",
+  "ca-prop-44",
+  "ca-prop-45",
+  "ca-us-house-47",
+  "ca-state-senate-36",
+  "ca-assembly-74",
+  "oc-supervisor-5",
+  "socccd-area-4",
+  "mnwd-directors",
+  "mnwd-short-term"
+ ],
+ "district_finders": [
+  {
+   "office_match": "South Orange County Community College District",
+   "label": "Find your trustee area on the registrar’s map",
+   "url": "https://ocvote.gov/findmydistrict"
+  },
+  {
+   "office_match": "South Orange County Community College District",
+   "label": "Check your OC sample ballot",
+   "url": "https://ocvote.gov/vlt/"
+  },
+  {
+   "office_match": "Moulton Niguel Water District",
+   "label": "Find your water district on the registrar’s map",
+   "url": "https://ocvote.gov/findmydistrict"
+  },
+  {
+   "office_match": "Moulton Niguel Water District",
+   "label": "Check your OC sample ballot",
+   "url": "https://ocvote.gov/vlt/"
+  }
+ ],
+ "lookups": {
+  "early_in_person": "https://ocvote.gov/elections/vote-center-locations",
+  "election_day": "https://ocvote.gov/elections/vote-center-locations",
+  "drop_box": "https://ocvote.gov/elections/ballot-drop-box-locations"
+ },
+ "situations": [
+  {
+   "id": "no_mail_ballot_or_lost",
+   "short": "Get a replacement at any Orange County vote center or at the Registrar's office in Santa Ana.",
+   "answer": "Orange County's deadline for a mailed replacement passed on October 27. You can still get a replacement ballot at any Orange County vote center or at the Registrar's office, 1300 S. Grand Ave., Building C, Santa Ana. Call (714) 567-7600 with questions.",
+   "steps": null,
+   "source": "https://ocvote.gov/faqs/vote-by-mail-faqs",
+   "confidence": "verified"
+  }
+ ],
+ "notes": "Dana Point has three vote centers. Through Oct 30 only Dana Point City Hall, 33282 Golden Lantern St, is open (second floor, with an elevator); the Dana Point Library, 33841 Niguel Rd, and Gloria Dei Lutheran Church, 33501 Stonehill Dr, open Oct 31. Drop boxes are at City Hall and the library. There is no city council race on Dana Point ballots this year: each of the three seats had one candidate, so the council appointed them and canceled the election. The county's map with wait times: ocvote.gov/locate.",
+ "dated": [
+  {
+   "path": "notes",
+   "from": "2026-10-31",
+   "text": "All three Dana Point vote centers are open: Dana Point City Hall, 33282 Golden Lantern St (second floor, with an elevator), the Dana Point Library, 33841 Niguel Rd, and Gloria Dei Lutheran Church, 33501 Stonehill Dr. Drop boxes are at City Hall and the library. There is no city council race on Dana Point ballots this year: each of the three seats had one candidate, so the council appointed them and canceled the election. The county's map with wait times: ocvote.gov/locate."
+  }
+ ],
+ "sources": [
+  {
+   "name": "Orange County (CA): contests qualified for the November 3, 2026 ballot",
+   "url": "https://ocvote.gov/elections/contests-qualified-for-the-ballot-for-the-2026-general-election"
+  },
+  {
+   "name": "Orange County (CA): measures on the November 3, 2026 ballot",
+   "url": "https://ocvote.gov/elections/2026-general-election-measures-on-the-ballot"
+  },
+  {
+   "name": "Orange County (CA): Dana Point precinct map",
+   "url": "https://ocvote.gov/bin/maps/pdf/City/Map_Dana%20Point.pdf"
+  },
+  {
+   "name": "Orange County (CA): Supervisorial District 5 precinct map",
+   "url": "https://ocvote.gov/bin/maps/pdf/OCBOS/Map_5th%20Supervisorial%20District.pdf"
+  },
+  {
+   "name": "Orange County (CA): South Orange County Community College District Trustee Area 4 precinct map",
+   "url": "https://ocvote.gov/bin/maps/pdf/School/Map_South%20Orange%20County%20Community%20College%20District%20-%20Trustee%20Area%204.pdf"
+  },
+  {
+   "name": "Orange County (CA): Moulton Niguel Water District precinct map",
+   "url": "https://ocvote.gov/bin/maps/pdf/Water/Map_Moulton%20Niguel%20Water%20District.pdf"
+  },
+  {
+   "name": "Orange County (CA): South Coast Water District precinct map",
+   "url": "https://ocvote.gov/bin/maps/pdf/Water/Map_South%20Coast%20Water%20District.pdf"
+  },
+  {
+   "name": "Dana Point Times: no election in fall, council appoints unopposed Gabbard, Pagano, Riggs (Aug 21, 2026)",
+   "url": "https://www.picketfencemedia.com/danapointtimes/eye-on-dp/no-election-in-fall-dana-point-council-appoints-unopposed-gabbard-pagano-riggs/article_e977c31e-ce8f-4943-940e-9014405e1502.html"
+  },
+  {
+   "name": "City of Dana Point: election information",
+   "url": "https://www.danapoint.org/city-government/city-clerk/election"
+  },
+  {
+   "name": "Orange County (CA): vote-by-mail FAQs",
+   "url": "https://ocvote.gov/faqs/vote-by-mail-faqs"
+  },
+  {
+   "name": "Orange County (CA): about (phones and hours)",
+   "url": "https://ocvote.gov/about"
+  },
+  {
+   "name": "Orange County (CA): vote center locations",
+   "url": "https://ocvote.gov/elections/vote-center-locations"
+  },
+  {
+   "name": "Orange County (CA): drop box locations",
+   "url": "https://ocvote.gov/elections/ballot-drop-box-locations"
+  },
+  {
+   "name": "Orange County (CA): find my district",
+   "url": "https://ocvote.gov/findmydistrict"
+  }
+ ]
+}

@@ -1283,6 +1283,36 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('go check: "Register now" before the deadline, "Register for next time" after', plan.registerAction(txr, '2026-10-01').label === 'Register now' && plan.registerAction(txr, '2026-10-20').label === 'Register for next time' && plan.registerAction(txr, '2026-10-01').url === 'https://vote.gov/register/texas');
     const { register_url, ...noUrl } = txr.registration;
     check('go check: no button without a register link', plan.registerAction({ ...txr, registration: noUrl }, '2026-10-01') === null);
+    // California after its online deadline (audit, Oct 29): same-day registration is in person, so the button opens
+    // where you can do it (the county's vote centers on an Orange County ballot), and the line says so.
+    const dpH = plan.localHowto(read('state-CA.json').howto, [read('place-dana-point-ca.json')], null, '2026-10-29');
+    const ra = plan.registerAction(dpH, '2026-10-29');
+    check('go check: in person is the only way left, so the button finds where to register and vote', ra && ra.label === 'Find where to register and vote' && ra.url === 'https://ocvote.gov/elections/vote-center-locations', JSON.stringify(ra));
+    check('go check: and the line says you can still register in person and vote', plan.registrationAlert(dpH, '2026-10-29') === 'Not registered? You can still register in person and vote through Tue, Nov 3.' && plan.registrationAlert(dpH, '2026-11-03') === 'Not registered? You can still register in person and vote today.', plan.registrationAlert(dpH, '2026-10-29'));
+    check('go check: before the online deadline it is still "Register now"', plan.registerAction(dpH, '2026-10-15').label === 'Register now');
+  }
+
+  /* ---------- a county's own mail-ballot facts and opening time (audit, Oct 29) ---------- */
+  {
+    const moH = read('state-MO.json').howto;
+    const city = plan.localHowto(moH, [read('place-st-louis-city-mo.json')], null, '2026-10-29');
+    const wg = plan.localHowto(moH, [read('place-webster-groves-mo.json')], null, '2026-10-29');
+    check('place mail: the City of St. Louis lists only its own ways back, never the County office', city.mail_ballot.return_options.length > 0 && city.mail_ballot.return_options.every((o) => !/Northwest Plaza|St\. Ann/.test(o)) && city.mail_ballot.return_options.some((o) => /300 N\. Tucker/.test(o)));
+    check('place mail: a County ballot keeps the state\'s list', JSON.stringify(wg.mail_ballot.return_options) === JSON.stringify(moH.mail_ballot.return_options));
+    check('place mail: the City\'s request line is its own, the deadline unchanged', city.mail_ballot.request_deadline.date === moH.mail_ballot.request_deadline.date && /City Election Board/.test(city.mail_ballot.request_deadline.rule));
+    const caH = read('state-CA.json').howto;
+    const dp = plan.localHowto(caH, [read('place-dana-point-ca.json')], null, '2026-10-29');
+    const la = plan.localHowto(caH, [read('place-los-angeles-ca.json')], null, '2026-10-29');
+    check('place mail: Orange County\'s replacement deadline cites the county, LA\'s still LA\'s', /ocvote\.gov/.test(dp.mail_ballot.request_deadline.source) && /Orange County/.test(dp.mail_ballot.request_deadline.rule) && la.mail_ballot.request_deadline.source === caH.mail_ballot.request_deadline.source);
+    check('place early: Orange County\'s in-person voting starts Oct 24, the state\'s Oct 5 stays elsewhere', dp.early_in_person.start === '2026-10-24' && la.early_in_person.start === caH.early_in_person.start);
+    const tnH = read('state-TN.json').howto;
+    const nash = plan.localHowto(tnH, [read('place-nashville-tn.json')], null, '2026-10-30');
+    const col = plan.localHowto(tnH, [read('place-columbia-tn.json')], null, '2026-10-30');
+    const sub = (h) => plan.nextStep(h, '2026-10-30', false, null).sub.join(' ');
+    check('place polls: Nashville says polls are open 7 AM to 7 PM; Columbia, whose county hasn\'t posted, only the close', /Polls are open 7 AM to 7 PM\./.test(sub(nash)) && /Polls close at 7 PM\./.test(sub(col)) && !/Polls are open/.test(sub(col)), `${sub(nash)} | ${sub(col)}`);
+    // Two places that disagree keep the state's (a Nashville and a Columbia ballot together never happens, but the rule holds).
+    const both = plan.localHowto(moH, [read('place-st-louis-city-mo.json'), read('place-webster-groves-mo.json')], null, '2026-10-29');
+    check('place mail: places that disagree keep the state\'s list', JSON.stringify(both.mail_ballot.return_options) === JSON.stringify(moH.mail_ballot.return_options));
   }
 
   /* ---------- flow, Oct 20: My plan ---------- */

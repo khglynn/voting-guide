@@ -107,6 +107,24 @@
   "election_day": "https://ocvote.gov/elections/vote-center-locations",
   "drop_box": "https://ocvote.gov/elections/ballot-drop-box-locations"
  },
+ "early_in_person": {
+  "start": "2026-10-24",
+  "end": "2026-11-02",
+  "hours_note": "Orange County vote centers: select centers are open Saturday, October 24 to Friday, October 30, and every center is open October 31 to November 2, all 10 AM to 6 PM. On Election Day, November 3, every center is open 7 AM to 8 PM. You can use any vote center in Orange County.",
+  "hours_short": "Orange County vote centers are open 10 AM to 6 PM every day.",
+  "lookup_url": "https://ocvote.gov/elections/vote-center-locations",
+  "source": "https://ocvote.gov/elections/vote-center-locations",
+  "confidence": "verified"
+ },
+ "mail_ballot": {
+  "request_deadline": {
+   "date": "2026-10-27",
+   "rule": "You don't need to ask for a ballot: every voter gets one in the mail. Orange County's last day to mail you a replacement was Tuesday, October 27 (7 days before Election Day). Now get a replacement at any Orange County vote center or at the Registrar's office, 1300 S. Grand Ave., Building C, Santa Ana, or just vote in person.",
+   "source": "https://ocvote.gov/faqs/vote-by-mail-faqs"
+  },
+  "source": "https://ocvote.gov/faqs/vote-by-mail-faqs",
+  "confidence": "verified"
+ },
  "situations": [
   {
    "id": "no_mail_ballot_or_lost",

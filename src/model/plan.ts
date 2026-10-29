@@ -189,6 +189,13 @@ function placeHowto(h0: HowTo, places: PlaceBundle[], county: string | null): Ho
       mail_ballot: lb || lt ? { ...h.mail_ballot, ...(lb ? { drop_box_lookup_url: lb } : {}), ...(lt ? { tracking_url: lt } : {}) } : h.mail_ballot,
     };
   }
+  // The county's own mail-ballot facts and opening time (Oct 29), when every place on the ballot gives the same ones:
+  // the City of St. Louis's ballots go back only to its own Board, Nashville's polls open at 7.
+  const same = <T>(xs: (T | undefined)[]): T | null => (xs.length && xs.every((x) => x != null) && new Set(xs.map((x) => JSON.stringify(x))).size === 1 ? xs[0]! : null);
+  const mail = same(places.map((p) => p.mail_ballot));
+  if (mail) h = { ...h, mail_ballot: { ...h.mail_ballot, ...(mail.request_deadline ? { request_deadline: mail.request_deadline } : {}), ...(mail.return_options ? { return_options: mail.return_options } : {}) } };
+  const opening = same(places.map((p) => p.election_day));
+  if (opening) h = { ...h, election_day: { ...h.election_day, polls_open: opening.polls_open } };
   const eps = places.map((p) => p.early_in_person);
   if (!eps.length || eps.some((e) => !e)) return h;
   const first = eps[0]!;
@@ -326,9 +333,21 @@ const firstSentence = (s: string): string => { const m = s.match(/^(.+?[.!?])(\s
 
 /* The button beside "Not registered?": the state's register page (registration.register_url, from
    the data track). "Register now" while any deadline is still ahead; once they have all passed,
-   "Register for next time". Null when the state file has no register page. */
+   "Register for next time". When the only way left is in person (California after its online deadline:
+   same-day registration at a vote center; audit, Oct 29), it opens where you can do that: the early
+   voting page while early voting is open, then the Election Day one. Null when the state file has no
+   register page and nothing else fits. */
+const inPersonOnly = (h: HowTo, t: string): boolean => {
+  const open = h.registration.deadlines.filter((d) => !!d.date && d.date >= t);
+  return open.length > 0 && open.every((d) => d.method === 'in_person');
+};
 export function registerAction(h: HowTo, t = todayISO()): { label: string; url: string } | null {
   const url = h.registration.register_url;
+  if (inPersonOnly(h, t)) {
+    const ep = h.early_in_person;
+    const where = (ep.available && ep.lookup_url && (!ep.end || t <= ep.end) ? ep.lookup_url : null) || h.election_day.lookup_url;
+    if (where) return { label: 'Find where to register and vote', url: where };
+  }
   if (!url) return null;
   const open = h.registration.deadlines.some((d) => !!d.date && d.date >= t);
   return { label: open ? 'Register now' : 'Register for next time', url };
@@ -339,6 +358,11 @@ export function registrationAlert(h: HowTo, t = todayISO(), absolute = false): s
   if (!open.length) return null;
   const first = open[0];
   if (daysBetween(t, first.date!) > 7) return null;
+  if (inPersonOnly(h, t)) {
+    const last = open[open.length - 1];
+    const same = h.registration.same_day_registration ? ' and vote' : '';
+    return last.date === t && !absolute ? `Not registered? You can still register in person${same} today.` : `Not registered? You can still register in person${same} through ${day(last.date!, t, absolute)}.`;
+  }
   const how = (m: string) => (m === 'online' ? 'online' : m === 'mail' ? 'by mail' : 'in person');
   const allSame = open.every((d) => d.date === first.date);
   const today = first.date === t && !absolute;

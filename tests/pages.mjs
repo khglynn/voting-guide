@@ -162,11 +162,22 @@ check('page titles and descriptions: no em dashes, no all caps', !bad.copy.lengt
     const st = p.kind === 'state' ? stateCodes.find((x) => site.statePath(data, x) === p.path) : data.places[p.path.slice(1)].state;
     const text = textOf(bodyOf(p.html));
     // Case aside: the app's deshout writes the data's "NOT at your polling place" as "not".
-    const gone = (data.states[st].howto.mail_ballot.return_options || []).filter((o) => !text.toLowerCase().includes(norm(o).slice(0, 60).toLowerCase()));
+    // A place with its own ways back (the City of St. Louis, Oct 29) lists those instead of the state's.
+    const place = p.kind === 'place' ? data.places[p.path.slice(1)] : null;
+    const opts = place?.mail_ballot?.return_options || data.states[st].howto.mail_ballot.return_options || [];
+    const gone = opts.filter((o) => !text.toLowerCase().includes(norm(o).slice(0, 60).toLowerCase()));
     const oneRule = /Your mail ballot must/.test(p.html) || !/Mail ballot deadline: <b>/.test(p.html);
     if (gone.length || oneRule) ways.push(`${p.path}: ${gone.length} way(s) missing${oneRule ? ', a one-rule heading' : ''}`);
   }
   check('every page lists each way to return a mail ballot, and its heading names no single rule', !ways.length, ways.slice(0, 4).join('; '));
+  // The City of St. Louis's page lists only the City's own ways back, never St. Louis County's office in St. Ann.
+  const stl = textOf(bodyOf(pages.find((x) => x.path === '/st-louis-city-mo').html));
+  check('the City of St. Louis page: its own ways back only, not the County office in St. Ann', /300 N\. Tucker/.test(stl) && !/Northwest Plaza/.test(stl) && !/boecabsentee/.test(stl));
+  // Orange County places: in-person voting starts Oct 24 (the county's vote center page), and the replacement deadline cites the county.
+  const dpg = textOf(bodyOf(pages.find((x) => x.path === '/dana-point-ca').html));
+  check('Dana Point page: in-person voting from Oct 24, and Orange County\'s own replacement deadline', /In-person voting: Sat, Oct 24 to(\s|&nbsp;)Mon, Nov 2/.test(dpg) && /Orange County's last day to mail you a replacement/.test(dpg) && !/LA County's last day/.test(dpg), dpg.match(/In-person voting:[^.]*/)?.[0] || '');
+  const npg = textOf(bodyOf(pages.find((x) => x.path === '/nashville-tn').html));
+  check('Nashville page: polls open 7 AM to 7 PM on Election Day', /You can vote from 7 AM to 7 PM/.test(npg), npg.match(/Election Day: [^.]*\.[^.]*/)?.[0] || '');
   check('Texas: the USPS postmark exception is on the page', textOf(bodyOf(pages.find((x) => x.path === '/texas').html)).includes('postmarked by 7:00 PM Nov. 3 and arriving by 5:00 PM'));
   // As the page reads it: a dated note (Tennessee's, "is over" from Oct 30) never goes on a static page.
   const early = stateCodes.filter((st) => { const n = site.undated(data.states[st].howto).early_in_person.hours_note; const text = textOf(bodyOf(pages.find((x) => x.path === site.statePath(data, st)).html)).toLowerCase(); return n && !text.includes(norm(n).slice(0, 60).toLowerCase()); });
@@ -175,7 +186,8 @@ check('page titles and descriptions: no em dashes, no all caps', !bad.copy.lengt
   // Tennessee closes at one moment in two zones: its state page names both, Nashville's its own 7 PM, as the plan does.
   const tn = textOf(bodyOf(pages.find((x) => x.path === '/tennessee').html));
   const nash = textOf(bodyOf(pages.find((x) => x.path === '/nashville-tn').html));
-  check('Tennessee: the state page names both closing times, Nashville its own', tn.includes('Polls close at 7:00 PM Central (8:00 PM Eastern).') && nash.includes('Polls close at 7 PM.') && !/You can vote from/.test(tn + nash), `${tn.match(/Polls close[^.]*\.[^.]*\./)} | ${nash.match(/Polls close[^.]*\./)}`);
+  // Since Oct 29 Nashville carries its own 7 AM opening (the county's sample ballot), so its page gives the whole day.
+  check('Tennessee: the state page names both closing times, Nashville its own', tn.includes('Polls close at 7:00 PM Central (8:00 PM Eastern).') && nash.includes('You can vote from 7 AM to 7 PM.') && !/You can vote from/.test(tn), `${tn.match(/Polls close[^.]*\.[^.]*\./)} | ${nash.match(/You can vote from[^.]*\./)}`);
 }
 /* ---------- per-county links and dated text (main's where-to-vote parts A and B, Oct 28) ---------- */
 {

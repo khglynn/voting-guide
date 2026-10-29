@@ -276,6 +276,11 @@ export interface CountyLinks { county: string; zips: string[]; lookups: Lookups;
 export interface PlaceSituation { id: string; short?: string; answer?: string; steps?: string[] | null; source: string; confidence: Confidence }
 export interface OfficeLine { label: string; phone: string; hours?: string }
 
+/* A county's own mail-ballot facts, where they differ from the state's (Oct 29): its request or replacement deadline,
+   and the ways back it takes. plan.ts uses them when every place on the ballot gives the same ones. */
+export interface PlaceMail { request_deadline?: { date: string | null; rule: string; source: string | null }; return_options?: string[]; source: string; confidence: Confidence }
+/* A county's own Election Day opening time, a plain time ("7:00 AM"), where the state's isn't one. */
+export interface PlaceElectionDay { polls_open: string; source: string; confidence: Confidence }
 /* `hours_short`: the county's early voting hours in one line ("Travis County sites are open 7 AM to 7 PM every day.") */
 export interface PlaceEarly { start: string; end: string; hours_note: string | null; hours_short?: string; lookup_url: string | null; source: string | null; confidence: string }
 
@@ -303,6 +308,10 @@ export interface PlaceBundle {
   early_in_person?: PlaceEarly;
   /* the county's own where-to-vote tools; plan.ts prefers them over the state's */
   lookups?: Lookups;
+  /* the county's own mail-ballot deadline and ways back, and its Election Day opening time (Oct 29); plan.ts
+     prefers them over the state's when every place on the ballot agrees */
+  mail_ballot?: PlaceMail;
+  election_day?: PlaceElectionDay;
   /* a place across county lines keeps each county's tools (Oct 28): plan.localHowto uses the voter's county's
      when it knows the county, and lists each county's, labeled, when it doesn't */
   by_county?: CountyLinks[];

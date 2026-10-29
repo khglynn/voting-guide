@@ -18,9 +18,13 @@
         "label": "Absentee and early voting line",
         "phone": "615-862-8815",
         "hours": "Monday to Friday, 8 AM to 4:30 PM"
+      },
+      {
+        "label": "TTY (or Relay 711)",
+        "phone": "800-848-0298"
       }
     ],
-    "hours": "Office open Monday to Friday, 8 AM to 4:30 PM: 1281 Murfreesboro Pike, Third Floor, Nashville.",
+    "hours": "Monday to Friday, 8 AM to 4:30 PM.",
     "source": "https://www.nashville.gov/departments/elections/contact-us"
   },
   "sample_ballot_url": "https://www.nashville.gov/sites/default/files/2026-09/Sample_Ballot_November_3_2026_State_Fed_Gen_Mun_Elections.pdf?ct=1790110765",
@@ -56,7 +60,7 @@
     "37232",
     "37238"
   ],
-  "zip_caveats": "A ZIP doesn't tell us your districts here. Davidson County is split among three U.S. House districts (4, 6 and 7, redrawn in May 2026), and only state Senate Districts 17, 19 and 21 have races this year, so some Nashville voters have no state Senate race. Your districts are on the yellow voter card the Election Commission mailed in June 2026, on your sample ballot, or in the state's district lookup. Belle Meade, Forest Hills and Goodlettsville voters also vote for city commissioners, and Goodlettsville votes on a sales tax question; those are only on those cities' ballots. Some ZIPs cross the county line, and the other county's ballot has different races: 37072 (Goodlettsville) reaches into Sumner and Robertson counties; 37076 (Hermitage) and 37138 (Old Hickory) reach into Wilson County; 37080 (Joelton) reaches into Cheatham County; 37215 and 37221 (Bellevue) reach into Williamson County; 37209 touches Cheatham County. If your voter card names another county, this is not your ballot. Small parts of 37015, 37027 (mostly Brentwood), 37064, 37086, 37122, 37135 and 37143 are in Davidson County too but open their own county's ballot; if you vote in Davidson with one of those ZIPs, choose Nashville from the list of places.",
+  "zip_caveats": "A ZIP doesn't tell us your districts here. Davidson County is split among three U.S. House districts (4, 6 and 7, redrawn in May 2026), and only state Senate Districts 17, 19 and 21 have races this year, so some Nashville voters have no state Senate race. Your districts are on the yellow voter card the Election Commission mailed this summer, after the May 2026 redraw, on your sample ballot, or in the state's district lookup. Belle Meade, Forest Hills and Goodlettsville voters also vote for city commissioners, and Goodlettsville votes on a sales tax question; those are only on those cities' ballots. Some ZIPs cross the county line, and the other county's ballot has different races: 37072 (Goodlettsville) reaches into Sumner and Robertson counties; 37076 (Hermitage) and 37138 (Old Hickory) reach into Wilson County; 37080 (Joelton) reaches into Cheatham County; 37215 and 37221 (Bellevue) reach into Williamson County; 37209 touches Cheatham County. If your voter card names another county, this is not your ballot. Small parts of 37015, 37027 (mostly Brentwood), 37064, 37086, 37122, 37135 and 37143 are in Davidson County too but open their own county's ballot; if you vote in Davidson with one of those ZIPs, choose Nashville from the list of places.",
   "contest_ids": [
     "tn-governor",
     "tn-amendment-1",
@@ -135,6 +139,11 @@
     "election_day": "https://maps.nashville.gov/PollingPlaceFinder",
     "tracking": "https://tnmap.tn.gov/voterlookup/"
   },
+  "election_day": {
+    "polls_open": "7:00 AM",
+    "source": "https://www.nashville.gov/sites/default/files/2026-09/Sample_Ballot_November_3_2026_State_Fed_Gen_Mun_Elections.pdf?ct=1790110765",
+    "confidence": "verified"
+  },
   "situations": [
     {
       "id": "no_mail_ballot_or_lost",
@@ -210,12 +219,12 @@
       "url": "https://www.census.gov/library/reference/code-lists/ansi.html"
     }
   ],
-  "notes": "Today, Thursday, October 29, is the last day of early voting: any of 15 sites, 8 AM to 7 PM. On Election Day, Tuesday, November 3, polls are open 7 AM to 7 PM, and you must vote at your assigned polling place. One change this year: voters assigned to the Downtown Library (District 19, Precinct 5) vote at the Howard Office Building, 700 President Ronald Reagan Way. Bring a Tennessee or federal photo ID; it can be expired, but college IDs and out-of-state licenses don't count. Absentee ballots go back by mail only and must arrive by 7 PM on November 3. Your U.S. House district may be new this year: the state redrew the lines in May 2026, and your yellow voter card from June shows the new one.",
+  "notes": "Today, Thursday, October 29, is the last day of early voting: any of 15 sites, 8 AM to 7 PM. On Election Day, Tuesday, November 3, polls are open 7 AM to 7 PM, and you must vote at your assigned polling place. One change this year: voters assigned to the Downtown Library (District 19, Precinct 5) vote at the Howard Office Building, 700 President Ronald Reagan Way. Bring a Tennessee or federal photo ID; it can be expired, but college IDs and out-of-state licenses don't count. Absentee ballots go back by mail only and must arrive by 7 PM on November 3. Your U.S. House district may be new this year: the state redrew the lines in May 2026, and the yellow voter card mailed this summer shows the new one.",
   "dated": [
     {
       "path": "notes",
       "from": "2026-10-30",
-      "text": "Early voting is over. On Election Day, Tuesday, November 3, polls are open 7 AM to 7 PM, and you must vote at your assigned polling place. One change this year: voters assigned to the Downtown Library (District 19, Precinct 5) vote at the Howard Office Building, 700 President Ronald Reagan Way. Bring a Tennessee or federal photo ID; it can be expired, but college IDs and out-of-state licenses don't count. Absentee ballots go back by mail only and must arrive by 7 PM on November 3. Your U.S. House district may be new this year: the state redrew the lines in May 2026, and your yellow voter card from June shows the new one."
+      "text": "Early voting is over. On Election Day, Tuesday, November 3, polls are open 7 AM to 7 PM, and you must vote at your assigned polling place. One change this year: voters assigned to the Downtown Library (District 19, Precinct 5) vote at the Howard Office Building, 700 President Ronald Reagan Way. Bring a Tennessee or federal photo ID; it can be expired, but college IDs and out-of-state licenses don't count. Absentee ballots go back by mail only and must arrive by 7 PM on November 3. Your U.S. House district may be new this year: the state redrew the lines in May 2026, and the yellow voter card mailed this summer shows the new one."
     },
     {
       "path": "early_in_person.hours_note",

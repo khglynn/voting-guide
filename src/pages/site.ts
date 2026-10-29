@@ -196,7 +196,8 @@ function dateRows(h: HowTo, place: PlaceBundle | null): DateRow[] {
   if (r && r.date) out.push({ date: r.date, lead: 'Mail ballot deadline: ', when: fmtDate(r.date), detail: r.time || null, list: (h.mail_ballot.return_options || []).filter(Boolean) });
   const ed = h.election_day;
   const { close } = closeOf(ed.polls_close, zonesFor(h.state, place ? [place] : []));
-  const hours = !close ? '' : !mail && PLAIN_TIME.test(ed.polls_open || '') && PLAIN_TIME.test(ed.polls_close || '') ? `You can vote from ${clock(ed.polls_open)} to ${close}.` : `Polls close at ${close}.`;
+  // A place's own opening time (Nashville's 7 AM, Oct 29) pairs with its own zone's close; a state's two-zone close never does.
+  const hours = !close ? '' : !mail && PLAIN_TIME.test(ed.polls_open || '') && (PLAIN_TIME.test(ed.polls_close || '') || !!place?.election_day) ? `You can vote from ${clock(ed.polls_open)} to ${close}.` : `Polls close at ${close}.`;
   if (h.election_date) out.push({ date: h.election_date, lead: 'Election Day: ', when: fmtDate(h.election_date), detail: [hours, ed.in_line_rule].filter(Boolean).join(' ') || null });
   return out.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
 }

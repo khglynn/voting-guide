@@ -2369,16 +2369,23 @@ const LOOKED = thinPlaces(true);
     await ctx.close();
   }
 }
-// Kevin, Oct 29: once we've looked hard for a place's own picks (Nashville), the card says so instead of asking.
+// Kevin, Oct 29: once we've looked hard for a place's own picks, the card says so instead of asking. Nashville was
+// the first place marked, and its first local pick made it full the same day, as it should. With no marked thin
+// place in the data, the unmarked one above stands in, marked through its index entry for this page only.
 {
-  if (!LOOKED) check('Looked hard: no such place in today’s data, so nothing to show', true);
+  const looked = LOOKED || (THIN && { ...THIN, p: { ...THIN.p, local_picks_checked: { on: THIN.p.checked, where: ['Paper A', 'Weekly B'] } } });
+  if (!looked) check('Looked hard: no thin place in today’s data, so nothing to show', true);
   else {
-    const name = LOOKED.p.label.replace(/\s*\(.*\)$/, '');
+    const name = looked.p.label.replace(/\s*\(.*\)$/, '');
     const { ctx, page } = await newPage();
-    const after = new Date(Date.parse(`${LOOKED.p.checked}T00:00:00Z`) + 864e5).toISOString().slice(0, 10);
+    if (!LOOKED) {
+      const idx = { ...INDEX_JSON, places: { ...INDEX_JSON.places, [looked.id]: looked.p } };
+      await page.route((u) => u.pathname.endsWith('/data/index.json'), (route) => route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(idx) }));
+    }
+    const after = new Date(Date.parse(`${looked.p.checked}T00:00:00Z`) + 864e5).toISOString().slice(0, 10);
     await page.goto(`${BASE}/?today=${after}`);
     await page.waitForSelector('#zip');
-    await page.fill('#zip', LOOKED.zip);
+    await page.fill('#zip', looked.zip);
     await page.waitForSelector('#door .cov-card', { timeout: 15000 });
     check(`Looked hard (${name}): the card says we looked, when and where, with no one-tap and no dark button`, (await text(page, '#door .cov-card .cov-lead')) === `We looked hard for ${name}’s local picks.`
       && /^On [A-Z][a-z]{2} \d+ we checked .+\. None of them had picks we could find\.$/.test(await text(page, '#door .cov-card .cov-here'))

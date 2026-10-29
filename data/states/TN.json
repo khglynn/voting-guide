@@ -51,8 +51,8 @@
       "source": "https://sos.tn.gov/elections/guides/guide-to-absentee-voting"
     },
     "return_options": [
-      "By mail only (USPS, FedEx, UPS or another carrier). Your county election commission must get it by the time polls close on Election Day: 7 PM Central, 8 PM Eastern. A postmark doesn't count.",
-      "You can't hand it in: not at the office, and not to a poll worker during early voting or on Election Day.",
+      "Return it by mail only (USPS, FedEx, UPS or another carrier). Your county election commission must get it by the time polls close on Election Day: 7 PM Central, 8 PM Eastern. A postmark doesn't count.",
+      "You can't hand it in at the office or give it to a poll worker during early voting or on Election Day.",
       "Military and overseas voters: separate rules, and they can get the ballot by email; see the Secretary of State's FAQ for military and overseas voters."
     ],
     "postage": null,

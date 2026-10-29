@@ -113,8 +113,8 @@
   },
   "mail_ballot": {
     "return_options": [
-      "By mail to the Board of Election Commissioners, 300 N. Tucker Blvd., St. Louis, MO 63101. It must arrive by 7 PM on Nov 3; a postmark doesn't count. You get no confirmation unless you send it by certified mail.",
-      "In person at the Board, 300 N. Tucker Blvd., Monday to Friday, 8 AM to 5 PM. A relative or guardian bringing it for you must come in person and sign a form saying how you're related; state law (RSMo 115.291) allows only close relatives (spouse, parent, child, grandparent, grandchild, sibling), not friends or neighbors.",
+      "Mail it to the Board of Election Commissioners, 300 N. Tucker Blvd., St. Louis, MO 63101. It must arrive by 7 PM on Nov 3. A postmark doesn't count. You get no confirmation unless you send it by certified mail.",
+      "Return it in person at the Board, 300 N. Tucker Blvd., Monday to Friday, 8 AM to 5 PM. A relative or guardian bringing it for you must come in person and sign a form saying how you're related. State law (RSMo 115.291) allows only close relatives (spouse, parent, child, grandparent, grandchild, sibling), not friends or neighbors.",
       "Questions: the City's Absentee Department, 314-622-3230 or 314-622-3319.",
       "Military and overseas voters: separate rules; see the Secretary of State's military and overseas page."
     ],
@@ -122,7 +122,7 @@
     "confidence": "verified",
     "request_deadline": {
       "date": "2026-10-21",
-      "rule": "Your application for a ballot by mail had to reach the City Election Board by 5 PM on Wednesday, October 21. That has passed, so vote in person instead: absentee in person through Monday, November 2, or at your polling place on Election Day.",
+      "rule": "Your application for a ballot by mail had to reach the City Election Board by 5 PM on Wednesday, October 21. That deadline has passed. You can vote absentee in person through Monday, November 2, or at your polling place on Election Day.",
       "source": "https://www.sos.mo.gov/elections/goVoteMissouri/howtovote"
     }
   },
@@ -297,7 +297,7 @@
     {
       "path": "early_in_person.hours_short",
       "from": "2026-11-01",
-      "text": "Libraries open 1 PM Monday, Nov 2; the Board is open 8 AM to 5 PM."
+      "text": "Libraries open at 1 PM Monday, Nov 2. The Board is open 8 AM to 5 PM."
     }
   ]
 }

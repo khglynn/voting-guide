@@ -2058,5 +2058,485 @@
     "url": "https://nashvillebanner.com/2026-voters-guide/",
     "date": "2026-10-29",
     "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-local-429",
+    "target_id": "tn-us-house-4",
+    "status": "endorsed",
+    "choice": "Victoria Broderick",
+    "why": "Its Aug 26 post says “The AFL-CIO has come out with their list of candidates that they (we) are endorsing for Tennessee elections” and lists “DISTRICT 4: Victoria Broderick” for the U.S. House.",
+    "url": "https://www.ibew429.org/viewStory/?active=1&story=93&cat=1",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-local-429",
+    "target_id": "tn-us-house-6",
+    "status": "endorsed",
+    "choice": "Mike Croley",
+    "why": "Its Aug 26 post says “The AFL-CIO has come out with their list of candidates that they (we) are endorsing for Tennessee elections” and lists “DISTRICT 6: Mike Croley (D)” for the U.S. House.",
+    "url": "https://www.ibew429.org/viewStory/?active=1&story=93&cat=1",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-local-429",
+    "target_id": "tn-us-house-7",
+    "status": "endorsed",
+    "choice": "Darden Copeland",
+    "why": "Its Aug 26 post says “The AFL-CIO has come out with their list of candidates that they (we) are endorsing for Tennessee elections” and lists “DISTRICT 7: Darden Copeland (D)” for the U.S. House. The Tennessee AFL-CIO’s own Aug 18 list names no one in this district.",
+    "url": "https://www.ibew429.org/viewStory/?active=1&story=93&cat=1",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-local-429",
+    "target_id": "tn-sd-17",
+    "status": "endorsed",
+    "choice": "Lindsey Patrick-Wright",
+    "why": "Its Aug 26 post says “The AFL-CIO has come out with their list of candidates that they (we) are endorsing for Tennessee elections” and lists “DISTRICT 17: Lindsey Patrick-Wright (D)” for the state Senate.",
+    "url": "https://www.ibew429.org/viewStory/?active=1&story=93&cat=1",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-local-429",
+    "target_id": "tn-sd-19",
+    "status": "endorsed",
+    "choice": "Charlane Oliver",
+    "why": "Its Aug 26 post says “The AFL-CIO has come out with their list of candidates that they (we) are endorsing for Tennessee elections” and lists “DISTRICT 19: Charlane Oliver (D)” for the state Senate.",
+    "url": "https://www.ibew429.org/viewStory/?active=1&story=93&cat=1",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-local-429",
+    "target_id": "tn-sd-21",
+    "status": "endorsed",
+    "choice": "Jeff Yarbro",
+    "why": "Its Aug 26 post says “The AFL-CIO has come out with their list of candidates that they (we) are endorsing for Tennessee elections” and lists “DISTRICT 21: Jeff Yarbro (D)” for the state Senate.",
+    "url": "https://www.ibew429.org/viewStory/?active=1&story=93&cat=1",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-local-429",
+    "target_id": "tn-hd-50",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its Aug 26 list names no one for state House District 50, though it names candidates in the districts on either side (checked Oct 29, 2026).",
+    "url": "https://www.ibew429.org/viewStory/?active=1&story=93&cat=1",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-local-429",
+    "target_id": "tn-hd-51",
+    "status": "endorsed",
+    "choice": "Aftyn Behn",
+    "why": "Its Aug 26 post says “The AFL-CIO has come out with their list of candidates that they (we) are endorsing for Tennessee elections” and lists “DISTRICT 51: Aftyn Behn (D)” for the state House.",
+    "url": "https://www.ibew429.org/viewStory/?active=1&story=93&cat=1",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-local-429",
+    "target_id": "tn-hd-52",
+    "status": "endorsed",
+    "choice": "Justin Jones",
+    "why": "Its Aug 26 post says “The AFL-CIO has come out with their list of candidates that they (we) are endorsing for Tennessee elections” and lists “DISTRICT 52: Justin Jones (D)” for the state House.",
+    "url": "https://www.ibew429.org/viewStory/?active=1&story=93&cat=1",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-local-429",
+    "target_id": "tn-hd-53",
+    "status": "endorsed",
+    "choice": "Jason L Powell",
+    "why": "Its Aug 26 post says “The AFL-CIO has come out with their list of candidates that they (we) are endorsing for Tennessee elections” and lists “DISTRICT 53: Jason Powell (D)” for the state House.",
+    "url": "https://www.ibew429.org/viewStory/?active=1&story=93&cat=1",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-local-429",
+    "target_id": "tn-hd-54",
+    "status": "endorsed",
+    "choice": "Vincent Dixie",
+    "why": "Its Aug 26 post says “The AFL-CIO has come out with their list of candidates that they (we) are endorsing for Tennessee elections” and lists “DISTRICT 54: Vincent Dixie (D)” for the state House.",
+    "url": "https://www.ibew429.org/viewStory/?active=1&story=93&cat=1",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-local-429",
+    "target_id": "tn-hd-55",
+    "status": "endorsed",
+    "choice": "John Ray Clemmons",
+    "why": "Its Aug 26 post says “The AFL-CIO has come out with their list of candidates that they (we) are endorsing for Tennessee elections” and lists “DISTRICT 55: John Ray Clemmons (D)” for the state House.",
+    "url": "https://www.ibew429.org/viewStory/?active=1&story=93&cat=1",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-local-429",
+    "target_id": "tn-hd-56",
+    "status": "endorsed",
+    "choice": "Bob Freeman",
+    "why": "Its Aug 26 post says “The AFL-CIO has come out with their list of candidates that they (we) are endorsing for Tennessee elections” and lists “DISTRICT 56: Bob Freeman (D)” for the state House.",
+    "url": "https://www.ibew429.org/viewStory/?active=1&story=93&cat=1",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-local-429",
+    "target_id": "tn-hd-58",
+    "status": "endorsed",
+    "choice": "Harold M. Love, Jr.",
+    "why": "Its Aug 26 post says “The AFL-CIO has come out with their list of candidates that they (we) are endorsing for Tennessee elections” and lists “DISTRICT 58: Harold Love, JR. (D)” for the state House.",
+    "url": "https://www.ibew429.org/viewStory/?active=1&story=93&cat=1",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-local-429",
+    "target_id": "tn-hd-59",
+    "status": "endorsed",
+    "choice": "Mark Proctor",
+    "why": "Its Aug 26 post says “The AFL-CIO has come out with their list of candidates that they (we) are endorsing for Tennessee elections” and lists “DISTRICT 59: Mark Proctor (D)” for the state House.",
+    "url": "https://www.ibew429.org/viewStory/?active=1&story=93&cat=1",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-local-429",
+    "target_id": "tn-hd-60",
+    "status": "endorsed",
+    "choice": "Shaundelle Brooks",
+    "why": "Its Aug 26 post says “The AFL-CIO has come out with their list of candidates that they (we) are endorsing for Tennessee elections” and lists “DISTRICT 60: Shaundelle Brooks (D)” for the state House.",
+    "url": "https://www.ibew429.org/viewStory/?active=1&story=93&cat=1",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tirrc-votes",
+    "target_id": "tn-us-house-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 list of endorsed Tennessee candidates names two: Justin J. Pearson in the 9th Congressional District and Jerri Green for governor (checked Oct 29, 2026).",
+    "url": "https://www.tirrcvotes.org/2026-tn-state-endorsed-candidates",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tirrc-votes",
+    "target_id": "tn-us-house-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 list of endorsed Tennessee candidates names two: Justin J. Pearson in the 9th Congressional District and Jerri Green for governor (checked Oct 29, 2026).",
+    "url": "https://www.tirrcvotes.org/2026-tn-state-endorsed-candidates",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tirrc-votes",
+    "target_id": "tn-us-house-7",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 list of endorsed Tennessee candidates names two: Justin J. Pearson in the 9th Congressional District and Jerri Green for governor (checked Oct 29, 2026).",
+    "url": "https://www.tirrcvotes.org/2026-tn-state-endorsed-candidates",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tirrc-votes",
+    "target_id": "tn-sd-17",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 list of endorsed Tennessee candidates names two: Justin J. Pearson in the 9th Congressional District and Jerri Green for governor (checked Oct 29, 2026).",
+    "url": "https://www.tirrcvotes.org/2026-tn-state-endorsed-candidates",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tirrc-votes",
+    "target_id": "tn-sd-19",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 list of endorsed Tennessee candidates names two: Justin J. Pearson in the 9th Congressional District and Jerri Green for governor (checked Oct 29, 2026).",
+    "url": "https://www.tirrcvotes.org/2026-tn-state-endorsed-candidates",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tirrc-votes",
+    "target_id": "tn-sd-21",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 list of endorsed Tennessee candidates names two: Justin J. Pearson in the 9th Congressional District and Jerri Green for governor (checked Oct 29, 2026).",
+    "url": "https://www.tirrcvotes.org/2026-tn-state-endorsed-candidates",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tirrc-votes",
+    "target_id": "tn-hd-50",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 list of endorsed Tennessee candidates names two: Justin J. Pearson in the 9th Congressional District and Jerri Green for governor (checked Oct 29, 2026).",
+    "url": "https://www.tirrcvotes.org/2026-tn-state-endorsed-candidates",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tirrc-votes",
+    "target_id": "tn-hd-51",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 list of endorsed Tennessee candidates names two: Justin J. Pearson in the 9th Congressional District and Jerri Green for governor (checked Oct 29, 2026).",
+    "url": "https://www.tirrcvotes.org/2026-tn-state-endorsed-candidates",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tirrc-votes",
+    "target_id": "tn-hd-52",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 list of endorsed Tennessee candidates names two: Justin J. Pearson in the 9th Congressional District and Jerri Green for governor (checked Oct 29, 2026).",
+    "url": "https://www.tirrcvotes.org/2026-tn-state-endorsed-candidates",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tirrc-votes",
+    "target_id": "tn-hd-53",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 list of endorsed Tennessee candidates names two: Justin J. Pearson in the 9th Congressional District and Jerri Green for governor (checked Oct 29, 2026).",
+    "url": "https://www.tirrcvotes.org/2026-tn-state-endorsed-candidates",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tirrc-votes",
+    "target_id": "tn-hd-54",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 list of endorsed Tennessee candidates names two: Justin J. Pearson in the 9th Congressional District and Jerri Green for governor (checked Oct 29, 2026).",
+    "url": "https://www.tirrcvotes.org/2026-tn-state-endorsed-candidates",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tirrc-votes",
+    "target_id": "tn-hd-55",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 list of endorsed Tennessee candidates names two: Justin J. Pearson in the 9th Congressional District and Jerri Green for governor (checked Oct 29, 2026).",
+    "url": "https://www.tirrcvotes.org/2026-tn-state-endorsed-candidates",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tirrc-votes",
+    "target_id": "tn-hd-56",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 list of endorsed Tennessee candidates names two: Justin J. Pearson in the 9th Congressional District and Jerri Green for governor (checked Oct 29, 2026).",
+    "url": "https://www.tirrcvotes.org/2026-tn-state-endorsed-candidates",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tirrc-votes",
+    "target_id": "tn-hd-58",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 list of endorsed Tennessee candidates names two: Justin J. Pearson in the 9th Congressional District and Jerri Green for governor (checked Oct 29, 2026).",
+    "url": "https://www.tirrcvotes.org/2026-tn-state-endorsed-candidates",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tirrc-votes",
+    "target_id": "tn-hd-59",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 list of endorsed Tennessee candidates names two: Justin J. Pearson in the 9th Congressional District and Jerri Green for governor (checked Oct 29, 2026).",
+    "url": "https://www.tirrcvotes.org/2026-tn-state-endorsed-candidates",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tirrc-votes",
+    "target_id": "tn-hd-60",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 list of endorsed Tennessee candidates names two: Justin J. Pearson in the 9th Congressional District and Jerri Green for governor (checked Oct 29, 2026).",
+    "url": "https://www.tirrcvotes.org/2026-tn-state-endorsed-candidates",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "equity-alliance-fund",
+    "target_id": "tn-us-house-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 endorsements page names five candidates, none in this race (checked Oct 29, 2026).",
+    "url": "https://www.theequityalliancefund.org/endorsements",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "equity-alliance-fund",
+    "target_id": "tn-us-house-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 endorsements page names five candidates, none in this race (checked Oct 29, 2026).",
+    "url": "https://www.theequityalliancefund.org/endorsements",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "equity-alliance-fund",
+    "target_id": "tn-us-house-7",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 endorsements page names five candidates, none in this race (checked Oct 29, 2026).",
+    "url": "https://www.theequityalliancefund.org/endorsements",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "equity-alliance-fund",
+    "target_id": "tn-sd-17",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 endorsements page names five candidates, none in this race (checked Oct 29, 2026).",
+    "url": "https://www.theequityalliancefund.org/endorsements",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "equity-alliance-fund",
+    "target_id": "tn-sd-19",
+    "status": "endorsed",
+    "choice": "Charlane Oliver",
+    "why": "Its endorsements page says “This year, we are proud to announce our 2026 Tennessee candidate endorsements” and lists Charlane Oliver, “Candidate for Tennessee Senate District 19”.",
+    "url": "https://www.theequityalliancefund.org/endorsements",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "equity-alliance-fund",
+    "target_id": "tn-sd-21",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 endorsements page names five candidates, none in this race (checked Oct 29, 2026).",
+    "url": "https://www.theequityalliancefund.org/endorsements",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "equity-alliance-fund",
+    "target_id": "tn-hd-50",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 endorsements page names five candidates, none in this race (checked Oct 29, 2026).",
+    "url": "https://www.theequityalliancefund.org/endorsements",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "equity-alliance-fund",
+    "target_id": "tn-hd-51",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 endorsements page names five candidates, none in this race (checked Oct 29, 2026).",
+    "url": "https://www.theequityalliancefund.org/endorsements",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "equity-alliance-fund",
+    "target_id": "tn-hd-52",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 endorsements page names five candidates, none in this race (checked Oct 29, 2026).",
+    "url": "https://www.theequityalliancefund.org/endorsements",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "equity-alliance-fund",
+    "target_id": "tn-hd-53",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 endorsements page names five candidates, none in this race (checked Oct 29, 2026).",
+    "url": "https://www.theequityalliancefund.org/endorsements",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "equity-alliance-fund",
+    "target_id": "tn-hd-54",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 endorsements page names five candidates, none in this race (checked Oct 29, 2026).",
+    "url": "https://www.theequityalliancefund.org/endorsements",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "equity-alliance-fund",
+    "target_id": "tn-hd-55",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 endorsements page names five candidates, none in this race (checked Oct 29, 2026).",
+    "url": "https://www.theequityalliancefund.org/endorsements",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "equity-alliance-fund",
+    "target_id": "tn-hd-56",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 endorsements page names five candidates, none in this race (checked Oct 29, 2026).",
+    "url": "https://www.theequityalliancefund.org/endorsements",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "equity-alliance-fund",
+    "target_id": "tn-hd-58",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 endorsements page names five candidates, none in this race (checked Oct 29, 2026).",
+    "url": "https://www.theequityalliancefund.org/endorsements",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "equity-alliance-fund",
+    "target_id": "tn-hd-59",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 endorsements page names five candidates, none in this race (checked Oct 29, 2026).",
+    "url": "https://www.theequityalliancefund.org/endorsements",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "equity-alliance-fund",
+    "target_id": "tn-hd-60",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 endorsements page names five candidates, none in this race (checked Oct 29, 2026).",
+    "url": "https://www.theequityalliancefund.org/endorsements",
+    "date": "2026-10-29",
+    "confidence": "verified"
   }
 ]

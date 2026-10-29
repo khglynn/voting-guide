@@ -561,12 +561,12 @@
     {
       "path": "mail_ballot.mail_cutoff_advice",
       "from": "2026-10-28",
-      "text": "Postmarks count, but USPS warns that a ballot dropped after the last pickup on Election Day 'will not be postmarked until the following business day,' which would miss the deadline. The safest way is to hand it in: your county board, any early voting site in your county through Nov 1, or any poll site in your county on Nov 3 by 9 PM."
+      "text": "Postmarks count, but USPS warns that a ballot dropped after the last pickup on Election Day 'will not be postmarked until the following business day,' which would miss the deadline. The safest way is to hand your ballot in: at your county board, any early voting site in your county through Nov 1, or any poll site in your county on Nov 3 by 9 PM."
     },
     {
       "path": "mail_ballot.mail_cutoff_advice",
       "from": "2026-11-02",
-      "text": "Postmarks count, but USPS warns that a ballot dropped after the last pickup on Election Day 'will not be postmarked until the following business day,' which would miss the deadline. The safest way is to hand it in: your county board, or any poll site in your county on Nov 3 by 9 PM."
+      "text": "Postmarks count, but USPS warns that a ballot dropped after the last pickup on Election Day 'will not be postmarked until the following business day,' which would miss the deadline. The safest way is to hand your ballot in: at your county board, or any poll site in your county on Nov 3 by 9 PM."
     }
   ]
 }

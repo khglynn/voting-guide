@@ -577,7 +577,7 @@
     {
       "path": "mail_ballot.mail_cutoff_advice",
       "from": "2026-10-28",
-      "text": "A mailed ballot still counts if it's postmarked by November 3, but putting it in a mailbox doesn't guarantee a same-day postmark. The safest way now is an official drop box by 8 PM on November 3. If you must mail it, ask the post office counter for a free manual postmark when you hand it over."
+      "text": "Your mailed ballot still counts if it's postmarked by November 3. But putting it in a mailbox doesn't guarantee a postmark that day. The safest way now is an official drop box by 8 PM on November 3. If you must mail it, ask a post office counter clerk for a free manual postmark when you hand it over."
     }
   ]
 }

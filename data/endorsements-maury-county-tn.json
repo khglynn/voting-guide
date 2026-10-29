@@ -1,0 +1,202 @@
+[
+  {
+    "endorser_id": "lwv-tennessee",
+    "target_id": "tn-us-house-5",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose any candidate. Its election page sends voters to VOTE411 to look up their ballot.",
+    "url": "https://www.lwvtn.org/november_3_2026_state_federal_general_election",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-tennessee",
+    "target_id": "tn-us-house-9",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose any candidate. Its election page sends voters to VOTE411 to look up their ballot.",
+    "url": "https://www.lwvtn.org/november_3_2026_state_federal_general_election",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-tennessee",
+    "target_id": "tn-hd-64",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose any candidate. Its election page sends voters to VOTE411 to look up their ballot.",
+    "url": "https://www.lwvtn.org/november_3_2026_state_federal_general_election",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-tennessee",
+    "target_id": "tn-hd-71",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose any candidate. Its election page sends voters to VOTE411 to look up their ballot.",
+    "url": "https://www.lwvtn.org/november_3_2026_state_federal_general_election",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tn-democratic-party",
+    "target_id": "tn-us-house-5",
+    "status": "endorsed",
+    "choice": "Chaz Molder",
+    "why": "Party nominee, listed in the party’s 2026 Candidate Guide.",
+    "url": "https://tndp.org/candidates/us-house/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tn-democratic-party",
+    "target_id": "tn-us-house-9",
+    "status": "endorsed",
+    "choice": "Justin J. Pearson",
+    "why": "Party nominee, listed in the party’s 2026 Candidate Guide.",
+    "url": "https://tndp.org/candidates/us-house/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tn-democratic-party",
+    "target_id": "tn-hd-64",
+    "status": "endorsed",
+    "choice": "Craig D'Apolito",
+    "why": "Party nominee, listed in the party’s 2026 Candidate Guide.",
+    "url": "https://tndp.org/candidates/state-house/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tn-democratic-party",
+    "target_id": "tn-hd-71",
+    "status": "endorsed",
+    "choice": "Matt Day",
+    "why": "Party nominee, listed in the party’s 2026 Candidate Guide.",
+    "url": "https://tndp.org/candidates/state-house/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tn-republican-party",
+    "target_id": "tn-us-house-5",
+    "status": "endorsed",
+    "choice": "Charlie Hatcher",
+    "why": "Party nominee, listed on the party’s home page with links to volunteer and donate.",
+    "url": "https://www.tngop.org/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tn-republican-party",
+    "target_id": "tn-us-house-9",
+    "status": "endorsed",
+    "choice": "Brent Taylor",
+    "why": "Party nominee, listed on the party’s home page with links to volunteer and donate.",
+    "url": "https://www.tngop.org/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tn-republican-party",
+    "target_id": "tn-hd-64",
+    "status": "endorsed",
+    "choice": "Scott Cepicky",
+    "why": "Party nominee, listed on the party’s candidate page.",
+    "url": "https://www.tngop.org/candidate-toolbox",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tn-republican-party",
+    "target_id": "tn-hd-71",
+    "status": "endorsed",
+    "choice": "Kip Capley",
+    "why": "Party nominee, listed on the party’s candidate page.",
+    "url": "https://www.tngop.org/candidate-toolbox",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tn-afl-cio",
+    "target_id": "tn-us-house-5",
+    "status": "endorsed",
+    "choice": "Chaz Molder",
+    "why": "On its Aug 18 general-election list: “When working people have a voice, our communities are stronger.”",
+    "url": "https://tnaflcio.org/news/tn-afl-cio-announces-2026-general-election-endorsements",
+    "date": "2026-08-18",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tn-afl-cio",
+    "target_id": "tn-us-house-9",
+    "status": "endorsed",
+    "choice": "Justin J. Pearson",
+    "why": "On its Aug 18 general-election list: “When working people have a voice, our communities are stronger.”",
+    "url": "https://tnaflcio.org/news/tn-afl-cio-announces-2026-general-election-endorsements",
+    "date": "2026-08-18",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tn-afl-cio",
+    "target_id": "tn-hd-64",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its Aug 18 general-election list names no one for this district (checked Oct 29, 2026).",
+    "url": "https://tnaflcio.org/news/tn-afl-cio-announces-2026-general-election-endorsements",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tn-afl-cio",
+    "target_id": "tn-hd-71",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its Aug 18 general-election list names no one for this district (checked Oct 29, 2026).",
+    "url": "https://tnaflcio.org/news/tn-afl-cio-announces-2026-general-election-endorsements",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tn-chamber",
+    "target_id": "tn-us-house-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "The 2026 endorsements we found cover the governor’s race and the legislature; no U.S. House pick was found (checked Oct 29, 2026).",
+    "url": "https://tnchamber.org/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tn-chamber",
+    "target_id": "tn-us-house-9",
+    "status": "not_found",
+    "choice": null,
+    "why": "The 2026 endorsements we found cover the governor’s race and the legislature; no U.S. House pick was found (checked Oct 29, 2026).",
+    "url": "https://tnchamber.org/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tn-chamber",
+    "target_id": "tn-hd-64",
+    "status": "not_found",
+    "choice": null,
+    "why": "This seat is not on either of its 2026 legislative endorsement lists (June 23 and Oct 5).",
+    "url": "https://tnchamber.org/tennessee-chamber-announces-additional-2026-legislative-endorsements/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tn-chamber",
+    "target_id": "tn-hd-71",
+    "status": "not_found",
+    "choice": null,
+    "why": "This seat is not on either of its 2026 legislative endorsement lists (June 23 and Oct 5).",
+    "url": "https://tnchamber.org/tennessee-chamber-announces-additional-2026-legislative-endorsements/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  }
+]

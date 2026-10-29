@@ -1,0 +1,786 @@
+[
+  {
+    "id": "tn-us-house-5",
+    "state": "TN",
+    "level": "federal",
+    "office": "U.S. House of Representatives",
+    "district": "TN-5",
+    "scope_plain": "Most of Maury County, including all of Mount Pleasant and the north and west side of Columbia, under the U.S. House map Tennessee redrew in May 2026. The new 5th runs from Maury and Williamson counties west across rural West Tennessee into part of Memphis.",
+    "office_explainer": "One of 435 House members. Writes federal laws and votes on the budget and taxes. Two-year term.",
+    "why_it_matters": "Open seat: Rep. Andy Ogles lost the August Republican primary to Charlie Hatcher. The lines are new too: the May 2026 redraw moved about 19,662 Maury County addresses from one U.S. House district to another, per the Election Commission.",
+    "vote_for": 1,
+    "incumbent": "Andy Ogles",
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Charlie Hatcher",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://charliehatcher.com",
+        "website_confidence": "sourced",
+        "background": "Former Tennessee agriculture commissioner and a dairy farmer, per NewsChannel 5. Republican nominee from College Grove, per the Secretary of State's candidate list.",
+        "own_words": [
+          {
+            "text": "The number one priority would be cost of living.",
+            "is_quote": true,
+            "source": "https://www.newschannel5.com/news/three-candidates-lay-out-priorities-for-tennessees-5th-congressional-district-at-public-forum",
+            "source_label": "NewsChannel 5, Oct 21 forum"
+          },
+          {
+            "text": "Tariffs are a tool; they can be used effectively, sometimes badly.",
+            "is_quote": true,
+            "source": "https://www.newschannel5.com/news/three-candidates-lay-out-priorities-for-tennessees-5th-congressional-district-at-public-forum",
+            "source_label": "NewsChannel 5, Oct 21 forum"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Chaz Molder",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://chazmolder.com",
+        "website_confidence": "sourced",
+        "background": "Mayor of Columbia since 2018, re-elected in 2022, per the Tennessee Democratic Party; he isn't running for mayor again. Democratic nominee from Columbia, per the Secretary of State's candidate list.",
+        "own_words": [
+          {
+            "text": "What I want to get to work immediately on is working to reduce the cost of living.",
+            "is_quote": true,
+            "source": "https://www.newschannel5.com/news/three-candidates-lay-out-priorities-for-tennessees-5th-congressional-district-at-public-forum",
+            "source_label": "NewsChannel 5, Oct 21 forum"
+          },
+          {
+            "text": "And constituent services has got to be the number one priority.",
+            "is_quote": true,
+            "source": "https://www.newschannel5.com/news/three-candidates-lay-out-priorities-for-tennessees-5th-congressional-district-at-public-forum",
+            "source_label": "NewsChannel 5, Oct 21 forum"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "James A. Johnson",
+        "party": "Independent",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Independent candidate from Memphis, per the Secretary of State's candidate list.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-29",
+          "where": [
+            "NewsChannel 5's Oct 21 forum report (he did not take part)",
+            "Web searches: campaign site, interviews"
+          ]
+        }
+      },
+      {
+        "name": "Micheál (Me-Haul) O'Leary",
+        "party": "Independent",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Irish-born businessman and former local elected official in California, per NewsChannel 5. Independent candidate from Nashville, per the Secretary of State's candidate list.",
+        "own_words": [
+          {
+            "text": "As an independent, I will have that independent voice.",
+            "is_quote": true,
+            "source": "https://www.newschannel5.com/news/three-candidates-lay-out-priorities-for-tennessees-5th-congressional-district-at-public-forum",
+            "source_label": "NewsChannel 5, Oct 21 forum"
+          },
+          {
+            "text": "I’m running to represent you. You are going to be grading my report card.",
+            "is_quote": true,
+            "source": "https://www.newschannel5.com/news/three-candidates-lay-out-priorities-for-tennessees-5th-congressional-district-at-public-forum",
+            "source_label": "NewsChannel 5, Oct 21 forum"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Maury County Election Commission: sample ballot, November 3, 2026",
+        "url": "https://www.maurycounty-tn.gov/DocumentCenter/View/7553/2026-November-Sample-Ballot"
+      },
+      {
+        "name": "Tennessee Secretary of State: U.S. House candidates, 2026",
+        "url": "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/USHouseCandidates_2026.pdf"
+      },
+      {
+        "name": "Clerk of the U.S. House: nominees for the 120th Congress, Oct 8, 2026 (Ogles defeated in the primary)",
+        "url": "https://clerk.house.gov/member_info/electionInfo/2026/120-nominations.pdf"
+      },
+      {
+        "name": "Maury County Election Commission: offices on the November ballot and the new U.S. House line",
+        "url": "https://www.maurycounty-tn.gov/227/Election-Commission"
+      },
+      {
+        "name": "Tennessee Secretary of State: 2026 congressional redistricting",
+        "url": "https://sos.tn.gov/announcements/2026-congressional-redistricting"
+      },
+      {
+        "name": "Tennessee Comptroller: U.S. Congress district maps (2026)",
+        "url": "https://comptroller.tn.gov/maps/u-s--congress-districts.html"
+      },
+      {
+        "name": "NewsChannel 5: three candidates lay out priorities for Tennessee's 5th Congressional District at public forum, Oct 21, 2026",
+        "url": "https://www.newschannel5.com/news/three-candidates-lay-out-priorities-for-tennessees-5th-congressional-district-at-public-forum"
+      },
+      {
+        "name": "Tennessee Democratic Party: Chaz Molder",
+        "url": "https://tndp.org/chaz-molder/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tn-us-house-9",
+    "state": "TN",
+    "level": "federal",
+    "office": "U.S. House of Representatives",
+    "district": "TN-9",
+    "scope_plain": "Part of Maury County, including downtown Columbia and much of the city's south and east side, under the U.S. House map Tennessee redrew in May 2026. The new 9th runs about 200 miles, from part of Memphis east across rural Tennessee to parts of Maury, Williamson and Rutherford counties.",
+    "office_explainer": "One of 435 House members. Writes federal laws and votes on the budget and taxes. Two-year term.",
+    "why_it_matters": "Open seat: Rep. Steve Cohen of Memphis isn't running again after the May 2026 redraw split his district, per Roll Call. The 9th, long a Memphis district, now reaches Columbia.",
+    "vote_for": 1,
+    "incumbent": "Steve Cohen",
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Brent Taylor",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://brenttaylorforcongress.com",
+        "website_confidence": "sourced",
+        "background": "State senator from outside Memphis who owns a funeral home business, per NewsChannel 5; a former Memphis City Council member, per WSMV. Republican nominee from Eads, per the Secretary of State's candidate list.",
+        "own_words": [
+          {
+            "text": "What I want to do is, I want to continue doing what I have been doing in the state senate. And that is cutting wasteful spending. We have to bring wasteful Washington spending under control. I also want to unleash American energy.",
+            "is_quote": true,
+            "source": "https://www.newschannel5.com/news/newschannel-5-investigates/tennessees-9th-congressional-district-race-pits-democrat-pearson-against-republican-taylor",
+            "source_label": "NewsChannel 5, Sept 25"
+          },
+          {
+            "text": "Look the voters already know the choice here. The choice is competence or chaos. We don't need a debate to prove that.",
+            "is_quote": true,
+            "source": "https://www.newschannel5.com/news/newschannel-5-investigates/tennessees-9th-congressional-district-race-pits-democrat-pearson-against-republican-taylor",
+            "source_label": "NewsChannel 5, Sept 25, on a debate"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Justin J. Pearson",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.votejustinj.com",
+        "website_confidence": "verified",
+        "background": "State representative for a Memphis district (House District 86), per the Tennessee Democratic Party. Democratic nominee from Memphis, per the Secretary of State's candidate list.",
+        "own_words": [
+          {
+            "text": "The first thing we need to do is end this endless war in Iran. It was done illegally in the first place, but that has increased gas prices for consumers substantially.",
+            "is_quote": true,
+            "source": "https://www.newschannel5.com/news/newschannel-5-investigates/tennessees-9th-congressional-district-race-pits-democrat-pearson-against-republican-taylor",
+            "source_label": "NewsChannel 5, Sept 25"
+          },
+          {
+            "text": "I want to debate Brent Taylor anytime, anyplace, anywhere because the voters deserve to hear the very different visions for the state that we have.",
+            "is_quote": true,
+            "source": "https://www.newschannel5.com/news/newschannel-5-investigates/tennessees-9th-congressional-district-race-pits-democrat-pearson-against-republican-taylor",
+            "source_label": "NewsChannel 5, Sept 25, on a debate"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Dennis Clark",
+        "party": "Independent",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Independent candidate from Memphis, per the Secretary of State's candidate list.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-29",
+          "where": [
+            "NewsChannel 5 and WSMV coverage of the race",
+            "Web searches: campaign site, interviews"
+          ]
+        }
+      },
+      {
+        "name": "Michelle Davis Head",
+        "party": "Independent",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Independent candidate from Lewisburg, per the Secretary of State's candidate list.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-29",
+          "where": [
+            "NewsChannel 5 and WSMV coverage of the race",
+            "Web searches: campaign site, interviews"
+          ]
+        }
+      }
+    ],
+    "sources": [
+      {
+        "name": "Maury County Election Commission: sample ballot, November 3, 2026",
+        "url": "https://www.maurycounty-tn.gov/DocumentCenter/View/7553/2026-November-Sample-Ballot"
+      },
+      {
+        "name": "Tennessee Secretary of State: U.S. House candidates, 2026",
+        "url": "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/USHouseCandidates_2026.pdf"
+      },
+      {
+        "name": "Clerk of the U.S. House: nominees for the 120th Congress, Oct 8, 2026 (Cohen not a candidate)",
+        "url": "https://clerk.house.gov/member_info/electionInfo/2026/120-nominations.pdf"
+      },
+      {
+        "name": "Maury County Election Commission: offices on the November ballot and the new U.S. House line",
+        "url": "https://www.maurycounty-tn.gov/227/Election-Commission"
+      },
+      {
+        "name": "Tennessee Secretary of State: 2026 congressional redistricting",
+        "url": "https://sos.tn.gov/announcements/2026-congressional-redistricting"
+      },
+      {
+        "name": "Tennessee Comptroller: U.S. Congress district maps (2026)",
+        "url": "https://comptroller.tn.gov/maps/u-s--congress-districts.html"
+      },
+      {
+        "name": "Roll Call: Tennessee Rep. Steve Cohen announces retirement after GOP dismantles his district, May 15, 2026",
+        "url": "https://rollcall.com/2026/05/15/tennessee-rep-steve-cohen-announces-retirement-after-gop-dismantles-his-district/"
+      },
+      {
+        "name": "NewsChannel 5: Tennessee's 9th Congressional District race pits Democrat Pearson against Republican Taylor, Sept 25, 2026",
+        "url": "https://www.newschannel5.com/news/newschannel-5-investigates/tennessees-9th-congressional-district-race-pits-democrat-pearson-against-republican-taylor"
+      },
+      {
+        "name": "WSMV: redrawn 9th Congressional District pits Brent Taylor against Justin Pearson, Sept 18, 2026",
+        "url": "https://www.wsmv.com/2026/09/18/redrawn-tennessee-9th-congressional-district-pits-brent-taylor-against-justin-pearson-race-drawing-national-attention/"
+      },
+      {
+        "name": "Tennessee Democratic Party: Justin J. Pearson",
+        "url": "https://tndp.org/justin-j-pearson/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tn-hd-64",
+    "state": "TN",
+    "level": "state",
+    "office": "Tennessee House of Representatives",
+    "district": "HD-64",
+    "scope_plain": "Part of Maury County, including most of Columbia (House District 64).",
+    "office_explainer": "One of 99 state representatives. Writes Tennessee laws and votes on the state budget.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Scott Cepicky",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Scott Cepicky",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://www.scottcepicky.com",
+        "website_confidence": "sourced",
+        "background": "First elected to the state House in 2018, per the Tennessee Lookout, and a former chair of the Maury County Commission, per his campaign site. Republican nominee from Culleoka, per the Secretary of State's candidate list.",
+        "own_words": [
+          {
+            "text": "I believe that the Education of our children is crucial in order to insure the continued growth and prosperity of Middle Tennessee.",
+            "is_quote": true,
+            "source": "https://www.scottcepicky.com/issues",
+            "source_label": "Campaign site, issues page"
+          },
+          {
+            "text": "I believe the protection of life and liberty is paramount and non-negotiable.",
+            "is_quote": true,
+            "source": "https://www.scottcepicky.com/issues",
+            "source_label": "Campaign site, issues page"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Craig D'Apolito",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.cdapolito.com",
+        "website_confidence": "verified",
+        "background": "Has worked in the hospitality industry and as a corrections officer at the Maury County Jail, rising to sergeant, per the Tennessee Lookout. A Maury County resident since 1997, per the Tennessee Democratic Party. Democratic nominee from Columbia, per the Secretary of State's candidate list.",
+        "own_words": [
+          {
+            "text": "A moratorium on new Data Centers until common sense legislation can be enacted",
+            "is_quote": true,
+            "source": "https://www.cdapolito.com/issues",
+            "source_label": "Campaign site, issues page"
+          },
+          {
+            "text": "State Grocery Tax of 4% hurts the most vulnerable among us and should be removed",
+            "is_quote": true,
+            "source": "https://www.cdapolito.com/issues",
+            "source_label": "Campaign site, issues page"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Maury County Election Commission: sample ballot, November 3, 2026",
+        "url": "https://www.maurycounty-tn.gov/DocumentCenter/View/7553/2026-November-Sample-Ballot"
+      },
+      {
+        "name": "Tennessee Secretary of State: candidates for Tennessee House of Representatives, Nov 3, 2026 general election",
+        "url": "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+      },
+      {
+        "name": "Tennessee Lookout voter guide: House District 64",
+        "url": "https://tennesseelookout.com/voter-guides/contests/house-district-64/"
+      },
+      {
+        "name": "Tennessee Democratic Party: Craig D'Apolito",
+        "url": "https://tndp.org/craig-dapolito/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tn-hd-71",
+    "state": "TN",
+    "level": "state",
+    "office": "Tennessee House of Representatives",
+    "district": "HD-71",
+    "scope_plain": "Southern and western Maury County, including all of Mount Pleasant and a small part of northwest Columbia. It also takes in Wayne County and parts of Hardin and Lawrence counties.",
+    "office_explainer": "One of 99 state representatives. Writes Tennessee laws and votes on the state budget.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Kip Capley",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Kip Capley",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://www.votecapley.com",
+        "website_confidence": "sourced",
+        "background": "Elected to the state House in 2022, succeeding David Byrd, per the Tennessee Lookout. Republican nominee from Summertown, per the Secretary of State's candidate list.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-29",
+          "where": [
+            "Campaign site (third-person copy only)",
+            "Tennessee Lookout voter guide",
+            "Web searches: interviews, forums"
+          ]
+        }
+      },
+      {
+        "name": "Matt Day",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.facebook.com/MattDayTN71/",
+        "website_confidence": "verified",
+        "background": "An accountant; this is his first campaign, per the Tennessee Lookout. Democratic nominee from Columbia, per the Secretary of State's candidate list.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-29",
+          "where": [
+            "Tennessee Democratic Party candidate page",
+            "Tennessee Lookout voter guide",
+            "Web searches: interviews, forums"
+          ]
+        }
+      }
+    ],
+    "sources": [
+      {
+        "name": "Maury County Election Commission: sample ballot, November 3, 2026",
+        "url": "https://www.maurycounty-tn.gov/DocumentCenter/View/7553/2026-November-Sample-Ballot"
+      },
+      {
+        "name": "Tennessee Secretary of State: candidates for Tennessee House of Representatives, Nov 3, 2026 general election",
+        "url": "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+      },
+      {
+        "name": "Tennessee Lookout voter guide: House District 71",
+        "url": "https://tennesseelookout.com/voter-guides/contests/house-district-71/"
+      },
+      {
+        "name": "Tennessee Democratic Party: Matt Day",
+        "url": "https://tndp.org/matt-day/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "columbia-tn-mayor",
+    "state": "TN",
+    "level": "city",
+    "office": "Columbia Mayor",
+    "district": null,
+    "scope_plain": "Only voters who live inside Columbia city limits; the whole city votes. If you live outside city limits (even with a Columbia mailing address), the city's races aren't on your ballot.",
+    "office_explainer": "Chairs and votes on the seven-member city council, speaks for the city to other governments, and names people to city boards with the council's approval. A city manager hired by the council runs the city day to day. Nonpartisan, four-year term.",
+    "why_it_matters": "Open seat: Mayor Chaz Molder isn't running again. He is on this ballot as the Democratic nominee for the U.S. House.",
+    "vote_for": 1,
+    "incumbent": "Chaz Molder",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Timothy Johnson",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Pastor of a local church, per Main Street Maury's report on the Sept 22 mayoral forum.",
+        "own_words": [
+          {
+            "text": "\"We may be doing too much, and we may need to slow down a little bit.\"",
+            "is_quote": true,
+            "source": "https://mainstreetmediatn.com/articles/mainstreetmaury/columbia-mayoral-candidates-speak-on-issues-at-september-forum/",
+            "source_label": "Main Street Maury, Sept 22 forum"
+          },
+          {
+            "text": "\"We need to expand our tax base strategically.\"",
+            "is_quote": true,
+            "source": "https://mainstreetmediatn.com/articles/mainstreetmaury/naacp-hosts-last-columbia-mayoral-forum/",
+            "source_label": "Main Street Maury, Oct 18 NAACP forum"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Jai Lipscomb",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Realtor who runs the nonprofit All Hands on Deck, per Main Street Maury's report on the Sept 22 mayoral forum. The county's petition list names her Jolita Lipscomb.",
+        "own_words": [
+          {
+            "text": "\"Growth is not the enemy, irresponsible growth is the enemy.\"",
+            "is_quote": true,
+            "source": "https://mainstreetmediatn.com/articles/mainstreetmaury/columbia-mayoral-candidates-speak-on-issues-at-september-forum/",
+            "source_label": "Main Street Maury, Sept 22 forum"
+          },
+          {
+            "text": "\"I think we need to… diversify the homes that we’re building.\"",
+            "is_quote": true,
+            "source": "https://mainstreetmediatn.com/articles/mainstreetmaury/columbia-mayoral-candidates-speak-on-issues-at-september-forum/",
+            "source_label": "Main Street Maury, Sept 22 forum"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Stewart Parker",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Businessman and chair of the county's Industrial Development Board, per Main Street Maury's report on the Sept 22 mayoral forum.",
+        "own_words": [
+          {
+            "text": "\"If we want to make sure our infrastructure is keeping up… and we’re not paying for it ourselves, we need to improve our relationship with the state.\"",
+            "is_quote": true,
+            "source": "https://mainstreetmediatn.com/articles/mainstreetmaury/columbia-mayoral-candidates-speak-on-issues-at-september-forum/",
+            "source_label": "Main Street Maury, Sept 22 forum"
+          },
+          {
+            "text": "\"Have we made it so difficult that a local builder cannot build a reasonably priced house here, or… buy an existing home and not increase the price because… of the restrictions within the city?\"",
+            "is_quote": true,
+            "source": "https://mainstreetmediatn.com/articles/mainstreetmaury/columbia-mayoral-candidates-speak-on-issues-at-september-forum/",
+            "source_label": "Main Street Maury, Sept 22 forum"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Eric Previti",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Maury County commissioner for District 2 for 12 years, through August 2026, per Main Street Maury.",
+        "own_words": [
+          {
+            "text": "\"Where are the new stores to support these neighborhoods, complexes and apartments? I think we need to work on that infrastructure.\"",
+            "is_quote": true,
+            "source": "https://mainstreetmediatn.com/articles/mainstreetmaury/columbia-mayoral-candidates-speak-on-issues-at-september-forum/",
+            "source_label": "Main Street Maury, Sept 22 forum"
+          },
+          {
+            "text": "\"The city of Columbia needs to formally recognize that there’s a homeless problem.\"",
+            "is_quote": true,
+            "source": "https://mainstreetmediatn.com/articles/mainstreetmaury/columbia-mayoral-candidates-speak-on-issues-at-september-forum/",
+            "source_label": "Main Street Maury, Sept 22 forum"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Ashley Townsend",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Legal assistant with Barnes Law, per Main Street Maury's report on the Sept 22 mayoral forum.",
+        "own_words": [
+          {
+            "text": "\"If we don’t have the roads in place… the proper water and sewer systems… [and] emergency response teams, then we do need, most certainly, a moratorium or something to that effect on our residential development.\"",
+            "is_quote": true,
+            "source": "https://mainstreetmediatn.com/articles/mainstreetmaury/columbia-mayoral-candidates-speak-on-issues-at-september-forum/",
+            "source_label": "Main Street Maury, Sept 22 forum"
+          },
+          {
+            "text": "\"I want individuals to be empowered… not placated… [or] pushed out.\"",
+            "is_quote": true,
+            "source": "https://mainstreetmediatn.com/articles/mainstreetmaury/naacp-hosts-last-columbia-mayoral-forum/",
+            "source_label": "Main Street Maury, Oct 18 NAACP forum"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Maury County Election Commission: sample ballot, November 3, 2026",
+        "url": "https://www.maurycounty-tn.gov/DocumentCenter/View/7553/2026-November-Sample-Ballot"
+      },
+      {
+        "name": "Maury County Election Commission: Nov 3 petitions (who filed)",
+        "url": "https://www.maurycounty-tn.gov/699/Nov-3-Petitions"
+      },
+      {
+        "name": "Columbia city charter (term, duties, nonpartisan races), via MTAS",
+        "url": "https://www.mtas.tennessee.edu/sites/default/files/private/charters/Columbia_cht.pdf"
+      },
+      {
+        "name": "MTAS directory: City of Columbia officials",
+        "url": "https://www.mtas.tennessee.edu/directories/cities/columbia"
+      },
+      {
+        "name": "Main Street Maury: Columbia mayoral candidates speak on issues at September forum (Oct 5, 2026)",
+        "url": "https://mainstreetmediatn.com/articles/mainstreetmaury/columbia-mayoral-candidates-speak-on-issues-at-september-forum/"
+      },
+      {
+        "name": "Main Street Maury: NAACP hosts last Columbia mayoral forum (Oct 28, 2026)",
+        "url": "https://mainstreetmediatn.com/articles/mainstreetmaury/naacp-hosts-last-columbia-mayoral-forum/"
+      },
+      {
+        "name": "Main Street Maury: departing county commissioners bid farewell in final meeting (Aug 24, 2026)",
+        "url": "https://mainstreetmediatn.com/articles/mainstreetmaury/departing-county-commissioners-bid-farewell-in-final-meeting/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "columbia-tn-vice-mayor",
+    "state": "TN",
+    "level": "city",
+    "office": "Columbia Vice Mayor",
+    "district": null,
+    "scope_plain": "Only voters who live inside Columbia city limits; the whole city votes. If you live outside city limits (even with a Columbia mailing address), the city's races aren't on your ballot.",
+    "office_explainer": "A voting member of the city council, elected by the whole city, who stands in for the mayor and becomes mayor if that office comes open. Nonpartisan, four-year term.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Randy McBroom",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Charlie Huffman",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Columbia City Council member for Ward 2 and an electrical lineman for CPWS, the city's power and water utility, per Main Street Maury's report on the Oct 18 forum. The county's petition list names him Charles Huffman.",
+        "own_words": [
+          {
+            "text": "\"There’s lots of people in Columbia that live paycheck to paycheck, they can’t pay a 150 percent increase…\"",
+            "is_quote": true,
+            "source": "https://mainstreetmediatn.com/articles/mainstreetmaury/naacp-hosts-last-columbia-mayoral-forum/",
+            "source_label": "Main Street Maury, Oct 18 NAACP forum"
+          },
+          {
+            "text": "\"Our infrastructure is full… and if we don’t do something about growth and slow it down, it’s going to get to [a crisis].\"",
+            "is_quote": true,
+            "source": "https://mainstreetmediatn.com/articles/mainstreetmaury/naacp-hosts-last-columbia-mayoral-forum/",
+            "source_label": "Main Street Maury, Oct 18 NAACP forum"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Randy McBroom",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Columbia's vice mayor since 2022. The city's page cites \"a career background in Residential Construction and a Bachelor of Science in Business Administration from Tennessee Tech.\"",
+        "own_words": [
+          {
+            "text": "\"As vice-mayor I’ve had many, many proud moments over the last few years.\"",
+            "is_quote": true,
+            "source": "https://mainstreetmediatn.com/articles/mainstreetmaury/naacp-hosts-last-columbia-mayoral-forum/",
+            "source_label": "Main Street Maury, Oct 18 NAACP forum"
+          },
+          {
+            "text": "\"The projects you’re seeing now were approved four and five years ago… The city of Columbia has only annexed one piece of property in almost 4 years…\"",
+            "is_quote": true,
+            "source": "https://mainstreetmediatn.com/articles/mainstreetmaury/naacp-hosts-last-columbia-mayoral-forum/",
+            "source_label": "Main Street Maury, Oct 18 NAACP forum"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Maury County Election Commission: sample ballot, November 3, 2026",
+        "url": "https://www.maurycounty-tn.gov/DocumentCenter/View/7553/2026-November-Sample-Ballot"
+      },
+      {
+        "name": "Maury County Election Commission: Nov 3 petitions (who filed)",
+        "url": "https://www.maurycounty-tn.gov/699/Nov-3-Petitions"
+      },
+      {
+        "name": "Columbia city charter (term, duties, nonpartisan races), via MTAS",
+        "url": "https://www.mtas.tennessee.edu/sites/default/files/private/charters/Columbia_cht.pdf"
+      },
+      {
+        "name": "City of Columbia: Vice Mayor Randy McBroom",
+        "url": "https://www.columbiatn.gov/775/Vice-Mayor-Randy-McBroom"
+      },
+      {
+        "name": "Main Street Maury: NAACP hosts last Columbia mayoral forum (Oct 28, 2026)",
+        "url": "https://mainstreetmediatn.com/articles/mainstreetmaury/naacp-hosts-last-columbia-mayoral-forum/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "mount-pleasant-tn-commission",
+    "state": "TN",
+    "level": "city",
+    "office": "Mount Pleasant City Commissioner",
+    "district": null,
+    "scope_plain": "Only voters who live inside Mount Pleasant city limits; the whole city votes. Pick up to two of the three candidates. If you live outside city limits (even with a Mount Pleasant mailing address), this race isn't on your ballot.",
+    "office_explainer": "One of five commissioners who govern the city: they pass city laws, hire the city manager and choose one of themselves as mayor. Four-year term.",
+    "why_it_matters": "None of the three candidates sits on the commission now, per the city's list of commissioners, so both places go to someone new.",
+    "vote_for": 2,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Brandon Evans",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "own_words_status": "none_found",
+        "own_words_checked": { "on": "2026-10-29", "where": ["Main Street Maury", "web search"] },
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "John Hunter",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "own_words_status": "none_found",
+        "own_words_checked": { "on": "2026-10-29", "where": ["Main Street Maury", "web search"] },
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Lonnie R. Thomason",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "own_words_status": "none_found",
+        "own_words_checked": { "on": "2026-10-29", "where": ["Main Street Maury", "web search"] },
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Maury County Election Commission: sample ballot, November 3, 2026",
+        "url": "https://www.maurycounty-tn.gov/DocumentCenter/View/7553/2026-November-Sample-Ballot"
+      },
+      {
+        "name": "Maury County Election Commission: Nov 3 petitions (who filed)",
+        "url": "https://www.maurycounty-tn.gov/699/Nov-3-Petitions"
+      },
+      {
+        "name": "City of Mt. Pleasant: commissioners",
+        "url": "https://www.mtpleasant-tn.gov/commissioners"
+      },
+      {
+        "name": "General-law manager-commission charter (TCA 6-18 to 6-22), via MTAS",
+        "url": "https://www.mtas.tennessee.edu/sites/default/files/private/charters/Manager_Commission_Charter.pdf"
+      },
+      {
+        "name": "MTAS directory: City of Mount Pleasant",
+        "url": "https://www.mtas.tennessee.edu/directories/cities/mount-pleasant"
+      }
+    ],
+    "confidence": "verified"
+  }
+]

@@ -77,8 +77,10 @@ const year = (iso: string): string => {
   const [y, m, d] = iso.split('-').map(Number);
   return new Date(Date.UTC(y, m - 1, d)).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 };
+// A date past the build day counts as the build day: dropping it instead fell back to an older date (a re-check that
+// re-dated rows to the day after the tests' fixed day turned Austin's lastmod into Oct 16, Oct 29).
 const newest = (dates: (string | null | undefined)[], cap: string): string => {
-  const ok = dates.filter((d): d is string => !!d && /^\d{4}-\d{2}-\d{2}$/.test(d) && d <= cap).sort();
+  const ok = dates.filter((d): d is string => !!d && /^\d{4}-\d{2}-\d{2}$/.test(d)).map((d) => (d > cap ? cap : d)).sort();
   return ok.length ? ok[ok.length - 1] : cap;
 };
 

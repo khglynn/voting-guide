@@ -2302,9 +2302,12 @@ const darkIn = (page, sel) => page.$$eval(`${sel} .mini.dark`, (els) => els.filt
   await ctx.close();
 }
 // A thin place: none of its own sources has picks and some of its races have none from anyone (model/coverage.ts).
-// Whichever place that is in today's data (Pensacola on Oct 25), through a ZIP that is only that place's.
-const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_picks === 0 && p.local_races_with_picks < p.local_races)
+// Whichever place that is in today's data (Pensacola on Oct 25), through a ZIP that is only that place's. One we
+// already looked hard for (local_picks_checked) asks nothing: LOOKED, below.
+const thinPlaces = (looked) => Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_picks === 0 && p.local_races_with_picks < p.local_races && !!p.local_picks_checked === looked)
   .map(([id, p]) => ({ id, p, zip: Object.entries(INDEX_JSON.zips).find(([, ids]) => ids.length === 1 && ids[0] === id)?.[0] })).find((x) => x.zip && x.p.state !== 'DC');
+const THIN = thinPlaces(false);
+const LOOKED = thinPlaces(true);
 {
   // Pressing Go on a phone (what most phones do with a ZIP) lands on the ballot: the card's lead is on the first
   // screen, and it holds the only dark button there.
@@ -2363,6 +2366,38 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
     await page.waitForSelector('.sheet-panel.shelf[data-hint="follow"]');
     check(`Thin place (${name}): Tell me what he finds opens its sheet with the request as text`, (await text(page, '.sheet-panel.shelf #sh-h')) === 'Tell me what he finds' && (await text(page, '.sheet-panel.shelf .rp-req')) === `Your request: local picks for ${name}, ZIP ${thin.zip}. Sent today.`, await text(page, '.sheet-panel.shelf .rp-req'));
     noErrors(page, `Thin place (${name})`);
+    await ctx.close();
+  }
+}
+// Kevin, Oct 29: once we've looked hard for a place's own picks, the card says so instead of asking. Nashville was
+// the first place marked, and its first local pick made it full the same day, as it should. With no marked thin
+// place in the data, the unmarked one above stands in, marked through its index entry for this page only.
+{
+  const looked = LOOKED || (THIN && { ...THIN, p: { ...THIN.p, local_picks_checked: { on: THIN.p.checked, where: ['Paper A', 'Weekly B'] } } });
+  if (!looked) check('Looked hard: no thin place in today’s data, so nothing to show', true);
+  else {
+    const name = looked.p.label.replace(/\s*\(.*\)$/, '');
+    const { ctx, page } = await newPage();
+    if (!LOOKED) {
+      const idx = { ...INDEX_JSON, places: { ...INDEX_JSON.places, [looked.id]: looked.p } };
+      await page.route((u) => u.pathname.endsWith('/data/index.json'), (route) => route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(idx) }));
+    }
+    const after = new Date(Date.parse(`${looked.p.checked}T00:00:00Z`) + 864e5).toISOString().slice(0, 10);
+    await page.goto(`${BASE}/?today=${after}`);
+    await page.waitForSelector('#zip');
+    await page.fill('#zip', looked.zip);
+    await page.waitForSelector('#door .cov-card', { timeout: 15000 });
+    check(`Looked hard (${name}): the card says we looked, when and where, with no one-tap and no dark button`, (await text(page, '#door .cov-card .cov-lead')) === `We looked hard for ${name}’s local picks.`
+      && /^On [A-Z][a-z]{2} \d+ we checked .+\. None of them had picks we could find\.$/.test(await text(page, '#door .cov-card .cov-here'))
+      && !(await page.$('#door [data-act="cov-ask"]')) && (await darkIn(page, '#door .cov-card')).length === 0, await text(page, '#door .cov-card'));
+    await plainSetup(page);
+    await page.waitForSelector('#plan', { timeout: 15000 });
+    check(`Looked hard (${name}): on the ballot the card keeps its slot, and the head adds the day`, (await text(page, '#r-restore .cov-card .cov-lead')) === `We looked hard for ${name}’s local picks.`
+      && /We looked hard on [A-Z][a-z]{2} \d+\./.test(await text(page, '.bhead .picks-cov')), await text(page, '.bhead .picks-cov'));
+    await tap(page, '#r-restore [data-fk="cov-add"]');
+    await page.waitForSelector('.sheet-panel.shelf[data-kind="source"] #rf-src', { timeout: 5000 });
+    check(`Looked hard (${name}): Add a source opens its form`, !!(await page.$('.sheet-panel.shelf[data-kind="source"] #rf-src')));
+    noErrors(page, `Looked hard (${name})`);
     await ctx.close();
   }
 }

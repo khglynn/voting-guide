@@ -8,6 +8,15 @@
   "county_fips": [
     "47037"
   ],
+  "local_picks_checked": {
+    "on": "2026-10-29",
+    "where": [
+      "The Tennessean",
+      "Nashville Scene",
+      "Nashville Post",
+      "Nashville Banner"
+    ]
+  },
   "county_election_office": {
     "name": "Davidson County Election Commission, 1281 Murfreesboro Pike, Third Floor, Nashville",
     "url": "https://www.nashville.gov/departments/elections",

@@ -10,7 +10,7 @@ import {
   SECTIONS, type SectionKey, type Entry, type Group, entriesBySection, status, isDecision, sectionOf, decisionItems, isMultiJudge, isMaybe,
   OTH_KEY, otherSchools, othOpen, unclaimed, pageWalk, contestDistrict, sameSeat,
 } from '../ballot';
-import { esc, hash, plural } from '../util';
+import { andList, esc, hash, plural } from '../util';
 import { rowTitle, measureTag, courtGroup, cleanOffice, optionLabel } from '../model/labels';
 import { verdict, type Verdict } from '../model/tally';
 import { canUndo } from '../model/bulk';
@@ -550,7 +550,6 @@ function addressEntries(): { c: Item; act: string; name: string }[] {
   return out;
 }
 const addressRaces = (): Item[] => addressEntries().map((x) => x.c);
-const andList = (xs: string[]): string => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} and ${xs[xs.length - 1]}`);
 /* Whether "Use my address" can still settle one of them. The Census answers Congress, the state
    legislature and whole school districts, and a place's district maps answer the races they name
    (open.addressSettles); anything else (a judge, a utility district) is the sample ballot's to

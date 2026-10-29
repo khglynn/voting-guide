@@ -346,7 +346,7 @@ if (fs.existsSync(INDEX_FILE)) {
   try { idx = JSON.parse(fs.readFileSync(INDEX_FILE, 'utf8')); } catch { err('bundle-unreadable', 'index.json'); }
   for (const [id, p] of Object.entries((idx && idx.places) || {})) {
     if (!(p.local_sources > 0 && p.local_with_picks === 0) && !isThin(p)) continue;
-    warn('place-thin', `${id}: ${p.local_sources} local sources, none with picks; ${p.local_races_with_picks} of its ${p.local_races} own races have a pick from anyone${!isThin(p) ? '' : p.local_picks_checked ? `. Looked for hard on ${p.local_picks_checked.on}, so the guide says so and asks nothing.` : '. The first page offers to gather its endorsements.'}`);
+    warn('place-thin', `${id}: ${p.local_sources} local sources, none with picks; ${p.local_races_with_picks} of its ${p.local_races} own races have a pick from anyone${!isThin(p) ? '' : p.local_picks_checked ? `. We looked hard for its picks on ${p.local_picks_checked.on}, so the guide says so and asks nothing.` : '. The first page offers to gather its endorsements.'}`);
   }
 }
 

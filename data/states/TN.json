@@ -1,0 +1,593 @@
+{
+  "state": "TN",
+  "election_date": "2026-11-03",
+  "last_verified": "2026-10-29",
+  "official_site": {
+    "name": "Tennessee Secretary of State: Division of Elections (GoVoteTN)",
+    "url": "https://sos.tn.gov/elections"
+  },
+  "voting_model": "in_person_first",
+  "model_plain": "Most Tennesseans vote in person, either during early voting (Oct 14 to 29 this year) or at their polling place on Election Day. A ballot by mail is only for people with a reason the state lists, like being 60 or older, and it has to go back by mail.",
+  "registration": {
+    "check_url": "https://tnmap.tn.gov/voterlookup/",
+    "register_url": "https://vote.gov/register/tennessee",
+    "register_url_source": "https://vote.gov/register",
+    "deadlines": [
+      {
+        "method": "online",
+        "date": "2026-10-05",
+        "rule": "The Secretary of State's 2026 election calendar lists Monday, October 5, 2026 as the voter registration deadline for the November 3 general election, 30 days before. The state FAQ: the online deadline is the same as for other ways to register ('you must register at least 30 days before Election Day').",
+        "source": "https://sos.tn.gov/elections/calendar"
+      },
+      {
+        "method": "mail",
+        "date": "2026-10-05",
+        "rule": "Mailed registration forms had to be postmarked by October 5, 2026. Anyone who registered by mail (or online) and has never voted in their county must vote in person the first time, with a few exceptions.",
+        "source": "https://sos.tn.gov/elections/guides/how-to-register-to-vote"
+      },
+      {
+        "method": "in_person",
+        "date": "2026-10-05",
+        "rule": "In-person registration at your county election commission also closed October 5, 2026. Tennessee has no same-day or Election Day registration.",
+        "source": "https://sos.tn.gov/elections/calendar"
+      }
+    ],
+    "same_day_notes": "None. Tennessee does not allow registration during early voting or on Election Day. If you're registered and moved within your county, you can still vote: update your address when you vote. A move to a different Tennessee county is a new registration, and that deadline was October 5.",
+    "same_day_registration": false,
+    "still_possible_now": "No. The October 5 deadline has passed. If you think you registered, check at tnmap.tn.gov/voterlookup. If you're registered and moved within your county, you can still vote; you'll update your address when you vote.",
+    "confidence": "verified"
+  },
+  "mail_ballot": {
+    "who_gets_one": "Nobody gets one automatically. You must ask, and you must fit one of the reasons on the Secretary of State's list: you're 60 or older; you'll be outside your county during all of early voting and all day on Election Day; you're hospitalized, ill or physically disabled, or you care for someone who is; you or your spouse are a full-time student at a college outside your county; you live in a nursing home, assisted living facility or home for the aged outside your county; you're a candidate; a religious holiday keeps you from voting in person during early voting and on Election Day; you're an Election Day official or work for the election commission; jury duty; you have a disability and your polling place isn't accessible; you or your spouse hold a CDL or TWIC card and will be working outside the county or state during early voting and Election Day with no address to get mail; or you're in the military or overseas. No reason on the list? Vote in person.",
+    "request_deadline": {
+      "date": "2026-10-24",
+      "rule": "Requests had to be received by your county election commission by Saturday, October 24, 2026, ten days before the election. The SOS absentee guide: 'the application must be received by the election commission no later than ten (10) days before the election.' Requests went by mail or by email with a scanned signature.",
+      "source": "https://sos.tn.gov/elections/guides/guide-to-absentee-voting"
+    },
+    "return_deadline": {
+      "date": "2026-11-03",
+      "rule": "received_by",
+      "time": "7:00 PM CT (8:00 PM ET), when the polls close",
+      "source": "https://sos.tn.gov/elections/guides/guide-to-absentee-voting"
+    },
+    "return_options": [
+      "mail only (USPS, FedEx, UPS or another carrier). The SOS: 'You must mail your ballot in time for your county election commission to receive it no later than the close of polls on Election Day.' Polls close at 7:00 PM Central, 8:00 PM Eastern. Postmarks don't count.",
+      "No hand delivery. The SOS: 'Hand delivery or handing it to a poll worker during early voting or on Election Day is not permitted.'",
+      "military and overseas voters: separate rules, and they can get the ballot by email; see the SOS FAQ for military and overseas voters"
+    ],
+    "postage": null,
+    "signature_witness_rules": "Follow the instructions that come with your ballot and sign where it asks. The state's absentee guide describes no notary or witness step. First-time voters who registered by mail or online must vote in person the first time unless they're on the permanent absentee list, enrolled in the Safe at Home program, or have voted in the county before (SOS FAQ).",
+    "tracking_url": "https://tnmap.tn.gov/voterlookup/",
+    "cure_process": null,
+    "mail_cutoff_advice": "Tennessee publishes no official 'last day to mail' date. The ballot must reach your county election commission by the close of polls on November 3, and you can't hand it in. Mail it as soon as you can, and track it at tnmap.tn.gov/voterlookup. The SOS FAQ says that if a mail ballot is rejected, the voter is told it was rejected and why.",
+    "drop_box_lookup_url": null,
+    "confidence": "verified"
+  },
+  "early_in_person": {
+    "available": true,
+    "start": "2026-10-14",
+    "end": "2026-10-29",
+    "hours_note": "Early voting runs Wednesday, October 14 through Thursday, October 29, 2026 (SOS calendar; the SOS's Oct 28 press release: 'the early voting period ends tomorrow'). You can vote at any early voting site in your county, and you can update your address there if you moved within the county. Hours vary by county and by day: check yours in the GoVoteTN app or at GoVoteTN.gov. Bring a Tennessee or federal photo ID; an expired one is fine.",
+    "vote_centers": true,
+    "lookup_url": "https://web.go-vote-tn.elections.tn.gov/",
+    "confidence": "verified"
+  },
+  "election_day": {
+    "polls_open": "7:00 AM in Davidson County (Nashville); each county sets its own opening time",
+    "polls_close": "7:00 PM Central (8:00 PM Eastern)",
+    "in_line_rule": "All Tennessee polls close at 7 PM Central time, which is 8 PM Eastern (Knoxville, Chattanooga and the rest of East Tennessee). If you're in line when the polls close, you'll be allowed to vote. Opening times vary by county: check yours in the GoVoteTN app.",
+    "vote_centers": false,
+    "lookup_url": "https://web.go-vote-tn.elections.tn.gov/",
+    "confidence": "verified"
+  },
+  "id_rules": {
+    "required": "photo",
+    "accepted": [
+      "Tennessee driver license with your photo (even if expired)",
+      "United States passport (even if expired)",
+      "Photo ID from the Tennessee Department of Safety and Homeland Security (even if expired)",
+      "Any other photo ID from the federal or Tennessee state government (even if expired)",
+      "United States military photo ID (even if expired)",
+      "Tennessee handgun carry permit with your photo (even if expired)",
+      "NOT accepted: college student IDs, out-of-state driver licenses or IDs, city or county IDs like library cards, and Tennessee IDs issued to non-U.S. citizens",
+      "First-time voters who registered by mail or online and bring an expired ID must also bring a copy of a current utility bill, bank statement, government check, paycheck or other government document with their name and address",
+      "Need an ID? A Tennessee photo ID for voting is free at a driver services center if you don't already have one; a license without a photo can be reissued with one for free"
+    ],
+    "no_id_option": "If you don't bring a photo ID, you'll vote a provisional ballot. You then have two business days after Election Day to go to your county election commission office, show a valid photo ID and sign an affidavit (SOS FAQ). Some voters don't need a photo ID at all: those voting by mail, nursing home or assisted living residents voting at the facility, hospitalized voters, voters with a religious objection to being photographed, and voters who are indigent and can't get an ID without paying a fee (they sign an oath at the polls).",
+    "confidence": "verified"
+  },
+  "in_the_booth": {
+    "phones": "restricted",
+    "phones_detail": "State law (Tenn. Code Ann. 2-7-142) says a county election commission 'shall not prohibit a voter from using a mobile electronic or communication device at a polling place for informational purposes to assist the voter in making election decisions,' and may require it to be silenced. You may not use it for phone calls, recording, or taking photos or videos inside the polling place. In Opinion 16-49 (Dec 22, 2016), the Attorney General said this rule doesn't violate free speech. Source: https://www.tn.gov/content/dam/tn/attorneygeneral/documents/ops/2016/op16-049.pdf",
+    "phones_short": "You can read your plan on your phone (silenced); no calls, photos or recording inside.",
+    "notes_allowed": "allowed",
+    "notes_detail": "Your phone, yes: state law lets you use it at the polls to help you decide, with the sound off, so you can read your plan there. You can view your sample ballot ahead of time in the GoVoteTN app or at GoVoteTN.gov. We couldn't find a state rule that speaks to paper notes either way. Campaign material isn't allowed within 100 feet of the entrance, so keep your notes to yourself. Sources: https://www.tn.gov/content/dam/tn/attorneygeneral/documents/ops/2016/op16-049.pdf and https://sos.tn.gov/press-releases/secretary-hargett-reminds-tennesseans-tomorrow-is-the-last-day-to-vote-early-more",
+    "ballot_selfies": "prohibited",
+    "apparel_rule": "Polling places and the area within 100 feet of each entrance are campaign-free zones. The Secretary of State: 'Voters wearing campaign-related clothing or paraphernalia will not be allowed within the 100-foot boundary.' Leave candidate and ballot-measure shirts, hats and buttons at home, or cover them. Source: https://sos.tn.gov/elections/press-releases/everything-voters-need-to-know-for-the-august-6-election-this-thursday",
+    "confidence": "verified"
+  },
+  "gotchas": [
+    {
+      "text": "Mail ballots in Tennessee go back by mail only (USPS, FedEx, UPS). You can't hand one in at the election office or give it to a poll worker. It has to reach your county election commission by the close of polls on Nov 3; postmarks don't count. Only voters with a reason on the state's list (like being 60 or older) could get one, and the deadline to ask was Oct 24.",
+      "short": "Mail ballots go back by mail only and must arrive before polls close Nov 3."
+    },
+    {
+      "text": "Registration closed October 5. There is no same-day registration in Tennessee. Check tnmap.tn.gov/voterlookup before you assume you're not on the rolls. If you moved within your county, you can still vote and update your address when you do.",
+      "short": "Check your registration before you go; the Oct 5 deadline has passed."
+    },
+    {
+      "text": "Photo ID is required, and it has to come from Tennessee state government or the federal government. It can be expired. College student IDs, out-of-state licenses and city or county IDs don't count. No ID? You vote provisional and have two business days to show ID at the election commission office.",
+      "short": "Bring a Tennessee or federal photo ID, even expired; student and out-of-state IDs don't count."
+    },
+    {
+      "text": "Every Tennessee poll closes at the same moment: 7 PM Central, which is 8 PM Eastern in East Tennessee. Opening times are set by each county, so check your polling place's hours in the GoVoteTN app or at GoVoteTN.gov.",
+      "short": "Polls close at 7 PM Central, 8 PM Eastern; opening times vary by county."
+    },
+    {
+      "text": "Early voting runs through Thursday, October 29, at any early voting site in your county, and you can update your address there if you moved within the county. On Election Day, Nov 3, go to the polling place GoVoteTN lists for you.",
+      "short": "Early voting ends Oct 29; on Nov 3, vote at the polling place GoVoteTN lists."
+    },
+    {
+      "text": "Registered online or by mail and never voted in your county? Tennessee asks you to vote in person the first time, not by mail (unless you're on the permanent absentee list or in the Safe at Home program). If your photo ID is expired, also bring a copy of a current utility bill, bank statement, government check, paycheck or other government document with your name and address.",
+      "short": "First-time voters who registered online or by mail vote in person, with photo ID."
+    }
+  ],
+  "situations": [
+    {
+      "id": "moved_in_state",
+      "question": "I moved to a new address in Tennessee.",
+      "short": "If you moved within your county, you can still vote and update your address when you do.",
+      "actions": [
+        {
+          "label": "Find my polling place",
+          "url": "https://web.go-vote-tn.elections.tn.gov/"
+        },
+        {
+          "label": "Find my election office",
+          "url": "https://tnsos.org/elections/election_commissions.php"
+        }
+      ],
+      "answer": "If you moved within the same county, you can still vote, even though the registration deadline passed. You update your address when you vote.",
+      "steps": [
+        "Through Thursday, Oct 29: go to any early voting site in your county, update your address and vote there.",
+        "On Election Day: you'll sign an affidavit and vote at the polling place for your new address, or at a central location your county names.",
+        "Moved to a different Tennessee county? Your registration doesn't move with you, and the deadline to register in the new county was Oct 5. Call your county election commission to ask what you can do."
+      ],
+      "deadline": "2026-11-03",
+      "source": "https://sos.tn.gov/elections/guides/how-to-update-your-voter-registration",
+      "confidence": "verified"
+    },
+    {
+      "id": "moved_out_of_state",
+      "question": "I just moved to Tennessee from another state.",
+      "short": "Tennessee's deadline was Oct 5, so register now for next time.",
+      "actions": [
+        {
+          "label": "Register for next time",
+          "url": "https://vote.gov/register/tennessee"
+        }
+      ],
+      "answer": "New Tennesseans need a new registration, and the deadline for November 3 was October 5, so if you missed it you can't vote in Tennessee this time. Register now so you're ready for the next election.",
+      "steps": [
+        "Register online at ovr.govote.tn.gov or with your county election commission.",
+        "If you register online or by mail, plan to vote in person the first time.",
+        "Get a Tennessee driver license or photo ID; an out-of-state license doesn't count as voter ID here."
+      ],
+      "deadline": "2026-10-05",
+      "source": "https://sos.tn.gov/elections/guides/how-to-register-to-vote",
+      "confidence": "verified"
+    },
+    {
+      "id": "not_registered",
+      "question": "I'm not registered to vote.",
+      "short": "The deadline was Oct 5, but check first, because you may be registered already.",
+      "actions": [
+        {
+          "label": "Check my registration",
+          "url": "https://tnmap.tn.gov/voterlookup/"
+        },
+        {
+          "label": "Register for next time",
+          "url": "https://vote.gov/register/tennessee"
+        }
+      ],
+      "answer": "We're sorry: Tennessee's deadline was October 5 and there's no same-day registration, so you can't vote in this election if you missed it. Before you give up, check, because you may be registered already.",
+      "steps": [
+        "Look yourself up at tnmap.tn.gov/voterlookup, or call your county election commission.",
+        "Registered but moved within your county? You can still vote; see the moving question.",
+        "Truly not registered? Register now so you're set for next time."
+      ],
+      "deadline": "2026-10-05",
+      "source": "https://sos.tn.gov/elections/calendar",
+      "confidence": "verified"
+    },
+    {
+      "id": "lookup_cant_find",
+      "question": "The lookup can’t find me.",
+      "short": "The lookup needs your name exactly as registered: try it with and without a hyphen or middle name.",
+      "actions": [
+        {
+          "label": "Check my registration",
+          "url": "https://tnmap.tn.gov/voterlookup/"
+        }
+      ],
+      "answer": "Tennessee’s lookup asks for your county, your first and last name, and your birth month and year, and every field is required. It says: “If your information cannot be found, please contact your local county election commission to verify the accuracy of the information on file.”",
+      "steps": [
+        "Make sure you picked the county you're registered in, then try your last name with the hyphen, with a space instead, and run together.",
+        "Still nothing? Call your county election commission. A failed search doesn’t mean you’re not registered."
+      ],
+      "deadline": null,
+      "source": "https://tnmap.tn.gov/voterlookup/",
+      "confidence": "verified"
+    },
+    {
+      "id": "wrong_polling_place",
+      "question": "I went to the wrong polling place.",
+      "short": "Poll officials can look up your right polling place; go there to vote a regular ballot.",
+      "actions": [
+        {
+          "label": "Find my polling place",
+          "url": "https://web.go-vote-tn.elections.tn.gov/"
+        }
+      ],
+      "answer": "During early voting (Oct 14 to 29) any early site in your county works. On Election Day you vote at the polling place GoVoteTN lists for you. If you're at the wrong one, ask the poll officials to look up yours and go there to vote a regular ballot.",
+      "steps": [
+        "Search by your name or address in GoVoteTN to see your polling place and its hours.",
+        "Leave time: polls close at 7 PM Central, 8 PM Eastern."
+      ],
+      "deadline": "2026-11-03",
+      "source": "https://sos.tn.gov/election-day",
+      "confidence": "sourced"
+    },
+    {
+      "id": "no_mail_ballot_or_lost",
+      "question": "My mail ballot never came, or I lost it.",
+      "short": "Call your county election commission now: the state says they send a replacement when you tell them.",
+      "actions": [
+        {
+          "label": "Track my ballot",
+          "url": "https://tnmap.tn.gov/voterlookup/"
+        },
+        {
+          "label": "Find my election office",
+          "url": "https://tnsos.org/elections/election_commissions.php"
+        }
+      ],
+      "answer": "Call your county election commission right away. The SOS FAQ: if a voter tells the commission the ballot never came or was spoiled, the commission sends new voting supplies. A replacement still has to come back by mail and arrive by the close of polls on Nov 3.",
+      "steps": [
+        "Check what the commission has on file with the state's ballot tracker.",
+        "With the election close, ask the commission whether there's still time for a mailed replacement, or what else you can do."
+      ],
+      "deadline": "2026-11-03",
+      "source": "https://sos.tn.gov/elections/faqs",
+      "confidence": "sourced"
+    },
+    {
+      "id": "mistake_on_ballot",
+      "question": "I made a mistake on my mail ballot.",
+      "short": "Don't mail it: call your county election commission, which can send a new ballot.",
+      "actions": [
+        {
+          "label": "Find my election office",
+          "url": "https://tnsos.org/elections/election_commissions.php"
+        }
+      ],
+      "answer": "Don't mail a ballot you've spoiled. Call your county election commission. The SOS FAQ: when a voter reports a spoiled ballot, the commission sends new voting supplies.",
+      "steps": [
+        "The new ballot also goes back by mail only, and must arrive by the close of polls on Nov 3.",
+        "With the election close, ask the commission what you can do if a new ballot can't reach you in time."
+      ],
+      "deadline": "2026-11-03",
+      "source": "https://sos.tn.gov/elections/faqs",
+      "confidence": "sourced"
+    },
+    {
+      "id": "mailed_but_want_in_person",
+      "question": "I mailed my ballot but now want to vote in person.",
+      "short": "Check the state's ballot tracker, then call your county election commission before you go to the polls.",
+      "actions": [
+        {
+          "label": "Track my ballot",
+          "url": "https://tnmap.tn.gov/voterlookup/"
+        }
+      ],
+      "answer": "Check the state's ballot tracker first: it shows the status of your mail ballot. Then call your county election commission before you go to the polls, and ask whether you can still vote in person. The state's guides don't say, so we can't tell you.",
+      "steps": [
+        "Use tnmap.tn.gov/voterlookup.",
+        "Call your county election commission before you go to the polls."
+      ],
+      "deadline": "2026-11-03",
+      "source": "https://sos.tn.gov/elections/faqs",
+      "confidence": "unverified"
+    },
+    {
+      "id": "no_id",
+      "question": "I don't have an ID.",
+      "short": "Bring a Tennessee or federal photo ID, even an expired one; student IDs and out-of-state licenses don't count.",
+      "actions": [
+        {
+          "label": "See accepted IDs",
+          "url": "https://sos.tn.gov/elections/voter-id-requirements"
+        }
+      ],
+      "answer": "Tennessee requires a photo ID from the state or federal government, like a Tennessee driver license, a U.S. passport, a military ID or a handgun carry permit with your photo. Expired ones work. College student IDs, out-of-state licenses and city or county IDs don't count.",
+      "steps": [
+        "Without one, you vote a provisional ballot. It counts if you go to your county election commission office within two business days after Election Day, show a photo ID and sign an affidavit.",
+        "Need one? A Tennessee photo ID for voting is free at a driver services center.",
+        "Some voters don't need one, including hospitalized voters and voters with a religious objection to being photographed."
+      ],
+      "deadline": "2026-11-03",
+      "source": "https://sos.tn.gov/elections/voter-id-requirements",
+      "confidence": "verified"
+    },
+    {
+      "id": "name_changed",
+      "question": "My name changed since I registered.",
+      "short": "You don't have to re-register; bring your photo ID and call your election commission if your names don't match.",
+      "actions": [
+        {
+          "label": "Find my election office",
+          "url": "https://tnsos.org/elections/election_commissions.php"
+        }
+      ],
+      "answer": "You don't have to re-register. The state asks you to update your registration with your new name; a change has to reach your county election commission five days before an election to be processed for it.",
+      "steps": [
+        "Bring your photo ID.",
+        "If your ID and your registration show different names, call your county election commission before you go.",
+        "Update your record afterward: the state says a name change form must be mailed or taken to your county election commission office."
+      ],
+      "deadline": null,
+      "source": "https://sos.tn.gov/elections/guides/how-to-update-your-voter-registration",
+      "confidence": "sourced"
+    },
+    {
+      "id": "college_student",
+      "question": "I'm a college student.",
+      "short": "Vote where you're registered, early through Oct 29 or on Nov 3; student IDs don't count.",
+      "actions": [
+        {
+          "label": "Find my polling place",
+          "url": "https://web.go-vote-tn.elections.tn.gov/"
+        }
+      ],
+      "answer": "Registration closed October 5, so you vote where you're already registered. The deadline to ask for a mail ballot was October 24. If you already have one, it must arrive by mail by the close of polls on Nov 3; you can't hand it in. If you don't, vote in person: early voting through Thursday, Oct 29, at any early site in your county, or at your polling place on Nov 3.",
+      "steps": [
+        "College student IDs don't count as voter ID in Tennessee. Bring a Tennessee driver license, a passport or another state or federal photo ID.",
+        "Registered online or by mail and never voted in your county? Tennessee asks you to vote in person the first time.",
+        "Mail ballots go back by mail only (USPS, FedEx or UPS), never by hand."
+      ],
+      "deadline": "2026-11-03",
+      "source": "https://sos.tn.gov/elections/guides/guide-to-absentee-voting",
+      "confidence": "verified"
+    },
+    {
+      "id": "away_on_election_day",
+      "question": "I'll be away on Election Day.",
+      "short": "Vote early in person through Thursday, Oct 29, at any early voting site in your county, with photo ID.",
+      "actions": [
+        {
+          "label": "Find early voting places",
+          "url": "https://web.go-vote-tn.elections.tn.gov/"
+        }
+      ],
+      "answer": "Vote early in person: early voting runs through Thursday, October 29, at any early voting site in your county. The deadline to ask for a mail ballot was Saturday, October 24.",
+      "steps": [
+        "Bring a Tennessee or federal photo ID.",
+        "Already have a mail ballot? Mail it (USPS, FedEx or UPS) so it arrives by the close of polls on Nov 3. You can't hand it in.",
+        "Hours vary by county and by day: check your early voting site's hours in the GoVoteTN app."
+      ],
+      "deadline": "2026-10-29",
+      "source": "https://sos.tn.gov/elections/guides/how-to-early-vote-in-person",
+      "confidence": "verified"
+    },
+    {
+      "id": "in_line_at_close",
+      "question": "I'm in line when polls close.",
+      "short": "Stay in line: if you're in line when polls close, you'll be allowed to vote.",
+      "answer": "Stay in line. Polls close at 7 PM Central, 8 PM Eastern. The Secretary of State: 'If you are in line at the time the polls close, you will be allowed to vote.'",
+      "steps": [
+        "Don't leave, even if the line is long.",
+        "Opening times vary by county; check yours in the GoVoteTN app if you'd rather go early."
+      ],
+      "deadline": "2026-11-03",
+      "source": "https://sos.tn.gov/elections/press-releases/everything-voters-need-to-know-for-the-august-6-election-this-thursday",
+      "confidence": "verified"
+    },
+    {
+      "id": "signature_problem",
+      "question": "They said there's a problem with my absentee ballot envelope.",
+      "short": "Call your county election commission right away to ask what you can do.",
+      "actions": [
+        {
+          "label": "Track my ballot",
+          "url": "https://tnmap.tn.gov/voterlookup/"
+        },
+        {
+          "label": "Find my election office",
+          "url": "https://tnsos.org/elections/election_commissions.php"
+        }
+      ],
+      "answer": "The SOS FAQ says that if your mail ballot is rejected, you'll be told it was rejected and why. It doesn't describe a way to fix it, so call your county election commission right away to ask what you can do.",
+      "steps": [
+        "Find your county election commission's phone number on the state's list.",
+        "Ask whether you can still vote another way before the polls close on Nov 3."
+      ],
+      "deadline": null,
+      "source": "https://sos.tn.gov/elections/faqs",
+      "confidence": "sourced"
+    },
+    {
+      "id": "provisional_ballot",
+      "question": "What's a provisional ballot?",
+      "short": "It's a backup ballot when you can't be confirmed at the polls; it counts once you're confirmed eligible.",
+      "answer": "It's a backup ballot for when you can't be confirmed at the polls. In Tennessee, if you don't bring a photo ID, you vote a provisional ballot (SOS FAQ). It's counted once the election commission confirms you're eligible.",
+      "steps": [
+        "If it's about ID, it counts if you go to your county election commission office within two business days after Election Day, show a photo ID and sign an affidavit.",
+        "Ask the poll officials how to check whether it counted."
+      ],
+      "deadline": "2026-11-03",
+      "source": "https://sos.tn.gov/elections/faqs",
+      "confidence": "sourced"
+    },
+    {
+      "id": "check_ballot_counted",
+      "question": "How do I check my ballot was counted?",
+      "short": "Track a mail ballot on the state's voter lookup; for a provisional ballot, ask your election commission.",
+      "actions": [
+        {
+          "label": "Track my ballot",
+          "url": "https://tnmap.tn.gov/voterlookup/"
+        }
+      ],
+      "answer": "For a mail ballot, look yourself up on the state's voter lookup and absentee ballot tracker, which shows its status. If a mail ballot is rejected, the SOS FAQ says you'll be told it was rejected and why. For a provisional ballot, ask your county election commission.",
+      "steps": [
+        "Use tnmap.tn.gov/voterlookup.",
+        "Questions? Call your county election commission, or the state's election hotline at 1-877-850-4959."
+      ],
+      "deadline": null,
+      "source": "https://sos.tn.gov/elections/faqs",
+      "confidence": "verified"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Tennessee Secretary of State: 2026 election calendar (registration deadline Oct 5, early voting Oct 14 to 29, absentee request deadline Oct 24)",
+      "url": "https://sos.tn.gov/elections/calendar"
+    },
+    {
+      "name": "Tennessee Secretary of State: Guide to Absentee Voting (reasons, 10-day request deadline, return by mail only, received by close of polls)",
+      "url": "https://sos.tn.gov/elections/guides/guide-to-absentee-voting"
+    },
+    {
+      "name": "Tennessee Secretary of State: Voter ID requirements (accepted and not accepted IDs, exemptions)",
+      "url": "https://sos.tn.gov/elections/voter-id-requirements"
+    },
+    {
+      "name": "Tennessee Secretary of State: Elections FAQs (provisional ballot and two business days, spoiled or missing mail ballots, first-time voters, tracking, rejected ballots)",
+      "url": "https://sos.tn.gov/elections/faqs"
+    },
+    {
+      "name": "Tennessee Secretary of State: Elections FAQs, page 2 (name change, online registration deadline)",
+      "url": "https://sos.tn.gov/elections/faqs?page=1"
+    },
+    {
+      "name": "Tennessee Secretary of State: How to Update Your Voter Registration (moved within the county, moved to a new county, name change)",
+      "url": "https://sos.tn.gov/elections/guides/how-to-update-your-voter-registration"
+    },
+    {
+      "name": "Tennessee Secretary of State: How to Early Vote in Person",
+      "url": "https://sos.tn.gov/elections/guides/how-to-early-vote-in-person"
+    },
+    {
+      "name": "Tennessee Secretary of State: How to Register to Vote",
+      "url": "https://sos.tn.gov/elections/guides/how-to-register-to-vote"
+    },
+    {
+      "name": "Tennessee Secretary of State: Election Day (polling place lookup, online registration, voter lookup)",
+      "url": "https://sos.tn.gov/election-day"
+    },
+    {
+      "name": "Tennessee Secretary of State, Oct 28, 2026: early voting ends tomorrow; photo ID rules",
+      "url": "https://sos.tn.gov/press-releases/secretary-hargett-reminds-tennesseans-tomorrow-is-the-last-day-to-vote-early-more"
+    },
+    {
+      "name": "Tennessee Secretary of State, Aug 4, 2026: 'All polls close at 8 p.m. EDT / 7 p.m. CDT'; in line at close may vote; 100-foot campaign-free zone",
+      "url": "https://sos.tn.gov/elections/press-releases/everything-voters-need-to-know-for-the-august-6-election-this-thursday"
+    },
+    {
+      "name": "Tennessee Secretary of State: 2026 proposed constitutional amendments (what it takes to pass)",
+      "url": "https://sos.tn.gov/elections/announcements/2026-proposed-constitutional-amendments"
+    },
+    {
+      "name": "Tennessee Voter Registration Lookup and Absentee Ballot Status Tracker",
+      "url": "https://tnmap.tn.gov/voterlookup/"
+    },
+    {
+      "name": "GoVoteTN: polling places, early voting sites and hours, sample ballots",
+      "url": "https://web.go-vote-tn.elections.tn.gov/"
+    },
+    {
+      "name": "Tennessee Secretary of State: county election commission offices",
+      "url": "https://tnsos.org/elections/election_commissions.php"
+    },
+    {
+      "name": "Tennessee Attorney General Opinion 16-49 (Dec 22, 2016): quotes Tenn. Code Ann. 2-7-142 on phones at the polls",
+      "url": "https://www.tn.gov/content/dam/tn/attorneygeneral/documents/ops/2016/op16-049.pdf"
+    }
+  ],
+  "judicial_review": null,
+  "heads_up": [
+    {
+      "text": "A Tennessee amendment passes only if it gets more yes votes than no votes, and its yes votes are more than half of all the votes cast for governor.",
+      "applies_to": "section:measures",
+      "source": "https://sos.tn.gov/elections/announcements/2026-proposed-constitutional-amendments"
+    },
+    {
+      "text": "You can read your plan on your phone in the booth, with the sound off. No calls, photos or recording inside the polling place.",
+      "applies_to": "ballot",
+      "source": "https://www.tn.gov/content/dam/tn/attorneygeneral/documents/ops/2016/op16-049.pdf"
+    }
+  ],
+  "dated": [
+    {
+      "path": "early_in_person.hours_note",
+      "from": "2026-10-30",
+      "text": "Early voting ran Wednesday, October 14 through Thursday, October 29, 2026, and is over. On Election Day, Nov 3, go to the polling place GoVoteTN lists for you, with a Tennessee or federal photo ID."
+    },
+    {
+      "path": "gotchas.4.text",
+      "from": "2026-10-30",
+      "text": "Early voting is over. On Election Day, Nov 3, go to the polling place GoVoteTN lists for you; search by your name or address in the GoVoteTN app or at GoVoteTN.gov. Moved within your county? You can still vote: you'll sign an affidavit and vote at the polling place for your new address, or at a central location your county names."
+    },
+    {
+      "path": "gotchas.4.short",
+      "from": "2026-10-30",
+      "text": "On Nov 3, go to the polling place GoVoteTN lists for you."
+    },
+    {
+      "path": "situations.moved_in_state.steps.0",
+      "from": "2026-10-30",
+      "text": "Look up the polling place for your new address in GoVoteTN."
+    },
+    {
+      "path": "situations.college_student.short",
+      "from": "2026-10-30",
+      "text": "Vote where you're registered, at your polling place on Nov 3; student IDs don't count."
+    },
+    {
+      "path": "situations.college_student.answer",
+      "from": "2026-10-30",
+      "text": "Registration closed October 5, so you vote where you're already registered. The deadline to ask for a mail ballot was October 24, and early voting ended October 29. If you already have a mail ballot, it must arrive by mail by the close of polls on Nov 3; you can't hand it in. If you don't, vote at your polling place on Nov 3."
+    },
+    {
+      "path": "situations.away_on_election_day.short",
+      "from": "2026-10-30",
+      "text": "Early voting has ended; if you're back before polls close Nov 3, vote at your polling place."
+    },
+    {
+      "path": "situations.away_on_election_day.answer",
+      "from": "2026-10-30",
+      "text": "Early voting ended Thursday, October 29, and the deadline to ask for a mail ballot was Saturday, October 24. If you can get back before the polls close on Nov 3 (7 PM Central, 8 PM Eastern), vote at your polling place."
+    },
+    {
+      "path": "situations.away_on_election_day.steps.2",
+      "from": "2026-10-30",
+      "text": "Look up your polling place and its hours in the GoVoteTN app."
+    },
+    {
+      "path": "situations.away_on_election_day.deadline",
+      "from": "2026-10-30",
+      "text": "2026-11-03"
+    },
+    {
+      "path": "situations.wrong_polling_place.answer",
+      "from": "2026-10-30",
+      "text": "Early voting is over. On Election Day you vote at the polling place GoVoteTN lists for you. If you're at the wrong one, ask the poll officials to look up yours and go there to vote a regular ballot."
+    },
+    {
+      "path": "situations.away_on_election_day.actions.0.label",
+      "from": "2026-10-30",
+      "text": "Find my polling place"
+    }
+  ]
+}

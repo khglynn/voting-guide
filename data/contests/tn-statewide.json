@@ -1,0 +1,341 @@
+[
+  {
+    "id": "tn-governor",
+    "state": "TN",
+    "level": "state",
+    "office": "Governor",
+    "district": null,
+    "scope_plain": "Every Tennessee voter.",
+    "office_explainer": "The governor runs the state's executive branch: proposes the state budget, signs or vetoes bills the legislature passes, and appoints the people who run state departments. A term is four years.",
+    "why_it_matters": "Gov. Bill Lee has served two terms and can't run again, so Tennessee will have a new governor. Two party nominees and 13 independents are on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Bill Lee",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Marsha Blackburn",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://marshablackburn.com/",
+        "website_confidence": "sourced",
+        "background": "U.S. senator since 2019. Before that, U.S. House member for Tennessee's 7th District (2003 to 2019) and state senator (1998 to 2002). Born in Laurel, Mississippi; degree from Mississippi State University (WSMV).",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Jerri Green",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://greenforgovernor.com/",
+        "website_confidence": "sourced",
+        "background": "Attorney and Memphis City Council member since 2023. Born in Memphis; degrees from the University of Tennessee, Knoxville and Georgetown University's law school (WSMV).",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Misam Abidi",
+        "party": "Independent",
+        "incumbent": false,
+        "website": "https://www.misamforgovernor.com/",
+        "website_confidence": "sourced",
+        "background": "Founded a credit consulting company that later moved into cryptocurrency; also drives for Uber and sells renewable energy. Born in Lahore, Pakistan; came to the U.S. in 1997. WSMV reports a grand jury indicted him in June on 11 counts tied to an alleged \"crypto Ponzi scheme.\"",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Dean Brewer",
+        "party": "Independent",
+        "incumbent": false,
+        "website": "https://www.facebook.com/profile.php?id=61580580683215",
+        "website_confidence": "sourced",
+        "background": "From Lenoir City; lives in Knoxville. Running for his first public office (WSMV).",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Ray Brown",
+        "party": "Independent",
+        "incumbent": false,
+        "website": "https://www.facebook.com/profile.php?id=61587065915935",
+        "website_confidence": "sourced",
+        "background": "Electrician from Oliver Springs (WSMV).",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "David Hatley",
+        "party": "Independent",
+        "incumbent": false,
+        "website": "https://hatleyforgovernor.com/",
+        "website_confidence": "sourced",
+        "background": "Owns a hot tub manufacturing business. From Elizabethtown; no past political office (WSMV).",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Wendell Jackson",
+        "party": "Independent",
+        "incumbent": false,
+        "website": "https://www.wendelljackson4tngov2026.com/",
+        "website_confidence": "sourced",
+        "background": "Performer and comedian from Clarksville (WSMV).",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Charles Van Morgan",
+        "party": "Independent",
+        "incumbent": false,
+        "website": "https://www.facebook.com/charlesvan.morgan/",
+        "website_confidence": "sourced",
+        "background": "Business owner, former police officer and Tennessee Highway Patrol deputy; ran for governor in 2022. Law degree from Nashville School of Law; lives in Knoxville (WSMV).",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Eddie Lee Murphy",
+        "party": "Independent",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "From Spring Hill. Ran in the October 2025 special election for the 7th Congressional District. WSMV found no campaign site or contact information.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Lauren Pinkston",
+        "party": "Independent",
+        "incumbent": false,
+        "website": "https://www.pinkstonfortn.com/",
+        "website_confidence": "sourced",
+        "background": "Business professor at Lipscomb University; has taught fourth grade and done anti-trafficking work with Freedom Business Alliance. Doctorate from Clemson University; lives in Columbia (WSMV).",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Victor L. Scoggin",
+        "party": "Independent",
+        "incumbent": false,
+        "website": "https://captvicscoggin4tngov.us/",
+        "website_confidence": "sourced",
+        "background": "U.S. Navy veteran, retired volunteer firefighter and retired Ford/UAW journeyman. Born in Nashville; lives in Pegram (WSMV).",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Dave Seeman",
+        "party": "Independent",
+        "incumbent": false,
+        "website": "https://davefortn.com/",
+        "website_confidence": "sourced",
+        "background": "Mechanical engineer (UT Knoxville); co-owns Fractal Hardware, a Nashville product development agency, and worked in material handling at the Uranium Processing Facility in Oak Ridge. Born in Nashville (WSMV).",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Karl Knox Smithson",
+        "party": "Independent",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Community activist for homeless people, from McMinnville. WSMV found no campaign site or contact information.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "L. Webb Taylor",
+        "party": "Independent",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Independent candidate from Memphis, per the Secretary of State's certified list.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Robert C. Vick",
+        "party": "Independent",
+        "incumbent": false,
+        "website": "https://drvick4tn.com/",
+        "website_confidence": "sourced",
+        "background": "Public school teacher, principal and athletic director in East Tennessee; doctorate in school leadership from East Tennessee State University. Born in White Pine (WSMV).",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Tennessee Secretary of State: Candidates for Governor, November 3, 2026 General Election (PDF)",
+        "url": "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/Governor_Nov2026.pdf"
+      },
+      {
+        "name": "Tennessee Secretary of State: 2026 candidate lists",
+        "url": "https://sos.tn.gov/elections/2026-candidate-lists"
+      },
+      {
+        "name": "WSMV: Election 2026, everything you need to know about TN's candidates for governor and Congress (Sep 28, 2026)",
+        "url": "https://www.wsmv.com/2026/09/28/election-2026-heres-everything-you-need-know-about-tns-candidates-governor-congress/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tn-us-senate",
+    "state": "TN",
+    "level": "federal",
+    "office": "U.S. Senate",
+    "district": null,
+    "scope_plain": "Every Tennessee voter.",
+    "office_explainer": "One of Tennessee's two U.S. senators. The Senate votes on federal laws and confirms federal judges and cabinet members. A term is six years.",
+    "why_it_matters": "Sen. Bill Hagerty, first elected in 2020, is running for a second term. Two party nominees and eight independents are on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Bill Hagerty",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Bill Hagerty",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://www.hagerty.senate.gov/",
+        "website_confidence": "sourced",
+        "background": "U.S. senator, first elected in 2020. Born in Gallatin; lives in Nashville. Degrees from Vanderbilt University and Vanderbilt Law School (WSMV). The link is his Senate office site.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Marquita Bradshaw",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.marquitabradshaw.com/",
+        "website_confidence": "sourced",
+        "background": "Executive director of Sowing Justice, an environmental nonprofit. Born and raised in Memphis; degree from the University of Memphis (WSMV).",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Tharon Chandler",
+        "party": "Independent",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Independent candidate from Lawrenceburg, per the Secretary of State's certified list.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Andrew Gerena",
+        "party": "Independent",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Independent candidate from Knoxville, per the Secretary of State's certified list.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Jeremy Dean Hearn",
+        "party": "Independent",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Independent candidate from Collierville, per the Secretary of State's certified list.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Robert Jones",
+        "party": "Independent",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Independent candidate from Jonesborough, per the Secretary of State's certified list.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "James William Macon III",
+        "party": "Independent",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Independent candidate from Memphis, per the Secretary of State's certified list.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Yoshi D. Matthews",
+        "party": "Independent",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Independent candidate from Goodlettsville, per the Secretary of State's certified list.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "David Sutman, Jr.",
+        "party": "Independent",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Independent candidate from Gray, per the Secretary of State's certified list.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Catherine Barcel \"Barcy\" Whitson",
+        "party": "Independent",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Independent candidate from Chattanooga, per the Secretary of State's certified list.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Tennessee Secretary of State: Candidates for United States Senate, November 3, 2026 General Election (PDF)",
+        "url": "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/USSenate_Nov2026.pdf"
+      },
+      {
+        "name": "Tennessee Secretary of State: 2026 candidate lists",
+        "url": "https://sos.tn.gov/elections/2026-candidate-lists"
+      },
+      {
+        "name": "WSMV: Election 2026, everything you need to know about TN's candidates for governor and Congress (Sep 28, 2026)",
+        "url": "https://www.wsmv.com/2026/09/28/election-2026-heres-everything-you-need-know-about-tns-candidates-governor-congress/"
+      }
+    ],
+    "confidence": "verified"
+  }
+]

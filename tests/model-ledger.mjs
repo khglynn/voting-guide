@@ -1293,6 +1293,13 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('plan: after midnight Central on Nov 4, a Pacific device still on Nov 3 says closed', plan.nextStep(austin, '2026-11-03', false, new Date('2026-11-04T06:10:00Z')).phase === 'polls_closed');
     check('plan: a statewide Texas ballot after midnight in both zones says closed', plan.nextStep(tx, '2026-11-03', false, new Date('2026-11-04T07:30:00Z')).phase === 'polls_closed');
     check('plan: Pensacola is on Central time, Orlando Eastern', JSON.stringify(open('FL', ['pensacola-fl']).howto.zones) === '["America/Chicago"]' && JSON.stringify(open('FL', ['orlando-fl']).howto.zones) === '["America/New_York"]');
+    // Tennessee's polls close at one moment, 7 PM Central and 8 PM Eastern: a statewide ballot names both, Nashville its own.
+    const tn = read('state-TN.json').howto;
+    const tnDay = plan.nextStep(tn, '2026-11-03', false, new Date('2026-11-04T00:30:00Z'));
+    check('plan: a statewide Tennessee ballot names both closing times', tnDay.phase === 'election_day' && /^Today is Election Day\. Polls close at 7:00 PM Central \(8:00 PM Eastern\)\.$/.test(words(tnDay)), words(tnDay));
+    check('plan: and says closed at 7 PM Central, when East Tennessee closes too', plan.nextStep(tn, '2026-11-03', false, new Date('2026-11-04T01:01:00Z')).phase === 'polls_closed');
+    const nash = plan.nextStep(open('TN', ['nashville-tn']).howto, '2026-11-03', false, new Date('2026-11-04T00:30:00Z'));
+    check('plan: Nashville says its own 7 PM', nash.phase === 'election_day' && /^Today is Election Day\. Polls close at 7 PM\.$/.test(words(nash)), words(nash));
     // Codex #12: after the polls close on Election Day, say so, and keep the in-line rule.
     const shut = plan.nextStep(tx, '2026-11-03', false, 19 * 60);
     check('plan: at 7 PM on Election Day Texas says the polls closed', shut.phase === 'polls_closed' && /^Polls closed at 7 PM\. Already in line\? Stay in line\.$/.test(words(shut)), words(shut));

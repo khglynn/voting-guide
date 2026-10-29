@@ -31,7 +31,8 @@ const STATE_ZONES: Record<string, string[]> = {
   AL: ['America/Chicago'], CA: ['America/Los_Angeles'], CO: ['America/Denver'], DC: ['America/New_York'],
   FL: ['America/New_York', 'America/Chicago'], GA: ['America/New_York'], IL: ['America/Chicago'],
   MD: ['America/New_York'], MO: ['America/Chicago'], NY: ['America/New_York'], OR: ['America/Los_Angeles', 'America/Boise'],
-  PA: ['America/New_York'], TX: ['America/Chicago', 'America/Denver'], WA: ['America/Los_Angeles'],
+  PA: ['America/New_York'], TN: ['America/Chicago', 'America/New_York'], TX: ['America/Chicago', 'America/Denver'],
+  WA: ['America/Los_Angeles'],
 };
 const PLACE_ZONE: Record<string, string> = { 'pensacola-fl': 'America/Chicago' };
 export function zonesFor(st: string, places: { id: string }[]): string[] {
@@ -202,13 +203,16 @@ export function nextStep(h: HowTo, t = todayISO(), absolute = false, now: number
   const ed = h.election_day;
   const mb = h.mail_ballot;
   const ep = h.early_in_person;
-  const close = clock(ed.polls_close) || ed.polls_close;
+  const zones = h.zones || STATE_ZONES[h.state] || [];
+  // Polls that close at one moment in two zones ("7:00 PM Central (8:00 PM Eastern)", Tennessee) keep
+  // both times on a ballot that spans the zones, where "7 PM" would be an hour early for half of it.
+  const both = zones.length > 1 && /\b(Eastern|Central|Mountain|Pacific)\b/.test(ed.polls_close);
+  const close = both ? ed.polls_close : clock(ed.polls_close) || ed.polls_close;
   if (t > h.election_date) {
     return { phase: 'closed', head: [['Voting has closed. Thank you for taking part.', false]], sub: mb.tracking_url ? ['Mailed a ballot? You can check that it was counted.'] : [], primary: mb.tracking_url ? { label: 'Track your ballot', url: mb.tracking_url } : null };
   }
   if (t === h.election_date) {
     const closesAt = clockMinutes(ed.polls_close);
-    const zones = h.zones || STATE_ZONES[h.state] || [];
     const at = now instanceof Date ? now : new Date();
     // Closed in a zone once that zone's own date and time are past Election Day's close there.
     const past = (z: string | null): boolean => {
@@ -229,8 +233,8 @@ export function nextStep(h: HowTo, t = todayISO(), absolute = false, now: number
     const url = isMailState(h) ? mb.drop_box_lookup_url || ed.lookup_url : ed.lookup_url;
     return {
       phase: 'election_day',
-      head: absolute ? [[`Election Day is ${fmtDate(h.election_date)}. ${zones.length > 1 ? 'Your local polls' : 'Polls'} close at `, false], [close, true], ['.', false]]
-        : [[`Today is Election Day. ${zones.length > 1 ? 'Your local polls' : 'Polls'} close at `, false], [close, true], ['.', false]],
+      head: absolute ? [[`Election Day is ${fmtDate(h.election_date)}. ${zones.length > 1 && !both ? 'Your local polls' : 'Polls'} close at `, false], [close, true], ['.', false]]
+        : [[`Today is Election Day. ${zones.length > 1 && !both ? 'Your local polls' : 'Polls'} close at `, false], [close, true], ['.', false]],
       sub, primary: url ? { label: isMailState(h) && mb.drop_box_lookup_url ? 'Find a drop box or vote center' : 'Find where to vote', url, look: isMailState(h) && mb.drop_box_lookup_url ? 'drop_box' : 'election_day' } : null,
     };
   }

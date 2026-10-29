@@ -232,6 +232,9 @@ if [ -n "$AFTER_MERGE" ]; then
   state="${info%% *}"; MERGED_SHA="${info#* }"
   [ "$state" = MERGED ] && [ -n "$MERGED_SHA" ] || die "PR #$AFTER_MERGE is $state, not merged. Merge it after its review (gh pr merge $AFTER_MERGE --squash), then rerun this."
   echo "merge commit: $MERGED_SHA"
+  # What production lists before this deploy lands, so IndexNow hears only about the pages that change (below).
+  mkdir -p .tmp
+  curl -sf --max-time 20 "$PROD_URL/data/pages.json" > .tmp/pages-before.json 2>/dev/null || : > .tmp/pages-before.json
   say "Waiting for Vercel to build ${MERGED_SHA:0:12} for production"
   wait_vercel "$MERGED_SHA" production
   say "Waiting for $PROD_URL to serve it"
@@ -239,6 +242,11 @@ if [ -n "$AFTER_MERGE" ]; then
   say "Sweeping production (fast) and running the scripted checks"
   BASE="$PROD_URL" MODE=fast SHOTS_DIR=.tmp/prod-sweep node tests/sweep.mjs || die "production failed its checks. Roll back in Vercel (promote the previous deployment), then fix forward: https://vercel.com/kevinhg/voting-guide"
   BASE="$PROD_URL" SHOTS_DIR=.tmp/prod-e2e node tests/e2e.mjs || die "production failed e2e. Roll back in Vercel, then fix forward."
+  BASE="$PROD_URL" SHOTS_DIR=.tmp/prod-pages node tests/pages-browser.mjs || die "production failed the page checks (tests/pages-browser.mjs). Roll back in Vercel, then fix forward."
+  # Bing, Yandex and the other IndexNow engines: the pages this deploy changed. A failed ping isn't a failed
+  # deploy; the sitemap still lists every page.
+  say "Telling search engines which pages changed (IndexNow)"
+  node scripts/indexnow.mjs --before .tmp/pages-before.json --base "$PROD_URL" || echo "IndexNow didn't take the ping (not fatal: robots.txt and the sitemap still list every page)."
   echo "Production serves PR #$AFTER_MERGE's merge commit and passes."; exit 0
 fi
 
@@ -265,6 +273,9 @@ run_gates() { # $1 folder holding the files to check, $2 label, $3 changed files
     # A test DSN (project 0, which takes nothing): the crash-report client loads as it does on Vercel, and
     # the e2e catches its reports (SENTRY_E2E=1 makes those checks required). The same value as CI's.
     VITE_SENTRY_DSN="$TEST_SENTRY_DSN" npm run build --silent
+    say "The pages for search engines and AI assistants"
+    node tests/pages.mjs
+    node scripts/indexnow.mjs --self-test > /dev/null || die "scripts/indexnow.mjs failed its own self-test."
     say "Browser checks against a local preview"
     port="$(python3 -c 'import socket;s=socket.socket();s.bind(("127.0.0.1",0));print(s.getsockname()[1])')"
     npx vite preview --port "$port" --strictPort > .tmp-preview.log 2>&1 &
@@ -273,6 +284,7 @@ run_gates() { # $1 folder holding the files to check, $2 label, $3 changed files
     for i in $(seq 1 30); do curl -sf "http://localhost:$port/data/index.json" >/dev/null && break; sleep 1; done
     curl -sf "http://localhost:$port/data/index.json" >/dev/null || { cat .tmp-preview.log; die "preview server did not start."; }
     BASE="http://localhost:$port" SHOTS_DIR=.tmp/e2e-shots SENTRY_E2E=1 node tests/e2e.mjs
+    BASE="http://localhost:$port" SHOTS_DIR=.tmp/pages-shots node tests/pages-browser.mjs
     BASE="http://localhost:$port" SHOTS_DIR=.tmp/sweep-shots MODE="$MODE" node tests/sweep.mjs
   )
 }

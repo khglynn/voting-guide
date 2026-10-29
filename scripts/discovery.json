@@ -1,0 +1,5 @@
+{
+  "_about": "Search engines and AI assistants (Oct 28, 2026). scripts/build-pages.mjs reads this. indexNowKey is public by design: the build serves it at /<key>.txt, and IndexNow (Bing, Yandex and others) checks that file before taking a ping. siteVerification holds the tokens Google Search Console and Bing Webmaster Tools give an owner; empty means no tag. Both tokens are public too: they sit in the home page's HTML.",
+  "indexNowKey": "87311330c9753c5f5e11183cdcc24bff",
+  "siteVerification": { "google": "", "bing": "" }
+}

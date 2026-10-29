@@ -30,11 +30,12 @@ import type { BeforeSendEvent } from '@vercel/analytics';
 /* The dashboard's vocabulary. Keep names, keys and values stable. */
 export interface Events {
   /* A ballot shown: its state code, never its place; and how it opened (the ZIP box, an address, a save
-     link, this device's saved ballot, or the list of cities). Every ballot counts by its state: some
+     link, this device's saved ballot, the list of cities, or a place's or state's own page: its "Open your
+     ... ballot" button, Oct 28). Every ballot counts by its state: some
      places, and every set of several places (DC's wards, Aurora and Denver), come from exactly one ZIP
      in the index, so a place would name the ZIP someone typed. Any ZIP in a state opens at least its
      statewide ballot, so a state never does. */
-  ballot: { state: string; how: 'zip' | 'address' | 'shared' | 'returning' | 'list' };
+  ballot: { state: string; how: 'zip' | 'address' | 'shared' | 'returning' | 'list' | 'page' };
   /* A form or one-tap request that went out (actions.ts). */
   request: { kind: 'city' | 'picks' | 'source' | 'report' | 'follow_up' };
   /* A screen shown: the first page, the ballot, My plan, Help friends vote, Full details. */

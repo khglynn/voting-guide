@@ -46,7 +46,8 @@ export function zonesFor(st: string, places: { id: string }[]): string[] {
 }
 /* The close a ballot names, for the plan and the place pages alike. Polls that close at one moment in two zones
    ("7:00 PM Central (8:00 PM Eastern)", Tennessee) keep both times on a ballot that spans the zones, where
-   "7 PM" would be an hour early for half of it; a ballot in one zone gets its own "7 PM". */
+   "7 PM" would be an hour early for half of it; a ballot in the first zone gets its own "7 PM". A place in the
+   second zone (Knoxville, Eastern) would get "7 PM" too, as would the closing check: give it that zone's time first. */
 export function closeOf(pollsClose: string, zones: string[]): { close: string; both: boolean } {
   const both = zones.length > 1 && /\b(Eastern|Central|Mountain|Pacific)\b/.test(pollsClose);
   return { close: both ? pollsClose : clock(pollsClose) || pollsClose, both };

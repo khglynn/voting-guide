@@ -824,6 +824,9 @@ export async function runAddress(addr: string): Promise<void> {
   const b = S.view === 'ballot' ? S.ballot : null;
   const door = !b && !choosing;
   S.ui.addrFail = '';
+  // Only a ZIP (a friend typed hers, Oct 28, and "Enter a street address with the city or ZIP" read as broken):
+  // say the ballot is fine and the box wants a street. Words from a GPT pass.
+  if (/^\d{5}(?:-\d{4})?$/.test(addr.trim())) { S.ui.addrMsg = b ? 'Your ballot is ready from your ZIP. Add your street address to find your exact districts.' : 'Add your street address to find your exact districts.'; paintAddr(); return; }
   if (addr.trim().length < 6) { S.ui.addrMsg = 'Enter a street address with the city or ZIP.'; paintAddr(); return; }
   // A crash report that mentions it never leaves (errors.ts). Only once it passes as an address: a short
   // word turned away here stays covered as whole words while it sits in the box, and doesn't silence

@@ -832,6 +832,15 @@ async function mapsSettled(page, timeout = 10000) {
   check('Ballot top: the old head lines are gone', !/in the same order as your ballot/.test(await text(page, '#r-ballot')) && !(await page.$('.bhead .sb')));
   await tap(page, '.addrbox [data-act="addr-open"]');
   check('Ballot top: "Use my address" opens the form in the box', !!(await page.$('.addrbox form[data-form="addr"]')) && await page.evaluate(() => document.activeElement && document.activeElement.id === 'addr-in'));
+  // A ZIP alone in the box (a friend's report, Oct 28): no lookup, and a line that says the ballot is fine.
+  let zipAsked = 0;
+  await page.route('https://geocoding.geo.census.gov/**', (route) => { zipAsked++; return route.abort(); });
+  await page.fill('#addr-in', '78744');
+  await page.locator('form[data-form="addr"] button[type=submit]').tap();
+  await page.waitForTimeout(300);
+  const zipMsg = await text(page, '.addrbox');
+  check('Ballot top: a ZIP alone in the address box says the ballot is ready and asks for a street, with no lookup', zipAsked === 0 && /Your ballot is ready from your ZIP\. Add your street address to find your exact districts\./.test(zipMsg), `${zipAsked} asks | ${zipMsg}`);
+  await page.unroute('https://geocoding.geo.census.gov/**');
   check('Ballot top: nothing in all caps', (await upperCased(page)).length === 0);
   await noSideScroll(page, 'Ballot top');
   noErrors(page, 'Ballot top');

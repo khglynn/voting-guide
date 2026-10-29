@@ -23,6 +23,10 @@ export function clock(s: string | null | undefined): string | null {
   if (/\bnoon\b/i.test(s || '')) return 'noon';
   return null;
 }
+/* "7:00 AM", "8 PM PT": a time and nothing else. A qualified one ("8:30 AM at the six King County vote centers",
+   "7:00 AM in Davidson County; each county sets its own") isn't a statewide opening time, so it never
+   becomes "Polls are open 7 AM to ..." or "You can vote from ...". */
+export const PLAIN_TIME = /^\s*\d{1,2}(?::\d{2})?\s*[ap]\.?m\.?(?:\s+[A-Z]{2,3})?\s*$/i;
 /* Poll times are local. Each state's zones, the zone most of it uses first; a place in a
    state's other zone is pinned here. A statewide-only ballot in a two-zone state says "your
    local polls close at" and says they have closed only once they have closed in every zone,
@@ -31,13 +35,22 @@ const STATE_ZONES: Record<string, string[]> = {
   AL: ['America/Chicago'], CA: ['America/Los_Angeles'], CO: ['America/Denver'], DC: ['America/New_York'],
   FL: ['America/New_York', 'America/Chicago'], GA: ['America/New_York'], IL: ['America/Chicago'],
   MD: ['America/New_York'], MO: ['America/Chicago'], NY: ['America/New_York'], OR: ['America/Los_Angeles', 'America/Boise'],
-  PA: ['America/New_York'], TX: ['America/Chicago', 'America/Denver'], WA: ['America/Los_Angeles'],
+  PA: ['America/New_York'], TN: ['America/Chicago', 'America/New_York'], TX: ['America/Chicago', 'America/Denver'],
+  WA: ['America/Los_Angeles'],
 };
 const PLACE_ZONE: Record<string, string> = { 'pensacola-fl': 'America/Chicago' };
 export function zonesFor(st: string, places: { id: string }[]): string[] {
   const all = STATE_ZONES[st] || [];
   if (!places.length) return all;
   return [...new Set(places.map((p) => PLACE_ZONE[p.id] || all[0]).filter(Boolean))];
+}
+/* The close a ballot names, for the plan and the place pages alike. Polls that close at one moment in two zones
+   ("7:00 PM Central (8:00 PM Eastern)", Tennessee) keep both times on a ballot that spans the zones, where
+   "7 PM" would be an hour early for half of it; a ballot in the first zone gets its own "7 PM". A place in the
+   second zone (Knoxville, Eastern) would get "7 PM" too, as would the closing check: give it that zone's time first. */
+export function closeOf(pollsClose: string, zones: string[]): { close: string; both: boolean } {
+  const both = zones.length > 1 && /\b(Eastern|Central|Mountain|Pacific)\b/.test(pollsClose);
+  return { close: both ? pollsClose : clock(pollsClose) || pollsClose, both };
 }
 
 /* "7:00 PM" -> 1140 (minutes after midnight); null when there is no time. */
@@ -202,13 +215,13 @@ export function nextStep(h: HowTo, t = todayISO(), absolute = false, now: number
   const ed = h.election_day;
   const mb = h.mail_ballot;
   const ep = h.early_in_person;
-  const close = clock(ed.polls_close) || ed.polls_close;
+  const zones = h.zones || STATE_ZONES[h.state] || [];
+  const { close, both } = closeOf(ed.polls_close, zones);
   if (t > h.election_date) {
     return { phase: 'closed', head: [['Voting has closed. Thank you for taking part.', false]], sub: mb.tracking_url ? ['Mailed a ballot? You can check that it was counted.'] : [], primary: mb.tracking_url ? { label: 'Track your ballot', url: mb.tracking_url } : null };
   }
   if (t === h.election_date) {
     const closesAt = clockMinutes(ed.polls_close);
-    const zones = h.zones || STATE_ZONES[h.state] || [];
     const at = now instanceof Date ? now : new Date();
     // Closed in a zone once that zone's own date and time are past Election Day's close there.
     const past = (z: string | null): boolean => {
@@ -229,8 +242,8 @@ export function nextStep(h: HowTo, t = todayISO(), absolute = false, now: number
     const url = isMailState(h) ? mb.drop_box_lookup_url || ed.lookup_url : ed.lookup_url;
     return {
       phase: 'election_day',
-      head: absolute ? [[`Election Day is ${fmtDate(h.election_date)}. ${zones.length > 1 ? 'Your local polls' : 'Polls'} close at `, false], [close, true], ['.', false]]
-        : [[`Today is Election Day. ${zones.length > 1 ? 'Your local polls' : 'Polls'} close at `, false], [close, true], ['.', false]],
+      head: absolute ? [[`Election Day is ${fmtDate(h.election_date)}. ${zones.length > 1 && !both ? 'Your local polls' : 'Polls'} close at `, false], [close, true], ['.', false]]
+        : [[`Today is Election Day. ${zones.length > 1 && !both ? 'Your local polls' : 'Polls'} close at `, false], [close, true], ['.', false]],
       sub, primary: url ? { label: isMailState(h) && mb.drop_box_lookup_url ? 'Find a drop box or vote center' : 'Find where to vote', url, look: isMailState(h) && mb.drop_box_lookup_url ? 'drop_box' : 'election_day' } : null,
     };
   }
@@ -287,7 +300,7 @@ export function nextStep(h: HowTo, t = todayISO(), absolute = false, now: number
   return {
     phase: 'election_day_next',
     head: [['Vote on Election Day, ', false], [fmtDate(h.election_date), true], ['.', false]],
-    sub: [`Polls are open ${clock(ed.polls_open) || ed.polls_open} to ${close}.`], primary: ed.lookup_url ? { label: 'Find your polling place', url: ed.lookup_url, look: 'election_day' } : null,
+    sub: [PLAIN_TIME.test(ed.polls_open || '') ? `Polls are open ${clock(ed.polls_open)} to ${close}.` : `Polls close at ${close}.`], primary: ed.lookup_url ? { label: 'Find your polling place', url: ed.lookup_url, look: 'election_day' } : null,
   };
 }
 /* The state's suggested last day to mail a ballot, read from its own advice ("Monday, October

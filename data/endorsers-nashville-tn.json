@@ -1,0 +1,22 @@
+[
+  {
+    "id": "tennessean-eb",
+    "name": "The Tennessean editorial board",
+    "type": "publication",
+    "lean": "neutral",
+    "lean_basis": "AllSides rates The Tennessean Center (low or initial confidence, as of Aug. 2026). No separate editorial-board rating was found. Rating source: https://www.allsides.com/news-source/tennessean-media-bias.",
+    "geography": [
+      "TN",
+      "nashville-tn"
+    ],
+    "guide_url": "https://www.tennessean.com/opinion/",
+    "blocked": true,
+    "blocked_note": "Behind a paywall, and its site shows a bot check to anything that isn’t a browser, so we couldn’t read its endorsements.",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating",
+    "paywall": true,
+    "paywall_note_ok": true
+  }
+]

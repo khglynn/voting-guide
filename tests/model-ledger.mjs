@@ -36,6 +36,12 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('may apply: Denver Public Schools measures cover Denver', dn.items.filter((x) => x.kind === 'measure' && /Denver Public Schools/.test(x.jurisdiction)).every((x) => !dn.mayApply.has(x.id)));
     const ch = open('IL', ['chicago-il']);
     check('may apply: Chicago Public Schools covers every Chicago voter; the mental health areas may apply', ch.items.filter((x) => x.kind === 'measure' && /Chicago Public Schools/.test(x.jurisdiction)).every((x) => !ch.mayApply.has(x.id)) && ch.items.filter((x) => x.kind === 'measure' && /Mental Health/.test(x.jurisdiction)).every((x) => ch.mayApply.has(x.id)));
+    // A city question for one ward or a few precincts ("City of Chicago, 4th Ward only") may apply; one for every Chicago voter doesn't.
+    const wards = ch.items.filter((x) => x.kind === 'measure' && x.level === 'city' && /\b(ward|precinct)/i.test(x.jurisdiction));
+    const whole = ch.items.filter((x) => x.kind === 'measure' && x.level === 'city' && /every Chicago voter/.test(x.jurisdiction));
+    check('may apply: Chicago\'s ward and precinct questions may apply; its citywide ones are on every ballot', wards.length >= 7 && wards.every((x) => ch.mayApply.has(x.id)) && whole.length >= 3 && whole.every((x) => !ch.mayApply.has(x.id)), [...wards.filter((x) => !ch.mayApply.has(x.id)), ...whole.filter((x) => ch.mayApply.has(x.id))].map((x) => x.id).join(', '));
+    // A small city's own question inside a county-wide place: Goodlettsville's sales tax on a Nashville ballot.
+    check('may apply: Goodlettsville\'s sales tax (city voters only) may apply on a Nashville ballot', open('TN', ['nashville-tn']).mayApply.has('goodlettsville-sales-tax'));
     // Codex r3: restrictive notes win over a place-name match.
     const au = open('CO', ['aurora-co']);
     check('may apply: Aurora\'s 17th Judicial District measure (Adams County only) may apply', au.mayApply.has('adams-broomfield-da-7e'));
@@ -1297,6 +1303,19 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('plan: after midnight Central on Nov 4, a Pacific device still on Nov 3 says closed', plan.nextStep(austin, '2026-11-03', false, new Date('2026-11-04T06:10:00Z')).phase === 'polls_closed');
     check('plan: a statewide Texas ballot after midnight in both zones says closed', plan.nextStep(tx, '2026-11-03', false, new Date('2026-11-04T07:30:00Z')).phase === 'polls_closed');
     check('plan: Pensacola is on Central time, Orlando Eastern', JSON.stringify(open('FL', ['pensacola-fl']).howto.zones) === '["America/Chicago"]' && JSON.stringify(open('FL', ['orlando-fl']).howto.zones) === '["America/New_York"]');
+    // Tennessee's polls close at one moment, 7 PM Central and 8 PM Eastern: a statewide ballot names both, Nashville its own.
+    const tn = read('state-TN.json').howto;
+    const tnDay = plan.nextStep(tn, '2026-11-03', false, new Date('2026-11-04T00:30:00Z'));
+    check('plan: a statewide Tennessee ballot names both closing times', tnDay.phase === 'election_day' && /^Today is Election Day\. Polls close at 7:00 PM Central \(8:00 PM Eastern\)\.$/.test(words(tnDay)), words(tnDay));
+    check('plan: and says closed at 7 PM Central, when East Tennessee closes too', plan.nextStep(tn, '2026-11-03', false, new Date('2026-11-04T01:01:00Z')).phase === 'polls_closed');
+    const nash = plan.nextStep(open('TN', ['nashville-tn']).howto, '2026-11-03', false, new Date('2026-11-04T00:30:00Z'));
+    check('plan: Nashville says its own 7 PM', nash.phase === 'election_day' && /^Today is Election Day\. Polls close at 7 PM\.$/.test(words(nash)), words(nash));
+    // Each Tennessee county sets its own opening time (Knox and Hamilton open at 8 AM Eastern), so the day before
+    // gives only the close; a state with one plain opening time still gives both.
+    const tnEve = plan.nextStep(tn, '2026-11-02');
+    check('plan: the day before, Tennessee gives the close and no opening time', tnEve.phase === 'election_day_next' && tnEve.sub.join(' ') === 'Polls close at 7:00 PM Central (8:00 PM Eastern).', tnEve.sub.join(' | '));
+    const txEve = plan.nextStep(austin, '2026-11-02');
+    check('plan: the day before, Austin gives both times', txEve.sub.join(' ') === 'Polls are open 7 AM to 7 PM.', txEve.sub.join(' | '));
     // Codex #12: after the polls close on Election Day, say so, and keep the in-line rule.
     const shut = plan.nextStep(tx, '2026-11-03', false, 19 * 60);
     check('plan: at 7 PM on Election Day Texas says the polls closed', shut.phase === 'polls_closed' && /^Polls closed at 7 PM\. Already in line\? Stay in line\.$/.test(words(shut)), words(shut));

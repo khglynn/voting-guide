@@ -86,18 +86,23 @@ export const contestDistrict = districtNum;
 /* Read from the measure's own jurisdiction note, the way coversPlace reads a race's scope: a
    district named as covering only part of the place ("including part of northwest Houston",
    "central San Antonio", "only voters inside this territory"), one county of a place that spans
-   several, or a school district that names neither the place nor its county, may apply. */
+   several, or a school district that names neither the place nor its county, may apply. So does
+   a city question for only some of the place's voters: a small city's own inside a county-wide
+   place (Goodlettsville's sales tax on a Nashville ballot: "City of Goodlettsville voters only"),
+   whose scope never names the place, or a ward's or precinct's (Chicago's advisory questions:
+   "City of Chicago, 4th Ward only"). */
 const PARTIAL = /\b(part of|parts of|small part|much of|touching|only|not already|except|excluding|outside|reaches|central|far (north|south|east|west)\w*|northwest|northeast|southwest|southeast)\b/i;
 function measureCovers(m: Measure, places: PlaceBundle[]): boolean {
   if (!places.length) return true;
   const j = m.jurisdiction || '';
   if (/\bevery\b[^)]*\bvoter/i.test(j)) return true;
+  const named = (c: string) => new RegExp(`\\b${c.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i').test(j);
+  if (m.level === 'city' && PARTIAL.test(j) && (DISTRICTISH.test(j) || !places.some((p) => named(p.label.replace(/\s*\(.*\)$/, ''))))) return false;
   if (!['school', 'special_district', 'county'].includes(m.level)) return true;
   if (PARTIAL.test(j)) return false;
   const counties = (p: PlaceBundle) => p.counties.map((c) => c.replace(/\s*\([^)]*\)/g, '').replace(/\s+County$/i, '').trim()).filter(Boolean);
   // A place in several counties: a measure that names some of them but not all (Aurora: "17th
   // Judicial District (Adams County and ...)") reaches only part of it.
-  const named = (c: string) => new RegExp(`\\b${c.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i').test(j);
   if (places.some((p) => counties(p).length > 1 && counties(p).some(named) && !counties(p).every(named))) return false;
   if (m.level === 'school') {
     const names = places.flatMap((p) => [p.label.replace(/\s*\(.*\)$/, ''), ...counties(p)]).map((x) => x.toLowerCase());

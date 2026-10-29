@@ -1,0 +1,114 @@
+[
+  {
+    "id": "tennessean-eb",
+    "name": "The Tennessean editorial board",
+    "type": "publication",
+    "lean": "neutral",
+    "lean_basis": "AllSides rates The Tennessean Center (low or initial confidence, as of Aug. 2026). No separate editorial-board rating was found. Rating source: https://www.allsides.com/news-source/tennessean-media-bias.",
+    "geography": [
+      "TN",
+      "nashville-tn"
+    ],
+    "guide_url": "https://www.tennessean.com/opinion/",
+    "blocked": true,
+    "blocked_note": "Behind a paywall, and its site shows a bot check to anything that isn’t a browser, so we couldn’t read its endorsements.",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating",
+    "paywall": true,
+    "paywall_note_ok": true
+  },
+  {
+    "id": "lwv-tennessee",
+    "name": "League of Women Voters of Tennessee (VOTE411)",
+    "type": "civic_nonpartisan",
+    "lean": "neutral",
+    "lean_basis": "League of Women Voters state League, which says it \"does not support or oppose any political candidate or party\" (https://www.lwvtn.org/about). No outside rating found; lean reflects its stated mission.",
+    "geography": [
+      "TN"
+    ],
+    "guide_url": "https://www.lwvtn.org/november_3_2026_state_federal_general_election",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
+  },
+  {
+    "id": "aclu-tennessee",
+    "name": "ACLU of Tennessee",
+    "type": "advocacy",
+    "lean": "lean_left",
+    "lean_basis": "AllSides rates the national ACLU Lean Left (think tank/policy group; independent review, checked Oct. 2026). This is its Tennessee affiliate. Rating source: https://www.allsides.com/news-source/aclu-media-bias.",
+    "geography": [
+      "TN"
+    ],
+    "guide_url": "https://www.aclu-tn.org/news/what-is-on-the-ballot-in-tennessee/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
+  },
+  {
+    "id": "tn-democratic-party",
+    "name": "Tennessee Democratic Party",
+    "type": "party",
+    "lean": "left",
+    "lean_basis": "Official state party organization. Its 2026 Candidate Guide lists its nominees (https://tndp.org/candidates/).",
+    "geography": [
+      "TN"
+    ],
+    "guide_url": "https://tndp.org/candidates/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "party": "Democratic",
+    "lean_basis_kind": "party"
+  },
+  {
+    "id": "tn-republican-party",
+    "name": "Tennessee Republican Party",
+    "type": "party",
+    "lean": "right",
+    "lean_basis": "Official state party organization. Its home page and candidate page list its 2026 nominees (https://www.tngop.org/).",
+    "geography": [
+      "TN"
+    ],
+    "guide_url": "https://www.tngop.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "party": "Republican",
+    "lean_basis_kind": "party"
+  },
+  {
+    "id": "tn-afl-cio",
+    "name": "Tennessee AFL-CIO",
+    "type": "labor",
+    "lean": "lean_left",
+    "lean_basis": "State labor council that says it \"serves as the voice of working families at the legislature\" (https://tnaflcio.org/about-us). No outside rating found; lean reflects its stated mission.",
+    "geography": [
+      "TN"
+    ],
+    "guide_url": "https://tnaflcio.org/news/tn-afl-cio-announces-2026-general-election-endorsements",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
+  },
+  {
+    "id": "tn-chamber",
+    "name": "Tennessee Chamber of Commerce and Industry",
+    "type": "business",
+    "lean": "lean_right",
+    "lean_basis": "Statewide chamber that calls itself \"the unified voice for businesses and manufacturers\" and backs \"a pro-business climate\" (https://tnchamber.org/about/). No outside rating found; lean reflects its stated mission.",
+    "geography": [
+      "TN"
+    ],
+    "guide_url": "https://tnchamber.org/endorsement-of-senator-marsha-blackburn-for-governor-of-tennessee/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
+  }
+]

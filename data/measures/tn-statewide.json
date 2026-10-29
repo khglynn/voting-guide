@@ -1,0 +1,86 @@
+[
+  {
+    "id": "tn-amendment-1",
+    "state": "TN",
+    "level": "state",
+    "jurisdiction": "Tennessee",
+    "number": "Amendment 1",
+    "official_title": "Shall Article I, Section 15 of the Constitution of Tennessee be amended by deleting the following: That all prisoners shall be bailable by sufficient sureties, unless for capital offences, when the proof is evident, or the presumption great. And the privilege of the writ of Habeas Corpus shall not be suspended, unless when in case of rebellion or invasion, the General Assembly shall declare the public safety requires it. and substituting instead the following: (a) All prisoners shall be bailable by sufficient sureties unless for the following when the proof is evident or the presumption great: (1) A capital offense; (2) An act of terrorism; (3) Second degree murder; (4) Aggravated rape of a child; (5) Aggravated rape; (6) Grave torture; and (7) Any other offense for which, as of November 3, 2026, a defendant, if convicted, could not be released prior to the expiration of at least eighty-five percent of the entire sentence imposed. (b) In any case in which bail for an offense listed in subsection (a) is granted or denied before conviction, the judge or magistrate shall place in the record the judge's or magistrate's reasons for granting or denying bail. (c) The privilege of the writ of Habeas Corpus shall not be suspended, unless when in case of rebellion or invasion, the General Assembly shall declare the public safety requires it.",
+    "plain_summary": "Today Tennessee's constitution says everyone charged with a crime can get bail, except people charged with a crime punishable by death when the evidence is strong. This would let a judge hold someone in jail before trial, with no bail, for a longer list of serious charges, and judges would have to write down why they granted or denied bail in those cases. The Attorney General's summary: it allows \"a court to hold a defendant without bail before trial\" for these charges.",
+    "yes_means": "Judges may refuse bail before trial when the evidence is strong for these charges: a crime punishable by death, terrorism, second degree murder, aggravated rape of a child, aggravated rape, grave torture, or any crime where a convicted person must serve at least 85% of the sentence under the law as of Nov 3, 2026. Judges must put their reasons for granting or denying bail in the record.",
+    "no_means": "The constitution stays as it is: everyone accused can get bail except people charged with a crime punishable by death when the proof is evident or the presumption great.",
+    "current_law": "Article I, Section 15 now reads: \"all prisoners shall be bailable by sufficient sureties, unless for capital offences, when the proof is evident, or the presumption great.\" So a judge can deny bail outright only in capital (death penalty) cases; in other cases a judge sets bail, which can be high. The rule against suspending habeas corpus (the right to challenge being held) stays the same either way.",
+    "fiscal_impact": "No cost estimate appears on the ballot or on the Secretary of State’s amendment page. Opponents say it will be costly, WMC Action News 5 reported (Feb 13, 2026).",
+    "pass_threshold": "more yes votes than no votes, and more yes votes than half of all the votes cast for governor in this election. If you vote for governor and skip this question, that counts against it, much like a no.",
+    "referred_by": "legislature",
+    "confusing_wording_note": "The ballot prints the whole old section and the whole new one, so it is long; the change is the list in (a) and the reasons rule in (b). \"When the proof is evident or the presumption great\" means the evidence against the person is strong. A yes lets a judge deny bail for these charges; it doesn't require it. Item 7 points to the 85% list in state law \"as of November 3, 2026,\" so crimes added to that list later would not be covered. The amendments come right after the governor’s race on the ballot. Because yes votes must top half of all the votes for governor, leaving one blank works against it.",
+    "supporters_case": {
+      "text": "House Speaker Cameron Sexton called final passage a \"win for public safety and reducing recidivism across our communities.\" He said repeat violent offenders were \"making bail and then reoffending while out on bail.\" The resolution passed the House 84-10 and the Senate 23-6 in 2025.",
+      "source": "https://news.ballotpedia.org/2025/04/24/tennessee-legislators-advance-constitutional-amendments-on-crime-victims-rights-bail-and-property-taxes-to-2026-ballot/"
+    },
+    "opponents_case": {
+      "text": "Rep. Justin Pearson (D-Memphis) said “judges are imperfect people with their own biases,” which can bring “a disproportionate harm on poor folks, a disproportionate harm on Black folks, on Latino folks.”",
+      "source": "https://news.ballotpedia.org/2025/04/24/tennessee-legislators-advance-constitutional-amendments-on-crime-victims-rights-bail-and-property-taxes-to-2026-ballot/"
+    },
+    "official_text_url": "https://sos.tn.gov/elections/announcements/2026-proposed-constitutional-amendments",
+    "official_guide_url": "https://sos.tn.gov/elections/announcements/2026-proposed-constitutional-amendments",
+    "confidence": "verified",
+    "short_title": "Denying bail for some serious charges"
+  },
+  {
+    "id": "tn-amendment-2",
+    "state": "TN",
+    "level": "state",
+    "jurisdiction": "Tennessee",
+    "number": "Amendment 2",
+    "official_title": "Shall Article II, Section 28 of the Constitution of the State of Tennessee be amended by deleting the following language from the first sentence: In accordance with the following provisions, all property real, personal or mixed shall be subject to taxation, but the Legislature and substituting instead the following: In accordance with the following provisions, all property real, personal, or mixed shall be subject to taxation, but the Legislature shall not levy, authorize, or otherwise permit any state tax upon such property, and the Legislature",
+    "plain_summary": "Tennessee has had no state property tax since 1949; state law sets the rate at zero, but the legislature could bring one back. This would write a ban on any state property tax into the constitution. County and city property taxes, the ones on your bill now, would not change. The Attorney General's summary: it \"prohibits the Legislature from imposing a State property tax on real, personal, or mixed property.\"",
+    "yes_means": "The constitution bars the state from ever levying a state property tax. Bringing one back would take another constitutional amendment.",
+    "no_means": "Nothing changes: there is still no state property tax today, but the legislature keeps the power to pass one by law.",
+    "current_law": "Article II, Section 28 makes property subject to taxation and lets the legislature tax it. The state has collected no property tax of its own since 1949 (state law sets it at zero percent). Counties and cities levy property taxes, and this amendment leaves them alone.",
+    "fiscal_impact": "No cost estimate appears on the ballot or on the Secretary of State’s amendment page. The state collects no property tax now (state law has set the rate at zero since 1949, WSMV reports), so a yes wouldn’t cut any tax the state collects today.",
+    "pass_threshold": "more yes votes than no votes, and more yes votes than half of all the votes cast for governor in this election. If you vote for governor and skip this question, that counts against it, much like a no.",
+    "referred_by": "legislature",
+    "confusing_wording_note": "The question repeats most of a sentence; the only new words are that the legislature \"shall not levy, authorize, or otherwise permit any state tax upon such property.\" A yes does not lower anyone's property tax bill, since the taxes on your bill are county and city taxes, which stay. The amendments come right after the governor’s race on the ballot. Because yes votes must top half of all the votes for governor, leaving one blank works against it.",
+    "supporters_case": {
+      "text": "Jack Powers of the Beacon Center of Tennessee: “This is about preventing that from ever happening in the future.” He says “property taxes make it more difficult” to keep Tennessee “a very attractive place to move, to raise a family, to earn a living.”",
+      "source": "https://www.wsmv.com/2026/10/20/tennesseans-vote-statewide-property-tax-ban/"
+    },
+    "opponents_case": {
+      "text": "Sen. Heidi Campbell (D-Nashville): “Really you’re taking this tool out of the tool chest.” She says the state might need it later, “possibly taxing corporations who are bringing data centers here.”",
+      "source": "https://www.wsmv.com/2026/10/20/tennesseans-vote-statewide-property-tax-ban/"
+    },
+    "official_text_url": "https://sos.tn.gov/elections/announcements/2026-proposed-constitutional-amendments",
+    "official_guide_url": "https://sos.tn.gov/elections/announcements/2026-proposed-constitutional-amendments",
+    "confidence": "verified",
+    "short_title": "Ban a state property tax"
+  },
+  {
+    "id": "tn-amendment-3",
+    "state": "TN",
+    "level": "state",
+    "jurisdiction": "Tennessee",
+    "number": "Amendment 3",
+    "official_title": "Shall Article I, Section 35 of the Constitution of Tennessee be amended by deleting the section in its entirety and substituting the following: Section 35. That to preserve and protect the rights of victims of crime to justice and due process throughout the criminal and juvenile justice systems, a victim, as defined by law and which may be expanded by the General Assembly, shall have the following rights, which shall be protected: (1) The right to be treated with fairness for the victim's safety and dignity; (2) The right, upon request, to reasonable notice of all public criminal proceedings and all public juvenile delinquency proceedings involving the accused; (3) The right to be present at all public criminal proceedings and all public juvenile delinquency proceedings involving the accused; (4) The right upon request to be heard in any proceeding involving release, plea, sentencing, disposition, and parole, as well as any public proceeding when relevant during which a right of the victim is implicated; (5) The right to be heard and informed of all parole procedures, to participate in the parole process, to provide information to the parole authority to be considered before the parole of the offender, and to be notified, upon request, of the parole or other release of the offender; (6) The right to be free from harassment, intimidation, and abuse throughout the criminal justice system, including reasonable protection, as defined by the General Assembly, from the accused or any person acting on behalf of the accused; (7) The right, upon request, to reasonable notice of any release, transfer, or escape of the accused or convicted person; (8) The right to full and timely restitution from the offender; (9) The right to a speedy trial or disposition and a prompt and final conclusion of the case after the conviction or sentence; (10) The right to be informed of the minimum sentence the offender will serve in custody and the scheduled release date; (11) The right to have the safety of the victim, the victim's family, and the general public considered before any parole or other post-judgment release decision is made; (12) The right, upon request, to confer with the prosecution; and (13) The right to be fully informed of all rights afforded to crime victims. A victim may assert the rights enumerated in this section, not as a party, but in the manner further provided by the General Assembly protecting the victim's right to standing. The General Assembly has the authority to enact substantive and procedural laws to further define, implement, preserve, and protect the rights guaranteed to victims by this section. This section must be interpreted to preserve and protect the rights of all persons to due process. This section, or any law enacted under this section, does not create a basis for vacating a conviction. This section does not restrict the powers of the District Attorney General or the inherent authority of the court. Other than as provided in the preceding paragraph, this section does not create a cause of action or claim for damages against the state or a political subdivision of the state; an officer, employee, or agent of the state or of any of its political subdivisions; or an officer or employee of the court.",
+    "plain_summary": "Tennessee's constitution has listed rights for crime victims since 1998. This replaces that section with a longer list, based on the national \"Marsy's Law\" model: 13 rights instead of 8. New ones include fair treatment, taking part in parole decisions, protection from harassment, being told the minimum sentence and release date, and having safety weighed before a release. Victims could assert these rights in court in ways the legislature sets, though not as a party to the case.",
+    "yes_means": "Section 35 is replaced with the new list of 13 victims' rights. Victims (as state law defines them) can assert those rights in court in ways the legislature sets. The text says it doesn't limit prosecutors or judges, can't be used to overturn a conviction, and creates no claim for money damages against the state.",
+    "no_means": "The current Section 35 stays. Victims keep the rights it already lists, among them to be told about proceedings, be present, talk to prosecutors, be heard on sentencing and release, a speedy resolution and restitution. A no doesn’t take those away.",
+    "current_law": "Article I, Section 35, added in 1998, already lists rights for crime victims: eight of them by WVLT’s count, against 13 in the new version. The Attorney General’s summary says the amendment keeps or clarifies those rights and adds new ones.",
+    "fiscal_impact": "No cost estimate appears on the ballot or on the Secretary of State’s amendment page. Some opponents have questioned whether the change could add costs, WTVC NewsChannel 9 reported.",
+    "pass_threshold": "more yes votes than no votes, and more yes votes than half of all the votes cast for governor in this election. If you vote for governor and skip this question, that counts against it, much like a no.",
+    "referred_by": "legislature",
+    "confusing_wording_note": "The ballot prints the whole new section, which is long. It replaces the current victims' rights section rather than adding a new one, and most of the old rights carry over. A no keeps today's victims' rights in place. The amendments come right after the governor’s race on the ballot. Because yes votes must top half of all the votes for governor, leaving one blank works against it.",
+    "supporters_case": {
+      "text": "Verna Wyatt, co-founder of Tennessee Voices for Victims, on the rights passed in 1998: “it doesn’t have any accountability. So if a victim’s rights are violated, nothing happens.” She says “the criminal has all of the rights.”",
+      "source": "https://www.wsmv.com/2026/10/13/tennesseans-vote-victims-rights-constitutional-amendment-what-you-need-know-before-casting-your-ballot/"
+    },
+    "opponents_case": {
+      "text": "Roshan Neil, policy director of the ACLU of Tennessee: “The State Constitution already protects victim’s rights and expanding them in this way basically would threaten Constitutional due process.” He says it could hinder the presumption of innocence.",
+      "source": "https://www.wsmv.com/2026/10/23/amendment-three-ballot-would-expand-crime-victims-rights-with-marsys-law/"
+    },
+    "official_text_url": "https://sos.tn.gov/elections/announcements/2026-proposed-constitutional-amendments",
+    "official_guide_url": "https://sos.tn.gov/elections/announcements/2026-proposed-constitutional-amendments",
+    "confidence": "verified",
+    "short_title": "Crime victims' rights (Marsy's Law)"
+  }
+]

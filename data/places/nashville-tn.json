@@ -1,0 +1,234 @@
+{
+  "id": "nashville-tn",
+  "label": "Nashville",
+  "state": "TN",
+  "counties": [
+    "Davidson"
+  ],
+  "county_election_office": {
+    "name": "Davidson County Election Commission, 1281 Murfreesboro Pike, Third Floor, Nashville",
+    "url": "https://www.nashville.gov/departments/elections",
+    "phone": "615-862-8800",
+    "phone_label": "General line",
+    "lines": [
+      {
+        "label": "Absentee and early voting line",
+        "phone": "615-862-8815",
+        "hours": "Monday to Friday, 8 AM to 4:30 PM"
+      }
+    ],
+    "hours": "Office open Monday to Friday, 8 AM to 4:30 PM: 1281 Murfreesboro Pike, Third Floor, Nashville.",
+    "source": "https://www.nashville.gov/departments/elections/contact-us"
+  },
+  "sample_ballot_url": "https://www.nashville.gov/sites/default/files/2026-09/Sample_Ballot_November_3_2026_State_Fed_Gen_Mun_Elections.pdf?ct=1790110765",
+  "zips": [
+    "37013",
+    "37072",
+    "37076",
+    "37080",
+    "37115",
+    "37138",
+    "37189",
+    "37201",
+    "37203",
+    "37204",
+    "37205",
+    "37206",
+    "37207",
+    "37208",
+    "37209",
+    "37210",
+    "37211",
+    "37212",
+    "37213",
+    "37214",
+    "37215",
+    "37216",
+    "37217",
+    "37218",
+    "37219",
+    "37220",
+    "37221",
+    "37228",
+    "37232",
+    "37238"
+  ],
+  "zip_caveats": "A ZIP doesn't tell us your districts here. Davidson County is split among three U.S. House districts (4, 6 and 7, redrawn in May 2026), and only state Senate Districts 17, 19 and 21 have races this year, so some Nashville voters have no state Senate race. Your districts are on the yellow voter card the Election Commission mailed in June 2026, on your sample ballot, or in the state's district lookup. Belle Meade, Forest Hills and Goodlettsville voters also vote for city commissioners, and Goodlettsville votes on a sales tax question; those are only on those cities' ballots. Some ZIPs cross the county line, and the other county's ballot has different races: 37072 (Goodlettsville) reaches into Sumner and Robertson counties; 37076 (Hermitage) and 37138 (Old Hickory) reach into Wilson County; 37080 (Joelton) reaches into Cheatham County; 37215 and 37221 (Bellevue) reach into Williamson County; 37209 touches Cheatham County. If your voter card names another county, this is not your ballot. Small parts of 37015, 37027 (mostly Brentwood), 37064, 37086, 37122, 37135 and 37143 are in Davidson County too but open their own county's ballot; if you vote in Davidson with one of those ZIPs, choose Nashville from the list of places.",
+  "contest_ids": [
+    "tn-governor",
+    "tn-amendment-1",
+    "tn-amendment-2",
+    "tn-amendment-3",
+    "tn-us-senate",
+    "tn-us-house-4",
+    "tn-us-house-6",
+    "tn-us-house-7",
+    "tn-sd-17",
+    "tn-sd-19",
+    "tn-sd-21",
+    "tn-hd-50",
+    "tn-hd-51",
+    "tn-hd-52",
+    "tn-hd-53",
+    "tn-hd-54",
+    "tn-hd-55",
+    "tn-hd-56",
+    "tn-hd-58",
+    "tn-hd-59",
+    "tn-hd-60",
+    "belle-meade-city-commission",
+    "forest-hills-city-commission",
+    "goodlettsville-city-commission",
+    "goodlettsville-sales-tax"
+  ],
+  "district_finders": [
+    {
+      "office_match": "U.S. House of Representatives",
+      "label": "Find your new 2026 district (state lookup)",
+      "url": "https://tn-cot.maps.arcgis.com/apps/instant/lookup/index.html?appid=2bd3c9b349634d2ba7153410c0930d27"
+    },
+    {
+      "office_match": "U.S. House of Representatives",
+      "label": "See every district's race on the Davidson sample ballot",
+      "url": "https://www.nashville.gov/sites/default/files/2026-09/Sample_Ballot_November_3_2026_State_Fed_Gen_Mun_Elections.pdf?ct=1790110765"
+    },
+    {
+      "office_match": "Tennessee Senate",
+      "label": "Find your state Senate district (state lookup)",
+      "url": "https://tn-cot.maps.arcgis.com/apps/instant/lookup/index.html?appid=2bd3c9b349634d2ba7153410c0930d27"
+    },
+    {
+      "office_match": "Tennessee House of Representatives",
+      "label": "Find your state House district (state lookup)",
+      "url": "https://tn-cot.maps.arcgis.com/apps/instant/lookup/index.html?appid=2bd3c9b349634d2ba7153410c0930d27"
+    },
+    {
+      "office_match": "Belle Meade City Commissioner",
+      "label": "Find your polling place and ballot",
+      "url": "https://maps.nashville.gov/PollingPlaceFinder"
+    },
+    {
+      "office_match": "Forest Hills City Commissioner",
+      "label": "Find your polling place and ballot",
+      "url": "https://maps.nashville.gov/PollingPlaceFinder"
+    },
+    {
+      "office_match": "Goodlettsville City Commissioner",
+      "label": "Find your polling place and ballot",
+      "url": "https://maps.nashville.gov/PollingPlaceFinder"
+    }
+  ],
+  "early_in_person": {
+    "start": "2026-10-14",
+    "end": "2026-10-29",
+    "hours_note": "Davidson County: Wednesday, October 14 through Thursday, October 29, at any of 15 early voting sites. Mondays and Fridays 8 AM to 5:30 PM; Tuesdays and Thursdays 8 AM to 7 PM; Wednesdays and Saturdays 8 AM to 4:30 PM; closed Sundays. The last day, Thursday, October 29, runs 8 AM to 7 PM.",
+    "hours_short": "Last day Thursday, October 29: all 15 sites open 8 AM to 7 PM.",
+    "lookup_url": "https://www.nashville.gov/departments/elections/voters/find-early-voting-information",
+    "source": "https://www.nashville.gov/sites/default/files/2026-08/Early_Voting_Schedule_NOV_3_2026_State_Fed_Gen_BMeade_FHills_Gville_Mun.pdf?ct=1787235029",
+    "confidence": "verified"
+  },
+  "lookups": {
+    "early_in_person": "https://www.nashville.gov/departments/elections/voters/find-early-voting-information",
+    "election_day": "https://maps.nashville.gov/PollingPlaceFinder",
+    "tracking": "https://tnmap.tn.gov/voterlookup/"
+  },
+  "situations": [
+    {
+      "id": "no_mail_ballot_or_lost",
+      "short": "The request deadline passed Oct 24, so vote early today until 7 PM or at your polling place Nov 3.",
+      "answer": "The deadline to ask for an absentee ballot was Saturday, October 24. If yours hasn't come, call the Davidson absentee office at 615-862-8815. Today, Thursday, October 29, is the last day of early voting: any of 15 sites, 8 AM to 7 PM. On Election Day, Tuesday, November 3, vote at your own polling place, 7 AM to 7 PM.",
+      "steps": [
+        "Call the absentee office, 615-862-8815 (Monday to Friday, 8 AM to 4:30 PM), and ask how to vote in person instead.",
+        "See whether your ballot was sent or received: the state's Voter Registration Lookup at tnmap.tn.gov/voterlookup.",
+        "Already filled it in? Mail it so it arrives by 7 PM on November 3. Tennessee doesn't let you hand it in at a polling place or the office."
+      ],
+      "source": "https://www.nashville.gov/departments/elections/voters/request-absentee-ballot",
+      "confidence": "verified"
+    },
+    {
+      "id": "wrong_polling_place",
+      "short": "On Nov 3 you must vote at your assigned polling place; the county's Polling Place Finder shows it.",
+      "answer": "On Election Day, Davidson County voters must vote at their assigned polling place. Find yours with the Polling Place Finder (maps.nashville.gov/PollingPlaceFinder) or call 615-862-8800. One place changed this year: voters assigned to the Downtown Library (District 19, Precinct 5) vote at the Howard Office Building, 700 President Ronald Reagan Way.",
+      "steps": [
+        "Moved within Davidson County and didn't update your address? Go to the polling place for your new address on Election Day; you can change your address there and vote.",
+        "At the wrong place? Ask the poll workers for your right one, and go there before 7 PM."
+      ],
+      "source": "https://www.nashville.gov/departments/elections/find-polling-place",
+      "confidence": "verified"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Davidson County Election Commission: contact",
+      "url": "https://www.nashville.gov/departments/elections/contact-us"
+    },
+    {
+      "name": "Davidson County Election Commission: sample ballot, November 3, 2026",
+      "url": "https://www.nashville.gov/sites/default/files/2026-09/Sample_Ballot_November_3_2026_State_Fed_Gen_Mun_Elections.pdf?ct=1790110765"
+    },
+    {
+      "name": "Davidson County Election Commission: early voting schedule, November 3, 2026",
+      "url": "https://www.nashville.gov/sites/default/files/2026-08/Early_Voting_Schedule_NOV_3_2026_State_Fed_Gen_BMeade_FHills_Gville_Mun.pdf?ct=1787235029"
+    },
+    {
+      "name": "Davidson County Election Commission: find early voting information",
+      "url": "https://www.nashville.gov/departments/elections/voters/find-early-voting-information"
+    },
+    {
+      "name": "Davidson County Election Commission: find polling place",
+      "url": "https://www.nashville.gov/departments/elections/find-polling-place"
+    },
+    {
+      "name": "Davidson County Election Commission: Election Day location change, November 3, 2026",
+      "url": "https://www.nashville.gov/sites/default/files/2026-09/Election_Day_Voting_Location_Change_November_3_2026.pdf?ct=1790351444"
+    },
+    {
+      "name": "Davidson County Election Commission: request an absentee ballot",
+      "url": "https://www.nashville.gov/departments/elections/voters/request-absentee-ballot"
+    },
+    {
+      "name": "Davidson County Election Commission: congressional redistricting complete (June 2026)",
+      "url": "https://www.nashville.gov/departments/elections/news/davidson-county-election-commission-completes-congressional-redistricting"
+    },
+    {
+      "name": "Davidson County Election Commission: 2026 election calendar",
+      "url": "https://www.nashville.gov/sites/default/files/2026-06/2026_Davidson_County_Election_Calendar.pdf?ct=1781280343"
+    },
+    {
+      "name": "Tennessee Secretary of State: absentee voting FAQ",
+      "url": "https://sos.tn.gov/elections/faqs"
+    },
+    {
+      "name": "Tennessee Secretary of State: voter ID requirements",
+      "url": "https://sos.tn.gov/elections/voter-id-requirements"
+    }
+  ],
+  "notes": "Today, Thursday, October 29, is the last day of early voting: any of 15 sites, 8 AM to 7 PM. On Election Day, Tuesday, November 3, polls are open 7 AM to 7 PM, and you must vote at your assigned polling place. One change this year: voters assigned to the Downtown Library (District 19, Precinct 5) vote at the Howard Office Building, 700 President Ronald Reagan Way. Bring a Tennessee or federal photo ID; it can be expired, but college IDs and out-of-state licenses don't count. Absentee ballots go back by mail only and must arrive by 7 PM on November 3. Your U.S. House district may be new this year: the state redrew the lines in May 2026, and your yellow voter card from June shows the new one.",
+  "dated": [
+    {
+      "path": "notes",
+      "from": "2026-10-30",
+      "text": "Early voting is over. On Election Day, Tuesday, November 3, polls are open 7 AM to 7 PM, and you must vote at your assigned polling place. One change this year: voters assigned to the Downtown Library (District 19, Precinct 5) vote at the Howard Office Building, 700 President Ronald Reagan Way. Bring a Tennessee or federal photo ID; it can be expired, but college IDs and out-of-state licenses don't count. Absentee ballots go back by mail only and must arrive by 7 PM on November 3. Your U.S. House district may be new this year: the state redrew the lines in May 2026, and your yellow voter card from June shows the new one."
+    },
+    {
+      "path": "early_in_person.hours_note",
+      "from": "2026-10-30",
+      "text": "Early voting in Davidson County ran October 14 through October 29 and is over. Vote at your own polling place on Tuesday, November 3, 7 AM to 7 PM."
+    },
+    {
+      "path": "early_in_person.hours_short",
+      "from": "2026-10-30",
+      "text": "Early voting is over. Vote at your polling place on Nov 3, 7 AM to 7 PM."
+    },
+    {
+      "path": "situations.no_mail_ballot_or_lost.short",
+      "from": "2026-10-30",
+      "text": "The request deadline passed Oct 24, so vote at your own polling place Nov 3, 7 AM to 7 PM."
+    },
+    {
+      "path": "situations.no_mail_ballot_or_lost.answer",
+      "from": "2026-10-30",
+      "text": "The deadline to ask for an absentee ballot was Saturday, October 24, and early voting ended October 29. If yours hasn't come, call the Davidson absentee office at 615-862-8815. On Election Day, Tuesday, November 3, vote at your own polling place, 7 AM to 7 PM."
+    }
+  ]
+}

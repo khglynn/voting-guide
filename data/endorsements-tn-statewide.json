@@ -1,0 +1,217 @@
+[
+  {
+    "endorser_id": "tennessean-eb",
+    "target_id": "tn-governor",
+    "status": "not_found",
+    "unreadable": true,
+    "choice": null,
+    "why": "Checked on October 29. The opinion page returned an access block and search found no current board endorsement for this item. A no-endorsement policy was not confirmed.",
+    "url": "https://www.tennessean.com/opinion/",
+    "date": "2026-10-29",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "tennessean-eb",
+    "target_id": "tn-us-senate",
+    "status": "not_found",
+    "unreadable": true,
+    "choice": null,
+    "why": "Checked on October 29. The opinion page returned an access block and search found no current board endorsement for this item. A no-endorsement policy was not confirmed.",
+    "url": "https://www.tennessean.com/opinion/",
+    "date": "2026-10-29",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "tennessean-eb",
+    "target_id": "tn-amendment-1",
+    "status": "not_found",
+    "unreadable": true,
+    "choice": null,
+    "why": "Checked on October 29. The opinion page returned an access block and search found no current board endorsement for this item. A no-endorsement policy was not confirmed.",
+    "url": "https://www.tennessean.com/opinion/",
+    "date": "2026-10-29",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "tennessean-eb",
+    "target_id": "tn-amendment-2",
+    "status": "not_found",
+    "unreadable": true,
+    "choice": null,
+    "why": "Checked on October 29. The opinion page returned an access block and search found no current board endorsement for this item. A no-endorsement policy was not confirmed.",
+    "url": "https://www.tennessean.com/opinion/",
+    "date": "2026-10-29",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "tennessean-eb",
+    "target_id": "tn-amendment-3",
+    "status": "not_found",
+    "unreadable": true,
+    "choice": null,
+    "why": "Checked on October 29. The opinion page returned an access block and search found no current board endorsement for this item. A no-endorsement policy was not confirmed.",
+    "url": "https://www.tennessean.com/opinion/",
+    "date": "2026-10-29",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-tennessee",
+    "target_id": "tn-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose any candidate. Its election page sends voters to VOTE411 to look up their ballot.",
+    "url": "https://www.lwvtn.org/november_3_2026_state_federal_general_election",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-tennessee",
+    "target_id": "tn-us-senate",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose any candidate. Its election page sends voters to VOTE411 to look up their ballot.",
+    "url": "https://www.lwvtn.org/november_3_2026_state_federal_general_election",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-tennessee",
+    "target_id": "tn-amendment-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League’s election page gives each amendment’s summary and what a yes or no vote means, without recommending a vote.",
+    "url": "https://www.lwvtn.org/november_3_2026_state_federal_general_election",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-tennessee",
+    "target_id": "tn-amendment-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League’s election page gives each amendment’s summary and what a yes or no vote means, without recommending a vote.",
+    "url": "https://www.lwvtn.org/november_3_2026_state_federal_general_election",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-tennessee",
+    "target_id": "tn-amendment-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League’s election page gives each amendment’s summary and what a yes or no vote means, without recommending a vote.",
+    "url": "https://www.lwvtn.org/november_3_2026_state_federal_general_election",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aclu-tennessee",
+    "target_id": "tn-amendment-1",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Opposes it, saying it “would give the government more power to jail people accused of certain crimes who have not been convicted.”",
+    "url": "https://www.aclu-tn.org/news/what-is-on-the-ballot-in-tennessee/",
+    "date": "2026-10-05",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aclu-tennessee",
+    "target_id": "tn-amendment-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "Its Oct 5 ballot page says it “does not have a position on Amendment 2.”",
+    "url": "https://www.aclu-tn.org/news/what-is-on-the-ballot-in-tennessee/",
+    "date": "2026-10-05",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aclu-tennessee",
+    "target_id": "tn-amendment-3",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Opposes it, saying the change “puts the presumption of innocence and fair treatment at risk.”",
+    "url": "https://www.aclu-tn.org/news/what-is-on-the-ballot-in-tennessee/",
+    "date": "2026-10-05",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tn-democratic-party",
+    "target_id": "tn-governor",
+    "status": "endorsed",
+    "choice": "Jerri Green",
+    "why": "Party nominee, listed in the party’s 2026 Candidate Guide.",
+    "url": "https://tndp.org/candidates/governor/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tn-democratic-party",
+    "target_id": "tn-us-senate",
+    "status": "endorsed",
+    "choice": "Marquita Bradshaw",
+    "why": "Party nominee, listed in the party’s 2026 Candidate Guide.",
+    "url": "https://tndp.org/candidates/us-senate/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tn-republican-party",
+    "target_id": "tn-governor",
+    "status": "endorsed",
+    "choice": "Marsha Blackburn",
+    "why": "Party nominee, listed on the party’s home page with links to volunteer and donate.",
+    "url": "https://www.tngop.org/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tn-republican-party",
+    "target_id": "tn-us-senate",
+    "status": "endorsed",
+    "choice": "Bill Hagerty",
+    "why": "Party nominee, listed on the party’s home page with links to volunteer and donate.",
+    "url": "https://www.tngop.org/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tn-afl-cio",
+    "target_id": "tn-governor",
+    "status": "endorsed",
+    "choice": "Jerri Green",
+    "why": "On its Aug 18 general-election list: “When working people have a voice, our communities are stronger.”",
+    "url": "https://tnaflcio.org/news/tn-afl-cio-announces-2026-general-election-endorsements",
+    "date": "2026-08-18",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tn-afl-cio",
+    "target_id": "tn-us-senate",
+    "status": "endorsed",
+    "choice": "Marquita Bradshaw",
+    "why": "On its Aug 18 general-election list: “When working people have a voice, our communities are stronger.”",
+    "url": "https://tnaflcio.org/news/tn-afl-cio-announces-2026-general-election-endorsements",
+    "date": "2026-08-18",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tn-chamber",
+    "target_id": "tn-governor",
+    "status": "endorsed",
+    "choice": "Marsha Blackburn",
+    "why": "“Senator Blackburn understands what it takes to keep Tennessee competitive,” said its CEO, Josh Brown.",
+    "url": "https://tnchamber.org/endorsement-of-senator-marsha-blackburn-for-governor-of-tennessee/",
+    "date": "2026-05-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tn-chamber",
+    "target_id": "tn-us-senate",
+    "status": "not_found",
+    "choice": null,
+    "why": "The 2026 endorsements we found cover the governor’s race and the legislature; no U.S. Senate pick was found (checked Oct 29, 2026).",
+    "url": "https://tnchamber.org/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  }
+]

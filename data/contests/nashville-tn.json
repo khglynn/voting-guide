@@ -1,0 +1,599 @@
+[
+  {
+    "id": "tn-us-house-4",
+    "state": "TN",
+    "level": "federal",
+    "office": "U.S. House of Representatives",
+    "district": "TN-4",
+    "scope_plain": "Parts of Nashville and Davidson County: the southeastern part of the county, in congressional District 4 as redrawn in May 2026. The district also covers most of Rutherford County and counties to the southeast.",
+    "office_explainer": "One of 435 House members. Writes federal laws and votes on the budget and taxes. Two-year term.",
+    "why_it_matters": "New lines this year: the May 2026 redraw moved southeastern Davidson County into District 4.",
+    "vote_for": 1,
+    "incumbent": "Scott DesJarlais",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Scott DesJarlais",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Republican nominee from Sherwood, per the Secretary of State's candidate list.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Victoria Broderick",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Democratic nominee from Fayetteville, per the Secretary of State's candidate list.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Jacob Kristopher Anders",
+        "party": "Independent",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Independent candidate from Tullahoma, per the Secretary of State's candidate list.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Clay Faircloth",
+        "party": "Independent",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Independent candidate from Nashville, per the Secretary of State's candidate list.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Davidson County Election Commission: sample ballot, November 3, 2026",
+        "url": "https://www.nashville.gov/sites/default/files/2026-09/Sample_Ballot_November_3_2026_State_Fed_Gen_Mun_Elections.pdf?ct=1790110765"
+      },
+      {
+        "name": "Tennessee Secretary of State: U.S. House candidates, 2026",
+        "url": "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/USHouseCandidates_2026.pdf"
+      },
+      {
+        "name": "Nashville Scene: the congressional races on Davidson County ballots",
+        "url": "https://www.nashvillescene.com/news/coverstory/congressional-races-davidson-county-2026/article_aa041344-d03c-4cc4-84f5-467818f329df.html"
+      },
+      {
+        "name": "Tennessee Secretary of State: 2026 congressional redistricting",
+        "url": "https://sos.tn.gov/announcements/2026-congressional-redistricting"
+      },
+      {
+        "name": "Tennessee Comptroller: U.S. Congress district maps (2026)",
+        "url": "https://comptroller.tn.gov/maps/u-s--congress-districts.html"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tn-us-house-6",
+    "state": "TN",
+    "level": "federal",
+    "office": "U.S. House of Representatives",
+    "district": "TN-6",
+    "scope_plain": "Parts of Nashville and Davidson County: a portion of middle and eastern Davidson County, in congressional District 6 as redrawn in May 2026. The district also covers Wilson County, parts of Sumner and Campbell counties, and counties to the east.",
+    "office_explainer": "One of 435 House members. Writes federal laws and votes on the budget and taxes. Two-year term.",
+    "why_it_matters": "No sitting member of Congress is on this ballot, so the district will have a new representative.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Johnny Garrett",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Republican nominee from Goodlettsville, per the Secretary of State's candidate list.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Mike Croley",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Democratic nominee from Crossville, per the Secretary of State's candidate list.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Christopher B. Monday",
+        "party": "Independent",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Independent candidate from Cookeville, per the Secretary of State's candidate list.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Angus Purdy",
+        "party": "Independent",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Independent candidate from Nashville, per the Secretary of State's candidate list.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Davidson County Election Commission: sample ballot, November 3, 2026",
+        "url": "https://www.nashville.gov/sites/default/files/2026-09/Sample_Ballot_November_3_2026_State_Fed_Gen_Mun_Elections.pdf?ct=1790110765"
+      },
+      {
+        "name": "Tennessee Secretary of State: U.S. House candidates, 2026",
+        "url": "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/USHouseCandidates_2026.pdf"
+      },
+      {
+        "name": "Nashville Scene: the congressional races on Davidson County ballots",
+        "url": "https://www.nashvillescene.com/news/coverstory/congressional-races-davidson-county-2026/article_aa041344-d03c-4cc4-84f5-467818f329df.html"
+      },
+      {
+        "name": "Tennessee Secretary of State: 2026 congressional redistricting",
+        "url": "https://sos.tn.gov/announcements/2026-congressional-redistricting"
+      },
+      {
+        "name": "Tennessee Comptroller: U.S. Congress district maps (2026)",
+        "url": "https://comptroller.tn.gov/maps/u-s--congress-districts.html"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tn-us-house-7",
+    "state": "TN",
+    "level": "federal",
+    "office": "U.S. House of Representatives",
+    "district": "TN-7",
+    "scope_plain": "Parts of Nashville and Davidson County: most of the county, in congressional District 7 as redrawn in May 2026. The district also covers Cheatham, Robertson, Dickson, Macon and Trousdale counties and most of Sumner and Montgomery counties.",
+    "office_explainer": "One of 435 House members. Writes federal laws and votes on the budget and taxes. Two-year term.",
+    "why_it_matters": "Matt Van Epps won this seat in a December 2025 special election; the district's lines changed in May 2026.",
+    "vote_for": 1,
+    "incumbent": "Matt Van Epps",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Matt Van Epps",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Republican nominee from Nashville, per the Secretary of State's candidate list.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Darden Copeland",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Democratic nominee from Nashville, per the Secretary of State's candidate list.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Andrew J. Koontz",
+        "party": "Independent",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Independent candidate from Portland, per the Secretary of State's candidate list.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Lowell Reynolds",
+        "party": "Independent",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Independent candidate from Nashville, per the Secretary of State's candidate list.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Davidson County Election Commission: sample ballot, November 3, 2026",
+        "url": "https://www.nashville.gov/sites/default/files/2026-09/Sample_Ballot_November_3_2026_State_Fed_Gen_Mun_Elections.pdf?ct=1790110765"
+      },
+      {
+        "name": "Tennessee Secretary of State: U.S. House candidates, 2026",
+        "url": "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/USHouseCandidates_2026.pdf"
+      },
+      {
+        "name": "Nashville Scene: the congressional races on Davidson County ballots",
+        "url": "https://www.nashvillescene.com/news/coverstory/congressional-races-davidson-county-2026/article_aa041344-d03c-4cc4-84f5-467818f329df.html"
+      },
+      {
+        "name": "Tennessee Secretary of State: 2026 congressional redistricting",
+        "url": "https://sos.tn.gov/announcements/2026-congressional-redistricting"
+      },
+      {
+        "name": "Tennessee Comptroller: U.S. Congress district maps (2026)",
+        "url": "https://comptroller.tn.gov/maps/u-s--congress-districts.html"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tn-sd-17",
+    "state": "TN",
+    "level": "state",
+    "office": "Tennessee Senate",
+    "district": "SD-17",
+    "scope_plain": "Parts of Nashville and Davidson County in state Senate District 17. Only Senate Districts 17, 19 and 21 have races this year, so voters in Davidson's other Senate districts have no state Senate race.",
+    "office_explainer": "One of 33 state senators. Writes Tennessee laws and votes on the state budget. Four-year term.",
+    "why_it_matters": "The only state Senate race in Davidson County this year with more than one candidate.",
+    "vote_for": 1,
+    "incumbent": "Mark Pody",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Mark Pody",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Lindsey Patrick-Wright",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Davidson County Election Commission: sample ballot, November 3, 2026",
+        "url": "https://www.nashville.gov/sites/default/files/2026-09/Sample_Ballot_November_3_2026_State_Fed_Gen_Mun_Elections.pdf?ct=1790110765"
+      },
+      {
+        "name": "Davidson County Election Commission: 2026 election calendar",
+        "url": "https://www.nashville.gov/sites/default/files/2026-06/2026_Davidson_County_Election_Calendar.pdf?ct=1781280343"
+      },
+      {
+        "name": "Nashville Scene: Who's Who in the Midterms, breaking down the Nov. 3 ballot",
+        "url": "https://www.nashvillescene.com/news/coverstory/who-s-who-in-the-midterms-breaking-down-the-nov-3-ballot/article_e342be74-36b4-4344-b832-dbf1dec6ad24.html"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tn-sd-19",
+    "state": "TN",
+    "level": "state",
+    "office": "Tennessee Senate",
+    "district": "SD-19",
+    "scope_plain": "Parts of Nashville and Davidson County in state Senate District 19. Only Senate Districts 17, 19 and 21 have races this year, so voters in Davidson's other Senate districts have no state Senate race.",
+    "office_explainer": "One of 33 state senators. Writes Tennessee laws and votes on the state budget. Four-year term.",
+    "why_it_matters": "Unopposed: incumbent Charlane Oliver is the only name on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Charlane Oliver",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Charlane Oliver",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Davidson County Election Commission: sample ballot, November 3, 2026",
+        "url": "https://www.nashville.gov/sites/default/files/2026-09/Sample_Ballot_November_3_2026_State_Fed_Gen_Mun_Elections.pdf?ct=1790110765"
+      },
+      {
+        "name": "Davidson County Election Commission: 2026 election calendar",
+        "url": "https://www.nashville.gov/sites/default/files/2026-06/2026_Davidson_County_Election_Calendar.pdf?ct=1781280343"
+      },
+      {
+        "name": "Nashville Scene: Who's Who in the Midterms, breaking down the Nov. 3 ballot",
+        "url": "https://www.nashvillescene.com/news/coverstory/who-s-who-in-the-midterms-breaking-down-the-nov-3-ballot/article_e342be74-36b4-4344-b832-dbf1dec6ad24.html"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tn-sd-21",
+    "state": "TN",
+    "level": "state",
+    "office": "Tennessee Senate",
+    "district": "SD-21",
+    "scope_plain": "Parts of Nashville and Davidson County in state Senate District 21. Only Senate Districts 17, 19 and 21 have races this year, so voters in Davidson's other Senate districts have no state Senate race.",
+    "office_explainer": "One of 33 state senators. Writes Tennessee laws and votes on the state budget. Four-year term.",
+    "why_it_matters": "Unopposed: incumbent Jeff Yarbro is the only name on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Jeff Yarbro",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jeff Yarbro",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Davidson County Election Commission: sample ballot, November 3, 2026",
+        "url": "https://www.nashville.gov/sites/default/files/2026-09/Sample_Ballot_November_3_2026_State_Fed_Gen_Mun_Elections.pdf?ct=1790110765"
+      },
+      {
+        "name": "Davidson County Election Commission: 2026 election calendar",
+        "url": "https://www.nashville.gov/sites/default/files/2026-06/2026_Davidson_County_Election_Calendar.pdf?ct=1781280343"
+      },
+      {
+        "name": "Nashville Scene: Who's Who in the Midterms, breaking down the Nov. 3 ballot",
+        "url": "https://www.nashvillescene.com/news/coverstory/who-s-who-in-the-midterms-breaking-down-the-nov-3-ballot/article_e342be74-36b4-4344-b832-dbf1dec6ad24.html"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "belle-meade-city-commission",
+    "state": "TN",
+    "level": "city",
+    "office": "Belle Meade City Commissioner",
+    "district": null,
+    "scope_plain": "Only voters who live in the City of Belle Meade. Pick up to three of the four candidates.",
+    "office_explainer": null,
+    "why_it_matters": "Four candidates for three seats on the city commission.",
+    "vote_for": 3,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Louise C. Bryan",
+        "party": null,
+        "incumbent": null,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Neal Clayton",
+        "party": null,
+        "incumbent": null,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Rusty Moore",
+        "party": null,
+        "incumbent": null,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Gray Oliver Thornburg",
+        "party": null,
+        "incumbent": null,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Davidson County Election Commission: sample ballot, November 3, 2026",
+        "url": "https://www.nashville.gov/sites/default/files/2026-09/Sample_Ballot_November_3_2026_State_Fed_Gen_Mun_Elections.pdf?ct=1790110765"
+      },
+      {
+        "name": "Davidson County Election Commission: early voting schedule (Belle Meade, Forest Hills and Goodlettsville municipal elections)",
+        "url": "https://www.nashville.gov/sites/default/files/2026-08/Early_Voting_Schedule_NOV_3_2026_State_Fed_Gen_BMeade_FHills_Gville_Mun.pdf?ct=1787235029"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "forest-hills-city-commission",
+    "state": "TN",
+    "level": "city",
+    "office": "Forest Hills City Commissioner",
+    "district": null,
+    "scope_plain": "Only voters who live in the City of Forest Hills. Pick up to two.",
+    "office_explainer": null,
+    "why_it_matters": "Two candidates for two seats on the city commission.",
+    "vote_for": 2,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jim Gardner",
+        "party": null,
+        "incumbent": null,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Henry Trost",
+        "party": null,
+        "incumbent": null,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Davidson County Election Commission: sample ballot, November 3, 2026",
+        "url": "https://www.nashville.gov/sites/default/files/2026-09/Sample_Ballot_November_3_2026_State_Fed_Gen_Mun_Elections.pdf?ct=1790110765"
+      },
+      {
+        "name": "Davidson County Election Commission: early voting schedule (Belle Meade, Forest Hills and Goodlettsville municipal elections)",
+        "url": "https://www.nashville.gov/sites/default/files/2026-08/Early_Voting_Schedule_NOV_3_2026_State_Fed_Gen_BMeade_FHills_Gville_Mun.pdf?ct=1787235029"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "goodlettsville-city-commission",
+    "state": "TN",
+    "level": "city",
+    "office": "Goodlettsville City Commissioner",
+    "district": null,
+    "scope_plain": "Only voters who live in the City of Goodlettsville. Pick up to two of the five candidates. Part of Goodlettsville is in Sumner County; those voters see this race on Sumner's ballot.",
+    "office_explainer": null,
+    "why_it_matters": "Five candidates for two seats on the city commission.",
+    "vote_for": 2,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jimmy D. Anderson",
+        "party": null,
+        "incumbent": null,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Eric Meacham",
+        "party": null,
+        "incumbent": null,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Michael Milliner",
+        "party": null,
+        "incumbent": null,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Eric Near",
+        "party": null,
+        "incumbent": null,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      },
+      {
+        "name": "Rusty Tinnin",
+        "party": null,
+        "incumbent": null,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/tennessee"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Davidson County Election Commission: sample ballot, November 3, 2026",
+        "url": "https://www.nashville.gov/sites/default/files/2026-09/Sample_Ballot_November_3_2026_State_Fed_Gen_Mun_Elections.pdf?ct=1790110765"
+      },
+      {
+        "name": "Davidson County Election Commission: early voting schedule (Belle Meade, Forest Hills and Goodlettsville municipal elections)",
+        "url": "https://www.nashville.gov/sites/default/files/2026-08/Early_Voting_Schedule_NOV_3_2026_State_Fed_Gen_BMeade_FHills_Gville_Mun.pdf?ct=1787235029"
+      }
+    ],
+    "confidence": "verified"
+  }
+]

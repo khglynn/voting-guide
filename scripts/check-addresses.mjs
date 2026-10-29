@@ -67,11 +67,11 @@ const HOUSE = '(?<![\\w$.,/:-])\\d{1,6}(?:-\\d{1,5})?(?:[- ]\\d\\/\\d)?[A-Za-z]?
 // "40 either way", "6 PM CT" (Central Time, not Court), "20008 near Connecticut Avenue", "5 until Orangethorpe Avenue".
 const STOP = `(?:${anyCase(['a', 'an', 'and', 'or', 'nor', 'but', 'of', 'to', 'in', 'on', 'at', 'by', 'for', 'from', 'with', 'per', 'as', 'is', 'are', 'was', 'were', 'be', 'been',
   'take', 'takes', 'took', 'its', 'it', 'their', 'his', 'her', 'our', 'your', 'my', 'this', 'that', 'these', 'those', 'than', 'then', 'into', 'onto', 'about', 'after',
-  'before', 'between', 'through', 'against', 'until', 'where', 'when', 'which', 'who', 'near', 'either', 'neither', 'any', 'other', 'no', 'not', 'each', 'every', 'more', 'less',
+  'before', 'between', 'through', 'across', 'against', 'until', 'where', 'when', 'which', 'who', 'near', 'either', 'neither', 'any', 'other', 'no', 'not', 'each', 'every', 'more', 'less',
   'most', 'percent', 'ago', 'am', 'pm', 'a.m.', 'p.m.'])})(?![A-Za-z])`;
 // Words that are prose in lowercase but real street names when capitalized ("1016 The Meadows Pkwy",
 // "3955 W. D. Judge Dr.", "12500 Will Clayton Pkwy", "Thousand Oaks Blvd").
-const PROSE_LOWER = '(?:the|will|over|under|million|billion|thousand|hundred|years?|months?|weeks?|days?|hours?|minutes?|times|seats?|votes?|members?|judges?|people|voters|cents|dollars|elections?|candidates?|office)(?![A-Za-z])';
+const PROSE_LOWER = '(?:the|will|over|under|million|billion|thousand|hundred|races?|measures?|years?|months?|weeks?|days?|hours?|minutes?|times|seats?|votes?|members?|judges?|people|voters|cents|dollars|elections?|candidates?|office)(?![A-Za-z])';
 // A street-name word: an initial ("F."), a street abbreviation in any case ("jr.", "MT."), a short capitalized
 // abbreviation ("So."), an ordinal,
 // or a word (inner hyphens and periods allowed, "BRd.way"; a period at the end is a sentence ending, not a word).
@@ -198,6 +198,8 @@ if (flag('--self-test')) {
     ['Position M-40 Tiffany Koyama Lane M-54', 'clean'],
     ['95.6 Meadows Place (4%) Total: 205', 'clean'],
     ['The 2026 general election takes place Nov 3.', 'clean'],
+    // a page's count before a place named St. Something (Oct 29: "7 measures across St. Louis")
+    ['25 races and 7 measures across St. Louis.', 'clean'],
     ['lost in 2018 against Republican Milton Street', 'clean'],
   ];
   const rank = { clean: 0, allowed: 1, blocked: 2, personal: 3 };

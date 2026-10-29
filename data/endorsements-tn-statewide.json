@@ -3,56 +3,51 @@
     "endorser_id": "tennessean-eb",
     "target_id": "tn-governor",
     "status": "not_found",
-    "unreadable": true,
     "choice": null,
-    "why": "Checked on October 29. The opinion page returned an access block and search found no current board endorsement for this item. A no-endorsement policy was not confirmed.",
-    "url": "https://www.tennessean.com/opinion/",
+    "why": "Read in a browser on October 29: the board’s newest editorial is from July 13, 2026, and none of the opinion pieces in its October 1 to 29 sitemaps is an editorial. No stated no-endorsement policy was found.",
+    "url": "https://www.tennessean.com/opinion/editorials/",
     "date": "2026-10-29",
-    "confidence": "unverified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "tennessean-eb",
     "target_id": "tn-us-senate",
     "status": "not_found",
-    "unreadable": true,
     "choice": null,
-    "why": "Checked on October 29. The opinion page returned an access block and search found no current board endorsement for this item. A no-endorsement policy was not confirmed.",
-    "url": "https://www.tennessean.com/opinion/",
+    "why": "Read in a browser on October 29: the board’s newest editorial is from July 13, 2026, and none of the opinion pieces in its October 1 to 29 sitemaps is an editorial. No stated no-endorsement policy was found.",
+    "url": "https://www.tennessean.com/opinion/editorials/",
     "date": "2026-10-29",
-    "confidence": "unverified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "tennessean-eb",
     "target_id": "tn-amendment-1",
     "status": "not_found",
-    "unreadable": true,
     "choice": null,
-    "why": "Checked on October 29. The opinion page returned an access block and search found no current board endorsement for this item. A no-endorsement policy was not confirmed.",
-    "url": "https://www.tennessean.com/opinion/",
+    "why": "Read in a browser on October 29: the board’s newest editorial is from July 13, 2026, and none of the opinion pieces in its October 1 to 29 sitemaps is an editorial. No stated no-endorsement policy was found.",
+    "url": "https://www.tennessean.com/opinion/editorials/",
     "date": "2026-10-29",
-    "confidence": "unverified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "tennessean-eb",
     "target_id": "tn-amendment-2",
     "status": "not_found",
-    "unreadable": true,
     "choice": null,
-    "why": "Checked on October 29. The opinion page returned an access block and search found no current board endorsement for this item. A no-endorsement policy was not confirmed.",
-    "url": "https://www.tennessean.com/opinion/",
+    "why": "Read in a browser on October 29: the board’s newest editorial is from July 13, 2026, and none of the opinion pieces in its October 1 to 29 sitemaps is an editorial. No stated no-endorsement policy was found.",
+    "url": "https://www.tennessean.com/opinion/editorials/",
     "date": "2026-10-29",
-    "confidence": "unverified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "tennessean-eb",
     "target_id": "tn-amendment-3",
     "status": "not_found",
-    "unreadable": true,
     "choice": null,
-    "why": "Checked on October 29. The opinion page returned an access block and search found no current board endorsement for this item. A no-endorsement policy was not confirmed.",
-    "url": "https://www.tennessean.com/opinion/",
+    "why": "Read in a browser on October 29: the board’s newest editorial is from July 13, 2026, and none of the opinion pieces in its October 1 to 29 sitemaps is an editorial. No stated no-endorsement policy was found.",
+    "url": "https://www.tennessean.com/opinion/editorials/",
     "date": "2026-10-29",
-    "confidence": "unverified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "lwv-tennessee",
@@ -213,5 +208,408 @@
     "url": "https://tnchamber.org/",
     "date": "2026-10-29",
     "confidence": "sourced"
+  },
+  {
+    "endorser_id": "indivisible-tn",
+    "target_id": "tn-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its candidate list includes this race but marks no one with the asterisk it uses for an endorsement (checked Oct 29, 2026).",
+    "url": "https://indivisibletn.org/candidates",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "indivisible-tn",
+    "target_id": "tn-us-senate",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its candidate list includes this race but marks no one with the asterisk it uses for an endorsement (checked Oct 29, 2026).",
+    "url": "https://indivisibletn.org/candidates",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "everytown-action-fund-tn",
+    "target_id": "tn-governor",
+    "status": "endorsed",
+    "choice": "Jerri Green",
+    "why": "Her page on its Gun Sense Voter site is marked “Everytown Endorsed.”",
+    "url": "https://gunsensevoter.org/candidates/516bf84d23149ae5351c338f39e7c794def164fa4768e13067ff11f1998a0857/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "everytown-action-fund-tn",
+    "target_id": "tn-us-senate",
+    "status": "not_found",
+    "choice": null,
+    "why": "No one in this race is marked “Everytown Endorsed” on its 2026 Tennessee candidate list. Its FAQ says its “Gun Sense Candidate” label “is not an endorsement” (checked Oct 29, 2026).",
+    "url": "https://gunsensevoter.org/candidates/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tn-advocates-planned-parenthood",
+    "target_id": "tn-governor",
+    "status": "endorsed",
+    "choice": "Jerri Green",
+    "why": "On its list for the November 3 general election: “Governor of Tennessee: Jerri Green.”",
+    "url": "https://www.plannedparenthoodaction.org/tennessee-advocates-planned-parenthood/blog/2026-election-information",
+    "date": "2026-10-12",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tn-advocates-planned-parenthood",
+    "target_id": "tn-us-senate",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its list for the November 3 general election covers state races only, with no U.S. Senate pick (checked Oct 29, 2026).",
+    "url": "https://www.plannedparenthoodaction.org/tennessee-advocates-planned-parenthood/blog/2026-election-information",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "tn-governor",
+    "status": "endorsed",
+    "choice": "Marsha Blackburn",
+    "why": "Its Tennessee grades page gives her an A+ and marks her “NRA Endorsed.”",
+    "url": "https://www.nrapvf.org/grades/tennessee",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "tn-us-senate",
+    "status": "endorsed",
+    "choice": "Bill Hagerty",
+    "why": "Its Tennessee grades page gives him an A and marks him “NRA Endorsed.”",
+    "url": "https://www.nrapvf.org/grades/tennessee",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nfib-tn",
+    "target_id": "tn-governor",
+    "status": "endorsed",
+    "choice": "Marsha Blackburn",
+    "why": "Endorsed by the NFIB Tennessee PAC: “Senator Blackburn’s pro-small business record speaks for itself,” said its state director, Jim Brown.",
+    "url": "https://www.nfib.com/news/news/nfib-tennessee-pac-endorses-marsha-blackburn-for-governor/",
+    "date": "2026-09-30",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nfib-tn",
+    "target_id": "tn-us-senate",
+    "status": "endorsed",
+    "choice": "Bill Hagerty",
+    "why": "On NFIB FedPAC’s Oct 19 Tennessee list: “The candidates we endorsed have committed to supporting Tennessee small businesses.”",
+    "url": "https://www.nfib.com/news/press-release/nfib-endorses-slate-of-tennessee-candidates-for-election-to-congress/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "club-for-growth-pac",
+    "target_id": "tn-governor",
+    "status": "endorsed",
+    "choice": "Marsha Blackburn",
+    "why": "Listed among its PAC-endorsed candidates as “Marsha Blackburn (TN-GOV).”",
+    "url": "https://www.clubforgrowth.org/elections/pac-endorsed-candidates/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "club-for-growth-pac",
+    "target_id": "tn-us-senate",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its PAC-endorsed candidates page lists no one for Tennessee’s U.S. Senate race (checked Oct 29, 2026).",
+    "url": "https://www.clubforgrowth.org/elections/pac-endorsed-candidates/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nrl-victory-fund",
+    "target_id": "tn-us-senate",
+    "status": "endorsed",
+    "choice": "Bill Hagerty",
+    "why": "Its Tennessee endorsements page lists “Bill Hagerty” under “For U.S. Senate.”",
+    "url": "https://www.nrlvictoryfund.org/endorsements/tennessee",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nrl-victory-fund",
+    "target_id": "tn-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its Tennessee endorsements page lists only U.S. Senate and U.S. House picks (checked Oct 29, 2026).",
+    "url": "https://www.nrlvictoryfund.org/endorsements/tennessee",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nwpc",
+    "target_id": "tn-us-senate",
+    "status": "endorsed",
+    "choice": "Marquita Bradshaw",
+    "why": "On its list of “NWPC 2026 Endorsed Candidates” for the U.S. Senate.",
+    "url": "https://nwpc.org/endorsed-candidates/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nwpc",
+    "target_id": "tn-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its 2026 list of endorsed candidates for governor names no one in Tennessee (checked Oct 29, 2026).",
+    "url": "https://nwpc.org/endorsed-candidates/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tn-chamber",
+    "target_id": "tn-amendment-2",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Says it is “proud to join a broad coalition of business and community organizations supporting a proposed constitutional amendment to prohibit Tennessee from ever imposing a statewide property tax.”",
+    "url": "https://tnchamber.org/yes-on-2-launches-to-support-constitutional-amendment-to-ban-state-property-tax/",
+    "date": "2026-02-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tn-chamber",
+    "target_id": "tn-amendment-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position on this amendment was found; its public support is for Amendment 2 (checked Oct 29, 2026).",
+    "url": "https://tnchamber.org/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tn-chamber",
+    "target_id": "tn-amendment-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position on this amendment was found; its public support is for Amendment 2 (checked Oct 29, 2026).",
+    "url": "https://tnchamber.org/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tn-farm-bureau",
+    "target_id": "tn-amendment-2",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "“Tennessee Farm Bureau is proud to serve on the committee for Yes on 2,” said its public policy director, Kevin Hensley.",
+    "url": "https://tnfarmbureau.org/yes-on-2-launches-to-support-constitutional-amendment-to-ban-state-property-tax",
+    "date": "2026-02-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tn-farm-bureau",
+    "target_id": "tn-amendment-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position on this amendment was found; its public support is for Amendment 2 (checked Oct 29, 2026).",
+    "url": "https://tnfarmbureau.org/yes-on-2-launches-to-support-constitutional-amendment-to-ban-state-property-tax",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tn-farm-bureau",
+    "target_id": "tn-amendment-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position on this amendment was found; its public support is for Amendment 2 (checked Oct 29, 2026).",
+    "url": "https://tnfarmbureau.org/yes-on-2-launches-to-support-constitutional-amendment-to-ban-state-property-tax",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tn-realtors",
+    "target_id": "tn-amendment-2",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Its 2026 legislative update says it “is actively involved with the Yes on 2 initiative.”",
+    "url": "https://tnrealtors.com/2026-legislative-update/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tn-realtors",
+    "target_id": "tn-amendment-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position on this amendment was found; its public support is for Amendment 2 (checked Oct 29, 2026).",
+    "url": "https://tnrealtors.com/2026-legislative-update/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tn-realtors",
+    "target_id": "tn-amendment-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position on this amendment was found; its public support is for Amendment 2 (checked Oct 29, 2026).",
+    "url": "https://tnrealtors.com/2026-legislative-update/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "chattanooga-free-press-eb",
+    "target_id": "tn-amendment-2",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "“We wholeheartedly support Amendments 2 and 3,” its Oct 15 editorial says.",
+    "url": "https://www.timesfreepress.com/news/2026/oct/15/state-opinion-if-interested-voters-will-find/",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "chattanooga-free-press-eb",
+    "target_id": "tn-amendment-3",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "“We wholeheartedly support Amendments 2 and 3,” its Oct 15 editorial says.",
+    "url": "https://www.timesfreepress.com/news/2026/oct/15/state-opinion-if-interested-voters-will-find/",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "chattanooga-free-press-eb",
+    "target_id": "tn-amendment-1",
+    "status": "not_found",
+    "unreadable": true,
+    "choice": null,
+    "why": "Its Oct 15 editorial says “we have reservations about Amendment 1”; the rest, where any recommendation would be, is behind a paywall.",
+    "url": "https://www.timesfreepress.com/news/2026/oct/15/state-opinion-if-interested-voters-will-find/",
+    "date": "2026-10-29",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "chattanooga-free-press-eb",
+    "target_id": "tn-governor",
+    "status": "not_found",
+    "unreadable": true,
+    "choice": null,
+    "why": "Its Oct 16 editorial calls independent David Hatley “one option for consideration”; the rest is behind a paywall, and the free part of its Oct 26 editorial on Blackburn makes no pick.",
+    "url": "https://www.timesfreepress.com/news/2026/oct/16/opinion-businessman-hatley-a-viable-alternative/",
+    "date": "2026-10-29",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "chattanooga-free-press-eb",
+    "target_id": "tn-us-senate",
+    "status": "not_found",
+    "unreadable": true,
+    "choice": null,
+    "why": "Its Oct 15 editorial, “Hagerty seems a lock for second term in Senate,” forecasts the result in the free part; the rest is behind a paywall.",
+    "url": "https://www.timesfreepress.com/news/2026/oct/15/state-opinion-hagerty-seems-a-lock-for-second/",
+    "date": "2026-10-29",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "tennessee-lookout",
+    "target_id": "tn-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "Its 2026 voter guide covers this race and makes no recommendation.",
+    "url": "https://tennesseelookout.com/voter-guides/2026-midterm-general-election/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tennessee-lookout",
+    "target_id": "tn-us-senate",
+    "status": "no_position",
+    "choice": null,
+    "why": "Its 2026 voter guide covers this race and makes no recommendation.",
+    "url": "https://tennesseelookout.com/voter-guides/2026-midterm-general-election/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tennessee-lookout",
+    "target_id": "tn-amendment-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "Its 2026 voter guide covers this amendment without recommending a vote.",
+    "url": "https://tennesseelookout.com/voter-guides/2026-midterm-general-election/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tennessee-lookout",
+    "target_id": "tn-amendment-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "Its 2026 voter guide covers this amendment without recommending a vote.",
+    "url": "https://tennesseelookout.com/voter-guides/2026-midterm-general-election/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tennessee-lookout",
+    "target_id": "tn-amendment-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "Its 2026 voter guide covers this amendment without recommending a vote.",
+    "url": "https://tennesseelookout.com/voter-guides/2026-midterm-general-election/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nashville-banner",
+    "target_id": "tn-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Banner’s 2026 voter guide lists this race’s candidates, with Q&As where they answered, and makes no recommendation.",
+    "url": "https://nashvillebanner.com/2026-voters-guide/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nashville-banner",
+    "target_id": "tn-us-senate",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Banner’s 2026 voter guide lists this race’s candidates and makes no recommendation.",
+    "url": "https://nashvillebanner.com/2026-voters-guide/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nashville-banner",
+    "target_id": "tn-amendment-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Banner’s 2026 voter guide says in a line what this amendment would do, without recommending a vote.",
+    "url": "https://nashvillebanner.com/2026-voters-guide/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nashville-banner",
+    "target_id": "tn-amendment-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Banner’s 2026 voter guide says in a line what this amendment would do, without recommending a vote.",
+    "url": "https://nashvillebanner.com/2026-voters-guide/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nashville-banner",
+    "target_id": "tn-amendment-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Banner’s 2026 voter guide says in a line what this amendment would do, without recommending a vote.",
+    "url": "https://nashvillebanner.com/2026-voters-guide/",
+    "date": "2026-10-29",
+    "confidence": "verified"
   }
 ]

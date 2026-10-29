@@ -9,15 +9,11 @@
       "TN",
       "nashville-tn"
     ],
-    "guide_url": "https://www.tennessean.com/opinion/",
-    "blocked": true,
-    "blocked_note": "Behind a paywall, and its site shows a bot check to anything that isn’t a browser, so we couldn’t read its endorsements.",
+    "guide_url": "https://www.tennessean.com/opinion/editorials/",
     "default_on": true,
     "endorses_candidates": true,
     "endorses_measures": true,
-    "lean_basis_kind": "outside_rating",
-    "paywall": true,
-    "paywall_note_ok": true
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "lwv-tennessee",
@@ -108,6 +104,191 @@
     "guide_url": "https://tnchamber.org/endorsement-of-senator-marsha-blackburn-for-governor-of-tennessee/",
     "default_on": false,
     "endorses_candidates": true,
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
+  },
+  {
+    "id": "indivisible-tn",
+    "name": "Indivisible Tennessee",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Statewide Indivisible group whose home page says the movement works to \"resist the GOP’s agenda, elect local champions, and fight for progressive policies\" (https://indivisibletn.org/). No outside rating found; lean reflects its stated mission.",
+    "geography": [
+      "TN"
+    ],
+    "guide_url": "https://indivisibletn.org/candidates",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
+  },
+  {
+    "id": "everytown-action-fund-tn",
+    "name": "Everytown for Gun Safety Action Fund",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Gun-safety group whose Gun Sense Voter campaign says it is \"organizing to elect candidates who support common-sense gun safety laws at every level of government\" (https://gunsensevoter.org/mission-impact/). No outside rating found; lean reflects its stated mission.",
+    "geography": [
+      "TN"
+    ],
+    "guide_url": "https://gunsensevoter.org/candidates/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
+  },
+  {
+    "id": "tn-advocates-planned-parenthood",
+    "name": "Tennessee Advocates for Planned Parenthood",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Abortion-rights political arm of Planned Parenthood in Tennessee. Its 2026 election page says it \"will unapologetically put bodily autonomy, including abortion and gender-affirming care, at the forefront of our considerations\" (https://www.plannedparenthoodaction.org/tennessee-advocates-planned-parenthood/blog/2026-election-information). No outside rating found; lean reflects its stated mission.",
+    "geography": [
+      "TN"
+    ],
+    "guide_url": "https://www.plannedparenthoodaction.org/tennessee-advocates-planned-parenthood/blog/2026-election-information",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
+  },
+  {
+    "id": "nra-pvf",
+    "name": "NRA Political Victory Fund",
+    "type": "advocacy",
+    "lean": "right",
+    "lean_basis": "Gun-rights PAC of the National Rifle Association, which calls itself 'a single issue organization' that grades candidates on 'Second Amendment issues' (https://www.nrapvf.org/). No outside rating found; lean reflects its stated mission.",
+    "geography": [
+      "TN"
+    ],
+    "guide_url": "https://www.nrapvf.org/grades/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
+  },
+  {
+    "id": "nfib-tn",
+    "name": "National Federation of Independent Business, Tennessee (NFIB)",
+    "short": "NFIB Tennessee",
+    "type": "business",
+    "lean": "lean_right",
+    "lean_basis": "AllSides rates the National Federation of Independent Business Lean Right (think tank/policy group; low or initial confidence, as of Oct. 2026). Its Tennessee picks come from NFIB FedPAC (Congress) and the NFIB Tennessee PAC (governor and legislature). Rating source: https://www.allsides.com/news-source/national-federation-independent-business-media-bias.",
+    "geography": [
+      "TN"
+    ],
+    "guide_url": "https://www.nfib.com/news/news/nfib-tennessee-pac-endorses-92-candidates-for-general-assembly/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "lean_basis_kind": "outside_rating"
+  },
+  {
+    "id": "club-for-growth-pac",
+    "name": "Club for Growth PAC",
+    "type": "advocacy",
+    "lean": "right",
+    "lean_basis": "Conservative PAC that says its endorsement \"is the gold standard in identifying limited-government, pro-growth economic conservative candidates for U.S. Congress\" (https://www.clubforgrowth.org/elections/pac-endorsed-candidates/). No AllSides rating found; lean reflects its stated mission.",
+    "geography": [
+      "TN"
+    ],
+    "guide_url": "https://www.clubforgrowth.org/elections/pac-endorsed-candidates/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
+  },
+  {
+    "id": "nrl-victory-fund",
+    "name": "National Right to Life Victory Fund",
+    "type": "advocacy",
+    "lean": "right",
+    "lean_basis": "Anti-abortion PAC that says it \"is dedicated to electing leaders who will work to ensure our nation’s laws protect unborn babies and their mothers from the tragedy of abortion\" (https://www.nrlvictoryfund.org/). No AllSides rating found; lean reflects its stated mission.",
+    "geography": [
+      "TN"
+    ],
+    "guide_url": "https://www.nrlvictoryfund.org/endorsements/tennessee",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
+  },
+  {
+    "id": "tn-farm-bureau",
+    "name": "Tennessee Farm Bureau",
+    "type": "advocacy",
+    "lean": "lean_right",
+    "lean_basis": "Farm lobby whose stated mission is to promote the \"economic, social, educational and political well-being of farm people\" of Tennessee, with policy work on \"private property rights, taxation, regulations\" (https://tnfarmbureau.org/about/). No outside rating found; lean reflects its stated mission.",
+    "geography": [
+      "TN"
+    ],
+    "guide_url": "https://tnfarmbureau.org/yes-on-2-launches-to-support-constitutional-amendment-to-ban-state-property-tax",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
+  },
+  {
+    "id": "tn-realtors",
+    "name": "Tennessee Realtors",
+    "type": "business",
+    "lean": "lean_right",
+    "lean_basis": "Real estate trade group that says it unites to \"advocate for home ownership and for property rights\" (https://tnrealtors.com/whatisrpac/). No outside rating found; lean reflects its stated mission.",
+    "geography": [
+      "TN"
+    ],
+    "guide_url": "https://tnrealtors.com/2026-legislative-update/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
+  },
+  {
+    "id": "chattanooga-free-press-eb",
+    "name": "Chattanooga Times Free Press, Free Press editorial page",
+    "short": "Chattanooga Free Press",
+    "type": "publication",
+    "lean": "lean_right",
+    "lean_basis": "The paper describes its Free Press editor as “representing the conservative side of the newspaper’s opinion section” (https://www.timesfreepress.com/news/2026/oct/15/state-opinion-if-interested-voters-will-find/). AllSides rates the Chattanooga Times Free Press Center for its online news, not this page (low or initial confidence, as of Oct. 2026). Rating source: https://www.allsides.com/news-source/chattanooga-times-free-press-media-bias.",
+    "geography": [
+      "TN"
+    ],
+    "guide_url": "https://www.timesfreepress.com/news/2026/oct/15/state-opinion-if-interested-voters-will-find/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "paywall": true,
+    "paywall_note": "Its editorials are behind a paywall after the first few paragraphs, so we couldn’t read a pick here. Have a login? We’d love a PDF or the rest.",
+    "lean_basis_kind": "mission"
+  },
+  {
+    "id": "nwpc",
+    "name": "National Women’s Political Caucus",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Group that says it “recruits, trains, and supports progressive, pro-choice women for elected and appointed offices” (https://nwpc.org/endorsed-candidates/). No outside rating found; lean reflects its stated mission.",
+    "geography": [
+      "TN"
+    ],
+    "guide_url": "https://nwpc.org/endorsed-candidates/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
+  },
+  {
+    "id": "tennessee-lookout",
+    "name": "Tennessee Lookout (voter guide, no endorsements)",
+    "short": "Tennessee Lookout",
+    "type": "publication",
+    "lean": null,
+    "lean_basis": "Not rated. Its ethics policy says its journalists are prohibited from “participating or intervening in any political campaign on behalf of or in opposition to any candidate for public office or a ballot referendum.” This does not establish a position on the political scale. Source: https://tennesseelookout.com/ethics-policy/.",
+    "geography": [
+      "TN"
+    ],
+    "guide_url": "https://tennesseelookout.com/voter-guides/2026-midterm-general-election/",
+    "default_on": true,
+    "endorses_candidates": false,
     "endorses_measures": false,
     "lean_basis_kind": "mission"
   }

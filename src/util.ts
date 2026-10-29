@@ -9,6 +9,7 @@ export const host = (u: string | null | undefined): string => {
 };
 
 export const plural = (n: number, w: string, ws = `${w}s`): string => `${n} ${n === 1 ? w : ws}`;
+export const andList = (xs: string[]): string => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} and ${xs[xs.length - 1]}`);
 
 /* Dates. Every date shown comes from the data as YYYY-MM-DD. We only format it. */
 const parse = (iso: string): Date => { const [y, m, d] = iso.split('-').map(Number); return new Date(Date.UTC(y, m - 1, d)); };

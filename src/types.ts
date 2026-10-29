@@ -300,6 +300,9 @@ export interface PlaceBundle {
   /* a ZIP that also reaches a town the guide doesn't cover, named for the chooser ("Pine Lawn, in St. Louis
      County"): it never opens the place by itself (app.ts lookZip, geo.ts settleAddress) */
   zip_outside?: Record<string, string>;
+  /* a hard look for the place's own picks that came up empty: the day, and the papers and groups checked
+     (Oct 29). While it stays thin the coverage card says we looked instead of offering to (model/coverage.ts) */
+  local_picks_checked?: LocalPicksChecked;
   notes: string | null;
   county_label?: string | null;
   district_finders?: { office_match: string; label: string; url: string }[];
@@ -359,6 +362,7 @@ export interface Coverage {
   local_with_picks: number;
   checked: string | null;
 }
+export interface LocalPicksChecked { on: string; where: string[] }
 export interface PlaceCoverage extends Coverage {
   /* the place's own races a voter decides, and how many of them have a pick from anyone */
   local_races: number;
@@ -367,8 +371,9 @@ export interface PlaceCoverage extends Coverage {
 export interface Index {
   generated: string;
   states: Record<string, { name: string; as_of: string | null; election_date: string; official_site: Src; places: string[] } & Coverage>;
-  /* county_fips and zip_outside as in PlaceBundle, so the first page can use them before a bundle loads */
-  places: Record<string, { label: string; state: string; counties: string[]; local_count: number; maps?: string[]; county_fips?: string[]; zip_outside?: Record<string, string> } & PlaceCoverage>;
+  /* county_fips and zip_outside as in PlaceBundle, so the first page can use them before a bundle loads;
+     local_picks_checked beside the coverage it speaks for */
+  places: Record<string, { label: string; state: string; counties: string[]; local_count: number; maps?: string[]; county_fips?: string[]; zip_outside?: Record<string, string>; local_picks_checked?: LocalPicksChecked } & PlaceCoverage>;
   zips: Record<string, string[]>;
   /* true when data/get-involved.json was bundled (the app never asks for a file that isn't there) */
   involved?: boolean;

@@ -2142,6 +2142,19 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('coverage: from outside the City (away), it offers to add the city, without the split', pine.state === 'none' && pine.shared === null && pine.ask?.key === 'z:63120', JSON.stringify(pine));
     check('coverage: a place-only ZIP still lands', mc.ballotCoverage(mo, idx, '63110').state === 'landed' && mc.ballotCoverage(mo, idx, '63110').shared === null);
     check('coverage: a ZIP whose only place is away doesn’t', mc.ballotCoverage(mo, idx, '63110', undefined, ['st-louis-city-mo']).state !== 'landed');
+    // Kevin, Oct 29: "request city is based on whether we've done a robust run for that spot not the number of
+    // sources we've found". A thin place we looked hard for says so and asks nothing; a local pick found later
+    // makes it full, so the date never hides one.
+    const looked = { on: '2026-10-26', where: ['Paper A', 'Weekly B', 'Group C'] };
+    idx.places['pensacola-fl'].local_picks_checked = looked;
+    const cs = mc.ballotCoverage(pen, idx, '32501', '2026-10-27');
+    check('coverage: a thin place we looked hard for stays thin, keeps the look, and has nothing to ask', cs.kind === 'thin' && cs.searched === looked && cs.ask === null && cs.state === 'none' && cs.localRaces === 10 && cs.localRacesWithPicks === 7, JSON.stringify(cs));
+    idx.places['pensacola-fl'].local_with_picks = 1;
+    check('coverage: a local pick found after the look reads full, the look set aside', mc.ballotCoverage(pen, idx, '32501').kind === 'full' && mc.ballotCoverage(pen, idx, '32501').searched === null);
+    idx.places['pensacola-fl'].local_with_picks = 0;
+    delete idx.places['pensacola-fl'].local_picks_checked;
+    const nash = INDEX.places['nashville-tn'];
+    check('coverage: Nashville’s look (Oct 29, #50) reaches the index with the newsrooms checked', nash.local_picks_checked?.on === '2026-10-29' && nash.local_picks_checked.where.includes('The Tennessean') && !('local_picks_checked' in pn), JSON.stringify(nash));
 
     // Remembered on this device, apart from the saved ballots, until the data lands or three days pass.
     const mem = {};
@@ -2154,6 +2167,12 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       check('coverage: data checked after the request day ends it', mc.ballotCoverage(pen, idx, '32501', '2026-10-26').state === 'none');
       idx.places['pensacola-fl'].checked = '2026-10-25';
       check('coverage: data checked the same day doesn’t (the request may have come after it)', mc.ballotCoverage(pen, idx, '32501', '2026-10-25').state === 'asked');
+      // A hard look on or after the request day answers it; one before it (data that landed after the tap) doesn't.
+      idx.places['pensacola-fl'].local_picks_checked = { on: '2026-10-25', where: ['Paper A'] };
+      check('coverage: a hard look on the request day answers the request', mc.ballotCoverage(pen, idx, '32501', '2026-10-25').state === 'none' && mc.ballotCoverage(pen, idx, '32501', '2026-10-25').askedOn === null);
+      idx.places['pensacola-fl'].local_picks_checked = { on: '2026-10-24', where: ['Paper A'] };
+      check('coverage: a look before the request day leaves it sent', mc.ballotCoverage(pen, idx, '32501', '2026-10-25').state === 'asked');
+      delete idx.places['pensacola-fl'].local_picks_checked;
       // Codex, Oct 26: three days means three (an Oct 25 request counts on the 25th, 26th and 27th), not four.
       check('coverage: after three days with nothing landed, the offer comes back', mc.ballotCoverage(pen, idx, '32501', '2026-10-27').state === 'asked' && mc.ballotCoverage(pen, idx, '32501', '2026-10-28').state === 'none');
       mc.rememberAsk('z:65806', '2026-10-28');
@@ -2237,6 +2256,20 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       check('coverage: the next day it reads the date', /You asked Oct 25\. It usually takes about a day\./.test(txt(views.coverage.covCardHTML('ballot'))) && txt(views.coverage.headCovHTML()).endsWith('You asked for local picks Oct 25.'));
       setToday('2026-10-25');
       delete store['vg-asked'];
+
+      // Looked hard (Oct 29): the card says when and where, where the picks come from, and asks nothing.
+      idx.places['pensacola-fl'].local_picks_checked = { on: '2026-10-24', where: ['Paper A', 'Weekly B', 'Group C'] };
+      const tl = views.coverage.covCardHTML('ballot');
+      check('coverage: looked hard, the card says when and where, where the picks come from, and the gap', txt(tl) === 'We looked hard for Pensacola’s local picks. On Oct 24 we checked Paper A, Weekly B and Group C. None of them had picks we could find. The picks here come from newspapers and groups across Florida. 3 of your 10 local races have no picks from anyone. Know a local paper or group with picks? Add a source', txt(tl));
+      check('coverage: looked hard, nothing to ask: no one-tap, no dark button, and Add a source opens its shelf', !/cov-ask|Ask Kevin/.test(tl) && darkOf(tl).length === 0 && /<button class="linkbtn" data-act="shelf" data-kind="source" aria-haspopup="dialog" data-fk="cov-add">Add a source<\/button>/.test(tl) && /class="notice strong cov-card wrap" role="region"/.test(tl) && !views.coverage.cardAsks(views.coverage.covOf()));
+      check('coverage: looked hard, the address box’s Use my address is the dark button again', darkOf(views.ledger.ballotHeadHTML()).join() === 'Use my address', darkOf(views.ledger.ballotHeadHTML()).join());
+      check('coverage: looked hard, the quiet lines add the day', txt(views.coverage.headCovHTML()) === '21 sources, 13 with picks, none from Pensacola’s own paper and groups. We looked hard on Oct 24. Last checked Oct 19.' && txt(views.coverage.sheetCovHTML()) === txt(views.coverage.headCovHTML()), txt(views.coverage.headCovHTML()));
+      idx.places['pensacola-fl'].checked = '2026-10-24';
+      check('coverage: and say the day once when the look is the last check', txt(views.coverage.headCovHTML()).endsWith('none from Pensacola’s own paper and groups. We looked hard on Oct 24.'), txt(views.coverage.headCovHTML()));
+      idx.places['pensacola-fl'].checked = '2026-10-19';
+      idx.places['pensacola-fl'].local_picks_checked.where.push('Group D', 'Group E');
+      check('coverage: more than four checked, the card names three and counts the rest', /On Oct 24 we checked Paper A, Weekly B, Group C and 2 more\./.test(txt(views.coverage.covCardHTML('door'))));
+      delete idx.places['pensacola-fl'].local_picks_checked;
 
       // A statewide ballot found by ZIP (Springfield, Missouri).
       open('MO', []);

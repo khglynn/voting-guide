@@ -170,6 +170,17 @@ function placeZipOutside(obj, p, where) {
   }
   return Object.keys(out).length ? out : null;
 }
+/* A hard look for the place's own picks that came up empty (Oct 29; Kevin: "if we can't find a bunch of sources
+   and we're really looked let's say that"): the day, and the papers and groups checked, set by the run that
+   looked. While none of the place's own sources has a pick, the coverage card says so instead of offering to
+   look (model/coverage.ts); a local pick found later ends that by itself. */
+function localPicksChecked(x, where) {
+  if (x == null) return null;
+  if (typeof x !== 'object' || Array.isArray(x) || !isDate(x.on)) { warn(`${where}: local_picks_checked needs an "on" date; dropped it`); return null; }
+  const checked = Array.isArray(x.where) ? x.where.filter(isStr).map((w) => w.trim()) : [];
+  if (!checked.length) { warn(`${where}: local_picks_checked needs "where", the papers and groups checked; dropped it`); return null; }
+  return { on: x.on, where: checked };
+}
 /* A county's own answer to one of the state's common questions (Oct 28: Orange County's lost mail ballot,
    with its own phone line and dates), keyed by the state situation's id. plan.ts uses it when every place on
    the ballot gives the same one; the state's question and buttons stay. */
@@ -584,6 +595,7 @@ for (const f of listJson('places')) {
     ...optional({ early_in_person: placeEarly(p.early_in_person, f), lookups: placeLookups(p.lookups, f), by_county: placeByCounty(p.by_county, p, f), situations: placeSituations(p.situations, f),
       mail_ballot: placeMail(p.mail_ballot, f), election_day: placeElectionDay(p.election_day, f),
       county_fips: placeCountyFips(p.county_fips, f), zip_outside: placeZipOutside(p.zip_outside, p, f),
+      local_picks_checked: localPicksChecked(p.local_picks_checked, f),
       // the official pages behind the place's own facts (its notes, office lines and answers), for the record
       sources: (Array.isArray(p.sources) ? p.sources : []).filter((x) => x && isStr(x.name) && safeUrl(x.url)).map((x) => ({ name: x.name.trim(), url: safeUrl(x.url) })),
       dated: datedList(p.dated, p, f) }),
@@ -928,9 +940,10 @@ for (const [id, p] of places) {
   // ballot (statewide races included), plus its own races and how many of them have any pick: a place
   // none of whose own sources has picks reads as thin.
   // county_fips and zip_outside too, so the first page can rule a place out of an address, or ask about a ZIP
-  // that reaches past it, before any bundle loads (geo.ts settleAddress, app.ts lookZip).
+  // that reaches past it, before any bundle loads (geo.ts settleAddress, app.ts lookZip). local_picks_checked
+  // beside the coverage it speaks for (model/coverage.ts).
   index.places[id] = { label: p.label, state: p.state, counties: p.counties, local_count: local.length, ...(pm.length ? { maps: pm.map((m) => m.file) } : {}),
-    ...optional({ county_fips: p.county_fips, zip_outside: p.zip_outside }), ...coverageOf(stateBundles.get(p.state), [bundle], id) };
+    ...optional({ county_fips: p.county_fips, zip_outside: p.zip_outside, local_picks_checked: p.local_picks_checked }), ...coverageOf(stateBundles.get(p.state), [bundle], id) };
   index.states[p.state].places.push(id);
   for (const z of p.zips) {
     (index.zips[z] = index.zips[z] || []);

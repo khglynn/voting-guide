@@ -4,7 +4,9 @@
    the date and the thin rule come from build-data (index.json, scripts/coverage.mjs). Three kinds:
    - full: "24 sources for Chicago, 12 with picks. Last checked Oct 19."
    - thin: a place none of whose own sources has a pick, with some of its own races unpicked: say so,
-     and offer to gather its endorsements in one tap.
+     and offer to gather its endorsements in one tap. Once a hard look for them came up empty (the place's
+     local_picks_checked, Oct 29; Kevin: "request city is based on whether we've done a robust run for that
+     spot not the number of sources we've found"), say we looked, when and where, and offer nothing.
    - statewide: no place (a ZIP in a covered state the guide has no city for, like Springfield, Missouri, or a
      state picked from the list): say we only have the statewide races, and with a ZIP offer to add the
      city in one tap.
@@ -13,7 +15,7 @@
    the ZIP has a place. Three days with nothing landed (the day sent and the two after) and the offer
    comes back, so a request the pipeline turned down never reads "about a day" forever. */
 import type { Ballot } from '../ballot';
-import type { Index, PlaceCoverage } from '../types';
+import type { Index, LocalPicksChecked, PlaceCoverage } from '../types';
 import { daysBetween, fmtDate, load, save, todayISO } from '../util';
 import { withPicks } from './lens';
 import { placeName } from '../geo';
@@ -40,7 +42,8 @@ export interface Cov {
   askedOn: string | null; // the day this device sent the request, while it counts
   localRaces: number;  // a thin place's own races a voter decides, and how many have a pick from anyone
   localRacesWithPicks: number;
-  late: boolean;       // Election Day is two days away or less: say it may not land before you vote
+  searched: LocalPicksChecked | null; // a thin place's hard look that came up empty: no ask, the card says so
+  late: boolean;      // Election Day is two days away or less: say it may not land before you vote
   /* A statewide ballot from a ZIP split between a place and a town the guide doesn't cover (zip_outside), when
      the voter didn't say which they live in ("I'm not sure"): the card says so and offers the address. */
   shared: { place: string; outside: string } | null;
@@ -81,7 +84,7 @@ export function ballotCoverage(b: Ballot, idx: Index, zip: string, today = today
   const picks = withPicks(b, b.endorsers).length;
   const e = b.howto.election_date;
   const late = !!e && /^\d{4}-\d{2}-\d{2}$/.test(e) && daysBetween(today, e) <= 2;
-  const base = { sources, withPicks: picks, stateName: b.stateName, zip, late, localRaces: 0, localRacesWithPicks: 0, shared: null };
+  const base = { sources, withPicks: picks, stateName: b.stateName, zip, late, localRaces: 0, localRacesWithPicks: 0, searched: null, shared: null };
   if (!b.places.length) {
     const st = idx.states[b.st];
     const ask: Ask | null = zip ? {
@@ -105,13 +108,18 @@ export function ballotCoverage(b: Ballot, idx: Index, zip: string, today = today
   const name = b.places.map((p) => bare(p.label)).join(' or ');
   const one = b.places.length === 1 && ps.length === 1 ? ps[0] : null;
   if (!one || !isThin(one)) return { ...base, kind: 'full', checked, name, single: b.places.length === 1, ask: null, state: 'none', askedOn: null };
-  const ask: Ask = {
-    key: `p:${b.places[0].id}`, name, what: `Gather endorsements: ${name}`,
+  // After a hard look that came up empty there is nothing to ask for. A local pick found later makes the
+  // place full by itself, so the date never hides one.
+  const searched = one.local_picks_checked || null;
+  const key = `p:${b.places[0].id}`;
+  const ask: Ask | null = searched ? null : {
+    key, name, what: `Gather endorsements: ${name}`,
     wrong: `Please gather local endorsements for ${name} (one-tap from the page)`,
   };
-  const on = askedOn(ask.key, today);
-  // Asked, until data checked after the request day comes in: then the place reads as it is.
-  const asked = !!on && !(checked && checked > on);
+  const on = askedOn(key, today);
+  // Asked, until data checked after the request day comes in, or a hard look on or after it: then the place
+  // reads as it is.
+  const asked = !!on && !(checked && checked > on) && !(searched && searched.on >= on);
   return { ...base, kind: 'thin', checked, name, single: true, ask, state: asked ? 'asked' : 'none', askedOn: asked ? on : null,
-    localRaces: one.local_races, localRacesWithPicks: one.local_races_with_picks };
+    localRaces: one.local_races, localRacesWithPicks: one.local_races_with_picks, searched };
 }

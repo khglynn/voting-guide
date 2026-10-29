@@ -1300,6 +1300,12 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('plan: and says closed at 7 PM Central, when East Tennessee closes too', plan.nextStep(tn, '2026-11-03', false, new Date('2026-11-04T01:01:00Z')).phase === 'polls_closed');
     const nash = plan.nextStep(open('TN', ['nashville-tn']).howto, '2026-11-03', false, new Date('2026-11-04T00:30:00Z'));
     check('plan: Nashville says its own 7 PM', nash.phase === 'election_day' && /^Today is Election Day\. Polls close at 7 PM\.$/.test(words(nash)), words(nash));
+    // Each Tennessee county sets its own opening time (Knox and Hamilton open at 8 AM Eastern), so the day before
+    // gives only the close; a state with one plain opening time still gives both.
+    const tnEve = plan.nextStep(tn, '2026-11-02');
+    check('plan: the day before, Tennessee gives the close and no opening time', tnEve.phase === 'election_day_next' && tnEve.sub.join(' ') === 'Polls close at 7:00 PM Central (8:00 PM Eastern).', tnEve.sub.join(' | '));
+    const txEve = plan.nextStep(austin, '2026-11-02');
+    check('plan: the day before, Austin gives both times', txEve.sub.join(' ') === 'Polls are open 7 AM to 7 PM.', txEve.sub.join(' | '));
     // Codex #12: after the polls close on Election Day, say so, and keep the in-line rule.
     const shut = plan.nextStep(tx, '2026-11-03', false, 19 * 60);
     check('plan: at 7 PM on Election Day Texas says the polls closed', shut.phase === 'polls_closed' && /^Polls closed at 7 PM\. Already in line\? Stay in line\.$/.test(words(shut)), words(shut));

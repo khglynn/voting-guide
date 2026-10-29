@@ -24,7 +24,7 @@ import type { Contest, Dated, HowTo, Index, Lookups, PlaceBundle, StateBundle } 
 import { buildBallot, sectionOf, SECTIONS, type Ballot, type SectionKey } from '../ballot';
 import { S } from '../state';
 import { cleanOffice, rowTitle } from '../model/labels';
-import { applyDated, clock, isMailState, localHowto } from '../model/plan';
+import { applyDated, clock, isMailState, localHowto, PLAIN_TIME } from '../model/plan';
 import { esc, fmtDate } from '../util';
 import { escP, telHTML } from '../views/common';
 
@@ -147,9 +147,6 @@ function ballotHTML(b: Ballot, where: string): string {
 
 /* ---------- dates, places to vote, the office ---------- */
 interface DateRow { date: string; lead: string; when: string; detail: string | null; list?: string[] }
-/* "7:00 AM", "8 PM PT": a time and nothing else. A qualified one ("8:30 AM at the six King County vote centers")
-   isn't a statewide opening time, so it never becomes "You can vote from ...". */
-const PLAIN_TIME = /^\s*\d{1,2}(?::\d{2})?\s*[ap]\.?m\.?(?:\s+[A-Z]{2,3})?\s*$/i;
 
 /* Text the data dates to change (`dated`, plan.applyDated) never goes on a static page, whatever the build date
    (Codex, Oct 28): it can say "today" or "tomorrow", and a page keeps what it says until the next deploy. So before

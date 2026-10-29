@@ -23,6 +23,10 @@ export function clock(s: string | null | undefined): string | null {
   if (/\bnoon\b/i.test(s || '')) return 'noon';
   return null;
 }
+/* "7:00 AM", "8 PM PT": a time and nothing else. A qualified one ("8:30 AM at the six King County vote centers",
+   "7:00 AM in Davidson County; each county sets its own") isn't a statewide opening time, so it never
+   becomes "Polls are open 7 AM to ..." or "You can vote from ...". */
+export const PLAIN_TIME = /^\s*\d{1,2}(?::\d{2})?\s*[ap]\.?m\.?(?:\s+[A-Z]{2,3})?\s*$/i;
 /* Poll times are local. Each state's zones, the zone most of it uses first; a place in a
    state's other zone is pinned here. A statewide-only ballot in a two-zone state says "your
    local polls close at" and says they have closed only once they have closed in every zone,
@@ -291,7 +295,7 @@ export function nextStep(h: HowTo, t = todayISO(), absolute = false, now: number
   return {
     phase: 'election_day_next',
     head: [['Vote on Election Day, ', false], [fmtDate(h.election_date), true], ['.', false]],
-    sub: [`Polls are open ${clock(ed.polls_open) || ed.polls_open} to ${close}.`], primary: ed.lookup_url ? { label: 'Find your polling place', url: ed.lookup_url, look: 'election_day' } : null,
+    sub: [PLAIN_TIME.test(ed.polls_open || '') ? `Polls are open ${clock(ed.polls_open)} to ${close}.` : `Polls close at ${close}.`], primary: ed.lookup_url ? { label: 'Find your polling place', url: ed.lookup_url, look: 'election_day' } : null,
   };
 }
 /* The state's suggested last day to mail a ballot, read from its own advice ("Monday, October

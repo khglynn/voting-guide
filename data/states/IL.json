@@ -613,6 +613,36 @@
       "path": "situations.college_student.steps.0",
       "from": "2026-10-31",
       "text": "Chicago's campus early voting sites closed Oct 30. Same-day registration is open at every Chicago early voting site through Nov 2, and at 51 vote centers on Election Day."
+    },
+    {
+      "path": "model_plain",
+      "from": "2026-11-03",
+      "text": "You can vote at the polls today, Tuesday, November 3. Early voting ended Monday, Nov. 2, and applications for a mail ballot have closed. A mail ballot you already have must be postmarked by Nov. 3. City of Chicago voters use the Chicago Board of Elections. Suburban Cook County voters use the Cook County Clerk."
+    },
+    {
+      "path": "situations.away_on_election_day.answer",
+      "from": "2026-11-03",
+      "text": "Early voting ended Monday, November 2, and so did in-person applications for a mail ballot. If you already have a mail ballot, it must be postmarked by today, November 3, and arrive by November 17. A drop box or a hand postmark at the post office counter is safest."
+    },
+    {
+      "path": "situations.away_on_election_day.short",
+      "from": "2026-11-03",
+      "text": "Early voting and mail ballot requests have closed; a mail ballot you have needs a Nov 3 postmark."
+    },
+    {
+      "path": "situations.college_student.answer",
+      "from": "2026-11-03",
+      "text": "You can vote from your home address, or register at your school address if you've lived there 30 days. Mail ballot applications have closed. Today you can register in person with two IDs and vote the same day: in Chicago, at your precinct polling place or any of the 51 vote centers."
+    },
+    {
+      "path": "situations.college_student.short",
+      "from": "2026-11-03",
+      "text": "Register and vote today with two IDs at your polling place or a Chicago vote center."
+    },
+    {
+      "path": "situations.college_student.steps.0",
+      "from": "2026-11-03",
+      "text": "Same-day registration is open today at your precinct polling place or any of Chicago's 51 vote centers. Bring two IDs."
     }
   ]
 }

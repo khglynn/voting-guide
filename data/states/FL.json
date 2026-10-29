@@ -671,7 +671,7 @@
     {
       "path": "mail_ballot.mail_cutoff_advice",
       "from": "2026-10-28",
-      "text": "It's too late to count on the mail. Postmarks don't count. The state's own page says your ballot 'must be received, regardless of postmark, by the Supervisor of Elections' office no later than 7:00 pm (local time) on Election Day.' Hand it to an intake station at an early voting site or the supervisor's office instead. Overseas voters are the only exception. They get a 10-day extension if their ballot is postmarked by Election Day."
+      "text": "It's too late to count on the mail. Postmarks don't count. The state's own page says your ballot 'must be received, regardless of postmark, by the Supervisor of Elections' office no later than 7:00 pm (local time) on Election Day.' Hand it in instead: at a ballot intake station at an early voting site while early voting is open in your county, or at your county supervisor of elections' office through 7 PM on Election Day. Overseas voters are the only exception. They get a 10-day extension if their ballot is postmarked by Election Day."
     }
   ]
 }

@@ -1342,9 +1342,13 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     // From Oct 28 the mail-by advice says what's true now, by each state's own rule (stale-date check, Oct 29): a
     // postmark state still counts a ballot postmarked by Nov 3; a receipt state's ballot must arrive by Election Day.
     const adv = (x, d) => plan.localHowto(read(`state-${x}.json`).howto, [], null, d).mail_ballot.mail_cutoff_advice || '';
-    const pm = ['CA', 'DC', 'MD', 'NY', 'OR', 'WA'].filter((x) => !/postmark/i.test(adv(x, '2026-10-29')) || !/Nov(ember)? 3/.test(adv(x, '2026-10-29')) || /by (about )?(Tuesday, )?October 27/.test(adv(x, '2026-10-29')));
+    // Affirmative: it says a postmark counts. Never: that it's too late to mail, or that postmarks don't count.
+    const COUNTS = /counts?(?: [\w ]{0,25})? if (?:it's |it is )?postmarked by Nov(?:ember)? 3|Postmarks count/i;
+    const DENIES = /too late (to|for) (count on )?(the )?mail|postmarks? (do not|don't|doesn't) count/i;
+    const pm = ['CA', 'DC', 'MD', 'NY', 'OR', 'WA'].filter((x) => !COUNTS.test(adv(x, '2026-10-29')) || DENIES.test(adv(x, '2026-10-29')) || /by (about )?(Tuesday, )?October 27/.test(adv(x, '2026-10-29')));
     check('mail advice, Oct 29: postmark states say a ballot postmarked by Nov 3 still counts, and no "mail by Oct 27"', pm.length === 0, pm.join(' '));
-    check('mail advice, Oct 29: receipt states (Florida, Pennsylvania) say not to count on the mail', ['FL', 'PA'].every((x) => /too late to count on the mail/.test(adv(x, '2026-10-29'))));
+    check('mail advice, Oct 29: receipt states (Florida, Pennsylvania) say not to count on the mail, and never that a postmark counts', ['FL', 'PA'].every((x) => /too late to count on the mail/.test(adv(x, '2026-10-29')) && !COUNTS.test(adv(x, '2026-10-29'))));
+    check('mail advice: the postmark check itself rejects "too late to mail" and accepts the real lines', !(COUNTS.test('It is too late to mail. Postmarks do not count. Hand it in by Nov 3.') && !DENIES.test('It is too late to mail. Postmarks do not count. Hand it in by Nov 3.')) && DENIES.test('It is too late to mail. Postmarks do not count.'));
     check('mail advice, Oct 20: the suggested mail-by day still reads, so the plan says mail by Oct 27', plan.mailBy(plan.localHowto(read('state-CA.json').howto, [], null, '2026-10-20'))?.date === '2026-10-27');
     // Lines that go stale before Nov 3 flip on their own (dated, Oct 29): each says what's true from the day after.
     const hw = (x, d) => plan.localHowto(read(`state-${x}.json`).howto, [], null, d);
@@ -1357,6 +1361,8 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       ['NY Nov 3', /hand in a mail ballot/.test(sit(hw('NY', '2026-11-03'), 'away_on_election_day').short)],
       ['TX Oct 31', /ended Oct 30/.test(sit(hw('TX', '2026-10-31'), 'moved_in_state').short)],
       ['GA Oct 31', /closed with early voting/.test(hw('GA', '2026-10-31').mail_ballot.mail_cutoff_advice)],
+      ['IL Nov 3', !/through (Monday, )?Nov(ember|\.)? 2|Vote early/.test(sit(hw('IL', '2026-11-03'), 'away_on_election_day').answer + sit(hw('IL', '2026-11-03'), 'college_student').answer + hw('IL', '2026-11-03').model_plain)],
+      ['FL Oct 29', /while early voting is open/.test(hw('FL', '2026-10-29').mail_ballot.mail_cutoff_advice)],
       ['Oct 29 unchanged', /apply by Oct\. 29/.test(hw('IL', '2026-10-29').model_plain) && /through Oct 29/.test(hw('AL', '2026-10-29').gotcha_shorts[1])],
     ].filter(([, ok]) => !ok).map(([n]) => n);
     check('stale lines: each flips to what is true the day after its deadline, and not before', flips.length === 0, flips.join(', '));

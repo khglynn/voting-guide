@@ -44,6 +44,13 @@ export function zonesFor(st: string, places: { id: string }[]): string[] {
   if (!places.length) return all;
   return [...new Set(places.map((p) => PLACE_ZONE[p.id] || all[0]).filter(Boolean))];
 }
+/* The close a ballot names, for the plan and the place pages alike. Polls that close at one moment in two zones
+   ("7:00 PM Central (8:00 PM Eastern)", Tennessee) keep both times on a ballot that spans the zones, where
+   "7 PM" would be an hour early for half of it; a ballot in one zone gets its own "7 PM". */
+export function closeOf(pollsClose: string, zones: string[]): { close: string; both: boolean } {
+  const both = zones.length > 1 && /\b(Eastern|Central|Mountain|Pacific)\b/.test(pollsClose);
+  return { close: both ? pollsClose : clock(pollsClose) || pollsClose, both };
+}
 
 /* "7:00 PM" -> 1140 (minutes after midnight); null when there is no time. */
 export function clockMinutes(s: string | null | undefined): number | null {
@@ -208,10 +215,7 @@ export function nextStep(h: HowTo, t = todayISO(), absolute = false, now: number
   const mb = h.mail_ballot;
   const ep = h.early_in_person;
   const zones = h.zones || STATE_ZONES[h.state] || [];
-  // Polls that close at one moment in two zones ("7:00 PM Central (8:00 PM Eastern)", Tennessee) keep
-  // both times on a ballot that spans the zones, where "7 PM" would be an hour early for half of it.
-  const both = zones.length > 1 && /\b(Eastern|Central|Mountain|Pacific)\b/.test(ed.polls_close);
-  const close = both ? ed.polls_close : clock(ed.polls_close) || ed.polls_close;
+  const { close, both } = closeOf(ed.polls_close, zones);
   if (t > h.election_date) {
     return { phase: 'closed', head: [['Voting has closed. Thank you for taking part.', false]], sub: mb.tracking_url ? ['Mailed a ballot? You can check that it was counted.'] : [], primary: mb.tracking_url ? { label: 'Track your ballot', url: mb.tracking_url } : null };
   }

@@ -148,9 +148,14 @@ check('page titles and descriptions: no em dashes, no all caps', !bad.copy.lengt
   }
   check('every page lists each way to return a mail ballot, and its heading names no single rule', !ways.length, ways.slice(0, 4).join('; '));
   check('Texas: the USPS postmark exception is on the page', textOf(bodyOf(pages.find((x) => x.path === '/texas').html)).includes('postmarked by 7:00 PM Nov. 3 and arriving by 5:00 PM'));
-  const early = stateCodes.filter((st) => { const n = data.states[st].howto.early_in_person.hours_note; const text = textOf(bodyOf(pages.find((x) => x.path === site.statePath(data, st)).html)).toLowerCase(); return n && !text.includes(norm(n).slice(0, 60).toLowerCase()); });
+  // As the page reads it: a dated note (Tennessee's, "is over" from Oct 30) never goes on a static page.
+  const early = stateCodes.filter((st) => { const n = site.undated(data.states[st].howto).early_in_person.hours_note; const text = textOf(bodyOf(pages.find((x) => x.path === site.statePath(data, st)).html)).toLowerCase(); return n && !text.includes(norm(n).slice(0, 60).toLowerCase()); });
   check('state pages: the early voting note, in the data\'s words, even where there is no window (Alabama, Pennsylvania)', !early.length, early.join(' '));
   check('Maryland: the request deadline says how it depends on delivery (fax or email); Washington: no blanket opening time', /fax or email/.test(md) && !/You can vote from/.test(wa) && /Polls close at 8 PM/.test(wa));
+  // Tennessee closes at one moment in two zones: its state page names both, Nashville's its own 7 PM, as the plan does.
+  const tn = textOf(bodyOf(pages.find((x) => x.path === '/tennessee').html));
+  const nash = textOf(bodyOf(pages.find((x) => x.path === '/nashville-tn').html));
+  check('Tennessee: the state page names both closing times, Nashville its own', tn.includes('Polls close at 7:00 PM Central (8:00 PM Eastern).') && nash.includes('Polls close at 7 PM.') && !/You can vote from/.test(tn + nash), `${tn.match(/Polls close[^.]*\.[^.]*\./)} | ${nash.match(/Polls close[^.]*\./)}`);
 }
 /* ---------- per-county links and dated text (main's where-to-vote parts A and B, Oct 28) ---------- */
 {

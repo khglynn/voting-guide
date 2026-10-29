@@ -3163,6 +3163,7 @@ const THIN = Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_pi
   await openBallot(page, '92629');
   const boe = await text(page, '#i-ca-boe-4');
   check('Dana Point: BOE District 4 is on the ballot, not "Maybe on your ballot"', !!boe && !/Maybe on your ballot/.test(boe), boe.slice(0, 120));
+  check('Dana Point: U.S. House and State Senate ask which district (precinct 41818 is CD-49 and SD-38)', !!(await page.$('[data-q*="U.S. Representative"]')) && !!(await page.$('[data-q*="State Senator"]')));
   noErrors(page, 'Dana Point');
   await ctx.close();
 }

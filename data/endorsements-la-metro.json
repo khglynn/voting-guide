@@ -6978,5 +6978,105 @@
   "why": "The party’s public lookup lists this choice. Its source label is: LAGOP.",
   "date": "2026-10-19",
   "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-gop",
+  "target_id": "ca-us-house-41",
+  "status": "endorsed",
+  "choice": "Mitch Clemmons",
+  "why": "In the Republican Party of Orange County's 2026 voter guide, linked from its endorsements page (read Oct 29, 2026).",
+  "url": "https://linkjar.to/_/pdf/aa0dc48e-a2ea-40c8-8408-d58668b90d0b/",
+  "date": "2026-10-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-gop",
+  "target_id": "ca-us-house-46",
+  "status": "endorsed",
+  "choice": "David Pan",
+  "why": "In the Republican Party of Orange County's 2026 voter guide, linked from its endorsements page (read Oct 29, 2026).",
+  "url": "https://linkjar.to/_/pdf/aa0dc48e-a2ea-40c8-8408-d58668b90d0b/",
+  "date": "2026-10-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-gop",
+  "target_id": "ca-assembly-59",
+  "status": "endorsed",
+  "choice": "Phillip Chen",
+  "why": "In the Republican Party of Orange County's 2026 voter guide, linked from its endorsements page (read Oct 29, 2026).",
+  "url": "https://linkjar.to/_/pdf/aa0dc48e-a2ea-40c8-8408-d58668b90d0b/",
+  "date": "2026-10-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-gop",
+  "target_id": "fullerton-fjuhsd-area-1",
+  "status": "endorsed",
+  "choice": "Matthew Matias",
+  "why": "In the Republican Party of Orange County's 2026 voter guide, linked from its endorsements page (read Oct 29, 2026).",
+  "url": "https://linkjar.to/_/pdf/aa0dc48e-a2ea-40c8-8408-d58668b90d0b/",
+  "date": "2026-10-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-gop",
+  "target_id": "nocccd-area-6",
+  "status": "endorsed",
+  "choice": "Zonya Townsend",
+  "why": "In the Republican Party of Orange County's 2026 voter guide, linked from its endorsements page (read Oct 29, 2026).",
+  "url": "https://linkjar.to/_/pdf/aa0dc48e-a2ea-40c8-8408-d58668b90d0b/",
+  "date": "2026-10-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-gop",
+  "target_id": "fullerton-fsd-area-3",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Republican Party of Orange County's 2026 voter guide has no Fullerton School District section (read Oct 29, 2026).",
+  "url": "https://linkjar.to/_/pdf/aa0dc48e-a2ea-40c8-8408-d58668b90d0b/",
+  "date": "2026-10-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-gop",
+  "target_id": "fullerton-fjuhsd-area-5",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Republican Party of Orange County's 2026 voter guide names a Fullerton Joint Union High School District pick for Trustee Area 1 only (read Oct 29, 2026).",
+  "url": "https://linkjar.to/_/pdf/aa0dc48e-a2ea-40c8-8408-d58668b90d0b/",
+  "date": "2026-10-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-dems",
+  "target_id": "ca-us-house-41",
+  "status": "endorsed",
+  "choice": "Linda Sánchez",
+  "why": "Listed on the Democratic Party of Orange County's endorsement page (checked Oct 29, 2026).",
+  "url": "https://orangecountydemocrats.com/statewide-endorsements",
+  "date": "2026-10-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-dems",
+  "target_id": "ca-us-house-46",
+  "status": "endorsed",
+  "choice": "Lou Correa",
+  "why": "Listed on the Democratic Party of Orange County's endorsement page (checked Oct 29, 2026).",
+  "url": "https://orangecountydemocrats.com/statewide-endorsements",
+  "date": "2026-10-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-dems",
+  "target_id": "ca-assembly-59",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Democratic Party of Orange County's endorsement page lists Assembly picks from District 64 on and none for District 59 (checked Oct 29, 2026).",
+  "url": "https://orangecountydemocrats.com/statewide-endorsements",
+  "date": "2026-10-29",
+  "confidence": "verified"
  }
 ]

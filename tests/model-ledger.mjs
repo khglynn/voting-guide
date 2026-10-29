@@ -304,6 +304,15 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       ['Voters in District 9: all of Golden and Arvada.', false], ['Not all of Lakewood is in District 9.', false]];
     const wrong = cases.filter(([s, want]) => fake(s) !== want);
     check('may apply: the whole-place rule reads "all of" and nothing looser', wrong.length === 0, wrong.map((x) => x[0]).join(' | '));
+    // Dana Point's precinct 41818 votes in CD-49 and SD-38 (the county's precinct maps): both are questions there,
+    // and an address answers them.
+    const dpb = open('CA', ['dana-point-ca']);
+    const q = (a, c) => dpb.groups.some((g) => g.members.includes(a) && g.members.includes(c) && g.members.length === 2);
+    check('Dana Point: U.S. House (47 or 49) and State Senate (36 or 38) are district questions', q('ca-us-house-47', 'ca-us-house-49') && q('ca-state-senate-36', 'ca-state-senate-38'));
+    const dset = mods.address.setFromAddress(dpb, S.b, { cd: 49, upper: 38, lower: 74 });
+    const gk = (id) => dpb.groupOf[id];
+    check('Dana Point: an address in precinct 41818 puts CD-49 and SD-38 on the ballot', S.b.districts[gk('ca-us-house-49')] === 'ca-us-house-49' && S.b.districts[gk('ca-state-senate-38')] === 'ca-state-senate-38', dset.join(' | '));
+    check('Dana Point: CD-47\'s scope no longer says all of Dana Point', /^Almost all of Dana Point/.test(dpb.byId.get('ca-us-house-47').scope_plain) && /precinct 41818/.test(dpb.byId.get('ca-us-house-49').scope_plain));
   }
 
   /* ---------- the seat rule ---------- */

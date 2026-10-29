@@ -5,7 +5,7 @@
    - full: "24 sources for Chicago, 12 with picks. Last checked Oct 19."
    - thin: a place none of whose own sources has a pick, with some of its own races unpicked: say so,
      and offer to gather its endorsements in one tap.
-   - statewide: no place (a ZIP in a covered state the guide has no city for, like St. Louis City, or a
+   - statewide: no place (a ZIP in a covered state the guide has no city for, like Springfield, Missouri, or a
      state picked from the list): say we only have the statewide races, and with a ZIP offer to add the
      city in one tap.
    A one-tap request is remembered on this device (localStorage `vg-asked`, never the save link or

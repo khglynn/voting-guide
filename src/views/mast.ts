@@ -142,7 +142,7 @@ function whereHTML(): string {
   const err = S.zipErr ? `<p class="zip-err" role="alert" id="zip-err">${esc(S.zipErr)}</p>` : '';
   let after = '';
   if (b) {
-    // "Austin, Texas · 78704", or "Missouri, statewide races only · 63110". After the place question,
+    // "Austin, Texas · 78704", or "Missouri, statewide races only · 65806". After the place question,
     // Change asks it again. Under it, a statewide ballot's or a thin place's coverage card (views/coverage.ts),
     // where coverage belongs: with where you vote (Kevin, Oct 25).
     const zip = S.b.zip ? ` · ${esc(S.b.zip)}` : '';

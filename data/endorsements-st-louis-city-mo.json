@@ -1,0 +1,1232 @@
+[
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-hd-76",
+    "status": "no_position",
+    "choice": null,
+    "why": "The board no longer endorses partisan candidates in general elections. Its October 14 editor’s note says it still takes positions in primaries, local nonpartisan elections and on ballot measures.",
+    "url": "https://www.stltoday.com/opinion/editorial/article_d27d6d5f-db25-4ec0-b4ee-87744270193d.html",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "mo-hd-76",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://my.lwv.org/missouri/metro-st-louis",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "mo-hd-76",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "mo-hd-76",
+    "status": "no_position",
+    "choice": null,
+    "why": "The general-election list explicitly says unlisted districts have no endorsement. This district is unlisted.",
+    "url": "https://missourilifepac.org/wp-content/uploads/2026/09/Endorsement-List.pdf",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "mo-hd-76",
+    "status": "not_found",
+    "choice": null,
+    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 29, 2026.",
+    "url": "https://www.nrapvf.org/grades/Missouri/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-hd-77",
+    "status": "no_position",
+    "choice": null,
+    "why": "The board no longer endorses partisan candidates in general elections. Its October 14 editor’s note says it still takes positions in primaries, local nonpartisan elections and on ballot measures.",
+    "url": "https://www.stltoday.com/opinion/editorial/article_d27d6d5f-db25-4ec0-b4ee-87744270193d.html",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "mo-hd-77",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://my.lwv.org/missouri/metro-st-louis",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "mo-hd-77",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "mo-hd-77",
+    "status": "no_position",
+    "choice": null,
+    "why": "The general-election list explicitly says unlisted districts have no endorsement. This district is unlisted.",
+    "url": "https://missourilifepac.org/wp-content/uploads/2026/09/Endorsement-List.pdf",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "mo-hd-77",
+    "status": "not_found",
+    "choice": null,
+    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 29, 2026.",
+    "url": "https://www.nrapvf.org/grades/Missouri/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-hd-78",
+    "status": "no_position",
+    "choice": null,
+    "why": "The board no longer endorses partisan candidates in general elections. Its October 14 editor’s note says it still takes positions in primaries, local nonpartisan elections and on ballot measures.",
+    "url": "https://www.stltoday.com/opinion/editorial/article_d27d6d5f-db25-4ec0-b4ee-87744270193d.html",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "mo-hd-78",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://my.lwv.org/missouri/metro-st-louis",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "mo-hd-78",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "mo-hd-78",
+    "status": "no_position",
+    "choice": null,
+    "why": "The general-election list explicitly says unlisted districts have no endorsement. This district is unlisted.",
+    "url": "https://missourilifepac.org/wp-content/uploads/2026/09/Endorsement-List.pdf",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "mo-hd-78",
+    "status": "not_found",
+    "choice": null,
+    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 29, 2026.",
+    "url": "https://www.nrapvf.org/grades/Missouri/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-hd-79",
+    "status": "no_position",
+    "choice": null,
+    "why": "The board no longer endorses partisan candidates in general elections. Its October 14 editor’s note says it still takes positions in primaries, local nonpartisan elections and on ballot measures.",
+    "url": "https://www.stltoday.com/opinion/editorial/article_d27d6d5f-db25-4ec0-b4ee-87744270193d.html",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "mo-hd-79",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://my.lwv.org/missouri/metro-st-louis",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "mo-hd-79",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "mo-hd-79",
+    "status": "no_position",
+    "choice": null,
+    "why": "The general-election list explicitly says unlisted districts have no endorsement. This district is unlisted.",
+    "url": "https://missourilifepac.org/wp-content/uploads/2026/09/Endorsement-List.pdf",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "mo-hd-79",
+    "status": "not_found",
+    "choice": null,
+    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 29, 2026.",
+    "url": "https://www.nrapvf.org/grades/Missouri/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-hd-80",
+    "status": "no_position",
+    "choice": null,
+    "why": "The board no longer endorses partisan candidates in general elections. Its October 14 editor’s note says it still takes positions in primaries, local nonpartisan elections and on ballot measures.",
+    "url": "https://www.stltoday.com/opinion/editorial/article_d27d6d5f-db25-4ec0-b4ee-87744270193d.html",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "mo-hd-80",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://my.lwv.org/missouri/metro-st-louis",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "mo-hd-80",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "mo-hd-80",
+    "status": "no_position",
+    "choice": null,
+    "why": "The general-election list explicitly says unlisted districts have no endorsement. This district is unlisted.",
+    "url": "https://missourilifepac.org/wp-content/uploads/2026/09/Endorsement-List.pdf",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "mo-hd-80",
+    "status": "not_found",
+    "choice": null,
+    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 29, 2026.",
+    "url": "https://www.nrapvf.org/grades/Missouri/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-hd-81",
+    "status": "no_position",
+    "choice": null,
+    "why": "The board no longer endorses partisan candidates in general elections. Its October 14 editor’s note says it still takes positions in primaries, local nonpartisan elections and on ballot measures.",
+    "url": "https://www.stltoday.com/opinion/editorial/article_d27d6d5f-db25-4ec0-b4ee-87744270193d.html",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "mo-hd-81",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://my.lwv.org/missouri/metro-st-louis",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "mo-hd-81",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "mo-hd-81",
+    "status": "no_position",
+    "choice": null,
+    "why": "The general-election list explicitly says unlisted districts have no endorsement. This district is unlisted.",
+    "url": "https://missourilifepac.org/wp-content/uploads/2026/09/Endorsement-List.pdf",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "mo-hd-81",
+    "status": "not_found",
+    "choice": null,
+    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 29, 2026.",
+    "url": "https://www.nrapvf.org/grades/Missouri/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-hd-82",
+    "status": "no_position",
+    "choice": null,
+    "why": "The board no longer endorses partisan candidates in general elections. Its October 14 editor’s note says it still takes positions in primaries, local nonpartisan elections and on ballot measures.",
+    "url": "https://www.stltoday.com/opinion/editorial/article_d27d6d5f-db25-4ec0-b4ee-87744270193d.html",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "mo-hd-82",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://my.lwv.org/missouri/metro-st-louis",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "mo-hd-82",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "mo-hd-82",
+    "status": "no_position",
+    "choice": null,
+    "why": "The general-election list explicitly says unlisted districts have no endorsement. This district is unlisted.",
+    "url": "https://missourilifepac.org/wp-content/uploads/2026/09/Endorsement-List.pdf",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "mo-hd-82",
+    "status": "not_found",
+    "choice": null,
+    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 29, 2026.",
+    "url": "https://www.nrapvf.org/grades/Missouri/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-hd-84",
+    "status": "no_position",
+    "choice": null,
+    "why": "The board no longer endorses partisan candidates in general elections. Its October 14 editor’s note says it still takes positions in primaries, local nonpartisan elections and on ballot measures.",
+    "url": "https://www.stltoday.com/opinion/editorial/article_d27d6d5f-db25-4ec0-b4ee-87744270193d.html",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "mo-hd-84",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://my.lwv.org/missouri/metro-st-louis",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "mo-hd-84",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "mo-hd-84",
+    "status": "no_position",
+    "choice": null,
+    "why": "The general-election list explicitly says unlisted districts have no endorsement. This district is unlisted.",
+    "url": "https://missourilifepac.org/wp-content/uploads/2026/09/Endorsement-List.pdf",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "mo-hd-84",
+    "status": "not_found",
+    "choice": null,
+    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 29, 2026.",
+    "url": "https://www.nrapvf.org/grades/Missouri/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlcity-collector-revenue",
+    "status": "no_position",
+    "choice": null,
+    "why": "The board no longer endorses partisan candidates in general elections. Its October 14 editor’s note says it still takes positions in primaries, local nonpartisan elections and on ballot measures.",
+    "url": "https://www.stltoday.com/opinion/editorial/article_d27d6d5f-db25-4ec0-b4ee-87744270193d.html",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlcity-collector-revenue",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://my.lwv.org/missouri/metro-st-louis",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "stlcity-collector-revenue",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlcity-license-collector",
+    "status": "no_position",
+    "choice": null,
+    "why": "The board no longer endorses partisan candidates in general elections. Its October 14 editor’s note says it still takes positions in primaries, local nonpartisan elections and on ballot measures.",
+    "url": "https://www.stltoday.com/opinion/editorial/article_d27d6d5f-db25-4ec0-b4ee-87744270193d.html",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlcity-license-collector",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://my.lwv.org/missouri/metro-st-louis",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "stlcity-license-collector",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlcity-recorder-deeds",
+    "status": "no_position",
+    "choice": null,
+    "why": "The board no longer endorses partisan candidates in general elections. Its October 14 editor’s note says it still takes positions in primaries, local nonpartisan elections and on ballot measures.",
+    "url": "https://www.stltoday.com/opinion/editorial/article_d27d6d5f-db25-4ec0-b4ee-87744270193d.html",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlcity-recorder-deeds",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://my.lwv.org/missouri/metro-st-louis",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "stlcity-recorder-deeds",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlcity-retention-wright",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Post-Dispatch editorial index; full articles require a subscription (checked October 29, 2026).",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlcity-retention-wright",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://my.lwv.org/missouri/metro-st-louis",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobar-jpr",
+    "target_id": "stlcity-retention-wright",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Committee recommendation: retain. It recommended retaining all 13 City of St. Louis (22nd Circuit) judges on the 2026 ballot.",
+    "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "stlcity-retention-wright",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "stlcity-retention-wright",
+    "status": "no_position",
+    "choice": null,
+    "why": "The 2026 judge guide lists this judge but says Paul C. Wilson is the only judge with a definitive retention recommendation.",
+    "url": "https://missourilifepac.org/wp-content/uploads/2026/09/2026-General-Election-Judge-Guide.pdf",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlcity-retention-hogan",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Post-Dispatch editorial index; full articles require a subscription (checked October 29, 2026).",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlcity-retention-hogan",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://my.lwv.org/missouri/metro-st-louis",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobar-jpr",
+    "target_id": "stlcity-retention-hogan",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Committee recommendation: retain. It recommended retaining all 13 City of St. Louis (22nd Circuit) judges on the 2026 ballot.",
+    "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "stlcity-retention-hogan",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "stlcity-retention-hogan",
+    "status": "no_position",
+    "choice": null,
+    "why": "The 2026 judge guide lists this judge but says Paul C. Wilson is the only judge with a definitive retention recommendation.",
+    "url": "https://missourilifepac.org/wp-content/uploads/2026/09/2026-General-Election-Judge-Guide.pdf",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlcity-retention-fowler",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Post-Dispatch editorial index; full articles require a subscription (checked October 29, 2026).",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlcity-retention-fowler",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://my.lwv.org/missouri/metro-st-louis",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobar-jpr",
+    "target_id": "stlcity-retention-fowler",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Committee recommendation: retain. It recommended retaining all 13 City of St. Louis (22nd Circuit) judges on the 2026 ballot.",
+    "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "stlcity-retention-fowler",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "stlcity-retention-fowler",
+    "status": "no_position",
+    "choice": null,
+    "why": "The 2026 judge guide lists this judge but says Paul C. Wilson is the only judge with a definitive retention recommendation.",
+    "url": "https://missourilifepac.org/wp-content/uploads/2026/09/2026-General-Election-Judge-Guide.pdf",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlcity-retention-llewellyn",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Post-Dispatch editorial index; full articles require a subscription (checked October 29, 2026).",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlcity-retention-llewellyn",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://my.lwv.org/missouri/metro-st-louis",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobar-jpr",
+    "target_id": "stlcity-retention-llewellyn",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Committee recommendation: retain. It recommended retaining all 13 City of St. Louis (22nd Circuit) judges on the 2026 ballot.",
+    "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "stlcity-retention-llewellyn",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "stlcity-retention-llewellyn",
+    "status": "no_position",
+    "choice": null,
+    "why": "The 2026 judge guide lists this judge but says Paul C. Wilson is the only judge with a definitive retention recommendation.",
+    "url": "https://missourilifepac.org/wp-content/uploads/2026/09/2026-General-Election-Judge-Guide.pdf",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlcity-retention-whyte",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Post-Dispatch editorial index; full articles require a subscription (checked October 29, 2026).",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlcity-retention-whyte",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://my.lwv.org/missouri/metro-st-louis",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobar-jpr",
+    "target_id": "stlcity-retention-whyte",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Committee recommendation: retain. It recommended retaining all 13 City of St. Louis (22nd Circuit) judges on the 2026 ballot.",
+    "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "stlcity-retention-whyte",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "stlcity-retention-whyte",
+    "status": "no_position",
+    "choice": null,
+    "why": "The 2026 judge guide lists this judge but says Paul C. Wilson is the only judge with a definitive retention recommendation.",
+    "url": "https://missourilifepac.org/wp-content/uploads/2026/09/2026-General-Election-Judge-Guide.pdf",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlcity-retention-boyer",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Post-Dispatch editorial index; full articles require a subscription (checked October 29, 2026).",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlcity-retention-boyer",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://my.lwv.org/missouri/metro-st-louis",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobar-jpr",
+    "target_id": "stlcity-retention-boyer",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Committee recommendation: retain. It recommended retaining all 13 City of St. Louis (22nd Circuit) judges on the 2026 ballot.",
+    "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "stlcity-retention-boyer",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "stlcity-retention-boyer",
+    "status": "no_position",
+    "choice": null,
+    "why": "The 2026 judge guide lists this judge but says Paul C. Wilson is the only judge with a definitive retention recommendation.",
+    "url": "https://missourilifepac.org/wp-content/uploads/2026/09/2026-General-Election-Judge-Guide.pdf",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlcity-retention-millikan",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Post-Dispatch editorial index; full articles require a subscription (checked October 29, 2026).",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlcity-retention-millikan",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://my.lwv.org/missouri/metro-st-louis",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobar-jpr",
+    "target_id": "stlcity-retention-millikan",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Committee recommendation: retain. It recommended retaining all 13 City of St. Louis (22nd Circuit) judges on the 2026 ballot.",
+    "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "stlcity-retention-millikan",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "stlcity-retention-millikan",
+    "status": "no_position",
+    "choice": null,
+    "why": "The 2026 judge guide lists this judge but says Paul C. Wilson is the only judge with a definitive retention recommendation.",
+    "url": "https://missourilifepac.org/wp-content/uploads/2026/09/2026-General-Election-Judge-Guide.pdf",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlcity-retention-stovall-reid",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Post-Dispatch editorial index; full articles require a subscription (checked October 29, 2026).",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlcity-retention-stovall-reid",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://my.lwv.org/missouri/metro-st-louis",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobar-jpr",
+    "target_id": "stlcity-retention-stovall-reid",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Committee recommendation: retain. It recommended retaining all 13 City of St. Louis (22nd Circuit) judges on the 2026 ballot.",
+    "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "stlcity-retention-stovall-reid",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "stlcity-retention-stovall-reid",
+    "status": "no_position",
+    "choice": null,
+    "why": "The 2026 judge guide lists this judge but says Paul C. Wilson is the only judge with a definitive retention recommendation.",
+    "url": "https://missourilifepac.org/wp-content/uploads/2026/09/2026-General-Election-Judge-Guide.pdf",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlcity-retention-connolly",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Post-Dispatch editorial index; full articles require a subscription (checked October 29, 2026).",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlcity-retention-connolly",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://my.lwv.org/missouri/metro-st-louis",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobar-jpr",
+    "target_id": "stlcity-retention-connolly",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Committee recommendation: retain. It recommended retaining all 13 City of St. Louis (22nd Circuit) judges on the 2026 ballot.",
+    "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "stlcity-retention-connolly",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "stlcity-retention-connolly",
+    "status": "no_position",
+    "choice": null,
+    "why": "The 2026 judge guide lists this judge but says Paul C. Wilson is the only judge with a definitive retention recommendation.",
+    "url": "https://missourilifepac.org/wp-content/uploads/2026/09/2026-General-Election-Judge-Guide.pdf",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlcity-retention-hays",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Post-Dispatch editorial index; full articles require a subscription (checked October 29, 2026).",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlcity-retention-hays",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://my.lwv.org/missouri/metro-st-louis",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobar-jpr",
+    "target_id": "stlcity-retention-hays",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Committee recommendation: retain. It recommended retaining all 13 City of St. Louis (22nd Circuit) judges on the 2026 ballot.",
+    "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "stlcity-retention-hays",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "stlcity-retention-hays",
+    "status": "no_position",
+    "choice": null,
+    "why": "The 2026 judge guide lists this judge but says Paul C. Wilson is the only judge with a definitive retention recommendation.",
+    "url": "https://missourilifepac.org/wp-content/uploads/2026/09/2026-General-Election-Judge-Guide.pdf",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlcity-retention-roither",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Post-Dispatch editorial index; full articles require a subscription (checked October 29, 2026).",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlcity-retention-roither",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://my.lwv.org/missouri/metro-st-louis",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobar-jpr",
+    "target_id": "stlcity-retention-roither",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Committee recommendation: retain. It recommended retaining all 13 City of St. Louis (22nd Circuit) judges on the 2026 ballot.",
+    "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "stlcity-retention-roither",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "stlcity-retention-roither",
+    "status": "no_position",
+    "choice": null,
+    "why": "The 2026 judge guide lists this judge but says Paul C. Wilson is the only judge with a definitive retention recommendation.",
+    "url": "https://missourilifepac.org/wp-content/uploads/2026/09/2026-General-Election-Judge-Guide.pdf",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlcity-retention-stelzer",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Post-Dispatch editorial index; full articles require a subscription (checked October 29, 2026).",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlcity-retention-stelzer",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://my.lwv.org/missouri/metro-st-louis",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobar-jpr",
+    "target_id": "stlcity-retention-stelzer",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Committee recommendation: retain. It recommended retaining all 13 City of St. Louis (22nd Circuit) judges on the 2026 ballot.",
+    "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "stlcity-retention-stelzer",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "stlcity-retention-stelzer",
+    "status": "no_position",
+    "choice": null,
+    "why": "The 2026 judge guide lists this judge but says Paul C. Wilson is the only judge with a definitive retention recommendation.",
+    "url": "https://missourilifepac.org/wp-content/uploads/2026/09/2026-General-Election-Judge-Guide.pdf",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlcity-retention-dauphin",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Post-Dispatch editorial index; full articles require a subscription (checked October 29, 2026).",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlcity-retention-dauphin",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://my.lwv.org/missouri/metro-st-louis",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobar-jpr",
+    "target_id": "stlcity-retention-dauphin",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Committee recommendation: retain. It recommended retaining all 13 City of St. Louis (22nd Circuit) judges on the 2026 ballot.",
+    "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "stlcity-retention-dauphin",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "stlcity-retention-dauphin",
+    "status": "no_position",
+    "choice": null,
+    "why": "The 2026 judge guide lists this judge but says Paul C. Wilson is the only judge with a definitive retention recommendation.",
+    "url": "https://missourilifepac.org/wp-content/uploads/2026/09/2026-General-Election-Judge-Guide.pdf",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "slps-board",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Post-Dispatch editorial index; full articles require a subscription (checked October 29, 2026).",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "slps-board",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://my.lwv.org/missouri/metro-st-louis",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "slps-board",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlcity-prop-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Post-Dispatch editorial index; full articles require a subscription (checked October 29, 2026).",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlcity-prop-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement for this measure was found in the Metro League’s current site and amendments page (checked October 29, 2026).",
+    "url": "https://my.lwv.org/missouri/metro-st-louis/article/amendments",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "stlcity-prop-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlcity-prop-b",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "The editorial index states that the board opposes City Proposition B (“‘No’ on City Prop B & County Prop S”). The full reasoning requires a subscription.",
+    "url": "https://www.stltoday.com/opinion/editorial/article_ef192b84-9b22-4f63-9137-38b9ffd44160.html",
+    "date": "2026-10-18",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlcity-prop-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement for this measure was found in the Metro League’s current site and amendments page (checked October 29, 2026).",
+    "url": "https://my.lwv.org/missouri/metro-st-louis/article/amendments",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "stlcity-prop-b",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-29",
+    "confidence": "sourced"
+  }
+]

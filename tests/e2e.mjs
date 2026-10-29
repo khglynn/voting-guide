@@ -3961,6 +3961,83 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
   noErrors(page, 'Address on the first page');
   await ctx.close();
 }
+// 63120 is the City of St. Louis and Pine Lawn, in St. Louis County (review of #46, Oct 29). The ZIP alone asks
+// which; an address settles it by the Census's county code (29510 the City, 29189 the County, both "St. Louis"),
+// on the first page and on a City ballot, which moves to Missouri's statewide races with the picks they share.
+// Census is answered here, with made-up addresses.
+{
+  const stl = (city) => ({ result: { addressMatches: [{ matchedAddress: city ? 'TEST ONE, ST LOUIS, MO, 63120' : 'TEST TWO, PINE LAWN, MO, 63120', geographies: {
+    States: [{ STATE: '29' }], 'Incorporated Places': [{ BASENAME: city ? 'St. Louis' : 'Pine Lawn' }], '119th Congressional Districts': [{ BASENAME: '1' }],
+    Counties: [city ? { GEOID: '29510', STATE: '29', COUNTY: '510', NAME: 'St. Louis city', BASENAME: 'St. Louis' } : { GEOID: '29189', STATE: '29', COUNTY: '189', NAME: 'St. Louis County', BASENAME: 'St. Louis' }] } }] } });
+  const route = async (page, box) => page.route('https://geocoding.geo.census.gov/**', (r) => {
+    const cb = new URL(r.request().url()).searchParams.get('callback');
+    return r.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify(box.answer)})` });
+  });
+  const lookUp = async (page, open) => {
+    await tap(page, open);
+    await page.fill('#addr-in', 'a test lookup');
+    await page.locator('form[data-form="addr"] button[type=submit]').tap();
+  };
+  const OUT = 'Your address is in St. Louis County, outside the City of St. Louis, so here are Missouri’s statewide races.';
+  {
+    // The ZIP alone: the City, Pine Lawn (the state's races) or not sure (the same, saying the ZIP is split).
+    const { ctx, page } = await newPage();
+    const box = { answer: stl(true) };
+    await route(page, box);
+    await openZip(page, '63120');
+    await page.waitForSelector('[data-fk="cp-outside"]', { timeout: 15000 });
+    check('St. Louis 63120: the ZIP asks between the City and Pine Lawn, never opening the City', !!(await page.$('[data-fk="cp-st-louis-city-mo"]')) && (await partsText(page, '[data-fk="cp-outside"]')) === 'Pine Lawn, in St. Louis County Missouri’s statewide races only, for now' && !(await page.$('.door-place')), await text(page, '.choose'));
+    check('St. Louis 63120: "I’m not sure" starts with the statewide races', /Start with Missouri’s statewide races/.test(await text(page, '[data-fk="cp-unsure"]')), await text(page, '[data-fk="cp-unsure"]'));
+    await tap(page, '[data-fk="cp-unsure"]');
+    await page.waitForSelector('#door .cov-card', { timeout: 15000 });
+    const card = await partsText(page, '#door .cov-card');
+    check('St. Louis 63120: not sure, the card says the ZIP is split and offers the address, never "your city is in"', /^Missouri, statewide races only/.test(await text(page, '.door-place')) && /^63120 is split between the City of St\. Louis and Pine Lawn, in St\. Louis County\. Here now: Missouri’s statewide races, the same for both, with picks from \d+ of \d+ sources\. Live in the City of St\. Louis\? Use your address and we’ll open its ballot\. Use my address/.test(card) && !/guide now|Ask Kevin/.test(card), card);
+    await lookUp(page, '#door [data-fk="cov-addr"]');
+    await page.waitForSelector('.door-found', { timeout: 15000 });
+    check('St. Louis 63120: a City address from there opens the City', /^St\. Louis/.test(await text(page, '.door-place span')) && !(await page.$('.addr-moved')), await text(page, '.door-place'));
+    noErrors(page, 'St. Louis 63120 not sure');
+    await ctx.close();
+  }
+  {
+    // From the place question, a Pine Lawn address: the statewide races, saying why, and the card asks for the town.
+    const { ctx, page } = await newPage();
+    const box = { answer: stl(false) };
+    await route(page, box);
+    await openZip(page, '63120');
+    await page.waitForSelector('[data-fk="cp-outside"]', { timeout: 15000 });
+    await lookUp(page, '.choose [data-act="addr-open"]');
+    await page.waitForSelector('.door-found', { timeout: 15000 });
+    check('St. Louis 63120: a County address from the place question gets the statewide races and says why', /^Missouri, statewide races only/.test(await text(page, '.door-place')) && (await text(page, '.door-where .addr-moved')) === OUT, `${await text(page, '.door-place')} | ${await text(page, '.addr-moved')}`);
+    check('St. Louis 63120: its card asks for the town, not "split" or "your city is in"', /^Your city’s races aren’t in the guide yet\./.test(await partsText(page, '#door .cov-card')) && !!(await page.$('#door [data-act="cov-ask"]')), await partsText(page, '#door .cov-card'));
+    noErrors(page, 'St. Louis 63120 County address');
+    await ctx.close();
+  }
+  {
+    // A City ballot, then a Pine Lawn address: the ballot moves to the statewide races, keeping the pick they share.
+    const { ctx, page } = await newPage();
+    const box = { answer: stl(false) };
+    await route(page, box);
+    await openZip(page, '63120');
+    await page.waitForSelector('[data-fk="cp-st-louis-city-mo"]', { timeout: 15000 });
+    await tap(page, '[data-fk="cp-st-louis-city-mo"]');
+    await throughSetup(page);
+    check('St. Louis 63120: picking the City opens its ballot', !!(await page.$('#i-stlcity-recorder-deeds')), await text(page, '.mast'));
+    await openRow(page, 'mo-amendment-3');
+    await tap(page, '#i-mo-amendment-3 [data-act="pick"][data-v="YES"]');
+    await lookUp(page, '.addrbox [data-act="addr-open"]');
+    await page.waitForSelector('.addrbox .addr-moved', { timeout: 15000 });
+    check('St. Louis 63120: a County address moves the ballot to the statewide races and says why, with the pick kept', (await text(page, '.addrbox .addr-moved')) === `${OUT} We kept your pick for a race on both ballots.`
+      && !(await page.$('#i-stlcity-recorder-deeds')) && !(await page.$('#i-mo-us-house-1')) && /Missouri/.test(await text(page, '.mast .place')), `${await text(page, '.addrbox .addr-moved')} | ${await text(page, '.mast .place')}`);
+    check('St. Louis 63120: the moved ballot still shows what the Census found, this visit', /^Found: TEST TWO, PINE LAWN/i.test(await text(page, '.addrbox .addr-found')), await text(page, '.addrbox .addr-found'));
+    check('St. Louis 63120: the shared pick came along', !(await page.$('#i-mo-amendment-3[data-undecided]')) && !!(await page.$('#i-mo-amendment-3')), await text(page, '#i-mo-amendment-3'));
+    check('St. Louis 63120: the moved ballot’s card asks for the town, never "your city is in"', /^Your city’s races aren’t in the guide yet\./.test(await partsText(page, '#r-restore .cov-card')), await partsText(page, '#r-restore .cov-card'));
+    await page.reload();
+    await page.waitForSelector('#plan', { timeout: 15000 });
+    check('St. Louis 63120: after a reload it stays the statewide ballot, still not "your city is in"', !(await page.$('#i-stlcity-recorder-deeds')) && /^Your city’s races aren’t in the guide yet\./.test(await partsText(page, '#r-restore .cov-card')) && !(await page.$('.addr-moved')), await partsText(page, '#r-restore .cov-card'));
+    noErrors(page, 'St. Louis 63120 moved ballot');
+    await ctx.close();
+  }
+}
 // A DC ward's ZIP: nothing on the ballot turns on the address, so there is no address box before a
 // lookup; after one from the first page, the box holds only what was found, this visit; after a
 // reload there is no box again. Census is answered here, with a made-up address.

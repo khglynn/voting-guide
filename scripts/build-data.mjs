@@ -141,6 +141,35 @@ function placeByCounty(list, p, where) {
   // voter the address lookup puts in another county gets the state's links instead.
   return out.length ? out : null;
 }
+/* The Census county codes (5 digits, state then county) a place's voters all live in (Oct 29): a city that is
+   its own county, like the City of St. Louis (29510) or Baltimore (24510), whose name the Census also gives the
+   county beside it. An address the Census puts in another county is never this place's (geo.ts outsideOf). */
+function placeCountyFips(list, where) {
+  if (list == null) return null;
+  if (!Array.isArray(list)) { warn(`${where}: county_fips is not a list; dropped it`); return null; }
+  const out = list.map(String).filter((c) => {
+    if (/^\d{5}$/.test(c)) return true;
+    warn(`${where}: county_fips ${c} is not a 5-digit Census county code; dropped it`);
+    return false;
+  });
+  return out.length ? out : null;
+}
+/* A ZIP of the place's that also reaches a town the guide doesn't cover (Oct 29: 63120 is the City of St. Louis
+   and Pine Lawn, in St. Louis County), named the way the chooser says it ("Pine Lawn, in St. Louis County"). A
+   ZIP listed here never opens the place by itself: the first page asks, and the outside choice opens the
+   state's ballot. */
+function placeZipOutside(obj, p, where) {
+  if (obj == null) return null;
+  if (typeof obj !== 'object' || Array.isArray(obj)) { warn(`${where}: zip_outside is not an object; dropped it`); return null; }
+  const placeZips = new Set((p.zips || []).map(String));
+  const out = {};
+  for (const [z, name] of Object.entries(obj)) {
+    if (!placeZips.has(z)) { warn(`${where}: zip_outside lists ZIP ${z}, which the place doesn't; dropped it`); continue; }
+    if (!isStr(name) || name.trim().length > 80) { warn(`${where}: zip_outside ${z} needs a short name (80 characters at most); dropped it`); continue; }
+    out[z] = name.trim();
+  }
+  return Object.keys(out).length ? out : null;
+}
 /* A county's own answer to one of the state's common questions (Oct 28: Orange County's lost mail ballot,
    with its own phone line and dates), keyed by the state situation's id. plan.ts uses it when every place on
    the ballot gives the same one; the state's question and buttons stay. */
@@ -524,6 +553,7 @@ for (const f of listJson('places')) {
     district_finders: districtFinders(p.district_finders, f),
     heads_up: headsUp(p.heads_up, f),
     ...optional({ early_in_person: placeEarly(p.early_in_person, f), lookups: placeLookups(p.lookups, f), by_county: placeByCounty(p.by_county, p, f), situations: placeSituations(p.situations, f),
+      county_fips: placeCountyFips(p.county_fips, f), zip_outside: placeZipOutside(p.zip_outside, p, f),
       // the official pages behind the place's own facts (its notes, office lines and answers), for the record
       sources: (Array.isArray(p.sources) ? p.sources : []).filter((x) => x && isStr(x.name) && safeUrl(x.url)).map((x) => ({ name: x.name.trim(), url: safeUrl(x.url) })),
       dated: datedList(p.dated, p, f) }),
@@ -867,7 +897,10 @@ for (const [id, p] of places) {
   // as the Census names the place, beside its bundle. And the same coverage numbers for this place's
   // ballot (statewide races included), plus its own races and how many of them have any pick: a place
   // none of whose own sources has picks reads as thin.
-  index.places[id] = { label: p.label, state: p.state, counties: p.counties, local_count: local.length, ...(pm.length ? { maps: pm.map((m) => m.file) } : {}), ...coverageOf(stateBundles.get(p.state), [bundle], id) };
+  // county_fips and zip_outside too, so the first page can rule a place out of an address, or ask about a ZIP
+  // that reaches past it, before any bundle loads (geo.ts settleAddress, app.ts lookZip).
+  index.places[id] = { label: p.label, state: p.state, counties: p.counties, local_count: local.length, ...(pm.length ? { maps: pm.map((m) => m.file) } : {}),
+    ...optional({ county_fips: p.county_fips, zip_outside: p.zip_outside }), ...coverageOf(stateBundles.get(p.state), [bundle], id) };
   index.states[p.state].places.push(id);
   for (const z of p.zips) {
     (index.zips[z] = index.zips[z] || []);

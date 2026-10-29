@@ -4,7 +4,7 @@
 import type { Index, PlaceBundle, StateBundle } from './types';
 import { S, emptyBallotState, noSections, persist, leaveLast, leftBallot, savedBallot, parseShareHead, decodeShare, normalizeRanks, type BallotState, type View } from './state';
 import { buildBallot, localize, entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, rankMax, decisionItems, chosenIds, sectionOf, sameSeat, type Ballot } from './ballot';
-import { zipState, censusLookup, placeFromGeo, settleAddress, withPlace, tidyAddress, type GeoResult } from './geo';
+import { zipState, censusLookup, settleAddress, ballotFor, whichPlace, outsideOf, zipPlaces, placeName, withPlace, tidyAddress, type GeoResult } from './geo';
 import { toast, hideToast } from './util';
 import { keepPrivate } from './errors';
 import { track, type Events } from './stats';
@@ -88,7 +88,7 @@ export function resetUI(): void {
   // The sections as you left them on this ballot (S.b.secs, saved with it).
   const secs = S.b.secs || noSections();
   u.folded = new Set(secs.folded); u.unfolded = new Set(secs.unfolded); u.reveal = new Set(secs.reveal);
-  u.noteOpen.clear(); u.reader = null; u.sheet = null; u.sheetFrom = null; u.sheetBack = null; u.addrOpen = false; u.addrMsg = null; u.addrFail = ''; u.addrCounty = null; u.addrFound = null; u.addrWhich = null; u.addrMaps = []; u.addrMapsPending = false; u.saveOpen = false; u.copyFallback = null; u.bulk = null; u.bulkWhy = null; u.addrFilled = null; u.lensEmptied = false;
+  u.noteOpen.clear(); u.reader = null; u.sheet = null; u.sheetFrom = null; u.sheetBack = null; u.addrOpen = false; u.addrMsg = null; u.addrFail = ''; u.addrCounty = null; u.addrFound = null; u.addrMoved = null; u.addrWhich = null; u.addrMaps = []; u.addrMapsPending = false; u.saveOpen = false; u.copyFallback = null; u.bulk = null; u.bulkWhy = null; u.addrFilled = null; u.lensEmptied = false;
   u.resume = false; u.covAsk = ''; u.srcQ = ''; u.wiQ = '';
   u.open.delete('voted');
 }
@@ -122,7 +122,7 @@ export function toDoor(): void {
   S.doorSaved = leftBallot(S.view === 'ballot' && S.ballot ? decisionItems().filter((x) => x.done).length : undefined);
   cancelLoad();
   S.view = 'start'; S.ballot = null; S.zipChoice = null; S.picked = null; S.coverage = null; S.pending = null; S.loadErr = null; S.retry = null; S.zipErr = '';
-  S.ui.view = 'ballot'; S.ui.reader = null; S.ui.sheet = null; S.ui.sheetBack = null; S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.addrFail = ''; S.ui.addrCounty = null; S.ui.addrFound = null; S.ui.addrWhich = null; S.ui.resume = false;
+  S.ui.view = 'ballot'; S.ui.reader = null; S.ui.sheet = null; S.ui.sheetBack = null; S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.addrFail = ''; S.ui.addrCounty = null; S.ui.addrFound = null; S.ui.addrMoved = null; S.ui.addrWhich = null; S.ui.resume = false;
   forgetUndo();
   hideToast();
   render();
@@ -227,11 +227,26 @@ export function cancelLoad(): void { loadSeq++; previewing = null; lookingUp = n
    `after`: what to do once it's open (an address's districts), on the first try or on "Try again".
    `how`: how the voter got here, counted when the ballot shows (stats.ts "ballot"); a save link counts as
    "shared" by itself. A first-page ballot counts when "Show my ballot" shows it (showBallot). None: it
-   isn't a new ballot (an address narrowing the one already open), so nothing is counted. */
+   isn't a new ballot (an address narrowing the one already open), so nothing is counted.
+   `carry`: the ballot an address lookup moved the voter off (Oct 29: a Pine Lawn address on the City of
+   St. Louis's ballot). A ballot this device has nothing for takes its picks, ranks and notes for the races
+   both share, and its sources, party and "Hide races I've decided"; never its districts or what its address
+   settled. One that has its own keeps them. */
 type How = Events['ballot']['how'];
-type OpenOpts = { share?: ReturnType<typeof parseShareHead>; door?: boolean; noSetup?: boolean; how?: How; after?: () => void | Promise<void> };
+type OpenOpts = { share?: ReturnType<typeof parseShareHead>; door?: boolean; noSetup?: boolean; how?: How; carry?: BallotState; after?: () => void | Promise<void> };
+/* What `carry` brings: the picks for races on both ballots, counted the way saved picks are. */
+function carryOver(from: BallotState, to: BallotState, ballot: Ballot): number {
+  const on = (k: string) => ballot.byId.has(k.split('|')[0]);
+  const keep = <T>(o: Record<string, T>): Record<string, T> => Object.fromEntries(Object.entries(o).filter(([k]) => on(k)));
+  to.picks = keep(from.picks); to.ranks = keep(from.ranks || {}); to.notes = keep(from.notes); to.auto = keep(from.auto);
+  to.noAuto = from.noAuto.filter(on);
+  to.sources = from.sources ? [...from.sources] : null; to.party = from.party; to.hideDecided = from.hideDecided;
+  return countPicks(to);
+}
 /* How the ballot on the first page was found, for when "Show my ballot" shows it. */
 let doorHow: How = 'zip';
+/* How many picks the last `carry` brought, for the line that says why the ballot changed. */
+let lastCarried = 0;
 /* A ballot shown, counted by its state code only (stats.ts Events: a place can name the ZIP typed). */
 function shown(b: Ballot, how: How): void {
   track('ballot', { state: b.st, how });
@@ -266,6 +281,9 @@ async function loadBallot(st: string, placeIds: string[], zip: string, opts: Ope
     const existing = S.tryMode ? null : savedBallot(ballot.key);
     const reopened = existing ? normalizeRanks(ballot, existing) : 0;
     S.b = existing || emptyBallotState(zip);
+    const carried = !existing && opts.carry ? carryOver(opts.carry, S.b, ballot) : 0;
+    // Who the voter isn't (S.b.away) is about one ZIP's places: another ZIP starts over.
+    if (zip && S.b.zip !== zip) S.b.away = [];
     if (zip) S.b.zip = zip;
     // Back on the first page after a reload, the saved line's count, now by the bar's rule.
     if (S.doorSaved && S.doorSaved.key === ballot.key && !opts.share) {
@@ -320,6 +338,7 @@ async function loadBallot(st: string, placeIds: string[], zip: string, opts: Ope
     if (!door) window.scrollTo(0, 0);
     if (S.pending) $('[data-fk="restore-yes"]')?.focus();
     watchAdds('load');
+    lastCarried = carried;
     // What the caller does next (an address's districts) can't turn a loaded ballot into a load error.
     if (opts.after) { try { await opts.after(); } catch (e) { console.error(e); } }
     return true;
@@ -367,9 +386,11 @@ export async function lookZip(v: string): Promise<void> {
     render(['mast']); return;
   }
   if (S.zip !== v) return; // typed on meanwhile
-  const places = idx.zips[v] || [];
-  if (places.length === 1) { if (await openBallot(idx.places[places[0]].state, places, v, { door: true, how: 'zip' })) dropKeypad(); return; }
-  if (places.length > 1) { S.zipChoice = { zip: v, placeIds: places }; S.ui.addrOpen = false; render(['mast']); return; }
+  // One place opens; several ask which. So does one place whose ZIP also reaches a town the guide doesn't
+  // cover (zip_outside: 63120 is the City of St. Louis and Pine Lawn), where the other answer is the state's.
+  const { ids: places, sure } = zipPlaces(idx, v);
+  if (sure) { if (await openBallot(idx.places[places[0]].state, places, v, { door: true, how: 'zip' })) dropKeypad(); return; }
+  if (places.length) { S.zipChoice = { zip: v, placeIds: places }; S.ui.addrOpen = false; render(['mast']); return; }
   const st = zipState(v);
   if (st && idx.states[st]) { if (await openBallot(st, [], v, { door: true, how: 'zip' })) dropKeypad(); return; }
   if (!st) { S.zipErr = 'We couldn’t find that ZIP. Check the digits and try again.'; render(['mast']); return; }
@@ -772,13 +793,20 @@ export function dismissResume(): void {
    result lives in geo.ts (placeFromGeo, settleAddress), where the state must match before
    anything else. Three places ask: the first page before any ZIP, the place question, a ballot. */
 /* A place picked on the place question. If an address brought the question up, its districts
-   come along. `how`: "list" from the shelf's list of cities; otherwise the ZIP or address that asked. */
-export async function openChosen(ids: string[], zip: string, how?: How): Promise<void> {
+   come along. `how`: "list" from the shelf's list of cities; otherwise the ZIP or address that asked.
+   No places: the state's ballot, from a ZIP that also reaches a town the guide doesn't cover (`st0` names
+   the state). `away`: the places the voter said they're not in ("Pine Lawn, in St. Louis County"), kept
+   with that ballot so it never offers one as their city; "I'm not sure" leaves it empty. */
+export async function openChosen(ids: string[], zip: string, how?: How, st0?: string, away: string[] = []): Promise<void> {
   const g = chooserGeo && chooserGeo.zip === zip ? chooserGeo.r : null;
   chooserGeo = null;
-  const st = S.index!.places[ids[0]].state;
+  const st = st0 || S.index!.places[ids[0]].state;
   const asked = S.zipChoice && S.zipChoice.zip === zip ? S.zipChoice : null;
-  if (await openBallot(st, ids, zip, { door: true, how: how || (g ? 'address' : 'zip'), after: g && g.state === st ? () => applyGeo(g) : undefined })) {
+  const after = async (): Promise<void> => {
+    if (!ids.length) S.b.away = [...away];
+    if (g && g.state === st) await applyGeo(g);
+  };
+  if (await openBallot(st, ids, zip, { door: true, how: how || (g ? 'address' : 'zip'), after })) {
     S.picked = asked;
     if (asked) render(['mast']);
     doorFocus();
@@ -863,8 +891,20 @@ export async function runAddress(addr: string): Promise<void> {
   }
   await useMatch(list[0]);
 }
+/* Why an address opened another ballot than the one its ZIP (or the voter) had open (Oct 29). `left`: the
+   places it isn't in, by its county; with none, the place it is in (`to`). */
+function movedWhy(idx: Index, st: string, r: GeoResult, left: string[], to: string | null): string {
+  const n = lastCarried;
+  const kept = !n ? '' : n === 1 ? ' We kept your pick for a race on both ballots.' : ` We kept your ${n} picks for races on both ballots.`;
+  if (to) return `Your address is in ${placeName(idx.places[to])}, so here is its ballot.${kept}`;
+  const out = left.length === 1 ? `, outside ${placeName(idx.places[left[0]])}` : '';
+  return `Your address is in ${r.countyName || 'another county'}${out}, so here are ${idx.states[st]?.name || st}’s statewide races.${kept}`;
+}
 /* One Census match, from the lookup or tapped from "Which one is yours?": the place it opens on the
-   first page or the place question, or the districts it settles on a ballot. */
+   first page or the place question, or the districts it settles on a ballot. An address whose county
+   isn't a place's (outsideOf) never gets that place's ballot: the first page and the place question
+   open the place the Census names or the state's races, and a ballot moves there, with the picks
+   both share (Oct 29: a Pine Lawn address in 63120 was getting the City of St. Louis's ballot). */
 export async function useMatch(r: GeoResult): Promise<void> {
   const choosing = S.view !== 'ballot' && S.zipChoice;
   const b = S.view === 'ballot' ? S.ballot : null;
@@ -895,16 +935,26 @@ export async function useMatch(r: GeoResult): Promise<void> {
       $(`[data-fk="cp-${CSS.escape(hit.ids[0])}"]`)?.focus();
       return;
     }
-    if (await openBallot(hit.st, hit.ids, hit.zip, { door: true, how: 'address', after: () => applyGeo(geo) })) doorFocus();
+    // The state's races where the ZIP opens a place the address's county rules out: the ballot remembers
+    // the voter isn't in it, and says why.
+    const left = !hit.ids.length && hit.zip ? (idx.zips[hit.zip] || []).filter((id) => idx.places[id]?.state === hit.st && outsideOf(idx.places[id], r)) : [];
+    const after = async (): Promise<void> => {
+      if (left.length) { S.b.away = left; S.ui.addrMoved = movedWhy(idx, hit.st, r, left, null); }
+      await applyGeo(geo);
+    };
+    if (await openBallot(hit.st, hit.ids, hit.zip, { door: true, how: 'address', after })) doorFocus();
     return;
   }
   if (choosing && S.zipChoice) {
     const idx = S.index!;
     const ids = S.zipChoice.placeIds;
-    const hit = placeFromGeo(idx.places, ids, r);
+    const hit = whichPlace(idx.places, ids, r);
     if (hit) warmPlaces(idx, [hit]);
     if (!hit) {
       const st = idx.places[ids[0]]?.state;
+      // In the state but outside every place offered (a Pine Lawn address for 63120): where the first page
+      // would send it, the place the Census names or the state's races.
+      if (r.state && r.state === st && ids.every((id) => outsideOf(idx.places[id], r))) { S.zipChoice = null; await useMatch(r); return; }
       S.ui.addrMsg = r.state && st && ids.every((id) => idx.places[id].state !== r.state)
         ? `That address is outside ${idx.states[st]?.name || st}. Check the ZIP, or pick a place below.`
         : 'That address didn’t match one of these places. Pick one, or “I’m not sure”.';
@@ -918,9 +968,22 @@ export async function useMatch(r: GeoResult): Promise<void> {
   }
   if (!b) return;
   if (r.state && r.state !== b.st) { addrFailed(`That address is outside ${b.stateName}. Change your ZIP first.`, 'miss'); return; }
-  if (b.places.length > 1) {
-    const hit = placeFromGeo(S.index!.places, b.places.map((p) => p.id), r);
-    if (hit) { await openBallot(b.st, [hit], S.b.zip, { noSetup: true, after: () => applyGeo(geo) }); return; }
+  // Which ballot the address belongs on (geo.ts ballotFor). Either way the picks for races both ballots share
+  // come along (carry); a narrowing says nothing, a move says why.
+  const idx = S.index!;
+  const here = b.places.map((p) => p.id);
+  const go = ballotFor(idx, here, r);
+  if (go) {
+    const { to, out } = go;
+    const named = to[0] || null;
+    const moved = !named || !here.includes(named);
+    const after = async (): Promise<void> => {
+      if (!to.length) S.b.away = here;
+      if (moved) S.ui.addrMoved = movedWhy(idx, b.st, r, out ? here : [], named);
+      await applyGeo(geo);
+    };
+    await openBallot(b.st, to, S.b.zip, { noSetup: true, carry: S.b, after });
+    return;
   }
   await applyGeo(r);
 }

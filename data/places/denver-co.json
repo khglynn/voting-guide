@@ -5,6 +5,9 @@
   "counties": [
     "Denver"
   ],
+  "county_fips": [
+    "08031"
+  ],
   "county_election_office": {
     "name": "Denver Elections Division (Clerk and Recorder Paul D. López), 200 W. 14th Ave., Denver 80204",
     "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division",
@@ -203,6 +206,10 @@
     {
       "name": "U.S. House: find your representative",
       "url": "https://www.house.gov/representatives/find-your-representative"
+    },
+    {
+      "name": "U.S. Census Bureau: county codes (the City and County of Denver is 08031)",
+      "url": "https://www.census.gov/library/reference/code-lists/ansi.html"
     }
   ]
 }

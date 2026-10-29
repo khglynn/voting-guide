@@ -6,6 +6,9 @@
     "St. Louis City"
   ],
   "county_label": "City of St. Louis",
+  "county_fips": [
+    "29510"
+  ],
   "county_election_office": {
     "name": "Board of Election Commissioners for the City of St. Louis, 300 N. Tucker Blvd., St. Louis, MO 63101 (the City board downtown, not the St. Louis County board in St. Ann)",
     "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/index.cfm",
@@ -42,7 +45,10 @@
     "63139",
     "63147"
   ],
-  "zip_caveats": "Every voter in the City gets the same City offices, the 22nd Circuit judges, the St. Louis Public Schools board race and City Propositions 1 and B. The whole City is in Missouri's 1st U.S. House district. Only the state legislature splits it: the City has eight state House districts on the ballot (76 to 82 and 84), and most ZIPs reach into two or more of them (63110 alone touches four). Part of the City is in state Senate District 5, which has no race this year; the rest is District 4. Your address settles all three. One ZIP here crosses the City line: in 63120, a corner of the ZIP is Pine Lawn, in St. Louis County, which votes on the County's ballot. A few blocks of the City have ZIPs that are mostly St. Louis County (63117, 63119, 63123, 63130, 63133, 63136, 63137 and 63143): if you live in the City with one of those ZIPs, this is your ballot, and your elections office is the City's board on Tucker, not the County's in St. Ann.",
+  "zip_caveats": "Every voter in the City gets the same City offices, the 22nd Circuit judges, the St. Louis Public Schools board race and City Propositions 1 and B. The whole City is in Missouri's 1st U.S. House district. Only the state legislature splits it: the City has eight state House districts on the ballot (76 to 82 and 84), and most ZIPs reach into two or more of them (63110 alone touches four). Part of the City is in state Senate District 5, which has no race this year; the rest is District 4. Your address settles all three. One ZIP here crosses the City line: in 63120, a corner of the ZIP is Pine Lawn, in St. Louis County, which votes on the County's ballot, so the guide asks which one you live in (zip_outside) and gives Pine Lawn Missouri's statewide races. A few blocks of the City have ZIPs that are mostly St. Louis County (63117, 63119, 63123, 63130, 63133, 63136, 63137 and 63143): those ZIPs alone open Missouri's statewide races (63119 opens Webster Groves), and an address lookup moves a City address to this ballot. If you live in the City with one of those ZIPs, this is your ballot, and your elections office is the City's board on Tucker, not the County's in St. Ann. The Census's county code tells the City (29510) from St. Louis County (29189), whose names it gives alike (county_fips).",
+  "zip_outside": {
+    "63120": "Pine Lawn, in St. Louis County"
+  },
   "contest_ids": [
     "mo-state-auditor",
     "mo-retention-wilson",
@@ -241,6 +247,14 @@
     {
       "name": "City Election Board: update your name or address",
       "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/voter/name-change.cfm"
+    },
+    {
+      "name": "U.S. Census Bureau: county codes (the City of St. Louis is 29510, St. Louis County 29189)",
+      "url": "https://www.census.gov/library/reference/code-lists/ansi.html"
+    },
+    {
+      "name": "U.S. Census Bureau: 2020 ZIP Code Tabulation Areas to places (63120 reaches the City and Pine Lawn)",
+      "url": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_place20_natl.txt"
     }
   ],
   "notes": "Hand in a mail ballot at the City Election Board, 300 N. Tucker Blvd., during office hours, or mail it there; it must arrive by 7 PM Nov 3, and postmarks don't count. A mailed ballot gets no confirmation unless you send it certified. Voting at Machacek Library? It has moved across the street to Storyline Church, which shares the parking lot.",

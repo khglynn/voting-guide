@@ -31,6 +31,7 @@ export interface BallotState {
   hideDecided: boolean;              // "Hide races I've decided", on this device; never in the save link
   mine: string[];                    // races on your ballot that might not have been: put there by an address lookup (then also in addrSet) or by your own "It's on my ballot"; never in the save link
   secs: SectionsShown;               // the sections and court groups you folded, opened or showed decided rows in, on this device; never in the save link
+  away: string[];                    // places this ballot's ZIP opens that the voter isn't in, by their own answer ("Pine Lawn, in St. Louis County") or their address's county (Oct 29), so a statewide ballot never offers one as their city; never the address, never in the save link
   addrSet: string[];                 // what the last address lookup settled and the voter hasn't changed since: district questions (group keys), so the race says so, and the "may apply" races it moved (item ids), so a corrected address can undo them; never the address, never in the save link
 }
 /* What you did to the ballot's sections, kept with it so a reload looks the way you left it (Kevin,
@@ -40,7 +41,7 @@ export const noSections = (): SectionsShown => ({ folded: [], unfolded: [], reve
 export const emptyBallotState = (zip = ''): BallotState => ({
   zip, picks: {}, ranks: {}, auto: {}, noAuto: [], notes: {}, districts: {}, notMine: [], sources: null,
   planSeen: false, offerDismissed: null, addrNote: null, party: null, ticks: [], setupDone: false, hideDecided: false, mine: [],
-  secs: noSections(), addrSet: [],
+  secs: noSections(), addrSet: [], away: [],
 });
 
 /* View state for the ledger. Nothing here is saved, except the section sets, which persist() copies to
@@ -70,6 +71,7 @@ export interface UI {
   addrMsg: string | null;
   addrFail: '' | 'down' | 'miss'; // the lookup didn't answer (Try again) or matched nothing usable
   addrCounty: string | null;  // the county the Census put that address in ("Travis"), for this visit only: picks a county's where-to-vote links (ballot.localize)
+  addrMoved: string | null;   // why an address lookup opened another ballot ("Your address is in St. Louis County, so ..."), for this visit only
   addrFound: string | null;   // the address the Census matched, tidied, shown back until a reload or another ballot ("Found: ...")
   addrWhich: GeoResult[] | null; // the Census matched several addresses: "Which one is yours?"
   addrMaps: string[];         // after a lookup, what the district maps said beyond the races they set, for this visit only: the voting precinct, a line they didn't guess at, a map that didn't load
@@ -148,7 +150,7 @@ export const S = {
   prefs: { parties: null, endorsedOnly: false, foldDecided: true, autoPick: false } as Prefs,
   ui: {
     view: 'ballot', open: new Set(), row: null, page: {}, others: new Set(), folded: new Set(), unfolded: new Set(), reveal: new Set(), keep: null, beat: null,
-    noteOpen: new Set(), reader: null, sheet: null, report: null, sheetFrom: null, sheetBack: null, addrOpen: false, addrBusy: false, addrMsg: null, addrFail: '', addrCounty: null, addrFound: null, addrWhich: null, addrMaps: [], addrMapsPending: false, saveOpen: false, copyFallback: null, bulk: null, bulkWhy: null, addrFilled: null, lensEmptied: false,
+    noteOpen: new Set(), reader: null, sheet: null, report: null, sheetFrom: null, sheetBack: null, addrOpen: false, addrBusy: false, addrMsg: null, addrFail: '', addrCounty: null, addrFound: null, addrMoved: null, addrWhich: null, addrMaps: [], addrMapsPending: false, saveOpen: false, copyFallback: null, bulk: null, bulkWhy: null, addrFilled: null, lensEmptied: false,
     setupFill: false, setupOnly: false, resume: false, covAsk: '', srcQ: '', wiQ: '',
   } as UI,
   /* ?try=fresh|aunt|straight|sources: a scenario on whatever ballot opens, never saved. */

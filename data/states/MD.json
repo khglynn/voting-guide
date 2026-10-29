@@ -588,17 +588,17 @@
     {
       "path": "situations.away_on_election_day.answer",
       "from": "2026-10-30",
-      "text": "Early voting ended Thursday, October 29. The deadline to have a mail-in ballot mailed was October 27. You can still get a Print-At-Home ballot online through October 30, or pick one up in person at your local board through 8 PM on Election Day (Baltimore City: 417 E. Fayette St.). To return a ballot now, use a drop box or the board, by 8 PM on November 3; don't count on the mail."
+      "text": "Early voting ended Thursday, October 29. The deadline to have a mail-in ballot mailed was October 27. You can still get a Print-At-Home ballot online through October 30. Or pick one up in person at your local board through 8 PM on Election Day (Baltimore City: 417 E. Fayette St.). To return a ballot now, use a drop box or the board by 8 PM on November 3. Don't count on the mail."
     },
     {
       "path": "situations.away_on_election_day.short",
       "from": "2026-10-30",
-      "text": "Early voting is over; get a mail-in ballot at your local board, or Print-At-Home online by Oct 30."
+      "text": "Early voting ended; get a mail-in ballot at your local board, or Print-At-Home online by Oct 30."
     },
     {
       "path": "situations.away_on_election_day.answer",
       "from": "2026-10-31",
-      "text": "Early voting ended Thursday, October 29, and online Print-At-Home requests closed October 30. You can still pick up a mail-in ballot in person at your local board through 8 PM on Election Day (Baltimore City: 417 E. Fayette St.). To return a ballot now, use a drop box or the board, by 8 PM on November 3; don't count on the mail."
+      "text": "Early voting ended Thursday, October 29. Online Print-At-Home requests closed October 30. You can still pick up a mail-in ballot in person at your local board through 8 PM on Election Day (Baltimore City: 417 E. Fayette St.). To return a ballot now, use a drop box or the board by 8 PM on November 3. Don't count on the mail."
     },
     {
       "path": "situations.away_on_election_day.short",

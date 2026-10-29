@@ -1350,7 +1350,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const hw = (x, d) => plan.localHowto(read(`state-${x}.json`).howto, [], null, d);
     const sit = (h, id) => h.situations.find((x) => x.id === id);
     const flips = [
-      ['AL Oct 30', /only for emergencies/.test(hw('AL', '2026-10-30').gotcha_shorts[1]) && /regular applications have closed/.test(hw('AL', '2026-10-30').gotchas[1])],
+      ['AL Oct 30', /only for emergencies/.test(hw('AL', '2026-10-30').gotcha_shorts[1]) && /regular applications closed/i.test(hw('AL', '2026-10-30').gotchas[1])],
       ['AL Nov 3', /applications have closed/.test(hw('AL', '2026-11-03').gotchas[1]) && !/until 5 PM Monday/.test(hw('AL', '2026-11-03').gotchas[1])],
       ['IL Oct 30', /closed Thursday, October 29/.test(sit(hw('IL', '2026-10-30'), 'away_on_election_day').answer) && !/apply by Oct/.test(hw('IL', '2026-10-30').model_plain)],
       ['MD Oct 31', /closed October 30/.test(sit(hw('MD', '2026-10-31'), 'away_on_election_day').steps[0])],

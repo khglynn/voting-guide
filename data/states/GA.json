@@ -606,7 +606,7 @@
     {
       "path": "mail_ballot.mail_cutoff_advice",
       "from": "2026-10-31",
-      "text": "Election officials and USPS say to mail at least 7 days before Election Day. Don't mail it now. The drop boxes at early voting sites closed with early voting on Friday, October 30, so hand it to your county elections office by 7 PM on Tuesday, November 3 (call for hours: Fulton 404-612-7020, DeKalb 404-298-4020). If you decide to vote in person instead, bring the mail ballot with you so the poll manager can cancel it. If you never received it, you can still vote in person: georgia.gov says you'll 'sign a document attesting that you are only voting once.' Once you've returned your absentee ballot, you've voted and can't vote in person."
+      "text": "Election officials and USPS say to mail at least 7 days before Election Day. Don't mail it now. Drop boxes at early voting sites closed with early voting on Friday, October 30. Hand your ballot to your county elections office by 7 PM on Tuesday, November 3. Call for hours: Fulton 404-612-7020, DeKalb 404-298-4020. If you decide to vote in person instead, bring the mail ballot so the poll manager can cancel it. If you never received it, you can still vote in person. Georgia.gov says you'll 'sign a document attesting that you are only voting once.' Once you've returned your absentee ballot, you've voted and can't vote in person."
     },
     {
       "path": "gotchas.4.text",

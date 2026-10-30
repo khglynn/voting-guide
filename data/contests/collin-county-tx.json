@@ -103,7 +103,7 @@
     "level": "state",
     "office": "State Representative",
     "district": "HD-67",
-    "scope_plain": "Voters in Texas House District 67 (most of Allen, mainly the west and center, plus parts of Plano and McKinney)",
+    "scope_plain": "Voters in Texas House District 67 (most of Allen, mainly the west and center, plus parts of McKinney, Plano, Anna and Princeton, most of Melissa, and unincorporated north and east Collin County)",
     "office_explainer": "One of 150 state House members who write Texas laws and the state budget.",
     "why_it_matters": "Jeff Leach has held this seat since 2013; he won it in 2024 with 60% of the vote (Collin County results).",
     "vote_for": 1,
@@ -173,6 +173,10 @@
         "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
       },
       {
+        "name": "U.S. Census Bureau TIGERweb: 2026 State House districts and city limits (the cities each district reaches, sampled Oct 29, 2026)",
+        "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer"
+      },
+      {
         "name": "Dallas Morning News voter guide: Texas House District 67 (candidate answers, unedited, 200 words at most)",
         "url": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/texas-house-district-67/"
       },
@@ -209,7 +213,7 @@
     "level": "state",
     "office": "State Representative",
     "district": "HD-70",
-    "scope_plain": "Voters in Texas House District 70 (a small part of Allen, plus parts of McKinney and other Collin County cities)",
+    "scope_plain": "Voters in Texas House District 70 (a small part of south Allen, west of US 75, plus a large part of Plano and parts of Richardson and Far North Dallas)",
     "office_explainer": "One of 150 state House members who write Texas laws and the state budget.",
     "why_it_matters": "Mihaela Plesa won this seat 51% to 49% in 2022 and 52% to 48% in 2024 (Collin County results).",
     "vote_for": 1,
@@ -279,6 +283,10 @@
         "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
       },
       {
+        "name": "U.S. Census Bureau TIGERweb: 2026 State House districts and city limits (the cities each district reaches, sampled Oct 29, 2026)",
+        "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer"
+      },
+      {
         "name": "Dallas Morning News voter guide: Texas House District 70 (candidate answers, unedited, 200 words at most)",
         "url": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/texas-house-district-70/"
       },
@@ -315,7 +323,7 @@
     "level": "state",
     "office": "State Representative",
     "district": "HD-89",
-    "scope_plain": "Voters in Texas House District 89 (about a third of Allen, mainly the east, plus Lucas, Parker, Wylie and other east Collin County towns)",
+    "scope_plain": "Voters in Texas House District 89 (about a third of Allen, mainly the east, plus Lucas, Parker, most of Wylie, part of Plano and other east Collin County towns)",
     "office_explainer": "One of 150 state House members who write Texas laws and the state budget.",
     "why_it_matters": "Candy Noble is in her fourth term in this seat; she won it in 2024 with 61% of the vote (Collin County results).",
     "vote_for": 1,
@@ -383,6 +391,10 @@
       {
         "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
         "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "U.S. Census Bureau TIGERweb: 2026 State House districts and city limits (the cities each district reaches, sampled Oct 29, 2026)",
+        "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer"
       },
       {
         "name": "Dallas Morning News voter guide: Texas House District 89 (candidate answers, unedited, 200 words at most)",
@@ -945,7 +957,7 @@
         "lwv_url": "https://www.lwvcollin.org/docs.ashx?id=1827416"
       },
       {
-        "name": "John R. \"Buster\" Brown",
+        "name": "John R. Buster Brown",
         "party": "Democratic",
         "incumbent": false,
         "website": null,

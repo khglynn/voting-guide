@@ -666,6 +666,46 @@
       "path": "situations.moved_in_state.steps.1",
       "from": "2026-10-31",
       "text": "New county, such as Travis to Williamson or Hays: the limited ballot was available only during early voting, which ended October 30. Your new county's voter registrar can tell you your options."
+    },
+    {
+      "path": "situations.moved_in_state.answer",
+      "from": "2026-10-31",
+      "text": "If you moved within the same county, you can still vote: go to any polling place in your county and fill out a short Statement of Residence. If you moved to a different Texas county and didn't re-register there by October 5, the limited ballot was available only during early voting, which ended October 30. Your new county's voter registrar can tell you your options."
+    },
+    {
+      "path": "registration.still_possible_now",
+      "from": "2026-10-31",
+      "text": "No. The deadline to register for the November 3 election was Monday, October 5, 2026, and it has passed. If you registered before then, confirm it worked at the My Voter Portal (link above). If you moved to a new Texas county and didn't re-register there by October 5, the 'limited ballot' (only the races your old and new county share) was available only during early voting, which ended October 30. If you moved within the same county, you can still vote: go to a polling place and fill out a Statement of Residence."
+    },
+    {
+      "path": "situations.no_mail_ballot_or_lost.steps.2",
+      "from": "2026-10-31",
+      "text": "It's too late to apply for a new mail ballot: applications had to arrive by Oct 23. Early voting ended Oct 30, so vote on Election Day, Nov 3, 7 AM to 7 PM."
+    },
+    {
+      "path": "situations.college_student.answer",
+      "from": "2026-10-31",
+      "text": "Registration closed October 5, so you vote where you're already registered. The deadline to apply for a mail ballot was Friday, October 23, and early voting ended Friday, October 30, so you'll need to vote in person in that county on Election Day, November 3."
+    },
+    {
+      "path": "situations.away_on_election_day.short",
+      "from": "2026-10-31",
+      "text": "Early voting has ended; if you're back before polls close Nov 3, vote in your county."
+    },
+    {
+      "path": "situations.away_on_election_day.answer",
+      "from": "2026-10-31",
+      "text": "Early voting ended Friday, October 30, and the deadline to apply for a mail ballot was Friday, October 23. If you can get back before the polls close at 7 PM on Nov 3, vote in your county. If you already have a mail ballot, it must arrive by 7 PM Nov 3, or be postmarked by then and arrive by 5 PM Nov 4."
+    },
+    {
+      "path": "situations.away_on_election_day.steps.0",
+      "from": "2026-10-31",
+      "text": "Check your county's Election Day polling places (Dallas, Harris, Bexar, Travis, Williamson and Hays each post their own)."
+    },
+    {
+      "path": "situations.away_on_election_day.actions.0.label",
+      "from": "2026-10-31",
+      "text": "Find voting places"
     }
   ]
 }

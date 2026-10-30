@@ -196,6 +196,11 @@
       "text": "From another Texas county: the limited ballot was available only during early voting, which ended Oct 30. Collin County Elections, (972) 547-1990, can tell you your options."
     },
     {
+      "path": "situations.moved_in_state.answer",
+      "from": "2026-10-31",
+      "text": "If you moved within Collin County, you can still vote: go to any Collin vote center and fill out a short Statement of Residence. If you moved here from another Texas county and didn't re-register by October 5, the limited ballot was available only during early voting, which ended Oct 30. Collin County Elections, (972) 547-1990, can tell you your options."
+    },
+    {
       "path": "situations.no_mail_ballot_or_lost.steps.2",
       "from": "2026-10-31",
       "text": "Early voting is over, so vote at any Collin vote center on Election Day, Tuesday, Nov 3, 7 AM to 7 PM."

@@ -190,6 +190,13 @@
     "tx-dvisd-prop-a"
   ],
   "notes": "Any Travis County voter can use any Travis polling place, early or on Election Day. Seven early-voting sites stay open until 10 PM on Oct 29 and 30. Travis also has a generic consolidated ballot PDF at votetravis.gov showing every contest in the county. Travis County: moved here from another Texas county and didn't re-register? You may be able to vote a limited ballot, but only at the Travis County Elections office, 5501 Airport Blvd., during early voting (through Oct 30); call 512-238-8683 first. Have a Travis mail ballot? On Election Day only, 7 AM to 7 PM, you can hand it in yourself, with photo ID, at 5501 Airport Blvd. Mail ballot questions: ebbm@traviscountytx.gov or 512-238-8683.",
+  "dated": [
+    {
+      "path": "notes",
+      "from": "2026-10-31",
+      "text": "Any Travis County voter can use any Travis polling place on Election Day, Tue Nov 3, 7 AM to 7 PM. Early voting ended Fri Oct 30. Travis also has a generic consolidated ballot PDF at votetravis.gov showing every contest in the county. Travis County: moved here from another Texas county and didn't re-register? The limited ballot was available only during early voting, which ended Oct 30; call 512-238-8683 to ask about your options. Have a Travis mail ballot? On Election Day only, 7 AM to 7 PM, you can hand it in yourself, with photo ID, at 5501 Airport Blvd. Mail ballot questions: ebbm@traviscountytx.gov or 512-238-8683."
+    }
+  ],
   "district_finders": [
     {
       "office_match": "U.S. Representative",

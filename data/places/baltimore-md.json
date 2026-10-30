@@ -89,6 +89,13 @@
     "baltimore-question-i"
   ],
   "notes": "On November 3, vote at your assigned polling place, 7 AM to 8 PM. Use the Maryland polling-place lookup to confirm it; the city has published its final 2026 general-election list. Early voting is October 22 to 29, 7 AM to 8 PM, at any Baltimore City early voting center. The state general-election drop-box list, updated August 26, includes the University of Maryland Engagement Center, 16 S. Poppleton St. Return a mail ballot by 8 PM on November 3 to an official drop box, an early voting center (through Oct 29), your polling place on Nov 3, or the local board. Baltimore City and Baltimore County are separate election jurisdictions.",
+  "dated": [
+    {
+      "path": "notes",
+      "from": "2026-10-30",
+      "text": "On November 3, vote at your assigned polling place, 7 AM to 8 PM. Use the Maryland polling-place lookup to confirm it; the city has published its final 2026 general-election list. Early voting ended October 29. The state general-election drop-box list, updated August 26, includes the University of Maryland Engagement Center, 16 S. Poppleton St. Return a mail ballot by 8 PM on November 3 to an official drop box, your polling place on Nov 3, or the local board. Baltimore City and Baltimore County are separate election jurisdictions."
+    }
+  ],
   "district_finders": [
     {
       "office_match": "U.S. Representative",

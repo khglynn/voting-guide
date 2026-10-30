@@ -613,7 +613,7 @@
   ],
   "judicial_review": {
     "how_judges_get_here": "Texas judges run with party labels. You choose between candidates, rather than voting yes or no on retaining a judge. Governors can appoint judges to fill vacancies between elections.",
-    "who_reviews": "There is no official job-review commission for these elections. Bar associations sometimes poll lawyers. The State Bar’s 2026 poll covered primary candidates; Houston’s separate general-election poll covers statewide and Houston-area races.",
+    "who_reviews": "There is no official job-review commission for these elections. Bar associations sometimes poll lawyers. The State Bar’s 2026 poll covered primary candidates; Houston’s separate general-election poll covers statewide and Houston-area races. Collin County’s bar has published no poll since 2017, so we found no current reviews of Collin County’s own judges (checked Oct 29, 2026).",
     "what_the_rating_means": "A preference poll counts which candidate responding lawyers prefer. It is different from a commission’s assessment of whether a judge meets job standards.",
     "what_it_doesnt_mean": "The bar’s poll is not its endorsement. Only responding lawyers are counted; it is not a poll of all lawyers or all voters.",
     "to_keep_a_judge": "Vote for the candidate you want. In the general election, the candidate with the most votes wins the seat.",
@@ -634,6 +634,10 @@
       {
         "name": "Houston Bar: 2026 poll methodology",
         "url": "https://www.hba.org/docDownload/3137156"
+      },
+      {
+        "name": "Collin County Bar Association: documents (Judicial Polls: 2014, 2016, 2017)",
+        "url": "https://www.collincountybar.org/council/documents"
       }
     ]
   },

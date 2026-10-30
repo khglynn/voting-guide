@@ -1,0 +1,251 @@
+{
+  "id": "allen-tx",
+  "label": "Allen",
+  "state": "TX",
+  "counties": [
+    "Collin"
+  ],
+  "county_fips": [
+    "48085"
+  ],
+  "county_election_office": {
+    "name": "Collin County Elections, 2010 Redbud Blvd., Suite 102, McKinney 75069",
+    "url": "https://www.collincountytx.gov/elections/details",
+    "phone": "(972) 547-1990",
+    "phone_label": "Main line, also for mail ballots",
+    "hours": "Monday to Friday, 8 AM to 5 PM. Collin has no separate mail-ballot phone line: call the main line, or email absenteemailballoting@collincountytx.gov.",
+    "source": "https://www.collincountytx.gov/elections/details"
+  },
+  "sample_ballot_url": "https://apps2.collincountytx.gov/Elections2BallotAddressSearch",
+  "zips": [
+    "75013",
+    "75002"
+  ],
+  "zip_outside": {
+    "75013": "Plano",
+    "75002": "Lucas, Parker or another nearby town"
+  },
+  "zip_caveats": "Allen is in Collin County, and two ZIP codes cover almost all of it: 75013 and 75002. 75002 also reaches Lucas, Parker and land outside any city, and thin strips along 75013's west and south edges are in Plano (TIGERweb's current city limits; the 2020 Census blocks there hold almost no one), so the guide asks which one you live in for both ZIPs (zip_outside) and gives the other towns Texas's statewide races. For your exact ballot, look up your address on Collin County's sample ballot search. All of Allen is in U.S. House District 3, as drawn in 2025. Three Texas House districts split Allen: District 67 (most of the west and center), District 89 (the east, about a third of the city) and District 70 (a small part). Allen is in State Senate District 8, which has no race this year. Collin's Commissioners Court precincts split Allen too: only Precincts 2 and 4 elect a commissioner this year, so voters in northeast Allen (Precinct 3) see no commissioner race. Justice of the peace Precincts 1 (a few voting precincts in northwest Allen) and 3 (most of Allen) each have a race. Most of Allen is in Allen ISD, which has nothing on this ballot; small parts are in Plano ISD and Lovejoy ISD, which have nothing on it either, and in McKinney ISD, whose tax rate and bond measures (McKinney ISD Props A to E) appear only for addresses inside that district. Every Collin County voter sees the county judges and offices, the 5th Court of Appeals, the Collin County Appraisal District board, the four Collin County bond measures and the Collin College bond. There is no City of Allen election on this ballot.",
+  "contest_ids": [
+    "tx-us-senate",
+    "tx-governor",
+    "tx-lt-governor",
+    "tx-attorney-general",
+    "tx-comptroller",
+    "tx-land-commissioner",
+    "tx-agriculture-commissioner",
+    "tx-railroad-commissioner",
+    "tx-supreme-court-chief",
+    "tx-supreme-court-place-2",
+    "tx-supreme-court-place-7",
+    "tx-supreme-court-place-8",
+    "tx-cca-place-3",
+    "tx-cca-place-4",
+    "tx-cca-place-9",
+    "tx-15th-coa-chief",
+    "tx-15th-coa-place-2",
+    "tx-15th-coa-place-3",
+    "tx-us-house-3",
+    "tx-house-67",
+    "tx-house-70",
+    "tx-house-89",
+    "tx-5th-coa-place-3",
+    "tx-5th-coa-place-6",
+    "tx-5th-coa-place-8",
+    "tx-collin-district-court-219th",
+    "tx-collin-district-court-296th",
+    "tx-collin-district-court-366th",
+    "tx-collin-district-court-417th",
+    "tx-collin-district-court-429th",
+    "tx-collin-district-court-471st",
+    "tx-collin-district-court-494th",
+    "tx-collin-cda",
+    "tx-collin-county-judge",
+    "tx-collin-ccl-1",
+    "tx-collin-ccl-2",
+    "tx-collin-ccl-3",
+    "tx-collin-ccl-4",
+    "tx-collin-ccl-5",
+    "tx-collin-ccl-6",
+    "tx-collin-ccl-7",
+    "tx-collin-probate",
+    "tx-collin-district-clerk",
+    "tx-collin-county-clerk",
+    "tx-collin-commissioner-2",
+    "tx-collin-commissioner-4",
+    "tx-collin-jp-1",
+    "tx-collin-jp-3",
+    "tx-ccad-place-1",
+    "tx-ccad-place-2",
+    "tx-ccad-place-3"
+  ],
+  "measure_ids": [
+    "tx-collin-county-prop-a",
+    "tx-collin-county-prop-b",
+    "tx-collin-county-prop-c",
+    "tx-collin-county-prop-d",
+    "tx-collin-college-prop-a",
+    "tx-mckinney-isd-prop-a",
+    "tx-mckinney-isd-prop-b",
+    "tx-mckinney-isd-prop-c",
+    "tx-mckinney-isd-prop-d",
+    "tx-mckinney-isd-prop-e"
+  ],
+  "notes": "Collin County uses vote centers: any registered Collin County voter can vote at any Collin County vote center, early or on Election Day. Early voting runs through Friday, Oct 30, 7 AM to 7 PM. Election Day, Tue Nov 3, is 7 AM to 7 PM; if you're in line by 7 PM, you can vote. In Allen, vote centers include the Allen Public Library, 300 N. Allen Dr., and the Allen ISD Service Center, 1451 N. Watters Rd. On Election Day only, two more open in Allen: Allen ISD's Professional Learning and Auxiliary Services building, 610 E. Bethany Dr., and Christ the Servant Lutheran Church's Fellowship Hall, 821 S. Greenville Ave. Sites can change, so check the county's list before you go. Texas has no straight-ticket voting, so you mark each race one by one, and skipping a race is fine. Several races have no one from the other party running; those still count, and you can skip them. On the ballot, each proposition says \"For\" or \"Against\": For means yes, Against means no. The four Collin County propositions are lettered A to D, and Collin College and McKinney ISD each have their own Prop A, so read the name above each one. Collin County Appraisal District board seats have no party label. Bring a printed or handwritten cheat sheet into the booth; phones can't be used while you vote. A mail ballot can be hand-delivered only on Election Day, by the voter, with photo ID, to the Collin County Elections Office, 2010 Redbud Blvd., Suite 102, McKinney, while polls are open.",
+  "district_finders": [
+    {
+      "office_match": "State Representative",
+      "label": "Find your district",
+      "url": "https://wrm.capitol.texas.gov/home"
+    },
+    {
+      "office_match": "County Commissioner",
+      "label": "Find your Collin commissioner precinct (Collin's Find My Elected Official map)",
+      "url": "https://collin.maps.arcgis.com/apps/webappviewer/index.html?id=70df500530ee4790a1e17e30c30cf87d"
+    },
+    {
+      "office_match": "Justice of the Peace",
+      "label": "Find your Collin JP precinct (Collin's Find My Elected Official map)",
+      "url": "https://collin.maps.arcgis.com/apps/webappviewer/index.html?id=70df500530ee4790a1e17e30c30cf87d"
+    },
+    {
+      "office_match": "County Commissioner",
+      "label": "Your Collin sample ballot: search by your address",
+      "url": "https://apps2.collincountytx.gov/Elections2BallotAddressSearch"
+    },
+    {
+      "office_match": "Justice of the Peace",
+      "label": "Your Collin sample ballot: search by your address",
+      "url": "https://apps2.collincountytx.gov/Elections2BallotAddressSearch"
+    },
+    {
+      "office_match": "State Representative",
+      "label": "Your Collin sample ballot: search by your address",
+      "url": "https://apps2.collincountytx.gov/Elections2BallotAddressSearch"
+    }
+  ],
+  "lookups": {
+    "early_in_person": "https://www.collincountytx.gov/elections/polling-locations",
+    "election_day": "https://www.collincountytx.gov/elections/polling-locations"
+  },
+  "early_in_person": {
+    "start": "2026-10-19",
+    "end": "2026-10-30",
+    "hours_note": "Collin County: Monday, Oct 19 to Friday, Oct 23, 8 AM to 5 PM; Saturday, Oct 24, 7 AM to 7 PM; Sunday, Oct 25, 11 AM to 5 PM; Monday, Oct 26 to Friday, Oct 30, 7 AM to 7 PM. Any Collin site works for any Collin voter. In Allen: The Allen Public Library, 300 N. Allen Dr., and the Allen ISD Service Center, 1451 N. Watters Rd. The county says sites and times can change.",
+    "hours_short": "Collin sites are open 7 AM to 7 PM through Friday, Oct 30.",
+    "lookup_url": "https://www.collincountytx.gov/elections/polling-locations",
+    "source": "https://www.collincountytx.gov/docs/default-source/elections/election-notices/collin-county-bond-notice-of-election.pdf?sfvrsn=23acc969_3",
+    "confidence": "verified"
+  },
+  "mail_ballot": {
+    "return_options": [
+      "Mail it to the Collin County Early Voting Clerk, 2010 Redbud Blvd., Suite 102, McKinney, TX 75069. It counts if it arrives by 7 PM on Nov 3, or if it is postmarked by 7 PM on Nov 3 and arrives by 5 PM on Wednesday, Nov 4.",
+      "A common or contract carrier (FedEx, UPS) must deliver it by 7 PM on Nov 3.",
+      "Hand-deliver it yourself only on Election Day, Nov 3, while polls are open, at the Collin County Elections Office, 2010 Redbud Blvd., Suite 102, McKinney, with your photo ID. No one else can drop it off for you.",
+      "Texas has no ballot drop boxes.",
+      "Questions: Collin County Elections, (972) 547-1990, Monday to Friday, 8 AM to 5 PM, or absenteemailballoting@collincountytx.gov."
+    ],
+    "source": "https://www.collincountytx.gov/elections/absentee-and-by-mail-voting",
+    "confidence": "verified"
+  },
+  "situations": [
+    {
+      "id": "moved_in_state",
+      "short": "Moved within Collin: any Collin vote center works; from another Texas county, ask about a limited ballot by Oct 30.",
+      "answer": "If you moved within Collin County, you can still vote: go to any Collin vote center and fill out a short Statement of Residence. If you moved here from another Texas county and didn't re-register by October 5, you may be able to vote a limited ballot, but only during early voting, at Collin's main early voting site.",
+      "steps": [
+        "Moved within Collin County: vote at any Collin vote center and tell the worker your address changed.",
+        "From another Texas county: the limited ballot is only at Collin's main early voting site, the Collin County Elections Office, 2010 Redbud Blvd., Suite 102, McKinney, through Friday, Oct 30, 7 AM to 7 PM. It covers only the races your old and new counties share. Call (972) 547-1990 first.",
+        "Update your address with the Collin County voter registrar so you're set for next time."
+      ],
+      "source": "https://www.collincountytx.gov/docs/default-source/elections/election-notices/collin-county-bond-notice-of-election.pdf?sfvrsn=23acc969_3",
+      "confidence": "verified"
+    },
+    {
+      "id": "wrong_polling_place",
+      "short": "In Collin County, you can vote at any Collin vote center; you're not tied to a precinct.",
+      "answer": "Collin County uses countywide vote centers, so any registered Collin County voter can vote at any Collin polling place. You're probably fine where you are, as long as it's a Collin County site. In Allen, they include the Allen Public Library, 300 N. Allen Dr., and the Allen ISD Service Center, 1451 N. Watters Rd.",
+      "steps": [
+        "Find the closest one on Collin County's polling locations page; sites can change.",
+        "At a site in another county, like Dallas or Denton? Go back to a Collin County site; that's where your ballot is."
+      ],
+      "source": "https://www.collincountytx.gov/docs/default-source/elections/election-notices/collin-county-bond-notice-of-election.pdf?sfvrsn=23acc969_3",
+      "confidence": "verified"
+    },
+    {
+      "id": "no_mail_ballot_or_lost",
+      "short": "Too late for a new mail ballot: vote at any Collin site, bringing the old one if you have it.",
+      "steps": [
+        "Check the Ballot by Mail Tracker, or call Collin County Elections at (972) 547-1990, Monday to Friday, 8 AM to 5 PM.",
+        "To vote in person, sign a cancellation form at the polls. Without the ballot to hand in, you vote a provisional ballot, counted once the county confirms your mail ballot wasn't returned.",
+        "Vote early at any Collin site through Friday, Oct 30, 7 AM to 7 PM, or on Election Day, Tuesday, Nov 3, 7 AM to 7 PM."
+      ],
+      "source": "https://www.collincountytx.gov/elections/absentee-and-by-mail-voting",
+      "confidence": "verified"
+    }
+  ],
+  "dated": [
+    {
+      "path": "situations.moved_in_state.short",
+      "from": "2026-10-31",
+      "text": "Moved within Collin: any Collin vote center works; from another Texas county, the limited ballot ended Oct 30."
+    },
+    {
+      "path": "situations.moved_in_state.steps.1",
+      "from": "2026-10-31",
+      "text": "From another Texas county: the limited ballot was available only during early voting, which ended Oct 30. Collin County Elections, (972) 547-1990, can tell you your options."
+    },
+    {
+      "path": "situations.no_mail_ballot_or_lost.steps.2",
+      "from": "2026-10-31",
+      "text": "Early voting is over, so vote at any Collin vote center on Election Day, Tuesday, Nov 3, 7 AM to 7 PM."
+    },
+    {
+      "path": "notes",
+      "from": "2026-10-31",
+      "text": "Collin County uses vote centers: any registered Collin County voter can vote at any Collin County vote center on Election Day. Early voting ended Friday, Oct 30. Election Day, Tue Nov 3, is 7 AM to 7 PM; if you're in line by 7 PM, you can vote. In Allen, vote centers include the Allen Public Library, 300 N. Allen Dr., and the Allen ISD Service Center, 1451 N. Watters Rd. On Election Day only, two more open in Allen: Allen ISD's Professional Learning and Auxiliary Services building, 610 E. Bethany Dr., and Christ the Servant Lutheran Church's Fellowship Hall, 821 S. Greenville Ave. Sites can change, so check the county's list before you go. Texas has no straight-ticket voting, so you mark each race one by one, and skipping a race is fine. Several races have no one from the other party running; those still count, and you can skip them. On the ballot, each proposition says \"For\" or \"Against\": For means yes, Against means no. The four Collin County propositions are lettered A to D, and Collin College and McKinney ISD each have their own Prop A, so read the name above each one. Collin County Appraisal District board seats have no party label. Bring a printed or handwritten cheat sheet into the booth; phones can't be used while you vote. A mail ballot can be hand-delivered only on Election Day, by the voter, with photo ID, to the Collin County Elections Office, 2010 Redbud Blvd., Suite 102, McKinney, while polls are open."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Collin County Elections: election details and contact",
+      "url": "https://www.collincountytx.gov/elections/details"
+    },
+    {
+      "name": "Collin County Elections: absentee and by-mail voting",
+      "url": "https://www.collincountytx.gov/elections/absentee-and-by-mail-voting"
+    },
+    {
+      "name": "VoteTexas.gov: Completing and mailing your carrier envelope (return by mail, carrier, or in person on Election Day; deadlines)",
+      "url": "https://www.votetexas.gov/voting-by-mail/carrier-envelope.html"
+    },
+    {
+      "name": "Texas Election Code 86.006 (returning a marked mail ballot; in-person delivery with ID)",
+      "url": "https://texas.public.law/statutes/tex._election_code_section_86.006"
+    },
+    {
+      "name": "Collin County Elections: polling locations",
+      "url": "https://www.collincountytx.gov/elections/polling-locations"
+    },
+    {
+      "name": "Collin County: order and notice of the Nov 3, 2026 election (Exhibit A, Election Day vote centers; Exhibit B, early voting)",
+      "url": "https://www.collincountytx.gov/docs/default-source/elections/election-notices/collin-county-bond-notice-of-election.pdf?sfvrsn=23acc969_3"
+    },
+    {
+      "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+      "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+    },
+    {
+      "name": "Collin County: sample ballot search by address",
+      "url": "https://apps2.collincountytx.gov/Elections2BallotAddressSearch"
+    },
+    {
+      "name": "Collin County Commissioners Court precincts",
+      "url": "https://www.collincountytx.gov/Government/Commissioners-Court/precincts"
+    },
+    {
+      "name": "U.S. Census Bureau: county codes (Collin County is 48085)",
+      "url": "https://www.census.gov/library/reference/code-lists/ansi.html"
+    }
+  ]
+}

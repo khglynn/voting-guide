@@ -126,6 +126,13 @@
     "tx-acc-prop-a-pflugerville"
   ],
   "notes": "If you live in the Williamson County part of Pflugerville, your elections office is Williamson County Elections, 301 SE Inner Loop, Georgetown, 512-943-1630. Pflugerville is in both Travis and Williamson counties, so check which county you're registered in before you pick a polling place. You must vote in your county of registration. Travis County: moved here from another Texas county and didn't re-register? You may be able to vote a limited ballot, but only at the Travis County Elections office, 5501 Airport Blvd., during early voting (through Oct 30); call 512-238-8683 first. Have a Travis mail ballot? On Election Day only, 7 AM to 7 PM, you can hand it in yourself, with photo ID, at 5501 Airport Blvd. Mail ballot questions: ebbm@traviscountytx.gov or 512-238-8683.",
+  "dated": [
+    {
+      "path": "notes",
+      "from": "2026-10-31",
+      "text": "If you live in the Williamson County part of Pflugerville, your elections office is Williamson County Elections, 301 SE Inner Loop, Georgetown, 512-943-1630. Pflugerville is in both Travis and Williamson counties, so check which county you're registered in before you pick a polling place. You must vote in your county of registration. Travis County: moved here from another Texas county and didn't re-register? The limited ballot was available only during early voting, which ended Oct 30; call 512-238-8683 to ask about your options. Have a Travis mail ballot? On Election Day only, 7 AM to 7 PM, you can hand it in yourself, with photo ID, at 5501 Airport Blvd. Mail ballot questions: ebbm@traviscountytx.gov or 512-238-8683."
+    }
+  ],
   "district_finders": [
     {
       "office_match": "U.S. Representative",

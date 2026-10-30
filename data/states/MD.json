@@ -581,6 +581,11 @@
   ],
   "dated": [
     {
+      "path": "mail_ballot.return_options.4",
+      "from": "2026-10-30",
+      "text": "hand it in at your polling place on Election Day, by 8 PM (early voting centers closed October 29)"
+    },
+    {
       "path": "mail_ballot.mail_cutoff_advice",
       "from": "2026-10-28",
       "text": "Your mailed ballot still counts if it's postmarked by November 3 and arrives by 10 AM on Friday, November 13. But SBE warns: 'Putting your ballot in a mailbox on election day does not mean it is postmarked that day.' SBE also issued a release in 2026 about a USPS postmarking policy change. The safest way now is to use a drop box or hand it in. Drop boxes are open until exactly 8 PM on November 3. If you mail it, ask a post office counter clerk for a free manual postmark when you hand it over."

@@ -545,6 +545,26 @@
       "text": "Absentee applications are open only for certain emergencies now, until 5 PM Monday, Nov 2."
     },
     {
+      "path": "situations.college_student.short",
+      "from": "2026-10-30",
+      "text": "Away at school counts as an absentee excuse, but regular applications have closed; only emergency ones are open now."
+    },
+    {
+      "path": "situations.college_student.answer",
+      "from": "2026-10-30",
+      "text": "Registered at home but away at school? Being a student who lives outside your county is a valid excuse to vote absentee, but regular applications closed October 27 by mail and October 29 in person. Applications are open now only for certain emergencies, until 5 PM Monday, November 2. If you can get home, vote at your polling place on November 3."
+    },
+    {
+      "path": "situations.college_student.short",
+      "from": "2026-11-03",
+      "text": "Absentee applications have closed; if you can get home, vote at your polling place today."
+    },
+    {
+      "path": "situations.college_student.answer",
+      "from": "2026-11-03",
+      "text": "Being away at school is a valid absentee excuse, but absentee applications have closed. If you can get home, vote at your polling place today, November 3."
+    },
+    {
       "path": "gotchas.1.text",
       "from": "2026-11-03",
       "text": "There is no early voting, and absentee applications have closed. The one exception is your own medical emergency. With a doctor's certification, the ballot is due by noon today, November 3. Mobile County: Absentee Election Manager, 151 Government St, 251-574-6400."

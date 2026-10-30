@@ -291,7 +291,7 @@
         "If asked, a photo ID works, or a current utility bill, bank statement, paycheck, government check or government document with your name and address."
       ],
       "deadline": null,
-      "source": "https://elections.ulstercountyny.gov/?p=482",
+      "source": "https://vote.nyc/page/voter-id",
       "confidence": "verified"
     },
     {
@@ -489,8 +489,8 @@
       "url": "https://www.sullivanny.gov/Departments/Elections"
     },
     {
-      "name": "Ulster County Board of Elections: What Do I Need When I Go to Vote? (first-time voter ID; affidavit ballot if no ID; same rule statewide)",
-      "url": "https://elections.ulstercountyny.gov/?p=482"
+      "name": "NYC Board of Elections: Voter ID (first-time voter ID; affidavit ballot if no ID; same rule statewide)",
+      "url": "https://vote.nyc/page/voter-id"
     },
     {
       "name": "NYC Board of Elections: Contact Us (borough office addresses and phones)",

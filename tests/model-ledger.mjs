@@ -1353,6 +1353,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     // Lines that go stale before Nov 3 flip on their own (dated, Oct 29): each says what's true from the day after.
     const hw = (x, d) => plan.localHowto(read(`state-${x}.json`).howto, [], null, d);
     const sit = (h, id) => h.situations.find((x) => x.id === id);
+    const lost = (p, d) => sit(plan.localHowto(read('state-FL.json').howto, [read(`place-${p}.json`)], null, d), 'no_mail_ballot_or_lost').answer;
     const flips = [
       ['AL Oct 30', /only for emergencies/.test(hw('AL', '2026-10-30').gotcha_shorts[1]) && /regular applications closed/i.test(hw('AL', '2026-10-30').gotchas[1])],
       ['AL Nov 3', /applications have closed/.test(hw('AL', '2026-11-03').gotchas[1]) && !/until 5 PM Monday/.test(hw('AL', '2026-11-03').gotchas[1])],
@@ -1363,6 +1364,17 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       ['GA Oct 31', /closed with early voting/.test(hw('GA', '2026-10-31').mail_ballot.mail_cutoff_advice)],
       ['IL Nov 3', !/through (Monday, )?Nov(ember|\.)? 2|Vote early/.test(sit(hw('IL', '2026-11-03'), 'away_on_election_day').answer + sit(hw('IL', '2026-11-03'), 'college_student').answer + hw('IL', '2026-11-03').model_plain)],
       ['FL Oct 29', /while early voting is open/.test(hw('FL', '2026-10-29').mail_ballot.mail_cutoff_advice)],
+      // Oct 30 (#59): the lines the Oct 29 run missed, and Florida's, New York's and DC's for when early voting ends.
+      ['MD Oct 30', ![...hw('MD', '2026-10-30').situations.map((x) => x.short), ...hw('MD', '2026-10-30').gotcha_shorts].some((t) => /vote early|early voting cent/i.test(t || '')) && !hw('MD', '2026-10-30').situations.some((x) => (x.actions || []).some((a) => /early/i.test(a.label)))],
+      ['GA Oct 31', /using a drop box/.test(hw('GA', '2026-10-30').mail_ballot.postage) && !/using a drop box/.test(hw('GA', '2026-10-31').mail_ballot.postage) && /vote early there/.test(sit(hw('GA', '2026-10-30'), 'moved_in_state').answer) && !/vote early/.test(sit(hw('GA', '2026-10-31'), 'moved_in_state').answer) && /^Early voting is over/.test(hw('GA', '2026-10-31').gotcha_shorts[2])],
+      ['TX Oct 31 mistake', /early voting site/.test(sit(hw('TX', '2026-10-30'), 'mistake_on_ballot').answer) && !/early voting site/.test(sit(hw('TX', '2026-10-31'), 'mistake_on_ballot').answer)],
+      ['FL Nov 1', /^Vote early/.test(sit(hw('FL', '2026-10-31'), 'away_on_election_day').short) && /ends today/.test(sit(hw('FL', '2026-11-01'), 'away_on_election_day').short) && /ends today in Orange and Leon/.test(hw('FL', '2026-11-01').gotcha_shorts[2])],
+      ['FL Nov 2', /has ended/.test(sit(hw('FL', '2026-11-02'), 'away_on_election_day').short) && !/early voting site/.test(sit(hw('FL', '2026-11-02'), 'mistake_on_ballot').answer) && /closed/.test(hw('FL', '2026-11-02').mail_ballot.return_options[1]) && /^Early voting is over/.test(hw('FL', '2026-11-02').gotcha_shorts[2])],
+      ['Pensacola Nov 1', /runs through Saturday, October 31/.test(lost('pensacola-fl', '2026-10-31')) && /ended Saturday, October 31/.test(lost('pensacola-fl', '2026-11-01'))],
+      ['Orlando and Tallahassee Nov 2', /27 sites/.test(lost('orlando-fl', '2026-11-01')) && /ended Sunday, November 1/.test(lost('orlando-fl', '2026-11-02')) && /open through Sunday/.test(lost('tallahassee-fl', '2026-11-01')) && /ended Sunday, November 1/.test(lost('tallahassee-fl', '2026-11-02'))],
+      ['NY Nov 2', /vote early/.test(sit(hw('NY', '2026-11-01'), 'college_student').short) && !/vote early/i.test([sit(hw('NY', '2026-11-02'), 'college_student').short, hw('NY', '2026-11-02').gotcha_shorts[0], ...sit(hw('NY', '2026-11-02'), 'away_on_election_day').steps].join(' ')) && sit(hw('NY', '2026-11-02'), 'away_on_election_day').actions[0].label === 'Find my poll site'],
+      ['NY Nov 3', !/(by|through) (Monday, )?Nov(ember)? 2/.test([sit(hw('NY', '2026-11-03'), 'college_student').short, sit(hw('NY', '2026-11-03'), 'college_student').answer, hw('NY', '2026-11-03').gotcha_shorts[0], hw('NY', '2026-11-03').gotchas[0]].join(' ')) && /9 PM/.test(sit(hw('NY', '2026-11-03'), 'college_student').short)],
+      ['DC Nov 2', /^Or vote early/.test(sit(hw('DC', '2026-11-01'), 'away_on_election_day').steps[0]) && /any Vote Center/.test(sit(hw('DC', '2026-11-02'), 'away_on_election_day').steps[0])],
       ['Oct 29 unchanged', /apply by Oct\. 29/.test(hw('IL', '2026-10-29').model_plain) && /through Oct 29/.test(hw('AL', '2026-10-29').gotcha_shorts[1])],
     ].filter(([, ok]) => !ok).map(([n]) => n);
     check('stale lines: each flips to what is true the day after its deadline, and not before', flips.length === 0, flips.join(', '));

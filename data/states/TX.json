@@ -706,6 +706,11 @@
       "path": "situations.away_on_election_day.actions.0.label",
       "from": "2026-10-31",
       "text": "Find voting places"
+    },
+    {
+      "path": "situations.mistake_on_ballot.answer",
+      "from": "2026-10-31",
+      "text": "At the polls, don't cast it: Texas law gives you a new ballot when you hand the spoiled one back to an election worker. On a mail ballot, bring the whole packet to your Election Day polling place, surrender it, and vote in person."
     }
   ]
 }

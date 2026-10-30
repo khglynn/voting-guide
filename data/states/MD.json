@@ -17,7 +17,7 @@
       {
         "method": "online",
         "date": "2026-10-13",
-        "rule": "Advance registration closed Tuesday, October 13 (the SBE calendar lists 5 PM; the SBE general-election page says 'the last day you can register to vote online or by mail'). That deadline has passed. You can still register in person during early voting or on Election Day.",
+        "rule": "Advance registration closed Tuesday, October 13 (the SBE calendar lists 5 PM; the SBE general-election page says 'the last day you can register to vote online or by mail'). That deadline has passed. You can still register in person at your polling place on Election Day.",
         "source": "https://elections.maryland.gov/elections/2026/2026_Election_Calendar.pdf"
       },
       {
@@ -29,13 +29,13 @@
       {
         "method": "in_person",
         "date": "2026-11-03",
-        "rule": "Same-day registration. SBE calendar: 'After this date, unregistered individuals must visit an early voting or election day polling location in person to register and vote.' Early voting: any center in your county, October 22 to 29, 7 AM to 8 PM. Election Day: your assigned polling place, 7 AM to 8 PM. Bring proof of where you live.",
+        "rule": "Same-day registration. SBE calendar: 'After this date, unregistered individuals must visit an early voting or election day polling location in person to register and vote.' Early voting ended October 29. Election Day: your assigned polling place, 7 AM to 8 PM. Bring proof of where you live.",
         "source": "https://elections.maryland.gov/elections/2026/2026_Election_Calendar.pdf"
       }
     ],
     "same_day_registration": true,
     "same_day_notes": "SBE early voting page: 'individuals who are eligible but not yet registered can register and vote' by going 'to an early voting center in the county where you live' with 'a document that proves where you live.' SBE registration page lists the accepted proof: your MVA-issued license, ID card, or change of address card, or 'your paycheck, bank statement, utility bill, or other government document with your name and new address.' The same rule applies at your assigned polling place on Election Day ('in-person registration is available'). SBE pages do not say whether same-day registrants get a regular or provisional ballot; Maryland practice since 2019 has been a regular ballot during early voting and a provisional ballot on Election Day. Treat that detail as unverified.",
-    "still_possible_now": "Yes, but only in person. The October 13 online and mail deadline has passed. Go to any early voting center in your county October 22 to 29 (7 AM to 8 PM), or to your assigned polling place on November 3, with a document showing your current address, and you can register and vote in the same trip.",
+    "still_possible_now": "Yes, but only in person. The October 13 online and mail deadline has passed, and early voting ended October 29. Go to your assigned polling place on November 3 (7 AM to 8 PM) with a document showing your current address, and you can register and vote in the same trip.",
     "confidence": "verified"
   },
   "mail_ballot": {
@@ -106,15 +106,15 @@
   },
   "gotchas": [
     {
-      "text": "Early voting is 'any center in your county.' Election Day is NOT. On November 3 you must go to your assigned polling place: look it up at voterservices.elections.maryland.gov/PollingPlaceSearch. Baltimore City voters have 9 early voting centers October 22 to 29; the closest one to UMB is the University of Maryland Engagement Center, 16 S. Poppleton St.",
-      "short": "Vote early at any center in your county; on Election Day, use your polling place."
+      "text": "Early voting at 'any center in your county' ended October 29. Election Day is different: on November 3 you must go to your assigned polling place. Look it up at voterservices.elections.maryland.gov/PollingPlaceSearch.",
+      "short": "Early voting is over; on Election Day, use your assigned polling place."
     },
     {
-      "text": "Missed the October 13 registration deadline? You can still register and vote in person. Bring something with your name and current address: a Maryland license, MVA ID or MVA change-of-address card, or a paycheck, bank statement, utility bill or other government document. Early voting is the easier route.",
+      "text": "Missed the October 13 registration deadline? You can still register and vote in person. Bring something with your name and current address: a Maryland license, MVA ID or MVA change-of-address card, or a paycheck, bank statement, utility bill or other government document. Early voting ended October 29, so go to your assigned polling place on November 3.",
       "short": "You can still register and vote in person; bring proof of your address."
     },
     {
-      "text": "Students at a Maryland school: SBE says 'your residential address can be your home address or your school address,' but 'you can only be registered to vote at one address, and you can only vote once in an election.' Pick one. To vote in Baltimore: go to any Baltimore City early voting center October 22 to 29 with a document showing your Baltimore address (bank statement, paycheck, utility bill, lease or housing statement from UMB count as 'other government document' only if issued by a government body, so a bank statement or paycheck is the safest bet), register and vote in one trip. If you were registered in another state, SBE says to 'cancel your registration in that state when you register in Maryland.' If you live in a dorm, 'list your dormitory and room number.' Voting residency is not the same as in-state tuition residency. To vote at home instead: 'contact your state's election office to update your registration information and request an absentee ballot.' Most states' mail-ballot request deadlines fell between October 22 and 27, so check your home state's rules today. Source: https://elections.maryland.gov/voter_registration/students.html",
+      "text": "Students at a Maryland school: SBE says 'your residential address can be your home address or your school address,' but 'you can only be registered to vote at one address, and you can only vote once in an election.' Pick one. To vote in Baltimore: early voting ended October 29, so go to the polling place for your Baltimore address on November 3 with a document showing that address (bank statement, paycheck, utility bill, lease or housing statement from UMB count as 'other government document' only if issued by a government body, so a bank statement or paycheck is the safest bet), register and vote in one trip. If you were registered in another state, SBE says to 'cancel your registration in that state when you register in Maryland.' If you live in a dorm, 'list your dormitory and room number.' Voting residency is not the same as in-state tuition residency. To vote at home instead: 'contact your state's election office to update your registration information and request an absentee ballot.' Most states' mail-ballot request deadlines fell between October 22 and 27, so check your home state's rules today. Source: https://elections.maryland.gov/voter_registration/students.html",
       "short": "Students: register at school or home, not both, and cancel any other state's registration."
     },
     {
@@ -134,24 +134,20 @@
     {
       "id": "moved_in_state",
       "question": "I moved to a new address in Maryland.",
-      "short": "Bring proof of your new address to an early voting center in your county, Oct 22 to 29, and vote.",
+      "short": "On Nov 3, vote at the polling place for your new address; sign the provisional ballot form and it counts.",
       "actions": [
-        {
-          "label": "Find early voting places",
-          "url": "https://elections.maryland.gov/elections/2026/2026_Early_Voting_Centers-GG-EN.pdf"
-        },
         {
           "label": "Find my polling place",
           "url": "https://voterservices.elections.maryland.gov/PollingPlaceSearch"
         }
       ],
-      "answer": "Take proof of your new address to an early voting center in the county where you live now, October 22 to 29, and vote there. Moved from another county, or voting on Election Day at your new polling place? You'll vote a provisional ballot, and it fully counts once you complete and sign the form.",
+      "answer": "Early voting ended October 29. On Election Day, November 3, vote at the polling place assigned to your new address, 7 AM to 8 PM. You'll vote a provisional ballot, and all of your votes count once you complete and sign its application.",
       "steps": [
         "Bring proof: an MVA license, ID or change-of-address card, or a paycheck, bank statement, utility bill or government document with your new address.",
-        "Baltimore City has 9 early voting centers, including the University of Maryland Engagement Center at 16 S. Poppleton St.",
+        "Moved less than 3 weeks before the election? You may vote at your old polling place instead.",
         "Find the Election Day polling place for your new address at voterservices.elections.maryland.gov/PollingPlaceSearch."
       ],
-      "deadline": "2026-10-29",
+      "deadline": "2026-11-03",
       "source": "https://elections.maryland.gov/voting/election_day_questions.html",
       "confidence": "verified"
     },
@@ -177,21 +173,21 @@
     {
       "id": "not_registered",
       "question": "I'm not registered yet.",
-      "short": "Bring proof of where you live to any early voting center, Oct 22 to 29, and register and vote.",
+      "short": "Bring proof of where you live to your assigned polling place on Nov 3, and register and vote.",
       "actions": [
         {
           "label": "Check my registration",
           "url": "https://voterservices.elections.maryland.gov/VoterSearch"
         },
         {
-          "label": "Find early voting places",
-          "url": "https://elections.maryland.gov/elections/2026/2026_Early_Voting_Centers-GG-EN.pdf"
+          "label": "Find my polling place",
+          "url": "https://voterservices.elections.maryland.gov/PollingPlaceSearch"
         }
       ],
-      "answer": "The October 13 deadline for online and mail registration has passed, but Maryland has same-day registration. Bring proof of where you live to any early voting center in your county, October 22 to 29 (7 AM to 8 PM), or to your assigned polling place on November 3, and register and vote in one trip.",
+      "answer": "The October 13 deadline for online and mail registration has passed, and early voting ended October 29, but Maryland has same-day registration. Bring proof of where you live to your assigned polling place on November 3 (7 AM to 8 PM), and register and vote in one trip.",
       "steps": [
         "Proof can be an MVA license or ID, or a paycheck, bank statement, utility bill or other government document with your name and address.",
-        "Early voting is the smoother route.",
+        "Find your assigned polling place at voterservices.elections.maryland.gov/PollingPlaceSearch.",
         "Check first at voterservices.elections.maryland.gov/VoterSearch in case you're already registered."
       ],
       "deadline": "2026-11-03",
@@ -221,14 +217,14 @@
     {
       "id": "wrong_polling_place",
       "question": "I went to the wrong polling place.",
-      "short": "Early voting works at any center in your county; on Election Day, go to your assigned polling place.",
+      "short": "Early voting ended Oct 29; on Election Day, go to your assigned polling place.",
       "actions": [
         {
           "label": "Find my polling place",
           "url": "https://voterservices.elections.maryland.gov/PollingPlaceSearch"
         }
       ],
-      "answer": "During early voting, any center in your county works. On Election Day you need your assigned polling place; if you vote a provisional ballot somewhere else, only the contests that also appear on your home ballot will count.",
+      "answer": "Early voting ended October 29. On Election Day you need your assigned polling place; if you vote a provisional ballot somewhere else, only the contests that also appear on your home ballot will count.",
       "steps": [
         "Look up your polling place at voterservices.elections.maryland.gov/PollingPlaceSearch.",
         "If you have time, go there for a full regular ballot. Polls are open 7 AM to 8 PM."
@@ -255,7 +251,7 @@
       "steps": [
         "Check status at voterservices.elections.maryland.gov/VoterSearch.",
         "Call your local board for a replacement (Baltimore City's mail-in ballot line: 410-396-5574). You or an agent can also pick one up there until 8 PM on November 3.",
-        "Or vote in person during early voting (October 22 to 29) or on Election Day."
+        "Or vote in person at your assigned polling place on Election Day, November 3."
       ],
       "deadline": null,
       "source": "https://elections.maryland.gov/voting/absentee.html",
@@ -294,7 +290,7 @@
       "answer": "You can, but you'll vote a provisional ballot because a mail-in ballot was issued to you. It counts as long as you don't also return the mail-in ballot.",
       "steps": [
         "Simplest: fill out the mail-in ballot and put it in a drop box by 8 PM on November 3.",
-        "Montgomery County says canceling your mail-in request before early voting starts on October 22 lets you vote a regular ballot. Cancel on the SBE voter registration update page.",
+        "That window has passed: Montgomery County says canceling your mail-in request before early voting started on October 22 let you vote a regular ballot.",
         "Already sent your mail-in ballot back? Then you've voted. Check its status instead of voting again."
       ],
       "deadline": "2026-10-22",
@@ -334,20 +330,20 @@
     {
       "id": "college_student",
       "question": "I'm a college student.",
-      "short": "Register at school or home, not both; in Baltimore, register and vote in one trip at early voting.",
+      "short": "Register at school or home, not both; in Baltimore, register and vote at your polling place Nov 3.",
       "actions": [
         {
-          "label": "Find early voting places",
-          "url": "https://elections.maryland.gov/elections/2026/2026_Early_Voting_Centers-GG-EN.pdf"
+          "label": "Find my polling place",
+          "url": "https://voterservices.elections.maryland.gov/PollingPlaceSearch"
         }
       ],
-      "answer": "You can register at your school address or your home address, but only one. Students at a Baltimore school can register and vote in one trip at any Baltimore City early voting center, October 22 to 29, with a document showing your Baltimore address.",
+      "answer": "You can register at your school address or your home address, but only one. Early voting ended October 29. Students at a Baltimore school can still register and vote in one trip on November 3, 7 AM to 8 PM, at the polling place for their Baltimore address, with a document showing that address.",
       "steps": [
         "Bring a bank statement, paycheck, utility bill or government document with your Baltimore address. Dorm residents list the dorm and room number.",
         "If you were registered in another state, cancel that registration.",
         "Voting from home instead? Contact your home state's election office today about an absentee ballot."
       ],
-      "deadline": "2026-10-29",
+      "deadline": "2026-11-03",
       "source": "https://elections.maryland.gov/voter_registration/students.html",
       "confidence": "verified"
     },
@@ -357,8 +353,8 @@
       "short": "Vote early through Oct 29, or pick up a mail-in ballot at your local board through Nov 3.",
       "actions": [
         {
-          "label": "Find early voting places",
-          "url": "https://elections.maryland.gov/elections/2026/2026_Early_Voting_Centers-GG-EN.pdf"
+          "label": "Find my local board",
+          "url": "https://elections.maryland.gov/about/county_boards.html"
         },
         {
           "label": "Request a mail-in ballot",
@@ -368,7 +364,7 @@
       "answer": "Vote early at any center in your county, through Thursday, October 29, 7 AM to 8 PM. The deadline to have a mail-in ballot mailed was October 27. You can still get a Print-At-Home ballot online through October 30. Or pick one up in person at your local board through 8 PM on Election Day (Baltimore City: 417 E. Fayette St.). To return a ballot now, use a drop box, an early voting center or the board, by 8 PM on November 3; don't count on the mail.",
       "steps": [
         "Print-At-Home: request it online at voterservices.elections.maryland.gov/onlinemailinrequest by October 30 (needs an MVA license or ID).",
-        "Don't count on the mail now: use a drop box, an early voting center or your local board by 8 PM on November 3.",
+        "Don't count on the mail now: use a drop box or your local board by 8 PM on November 3.",
         "Print-At-Home ballots need your own envelope and a stamp."
       ],
       "deadline": "2026-10-27",

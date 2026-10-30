@@ -697,6 +697,26 @@
       "path": "registration.still_possible_now",
       "from": "2026-11-03",
       "text": "Not for November 3. The deadline was Monday, October 5, 2026. If you think you registered, confirm it now at mvp.sos.ga.gov; if your record is wrong or missing, call your county elections office before you go vote. One exception worth knowing: if a federal race (U.S. Senate or U.S. House) goes to a December 1 runoff, registration for that runoff closed Monday, November 2 (Fulton County listed 'Voter Registration Deadline (Federal races): Monday, November 2'). For a runoff in a state or local race, the October 5 deadline still applies. If you moved within the same county after October 5, you can still vote (go to your old precinct, or update your address at the registrar's office and vote in the new one). If you moved to a different Georgia county within 30 days of the election (on or after October 4), vote in your old county. If you moved counties before that and didn't re-register there by October 5, call your county registrar; you may not be eligible this time (O.C.G.A. 21-2-218)."
+    },
+    {
+      "path": "mail_ballot.postage",
+      "from": "2026-10-31",
+      "text": "Not prepaid statewide. Most Georgia counties require you to put a First-Class stamp on the return envelope; a few provide prepaid envelopes. Follow the instructions printed on your envelope. Drop boxes closed with early voting on October 30, so to skip postage now, hand your ballot to your county elections office by 7 PM Nov 3. Confidence: unverified for your county; check your envelope."
+    },
+    {
+      "path": "situations.moved_in_state.answer",
+      "from": "2026-10-31",
+      "text": "If you moved within the same county (say, within Fulton) and didn't update your registration in time, you can vote at your old polling place this time. If you moved to a different Georgia county within 30 days of the election, go back to your old county's precinct on Election Day, November 3; early voting ended October 30."
+    },
+    {
+      "path": "gotchas.2.text",
+      "from": "2026-10-31",
+      "text": "Election Day is 'only your precinct.' Early voting, when any site in your county worked, ended October 30. On November 3 you must go to your assigned precinct, which may be a different building. Look it up on My Voter Page the night before."
+    },
+    {
+      "path": "gotchas.2.short",
+      "from": "2026-10-31",
+      "text": "Early voting is over; on Election Day, vote only at your assigned precinct."
     }
   ]
 }

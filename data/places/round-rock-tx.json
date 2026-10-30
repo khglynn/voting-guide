@@ -368,5 +368,12 @@
       "name": "Census 2020 ZIP code (ZCTA) to county relationship file",
       "url": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_county20_natl.txt"
     }
+  ],
+  "dated": [
+    {
+      "path": "notes",
+      "from": "2026-10-31",
+      "text": "Williamson early voting ended Fri Oct 30. On Election Day, Tue Nov 3, 7 AM to 7 PM, any Williamson voter can use any Williamson vote center. This guide doesn't show the Leander ISD trustee races (Places 1, 2, 6 and 7) or the Georgetown ISD tax election for Round Rock. If you live in either school district, check your sample ballot for them."
+    }
   ]
 }

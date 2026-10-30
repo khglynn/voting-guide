@@ -181,5 +181,12 @@
       "name": "Hays County: vote centers (PDF)",
       "url": "https://www.hayscountytx.gov/DocumentCenter/View/5053/Vote-Centers-20261103-General-Election"
     }
+  ],
+  "dated": [
+    {
+      "path": "notes",
+      "from": "2026-10-31",
+      "text": "Hays early voting ended Fri Oct 30. On Election Day, Tue Nov 3, 7 AM to 7 PM, any Hays voter can use any Hays vote center. We found no Hays County, San Marcos CISD or Hays CISD bond or tax measure for Nov 2026, but we couldn't confirm that on the county's website, so check your Hays sample ballot."
+    }
   ]
 }

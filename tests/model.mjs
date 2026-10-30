@@ -57,6 +57,14 @@ function open(stCode, placeIds, b = null) {
   st.S.b = b || st.emptyBallotState('');
   return ballot;
 }
+/* The same, with its dated text as it reads on `day`. A check about something else compares with the file's own
+   text, so it must not change with the day CI runs (Oct 30: Florida's answers switch on Nov 1 and 2); the dated
+   lines have their own checks ("stale lines" in model-ledger.mjs). */
+function openOn(day, stCode, placeIds) {
+  const ballot = open(stCode, placeIds);
+  ballot.howto = mods.plan.localHowto(ballot.stateHowto, ballot.places, ballot.county, day);
+  return ballot;
+}
 const head = (link) => st.parseShareHead(link);
 
 /* ---------- 0. the address lookup adds the state and ZIP the guide already knows ---------- */
@@ -1021,13 +1029,14 @@ function roundTrip(name, stCode, places, mutate) {
   bl.localize(b, '78660', null);
   check('where: Pflugerville\u2019s 78660 is split, so Travis and Williamson both show', b.county === null && (b.howto.county_links || []).map((c) => c.county).join('|') === 'Travis|Williamson');
   // A county's own answer: Orange's lost mail ballot, with its own line; the state's question and buttons stay.
+  // As of Oct 30: these answers switch on Nov 1 and 2 (openOn).
   const fl = read('state-FL.json').howto.situations.find((x) => x.id === 'no_mail_ballot_or_lost');
-  b = open('FL', ['orlando-fl']);
+  b = openOn('2026-10-30', 'FL', ['orlando-fl']);
   const own = b.howto.situations.find((x) => x.id === 'no_mail_ballot_or_lost');
   check('where: Orlando\u2019s lost-ballot answer is Orange County\u2019s, with its vote-by-mail line', own.question === fl.question && own.actions.length === fl.actions.length && /27 sites/.test(own.answer) && own.steps.some((x) => /407-836-8683/.test(x)) && own.source === 'https://voteorangefl.gov/request-a-mail-ballot/', own.short);
-  b = open('FL', ['pensacola-fl']);
+  b = openOn('2026-10-30', 'FL', ['pensacola-fl']);
   check('where: Pensacola\u2019s answer stands alone (steps: null) and the state\u2019s other questions are untouched', b.howto.situations.find((x) => x.id === 'no_mail_ballot_or_lost').steps === null && JSON.stringify(b.howto.situations.find((x) => x.id === 'college_student')) === JSON.stringify(read('state-FL.json').howto.situations.find((x) => x.id === 'college_student')));
-  b = open('FL', []);
+  b = openOn('2026-10-30', 'FL', []);
   check('where: a statewide Florida ballot keeps the state\u2019s answer', JSON.stringify(b.howto.situations.find((x) => x.id === 'no_mail_ballot_or_lost')) === JSON.stringify(fl));
   open('FL', ['orlando-fl']);
   st.S.ui.open = new Set(['whatif', 'bx-office']);
@@ -1070,7 +1079,7 @@ function roundTrip(name, stCode, places, mutate) {
   check('help buttons: Orlando\u2019s tracking link is Orange County\u2019s BallotTrax', b.howto.mail_ballot.tracking_url === 'https://floridaorangevotes.ballottrax.net/voter/' && act(b.howto, 'no_mail_ballot_or_lost', 'Track my ballot').url === 'https://floridaorangevotes.ballottrax.net/voter/');
   b = open('FL', ['tallahassee-fl']);
   check('help buttons: Tallahassee keeps the state\u2019s tracker (Leon\u2019s link is held until someone opens it)', b.howto.mail_ballot.tracking_url === read('state-FL.json').howto.mail_ballot.tracking_url);
-  b = open('FL', []);
+  b = openOn('2026-10-30', 'FL', []); // before Florida's dated answers (Nov 1 and 2)
   check('help buttons: a statewide Florida ballot keeps the state\u2019s buttons', JSON.stringify(b.howto.situations) === JSON.stringify(read('state-FL.json').howto.situations));
   b = open('NY', ['nyc-queens-ny']);
   const ny = read('state-NY.json').howto;

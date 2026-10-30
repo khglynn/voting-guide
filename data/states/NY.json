@@ -627,6 +627,26 @@
       "path": "gotchas.0.text",
       "from": "2026-11-02",
       "text": "October 24 was the last day to register and the last day to request a mail ballot online or by mail. Both have passed, and early voting ended November 1. You can still apply for a mail ballot in person at your county board through Monday, November 2, or vote on Election Day. No same-day registration in New York."
+    },
+    {
+      "path": "situations.college_student.short",
+      "from": "2026-11-03",
+      "text": "Mail-ballot applications closed Nov 2; vote at your home poll site by 9 PM today."
+    },
+    {
+      "path": "situations.college_student.answer",
+      "from": "2026-11-03",
+      "text": "Registered at home but away at school? Online mail-ballot requests closed October 24, early voting ended November 1, and in-person applications at your county board closed November 2. Today you can vote at your home poll site until 9 PM. Already have a mail ballot? Hand it in at any poll site in your home county or at your county board by 9 PM."
+    },
+    {
+      "path": "gotchas.0.short",
+      "from": "2026-11-03",
+      "text": "Registration and mail-ballot applications have closed; vote at your poll site by 9 PM."
+    },
+    {
+      "path": "gotchas.0.text",
+      "from": "2026-11-03",
+      "text": "October 24 was the last day to register and the last day to request a mail ballot online or by mail, and in-person applications at your county board closed Monday, November 2. Early voting ended November 1. Today, vote at your own poll site, 6 AM to 9 PM. No same-day registration in New York."
     }
   ]
 }

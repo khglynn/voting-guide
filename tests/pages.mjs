@@ -219,6 +219,16 @@ check('page titles and descriptions: no em dashes, no all caps', !bad.copy.lengt
   const aus = (day) => site.placePage(data, 'austin-tx', A, day).html;
   check('a page built after early voting ended has no early voting link and keeps Election Day\'s', md('2026-10-29').includes('>Find early voting locations</a>') && !md('2026-10-30').includes('>Find early voting locations</a>') && md('2026-10-30').includes('>Find your Election Day polling place</a>'));
   check('Austin built after early voting: no county\'s early voting link, every county\'s Election Day link stays', aus('2026-10-30').includes('>Early voting locations</a>') && !aus('2026-10-31').includes('>Early voting locations</a>') && (aus('2026-10-31').match(/>Election Day locations<\/a>/g) || []).length === (data.places['austin-tx'].by_county || []).filter((c) => c.lookups.election_day).length);
+  // A county row always has a link, and the heading never stands alone (Atlanta from Oct 31: its counties' early
+  // voting links go with early voting, and their drop box links are dated, so no row is left).
+  const bareRows = (html) => {
+    const lis = ((html.match(/<ul class="pg-ctys">([\s\S]*?)<\/ul>/) || [])[1] || '').match(/<li>[\s\S]*?<\/li>/g) || [];
+    return (html.includes('class="pg-cty"') && !lis.length) || lis.some((li) => !li.includes('<a '));
+  };
+  const atl = (day) => site.placePage(data, 'atlanta-ga', A, day).html;
+  check('Atlanta built Oct 31: no county row without a link (Oct 28 still lists both counties\' links)', atl('2026-10-28').includes('class="pg-cty"') && !bareRows(atl('2026-10-28')) && !bareRows(atl('2026-10-31')));
+  const bare = ['2026-10-31', '2026-11-01', '2026-11-02', '2026-11-03'].flatMap((day) => placeIds.filter((id) => bareRows(site.placePage(data, id, A, day).html)).map((id) => `${id} ${day}`));
+  check('no place page built Oct 31 to Nov 3 has a county row without a link, or the heading alone', !bare.length, bare.join(' '));
   // Dated text never goes on a page, whatever the build date (Codex on 217e8df): it can say "today", and a page keeps
   // it until the next deploy. The app shows it as it reads on the day.
   const dn = placeIds.filter((id) => (data.places[id].dated || []).some((x) => x.path === 'notes'));

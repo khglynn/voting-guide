@@ -717,6 +717,11 @@
       "path": "gotchas.2.short",
       "from": "2026-10-31",
       "text": "Early voting is over; on Election Day, vote only at your assigned precinct."
+    },
+    {
+      "path": "mail_ballot.drop_box_lookup_url",
+      "from": "2026-10-31",
+      "text": ""
     }
   ]
 }

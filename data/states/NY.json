@@ -647,6 +647,16 @@
       "path": "gotchas.0.text",
       "from": "2026-11-03",
       "text": "October 24 was the last day to register and the last day to request a mail ballot online or by mail, and in-person applications at your county board closed Monday, November 2. Early voting ended November 1. Today, vote at your own poll site, 6 AM to 9 PM. No same-day registration in New York."
+    },
+    {
+      "path": "situations.away_on_election_day.actions.1.label",
+      "from": "2026-11-03",
+      "text": "Track my ballot"
+    },
+    {
+      "path": "situations.away_on_election_day.actions.1.url",
+      "from": "2026-11-03",
+      "text": "https://voterlookup.elections.ny.gov/"
     }
   ]
 }

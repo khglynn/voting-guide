@@ -277,12 +277,18 @@ function srcPath(o, path) {
   }
   return cur;
 }
+/* A link can change on its date too (Oct 30: Maryland's request button, Florida's and Illinois's early voting
+   buttons, Georgia's drop box links). A path to a link (its last part `url` or `..._url`, or a `lookups` entry)
+   takes an http(s) URL, or "" for no link from that day (Georgia's drop boxes close with early voting); a help
+   button's `url` always takes a URL, and check-data holds it to the URLs its state file already has. */
+const LINK_PATH = /(?:^|\.)(?:url|[a-z_]+_url)$|(?:^|\.)lookups\.[a-z_]+$/;
+const datedTextOk = (path, t) => (!LINK_PATH.test(path) ? isStr(t) : t === '' ? !/\.actions\.\d+\.url$/.test(path) : !!safeUrl(t));
 function datedList(list, src, where) {
   if (list == null) return null;
   if (!Array.isArray(list)) { warn(`${where}: dated is not a list; dropped it`); return null; }
   const out = [];
   for (const x of list) {
-    if (!(x && isStr(x.path) && isDate(x.from) && isStr(x.text))) { warn(`${where}: a dated entry needs a path, a from date and text; dropped it`); continue; }
+    if (!(x && isStr(x.path) && isDate(x.from) && typeof x.text === 'string' && datedTextOk(x.path.trim(), x.text))) { warn(`${where}: a dated entry needs a path, a from date and text (for a link, a URL or "" for none); dropped it`); continue; }
     if (typeof srcPath(src, x.path.trim()) !== 'string') { warn(`${where}: dated path ${x.path} names no text in the file; dropped it`); continue; }
     out.push({ path: x.path.trim(), from: x.from, text: x.text.trim() });
   }

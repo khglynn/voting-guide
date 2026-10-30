@@ -1074,7 +1074,7 @@ function roundTrip(name, stCode, places, mutate) {
   check('dated: Pensacola\u2019s drop-off note says early voting closed once it has (Nov 1)', /^Drop boxes/.test(plan.applyDated(pen, pen.dated, '2026-10-31').notes) && /^Early voting and its drop boxes closed/.test(plan.applyDated(pen, pen.dated, '2026-11-01').notes));
   // The help buttons open the county's tools where the place has them (west-mail-25, fl-10, ny-11, south-midwest-19, east-18).
   const act = (h, sid, label) => ((h.situations.find((x) => x.id === sid) || {}).actions || []).find((a) => a.label === label);
-  let b = open('FL', ['orlando-fl']);
+  let b = openOn('2026-10-30', 'FL', ['orlando-fl']); // before the button switches on Nov 1 ("stale lines" in model-ledger)
   check('help buttons: Orlando\u2019s "Find early voting places" opens Orange County\u2019s early voting page', act(b.howto, 'away_on_election_day', 'Find early voting places').url === 'https://voteorangefl.gov/vote-early/', JSON.stringify(act(b.howto, 'away_on_election_day', 'Find early voting places')));
   check('help buttons: Orlando\u2019s tracking link is Orange County\u2019s BallotTrax', b.howto.mail_ballot.tracking_url === 'https://floridaorangevotes.ballottrax.net/voter/' && act(b.howto, 'no_mail_ballot_or_lost', 'Track my ballot').url === 'https://floridaorangevotes.ballottrax.net/voter/');
   b = open('FL', ['tallahassee-fl']);

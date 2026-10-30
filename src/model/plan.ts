@@ -128,7 +128,10 @@ export function applyDated<T extends object>(o: T, dated: Dated[] | undefined, t
    the county's. A button changes only when its label says what kind of page it is, since a state can use one
    page for several jobs (Illinois's election-office directory is also its tracking fallback; New York uses one
    lookup for all four). A general one ("Find voting places", "Find a vote center") that could be either opens
-   the early voting page while early voting is open, then the Election Day one (Codex on part B). */
+   the early voting page while early voting is open, then the Election Day one (Codex on part B). One that names
+   early voting follows the county's own window (Oct 30: Escambia's ends Oct 31, Orange's and Leon's Nov 1, while
+   Florida's state buttons switch by date on Nov 2): once it has ended, it is "Find my polling place" and opens the
+   county's Election Day page, so it never opens a closed county's early voting list. */
 const KINDS = ['early_in_person', 'election_day', 'drop_box', 'tracking'] as const;
 type Kind = (typeof KINDS)[number];
 const urlsOf = (x: HowTo): Record<Kind, string | null> => ({
@@ -147,6 +150,8 @@ function localActions(base: HowTo, h: HowTo, today: string): HowTo {
     const fits = KINDS.filter((k) => was[k] && was[k] === a.url && FITS[k].test(a.label));
     let k: Kind | undefined = fits.length === 1 ? fits[0] : fits.find((x) => NAMES[x]?.test(a.label));
     if (!k && fits.length > 1) k = earlyOpen && fits.includes('early_in_person') ? 'early_in_person' : fits.includes('election_day') ? 'election_day' : fits[0];
+    // Only a label that says early voting: "Find a vote center" (California, Colorado) stays right on Election Day.
+    if (k === 'early_in_person' && !earlyOpen && NAMES.early_in_person!.test(a.label) && now.election_day) return { label: 'Find my polling place', url: now.election_day };
     return k && now[k] && now[k] !== a.url ? { ...a, url: now[k]! } : a;
   };
   return { ...h, situations: h.situations!.map((x) => (x.actions && x.actions.length ? { ...x, actions: x.actions.map(swap) } : x)) };

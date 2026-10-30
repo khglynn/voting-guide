@@ -747,6 +747,56 @@
       "path": "mail_ballot.return_options.1",
       "from": "2026-11-02",
       "text": "secure ballot intake station (Florida's name for a drop box) at an early voting site: closed, since early voting ended October 31 or November 1, depending on your county"
+    },
+    {
+      "path": "situations.moved_in_state.actions.1.label",
+      "from": "2026-11-02",
+      "text": "Find my county office"
+    },
+    {
+      "path": "situations.moved_in_state.actions.1.url",
+      "from": "2026-11-02",
+      "text": "https://dos.fl.gov/elections/contacts/supervisor-of-elections/"
+    },
+    {
+      "path": "situations.wrong_polling_place.actions.1.label",
+      "from": "2026-11-02",
+      "text": "Find my county office"
+    },
+    {
+      "path": "situations.wrong_polling_place.actions.1.url",
+      "from": "2026-11-02",
+      "text": "https://dos.fl.gov/elections/contacts/supervisor-of-elections/"
+    },
+    {
+      "path": "situations.no_mail_ballot_or_lost.actions.1.label",
+      "from": "2026-11-02",
+      "text": "Find my polling place"
+    },
+    {
+      "path": "situations.no_mail_ballot_or_lost.actions.1.url",
+      "from": "2026-11-02",
+      "text": "https://registration.dos.fl.gov/CheckVoterStatus"
+    },
+    {
+      "path": "situations.mistake_on_ballot.actions.0.label",
+      "from": "2026-11-02",
+      "text": "Find my polling place"
+    },
+    {
+      "path": "situations.mistake_on_ballot.actions.0.url",
+      "from": "2026-11-02",
+      "text": "https://registration.dos.fl.gov/CheckVoterStatus"
+    },
+    {
+      "path": "situations.away_on_election_day.actions.0.label",
+      "from": "2026-11-02",
+      "text": "Find my polling place"
+    },
+    {
+      "path": "situations.away_on_election_day.actions.0.url",
+      "from": "2026-11-02",
+      "text": "https://registration.dos.fl.gov/CheckVoterStatus"
     }
   ]
 }

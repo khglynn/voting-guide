@@ -672,6 +672,81 @@
       "path": "mail_ballot.mail_cutoff_advice",
       "from": "2026-10-28",
       "text": "It's too late to count on the mail. Postmarks don't count. The state's own page says your ballot 'must be received, regardless of postmark, by the Supervisor of Elections' office no later than 7:00 pm (local time) on Election Day.' Hand it in instead: at a ballot intake station at an early voting site while early voting is open in your county, or at your county supervisor of elections' office through 7 PM on Election Day. Overseas voters are the only exception. They get a 10-day extension if their ballot is postmarked by Election Day."
+    },
+    {
+      "path": "situations.away_on_election_day.short",
+      "from": "2026-11-01",
+      "text": "Early voting ends today in some counties, like Orange and Leon; it's too late to have a mail ballot sent."
+    },
+    {
+      "path": "situations.away_on_election_day.answer",
+      "from": "2026-11-01",
+      "text": "Early voting ended Saturday, October 31 in some counties, like Escambia. In others, like Orange and Leon, today, Sunday, November 1, is the last day, at any site in your county. It's too late to have a mail ballot sent (the deadline was October 22). Already have one? It must reach your supervisor's office by 7 PM on November 3."
+    },
+    {
+      "path": "gotchas.2.short",
+      "from": "2026-11-01",
+      "text": "Early voting ends today in Orange and Leon; on Election Day, use your own precinct."
+    },
+    {
+      "path": "situations.away_on_election_day.short",
+      "from": "2026-11-02",
+      "text": "Early voting has ended; if you're back before polls close Nov 3, vote at your own precinct."
+    },
+    {
+      "path": "situations.away_on_election_day.answer",
+      "from": "2026-11-02",
+      "text": "Early voting has ended, and it's too late to have a mail ballot sent (the deadline was October 22). If you can get back before the polls close at 7 PM on November 3, vote at your own precinct. Already have a mail ballot? It must reach your supervisor's office by 7 PM on November 3, so don't mail it now."
+    },
+    {
+      "path": "situations.away_on_election_day.steps.1",
+      "from": "2026-11-02",
+      "text": "Don't mail it now. Put it in the secure drop box at your supervisor's main or branch office by 7 PM Nov 3."
+    },
+    {
+      "path": "gotchas.2.short",
+      "from": "2026-11-02",
+      "text": "Early voting is over; on Election Day, vote only at your own precinct."
+    },
+    {
+      "path": "gotchas.2.text",
+      "from": "2026-11-02",
+      "text": "Early voting, at 'any site in your county,' ended October 31 or November 1, depending on your county. Election Day is 'your assigned precinct only.' Check your precinct at the lookup link the night before."
+    },
+    {
+      "path": "gotchas.1.short",
+      "from": "2026-11-02",
+      "text": "Drop off your mail ballot at your supervisor's office by 7 PM Nov 3."
+    },
+    {
+      "path": "gotchas.1.text",
+      "from": "2026-11-02",
+      "text": "Mail ballots must reach the supervisor's office by 7 PM on November 3. Postmarks do not count, so don't mail yours now. Do not take it to your Election Day polling place: precincts cannot accept mail ballots. Use the secure drop box or front counter at the supervisor's main or branch office; the boxes at early voting sites closed with early voting."
+    },
+    {
+      "path": "situations.wrong_polling_place.short",
+      "from": "2026-11-02",
+      "text": "Early voting is over; on Election Day, go to your assigned precinct."
+    },
+    {
+      "path": "situations.wrong_polling_place.answer",
+      "from": "2026-11-02",
+      "text": "Early voting has ended. On Election Day you must vote at your assigned precinct, so look it up and go there."
+    },
+    {
+      "path": "situations.mistake_on_ballot.answer",
+      "from": "2026-11-02",
+      "text": "At the polls, don't put it in the scanner: hand it back and get a new one (you can get up to three ballots in all). On a mail ballot, bring it with you to your precinct on Election Day, turn it in, and vote a regular ballot."
+    },
+    {
+      "path": "situations.college_student.steps.0",
+      "from": "2026-11-02",
+      "text": "Registered at school in Orange County (say, UCF)? Early voting ended Nov 1, so vote at your own precinct on Nov 3."
+    },
+    {
+      "path": "mail_ballot.return_options.1",
+      "from": "2026-11-02",
+      "text": "secure ballot intake station (Florida's name for a drop box) at an early voting site: closed, since early voting ended October 31 or November 1, depending on your county"
     }
   ]
 }

@@ -592,6 +592,41 @@
       "path": "situations.away_on_election_day.short",
       "from": "2026-11-03",
       "text": "Early voting is over; hand in a mail ballot you have at any poll site by 9 PM."
+    },
+    {
+      "path": "situations.away_on_election_day.steps.0",
+      "from": "2026-11-02",
+      "text": "NYC: look up your Election Day poll site at findmypollsite.vote.nyc."
+    },
+    {
+      "path": "situations.away_on_election_day.steps.1",
+      "from": "2026-11-02",
+      "text": "Sullivan County: early voting at Monticello and Liberty ended Nov 1."
+    },
+    {
+      "path": "situations.away_on_election_day.actions.0.label",
+      "from": "2026-11-02",
+      "text": "Find my poll site"
+    },
+    {
+      "path": "situations.college_student.short",
+      "from": "2026-11-02",
+      "text": "Early voting ended Nov 1; apply at your home county board by Nov 2, or vote there Nov 3."
+    },
+    {
+      "path": "situations.college_student.answer",
+      "from": "2026-11-02",
+      "text": "Registered at home but away at school? Online mail-ballot requests closed Saturday, October 24, and early voting ended Sunday, November 1. You can still apply in person at your home county board through November 2. You can also name someone to deliver your application and pick up your ballot. Or vote at your home poll site on Election Day, November 3, 6 AM to 9 PM."
+    },
+    {
+      "path": "gotchas.0.short",
+      "from": "2026-11-02",
+      "text": "Registration and online mail-ballot requests closed Oct 24; vote on Nov 3."
+    },
+    {
+      "path": "gotchas.0.text",
+      "from": "2026-11-02",
+      "text": "October 24 was the last day to register and the last day to request a mail ballot online or by mail. Both have passed, and early voting ended November 1. You can still apply for a mail ballot in person at your county board through Monday, November 2, or vote on Election Day. No same-day registration in New York."
     }
   ]
 }

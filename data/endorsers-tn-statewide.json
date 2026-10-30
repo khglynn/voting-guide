@@ -73,7 +73,7 @@
     "guide_url": "https://www.tngop.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false,
+    "endorses_measures": true,
     "party": "Republican",
     "lean_basis_kind": "party"
   },

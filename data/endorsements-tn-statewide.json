@@ -170,6 +170,36 @@
     "confidence": "verified"
   },
   {
+    "endorser_id": "tn-republican-party",
+    "target_id": "tn-amendment-1",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Under “November Ballot Measures,” its candidate toolbox says “VOTE YES ON ALL” and “YES on Amendment 1.”",
+    "url": "https://tngop.org/candidate-toolbox",
+    "date": "2026-10-30",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tn-republican-party",
+    "target_id": "tn-amendment-2",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Under “November Ballot Measures,” its candidate toolbox says “VOTE YES ON ALL” and “YES on Amendment 2.”",
+    "url": "https://tngop.org/candidate-toolbox",
+    "date": "2026-10-30",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tn-republican-party",
+    "target_id": "tn-amendment-3",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Under “November Ballot Measures,” its candidate toolbox says “VOTE YES ON ALL” and “YES on Amendment 3.”",
+    "url": "https://tngop.org/candidate-toolbox",
+    "date": "2026-10-30",
+    "confidence": "verified"
+  },
+  {
     "endorser_id": "tn-afl-cio",
     "target_id": "tn-governor",
     "status": "endorsed",

@@ -207,12 +207,16 @@ const LOOK_LABEL: [keyof Lookups, string][] = [['early_in_person', 'Early voting
 function whereHTML(h: HowTo, p: PlaceBundle | null): string {
   const links: string[] = [];
   const mail = isMailState(h);
-  const early = h.early_in_person.available ? h.early_in_person.lookup_url : null;
+  // Once early voting has ended by the build day (h.day, Oct 30), its links go and the Election Day link stays;
+  // a page built during early voting keeps its link until the next deploy.
+  const ep = h.early_in_person;
+  const earlyOver = !!(ep.end && h.day && h.day > ep.end);
+  const early = ep.available && !earlyOver ? ep.lookup_url : null;
   const day = h.election_day.lookup_url;
   // A place across county lines (Austin: Travis, Williamson, Hays): each county's own tools, labeled, as My plan
   // shows them before it knows your county; the state's statewide lookup stands in for none of them.
   const counties = h.county_links && h.county_links.length > 1 ? h.county_links.filter((c) => c && c.county) : [];
-  const byCounty = counties.length ? `<p class="pg-cty"><b>Find your county’s voting places:</b></p><ul class="pg-ctys">${counties.map((c) => `<li><b>${esc(`${c.county} County`)}</b> ${LOOK_LABEL.filter(([k]) => c.lookups[k]).map(([k, l]) => ext(c.lookups[k]!, l)).join(' · ')}</li>`).join('')}</ul>` : '';
+  const byCounty = counties.length ? `<p class="pg-cty"><b>Find your county’s voting places:</b></p><ul class="pg-ctys">${counties.map((c) => `<li><b>${esc(`${c.county} County`)}</b> ${LOOK_LABEL.filter(([k]) => c.lookups[k] && !(k === 'early_in_person' && earlyOver)).map(([k, l]) => ext(c.lookups[k]!, l)).join(' · ')}</li>`).join('')}</ul>` : '';
   // The state's lookup stays for any kind not every county has (Atlanta's counties list no Election Day page).
   const own = (k: keyof Lookups): boolean => counties.length > 0 && counties.every((c) => !!c.lookups[k]);
   const e = own('early_in_person') ? null : early, dd = own('election_day') ? null : day;

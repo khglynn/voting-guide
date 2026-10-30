@@ -427,6 +427,15 @@ for (const s of all.states) {
     });
   });
   (s.gotchas || []).forEach((g, i) => { if (g && typeof g === 'object') shortOk(g.short, 15, `${st} gotcha ${i + 1}`); });
+  // A button's link or label dated to change (Oct 30) keeps the same rules: a URL this state file already holds, 2 to 5 words.
+  (s.dated || []).forEach((d) => {
+    const m = d && /^situations\.([a-z_]+)\.actions\.\d+\.(url|label)$/.exec(d.path || '');
+    if (!m) return;
+    const where = `${st} dated ${d.path} from ${d.from}`;
+    const x = (s.situations || []).find((y) => y && y.id === m[1]);
+    if (m[2] === 'url' && !known.has(String(d.text).trim()) && String(d.text).trim() !== ((x && x.source) || '').trim()) err('help-action-url', `${where}: ${d.text} is not a URL this state file already holds`);
+    if (m[2] === 'label') { const n = words(d.text); if (n < 2 || n > 5) warn('help-action-label', `${where}: "${d.text}" is ${n} words (2 to 5)`); }
+  });
 }
 all.places.forEach((p) => shortOk(p.early_in_person?.hours_short, 20, `places/${p.id} early_in_person.hours_short`));
 // A county's own quick answers, and text dated to change on its own date (Oct 28), keep the same limits.

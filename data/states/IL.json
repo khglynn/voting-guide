@@ -643,6 +643,86 @@
       "path": "situations.college_student.steps.0",
       "from": "2026-11-03",
       "text": "Same-day registration is open today at your precinct polling place or any of Chicago's 51 vote centers. Bring two IDs."
+    },
+    {
+      "path": "situations.moved_in_state.actions.0.label",
+      "from": "2026-11-03",
+      "text": "Find my polling place"
+    },
+    {
+      "path": "situations.moved_in_state.actions.0.url",
+      "from": "2026-11-03",
+      "text": "https://ova.elections.il.gov/PollingPlaceLookup.aspx"
+    },
+    {
+      "path": "situations.moved_out_of_state.actions.0.label",
+      "from": "2026-11-03",
+      "text": "Find my polling place"
+    },
+    {
+      "path": "situations.moved_out_of_state.actions.0.url",
+      "from": "2026-11-03",
+      "text": "https://ova.elections.il.gov/PollingPlaceLookup.aspx"
+    },
+    {
+      "path": "situations.not_registered.actions.1.label",
+      "from": "2026-11-03",
+      "text": "Find my polling place"
+    },
+    {
+      "path": "situations.not_registered.actions.1.url",
+      "from": "2026-11-03",
+      "text": "https://ova.elections.il.gov/PollingPlaceLookup.aspx"
+    },
+    {
+      "path": "situations.no_mail_ballot_or_lost.actions.1.label",
+      "from": "2026-11-03",
+      "text": "Find my polling place"
+    },
+    {
+      "path": "situations.no_mail_ballot_or_lost.actions.1.url",
+      "from": "2026-11-03",
+      "text": "https://ova.elections.il.gov/PollingPlaceLookup.aspx"
+    },
+    {
+      "path": "situations.mistake_on_ballot.actions.0.label",
+      "from": "2026-11-03",
+      "text": "Find my polling place"
+    },
+    {
+      "path": "situations.mistake_on_ballot.actions.0.url",
+      "from": "2026-11-03",
+      "text": "https://ova.elections.il.gov/PollingPlaceLookup.aspx"
+    },
+    {
+      "path": "situations.mailed_but_want_in_person.actions.0.label",
+      "from": "2026-11-03",
+      "text": "Find my polling place"
+    },
+    {
+      "path": "situations.mailed_but_want_in_person.actions.0.url",
+      "from": "2026-11-03",
+      "text": "https://ova.elections.il.gov/PollingPlaceLookup.aspx"
+    },
+    {
+      "path": "situations.college_student.actions.1.label",
+      "from": "2026-11-03",
+      "text": "Find my polling place"
+    },
+    {
+      "path": "situations.college_student.actions.1.url",
+      "from": "2026-11-03",
+      "text": "https://ova.elections.il.gov/PollingPlaceLookup.aspx"
+    },
+    {
+      "path": "situations.away_on_election_day.actions.0.label",
+      "from": "2026-11-03",
+      "text": "Find my polling place"
+    },
+    {
+      "path": "situations.away_on_election_day.actions.0.url",
+      "from": "2026-11-03",
+      "text": "https://ova.elections.il.gov/PollingPlaceLookup.aspx"
     }
   ]
 }

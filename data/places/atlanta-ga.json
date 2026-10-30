@@ -216,6 +216,16 @@
       "path": "notes",
       "from": "2026-10-31",
       "text": "Early voting is over. On Nov 3 you must go to your assigned precinct, 7 AM to 7 PM. Mail ballot? Drop boxes closed Oct 30, so hand it to your county elections office by Nov 3; call for hours (Fulton 404-612-7020, DeKalb 404-298-4020). You can't return it at your Election Day polling place."
+    },
+    {
+      "path": "by_county.0.lookups.drop_box",
+      "from": "2026-10-31",
+      "text": ""
+    },
+    {
+      "path": "by_county.1.lookups.drop_box",
+      "from": "2026-10-31",
+      "text": ""
     }
   ],
   "sources": [

@@ -213,6 +213,12 @@ check('page titles and descriptions: no em dashes, no all caps', !bad.copy.lengt
     }
   }
   check('every place page keeps a way to find early voting and Election Day places (county\'s or state\'s)', !lost.length, lost.join(' '));
+  // Once early voting has ended by the build day (Oct 30), a page drops its early voting links, the state's and each
+  // county's, and keeps Election Day's (Maryland's ended Oct 29, Travis's, Williamson's and Hays's Oct 30).
+  const md = (day) => site.statePage(data, 'MD', A, day).html;
+  const aus = (day) => site.placePage(data, 'austin-tx', A, day).html;
+  check('a page built after early voting ended has no early voting link and keeps Election Day\'s', md('2026-10-29').includes('>Find early voting locations</a>') && !md('2026-10-30').includes('>Find early voting locations</a>') && md('2026-10-30').includes('>Find your Election Day polling place</a>'));
+  check('Austin built after early voting: no county\'s early voting link, every county\'s Election Day link stays', aus('2026-10-30').includes('>Early voting locations</a>') && !aus('2026-10-31').includes('>Early voting locations</a>') && (aus('2026-10-31').match(/>Election Day locations<\/a>/g) || []).length === (data.places['austin-tx'].by_county || []).filter((c) => c.lookups.election_day).length);
   // Dated text never goes on a page, whatever the build date (Codex on 217e8df): it can say "today", and a page keeps
   // it until the next deploy. The app shows it as it reads on the day.
   const dn = placeIds.filter((id) => (data.places[id].dated || []).some((x) => x.path === 'notes'));

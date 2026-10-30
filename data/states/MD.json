@@ -610,6 +610,16 @@
       "path": "situations.away_on_election_day.steps.0",
       "from": "2026-10-31",
       "text": "Print-At-Home requests closed October 30. You can still pick up a mail-in ballot in person at your local board through 8 PM on Election Day."
+    },
+    {
+      "path": "situations.away_on_election_day.actions.1.label",
+      "from": "2026-10-31",
+      "text": "Find a drop box"
+    },
+    {
+      "path": "situations.away_on_election_day.actions.1.url",
+      "from": "2026-10-31",
+      "text": "https://elections.maryland.gov/elections/2026/2026_General_Drop_Box_Locations.pdf"
     }
   ]
 }

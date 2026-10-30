@@ -1354,6 +1354,13 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const hw = (x, d) => plan.localHowto(read(`state-${x}.json`).howto, [], null, d);
     const sit = (h, id) => h.situations.find((x) => x.id === id);
     const lost = (p, d) => sit(plan.localHowto(read('state-FL.json').howto, [read(`place-${p}.json`)], null, d), 'no_mail_ballot_or_lost').answer;
+    // Buttons and links dated to change (Oct 30): every help button on a ballot built for that day, and its drop box links.
+    const hp = (x, ps, d) => plan.localHowto(read(`state-${x}.json`).howto, ps.map((p) => read(`place-${p}.json`)), null, d);
+    const btns = (h) => h.situations.flatMap((x) => x.actions || []);
+    const early = (h) => btns(h).filter((a) => /early/i.test(a.label));
+    const mdAway = (d) => sit(hw('MD', d), 'away_on_election_day').actions[1];
+    const flAway = (ps, d) => sit(hp('FL', ps, d), 'away_on_election_day').actions[0];
+    const ilPoll = 'https://ova.elections.il.gov/PollingPlaceLookup.aspx';
     const flips = [
       ['AL Oct 30', /only for emergencies/.test(hw('AL', '2026-10-30').gotcha_shorts[1]) && /regular applications closed/i.test(hw('AL', '2026-10-30').gotchas[1])],
       ['AL Nov 3', /applications have closed/.test(hw('AL', '2026-11-03').gotchas[1]) && !/until 5 PM Monday/.test(hw('AL', '2026-11-03').gotchas[1])],
@@ -1375,6 +1382,11 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       ['NY Nov 2', /vote early/.test(sit(hw('NY', '2026-11-01'), 'college_student').short) && !/vote early/i.test([sit(hw('NY', '2026-11-02'), 'college_student').short, hw('NY', '2026-11-02').gotcha_shorts[0], ...sit(hw('NY', '2026-11-02'), 'away_on_election_day').steps].join(' ')) && sit(hw('NY', '2026-11-02'), 'away_on_election_day').actions[0].label === 'Find my poll site'],
       ['NY Nov 3', !/(by|through) (Monday, )?Nov(ember)? 2/.test([sit(hw('NY', '2026-11-03'), 'college_student').short, sit(hw('NY', '2026-11-03'), 'college_student').answer, hw('NY', '2026-11-03').gotcha_shorts[0], hw('NY', '2026-11-03').gotchas[0]].join(' ')) && /9 PM/.test(sit(hw('NY', '2026-11-03'), 'college_student').short)],
       ['DC Nov 2', /^Or vote early/.test(sit(hw('DC', '2026-11-01'), 'away_on_election_day').steps[0]) && /any Vote Center/.test(sit(hw('DC', '2026-11-02'), 'away_on_election_day').steps[0])],
+      ['MD button Oct 31', mdAway('2026-10-30').label === 'Request a mail-in ballot' && /onlinemailinrequest/.test(mdAway('2026-10-30').url) && mdAway('2026-10-31').label === 'Find a drop box' && mdAway('2026-10-31').url === hw('MD', '2026-10-31').mail_ballot.drop_box_lookup_url],
+      ['FL buttons Nov 1', early(hw('FL', '2026-10-31')).length === 5 && [[], ['orlando-fl'], ['pensacola-fl'], ['tallahassee-fl']].every((ps) => early(hp('FL', ps, '2026-11-01')).length === 0) && flAway([], '2026-11-01').url === hw('FL', '2026-11-01').election_day.lookup_url && flAway(['orlando-fl'], '2026-10-31').url === 'https://voteorangefl.gov/vote-early/' && flAway(['orlando-fl'], '2026-11-02').url === 'https://voteorangefl.gov/find-your-polling-place/' && flAway(['pensacola-fl'], '2026-11-01').url === 'https://escambiavotes.gov/precinct-finder'],
+      ['IL buttons Nov 3', early(hw('IL', '2026-11-02')).length === 8 && early(hp('IL', ['chicago-il'], '2026-11-03')).length === 0 && btns(hw('IL', '2026-11-03')).filter((a) => a.label === 'Find my polling place').length === 9 && btns(hw('IL', '2026-11-03')).filter((a) => a.label === 'Find my polling place').every((a) => a.url === ilPoll)],
+      ['GA drop boxes Oct 31', !!hw('GA', '2026-10-30').mail_ballot.drop_box_lookup_url && !hw('GA', '2026-10-31').mail_ballot.drop_box_lookup_url && !hp('GA', ['atlanta-ga'], '2026-10-31').mail_ballot.drop_box_lookup_url && (hp('GA', ['atlanta-ga'], '2026-10-31').county_links || []).every((c) => !c.lookups.drop_box) && (hp('GA', ['atlanta-ga'], '2026-10-30').county_links || []).every((c) => !!c.lookups.drop_box)],
+      ['Pensacola drop box Nov 1', hp('FL', ['pensacola-fl'], '2026-10-31').mail_ballot.drop_box_lookup_url === 'https://escambiavotes.gov/early-voting-locations' && hp('FL', ['pensacola-fl'], '2026-11-01').mail_ballot.drop_box_lookup_url === hw('FL', '2026-11-01').mail_ballot.drop_box_lookup_url],
       ['Oct 29 unchanged', /apply by Oct\. 29/.test(hw('IL', '2026-10-29').model_plain) && /through Oct 29/.test(hw('AL', '2026-10-29').gotcha_shorts[1])],
     ].filter(([, ok]) => !ok).map(([n]) => n);
     check('stale lines: each flips to what is true the day after its deadline, and not before', flips.length === 0, flips.join(', '));

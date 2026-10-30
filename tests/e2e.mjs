@@ -4642,7 +4642,8 @@ const ADDRESS = /testing lane|testing%20lane|testing\+lane|test one/i;
 
 // Where to vote, part B (Oct 28): text dated to change does on its own date, and the "If something goes wrong"
 // buttons open the county's own tools. Orlando on Nov 2 (after early voting): the drop-off note names only
-// the elections office; its "Find early voting places" help button opens Orange County's page, not the state's.
+// the elections office; its away-on-Election-Day button, "Find early voting places" until Nov 1 (dated, Oct 30),
+// is "Find my polling place" and opens Orange County's polling place page, not the state's.
 {
   const { ctx, page } = await newPage();
   await page.goto(`${BASE}/?today=2026-11-02`);
@@ -4655,7 +4656,8 @@ const ADDRESS = /testing lane|testing%20lane|testing\+lane|test one/i;
   check('Where to vote B: on Nov 2, Orlando\u2019s drop-off note names only the elections office', /^Drop off a mail ballot only at the elections office/.test(note) && !/27 early voting sites/.test(note), note);
   await tap(page, '[data-act="open"][data-k="wi-away_on_election_day"]');
   const btn = await page.getAttribute('[data-k="wi-away_on_election_day"] + .wi-a .wi-acts a', 'href');
-  check('Where to vote B: Orlando\u2019s help button opens Orange County\u2019s early voting page', btn === 'https://voteorangefl.gov/vote-early/', btn);
+  const btnText = await text(page, '[data-k="wi-away_on_election_day"] + .wi-a .wi-acts a');
+  check('Where to vote B: on Nov 2, Orlando\u2019s help button is "Find my polling place" and opens Orange County\u2019s polling place page', btn === 'https://voteorangefl.gov/find-your-polling-place/' && btnText === 'Find my polling place', `${btnText} ${btn}`);
   noErrors(page, 'Where to vote B, Orlando');
   await ctx.close();
 }

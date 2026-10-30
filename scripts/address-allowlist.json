@@ -399,6 +399,21 @@
       "address": "1207 Tradewinds Drive",
       "reason": "Maury County (TN) Election Commission office, as its early voting site is listed.",
       "source": "https://www.maurycounty-tn.gov/227/Election-Commission"
+    },
+    {
+      "address": "2010 Redbud Blvd.",
+      "reason": "Collin County (TX) Elections Office: the Early Voting Clerk's mailing address, the main early voting site and where mail ballots are hand-delivered on Election Day.",
+      "source": "https://www.collincountytx.gov/docs/default-source/elections/election-notices/collin-county-bond-notice-of-election.pdf?sfvrsn=23acc969_3"
+    },
+    {
+      "address": "300 N. Allen Dr.",
+      "reason": "Allen Public Library (TX), a Collin County early voting and Election Day vote center for Nov 3, 2026.",
+      "source": "https://www.collincountytx.gov/docs/default-source/elections/election-notices/collin-county-bond-notice-of-election.pdf?sfvrsn=23acc969_3"
+    },
+    {
+      "address": "1451 N. Watters Rd.",
+      "reason": "Allen ISD Service Center (TX), a Collin County early voting and Election Day vote center for Nov 3, 2026.",
+      "source": "https://www.collincountytx.gov/docs/default-source/elections/election-notices/collin-county-bond-notice-of-election.pdf?sfvrsn=23acc969_3"
     }
   ]
 }

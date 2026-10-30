@@ -1,0 +1,1362 @@
+[
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-house-67",
+    "status": "endorsed",
+    "choice": "Jeff Leach",
+    "why": "The board calls Leach a highly effective legislator with a moral core; it says it is skeptical the state can raise enough money to replace local school property taxes, as he proposes.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/texas-house-district-67-recommendation-22463804.php",
+    "date": "2026-10-06",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-house-70",
+    "status": "endorsed",
+    "choice": "Mihaela Elizabeth Plesa",
+    "why": "The board cites Plesa's record of turning ideas into law and building coalitions with Republicans; it calls Flint's legal and judicial experience strong qualifications.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/we-recommend-race-texas-house-district-70-22465215.php",
+    "date": "2026-10-07",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-collin-county-judge",
+    "status": "endorsed",
+    "choice": "Chris Hill",
+    "why": "The board respects Hill's record for residents worried about property taxes but worries his pointedly partisan style can't unite a changing county; it found Brown personable but short on experience for the office.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/collin-county-judge-chris-hill-john-brown-election-22455184.php",
+    "date": "2026-09-30",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-collin-county-prop-a",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "The board urges a yes on all four county bonds; it notes Prop A's $296.5 million for courtrooms and 550 more jail beds, and says the county can afford these bonds.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/collin-county-bond-election-jail-roads-22454818.php",
+    "date": "2026-09-30",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-collin-county-prop-b",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "The board urges a yes on all four county bonds; it notes Prop B's $475 million for roads, including Dallas North Tollway service roads and the Outer Loop, and says the county can afford these bonds.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/collin-county-bond-election-jail-roads-22454818.php",
+    "date": "2026-09-30",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-collin-county-prop-c",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "The board urges a yes on all four county bonds; Prop C, the smallest, is $6 million for parks and open space.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/collin-county-bond-election-jail-roads-22454818.php",
+    "date": "2026-09-30",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-collin-county-prop-d",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "The board urges a yes on all four county bonds; it notes Prop D's $40 million building for elections and records would replace space the county leases for about $650,000 a year.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/collin-county-bond-election-jail-roads-22454818.php",
+    "date": "2026-09-30",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-us-house-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not among the board's 2026 general-election recommendations: its Oct 19 roundup lists every pick, and none is for this race. Checked Oct 29, 2026.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/dfw-texas-election-candidate-recommendations-22480028.php",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-house-89",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not among the board's 2026 general-election recommendations: its Oct 19 roundup lists every pick, and none is for this race. Checked Oct 29, 2026.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/dfw-texas-election-candidate-recommendations-22480028.php",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-collin-county-clerk",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not among the board's 2026 general-election recommendations: its Oct 19 roundup lists every pick, and none is for this race. Checked Oct 29, 2026.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/dfw-texas-election-candidate-recommendations-22480028.php",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-collin-commissioner-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not among the board's 2026 general-election recommendations: its Oct 19 roundup lists every pick, and none is for this race. Checked Oct 29, 2026.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/dfw-texas-election-candidate-recommendations-22480028.php",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-collin-jp-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not among the board's 2026 general-election recommendations: its Oct 19 roundup lists every pick, and none is for this race. Checked Oct 29, 2026.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/dfw-texas-election-candidate-recommendations-22480028.php",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-ccad-place-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not among the board's 2026 general-election recommendations: its Oct 19 roundup lists every pick, and none is for this race. Checked Oct 29, 2026.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/dfw-texas-election-candidate-recommendations-22480028.php",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-collin-college-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not among the board's 2026 general-election recommendations: its Oct 19 roundup lists every pick, and none is on this measure. Checked Oct 29, 2026.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/dfw-texas-election-candidate-recommendations-22480028.php",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-mckinney-isd-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not among the board's 2026 general-election recommendations: its Oct 19 roundup lists every pick, and none is on this measure. Checked Oct 29, 2026.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/dfw-texas-election-candidate-recommendations-22480028.php",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-mckinney-isd-prop-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not among the board's 2026 general-election recommendations: its Oct 19 roundup lists every pick, and none is on this measure. Checked Oct 29, 2026.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/dfw-texas-election-candidate-recommendations-22480028.php",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-mckinney-isd-prop-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not among the board's 2026 general-election recommendations: its Oct 19 roundup lists every pick, and none is on this measure. Checked Oct 29, 2026.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/dfw-texas-election-candidate-recommendations-22480028.php",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-mckinney-isd-prop-d",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not among the board's 2026 general-election recommendations: its Oct 19 roundup lists every pick, and none is on this measure. Checked Oct 29, 2026.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/dfw-texas-election-candidate-recommendations-22480028.php",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-mckinney-isd-prop-e",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not among the board's 2026 general-election recommendations: its Oct 19 roundup lists every pick, and none is on this measure. Checked Oct 29, 2026.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/dfw-texas-election-candidate-recommendations-22480028.php",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "collin-county-democrats",
+    "target_id": "tx-us-house-3",
+    "status": "endorsed",
+    "choice": "Evan Hunt",
+    "why": "On the party's 2026 slate card of Democratic nominees, which it asks voters to use at the polls (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.collindemocrats.org/wp-content/uploads/Printable-Slate-Card-2026.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "collin-county-democrats",
+    "target_id": "tx-house-67",
+    "status": "endorsed",
+    "choice": "Jordan Wheatley",
+    "why": "On the party's 2026 slate card of Democratic nominees, which it asks voters to use at the polls (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.collindemocrats.org/wp-content/uploads/Printable-Slate-Card-2026.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "collin-county-democrats",
+    "target_id": "tx-house-70",
+    "status": "endorsed",
+    "choice": "Mihaela Elizabeth Plesa",
+    "why": "On the party's 2026 slate card of Democratic nominees, which it asks voters to use at the polls (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.collindemocrats.org/wp-content/uploads/Printable-Slate-Card-2026.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "collin-county-democrats",
+    "target_id": "tx-house-89",
+    "status": "endorsed",
+    "choice": "Angie Carraway",
+    "why": "On the party's 2026 slate card of Democratic nominees, which it asks voters to use at the polls (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.collindemocrats.org/wp-content/uploads/Printable-Slate-Card-2026.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "collin-county-democrats",
+    "target_id": "tx-5th-coa-place-3",
+    "status": "endorsed",
+    "choice": "Amanda Reichek",
+    "why": "On the party's 2026 slate card of Democratic nominees, which it asks voters to use at the polls (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.collindemocrats.org/wp-content/uploads/Printable-Slate-Card-2026.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "collin-county-democrats",
+    "target_id": "tx-5th-coa-place-6",
+    "status": "endorsed",
+    "choice": "Monica Purdy",
+    "why": "On the party's 2026 slate card of Democratic nominees, which it asks voters to use at the polls (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.collindemocrats.org/wp-content/uploads/Printable-Slate-Card-2026.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "collin-county-democrats",
+    "target_id": "tx-5th-coa-place-8",
+    "status": "endorsed",
+    "choice": "Andrea D. Plumlee",
+    "why": "On the party's 2026 slate card of Democratic nominees, which it asks voters to use at the polls (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.collindemocrats.org/wp-content/uploads/Printable-Slate-Card-2026.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "collin-county-democrats",
+    "target_id": "tx-collin-county-judge",
+    "status": "endorsed",
+    "choice": "John R. \"Buster\" Brown",
+    "why": "On the party's 2026 slate card of Democratic nominees, which it asks voters to use at the polls (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.collindemocrats.org/wp-content/uploads/Printable-Slate-Card-2026.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "collin-county-democrats",
+    "target_id": "tx-collin-county-clerk",
+    "status": "endorsed",
+    "choice": "John Russell",
+    "why": "On the party's 2026 slate card of Democratic nominees, which it asks voters to use at the polls (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.collindemocrats.org/wp-content/uploads/Printable-Slate-Card-2026.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "collin-county-democrats",
+    "target_id": "tx-collin-commissioner-4",
+    "status": "endorsed",
+    "choice": "Julie Holmer",
+    "why": "On the party's 2026 slate card of Democratic nominees, which it asks voters to use at the polls (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.collindemocrats.org/wp-content/uploads/Printable-Slate-Card-2026.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "collin-county-democrats",
+    "target_id": "tx-collin-jp-3",
+    "status": "endorsed",
+    "choice": "Irvin Lynn Barrett",
+    "why": "On the party's 2026 slate card of Democratic nominees, which it asks voters to use at the polls (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.collindemocrats.org/wp-content/uploads/Printable-Slate-Card-2026.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "collin-county-democrats",
+    "target_id": "tx-ccad-place-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "The appraisal district board race is nonpartisan and isn't on the party's 2026 slate card or its candidates page. Checked Oct 29, 2026.",
+    "url": "https://www.collindemocrats.org/wp-content/uploads/Printable-Slate-Card-2026.pdf",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "collin-county-gop",
+    "target_id": "tx-us-house-3",
+    "status": "endorsed",
+    "choice": "Keith Self",
+    "why": "Listed on the party's \"2026 Republican Candidates\" page (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.collincountygop.org/2026candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "collin-county-gop",
+    "target_id": "tx-house-67",
+    "status": "endorsed",
+    "choice": "Jeff Leach",
+    "why": "Listed on the party's \"2026 Republican Candidates\" page (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.collincountygop.org/2026candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "collin-county-gop",
+    "target_id": "tx-house-70",
+    "status": "endorsed",
+    "choice": "George Flint",
+    "why": "Listed on the party's \"2026 Republican Candidates\" page (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.collincountygop.org/2026candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "collin-county-gop",
+    "target_id": "tx-house-89",
+    "status": "endorsed",
+    "choice": "Candy Noble",
+    "why": "Listed on the party's \"2026 Republican Candidates\" page (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.collincountygop.org/2026candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "collin-county-gop",
+    "target_id": "tx-5th-coa-place-3",
+    "status": "endorsed",
+    "choice": "Matthew Kolodoski",
+    "why": "Listed on the party's \"2026 Republican Candidates\" page (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.collincountygop.org/2026candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "collin-county-gop",
+    "target_id": "tx-5th-coa-place-6",
+    "status": "endorsed",
+    "choice": "Ben Smith",
+    "why": "Listed on the party's \"2026 Republican Candidates\" page (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.collincountygop.org/2026candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "collin-county-gop",
+    "target_id": "tx-5th-coa-place-8",
+    "status": "endorsed",
+    "choice": "Ashley Wysocki",
+    "why": "Listed on the party's \"2026 Republican Candidates\" page (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.collincountygop.org/2026candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "collin-county-gop",
+    "target_id": "tx-collin-county-judge",
+    "status": "endorsed",
+    "choice": "Chris Hill",
+    "why": "Listed on the party's \"2026 Republican Candidates\" page (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.collincountygop.org/2026candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "collin-county-gop",
+    "target_id": "tx-collin-county-clerk",
+    "status": "endorsed",
+    "choice": "Stacey Kemp",
+    "why": "Listed on the party's \"2026 Republican Candidates\" page (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.collincountygop.org/2026candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "collin-county-gop",
+    "target_id": "tx-collin-commissioner-4",
+    "status": "endorsed",
+    "choice": "Shelby Williams",
+    "why": "Listed on the party's \"2026 Republican Candidates\" page (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.collincountygop.org/2026candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "collin-county-gop",
+    "target_id": "tx-collin-jp-3",
+    "status": "endorsed",
+    "choice": "Mike Missildine",
+    "why": "Listed on the party's \"2026 Republican Candidates\" page (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.collincountygop.org/2026candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "collin-county-gop",
+    "target_id": "tx-ccad-place-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "The appraisal district board race is nonpartisan and isn't on the party's 2026 candidates page; its news page has no November endorsements. Checked Oct 29, 2026.",
+    "url": "https://www.collincountygop.org/2026candidates/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-us-house-3",
+    "status": "endorsed",
+    "choice": "Evan Hunt",
+    "why": "On the federation's 2026 general-election slate (federal and state picks made by the Texas AFL-CIO's political committee).",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-house-70",
+    "status": "endorsed",
+    "choice": "Mihaela Elizabeth Plesa",
+    "why": "On the federation's 2026 general-election slate, which marks Plesa as a union member (TSEU, CWA 6186).",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-house-89",
+    "status": "endorsed",
+    "choice": "Angie Carraway",
+    "why": "On the federation's 2026 general-election slate, which lists Carraway as a member of Texas AFT.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-house-67",
+    "status": "no_position",
+    "choice": null,
+    "why": "The federation's slate says a race not listed got no recommendation, and this one isn't listed. Checked Oct 29, 2026.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-5th-coa-place-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "The federation's slate says a race not listed got no recommendation, and this one isn't listed. Checked Oct 29, 2026.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-5th-coa-place-6",
+    "status": "no_position",
+    "choice": null,
+    "why": "The federation's slate says a race not listed got no recommendation, and this one isn't listed. Checked Oct 29, 2026.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-5th-coa-place-8",
+    "status": "no_position",
+    "choice": null,
+    "why": "The federation's slate says a race not listed got no recommendation, and this one isn't listed. Checked Oct 29, 2026.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-collin-county-judge",
+    "status": "no_position",
+    "choice": null,
+    "why": "The federation's slate says a race not listed got no recommendation, and this one isn't listed. Checked Oct 29, 2026.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-collin-county-clerk",
+    "status": "no_position",
+    "choice": null,
+    "why": "The federation's slate says a race not listed got no recommendation, and this one isn't listed. Checked Oct 29, 2026.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-collin-commissioner-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "The federation's slate says a race not listed got no recommendation, and this one isn't listed. Checked Oct 29, 2026.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-collin-jp-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "The federation's slate says a race not listed got no recommendation, and this one isn't listed. Checked Oct 29, 2026.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-ccad-place-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "The federation's slate says a race not listed got no recommendation, and this one isn't listed. Checked Oct 29, 2026.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-collin-county-prop-a",
+    "status": "no_position",
+    "choice": null,
+    "why": "The federation's slate says a race not listed got no recommendation, and this one isn't listed. Checked Oct 29, 2026.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-collin-county-prop-b",
+    "status": "no_position",
+    "choice": null,
+    "why": "The federation's slate says a race not listed got no recommendation, and this one isn't listed. Checked Oct 29, 2026.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-collin-county-prop-c",
+    "status": "no_position",
+    "choice": null,
+    "why": "The federation's slate says a race not listed got no recommendation, and this one isn't listed. Checked Oct 29, 2026.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-collin-county-prop-d",
+    "status": "no_position",
+    "choice": null,
+    "why": "The federation's slate says a race not listed got no recommendation, and this one isn't listed. Checked Oct 29, 2026.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-collin-college-prop-a",
+    "status": "no_position",
+    "choice": null,
+    "why": "The federation's slate says a race not listed got no recommendation, and this one isn't listed. Checked Oct 29, 2026.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-mckinney-isd-prop-a",
+    "status": "no_position",
+    "choice": null,
+    "why": "The federation's slate says a race not listed got no recommendation, and this one isn't listed. Checked Oct 29, 2026.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-mckinney-isd-prop-b",
+    "status": "no_position",
+    "choice": null,
+    "why": "The federation's slate says a race not listed got no recommendation, and this one isn't listed. Checked Oct 29, 2026.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-mckinney-isd-prop-c",
+    "status": "no_position",
+    "choice": null,
+    "why": "The federation's slate says a race not listed got no recommendation, and this one isn't listed. Checked Oct 29, 2026.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-mckinney-isd-prop-d",
+    "status": "no_position",
+    "choice": null,
+    "why": "The federation's slate says a race not listed got no recommendation, and this one isn't listed. Checked Oct 29, 2026.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-mckinney-isd-prop-e",
+    "status": "no_position",
+    "choice": null,
+    "why": "The federation's slate says a race not listed got no recommendation, and this one isn't listed. Checked Oct 29, 2026.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-collin-county",
+    "target_id": "tx-us-house-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://www.lwvcollin.org/docs.ashx?id=1827429",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-collin-county",
+    "target_id": "tx-house-67",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://www.lwvcollin.org/docs.ashx?id=1827426",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-collin-county",
+    "target_id": "tx-house-70",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://www.lwvcollin.org/docs.ashx?id=1827427",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-collin-county",
+    "target_id": "tx-house-89",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://www.lwvcollin.org/docs.ashx?id=1827428",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-collin-county",
+    "target_id": "tx-5th-coa-place-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://www.lwvcollin.org/docs.ashx?id=1827422",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-collin-county",
+    "target_id": "tx-5th-coa-place-6",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://www.lwvcollin.org/docs.ashx?id=1827422",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-collin-county",
+    "target_id": "tx-5th-coa-place-8",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://www.lwvcollin.org/docs.ashx?id=1827422",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-collin-county",
+    "target_id": "tx-collin-county-judge",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://www.lwvcollin.org/docs.ashx?id=1827416",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-collin-county",
+    "target_id": "tx-collin-county-clerk",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://www.lwvcollin.org/docs.ashx?id=1827416",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-collin-county",
+    "target_id": "tx-collin-commissioner-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://www.lwvcollin.org/docs.ashx?id=1827416",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-collin-county",
+    "target_id": "tx-collin-jp-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://www.lwvcollin.org/docs.ashx?id=1827416",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-collin-county",
+    "target_id": "tx-ccad-place-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://www.lwvcollin.org/docs.ashx?id=1827416",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-collin-county",
+    "target_id": "tx-collin-county-prop-a",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League's guide prints the ballot language and takes no side.",
+    "url": "https://www.lwvcollin.org/docs.ashx?id=1827416",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-collin-county",
+    "target_id": "tx-collin-county-prop-b",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League's guide prints the ballot language and takes no side.",
+    "url": "https://www.lwvcollin.org/docs.ashx?id=1827416",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-collin-county",
+    "target_id": "tx-collin-county-prop-c",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League's guide prints the ballot language and takes no side.",
+    "url": "https://www.lwvcollin.org/docs.ashx?id=1827416",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-collin-county",
+    "target_id": "tx-collin-county-prop-d",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League's guide prints the ballot language and takes no side.",
+    "url": "https://www.lwvcollin.org/docs.ashx?id=1827416",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-collin-county",
+    "target_id": "tx-collin-college-prop-a",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League's guide prints the ballot language and takes no side.",
+    "url": "https://www.lwvcollin.org/docs.ashx?id=1827416",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-collin-county",
+    "target_id": "tx-mckinney-isd-prop-a",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League's guide prints the ballot language and takes no side.",
+    "url": "https://www.lwvcollin.org/docs.ashx?id=1827419",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-collin-county",
+    "target_id": "tx-mckinney-isd-prop-b",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League's guide prints the ballot language and takes no side.",
+    "url": "https://www.lwvcollin.org/docs.ashx?id=1827419",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-collin-county",
+    "target_id": "tx-mckinney-isd-prop-c",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League's guide prints the ballot language and takes no side.",
+    "url": "https://www.lwvcollin.org/docs.ashx?id=1827419",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-collin-county",
+    "target_id": "tx-mckinney-isd-prop-d",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League's guide prints the ballot language and takes no side.",
+    "url": "https://www.lwvcollin.org/docs.ashx?id=1827419",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-collin-county",
+    "target_id": "tx-mckinney-isd-prop-e",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League's guide prints the ballot language and takes no side.",
+    "url": "https://www.lwvcollin.org/docs.ashx?id=1827419",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-us-house-3",
+    "status": "endorsed",
+    "choice": "Evan Hunt",
+    "why": "On the Texas AFL-CIO COPE 2026 general election slate.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": "2026-07-21",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-house-70",
+    "status": "endorsed",
+    "choice": "Mihaela Elizabeth Plesa",
+    "why": "On the Texas AFL-CIO COPE 2026 general election slate.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": "2026-07-21",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-house-89",
+    "status": "endorsed",
+    "choice": "Angie Carraway",
+    "why": "On the Texas AFL-CIO COPE 2026 general election slate.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": "2026-07-21",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-house-67",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the Texas AFL-CIO slate, which says an unlisted race means delegates made no recommendation.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": "2026-07-21",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-collin-jp-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the Texas AFL-CIO slate, which says an unlisted race means delegates made no recommendation.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": "2026-07-21",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sierra-club-lone-star",
+    "target_id": "tx-house-70",
+    "status": "endorsed",
+    "choice": "Mihaela Elizabeth Plesa",
+    "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 29, 2026.",
+    "url": "https://www.turntexasgreen.org/2026-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sierra-club-lone-star",
+    "target_id": "tx-house-89",
+    "status": "endorsed",
+    "choice": "Angie Carraway",
+    "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 29, 2026.",
+    "url": "https://www.turntexasgreen.org/2026-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sierra-club-lone-star",
+    "target_id": "tx-house-67",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the chapter's 2026 endorsement page, which names picks in other districts. Checked Oct 29, 2026.",
+    "url": "https://www.turntexasgreen.org/2026-endorsements",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "cleat",
+    "target_id": "tx-house-67",
+    "status": "endorsed",
+    "choice": "Jeff Leach",
+    "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 29, 2026.",
+    "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "cleat",
+    "target_id": "tx-house-70",
+    "status": "endorsed",
+    "choice": "Mihaela Elizabeth Plesa",
+    "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 29, 2026.",
+    "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "cleat",
+    "target_id": "tx-house-89",
+    "status": "endorsed",
+    "choice": "Candy Noble",
+    "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 29, 2026.",
+    "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "cleat",
+    "target_id": "tx-us-house-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on CLEAT PAC's 2026 endorsement page, which names picks in other districts. Checked Oct 29, 2026.",
+    "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "equality-texas",
+    "target_id": "tx-house-70",
+    "status": "endorsed",
+    "choice": "Mihaela Elizabeth Plesa",
+    "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 29, 2026.",
+    "url": "https://equalitytexas.org/endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "equality-texas",
+    "target_id": "tx-house-89",
+    "status": "endorsed",
+    "choice": "Angie Carraway",
+    "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 29, 2026.",
+    "url": "https://equalitytexas.org/endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "equality-texas",
+    "target_id": "tx-us-house-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the group's 2026 endorsement page, which names picks in other districts. Checked Oct 29, 2026.",
+    "url": "https://equalitytexas.org/endorsements/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "equality-texas",
+    "target_id": "tx-house-67",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the group's 2026 endorsement page, which names picks in other districts. Checked Oct 29, 2026.",
+    "url": "https://equalitytexas.org/endorsements/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tsta",
+    "target_id": "tx-house-70",
+    "status": "endorsed",
+    "choice": "Mihaela Elizabeth Plesa",
+    "why": "Listed on TSTA's 2026 endorsed-candidates sheet.",
+    "url": "https://tsta.org/wp-content/uploads/2026/08/2026EndorsedCandidates.pdf",
+    "date": "2026-08-01",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tsta",
+    "target_id": "tx-us-house-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on TSTA's 2026 endorsed-candidates sheet, which names picks in other districts. Checked Oct 29, 2026.",
+    "url": "https://tsta.org/wp-content/uploads/2026/08/2026EndorsedCandidates.pdf",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tsta",
+    "target_id": "tx-house-67",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on TSTA's 2026 endorsed-candidates sheet, which names picks in other districts. Checked Oct 29, 2026.",
+    "url": "https://tsta.org/wp-content/uploads/2026/08/2026EndorsedCandidates.pdf",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tsta",
+    "target_id": "tx-house-89",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on TSTA's 2026 endorsed-candidates sheet, which names picks in other districts. Checked Oct 29, 2026.",
+    "url": "https://tsta.org/wp-content/uploads/2026/08/2026EndorsedCandidates.pdf",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-association-of-business",
+    "target_id": "tx-house-67",
+    "status": "endorsed",
+    "choice": "Jeff Leach",
+    "why": "On TXBIZ PAC's 2026 general-election endorsement list (last updated Oct 7, 2026).",
+    "url": "https://www.txbiz.org/2026-general-election-endorsements/",
+    "date": "2026-10-07",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-association-of-business",
+    "target_id": "tx-house-70",
+    "status": "endorsed",
+    "choice": "Mihaela Elizabeth Plesa",
+    "why": "On TXBIZ PAC's 2026 general-election endorsement list (last updated Oct 7, 2026).",
+    "url": "https://www.txbiz.org/2026-general-election-endorsements/",
+    "date": "2026-10-07",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-association-of-business",
+    "target_id": "tx-house-89",
+    "status": "endorsed",
+    "choice": "Candy Noble",
+    "why": "On TXBIZ PAC's 2026 general-election endorsement list (last updated Oct 7, 2026).",
+    "url": "https://www.txbiz.org/2026-general-election-endorsements/",
+    "date": "2026-10-07",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-association-of-business",
+    "target_id": "tx-us-house-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "TXBIZ PAC's general-election list covers state races; its federal PAC page says endorsements are coming soon. Checked Oct 29, 2026.",
+    "url": "https://www.txbiz.org/political-engagement/txbiz-fedpac/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texans-for-lawsuit-reform",
+    "target_id": "tx-house-67",
+    "status": "endorsed",
+    "choice": "Jeff Leach",
+    "why": "On TLRPAC's Texas House endorsement list, which it updates on a rolling basis. Checked Oct 29, 2026.",
+    "url": "https://tlrpac.org/texas-house-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texans-for-lawsuit-reform",
+    "target_id": "tx-house-89",
+    "status": "endorsed",
+    "choice": "Candy Noble",
+    "why": "On TLRPAC's Texas House endorsement list, which it updates on a rolling basis. Checked Oct 29, 2026.",
+    "url": "https://tlrpac.org/texas-house-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texans-for-lawsuit-reform",
+    "target_id": "tx-house-70",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on TLRPAC's Texas House endorsement list, which says it is not comprehensive. Checked Oct 29, 2026.",
+    "url": "https://tlrpac.org/texas-house-endorsements/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "tx-us-house-3",
+    "status": "endorsed",
+    "choice": "Keith Self",
+    "why": "Marked “NRA Endorsed” with a grade of A on its Texas grades page. Checked Oct 29, 2026.",
+    "url": "https://www.nrapvf.org/grades/texas/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "tx-house-67",
+    "status": "endorsed",
+    "choice": "Jeff Leach",
+    "why": "Marked “NRA Endorsed” with a grade of A on its Texas grades page. Checked Oct 29, 2026.",
+    "url": "https://www.nrapvf.org/grades/texas/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "tx-house-89",
+    "status": "endorsed",
+    "choice": "Candy Noble",
+    "why": "Marked “NRA Endorsed” with a grade of A on its Texas grades page. Checked Oct 29, 2026.",
+    "url": "https://www.nrapvf.org/grades/texas/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "tx-house-70",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its Texas grades page grades both candidates in this race but marks neither “NRA Endorsed.” A grade alone isn't counted as an endorsement. Checked Oct 29, 2026.",
+    "url": "https://www.nrapvf.org/grades/texas/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-right-to-life-pac",
+    "target_id": "tx-house-67",
+    "status": "endorsed",
+    "choice": "Jeff Leach",
+    "why": "Listed on the PAC's 2026 general election endorsement page.",
+    "url": "https://texasrighttolifepac.com/2026-general-election-endorsements/",
+    "date": "2026-10-06",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-right-to-life-pac",
+    "target_id": "tx-house-70",
+    "status": "endorsed",
+    "choice": "George Flint",
+    "why": "Listed on the PAC's 2026 general election endorsement page.",
+    "url": "https://texasrighttolifepac.com/2026-general-election-endorsements/",
+    "date": "2026-10-06",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-right-to-life-pac",
+    "target_id": "tx-house-89",
+    "status": "endorsed",
+    "choice": "Candy Noble",
+    "why": "Listed on the PAC's 2026 general election endorsement page.",
+    "url": "https://texasrighttolifepac.com/2026-general-election-endorsements/",
+    "date": "2026-10-06",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-right-to-life-pac",
+    "target_id": "tx-us-house-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the PAC's 2026 general election endorsement page, which names picks in other districts. Checked Oct 29, 2026.",
+    "url": "https://texasrighttolifepac.com/2026-general-election-endorsements/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "planned-parenthood-texas-votes",
+    "target_id": "tx-house-67",
+    "status": "endorsed",
+    "choice": "Jordan Wheatley",
+    "why": "On its 2026 Collin County endorsed-candidates card. Checked Oct 29, 2026.",
+    "url": "https://www.plannedparenthoodaction.org/uploads/filer_public/9a/ce/9ace4a6f-7d62-4339-9fe3-71169488fb04/collin_county.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "planned-parenthood-texas-votes",
+    "target_id": "tx-house-70",
+    "status": "endorsed",
+    "choice": "Mihaela Elizabeth Plesa",
+    "why": "On its 2026 Collin County endorsed-candidates card. Checked Oct 29, 2026.",
+    "url": "https://www.plannedparenthoodaction.org/uploads/filer_public/9a/ce/9ace4a6f-7d62-4339-9fe3-71169488fb04/collin_county.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "planned-parenthood-texas-votes",
+    "target_id": "tx-house-89",
+    "status": "endorsed",
+    "choice": "Angie Carraway",
+    "why": "On its 2026 Collin County endorsed-candidates card. Checked Oct 29, 2026.",
+    "url": "https://www.plannedparenthoodaction.org/uploads/filer_public/9a/ce/9ace4a6f-7d62-4339-9fe3-71169488fb04/collin_county.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "planned-parenthood-texas-votes",
+    "target_id": "tx-us-house-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on its 2026 Collin County endorsed-candidates card, which lists Texas House and statewide picks. Checked Oct 29, 2026.",
+    "url": "https://www.plannedparenthoodaction.org/uploads/filer_public/9a/ce/9ace4a6f-7d62-4339-9fe3-71169488fb04/collin_county.pdf",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-values-action",
+    "target_id": "tx-us-house-3",
+    "status": "endorsed",
+    "choice": "Keith Self",
+    "why": "Listed on the group's November 3, 2026 endorsement page (last updated Oct 18, 2026).",
+    "url": "https://txvaluesaction.org/endorsements/",
+    "date": "2026-10-18",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-values-action",
+    "target_id": "tx-house-67",
+    "status": "endorsed",
+    "choice": "Jeff Leach",
+    "why": "Listed on the group's November 3, 2026 endorsement page (last updated Oct 18, 2026).",
+    "url": "https://txvaluesaction.org/endorsements/",
+    "date": "2026-10-18",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-values-action",
+    "target_id": "tx-house-70",
+    "status": "endorsed",
+    "choice": "George Flint",
+    "why": "Listed on the group's November 3, 2026 endorsement page (last updated Oct 18, 2026).",
+    "url": "https://txvaluesaction.org/endorsements/",
+    "date": "2026-10-18",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-values-action",
+    "target_id": "tx-house-89",
+    "status": "endorsed",
+    "choice": "Candy Noble",
+    "why": "Listed on the group's November 3, 2026 endorsement page (last updated Oct 18, 2026).",
+    "url": "https://txvaluesaction.org/endorsements/",
+    "date": "2026-10-18",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-values-action",
+    "target_id": "tx-collin-county-judge",
+    "status": "endorsed",
+    "choice": "Chris Hill",
+    "why": "Listed on the group's November 3, 2026 endorsement page (last updated Oct 18, 2026).",
+    "url": "https://txvaluesaction.org/endorsements/",
+    "date": "2026-10-18",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-values-action",
+    "target_id": "tx-collin-commissioner-4",
+    "status": "endorsed",
+    "choice": "Shelby Williams",
+    "why": "Listed on the group's November 3, 2026 endorsement page as \"Collin County Commissioner – Shelby Williams\" (last updated Oct 18, 2026).",
+    "url": "https://txvaluesaction.org/endorsements/",
+    "date": "2026-10-18",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-values-action",
+    "target_id": "tx-collin-county-clerk",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its Collin County list names picks for county judge and commissioner only; the group says it doesn't endorse in every race. Checked Oct 29, 2026.",
+    "url": "https://txvaluesaction.org/endorsements/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-freedom-network",
+    "target_id": "tx-house-70",
+    "status": "endorsed",
+    "choice": "Mihaela Elizabeth Plesa",
+    "why": "Listed on TFN's November 2026 endorsement page.",
+    "url": "https://tfn.org/tfn-texas-rising-actions-november-2026-election-endorsements/",
+    "date": "2026-10-06",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-freedom-network",
+    "target_id": "tx-house-67",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on TFN's November 2026 endorsement page, which names picks in other districts. Checked Oct 29, 2026.",
+    "url": "https://tfn.org/tfn-texas-rising-actions-november-2026-election-endorsements/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-freedom-network",
+    "target_id": "tx-house-89",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on TFN's November 2026 endorsement page, which names picks in other districts. Checked Oct 29, 2026.",
+    "url": "https://tfn.org/tfn-texas-rising-actions-november-2026-election-endorsements/",
+    "date": "2026-10-29",
+    "confidence": "verified"
+  }
+]

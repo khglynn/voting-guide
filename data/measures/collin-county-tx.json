@@ -1,0 +1,488 @@
+[
+  {
+    "id": "tx-collin-county-prop-a",
+    "state": "TX",
+    "level": "county",
+    "jurisdiction": "All of Collin County",
+    "number": "Collin County Proposition A",
+    "short_title": "County courts and jail bonds",
+    "official_title": "This is a tax increase. \"The issuance of $296,500,000 bonds for the purpose of designing, developing, constructing, renovating, improving, expanding, and equipping court facilities, adult detention facilities, medical and mental health detention facilities, and including adult probation facilities, and the levy of a tax sufficient to pay principal and interest thereon.\"",
+    "plain_summary": "Lets Collin County borrow up to $296.5 million to build, expand and equip court buildings, the adult jail, medical and mental health detention space and adult probation offices, and to levy a property tax to repay it. The county says the money would finish empty shell space in the courthouse and its expansion, including the buildout of 15 courtrooms, and spend about $90 million on two jail housing clusters with 550 beds, new elevators and new cell doors (Community Impact).",
+    "yes_means": "A YES vote lets the county sell up to $296.5 million in bonds for courts, the jail, detention health space and probation offices, repaid with property taxes.",
+    "no_means": "A NO vote means the county can't sell these bonds.",
+    "current_law": "Without Prop A the county can't sell these bonds. The courthouse expansion began with the $683 million bond voters approved in 2023; County Administrator Yoon Kim said, “Because of the current scope and our budget, we do not believe we can build out all 15 courtrooms at this time.” The jail held about 1,200 people on Aug. 10, 2026, and the new beds could be done by the end of 2031 (Community Impact).",
+    "fiscal_impact": "Principal $296,500,000; estimated interest $176,313,083; total $472,813,083 to repay (Collin County's bond voter information document, required by Texas Government Code 1251.052). For Prop A by itself, the document puts the largest yearly increase on a $100,000 homestead at \"approximately $0.00\" and says it \"may be paid without an increase to the County's current debt service tax rate.\" If all four county propositions pass, along with part of the bonds still unsold from 2023, the same document estimates the county's debt tax rate rises from $0.041891 to about $0.051402 per $100 of value, \"which equates to $9.51 on a residence homestead with an appraised value of $100,000\" before any exemptions. The county already owes $1,133,210,000 in principal and $506,331,862 in interest on earlier bonds. The document assumes 5% interest and 3% yearly growth in taxable value from fiscal 2028.",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "The ballot starts with \"This is a tax increase\" (printed in capitals), wording state law requires on any bond repaid by property taxes, even when the tax rate may not go up. An Allen ballot has two \"Prop A\" items that are separate votes: this Collin County Prop A and Collin College's Prop A ($600 million for campuses). In a small part of far northern Allen there is also McKinney ISD's Prop A (its school tax rate), and McKinney ISD's Props B to E are separate from the county's Props B to D. The City of Allen and Allen ISD have nothing on this ballot. The county's voter information document and news reports give different tax numbers because they assume different things: the document's all-four-pass estimate includes part of the bonds still unsold from 2023 and applies no exemptions, while the Murphy Monitor reports projections of a debt rate of up to 4.95 cents per $100 by 2031, about $27 a year more on a $350,000 taxable home, and notes \"The projections are not guarantees.\"",
+    "supporters_case": {
+      "text": "No organized campaign for or against the county bonds was found as of Oct. 29, 2026. County Judge Chris Hill: “We want our taxpayers to see steady finances from the county and steady tax rates from the county, but I recognize that all these projects are really important” and “As we put them off we defer them for the future” (Community Impact).",
+      "source": "https://communityimpact.com/frisco/government/collin-county-calls-8175m-bond-to-address-growth-needs/"
+    },
+    "opponents_case": {
+      "text": "No organized campaign for or against the county bonds was found as of Oct. 29, 2026. The concern raised in coverage is cost: the county's debt tax rate could rise by 2031, and the Murphy Monitor notes \"The projections are not guarantees.\"",
+      "source": "https://murphymonitor.com/2026/10/29/county-bond-proposals-carry-different-tax-impacts/"
+    },
+    "official_text_url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5",
+    "official_guide_url": "https://www.collincountytx.gov/docs/default-source/elections/election-notices/collin-county-bond-voter-information-documents---english.pdf?sfvrsn=ace00f3f_3",
+    "explainers": [
+      {
+        "source": "Community Impact",
+        "title": "Collin County calls $817.5M bond to address growth needs",
+        "url": "https://communityimpact.com/frisco/government/collin-county-calls-8175m-bond-to-address-growth-needs/"
+      },
+      {
+        "source": "Murphy Monitor",
+        "title": "County bond proposals carry different tax impacts",
+        "url": "https://murphymonitor.com/2026/10/29/county-bond-proposals-carry-different-tax-impacts/"
+      },
+      {
+        "source": "NBC DFW",
+        "title": "Fast-growing Collin County calls $817.5 million bond election for November",
+        "url": "https://www.nbcdfw.com/news/local/fast-growing-collin-county-calls-817-5-million-bond-election-for-november/4061339/"
+      }
+    ],
+    "sources": [
+      "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5",
+      "https://www.collincountytx.gov/docs/default-source/elections/election-notices/collin-county-bond-voter-information-documents---english.pdf?sfvrsn=ace00f3f_3",
+      "https://www.collincountytx.gov/docs/default-source/elections/election-notices/collin-county-bond-notice-of-election.pdf?sfvrsn=23acc969_3",
+      "https://communityimpact.com/frisco/government/collin-county-calls-8175m-bond-to-address-growth-needs/",
+      "https://murphymonitor.com/2026/10/29/county-bond-proposals-carry-different-tax-impacts/",
+      "https://www.nbcdfw.com/news/local/fast-growing-collin-county-calls-817-5-million-bond-election-for-november/4061339/"
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-collin-county-prop-b",
+    "state": "TX",
+    "level": "county",
+    "jurisdiction": "All of Collin County",
+    "number": "Collin County Proposition B",
+    "short_title": "County road and bridge bonds",
+    "official_title": "This is a tax increase. \"The issuance of $475,000,000 bonds for the purpose of designing, developing, constructing, renovating, improving, extending, expanding and maintaining non-tolled roads and bridges within Collin County, including the acquisition of land and rights-of-way therefor, and the levy of a tax sufficient to pay principal and interest thereon.\"",
+    "plain_summary": "Lets Collin County borrow up to $475 million to design, build, extend, expand and maintain roads and bridges that are not toll roads, including buying land for them, and to levy a property tax to repay it. County engineering director Clarence Daughtery named examples: a Dallas North Tollway service road, an Outer Loop service road west of US 75, and a service road from Farmersville to Rockwall County (Community Impact).",
+    "yes_means": "A YES vote lets the county sell up to $475 million in bonds for non-toll roads and bridges, repaid with property taxes.",
+    "no_means": "A NO vote means the county can't sell these bonds.",
+    "current_law": "Without Prop B the county can't sell these bonds. Collin County has about 1.3 million people and added nearly 43,000 from July 2024 to July 2025 (NBC DFW).",
+    "fiscal_impact": "Principal $475,000,000; estimated interest $282,458,083; total $757,458,083 to repay (Collin County's bond voter information document, required by Texas Government Code 1251.052). For Prop B by itself, the document puts the largest yearly increase on a $100,000 homestead at \"approximately $1.12\" and its top debt rate at $0.043011 per $100, \"more than the current\" $0.041891. If all four county propositions pass, along with part of the bonds still unsold from 2023, the same document estimates the county's debt tax rate rises from $0.041891 to about $0.051402 per $100 of value, \"which equates to $9.51 on a residence homestead with an appraised value of $100,000\" before any exemptions. The county already owes $1,133,210,000 in principal and $506,331,862 in interest on earlier bonds. The document assumes 5% interest and 3% yearly growth in taxable value from fiscal 2028.",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "The ballot starts with \"This is a tax increase\" (printed in capitals), wording state law requires on any bond repaid by property taxes, even when the tax rate may not go up. The ballot names no specific roads: commissioners said they wanted to keep the projects on the ballot vague so they can address other projects as needed (Community Impact). An Allen ballot has two \"Prop A\" items that are separate votes: this Collin County Prop A and Collin College's Prop A ($600 million for campuses). In a small part of far northern Allen there is also McKinney ISD's Prop A (its school tax rate), and McKinney ISD's Props B to E are separate from the county's Props B to D. The City of Allen and Allen ISD have nothing on this ballot. The county's voter information document and news reports give different tax numbers because they assume different things: the document's all-four-pass estimate includes part of the bonds still unsold from 2023 and applies no exemptions, while the Murphy Monitor reports projections of a debt rate of up to 4.95 cents per $100 by 2031, about $27 a year more on a $350,000 taxable home, and notes \"The projections are not guarantees.\"",
+    "supporters_case": {
+      "text": "No organized campaign for or against the county bonds was found as of Oct. 29, 2026. County Judge Chris Hill: “We want our taxpayers to see steady finances from the county and steady tax rates from the county, but I recognize that all these projects are really important” and “As we put them off we defer them for the future” (Community Impact).",
+      "source": "https://communityimpact.com/frisco/government/collin-county-calls-8175m-bond-to-address-growth-needs/"
+    },
+    "opponents_case": {
+      "text": "No organized campaign for or against the county bonds was found as of Oct. 29, 2026. Concerns raised in coverage: the ballot names no roads, and the county's debt tax rate could rise by 2031; the Murphy Monitor notes \"The projections are not guarantees.\"",
+      "source": "https://murphymonitor.com/2026/10/29/county-bond-proposals-carry-different-tax-impacts/"
+    },
+    "official_text_url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5",
+    "official_guide_url": "https://www.collincountytx.gov/docs/default-source/elections/election-notices/collin-county-bond-voter-information-documents---english.pdf?sfvrsn=ace00f3f_3",
+    "explainers": [
+      {
+        "source": "Community Impact",
+        "title": "Collin County calls $817.5M bond to address growth needs",
+        "url": "https://communityimpact.com/frisco/government/collin-county-calls-8175m-bond-to-address-growth-needs/"
+      },
+      {
+        "source": "Murphy Monitor",
+        "title": "County bond proposals carry different tax impacts",
+        "url": "https://murphymonitor.com/2026/10/29/county-bond-proposals-carry-different-tax-impacts/"
+      },
+      {
+        "source": "NBC DFW",
+        "title": "Fast-growing Collin County calls $817.5 million bond election for November",
+        "url": "https://www.nbcdfw.com/news/local/fast-growing-collin-county-calls-817-5-million-bond-election-for-november/4061339/"
+      }
+    ],
+    "sources": [
+      "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5",
+      "https://www.collincountytx.gov/docs/default-source/elections/election-notices/collin-county-bond-voter-information-documents---english.pdf?sfvrsn=ace00f3f_3",
+      "https://www.collincountytx.gov/docs/default-source/elections/election-notices/collin-county-bond-notice-of-election.pdf?sfvrsn=23acc969_3",
+      "https://communityimpact.com/frisco/government/collin-county-calls-8175m-bond-to-address-growth-needs/",
+      "https://murphymonitor.com/2026/10/29/county-bond-proposals-carry-different-tax-impacts/",
+      "https://www.nbcdfw.com/news/local/fast-growing-collin-county-calls-817-5-million-bond-election-for-november/4061339/"
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-collin-county-prop-c",
+    "state": "TX",
+    "level": "county",
+    "jurisdiction": "All of Collin County",
+    "number": "Collin County Proposition C",
+    "short_title": "County parks bonds",
+    "official_title": "This is a tax increase. \"The issuance of $6,000,000 bonds for the purpose of acquiring, designing, developing, constructing, renovating, improving, and equipping land for park and open space purposes, and including joint county-city projects, and the levy of a tax sufficient to pay principal and interest thereon.\"",
+    "plain_summary": "Lets Collin County borrow up to $6 million to buy and improve land for parks and open space, including projects shared with cities, and to levy a property tax to repay it. The county plans to sell $2 million a year from 2029 to 2031 (county voter information document).",
+    "yes_means": "A YES vote lets the county sell up to $6 million in bonds for parks and open space, including joint county-city projects, repaid with property taxes.",
+    "no_means": "A NO vote means the county can't sell these bonds.",
+    "current_law": "Without Prop C the county can't sell these bonds. County Judge Chris Hill said of the bond's projects, “As we put them off we defer them for the future” (Community Impact).",
+    "fiscal_impact": "Principal $6,000,000; estimated interest $3,566,000; total $9,566,000 to repay (Collin County's bond voter information document, required by Texas Government Code 1251.052). For Prop C by itself, the document puts the largest yearly increase on a $100,000 homestead at about $0.00. If all four county propositions pass, along with part of the bonds still unsold from 2023, the same document estimates the county's debt tax rate rises from $0.041891 to about $0.051402 per $100 of value, \"which equates to $9.51 on a residence homestead with an appraised value of $100,000\" before any exemptions. The county already owes $1,133,210,000 in principal and $506,331,862 in interest on earlier bonds. The document assumes 5% interest and 3% yearly growth in taxable value from fiscal 2028.",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "The ballot starts with \"This is a tax increase\" (printed in capitals), wording state law requires on any bond repaid by property taxes, even when the tax rate may not go up. The ballot names no specific parks. An Allen ballot has two \"Prop A\" items that are separate votes: this Collin County Prop A and Collin College's Prop A ($600 million for campuses). In a small part of far northern Allen there is also McKinney ISD's Prop A (its school tax rate), and McKinney ISD's Props B to E are separate from the county's Props B to D. The City of Allen and Allen ISD have nothing on this ballot. The county's voter information document and news reports give different tax numbers because they assume different things: the document's all-four-pass estimate includes part of the bonds still unsold from 2023 and applies no exemptions, while the Murphy Monitor reports projections of a debt rate of up to 4.95 cents per $100 by 2031, about $27 a year more on a $350,000 taxable home, and notes \"The projections are not guarantees.\"",
+    "supporters_case": {
+      "text": "No organized campaign for or against the county bonds was found as of Oct. 29, 2026. County Judge Chris Hill: “We want our taxpayers to see steady finances from the county and steady tax rates from the county, but I recognize that all these projects are really important” (Community Impact).",
+      "source": "https://communityimpact.com/frisco/government/collin-county-calls-8175m-bond-to-address-growth-needs/"
+    },
+    "opponents_case": {
+      "text": "No organized campaign for or against the county bonds was found as of Oct. 29, 2026. The concern raised in coverage is cost: the county's debt tax rate could rise by 2031 if all the bonds pass, and the Murphy Monitor notes \"The projections are not guarantees.\"",
+      "source": "https://murphymonitor.com/2026/10/29/county-bond-proposals-carry-different-tax-impacts/"
+    },
+    "official_text_url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5",
+    "official_guide_url": "https://www.collincountytx.gov/docs/default-source/elections/election-notices/collin-county-bond-voter-information-documents---english.pdf?sfvrsn=ace00f3f_3",
+    "explainers": [
+      {
+        "source": "Community Impact",
+        "title": "Collin County calls $817.5M bond to address growth needs",
+        "url": "https://communityimpact.com/frisco/government/collin-county-calls-8175m-bond-to-address-growth-needs/"
+      },
+      {
+        "source": "Murphy Monitor",
+        "title": "County bond proposals carry different tax impacts",
+        "url": "https://murphymonitor.com/2026/10/29/county-bond-proposals-carry-different-tax-impacts/"
+      },
+      {
+        "source": "NBC DFW",
+        "title": "Fast-growing Collin County calls $817.5 million bond election for November",
+        "url": "https://www.nbcdfw.com/news/local/fast-growing-collin-county-calls-817-5-million-bond-election-for-november/4061339/"
+      }
+    ],
+    "sources": [
+      "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5",
+      "https://www.collincountytx.gov/docs/default-source/elections/election-notices/collin-county-bond-voter-information-documents---english.pdf?sfvrsn=ace00f3f_3",
+      "https://www.collincountytx.gov/docs/default-source/elections/election-notices/collin-county-bond-notice-of-election.pdf?sfvrsn=23acc969_3",
+      "https://communityimpact.com/frisco/government/collin-county-calls-8175m-bond-to-address-growth-needs/",
+      "https://murphymonitor.com/2026/10/29/county-bond-proposals-carry-different-tax-impacts/",
+      "https://www.nbcdfw.com/news/local/fast-growing-collin-county-calls-817-5-million-bond-election-for-november/4061339/"
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-collin-county-prop-d",
+    "state": "TX",
+    "level": "county",
+    "jurisdiction": "All of Collin County",
+    "number": "Collin County Proposition D",
+    "short_title": "County elections building bonds",
+    "official_title": "This is a tax increase. \"The issuance of $40,000,000 bonds for the purpose of designing, developing, constructing, and equipping a new County elections and storage facility, including election department offices, election training, election storage, County records, historical documents and equipment storage, and the levy of a tax sufficient to pay principal and interest thereon.\"",
+    "plain_summary": "Lets Collin County borrow up to $40 million to build and equip a new building for its elections department (offices, training and storage) and for county records, historical documents and equipment, and to levy a property tax to repay it. Construction could start in 2027 (Community Impact).",
+    "yes_means": "A YES vote lets the county sell up to $40 million in bonds for a new elections and records building, repaid with property taxes.",
+    "no_means": "A NO vote means the county can't sell these bonds.",
+    "current_law": "The county now rents space for elections and record keeping, about $650,000 a year, County Administrator Yoon Kim said (Community Impact). Without Prop D the county can't sell these bonds.",
+    "fiscal_impact": "Principal $40,000,000; estimated interest $23,783,333; total $63,783,333 to repay, all sold in 2028 (Collin County's bond voter information document, required by Texas Government Code 1251.052). For Prop D by itself, the document puts the largest yearly increase on a $100,000 homestead at about $0.00. If all four county propositions pass, along with part of the bonds still unsold from 2023, the same document estimates the county's debt tax rate rises from $0.041891 to about $0.051402 per $100 of value, \"which equates to $9.51 on a residence homestead with an appraised value of $100,000\" before any exemptions. The county already owes $1,133,210,000 in principal and $506,331,862 in interest on earlier bonds. The document assumes 5% interest and 3% yearly growth in taxable value from fiscal 2028.",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "The ballot starts with \"This is a tax increase\" (printed in capitals), wording state law requires on any bond repaid by property taxes, even when the tax rate may not go up. An Allen ballot has two \"Prop A\" items that are separate votes: this Collin County Prop A and Collin College's Prop A ($600 million for campuses). In a small part of far northern Allen there is also McKinney ISD's Prop A (its school tax rate), and McKinney ISD's Props B to E are separate from the county's Props B to D. The City of Allen and Allen ISD have nothing on this ballot. The county's voter information document and news reports give different tax numbers because they assume different things: the document's all-four-pass estimate includes part of the bonds still unsold from 2023 and applies no exemptions, while the Murphy Monitor reports projections of a debt rate of up to 4.95 cents per $100 by 2031, about $27 a year more on a $350,000 taxable home, and notes \"The projections are not guarantees.\"",
+    "supporters_case": {
+      "text": "No organized campaign for or against the county bonds was found as of Oct. 29, 2026. Commissioner Susan Fletcher: “I don't want to go out for [a] bond anymore than we need to but I don't want to hurt our own operations in the long run” (Community Impact).",
+      "source": "https://communityimpact.com/frisco/government/collin-county-calls-8175m-bond-to-address-growth-needs/"
+    },
+    "opponents_case": {
+      "text": "No organized campaign for or against the county bonds was found as of Oct. 29, 2026. The concern raised in coverage is cost: the county's debt tax rate could rise by 2031 if all the bonds pass, and the Murphy Monitor notes \"The projections are not guarantees.\"",
+      "source": "https://murphymonitor.com/2026/10/29/county-bond-proposals-carry-different-tax-impacts/"
+    },
+    "official_text_url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5",
+    "official_guide_url": "https://www.collincountytx.gov/docs/default-source/elections/election-notices/collin-county-bond-voter-information-documents---english.pdf?sfvrsn=ace00f3f_3",
+    "explainers": [
+      {
+        "source": "Community Impact",
+        "title": "Collin County calls $817.5M bond to address growth needs",
+        "url": "https://communityimpact.com/frisco/government/collin-county-calls-8175m-bond-to-address-growth-needs/"
+      },
+      {
+        "source": "Murphy Monitor",
+        "title": "County bond proposals carry different tax impacts",
+        "url": "https://murphymonitor.com/2026/10/29/county-bond-proposals-carry-different-tax-impacts/"
+      },
+      {
+        "source": "NBC DFW",
+        "title": "Fast-growing Collin County calls $817.5 million bond election for November",
+        "url": "https://www.nbcdfw.com/news/local/fast-growing-collin-county-calls-817-5-million-bond-election-for-november/4061339/"
+      }
+    ],
+    "sources": [
+      "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5",
+      "https://www.collincountytx.gov/docs/default-source/elections/election-notices/collin-county-bond-voter-information-documents---english.pdf?sfvrsn=ace00f3f_3",
+      "https://www.collincountytx.gov/docs/default-source/elections/election-notices/collin-county-bond-notice-of-election.pdf?sfvrsn=23acc969_3",
+      "https://communityimpact.com/frisco/government/collin-county-calls-8175m-bond-to-address-growth-needs/",
+      "https://murphymonitor.com/2026/10/29/county-bond-proposals-carry-different-tax-impacts/",
+      "https://www.nbcdfw.com/news/local/fast-growing-collin-county-calls-817-5-million-bond-election-for-november/4061339/"
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-collin-college-prop-a",
+    "state": "TX",
+    "level": "special_district",
+    "jurisdiction": "All of Collin County (Collin College's taxing district)",
+    "number": "Collin College Proposition A",
+    "short_title": "Collin College campus bonds",
+    "official_title": "This is a tax increase. \"the issuance of $600,000,000 in bonds for college facilities used for workforce training, career and technical education, and academic instruction, and the levy of taxes sufficient to pay the principal and interest on the bonds.\"",
+    "plain_summary": "Lets Collin College borrow up to $600 million for buildings used for workforce training, career and technical education and academic classes, and levy a property tax to repay it. The college says it would expand eight campuses and build new campuses in Anna and Royse City and an aviation academy in McKinney. In Allen, campus renovations would add classroom and lab space and room for automotive and diesel technology programs (Community Impact).",
+    "yes_means": "A YES vote lets Collin College sell up to $600 million in bonds for new and expanded campus buildings, repaid with property taxes.",
+    "no_means": "A NO vote means the college can't sell these bonds. College President Neil Matkin said it would then “figure out alternative financing or we’d slow the projects down until we could figure out a way to afford them” (Community Impact).",
+    "current_law": "Collin County voters approved a $600 million Collin College bond in 2017 (college FAQ). This bond would pay for phases 2 and 3 of the college's Destination 2030 plan; enrollment grew 11.92% from 2017 to 2024 and its campuses average about 20 years old (Community Impact). Without it the college can't sell these bonds.",
+    "fiscal_impact": "Principal $600,000,000; estimated interest $378,192,750; total $978,192,750 over 20 years (the voter information document in the college's notice of election). The document puts the largest yearly increase on a $100,000 homestead at $20.18 and says \"this figure makes conservative assumptions\"; it assumes taxable values grow 4% for one year and then stay flat. The college already owes $438,250,000 in principal and $132,004,735 in interest. Its tax rate has been $0.08122 per $100 since 2018, and the college says it is \"anticipated to stay at the same rate with the passage of the 2026 bond\" (college financial impact page).",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "On the ballot this is under \"Collin County Community College District,\" Collin College's legal name. It starts with \"This is a tax increase\" (printed in capitals) because state law requires that wording on bonds repaid by property taxes even if the rate stays the same, Equity Center director Josh Sanderson told Community Impact; Matkin said the college's rate is expected to stay the same. A tax bill can still change with property values: the Murphy Monitor notes \"an individual’s total property tax bill could still change if appraised property values increase.\" An Allen ballot has two \"Prop A\" items that are separate votes: this one and Collin County's Prop A (courts and jail). In a small part of far northern Allen there is also McKinney ISD's Prop A.",
+    "supporters_case": {
+      "text": "No organized campaign for or against the college bond was found as of Oct. 29, 2026. Matkin: “We’re going to continue to sell bonds when the financial circumstances surrounding it allow us to keep our word and do the right thing.” Frisco Chamber of Commerce President Christal Howard: “Workforce availability is one of the biggest factors that affects a business’s ability to succeed and grow” (Community Impact). The college estimates waiting would raise the total cost by about 8%, roughly $48 million a year (college financial impact page).",
+      "source": "https://communityimpact.com/mckinney/election/collin-college-looks-to-add-expand-campuses-with-600m-bond/"
+    },
+    "opponents_case": {
+      "text": "No organized campaign for or against the college bond was found as of Oct. 29, 2026. The concern raised in coverage is cost: the ballot's tax-increase wording, and the Murphy Monitor's note that \"an individual’s total property tax bill could still change if appraised property values increase\" even at the same rate.",
+      "source": "https://murphymonitor.com/2026/10/29/county-bond-proposals-carry-different-tax-impacts/"
+    },
+    "official_text_url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5",
+    "official_guide_url": "https://www.collin.edu/bond/documents/collin-county-community-college-district-notice-english.pdf",
+    "explainers": [
+      {
+        "source": "Community Impact",
+        "title": "Collin College looks to add, expand campuses with $600M bond",
+        "url": "https://communityimpact.com/mckinney/election/collin-college-looks-to-add-expand-campuses-with-600m-bond/"
+      },
+      {
+        "source": "Murphy Monitor",
+        "title": "County bond proposals carry different tax impacts",
+        "url": "https://murphymonitor.com/2026/10/29/county-bond-proposals-carry-different-tax-impacts/"
+      }
+    ],
+    "sources": [
+      "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5",
+      "https://www.collin.edu/bond/documents/collin-county-community-college-district-notice-english.pdf",
+      "https://www.collin.edu/bond/financial-impact",
+      "https://www.collin.edu/bond/faq.html",
+      "https://collin.edu/bursar/residency",
+      "https://communityimpact.com/mckinney/election/collin-college-looks-to-add-expand-campuses-with-600m-bond/",
+      "https://murphymonitor.com/2026/10/29/county-bond-proposals-carry-different-tax-impacts/"
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-mckinney-isd-prop-a",
+    "state": "TX",
+    "level": "school",
+    "jurisdiction": "McKinney ISD (most of McKinney, plus a small, mostly commercial part of far northern Allen near US 75 and SH 121)",
+    "number": "McKinney ISD Proposition A",
+    "short_title": "McKinney school operating tax",
+    "official_title": "This is a tax increase. \"Ratifying the ad valorem tax rate of $1.0664 per $100 valuation in the McKinney Independent School District for the current year, a rate that will result in an increase of 4.4222 percent in maintenance and operations tax revenue for the District for the current year as compared to the preceding year, which is an additional $9,142,763.\"",
+    "plain_summary": "Asks you to approve McKinney ISD's school tax rate of $1.0664 per $100 of value for this year. Its operating part, $0.7464, is about 3.17 cents above the most the district can set without a vote. The district says the extra money, $9.1 million a year before the state takes some back through recapture and about $4.1 million after, would go to teacher pay and student programs (Community Impact). Even with Prop A, the total rate is 3.79 cents lower than last year's $1.1043, because the state lowered the operating rate and the district lowered its debt rate (district financial page).",
+    "yes_means": "A YES vote approves the $1.0664 rate, including about 3.17 cents per $100 above the state limit for the district's operating budget.",
+    "no_means": "A NO vote sets the rate at the most allowed without a vote, about $1.0347 per $100 (the district's $0.7147 operating rate plus its $0.32 debt rate), and the district doesn't get the extra operating money. The district says it \"would face reductions that could affect student programming, campus staffing, transportation services and the overall classroom experience\" (district Prop A page).",
+    "current_law": "Texas caps the tax rate a school district can set for day-to-day costs; going above it takes voter approval (Texas Tax Code 26.08). McKinney ISD adopted its 2026-27 budget with a projected $6 million shortfall, its third year in a row, after closing Eddins, McNeil and Wolford elementaries at the end of 2025-26 to save about $3 million a year (Community Impact).",
+    "fiscal_impact": "Per the district's notice of the tax rate election: the $1.0664 rate ($0.7464 operating, $0.3200 debt) brings in $9,142,763 more operating revenue than last year, about 4.4222% more. The district's chief financial officer, Marlene Harbeson, said recapture (money Texas takes back from districts with high property wealth) leaves about $4.1 million of it (Community Impact). The district's financial page puts the median homestead bill at $3,925, down from $4,227, as the median value falls from $382,757 to $368,036; those figures multiply the rate by the full value, before the homestead exemption.",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "A “VATRE” is a voter-approval tax rate election: the vote Texas requires when a school district wants an operating tax rate above the state's cap. The ballot says \"This is a tax increase\" (printed in capitals) because the rate is above that cap and operating revenue goes up, even though the district's total rate is lower than last year's. The ballot doesn't say the extra is about 3.17 cents or that the total rate fell. The district's Prop A web page prints the rate as $1.0644; the ballot and the official notice say $1.0664. McKinney ISD covers most of McKinney and only a small, mostly commercial part of far northern Allen near US 75 and SH 121; most Allen homes are in Allen ISD, which has nothing on this ballot. An Allen ballot can have three separate \"Prop A\" items: Collin County's (courts and jail), Collin College's (campuses) and this one.",
+    "supporters_case": {
+      "text": "A political committee, Vote For McKinney ISD, reported raising $43,500 and spending $281 from July 1 to Sept. 24, 2026 (its report filed Oct. 4). The district: \"Prop A is not a building bond. It funds the people in the classroom.\" Trustee Corey Homer: “We’ve done everything that we can do except go before the voters” (Community Impact). Board President Amy Dankel: “It's important for voters to know that, although the wording of these bond proposals (set by the state) sounds a little wonky, their taxes will actually be going down” (Community Impact).",
+      "source": "https://communityimpact.com/mckinney/education/bond-on-the-ballot-mckinney-isd-officials-call-500m-bond-tax-rate-election-this-november/"
+    },
+    "opponents_case": {
+      "text": "We could not confirm an organized campaign against McKinney ISD's propositions as of Oct. 29, 2026. McKinney ISD parent Anthony England: “I would love to vote yes ... I think it's hard seeing the lack of transparency in the school closure process, especially knowing that the VATRE was an option that wasn't offered to my kids to keep their schools open” (Community Impact).",
+      "source": "https://communityimpact.com/mckinney/education/bond-on-the-ballot-mckinney-isd-officials-call-500m-bond-tax-rate-election-this-november/"
+    },
+    "official_text_url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5",
+    "official_guide_url": "https://www.mckinneyisd.net/page/election-2026",
+    "explainers": [
+      {
+        "source": "Community Impact",
+        "title": "Bond on the ballot: McKinney ISD officials call $500M bond, tax rate election this November",
+        "url": "https://communityimpact.com/mckinney/education/bond-on-the-ballot-mckinney-isd-officials-call-500m-bond-tax-rate-election-this-november/"
+      }
+    ],
+    "sources": [
+      "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5",
+      "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4789/Misd/bd1f48df-1150-4eb3-9c01-e428163dcac4/MCKINNEY-ISD-NOV-2026---Final-Notice-of-Voter-Approval-Tax-Rate-Election.pdf?disposition=inline",
+      "https://www.mckinneyisd.net/page/election-2026",
+      "https://www.mckinneyisd.net/page/election-2026-prop-a",
+      "https://www.mckinneyisd.net/page/election-2026-financial-info",
+      "https://www.mckinneyisd.net/page/election-2026-board-announcement",
+      "https://communityimpact.com/mckinney/education/bond-on-the-ballot-mckinney-isd-officials-call-500m-bond-tax-rate-election-this-november/",
+      "https://texasscorecard.com/wp-content/uploads/2026/10/McKinney-ISD-Bond-2026-FOR-PAC.pdf"
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-mckinney-isd-prop-b",
+    "state": "TX",
+    "level": "school",
+    "jurisdiction": "McKinney ISD (most of McKinney, plus a small, mostly commercial part of far northern Allen near US 75 and SH 121)",
+    "number": "McKinney ISD Proposition B",
+    "short_title": "McKinney school building bonds",
+    "official_title": "This is a property tax increase. \"The issuance of $430,950,000 of bonds by the McKinney Independent School District for designing, constructing, renovating, improving, upgrading, updating, acquiring, and equipping school facilities, the purchase of the necessary sites for school facilities, buses and vehicles and the levying of a tax sufficient to pay the principal of and interest on the bonds.\"",
+    "plain_summary": "Lets McKinney ISD borrow up to $430.95 million for school buildings, land and buses, and levy a property tax to repay it. The district lists roof, heating and cooling, plumbing, electrical and safety work, two new elementary schools in north McKinney, a career and technical education center shared with Collin College, and new buses (district board announcement; Community Impact).",
+    "yes_means": "A YES vote lets the district sell up to $430.95 million in bonds for school buildings, sites and buses, repaid with property taxes.",
+    "no_means": "A NO vote means the district can't sell these bonds.",
+    "current_law": "Without Prop B the district can't sell these bonds. Frazier Elementary, opened in 2023, is already at capacity, and the district hopes to open its next campus in 2029 if the bond passes (Community Impact).",
+    "fiscal_impact": "Principal $430,950,000; estimated interest $110,151,209; total $541,101,209 over 20 years at no more than 5% interest (the voter information document in the district's notice of bond election). Estimated largest yearly tax increase for this proposition on a homestead with $100,000 of taxable value after the $140,000 homestead exemption: $0, with what the document calls \"conservative assumptions\" about value growth. The district already owes $338,220,000 in principal and $89,536,726 in interest on earlier bonds.",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "The ballot says \"This is a property tax increase\" (printed in capitals), wording state law requires on school bonds repaid by property taxes even if the rate stays the same; the district estimates $0 more a year for these bonds, and its debt rate fell from $0.37 to $0.32 this year. McKinney ISD's Props B to E are separate from Collin County's Props B to D on the same ballot. McKinney ISD covers most of McKinney and only a small, mostly commercial part of far northern Allen near US 75 and SH 121; most Allen homes are in Allen ISD, which has nothing on this ballot. ",
+    "supporters_case": {
+      "text": "A political committee, Vote For McKinney ISD, reported raising $43,500 and spending $281 from July 1 to Sept. 24, 2026 (its report filed Oct. 4). Chief Financial Officer Marlene Harbeson: “Together, the bond and VATRE help ensure the district can accommodate growth, maintain and improve facilities, invest in students and staff and preserve financial stability without diverting operating funds away from educational programs” (Community Impact). The district says the shared career center with Collin College \"saves taxpayers approximately 350 million dollars over the 50 year agreement period\" (district board announcement).",
+      "source": "https://communityimpact.com/mckinney/education/bond-on-the-ballot-mckinney-isd-officials-call-500m-bond-tax-rate-election-this-november/"
+    },
+    "opponents_case": {
+      "text": "We could not confirm an organized campaign against McKinney ISD's propositions as of Oct. 29, 2026. McKinney ISD parent Anthony England: “I would love to vote yes ... I think it's hard seeing the lack of transparency in the school closure process, especially knowing that the VATRE was an option that wasn't offered to my kids to keep their schools open” (Community Impact).",
+      "source": "https://communityimpact.com/mckinney/education/bond-on-the-ballot-mckinney-isd-officials-call-500m-bond-tax-rate-election-this-november/"
+    },
+    "official_text_url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5",
+    "official_guide_url": "https://www.mckinneyisd.net/page/election-2026",
+    "explainers": [
+      {
+        "source": "Community Impact",
+        "title": "Bond on the ballot: McKinney ISD officials call $500M bond, tax rate election this November",
+        "url": "https://communityimpact.com/mckinney/education/bond-on-the-ballot-mckinney-isd-officials-call-500m-bond-tax-rate-election-this-november/"
+      }
+    ],
+    "sources": [
+      "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5",
+      "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4789/Misd/1e5088dc-0db0-474b-ab27-007c45e218be/MCKINNEY-ISD-NOV-2026---Final-Notice-of-Bond-Election.pdf?disposition=inline",
+      "https://www.mckinneyisd.net/page/election-2026",
+      "https://www.mckinneyisd.net/page/election-2026-bond-propositions",
+      "https://www.mckinneyisd.net/page/election-2026-financial-info",
+      "https://www.mckinneyisd.net/page/election-2026-board-announcement",
+      "https://communityimpact.com/mckinney/education/bond-on-the-ballot-mckinney-isd-officials-call-500m-bond-tax-rate-election-this-november/",
+      "https://texasscorecard.com/wp-content/uploads/2026/10/McKinney-ISD-Bond-2026-FOR-PAC.pdf"
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-mckinney-isd-prop-c",
+    "state": "TX",
+    "level": "school",
+    "jurisdiction": "McKinney ISD (most of McKinney, plus a small, mostly commercial part of far northern Allen near US 75 and SH 121)",
+    "number": "McKinney ISD Proposition C",
+    "short_title": "McKinney school technology bonds",
+    "official_title": "This is a property tax increase. \"The issuance of $62,000,000 of bonds by the McKinney Independent School District for instructional technology equipment and the levying of a tax sufficient to pay the principal of and interest on the bonds.\"",
+    "plain_summary": "Lets McKinney ISD borrow up to $62 million for instructional technology equipment, and levy a property tax to repay it (Community Impact).",
+    "yes_means": "A YES vote lets the district sell up to $62 million in bonds for classroom technology, repaid with property taxes.",
+    "no_means": "A NO vote means the district can't sell these bonds.",
+    "current_law": "Without Prop C the district can't sell these bonds.",
+    "fiscal_impact": "Principal $62,000,000; estimated interest $16,522,056; total $78,522,056 over 20 years at no more than 5% interest (the voter information document in the district's notice of bond election). Estimated largest yearly tax increase for this proposition on a homestead with $100,000 of taxable value after the $140,000 homestead exemption: $0, with what the document calls \"conservative assumptions\" about value growth. The district already owes $338,220,000 in principal and $89,536,726 in interest on earlier bonds.",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "The ballot says \"This is a property tax increase\" (printed in capitals), wording state law requires on school bonds repaid by property taxes even if the rate stays the same; the district estimates $0 more a year for these bonds, and its debt rate fell from $0.37 to $0.32 this year. McKinney ISD's Props B to E are separate from Collin County's Props B to D on the same ballot. McKinney ISD covers most of McKinney and only a small, mostly commercial part of far northern Allen near US 75 and SH 121; most Allen homes are in Allen ISD, which has nothing on this ballot. ",
+    "supporters_case": {
+      "text": "A political committee, Vote For McKinney ISD, reported raising $43,500 and spending $281 from July 1 to Sept. 24, 2026 (its report filed Oct. 4). Chief Financial Officer Marlene Harbeson: “Together, the bond and VATRE help ensure the district can accommodate growth, maintain and improve facilities, invest in students and staff and preserve financial stability without diverting operating funds away from educational programs” (Community Impact).",
+      "source": "https://communityimpact.com/mckinney/education/bond-on-the-ballot-mckinney-isd-officials-call-500m-bond-tax-rate-election-this-november/"
+    },
+    "opponents_case": {
+      "text": "We could not confirm an organized campaign against McKinney ISD's propositions as of Oct. 29, 2026. McKinney ISD parent Anthony England: “I would love to vote yes ... I think it's hard seeing the lack of transparency in the school closure process, especially knowing that the VATRE was an option that wasn't offered to my kids to keep their schools open” (Community Impact).",
+      "source": "https://communityimpact.com/mckinney/education/bond-on-the-ballot-mckinney-isd-officials-call-500m-bond-tax-rate-election-this-november/"
+    },
+    "official_text_url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5",
+    "official_guide_url": "https://www.mckinneyisd.net/page/election-2026",
+    "explainers": [
+      {
+        "source": "Community Impact",
+        "title": "Bond on the ballot: McKinney ISD officials call $500M bond, tax rate election this November",
+        "url": "https://communityimpact.com/mckinney/education/bond-on-the-ballot-mckinney-isd-officials-call-500m-bond-tax-rate-election-this-november/"
+      }
+    ],
+    "sources": [
+      "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5",
+      "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4789/Misd/1e5088dc-0db0-474b-ab27-007c45e218be/MCKINNEY-ISD-NOV-2026---Final-Notice-of-Bond-Election.pdf?disposition=inline",
+      "https://www.mckinneyisd.net/page/election-2026",
+      "https://www.mckinneyisd.net/page/election-2026-bond-propositions",
+      "https://www.mckinneyisd.net/page/election-2026-financial-info",
+      "https://www.mckinneyisd.net/page/election-2026-board-announcement",
+      "https://communityimpact.com/mckinney/education/bond-on-the-ballot-mckinney-isd-officials-call-500m-bond-tax-rate-election-this-november/",
+      "https://texasscorecard.com/wp-content/uploads/2026/10/McKinney-ISD-Bond-2026-FOR-PAC.pdf"
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-mckinney-isd-prop-d",
+    "state": "TX",
+    "level": "school",
+    "jurisdiction": "McKinney ISD (most of McKinney, plus a small, mostly commercial part of far northern Allen near US 75 and SH 121)",
+    "number": "McKinney ISD Proposition D",
+    "short_title": "McKinney High training pool bonds",
+    "official_title": "This is a property tax increase. \"The issuance of $4,500,000 of bonds by the McKinney Independent School District for designing, renovating, improving, upgrading, updating, acquiring, and equipping the existing McKinney High School training pool, and the levying of a tax sufficient to pay the principal of and interest on the bonds.\"",
+    "plain_summary": "Lets McKinney ISD borrow up to $4.5 million to repair and upgrade the existing training pool at McKinney High School, and levy a property tax to repay it (Community Impact).",
+    "yes_means": "A YES vote lets the district sell up to $4.5 million in bonds for the McKinney High School training pool, repaid with property taxes.",
+    "no_means": "A NO vote means the district can't sell these bonds.",
+    "current_law": "Without Prop D the district can't sell these bonds.",
+    "fiscal_impact": "Principal $4,500,000; estimated interest $2,633,500; total $7,133,500 over 20 years at no more than 5% interest (the voter information document in the district's notice of bond election). Estimated largest yearly tax increase for this proposition on a homestead with $100,000 of taxable value after the $140,000 homestead exemption: $0, with what the document calls \"conservative assumptions\" about value growth. The district already owes $338,220,000 in principal and $89,536,726 in interest on earlier bonds.",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "The ballot says \"This is a property tax increase\" (printed in capitals), wording state law requires on school bonds repaid by property taxes even if the rate stays the same; the district estimates $0 more a year for these bonds, and its debt rate fell from $0.37 to $0.32 this year. McKinney ISD's Props B to E are separate from Collin County's Props B to D on the same ballot. McKinney ISD covers most of McKinney and only a small, mostly commercial part of far northern Allen near US 75 and SH 121; most Allen homes are in Allen ISD, which has nothing on this ballot. ",
+    "supporters_case": {
+      "text": "A political committee, Vote For McKinney ISD, reported raising $43,500 and spending $281 from July 1 to Sept. 24, 2026 (its report filed Oct. 4). Chief Financial Officer Marlene Harbeson: “Together, the bond and VATRE help ensure the district can accommodate growth, maintain and improve facilities, invest in students and staff and preserve financial stability without diverting operating funds away from educational programs” (Community Impact).",
+      "source": "https://communityimpact.com/mckinney/education/bond-on-the-ballot-mckinney-isd-officials-call-500m-bond-tax-rate-election-this-november/"
+    },
+    "opponents_case": {
+      "text": "We could not confirm an organized campaign against McKinney ISD's propositions as of Oct. 29, 2026. McKinney ISD parent Anthony England: “I would love to vote yes ... I think it's hard seeing the lack of transparency in the school closure process, especially knowing that the VATRE was an option that wasn't offered to my kids to keep their schools open” (Community Impact).",
+      "source": "https://communityimpact.com/mckinney/education/bond-on-the-ballot-mckinney-isd-officials-call-500m-bond-tax-rate-election-this-november/"
+    },
+    "official_text_url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5",
+    "official_guide_url": "https://www.mckinneyisd.net/page/election-2026",
+    "explainers": [
+      {
+        "source": "Community Impact",
+        "title": "Bond on the ballot: McKinney ISD officials call $500M bond, tax rate election this November",
+        "url": "https://communityimpact.com/mckinney/education/bond-on-the-ballot-mckinney-isd-officials-call-500m-bond-tax-rate-election-this-november/"
+      }
+    ],
+    "sources": [
+      "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5",
+      "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4789/Misd/1e5088dc-0db0-474b-ab27-007c45e218be/MCKINNEY-ISD-NOV-2026---Final-Notice-of-Bond-Election.pdf?disposition=inline",
+      "https://www.mckinneyisd.net/page/election-2026",
+      "https://www.mckinneyisd.net/page/election-2026-bond-propositions",
+      "https://www.mckinneyisd.net/page/election-2026-financial-info",
+      "https://www.mckinneyisd.net/page/election-2026-board-announcement",
+      "https://communityimpact.com/mckinney/education/bond-on-the-ballot-mckinney-isd-officials-call-500m-bond-tax-rate-election-this-november/",
+      "https://texasscorecard.com/wp-content/uploads/2026/10/McKinney-ISD-Bond-2026-FOR-PAC.pdf"
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-mckinney-isd-prop-e",
+    "state": "TX",
+    "level": "school",
+    "jurisdiction": "McKinney ISD (most of McKinney, plus a small, mostly commercial part of far northern Allen near US 75 and SH 121)",
+    "number": "McKinney ISD Proposition E",
+    "short_title": "McKinney stadium turf and track bonds",
+    "official_title": "This is a property tax increase. \"The issuance of $2,550,000 of bonds by the McKinney Independent School District for designing, renovating, improving, upgrading, updating, acquiring, and equipping existing stadium facilities and related infrastructure and the levying of a tax sufficient to pay the principal of and interest on the bonds.\"",
+    "plain_summary": "Lets McKinney ISD borrow up to $2.55 million to replace turf and track at its existing stadiums, and levy a property tax to repay it (Community Impact).",
+    "yes_means": "A YES vote lets the district sell up to $2.55 million in bonds for stadium turf and track, repaid with property taxes.",
+    "no_means": "A NO vote means the district can't sell these bonds.",
+    "current_law": "Without Prop E the district can't sell these bonds.",
+    "fiscal_impact": "Principal $2,550,000; estimated interest $1,227,709; total $3,777,709 over 20 years at no more than 5% interest (the voter information document in the district's notice of bond election). Estimated largest yearly tax increase for this proposition on a homestead with $100,000 of taxable value after the $140,000 homestead exemption: $0, with what the document calls \"conservative assumptions\" about value growth. The district already owes $338,220,000 in principal and $89,536,726 in interest on earlier bonds.",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "The ballot says \"This is a property tax increase\" (printed in capitals), wording state law requires on school bonds repaid by property taxes even if the rate stays the same; the district estimates $0 more a year for these bonds, and its debt rate fell from $0.37 to $0.32 this year. McKinney ISD's Props B to E are separate from Collin County's Props B to D on the same ballot. McKinney ISD covers most of McKinney and only a small, mostly commercial part of far northern Allen near US 75 and SH 121; most Allen homes are in Allen ISD, which has nothing on this ballot. ",
+    "supporters_case": {
+      "text": "A political committee, Vote For McKinney ISD, reported raising $43,500 and spending $281 from July 1 to Sept. 24, 2026 (its report filed Oct. 4). Chief Financial Officer Marlene Harbeson: “Together, the bond and VATRE help ensure the district can accommodate growth, maintain and improve facilities, invest in students and staff and preserve financial stability without diverting operating funds away from educational programs” (Community Impact).",
+      "source": "https://communityimpact.com/mckinney/education/bond-on-the-ballot-mckinney-isd-officials-call-500m-bond-tax-rate-election-this-november/"
+    },
+    "opponents_case": {
+      "text": "We could not confirm an organized campaign against McKinney ISD's propositions as of Oct. 29, 2026. McKinney ISD parent Anthony England: “I would love to vote yes ... I think it's hard seeing the lack of transparency in the school closure process, especially knowing that the VATRE was an option that wasn't offered to my kids to keep their schools open” (Community Impact).",
+      "source": "https://communityimpact.com/mckinney/education/bond-on-the-ballot-mckinney-isd-officials-call-500m-bond-tax-rate-election-this-november/"
+    },
+    "official_text_url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5",
+    "official_guide_url": "https://www.mckinneyisd.net/page/election-2026",
+    "explainers": [
+      {
+        "source": "Community Impact",
+        "title": "Bond on the ballot: McKinney ISD officials call $500M bond, tax rate election this November",
+        "url": "https://communityimpact.com/mckinney/education/bond-on-the-ballot-mckinney-isd-officials-call-500m-bond-tax-rate-election-this-november/"
+      }
+    ],
+    "sources": [
+      "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5",
+      "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4789/Misd/1e5088dc-0db0-474b-ab27-007c45e218be/MCKINNEY-ISD-NOV-2026---Final-Notice-of-Bond-Election.pdf?disposition=inline",
+      "https://www.mckinneyisd.net/page/election-2026",
+      "https://www.mckinneyisd.net/page/election-2026-bond-propositions",
+      "https://www.mckinneyisd.net/page/election-2026-financial-info",
+      "https://www.mckinneyisd.net/page/election-2026-board-announcement",
+      "https://communityimpact.com/mckinney/education/bond-on-the-ballot-mckinney-isd-officials-call-500m-bond-tax-rate-election-this-november/",
+      "https://texasscorecard.com/wp-content/uploads/2026/10/McKinney-ISD-Bond-2026-FOR-PAC.pdf"
+    ],
+    "confidence": "verified"
+  }
+]

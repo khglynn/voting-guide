@@ -1,0 +1,2172 @@
+[
+  {
+    "id": "tx-us-house-3",
+    "state": "TX",
+    "level": "federal",
+    "office": "U.S. Representative",
+    "district": "CD-3",
+    "scope_plain": "Voters in Congressional District 3, which includes all of Allen (the district drawn in 2025)",
+    "office_explainer": "Your voice in the U.S. House: votes on federal laws, taxes and spending.",
+    "why_it_matters": "Keith Self, a former Collin County judge, holds this seat and is seeking another two-year term.",
+    "vote_for": 1,
+    "incumbent": "Keith Self",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Keith Self",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://keithself.com/",
+        "website_confidence": "verified",
+        "background": "Holds this seat; retired Army officer (25 years, after West Point) and Collin County judge from 2007 to 2018 (House website; Dallas Morning News). Did not answer the LWV questionnaire.",
+        "own_words": [
+          {
+            "text": "I have voted against $3.5 trillion in spending bills, not because they are bad bills, but because they proposed spending money on things that are not priorities for the American people.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/us-house-district-3/"
+          },
+          {
+            "text": "Congress has several options: request reports on war progress, declare war, pass a relevant Authorization for Use of Military Force (AUMF).",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/us-house-district-3/"
+          },
+          {
+            "text": "I have advocated for local control of those decisions because the federal government should not dictate to local communities who can do business there.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/us-house-district-3/"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://www.lwvcollin.org/docs.ashx?id=1827429"
+      },
+      {
+        "name": "Evan Hunt",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://electevanhunt.com/",
+        "website_confidence": "verified",
+        "background": "Retired Air Force lieutenant colonel who served as a B-1 weapons systems officer; now an aerospace and defense business development executive; University of Pennsylvania graduate; has not held office (campaign site; Dallas Morning News).",
+        "own_words": [
+          {
+            "text": "My goal is to move the federal government as close to a balanced budget as responsibly possible, without breaking our commitments to Social Security and Medicare or compromising national security.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/us-house-district-3/"
+          },
+          {
+            "text": "Congress should debate and vote on continued military action in the region rather than allowing an open-ended conflict to continue without clear authorization.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/us-house-district-3/"
+          },
+          {
+            "text": "Our biggest challenge is managing explosive growth without sacrificing affordability and quality of life.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/us-house-district-3/"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.lwvcollin.org/docs.ashx?id=1827429"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "Dallas Morning News voter guide: U.S. House District 3 (candidate answers, unedited, 200 words at most)",
+        "url": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/us-house-district-3/"
+      },
+      {
+        "name": "League of Women Voters of Collin County Voters Guide, Nov 3, 2026: U.S. Representative, District 3 (PDF, candidate answers)",
+        "url": "https://www.lwvcollin.org/docs.ashx?id=1827429"
+      },
+      {
+        "name": "Rep. Keith Self, official House biography",
+        "url": "https://self.house.gov/about"
+      },
+      {
+        "name": "Keith Self campaign site",
+        "url": "https://keithself.com/"
+      },
+      {
+        "name": "Evan Hunt campaign site",
+        "url": "https://electevanhunt.com/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-house-67",
+    "state": "TX",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-67",
+    "scope_plain": "Voters in Texas House District 67 (most of Allen, mainly the west and center, plus parts of Plano and McKinney)",
+    "office_explainer": "One of 150 state House members who write Texas laws and the state budget.",
+    "why_it_matters": "Jeff Leach has held this seat since 2013; he won it in 2024 with 60% of the vote (Collin County results).",
+    "vote_for": 1,
+    "incumbent": "Jeff Leach",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jeff Leach",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://jeffleach.com/",
+        "website_confidence": "verified",
+        "background": "State representative since 2013, now in his seventh term, and chair of the House Judiciary and Civil Jurisprudence Committee; attorney; Baylor and SMU law graduate (campaign site; Ballotpedia; Dallas Morning News). Did not answer the LWV questionnaire.",
+        "own_words": [
+          {
+            "text": "We should work to do away with property taxes - and we can - while also fully funding the core competencies and priorities of state government, including education.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/texas-house-district-67/"
+          },
+          {
+            "text": "I proudly supported legislation to create school choice and educational savings accounts",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/texas-house-district-67/"
+          },
+          {
+            "text": "Opposes expanding Medicaid \"under Obamacare\"; wants a \"Texas Solution\" that covers uninsured Texans and keeps protections for pre-existing conditions.",
+            "is_quote": false,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/texas-house-district-67/"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://www.lwvcollin.org/docs.ashx?id=1827426"
+      },
+      {
+        "name": "Jordan Wheatley",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.jordan4texas.com/",
+        "website_confidence": "verified",
+        "background": "Public school teacher (fourth grade, per his campaign site); West Virginia University and UT Dallas graduate; has run for U.S. House District 3 before (Dallas Morning News). Did not answer the LWV questionnaire.",
+        "own_words": [
+          {
+            "text": "promising to completely eliminate school property taxes without a realistic replacement plan is a dangerous political soundbite that threatens the future of our public education system.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/texas-house-district-67/"
+          },
+          {
+            "text": "Public tax dollars must answer to the public.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/texas-house-district-67/"
+          },
+          {
+            "text": "Texas should expand Medicaid eligibility because doing so reclaims billions of Texas tax dollars that our residents are already sending to Washington.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/texas-house-district-67/"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://www.lwvcollin.org/docs.ashx?id=1827426"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "Dallas Morning News voter guide: Texas House District 67 (candidate answers, unedited, 200 words at most)",
+        "url": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/texas-house-district-67/"
+      },
+      {
+        "name": "League of Women Voters of Collin County Voters Guide, Nov 3, 2026: Texas House District 67 (PDF, candidate answers)",
+        "url": "https://www.lwvcollin.org/docs.ashx?id=1827426"
+      },
+      {
+        "name": "Collin County official results, Nov 5, 2024 general election (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/results-archive/november-5-2024-combined-accumulated-totals-official-final2a0e4bf870d14e93a7bf1ae4b9aca757.pdf?sfvrsn=40df053c_0"
+      },
+      {
+        "name": "Collin County official results, March 3, 2026 primaries (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/results-archive/march-3-2026-primary-election-summary-report-official-final.pdf?sfvrsn=13303697_9"
+      },
+      {
+        "name": "Ballotpedia: Jeff Leach (took office Jan 8, 2013)",
+        "url": "https://ballotpedia.org/Jeff_Leach"
+      },
+      {
+        "name": "Jeff Leach campaign site: Meet Jeff",
+        "url": "https://jeffleach.com/meet-jeff"
+      },
+      {
+        "name": "Jordan Wheatley campaign site",
+        "url": "https://www.jordan4texas.com/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-house-70",
+    "state": "TX",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-70",
+    "scope_plain": "Voters in Texas House District 70 (a small part of Allen, plus parts of McKinney and other Collin County cities)",
+    "office_explainer": "One of 150 state House members who write Texas laws and the state budget.",
+    "why_it_matters": "Mihaela Plesa won this seat 51% to 49% in 2022 and 52% to 48% in 2024 (Collin County results).",
+    "vote_for": 1,
+    "incumbent": "Mihaela Elizabeth Plesa",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "George Flint",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://texansforflint.com/",
+        "website_confidence": "verified",
+        "background": "Mediator and lawyer since 1980; judge of the 401st District Court from 2020 to 2024; former Collin County Republican Party chairman; MIT, Wake Forest MBA and SMU law graduate (LWV guide; Dallas Morning News).",
+        "own_words": [
+          {
+            "text": "the public demand is clear and I therefore support Comptroller Huffines' proposal to double it.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/texas-house-district-70/"
+          },
+          {
+            "text": "Yes, they are an unreasonable invasion of privacy by the government and constitute unreasonable searches and seizures.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/texas-house-district-70/"
+          },
+          {
+            "text": "Data centers should provide their own power and cooling needs without burden on the existing water system or electric grid.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/texas-house-district-70/"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.lwvcollin.org/docs.ashx?id=1827427"
+      },
+      {
+        "name": "Mihaela Elizabeth Plesa",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://plesafortexas.com/",
+        "website_confidence": "verified",
+        "background": "State representative in her second term; vice chair of the House Pensions, Investments and Financial Services Committee; small business owner; UNT and SMU graduate (LWV guide; campaign site; Dallas Morning News).",
+        "own_words": [
+          {
+            "text": "I would not expand the program until the evidence shows it is working.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/texas-house-district-70/"
+          },
+          {
+            "text": "Technology like Flock cameras can be an important public-safety tool, and we have seen their value in Plano, but that does not mean there should be unlimited surveillance of law-abiding Texans.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/texas-house-district-70/"
+          },
+          {
+            "text": "Data centers should not come at the expense of the communities where they are built.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/texas-house-district-70/"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.lwvcollin.org/docs.ashx?id=1827427"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "Dallas Morning News voter guide: Texas House District 70 (candidate answers, unedited, 200 words at most)",
+        "url": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/texas-house-district-70/"
+      },
+      {
+        "name": "League of Women Voters of Collin County Voters Guide, Nov 3, 2026: Texas House District 70 (PDF, candidate answers)",
+        "url": "https://www.lwvcollin.org/docs.ashx?id=1827427"
+      },
+      {
+        "name": "Collin County official results, Nov 8, 2022 general election (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/results-archive/november-8-2022-general-and-special-election-combined-accumulated-totals.pdf?sfvrsn=e336cc91_0"
+      },
+      {
+        "name": "Collin County official results, Nov 5, 2024 general election (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/results-archive/november-5-2024-combined-accumulated-totals-official-final2a0e4bf870d14e93a7bf1ae4b9aca757.pdf?sfvrsn=40df053c_0"
+      },
+      {
+        "name": "Collin County official results, March 3, 2026 primaries (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/results-archive/march-3-2026-primary-election-summary-report-official-final.pdf?sfvrsn=13303697_9"
+      },
+      {
+        "name": "George Flint campaign site",
+        "url": "https://texansforflint.com/"
+      },
+      {
+        "name": "Mihaela Plesa campaign site: Meet Mihaela",
+        "url": "https://plesafortexas.com/meet-mihaela/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-house-89",
+    "state": "TX",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-89",
+    "scope_plain": "Voters in Texas House District 89 (about a third of Allen, mainly the east, plus Lucas, Parker, Wylie and other east Collin County towns)",
+    "office_explainer": "One of 150 state House members who write Texas laws and the state budget.",
+    "why_it_matters": "Candy Noble is in her fourth term in this seat; she won it in 2024 with 61% of the vote (Collin County results).",
+    "vote_for": 1,
+    "incumbent": "Candy Noble",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Candy Noble",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://votecandynoble.com/",
+        "website_confidence": "verified",
+        "background": "State representative in her fourth term; president of the Texas Conservative Coalition; a former educator (campaign site). Did not answer the LWV or Dallas Morning News questionnaires.",
+        "own_words": [
+          {
+            "text": "Fighting to lower property taxes by reining in the out-of-control home appraisal process and bring down property taxes for good",
+            "is_quote": true,
+            "source": "https://votecandynoble.com/"
+          },
+          {
+            "text": "Passed a school choice bill, allowing parents to ensure the best education possible for their children",
+            "is_quote": true,
+            "source": "https://votecandynoble.com/"
+          },
+          {
+            "text": "Sponsored a constitutional amendment, approved overwhelmingly by Texas voters, ensuring that only U.S. citizens can vote in Texas elections",
+            "is_quote": true,
+            "source": "https://votecandynoble.com/"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://www.lwvcollin.org/docs.ashx?id=1827428"
+      },
+      {
+        "name": "Angie Carraway",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.citizensforcarraway.com/",
+        "website_confidence": "verified",
+        "background": "Middle school teacher with 14 years in public schools; UNT and Western Governors University graduate; has lived in the district since 2001 (LWV guide; Dallas Morning News).",
+        "own_words": [
+          {
+            "text": "It is preposterous to think that you can eliminate school property taxes and fund public schools.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/texas-house-district-89/"
+          },
+          {
+            "text": "this program is not delivering the educational choice it promised, and it should not be expanded.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/texas-house-district-89/"
+          },
+          {
+            "text": "Leadership should be steady instead of theatrical, transparent instead of evasive, and focused on community instead of spectacle.",
+            "is_quote": true,
+            "source": "https://www.citizensforcarraway.com/"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.lwvcollin.org/docs.ashx?id=1827428"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "Dallas Morning News voter guide: Texas House District 89 (candidate answers, unedited, 200 words at most)",
+        "url": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/texas-house-district-89/"
+      },
+      {
+        "name": "League of Women Voters of Collin County Voters Guide, Nov 3, 2026: Texas House District 89 (PDF, candidate answers)",
+        "url": "https://www.lwvcollin.org/docs.ashx?id=1827428"
+      },
+      {
+        "name": "Collin County official results, Nov 5, 2024 general election (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/results-archive/november-5-2024-combined-accumulated-totals-official-final2a0e4bf870d14e93a7bf1ae4b9aca757.pdf?sfvrsn=40df053c_0"
+      },
+      {
+        "name": "Collin County official results, March 3, 2026 primaries (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/results-archive/march-3-2026-primary-election-summary-report-official-final.pdf?sfvrsn=13303697_9"
+      },
+      {
+        "name": "Candy Noble campaign site",
+        "url": "https://votecandynoble.com/"
+      },
+      {
+        "name": "Angie Carraway campaign site",
+        "url": "https://www.citizensforcarraway.com/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-collin-district-court-219th",
+    "state": "TX",
+    "level": "judicial",
+    "office": "District Judge",
+    "district": "219th Judicial District",
+    "scope_plain": "Every Collin County voter",
+    "office_explainer": "A state trial judge in Collin County: felonies, big civil suits and family cases.",
+    "why_it_matters": "Unopposed. The 219th is one of Collin County's district courts, which hear felony criminal cases, civil cases over larger amounts and family law matters.",
+    "vote_for": 1,
+    "incumbent": "Jennifer Edgeworth",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jennifer Edgeworth",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://www.jenniferedgeworth.com/",
+        "website_confidence": "verified",
+        "background": "Judge of the 219th District Court since January 1, 2019, after beating the sitting judge in the 2018 Republican primary (Ballotpedia). She also presides over the county's adult mental health court, and earned law and business degrees at Baylor in 1999 (her campaign site). Did not answer the LWV questionnaire.",
+        "own_words": [
+          {
+            "text": "I believe in preserving the rule of law in our courtrooms and ensuring that we have a qualified, fair, and trusted judiciary.",
+            "is_quote": true,
+            "source": "https://www.jenniferedgeworth.com/"
+          },
+          {
+            "text": "And as a conservative Republican, I believe in fiscal responsibility for our courts and adhering to the language of the U.S. and Texas constitutions.",
+            "is_quote": true,
+            "source": "https://www.jenniferedgeworth.com/"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "League of Women Voters of Collin County, 2026 voters guide: county offices",
+        "url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      },
+      {
+        "name": "Collin County: 219th District Court",
+        "url": "https://www.collincountytx.gov/courts/district-courts/219dc"
+      },
+      {
+        "name": "Collin County: District Courts (what they hear)",
+        "url": "https://www.collincountytx.gov/courts/district-courts"
+      },
+      {
+        "name": "Ballotpedia: Jennifer Edgeworth",
+        "url": "https://ballotpedia.org/Jennifer_Edgeworth"
+      },
+      {
+        "name": "Jennifer Edgeworth campaign site: about",
+        "url": "https://www.jenniferedgeworth.com/about/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-collin-district-court-296th",
+    "state": "TX",
+    "level": "judicial",
+    "office": "District Judge",
+    "district": "296th Judicial District",
+    "scope_plain": "Every Collin County voter",
+    "office_explainer": "A state trial judge in Collin County: felonies, big civil suits and family cases.",
+    "why_it_matters": "Open seat: Judge John Roach Jr. is not on the ballot, and Piper McCraw, now judge of the 469th District Court, is unopposed for it.",
+    "vote_for": 1,
+    "incumbent": "John Roach Jr. (not running)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Piper McCraw",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": null,
+        "background": "Judge of the 469th District Court since September 2015, when Gov. Greg Abbott appointed her; before that she owned her own law firm and was a Collin County assistant district attorney (Governor's office). Her 469th term runs through 2028 (Ballotpedia). Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-29",
+          "where": [
+            "League of Women Voters of Collin County voters guide (no response)",
+            "web search for a campaign site",
+            "Ballotpedia"
+          ]
+        }
+      }
+    ],
+    "sources": [
+      {
+        "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "League of Women Voters of Collin County, 2026 voters guide: county offices",
+        "url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      },
+      {
+        "name": "Collin County: 296th District Court",
+        "url": "https://www.collincountytx.gov/courts/district-courts/296dc"
+      },
+      {
+        "name": "Collin County: District Courts (what they hear)",
+        "url": "https://www.collincountytx.gov/courts/district-courts"
+      },
+      {
+        "name": "Collin County: 469th District Court",
+        "url": "https://www.collincountytx.gov/courts/district-courts/469dc"
+      },
+      {
+        "name": "Office of the Texas Governor: McCraw appointed to the 469th (Aug 18, 2015)",
+        "url": "https://gov.texas.gov/news/post/governor_abbott_appoints_mccraw_judge_of_469th_judicial_district_court"
+      },
+      {
+        "name": "Ballotpedia: Piper McCraw",
+        "url": "https://ballotpedia.org/Piper_McCraw"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-collin-district-court-366th",
+    "state": "TX",
+    "level": "judicial",
+    "office": "District Judge",
+    "district": "366th Judicial District",
+    "scope_plain": "Every Collin County voter",
+    "office_explainer": "A state trial judge in Collin County: felonies, big civil suits and family cases.",
+    "why_it_matters": "Unopposed. The 366th is one of Collin County's district courts, which hear felony criminal cases, civil cases over larger amounts and family law matters.",
+    "vote_for": 1,
+    "incumbent": "Tom Nowak",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Tom Nowak",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://www.votingfortom.com/",
+        "website_confidence": "verified",
+        "background": "Judge of the 366th District Court since October 2019, when Gov. Greg Abbott appointed him; before that a criminal law supervising attorney at a private firm, a Dallas County assistant district attorney and an Air Force reserve JAG officer, board certified in criminal law (Governor's office). Degrees from Texas A&M and Baylor Law School (LWV guide).",
+        "own_words": [
+          {
+            "text": "My focus this term is to reduce the backlog of outstanding felony warrants in Collin County. Victims and defendants deserve their day in court.",
+            "is_quote": true,
+            "source": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+          },
+          {
+            "text": "Expertise matters, which is why my Board Certification in Criminal Law ensures our courts uphold the law with precision and integrity.",
+            "is_quote": true,
+            "source": "https://www.votingfortom.com/"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "League of Women Voters of Collin County, 2026 voters guide: county offices",
+        "url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      },
+      {
+        "name": "Collin County: 366th District Court",
+        "url": "https://www.collincountytx.gov/courts/district-courts/366dc"
+      },
+      {
+        "name": "Collin County: District Courts (what they hear)",
+        "url": "https://www.collincountytx.gov/courts/district-courts"
+      },
+      {
+        "name": "Office of the Texas Governor: Nowak appointed to the 366th (Sept 19, 2019)",
+        "url": "https://gov.texas.gov/news/post/governor-abbott-appoints-nowak-to-366th-judicial-district-court"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-collin-district-court-417th",
+    "state": "TX",
+    "level": "judicial",
+    "office": "District Judge",
+    "district": "417th Judicial District",
+    "scope_plain": "Every Collin County voter",
+    "office_explainer": "A state trial judge in Collin County: felonies, big civil suits and family cases.",
+    "why_it_matters": "Unopposed. The 417th is a district court set up as Collin County's juvenile court.",
+    "vote_for": 1,
+    "incumbent": "Cyndi McCrann Wheless",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Cyndi McCrann Wheless",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": null,
+        "background": "Judge of the 417th District Court, set up as a juvenile court, since Gov. Rick Perry appointed her in 2004; a juvenile court referee from 1999, board certified in juvenile law, and named to the Texas Juvenile Justice Board in December 2022 (Texas Judicial Commission on Mental Health). Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-29",
+          "where": [
+            "League of Women Voters of Collin County voters guide (no response)",
+            "web search for a campaign site",
+            "Ballotpedia"
+          ]
+        }
+      }
+    ],
+    "sources": [
+      {
+        "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "League of Women Voters of Collin County, 2026 voters guide: county offices",
+        "url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      },
+      {
+        "name": "Collin County: 417th District Court",
+        "url": "https://www.collincountytx.gov/courts/district-courts/417dc"
+      },
+      {
+        "name": "Collin County: District Courts (what they hear)",
+        "url": "https://www.collincountytx.gov/courts/district-courts"
+      },
+      {
+        "name": "Texas Judicial Commission on Mental Health: Judge Cynthia Wheless",
+        "url": "https://texasjcmh.gov/about-us/commissioners/wheless-cynthia/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-collin-district-court-429th",
+    "state": "TX",
+    "level": "judicial",
+    "office": "District Judge",
+    "district": "429th Judicial District",
+    "scope_plain": "Every Collin County voter",
+    "office_explainer": "A state trial judge in Collin County: felonies, big civil suits and family cases.",
+    "why_it_matters": "Unopposed. The 429th is one of Collin County's district courts, which hear felony criminal cases, civil cases over larger amounts and family law matters.",
+    "vote_for": 1,
+    "incumbent": "Jill Willis",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jill Willis",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": null,
+        "background": "The sitting judge of the 429th District Court, listed by the county as Judge Jill Renfro Willis (Collin County). The LWV guide says it could not reach her.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-29",
+          "where": [
+            "League of Women Voters of Collin County voters guide (could not reach her)",
+            "web search for a campaign site",
+            "Ballotpedia (no biography)",
+            "Collin County court page"
+          ]
+        }
+      }
+    ],
+    "sources": [
+      {
+        "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "League of Women Voters of Collin County, 2026 voters guide: county offices",
+        "url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      },
+      {
+        "name": "Collin County: 429th District Court",
+        "url": "https://www.collincountytx.gov/courts/district-courts/429dc"
+      },
+      {
+        "name": "Collin County: District Courts (what they hear)",
+        "url": "https://www.collincountytx.gov/courts/district-courts"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-collin-district-court-471st",
+    "state": "TX",
+    "level": "judicial",
+    "office": "District Judge",
+    "district": "471st Judicial District",
+    "scope_plain": "Every Collin County voter",
+    "office_explainer": "A state trial judge in Collin County: felonies, big civil suits and family cases.",
+    "why_it_matters": "Unopposed. He has held this seat by appointment since September 2024.",
+    "vote_for": 1,
+    "incumbent": "Bryan Gantt",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Bryan Gantt",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": null,
+        "background": "Judge of the 471st District Court since September 2024, when Gov. Greg Abbott appointed him, then reappointed him for a term through 2026; before that a partner at the law firm McCraw Gantt, PLLC and an assistant attorney general (Governor's office). Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-29",
+          "where": [
+            "League of Women Voters of Collin County voters guide (no response)",
+            "web search for a campaign site",
+            "Ballotpedia"
+          ]
+        }
+      }
+    ],
+    "sources": [
+      {
+        "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "League of Women Voters of Collin County, 2026 voters guide: county offices",
+        "url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      },
+      {
+        "name": "Collin County: 471st District Court",
+        "url": "https://www.collincountytx.gov/courts/district-courts/471dc"
+      },
+      {
+        "name": "Collin County: District Courts (what they hear)",
+        "url": "https://www.collincountytx.gov/courts/district-courts"
+      },
+      {
+        "name": "Office of the Texas Governor: Gantt appointed to the 471st (Sept 3, 2024)",
+        "url": "https://gov.texas.gov/news/post/governor-abbott-appoints-gantt-to-471st-judicial-district-court"
+      },
+      {
+        "name": "Office of the Texas Governor: Gantt reappointed to the 471st",
+        "url": "https://gov.texas.gov/news/post/governor-abbott-reappoints-gantt-to-471st-judicial-district-court"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-collin-district-court-494th",
+    "state": "TX",
+    "level": "judicial",
+    "office": "District Judge",
+    "district": "494th Judicial District",
+    "scope_plain": "Every Collin County voter",
+    "office_explainer": "A state trial judge in Collin County: felonies, big civil suits and family cases.",
+    "why_it_matters": "Unopposed. She has held this seat by appointment since September 2024.",
+    "vote_for": 1,
+    "incumbent": "Kathryn Pruitt",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Kathryn Pruitt",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://keepjudgepruitt.com/",
+        "website_confidence": "verified",
+        "background": "Judge of the 494th District Court since September 2024, when Gov. Greg Abbott appointed her; before that a family lawyer, board certified in family law, at Plunk Smith, PLLC and at her own firm (Governor's office). The LWV guide says it could not reach her.",
+        "own_words": [
+          {
+            "text": "As a constitutional conservative, I believe in the separation of powers and the importance of judicial restraint.",
+            "is_quote": true,
+            "source": "https://keepjudgepruitt.com/"
+          },
+          {
+            "text": "I run an efficient and fiscally responsible court. We strive to provide litigants with access to the court without long delays.",
+            "is_quote": true,
+            "source": "https://keepjudgepruitt.com/"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "League of Women Voters of Collin County, 2026 voters guide: county offices",
+        "url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      },
+      {
+        "name": "Collin County: 494th District Court",
+        "url": "https://www.collincountytx.gov/courts/district-courts/494dc"
+      },
+      {
+        "name": "Collin County: District Courts (what they hear)",
+        "url": "https://www.collincountytx.gov/courts/district-courts"
+      },
+      {
+        "name": "Office of the Texas Governor: Pruitt appointed to the 494th (Sept 12, 2024)",
+        "url": "https://gov.texas.gov/news/post/governor-abbott-appoints-pruitt-to-494th-judicial-district-court"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-collin-cda",
+    "state": "TX",
+    "level": "county",
+    "office": "Criminal District Attorney",
+    "district": null,
+    "scope_plain": "Every Collin County voter",
+    "office_explainer": "The county's top prosecutor: decides which criminal cases to bring and how to try them.",
+    "why_it_matters": "Unopposed.",
+    "vote_for": 1,
+    "incumbent": "Greg Willis",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Greg Willis",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": null,
+        "background": "Collin County Criminal District Attorney since 2011 (Ballotpedia). Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-29",
+          "where": [
+            "League of Women Voters of Collin County voters guide (no response)",
+            "web search for a campaign site (none found; Branch lists only the office's own site)",
+            "Ballotpedia"
+          ]
+        }
+      }
+    ],
+    "sources": [
+      {
+        "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "League of Women Voters of Collin County, 2026 voters guide: county offices",
+        "url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      },
+      {
+        "name": "Ballotpedia: Greg Willis",
+        "url": "https://ballotpedia.org/Greg_Willis"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-collin-county-judge",
+    "state": "TX",
+    "level": "county",
+    "office": "County Judge",
+    "district": null,
+    "scope_plain": "Every Collin County voter",
+    "office_explainer": "Runs county government and leads Commissioners Court. Not a courtroom job.",
+    "why_it_matters": "The county judge leads the Commissioners Court, which sets the county budget and tax rate; this year the court raised the county tax rate for the first time since 1993 (Dallas Morning News).",
+    "vote_for": 1,
+    "incumbent": "Chris Hill",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Chris Hill",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://chrishill.us/",
+        "website_confidence": "verified",
+        "background": "County judge, reelected in 2022; CPA and former executive pastor and corporate controller; former Collin County Republican Party treasurer (campaign site; county results). Did not answer the LWV or Dallas Morning News questionnaires.",
+        "own_words": [
+          {
+            "text": "From his first day in office, Chris has been committed to advancing liberty, limiting the size of government, and pursuing excellence in every aspect of county government.",
+            "is_quote": true,
+            "source": "https://www.chrishill.us/about/"
+          },
+          {
+            "text": "Says Collin County has one of the lowest property tax rates of all 254 Texas counties.",
+            "is_quote": false,
+            "source": "https://www.chrishill.us/about/"
+          },
+          {
+            "text": "If the government can declare you ‘non-essential’ and take away your right to work and provide for your family, you’ve already lost your rights to life, liberty, and the pursuit of happiness.",
+            "is_quote": true,
+            "source": "https://chrishill.us/"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://www.lwvcollin.org/docs.ashx?id=1827416"
+      },
+      {
+        "name": "John R. \"Buster\" Brown",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Texas lawyer for more than 45 years, at firms including Jones Day and at Marathon Oil; University of Arkansas accounting and law graduate; ran for Harris County district judge in 1996 and 1998 (LWV guide; Dallas Morning News).",
+        "own_words": [
+          {
+            "text": "I am personally opposed to the use of Flock cameras.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/collin-county-judge/"
+          },
+          {
+            "text": "I feel that we should go slowly on the construction of new data centers, especially in Collin County.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/collin-county-judge/"
+          },
+          {
+            "text": "Wants Commissioners Court meetings broadcast live and recorded on YouTube.",
+            "is_quote": false,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/collin-county-judge/"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.lwvcollin.org/docs.ashx?id=1827416"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "Dallas Morning News voter guide: Collin County Judge (candidate answers, unedited, 200 words at most)",
+        "url": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/collin-county-judge/"
+      },
+      {
+        "name": "League of Women Voters of Collin County Voters Guide, Nov 3, 2026: Collin County offices (PDF, candidate answers)",
+        "url": "https://www.lwvcollin.org/docs.ashx?id=1827416"
+      },
+      {
+        "name": "Collin County official results, Nov 8, 2022 general election (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/results-archive/november-8-2022-general-and-special-election-combined-accumulated-totals.pdf?sfvrsn=e336cc91_0"
+      },
+      {
+        "name": "Collin County official results, March 3, 2026 primaries (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/results-archive/march-3-2026-primary-election-summary-report-official-final.pdf?sfvrsn=13303697_9"
+      },
+      {
+        "name": "Dallas Morning News editorial board, Collin County judge recommendation (first county tax rate increase since 1993)",
+        "url": "https://www.dallasnews.com/opinion/we-recommend/article/collin-county-judge-chris-hill-john-brown-election-22455184.php"
+      },
+      {
+        "name": "Chris Hill campaign site: About",
+        "url": "https://www.chrishill.us/about/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-collin-ccl-1",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, County Court at Law",
+    "district": "No. 1",
+    "scope_plain": "Every Collin County voter",
+    "office_explainer": "A county trial judge for misdemeanors and smaller civil cases.",
+    "why_it_matters": "Unopposed. County courts at law hear misdemeanor criminal cases, civil matters, mental health cases and some probate matters.",
+    "vote_for": 1,
+    "incumbent": "Corinne Mason",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Corinne Mason",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": null,
+        "background": "The sitting judge of County Court at Law No. 1 (Collin County).",
+        "own_words": [
+          {
+            "text": "My priority has been and will remain to run County Court at Law Number One as efficiently and fairly as possible.",
+            "is_quote": true,
+            "source": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+          },
+          {
+            "text": "As the number of cases continues to increase, without any new courts, moving the docket is imperative to assure every litigant is able to get their day in court in a timely manner.",
+            "is_quote": true,
+            "source": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "League of Women Voters of Collin County, 2026 voters guide: county offices",
+        "url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      },
+      {
+        "name": "Collin County: County Courts at Law",
+        "url": "https://www.collincountytx.gov/Courts/County-Courts-at-Law"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-collin-ccl-2",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, County Court at Law",
+    "district": "No. 2",
+    "scope_plain": "Every Collin County voter",
+    "office_explainer": "A county trial judge for misdemeanors and smaller civil cases.",
+    "why_it_matters": "Unopposed. County courts at law hear misdemeanor criminal cases, civil matters, mental health cases and some probate matters.",
+    "vote_for": 1,
+    "incumbent": "Barnett Walker",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Barnett Walker",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": null,
+        "background": "The sitting judge of County Court at Law No. 2 (Collin County). Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-29",
+          "where": [
+            "League of Women Voters of Collin County voters guide (no response)",
+            "web search for a campaign site",
+            "Ballotpedia"
+          ]
+        }
+      }
+    ],
+    "sources": [
+      {
+        "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "League of Women Voters of Collin County, 2026 voters guide: county offices",
+        "url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      },
+      {
+        "name": "Collin County: County Courts at Law",
+        "url": "https://www.collincountytx.gov/Courts/County-Courts-at-Law"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-collin-ccl-3",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, County Court at Law",
+    "district": "No. 3",
+    "scope_plain": "Every Collin County voter",
+    "office_explainer": "A county trial judge for misdemeanors and smaller civil cases.",
+    "why_it_matters": "Unopposed. County courts at law hear misdemeanor criminal cases, civil matters, mental health cases and some probate matters.",
+    "vote_for": 1,
+    "incumbent": "Lance S. Baxter",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Lance S. Baxter",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": null,
+        "background": "The sitting judge of County Court at Law No. 3 (Collin County). Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-29",
+          "where": [
+            "League of Women Voters of Collin County voters guide (no response)",
+            "web search for a campaign site",
+            "Ballotpedia"
+          ]
+        }
+      }
+    ],
+    "sources": [
+      {
+        "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "League of Women Voters of Collin County, 2026 voters guide: county offices",
+        "url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      },
+      {
+        "name": "Collin County: County Courts at Law",
+        "url": "https://www.collincountytx.gov/Courts/County-Courts-at-Law"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-collin-ccl-4",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, County Court at Law",
+    "district": "No. 4",
+    "scope_plain": "Every Collin County voter",
+    "office_explainer": "A county trial judge for misdemeanors and smaller civil cases.",
+    "why_it_matters": "Unopposed. County courts at law hear misdemeanor criminal cases, civil matters, mental health cases and some probate matters.",
+    "vote_for": 1,
+    "incumbent": "David Rippel",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "David Rippel",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": null,
+        "background": "The sitting judge of County Court at Law No. 4 (Collin County). The county also lists him as its Local Administrative County Judge. Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-29",
+          "where": [
+            "League of Women Voters of Collin County voters guide (no response)",
+            "web search for a campaign site",
+            "Ballotpedia"
+          ]
+        }
+      }
+    ],
+    "sources": [
+      {
+        "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "League of Women Voters of Collin County, 2026 voters guide: county offices",
+        "url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      },
+      {
+        "name": "Collin County: County Courts at Law",
+        "url": "https://www.collincountytx.gov/Courts/County-Courts-at-Law"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-collin-ccl-5",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, County Court at Law",
+    "district": "No. 5",
+    "scope_plain": "Every Collin County voter",
+    "office_explainer": "A county trial judge for misdemeanors and smaller civil cases.",
+    "why_it_matters": "Unopposed. County courts at law hear misdemeanor criminal cases, civil matters, mental health cases and some probate matters.",
+    "vote_for": 1,
+    "incumbent": "Randy Johnson",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Randy Johnson",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://www.voterandy4judge.com/",
+        "website_confidence": "verified",
+        "background": "The sitting judge of County Court at Law No. 5 (Collin County). Did not answer the LWV questionnaire.",
+        "own_words": [
+          {
+            "text": "Despite having an increasing number of cases filed in my court each year that I have been on the bench, we are on budget, do not have a backlog, and are working hard every day to make sure every case is handled expeditiously.",
+            "is_quote": true,
+            "source": "https://www.voterandy4judge.com/"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "League of Women Voters of Collin County, 2026 voters guide: county offices",
+        "url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      },
+      {
+        "name": "Collin County: County Courts at Law",
+        "url": "https://www.collincountytx.gov/Courts/County-Courts-at-Law"
+      },
+      {
+        "name": "Randy Johnson campaign site",
+        "url": "https://www.voterandy4judge.com/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-collin-ccl-6",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, County Court at Law",
+    "district": "No. 6",
+    "scope_plain": "Every Collin County voter",
+    "office_explainer": "A county trial judge for misdemeanors and smaller civil cases.",
+    "why_it_matters": "Unopposed. County courts at law hear misdemeanor criminal cases, civil matters, mental health cases and some probate matters.",
+    "vote_for": 1,
+    "incumbent": "Jay A. Bender",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jay A. Bender",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": null,
+        "background": "The sitting judge of County Court at Law No. 6 (Collin County). Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-29",
+          "where": [
+            "League of Women Voters of Collin County voters guide (no response)",
+            "web search for a campaign site",
+            "Ballotpedia"
+          ]
+        }
+      }
+    ],
+    "sources": [
+      {
+        "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "League of Women Voters of Collin County, 2026 voters guide: county offices",
+        "url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      },
+      {
+        "name": "Collin County: County Courts at Law",
+        "url": "https://www.collincountytx.gov/Courts/County-Courts-at-Law"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-collin-ccl-7",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, County Court at Law",
+    "district": "No. 7",
+    "scope_plain": "Every Collin County voter",
+    "office_explainer": "A county trial judge for misdemeanors and smaller civil cases.",
+    "why_it_matters": "Unopposed. County courts at law hear misdemeanor criminal cases, civil matters, mental health cases and some probate matters.",
+    "vote_for": 1,
+    "incumbent": "David Waddill",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "David Waddill",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": null,
+        "background": "The sitting judge of County Court at Law No. 7 (Collin County). Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-29",
+          "where": [
+            "League of Women Voters of Collin County voters guide (no response)",
+            "web search for a campaign site",
+            "Ballotpedia"
+          ]
+        }
+      }
+    ],
+    "sources": [
+      {
+        "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "League of Women Voters of Collin County, 2026 voters guide: county offices",
+        "url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      },
+      {
+        "name": "Collin County: County Courts at Law",
+        "url": "https://www.collincountytx.gov/Courts/County-Courts-at-Law"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-collin-probate",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, County Probate Court",
+    "district": null,
+    "scope_plain": "Every Collin County voter",
+    "office_explainer": "Handles wills, estates, guardianships and mental health commitments.",
+    "why_it_matters": "Unopposed. The probate court hears probate and inheritance cases, guardianships and involuntary mental health commitments.",
+    "vote_for": 1,
+    "incumbent": "Sarah R. Duff",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Sarah R. Duff",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": null,
+        "background": "Judge of the Collin County Probate Court since February 1, 2024, appointed after Judge Weldon S. Copeland; she won the November 2024 special election for the rest of that term with no opponent (Ballotpedia; Collin County results). Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-29",
+          "where": [
+            "League of Women Voters of Collin County voters guide (no response)",
+            "web search for a campaign site",
+            "Ballotpedia"
+          ]
+        }
+      }
+    ],
+    "sources": [
+      {
+        "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "League of Women Voters of Collin County, 2026 voters guide: county offices",
+        "url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      },
+      {
+        "name": "Collin County: Probate Court",
+        "url": "https://www.collincountytx.gov/courts/probate-court"
+      },
+      {
+        "name": "Ballotpedia: Sarah Duff",
+        "url": "https://ballotpedia.org/Sarah_Duff"
+      },
+      {
+        "name": "Collin County official results, Nov 5, 2024 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/results-archive/november-5-2024-combined-accumulated-totals-official-final2a0e4bf870d14e93a7bf1ae4b9aca757.pdf?sfvrsn=40df053c_0"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-collin-district-clerk",
+    "state": "TX",
+    "level": "county",
+    "office": "District Clerk",
+    "district": null,
+    "scope_plain": "Every Collin County voter",
+    "office_explainer": "Keeps the records for the district courts and runs jury duty summons.",
+    "why_it_matters": "Unopposed. The district clerk keeps the district courts' records and also runs jury duty and passport services.",
+    "vote_for": 1,
+    "incumbent": "Mike Gould",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Mike Gould",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": null,
+        "background": "Collin County District Clerk since January 1, 2023; he beat the sitting clerk, Lynne Finley, in the 2022 Republican runoff and won the November 2022 election with 57.8% (Ballotpedia; Collin County results). The county says he has lived in Collin County for more than 22 years (county profile). Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-29",
+          "where": [
+            "League of Women Voters of Collin County voters guide (no response)",
+            "web search for a campaign site",
+            "Ballotpedia"
+          ]
+        }
+      }
+    ],
+    "sources": [
+      {
+        "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "League of Women Voters of Collin County, 2026 voters guide: county offices",
+        "url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      },
+      {
+        "name": "Collin County: District Clerk profile",
+        "url": "https://www.collincountytx.gov/district-clerk/profile"
+      },
+      {
+        "name": "Ballotpedia: Mike Gould",
+        "url": "https://ballotpedia.org/Mike_Gould"
+      },
+      {
+        "name": "Collin County official results, Nov 8, 2022 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/results-archive/november-8-2022-general-and-special-election-combined-accumulated-totals.pdf?sfvrsn=e336cc91_0"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-collin-county-clerk",
+    "state": "TX",
+    "level": "county",
+    "office": "County Clerk",
+    "district": null,
+    "scope_plain": "Every Collin County voter",
+    "office_explainer": "Keeps public records like property deeds, marriage licenses and county court files.",
+    "why_it_matters": "The county clerk keeps land records, marriage licenses, birth and death certificates and county court records; Stacey Kemp has held the office since 2007.",
+    "vote_for": 1,
+    "incumbent": "Stacey Kemp",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Stacey Kemp",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://votestaceykemp.com/",
+        "website_confidence": "verified",
+        "background": "County clerk since 2007; past president of the County and District Clerks' Association of Texas; serves on the Collin County Bail Bond Board (Ballotpedia; campaign site). Did not answer the LWV or Dallas Morning News questionnaires.",
+        "own_words": [
+          {
+            "text": "Stacey’s focus remains simple: deliver dependable service and make county government work better for every citizen.",
+            "is_quote": true,
+            "source": "https://votestaceykemp.com/about/"
+          },
+          {
+            "text": "Points to the office's Property Fraud Alert notices, which help residents watch for filings on their property.",
+            "is_quote": false,
+            "source": "https://votestaceykemp.com/"
+          },
+          {
+            "text": "Points to electronic filing, online judicial searches and online renewals as ways the office has moved services online.",
+            "is_quote": false,
+            "source": "https://votestaceykemp.com/"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://www.lwvcollin.org/docs.ashx?id=1827416"
+      },
+      {
+        "name": "John Russell",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "AI risk and controls consultant who has done IT risk work for Amazon, Costco, JP Morgan Chase and Goldman Sachs; degrees from UConn, East Carolina and UMass Amherst; has not held office (LWV guide; Dallas Morning News).",
+        "own_words": [
+          {
+            "text": "Measure, report, improve, repeat.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/collin-county-clerk/"
+          },
+          {
+            "text": "Would require every vendor that holds county records to provide a current SOC 2 Type II security report and a written security and continuity plan.",
+            "is_quote": false,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/collin-county-clerk/"
+          },
+          {
+            "text": "Would open the office one late day or evening a week and one morning a month to start.",
+            "is_quote": false,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/collin-county-clerk/"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.lwvcollin.org/docs.ashx?id=1827416"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "Dallas Morning News voter guide: Collin County Clerk (candidate answers, unedited, 200 words at most)",
+        "url": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/collin-county-clerk/"
+      },
+      {
+        "name": "League of Women Voters of Collin County Voters Guide, Nov 3, 2026: Collin County offices (PDF, candidate answers)",
+        "url": "https://www.lwvcollin.org/docs.ashx?id=1827416"
+      },
+      {
+        "name": "Collin County official results, March 3, 2026 primaries (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/results-archive/march-3-2026-primary-election-summary-report-official-final.pdf?sfvrsn=13303697_9"
+      },
+      {
+        "name": "Collin County Clerk's office page",
+        "url": "https://www.collincountytx.gov/county-clerk"
+      },
+      {
+        "name": "Ballotpedia: Stacey Kemp (assumed office in 2007)",
+        "url": "https://ballotpedia.org/Stacey_Kemp"
+      },
+      {
+        "name": "Stacey Kemp campaign site: About",
+        "url": "https://votestaceykemp.com/about/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-collin-commissioner-2",
+    "state": "TX",
+    "level": "county",
+    "office": "County Commissioner",
+    "district": "Precinct 2",
+    "scope_plain": "Voters in Collin County Commissioners Court Precinct 2 (southeast Collin County, including southeast Allen, Lucas, Parker, Murphy, Wylie and Lavon, per the county's precinct map)",
+    "office_explainer": "One of four commissioners who, with the county judge, set the county budget and tax rate.",
+    "why_it_matters": "Only Precincts 2 and 4 elect a commissioner this year. Northeast Allen is in Precinct 3, which has no race. Open seat: Commissioner Cheryl Williams, in office since 2011, is not on the ballot, and Michael Slaughter is unopposed.",
+    "vote_for": 1,
+    "incumbent": "Cheryl Williams (not running)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Michael Slaughter",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.michaelslaughter.com/",
+        "website_confidence": "verified",
+        "background": "A business owner, a former Parker City Council member and mayor pro tem, and a certified law enforcement officer (LWV guide).",
+        "own_words": [
+          {
+            "text": "we must get a better handle on budgeting and the budget process by moving toward a zero-based budgeting approach and clearly showing where every dollar is spent.",
+            "is_quote": true,
+            "source": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+          },
+          {
+            "text": "Keep taxes low for property owners across Collin County",
+            "is_quote": true,
+            "source": "https://www.michaelslaughter.com/"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "Collin County Commissioners precinct map, Jan 19, 2024 (PDF; precincts per Court Order 2023-915-09-25)",
+        "url": "https://www.collincountytx.gov/docs/default-source/commissioners-court/maps/commish8x11.pdf?sfvrsn=b3d28ae7_3"
+      },
+      {
+        "name": "League of Women Voters of Collin County, 2026 voters guide: county offices",
+        "url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      },
+      {
+        "name": "Collin County: Commissioners Court",
+        "url": "https://www.collincountytx.gov/government/commissioners-court"
+      },
+      {
+        "name": "Collin County: Precinct 2 commissioner",
+        "url": "https://www.collincountytx.gov/government/commissioners-court/precinct-2"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-collin-commissioner-4",
+    "state": "TX",
+    "level": "county",
+    "office": "County Commissioner",
+    "district": "Precinct 4",
+    "scope_plain": "Voters in Collin County Commissioners Court Precinct 4 (southwest Collin County, including most of Allen and much of Plano, per the county's precinct map)",
+    "office_explainer": "One of four commissioners who, with the county judge, set the county budget and tax rate.",
+    "why_it_matters": "Only Precincts 2 and 4 elect a commissioner this year. Northeast Allen is in Precinct 3, which has no race. Open seat: Commissioner Duncan Webb did not run again. Both candidates served on the Plano City Council.",
+    "vote_for": 1,
+    "incumbent": "Duncan Webb (not running)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Shelby Williams",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://shelbyhwilliams.com/",
+        "website_confidence": "verified",
+        "background": "Digital and AI transformation consultant; served six years on the Plano City Council (Place 5); UT Austin MBA (Dallas Morning News; campaign site).",
+        "own_words": [
+          {
+            "text": "What we can do is require warrants for government surveillance utilizing such technology.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/collin-county-commissioners-court-precinct-4/"
+          },
+          {
+            "text": "When new data centers are built, they need to provide the resources to see to their own power needs.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/collin-county-commissioners-court-precinct-4/"
+          },
+          {
+            "text": "The most important thing any of us, including the county, can do is to invest more energy and resources in homelessness prevention.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/collin-county-commissioners-court-precinct-4/"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.lwvcollin.org/docs.ashx?id=1827416"
+      },
+      {
+        "name": "Julie Holmer",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://julieforcommissioner.com/",
+        "website_confidence": "verified",
+        "background": "Marketing and print broker; Plano City Council member (Place 7) from 2021 to 2026 and deputy mayor pro tem from 2024; has lived in Precinct 4 for 45 years; Stephen F. Austin graduate (Dallas Morning News).",
+        "own_words": [
+          {
+            "text": "I support the use of Flock cameras for legitimate public safety purposes, but only with strong safeguards, oversight and transparency.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/collin-county-commissioners-court-precinct-4/"
+          },
+          {
+            "text": "I generally do not support tax breaks and other incentives using public dollars to help build these centers.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/collin-county-commissioners-court-precinct-4/"
+          },
+          {
+            "text": "Homelessness is a regional issue that requires regional cooperation.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/collin-county-commissioners-court-precinct-4/"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.lwvcollin.org/docs.ashx?id=1827416"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "Collin County Commissioners precinct map, Jan 19, 2024 (PDF; precincts per Court Order 2023-915-09-25)",
+        "url": "https://www.collincountytx.gov/docs/default-source/commissioners-court/maps/commish8x11.pdf?sfvrsn=b3d28ae7_3"
+      },
+      {
+        "name": "Dallas Morning News voter guide: Collin County Commissioners Court, Precinct 4 (candidate answers, unedited, 200 words at most)",
+        "url": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/collin-county-commissioners-court-precinct-4/"
+      },
+      {
+        "name": "League of Women Voters of Collin County Voters Guide, Nov 3, 2026: Collin County offices (PDF, candidate answers)",
+        "url": "https://www.lwvcollin.org/docs.ashx?id=1827416"
+      },
+      {
+        "name": "Collin County official results, March 3, 2026 primaries (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/results-archive/march-3-2026-primary-election-summary-report-official-final.pdf?sfvrsn=13303697_9"
+      },
+      {
+        "name": "Collin County Commissioners Court page (names Duncan Webb for Precinct 4)",
+        "url": "https://www.collincountytx.gov/government/commissioners-court"
+      },
+      {
+        "name": "Shelby Williams campaign site",
+        "url": "https://shelbyhwilliams.com/"
+      },
+      {
+        "name": "Julie Holmer campaign site",
+        "url": "https://julieforcommissioner.com/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-collin-jp-1",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Justice of the Peace",
+    "district": "Precinct 1",
+    "scope_plain": "Voters in Collin County Justice of the Peace Precinct 1 (north-central Collin County: McKinney, Anna, Melissa and a few voting precincts in northwest Allen, per the county's precinct map)",
+    "office_explainer": "A local judge for evictions, small claims up to $20,000, traffic tickets and fine-only crimes.",
+    "why_it_matters": "Unopposed in November after a close March primary. Justice of the peace courts hear traffic tickets, civil suits and Class C misdemeanors.",
+    "vote_for": 1,
+    "incumbent": "Paul M. Raleeh",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Paul M. Raleeh",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://reelectjudgeraleeh.com/",
+        "website_confidence": "verified",
+        "background": "Justice of the Peace, Precinct 1, since January 1999, now in his seventh four-year term, and administrative judge for the county's justice courts; before that a criminal investigator with the Sheriff's Office (county profile). He won the March 2026 Republican primary over C.D. Mayfield, 51.3% to 48.7% (Collin County results).",
+        "own_words": [
+          {
+            "text": "Since 1999, I’ve moved the court toward paperless operations, upgraded technology without taxpayer cost, and ensured direct phone access to staff.",
+            "is_quote": true,
+            "source": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+          },
+          {
+            "text": "He has turned off voicemail in his office during business hours, so that customers will always speak to a real person for assistance, rather than an automated system.",
+            "is_quote": true,
+            "source": "https://reelectjudgeraleeh.com/"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "Collin County Justices of the Peace precinct map, Jan 19, 2024 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/commissioners-court/maps/jps8x11.pdf?sfvrsn=d3edcd12_3"
+      },
+      {
+        "name": "League of Women Voters of Collin County, 2026 voters guide: county offices",
+        "url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      },
+      {
+        "name": "Collin County: Justice of the Peace, Precinct 1, profile",
+        "url": "https://www.collincountytx.gov/courts/justices-peace/justice-precinct-1/profile"
+      },
+      {
+        "name": "Collin County official results, March 3, 2026 primary (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/results-archive/march-3-2026-primary-election-summary-report-official-final.pdf?sfvrsn=13303697_9"
+      },
+      {
+        "name": "Collin County: Justice of the Peace, Precinct 2 (what the justice courts hear)",
+        "url": "https://www.collincountytx.gov/courts/justices-peace/justice-precinct-2"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-collin-jp-3",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Justice of the Peace",
+    "district": "Precinct 3",
+    "scope_plain": "Voters in Collin County Justice of the Peace Precinct 3 (south-central Collin County: most of Allen, plus Fairview, Lucas, Parker, Murphy and part of Plano, per the county's precinct map)",
+    "office_explainer": "A local judge for evictions, small claims up to $20,000, traffic tickets and fine-only crimes.",
+    "why_it_matters": "A rematch: Mike Missildine beat Irvin Lynn Barrett 53% to 47% in 2022 (Collin County results).",
+    "vote_for": 1,
+    "incumbent": "Mike Missildine",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Mike Missildine",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://www.mikemissildine.com/",
+        "website_confidence": "verified",
+        "background": "Justice of the peace since he was first elected in 2018; retired police officer (23 years) and former chief deputy constable; PhD in psychology (Dallas Morning News; LWV guide).",
+        "own_words": [
+          {
+            "text": "I utilize AI-assisted software to automate administrative bottlenecks like data entry and scheduling.",
+            "is_quote": true,
+            "source": "https://www.lwvcollin.org/docs.ashx?id=1827416"
+          },
+          {
+            "text": "For truancy, I prioritize early intervention to keep youth in school, preventing future crime.",
+            "is_quote": true,
+            "source": "https://www.lwvcollin.org/docs.ashx?id=1827416"
+          },
+          {
+            "text": "My constitutional duty is strict impartiality.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/collin-county-justice-of-the-peace-precinct-3/"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.lwvcollin.org/docs.ashx?id=1827416"
+      },
+      {
+        "name": "Irvin Lynn Barrett",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.irvinbarrett.com/",
+        "website_confidence": "verified",
+        "background": "Senior pastor, hospice chaplain and insurance agent; studied at Criswell College (LWV guide; Ballotpedia). Did not answer the Dallas Morning News questionnaire.",
+        "own_words": [
+          {
+            "text": "This encounter should not be threatening or intimidating.",
+            "is_quote": true,
+            "source": "https://www.lwvcollin.org/docs.ashx?id=1827416"
+          },
+          {
+            "text": "My aim is to stop sending students to jail.",
+            "is_quote": true,
+            "source": "https://www.irvinbarrett.com/priorities"
+          },
+          {
+            "text": "I cannot promise anyone a particular result, but I can promise that every person will be heard, every case will be considered carefully, and every decision will be governed by the law.",
+            "is_quote": true,
+            "source": "https://www.lwvcollin.org/docs.ashx?id=1827416"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.lwvcollin.org/docs.ashx?id=1827416"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "Collin County Justices of the Peace precinct map, Jan 19, 2024 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/commissioners-court/maps/jps8x11.pdf?sfvrsn=d3edcd12_3"
+      },
+      {
+        "name": "Dallas Morning News voter guide: Collin County Justice of the Peace, Precinct 3 (candidate answers, unedited, 200 words at most)",
+        "url": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/collin-county-justice-of-the-peace-precinct-3/"
+      },
+      {
+        "name": "League of Women Voters of Collin County Voters Guide, Nov 3, 2026: Collin County offices (PDF, candidate answers)",
+        "url": "https://www.lwvcollin.org/docs.ashx?id=1827416"
+      },
+      {
+        "name": "Collin County official results, Nov 8, 2022 general election (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/results-archive/november-8-2022-general-and-special-election-combined-accumulated-totals.pdf?sfvrsn=e336cc91_0"
+      },
+      {
+        "name": "Collin County Justice of the Peace, Precinct 3 page (Judge Mike Missildine)",
+        "url": "https://www.collincountytx.gov/courts/justices-peace/justice-precinct-3"
+      },
+      {
+        "name": "Ballotpedia: Irvin Barrett",
+        "url": "https://ballotpedia.org/Irvin_Barrett"
+      },
+      {
+        "name": "Irvin Barrett campaign site: Priorities",
+        "url": "https://www.irvinbarrett.com/priorities"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-ccad-place-1",
+    "state": "TX",
+    "level": "special_district",
+    "office": "Director, Collin County Appraisal District",
+    "district": "Place 1",
+    "scope_plain": "Every Collin County voter",
+    "office_explainer": "One of three elected directors on the board that oversees the office that sets property values for taxes.",
+    "why_it_matters": "Nonpartisan: no party labels. Texas first elected some appraisal district directors in May 2024, under a 2023 law (Senate Bill 2); this is the first time these seats are on a November ballot. The appraisal district's own page says its board has no authority to set values; it hires the chief appraiser, adopts the budget and reappraisal plan, and appoints the Appraisal Review Board. A winner needs more than half the votes, or the top two go to a runoff. After this election, the three winners draw lots: one serves two years and two serve four.",
+    "vote_for": 1,
+    "incumbent": "Randal Shinn",
+    "open_seat": false,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Randal Shinn",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": null,
+        "background": "Place 1 director of the Collin Central Appraisal District since April 24, 2025, appointed after Robert Philo left the seat (Ballotpedia); the district lists him as the board's secretary (CollinCAD). Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-29",
+          "where": [
+            "League of Women Voters of Collin County voters guide (no response)",
+            "web search for a campaign site",
+            "Ballotpedia"
+          ]
+        }
+      }
+    ],
+    "sources": [
+      {
+        "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "Collin County Elections: Central Appraisal District board election information (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/documents/central-appraisal-district-board-election-information49d5cd75ef2443e1b93790981cdc98a9.pdf?sfvrsn=36f18e3d_4"
+      },
+      {
+        "name": "Collin Central Appraisal District: Board of Directors",
+        "url": "https://collincad.org/district-information/board-of-directors/"
+      },
+      {
+        "name": "Texas Secretary of State, Election Advisory No. 2023-24 (appraisal district elections, Senate Bill 2)",
+        "url": "https://www.sos.texas.gov/elections/laws/advisory2023-24.shtml"
+      },
+      {
+        "name": "Texas Secretary of State, 2026 election law seminar: county appraisal district elections (PDF slides)",
+        "url": "https://www.sos.texas.gov/elections/forms/seminar/2026/cad-november-transition.pdf"
+      },
+      {
+        "name": "League of Women Voters of Collin County, 2026 voters guide: county offices",
+        "url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      },
+      {
+        "name": "Ballotpedia: Randal Shinn",
+        "url": "https://ballotpedia.org/Randal_Shinn"
+      },
+      {
+        "name": "Ballotpedia: Robert Philo",
+        "url": "https://ballotpedia.org/Robert_Philo"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-ccad-place-2",
+    "state": "TX",
+    "level": "special_district",
+    "office": "Director, Collin County Appraisal District",
+    "district": "Place 2",
+    "scope_plain": "Every Collin County voter",
+    "office_explainer": "One of three elected directors on the board that oversees the office that sets property values for taxes.",
+    "why_it_matters": "Nonpartisan: no party labels. Texas first elected some appraisal district directors in May 2024, under a 2023 law (Senate Bill 2); this is the first time these seats are on a November ballot. The appraisal district's own page says its board has no authority to set values; it hires the chief appraiser, adopts the budget and reappraisal plan, and appoints the Appraisal Review Board. A winner needs more than half the votes, or the top two go to a runoff. After this election, the three winners draw lots: one serves two years and two serve four. Sumbel Zeb holds this seat now and isn't running; Andrew Cook holds Place 3 now and is running for Place 2.",
+    "vote_for": 1,
+    "incumbent": "Sumbel Zeb (not running)",
+    "open_seat": true,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Michael G. Smith",
+        "party": null,
+        "incumbent": false,
+        "website": "https://smithforcollincad.com/",
+        "website_confidence": "verified",
+        "background": "A business executive and certified public accountant (LWV guide).",
+        "own_words": [
+          {
+            "text": "I am running to bring a CPA and business manager’s oversight experience to the board.",
+            "is_quote": true,
+            "source": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+          },
+          {
+            "text": "Board members cannot determine individual values, but they are responsible for the quality of the overall appraisal process.",
+            "is_quote": true,
+            "source": "https://smithforcollincad.com/"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      },
+      {
+        "name": "Andrew Cook",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": null,
+        "background": "The board's current Place 3 director, sworn in in August 2024 (CollinCAD board page and minutes); this time he is running for Place 2. Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-29",
+          "where": [
+            "League of Women Voters of Collin County voters guide (no response)",
+            "web search for a campaign site",
+            "Ballotpedia"
+          ]
+        }
+      }
+    ],
+    "sources": [
+      {
+        "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "Collin County Elections: Central Appraisal District board election information (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/documents/central-appraisal-district-board-election-information49d5cd75ef2443e1b93790981cdc98a9.pdf?sfvrsn=36f18e3d_4"
+      },
+      {
+        "name": "Collin Central Appraisal District: Board of Directors",
+        "url": "https://collincad.org/district-information/board-of-directors/"
+      },
+      {
+        "name": "Texas Secretary of State, Election Advisory No. 2023-24 (appraisal district elections, Senate Bill 2)",
+        "url": "https://www.sos.texas.gov/elections/laws/advisory2023-24.shtml"
+      },
+      {
+        "name": "Texas Secretary of State, 2026 election law seminar: county appraisal district elections (PDF slides)",
+        "url": "https://www.sos.texas.gov/elections/forms/seminar/2026/cad-november-transition.pdf"
+      },
+      {
+        "name": "League of Women Voters of Collin County, 2026 voters guide: county offices",
+        "url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      },
+      {
+        "name": "Ballotpedia: Sumbel Zeb",
+        "url": "https://ballotpedia.org/Sumbel_Zeb"
+      },
+      {
+        "name": "Collin Central Appraisal District board packet, Sept 26, 2024, with Aug 22 minutes (PDF)",
+        "url": "https://collincad.org/wp-content/uploads/2024/09/2024-09-26_Board_Packet.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-ccad-place-3",
+    "state": "TX",
+    "level": "special_district",
+    "office": "Director, Collin County Appraisal District",
+    "district": "Place 3",
+    "scope_plain": "Every Collin County voter",
+    "office_explainer": "One of three elected directors on the board that oversees the office that sets property values for taxes.",
+    "why_it_matters": "Nonpartisan: no party labels. Texas first elected some appraisal district directors in May 2024, under a 2023 law (Senate Bill 2); this is the first time these seats are on a November ballot. The appraisal district's own page says its board has no authority to set values; it hires the chief appraiser, adopts the budget and reappraisal plan, and appoints the Appraisal Review Board. A winner needs more than half the votes, or the top two go to a runoff. After this election, the three winners draw lots: one serves two years and two serve four. Andrew Cook holds this seat now and is running for Place 2 instead.",
+    "vote_for": 1,
+    "incumbent": "Andrew Cook (running for Place 2)",
+    "open_seat": true,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Joe Corcoran",
+        "party": null,
+        "incumbent": false,
+        "website": "https://www.joeforccad3.com/",
+        "website_confidence": "verified",
+        "background": "Richardson City Council member from 2021 to 2026 and chair of its audit committee from 2023; an MBA and an MS in business administration from Texas Tech (LWV guide).",
+        "own_words": [
+          {
+            "text": "My main initial goal as an individual board member will be to work hard to recruit qualified applicants for the Appraisal Review Boards.",
+            "is_quote": true,
+            "source": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+          },
+          {
+            "text": "I would like to use my time as an elected official to advertise the positions and get more applicants.",
+            "is_quote": true,
+            "source": "https://www.joeforccad3.com/"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Collin County official all-race sample ballot, Nov 3, 2026 (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/sample-ballots/20261103_joint-general-and-special-election_all-race-sample-ballot_final.pdf?sfvrsn=e253de7b_5"
+      },
+      {
+        "name": "Collin County Elections: Central Appraisal District board election information (PDF)",
+        "url": "https://www.collincountytx.gov/docs/default-source/elections/documents/central-appraisal-district-board-election-information49d5cd75ef2443e1b93790981cdc98a9.pdf?sfvrsn=36f18e3d_4"
+      },
+      {
+        "name": "Collin Central Appraisal District: Board of Directors",
+        "url": "https://collincad.org/district-information/board-of-directors/"
+      },
+      {
+        "name": "Texas Secretary of State, Election Advisory No. 2023-24 (appraisal district elections, Senate Bill 2)",
+        "url": "https://www.sos.texas.gov/elections/laws/advisory2023-24.shtml"
+      },
+      {
+        "name": "Texas Secretary of State, 2026 election law seminar: county appraisal district elections (PDF slides)",
+        "url": "https://www.sos.texas.gov/elections/forms/seminar/2026/cad-november-transition.pdf"
+      },
+      {
+        "name": "League of Women Voters of Collin County, 2026 voters guide: county offices",
+        "url": "https://www.lwvcollin.org/handlers/celinks.ashx?id=182387"
+      },
+      {
+        "name": "Collin Central Appraisal District board packet, Sept 26, 2024, with Aug 22 minutes (PDF)",
+        "url": "https://collincad.org/wp-content/uploads/2024/09/2024-09-26_Board_Packet.pdf"
+      }
+    ],
+    "confidence": "verified"
+  }
+]

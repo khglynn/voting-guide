@@ -163,8 +163,10 @@ check('page titles and descriptions: no em dashes, no all caps', !bad.copy.lengt
     const text = textOf(bodyOf(p.html));
     // Case aside: the app's deshout writes the data's "NOT at your polling place" as "not".
     // A place with its own ways back (the City of St. Louis, Oct 29) lists those instead of the state's.
-    const place = p.kind === 'place' ? data.places[p.path.slice(1)] : null;
-    const opts = place?.mail_ballot?.return_options || data.states[st].howto.mail_ballot.return_options || [];
+    // As the page reads it: a way back a `dated` entry names never goes on a static page (site.undated; Georgia's
+    // drop boxes and Maryland's early voting centers close, Oct 30), so it isn't looked for.
+    const place = p.kind === 'place' ? site.undated(data.places[p.path.slice(1)]) : null;
+    const opts = (place?.mail_ballot?.return_options || site.undated(data.states[st].howto).mail_ballot.return_options || []).filter(Boolean);
     const gone = opts.filter((o) => !text.toLowerCase().includes(norm(o).slice(0, 60).toLowerCase()));
     const oneRule = /Your mail ballot must/.test(p.html) || !/Mail ballot deadline: <b>/.test(p.html);
     if (gone.length || oneRule) ways.push(`${p.path}: ${gone.length} way(s) missing${oneRule ? ', a one-rule heading' : ''}`);

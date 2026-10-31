@@ -1577,14 +1577,23 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const placeSteps = ['orlando-fl', 'pensacola-fl', 'tallahassee-fl'].flatMap((id) => ['2026-10-30', '2026-10-31', '2026-11-01'].map((t) => plan.nextStep(open('FL', [id]).howto, t)));
     check('plan: a Florida place keeps its own county\'s last day, with no latest-county-day line', orl.latest_end === null && pen.latest_end === null && !placeSteps.some((st) => [words(st), ...st.sub].some((x) => /Some counties|Others stay|yours does/.test(x))) && words(plan.nextStep(open('FL', ['pensacola-fl']).howto, '2026-10-31')) === 'Today is the last day of early voting.', placeSteps.map((st) => st.sub.join(' | ')).join(' || '));
     // Self-review on #62: the Key dates list says the same as the step, both ends for the state, one for a place.
-    const keyDates = (places) => {
+    // Gate round 1 on #62: only the list itself, built as of Nov 1, so the dated gotchas beside it (Florida's third
+    // reads "Early voting ends today in Orange and Leon" on Nov 1) can't change what it reads with the day CI runs.
+    const keyDates = (places, day = '2026-11-01') => {
+      const loc = Object.getOwnPropertyDescriptor(globalThis, 'location');
       const wq = S.ui.wiQ, had = S.ui.open.has('bx-dates'); S.ui.wiQ = ''; S.ui.open.add('bx-dates');
-      const h = open('FL', places).howto; const out = views.planstrip.whatIfBody(h).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
-      S.ui.wiQ = wq; if (!had) S.ui.open.delete('bx-dates'); return out;
+      Object.defineProperty(globalThis, 'location', { configurable: true, value: { search: `?today=${day}`, origin: 'http://x', pathname: '/' } });
+      try {
+        const list = (views.planstrip.whatIfBody(open('FL', places).howto).match(/<ol class="pdates">[\s\S]*?<\/ol>/) || [''])[0];
+        return list.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+      } finally {
+        if (loc) Object.defineProperty(globalThis, 'location', loc); else delete globalThis.location;
+        S.ui.wiQ = wq; if (!had) S.ui.open.delete('bx-dates');
+      }
     };
     const kdFl = keyDates([]), kdPen = keyDates(['pensacola-fl']);
-    check('plan: statewide Florida\'s key dates end early voting in some counties Oct 31 and in the rest Nov 1', /Sat, Oct 31\s*Early voting ends in some counties/.test(kdFl) && /Sun, Nov 1\s*Early voting ends in the rest/.test(kdFl) && !/Early voting ends(?! in)/.test(kdFl), kdFl.slice(0, 600));
-    check('plan: Pensacola\'s key dates end early voting once, on Oct 31', /Sat, Oct 31\s*Early voting ends(?! in)/.test(kdPen) && !/in the rest|in some counties/.test(kdPen), kdPen.slice(0, 600));
+    check('plan: statewide Florida\'s key dates on Nov 1 end early voting in some counties Oct 31 (passed) and in the rest Nov 1 (not passed)', /Sat, Oct 31 Early voting ends in some counties passed\b/.test(kdFl) && /Sun, Nov 1 Early voting ends in the rest(?! passed)/.test(kdFl) && !/Early voting ends(?! in)/.test(kdFl), kdFl);
+    check('plan: Pensacola\'s key dates end early voting once, on Oct 31', /Sat, Oct 31 Early voting ends(?! in)/.test(kdPen) && !/in the rest|in some counties/.test(kdPen), kdPen);
     const a1 = { early_in_person: { start: '2026-10-19', end: '2026-11-01', hours_note: 'A', lookup_url: 'https://a.example', source: 'https://a.example', confidence: 'verified' } };
     const a2 = { early_in_person: { start: '2026-10-24', end: '2026-10-31', hours_note: 'B', lookup_url: 'https://b.example', source: 'https://b.example', confidence: 'verified' } };
     check('plan: places that disagree keep the state window', plan.localHowto(fl, [a1, a2]).early_in_person === fl.early_in_person && plan.localHowto(fl, [a1, {}]).early_in_person === fl.early_in_person);

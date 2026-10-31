@@ -1388,8 +1388,8 @@
   "state": "CA",
   "level": "federal",
   "office": "U.S. Representative",
-  "district": "CD-36 (Westside and South Bay: Mar Vista, Westchester, Venice, Santa Monica, Beverly Hills, Torrance, Palos Verdes)",
-  "scope_plain": "Voters in the 36th Congressional District. In the City of LA that includes Mar Vista and Westchester. It also covers all of Beverly Hills. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "district": "CD-36 (Westside and South Bay: Mar Vista, Westchester, Venice, Santa Monica, Beverly Hills, Culver City west of the 405, Torrance, Palos Verdes)",
+  "scope_plain": "Voters in the 36th Congressional District. In the City of LA that includes Mar Vista and Westchester. It also covers all of Beverly Hills. About 5,900 Culver City residents, west of the 405, are in it too. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
   "why_it_matters": "A six-term incumbent and vice chair of the House Democratic Caucus against a Republican with no public campaign presence. Lieu won the June primary with 61%.",
   "vote_for": 1,
@@ -1478,8 +1478,8 @@
   "state": "CA",
   "level": "federal",
   "office": "U.S. Representative",
-  "district": "CD-37 (Mid-City, Fairfax area south of Wilshire, Culver City, Crenshaw, Baldwin Hills, parts of Koreatown and South LA)",
-  "scope_plain": "Voters in the 37th Congressional District. In the City of LA that includes much of Mid-City; the Fairfax District north of Wilshire is mostly CD-30. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Two Democrats.",
+  "district": "CD-37 (Mid-City, Fairfax area south of Wilshire, most of Culver City (east of the 405), Crenshaw, Baldwin Hills, parts of Koreatown and South LA)",
+  "scope_plain": "Voters in the 37th Congressional District. In the City of LA that includes much of Mid-City; the Fairfax District north of Wilshire is mostly CD-30. It also covers most of Culver City (about 35,000 residents east of the 405). California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Two Democrats.",
   "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
   "why_it_matters": "An incumbent who won 55% in June against a 27-year-old community advocate who got under 12%. Both Democrats.",
   "vote_for": 1,
@@ -1555,6 +1555,10 @@
    {
     "name": "City Hall Pass: CA-37",
     "url": "https://cityhallpass.com/election-2026/races/congress-37"
+   },
+   {
+    "name": "Statewide Database: which cities each 2025 congressional district holds (AB 604 city splits report)",
+    "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
    }
   ],
   "confidence": "verified"

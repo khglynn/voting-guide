@@ -1,0 +1,358 @@
+[
+ {
+  "id": "west-hollywood-city-council",
+  "state": "CA",
+  "level": "city",
+  "office": "West Hollywood City Council",
+  "district": null,
+  "scope_plain": "All of West Hollywood votes in this race: the council is elected citywide, not by district. You can vote for up to three candidates, and the three with the most votes win. There's no primary or runoff. Only people who live inside West Hollywood city limits see it, and a 90046, 90048 or 90069 address can be in the City of Los Angeles instead.",
+  "office_explainer": "One of five members who pass city laws, set the budget and decide what gets built. Members pick the mayor each year.",
+  "why_it_matters": "Three of the five seats are up. Two are open because Mayor John Heilman and Councilmember Lauren Meister can't run again (term limits), and Councilmember Chelsea Byers is running for a second term. There are 14 names on the ballot.",
+  "vote_for": 3,
+  "incumbent": "Chelsea Byers (running); John Heilman and Lauren Meister (term-limited)",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Helen Krieger",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Screenwriter. Her official statement says she is a renter and TV writer who has lived in West Hollywood since 2016 and has served on the city's Transportation Commission.",
+    "own_words": [
+     {
+      "text": "create more housing, to bring filming back to WeHo, to create safer, more connected streets",
+      "is_quote": true,
+      "source": "https://www.weho.org/home/showpublisheddocument/65995/639226503477630000"
+     },
+     {
+      "text": "streamline permitting for all our businesses",
+      "is_quote": true,
+      "source": "https://www.weho.org/home/showpublisheddocument/65995/639226503477630000"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Kody Christiansen",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Sales Associate/Author. His official statement says he has lived in West Hollywood for more than 20 years, rents, works in retail and is finishing a public administration master's degree at USC.",
+    "own_words": [
+     {
+      "text": "strengthen public safety, support housing that is affordable while planning responsibly for our future",
+      "is_quote": true,
+      "source": "https://www.weho.org/home/showpublisheddocument/65977/639226513315800000"
+     },
+     {
+      "text": "address homelessness with compassion, accountability, real solutions, and the perspective of lived experience",
+      "is_quote": true,
+      "source": "https://www.weho.org/home/showpublisheddocument/65977/639226513315800000"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Jonathan Cottrell",
+    "party": null,
+    "incumbent": false,
+    "website": "https://cottrell4weho.com",
+    "website_confidence": "verified",
+    "background": "Ballot designation: Restaurant Owner/Engineer. His official statement says he and his husband own and run GYM Bar WeHo, a sports bar in the city.",
+    "own_words": [
+     {
+      "text": "more affordable homes/apartments that are concentrated on commercial corridors, and transit nodes",
+      "is_quote": true,
+      "source": "https://www.weho.org/home/showpublisheddocument/65997/639226503480030000"
+     },
+     {
+      "text": "strengthening financial disclosures for our public officials",
+      "is_quote": true,
+      "source": "https://www.weho.org/home/showpublisheddocument/65997/639226503480030000"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Stephen Post",
+    "party": null,
+    "incumbent": false,
+    "website": "https://post4weho.com",
+    "website_confidence": "verified",
+    "background": "Ballot designation: Nonprofit Business Manager. His official statement says he manages a business improvement district, is a renter and serves on West Hollywood's Public Safety Commission.",
+    "own_words": [
+     {
+      "text": "increasing funding to homelessness prevention, implementing a rent reduction for stabilized units, expanding public affordable housing options",
+      "is_quote": true,
+      "source": "https://www.weho.org/home/showpublisheddocument/65985/639226503116630000"
+     },
+     {
+      "text": "making City Hall more transparent and accountable",
+      "is_quote": true,
+      "source": "https://www.weho.org/home/showpublisheddocument/65985/639226503116630000"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Joel Zaldivar",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.joel4weho.com",
+    "website_confidence": "verified",
+    "background": "Ballot designation: Business Owner. His official statement says he owns a neighborhood gym in West Hollywood and is the son of Cuban refugees.",
+    "own_words": [
+     {
+      "text": "I will spearhead the creation of a Commercial Rent Stabilization Division",
+      "is_quote": true,
+      "source": "https://www.weho.org/home/showpublisheddocument/65973/639226503089570000"
+     },
+     {
+      "text": "I will champion the creation of the West Hollywood Police Department.",
+      "is_quote": true,
+      "source": "https://www.weho.org/home/showpublisheddocument/65973/639226503089570000"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Kevin Ligon",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.kevinligon.com",
+    "website_confidence": "verified",
+    "background": "Ballot designation: Retired Veterans Liaison. His official statement says he was a program manager at the VA Greater Los Angeles Healthcare System and belongs to his building's tenant association.",
+    "own_words": [
+     {
+      "text": "make decisions based on transparency, fiscal responsibility, and collaboration",
+      "is_quote": true,
+      "source": "https://www.weho.org/home/showpublisheddocument/65979/639226503099270000"
+     },
+     {
+      "text": "Wants to help entrepreneurs and small businesses fill the city's empty storefronts.",
+      "is_quote": false,
+      "source": "https://www.weho.org/home/showpublisheddocument/65979/639226503099270000"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Tom Demille",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Thespian. His official statement says he has lived in West Hollywood for 35 years and organized a candlelight vigil in the city after September 11, 2001.",
+    "own_words": [
+     {
+      "text": "every resident and guest has the fundamental right to sleep peacefully at night without fear of break-ins",
+      "is_quote": true,
+      "source": "https://www.weho.org/home/showpublisheddocument/65987/639226503119730000"
+     },
+     {
+      "text": "widen the sidewalks throughout the Rainbow District to create vibrant gathering spaces",
+      "is_quote": true,
+      "source": "https://www.weho.org/home/showpublisheddocument/65987/639226503119730000"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "John Duran",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Civil Rights Attorney. His official statement says he served on the West Hollywood City Council from 2000 to 2020 and has lived in the city for 36 years.",
+    "own_words": [
+     {
+      "text": "I will work to restore the full funding of our sheriffs and fire departments.",
+      "is_quote": true,
+      "source": "https://www.weho.org/home/showpublisheddocument/65971/639226503083530000"
+     },
+     {
+      "text": "I oppose eliminating traffic lanes on Fountain Avenue.",
+      "is_quote": true,
+      "source": "https://www.weho.org/home/showpublisheddocument/65971/639226503083530000"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Larry Block",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.larryblock4weho.com",
+    "website_confidence": "verified",
+    "background": "Ballot designation: Small Business Owner. His official statement says he has lived and worked in West Hollywood since 1986, owns BlockParty WeHo, publishes the news site WEHOonline and ran for the council in 2024.",
+    "own_words": [
+     {
+      "text": "I'm running to make West Hollywood safer, to protect residents and neighborhoods",
+      "is_quote": true,
+      "source": "https://www.weho.org/home/showpublisheddocument/65981/639226503103770000"
+     },
+     {
+      "text": "spend your tax dollars on public safety and resident services",
+      "is_quote": true,
+      "source": "https://www.weho.org/home/showpublisheddocument/65981/639226503103770000"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Kyle Brazeal",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Finance Director. His official statement says he is an LGBTQ+ resident with a career in finance who has spoken before the City Council on local issues.",
+    "own_words": [
+     {
+      "text": "a local development plan that welcomes new housing without displacing renters",
+      "is_quote": true,
+      "source": "https://www.weho.org/home/showpublisheddocument/65975/639226503092230000"
+     },
+     {
+      "text": "We need a City Council that listens, not lectures",
+      "is_quote": true,
+      "source": "https://www.weho.org/home/showpublisheddocument/65975/639226503092230000"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Chelsea Byers",
+    "party": null,
+    "incumbent": true,
+    "website": "https://chelsea4weho.com",
+    "website_confidence": "verified",
+    "background": "Ballot designation: Councilmember/Policy Director. Elected to the council in 2022 and has served as mayor; she is the only council member running this year.",
+    "own_words": [
+     {
+      "text": "lower housing costs, strengthen social services, modernize our aging infrastructure, make our streets safer",
+      "is_quote": true,
+      "source": "https://www.weho.org/home/showpublisheddocument/65991/639226503472370000"
+     },
+     {
+      "text": "Led the effort to strengthen our rent stabilization ordinance",
+      "is_quote": true,
+      "source": "https://www.weho.org/home/showpublisheddocument/65991/639226503472370000"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Alden \"Marlon\" Gobel",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Designer/Creative Director. His official statement says he is a fashion designer with his own label, Marlon Gobel, and studied art and design at Central Saint Martins in London.",
+    "own_words": [
+     {
+      "text": "I will bring fiscal discipline, project management expertise",
+      "is_quote": true,
+      "source": "https://www.weho.org/home/showpublisheddocument/65983/639226503109370000"
+     },
+     {
+      "text": "preserving our distinct, rebellious, and authentic spirit",
+      "is_quote": true,
+      "source": "https://www.weho.org/home/showpublisheddocument/65983/639226503109370000"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Chukwudubem \"Chiedu\" Egbuniwe",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Technology Services Professional. His official statement says he has lived in West Hollywood for 22 years and has worked as a nonprofit and technology leader.",
+    "own_words": [
+     {
+      "text": "It is critical that we prepare for growth, while preserving the core community values",
+      "is_quote": true,
+      "source": "https://www.weho.org/home/showpublisheddocument/65993/639226503475030000"
+     },
+     {
+      "text": "Listening does not end after Election Day.",
+      "is_quote": true,
+      "source": "https://www.weho.org/home/showpublisheddocument/65993/639226503475030000"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Tatyana \"Tanya\" Tsikanovsky",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Non-Profit Executive. Her official statement says she founded her high school's first Gay-Straight Alliance.",
+    "own_words": [
+     {
+      "text": "Public safety must be our highest priority.",
+      "is_quote": true,
+      "source": "https://www.weho.org/home/showpublisheddocument/65989/639226503122570000"
+     },
+     {
+      "text": "invest in bringing back our vibrant business community by cutting the red tape",
+      "is_quote": true,
+      "source": "https://www.weho.org/home/showpublisheddocument/65989/639226503122570000"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "City of West Hollywood: election information (three seats, candidate statements, drop boxes, vote centers)",
+    "url": "https://www.weho.org/city-government/city-clerk/election-information"
+   },
+   {
+    "name": "City of West Hollywood: notice of nominees (ballot order, posted Aug 19, 2026)",
+    "url": "https://www.weho.org/home/showpublisheddocument/66013/639227456423830000"
+   },
+   {
+    "name": "City of West Hollywood: candidate ballot designations",
+    "url": "https://www.weho.org/home/showpublisheddocument/65999/639226504081000000"
+   },
+   {
+    "name": "City of West Hollywood: notice of election (three seats, four-year terms)",
+    "url": "https://www.weho.org/home/showpublisheddocument/65590/639185798006870000"
+   },
+   {
+    "name": "City of West Hollywood: nomination period (elected at large; council picks the mayor each year)",
+    "url": "https://www.weho.org/Home/Components/News/News/12206/"
+   },
+   {
+    "name": "California Secretary of State: randomized alphabet for Nov 3, 2026",
+    "url": "https://www.sos.ca.gov/administration/news-releases-and-advisories/2026-news-releases-and-advisories/california-secretary-state-shirley-n-weber-phd-announces-results-randomized-alphabet-drawing-november-3-2026-general-election"
+   },
+   {
+    "name": "Beverly Press: West Hollywood City Council election comes into focus (Heilman and Meister term-limited)",
+    "url": "https://beverlypress.com/2026/07/west-hollywood-city-council-election-comes-into-focus/"
+   }
+  ],
+  "confidence": "verified"
+ }
+]

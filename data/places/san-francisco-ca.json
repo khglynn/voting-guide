@@ -155,6 +155,15 @@
     "election_day": "https://sfelections.org/tools/map_poll_time/",
     "drop_box": "https://www.google.com/maps/d/viewer?mid=1LiRzGpYK1HVoJ1yB7lV_WzmPQ1I3yWg&ll=37.75034430815189%2C-122.46331686821289&z=12"
   },
+  "mail_ballot": {
+    "request_deadline": {
+      "date": "2026-10-27",
+      "rule": "You don't need to ask for a ballot: every voter gets one in the mail. San Francisco's last day to ask for a replacement by mail was Tuesday, October 27 (7 days before Election Day). You can now get a replacement at the City Hall Voting Center, in front of Room 48, or at your polling place on Election Day. You can also vote in person.",
+      "source": "https://www.sf.gov/vote-by-mail"
+    },
+    "source": "https://www.sf.gov/vote-by-mail",
+    "confidence": "verified"
+  },
   "situations": [
     {
       "id": "no_mail_ballot_or_lost",

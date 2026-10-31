@@ -4108,5 +4108,25 @@
     "url": "https://equalitytexas.org/endorsements/",
     "date": null,
     "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-right-to-life-pac",
+    "target_id": "tx-5th-coa-place-6",
+    "status": "endorsed",
+    "choice": "Ben Smith",
+    "why": "Listed under Misc. Local Races on the PAC's 2026 general election endorsement page, for \"5th Court of Appeals Pl. 6 (Includes Collin, Dallas, Grayson, Hunt, Kaufman, and Rockwall Counties).\"",
+    "url": "https://texasrighttolifepac.com/2026-general-election-endorsements/",
+    "date": "2026-10-30",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texans-for-lawsuit-reform",
+    "target_id": "tx-5th-coa-place-3",
+    "status": "endorsed",
+    "choice": "Matthew Kolodoski",
+    "why": "Listed on TLRPAC's judicial endorsements page, which it says \"will be updated throughout the election cycle.\" The page doesn't date its picks.",
+    "url": "https://tlrpac.org/judicial-endorsements/",
+    "date": "2026-10-21",
+    "confidence": "sourced"
   }
 ]

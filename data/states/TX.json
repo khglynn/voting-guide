@@ -8,7 +8,7 @@
   },
   "sample_ballot_url": "https://content.govdelivery.com/attachments/TXSOS/2026/08/28/file_attachments/3762824/2026%20Sample%20Ballot-final.pdf",
   "voting_model": "in_person_first",
-  "model_plain": "Most Texans vote in person, either during early voting (Oct. 19 to 30) or on Election Day (Nov. 3). Mail ballots are only for people who qualify: 65 or older, sick or disabled, out of the county, expecting a baby, or in jail.",
+  "model_plain": "Most Texans vote in person, either during early voting (Oct. 19 to 30, now over) or on Election Day (Nov. 3). Mail ballots are only for people who qualify: 65 or older, sick or disabled, out of the county, expecting a baby, or in jail.",
   "registration": {
     "check_url": "https://goelect.txelections.civixapps.com/ivis-mvp-ui/#/login",
     "register_url": "https://vote.gov/register/texas",
@@ -39,7 +39,7 @@
     "confidence": "verified"
   },
   "mail_ballot": {
-    "who_gets_one": "You must apply, and you must qualify. Texas allows voting by mail only if you: are 65 or older on Election Day; are sick or have a disability that keeps you from going to the polls without help or risk to your health; expect to give birth within three weeks before or after Election Day; will be out of your county during all of early voting and on Election Day; or are confined in jail but otherwise eligible. Nobody is mailed a ballot automatically. If you're 65+ or have a disability you can file one 'annual' application that covers every election in the calendar year.",
+    "who_gets_one": "You must apply, and you must qualify. For this election, applications had to arrive by Oct 23, so it's too late to apply now. Texas allows voting by mail only if you: are 65 or older on Election Day; are sick or have a disability that keeps you from going to the polls without help or risk to your health; expect to give birth within three weeks before or after Election Day; will be out of your county during all of early voting and on Election Day; or are confined in jail but otherwise eligible. Nobody is mailed a ballot automatically. If you're 65+ or have a disability you can file one 'annual' application that covers every election in the calendar year.",
     "request_deadline": {
       "date": "2026-10-23",
       "rule": "Your application must be received (not postmarked) by your county's Early Voting Clerk by Friday, October 23, 2026. Get the form (6-1f) at VoteTexas.gov or from your county. You can submit it by mail, in person, by fax or by email as a signed scanned attachment, but if you fax or email it the signed original must arrive by mail within 4 business days. The application must include your Texas driver license, personal ID or Election Identification Certificate number (NOT your VUID), or if you have none of those, the last 4 digits of your Social Security number. Send it to the Early Voting Clerk in the county where you're registered.",
@@ -253,7 +253,7 @@
           "url": "https://www.votetexas.gov/voting/where.html"
         }
       ],
-      "answer": "Texas only mails ballots to voters who applied and qualified. If yours never came or got lost, you can vote in person instead, or cancel it in writing and apply for a new one.",
+      "answer": "Texas only mails ballots to voters who applied and qualified. If yours never came or got lost, it's too late to apply for a new one: applications had to arrive by Oct 23. You can still vote in person on Election Day, Nov 3.",
       "steps": [
         "Check the Ballot by Mail Tracker to see whether it was mailed.",
         "To vote in person, sign a cancellation form at the polls. Without the ballot to hand in, you vote a provisional ballot, counted once the county confirms your mail ballot wasn't returned.",
@@ -700,7 +700,7 @@
     {
       "path": "situations.away_on_election_day.steps.0",
       "from": "2026-10-31",
-      "text": "Check your county's Election Day polling places (Dallas, Harris, Bexar, Travis, Williamson and Hays each post their own)."
+      "text": "Check your county's Election Day polling places (Dallas, Harris, Bexar, Travis, Williamson, Hays and Collin each post their own)."
     },
     {
       "path": "situations.away_on_election_day.actions.0.label",

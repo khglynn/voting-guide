@@ -18,7 +18,7 @@
     "78666",
     "78667"
   ],
-  "zip_caveats": "78666 is mostly Hays County but reaches into Caldwell and Guadalupe counties; voters there get a different county ballot. Texas State students registered at campus addresses vote in Hays County. Congress after the 2025 redraw: San Marcos is in CD-21 (Teixeira vs. Hook); the Labor Council lists Kyle under CD-27. Texas Legislature: the Texas Legislative Council's district reports put all of the City of San Marcos (and all of Kyle) in House District 45 (Zwiener vs. Moreno) and Senate District 21 (Zaffirini vs. Dahlberg). House District 73 (Isaac vs. Fox) covers western Hays County (Wimberley, Woodcreek, Dripping Springs); it is listed only for rural addresses outside the city, so most San Marcos voters should pick HD-45. Four San Marcos residents live in the Caldwell County part, which is House District 17 (not in this guide). Senate District 25, which covers western Hays and part of Buda, has no race this year. San Marcos city races (mayor; council Places 3, 4, 6) and Kyle (mayor; Districts 2 and 4) are nonpartisan. Buda elects an at-large seat and District B.",
+  "zip_caveats": "78666 is mostly Hays County but reaches into Caldwell and Guadalupe counties; voters there get a different county ballot. Texas State students registered at campus addresses vote in Hays County. Congress after the 2025 redraw: San Marcos is in CD-21 (Teixeira vs. Hook); the Labor Council lists Kyle under CD-27. Texas Legislature: the Texas Legislative Council's district reports put all of the City of San Marcos (and all of Kyle) in House District 45 (Zwiener vs. Moreno) and Senate District 21 (Zaffirini vs. Dahlberg). House District 73 (Isaac vs. Fox) covers western Hays County (Wimberley, Woodcreek, Dripping Springs); it is listed only for rural addresses outside the city, so most San Marcos voters should pick HD-45. Four San Marcos residents live in the Caldwell County part, which is House District 17 (not in this guide). Senate District 25, which covers western Hays and part of Buda, has no race this year. San Marcos city races (mayor; council Places 3, 4, 6) and Kyle (mayor; Districts 2 and 4) are nonpartisan. Part of Kyle uses ZIP 78666 too: if you live inside Kyle city limits, you get Kyle's city races, not San Marcos's, and this guide lists only Kyle's mayor race. Buda elects an at-large seat and District B.",
   "contest_ids": [
     "tx-us-senate",
     "tx-governor",
@@ -180,6 +180,10 @@
     {
       "name": "Hays County: vote centers (PDF)",
       "url": "https://www.hayscountytx.gov/DocumentCenter/View/5053/Vote-Centers-20261103-General-Election"
+    },
+    {
+      "name": "U.S. Census Bureau: 2020 ZIP code areas by city (part of Kyle is in ZIP 78666)",
+      "url": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_place20_natl.txt"
     }
   ]
 }

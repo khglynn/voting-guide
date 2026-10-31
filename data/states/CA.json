@@ -569,14 +569,14 @@
     }
   ],
   "judicial_review": {
-    "how_judges_get_here": "The governor appoints Supreme Court and appeals justices, subject to confirmation. You later vote yes or no on keeping them. Superior Court candidates compete in nonpartisan elections; the four Los Angeles races are runoffs.",
-    "who_reviews": "There is no official job review for appellate retention. The Los Angeles County Bar evaluates local Superior Court candidates through questionnaires, interviews and reference checks. Appointment screening of appellate nominees is a separate process.",
-    "what_the_rating_means": "The county bar’s scale is Exceptionally Well Qualified, Well Qualified, Qualified and Not Qualified. These tiers assess qualifications for the job. None of the eight Los Angeles runoff candidates received the highest or lowest tier.",
+    "how_judges_get_here": "The governor appoints Supreme Court and appeals justices, subject to confirmation. You later vote yes or no on keeping them. Superior Court candidates compete in nonpartisan elections. This fall, Los Angeles County has four Superior Court runoffs; San Diego, San Francisco and Orange County have none.",
+    "who_reviews": "There is no official job review for appellate retention. The Los Angeles County Bar evaluates Los Angeles Superior Court candidates through questionnaires, interviews and reference checks. The San Diego County Bar rated candidates only for the June primary. Appointment screening of appellate nominees is a separate process.",
+    "what_the_rating_means": "In Los Angeles County, the county bar’s scale is Exceptionally Well Qualified, Well Qualified, Qualified and Not Qualified. These tiers assess qualifications for the job. None of the eight Los Angeles runoff candidates received the highest or lowest tier.",
     "what_it_doesnt_mean": "A county bar qualification rating is not an endorsement. A nominee’s appointment screening is not a current review for retention. We show no evaluations for appellate retention.",
     "to_keep_a_judge": "More yes than no votes keeps an appellate justice. For a Superior Court runoff, choose a candidate; the one with the most votes wins.",
     "history": "In 1986, voters rejected Supreme Court Chief Justice Rose Bird and Justices Cruz Reynoso and Joseph Grodin in retention elections.",
     "read_one": {
-      "label": "Read the county bar’s full 2026 evaluation report",
+      "label": "Read the Los Angeles County Bar’s full 2026 evaluation report",
       "url": "https://lacba.org/JEEC2026"
     },
     "sources": [
@@ -587,6 +587,10 @@
       {
         "name": "Los Angeles County Bar: November runoff ratings",
         "url": "https://lacba.org/docDownload/3141411"
+      },
+      {
+        "name": "San Diego County Bar: judicial evaluations (2026 primary only)",
+        "url": "https://www.sdcba.org/?pg=JudicialEvaluations"
       },
       {
         "name": "California courts: appellate retention",

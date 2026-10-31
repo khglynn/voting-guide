@@ -5441,7 +5441,7 @@
     "level": "city",
     "office": "Mayor of Kyle",
     "district": null,
-    "scope_plain": "City of Kyle voters only. Kyle is a separate city north of San Marcos, so San Marcos voters do not see this race.",
+    "scope_plain": "Only voters who live inside Kyle city limits. Kyle is the next city north of San Marcos, and part of Kyle uses the 78666 ZIP code, so a 78666 address can be in Kyle. If you live in San Marcos, this race isn't on your ballot.",
     "office_explainer": "Leads the seven-member council that sets Kyle's budget, tax rate and local laws.",
     "why_it_matters": "Incumbent Yvonne Flores-Cale faces two challengers. Kyle also elects council Districts 2 and 4.",
     "vote_for": 1,
@@ -5524,6 +5524,10 @@
       {
         "name": "City of Kyle 2026 election page",
         "url": "https://www.cityofkyle.gov/city-hall/elections/2026-election/"
+      },
+      {
+        "name": "U.S. Census Bureau: 2020 ZIP code areas by city (about a quarter of Kyle's land is in ZIP 78666)",
+        "url": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_place20_natl.txt"
       }
     ],
     "confidence": "verified"

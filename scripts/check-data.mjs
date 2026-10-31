@@ -139,7 +139,7 @@ for (const s of all.states) {
   const es = d(e.start, 'early voting start'), ee = d(e.end, 'early voting end');
   if (es && ee && es > ee) err('date-order', `${st}: early voting starts ${es}, ends ${ee}`);
   const el = d(e.latest_end, 'early voting latest county day');
-  if (el && !(e.counties_vary === 'minimum' && ee && ee < el && el < ELECTION)) err('date-order', `${st}: early voting's latest county day ${el} needs counties_vary "minimum", a date after its end ${ee} and before Election Day`);
+  if (el && !(e.counties_vary === 'minimum' && ee && ee < el && el < ELECTION)) err('date-order', `${st}: early voting's latest county day ${el} needs counties_vary "minimum", an early voting end before it${ee ? ` (it ends ${ee})` : ''} and to come before Election Day`);
   if (e.available === true && !es) warn('early-voting-no-start', `${st}: early voting is available but has no start date`);
   if (s.last_verified) {
     if (!isoOk(s.last_verified) || s.last_verified > TODAY) err('date-last-verified', `${st} last_verified "${s.last_verified}"`);

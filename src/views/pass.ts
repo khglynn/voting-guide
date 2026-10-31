@@ -117,7 +117,7 @@ export function messages(): { fam: string | null; pub: string | null } {
         : vary === 'minimum' ? `Every ${b.stateName} county offers early voting ${span}. Some counties start earlier or finish later; check yours.`
         : vary === 'varies' ? `Early voting dates vary by county and run through ${fmtDate(ep.end)}; check yours.`
         : `Early voting runs ${span}.`);
-    } else if (!own && vary === 'minimum' && sh.early_in_person.latest_end && sh.early_in_person.latest_end >= todayISO()) {
+    } else if (!own && vary === 'minimum' && sh.early_in_person.available && sh.early_in_person.latest_end && sh.early_in_person.latest_end >= todayISO()) {
       // Past the window every county offers, some still vote early (Florida's Nov 1), as the plan says.
       dates.push(`Some ${b.stateName} counties offer early voting through ${fmtDate(sh.early_in_person.latest_end)}; check yours.`);
     }

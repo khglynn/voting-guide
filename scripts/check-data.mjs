@@ -87,6 +87,7 @@ const BUILD_WARNINGS = [
   [/is ranked choice with no usable rank_up_to; using /, 'build-rank-guessed'],
   [/is missing yes_means or no_means/, 'measure-means'],
   [/: short is not one plain line; dropped it|: actions is not a list; dropped it|: an action needs a label and an http\(s\) URL; dropped it|: more than 2 actions; dropped the rest|: a gotcha has no text; dropped it|: registration\.register_url(_source)? is not an http\(s\) URL; dropped it|: sample_ballot_url is not an http\(s\) URL; dropped it/, 'build-dropped-help'],
+  [/: early_in_person\.latest_end needs .*; dropped it/, 'date-order'],
 ];
 const reportFile = path.join(ROOT, 'public', 'data', 'build-report.json');
 const BUNDLES = path.join(ROOT, 'public', 'data');
@@ -137,6 +138,8 @@ for (const s of all.states) {
   const e = s.early_in_person || {};
   const es = d(e.start, 'early voting start'), ee = d(e.end, 'early voting end');
   if (es && ee && es > ee) err('date-order', `${st}: early voting starts ${es}, ends ${ee}`);
+  const el = d(e.latest_end, 'early voting latest county day');
+  if (el && !(e.counties_vary === 'minimum' && ee && ee < el && el < ELECTION)) err('date-order', `${st}: early voting's latest county day ${el} needs counties_vary "minimum", a date after its end ${ee} and before Election Day`);
   if (e.available === true && !es) warn('early-voting-no-start', `${st}: early voting is available but has no start date`);
   if (s.last_verified) {
     if (!isoOk(s.last_verified) || s.last_verified > TODAY) err('date-last-verified', `${st} last_verified "${s.last_verified}"`);

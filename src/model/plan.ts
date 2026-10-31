@@ -207,10 +207,11 @@ function placeHowto(h0: HowTo, places: PlaceBundle[], county: string | null): Ho
   if (eps.some((e) => e!.start !== first.start || e!.end !== first.end)) return h;
   const notes = [...new Set(eps.map((e) => e!.hours_note).filter((n): n is string => !!n))];
   const pages = [...new Set(eps.map((e) => e!.lookup_url))];
+  // The place's own window is its county's real dates, so the state's latest possible county day goes with the state's window.
   return {
     ...h,
     early_in_person: {
-      ...h.early_in_person, available: true, start: first.start, end: first.end,
+      ...h.early_in_person, available: true, start: first.start, end: first.end, latest_end: null,
       hours_note: notes.length ? notes.join(' ') : h.early_in_person.hours_note,
       lookup_url: le || (pages.length === 1 && pages[0] ? pages[0] : h.early_in_person.lookup_url),
     },
@@ -302,12 +303,18 @@ export function nextStep(h: HowTo, t = todayISO(), absolute = false, now: number
       sub: [ep.end ? `It runs through ${fmtDate(ep.end)}.` : '', /counties may add days|some counties open earlier/i.test(ep.hours_note || '') ? 'Some counties open sooner. Check yours.' : '', ...sub].filter(Boolean), primary: look ? { label: 'Find early voting places', url: look, look: lookKind } : null,
     };
   }
-  if (ep.available && ep.start && ep.end && t <= ep.end) {
-    const head: Part[] = absolute ? [['Early voting is open through ', false], [fmtDate(ep.end), true], ['.', false]]
-      : t === ep.start ? [['Early voting starts today, ', false], [dayNoWeek(ep.start), true], ['.', false]]
-        : t === ep.end ? [['Today is the last day of early voting.', false]]
-          : [['Early voting is open through ', false], [fmtDate(ep.end), true], ['.', false]];
-    return { phase: 'early_open', head, sub: [...sub, `Or vote on Election Day, ${fmtDate(h.election_date)}, until ${close}.`], primary: look ? { label: 'Find early voting places', url: look, look: lookKind } : null };
+  // A window that is only a minimum (statewide Florida's ends Oct 31) runs on in some counties to its last possible
+  // county day (Nov 1, when Orange and Leon still vote early): the other end of "Some counties open sooner". Until
+  // that day the step stays early voting, its button the state's early voting page, as the state's dated notes do.
+  const later = ep.available && ep.end && ep.latest_end && ep.latest_end > ep.end ? ep.latest_end : null;
+  if (ep.available && ep.start && ep.end && t <= (later || ep.end)) {
+    const head: Part[] = t > ep.end ? (absolute ? [['Some counties offer early voting through ', false], [fmtDate(later || ep.end), true], ['.', false]] : [['Some counties still offer early voting today.', false]])
+      : absolute ? [['Early voting is open through ', false], [fmtDate(ep.end), true], ['.', false]]
+        : t === ep.start ? [['Early voting starts today, ', false], [dayNoWeek(ep.start), true], ['.', false]]
+          : t === ep.end ? [[later ? 'Early voting ends today in some counties.' : 'Today is the last day of early voting.', false]]
+            : [['Early voting is open through ', false], [fmtDate(ep.end), true], ['.', false]];
+    const more = !later ? [] : t > ep.end ? ['Check whether yours does.'] : [`${t === ep.end && !absolute ? 'Others stay' : 'Some counties stay'} open through ${fmtDate(later)}. Check yours.`];
+    return { phase: 'early_open', head, sub: [...more, ...sub, `Or vote on Election Day, ${fmtDate(h.election_date)}, until ${close}.`], primary: look ? { label: 'Find early voting places', url: look, look: lookKind } : null };
   }
   return {
     phase: 'election_day_next',

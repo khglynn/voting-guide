@@ -64,7 +64,7 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "Ballot designation: Parent. A paralegal and former preschool teacher whose child is a special education student at Horace Mann Elementary; she has served as a room parent and on the PTA executive board.",
+    "background": "Ballot designation: Parent. A former paralegal and preschool teacher whose child is a special education student at Horace Mann Elementary; she has served as a room parent and on the PTA executive board.",
     "own_words": [
      {
       "text": "it’s time for BHUSD to get back to school",
@@ -106,8 +106,8 @@
     "name": "Judith Manouchehri",
     "party": null,
     "incumbent": true,
-    "website": null,
-    "website_confidence": "unverified",
+    "website": "https://judyforbhusd.com/",
+    "website_confidence": "verified",
     "background": "Ballot designation: School Board President. The board's president, finishing her first term; she graduated from district schools and has three children in them.",
     "own_words": [
      {
@@ -153,6 +153,14 @@
    {
     "name": "Beverly Press: BHUSD candidates make case to students at district forum (Oct 7, 2026)",
     "url": "https://beverlypress.com/2026/10/bhusd-candidates-make-case-to-students-at-district-forum/"
+   },
+   {
+    "name": "Beverly Press: Lifschitz calls for stronger governance, accountability in Beverly Hills schools (Oct 7, 2026)",
+    "url": "https://beverlypress.com/2026/10/lifschitz-calls-for-stronger-governance-accountability/"
+   },
+   {
+    "name": "Judy Manouchehri for Beverly Hills School Board 2026 (her campaign site)",
+    "url": "https://judyforbhusd.com/"
    }
   ],
   "confidence": "sourced"

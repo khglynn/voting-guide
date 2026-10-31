@@ -1,0 +1,77 @@
+[
+ {
+  "id": "pasadena-pccd-measure-up",
+  "state": "CA",
+  "level": "school",
+  "jurisdiction": "Pasadena Area Community College District: all of Pasadena, plus Altadena, Sierra Madre, Arcadia, South Pasadena, San Marino, Temple City, Rosemead, La Cañada Flintridge and some of San Gabriel and El Monte",
+  "number": "Measure UP",
+  "official_title": "Pasadena City College Measure Preserving Affordable Higher Education/Career Training Without Increasing Tax Rates. To construct/equip classrooms/career training facilities to prepare students for careers in nursing/healthcare, firefighting/EMS, construction, hospitality, and skilled trades; fix deteriorating roofs, plumbing/electrical systems, shall Pasadena Area Community College District's measure be adopted authorizing $485,000,000 in bonds at legal rates, without exceeding the current $9 per $100,000 assessed value (no increase), providing $27,000,000 annually while bonds are outstanding, with independent oversight/local control?",
+  "short_title": "Pasadena City College bond, $485M",
+  "plain_summary": "Lets Pasadena City College borrow $485 million by selling bonds, paid back from property taxes, to build and equip career training classrooms (nursing, firefighting, construction, skilled trades) and fix old roofs, plumbing and wiring. The college says the tax rate stays at today's $9 per $100,000 of assessed value because an older bond is almost paid off. Everyone in the college district votes on it, not just Pasadena.",
+  "yes_means": "PCC can sell up to $485 million in bonds for repairs and new career training space, and property owners keep paying about $9 per $100,000 of assessed value until the bonds are repaid.",
+  "no_means": "PCC can't sell these bonds; the college says the $9 rate for its 2002 bond would end once that bond is paid off.",
+  "current_law": "Property owners in the district already pay for PCC's past bonds. The college says 2002's Measure P, taxed at $9 per $100,000 of assessed value, will soon be paid off. Voters also approved a $565 million PCC bond, Measure PCC, in 2022.",
+  "fiscal_impact": "Up to $485 million in bonds, raising about $27 million a year while they're outstanding, at no more than the current $9 per $100,000 of assessed (not market) value. An independent oversight committee, yearly audits and public spending reports are required, and the money can only be spent on PCC facilities.",
+  "pass_threshold": "55% (school bond under Prop 39)",
+  "referred_by": "other",
+  "confusing_wording_note": "\"Without increasing tax rates\" means the rate stays where it is now. It is still new borrowing: yes keeps a property tax going that would otherwise end when the old bond is paid off.",
+  "supporters_case": {
+   "text": "PCC says many of its classrooms are 60 to 90 years old and don't meet earthquake or disability-access codes, with failing pipes underground, and that the money would train the nurses, firefighters and construction workers the region needs, including for the Eaton fire rebuild.",
+   "source": "https://pasadena.edu/business-administrative-services/facilities-and-construction/bond-extension.php"
+  },
+  "opponents_case": {
+   "text": "No official argument against Measure UP was filed, the Cal State LA University Times reported, and we found no organized campaign against it. The paper notes some say the tax money could go to other services or back to taxpayers.",
+   "source": "https://csulauniversitytimes.com/measure-up-should-some-property-taxes-for-residents-in-the-pasadena-community-college-district-continue-supporting-building-and-other-improvements-at-pcc/"
+  },
+  "official_text_url": "https://content.lavote.gov/docs/rrcc/documents/measures-appearing-on-the-ballot---november-3-2026-rev-8-14-2026-v-4.pdf",
+  "official_guide_url": "https://pasadena.edu/business-administrative-services/facilities-and-construction/bond-extension.php",
+  "explainers": [
+   {
+    "source": "LAist",
+    "title": "Pasadena Area Community College District Board of Trustees (with Measure UP)",
+    "url": "https://laist.com/news/politics/voter-guides/2026-election-california-pasadena-community-college-board"
+   },
+   {
+    "source": "Cal State LA University Times",
+    "title": "Measure UP: Should some property taxes for residents in the Pasadena Community College district continue supporting building and other improvements at PCC?",
+    "url": "https://csulauniversitytimes.com/measure-up-should-some-property-taxes-for-residents-in-the-pasadena-community-college-district-continue-supporting-building-and-other-improvements-at-pcc/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "pasadena-measure-pfd",
+  "state": "CA",
+  "level": "city",
+  "jurisdiction": "City of Pasadena",
+  "number": "Measure PFD",
+  "official_title": "City of Pasadena 911 Firefighter/Paramedic Emergency Medical/Wildfire Preparedness/Response Measure. To help maintain fire, paramedic, 911 response; prepare for/respond to wildfires/earthquakes/medical emergencies; recruit/retain well-trained firefighters; maintain lifesaving equipment/fire alert communication; shall City of Pasadena's measure annually levy 19¢ per square foot of improved property, with low-income senior exemption, providing approximately $22,100,000 annually, expiring after 14 years, requiring accountability, independent audits, oversight, public spending disclosure; all funds must be used to support local fire protection/emergency medical response services, be adopted?",
+  "short_title": "Fire department parcel tax",
+  "plain_summary": "A new yearly tax on Pasadena property with a building on it: 19 cents per square foot of building space, for 14 years. It raises about $22.1 million a year for the Pasadena Fire Department only: rebuilding Fire Stations 33 and 37, a new fire station and training center, more staff and equipment, and wildfire brush clearance.",
+  "yes_means": "Pasadena adds the tax, about $304 a year for a 1,600-square-foot home, and the money goes only to the Fire Department for 14 years.",
+  "no_means": "No new tax; the city keeps paying for fire and paramedic service from the money it already has.",
+  "current_law": "The Fire Department is paid for from the city's general fund. The city says it has balanced recent budgets with one-time money and reserves and can't pay for new or rebuilt stations from what it has.",
+  "fiscal_impact": "About $22.1 million a year for 14 years, with no yearly increase. Owners with very low household incomes don't pay, nor do owners who get the city's senior or disability break on the utility users tax; government, religious and qualifying nonprofit property is exempt. Yearly independent audits and public reports are required. City staff estimated putting it on the ballot cost about $436,660.",
+  "pass_threshold": "two-thirds of votes cast (special tax)",
+  "referred_by": "council",
+  "confusing_wording_note": "\"Improved property\" means land with a building on it. The tax is figured on building square footage, not on land size or property value, so a big house pays more than a small one whatever either is worth.",
+  "supporters_case": {
+   "text": "Supporters say aging stations need rebuilding, including Stations 33 and 37, which the Fire Department rates in poor condition and which could be unsafe in an earthquake; that it would speed emergency response and wildfire prevention; and that it costs less than fire damage and higher insurance.",
+   "source": "https://laist.com/news/politics/voter-guides/2026-election-california-general-pasadena-measure-pfd-property-tax-fire-department"
+  },
+  "opponents_case": {
+   "text": "Opponents say the city should pay for the Fire Department through its regular budget or explain why it can't, that a tax on property owners alone is unfair for a service everyone uses, and that landlords with rent-controlled units can't pass the cost on.",
+   "source": "https://laist.com/news/politics/voter-guides/2026-election-california-general-pasadena-measure-pfd-property-tax-fire-department"
+  },
+  "official_text_url": "https://www.cityofpasadena.net/city-clerk/wp-content/uploads/sites/21/2026-General-Election-Ballot-Measure-Information.pdf",
+  "official_guide_url": "https://www.cityofpasadena.net/fire/wp-content/uploads/sites/25/Measure-PFD-City-Attorney-Impartial-Analysis.pdf",
+  "explainers": [
+   {
+    "source": "LAist",
+    "title": "City of Pasadena Measure PFD: What to know about the tax to support the Fire Department",
+    "url": "https://laist.com/news/politics/voter-guides/2026-election-california-general-pasadena-measure-pfd-property-tax-fire-department"
+   }
+  ],
+  "confidence": "verified"
+ }
+]

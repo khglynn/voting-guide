@@ -51,7 +51,7 @@
   "name": "San Diego & Imperial Counties Labor Council, AFL-CIO",
   "type": "labor",
   "lean": "lean_left",
-  "lean_basis": "Labor federation with no AllSides or Ad Fontes rating, so it is labeled lean_left under this guide's rule for unions. Its stated mission (About page, https://www.unionyes.org/about): its members \"improve the lives of all working people by standing together and fighting for each other.\"",
+  "lean_basis": "Labor federation with no AllSides or Ad Fontes rating; lean reflects its stated mission. Its About page (https://www.unionyes.org/about) says its members \"improve the lives of all working people by standing together and fighting for each other.\"",
   "geography": [
    "san-diego-ca"
   ],
@@ -81,8 +81,8 @@
   "id": "sd-regional-chamber",
   "name": "San Diego Regional Chamber of Commerce",
   "type": "business",
-  "lean": null,
-  "lean_basis": "Chamber of commerce with no AllSides or Ad Fontes rating. Its About page (sdchamber.org) blocked our reader, so its mission is not quoted here. Not rated: with no stated mission and no outside rating available, no position on the political scale is shown.",
+  "lean": "lean_right",
+  "lean_basis": "Regional chamber of commerce that says it 'fights for its members and all the region's businesses by supporting pro-business policies and candidates' (https://sdchamber.org/). No outside rating found; lean reflects its stated mission.",
   "geography": [
    "san-diego-ca"
   ],

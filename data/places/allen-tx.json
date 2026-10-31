@@ -126,7 +126,7 @@
   ],
   "lookups": {
     "early_in_person": "https://www.collincountytx.gov/elections/polling-locations",
-    "election_day": "https://www.collincountytx.gov/elections/polling-locations"
+    "election_day": "https://www.collincountytx.gov/Elections/polling-locations?electionId=75&scheduleType=ed&electionDesc=November%203,%202026%20Uniform%20Election"
   },
   "early_in_person": {
     "start": "2026-10-19",

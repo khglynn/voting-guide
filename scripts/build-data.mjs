@@ -370,8 +370,9 @@ function partyList(p) {
   return p.split(/\s*,\s*|\s*\/\s*/).map((x) => x.trim()).filter(Boolean)
     .map((x) => (/^democrat(ic)?$/i.test(x) ? 'Democratic' : /^republican$/i.test(x) ? 'Republican' : x));
 }
+const fullCand = (name) => name.split(' / ')[0].replace(/\s*\(.*?\)\s*/g, ' ').trim();
 function shortCand(name) {
-  const first = name.split(' / ')[0].replace(/\s*\(.*?\)\s*/g, ' ').trim();
+  const first = fullCand(name);
   const parts = first.replace(/,/g, '').split(/\s+/).filter((p) => !/^(jr\.?|sr\.?|ii|iii|iv)$/i.test(p));
   return parts.length ? parts[parts.length - 1] : first;
 }
@@ -409,6 +410,10 @@ function normContest(c, file) {
       }),
     });
   }
+  // Two candidates with one last name (Kyle and Kristen Hawkins, Texas Supreme Court Place 7) would both
+  // read "Hawkins" in the pick, the table head and the screen-reader text: those two get their full names.
+  const shorts = cands.map((k) => k.short);
+  for (const k of cands) if (shorts.filter((s) => s === k.short).length > 1) k.short = fullCand(k.name);
   const scope = str(c.scope_plain) || '';
   const voteFor = Number.isInteger(c.vote_for) && c.vote_for > 0 ? c.vote_for : 1;
   // Ranked choice only when the research says so, with the ballot's own "rank up to" number.

@@ -233,6 +233,15 @@ function roundTrip(name, stCode, places, mutate) {
   check('normalizeRanks: unknown names drop out', !b.ranks['multnomah-chair']);
 }
 
+/* ---------- 3b. two candidates with one last name ---------- */
+{
+  const c = read('state-TX.json').items.find((x) => x.id === 'tx-supreme-court-place-7');
+  check('candidates: the two Hawkinses in one race each show a full name', !!c && c.candidates.map((k) => k.short).join() === 'Kyle Hawkins,Kristen Hawkins');
+  const dupes = fs.readdirSync(DATA).filter((f) => /^(state|place)-.*\.json$/.test(f)).flatMap((f) => (read(f).items || [])
+    .filter((x) => x.kind === 'contest' && new Set(x.candidates.map((k) => k.short)).size < x.candidates.length).map((x) => `${f} ${x.id}`));
+  check('candidates: no race shows two candidates under one short name', dupes.length === 0, dupes.join(', '));
+}
+
 /* ---------- 4. districts ---------- */
 {
   const ballot = open('TX', ['austin-tx']);

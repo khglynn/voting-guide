@@ -2752,11 +2752,11 @@
   {
     "endorser_id": "texas-right-to-life-pac",
     "target_id": "tx-land-commissioner",
-    "status": "no_position",
-    "choice": null,
-    "why": "Not listed on the PAC's 2026 general election endorsement page.",
+    "status": "endorsed",
+    "choice": "Dawn Buckingham",
+    "why": "Listed on the PAC's 2026 general election endorsement page: \"Land Commissioner – Dawn Buckingham.\"",
     "url": "https://texasrighttolifepac.com/2026-general-election-endorsements/",
-    "date": "2026-10-06",
+    "date": "2026-10-30",
     "confidence": "verified"
   },
   {
@@ -3064,9 +3064,9 @@
     "target_id": "tx-us-senate",
     "status": "endorsed",
     "choice": "Ken Paxton",
-    "why": "Listed on the group's November 3, 2026 endorsement page.",
+    "why": "The group's endorsement page says \"We recommend Ken Paxton.\" It keeps the word endorsement \"for candidates who meet our standards at the highest level.\"",
     "url": "https://txvaluesaction.org/endorsements/",
-    "date": "2026-10-12",
+    "date": "2026-10-30",
     "confidence": "verified"
   },
   {
@@ -3122,11 +3122,11 @@
   {
     "endorser_id": "texas-values-action",
     "target_id": "tx-agriculture-commissioner",
-    "status": "no_position",
-    "choice": null,
-    "why": "Not listed on the group's endorsement page.",
+    "status": "endorsed",
+    "choice": "Nate Sheets",
+    "why": "Listed on the group's endorsement page (last updated Oct 18): \"Ag Commissioner – Nate Sheets.\"",
     "url": "https://txvaluesaction.org/endorsements/",
-    "date": "2026-10-12",
+    "date": "2026-10-30",
     "confidence": "verified"
   },
   {
@@ -3192,21 +3192,21 @@
   {
     "endorser_id": "texas-values-action",
     "target_id": "tx-cca-place-4",
-    "status": "no_position",
-    "choice": null,
-    "why": "Not listed on the group's endorsement page.",
+    "status": "endorsed",
+    "choice": "Kevin Patrick Yeary",
+    "why": "Listed on the group's endorsement page (last updated Oct 18): \"Judge, Court Of Criminal Appeals, Place 4 – Kevin Yeary.\"",
     "url": "https://txvaluesaction.org/endorsements/",
-    "date": "2026-10-12",
+    "date": "2026-10-30",
     "confidence": "verified"
   },
   {
     "endorser_id": "texas-values-action",
     "target_id": "tx-cca-place-9",
-    "status": "no_position",
-    "choice": null,
-    "why": "Not listed on the group's endorsement page.",
+    "status": "endorsed",
+    "choice": "John Messinger",
+    "why": "Listed on the group's endorsement page (last updated Oct 18): \"Judge, Court Of Criminal Appeals, Place 9 – John Messinger.\"",
     "url": "https://txvaluesaction.org/endorsements/",
-    "date": "2026-10-12",
+    "date": "2026-10-30",
     "confidence": "verified"
   },
   {
@@ -4582,42 +4582,42 @@
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-supreme-court-chief",
-    "status": "not_found",
-    "choice": null,
-    "why": "No named November general-election slate found in accessible endorsement-page text or the press-release index on Oct 19, 2026. Earlier primary endorsements were not carried forward.",
-    "url": "https://tlrpac.org/endorsements/",
-    "date": "2026-10-19",
-    "confidence": "verified"
+    "status": "endorsed",
+    "choice": "Jimmy Blacklock",
+    "why": "Listed on TLRPAC's judicial endorsements page, which it says \"will be updated throughout the election cycle.\" The page doesn't date its picks.",
+    "url": "https://tlrpac.org/judicial-endorsements/",
+    "date": "2026-10-21",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-supreme-court-place-2",
-    "status": "not_found",
-    "choice": null,
-    "why": "No named November general-election slate found in accessible endorsement-page text or the press-release index on Oct 19, 2026. Earlier primary endorsements were not carried forward.",
-    "url": "https://tlrpac.org/endorsements/",
-    "date": "2026-10-19",
-    "confidence": "verified"
+    "status": "endorsed",
+    "choice": "James P. Sullivan",
+    "why": "Listed on TLRPAC's judicial endorsements page, which it says \"will be updated throughout the election cycle.\" The page doesn't date its picks.",
+    "url": "https://tlrpac.org/judicial-endorsements/",
+    "date": "2026-10-21",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-supreme-court-place-7",
-    "status": "not_found",
-    "choice": null,
-    "why": "No named November general-election slate found in accessible endorsement-page text or the press-release index on Oct 19, 2026. Earlier primary endorsements were not carried forward.",
-    "url": "https://tlrpac.org/endorsements/",
-    "date": "2026-10-19",
-    "confidence": "verified"
+    "status": "endorsed",
+    "choice": "Kyle Hawkins",
+    "why": "Listed on TLRPAC's judicial endorsements page, which labels his seat Place 3 and says the list \"will be updated throughout the election cycle.\" The page doesn't date its picks.",
+    "url": "https://tlrpac.org/judicial-endorsements/",
+    "date": "2026-10-21",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-supreme-court-place-8",
-    "status": "not_found",
-    "choice": null,
-    "why": "No named November general-election slate found in accessible endorsement-page text or the press-release index on Oct 19, 2026. Earlier primary endorsements were not carried forward.",
-    "url": "https://tlrpac.org/endorsements/",
-    "date": "2026-10-19",
-    "confidence": "verified"
+    "status": "endorsed",
+    "choice": "Brett Busby",
+    "why": "Listed on TLRPAC's judicial endorsements page, which it says \"will be updated throughout the election cycle.\" The page doesn't date its picks.",
+    "url": "https://tlrpac.org/judicial-endorsements/",
+    "date": "2026-10-21",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "texans-for-lawsuit-reform",
@@ -4652,32 +4652,32 @@
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-15th-coa-chief",
-    "status": "not_found",
-    "choice": null,
-    "why": "No named November general-election slate found in accessible endorsement-page text or the press-release index on Oct 19, 2026. Earlier primary endorsements were not carried forward.",
-    "url": "https://tlrpac.org/endorsements/",
-    "date": "2026-10-19",
-    "confidence": "verified"
+    "status": "endorsed",
+    "choice": "Scott Brister",
+    "why": "Listed on TLRPAC's judicial endorsements page, which it says \"will be updated throughout the election cycle.\" The page doesn't date its picks.",
+    "url": "https://tlrpac.org/judicial-endorsements/",
+    "date": "2026-10-21",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-15th-coa-place-2",
-    "status": "not_found",
-    "choice": null,
-    "why": "No named November general-election slate found in accessible endorsement-page text or the press-release index on Oct 19, 2026. Earlier primary endorsements were not carried forward.",
-    "url": "https://tlrpac.org/endorsements/",
-    "date": "2026-10-19",
-    "confidence": "verified"
+    "status": "endorsed",
+    "choice": "Scott K. Field",
+    "why": "Listed on TLRPAC's judicial endorsements page, which it says \"will be updated throughout the election cycle.\" The page doesn't date its picks.",
+    "url": "https://tlrpac.org/judicial-endorsements/",
+    "date": "2026-10-21",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-15th-coa-place-3",
-    "status": "not_found",
-    "choice": null,
-    "why": "No named November general-election slate found in accessible endorsement-page text or the press-release index on Oct 19, 2026. Earlier primary endorsements were not carried forward.",
-    "url": "https://tlrpac.org/endorsements/",
-    "date": "2026-10-19",
-    "confidence": "verified"
+    "status": "endorsed",
+    "choice": "April Farris",
+    "why": "Listed on TLRPAC's judicial endorsements page, which it says \"will be updated throughout the election cycle.\" The page doesn't date its picks.",
+    "url": "https://tlrpac.org/judicial-endorsements/",
+    "date": "2026-10-21",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "equality-texas",

@@ -84,9 +84,9 @@
   "target_id": "sd-county-measure-a",
   "status": "endorsed",
   "choice": "NO",
-  "why": "The board's list describes it as \"government restructuring, weakening term limits.\" Its editorial was not read.",
-  "url": "https://www.sandiegouniontribune.com/2026/10/02/the-u-t-editorial-boards-endorsements/",
-  "date": "2026-10-19",
+  "why": "Its Oct 8 editorial, \"Why we strongly oppose both county Measure A and Measure B,\" says \"San Diego County Measures A and B are built on deceit.\"",
+  "url": "https://www.sandiegouniontribune.com/2026/10/08/endorsement-why-we-strongly-oppose-both-county-measure-a-and-measure-b/",
+  "date": "2026-10-31",
   "confidence": "verified"
  },
  {
@@ -94,9 +94,9 @@
   "target_id": "sd-county-measure-b",
   "status": "endorsed",
   "choice": "NO",
-  "why": "The board's list describes it as a \"half-cent county sales tax increase.\" Its editorial was not read.",
-  "url": "https://www.sandiegouniontribune.com/2026/10/02/the-u-t-editorial-boards-endorsements/",
-  "date": "2026-10-19",
+  "why": "Its Oct 8 editorial, \"Why we strongly oppose both county Measure A and Measure B,\" says \"San Diego County Measures A and B are built on deceit.\"",
+  "url": "https://www.sandiegouniontribune.com/2026/10/08/endorsement-why-we-strongly-oppose-both-county-measure-a-and-measure-b/",
+  "date": "2026-10-31",
   "confidence": "verified"
  },
  {
@@ -104,9 +104,9 @@
   "target_id": "sdusd-measure-m",
   "status": "endorsed",
   "choice": "NO",
-  "why": "Listed as \"Measure M ($3.5 billion bond): No.\" Its editorial was not read.",
-  "url": "https://www.sandiegouniontribune.com/2026/10/02/the-u-t-editorial-boards-endorsements/",
-  "date": "2026-10-19",
+  "why": "Its Oct 23 editorial, \"No on Measure M, San Diego Unified's bond bait and switch,\" ends: \"San Diegans need to say enough is enough by voting no on Measure M.\"",
+  "url": "https://www.sandiegouniontribune.com/2026/10/23/endorsement-no-on-measure-m-san-diego-unifieds-bond-bait-and-switch/",
+  "date": "2026-10-31",
   "confidence": "verified"
  },
  {
@@ -764,7 +764,7 @@
   "target_id": "sd-city-council-4",
   "status": "no_position",
   "choice": null,
-  "why": "Its San Diego city section lists only Districts 2 and 6. Both candidates in this race are Democrats.",
+  "why": "Its San Diego city section lists only Districts 2 and 6.",
   "url": "https://www.sandiegorepublicans.org/voter-guides/san-diego",
   "date": "2026-10-17",
   "confidence": "verified"
@@ -774,7 +774,7 @@
   "target_id": "sd-city-council-8",
   "status": "no_position",
   "choice": null,
-  "why": "Its San Diego city section lists only Districts 2 and 6. Both candidates in this race are Democrats.",
+  "why": "Its San Diego city section lists only Districts 2 and 6.",
   "url": "https://www.sandiegorepublicans.org/voter-guides/san-diego",
   "date": "2026-10-17",
   "confidence": "verified"
@@ -1362,32 +1362,32 @@
  {
   "endorser_id": "sd-democrats-for-equality",
   "target_id": "sd-city-council-8",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "No pick in this race on its Blue Voter Guide listing; its own page could not be read.",
-  "url": "https://bluevoterguide.org/endorser-org/San_Diego_Democrats_for_Equality/CA/1115",
-  "date": "2026-10-17",
-  "confidence": "sourced"
+  "why": "Its own endorsements page lists no pick in this race (checked Oct 31, 2026).",
+  "url": "https://www.democratsforequality.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
  },
  {
   "endorser_id": "sd-democrats-for-equality",
   "target_id": "sd-county-board-of-ed-3",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "No pick in this race on its Blue Voter Guide listing; its own page could not be read.",
-  "url": "https://bluevoterguide.org/endorser-org/San_Diego_Democrats_for_Equality/CA/1115",
-  "date": "2026-10-17",
-  "confidence": "sourced"
+  "why": "Its own endorsements page lists no pick in this race (checked Oct 31, 2026).",
+  "url": "https://www.democratsforequality.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
  },
  {
   "endorser_id": "sd-democrats-for-equality",
   "target_id": "sd-county-board-of-ed-5",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "No pick in this race on its Blue Voter Guide listing; its own page could not be read.",
-  "url": "https://bluevoterguide.org/endorser-org/San_Diego_Democrats_for_Equality/CA/1115",
-  "date": "2026-10-17",
-  "confidence": "sourced"
+  "why": "Its own endorsements page lists no pick in this race (checked Oct 31, 2026).",
+  "url": "https://www.democratsforequality.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
  },
  {
   "endorser_id": "sd-democrats-for-equality",
@@ -1494,9 +1494,9 @@
   "target_id": "sd-city-council-2",
   "status": "not_found",
   "choice": null,
-  "why": "No published 2026 endorsement list found; sdchamber.org blocked our reader.",
-  "url": "https://sdchamber.org/",
-  "date": "2026-10-17",
+  "why": "No 2026 endorsement list on its site; its PAC page lists no picks (checked Oct 31, 2026).",
+  "url": "https://sdchamber.org/sdchamber-pac/",
+  "date": "2026-10-31",
   "confidence": "sourced"
  },
  {
@@ -1504,9 +1504,9 @@
   "target_id": "sd-city-council-4",
   "status": "not_found",
   "choice": null,
-  "why": "No published 2026 endorsement list found; sdchamber.org blocked our reader.",
-  "url": "https://sdchamber.org/",
-  "date": "2026-10-17",
+  "why": "No 2026 endorsement list on its site; its PAC page lists no picks (checked Oct 31, 2026).",
+  "url": "https://sdchamber.org/sdchamber-pac/",
+  "date": "2026-10-31",
   "confidence": "sourced"
  },
  {
@@ -1514,9 +1514,9 @@
   "target_id": "sd-city-council-6",
   "status": "not_found",
   "choice": null,
-  "why": "No published 2026 endorsement list found; sdchamber.org blocked our reader.",
-  "url": "https://sdchamber.org/",
-  "date": "2026-10-17",
+  "why": "No 2026 endorsement list on its site; its PAC page lists no picks (checked Oct 31, 2026).",
+  "url": "https://sdchamber.org/sdchamber-pac/",
+  "date": "2026-10-31",
   "confidence": "sourced"
  },
  {
@@ -1524,9 +1524,9 @@
   "target_id": "sd-county-measure-a",
   "status": "not_found",
   "choice": null,
-  "why": "No published 2026 endorsement list found; sdchamber.org blocked our reader.",
-  "url": "https://sdchamber.org/",
-  "date": "2026-10-17",
+  "why": "No 2026 endorsement list on its site; its PAC page lists no picks (checked Oct 31, 2026).",
+  "url": "https://sdchamber.org/sdchamber-pac/",
+  "date": "2026-10-31",
   "confidence": "sourced"
  },
  {
@@ -1534,9 +1534,9 @@
   "target_id": "sd-county-measure-b",
   "status": "not_found",
   "choice": null,
-  "why": "No published 2026 endorsement list found; sdchamber.org blocked our reader.",
-  "url": "https://sdchamber.org/",
-  "date": "2026-10-17",
+  "why": "No 2026 endorsement list on its site; its PAC page lists no picks (checked Oct 31, 2026).",
+  "url": "https://sdchamber.org/sdchamber-pac/",
+  "date": "2026-10-31",
   "confidence": "sourced"
  },
  {
@@ -1544,9 +1544,9 @@
   "target_id": "sdusd-measure-m",
   "status": "not_found",
   "choice": null,
-  "why": "No published 2026 endorsement list found; sdchamber.org blocked our reader.",
-  "url": "https://sdchamber.org/",
-  "date": "2026-10-17",
+  "why": "No 2026 endorsement list on its site; its PAC page lists no picks (checked Oct 31, 2026).",
+  "url": "https://sdchamber.org/sdchamber-pac/",
+  "date": "2026-10-31",
   "confidence": "sourced"
  },
  {
@@ -1572,7 +1572,7 @@
  {
   "endorser_id": "reform-california",
   "target_id": "sd-city-council-4",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
   "why": "Its San Diego city list names Districts 2, 6 and 8 only; District 4 is not listed. Checked again on Oct 29, 2026; still no pick on this page.",
   "url": "https://www.reformcalifornia.org/voter-guides/san-diego",
@@ -1714,9 +1714,9 @@
   "target_id": "ca-us-house-51",
   "status": "endorsed",
   "choice": "Ricardo Cabrera",
-  "why": "Spelled \"Ricardo Cabrero\" on its page.",
+  "why": null,
   "url": "https://www.reformcalifornia.org/voter-guides/san-diego",
-  "date": "2026-10-17",
+  "date": "2026-10-27",
   "confidence": "verified"
  },
  {

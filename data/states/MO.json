@@ -576,5 +576,17 @@
       "text": "St. Louis County and the City of St. Louis have separate election offices and different ballots.",
       "applies_to": "ballot"
     }
+  ],
+  "dated": [
+    {
+      "path": "situations.away_on_election_day.short",
+      "from": "2026-11-03",
+      "text": "Early voting ended Nov 2. Back before 7 PM? You can still vote in person today."
+    },
+    {
+      "path": "situations.away_on_election_day.answer",
+      "from": "2026-11-03",
+      "text": "Early voting ended Monday, November 2, and the deadline to ask for a mail ballot was October 21. If you're back before polls close at 7 PM, you can still vote in person today. Already mailed your ballot? It counts if it arrives by 7 PM today."
+    }
   ]
 }

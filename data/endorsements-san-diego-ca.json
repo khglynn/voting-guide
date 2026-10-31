@@ -1594,7 +1594,7 @@
   "target_id": "sd-city-council-8",
   "status": "no_position",
   "choice": null,
-  "why": "Marks District 8 \"You are Doomed\" and names no candidate.",
+  "why": "Marks District 8 \"You are Doomed\" and names no candidate. Its guide says a race with no recommendation means it \"could not support\" the candidates or lacked enough information.",
   "url": "https://www.reformcalifornia.org/voter-guides/san-diego",
   "date": "2026-10-17",
   "confidence": "verified"
@@ -1654,7 +1654,7 @@
   "target_id": "sdccd-district-a",
   "status": "no_position",
   "choice": null,
-  "why": "Marks District A \"You are Doomed\" and names no candidate.",
+  "why": "Marks District A \"You are Doomed\" and names no candidate. Its guide says a race with no recommendation means it \"could not support\" the candidates or lacked enough information.",
   "url": "https://www.reformcalifornia.org/voter-guides/san-diego",
   "date": "2026-10-17",
   "confidence": "verified"
@@ -1674,7 +1674,7 @@
   "target_id": "sdusd-district-b",
   "status": "no_position",
   "choice": null,
-  "why": "Marks Trustee District B \"You are Doomed\" and names no candidate.",
+  "why": "Marks Trustee District B \"You are Doomed\" and names no candidate. Its guide says a race with no recommendation means it \"could not support\" the candidates or lacked enough information.",
   "url": "https://www.reformcalifornia.org/voter-guides/san-diego",
   "date": "2026-10-17",
   "confidence": "verified"
@@ -1684,7 +1684,7 @@
   "target_id": "sdusd-district-c",
   "status": "no_position",
   "choice": null,
-  "why": "Marks Trustee District C \"You are Doomed\" and names no candidate.",
+  "why": "Marks Trustee District C \"You are Doomed\" and names no candidate. Its guide says a race with no recommendation means it \"could not support\" the candidates or lacked enough information.",
   "url": "https://www.reformcalifornia.org/voter-guides/san-diego",
   "date": "2026-10-17",
   "confidence": "verified"

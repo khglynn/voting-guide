@@ -1,0 +1,582 @@
+[
+ {
+  "endorser_id": "lacdp",
+  "target_id": "torrance-usd-area-d",
+  "status": "endorsed",
+  "choice": "Ryan Rauzon",
+  "why": "Listed under 'Torrance Unified, Area D' in its Nov 3, 2026 endorsements, with no reason given.",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lacdp",
+  "target_id": "el-camino-ccd-area-5",
+  "status": "endorsed",
+  "choice": "MyLoc Dinh",
+  "why": "Listed under 'El Camino CCD, Trustee Area 5' in its Nov 3, 2026 endorsements, with no reason given.",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "torrance-usd-area-d",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its endorsement lookup has picks for some LA County school and college boards, but none for Torrance Unified's Area D (checked Oct 31, 2026).",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "el-camino-ccd-area-5",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its endorsement lookup has picks for some LA County school and college boards, but none for El Camino College's Area 5 (checked Oct 31, 2026).",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-fed",
+  "target_id": "torrance-usd-area-d",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not in its picture guide as posted on Oct 31, 2026. The guide lists local races in A to Z order, and no posted page covers the names between Three Valleys and Water Replenishment, where Torrance would fall, so a pick there can't be ruled out.",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "date": "2026-10-31",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-fed",
+  "target_id": "el-camino-ccd-area-5",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not in its picture guide as posted on Oct 31, 2026: its school and college races run from Alhambra to Whittier with no El Camino College entry.",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "date": "2026-10-31",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "torrance-usd-area-d",
+  "status": "endorsed",
+  "choice": "Ryan Rauzon",
+  "why": "'Recommended' on its Torrance page, which says 'Analysis forthcoming.'",
+  "url": "https://laforwardguide.org/guide/torrance",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "el-camino-ccd-area-5",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its Torrance page and its list of school and special districts have no El Camino College race (checked Oct 31, 2026).",
+  "url": "https://laforwardguide.org/guide/torrance",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "torrance-usd-area-d",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as the Daily Breeze prints it (updated Oct 20, 2026; checked Oct 31, 2026).",
+  "url": "https://www.dailybreeze.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "el-camino-ccd-area-5",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as the Daily Breeze prints it (updated Oct 20, 2026; checked Oct 31, 2026).",
+  "url": "https://www.dailybreeze.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "torrance-usd-area-d",
+  "status": "endorsed",
+  "choice": "Ryan Rauzon",
+  "why": "Says it 'officially endorses Ryan Rauzon' for the Torrance Unified board; gives no reason.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "el-camino-ccd-area-5",
+  "status": "endorsed",
+  "choice": "MyLoc Dinh",
+  "why": "Says it is 'proud to endorse MyLoc Dinh' for El Camino College's Area 5; gives no reason.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "la-county-sheriff",
+  "status": "endorsed",
+  "choice": "Robert G. Luna",
+  "why": "Listed in its General Election Guide, with no reason given.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "ca-us-house-36",
+  "status": "endorsed",
+  "choice": "Ted W. Lieu",
+  "why": "Listed in its General Election Guide, with no reason given.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "ca-us-house-43",
+  "status": "endorsed",
+  "choice": "Maxine Waters",
+  "why": "Listed in its General Election Guide, with no reason given.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "la-county-judge-64",
+  "status": "endorsed",
+  "choice": "Maria Ghobadi",
+  "why": "Listed among the judges it is 'proud to endorse', with no reason given.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "la-county-judge-65",
+  "status": "endorsed",
+  "choice": "Justin Allen Clayton",
+  "why": "Listed among the judges it is 'proud to endorse', with no reason given.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "la-county-judge-87",
+  "status": "endorsed",
+  "choice": "David DeJute",
+  "why": "Listed among the judges it is 'proud to endorse', with no reason given.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "la-county-judge-131",
+  "status": "endorsed",
+  "choice": "Donna Tryfman or David Ross",
+  "why": "Lists both, under 'Seat 131 (vote for one)', among the judges it is 'proud to endorse'; gives no reason.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "ca-governor",
+  "status": "endorsed",
+  "choice": "Xavier Becerra",
+  "why": "Listed in its General Election Guide, with no reason given.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "ca-lt-governor",
+  "status": "endorsed",
+  "choice": "Fiona Ma",
+  "why": "Listed in its General Election Guide, with no reason given.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "ca-secretary-of-state",
+  "status": "endorsed",
+  "choice": "Shirley N. Weber",
+  "why": "Listed in its General Election Guide, with no reason given.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "ca-treasurer",
+  "status": "endorsed",
+  "choice": "Eleni Kounalakis",
+  "why": "Listed in its General Election Guide, with no reason given.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "ca-attorney-general",
+  "status": "endorsed",
+  "choice": "Rob Bonta",
+  "why": "Listed in its General Election Guide, with no reason given.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "ca-superintendent",
+  "status": "endorsed",
+  "choice": "Richard Barrera",
+  "why": "Listed in its General Election Guide (spelled 'Richard Barerra'), with no reason given.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "ca-controller",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its General Election Guide names picks for six statewide offices, and controller isn't one of them (checked Oct 31, 2026).",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "ca-insurance-commissioner",
+  "status": "not_found",
+  "choice": null,
+  "why": "Lists both candidates, Jane Kim and Ben Allen, under its heading 'Democrat-against-Democrat Runoff Elections', with no pick.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "ca-boe-3",
+  "status": "not_found",
+  "choice": null,
+  "why": "Lists both candidates, Samuel P. Sukaton and Mike Gipson, under its heading 'Democrat-against-Democrat Runoff Elections', with no pick.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "ca-assembly-66",
+  "status": "not_found",
+  "choice": null,
+  "why": "Lists both candidates, Sara Deen and Paul Seo, under its heading 'Democrat-against-Democrat Runoff Elections', with no pick.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "ca-state-senate-24",
+  "status": "not_found",
+  "choice": null,
+  "why": "Lists both candidates, John Erickson and Brian Goldsmith, under its heading 'Democrat-against-Democrat Runoff Elections', with no pick.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "ca-prop-1",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "'Support' in its State Propositions table, with no reason given.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "ca-prop-2",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "'Support' in its State Propositions table, with no reason given.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "ca-prop-3",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "'Support' in its State Propositions table, with no reason given.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "ca-prop-4",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "'Support' in its State Propositions table, with no reason given.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "ca-prop-5",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "'Support' in its State Propositions table, with no reason given.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "ca-prop-37",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "'Support' in its State Propositions table, with no reason given.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "ca-prop-38",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "'Support' in its State Propositions table, with no reason given.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "ca-prop-39",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "'Oppose' in its State Propositions table, with no reason given.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "ca-prop-40",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "'Support' in its State Propositions table, with no reason given.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "ca-prop-41",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "'Oppose' in its State Propositions table, with no reason given.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "ca-prop-42",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "'Oppose' in its State Propositions table, with no reason given.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "ca-prop-43",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "'Oppose' in its State Propositions table, with no reason given.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "ca-prop-44",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "'Oppose' in its State Propositions table, with no reason given.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "ca-prop-45",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "'Oppose' in its State Propositions table, with no reason given.",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "la-county-measure-a",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not in its endorsements or its voter guide's tables, which list only the state propositions among measures (checked Oct 31, 2026).",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-democratic-club",
+  "target_id": "la-county-measure-e",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not in its endorsements or its voter guide's tables, which list only the state propositions among measures (checked Oct 31, 2026).",
+  "url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "indivisible-south-bay-la",
+  "target_id": "torrance-usd-area-d",
+  "status": "endorsed",
+  "choice": "Ryan Rauzon",
+  "why": "Listed in its endorsements for the Nov 3, 2026 election, with no reason given.",
+  "url": "https://indivisiblesouthbay.com/endorsements/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "indivisible-south-bay-la",
+  "target_id": "ca-assembly-66",
+  "status": "endorsed",
+  "choice": "Sara Deen",
+  "why": "Listed in its endorsements for the Nov 3, 2026 election, with no reason given.",
+  "url": "https://indivisiblesouthbay.com/endorsements/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "indivisible-south-bay-la",
+  "target_id": "ca-state-senate-24",
+  "status": "endorsed",
+  "choice": "John M. Erickson",
+  "why": "Its list prints 'AD24 – John Erickson' under state endorsements and links his name to his State Senate campaign site; he is running for State Senate District 24. Gives no reason.",
+  "url": "https://indivisiblesouthbay.com/endorsements/",
+  "date": "2026-10-31",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "indivisible-south-bay-la",
+  "target_id": "el-camino-ccd-area-5",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on its Nov 3, 2026 endorsement list, published in September (checked Oct 31, 2026).",
+  "url": "https://indivisiblesouthbay.com/endorsements/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "indivisible-south-bay-la",
+  "target_id": "ca-us-house-36",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its only pick for Congress is Derek Tran in the 45th District, so nothing for this race (checked Oct 31, 2026).",
+  "url": "https://indivisiblesouthbay.com/endorsements/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "indivisible-south-bay-la",
+  "target_id": "ca-us-house-43",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its only pick for Congress is Derek Tran in the 45th District, so nothing for this race (checked Oct 31, 2026).",
+  "url": "https://indivisiblesouthbay.com/endorsements/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "south-bay-republicans",
+  "target_id": "torrance-usd-area-d",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its candidates page lists nine picks, none in this race, and its voter guide page links to other Republican groups' guides, among them the LA County Republican Party's (checked Oct 31, 2026).",
+  "url": "https://www.southbayrepublicans.com/candidates-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "south-bay-republicans",
+  "target_id": "el-camino-ccd-area-5",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its candidates page lists nine picks, none in this race, and its voter guide page links to other Republican groups' guides, among them the LA County Republican Party's (checked Oct 31, 2026).",
+  "url": "https://www.southbayrepublicans.com/candidates-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "south-bay-republicans",
+  "target_id": "ca-us-house-36",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its candidates page lists nine picks, none in this race, and its voter guide page links to other Republican groups' guides, among them the LA County Republican Party's (checked Oct 31, 2026).",
+  "url": "https://www.southbayrepublicans.com/candidates-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "south-bay-republicans",
+  "target_id": "ca-us-house-43",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its candidates page lists nine picks, none in this race, and its voter guide page links to other Republican groups' guides, among them the LA County Republican Party's (checked Oct 31, 2026).",
+  "url": "https://www.southbayrepublicans.com/candidates-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "south-bay-republicans",
+  "target_id": "ca-state-senate-24",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its candidates page lists nine picks, none in this race, and its voter guide page links to other Republican groups' guides, among them the LA County Republican Party's (checked Oct 31, 2026).",
+  "url": "https://www.southbayrepublicans.com/candidates-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "south-bay-republicans",
+  "target_id": "ca-assembly-66",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its candidates page lists nine picks, none in this race, and its voter guide page links to other Republican groups' guides, among them the LA County Republican Party's (checked Oct 31, 2026).",
+  "url": "https://www.southbayrepublicans.com/candidates-endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ }
+]

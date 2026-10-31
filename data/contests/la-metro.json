@@ -1389,7 +1389,7 @@
   "level": "federal",
   "office": "U.S. Representative",
   "district": "CD-36 (Westside and South Bay: Mar Vista, Westchester, Venice, Santa Monica, Beverly Hills, Torrance, Palos Verdes)",
-  "scope_plain": "Voters in the 36th Congressional District. In the City of LA that includes Mar Vista and Westchester. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "scope_plain": "Voters in the 36th Congressional District. In the City of LA that includes Mar Vista and Westchester. It also covers all of Beverly Hills. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
   "why_it_matters": "A six-term incumbent and vice chair of the House Democratic Caucus against a Republican with no public campaign presence. Lieu won the June primary with 61%.",
   "vote_for": 1,
@@ -1465,6 +1465,10 @@
    {
     "name": "City Hall Pass: CA-36",
     "url": "https://cityhallpass.com/election-2026/races/congress-36"
+   },
+   {
+    "name": "Statewide Database: which cities each 2025 congressional district holds (AB 604 city splits report)",
+    "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
    }
   ],
   "confidence": "verified"
@@ -1560,8 +1564,8 @@
   "state": "CA",
   "level": "federal",
   "office": "U.S. Representative",
-  "district": "CD-30 (Hollywood, the Hollywood Hills, Fairfax, Los Feliz, Silver Lake, Burbank, Glendale, Pasadena)",
-  "scope_plain": "Voters in the 30th Congressional District. In the City of LA that includes Hollywood, the Hollywood Hills and the Fairfax District. It also covers all of Glendale and all of Burbank. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "district": "CD-30 (Hollywood, the Hollywood Hills, Fairfax, Los Feliz, Silver Lake, Burbank, Glendale, part of Pasadena, the Sand Canyon edge of Santa Clarita)",
+  "scope_plain": "Voters in the 30th Congressional District. In the City of LA that includes Hollywood, the Hollywood Hills and the Fairfax District. It also covers all of Glendale, all of Burbank and all of West Hollywood. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
   "why_it_matters": "A first-term Democrat who succeeded Adam Schiff, against a Republican attorney. Friedman won 53% in a seven-way June primary.",
   "vote_for": 1,
@@ -1640,8 +1644,8 @@
   "state": "CA",
   "level": "state",
   "office": "State Senator",
-  "district": "SD-24 (Westside and Hollywood: Pacific Palisades, Brentwood, Venice, Mar Vista, Westchester, Hollywood, West Hollywood, Santa Monica, Beverly Hills, the South Bay coast)",
-  "scope_plain": "Voters in the 24th State Senate District. In the City of LA that includes the Westside and Hollywood. It also includes all of Malibu and all of Santa Monica. Only even-numbered Senate districts vote in 2026. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Two Democrats.",
+  "district": "SD-24 (Westside and Hollywood: Pacific Palisades, Brentwood, Venice, Mar Vista, Westchester, Hollywood, West Hollywood, Santa Monica, Beverly Hills, the South Bay coast, Torrance)",
+  "scope_plain": "Voters in the 24th State Senate District. In the City of LA that includes the Westside and Hollywood. It also includes all of Malibu, all of Santa Monica, all of Beverly Hills, all of West Hollywood and all of Torrance. Only even-numbered Senate districts vote in 2026. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Two Democrats.",
   "office_explainer": "One of 40 state senators. Writes California laws and passes the state budget with the Assembly. Four-year term.",
   "why_it_matters": "Open seat (Ben Allen is termed out) and the most expensive legislative race in LA. Two Democrats: a West Hollywood councilmember backed by labor and the housing groups, and a media consultant who has put $1.85 million of his own money in and is backed by Pelosi, Hillary Clinton and the police union. Outside groups have spent millions against Erickson.",
   "vote_for": 1,
@@ -1817,7 +1821,7 @@
   "level": "state",
   "office": "State Senator",
   "district": "SD-28 (Mid-City, West Adams, Crenshaw, Culver City, parts of Downtown and South LA, west to the Westside)",
-  "scope_plain": "Voters in the 28th State Senate District. In the City of LA that includes Mid-City. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "scope_plain": "Voters in the 28th State Senate District. In the City of LA that includes Mid-City. It also includes all of Culver City. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 40 state senators. Writes California laws and passes the state budget with the Assembly. Four-year term.",
   "why_it_matters": "The incumbent won 77.5% in June against a Republican neighborhood council member with no campaign committee.",
   "vote_for": 1,
@@ -1883,6 +1887,10 @@
    {
     "name": "City Hall Pass: SD-28",
     "url": "https://cityhallpass.com/election-2026/races/senate-28"
+   },
+   {
+    "name": "Citizens Redistricting Commission 2021: cities in each district (place report)",
+    "url": "https://sdmg.senate.ca.gov/sites/sdmg.senate.ca.gov/files/2021/crc_2021_place_report_v2.pdf"
    }
   ],
   "confidence": "verified"
@@ -3242,7 +3250,7 @@
   "state": "CA",
   "level": "federal",
   "office": "U.S. Representative",
-  "district": "CD-27 (northwest Valley: Granada Hills, most of Northridge, parts of Reseda, Lake Balboa, North Hills)",
+  "district": "CD-27 (northwest Valley: Granada Hills, most of Northridge, parts of Reseda, Lake Balboa, North Hills; plus most of Santa Clarita and the Antelope Valley)",
   "scope_plain": "Voters in the 27th Congressional District (new map approved with Prop 50). In the City of LA that is Granada Hills, most of Northridge and parts of Reseda, Lake Balboa and North Hills, about 144,000 residents. The rest is most of Santa Clarita and the Antelope Valley. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
   "why_it_matters": "One of the closest House races in LA County. In June the Republican finished just ahead of the first-term Democrat, 41.0% to 40.6%.",
@@ -3947,8 +3955,8 @@
     "url": "https://laforwardguide.org/guide/state-assembly"
    },
    {
-    "name": "Citizens Redistricting Commission 2021: cities in each district (place report)",
-    "url": "https://sdmg.senate.ca.gov/sites/sdmg.senate.ca.gov/files/2021/crc_2021_place_report_v2.pdf"
+    "name": "Senate Office of Demographics: Assembly districts by ZIP code (2021 lines)",
+    "url": "https://sdmg.senate.ca.gov/system/files/2024-12/2025-state-assembly-zip-codes-zip-code-order.pdf"
    }
   ],
   "confidence": "verified"
@@ -4033,8 +4041,8 @@
     "url": "https://cityhallpass.com/election-2026/races/assembly-42"
    },
    {
-    "name": "Citizens Redistricting Commission 2021: cities in each district (place report)",
-    "url": "https://sdmg.senate.ca.gov/sites/sdmg.senate.ca.gov/files/2021/crc_2021_place_report_v2.pdf"
+    "name": "Senate Office of Demographics: Assembly districts by ZIP code (2021 lines)",
+    "url": "https://sdmg.senate.ca.gov/system/files/2024-12/2025-state-assembly-zip-codes-zip-code-order.pdf"
    }
   ],
   "confidence": "verified"
@@ -4196,8 +4204,8 @@
     "url": "https://cityhallpass.com/election-2026/races/assembly-44"
    },
    {
-    "name": "Citizens Redistricting Commission 2021: cities in each district (place report)",
-    "url": "https://sdmg.senate.ca.gov/sites/sdmg.senate.ca.gov/files/2021/crc_2021_place_report_v2.pdf"
+    "name": "Senate Office of Demographics: Assembly districts by ZIP code (2021 lines)",
+    "url": "https://sdmg.senate.ca.gov/system/files/2024-12/2025-state-assembly-zip-codes-zip-code-order.pdf"
    }
   ],
   "confidence": "verified"
@@ -4289,8 +4297,8 @@
   "state": "CA",
   "level": "state",
   "office": "Member of the State Assembly",
-  "district": "AD-52 (Eagle Rock, Highland Park, El Sereno, Echo Park, Silver Lake, Los Feliz, Glassell Park, Atwater Village)",
-  "scope_plain": "Voters in the 52nd Assembly District. In the City of LA that is El Sereno, Eagle Rock, Echo Park, Highland Park, Silver Lake, Glassell Park, Los Feliz, Atwater Village, Lincoln Heights, Cypress Park and Elysian Valley. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "district": "AD-52 (Eagle Rock, Highland Park, El Sereno, Echo Park, Silver Lake, Los Feliz, Glassell Park, Atwater Village; plus south Glendale)",
+  "scope_plain": "Voters in the 52nd Assembly District. In the City of LA that is El Sereno, Eagle Rock, Echo Park, Highland Park, Silver Lake, Glassell Park, Los Feliz, Atwater Village, Lincoln Heights, Cypress Park and Elysian Valley. It also covers south Glendale. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
   "why_it_matters": "A first-term Democrat against a Republican musician with no ballot designation. Caloza got 85.8% in June.",
   "vote_for": 1,
@@ -4356,6 +4364,10 @@
    {
     "name": "City Hall Pass: AD-52",
     "url": "https://cityhallpass.com/election-2026/races/assembly-52"
+   },
+   {
+    "name": "Senate Office of Demographics: Assembly districts by ZIP code (2021 lines)",
+    "url": "https://sdmg.senate.ca.gov/system/files/2024-12/2025-state-assembly-zip-codes-zip-code-order.pdf"
    }
   ],
   "confidence": "verified"
@@ -4442,7 +4454,7 @@
   "level": "state",
   "office": "Member of the State Assembly",
   "district": "AD-66 (northwest and coastal San Pedro; plus Torrance, Redondo Beach, Palos Verdes, Manhattan Beach)",
-  "scope_plain": "Voters in the 66th Assembly District. In the City of LA that is only northwest and coastal San Pedro. The rest is South Bay cities from Torrance and Palos Verdes to Manhattan Beach. Two Democrats. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "scope_plain": "Voters in the 66th Assembly District. In the City of LA that is only northwest and coastal San Pedro. The rest is South Bay cities, including all of Torrance, from Palos Verdes to Manhattan Beach. Two Democrats. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
   "why_it_matters": "Open seat (Al Muratsuchi is termed out) with two Democrats. A school board president backed by teachers and housing groups faces a mayor and prosecutor backed by the state party, labor and police unions. They differ on refineries and single-payer health care.",
   "vote_for": 1,
@@ -4518,6 +4530,10 @@
    {
     "name": "City Hall Pass: AD-66",
     "url": "https://cityhallpass.com/election-2026/races/assembly-66"
+   },
+   {
+    "name": "Senate Office of Demographics: Assembly districts by ZIP code (2021 lines)",
+    "url": "https://sdmg.senate.ca.gov/system/files/2024-12/2025-state-assembly-zip-codes-zip-code-order.pdf"
    }
   ],
   "confidence": "verified"

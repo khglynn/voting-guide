@@ -182,5 +182,21 @@
   "default_on": false,
   "endorses_candidates": false,
   "endorses_measures": true
+ },
+ {
+  "id": "colorado-boulevard-eb",
+  "name": "Colorado Boulevard Newspaper editorial board",
+  "short": "Colorado Boulevard",
+  "type": "publication",
+  "lean": null,
+  "lean_basis": "Not rated. The recorded description says: \"Our mission is simple: to inform, educate, and connect our communities through thoughtful local journalism\". This does not establish a position on the political scale. Source: https://www.coloradoboulevard.net/about-us/.",
+  "geography": [
+   "pasadena-ca"
+  ],
+  "guide_url": "https://www.coloradoboulevard.net/2026-general-election-recommendations-for-l-a-county-superior-court-judges/",
+  "default_on": true,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "lean_basis_kind": "mission"
  }
 ]

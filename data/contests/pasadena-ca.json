@@ -86,8 +86,8 @@
   "state": "CA",
   "level": "special_district",
   "office": "Pasadena Area Community College District Board of Trustees",
-  "district": "Trustee Area 1 (west Pasadena and La Cañada Flintridge)",
-  "scope_plain": "Only voters in Pasadena City College's Trustee Area 1: west Pasadena (Linda Vista, San Rafael, Annandale, Oak Knoll, Madison Heights and parts of downtown and Old Pasadena) and La Cañada Flintridge. Northwest Pasadena votes in Area 3. Areas 2 and 4, which cover the rest of Pasadena, are not up this year. Nonpartisan; most votes wins.",
+  "district": "Trustee Area 1 (west Pasadena, Oak Knoll, Madison Heights and La Cañada Flintridge)",
+  "scope_plain": "Only voters in Pasadena City College's Trustee Area 1: Pasadena's west and south sides (Linda Vista, San Rafael, Annandale, Oak Knoll, Madison Heights and parts of downtown and Old Pasadena) and La Cañada Flintridge. Northwest Pasadena votes in Area 3. Areas 2 and 4, which cover the rest of Pasadena, are not up this year. Nonpartisan; most votes wins.",
   "office_explainer": "One of seven trustees who run Pasadena City College: its budget, its president, its policies and its building bonds.",
   "why_it_matters": "Open seat; trustee Sandra Chen Lau is not on the ballot. If Measure UP passes, this board decides how to spend $485 million in new bonds.",
   "vote_for": 1,
@@ -171,7 +171,7 @@
   "level": "special_district",
   "office": "Pasadena Area Community College District Board of Trustees",
   "district": "Trustee Area 3 (northwest Pasadena and part of southwest Altadena)",
-  "scope_plain": "Only voters in Pasadena City College's Trustee Area 3: northwest Pasadena and part of southwest Altadena, including the area around John Muir High School. West Pasadena votes in Area 1. Areas 2 and 4, which cover the rest of Pasadena, are not up this year. Nonpartisan; most votes wins.",
+  "scope_plain": "Only voters in Pasadena City College's Trustee Area 3: northwest Pasadena and part of southwest Altadena, including the area around John Muir High School. Pasadena's west and south sides vote in Area 1. Areas 2 and 4, which cover the rest of Pasadena, are not up this year. Nonpartisan; most votes wins.",
   "office_explainer": "One of seven trustees who run Pasadena City College: its budget, its president, its policies and its building bonds.",
   "why_it_matters": "The board's president, first elected in 2022, against a Pasadena planning commissioner. If Measure UP passes, this board decides how to spend $485 million in new bonds.",
   "vote_for": 1,
@@ -315,8 +315,8 @@
     "url": "https://www.cityofpasadena.net/city-clerk/wp-content/uploads/sites/21/2026-General-Election-Board-of-Education-Candidate-Information.pdf"
    },
    {
-    "name": "City of Pasadena: maps of Pasadena Unified Districts 1, 3, 5 and 7",
-    "url": "https://www.cityofpasadena.net/city-clerk/wp-content/uploads/sites/21/2026-General-Election-PUSD-District-Maps-1-3-5-7.pdf"
+    "name": "Pasadena Unified: board district map and boundary descriptions (Feb 2, 2022)",
+    "url": "https://resources.finalsite.net/images/v1707482714/pusdus/peeovbnon0h72varoxpm/pusdboardmembersgeographicsubdistrictmapandexhibit.pdf"
    },
    {
     "name": "LAist: Pasadena Unified Board of Education",
@@ -337,7 +337,7 @@
   "district": "District 3 (northwest Pasadena)",
   "scope_plain": "Voters in Pasadena Unified School District Board District 3 only, in northwest Pasadena, around John Muir High School and the Jackie Robinson Community Center. Districts 1 and 7 also vote this year; Districts 2, 4 and 6 don't, and District 5's race was canceled because only the incumbent filed. Nonpartisan; most votes wins.",
   "office_explainer": "One of seven board members who run Pasadena's public schools: the budget, the superintendent, school closures.",
-  "why_it_matters": "A board member since 2017 who voted against last year's $24.5 million in cuts and a process that could close schools, against an educator and former charter school principal.",
+  "why_it_matters": "A board member since 2017 who voted against last year's $24.5 million in cuts and a process that could close schools, against an educator and former charter school principal who says she would have voted against the cuts but for the process.",
   "vote_for": 1,
   "incumbent": "Michelle Richardson Bailey",
   "open_seat": false,
@@ -395,8 +395,8 @@
     "url": "https://www.cityofpasadena.net/city-clerk/wp-content/uploads/sites/21/2026-General-Election-PUSD-Qualified-Candidates-EN.pdf"
    },
    {
-    "name": "City of Pasadena: maps of Pasadena Unified Districts 1, 3, 5 and 7",
-    "url": "https://www.cityofpasadena.net/city-clerk/wp-content/uploads/sites/21/2026-General-Election-PUSD-District-Maps-1-3-5-7.pdf"
+    "name": "Pasadena Unified: board district map and boundary descriptions (Feb 2, 2022)",
+    "url": "https://resources.finalsite.net/images/v1707482714/pusdus/peeovbnon0h72varoxpm/pusdboardmembersgeographicsubdistrictmapandexhibit.pdf"
    },
    {
     "name": "LAist: Pasadena Unified Board of Education",
@@ -471,8 +471,8 @@
     "url": "https://www.cityofpasadena.net/city-clerk/wp-content/uploads/sites/21/2026-General-Election-PUSD-Qualified-Candidates-EN.pdf"
    },
    {
-    "name": "City of Pasadena: maps of Pasadena Unified Districts 1, 3, 5 and 7",
-    "url": "https://www.cityofpasadena.net/city-clerk/wp-content/uploads/sites/21/2026-General-Election-PUSD-District-Maps-1-3-5-7.pdf"
+    "name": "Pasadena Unified: board district map and boundary descriptions (Feb 2, 2022)",
+    "url": "https://resources.finalsite.net/images/v1707482714/pusdus/peeovbnon0h72varoxpm/pusdboardmembersgeographicsubdistrictmapandexhibit.pdf"
    },
    {
     "name": "LAist: Pasadena Unified Board of Education",

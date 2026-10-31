@@ -898,5 +898,75 @@
   "url": "https://aagla.org/pasadena-pfd/",
   "date": "2026-10-06",
   "confidence": "verified"
+ },
+ {
+  "endorser_id": "colorado-boulevard-eb",
+  "target_id": "la-county-judge-64",
+  "status": "endorsed",
+  "choice": "Maria Ghobadi",
+  "why": "Its editorial board's Oct 9 recommendations for the Superior Court put a check mark beside Maria Ghobadi for Office 64. The board says that in these races it \"found distinctions in experience and courtroom readiness significant enough to recommend one candidate over others.\"",
+  "url": "https://www.coloradoboulevard.net/2026-general-election-recommendations-for-l-a-county-superior-court-judges/",
+  "date": "2026-10-09",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "colorado-boulevard-eb",
+  "target_id": "la-county-judge-65",
+  "status": "endorsed",
+  "choice": "Justin Allen Clayton",
+  "why": "Its editorial board's Oct 9 recommendations for the Superior Court put a check mark beside Justin Allen Clayton for Office 65. The board says that in these races it \"found distinctions in experience and courtroom readiness significant enough to recommend one candidate over others.\"",
+  "url": "https://www.coloradoboulevard.net/2026-general-election-recommendations-for-l-a-county-superior-court-judges/",
+  "date": "2026-10-09",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "colorado-boulevard-eb",
+  "target_id": "la-county-judge-87",
+  "status": "endorsed",
+  "choice": "Anthony (A.J.) Bayne",
+  "why": "Its editorial board's Oct 9 recommendations for the Superior Court put a check mark beside Anthony (A.J.) Bayne for Office 87. The board says that in these races it \"found distinctions in experience and courtroom readiness significant enough to recommend one candidate over others.\"",
+  "url": "https://www.coloradoboulevard.net/2026-general-election-recommendations-for-l-a-county-superior-court-judges/",
+  "date": "2026-10-09",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "colorado-boulevard-eb",
+  "target_id": "la-county-judge-131",
+  "status": "endorsed",
+  "choice": "Donna Tryfman",
+  "why": "Its editorial board's Oct 9 recommendations for the Superior Court put a check mark beside Donna Tryfman for Office 131. The board says that in these races it \"found distinctions in experience and courtroom readiness significant enough to recommend one candidate over others.\"",
+  "url": "https://www.coloradoboulevard.net/2026-general-election-recommendations-for-l-a-county-superior-court-judges/",
+  "date": "2026-10-09",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "reform-california",
+  "target_id": "la-county-judge-64",
+  "status": "no_position",
+  "choice": null,
+  "why": "Marks Office 64 \"Definitely NOT Rhonda A. Haymon\" and names no one to vote for. Its guide says a race with no recommendation means \"we either could not support the measure or candidates running in that race, or do not have enough information to make an informed recommendation.\"",
+  "url": "https://www.reformcalifornia.org/voter-guides/los-angeles",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "reform-california",
+  "target_id": "la-county-judge-65",
+  "status": "no_position",
+  "choice": null,
+  "why": "Marks Office 65 \"Definitely NOT Justin Clayton\" and names no one to vote for. Its guide says a race with no recommendation means \"we either could not support the measure or candidates running in that race, or do not have enough information to make an informed recommendation.\"",
+  "url": "https://www.reformcalifornia.org/voter-guides/los-angeles",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "reform-california",
+  "target_id": "la-county-judge-87",
+  "status": "no_position",
+  "choice": null,
+  "why": "Marks Office 87 \"Definitely NOT A.J. Bayne\" and names no one to vote for. Its guide says a race with no recommendation means \"we either could not support the measure or candidates running in that race, or do not have enough information to make an informed recommendation.\"",
+  "url": "https://www.reformcalifornia.org/voter-guides/los-angeles",
+  "date": "2026-10-31",
+  "confidence": "verified"
  }
 ]

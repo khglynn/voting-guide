@@ -572,72 +572,72 @@
  {
   "endorser_id": "la-fed",
   "target_id": "burbank-city-council",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its November 2026 voter guide, two images on this page, lists nothing on Burbank City Council (checked Oct 31, 2026).",
+  "status": "endorsed",
+  "choice": "Nikki Perez, Nolan Southerland, Mike Van Gorder",
+  "why": "Listed under 'Burbank City Council' in its November 2026 voter guide (the third of the guide's images on this page), with no reason given.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
   "date": "2026-10-31",
-  "confidence": "verified"
+  "confidence": "sourced"
  },
  {
   "endorser_id": "la-fed",
   "target_id": "burbank-city-clerk",
   "status": "not_found",
   "choice": null,
-  "why": "Its November 2026 voter guide, two images on this page, lists nothing on Burbank city clerk (checked Oct 31, 2026).",
+  "why": "Its November 2026 voter guide lists picks for Burbank City Council and Burbank Unified, but none for city clerk (checked Oct 31, 2026).",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
   "date": "2026-10-31",
-  "confidence": "verified"
+  "confidence": "sourced"
  },
  {
   "endorser_id": "la-fed",
   "target_id": "burbank-city-treasurer",
   "status": "not_found",
   "choice": null,
-  "why": "Its November 2026 voter guide, two images on this page, lists nothing on Burbank city treasurer (checked Oct 31, 2026).",
+  "why": "Its November 2026 voter guide lists picks for Burbank City Council and Burbank Unified, but none for city treasurer (checked Oct 31, 2026).",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
   "date": "2026-10-31",
-  "confidence": "verified"
+  "confidence": "sourced"
  },
  {
   "endorser_id": "la-fed",
   "target_id": "burbank-usd-area-3",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its November 2026 voter guide, two images on this page, lists nothing on Burbank Unified (checked Oct 31, 2026).",
+  "status": "endorsed",
+  "choice": "Rosemary T. Morrison",
+  "why": "Listed under 'Burbank Unified School District' as 'Rosemary T. Morrison - Area 3' in its November 2026 voter guide, with no reason given.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
   "date": "2026-10-31",
-  "confidence": "verified"
+  "confidence": "sourced"
  },
  {
   "endorser_id": "la-fed",
   "target_id": "burbank-measure-c",
   "status": "not_found",
   "choice": null,
-  "why": "Its November 2026 voter guide, two images on this page, lists nothing on Burbank's Measure C (checked Oct 31, 2026).",
+  "why": "Its November 2026 voter guide's page of local measures lists LA County's Measure A and measures in other cities, but nothing on Burbank's Measure C (checked Oct 31, 2026).",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
   "date": "2026-10-31",
-  "confidence": "verified"
+  "confidence": "sourced"
  },
  {
   "endorser_id": "la-fed",
   "target_id": "burbank-measure-cc",
   "status": "not_found",
   "choice": null,
-  "why": "Its November 2026 voter guide, two images on this page, lists nothing on Burbank's Measure CC (checked Oct 31, 2026).",
+  "why": "Its November 2026 voter guide's page of local measures lists LA County's Measure A and measures in other cities, but nothing on Burbank's Measure CC (checked Oct 31, 2026).",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
   "date": "2026-10-31",
-  "confidence": "verified"
+  "confidence": "sourced"
  },
  {
   "endorser_id": "la-fed",
   "target_id": "burbank-measure-cd",
   "status": "not_found",
   "choice": null,
-  "why": "Its November 2026 voter guide, two images on this page, lists nothing on Burbank's Measure CD (checked Oct 31, 2026).",
+  "why": "Its November 2026 voter guide's page of local measures lists LA County's Measure A and measures in other cities, but nothing on Burbank's Measure CD (checked Oct 31, 2026).",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
   "date": "2026-10-31",
-  "confidence": "verified"
+  "confidence": "sourced"
  },
  {
   "endorser_id": "la-daily-news-eb",

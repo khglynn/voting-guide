@@ -6,7 +6,7 @@
   "pass_threshold": "simple majority",
   "referred_by": "council",
   "official_text_url": "https://content.lavote.gov/docs/rrcc/documents/measures-appearing-on-the-ballot---november-3-2026-rev-8-14-2026-v-4.pdf",
-  "official_guide_url": null,
+  "official_guide_url": "https://www.burbankca.gov/tot-measure",
   "explainers": [],
   "confidence": "sourced",
   "id": "burbank-measure-c",
@@ -24,8 +24,8 @@
    "source": "https://outlooknewspapers.com/burbankleader/voters-to-see-tax-hike-election-measures-in-november/article_636f9af5-f657-4687-8f71-6014ee06e4bc.html"
   },
   "opponents_case": {
-   "text": "We found no organized campaign or official argument against it. An independent Burbank guide that links every argument the city posted lists only an argument in favor.",
-   "source": "https://burbankvotes.com/measures/"
+   "text": "The LA County Republican Party says vote no. Its guide calls Measure C a “General tax, no sunset,” meaning the money can pay for any city service and the higher rate has no end date.",
+   "source": "https://lagop-endorsement-lookup.vercel.app/"
   }
  },
  {
@@ -35,7 +35,7 @@
   "pass_threshold": "simple majority",
   "referred_by": "council",
   "official_text_url": "https://content.lavote.gov/docs/rrcc/documents/measures-appearing-on-the-ballot---november-3-2026-rev-8-14-2026-v-4.pdf",
-  "official_guide_url": null,
+  "official_guide_url": "https://www.burbankca.gov/election-measures",
   "explainers": [],
   "confidence": "sourced",
   "id": "burbank-measure-cc",
@@ -49,12 +49,12 @@
   "fiscal_impact": null,
   "confusing_wording_note": "If CC passes and CD fails, council elections stay citywide for now, but a future council could change the system by ordinance without another charter vote.",
   "supporters_case": {
-   "text": "The city says passing CC gives the council more flexibility to change how elections are run if state or federal law changes, and that letting voters decide avoids more legal costs.",
-   "source": "https://outlooknewspapers.com/burbankleader/voters-to-see-tax-hike-election-measures-in-november/article_636f9af5-f657-4687-8f71-6014ee06e4bc.html"
+   "text": "The city says CC gives the council and voters flexibility to respond to future changes in state law, election rules or court rulings, and could lower the risk of costly lawsuits.",
+   "source": "https://burbankvotes.com/measures/"
   },
   "opponents_case": {
-   "text": "We found no organized campaign or official argument against it. An independent Burbank guide that links every argument the city posted lists only an argument in favor.",
-   "source": "https://burbankvotes.com/measures/"
+   "text": "myBurbank's editor says that if CC passes and CD fails, the council could still adopt a different district map by ordinance, without a charter vote. He writes that “the method we use to elect our representatives is important enough to keep under direct voter control.”",
+   "source": "https://myburbank.com/myburbanks-position-vote-no-on-measures-cc-and-cd-yes-on-c/"
   }
  },
  {
@@ -64,7 +64,7 @@
   "pass_threshold": "simple majority",
   "referred_by": "council",
   "official_text_url": "https://content.lavote.gov/docs/rrcc/documents/measures-appearing-on-the-ballot---november-3-2026-rev-8-14-2026-v-4.pdf",
-  "official_guide_url": null,
+  "official_guide_url": "https://www.burbankca.gov/election-measures",
   "explainers": [],
   "confidence": "sourced",
   "id": "burbank-measure-cd",
@@ -77,7 +77,13 @@
   "current_law": "Burbank elects its five council members at large: every voter votes for all the open seats, wherever they live. In 2023 a resident sued the city under the California Voting Rights Act over these citywide elections. To settle the case in 2026, the city agreed to put Measures CC and CD on this ballot.",
   "fiscal_impact": null,
   "confusing_wording_note": "A yes on CD does nothing unless Measure CC passes too. This year's council race is still citywide either way.",
-  "supporters_case": null,
-  "opponents_case": null
+  "supporters_case": {
+   "text": "We found no official argument for CD. A resident's letter in myBurbank argues that a district “gives each neighborhood one person whose job is to answer to it,” and that smaller races cost less to run, so people without big donors could win a seat.",
+   "source": "https://myburbank.com/letter-to-the-editor-resident-disagrees-with-myburbanks-ballot-position/"
+  },
+  "opponents_case": {
+   "text": "myBurbank's editor says districts would limit your vote to the one council seat for your district, once every four years, with no say in choosing the other four members, whose decisions still affect your neighborhood. “Every resident should have a vote in choosing the entire council.”",
+   "source": "https://myburbank.com/myburbanks-position-vote-no-on-measures-cc-and-cd-yes-on-c/"
+  }
  }
 ]

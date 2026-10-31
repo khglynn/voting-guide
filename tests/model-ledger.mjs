@@ -1440,6 +1440,19 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       open('FL', []);
       pub = pass.messages().pub || '';
       check('share: a statewide ballot before early voting opens gets no where-to-vote line', !/Find (early voting places|where to vote)/.test(pub), pub);
+      // Florida's statewide window is a minimum (Oct 24 to 31); on Nov 1 some counties still vote early, so the
+      // message says so and links the state's early voting page, as the plan does. Nov 2, neither.
+      on('2026-11-01');
+      pub = pass.messages().pub || '';
+      check('share: statewide Florida on Nov 1 says some counties still vote early and links the state’s page', /Some Florida counties offer early voting through Sun, Nov 1; check yours\./.test(pub) && /\nFind early voting places: https:\/\/dos\.fl\.gov\/elections\/for-voters\/voting\/early-voting\/\n/.test(pub) && !/Every Florida county/.test(pub), pub);
+      on('2026-11-02');
+      pub = pass.messages().pub || '';
+      check('share: statewide Florida on Nov 2 has no early voting line or link', !/early voting/i.test(pub), pub);
+      open('FL', ['pensacola-fl']);
+      on('2026-11-01');
+      pub = pass.messages().pub || '';
+      check('share: Pensacola on Nov 1 keeps its county’s closing day (Oct 31): no early voting line', !/early voting/i.test(pub), pub);
+      on('2026-10-20');
       open('TX', []);
       pub = pass.messages().pub || '';
       check('share: a statewide Texas ballot during early voting gets the state’s early voting page', /Find early voting places: https:\/\/www\.votetexas\.gov\/voting\/where\.html/.test(pub), pub);
@@ -1553,6 +1566,34 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const flAll = plan.nextStep(open('FL', []).howto, '2026-10-19');
     check('plan: statewide Florida on Oct 19 says early voting starts Sat, Oct 24, and that some counties open sooner', /^Early voting starts Sat, Oct 24\.$/.test(words(flAll)) && flAll.sub.some((x) => /Some counties open sooner/.test(x)), `${words(flAll)} | ${flAll.sub.join(' | ')}`);
     check('plan: Orlando on Oct 19 still says early voting starts today', /^Early voting starts today, Oct 19\.$/.test(words(plan.nextStep(open('FL', ['orlando-fl']).howto, '2026-10-19'))));
+    // Round 3 gate on #60: Florida's Oct 31 is a minimum, and counties may vote early to Nov 1 (s. 101.657, F.S.).
+    const flOn = (t, absolute) => plan.nextStep(open('FL', []).howto, t, absolute);
+    const fl30 = flOn('2026-10-30'), fl31 = flOn('2026-10-31'), fl31a = flOn('2026-10-31', true), fl1 = flOn('2026-11-01'), fl1a = flOn('2026-11-01', true), fl2 = flOn('2026-11-02');
+    check('plan: statewide Florida on Oct 30 says some counties stay open through Sun, Nov 1', fl30.phase === 'early_open' && fl30.sub[0] === 'Some counties stay open through Sun, Nov 1. Check yours.', fl30.sub.join(' | '));
+    check('plan: statewide Florida on Oct 31 never says it is the last day of early voting', fl31.phase === 'early_open' && words(fl31) === 'Early voting ends today in some counties.' && fl31.sub[0] === 'Others stay open through Sun, Nov 1. Check yours.', `${words(fl31)} | ${fl31.sub.join(' | ')}`);
+    check('plan: statewide Florida\'s plan on Oct 31 says open through Oct 31 and some counties through Nov 1', /^Early voting is open through Sat, Oct 31\.$/.test(words(fl31a)) && fl31a.sub[0] === 'Some counties stay open through Sun, Nov 1. Check yours.', `${words(fl31a)} | ${fl31a.sub.join(' | ')}`);
+    check('plan: statewide Florida on Nov 1 says some counties still vote early today, with the state\'s early voting page and Election Day after', fl1.phase === 'early_open' && words(fl1) === 'Some counties still offer early voting today.' && fl1.sub[0] === 'Check whether yours does.' && fl1.sub.at(-1) === 'Or vote on Election Day, Tue, Nov 3, until 7 PM.' && fl1.primary.label === 'Find early voting places' && fl1.primary.url === fl.early_in_person.lookup_url && words(fl1a) === 'Some counties offer early voting through Sun, Nov 1.', `${words(fl1)} | ${fl1.sub.join(' | ')} | ${JSON.stringify(fl1.primary)} || ${words(fl1a)}`);
+    check('plan: statewide Florida on Nov 2 says nothing more about early voting', fl2.phase === 'election_day_next' && !fl2.sub.some((x) => /early voting/.test(x)), fl2.sub.join(' | '));
+    const placeSteps = ['orlando-fl', 'pensacola-fl', 'tallahassee-fl'].flatMap((id) => ['2026-10-30', '2026-10-31', '2026-11-01'].map((t) => plan.nextStep(open('FL', [id]).howto, t)));
+    check('plan: a Florida place keeps its own county\'s last day, with no latest-county-day line', orl.latest_end === null && pen.latest_end === null && !placeSteps.some((st) => [words(st), ...st.sub].some((x) => /Some counties|Others stay|yours does/.test(x))) && words(plan.nextStep(open('FL', ['pensacola-fl']).howto, '2026-10-31')) === 'Today is the last day of early voting.', placeSteps.map((st) => st.sub.join(' | ')).join(' || '));
+    // Self-review on #62: the Key dates list says the same as the step, both ends for the state, one for a place.
+    // Gate round 1 on #62: only the list itself, built as of Nov 1, so the dated gotchas beside it (Florida's third
+    // reads "Early voting ends today in Orange and Leon" on Nov 1) can't change what it reads with the day CI runs.
+    const keyDates = (places, day = '2026-11-01') => {
+      const loc = Object.getOwnPropertyDescriptor(globalThis, 'location');
+      const wq = S.ui.wiQ, had = S.ui.open.has('bx-dates'); S.ui.wiQ = ''; S.ui.open.add('bx-dates');
+      Object.defineProperty(globalThis, 'location', { configurable: true, value: { search: `?today=${day}`, origin: 'http://x', pathname: '/' } });
+      try {
+        const list = (views.planstrip.whatIfBody(open('FL', places).howto).match(/<ol class="pdates">[\s\S]*?<\/ol>/) || [''])[0];
+        return list.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+      } finally {
+        if (loc) Object.defineProperty(globalThis, 'location', loc); else delete globalThis.location;
+        S.ui.wiQ = wq; if (!had) S.ui.open.delete('bx-dates');
+      }
+    };
+    const kdFl = keyDates([]), kdPen = keyDates(['pensacola-fl']);
+    check('plan: statewide Florida\'s key dates on Nov 1 end early voting in some counties Oct 31 (passed) and in the rest Nov 1 (not passed)', /Sat, Oct 31 Early voting ends in some counties passed\b/.test(kdFl) && /Sun, Nov 1 Early voting ends in the rest(?! passed)/.test(kdFl) && !/Early voting ends(?! in)/.test(kdFl), kdFl);
+    check('plan: Pensacola\'s key dates end early voting once, on Oct 31', /Sat, Oct 31 Early voting ends(?! in)/.test(kdPen) && !/in the rest|in some counties/.test(kdPen), kdPen);
     const a1 = { early_in_person: { start: '2026-10-19', end: '2026-11-01', hours_note: 'A', lookup_url: 'https://a.example', source: 'https://a.example', confidence: 'verified' } };
     const a2 = { early_in_person: { start: '2026-10-24', end: '2026-10-31', hours_note: 'B', lookup_url: 'https://b.example', source: 'https://b.example', confidence: 'verified' } };
     check('plan: places that disagree keep the state window', plan.localHowto(fl, [a1, a2]).early_in_person === fl.early_in_person && plan.localHowto(fl, [a1, {}]).early_in_person === fl.early_in_person);

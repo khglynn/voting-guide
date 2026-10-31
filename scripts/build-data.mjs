@@ -556,6 +556,13 @@ for (const f of listJson('states')) {
   s.heads_up = headsUp(s.heads_up, f);
   const dated = datedGotchas(datedList(s.dated, s, f), s.gotchas);
   stateHelp(s, f);
+  // The last day any county may still vote early, where the state's window is a minimum (Florida's Nov 1):
+  // after the window's end and before Election Day, or nothing.
+  const ep = s.early_in_person;
+  if (ep && ep.latest_end != null && !(isDate(ep.latest_end) && ep.counties_vary === 'minimum' && isDate(ep.end) && ep.end < ep.latest_end && ep.latest_end < s.election_date)) {
+    warn(`${f}: early_in_person.latest_end needs counties_vary "minimum" and a date after end and before Election Day; dropped it`);
+    ep.latest_end = null;
+  }
   if (dated && dated.length) s.dated = dated; else delete s.dated;
   if (s.judicial_review != null) {
     const jr = s.judicial_review;

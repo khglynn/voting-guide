@@ -95,7 +95,10 @@ function dateRows(h: HowTo): Row[] {
   if (rq && rq.date) out.push({ date: rq.date, label: 'Last day to ask for a mail ballot', detail: rq.rule, source: rq.source, key: 'req' });
   const ep = h.early_in_person;
   if (ep.available && ep.start) out.push({ date: ep.start, label: 'Early voting starts', detail: ep.hours_note, source: ep.lookup_url, key: 'eps' });
-  if (ep.available && ep.end) out.push({ date: ep.end, label: 'Early voting ends', detail: ep.available && ep.start ? null : ep.hours_note, source: ep.lookup_url, key: 'epe' });
+  // Where the window is a minimum with a later county day (statewide Florida: Oct 31, then Nov 1), both ends.
+  const later = ep.available && ep.end && ep.latest_end && ep.latest_end > ep.end ? ep.latest_end : null;
+  if (ep.available && ep.end) out.push({ date: ep.end, label: later ? 'Early voting ends in some counties' : 'Early voting ends', detail: ep.available && ep.start ? null : ep.hours_note, source: ep.lookup_url, key: 'epe' });
+  if (later) out.push({ date: later, label: 'Early voting ends in the rest', detail: null, source: ep.lookup_url, key: 'epl' });
   const r = h.mail_ballot.return_deadline;
   out.push({ date: r.date, label: `Mail ballots must be ${r.rule === 'received_by' ? 'received' : r.rule === 'postmarked_by' ? 'postmarked' : 'returned'}`, detail: r.time, source: r.source, key: 'ret' });
   out.push({ date: h.election_date, label: `Election Day. Polls close ${h.election_day.polls_close}`, detail: h.election_day.in_line_rule, source: h.election_day.lookup_url, key: 'ed' });

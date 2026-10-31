@@ -73,7 +73,8 @@
     "vote_centers": true,
     "lookup_url": "https://dos.fl.gov/elections/for-voters/voting/early-voting/",
     "confidence": "verified",
-    "counties_vary": "minimum"
+    "counties_vary": "minimum",
+    "latest_end": "2026-11-01"
   },
   "election_day": {
     "polls_open": "7:00 AM",

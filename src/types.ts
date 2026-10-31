@@ -208,6 +208,12 @@ export interface HowTo {
     hours_note: string | null;
     vote_centers: boolean | null;
     lookup_url: string | null;
+    /* "minimum": the state's window is a floor every county offers (Florida); "varies": there is
+       no statewide window, only a common last day (Illinois). */
+    counties_vary?: 'minimum' | 'varies';
+    /* Where the window is a minimum, the last day any county may still offer early voting
+       (Florida's 2nd day before the election, s. 101.657, F.S.). A place's own window drops it. */
+    latest_end?: string | null;
   };
   election_day: {
     polls_open: string;

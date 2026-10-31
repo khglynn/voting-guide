@@ -37,6 +37,7 @@ const site = await vite.ssrLoadModule('/src/pages/site.ts');
 const bl = await vite.ssrLoadModule('/src/ballot.ts');
 const labels = await vite.ssrLoadModule('/src/model/labels.ts');
 const st8 = await vite.ssrLoadModule('/src/state.ts');
+const { fmtDate } = await vite.ssrLoadModule('/src/util.ts');
 
 const results = [];
 const check = (name, ok, extra = '') => { results.push({ name, ok }); console.log(`${ok ? 'PASS' : 'FAIL'}  ${name}${!ok && extra ? `  (${extra})` : ''}`); };
@@ -219,6 +220,20 @@ check('page titles and descriptions: no em dashes, no all caps', !bad.copy.lengt
   const aus = (day) => site.placePage(data, 'austin-tx', A, day).html;
   check('a page built after early voting ended has no early voting link and keeps Election Day\'s', md('2026-10-29').includes('>Find early voting locations</a>') && !md('2026-10-30').includes('>Find early voting locations</a>') && md('2026-10-30').includes('>Find your Election Day polling place</a>'));
   check('Austin built after early voting: no county\'s early voting link, every county\'s Election Day link stays', aus('2026-10-30').includes('>Early voting locations</a>') && !aus('2026-10-31').includes('>Early voting locations</a>') && (aus('2026-10-31').match(/>Election Day locations<\/a>/g) || []).length === (data.places['austin-tx'].by_county || []).filter((c) => c.lookups.election_day).length);
+  // Florida's window is only a minimum: its page keeps the state's early voting link through the last day a county may
+  // still vote early (Nov 1, s. 101.657, when Orange and Leon do), while each place keeps its own last day and dates.
+  const fl = (day) => site.statePage(data, 'FL', A, day).html;
+  const flEp = data.states.FL.howto.early_in_person;
+  const flLink = `<a href="${flEp.lookup_url}" rel="noopener">Find early voting locations</a>`;
+  check('Florida\'s page built Nov 1 keeps the state\'s early voting link, and built Nov 2 drops it', flEp.latest_end === '2026-11-01' && fl('2026-11-01').includes(flLink) && !fl('2026-11-02').includes(flLink) && fl('2026-11-02').includes('>Find your Election Day polling place</a>'));
+  const dayAfter = (iso) => new Date(Date.parse(`${iso}T12:00:00Z`) + 864e5).toISOString().slice(0, 10);
+  const flOff = ['pensacola-fl', 'orlando-fl', 'tallahassee-fl'].filter((id) => {
+    const end = data.places[id].early_in_person.end;
+    const pg = (day) => site.placePage(data, id, A, day).html;
+    const dates = `<b>${fmtDate(data.places[id].early_in_person.start)} to&nbsp;${fmtDate(end)}</b>`;
+    return !(pg(end).includes('>Find early voting locations</a>') && !pg(dayAfter(end)).includes('>Find early voting locations</a>') && pg(flEp.latest_end).includes(dates));
+  });
+  check('Florida places keep their own last day of early voting (Pensacola\'s Oct 31, before the state\'s latest county day) and dates', !flOff.length && data.places['pensacola-fl'].early_in_person.end < flEp.latest_end, flOff.join(' '));
   // A county row always has a link, and the heading never stands alone (Atlanta from Oct 31: its counties' early
   // voting links go with early voting, and their drop box links are dated, so no row is left).
   const bareRows = (html) => {

@@ -208,9 +208,12 @@ function whereHTML(h: HowTo, p: PlaceBundle | null): string {
   const links: string[] = [];
   const mail = isMailState(h);
   // Once early voting has ended by the build day (h.day, Oct 30), its links go and the Election Day link stays;
-  // a page built during early voting keeps its link until the next deploy.
+  // a page built during early voting keeps its link until the next deploy. Where the state's window is only a
+  // minimum, that's its last possible county day (Florida's page keeps its link Nov 1, when Orange and Leon still
+  // vote early); a place's own window has no such day (Pensacola's link goes Nov 1, Orlando's Nov 2).
   const ep = h.early_in_person;
-  const earlyOver = !!(ep.end && h.day && h.day > ep.end);
+  const last = ep.latest_end || ep.end;
+  const earlyOver = !!(last && h.day && h.day > last);
   const early = ep.available && !earlyOver ? ep.lookup_url : null;
   const day = h.election_day.lookup_url;
   // A place across county lines (Austin: Travis, Williamson, Hays): each county's own tools, labeled, as My plan

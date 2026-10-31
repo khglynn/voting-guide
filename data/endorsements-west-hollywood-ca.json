@@ -60,6 +60,16 @@
   "confidence": "verified"
  },
  {
+  "endorser_id": "la-forward",
+  "target_id": "west-hollywood-city-council",
+  "status": "endorsed",
+  "choice": "Chelsea Byers, Helen Krieger, Stephen Post",
+  "why": "Marks all three 'Recommended' for the three at-large seats. After naming Councilmember Chelsea Byers, it says: 'We recommend you vote for her, along with Helen Krieger, and Stephen Post.'",
+  "url": "https://laforwardguide.org/guide/west-hollywood",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
   "endorser_id": "la-fed",
   "target_id": "west-hollywood-city-council",
   "status": "endorsed",

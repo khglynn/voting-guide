@@ -6,7 +6,7 @@
   "office": "West Hollywood City Council",
   "district": null,
   "scope_plain": "All of West Hollywood votes in this race: the council is elected citywide, not by district. You can vote for up to three candidates, and the three with the most votes win. There's no primary or runoff. Only people who live inside West Hollywood city limits see it, and a 90046, 90048 or 90069 address can be in the City of Los Angeles instead.",
-  "office_explainer": "One of five members who pass city laws, set the budget and decide what gets built. Members pick the mayor each year.",
+  "office_explainer": "One of five members who pass city laws and set the budget. Members pick the mayor each year.",
   "why_it_matters": "Three of the five seats are up. Two are open because Mayor John Heilman and Councilmember Lauren Meister can't run again (term limits), and Councilmember Chelsea Byers is running for a second term. There are 14 names on the ballot.",
   "vote_for": 3,
   "incumbent": "Chelsea Byers (running); John Heilman and Lauren Meister (term-limited)",
@@ -42,7 +42,7 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "Ballot designation: Sales Associate/Author. His official statement says he has lived in West Hollywood for more than 20 years, rents, works in retail and is finishing a public administration master's degree at USC.",
+    "background": "Ballot designation: Sales Associate/Author. His official statement says West Hollywood has been part of his life for more than 20 years, and that he rents, works in retail and is finishing a public administration master's degree at USC.",
     "own_words": [
      {
       "text": "strengthen public safety, support housing that is affordable while planning responsibly for our future",
@@ -240,7 +240,7 @@
     "incumbent": true,
     "website": "https://chelsea4weho.com",
     "website_confidence": "verified",
-    "background": "Ballot designation: Councilmember/Policy Director. Elected to the council in 2022 and has served as mayor; she is the only council member running this year.",
+    "background": "Ballot designation: Councilmember/Policy Director. Elected to the council in 2022 and has served as mayor; she is the only sitting council member running for the council this year.",
     "own_words": [
      {
       "text": "lower housing costs, strengthen social services, modernize our aging infrastructure, make our streets safer",

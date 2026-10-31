@@ -1,0 +1,213 @@
+{
+ "id": "santa-clarita-ca",
+ "label": "Santa Clarita",
+ "state": "CA",
+ "counties": [
+  "Los Angeles"
+ ],
+ "county_fips": [
+  "06037"
+ ],
+ "county_election_office": {
+  "name": "Los Angeles County Registrar-Recorder/County Clerk (LAVote.gov), 12400 Imperial Hwy, Norwalk",
+  "url": "https://lavote.gov",
+  "phone": "(800) 815-2666",
+  "phone_label": "General line",
+  "lines": [
+   {
+    "label": "Mail ballot help",
+    "phone": "(800) 815-2666",
+    "hours": "press 2, then 3"
+   },
+   {
+    "label": "Vote center questions",
+    "phone": "(800) 815-2666",
+    "hours": "press 1"
+   }
+  ]
+ },
+ "sample_ballot_url": "https://isb.lavote.gov/",
+ "zips": [
+  "91321",
+  "91350",
+  "91351",
+  "91354",
+  "91355",
+  "91387",
+  "91390"
+ ],
+ "zip_caveats": "Santa Clarita takes in Valencia, Saugus, Newhall and Canyon Country, so your mail may use any of those names. Most city homes are in 91321, 91350, 91351, 91354, 91355, 91387 and 91390. Some homes in these ZIPs are in unincorporated LA County, not the city: about 1 in 8 people in 91354 (land north of Valencia) and about 1 in 3 in 91390 (toward Agua Dulce, Acton and Green Valley), plus a few at the edges of 91321, 91351 and 91387. If you live outside city limits, you don't vote for city council, but you may still have Hart district, Saugus Union, College of the Canyons and SCV Water races; this guide's Santa Clarita ballot covers city voters. Stevenson Ranch (91381) and Castaic, Val Verde and Hasley Canyon (91384) are unincorporated, so they aren't part of this ballot. Congress: most of the city is in the 27th District. About 8,500 people on the city's southeast edge, almost all in 91387 (Sand Canyon and nearby), are in the 30th. All of the city is in Assembly District 40 and State Senate District 23. District 23 has no race this year, because only even-numbered Senate districts vote in 2026. City council: only Districts 2, 4 and 5 vote this year. Schools: all of the city is in the Hart high school district (Areas 2 and 5 vote), and each home is in one elementary district: Saugus Union (Areas 1, 2 and 5 vote), Sulphur Springs Union or Newhall (no races: every seat up this year had one candidate), or, for a small corner of the city, Castaic Union, whose races aren't in this guide. College of the Canyons: only Trustee Area 1 votes. SCV Water: Divisions 1 and 3 vote; Division 2 doesn't. The county's interactive sample ballot at isb.lavote.gov shows your exact races.",
+ "zip_outside": {
+  "91354": "Unincorporated LA County land north of Valencia",
+  "91390": "Agua Dulce, Acton, Green Valley or other unincorporated land"
+ },
+ "contest_ids": [
+  "ca-governor",
+  "ca-lt-governor",
+  "ca-secretary-of-state",
+  "ca-controller",
+  "ca-treasurer",
+  "ca-attorney-general",
+  "ca-insurance-commissioner",
+  "ca-superintendent",
+  "ca-boe-3",
+  "ca-supreme-court-evans",
+  "ca-supreme-court-groban",
+  "ca-coa-2d-retention",
+  "ca-prop-1",
+  "ca-prop-2",
+  "ca-prop-3",
+  "ca-prop-4",
+  "ca-prop-5",
+  "ca-prop-37",
+  "ca-prop-38",
+  "ca-prop-39",
+  "ca-prop-40",
+  "ca-prop-41",
+  "ca-prop-42",
+  "ca-prop-43",
+  "ca-prop-44",
+  "ca-prop-45",
+  "la-county-measure-a",
+  "la-county-measure-e",
+  "santa-clarita-council-2",
+  "santa-clarita-council-4",
+  "santa-clarita-council-5",
+  "la-county-sheriff",
+  "la-county-judge-64",
+  "la-county-judge-65",
+  "la-county-judge-87",
+  "la-county-judge-131",
+  "hart-uhsd-area-2",
+  "hart-uhsd-area-5",
+  "saugus-usd-area-1",
+  "saugus-usd-area-2",
+  "saugus-usd-area-5",
+  "scccd-area-1",
+  "scv-water-division-1",
+  "scv-water-division-3",
+  "ca-us-house-27",
+  "ca-us-house-30",
+  "ca-assembly-40"
+ ],
+ "district_finders": [
+  {
+   "office_match": "Santa Clarita City Council",
+   "label": "Find your council district",
+   "url": "https://residency.santa-clarita.com/"
+  },
+  {
+   "office_match": "William S. Hart Union High School District Governing Board",
+   "label": "Find your Hart trustee area",
+   "url": "https://www.hartdistrict.org/apps/pages/index.jsp?uREC_ID=739893&type=d&pREC_ID=1152469"
+  },
+  {
+   "office_match": "Saugus Union School District Governing Board",
+   "label": "See the Saugus Union trustee area map",
+   "url": "https://wsos-cdn.s3.us-west-2.amazonaws.com/uploads/sites/109/Trustee-Area-Map.pdf"
+  },
+  {
+   "office_match": "Santa Clarita Community College District Board of Trustees",
+   "label": "See College of the Canyons' trustee areas",
+   "url": "https://www.canyons.edu/administration/board/elections/index.php"
+  },
+  {
+   "office_match": "Santa Clarita Valley Water Agency Board of Directors",
+   "label": "See SCV Water's division map",
+   "url": "https://yourscvwater.com/sites/default/files/SCVWA/about/governance/board/SCVWA%20Electoral%20Divisions%20Layout%2011x17%20v20250101.pdf"
+  },
+  {
+   "office_match": "U.S. Representative",
+   "label": "Find your district on your official ballot",
+   "url": "https://isb.lavote.gov/"
+  },
+  {
+   "office_match": "Santa Clarita City Council",
+   "label": "Check your district on your official sample ballot",
+   "url": "https://isb.lavote.gov/"
+  },
+  {
+   "office_match": "William S. Hart Union High School District Governing Board",
+   "label": "Check your area on your official sample ballot",
+   "url": "https://isb.lavote.gov/"
+  },
+  {
+   "office_match": "Saugus Union School District Governing Board",
+   "label": "Check your area on your official sample ballot",
+   "url": "https://isb.lavote.gov/"
+  },
+  {
+   "office_match": "Santa Clarita Community College District Board of Trustees",
+   "label": "Check your area on your official sample ballot",
+   "url": "https://isb.lavote.gov/"
+  },
+  {
+   "office_match": "Santa Clarita Valley Water Agency Board of Directors",
+   "label": "Check your division on your official sample ballot",
+   "url": "https://isb.lavote.gov/"
+  }
+ ],
+ "lookups": {
+  "early_in_person": "https://locator.lavote.net/locations/vc",
+  "election_day": "https://locator.lavote.net/locations/vc",
+  "drop_box": "https://locator.lavote.gov/locations/vbm?culture=en"
+ },
+ "situations": [
+  {
+   "id": "no_mail_ballot_or_lost",
+   "short": "Get a replacement at any LA County vote center or just vote there.",
+   "answer": "The last day to ask for a ballot by mail was October 27. You can still go to any LA County vote center and ask for a replacement or vote there in person. Questions? Call (800) 815-2666, press 2, then 3.",
+   "steps": [
+    "Use the county's locator to find a vote center near you."
+   ],
+   "source": "https://www.lavote.gov/home/voting-elections/voting-options/vote-by-mail/how-to-vote-by-mail",
+   "confidence": "verified"
+  }
+ ],
+ "notes": "The Santa Clarita Valley has 22 vote centers. Every LA County vote center is open 10 AM to 7 PM daily through November 2, and 7 AM to 8 PM on Election Day, November 3. You can vote at any vote center in LA County. Find one at locator.lavote.gov.",
+ "dated": [
+  {
+   "path": "notes",
+   "from": "2026-11-03",
+   "text": "All 22 Santa Clarita Valley vote centers, like every LA County vote center, are open 7 AM to 8 PM on Election Day, November 3. You can vote at any one. Find one at locator.lavote.gov."
+  }
+ ],
+ "sources": [
+  {
+   "name": "LA County: how to vote by mail",
+   "url": "https://www.lavote.gov/home/voting-elections/voting-options/vote-by-mail/how-to-vote-by-mail"
+  },
+  {
+   "name": "LA County: contact (phone menu)",
+   "url": "https://www.lavote.gov/contact-us/contact-us"
+  },
+  {
+   "name": "LA County: drop box locator",
+   "url": "https://locator.lavote.gov/locations/vbm?culture=en"
+  },
+  {
+   "name": "LA County: interactive sample ballot",
+   "url": "https://isb.lavote.gov/"
+  },
+  {
+   "name": "SCVNews: SCV has 22 vote centers open this weekend (Oct 31, 2026, from the county's announcement)",
+   "url": "https://scvnews.com/scv-has-22-vote-centers-open-this-weekend-for-nov-3-general-election/"
+  },
+  {
+   "name": "City of Santa Clarita: elections",
+   "url": "https://santaclarita.gov/city-clerk/elections/"
+  },
+  {
+   "name": "City of Santa Clarita: district elections",
+   "url": "https://santaclarita.gov/district-elections/"
+  },
+  {
+   "name": "Statewide Database: AB 604 (Prop 50) city splits report",
+   "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
+  },
+  {
+   "name": "U.S. Census Bureau: 2020 ZIP area (ZCTA) to block relationship file",
+   "url": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_tabblock20_natl.txt"
+  }
+ ]
+}

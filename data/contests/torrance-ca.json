@@ -1,0 +1,188 @@
+[
+ {
+  "id": "torrance-usd-area-d",
+  "state": "CA",
+  "level": "school",
+  "office": "Torrance Unified School District Governing Board",
+  "district": "Trustee Area D",
+  "scope_plain": "Only voters in Torrance Unified's Trustee Area D, in south Torrance, have this race. Torrance Unified elects each board member by area, and Area D is the only one with a race this year: Areas B, C and E each had just one candidate, so those seats aren't on the ballot. Your sample ballot shows whether you have it. Nonpartisan.",
+  "office_explainer": "Sets policy and the budget for Torrance's public schools, and hires the superintendent.",
+  "why_it_matters": "The Area D seat is empty because the trustee who held it was elected to the Torrance City Council in June, so either winner will be new to the board.",
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": true,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Ryan Rauzon",
+    "party": null,
+    "incumbent": false,
+    "website": "https://electryanr.com/",
+    "website_confidence": "sourced",
+    "background": "Ballot designation: Small Business Owner. Says he has been a PTA president and a school site council member in Torrance schools, and that his wife is a teacher.",
+    "own_words": [
+     {
+      "text": "My No. 1 concern is the kids not meeting state standards ... the ones a healthy-looking district average conveniently conceals.",
+      "is_quote": true,
+      "source": "https://www.dailybreeze.com/2026/10/05/ryan-rauzon-torrance-unified-school-district-area-d-candidate-2026-election-questionnaire/"
+     },
+     {
+      "text": "I want Torrance to be best known as the place where adults work in unity to improve the student experience ... the district teachers want to work in.",
+      "is_quote": true,
+      "source": "https://www.dailybreeze.com/2026/10/05/ryan-rauzon-torrance-unified-school-district-area-d-candidate-2026-election-questionnaire/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Jennifer Mak",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.jennifermakfortusd.com/",
+    "website_confidence": "verified",
+    "background": "Ballot designation: Retired School Administrator. Says she spent 38 years in public schools as a teacher, principal and district administrator, and that her three children graduated from Torrance Unified schools.",
+    "own_words": [
+     {
+      "text": "Student achievement must remain at the center of every decision.",
+      "is_quote": true,
+      "source": "https://www.dailybreeze.com/2026/10/05/jennifer-mak-torrance-unified-school-district-area-d-candidate-2026-election-questionnaire/"
+     },
+     {
+      "text": "Fiscal responsibility is not simply reducing expenditures; it is making informed, strategic decisions that strengthen TUSD for the future.",
+      "is_quote": true,
+      "source": "https://www.dailybreeze.com/2026/10/05/jennifer-mak-torrance-unified-school-district-area-d-candidate-2026-election-questionnaire/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "VoteStack: TUSD Trustee Area D, candidates in ballot order (from the county's sample ballot data)",
+    "url": "https://votestack.org/races/ca/los-angeles-county/2026-11-03/torrance-unified-school-district-governing-board-member-trustee-area-d"
+   },
+   {
+    "name": "Ballotpedia: Torrance Unified School District elections (Area D, no incumbent)",
+    "url": "https://ballotpedia.org/Torrance_Unified_School_District,_California,_elections"
+   },
+   {
+    "name": "Jennifer Mak campaign: Trustee Area D (by-area elections; Areas B, C and E not on the ballot)",
+    "url": "https://www.jennifermakfortusd.com/trustee-area-d/"
+   },
+   {
+    "name": "Ryan Rauzon campaign release on openPR (Area D in south Torrance; seat left by Betty Lieu)",
+    "url": "https://www.openpr.com/news/4631047/torrance-city-councilmember-betty-lieu-endorses-ryan-rauzon"
+   },
+   {
+    "name": "City of Torrance: City Council (Betty Lieu elected to District 5 on June 2, 2026)",
+    "url": "https://torranceca.gov/government/city-council"
+   },
+   {
+    "name": "Daily Breeze: Ryan Rauzon questionnaire",
+    "url": "https://www.dailybreeze.com/2026/10/05/ryan-rauzon-torrance-unified-school-district-area-d-candidate-2026-election-questionnaire/"
+   },
+   {
+    "name": "Daily Breeze: Jennifer Mak questionnaire",
+    "url": "https://www.dailybreeze.com/2026/10/05/jennifer-mak-torrance-unified-school-district-area-d-candidate-2026-election-questionnaire/"
+   },
+   {
+    "name": "CA Secretary of State: randomized alphabet for Nov 3, 2026",
+    "url": "https://www.sos.ca.gov/administration/news-releases-and-advisories/2026-news-releases-and-advisories/california-secretary-state-shirley-n-weber-phd-announces-results-randomized-alphabet-drawing-november-3-2026-general-election"
+   }
+  ],
+  "confidence": "sourced"
+ },
+ {
+  "id": "el-camino-ccd-area-5",
+  "state": "CA",
+  "level": "school",
+  "office": "El Camino Community College District Governing Board",
+  "district": "Trustee Area 5",
+  "scope_plain": "Only voters in El Camino College's Trustee Area 5, which covers part of Torrance and part of Redondo Beach, have this race. The rest of Torrance is in trustee areas with no race this year. Your sample ballot shows whether you have it. Nonpartisan.",
+  "office_explainer": "Sets policy and the budget for El Camino College, the public two-year college serving Torrance.",
+  "why_it_matters": "MyLoc Dinh was appointed to this seat in December 2025 after the trustee who held it resigned. This election decides who holds it for the next four years.",
+  "vote_for": 1,
+  "incumbent": "MyLoc Dinh",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Keicy Chung",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Business Owner/Student.",
+    "own_words": [],
+    "own_words_status": "none_found",
+    "own_words_checked": {
+     "on": "2026-10-31",
+     "where": [
+      "Daily Breeze 2026 candidate questionnaires (none found for Keicy Chung)",
+      "VoteStack candidate profile, which found no campaign site or statement",
+      "SpectrumVote and Sway pages for this race"
+     ]
+    },
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "MyLoc Dinh",
+    "party": null,
+    "incumbent": true,
+    "website": "https://www.mylocdinh.com/",
+    "website_confidence": "verified",
+    "background": "Ballot designation: Appointed Governing Board Member, El Camino Community College. A lawyer and former staff member for state legislators; the board appointed her to the Area 5 seat in December 2025.",
+    "own_words": [
+     {
+      "text": "The top two priorities for El Camino College are long-term financial stability and student achievement.",
+      "is_quote": true,
+      "source": "https://www.dailybreeze.com/2026/10/05/myloc-dinh-el-camino-community-college-district-area-5-candidate-2026-election-questionnaire/"
+     },
+     {
+      "text": "Community colleges are the people’s college and should be accessible to everyone.",
+      "is_quote": true,
+      "source": "https://www.dailybreeze.com/2026/10/05/myloc-dinh-el-camino-community-college-district-area-5-candidate-2026-election-questionnaire/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "VoteStack: El Camino CCD Trustee Area 5, candidates in ballot order (from the county's sample ballot data)",
+    "url": "https://votestack.org/races/ca/los-angeles-county/2026-11-03/el-camino-community-college-district-governing-board-member-trustee-area-no-5"
+   },
+   {
+    "name": "El Camino College: new trustee appointed to Area 5 (Torrance and parts of Redondo Beach), Dec 19, 2025",
+    "url": "https://www.elcamino.edu/news/new-trustee-appointed-to-fill-el-camino-community-college-districts-vacant-seat.php"
+   },
+   {
+    "name": "El Camino College: trustee appointment (seat on the Nov 3, 2026 ballot)",
+    "url": "https://www.elcamino.edu/leadership/trustees/appointment/index.php"
+   },
+   {
+    "name": "LA County Registrar map of El Camino trustee areas (2012 lines, Torrance split between Areas 4 and 5)",
+    "url": "https://www.elcamino.edu/leadership/trustees/docs/El-Camino-CC-Cities.pdf"
+   },
+   {
+    "name": "VoteStack: Keicy Chung profile",
+    "url": "https://votestack.org/candidates/keicy-chung"
+   },
+   {
+    "name": "Daily Breeze: MyLoc Dinh questionnaire",
+    "url": "https://www.dailybreeze.com/2026/10/05/myloc-dinh-el-camino-community-college-district-area-5-candidate-2026-election-questionnaire/"
+   },
+   {
+    "name": "CA Secretary of State: randomized alphabet for Nov 3, 2026",
+    "url": "https://www.sos.ca.gov/administration/news-releases-and-advisories/2026-news-releases-and-advisories/california-secretary-state-shirley-n-weber-phd-announces-results-randomized-alphabet-drawing-november-3-2026-general-election"
+   }
+  ],
+  "confidence": "sourced"
+ }
+]

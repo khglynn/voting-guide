@@ -42,10 +42,10 @@
   "91214"
  ],
  "zip_outside": {
-  "91020": "La Crescenta-Montrose, outside Glendale city limits",
+  "91020": "La Crescenta-Montrose or La Cañada Flintridge, outside Glendale city limits",
   "91214": "La Crescenta-Montrose, outside Glendale city limits"
  },
- "zip_caveats": "ZIPs 91201 to 91208 and 91210 are all or almost all Glendale. Two ZIPs cross the city line, so the guide asks which you live in: 91214 is a little over half Glendale, and the rest is unincorporated La Crescenta-Montrose (plus a sliver of Los Angeles near Tujunga); 91020 (Montrose) is mostly unincorporated La Crescenta-Montrose. La Crescenta-Montrose isn’t in this guide, so choosing it gives you California’s statewide races. Small edges of Glendale fall in ZIPs 90039 and 90041 (mostly Los Angeles) and 91011 (mostly La Cañada Flintridge); if that’s you, use your address. All of Glendale is in U.S. House District 30, as drawn in 2025. Two Assembly districts split Glendale: District 52 has the south (all of 91204, 91205 and 91210, and most of 91203), and District 44 has the rest (91201, 91202, 91207, 91208 and Glendale’s parts of 91214 and 91020). 91203 and 91206 are split between them. All of Glendale is in State Senate District 25, which has no race this year. Glendale’s own races (city council, city clerk, city treasurer, the Glendale Unified school board and the Glendale Community College board) were decided in the June 2 election, so none are on this ballot, and there are no Glendale city, school or college measures. Your address settles your Assembly district; the county’s sample ballot lookup shows your exact ballot.",
+ "zip_caveats": "ZIPs 91201 to 91208 and 91210 are all or almost all Glendale. Two ZIPs cross the city line, so the guide asks which you live in: 91214 is a little over half Glendale, and the rest is unincorporated La Crescenta-Montrose (plus a sliver of Los Angeles near Tujunga); 91020 (Montrose) is mostly unincorporated La Crescenta-Montrose, with a sliver of La Cañada Flintridge. La Crescenta-Montrose and La Cañada Flintridge aren’t in this guide, so choosing either gives you California’s statewide races. Small edges of Glendale fall in ZIPs 90039 and 90041 (mostly Los Angeles) and 91011 (mostly La Cañada Flintridge); if that’s you, use your address. All of Glendale is in U.S. House District 30, as drawn in 2025. Two Assembly districts split Glendale: District 52 has the south (all of 91204, 91205 and 91210, and most of 91203), and District 44 has the rest (91201, 91202, 91207, 91208 and Glendale’s parts of 91214 and 91020). 91203 and 91206 are split between them. All of Glendale is in State Senate District 25, which has no race this year. Glendale’s own races (city council, city clerk, city treasurer, the Glendale Unified school board and the Glendale Community College board) were decided in the June 2 election, so none are on this ballot, and there are no Glendale city, school or college measures. Your address settles your Assembly district; the county’s sample ballot lookup shows your exact ballot.",
  "contest_ids": [
   "ca-governor",
   "ca-lt-governor",
@@ -124,6 +124,15 @@
   "election_day": "https://locator.lavote.net/locations/vc",
   "drop_box": "https://locator.lavote.gov/locations/vbm?culture=en"
  },
+ "early_in_person": {
+  "start": "2026-10-24",
+  "end": "2026-11-02",
+  "hours_note": "Some LA County vote centers opened Saturday, October 24, including two in Glendale. Every vote center is open October 31 to November 2. Hours on those dates are 10 AM to 7 PM. On Election Day, November 3, every center is open 7 AM to 8 PM. You can use any vote center in LA County.",
+  "hours_short": "LA County vote centers are open 10 AM to 7 PM every day.",
+  "lookup_url": "https://locator.lavote.net/locations/vc",
+  "source": "https://www.glendalevotes.org/home/showpublisheddocument/84961/639269009742030000",
+  "confidence": "verified"
+ },
  "situations": [
   {
    "id": "no_mail_ballot_or_lost",
@@ -133,6 +142,18 @@
     "Use the county's locator to find a vote center near you."
    ],
    "source": "https://www.lavote.gov/home/voting-elections/voting-options/vote-by-mail/how-to-vote-by-mail",
+   "confidence": "verified"
+  },
+  {
+   "id": "wrong_polling_place",
+   "short": "LA County uses vote centers: you can vote at any vote center in the county.",
+   "answer": "LA County uses vote centers, so you can vote at any one in the county. Go to the nearest one; the county’s locator shows them all.",
+   "steps": [
+    "Find a vote center near you with LA County’s locator.",
+    "Just dropping off a mail ballot? Any drop box or polling place in California takes it.",
+    "A provisional ballot cast in another county may not count, so vote in your own county."
+   ],
+   "source": "https://www.glendalevotes.org/home/showpublisheddocument/84961/639269009742030000",
    "confidence": "verified"
   }
  ],
@@ -164,6 +185,10 @@
   {
    "name": "City of Glendale: City Council (terms and years elected)",
    "url": "https://www.glendaleca.gov/government/city-council"
+  },
+  {
+   "name": "Glendale Community College: Board of Trustees (Areas 2, 3 and 4 next elect in June 2030)",
+   "url": "https://www.glendale.edu/about-gcc/board-of-trustees/"
   },
   {
    "name": "Statewide Database: AB 604 congressional city splits report",

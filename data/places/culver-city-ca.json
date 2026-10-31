@@ -135,7 +135,7 @@
   },
   {
    "name": "LA County Registrar vote center data, Nov 3, 2026 (Culver City sites)",
-   "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/Election_Vote_Centers_%28Current_Public%29_view/FeatureServer/2/query?where=PC_BuildingCity%3D%27Culver+City%27&outFields=PC_BuildingName,PC_RoomArea,PC_BuildingCity,PC_ServiceAreaType,Election_Name,Election_Year&returnGeometry=false&f=json"
+   "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/Election_Vote_Centers_%28Current_Public%29_view/FeatureServer/2/query?where=PC_BuildingCity%3D%27Culver+City%27&outFields=PC_BuildingName,PC_BuildingFullAddress,PC_RoomArea,PC_BuildingCity,PC_ServiceAreaType,Election_Name,Election_Year&returnGeometry=false&f=json"
   },
   {
    "name": "Census 2020 ZIP area (ZCTA) to place relationship file",

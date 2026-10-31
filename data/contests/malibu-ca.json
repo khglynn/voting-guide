@@ -110,6 +110,14 @@
     "website_confidence": "unverified",
     "background": "Qualified write-in candidate (City of Malibu). The name is not printed on the ballot: to vote for this candidate, you write the name in.",
     "own_words": [],
+    "own_words_status": "none_found",
+    "own_words_checked": {
+     "on": "2026-10-31",
+     "where": [
+      "the City of Malibu’s election page",
+      "Malibu.FM’s stories and its search"
+     ]
+    },
     "lwv_status": "unknown",
     "lwv_url": null
    }
@@ -315,8 +323,8 @@
     "name": "Tom Peters",
     "party": null,
     "incumbent": true,
-    "website": null,
-    "website_confidence": "unverified",
+    "website": "https://www.tompeters4trustee.org",
+    "website_confidence": "verified",
     "background": "Ballot designation: SMC Board Vice-Chair. On the board since 2022. Former tenured SMC faculty member in the Center for Students with Disabilities, with a doctorate in business administration (his official statement).",
     "own_words": [
      {
@@ -381,8 +389,8 @@
     "name": "Kera Blades-Snell",
     "party": null,
     "incumbent": false,
-    "website": null,
-    "website_confidence": "unverified",
+    "website": "https://www.blades-snell4smctrustee.com",
+    "website_confidence": "verified",
     "background": "Ballot designation: Entrepreneur/Nonprofit Director. Executive director of the Santa Monica Black Empowerment Association, small business owner and president of SMC Associates. Started at a community college in Belize and finished her degrees as an adult (her official statement).",
     "own_words": [
      {

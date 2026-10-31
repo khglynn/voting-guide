@@ -100,6 +100,7 @@
   "type": "advocacy",
   "lean": null,
   "lean_basis": "Not rated: no AllSides or Ad Fontes rating found, and its stated mission, 'We identify and support issues that will support education and public schools in Santa Monica and Malibu' (https://www.cepssm.org/issues), names no political side. It calls itself a PAC that endorses candidates.",
+  "lean_basis_kind": "mission",
   "geography": [
    "malibu-ca"
   ],
@@ -115,6 +116,7 @@
   "type": "labor",
   "lean": null,
   "lean_basis": "Not rated: no AllSides or Ad Fontes rating found. It is the teachers' union for Santa Monica-Malibu schools, and its political action mission, 'We believe in the power of education to transform a future that works for everyone' (https://www.smmcta.com/political-action.html), names no political side.",
+  "lean_basis_kind": "mission",
   "geography": [
    "malibu-ca"
   ],

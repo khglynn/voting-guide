@@ -683,8 +683,8 @@
   "endorser_id": "la-county-gop",
   "target_id": "scv-water-division-3",
   "status": "endorsed",
-  "choice": "Kenneth \"Ken\" Petersen, Maria A. Gutzeit",
-  "why": "The party’s public lookup lists both for the two seats: Gutzeit as the county party’s own endorsement, and Petersen with the label Reform CA, which its printed list shows as Recommended.",
+  "choice": "Maria A. Gutzeit",
+  "why": "The party’s public lookup lists Gutzeit as the county party’s own endorsement. It lists Petersen too, but with Reform CA as the source, and its key says that means “Endorsed by Reform California, an allied group.”",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
   "date": "2026-10-31",
   "confidence": "verified"

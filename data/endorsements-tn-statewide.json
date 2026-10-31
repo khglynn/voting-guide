@@ -150,6 +150,36 @@
     "confidence": "verified"
   },
   {
+    "endorser_id": "tn-democratic-party",
+    "target_id": "tn-amendment-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position on the amendments found. Its 2026 Candidate Guide lists only nominees, and its home page and Voter Hub don’t mention them (checked Oct 30, 2026).",
+    "url": "https://tndp.org/candidates/",
+    "date": "2026-10-30",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tn-democratic-party",
+    "target_id": "tn-amendment-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position on the amendments found. Its 2026 Candidate Guide lists only nominees, and its home page and Voter Hub don’t mention them (checked Oct 30, 2026).",
+    "url": "https://tndp.org/candidates/",
+    "date": "2026-10-30",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tn-democratic-party",
+    "target_id": "tn-amendment-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position on the amendments found. Its 2026 Candidate Guide lists only nominees, and its home page and Voter Hub don’t mention them (checked Oct 30, 2026).",
+    "url": "https://tndp.org/candidates/",
+    "date": "2026-10-30",
+    "confidence": "sourced"
+  },
+  {
     "endorser_id": "tn-republican-party",
     "target_id": "tn-governor",
     "status": "endorsed",

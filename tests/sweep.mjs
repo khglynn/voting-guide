@@ -558,7 +558,12 @@ const ballots = [];
 for (const st of Object.keys(states)) ballots.push({ name: `state-${st}`, st, placeIds: [] });
 for (const [id, p] of Object.entries(places)) ballots.push({ name: id, st: p.state, placeIds: [id] });
 const combos = new Map();
-for (const [zip, list] of Object.entries(zips)) if (Array.isArray(list) && list.length > 1 && !combos.has(list.join('+'))) combos.set(list.join('+'), zip);
+// A ZIP that one of its places marks as also reaching a town outside (zip_outside) never offers its places' races
+// together: the first page asks, with the outside town and "I'm not sure" both starting from the state's races
+// (src/views/mast.ts). So only a ZIP with no such town plans a combined ballot (Oct 31: Glendale's 91214 and
+// Long Beach's 90810 are shared with Los Angeles and also reach La Crescenta-Montrose and Carson).
+const outsideOf = (id, zip) => !!((places[id] && places[id].zip_outside) || {})[zip];
+for (const [zip, list] of Object.entries(zips)) if (Array.isArray(list) && list.length > 1 && !list.some((id) => outsideOf(id, zip)) && !combos.has(list.join('+'))) combos.set(list.join('+'), zip);
 for (const [key, zip] of combos) ballots.push({ name: `zip-${key}`, st: (places[key.split('+')[0]] || {}).state, placeIds: key.split('+'), combo: true, zip });
 const unknown = ONLY.filter((n) => !ballots.some((b) => b.name === n));
 if (unknown.length) stop(`ONLY names ballots that do not exist: ${unknown.join(', ')}. Names look like state-TX, austin-tx, ${[...combos.keys()][0] ? `zip-${[...combos.keys()][0]}` : 'zip-a+b'}.`);

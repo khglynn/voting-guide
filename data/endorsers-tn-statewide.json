@@ -57,7 +57,7 @@
     "guide_url": "https://tndp.org/candidates/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false,
+    "endorses_measures": true,
     "party": "Democratic",
     "lean_basis_kind": "party"
   },
@@ -66,14 +66,14 @@
     "name": "Tennessee Republican Party",
     "type": "party",
     "lean": "right",
-    "lean_basis": "Official state party organization. Its home page and candidate page list its 2026 nominees (https://www.tngop.org/).",
+    "lean_basis": "Official state party organization. Its home page and candidate page list its 2026 nominees (https://www.tngop.org/), and its candidate toolbox urges a Yes on all three amendments (https://tngop.org/candidate-toolbox).",
     "geography": [
       "TN"
     ],
     "guide_url": "https://www.tngop.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false,
+    "endorses_measures": true,
     "party": "Republican",
     "lean_basis_kind": "party"
   },

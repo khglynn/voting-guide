@@ -1,0 +1,189 @@
+{
+ "id": "glendale-ca",
+ "label": "Glendale",
+ "state": "CA",
+ "counties": [
+  "Los Angeles"
+ ],
+ "county_fips": [
+  "06037"
+ ],
+ "county_election_office": {
+  "name": "Los Angeles County Registrar-Recorder/County Clerk (LAVote.gov), 12400 Imperial Hwy, Norwalk",
+  "url": "https://lavote.gov",
+  "phone": "(800) 815-2666",
+  "phone_label": "General line",
+  "lines": [
+   {
+    "label": "Mail ballot help",
+    "phone": "(800) 815-2666",
+    "hours": "press 2, then 3"
+   },
+   {
+    "label": "Vote center questions",
+    "phone": "(800) 815-2666",
+    "hours": "press 1"
+   }
+  ]
+ },
+ "sample_ballot_url": "https://isb.lavote.gov/",
+ "zips": [
+  "91020",
+  "91046",
+  "91201",
+  "91202",
+  "91203",
+  "91204",
+  "91205",
+  "91206",
+  "91207",
+  "91208",
+  "91210",
+  "91214"
+ ],
+ "zip_outside": {
+  "91020": "La Crescenta-Montrose, outside Glendale city limits",
+  "91214": "La Crescenta-Montrose, outside Glendale city limits"
+ },
+ "zip_caveats": "ZIPs 91201 to 91208 and 91210 are all or almost all Glendale. Two ZIPs cross the city line, so the guide asks which you live in: 91214 is a little over half Glendale, and the rest is unincorporated La Crescenta-Montrose (plus a sliver of Los Angeles near Tujunga); 91020 (Montrose) is mostly unincorporated La Crescenta-Montrose. La Crescenta-Montrose isn’t in this guide, so choosing it gives you California’s statewide races. Small edges of Glendale fall in ZIPs 90039 and 90041 (mostly Los Angeles) and 91011 (mostly La Cañada Flintridge); if that’s you, use your address. All of Glendale is in U.S. House District 30, as drawn in 2025. Two Assembly districts split Glendale: District 52 has the south (all of 91204, 91205 and 91210, and most of 91203), and District 44 has the rest (91201, 91202, 91207, 91208 and Glendale’s parts of 91214 and 91020). 91203 and 91206 are split between them. All of Glendale is in State Senate District 25, which has no race this year. Glendale’s own races (city council, city clerk, city treasurer, the Glendale Unified school board and the Glendale Community College board) were decided in the June 2 election, so none are on this ballot, and there are no Glendale city, school or college measures. Your address settles your Assembly district; the county’s sample ballot lookup shows your exact ballot.",
+ "contest_ids": [
+  "ca-governor",
+  "ca-lt-governor",
+  "ca-secretary-of-state",
+  "ca-controller",
+  "ca-treasurer",
+  "ca-attorney-general",
+  "ca-insurance-commissioner",
+  "ca-superintendent",
+  "ca-boe-3",
+  "ca-supreme-court-evans",
+  "ca-supreme-court-groban",
+  "ca-coa-2d-retention",
+  "ca-prop-1",
+  "ca-prop-2",
+  "ca-prop-3",
+  "ca-prop-4",
+  "ca-prop-5",
+  "ca-prop-37",
+  "ca-prop-38",
+  "ca-prop-39",
+  "ca-prop-40",
+  "ca-prop-41",
+  "ca-prop-42",
+  "ca-prop-43",
+  "ca-prop-44",
+  "ca-prop-45",
+  "la-county-measure-a",
+  "la-county-measure-e",
+  "la-county-sheriff",
+  "la-county-judge-64",
+  "la-county-judge-65",
+  "la-county-judge-87",
+  "la-county-judge-131",
+  "ca-us-house-30",
+  "ca-assembly-44",
+  "ca-assembly-52"
+ ],
+ "district_finders": [
+  {
+   "office_match": "Member of the State Assembly",
+   "label": "Find your district on your official ballot",
+   "url": "https://isb.lavote.gov/"
+  },
+  {
+   "office_match": "U.S. Representative",
+   "label": "Check your district on your official ballot",
+   "url": "https://isb.lavote.gov/"
+  }
+ ],
+ "heads_up": [
+  {
+   "text": "Glendale’s city council, city clerk, city treasurer, school board and college board races were decided in the June 2 election, so none of them are on this ballot.",
+   "applies_to": "ballot",
+   "source": "https://www.glendaleca.gov/government/city-council"
+  },
+  {
+   "text": "All of Glendale is in U.S. House District 30, so this race is on every Glendale ballot.",
+   "applies_to": "item:ca-us-house-30",
+   "source": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
+  },
+  {
+   "text": "Glendale is split between two Assembly districts. The south (ZIPs 91204, 91205, 91210 and most of 91203) votes in District 52. The north and west (91201, 91202, 91207, 91208 and the Crescenta Valley) vote in District 44. 91203 and 91206 are split, so use your address.",
+   "applies_to": "item:ca-assembly-52",
+   "source": "https://sdmg.senate.ca.gov/media/386"
+  },
+  {
+   "text": "Glendale is split between two Assembly districts. The north and west (ZIPs 91201, 91202, 91207, 91208 and the Crescenta Valley) vote in District 44. The south (91204, 91205, 91210 and most of 91203) votes in District 52. 91203 and 91206 are split, so use your address.",
+   "applies_to": "item:ca-assembly-44",
+   "source": "https://sdmg.senate.ca.gov/media/386"
+  }
+ ],
+ "notes": "Every LA County vote center is open now: 10 AM to 7 PM through Monday, November 2, and 7 AM to 8 PM on Tuesday, November 3. You can use any of them, anywhere in the county. The city’s list has 11 in Glendale: the Glendale Civic Auditorium and the AYAC Mesdjian Center (both open since October 24), plus Brand Studios, the Chevy Chase Branch Library, Eleanor J. Toll Middle School, Glendale Community College’s Student Center, the Glendale Youth Center, the Glendale Express Hotel, Glendale Church of Christ, the Armenian Church of the Nazarene and The Lighthouse Mission Church. Glendale also has eight 24-hour ballot drop boxes, open until 8 PM on November 3, including the Central, Grandview, Pacific Park and Montrose-Crescenta libraries, Verdugo Park and Dunsmore Park.",
+ "lookups": {
+  "early_in_person": "https://locator.lavote.net/locations/vc",
+  "election_day": "https://locator.lavote.net/locations/vc",
+  "drop_box": "https://locator.lavote.gov/locations/vbm?culture=en"
+ },
+ "situations": [
+  {
+   "id": "no_mail_ballot_or_lost",
+   "short": "Get a replacement at any LA County vote center or just vote there.",
+   "answer": "The last day to ask for a ballot by mail was October 27. You can still go to any LA County vote center and ask for a replacement or vote there in person. Questions? Call (800) 815-2666, press 2, then 3.",
+   "steps": [
+    "Use the county's locator to find a vote center near you."
+   ],
+   "source": "https://www.lavote.gov/home/voting-elections/voting-options/vote-by-mail/how-to-vote-by-mail",
+   "confidence": "verified"
+  }
+ ],
+ "sources": [
+  {
+   "name": "LA County: how to vote by mail",
+   "url": "https://www.lavote.gov/home/voting-elections/voting-options/vote-by-mail/how-to-vote-by-mail"
+  },
+  {
+   "name": "LA County: contact (phone menu)",
+   "url": "https://www.lavote.gov/contact-us/contact-us"
+  },
+  {
+   "name": "LA County: drop box locator",
+   "url": "https://locator.lavote.gov/locations/vbm?culture=en"
+  },
+  {
+   "name": "LA County: interactive sample ballot",
+   "url": "https://isb.lavote.gov/"
+  },
+  {
+   "name": "City of Glendale: November 3, 2026 vote centers and drop boxes (city clerk flyer)",
+   "url": "https://www.glendalevotes.org/home/showpublisheddocument/84961/639269009742030000"
+  },
+  {
+   "name": "GlendaleVotes.org (City Clerk)",
+   "url": "https://www.glendalevotes.org/"
+  },
+  {
+   "name": "City of Glendale: City Council (terms and years elected)",
+   "url": "https://www.glendaleca.gov/government/city-council"
+  },
+  {
+   "name": "Statewide Database: AB 604 congressional city splits report",
+   "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
+  },
+  {
+   "name": "Senate Office of Demographics: 2021 Assembly districts by ZIP",
+   "url": "https://sdmg.senate.ca.gov/media/386"
+  },
+  {
+   "name": "Senate Office of Demographics: Senate districts by ZIP",
+   "url": "https://sdmg.senate.ca.gov/sites/sdmg.senate.ca.gov/files/ZipCodes/2023_2024_state_senate_zip_codes-_zip_code_order.pdf"
+  },
+  {
+   "name": "Crescenta Valley Weekly: June 2 results certified",
+   "url": "https://www.crescentavalleyweekly.com/news/07/02/2026/election-results-certified-by-la-county-board-of-supervisors/"
+  },
+  {
+   "name": "LA County Registrar: measures on the November 3, 2026 ballot (rev. Aug 14)",
+   "url": "https://content.lavote.gov/docs/rrcc/documents/measures-appearing-on-the-ballot---november-3-2026-rev-8-14-2026-v-4.pdf"
+  }
+ ]
+}

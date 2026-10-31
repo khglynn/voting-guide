@@ -4582,42 +4582,42 @@
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-supreme-court-chief",
-    "status": "endorsed",
-    "choice": "Jimmy Blacklock",
-    "why": "Listed on TLRPAC's judicial endorsements page, which it says \"will be updated throughout the election cycle.\" The page doesn't date its picks.",
+    "status": "not_found",
+    "choice": null,
+    "why": "TLRPAC's judicial page lists Jimmy Blacklock, but it names no year or election and mixes in seats from past elections, so it doesn't show a pick for Nov 3. Read Oct 31, 2026.",
     "url": "https://tlrpac.org/judicial-endorsements/",
-    "date": "2026-10-21",
-    "confidence": "sourced"
+    "date": "2026-10-31",
+    "confidence": "verified"
   },
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-supreme-court-place-2",
-    "status": "endorsed",
-    "choice": "James P. Sullivan",
-    "why": "Listed on TLRPAC's judicial endorsements page, which it says \"will be updated throughout the election cycle.\" The page doesn't date its picks.",
+    "status": "not_found",
+    "choice": null,
+    "why": "TLRPAC's judicial page lists James Sullivan, but it names no year or election and mixes in seats from past elections, so it doesn't show a pick for Nov 3. Read Oct 31, 2026.",
     "url": "https://tlrpac.org/judicial-endorsements/",
-    "date": "2026-10-21",
-    "confidence": "sourced"
+    "date": "2026-10-31",
+    "confidence": "verified"
   },
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-supreme-court-place-7",
-    "status": "endorsed",
-    "choice": "Kyle Hawkins",
-    "why": "Listed on TLRPAC's judicial endorsements page, which labels his seat Place 3 and says the list \"will be updated throughout the election cycle.\" The page doesn't date its picks.",
+    "status": "not_found",
+    "choice": null,
+    "why": "TLRPAC's judicial page lists Kyle Hawkins under Place 3, but it names no year or election and mixes in seats from past elections, so it doesn't show a pick for Nov 3. Read Oct 31, 2026.",
     "url": "https://tlrpac.org/judicial-endorsements/",
-    "date": "2026-10-21",
-    "confidence": "sourced"
+    "date": "2026-10-31",
+    "confidence": "verified"
   },
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-supreme-court-place-8",
-    "status": "endorsed",
-    "choice": "Brett Busby",
-    "why": "Listed on TLRPAC's judicial endorsements page, which it says \"will be updated throughout the election cycle.\" The page doesn't date its picks.",
+    "status": "not_found",
+    "choice": null,
+    "why": "TLRPAC's judicial page lists Brett Busby, but it names no year or election and mixes in seats from past elections, so it doesn't show a pick for Nov 3. Read Oct 31, 2026.",
     "url": "https://tlrpac.org/judicial-endorsements/",
-    "date": "2026-10-21",
-    "confidence": "sourced"
+    "date": "2026-10-31",
+    "confidence": "verified"
   },
   {
     "endorser_id": "texans-for-lawsuit-reform",
@@ -4652,32 +4652,32 @@
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-15th-coa-chief",
-    "status": "endorsed",
-    "choice": "Scott Brister",
-    "why": "Listed on TLRPAC's judicial endorsements page, which it says \"will be updated throughout the election cycle.\" The page doesn't date its picks.",
+    "status": "not_found",
+    "choice": null,
+    "why": "TLRPAC's judicial page lists Scott Brister, but it names no year or election and mixes in seats from past elections, so it doesn't show a pick for Nov 3. Read Oct 31, 2026.",
     "url": "https://tlrpac.org/judicial-endorsements/",
-    "date": "2026-10-21",
-    "confidence": "sourced"
+    "date": "2026-10-31",
+    "confidence": "verified"
   },
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-15th-coa-place-2",
-    "status": "endorsed",
-    "choice": "Scott K. Field",
-    "why": "Listed on TLRPAC's judicial endorsements page, which it says \"will be updated throughout the election cycle.\" The page doesn't date its picks.",
+    "status": "not_found",
+    "choice": null,
+    "why": "TLRPAC's judicial page lists Scott Field, but it names no year or election and mixes in seats from past elections, so it doesn't show a pick for Nov 3. Read Oct 31, 2026.",
     "url": "https://tlrpac.org/judicial-endorsements/",
-    "date": "2026-10-21",
-    "confidence": "sourced"
+    "date": "2026-10-31",
+    "confidence": "verified"
   },
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-15th-coa-place-3",
-    "status": "endorsed",
-    "choice": "April Farris",
-    "why": "Listed on TLRPAC's judicial endorsements page, which it says \"will be updated throughout the election cycle.\" The page doesn't date its picks.",
+    "status": "not_found",
+    "choice": null,
+    "why": "TLRPAC's judicial page lists April Farris, but it names no year or election and mixes in seats from past elections, so it doesn't show a pick for Nov 3. Read Oct 31, 2026.",
     "url": "https://tlrpac.org/judicial-endorsements/",
-    "date": "2026-10-21",
-    "confidence": "sourced"
+    "date": "2026-10-31",
+    "confidence": "verified"
   },
   {
     "endorser_id": "equality-texas",

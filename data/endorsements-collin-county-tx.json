@@ -1112,21 +1112,21 @@
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-house-67",
-    "status": "endorsed",
-    "choice": "Jeff Leach",
-    "why": "On TLRPAC's Texas House endorsement list, which it updates on a rolling basis. Checked Oct 29, 2026.",
+    "status": "not_found",
+    "choice": null,
+    "why": "TLRPAC's Texas House list includes Jeff Leach, but it names no year or election, so it doesn't show a pick for Nov 3. Checked Oct 30, 2026.",
     "url": "https://tlrpac.org/texas-house-endorsements/",
-    "date": null,
+    "date": "2026-10-30",
     "confidence": "verified"
   },
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-house-89",
-    "status": "endorsed",
-    "choice": "Candy Noble",
-    "why": "On TLRPAC's Texas House endorsement list, which it updates on a rolling basis. Checked Oct 29, 2026.",
+    "status": "not_found",
+    "choice": null,
+    "why": "TLRPAC's Texas House list includes Candy Noble, but it names no year or election, so it doesn't show a pick for Nov 3. Checked Oct 30, 2026.",
     "url": "https://tlrpac.org/texas-house-endorsements/",
-    "date": null,
+    "date": "2026-10-30",
     "confidence": "verified"
   },
   {

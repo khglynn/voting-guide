@@ -2062,7 +2062,7 @@
   "level": "state",
   "office": "Member of the State Assembly",
   "district": "AD-55 (Mar Vista, Del Rey, Palms, Mid-City, West Adams, Crenshaw, Culver City, Ladera Heights)",
-  "scope_plain": "Voters in the 55th Assembly District. In the City of LA that includes Mar Vista and Mid-City. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Two Democrats.",
+  "scope_plain": "Voters in the 55th Assembly District. In the City of LA that includes Mar Vista and Mid-City. It also includes all of Culver City. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Two Democrats.",
   "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
   "why_it_matters": "The chair of the Assembly Natural Resources Committee against an LAUSD school social worker. Bryan won 64.6% in June.",
   "vote_for": 1,
@@ -2138,6 +2138,10 @@
    {
     "name": "City Hall Pass: AD-55",
     "url": "https://cityhallpass.com/election-2026/races/assembly-55"
+   },
+   {
+    "name": "Senate Office of Demographics: Assembly districts by ZIP code (2021 lines)",
+    "url": "https://sdmg.senate.ca.gov/system/files/2024-12/2025-state-assembly-zip-codes-zip-code-order.pdf"
    }
   ],
   "confidence": "verified"

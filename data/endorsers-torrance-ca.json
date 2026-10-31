@@ -153,5 +153,20 @@
   "default_on": false,
   "endorses_candidates": true,
   "endorses_measures": false
+ },
+ {
+  "id": "torrance-teachers-association",
+  "name": "Torrance Teachers Association",
+  "type": "labor",
+  "lean": "lean_left",
+  "lean_basis": "The union for Torrance Unified's teachers, an affiliate of the California Teachers Association and the NEA. Its home page says it 'exists as the exclusive bargaining representative for its members' and works to improve teachers' working conditions 'in order to improve students’ learning environment' (https://torranceteachers.org/). No outside rating found; lean reflects its stated mission, as for the guide's other teachers' unions.",
+  "lean_basis_kind": "mission",
+  "geography": [
+   "torrance-ca"
+  ],
+  "guide_url": "https://torranceteachers.org/wp-content/uploads/2026/10/10-2-26.pdf",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
  }
 ]

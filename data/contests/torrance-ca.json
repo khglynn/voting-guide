@@ -5,7 +5,7 @@
   "level": "school",
   "office": "Torrance Unified School District Governing Board",
   "district": "Trustee Area D",
-  "scope_plain": "Only voters in Torrance Unified's Trustee Area D, in south Torrance, have this race. Torrance Unified elects each board member by area, and Area D is the only one with a race this year: Areas B, C and E each had just one candidate, so those seats aren't on the ballot. Your sample ballot shows whether you have it. Nonpartisan.",
+  "scope_plain": "Only voters in Torrance Unified's Trustee Area D, in south Torrance, have this race. Torrance Unified elects each board member by area, and Area D is the only Torrance Unified race on this ballot. Your sample ballot shows whether you have it. Nonpartisan.",
   "office_explainer": "Sets policy and the budget for Torrance's public schools, and hires the superintendent.",
   "why_it_matters": "The Area D seat is empty because the trustee who held it was elected to the Torrance City Council in June, so either winner will be new to the board.",
   "vote_for": 1,
@@ -61,7 +61,7 @@
   ],
   "sources": [
    {
-    "name": "VoteStack: TUSD Trustee Area D, candidates in ballot order (from the county's sample ballot data)",
+    "name": "VoteStack: TUSD Trustee Area D, candidates in ballot order (from the county's sample ballot data; the only Torrance Unified race on its countywide list)",
     "url": "https://votestack.org/races/ca/los-angeles-county/2026-11-03/torrance-unified-school-district-governing-board-member-trustee-area-d"
    },
    {
@@ -69,7 +69,7 @@
     "url": "https://ballotpedia.org/Torrance_Unified_School_District,_California,_elections"
    },
    {
-    "name": "Jennifer Mak campaign: Trustee Area D (by-area elections; Areas B, C and E not on the ballot)",
+    "name": "Jennifer Mak campaign: Trustee Area D (elections by trustee area; Area D seat vacant)",
     "url": "https://www.jennifermakfortusd.com/trustee-area-d/"
    },
    {

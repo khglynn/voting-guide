@@ -578,5 +578,105 @@
   "url": "https://www.southbayrepublicans.com/candidates-endorsements",
   "date": "2026-10-31",
   "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-teachers-association",
+  "target_id": "torrance-usd-area-d",
+  "status": "endorsed",
+  "choice": "Ryan Rauzon",
+  "why": "Its Oct 2, 2026 newsletter lists him for 'TUSD Board of Ed Area D' under 'How to help with the November Election', with dates to canvass for his campaign. Gives no reason.",
+  "url": "https://torranceteachers.org/wp-content/uploads/2026/10/10-2-26.pdf",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-teachers-association",
+  "target_id": "el-camino-ccd-area-5",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its Oct 2, 2026 newsletter's list for the November election has no El Camino College race (checked Oct 31, 2026).",
+  "url": "https://torranceteachers.org/wp-content/uploads/2026/10/10-2-26.pdf",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-teachers-association",
+  "target_id": "ca-assembly-66",
+  "status": "endorsed",
+  "choice": "Sara Deen",
+  "why": "Its Oct 2, 2026 newsletter lists her for 'Assembly District 66' under 'How to help with the November Election'. Gives no reason.",
+  "url": "https://torranceteachers.org/wp-content/uploads/2026/10/10-2-26.pdf",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-teachers-association",
+  "target_id": "ca-state-senate-24",
+  "status": "endorsed",
+  "choice": "John M. Erickson",
+  "why": "Its Oct 2, 2026 newsletter lists John Erickson for 'State Senate District 24' under 'How to help with the November Election'. Gives no reason.",
+  "url": "https://torranceteachers.org/wp-content/uploads/2026/10/10-2-26.pdf",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-teachers-association",
+  "target_id": "ca-superintendent",
+  "status": "endorsed",
+  "choice": "Richard Barrera",
+  "why": "Its Oct 2, 2026 newsletter lists him for 'Superintendent of Public Instruction' under 'How to help with the November Election'. Gives no reason.",
+  "url": "https://torranceteachers.org/wp-content/uploads/2026/10/10-2-26.pdf",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "torrance-teachers-association",
+  "target_id": "ca-prop-3",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Its Oct 2, 2026 newsletter shows a 'Yes on 3' graphic under 'How to help with the November Election' and asks members to canvass for Prop 3. Gives no reason.",
+  "url": "https://torranceteachers.org/wp-content/uploads/2026/10/10-2-26.pdf",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "torrance-usd-area-d",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its November 2026 guide covers LA Community College District seats and an LAUSD measure, but no Torrance Unified race (checked Oct 31, 2026).",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "el-camino-ccd-area-5",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its November 2026 guide covers LA Community College District seats, but no El Camino College race (checked Oct 31, 2026).",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "thrive-la",
+  "target_id": "torrance-usd-area-d",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its voter guide covers two LA Community College District seats and an LAUSD measure, but no Torrance Unified race (checked Oct 31, 2026).",
+  "url": "https://www.thrivelosangeles.org/voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "thrive-la",
+  "target_id": "el-camino-ccd-area-5",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its voter guide covers two LA Community College District seats, but no El Camino College race (checked Oct 31, 2026).",
+  "url": "https://www.thrivelosangeles.org/voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
  }
 ]

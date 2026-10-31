@@ -1362,9 +1362,9 @@
  {
   "endorser_id": "sd-democrats-for-equality",
   "target_id": "sd-city-council-8",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "Its own endorsements page lists no pick in this race (checked Oct 31, 2026).",
+  "why": "Its own endorsements page gives no pick or rating in this race, not even its \"Neutral/No Position\" rating (checked Oct 31, 2026).",
   "url": "https://www.democratsforequality.org/endorsements",
   "date": "2026-10-31",
   "confidence": "verified"
@@ -1372,9 +1372,9 @@
  {
   "endorser_id": "sd-democrats-for-equality",
   "target_id": "sd-county-board-of-ed-3",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "Its own endorsements page lists no pick in this race (checked Oct 31, 2026).",
+  "why": "Its own endorsements page gives no pick or rating in this race, not even its \"Neutral/No Position\" rating (checked Oct 31, 2026).",
   "url": "https://www.democratsforequality.org/endorsements",
   "date": "2026-10-31",
   "confidence": "verified"
@@ -1382,9 +1382,9 @@
  {
   "endorser_id": "sd-democrats-for-equality",
   "target_id": "sd-county-board-of-ed-5",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "Its own endorsements page lists no pick in this race (checked Oct 31, 2026).",
+  "why": "Its own endorsements page gives no pick or rating in this race, not even its \"Neutral/No Position\" rating (checked Oct 31, 2026).",
   "url": "https://www.democratsforequality.org/endorsements",
   "date": "2026-10-31",
   "confidence": "verified"
@@ -1574,7 +1574,7 @@
   "target_id": "sd-city-council-4",
   "status": "no_position",
   "choice": null,
-  "why": "Its San Diego city list names Districts 2, 6 and 8 only; District 4 is not listed. Checked again on Oct 29, 2026; still no pick on this page.",
+  "why": "Its San Diego city list names Districts 2, 6 and 8 only. Its guide says a race with no recommendation means \"we either could not support the measure or candidates running in that race, or do not have enough information to make an informed recommendation.\" Checked Oct 29, 2026.",
   "url": "https://www.reformcalifornia.org/voter-guides/san-diego",
   "date": "2026-10-29",
   "confidence": "verified"
@@ -1594,7 +1594,7 @@
   "target_id": "sd-city-council-8",
   "status": "no_position",
   "choice": null,
-  "why": "Marks District 8 \"You are Doomed,\" its label for a race with no candidate it backs.",
+  "why": "Marks District 8 \"You are Doomed\" and names no candidate.",
   "url": "https://www.reformcalifornia.org/voter-guides/san-diego",
   "date": "2026-10-17",
   "confidence": "verified"
@@ -1654,7 +1654,7 @@
   "target_id": "sdccd-district-a",
   "status": "no_position",
   "choice": null,
-  "why": "Marks District A \"You are Doomed,\" its label for a race with no candidate it backs.",
+  "why": "Marks District A \"You are Doomed\" and names no candidate.",
   "url": "https://www.reformcalifornia.org/voter-guides/san-diego",
   "date": "2026-10-17",
   "confidence": "verified"
@@ -1674,7 +1674,7 @@
   "target_id": "sdusd-district-b",
   "status": "no_position",
   "choice": null,
-  "why": "Marks Trustee District B \"You are Doomed,\" its label for a race with no candidate it backs.",
+  "why": "Marks Trustee District B \"You are Doomed\" and names no candidate.",
   "url": "https://www.reformcalifornia.org/voter-guides/san-diego",
   "date": "2026-10-17",
   "confidence": "verified"
@@ -1684,7 +1684,7 @@
   "target_id": "sdusd-district-c",
   "status": "no_position",
   "choice": null,
-  "why": "Marks Trustee District C \"You are Doomed,\" its label for a race with no candidate it backs.",
+  "why": "Marks Trustee District C \"You are Doomed\" and names no candidate.",
   "url": "https://www.reformcalifornia.org/voter-guides/san-diego",
   "date": "2026-10-17",
   "confidence": "verified"

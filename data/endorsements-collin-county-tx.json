@@ -1112,21 +1112,21 @@
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-house-67",
-    "status": "endorsed",
-    "choice": "Jeff Leach",
-    "why": "On TLRPAC's Texas House endorsement list, which it updates on a rolling basis. Checked Oct 29, 2026.",
+    "status": "not_found",
+    "choice": null,
+    "why": "TLRPAC's Texas House list includes Jeff Leach, but it names no year or election, so it doesn't show a pick for Nov 3. Checked Oct 30, 2026.",
     "url": "https://tlrpac.org/texas-house-endorsements/",
-    "date": null,
+    "date": "2026-10-30",
     "confidence": "verified"
   },
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-house-89",
-    "status": "endorsed",
-    "choice": "Candy Noble",
-    "why": "On TLRPAC's Texas House endorsement list, which it updates on a rolling basis. Checked Oct 29, 2026.",
+    "status": "not_found",
+    "choice": null,
+    "why": "TLRPAC's Texas House list includes Candy Noble, but it names no year or election, so it doesn't show a pick for Nov 3. Checked Oct 30, 2026.",
     "url": "https://tlrpac.org/texas-house-endorsements/",
-    "date": null,
+    "date": "2026-10-30",
     "confidence": "verified"
   },
   {
@@ -1137,6 +1137,36 @@
     "why": "Not on TLRPAC's Texas House endorsement list, which says it is not comprehensive. Checked Oct 29, 2026.",
     "url": "https://tlrpac.org/texas-house-endorsements/",
     "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texans-for-lawsuit-reform",
+    "target_id": "tx-5th-coa-place-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "TLRPAC's judicial page lists Matthew Kolodoski under Place 3 (and again under Place 9), but it names no year or election and mixes in seats from past elections, so it doesn't show a pick for Nov 3. Read Oct 31, 2026.",
+    "url": "https://tlrpac.org/judicial-endorsements/",
+    "date": "2026-10-31",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texans-for-lawsuit-reform",
+    "target_id": "tx-5th-coa-place-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "TLRPAC's judicial page lists no one for this seat. Read Oct 31, 2026.",
+    "url": "https://tlrpac.org/judicial-endorsements/",
+    "date": "2026-10-31",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texans-for-lawsuit-reform",
+    "target_id": "tx-5th-coa-place-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "TLRPAC's judicial page lists no one for this seat. Read Oct 31, 2026.",
+    "url": "https://tlrpac.org/judicial-endorsements/",
+    "date": "2026-10-31",
     "confidence": "verified"
   },
   {
@@ -1217,6 +1247,36 @@
     "why": "Not on the PAC's 2026 general election endorsement page, which names picks in other districts. Checked Oct 29, 2026.",
     "url": "https://texasrighttolifepac.com/2026-general-election-endorsements/",
     "date": "2026-10-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-right-to-life-pac",
+    "target_id": "tx-5th-coa-place-6",
+    "status": "endorsed",
+    "choice": "Ben Smith",
+    "why": "Listed under Misc. Local Races on the PAC's 2026 general election endorsement page, for \"5th Court of Appeals Pl. 6 (Includes Collin, Dallas, Grayson, Hunt, Kaufman, and Rockwall Counties).\"",
+    "url": "https://texasrighttolifepac.com/2026-general-election-endorsements/",
+    "date": "2026-10-30",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-right-to-life-pac",
+    "target_id": "tx-5th-coa-place-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the PAC's 2026 general election endorsement page, whose Misc. Local Races section names only Place 6 on the 5th Court of Appeals. Checked Oct 30, 2026.",
+    "url": "https://texasrighttolifepac.com/2026-general-election-endorsements/",
+    "date": "2026-10-30",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-right-to-life-pac",
+    "target_id": "tx-5th-coa-place-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the PAC's 2026 general election endorsement page, whose Misc. Local Races section names only Place 6 on the 5th Court of Appeals. Checked Oct 30, 2026.",
+    "url": "https://texasrighttolifepac.com/2026-general-election-endorsements/",
+    "date": "2026-10-30",
     "confidence": "verified"
   },
   {

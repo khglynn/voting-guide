@@ -5,7 +5,7 @@
   "level": "federal",
   "office": "U.S. Representative",
   "district": "CD-42 (most of Long Beach; plus Signal Hill, Huntington Beach, Costa Mesa)",
-  "scope_plain": "Voters in the 42nd Congressional District (new map approved with Prop 50). About 320,000 Long Beach residents live in it, most of the city. It also covers Signal Hill, Huntington Beach, Costa Mesa, Avalon and parts of Newport Beach, Santa Ana and Seal Beach. Roughly, North Long Beach (90805) and most of West Long Beach (90810) are in the 44th instead, and much of 90808 in east Long Beach, next to Lakewood, is in the 41st. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "scope_plain": "Voters in the 42nd Congressional District (new map approved with Prop 50). About 320,000 Long Beach residents live in it, most of the city. It also covers Signal Hill, Huntington Beach, Costa Mesa, Avalon and parts of Newport Beach, Santa Ana and Seal Beach. Roughly, North Long Beach (90805) and most of West Long Beach (90810) are in the 44th instead, and much of 90808 in east Long Beach, plus a corner of North Long Beach, both next to Lakewood, are in the 41st. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 435 U.S. House members. Writes federal laws and votes on the budget and taxes. Two-year term.",
   "why_it_matters": "Prop 50 redrew this district to pair most of Long Beach with Huntington Beach and Costa Mesa in Orange County. The Democrat who holds the current 42nd faces a Republican Huntington Beach school board member. Garcia got 56.5% in June and Burley 20.6%.",
   "vote_for": 1,
@@ -14,28 +14,6 @@
   "term_years": 2,
   "is_retention": false,
   "candidates": [
-   {
-    "name": "Brian Burley",
-    "party": "Republican",
-    "incumbent": false,
-    "website": "https://brianburley.com/",
-    "website_confidence": "verified",
-    "background": "Elected to the Huntington Beach City School District board in 2024. Owns an information technology consulting company. USC bachelor's in political economy and master's in public policy. Ran in the 2022 primary for the 47th District. Second in June with 20.6%. Ballot designation: Trustee, Huntington Beach City School District.",
-    "own_words": [
-     {
-      "text": "\"I know what families in our district are facing: rising costs, public safety concerns, and a government that too often forgets who it works for.\"",
-      "is_quote": true,
-      "source": "https://brianburley.com/"
-     },
-     {
-      "text": "Lists tax relief for families and business owners, taking \"a stand against illegal immigration,\" full support for police and the military, and restoring \"American family values\" as his priorities.",
-      "is_quote": false,
-      "source": "https://brianburley.com/"
-     }
-    ],
-    "lwv_status": "unknown",
-    "lwv_url": null
-   },
    {
     "name": "Robert Garcia",
     "party": "Democratic",
@@ -57,6 +35,28 @@
     ],
     "lwv_status": "unknown",
     "lwv_url": null
+   },
+   {
+    "name": "Brian Burley",
+    "party": "Republican",
+    "incumbent": false,
+    "website": "https://brianburley.com/",
+    "website_confidence": "verified",
+    "background": "Elected to the Huntington Beach City School District board in 2024. Owns an information technology consulting company. USC bachelor's in political economy and master's in public policy. Ran in the 2022 primary for the 47th District. Second in June with 20.6%. Ballot designation: Trustee, Huntington Beach City School District.",
+    "own_words": [
+     {
+      "text": "\"I know what families in our district are facing: rising costs, public safety concerns, and a government that too often forgets who it works for.\"",
+      "is_quote": true,
+      "source": "https://brianburley.com/"
+     },
+     {
+      "text": "Lists tax relief for families and business owners, taking \"a stand against illegal immigration,\" full support for police and the military, and restoring \"American family values\" as his priorities.",
+      "is_quote": false,
+      "source": "https://brianburley.com/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
    }
   ],
   "sources": [
@@ -73,12 +73,24 @@
     "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
    },
    {
-    "name": "Orange County Registrar: candidate list in random alphabet order (CD-42 shared with LA County)",
+    "name": "Orange County Registrar: CD-42 candidates in random alphabet order (the order in Assembly District 68, which leads the district's rotation)",
     "url": "https://ocvote.gov/fileadmin/user_upload/data/candlog/gen2026/candlog.pdf"
    },
    {
     "name": "CA Secretary of State: random alphabet for Nov 3, 2026",
     "url": "https://www.sos.ca.gov/administration/news-releases-and-advisories/2026-news-releases-and-advisories/california-secretary-state-shirley-n-weber-phd-announces-results-randomized-alphabet-drawing-november-3-2026-general-election"
+   },
+   {
+    "name": "CA Secretary of State: how the random alphabet sets ballot order (Congress rotates by Assembly district; Assembly does not)",
+    "url": "https://www.sos.ca.gov/elections/randomized-alphabet"
+   },
+   {
+    "name": "Statewide Database: AB 604 (Prop 50) congressional block equivalency file",
+    "url": "https://statewidedatabase.org/pub/data/d25/AB604.zip"
+   },
+   {
+    "name": "Statewide Database: 2021 Assembly block equivalency file",
+    "url": "https://statewidedatabase.org/pub/data/D20/FINAL_MAPS/2021_AD_Final_equiv.zip"
    },
    {
     "name": "Rep. Robert Garcia: about",
@@ -107,28 +119,6 @@
   "is_retention": false,
   "candidates": [
    {
-    "name": "Carolyn J. Essex",
-    "party": "Democratic",
-    "incumbent": false,
-    "website": null,
-    "website_confidence": "unverified",
-    "background": "Retired City of Los Angeles policy analyst who spent 18 years overseeing federal community development grant money. Has also worked as a caregiver for seniors and children with developmental disabilities, and as a housing coordinator at a transitional home for women leaving prison. Has lived in Long Beach for 12 years. Second in June with 28.5%. Ballot designation: Legislative Policy Analyst.",
-    "own_words": [
-     {
-      "text": "\"Legislation should prioritize infrastructure and improve the daily lives of seniors, working families and young people K-12.\"",
-      "is_quote": true,
-      "source": "https://ballotpedia.org/Carolyn_J._Essex"
-     },
-     {
-      "text": "\"Legislation should usher in correction to decades of infrastructure neglect, land, highway and homelessness that are plaguing our inner cities.\"",
-      "is_quote": true,
-      "source": "https://ballotpedia.org/Carolyn_J._Essex"
-     }
-    ],
-    "lwv_status": "unknown",
-    "lwv_url": null
-   },
-   {
     "name": "Josh Lowenthal",
     "party": "Democratic",
     "incumbent": true,
@@ -149,6 +139,28 @@
     ],
     "lwv_status": "unknown",
     "lwv_url": null
+   },
+   {
+    "name": "Carolyn J. Essex",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": "https://carolynjessex.com/",
+    "website_confidence": "sourced",
+    "background": "Retired City of Los Angeles policy analyst who spent 18 years overseeing federal community development grant money. Has also worked as a caregiver for seniors and children with developmental disabilities, and as a housing coordinator at a transitional home for women leaving prison. Has lived in Long Beach for 12 years. Second in June with 28.5%. Ballot designation: Legislative Policy Analyst.",
+    "own_words": [
+     {
+      "text": "\"Legislation should prioritize infrastructure and improve the daily lives of seniors, working families and young people K-12.\"",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Carolyn_J._Essex"
+     },
+     {
+      "text": "\"Legislation should usher in correction to decades of infrastructure neglect, land, highway and homelessness that are plaguing our inner cities.\"",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Carolyn_J._Essex"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
    }
   ],
   "sources": [
@@ -159,6 +171,14 @@
    {
     "name": "CA Secretary of State: June 2, 2026 primary statement of vote",
     "url": "https://elections.cdn.sos.ca.gov/sov/2026-primary/sov/complete-sov.pdf"
+   },
+   {
+    "name": "CA Secretary of State: random alphabet for Nov 3, 2026",
+    "url": "https://www.sos.ca.gov/administration/news-releases-and-advisories/2026-news-releases-and-advisories/california-secretary-state-shirley-n-weber-phd-announces-results-randomized-alphabet-drawing-november-3-2026-general-election"
+   },
+   {
+    "name": "CA Secretary of State: how the random alphabet sets ballot order (Congress rotates by Assembly district; Assembly does not)",
+    "url": "https://www.sos.ca.gov/elections/randomized-alphabet"
    },
    {
     "name": "City of Long Beach: state and federal officials who represent Long Beach",

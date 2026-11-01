@@ -197,6 +197,12 @@
       "text": "Any Travis County voter can use any Travis polling place on Election Day, Tue Nov 3, 7 AM to 7 PM. Early voting ended Fri Oct 30. Travis also has a generic consolidated ballot PDF at votetravis.gov showing every contest in the county. Travis County: moved here from another Texas county and didn't re-register? The limited ballot was available only during early voting, which ended Oct 30; call 512-238-8683 to ask about your options. Have a Travis mail ballot? On Election Day only, 7 AM to 7 PM, you can hand it in yourself, with photo ID, at 5501 Airport Blvd. Mail ballot questions: ebbm@traviscountytx.gov or 512-238-8683."
     }
   ],
+  "heads_up": [
+    {
+      "text": "Austin reaches into Williamson and Hays counties. If you live in the Williamson County part (ZIPs such as 78717, 78727, 78728, 78729, 78750 and 78759) or the Hays County part (such as 78737, 78739 and 78747), the county races on this page are Travis County's, not yours. Your own county's sample ballot shows your races: Williamson at wilcotx.gov/VoterLookup, Hays at hayscountytx.gov/873.",
+      "applies_to": "ballot"
+    }
+  ],
   "district_finders": [
     {
       "office_match": "U.S. Representative",
@@ -817,7 +823,7 @@
       "zips": [],
       "lookups": {
         "early_in_person": "https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Early%20Voting%20Dashboard.html",
-        "election_day": "https://www.wilcotx.gov/elections"
+        "election_day": "https://www.wilcotx.gov/DocumentCenter/View/22255/Notice-of-General-Election-Williamson-County"
       },
       "source": "https://www.wilcotx.gov/elections",
       "confidence": "verified"

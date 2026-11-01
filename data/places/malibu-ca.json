@@ -1,0 +1,154 @@
+{
+ "id": "malibu-ca",
+ "label": "Malibu",
+ "state": "CA",
+ "counties": [
+  "Los Angeles"
+ ],
+ "county_fips": [
+  "06037"
+ ],
+ "county_election_office": {
+  "name": "Los Angeles County Registrar-Recorder/County Clerk (LAVote.gov), 12400 Imperial Hwy, Norwalk",
+  "url": "https://lavote.gov",
+  "phone": "(800) 815-2666",
+  "phone_label": "General line",
+  "lines": [
+   {
+    "label": "Mail ballot help",
+    "phone": "(800) 815-2666",
+    "hours": "press 2, then 3"
+   },
+   {
+    "label": "Vote center questions",
+    "phone": "(800) 815-2666",
+    "hours": "press 1"
+   }
+  ]
+ },
+ "sample_ballot_url": "https://isb.lavote.gov/",
+ "zips": [
+  "90265"
+ ],
+ "zip_outside": {
+  "90265": "Topanga or the hills outside city limits"
+ },
+ "zip_caveats": "All of the City of Malibu is in ZIP 90265, but most of that ZIP's land is outside city limits: the Santa Monica Mountains above the city and part of Topanga. People there live in unincorporated Los Angeles County, so they don't vote for Malibu City Council. That's why the guide asks which side you live on. Pepperdine University (ZIP 90263) is outside the city too. Everyone in the city votes in the same races. All of Malibu is in U.S. House District 32 (the 2025 map), State Senate District 24 and Assembly District 42. Outside the city, a small part of 90265 is in House District 26 and Senate District 21 instead, and District 21 has no race this year. Malibu also shares two school boards with Santa Monica: Santa Monica-Malibu Unified and Santa Monica College. Both are elected by voters in both cities. Malibu has no city measure this year, and neither school district has one. Santa Monica's school parcel tax, Measure ES, is a City of Santa Monica measure, so Malibu voters don't see it. Malibu is in Division IV of the West Basin Municipal Water District, but there's no race for it: only the sitting director filed, so that election was canceled. Your sample ballot at isb.lavote.gov shows your exact ballot.",
+ "contest_ids": [
+  "ca-governor",
+  "ca-lt-governor",
+  "ca-secretary-of-state",
+  "ca-controller",
+  "ca-treasurer",
+  "ca-attorney-general",
+  "ca-insurance-commissioner",
+  "ca-superintendent",
+  "ca-boe-3",
+  "ca-supreme-court-evans",
+  "ca-supreme-court-groban",
+  "ca-coa-2d-retention",
+  "ca-prop-1",
+  "ca-prop-2",
+  "ca-prop-3",
+  "ca-prop-4",
+  "ca-prop-5",
+  "ca-prop-37",
+  "ca-prop-38",
+  "ca-prop-39",
+  "ca-prop-40",
+  "ca-prop-41",
+  "ca-prop-42",
+  "ca-prop-43",
+  "ca-prop-44",
+  "ca-prop-45",
+  "ca-us-house-32",
+  "ca-state-senate-24",
+  "ca-assembly-42",
+  "la-county-judge-64",
+  "la-county-judge-65",
+  "la-county-judge-87",
+  "la-county-judge-131",
+  "la-county-sheriff",
+  "malibu-city-council",
+  "smmusd-board",
+  "smccd-board",
+  "la-county-measure-a",
+  "la-county-measure-e"
+ ],
+ "lookups": {
+  "early_in_person": "https://locator.lavote.net/locations/vc",
+  "election_day": "https://locator.lavote.net/locations/vc",
+  "drop_box": "https://locator.lavote.gov/locations/vbm?culture=en"
+ },
+ "situations": [
+  {
+   "id": "no_mail_ballot_or_lost",
+   "short": "Get a replacement at any LA County vote center or just vote there.",
+   "answer": "The last day to ask for a ballot by mail was October 27. You can still go to any LA County vote center and ask for a replacement or vote there in person. Questions? Call (800) 815-2666, press 2, then 3.",
+   "steps": [
+    "Use the county's locator to find a vote center near you."
+   ],
+   "source": "https://www.lavote.gov/home/voting-elections/voting-options/vote-by-mail/how-to-vote-by-mail",
+   "confidence": "verified"
+  }
+ ],
+ "notes": null,
+ "sources": [
+  {
+   "name": "LA County: how to vote by mail",
+   "url": "https://www.lavote.gov/home/voting-elections/voting-options/vote-by-mail/how-to-vote-by-mail"
+  },
+  {
+   "name": "LA County: contact (phone menu)",
+   "url": "https://www.lavote.gov/contact-us/contact-us"
+  },
+  {
+   "name": "LA County: drop box locator",
+   "url": "https://locator.lavote.gov/locations/vbm?culture=en"
+  },
+  {
+   "name": "LA County: interactive sample ballot",
+   "url": "https://isb.lavote.gov/"
+  },
+  {
+   "name": "City of Malibu: election information",
+   "url": "https://www.malibucity.org/190/Election-Information"
+  },
+  {
+   "name": "Census 2020 ZIP area (ZCTA) to place relationship file",
+   "url": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_place20_natl.txt"
+  },
+  {
+   "name": "Senate Office of Demographics: Congressional District 32 (2025), places in district",
+   "url": "https://sdmg.senate.ca.gov/committeehome/2025-congressional-districts/congressional-district-32-2025"
+  },
+  {
+   "name": "Senate Office of Demographics: place report for the Senate districts drawn in 2021",
+   "url": "https://sdmg.senate.ca.gov/sites/sdmg.senate.ca.gov/files/2021/crc_2021_place_report_v2.pdf"
+  },
+  {
+   "name": "Senate Office of Demographics: 2025 Senate district ZIP codes",
+   "url": "https://sdmg.senate.ca.gov/system/files/2024-12/2025-state-senate-zip-codes-zip-code-order.pdf"
+  },
+  {
+   "name": "Senate Office of Demographics: 2025 Assembly district ZIP codes",
+   "url": "https://sdmg.senate.ca.gov/system/files/2024-12/2025-state-assembly-zip-codes-zip-code-order.pdf"
+  },
+  {
+   "name": "Senate Office of Demographics: 120th Congress House districts by ZIP code",
+   "url": "https://sdmg.senate.ca.gov/system/files/2026-02/ca_120thcongress_housedistricts_zipcodes_in_zipcode-order_20260205.pdf"
+  },
+  {
+   "name": "West Basin Municipal Water District: Division IV director (Malibu)",
+   "url": "https://www.westbasinca.gov/about-west-basin/board-of-directors/scott-houston"
+  },
+  {
+   "name": "Ballotpedia: municipal and special district elections in Los Angeles County, 2026 (West Basin Division 4 canceled)",
+   "url": "https://ballotpedia.org/Municipal_elections_in_Los_Angeles_County,_California_(2026)"
+  },
+  {
+   "name": "LA County Registrar: measures on the Nov 3, 2026 ballot (rev. Aug 14, 2026)",
+   "url": "https://content.lavote.gov/docs/rrcc/documents/measures-appearing-on-the-ballot---november-3-2026-rev-8-14-2026-v-4.pdf"
+  }
+ ]
+}

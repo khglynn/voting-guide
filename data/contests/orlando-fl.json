@@ -291,9 +291,15 @@
       "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-us-house-district-8/"
      },
      {
-      "text": "Favors free-market pricing in health care and opposes any single-payer system (campaign site, as quoted by News 6; he did not answer the questionnaire).",
+      "text": "Favors free-market pricing in health care and opposes any single-payer system (campaign site, as quoted by News 6; he did not answer News 6's questionnaire).",
       "is_quote": false,
       "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-us-house-district-8/"
+     },
+     {
+      "text": "The Central Florida Freethought Community lists Michael Haridopolos as not responding to its questionnaire.",
+      "is_quote": false,
+      "source": "https://www.cflfreethought.org/2026-orange",
+      "source_label": "Central Florida Freethought Community questionnaire"
      }
     ],
     "lwv_status": "unknown",
@@ -318,7 +324,7 @@
       "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-us-house-district-8/"
      },
      {
-      "text": "Wants to protect the U.S. Department of Education and fully fund special education (campaign site, as quoted by News 6; she did not answer the questionnaire).",
+      "text": "Wants to protect the U.S. Department of Education and fully fund special education (campaign site, as quoted by News 6; she did not answer News 6's questionnaire).",
       "is_quote": false,
       "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-us-house-district-8/"
      },
@@ -1047,6 +1053,12 @@
       "text": "Supports letting the tourist development tax also pay for transportation, infrastructure and public safety.",
       "is_quote": false,
       "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-42/"
+     },
+     {
+      "text": "The Central Florida Freethought Community lists Bonnie Jackson as not responding to its questionnaire.",
+      "is_quote": false,
+      "source": "https://www.cflfreethought.org/2026-orange",
+      "source_label": "Central Florida Freethought Community questionnaire"
      }
     ],
     "lwv_status": "unknown",

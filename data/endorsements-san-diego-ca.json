@@ -542,7 +542,7 @@
  {
   "endorser_id": "sd-county-democratic-party",
   "target_id": "sd-county-assessor",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
   "why": "Its list shows no name for this office; the party says offices with no names \"do not have a known Democrat in the race.\"",
   "url": "https://www.sddemocrats.org/candidates.html",
@@ -752,7 +752,7 @@
  {
   "endorser_id": "sd-county-gop",
   "target_id": "sd-city-council-2",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
   "why": "Its guide lists Council District 2 as \"definitely not Nicole Crosby\" (in capitals in the original) and names no candidate to vote for.",
   "url": "https://www.sandiegorepublicans.org/voter-guides/san-diego",
@@ -827,7 +827,7 @@
   "why": "Measure A is not in its local measures list; KPBS lists the party as taking no position.",
   "url": "https://www.kpbs.org/news/politics/2026/09/30/2026-general-election-guide-to-endorsements-from-san-diego-democrats-republicans-green-libertarian",
   "date": "2026-10-17",
-  "confidence": "verified"
+  "confidence": "sourced"
  },
  {
   "endorser_id": "sd-county-gop",

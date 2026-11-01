@@ -1652,7 +1652,7 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "ga-us-house-5",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The current Georgia ratings page lists this race, but neither candidate has an NRA Endorsed badge. Candidate grades alone are not endorsements.",
     "url": "https://www.nrapvf.org/grades/georgia/",
@@ -1662,7 +1662,7 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "ga-us-house-6",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The current Georgia ratings page lists this race, but neither candidate has an NRA Endorsed badge. Candidate grades alone are not endorsements.",
     "url": "https://www.nrapvf.org/grades/georgia/",
@@ -1672,7 +1672,7 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "ga-sd-35",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The current Georgia ratings page lists this race, but neither candidate has an NRA Endorsed badge. Candidate grades alone are not endorsements.",
     "url": "https://www.nrapvf.org/grades/georgia/",
@@ -1682,7 +1682,7 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "ga-sd-36",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The current Georgia ratings page lists this race, but neither candidate has an NRA Endorsed badge. Candidate grades alone are not endorsements.",
     "url": "https://www.nrapvf.org/grades/georgia/",
@@ -1692,7 +1692,7 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "ga-sd-38",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The current Georgia ratings page lists this race, but neither candidate has an NRA Endorsed badge. Candidate grades alone are not endorsements.",
     "url": "https://www.nrapvf.org/grades/georgia/",
@@ -1702,7 +1702,7 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "ga-sd-39",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The current Georgia ratings page lists this race, but neither candidate has an NRA Endorsed badge. Candidate grades alone are not endorsements.",
     "url": "https://www.nrapvf.org/grades/georgia/",
@@ -1712,7 +1712,7 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "ga-sd-44",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The current Georgia ratings page lists this race, but neither candidate has an NRA Endorsed badge. Candidate grades alone are not endorsements.",
     "url": "https://www.nrapvf.org/grades/georgia/",
@@ -1722,7 +1722,7 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "ga-hd-53",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The current Georgia ratings page lists this race, but neither candidate has an NRA Endorsed badge. Candidate grades alone are not endorsements.",
     "url": "https://www.nrapvf.org/grades/georgia/",
@@ -1732,7 +1732,7 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "ga-hd-54",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The current Georgia ratings page lists this race, but neither candidate has an NRA Endorsed badge. Candidate grades alone are not endorsements.",
     "url": "https://www.nrapvf.org/grades/georgia/",
@@ -1742,7 +1742,7 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "ga-hd-55",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The current Georgia ratings page lists this race, but neither candidate has an NRA Endorsed badge. Candidate grades alone are not endorsements.",
     "url": "https://www.nrapvf.org/grades/georgia/",
@@ -1752,7 +1752,7 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "ga-hd-56",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The current Georgia ratings page lists this race, but neither candidate has an NRA Endorsed badge. Candidate grades alone are not endorsements.",
     "url": "https://www.nrapvf.org/grades/georgia/",
@@ -1762,7 +1762,7 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "ga-hd-57",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The current Georgia ratings page lists this race, but neither candidate has an NRA Endorsed badge. Candidate grades alone are not endorsements.",
     "url": "https://www.nrapvf.org/grades/georgia/",
@@ -1772,7 +1772,7 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "ga-hd-58",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The current Georgia ratings page lists this race, but neither candidate has an NRA Endorsed badge. Candidate grades alone are not endorsements.",
     "url": "https://www.nrapvf.org/grades/georgia/",
@@ -1782,7 +1782,7 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "ga-hd-59",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The current Georgia ratings page lists this race, but neither candidate has an NRA Endorsed badge. Candidate grades alone are not endorsements.",
     "url": "https://www.nrapvf.org/grades/georgia/",
@@ -1792,7 +1792,7 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "ga-hd-60",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The current Georgia ratings page lists this race, but neither candidate has an NRA Endorsed badge. Candidate grades alone are not endorsements.",
     "url": "https://www.nrapvf.org/grades/georgia/",
@@ -1802,7 +1802,7 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "ga-hd-61",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The current Georgia ratings page lists this race, but neither candidate has an NRA Endorsed badge. Candidate grades alone are not endorsements.",
     "url": "https://www.nrapvf.org/grades/georgia/",
@@ -1812,7 +1812,7 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "ga-hd-62",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The current Georgia ratings page lists this race, but neither candidate has an NRA Endorsed badge. Candidate grades alone are not endorsements.",
     "url": "https://www.nrapvf.org/grades/georgia/",
@@ -1822,7 +1822,7 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "ga-hd-63",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The current Georgia ratings page lists this race, but neither candidate has an NRA Endorsed badge. Candidate grades alone are not endorsements.",
     "url": "https://www.nrapvf.org/grades/georgia/",
@@ -1832,7 +1832,7 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "ga-hd-84",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The current Georgia ratings page lists this race, but neither candidate has an NRA Endorsed badge. Candidate grades alone are not endorsements.",
     "url": "https://www.nrapvf.org/grades/georgia/",
@@ -1842,7 +1842,7 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "ga-hd-89",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The current Georgia ratings page lists this race, but neither candidate has an NRA Endorsed badge. Candidate grades alone are not endorsements.",
     "url": "https://www.nrapvf.org/grades/georgia/",
@@ -1852,7 +1852,7 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "ga-hd-90",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The current Georgia ratings page lists this race, but neither candidate has an NRA Endorsed badge. Candidate grades alone are not endorsements.",
     "url": "https://www.nrapvf.org/grades/georgia/",

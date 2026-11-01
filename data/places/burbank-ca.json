@@ -1,0 +1,160 @@
+{
+ "id": "burbank-ca",
+ "label": "Burbank",
+ "state": "CA",
+ "counties": [
+  "Los Angeles"
+ ],
+ "county_fips": [
+  "06037"
+ ],
+ "county_election_office": {
+  "name": "Los Angeles County Registrar-Recorder/County Clerk (LAVote.gov), 12400 Imperial Hwy, Norwalk",
+  "url": "https://lavote.gov",
+  "phone": "(800) 815-2666",
+  "phone_label": "General line",
+  "lines": [
+   {
+    "label": "Mail ballot help",
+    "phone": "(800) 815-2666",
+    "hours": "press 2, then 3"
+   },
+   {
+    "label": "Vote center questions",
+    "phone": "(800) 815-2666",
+    "hours": "press 1"
+   }
+  ]
+ },
+ "sample_ballot_url": "https://isb.lavote.gov/",
+ "zips": [
+  "91501",
+  "91502",
+  "91504",
+  "91505",
+  "91506"
+ ],
+ "zip_caveats": "91501 and 91502 are all Burbank. About 60% of 91504's land is in Burbank; the rest is the City of Los Angeles, on the Sun Valley side. 91505 and 91506 are almost all Burbank, with small edges in Los Angeles. If your address is in Los Angeles, you don't get Burbank's council, clerk, treasurer or school board races or Measures C, CC and CD, so check your address in the address box. All of Burbank is in the 30th Congressional District, the 20th State Senate District and the 44th Assembly District, and in the Los Angeles Community College District. For school board, only Trustee Area 3 votes this year; Burbank Unified's map shows your area. The studio ZIPs (91521, 91522, 91523) and PO box ZIPs aren't listed. Your official sample ballot at lavote.gov shows your exact ballot.",
+ "contest_ids": [
+  "ca-governor",
+  "ca-lt-governor",
+  "ca-secretary-of-state",
+  "ca-controller",
+  "ca-treasurer",
+  "ca-attorney-general",
+  "ca-insurance-commissioner",
+  "ca-superintendent",
+  "ca-boe-3",
+  "ca-supreme-court-evans",
+  "ca-supreme-court-groban",
+  "ca-coa-2d-retention",
+  "ca-prop-1",
+  "ca-prop-2",
+  "ca-prop-3",
+  "ca-prop-4",
+  "ca-prop-5",
+  "ca-prop-37",
+  "ca-prop-38",
+  "ca-prop-39",
+  "ca-prop-40",
+  "ca-prop-41",
+  "ca-prop-42",
+  "ca-prop-43",
+  "ca-prop-44",
+  "ca-prop-45",
+  "burbank-measure-c",
+  "burbank-measure-cc",
+  "burbank-measure-cd",
+  "la-county-measure-a",
+  "la-county-measure-e",
+  "burbank-city-council",
+  "burbank-city-clerk",
+  "burbank-city-treasurer",
+  "la-county-sheriff",
+  "la-county-judge-64",
+  "la-county-judge-65",
+  "la-county-judge-87",
+  "la-county-judge-131",
+  "burbank-usd-area-3",
+  "la-laccd-seat-2",
+  "la-laccd-seat-4",
+  "la-laccd-seat-6",
+  "ca-us-house-30",
+  "ca-state-senate-20",
+  "ca-assembly-44"
+ ],
+ "district_finders": [
+  {
+   "office_match": "Burbank Unified School District Governing Board",
+   "label": "Find your trustee area",
+   "url": "https://www.burbankusd.org/board-of-education/trustee-maps"
+  },
+  {
+   "office_match": "U.S. Representative",
+   "label": "Find your district on your official ballot",
+   "url": "https://isb.lavote.gov/"
+  },
+  {
+   "office_match": "State Senator",
+   "label": "Find your district on your official ballot",
+   "url": "https://isb.lavote.gov/"
+  },
+  {
+   "office_match": "Member of the State Assembly",
+   "label": "Find your district on your official ballot",
+   "url": "https://isb.lavote.gov/"
+  }
+ ],
+ "lookups": {
+  "early_in_person": "https://locator.lavote.net/locations/vc",
+  "election_day": "https://locator.lavote.net/locations/vc",
+  "drop_box": "https://locator.lavote.gov/locations/vbm?culture=en"
+ },
+ "heads_up": [
+  {
+   "text": "Measures CC and CD go together. CC removes the charter's rule that council members are elected citywide; CD draws five council districts. Districts happen only if both pass.",
+   "applies_to": "item:burbank-measure-cc",
+   "source": "https://outlooknewspapers.com/burbankleader/voters-to-see-tax-hike-election-measures-in-november/article_636f9af5-f657-4687-8f71-6014ee06e4bc.html"
+  },
+  {
+   "text": "Measure CD takes effect only if Measure CC passes too. If CC fails, council elections stay citywide however CD does.",
+   "applies_to": "item:burbank-measure-cd",
+   "source": "https://outlooknewspapers.com/burbankleader/voters-to-see-tax-hike-election-measures-in-november/article_636f9af5-f657-4687-8f71-6014ee06e4bc.html"
+  }
+ ],
+ "situations": [
+  {
+   "id": "no_mail_ballot_or_lost",
+   "short": "Get a replacement at any LA County vote center or just vote there.",
+   "answer": "The last day to ask for a ballot by mail was October 27. You can still go to any LA County vote center and ask for a replacement or vote there in person. Questions? Call (800) 815-2666, press 2, then 3.",
+   "steps": [
+    "Use the county's locator to find a vote center near you."
+   ],
+   "source": "https://www.lavote.gov/home/voting-elections/voting-options/vote-by-mail/how-to-vote-by-mail",
+   "confidence": "verified"
+  }
+ ],
+ "notes": "Burbank has four vote centers open through Election Day, November 3: Magnolia Park United Methodist Church on West Magnolia Boulevard (open since October 24), the Buena Vista Branch Library, Burbank Town Center (third floor, Sears wing) and the Courtyard by Marriott at the Empire Center. On November 3 vote centers are open 7 AM to 8 PM. Burbank's four 24-hour drop boxes are at City Hall, the Buena Vista Library, George Izay Park (Joslyn Adult Center) and Ralph Foy Park (Northwest Library). You can use any vote center in LA County; the county's locator has hours and wait times.",
+ "sources": [
+  {
+   "name": "LA County: how to vote by mail",
+   "url": "https://www.lavote.gov/home/voting-elections/voting-options/vote-by-mail/how-to-vote-by-mail"
+  },
+  {
+   "name": "LA County: contact (phone menu)",
+   "url": "https://www.lavote.gov/contact-us/contact-us"
+  },
+  {
+   "name": "LA County: drop box locator",
+   "url": "https://locator.lavote.gov/locations/vbm?culture=en"
+  },
+  {
+   "name": "LA County: interactive sample ballot",
+   "url": "https://isb.lavote.gov/"
+  },
+  {
+   "name": "Burbank Leader: Voters hit the polls ahead of Nov. 3 (Burbank vote centers and drop boxes)",
+   "url": "https://outlooknewspapers.com/burbankleader/voters-hit-the-polls-ahead-of-nov-3/article_a543f406-c8f6-4d7d-95c6-d9a211a3c578.html"
+  }
+ ]
+}

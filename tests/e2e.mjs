@@ -4096,6 +4096,20 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
     noErrors(page, 'St. Louis 63120 moved ballot');
     await ctx.close();
   }
+  {
+    // Review of #71, Nov 1: 90810 is Long Beach's and Los Angeles's, and Long Beach marks its Carson side. Not
+    // sure which, the card names all three and never says "your city is in", though Los Angeles doesn't mark it.
+    const { ctx, page } = await newPage();
+    await openZip(page, '90810');
+    await page.waitForSelector('[data-fk="cp-outside"]', { timeout: 15000 });
+    check('Long Beach 90810: the ZIP asks between Long Beach, Los Angeles and Carson', !!(await page.$('[data-fk="cp-long-beach-ca"]')) && !!(await page.$('[data-fk="cp-los-angeles-ca"]')) && /^Carson/.test(await partsText(page, '[data-fk="cp-outside"]')), await text(page, '.choose'));
+    await tap(page, '[data-fk="cp-unsure"]');
+    await page.waitForSelector('#door .cov-card', { timeout: 15000 });
+    const card = await partsText(page, '#door .cov-card');
+    check('Long Beach 90810: not sure, the card names all three and offers the address, never "your city is in"', /^90810 is split between (Long Beach, Los Angeles|Los Angeles, Long Beach) and Carson\. Here now: California’s statewide races, the same for all, with picks from \d+ of \d+ sources\. Live in (Long Beach or Los Angeles|Los Angeles or Long Beach)\? Use your address and we’ll open your city’s ballot\. Use my address/.test(card) && !/guide now|Ask Kevin/.test(card), card);
+    noErrors(page, 'Long Beach 90810 not sure');
+    await ctx.close();
+  }
 }
 // A DC ward's ZIP: nothing on the ballot turns on the address, so there is no address box before a
 // lookup; after one from the first page, the box holds only what was found, this visit; after a

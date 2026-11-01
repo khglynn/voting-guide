@@ -13,7 +13,7 @@
      lines there were "repetative").
    Never "minutes": the pipeline runs scouts, a judge and Kevin's review, so "about a day" is honest. */
 import { S } from '../state';
-import { andList, esc, fmtDate, plural } from '../util';
+import { andList, esc, fmtDate, orList, plural } from '../util';
 import { ballotCoverage, askedWord, type Cov } from '../model/coverage';
 import { noEndorsements } from '../model/lens';
 import { shelfAttrs, reportAttrs, sampleBallot } from './common';
@@ -95,9 +95,10 @@ export function covCardHTML(where: 'door' | 'ballot'): string {
   } else if (statewide && c.shared) {
     // A ZIP split with a town the guide doesn't cover, the voter not sure which side: the statewide races fit
     // both, and the address settles it (app.ts useMatch moves a City address to the City's ballot).
-    body = lead(`${c.zip} is split between ${c.shared.place} and ${c.shared.outside}.`)
-      + line('cov-here', `Here now: ${name}’s statewide races, the same for both${noEndorsements() ? '' : `, with picks from ${c.withPicks} of ${c.sources} sources`}.`)
-      + line('cov-miss', `Live in ${esc(c.shared.place)}? Use your address and we’ll open its ballot.`)
+    const ps = c.shared.places;
+    body = lead(`${c.zip} is split between ${andList([...ps, c.shared.outside])}.`)
+      + line('cov-here', `Here now: ${name}’s statewide races, the same for ${ps.length > 1 ? 'all' : 'both'}${noEndorsements() ? '' : `, with picks from ${c.withPicks} of ${c.sources} sources`}.`)
+      + line('cov-miss', esc(`Live in ${orList(ps)}? Use your address and we’ll open ${ps.length > 1 ? 'your city’s' : 'its'} ballot.`))
       + row(`<button class="${dark}" data-act="addr-open" data-fk="cov-addr">Use my address</button>`) + sbLine;
   } else if (statewide) {
     const action = c.ask

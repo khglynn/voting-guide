@@ -2209,7 +2209,14 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     // Review of #46, Oct 29: 63120 is the City of St. Louis and Pine Lawn. Its statewide ballot never says the
     // city is in (Pine Lawn's isn't); not sure which, it says the ZIP is split; from Pine Lawn (away), it asks as usual.
     const unsure = mc.ballotCoverage(mo, idx, '63120', '2026-10-29');
-    check('coverage: a split ZIP’s statewide ballot isn’t "landed" and names both sides', unsure.state === 'none' && unsure.shared?.place === 'the City of St. Louis' && /Pine Lawn/.test(unsure.shared.outside), JSON.stringify(unsure));
+    check('coverage: a split ZIP’s statewide ballot isn’t "landed" and names both sides', unsure.state === 'none' && unsure.shared?.places.join() === 'the City of St. Louis' && /Pine Lawn/.test(unsure.shared.outside), JSON.stringify(unsure));
+    // Review of #71, Nov 1: 90810 is Long Beach's and Los Angeles's, and Long Beach marks its Carson side. Los
+    // Angeles not marking it doesn't make the ZIP land: the voter may be in Carson. The card names all three.
+    const ca = open('CA', []);
+    const lbz = mc.ballotCoverage(ca, idx, '90810', '2026-11-01');
+    check('coverage: a ZIP two places share, one marking a town outside the guide, isn’t "landed" and names all three', lbz.state === 'none' && [...lbz.shared?.places || []].sort().join() === 'Long Beach,Los Angeles' && lbz.shared.outside === 'Carson', JSON.stringify(lbz));
+    const carson = mc.ballotCoverage(ca, idx, '90810', '2026-11-01', ['long-beach-ca', 'los-angeles-ca']);
+    check('coverage: from Carson (both places away), it offers to add the city, without the split', carson.state === 'none' && carson.shared === null && carson.ask?.key === 'z:90810', JSON.stringify(carson));
     const pine = mc.ballotCoverage(mo, idx, '63120', '2026-10-29', ['st-louis-city-mo']);
     check('coverage: from outside the City (away), it offers to add the city, without the split', pine.state === 'none' && pine.shared === null && pine.ask?.key === 'z:63120', JSON.stringify(pine));
     check('coverage: a place-only ZIP still lands', mc.ballotCoverage(mo, idx, '63110').state === 'landed' && mc.ballotCoverage(mo, idx, '63110').shared === null);

@@ -390,5 +390,21 @@
   "default_on": false,
   "endorses_candidates": true,
   "endorses_measures": true
+ },
+ {
+  "id": "ca-working-families-party",
+  "name": "California Working Families Party",
+  "short": "CA Working Families Party",
+  "type": "advocacy",
+  "lean": "left",
+  "lean_basis": "On its About page (https://www.caworkingfamilies.org/about) it says it works to 'Identify, recruit, and support progressive candidates to offices at every level' and that 'We organize on top of and around the two party system.' No outside rating found; lean reflects its stated mission.",
+  "lean_basis_kind": "mission",
+  "geography": [
+   "santa-monica-ca"
+  ],
+  "guide_url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
  }
 ]

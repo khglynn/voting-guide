@@ -1779,5 +1779,75 @@
   "url": "https://santamonicademocrats.com/full-2026-endorsements/",
   "date": "2026-10-31",
   "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "santa-monica-city-council",
+  "status": "endorsed",
+  "choice": "Caroline M. Torosis",
+  "why": "Its Nov 3, 2026 California voter guide lists \"Caroline Torosis, Santa Monica City Council\" under Los Angeles, its only name in the race.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "santa-monica-rent-board",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its Nov 3, 2026 California voter guide names no one for the Santa Monica Rent Control Board.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "santa-monica-measure-es",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its Nov 3, 2026 California voter guide takes up no Santa Monica measure.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "santa-monica-measure-gg",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its Nov 3, 2026 California voter guide takes up no Santa Monica measure.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "santa-monica-measure-rr",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its Nov 3, 2026 California voter guide takes up no Santa Monica measure.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "santa-monica-measure-vv",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its Nov 3, 2026 California voter guide takes up no Santa Monica measure.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "santa-monica-measure-tt",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its Nov 3, 2026 California voter guide takes up no Santa Monica measure.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
  }
 ]

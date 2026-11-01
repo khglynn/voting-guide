@@ -1,0 +1,498 @@
+[
+ {
+  "id": "burbank-city-council",
+  "state": "CA",
+  "level": "city",
+  "office": "Burbank City Council",
+  "district": null,
+  "scope_plain": "All of Burbank votes in this race. Council seats are citywide (at large), so you can vote for up to three candidates wherever you live in Burbank. Addresses in the City of Los Angeles parts of ZIPs 91504, 91505 and 91506 don't get this race.",
+  "office_explainer": "Five members pass city laws and the budget, and pick the mayor from among themselves.",
+  "why_it_matters": "Three of the five seats are open, and 13 people are running. Mayor Tamala Takahashi and Council Member Nikki Perez are running again; Vice Mayor Zizette Mullins is not. The top three vote-getters win four-year terms.",
+  "vote_for": 3,
+  "incumbent": "Tamala Takahashi, Nikki Perez and Zizette Mullins (not running)",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Jackie Waltman",
+    "party": null,
+    "incumbent": false,
+    "website": "https://jackiewaltmanburbank.com/",
+    "website_confidence": "sourced",
+    "background": "Ballot designation: Retired. A retired law enforcement official who serves on Burbank's Civil Service Commission and used to serve on the Tenant-Landlord Commission.",
+    "own_words": [
+     {
+      "text": "It's clear that we're in trouble with our entertainment industry and part of that is Burbank's fault.",
+      "is_quote": true,
+      "source": "https://outlooknewspapers.com/burbankleader/candidates-share-ideas-at-league-forum/article_09ac85dc-534b-43ab-a769-db464d1ea7ed.html"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Samantha Wick",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.samanthawick.com/",
+    "website_confidence": "sourced",
+    "background": "Ballot designation: Nonprofit Grant Writer. Serves on the Burbank Planning Commission and used to chair the Burbank Heritage Commission.",
+    "own_words": [
+     {
+      "text": "Says closing the city's general fund deficit is a top issue, because a $3.2 million gap is a lot for a city Burbank's size.",
+      "is_quote": false,
+      "source": "https://outlooknewspapers.com/burbankleader/candidates-share-ideas-at-league-forum/article_09ac85dc-534b-43ab-a769-db464d1ea7ed.html"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Eddy Polon",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.eddypolon.com/",
+    "website_confidence": "sourced",
+    "background": "Ballot designation: Community Advocate/Screenwriter. Serves on the Burbank Transportation Commission and for many years ran Continental Kosher Bakery. Ran for council in 2024.",
+    "own_words": [
+     {
+      "text": "Wants the parking lane on Olive Avenue turned into a bus-only lane at rush hour, and says the council should have taken its staff's compromise on the new bus line.",
+      "is_quote": false,
+      "source": "https://outlooknewspapers.com/burbankleader/candidates-share-ideas-at-league-forum/article_09ac85dc-534b-43ab-a769-db464d1ea7ed.html"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "JT Parr",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Comedian. Ran for council in 2024 as John Parr.",
+    "own_words": [
+     {
+      "text": "Opposes Measure CD's switch to district elections, saying it would shrink the pool of candidates and set neighborhoods against each other.",
+      "is_quote": false,
+      "source": "https://outlooknewspapers.com/burbankleader/candidates-share-ideas-at-league-forum/article_09ac85dc-534b-43ab-a769-db464d1ea7ed.html"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Nikki Perez",
+    "party": null,
+    "incumbent": true,
+    "website": "https://www.nikkiperez.com/",
+    "website_confidence": "sourced",
+    "background": "Ballot designation: Burbank City Councilmember. On the council since 2022. A social worker and lifelong Burbank resident.",
+    "own_words": [
+     {
+      "text": "We need to keep families housed and we need to build more housing",
+      "is_quote": true,
+      "source": "https://outlooknewspapers.com/burbankleader/candidates-share-ideas-at-league-forum/article_09ac85dc-534b-43ab-a769-db464d1ea7ed.html"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Jonathan Ontiveros",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.jonathan4burbank.com/",
+    "website_confidence": "sourced",
+    "background": "Ballot designation: Civil Engineering Professional. A civil engineer and labor union director who grew up in Burbank.",
+    "own_words": [
+     {
+      "text": "Says the deficit has to come first, then wants creative ways to keep paying for programs in different parts of the city.",
+      "is_quote": false,
+      "source": "https://outlooknewspapers.com/burbankleader/candidates-share-ideas-at-league-forum/article_09ac85dc-534b-43ab-a769-db464d1ea7ed.html"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "David Phillip Donahue",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Small Business Owner. Serves on the Burbank Association of Realtors legislative committee and is active in the Burbank Chamber of Commerce.",
+    "own_words": [
+     {
+      "text": "Opposes the new state law SB 79, which allows taller housing near transit without required parking, and wants Burbank to join other cities fighting it.",
+      "is_quote": false,
+      "source": "https://outlooknewspapers.com/burbankleader/candidates-share-ideas-at-league-forum/article_09ac85dc-534b-43ab-a769-db464d1ea7ed.html"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Nolan Southerland",
+    "party": null,
+    "incumbent": false,
+    "website": "https://nolanforburbank.com/",
+    "website_confidence": "sourced",
+    "background": "Ballot designation: Film Editor. A member of the Burbank Tenants Union and a leader of Burbank Community Defense.",
+    "own_words": [
+     {
+      "text": "I support banning all ALPRs (automated license plate readers)",
+      "is_quote": true,
+      "source": "https://outlooknewspapers.com/burbankleader/candidates-share-ideas-at-league-forum/article_09ac85dc-534b-43ab-a769-db464d1ea7ed.html"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Robbie Brody",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.robbieforburbank.com/",
+    "website_confidence": "sourced",
+    "background": "Ballot designation: Administrative Law Judge. Serves on the Burbank Parks and Recreation Board and used to chair the Burbank Water and Power Board and the Art in Public Places Committee.",
+    "own_words": [
+     {
+      "text": "Objects to the city's Flock license plate cameras, calling them a warrantless search of people who haven't committed any crime.",
+      "is_quote": false,
+      "source": "https://outlooknewspapers.com/burbankleader/candidates-share-ideas-at-league-forum/article_09ac85dc-534b-43ab-a769-db464d1ea7ed.html"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Chris Yoosefi",
+    "party": null,
+    "incumbent": false,
+    "website": "https://yoosefiserves.com/",
+    "website_confidence": "sourced",
+    "background": "Ballot designation: Small Business Owner. A U.S. Navy veteran who served as a hospital corpsman, and active with the Burbank American Legion.",
+    "own_words": [
+     {
+      "text": "Nobody rides the current bus. People in Burbank aren't using them.",
+      "is_quote": true,
+      "source": "https://outlooknewspapers.com/burbankleader/candidates-share-ideas-at-league-forum/article_09ac85dc-534b-43ab-a769-db464d1ea7ed.html"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Mike Van Gorder",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.vangorderforburbank.com/",
+    "website_confidence": "sourced",
+    "background": "Ballot designation: Housing Policy Analyst. Ran for council in 2024.",
+    "own_words": [
+     {
+      "text": "Burbank is the whole city, not just our City Hall",
+      "is_quote": true,
+      "source": "https://outlooknewspapers.com/burbankleader/candidates-share-ideas-at-league-forum/article_09ac85dc-534b-43ab-a769-db464d1ea7ed.html"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Hovanes \"Hov\" Tonoyan",
+    "party": null,
+    "incumbent": false,
+    "website": "https://votehov.com/",
+    "website_confidence": "sourced",
+    "background": "Ballot designation: Cybersecurity Project Manager. A Burbank native who studied political science at UC Berkeley. Ran for council in 2024.",
+    "own_words": [
+     {
+      "text": "Wants the city to watch studio mergers closely and set its own terms to keep the entertainment industry in Burbank.",
+      "is_quote": false,
+      "source": "https://outlooknewspapers.com/burbankleader/candidates-share-ideas-at-league-forum/article_09ac85dc-534b-43ab-a769-db464d1ea7ed.html"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Tamala Takahashi",
+    "party": null,
+    "incumbent": true,
+    "website": "https://tamala4burbank.com/",
+    "website_confidence": "sourced",
+    "background": "Ballot designation: Incumbent. Burbank's mayor this year; on the council since 2022. A therapist who used to run a consulting business for nonprofits.",
+    "own_words": [
+     {
+      "text": "Wants new ways to reach residents: small neighborhood roundtables instead of typical town halls, 311 alerts on your phone, and more press releases.",
+      "is_quote": false,
+      "source": "https://outlooknewspapers.com/burbankleader/candidates-share-ideas-at-league-forum/article_09ac85dc-534b-43ab-a769-db464d1ea7ed.html"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "Burbank Leader: Burbank City Council hopefuls begin campaigns (Aug 21, 2026)",
+    "url": "https://outlooknewspapers.com/burbankleader/burbank-city-council-hopefuls-begin-campaigns/article_2bbab391-55b3-467d-ac37-b0202d6a111b.html"
+   },
+   {
+    "name": "Burbank Leader: Candidates share ideas at League forum (Sept 26, 2026)",
+    "url": "https://outlooknewspapers.com/burbankleader/candidates-share-ideas-at-league-forum/article_09ac85dc-534b-43ab-a769-db464d1ea7ed.html"
+   },
+   {
+    "name": "Burbank Leader: Mullins won't seek reelection (Aug 7, 2026)",
+    "url": "https://outlooknewspapers.com/burbankleader/mullins-wont-seek-reelection-to-burbank-city-council/article_5a3e9363-feee-4e72-86ee-3af8bad09ab1.html"
+   },
+   {
+    "name": "Burbank Leader: Nominations open for City Council, other offices (July 11, 2026)",
+    "url": "https://outlooknewspapers.com/burbankleader/nominations-open-for-city-council-other-offices/article_719f1a6e-7447-4de7-a325-f8ed6b4f9fbf.html"
+   },
+   {
+    "name": "VoteStack: City of Burbank, Member of the City Council (ballot order and designations)",
+    "url": "https://votestack.org/races/ca/burbank/2026-11-03/city-of-burbank-member-of-the-city-council"
+   },
+   {
+    "name": "Burbank Votes: candidates and ballot designations",
+    "url": "https://burbankvotes.com/"
+   },
+   {
+    "name": "Secretary of State's random alphabet for Nov 3, 2026 (as posted by Nevada County)",
+    "url": "https://nevadacountyca.gov/CivicAlerts.aspx?AID=8876"
+   }
+  ],
+  "confidence": "sourced"
+ },
+ {
+  "id": "burbank-city-clerk",
+  "state": "CA",
+  "level": "city",
+  "office": "Burbank City Clerk",
+  "district": null,
+  "scope_plain": "All of Burbank votes in this race. Addresses in the City of Los Angeles parts of ZIPs 91504, 91505 and 91506 don't get it.",
+  "office_explainer": "Keeps the city's official records and runs Burbank's city elections.",
+  "why_it_matters": "Only one candidate is running: City Clerk Kimberley Clark.",
+  "vote_for": 1,
+  "incumbent": "Kimberley Clark",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Kimberley Clark",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Burbank City Clerk. Elected city clerk in 2022. Before that she worked for Burbank Unified from 2010 as its public information officer and assistant to the school board.",
+    "own_words": [
+     {
+      "text": "During my term, I will continue delivering accountable, efficient and accessible service to our community.",
+      "is_quote": true,
+      "source": "https://outlooknewspapers.com/burbankleader/burbank-city-council-hopefuls-begin-campaigns/article_2bbab391-55b3-467d-ac37-b0202d6a111b.html"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "VoteStack: City of Burbank, City Clerk",
+    "url": "https://votestack.org/races/ca/burbank/2026-11-03/city-of-burbank-city-clerk"
+   },
+   {
+    "name": "Burbank Leader: Burbank City Council hopefuls begin campaigns (Aug 21, 2026)",
+    "url": "https://outlooknewspapers.com/burbankleader/burbank-city-council-hopefuls-begin-campaigns/article_2bbab391-55b3-467d-ac37-b0202d6a111b.html"
+   },
+   {
+    "name": "Burbank Votes: Kimberley Clark",
+    "url": "https://burbankvotes.com/candidates/kimberley-clark/"
+   }
+  ],
+  "confidence": "sourced"
+ },
+ {
+  "id": "burbank-city-treasurer",
+  "state": "CA",
+  "level": "city",
+  "office": "Burbank City Treasurer",
+  "district": null,
+  "scope_plain": "All of Burbank votes in this race. Addresses in the City of Los Angeles parts of ZIPs 91504, 91505 and 91506 don't get it.",
+  "office_explainer": "Invests the city's money and keeps track of the cash Burbank holds.",
+  "why_it_matters": "Only one candidate is running: City Treasurer Krystle Palmer.",
+  "vote_for": 1,
+  "incumbent": "Krystle Palmer",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Krystle Palmer",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Incumbent. City treasurer since 2019. Has a master's in financial engineering from Columbia University and worked as an investment analyst.",
+    "own_words": [
+     {
+      "text": "Together we have grown Burbank's investment portfolio from $430 million to $750 million",
+      "is_quote": true,
+      "source": "https://outlooknewspapers.com/burbankleader/burbank-city-council-hopefuls-begin-campaigns/article_2bbab391-55b3-467d-ac37-b0202d6a111b.html"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "VoteStack: City of Burbank, City Treasurer",
+    "url": "https://votestack.org/races/ca/burbank/2026-11-03/city-of-burbank-city-treasurer"
+   },
+   {
+    "name": "Burbank Leader: Burbank City Council hopefuls begin campaigns (Aug 21, 2026)",
+    "url": "https://outlooknewspapers.com/burbankleader/burbank-city-council-hopefuls-begin-campaigns/article_2bbab391-55b3-467d-ac37-b0202d6a111b.html"
+   },
+   {
+    "name": "Burbank Votes: Krystle Palmer",
+    "url": "https://burbankvotes.com/candidates/krystle-palmer/"
+   }
+  ],
+  "confidence": "sourced"
+ },
+ {
+  "id": "burbank-usd-area-3",
+  "state": "CA",
+  "level": "school",
+  "office": "Burbank Unified School District Governing Board",
+  "district": "Trustee Area 3",
+  "scope_plain": "Only voters who live in Trustee Area 3, one of the five areas of the Burbank Unified School District. Check your area on the district's map. Trustee Area 4's seat is also up, but only one person filed, so it isn't on the ballot.",
+  "office_explainer": "Five trustees set the school district's budget and policies and hire the superintendent.",
+  "why_it_matters": "An open seat. The trustee elected here in 2022 resigned in September 2025, and the board appointed a member from another area to fill in until December. That member isn't running.",
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": true,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Hai Ho",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Retired Aerospace Engineer. Born in Vietnam; managed aerospace engineering projects for 39 years and sent his children to Burbank public schools.",
+    "own_words": [
+     {
+      "text": "Burbank Unified faces a recurring budget deficit, and I have a practical plan to address it without raising taxes.",
+      "is_quote": true,
+      "source": "https://outlooknewspapers.com/burbankleader/candidate-statement-hai-ho/article_d56b8033-356e-4f51-a95d-ef632a9817c6.html"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Dennis M. Connor",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Retired Technical Writer.",
+    "own_words": [
+     {
+      "text": "Says money is the district's main issue, and would test every budget line by whether it adds an adult in a classroom or one above it.",
+      "is_quote": false,
+      "source": "https://outlooknewspapers.com/burbankleader/candidate-statement-dennis-connor/article_9dfe7fc5-6289-4ccb-ac22-d4a32e6c4a7c.html"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Evren Ozbey",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "No ballot designation is listed.",
+    "own_words": [
+     {
+      "text": "educational courses focusing on ethics and character development will be necessary",
+      "is_quote": true,
+      "source": "https://outlooknewspapers.com/burbankleader/candidate-statement-evren-ozbey/article_fe7adbf5-0967-4f8d-ba28-b14a9fd0a370.html"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Paul Gerard",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: College Professor/Parent. Has taught at USC for 20 years after a background in finance; moved to Burbank 17 years ago.",
+    "own_words": [
+     {
+      "text": "The number one issue our district faces is the fiscal crisis.",
+      "is_quote": true,
+      "source": "https://outlooknewspapers.com/burbankleader/candidate-statement-paul-gerard/article_c4f4fe63-cc30-40dd-9955-b36719829210.html"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Rosemary T. Morrison",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Mother/Teacher/Student. An educator for more than 20 years who has served on the Burbank Library Board and worked as a district classified employee.",
+    "own_words": [
+     {
+      "text": "my goal is to move BUSD away from a cycle of austerity and toward long-term success",
+      "is_quote": true,
+      "source": "https://outlooknewspapers.com/burbankleader/candidate-statement-rosemary-morrison/article_76401f7a-86e0-43a7-9334-33dfbd5ce7c7.html"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "Burbank Unified: trustee area map and 2026 election sequence",
+    "url": "https://www.burbankusd.org/board-of-education/trustee-maps"
+   },
+   {
+    "name": "Burbank Unified: board members and terms",
+    "url": "https://www.burbankusd.org/board-of-education/board-members"
+   },
+   {
+    "name": "Burbank Leader: Six candidates vie for Burbank Board of Education (Aug 21, 2026)",
+    "url": "https://outlooknewspapers.com/burbankleader/six-candidates-vie-for-burbank-board-of-education/article_4f1ecb94-4d72-444d-84c3-018b224e8770.html"
+   },
+   {
+    "name": "myBurbank: George Saikali will be appointed to the Burbank Unified board, Trustee Area 4",
+    "url": "https://myburbank.com/george-saikali-will-be-appointed-to-the-burbank-unified-school-district-board-of-education-trustee-area-4/"
+   },
+   {
+    "name": "VoteStack: Burbank Unified, Trustee Area No. 3 (ballot order and designations)",
+    "url": "https://votestack.org/races/ca/los-angeles-county/2026-11-03/burbank-unified-school-district-governing-board-member-trustee-area-no-3"
+   },
+   {
+    "name": "Secretary of State's random alphabet for Nov 3, 2026 (as posted by Nevada County)",
+    "url": "https://nevadacountyca.gov/CivicAlerts.aspx?AID=8876"
+   }
+  ],
+  "confidence": "sourced"
+ }
+]

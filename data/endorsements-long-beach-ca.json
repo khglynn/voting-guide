@@ -94,9 +94,9 @@
   "target_id": "ca-us-house-42",
   "status": "not_found",
   "choice": null,
-  "why": "HJTA-PAC's 2026 voting guide lists congressional picks for 16 districts, including the 41st, but none for District 42 (checked the Oct 29, 2026 copy).",
+  "why": "HJTA-PAC's 2026 voting guide lists congressional picks for 16 districts, including the 41st, but none for District 42 (checked the Oct 29, 2026 copy). Checked again on Nov 1, 2026; still no pick on this page.",
   "url": "https://www.hjta.org/2026VotingGuide/",
-  "date": "2026-10-29",
+  "date": "2026-11-01",
   "confidence": "verified"
  },
  {
@@ -184,9 +184,9 @@
   "target_id": "ca-assembly-69",
   "status": "not_found",
   "choice": null,
-  "why": "The California Republican Party's 2026 endorsements page lists Assembly picks up to District 65 and from District 70, with none for District 69, where both candidates are Democrats (checked the Oct 30, 2026 copy).",
+  "why": "The California Republican Party's 2026 endorsements page lists Assembly picks up to District 65 and from District 70, with none for District 69, where both candidates are Democrats (checked the Oct 30, 2026 copy). Checked again on Nov 1, 2026; still no pick on this page.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-30",
+  "date": "2026-11-01",
   "confidence": "verified"
  },
  {
@@ -224,9 +224,9 @@
   "target_id": "ca-assembly-69",
   "status": "not_found",
   "choice": null,
-  "why": "The party’s public lookup has picks for nearby Assembly districts but no entry for District 69, where both candidates are Democrats (checked Oct 31, 2026).",
+  "why": "The party’s public lookup has picks for nearby Assembly districts but no entry for District 69, where both candidates are Democrats (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "confidence": "verified"
  },
  {
@@ -294,9 +294,9 @@
   "target_id": "lbccd-area-5",
   "status": "not_found",
   "choice": null,
-  "why": "Its guide's Long Beach City College Board of Trustees card lists picks for Areas 1 and 3 only; Area 5 is not listed (checked Oct 31, 2026).",
+  "why": "Its guide's Long Beach City College Board of Trustees card lists picks for Areas 1 and 3 only; Area 5 is not listed (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "confidence": "verified"
  },
  {
@@ -304,9 +304,9 @@
   "target_id": "lbccd-area-5",
   "status": "not_found",
   "choice": null,
-  "why": "The party’s public lookup has no entry for the Long Beach college board (checked Oct 31, 2026).",
+  "why": "The party’s public lookup has no entry for the Long Beach college board (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "confidence": "verified"
  },
  {
@@ -314,9 +314,9 @@
   "target_id": "lbccd-area-5",
   "status": "not_found",
   "choice": null,
-  "why": "Knock LA's Nov 2026 guide covers the Los Angeles Community College District but not Long Beach's (checked Oct 31, 2026).",
+  "why": "Knock LA's Nov 2026 guide covers the Los Angeles Community College District but not Long Beach's (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
   "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "confidence": "verified"
  },
  {
@@ -384,9 +384,9 @@
   "target_id": "wrd-division-3",
   "status": "not_found",
   "choice": null,
-  "why": "The party’s public lookup lists Tracy Burns for Division 3 but marks the pick “Endorsed by Reform California, an allied group,” not as a party endorsement or recommendation (checked Oct 31, 2026).",
+  "why": "The party’s public lookup lists Tracy Burns for Division 3 but marks the pick “Endorsed by Reform California, an allied group,” not as a party endorsement or recommendation (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "confidence": "verified"
  },
  {
@@ -394,9 +394,9 @@
   "target_id": "wrd-division-3",
   "status": "not_found",
   "choice": null,
-  "why": "Knock LA's Nov 2026 guide has no Water Replenishment District section (checked Oct 31, 2026).",
+  "why": "Knock LA's Nov 2026 guide has no Water Replenishment District section (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
   "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "confidence": "verified"
  },
  {

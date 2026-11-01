@@ -762,7 +762,7 @@
  {
   "endorser_id": "sd-county-gop",
   "target_id": "sd-city-council-4",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
   "why": "Its San Diego city section lists only Districts 2 and 6.",
   "url": "https://www.sandiegorepublicans.org/voter-guides/san-diego",
@@ -772,7 +772,7 @@
  {
   "endorser_id": "sd-county-gop",
   "target_id": "sd-city-council-8",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
   "why": "Its San Diego city section lists only Districts 2 and 6.",
   "url": "https://www.sandiegorepublicans.org/voter-guides/san-diego",
@@ -782,7 +782,7 @@
  {
   "endorser_id": "sd-county-gop",
   "target_id": "sd-county-board-of-ed-5",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
   "why": "Its County Board of Education entry lists District 3 only.",
   "url": "https://www.sandiegorepublicans.org/voter-guides/san-diego",
@@ -792,7 +792,7 @@
  {
   "endorser_id": "sd-county-gop",
   "target_id": "sdccd-district-a",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
   "why": "Its guide lists no San Diego Community College District race.",
   "url": "https://www.sandiegorepublicans.org/voter-guides/san-diego",
@@ -802,7 +802,7 @@
  {
   "endorser_id": "sd-county-gop",
   "target_id": "sdccd-district-c",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
   "why": "Its guide lists no San Diego Community College District race.",
   "url": "https://www.sandiegorepublicans.org/voter-guides/san-diego",
@@ -812,7 +812,7 @@
  {
   "endorser_id": "sd-county-gop",
   "target_id": "ca-us-house-52",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
   "why": "Its congressional list stops at District 51; KPBS reports \"None endorsed\" for District 52, and Times of San Diego says the Republican on the ballot, Jeff Belle, is not party-endorsed.",
   "url": "https://www.sandiegorepublicans.org/voter-guides/san-diego",
@@ -962,7 +962,7 @@
  {
   "endorser_id": "sd-imperial-labor-council",
   "target_id": "sdusd-district-b",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
   "why": "Its San Diego Unified entry names only District C (Hayden Gore); District B, where Shana Hazan is unopposed, is not listed.",
   "url": "https://www.unionyes.org/2026-endorsements",
@@ -1082,7 +1082,7 @@
  {
   "endorser_id": "sd-imperial-labor-council",
   "target_id": "ca-assembly-75",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
   "why": "Its Assembly list covers Districts 74 and 76 through 79 and skips 75.",
   "url": "https://www.unionyes.org/2026-endorsements",
@@ -1092,7 +1092,7 @@
  {
   "endorser_id": "sd-imperial-labor-council",
   "target_id": "ca-assembly-80",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
   "why": "Its Assembly list covers Districts 74 and 76 through 79 and skips 80.",
   "url": "https://www.unionyes.org/2026-endorsements",
@@ -1102,7 +1102,7 @@
  {
   "endorser_id": "sd-imperial-labor-council",
   "target_id": "sd-county-assessor",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
   "why": "Its San Diego County section lists supervisors, the treasurer and measures, not the assessor.",
   "url": "https://www.unionyes.org/2026-endorsements",

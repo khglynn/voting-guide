@@ -142,7 +142,7 @@
   {
     "endorser_id": "pa-chamberpac",
     "target_id": "pa-sd-38",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
     "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
@@ -222,7 +222,7 @@
   {
     "endorser_id": "pa-chamberpac",
     "target_id": "pa-sd-42",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
     "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
@@ -302,7 +302,7 @@
   {
     "endorser_id": "pa-chamberpac",
     "target_id": "pa-hd-19",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
     "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
@@ -382,7 +382,7 @@
   {
     "endorser_id": "pa-chamberpac",
     "target_id": "pa-hd-20",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
     "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
@@ -462,7 +462,7 @@
   {
     "endorser_id": "pa-chamberpac",
     "target_id": "pa-hd-21",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
     "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
@@ -542,7 +542,7 @@
   {
     "endorser_id": "pa-chamberpac",
     "target_id": "pa-hd-23",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
     "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
@@ -622,7 +622,7 @@
   {
     "endorser_id": "pa-chamberpac",
     "target_id": "pa-hd-24",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
     "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
@@ -702,7 +702,7 @@
   {
     "endorser_id": "pa-chamberpac",
     "target_id": "pa-hd-27",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
     "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
@@ -782,7 +782,7 @@
   {
     "endorser_id": "pa-chamberpac",
     "target_id": "pa-hd-34",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
     "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
@@ -862,7 +862,7 @@
   {
     "endorser_id": "pa-chamberpac",
     "target_id": "pa-hd-36",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
     "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
@@ -942,7 +942,7 @@
   {
     "endorser_id": "pa-chamberpac",
     "target_id": "pa-hd-38",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
     "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
@@ -1122,9 +1122,9 @@
   {
     "endorser_id": "allegheny-fayette-clc",
     "target_id": "allegheny-charter-7c",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The labor council's complete 2026 general-election list covers candidates only and takes no stand on the ballot question.",
+    "why": "The labor council's complete 2026 general-election list covers candidates only; the ballot question is not on it.",
     "url": "https://paaflcio.org/system/files/2026-08/ACLC-%202026%20General%20Endorsements.pdf",
     "date": "2026-10-17",
     "confidence": "verified"
@@ -1192,7 +1192,7 @@
   {
     "endorser_id": "pa-working-families-party",
     "target_id": "pa-sd-42",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The party's full 2026 Pennsylvania candidate list on its own page (including the part behind \"View More\") has no pick in this race.",
     "url": "https://workingfamilies.org/state/pennsylvania",
@@ -1202,7 +1202,7 @@
   {
     "endorser_id": "pa-working-families-party",
     "target_id": "pa-hd-20",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The party's full 2026 Pennsylvania candidate list on its own page (including the part behind \"View More\") has no pick in this race.",
     "url": "https://workingfamilies.org/state/pennsylvania",
@@ -1212,7 +1212,7 @@
   {
     "endorser_id": "pa-working-families-party",
     "target_id": "pa-hd-23",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The party's full 2026 Pennsylvania candidate list on its own page (including the part behind \"View More\") has no pick in this race.",
     "url": "https://workingfamilies.org/state/pennsylvania",
@@ -1222,7 +1222,7 @@
   {
     "endorser_id": "pa-working-families-party",
     "target_id": "pa-hd-27",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The party's full 2026 Pennsylvania candidate list on its own page (including the part behind \"View More\") has no pick in this race.",
     "url": "https://workingfamilies.org/state/pennsylvania",
@@ -1232,7 +1232,7 @@
   {
     "endorser_id": "pa-working-families-party",
     "target_id": "pa-hd-34",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The party's full 2026 Pennsylvania candidate list on its own page (including the part behind \"View More\") has no pick in this race.",
     "url": "https://workingfamilies.org/state/pennsylvania",
@@ -1242,7 +1242,7 @@
   {
     "endorser_id": "pa-working-families-party",
     "target_id": "pa-hd-36",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The party's full 2026 Pennsylvania candidate list on its own page (including the part behind \"View More\") has no pick in this race.",
     "url": "https://workingfamilies.org/state/pennsylvania",
@@ -1252,7 +1252,7 @@
   {
     "endorser_id": "pa-working-families-party",
     "target_id": "pa-hd-38",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The party's full 2026 Pennsylvania candidate list on its own page (including the part behind \"View More\") has no pick in this race.",
     "url": "https://workingfamilies.org/state/pennsylvania",

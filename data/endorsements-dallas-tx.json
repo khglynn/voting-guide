@@ -1572,7 +1572,7 @@
   {
     "endorser_id": "dallas-county-gop",
     "target_id": "tx-house-104",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican is on the ballot in this race.",
     "url": "https://dallasgop.org/meet-the-candidates/",
@@ -1582,7 +1582,7 @@
   {
     "endorser_id": "dallas-county-gop",
     "target_id": "tx-house-105",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican is on the ballot in this race.",
     "url": "https://dallasgop.org/meet-the-candidates/",
@@ -1592,7 +1592,7 @@
   {
     "endorser_id": "dallas-county-gop",
     "target_id": "tx-house-107",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican is on the ballot in this race.",
     "url": "https://dallasgop.org/meet-the-candidates/",
@@ -1622,7 +1622,7 @@
   {
     "endorser_id": "dallas-county-gop",
     "target_id": "tx-house-110",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican is on the ballot in this race.",
     "url": "https://dallasgop.org/meet-the-candidates/",
@@ -1632,7 +1632,7 @@
   {
     "endorser_id": "dallas-county-gop",
     "target_id": "tx-house-111",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican is on the ballot in this race.",
     "url": "https://dallasgop.org/meet-the-candidates/",
@@ -1722,7 +1722,7 @@
   {
     "endorser_id": "dallas-county-gop",
     "target_id": "tx-dallas-cda",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican is on the ballot in this race.",
     "url": "https://dallasgop.org/meet-the-candidates/",
@@ -1782,7 +1782,7 @@
   {
     "endorser_id": "dallas-county-gop",
     "target_id": "tx-dallas-commissioner-4",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican is on the ballot in this race.",
     "url": "https://dallasgop.org/meet-the-candidates/",
@@ -1802,7 +1802,7 @@
   {
     "endorser_id": "dallas-county-gop",
     "target_id": "tx-dallas-jp-1-2",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican is on the ballot. The party lists write-in candidate Jayla Godbolt on its Meet the Candidates page, which says \"These are not endorsements.\"",
     "url": "https://dallasgop.org/meet-the-candidates/",
@@ -1822,7 +1822,7 @@
   {
     "endorser_id": "dallas-county-gop",
     "target_id": "tx-dallas-jp-2-2",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican is on the ballot in this race.",
     "url": "https://dallasgop.org/meet-the-candidates/",
@@ -1862,7 +1862,7 @@
   {
     "endorser_id": "dallas-county-gop",
     "target_id": "tx-dallas-jp-4-2",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican is on the ballot in this race.",
     "url": "https://dallasgop.org/meet-the-candidates/",
@@ -1872,7 +1872,7 @@
   {
     "endorser_id": "dallas-county-gop",
     "target_id": "tx-dallas-jp-5-1",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican is on the ballot in this race.",
     "url": "https://dallasgop.org/meet-the-candidates/",
@@ -1882,7 +1882,7 @@
   {
     "endorser_id": "dallas-county-gop",
     "target_id": "tx-dallas-jp-5-2",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican is on the ballot in this race.",
     "url": "https://dallasgop.org/meet-the-candidates/",
@@ -1892,7 +1892,7 @@
   {
     "endorser_id": "dallas-county-gop",
     "target_id": "tx-dallas-constable-1",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican is on the ballot in this race.",
     "url": "https://dallasgop.org/meet-the-candidates/",
@@ -1912,7 +1912,7 @@
   {
     "endorser_id": "dallas-county-gop",
     "target_id": "tx-dallas-constable-3",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican is on the ballot in this race.",
     "url": "https://dallasgop.org/meet-the-candidates/",
@@ -1922,7 +1922,7 @@
   {
     "endorser_id": "dallas-county-gop",
     "target_id": "tx-dallas-constable-4",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican is on the ballot in this race.",
     "url": "https://dallasgop.org/meet-the-candidates/",
@@ -1932,7 +1932,7 @@
   {
     "endorser_id": "dallas-county-gop",
     "target_id": "tx-dallas-constable-5",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican is on the ballot in this race.",
     "url": "https://dallasgop.org/meet-the-candidates/",
@@ -3242,7 +3242,7 @@
   {
     "endorser_id": "dallas-county-gop",
     "target_id": "tx-dallas-uncontested-judges",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican is in this box.",
     "url": "https://dallasgop.org/meet-the-candidates/",

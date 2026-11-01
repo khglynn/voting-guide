@@ -372,9 +372,9 @@
   {
     "endorser_id": "mo-democratic-party",
     "target_id": "mo-retention-wilson",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties do not take positions on nonpartisan judicial retention in Missouri; none appears on the party's 2026 page.",
+    "why": "No retention pick appears on the party's 2026 page.",
     "url": "https://www.missouridemocrats.org/2026-general-election",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -382,9 +382,9 @@
   {
     "endorser_id": "mo-democratic-party",
     "target_id": "mo-retention-lay",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties do not take positions on nonpartisan judicial retention in Missouri; none appears on the party's 2026 page.",
+    "why": "No retention pick appears on the party's 2026 page.",
     "url": "https://www.missouridemocrats.org/2026-general-election",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -392,9 +392,9 @@
   {
     "endorser_id": "mo-democratic-party",
     "target_id": "mo-retention-navarro-mckelvey",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties do not take positions on nonpartisan judicial retention in Missouri; none appears on the party's 2026 page.",
+    "why": "No retention pick appears on the party's 2026 page.",
     "url": "https://www.missouridemocrats.org/2026-general-election",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -402,9 +402,9 @@
   {
     "endorser_id": "mo-democratic-party",
     "target_id": "mo-retention-quigless",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties do not take positions on nonpartisan judicial retention in Missouri; none appears on the party's 2026 page.",
+    "why": "No retention pick appears on the party's 2026 page.",
     "url": "https://www.missouridemocrats.org/2026-general-election",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -472,9 +472,9 @@
   {
     "endorser_id": "mo-republican-party",
     "target_id": "mo-retention-wilson",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties do not take positions on nonpartisan judicial retention in Missouri; none appears in the Oct 8 guide coverage.",
+    "why": "No retention pick appears in the Oct 8 guide coverage.",
     "url": "https://www.newstalkkzrg.com/2026/10/08/missouri-gop-releases-ballot-guide-ahead-of-november-election/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -482,9 +482,9 @@
   {
     "endorser_id": "mo-republican-party",
     "target_id": "mo-retention-lay",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties do not take positions on nonpartisan judicial retention in Missouri; none appears in the Oct 8 guide coverage.",
+    "why": "No retention pick appears in the Oct 8 guide coverage.",
     "url": "https://www.newstalkkzrg.com/2026/10/08/missouri-gop-releases-ballot-guide-ahead-of-november-election/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -492,9 +492,9 @@
   {
     "endorser_id": "mo-republican-party",
     "target_id": "mo-retention-navarro-mckelvey",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties do not take positions on nonpartisan judicial retention in Missouri; none appears in the Oct 8 guide coverage.",
+    "why": "No retention pick appears in the Oct 8 guide coverage.",
     "url": "https://www.newstalkkzrg.com/2026/10/08/missouri-gop-releases-ballot-guide-ahead-of-november-election/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -502,9 +502,9 @@
   {
     "endorser_id": "mo-republican-party",
     "target_id": "mo-retention-quigless",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties do not take positions on nonpartisan judicial retention in Missouri; none appears in the Oct 8 guide coverage.",
+    "why": "No retention pick appears in the Oct 8 guide coverage.",
     "url": "https://www.newstalkkzrg.com/2026/10/08/missouri-gop-releases-ballot-guide-ahead-of-november-election/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -512,7 +512,7 @@
   {
     "endorser_id": "mo-chamber",
     "target_id": "mo-state-auditor",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Chamber PAC's Oct 5 and July 8 endorsement lists cover General Assembly seats only (63 and 22 candidates). No auditor endorsement.",
     "url": "https://mochamber.com/news-archive/election-news",
@@ -572,9 +572,9 @@
   {
     "endorser_id": "mo-chamber",
     "target_id": "mo-retention-wilson",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Does not weigh in on judicial retention.",
+    "why": "No position on this retention vote found.",
     "url": null,
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -582,9 +582,9 @@
   {
     "endorser_id": "mo-chamber",
     "target_id": "mo-retention-lay",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Does not weigh in on judicial retention.",
+    "why": "No position on this retention vote found.",
     "url": null,
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -592,9 +592,9 @@
   {
     "endorser_id": "mo-chamber",
     "target_id": "mo-retention-navarro-mckelvey",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Does not weigh in on judicial retention.",
+    "why": "No position on this retention vote found.",
     "url": null,
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -602,9 +602,9 @@
   {
     "endorser_id": "mo-chamber",
     "target_id": "mo-retention-quigless",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Does not weigh in on judicial retention.",
+    "why": "No position on this retention vote found.",
     "url": null,
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -662,7 +662,7 @@
   {
     "endorser_id": "mo-afl-cio",
     "target_id": "mo-amendment-8",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Amendment 8 is not listed on the federation's endorsement page.",
     "url": "https://moaflcio.org/news/missouri-afl-cio-2026-primary-endorsements",
@@ -672,9 +672,9 @@
   {
     "endorser_id": "mo-afl-cio",
     "target_id": "mo-retention-wilson",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Does not weigh in on judicial retention.",
+    "why": "No position on this retention vote found.",
     "url": "https://moaflcio.org/news/missouri-afl-cio-2026-primary-endorsements",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -682,9 +682,9 @@
   {
     "endorser_id": "mo-afl-cio",
     "target_id": "mo-retention-lay",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Does not weigh in on judicial retention.",
+    "why": "No position on this retention vote found.",
     "url": "https://moaflcio.org/news/missouri-afl-cio-2026-primary-endorsements",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -692,9 +692,9 @@
   {
     "endorser_id": "mo-afl-cio",
     "target_id": "mo-retention-navarro-mckelvey",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Does not weigh in on judicial retention.",
+    "why": "No position on this retention vote found.",
     "url": "https://moaflcio.org/news/missouri-afl-cio-2026-primary-endorsements",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -702,9 +702,9 @@
   {
     "endorser_id": "mo-afl-cio",
     "target_id": "mo-retention-quigless",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Does not weigh in on judicial retention.",
+    "why": "No position on this retention vote found.",
     "url": "https://moaflcio.org/news/missouri-afl-cio-2026-primary-endorsements",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -722,9 +722,9 @@
   {
     "endorser_id": "mo-right-to-life-pac",
     "target_id": "mo-prop-a",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not a life issue; MRL takes no position.",
+    "why": "No Missouri Right to Life position on this found.",
     "url": null,
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -742,9 +742,9 @@
   {
     "endorser_id": "mo-right-to-life-pac",
     "target_id": "mo-amendment-6",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not a life issue; MRL takes no position.",
+    "why": "No Missouri Right to Life position on this found.",
     "url": null,
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -752,9 +752,9 @@
   {
     "endorser_id": "mo-right-to-life-pac",
     "target_id": "mo-amendment-7",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not a life issue; MRL takes no position.",
+    "why": "No Missouri Right to Life position on this found.",
     "url": null,
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -762,9 +762,9 @@
   {
     "endorser_id": "mo-right-to-life-pac",
     "target_id": "mo-amendment-8",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not a life issue; MRL takes no position.",
+    "why": "No Missouri Right to Life position on this found.",
     "url": null,
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -922,9 +922,9 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "mo-prop-a",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not a firearms measure; NRA-PVF does not take positions on it.",
+    "why": "No NRA-PVF position on this measure found.",
     "url": null,
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -932,9 +932,9 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "mo-amendment-3",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not a firearms measure; NRA-PVF does not take positions on it.",
+    "why": "No NRA-PVF position on this measure found.",
     "url": null,
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -942,9 +942,9 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "mo-amendment-6",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not a firearms measure; NRA-PVF does not take positions on it.",
+    "why": "No NRA-PVF position on this measure found.",
     "url": null,
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -952,9 +952,9 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "mo-amendment-7",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not a firearms measure; NRA-PVF does not take positions on it.",
+    "why": "No NRA-PVF position on this measure found.",
     "url": null,
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -962,9 +962,9 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "mo-amendment-8",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not a firearms measure; NRA-PVF does not take positions on it.",
+    "why": "No NRA-PVF position on this measure found.",
     "url": null,
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -972,9 +972,9 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "mo-retention-wilson",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Does not rate judicial retention.",
+    "why": "No NRA-PVF rating on this retention vote found.",
     "url": null,
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -982,9 +982,9 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "mo-retention-lay",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Does not rate judicial retention.",
+    "why": "No NRA-PVF rating on this retention vote found.",
     "url": null,
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -992,9 +992,9 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "mo-retention-navarro-mckelvey",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Does not rate judicial retention.",
+    "why": "No NRA-PVF rating on this retention vote found.",
     "url": null,
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1002,9 +1002,9 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "mo-retention-quigless",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Does not rate judicial retention.",
+    "why": "No NRA-PVF rating on this retention vote found.",
     "url": null,
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1012,9 +1012,9 @@
   {
     "endorser_id": "people-not-politicians-mo",
     "target_id": "mo-state-auditor",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Single-issue committee focused on the redistricting referendum.",
+    "why": "No pick in this race found; the committee campaigns on the redistricting referendum.",
     "url": "https://peoplenotpoliticiansmo.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1032,9 +1032,9 @@
   {
     "endorser_id": "people-not-politicians-mo",
     "target_id": "mo-amendment-3",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Single-issue committee focused on the redistricting referendum.",
+    "why": "No pick in this race found; the committee campaigns on the redistricting referendum.",
     "url": "https://peoplenotpoliticiansmo.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1042,9 +1042,9 @@
   {
     "endorser_id": "people-not-politicians-mo",
     "target_id": "mo-amendment-6",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Single-issue committee focused on the redistricting referendum.",
+    "why": "No pick in this race found; the committee campaigns on the redistricting referendum.",
     "url": "https://peoplenotpoliticiansmo.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1052,9 +1052,9 @@
   {
     "endorser_id": "people-not-politicians-mo",
     "target_id": "mo-amendment-7",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Single-issue committee focused on the redistricting referendum.",
+    "why": "No pick in this race found; the committee campaigns on the redistricting referendum.",
     "url": "https://peoplenotpoliticiansmo.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1062,9 +1062,9 @@
   {
     "endorser_id": "people-not-politicians-mo",
     "target_id": "mo-amendment-8",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Single-issue committee focused on the redistricting referendum.",
+    "why": "No pick in this race found; the committee campaigns on the redistricting referendum.",
     "url": "https://peoplenotpoliticiansmo.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1072,9 +1072,9 @@
   {
     "endorser_id": "people-not-politicians-mo",
     "target_id": "mo-retention-wilson",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Single-issue committee focused on the redistricting referendum.",
+    "why": "No pick in this race found; the committee campaigns on the redistricting referendum.",
     "url": "https://peoplenotpoliticiansmo.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1082,9 +1082,9 @@
   {
     "endorser_id": "people-not-politicians-mo",
     "target_id": "mo-retention-lay",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Single-issue committee focused on the redistricting referendum.",
+    "why": "No pick in this race found; the committee campaigns on the redistricting referendum.",
     "url": "https://peoplenotpoliticiansmo.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1092,9 +1092,9 @@
   {
     "endorser_id": "people-not-politicians-mo",
     "target_id": "mo-retention-navarro-mckelvey",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Single-issue committee focused on the redistricting referendum.",
+    "why": "No pick in this race found; the committee campaigns on the redistricting referendum.",
     "url": "https://peoplenotpoliticiansmo.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1102,9 +1102,9 @@
   {
     "endorser_id": "people-not-politicians-mo",
     "target_id": "mo-retention-quigless",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Single-issue committee focused on the redistricting referendum.",
+    "why": "No pick in this race found; the committee campaigns on the redistricting referendum.",
     "url": "https://peoplenotpoliticiansmo.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1172,9 +1172,9 @@
   {
     "endorser_id": "sierra-club-mo",
     "target_id": "mo-retention-wilson",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Does not weigh in on judicial retention.",
+    "why": "No position on this retention vote found.",
     "url": null,
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1182,9 +1182,9 @@
   {
     "endorser_id": "sierra-club-mo",
     "target_id": "mo-retention-lay",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Does not weigh in on judicial retention.",
+    "why": "No position on this retention vote found.",
     "url": null,
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1192,9 +1192,9 @@
   {
     "endorser_id": "sierra-club-mo",
     "target_id": "mo-retention-navarro-mckelvey",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Does not weigh in on judicial retention.",
+    "why": "No position on this retention vote found.",
     "url": null,
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1202,9 +1202,9 @@
   {
     "endorser_id": "sierra-club-mo",
     "target_id": "mo-retention-quigless",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Does not weigh in on judicial retention.",
+    "why": "No position on this retention vote found.",
     "url": null,
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1212,7 +1212,7 @@
   {
     "endorser_id": "act-for-missouri",
     "target_id": "mo-state-auditor",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The guide covers measures only; it does not mention the auditor race.",
     "url": "https://new-site.act4mo.org/elections/2026/2026-november-voter-guide.html",
@@ -1272,7 +1272,7 @@
   {
     "endorser_id": "act-for-missouri",
     "target_id": "mo-retention-wilson",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The guide covers measures only.",
     "url": "https://new-site.act4mo.org/elections/2026/2026-november-voter-guide.html",
@@ -1282,7 +1282,7 @@
   {
     "endorser_id": "act-for-missouri",
     "target_id": "mo-retention-lay",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The guide covers measures only.",
     "url": "https://new-site.act4mo.org/elections/2026/2026-november-voter-guide.html",
@@ -1292,7 +1292,7 @@
   {
     "endorser_id": "act-for-missouri",
     "target_id": "mo-retention-navarro-mckelvey",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The guide covers measures only.",
     "url": "https://new-site.act4mo.org/elections/2026/2026-november-voter-guide.html",
@@ -1302,7 +1302,7 @@
   {
     "endorser_id": "act-for-missouri",
     "target_id": "mo-retention-quigless",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The guide covers measures only.",
     "url": "https://new-site.act4mo.org/elections/2026/2026-november-voter-guide.html",

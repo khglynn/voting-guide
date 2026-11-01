@@ -1272,7 +1272,7 @@
   {
     "endorser_id": "georgia-equality-pac",
     "target_id": "ga-sd-35",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its 2026 general slate (page updated Oct 13) lists no pick in this race.",
     "url": "https://georgiaequalitypac.org/2026-election-endorsements/",
@@ -1282,7 +1282,7 @@
   {
     "endorser_id": "georgia-equality-pac",
     "target_id": "ga-sd-39",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its 2026 general slate (page updated Oct 13) lists no pick in this race.",
     "url": "https://georgiaequalitypac.org/2026-election-endorsements/",
@@ -1292,7 +1292,7 @@
   {
     "endorser_id": "georgia-equality-pac",
     "target_id": "ga-hd-53",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its 2026 general slate (page updated Oct 13) lists no pick in this race.",
     "url": "https://georgiaequalitypac.org/2026-election-endorsements/",
@@ -1302,7 +1302,7 @@
   {
     "endorser_id": "georgia-equality-pac",
     "target_id": "ga-hd-55",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its 2026 general slate (page updated Oct 13) lists no pick in this race.",
     "url": "https://georgiaequalitypac.org/2026-election-endorsements/",
@@ -1312,7 +1312,7 @@
   {
     "endorser_id": "georgia-equality-pac",
     "target_id": "ga-hd-56",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its 2026 general slate (page updated Oct 13) lists no pick in this race.",
     "url": "https://georgiaequalitypac.org/2026-election-endorsements/",
@@ -1322,7 +1322,7 @@
   {
     "endorser_id": "georgia-equality-pac",
     "target_id": "ga-hd-59",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its 2026 general slate (page updated Oct 13) lists no pick in this race.",
     "url": "https://georgiaequalitypac.org/2026-election-endorsements/",
@@ -1332,7 +1332,7 @@
   {
     "endorser_id": "georgia-equality-pac",
     "target_id": "ga-hd-60",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its 2026 general slate (page updated Oct 13) lists no pick in this race.",
     "url": "https://georgiaequalitypac.org/2026-election-endorsements/",
@@ -1342,7 +1342,7 @@
   {
     "endorser_id": "georgia-equality-pac",
     "target_id": "ga-hd-61",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its 2026 general slate (page updated Oct 13) lists no pick in this race.",
     "url": "https://georgiaequalitypac.org/2026-election-endorsements/",
@@ -1352,7 +1352,7 @@
   {
     "endorser_id": "georgia-equality-pac",
     "target_id": "ga-hd-62",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its 2026 general slate (page updated Oct 13) lists no pick in this race.",
     "url": "https://georgiaequalitypac.org/2026-election-endorsements/",
@@ -1362,7 +1362,7 @@
   {
     "endorser_id": "georgia-equality-pac",
     "target_id": "ga-hd-63",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its 2026 general slate (page updated Oct 13) lists no pick in this race.",
     "url": "https://georgiaequalitypac.org/2026-election-endorsements/",
@@ -1372,7 +1372,7 @@
   {
     "endorser_id": "georgia-equality-pac",
     "target_id": "ga-hd-84",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its 2026 general slate (page updated Oct 13) lists no pick in this race.",
     "url": "https://georgiaequalitypac.org/2026-election-endorsements/",
@@ -1382,7 +1382,7 @@
   {
     "endorser_id": "georgia-equality-pac",
     "target_id": "ga-hd-89",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its 2026 general slate (page updated Oct 13) lists no pick in this race.",
     "url": "https://georgiaequalitypac.org/2026-election-endorsements/",
@@ -1392,7 +1392,7 @@
   {
     "endorser_id": "georgia-equality-pac",
     "target_id": "ga-us-house-5",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its 2026 general slate has no U.S. House section.",
     "url": "https://georgiaequalitypac.org/2026-election-endorsements/",
@@ -1402,7 +1402,7 @@
   {
     "endorser_id": "georgia-equality-pac",
     "target_id": "ga-us-house-6",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its 2026 general slate has no U.S. House section.",
     "url": "https://georgiaequalitypac.org/2026-election-endorsements/",
@@ -1412,7 +1412,7 @@
   {
     "endorser_id": "georgia-equality-pac",
     "target_id": "dekalb-commission-2",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its 2026 local picks cover Fulton, Cobb and Gwinnett only; no DeKalb Commission section.",
     "url": "https://georgiaequalitypac.org/2026-election-endorsements/",
@@ -1422,7 +1422,7 @@
   {
     "endorser_id": "georgia-equality-pac",
     "target_id": "dekalb-commission-3",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its 2026 local picks cover Fulton, Cobb and Gwinnett only; no DeKalb Commission section.",
     "url": "https://georgiaequalitypac.org/2026-election-endorsements/",
@@ -1432,7 +1432,7 @@
   {
     "endorser_id": "georgia-equality-pac",
     "target_id": "dekalb-commission-7",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its 2026 local picks cover Fulton, Cobb and Gwinnett only; no DeKalb Commission section.",
     "url": "https://georgiaequalitypac.org/2026-election-endorsements/",

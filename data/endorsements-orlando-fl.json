@@ -452,7 +452,7 @@
  {
   "endorser_id": "fl-republican-party",
   "target_id": "fl-orange-clerk",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
   "why": "There is no Republican on the ballot for Clerk of Courts; the race is a Democrat vs. a no-party candidate.",
   "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf",

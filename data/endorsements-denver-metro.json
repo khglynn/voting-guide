@@ -182,9 +182,9 @@
   {
     "endorser_id": "gazette-eb",
     "target_id": "denver-2h",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The Gazette's Nov. 3 picks list covers Denver 4A and 7A but takes no position on the five municipal questions.",
+    "why": "The Gazette's Nov. 3 picks list covers Denver 4A and 7A but does not list the five municipal questions.",
     "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
     "date": "2026-10-12",
     "confidence": "verified"
@@ -192,9 +192,9 @@
   {
     "endorser_id": "gazette-eb",
     "target_id": "denver-2i",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The Gazette's Nov. 3 picks list covers Denver 4A and 7A but takes no position on the five municipal questions.",
+    "why": "The Gazette's Nov. 3 picks list covers Denver 4A and 7A but does not list the five municipal questions.",
     "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
     "date": "2026-10-12",
     "confidence": "verified"
@@ -202,9 +202,9 @@
   {
     "endorser_id": "gazette-eb",
     "target_id": "denver-2j",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The Gazette's Nov. 3 picks list covers Denver 4A and 7A but takes no position on the five municipal questions.",
+    "why": "The Gazette's Nov. 3 picks list covers Denver 4A and 7A but does not list the five municipal questions.",
     "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
     "date": "2026-10-12",
     "confidence": "verified"
@@ -212,9 +212,9 @@
   {
     "endorser_id": "gazette-eb",
     "target_id": "denver-2k",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The Gazette's Nov. 3 picks list covers Denver 4A and 7A but takes no position on the five municipal questions.",
+    "why": "The Gazette's Nov. 3 picks list covers Denver 4A and 7A but does not list the five municipal questions.",
     "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
     "date": "2026-10-12",
     "confidence": "verified"
@@ -222,9 +222,9 @@
   {
     "endorser_id": "gazette-eb",
     "target_id": "denver-311",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The Gazette's Nov. 3 picks list covers Denver 4A and 7A but takes no position on the five municipal questions.",
+    "why": "The Gazette's Nov. 3 picks list covers Denver 4A and 7A but does not list the five municipal questions.",
     "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
     "date": "2026-10-12",
     "confidence": "verified"
@@ -232,7 +232,7 @@
   {
     "endorser_id": "gazette-eb",
     "target_id": "denver-council-at-large-b",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not on the Gazette's Oct 12 picks list, which is complete: CD-8, CD-3, CD-1, attorney general and the ballot measures. It ran a candidate Q&A for this race instead.",
     "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
@@ -242,7 +242,7 @@
   {
     "endorser_id": "gazette-eb",
     "target_id": "co-sd-32",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not on the Gazette's Oct 12 picks list, which is complete: CD-8, CD-3, CD-1, attorney general and the ballot measures.",
     "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
@@ -252,7 +252,7 @@
   {
     "endorser_id": "gazette-eb",
     "target_id": "co-sd-34",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not on the Gazette's Oct 12 picks list, which is complete: CD-8, CD-3, CD-1, attorney general and the ballot measures.",
     "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
@@ -262,7 +262,7 @@
   {
     "endorser_id": "gazette-eb",
     "target_id": "co-hd-6",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not on the Gazette's Oct 12 picks list, which is complete: CD-8, CD-3, CD-1, attorney general and the ballot measures.",
     "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
@@ -272,7 +272,7 @@
   {
     "endorser_id": "gazette-eb",
     "target_id": "co-rtd-b",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not on the Gazette's Oct 12 picks list, which is complete: CD-8, CD-3, CD-1, attorney general and the ballot measures.",
     "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
@@ -282,7 +282,7 @@
   {
     "endorser_id": "gazette-eb",
     "target_id": "co-sboe-1",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not on the Gazette's Oct 12 picks list, which is complete: CD-8, CD-3, CD-1, attorney general and the ballot measures.",
     "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
@@ -292,7 +292,7 @@
   {
     "endorser_id": "gazette-eb",
     "target_id": "co-cu-regent-6",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not on the Gazette's Oct 12 picks list, which is complete: CD-8, CD-3, CD-1, attorney general and the ballot measures.",
     "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
@@ -682,7 +682,7 @@
   {
     "endorser_id": "denver-democrats",
     "target_id": "co-rtd-b",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The party endorsed only in RTD District C among nonpartisan races.",
     "url": "https://www.denverdemocrats.org/vote",
@@ -1312,7 +1312,7 @@
   {
     "endorser_id": "denver-dsa",
     "target_id": "denver-2i",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not included in Denver DSA's local measures guide.",
     "url": "https://denverdsa.org/voter-guide/2026-november-ballot-measures/",
@@ -1322,7 +1322,7 @@
   {
     "endorser_id": "denver-dsa",
     "target_id": "denver-2j",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not included in Denver DSA's local measures guide.",
     "url": "https://denverdsa.org/voter-guide/2026-november-ballot-measures/",
@@ -1332,7 +1332,7 @@
   {
     "endorser_id": "denver-dsa",
     "target_id": "co-frpr-7a",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not included in Denver DSA's local measures guide.",
     "url": "https://denverdsa.org/voter-guide/2026-november-ballot-measures/",
@@ -1452,7 +1452,7 @@
   {
     "endorser_id": "dalf",
     "target_id": "denver-2i",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "DALF's page lists only 2H among Denver measures and refers readers to the Colorado AFL-CIO guide for statewide items.",
     "url": "https://denverlabor.org/endorsements",
@@ -1462,7 +1462,7 @@
   {
     "endorser_id": "dalf",
     "target_id": "denver-2j",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "DALF's page lists only 2H among Denver measures and refers readers to the Colorado AFL-CIO guide for statewide items.",
     "url": "https://denverlabor.org/endorsements",
@@ -1472,7 +1472,7 @@
   {
     "endorser_id": "dalf",
     "target_id": "denver-2k",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "DALF's page lists only 2H among Denver measures and refers readers to the Colorado AFL-CIO guide for statewide items.",
     "url": "https://denverlabor.org/endorsements",
@@ -1482,7 +1482,7 @@
   {
     "endorser_id": "dalf",
     "target_id": "denver-311",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "DALF's page lists only 2H among Denver measures and refers readers to the Colorado AFL-CIO guide for statewide items.",
     "url": "https://denverlabor.org/endorsements",
@@ -1492,7 +1492,7 @@
   {
     "endorser_id": "dalf",
     "target_id": "denver-dps-4a",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "DALF's page lists only 2H among Denver measures and refers readers to the Colorado AFL-CIO guide for statewide items.",
     "url": "https://denverlabor.org/endorsements",
@@ -1502,7 +1502,7 @@
   {
     "endorser_id": "dalf",
     "target_id": "co-frpr-7a",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "DALF's page lists only 2H among Denver measures and refers readers to the Colorado AFL-CIO guide for statewide items.",
     "url": "https://denverlabor.org/endorsements",
@@ -1872,7 +1872,7 @@
   {
     "endorser_id": "downtown-denver-partnership",
     "target_id": "denver-dps-4a",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not among the ten measures the Partnership evaluated.",
     "url": "https://www.downtowndenver.com/post/announcing-our-2026-ballot-guide",
@@ -2462,9 +2462,9 @@
   {
     "endorser_id": "independence-institute",
     "target_id": "denver-2h",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones.",
     "url": "https://i2i.org/2026-voter-guide/",
     "date": "2026-09-29",
     "confidence": "verified"
@@ -2472,9 +2472,9 @@
   {
     "endorser_id": "independence-institute",
     "target_id": "denver-2i",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones.",
     "url": "https://i2i.org/2026-voter-guide/",
     "date": "2026-09-29",
     "confidence": "verified"
@@ -2482,9 +2482,9 @@
   {
     "endorser_id": "independence-institute",
     "target_id": "denver-2j",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones.",
     "url": "https://i2i.org/2026-voter-guide/",
     "date": "2026-09-29",
     "confidence": "verified"
@@ -2492,9 +2492,9 @@
   {
     "endorser_id": "independence-institute",
     "target_id": "denver-2k",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones.",
     "url": "https://i2i.org/2026-voter-guide/",
     "date": "2026-09-29",
     "confidence": "verified"
@@ -2502,9 +2502,9 @@
   {
     "endorser_id": "independence-institute",
     "target_id": "denver-311",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones.",
     "url": "https://i2i.org/2026-voter-guide/",
     "date": "2026-09-29",
     "confidence": "verified"
@@ -2512,9 +2512,9 @@
   {
     "endorser_id": "independence-institute",
     "target_id": "aurora-3a",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones.",
     "url": "https://i2i.org/2026-voter-guide/",
     "date": "2026-09-29",
     "confidence": "verified"
@@ -2522,9 +2522,9 @@
   {
     "endorser_id": "independence-institute",
     "target_id": "aurora-3b",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones.",
     "url": "https://i2i.org/2026-voter-guide/",
     "date": "2026-09-29",
     "confidence": "verified"
@@ -2532,9 +2532,9 @@
   {
     "endorser_id": "independence-institute",
     "target_id": "aurora-3c",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones.",
     "url": "https://i2i.org/2026-voter-guide/",
     "date": "2026-09-29",
     "confidence": "verified"
@@ -2542,9 +2542,9 @@
   {
     "endorser_id": "independence-institute",
     "target_id": "aurora-3d",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones.",
     "url": "https://i2i.org/2026-voter-guide/",
     "date": "2026-09-29",
     "confidence": "verified"
@@ -2552,9 +2552,9 @@
   {
     "endorser_id": "independence-institute",
     "target_id": "lakewood-2g",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones.",
     "url": "https://i2i.org/2026-voter-guide/",
     "date": "2026-09-29",
     "confidence": "verified"
@@ -2562,9 +2562,9 @@
   {
     "endorser_id": "independence-institute",
     "target_id": "lakewood-2h",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones.",
     "url": "https://i2i.org/2026-voter-guide/",
     "date": "2026-09-29",
     "confidence": "verified"
@@ -2572,9 +2572,9 @@
   {
     "endorser_id": "independence-institute",
     "target_id": "lakewood-2i",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones.",
     "url": "https://i2i.org/2026-voter-guide/",
     "date": "2026-09-29",
     "confidence": "verified"
@@ -2582,9 +2582,9 @@
   {
     "endorser_id": "independence-institute",
     "target_id": "lakewood-2j",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones.",
     "url": "https://i2i.org/2026-voter-guide/",
     "date": "2026-09-29",
     "confidence": "verified"
@@ -2592,9 +2592,9 @@
   {
     "endorser_id": "independence-institute",
     "target_id": "arvada-fire-6c",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones.",
     "url": "https://i2i.org/2026-voter-guide/",
     "date": "2026-09-29",
     "confidence": "verified"
@@ -2602,9 +2602,9 @@
   {
     "endorser_id": "independence-institute",
     "target_id": "thornton-2a",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones.",
     "url": "https://i2i.org/2026-voter-guide/",
     "date": "2026-09-29",
     "confidence": "verified"
@@ -2612,9 +2612,9 @@
   {
     "endorser_id": "independence-institute",
     "target_id": "adams-broomfield-da-7e",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones.",
     "url": "https://i2i.org/2026-voter-guide/",
     "date": "2026-09-29",
     "confidence": "verified"

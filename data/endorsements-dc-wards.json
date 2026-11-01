@@ -2,7 +2,7 @@
  {
   "endorser_id": "washington-post-eb",
   "target_id": "dc-ward-1-council",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
   "why": "The Post's editorial board has published no endorsement in this race. Its editorial page from Sept. 26 to Oct. 17, 2026 has no DC or Maryland endorsements.",
   "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
@@ -12,7 +12,7 @@
  {
   "endorser_id": "washington-post-eb",
   "target_id": "dc-ward-3-council",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
   "why": "The Post's editorial board has published no endorsement in this race. Its editorial page from Sept. 26 to Oct. 17, 2026 has no DC or Maryland endorsements.",
   "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
@@ -22,7 +22,7 @@
  {
   "endorser_id": "washington-post-eb",
   "target_id": "dc-ward-5-council",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
   "why": "The Post's editorial board has published no endorsement in this race. Its editorial page from Sept. 26 to Oct. 17, 2026 has no DC or Maryland endorsements.",
   "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
@@ -32,7 +32,7 @@
  {
   "endorser_id": "washington-post-eb",
   "target_id": "dc-ward-6-council",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
   "why": "The Post's editorial board has published no endorsement in this race. Its editorial page from Sept. 26 to Oct. 17, 2026 has no DC or Maryland endorsements.",
   "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
@@ -42,7 +42,7 @@
  {
   "endorser_id": "washington-post-eb",
   "target_id": "dc-ward-1-sboe",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
   "why": "The Post's editorial board has published no endorsement in this race. Its editorial page from Sept. 26 to Oct. 17, 2026 has no DC or Maryland endorsements.",
   "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
@@ -52,7 +52,7 @@
  {
   "endorser_id": "washington-post-eb",
   "target_id": "dc-ward-3-sboe",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
   "why": "The Post's editorial board has published no endorsement in this race. Its editorial page from Sept. 26 to Oct. 17, 2026 has no DC or Maryland endorsements.",
   "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
@@ -62,7 +62,7 @@
  {
   "endorser_id": "washington-post-eb",
   "target_id": "dc-ward-5-sboe",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
   "why": "The Post's editorial board has published no endorsement in this race. Its editorial page from Sept. 26 to Oct. 17, 2026 has no DC or Maryland endorsements.",
   "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
@@ -72,7 +72,7 @@
  {
   "endorser_id": "washington-post-eb",
   "target_id": "dc-ward-6-sboe",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
   "why": "The Post's editorial board has published no endorsement in this race. Its editorial page from Sept. 26 to Oct. 17, 2026 has no DC or Maryland endorsements.",
   "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
@@ -432,7 +432,7 @@
  {
   "endorser_id": "dc-republican-party",
   "target_id": "dc-ward-3-council",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
   "why": "The party has no candidate in this race.",
   "url": "https://dcgop.com/meet-dc-candidates/",
@@ -502,7 +502,7 @@
  {
   "endorser_id": "dc-statehood-green-party",
   "target_id": "dc-ward-3-council",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
   "why": "The party has no candidate in this race.",
   "url": "https://statehoodgreensofdc.org/",
@@ -512,7 +512,7 @@
  {
   "endorser_id": "dc-statehood-green-party",
   "target_id": "dc-ward-6-council",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
   "why": "The party has no candidate in this race.",
   "url": "https://statehoodgreensofdc.org/",

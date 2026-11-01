@@ -128,8 +128,8 @@
   }
  ],
  "lookups": {
-  "early_in_person": "https://locator.lavote.net/locations/vc",
-  "election_day": "https://locator.lavote.net/locations/vc",
+  "early_in_person": "https://locator.lavote.gov/locations/vc?culture=en",
+  "election_day": "https://locator.lavote.gov/locations/vc?culture=en",
   "drop_box": "https://locator.lavote.gov/locations/vbm?culture=en"
  },
  "early_in_person": {
@@ -137,7 +137,7 @@
   "end": "2026-11-02",
   "hours_note": "LA County's first vote centers opened Saturday, October 24, and every vote center is open from Saturday, October 31. They're open 10 AM to 7 PM through Monday, November 2, and 7 AM to 8 PM on Election Day, November 3. You can use any vote center in LA County.",
   "hours_short": "LA County vote centers are open 10 AM to 7 PM every day.",
-  "lookup_url": "https://locator.lavote.net/locations/vc",
+  "lookup_url": "https://locator.lavote.gov/locations/vc?culture=en",
   "source": "https://www.cityofpasadena.net/city-clerk/wp-content/uploads/sites/21/VOTING-IN-PASADENA-EN.pdf",
   "confidence": "verified"
  },

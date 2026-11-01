@@ -1,0 +1,1170 @@
+[
+ {
+  "id": "santa-clarita-council-2",
+  "state": "CA",
+  "level": "city",
+  "office": "Santa Clarita City Council",
+  "district": "District 2",
+  "scope_plain": "Only City of Santa Clarita voters who live in Council District 2. Districts 2, 4 and 5 vote this year; Districts 1 and 3 don't vote until 2028. This is the city's second election by district: until now these seats were elected citywide. Nonpartisan; the candidate with the most votes wins. Use the city's residency lookup to find your district.",
+  "office_explainer": "One of five members who pass city laws, set the budget and choose the mayor each year.",
+  "why_it_matters": "The first election for the District 2 seat. None of the three candidates is on the council now.",
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": true,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Brett Haddoak",
+    "party": null,
+    "incumbent": false,
+    "website": "https://haddoakforsantaclarita.com/",
+    "website_confidence": "sourced",
+    "background": "Software engineer and founder of Oakworks Software, which makes tools for school districts' afterschool programs. Says he worked eight years at eBay and served on the city's Homelessness Task Force. Ran for council twice before under the name Brett Haddock.",
+    "own_words": [
+     {
+      "text": "Wants a council “confident enough in Santa Clarita to engage with the region instead of retreating from it.”",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Brett_Haddoak"
+     },
+     {
+      "text": "Wants an emergency care facility on the city's east side, real transit links to the rest of the region, and a homelessness plan that treats it as an infrastructure problem.",
+      "is_quote": false,
+      "source": "https://ballotpedia.org/Brett_Haddoak"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Denise Lite",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.electdeniselite.com/",
+    "website_confidence": "sourced",
+    "background": "Attorney and former Santa Clarita Planning Commissioner. Ran for city council in 2022.",
+    "own_words": [
+     {
+      "text": "Santa Clarita must grow responsibly, with development that reflects the needs and priorities of our community.",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Denise_Lite"
+     },
+     {
+      "text": "Wants full support for the LA County Sheriff's Department and more spending on roads, sewers and water systems. Says she'll give 10% of her council pay to a different local nonprofit each month.",
+      "is_quote": false,
+      "source": "https://ballotpedia.org/Denise_Lite"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Gloria Mercado-Fortine",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.gloriaforsantaclarita.com/",
+    "website_confidence": "sourced",
+    "background": "Served on the Hart high school district board from 1999 to 2015 and ran for it again in 2024. Past president of the SCV Sheriff's Foundation (her campaign site).",
+    "own_words": [
+     {
+      "text": "Our community needs a council member who is accountable, actively engaged, accessible and who will listen",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Gloria_Mercado-Fortine"
+     },
+     {
+      "text": "Wants stronger ties between law enforcement, schools and businesses, more high-paying jobs, and more career and technical classes with the Hart district and College of the Canyons.",
+      "is_quote": false,
+      "source": "https://ballotpedia.org/Gloria_Mercado-Fortine"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "Santa Clarita City Clerk: list of qualified candidates (Aug 13, 2026)",
+    "url": "https://santaclarita.gov/city-clerk/wp-content/uploads/sites/8/2026/08/List-of-Qualified-Candidates-Memo.pdf"
+   },
+   {
+    "name": "Santa Clarita City Clerk: notice of election (July 7, 2026)",
+    "url": "https://santaclarita.gov/city-council/wp-content/uploads/sites/39/2026/07/26NOTICE-of-ELECTION_English-Spanish.pdf"
+   },
+   {
+    "name": "Santa Clarita City Clerk: election FAQs",
+    "url": "https://santaclarita.gov/city-clerk/elections/faqs/"
+   },
+   {
+    "name": "City of Santa Clarita: district elections and residency lookup",
+    "url": "https://santaclarita.gov/district-elections/"
+   },
+   {
+    "name": "California Secretary of State: randomized alphabet for the Nov 3 ballot (sets name order)",
+    "url": "https://www.sos.ca.gov/administration/news-releases-and-advisories/2026-news-releases-and-advisories/california-secretary-state-shirley-n-weber-phd-announces-results-randomized-alphabet-drawing-november-3-2026-general-election"
+   },
+   {
+    "name": "Ballotpedia: Santa Clarita city elections (2026)",
+    "url": "https://ballotpedia.org/City_elections_in_Santa_Clarita,_California_(2026)"
+   },
+   {
+    "name": "Ballotpedia: Brett Haddoak",
+    "url": "https://ballotpedia.org/Brett_Haddoak"
+   },
+   {
+    "name": "Ballotpedia: Denise Lite",
+    "url": "https://ballotpedia.org/Denise_Lite"
+   },
+   {
+    "name": "Ballotpedia: Gloria Mercado-Fortine",
+    "url": "https://ballotpedia.org/Gloria_Mercado-Fortine"
+   },
+   {
+    "name": "KHTS: District 2 candidates (Oct 29, 2026)",
+    "url": "https://www.hometownstation.com/santa-clarita-news/politics/santa-clarita-elections/santa-clarita-city-council-candidate-admits-building-nonpartisan-voter-guides-that-never-told-voters-a-candidate-ran-them-616461"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "santa-clarita-council-4",
+  "state": "CA",
+  "level": "city",
+  "office": "Santa Clarita City Council",
+  "district": "District 4",
+  "scope_plain": "Only City of Santa Clarita voters who live in Council District 4. Districts 2, 4 and 5 vote this year; Districts 1 and 3 don't vote until 2028. This is the city's second election by district: until now these seats were elected citywide. Nonpartisan; the candidate with the most votes wins. Use the city's residency lookup to find your district.",
+  "office_explainer": "One of five members who pass city laws, set the budget and choose the mayor each year.",
+  "why_it_matters": "Mayor Laurene Weste, on the council since 1998, runs against four challengers in the first election for the District 4 seat.",
+  "vote_for": 1,
+  "incumbent": "Laurene Weste (now elected citywide)",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Laurene Weste",
+    "party": null,
+    "incumbent": true,
+    "website": "https://www.laureneweste.com/",
+    "website_confidence": "sourced",
+    "background": "Mayor of Santa Clarita (the council chose her in December 2025) and on the council, elected citywide, since 1998. Former city parks commissioner and former director of the Santa Clarita Valley Committee on Aging.",
+    "own_words": [
+     {
+      "text": "Keep District 4 safe, thriving, and true to its family character.",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Laurene_Weste"
+     },
+     {
+      "text": "Her priorities include a Saugus community center and library, housing for veterans and seniors, a green belt of open space around the city, roads that ease traffic, and new sports fields.",
+      "is_quote": false,
+      "source": "https://ballotpedia.org/Laurene_Weste"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Nick Somers",
+    "party": null,
+    "incumbent": false,
+    "website": "https://nicksomers.com",
+    "website_confidence": "sourced",
+    "background": "Small business owner who has worked in the film industry for 25 years. Licensed EMT who volunteers with the Santa Clarita Valley Search & Rescue Team. Has lived in Santa Clarita more than 14 years.",
+    "own_words": [
+     {
+      "text": "I’m not running because I’ve spent my life in politics. I’m running because I’ve spent my life serving people.",
+      "is_quote": true,
+      "source": "https://www.hometownstation.com/santa-clarita-news/politics/santa-clarita-elections/nick-somers-announces-campaign-for-santa-clarita-city-council-district-4-608304"
+     },
+     {
+      "text": "Wants a closer look at how big developments affect traffic and neighborhoods, roads and services that keep up with growth, and a community center for District 4. Pledges 20% of his council pay to local nonprofits.",
+      "is_quote": false,
+      "source": "https://www.hometownstation.com/santa-clarita-news/politics/santa-clarita-elections/nick-somers-announces-campaign-for-santa-clarita-city-council-district-4-608304"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Valerie Bradford",
+    "party": null,
+    "incumbent": false,
+    "website": "https://bradford4district4.com/",
+    "website_confidence": "sourced",
+    "background": null,
+    "own_words": [
+     {
+      "text": "Everyone deserves safe and stable housing, not to mention self-dignity.",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Valerie_Bradford"
+     },
+     {
+      "text": "Her campaign site lists affordable housing, District 4 roads and parks, homelessness, keeping businesses open, and public safety as priorities.",
+      "is_quote": false,
+      "source": "https://ballotpedia.org/Valerie_Bradford"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Jeffrey Berman",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.berman4citycouncilscv.com",
+    "website_confidence": "sourced",
+    "background": "Screenwriter, author, producer and director. Says he spent 14 years making compliance and ethics training videos for NAVEX and moved to Santa Clarita about five years ago.",
+    "own_words": [
+     {
+      "text": "Protect what works. Improve what matters.",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Jeffrey_Berman_(California)"
+     },
+     {
+      "text": "Says growth should come with the roads and public safety to support it, and that leaders should listen, research, then decide and explain their votes.",
+      "is_quote": false,
+      "source": "https://ballotpedia.org/Jeffrey_Berman_(California)"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Peter Yahiayan",
+    "party": null,
+    "incumbent": false,
+    "website": "https://peteryahiayan.com",
+    "website_confidence": "sourced",
+    "background": "Grew up in Santa Clarita and went to Golden Valley High School. Small business owner and real estate professional.",
+    "own_words": [
+     {
+      "text": "public safety and individual privacy do not have to be opposing goals",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Peter_Yahiayan"
+     },
+     {
+      "text": "Wants growth reviewed together with the roads and services it needs, a review of the city's license plate reader cameras, and more children's and emergency health care nearby.",
+      "is_quote": false,
+      "source": "https://ballotpedia.org/Peter_Yahiayan"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "Santa Clarita City Clerk: list of qualified candidates (Aug 13, 2026)",
+    "url": "https://santaclarita.gov/city-clerk/wp-content/uploads/sites/8/2026/08/List-of-Qualified-Candidates-Memo.pdf"
+   },
+   {
+    "name": "Santa Clarita City Clerk: notice of election (July 7, 2026)",
+    "url": "https://santaclarita.gov/city-council/wp-content/uploads/sites/39/2026/07/26NOTICE-of-ELECTION_English-Spanish.pdf"
+   },
+   {
+    "name": "Santa Clarita City Clerk: election FAQs",
+    "url": "https://santaclarita.gov/city-clerk/elections/faqs/"
+   },
+   {
+    "name": "City of Santa Clarita: district elections and residency lookup",
+    "url": "https://santaclarita.gov/district-elections/"
+   },
+   {
+    "name": "California Secretary of State: randomized alphabet for the Nov 3 ballot (sets name order)",
+    "url": "https://www.sos.ca.gov/administration/news-releases-and-advisories/2026-news-releases-and-advisories/california-secretary-state-shirley-n-weber-phd-announces-results-randomized-alphabet-drawing-november-3-2026-general-election"
+   },
+   {
+    "name": "Ballotpedia: Santa Clarita city elections (2026)",
+    "url": "https://ballotpedia.org/City_elections_in_Santa_Clarita,_California_(2026)"
+   },
+   {
+    "name": "City of Santa Clarita: Mayor Laurene Weste",
+    "url": "https://santaclarita.gov/city-council/laurene-weste/"
+   },
+   {
+    "name": "Ballotpedia: Santa Clarita (council members and mayor)",
+    "url": "https://ballotpedia.org/Santa_Clarita,_California"
+   },
+   {
+    "name": "KHTS: Nick Somers announcement (Sept 3, 2026)",
+    "url": "https://www.hometownstation.com/santa-clarita-news/politics/santa-clarita-elections/nick-somers-announces-campaign-for-santa-clarita-city-council-district-4-608304"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "santa-clarita-council-5",
+  "state": "CA",
+  "level": "city",
+  "office": "Santa Clarita City Council",
+  "district": "District 5",
+  "scope_plain": "Only City of Santa Clarita voters who live in Council District 5. Districts 2, 4 and 5 vote this year; Districts 1 and 3 don't vote until 2028. This is the city's second election by district: until now these seats were elected citywide. Nonpartisan; the candidate with the most votes wins. Use the city's residency lookup to find your district.",
+  "office_explainer": "One of five members who pass city laws, set the budget and choose the mayor each year.",
+  "why_it_matters": "The first election for the District 5 seat. None of the three candidates is on the council now.",
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": true,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Bob Khalsa",
+    "party": null,
+    "incumbent": false,
+    "website": "https://votebobkhalsa.com",
+    "website_confidence": "sourced",
+    "background": "Real estate broker and business owner; past president of the Southland Regional Association of Realtors. Says he was a fighter pilot for 23 years, then an airline pilot and a high school science and math teacher. Has lived in District 5 for 28 years.",
+    "own_words": [
+     {
+      "text": "My key message is simple: responsible growth, fiscal accountability, public safety, and economic opportunity",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Bob_Khalsa"
+     },
+     {
+      "text": "Wants fewer permit delays, support for local businesses, wildfire preparedness and better traffic and roads.",
+      "is_quote": false,
+      "source": "https://ballotpedia.org/Bob_Khalsa"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Liliia Chernova",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": null,
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null,
+    "own_words_status": "none_found",
+    "own_words_checked": {
+     "on": "2026-10-31",
+     "where": [
+      "Ballotpedia",
+      "the City Clerk's candidate list"
+     ]
+    }
+   },
+   {
+    "name": "Kelvin Driscoll",
+    "party": null,
+    "incumbent": false,
+    "website": "https://kelvinforscv.com/",
+    "website_confidence": "sourced",
+    "background": "Says he is a director at one of LA County's largest nonprofits and teaches graduate students at the USC School of Social Work. Holds a Ph.D. Ran for city council in 2020.",
+    "own_words": [
+     {
+      "text": "I believe District 5 deserves a Councilmember who is accessible, listens to residents, brings people together, and delivers results.",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Kelvin_Driscoll"
+     },
+     {
+      "text": "His priorities: support for first responders, planning and roads that keep up with growth, and open, careful decisions.",
+      "is_quote": false,
+      "source": "https://ballotpedia.org/Kelvin_Driscoll"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "Santa Clarita City Clerk: list of qualified candidates (Aug 13, 2026)",
+    "url": "https://santaclarita.gov/city-clerk/wp-content/uploads/sites/8/2026/08/List-of-Qualified-Candidates-Memo.pdf"
+   },
+   {
+    "name": "Santa Clarita City Clerk: notice of election (July 7, 2026)",
+    "url": "https://santaclarita.gov/city-council/wp-content/uploads/sites/39/2026/07/26NOTICE-of-ELECTION_English-Spanish.pdf"
+   },
+   {
+    "name": "Santa Clarita City Clerk: election FAQs",
+    "url": "https://santaclarita.gov/city-clerk/elections/faqs/"
+   },
+   {
+    "name": "City of Santa Clarita: district elections and residency lookup",
+    "url": "https://santaclarita.gov/district-elections/"
+   },
+   {
+    "name": "California Secretary of State: randomized alphabet for the Nov 3 ballot (sets name order)",
+    "url": "https://www.sos.ca.gov/administration/news-releases-and-advisories/2026-news-releases-and-advisories/california-secretary-state-shirley-n-weber-phd-announces-results-randomized-alphabet-drawing-november-3-2026-general-election"
+   },
+   {
+    "name": "Ballotpedia: Santa Clarita city elections (2026)",
+    "url": "https://ballotpedia.org/City_elections_in_Santa_Clarita,_California_(2026)"
+   },
+   {
+    "name": "Ballotpedia: Bob Khalsa",
+    "url": "https://ballotpedia.org/Bob_Khalsa"
+   },
+   {
+    "name": "Ballotpedia: Kelvin Driscoll",
+    "url": "https://ballotpedia.org/Kelvin_Driscoll"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "hart-uhsd-area-2",
+  "state": "CA",
+  "level": "school",
+  "office": "William S. Hart Union High School District Governing Board",
+  "district": "Trustee Area 2",
+  "scope_plain": "Only voters in Trustee Area 2 of the William S. Hart Union High School District. Santa Clarita lies entirely inside the Hart district, but only Areas 2 and 5 vote this year; Area 3's race was canceled because only the incumbent filed, and Areas 1 and 4 vote in 2028. Voters outside the city who live in the same trustee area vote too. Nonpartisan; the candidate with the most votes wins. Check the district's trustee area map.",
+  "office_explainer": "One of five trustees who run the Santa Clarita Valley’s public junior high and high schools.",
+  "why_it_matters": "An open seat: Bob Jensen, on the board since 2009, is not running.",
+  "vote_for": 1,
+  "incumbent": "Bob Jensen (not running)",
+  "open_seat": true,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Bryan Biggers",
+    "party": null,
+    "incumbent": false,
+    "website": "https://biggers4hart.com",
+    "website_confidence": "sourced",
+    "background": "Says he took AP classes at Hart and has worked in construction (his campaign site).",
+    "own_words": [
+     {
+      "text": "Students who want to build things should have a real technical pathway that leads to a career",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Bryan_Biggers"
+     },
+     {
+      "text": "Wants both a demanding AP path for students headed to four-year colleges and strong career training, backed by strong teachers.",
+      "is_quote": false,
+      "source": "https://ballotpedia.org/Bryan_Biggers"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Julee Brooks",
+    "party": null,
+    "incumbent": false,
+    "website": "https://julee4hart.com",
+    "website_confidence": "sourced",
+    "background": "CEO of Woodcraft Rangers, an LA youth nonprofit that runs afterschool and summer programs; earlier led the LA Ronald McDonald House. A state appointee to California's advisory committee on before and afterschool programs.",
+    "own_words": [
+     {
+      "text": "School safety is the number one issue I hear from parents",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Julee_Brooks"
+     },
+     {
+      "text": "Supports the district's partnership with the Sheriff's Department with training, more counselors and therapists, and more career classes and apprenticeships with College of the Canyons.",
+      "is_quote": false,
+      "source": "https://ballotpedia.org/Julee_Brooks"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "LA County notice of election for special and school districts (July 7, 2026), posted by SCV Water",
+    "url": "https://yourscvwater.com/sites/default/files/SCVWA/Exhibit%20D%20-%20NOTICE%20OF%20ELECTION%20-%20SPECIAL%20AND%20SCHOOL%20DISTRICTS%20The%20Signal.pdf"
+   },
+   {
+    "name": "Ballotpedia: Hart district elections (2026)",
+    "url": "https://ballotpedia.org/William_S._Hart_Union_High_School_District,_California,_elections_(2026)"
+   },
+   {
+    "name": "Hart district: governing board members",
+    "url": "https://www.hartdistrict.org/apps/pages/index.jsp?uREC_ID=317470&type=d&pREC_ID=725071"
+   },
+   {
+    "name": "Hart district: trustee area voting map",
+    "url": "https://www.hartdistrict.org/apps/pages/index.jsp?uREC_ID=739893&type=d&pREC_ID=1152469"
+   },
+   {
+    "name": "LA County Democratic Party endorsement list (Sept 8, 2026; lists the race and seat)",
+    "url": "https://assets.nationbuilder.com/lademocrats/mailings/11554/attachments/original/Consent_Calendar_9.8.26.docx.pdf"
+   },
+   {
+    "name": "California Secretary of State: randomized alphabet for the Nov 3 ballot (sets name order)",
+    "url": "https://www.sos.ca.gov/administration/news-releases-and-advisories/2026-news-releases-and-advisories/california-secretary-state-shirley-n-weber-phd-announces-results-randomized-alphabet-drawing-november-3-2026-general-election"
+   },
+   {
+    "name": "Ballotpedia: Bryan Biggers",
+    "url": "https://ballotpedia.org/Bryan_Biggers"
+   },
+   {
+    "name": "Ballotpedia: Julee Brooks",
+    "url": "https://ballotpedia.org/Julee_Brooks"
+   }
+  ],
+  "confidence": "sourced"
+ },
+ {
+  "id": "hart-uhsd-area-5",
+  "state": "CA",
+  "level": "school",
+  "office": "William S. Hart Union High School District Governing Board",
+  "district": "Trustee Area 5",
+  "scope_plain": "Only voters in Trustee Area 5 of the William S. Hart Union High School District. Santa Clarita lies entirely inside the Hart district, but only Areas 2 and 5 vote this year; Area 3's race was canceled because only the incumbent filed, and Areas 1 and 4 vote in 2028. Voters outside the city who live in the same trustee area vote too. Nonpartisan; the candidate with the most votes wins. Check the district's trustee area map.",
+  "office_explainer": "One of five trustees who run the Santa Clarita Valley’s public junior high and high schools.",
+  "why_it_matters": "Joe Messina, on the board since 2009, runs against Stacy Fortner.",
+  "vote_for": 1,
+  "incumbent": "Joe Messina",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Stacy Fortner",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.electstacyfortner.com",
+    "website_confidence": "sourced",
+    "background": "Technology consultant and parent of a Hart district graduate; daughter of a school bus driver (her Ballotpedia survey).",
+    "own_words": [
+     {
+      "text": "Fiscal responsibility isn't just about balancing budgets.",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Stacy_Fortner"
+     },
+     {
+      "text": "Wants to protect advanced classes and career programs, keep money focused on classrooms as enrollment changes, and listen to teachers, staff and parents so every student feels they belong.",
+      "is_quote": false,
+      "source": "https://ballotpedia.org/Stacy_Fortner"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Joe Messina",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "On the Hart board since 2009. Local business owner in the Santa Clarita Valley for over 20 years (district bio).",
+    "own_words": [
+     {
+      "text": "education isn’t just about preparing students for college; it’s about preparing students for life.",
+      "is_quote": true,
+      "source": "https://www.hartdistrict.org/apps/pages/index.jsp?uREC_ID=317470&type=d&pREC_ID=725071"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "LA County notice of election for special and school districts (July 7, 2026), posted by SCV Water",
+    "url": "https://yourscvwater.com/sites/default/files/SCVWA/Exhibit%20D%20-%20NOTICE%20OF%20ELECTION%20-%20SPECIAL%20AND%20SCHOOL%20DISTRICTS%20The%20Signal.pdf"
+   },
+   {
+    "name": "Ballotpedia: Hart district elections (2026)",
+    "url": "https://ballotpedia.org/William_S._Hart_Union_High_School_District,_California,_elections_(2026)"
+   },
+   {
+    "name": "Hart district: governing board members",
+    "url": "https://www.hartdistrict.org/apps/pages/index.jsp?uREC_ID=317470&type=d&pREC_ID=725071"
+   },
+   {
+    "name": "Hart district: trustee area voting map",
+    "url": "https://www.hartdistrict.org/apps/pages/index.jsp?uREC_ID=739893&type=d&pREC_ID=1152469"
+   },
+   {
+    "name": "LA County Democratic Party endorsement list (Sept 8, 2026; lists the race and seat)",
+    "url": "https://assets.nationbuilder.com/lademocrats/mailings/11554/attachments/original/Consent_Calendar_9.8.26.docx.pdf"
+   },
+   {
+    "name": "California Secretary of State: randomized alphabet for the Nov 3 ballot (sets name order)",
+    "url": "https://www.sos.ca.gov/administration/news-releases-and-advisories/2026-news-releases-and-advisories/california-secretary-state-shirley-n-weber-phd-announces-results-randomized-alphabet-drawing-november-3-2026-general-election"
+   },
+   {
+    "name": "Ballotpedia: Stacy Fortner",
+    "url": "https://ballotpedia.org/Stacy_Fortner"
+   },
+   {
+    "name": "Ballotpedia: Joe Messina",
+    "url": "https://ballotpedia.org/Joe_Messina"
+   }
+  ],
+  "confidence": "sourced"
+ },
+ {
+  "id": "saugus-usd-area-1",
+  "state": "CA",
+  "level": "school",
+  "office": "Saugus Union School District Governing Board",
+  "district": "Trustee Area 1",
+  "scope_plain": "Only voters in Trustee Area 1 of the Saugus Union School District. Saugus Union covers about half of Santa Clarita's residents; the rest of the city is in the Sulphur Springs, Newhall or Castaic districts. Areas 1, 2 and 5 vote this year. Nonpartisan; the candidate with the most votes wins. Check the district's trustee area map.",
+  "office_explainer": "One of five trustees who run the Saugus Union School District’s elementary schools.",
+  "why_it_matters": "An open seat: Patti Garibay's term ends and she is not on the ballot. Three candidates.",
+  "vote_for": 1,
+  "incumbent": "Patti Garibay (not running)",
+  "open_seat": true,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Kevin Kim",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": null,
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null,
+    "own_words_status": "none_found",
+    "own_words_checked": {
+     "on": "2026-10-31",
+     "where": [
+      "Ballotpedia"
+     ]
+    }
+   },
+   {
+    "name": "Larry Grable",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.votegrable.com",
+    "website_confidence": "sourced",
+    "background": "Attorney for more than 25 years and owner of a local small business; parent of two (his Ballotpedia survey).",
+    "own_words": [
+     {
+      "text": "safe schools and classrooms where teachers can teach, and students can learn",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Larry_Grable"
+     },
+     {
+      "text": "Wants regular public reports on student behavior and safety, an advanced learning path for students ahead of grade level, and proof that spending gets results.",
+      "is_quote": false,
+      "source": "https://ballotpedia.org/Larry_Grable"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Natalie Epstein",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.natalieforsaugus.com/",
+    "website_confidence": "sourced",
+    "background": null,
+    "own_words": [
+     {
+      "text": "School safety needs to be proactive, not reactive.",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Natalie_Epstein"
+     },
+     {
+      "text": "Wants anti-bullying rules that are enforced the same way every time, strong access to counselors, and a parent's voice on the board.",
+      "is_quote": false,
+      "source": "https://ballotpedia.org/Natalie_Epstein"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "LA County notice of election for special and school districts (July 7, 2026), posted by SCV Water",
+    "url": "https://yourscvwater.com/sites/default/files/SCVWA/Exhibit%20D%20-%20NOTICE%20OF%20ELECTION%20-%20SPECIAL%20AND%20SCHOOL%20DISTRICTS%20The%20Signal.pdf"
+   },
+   {
+    "name": "Ballotpedia: Saugus Union elections (2026)",
+    "url": "https://ballotpedia.org/Saugus_Union_School_District,_California,_elections_(2026)"
+   },
+   {
+    "name": "Saugus Union School District: governing board",
+    "url": "https://www.saugususd.org/governing-board"
+   },
+   {
+    "name": "California Secretary of State: randomized alphabet for the Nov 3 ballot (sets name order)",
+    "url": "https://www.sos.ca.gov/administration/news-releases-and-advisories/2026-news-releases-and-advisories/california-secretary-state-shirley-n-weber-phd-announces-results-randomized-alphabet-drawing-november-3-2026-general-election"
+   },
+   {
+    "name": "Ballotpedia: Larry Grable",
+    "url": "https://ballotpedia.org/Larry_Grable"
+   },
+   {
+    "name": "Ballotpedia: Natalie Epstein",
+    "url": "https://ballotpedia.org/Natalie_Epstein"
+   }
+  ],
+  "confidence": "sourced"
+ },
+ {
+  "id": "saugus-usd-area-2",
+  "state": "CA",
+  "level": "school",
+  "office": "Saugus Union School District Governing Board",
+  "district": "Trustee Area 2",
+  "scope_plain": "Only voters in Trustee Area 2 of the Saugus Union School District. Saugus Union covers about half of Santa Clarita's residents; the rest of the city is in the Sulphur Springs, Newhall or Castaic districts. Areas 1, 2 and 5 vote this year. Nonpartisan; the candidate with the most votes wins. Check the district's trustee area map.",
+  "office_explainer": "One of five trustees who run the Saugus Union School District’s elementary schools.",
+  "why_it_matters": "Anna Griese, elected in 2022, runs against Alisa Gentry.",
+  "vote_for": 1,
+  "incumbent": "Anna Griese",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Anna Griese",
+    "party": null,
+    "incumbent": true,
+    "website": "https://electannagriese.com/",
+    "website_confidence": "sourced",
+    "background": "On the board since December 2022.",
+    "own_words": [
+     {
+      "text": "Every student deserves a safe classroom where they can learn",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Anna_Griese"
+     },
+     {
+      "text": "Wants clear rules for student behavior with quick help when a student struggles, support to hire and keep good teachers, and goals with measurable results.",
+      "is_quote": false,
+      "source": "https://ballotpedia.org/Anna_Griese"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Alisa Gentry",
+    "party": null,
+    "incumbent": false,
+    "website": "https://alisagentry.com",
+    "website_confidence": "sourced",
+    "background": "EMT and parent of children with special needs; her son went through Saugus Union schools and graduated from the Hart district (her Ballotpedia survey).",
+    "own_words": [
+     {
+      "text": "Retaining valuable educators keeps this district desirable.",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Alisa_Gentry"
+     },
+     {
+      "text": "Says parents should have a voice, but not to decide library books or curriculum, and wants classrooms where teachers and students feel safe.",
+      "is_quote": false,
+      "source": "https://ballotpedia.org/Alisa_Gentry"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "LA County notice of election for special and school districts (July 7, 2026), posted by SCV Water",
+    "url": "https://yourscvwater.com/sites/default/files/SCVWA/Exhibit%20D%20-%20NOTICE%20OF%20ELECTION%20-%20SPECIAL%20AND%20SCHOOL%20DISTRICTS%20The%20Signal.pdf"
+   },
+   {
+    "name": "Ballotpedia: Saugus Union elections (2026)",
+    "url": "https://ballotpedia.org/Saugus_Union_School_District,_California,_elections_(2026)"
+   },
+   {
+    "name": "Saugus Union School District: governing board",
+    "url": "https://www.saugususd.org/governing-board"
+   },
+   {
+    "name": "California Secretary of State: randomized alphabet for the Nov 3 ballot (sets name order)",
+    "url": "https://www.sos.ca.gov/administration/news-releases-and-advisories/2026-news-releases-and-advisories/california-secretary-state-shirley-n-weber-phd-announces-results-randomized-alphabet-drawing-november-3-2026-general-election"
+   },
+   {
+    "name": "Ballotpedia: Anna Griese",
+    "url": "https://ballotpedia.org/Anna_Griese"
+   },
+   {
+    "name": "Ballotpedia: Alisa Gentry",
+    "url": "https://ballotpedia.org/Alisa_Gentry"
+   }
+  ],
+  "confidence": "sourced"
+ },
+ {
+  "id": "saugus-usd-area-5",
+  "state": "CA",
+  "level": "school",
+  "office": "Saugus Union School District Governing Board",
+  "district": "Trustee Area 5",
+  "scope_plain": "Only voters in Trustee Area 5 of the Saugus Union School District. Saugus Union covers about half of Santa Clarita's residents; the rest of the city is in the Sulphur Springs, Newhall or Castaic districts. Areas 1, 2 and 5 vote this year. Nonpartisan; the candidate with the most votes wins. Check the district's trustee area map.",
+  "office_explainer": "One of five trustees who run the Saugus Union School District’s elementary schools.",
+  "why_it_matters": "Chris Trunkey, on the board since 2014, runs against Cindy Hallman.",
+  "vote_for": 1,
+  "incumbent": "Chris Trunkey",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Cindy Hallman",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.electchallman.com",
+    "website_confidence": "sourced",
+    "background": "Retired educator: started teaching in the Saugus Union district in the early 1980s, became an administrator, then trained new teachers as a professor at The Master's University.",
+    "own_words": [
+     {
+      "text": "Strong schools begin with excellent teachers, responsible stewardship, transparent decisions, and a community that works together for every child.",
+      "is_quote": true,
+      "source": "https://www.hometownstation.com/santa-clarita-news/politics/santa-clarita-elections/cindy-hallman-passionate-retired-educator-with-40-years-of-experience-running-for-saugus-union-school-board-608456"
+     },
+     {
+      "text": "Wants clear behavior expectations, quick help for teachers, and easy access to district leaders for families, including on special education.",
+      "is_quote": false,
+      "source": "https://ballotpedia.org/Cindy_Hallman"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Chris Trunkey",
+    "party": null,
+    "incumbent": true,
+    "website": "https://www.trunkeyforsaugus.com/",
+    "website_confidence": "sourced",
+    "background": "On the board since 2014. Chief financial officer with over 35 years in private business; Saugus resident for over 25 years (his Ballotpedia survey).",
+    "own_words": [
+     {
+      "text": "Keep our schools safe, accessible, and focused on every child's success.",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Chris_Trunkey"
+     },
+     {
+      "text": "Wants more student mental health support and more hands-on programs, like STEAM (science, technology, engineering, arts and math), an edible schoolyard and dual-language immersion, at more schools.",
+      "is_quote": false,
+      "source": "https://ballotpedia.org/Chris_Trunkey"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "LA County notice of election for special and school districts (July 7, 2026), posted by SCV Water",
+    "url": "https://yourscvwater.com/sites/default/files/SCVWA/Exhibit%20D%20-%20NOTICE%20OF%20ELECTION%20-%20SPECIAL%20AND%20SCHOOL%20DISTRICTS%20The%20Signal.pdf"
+   },
+   {
+    "name": "Ballotpedia: Saugus Union elections (2026)",
+    "url": "https://ballotpedia.org/Saugus_Union_School_District,_California,_elections_(2026)"
+   },
+   {
+    "name": "Saugus Union School District: governing board",
+    "url": "https://www.saugususd.org/governing-board"
+   },
+   {
+    "name": "California Secretary of State: randomized alphabet for the Nov 3 ballot (sets name order)",
+    "url": "https://www.sos.ca.gov/administration/news-releases-and-advisories/2026-news-releases-and-advisories/california-secretary-state-shirley-n-weber-phd-announces-results-randomized-alphabet-drawing-november-3-2026-general-election"
+   },
+   {
+    "name": "KHTS: Cindy Hallman announcement (Sept 4, 2026)",
+    "url": "https://www.hometownstation.com/santa-clarita-news/politics/santa-clarita-elections/cindy-hallman-passionate-retired-educator-with-40-years-of-experience-running-for-saugus-union-school-board-608456"
+   },
+   {
+    "name": "Ballotpedia: Cindy Hallman",
+    "url": "https://ballotpedia.org/Cindy_Hallman"
+   },
+   {
+    "name": "Ballotpedia: Chris Trunkey",
+    "url": "https://ballotpedia.org/Chris_Trunkey"
+   }
+  ],
+  "confidence": "sourced"
+ },
+ {
+  "id": "scccd-area-1",
+  "state": "CA",
+  "level": "special_district",
+  "office": "Santa Clarita Community College District Board of Trustees",
+  "district": "Trustee Area 1",
+  "scope_plain": "Only voters in Trustee Area 1 of the Santa Clarita Community College District, which runs College of the Canyons. Area 5 was also up, but only the incumbent filed, so that race was canceled. Areas 2, 3 and 4 vote in 2028. Nonpartisan; the candidate with the most votes wins. Check the college's trustee area map.",
+  "office_explainer": "One of five trustees who oversee College of the Canyons, the valley's community college.",
+  "why_it_matters": "Darlene Trevino, who won this seat in a 2024 special election, runs against Reza Rassool.",
+  "vote_for": 1,
+  "incumbent": "Darlene Trevino",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Reza Rassool",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.trusteevote.com/",
+    "website_confidence": "sourced",
+    "background": "Retired technology executive whose two startups were bought by Google; runs a nonprofit AI lab with student internships and is an affiliate professor at the University of Washington. Santa Clarita Valley resident since 1994 (his Ballotpedia survey).",
+    "own_words": [
+     {
+      "text": "To bring transparency, accountability, and respectful oversight to the Board of Trustees",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Reza_Rassool"
+     },
+     {
+      "text": "Wants College of the Canyons to stay affordable and to use technology and AI to prepare students for a changing job market.",
+      "is_quote": false,
+      "source": "https://ballotpedia.org/Reza_Rassool"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Darlene Trevino",
+    "party": null,
+    "incumbent": true,
+    "website": "https://trevino4santaclarita.com",
+    "website_confidence": "sourced",
+    "background": "Won a special election for this seat in November 2024.",
+    "own_words": [
+     {
+      "text": "Says she pushed for a forensic audit of the district's contracts and spending, and wants more classes, updated buildings and technology, and rules for using AI responsibly.",
+      "is_quote": false,
+      "source": "https://ballotpedia.org/Darlene_Trevino"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "LA County notice of election for special and school districts (July 7, 2026), posted by SCV Water",
+    "url": "https://yourscvwater.com/sites/default/files/SCVWA/Exhibit%20D%20-%20NOTICE%20OF%20ELECTION%20-%20SPECIAL%20AND%20SCHOOL%20DISTRICTS%20The%20Signal.pdf"
+   },
+   {
+    "name": "College of the Canyons: board elections and trustee areas",
+    "url": "https://www.canyons.edu/administration/board/elections/index.php"
+   },
+   {
+    "name": "Ballotpedia: LA County local elections (2026), Santa Clarita Community College District",
+    "url": "https://ballotpedia.org/Municipal_elections_in_Los_Angeles_County,_California_(2026)"
+   },
+   {
+    "name": "Ballotpedia: Darlene Trevino",
+    "url": "https://ballotpedia.org/Darlene_Trevino"
+   },
+   {
+    "name": "Ballotpedia: Reza Rassool",
+    "url": "https://ballotpedia.org/Reza_Rassool"
+   },
+   {
+    "name": "California Secretary of State: randomized alphabet for the Nov 3 ballot (sets name order)",
+    "url": "https://www.sos.ca.gov/administration/news-releases-and-advisories/2026-news-releases-and-advisories/california-secretary-state-shirley-n-weber-phd-announces-results-randomized-alphabet-drawing-november-3-2026-general-election"
+   }
+  ],
+  "confidence": "sourced"
+ },
+ {
+  "id": "scv-water-division-1",
+  "state": "CA",
+  "level": "special_district",
+  "office": "Santa Clarita Valley Water Agency Board of Directors",
+  "district": "Division 1",
+  "scope_plain": "Only voters in SCV Water's Division 1: roughly the middle and southeast of the valley, including central Valencia, east Newhall, Canyon Country south of the Santa Clara River, and Sand Canyon. Division 3 also votes this year; Division 2's race was canceled because only one person filed. Nonpartisan; the candidate with the most votes wins. Check SCV Water's division map.",
+  "office_explainer": "One of nine elected directors who set water rates and plan the valley’s water supply.",
+  "why_it_matters": "Bill Cooper, on local water boards since 1993, runs against Noah M. Ropp.",
+  "vote_for": 1,
+  "incumbent": "Bill Cooper",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Bill Cooper",
+    "party": null,
+    "incumbent": true,
+    "website": "http://votebillcooper.com",
+    "website_confidence": "sourced",
+    "background": "Worked about 40 years for the Metropolitan Water District of Southern California, including as manager of its water treatment section. On local water boards since 1993 and the first president of SCV Water's board. Navy veteran.",
+    "own_words": [
+     {
+      "text": "Reliable water does not happen by accident",
+      "is_quote": true,
+      "source": "https://www.hometownstation.com/santa-clarita-news/politics/santa-clarita-elections/bill-cooper-announces-campaign-for-re-election-to-scv-water-agency-board-604476"
+     },
+     {
+      "text": "Wants to repair and improve the valley's pipes, pumps, wells and treatment systems.",
+      "is_quote": false,
+      "source": "https://www.hometownstation.com/santa-clarita-news/politics/santa-clarita-elections/bill-cooper-announces-campaign-for-re-election-to-scv-water-agency-board-604476"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Noah M. Ropp",
+    "party": null,
+    "incumbent": false,
+    "website": "https://roppforscvwater.com/",
+    "website_confidence": "sourced",
+    "background": "Environmental organizer. Graduated from Hart High School and UC Santa Barbara (2024).",
+    "own_words": [
+     {
+      "text": "I’m fighting for Santa Clarita residents to be able to trust what comes out of their tap",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Noah_Ropp"
+     },
+     {
+      "text": "Wants more testing for perchlorate, PFAS and other pollutants, including near Chiquita Canyon Landfill, votes against rate increases, and a bigger program to help people pay their water bills.",
+      "is_quote": false,
+      "source": "https://ballotpedia.org/Noah_Ropp"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "LA County notice of election and list of candidates, SCV Water (Aug 22, 2026)",
+    "url": "https://yourscvwater.com/sites/default/files/SCVWA/Exhibit%20I%20-%20NOTICE%20OF%20ELECTION%20NO%20ELECTION%20AND%20LIST%20OF%20CANDIDATES%20-Santa%20Clarita%20Valley%20Water%20Agencies-%20syl%20approved.pdf"
+   },
+   {
+    "name": "SCV Water: resolution calling the election (Apr 7, 2026)",
+    "url": "https://www.yourscvwater.com/sites/default/files/2026-04/SCV-Water-Resolution-SCV-520-040726.pdf"
+   },
+   {
+    "name": "SCV Water: board of directors",
+    "url": "https://yourscvwater.com/governance/board-directors"
+   },
+   {
+    "name": "SCV Water: division boundary descriptions",
+    "url": "https://yourscvwater.com/sites/default/files/SCVWA/about/governance/board/Updated%20051324%20Santa%20Clarita%20Valley%20Water%20Agency%20-%20Electoral%20Boundary%20Descriptions.pdf"
+   },
+   {
+    "name": "California Secretary of State: randomized alphabet for the Nov 3 ballot (sets name order)",
+    "url": "https://www.sos.ca.gov/administration/news-releases-and-advisories/2026-news-releases-and-advisories/california-secretary-state-shirley-n-weber-phd-announces-results-randomized-alphabet-drawing-november-3-2026-general-election"
+   },
+   {
+    "name": "KHTS: Bill Cooper announcement (Aug 4, 2026)",
+    "url": "https://www.hometownstation.com/santa-clarita-news/politics/santa-clarita-elections/bill-cooper-announces-campaign-for-re-election-to-scv-water-agency-board-604476"
+   },
+   {
+    "name": "Ballotpedia: Noah Ropp",
+    "url": "https://ballotpedia.org/Noah_Ropp"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "scv-water-division-3",
+  "state": "CA",
+  "level": "special_district",
+  "office": "Santa Clarita Valley Water Agency Board of Directors",
+  "district": "Division 3",
+  "scope_plain": "Only voters in SCV Water's Division 3: roughly the west side of the valley, including Castaic, Stevenson Ranch, west Valencia and west Newhall. Two seats: you can vote for up to two. Division 1 also votes this year; Division 2's race was canceled. Nonpartisan; the two candidates with the most votes win. Check SCV Water's division map.",
+  "office_explainer": "One of nine elected directors who set water rates and plan the valley’s water supply.",
+  "why_it_matters": "Two seats, three candidates: board president Maria A. Gutzeit, director Ken Petersen and former director Lynne Plambeck.",
+  "vote_for": 2,
+  "incumbent": "Maria A. Gutzeit and Kenneth \"Ken\" Petersen",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Lynne Plambeck",
+    "party": null,
+    "incumbent": false,
+    "website": "https://plambeckforscvwater.com",
+    "website_confidence": "sourced",
+    "background": "On SCV Water's board until 2022, with over 25 years on local water boards. Executive director of a local environmental nonprofit; has lived in the valley over 40 years (her Ballotpedia survey).",
+    "own_words": [
+     {
+      "text": "polluted water should not be included in drinking water supply calculations",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Lynne_Plambeck"
+     },
+     {
+      "text": "Wants more accurate reports of how much water the valley really has, protection of flood plains and groundwater recharge areas, and careful budgets to keep water affordable.",
+      "is_quote": false,
+      "source": "https://ballotpedia.org/Lynne_Plambeck"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Kenneth \"Ken\" Petersen",
+    "party": null,
+    "incumbent": true,
+    "website": "https://kenpetersen.com/",
+    "website_confidence": "sourced",
+    "background": "Director since he was appointed in 2022. Consulting civil engineer and former general manager of the Valencia Water Company; lives in Castaic (SCV Water bio).",
+    "own_words": [
+     {
+      "text": "His campaign says meeting state drinking water standards is “the starting point” and calls for constant testing and modern treatment.",
+      "is_quote": false,
+      "source": "https://ballotpedia.org/Kenneth_Petersen"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Maria A. Gutzeit",
+    "party": null,
+    "incumbent": true,
+    "website": "https://www.electmaria.com/",
+    "website_confidence": "sourced",
+    "background": "President of SCV Water's board. Served on it or on the Newhall County Water District board from 2003 to 2020 and again since 2023. Chemical engineer who owns an environmental compliance firm (SCV Water bio).",
+    "own_words": [
+     {
+      "text": "Safe, reliable water at the lowest possible cost.",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Maria_Gutzeit"
+     },
+     {
+      "text": "Wants to plan ahead for droughts and says she helped bring in more than $23 million in grants.",
+      "is_quote": false,
+      "source": "https://ballotpedia.org/Maria_Gutzeit"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "LA County notice of election and list of candidates, SCV Water (Aug 22, 2026)",
+    "url": "https://yourscvwater.com/sites/default/files/SCVWA/Exhibit%20I%20-%20NOTICE%20OF%20ELECTION%20NO%20ELECTION%20AND%20LIST%20OF%20CANDIDATES%20-Santa%20Clarita%20Valley%20Water%20Agencies-%20syl%20approved.pdf"
+   },
+   {
+    "name": "SCV Water: resolution calling the election (Apr 7, 2026)",
+    "url": "https://www.yourscvwater.com/sites/default/files/2026-04/SCV-Water-Resolution-SCV-520-040726.pdf"
+   },
+   {
+    "name": "SCV Water: board of directors",
+    "url": "https://yourscvwater.com/governance/board-directors"
+   },
+   {
+    "name": "SCV Water: division boundary descriptions",
+    "url": "https://yourscvwater.com/sites/default/files/SCVWA/about/governance/board/Updated%20051324%20Santa%20Clarita%20Valley%20Water%20Agency%20-%20Electoral%20Boundary%20Descriptions.pdf"
+   },
+   {
+    "name": "California Secretary of State: randomized alphabet for the Nov 3 ballot (sets name order)",
+    "url": "https://www.sos.ca.gov/administration/news-releases-and-advisories/2026-news-releases-and-advisories/california-secretary-state-shirley-n-weber-phd-announces-results-randomized-alphabet-drawing-november-3-2026-general-election"
+   },
+   {
+    "name": "Ballotpedia: Lynne Plambeck",
+    "url": "https://ballotpedia.org/Lynne_Plambeck"
+   },
+   {
+    "name": "Ballotpedia: Kenneth Petersen",
+    "url": "https://ballotpedia.org/Kenneth_Petersen"
+   },
+   {
+    "name": "Ballotpedia: Maria Gutzeit",
+    "url": "https://ballotpedia.org/Maria_Gutzeit"
+   }
+  ],
+  "confidence": "verified"
+ }
+]

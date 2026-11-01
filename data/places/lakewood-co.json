@@ -22,7 +22,7 @@
     "80235",
     "80401"
   ],
-  "zip_caveats": "80214 also covers Edgewater and parts of Wheat Ridge and Denver; 80215 includes Wheat Ridge; 80227 and 80235 include unincorporated Jeffco (Bear Creek, Fort Logan area) and a bit of Denver; 80401 is mostly Golden and unincorporated Jeffco with a slice of west Lakewood; 80123 touches southeast Lakewood, Bow Mar and Littleton. All of Lakewood is in Congressional District 7, so every Lakewood voter sees the CD-7 races for U.S. House, State Board of Education and CU Regent. State Senate: roughly, District 20 is the part of Lakewood south of Alameda Ave (south of Mississippi Ave east of Wadsworth) and District 22 is north of that. State House: roughly, District 28 is south of Jewell Ave; north of Jewell, District 30 is east of about Kipling and District 23 is west of it. RTD: most of Lakewood is in RTD District M or D, which have no election this year; only the south end (roughly west of Wadsworth and south of Jewell) is in District N. These lines are approximate, from Census district maps checked Oct 17; your mailed ballot or the Secretary of State's ballot lookup is exact. All Lakewood voters see the Jefferson County races (commissioner, clerk, treasurer, assessor, sheriff, surveyor, coroner), the 1st Judicial District and Jefferson County Court judges, city questions 2G to 2J, Jeffco Schools 5A and 5B, West Metro Fire 7C (most of the city) and rail 7A.",
+  "zip_caveats": "80214 also covers Edgewater and parts of Wheat Ridge and Denver; 80215 includes Wheat Ridge; 80227 and 80235 include unincorporated Jeffco (Bear Creek, Fort Logan area) and a bit of Denver; 80401 is mostly Golden and unincorporated Jeffco with a slice of west Lakewood; 80123 touches southeast Lakewood, Bow Mar and Littleton. All of Lakewood is in Congressional District 7, so every Lakewood voter sees the CD-7 races for U.S. House, State Board of Education and CU Regent. State Senate: roughly, District 20 is the part of Lakewood south of Alameda Ave (south of Mississippi Ave east of Wadsworth) and District 22 is north of that. State House: roughly, District 28 is south of Jewell Ave; north of Jewell, District 30 is east of about Kipling and District 23 is west of it. RTD: most of Lakewood is in RTD District M or D, which have no election this year; only the south end (roughly west of Wadsworth and south of Jewell) is in District N. These lines are approximate, from Census district maps checked Oct 17; your mailed ballot or the Secretary of State's ballot lookup is exact. All Lakewood voters see the Jefferson County races (commissioner, clerk, treasurer, assessor, sheriff, surveyor, coroner), the 1st Judicial District and Jefferson County Court judges, city questions 2G to 2J, Jeffco Schools 5A and 5B, West Metro Fire 7C and rail 7A.",
   "contest_ids": [
     "co-us-senate",
     "co-governor",
@@ -82,7 +82,8 @@
     "lakewood-2j",
     "jeffco-schools-5a",
     "jeffco-schools-5b",
-    "co-frpr-7a"
+    "co-frpr-7a",
+    "west-metro-fire-7c"
   ],
   "district_finders": [
     {
@@ -101,11 +102,38 @@
     "election_day": "https://www.jeffco.us/3907/Find-a-Voting-Location",
     "drop_box": "https://www.jeffco.us/3907/Find-a-Voting-Location"
   },
+  "early_in_person": {
+    "start": "2026-10-19",
+    "end": "2026-11-02",
+    "hours_note": "Jefferson County vote centers are closed Sundays, so none is open Sunday, Nov 1. They're open Monday, Nov 2, 8 AM to 5 PM, and Election Day, Nov 3, 7 AM to 7 PM. Some centers open only on Nov 2 and 3. You can use any vote center in Jefferson County.",
+    "hours_short": "Jeffco vote centers: Mon Nov 2, 8 AM to 5 PM; Election Day, 7 AM to 7 PM; closed Sundays.",
+    "lookup_url": "https://www.jeffco.us/3907/Find-a-Voting-Location",
+    "source": "https://www.jeffco.us/3907/Find-a-Voting-Location",
+    "confidence": "verified"
+  },
+  "mail_ballot": {
+    "request_deadline": {
+      "date": "2026-10-26",
+      "rule": "You don't need to ask for a ballot: every voter gets one in the mail. Jefferson County says Monday, October 26, was the last day to register and still be mailed one. If yours never came, you lost it or you made a mistake, get a replacement at any Jefferson County vote center through 7 PM on Election Day, or vote there.",
+      "source": "https://www.jeffco.us/5015/Upcoming-Election"
+    },
+    "return_options": [
+      "Any of Jefferson County's 40 drop boxes (38 are open day and night) until 7 PM Nov 3",
+      "Any Jefferson County vote center during its hours",
+      "Mail (USPS): too late now. Jefferson County said to mail ballots by Monday, October 26, and a ballot must arrive by 7 PM Nov 3 (postmarks don't count). Use a drop box or a vote center instead (no stamp needed)."
+    ],
+    "source": "https://www.jeffco.us/3907/Find-a-Voting-Location",
+    "confidence": "verified"
+  },
   "notes": "Lakewood vote centers: Belmar Library, 555 S. Allison Pkwy., open now; from Oct 30, Green Mountain Rec, Lakewood Link Rec, Jeffco Public Health (645 Parfet St.), the West Metro Fire training center and Red Rocks Community College; from Nov 2, Bear Valley Church, the Elks Lodge and Lakewood Library. Hours: Monday to Friday 8 AM to 5 PM, Saturday Oct 31 8 AM to 5 PM, closed Sundays; Election Day 7 AM to 7 PM. Drop boxes are open day and night until 7 PM Nov 3.",
   "sources": [
     {
       "name": "Jefferson County: find a voting location",
       "url": "https://www.jeffco.us/3907/Find-a-Voting-Location"
+    },
+    {
+      "name": "Jefferson County: upcoming election and key dates",
+      "url": "https://www.jeffco.us/5015/Upcoming-Election"
     }
   ]
 }

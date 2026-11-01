@@ -1,0 +1,176 @@
+[
+ {
+  "state": "CA",
+  "level": "city",
+  "jurisdiction": "City of Santa Monica",
+  "pass_threshold": "simple majority",
+  "official_guide_url": "https://www.santamonica.gov/elections/2026-11-03",
+  "confidence": "verified",
+  "id": "santa-monica-measure-es",
+  "number": "Measure ES",
+  "short_title": "Schools parcel tax, $495",
+  "official_title": "Shall a measure imposing a City of Santa Monica collected parcel tax of $495 per taxable parcel, adjusted annually for inflation, exempting qualifying seniors, affordable housing, non-profits, religious organizations, and schools, providing continual funding for Santa Monica's public schools, including retaining teachers, assisting disadvantaged students, supporting art, music, science, math, and early childhood education, keeping school facilities clean and safe for student and community use, generating an estimated $12,000,000 annually until repealed by voters, with oversight requirements, be adopted?",
+  "plain_summary": "Measure ES was put on the ballot by a citizens' initiative. It would charge a tax of $495 a year on each taxable parcel in Santa Monica, rising with inflation, with no end date unless voters repeal it. The City collects it and all of the money goes to the Santa Monica-Malibu school district (SMMUSD). The City Attorney's analysis says it is meant to replace the City's current school funding, which expires June 30, 2027.",
+  "yes_means": "Yes means the parcel tax is adopted: $495 per taxable parcel per year, adjusted for inflation, with the money going to SMMUSD for teachers, disadvantaged students, art, music, science, math, early childhood education and upkeep of existing school facilities. It starts the first July 1 after approval.",
+  "no_means": "No means the parcel tax is not created. The City's current school funding under its agreement with SMMUSD (the Master Facilities Use Agreement) still ends June 30, 2027.",
+  "current_law": "There is no City parcel tax for schools. The City now gives SMMUSD money under the Master Facilities Use Agreement, which expires June 30, 2027 (City Attorney's analysis). The City Attorney says ES is intended to replace that funding and that the City would not count it against other City school funding (Measures YNY, GS/GSH and GS).",
+  "fiscal_impact": "The City Attorney's impartial analysis says the tax is estimated to raise $12,000,000 a year. The staff report to the City Council says there is no immediate financial impact or budget action needed, and that the City's costs to carry out the measure are unknown at this time.",
+  "referred_by": "citizen_initiative",
+  "confusing_wording_note": "The question lists what the money is for but does not say that the City's current school funding expires June 30, 2027, or that the measure is meant to replace it. The City Attorney's analysis and the measure text say so.",
+  "supporters_case": {
+   "text": "The argument in favor (signed by State Senator Ben Allen, Sarah Braff, Addie Van Gessel, Jayanthi Daniel and Ted Winterer) says the City's financial trouble puts about $12 million a year in school funding at risk, and that ES replaces it with steady local funding. It says this prevents the loss of up to 73 teachers, that the money stays in classrooms and cannot be taken by the State or federal government, and that an independent citizens' oversight committee would watch the spending.",
+   "source": "https://www.santamonica.gov/elections/2026-11-02/measures/initiative-parcel-tax-smmusd"
+  },
+  "opponents_case": {
+   "text": "The argument against (signed by Tricia Crane, Elizabeth Van Denburgh, Marc Verville, Karen Melick and Lori Brown) calls ES a back-door City tax increase: it says the schools do not get more money, the City does, and that it moves the cost from the City to residents for good. It says the tax is regressive and can be passed on to renters, and points to a City budget of $525 million with a $9 million surplus last year, and to SMMUSD revenue up 53% in 10 years to $225 million with enrollment down 23%. It says the measure puts no limits on how the City uses the $12 million it would free up.",
+   "source": "https://www.santamonica.gov/elections/2026-11-02/measures/initiative-parcel-tax-smmusd"
+  },
+  "official_text_url": "https://www.santamonica.gov/elections/2026-11-02/measures/initiative-parcel-tax-smmusd",
+  "explainers": [
+   {
+    "source": "City of Santa Monica",
+    "title": "Staff report on the initiative parcel tax (City Council)",
+    "url": "https://santamonicacityca.iqm2.com/Citizens/Detail_LegiFile.aspx?ID=7796"
+   }
+  ]
+ },
+ {
+  "state": "CA",
+  "level": "city",
+  "jurisdiction": "City of Santa Monica",
+  "pass_threshold": "simple majority",
+  "official_guide_url": "https://www.santamonica.gov/elections/2026-11-03",
+  "confidence": "verified",
+  "id": "santa-monica-measure-gg",
+  "number": "Measure GG",
+  "short_title": "Rent Control Board charter changes",
+  "official_title": "Shall the City Charter be amended to: affirm the City of Santa Monica's just cause eviction laws; allow Rent Control Board Commissioners to serve up to three terms, including appointed service; annually increase the cap on rent controlled unit registration fees; clarify Rent Control Board authority to regulate timelines for deciding rent adjustment petitions; and permit eviction from affordable housing units for tenants who are not eligible or do not establish eligibility?",
+  "plain_summary": "Measure GG is a City Council-placed charter amendment that makes five changes to rent control and tenant rules. It affirms the City's just cause eviction laws, lets Rent Control Board commissioners serve three terms instead of two, raises the cap on the yearly rent control registration fee with inflation starting in 2028, lets the Board set longer deadlines for rent adjustment petitions, and adds two new reasons to evict a tenant from a deed-restricted affordable unit.",
+  "yes_means": "Yes means all five changes are added to the City Charter: the just cause affirmation, three-term limit for commissioners, inflation-based yearly increase of the $288 fee cap (up to 5% a year, from 2028), Board power to set petition timelines, and two new eviction grounds for deed-restricted affordable units.",
+  "no_means": "No means the Charter stays as it is: two four-year terms for commissioners, a fixed $288 fee cap, a 120-day deadline on individual rent adjustment petitions, and no new eviction grounds for affordable units. The measure bundles the five items, so a voter cannot approve some and reject others.",
+  "current_law": "Commissioners are limited to two four-year terms. The Charter caps the yearly registration fee for rent controlled units at $288, and a landlord may pass up to half to the tenant. The Board must decide individual rent adjustment petitions within 120 days. The affordable-housing eviction grounds below are not in the Charter now (City Attorney's analysis).",
+  "fiscal_impact": "No dollar estimate is given. The City Council staff report says that, based on past practice, the Rent Control Board would reimburse the City for the added cost of putting the measures on the ballot. The staff report says the Board now charges $240 a unit, below the $288 cap, and that the Board does not have to charge the maximum.",
+  "referred_by": "council",
+  "confusing_wording_note": "The last item says tenants who are not eligible or do not establish eligibility can be evicted from affordable units. The City Attorney's analysis says this applies to deed-restricted affordable units, and that the landlord must first make a written request for proof of eligibility that warns failure to comply may lead to eviction proceedings.",
+  "supporters_case": {
+   "text": "The argument in favor (Danny Ivanov, Tracy Condon, Councilmember Daniel Hall, Juan Matute and Bruria Finkel) calls GG a good government measure. It says state law requires the City to affirm its more protective just cause rules if it adds new protections, that three terms matches the limit for Councilmembers, and that tying the fee cap to inflation is fiscal management best practice. It says affordable units are meant for income-qualified tenants, and that rent control covers more than 27,500 units. In their rebuttal they say GG does not make it easier for developers to evict, and that a written request for proof must come before any notice.",
+   "source": "https://www.santamonica.gov/elections/2026-11-02/measures/measure-rent-control-administrative"
+  },
+  "opponents_case": {
+   "text": "The argument against (Jay Johnson, Monica Santana, Anne Elliot and Lori Brown) says the Council added a change to the just cause rules that makes it easier for developers to evict tenants from affordable housing. In their rebuttal they add that registration fees would rise every year and landlords can legally pass half of them to renters.",
+   "source": "https://www.santamonica.gov/elections/2026-11-02/measures/measure-rent-control-administrative"
+  },
+  "official_text_url": "https://www.santamonica.gov/elections/2026-11-02/measures/measure-rent-control-administrative",
+  "explainers": [
+   {
+    "source": "City of Santa Monica",
+    "title": "Staff report on the charter amendments (City Council)",
+    "url": "https://santamonicacityca.iqm2.com/Citizens/Detail_LegiFile.aspx?Frame=&MeetingID=1499&MediaPosition=&ID=7777&CssClass="
+   }
+  ]
+ },
+ {
+  "state": "CA",
+  "level": "city",
+  "jurisdiction": "City of Santa Monica",
+  "pass_threshold": "simple majority",
+  "official_guide_url": "https://www.santamonica.gov/elections/2026-11-03",
+  "confidence": "sourced",
+  "id": "santa-monica-measure-rr",
+  "number": "Measure RR",
+  "short_title": "No eviction under a month's market rent owed",
+  "official_title": "Shall the City Charter be amended to prohibit evictions based on non-payment of rent when a tenant owes less than one month of the average of fair market rents, set annually by the U.S. Department of Housing and Urban Development, for ZIP codes in Santa Monica?",
+  "plain_summary": "Measure RR is a City Council-placed charter amendment. Today a landlord can start an eviction when a tenant owes any amount of rent. RR would allow an eviction for non-payment only if the amount owed is more than one month's average of HUD's Small Area Fair Market Rents for a unit of the same size, across the ZIP codes wholly or partly in Santa Monica. It applies to rent controlled and non-rent-controlled homes.",
+  "yes_means": "Yes means a landlord could evict for non-payment of rent only when the tenant owes more than the average Small Area Fair Market Rent for their unit size (rounded to the nearest dollar), and the written notice must state the bedroom count and that average.",
+  "no_means": "No means a landlord can keep evicting for non-payment when a tenant owes any amount of rent, as now.",
+  "current_law": "Landlords may evict when a tenant owes any amount of rent (City Attorney's analysis). RR amends Charter sections 1806(a)(1) (rent controlled units) and 2304(a)(1) (other units). The City Attorney says RR does not affect a landlord's right to collect unpaid rent by means other than eviction.",
+  "fiscal_impact": "No dollar estimate is given. The City Council staff report says that, based on past practice, the Rent Control Board would reimburse the City for the added cost of putting the measures on the ballot. The staff report says the City would publish the average figures on its website.",
+  "referred_by": "council",
+  "confusing_wording_note": "The question says fair market rents for ZIP codes. The City Attorney's analysis and the staff report explain these are HUD's Small Area Fair Market Rents, and that the five ZIP-code averages for Santa Monica run about 30% above HUD's figure for the whole Los Angeles-Long Beach-Glendale area (for example $3,034 for a one-bedroom against $2,328 in fiscal year 2026). This is a different measure from the 2010 charter Measure RR on just cause eviction.",
+  "supporters_case": {
+   "text": "The argument in favor (Mayor Caroline Torosis, Kay Ambriz, Councilmember Ellis Raskin, Jennifer Kennedy and Irma Carranza) says records filed with the City show eviction notices over debts as low as $73.87 and eviction lawsuits over debts as low as $405.67. It cites a Federal Reserve finding that more than a third of adults are one $400 setback from missing a bill, notes that Los Angeles, Los Angeles County, Oakland and Berkeley have similar rules, and says landlords keep the right to be paid and to evict for debts over one month's rent.",
+   "source": "https://www.santamonica.gov/elections/2026-11-02/measures/measure-rent-control-eviction-protections"
+  },
+  "opponents_case": {
+   "text": "No argument against this measure was submitted, according to the City's page for Measure RR.",
+   "source": "https://www.santamonica.gov/elections/2026-11-02/measures/measure-rent-control-eviction-protections"
+  },
+  "official_text_url": "https://www.santamonica.gov/elections/2026-11-02/measures/measure-rent-control-eviction-protections",
+  "explainers": [
+   {
+    "source": "City of Santa Monica",
+    "title": "Staff report on the charter amendments (City Council)",
+    "url": "https://santamonicacityca.iqm2.com/Citizens/Detail_LegiFile.aspx?Frame=&MeetingID=1499&MediaPosition=&ID=7777&CssClass="
+   }
+  ]
+ },
+ {
+  "state": "CA",
+  "level": "city",
+  "jurisdiction": "City of Santa Monica",
+  "pass_threshold": "simple majority",
+  "official_guide_url": "https://www.santamonica.gov/elections/2026-11-03",
+  "confidence": "sourced",
+  "id": "santa-monica-measure-vv",
+  "number": "Measure VV",
+  "short_title": "Eviction rules for houses, condos",
+  "official_title": "Shall Article XXIII of the City Charter related to housing policies be amended to extend existing eviction protections to tenants renting single unit dwellings and condominiums and require that for owner occupancy evictions from non-rent controlled units, the owner must intend in good faith to occupy the unit within 60 days after the tenant vacates and for at least 2 years thereafter?",
+  "plain_summary": "Measure VV is a City Council-placed charter amendment to Article XXIII (housing policies). Today that article leaves out tenants who rent single-unit dwellings and condominiums. VV would give them the same just cause eviction protections other tenants have, and would lengthen the rules for owner move-in evictions. The Council first adopted a broader measure, then rescinded it on July 28, 2026 and replaced it with this narrower one.",
+  "yes_means": "Yes means just cause eviction protections apply to tenants of single-unit dwellings and condominiums that are not already under rent control. An owner or relative who evicts to move in must intend in good faith to move in within 60 days and stay at least 2 years.",
+  "no_means": "No means those tenants stay outside Article XXIII's protections, and owner move-in evictions on non-rent-controlled units keep the current rules (move in within 30 days, stay at least 1 year).",
+  "current_law": "Article XXIII excludes single-unit dwellings and condominiums from its eviction protections. For owner move-ins it requires intent to occupy within 30 days and for at least 1 year. Rent controlled units, including rent controlled houses and condos, are already covered by Article XVIII, which since 2022 (Measure RC) uses 60 days and 2 years (City Attorney's analysis and staff report).",
+  "fiscal_impact": "No dollar estimate is given. The City Council staff report says that, based on past practice, the Rent Control Board would reimburse the City for the added cost of putting the measure on the ballot.",
+  "referred_by": "council",
+  "supporters_case": {
+   "text": "The argument in favor (Councilmember Ellis Raskin, Rickey Snell, Kay Ambriz and Soledad Marcial) says all tenants should have the same rights, and describes the owner move-in changes as minor technical revisions.",
+   "source": "https://www.santamonica.gov/elections/2026-11-02/measures/measure-expanding-tenant-eviction-protections"
+  },
+  "opponents_case": {
+   "text": "The argument against (Jay Johnson, Nancy Cook Smith, Esther Hickman, John Kelso and Clara Benrey) calls VV an expansion of rent control to single-family homes and condos. It says owners would pay $20,000 to over $40,000 in mandatory relocation fees to move back in, shrink the rental supply, and hurt multi-generational families and seniors. In their rebuttal, the proponents say VV does not create price controls and adds no relocation payments, which existing law (Municipal Code Chapter 4.36) already requires.",
+   "source": "https://www.santamonica.gov/elections/2026-11-02/measures/measure-expanding-tenant-eviction-protections"
+  },
+  "official_text_url": "https://www.santamonica.gov/elections/2026-11-02/measures/measure-expanding-tenant-eviction-protections",
+  "explainers": [
+   {
+    "source": "City of Santa Monica",
+    "title": "Staff report on the tenant protection measure (City Council)",
+    "url": "https://santamonicacityca.iqm2.com/Citizens/Detail_LegiFile.aspx?Frame=&MeetingID=1517&MediaPosition=&ID=7848&CssClass="
+   }
+  ]
+ },
+ {
+  "state": "CA",
+  "level": "city",
+  "jurisdiction": "City of Santa Monica",
+  "pass_threshold": "simple majority",
+  "official_guide_url": "https://www.santamonica.gov/elections/2026-11-03",
+  "confidence": "sourced",
+  "id": "santa-monica-measure-tt",
+  "number": "Measure TT",
+  "short_title": "Hotel tax during major events",
+  "official_title": "Shall the measure, which maintains the existing transient occupancy tax rates; authorizes the City Council to establish Major Event Periods, as defined, when the tax applies to lodging paid for or obtained by corporate entities for stays over 30 days, and to adjust the hotel and motel tax rate for such stays; clarifies that refunds require a natural person to complete at least thirty-one consecutive days of occupancy, and authorizes administrative regulations, be adopted?",
+  "plain_summary": "Measure TT, placed by the City Council, changes the rules for the City's hotel tax (the transient occupancy tax) without changing its rates. Today a stay of more than 30 days ends up paying no hotel tax, and the City says it has had more questions from companies about booking blocks of rooms for longer than that during the 2028 Olympics. TT lets the Council name Major Event Periods, like the Olympics, when lodging that a company or other organization pays for is taxed for the whole stay, and lets the Council lower the hotel and motel rate for those stays, anywhere from 0% to 15%. People who book their own rooms keep today's rules.",
+  "yes_means": "Yes means the Council may name Major Event Periods. During one, lodging paid for or obtained by a company or other organization is taxed for the whole stay, even past 30 days, and the Council may set the hotel and motel rate for those stays anywhere from 0% to 15%. At any time, a refund for a long stay needs the same person to stay 31 or more days in a row. The Finance Director may write rules, including exemptions for long-term guests facing a disaster, medical treatment or the like.",
+  "no_means": "No means these changes are not made and the hotel tax rules stay as they are now, including for company bookings during the 2028 Olympics.",
+  "current_law": "Hotels and motels charge 15% and home-shares 17% (City Attorney's analysis). The ordinance has no exemption for long-term guests; instead it refunds the tax on stays over 30 days, so those stays, company block bookings included, pay no hotel tax. The staff report says Beverly Hills, Long Beach, Newport Beach and other nearby cities handle long stays the same way.",
+  "fiscal_impact": "The City Council staff report says there is no immediate financial impact or budget action needed. It says temporary rate adjustments may cut the tax collected per stay in the short run, but that this is expected to be offset by higher daily rates, visits and other economic activity. No dollar figure is given.",
+  "referred_by": "council",
+  "confusing_wording_note": "The question says the Council may adjust the hotel and motel rate for these stays. The staff report says that means a rate from 0% to 15% during a Major Event Period, so it could go down but not up, and only for hotels and motels.",
+  "supporters_case": {
+   "text": "The argument in favor (Garrett Childers, Manju Raman, Richard Bloom, Councilmember Jesse Zwick and Councilmember Natalya Zernitskaya) says TT does not create a new hotel tax and applies only to company bookings during designated events. It says tourism-generated taxes in 2025 alone contributed the equivalent of $1,267 for every Santa Monica household, and that millions of dollars could be lost without the measure.",
+   "source": "https://www.santamonica.gov/elections/2026-11-02/measures/measure-tot-major-event-period"
+  },
+  "opponents_case": {
+   "text": "No argument against was filed, according to the City's page for Measure TT.",
+   "source": "https://www.santamonica.gov/elections/2026-11-02/measures/measure-tot-major-event-period"
+  },
+  "official_text_url": "https://www.santamonica.gov/elections/2026-11-02/measures/measure-tot-major-event-period",
+  "explainers": [
+   {
+    "source": "City of Santa Monica",
+    "title": "Staff report on the hotel tax measure (City Council)",
+    "url": "https://santamonicacityca.iqm2.com/Citizens/Detail_LegiFile.aspx?Frame=&MeetingID=1517&MediaPosition=&ID=7824&CssClass="
+   }
+  ]
+ }
+]

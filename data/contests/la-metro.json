@@ -1389,7 +1389,7 @@
   "level": "federal",
   "office": "U.S. Representative",
   "district": "CD-36 (Westside and South Bay: Mar Vista, Westchester, Venice, Santa Monica, Beverly Hills, Culver City west of the 405, Torrance, Palos Verdes)",
-  "scope_plain": "Voters in the 36th Congressional District. In the City of LA that includes Mar Vista and Westchester. It also covers all of Beverly Hills. About 5,900 Culver City residents, west of the 405, are in it too. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "scope_plain": "Voters in the 36th Congressional District. In the City of LA that includes Mar Vista and Westchester. It also covers all of Santa Monica and all of Beverly Hills. About 5,900 Culver City residents, west of the 405, are in it too. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
   "why_it_matters": "A six-term incumbent and vice chair of the House Democratic Caucus against a Republican with no public campaign presence. Lieu won the June primary with 61%.",
   "vote_for": 1,
@@ -1492,8 +1492,8 @@
     "name": "Sydney Kamlager-Dove",
     "party": "Democratic",
     "incumbent": true,
-    "website": "https://www.sydneykamlagerdove.com",
-    "website_confidence": "unverified",
+    "website": "https://sydneykamlager.com",
+    "website_confidence": "sourced",
     "background": "In Congress since 2023; earlier LACCD trustee, State Assembly and State Senate. USC graduate. Foreign Affairs and Judiciary committees; Whip of the Congressional Black Caucus. First in June with 55.2%.",
     "own_words": [
      {
@@ -1905,7 +1905,7 @@
   "level": "state",
   "office": "Member of the State Assembly",
   "district": "AD-51 (Hollywood, the Hollywood Hills, Fairfax, Westwood, Bel Air, Atwater Village, West Hollywood, Santa Monica, Beverly Hills)",
-  "scope_plain": "Voters in the 51st Assembly District. In the City of LA that includes Hollywood, the Hollywood Hills and the Fairfax District. It also includes all of West Hollywood and all of Beverly Hills. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Two Democrats.",
+  "scope_plain": "Voters in the 51st Assembly District. In the City of LA that includes Hollywood, the Hollywood Hills and the Fairfax District. It also includes all of Santa Monica, all of West Hollywood and all of Beverly Hills. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Two Democrats.",
   "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
   "why_it_matters": "The Assembly Democratic Caucus chair against a democratic socialist challenger. Zbur won 54% in June. The clearest left-versus-center contrast on housing (he voted no on SB 79; Hernandez wants to repeal Costa-Hawkins) and on AB 715, Zbur's antisemitism-in-schools law.",
   "vote_for": 1,
@@ -1985,6 +1985,10 @@
    {
     "name": "Senate Office of Demographics: Assembly districts by ZIP code (2021 lines)",
     "url": "https://sdmg.senate.ca.gov/system/files/2024-12/2025-state-assembly-zip-codes-zip-code-order.pdf"
+   },
+   {
+    "name": "Census TIGERweb: 2026 State Legislative Districts, Lower (every part of Santa Monica is in AD-51)",
+    "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer/58"
    }
   ],
   "confidence": "verified"

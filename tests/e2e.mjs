@@ -4099,7 +4099,11 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
   {
     // Review of #71, Nov 1: 90810 is Long Beach's and Los Angeles's, and Long Beach marks its Carson side. Not
     // sure which, the card names all three and never says "your city is in", though Los Angeles doesn't mark it.
+    // Review of #80: the card's promise holds on the ballot too, where a Los Angeles address opens Los Angeles.
     const { ctx, page } = await newPage();
+    await route(page, { answer: { result: { addressMatches: [{ matchedAddress: 'TEST FIVE, LOS ANGELES, CA, 90810', geographies: {
+      States: [{ STATE: '06' }], 'Incorporated Places': [{ BASENAME: 'Los Angeles' }], '119th Congressional Districts': [{ BASENAME: '44' }],
+      Counties: [{ GEOID: '06037', STATE: '06', COUNTY: '037', NAME: 'Los Angeles County', BASENAME: 'Los Angeles' }] } }] } } });
     await openZip(page, '90810');
     await page.waitForSelector('[data-fk="cp-outside"]', { timeout: 15000 });
     check('Long Beach 90810: the ZIP asks between Long Beach, Los Angeles and Carson', !!(await page.$('[data-fk="cp-long-beach-ca"]')) && !!(await page.$('[data-fk="cp-los-angeles-ca"]')) && /^Carson/.test(await partsText(page, '[data-fk="cp-outside"]')), await text(page, '.choose'));
@@ -4107,6 +4111,11 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
     await page.waitForSelector('#door .cov-card', { timeout: 15000 });
     const card = await partsText(page, '#door .cov-card');
     check('Long Beach 90810: not sure, the card names all three and offers the address, never "your city is in"', /^90810 is split between (Long Beach, Los Angeles|Los Angeles, Long Beach) and Carson\. Here now: California’s statewide races, the same for all, with picks from \d+ of \d+ sources\. Live in (Long Beach or Los Angeles|Los Angeles or Long Beach)\? Use your address and we’ll open your city’s ballot\. Use my address/.test(card) && !/guide now|Ask Kevin/.test(card), card);
+    await throughSetup(page);
+    check('Long Beach 90810: not sure, the ballot is the statewide races, its card offering the address', !(await page.$('#i-la-city-mayor')) && !!(await page.$('#r-restore .cov-card [data-fk="cov-addr"]')), await partsText(page, '#r-restore .cov-card'));
+    await lookUp(page, '#r-restore [data-fk="cov-addr"]');
+    await page.waitForSelector('#i-la-city-mayor', { timeout: 15000 });
+    check('Long Beach 90810: a Los Angeles address from the ballot’s card opens Los Angeles’s ballot and says why', /^Your address is in [^.]*Los Angeles[^.]*, so here is its ballot\./.test(await text(page, '.addrbox .addr-moved')) && !(await page.$('#i-lbccd-area-5, #r-restore [data-fk="cov-addr"]')), `${await text(page, '.addrbox .addr-moved')} | ${await text(page, '.mast .place')}`);
     noErrors(page, 'Long Beach 90810 not sure');
     await ctx.close();
   }

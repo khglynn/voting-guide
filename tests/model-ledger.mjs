@@ -1017,6 +1017,15 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('address on a ballot: Aurora and Denver narrow to Aurora', on(['aurora-co', 'denver-co'], at('CO', 'Aurora', '08005')) === JSON.stringify({ to: ['aurora-co'], out: false }), on(['aurora-co', 'denver-co'], at('CO', 'Aurora', '08005')));
     check('address on a ballot: Denver’s, with an Aurora address in Arapahoe County, moves to Aurora', on(['denver-co'], at('CO', 'Aurora', '08005')) === JSON.stringify({ to: ['aurora-co'], out: true }), on(['denver-co'], at('CO', 'Aurora', '08005')));
     check('address on a ballot: one place, its own address, stays (no county code rules nothing out)', on(['austin-tx'], at('TX', 'Austin', '48491')) === 'null' && on(['denver-co'], at('CO', 'Denver', '08031')) === 'null');
+    // The review of #80: the split card ("90810 is split between Long Beach, Los Angeles and Carson") tells a voter
+    // on the state's races to use their address, and promises their city's ballot. Every place on such a ZIP keeps it.
+    check('address on a ballot: 90810’s statewide races open Los Angeles for a Los Angeles address', on([], at('CA', 'Los Angeles', '06037')) === JSON.stringify({ to: ['los-angeles-ca'], out: false }), on([], at('CA', 'Los Angeles', '06037')));
+    check('address on a ballot: and Long Beach for a Long Beach address; a Carson address stays', on([], at('CA', 'Long Beach', '06037')) === JSON.stringify({ to: ['long-beach-ca'], out: false }) && on([], at('CA', 'Carson', '06037')) === 'null');
+    const split = Object.entries(INDEX.zips).filter(([z, ids]) => ids.some((id) => (INDEX.places[id]?.zip_outside || {})[z]));
+    for (const [z, ids] of split) for (const id of ids) {
+      const p = INDEX.places[id];
+      check(`address on a ballot: the split card for ${z} keeps its promise for ${id}`, !!p.county_fips?.length && on([], at(p.state, p.label.replace(/\s*\(.*\)$/, ''), p.county_fips[0])) === JSON.stringify({ to: [id], out: false }), JSON.stringify(p.county_fips || null));
+    }
   }
 
   /* ---------- the first page (flow, Oct 20): an address before any ZIP, step 2, the city count ---------- */

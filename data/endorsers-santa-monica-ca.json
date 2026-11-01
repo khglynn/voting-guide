@@ -1,0 +1,394 @@
+[
+ {
+  "id": "smrr",
+  "name": "Santa Monicans for Renters' Rights",
+  "short": "SMRR",
+  "type": "advocacy",
+  "lean": null,
+  "lean_basis": "Santa Monicans for Renters' Rights, a tenants' political group that endorses candidates and measures (https://smrr.org). Not rated: with no stated mission and no outside rating available, no position on the political scale is shown.",
+  "lean_basis_kind": "mission",
+  "geography": [
+   "santa-monica-ca"
+  ],
+  "guide_url": "https://smrr.org",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "sm-dem-club",
+  "name": "Santa Monica Democratic Club",
+  "short": "Dem Club",
+  "type": "advocacy",
+  "lean": "left",
+  "lean_basis": "A Democratic club whose bylaws say it \"shall be chartered by the Los Angeles County Democratic Central Committee\" and that it strives \"To elect registered Democrats in partisan and nonpartisan elections\" (https://santamonicademocrats.com/wp-content/uploads/2025/12/SMDC-6.25.25-Bylaws.pdf). No outside rating found; lean reflects its stated mission.",
+  "lean_basis_kind": "mission",
+  "geography": [
+   "santa-monica-ca"
+  ],
+  "guide_url": "https://santamonicademocrats.com/full-2026-endorsements/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "sm-forward",
+  "name": "Santa Monica Forward",
+  "short": "Forward",
+  "type": "advocacy",
+  "lean": null,
+  "lean_basis": "A Santa Monica political group that posts its council endorsements on its own blog (https://www.santamonicaforward.org/blog). Not rated: with no stated mission and no outside rating available, no position on the political scale is shown.",
+  "lean_basis_kind": "mission",
+  "geography": [
+   "santa-monica-ca"
+  ],
+  "guide_url": "https://santamonicanext.org/?p=31015",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false
+ },
+ {
+  "id": "smclc",
+  "name": "Santa Monica Coalition for a Livable City",
+  "short": "SMCLC",
+  "type": "advocacy",
+  "lean": null,
+  "lean_basis": "A Santa Monica residents' group that endorses council candidates and writes to the city on planning and the coast (https://smclc.org). Not rated: with no stated mission and no outside rating available, no position on the political scale is shown.",
+  "lean_basis_kind": "mission",
+  "geography": [
+   "santa-monica-ca"
+  ],
+  "guide_url": "https://smclc.org",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false
+ },
+ {
+  "id": "sm-police-officers",
+  "name": "Santa Monica Police Officers Association",
+  "short": "SM Police",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "The union for Santa Monica police officers. Not rated: with no stated mission and no outside rating available, no position on the political scale is shown.",
+  "lean_basis_kind": "mission",
+  "geography": [
+   "santa-monica-ca"
+  ],
+  "guide_url": "https://www.smdp.com/public-safety-unions-expand-endorsements-alongside-new-survey-saying-the-city-is-on-the-wrong-track/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false
+ },
+ {
+  "id": "sm-firefighters-1109",
+  "name": "Santa Monica Firefighters Local 1109",
+  "short": "SM Fire",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "The union for Santa Monica firefighters. Not rated: with no stated mission and no outside rating available, no position on the political scale is shown.",
+  "lean_basis_kind": "mission",
+  "geography": [
+   "santa-monica-ca"
+  ],
+  "guide_url": "https://www.smdp.com/public-safety-unions-expand-endorsements-alongside-new-survey-saying-the-city-is-on-the-wrong-track/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false
+ },
+ {
+  "id": "aagla",
+  "name": "Apartment Association of Greater Los Angeles",
+  "short": "AAGLA",
+  "type": "business",
+  "lean": null,
+  "lean_basis": "A trade group for apartment owners and managers in the Los Angeles area. Not rated: with no stated mission and no outside rating available, no position on the political scale is shown.",
+  "lean_basis_kind": "mission",
+  "geography": [
+   "santa-monica-ca"
+  ],
+  "guide_url": "https://members.aagla.org/news/apartment-association-of-greater-los-angeles--voting-slate-candidate-endorsements-election-tuesday",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "pico-neighborhood-assoc",
+  "name": "Pico Neighborhood Association",
+  "short": "Pico NA",
+  "type": "advocacy",
+  "lean": null,
+  "lean_basis": "A neighborhood group for Santa Monica's Pico neighborhood. Not rated: with no stated mission and no outside rating available, no position on the political scale is shown.",
+  "lean_basis_kind": "mission",
+  "geography": [
+   "santa-monica-ca"
+  ],
+  "guide_url": "https://www.smdp.com/pico-neighborhood-association-urges-no-on-local-measures-gg-and-es/",
+  "default_on": false,
+  "endorses_candidates": false,
+  "endorses_measures": true
+ },
+ {
+  "id": "sm-chamber",
+  "name": "Santa Monica Chamber of Commerce",
+  "short": "Chamber",
+  "type": "business",
+  "lean": "lean_right",
+  "lean_basis": "Santa Monica's chamber of commerce, which says it \"advocates and represents business interests and issues facing the community\" (https://smchamber.com). No outside rating found; lean reflects its stated mission.",
+  "lean_basis_kind": "mission",
+  "geography": [
+   "santa-monica-ca"
+  ],
+  "guide_url": "https://smchamber.com",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "residocracy",
+  "name": "Residocracy",
+  "short": "Residocracy",
+  "type": "advocacy",
+  "lean": null,
+  "lean_basis": "A Santa Monica residents' group (https://www.residocracy.com). Not rated: with no stated mission and no outside rating available, no position on the political scale is shown.",
+  "lean_basis_kind": "mission",
+  "geography": [
+   "santa-monica-ca"
+  ],
+  "guide_url": "https://www.residocracy.com",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "smdp",
+  "name": "Santa Monica Daily Press",
+  "short": "Daily Press",
+  "type": "publication",
+  "lean": null,
+  "lean_basis": "Santa Monica's daily local paper (https://www.smdp.com). No about page was saved. Not rated: with no stated mission and no outside rating available, no position on the political scale is shown.",
+  "lean_basis_kind": "mission",
+  "geography": [
+   "santa-monica-ca"
+  ],
+  "guide_url": "https://www.smdp.com",
+  "default_on": true,
+  "endorses_candidates": false,
+  "endorses_measures": false
+ },
+ {
+  "id": "lacdp",
+  "name": "Los Angeles County Democratic Party",
+  "type": "party",
+  "lean": "left",
+  "lean_basis": "Official county Democratic Party organization. Its candidates page lists its Nov 2026 candidate endorsements and a table of positions on statewide and local measures (read Oct 17, 2026).",
+  "geography": [
+   "santa-monica-ca"
+  ],
+  "guide_url": "https://www.lacdp.org/candidates",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "party": "Democratic",
+  "lean_basis_kind": "party"
+ },
+ {
+  "id": "la-county-gop",
+  "name": "Republican Party of Los Angeles County",
+  "type": "party",
+  "lean": "right",
+  "lean_basis": "Official county Republican Party organization. Its Nov 3, 2026 candidate picks and its positions on LA city and county measures are published in an address-lookup tool linked from lagop.org (read Oct 17, 2026). It marks some candidate picks as recommended rather than formally endorsed.",
+  "geography": [
+   "santa-monica-ca"
+  ],
+  "guide_url": "https://lagop-endorsement-lookup.vercel.app/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "party": "Republican",
+  "lean_basis_kind": "party",
+  "short": "LA County Republican Party"
+ },
+ {
+  "id": "la-fed",
+  "name": "Los Angeles County Federation of Labor, AFL-CIO",
+  "type": "labor",
+  "lean": "lean_left",
+  "lean_basis": "Federation of about 300 unions in LA County that says 'We empower workers to organize and take collective action to win better wages and respect in the workplace' (https://thelafed.org/about/). No outside rating found; lean reflects its stated mission.",
+  "geography": [
+   "santa-monica-ca"
+  ],
+  "guide_url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
+ },
+ {
+  "id": "la-forward",
+  "name": "LA Forward (LA Forward Action Fund voter guide)",
+  "type": "advocacy",
+  "lean": "left",
+  "lean_basis": "Its stated mission or political identity includes: \"Los Angeles Progressive Voter Guide\". Source: https://laforwardguide.org/.",
+  "geography": [
+   "santa-monica-ca"
+  ],
+  "guide_url": "https://laforwardguide.org/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
+ },
+ {
+  "id": "lalcv",
+  "name": "Los Angeles League of Conservation Voters",
+  "type": "advocacy",
+  "lean": "lean_left",
+  "lean_basis": "Environmental group that calls itself 'the only environmental Political Action Committee (PAC) in Los Angeles County' (https://lalcv.org/about/). No outside rating found; lean reflects its stated mission.",
+  "geography": [
+   "santa-monica-ca"
+  ],
+  "guide_url": "https://lalcv.org/category/featured/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "lean_basis_kind": "mission",
+  "short": "LA League of Conservation Voters"
+ },
+ {
+  "id": "knock-la",
+  "name": "Knock LA",
+  "type": "publication",
+  "lean": "left",
+  "lean_basis": "Its stated mission or political identity includes: \"We are dedicated to giving a voice to the left and uplifting marginalized communities\". Source: https://knock-la.com/about-us/.",
+  "geography": [
+   "santa-monica-ca"
+  ],
+  "guide_url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "default_on": true,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
+ },
+ {
+  "id": "streets-for-all",
+  "name": "Streets For All",
+  "type": "advocacy",
+  "lean": "lean_left",
+  "lean_basis": "Safe-streets and transit group that says 'we believe our air doesn’t have to be polluted' (https://www.streetsforall.org/). No outside rating found; lean reflects its stated mission.",
+  "geography": [
+   "santa-monica-ca"
+  ],
+  "guide_url": "https://www.streetsforall.org/endorsements",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
+ },
+ {
+  "id": "thrive-la",
+  "name": "Thrive LA",
+  "type": "advocacy",
+  "lean": "neutral",
+  "lean_basis": "Describes itself as 'a pragmatic, nonpartisan voter guide' (https://www.thrivelosangeles.org/voter-guide), with no stated ideological mission. No outside rating found; lean reflects its stated mission.",
+  "geography": [
+   "santa-monica-ca"
+  ],
+  "guide_url": "https://www.thrivelosangeles.org/voter-guide",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
+ },
+ {
+  "id": "abundant-housing-la",
+  "name": "Abundant Housing LA",
+  "type": "advocacy",
+  "lean": "lean_left",
+  "lean_basis": "Pro-housing group that says more homes near transit are needed to 'lower housing costs, solve our climate crisis, and avoid displacement' (https://www.abundanthousingla.org/about-us). No outside rating found; lean reflects its stated mission.",
+  "geography": [
+   "santa-monica-ca"
+  ],
+  "guide_url": "https://www.abundanthousingla.org/2026-endorsements",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "lean_basis_kind": "mission"
+ },
+ {
+  "id": "alads",
+  "name": "Association for Los Angeles Deputy Sheriffs",
+  "type": "labor",
+  "lean": "neutral",
+  "lean_basis": "Deputies' union formed, in its words, 'to ensure that the rights of future Deputy Sheriffs would be protected' (https://www.alads.org/), with no ideological language. No outside rating found; lean reflects its stated mission.",
+  "geography": [
+   "santa-monica-ca"
+  ],
+  "guide_url": "https://www.alads.org/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
+ },
+ {
+  "id": "ceps-santa-monica",
+  "name": "Community for Excellent Public Schools",
+  "short": "CEPS",
+  "type": "advocacy",
+  "lean": null,
+  "lean_basis": "Not rated: no AllSides or Ad Fontes rating found, and its stated mission, 'We identify and support issues that will support education and public schools in Santa Monica and Malibu' (https://www.cepssm.org/issues), names no political side. It calls itself a PAC that endorses candidates.",
+  "lean_basis_kind": "mission",
+  "geography": [
+   "santa-monica-ca"
+  ],
+  "guide_url": "https://www.cepssm.org/endorsements",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "smmcta",
+  "name": "Santa Monica-Malibu Classroom Teachers Association",
+  "short": "Santa Monica-Malibu Teachers",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: no AllSides or Ad Fontes rating found. It is the teachers' union for Santa Monica-Malibu schools, and its political action mission, 'We believe in the power of education to transform a future that works for everyone' (https://www.smmcta.com/political-action.html), names no political side.",
+  "lean_basis_kind": "mission",
+  "geography": [
+   "santa-monica-ca"
+  ],
+  "guide_url": "https://www.smmcta.com/political-action.html",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "reform-california",
+  "name": "Reform California",
+  "type": "advocacy",
+  "lean": "right",
+  "lean_basis": "Its own stated mission (About page, https://www.reformcalifornia.org/about): \"dedicated to taking back our state from the far-Left politicians and special interests,\" and it runs campaigns against \"tax increases\" (it says it has defeated \"over 300 tax hike proposals\"). No AllSides or Ad Fontes rating found. Its About page also says it is led by Carl DeMaio and funded as a project of his Assembly campaign committee; DeMaio is on the ballot in AD-75.",
+  "geography": [
+   "santa-monica-ca"
+  ],
+  "guide_url": "https://www.reformcalifornia.org/voter-guides/san-diego",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
+ },
+ {
+  "id": "unite-here-local-11",
+  "name": "UNITE HERE Local 11",
+  "short": "UNITE HERE Local 11",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says it “represents over 32,000 workers employed in hotels, restaurants, airports, sports arenas, and convention centers throughout Southern California and Arizona” (https://www.unitehere11.org/ca-voter-guide-nov-2026/). Its own words name no political side, and no outside rating was found.",
+  "geography": [
+   "santa-monica-ca"
+  ],
+  "guide_url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ }
+]

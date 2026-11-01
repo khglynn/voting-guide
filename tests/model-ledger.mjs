@@ -1436,7 +1436,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       on('2026-10-20');
       open('CA', ['los-angeles-ca']);
       pub = pass.messages().pub || '';
-      check('share: a mail state keeps its own where-to-vote page', /Find where to vote in Los Angeles: https:\/\/locator\.lavote\.net/.test(pub) && !/early voting places/.test(pub), pub);
+      check('share: a mail state keeps its own where-to-vote page', /Find where to vote in Los Angeles: https:\/\/locator\.lavote\.gov/.test(pub) && !/early voting places/.test(pub), pub);
       open('FL', []);
       pub = pass.messages().pub || '';
       check('share: a statewide ballot before early voting opens gets no where-to-vote line', !/Find (early voting places|where to vote)/.test(pub), pub);

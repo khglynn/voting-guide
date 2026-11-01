@@ -824,9 +824,9 @@
   "target_id": "fl-orange-ocps-millage",
   "status": "not_found",
   "choice": null,
-  "why": "No position found in this run. Its own page was not opened. Checked again on Oct 29, 2026; still no pick on this page.",
+  "why": "No position found in this run. Its own page was not opened.",
   "url": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-school-board-district-3/",
-  "date": "2026-10-29",
+  "date": null,
   "confidence": "unverified"
  },
  {

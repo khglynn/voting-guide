@@ -2341,6 +2341,10 @@ const LOOKED = thinPlaces(true);
     // On the day after the data's newest date: the e2e's usual Oct 19 comes before the re-check's rows, and a
     // request "sent" before the data's date reads as answered (model/coverage.ts), which no real device sees.
     const after = new Date(Date.parse(`${thin.p.checked}T00:00:00Z`) + 864e5).toISOString().slice(0, 10);
+    // Two days or less before Election Day the card says he may not finish in time (model/coverage.ts, late). Rows
+    // re-checked on Nov 1 put this visit on Nov 2, so from then on the late words are the right ones.
+    const elect = INDEX_JSON.states[thin.p.state]?.election_date;
+    const late = !!elect && Math.round((Date.parse(`${elect}T00:00:00Z`) - Date.parse(`${after}T00:00:00Z`)) / 864e5) <= 2;
     await page.goto(`${BASE}/?today=${after}`);
     await page.waitForSelector('#zip');
     await page.fill('#zip', thin.zip);
@@ -2357,7 +2361,8 @@ const LOOKED = thinPlaces(true);
     check(`Thin place (${name}): one tap posts "Gather endorsements", the place and ZIP, nothing typed`, posts.list.length === 1 && FORM_IDS.every((k) => p.has(k)) && p.get('entry.90887649') === `Gather endorsements: ${name}` && p.get('entry.628621310') === `${thin.p.label}, ${thin.zip}`
       && p.get('entry.780704302').startsWith(`Please gather local endorsements for ${name} (one-tap from the page)\n\nSent along:\nPage: First page\n`) && p.get('entry.2040687555') === '', p ? p.toString() : 'no post');
     check(`Thin place (${name}): the one tap never carries the save link’s hash, any contact, or any query but the test date`, !/zz9pick|v1~|#/.test(postText(p)) && [...postText(p).matchAll(/\?([^\s)]*)/g)].every((m) => /^today=\d{4}-\d{2}-\d{2}$/.test(m[1])), postText(p).replace(/\n/g, ' / '));
-    check(`Thin place (${name}): asked, the card says Kevin is looking, that he may not find any, never minutes`, (await text(page, '#door .cov-card .cov-lead')) === `Request sent. Kevin is looking for ${name}’s local picks.` && (await text(page, '#door .cov-card .cov-here')) === 'You asked today. It usually takes about a day. He may not find any, since some groups don’t endorse.' && !/minute/.test(await text(page, '#door')), await text(page, '#door .cov-card'));
+    check(`Thin place (${name}): asked, the card says Kevin is looking, ${late ? 'that he may not finish before you vote' : 'that he may not find any'}, never minutes`, (await text(page, '#door .cov-card .cov-lead')) === `Request sent. Kevin is looking for ${name}’s local picks.`
+      && (await text(page, '#door .cov-card .cov-here')) === (late ? 'You asked today. He may not finish before you vote.' : 'You asked today. It usually takes about a day. He may not find any, since some groups don’t endorse.') && !/minute/.test(await text(page, '#door')), await text(page, '#door .cov-card'));
     await page.evaluate(() => history.replaceState(history.state, '', `${location.pathname}${location.search}`));
     await plainSetup(page);
     await page.waitForSelector('#plan', { timeout: 15000 });

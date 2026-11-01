@@ -237,6 +237,9 @@ function roundTrip(name, stCode, places, mutate) {
 {
   const c = read('state-TX.json').items.find((x) => x.id === 'tx-supreme-court-place-7');
   check('candidates: the two Hawkinses in one race each show a full name', !!c && c.candidates.map((k) => k.short).join() === 'Kyle Hawkins,Kristen Hawkins');
+  // The data's `short` for a two-word surname (review of #71, Nov 1): "Reyes Uranga", never "Uranga".
+  const wrd = read('place-long-beach-ca.json').items.find((x) => x.id === 'wrd-division-3');
+  check('candidates: a two-word surname from the data shows whole', !!wrd && wrd.candidates.find((k) => k.name === 'Tonia Reyes Uranga')?.short === 'Reyes Uranga', wrd && wrd.candidates.map((k) => k.short).join());
   const dupes = fs.readdirSync(DATA).filter((f) => /^(state|place)-.*\.json$/.test(f)).flatMap((f) => (read(f).items || [])
     .filter((x) => x.kind === 'contest' && new Set(x.candidates.map((k) => k.short)).size < x.candidates.length).map((x) => `${f} ${x.id}`));
   check('candidates: no race shows two candidates under one short name', dupes.length === 0, dupes.join(', '));

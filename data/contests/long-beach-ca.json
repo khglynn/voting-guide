@@ -1,0 +1,428 @@
+[
+ {
+  "id": "ca-us-house-42",
+  "state": "CA",
+  "level": "federal",
+  "office": "U.S. Representative",
+  "district": "CD-42 (most of Long Beach; plus Signal Hill, Huntington Beach, Costa Mesa)",
+  "scope_plain": "Voters in the 42nd Congressional District (new map approved with Prop 50). About 320,000 Long Beach residents live in it, most of the city. It also covers Signal Hill, Huntington Beach, Costa Mesa, Avalon and parts of Newport Beach, Santa Ana and Seal Beach. Roughly, North Long Beach (90805) and most of West Long Beach (90810) are in the 44th instead, and much of 90808 in east Long Beach, plus a corner of North Long Beach, both next to Lakewood, are in the 41st. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 435 U.S. House members. Writes federal laws and votes on the budget and taxes. Two-year term.",
+  "why_it_matters": "Prop 50 redrew this district to pair most of Long Beach with Huntington Beach and Costa Mesa in Orange County. The Democrat who holds the current 42nd faces a Republican Huntington Beach school board member. Garcia got 56.5% in June and Burley 20.6%.",
+  "vote_for": 1,
+  "incumbent": "Robert Garcia",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Robert Garcia",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://robertgarcia.com/",
+    "website_confidence": "verified",
+    "background": "In Congress since 2023 for the current 42nd District; the top Democrat on the House Oversight Committee. Mayor of Long Beach from 2014 to 2022 and on the City Council from 2009 to 2014. Born in Peru; doctorate in higher education from Cal State Long Beach. First in June with 56.5%. Ballot designation: United States Congressman.",
+    "own_words": [
+     {
+      "text": "\"My mother brought me to this country and risked everything so I could succeed.\"",
+      "is_quote": true,
+      "source": "https://robertgarcia.com/"
+     },
+     {
+      "text": "His office says he has pushed bills on the affordable housing shortage, more efficient government, ammunition sales rules and ocean shipping pollution, and helped start the House YIMBY Caucus to build more housing.",
+      "is_quote": false,
+      "source": "https://robertgarcia.house.gov/about"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Brian Burley",
+    "party": "Republican",
+    "incumbent": false,
+    "website": "https://brianburley.com/",
+    "website_confidence": "verified",
+    "background": "Elected to the Huntington Beach City School District board in 2024. Owns an information technology consulting company. USC bachelor's in political economy and master's in public policy. Ran in the 2022 primary for the 47th District. Second in June with 20.6%. Ballot designation: Trustee, Huntington Beach City School District.",
+    "own_words": [
+     {
+      "text": "\"I know what families in our district are facing: rising costs, public safety concerns, and a government that too often forgets who it works for.\"",
+      "is_quote": true,
+      "source": "https://brianburley.com/"
+     },
+     {
+      "text": "Lists tax relief for families and business owners, taking \"a stand against illegal immigration,\" full support for police and the military, and restoring \"American family values\" as his priorities.",
+      "is_quote": false,
+      "source": "https://brianburley.com/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
+    "name": "CA Secretary of State: June 2, 2026 primary statement of vote",
+    "url": "https://elections.cdn.sos.ca.gov/sov/2026-primary/sov/complete-sov.pdf"
+   },
+   {
+    "name": "Statewide Database: AB 604 (Prop 50) city splits report",
+    "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
+   },
+   {
+    "name": "Orange County Registrar: CD-42 candidates in random alphabet order, Burley first, as in Assembly District 68, which leads the district's rotation; Long Beach's AD-69 comes next, so Garcia is first there",
+    "url": "https://ocvote.gov/fileadmin/user_upload/data/candlog/GEN2026/candlog.pdf"
+   },
+   {
+    "name": "CA Secretary of State: random alphabet for Nov 3, 2026",
+    "url": "https://www.sos.ca.gov/administration/news-releases-and-advisories/2026-news-releases-and-advisories/california-secretary-state-shirley-n-weber-phd-announces-results-randomized-alphabet-drawing-november-3-2026-general-election"
+   },
+   {
+    "name": "CA Secretary of State: how the random alphabet sets ballot order (Congress rotates by Assembly district; Assembly does not)",
+    "url": "https://www.sos.ca.gov/elections/randomized-alphabet"
+   },
+   {
+    "name": "Statewide Database: AB 604 (Prop 50) congressional block equivalency file",
+    "url": "https://statewidedatabase.org/pub/data/d25/AB604.zip"
+   },
+   {
+    "name": "Statewide Database: 2021 Assembly block equivalency file",
+    "url": "https://statewidedatabase.org/pub/data/D20/FINAL_MAPS/2021_AD_Final_equiv.zip"
+   },
+   {
+    "name": "Rep. Robert Garcia: about",
+    "url": "https://robertgarcia.house.gov/about"
+   },
+   {
+    "name": "Ballotpedia: Brian Burley",
+    "url": "https://ballotpedia.org/Brian_Burley"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-assembly-69",
+  "state": "CA",
+  "level": "state",
+  "office": "Member of the State Assembly",
+  "district": "AD-69 (most of Long Beach)",
+  "scope_plain": "Voters in the 69th Assembly District, which takes in most of Long Beach. North Long Beach, mostly in ZIP 90805, is in the 65th instead. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
+  "why_it_matters": "Two Democrats. Lowenthal, the incumbent since 2022, got 68.6% in June; Essex got 28.5%.",
+  "vote_for": 1,
+  "incumbent": "Josh Lowenthal",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Josh Lowenthal",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://www.joshlowenthal.com/",
+    "website_confidence": "verified",
+    "background": "Assemblymember for the 69th District since December 2022. Former president and chief operating officer of FreeConferenceCall.com; his campaign says he also worked as a local teacher. Born and raised in Long Beach; Long Beach Poly, Cornell and UC San Diego. First in June with 68.6%. Ballot designation: Business Owner/Assemblymember.",
+    "own_words": [
+     {
+      "text": "\"I'll fight to get our cities and communities the tools they need to crack down on residential crime, gun violence, and organized retail theft.\"",
+      "is_quote": true,
+      "source": "https://www.joshlowenthal.com/issues"
+     },
+     {
+      "text": "On homelessness, wants state money for \"programs necessary to get people off the streets and into housing and treatment,\" and tools for cities to deal with unlawful encampments.",
+      "is_quote": false,
+      "source": "https://www.joshlowenthal.com/issues"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Carolyn J. Essex",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": "https://carolynjessex.com/",
+    "website_confidence": "sourced",
+    "background": "Retired City of Los Angeles policy analyst who spent 18 years overseeing federal community development grant money. Has also worked as a caregiver for seniors and children with developmental disabilities, and as a housing coordinator at a transitional home for women leaving prison. Has lived in Long Beach for 12 years. Second in June with 28.5%. Ballot designation: Legislative Policy Analyst.",
+    "own_words": [
+     {
+      "text": "\"Legislation should prioritize infrastructure and improve the daily lives of seniors, working families and young people K-12.\"",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Carolyn_J._Essex"
+     },
+     {
+      "text": "\"Legislation should usher in correction to decades of infrastructure neglect, land, highway and homelessness that are plaguing our inner cities.\"",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Carolyn_J._Essex"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
+    "name": "CA Secretary of State: June 2, 2026 primary statement of vote",
+    "url": "https://elections.cdn.sos.ca.gov/sov/2026-primary/sov/complete-sov.pdf"
+   },
+   {
+    "name": "CA Secretary of State: random alphabet for Nov 3, 2026",
+    "url": "https://www.sos.ca.gov/administration/news-releases-and-advisories/2026-news-releases-and-advisories/california-secretary-state-shirley-n-weber-phd-announces-results-randomized-alphabet-drawing-november-3-2026-general-election"
+   },
+   {
+    "name": "CA Secretary of State: how the random alphabet sets ballot order (Congress rotates by Assembly district; Assembly does not)",
+    "url": "https://www.sos.ca.gov/elections/randomized-alphabet"
+   },
+   {
+    "name": "City of Long Beach: state and federal officials who represent Long Beach",
+    "url": "https://www.longbeach.gov/officials/other-elected-officials/"
+   },
+   {
+    "name": "Statewide Database: 2021 final district maps and block equivalency files",
+    "url": "https://statewidedatabase.org/pub/data/D20/FINAL_MAPS/"
+   },
+   {
+    "name": "Ballotpedia: Josh Lowenthal",
+    "url": "https://ballotpedia.org/Josh_Lowenthal"
+   },
+   {
+    "name": "Ballotpedia: Carolyn J. Essex (candidate survey)",
+    "url": "https://ballotpedia.org/Carolyn_J._Essex"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "lbccd-area-5",
+  "state": "CA",
+  "level": "school",
+  "office": "Long Beach Community College District Board of Trustees",
+  "district": "Trustee Area 5",
+  "scope_plain": "Voters in Trustee Area 5 of the Long Beach Community College District: much of East Long Beach north of the 405, plus California Heights and part of Lakewood. Other parts of Long Beach are in Areas 1 to 4 and have no college board race this year. The office is nonpartisan, and whoever gets the most votes wins.",
+  "office_explainer": "One of five trustees who hire the college president and set Long Beach City College's budget and policies.",
+  "why_it_matters": "An open seat: longtime trustee Virginia Baxter is leaving the board. The board oversees bond-funded building at Long Beach City College, including new student housing. Areas 1 and 3 had only one candidate each, so they are not on the ballot.",
+  "vote_for": 1,
+  "incumbent": "Virginia Baxter (not running)",
+  "open_seat": true,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Huy \"Henry\" Nguyen",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Area supervisor in the Los Angeles Unified School District, where he has overseen food service operations, and a U.S. Air Force veteran who served in Afghanistan and Turkey. Degrees from Cal Poly Pomona, Bowie State University and Cal State Long Beach (MBA). Ballot designation: School District Administrator.",
+    "own_words": [
+     {
+      "text": "Wants to expand and promote dual enrollment to cut costs for working families, promote LBCC's shorter 8-week courses, and make students' basic needs a priority.",
+      "is_quote": false,
+      "source": "https://lbpost.com/news/politics/elections/long-beach-voter-guide-lbcc-board-of-trustees/"
+     },
+     {
+      "text": "As a veteran, wants to make sure veterans know about resources from mental health support to education, and wants more classes and events for seniors.",
+      "is_quote": false,
+      "source": "https://lbpost.com/news/politics/elections/long-beach-voter-guide-lbcc-board-of-trustees/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Susana Gonzalez Edmond",
+    "short": "Gonzalez Edmond",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.joinsusana.com/",
+    "website_confidence": "verified",
+    "background": "More than 25 years in education, public service and community leadership, including leading the Cal State Student Association. A former city commissioner and PTA president who started her own education at a community college. Ballot designation: Education Consultant/Businesswoman.",
+    "own_words": [
+     {
+      "text": "Calls student success her \"number one priority\" and wants clear reporting on how bond money for campus construction is spent.",
+      "is_quote": false,
+      "source": "https://lbpost.com/news/politics/elections/long-beach-voter-guide-lbcc-board-of-trustees/"
+     },
+     {
+      "text": "\"I bring a strong foundation in fiscal accountability, governance, and student advocacy.\"",
+      "is_quote": true,
+      "source": "https://www.joinsusana.com/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "Long Beach City College: board terms and the Nov 3, 2026 election (Areas 1, 3, 5)",
+    "url": "https://lbcc.edu/pod/lbccd-board-info"
+   },
+   {
+    "name": "Long Beach Post and LAist voter guide: LBCC board of trustees",
+    "url": "https://lbpost.com/news/politics/elections/long-beach-voter-guide-lbcc-board-of-trustees/"
+   },
+   {
+    "name": "Patch: Long Beach voter guide 2026",
+    "url": "https://patch.com/california/longbeach-ca/long-beach-voter-guide-2026-whats-ballot-voting-more"
+   },
+   {
+    "name": "LBCC Faculty Association: Huy Nguyen biography (June 26, 2026)",
+    "url": "https://longbeachcca.org/2026/06/26/long-beach-city-college-faculty-association-lbccfa-endorses-huy-nguyen-for-the-long-beach-community-college-district-board-of-trustees-area-5/"
+   },
+   {
+    "name": "LA County RR/CC final list of qualified candidates, Nov 3, 2026 (Sept 2, 2026)",
+    "url": "https://content.lavote.gov/docs/rrcc/documents/final-list-of-qualified-candidates-to-appear-on-the-ballot9fcf3b64-1a33-4882-9e17-8cbc3b3c8d76.pdf"
+   },
+   {
+    "name": "CA Secretary of State: random alphabet for Nov 3, 2026",
+    "url": "https://www.sos.ca.gov/administration/news-releases-and-advisories/2026-news-releases-and-advisories/california-secretary-state-shirley-n-weber-phd-announces-results-randomized-alphabet-drawing-november-3-2026-general-election"
+   }
+  ],
+  "confidence": "sourced"
+ },
+ {
+  "id": "wrd-division-3",
+  "state": "CA",
+  "level": "special_district",
+  "office": "Water Replenishment District of Southern California, Board of Directors",
+  "district": "Division 3",
+  "scope_plain": "Voters in Division 3 of the Water Replenishment District: almost all of Long Beach, plus Signal Hill, Lakewood, Cerritos, Artesia, Hawaiian Gardens and Wilmington. A small corner of North Long Beach near Paramount and Compton is in Division 5, which doesn't vote this year. The office is nonpartisan, and whoever gets the most votes wins, even without a majority.",
+  "office_explainer": "One of five directors who manage the groundwater basins under southern LA County and set pumping charges.",
+  "why_it_matters": "An open seat: John D. S. Allen, the director since 2014, is not on the ballot. The board sets the charge cities and water companies pay for each acre-foot of groundwater they pump; for 2026-27 it is $480, up 5.6%.",
+  "vote_for": 1,
+  "incumbent": "John D. S. Allen (not running)",
+  "open_seat": true,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Al Austin",
+    "party": null,
+    "incumbent": false,
+    "website": "https://alaustinforwrd.com/",
+    "website_confidence": "verified",
+    "background": "Long Beach City Council member for the 8th District from 2012 to 2024, and since 2025 a member of the Long Beach Board of Utilities Commissioners, which runs the city's water, gas and sewer utility. Political and legislative director for the public employees union AFSCME. Ballot designation: Long Beach Utilities Commissioner.",
+    "own_words": [
+     {
+      "text": "\"I'm running for the Water Replenishment District Board to protect groundwater, secure a sustainable future, connect communities and deliver safe, reliable water for generations to come.\"",
+      "is_quote": true,
+      "source": "https://alaustinforwrd.com/"
+     },
+     {
+      "text": "His county ballot statement lists keeping rates affordable, building groundwater capacity and resilience, and long-term sustainable investments as priorities.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/wrd-division-3"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Tracy Burns",
+    "party": null,
+    "incumbent": false,
+    "website": "https://tracyburns2026.com/",
+    "website_confidence": "verified",
+    "background": "Retired Los Angeles County Sheriff's Department sergeant who co-founded one business and helped build another. Volunteers with Youth Champions and the Long Beach VA food pantry. Ballot designation: Small Businesswoman.",
+    "own_words": [
+     {
+      "text": "\"Require efficiency and cost-saving measures before asking families and businesses to pay more.\"",
+      "is_quote": true,
+      "source": "https://tracyburns2026.com/"
+     },
+     {
+      "text": "On data centers and other big new water users: \"Growth should pay its own way. Ratepayers should not be handed the bill.\"",
+      "is_quote": true,
+      "source": "https://tracyburns2026.com/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Tonia Reyes Uranga",
+    "short": "Reyes Uranga",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.uranga4wrd3.com/",
+    "website_confidence": "verified",
+    "background": "Long Beach City Council member for the 7th District from 2002 to 2010, when she also sat on the South Coast Air Quality Management District and county sanitation district boards. Ran the consulting firm TRUConsult until 2023 and was the first executive director of the Miguel Contreras Foundation. Ran for this seat in 2014. Ballot designation: Long Beach Water Advocate.",
+    "own_words": [
+     {
+      "text": "Her campaign points to her work on water quality, groundwater management, stormwater and regional water policy, and to environmental justice work.",
+      "is_quote": false,
+      "source": "https://www.uranga4wrd3.com/"
+     },
+     {
+      "text": "Lists affordable water access for all, a self-sustaining water policy and environmental justice as priorities.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/wrd-division-3"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Mike Murchison",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.murchison4wrdboard.com/",
+    "website_confidence": "verified",
+    "background": "Long Beach native and small business owner who worked in local government and at the engineering firm Earth Tech on water systems, and spent about a decade on the effort to restore the Los Cerritos Wetlands. Ran for this seat in 2022 and came in second. Ballot designation: Water Preservation Advocate.",
+    "own_words": [
+     {
+      "text": "\"Protect our groundwater basins, invest wisely in replenishment, and ensure a reliable, affordable water supply for future generations.\"",
+      "is_quote": true,
+      "source": "https://www.murchison4wrdboard.com/"
+     },
+     {
+      "text": "\"Every dollar should be accounted for; spending should be transparent, and infrastructure investments should deliver results.\"",
+      "is_quote": true,
+      "source": "https://www.murchison4wrdboard.com/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "Water Replenishment District: Division 3 (communities served)",
+    "url": "https://www.wrd.org/director-john-d-s-allen"
+   },
+   {
+    "name": "Water Replenishment District: Division 5 (communities served)",
+    "url": "https://www.wrd.org/director-vera-robles-dewitt"
+   },
+   {
+    "name": "Water Replenishment District: division map",
+    "url": "https://www.wrd.org/district-boundaries-map"
+   },
+   {
+    "name": "City Hall Pass: WRD Division 3 (candidates, ballot designations, rates)",
+    "url": "https://cityhallpass.com/election-2026/races/wrd-division-3"
+   },
+   {
+    "name": "LA Superior Court minute order on a Division 3 ballot designation (Aug 26, 2026)",
+    "url": "https://www.loscerritosnews.net/wp-content/uploads/2026/08/Minute-Order-8.26.26.pdf"
+   },
+   {
+    "name": "LA County RR/CC final list of qualified candidates, Nov 3, 2026 (Sept 2, 2026)",
+    "url": "https://content.lavote.gov/docs/rrcc/documents/final-list-of-qualified-candidates-to-appear-on-the-ballot9fcf3b64-1a33-4882-9e17-8cbc3b3c8d76.pdf"
+   },
+   {
+    "name": "CA Secretary of State: random alphabet for Nov 3, 2026",
+    "url": "https://www.sos.ca.gov/administration/news-releases-and-advisories/2026-news-releases-and-advisories/california-secretary-state-shirley-n-weber-phd-announces-results-randomized-alphabet-drawing-november-3-2026-general-election"
+   }
+  ],
+  "confidence": "sourced"
+ }
+]

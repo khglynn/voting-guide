@@ -413,7 +413,14 @@
         "website": null,
         "website_confidence": "unverified",
         "background": null,
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "She believes the City can continue to provide excellent services while maintaining a fiscally conservative approach to budgeting and thoughtfully pursuing opportunities that benefit residents.",
+            "is_quote": true,
+            "source": "https://citybellemeade.org/wp-content/uploads/2026/10/2026-all-Candidates-Bios.pdf",
+            "source_label": "City of Belle Meade candidate biographies (PDF), Nov 3 2026"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/tennessee"
       },
@@ -424,7 +431,14 @@
         "website": null,
         "website_confidence": "unverified",
         "background": null,
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Ensuring Fiscal Integrity: Fiercely safeguarding the city's tax dollars and long-term financial health through responsible budgeting and strategic oversight.",
+            "is_quote": true,
+            "source": "https://citybellemeade.org/wp-content/uploads/2026/10/2026-all-Candidates-Bios.pdf",
+            "source_label": "City of Belle Meade candidate biographies (PDF), Nov 3 2026"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/tennessee"
       },
@@ -435,7 +449,20 @@
         "website": null,
         "website_confidence": "unverified",
         "background": null,
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "I believe the greatest strength I have brought to the city is a calming and collaborative approach to issues that have arisen.",
+            "is_quote": true,
+            "source": "https://citybellemeade.org/wp-content/uploads/2026/10/2026-all-Candidates-Bios.pdf",
+            "source_label": "City of Belle Meade candidate biographies (PDF), Nov 3 2026"
+          },
+          {
+            "text": "I welcome the opportunity to continue to serve our community.",
+            "is_quote": true,
+            "source": "https://citybellemeade.org/wp-content/uploads/2026/10/2026-all-Candidates-Bios.pdf",
+            "source_label": "City of Belle Meade candidate biographies (PDF), Nov 3 2026"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/tennessee"
       },
@@ -446,7 +473,14 @@
         "website": null,
         "website_confidence": "unverified",
         "background": null,
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "In running for the Belle Meade Commission, Gray's overall objective is to make the city safer for all citizens.",
+            "is_quote": true,
+            "source": "https://citybellemeade.org/wp-content/uploads/2026/10/2026-all-Candidates-Bios.pdf",
+            "source_label": "City of Belle Meade candidate biographies (PDF), Nov 3 2026"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/tennessee"
       }
@@ -487,7 +521,17 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/tennessee"
+        "lwv_url": "https://www.vote411.org/tennessee",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "https://www.cityofforesthills.com/page/board-of-commissioners/ (bio text, no stance)",
+            "https://onyourballot.vote411.org/candidate-detail.do?id=74053018 (HTTP 500 on every fetch ",
+            "Sway candidate profiles for Jim Gardner and Henry Trost (saved, directory data only)",
+            "web search: Forest Hills commissioner 2026 statements (nothing candidate-authored found)"
+          ]
+        }
       },
       {
         "name": "Henry Trost",
@@ -498,7 +542,17 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/tennessee"
+        "lwv_url": "https://www.vote411.org/tennessee",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "https://www.cityofforesthills.com/page/board-of-commissioners/ (bio text, no stance)",
+            "https://onyourballot.vote411.org/candidate-detail.do?id=74053018 (HTTP 500 on every fetch ",
+            "Sway candidate profiles for Jim Gardner and Henry Trost (saved, directory data only)",
+            "web search: Forest Hills commissioner 2026 statements (nothing candidate-authored found)"
+          ]
+        }
       }
     ],
     "sources": [
@@ -537,7 +591,17 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/tennessee"
+        "lwv_url": "https://www.vote411.org/tennessee",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "https://www.meachamforgood.com/ (saved)",
+            "https://www.meachamforgood.com/platform (saved)",
+            "https://www.meachamforgood.com/about (saved)",
+            "https://www.mike4goodlettsville.com/ (saved, thin)"
+          ]
+        }
       },
       {
         "name": "Eric Meacham",
@@ -546,7 +610,20 @@
         "website": null,
         "website_confidence": "unverified",
         "background": null,
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "I will champion development that preserves our small-town character, protects property values, and ensures new growth pays its fair share.",
+            "is_quote": true,
+            "source": "https://www.meachamforgood.com/platform",
+            "source_label": "Eric Meacham campaign website, Platform page"
+          },
+          {
+            "text": "I can't categorize myself either way because I believe right is right, wrong is wrong, and the best idea (and most agreed upon by our residents) for Goodlettsville should prevail - no matter who presents it.",
+            "is_quote": true,
+            "source": "https://www.meachamforgood.com/about",
+            "source_label": "Eric Meacham campaign website, About page"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/tennessee"
       },
@@ -557,7 +634,20 @@
         "website": null,
         "website_confidence": "unverified",
         "background": null,
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "I will work to keep residents informed about the Planning Commission issues and upcoming property developments, and to make sure that traffic and safety issues that may affect residents are heard and addressed prior to approval.",
+            "is_quote": true,
+            "source": "https://www.mike4goodlettsville.com/plan",
+            "source_label": "Mike Milliner campaign website, Priorities page"
+          },
+          {
+            "text": "I am not a fan of using the people of Goodlettsville as a piggy bank.",
+            "is_quote": true,
+            "source": "https://www.mike4goodlettsville.com/plan",
+            "source_label": "Mike Milliner campaign website, Priorities page"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/tennessee"
       },
@@ -570,7 +660,17 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/tennessee"
+        "lwv_url": "https://www.vote411.org/tennessee",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "https://www.meachamforgood.com/ (saved)",
+            "https://www.meachamforgood.com/platform (saved)",
+            "https://www.meachamforgood.com/about (saved)",
+            "https://www.mike4goodlettsville.com/ (saved, thin)"
+          ]
+        }
       },
       {
         "name": "Rusty Tinnin",
@@ -581,7 +681,17 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/tennessee"
+        "lwv_url": "https://www.vote411.org/tennessee",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "https://www.meachamforgood.com/ (saved)",
+            "https://www.meachamforgood.com/platform (saved)",
+            "https://www.meachamforgood.com/about (saved)",
+            "https://www.mike4goodlettsville.com/ (saved, thin)"
+          ]
+        }
       }
     ],
     "sources": [

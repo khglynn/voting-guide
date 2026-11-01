@@ -23,14 +23,36 @@
         "background": "Sitting state representative for District 76.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+        "lwv_url": "https://www.vote411.org/mo-lwvstl",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "https://ballotpedia.org/Marlon_Anderson",
+            "https://marlonanderson4mo.wordpress.com/ (2020 site, not used)",
+            "https://saveyourstate.com/candidates/mo/legislature/house-76-marlon-anderson/ (third-party",
+            "search: Marlon Anderson Missouri House District 76 2026 candidate"
+          ]
+        }
       }
     ],
     "sources": [
-      { "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)", "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf" },
-      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
-      { "name": "Missouri House of Representatives: 2026 member roster", "url": "https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R" },
-      { "name": "U.S. Census Bureau TIGERweb: current Missouri House districts and 2020 census blocks (the ZIP codes each district reaches)", "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer" }
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)",
+        "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf"
+      },
+      {
+        "name": "Missouri House of Representatives: 2026 member roster",
+        "url": "https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R"
+      },
+      {
+        "name": "U.S. Census Bureau TIGERweb: current Missouri House districts and 2020 census blocks (the ZIP codes each district reaches)",
+        "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer"
+      }
     ],
     "confidence": "verified"
   },
@@ -58,7 +80,15 @@
         "background": "Sitting state representative for District 77.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+        "lwv_url": "https://www.vote411.org/mo-lwvstl",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "https://themissouritimes.com/freshmen-to-watch-kimberly-ann-collins/",
+            "https://ballotpedia.org/Michael_Corey_(Missouri)"
+          ]
+        }
       },
       {
         "name": "Michael Corey",
@@ -69,14 +99,34 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+        "lwv_url": "https://www.vote411.org/mo-lwvstl",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "https://themissouritimes.com/freshmen-to-watch-kimberly-ann-collins/",
+            "https://ballotpedia.org/Michael_Corey_(Missouri)"
+          ]
+        }
       }
     ],
     "sources": [
-      { "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)", "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf" },
-      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
-      { "name": "Missouri House of Representatives: 2026 member roster", "url": "https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R" },
-      { "name": "U.S. Census Bureau TIGERweb: current Missouri House districts and 2020 census blocks (the ZIP codes each district reaches)", "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer" }
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)",
+        "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf"
+      },
+      {
+        "name": "Missouri House of Representatives: 2026 member roster",
+        "url": "https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R"
+      },
+      {
+        "name": "U.S. Census Bureau TIGERweb: current Missouri House districts and 2020 census blocks (the ZIP codes each district reaches)",
+        "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer"
+      }
     ],
     "confidence": "verified"
   },
@@ -102,16 +152,41 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Sitting state representative for District 78.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "As an advocate for SLPS I will fight to fully fund our district.",
+            "is_quote": true,
+            "source": "https://martyjoemurray.com/",
+            "source_label": "Marty Joe Murray campaign website (martyjoemurray.com)"
+          },
+          {
+            "text": "As your State Rep my focus will be find solutions to ensure families are safe.",
+            "is_quote": true,
+            "source": "https://martyjoemurray.com/",
+            "source_label": "Marty Joe Murray campaign website (martyjoemurray.com)"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/mo-lwvstl"
       }
     ],
     "sources": [
-      { "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)", "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf" },
-      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
-      { "name": "Missouri House of Representatives: 2026 member roster", "url": "https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R" },
-      { "name": "U.S. Census Bureau TIGERweb: current Missouri House districts and 2020 census blocks (the ZIP codes each district reaches)", "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer" }
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)",
+        "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf"
+      },
+      {
+        "name": "Missouri House of Representatives: 2026 member roster",
+        "url": "https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R"
+      },
+      {
+        "name": "U.S. Census Bureau TIGERweb: current Missouri House districts and 2020 census blocks (the ZIP codes each district reaches)",
+        "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer"
+      }
     ],
     "confidence": "verified"
   },
@@ -139,7 +214,17 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+        "lwv_url": "https://www.vote411.org/mo-lwvstl",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "https://www.racheldsouzaformo.com/",
+            "https://www.racheldsouzaformo.com/platform",
+            "https://ivoterguide.com/candidate/53780/race/34787/election/1501?culture=en-us",
+            "search: Rachel D'Souza / Mike Hebron House 79 2026"
+          ]
+        }
       },
       {
         "name": "Rachel D'Souza",
@@ -148,16 +233,47 @@
         "website": null,
         "website_confidence": "unverified",
         "background": null,
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "The cost of healthcare has been rising for way too long, and with ACA credits set to expire, there's little relief in sight for working families.",
+            "is_quote": true,
+            "source": "https://www.racheldsouzaformo.com/platform",
+            "source_label": "Rachel D'Souza campaign website (platform page)"
+          },
+          {
+            "text": "I support more state aid for tornado relief. I'm glad that we were able to secure $100 million, but that's barely a dent in the $2 billion price tag cited by city officials.",
+            "is_quote": true,
+            "source": "https://www.racheldsouzaformo.com/platform",
+            "source_label": "Rachel D'Souza campaign website (platform page)"
+          },
+          {
+            "text": "I support expanding what care is covered under Medicaid, oppose TRAP laws, and oppose state legislators attempting to legislate any medical decisions between a patient and a provider.",
+            "is_quote": true,
+            "source": "https://www.racheldsouzaformo.com/platform",
+            "source_label": "Rachel D'Souza campaign website (platform page)"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/mo-lwvstl"
       }
     ],
     "sources": [
-      { "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)", "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf" },
-      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
-      { "name": "Missouri House of Representatives: 2026 member roster", "url": "https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R" },
-      { "name": "U.S. Census Bureau TIGERweb: current Missouri House districts and 2020 census blocks (the ZIP codes each district reaches)", "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer" }
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)",
+        "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf"
+      },
+      {
+        "name": "Missouri House of Representatives: 2026 member roster",
+        "url": "https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R"
+      },
+      {
+        "name": "U.S. Census Bureau TIGERweb: current Missouri House districts and 2020 census blocks (the ZIP codes each district reaches)",
+        "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer"
+      }
     ],
     "confidence": "verified"
   },
@@ -185,7 +301,16 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+        "lwv_url": "https://www.vote411.org/mo-lwvstl",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "https://ivoterguide.com/candidate/86113/race/34788/election/1501?culture=en-us",
+            "https://www.stl-gop.com/jennie-drag-for-house-dist-80",
+            "earlier pass: Ballotpedia candidate page for Jennie Drag (no survey), MultiState and Misso"
+          ]
+        }
       },
       {
         "name": "Elizabeth (Lilly) Fuchs",
@@ -196,14 +321,35 @@
         "background": "Sitting state representative for District 80.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+        "lwv_url": "https://www.vote411.org/mo-lwvstl",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "https://ivoterguide.com/candidate/86113/race/34788/election/1501?culture=en-us",
+            "https://www.stl-gop.com/jennie-drag-for-house-dist-80",
+            "earlier pass: Ballotpedia candidate page for Jennie Drag (no survey), MultiState and Misso"
+          ]
+        }
       }
     ],
     "sources": [
-      { "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)", "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf" },
-      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
-      { "name": "Missouri House of Representatives: 2026 member roster", "url": "https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R" },
-      { "name": "U.S. Census Bureau TIGERweb: current Missouri House districts and 2020 census blocks (the ZIP codes each district reaches)", "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer" }
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)",
+        "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf"
+      },
+      {
+        "name": "Missouri House of Representatives: 2026 member roster",
+        "url": "https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R"
+      },
+      {
+        "name": "U.S. Census Bureau TIGERweb: current Missouri House districts and 2020 census blocks (the ZIP codes each district reaches)",
+        "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer"
+      }
     ],
     "confidence": "verified"
   },
@@ -229,16 +375,41 @@
         "website": null,
         "website_confidence": "unverified",
         "background": null,
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Democracy in Missouri is under attack. I will work to defend it.",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/James_Lappe",
+            "source_label": "Ballotpedia Candidate Connection survey (2026)"
+          },
+          {
+            "text": "I will work to protect the earnings tax that funds critical services in St. Louis City and to restore local control to St. Louis and fight against preemption.",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/James_Lappe",
+            "source_label": "Ballotpedia Candidate Connection survey (2026)"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/mo-lwvstl"
       }
     ],
     "sources": [
-      { "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)", "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf" },
-      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
-      { "name": "Missouri House of Representatives: 2026 member roster", "url": "https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R" },
-      { "name": "U.S. Census Bureau TIGERweb: current Missouri House districts and 2020 census blocks (the ZIP codes each district reaches)", "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer" }
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)",
+        "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf"
+      },
+      {
+        "name": "Missouri House of Representatives: 2026 member roster",
+        "url": "https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R"
+      },
+      {
+        "name": "U.S. Census Bureau TIGERweb: current Missouri House districts and 2020 census blocks (the ZIP codes each district reaches)",
+        "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer"
+      }
     ],
     "confidence": "verified"
   },
@@ -264,16 +435,41 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Sitting state representative for District 82.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "As a lifelong resident of South City, I have always been passionate about our city and a champion for our values.",
+            "is_quote": true,
+            "source": "https://www.upballot.com/nick-kimble",
+            "source_label": "Nick Kimble campaign website (upballot.com)"
+          },
+          {
+            "text": "We must reverse population loss.",
+            "is_quote": true,
+            "source": "https://www.upballot.com/nick-kimble",
+            "source_label": "Nick Kimble campaign website (upballot.com)"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/mo-lwvstl"
       }
     ],
     "sources": [
-      { "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)", "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf" },
-      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
-      { "name": "Missouri House of Representatives: 2026 member roster", "url": "https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R" },
-      { "name": "U.S. Census Bureau TIGERweb: current Missouri House districts and 2020 census blocks (the ZIP codes each district reaches)", "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer" }
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)",
+        "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf"
+      },
+      {
+        "name": "Missouri House of Representatives: 2026 member roster",
+        "url": "https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R"
+      },
+      {
+        "name": "U.S. Census Bureau TIGERweb: current Missouri House districts and 2020 census blocks (the ZIP codes each district reaches)",
+        "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer"
+      }
     ],
     "confidence": "verified"
   },
@@ -301,7 +497,15 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+        "lwv_url": "https://www.vote411.org/mo-lwvstl",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "https://electdeltaylor.com/",
+            "https://ballotpedia.org/Robert_Vroman"
+          ]
+        }
       },
       {
         "name": "Del Taylor",
@@ -310,16 +514,41 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Sitting state representative for District 84.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "I vehemently opposed Amendments 4 and 5 in 2026 which were defeated",
+            "is_quote": true,
+            "source": "https://electdeltaylor.com/",
+            "source_label": "Del Taylor campaign website (electdeltaylor.com)"
+          },
+          {
+            "text": "I will continue that fight as well as supporting the effort to restore women’s rights to make their own reproductive decisions.",
+            "is_quote": true,
+            "source": "https://electdeltaylor.com/",
+            "source_label": "Del Taylor campaign website (electdeltaylor.com)"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/mo-lwvstl"
       }
     ],
     "sources": [
-      { "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)", "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf" },
-      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
-      { "name": "Missouri House of Representatives: 2026 member roster", "url": "https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R" },
-      { "name": "U.S. Census Bureau TIGERweb: current Missouri House districts and 2020 census blocks (the ZIP codes each district reaches)", "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer" }
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)",
+        "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf"
+      },
+      {
+        "name": "Missouri House of Representatives: 2026 member roster",
+        "url": "https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R"
+      },
+      {
+        "name": "U.S. Census Bureau TIGERweb: current Missouri House districts and 2020 census blocks (the ZIP codes each district reaches)",
+        "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer"
+      }
     ],
     "confidence": "verified"
   },
@@ -345,14 +574,33 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Sitting Collector of Revenue.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "As your Collector of Revenue, I think it’s important to adapt, evolve and innovate to address the needs of our diverse community",
+            "is_quote": true,
+            "source": "https://www.gregoryfxdaly.com/",
+            "source_label": "Gregory F.X. Daly campaign website (gregoryfxdaly.com)"
+          },
+          {
+            "text": "I believe the people of this great city deserve an experienced leader to ensure your taxes are collected and distributed to taxing authorities with professionalism and integrity.",
+            "is_quote": true,
+            "source": "https://www.gregoryfxdaly.com/",
+            "source_label": "Gregory F.X. Daly campaign website (gregoryfxdaly.com)"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/mo-lwvstl"
       }
     ],
     "sources": [
-      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
-      { "name": "City of St. Louis: Collector of Revenue's office", "url": "https://www.stlouis-mo.gov/government/departments/collector/index.cfm" }
+      {
+        "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)",
+        "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf"
+      },
+      {
+        "name": "City of St. Louis: Collector of Revenue's office",
+        "url": "https://www.stlouis-mo.gov/government/departments/collector/index.cfm"
+      }
     ],
     "confidence": "verified"
   },
@@ -378,14 +626,33 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Sitting License Collector.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "As an incumbent, I will not rely on name recognition alone to earn votes.",
+            "is_quote": true,
+            "source": "https://mavisthompson.org/",
+            "source_label": "Mavis Thompson campaign website (mavisthompson.org)"
+          },
+          {
+            "text": "Because our #1 goal is to keep businesses in business, we enforce this policy only when we have exhausted all efforts to bring a business into compliance.",
+            "is_quote": true,
+            "source": "https://mavisthompson.org/",
+            "source_label": "Mavis Thompson campaign website (mavisthompson.org)"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/mo-lwvstl"
       }
     ],
     "sources": [
-      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
-      { "name": "City of St. Louis: License Collector's office", "url": "https://www.stlouis-mo.gov/government/departments/license/index.cfm" }
+      {
+        "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)",
+        "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf"
+      },
+      {
+        "name": "City of St. Louis: License Collector's office",
+        "url": "https://www.stlouis-mo.gov/government/departments/license/index.cfm"
+      }
     ],
     "confidence": "verified"
   },
@@ -450,9 +717,18 @@
       }
     ],
     "sources": [
-      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
-      { "name": "St. Louis Public Radio: St. Louis Voter Guide, Nov. 2026 (read Oct. 29)", "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois" },
-      { "name": "City of St. Louis: Recorder of Deeds and Vital Records Registrar", "url": "https://www.stlouis-mo.gov/government/departments/recorder/index.cfm" }
+      {
+        "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)",
+        "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf"
+      },
+      {
+        "name": "St. Louis Public Radio: St. Louis Voter Guide, Nov. 2026 (read Oct. 29)",
+        "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+      },
+      {
+        "name": "City of St. Louis: Recorder of Deeds and Vital Records Registrar",
+        "url": "https://www.stlouis-mo.gov/government/departments/recorder/index.cfm"
+      }
     ],
     "confidence": "sourced"
   },
@@ -502,10 +778,22 @@
       }
     ],
     "sources": [
-      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
-      { "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges", "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/" },
-      { "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)", "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf" },
-      { "name": "The Missouri Bar: 2026 review of Judge Clinton Wright", "url": "https://yourmissourijudges.org/judges/2026-clinton-wright/" }
+      {
+        "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)",
+        "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf"
+      },
+      {
+        "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges",
+        "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/"
+      },
+      {
+        "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)",
+        "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+      },
+      {
+        "name": "The Missouri Bar: 2026 review of Judge Clinton Wright",
+        "url": "https://yourmissourijudges.org/judges/2026-clinton-wright/"
+      }
     ],
     "confidence": "verified"
   },
@@ -555,10 +843,22 @@
       }
     ],
     "sources": [
-      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
-      { "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges", "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/" },
-      { "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)", "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf" },
-      { "name": "The Missouri Bar: 2026 review of Judge Elizabeth Hogan", "url": "https://yourmissourijudges.org/judges/2026-elizabeth-hogan/" }
+      {
+        "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)",
+        "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf"
+      },
+      {
+        "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges",
+        "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/"
+      },
+      {
+        "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)",
+        "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+      },
+      {
+        "name": "The Missouri Bar: 2026 review of Judge Elizabeth Hogan",
+        "url": "https://yourmissourijudges.org/judges/2026-elizabeth-hogan/"
+      }
     ],
     "confidence": "verified"
   },
@@ -608,10 +908,22 @@
       }
     ],
     "sources": [
-      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
-      { "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges", "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/" },
-      { "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)", "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf" },
-      { "name": "The Missouri Bar: 2026 review of Judge Katherine Fowler", "url": "https://yourmissourijudges.org/judges/2026-katherine-fowler/" }
+      {
+        "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)",
+        "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf"
+      },
+      {
+        "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges",
+        "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/"
+      },
+      {
+        "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)",
+        "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+      },
+      {
+        "name": "The Missouri Bar: 2026 review of Judge Katherine Fowler",
+        "url": "https://yourmissourijudges.org/judges/2026-katherine-fowler/"
+      }
     ],
     "confidence": "verified"
   },
@@ -661,10 +973,22 @@
       }
     ],
     "sources": [
-      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
-      { "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges", "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/" },
-      { "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)", "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf" },
-      { "name": "The Missouri Bar: 2026 review of Judge Annette Llewellyn", "url": "https://yourmissourijudges.org/judges/2026-annette-llewellyn/" }
+      {
+        "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)",
+        "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf"
+      },
+      {
+        "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges",
+        "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/"
+      },
+      {
+        "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)",
+        "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+      },
+      {
+        "name": "The Missouri Bar: 2026 review of Judge Annette Llewellyn",
+        "url": "https://yourmissourijudges.org/judges/2026-annette-llewellyn/"
+      }
     ],
     "confidence": "verified"
   },
@@ -714,10 +1038,22 @@
       }
     ],
     "sources": [
-      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
-      { "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges", "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/" },
-      { "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)", "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf" },
-      { "name": "The Missouri Bar: 2026 review of Judge Joseph Whyte", "url": "https://yourmissourijudges.org/judges/2026-joseph-whyte/" }
+      {
+        "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)",
+        "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf"
+      },
+      {
+        "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges",
+        "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/"
+      },
+      {
+        "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)",
+        "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+      },
+      {
+        "name": "The Missouri Bar: 2026 review of Judge Joseph Whyte",
+        "url": "https://yourmissourijudges.org/judges/2026-joseph-whyte/"
+      }
     ],
     "confidence": "verified"
   },
@@ -767,10 +1103,22 @@
       }
     ],
     "sources": [
-      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
-      { "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges", "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/" },
-      { "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)", "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf" },
-      { "name": "The Missouri Bar: 2026 review of Judge Timothy Boyer", "url": "https://yourmissourijudges.org/judges/2026-timothy-boyer/" }
+      {
+        "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)",
+        "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf"
+      },
+      {
+        "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges",
+        "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/"
+      },
+      {
+        "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)",
+        "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+      },
+      {
+        "name": "The Missouri Bar: 2026 review of Judge Timothy Boyer",
+        "url": "https://yourmissourijudges.org/judges/2026-timothy-boyer/"
+      }
     ],
     "confidence": "verified"
   },
@@ -820,10 +1168,22 @@
       }
     ],
     "sources": [
-      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
-      { "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges", "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/" },
-      { "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)", "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf" },
-      { "name": "The Missouri Bar: 2026 review of Judge Scott Millikan", "url": "https://yourmissourijudges.org/judges/2026-scott-millikan/" }
+      {
+        "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)",
+        "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf"
+      },
+      {
+        "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges",
+        "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/"
+      },
+      {
+        "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)",
+        "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+      },
+      {
+        "name": "The Missouri Bar: 2026 review of Judge Scott Millikan",
+        "url": "https://yourmissourijudges.org/judges/2026-scott-millikan/"
+      }
     ],
     "confidence": "verified"
   },
@@ -873,10 +1233,22 @@
       }
     ],
     "sources": [
-      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
-      { "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges", "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/" },
-      { "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)", "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf" },
-      { "name": "The Missouri Bar: 2026 review of Judge Calea Stovall-Reid", "url": "https://yourmissourijudges.org/judges/2026-calea-stovall-reid/" }
+      {
+        "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)",
+        "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf"
+      },
+      {
+        "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges",
+        "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/"
+      },
+      {
+        "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)",
+        "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+      },
+      {
+        "name": "The Missouri Bar: 2026 review of Judge Calea Stovall-Reid",
+        "url": "https://yourmissourijudges.org/judges/2026-calea-stovall-reid/"
+      }
     ],
     "confidence": "verified"
   },
@@ -926,10 +1298,22 @@
       }
     ],
     "sources": [
-      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
-      { "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges", "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/" },
-      { "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)", "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf" },
-      { "name": "The Missouri Bar: 2026 review of Judge Madeline Connolly", "url": "https://yourmissourijudges.org/judges/2026-madeline-connolly/" }
+      {
+        "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)",
+        "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf"
+      },
+      {
+        "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges",
+        "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/"
+      },
+      {
+        "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)",
+        "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+      },
+      {
+        "name": "The Missouri Bar: 2026 review of Judge Madeline Connolly",
+        "url": "https://yourmissourijudges.org/judges/2026-madeline-connolly/"
+      }
     ],
     "confidence": "verified"
   },
@@ -979,10 +1363,22 @@
       }
     ],
     "sources": [
-      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
-      { "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges", "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/" },
-      { "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)", "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf" },
-      { "name": "The Missouri Bar: 2026 review of Judge Heather Hays", "url": "https://yourmissourijudges.org/judges/2026-heather-hays/" }
+      {
+        "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)",
+        "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf"
+      },
+      {
+        "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges",
+        "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/"
+      },
+      {
+        "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)",
+        "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+      },
+      {
+        "name": "The Missouri Bar: 2026 review of Judge Heather Hays",
+        "url": "https://yourmissourijudges.org/judges/2026-heather-hays/"
+      }
     ],
     "confidence": "verified"
   },
@@ -1032,10 +1428,22 @@
       }
     ],
     "sources": [
-      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
-      { "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges", "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/" },
-      { "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)", "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf" },
-      { "name": "The Missouri Bar: 2026 review of Judge David Roither", "url": "https://yourmissourijudges.org/judges/2026-david-roither/" }
+      {
+        "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)",
+        "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf"
+      },
+      {
+        "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges",
+        "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/"
+      },
+      {
+        "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)",
+        "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+      },
+      {
+        "name": "The Missouri Bar: 2026 review of Judge David Roither",
+        "url": "https://yourmissourijudges.org/judges/2026-david-roither/"
+      }
     ],
     "confidence": "verified"
   },
@@ -1085,10 +1493,22 @@
       }
     ],
     "sources": [
-      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
-      { "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges", "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/" },
-      { "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)", "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf" },
-      { "name": "The Missouri Bar: 2026 review of Judge Michael Stelzer", "url": "https://yourmissourijudges.org/judges/2026-michael-stelzer/" }
+      {
+        "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)",
+        "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf"
+      },
+      {
+        "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges",
+        "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/"
+      },
+      {
+        "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)",
+        "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+      },
+      {
+        "name": "The Missouri Bar: 2026 review of Judge Michael Stelzer",
+        "url": "https://yourmissourijudges.org/judges/2026-michael-stelzer/"
+      }
     ],
     "confidence": "verified"
   },
@@ -1138,10 +1558,22 @@
       }
     ],
     "sources": [
-      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
-      { "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges", "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/" },
-      { "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)", "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf" },
-      { "name": "The Missouri Bar: 2026 review of Judge Michael Dauphin", "url": "https://yourmissourijudges.org/judges/2026-michael-dauphin/" }
+      {
+        "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)",
+        "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf"
+      },
+      {
+        "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis City (22nd Circuit) judges",
+        "url": "https://yourmissourijudges.org/judges/circuit/st-louis-city/"
+      },
+      {
+        "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)",
+        "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+      },
+      {
+        "name": "The Missouri Bar: 2026 review of Judge Michael Dauphin",
+        "url": "https://yourmissourijudges.org/judges/2026-michael-dauphin/"
+      }
     ],
     "confidence": "verified"
   },
@@ -1272,8 +1704,14 @@
       }
     ],
     "sources": [
-      { "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)", "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf" },
-      { "name": "St. Louis Public Radio: St. Louis Voter Guide, Nov. 2026 (read Oct. 29)", "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois" }
+      {
+        "name": "City of St. Louis Board of Election Commissioners: Nov. 3, 2026 sample ballot, all races (PDF)",
+        "url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf"
+      },
+      {
+        "name": "St. Louis Public Radio: St. Louis Voter Guide, Nov. 2026 (read Oct. 29)",
+        "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+      }
     ],
     "confidence": "sourced"
   }

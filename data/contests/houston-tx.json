@@ -10797,7 +10797,17 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "https://www.houstonvotersguide.org/races/spring-isd-trustee-position-5 (saved; names only)",
+            "https://www.houstonvotersguide.org/candidates/rhonda-newhouse",
+            "https://www.houstonvotersguide.org/candidates/kenneth-williams-jr",
+            "https://ballotpedia.org/Rhonda_Newhouse"
+          ]
+        }
       },
       {
         "name": "Kenneth Williams Jr.",
@@ -10808,7 +10818,17 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "https://www.houstonvotersguide.org/races/spring-isd-trustee-position-5 (saved; names only)",
+            "https://www.houstonvotersguide.org/candidates/rhonda-newhouse",
+            "https://www.houstonvotersguide.org/candidates/kenneth-williams-jr",
+            "https://ballotpedia.org/Rhonda_Newhouse"
+          ]
+        }
       }
     ],
     "sources": [
@@ -10845,7 +10865,26 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Realtor with nearly 10 years in banking; Sheldon ISD parent.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "My mission is simple: to bridge, connect, and empower current and future residents of Sheldon.",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/Tiffany_Lockett_(Sheldon_Independent_School_District,_Position_4,_Texas,_candidate_2026)",
+            "source_label": "Ballotpedia Candidate Connection survey (candidate's own answers)"
+          },
+          {
+            "text": "My campaign is centered on bridging the learning gaps of our students because our students are our future community leaders, homeowners and parents.",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/Tiffany_Lockett_(Sheldon_Independent_School_District,_Position_4,_Texas,_candidate_2026)",
+            "source_label": "Ballotpedia Candidate Connection survey (candidate's own answers)"
+          },
+          {
+            "text": "Connect students with mental health and other supportive resources.",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/Tiffany_Lockett_(Sheldon_Independent_School_District,_Position_4,_Texas,_candidate_2026)",
+            "source_label": "Ballotpedia Candidate Connection survey (candidate's own answers)"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -10858,7 +10897,16 @@
         "background": "Trustee since 2005; owns an equipment repair business.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "https://ballotpedia.org/Tiffany_Lockett_(Sheldon_Independent_School_District,_Position_4,_",
+            "https://www.sheldonisd.com/about-us/board-of-trustees/school-board-elections",
+            "https://www.houstonvotersguide.org/races/sheldon-isd-trustee-position-4 (404)"
+          ]
+        }
       }
     ],
     "sources": [
@@ -10901,7 +10949,16 @@
         "background": "45-year Sheldon resident and former district cafeteria cook; parent of three graduates.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "https://www.sheldonisd.com/about-us/board-of-trustees/school-board-elections",
+            "https://www.houstonvotersguide.org/races/sheldon-isd-trustee-position-5 (404)",
+            "Facebook group posts (not fetched; not candidate-authored)"
+          ]
+        }
       },
       {
         "name": "Kevin Gaines",
@@ -10912,7 +10969,16 @@
         "background": "Senior manager at Aetna Medicare and Navy veteran; 23 years in the district.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "https://www.sheldonisd.com/about-us/board-of-trustees/school-board-elections",
+            "https://www.houstonvotersguide.org/races/sheldon-isd-trustee-position-5 (404)",
+            "Facebook group posts (not fetched; not candidate-authored)"
+          ]
+        }
       },
       {
         "name": "Bethel Nwachukwu",
@@ -10923,7 +10989,16 @@
         "background": "Retired educator and professor with a Ph.D. in special education.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "https://www.sheldonisd.com/about-us/board-of-trustees/school-board-elections",
+            "https://www.houstonvotersguide.org/races/sheldon-isd-trustee-position-5 (404)",
+            "Facebook group posts (not fetched; not candidate-authored)"
+          ]
+        }
       },
       {
         "name": "Kristin Williams-White",
@@ -10934,7 +11009,16 @@
         "background": "Trustee since 2022 and board secretary; former district bus driver and staff member.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "https://www.sheldonisd.com/about-us/board-of-trustees/school-board-elections",
+            "https://www.houstonvotersguide.org/races/sheldon-isd-trustee-position-5 (404)",
+            "Facebook group posts (not fetched; not candidate-authored)"
+          ]
+        }
       }
     ],
     "sources": [
@@ -11020,7 +11104,15 @@
         "background": "Trustee; longtime district volunteer and parent of three Sheldon ISD students.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "https://www.sheldonisd.com/about-us/board-of-trustees/school-board-elections",
+            "https://www.houstonvotersguide.org/races/sheldon-isd-trustee-position-7 (404)"
+          ]
+        }
       },
       {
         "name": "Nora Banks Willis",
@@ -11031,7 +11123,15 @@
         "background": "Sheldon ISD school bus driver; active in church youth ministry.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "https://www.sheldonisd.com/about-us/board-of-trustees/school-board-elections",
+            "https://www.houstonvotersguide.org/races/sheldon-isd-trustee-position-7 (404)"
+          ]
+        }
       }
     ],
     "sources": [
@@ -11306,7 +11406,15 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "https://www.huffmanisd.net/about-us/election-information",
+            "https://www.houstonvotersguide.org/races/huffman-isd-trustee-position-1 (404)"
+          ]
+        }
       },
       {
         "name": "Vernon Reed",
@@ -11317,7 +11425,15 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "https://www.huffmanisd.net/about-us/election-information",
+            "https://www.houstonvotersguide.org/races/huffman-isd-trustee-position-1 (404)"
+          ]
+        }
       }
     ],
     "sources": [

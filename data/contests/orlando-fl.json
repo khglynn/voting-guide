@@ -449,7 +449,14 @@
     "background": "Incumbent U.S. representative for District 10 since 2023. Unopposed in the general election.",
     "own_words": [],
     "lwv_status": "unknown",
-    "lwv_url": "https://www.vote411.org/florida"
+    "lwv_url": "https://www.vote411.org/florida",
+    "own_words_status": "none_found",
+    "own_words_checked": {
+     "on": "2026-11-01",
+     "where": [
+      "web search for a campaign site or questionnaire"
+     ]
+    }
    }
   ],
   "sources": [
@@ -2111,7 +2118,14 @@
     "background": null,
     "own_words": [],
     "lwv_status": "unknown",
-    "lwv_url": "https://www.vote411.org/florida"
+    "lwv_url": "https://www.vote411.org/florida",
+    "own_words_status": "none_found",
+    "own_words_checked": {
+     "on": "2026-11-01",
+     "where": [
+      "web search for a campaign site or questionnaire"
+     ]
+    }
    },
    {
     "name": "Frank J. Sebestyen",
@@ -2122,7 +2136,14 @@
     "background": null,
     "own_words": [],
     "lwv_status": "unknown",
-    "lwv_url": "https://www.vote411.org/florida"
+    "lwv_url": "https://www.vote411.org/florida",
+    "own_words_status": "none_found",
+    "own_words_checked": {
+     "on": "2026-11-01",
+     "where": [
+      "web search for a campaign site or questionnaire"
+     ]
+    }
    }
   ],
   "sources": [

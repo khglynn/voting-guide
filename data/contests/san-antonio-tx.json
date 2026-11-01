@@ -3720,7 +3720,14 @@
         "background": "Content creator and health peer specialist.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": null
+        "lwv_url": null,
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "web search for a campaign site or questionnaire"
+          ]
+        }
       },
       {
         "name": "James Hernandez",
@@ -3729,7 +3736,20 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Education consultant; first elected in 2018.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Edgewood ISD faces interconnected challenges: declining enrollment, financial pressures, aging facilities, academic achievement gaps, teacher recruitment and retention, and ensuring students are prepared for a rapidly changing workforce.",
+            "is_quote": true,
+            "source": "https://sanantonioreport.org/profile/james-hernandez-2026-candidate-for-edgewood-isd-school-board/",
+            "source_label": "San Antonio Report voter guide, Edgewood ISD 2026 (candidate questionnaire)"
+          },
+          {
+            "text": "I approach school board service as governance, not micromanagement.",
+            "is_quote": true,
+            "source": "https://sanantonioreport.org/profile/james-hernandez-2026-candidate-for-edgewood-isd-school-board/",
+            "source_label": "San Antonio Report voter guide, Edgewood ISD 2026 (candidate questionnaire)"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": null
       }
@@ -3770,7 +3790,14 @@
         "background": "Owns a logistics company and leads the district's alumni association.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": null
+        "lwv_url": null,
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "web search for a campaign site or questionnaire"
+          ]
+        }
       },
       {
         "name": "Elias Hernandez",
@@ -3781,7 +3808,14 @@
         "background": "Full-time dad with a background in construction.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": null
+        "lwv_url": null,
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "web search for a campaign site or questionnaire"
+          ]
+        }
       },
       {
         "name": "Jose \"Joe\" Gallegos II",
@@ -3790,7 +3824,20 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Previously ran for the Alamo Colleges board.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "The biggest challenges Edgewood Independent School District continues to face is low student attendance",
+            "is_quote": true,
+            "source": "https://sanantonioreport.org/profile/jose-joe-gallegos-2026-candidate-for-edgewood-isd-board-of-trustees/",
+            "source_label": "San Antonio Report voter guide, Edgewood ISD 2026 (candidate questionnaire)"
+          },
+          {
+            "text": "Have regular district wide community meetings to hear the needs, and concerns of the students, parents, and teachers.",
+            "is_quote": true,
+            "source": "https://sanantonioreport.org/profile/jose-joe-gallegos-2026-candidate-for-edgewood-isd-board-of-trustees/",
+            "source_label": "San Antonio Report voter guide, Edgewood ISD 2026 (candidate questionnaire)"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": null
       }
@@ -3831,7 +3878,14 @@
         "background": "Edgewood ISD parent with a background in tax preparation and customer service.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": null
+        "lwv_url": null,
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "web search for a campaign site or questionnaire"
+          ]
+        }
       },
       {
         "name": "Richard Santoyo",
@@ -3842,7 +3896,14 @@
         "background": "Retired San Antonio firefighter.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": null
+        "lwv_url": null,
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "web search for a campaign site or questionnaire"
+          ]
+        }
       }
     ],
     "sources": [
@@ -3879,7 +3940,20 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "UTSA student; first elected in 2022.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "The biggest challenges facing Edgewood ISD are declining enrollment, budget deficits, the need for stronger state investment in public education, and ensuring that our students learn in the high-quality facilities they deserve.",
+            "is_quote": true,
+            "source": "https://sanantonioreport.org/profile/michael-valdez-2026-candidate-for-edgewood-isd-board-of-trustees/",
+            "source_label": "San Antonio Report voter guide, Edgewood ISD 2026 (candidate questionnaire)"
+          },
+          {
+            "text": "Our priority should be protecting classrooms, supporting teachers and staff",
+            "is_quote": true,
+            "source": "https://sanantonioreport.org/profile/michael-valdez-2026-candidate-for-edgewood-isd-board-of-trustees/",
+            "source_label": "San Antonio Report voter guide, Edgewood ISD 2026 (candidate questionnaire)"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": null
       },
@@ -3892,7 +3966,14 @@
         "background": "Leader in the Thompson Neighborhood Association.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": null
+        "lwv_url": null,
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "web search for a campaign site or questionnaire"
+          ]
+        }
       }
     ],
     "sources": [
@@ -3931,7 +4012,14 @@
         "background": "Bus driver (listed by the San Antonio Report as Albert Ray Herrera).",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": null
+        "lwv_url": null,
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "web search for a campaign site or questionnaire"
+          ]
+        }
       },
       {
         "name": "Doug Black",
@@ -3942,7 +4030,14 @@
         "background": "Business owner (listed as Douglas Ray Black).",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": null
+        "lwv_url": null,
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "web search for a campaign site or questionnaire"
+          ]
+        }
       }
     ],
     "sources": [
@@ -3981,7 +4076,14 @@
         "background": "Retired from the U.S. Army; served on the State Republican Executive Committee.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": null
+        "lwv_url": null,
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "web search for a campaign site or questionnaire"
+          ]
+        }
       },
       {
         "name": "Emilio G. Arcos",
@@ -3990,7 +4092,20 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Senior office services manager at Zachary Industrial.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "The annual school budget is a big challenge, trying to figure on lowering cost without raising taxes, curriculum and programs.",
+            "is_quote": true,
+            "source": "https://sanantonioreport.org/profile/emilio-g-arcos-2026-candidate-for-somerset-isd-board-of-trustees/",
+            "source_label": "San Antonio Report voter guide, Somerset ISD 2026 (candidate questionnaire)"
+          },
+          {
+            "text": "I believe our schools are more than buildings, they are the heart of our community.",
+            "is_quote": true,
+            "source": "https://sanantonioreport.org/profile/emilio-g-arcos-2026-candidate-for-somerset-isd-board-of-trustees/",
+            "source_label": "San Antonio Report voter guide, Somerset ISD 2026 (candidate questionnaire)"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": null
       }
@@ -4031,7 +4146,14 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": null
+        "lwv_url": null,
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "web search for a campaign site or questionnaire"
+          ]
+        }
       },
       {
         "name": "Carol G. Patterson",
@@ -4040,7 +4162,14 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "EAA director since 1996; earlier on the board of its predecessor, the Edwards Underground Water District. President of the Regional Clean Air and Water Association.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Patterson’s community service on water issues is focused on controlling costs, preserving water quality and respecting the environment.",
+            "is_quote": true,
+            "source": "https://www.edwardsaquifer.org/about/board-of-directors/",
+            "source_label": "Edwards Aquifer Authority board bio (agency page, not a questionnaire)"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": null
       }

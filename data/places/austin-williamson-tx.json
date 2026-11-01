@@ -97,9 +97,11 @@
     "tx-austin-prop-h",
     "tx-austin-prop-i",
     "tx-austin-prop-j",
-    "tx-rrisd-prop-a"
+    "tx-rrisd-prop-a",
+    "tx-lisd-prop-a",
+    "tx-acc-prop-a-pflugerville"
   ],
-  "notes": "Election Day: Tue Nov 3, 7 AM to 7 PM. Any Williamson voter can use any Williamson vote center. This list follows Williamson County's own comprehensive sample ballot, so you only see races that county prints. Not listed here, so check your sample ballot: the Leander ISD tax-rate election, the Austin Community College annexation vote, the North Austin Municipal Utility District No. 1 director races, and Texas House District 20.",
+  "notes": "Election Day: Tue Nov 3, 7 AM to 7 PM. Any Williamson voter can use any Williamson vote center. This list follows Williamson County's own comprehensive sample ballot, so you only see races that county prints. Not listed here, so check your sample ballot: the North Austin Municipal Utility District No. 1 director races, and Texas House District 20.",
   "district_finders": [
     {
       "office_match": "U.S. Representative",
@@ -128,18 +130,8 @@
     },
     {
       "office_match": "Austin Community College Trustee",
-      "label": "Travis County: find your district and ballot",
-      "url": "https://votetravis.gov/voter-lookup/"
-    },
-    {
-      "office_match": "Austin Community College Trustee",
       "label": "Williamson County: find your district and ballot",
       "url": "https://apps.wilcotx.gov/elections/voterlookup"
-    },
-    {
-      "office_match": "Chief Justice, 15th Court of Appeals",
-      "label": "Travis County: find your district and ballot",
-      "url": "https://votetravis.gov/voter-lookup/"
     },
     {
       "office_match": "Chief Justice, 15th Court of Appeals",
@@ -148,18 +140,8 @@
     },
     {
       "office_match": "Chief Justice, 3rd Court of Appeals",
-      "label": "Travis County: find your district and ballot",
-      "url": "https://votetravis.gov/voter-lookup/"
-    },
-    {
-      "office_match": "Chief Justice, 3rd Court of Appeals",
       "label": "Williamson County: find your district and ballot",
       "url": "https://apps.wilcotx.gov/elections/voterlookup"
-    },
-    {
-      "office_match": "Chief Justice, Supreme Court",
-      "label": "Travis County: find your district and ballot",
-      "url": "https://votetravis.gov/voter-lookup/"
     },
     {
       "office_match": "Chief Justice, Supreme Court",
@@ -168,18 +150,8 @@
     },
     {
       "office_match": "County Commissioner",
-      "label": "Travis County: find your district and ballot",
-      "url": "https://votetravis.gov/voter-lookup/"
-    },
-    {
-      "office_match": "County Commissioner",
       "label": "Williamson County: find your district and ballot",
       "url": "https://apps.wilcotx.gov/elections/voterlookup"
-    },
-    {
-      "office_match": "Director, Williamson Central Appraisal District",
-      "label": "Travis County: find your district and ballot",
-      "url": "https://votetravis.gov/voter-lookup/"
     },
     {
       "office_match": "Director, Williamson Central Appraisal District",
@@ -188,18 +160,8 @@
     },
     {
       "office_match": "District Judge",
-      "label": "Travis County: find your district and ballot",
-      "url": "https://votetravis.gov/voter-lookup/"
-    },
-    {
-      "office_match": "District Judge",
       "label": "Williamson County: find your district and ballot",
       "url": "https://apps.wilcotx.gov/elections/voterlookup"
-    },
-    {
-      "office_match": "Judge, County Court at Law",
-      "label": "Travis County: find your district and ballot",
-      "url": "https://votetravis.gov/voter-lookup/"
     },
     {
       "office_match": "Judge, County Court at Law",
@@ -208,18 +170,8 @@
     },
     {
       "office_match": "Judge, Court of Criminal Appeals",
-      "label": "Travis County: find your district and ballot",
-      "url": "https://votetravis.gov/voter-lookup/"
-    },
-    {
-      "office_match": "Judge, Court of Criminal Appeals",
       "label": "Williamson County: find your district and ballot",
       "url": "https://apps.wilcotx.gov/elections/voterlookup"
-    },
-    {
-      "office_match": "Justice of the Peace",
-      "label": "Travis County: find your district and ballot",
-      "url": "https://votetravis.gov/voter-lookup/"
     },
     {
       "office_match": "Justice of the Peace",
@@ -228,18 +180,8 @@
     },
     {
       "office_match": "Justice, 15th Court of Appeals",
-      "label": "Travis County: find your district and ballot",
-      "url": "https://votetravis.gov/voter-lookup/"
-    },
-    {
-      "office_match": "Justice, 15th Court of Appeals",
       "label": "Williamson County: find your district and ballot",
       "url": "https://apps.wilcotx.gov/elections/voterlookup"
-    },
-    {
-      "office_match": "Justice, Supreme Court",
-      "label": "Travis County: find your district and ballot",
-      "url": "https://votetravis.gov/voter-lookup/"
     },
     {
       "office_match": "Justice, Supreme Court",
@@ -248,18 +190,8 @@
     },
     {
       "office_match": "Member, State Board of Education",
-      "label": "Travis County: find your district and ballot",
-      "url": "https://votetravis.gov/voter-lookup/"
-    },
-    {
-      "office_match": "Member, State Board of Education",
       "label": "Williamson County: find your district and ballot",
       "url": "https://apps.wilcotx.gov/elections/voterlookup"
-    },
-    {
-      "office_match": "Round Rock ISD Trustee, Place 3",
-      "label": "Travis County: find your district and ballot",
-      "url": "https://votetravis.gov/voter-lookup/"
     },
     {
       "office_match": "Round Rock ISD Trustee, Place 3",
@@ -268,18 +200,8 @@
     },
     {
       "office_match": "Round Rock ISD Trustee, Place 4",
-      "label": "Travis County: find your district and ballot",
-      "url": "https://votetravis.gov/voter-lookup/"
-    },
-    {
-      "office_match": "Round Rock ISD Trustee, Place 4",
       "label": "Williamson County: find your district and ballot",
       "url": "https://apps.wilcotx.gov/elections/voterlookup"
-    },
-    {
-      "office_match": "Round Rock ISD Trustee, Place 5",
-      "label": "Travis County: find your district and ballot",
-      "url": "https://votetravis.gov/voter-lookup/"
     },
     {
       "office_match": "Round Rock ISD Trustee, Place 5",
@@ -288,18 +210,8 @@
     },
     {
       "office_match": "Round Rock ISD Trustee, Place 6",
-      "label": "Travis County: find your district and ballot",
-      "url": "https://votetravis.gov/voter-lookup/"
-    },
-    {
-      "office_match": "Round Rock ISD Trustee, Place 6",
       "label": "Williamson County: find your district and ballot",
       "url": "https://apps.wilcotx.gov/elections/voterlookup"
-    },
-    {
-      "office_match": "State Representative",
-      "label": "Travis County: find your district and ballot",
-      "url": "https://votetravis.gov/voter-lookup/"
     },
     {
       "office_match": "State Representative",
@@ -308,28 +220,13 @@
     },
     {
       "office_match": "State Senator",
-      "label": "Travis County: find your district and ballot",
-      "url": "https://votetravis.gov/voter-lookup/"
-    },
-    {
-      "office_match": "State Senator",
       "label": "Williamson County: find your district and ballot",
       "url": "https://apps.wilcotx.gov/elections/voterlookup"
     },
     {
       "office_match": "Tax Assessor-Collector",
-      "label": "Travis County: find your district and ballot",
-      "url": "https://votetravis.gov/voter-lookup/"
-    },
-    {
-      "office_match": "Tax Assessor-Collector",
       "label": "Williamson County: find your district and ballot",
       "url": "https://apps.wilcotx.gov/elections/voterlookup"
-    },
-    {
-      "office_match": "U.S. Representative",
-      "label": "Travis County: find your district and ballot",
-      "url": "https://votetravis.gov/voter-lookup/"
     }
   ],
   "by_county": [
@@ -365,7 +262,7 @@
   ],
   "heads_up": [
     {
-      "text": "This page is for the part of Austin in Williamson County. If your address is in Travis County, go back and pick Austin.",
+      "text": "This page is for the part of Austin in Williamson County. If your address is in Travis County, use the Austin page instead.",
       "applies_to": "ballot",
       "source": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_county20_natl.txt"
     }

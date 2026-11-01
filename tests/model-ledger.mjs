@@ -1071,7 +1071,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const before = st.encodeShare(au, b);
     b.setupDone = true;
     check('step 2: finishing it never changes the save link', st.encodeShare(au, b) === before);
-    check('first page: the city count counts DC\'s wards and New York City\'s boroughs once', views.mast.cityCount(INDEX) === Object.keys(INDEX.places).length - (Object.keys(INDEX.places).filter((id) => id.startsWith('dc-ward-')).length - 1) - (Object.keys(INDEX.places).filter((id) => id.startsWith('nyc-')).length - 1), String(views.mast.cityCount(INDEX)));
+    check('first page: the city count counts DC\'s wards, New York City\'s boroughs and Austin\'s county pages once', views.mast.cityCount(INDEX) === Object.keys(INDEX.places).length - (Object.keys(INDEX.places).filter((id) => id.startsWith('dc-ward-')).length - 1) - (Object.keys(INDEX.places).filter((id) => id.startsWith('nyc-')).length - 1) - Object.keys(INDEX.places).filter((id) => /^austin-(williamson|hays)-tx$/.test(id)).length, String(views.mast.cityCount(INDEX)));
     check('step 2: the place line reads like the mock-up', views.setup.placeLine(au) === 'Austin, Texas' && views.setup.placeLine(open('DC', ['dc-ward-1'])) === 'Ward 1, Washington, DC' && views.setup.placeLine(open('NY', ['nyc-brooklyn-ny'])) === 'Brooklyn, New York' && views.setup.placeLine(open('WA', [])) === 'Washington');
 
     // Round 3 (Oct 20): the fill switch's words, the first page before a ZIP, and the parties it offers.

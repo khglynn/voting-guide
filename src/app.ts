@@ -896,7 +896,13 @@ export async function runAddress(addr: string): Promise<void> {
 function movedWhy(idx: Index, st: string, r: GeoResult, left: string[], to: string | null): string {
   const n = lastCarried;
   const kept = !n ? '' : n === 1 ? ' We kept your pick for a race on both ballots.' : ` We kept your ${n} picks for races on both ballots.`;
-  if (to) return `Your address is in ${placeName(idx.places[to])}, so here is its ballot.${kept}`;
+  if (to) {
+    // Two pages with one city name (Austin and Austin (Williamson County)): name the county, or it reads like nothing moved.
+    const name = placeName(idx.places[to]);
+    const county = /\(([^)]*)\)\s*$/.exec(idx.places[to].label)?.[1] || `${idx.places[to].counties[0]} County`;
+    const twin = Object.values(idx.places).filter((p) => p.state === st && placeName(p) === name).length > 1;
+    return `Your address is in ${county && twin ? `${name} (${county})` : name}, so here is its ballot.${kept}`;
+  }
   const out = left.length === 1 ? `, outside ${placeName(idx.places[left[0]])}` : '';
   return `Your address is in ${r.countyName || 'another county'}${out}, so here are ${idx.states[st]?.name || st}’s statewide races.${kept}`;
 }

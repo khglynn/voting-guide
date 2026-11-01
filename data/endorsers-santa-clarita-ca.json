@@ -1,0 +1,160 @@
+[
+ {
+  "id": "lacdp",
+  "name": "Los Angeles County Democratic Party",
+  "type": "party",
+  "lean": "left",
+  "lean_basis": "Official county Democratic Party organization. Its candidates page lists its Nov 2026 candidate endorsements and a table of positions on statewide and local measures (read Oct 17, 2026).",
+  "geography": [
+   "santa-clarita-ca"
+  ],
+  "guide_url": "https://www.lacdp.org/candidates",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "party": "Democratic",
+  "lean_basis_kind": "party"
+ },
+ {
+  "id": "la-county-gop",
+  "name": "Republican Party of Los Angeles County",
+  "type": "party",
+  "lean": "right",
+  "lean_basis": "Official county Republican Party organization. Its Nov 3, 2026 candidate picks and its positions on LA city and county measures are published in an address-lookup tool linked from lagop.org (read Oct 17, 2026). It marks some candidate picks as recommended rather than formally endorsed.",
+  "geography": [
+   "santa-clarita-ca"
+  ],
+  "guide_url": "https://lagop-endorsement-lookup.vercel.app/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "party": "Republican",
+  "lean_basis_kind": "party",
+  "short": "LA County Republican Party"
+ },
+ {
+  "id": "la-fed",
+  "name": "Los Angeles County Federation of Labor, AFL-CIO",
+  "type": "labor",
+  "lean": "lean_left",
+  "lean_basis": "Federation of about 300 unions in LA County that says 'We empower workers to organize and take collective action to win better wages and respect in the workplace' (https://thelafed.org/about/). No outside rating found; lean reflects its stated mission.",
+  "geography": [
+   "santa-clarita-ca"
+  ],
+  "guide_url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
+ },
+ {
+  "id": "lalcv",
+  "name": "Los Angeles League of Conservation Voters",
+  "type": "advocacy",
+  "lean": "lean_left",
+  "lean_basis": "Environmental group that calls itself 'the only environmental Political Action Committee (PAC) in Los Angeles County' (https://lalcv.org/about/). No outside rating found; lean reflects its stated mission.",
+  "geography": [
+   "santa-clarita-ca"
+  ],
+  "guide_url": "https://lalcv.org/category/featured/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "lean_basis_kind": "mission",
+  "short": "LA League of Conservation Voters"
+ },
+ {
+  "id": "reform-california",
+  "name": "Reform California",
+  "type": "advocacy",
+  "lean": "right",
+  "lean_basis": "Its own stated mission (About page, https://www.reformcalifornia.org/about): \"dedicated to taking back our state from the far-Left politicians and special interests,\" and it runs campaigns against \"tax increases\" (it says it has defeated \"over 300 tax hike proposals\"). No AllSides or Ad Fontes rating found. Its About page also says it is led by Carl DeMaio and funded as a project of his Assembly campaign committee; DeMaio is on the ballot in AD-75.",
+  "geography": [
+   "santa-clarita-ca"
+  ],
+  "guide_url": "https://www.reformcalifornia.org/voter-guides/san-diego",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
+ },
+ {
+  "id": "scv-democrats",
+  "name": "Santa Clarita Valley Democrats",
+  "short": "SCV Democrats",
+  "type": "advocacy",
+  "lean": "left",
+  "lean_basis": "A Democratic club that says it is \"affiliated, by charter, with the California Democratic Party and the Los Angeles County Democratic Party\" and that \"Our goal is to elect Democrats, from local boards to Congress\" (About page, https://santaclaritavalleydemocrats.com/about). No outside rating.",
+  "lean_basis_kind": "party",
+  "geography": [
+   "santa-clarita-ca"
+  ],
+  "guide_url": "https://santaclaritavalleydemocrats.com/endorsements",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "scv-chamber",
+  "name": "Santa Clarita Valley Chamber of Commerce",
+  "short": "SCV Chamber",
+  "type": "business",
+  "lean": null,
+  "lean_basis": "Not rated: we found no AllSides or Ad Fontes rating. It calls its endorsement process \"nonpartisan\", says it \"supports pro-business, pro-economic development candidates\" and that \"party affiliation is not a factor\" (https://www.scvchamber.com/articles/scv-chamber-announces-candidate-endorsements-for-november-2026-election-1). Those words name no side.",
+  "geography": [
+   "santa-clarita-ca"
+  ],
+  "guide_url": "https://www.scvchamber.com/articles/scv-chamber-announces-candidate-endorsements-for-november-2026-election-1",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false
+ },
+ {
+  "id": "khts-editorial",
+  "name": "KHTS radio, Santa Clarita (owners' endorsements)",
+  "short": "KHTS",
+  "type": "publication",
+  "lean": null,
+  "lean_basis": "Not rated: we found no AllSides or Ad Fontes rating (allsides.com refused our reader), and its mission statement, \"To strengthen our bond with Santa Clarita by remaining its vital link for reliable, instantaneous news, information and community involvement\" (https://www.hometownstation.com/khts-mission-statement), names no side.",
+  "geography": [
+   "santa-clarita-ca"
+  ],
+  "guide_url": "https://www.hometownstation.com/santa-clarita-news/politics/santa-clarita-elections/editorial-khts-endorsements-for-the-2026-election-612909",
+  "default_on": true,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "sierra-club-angeles",
+  "name": "Sierra Club, Angeles Chapter",
+  "short": "Sierra Club Angeles",
+  "type": "advocacy",
+  "lean": "lean_left",
+  "lean_basis": "AllSides rates the national Sierra Club Lean Left (think tank/policy group; independent review, low or initial confidence, as of Oct. 2026). This is its Angeles Chapter, which endorses in Los Angeles and Orange counties. Rating source: https://www.allsides.com/news-source/sierra-club-media-bias.",
+  "lean_basis_kind": "outside_rating",
+  "geography": [
+   "santa-clarita-ca"
+  ],
+  "guide_url": "https://www.sierraclub.org/angeles/endorsements",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "signal-scv-eb",
+  "name": "The Signal (Santa Clarita) editorial board",
+  "short": "The Signal",
+  "type": "publication",
+  "lean": null,
+  "lean_basis": "Not rated: we couldn't look up an AllSides or Ad Fontes rating for it, and its site refused our reader.",
+  "geography": [
+   "santa-clarita-ca"
+  ],
+  "guide_url": "https://signalscv.com/2026/10/our-view-endorsements-for-city-council-ad-40/",
+  "blocked": true,
+  "blocked_note": "Its site refused our reader, so we couldn't read its endorsements. Its page may open in your browser.",
+  "default_on": true,
+  "endorses_candidates": true,
+  "endorses_measures": false
+ }
+]

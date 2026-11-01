@@ -1,0 +1,812 @@
+[
+ {
+  "endorser_id": "lacdp",
+  "target_id": "west-hollywood-city-council",
+  "status": "endorsed",
+  "choice": "Chelsea Byers, Jonathan Cottrell, Helen Krieger",
+  "why": "Listed under 'West Hollywood City Council, At Large' in the party's November 2026 endorsements, with no reason given.",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "west-hollywood-city-council",
+  "status": "endorsed",
+  "choice": "Tatyana \"Tanya\" Tsikanovsky",
+  "why": "The party's lookup lists her as 'Endorsed by LAGOP', its only pick for West Hollywood City Council. It marks Stephen J. Post 'Do not vote for', which it explains as 'Backed by the Democratic Socialists of America (DSA-LA).'",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lalcv",
+  "target_id": "west-hollywood-city-council",
+  "status": "endorsed",
+  "choice": "Chelsea Byers, Stephen Post, Helen Krieger",
+  "why": "Lists all three under 'West Hollywood City Council' on its 2026 endorsements page. Its Oct 10 announcements call Byers 'a proven environmental leader in West Hollywood' and say Krieger has 'a bold climate vision for West Hollywood' and Post 'a climate vision for West Hollywood that prioritizes safer streets, more green space, and community engagement.'",
+  "url": "https://lalcv.org/current-endorsements",
+  "date": "2026-10-10",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "streets-for-all",
+  "target_id": "west-hollywood-city-council",
+  "status": "endorsed",
+  "choice": "Chelsea Byers, Helen Krieger, Stephen Post",
+  "why": "Calls them 'Three candidates who show strong conviction for safe, multimodal streets both in their answers and in previous advocacy.'",
+  "url": "https://www.streetsforall.org/2026",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "abundant-housing-la",
+  "target_id": "west-hollywood-city-council",
+  "status": "endorsed",
+  "choice": "Chelsea Byers, Helen Krieger, Stephen Post",
+  "why": "Listed under 'Local Cities' on its 2026 endorsements page. The page gives no reason for each pick; it says its endorsements go to people who share its mission 'to increase housing supply.'",
+  "url": "https://www.abundanthousingla.org/endorsements-pac",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "west-hollywood-city-council",
+  "status": "endorsed",
+  "choice": "Chelsea Byers, Helen Krieger, Stephen Post",
+  "why": "Calls them 'three choice candidates.' Says Byers has been 'an incredible champion for tenants' and praises Post's 'housing justice approach'; on Krieger, says it 'would prefer to see a stronger position' on privacy and surveillance.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "west-hollywood-city-council",
+  "status": "endorsed",
+  "choice": "Chelsea Byers, Helen Krieger, Stephen Post",
+  "why": "Marks all three 'Recommended' for the three at-large seats. After naming Councilmember Chelsea Byers, it says: 'We recommend you vote for her, along with Helen Krieger, and Stephen Post.'",
+  "url": "https://laforwardguide.org/guide/west-hollywood",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-fed",
+  "target_id": "west-hollywood-city-council",
+  "status": "endorsed",
+  "choice": "Chelsea Byers, Jonathan Cottrell, Helen Krieger",
+  "why": "Listed under 'West Hollywood City Council' in its November 2026 voter guide, which is an image and spells the name 'Jonathon Cottrel', with no reason given.",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "date": "2026-10-31",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "unite-here-local-11",
+  "target_id": "west-hollywood-city-council",
+  "status": "endorsed",
+  "choice": "Chelsea Byers, Helen Krieger, Jonathan Cottrell, Stephen Post (third vote: Cottrell or Post)",
+  "why": "Its Nov 2026 voter guide says to vote for three: Chelsea Byers, Helen Krieger, and 'Jonathan Cottrell or Stephen Post.' Its Sept 18 post backed all four, calling them 'the progressive choices for West Hollywood City Council.'",
+  "url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "west-hollywood-city-council",
+  "status": "endorsed",
+  "choice": "Stephen Post, Chelsea Byers, Helen Krieger",
+  "why": "Listed for West Hollywood City Council in its 2026 California voter guide, with no reason given.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sierra-club-angeles",
+  "target_id": "west-hollywood-city-council",
+  "status": "endorsed",
+  "choice": "Chelsea Byers, Helen Krieger, Stephen Post",
+  "why": "Listed under 'West Hollywood City Council' in its 2026 endorsements for the June 2 primary and November 3 general elections, with no reason given.",
+  "url": "https://www.sierraclub.org/angeles/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-california",
+  "target_id": "west-hollywood-city-council",
+  "status": "endorsed",
+  "choice": "Kyle Brazeal, Chelsea Byers, Jonathan Cottrell, Helen Krieger",
+  "why": "Lists four names as 'West Hollywood City Council, At-Large' for the three seats, with no reason given. Its Aug 21 announcement named only Byers.",
+  "url": "https://www.eqca.org/elections/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "west-hollywood-city-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group's Nov 3 endorsement list, last updated Oct 20 (checked Oct 31, 2026).",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "west-hollywood-city-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group's Nov 3 endorsement list, last updated Oct 20 (checked Oct 31, 2026).",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "thrive-la",
+  "target_id": "west-hollywood-city-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its voter guide covers City of Los Angeles, county and state races and has no West Hollywood section (checked Oct 31, 2026).",
+  "url": "https://www.thrivelosangeles.org/voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-times-eb",
+  "target_id": "west-hollywood-city-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Times editorial board made no endorsements in local races in the June primary, LA Material reported, and none was found for this race (checked Oct 31, 2026).",
+  "url": "https://lamaterial.com/p/la-times-election-politics-endorsement-vacuum",
+  "date": "2026-10-31",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "ppac-votes",
+  "target_id": "west-hollywood-city-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its LA County voter guide lists local picks only for Los Angeles mayor and city attorney (checked Oct 31, 2026).",
+  "url": "https://www.plannedparenthoodaction.org/planned-parenthood-advocacy-project-los-angeles-county/voter-guide-ppapx",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-envirovoters",
+  "target_id": "west-hollywood-city-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 endorsements page lists a few local picks in Los Angeles and Orange County, and none for West Hollywood (checked Oct 31, 2026).",
+  "url": "https://envirovoters.org/2026-endorsements/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-california",
+  "target_id": "ca-state-senate-24",
+  "status": "endorsed",
+  "choice": "John M. Erickson",
+  "why": "Listed as 'Senate District 24: John Erickson', with no reason given.",
+  "url": "https://www.eqca.org/elections/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "unite-here-local-11",
+  "target_id": "ca-state-senate-24",
+  "status": "endorsed",
+  "choice": "John M. Erickson",
+  "why": "Listed in its Nov 2026 California voter guide, with no reason given.",
+  "url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "ca-state-senate-24",
+  "status": "endorsed",
+  "choice": "John M. Erickson",
+  "why": "Listed for State Senate District 24 in its 2026 California voter guide, with no reason given.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sierra-club-angeles",
+  "target_id": "ca-state-senate-24",
+  "status": "endorsed",
+  "choice": "John M. Erickson",
+  "why": "Listed as 'SD 24 John Erickson' in its 2026 endorsements, with no reason given.",
+  "url": "https://www.sierraclub.org/angeles/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sierra-club-ca",
+  "target_id": "ca-state-senate-24",
+  "status": "endorsed",
+  "choice": "John M. Erickson",
+  "why": "Listed as 'SD 24 John Erickson' on its 2026 state legislature endorsements, with no reason given.",
+  "url": "https://www.sierraclub.org/california/2026-endorsements-scc-political-committee",
+  "date": "2026-10-21",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "cta",
+  "target_id": "ca-state-senate-24",
+  "status": "endorsed",
+  "choice": "John M. Erickson",
+  "why": "Listed as 'SD 24 John Erickson (D)' in its 2026 candidate recommendations, with no reason given.",
+  "url": "https://www.cta.org/document/2026-candidate-recommendations",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ppac-votes",
+  "target_id": "ca-state-senate-24",
+  "status": "endorsed",
+  "choice": "John M. Erickson",
+  "why": "Listed as 'State Senate District 24 John Erickson' in its LA County voter guide, with no reason given.",
+  "url": "https://www.plannedparenthoodaction.org/planned-parenthood-advocacy-project-los-angeles-county/voter-guide-ppapx",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-envirovoters",
+  "target_id": "ca-state-senate-24",
+  "status": "endorsed",
+  "choice": "Brian Goldsmith",
+  "why": "Listed under 'Senate District 24' on its page of picks for the Nov 3, 2026 general election, with no reason given there.",
+  "url": "https://envirovoters.org/2026-endorsements/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-california",
+  "target_id": "ca-assembly-51",
+  "status": "endorsed",
+  "choice": "Rick Chavez Zbur",
+  "why": "Listed as 'Assembly District 51: Rick Chavez Zbur', with no reason given.",
+  "url": "https://www.eqca.org/elections/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "unite-here-local-11",
+  "target_id": "ca-assembly-51",
+  "status": "endorsed",
+  "choice": "Rick Chavez Zbur",
+  "why": "Listed in its Nov 2026 California voter guide, with no reason given.",
+  "url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sierra-club-angeles",
+  "target_id": "ca-assembly-51",
+  "status": "endorsed",
+  "choice": "Rick Chavez Zbur",
+  "why": "Listed as 'AD 51 Rick Chavez Zbur', marked as an incumbent it endorses for re-election, with no reason given.",
+  "url": "https://www.sierraclub.org/angeles/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sierra-club-ca",
+  "target_id": "ca-assembly-51",
+  "status": "endorsed",
+  "choice": "Rick Chavez Zbur",
+  "why": "Listed as 'AD 51 Rick Chavez Zbur' on its 2026 state legislature endorsements, with no reason given.",
+  "url": "https://www.sierraclub.org/california/2026-endorsements-scc-political-committee",
+  "date": "2026-10-21",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ppac-votes",
+  "target_id": "ca-assembly-51",
+  "status": "endorsed",
+  "choice": "Rick Chavez Zbur",
+  "why": "Listed as 'State Assembly District 51 Rick Chavez Zbur' in its LA County voter guide, with no reason given.",
+  "url": "https://www.plannedparenthoodaction.org/planned-parenthood-advocacy-project-los-angeles-county/voter-guide-ppapx",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-envirovoters",
+  "target_id": "ca-assembly-51",
+  "status": "endorsed",
+  "choice": "Rick Chavez Zbur",
+  "why": "Listed under 'Assembly District 51' on its page of picks for the Nov 3, 2026 general election, with no reason given there.",
+  "url": "https://envirovoters.org/2026-endorsements/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "cta",
+  "target_id": "ca-assembly-51",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 candidate recommendations list Assembly Districts 50 and 52 but no one for District 51 (checked Oct 31, 2026).",
+  "url": "https://www.cta.org/document/2026-candidate-recommendations",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "ca-assembly-51",
+  "status": "not_found",
+  "choice": null,
+  "why": "The party's lookup has no pick for Assembly District 51 (checked Oct 31, 2026).",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "streets-for-all",
+  "target_id": "ca-assembly-51",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 endorsements page lists no Assembly race (checked Oct 31, 2026).",
+  "url": "https://www.streetsforall.org/2026",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "ca-assembly-51",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 California voter guide lists Assembly picks in other districts and none for District 51 (checked Oct 31, 2026).",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "unite-here-local-11",
+  "target_id": "ca-us-house-30",
+  "status": "endorsed",
+  "choice": "Laura Friedman",
+  "why": "Listed in its Nov 2026 California voter guide, with no reason given.",
+  "url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "cta",
+  "target_id": "ca-us-house-30",
+  "status": "endorsed",
+  "choice": "Laura Friedman",
+  "why": "Listed as 'CD 30 Laura Friedman (D)' in its 2026 candidate recommendations, with no reason given.",
+  "url": "https://www.cta.org/document/2026-candidate-recommendations",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ppac-votes",
+  "target_id": "ca-us-house-30",
+  "status": "endorsed",
+  "choice": "Laura Friedman",
+  "why": "Listed as 'Congressional District 30 Laura Friedman' in its LA County voter guide, with no reason given.",
+  "url": "https://www.plannedparenthoodaction.org/planned-parenthood-advocacy-project-los-angeles-county/voter-guide-ppapx",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-envirovoters",
+  "target_id": "ca-us-house-30",
+  "status": "endorsed",
+  "choice": "Laura Friedman",
+  "why": "Listed under 'CA 30' on its page of picks for the Nov 3, 2026 general election, with no reason given there.",
+  "url": "https://envirovoters.org/2026-endorsements/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "ca-us-house-30",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 California voter guide lists U.S. House picks in other districts and none for District 30 (checked Oct 31, 2026).",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "unite-here-local-11",
+  "target_id": "la-laccd-seat-2",
+  "status": "endorsed",
+  "choice": "Steven F. Veres",
+  "why": "Listed as Seat 2, 'Steve Veres', in its Nov 2026 California voter guide, with no reason given.",
+  "url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "unite-here-local-11",
+  "target_id": "la-laccd-seat-4",
+  "status": "endorsed",
+  "choice": "Darryn Harris",
+  "why": "Listed as Seat 4, 'Darryn Harris', in its Nov 2026 California voter guide, with no reason given.",
+  "url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "unite-here-local-11",
+  "target_id": "la-laccd-seat-6",
+  "status": "endorsed",
+  "choice": "Randall Winston",
+  "why": "Listed as Seat 6, 'Randall Winston', in its Nov 2026 California voter guide, with no reason given.",
+  "url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sierra-club-angeles",
+  "target_id": "la-laccd-seat-2",
+  "status": "endorsed",
+  "choice": "Steven F. Veres",
+  "why": "Listed under 'Los Angeles Community College' as 'District 2 - Steve Veres', with no reason given.",
+  "url": "https://www.sierraclub.org/angeles/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sierra-club-angeles",
+  "target_id": "la-laccd-seat-4",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 endorsements name Steve Veres for Seat 2 and no one for Seat 4 (checked Oct 31, 2026).",
+  "url": "https://www.sierraclub.org/angeles/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sierra-club-angeles",
+  "target_id": "la-laccd-seat-6",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 endorsements name Steve Veres for Seat 2 and no one for Seat 6 (checked Oct 31, 2026).",
+  "url": "https://www.sierraclub.org/angeles/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "la-laccd-seat-4",
+  "status": "endorsed",
+  "choice": "Darryn Harris",
+  "why": "Listed under Los Angeles Community College District in its 2026 voter guide, without a seat number (Harris is running for Seat 4), with no reason given.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "la-laccd-seat-2",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 voter guide names one Los Angeles Community College District candidate, Darryn Harris (Seat 4), and no one for Seat 2 (checked Oct 31, 2026).",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "la-laccd-seat-6",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 voter guide names one Los Angeles Community College District candidate, Darryn Harris (Seat 4), and no one for Seat 6 (checked Oct 31, 2026).",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-envirovoters",
+  "target_id": "la-laccd-seat-6",
+  "status": "endorsed",
+  "choice": "Randall Winston",
+  "why": "Listed as 'LACCD Board of Trustees, Seat 6' under its local endorsements for the Nov 3, 2026 general election, with no reason given there.",
+  "url": "https://envirovoters.org/2026-endorsements/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-envirovoters",
+  "target_id": "la-laccd-seat-2",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its local endorsements name Randall Winston for Seat 6 and no one for Seat 2 (checked Oct 31, 2026).",
+  "url": "https://envirovoters.org/2026-endorsements/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-envirovoters",
+  "target_id": "la-laccd-seat-4",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its local endorsements name Randall Winston for Seat 6 and no one for Seat 4 (checked Oct 31, 2026).",
+  "url": "https://envirovoters.org/2026-endorsements/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "unite-here-local-11",
+  "target_id": "la-city-charter-sc",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its Nov 2026 voter guide says no on Measure SC, listed under Los Angeles City measures, with the line 'Oppose the creation of unelected bureaucracies in local government,' the same line it gives County Measure E.",
+  "url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "la-county-judge-65",
+  "status": "endorsed",
+  "choice": "Justin Allen Clayton",
+  "why": "Listed for Judge of the Superior Court, Office 65, as 'Justin Clayton', with no reason given.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "la-county-judge-131",
+  "status": "endorsed",
+  "choice": "David Ross",
+  "why": "Listed for Judge of the Superior Court, Office 131, with no reason given.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "la-county-judge-64",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 voter guide lists Superior Court picks for Offices 65 and 131 only, and none for Office 64 (checked Oct 31, 2026).",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "la-county-judge-87",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 voter guide lists Superior Court picks for Offices 65 and 131 only, and none for Office 87 (checked Oct 31, 2026).",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "ca-insurance-commissioner",
+  "status": "endorsed",
+  "choice": "Jane Kim",
+  "why": "Listed for State Insurance Commissioner in its 2026 voter guide, with no reason given.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "ca-boe-3",
+  "status": "endorsed",
+  "choice": "Samuel P. Sukaton",
+  "why": "Listed for Board of Equalization, District 3, as 'Samuel Sukaton', with no reason given.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "ca-governor",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 voter guide's statewide list names only the Insurance Commissioner race, so no pick for Governor (checked Oct 31, 2026).",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "ca-lt-governor",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 voter guide's statewide list names only the Insurance Commissioner race, so no pick for Lieutenant Governor (checked Oct 31, 2026).",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "ca-secretary-of-state",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 voter guide's statewide list names only the Insurance Commissioner race, so no pick for Secretary of State (checked Oct 31, 2026).",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "ca-controller",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 voter guide's statewide list names only the Insurance Commissioner race, so no pick for Controller (checked Oct 31, 2026).",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "ca-treasurer",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 voter guide's statewide list names only the Insurance Commissioner race, so no pick for Treasurer (checked Oct 31, 2026).",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "ca-attorney-general",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 voter guide's statewide list names only the Insurance Commissioner race, so no pick for Attorney General (checked Oct 31, 2026).",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "ca-superintendent",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 voter guide's statewide list names only the Insurance Commissioner race, so no pick for Superintendent of Public Instruction (checked Oct 31, 2026).",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "ca-prop-1",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Its 2026 voter guide says yes on Proposition 1, with no reason given.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "ca-prop-2",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Its 2026 voter guide says yes on Proposition 2, with no reason given.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "ca-prop-3",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Its 2026 voter guide says yes on Proposition 3, with no reason given.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "ca-prop-4",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Its 2026 voter guide says yes on Proposition 4, with no reason given.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "ca-prop-5",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Its 2026 voter guide says yes on Proposition 5, with no reason given.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "ca-prop-38",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Its 2026 voter guide says yes on Proposition 38, with no reason given.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "ca-prop-39",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its 2026 voter guide says no on Proposition 39, with no reason given.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "ca-prop-40",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Its 2026 voter guide says yes on Proposition 40, with no reason given.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "ca-prop-41",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its 2026 voter guide says no on Proposition 41, with no reason given.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "ca-prop-42",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its 2026 voter guide says no on Proposition 42, with no reason given.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "ca-prop-43",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its 2026 voter guide says no on Proposition 43, with no reason given.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "ca-prop-44",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its 2026 voter guide says no on Proposition 44, with no reason given.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "ca-prop-45",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its 2026 voter guide says no on Proposition 45, with no reason given.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "ca-prop-37",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 voter guide's list of state propositions skips Proposition 37 (checked Oct 31, 2026).",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ }
+]

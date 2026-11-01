@@ -106,8 +106,8 @@
   }
  ],
  "lookups": {
-  "early_in_person": "https://locator.lavote.net/locations/vc",
-  "election_day": "https://locator.lavote.net/locations/vc",
+  "early_in_person": "https://locator.lavote.gov/locations/vc?culture=en",
+  "election_day": "https://locator.lavote.gov/locations/vc?culture=en",
   "drop_box": "https://locator.lavote.gov/locations/vbm?culture=en"
  },
  "heads_up": [

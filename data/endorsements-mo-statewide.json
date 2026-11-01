@@ -1114,9 +1114,9 @@
     "target_id": "mo-state-auditor",
     "status": "not_found",
     "choice": null,
-    "why": "No auditor endorsement in the Oct 1 post; check the chapter's full endorsement list. Checked again on Nov 1, 2026; still no pick on this page.",
+    "why": "No auditor endorsement in the Oct 1 post; check the chapter's full endorsement list.",
     "url": "https://www.sierraclub.org/missouri/thomas-hart-benton/blog/2026/10/missouri-chapter-endorsements-yes-6-no-3-and",
-    "date": "2026-11-01",
+    "date": "2026-10-16",
     "confidence": "sourced"
   },
   {
@@ -1154,9 +1154,9 @@
     "target_id": "mo-amendment-7",
     "status": "not_found",
     "choice": null,
-    "why": "Not addressed in the Oct 1 statewide-measures post; the chapter's full list is under its Political Action menu. Checked again on Nov 1, 2026; still no pick on this page.",
+    "why": "Not addressed in the Oct 1 statewide-measures post; the chapter's full list is under its Political Action menu.",
     "url": "https://www.sierraclub.org/missouri/thomas-hart-benton/blog/2026/10/missouri-chapter-endorsements-yes-6-no-3-and",
-    "date": "2026-11-01",
+    "date": "2026-10-16",
     "confidence": "sourced"
   },
   {
@@ -1164,9 +1164,9 @@
     "target_id": "mo-amendment-8",
     "status": "not_found",
     "choice": null,
-    "why": "Not addressed in the Oct 1 statewide-measures post. Checked again on Nov 1, 2026; still no pick on this page.",
+    "why": "Not addressed in the Oct 1 statewide-measures post.",
     "url": "https://www.sierraclub.org/missouri/thomas-hart-benton/blog/2026/10/missouri-chapter-endorsements-yes-6-no-3-and",
-    "date": "2026-11-01",
+    "date": "2026-10-16",
     "confidence": "sourced"
   },
   {

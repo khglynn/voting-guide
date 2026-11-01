@@ -1037,7 +1037,7 @@ function roundTrip(name, stCode, places, mutate) {
   const btns = [...html.matchAll(/<a class="pbtn (gold|line)" href="([^"]+)"[^>]*data-county="([^"]+)">([^<]+)<\/a>/g)].map((m) => `${m[1]} ${m[3]} ${m[4]}`);
   check('where: a split ZIP\u2019s plan shows one labeled button per county, Travis first in gold', btns.join('|') === 'gold Travis Travis County|line Williamson Williamson County|line Hays Hays County' && /<p class="plan-cty">Find [a-z ]+ in your county:<\/p>/.test(html), btns.join('|'));
   bl.localize(b, '78729', 'Williamson');
-  check('where: once the address lookup says Williamson, Williamson\u2019s links, and one button again', b.county === 'Williamson' && b.howto.early_in_person.lookup_url === WILCO_EARLY && b.howto.election_day.lookup_url === 'https://www.wilcotx.gov/elections' && !b.howto.county_links && !/data-county=/.test(ps.planHTML()));
+  check('where: once the address lookup says Williamson, Williamson\u2019s links, and one button again', b.county === 'Williamson' && b.howto.early_in_person.lookup_url === WILCO_EARLY && b.howto.election_day.lookup_url === 'https://www.wilcotx.gov/DocumentCenter/View/22255/Notice-of-General-Election-Williamson-County' && !b.howto.county_links && !/data-county=/.test(ps.planHTML()));
   // Nov 1: Lakewood's own Jefferson County mail and hours text, not the state's Denver, Adams and Arapahoe lines.
   // (The state's other mail fields keep statewide facts with a Denver aside; only these four are county-specific.)
   const lkw = open('CO', ['lakewood-co']).howto;

@@ -2119,7 +2119,7 @@ const touchAt = async (page, sel) => {
 for (const [zip, label, id, btn, href, full] of [
   ['78702', 'Austin', 'not_registered', 'Register for next time', /^https:\/\/vote\.gov\/register\/texas$/, /the Texas deadline was October 5/],
   // Oct 28 (west-mail-25): LA's vote center button opens LA County's own locator, not the statewide form.
-  ['90004', 'Los Angeles', 'not_registered', 'Find a vote center', /^https:\/\/locator\.lavote\.net\/locations\/vc$/, /RegisterToVote\.ca\.gov/],
+  ['90004', 'Los Angeles', 'not_registered', 'Find a vote center', /^https:\/\/locator\.lavote\.gov\/locations\/vc\?culture=en$/, /RegisterToVote\.ca\.gov/],
 ]) {
   const { ctx, page } = await newPage();
   await openBallot(page, zip);

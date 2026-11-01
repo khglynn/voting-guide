@@ -1010,7 +1010,8 @@ function roundTrip(name, stCode, places, mutate) {
   const plan = mods.plan;
   const ps = views.planstrip;
   const TRAVIS_EARLY = 'https://www.google.com/maps/d/viewer?mid=1t_vWJgd_BRfKnJn_fQoHE25IV2i_0Jo';
-  const TRAVIS_DAY = 'https://www.google.com/maps/d/viewer?mid=1Y86BIAffVIw2L_WEkSls_0OWg7NpvX8';
+  // Nov 1: the county's Election Day tab dropped the old map and links this list, which marks one site removed.
+  const TRAVIS_DAY = 'https://votetravis.gov/wp-content/uploads/G26-Election-Day-Flyer-FINAL-Website-wNotice.pdf';
   const WILCO_EARLY = 'https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Early%20Voting%20Dashboard.html';
   const keep = { ballot: st.S.ballot, b: st.S.b, open: st.S.ui.open };
   const aus = read('place-austin-tx.json');
@@ -1021,10 +1022,10 @@ function roundTrip(name, stCode, places, mutate) {
   const tx = read('state-TX.json').howto;
   let b = open('TX', ['austin-tx']);
   bl.localize(b, '78704', null);
-  check('where: on a Travis ZIP, the plan\u2019s early voting and Election Day links are Travis\u2019s own maps', b.county === 'Travis' && b.howto.early_in_person.lookup_url === TRAVIS_EARLY && b.howto.election_day.lookup_url === TRAVIS_DAY && !b.howto.county_links, `${b.county} ${b.howto.early_in_person.lookup_url}`);
+  check('where: on a Travis ZIP, the plan\u2019s early voting and Election Day links are Travis\u2019s own (early map, Election Day list)', b.county === 'Travis' && b.howto.early_in_person.lookup_url === TRAVIS_EARLY && b.howto.election_day.lookup_url === TRAVIS_DAY && !b.howto.county_links, `${b.county} ${b.howto.early_in_person.lookup_url}`);
   const early = plan.nextStep(b.howto, '2026-10-28');
   const day = plan.nextStep(b.howto, '2026-11-03', false, 600);
-  check('where: during early voting the button opens the early map, on Election Day the Election Day map', early.primary.url === TRAVIS_EARLY && early.primary.look === 'early_in_person' && day.primary.url === TRAVIS_DAY && day.primary.look === 'election_day', `${early.primary.url} ${day.primary.url}`);
+  check('where: during early voting the button opens the early map, on Election Day the Election Day list', early.primary.url === TRAVIS_EARLY && early.primary.look === 'early_in_person' && day.primary.url === TRAVIS_DAY && day.primary.look === 'election_day', `${early.primary.url} ${day.primary.url}`);
   b = open('TX', ['austin-tx']);
   bl.localize(b, '78729', null);
   check('where: on a split ZIP, the state\u2019s lookup stays and each county\u2019s links are listed', b.county === null && b.howto.early_in_person.lookup_url === tx.early_in_person.lookup_url && (b.howto.county_links || []).map((c) => c.county).join('|') === 'Travis|Williamson|Hays');
@@ -1034,6 +1035,11 @@ function roundTrip(name, stCode, places, mutate) {
   check('where: a split ZIP\u2019s plan shows one labeled button per county, Travis first in gold', btns.join('|') === 'gold Travis Travis County|line Williamson Williamson County|line Hays Hays County' && /<p class="plan-cty">Find [a-z ]+ in your county:<\/p>/.test(html), btns.join('|'));
   bl.localize(b, '78729', 'Williamson');
   check('where: once the address lookup says Williamson, Williamson\u2019s links, and one button again', b.county === 'Williamson' && b.howto.early_in_person.lookup_url === WILCO_EARLY && b.howto.election_day.lookup_url === 'https://www.wilcotx.gov/elections' && !b.howto.county_links && !/data-county=/.test(ps.planHTML()));
+  // Nov 1: Lakewood's own Jefferson County mail and hours text, not the state's Denver, Adams and Arapahoe lines.
+  // (The state's other mail fields keep statewide facts with a Denver aside; only these four are county-specific.)
+  const lkw = open('CO', ['lakewood-co']).howto;
+  const lkwText = JSON.stringify([lkw.mail_ballot.request_deadline, lkw.mail_ballot.return_options, lkw.early_in_person.hours_note, lkw.early_in_person.hours_short]);
+  check('where: Lakewood’s mail and vote center text is Jefferson County’s, naming no other county', /Jefferson County/.test(lkwText) && !/Denver|Adams|Arapahoe/.test(lkwText), lkwText.slice(0, 200));
   b = open('TX', ['pflugerville-tx']);
   bl.localize(b, '78660', null);
   check('where: Pflugerville\u2019s 78660 is split, so Travis and Williamson both show', b.county === null && (b.howto.county_links || []).map((c) => c.county).join('|') === 'Travis|Williamson');

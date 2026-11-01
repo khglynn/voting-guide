@@ -1,0 +1,168 @@
+{
+ "id": "west-hollywood-ca",
+ "label": "West Hollywood",
+ "state": "CA",
+ "counties": [
+  "Los Angeles"
+ ],
+ "county_fips": [
+  "06037"
+ ],
+ "county_election_office": {
+  "name": "Los Angeles County Registrar-Recorder/County Clerk (LAVote.gov), 12400 Imperial Hwy, Norwalk",
+  "url": "https://lavote.gov",
+  "phone": "(800) 815-2666",
+  "phone_label": "General line",
+  "lines": [
+   {
+    "label": "Mail ballot help",
+    "phone": "(800) 815-2666",
+    "hours": "press 2, then 3"
+   },
+   {
+    "label": "Vote center questions",
+    "phone": "(800) 815-2666",
+    "hours": "press 1"
+   }
+  ]
+ },
+ "sample_ballot_url": "https://isb.lavote.gov/",
+ "zips": [
+  "90046",
+  "90048",
+  "90069"
+ ],
+ "zip_caveats": "West Hollywood shares all three of its ZIPs with the City of Los Angeles. 90069, 90046 and 90048 each take in parts of both cities, and mail in West Hollywood often says \"Los Angeles\", so the guide asks which city you live in. By land, about two-fifths of 90069 is in West Hollywood, and about one-seventh each of 90046 and 90048. A small piece of the city's east end is in 90038, a mostly Hollywood ZIP. If that's you, pick West Hollywood from the guide's list of cities. Not sure which city you're in? Check the sample ballot booklet the county mailed you: if it lists the West Hollywood City Council race, you live in West Hollywood, and if it lists Mayor of Los Angeles, you live in the City of LA. Your exact ballot is also at isb.lavote.gov. Everyone in West Hollywood votes in the same races. The whole city is in U.S. House District 30, State Senate District 24, Assembly District 51, Los Angeles Unified and the Los Angeles Community College District. LAUSD's school board races were settled in June, so there's no school board race here. West Hollywood's seat on the West Basin water board (Division IV) isn't on the ballot: only the sitting director filed, so that election was canceled. There's no West Hollywood city measure this time.",
+ "contest_ids": [
+  "ca-governor",
+  "ca-lt-governor",
+  "ca-secretary-of-state",
+  "ca-controller",
+  "ca-treasurer",
+  "ca-attorney-general",
+  "ca-insurance-commissioner",
+  "ca-superintendent",
+  "ca-boe-3",
+  "ca-supreme-court-evans",
+  "ca-supreme-court-groban",
+  "ca-coa-2d-retention",
+  "ca-prop-1",
+  "ca-prop-2",
+  "ca-prop-3",
+  "ca-prop-4",
+  "ca-prop-5",
+  "ca-prop-37",
+  "ca-prop-38",
+  "ca-prop-39",
+  "ca-prop-40",
+  "ca-prop-41",
+  "ca-prop-42",
+  "ca-prop-43",
+  "ca-prop-44",
+  "ca-prop-45",
+  "la-county-measure-a",
+  "la-county-measure-e",
+  "la-city-charter-sc",
+  "west-hollywood-city-council",
+  "la-county-sheriff",
+  "la-county-judge-64",
+  "la-county-judge-65",
+  "la-county-judge-87",
+  "la-county-judge-131",
+  "la-laccd-seat-2",
+  "la-laccd-seat-4",
+  "la-laccd-seat-6",
+  "ca-us-house-30",
+  "ca-state-senate-24",
+  "ca-assembly-51"
+ ],
+ "district_finders": [
+  {
+   "office_match": "U.S. Representative",
+   "label": "Check your official sample ballot",
+   "url": "https://isb.lavote.gov/"
+  },
+  {
+   "office_match": "State Senator",
+   "label": "Check your official sample ballot",
+   "url": "https://isb.lavote.gov/"
+  },
+  {
+   "office_match": "Member of the State Assembly",
+   "label": "Check your official sample ballot",
+   "url": "https://isb.lavote.gov/"
+  }
+ ],
+ "lookups": {
+  "early_in_person": "https://locator.lavote.gov/locations/vc?culture=en",
+  "election_day": "https://locator.lavote.gov/locations/vc?culture=en",
+  "drop_box": "https://locator.lavote.gov/locations/vbm?culture=en"
+ },
+ "situations": [
+  {
+   "id": "no_mail_ballot_or_lost",
+   "short": "Get a replacement at any LA County vote center or just vote there.",
+   "answer": "The last day to ask for a ballot by mail was October 27. You can still go to any LA County vote center and ask for a replacement or vote there in person. Questions? Call (800) 815-2666, press 2, then 3.",
+   "steps": [
+    "Use the county's locator to find a vote center near you."
+   ],
+   "source": "https://www.lavote.gov/home/voting-elections/voting-options/vote-by-mail/how-to-vote-by-mail",
+   "confidence": "verified"
+  }
+ ],
+ "notes": "You can vote at any LA County vote center, in West Hollywood or anywhere else in the county. The city hosts two: Fiesta Hall in Plummer Park and the West Hollywood Aquatic and Recreation Center, both open through Election Day, November 3. West Hollywood has three ballot drop boxes: behind City Hall (off Sweetzer Avenue), in front of the West Hollywood Library and in front of the Plummer Park Community Center.",
+ "sources": [
+  {
+   "name": "LA County: how to vote by mail",
+   "url": "https://www.lavote.gov/home/voting-elections/voting-options/vote-by-mail/how-to-vote-by-mail"
+  },
+  {
+   "name": "LA County: contact (phone menu)",
+   "url": "https://www.lavote.gov/contact-us/contact-us"
+  },
+  {
+   "name": "LA County: drop box locator",
+   "url": "https://locator.lavote.gov/locations/vbm?culture=en"
+  },
+  {
+   "name": "LA County: interactive sample ballot",
+   "url": "https://isb.lavote.gov/"
+  },
+  {
+   "name": "City of West Hollywood: election information (vote centers the city hosts, drop boxes, council race)",
+   "url": "https://www.weho.org/city-government/city-clerk/election-information"
+  },
+  {
+   "name": "LA County Registrar: measures on the Nov 3, 2026 ballot (rev. Aug 14; no West Hollywood measure)",
+   "url": "https://content.lavote.gov/docs/rrcc/documents/measures-appearing-on-the-ballot---november-3-2026-rev-8-14-2026-v-4.pdf"
+  },
+  {
+   "name": "Census 2020 ZIP area to city relationship file",
+   "url": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_place20_natl.txt"
+  },
+  {
+   "name": "Statewide Database: AB 604 (2025) congressional city splits (West Hollywood all in CD-30)",
+   "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
+  },
+  {
+   "name": "Senate Office of Demographics: Senate district place report, 2021 lines (West Hollywood all in SD-24)",
+   "url": "https://sdmg.senate.ca.gov/sites/sdmg.senate.ca.gov/files/2021/crc_2021_place_report_v2.pdf"
+  },
+  {
+   "name": "Senate Office of Demographics: 2021 Assembly districts by ZIP (90069 all in AD-51)",
+   "url": "https://sdmg.senate.ca.gov/media/386"
+  },
+  {
+   "name": "Census geocoder at West Hollywood City Hall (CD-30, SD-24, AD-51, LAUSD)",
+   "url": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=8300+Santa+Monica+Blvd%2C+West+Hollywood%2C+CA+90069&benchmark=Public_AR_Current&vintage=Current_Current&layers=all&format=json"
+  },
+  {
+   "name": "West Basin MWD: Director Scott Houston, Division IV (represents West Hollywood)",
+   "url": "https://www.westbasinca.gov/about-west-basin/board-of-directors/scott-houston"
+  },
+  {
+   "name": "Ballotpedia: LA County 2026 (West Basin Division 4 election canceled)",
+   "url": "https://ballotpedia.org/Municipal_elections_in_Los_Angeles_County,_California_(2026)"
+  }
+ ]
+}

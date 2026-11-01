@@ -1388,8 +1388,8 @@
   "state": "CA",
   "level": "federal",
   "office": "U.S. Representative",
-  "district": "CD-36 (Westside and South Bay: Mar Vista, Westchester, Venice, Santa Monica, Beverly Hills, Torrance, Palos Verdes)",
-  "scope_plain": "Voters in the 36th Congressional District. Covers Mar Vista and Westchester on Kevin's list. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "district": "CD-36 (Westside and South Bay: Mar Vista, Westchester, Venice, Santa Monica, Beverly Hills, Culver City west of the 405, Torrance, Palos Verdes)",
+  "scope_plain": "Voters in the 36th Congressional District. In the City of LA that includes Mar Vista and Westchester. It also covers all of Santa Monica and all of Beverly Hills. About 5,900 Culver City residents, west of the 405, are in it too. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
   "why_it_matters": "A six-term incumbent and vice chair of the House Democratic Caucus against a Republican with no public campaign presence. Lieu won the June primary with 61%.",
   "vote_for": 1,
@@ -1465,6 +1465,10 @@
    {
     "name": "City Hall Pass: CA-36",
     "url": "https://cityhallpass.com/election-2026/races/congress-36"
+   },
+   {
+    "name": "Statewide Database: which cities each 2025 congressional district holds (AB 604 city splits report)",
+    "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
    }
   ],
   "confidence": "verified"
@@ -1488,8 +1492,8 @@
     "name": "Sydney Kamlager-Dove",
     "party": "Democratic",
     "incumbent": true,
-    "website": "https://www.sydneykamlagerdove.com",
-    "website_confidence": "unverified",
+    "website": "https://sydneykamlager.com",
+    "website_confidence": "sourced",
     "background": "In Congress since 2023; earlier LACCD trustee, State Assembly and State Senate. USC graduate. Foreign Affairs and Judiciary committees; Whip of the Congressional Black Caucus. First in June with 55.2%.",
     "own_words": [
      {
@@ -1636,8 +1640,8 @@
   "state": "CA",
   "level": "state",
   "office": "State Senator",
-  "district": "SD-24 (Westside and Hollywood: Pacific Palisades, Brentwood, Venice, Mar Vista, Westchester, Hollywood, West Hollywood, Santa Monica, Beverly Hills, the South Bay coast)",
-  "scope_plain": "Voters in the 24th State Senate District. Covers the Westside and Hollywood neighborhoods on Kevin's list. Only even-numbered Senate districts vote in 2026. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Two Democrats.",
+  "district": "SD-24 (Westside and Hollywood: Pacific Palisades, Brentwood, Venice, Mar Vista, Westchester, Hollywood, West Hollywood, Santa Monica, Beverly Hills, the South Bay coast, Torrance)",
+  "scope_plain": "Voters in the 24th State Senate District. In the City of LA that includes the Westside and Hollywood. It also includes all of Malibu, all of Santa Monica, all of Beverly Hills, all of West Hollywood and all of Torrance. Only even-numbered Senate districts vote in 2026. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Two Democrats.",
   "office_explainer": "One of 40 state senators. Writes California laws and passes the state budget with the Assembly. Four-year term.",
   "why_it_matters": "Open seat (Ben Allen is termed out) and the most expensive legislative race in LA. Two Democrats: a West Hollywood councilmember backed by labor and the housing groups, and a media consultant who has put $1.85 million of his own money in and is backed by Pelosi, Hillary Clinton and the police union. Outside groups have spent millions against Erickson.",
   "vote_for": 1,
@@ -1713,6 +1717,10 @@
    {
     "name": "City Hall Pass: SD-24",
     "url": "https://cityhallpass.com/election-2026/races/senate-24"
+   },
+   {
+    "name": "Citizens Redistricting Commission 2021: cities in each district (place report)",
+    "url": "https://sdmg.senate.ca.gov/sites/sdmg.senate.ca.gov/files/2021/crc_2021_place_report_v2.pdf"
    }
   ],
   "confidence": "verified"
@@ -1885,7 +1893,7 @@
   "level": "state",
   "office": "Member of the State Assembly",
   "district": "AD-51 (Hollywood, the Hollywood Hills, Fairfax, Westwood, Bel Air, Atwater Village, West Hollywood, Santa Monica, Beverly Hills)",
-  "scope_plain": "Voters in the 51st Assembly District. Covers Hollywood, the Hollywood Hills and the Fairfax District on Kevin's list. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Two Democrats.",
+  "scope_plain": "Voters in the 51st Assembly District. In the City of LA that includes Hollywood, the Hollywood Hills and the Fairfax District. It also includes all of Santa Monica, all of West Hollywood and all of Beverly Hills. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Two Democrats.",
   "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
   "why_it_matters": "The Assembly Democratic Caucus chair against a democratic socialist challenger. Zbur won 54% in June. The clearest left-versus-center contrast on housing (he voted no on SB 79; Hernandez wants to repeal Costa-Hawkins) and on AB 715, Zbur's antisemitism-in-schools law.",
   "vote_for": 1,
@@ -1961,6 +1969,14 @@
    {
     "name": "City Hall Pass: AD-51",
     "url": "https://cityhallpass.com/election-2026/races/assembly-51"
+   },
+   {
+    "name": "Senate Office of Demographics: Assembly districts by ZIP code (2021 lines)",
+    "url": "https://sdmg.senate.ca.gov/system/files/2024-12/2025-state-assembly-zip-codes-zip-code-order.pdf"
+   },
+   {
+    "name": "Census TIGERweb: 2026 State Legislative Districts, Lower (every part of Santa Monica is in AD-51)",
+    "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer/58"
    }
   ],
   "confidence": "verified"

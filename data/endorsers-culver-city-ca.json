@@ -1,0 +1,310 @@
+[
+  {
+    "id": "lacdp",
+    "name": "Los Angeles County Democratic Party",
+    "type": "party",
+    "lean": "left",
+    "lean_basis": "Official county Democratic Party organization. Its candidates page lists its Nov 2026 candidate endorsements and a table of positions on statewide and local measures (read Oct 17, 2026).",
+    "geography": [
+      "culver-city-ca"
+    ],
+    "guide_url": "https://www.lacdp.org/candidates",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "party": "Democratic",
+    "lean_basis_kind": "party"
+  },
+  {
+    "id": "la-county-gop",
+    "name": "Republican Party of Los Angeles County",
+    "type": "party",
+    "lean": "right",
+    "lean_basis": "Official county Republican Party organization. Its Nov 3, 2026 candidate picks and its positions on LA city and county measures are published in an address-lookup tool linked from lagop.org (read Oct 17, 2026). It marks some candidate picks as recommended rather than formally endorsed.",
+    "geography": [
+      "culver-city-ca"
+    ],
+    "guide_url": "https://lagop-endorsement-lookup.vercel.app/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "party": "Republican",
+    "lean_basis_kind": "party",
+    "short": "LA County Republican Party"
+  },
+  {
+    "id": "la-fed",
+    "name": "Los Angeles County Federation of Labor, AFL-CIO",
+    "type": "labor",
+    "lean": "lean_left",
+    "lean_basis": "Federation of about 300 unions in LA County that says 'We empower workers to organize and take collective action to win better wages and respect in the workplace' (https://thelafed.org/about/). No outside rating found; lean reflects its stated mission.",
+    "geography": [
+      "culver-city-ca"
+    ],
+    "guide_url": "https://thelafed.org/resource/lalaborvoterguide/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
+  },
+  {
+    "id": "la-forward",
+    "name": "LA Forward (LA Forward Action Fund voter guide)",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Its stated mission or political identity includes: \"Los Angeles Progressive Voter Guide\". Source: https://laforwardguide.org/.",
+    "geography": [
+      "culver-city-ca"
+    ],
+    "guide_url": "https://laforwardguide.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
+  },
+  {
+    "id": "lalcv",
+    "name": "Los Angeles League of Conservation Voters",
+    "type": "advocacy",
+    "lean": "lean_left",
+    "lean_basis": "Environmental group that calls itself 'the only environmental Political Action Committee (PAC) in Los Angeles County' (https://lalcv.org/about/). No outside rating found; lean reflects its stated mission.",
+    "geography": [
+      "culver-city-ca"
+    ],
+    "guide_url": "https://lalcv.org/category/featured/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "lean_basis_kind": "mission",
+    "short": "LA League of Conservation Voters"
+  },
+  {
+    "id": "abundant-housing-la",
+    "name": "Abundant Housing LA",
+    "type": "advocacy",
+    "lean": "lean_left",
+    "lean_basis": "Pro-housing group that says more homes near transit are needed to 'lower housing costs, solve our climate crisis, and avoid displacement' (https://www.abundanthousingla.org/about-us). No outside rating found; lean reflects its stated mission.",
+    "geography": [
+      "culver-city-ca"
+    ],
+    "guide_url": "https://www.abundanthousingla.org/2026-endorsements",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
+  },
+  {
+    "id": "sierra-club-angeles",
+    "name": "Sierra Club, Angeles Chapter",
+    "short": "Sierra Club Angeles",
+    "type": "advocacy",
+    "lean": "lean_left",
+    "lean_basis": "AllSides rates the national Sierra Club Lean Left (think tank/policy group; independent review, low or initial confidence, as of Oct. 2026). This is its Angeles Chapter, which endorses in Los Angeles and Orange counties. Rating source: https://www.allsides.com/news-source/sierra-club-media-bias.",
+    "lean_basis_kind": "outside_rating",
+    "geography": [
+      "culver-city-ca"
+    ],
+    "guide_url": "https://www.sierraclub.org/angeles/endorsements",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "aagla",
+    "name": "Apartment Association of Greater Los Angeles",
+    "short": "Apartment Association of Greater LA",
+    "type": "business",
+    "lean": null,
+    "lean_basis": "Not rated: no AllSides or Ad Fontes rating. It describes itself as 'a trade association and government advocate serving rental housing providers throughout Southern California since 1917' (https://aagla.org/), which names no political side.",
+    "geography": [
+      "culver-city-ca"
+    ],
+    "guide_url": "https://members.aagla.org/news/apartment-association-of-greater-los-angeles--voting-slate-candidate-endorsements-election-tuesday",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "culver-city-dem-club",
+    "name": "Culver City Democratic Club",
+    "short": "Culver City Dem Club",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "A Democratic club chartered by the county Democratic Party: its About page says 'In 1953 the Los Angeles County Democratic Central Committee issued the club a charter' (https://c-c-d-c.com/about-us/). No outside rating found.",
+    "lean_basis_kind": "party",
+    "geography": [
+      "culver-city-ca"
+    ],
+    "guide_url": "https://c-c-d-c.com/connect-and-get-involved-this-election-season/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "culver-city-dems-united",
+    "name": "Culver City Democrats United",
+    "short": "CC Democrats United",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "A Democratic club: its Sept 2, 2026 announcement says 'CCDU was founded in 2023 and is chartered by the Los Angeles County Democratic Party' (https://culvercitycrossroads.com/2026/09/02/cc-dems-united-post-november-endorsements/). No outside rating found.",
+    "lean_basis_kind": "party",
+    "geography": [
+      "culver-city-ca"
+    ],
+    "guide_url": "https://culvercitycrossroads.com/2026/09/02/cc-dems-united-post-november-endorsements/",
+    "blocked": true,
+    "blocked_note": "Its own site shows a bot check to our reader. Its picks here come from its Sept 2 announcement, published in Culver City Crossroads.",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "culver-city-chamber",
+    "name": "Culver City Chamber of Commerce",
+    "short": "Culver City Chamber",
+    "type": "business",
+    "lean": null,
+    "lean_basis": "Not rated: no AllSides or Ad Fontes rating found. Its home page calls it 'a voluntary, action-oriented organization of businesses and professionals working together to promote the commercial and economic vitality of Culver City' (https://www.culvercitychamber.org), which names no political side.",
+    "geography": [
+      "culver-city-ca"
+    ],
+    "guide_url": "https://www.culvercitychamber.org",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "protect-culver-city",
+    "name": "Protect Culver City",
+    "type": "advocacy",
+    "lean": null,
+    "lean_basis": "Not rated: no AllSides or Ad Fontes rating found. A political action committee whose About page calls it 'an association of Culver City residents and business owners who are concerned with the current direction of our city council' (https://protectculvercity.org/about-us/), which names no political side.",
+    "geography": [
+      "culver-city-ca"
+    ],
+    "guide_url": "https://protectculvercity.org",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "our-culver",
+    "name": "Our Culver",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Its stated political identity: its home page says 'Our Culver is proud to share our 2026 Progressive Voter Guide' and calls the group 'a coalition of renters, homeowners, small business owners, workers, parents, youth, students, seniors, and neighbors' (https://www.ourculver.org). No outside rating found; lean reflects its stated mission.",
+    "lean_basis_kind": "mission",
+    "geography": [
+      "culver-city-ca"
+    ],
+    "guide_url": "https://www.ourculver.org/blog/2026-voter-guide",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "culver-city-teachers-aft",
+    "name": "Culver City Federation of Teachers, AFT Local 1343",
+    "short": "Culver City Teachers (AFT 1343)",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: no AllSides or Ad Fontes rating found, and we found no website of its own. Its signed letter describes its members as 'teachers, school counselors, school nurses, speech language pathologists' and other specialists, which names no political side (https://www.culvercityobserver.com/story/2026/07/09/opinion/culver-city-federation-of-teachers-aft-local-1343/16272.html).",
+    "geography": [
+      "culver-city-ca"
+    ],
+    "guide_url": "https://www.culvercityobserver.com/story/2026/07/09/opinion/culver-city-federation-of-teachers-aft-local-1343/16272.html",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "culver-city-crossroads",
+    "name": "Culver City Crossroads (publisher's Vote Smart picks)",
+    "short": "Culver City Crossroads",
+    "type": "publication",
+    "lean": null,
+    "lean_basis": "Not rated: we found no AllSides or Ad Fontes rating. Its About page calls it 'Culver City’s only local daily news' (https://culvercitycrossroads.com/about-us/), which names no side. Its picks are the signed 'Vote Smart' columns of its publisher and editor, Judith Martin-Straw.",
+    "geography": [
+      "culver-city-ca"
+    ],
+    "guide_url": "https://culvercitycrossroads.com/2026/10/30/mark-your-ballot-and-vote-early/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "knock-la",
+    "name": "Knock LA",
+    "type": "publication",
+    "lean": "left",
+    "lean_basis": "Its stated mission or political identity includes: \"We are dedicated to giving a voice to the left and uplifting marginalized communities\". Source: https://knock-la.com/about-us/.",
+    "geography": [
+      "culver-city-ca"
+    ],
+    "guide_url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
+  },
+  {
+    "id": "thrive-la",
+    "name": "Thrive LA",
+    "type": "advocacy",
+    "lean": "neutral",
+    "lean_basis": "Describes itself as 'a pragmatic, nonpartisan voter guide' (https://www.thrivelosangeles.org/voter-guide), with no stated ideological mission. No outside rating found; lean reflects its stated mission.",
+    "geography": [
+      "culver-city-ca"
+    ],
+    "guide_url": "https://www.thrivelosangeles.org/voter-guide",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
+  },
+  {
+    "id": "streets-for-all",
+    "name": "Streets For All",
+    "type": "advocacy",
+    "lean": "lean_left",
+    "lean_basis": "Safe-streets and transit group that says 'we believe our air doesn’t have to be polluted' (https://www.streetsforall.org/). No outside rating found; lean reflects its stated mission.",
+    "geography": [
+      "culver-city-ca"
+    ],
+    "guide_url": "https://www.streetsforall.org/endorsements",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
+  },
+  {
+    "id": "alads",
+    "name": "Association for Los Angeles Deputy Sheriffs",
+    "type": "labor",
+    "lean": "neutral",
+    "lean_basis": "Deputies' union formed, in its words, 'to ensure that the rights of future Deputy Sheriffs would be protected' (https://www.alads.org/), with no ideological language. No outside rating found; lean reflects its stated mission.",
+    "geography": [
+      "culver-city-ca"
+    ],
+    "guide_url": "https://www.alads.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
+  },
+  {
+    "id": "lwv-greater-la",
+    "name": "League of Women Voters of Greater Los Angeles",
+    "type": "civic_nonpartisan",
+    "lean": "neutral",
+    "lean_basis": "League of Women Voters chapter; its page calls the League 'a nonpartisan political organization encouraging informed and active participation in government' (https://my.lwv.org/california/greater-los-angeles/about-us). No outside rating found; lean reflects its stated mission.",
+    "geography": [
+      "culver-city-ca"
+    ],
+    "guide_url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
+  }
+]

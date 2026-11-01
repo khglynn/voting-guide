@@ -1,0 +1,193 @@
+{
+ "id": "culver-city-ca",
+ "label": "Culver City",
+ "state": "CA",
+ "counties": [
+  "Los Angeles"
+ ],
+ "county_fips": [
+  "06037"
+ ],
+ "county_election_office": {
+  "name": "Los Angeles County Registrar-Recorder/County Clerk (LAVote.gov), 12400 Imperial Hwy, Norwalk",
+  "url": "https://lavote.gov",
+  "phone": "(800) 815-2666",
+  "phone_label": "General line",
+  "lines": [
+   {
+    "label": "Mail ballot help",
+    "phone": "(800) 815-2666",
+    "hours": "press 2, then 3"
+   },
+   {
+    "label": "Vote center questions",
+    "phone": "(800) 815-2666",
+    "hours": "press 1"
+   }
+  ]
+ },
+ "sample_ballot_url": "https://isb.lavote.gov/",
+ "zips": [
+  "90230",
+  "90232",
+  "90066"
+ ],
+ "zip_outside": {
+  "90230": "Ladera Heights, in unincorporated LA County"
+ },
+ "zip_caveats": "Culver City's ZIPs are 90230 and 90232, plus the west side of town in 90066, and each one reaches past city limits. 90232 is almost all Culver City, with a few blocks in the City of Los Angeles. About half of 90230's land is Culver City; the rest is unincorporated Ladera Heights and part of the City of Los Angeles. Ladera Heights has no city council, and its schools are Inglewood Unified, so its ballot is different. 90066 is mostly the City of Los Angeles (Mar Vista and Del Rey), so the guide asks which city you live in. A few homes at the city's edges have a 90016, 90045 or 90292 address. Everyone in Culver City votes for City Council, the Culver City Unified school board, the three Los Angeles Community College District seats, and Measures AA, T and YV. All of Culver City is in State Senate District 28 and Assembly District 55. For Congress, the 405 freeway splits the city: west of the 405 (about 6,000 people, including Culver West) is District 36, and east of the 405 is District 37. Culver City is in Division IV of the West Basin Municipal Water District, but there's no race for it this year: only the sitting director filed, so that election was canceled. Your sample ballot at isb.lavote.gov shows your exact ballot.",
+ "contest_ids": [
+  "ca-governor",
+  "ca-lt-governor",
+  "ca-secretary-of-state",
+  "ca-controller",
+  "ca-treasurer",
+  "ca-attorney-general",
+  "ca-insurance-commissioner",
+  "ca-superintendent",
+  "ca-boe-3",
+  "ca-supreme-court-evans",
+  "ca-supreme-court-groban",
+  "ca-coa-2d-retention",
+  "ca-prop-1",
+  "ca-prop-2",
+  "ca-prop-3",
+  "ca-prop-4",
+  "ca-prop-5",
+  "ca-prop-37",
+  "ca-prop-38",
+  "ca-prop-39",
+  "ca-prop-40",
+  "ca-prop-41",
+  "ca-prop-42",
+  "ca-prop-43",
+  "ca-prop-44",
+  "ca-prop-45",
+  "ca-us-house-36",
+  "ca-us-house-37",
+  "ca-state-senate-28",
+  "ca-assembly-55",
+  "la-county-sheriff",
+  "la-county-judge-64",
+  "la-county-judge-65",
+  "la-county-judge-87",
+  "la-county-judge-131",
+  "culver-city-council",
+  "culver-city-ccusd-board",
+  "la-laccd-seat-2",
+  "la-laccd-seat-4",
+  "la-laccd-seat-6",
+  "la-county-measure-a",
+  "la-county-measure-e",
+  "culver-city-measure-aa",
+  "culver-city-measure-t",
+  "culver-city-measure-yv"
+ ],
+ "district_finders": [
+  {
+   "office_match": "U.S. Representative",
+   "label": "Find your district on your official ballot",
+   "url": "https://isb.lavote.gov/"
+  }
+ ],
+ "lookups": {
+  "early_in_person": "https://locator.lavote.gov/locations/vc?culture=en",
+  "election_day": "https://locator.lavote.gov/locations/vc?culture=en",
+  "drop_box": "https://locator.lavote.gov/locations/vbm?culture=en"
+ },
+ "situations": [
+  {
+   "id": "no_mail_ballot_or_lost",
+   "short": "Get a replacement at any LA County vote center or just vote there.",
+   "answer": "The last day to ask for a ballot by mail was October 27. You can still go to any LA County vote center and ask for a replacement or vote there in person. Questions? Call (800) 815-2666, press 2, then 3.",
+   "steps": [
+    "Use the county's locator to find a vote center near you."
+   ],
+   "source": "https://www.lavote.gov/home/voting-elections/voting-options/vote-by-mail/how-to-vote-by-mail",
+   "confidence": "verified"
+  }
+ ],
+ "notes": "Vote centers in Culver City: City Hall has been open since October 24. BioscienceLA, Rotary Plaza and West Los Angeles College, all on Overland Avenue, and the Courtyard by Marriott on Bristol Parkway opened October 31. All of them are open 10 AM to 7 PM through November 2, and 7 AM to 8 PM on Election Day. You can vote at any vote center in LA County, not only these. The city's 24-hour ballot drop boxes are at Culver West Alexander Park, Fox Hills Parkette, Julian Dixon Library and West Los Angeles College; they close at 8 PM on Election Day.",
+ "sources": [
+  {
+   "name": "LA County: how to vote by mail",
+   "url": "https://www.lavote.gov/home/voting-elections/voting-options/vote-by-mail/how-to-vote-by-mail"
+  },
+  {
+   "name": "LA County: contact (phone menu)",
+   "url": "https://www.lavote.gov/contact-us/contact-us"
+  },
+  {
+   "name": "LA County: drop box locator",
+   "url": "https://locator.lavote.gov/locations/vbm?culture=en"
+  },
+  {
+   "name": "LA County: interactive sample ballot",
+   "url": "https://isb.lavote.gov/"
+  },
+  {
+   "name": "City of Culver City: How to Vote in Culver City (vote centers, hours, drop boxes)",
+   "url": "https://www.culvercity.gov/City-Hall/Election-Information-Updated/How-to-Vote-in-Culver-City"
+  },
+  {
+   "name": "City of Culver City: November 3, 2026 General Municipal Election information",
+   "url": "https://www.culvercity.gov/City-Hall/Election-Information-Updated/Upcoming-Election-Information"
+  },
+  {
+   "name": "LA County Registrar vote center data, Nov 3, 2026 (Culver City sites)",
+   "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/Election_Vote_Centers_%28Current_Public%29_view/FeatureServer/2/query?where=PC_BuildingCity%3D%27Culver+City%27&outFields=PC_BuildingName,PC_BuildingFullAddress,PC_RoomArea,PC_BuildingCity,PC_ServiceAreaType,Election_Name,Election_Year&returnGeometry=false&f=json"
+  },
+  {
+   "name": "Census 2020 ZIP area (ZCTA) to place relationship file",
+   "url": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_place20_natl.txt"
+  },
+  {
+   "name": "Senate Office of Demographics: Congressional District 36 (2025), places in district (Culver City 5,934)",
+   "url": "https://sdmg.senate.ca.gov/committeehome/2025-congressional-districts/congressional-district-36-2025"
+  },
+  {
+   "name": "Senate Office of Demographics: Congressional District 37 (2025), places in district (Culver City 34,959)",
+   "url": "https://sdmg.senate.ca.gov/committeehome/2025-congressional-districts/congressional-district-37-2025"
+  },
+  {
+   "name": "Statewide Database: AB 604 (Prop 50) city splits report",
+   "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
+  },
+  {
+   "name": "Statewide Database: AB 604 congressional plan block assignments (used to place the CD-36 and CD-37 line at the 405)",
+   "url": "https://statewidedatabase.org/pub/data/d25/AB604.zip"
+  },
+  {
+   "name": "Senate Office of Demographics: city populations by Senate district, 2021 lines (Culver City all in SD-28)",
+   "url": "https://sdmg.senate.ca.gov/sites/sdmg.senate.ca.gov/files/2021/crc_2021_place_report_v2.pdf"
+  },
+  {
+   "name": "Senate Office of Demographics: 2025 Assembly district ZIP codes",
+   "url": "https://sdmg.senate.ca.gov/system/files/2024-12/2025-state-assembly-zip-codes-zip-code-order.pdf"
+  },
+  {
+   "name": "Senate Office of Demographics: 2025 Senate district ZIP codes",
+   "url": "https://sdmg.senate.ca.gov/system/files/2024-12/2025-state-senate-zip-codes-zip-code-order.pdf"
+  },
+  {
+   "name": "LA County Office of Education community college district layer (Culver City in LACCD)",
+   "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/Community_College_Districts/FeatureServer/0/query?geometry=-118.3965,34.0219&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=DistrictNa,SourceOf_1,LegalBou_1&returnGeometry=false&f=json"
+  },
+  {
+   "name": "West Basin Municipal Water District: Division IV director (Culver City)",
+   "url": "https://www.westbasinca.gov/about-west-basin/board-of-directors/scott-houston"
+  },
+  {
+   "name": "Ballotpedia: LA County 2026 local elections (West Basin Division 4 election canceled; Scott Houston, the only candidate, elected)",
+   "url": "https://ballotpedia.org/Municipal_elections_in_Los_Angeles_County,_California_(2026)"
+  },
+  {
+   "name": "VoteStack: every race on LA County's Nov 3, 2026 ballot (no West Basin Division IV race)",
+   "url": "https://votestack.org/races/ca/los-angeles-county/2026-11-03"
+  },
+  {
+   "name": "LA County Registrar: measures on the Nov 3, 2026 ballot (rev. Aug 14, 2026)",
+   "url": "https://content.lavote.gov/docs/rrcc/documents/measures-appearing-on-the-ballot---november-3-2026-rev-8-14-2026-v-4.pdf"
+  }
+ ]
+}

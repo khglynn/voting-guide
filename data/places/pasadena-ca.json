@@ -122,13 +122,8 @@
  ],
  "heads_up": [
   {
-   "text": "About 130,000 of Pasadena's 139,000 people live in Congressional District 28, and about 9,000 live in District 30. Your official sample ballot shows which one is yours.",
-   "applies_to": "item:ca-us-house-28",
-   "source": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
-  },
-  {
-   "text": "About 130,000 of Pasadena's 139,000 people live in Congressional District 28, and about 9,000 live in District 30. Your official sample ballot shows which one is yours.",
-   "applies_to": "item:ca-us-house-30",
+   "text": "Most of Pasadena is in Congressional District 28: about 130,000 of the city's 139,000 people. About 9,000 people on the west side, in Linda Vista and nearby blocks along the Arroyo Seco, are in District 30. Your address or your official sample ballot tells you which one is yours.",
+   "applies_to": "section:federal",
    "source": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
   }
  ],

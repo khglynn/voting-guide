@@ -132,7 +132,7 @@
   "geography": [
    "pasadena-ca"
   ],
-  "guide_url": "https://www.reformcalifornia.org/voter-guides/san-diego",
+  "guide_url": "https://www.reformcalifornia.org/voter-guides-list",
   "default_on": false,
   "endorses_candidates": true,
   "endorses_measures": true,
@@ -178,9 +178,9 @@
   "geography": [
    "pasadena-ca"
   ],
-  "guide_url": "https://aagla.org/pasadena-pfd/",
+  "guide_url": "https://members.aagla.org/news/apartment-association-of-greater-los-angeles--voting-slate-candidate-endorsements-election-tuesday",
   "default_on": false,
-  "endorses_candidates": false,
+  "endorses_candidates": true,
   "endorses_measures": true
  },
  {

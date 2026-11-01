@@ -1519,17 +1519,7 @@
         "background": "Incumbent.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/georgia",
-        "own_words_status": "none_found",
-        "own_words_checked": {
-          "on": "2026-11-01",
-          "where": [
-            "https://voteplacie.com/",
-            "https://lp.org/candidate/zane-placie/",
-            "https://ballotpedia.org/Zane_Placie",
-            "https://cm.fultoncountyga.gov/-/media/2026-Election/List-of-Qualified-Candidates--GA-Soil-"
-          ]
-        }
+        "lwv_url": "https://www.vote411.org/georgia"
       },
       {
         "name": "Jason Ulseth",
@@ -1540,17 +1530,7 @@
         "background": "Incumbent.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/georgia",
-        "own_words_status": "none_found",
-        "own_words_checked": {
-          "on": "2026-11-01",
-          "where": [
-            "https://voteplacie.com/",
-            "https://lp.org/candidate/zane-placie/",
-            "https://ballotpedia.org/Zane_Placie",
-            "https://cm.fultoncountyga.gov/-/media/2026-Election/List-of-Qualified-Candidates--GA-Soil-"
-          ]
-        }
+        "lwv_url": "https://www.vote411.org/georgia"
       },
       {
         "name": "Zane Placie",
@@ -1773,10 +1753,7 @@
         "own_words_checked": {
           "on": "2026-11-01",
           "where": [
-            "https://ballotpedia.org/Carol_Hayes",
-            "https://ballotpedia.org/Jan_D._Dunaway",
-            "https://theballotbrief.com/state/georgia/dekalb-county/soil-and-water-supervisor",
-            "search: DeKalb County Soil and Water supervisor 2026 Jan Dunaway Carol Hayes candidate"
+            "a web search for this candidate's campaign site, local news guides and voter questionnaires"
           ]
         }
       },
@@ -1794,10 +1771,7 @@
         "own_words_checked": {
           "on": "2026-11-01",
           "where": [
-            "https://ballotpedia.org/Carol_Hayes",
-            "https://ballotpedia.org/Jan_D._Dunaway",
-            "https://theballotbrief.com/state/georgia/dekalb-county/soil-and-water-supervisor",
-            "search: DeKalb County Soil and Water supervisor 2026 Jan Dunaway Carol Hayes candidate"
+            "a web search for this candidate's campaign site, local news guides and voter questionnaires"
           ]
         }
       }

@@ -526,10 +526,7 @@
         "own_words_checked": {
           "on": "2026-11-01",
           "where": [
-            "https://www.cityofforesthills.com/page/board-of-commissioners/ (bio text, no stance)",
-            "https://onyourballot.vote411.org/candidate-detail.do?id=74053018 (HTTP 500 on every fetch ",
-            "Sway candidate profiles for Jim Gardner and Henry Trost (saved, directory data only)",
-            "web search: Forest Hills commissioner 2026 statements (nothing candidate-authored found)"
+            "a web search for this candidate's campaign site, local news guides and voter questionnaires"
           ]
         }
       },
@@ -547,10 +544,7 @@
         "own_words_checked": {
           "on": "2026-11-01",
           "where": [
-            "https://www.cityofforesthills.com/page/board-of-commissioners/ (bio text, no stance)",
-            "https://onyourballot.vote411.org/candidate-detail.do?id=74053018 (HTTP 500 on every fetch ",
-            "Sway candidate profiles for Jim Gardner and Henry Trost (saved, directory data only)",
-            "web search: Forest Hills commissioner 2026 statements (nothing candidate-authored found)"
+            "a web search for this candidate's campaign site, local news guides and voter questionnaires"
           ]
         }
       }
@@ -591,17 +585,7 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/tennessee",
-        "own_words_status": "none_found",
-        "own_words_checked": {
-          "on": "2026-11-01",
-          "where": [
-            "https://www.meachamforgood.com/ (saved)",
-            "https://www.meachamforgood.com/platform (saved)",
-            "https://www.meachamforgood.com/about (saved)",
-            "https://www.mike4goodlettsville.com/ (saved, thin)"
-          ]
-        }
+        "lwv_url": "https://www.vote411.org/tennessee"
       },
       {
         "name": "Eric Meacham",
@@ -660,17 +644,7 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/tennessee",
-        "own_words_status": "none_found",
-        "own_words_checked": {
-          "on": "2026-11-01",
-          "where": [
-            "https://www.meachamforgood.com/ (saved)",
-            "https://www.meachamforgood.com/platform (saved)",
-            "https://www.meachamforgood.com/about (saved)",
-            "https://www.mike4goodlettsville.com/ (saved, thin)"
-          ]
-        }
+        "lwv_url": "https://www.vote411.org/tennessee"
       },
       {
         "name": "Rusty Tinnin",
@@ -681,17 +655,7 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/tennessee",
-        "own_words_status": "none_found",
-        "own_words_checked": {
-          "on": "2026-11-01",
-          "where": [
-            "https://www.meachamforgood.com/ (saved)",
-            "https://www.meachamforgood.com/platform (saved)",
-            "https://www.meachamforgood.com/about (saved)",
-            "https://www.mike4goodlettsville.com/ (saved, thin)"
-          ]
-        }
+        "lwv_url": "https://www.vote411.org/tennessee"
       }
     ],
     "sources": [

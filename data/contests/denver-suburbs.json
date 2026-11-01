@@ -2880,10 +2880,7 @@
         "own_words_checked": {
           "on": "2026-11-01",
           "where": [
-            "https://jim4clerk.com/",
-            "https://www.douglasco.gov/board-county-commissioners/transparency/elected-officials/clerk-",
-            "https://douglascountyvotes.org/compare/davis-vs-oehler/",
-            "https://theballotbrief.com/state/colorado/douglas-county/clerk-and-recorder"
+            "a web search for this candidate's campaign site, local news guides and voter questionnaires"
           ]
         }
       },
@@ -2893,7 +2890,7 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Product manager, per Critical Report. No campaign site or published statement found.",
+        "background": "Product manager, per Critical Report.",
         "own_words": [
           {
             "text": "I’m running for Douglas County Clerk and Recorder because I believe in something simple but essential: elections must be open, fair, and free from political influence.",

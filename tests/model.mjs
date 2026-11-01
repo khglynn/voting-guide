@@ -887,7 +887,7 @@ function roundTrip(name, stCode, places, mutate) {
     const auraRows = Object.entries(real.endorsements).filter(([t, r]) => r.aura && liveB.byId.has(t));
     check('adds: a preview brings only the source the live data lacks', f.endorsers.map((e) => e.id).join() === 'aura', f.endorsers.map((e) => e.id).join());
     const ae = f.endorsers[0];
-    check('adds: its record starts off for everyone, is marked as a preview, and keeps its fields', ae.default_on === false && ae.preview === true && ae.name === 'AURA' && ae.type === 'advocacy' && ae.lean === 'lean_left' && ae.lean_basis_kind === 'mission' && ae.guide_url === real.endorsers.find((e) => e.id === 'aura').guide_url && ae.home_places.join() === 'austin-tx', JSON.stringify(ae).slice(0, 200));
+    check('adds: its record starts off for everyone, is marked as a preview, and keeps its fields', ae.default_on === false && ae.preview === true && ae.name === 'AURA' && ae.type === 'advocacy' && ae.lean === 'lean_left' && ae.lean_basis_kind === 'mission' && ae.guide_url === real.endorsers.find((e) => e.id === 'aura').guide_url && ae.home_places.join() === 'austin-hays-tx,austin-tx,austin-williamson-tx', JSON.stringify(ae).slice(0, 200));
     const same = (a, b) => ['s', 'c', 'note', 'why', 'url', 'date', 'conf'].every((k) => JSON.stringify(a[k] ?? null) === JSON.stringify(b[k] ?? null));
     check('adds: every one of its rows on this ballot comes along, as the data has it', auraRows.length > 10 && Object.keys(f.rows).length === auraRows.length && auraRows.every(([t, r]) => f.rows[t] && same(f.rows[t].aura, r.aura)), `${Object.keys(f.rows).length} of ${auraRows.length}`);
     const nb = bl.buildBallot(ad.withFound(sbx, f), [liveP]);

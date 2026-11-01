@@ -4632,6 +4632,7 @@ const ADDRESS = /testing lane|testing%20lane|testing\+lane|test one/i;
   await openZip(two.page, '78729');
   await two.page.waitForSelector('.choose', { timeout: 15000 });
   check('Where to vote: a ZIP split by county asks which county, with each page’s own county under its name', /is split between counties/.test(await text(two.page, '#which-h')) && (await two.page.$$eval('.choose .opt small', (els) => els.slice(0, 2).map((e) => e.textContent.trim()))).join('|') === 'Travis County|Williamson County', await text(two.page, '.choose'));
+  check('Where to vote: "I’m not sure" on a county-split ZIP opens the Travis page alone, never "Austin or Austin"', (await two.page.getAttribute('[data-fk="cp-unsure"]', 'data-ids')) === 'austin-tx' && /Travis County part/.test(await text(two.page, '[data-fk="cp-unsure"]')), await text(two.page, '[data-fk="cp-unsure"]'));
   await tap(two.page, '.choose [data-fk="cp-austin-tx"]');
   await throughSetup(two.page);
   await two.page.waitForTimeout(150);

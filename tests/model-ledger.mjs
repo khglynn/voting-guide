@@ -2194,6 +2194,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('coverage: index.json’s source counts match the ballot the app builds, every place and state', off.length === 0, off.slice(0, 4).join(' | '));
     check('coverage: a place with a local source that picks is never thin', Object.values(INDEX.places).every((p) => p.local_with_picks === 0 || !mc.isThin(p)));
     check('coverage: Chicago isn’t thin', !mc.isThin(INDEX.places['chicago-il']), JSON.stringify(INDEX.places['chicago-il']));
+    check('coverage: Austin’s Williamson and Hays pages aren’t thin either: the city-wide sources name them', ['austin-williamson-tx', 'austin-hays-tx'].every((id) => !mc.isThin(INDEX.places[id]) && INDEX.places[id].local_with_picks > 0), JSON.stringify([INDEX.places['austin-williamson-tx'], INDEX.places['austin-hays-tx']].map((p) => [p.local_with_picks, p.local_races_with_picks, p.local_races])));
     // Codex, Oct 26: the Pensacola News Journal is Pensacola's own paper, so it counts as one of its local
     // sources (5, none with picks); Ballwin's three are the Post-Dispatch (one pick), LWV Metro STL and STLPR.
     const pn = INDEX.places['pensacola-fl'], bw = INDEX.places['ballwin-mo'];

@@ -2875,7 +2875,14 @@
         "background": "Incumbent clerk and recorder since 2023. Earlier worked in the Douglas County clerk's office as elections deputy (1997 to 2017) and motor vehicle deputy (2017 to 2022), per BallotReady. No campaign site or published statement found.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/colorado"
+        "lwv_url": "https://www.vote411.org/colorado",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-11-01",
+          "where": [
+            "a web search for this candidate's campaign site, local news guides and voter questionnaires"
+          ]
+        }
       },
       {
         "name": "Jim Oehler",
@@ -2883,8 +2890,21 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Product manager, per Critical Report. No campaign site or published statement found.",
-        "own_words": [],
+        "background": "Product manager, per Critical Report.",
+        "own_words": [
+          {
+            "text": "I’m running for Douglas County Clerk and Recorder because I believe in something simple but essential: elections must be open, fair, and free from political influence.",
+            "is_quote": true,
+            "source": "https://jim4clerk.com/",
+            "source_label": "Jim Oehler campaign website (home page)"
+          },
+          {
+            "text": "I’m committed to protecting the integrity of elections, even if it means standing up to elected officials who wish to harm the election process for political gain.",
+            "is_quote": true,
+            "source": "https://jim4clerk.com/",
+            "source_label": "Jim Oehler campaign website (home page)"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/colorado"
       }

@@ -44,9 +44,9 @@
     "target_id": "culver-city-measure-t",
     "status": "not_found",
     "choice": null,
-    "why": "Its Oct 4 newsletter lists its endorsed local measures as AA and YV. No position on Measure T was found on its site (checked Oct 31, 2026).",
+    "why": "Its Oct 4 newsletter lists its endorsed local measures as AA and YV. No position on Measure T was found on its site (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://c-c-d-c.com/connect-and-get-involved-this-election-season/",
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -152,81 +152,81 @@
   {
     "endorser_id": "culver-city-dem-club",
     "target_id": "ca-secretary-of-state",
-    "status": "not_found",
-    "choice": null,
-    "why": "Its endorsements page lists Shirley Weber as its pick in the June 2 primary, marked as advanced to the November runoff, but nothing is listed yet under its November 3, 2026 heading, so we found no November pick (checked Oct 31, 2026).",
-    "url": "https://c-c-d-c.com/endorsements/",
-    "date": "2026-10-31",
+    "status": "endorsed",
+    "choice": "Shirley N. Weber",
+    "why": "Listed for Secretary of State on its endorsement card for the Nov 3 election.",
+    "url": "https://www.c-c-d-c.com/wp-content/uploads/2026/09/Nov-2026-card-1.jpg",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
     "endorser_id": "culver-city-dem-club",
     "target_id": "ca-controller",
-    "status": "not_found",
-    "choice": null,
-    "why": "Its endorsements page lists Malia Cohen as its pick in the June 2 primary, marked as advanced to the November runoff, but nothing is listed yet under its November 3, 2026 heading, so we found no November pick (checked Oct 31, 2026).",
-    "url": "https://c-c-d-c.com/endorsements/",
-    "date": "2026-10-31",
+    "status": "endorsed",
+    "choice": "Malia M. Cohen",
+    "why": "Listed for State Controller on its endorsement card for the Nov 3 election.",
+    "url": "https://www.c-c-d-c.com/wp-content/uploads/2026/09/Nov-2026-card-1.jpg",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
     "endorser_id": "culver-city-dem-club",
     "target_id": "ca-attorney-general",
-    "status": "not_found",
-    "choice": null,
-    "why": "Its endorsements page lists Rob Bonta as its pick in the June 2 primary, marked as advanced to the November runoff, but nothing is listed yet under its November 3, 2026 heading, so we found no November pick (checked Oct 31, 2026).",
-    "url": "https://c-c-d-c.com/endorsements/",
-    "date": "2026-10-31",
+    "status": "endorsed",
+    "choice": "Rob Bonta",
+    "why": "Listed for Attorney General on its endorsement card for the Nov 3 election.",
+    "url": "https://www.c-c-d-c.com/wp-content/uploads/2026/09/Nov-2026-card-1.jpg",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
     "endorser_id": "culver-city-dem-club",
     "target_id": "ca-boe-3",
-    "status": "not_found",
-    "choice": null,
-    "why": "Its endorsements page lists Sam Sukaton as its pick in the June 2 primary, marked as advanced to the November runoff, but nothing is listed yet under its November 3, 2026 heading, so we found no November pick (checked Oct 31, 2026).",
-    "url": "https://c-c-d-c.com/endorsements/",
-    "date": "2026-10-31",
+    "status": "endorsed",
+    "choice": "Samuel P. Sukaton",
+    "why": "Listed for Board of Equalization Seat 3 on its endorsement card for the Nov 3 election.",
+    "url": "https://www.c-c-d-c.com/wp-content/uploads/2026/09/Nov-2026-card-1.jpg",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
     "endorser_id": "culver-city-dem-club",
     "target_id": "la-county-judge-64",
-    "status": "not_found",
-    "choice": null,
-    "why": "Its endorsements page lists Rhonda Haymon as its pick in the June 2 primary, marked as advanced to the November runoff, but nothing is listed yet under its November 3, 2026 heading, so we found no November pick (checked Oct 31, 2026).",
-    "url": "https://c-c-d-c.com/endorsements/",
-    "date": "2026-10-31",
+    "status": "endorsed",
+    "choice": "Rhonda A. Haymon",
+    "why": "Listed for Superior Court Seat 64 on its endorsement card for the Nov 3 election.",
+    "url": "https://www.c-c-d-c.com/wp-content/uploads/2026/09/Nov-2026-card-1.jpg",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
     "endorser_id": "culver-city-dem-club",
     "target_id": "la-county-judge-65",
-    "status": "not_found",
-    "choice": null,
-    "why": "Its endorsements page lists Justin Allen Clayton as its pick in the June 2 primary, marked as advanced to the November runoff, but nothing is listed yet under its November 3, 2026 heading, so we found no November pick (checked Oct 31, 2026).",
-    "url": "https://c-c-d-c.com/endorsements/",
-    "date": "2026-10-31",
+    "status": "endorsed",
+    "choice": "Justin Allen Clayton",
+    "why": "Listed for Superior Court Seat 65 on its endorsement card for the Nov 3 election.",
+    "url": "https://www.c-c-d-c.com/wp-content/uploads/2026/09/Nov-2026-card-1.jpg",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
     "endorser_id": "culver-city-dem-club",
     "target_id": "la-county-judge-87",
-    "status": "not_found",
-    "choice": null,
-    "why": "Its endorsements page lists David DeJute as its pick in the June 2 primary, marked as advanced to the November runoff, but nothing is listed yet under its November 3, 2026 heading, so we found no November pick (checked Oct 31, 2026).",
-    "url": "https://c-c-d-c.com/endorsements/",
-    "date": "2026-10-31",
+    "status": "endorsed",
+    "choice": "David DeJute",
+    "why": "Listed for Superior Court Seat 87 on its endorsement card for the Nov 3 election.",
+    "url": "https://www.c-c-d-c.com/wp-content/uploads/2026/09/Nov-2026-card-1.jpg",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
     "endorser_id": "culver-city-dem-club",
     "target_id": "la-county-judge-131",
-    "status": "not_found",
-    "choice": null,
-    "why": "Its endorsements page lists David Ross as its pick in the June 2 primary, marked as advanced to the November runoff, but nothing is listed yet under its November 3, 2026 heading, so we found no November pick (checked Oct 31, 2026).",
-    "url": "https://c-c-d-c.com/endorsements/",
-    "date": "2026-10-31",
+    "status": "endorsed",
+    "choice": "David Ross",
+    "why": "Listed for Superior Court Seat 131 on its endorsement card for the Nov 3 election.",
+    "url": "https://www.c-c-d-c.com/wp-content/uploads/2026/09/Nov-2026-card-1.jpg",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -262,21 +262,21 @@
   {
     "endorser_id": "culver-city-dem-club",
     "target_id": "ca-prop-1",
-    "status": "not_found",
-    "choice": null,
-    "why": "Its Oct 4 newsletter names its positions on Props 3, 40 and 43 only. No position on this one was found on its site (checked Oct 31, 2026).",
-    "url": "https://c-c-d-c.com/connect-and-get-involved-this-election-season/",
-    "date": "2026-10-31",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "In the Yes list on its endorsement card for the Nov 3 election.",
+    "url": "https://www.c-c-d-c.com/wp-content/uploads/2026/09/Nov-2026-card-1.jpg",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
     "endorser_id": "culver-city-dem-club",
     "target_id": "ca-prop-2",
-    "status": "not_found",
-    "choice": null,
-    "why": "Its Oct 4 newsletter names its positions on Props 3, 40 and 43 only. No position on this one was found on its site (checked Oct 31, 2026).",
-    "url": "https://c-c-d-c.com/connect-and-get-involved-this-election-season/",
-    "date": "2026-10-31",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "In the Yes list on its endorsement card for the Nov 3 election.",
+    "url": "https://www.c-c-d-c.com/wp-content/uploads/2026/09/Nov-2026-card-1.jpg",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -284,9 +284,9 @@
     "target_id": "ca-prop-4",
     "status": "not_found",
     "choice": null,
-    "why": "Its Oct 4 newsletter names its positions on Props 3, 40 and 43 only. No position on this one was found on its site (checked Oct 31, 2026).",
+    "why": "Its Oct 4 newsletter names its positions on Props 3, 40 and 43 only. No position on this one was found on its site (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://c-c-d-c.com/connect-and-get-involved-this-election-season/",
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -294,19 +294,19 @@
     "target_id": "ca-prop-5",
     "status": "not_found",
     "choice": null,
-    "why": "Its Oct 4 newsletter names its positions on Props 3, 40 and 43 only. No position on this one was found on its site (checked Oct 31, 2026).",
+    "why": "Its Oct 4 newsletter names its positions on Props 3, 40 and 43 only. No position on this one was found on its site (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://c-c-d-c.com/connect-and-get-involved-this-election-season/",
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
     "endorser_id": "culver-city-dem-club",
     "target_id": "ca-prop-37",
-    "status": "not_found",
-    "choice": null,
-    "why": "Its Oct 4 newsletter names its positions on Props 3, 40 and 43 only. No position on this one was found on its site (checked Oct 31, 2026).",
-    "url": "https://c-c-d-c.com/connect-and-get-involved-this-election-season/",
-    "date": "2026-10-31",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "In the No list on its endorsement card for the Nov 3 election.",
+    "url": "https://www.c-c-d-c.com/wp-content/uploads/2026/09/Nov-2026-card-1.jpg",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -314,9 +314,9 @@
     "target_id": "ca-prop-38",
     "status": "not_found",
     "choice": null,
-    "why": "Its Oct 4 newsletter names its positions on Props 3, 40 and 43 only. No position on this one was found on its site (checked Oct 31, 2026).",
+    "why": "Its Oct 4 newsletter names its positions on Props 3, 40 and 43 only. No position on this one was found on its site (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://c-c-d-c.com/connect-and-get-involved-this-election-season/",
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -324,9 +324,9 @@
     "target_id": "ca-prop-39",
     "status": "not_found",
     "choice": null,
-    "why": "Its Oct 4 newsletter names its positions on Props 3, 40 and 43 only. No position on this one was found on its site (checked Oct 31, 2026).",
+    "why": "Its Oct 4 newsletter names its positions on Props 3, 40 and 43 only. No position on this one was found on its site (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://c-c-d-c.com/connect-and-get-involved-this-election-season/",
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -334,9 +334,9 @@
     "target_id": "ca-prop-44",
     "status": "not_found",
     "choice": null,
-    "why": "Its Oct 4 newsletter names its positions on Props 3, 40 and 43 only. No position on this one was found on its site (checked Oct 31, 2026).",
+    "why": "Its Oct 4 newsletter names its positions on Props 3, 40 and 43 only. No position on this one was found on its site (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://c-c-d-c.com/connect-and-get-involved-this-election-season/",
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -344,9 +344,9 @@
     "target_id": "ca-prop-45",
     "status": "not_found",
     "choice": null,
-    "why": "Its Oct 4 newsletter names its positions on Props 3, 40 and 43 only. No position on this one was found on its site (checked Oct 31, 2026).",
+    "why": "Its Oct 4 newsletter names its positions on Props 3, 40 and 43 only. No position on this one was found on its site (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://c-c-d-c.com/connect-and-get-involved-this-election-season/",
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -354,9 +354,9 @@
     "target_id": "ca-prop-41",
     "status": "not_found",
     "choice": null,
-    "why": "Its Oct 4 newsletter says Props 41 and 42 'would negate 40' but names no position on them (checked Oct 31, 2026).",
+    "why": "Its Oct 4 newsletter says Props 41 and 42 'would negate 40' but names no position on them (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://c-c-d-c.com/connect-and-get-involved-this-election-season/",
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -364,9 +364,9 @@
     "target_id": "ca-prop-42",
     "status": "not_found",
     "choice": null,
-    "why": "Its Oct 4 newsletter says Props 41 and 42 'would negate 40' but names no position on them (checked Oct 31, 2026).",
+    "why": "Its Oct 4 newsletter says Props 41 and 42 'would negate 40' but names no position on them (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://c-c-d-c.com/connect-and-get-involved-this-election-season/",
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -524,9 +524,9 @@
     "target_id": "culver-city-measure-aa",
     "status": "not_found",
     "choice": null,
-    "why": "Its 2026 election recommendations name no position on Measure AA (checked Oct 31, 2026).",
+    "why": "Its 2026 election recommendations name no position on Measure AA (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://protectculvercity.org",
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -534,9 +534,9 @@
     "target_id": "culver-city-measure-t",
     "status": "not_found",
     "choice": null,
-    "why": "Its 2026 election recommendations name no position on Measure T (checked Oct 31, 2026).",
+    "why": "Its 2026 election recommendations name no position on Measure T (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://protectculvercity.org",
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -724,9 +724,9 @@
     "target_id": "culver-city-council",
     "status": "not_found",
     "choice": null,
-    "why": "Its endorsement lookup has picks for some LA County city councils, but none for Culver City's (checked Oct 31, 2026).",
+    "why": "Its endorsement lookup has picks for some LA County city councils, but none for Culver City's (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://lagop-endorsement-lookup.vercel.app/",
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -734,9 +734,9 @@
     "target_id": "culver-city-ccusd-board",
     "status": "not_found",
     "choice": null,
-    "why": "Its endorsement lookup has picks for some LA County school boards, but none for Culver City Unified (checked Oct 31, 2026).",
+    "why": "Its endorsement lookup has picks for some LA County school boards, but none for Culver City Unified (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://lagop-endorsement-lookup.vercel.app/",
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -874,9 +874,9 @@
     "target_id": "culver-city-measure-t",
     "status": "not_found",
     "choice": null,
-    "why": "Its voter guide's local measures page lists only Measure AA for Culver City, not Measure T (read Oct 31, 2026).",
+    "why": "Its voter guide's local measures page lists only Measure AA for Culver City, not Measure T (read Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://thelafed.org/resource/lalaborvoterguide/",
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -884,9 +884,9 @@
     "target_id": "culver-city-measure-yv",
     "status": "not_found",
     "choice": null,
-    "why": "Its voter guide's local measures page lists only Measure AA for Culver City, not Measure YV (read Oct 31, 2026).",
+    "why": "Its voter guide's local measures page lists only Measure AA for Culver City, not Measure YV (read Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://thelafed.org/resource/lalaborvoterguide/",
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -1024,9 +1024,9 @@
     "target_id": "culver-city-measure-aa",
     "status": "not_found",
     "choice": null,
-    "why": "Its voting slate takes positions on some local measures, but not on Culver City's Measure AA (as of Sept 23, 2026; read Oct 31, 2026).",
+    "why": "Its voting slate takes positions on some local measures, but not on Culver City's Measure AA (as of Sept 23, 2026; read Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://members.aagla.org/news/apartment-association-of-greater-los-angeles--voting-slate-candidate-endorsements-election-tuesday",
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1034,9 +1034,9 @@
     "target_id": "culver-city-measure-t",
     "status": "not_found",
     "choice": null,
-    "why": "Its voting slate takes positions on some local measures, but not on Culver City's Measure T (as of Sept 23, 2026; read Oct 31, 2026).",
+    "why": "Its voting slate takes positions on some local measures, but not on Culver City's Measure T (as of Sept 23, 2026; read Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://members.aagla.org/news/apartment-association-of-greater-los-angeles--voting-slate-candidate-endorsements-election-tuesday",
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1044,9 +1044,9 @@
     "target_id": "culver-city-measure-yv",
     "status": "not_found",
     "choice": null,
-    "why": "Its voting slate takes positions on some local measures, but not on Culver City's Measure YV (as of Sept 23, 2026; read Oct 31, 2026).",
+    "why": "Its voting slate takes positions on some local measures, but not on Culver City's Measure YV (as of Sept 23, 2026; read Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://members.aagla.org/news/apartment-association-of-greater-los-angeles--voting-slate-candidate-endorsements-election-tuesday",
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1074,9 +1074,9 @@
     "target_id": "culver-city-measure-t",
     "status": "not_found",
     "choice": null,
-    "why": "No position found. The union has no site of its own, its July letter covers only the school board, and none of its officers signed an argument for or against Measure T (checked Oct 31, 2026).",
+    "why": "No position found. The union has no site of its own, its July letter covers only the school board, and none of its officers signed an argument for or against Measure T (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.culvercity.gov/City-Hall/Election-Information-Updated/Upcoming-Election-Information",
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -1084,9 +1084,9 @@
     "target_id": "culver-city-measure-yv",
     "status": "not_found",
     "choice": null,
-    "why": "No position found. The union has no site of its own, its July letter covers only the school board, and none of its officers signed an argument for or against Measure YV (checked Oct 31, 2026).",
+    "why": "No position found. The union has no site of its own, its July letter covers only the school board, and none of its officers signed an argument for or against Measure YV (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.culvercity.gov/City-Hall/Election-Information-Updated/Upcoming-Election-Information",
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -1174,9 +1174,9 @@
     "target_id": "ca-us-house-36",
     "status": "not_found",
     "choice": null,
-    "why": "Its Oct 30 ballot column covers the House race in District 37 only, with no pick in District 36.",
+    "why": "Its Oct 30 ballot column covers the House race in District 37 only, with no pick in District 36. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://culvercitycrossroads.com/2026/10/30/mark-your-ballot-and-vote-early/",
-    "date": "2026-10-30",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1364,9 +1364,9 @@
     "target_id": "ca-boe-3",
     "status": "not_found",
     "choice": null,
-    "why": "Its Oct 30 ballot column has no pick for the Board of Equalization.",
+    "why": "Its Oct 30 ballot column has no pick for the Board of Equalization. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://culvercitycrossroads.com/2026/10/30/mark-your-ballot-and-vote-early/",
-    "date": "2026-10-30",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1544,9 +1544,9 @@
     "target_id": "culver-city-council",
     "status": "not_found",
     "choice": null,
-    "why": "Not on the Southern California News Group board's endorsement list as printed in the Daily News (updated Oct 20, 2026; read Oct 31, 2026). The board says the list 'will be constantly updated.'",
+    "why": "Not on the Southern California News Group board's endorsement list as printed in the Daily News (updated Oct 20, 2026; read Oct 31, 2026). The board says the list 'will be constantly updated.' Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1554,9 +1554,9 @@
     "target_id": "culver-city-measure-aa",
     "status": "not_found",
     "choice": null,
-    "why": "Not on the Southern California News Group board's endorsement list as printed in the Daily News (updated Oct 20, 2026; read Oct 31, 2026). The board says the list 'will be constantly updated.'",
+    "why": "Not on the Southern California News Group board's endorsement list as printed in the Daily News (updated Oct 20, 2026; read Oct 31, 2026). The board says the list 'will be constantly updated.' Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1564,9 +1564,9 @@
     "target_id": "culver-city-measure-t",
     "status": "not_found",
     "choice": null,
-    "why": "Not on the Southern California News Group board's endorsement list as printed in the Daily News (updated Oct 20, 2026; read Oct 31, 2026). The board says the list 'will be constantly updated.'",
+    "why": "Not on the Southern California News Group board's endorsement list as printed in the Daily News (updated Oct 20, 2026; read Oct 31, 2026). The board says the list 'will be constantly updated.' Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1574,9 +1574,9 @@
     "target_id": "culver-city-measure-yv",
     "status": "not_found",
     "choice": null,
-    "why": "Not on the Southern California News Group board's endorsement list as printed in the Daily News (updated Oct 20, 2026; read Oct 31, 2026). The board says the list 'will be constantly updated.'",
+    "why": "Not on the Southern California News Group board's endorsement list as printed in the Daily News (updated Oct 20, 2026; read Oct 31, 2026). The board says the list 'will be constantly updated.' Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {

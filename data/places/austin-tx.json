@@ -199,8 +199,9 @@
   ],
   "heads_up": [
     {
-      "text": "Austin reaches into Williamson and Hays counties. If you live in the Williamson County part (ZIPs such as 78717, 78727, 78728, 78729, 78750 and 78759) or the Hays County part (such as 78737, 78739 and 78747), the county races on this page are Travis County's, not yours. Your own county's sample ballot shows your races: Williamson at wilcotx.gov/VoterLookup, Hays at hayscountytx.gov/873.",
-      "applies_to": "ballot"
+      "text": "Austin reaches into Williamson and Hays counties. If you live in the Williamson County part (ZIPs such as 78717, 78727, 78728, 78729, 78750 and 78759) or the Hays County part (such as 78737, 78739 and 78747), the Travis County races on this page (county offices, Travis judges and justices of the peace, the appraisal board) are not on your ballot. Your own county's sample ballot shows your races: Williamson at apps.wilcotx.gov/elections/voterlookup, Hays at mapps.hayscountytx.gov/election/index.cfm.",
+      "applies_to": "ballot",
+      "source": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_county20_natl.txt"
     }
   ],
   "district_finders": [

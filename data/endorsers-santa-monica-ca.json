@@ -45,7 +45,7 @@
   "guide_url": "https://santamonicanext.org/?p=31015",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": false
+  "endorses_measures": true
  },
  {
   "id": "smclc",
@@ -61,7 +61,7 @@
   "guide_url": "https://smclc.org",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": false
+  "endorses_measures": true
  },
  {
   "id": "sm-police-officers",
@@ -77,7 +77,7 @@
   "guide_url": "https://www.smdp.com/public-safety-unions-expand-endorsements-alongside-new-survey-saying-the-city-is-on-the-wrong-track/",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": false
+  "endorses_measures": true
  },
  {
   "id": "sm-firefighters-1109",
@@ -93,7 +93,7 @@
   "guide_url": "https://www.smdp.com/public-safety-unions-expand-endorsements-alongside-new-survey-saying-the-city-is-on-the-wrong-track/",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": false
+  "endorses_measures": true
  },
  {
   "id": "aagla",
@@ -124,7 +124,7 @@
   ],
   "guide_url": "https://www.smdp.com/pico-neighborhood-association-urges-no-on-local-measures-gg-and-es/",
   "default_on": false,
-  "endorses_candidates": false,
+  "endorses_candidates": true,
   "endorses_measures": true
  },
  {
@@ -170,7 +170,7 @@
   "geography": [
    "santa-monica-ca"
   ],
-  "guide_url": "https://www.smdp.com",
+  "guide_url": "https://www.smdp.com/election/",
   "default_on": true,
   "endorses_candidates": false,
   "endorses_measures": false
@@ -370,7 +370,7 @@
   "geography": [
    "santa-monica-ca"
   ],
-  "guide_url": "https://www.reformcalifornia.org/voter-guides/san-diego",
+  "guide_url": "https://www.reformcalifornia.org/voter-guides-list",
   "default_on": false,
   "endorses_candidates": true,
   "endorses_measures": true,

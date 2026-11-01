@@ -775,7 +775,7 @@
   "status": "not_found",
   "choice": null,
   "why": "No Daily Press editorial board endorsement for the Nov 2026 general found; only news reports and opinion columns (e.g. a column urging No on ES).",
-  "url": "https://www.smdp.com",
+  "url": "https://www.smdp.com/election/",
   "date": "2026-10-31",
   "confidence": "sourced"
  },
@@ -785,7 +785,7 @@
   "status": "not_found",
   "choice": null,
   "why": "No Daily Press editorial board endorsement for the Nov 2026 general found; only news reports and opinion columns (e.g. a column urging No on ES).",
-  "url": "https://www.smdp.com",
+  "url": "https://www.smdp.com/election/",
   "date": "2026-10-31",
   "confidence": "sourced"
  },
@@ -795,7 +795,7 @@
   "status": "not_found",
   "choice": null,
   "why": "No Daily Press editorial board endorsement for the Nov 2026 general found; only news reports and opinion columns (e.g. a column urging No on ES).",
-  "url": "https://www.smdp.com",
+  "url": "https://www.smdp.com/election/",
   "date": "2026-10-31",
   "confidence": "sourced"
  },
@@ -805,7 +805,7 @@
   "status": "not_found",
   "choice": null,
   "why": "No Daily Press editorial board endorsement for the Nov 2026 general found; only news reports and opinion columns (e.g. a column urging No on ES).",
-  "url": "https://www.smdp.com",
+  "url": "https://www.smdp.com/election/",
   "date": "2026-10-31",
   "confidence": "sourced"
  },
@@ -815,7 +815,7 @@
   "status": "not_found",
   "choice": null,
   "why": "No Daily Press editorial board endorsement for the Nov 2026 general found; only news reports and opinion columns (e.g. a column urging No on ES).",
-  "url": "https://www.smdp.com",
+  "url": "https://www.smdp.com/election/",
   "date": "2026-10-31",
   "confidence": "sourced"
  },
@@ -825,7 +825,7 @@
   "status": "not_found",
   "choice": null,
   "why": "No Daily Press editorial board endorsement for the Nov 2026 general found; only news reports and opinion columns (e.g. a column urging No on ES).",
-  "url": "https://www.smdp.com",
+  "url": "https://www.smdp.com/election/",
   "date": "2026-10-31",
   "confidence": "sourced"
  },
@@ -835,7 +835,7 @@
   "status": "not_found",
   "choice": null,
   "why": "No Daily Press editorial board endorsement for the Nov 2026 general found; only news reports and opinion columns (e.g. a column urging No on ES).",
-  "url": "https://www.smdp.com",
+  "url": "https://www.smdp.com/election/",
   "date": "2026-10-31",
   "confidence": "sourced"
  },
@@ -1846,6 +1846,16 @@
   "status": "not_found",
   "choice": null,
   "why": "Its Nov 3, 2026 California voter guide takes up no Santa Monica measure.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "ca-us-house-36",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its Nov 3, 2026 California voter guide names its U.S. House picks (the 7th to the 34th districts) and no one in the 36th.",
   "url": "https://www.caworkingfamilies.org/2026-voter-guide",
   "date": "2026-10-31",
   "confidence": "verified"

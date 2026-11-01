@@ -1,0 +1,291 @@
+[
+ {
+  "id": "culver-city-council",
+  "state": "CA",
+  "level": "city",
+  "office": "Culver City City Council",
+  "district": null,
+  "scope_plain": "All of Culver City votes in this race: the council is elected citywide, not by district. You can vote for up to two candidates. Neighbors who live outside city limits, in Ladera Heights or the City of Los Angeles, don't see it, even with a Culver City mailing address.",
+  "office_explainer": "One of five members who pass city laws, set the budget and choose a mayor each year.",
+  "why_it_matters": "Two of the five seats are up. Mayor Freddy Puza is running for a second term. Council Member Dan O'Brien is not running again, so at least one new member will join the council in December.",
+  "vote_for": 2,
+  "incumbent": "Freddy Puza (running) and Dan O'Brien (not running)",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Jeannine Wisnosky Stehlin",
+    "party": null,
+    "incumbent": false,
+    "website": "https://jeannine4culvercity.com",
+    "website_confidence": "verified",
+    "background": "Ballot designation: Small Business Owner. Small business owner and nonprofit executive director working in performing arts, access to justice, education and student health care. Served on the city's Cultural Affairs Commission from 2016 to 2024 and on Culver City Unified's bond oversight committee. Raised three daughters who went to Culver City schools (her official statement).",
+    "own_words": [
+     {
+      "text": "enhance Culver City's quality of life by improving parks and neighborhoods, making our city more affordable, addressing homelessness",
+      "is_quote": true,
+      "source": "https://www.culvercity.gov/City-Hall/Election-Information-Updated/Upcoming-Election-Information"
+     },
+     {
+      "text": "Wants safer streets, sidewalks and routes to school, less traffic, support for schools, local businesses and the creative economy, and careful spending by leaders who listen.",
+      "is_quote": false,
+      "source": "https://www.culvercity.gov/City-Hall/Election-Information-Updated/Upcoming-Election-Information"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Franklin Carvajal",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Psychologist. Psychologist and business owner who has lived in Culver City as a renter and a homeowner. Came to the United States alone at 16 and earned two PhDs, from UMass Amherst and Virginia Tech (his official statement).",
+    "own_words": [
+     {
+      "text": "a Culver City that is safe, clean, quiet, beautiful, and accountable",
+      "is_quote": true,
+      "source": "https://www.culvercity.gov/City-Hall/Election-Information-Updated/Upcoming-Election-Information"
+     },
+     {
+      "text": "Lists quick public safety response, clean streets and parks, peaceful neighborhoods, careful development with green space, responsible use of tax money, open government and a council that listens.",
+      "is_quote": false,
+      "source": "https://www.culvercity.gov/City-Hall/Election-Information-Updated/Upcoming-Election-Information"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Freddy Puza",
+    "party": null,
+    "incumbent": true,
+    "website": "https://www.freddypuza.com",
+    "website_confidence": "verified",
+    "background": "Ballot designation: Mayor/Education Director. Culver City's mayor, running for a second term on the council. Says he is the city's first openly LGBTQ+ mayor (his official statement).",
+    "own_words": [
+     {
+      "text": "make Culver City more affordable, accountable, and functional for the people who live and work here",
+      "is_quote": true,
+      "source": "https://www.culvercity.gov/City-Hall/Election-Information-Updated/Upcoming-Election-Information"
+     },
+     {
+      "text": "Points to the city's Affordable Housing Trust Fund, its Mobile Crisis Team for mental health calls, small business grants and fee relief, and the council's first balanced budget in three years.",
+      "is_quote": false,
+      "source": "https://www.culvercity.gov/City-Hall/Election-Information-Updated/Upcoming-Election-Information"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Thomas Aujero Small",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.smallforculvercity.com",
+    "website_confidence": "verified",
+    "background": "Ballot designation: Urban Development Strategist. Former Culver City council member and mayor. Says that as mayor he led the city's General Plan update and pushed for the Ballona Creek Bikeway extension (his official statement).",
+    "own_words": [
+     {
+      "text": "a government that plans instead of reacting to crises",
+      "is_quote": true,
+      "source": "https://www.culvercity.gov/City-Hall/Election-Information-Updated/Upcoming-Election-Information"
+     },
+     {
+      "text": "Says housing, transportation, jobs and infrastructure should be planned together, and promises safer streets, more housing choices and stronger neighborhoods.",
+      "is_quote": false,
+      "source": "https://www.culvercity.gov/City-Hall/Election-Information-Updated/Upcoming-Election-Information"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Kimberley “Kim” Griffin",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.griffin4culvercity.com",
+    "website_confidence": "verified",
+    "background": "Ballot designation: Community Volunteer. Longtime resident who says she has more than 20 years of experience as a public safety professional working on homelessness, human trafficking and quality of life (her official statement).",
+    "own_words": [
+     {
+      "text": "Connect the unhoused with critical services",
+      "is_quote": true,
+      "source": "https://www.culvercity.gov/City-Hall/Election-Information-Updated/Upcoming-Election-Information"
+     },
+     {
+      "text": "Lists affordable housing for seniors and young professionals, getting around \"without creating gridlock,\" help for small businesses, investing in city infrastructure, stopping wasteful spending and a more open City Hall.",
+      "is_quote": false,
+      "source": "https://www.culvercity.gov/City-Hall/Election-Information-Updated/Upcoming-Election-Information"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "City of Culver City: official list of qualified candidates, in ballot order (Aug 14, 2026)",
+    "url": "https://www.culvercity.gov/files/assets/public/v/1/documents/city-clerk/election-info/2026-nov-3-election/2026-08-14__official-list-of-qualified-candidates__final.pdf"
+   },
+   {
+    "name": "City of Culver City: November 3, 2026 election information and candidate statements",
+    "url": "https://www.culvercity.gov/City-Hall/Election-Information-Updated/Upcoming-Election-Information"
+   },
+   {
+    "name": "City of Culver City: two council seats, four-year terms, elected at large",
+    "url": "https://www.culvercity.gov/News/City-Council-Nomination-Period-2026"
+   },
+   {
+    "name": "California Secretary of State: randomized alphabet for Nov 3, 2026 (ballot order)",
+    "url": "https://www.sos.ca.gov/administration/news-releases-and-advisories/2026-news-releases-and-advisories/california-secretary-state-shirley-n-weber-phd-announces-results-randomized-alphabet-drawing-november-3-2026-general-election"
+   },
+   {
+    "name": "Culver City Crossroads: Dan O'Brien not seeking re-election; Puza seeks a second term",
+    "url": "https://culvercitycrossroads.com/2026/07/28/culver-city-dem-club-to-put-city-council-candidate-forum-online/"
+   },
+   {
+    "name": "VoteStack: Culver City council race in ballot order (from the county's sample ballot data)",
+    "url": "https://votestack.org/races/ca/culver-city/2026-11-03/city-of-culver-city-member-of-the-city-council"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "culver-city-ccusd-board",
+  "state": "CA",
+  "level": "school",
+  "office": "Culver City Unified School District Governing Board",
+  "district": null,
+  "scope_plain": "All of Culver City votes in this race: Culver City Unified's lines follow the city's, and its five board members are elected at large. You can vote for up to three candidates.",
+  "office_explainer": "One of five members who hire the superintendent, set the budget and make policy for Culver City schools.",
+  "why_it_matters": "Three of the five seats are up, and all three members who hold them are running again. One challenger, Darrel Menthe, is also running. Measure AA, a new parcel tax for Culver City Unified, is on the same ballot.",
+  "vote_for": 3,
+  "incumbent": "Stephanie Loredo, Brian Guerrero and Triston Ezidore (all running)",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Stephanie Loredo",
+    "party": null,
+    "incumbent": true,
+    "website": "https://www.stephanieloredo.com",
+    "website_confidence": "verified",
+    "background": "Ballot designation: Governing Board Member, Culver City Unified School District. Elected to the board in 2022; board president since December 2025. Former vice president of national broadcast at Zenith Media, an advertising firm, and a University of Pennsylvania graduate (district biography).",
+    "own_words": [
+     {
+      "text": "sustaining fiscally sound operations, including enhancing the public’s trust for successful passage of a parcel tax",
+      "is_quote": true,
+      "source": "https://www.stephanieloredo.com"
+     },
+     {
+      "text": "Points to the $358 million school bond voters passed in March 2024, the parcel tax renewal in November 2024 and a $2.5 million grant from the city, and says success depends on \"fully funding public education.\"",
+      "is_quote": false,
+      "source": "https://www.stephanieloredo.com"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Brian Guerrero",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Governing Board Member, Culver City Unified School District. Board vice president. Taught for 27 years, 21 of them in the Lennox School District, and now works as an organizer, trainer and policy analyst for the California Teachers Association. His son attends Culver City High School (district biography).",
+    "own_words": [
+     {
+      "text": "His board biography says his goal is strong academic, social-emotional, arts and athletic programs for every student on safe, well-kept campuses, and making sure diverse voices have a role in district decisions.",
+      "is_quote": false,
+      "source": "https://www.ccusd.org/apps/pages/index.jsp?uREC_ID=42334&type=d&pREC_ID=51431"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Triston Ezidore",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Governing Board Member, Culver City Unified School District. Elected in 2022 at 19, about a year and a half after graduating from Culver City High School; has served as board vice president and president. Works in government partnerships for Highland Electric Fleets and was a youth employment manager for the Housing Authority of the City of LA (district biography).",
+    "own_words": [
+     {
+      "text": "improve student outcomes in math and literacy, expand college and career readiness opportunities, support student mental health and well-being",
+      "is_quote": true,
+      "source": "https://culvercitycrossroads.com/2026/06/12/ezidore-will-run-for-re-election-to-ccusd-school-board/"
+     },
+     {
+      "text": "Points to record-high graduation rates, more mental health help for students, stronger literacy programs and the Measure E bond to modernize campuses.",
+      "is_quote": false,
+      "source": "https://culvercitycrossroads.com/2026/06/12/ezidore-will-run-for-re-election-to-ccusd-school-board/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Darrel Menthe",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.mentheforculvercity.com",
+    "website_confidence": "verified",
+    "background": "Ballot designation: Parent/Attorney. Executive director of the Culver City Downtown Business Association and chair of the city's Planning Commission; served on the city's Finance Advisory Committee from 2018 to 2023. Trained as a lawyer (UC San Diego, Stanford Law School, UCLA). Parent of two Culver City High School students (his campaign announcement).",
+    "own_words": [
+     {
+      "text": "restore confidence in our schools and ensure every student has the resources they need to strive for excellence",
+      "is_quote": true,
+      "source": "https://www.mentheforculvercity.com"
+     },
+     {
+      "text": "Wants to fix the district's finances, keep honors classes, make sure students and parents can meet with a counselor, cover AP class costs, shrink class sizes, and set term limits and contribution limits for board members.",
+      "is_quote": false,
+      "source": "https://www.mentheforculvercity.com"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "VoteStack: Culver City Unified board race in ballot order, with ballot designations (from the county's sample ballot data)",
+    "url": "https://votestack.org/races/ca/los-angeles-county/2026-11-03/culver-city-unified-school-district-governing-board-member"
+   },
+   {
+    "name": "California Secretary of State: randomized alphabet for Nov 3, 2026 (ballot order)",
+    "url": "https://www.sos.ca.gov/administration/news-releases-and-advisories/2026-news-releases-and-advisories/california-secretary-state-shirley-n-weber-phd-announces-results-randomized-alphabet-drawing-november-3-2026-general-election"
+   },
+   {
+    "name": "Culver City Crossroads: council set the Nov 3 election; three school board seats open",
+    "url": "https://culvercitycrossroads.com/?p=77204"
+   },
+   {
+    "name": "Culver City Crossroads: Menthe running; five at-large members, three seats up",
+    "url": "https://culvercitycrossroads.com/2026/06/15/menthe-running-for-ccusd-school-board/"
+   },
+   {
+    "name": "Culver City Unified: board member biographies",
+    "url": "https://www.ccusd.org/apps/pages/index.jsp?uREC_ID=42334&type=d&pREC_ID=2644908"
+   },
+   {
+    "name": "Culver City Unified: Triston Ezidore biography",
+    "url": "https://www.ccusd.org/apps/pages/index.jsp?uREC_ID=42334&type=d&pREC_ID=1632907"
+   },
+   {
+    "name": "Culver City Unified: Brian Guerrero biography",
+    "url": "https://www.ccusd.org/apps/pages/index.jsp?uREC_ID=42334&type=d&pREC_ID=51431"
+   },
+   {
+    "name": "Culver City Crossroads: Loredo seeks a second term; Guerrero is board vice president",
+    "url": "https://culvercitycrossroads.com/2026/07/08/loredo-gathers-a-long-list-of-endorsements-for-school-board-race/"
+   }
+  ],
+  "confidence": "sourced"
+ }
+]

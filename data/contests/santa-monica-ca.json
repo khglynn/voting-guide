@@ -345,8 +345,8 @@
   "office": "Santa Monica Rent Control Board",
   "district": null,
   "scope_plain": "All of Santa Monica votes in this race: the board is elected citywide. You can vote for up to three candidates, whether you rent, own or neither.",
-  "office_explainer": "One of seven elected commissioners who run Santa Monica's rent control law, which voters passed in 1979. The board sets the yearly limit on rent increases for most apartments built before April 1979, keeps the records on those units, and decides disputes between landlords and tenants.",
-  "why_it_matters": "Three of the seven seats are up and five candidates are running. Kurt Gonska, the board's vice chair, is running again. The board's chair, Daniel Ivanov, and member Ericka Lesley are running for City Council instead. Measures GG, RR and VV on this same ballot would change the city's rent control and eviction rules.",
+  "office_explainer": "One of five elected commissioners who run Santa Monica's rent control law, which voters passed in 1979. The board sets the yearly limit on rent increases for most apartments built before April 1979, keeps the records on those units, and decides disputes between landlords and tenants.",
+  "why_it_matters": "Three of the five seats are up and five candidates are running. Kurt Gonska, the board's vice chair, is running again. The board's chair, Daniel Ivanov, and member Ericka Lesley are running for City Council instead. Measures GG, RR and VV on this same ballot would change the city's rent control and eviction rules.",
   "vote_for": 3,
   "incumbent": "Kurt Gonska (running)",
   "open_seat": false,
@@ -376,6 +376,10 @@
    {
     "name": "Santa Monica Next: the five Rent Control Board candidates on their top issues",
     "url": "https://santamonicanext.org/2026/06/heres-what-the-five-candidates-for-rent-control-board-said-when-asked-what-issues-define-their-campaign/"
+   },
+   {
+    "name": "City of Santa Monica: Measure GG, with the Charter's Rent Control Board section (its \"first five (5) Commissioners\")",
+    "url": "https://www.santamonica.gov/elections/2026-11-02/measures/measure-rent-control-administrative"
    }
   ],
   "confidence": "verified",

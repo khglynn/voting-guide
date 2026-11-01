@@ -489,6 +489,34 @@
     "short_title": "Fire district sales tax"
   },
   {
+    "id": "west-metro-fire-7c",
+    "state": "CO",
+    "level": "special_district",
+    "jurisdiction": "West Metro Fire Protection District (all of Lakewood, plus Wheat Ridge, Edgewater, Morrison and nearby areas of Jefferson and Douglas counties)",
+    "number": "Ballot Issue 7C",
+    "official_title": "Shall West Metro Fire Protection District taxes be increased by up to $36,300,000 in fiscal year 2027 and by whatever amounts as are raised annually thereafter, from a three-quarters of a percent (0.75%) sales tax, which is seventy-five cents on every $100 purchase, excluding everyday necessities like groceries, gas and medicine, for the purposes of maintaining vital firefighting and emergency medical services, including but not limited to: continuing to provide rapid emergency medical and firefighting services to meet increased demand; maintaining adequate numbers of first responders; protecting the safety and health of firefighters and paramedics; updating life-saving medical and rescue equipment; and strengthening local wildfire response. With such sales tax to be in addition to all other taxes levied by the district and spending of all district revenues shall be reviewed monthly by a citizen board of directors and annually by an independent audit, and reported on the district website; and shall the resulting sales tax revenue and investment earnings be treated as a voter-approved revenue and spending change under Article X of Section 20 of the Colorado Constitution and any other law?",
+    "plain_summary": "A new 0.75% sales tax (75 cents on a $100 purchase; groceries, gas and medicine exempt) for West Metro Fire Rescue, raising up to $36.3 million in 2027 for firefighter and paramedic staffing, equipment and wildfire response. This is the fire district, not the City of Lakewood.",
+    "yes_means": "A 0.75% fire district sales tax starts in 2027.",
+    "no_means": "No new fire district sales tax.",
+    "current_law": null,
+    "fiscal_impact": "Up to $36.3 million in 2027, growing with sales.",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "It's run by the West Metro Fire Protection District, so it isn't a City of Lakewood tax. The city's own sales tax question, 2G, is a separate item on the same ballot.",
+    "supporters_case": {
+      "text": "The district's 7C page lists these arguments for: it needs the money to keep enough firefighters and first responders; calls are growing four times faster than the population; two-thirds of calls are medical emergencies; it faces a $40 million funding gap in 2027; shoppers from outside the district would pay too; and it has had no additional voter-approved mill levy money in 20 years.",
+      "source": "https://www.westmetrofire.org/west-metro-district-election-2026"
+    },
+    "opponents_case": {
+      "text": "The same page lists these arguments against: housing and living costs are already high; it's the wrong time to raise taxes; sales taxes can hit lower-income households harder; taxpayers already pay many state, local and district taxes; the district should live within its budget; and a permanent tax may not fix the causes of its funding problem.",
+      "source": "https://www.westmetrofire.org/west-metro-district-election-2026"
+    },
+    "official_text_url": "https://www.jeffco.us/4652/On-the-Ballot",
+    "official_guide_url": null,
+    "confidence": "verified",
+    "short_title": "Fire district sales tax"
+  },
+  {
     "id": "jeffco-schools-5a",
     "state": "CO",
     "level": "school",

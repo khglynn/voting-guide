@@ -1010,7 +1010,8 @@ function roundTrip(name, stCode, places, mutate) {
   const plan = mods.plan;
   const ps = views.planstrip;
   const TRAVIS_EARLY = 'https://www.google.com/maps/d/viewer?mid=1t_vWJgd_BRfKnJn_fQoHE25IV2i_0Jo';
-  const TRAVIS_DAY = 'https://www.google.com/maps/d/viewer?mid=1Y86BIAffVIw2L_WEkSls_0OWg7NpvX8';
+  // Nov 1: the county's Election Day tab dropped the old map and links this list, which marks one site removed.
+  const TRAVIS_DAY = 'https://votetravis.gov/wp-content/uploads/G26-Election-Day-Flyer-FINAL-Website-wNotice.pdf';
   const WILCO_EARLY = 'https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Early%20Voting%20Dashboard.html';
   const keep = { ballot: st.S.ballot, b: st.S.b, open: st.S.ui.open };
   const aus = read('place-austin-tx.json');

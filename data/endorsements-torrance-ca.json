@@ -41,16 +41,6 @@
  },
  {
   "endorser_id": "la-fed",
-  "target_id": "torrance-usd-area-d",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not in its picture guide as posted on Oct 31, 2026. The guide lists local races in A to Z order, and no posted page covers the names between Three Valleys and Water Replenishment, where Torrance would fall, so a pick there can't be ruled out.",
-  "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-31",
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "la-fed",
   "target_id": "el-camino-ccd-area-5",
   "status": "not_found",
   "choice": null,

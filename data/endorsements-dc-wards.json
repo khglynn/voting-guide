@@ -434,9 +434,9 @@
   "target_id": "dc-ward-3-council",
   "status": "not_found",
   "choice": null,
-  "why": "The party has no candidate in this race.",
+  "why": "The party has no candidate in this race. Checked again on Nov 2, 2026; still no pick on this page.",
   "url": "https://dcgop.com/meet-dc-candidates/",
-  "date": null,
+  "date": "2026-11-02",
   "confidence": "verified"
  },
  {
@@ -504,9 +504,9 @@
   "target_id": "dc-ward-3-council",
   "status": "not_found",
   "choice": null,
-  "why": "The party has no candidate in this race.",
+  "why": "The party has no candidate in this race. Checked again on Nov 2, 2026; still no pick on this page.",
   "url": "https://statehoodgreensofdc.org/",
-  "date": null,
+  "date": "2026-11-02",
   "confidence": "verified"
  },
  {
@@ -514,9 +514,9 @@
   "target_id": "dc-ward-6-council",
   "status": "not_found",
   "choice": null,
-  "why": "The party has no candidate in this race.",
+  "why": "The party has no candidate in this race. Checked again on Nov 2, 2026; still no pick on this page.",
   "url": "https://statehoodgreensofdc.org/",
-  "date": null,
+  "date": "2026-11-02",
   "confidence": "verified"
  },
  {

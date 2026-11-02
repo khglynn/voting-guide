@@ -674,9 +674,9 @@
     "target_id": "nyc-surrogate-manhattan",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -684,9 +684,9 @@
     "target_id": "nyc-surrogate-manhattan",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -694,9 +694,9 @@
     "target_id": "nyc-surrogate-manhattan",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -734,9 +734,9 @@
     "target_id": "ny-supreme-court-jd1",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -754,9 +754,9 @@
     "target_id": "ny-supreme-court-jd1",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -794,9 +794,9 @@
     "target_id": "nyc-civil-court-manhattan",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -804,9 +804,9 @@
     "target_id": "nyc-civil-court-manhattan",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -814,9 +814,9 @@
     "target_id": "nyc-civil-court-manhattan",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -912,12 +912,12 @@
   {
     "endorser_id": "ny-post-eb",
     "target_id": "ny-us-house-10",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election endorsement for this race or measure was found in the Post editorial index, opinion page and charter-proposal search checked October 19, 2026. Checked again on Nov 1, 2026; still no pick on this page.",
-    "url": "https://nypost.com/tag/editorial/",
-    "date": "2026-11-01",
-    "confidence": "sourced"
+    "status": "endorsed",
+    "choice": "Jennifer E. Moore",
+    "why": "In its roundup of House endorsements, the board says Moore offers an honorable alternative in the 10th district.",
+    "url": "https://nypost.com/2026/10/29/opinion/vote-for-prosperity-security-the-posts-endorsements-for-nys-house-races/",
+    "date": "2026-10-29",
+    "confidence": "verified"
   },
   {
     "endorser_id": "ny-democratic-party",
@@ -944,9 +944,9 @@
     "target_id": "ny-us-house-12",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -992,12 +992,12 @@
   {
     "endorser_id": "ny-post-eb",
     "target_id": "ny-us-house-12",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election endorsement for this race or measure was found in the Post editorial index, opinion page and charter-proposal search checked October 19, 2026. Checked again on Nov 1, 2026; still no pick on this page.",
-    "url": "https://nypost.com/tag/editorial/",
-    "date": "2026-11-01",
-    "confidence": "sourced"
+    "status": "endorsed",
+    "choice": "Caroline Shinkle",
+    "why": "In its roundup of House endorsements, the board says Shinkle, a lawyer with government and financial experience, brings a pro-business, pro-jobs, pro-safety outlook.",
+    "url": "https://nypost.com/2026/10/29/opinion/vote-for-prosperity-security-the-posts-endorsements-for-nys-house-races/",
+    "date": "2026-10-29",
+    "confidence": "verified"
   },
   {
     "endorser_id": "ny-democratic-party",
@@ -1034,9 +1034,9 @@
     "target_id": "ny-us-house-13",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1224,9 +1224,9 @@
     "target_id": "ny-sd-28",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1234,9 +1234,9 @@
     "target_id": "ny-sd-28",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1274,9 +1274,9 @@
     "target_id": "ny-sd-29",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1294,9 +1294,9 @@
     "target_id": "ny-sd-29",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1334,9 +1334,9 @@
     "target_id": "ny-sd-30",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1354,9 +1354,9 @@
     "target_id": "ny-sd-30",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1394,9 +1394,9 @@
     "target_id": "ny-sd-31",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1414,9 +1414,9 @@
     "target_id": "ny-sd-31",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1474,9 +1474,9 @@
     "target_id": "ny-sd-47",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1514,9 +1514,9 @@
     "target_id": "ny-sd-59",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1534,9 +1534,9 @@
     "target_id": "ny-sd-59",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1574,9 +1574,9 @@
     "target_id": "nyc-council-3",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1584,9 +1584,9 @@
     "target_id": "nyc-council-3",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1594,9 +1594,9 @@
     "target_id": "nyc-council-3",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1634,9 +1634,9 @@
     "target_id": "ny-ad-37",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1654,9 +1654,9 @@
     "target_id": "ny-ad-37",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1704,9 +1704,9 @@
     "target_id": "ny-ad-61",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1714,9 +1714,9 @@
     "target_id": "ny-ad-61",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1764,9 +1764,9 @@
     "target_id": "ny-ad-65",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1774,9 +1774,9 @@
     "target_id": "ny-ad-65",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1814,9 +1814,9 @@
     "target_id": "ny-ad-66",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1824,9 +1824,9 @@
     "target_id": "ny-ad-66",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1834,9 +1834,9 @@
     "target_id": "ny-ad-66",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1874,9 +1874,9 @@
     "target_id": "ny-ad-67",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1894,9 +1894,9 @@
     "target_id": "ny-ad-67",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1934,9 +1934,9 @@
     "target_id": "ny-ad-68",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1954,9 +1954,9 @@
     "target_id": "ny-ad-68",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1994,9 +1994,9 @@
     "target_id": "ny-ad-69",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2014,9 +2014,9 @@
     "target_id": "ny-ad-69",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2054,9 +2054,9 @@
     "target_id": "ny-ad-70",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2064,9 +2064,9 @@
     "target_id": "ny-ad-70",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2074,9 +2074,9 @@
     "target_id": "ny-ad-70",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2114,9 +2114,9 @@
     "target_id": "ny-ad-71",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2134,9 +2134,9 @@
     "target_id": "ny-ad-71",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2174,9 +2174,9 @@
     "target_id": "ny-ad-72",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2194,9 +2194,9 @@
     "target_id": "ny-ad-72",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2234,9 +2234,9 @@
     "target_id": "ny-ad-73",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2254,9 +2254,9 @@
     "target_id": "ny-ad-73",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2304,9 +2304,9 @@
     "target_id": "ny-ad-74",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2374,9 +2374,9 @@
     "target_id": "ny-ad-75",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2434,9 +2434,9 @@
     "target_id": "ny-ad-76",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2474,9 +2474,9 @@
     "target_id": "nyc-civil-court-manhattan-md1",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2484,9 +2484,9 @@
     "target_id": "nyc-civil-court-manhattan-md1",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2494,9 +2494,9 @@
     "target_id": "nyc-civil-court-manhattan-md1",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2534,9 +2534,9 @@
     "target_id": "nyc-civil-court-manhattan-md3",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2544,9 +2544,9 @@
     "target_id": "nyc-civil-court-manhattan-md3",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2554,9 +2554,9 @@
     "target_id": "nyc-civil-court-manhattan-md3",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2594,9 +2594,9 @@
     "target_id": "nyc-civil-court-manhattan-md4",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2604,9 +2604,9 @@
     "target_id": "nyc-civil-court-manhattan-md4",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2614,9 +2614,9 @@
     "target_id": "nyc-civil-court-manhattan-md4",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2654,9 +2654,9 @@
     "target_id": "nyc-civil-court-manhattan-md7",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2664,9 +2664,9 @@
     "target_id": "nyc-civil-court-manhattan-md7",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2674,9 +2674,9 @@
     "target_id": "nyc-civil-court-manhattan-md7",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2714,9 +2714,9 @@
     "target_id": "nyc-civil-court-manhattan-md9",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2724,9 +2724,9 @@
     "target_id": "nyc-civil-court-manhattan-md9",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2734,9 +2734,9 @@
     "target_id": "nyc-civil-court-manhattan-md9",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2774,9 +2774,9 @@
     "target_id": "nyc-surrogate-bronx",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2784,9 +2784,9 @@
     "target_id": "nyc-surrogate-bronx",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2794,9 +2794,9 @@
     "target_id": "nyc-surrogate-bronx",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2834,9 +2834,9 @@
     "target_id": "ny-supreme-court-jd12",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2844,9 +2844,9 @@
     "target_id": "ny-supreme-court-jd12",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2854,9 +2854,9 @@
     "target_id": "ny-supreme-court-jd12",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2984,9 +2984,9 @@
     "target_id": "ny-us-house-15",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3064,9 +3064,9 @@
     "target_id": "ny-us-house-16",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3074,9 +3074,9 @@
     "target_id": "ny-us-house-16",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3144,9 +3144,9 @@
     "target_id": "ny-sd-11",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3194,9 +3194,9 @@
     "target_id": "ny-sd-32",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3204,9 +3204,9 @@
     "target_id": "ny-sd-32",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3214,9 +3214,9 @@
     "target_id": "ny-sd-32",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3254,9 +3254,9 @@
     "target_id": "ny-sd-33",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3274,9 +3274,9 @@
     "target_id": "ny-sd-33",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3314,9 +3314,9 @@
     "target_id": "ny-sd-34",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3374,9 +3374,9 @@
     "target_id": "ny-sd-36",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3384,9 +3384,9 @@
     "target_id": "ny-sd-36",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3434,9 +3434,9 @@
     "target_id": "ny-ad-77",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3444,9 +3444,9 @@
     "target_id": "ny-ad-77",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3454,9 +3454,9 @@
     "target_id": "ny-ad-77",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3494,9 +3494,9 @@
     "target_id": "ny-ad-78",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3514,9 +3514,9 @@
     "target_id": "ny-ad-78",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3554,9 +3554,9 @@
     "target_id": "ny-ad-79",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3564,9 +3564,9 @@
     "target_id": "ny-ad-79",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3614,9 +3614,9 @@
     "target_id": "ny-ad-80",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3624,9 +3624,9 @@
     "target_id": "ny-ad-80",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3674,9 +3674,9 @@
     "target_id": "ny-ad-81",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3684,9 +3684,9 @@
     "target_id": "ny-ad-81",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3694,9 +3694,9 @@
     "target_id": "ny-ad-81",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3744,9 +3744,9 @@
     "target_id": "ny-ad-82",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3794,9 +3794,9 @@
     "target_id": "ny-ad-83",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3804,9 +3804,9 @@
     "target_id": "ny-ad-83",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3854,9 +3854,9 @@
     "target_id": "ny-ad-84",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3914,9 +3914,9 @@
     "target_id": "ny-ad-85",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3934,9 +3934,9 @@
     "target_id": "ny-ad-85",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3984,9 +3984,9 @@
     "target_id": "ny-ad-86",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -4034,9 +4034,9 @@
     "target_id": "ny-ad-87",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -4094,9 +4094,9 @@
     "target_id": "nyc-civil-court-bronx-md1",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -4104,9 +4104,9 @@
     "target_id": "nyc-civil-court-bronx-md1",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -4114,9 +4114,9 @@
     "target_id": "nyc-civil-court-bronx-md1",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -4154,9 +4154,9 @@
     "target_id": "nyc-civil-court-bronx-md2",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -4164,9 +4164,9 @@
     "target_id": "nyc-civil-court-bronx-md2",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -4174,9 +4174,9 @@
     "target_id": "nyc-civil-court-bronx-md2",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -4224,9 +4224,9 @@
     "target_id": "ny-supreme-court-jd2",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -4274,9 +4274,9 @@
     "target_id": "nyc-civil-court-brooklyn",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -4284,9 +4284,9 @@
     "target_id": "nyc-civil-court-brooklyn",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -4294,9 +4294,9 @@
     "target_id": "nyc-civil-court-brooklyn",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -4632,12 +4632,12 @@
   {
     "endorser_id": "ny-post-eb",
     "target_id": "ny-us-house-11",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election endorsement for this race or measure was found in the Post editorial index, opinion page and charter-proposal search checked October 19, 2026. Checked again on Nov 1, 2026; still no pick on this page.",
-    "url": "https://nypost.com/tag/editorial/",
-    "date": "2026-11-01",
-    "confidence": "sourced"
+    "status": "endorsed",
+    "choice": "Nicole Malliotakis",
+    "why": "In its roundup of House endorsements, the board backs the re-election of the state's Republican House incumbents and says Malliotakis has held the 11th district through steady advocacy on immigration enforcement.",
+    "url": "https://nypost.com/2026/10/29/opinion/vote-for-prosperity-security-the-posts-endorsements-for-nys-house-races/",
+    "date": "2026-10-29",
+    "confidence": "verified"
   },
   {
     "endorser_id": "ny-democratic-party",
@@ -9435,9 +9435,9 @@
     "target_id": "callicoon-town-supervisor",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Democratic line in this race.",
+    "why": "No candidate on the Democratic line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
-    "date": "2026-09-09",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -9455,9 +9455,9 @@
     "target_id": "callicoon-town-supervisor",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
-    "date": "2026-09-09",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -9475,9 +9475,9 @@
     "target_id": "callicoon-town-highway-superintendent",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Democratic line in this race.",
+    "why": "No candidate on the Democratic line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
-    "date": "2026-09-09",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -9495,9 +9495,9 @@
     "target_id": "callicoon-town-highway-superintendent",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
-    "date": "2026-09-09",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -9525,9 +9525,9 @@
     "target_id": "delaware-town-supervisor",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
-    "date": "2026-09-09",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -9535,9 +9535,9 @@
     "target_id": "delaware-town-supervisor",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
-    "date": "2026-09-09",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -9545,9 +9545,9 @@
     "target_id": "delaware-town-supervisor",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
-    "date": "2026-09-09",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -9565,9 +9565,9 @@
     "target_id": "delaware-town-clerk-tax-collector",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
-    "date": "2026-09-09",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -9575,9 +9575,9 @@
     "target_id": "delaware-town-clerk-tax-collector",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
-    "date": "2026-09-09",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -9585,9 +9585,9 @@
     "target_id": "delaware-town-clerk-tax-collector",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
-    "date": "2026-09-09",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -9595,9 +9595,9 @@
     "target_id": "delaware-town-council-vacancy",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Democratic line in this race.",
+    "why": "No candidate on the Democratic line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
-    "date": "2026-09-09",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -9605,9 +9605,9 @@
     "target_id": "delaware-town-council-vacancy",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
-    "date": "2026-09-09",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -9615,9 +9615,9 @@
     "target_id": "delaware-town-council-vacancy",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
-    "date": "2026-09-09",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -9625,9 +9625,9 @@
     "target_id": "delaware-town-council-vacancy",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
-    "date": "2026-09-09",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -9645,9 +9645,9 @@
     "target_id": "delaware-town-highway-superintendent",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Republican line in this race.",
+    "why": "No candidate on the Republican line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
-    "date": "2026-09-09",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -9655,9 +9655,9 @@
     "target_id": "delaware-town-highway-superintendent",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Working Families line in this race.",
+    "why": "No candidate on the Working Families line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
-    "date": "2026-09-09",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -9665,9 +9665,9 @@
     "target_id": "delaware-town-highway-superintendent",
     "status": "not_found",
     "choice": null,
-    "why": "No candidate on the Conservative line in this race.",
+    "why": "No candidate on the Conservative line in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
-    "date": "2026-09-09",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {

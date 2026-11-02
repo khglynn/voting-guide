@@ -762,11 +762,11 @@
   {
     "endorser_id": "oc-register-eb",
     "target_id": "ca-us-house-49",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not on the Southern California News Group editorial board's endorsement list, last updated Oct 20 and checked Oct 29, 2026. The board says the list 'will be constantly updated.' Checked again on Nov 1, 2026; still no pick on this page.",
-    "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-    "date": "2026-11-01",
+    "status": "endorsed",
+    "choice": "Mike Levin",
+    "why": "The board says it disagrees with many of Levin's economic and regulatory views and has never endorsed him before, but backs him now as a check on the executive branch. It says it has no confidence his challenger, Armen Kurdian, would serve as that check.",
+    "url": "https://www.ocregister.com/2026/11/02/endorsement-mike-levin-for-the-49th-congressional-district/",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {

@@ -892,7 +892,7 @@
   {
     "endorser_id": "md-republican-party",
     "target_id": "md-sd-40",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican on the ballot in this race.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
@@ -912,7 +912,7 @@
   {
     "endorser_id": "md-republican-party",
     "target_id": "md-sd-41",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican on the ballot in this race.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
@@ -932,7 +932,7 @@
   {
     "endorser_id": "md-republican-party",
     "target_id": "md-sd-43",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican on the ballot in this race.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
@@ -952,7 +952,7 @@
   {
     "endorser_id": "md-republican-party",
     "target_id": "md-sd-45",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican on the ballot in this race.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
@@ -992,7 +992,7 @@
   {
     "endorser_id": "md-republican-party",
     "target_id": "md-hd-40",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican on the ballot in this race.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
@@ -1012,7 +1012,7 @@
   {
     "endorser_id": "md-republican-party",
     "target_id": "md-hd-41",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican on the ballot in this race.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
@@ -1032,7 +1032,7 @@
   {
     "endorser_id": "md-republican-party",
     "target_id": "md-hd-43a",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican on the ballot in this race.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
@@ -1052,7 +1052,7 @@
   {
     "endorser_id": "md-republican-party",
     "target_id": "md-hd-45",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican on the ballot in this race.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
@@ -1092,7 +1092,7 @@
   {
     "endorser_id": "md-republican-party",
     "target_id": "baltimore-states-attorney",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican on the ballot in this race.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
@@ -1112,7 +1112,7 @@
   {
     "endorser_id": "md-republican-party",
     "target_id": "baltimore-clerk-circuit-court",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican on the ballot in this race.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
@@ -1152,7 +1152,7 @@
   {
     "endorser_id": "md-republican-party",
     "target_id": "baltimore-orphans-court",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican on the ballot in this race.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
@@ -1172,7 +1172,7 @@
   {
     "endorser_id": "md-republican-party",
     "target_id": "baltimore-sheriff",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican on the ballot in this race.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",

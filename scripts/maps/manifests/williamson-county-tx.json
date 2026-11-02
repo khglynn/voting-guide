@@ -9,7 +9,8 @@
       "title": "Williamson County voting precincts, with each precinct's commissioner, justice of the peace and constable precinct",
       "places": [
         "pflugerville-tx",
-        "round-rock-tx"
+        "round-rock-tx",
+        "austin-williamson-tx"
       ],
       "county": "Williamson",
       "source_url": "https://services.arcgis.com/5ZjkDcAQQjFnTEkh/arcgis/rest/services/Voting_Precincts_2026/FeatureServer/0",
@@ -72,7 +73,8 @@
       "places": [
         "pflugerville-tx",
         "round-rock-tx",
-        "austin-tx"
+        "austin-tx",
+        "austin-williamson-tx"
       ],
       "county": "Williamson",
       "source_format": "shapefile_zip",

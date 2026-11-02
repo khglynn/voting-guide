@@ -261,7 +261,7 @@ async function mapsSettled(page, timeout = 10000) {
   check('First page: "Use my address for a more exact ballot", on one line at phone width', (await text(page, '.front [data-act="addr-open"]')) === 'Use my address for a more exact ballot'
     && (await page.$eval('.front [data-act="addr-open"]', (e) => { const r = document.createRange(); r.selectNodeContents(e); return new Set([...r.getClientRects()].map((x) => Math.round(x.top))).size; })) === 1, await text(page, '.front [data-act="addr-open"]'));
   const fine = await page.$$eval('.front .door-foot .foot-line', (els) => els.map((e) => e.textContent.replace(/\s+/g, ' ').trim()));
-  const cities = new Set(Object.entries(await page.evaluate(() => fetch('/data/index.json').then((r) => r.json()).then((i) => i.places))).map(([id, p]) => (p.state === 'DC' ? 'DC' : /^nyc-/.test(id) ? 'NYC' : id))).size;
+  const cities = new Set(Object.entries(await page.evaluate(() => fetch('/data/index.json').then((r) => r.json()).then((i) => i.places))).map(([id, p]) => (p.state === 'DC' ? 'DC' : /^nyc-/.test(id) ? 'NYC' : /^austin-(williamson-|hays-)?tx$/.test(id) ? 'Austin' : id))).size;
   check('First page: the small print is two lines: the cities, then the four things you can do (Kevin, Oct 21 evening: Support takes the coffee line\'s place)', fine.length === 2 && fine[0] === `Covers ${cities} cities where Kevin HG’s friends live.` && fine[1] === 'How this guide works · Report a problem · Request a city · Support', `${fine.join(' / ')} (index says ${cities})`);
   check('First page: Kevin HG links to kevinhg.com, the one link out in the small print', (await text(page, '.door-foot .fine a[href="https://kevinhg.com"]')) === 'Kevin HG' && (await page.$$('.door-foot .fine a')).length === 1);
   const doorKinds = await page.$$eval('.door-foot .fine [data-act="shelf"]', (els) => els.map((e) => `${e.dataset.fk}=${e.dataset.kind}`));
@@ -4633,7 +4633,14 @@ const ADDRESS = /testing lane|testing%20lane|testing\+lane|test one/i;
     const cb = new URL(route.request().url()).searchParams.get('callback');
     return route.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify(answer)})` });
   });
-  await openBallot(two.page, '78729');
+  // 78729 is mostly Williamson County now, so it asks which Austin page to open: the Travis one.
+  await openZip(two.page, '78729');
+  await two.page.waitForSelector('.choose', { timeout: 15000 });
+  check('Where to vote: a ZIP split by county asks which county, with each page’s own county under its name', /is split between counties/.test(await text(two.page, '#which-h')) && (await two.page.$$eval('.choose .opt small', (els) => els.slice(0, 2).map((e) => e.textContent.trim()))).join('|') === 'Travis County|Williamson County', await text(two.page, '.choose'));
+  check('Where to vote: "I’m not sure" on a county-split ZIP opens the Travis page alone, never "Austin or Austin"', (await two.page.getAttribute('[data-fk="cp-unsure"]', 'data-ids')) === 'austin-tx' && /Travis County part/.test(await text(two.page, '[data-fk="cp-unsure"]')), await text(two.page, '[data-fk="cp-unsure"]'));
+  await tap(two.page, '.choose [data-fk="cp-austin-tx"]');
+  await throughSetup(two.page);
+  await two.page.waitForTimeout(150);
   const counties = await two.page.$$eval('#plan [data-county]', (els) => els.map((e) => `${e.classList.contains('gold') ? 'gold' : 'line'} ${e.textContent.trim()}`));
   check('Where to vote: a ZIP split across counties shows one labeled button per county, Travis first', counties.join('|') === 'gold Travis County|line Williamson County|line Hays County' && /in your county:$/.test(await text(two.page, '#plan .plan-cty')), `${counties.join('|')} / ${await text(two.page, '#plan .plan-cty')}`);
   check('Where to vote: the county buttons fit at 380px', (await two.page.evaluate(() => document.documentElement.scrollWidth)) <= 380);

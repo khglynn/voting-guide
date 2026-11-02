@@ -154,9 +154,9 @@
     "target_id": "tn-amendment-1",
     "status": "not_found",
     "choice": null,
-    "why": "No position on the amendments found. Its 2026 Candidate Guide lists only nominees, and its home page and Voter Hub don’t mention them (checked Oct 30, 2026).",
+    "why": "No position on the amendments found. Its 2026 Candidate Guide lists only nominees, and its home page and Voter Hub don’t mention them (checked Oct 30, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://tndp.org/candidates/",
-    "date": "2026-10-30",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -164,9 +164,9 @@
     "target_id": "tn-amendment-2",
     "status": "not_found",
     "choice": null,
-    "why": "No position on the amendments found. Its 2026 Candidate Guide lists only nominees, and its home page and Voter Hub don’t mention them (checked Oct 30, 2026).",
+    "why": "No position on the amendments found. Its 2026 Candidate Guide lists only nominees, and its home page and Voter Hub don’t mention them (checked Oct 30, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://tndp.org/candidates/",
-    "date": "2026-10-30",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -174,9 +174,9 @@
     "target_id": "tn-amendment-3",
     "status": "not_found",
     "choice": null,
-    "why": "No position on the amendments found. Its 2026 Candidate Guide lists only nominees, and its home page and Voter Hub don’t mention them (checked Oct 30, 2026).",
+    "why": "No position on the amendments found. Its 2026 Candidate Guide lists only nominees, and its home page and Voter Hub don’t mention them (checked Oct 30, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://tndp.org/candidates/",
-    "date": "2026-10-30",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -264,9 +264,9 @@
     "target_id": "tn-us-senate",
     "status": "not_found",
     "choice": null,
-    "why": "The 2026 endorsements we found cover the governor’s race and the legislature; no U.S. Senate pick was found (checked Oct 29, 2026).",
+    "why": "The 2026 endorsements we found cover the governor’s race and the legislature; no U.S. Senate pick was found (checked Oct 29, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://tnchamber.org/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -274,9 +274,9 @@
     "target_id": "tn-governor",
     "status": "not_found",
     "choice": null,
-    "why": "Its candidate list includes this race but marks no one with the asterisk it uses for an endorsement (checked Oct 29, 2026).",
+    "why": "Its candidate list includes this race but marks no one with the asterisk it uses for an endorsement (checked Oct 29, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://indivisibletn.org/candidates",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -284,9 +284,9 @@
     "target_id": "tn-us-senate",
     "status": "not_found",
     "choice": null,
-    "why": "Its candidate list includes this race but marks no one with the asterisk it uses for an endorsement (checked Oct 29, 2026).",
+    "why": "Its candidate list includes this race but marks no one with the asterisk it uses for an endorsement (checked Oct 29, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://indivisibletn.org/candidates",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -304,9 +304,9 @@
     "target_id": "tn-us-senate",
     "status": "not_found",
     "choice": null,
-    "why": "No one in this race is marked “Everytown Endorsed” on its 2026 Tennessee candidate list. Its FAQ says its “Gun Sense Candidate” label “is not an endorsement” (checked Oct 29, 2026).",
+    "why": "No one in this race is marked “Everytown Endorsed” on its 2026 Tennessee candidate list. Its FAQ says its “Gun Sense Candidate” label “is not an endorsement” (checked Oct 29, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://gunsensevoter.org/candidates/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -324,9 +324,9 @@
     "target_id": "tn-us-senate",
     "status": "not_found",
     "choice": null,
-    "why": "Its list for the November 3 general election covers state races only, with no U.S. Senate pick (checked Oct 29, 2026).",
+    "why": "Its list for the November 3 general election covers state races only, with no U.S. Senate pick (checked Oct 29, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.plannedparenthoodaction.org/tennessee-advocates-planned-parenthood/blog/2026-election-information",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -384,9 +384,9 @@
     "target_id": "tn-us-senate",
     "status": "not_found",
     "choice": null,
-    "why": "Its PAC-endorsed candidates page lists no one for Tennessee’s U.S. Senate race (checked Oct 29, 2026).",
+    "why": "Its PAC-endorsed candidates page lists no one for Tennessee’s U.S. Senate race (checked Oct 29, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.clubforgrowth.org/elections/pac-endorsed-candidates/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -424,9 +424,9 @@
     "target_id": "tn-governor",
     "status": "not_found",
     "choice": null,
-    "why": "Its 2026 list of endorsed candidates for governor names no one in Tennessee (checked Oct 29, 2026).",
+    "why": "Its 2026 list of endorsed candidates for governor names no one in Tennessee (checked Oct 29, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://nwpc.org/endorsed-candidates/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -444,9 +444,9 @@
     "target_id": "tn-amendment-1",
     "status": "not_found",
     "choice": null,
-    "why": "No position on this amendment was found; its public support is for Amendment 2 (checked Oct 29, 2026).",
+    "why": "No position on this amendment was found; its public support is for Amendment 2 (checked Oct 29, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://tnchamber.org/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -454,9 +454,9 @@
     "target_id": "tn-amendment-3",
     "status": "not_found",
     "choice": null,
-    "why": "No position on this amendment was found; its public support is for Amendment 2 (checked Oct 29, 2026).",
+    "why": "No position on this amendment was found; its public support is for Amendment 2 (checked Oct 29, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://tnchamber.org/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -474,9 +474,9 @@
     "target_id": "tn-amendment-1",
     "status": "not_found",
     "choice": null,
-    "why": "No position on this amendment was found; its public support is for Amendment 2 (checked Oct 29, 2026).",
+    "why": "No position on this amendment was found; its public support is for Amendment 2 (checked Oct 29, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://tnfarmbureau.org/yes-on-2-launches-to-support-constitutional-amendment-to-ban-state-property-tax",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -484,9 +484,9 @@
     "target_id": "tn-amendment-3",
     "status": "not_found",
     "choice": null,
-    "why": "No position on this amendment was found; its public support is for Amendment 2 (checked Oct 29, 2026).",
+    "why": "No position on this amendment was found; its public support is for Amendment 2 (checked Oct 29, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://tnfarmbureau.org/yes-on-2-launches-to-support-constitutional-amendment-to-ban-state-property-tax",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -504,9 +504,9 @@
     "target_id": "tn-amendment-1",
     "status": "not_found",
     "choice": null,
-    "why": "No position on this amendment was found; its public support is for Amendment 2 (checked Oct 29, 2026).",
+    "why": "No position on this amendment was found; its public support is for Amendment 2 (checked Oct 29, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://tnrealtors.com/2026-legislative-update/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -514,9 +514,9 @@
     "target_id": "tn-amendment-3",
     "status": "not_found",
     "choice": null,
-    "why": "No position on this amendment was found; its public support is for Amendment 2 (checked Oct 29, 2026).",
+    "why": "No position on this amendment was found; its public support is for Amendment 2 (checked Oct 29, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://tnrealtors.com/2026-legislative-update/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -707,9 +707,9 @@
     "target_id": "tn-us-senate",
     "status": "not_found",
     "choice": null,
-    "why": "Its 2026 list of endorsed Tennessee candidates names two: Justin J. Pearson in the 9th Congressional District and Jerri Green for governor (checked Oct 29, 2026).",
+    "why": "Its 2026 list of endorsed Tennessee candidates names two: Justin J. Pearson in the 9th Congressional District and Jerri Green for governor (checked Oct 29, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.tirrcvotes.org/2026-tn-state-endorsed-candidates",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -717,9 +717,9 @@
     "target_id": "tn-governor",
     "status": "not_found",
     "choice": null,
-    "why": "Its 2026 endorsements page names five candidates, none in this race (checked Oct 29, 2026).",
+    "why": "Its 2026 endorsements page names five candidates, none in this race (checked Oct 29, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.theequityalliancefund.org/endorsements",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -727,9 +727,9 @@
     "target_id": "tn-us-senate",
     "status": "not_found",
     "choice": null,
-    "why": "Its 2026 endorsements page names five candidates, none in this race (checked Oct 29, 2026).",
+    "why": "Its 2026 endorsements page names five candidates, none in this race (checked Oct 29, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.theequityalliancefund.org/endorsements",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   }
 ]

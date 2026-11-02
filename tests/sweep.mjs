@@ -485,7 +485,36 @@ const pressDistrict = async (page, key, v, also = []) => {
 };
 const pressChange = (page, key) => page.locator(`[data-act="district-change"][data-g="${key.replace(/"/g, '\\"')}"]`).first().evaluate((e) => window.__press(e));
 
+/* A ZIP split between pages of one city by county (Austin: Travis, Williamson, Hays) never offers the pages
+   together: the first page lists each page and "I'm not sure" opens the main one alone (src/views/mast.ts). Each
+   page is swept as a place on its own, so this checks only that chooser. */
+async function sweepSplit(browser, ballot) {
+  const t0 = Date.now();
+  const ctx = await browser.newContext({ viewport: { width: W, height: 820 }, deviceScaleFactor: 1, hasTouch: true, isMobile: true });
+  let bad = 0;
+  const no = (what, detail) => { bad++; fail(ballot.name, what, detail); };
+  try {
+    await ctx.route((u) => u.pathname.startsWith('/_vercel/insights/'), (route) => route.fulfill({ status: 200, contentType: 'text/javascript', body: '' }));
+    const page = await ctx.newPage();
+    await page.addInitScript(PRESS);
+    await page.goto(`${BASE}/?today=${TODAY}`, { waitUntil: 'domcontentloaded' });
+    await page.waitForSelector('#zip');
+    await page.fill('#zip', ballot.zip);
+    await page.waitForSelector('.choose', { timeout: 20000 });
+    for (const id of ballot.placeIds) if (!(await page.locator(`.choose [data-act="choose-place"][data-ids="${id}"]`).count())) no('the chooser lacks a button for a page', id);
+    const unsure = await page.locator('.choose [data-fk="cp-unsure"]').getAttribute('data-ids');
+    if (unsure !== ballot.main) no('"I\u2019m not sure" does not open the main page alone', `${unsure} instead of ${ballot.main}`);
+    await page.locator('.choose [data-fk="cp-unsure"]').click();
+    await page.waitForSelector('.door-place', { timeout: 20000 });
+    const named = await page.textContent('.door-place');
+    if (!/Austin/.test(named) || /Austin or Austin/.test(named)) no('the first page names the wrong place after "I\u2019m not sure"', named.trim().slice(0, 80));
+  } finally { await ctx.close().catch(() => {}); }
+  results.push({ name: ballot.name, items: 0, groups: 0, ms: Date.now() - t0, failures: bad });
+  console.log(`${bad ? 'FAIL' : 'ok  '}  ${ballot.name}  split-ZIP chooser, ${((Date.now() - t0) / 1000).toFixed(1)}s`);
+}
+
 async function sweepBallot(browser, ballot) {
+  if (ballot.split) return sweepSplit(browser, ballot);
   const t0 = Date.now();
   const R = { n: 0, fail: (b, w, d) => { R.n++; fail(b, w, d); } };
   const o = await oracle(ballot.st, ballot.placeIds);
@@ -564,7 +593,15 @@ const combos = new Map();
 // Long Beach's 90810 are shared with Los Angeles and also reach La Crescenta-Montrose and Carson).
 const outsideOf = (id, zip) => !!((places[id] && places[id].zip_outside) || {})[zip];
 for (const [zip, list] of Object.entries(zips)) if (Array.isArray(list) && list.length > 1 && !list.some((id) => outsideOf(id, zip)) && !combos.has(list.join('+'))) combos.set(list.join('+'), zip);
-for (const [key, zip] of combos) ballots.push({ name: `zip-${key}`, st: (places[key.split('+')[0]] || {}).state, placeIds: key.split('+'), combo: true, zip });
+// Pages of one city split by county (Austin's Travis, Williamson and Hays) are never combined either: the first
+// page lists them one by one and "I'm not sure" opens the main one (the page whose label has no county).
+const bareName = (id) => ((places[id] || {}).label || id).replace(/\s*\(.*\)$/, '');
+for (const [key, zip] of combos) {
+  const ids = key.split('+');
+  const split = ids.length > 1 && new Set(ids.map(bareName)).size === 1;
+  const main = split ? (ids.find((id) => !/\(/.test(places[id].label)) || ids[0]) : '';
+  ballots.push({ name: `zip-${key}`, st: (places[ids[0]] || {}).state, placeIds: ids, combo: true, zip, split, main });
+}
 const unknown = ONLY.filter((n) => !ballots.some((b) => b.name === n));
 if (unknown.length) stop(`ONLY names ballots that do not exist: ${unknown.join(', ')}. Names look like state-TX, austin-tx, ${[...combos.keys()][0] ? `zip-${[...combos.keys()][0]}` : 'zip-a+b'}.`);
 const todo = ballots.filter((b) => !ONLY.length || ONLY.includes(b.name));

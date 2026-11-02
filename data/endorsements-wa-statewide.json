@@ -244,9 +244,9 @@
     "target_id": "wa-initiative-645",
     "status": "not_found",
     "choice": null,
-    "why": "The state party website has no page stating positions on the three initiatives as of Oct 16. Democratic legislators passed the income tax and the 2025 parental-rights rewrite, and Gov. Ferguson leads the No on 645 campaign, but that is not a party endorsement. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "The state party website has no page stating positions on the three initiatives as of Oct 16. Democratic legislators passed the income tax and the 2025 parental-rights rewrite, and Gov. Ferguson leads the No on 645 campaign, but that is not a party endorsement. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://wadems.org/vote/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -254,9 +254,9 @@
     "target_id": "wa-initiative-001",
     "status": "not_found",
     "choice": null,
-    "why": "The state party website has no page stating positions on the three initiatives as of Oct 16. Democratic legislators passed the income tax and the 2025 parental-rights rewrite, and Gov. Ferguson leads the No on 645 campaign, but that is not a party endorsement. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "The state party website has no page stating positions on the three initiatives as of Oct 16. Democratic legislators passed the income tax and the 2025 parental-rights rewrite, and Gov. Ferguson leads the No on 645 campaign, but that is not a party endorsement. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://wadems.org/vote/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -264,9 +264,9 @@
     "target_id": "wa-initiative-638",
     "status": "not_found",
     "choice": null,
-    "why": "The state party website has no page stating positions on the three initiatives as of Oct 16. Democratic legislators passed the income tax and the 2025 parental-rights rewrite, and Gov. Ferguson leads the No on 645 campaign, but that is not a party endorsement. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "The state party website has no page stating positions on the three initiatives as of Oct 16. Democratic legislators passed the income tax and the 2025 parental-rights rewrite, and Gov. Ferguson leads the No on 645 campaign, but that is not a party endorsement. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://wadems.org/vote/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -374,9 +374,9 @@
     "target_id": "wa-supreme-court-pos-4",
     "status": "not_found",
     "choice": null,
-    "why": "The party’s July list deferred Position 4 until after the primary. No later Position 4 recommendation was found in the public party pages and searches checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "The party’s July list deferred Position 4 until after the primary. No later Position 4 recommendation was found in the public party pages and searches checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://wagop.org/wagop-completes-official-recommendations-of-candidates-for-the-state-supreme-by-recommending-scott-edwards/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -492,9 +492,9 @@
   {
     "endorser_id": "awb",
     "target_id": "wa-initiative-001",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "AWB's Sept 14 endorsement release covers I-645 and three court races only; it does not take positions on the two education initiatives.",
+    "why": "AWB's Sept 14 endorsement release covers I-645 and three court races only; the two education initiatives are not in it.",
     "url": "https://www.awb.org/awb-endorses-i-645-washington-supreme-court-justices/",
     "date": "2026-09-14",
     "confidence": "sourced"
@@ -502,9 +502,9 @@
   {
     "endorser_id": "awb",
     "target_id": "wa-initiative-638",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "AWB's Sept 14 endorsement release covers I-645 and three court races only; it does not take positions on the two education initiatives.",
+    "why": "AWB's Sept 14 endorsement release covers I-645 and three court races only; the two education initiatives are not in it.",
     "url": "https://www.awb.org/awb-endorses-i-645-washington-supreme-court-justices/",
     "date": "2026-09-14",
     "confidence": "sourced"
@@ -522,7 +522,7 @@
   {
     "endorser_id": "awb",
     "target_id": "wa-supreme-court-pos-3",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "AWB endorsed in Positions 1, 4 and 5 only.",
     "url": "https://www.awb.org/awb-endorses-i-645-washington-supreme-court-justices/",
@@ -552,7 +552,7 @@
   {
     "endorser_id": "awb",
     "target_id": "wa-supreme-court-pos-7",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "AWB endorsed in Positions 1, 4 and 5 only.",
     "url": "https://www.awb.org/awb-endorses-i-645-washington-supreme-court-justices/",
@@ -594,9 +594,9 @@
     "target_id": "wa-supreme-court-pos-1",
     "status": "not_found",
     "choice": null,
-    "why": "WEA-PAC judicial endorsements for 2026 were not located. (Candidate statements by Birk and Angelis list 'Teachers' among their endorsers.) Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "WEA-PAC judicial endorsements for 2026 were not located. (Candidate statements by Birk and Angelis list 'Teachers' among their endorsers.) Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.washingtonea.org/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "unverified"
   },
   {
@@ -604,9 +604,9 @@
     "target_id": "wa-supreme-court-pos-3",
     "status": "not_found",
     "choice": null,
-    "why": "WEA-PAC judicial endorsements for 2026 were not located. (Candidate statements by Birk and Angelis list 'Teachers' among their endorsers.) Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "WEA-PAC judicial endorsements for 2026 were not located. (Candidate statements by Birk and Angelis list 'Teachers' among their endorsers.) Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.washingtonea.org/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "unverified"
   },
   {
@@ -614,9 +614,9 @@
     "target_id": "wa-supreme-court-pos-4",
     "status": "not_found",
     "choice": null,
-    "why": "WEA-PAC judicial endorsements for 2026 were not located. (Candidate statements by Birk and Angelis list 'Teachers' among their endorsers.) Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "WEA-PAC judicial endorsements for 2026 were not located. (Candidate statements by Birk and Angelis list 'Teachers' among their endorsers.) Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.washingtonea.org/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "unverified"
   },
   {
@@ -624,9 +624,9 @@
     "target_id": "wa-supreme-court-pos-5",
     "status": "not_found",
     "choice": null,
-    "why": "WEA-PAC judicial endorsements for 2026 were not located. (Candidate statements by Birk and Angelis list 'Teachers' among their endorsers.) Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "WEA-PAC judicial endorsements for 2026 were not located. (Candidate statements by Birk and Angelis list 'Teachers' among their endorsers.) Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.washingtonea.org/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "unverified"
   },
   {
@@ -634,9 +634,9 @@
     "target_id": "wa-supreme-court-pos-7",
     "status": "not_found",
     "choice": null,
-    "why": "WEA-PAC judicial endorsements for 2026 were not located. (Candidate statements by Birk and Angelis list 'Teachers' among their endorsers.) Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "WEA-PAC judicial endorsements for 2026 were not located. (Candidate statements by Birk and Angelis list 'Teachers' among their endorsers.) Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.washingtonea.org/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "unverified"
   },
   {
@@ -754,9 +754,9 @@
     "target_id": "wa-supreme-court-pos-1",
     "status": "not_found",
     "choice": null,
-    "why": "The initiatives page lists no Supreme Court endorsements. (Melody's and Hawk's statements cite endorsements from Planned Parenthood-aligned officials, but no PPAA judicial page was located.) Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "The initiatives page lists no Supreme Court endorsements. (Melody's and Hawk's statements cite endorsements from Planned Parenthood-aligned officials, but no PPAA judicial page was located.) Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.plannedparenthoodaction.org/planned-parenthood-alliance-advocates/elections/washington-candidate-endorsements/wa-initiatives",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -764,9 +764,9 @@
     "target_id": "wa-supreme-court-pos-3",
     "status": "not_found",
     "choice": null,
-    "why": "The initiatives page lists no Supreme Court endorsements. (Melody's and Hawk's statements cite endorsements from Planned Parenthood-aligned officials, but no PPAA judicial page was located.) Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "The initiatives page lists no Supreme Court endorsements. (Melody's and Hawk's statements cite endorsements from Planned Parenthood-aligned officials, but no PPAA judicial page was located.) Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.plannedparenthoodaction.org/planned-parenthood-alliance-advocates/elections/washington-candidate-endorsements/wa-initiatives",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -774,9 +774,9 @@
     "target_id": "wa-supreme-court-pos-4",
     "status": "not_found",
     "choice": null,
-    "why": "The initiatives page lists no Supreme Court endorsements. (Melody's and Hawk's statements cite endorsements from Planned Parenthood-aligned officials, but no PPAA judicial page was located.) Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "The initiatives page lists no Supreme Court endorsements. (Melody's and Hawk's statements cite endorsements from Planned Parenthood-aligned officials, but no PPAA judicial page was located.) Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.plannedparenthoodaction.org/planned-parenthood-alliance-advocates/elections/washington-candidate-endorsements/wa-initiatives",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -784,9 +784,9 @@
     "target_id": "wa-supreme-court-pos-5",
     "status": "not_found",
     "choice": null,
-    "why": "The initiatives page lists no Supreme Court endorsements. (Melody's and Hawk's statements cite endorsements from Planned Parenthood-aligned officials, but no PPAA judicial page was located.) Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "The initiatives page lists no Supreme Court endorsements. (Melody's and Hawk's statements cite endorsements from Planned Parenthood-aligned officials, but no PPAA judicial page was located.) Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.plannedparenthoodaction.org/planned-parenthood-alliance-advocates/elections/washington-candidate-endorsements/wa-initiatives",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -794,9 +794,9 @@
     "target_id": "wa-supreme-court-pos-7",
     "status": "not_found",
     "choice": null,
-    "why": "The initiatives page lists no Supreme Court endorsements. (Melody's and Hawk's statements cite endorsements from Planned Parenthood-aligned officials, but no PPAA judicial page was located.) Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "The initiatives page lists no Supreme Court endorsements. (Melody's and Hawk's statements cite endorsements from Planned Parenthood-aligned officials, but no PPAA judicial page was located.) Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.plannedparenthoodaction.org/planned-parenthood-alliance-advocates/elections/washington-candidate-endorsements/wa-initiatives",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -814,17 +814,17 @@
     "target_id": "wa-initiative-001",
     "status": "not_found",
     "choice": null,
-    "why": "ACLU-WA opposed the original I-2081 provisions in 2024 and 2025; a 2026 page on Initiative 001 specifically was not located. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "ACLU-WA opposed the original I-2081 provisions in 2024 and 2025; a 2026 page on Initiative 001 specifically was not located. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.aclu-wa.org/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "unverified"
   },
   {
     "endorser_id": "aclu-wa",
     "target_id": "wa-initiative-645",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Tax policy is outside the ACLU's issue scope.",
+    "why": "No ACLU position on this measure found.",
     "url": "https://www.aclu-wa.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -912,9 +912,9 @@
   {
     "endorser_id": "lets-go-washington",
     "target_id": "wa-supreme-court-pos-1",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "An initiative committee; does not endorse candidates.",
+    "why": "No pick in this race found; Let's Go Washington campaigns on initiatives.",
     "url": "https://washingtonstatestandard.com/voter-guides/ballot-measures/to-repeal-the-states-income-tax/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -922,9 +922,9 @@
   {
     "endorser_id": "lets-go-washington",
     "target_id": "wa-supreme-court-pos-3",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "An initiative committee; does not endorse candidates.",
+    "why": "No pick in this race found; Let's Go Washington campaigns on initiatives.",
     "url": "https://washingtonstatestandard.com/voter-guides/ballot-measures/to-repeal-the-states-income-tax/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -932,9 +932,9 @@
   {
     "endorser_id": "lets-go-washington",
     "target_id": "wa-supreme-court-pos-4",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "An initiative committee; does not endorse candidates.",
+    "why": "No pick in this race found; Let's Go Washington campaigns on initiatives.",
     "url": "https://washingtonstatestandard.com/voter-guides/ballot-measures/to-repeal-the-states-income-tax/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -942,9 +942,9 @@
   {
     "endorser_id": "lets-go-washington",
     "target_id": "wa-supreme-court-pos-5",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "An initiative committee; does not endorse candidates.",
+    "why": "No pick in this race found; Let's Go Washington campaigns on initiatives.",
     "url": "https://washingtonstatestandard.com/voter-guides/ballot-measures/to-repeal-the-states-income-tax/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -952,9 +952,9 @@
   {
     "endorser_id": "lets-go-washington",
     "target_id": "wa-supreme-court-pos-7",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "An initiative committee; does not endorse candidates.",
+    "why": "No pick in this race found; Let's Go Washington campaigns on initiatives.",
     "url": "https://washingtonstatestandard.com/voter-guides/ballot-measures/to-repeal-the-states-income-tax/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -992,9 +992,9 @@
   {
     "endorser_id": "wa-house-republicans",
     "target_id": "wa-supreme-court-pos-1",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "A legislative caucus; does not endorse in judicial races.",
+    "why": "No pick in this judicial race found.",
     "url": "https://houserepublicans.wa.gov/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1002,9 +1002,9 @@
   {
     "endorser_id": "wa-house-republicans",
     "target_id": "wa-supreme-court-pos-3",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "A legislative caucus; does not endorse in judicial races.",
+    "why": "No pick in this judicial race found.",
     "url": "https://houserepublicans.wa.gov/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1012,9 +1012,9 @@
   {
     "endorser_id": "wa-house-republicans",
     "target_id": "wa-supreme-court-pos-4",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "A legislative caucus; does not endorse in judicial races.",
+    "why": "No pick in this judicial race found.",
     "url": "https://houserepublicans.wa.gov/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1022,9 +1022,9 @@
   {
     "endorser_id": "wa-house-republicans",
     "target_id": "wa-supreme-court-pos-5",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "A legislative caucus; does not endorse in judicial races.",
+    "why": "No pick in this judicial race found.",
     "url": "https://houserepublicans.wa.gov/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1032,9 +1032,9 @@
   {
     "endorser_id": "wa-house-republicans",
     "target_id": "wa-supreme-court-pos-7",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "A legislative caucus; does not endorse in judicial races.",
+    "why": "No pick in this judicial race found.",
     "url": "https://houserepublicans.wa.gov/",
     "date": "2026-10-16",
     "confidence": "sourced"

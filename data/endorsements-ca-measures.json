@@ -2,7 +2,7 @@
   {
     "endorser_id": "la-times-eb",
     "target_id": "ca-prop-1",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The LA Times published a 2026 voter guide with explainers for each proposition but no editorial board recommendations.",
     "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
@@ -12,7 +12,7 @@
   {
     "endorser_id": "la-times-eb",
     "target_id": "ca-prop-2",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The LA Times published a 2026 voter guide with explainers for each proposition but no editorial board recommendations.",
     "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
@@ -22,7 +22,7 @@
   {
     "endorser_id": "la-times-eb",
     "target_id": "ca-prop-3",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The LA Times published a 2026 voter guide with explainers for each proposition but no editorial board recommendations.",
     "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
@@ -32,7 +32,7 @@
   {
     "endorser_id": "la-times-eb",
     "target_id": "ca-prop-4",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The LA Times published a 2026 voter guide with explainers for each proposition but no editorial board recommendations.",
     "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
@@ -42,7 +42,7 @@
   {
     "endorser_id": "la-times-eb",
     "target_id": "ca-prop-5",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The LA Times published a 2026 voter guide with explainers for each proposition but no editorial board recommendations.",
     "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
@@ -52,7 +52,7 @@
   {
     "endorser_id": "la-times-eb",
     "target_id": "ca-prop-37",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The LA Times published a 2026 voter guide with explainers for each proposition but no editorial board recommendations.",
     "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
@@ -62,7 +62,7 @@
   {
     "endorser_id": "la-times-eb",
     "target_id": "ca-prop-38",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The LA Times published a 2026 voter guide with explainers for each proposition but no editorial board recommendations.",
     "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
@@ -72,7 +72,7 @@
   {
     "endorser_id": "la-times-eb",
     "target_id": "ca-prop-39",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The LA Times published a 2026 voter guide with explainers for each proposition but no editorial board recommendations.",
     "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
@@ -82,7 +82,7 @@
   {
     "endorser_id": "la-times-eb",
     "target_id": "ca-prop-40",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The LA Times published a 2026 voter guide with explainers for each proposition but no editorial board recommendations.",
     "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
@@ -92,7 +92,7 @@
   {
     "endorser_id": "la-times-eb",
     "target_id": "ca-prop-41",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The LA Times published a 2026 voter guide with explainers for each proposition but no editorial board recommendations.",
     "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
@@ -102,7 +102,7 @@
   {
     "endorser_id": "la-times-eb",
     "target_id": "ca-prop-42",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The LA Times published a 2026 voter guide with explainers for each proposition but no editorial board recommendations.",
     "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
@@ -112,7 +112,7 @@
   {
     "endorser_id": "la-times-eb",
     "target_id": "ca-prop-43",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The LA Times published a 2026 voter guide with explainers for each proposition but no editorial board recommendations.",
     "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
@@ -122,7 +122,7 @@
   {
     "endorser_id": "la-times-eb",
     "target_id": "ca-prop-44",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The LA Times published a 2026 voter guide with explainers for each proposition but no editorial board recommendations.",
     "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
@@ -132,7 +132,7 @@
   {
     "endorser_id": "la-times-eb",
     "target_id": "ca-prop-45",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The LA Times published a 2026 voter guide with explainers for each proposition but no editorial board recommendations.",
     "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
@@ -1422,7 +1422,7 @@
   {
     "endorser_id": "calchamber",
     "target_id": "ca-prop-3",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Board's Sept 2026 release says its positions 'cover 10 of the 14 proposals'; this measure is not among them.",
     "url": "https://advocacy.calchamber.com/news/2026/09/calchamber-board-of-directors-announces-positions-on-november-ballot-measures",
@@ -1442,7 +1442,7 @@
   {
     "endorser_id": "calchamber",
     "target_id": "ca-prop-5",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Board's Sept 2026 release says its positions 'cover 10 of the 14 proposals'; this measure is not among them.",
     "url": "https://advocacy.calchamber.com/news/2026/09/calchamber-board-of-directors-announces-positions-on-november-ballot-measures",
@@ -1462,7 +1462,7 @@
   {
     "endorser_id": "calchamber",
     "target_id": "ca-prop-38",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Board's Sept 2026 release says its positions 'cover 10 of the 14 proposals'; this measure is not among them.",
     "url": "https://advocacy.calchamber.com/news/2026/09/calchamber-board-of-directors-announces-positions-on-november-ballot-measures",
@@ -1472,7 +1472,7 @@
   {
     "endorser_id": "calchamber",
     "target_id": "ca-prop-39",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Board's Sept 2026 release says its positions 'cover 10 of the 14 proposals'; this measure is not among them.",
     "url": "https://advocacy.calchamber.com/news/2026/09/calchamber-board-of-directors-announces-positions-on-november-ballot-measures",
@@ -1694,9 +1694,9 @@
     "target_id": "ca-prop-2",
     "status": "not_found",
     "choice": null,
-    "why": "Not included in the ACLU SoCal 2026 voter guide. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "Not included in the ACLU SoCal 2026 voter guide. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.aclusocal.org/aclu-socal-2026-voter-guide/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1724,9 +1724,9 @@
     "target_id": "ca-prop-5",
     "status": "not_found",
     "choice": null,
-    "why": "Not included in the ACLU SoCal 2026 voter guide. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "Not included in the ACLU SoCal 2026 voter guide. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.aclusocal.org/aclu-socal-2026-voter-guide/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1734,9 +1734,9 @@
     "target_id": "ca-prop-37",
     "status": "not_found",
     "choice": null,
-    "why": "Not included in the ACLU SoCal 2026 voter guide. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "Not included in the ACLU SoCal 2026 voter guide. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.aclusocal.org/aclu-socal-2026-voter-guide/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1744,9 +1744,9 @@
     "target_id": "ca-prop-38",
     "status": "not_found",
     "choice": null,
-    "why": "Not included in the ACLU SoCal 2026 voter guide. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "Not included in the ACLU SoCal 2026 voter guide. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.aclusocal.org/aclu-socal-2026-voter-guide/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1804,9 +1804,9 @@
     "target_id": "ca-prop-44",
     "status": "not_found",
     "choice": null,
-    "why": "Not included in the ACLU SoCal 2026 voter guide. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "Not included in the ACLU SoCal 2026 voter guide. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.aclusocal.org/aclu-socal-2026-voter-guide/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -2244,9 +2244,9 @@
     "target_id": "ca-prop-1",
     "status": "not_found",
     "choice": null,
-    "why": "Not listed on PPAC's 2026 voter guide. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "Not listed on PPAC's 2026 voter guide. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.plannedparenthoodaction.org/planned-parenthood-affiliates-california/voter-guide",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -2254,9 +2254,9 @@
     "target_id": "ca-prop-2",
     "status": "not_found",
     "choice": null,
-    "why": "Not listed on PPAC's 2026 voter guide. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "Not listed on PPAC's 2026 voter guide. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.plannedparenthoodaction.org/planned-parenthood-affiliates-california/voter-guide",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -2274,9 +2274,9 @@
     "target_id": "ca-prop-4",
     "status": "not_found",
     "choice": null,
-    "why": "Not listed on PPAC's 2026 voter guide. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "Not listed on PPAC's 2026 voter guide. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.plannedparenthoodaction.org/planned-parenthood-affiliates-california/voter-guide",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -2284,9 +2284,9 @@
     "target_id": "ca-prop-5",
     "status": "not_found",
     "choice": null,
-    "why": "Not listed on PPAC's 2026 voter guide. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "Not listed on PPAC's 2026 voter guide. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.plannedparenthoodaction.org/planned-parenthood-affiliates-california/voter-guide",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -2294,9 +2294,9 @@
     "target_id": "ca-prop-37",
     "status": "not_found",
     "choice": null,
-    "why": "Not listed on PPAC's 2026 voter guide. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "Not listed on PPAC's 2026 voter guide. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.plannedparenthoodaction.org/planned-parenthood-affiliates-california/voter-guide",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -2304,9 +2304,9 @@
     "target_id": "ca-prop-38",
     "status": "not_found",
     "choice": null,
-    "why": "Not listed on PPAC's 2026 voter guide. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "Not listed on PPAC's 2026 voter guide. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.plannedparenthoodaction.org/planned-parenthood-affiliates-california/voter-guide",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -2334,9 +2334,9 @@
     "target_id": "ca-prop-41",
     "status": "not_found",
     "choice": null,
-    "why": "Not listed on PPAC's 2026 voter guide. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "Not listed on PPAC's 2026 voter guide. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.plannedparenthoodaction.org/planned-parenthood-affiliates-california/voter-guide",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -2344,9 +2344,9 @@
     "target_id": "ca-prop-42",
     "status": "not_found",
     "choice": null,
-    "why": "Not listed on PPAC's 2026 voter guide. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "Not listed on PPAC's 2026 voter guide. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.plannedparenthoodaction.org/planned-parenthood-affiliates-california/voter-guide",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -2374,9 +2374,9 @@
     "target_id": "ca-prop-45",
     "status": "not_found",
     "choice": null,
-    "why": "Not listed on PPAC's 2026 voter guide. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "Not listed on PPAC's 2026 voter guide. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.plannedparenthoodaction.org/planned-parenthood-affiliates-california/voter-guide",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -3305,8 +3305,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
-    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3315,8 +3315,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
-    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3325,8 +3325,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
-    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3335,8 +3335,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
-    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3345,8 +3345,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
-    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3355,8 +3355,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
-    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3365,8 +3365,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
-    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3375,8 +3375,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
-    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3385,8 +3385,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
-    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3395,8 +3395,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
-    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3405,8 +3405,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
-    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3415,8 +3415,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
-    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3425,8 +3425,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
-    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3435,8 +3435,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
-    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3465,8 +3465,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
-    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3475,8 +3475,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
-    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3485,8 +3485,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
-    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3515,8 +3515,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
-    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3525,8 +3525,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
-    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3535,8 +3535,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
-    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3555,8 +3555,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
-    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3575,8 +3575,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
-    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3585,8 +3585,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://lwvsf.org/ballot-recommendations",
-    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3595,8 +3595,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://lwvsf.org/ballot-recommendations",
-    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3605,8 +3605,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://lwvsf.org/ballot-recommendations",
-    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3615,8 +3615,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://lwvsf.org/ballot-recommendations",
-    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3625,8 +3625,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://lwvsf.org/ballot-recommendations",
-    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3635,8 +3635,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://lwvsf.org/ballot-recommendations",
-    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3645,8 +3645,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://lwvsf.org/ballot-recommendations",
-    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3655,8 +3655,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://lwvsf.org/ballot-recommendations",
-    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3665,8 +3665,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://lwvsf.org/ballot-recommendations",
-    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3675,8 +3675,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://lwvsf.org/ballot-recommendations",
-    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3685,8 +3685,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://lwvsf.org/ballot-recommendations",
-    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3695,8 +3695,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://lwvsf.org/ballot-recommendations",
-    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3705,8 +3705,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://lwvsf.org/ballot-recommendations",
-    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3715,8 +3715,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://lwvsf.org/ballot-recommendations",
-    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3725,8 +3725,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
-    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3735,8 +3735,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
-    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3745,8 +3745,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
-    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3755,8 +3755,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
-    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3765,8 +3765,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
-    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3775,8 +3775,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
-    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3785,8 +3785,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
-    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3795,8 +3795,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
-    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3805,8 +3805,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
-    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3815,8 +3815,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
-    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3825,8 +3825,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
-    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3835,8 +3835,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
-    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3845,8 +3845,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
-    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -3855,8 +3855,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
-    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Oct 29, 2026; still no pick on this page.",
-    "date": "2026-10-29",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   }
 ]

@@ -142,7 +142,7 @@
   {
     "endorser_id": "washington-post-eb",
     "target_id": "md-governor",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Post's editorial board has published no endorsement in this race. Its editorial page from Sept. 26 to Oct. 17, 2026 has no DC or Maryland endorsements. The Moore campaign's list of 'Washington Post Editorial Board' support dates to 2022.",
     "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
@@ -152,7 +152,7 @@
   {
     "endorser_id": "washington-post-eb",
     "target_id": "md-comptroller",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Post's editorial board has published no endorsement in this race. Its editorial page from Sept. 26 to Oct. 17, 2026 has no DC or Maryland endorsements.",
     "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
@@ -162,7 +162,7 @@
   {
     "endorser_id": "washington-post-eb",
     "target_id": "md-attorney-general",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Post's editorial board has published no endorsement in this race. Its editorial page from Sept. 26 to Oct. 17, 2026 has no DC or Maryland endorsements.",
     "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
@@ -172,7 +172,7 @@
   {
     "endorser_id": "washington-post-eb",
     "target_id": "md-retention-friedman",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Post's editorial board has published no endorsement in this race. Its editorial page from Sept. 26 to Oct. 17, 2026 has no DC or Maryland endorsements.",
     "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
@@ -182,7 +182,7 @@
   {
     "endorser_id": "washington-post-eb",
     "target_id": "md-question-1",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Post's editorial board has published no endorsement in this race. Its editorial page from Sept. 26 to Oct. 17, 2026 has no DC or Maryland endorsements.",
     "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
@@ -192,7 +192,7 @@
   {
     "endorser_id": "washington-post-eb",
     "target_id": "md-question-2",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Post's editorial board has published no endorsement in this race. Its editorial page from Sept. 26 to Oct. 17, 2026 has no DC or Maryland endorsements.",
     "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
@@ -202,9 +202,9 @@
   {
     "endorser_id": "washington-post-eb",
     "target_id": "md-question-3",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "No board position. The Oct. 1 piece 'Maryland Democrats should reject gerrymandering' ran under the Post's Ripple opinion vertical as an individual column, not a board editorial. The board's own page from Sept. 26 to Oct. 17, 2026 has no Maryland endorsements.",
+    "why": "No board endorsement found. The Oct. 1 piece 'Maryland Democrats should reject gerrymandering' ran under the Post's Ripple opinion vertical as an individual column, not a board editorial. The board's own page from Sept. 26 to Oct. 17, 2026 has no Maryland endorsements.",
     "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
     "date": "2026-10-17",
     "confidence": "sourced"
@@ -254,9 +254,9 @@
     "target_id": "md-question-1",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election endorsement for this race or measure was found in the state League’s advocacy page, voter-service policy and targeted 2026 ballot-question searches checked October 19, 2026. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "No 2026 general-election endorsement for this race or measure was found in the state League’s advocacy page, voter-service policy and targeted 2026 ballot-question searches checked October 19, 2026. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.lwvmd.org/advocacy",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -264,9 +264,9 @@
     "target_id": "md-question-2",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election endorsement for this race or measure was found in the state League’s advocacy page, voter-service policy and targeted 2026 ballot-question searches checked October 19, 2026. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "No 2026 general-election endorsement for this race or measure was found in the state League’s advocacy page, voter-service policy and targeted 2026 ballot-question searches checked October 19, 2026. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.lwvmd.org/advocacy",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -274,9 +274,9 @@
     "target_id": "md-question-3",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election endorsement for this race or measure was found in the state League’s advocacy page, voter-service policy and targeted 2026 ballot-question searches checked October 19, 2026. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "No 2026 general-election endorsement for this race or measure was found in the state League’s advocacy page, voter-service policy and targeted 2026 ballot-question searches checked October 19, 2026. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.lwvmd.org/advocacy",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -284,9 +284,9 @@
     "target_id": "md-governor",
     "status": "not_found",
     "choice": null,
-    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.mddems.org/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -294,9 +294,9 @@
     "target_id": "md-comptroller",
     "status": "not_found",
     "choice": null,
-    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.mddems.org/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -304,17 +304,17 @@
     "target_id": "md-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.mddems.org/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
     "endorser_id": "md-democratic-party",
     "target_id": "md-retention-friedman",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Does not take positions on judicial retention questions.",
+    "why": "No position on this retention question found.",
     "url": null,
     "date": null,
     "confidence": "sourced"
@@ -354,9 +354,9 @@
     "target_id": "md-governor",
     "status": "not_found",
     "choice": null,
-    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://mdgop.org/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -364,9 +364,9 @@
     "target_id": "md-comptroller",
     "status": "not_found",
     "choice": null,
-    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://mdgop.org/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -374,17 +374,17 @@
     "target_id": "md-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://mdgop.org/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
     "endorser_id": "md-republican-party",
     "target_id": "md-retention-friedman",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Does not take positions on judicial retention questions.",
+    "why": "No position on this retention question found.",
     "url": null,
     "date": null,
     "confidence": "sourced"
@@ -452,9 +452,9 @@
   {
     "endorser_id": "mddc-afl-cio",
     "target_id": "md-retention-friedman",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Does not take positions on judicial retention questions.",
+    "why": "No position on this retention question found.",
     "url": null,
     "date": null,
     "confidence": "sourced"
@@ -522,9 +522,9 @@
   {
     "endorser_id": "md-state-education-association",
     "target_id": "md-retention-friedman",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Does not take positions on judicial retention questions.",
+    "why": "No position on this retention question found.",
     "url": null,
     "date": null,
     "confidence": "sourced"
@@ -592,9 +592,9 @@
   {
     "endorser_id": "md-chamber-of-commerce",
     "target_id": "md-retention-friedman",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Does not take positions on judicial retention questions.",
+    "why": "No position on this retention question found.",
     "url": null,
     "date": null,
     "confidence": "sourced"
@@ -662,9 +662,9 @@
   {
     "endorser_id": "md-lcv",
     "target_id": "md-retention-friedman",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Does not take positions on judicial retention questions.",
+    "why": "No position on this retention question found.",
     "url": null,
     "date": null,
     "confidence": "sourced"
@@ -732,9 +732,9 @@
   {
     "endorser_id": "planned-parenthood-md-action",
     "target_id": "md-retention-friedman",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Does not take positions on judicial retention questions.",
+    "why": "No position on this retention question found.",
     "url": null,
     "date": null,
     "confidence": "sourced"
@@ -802,9 +802,9 @@
   {
     "endorser_id": "md-right-to-life",
     "target_id": "md-retention-friedman",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Does not take positions on judicial retention questions.",
+    "why": "No position on this retention question found.",
     "url": null,
     "date": null,
     "confidence": "sourced"
@@ -872,9 +872,9 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "md-retention-friedman",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Does not take positions on judicial retention questions.",
+    "why": "No position on this retention question found.",
     "url": null,
     "date": null,
     "confidence": "sourced"
@@ -942,9 +942,9 @@
   {
     "endorser_id": "md-fop",
     "target_id": "md-retention-friedman",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Does not take positions on judicial retention questions.",
+    "why": "No position on this retention question found.",
     "url": null,
     "date": null,
     "confidence": "sourced"

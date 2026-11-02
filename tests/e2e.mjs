@@ -261,7 +261,7 @@ async function mapsSettled(page, timeout = 10000) {
   check('First page: "Use my address for a more exact ballot", on one line at phone width', (await text(page, '.front [data-act="addr-open"]')) === 'Use my address for a more exact ballot'
     && (await page.$eval('.front [data-act="addr-open"]', (e) => { const r = document.createRange(); r.selectNodeContents(e); return new Set([...r.getClientRects()].map((x) => Math.round(x.top))).size; })) === 1, await text(page, '.front [data-act="addr-open"]'));
   const fine = await page.$$eval('.front .door-foot .foot-line', (els) => els.map((e) => e.textContent.replace(/\s+/g, ' ').trim()));
-  const cities = new Set(Object.entries(await page.evaluate(() => fetch('/data/index.json').then((r) => r.json()).then((i) => i.places))).map(([id, p]) => (p.state === 'DC' ? 'DC' : /^nyc-/.test(id) ? 'NYC' : id))).size;
+  const cities = new Set(Object.entries(await page.evaluate(() => fetch('/data/index.json').then((r) => r.json()).then((i) => i.places))).map(([id, p]) => (p.state === 'DC' ? 'DC' : /^nyc-/.test(id) ? 'NYC' : /^austin-(williamson-|hays-)?tx$/.test(id) ? 'Austin' : id))).size;
   check('First page: the small print is two lines: the cities, then the four things you can do (Kevin, Oct 21 evening: Support takes the coffee line\'s place)', fine.length === 2 && fine[0] === `Covers ${cities} cities where Kevin HG’s friends live.` && fine[1] === 'How this guide works · Report a problem · Request a city · Support', `${fine.join(' / ')} (index says ${cities})`);
   check('First page: Kevin HG links to kevinhg.com, the one link out in the small print', (await text(page, '.door-foot .fine a[href="https://kevinhg.com"]')) === 'Kevin HG' && (await page.$$('.door-foot .fine a')).length === 1);
   const doorKinds = await page.$$eval('.door-foot .fine [data-act="shelf"]', (els) => els.map((e) => `${e.dataset.fk}=${e.dataset.kind}`));
@@ -2341,6 +2341,10 @@ const LOOKED = thinPlaces(true);
     // On the day after the data's newest date: the e2e's usual Oct 19 comes before the re-check's rows, and a
     // request "sent" before the data's date reads as answered (model/coverage.ts), which no real device sees.
     const after = new Date(Date.parse(`${thin.p.checked}T00:00:00Z`) + 864e5).toISOString().slice(0, 10);
+    // Two days or less before Election Day the card says he may not finish in time (model/coverage.ts, late). Rows
+    // re-checked on Nov 1 put this visit on Nov 2, so from then on the late words are the right ones.
+    const elect = INDEX_JSON.states[thin.p.state]?.election_date;
+    const late = !!elect && Math.round((Date.parse(`${elect}T00:00:00Z`) - Date.parse(`${after}T00:00:00Z`)) / 864e5) <= 2;
     await page.goto(`${BASE}/?today=${after}`);
     await page.waitForSelector('#zip');
     await page.fill('#zip', thin.zip);
@@ -2357,7 +2361,8 @@ const LOOKED = thinPlaces(true);
     check(`Thin place (${name}): one tap posts "Gather endorsements", the place and ZIP, nothing typed`, posts.list.length === 1 && FORM_IDS.every((k) => p.has(k)) && p.get('entry.90887649') === `Gather endorsements: ${name}` && p.get('entry.628621310') === `${thin.p.label}, ${thin.zip}`
       && p.get('entry.780704302').startsWith(`Please gather local endorsements for ${name} (one-tap from the page)\n\nSent along:\nPage: First page\n`) && p.get('entry.2040687555') === '', p ? p.toString() : 'no post');
     check(`Thin place (${name}): the one tap never carries the save link’s hash, any contact, or any query but the test date`, !/zz9pick|v1~|#/.test(postText(p)) && [...postText(p).matchAll(/\?([^\s)]*)/g)].every((m) => /^today=\d{4}-\d{2}-\d{2}$/.test(m[1])), postText(p).replace(/\n/g, ' / '));
-    check(`Thin place (${name}): asked, the card says Kevin is looking, that he may not find any, never minutes`, (await text(page, '#door .cov-card .cov-lead')) === `Request sent. Kevin is looking for ${name}’s local picks.` && (await text(page, '#door .cov-card .cov-here')) === 'You asked today. It usually takes about a day. He may not find any, since some groups don’t endorse.' && !/minute/.test(await text(page, '#door')), await text(page, '#door .cov-card'));
+    check(`Thin place (${name}): asked, the card says Kevin is looking, ${late ? 'that he may not finish before you vote' : 'that he may not find any'}, never minutes`, (await text(page, '#door .cov-card .cov-lead')) === `Request sent. Kevin is looking for ${name}’s local picks.`
+      && (await text(page, '#door .cov-card .cov-here')) === (late ? 'You asked today. He may not finish before you vote.' : 'You asked today. It usually takes about a day. He may not find any, since some groups don’t endorse.') && !/minute/.test(await text(page, '#door')), await text(page, '#door .cov-card'));
     await page.evaluate(() => history.replaceState(history.state, '', `${location.pathname}${location.search}`));
     await plainSetup(page);
     await page.waitForSelector('#plan', { timeout: 15000 });
@@ -4628,7 +4633,14 @@ const ADDRESS = /testing lane|testing%20lane|testing\+lane|test one/i;
     const cb = new URL(route.request().url()).searchParams.get('callback');
     return route.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify(answer)})` });
   });
-  await openBallot(two.page, '78729');
+  // 78729 is mostly Williamson County now, so it asks which Austin page to open: the Travis one.
+  await openZip(two.page, '78729');
+  await two.page.waitForSelector('.choose', { timeout: 15000 });
+  check('Where to vote: a ZIP split by county asks which county, with each page’s own county under its name', /is split between counties/.test(await text(two.page, '#which-h')) && (await two.page.$$eval('.choose .opt small', (els) => els.slice(0, 2).map((e) => e.textContent.trim()))).join('|') === 'Travis County|Williamson County', await text(two.page, '.choose'));
+  check('Where to vote: "I’m not sure" on a county-split ZIP opens the Travis page alone, never "Austin or Austin"', (await two.page.getAttribute('[data-fk="cp-unsure"]', 'data-ids')) === 'austin-tx' && /Travis County part/.test(await text(two.page, '[data-fk="cp-unsure"]')), await text(two.page, '[data-fk="cp-unsure"]'));
+  await tap(two.page, '.choose [data-fk="cp-austin-tx"]');
+  await throughSetup(two.page);
+  await two.page.waitForTimeout(150);
   const counties = await two.page.$$eval('#plan [data-county]', (els) => els.map((e) => `${e.classList.contains('gold') ? 'gold' : 'line'} ${e.textContent.trim()}`));
   check('Where to vote: a ZIP split across counties shows one labeled button per county, Travis first', counties.join('|') === 'gold Travis County|line Williamson County|line Hays County' && /in your county:$/.test(await text(two.page, '#plan .plan-cty')), `${counties.join('|')} / ${await text(two.page, '#plan .plan-cty')}`);
   check('Where to vote: the county buttons fit at 380px', (await two.page.evaluate(() => document.documentElement.scrollWidth)) <= 380);

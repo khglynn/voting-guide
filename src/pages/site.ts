@@ -58,9 +58,19 @@ export const statePath = (d: SiteData, st: string): string => `/${slug(d.index.s
 export const placePath = (id: string): string => `/${id}`;
 /* "Austin", "Los Angeles", "Brooklyn", "Ballwin area": the label without its parenthetical. */
 export const shortLabel = (label: string): string => label.replace(/\s*\(.*\)\s*$/, '').trim();
+/* The name a page goes by: shortLabel, except where another place in the state has the same one
+   (Austin's three county pages), which keeps its county so the pages tell apart ("Austin (Williamson County)"). */
+export function pageLabel(d: SiteData, id: string): string {
+  const p = d.index.places[id];
+  const bare = shortLabel(p.label);
+  const twin = Object.values(d.index.places).some((x) => x !== p && x.state === p.state && shortLabel(x.label) === bare);
+  if (!twin) return bare;
+  const county = /\(([^)]*)\)\s*$/.exec(p.label);
+  return `${bare} (${county ? county[1] : `${p.counties[0]} County`})`;
+}
 /* "Austin, TX"; a label that already names its state ("DC Ward 1") keeps it as it is. */
-export function placeName(p: { label: string; state: string }): string {
-  const s = shortLabel(p.label);
+export function placeName(p: { label: string; state: string }, label = shortLabel(p.label)): string {
+  const s = label;
   return p.state === 'DC' ? s : `${s}, ${p.state}`;
 }
 const countyName = (c: string): string => c.replace(/\s*\([^)]*\)/g, '').replace(/\s+County$/i, '').trim();
@@ -375,13 +385,14 @@ export function placePage(d: SiteData, id: string, a: Assets, today: string): Pa
   const b = buildBallot(sb, [p]);
   b.howto = localHowto(sh, [p], null, today);
   const h = b.howto;
-  const name = placeName(p);
-  const short = shortLabel(p.label);
+  const short = pageLabel(d, id);
+  const name = placeName(p, short);
   const stName = d.index.states[p.state].name;
   const { races, measures } = countItems(b);
   const counties = countiesLine(p);
   const lastmod = newest([sb.howto.last_verified, ix.checked, d.index.states[p.state].checked], today);
-  const title = `${name} voting guide: your ${ELECTION} ballot`;
+  // A county in the name (Austin's pages) takes the room "your" had, to stay under a title's 65.
+  const title = `${name} voting guide: ${short === shortLabel(p.label) ? 'your ' : ''}${ELECTION} ballot`;
   const summary = `${plural(races, 'race')}, ${plural(measures, 'measure')}, key dates and where to vote`;
   const description = `Your ${short} ballot for ${ELECTION}, in plain English: ${summary}.`;
   const others = d.index.states[p.state].places.filter((x) => x !== id);
@@ -402,7 +413,7 @@ ${idHTML(h, false)}<p><a href="${esc(statePath(d, p.state))}#id">What counts as 
 <p>${plural(races, 'race')} and ${plural(measures, 'measure')} across ${esc(short)}.${b.groups.length || b.mayApply.size ? ' Your address decides which ones are on your ballot. Enter it in the guide to see yours.' : ''}</p>
 ${ballotHTML(b, short)}
 <p style="margin-top:22px"><a class="bigbtn" href="/?place=${esc(id)}">Open your ${esc(short)} ballot</a></p>
-${others.length ? `<h2 class="pg-h2">Other places in ${esc(stName)}</h2><ul class="pg-places">${others.map((x) => `<li><a href="${esc(placePath(x))}">${esc(shortLabel(d.index.places[x].label))}</a></li>`).join('')}</ul>` : ''}
+${others.length ? `<h2 class="pg-h2">Other places in ${esc(stName)}</h2><ul class="pg-places">${others.map((x) => `<li><a href="${esc(placePath(x))}">${esc(pageLabel(d, x))}</a></li>`).join('')}</ul>` : ''}
 <p><a href="${esc(statePath(d, p.state))}">See the statewide ballot for ${esc(stName)}</a></p>`;
   const path = placePath(id);
   const html = shell({
@@ -432,7 +443,7 @@ export function statePage(d: SiteData, st: string, a: Assets, today: string): Pa
 <a class="bigbtn" href="/?state=${esc(st)}">Open your ${esc(s.name)} ballot</a>
 <p class="fine">Enter your ZIP code in the guide to add your local races. Your picks stay on your device.</p>
 <h2 class="pg-h2">Local guides in ${esc(s.name)}</h2>
-<ul class="pg-places">${s.places.map((id) => `<li><a href="${esc(placePath(id))}">${esc(shortLabel(d.index.places[id].label))}</a></li>`).join('')}</ul>
+<ul class="pg-places">${s.places.map((id) => `<li><a href="${esc(placePath(id))}">${esc(pageLabel(d, id))}</a></li>`).join('')}</ul>
 <h2 class="pg-h2" id="dates">Key dates</h2>
 ${datesHTML(dateRows(h, null))}
 ${h.model_plain ? `<h2 class="pg-h2">How voting works in ${esc(s.name)}</h2><p>${escP(h.model_plain)}</p>` : ''}
@@ -468,7 +479,7 @@ export function homeExtras(d: SiteData): { jsonLd: string; noscript: string } {
       publisher: { '@type': 'Person', name: 'Kevin HG', url: 'https://kevinhg.com' },
     }],
   }).replace(/</g, '\\u003c');
-  const list = byState(d).map((st) => `<li><a href="${esc(statePath(d, st))}">${esc(d.index.states[st].name)}</a>: ${d.index.states[st].places.map((id) => `<a href="${esc(placePath(id))}">${esc(shortLabel(d.index.places[id].label))}</a>`).join(', ')}</li>`).join('');
+  const list = byState(d).map((st) => `<li><a href="${esc(statePath(d, st))}">${esc(d.index.states[st].name)}</a>: ${d.index.states[st].places.map((id) => `<a href="${esc(placePath(id))}">${esc(pageLabel(d, id))}</a>`).join(', ')}</li>`).join('');
   const noscript = `<noscript><div style="padding:16px;font-family:Georgia,serif;max-width:640px"><p>Turn on JavaScript to build your ballot. Find official voting info for every state at <a href="https://vote.gov/">vote.gov</a>.</p><p>You can still read about the ballot where you live:</p><ul>${list}</ul></div></noscript>`;
   return { jsonLd: ld, noscript };
 }

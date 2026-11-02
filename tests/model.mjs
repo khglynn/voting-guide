@@ -887,7 +887,7 @@ function roundTrip(name, stCode, places, mutate) {
     const auraRows = Object.entries(real.endorsements).filter(([t, r]) => r.aura && liveB.byId.has(t));
     check('adds: a preview brings only the source the live data lacks', f.endorsers.map((e) => e.id).join() === 'aura', f.endorsers.map((e) => e.id).join());
     const ae = f.endorsers[0];
-    check('adds: its record starts off for everyone, is marked as a preview, and keeps its fields', ae.default_on === false && ae.preview === true && ae.name === 'AURA' && ae.type === 'advocacy' && ae.lean === 'lean_left' && ae.lean_basis_kind === 'mission' && ae.guide_url === real.endorsers.find((e) => e.id === 'aura').guide_url && ae.home_places.join() === 'austin-tx', JSON.stringify(ae).slice(0, 200));
+    check('adds: its record starts off for everyone, is marked as a preview, and keeps its fields', ae.default_on === false && ae.preview === true && ae.name === 'AURA' && ae.type === 'advocacy' && ae.lean === 'lean_left' && ae.lean_basis_kind === 'mission' && ae.guide_url === real.endorsers.find((e) => e.id === 'aura').guide_url && ae.home_places.join() === 'austin-hays-tx,austin-tx,austin-williamson-tx', JSON.stringify(ae).slice(0, 200));
     const same = (a, b) => ['s', 'c', 'note', 'why', 'url', 'date', 'conf'].every((k) => JSON.stringify(a[k] ?? null) === JSON.stringify(b[k] ?? null));
     check('adds: every one of its rows on this ballot comes along, as the data has it', auraRows.length > 10 && Object.keys(f.rows).length === auraRows.length && auraRows.every(([t, r]) => f.rows[t] && same(f.rows[t].aura, r.aura)), `${Object.keys(f.rows).length} of ${auraRows.length}`);
     const nb = bl.buildBallot(ad.withFound(sbx, f), [liveP]);
@@ -1037,7 +1037,7 @@ function roundTrip(name, stCode, places, mutate) {
   const btns = [...html.matchAll(/<a class="pbtn (gold|line)" href="([^"]+)"[^>]*data-county="([^"]+)">([^<]+)<\/a>/g)].map((m) => `${m[1]} ${m[3]} ${m[4]}`);
   check('where: a split ZIP\u2019s plan shows one labeled button per county, Travis first in gold', btns.join('|') === 'gold Travis Travis County|line Williamson Williamson County|line Hays Hays County' && /<p class="plan-cty">Find [a-z ]+ in your county:<\/p>/.test(html), btns.join('|'));
   bl.localize(b, '78729', 'Williamson');
-  check('where: once the address lookup says Williamson, Williamson\u2019s links, and one button again', b.county === 'Williamson' && b.howto.early_in_person.lookup_url === WILCO_EARLY && b.howto.election_day.lookup_url === 'https://www.wilcotx.gov/elections' && !b.howto.county_links && !/data-county=/.test(ps.planHTML()));
+  check('where: once the address lookup says Williamson, Williamson\u2019s links, and one button again', b.county === 'Williamson' && b.howto.early_in_person.lookup_url === WILCO_EARLY && b.howto.election_day.lookup_url === 'https://www.wilcotx.gov/DocumentCenter/View/22255/Notice-of-General-Election-Williamson-County' && !b.howto.county_links && !/data-county=/.test(ps.planHTML()));
   // Nov 1: Lakewood's own Jefferson County mail and hours text, not the state's Denver, Adams and Arapahoe lines.
   // (The state's other mail fields keep statewide facts with a Denver aside; only these four are county-specific.)
   const lkw = open('CO', ['lakewood-co']).howto;

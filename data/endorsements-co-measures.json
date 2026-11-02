@@ -682,7 +682,7 @@
   {
     "endorser_id": "co-democratic-party",
     "target_id": "co-amendment-83",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not on the party's support or oppose lists after its State Central Committee concluded consideration of 2026 measures on Sept. 8.",
     "url": "https://www.coloradodems.org/press/colorado-democrats-finalize-positions-on-2026-ballot-measures",
@@ -692,7 +692,7 @@
   {
     "endorser_id": "co-democratic-party",
     "target_id": "co-proposition-133",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not on the party's support or oppose lists after its State Central Committee concluded consideration of 2026 measures on Sept. 8.",
     "url": "https://www.coloradodems.org/press/colorado-democrats-finalize-positions-on-2026-ballot-measures",
@@ -1242,7 +1242,7 @@
   {
     "endorser_id": "colorado-fiscal-institute",
     "target_id": "co-amendment-83",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not addressed in CFI's 2026 ballot guide, which lists its position measure by measure.",
     "url": "https://coloradofiscal.org/2026-ballot-guide/",
@@ -1252,7 +1252,7 @@
   {
     "endorser_id": "colorado-fiscal-institute",
     "target_id": "co-amendment-86",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not addressed in CFI's 2026 ballot guide, which lists its position measure by measure.",
     "url": "https://coloradofiscal.org/2026-ballot-guide/",
@@ -1572,7 +1572,7 @@
   {
     "endorser_id": "colorado-chamber",
     "target_id": "co-amendment-81",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Chamber's board took positions only on Amendment 87, Proposition NN and Proposition 136.",
     "url": "https://cochamber.com/2026/09/03/colorado-chamber-announces-positions-on-statewide-ballot-measures/",
@@ -1582,7 +1582,7 @@
   {
     "endorser_id": "colorado-chamber",
     "target_id": "co-amendment-82",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Chamber's board took positions only on Amendment 87, Proposition NN and Proposition 136.",
     "url": "https://cochamber.com/2026/09/03/colorado-chamber-announces-positions-on-statewide-ballot-measures/",
@@ -1592,7 +1592,7 @@
   {
     "endorser_id": "colorado-chamber",
     "target_id": "co-amendment-83",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Chamber's board took positions only on Amendment 87, Proposition NN and Proposition 136.",
     "url": "https://cochamber.com/2026/09/03/colorado-chamber-announces-positions-on-statewide-ballot-measures/",
@@ -1602,7 +1602,7 @@
   {
     "endorser_id": "colorado-chamber",
     "target_id": "co-amendment-84",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Chamber's board took positions only on Amendment 87, Proposition NN and Proposition 136.",
     "url": "https://cochamber.com/2026/09/03/colorado-chamber-announces-positions-on-statewide-ballot-measures/",
@@ -1612,7 +1612,7 @@
   {
     "endorser_id": "colorado-chamber",
     "target_id": "co-amendment-85",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Chamber's board took positions only on Amendment 87, Proposition NN and Proposition 136.",
     "url": "https://cochamber.com/2026/09/03/colorado-chamber-announces-positions-on-statewide-ballot-measures/",
@@ -1622,7 +1622,7 @@
   {
     "endorser_id": "colorado-chamber",
     "target_id": "co-amendment-86",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Chamber's board took positions only on Amendment 87, Proposition NN and Proposition 136.",
     "url": "https://cochamber.com/2026/09/03/colorado-chamber-announces-positions-on-statewide-ballot-measures/",
@@ -1632,7 +1632,7 @@
   {
     "endorser_id": "colorado-chamber",
     "target_id": "co-proposition-132",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Chamber's board took positions only on Amendment 87, Proposition NN and Proposition 136.",
     "url": "https://cochamber.com/2026/09/03/colorado-chamber-announces-positions-on-statewide-ballot-measures/",
@@ -1642,7 +1642,7 @@
   {
     "endorser_id": "colorado-chamber",
     "target_id": "co-proposition-133",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Chamber's board took positions only on Amendment 87, Proposition NN and Proposition 136.",
     "url": "https://cochamber.com/2026/09/03/colorado-chamber-announces-positions-on-statewide-ballot-measures/",
@@ -1652,7 +1652,7 @@
   {
     "endorser_id": "colorado-chamber",
     "target_id": "co-proposition-134",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Chamber's board took positions only on Amendment 87, Proposition NN and Proposition 136.",
     "url": "https://cochamber.com/2026/09/03/colorado-chamber-announces-positions-on-statewide-ballot-measures/",
@@ -1662,7 +1662,7 @@
   {
     "endorser_id": "colorado-chamber",
     "target_id": "co-proposition-135",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Chamber's board took positions only on Amendment 87, Proposition NN and Proposition 136.",
     "url": "https://cochamber.com/2026/09/03/colorado-chamber-announces-positions-on-statewide-ballot-measures/",
@@ -1672,7 +1672,7 @@
   {
     "endorser_id": "colorado-chamber",
     "target_id": "co-proposition-137",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Chamber's board took positions only on Amendment 87, Proposition NN and Proposition 136.",
     "url": "https://cochamber.com/2026/09/03/colorado-chamber-announces-positions-on-statewide-ballot-measures/",
@@ -1782,7 +1782,7 @@
   {
     "endorser_id": "colorado-afl-cio",
     "target_id": "co-amendment-82",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not listed in the federation's 2026 voter guide, which covers ten of the fourteen statewide measures.",
     "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
@@ -1792,7 +1792,7 @@
   {
     "endorser_id": "colorado-afl-cio",
     "target_id": "co-amendment-83",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not listed in the federation's 2026 voter guide, which covers ten of the fourteen statewide measures.",
     "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
@@ -1802,7 +1802,7 @@
   {
     "endorser_id": "colorado-afl-cio",
     "target_id": "co-amendment-86",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not listed in the federation's 2026 voter guide, which covers ten of the fourteen statewide measures.",
     "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
@@ -1812,7 +1812,7 @@
   {
     "endorser_id": "colorado-afl-cio",
     "target_id": "co-proposition-137",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not listed in the federation's 2026 voter guide, which covers ten of the fourteen statewide measures.",
     "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
@@ -1912,9 +1912,9 @@
   {
     "endorser_id": "conservation-colorado",
     "target_id": "co-amendment-83",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not in Conservation Colorado's 2026 voter guide, which lists its positions on 'the measures that matter most for Colorado's climate, air, land, water and communities.' It took no position on this one.",
+    "why": "Not in Conservation Colorado's 2026 voter guide, which lists its positions on 'the measures that matter most for Colorado's climate, air, land, water and communities.'",
     "url": "https://conservationco.org/resources/2026-voter-guide/",
     "date": "2026-09-24",
     "confidence": "verified"
@@ -1922,9 +1922,9 @@
   {
     "endorser_id": "conservation-colorado",
     "target_id": "co-amendment-85",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not in Conservation Colorado's 2026 voter guide, which lists its positions on 'the measures that matter most for Colorado's climate, air, land, water and communities.' It took no position on this one.",
+    "why": "Not in Conservation Colorado's 2026 voter guide, which lists its positions on 'the measures that matter most for Colorado's climate, air, land, water and communities.'",
     "url": "https://conservationco.org/resources/2026-voter-guide/",
     "date": "2026-09-24",
     "confidence": "verified"
@@ -1932,9 +1932,9 @@
   {
     "endorser_id": "conservation-colorado",
     "target_id": "co-amendment-86",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not in Conservation Colorado's 2026 voter guide, which lists its positions on 'the measures that matter most for Colorado's climate, air, land, water and communities.' It took no position on this one.",
+    "why": "Not in Conservation Colorado's 2026 voter guide, which lists its positions on 'the measures that matter most for Colorado's climate, air, land, water and communities.'",
     "url": "https://conservationco.org/resources/2026-voter-guide/",
     "date": "2026-09-24",
     "confidence": "verified"
@@ -1942,9 +1942,9 @@
   {
     "endorser_id": "conservation-colorado",
     "target_id": "co-proposition-132",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not in Conservation Colorado's 2026 voter guide, which lists its positions on 'the measures that matter most for Colorado's climate, air, land, water and communities.' It took no position on this one.",
+    "why": "Not in Conservation Colorado's 2026 voter guide, which lists its positions on 'the measures that matter most for Colorado's climate, air, land, water and communities.'",
     "url": "https://conservationco.org/resources/2026-voter-guide/",
     "date": "2026-09-24",
     "confidence": "verified"
@@ -1952,9 +1952,9 @@
   {
     "endorser_id": "conservation-colorado",
     "target_id": "co-proposition-133",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not in Conservation Colorado's 2026 voter guide, which lists its positions on 'the measures that matter most for Colorado's climate, air, land, water and communities.' It took no position on this one.",
+    "why": "Not in Conservation Colorado's 2026 voter guide, which lists its positions on 'the measures that matter most for Colorado's climate, air, land, water and communities.'",
     "url": "https://conservationco.org/resources/2026-voter-guide/",
     "date": "2026-09-24",
     "confidence": "verified"
@@ -2014,9 +2014,9 @@
     "target_id": "co-amendment-82",
     "status": "not_found",
     "choice": null,
-    "why": "Not among the five measures in the ACLU of Colorado's 2026 voter guide, which addresses civil-rights questions only. The ACLU states it does not endorse candidates. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "Not among the five measures in the ACLU of Colorado's 2026 voter guide, which addresses civil-rights questions only. The ACLU states it does not endorse candidates. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.aclu-co.org/voterguide2026/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -2024,9 +2024,9 @@
     "target_id": "co-amendment-83",
     "status": "not_found",
     "choice": null,
-    "why": "Not among the five measures in the ACLU of Colorado's 2026 voter guide, which addresses civil-rights questions only. The ACLU states it does not endorse candidates. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "Not among the five measures in the ACLU of Colorado's 2026 voter guide, which addresses civil-rights questions only. The ACLU states it does not endorse candidates. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.aclu-co.org/voterguide2026/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -2034,9 +2034,9 @@
     "target_id": "co-amendment-85",
     "status": "not_found",
     "choice": null,
-    "why": "Not among the five measures in the ACLU of Colorado's 2026 voter guide, which addresses civil-rights questions only. The ACLU states it does not endorse candidates. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "Not among the five measures in the ACLU of Colorado's 2026 voter guide, which addresses civil-rights questions only. The ACLU states it does not endorse candidates. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.aclu-co.org/voterguide2026/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -2044,9 +2044,9 @@
     "target_id": "co-amendment-86",
     "status": "not_found",
     "choice": null,
-    "why": "Not among the five measures in the ACLU of Colorado's 2026 voter guide, which addresses civil-rights questions only. The ACLU states it does not endorse candidates. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "Not among the five measures in the ACLU of Colorado's 2026 voter guide, which addresses civil-rights questions only. The ACLU states it does not endorse candidates. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.aclu-co.org/voterguide2026/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -2054,9 +2054,9 @@
     "target_id": "co-amendment-87",
     "status": "not_found",
     "choice": null,
-    "why": "Not among the five measures in the ACLU of Colorado's 2026 voter guide, which addresses civil-rights questions only. The ACLU states it does not endorse candidates. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "Not among the five measures in the ACLU of Colorado's 2026 voter guide, which addresses civil-rights questions only. The ACLU states it does not endorse candidates. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.aclu-co.org/voterguide2026/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -2064,9 +2064,9 @@
     "target_id": "co-proposition-nn",
     "status": "not_found",
     "choice": null,
-    "why": "Not among the five measures in the ACLU of Colorado's 2026 voter guide, which addresses civil-rights questions only. The ACLU states it does not endorse candidates. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "Not among the five measures in the ACLU of Colorado's 2026 voter guide, which addresses civil-rights questions only. The ACLU states it does not endorse candidates. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.aclu-co.org/voterguide2026/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -2074,9 +2074,9 @@
     "target_id": "co-proposition-133",
     "status": "not_found",
     "choice": null,
-    "why": "Not among the five measures in the ACLU of Colorado's 2026 voter guide, which addresses civil-rights questions only. The ACLU states it does not endorse candidates. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "Not among the five measures in the ACLU of Colorado's 2026 voter guide, which addresses civil-rights questions only. The ACLU states it does not endorse candidates. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.aclu-co.org/voterguide2026/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -2084,9 +2084,9 @@
     "target_id": "co-proposition-136",
     "status": "not_found",
     "choice": null,
-    "why": "Not among the five measures in the ACLU of Colorado's 2026 voter guide, which addresses civil-rights questions only. The ACLU states it does not endorse candidates. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "Not among the five measures in the ACLU of Colorado's 2026 voter guide, which addresses civil-rights questions only. The ACLU states it does not endorse candidates. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.aclu-co.org/voterguide2026/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -2094,9 +2094,9 @@
     "target_id": "co-proposition-137",
     "status": "not_found",
     "choice": null,
-    "why": "Not among the five measures in the ACLU of Colorado's 2026 voter guide, which addresses civil-rights questions only. The ACLU states it does not endorse candidates. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "Not among the five measures in the ACLU of Colorado's 2026 voter guide, which addresses civil-rights questions only. The ACLU states it does not endorse candidates. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.aclu-co.org/voterguide2026/",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -2244,9 +2244,9 @@
     "target_id": "co-amendment-81",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 ballot-measure slate found on the group’s public home and policy pages during the Oct 19 check. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "No 2026 ballot-measure slate found on the group’s public home and policy pages during the Oct 19 check. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://coloradoconcern.com/public-policy",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -2254,9 +2254,9 @@
     "target_id": "co-amendment-82",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 ballot-measure slate found on the group’s public home and policy pages during the Oct 19 check. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "No 2026 ballot-measure slate found on the group’s public home and policy pages during the Oct 19 check. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://coloradoconcern.com/public-policy",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -2264,9 +2264,9 @@
     "target_id": "co-amendment-83",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 ballot-measure slate found on the group’s public home and policy pages during the Oct 19 check. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "No 2026 ballot-measure slate found on the group’s public home and policy pages during the Oct 19 check. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://coloradoconcern.com/public-policy",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -2274,9 +2274,9 @@
     "target_id": "co-amendment-84",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 ballot-measure slate found on the group’s public home and policy pages during the Oct 19 check. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "No 2026 ballot-measure slate found on the group’s public home and policy pages during the Oct 19 check. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://coloradoconcern.com/public-policy",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -2284,9 +2284,9 @@
     "target_id": "co-amendment-85",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 ballot-measure slate found on the group’s public home and policy pages during the Oct 19 check. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "No 2026 ballot-measure slate found on the group’s public home and policy pages during the Oct 19 check. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://coloradoconcern.com/public-policy",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -2294,9 +2294,9 @@
     "target_id": "co-amendment-86",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 ballot-measure slate found on the group’s public home and policy pages during the Oct 19 check. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "No 2026 ballot-measure slate found on the group’s public home and policy pages during the Oct 19 check. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://coloradoconcern.com/public-policy",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -2304,9 +2304,9 @@
     "target_id": "co-amendment-87",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 ballot-measure slate found on the group’s public home and policy pages during the Oct 19 check. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "No 2026 ballot-measure slate found on the group’s public home and policy pages during the Oct 19 check. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://coloradoconcern.com/public-policy",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -2314,9 +2314,9 @@
     "target_id": "co-proposition-nn",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 ballot-measure slate found on the group’s public home and policy pages during the Oct 19 check. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "No 2026 ballot-measure slate found on the group’s public home and policy pages during the Oct 19 check. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://coloradoconcern.com/public-policy",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -2324,9 +2324,9 @@
     "target_id": "co-proposition-132",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 ballot-measure slate found on the group’s public home and policy pages during the Oct 19 check. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "No 2026 ballot-measure slate found on the group’s public home and policy pages during the Oct 19 check. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://coloradoconcern.com/public-policy",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -2334,9 +2334,9 @@
     "target_id": "co-proposition-133",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 ballot-measure slate found on the group’s public home and policy pages during the Oct 19 check. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "No 2026 ballot-measure slate found on the group’s public home and policy pages during the Oct 19 check. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://coloradoconcern.com/public-policy",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -2344,9 +2344,9 @@
     "target_id": "co-proposition-134",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 ballot-measure slate found on the group’s public home and policy pages during the Oct 19 check. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "No 2026 ballot-measure slate found on the group’s public home and policy pages during the Oct 19 check. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://coloradoconcern.com/public-policy",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -2354,9 +2354,9 @@
     "target_id": "co-proposition-135",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 ballot-measure slate found on the group’s public home and policy pages during the Oct 19 check. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "No 2026 ballot-measure slate found on the group’s public home and policy pages during the Oct 19 check. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://coloradoconcern.com/public-policy",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -2364,9 +2364,9 @@
     "target_id": "co-proposition-136",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 ballot-measure slate found on the group’s public home and policy pages during the Oct 19 check. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "No 2026 ballot-measure slate found on the group’s public home and policy pages during the Oct 19 check. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://coloradoconcern.com/public-policy",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -2374,9 +2374,9 @@
     "target_id": "co-proposition-137",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 ballot-measure slate found on the group’s public home and policy pages during the Oct 19 check. Checked again on Oct 29, 2026; still no pick on this page.",
+    "why": "No 2026 ballot-measure slate found on the group’s public home and policy pages during the Oct 19 check. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://coloradoconcern.com/public-policy",
-    "date": "2026-10-29",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {

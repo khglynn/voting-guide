@@ -1,0 +1,168 @@
+[
+ {
+  "id": "beverly-hills-usd-board",
+  "state": "CA",
+  "level": "school",
+  "office": "Beverly Hills Unified School District Governing Board",
+  "district": null,
+  "scope_plain": "Voters in the Beverly Hills Unified School District, which covers all of Beverly Hills. Members are elected at large, so you can pick up to two of the five candidates. The two with the most votes win.",
+  "office_explainer": "Five board members set the school district's budget and policies and hire the superintendent.",
+  "why_it_matters": "Two of the board's five seats are up. Board President Judith Manouchehri is running for a second term; board member Rachelle Marcus is not running again, so the other seat is open. The board has been divided over the past year, including a lawsuit over how it chose its vice president.",
+  "vote_for": 2,
+  "incumbent": "Judith Manouchehri and Rachelle Marcus",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Jackie R. Kruger",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Attorney/Parent/Businessowner. A Beverly Hills High School graduate who owns a law firm; she has two children in district schools and one graduate, and has volunteered as a PTA member and room parent.",
+    "own_words": [
+     {
+      "text": "Beverly Hills voters deserve a board that follows its own rules and answers to the community",
+      "is_quote": true,
+      "source": "https://beverlypress.com/2026/07/jackie-kruger-kim-lifschitz-join-bhusd-race/"
+     },
+     {
+      "text": "We spend one and a half to two times as much per kid, and we’re getting worse results.",
+      "is_quote": true,
+      "source": "https://beverlypress.com/2026/10/bhusd-candidates-make-case-to-students-at-district-forum/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "David Cienfuegos",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Attorney/Parent. A managing partner and trial attorney at a personal injury law firm with three children in district schools; he chaired Horace Mann Elementary's Principal's Advisory Council in 2025-26.",
+    "own_words": [
+     {
+      "text": "I’m running because our children only get one chance at an education.",
+      "is_quote": true,
+      "source": "https://beverlypress.com/2026/08/david-cienfuegos-enters-bhusd-board-race/"
+     },
+     {
+      "text": "In TK-8, classrooms should prioritize teachers, books, writing, discussion, creativity and human interaction, not unnecessary dependence on screens",
+      "is_quote": true,
+      "source": "https://beverlypress.com/2026/08/david-cienfuegos-enters-bhusd-board-race/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Kimberly Lifschitz",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Parent. A former paralegal and preschool teacher whose child is a special education student at Horace Mann Elementary; she has served as a room parent and on the PTA executive board.",
+    "own_words": [
+     {
+      "text": "it’s time for BHUSD to get back to school",
+      "is_quote": true,
+      "source": "https://beverlypress.com/2026/07/jackie-kruger-kim-lifschitz-join-bhusd-race/"
+     },
+     {
+      "text": "it’s the students of this district who must be our number one priority.",
+      "is_quote": true,
+      "source": "https://beverlypress.com/2026/07/jackie-kruger-kim-lifschitz-join-bhusd-race/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Jared Gonzales",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Math Teacher. Teaches seventh- and eighth-grade math at Yavneh Hebrew Academy and earlier taught at Harkham Hillel Hebrew Academy in Beverly Hills; he has a master's degree in dispute resolution from USC.",
+    "own_words": [
+     {
+      "text": "I’m fighting to make sure that we have educational expertise on the board for the next four years",
+      "is_quote": true,
+      "source": "https://beverlypress.com/2026/10/gonzales-hopes-to-bring-classroom-experience-to-bhusd/"
+     },
+     {
+      "text": "I know what it takes to get scores up because I’ve done it year in and year out",
+      "is_quote": true,
+      "source": "https://beverlypress.com/2026/10/gonzales-hopes-to-bring-classroom-experience-to-bhusd/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Judith Manouchehri",
+    "party": null,
+    "incumbent": true,
+    "website": "https://judyforbhusd.com/",
+    "website_confidence": "verified",
+    "background": "Ballot designation: School Board President. The board's president, finishing her first term; she graduated from district schools and has three children in them.",
+    "own_words": [
+     {
+      "text": "I am running to continue raising academic standards, strengthening safety, protecting taxpayers, supporting educators, modernizing our schools",
+      "is_quote": true,
+      "source": "https://beverlypress.com/2026/07/judy-manouchehri-enters-bhusd-board-race/"
+     },
+     {
+      "text": "The turnaround for academics is here",
+      "is_quote": true,
+      "source": "https://beverlypress.com/2026/10/bhusd-candidates-make-case-to-students-at-district-forum/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "VoteStack: Beverly Hills Unified, Governing Board Member (from the county's sample ballot data: vote for up to 2, ballot order and designations)",
+    "url": "https://votestack.org/races/ca/los-angeles-county/2026-11-03/beverly-hills-unified-school-district-governing-board-member"
+   },
+   {
+    "name": "California Secretary of State: randomized alphabet for the Nov 3, 2026 ballot (H X K W C P J O Z A L D N S Q B I R Y G V E F M T U)",
+    "url": "https://www.sos.ca.gov/administration/news-releases-and-advisories/2026-news-releases-and-advisories/california-secretary-state-shirley-n-weber-phd-announces-results-randomized-alphabet-drawing-november-3-2026-general-election"
+   },
+   {
+    "name": "Beverly Press: Five candidates set for BHUSD board race (Aug 13, 2026)",
+    "url": "https://beverlypress.com/2026/08/five-candidates-set-for-bhusd-board-race/"
+   },
+   {
+    "name": "Beverly Hills Courier: Kruger and Lifschitz hold BHUSD board kickoff (Sept 3, 2026; five candidates, two seats, filing closed Aug 7)",
+    "url": "https://beverlyhillscourier.com/2026/09/03/kruger-and-lifschitz-hold-bhusd-board-kickoff-event/"
+   },
+   {
+    "name": "City of Beverly Hills: Election Information (BHUSD's Nov 3 election is run by LA County)",
+    "url": "https://www.beverlyhills.org/167/Election-Information"
+   },
+   {
+    "name": "Beverly Press: Gonzales hopes to bring classroom experience to BHUSD (Oct 2, 2026; the board's disagreements and the vice president lawsuit)",
+    "url": "https://beverlypress.com/2026/10/gonzales-hopes-to-bring-classroom-experience-to-bhusd/"
+   },
+   {
+    "name": "Beverly Press: BHUSD candidates make case to students at district forum (Oct 7, 2026)",
+    "url": "https://beverlypress.com/2026/10/bhusd-candidates-make-case-to-students-at-district-forum/"
+   },
+   {
+    "name": "Beverly Press: Lifschitz calls for stronger governance, accountability in Beverly Hills schools (Oct 7, 2026)",
+    "url": "https://beverlypress.com/2026/10/lifschitz-calls-for-stronger-governance-accountability/"
+   },
+   {
+    "name": "Judy Manouchehri for Beverly Hills School Board 2026 (her campaign site)",
+    "url": "https://judyforbhusd.com/"
+   }
+  ],
+  "confidence": "sourced"
+ }
+]

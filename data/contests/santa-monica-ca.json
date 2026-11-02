@@ -1,0 +1,496 @@
+[
+ {
+  "id": "santa-monica-city-council",
+  "state": "CA",
+  "level": "city",
+  "office": "Santa Monica City Council",
+  "district": null,
+  "scope_plain": "All of Santa Monica votes in this race: the council is elected citywide, not by district. You can vote for up to three candidates.",
+  "office_explainer": "One of seven members of the council that oversees Santa Monica's budget, land use, public safety, housing, infrastructure and other city services.",
+  "why_it_matters": "Three of the seven seats are up. Mayor Caroline Torosis and Councilmember Lana Negrete are running again; the third seat's holder, Jesse Zwick, isn't on the ballot. Twelve candidates are running, among them former mayor Phil Brock and two Rent Control Board members, Daniel Ivanov and Ericka Lesley. Issues in the race include the city's finances, downtown, housing, homelessness, public safety and the long-term future of Santa Monica Airport.",
+  "vote_for": 3,
+  "incumbent": "Caroline Torosis and Lana Negrete (both running); Jesse Zwick (not on the ballot)",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "sources": [
+   {
+    "name": "City of Santa Monica: Nov 3, 2026 election (candidates and ballot designations)",
+    "url": "https://www.santamonica.gov/elections/2026-11-03"
+   },
+   {
+    "name": "LA County Registrar: final list of qualified candidates, Nov 3, 2026",
+    "url": "https://content.lavote.gov/docs/rrcc/documents/final-list-of-qualified-candidates-to-appear-on-the-ballot9fcf3b64-1a33-4882-9e17-8cbc3b3c8d76.pdf"
+   },
+   {
+    "name": "California Secretary of State: randomized alphabet for Nov 3, 2026 (ballot order)",
+    "url": "https://www.sos.ca.gov/administration/news-releases-and-advisories/2026-news-releases-and-advisories/california-secretary-state-shirley-n-weber-phd-announces-results-randomized-alphabet-drawing-november-3-2026-general-election"
+   },
+   {
+    "name": "Patch: Santa Monica voter guide 2026",
+    "url": "https://patch.com/california/santamonica/santa-monica-voter-guide-2026-whats-ballot-voting-more"
+   },
+   {
+    "name": "Santa Monica Next: everyone running for election in Santa Monica (Aug 2026)",
+    "url": "https://santamonicanext.org/2026/08/heres-a-list-of-everyone-running-for-election-in-santa-monica/"
+   },
+   {
+    "name": "Santa Monica Next: why these 11 people are running for City Council (questionnaire answers)",
+    "url": "https://santamonicanext.org/2026/06/why-are-these-11-people-running-for-city-council/"
+   }
+  ],
+  "confidence": "verified",
+  "candidates": [
+   {
+    "name": "Wade Kelley",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Singer/Songwriter.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null,
+    "own_words_status": "none_found",
+    "own_words_checked": {
+     "on": "2026-10-31",
+     "where": [
+      "City of Santa Monica candidate page (says no statement was submitted)"
+     ]
+    }
+   },
+   {
+    "name": "Ashley Oelsen",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.vote4ash.com",
+    "website_confidence": "verified",
+    "background": "Ballot designation: Scientist/Commissioner. Scientist who serves on the city's commission for Sustainability, Environmental Justice, and the Environment. Rents her home in Santa Monica and is raising a child here (her official statement).",
+    "own_words": [
+     {
+      "text": "the best decisions are made by bringing people together, listening first, following the facts, and having the courage to change course when the evidence demands it",
+      "is_quote": true,
+      "source": "https://www.santamonica.gov/elections/2026-11-03/candidates/ashley-oelsen"
+     },
+     {
+      "text": "Says she has shown up at City Hall, regulatory hearings and in neighborhoods for a long time, and that she owes no special interests.",
+      "is_quote": false,
+      "source": "https://www.santamonica.gov/elections/2026-11-03/candidates/ashley-oelsen"
+     },
+     {
+      "text": "Campaign site lists three priorities: sustainable safety, sustainable finances and sustainable environment.",
+      "is_quote": false,
+      "source": "https://www.vote4ash.com"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Ericka Lesley",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Rent Control Boardmember. Current Rent Control Board commissioner and longtime community advocate (her official statement).",
+    "own_words": [
+     {
+      "text": "every resident has the opportunity to succeed",
+      "is_quote": true,
+      "source": "https://www.santamonica.gov/elections/2026-11-03/candidates/ericka-lesley"
+     },
+     {
+      "text": "Says she has worked to protect renters, expand affordable housing, support working families and strengthen the local economy, and wants help for small businesses and good-paying jobs.",
+      "is_quote": false,
+      "source": "https://www.santamonica.gov/elections/2026-11-03/candidates/ericka-lesley"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Lindsay Davis",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.daisythevenicehealer.org",
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Yoga Instructor. Also known as \"Daisy the Venice Healer.\" Says she has been part of the community for most of her life and for nearly a decade has run community-led and volunteer-run food forests, healing circles, beach cleanups and mentoring (her official statement).",
+    "own_words": [
+     {
+      "text": "Awakening, Biodiversity, and Fellowships",
+      "is_quote": true,
+      "source": "https://www.santamonica.gov/elections/2026-11-03/candidates/lindsay-davis"
+     },
+     {
+      "text": "Says she wants to restore the environment, strengthen neighborhood bonds and reduce isolation.",
+      "is_quote": false,
+      "source": "https://www.santamonica.gov/elections/2026-11-03/candidates/lindsay-davis"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Lana Negrete",
+    "party": null,
+    "incumbent": true,
+    "website": "https://lananegrete.com",
+    "website_confidence": "verified",
+    "background": "Ballot designation: Councilmember/Businesswoman/Mother. Born and raised in Santa Monica. A sitting councilmember and former mayor seeking reelection; runs her family's music business and a nonprofit that provides musical instruments and lessons to children from lower-income families (her Patch interview).",
+    "own_words": [
+     {
+      "text": "We should measure how many people achieve permanent housing, not simply how many receive services.",
+      "is_quote": true,
+      "source": "https://patch.com/california/santamonica/santa-monica-council-candidate-spotlight-lana-negrete"
+     },
+     {
+      "text": "Says she supports a public park at Santa Monica Airport, paid for without new taxes through an infrastructure financing district and other sources, and that the city should keep challenging state housing mandates.",
+      "is_quote": false,
+      "source": "https://patch.com/california/santamonica/santa-monica-council-candidate-spotlight-lana-negrete"
+     },
+     {
+      "text": "Says spending is the city's bigger budget problem and that she looks at expenditures in terms of return on investment.",
+      "is_quote": false,
+      "source": "https://patch.com/california/santamonica/santa-monica-council-candidate-spotlight-lana-negrete"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Phil Brock",
+    "party": null,
+    "incumbent": false,
+    "website": "https://votebrock.org",
+    "website_confidence": "verified",
+    "background": "Ballot designation: Businessperson/Board Member. Born in Santa Monica and went to its public schools; has owned Santa Monica-based Studio Talent Group, which represents actors, for more than 30 years; served on the City Council from 2020 and was mayor in 2024 (his Patch interview).",
+    "own_words": [
+     {
+      "text": "I've said I will not vote for a new tax or new fees.",
+      "is_quote": true,
+      "source": "https://patch.com/california/santamonica/santa-monica-city-council-candidate-spotlight-phil-brock"
+     },
+     {
+      "text": "Says homelessness policy should be treatment first, that SAMOSHEL and the Downtown Service Center should be closed, and that L.A. County should take responsibility for homeless people who come into the city.",
+      "is_quote": false,
+      "source": "https://patch.com/california/santamonica/santa-monica-city-council-candidate-spotlight-phil-brock"
+     },
+     {
+      "text": "Says Santa Monica Airport should become a park and that downtown should stay low-rise, with new housing built as condominiums where possible.",
+      "is_quote": false,
+      "source": "https://patch.com/california/santamonica/santa-monica-city-council-candidate-spotlight-phil-brock"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Daniel Ivanov",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.electdannyivanov.com/",
+    "website_confidence": "verified",
+    "background": "Ballot designation: Rent Control Board Chair/Attorney. Labor and employment attorney who has lived in Santa Monica about five and a half years; on the Rent Control Board since 2022 and its current chair (his Patch interview). Running for council, not for his board seat.",
+    "own_words": [
+     {
+      "text": "We absolutely need to modernize and streamline our permitting process, particularly by establishing a Local Coastal Program",
+      "is_quote": true,
+      "source": "https://patch.com/california/santamonica/santa-monica-council-candidate-spotlight-danny-ivanov"
+     },
+     {
+      "text": "Says the first priority at Santa Monica Airport is closing it by Dec. 31, 2028, and that what replaces it should be decided after the environmental studies.",
+      "is_quote": false,
+      "source": "https://patch.com/california/santamonica/santa-monica-council-candidate-spotlight-danny-ivanov"
+     },
+     {
+      "text": "Says he is running because affordability is slipping out of reach for his generation, and he wants to make long-term investments to turn that around.",
+      "is_quote": false,
+      "source": "https://santamonicanext.org/2026/06/why-are-these-11-people-running-for-city-council/",
+      "source_label": "Santa Monica Next (candidate questionnaire answers)"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Eli Gill",
+    "party": null,
+    "incumbent": false,
+    "website": "https://eli4sm.com",
+    "website_confidence": "verified",
+    "background": "Ballot designation: Business Operations Manager. Has lived in Santa Monica 22 years; works in operations for a technology company in the insurance sector and previously owned an art gallery in Culver City; first run for City Council (his Patch interview).",
+    "own_words": [
+     {
+      "text": "Not through grand gestures or ideological posturing, but through better management, clearer priorities, and a relentless focus on execution.",
+      "is_quote": true,
+      "source": "https://santamonicanext.org/2026/06/why-are-these-11-people-running-for-city-council/",
+      "source_label": "Santa Monica Next (candidate questionnaire answers)"
+     },
+     {
+      "text": "Says people who repeatedly refuse services in Santa Monica should be moved along, and that Los Angeles, the county and the state should take more responsibility for homelessness.",
+      "is_quote": false,
+      "source": "https://patch.com/california/santamonica/santa-monica-council-candidate-spotlight-eli-gill"
+     },
+     {
+      "text": "Says a park at Santa Monica Airport is a wonderful idea but he is open to other proposals, and that state funding and private philanthropy could help pay for it.",
+      "is_quote": false,
+      "source": "https://patch.com/california/santamonica/santa-monica-council-candidate-spotlight-eli-gill"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Brett Morrow",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Health Official/Commissioner.",
+    "own_words": [
+     {
+      "text": "We need safer and cleaner streets, stronger support for our local businesses, more park space and recreation opportunities",
+      "is_quote": true,
+      "source": "https://santamonicanext.org/2026/06/why-are-these-11-people-running-for-city-council/",
+      "source_label": "Santa Monica Next (candidate questionnaire answers)"
+     },
+     {
+      "text": "Says it is still too expensive to live in Santa Monica for families, workers, students and seniors, and that he would focus on implementation and results.",
+      "is_quote": false,
+      "source": "https://santamonicanext.org/2026/06/why-are-these-11-people-running-for-city-council/",
+      "source_label": "Santa Monica Next (candidate questionnaire answers)"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Derrick Townsend",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Healthcare/Rehabilitation Specialist. Occupational therapist for more than 18 years; New Orleans native who has lived in Santa Monica seven years and works for Kaiser Permanente in Santa Monica (his Patch interview).",
+    "own_words": [
+     {
+      "text": "Fund the basics and the staffing, but when somebody goes through a work program and goes on to live independently, then pay for that success.",
+      "is_quote": true,
+      "source": "https://patch.com/california/santamonica/santa-monica-council-candidate-spotlight-derrick-townsend"
+     },
+     {
+      "text": "Says Santa Monica Airport should stay a hybrid airport with electric aviation and education programs, with no taxpayer money for a new park.",
+      "is_quote": false,
+      "source": "https://patch.com/california/santamonica/santa-monica-council-candidate-spotlight-derrick-townsend"
+     },
+     {
+      "text": "Says he does not agree with concrete protected bike lanes that remove traffic lanes, and that he is against removing R1 zoning.",
+      "is_quote": false,
+      "source": "https://patch.com/california/santamonica/santa-monica-council-candidate-spotlight-derrick-townsend"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Caroline M. Torosis",
+    "party": null,
+    "incumbent": true,
+    "website": "https://torosisforsantamonica.com",
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Mayor/Attorney. Santa Monica's current mayor and a sitting councilmember; an attorney who is policy director for Los Angeles County Supervisor Holly Mitchell and has worked for the county for 14 years; lives in Sunset Park (her Patch interview).",
+    "own_words": [
+     {
+      "text": "I believe additional housing should be concentrated downtown and along commercial boulevards such as Wilshire and Lincoln.",
+      "is_quote": true,
+      "source": "https://patch.com/california/santamonica/santa-monica-council-candidate-spotlight-caroline-torosis"
+     },
+     {
+      "text": "Says Santa Monica Airport should become a great park, paid for without direct taxpayer money through financing districts, philanthropy and possibly a conservancy.",
+      "is_quote": false,
+      "source": "https://patch.com/california/santamonica/santa-monica-council-candidate-spotlight-caroline-torosis"
+     },
+     {
+      "text": "Says the city has brought its homelessness system of care in-house and is working toward closing SAMOSHEL while developing alternative shelter locations.",
+      "is_quote": false,
+      "source": "https://patch.com/california/santamonica/santa-monica-council-candidate-spotlight-caroline-torosis"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Doug Trussler",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Businessman/Coach/Parent.",
+    "own_words": [
+     {
+      "text": "I am running with a specific mission: to fix Santa Monica’s finances so that this city can once again be what drew me here in the first place",
+      "is_quote": true,
+      "source": "https://santamonicanext.org/2026/06/why-are-these-11-people-running-for-city-council/",
+      "source_label": "Santa Monica Next (candidate questionnaire answers)"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ]
+ },
+ {
+  "id": "santa-monica-rent-board",
+  "state": "CA",
+  "level": "city",
+  "office": "Santa Monica Rent Control Board",
+  "district": null,
+  "scope_plain": "All of Santa Monica votes in this race: the board is elected citywide. You can vote for up to three candidates, whether you rent, own or neither.",
+  "office_explainer": "One of five elected commissioners who run Santa Monica's rent control law, which voters passed in 1979. The board sets the yearly limit on rent increases for most apartments built before April 1979, keeps the records on those units, and decides disputes between landlords and tenants.",
+  "why_it_matters": "Three of the five seats are up and five candidates are running. Kurt Gonska, the board's vice chair, is running again. The board's chair, Daniel Ivanov, and member Ericka Lesley are running for City Council instead. Measures GG, RR and VV on this same ballot would change the city's rent control and eviction rules.",
+  "vote_for": 3,
+  "incumbent": "Kurt Gonska (running)",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "sources": [
+   {
+    "name": "City of Santa Monica: Nov 3, 2026 election (candidates and ballot designations)",
+    "url": "https://www.santamonica.gov/elections/2026-11-03"
+   },
+   {
+    "name": "LA County Registrar: final list of qualified candidates, Nov 3, 2026",
+    "url": "https://content.lavote.gov/docs/rrcc/documents/final-list-of-qualified-candidates-to-appear-on-the-ballot9fcf3b64-1a33-4882-9e17-8cbc3b3c8d76.pdf"
+   },
+   {
+    "name": "California Secretary of State: randomized alphabet for Nov 3, 2026 (ballot order)",
+    "url": "https://www.sos.ca.gov/administration/news-releases-and-advisories/2026-news-releases-and-advisories/california-secretary-state-shirley-n-weber-phd-announces-results-randomized-alphabet-drawing-november-3-2026-general-election"
+   },
+   {
+    "name": "Patch: Santa Monica voter guide 2026",
+    "url": "https://patch.com/california/santamonica/santa-monica-voter-guide-2026-whats-ballot-voting-more"
+   },
+   {
+    "name": "Santa Monica Next: everyone running for election in Santa Monica (Aug 2026)",
+    "url": "https://santamonicanext.org/2026/08/heres-a-list-of-everyone-running-for-election-in-santa-monica/"
+   },
+   {
+    "name": "Santa Monica Next: the five Rent Control Board candidates on their top issues",
+    "url": "https://santamonicanext.org/2026/06/heres-what-the-five-candidates-for-rent-control-board-said-when-asked-what-issues-define-their-campaign/"
+   },
+   {
+    "name": "City of Santa Monica: Measure GG, with the Charter's Rent Control Board section (its \"first five (5) Commissioners\")",
+    "url": "https://www.santamonica.gov/elections/2026-11-02/measures/measure-rent-control-administrative"
+   }
+  ],
+  "confidence": "verified",
+  "candidates": [
+   {
+    "name": "Sue Himmelrich",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Tenants' Rights Attorney. Former Santa Monica mayor (Santa Monica Next).",
+    "own_words": [
+     {
+      "text": "Where I have discretion, I will use it to protect our neighbors living in rent-controlled units from displacement and abuse of their rights to the maximum extent possible",
+      "is_quote": true,
+      "source": "https://santamonicanext.org/2026/06/heres-what-the-five-candidates-for-rent-control-board-said-when-asked-what-issues-define-their-campaign/",
+      "source_label": "Santa Monica Next (candidate questionnaire answers)"
+     },
+     {
+      "text": "Says the top issue of her campaign is making sure the board is made up of the most qualified and committed rent-control and tenants' rights advocates, and that she would also press the City Council and the State to protect rent-controlled housing.",
+      "is_quote": false,
+      "source": "https://santamonicanext.org/2026/06/heres-what-the-five-candidates-for-rent-control-board-said-when-asked-what-issues-define-their-campaign/",
+      "source_label": "Santa Monica Next (candidate questionnaire answers)"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Kurt Gonska",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Rent Control Commissioner. Sitting Rent Control Board member and its vice chair (Santa Monica Next).",
+    "own_words": [
+     {
+      "text": "revamp how the office receives rent decrease petitions (and other documents and information) from the public to streamline their experience and reduce barriers to entry",
+      "is_quote": true,
+      "source": "https://santamonicanext.org/2026/06/heres-what-the-five-candidates-for-rent-control-board-said-when-asked-what-issues-define-their-campaign/",
+      "source_label": "Santa Monica Next (candidate questionnaire answers)"
+     },
+     {
+      "text": "Says he supports the charter amendment measures the board proposed on commissioner term limits, registration fee financing, petition decision timelines and family members moving into rent-controlled units.",
+      "is_quote": false,
+      "source": "https://santamonicanext.org/2026/06/heres-what-the-five-candidates-for-rent-control-board-said-when-asked-what-issues-define-their-campaign/",
+      "source_label": "Santa Monica Next (candidate questionnaire answers)"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Soledad Marcial",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Community Volunteer.",
+    "own_words": [
+     {
+      "text": "The main and most important issue is to maintain policies in place to safeguard the people who are under rent control units.",
+      "is_quote": true,
+      "source": "https://santamonicanext.org/2026/06/heres-what-the-five-candidates-for-rent-control-board-said-when-asked-what-issues-define-their-campaign/",
+      "source_label": "Santa Monica Next (candidate questionnaire answers)"
+     },
+     {
+      "text": "Says she would adopt new policies that benefit renters and would be impartial on cases brought to the board, for landlords as well as tenants.",
+      "is_quote": false,
+      "source": "https://santamonicanext.org/2026/06/heres-what-the-five-candidates-for-rent-control-board-said-when-asked-what-issues-define-their-campaign/",
+      "source_label": "Santa Monica Next (candidate questionnaire answers)"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Zoë Muntaner",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Small Business Owner.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Heather Thomason",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: TV/Screenwriter.",
+    "own_words": [
+     {
+      "text": "My top concern is protecting our rent-controlled housing stock from demolition",
+      "is_quote": true,
+      "source": "https://santamonicanext.org/2026/06/heres-what-the-five-candidates-for-rent-control-board-said-when-asked-what-issues-define-their-campaign/",
+      "source_label": "Santa Monica Next (candidate questionnaire answers)"
+     },
+     {
+      "text": "Says she would use the board's authority to send tenants informational mailers about state laws such as SB 79, and has a particular interest in protecting aging residents from displacement.",
+      "is_quote": false,
+      "source": "https://santamonicanext.org/2026/06/heres-what-the-five-candidates-for-rent-control-board-said-when-asked-what-issues-define-their-campaign/",
+      "source_label": "Santa Monica Next (candidate questionnaire answers)"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ]
+ }
+]

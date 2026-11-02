@@ -2119,7 +2119,7 @@ const touchAt = async (page, sel) => {
 for (const [zip, label, id, btn, href, full] of [
   ['78702', 'Austin', 'not_registered', 'Register for next time', /^https:\/\/vote\.gov\/register\/texas$/, /the Texas deadline was October 5/],
   // Oct 28 (west-mail-25): LA's vote center button opens LA County's own locator, not the statewide form.
-  ['90004', 'Los Angeles', 'not_registered', 'Find a vote center', /^https:\/\/locator\.lavote\.net\/locations\/vc$/, /RegisterToVote\.ca\.gov/],
+  ['90004', 'Los Angeles', 'not_registered', 'Find a vote center', /^https:\/\/locator\.lavote\.gov\/locations\/vc\?culture=en$/, /RegisterToVote\.ca\.gov/],
 ]) {
   const { ctx, page } = await newPage();
   await openBallot(page, zip);
@@ -2341,6 +2341,10 @@ const LOOKED = thinPlaces(true);
     // On the day after the data's newest date: the e2e's usual Oct 19 comes before the re-check's rows, and a
     // request "sent" before the data's date reads as answered (model/coverage.ts), which no real device sees.
     const after = new Date(Date.parse(`${thin.p.checked}T00:00:00Z`) + 864e5).toISOString().slice(0, 10);
+    // Two days or less before Election Day the card says he may not finish in time (model/coverage.ts, late). Rows
+    // re-checked on Nov 1 put this visit on Nov 2, so from then on the late words are the right ones.
+    const elect = INDEX_JSON.states[thin.p.state]?.election_date;
+    const late = !!elect && Math.round((Date.parse(`${elect}T00:00:00Z`) - Date.parse(`${after}T00:00:00Z`)) / 864e5) <= 2;
     await page.goto(`${BASE}/?today=${after}`);
     await page.waitForSelector('#zip');
     await page.fill('#zip', thin.zip);
@@ -2357,7 +2361,8 @@ const LOOKED = thinPlaces(true);
     check(`Thin place (${name}): one tap posts "Gather endorsements", the place and ZIP, nothing typed`, posts.list.length === 1 && FORM_IDS.every((k) => p.has(k)) && p.get('entry.90887649') === `Gather endorsements: ${name}` && p.get('entry.628621310') === `${thin.p.label}, ${thin.zip}`
       && p.get('entry.780704302').startsWith(`Please gather local endorsements for ${name} (one-tap from the page)\n\nSent along:\nPage: First page\n`) && p.get('entry.2040687555') === '', p ? p.toString() : 'no post');
     check(`Thin place (${name}): the one tap never carries the save link’s hash, any contact, or any query but the test date`, !/zz9pick|v1~|#/.test(postText(p)) && [...postText(p).matchAll(/\?([^\s)]*)/g)].every((m) => /^today=\d{4}-\d{2}-\d{2}$/.test(m[1])), postText(p).replace(/\n/g, ' / '));
-    check(`Thin place (${name}): asked, the card says Kevin is looking, that he may not find any, never minutes`, (await text(page, '#door .cov-card .cov-lead')) === `Request sent. Kevin is looking for ${name}’s local picks.` && (await text(page, '#door .cov-card .cov-here')) === 'You asked today. It usually takes about a day. He may not find any, since some groups don’t endorse.' && !/minute/.test(await text(page, '#door')), await text(page, '#door .cov-card'));
+    check(`Thin place (${name}): asked, the card says Kevin is looking, ${late ? 'that he may not finish before you vote' : 'that he may not find any'}, never minutes`, (await text(page, '#door .cov-card .cov-lead')) === `Request sent. Kevin is looking for ${name}’s local picks.`
+      && (await text(page, '#door .cov-card .cov-here')) === (late ? 'You asked today. He may not finish before you vote.' : 'You asked today. It usually takes about a day. He may not find any, since some groups don’t endorse.') && !/minute/.test(await text(page, '#door')), await text(page, '#door .cov-card'));
     await page.evaluate(() => history.replaceState(history.state, '', `${location.pathname}${location.search}`));
     await plainSetup(page);
     await page.waitForSelector('#plan', { timeout: 15000 });
@@ -4094,6 +4099,29 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
     await page.waitForSelector('#plan', { timeout: 15000 });
     check('St. Louis 63120: after a reload it stays the statewide ballot, still not "your city is in"', !(await page.$('#i-stlcity-recorder-deeds')) && /^Your city’s races aren’t in the guide yet\./.test(await partsText(page, '#r-restore .cov-card')) && !(await page.$('.addr-moved')), await partsText(page, '#r-restore .cov-card'));
     noErrors(page, 'St. Louis 63120 moved ballot');
+    await ctx.close();
+  }
+  {
+    // Review of #71, Nov 1: 90810 is Long Beach's and Los Angeles's, and Long Beach marks its Carson side. Not
+    // sure which, the card names all three and never says "your city is in", though Los Angeles doesn't mark it.
+    // Review of #80: the card's promise holds on the ballot too, where a Los Angeles address opens Los Angeles.
+    const { ctx, page } = await newPage();
+    await route(page, { answer: { result: { addressMatches: [{ matchedAddress: 'TEST FIVE, LOS ANGELES, CA, 90810', geographies: {
+      States: [{ STATE: '06' }], 'Incorporated Places': [{ BASENAME: 'Los Angeles' }], '119th Congressional Districts': [{ BASENAME: '44' }],
+      Counties: [{ GEOID: '06037', STATE: '06', COUNTY: '037', NAME: 'Los Angeles County', BASENAME: 'Los Angeles' }] } }] } } });
+    await openZip(page, '90810');
+    await page.waitForSelector('[data-fk="cp-outside"]', { timeout: 15000 });
+    check('Long Beach 90810: the ZIP asks between Long Beach, Los Angeles and Carson', !!(await page.$('[data-fk="cp-long-beach-ca"]')) && !!(await page.$('[data-fk="cp-los-angeles-ca"]')) && /^Carson/.test(await partsText(page, '[data-fk="cp-outside"]')), await text(page, '.choose'));
+    await tap(page, '[data-fk="cp-unsure"]');
+    await page.waitForSelector('#door .cov-card', { timeout: 15000 });
+    const card = await partsText(page, '#door .cov-card');
+    check('Long Beach 90810: not sure, the card names all three and offers the address, never "your city is in"', /^90810 is split between (Long Beach, Los Angeles|Los Angeles, Long Beach) and Carson\. Here now: California’s statewide races, the same for all, with picks from \d+ of \d+ sources\. Live in (Long Beach or Los Angeles|Los Angeles or Long Beach)\? Use your address and we’ll open your city’s ballot\. Use my address/.test(card) && !/guide now|Ask Kevin/.test(card), card);
+    await throughSetup(page);
+    check('Long Beach 90810: not sure, the ballot is the statewide races, its card offering the address', !(await page.$('#i-la-city-mayor')) && !!(await page.$('#r-restore .cov-card [data-fk="cov-addr"]')), await partsText(page, '#r-restore .cov-card'));
+    await lookUp(page, '#r-restore [data-fk="cov-addr"]');
+    await page.waitForSelector('#i-la-city-mayor', { timeout: 15000 });
+    check('Long Beach 90810: a Los Angeles address from the ballot’s card opens Los Angeles’s ballot and says why', /^Your address is in [^.]*Los Angeles[^.]*, so here is its ballot\./.test(await text(page, '.addrbox .addr-moved')) && !(await page.$('#i-lbccd-area-5, #r-restore [data-fk="cov-addr"]')), `${await text(page, '.addrbox .addr-moved')} | ${await text(page, '.mast .place')}`);
+    noErrors(page, 'Long Beach 90810 not sure');
     await ctx.close();
   }
 }

@@ -1,0 +1,125 @@
+[
+ {
+  "id": "la-daily-news-eb",
+  "name": "Los Angeles Daily News / Southern California News Group editorial board",
+  "type": "publication",
+  "lean": "neutral",
+  "lean_basis": "AllSides rates the Los Angeles Daily News Center (independent review, initial rating July 2020; low or initial confidence as of Sept. 2026). Its editorials come from the Southern California News Group board it shares with the OC Register, whose news AllSides rates Lean Right. Rating source: https://www.allsides.com/news-source/los-angeles-daily-news-media-bias.",
+  "geography": [
+   "long-beach-ca"
+  ],
+  "guide_url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "default_on": true,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "lean_basis_kind": "outside_rating"
+ },
+ {
+  "id": "knock-la",
+  "name": "Knock LA",
+  "type": "publication",
+  "lean": "left",
+  "lean_basis": "Its stated mission or political identity includes: \"We are dedicated to giving a voice to the left and uplifting marginalized communities\". Source: https://knock-la.com/about-us/.",
+  "geography": [
+   "long-beach-ca"
+  ],
+  "guide_url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "default_on": true,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
+ },
+ {
+  "id": "la-forward",
+  "name": "LA Forward (LA Forward Action Fund voter guide)",
+  "type": "advocacy",
+  "lean": "left",
+  "lean_basis": "Its stated mission or political identity includes: \"Los Angeles Progressive Voter Guide\". Source: https://laforwardguide.org/.",
+  "geography": [
+   "long-beach-ca"
+  ],
+  "guide_url": "https://laforwardguide.org/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
+ },
+ {
+  "id": "lacdp",
+  "name": "Los Angeles County Democratic Party",
+  "type": "party",
+  "lean": "left",
+  "lean_basis": "Official county Democratic Party organization. Its candidates page lists its Nov 2026 candidate endorsements and a table of positions on statewide and local measures (read Oct 17, 2026).",
+  "geography": [
+   "long-beach-ca"
+  ],
+  "guide_url": "https://www.lacdp.org/candidates",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "party": "Democratic",
+  "lean_basis_kind": "party"
+ },
+ {
+  "id": "la-county-gop",
+  "name": "Republican Party of Los Angeles County",
+  "type": "party",
+  "lean": "right",
+  "lean_basis": "Official county Republican Party organization. Its Nov 3, 2026 candidate picks and its positions on LA city and county measures are published in an address-lookup tool linked from lagop.org (read Oct 17, 2026). It marks some candidate picks as recommended rather than formally endorsed.",
+  "geography": [
+   "long-beach-ca"
+  ],
+  "guide_url": "https://lagop-endorsement-lookup.vercel.app/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "party": "Republican",
+  "lean_basis_kind": "party",
+  "short": "LA County Republican Party"
+ },
+ {
+  "id": "la-fed",
+  "name": "Los Angeles County Federation of Labor, AFL-CIO",
+  "type": "labor",
+  "lean": "lean_left",
+  "lean_basis": "Federation of about 300 unions in LA County that says 'We empower workers to organize and take collective action to win better wages and respect in the workplace' (https://thelafed.org/about/). No outside rating found; lean reflects its stated mission.",
+  "geography": [
+   "long-beach-ca"
+  ],
+  "guide_url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
+ },
+ {
+  "id": "lbcc-faculty-association",
+  "name": "Long Beach City College Faculty Association",
+  "short": "LBCC Faculty Association",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: the union of Long Beach City College's full-time faculty, which says it “represents the Long Beach Community College District’s 325+ full-time faculty members” and belongs to the California Teachers Association's community college affiliate and the National Education Association (https://longbeachcca.org/2026/06/26/long-beach-city-college-faculty-association-lbccfa-endorses-huy-nguyen-for-the-long-beach-community-college-district-board-of-trustees-area-5/). Its own words name no political side, and no outside rating was found.",
+  "geography": [
+   "long-beach-ca"
+  ],
+  "guide_url": "https://longbeachcca.org/2026/06/26/long-beach-city-college-faculty-association-lbccfa-endorses-huy-nguyen-for-the-long-beach-community-college-district-board-of-trustees-area-5/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false
+ },
+ {
+  "id": "unite-here-local-11",
+  "name": "UNITE HERE Local 11",
+  "short": "UNITE HERE Local 11",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says it “represents over 32,000 workers employed in hotels, restaurants, airports, sports arenas, and convention centers throughout Southern California and Arizona” (https://www.unitehere11.org/ca-voter-guide-nov-2026/). Its own words name no political side, and no outside rating was found.",
+  "geography": [
+   "long-beach-ca"
+  ],
+  "guide_url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ }
+]

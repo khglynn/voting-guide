@@ -1388,8 +1388,8 @@
   "state": "CA",
   "level": "federal",
   "office": "U.S. Representative",
-  "district": "CD-36 (Westside and South Bay: Mar Vista, Westchester, Venice, Santa Monica, Beverly Hills, Torrance, Palos Verdes)",
-  "scope_plain": "Voters in the 36th Congressional District. Covers Mar Vista and Westchester on Kevin's list. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "district": "CD-36 (Westside and South Bay: Mar Vista, Westchester, Venice, Santa Monica, Beverly Hills, Culver City west of the 405, Torrance, Palos Verdes)",
+  "scope_plain": "Voters in the 36th Congressional District. In the City of LA that includes Mar Vista and Westchester. It also covers all of Santa Monica and all of Beverly Hills. About 5,900 Culver City residents, west of the 405, are in it too. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
   "why_it_matters": "A six-term incumbent and vice chair of the House Democratic Caucus against a Republican with no public campaign presence. Lieu won the June primary with 61%.",
   "vote_for": 1,
@@ -1465,6 +1465,10 @@
    {
     "name": "City Hall Pass: CA-36",
     "url": "https://cityhallpass.com/election-2026/races/congress-36"
+   },
+   {
+    "name": "Statewide Database: which cities each 2025 congressional district holds (AB 604 city splits report)",
+    "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
    }
   ],
   "confidence": "verified"
@@ -1488,8 +1492,8 @@
     "name": "Sydney Kamlager-Dove",
     "party": "Democratic",
     "incumbent": true,
-    "website": "https://www.sydneykamlagerdove.com",
-    "website_confidence": "unverified",
+    "website": "https://sydneykamlager.com",
+    "website_confidence": "sourced",
     "background": "In Congress since 2023; earlier LACCD trustee, State Assembly and State Senate. USC graduate. Foreign Affairs and Judiciary committees; Whip of the Congressional Black Caucus. First in June with 55.2%.",
     "own_words": [
      {
@@ -1560,8 +1564,8 @@
   "state": "CA",
   "level": "federal",
   "office": "U.S. Representative",
-  "district": "CD-30 (Hollywood, the Hollywood Hills, Fairfax, Los Feliz, Silver Lake, Burbank, Glendale, Pasadena)",
-  "scope_plain": "Voters in the 30th Congressional District. Covers Hollywood, the Hollywood Hills and the Fairfax District on Kevin's list. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "district": "CD-30 (Hollywood, the Hollywood Hills, Fairfax, Los Feliz, Silver Lake, Burbank, Glendale, part of Pasadena, the Sand Canyon edge of Santa Clarita)",
+  "scope_plain": "Voters in the 30th Congressional District. In the City of LA that includes Hollywood, the Hollywood Hills and the Fairfax District. It also covers all of Glendale, all of Burbank and all of West Hollywood. About 9,000 people on Pasadena’s west side and about 8,600 near Sand Canyon in Santa Clarita are in it too. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
   "why_it_matters": "A first-term Democrat who succeeded Adam Schiff, against a Republican attorney. Friedman won 53% in a seven-way June primary.",
   "vote_for": 1,
@@ -1627,6 +1631,10 @@
    {
     "name": "City Hall Pass: CA-30",
     "url": "https://cityhallpass.com/election-2026/races/congress-30"
+   },
+   {
+    "name": "Statewide Database: which cities each 2025 congressional district holds (AB 604 city splits report)",
+    "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
    }
   ],
   "confidence": "verified"
@@ -1636,8 +1644,8 @@
   "state": "CA",
   "level": "state",
   "office": "State Senator",
-  "district": "SD-24 (Westside and Hollywood: Pacific Palisades, Brentwood, Venice, Mar Vista, Westchester, Hollywood, West Hollywood, Santa Monica, Beverly Hills, the South Bay coast)",
-  "scope_plain": "Voters in the 24th State Senate District. Covers the Westside and Hollywood neighborhoods on Kevin's list. Only even-numbered Senate districts vote in 2026. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Two Democrats.",
+  "district": "SD-24 (Westside and Hollywood: Pacific Palisades, Brentwood, Venice, Mar Vista, Westchester, Hollywood, West Hollywood, Santa Monica, Beverly Hills, the South Bay coast, Torrance)",
+  "scope_plain": "Voters in the 24th State Senate District. In the City of LA that includes the Westside and Hollywood. It also includes all of Malibu, all of Santa Monica, all of Beverly Hills, all of West Hollywood and all of Torrance. Only even-numbered Senate districts vote in 2026. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Two Democrats.",
   "office_explainer": "One of 40 state senators. Writes California laws and passes the state budget with the Assembly. Four-year term.",
   "why_it_matters": "Open seat (Ben Allen is termed out) and the most expensive legislative race in LA. Two Democrats: a West Hollywood councilmember backed by labor and the housing groups, and a media consultant who has put $1.85 million of his own money in and is backed by Pelosi, Hillary Clinton and the police union. Outside groups have spent millions against Erickson.",
   "vote_for": 1,
@@ -1713,6 +1721,10 @@
    {
     "name": "City Hall Pass: SD-24",
     "url": "https://cityhallpass.com/election-2026/races/senate-24"
+   },
+   {
+    "name": "Citizens Redistricting Commission 2021: cities in each district (place report)",
+    "url": "https://sdmg.senate.ca.gov/sites/sdmg.senate.ca.gov/files/2021/crc_2021_place_report_v2.pdf"
    }
   ],
   "confidence": "verified"
@@ -1885,7 +1897,7 @@
   "level": "state",
   "office": "Member of the State Assembly",
   "district": "AD-51 (Hollywood, the Hollywood Hills, Fairfax, Westwood, Bel Air, Atwater Village, West Hollywood, Santa Monica, Beverly Hills)",
-  "scope_plain": "Voters in the 51st Assembly District. Covers Hollywood, the Hollywood Hills and the Fairfax District on Kevin's list. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Two Democrats.",
+  "scope_plain": "Voters in the 51st Assembly District. In the City of LA that includes Hollywood, the Hollywood Hills and the Fairfax District. It also includes all of Santa Monica, all of West Hollywood and all of Beverly Hills. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Two Democrats.",
   "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
   "why_it_matters": "The Assembly Democratic Caucus chair against a democratic socialist challenger. Zbur won 54% in June. The clearest left-versus-center contrast on housing (he voted no on SB 79; Hernandez wants to repeal Costa-Hawkins) and on AB 715, Zbur's antisemitism-in-schools law.",
   "vote_for": 1,
@@ -1961,6 +1973,14 @@
    {
     "name": "City Hall Pass: AD-51",
     "url": "https://cityhallpass.com/election-2026/races/assembly-51"
+   },
+   {
+    "name": "Senate Office of Demographics: Assembly districts by ZIP code (2021 lines)",
+    "url": "https://sdmg.senate.ca.gov/system/files/2024-12/2025-state-assembly-zip-codes-zip-code-order.pdf"
+   },
+   {
+    "name": "Census TIGERweb: 2026 State Legislative Districts, Lower (every part of Santa Monica is in AD-51)",
+    "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer/58"
    }
   ],
   "confidence": "verified"
@@ -3324,10 +3344,10 @@
   "state": "CA",
   "level": "federal",
   "office": "U.S. Representative",
-  "district": "CD-28 (San Gabriel Valley; only about 150 City of LA residents, at the edge near Highland Park)",
-  "scope_plain": "Voters in the 28th Congressional District (new map approved with Prop 50). Only about 154 City of LA residents live in it, at the city’s northeast edge near Highland Park. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "district": "CD-28 (San Gabriel Valley, including most of Pasadena; in the City of LA only about 150 residents near Highland Park)",
+  "scope_plain": "Voters in the 28th Congressional District (new map approved with Prop 50). It covers most of Pasadena (about 130,000 of its 139,000 residents) and much of the San Gabriel Valley. Only about 154 City of LA residents live in it, at the city’s northeast edge near Highland Park. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
-  "why_it_matters": "A long-time incumbent against the Arcadia Republican she beat in 2024. Very few City of LA voters will see this race.",
+  "why_it_matters": "A long-time incumbent against the Arcadia Republican she beat in 2024. Most Pasadena voters see it; very few City of LA voters do.",
   "vote_for": 1,
   "incumbent": "Judy Chu",
   "open_seat": false,
@@ -3676,7 +3696,7 @@
   "state": "CA",
   "level": "federal",
   "office": "U.S. Representative",
-  "district": "CD-44 (San Pedro, Wilmington, Harbor City, Harbor Gateway South; plus Carson, South Gate, Lynwood)",
+  "district": "CD-44 (San Pedro, Wilmington, Harbor City, Harbor Gateway South; plus north and west Long Beach, Carson, South Gate, Lynwood)",
   "scope_plain": "Voters in the 44th Congressional District (new map approved with Prop 50). In the City of LA that is San Pedro, Wilmington, Harbor City and Harbor Gateway South, about 169,000 residents. It also covers Carson, South Gate, Lynwood, Huntington Park, Paramount and part of Long Beach. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
   "why_it_matters": "The incumbent Democrat against a Republican nurse practitioner. Barragán got 77.0% in June.",
@@ -4341,7 +4361,7 @@
   "state": "CA",
   "level": "state",
   "office": "Member of the State Assembly",
-  "district": "AD-65 (Wilmington, Harbor City, Harbor Gateway, much of San Pedro, Watts; plus Compton, Carson)",
+  "district": "AD-65 (Wilmington, Harbor City, Harbor Gateway, much of San Pedro, Watts; plus North Long Beach, Compton, Carson)",
   "scope_plain": "Voters in the 65th Assembly District. In the City of LA that is Wilmington, Harbor City, Harbor Gateway, much of San Pedro, the Port and Watts. It also covers Compton, Carson and part of Long Beach. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
   "why_it_matters": "Open seat: Mike Gipson is termed out and running for the Board of Equalization. A Compton school board member faces a Republican Long Beach teacher. Davis got 46.3% in June.",
@@ -4503,8 +4523,8 @@
   "state": "CA",
   "level": "federal",
   "office": "U.S. Representative",
-  "district": "CD-41 (north edge of Fullerton; plus La Habra, Brea, Whittier, Downey, Bellflower)",
-  "scope_plain": "Voters in the 41st Congressional District (new map approved with Prop 50). About 17,000 Fullerton residents live in it, at the north end of the city next to La Habra and Brea. Most of the district is in southeast LA County. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "district": "CD-41 (north edge of Fullerton and a slice of east Long Beach; plus La Habra, Brea, Whittier, Downey, Bellflower)",
+  "scope_plain": "Voters in the 41st Congressional District (new map approved with Prop 50). About 17,000 Fullerton residents live in it, at the north end of the city next to La Habra and Brea. About 30,000 Long Beach residents live in it too, in east Long Beach next to Lakewood. Most of the district is in southeast LA County. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
   "why_it_matters": "Prop 50 redrew this seat into a Democratic-leaning district. A Democrat who has been in Congress since 2003 (most recently for the old 38th) faces a Republican plumbing contractor. The current CD-41 member, Ken Calvert, is running in CD-40.",
   "vote_for": 1,

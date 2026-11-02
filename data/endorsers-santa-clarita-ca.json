@@ -72,7 +72,7 @@
   "geography": [
    "santa-clarita-ca"
   ],
-  "guide_url": "https://www.reformcalifornia.org/voter-guides/san-diego",
+  "guide_url": "https://www.reformcalifornia.org/voter-guides-list",
   "default_on": false,
   "endorses_candidates": true,
   "endorses_measures": true,
@@ -146,13 +146,13 @@
   "short": "The Signal",
   "type": "publication",
   "lean": null,
-  "lean_basis": "Not rated: we couldn't look up an AllSides or Ad Fontes rating for it, and its site refused our reader.",
+  "lean_basis": "Not rated: we couldn't look up an AllSides or Ad Fontes rating for it, and its site refuses our reader.",
   "geography": [
    "santa-clarita-ca"
   ],
   "guide_url": "https://signalscv.com/2026/10/our-view-endorsements-for-city-council-ad-40/",
   "blocked": true,
-  "blocked_note": "Its site refused our reader, so we couldn't read its endorsements. Its page may open in your browser.",
+  "blocked_note": "Its site refuses our reader. Its picks here are from its Oct 24 editorial on City Council and Assembly District 40. We couldn't open its recap of all its picks.",
   "default_on": true,
   "endorses_candidates": true,
   "endorses_measures": false

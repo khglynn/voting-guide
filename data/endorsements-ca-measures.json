@@ -2,7 +2,7 @@
   {
     "endorser_id": "la-times-eb",
     "target_id": "ca-prop-1",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The LA Times published a 2026 voter guide with explainers for each proposition but no editorial board recommendations.",
     "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
@@ -12,7 +12,7 @@
   {
     "endorser_id": "la-times-eb",
     "target_id": "ca-prop-2",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The LA Times published a 2026 voter guide with explainers for each proposition but no editorial board recommendations.",
     "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
@@ -22,7 +22,7 @@
   {
     "endorser_id": "la-times-eb",
     "target_id": "ca-prop-3",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The LA Times published a 2026 voter guide with explainers for each proposition but no editorial board recommendations.",
     "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
@@ -32,7 +32,7 @@
   {
     "endorser_id": "la-times-eb",
     "target_id": "ca-prop-4",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The LA Times published a 2026 voter guide with explainers for each proposition but no editorial board recommendations.",
     "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
@@ -42,7 +42,7 @@
   {
     "endorser_id": "la-times-eb",
     "target_id": "ca-prop-5",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The LA Times published a 2026 voter guide with explainers for each proposition but no editorial board recommendations.",
     "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
@@ -52,7 +52,7 @@
   {
     "endorser_id": "la-times-eb",
     "target_id": "ca-prop-37",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The LA Times published a 2026 voter guide with explainers for each proposition but no editorial board recommendations.",
     "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
@@ -62,7 +62,7 @@
   {
     "endorser_id": "la-times-eb",
     "target_id": "ca-prop-38",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The LA Times published a 2026 voter guide with explainers for each proposition but no editorial board recommendations.",
     "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
@@ -72,7 +72,7 @@
   {
     "endorser_id": "la-times-eb",
     "target_id": "ca-prop-39",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The LA Times published a 2026 voter guide with explainers for each proposition but no editorial board recommendations.",
     "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
@@ -82,7 +82,7 @@
   {
     "endorser_id": "la-times-eb",
     "target_id": "ca-prop-40",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The LA Times published a 2026 voter guide with explainers for each proposition but no editorial board recommendations.",
     "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
@@ -92,7 +92,7 @@
   {
     "endorser_id": "la-times-eb",
     "target_id": "ca-prop-41",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The LA Times published a 2026 voter guide with explainers for each proposition but no editorial board recommendations.",
     "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
@@ -102,7 +102,7 @@
   {
     "endorser_id": "la-times-eb",
     "target_id": "ca-prop-42",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The LA Times published a 2026 voter guide with explainers for each proposition but no editorial board recommendations.",
     "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
@@ -112,7 +112,7 @@
   {
     "endorser_id": "la-times-eb",
     "target_id": "ca-prop-43",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The LA Times published a 2026 voter guide with explainers for each proposition but no editorial board recommendations.",
     "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
@@ -122,7 +122,7 @@
   {
     "endorser_id": "la-times-eb",
     "target_id": "ca-prop-44",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The LA Times published a 2026 voter guide with explainers for each proposition but no editorial board recommendations.",
     "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
@@ -132,7 +132,7 @@
   {
     "endorser_id": "la-times-eb",
     "target_id": "ca-prop-45",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The LA Times published a 2026 voter guide with explainers for each proposition but no editorial board recommendations.",
     "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
@@ -1422,7 +1422,7 @@
   {
     "endorser_id": "calchamber",
     "target_id": "ca-prop-3",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Board's Sept 2026 release says its positions 'cover 10 of the 14 proposals'; this measure is not among them.",
     "url": "https://advocacy.calchamber.com/news/2026/09/calchamber-board-of-directors-announces-positions-on-november-ballot-measures",
@@ -1442,7 +1442,7 @@
   {
     "endorser_id": "calchamber",
     "target_id": "ca-prop-5",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Board's Sept 2026 release says its positions 'cover 10 of the 14 proposals'; this measure is not among them.",
     "url": "https://advocacy.calchamber.com/news/2026/09/calchamber-board-of-directors-announces-positions-on-november-ballot-measures",
@@ -1462,7 +1462,7 @@
   {
     "endorser_id": "calchamber",
     "target_id": "ca-prop-38",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Board's Sept 2026 release says its positions 'cover 10 of the 14 proposals'; this measure is not among them.",
     "url": "https://advocacy.calchamber.com/news/2026/09/calchamber-board-of-directors-announces-positions-on-november-ballot-measures",
@@ -1472,7 +1472,7 @@
   {
     "endorser_id": "calchamber",
     "target_id": "ca-prop-39",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Board's Sept 2026 release says its positions 'cover 10 of the 14 proposals'; this measure is not among them.",
     "url": "https://advocacy.calchamber.com/news/2026/09/calchamber-board-of-directors-announces-positions-on-november-ballot-measures",

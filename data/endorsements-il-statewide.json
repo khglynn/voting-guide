@@ -552,7 +552,7 @@
   {
     "endorser_id": "il-republican-party",
     "target_id": "il-appellate-1st-hoffman-vacancy",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican candidate filed for the Hoffman vacancy; Rice is unopposed.",
     "url": "https://news.wttw.com/elections/voters-guide/2026-general/races/il-appellate-court",
@@ -722,7 +722,7 @@
   {
     "endorser_id": "chicago-federation-of-labor",
     "target_id": "il-appellate-1st-retention-lampkin",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The CFL slate recommends 'yes' on 58 of the 59 Cook County Circuit Court retention judges on the ballot (it does not list Ursula Walowski) but does not list the Appellate Court retention question.",
     "url": "https://chicagolabor.org/wp-content/uploads/CFL-2026-General-Election-Endorsements.pdf",

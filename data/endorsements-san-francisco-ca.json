@@ -162,11 +162,11 @@
   {
     "endorser_id": "sf-chronicle-eb",
     "target_id": "sf-supervisor-8",
-    "status": "not_found",
-    "choice": null,
-    "why": "The Chronicle's endorsement page still says 'Coming Soon' for this one as of its Oct 18, 2026 update. Checked again on Nov 1, 2026; still no pick on this page.",
-    "url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
-    "date": "2026-11-01",
+    "status": "endorsed",
+    "choice": "Gary McCoy",
+    "why": "The board says District 8 needs a supervisor who can turn ambition into workable policy, and McCoy is best equipped to do that.",
+    "url": "https://www.sfchronicle.com/opinion/editorials/article/endorsement-san-francisco-district-8-22480586.php",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {

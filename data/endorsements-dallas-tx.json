@@ -362,11 +362,11 @@
   {
     "endorser_id": "dallas-morning-news-eb",
     "target_id": "tx-dallas-prop-a",
-    "status": "not_found",
-    "choice": null,
-    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026. Checked again on Nov 1, 2026; still no pick on this page.",
-    "url": "https://www.dallasnews.com/opinion/we-recommend/",
-    "date": "2026-11-01",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "The board recommends voters approve the $443 million public safety bond, saying the projects are serious and immediate needs and the bond won't raise the tax rate.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/dfw-texas-election-candidate-recommendations-22480028.php",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {

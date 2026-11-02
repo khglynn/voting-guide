@@ -72,11 +72,11 @@
   {
     "endorser_id": "denver-post-eb",
     "target_id": "co-us-house-1",
-    "status": "not_found",
-    "choice": null,
-    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026. Checked again on Nov 1, 2026; still no pick on this page.",
-    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
-    "date": "2026-11-01",
+    "status": "endorsed",
+    "choice": "Melat Kiros",
+    "why": "The Denver Post editorial board lists \"Vote for Melat Kiros for Congressional District 1\" among its 2026 endorsements.",
+    "url": "https://www.denverpost.com/2026/10/30/last-minute-colorado-voter-guide-election-ballot/",
+    "date": "2026-10-30",
     "confidence": "verified"
   },
   {

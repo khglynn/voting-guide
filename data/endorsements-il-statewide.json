@@ -632,12 +632,12 @@
   {
     "endorser_id": "il-afl-cio",
     "target_id": "il-appellate-1st-hoffman-vacancy",
-    "status": "not_found",
-    "choice": null,
-    "why": "The AFL-CIO's statewide list covers executive and legislative races; no judicial positions found. Checked again on Nov 1, 2026; still no pick on this page.",
+    "status": "endorsed",
+    "choice": "Judith C. Rice",
+    "why": "Listed under Judicial on the Illinois AFL-CIO's list of the candidates it endorses for the Nov. 3 general election.",
     "url": "https://labortribune.com/illinois-afl-cio-2026-general-election-endorsements/",
-    "date": "2026-11-01",
-    "confidence": "unverified"
+    "date": "2026-10-12",
+    "confidence": "verified"
   },
   {
     "endorser_id": "il-afl-cio",

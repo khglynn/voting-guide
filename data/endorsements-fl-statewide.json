@@ -2313,42 +2313,42 @@
   {
     "endorser_id": "fl-realtors",
     "target_id": "fl-governor",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Nov 1, 2026; still no pick on this page.",
-    "url": "https://www.floridarealtors.org/",
-    "date": "2026-11-01",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Byron Donalds (Lt. Gov.: Bryan Avila)",
+    "why": "Listed for governor on Florida Realtors PAC's endorsements page.",
+    "url": "https://www.floridarealtors.org/advocacy/pac/endorsements",
+    "date": "2026-10-21",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fl-realtors",
     "target_id": "fl-attorney-general",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Nov 1, 2026; still no pick on this page.",
-    "url": "https://www.floridarealtors.org/",
-    "date": "2026-11-01",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "James Uthmeier",
+    "why": "Listed for attorney general on Florida Realtors PAC's endorsements page.",
+    "url": "https://www.floridarealtors.org/advocacy/pac/endorsements",
+    "date": "2026-10-21",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fl-realtors",
     "target_id": "fl-cfo",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Nov 1, 2026; still no pick on this page.",
-    "url": "https://www.floridarealtors.org/",
-    "date": "2026-11-01",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Blaise Ingoglia",
+    "why": "Listed for chief financial officer on Florida Realtors PAC's endorsements page.",
+    "url": "https://www.floridarealtors.org/advocacy/pac/endorsements",
+    "date": "2026-10-21",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fl-realtors",
     "target_id": "fl-agriculture-commissioner",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Nov 1, 2026; still no pick on this page.",
-    "url": "https://www.floridarealtors.org/",
-    "date": "2026-11-01",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Wilton Simpson",
+    "why": "Listed for commissioner of agriculture on Florida Realtors PAC's endorsements page.",
+    "url": "https://www.floridarealtors.org/advocacy/pac/endorsements",
+    "date": "2026-10-21",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fl-realtors",

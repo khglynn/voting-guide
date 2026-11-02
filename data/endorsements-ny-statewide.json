@@ -432,21 +432,21 @@
   {
     "endorser_id": "pp-empire-state-votes",
     "target_id": "ny-attorney-general",
-    "status": "not_found",
-    "choice": null,
-    "why": "No Planned Parenthood Empire State Votes endorsement found in this race. Checked again on Nov 1, 2026; still no pick on this page.",
-    "url": "https://www.plannedparenthoodaction.org/planned-parenthood-empire-state-votes",
-    "date": "2026-11-01",
-    "confidence": "sourced"
+    "status": "endorsed",
+    "choice": "Letitia A. James",
+    "why": "Listed for attorney general on the Planned Parenthood Empire State Votes PAC's 2026 endorsement list.",
+    "url": "https://www.plannedparenthoodaction.org/planned-parenthood-empire-state-votes/endorsements",
+    "date": "2026-10-30",
+    "confidence": "verified"
   },
   {
     "endorser_id": "pp-empire-state-votes",
     "target_id": "ny-comptroller",
-    "status": "not_found",
-    "choice": null,
-    "why": "No Planned Parenthood Empire State Votes endorsement found in this race. Checked again on Nov 1, 2026; still no pick on this page.",
-    "url": "https://www.plannedparenthoodaction.org/planned-parenthood-empire-state-votes",
-    "date": "2026-11-01",
-    "confidence": "sourced"
+    "status": "endorsed",
+    "choice": "Thomas P. DiNapoli",
+    "why": "Listed for comptroller on the Planned Parenthood Empire State Votes PAC's 2026 endorsement list.",
+    "url": "https://www.plannedparenthoodaction.org/planned-parenthood-empire-state-votes/endorsements",
+    "date": "2026-10-30",
+    "confidence": "verified"
   }
 ]

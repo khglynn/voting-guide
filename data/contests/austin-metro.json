@@ -5006,6 +5006,23 @@
         ],
         "lwv_status": "declined",
         "lwv_url": "https://austinvotersguide.org/"
+      },
+      {
+        "name": "Tish Flores",
+        "party": "Write-in",
+        "incumbent": false,
+        "website": "https://www.tishflores.com",
+        "website_confidence": "verified",
+        "background": "Declared write-in candidate. Write-in names are not printed on the ballot; you must write the name in.",
+        "own_words": [
+          {
+            "text": "Wants 24/7 mobile outreach teams and specialty diversion courts.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://austinvotersguide.org/"
       }
     ],
     "sources": [

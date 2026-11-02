@@ -229,6 +229,10 @@
       "url": "https://apps.wilcotx.gov/elections/voterlookup"
     }
   ],
+  "lookups": {
+    "early_in_person": "https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Early%20Voting%20Dashboard.html",
+    "election_day": "https://www.wilcotx.gov/DocumentCenter/View/22255/Notice-of-General-Election-Williamson-County"
+  },
   "by_county": [
     {
       "county": "Williamson",

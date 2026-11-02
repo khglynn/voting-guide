@@ -169,6 +169,10 @@
       "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
     }
   ],
+  "lookups": {
+    "early_in_person": "https://updates.electionlink.net/widgets/haystx/2026-11-03/Early%20Voting%20Dashboard.html",
+    "election_day": "https://www.hayscountytx.gov/DocumentCenter/View/5053/Vote-Centers-20261103-General-Election"
+  },
   "by_county": [
     {
       "county": "Hays",

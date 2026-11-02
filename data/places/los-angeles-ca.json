@@ -5,6 +5,9 @@
  "counties": [
   "Los Angeles"
  ],
+ "county_fips": [
+  "06037"
+ ],
  "county_election_office": {
   "name": "Los Angeles County Registrar-Recorder/County Clerk (LAVote.gov), 12400 Imperial Hwy, Norwalk",
   "url": "https://lavote.gov",

@@ -783,6 +783,9 @@ function roundTrip(name, stCode, places, mutate) {
   }).map(([s, ids]) => ids.join('+') || s);
   check('stats: every ballot the index can open counts as its state code, which has a statewide ballot of its own', opens.length > Object.keys(INDEX.states).length && odd.length === 0, JSON.stringify(odd));
   check('stats: the places one ZIP alone leads to (Ballwin, Clayton, Webster Groves) are in the index, and count as their state', ['ballwin-mo', 'clayton-mo', 'webster-groves-mo'].every((id) => Object.values(INDEX.zips).filter((ids) => ids.includes(id)).length === 1 && ballotOf('MO', [id]).st === 'MO'));
+  // Torrance is wholly in Assembly District 66, so the shared LA race is on its ballot outright (its scope says "all of Torrance"), not a "may apply".
+  const torr = ballotOf('CA', ['torrance-ca']);
+  check('torrance: Assembly District 66 is on the ballot, not a maybe', torr.order.includes('ca-assembly-66') && !torr.mayApply.has('ca-assembly-66'));
   // The referring site, as Vercel's script may see it once startStats() has shadowed document.referrer.
   check('stats: referrerOrigin keeps the origin and drops the path and the query', stats.referrerOrigin('https://referrer.example/search?zip=78704&q=a@b.co#x') === 'https://referrer.example' && stats.referrerOrigin('http://news.example.org:8080/a/b') === 'http://news.example.org:8080' && stats.referrerOrigin('https://me:pw@referrer.example/') === 'https://referrer.example');
   check('stats: referrerOrigin gives nothing for no referrer or one that isn’t a web address', ['', 'not an address', 'about:blank', 'android-app://com.google.android.gm/', 'javascript:alert(1)', 'file:///etc/hosts', null, undefined].every((r) => stats.referrerOrigin(r) === ''));

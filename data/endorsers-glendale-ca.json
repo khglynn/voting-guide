@@ -124,5 +124,20 @@
   "default_on": false,
   "endorses_candidates": true,
   "endorses_measures": true
+ },
+ {
+  "id": "knock-la",
+  "name": "Knock LA",
+  "type": "publication",
+  "lean": "left",
+  "lean_basis": "Its stated mission or political identity includes: \"We are dedicated to giving a voice to the left and uplifting marginalized communities\". Source: https://knock-la.com/about-us/.",
+  "geography": [
+   "glendale-ca"
+  ],
+  "guide_url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "default_on": true,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
  }
 ]

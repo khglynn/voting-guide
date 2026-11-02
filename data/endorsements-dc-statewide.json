@@ -2,7 +2,7 @@
   {
     "endorser_id": "washington-post-eb",
     "target_id": "dc-mayor",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Post's editorial board has published no endorsement in this race. Its editorial page from Sept. 26 to Oct. 17, 2026 has no DC or Maryland endorsements.",
     "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
@@ -12,7 +12,7 @@
   {
     "endorser_id": "washington-post-eb",
     "target_id": "dc-council-chair",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Post's editorial board has published no endorsement in this race. Its editorial page from Sept. 26 to Oct. 17, 2026 has no DC or Maryland endorsements.",
     "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
@@ -22,7 +22,7 @@
   {
     "endorser_id": "washington-post-eb",
     "target_id": "dc-council-at-large",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Post's editorial board has published no endorsement in this race. Its editorial page from Sept. 26 to Oct. 17, 2026 has no DC or Maryland endorsements.",
     "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
@@ -32,7 +32,7 @@
   {
     "endorser_id": "washington-post-eb",
     "target_id": "dc-delegate",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Post's editorial board has published no endorsement in this race. Its editorial page from Sept. 26 to Oct. 17, 2026 has no DC or Maryland endorsements.",
     "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
@@ -42,7 +42,7 @@
   {
     "endorser_id": "washington-post-eb",
     "target_id": "dc-attorney-general",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Post's editorial board has published no endorsement in this race. Its editorial page from Sept. 26 to Oct. 17, 2026 has no DC or Maryland endorsements.",
     "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
@@ -52,7 +52,7 @@
   {
     "endorser_id": "washington-post-eb",
     "target_id": "dc-shadow-senator",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Post's editorial board has published no endorsement in this race. Its editorial page from Sept. 26 to Oct. 17, 2026 has no DC or Maryland endorsements.",
     "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
@@ -62,7 +62,7 @@
   {
     "endorser_id": "washington-post-eb",
     "target_id": "dc-shadow-representative",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Post's editorial board has published no endorsement in this race. Its editorial page from Sept. 26 to Oct. 17, 2026 has no DC or Maryland endorsements.",
     "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
@@ -72,7 +72,7 @@
   {
     "endorser_id": "washington-post-eb",
     "target_id": "dc-initiative-86",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Post's editorial board has published no endorsement in this race. Its editorial page from Sept. 26 to Oct. 17, 2026 has no DC or Maryland endorsements.",
     "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
@@ -402,7 +402,7 @@
   {
     "endorser_id": "dc-republican-party",
     "target_id": "dc-mayor",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The party has no mayoral nominee; the Republican mayoral primary line was write-in only and no one qualified.",
     "url": "https://dcgop.com/2026/06/18/dc-republican-party-celebrates-largest-candidate-slate-in-decades-as-nominees-advance-to-general-election/",
@@ -492,7 +492,7 @@
   {
     "endorser_id": "dc-statehood-green-party",
     "target_id": "dc-council-chair",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The party fielded no candidate in this race.",
     "url": "https://statehoodgreensofdc.org/",
@@ -522,7 +522,7 @@
   {
     "endorser_id": "dc-statehood-green-party",
     "target_id": "dc-attorney-general",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The party fielded no candidate in this race.",
     "url": "https://statehoodgreensofdc.org/",
@@ -532,7 +532,7 @@
   {
     "endorser_id": "dc-statehood-green-party",
     "target_id": "dc-shadow-senator",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The party fielded no candidate in this race.",
     "url": "https://statehoodgreensofdc.org/",
@@ -542,7 +542,7 @@
   {
     "endorser_id": "dc-statehood-green-party",
     "target_id": "dc-shadow-representative",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The party fielded no candidate in this race.",
     "url": "https://statehoodgreensofdc.org/",
@@ -952,9 +952,9 @@
   {
     "endorser_id": "dc-police-union",
     "target_id": "dc-initiative-86",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The union does not take positions on ballot measures of this kind.",
+    "why": "No union position on this measure found.",
     "url": "https://www.dcpoliceunion.com/",
     "date": "2026-10-16",
     "confidence": "sourced"

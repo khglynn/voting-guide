@@ -672,7 +672,7 @@
   {
     "endorser_id": "nfib-georgia-pac",
     "target_id": "ga-us-senate",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not included in NFIB Georgia PAC's Oct 15 statewide slate.",
     "url": "https://www.nfib.com/news/news/nfib-georgia-pac-endorses-candidates-for-statewide-office-general-assembly/",
@@ -682,7 +682,7 @@
   {
     "endorser_id": "nfib-georgia-pac",
     "target_id": "ga-governor",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not included in NFIB Georgia PAC's Oct 15 statewide slate.",
     "url": "https://www.nfib.com/news/news/nfib-georgia-pac-endorses-candidates-for-statewide-office-general-assembly/",
@@ -722,7 +722,7 @@
   {
     "endorser_id": "nfib-georgia-pac",
     "target_id": "ga-school-superintendent",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not included in NFIB Georgia PAC's Oct 15 statewide slate.",
     "url": "https://www.nfib.com/news/news/nfib-georgia-pac-endorses-candidates-for-statewide-office-general-assembly/",
@@ -762,7 +762,7 @@
   {
     "endorser_id": "nfib-georgia-pac",
     "target_id": "ga-psc-district-3",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not included in NFIB Georgia PAC's Oct 15 statewide slate.",
     "url": "https://www.nfib.com/news/news/nfib-georgia-pac-endorses-candidates-for-statewide-office-general-assembly/",
@@ -772,7 +772,7 @@
   {
     "endorser_id": "nfib-georgia-pac",
     "target_id": "ga-psc-district-5",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not included in NFIB Georgia PAC's Oct 15 statewide slate.",
     "url": "https://www.nfib.com/news/news/nfib-georgia-pac-endorses-candidates-for-statewide-office-general-assembly/",
@@ -812,7 +812,7 @@
   {
     "endorser_id": "sierra-club-georgia",
     "target_id": "ga-secretary-of-state",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not on the Sierra Club Georgia general election slate (last updated Oct 16).",
     "url": "https://www.sierraclub.org/georgia/2026Endorsements",
@@ -832,7 +832,7 @@
   {
     "endorser_id": "sierra-club-georgia",
     "target_id": "ga-school-superintendent",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not on the Sierra Club Georgia general election slate (last updated Oct 16).",
     "url": "https://www.sierraclub.org/georgia/2026Endorsements",
@@ -852,7 +852,7 @@
   {
     "endorser_id": "sierra-club-georgia",
     "target_id": "ga-insurance-commissioner",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not on the Sierra Club Georgia general election slate (last updated Oct 16).",
     "url": "https://www.sierraclub.org/georgia/2026Endorsements",
@@ -862,7 +862,7 @@
   {
     "endorser_id": "sierra-club-georgia",
     "target_id": "ga-labor-commissioner",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not on the Sierra Club Georgia general election slate (last updated Oct 16).",
     "url": "https://www.sierraclub.org/georgia/2026Endorsements",
@@ -1002,7 +1002,7 @@
   {
     "endorser_id": "georgia-equality-pac",
     "target_id": "ga-us-senate",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not on the Georgia Equality PAC general election slate.",
     "url": "https://georgiaequalitypac.org/2026-election-endorsements/",
@@ -1092,7 +1092,7 @@
   {
     "endorser_id": "georgia-equality-pac",
     "target_id": "ga-psc-district-3",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not on the Georgia Equality PAC general election slate.",
     "url": "https://georgiaequalitypac.org/2026-election-endorsements/",
@@ -1102,7 +1102,7 @@
   {
     "endorser_id": "georgia-equality-pac",
     "target_id": "ga-psc-district-5",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not on the Georgia Equality PAC general election slate.",
     "url": "https://georgiaequalitypac.org/2026-election-endorsements/",

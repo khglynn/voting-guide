@@ -62,7 +62,7 @@
   {
     "endorser_id": "co-springs-gazette-eb",
     "target_id": "co-us-senate",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Gazette's Oct. 12 full ballot slate recommends in only one statewide candidate race (attorney general). This race is not listed.",
     "url": "https://gazette.com/2026/10/12/gazette-editorial-board-recommendations-nov-3-ballot/",
@@ -72,7 +72,7 @@
   {
     "endorser_id": "co-springs-gazette-eb",
     "target_id": "co-governor",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Gazette's Oct. 12 full ballot slate recommends in only one statewide candidate race (attorney general). This race is not listed.",
     "url": "https://gazette.com/2026/10/12/gazette-editorial-board-recommendations-nov-3-ballot/",
@@ -82,7 +82,7 @@
   {
     "endorser_id": "co-springs-gazette-eb",
     "target_id": "co-secretary-of-state",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Gazette's Oct. 12 full ballot slate recommends in only one statewide candidate race (attorney general). This race is not listed.",
     "url": "https://gazette.com/2026/10/12/gazette-editorial-board-recommendations-nov-3-ballot/",
@@ -92,7 +92,7 @@
   {
     "endorser_id": "co-springs-gazette-eb",
     "target_id": "co-treasurer",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Gazette's Oct. 12 full ballot slate recommends in only one statewide candidate race (attorney general). This race is not listed.",
     "url": "https://gazette.com/2026/10/12/gazette-editorial-board-recommendations-nov-3-ballot/",
@@ -112,7 +112,7 @@
   {
     "endorser_id": "denver-gazette-eb",
     "target_id": "co-us-senate",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Denver Gazette's Oct. 12 full ballot slate recommends in only one statewide candidate race (attorney general). This race is not listed.",
     "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
@@ -122,7 +122,7 @@
   {
     "endorser_id": "denver-gazette-eb",
     "target_id": "co-governor",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Denver Gazette's Oct. 12 full ballot slate recommends in only one statewide candidate race (attorney general). This race is not listed.",
     "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
@@ -132,7 +132,7 @@
   {
     "endorser_id": "denver-gazette-eb",
     "target_id": "co-secretary-of-state",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Denver Gazette's Oct. 12 full ballot slate recommends in only one statewide candidate race (attorney general). This race is not listed.",
     "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
@@ -142,7 +142,7 @@
   {
     "endorser_id": "denver-gazette-eb",
     "target_id": "co-treasurer",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Denver Gazette's Oct. 12 full ballot slate recommends in only one statewide candidate race (attorney general). This race is not listed.",
     "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
@@ -392,7 +392,7 @@
   {
     "endorser_id": "co-afl-cio",
     "target_id": "co-us-senate",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The AFL-CIO's 2026 slate (Aug. 19, unchanged when re-read Oct. 17) lists governor, the other statewide offices and Congress but makes no U.S. Senate pick.",
     "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
@@ -492,7 +492,7 @@
   {
     "endorser_id": "conservation-colorado",
     "target_id": "co-us-senate",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not on the group's 2026 endorsement page, which covers statewide, legislative and county races; it made no U.S. Senate pick.",
     "url": "https://conservationco.org/resources/endorsements/",
@@ -542,7 +542,7 @@
   {
     "endorser_id": "planned-parenthood-votes-co",
     "target_id": "co-us-senate",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not on the group's 'full 2026 endorsement slate'; it made no U.S. Senate pick.",
     "url": "https://www.plannedparenthoodaction.org/planned-parenthood-votes-colorado/blog-copy-2/planned-parenthood-votes-colorado-announces-full-2026-endorsement-slate",
@@ -582,9 +582,9 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "co-secretary-of-state",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The NRA-PVF Colorado grades page does not grade this race, so it made no pick.",
+    "why": "The NRA-PVF Colorado grades page does not grade this race.",
     "url": "https://www.nrapvf.org/grades/colorado",
     "date": null,
     "confidence": "verified"
@@ -592,9 +592,9 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "co-treasurer",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The NRA-PVF Colorado grades page does not grade this race, so it made no pick.",
+    "why": "The NRA-PVF Colorado grades page does not grade this race.",
     "url": "https://www.nrapvf.org/grades/colorado",
     "date": null,
     "confidence": "verified"
@@ -652,7 +652,7 @@
   {
     "endorser_id": "colorado-chamber-pac",
     "target_id": "co-us-senate",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Chamber PAC's general-election endorsements cover state legislative candidates only.",
     "url": "https://cochamber.com/2026/07/10/colorado-chamber-announces-general-election-endorsements/",
@@ -662,7 +662,7 @@
   {
     "endorser_id": "colorado-chamber-pac",
     "target_id": "co-governor",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Chamber PAC's general-election endorsements cover state legislative candidates only.",
     "url": "https://cochamber.com/2026/07/10/colorado-chamber-announces-general-election-endorsements/",
@@ -672,7 +672,7 @@
   {
     "endorser_id": "colorado-chamber-pac",
     "target_id": "co-attorney-general",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Chamber PAC's general-election endorsements cover state legislative candidates only.",
     "url": "https://cochamber.com/2026/07/10/colorado-chamber-announces-general-election-endorsements/",
@@ -682,7 +682,7 @@
   {
     "endorser_id": "colorado-chamber-pac",
     "target_id": "co-secretary-of-state",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Chamber PAC's general-election endorsements cover state legislative candidates only.",
     "url": "https://cochamber.com/2026/07/10/colorado-chamber-announces-general-election-endorsements/",
@@ -692,7 +692,7 @@
   {
     "endorser_id": "colorado-chamber-pac",
     "target_id": "co-treasurer",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Chamber PAC's general-election endorsements cover state legislative candidates only.",
     "url": "https://cochamber.com/2026/07/10/colorado-chamber-announces-general-election-endorsements/",

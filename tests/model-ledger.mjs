@@ -1013,10 +1013,13 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
   {
     const at = (state, place, countyId) => ({ matched: '', state, county: null, countyId, countyName: null, place, cd: null, upper: null, lower: null, zip: null });
     const on = (here, x) => JSON.stringify(geo.ballotFor(INDEX, here, x));
-    check('address on a ballot: the state’s races never open a place without county codes (Portland reaches past Multnomah)', on([], at('OR', 'Portland', '41067')) === 'null' && on([], at('TX', 'Austin', '48453')) === 'null', on([], at('OR', 'Portland', '41067')));
+    check('address on a ballot: the state’s races never open a place without county codes (Portland reaches past Multnomah)', on([], at('OR', 'Portland', '41067')) === 'null' && on([], at('TX', 'Round Rock', '48453')) === 'null', on([], at('OR', 'Portland', '41067')));
+    // Nov 1: Austin has county codes now, so the state's races open the Austin page of the address's own county.
+    check('address on a ballot: Austin on the state’s races opens its own county’s page (Travis, Williamson, Hays)', on([], at('TX', 'Austin', '48453')) === JSON.stringify({ to: ['austin-tx'], out: false }) && on([], at('TX', 'Austin', '48491')) === JSON.stringify({ to: ['austin-williamson-tx'], out: false }) && on([], at('TX', 'Austin', '48209')) === JSON.stringify({ to: ['austin-hays-tx'], out: false }), on([], at('TX', 'Austin', '48491')));
+    check('address on a ballot: on Travis’s Austin page, a Williamson or Hays address moves to its own county’s page, a Travis address stays', on(['austin-tx'], at('TX', 'Austin', '48491')) === JSON.stringify({ to: ['austin-williamson-tx'], out: true }) && on(['austin-tx'], at('TX', 'Austin', '48209')) === JSON.stringify({ to: ['austin-hays-tx'], out: true }) && on(['austin-tx'], at('TX', 'Austin', '48453')) === 'null', on(['austin-tx'], at('TX', 'Austin', '48491')));
     check('address on a ballot: Aurora and Denver narrow to Aurora', on(['aurora-co', 'denver-co'], at('CO', 'Aurora', '08005')) === JSON.stringify({ to: ['aurora-co'], out: false }), on(['aurora-co', 'denver-co'], at('CO', 'Aurora', '08005')));
     check('address on a ballot: Denver’s, with an Aurora address in Arapahoe County, moves to Aurora', on(['denver-co'], at('CO', 'Aurora', '08005')) === JSON.stringify({ to: ['aurora-co'], out: true }), on(['denver-co'], at('CO', 'Aurora', '08005')));
-    check('address on a ballot: one place, its own address, stays (no county code rules nothing out)', on(['austin-tx'], at('TX', 'Austin', '48491')) === 'null' && on(['denver-co'], at('CO', 'Denver', '08031')) === 'null');
+    check('address on a ballot: one place, its own address, stays (no county code rules nothing out)', on(['round-rock-tx'], at('TX', 'Round Rock', '48453')) === 'null' && on(['denver-co'], at('CO', 'Denver', '08031')) === 'null');
     // The review of #80: the split card ("90810 is split between Long Beach, Los Angeles and Carson") tells a voter
     // on the state's races to use their address, and promises their city's ballot. Every place on such a ZIP keeps it.
     check('address on a ballot: 90810’s statewide races open Los Angeles for a Los Angeles address', on([], at('CA', 'Los Angeles', '06037')) === JSON.stringify({ to: ['los-angeles-ca'], out: false }), on([], at('CA', 'Los Angeles', '06037')));
@@ -1068,7 +1071,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const before = st.encodeShare(au, b);
     b.setupDone = true;
     check('step 2: finishing it never changes the save link', st.encodeShare(au, b) === before);
-    check('first page: the city count counts DC\'s wards and New York City\'s boroughs once', views.mast.cityCount(INDEX) === Object.keys(INDEX.places).length - (Object.keys(INDEX.places).filter((id) => id.startsWith('dc-ward-')).length - 1) - (Object.keys(INDEX.places).filter((id) => id.startsWith('nyc-')).length - 1), String(views.mast.cityCount(INDEX)));
+    check('first page: the city count counts DC\'s wards, New York City\'s boroughs and Austin\'s county pages once', views.mast.cityCount(INDEX) === Object.keys(INDEX.places).length - (Object.keys(INDEX.places).filter((id) => id.startsWith('dc-ward-')).length - 1) - (Object.keys(INDEX.places).filter((id) => id.startsWith('nyc-')).length - 1) - Object.keys(INDEX.places).filter((id) => /^austin-(williamson|hays)-tx$/.test(id)).length, String(views.mast.cityCount(INDEX)));
     check('step 2: the place line reads like the mock-up', views.setup.placeLine(au) === 'Austin, Texas' && views.setup.placeLine(open('DC', ['dc-ward-1'])) === 'Ward 1, Washington, DC' && views.setup.placeLine(open('NY', ['nyc-brooklyn-ny'])) === 'Brooklyn, New York' && views.setup.placeLine(open('WA', [])) === 'Washington');
 
     // Round 3 (Oct 20): the fill switch's words, the first page before a ZIP, and the parties it offers.
@@ -2191,6 +2194,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('coverage: index.json’s source counts match the ballot the app builds, every place and state', off.length === 0, off.slice(0, 4).join(' | '));
     check('coverage: a place with a local source that picks is never thin', Object.values(INDEX.places).every((p) => p.local_with_picks === 0 || !mc.isThin(p)));
     check('coverage: Chicago isn’t thin', !mc.isThin(INDEX.places['chicago-il']), JSON.stringify(INDEX.places['chicago-il']));
+    check('coverage: Austin’s Williamson and Hays pages aren’t thin either: the city-wide sources name them', ['austin-williamson-tx', 'austin-hays-tx'].every((id) => !mc.isThin(INDEX.places[id]) && INDEX.places[id].local_with_picks > 0), JSON.stringify([INDEX.places['austin-williamson-tx'], INDEX.places['austin-hays-tx']].map((p) => [p.local_with_picks, p.local_races_with_picks, p.local_races])));
     // Codex, Oct 26: the Pensacola News Journal is Pensacola's own paper, so it counts as one of its local
     // sources (5, none with picks); Ballwin's three are the Post-Dispatch (one pick), LWV Metro STL and STLPR.
     const pn = INDEX.places['pensacola-fl'], bw = INDEX.places['ballwin-mo'];

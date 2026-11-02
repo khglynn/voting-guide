@@ -2,6 +2,9 @@
   "id": "austin-tx",
   "label": "Austin",
   "state": "TX",
+  "county_fips": [
+    "48453"
+  ],
   "counties": [
     "Travis",
     "Williamson (far north Austin)",
@@ -75,7 +78,7 @@
     "78758",
     "78759"
   ],
-  "zip_caveats": "ZIPs do not map to ballots. Kevin's 78702 is split between Council Districts 1 and 3 and between AISD trustee districts; all of it is HD-51, CD-37, Commissioner Pct 4 and JP/Constable 4, but confirm with the Travis County voter lookup. 78717, 78728, 78729 and 78750 are partly in Williamson County (Williamson voters get a Williamson ballot: Wilco county judge, clerk, Round Rock or Leander ISD). 78737 and 78739 touch Hays County. 78745 to 78749 and 78735 are split between Council Districts 5 and 8. 78704 is split among Districts 3, 5 and 9. 78731, 78746 and 78733 reach into Eanes or Lake Travis ISD, which have no race on this ballot. Congressional lines were redrawn in 2025: central Austin is CD-37, east and southeast Travis is CD-27 or CD-10, and far west and northwest Travis is CD-11; check your registration card or the voter lookup.",
+  "zip_caveats": "ZIPs do not map to ballots. Kevin's 78702 is split between Council Districts 1 and 3 and between AISD trustee districts; all of it is HD-51, CD-37, Commissioner Pct 4 and JP/Constable 4, but confirm with the Travis County voter lookup. 78717, 78728, 78729 and 78750 are partly in Williamson County (Williamson voters get a Williamson ballot: Wilco county judge, clerk, Round Rock or Leander ISD). 78737 and 78739 touch Hays County (Hays voters get a Hays ballot). Those six ZIPs offer you a choice of Austin pages; typing your address picks the right one. 78745 to 78749 and 78735 are split between Council Districts 5 and 8. 78704 is split among Districts 3, 5 and 9. 78731, 78746 and 78733 reach into Eanes or Lake Travis ISD, which have no race on this ballot. Congressional lines were redrawn in 2025: central Austin is CD-37, east and southeast Travis is CD-27 or CD-10, and far west and northwest Travis is CD-11; check your registration card or the voter lookup.",
   "contest_ids": [
     "tx-us-senate",
     "tx-governor",
@@ -199,7 +202,7 @@
   ],
   "heads_up": [
     {
-      "text": "Austin reaches into Williamson and Hays counties. If you live in the Williamson County part (ZIPs such as 78717, 78728, 78729 and 78750) or the Hays County part (such as 78737 and 78739), the Travis County races on this page (county offices, Travis judges and justices of the peace, the appraisal board) are not on your ballot. Your own county's sample ballot shows your races: Williamson at apps.wilcotx.gov/elections/voterlookup, Hays at mapps.hayscountytx.gov/election/index.cfm.",
+      "text": "This page is for the Travis County part of Austin. Austin also reaches into Williamson County (parts of ZIPs 78717, 78728, 78729 and 78750, and a sliver of 78727 and 78759) and Hays County (parts of 78737 and 78739, and a sliver of 78736). If your address is there, the Travis County races on this page (county offices, Travis judges and justices of the peace, the appraisal board) are not on your ballot. Use your address to find your page, pick Austin (Williamson County) or Austin (Hays County), or check your own county’s sample ballot: Williamson at apps.wilcotx.gov/elections/voterlookup, Hays at mapps.hayscountytx.gov/election/index.cfm.",
       "applies_to": "ballot",
       "source": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_county20_natl.txt"
     }

@@ -602,7 +602,7 @@
   {
     "endorser_id": "austin-chronicle-eb",
     "target_id": "tx-pflugerville-council-6",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Outside the Chronicle's Austin/Travis coverage.",
     "url": "https://www.austinchronicle.com/news/endorsements/chronicle-endorsements-for-the-november-3-midterm-elections-short-version/",
@@ -622,7 +622,7 @@
   {
     "endorser_id": "austin-chronicle-eb",
     "target_id": "tx-pfisd-trustee-7",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Outside the Chronicle's Austin/Travis coverage.",
     "url": "https://www.austinchronicle.com/news/endorsements/chronicle-endorsements-for-the-november-3-midterm-elections-short-version/",
@@ -642,7 +642,7 @@
   {
     "endorser_id": "austin-chronicle-eb",
     "target_id": "tx-rrisd-trustee-4",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Outside the Chronicle's Austin/Travis coverage.",
     "url": "https://www.austinchronicle.com/news/endorsements/chronicle-endorsements-for-the-november-3-midterm-elections-short-version/",
@@ -692,7 +692,7 @@
   {
     "endorser_id": "austin-chronicle-eb",
     "target_id": "tx-wilco-treasurer",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Outside the Chronicle's Austin/Travis coverage.",
     "url": "https://www.austinchronicle.com/news/endorsements/chronicle-endorsements-for-the-november-3-midterm-elections-short-version/",
@@ -712,7 +712,7 @@
   {
     "endorser_id": "austin-chronicle-eb",
     "target_id": "tx-wilco-commissioner-2",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Outside the Chronicle's Austin/Travis coverage.",
     "url": "https://www.austinchronicle.com/news/endorsements/chronicle-endorsements-for-the-november-3-midterm-elections-short-version/",
@@ -5872,7 +5872,7 @@
   {
     "endorser_id": "travis-county-democratic-party",
     "target_id": "tx-tcad-place-1",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Nonpartisan race; the county party slate lists only partisan nominees.",
     "url": "https://www.travisturnsout.com/candidates",
@@ -5882,7 +5882,7 @@
   {
     "endorser_id": "travis-county-democratic-party",
     "target_id": "tx-tcad-place-2",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Nonpartisan race; the county party slate lists only partisan nominees.",
     "url": "https://www.travisturnsout.com/candidates",
@@ -5892,7 +5892,7 @@
   {
     "endorser_id": "travis-county-democratic-party",
     "target_id": "tx-tcad-place-3",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Nonpartisan race; the county party slate lists only partisan nominees.",
     "url": "https://www.travisturnsout.com/candidates",
@@ -5902,7 +5902,7 @@
   {
     "endorser_id": "travis-county-democratic-party",
     "target_id": "tx-austin-council-1",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Nonpartisan race; the county party slate lists only partisan nominees.",
     "url": "https://www.travisturnsout.com/candidates",
@@ -5912,7 +5912,7 @@
   {
     "endorser_id": "travis-county-democratic-party",
     "target_id": "tx-austin-council-3",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Nonpartisan race; the county party slate lists only partisan nominees.",
     "url": "https://www.travisturnsout.com/candidates",
@@ -5922,7 +5922,7 @@
   {
     "endorser_id": "travis-county-democratic-party",
     "target_id": "tx-austin-council-5",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Nonpartisan race; the county party slate lists only partisan nominees.",
     "url": "https://www.travisturnsout.com/candidates",
@@ -5932,7 +5932,7 @@
   {
     "endorser_id": "travis-county-democratic-party",
     "target_id": "tx-austin-council-8",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Nonpartisan race; the county party slate lists only partisan nominees.",
     "url": "https://www.travisturnsout.com/candidates",
@@ -5942,7 +5942,7 @@
   {
     "endorser_id": "travis-county-democratic-party",
     "target_id": "tx-austin-council-9",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Nonpartisan race; the county party slate lists only partisan nominees.",
     "url": "https://www.travisturnsout.com/candidates",
@@ -5952,7 +5952,7 @@
   {
     "endorser_id": "travis-county-democratic-party",
     "target_id": "tx-aisd-district-1",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Nonpartisan race; the county party slate lists only partisan nominees.",
     "url": "https://www.travisturnsout.com/candidates",
@@ -5962,7 +5962,7 @@
   {
     "endorser_id": "travis-county-democratic-party",
     "target_id": "tx-aisd-district-4",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Nonpartisan race; the county party slate lists only partisan nominees.",
     "url": "https://www.travisturnsout.com/candidates",
@@ -5972,7 +5972,7 @@
   {
     "endorser_id": "travis-county-democratic-party",
     "target_id": "tx-aisd-district-6",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Nonpartisan race; the county party slate lists only partisan nominees.",
     "url": "https://www.travisturnsout.com/candidates",
@@ -5982,7 +5982,7 @@
   {
     "endorser_id": "travis-county-democratic-party",
     "target_id": "tx-aisd-district-7",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Nonpartisan race; the county party slate lists only partisan nominees.",
     "url": "https://www.travisturnsout.com/candidates",
@@ -5992,7 +5992,7 @@
   {
     "endorser_id": "travis-county-democratic-party",
     "target_id": "tx-aisd-at-large-9",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Nonpartisan race; the county party slate lists only partisan nominees.",
     "url": "https://www.travisturnsout.com/candidates",
@@ -6002,7 +6002,7 @@
   {
     "endorser_id": "travis-county-democratic-party",
     "target_id": "tx-acc-trustee-1",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Nonpartisan race; the county party slate lists only partisan nominees.",
     "url": "https://www.travisturnsout.com/candidates",
@@ -6012,7 +6012,7 @@
   {
     "endorser_id": "travis-county-democratic-party",
     "target_id": "tx-acc-trustee-2",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Nonpartisan race; the county party slate lists only partisan nominees.",
     "url": "https://www.travisturnsout.com/candidates",
@@ -6022,7 +6022,7 @@
   {
     "endorser_id": "travis-county-democratic-party",
     "target_id": "tx-acc-trustee-3",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Nonpartisan race; the county party slate lists only partisan nominees.",
     "url": "https://www.travisturnsout.com/candidates",
@@ -6032,7 +6032,7 @@
   {
     "endorser_id": "travis-county-democratic-party",
     "target_id": "tx-us-house-31",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Outside Travis County; the Travis Turns Out slate lists only races on Travis ballots.",
     "url": "https://www.travisturnsout.com/candidates",
@@ -6042,7 +6042,7 @@
   {
     "endorser_id": "travis-county-democratic-party",
     "target_id": "tx-us-house-17",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Outside Travis County; the Travis Turns Out slate lists only races on Travis ballots.",
     "url": "https://www.travisturnsout.com/candidates",
@@ -6052,7 +6052,7 @@
   {
     "endorser_id": "travis-county-democratic-party",
     "target_id": "tx-us-house-21",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Outside Travis County; the Travis Turns Out slate lists only races on Travis ballots.",
     "url": "https://www.travisturnsout.com/candidates",
@@ -6062,7 +6062,7 @@
   {
     "endorser_id": "travis-county-democratic-party",
     "target_id": "tx-house-52",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Outside Travis County; the Travis Turns Out slate lists only races on Travis ballots.",
     "url": "https://www.travisturnsout.com/candidates",
@@ -6072,7 +6072,7 @@
   {
     "endorser_id": "travis-county-democratic-party",
     "target_id": "tx-house-136",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Outside Travis County; the Travis Turns Out slate lists only races on Travis ballots.",
     "url": "https://www.travisturnsout.com/candidates",
@@ -6262,7 +6262,7 @@
   {
     "endorser_id": "travis-county-gop",
     "target_id": "tx-house-46",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican on the ballot.",
     "url": "https://traviscountygop.org/news",
@@ -6282,7 +6282,7 @@
   {
     "endorser_id": "travis-county-gop",
     "target_id": "tx-house-49",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican on the ballot.",
     "url": "https://traviscountygop.org/news",
@@ -6312,7 +6312,7 @@
   {
     "endorser_id": "travis-county-gop",
     "target_id": "tx-us-house-31",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Outside Travis County; not covered by the Travis County party.",
     "url": "https://traviscountygop.org/news",
@@ -6322,7 +6322,7 @@
   {
     "endorser_id": "travis-county-gop",
     "target_id": "tx-us-house-17",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Outside Travis County; not covered by the Travis County party.",
     "url": "https://traviscountygop.org/news",
@@ -6332,7 +6332,7 @@
   {
     "endorser_id": "travis-county-gop",
     "target_id": "tx-us-house-21",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Outside Travis County; not covered by the Travis County party.",
     "url": "https://traviscountygop.org/news",
@@ -6342,7 +6342,7 @@
   {
     "endorser_id": "travis-county-gop",
     "target_id": "tx-house-52",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Outside Travis County; not covered by the Travis County party.",
     "url": "https://traviscountygop.org/news",
@@ -6352,7 +6352,7 @@
   {
     "endorser_id": "travis-county-gop",
     "target_id": "tx-house-136",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Outside Travis County; not covered by the Travis County party.",
     "url": "https://traviscountygop.org/news",
@@ -7902,7 +7902,7 @@
   {
     "endorser_id": "aura",
     "target_id": "tx-aisd-district-1",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "AURA endorsed only in council, Commissioner Pct 4 and HD 49/50.",
     "url": "https://aura-atx.org/austin-voter-guide-2026/",
@@ -7912,7 +7912,7 @@
   {
     "endorser_id": "aura",
     "target_id": "tx-aisd-district-4",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "AURA endorsed only in council, Commissioner Pct 4 and HD 49/50.",
     "url": "https://aura-atx.org/austin-voter-guide-2026/",
@@ -7922,7 +7922,7 @@
   {
     "endorser_id": "aura",
     "target_id": "tx-aisd-district-6",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "AURA endorsed only in council, Commissioner Pct 4 and HD 49/50.",
     "url": "https://aura-atx.org/austin-voter-guide-2026/",
@@ -7932,7 +7932,7 @@
   {
     "endorser_id": "aura",
     "target_id": "tx-aisd-district-7",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "AURA endorsed only in council, Commissioner Pct 4 and HD 49/50.",
     "url": "https://aura-atx.org/austin-voter-guide-2026/",
@@ -7942,7 +7942,7 @@
   {
     "endorser_id": "aura",
     "target_id": "tx-aisd-at-large-9",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "AURA endorsed only in council, Commissioner Pct 4 and HD 49/50.",
     "url": "https://aura-atx.org/austin-voter-guide-2026/",
@@ -7952,7 +7952,7 @@
   {
     "endorser_id": "aura",
     "target_id": "tx-acc-trustee-1",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "AURA endorsed only in council, Commissioner Pct 4 and HD 49/50.",
     "url": "https://aura-atx.org/austin-voter-guide-2026/",
@@ -7962,7 +7962,7 @@
   {
     "endorser_id": "aura",
     "target_id": "tx-acc-trustee-2",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "AURA endorsed only in council, Commissioner Pct 4 and HD 49/50.",
     "url": "https://aura-atx.org/austin-voter-guide-2026/",
@@ -7972,7 +7972,7 @@
   {
     "endorser_id": "aura",
     "target_id": "tx-acc-trustee-3",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "AURA endorsed only in council, Commissioner Pct 4 and HD 49/50.",
     "url": "https://aura-atx.org/austin-voter-guide-2026/",
@@ -8862,9 +8862,9 @@
   {
     "endorser_id": "reca",
     "target_id": "tx-austin-prop-a",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "RECA's 2026 voter guide covers candidates only; it took no position on this proposition.",
+    "why": "RECA's 2026 voter guide covers candidates only; this proposition is not in it.",
     "url": "https://www.reca.org/uploads/1/3/8/9/138900216/2026_general_election_-_reca_full_voter_guide.pdf",
     "date": "2026-10-16",
     "confidence": "verified"
@@ -8872,9 +8872,9 @@
   {
     "endorser_id": "reca",
     "target_id": "tx-austin-prop-b",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "RECA's 2026 voter guide covers candidates only; it took no position on this proposition.",
+    "why": "RECA's 2026 voter guide covers candidates only; this proposition is not in it.",
     "url": "https://www.reca.org/uploads/1/3/8/9/138900216/2026_general_election_-_reca_full_voter_guide.pdf",
     "date": "2026-10-16",
     "confidence": "verified"
@@ -8882,9 +8882,9 @@
   {
     "endorser_id": "reca",
     "target_id": "tx-austin-prop-c",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "RECA's 2026 voter guide covers candidates only; it took no position on this proposition.",
+    "why": "RECA's 2026 voter guide covers candidates only; this proposition is not in it.",
     "url": "https://www.reca.org/uploads/1/3/8/9/138900216/2026_general_election_-_reca_full_voter_guide.pdf",
     "date": "2026-10-16",
     "confidence": "verified"
@@ -8892,9 +8892,9 @@
   {
     "endorser_id": "reca",
     "target_id": "tx-austin-prop-d",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "RECA's 2026 voter guide covers candidates only; it took no position on this proposition.",
+    "why": "RECA's 2026 voter guide covers candidates only; this proposition is not in it.",
     "url": "https://www.reca.org/uploads/1/3/8/9/138900216/2026_general_election_-_reca_full_voter_guide.pdf",
     "date": "2026-10-16",
     "confidence": "verified"
@@ -8902,9 +8902,9 @@
   {
     "endorser_id": "reca",
     "target_id": "tx-austin-prop-e",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "RECA's 2026 voter guide covers candidates only; it took no position on this proposition.",
+    "why": "RECA's 2026 voter guide covers candidates only; this proposition is not in it.",
     "url": "https://www.reca.org/uploads/1/3/8/9/138900216/2026_general_election_-_reca_full_voter_guide.pdf",
     "date": "2026-10-16",
     "confidence": "verified"
@@ -8912,9 +8912,9 @@
   {
     "endorser_id": "reca",
     "target_id": "tx-austin-prop-f",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "RECA's 2026 voter guide covers candidates only; it took no position on this proposition.",
+    "why": "RECA's 2026 voter guide covers candidates only; this proposition is not in it.",
     "url": "https://www.reca.org/uploads/1/3/8/9/138900216/2026_general_election_-_reca_full_voter_guide.pdf",
     "date": "2026-10-16",
     "confidence": "verified"
@@ -8922,9 +8922,9 @@
   {
     "endorser_id": "reca",
     "target_id": "tx-austin-prop-g",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "RECA's 2026 voter guide covers candidates only; it took no position on this proposition.",
+    "why": "RECA's 2026 voter guide covers candidates only; this proposition is not in it.",
     "url": "https://www.reca.org/uploads/1/3/8/9/138900216/2026_general_election_-_reca_full_voter_guide.pdf",
     "date": "2026-10-16",
     "confidence": "verified"
@@ -8932,9 +8932,9 @@
   {
     "endorser_id": "reca",
     "target_id": "tx-austin-prop-h",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "RECA's 2026 voter guide covers candidates only; it took no position on this proposition.",
+    "why": "RECA's 2026 voter guide covers candidates only; this proposition is not in it.",
     "url": "https://www.reca.org/uploads/1/3/8/9/138900216/2026_general_election_-_reca_full_voter_guide.pdf",
     "date": "2026-10-16",
     "confidence": "verified"
@@ -8942,9 +8942,9 @@
   {
     "endorser_id": "reca",
     "target_id": "tx-austin-prop-i",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "RECA's 2026 voter guide covers candidates only; it took no position on this proposition.",
+    "why": "RECA's 2026 voter guide covers candidates only; this proposition is not in it.",
     "url": "https://www.reca.org/uploads/1/3/8/9/138900216/2026_general_election_-_reca_full_voter_guide.pdf",
     "date": "2026-10-16",
     "confidence": "verified"
@@ -8952,9 +8952,9 @@
   {
     "endorser_id": "reca",
     "target_id": "tx-austin-prop-j",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "RECA's 2026 voter guide covers candidates only; it took no position on this proposition.",
+    "why": "RECA's 2026 voter guide covers candidates only; this proposition is not in it.",
     "url": "https://www.reca.org/uploads/1/3/8/9/138900216/2026_general_election_-_reca_full_voter_guide.pdf",
     "date": "2026-10-16",
     "confidence": "verified"
@@ -8964,10 +8964,10 @@
     "target_id": "tx-austin-prop-i",
     "status": "endorsed",
     "choice": "YES",
-    "why": "Authored the petition: \"vote YES to force independent scrutiny of spending, services and financial controls, with deadlines written into the Charter.\"",
+    "why": "Its Prop I page says: \"Force the audit. Start the clock.\" It describes Prop I as \"A proposed City Charter amendment for recurring independent analysis of spending, affordability, and performance.\"",
     "url": "https://www.saveaustinnow.com/austin-proposition-i",
-    "date": "2026-10-16",
-    "confidence": "verified"
+    "date": "2026-11-01",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "save-austin-now",
@@ -11252,7 +11252,7 @@
   {
     "endorser_id": "travis-county-democratic-party",
     "target_id": "tx-dvisd-trustee-3",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Nonpartisan race; the county party slate lists only partisan nominees.",
     "url": "https://www.travisturnsout.com/candidates",
@@ -11322,7 +11322,7 @@
   {
     "endorser_id": "travis-county-democratic-party",
     "target_id": "tx-dvisd-trustee-5",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Nonpartisan race; the county party slate lists only partisan nominees.",
     "url": "https://www.travisturnsout.com/candidates",
@@ -11392,7 +11392,7 @@
   {
     "endorser_id": "travis-county-democratic-party",
     "target_id": "tx-dvisd-trustee-7",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Nonpartisan race; the county party slate lists only partisan nominees.",
     "url": "https://www.travisturnsout.com/candidates",
@@ -11462,7 +11462,7 @@
   {
     "endorser_id": "travis-county-democratic-party",
     "target_id": "tx-dvisd-trustee-8",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Nonpartisan race; the county party slate lists only partisan nominees.",
     "url": "https://www.travisturnsout.com/candidates",
@@ -11532,7 +11532,7 @@
   {
     "endorser_id": "travis-county-democratic-party",
     "target_id": "tx-dvisd-trustee-9",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Nonpartisan race; the county party slate lists only partisan nominees.",
     "url": "https://www.travisturnsout.com/candidates",
@@ -11602,7 +11602,7 @@
   {
     "endorser_id": "travis-county-democratic-party",
     "target_id": "tx-lisd-trustee-1",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Nonpartisan race; the county party slate lists only partisan nominees.",
     "url": "https://www.travisturnsout.com/candidates",
@@ -11672,7 +11672,7 @@
   {
     "endorser_id": "travis-county-democratic-party",
     "target_id": "tx-lisd-trustee-2",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Nonpartisan race; the county party slate lists only partisan nominees.",
     "url": "https://www.travisturnsout.com/candidates",
@@ -11742,7 +11742,7 @@
   {
     "endorser_id": "travis-county-democratic-party",
     "target_id": "tx-lisd-trustee-6",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Nonpartisan race; the county party slate lists only partisan nominees.",
     "url": "https://www.travisturnsout.com/candidates",
@@ -11812,7 +11812,7 @@
   {
     "endorser_id": "travis-county-democratic-party",
     "target_id": "tx-lisd-trustee-7",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Nonpartisan race; the county party slate lists only partisan nominees.",
     "url": "https://www.travisturnsout.com/candidates",

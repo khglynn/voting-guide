@@ -376,6 +376,16 @@ function shortCand(name) {
   const parts = first.replace(/,/g, '').split(/\s+/).filter((p) => !/^(jr\.?|sr\.?|ii|iii|iv)$/i.test(p));
   return parts.length ? parts[parts.length - 1] : first;
 }
+/* The last word of the name, unless the data gives `short` for a two-word surname (Tonia Reyes Uranga is
+   "Reyes Uranga", not "Uranga"). It must be words from the name itself, or the last word stands. */
+function candShort(k, where) {
+  const auto = shortCand(k.name.trim());
+  if (k.short == null) return auto;
+  const s = isStr(k.short) ? k.short.trim().replace(/\s+/g, ' ') : '';
+  if (s && ` ${fullCand(k.name).replace(/,/g, '')} `.includes(` ${s} `)) return s;
+  warn(`${where}: short "${k.short}" isn't words from the name; used "${auto}"`);
+  return auto;
+}
 function normContest(c, file) {
   if (!c || !isStr(c.id)) return skipRec(file, c && c.id, 'contest missing id');
   if (!isStr(c.state)) return skipRec(file, c.id, 'contest missing state');
@@ -387,7 +397,7 @@ function normContest(c, file) {
     if (!k || !isStr(k.name)) { warn(`${file}: ${c.id} has a candidate with no name; dropped it`); continue; }
     cands.push({
       name: k.name.trim(),
-      short: shortCand(k.name.trim()),
+      short: candShort(k, `${file}: ${c.id} / ${k.name.trim()}`),
       party: str(k.party),
       parties: partyList(k.party),
       incumbent: !!k.incumbent,

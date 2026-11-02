@@ -516,7 +516,20 @@
     "website": null,
     "website_confidence": "unverified",
     "background": "Ward 3 State Board of Education member since 2023 and the board's vice president. Ran for Ward 3 Council in 2022.",
-    "own_words": [],
+    "own_words": [
+     {
+      "text": "Advocate for new school construction in Ward 3 to address overcrowding, ensure every family can enroll their three and four-year-old children in pre-K at their neighborhood elementary schools, provide an inclusive education for students with learning disabilities, and replace trailers with permanent buildings",
+      "is_quote": true,
+      "source": "https://www.ericgouletforward3.com/",
+      "source_label": "Eric Goulet campaign website (Education Priorities)"
+     },
+     {
+      "text": "Ensure technology is used in an intentional and age-appropriate manner, student data is protected, and that screen time has an instructional purpose",
+      "is_quote": true,
+      "source": "https://www.ericgouletforward3.com/",
+      "source_label": "Eric Goulet campaign website (Education Priorities)"
+     }
+    ],
     "lwv_status": "unknown",
     "lwv_url": "https://www.vote411.org/ballot"
    },
@@ -527,7 +540,20 @@
     "website": null,
     "website_confidence": "unverified",
     "background": null,
-    "own_words": [],
+    "own_words": [
+     {
+      "text": "I believe we deserve a representative who listens to the community, who speaks up for them, and who will consistently advocate for excellence and accountability for every public school in D.C.",
+      "is_quote": true,
+      "source": "https://www.aaron4ward3.com/",
+      "source_label": "Aaron Wesolowski campaign website (About Aaron)"
+     },
+     {
+      "text": "We’ve seen the DC Public Schools (DCPS) administration fall short when it comes to accountability and responding to parent concerns or even keeping parents informed.",
+      "is_quote": true,
+      "source": "https://www.aaron4ward3.com/",
+      "source_label": "Aaron Wesolowski campaign website (About Aaron)"
+     }
+    ],
     "lwv_status": "unknown",
     "lwv_url": "https://www.vote411.org/ballot"
    }

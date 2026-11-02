@@ -72,7 +72,7 @@
   {
     "endorser_id": "willamette-week-eb",
     "target_id": "or-us-house-3",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its federal endorsements page skips the 3rd District.",
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
@@ -182,7 +182,7 @@
   {
     "endorser_id": "willamette-week-eb",
     "target_id": "or-sd-24",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its Oct. 14 legislature endorsements skip this race.",
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
@@ -192,7 +192,7 @@
   {
     "endorser_id": "willamette-week-eb",
     "target_id": "or-hd-34",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its Oct. 14 legislature endorsements skip this race.",
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
@@ -202,7 +202,7 @@
   {
     "endorser_id": "willamette-week-eb",
     "target_id": "or-hd-38",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its Oct. 14 legislature endorsements skip this race.",
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
@@ -212,7 +212,7 @@
   {
     "endorser_id": "willamette-week-eb",
     "target_id": "or-hd-44",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its Oct. 14 legislature endorsements skip this race.",
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
@@ -222,7 +222,7 @@
   {
     "endorser_id": "willamette-week-eb",
     "target_id": "or-hd-45",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its Oct. 14 legislature endorsements skip this race.",
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
@@ -232,7 +232,7 @@
   {
     "endorser_id": "willamette-week-eb",
     "target_id": "or-hd-46",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its Oct. 14 legislature endorsements skip this race.",
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
@@ -242,7 +242,7 @@
   {
     "endorser_id": "willamette-week-eb",
     "target_id": "or-hd-47",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its Oct. 14 legislature endorsements skip this race.",
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
@@ -252,7 +252,7 @@
   {
     "endorser_id": "willamette-week-eb",
     "target_id": "or-hd-50",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its Oct. 14 legislature endorsements skip this race.",
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
@@ -763,7 +763,7 @@
   {
     "endorser_id": "multnomah-county-gop",
     "target_id": "or-sd-24",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican is on the ballot; the guide lists no one.",
     "url": "https://multco.gop/candidate-measure-guide-for-general-election-nov-2026/",
@@ -773,7 +773,7 @@
   {
     "endorser_id": "multnomah-county-gop",
     "target_id": "or-hd-38",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Daniel Loc Nguyen holds both the Democratic and Republican nominations; the guide lists no one.",
     "url": "https://multco.gop/candidate-measure-guide-for-general-election-nov-2026/",
@@ -783,7 +783,7 @@
   {
     "endorser_id": "multnomah-county-gop",
     "target_id": "or-hd-42",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican is on the ballot; the guide lists no one.",
     "url": "https://multco.gop/candidate-measure-guide-for-general-election-nov-2026/",
@@ -793,7 +793,7 @@
   {
     "endorser_id": "multnomah-county-gop",
     "target_id": "or-hd-47",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican is on the ballot; the guide lists no one.",
     "url": "https://multco.gop/candidate-measure-guide-for-general-election-nov-2026/",
@@ -1143,7 +1143,7 @@
   {
     "endorser_id": "basic-rights-oregon",
     "target_id": "or-hd-33",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement.",
     "url": "https://www.basicrights.org/2026endorsements",
@@ -1153,7 +1153,7 @@
   {
     "endorser_id": "basic-rights-oregon",
     "target_id": "or-hd-34",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement.",
     "url": "https://www.basicrights.org/2026endorsements",
@@ -1163,7 +1163,7 @@
   {
     "endorser_id": "basic-rights-oregon",
     "target_id": "or-hd-38",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement.",
     "url": "https://www.basicrights.org/2026endorsements",
@@ -1173,7 +1173,7 @@
   {
     "endorser_id": "basic-rights-oregon",
     "target_id": "or-hd-41",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement.",
     "url": "https://www.basicrights.org/2026endorsements",
@@ -1183,7 +1183,7 @@
   {
     "endorser_id": "basic-rights-oregon",
     "target_id": "or-hd-45",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement.",
     "url": "https://www.basicrights.org/2026endorsements",
@@ -1193,7 +1193,7 @@
   {
     "endorser_id": "basic-rights-oregon",
     "target_id": "or-hd-46",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement.",
     "url": "https://www.basicrights.org/2026endorsements",
@@ -1203,7 +1203,7 @@
   {
     "endorser_id": "basic-rights-oregon",
     "target_id": "or-hd-48",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement.",
     "url": "https://www.basicrights.org/2026endorsements",
@@ -1213,7 +1213,7 @@
   {
     "endorser_id": "basic-rights-oregon",
     "target_id": "or-hd-50",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement.",
     "url": "https://www.basicrights.org/2026endorsements",

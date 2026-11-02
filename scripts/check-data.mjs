@@ -85,6 +85,7 @@ const BUILD_WARNINGS = [
   [/two files disagree .*; kept /, 'build-endorsement-conflict-dropped'],
   [/couldn't match .* to a candidate; shown as text/, 'build-endorsement-unlinked'],
   [/is ranked choice with no usable rank_up_to; using /, 'build-rank-guessed'],
+  [/: short ".*" isn't words from the name; used /, 'build-candidate-short'],
   [/is missing yes_means or no_means/, 'measure-means'],
   [/: short is not one plain line; dropped it|: actions is not a list; dropped it|: an action needs a label and an http\(s\) URL; dropped it|: more than 2 actions; dropped the rest|: a gotcha has no text; dropped it|: registration\.register_url(_source)? is not an http\(s\) URL; dropped it|: sample_ballot_url is not an http\(s\) URL; dropped it/, 'build-dropped-help'],
   [/: early_in_person\.latest_end needs .*; dropped it/, 'date-order'],
@@ -266,6 +267,14 @@ for (const p of all.places) {
       if (!isStr(name) || name.trim().length > 80) err('place-zip-outside', `${p._f}: zip_outside ${z} needs a short name (80 characters at most)`);
     }
   }
+}
+// Nov 1: a ZIP one place marks as reaching an outside town gets the split card, which tells a voter who isn't
+// sure to use their address and promises their city's ballot. From the state's races, an address opens a place
+// only when that place names its county codes (geo.ts ballotFor), so every place on such a ZIP needs them
+// (the review of #80: Los Angeles shares 90810 with Long Beach and had none).
+const splitZips = new Set(all.places.flatMap((p) => (p.zip_outside && typeof p.zip_outside === 'object' ? Object.keys(p.zip_outside) : [])));
+for (const p of all.places) for (const z of (p.zips || []).map(String)) {
+  if (splitZips.has(z) && !(Array.isArray(p.county_fips) && p.county_fips.length)) err('place-county-fips', `${p._f}: shares ${z}, which a place marks as reaching a town outside, so it needs county_fips for the split card's address step to open it`);
 }
 
 /* ---------- 7b. what the build wrote, bundle by bundle ----------

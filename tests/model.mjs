@@ -237,6 +237,9 @@ function roundTrip(name, stCode, places, mutate) {
 {
   const c = read('state-TX.json').items.find((x) => x.id === 'tx-supreme-court-place-7');
   check('candidates: the two Hawkinses in one race each show a full name', !!c && c.candidates.map((k) => k.short).join() === 'Kyle Hawkins,Kristen Hawkins');
+  // The data's `short` for a two-word surname (review of #71, Nov 1): "Reyes Uranga", never "Uranga".
+  const wrd = read('place-long-beach-ca.json').items.find((x) => x.id === 'wrd-division-3');
+  check('candidates: a two-word surname from the data shows whole', !!wrd && wrd.candidates.find((k) => k.name === 'Tonia Reyes Uranga')?.short === 'Reyes Uranga', wrd && wrd.candidates.map((k) => k.short).join());
   const dupes = fs.readdirSync(DATA).filter((f) => /^(state|place)-.*\.json$/.test(f)).flatMap((f) => (read(f).items || [])
     .filter((x) => x.kind === 'contest' && new Set(x.candidates.map((k) => k.short)).size < x.candidates.length).map((x) => `${f} ${x.id}`));
   check('candidates: no race shows two candidates under one short name', dupes.length === 0, dupes.join(', '));
@@ -1034,7 +1037,7 @@ function roundTrip(name, stCode, places, mutate) {
   const btns = [...html.matchAll(/<a class="pbtn (gold|line)" href="([^"]+)"[^>]*data-county="([^"]+)">([^<]+)<\/a>/g)].map((m) => `${m[1]} ${m[3]} ${m[4]}`);
   check('where: a split ZIP\u2019s plan shows one labeled button per county, Travis first in gold', btns.join('|') === 'gold Travis Travis County|line Williamson Williamson County|line Hays Hays County' && /<p class="plan-cty">Find [a-z ]+ in your county:<\/p>/.test(html), btns.join('|'));
   bl.localize(b, '78729', 'Williamson');
-  check('where: once the address lookup says Williamson, Williamson\u2019s links, and one button again', b.county === 'Williamson' && b.howto.early_in_person.lookup_url === WILCO_EARLY && b.howto.election_day.lookup_url === 'https://www.wilcotx.gov/elections' && !b.howto.county_links && !/data-county=/.test(ps.planHTML()));
+  check('where: once the address lookup says Williamson, Williamson\u2019s links, and one button again', b.county === 'Williamson' && b.howto.early_in_person.lookup_url === WILCO_EARLY && b.howto.election_day.lookup_url === 'https://www.wilcotx.gov/DocumentCenter/View/22255/Notice-of-General-Election-Williamson-County' && !b.howto.county_links && !/data-county=/.test(ps.planHTML()));
   // Nov 1: Lakewood's own Jefferson County mail and hours text, not the state's Denver, Adams and Arapahoe lines.
   // (The state's other mail fields keep statewide facts with a Denver aside; only these four are county-specific.)
   const lkw = open('CO', ['lakewood-co']).howto;

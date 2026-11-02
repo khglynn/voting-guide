@@ -45,8 +45,9 @@ export interface Cov {
   searched: LocalPicksChecked | null; // a thin place's hard look that came up empty: no ask, the card says so
   late: boolean;      // Election Day is two days away or less: say it may not land before you vote
   /* A statewide ballot from a ZIP split between a place and a town the guide doesn't cover (zip_outside), when
-     the voter didn't say which they live in ("I'm not sure"): the card says so and offers the address. */
-  shared: { place: string; outside: string } | null;
+     the voter didn't say which they live in ("I'm not sure"): the card says so and offers the address. `places`
+     names every place the ZIP has, as the first page offered them (90810: Long Beach and Los Angeles). */
+  shared: { places: string[]; outside: string } | null;
 }
 
 /* ---------- requests remembered on this device ---------- */
@@ -93,12 +94,14 @@ export function ballotCoverage(b: Ballot, idx: Index, zip: string, today = today
     } : null;
     // The ZIP has a place now, unless the voter isn't in it (away) or it only shares the ZIP with a town the
     // guide doesn't cover (zip_outside: 63120 is the City of St. Louis and Pine Lawn), where the place may not be
-    // theirs: "Your city is in the guide now" would send a Pine Lawn voter to the City's ballot (Oct 29).
+    // theirs: "Your city is in the guide now" would send a Pine Lawn voter to the City's ballot (Oct 29). One
+    // place marking it is enough, though another shares the ZIP unmarked: 90810 is Long Beach's and Los Angeles's,
+    // and Long Beach marks its Carson side (review of #71, Nov 1).
     const inZip = zip ? (idx.zips[zip] || []).filter((id) => idx.places[id] && !away.includes(id)) : [];
     const outside = (id: string): string | undefined => (idx.places[id].zip_outside || {})[zip];
-    const landed = inZip.some((id) => !outside(id));
-    const split = landed ? undefined : inZip.find(outside);
-    const shared = split ? { place: placeName(idx.places[split]), outside: outside(split)! } : null;
+    const split = inZip.find(outside);
+    const landed = inZip.length > 0 && !split;
+    const shared = split ? { places: inZip.map((id) => placeName(idx.places[id])), outside: outside(split)! } : null;
     const on = ask ? askedOn(ask.key, today) : null;
     return { ...base, kind: 'statewide', checked: st ? st.checked : null, name: b.stateName, single: false, ask,
       state: landed ? 'landed' : on ? 'asked' : 'none', askedOn: landed ? null : on, shared };

@@ -13,7 +13,7 @@
     "fiscal_impact": "City estimate: up to $8.14 a year in added property tax per $100,000 of a homestead's appraised value (LWV, citing the city's voter information). KUT reports Props A and B together would add about $40 a year for an average $495,000 home. City staff recommended waiting two years before asking voters.",
     "pass_threshold": "simple majority",
     "referred_by": "council",
-    "confusing_wording_note": "State law requires this bond question to open with \"This is a tax increase\" (printed in capitals on the ballot). The phrase doesn't say how big the increase is; see the city's estimate above. \"Principle of and interest in bonds\" is a typo on the printed ballot for \"principal of and interest on the bonds.\"",
+    "confusing_wording_note": "State law requires this bond question to open with \"This is a tax increase\" (printed in capitals on the ballot). The phrase doesn't say how big the increase is; see the city's estimate above. \"Principle of and interest in bonds\" is a typo on the Travis County ballot for \"principal of and interest on the bonds\"; the Williamson and Hays County ballots print it correctly.",
     "supporters_case": {
       "text": "The Austin Parks Foundation says the city budget mostly pays to maintain existing parks, leaving little for anything else, and that without the bonds Austin will \"continue to fall behind\" peer cities.",
       "source": "https://www.kut.org/austin/2026-10-15/austin-tx-parks-library-bond-package-2026-295-million"
@@ -93,7 +93,7 @@
     "fiscal_impact": null,
     "pass_threshold": "simple majority",
     "referred_by": "council",
-    "confusing_wording_note": null,
+    "confusing_wording_note": "Travis County's ballot words a few phrases differently from the Williamson and Hays County ballots, for example \"filing vacancies\" instead of \"filling vacancies\" and a shorter \"increase the potential appointees.\" The meaning is the same.",
     "supporters_case": {
       "text": "The Chronicle: the process was always meant to be independent of political control and the other changes sound beneficial.",
       "source": "https://www.austinchronicle.com/news/endorsements/austin-chronicle-endorsements-for-the-november-3-midterm-elections/"

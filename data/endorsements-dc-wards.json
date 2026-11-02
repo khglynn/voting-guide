@@ -814,9 +814,9 @@
   "target_id": "dc-ward-1-council",
   "status": "not_found",
   "choice": null,
-  "why": "No 2026 general-election endorsements found; its site was not opened. Checked again on Oct 29, 2026; still no pick on this page.",
+  "why": "No 2026 general-election endorsements found; its site was not opened.",
   "url": "https://www.dcpoliceunion.com/",
-  "date": "2026-10-29",
+  "date": "2026-10-16",
   "confidence": "unverified"
  },
  {
@@ -834,9 +834,9 @@
   "target_id": "dc-ward-3-council",
   "status": "not_found",
   "choice": null,
-  "why": "No 2026 general-election endorsements found; its site was not opened. Checked again on Oct 29, 2026; still no pick on this page.",
+  "why": "No 2026 general-election endorsements found; its site was not opened.",
   "url": "https://www.dcpoliceunion.com/",
-  "date": "2026-10-29",
+  "date": "2026-10-16",
   "confidence": "unverified"
  },
  {
@@ -854,9 +854,9 @@
   "target_id": "dc-ward-5-council",
   "status": "not_found",
   "choice": null,
-  "why": "No 2026 general-election endorsements found; its site was not opened. Checked again on Oct 29, 2026; still no pick on this page.",
+  "why": "No 2026 general-election endorsements found; its site was not opened.",
   "url": "https://www.dcpoliceunion.com/",
-  "date": "2026-10-29",
+  "date": "2026-10-16",
   "confidence": "unverified"
  },
  {
@@ -874,9 +874,9 @@
   "target_id": "dc-ward-6-council",
   "status": "not_found",
   "choice": null,
-  "why": "No 2026 general-election endorsements found; its site was not opened. Checked again on Oct 29, 2026; still no pick on this page.",
+  "why": "No 2026 general-election endorsements found; its site was not opened.",
   "url": "https://www.dcpoliceunion.com/",
-  "date": "2026-10-29",
+  "date": "2026-10-16",
   "confidence": "unverified"
  },
  {
@@ -894,9 +894,9 @@
   "target_id": "dc-ward-1-sboe",
   "status": "not_found",
   "choice": null,
-  "why": "No 2026 general-election endorsements found; its site was not opened. Checked again on Oct 29, 2026; still no pick on this page.",
+  "why": "No 2026 general-election endorsements found; its site was not opened.",
   "url": "https://www.dcpoliceunion.com/",
-  "date": "2026-10-29",
+  "date": "2026-10-16",
   "confidence": "unverified"
  },
  {
@@ -914,9 +914,9 @@
   "target_id": "dc-ward-3-sboe",
   "status": "not_found",
   "choice": null,
-  "why": "No 2026 general-election endorsements found; its site was not opened. Checked again on Oct 29, 2026; still no pick on this page.",
+  "why": "No 2026 general-election endorsements found; its site was not opened.",
   "url": "https://www.dcpoliceunion.com/",
-  "date": "2026-10-29",
+  "date": "2026-10-16",
   "confidence": "unverified"
  },
  {
@@ -934,9 +934,9 @@
   "target_id": "dc-ward-5-sboe",
   "status": "not_found",
   "choice": null,
-  "why": "No 2026 general-election endorsements found; its site was not opened. Checked again on Oct 29, 2026; still no pick on this page.",
+  "why": "No 2026 general-election endorsements found; its site was not opened.",
   "url": "https://www.dcpoliceunion.com/",
-  "date": "2026-10-29",
+  "date": "2026-10-16",
   "confidence": "unverified"
  },
  {
@@ -954,9 +954,9 @@
   "target_id": "dc-ward-6-sboe",
   "status": "not_found",
   "choice": null,
-  "why": "No 2026 general-election endorsements found; its site was not opened. Checked again on Oct 29, 2026; still no pick on this page.",
+  "why": "No 2026 general-election endorsements found; its site was not opened.",
   "url": "https://www.dcpoliceunion.com/",
-  "date": "2026-10-29",
+  "date": "2026-10-16",
   "confidence": "unverified"
  },
  {
@@ -974,9 +974,9 @@
   "target_id": "dc-ward-3-council",
   "status": "not_found",
   "choice": null,
-  "why": "Its DC picks are posted only as images; we could not confirm a pick in this race. Checked again on Oct 28, 2026; still no pick on this page.",
+  "why": "Its DC picks are posted only as images; we could not confirm a pick in this race.",
   "url": "https://www.dclabor.org/voter-guides",
-  "date": "2026-10-28",
+  "date": "2026-10-16",
   "confidence": "unverified"
  },
  {
@@ -984,9 +984,9 @@
   "target_id": "dc-ward-5-council",
   "status": "not_found",
   "choice": null,
-  "why": "Its DC picks are posted only as images; we could not confirm a pick in this race. Checked again on Oct 28, 2026; still no pick on this page.",
+  "why": "Its DC picks are posted only as images; we could not confirm a pick in this race.",
   "url": "https://www.dclabor.org/voter-guides",
-  "date": "2026-10-28",
+  "date": "2026-10-16",
   "confidence": "unverified"
  },
  {
@@ -994,9 +994,9 @@
   "target_id": "dc-ward-6-council",
   "status": "not_found",
   "choice": null,
-  "why": "Its DC picks are posted only as images; we could not confirm a pick in this race. Checked again on Oct 28, 2026; still no pick on this page.",
+  "why": "Its DC picks are posted only as images; we could not confirm a pick in this race.",
   "url": "https://www.dclabor.org/voter-guides",
-  "date": "2026-10-28",
+  "date": "2026-10-16",
   "confidence": "unverified"
  },
  {
@@ -1004,9 +1004,9 @@
   "target_id": "dc-ward-1-sboe",
   "status": "not_found",
   "choice": null,
-  "why": "Its DC picks are posted only as images; we could not confirm a pick in this race. Checked again on Oct 28, 2026; still no pick on this page.",
+  "why": "Its DC picks are posted only as images; we could not confirm a pick in this race.",
   "url": "https://www.dclabor.org/voter-guides",
-  "date": "2026-10-28",
+  "date": "2026-10-16",
   "confidence": "unverified"
  },
  {
@@ -1014,9 +1014,9 @@
   "target_id": "dc-ward-3-sboe",
   "status": "not_found",
   "choice": null,
-  "why": "Its DC picks are posted only as images; we could not confirm a pick in this race. Checked again on Oct 28, 2026; still no pick on this page.",
+  "why": "Its DC picks are posted only as images; we could not confirm a pick in this race.",
   "url": "https://www.dclabor.org/voter-guides",
-  "date": "2026-10-28",
+  "date": "2026-10-16",
   "confidence": "unverified"
  },
  {
@@ -1024,9 +1024,9 @@
   "target_id": "dc-ward-5-sboe",
   "status": "not_found",
   "choice": null,
-  "why": "Its DC picks are posted only as images; we could not confirm a pick in this race. Checked again on Oct 28, 2026; still no pick on this page.",
+  "why": "Its DC picks are posted only as images; we could not confirm a pick in this race.",
   "url": "https://www.dclabor.org/voter-guides",
-  "date": "2026-10-28",
+  "date": "2026-10-16",
   "confidence": "unverified"
  },
  {
@@ -1034,9 +1034,9 @@
   "target_id": "dc-ward-6-sboe",
   "status": "not_found",
   "choice": null,
-  "why": "Its DC picks are posted only as images; we could not confirm a pick in this race. Checked again on Oct 28, 2026; still no pick on this page.",
+  "why": "Its DC picks are posted only as images; we could not confirm a pick in this race.",
   "url": "https://www.dclabor.org/voter-guides",
-  "date": "2026-10-28",
+  "date": "2026-10-16",
   "confidence": "unverified"
  },
  {

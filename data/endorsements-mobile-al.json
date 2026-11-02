@@ -42,7 +42,7 @@
   {
     "endorser_id": "al-republican-party",
     "target_id": "al-sd-33",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican nominee in this race.",
     "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
@@ -72,7 +72,7 @@
   {
     "endorser_id": "al-democratic-party",
     "target_id": "al-sd-34",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Democratic nominee in this race.",
     "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
@@ -92,7 +92,7 @@
   {
     "endorser_id": "al-democratic-party",
     "target_id": "al-sd-35",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Democratic nominee in this race.",
     "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
@@ -102,7 +102,7 @@
   {
     "endorser_id": "al-republican-party",
     "target_id": "al-hd-97",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican nominee in this race.",
     "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
@@ -122,7 +122,7 @@
   {
     "endorser_id": "al-republican-party",
     "target_id": "al-hd-98",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican nominee in this race.",
     "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
@@ -172,7 +172,7 @@
   {
     "endorser_id": "al-democratic-party",
     "target_id": "al-hd-100",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Democratic nominee in this race.",
     "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
@@ -212,7 +212,7 @@
   {
     "endorser_id": "al-democratic-party",
     "target_id": "al-hd-102",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Democratic nominee in this race.",
     "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
@@ -222,7 +222,7 @@
   {
     "endorser_id": "al-republican-party",
     "target_id": "al-hd-103",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican nominee in this race.",
     "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
@@ -252,7 +252,7 @@
   {
     "endorser_id": "al-democratic-party",
     "target_id": "al-hd-104",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Democratic nominee in this race.",
     "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
@@ -272,7 +272,7 @@
   {
     "endorser_id": "al-democratic-party",
     "target_id": "al-hd-105",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Democratic nominee in this race.",
     "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
@@ -292,7 +292,7 @@
   {
     "endorser_id": "al-democratic-party",
     "target_id": "mobile-district-judge-3",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Democratic nominee in this race.",
     "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
@@ -352,7 +352,7 @@
   {
     "endorser_id": "mobile-county-democrats",
     "target_id": "mobile-revenue-commissioner",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Democratic nominee in this race.",
     "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
@@ -402,7 +402,7 @@
   {
     "endorser_id": "mobile-county-gop",
     "target_id": "mobile-school-board-3",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "No Republican nominee in this race.",
     "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
@@ -462,7 +462,7 @@
   {
     "endorser_id": "alabama-realtors-pac",
     "target_id": "al-us-house-1",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "ARPAC (state) did not endorse for U.S. House; the same article notes the National Association of Realtors' RPAC backed Jerry Carl.",
     "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",

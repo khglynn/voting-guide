@@ -362,11 +362,11 @@
   {
     "endorser_id": "dallas-morning-news-eb",
     "target_id": "tx-dallas-prop-a",
-    "status": "not_found",
-    "choice": null,
-    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026. Checked again on Nov 1, 2026; still no pick on this page.",
-    "url": "https://www.dallasnews.com/opinion/we-recommend/",
-    "date": "2026-11-01",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "The board recommends voters approve the $443 million public safety bond, saying the projects are serious and immediate needs and the bond won't raise the tax rate.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/dfw-texas-election-candidate-recommendations-22480028.php",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1574,9 +1574,9 @@
     "target_id": "tx-house-104",
     "status": "not_found",
     "choice": null,
-    "why": "No Republican is on the ballot in this race.",
+    "why": "No Republican is on the ballot in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://dallasgop.org/meet-the-candidates/",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1584,9 +1584,9 @@
     "target_id": "tx-house-105",
     "status": "not_found",
     "choice": null,
-    "why": "No Republican is on the ballot in this race.",
+    "why": "No Republican is on the ballot in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://dallasgop.org/meet-the-candidates/",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1594,9 +1594,9 @@
     "target_id": "tx-house-107",
     "status": "not_found",
     "choice": null,
-    "why": "No Republican is on the ballot in this race.",
+    "why": "No Republican is on the ballot in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://dallasgop.org/meet-the-candidates/",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1624,9 +1624,9 @@
     "target_id": "tx-house-110",
     "status": "not_found",
     "choice": null,
-    "why": "No Republican is on the ballot in this race.",
+    "why": "No Republican is on the ballot in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://dallasgop.org/meet-the-candidates/",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1634,9 +1634,9 @@
     "target_id": "tx-house-111",
     "status": "not_found",
     "choice": null,
-    "why": "No Republican is on the ballot in this race.",
+    "why": "No Republican is on the ballot in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://dallasgop.org/meet-the-candidates/",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1724,9 +1724,9 @@
     "target_id": "tx-dallas-cda",
     "status": "not_found",
     "choice": null,
-    "why": "No Republican is on the ballot in this race.",
+    "why": "No Republican is on the ballot in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://dallasgop.org/meet-the-candidates/",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1784,9 +1784,9 @@
     "target_id": "tx-dallas-commissioner-4",
     "status": "not_found",
     "choice": null,
-    "why": "No Republican is on the ballot in this race.",
+    "why": "No Republican is on the ballot in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://dallasgop.org/meet-the-candidates/",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1804,9 +1804,9 @@
     "target_id": "tx-dallas-jp-1-2",
     "status": "not_found",
     "choice": null,
-    "why": "No Republican is on the ballot. The party lists write-in candidate Jayla Godbolt on its Meet the Candidates page, which says \"These are not endorsements.\"",
+    "why": "No Republican is on the ballot. The party lists write-in candidate Jayla Godbolt on its Meet the Candidates page, which says \"These are not endorsements.\" Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://dallasgop.org/meet-the-candidates/",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1824,9 +1824,9 @@
     "target_id": "tx-dallas-jp-2-2",
     "status": "not_found",
     "choice": null,
-    "why": "No Republican is on the ballot in this race.",
+    "why": "No Republican is on the ballot in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://dallasgop.org/meet-the-candidates/",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1864,9 +1864,9 @@
     "target_id": "tx-dallas-jp-4-2",
     "status": "not_found",
     "choice": null,
-    "why": "No Republican is on the ballot in this race.",
+    "why": "No Republican is on the ballot in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://dallasgop.org/meet-the-candidates/",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1874,9 +1874,9 @@
     "target_id": "tx-dallas-jp-5-1",
     "status": "not_found",
     "choice": null,
-    "why": "No Republican is on the ballot in this race.",
+    "why": "No Republican is on the ballot in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://dallasgop.org/meet-the-candidates/",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1884,9 +1884,9 @@
     "target_id": "tx-dallas-jp-5-2",
     "status": "not_found",
     "choice": null,
-    "why": "No Republican is on the ballot in this race.",
+    "why": "No Republican is on the ballot in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://dallasgop.org/meet-the-candidates/",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1894,9 +1894,9 @@
     "target_id": "tx-dallas-constable-1",
     "status": "not_found",
     "choice": null,
-    "why": "No Republican is on the ballot in this race.",
+    "why": "No Republican is on the ballot in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://dallasgop.org/meet-the-candidates/",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1914,9 +1914,9 @@
     "target_id": "tx-dallas-constable-3",
     "status": "not_found",
     "choice": null,
-    "why": "No Republican is on the ballot in this race.",
+    "why": "No Republican is on the ballot in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://dallasgop.org/meet-the-candidates/",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1924,9 +1924,9 @@
     "target_id": "tx-dallas-constable-4",
     "status": "not_found",
     "choice": null,
-    "why": "No Republican is on the ballot in this race.",
+    "why": "No Republican is on the ballot in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://dallasgop.org/meet-the-candidates/",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1934,9 +1934,9 @@
     "target_id": "tx-dallas-constable-5",
     "status": "not_found",
     "choice": null,
-    "why": "No Republican is on the ballot in this race.",
+    "why": "No Republican is on the ballot in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://dallasgop.org/meet-the-candidates/",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -3244,9 +3244,9 @@
     "target_id": "tx-dallas-uncontested-judges",
     "status": "not_found",
     "choice": null,
-    "why": "No Republican is in this box.",
+    "why": "No Republican is in this box. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://dallasgop.org/meet-the-candidates/",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {

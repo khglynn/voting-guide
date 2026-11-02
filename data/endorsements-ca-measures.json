@@ -1424,9 +1424,9 @@
     "target_id": "ca-prop-3",
     "status": "not_found",
     "choice": null,
-    "why": "The Board's Sept 2026 release says its positions 'cover 10 of the 14 proposals'; this measure is not among them.",
+    "why": "The Board's Sept 2026 release says its positions 'cover 10 of the 14 proposals'; this measure is not among them. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://advocacy.calchamber.com/news/2026/09/calchamber-board-of-directors-announces-positions-on-november-ballot-measures",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1444,9 +1444,9 @@
     "target_id": "ca-prop-5",
     "status": "not_found",
     "choice": null,
-    "why": "The Board's Sept 2026 release says its positions 'cover 10 of the 14 proposals'; this measure is not among them.",
+    "why": "The Board's Sept 2026 release says its positions 'cover 10 of the 14 proposals'; this measure is not among them. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://advocacy.calchamber.com/news/2026/09/calchamber-board-of-directors-announces-positions-on-november-ballot-measures",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1464,9 +1464,9 @@
     "target_id": "ca-prop-38",
     "status": "not_found",
     "choice": null,
-    "why": "The Board's Sept 2026 release says its positions 'cover 10 of the 14 proposals'; this measure is not among them.",
+    "why": "The Board's Sept 2026 release says its positions 'cover 10 of the 14 proposals'; this measure is not among them. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://advocacy.calchamber.com/news/2026/09/calchamber-board-of-directors-announces-positions-on-november-ballot-measures",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1474,9 +1474,9 @@
     "target_id": "ca-prop-39",
     "status": "not_found",
     "choice": null,
-    "why": "The Board's Sept 2026 release says its positions 'cover 10 of the 14 proposals'; this measure is not among them.",
+    "why": "The Board's Sept 2026 release says its positions 'cover 10 of the 14 proposals'; this measure is not among them. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://advocacy.calchamber.com/news/2026/09/calchamber-board-of-directors-announces-positions-on-november-ballot-measures",
-    "date": "2026-09-11",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2252,12 +2252,12 @@
   {
     "endorser_id": "ppac",
     "target_id": "ca-prop-2",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not listed on PPAC's 2026 voter guide. Checked again on Nov 1, 2026; still no pick on this page.",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed under Support on Planned Parenthood Affiliates of California's guide for the Nov. 3 general election.",
     "url": "https://www.plannedparenthoodaction.org/planned-parenthood-affiliates-california/voter-guide",
-    "date": "2026-11-01",
-    "confidence": "sourced"
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "ppac",
@@ -3462,31 +3462,31 @@
   {
     "endorser_id": "lwv-san-diego",
     "target_id": "ca-prop-3",
-    "status": "not_found",
-    "choice": null,
-    "url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
-    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
-    "date": "2026-11-01",
+    "status": "endorsed",
+    "choice": "YES",
+    "url": "https://www.lwvsandiego.org/docs.ashx?id=1820268",
+    "why": "The League of Women Voters of San Diego's voter guide says: Vote YES on Proposition 3.",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
     "endorser_id": "lwv-san-diego",
     "target_id": "ca-prop-37",
-    "status": "not_found",
-    "choice": null,
-    "url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
-    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
-    "date": "2026-11-01",
+    "status": "endorsed",
+    "choice": "NO",
+    "url": "https://www.lwvsandiego.org/docs.ashx?id=1820268",
+    "why": "The League of Women Voters of San Diego's voter guide says: Vote NO on Proposition 37.",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
     "endorser_id": "lwv-san-diego",
     "target_id": "ca-prop-38",
-    "status": "not_found",
-    "choice": null,
-    "url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
-    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
-    "date": "2026-11-01",
+    "status": "endorsed",
+    "choice": "NO",
+    "url": "https://www.lwvsandiego.org/docs.ashx?id=1820268",
+    "why": "The League of Women Voters of San Diego's voter guide says: Vote NO on Proposition 38.",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -3512,31 +3512,31 @@
   {
     "endorser_id": "lwv-san-diego",
     "target_id": "ca-prop-40",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
-    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
-    "date": "2026-11-01",
+    "url": "https://www.lwvsandiego.org/docs.ashx?id=1820268",
+    "why": "The League says it has strong positions on both sides of Prop 40, so it takes a neutral position.",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
     "endorser_id": "lwv-san-diego",
     "target_id": "ca-prop-41",
-    "status": "not_found",
-    "choice": null,
-    "url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
-    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
-    "date": "2026-11-01",
+    "status": "endorsed",
+    "choice": "NO",
+    "url": "https://www.lwvsandiego.org/docs.ashx?id=1820268",
+    "why": "The League of Women Voters of San Diego's voter guide says: Vote NO on Proposition 41.",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
     "endorser_id": "lwv-san-diego",
     "target_id": "ca-prop-42",
-    "status": "not_found",
-    "choice": null,
-    "url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
-    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
-    "date": "2026-11-01",
+    "status": "endorsed",
+    "choice": "NO",
+    "url": "https://www.lwvsandiego.org/docs.ashx?id=1820268",
+    "why": "The League of Women Voters of San Diego's voter guide says: Vote NO on Proposition 42.",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -3552,11 +3552,11 @@
   {
     "endorser_id": "lwv-san-diego",
     "target_id": "ca-prop-44",
-    "status": "not_found",
-    "choice": null,
-    "url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
-    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
-    "date": "2026-11-01",
+    "status": "endorsed",
+    "choice": "NO",
+    "url": "https://www.lwvsandiego.org/docs.ashx?id=1820268",
+    "why": "The League of Women Voters of San Diego's voter guide says: Vote NO on Proposition 44.",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {
@@ -3572,11 +3572,11 @@
   {
     "endorser_id": "lwv-san-diego",
     "target_id": "ca-prop-5",
-    "status": "not_found",
-    "choice": null,
-    "url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
-    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
-    "date": "2026-11-01",
+    "status": "endorsed",
+    "choice": "YES",
+    "url": "https://www.lwvsandiego.org/docs.ashx?id=1820268",
+    "why": "The League of Women Voters of San Diego's voter guide says: Vote YES on Proposition 5.",
+    "date": "2026-10-21",
     "confidence": "verified"
   },
   {

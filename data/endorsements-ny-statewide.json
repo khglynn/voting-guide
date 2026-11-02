@@ -62,12 +62,12 @@
   {
     "endorser_id": "ny-post-eb",
     "target_id": "ny-governor",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election endorsement for this race or measure was found in the Post editorial index, opinion page and charter-proposal search checked October 19, 2026. Checked again on Nov 1, 2026; still no pick on this page.",
+    "status": "endorsed",
+    "choice": "Bruce A. Blakeman / Todd Hood",
+    "why": "In its Oct. 23 endorsement, the board tells you to vote for Blakeman for real change and a better standard of living.",
     "url": "https://nypost.com/tag/editorial/",
-    "date": "2026-11-01",
-    "confidence": "sourced"
+    "date": "2026-10-23",
+    "confidence": "verified"
   },
   {
     "endorser_id": "ny-post-eb",
@@ -122,12 +122,12 @@
   {
     "endorser_id": "times-union-eb",
     "target_id": "ny-governor",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election endorsement for this race or measure was found in the Times Union opinion index and targeted endorsement search checked October 19, 2026. Checked again on Nov 1, 2026; still no pick on this page.",
-    "url": "https://www.timesunion.com/opinion/",
-    "date": "2026-11-01",
-    "confidence": "sourced"
+    "status": "endorsed",
+    "choice": "Kathy C. Hochul / Adrienne E. Adams",
+    "why": "The board says Hochul has struck a moderate path on economic, criminal justice and environmental issues, and that her steady hand makes her the easy choice over her opponent.",
+    "url": "https://www.timesunion.com/opinion/article/hochul-endorsement-22489379.php",
+    "date": "2026-10-24",
+    "confidence": "verified"
   },
   {
     "endorser_id": "times-union-eb",
@@ -432,21 +432,21 @@
   {
     "endorser_id": "pp-empire-state-votes",
     "target_id": "ny-attorney-general",
-    "status": "not_found",
-    "choice": null,
-    "why": "No Planned Parenthood Empire State Votes endorsement found in this race. Checked again on Nov 1, 2026; still no pick on this page.",
-    "url": "https://www.plannedparenthoodaction.org/planned-parenthood-empire-state-votes",
-    "date": "2026-11-01",
-    "confidence": "sourced"
+    "status": "endorsed",
+    "choice": "Letitia A. James",
+    "why": "Listed for attorney general on the Planned Parenthood Empire State Votes PAC's 2026 endorsement list.",
+    "url": "https://www.plannedparenthoodaction.org/planned-parenthood-empire-state-votes/endorsements",
+    "date": "2026-10-30",
+    "confidence": "verified"
   },
   {
     "endorser_id": "pp-empire-state-votes",
     "target_id": "ny-comptroller",
-    "status": "not_found",
-    "choice": null,
-    "why": "No Planned Parenthood Empire State Votes endorsement found in this race. Checked again on Nov 1, 2026; still no pick on this page.",
-    "url": "https://www.plannedparenthoodaction.org/planned-parenthood-empire-state-votes",
-    "date": "2026-11-01",
-    "confidence": "sourced"
+    "status": "endorsed",
+    "choice": "Thomas P. DiNapoli",
+    "why": "Listed for comptroller on the Planned Parenthood Empire State Votes PAC's 2026 endorsement list.",
+    "url": "https://www.plannedparenthoodaction.org/planned-parenthood-empire-state-votes/endorsements",
+    "date": "2026-10-30",
+    "confidence": "verified"
   }
 ]

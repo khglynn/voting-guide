@@ -322,13 +322,12 @@
   {
     "endorser_id": "oregonian-eb",
     "target_id": "portland-26-267",
-    "status": "not_found",
-    "unreadable": true,
-    "choice": null,
-    "why": "The Oregonian's endorsement page is behind a paywall we couldn't read. We only saw a pick for this secondhand, so we're not showing one. Checked Oct 19, 2026.",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "The board says Portlanders already frustrated with high taxes and low service should resist another funding silo and vote no on Measure 26-267.",
     "url": "https://www.oregonlive.com/opinion/2026/09/editorial-endorsement-november-2026-vote-no-on-portlands-participatory-budgeting-measure.html",
-    "date": "2026-10-19",
-    "confidence": "sourced"
+    "date": "2026-09-27",
+    "confidence": "verified"
   },
   {
     "endorser_id": "multnomah-county-democrats",
@@ -1145,9 +1144,9 @@
     "target_id": "or-hd-33",
     "status": "not_found",
     "choice": null,
-    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement.",
+    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.basicrights.org/2026endorsements",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1155,9 +1154,9 @@
     "target_id": "or-hd-34",
     "status": "not_found",
     "choice": null,
-    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement.",
+    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.basicrights.org/2026endorsements",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1165,9 +1164,9 @@
     "target_id": "or-hd-38",
     "status": "not_found",
     "choice": null,
-    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement.",
+    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.basicrights.org/2026endorsements",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1175,9 +1174,9 @@
     "target_id": "or-hd-41",
     "status": "not_found",
     "choice": null,
-    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement.",
+    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.basicrights.org/2026endorsements",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1185,9 +1184,9 @@
     "target_id": "or-hd-45",
     "status": "not_found",
     "choice": null,
-    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement.",
+    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.basicrights.org/2026endorsements",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1195,9 +1194,9 @@
     "target_id": "or-hd-46",
     "status": "not_found",
     "choice": null,
-    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement.",
+    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.basicrights.org/2026endorsements",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1205,9 +1204,9 @@
     "target_id": "or-hd-48",
     "status": "not_found",
     "choice": null,
-    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement.",
+    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.basicrights.org/2026endorsements",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1215,9 +1214,9 @@
     "target_id": "or-hd-50",
     "status": "not_found",
     "choice": null,
-    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement.",
+    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.basicrights.org/2026endorsements",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {

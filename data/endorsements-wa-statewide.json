@@ -592,52 +592,52 @@
   {
     "endorser_id": "wa-education-association",
     "target_id": "wa-supreme-court-pos-1",
-    "status": "not_found",
-    "choice": null,
-    "why": "WEA-PAC judicial endorsements for 2026 were not located. (Candidate statements by Birk and Angelis list 'Teachers' among their endorsers.) Checked again on Nov 1, 2026; still no pick on this page.",
-    "url": "https://www.washingtonea.org/",
-    "date": "2026-11-01",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Colleen Melody",
+    "why": "Listed under WEA-PAC Endorsed Supreme Court Candidates on the Washington Education Association's 2026 endorsements page.",
+    "url": "https://www.washingtonea.org/advocacy/wea-pac/2026-endorsements/",
+    "date": "2026-10-21",
+    "confidence": "verified"
   },
   {
     "endorser_id": "wa-education-association",
     "target_id": "wa-supreme-court-pos-3",
-    "status": "not_found",
-    "choice": null,
-    "why": "WEA-PAC judicial endorsements for 2026 were not located. (Candidate statements by Birk and Angelis list 'Teachers' among their endorsers.) Checked again on Nov 1, 2026; still no pick on this page.",
-    "url": "https://www.washingtonea.org/",
-    "date": "2026-11-01",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Jaime Michelle Hawk",
+    "why": "Listed under WEA-PAC Endorsed Supreme Court Candidates on the Washington Education Association's 2026 endorsements page.",
+    "url": "https://www.washingtonea.org/advocacy/wea-pac/2026-endorsements/",
+    "date": "2026-10-21",
+    "confidence": "verified"
   },
   {
     "endorser_id": "wa-education-association",
     "target_id": "wa-supreme-court-pos-4",
-    "status": "not_found",
-    "choice": null,
-    "why": "WEA-PAC judicial endorsements for 2026 were not located. (Candidate statements by Birk and Angelis list 'Teachers' among their endorsers.) Checked again on Nov 1, 2026; still no pick on this page.",
-    "url": "https://www.washingtonea.org/",
-    "date": "2026-11-01",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Ian Birk",
+    "why": "Listed under WEA-PAC Endorsed Supreme Court Candidates on the Washington Education Association's 2026 endorsements page.",
+    "url": "https://www.washingtonea.org/advocacy/wea-pac/2026-endorsements/",
+    "date": "2026-10-21",
+    "confidence": "verified"
   },
   {
     "endorser_id": "wa-education-association",
     "target_id": "wa-supreme-court-pos-5",
-    "status": "not_found",
-    "choice": null,
-    "why": "WEA-PAC judicial endorsements for 2026 were not located. (Candidate statements by Birk and Angelis list 'Teachers' among their endorsers.) Checked again on Nov 1, 2026; still no pick on this page.",
-    "url": "https://www.washingtonea.org/",
-    "date": "2026-11-01",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Theo Angelis",
+    "why": "Listed under WEA-PAC Endorsed Supreme Court Candidates on the Washington Education Association's 2026 endorsements page.",
+    "url": "https://www.washingtonea.org/advocacy/wea-pac/2026-endorsements/",
+    "date": "2026-10-21",
+    "confidence": "verified"
   },
   {
     "endorser_id": "wa-education-association",
     "target_id": "wa-supreme-court-pos-7",
-    "status": "not_found",
-    "choice": null,
-    "why": "WEA-PAC judicial endorsements for 2026 were not located. (Candidate statements by Birk and Angelis list 'Teachers' among their endorsers.) Checked again on Nov 1, 2026; still no pick on this page.",
-    "url": "https://www.washingtonea.org/",
-    "date": "2026-11-01",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Debra L. Stephens",
+    "why": "Listed under WEA-PAC Endorsed Supreme Court Candidates on the Washington Education Association's 2026 endorsements page.",
+    "url": "https://www.washingtonea.org/advocacy/wea-pac/2026-endorsements/",
+    "date": "2026-10-21",
+    "confidence": "verified"
   },
   {
     "endorser_id": "wa-state-pta",

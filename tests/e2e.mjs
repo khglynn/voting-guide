@@ -3261,12 +3261,17 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
   // The Oregonian's ranked District 3 pick is in since Oct 25 (read in full on the 21st; written by hand), so the
   // race shows it rather than a paywall note.
   check('Portland: the race shows the Oregonian\u2019s ranked pick, no paywall note', /Oregonian/.test(await text(page, card)) && !(await page.$(`${card} .pw-note`)), (await text(page, card)).slice(0, 120));
-  // Paywalled papers (Kevin, Oct 19): where the Oregonian's pick was only seen secondhand (Measure 26-267 still is),
-  // the row says once why, with a link that opens the report form naming the paper and the measure.
+  // The Oregonian's Measure 26-267 pick is in since Nov 2 (its editorial was read in full on Oct 21), so that row
+  // shows the pick and no paywall note.
   await openRow(page, 'portland-26-267');
   const mcard = '#i-portland-26-267';
-  const pwRow = await page.evaluate((c) => { const n = document.querySelector(`${c} .pw-note`); return n ? { n: document.querySelectorAll(`${c} .pw-note`).length, note: n.textContent.replace(/\s+/g, ' ').trim(), what: (n.querySelector('[data-act="shelf"][data-kind="report"]') || { dataset: {} }).dataset.what || '' } : null; }, mcard);
-  check('Portland: the measure notes the paywalled Oregonian once, with Send it to us naming the paper and the measure', !!pwRow && pwRow.n === 1 && /Oregonian/.test(pwRow.note) && PW_NOTE_RE.test(pwRow.note) && /Oregonian.*: picks on Measure 26-267/.test(pwRow.what), pwRow ? `${pwRow.note} | ${pwRow.what}` : 'no note');
+  check('Portland: the measure shows the Oregonian’s pick, no paywall note', /Oregonian/.test(await text(page, mcard)) && !(await page.$(`${mcard} .pw-note`)), (await text(page, mcard)).slice(0, 120));
+  // Paywalled papers (Kevin, Oct 19): where the Oregonian's pick was only seen secondhand (the U.S. Senate race
+  // still is), the row says once why, with a link that opens the report form naming the paper and the race.
+  await openRow(page, 'or-us-senate');
+  const scard = '#i-or-us-senate';
+  const pwRow = await page.evaluate((c) => { const n = document.querySelector(`${c} .pw-note`); return n ? { n: document.querySelectorAll(`${c} .pw-note`).length, note: n.textContent.replace(/\s+/g, ' ').trim(), what: (n.querySelector('[data-act="shelf"][data-kind="report"]') || { dataset: {} }).dataset.what || '' } : null; }, scard);
+  check('Portland: the Senate race notes the paywalled Oregonian once, with Send it to us naming the paper and the race', !!pwRow && pwRow.n === 1 && /Oregonian/.test(pwRow.note) && PW_NOTE_RE.test(pwRow.note) && /Oregonian.*: picks on .*Senat/.test(pwRow.what), pwRow ? `${pwRow.note} | ${pwRow.what}` : 'no note');
   await openRow(page, 'portland-council-3');
   await tap(page, `${card} [data-act="rank"][data-v="Steve Novick"]`);
   await tap(page, `${card} [data-act="rank"][data-v="Tiffany Koyama Lane"]`);

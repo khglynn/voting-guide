@@ -704,9 +704,9 @@
     "target_id": "ca-boe-2",
     "status": "not_found",
     "choice": null,
-    "why": "Outside SCNG's coverage area; the board interviewed candidates for the three Southern California districts only.",
+    "why": "Outside SCNG's coverage area; the board interviewed candidates for the three Southern California districts only. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.ocregister.com/2026/08/30/our-endorsements-for-the-california-state-board-of-equalization/",
-    "date": "2026-08-30",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2602,11 +2602,11 @@
   {
     "endorser_id": "ca-envirovoters",
     "target_id": "ca-governor",
-    "status": "not_found",
-    "choice": null,
-    "why": "EnviroVoters dual-endorsed Katie Porter and Tom Steyer; neither advanced. Its page still shows those names and no endorsement of Becerra or Hilton.",
-    "url": "https://action.ecovote.org/2026-endorsements",
-    "date": null,
+    "status": "endorsed",
+    "choice": "Xavier Becerra",
+    "why": "Listed for governor on California Environmental Voters' 2026 endorsements page.",
+    "url": "https://envirovoters.org/2026-endorsements/",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2622,11 +2622,11 @@
   {
     "endorser_id": "ca-envirovoters",
     "target_id": "ca-secretary-of-state",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not on California Environmental Voters' 2026 endorsements page.",
-    "url": "https://action.ecovote.org/2026-endorsements",
-    "date": null,
+    "status": "endorsed",
+    "choice": "Shirley N. Weber",
+    "why": "Listed for secretary of state on California Environmental Voters' 2026 endorsements page.",
+    "url": "https://envirovoters.org/2026-endorsements/",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2652,11 +2652,11 @@
   {
     "endorser_id": "ca-envirovoters",
     "target_id": "ca-boe-2",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not on California Environmental Voters' 2026 endorsements page.",
-    "url": "https://action.ecovote.org/2026-endorsements",
-    "date": null,
+    "status": "endorsed",
+    "choice": "Sally J. Lieber",
+    "why": "Listed for Board of Equalization District 2 on California Environmental Voters' 2026 endorsements page.",
+    "url": "https://envirovoters.org/2026-endorsements/",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {

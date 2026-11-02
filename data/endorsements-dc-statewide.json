@@ -404,9 +404,9 @@
     "target_id": "dc-mayor",
     "status": "not_found",
     "choice": null,
-    "why": "The party has no mayoral nominee; the Republican mayoral primary line was write-in only and no one qualified.",
+    "why": "The party has no mayoral nominee; the Republican mayoral primary line was write-in only and no one qualified. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://dcgop.com/2026/06/18/dc-republican-party-celebrates-largest-candidate-slate-in-decades-as-nominees-advance-to-general-election/",
-    "date": "2026-06-18",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -494,9 +494,9 @@
     "target_id": "dc-council-chair",
     "status": "not_found",
     "choice": null,
-    "why": "The party fielded no candidate in this race.",
+    "why": "The party fielded no candidate in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://statehoodgreensofdc.org/",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -524,9 +524,9 @@
     "target_id": "dc-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "The party fielded no candidate in this race.",
+    "why": "The party fielded no candidate in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://statehoodgreensofdc.org/",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -534,9 +534,9 @@
     "target_id": "dc-shadow-senator",
     "status": "not_found",
     "choice": null,
-    "why": "The party fielded no candidate in this race.",
+    "why": "The party fielded no candidate in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://statehoodgreensofdc.org/",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -544,9 +544,9 @@
     "target_id": "dc-shadow-representative",
     "status": "not_found",
     "choice": null,
-    "why": "The party fielded no candidate in this race.",
+    "why": "The party fielded no candidate in this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://statehoodgreensofdc.org/",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {

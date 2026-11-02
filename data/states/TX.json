@@ -53,7 +53,7 @@
     },
     "return_options": [
       "mail (USPS) to your county Early Voting Clerk, arriving by 7:00 PM Nov. 3, OR postmarked by 7:00 PM Nov. 3 and arriving by 5:00 PM Wednesday, Nov. 4",
-      "common or contract carrier (FedEx, UPS) arriving by 7:00 PM Nov. 3",
+      "common or contract carrier (FedEx, UPS) arriving by 7:00 PM Nov. 3, or by 5:00 PM Wednesday, Nov. 4 if the carrier's receipt mark shows a time before 7:00 PM Nov. 3 (Travis County lists this)",
       "hand-deliver it yourself, in person, to the county Early Voting Clerk's office, but only on Election Day (Nov. 3) while polls are open, with your photo ID (Election Code 86.006(a-1))",
       "Texas does not use ballot drop boxes"
     ],
@@ -230,7 +230,7 @@
           "url": "https://www.votetexas.gov/voting/where.html"
         }
       ],
-      "answer": "Dallas, Harris, Bexar, Travis, Williamson, Hays and other big counties use vote centers, so you can vote at any polling place in your county, early or on Election Day. Go to the closest one in the county where you're registered.",
+      "answer": "Dallas, Harris, Bexar, Travis, Williamson, Hays and other big counties use vote centers, so you can vote at any polling place in your county on Election Day. Go to the closest one in the county where you're registered.",
       "steps": [
         "Find locations (and wait times, in many counties) on your county elections site or the My Voter Portal.",
         "In a different county? Go back to your own county; that's where your ballot is."
@@ -647,7 +647,7 @@
       "applies_to": "section:judicial"
     },
     {
-      "text": "Bring your plan on paper. You may use written notes, but phones and other wireless devices cannot be used within 100 feet of a voting station.",
+      "text": "Bring your plan on paper. You may use written notes, but you cannot use a phone or other wireless device in the room where voting happens, and recording images or sound within 100 feet of a voting station is banned.",
       "applies_to": "ballot"
     }
   ],

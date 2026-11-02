@@ -1,0 +1,274 @@
+{
+  "id": "austin-williamson-tx",
+  "label": "Austin (Williamson County)",
+  "state": "TX",
+  "counties": [
+    "Williamson"
+  ],
+  "county_fips": [
+    "48491"
+  ],
+  "county_election_office": {
+    "name": "Williamson County Elections Department, 301 SE Inner Loop, Suite 104, Georgetown 78626",
+    "url": "https://www.wilcotx.gov/elections",
+    "phone": "512-943-1630"
+  },
+  "sample_ballot_url": "https://apps.wilcotx.gov/elections/voterlookup",
+  "zips": [
+    "78717",
+    "78728",
+    "78729",
+    "78750"
+  ],
+  "zip_caveats": "These ZIPs reach into Travis County too, so a ZIP alone cannot tell. If your address is in Travis County, pick Austin instead. Williamson County voters in Austin vote on the Austin ballot measures (Props A to J) and Austin Community College trustees, but there is no Austin City Council race on a Williamson ballot this year. Your school district decides which trustee races you get: Round Rock ISD, Leander ISD or Pflugerville ISD. Congress after the 2025 redraw is CD-31, CD-17, CD-11 or CD-10 depending on where you live; the Williamson sample ballot shows yours.",
+  "contest_ids": [
+    "tx-us-senate",
+    "tx-governor",
+    "tx-lt-governor",
+    "tx-attorney-general",
+    "tx-comptroller",
+    "tx-land-commissioner",
+    "tx-agriculture-commissioner",
+    "tx-railroad-commissioner",
+    "tx-supreme-court-chief",
+    "tx-supreme-court-place-2",
+    "tx-supreme-court-place-7",
+    "tx-supreme-court-place-8",
+    "tx-cca-place-3",
+    "tx-cca-place-4",
+    "tx-cca-place-9",
+    "tx-15th-coa-chief",
+    "tx-15th-coa-place-2",
+    "tx-15th-coa-place-3",
+    "tx-us-house-10",
+    "tx-us-house-11",
+    "tx-sboe-5",
+    "tx-senate-5",
+    "tx-senate-24",
+    "tx-3rd-coa-chief",
+    "tx-acc-trustee-1",
+    "tx-acc-trustee-2",
+    "tx-acc-trustee-3",
+    "tx-rrisd-trustee-3",
+    "tx-rrisd-trustee-4",
+    "tx-rrisd-trustee-5",
+    "tx-rrisd-trustee-6",
+    "tx-wilco-county-judge",
+    "tx-wilco-county-clerk",
+    "tx-wilco-treasurer",
+    "tx-wilco-tax-assessor",
+    "tx-wilco-commissioner-2",
+    "tx-wilco-commissioner-4",
+    "tx-wilco-district-court-512",
+    "tx-wilco-district-court-277",
+    "tx-wilco-district-court-368",
+    "tx-wilco-district-court-480",
+    "tx-wilco-ccl-1",
+    "tx-wilco-ccl-2",
+    "tx-wilco-ccl-3",
+    "tx-wilco-ccl-4",
+    "tx-wilco-district-clerk",
+    "tx-wilco-jp-1",
+    "tx-wilco-jp-2",
+    "tx-wilco-jp-3",
+    "tx-wilco-jp-4",
+    "tx-wcad-place-1",
+    "tx-wcad-place-2",
+    "tx-wcad-place-3",
+    "tx-us-house-31",
+    "tx-us-house-17",
+    "tx-house-52",
+    "tx-house-136",
+    "tx-lisd-trustee-1",
+    "tx-lisd-trustee-2",
+    "tx-lisd-trustee-6",
+    "tx-lisd-trustee-7",
+    "tx-pfisd-trustee-6",
+    "tx-pfisd-trustee-7"
+  ],
+  "measure_ids": [
+    "tx-austin-prop-a",
+    "tx-austin-prop-b",
+    "tx-austin-prop-c",
+    "tx-austin-prop-d",
+    "tx-austin-prop-e",
+    "tx-austin-prop-f",
+    "tx-austin-prop-g",
+    "tx-austin-prop-h",
+    "tx-austin-prop-i",
+    "tx-austin-prop-j",
+    "tx-rrisd-prop-a",
+    "tx-lisd-prop-a",
+    "tx-acc-prop-a-pflugerville"
+  ],
+  "notes": "Election Day: Tue Nov 3, 7 AM to 7 PM. Any Williamson voter can use any Williamson vote center. This list follows Williamson County's own comprehensive sample ballot, so you only see races that county prints. Not listed here, so check your sample ballot: the North Austin Municipal Utility District No. 1 director races, and Texas House District 20.",
+  "district_finders": [
+    {
+      "office_match": "U.S. Representative",
+      "label": "Find your 2026 district on your Williamson sample ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "State Senator",
+      "label": "Find your district",
+      "url": "https://wrm.capitol.texas.gov/home"
+    },
+    {
+      "office_match": "County Commissioner",
+      "label": "Find your Williamson commissioner precinct",
+      "url": "https://www.wilcotx.gov/683/Redistricting-Census-Information"
+    },
+    {
+      "office_match": "Justice of the Peace",
+      "label": "Find your Williamson JP precinct",
+      "url": "https://www.wilcotx.gov/683/Redistricting-Census-Information"
+    },
+    {
+      "office_match": "State Representative",
+      "label": "Find your district",
+      "url": "https://wrm.capitol.texas.gov/home"
+    },
+    {
+      "office_match": "Austin Community College Trustee",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Chief Justice, 15th Court of Appeals",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Chief Justice, 3rd Court of Appeals",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Chief Justice, Supreme Court",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "County Commissioner",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Director, Williamson Central Appraisal District",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "District Judge",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Judge, County Court at Law",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Judge, Court of Criminal Appeals",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Justice of the Peace",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Justice, 15th Court of Appeals",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Justice, Supreme Court",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Member, State Board of Education",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Round Rock ISD Trustee, Place 3",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Round Rock ISD Trustee, Place 4",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Round Rock ISD Trustee, Place 5",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Round Rock ISD Trustee, Place 6",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "State Representative",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "State Senator",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Tax Assessor-Collector",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    }
+  ],
+  "lookups": {
+    "early_in_person": "https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Early%20Voting%20Dashboard.html",
+    "election_day": "https://www.wilcotx.gov/DocumentCenter/View/22255/Notice-of-General-Election-Williamson-County"
+  },
+  "by_county": [
+    {
+      "county": "Williamson",
+      "zips": [
+        "78717",
+        "78728",
+        "78729",
+        "78750"
+      ],
+      "lookups": {
+        "early_in_person": "https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Early%20Voting%20Dashboard.html",
+        "election_day": "https://www.wilcotx.gov/DocumentCenter/View/22255/Notice-of-General-Election-Williamson-County"
+      },
+      "source": "https://www.wilcotx.gov/elections",
+      "confidence": "verified"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Williamson County comprehensive sample ballot, Nov 3, 2026 (PDF, saved Nov 1)",
+      "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF"
+    },
+    {
+      "name": "Williamson County Elections",
+      "url": "https://www.wilcotx.gov/elections"
+    },
+    {
+      "name": "Census 2020 ZIP code (ZCTA) to county relationship file",
+      "url": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_county20_natl.txt"
+    }
+  ],
+  "heads_up": [
+    {
+      "text": "This page is for the part of Austin in Williamson County. If your address is in Travis County, use the Austin page instead.",
+      "applies_to": "ballot",
+      "source": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_county20_natl.txt"
+    }
+  ]
+}

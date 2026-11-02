@@ -284,9 +284,9 @@
   "target_id": "malibu-city-council",
   "status": "not_found",
   "choice": null,
-  "why": "The federation's 2026 voter guide has no Malibu City Council entry (checked Oct 31, 2026).",
+  "why": "The federation's 2026 voter guide has no Malibu City Council entry (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "confidence": "verified"
  },
  {
@@ -314,9 +314,9 @@
   "target_id": "malibu-city-council",
   "status": "not_found",
   "choice": null,
-  "why": "The guide has no Malibu page and no pick in this race (checked Oct 31, 2026).",
+  "why": "The guide has no Malibu page and no pick in this race (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
   "url": "https://laforwardguide.org/",
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "confidence": "verified"
  },
  {
@@ -334,9 +334,9 @@
   "target_id": "smccd-board",
   "status": "not_found",
   "choice": null,
-  "why": "Its 2026 endorsements page lists no pick in this race (checked Oct 31, 2026).",
+  "why": "Its 2026 endorsements page lists no pick in this race (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
   "url": "https://lalcv.org/current-endorsements/",
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "confidence": "verified"
  },
  {
@@ -344,9 +344,9 @@
   "target_id": "malibu-city-council",
   "status": "not_found",
   "choice": null,
-  "why": "Its 2026 endorsements page lists no pick in this race (checked Oct 31, 2026).",
+  "why": "Its 2026 endorsements page lists no pick in this race (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
   "url": "https://lalcv.org/current-endorsements/",
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "confidence": "verified"
  },
  {
@@ -354,9 +354,9 @@
   "target_id": "malibu-city-council",
   "status": "not_found",
   "choice": null,
-  "why": "The party's Nov 3, 2026 endorsement lookup has no record for this race (checked Oct 31, 2026).",
+  "why": "The party's Nov 3, 2026 endorsement lookup has no record for this race (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "confidence": "verified"
  },
  {
@@ -364,9 +364,9 @@
   "target_id": "smmusd-board",
   "status": "not_found",
   "choice": null,
-  "why": "The party's Nov 3, 2026 endorsement lookup has no record for this race (checked Oct 31, 2026).",
+  "why": "The party's Nov 3, 2026 endorsement lookup has no record for this race (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "confidence": "verified"
  },
  {
@@ -374,9 +374,9 @@
   "target_id": "smccd-board",
   "status": "not_found",
   "choice": null,
-  "why": "The party's Nov 3, 2026 endorsement lookup has no record for this race (checked Oct 31, 2026).",
+  "why": "The party's Nov 3, 2026 endorsement lookup has no record for this race (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "confidence": "verified"
  },
  {
@@ -414,9 +414,9 @@
   "target_id": "smccd-board",
   "status": "not_found",
   "choice": null,
-  "why": "The union's political action page lists no pick in this race (checked Oct 31, 2026).",
+  "why": "The union's political action page lists no pick in this race (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
   "url": "https://www.smmcta.com/political-action.html",
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "confidence": "verified"
  },
  {
@@ -434,9 +434,9 @@
   "target_id": "ca-prop-1",
   "status": "not_found",
   "choice": null,
-  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026).",
+  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
   "url": "https://www.smmcta.com/political-action.html",
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "confidence": "verified"
  },
  {
@@ -444,9 +444,9 @@
   "target_id": "ca-prop-2",
   "status": "not_found",
   "choice": null,
-  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026).",
+  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
   "url": "https://www.smmcta.com/political-action.html",
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "confidence": "verified"
  },
  {
@@ -454,9 +454,9 @@
   "target_id": "ca-prop-4",
   "status": "not_found",
   "choice": null,
-  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026).",
+  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
   "url": "https://www.smmcta.com/political-action.html",
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "confidence": "verified"
  },
  {
@@ -464,9 +464,9 @@
   "target_id": "ca-prop-5",
   "status": "not_found",
   "choice": null,
-  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026).",
+  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
   "url": "https://www.smmcta.com/political-action.html",
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "confidence": "verified"
  },
  {
@@ -474,9 +474,9 @@
   "target_id": "ca-prop-37",
   "status": "not_found",
   "choice": null,
-  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026).",
+  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
   "url": "https://www.smmcta.com/political-action.html",
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "confidence": "verified"
  },
  {
@@ -484,9 +484,9 @@
   "target_id": "ca-prop-38",
   "status": "not_found",
   "choice": null,
-  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026).",
+  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
   "url": "https://www.smmcta.com/political-action.html",
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "confidence": "verified"
  },
  {
@@ -494,9 +494,9 @@
   "target_id": "ca-prop-39",
   "status": "not_found",
   "choice": null,
-  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026).",
+  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
   "url": "https://www.smmcta.com/political-action.html",
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "confidence": "verified"
  },
  {
@@ -504,9 +504,9 @@
   "target_id": "ca-prop-40",
   "status": "not_found",
   "choice": null,
-  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026).",
+  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
   "url": "https://www.smmcta.com/political-action.html",
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "confidence": "verified"
  },
  {
@@ -514,9 +514,9 @@
   "target_id": "ca-prop-41",
   "status": "not_found",
   "choice": null,
-  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026).",
+  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
   "url": "https://www.smmcta.com/political-action.html",
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "confidence": "verified"
  },
  {
@@ -524,9 +524,9 @@
   "target_id": "ca-prop-42",
   "status": "not_found",
   "choice": null,
-  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026).",
+  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
   "url": "https://www.smmcta.com/political-action.html",
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "confidence": "verified"
  },
  {
@@ -534,9 +534,9 @@
   "target_id": "ca-prop-43",
   "status": "not_found",
   "choice": null,
-  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026).",
+  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
   "url": "https://www.smmcta.com/political-action.html",
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "confidence": "verified"
  },
  {
@@ -544,9 +544,9 @@
   "target_id": "ca-prop-44",
   "status": "not_found",
   "choice": null,
-  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026).",
+  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
   "url": "https://www.smmcta.com/political-action.html",
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "confidence": "verified"
  },
  {
@@ -554,9 +554,9 @@
   "target_id": "ca-prop-45",
   "status": "not_found",
   "choice": null,
-  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026).",
+  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
   "url": "https://www.smmcta.com/political-action.html",
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "confidence": "verified"
  }
 ]

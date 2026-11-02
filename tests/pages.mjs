@@ -63,7 +63,7 @@ const OUR_WORDS = /—|–|\b[A-Z]{4,}\b/;
 for (const id of placeIds) {
   const p = pages.find((x) => x.path === `/${id}`);
   const pb = data.places[id];
-  const short = site.shortLabel(pb.label);
+  const short = site.pageLabel(data, id);
   if (!p) { bad.title.push(`${id}: no page`); continue; }
   if (!p.title.includes(short) || p.title.length > 65 || !p.description.includes(short) || p.description.length > 160) bad.title.push(`${id}: "${p.title}" / ${p.description.length} chars`);
   if (!p.html.includes(`<link rel="canonical" href="${site.ORIGIN}/${id}">`)) bad.canon.push(id);

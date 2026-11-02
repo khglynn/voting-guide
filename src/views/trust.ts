@@ -11,7 +11,11 @@ import { kevinLink, shelfAttrs } from './common';
 /* How many cities the guide covers: each place counts once, except that DC's wards are one city
    and New York City's boroughs are one. */
 export function cityCount(idx: Pick<Index, 'places'>): number {
-  return new Set(Object.entries(idx.places).map(([id, p]) => (p.state === 'DC' ? 'DC' : /^nyc-/.test(id) ? 'NYC' : id))).size;
+  // A city split by county (Austin, Austin (Williamson County)) is one city: the pages share a state and a
+  // label once the "(… County)" bracket is dropped.
+  const bare = (label: string): string => label.replace(/\s*\(.*\)$/, '');
+  const split = new Set(Object.values(idx.places).filter((p) => /\(.+ County\)$/.test(p.label)).map((p) => `${p.state}|${bare(p.label)}`));
+  return new Set(Object.entries(idx.places).map(([id, p]) => (p.state === 'DC' ? 'DC' : /^nyc-/.test(id) ? 'NYC' : split.has(`${p.state}|${bare(p.label)}`) ? `${p.state}|${bare(p.label)}` : id))).size;
 }
 
 export function trustHTML(inDoor = false): string {

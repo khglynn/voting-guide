@@ -1,0 +1,37 @@
+{
+  "id": "bexar-tx",
+  "state": "TX",
+  "name": "Bexar County",
+  "county": "Bexar",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "127291",
+    "feed_name": "2026 General Election"
+  },
+  "guide": {
+    "fingerprint": "e3b0c44298fc1c14",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-03T21:18:11.797Z",
+    "places": [
+      "san-antonio-tx"
+    ]
+  },
+  "feed": {
+    "adapter": "clarity",
+    "base": "https://results.enr.clarityelections.com/TX/Bexar",
+    "results_url": "https://results.enr.clarityelections.com/TX/Bexar/127291/",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent on Nov 3, 3:10 PM CT (current_ver.txt, summary.json, electionsettings.json all 200).",
+    "election_id_from": "The registry row and Clarity's electionsettings for 127291: \"2026 General Election\", 11/3/2026, 183 contests.",
+    "tz": "America/Chicago"
+  },
+  "count_closes": "2026-11-04T23:00:00Z",
+  "complete_marker": {
+    "flag": "final_flag",
+    "words": "Clarity's final-upload flag (electiondetails.chkisfinalupload)."
+  },
+  "certify_by": "2026-11-17",
+  "official": null,
+  "contests": [],
+  "unmatched_feed": [],
+  "unmatched_guide": []
+}

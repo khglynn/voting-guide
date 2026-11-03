@@ -1,0 +1,14 @@
+{
+  "name": "vg-results",
+  "private": true,
+  "type": "module",
+  "description": "The voting guide's results fetcher: a Cloudflare Worker that reads official results feeds on a one-minute cron and serves one file per state.",
+  "scripts": {
+    "test": "node --test test/",
+    "map-check": "node bin/map-check.mjs",
+    "dev": "wrangler dev --test-scheduled"
+  },
+  "devDependencies": {
+    "wrangler": "4.157.0"
+  }
+}

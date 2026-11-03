@@ -590,7 +590,7 @@ function nearLineHTML(): string {
     const n = h ? nearNow(h, nextStep(h)) : null;
     if (!n) return '';
     const { site, mi } = n.rows[0];
-    const more = n.rows.length > 1 ? ` <button class="linkbtn" data-act="near" data-fk="addr-near">See all ${n.rows.length}</button>` : ' <button class="linkbtn" data-act="near" data-fk="addr-near">Directions</button>';
+    const more = ` <button class="linkbtn" data-act="near" data-fk="addr-near">${n.rows.length > 1 ? `See all ${n.rows.length}` : 'See directions'}</button>`;
     return `<p class="addr-near"><b>Closest vote center:</b> ${esc(`${site.name}, ${fmtMiles(mi)}.`)}${more}</p>`;
   } catch { return ''; }
 }

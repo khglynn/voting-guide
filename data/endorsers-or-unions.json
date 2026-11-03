@@ -1,0 +1,227 @@
+[
+  {
+    "id": "oregon-education-association",
+    "name": "Oregon Education Association (OEA-PAC)",
+    "short": "Oregon Education Association",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it is “a union that represents about 41,000 educators working in pre-kindergarten through grade 12 public schools and community colleges” (https://oregoned.org/about-oea). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://oregoned.org/2026recommendations",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "geography": [
+      "portland-or"
+    ]
+  },
+  {
+    "id": "seiu-oregon",
+    "name": "SEIU Oregon State Council (SEIU Local 503 and SEIU Local 49)",
+    "short": "SEIU Oregon",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it is “a coordinating body combining the political programs of SEIU Local 503 and SEIU Local 49” (https://seiu-oregon.org/about-the-seiu-oregon-state-council/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://seiu-oregon.org/2026-general-election-endorsements/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "geography": [
+      "portland-or"
+    ]
+  },
+  {
+    "id": "portland-association-of-teachers",
+    "name": "Portland Association of Teachers (PAT PAC)",
+    "short": "Portland Association of Teachers",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it “represents over 4500 professional educators in the Portland Public School system” (https://www.pdxteachers.org/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://www.pdxteachers.org/pat_pac_endorsements_11_26",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "geography": [
+      "portland-or"
+    ]
+  },
+  {
+    "id": "aft-oregon",
+    "name": "AFT-Oregon (American Federation of Teachers)",
+    "short": "AFT-Oregon",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says “our affiliated local unions represent over 19,000 Oregon workers in K-12, community college and higher education” (https://or.aft.org/about-aft-oregon). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://or.aft.org/political-legislative-news/2026-general-election-voters-guide",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "geography": [
+      "portland-or"
+    ]
+  },
+  {
+    "id": "ibew-local-48",
+    "name": "IBEW Local 48 (electricians, Portland and Vancouver)",
+    "short": "IBEW 48",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that describes itself as “Advocating for electrical professionals across the Northwest for over 100 years” (https://www.ibew48.com/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://www.ibew48.com/about/political-conversations/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "geography": [
+      "portland-or"
+    ]
+  },
+  {
+    "id": "oregon-afscme",
+    "name": "Oregon AFSCME Council 75",
+    "short": "Oregon AFSCME",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it is “the fastest growing union in the state, representing over 40,000 workers who work for the state, counties, municipalities, behavioral health and social service non-profits, workers at OHSU and childcare providers” (https://oregonafscme.org/history). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://www.politicalaction.oregonafscme.org/elections2026",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "geography": [
+      "portland-or"
+    ]
+  },
+  {
+    "id": "osea",
+    "name": "Oregon School Employees Association",
+    "short": "OSEA",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says “We represent more than 25,000 education professionals across Oregon” (https://www.osea.org/our-union/about-osea/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://www.osea.org/news-releases/election-2026-oseas-nonpartisan-endorsements/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "geography": [
+      "portland-or"
+    ]
+  },
+  {
+    "id": "oregon-state-fire-fighters-council",
+    "name": "Oregon State Fire Fighters Council",
+    "short": "Oregon Fire Fighters",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says “The OSFFC represents over 47 IAFF locals; over 3500 full-time, paid employees engaged in firefighting and related services” (https://www.osffc.org/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://www.osffc.org/docs/2026endorsements.general.pdf",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "geography": [
+      "portland-or"
+    ]
+  },
+  {
+    "id": "portland-fire-fighters-43",
+    "name": "Portland Fire Fighters' Association, IAFF Local 43",
+    "short": "Portland Fire Fighters",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it is “approximately seven hundred firefighters and EMTs working for Portland Fire and Rescue and for the Port of Portland Fire Department” (https://local.iaff.org/local0043). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://www.osffc.org/docs/PFFA_2026_Endorsements_Final_2026-10-02.pdf",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "portland-or"
+    ]
+  },
+  {
+    "id": "ufcw-555",
+    "name": "UFCW Local 555",
+    "short": "UFCW 555",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says “We are grocery, meat, CCK, and non-food retail workers” (https://www.ufcw555.org/about-local-555/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://www.ufcw555.org/endorsements/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "geography": [
+      "portland-or"
+    ]
+  },
+  {
+    "id": "north-coast-carpenters-or",
+    "name": "North Coast States Carpenters Union (Oregon)",
+    "short": "Carpenters Union",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says “With a membership of over 57,000 skilled craftspeople, the North Coast States Carpenters Union (NCSCU) with our 26 affiliated Local Unions is one of the largest organized voices in the construction industry” (https://www.ncscarpenters.org/about). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://www.ncscarpenters.org/images/ORCandidates_Voter_Guide.pdf",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "geography": [
+      "portland-or"
+    ]
+  },
+  {
+    "id": "protec17",
+    "name": "PROTEC17",
+    "short": "PROTEC17",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it “represents nearly 9,000 public employees across Washington and Oregon” (https://www.protec17.org/about-us/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://www.protec17.org/endorsements/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "portland-or"
+    ]
+  },
+  {
+    "id": "ofnhp",
+    "name": "Oregon Federation of Nurses and Health Professionals (AFT Local 5017)",
+    "short": "OFNHP",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it is “a union of more than 6,000 nurses and health professionals in Oregon and Southwest Washington” (https://ofnhp.aft.org/about-us). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://ofnhp.aft.org/news/its-time-vote-our-midterms",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "geography": [
+      "portland-or"
+    ]
+  },
+  {
+    "id": "psu-aaup",
+    "name": "Portland State University Chapter, American Association of University Professors (PSU-AAUP)",
+    "short": "PSU-AAUP",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it is “the largest bargaining unit at Portland State, and one of the largest faculty bargaining units in higher education in the State of Oregon” (https://psuaaup.net/about/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://psuaaup.net/news/psu-aaup-general-election-endorsements/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "portland-or"
+    ]
+  },
+  {
+    "id": "pccffap",
+    "name": "Portland Community College Federation of Faculty and Academic Professionals (AFT Local 2277)",
+    "short": "PCC Federation of Faculty",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it is “Local 2277 of the American Federation of Teachers, representing faculty and academic professionals at Portland Community College” (https://pccffap.org/about-us/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://pccffap.org/pccffap-political-and-legislative-action-committee-plac/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "geography": [
+      "portland-or"
+    ]
+  }
+]

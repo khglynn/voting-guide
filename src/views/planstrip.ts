@@ -9,12 +9,17 @@ import { esc, fmtDate, todayISO, host } from '../util';
 import { nextStep, registrationAlert, registerAction, isMailState, applyDated, countyKey, type Step } from '../model/plan';
 import { ext, isOpen, bulletsHTML, leadBulletsHTML, escP, srcLink, sentences, telHTML, wordCount, deshout } from './common';
 import { queryOf, textOf, best, type Item } from '../model/search';
-import { sitesIdFor, sitesFile, wantSites, nearest, fmtMiles, directionsURL } from '../model/sites';
+import { nearNow, fmtMiles, directionsURL, type NearNow } from '../model/sites';
 
 /* What the strip last showed, so main.ts can repaint it when the step changes while the page
    sits open (the polls close, midnight passes). */
 export let planKey = '';
 export const stepKey = (h: HowTo): string => { const s = nextStep(h); return `${s.phase}|${s.head.map((p) => p[0]).join('')}`; };
+/* What the closest-sites block last showed ('' for none), so main.ts can repaint when it changes on its own: the
+   sites close at 7 PM Central while a statewide ballot's step stays open until El Paso's polls close. */
+export let nearKey = '';
+const keyOfNear = (n: NearNow | null): string => (n ? `${n.county}|${n.rows.map((r) => r.site.name).join('|')}` : '');
+export const nearKeyNow = (h: HowTo): string => { try { return S.ui.addrPoint ? keyOfNear(nearNow(h, nextStep(h))) : ''; } catch { return ''; } };
 export function planHTML(): string {
   const b = S.ballot!;
   const h = b.howto;
@@ -72,24 +77,20 @@ function waitsHTML(h: HowTo, step: Step): string {
 
 /* The closest Election Day vote centers to the address looked up this visit (Nov 3): in Travis, Williamson and
    Hays any voter can vote at any vote center in their county, so after "Use my address" the step names the three
-   nearest, each with its distance and directions, under the where-to-vote button. Only on Election Day while the
-   polls are open, only while the address found shows (the form closed: "Not it? Try again" hides it, Cancel
-   brings it back), and only for a county whose list the place names. Its list loads when this would show and
-   not before (model/sites.ts); until then, or if it never loads, nothing new shows. The distances come from the
-   Census's point in memory; the links carry only each site's own address. Anything wrong here shows nothing
-   rather than breaking the step. */
+   nearest, each with its distance and directions, under the where-to-vote button. When it shows is nearNow's
+   (model/sites.ts): Election Day while the polls are open, while the address found shows ("Not it? Try again"
+   hides it, Cancel brings it back), for a county with a list, once the list is here. The address box's line
+   ("Closest vote center: ... See all 3", views/ledger.ts) reads the same and jumps here, to the heading
+   (`plan-near`). The distances come from the Census's point in memory; the links carry only each site's own
+   address. Anything wrong here shows nothing rather than breaking the step. */
 function closestHTML(h: HowTo, step: Step): string {
+  nearKey = '';
   try {
-    const at = S.ui.addrPoint;
-    if (step.phase !== 'election_day' || step.primary?.look !== 'election_day' || !at || S.ui.addrOpen) return '';
-    const id = sitesIdFor(S.ballot!.places, S.ui.addrCounty);
-    if (!id) return '';
-    const f = sitesFile(id);
-    if (!f) { wantSites(id); return ''; }
-    if (f.election_date !== h.election_date) return '';
-    const rows = nearest(f.sites, at, 3).map(({ site, mi }, i) => `<li><span class="pn-name">${esc(site.name)}</span><span class="pn-mi">${esc(fmtMiles(mi))}</span><a class="pn-dir" href="${esc(directionsURL(site))}" target="_blank" rel="noopener" data-fk="pn-dir-${i}" aria-label="${esc(`Directions to ${site.name}`)}">Directions</a></li>`).join('');
-    if (!rows) return '';
-    return `<div class="plan-near"><p class="plan-near-h" id="plan-near-h">Closest to your address:</p><ol class="plan-near-list" aria-labelledby="plan-near-h">${rows}</ol><p class="plan-hint plan-near-any">${esc(`You can vote at any site in ${f.county.replace(/\s+county$/i, '')} County.`)}</p></div>`;
+    const n = nearNow(h, step);
+    nearKey = keyOfNear(n);
+    if (!n) return '';
+    const rows = n.rows.map(({ site, mi }, i) => `<li><span class="pn-name">${esc(site.name)}</span><span class="pn-mi">${esc(fmtMiles(mi))}</span><a class="pn-dir" href="${esc(directionsURL(site))}" target="_blank" rel="noopener" data-fk="pn-dir-${i}" aria-label="${esc(`Directions to ${site.name}`)}">Directions</a></li>`).join('');
+    return `<div class="plan-near"><p class="plan-near-h" id="plan-near-h" tabindex="-1" data-fk="plan-near">Closest to your address:</p><ol class="plan-near-list" aria-labelledby="plan-near-h">${rows}</ol><p class="plan-hint plan-near-any">${esc(`You can vote at any site in ${n.county} County.`)}</p></div>`;
   } catch { return ''; }
 }
 

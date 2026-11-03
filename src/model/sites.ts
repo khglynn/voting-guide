@@ -8,9 +8,16 @@
      and a directions link carries only the site's own address.
    - A county's list (public/data/sites/<id>.json, from data/sites/, checked by scripts/build-data.mjs) loads only
      when the block would show, once per visit. A list that doesn't load shows nothing new and logs nothing.
-   - The place files name each county's list (`by_county[].sites`), so a county the place doesn't list gets none. */
-import type { PlaceBundle } from '../types';
-import { countyKey } from './plan';
+   - The place files name each county's list (`by_county[].sites`). A ballot no place names a list on (a statewide-only
+     one: Georgetown, Cedar Park, Kyle, Buda) takes the state file's (`election_day.sites`, by the Census's county), so
+     a county neither names gets none.
+   - The address box says the nearest one in a line under "Found:", with "See all 3" up to the block (views/ledger.ts),
+     because after a lookup the voter is looking at the address box, and the block sits above it, off screen. Both
+     read nearNow(), so the line shows exactly when the block does. */
+import type { HowTo, PlaceBundle } from '../types';
+import { S } from '../state';
+import { nowOverride, zonedNow } from '../util';
+import { countyKey, clockMinutes, type Step } from './plan';
 
 export interface Site { name: string; address: string; lat: number; lng: number }
 export interface SiteFile {
@@ -21,15 +28,18 @@ export interface SiteFile {
 export interface Near { site: Site; mi: number }
 export type Point = { lat: number; lon: number };
 
-/* The county's list for this ballot: the first place on it whose by_county entry for that county names one. */
-export function sitesIdFor(places: PlaceBundle[], county: string | null | undefined): string | null {
+/* The county's list for this ballot: the first place on it whose by_county entry for that county names one, else
+   the state's own map (`state`: the state file's election_day.sites, county to list, checked by build-data). The
+   county is the Census's, for the address looked up, and the lookup only settles an address in the ballot's state. */
+export function sitesIdFor(places: PlaceBundle[], county: string | null | undefined, state?: Record<string, string> | null): string | null {
   if (!county || !county.trim()) return null;
   const k = countyKey(county);
   for (const p of places) {
     const c = (p.by_county || []).find((x) => countyKey(x.county) === k && x.sites);
     if (c) return c.sites!;
   }
-  return null;
+  const hit = state && typeof state === 'object' ? Object.entries(state).find(([c, id]) => countyKey(c) === k && typeof id === 'string' && id) : null;
+  return hit ? hit[1] : null;
 }
 
 /* Miles between two points on the Earth, as the crow flies (haversine, mean radius 3958.8 miles). */
@@ -90,4 +100,40 @@ export function putSites(id: string, raw: unknown): boolean {
   if (!sites.length) return false;
   files.set(id, { ...(f as SiteFile), sites });
   return true;
+}
+
+/* The closest sites right now, for the plan's block (views/planstrip.ts) and the address box's line about it
+   (views/ledger.ts), so the two always agree: on Election Day while the polls are open (the step the plan shows,
+   `step`), after an address lookup this visit with a point, while the address found shows (the form closed), for a
+   county with a list, once that list is here and is for this election. Until the list is here it asks for it
+   (once a visit) and says null; anything else is null too, and the caller shows nothing new. `county` is the
+   list's, without "County". */
+export interface NearNow { county: string; rows: Near[] }
+export function nearNow(h: HowTo, step: Step, now: number | Date | null = nowOverride()): NearNow | null {
+  const b = S.ballot;
+  const at = S.ui.addrPoint;
+  if (!b || step.phase !== 'election_day' || step.primary?.look !== 'election_day' || !at || S.ui.addrOpen) return null;
+  const id = sitesIdFor(b.places, S.ui.addrCounty, b.stateHowto.election_day.sites);
+  if (!id) return null;
+  const f = files.get(id);
+  if (!f) { wantSites(id); return null; }
+  if (f.election_date !== h.election_date || !listOpen(id, f, b.stateHowto.election_day.polls_close, now)) return null;
+  const rows = nearest(f.sites, at, 3);
+  return rows.length ? { county: f.county.replace(/\s+county$/i, '').trim(), rows } : null;
+}
+
+/* Each list's county's own time zone. Its sites close at the state's polls-close time there ("7:00 PM"), on the
+   list's election date, whatever the plan's step says: a statewide ballot's step waits for every zone in the state
+   (Texas's says closed at 8 PM Central, once El Paso's Mountain-time polls close), and Codex found the block still
+   up for Georgetown and Kyle voters until then (Nov 3). A list with no zone here shows nothing (model test: every
+   built list has one). */
+export const LIST_ZONE: Record<string, string> = { 'travis-tx': 'America/Chicago', 'williamson-tx': 'America/Chicago', 'hays-tx': 'America/Chicago' };
+/* Whether a list's sites are still open: before its close in its county's zone on its election date. `now` as in
+   plan.nextStep: minutes after midnight where the polls are (`?now=HH:MM`, a test), or an instant. */
+export function listOpen(id: string, f: SiteFile, pollsClose: string | null | undefined, now: number | Date | null = nowOverride()): boolean {
+  const zone = LIST_ZONE[id];
+  const closes = clockMinutes(pollsClose);
+  if (!zone || closes == null) return false;
+  const { date, min } = typeof now === 'number' ? { date: f.election_date, min: now } : zonedNow(zone, now instanceof Date ? now : new Date());
+  return date < f.election_date || (date === f.election_date && min < closes);
 }

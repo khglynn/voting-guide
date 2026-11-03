@@ -4718,6 +4718,7 @@ const ADDRESS = /testing lane|testing%20lane|testing\+lane|test one/i;
   const where = await page.$$eval('#plan .plan-acts a.pbtn', (els) => els.map((e) => `${e.textContent.trim()} ${e.getAttribute('href')}`));
   check('Closest sites: before a lookup, the plan is as it was (no block) and no list loads', !(await page.$('#plan .plan-near')) && sitesAsked.length === 0 && /^Find where to vote https:\/\/www\.vote\.org\/polling-place-locator\/$/.test(where[0] || ''), `${where.join(' | ')} ${sitesAsked.join(' ')}`);
   await page.locator('#plan').screenshot({ path: path.join(SHOTS, 'closest-sites-nolookup-380.png') });
+  check('Closest sites: before a lookup, the address box has no closest line', !(await page.$('.addrbox .addr-near')));
   const answer = { result: { addressMatches: [{ matchedAddress: 'TEST CITY HALL, AUSTIN, TX, 78701', coordinates: { x: -97.746669, y: 30.26496 }, geographies: {
     States: [{ STATE: '48' }], Counties: [{ BASENAME: 'Travis' }], 'Incorporated Places': [{ BASENAME: 'Austin' }], '120th Congressional Districts': [{ BASENAME: '10' }],
     '2026 State Legislative Districts - Upper': [{ BASENAME: '14' }], '2026 State Legislative Districts - Lower': [{ BASENAME: '49' }],
@@ -4742,6 +4743,19 @@ const ADDRESS = /testing lane|testing%20lane|testing\+lane|test one/i;
   check('Closest sites: the where-to-vote button and the wait-times line stay', after[0] === where[0] && /See live wait times/.test(await text(page, '#plan .plan-waits')), after.join(' | '));
   check('Closest sites: nothing in all caps', (await upperCased(page)).length === 0, (await upperCased(page)).join(' | '));
   await noSideScroll(page, 'Closest sites');
+  // The address box, where the voter is after a lookup, names the nearest and jumps to the block.
+  const line = await text(page, '.addrbox .addr-near');
+  check('Closest sites: under "Found:", "Closest vote center: Austin City Hall, under 0.1 mi. See all 3"', line === 'Closest vote center: Austin City Hall, under 0.1 mi. See all 3', line);
+  const lineAt = await page.$eval('.addrbox .addr-near', (e) => { const r = e.getBoundingClientRect(); return r.top >= 0 && r.bottom <= window.innerHeight; }).catch(() => false);
+  check('Closest sites: the line is on screen after the lookup, and the block is not', lineAt && !(await page.$eval('#plan .plan-near', (e) => e.getBoundingClientRect().bottom > 0)), String(lineAt));
+  await page.screenshot({ path: path.join(SHOTS, 'closest-sites-line-380.png') });
+  await tap(page, '.addrbox [data-act="near"]');
+  await page.waitForTimeout(700);
+  const landed = await page.$eval('#plan .plan-near', (e) => { const r = e.getBoundingClientRect(); return r.top >= 0 && r.top < window.innerHeight / 2 && r.bottom <= window.innerHeight; });
+  check('Closest sites: "See all 3" brings the block on screen, its heading focused', landed && (await focusedFk(page)) === 'plan-near', `${landed} ${await focusedFk(page)}`);
+  await page.screenshot({ path: path.join(SHOTS, 'closest-sites-jump-380.png') });
+  const seeTall = await page.$eval('.addrbox [data-act="near"]', (e) => Math.round(e.getBoundingClientRect().height));
+  check('Closest sites: "See all 3" is a 44px tap', seeTall >= 44, String(seeTall));
   const tall = await page.$$eval('#plan .plan-near a.pn-dir', (els) => els.map((e) => Math.round(e.getBoundingClientRect().height)));
   check('Closest sites: each Directions link is a 44px tap', tall.length === 3 && tall.every((h) => h >= 44), tall.join(','));
   await page.locator('#plan').screenshot({ path: path.join(SHOTS, 'closest-sites-380.png') });
@@ -4749,14 +4763,120 @@ const ADDRESS = /testing lane|testing%20lane|testing\+lane|test one/i;
   const stored = (await savedVG(page)) || '';
   check('Closest sites: the point is never saved or in the page’s address', !!stored && !/30\.26|97\.74|2649|7466/.test(stored) && !/30\.26|97\.74/.test(page.url()), page.url());
   await tap(page, '.addrbox [data-act="addr-again"]');
-  check('Closest sites: "Not it? Try again" takes the block away', !(await page.$('#plan .plan-near')));
+  check('Closest sites: "Not it? Try again" takes the block away, and the line with it', !(await page.$('#plan .plan-near')) && !(await page.$('.addrbox .addr-near')));
   await tap(page, '.addrbox [data-act="addr-close"]');
-  check('Closest sites: Cancel brings it back with the address found', !!(await page.$('#plan .plan-near li')) && !!(await page.$('.addrbox .addr-found')));
+  check('Closest sites: Cancel brings it back with the address found', !!(await page.$('#plan .plan-near li')) && !!(await page.$('.addrbox .addr-found')) && !!(await page.$('.addrbox .addr-near')));
   await page.reload();
   await page.waitForSelector('#plan', { timeout: 15000 });
   await page.waitForTimeout(200);
-  check('Closest sites: after a reload the block is gone (the point was this visit only)', !(await page.$('#plan .plan-near')));
+  check('Closest sites: after a reload the block is gone (the point was this visit only)', !(await page.$('#plan .plan-near')) && !(await page.$('.addrbox .addr-near')));
   noErrors(page, 'Closest sites');
+  await ctx.close();
+}
+
+/* The first page's "Use my address for a more exact ballot", once the ZIP has found its ballot (the door repaints as
+   it does, and a tap on the link it replaces opens nothing), then a lookup and its "Found:" line. */
+async function doorLookup(page) {
+  await page.waitForSelector('.door-place [data-act="rechoose"], .door-place, [data-act="setup-done"]', { timeout: 15000 }).catch(() => {});
+  for (let i = 0; i < 3 && !(await page.$('#addr-in')); i++) {
+    await page.waitForSelector('[data-act="addr-open"]', { timeout: 10000 });
+    await tap(page, '[data-act="addr-open"]');
+    await page.waitForSelector('#addr-in', { timeout: 3000 }).catch(() => {});
+  }
+  await page.fill('#addr-in', 'a test lookup');
+  await page.locator('form[data-form="addr"] button[type=submit]').tap();
+  await page.waitForSelector('.door-found', { timeout: 10000 }).catch(() => {});
+}
+// A statewide-only ballot in one of the three counties (Georgetown's 78626: no place in the guide) gets the state's
+// list for the Census's county. Such a ballot has no address box until a lookup, so the lookup is the first page's
+// "Use my address for a more exact ballot". The Census answers with the Williamson County Courthouse, 710 S Main St
+// (a public building).
+{
+  const { ctx, page } = await newPage();
+  const sitesAsked = [];
+  page.on('request', (r) => { if (/\/data\/sites\//.test(r.url())) sitesAsked.push(new URL(r.url()).pathname); });
+  await page.goto(`${BASE}/?today=2026-11-03&now=12:00`);
+  await page.waitForSelector('#zip');
+  await page.fill('#zip', '78626');
+  await throughSetup(page);
+  await page.waitForTimeout(200);
+  check('Closest sites, Georgetown: a statewide ballot, and with no lookup no block, no line, no list', !!(await page.$('.statewide-note, .cov-card')) && !(await page.$('#plan .plan-near')) && !(await page.$('.addrbox .addr-near')) && sitesAsked.length === 0, sitesAsked.join(' '));
+  await ctx.close();
+}
+{
+  const { ctx, page } = await newPage();
+  const sitesAsked = [];
+  page.on('request', (r) => { if (/\/data\/sites\//.test(r.url())) sitesAsked.push(new URL(r.url()).pathname); });
+  const answer = { result: { addressMatches: [{ matchedAddress: '710 S MAIN ST, GEORGETOWN, TX, 78626', coordinates: { x: -97.677112983413, y: 30.637337671838 }, geographies: {
+    States: [{ STATE: '48' }], Counties: [{ BASENAME: 'Williamson', NAME: 'Williamson County', GEOID: '48491' }], 'Incorporated Places': [{ BASENAME: 'Georgetown' }], '120th Congressional Districts': [{ BASENAME: '31' }],
+    '2026 State Legislative Districts - Upper': [{ BASENAME: '5' }], '2026 State Legislative Districts - Lower': [{ BASENAME: '20' }],
+    'Unified School Districts': [{ NAME: 'Georgetown Independent School District' }], '2020 Census Blocks': [{ INTPTLAT: '+30.6370307', INTPTLON: '-097.6775453' }] } }] } };
+  await page.route('https://geocoding.geo.census.gov/**', (route) => {
+    const cb = new URL(route.request().url()).searchParams.get('callback');
+    return route.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify(answer)})` });
+  });
+  await page.goto(`${BASE}/?today=2026-11-03&now=12:00`);
+  await page.waitForSelector('#zip');
+  await page.fill('#zip', '78626');
+  await doorLookup(page);
+  await throughSetup(page);
+  await page.waitForSelector('#plan .plan-near li', { timeout: 10000 }).catch(() => {});
+  await page.waitForTimeout(300);
+  const rows = await page.$$eval('#plan .plan-near li', (els) => els.map((li) => `${li.querySelector('.pn-name')?.textContent || ''} ${li.querySelector('.pn-mi')?.textContent || ''}`));
+  check('Closest sites, Georgetown: Williamson\u2019s three closest, Georgetown City Hall first', rows.join(' | ') === 'Georgetown City Hall 0.2 mi | Hammerlun Center for Leadership and Learning 0.4 mi | Carver Center for Families 0.8 mi', rows.join(' | '));
+  check('Closest sites, Georgetown: "You can vote at any site in Williamson County."', (await text(page, '#plan .plan-near-any')) === 'You can vote at any site in Williamson County.');
+  const line = await text(page, '.addrbox .addr-near');
+  check('Closest sites, Georgetown: "Closest vote center: Georgetown City Hall, 0.2 mi. See all 3" under "Found:"', line === 'Closest vote center: Georgetown City Hall, 0.2 mi. See all 3' && !!(await page.$('.addrbox .addr-found + .addr-near')), line);
+  check('Closest sites, Georgetown: Williamson\u2019s list loaded once, and no other', sitesAsked.join(' ') === '/data/sites/williamson-tx.json', sitesAsked.join(' '));
+  check('Closest sites, Georgetown: nothing in all caps', (await upperCased(page)).length === 0, (await upperCased(page)).join(' | '));
+  await noSideScroll(page, 'Closest sites, Georgetown');
+  await page.screenshot({ path: path.join(SHOTS, 'closest-sites-georgetown-line-380.png') });
+  await tap(page, '.addrbox [data-act="near"]');
+  await page.waitForTimeout(700);
+  const landed = await page.$eval('#plan .plan-near', (e) => { const r = e.getBoundingClientRect(); return r.top >= 0 && r.bottom <= window.innerHeight; });
+  check('Closest sites, Georgetown: "See all 3" brings the block on screen, its heading focused', landed && (await focusedFk(page)) === 'plan-near', `${landed} ${await focusedFk(page)}`);
+  await page.screenshot({ path: path.join(SHOTS, 'closest-sites-georgetown-block-380.png') });
+  check('Closest sites, Georgetown: the point is never in the page\u2019s address or a link', !/30\.63|97\.67/.test(page.url()) && !(await page.$$eval('a[href]', (as) => as.some((a) => /30\.63|97\.67/.test(a.getAttribute('href'))))));
+  noErrors(page, 'Closest sites, Georgetown');
+  await ctx.close();
+}
+// Codex on #132: the sites close at 7 PM Central on their own. A statewide Texas ballot's step stays open until
+// El Paso's polls close (8 PM Central), so an open tab must drop the block and the line at 7 PM even though the
+// step doesn't change; Austin's step changes at 7 PM and takes them too. A Pacific-time phone, as above.
+for (const [zip, label, county, place, x, y, first] of [
+  ['78626', 'Georgetown', 'Williamson', 'Georgetown', -97.677112983413, 30.637337671838, 'Georgetown City Hall'],
+  ['78702', 'Austin', 'Travis', 'Austin', -97.746669, 30.26496, 'Austin City Hall'],
+]) {
+  const { ctx, page } = await newPage({ timezoneId: 'America/Los_Angeles' });
+  await page.clock.install({ time: new Date('2026-11-04T00:58:00Z') });
+  const answer = { result: { addressMatches: [{ matchedAddress: `TEST, ${place.toUpperCase()}, TX, ${zip}`, coordinates: { x, y }, geographies: {
+    States: [{ STATE: '48' }], Counties: [{ BASENAME: county }], 'Incorporated Places': [{ BASENAME: place }], '2020 Census Blocks': [{ INTPTLAT: String(y), INTPTLON: String(x) }] } }] } };
+  await page.route('https://geocoding.geo.census.gov/**', (route) => {
+    const cb = new URL(route.request().url()).searchParams.get('callback');
+    return route.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify(answer)})` });
+  });
+  await page.goto(`${BASE}/?today=2026-11-03`);
+  await page.waitForSelector('#zip');
+  await page.fill('#zip', zip);
+  if (zip === '78626') {
+    await doorLookup(page);
+    await throughSetup(page);
+  } else {
+    await throughSetup(page);
+    await tap(page, '.addrbox [data-act="addr-open"]');
+    await page.fill('#addr-in', 'a test lookup');
+    await page.locator('form[data-form="addr"] button[type=submit]').tap();
+  }
+  await page.waitForSelector('#plan .plan-near li', { timeout: 10000 }).catch(() => {});
+  await page.waitForTimeout(300);
+  const before = { block: await text(page, '#plan .plan-near .pn-name'), line: await text(page, '.addrbox .addr-near'), head: await text(page, '.plan-h') };
+  check(`Closest sites, ${label} at 6:58 PM Central on an open tab: the block and the line show`, before.block === first && before.line.startsWith(`Closest vote center: ${first},`), JSON.stringify(before));
+  await page.clock.runFor(3 * 60_000);
+  await page.waitForTimeout(300);
+  const after = { block: !!(await page.$('#plan .plan-near')), line: !!(await page.$('.addrbox .addr-near')), found: !!(await page.$('.addrbox .addr-found')), head: await text(page, '.plan-h') };
+  const headOk = zip === '78626' ? after.head === before.head && /^Today is Election Day\. Your local polls close at 7 PM\.$/.test(after.head) : /^Polls closed at 7 PM/.test(after.head);
+  check(`Closest sites, ${label}: past 7 PM Central the open tab drops the block and the line${zip === '78626' ? ', the statewide step unchanged' : ''}`, !after.block && !after.line && after.found && headOk, JSON.stringify(after));
+  noErrors(page, `Closest sites, ${label} at 7 PM`);
   await ctx.close();
 }
 

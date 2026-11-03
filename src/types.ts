@@ -226,6 +226,10 @@ export interface HowTo {
     lookup_url: string | null;
     /* The county's live wait times, from a place's `lookups.election_day_waits` (never the state's). */
     waits_url?: string | null;
+    /* The state's own Election Day vote center lists, county to list (data/sites/<id>.json, Nov 3), for a ballot
+       no place names one on: a statewide-only ballot in Travis, Williamson or Hays (model/sites.ts sitesIdFor).
+       Only in the state file; build-data drops any entry that names no list for that county. */
+    sites?: Record<string, string>;
   };
   id_rules: { required: string; accepted: string[]; no_id_option: string | null };
   in_the_booth: {

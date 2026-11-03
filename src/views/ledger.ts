@@ -24,6 +24,8 @@ import { addrHTML } from './mast';
 import { messages } from './pass';
 import { openHTML, censusSettles, addressSettles } from './open';
 import { mapCounty, seatless } from '../model/maps';
+import { nextStep } from '../model/plan';
+import { nearNow, fmtMiles } from '../model/sites';
 
 /* ---------- names ---------- */
 export function countyName(p: PlaceBundle): string {
@@ -578,6 +580,21 @@ export function addressHelps(): boolean {
    confounding"): "Official sample ballot" is an outline then, and "Use my address" is too until the
    card's request is sent. */
 interface AddrParts { lines: string; form: string; btns: string[] }
+/* Under "Found:" on Election Day (Nov 3), when the plan's "Closest to your address" block shows (the same
+   nearNow, model/sites.ts): the nearest vote center by name and distance, so the answer is right where the voter
+   is looking after a lookup, and "See all 3" up to the block, which sits above the ballot, off screen, with each
+   one's directions (actions.ts A.near). Nothing for anyone else, and anything wrong here shows nothing. */
+function nearLineHTML(): string {
+  try {
+    const h = S.ballot?.howto;
+    // No lookup this visit (nearly everyone): nothing to work out on each repaint of the head.
+    const n = h && S.ui.addrPoint ? nearNow(h, nextStep(h)) : null;
+    if (!n) return '';
+    const { site, mi } = n.rows[0];
+    const more = ` <button class="linkbtn" data-act="near" data-fk="addr-near">${n.rows.length > 1 ? `See all ${n.rows.length}` : 'See directions'}</button>`;
+    return `<p class="addr-near"><b>Closest vote center:</b> ${esc(`${site.name}, ${fmtMiles(mi)}.`)}${more}</p>`;
+  } catch { return ''; }
+}
 const sbLinkHTML = (sb: { url: string } | null, dark: boolean): string => (sb ? `<a class="mini${dark ? ' dark' : ''}" href="${esc(sb.url)}" target="_blank" rel="noopener">Official sample ballot</a>` : '');
 const useAddrHTML = (dark: boolean): string => `<button class="mini${dark ? ' dark' : ''}" data-act="addr-open" data-fk="addr-open">Use my address</button>`;
 function addrParts(): AddrParts | null {
@@ -607,17 +624,18 @@ function addrParts(): AddrParts | null {
   }
   const found = S.ui.addrFound && !S.ui.addrOpen
     ? `<p class="addr-found" tabindex="-1" data-fk="addr-found"><b>Found:</b> ${esc(S.ui.addrFound)} <button class="linkbtn" data-act="addr-again" data-fk="addr-again">Not it? Try again</button></p>` : '';
+  const near = nearLineHTML();
   // Why this is another ballot than the one the address was typed on (app.ts movedWhy), for this visit.
   const moved = S.ui.addrMoved ? `<p class="addr-moved">${esc(S.ui.addrMoved)}</p>` : '';
   const none = note === FOUND_ONLY;
   // What the district maps said beyond the races they set, for this visit: the voting precinct, a line
   // they didn't guess at, a map that didn't load (S.ui.addrMaps).
   const mapLines = S.ui.addrMaps.map((t) => `<p class="addr-map"${t === CHECKING ? ' data-pending' : ''}>${esc(t)}</p>`).join('');
-  if (none && !n) return found || moved || mapLines || form ? { lines: found + moved + mapLines, form, btns: [] } : null;
+  if (none && !n) return found || near || moved || mapLines || form ? { lines: found + near + moved + mapLines, form, btns: [] } : null;
   // While the maps are still on their way, the races they'll settle aren't the sample ballot's yet.
   const left = n && !S.ui.addrMapsPending ? rest(n) : '';
   const filledLine = S.ui.addrFilled ? `<p class="addr-fill">${esc(S.ui.addrFilled)}</p>` : '';
-  return { lines: `${found}${moved}${none ? '' : `<p class="addr-set">${esc(note)}</p>`}${mapLines}${filledLine}${left}`, form, btns: !form && (none || n) && sb ? [sbLinkHTML(sb, !card)] : [] };
+  return { lines: `${found}${near}${moved}${none ? '' : `<p class="addr-set">${esc(note)}</p>`}${mapLines}${filledLine}${left}`, form, btns: !form && (none || n) && sb ? [sbLinkHTML(sb, !card)] : [] };
 }
 const btnRow = (btns: string[]): string => (btns.length ? `<div class="row-btns">${btns.join('')}</div>` : '');
 /* `route`: the ballot's "which page are you on" notes (headsUp's until_address), a quiet line above the

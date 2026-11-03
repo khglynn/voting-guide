@@ -669,6 +669,22 @@ for (const f of listJson('sites')) {
     list_source: safeUrl(j.list_source), coords_source: safeUrl(j.coords_source), fetched: j.fetched, count_official: j.count_official, sites,
   });
 }
+/* A state's own lists (election_day.sites, county to list id), for a ballot no place names one on: a statewide-only
+   ballot in a county that has one (Georgetown, Kyle), keyed on the Census's county name ("Williamson"). Each entry
+   must name a list built above for that county in this state; anything else is dropped with a warning. */
+const siteCounty = (x) => x.replace(/\s+county$/i, '').trim().toLowerCase();
+for (const [st, s] of states) {
+  const m = s.election_day && s.election_day.sites;
+  if (m == null) continue;
+  const keep = {};
+  if (typeof m !== 'object' || Array.isArray(m)) warn(`data/states/${st}.json: election_day.sites must map a county to a data/sites list; dropped it`);
+  else for (const [county, id] of Object.entries(m)) {
+    const l = isStr(id) ? siteLists.get(id.trim()) : null;
+    if (isStr(county) && l && siteCounty(l.county) === siteCounty(county) && l.state === st) keep[county.replace(/\s+county$/i, '').trim()] = id.trim();
+    else warn(`data/states/${st}.json: election_day.sites ${county} "${id}" names no usable data/sites list for that county; dropped it`);
+  }
+  if (Object.keys(keep).length) s.election_day.sites = keep; else delete s.election_day.sites;
+}
 
 const places = new Map();
 for (const f of listJson('places')) {
@@ -1094,7 +1110,9 @@ fs.writeFileSync(path.join(OUT, 'build-report.json'), JSON.stringify(report, nul
 
 /* ---------- console summary ---------- */
 const kb = (n) => `${(n / 1024).toFixed(0)}KB`;
-console.log(`build-data: ${Object.entries(report.counts).map(([k, v]) => `${v} ${k}`).join(', ')}`);
+// The sites count is per list in the report; the summary says how many sites in how many lists.
+const countLine = ([k, v]) => (k === 'sites' ? `${Object.values(v).reduce((a, x) => a + x.listed, 0)} sites in ${Object.keys(v).length} lists` : `${v} ${k}`);
+console.log(`build-data: ${Object.entries(report.counts).map(countLine).join(', ')}`);
 console.log(`  bundles: ${Object.entries(sizes).map(([k, v]) => `${k} ${kb(v)}`).join(', ')}`);
 console.log(`  linked measures: ${report.linkedMeasures.map((g) => g.join(' + ')).join('; ') || 'none'}`);
 if (Object.keys(report.maps).length) console.log(`  district maps: ${Object.entries(report.maps).map(([id, m]) => `${id} ${m.maps.length} (${kb(m.bytes)})`).join(', ')}`);

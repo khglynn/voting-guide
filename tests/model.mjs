@@ -1384,6 +1384,13 @@ function roundTrip(name, stCode, places, mutate) {
   const lookup = (county, point = AT) => { st.S.ui.addrCounty = county; st.S.ui.addrPoint = point; st.S.ui.addrFound = 'Test One, Austin, TX 78701'; st.S.ui.addrOpen = false; };
   const forget = () => { st.S.ui.addrCounty = null; st.S.ui.addrPoint = null; st.S.ui.addrFound = null; st.S.ui.addrOpen = false; };
   const tick = () => new Promise((r) => setTimeout(r, 0));
+  // The address box after a lookup (a lookup always leaves its "Set from your address" line), and its
+  // "Closest vote center" line, which shows exactly when the plan's block does.
+  const headNow = () => { if (!st.S.b.addrNote) st.S.b.addrNote = 'Set from your address: a test.'; return views.ledger.ballotHeadHTML(); };
+  const lineOf = (head) => (head.match(/<p class="addr-near">[\s\S]*?<\/p>/) || [''])[0];
+  const flat = (t) => t.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+  const gone = []; // [when, head]: every case the block doesn't show, the line mustn't either
+  const noLine = (when, formOpen = false) => { const hd = headNow(); gone.push([when, !lineOf(hd) && (formOpen || /class="addr-found"/.test(hd))]); };
   try {
     at('?today=2026-11-03&now=12:00');
     let b = open('TX', ['austin-tx']);
@@ -1399,6 +1406,8 @@ function roundTrip(name, stCode, places, mutate) {
     check('sites: a lookup on Election Day with the list not here yet: nothing new shows, and Travis’s list is asked for once', !block(html) && asked.join(',') === 'travis-tx', asked.join(','));
     ps.planHTML(); await tick();
     check('sites: asked once a visit, not on every paint', asked.join(',') === 'travis-tx', asked.join(','));
+    noLine('the list not here yet');
+    check('sites: with the list not here yet, the address box asks for nothing more', asked.join(',') === 'travis-tx', asked.join(','));
     // A list that didn't load is asked for again after the next lookup; one still on its way never twice.
     {
       const seen = [];
@@ -1422,36 +1431,137 @@ function roundTrip(name, stCode, places, mutate) {
     check('sites: the "Find where to vote" button and "See live wait times" stay exactly as they were', html.replace(block(html), '').replace(/\s+/g, ' ') === plain.replace(/\s+/g, ' '), 'the plan without the block differs from the plan before the lookup');
     check('sites: the block sits under the buttons, above the wait times', html.indexOf('class="plan-acts"') < html.indexOf('class="plan-near"') && html.indexOf('class="plan-near"') < html.indexOf('plan-waits'));
     check('sites: no em dashes, nothing in capitals', !/—/.test(block(html)) && !/uppercase/.test(block(html)));
+    check('sites: the block\u2019s heading takes the jump\u2019s focus (data-fk "plan-near")', /<p class="plan-near-h" id="plan-near-h" tabindex="-1" data-fk="plan-near">/.test(html));
+    {
+      const hd = headNow();
+      const line = lineOf(hd);
+      check('sites: the address box names the nearest under "Found:": "Closest vote center: Austin City Hall, under 0.1 mi. See all 3"', flat(line) === 'Closest vote center: Austin City Hall, under 0.1 mi. See all 3'
+        && /<button class="linkbtn" data-act="near" data-fk="addr-near">See all 3<\/button>/.test(line), flat(line));
+      check('sites: the line sits right under "Found:", above "Set from your address"', hd.indexOf('class="addr-found"') < hd.indexOf('class="addr-near"') && hd.indexOf('class="addr-near"') < hd.indexOf('class="addr-set"')
+        && /<\/p><p class="addr-near">/.test(hd));
+      const pt = st.S.ui.addrPoint;
+      st.S.ui.addrPoint = null;
+      const without = headNow();
+      st.S.ui.addrPoint = pt;
+      check('sites: the line is the address box\u2019s only change', hd.replace(line, '') === without && /class="addr-found"/.test(without), 'the head without the line differs from the head with no point');
+      check('sites: the line carries no coordinates, no em dash and no capitals', !/30\.26|97\.74|—/.test(line) && !/[A-Z]{3,}/.test(flat(line)));
+    }
     st.S.ui.addrOpen = true;
     check('sites: "Not it? Try again" (the form open) hides it', !block(ps.planHTML()));
+    noLine('the form open', true);
     st.S.ui.addrOpen = false;
-    check('sites: Cancel brings it back', !!block(ps.planHTML()));
+    check('sites: Cancel brings it back', !!block(ps.planHTML()) && !!lineOf(headNow()));
     st.S.ui.addrPoint = null;
     check('sites: a lookup with no point shows none', !block(ps.planHTML()));
+    noLine('no point');
     lookup('Travis');
     const n0 = asked.length;
     at('?today=2026-11-02');
     check('sites: the day before Election Day: none', !block(ps.planHTML()));
+    noLine('the day before');
     at('?today=2026-11-03&now=19:05');
     check('sites: once the polls have closed: none', !block(ps.planHTML()) && /Polls closed/.test(ps.planHTML()));
+    noLine('the polls closed');
     at('?today=2026-11-03&now=12:00');
     b = open('TX', ['san-marcos-tx']);
     lookup('Caldwell');
     bl.localize(b, '78666', 'Caldwell');
     check('sites: a county the place names no list for (Caldwell on San Marcos’s ballot): none', !block(ps.planHTML()));
+    noLine('Caldwell on San Marcos');
     b = open('TX', ['dallas-tx']);
     lookup('Dallas');
     bl.localize(b, '75201', 'Dallas');
     html = ps.planHTML();
     await tick();
     check('sites: a place with no lists (Dallas): none, and nothing more asked for', !block(html) && asked.length === n0, asked.join(','));
+    noLine('Dallas');
     // A list for another election day is never used.
     sites.putSites('travis-tx', { ...FIX, election_date: '2026-11-04' });
     b = open('TX', ['austin-tx']);
     lookup('Travis');
     bl.localize(b, '78702', 'Travis');
     check('sites: a list dated for another day shows nothing', !block(ps.planHTML()));
+    noLine('a list for another day');
     sites.putSites('travis-tx', FIX);
+    check('sites: the address box line goes whenever the block does', gone.length === 8 && gone.every(([, ok]) => ok), gone.filter(([, ok]) => !ok).map(([w]) => w).join(', ') || String(gone.length));
+    // A statewide-only ballot (no place: Georgetown, Cedar Park, Leander, Kyle, Buda) takes the state's own map,
+    // keyed on the Census's county; a place's list comes first, and nothing outside the three counties.
+    {
+      const idx = read('index.json');
+      const tx = read('state-TX.json').howto.election_day.sites;
+      check('sites: Texas maps Travis, Williamson and Hays to their lists, and nothing else', JSON.stringify(tx) === JSON.stringify({ Travis: 'travis-tx', Williamson: 'williamson-tx', Hays: 'hays-tx' }), JSON.stringify(tx));
+      check('sites: a statewide ballot picks the list by the Census\u2019s county ("Williamson" or "Williamson County"), none for Bexar or Dallas', ['Travis', 'Williamson', 'Hays', 'Williamson County', 'hays'].map((c) => sites.sitesIdFor([], c, tx)).join('|') === 'travis-tx|williamson-tx|hays-tx|williamson-tx|hays-tx'
+        && sites.sitesIdFor([], 'Bexar', tx) === null && sites.sitesIdFor([], 'Dallas', tx) === null && sites.sitesIdFor([], '', tx) === null && sites.sitesIdFor([], 'Travis', null) === null);
+      check('sites: a place\u2019s own list comes first, and the state\u2019s fills in only where none names one', sites.sitesIdFor([read('place-san-marcos-tx.json')], 'Hays', { Hays: 'other-tx' }) === 'hays-tx'
+        && sites.sitesIdFor([read('place-san-marcos-tx.json')], 'Caldwell', tx) === null && sites.sitesIdFor([read('place-dallas-tx.json')], 'Dallas', tx) === null);
+      const others = Object.keys(idx.states).filter((k) => k !== 'TX' && read(`state-${k}.json`).howto.election_day.sites != null);
+      check('sites: no other state has lists of its own (a Williamson County, Tennessee address gets none)', others.length === 0 && sites.sitesIdFor([], 'Williamson', read('state-TN.json').howto.election_day.sites) === null, others.join(','));
+      // Georgetown: a statewide Texas ballot, the Census at the Williamson County Courthouse (710 S Main St, a public building).
+      const n1 = asked.length;
+      sites.putSites('williamson-tx', read('sites/williamson-tx.json'));
+      const sw = open('TX', []);
+      bl.localize(sw, '78626', 'Williamson');
+      lookup('Williamson', { lat: 30.637338, lon: -97.677113 });
+      const swHtml = ps.planHTML();
+      const swRows = [...block(swHtml).matchAll(/<span class="pn-name">([^<]+)<\/span><span class="pn-mi">([^<]+)<\/span>/g)].map((m) => `${m[1]} ${m[2]}`);
+      check('sites: a statewide ballot in Georgetown gets Williamson\u2019s three closest, Georgetown City Hall first', sw.places.length === 0 && swRows.join('|') === 'Georgetown City Hall 0.2 mi|Hammerlun Center for Leadership and Learning 0.4 mi|Carver Center for Families 0.8 mi'
+        && /You can vote at any site in Williamson County\./.test(block(swHtml)), swRows.join('|') || 'no block');
+      check('sites: and its address box says "Closest vote center: Georgetown City Hall, 0.2 mi. See all 3"', flat(lineOf(headNow())) === 'Closest vote center: Georgetown City Hall, 0.2 mi. See all 3', flat(lineOf(headNow())));
+      // Codex, Nov 3: the sites close at 7 PM Central on their own. A statewide Texas ballot's step stays open until
+      // El Paso's polls close (8 PM Central), and `?now=` reads one time in every zone, so these use real instants.
+      {
+        const RealDate = globalThis.Date;
+        const atInstant = (iso) => { const T = new RealDate(iso).getTime(); globalThis.Date = class extends RealDate { constructor(...a) { super(...(a.length ? a : [T])); } static now() { return T; } }; };
+        const COURT = { lat: 30.637338, lon: -97.677113 };
+        const seen = () => { const p = ps.planHTML(); return { block: !!block(p), line: !!lineOf(headNow()), head: flat((p.match(/<p class="plan-h"[^>]*>[\s\S]*?<\/p>/) || [''])[0]), key: ps.nearKeyNow(st.S.ballot.howto), step: ps.stepKey(st.S.ballot.howto) }; };
+        try {
+          at('?today=2026-11-03');
+          const g = open('TX', []);
+          bl.localize(g, '78626', 'Williamson');
+          lookup('Williamson', COURT);
+          atInstant('2026-11-04T00:59:00Z');
+          const g0 = seen();
+          atInstant('2026-11-04T01:05:00Z');
+          const g1 = seen();
+          check('sites: Georgetown statewide at 6:59 PM Central (00:59Z): the block and the line show', g0.block && g0.line && !!g0.key, JSON.stringify(g0));
+          check('sites: Georgetown statewide at 7:05 PM Central (01:05Z): both gone, the statewide step unchanged ("Your local polls close at 7 PM", for El Paso)', !g1.block && !g1.line && g1.key === ''
+            && g1.head === 'Today is Election Day. Your local polls close at 7 PM.' && g1.step === g0.step, JSON.stringify(g1));
+          check('sites: what main.ts watches flips at 7 PM Central though the step key doesn\u2019t, so an open tab repaints', g0.key !== g1.key && g0.step === g1.step);
+          const a = open('TX', ['austin-tx']);
+          bl.localize(a, '78702', 'Travis');
+          lookup('Travis');
+          atInstant('2026-11-04T00:59:00Z');
+          const a0 = seen();
+          atInstant('2026-11-04T01:05:00Z');
+          const a1 = seen();
+          check('sites: Austin at 6:59 PM Central: the block and the line show', a0.block && a0.line, JSON.stringify(a0));
+          check('sites: Austin at 7:05 PM Central: both gone, polls closed', !a1.block && !a1.line && a1.key === '' && /^Polls closed at 7 PM/.test(a1.head), JSON.stringify(a1));
+        } finally {
+          globalThis.Date = RealDate;
+          at('?today=2026-11-03&now=12:00');
+        }
+        const f = sites.sitesFile('travis-tx');
+        check('sites: a list is open until its own 7 PM, and a list with no zone never shows', sites.listOpen('travis-tx', f, '7:00 PM', 1139) && !sites.listOpen('travis-tx', f, '7:00 PM', 1140)
+          && !sites.listOpen('nowhere-tx', f, '7:00 PM', 600) && !sites.listOpen('travis-tx', f, null, 600));
+        const built = fs.readdirSync(path.join(DATA, 'sites')).map((x) => x.replace(/\.json$/, ''));
+        check('sites: every built list has its county\u2019s time zone', built.length > 0 && built.every((id) => sites.LIST_ZONE[id]), built.filter((id) => !sites.LIST_ZONE[id]).join(',') || built.join(','));
+      }
+      const bx = open('TX', []);
+      bl.localize(bx, '78205', 'Bexar');
+      lookup('Bexar', { lat: 29.4241, lon: -98.4936 });
+      const bxHtml = ps.planHTML();
+      await tick();
+      check('sites: a statewide ballot in Bexar: no block, no line, nothing asked for', !block(bxHtml) && !lineOf(headNow()) && asked.length === n1, asked.join(','));
+      const co = open('CO', []);
+      bl.localize(co, '80601', 'Adams');
+      lookup('Adams', { lat: 39.8, lon: -104.8 });
+      const coHtml = ps.planHTML();
+      await tick();
+      check('sites: a statewide ballot in another state: no block, no line, nothing asked for', !block(coHtml) && !lineOf(headNow()) && asked.length === n1, asked.join(','));
+      b = open('TX', ['austin-tx']);
+      lookup('Travis');
+      bl.localize(b, '78702', 'Travis');
+    }
     // The point never reaches the save link or saved state.
     const mem = new Map();
     const hadW = Object.getOwnPropertyDescriptor(globalThis, 'window');

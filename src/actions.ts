@@ -246,6 +246,16 @@ A.jump = (d, el) => {
   glideTo($(`#sec-${sec}`), 0, () => land($(`#sec-${sec}`)));
   focusFk(`sec-${sec}`);
 };
+/* The address box's "See all 3" (Nov 3, views/ledger.ts): up to the plan's "Closest to your address" block, which
+   sits above the ballot and off screen after a lookup. Its heading takes focus, so a screen reader reads the list
+   next, and the block gets the jump's short wash. If the block has gone meanwhile (the polls closed), nothing. */
+A.near = () => {
+  const el = $('#plan .plan-near');
+  if (!el) return;
+  endBeat();
+  glideTo(el, 12, () => land(el));
+  focusFk('plan-near');
+};
 A.page = (d) => { S.ui.page[d.id!] = Number(d.v); renderRow(d.id!); $(`[data-fk="pg-${CSS.escape(d.id!)}"]`)?.focus({ preventScroll: true }); };
 A.others = (d) => { const k = d.id!; S.ui.others.has(k) ? S.ui.others.delete(k) : S.ui.others.add(k); renderRow(k); };
 A.sec = (d, btn) => {
@@ -1075,7 +1085,7 @@ A['setup-done'] = async () => { await showBallot(); };
 A.rechoose = () => { rechoose(); };
 A['saved-open'] = () => { openSaved(); };
 A['addr-open'] = () => { S.ui.addrOpen = true; S.ui.addrMsg = null; S.ui.addrFail = ''; S.ui.addrWhich = null; glide(['.addrbox', '.door-where'], () => renderAddr()); const i = $('#addr-in'); if (i) { i.scrollIntoView({ block: 'center' }); i.focus({ preventScroll: true }); } };
-A['addr-close'] = () => { S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.addrFail = ''; S.ui.addrWhich = null; glide(['.addrbox', '.door-where'], () => renderAddr()); repaintNear(); focusFk($('[data-fk="addr-again"]') ? 'addr-again' : 'addr-open'); };
+A['addr-close'] = () => { S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.addrFail = ''; S.ui.addrWhich = null; glide(['.addrbox', '.door-where'], () => renderAddr()); repaintNear(false); focusFk($('[data-fk="addr-again"]') ? 'addr-again' : 'addr-open'); };
 /* "Not it? Try again" beside what the Census found, and "None of these" under several matches: the
    form again, with what you typed. */
 A['addr-again'] = () => { reopenAddr(); };

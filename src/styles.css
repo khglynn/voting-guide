@@ -274,6 +274,9 @@ b, strong { font-weight: 600; }
 .pn-mi { color: var(--on-dusk-2); white-space: nowrap; font-variant-numeric: tabular-nums; }
 .pn-dir { color: var(--on-dusk); display: inline-flex; align-items: center; min-height: 44px; white-space: nowrap; }
 .plan-near-any { margin-top: 8px; }
+/* Where the address box's "See all 3" lands: the band's own short wash, on the block. */
+.plan-near.land { position: relative; isolation: isolate; }
+.plan-near.land::before { content: ""; position: absolute; top: -6px; bottom: -6px; left: -8px; right: -8px; z-index: -1; background: var(--on-dusk); opacity: 0; animation: land-band 1s ease-out; pointer-events: none; }
 .pbtn { display: flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 10px; font-weight: 600; font-size: 15px; text-decoration: none; border-radius: 2px; text-align: center; line-height: 1.2; }
 .pbtn.gold { background: #F3EDDD; color: #1F2623; box-shadow: var(--lie); }
 .pbtn.line { border: 1.25px solid var(--on-dusk-2); color: var(--on-dusk); }
@@ -338,7 +341,7 @@ b, strong { font-weight: 600; }
 .addrbox .addr { margin-top: 8px; padding: 0; border: 0; background: none; }
 /* After a lookup: what the Census found (this visit only), what it set, what's left. */
 .addrbox > p + p { margin-top: 8px; }
-.addrbox .addr-found .linkbtn { margin: -12px 0; padding: 0; }
+.addrbox .addr-found .linkbtn, .addrbox .addr-near .linkbtn { margin: -12px 0; padding: 0; }
 .addrbox .addr-set { color: var(--ink-2); }
 .addrbox .addr-map, .addrbox .addr-route { color: var(--ink-2); }
 /* Under the picks line: how many sources, scoped to the ballot. A quiet line, no button. */

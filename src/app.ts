@@ -75,10 +75,23 @@ async function loadSites(id: string): Promise<boolean> {
   try { repaintNear(); } catch { /* the list is kept; the next paint shows it */ }
   return true;
 }
-/* The plan again, in place, when its closest-sites block may have changed: its list landed, or the address form
-   opened or closed. Nothing happens for a voter with no address looked up this visit. */
-export function repaintNear(): void {
-  if (S.view === 'ballot' && S.ballot && S.ui.view === 'ballot' && S.ui.addrPoint) anchored(() => render(['plan']));
+/* The plan again, in place, when its closest-sites block may have changed: its list landed, the address form
+   opened or closed, or the polls closed (main.ts refreshPlan). `head`: the ballot head too, for the address box's
+   "Closest vote center" line (views/ledger.ts), unless the form is open (a repaint would clear what's typed) or the
+   caller just painted it. Nothing happens for a voter with no address looked up this visit. */
+export function repaintNear(head = true): void {
+  if (S.view !== 'ballot' || !S.ballot || S.ui.view !== 'ballot' || !S.ui.addrPoint) return;
+  anchored(() => { render(['plan']); if (head && !S.ui.addrOpen) renderAddr(); }, nearAnchor());
+}
+/* What stays still while the block comes or goes: the plan, while the voter is reading it (the block opens under its
+   buttons, and what's below moves down); the ballot's heading, while they're at the address box (the block above is
+   off screen, and the line opens under "Found:"); else the ballot's rows, anchored's own pick. Anchoring on the rows
+   alone moved the page 261px under a voter reading the plan at the top (Nov 3, a statewide ballot's first lookup). */
+function nearAnchor(): string | undefined {
+  const plan = document.getElementById('plan')?.getBoundingClientRect();
+  if (plan && plan.bottom > window.innerHeight / 3) return 'plan';
+  const head = document.querySelector('.wrap-led')?.getBoundingClientRect();
+  return head && head.bottom > 0 && document.getElementById('ballot-h') ? 'ballot-h' : undefined;
 }
 onWantSites(loadSites);
 

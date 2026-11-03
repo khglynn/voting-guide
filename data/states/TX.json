@@ -80,6 +80,7 @@
     "in_line_rule": "Inside or in line by 7 PM? You still get to vote.",
     "vote_centers": true,
     "lookup_url": "https://www.votetexas.gov/voting/where.html",
+    "sites": { "Travis": "travis-tx", "Williamson": "williamson-tx", "Hays": "hays-tx" },
     "confidence": "verified"
   },
   "id_rules": {

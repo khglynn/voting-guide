@@ -2036,6 +2036,19 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     S.view = keep.view; S.ui.addrOpen = keep.addrOpen; S.ui.addrFound = keep.addrFound;
   }
 
+  /* ---------- the printed plan's name (Nov 3) ----------
+     Browsers name a saved PDF after the page's title, and print headers show it, so while printing the title says
+     whose plan it is: the election's year and month (from the data), the place, the ZIP when known. */
+  {
+    const pt = views.mast.printTitle;
+    open('TX', ['austin-tx'], st.emptyBallotState('78702'));
+    check('print title: Austin on 78702', pt() === '2611 Austin 78702 Voting Guide from vote.kevinhg.com', pt());
+    open('TX', ['austin-williamson-tx'], st.emptyBallotState('78750'));
+    check('print title: the place without its note ("Austin (Williamson County)" is Austin)', pt() === '2611 Austin 78750 Voting Guide from vote.kevinhg.com', pt());
+    open('FL', []);
+    check('print title: a statewide ballot with no ZIP names its state', pt() === '2611 Florida Voting Guide from vote.kevinhg.com', pt());
+  }
+
   /* ---------- the shelf's two forms (Oct 21): what goes into Kevin's Google Form ----------
      The form's response sheet is the queue the city and fix pipeline reads, so the five ids and the
      city request's wording are a contract. The forms ask for a note and a way back; the rest is what

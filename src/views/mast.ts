@@ -9,7 +9,7 @@ import { countyName } from './ledger';
 import { doorPicksHTML, placeLine } from './setup';
 import { covCardHTML } from './coverage';
 import { stateName, tidyAddress } from '../geo';
-import { pageWalk, decisionItems } from '../ballot';
+import { pageWalk, decisionItems, type Ballot } from '../ballot';
 import { addsHTML } from './adds';
 
 function electionDate(): string {
@@ -69,14 +69,26 @@ function addrNextHTML(): string {
 /* "Try again" under a load error: the same ZIP, ballot or first visit again. */
 const retryHTML = (): string => (S.retry ? '<p class="row-btns"><button class="mini dark" data-act="retry" data-fk="retry">Try again</button></p>' : '');
 
+/* The ballot's place as the masthead names it: "Brooklyn (Kings County)" is "Brooklyn" (the note goes on the line
+   below); a DC "not sure" is the city, not four ward names; a statewide ballot is its state. */
+const dcWards = (b: Ballot): string[] | null => (b.places.length > 1 && b.places.every((p) => /^DC Ward \d+$/.test(p.label)) ? b.places.map((p) => p.label.replace('DC Ward ', '')) : null);
+export const placeName = (b: Ballot): string => (dcWards(b) ? 'Washington, DC' : b.places.length ? b.places.map((p) => p.label.replace(/\s*\(.*\)$/, '')).join(' or ') : b.stateName);
+/* What a saved PDF is called (browsers name it after the page's title) and print headers show, while printing
+   (main.ts): "2611 Austin 78702 Voting Guide from vote.kevinhg.com". The election's year and month from the
+   data, not today's clock; the place as the masthead names it; the ZIP when we know it. */
+export function printTitle(): string | null {
+  const b = S.ballot;
+  if (!b) return null;
+  const d = b.howto.election_date || '';
+  const yymm = /^\d{4}-\d{2}/.test(d) ? `${d.slice(2, 4)}${d.slice(5, 7)}` : '';
+  return [yymm, placeName(b), S.b.zip, 'Voting Guide from vote.kevinhg.com'].filter(Boolean).join(' ');
+}
+
 export function mastHTML(): string {
   if (S.view === 'ballot' && S.ballot) {
     const b = S.ballot;
-    // "Brooklyn (Kings County)": the name up top, the note in parentheses on the line below.
-    const bare = (l: string) => l.replace(/\s*\(.*\)$/, '');
-    // DC "not sure": the city as the headline and the wards under it, not four ward names.
-    const wards = b.places.length > 1 && b.places.every((p) => /^DC Ward \d+$/.test(p.label)) ? b.places.map((p) => p.label.replace('DC Ward ', '')) : null;
-    const name = wards ? 'Washington, DC' : b.places.length ? b.places.map((p) => bare(p.label)).join(' or ') : b.stateName;
+    const wards = dcWards(b);
+    const name = placeName(b);
     const note = wards ? `Ward ${wards.slice(0, -1).join(', ')} or ${wards[wards.length - 1]}` : b.places.length === 1 ? (b.places[0].label.match(/\((.*)\)$/) || [])[1] : '';
     // A city in several counties (Austin) shows just the state: three county names wrap to two lines.
     const county = b.places.length === 1 && b.st !== 'DC' && b.places[0].counties.length === 1 ? countyName(b.places[0]) : '';

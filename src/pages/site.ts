@@ -29,7 +29,9 @@ import { esc, fmtDate } from '../util';
 import { escP, telHTML } from '../views/common';
 
 export const ORIGIN = 'https://vote.kevinhg.com';
-export const SITE_NAME = 'Your ballot, explained';
+/* The guide's name in breadcrumbs, structured data, og:site_name, the 404's title, robots.txt and llms.txt: the
+   tagline (views/mast.ts, the home page's <title>) without its period, since it sits mid-line in most of them. */
+export const SITE_NAME = 'Quickly make your voting plan';
 const ELECTION = 'Nov 3, 2026';
 
 export interface SiteData {

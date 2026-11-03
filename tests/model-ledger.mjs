@@ -1988,6 +1988,67 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     S.view = view0; S.ui.addrFound = null;
   }
 
+  /* ---------- heads-ups that wait on what we know (Nov 3) ----------
+     Kevin, on Election Day: a 645-character "Austin also reaches into Williamson and Hays" callout right under
+     the precinct his address had just found. `zips` shows a note only for a listed ZIP, or when we don't know
+     the ZIP; `until_address` hides a which-page note once a lookup has placed the ballot (S.b.addrNote). At the
+     top of the ballot such a note is a quiet line in the address box, above Use my address. */
+  {
+    const { address } = mods;
+    const ledger = views.ledger;
+    const keep = { view: S.view, addrOpen: S.ui.addrOpen, addrFound: S.ui.addrFound };
+    S.view = 'ballot'; S.ui.addrOpen = false; S.ui.addrFound = null;
+    const ROUTE = /far north or far south Austin/;
+    const at = (zip) => { open('TX', ['austin-tx'], st.emptyBallotState(zip)); return ledger.ballotHeadHTML(); };
+    const boxOf = (h) => (h.match(/<div class="addrbox">[\s\S]*?<\/div><\/div>/) || [''])[0];
+    const callout = (h, re) => [...h.matchAll(/<p class="heads">[\s\S]*?<\/p>/g)].some((m) => re.test(m[0]));
+    let h = at('78702');
+    check('heads-up zips: Austin on a ZIP wholly in Travis (78702) shows no county note, in the box or as a callout', !ROUTE.test(h) && !ledger.headsUp('ballot').some((t) => ROUTE.test(t)));
+    h = at('78750');
+    const box = boxOf(h);
+    check('heads-up zips: on a split ZIP (78750) it shows as a quiet line in the address box, above Use my address, not as a callout',
+      /<p class="addr-route">Live in far north or far south Austin\?/.test(box) && box.indexOf('addr-route') < box.indexOf('data-act="addr-open"') && !callout(h, ROUTE), box.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').slice(0, 240));
+    check('heads-up zips: with no ZIP known (a link without one) it shows too', ROUTE.test(boxOf(at(''))));
+    at('78750');
+    S.b.addrNote = address.addrSummary(address.setFromAddress(S.ballot, S.b, { cd: 37, upper: 14, lower: 49 }));
+    check('heads-up until_address: gone once a lookup has placed the ballot, even on a listed ZIP', !ROUTE.test(ledger.ballotHeadHTML()) && !ledger.headsUp('ballot').some((t) => ROUTE.test(t)));
+    S.b.addrNote = address.FOUND_ONLY;
+    check('heads-up until_address: gone after a lookup that set no race too ("Found your address.")', !ROUTE.test(ledger.ballotHeadHTML()));
+    // Every target honors both fields, and a note is still shown once.
+    const ab = open('TX', ['austin-tx'], st.emptyBallotState('78702'));
+    const it = ab.items.find((x) => x.kind === 'contest');
+    ab.places[0].heads_up = [...(ab.places[0].heads_up || []),
+      { text: 'Test: for 78750 only.', applies_to: 'section:county', zips: ['78750'] },
+      { text: 'Test: until an address.', applies_to: `item:${it.id}`, until_address: true },
+      { text: 'Test: twice.', applies_to: 'section:county' }, { text: 'Test: twice.', applies_to: 'section:county' }];
+    const sec = () => ledger.headsUp('section:county').filter((t) => /^Test:/.test(t)).join('|');
+    check('heads-up zips: a section note listed for 78750 hides on 78702, and a note twice shows once', sec() === 'Test: twice.', sec());
+    S.b.zip = '78750';
+    check('heads-up zips: and shows on 78750', sec() === 'Test: for 78750 only.|Test: twice.', sec());
+    check('heads-up until_address: an item note shows before a lookup', ledger.headsUp(`item:${it.id}`).includes('Test: until an address.'));
+    S.b.addrNote = address.FOUND_ONLY;
+    check('heads-up until_address: and hides after one', !ledger.headsUp(`item:${it.id}`).includes('Test: until an address.'));
+    // With no address box (nothing on the ballot turns on the address), a which-page note keeps the callout spot.
+    const dc = open('DC', ['dc-ward-1']);
+    dc.places[0].heads_up = [...(dc.places[0].heads_up || []), { text: 'Test: which page.', applies_to: 'ballot', until_address: true }];
+    h = ledger.ballotHeadHTML();
+    check('heads-up until_address: with no address box it falls back to a callout', !/class="addrbox"/.test(h) && callout(h, /Test: which page\./), h.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').slice(-200));
+    S.view = keep.view; S.ui.addrOpen = keep.addrOpen; S.ui.addrFound = keep.addrFound;
+  }
+
+  /* ---------- the printed plan's name (Nov 3) ----------
+     Browsers name a saved PDF after the page's title, and print headers show it, so while printing the title says
+     whose plan it is: the election's year and month (from the data), the place, the ZIP when known. */
+  {
+    const pt = views.mast.printTitle;
+    open('TX', ['austin-tx'], st.emptyBallotState('78702'));
+    check('print title: Austin on 78702', pt() === '2611 Austin 78702 Voting Guide from vote.kevinhg.com', pt());
+    open('TX', ['austin-williamson-tx'], st.emptyBallotState('78750'));
+    check('print title: the place without its note ("Austin (Williamson County)" is Austin)', pt() === '2611 Austin 78750 Voting Guide from vote.kevinhg.com', pt());
+    open('FL', []);
+    check('print title: a statewide ballot with no ZIP names its state', pt() === '2611 Florida Voting Guide from vote.kevinhg.com', pt());
+  }
+
   /* ---------- the shelf's two forms (Oct 21): what goes into Kevin's Google Form ----------
      The form's response sheet is the queue the city and fix pipeline reads, so the five ids and the
      city request's wording are a contract. The forms ask for a note and a way back; the rest is what

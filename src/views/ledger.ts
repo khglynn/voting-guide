@@ -4,8 +4,8 @@
      id="i-<item id>" + data-item on every item, data-undecided on undecided rows,
      data-q="<group key>" on district questions, data-act on every control,
      .sec[data-sec] with .sec-count, .unopp .disc for unopposed races, .bar-txt in the bar. */
-import type { Contest, Item, PlaceBundle } from '../types';
-import { S } from '../state';
+import type { Contest, HeadsUp, Item, PlaceBundle } from '../types';
+import { S, type BallotState } from '../state';
 import {
   SECTIONS, type SectionKey, type Entry, type Group, entriesBySection, status, isDecision, sectionOf, decisionItems, isMultiJudge, isMaybe,
   OTH_KEY, otherSchools, othOpen, unclaimed, pageWalk, contestDistrict, sameSeat,
@@ -59,13 +59,21 @@ function sectionSub(sec: SectionKey): string {
   return '';
 }
 
-/* ---------- heads-up notes, each shown once where it applies ---------- */
-export function headsUp(applies: string): string[] {
+/* ---------- heads-up notes, each shown once where it applies ----------
+   A note can wait on what we know about you (Kevin, Nov 3: a 645-character "which county" note under the
+   precinct his address had just found). `zips`: only for a voter whose ZIP is in the list, or whose ZIP we
+   don't know. `until_address`: a note about which page or county you're on, gone once an address lookup has
+   placed this ballot (S.b.addrNote, which only a lookup sets). At the top of the ballot such a note is a
+   quiet line in the address box, beside the button that settles it (addrBoxHTML), not a callout. */
+export const headsShows = (h: HeadsUp, b: BallotState = S.b): boolean =>
+  !(h.until_address && b.addrNote) && !(h.zips && h.zips.length && b.zip && !h.zips.includes(b.zip));
+function headsAt(applies: string): HeadsUp[] {
   const b = S.ballot!;
   const all = [...(b.howto.heads_up || []), ...b.places.flatMap((p) => p.heads_up || [])];
   const seen = new Set<string>();
-  return all.filter((h) => h.applies_to === applies && !seen.has(h.text) && seen.add(h.text)).map((h) => h.text);
+  return all.filter((h) => h.applies_to === applies && headsShows(h) && !seen.has(h.text) && seen.add(h.text));
 }
+export const headsUp = (applies: string): string[] => headsAt(applies).map((h) => h.text);
 export const headsHTML = (list: string[]): string => list.map((t) => `<p class="heads"><b>Heads up:</b> ${escP(t)}</p>`).join('');
 
 /* ---------- the verdict column ---------- */
@@ -612,9 +620,13 @@ function addrParts(): AddrParts | null {
   return { lines: `${found}${moved}${none ? '' : `<p class="addr-set">${esc(note)}</p>`}${mapLines}${filledLine}${left}`, form, btns: !form && (none || n) && sb ? [sbLinkHTML(sb, !card)] : [] };
 }
 const btnRow = (btns: string[]): string => (btns.length ? `<div class="row-btns">${btns.join('')}</div>` : '');
-function addrBoxHTML(): string {
+/* `route`: the ballot's "which page are you on" notes (headsUp's until_address), a quiet line above the
+   address button that settles them. They only show before a lookup, so the box always has that button
+   or its form then. */
+function addrBoxHTML(route: string[] = []): string {
   const p = addrParts();
-  return p ? `<div class="addrbox">${p.lines}${p.form}${btnRow(p.btns)}</div>` : '';
+  const lines = route.map((t) => `<p class="addr-route">${escP(t)}</p>`).join('');
+  return p ? `<div class="addrbox">${p.lines}${lines}${p.form}${btnRow(p.btns)}</div>` : '';
 }
 /* The ballot's head. A statewide-only ballot's notice is the coverage card under the masthead now
    (mast.ts restoreHTML), so the head holds the address box alone, doing its own job, on every ballot. */
@@ -623,11 +635,17 @@ export function ballotHeadHTML(): string {
     ? `<p class="filled">${esc(S.ui.bulk)} filled in${esc(S.ui.bulkWhy || '')}. <button class="linkbtn" data-act="undo-bulk" data-fk="filled-undo">Undo</button></p>` : '';
   // How many sources, scoped to this ballot, under whose picks you see; nothing while endorsements are off.
   const cov = noEndorsements() ? '' : headCovHTML();
+  // A "which page are you on" note rides in the address box; with no box (nothing depends on the address),
+  // it falls back to the usual heads-up spot.
+  const top = headsAt('ballot');
+  const route = top.filter((h) => h.until_address).map((h) => h.text);
+  const box = addrBoxHTML(route);
+  const rest = top.filter((h) => !h.until_address || !box).map((h) => h.text);
   return `<div class="bhead"><h2 class="step su-h bal-h" id="ballot-h"><span class="step-n" aria-hidden="true">3</span>Your ballot</h2>
       <p class="picks-line"><span>Endorsements: ${esc(lensSummary())}</span><button class="mini" data-act="picks" data-fk="picks-edit">Edit</button></p>
-      ${cov}${filled}${addrBoxHTML()}
+      ${cov}${filled}${box}
     </div>
-    ${headsHTML(headsUp('ballot'))}`;
+    ${headsHTML(rest)}`;
 }
 export function ballotHTML(): string {
   const by = entriesBySection();

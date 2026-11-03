@@ -202,8 +202,20 @@
   ],
   "heads_up": [
     {
-      "text": "This page is for the Travis County part of Austin. Austin also reaches into Williamson County (parts of ZIPs 78717, 78728, 78729 and 78750, and a sliver of 78727 and 78759) and Hays County (parts of 78737 and 78739, and a sliver of 78736). If your address is there, the Travis County races on this page (county offices, Travis judges and justices of the peace, the appraisal board) are not on your ballot. Use your address to find your page, pick Austin (Williamson County) or Austin (Hays County), or check your own county’s sample ballot: Williamson at apps.wilcotx.gov/elections/voterlookup, Hays at mapps.hayscountytx.gov/election/index.cfm.",
+      "text": "Live in far north or far south Austin? Part of the city is in Williamson or Hays County, each with its own ballot. Use your address and we’ll open the right page.",
       "applies_to": "ballot",
+      "until_address": true,
+      "zips": [
+        "78717",
+        "78728",
+        "78729",
+        "78750",
+        "78727",
+        "78759",
+        "78737",
+        "78739",
+        "78736"
+      ],
       "source": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_county20_natl.txt"
     }
   ],

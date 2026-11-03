@@ -77,6 +77,10 @@ function evaluations(list, where) {
   return out;
 }
 const APPLIES = /^(ballot|section:(federal|state|judicial|county|city|school|special_district|measures)|item:\S+)$/;
+/* until_address (a "which page are you on" note, hidden once an address lookup places the ballot) and zips
+   (shown only to a voter whose ZIP is listed) are optional. A bad one is dropped with a warning, which
+   check-data blocks on, and the note then shows to everyone: a wrong field never hides a note. */
+const ZIP5 = /^\d{5}$/;
 function headsUp(list, where) {
   if (list == null) return [];
   if (!Array.isArray(list)) { warn(`${where}: heads_up is not a list; dropped it`); return []; }
@@ -84,7 +88,18 @@ function headsUp(list, where) {
     const ok = h && isStr(h.text) && isStr(h.applies_to) && APPLIES.test(h.applies_to.trim());
     if (!ok) warn(`${where}: a heads_up note has no text or a bad applies_to; dropped it`);
     return ok;
-  }).map((h) => ({ text: h.text.trim(), applies_to: h.applies_to.trim(), source: safeUrl(h.source) }));
+  }).map((h) => {
+    const out = { text: h.text.trim(), applies_to: h.applies_to.trim(), source: safeUrl(h.source) };
+    if (h.until_address != null) {
+      if (typeof h.until_address === 'boolean') { if (h.until_address) out.until_address = true; }
+      else warn(`${where}: heads_up until_address is not true or false; dropped the field`);
+    }
+    if (h.zips != null) {
+      if (Array.isArray(h.zips) && h.zips.length && h.zips.every((z) => typeof z === 'string' && ZIP5.test(z))) out.zips = [...new Set(h.zips)];
+      else warn(`${where}: heads_up zips is not a list of 5-digit ZIP strings; dropped the field`);
+    }
+    return out;
+  });
 }
 function districtFinders(list, where) {
   if (list == null) return [];

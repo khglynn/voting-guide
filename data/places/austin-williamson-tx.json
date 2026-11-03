@@ -266,8 +266,9 @@
   ],
   "heads_up": [
     {
-      "text": "This page is for the part of Austin in Williamson County. If your address is in Travis County, use the Austin page instead.",
+      "text": "This page is for the part of Austin in Williamson County. In Travis County? Use your address and we’ll open the right page.",
       "applies_to": "ballot",
+      "until_address": true,
       "source": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_county20_natl.txt"
     }
   ]

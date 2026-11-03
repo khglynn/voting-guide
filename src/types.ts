@@ -48,8 +48,11 @@ export interface Evaluation {
    including "no opinion", so yes and no need not add to 100. */
 export interface SurveyRow { yes_pct: number; no_pct: number | null; n: number | null }
 
-/* A short note on a known confusion point, shown once where it applies. */
-export interface HeadsUp { text: string; applies_to: string; source?: string | null }
+/* A short note on a known confusion point, shown once where it applies. Two optional fields hold it back
+   when it isn't yours (views/ledger.ts headsUp): `until_address`, a note about which page or county you're
+   on, hides once an address lookup has placed this ballot; `zips` shows it only to a voter whose ZIP is in
+   the list, or whose ZIP we don't know. */
+export interface HeadsUp { text: string; applies_to: string; source?: string | null; until_address?: boolean; zips?: string[] }
 
 export interface Contest {
   kind: 'contest';

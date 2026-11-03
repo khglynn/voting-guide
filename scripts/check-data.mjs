@@ -89,6 +89,7 @@ const BUILD_WARNINGS = [
   [/is missing yes_means or no_means/, 'measure-means'],
   [/: short is not one plain line; dropped it|: actions is not a list; dropped it|: an action needs a label and an http\(s\) URL; dropped it|: more than 2 actions; dropped the rest|: a gotcha has no text; dropped it|: registration\.register_url(_source)? is not an http\(s\) URL; dropped it|: sample_ballot_url is not an http\(s\) URL; dropped it/, 'build-dropped-help'],
   [/: early_in_person\.latest_end needs .*; dropped it/, 'date-order'],
+  [/: heads_up (until_address|zips) is not .*; dropped the field/, 'heads-up-field'],
 ];
 const reportFile = path.join(ROOT, 'public', 'data', 'build-report.json');
 const BUNDLES = path.join(ROOT, 'public', 'data');

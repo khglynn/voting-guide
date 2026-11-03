@@ -199,7 +199,7 @@
       "lookups": {
         "early_in_person": "https://dcgis.dekalbcountyga.gov/earlyvoting",
         "drop_box": "https://dekalbcountyga.gov/departments/voter-registration-and-elections",
-        "results": "https://dekalbcountyga.gov/departments/voter-registration-and-elections/election-results"
+        "results": "https://app.enhancedvoting.com/results/public/dekalb-county-ga/elections/11032026GeneralAndSpecialElection"
       },
       "source": "https://dekalbcountyga.gov/departments/voter-registration-and-elections",
       "confidence": "verified",

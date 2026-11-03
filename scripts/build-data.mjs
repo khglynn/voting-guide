@@ -1033,6 +1033,92 @@ function bundleFor(ids, placeId = null) {
   return { items, endorsements: ends, endorsers: [...used].map((id) => endorsers.get(id)) };
 }
 fs.rmSync(OUT, { recursive: true, force: true });
+/* ---------- results (Nov 3, Phase 0 of the results view: links only) ----------
+   data/results-sources.json is the workbench registry of where each state and county posts official results,
+   copied in with three fields of the site's (its `note` says which). A row must have an id, a state, a kind
+   (state or county), a name, an https results_url, a wait line (the sentence a voter reads: under 25 words, never
+   "called" or "won", since the guide calls nothing), a certification_date (a date or a plain rule) and a
+   confidence; a bad row is skipped and blocks the deploy (check-data). Each state bundle carries its state row
+   and each place bundle the county rows for its counties, as `results.sources`. Wait lines and dates are shown as
+   the data says them, never computed.
+   data/whats-next.json's `after_election` rows are the dated steps after Election Day: only rows marked verified
+   or sourced, whose `when` is a date (or "Between date and date") the registry didn't compute, estimate or mark
+   tentative; the rest stay out, counted in the report. State rows go to the state bundle (`results.next`); county
+   and city rows to the places whose counties they name, or to every place in the state when they speak for all
+   its counties. */
+const RES_KINDS = ['state', 'county'];
+const cKey = (x) => String(x).replace(/\s*\(.*?\)\s*/g, ' ').replace(/\s+county$/i, '').trim().toLowerCase();
+const confOf = (v) => { const w = isStr(v) ? v.trim().split(/[\s(;,]/)[0].toLowerCase() : ''; return CONF.includes(w) ? w : 'unverified'; };
+const resultsRows = [];
+if (fs.existsSync(path.join(DATA, 'results-sources.json'))) {
+  const j = readJson('results-sources.json');
+  for (const r of (j && Array.isArray(j.sources) ? j.sources : [])) {
+    const id = r && str(r.id);
+    const bad = (why) => skipRec('results-sources.json', id || '(no id)', why);
+    if (!id || !isStr(r.state) || !RES_KINDS.includes(r.kind) || !isStr(r.name)) { bad('needs id, state, kind (state or county) and name'); continue; }
+    const url = isStr(r.results_url) && /^https:\/\/\S+$/.test(r.results_url.trim()) ? r.results_url.trim() : null;
+    if (!url) { bad('results_url is not an https URL'); continue; }
+    const wl = str(r.wait_line);
+    if (!wl || wl.split(/\s+/).length >= 25) { bad('wait_line is missing or 25 words or more'); continue; }
+    if (/\b(called|won)\b/i.test(wl) || /\u2014/.test(wl)) { bad('wait_line says called or won, or has an em dash'); continue; }
+    if (!isStr(r.certification_date)) { bad('certification_date is missing (a date or a plain rule)'); continue; }
+    if (r.official_by != null && !isDate(r.official_by)) { bad('official_by is not YYYY-MM-DD'); continue; }
+    if (!isStr(r.confidence)) { bad('confidence is missing'); continue; }
+    const counties = r.kind === 'county' ? (Array.isArray(r.counties) ? r.counties.filter(isStr).map((c) => c.trim()) : []) : null;
+    if (r.kind === 'county' && !counties.length) { bad('a county row needs `counties`, spelled as the place files spell them'); continue; }
+    resultsRows.push({
+      id, state: r.state.trim().toUpperCase(), kind: r.kind, name: r.name.trim(), results_url: url, wait_line: wl,
+      certification_date: r.certification_date.trim(), certification_source: safeUrl(String(r.certification_source || '').split(/\s+/)[0]),
+      official_by: r.official_by || null, official_by_sure: !!(r.official_by && r.official_by_sure === true), confidence: confOf(r.confidence),
+      ...(counties ? { counties } : {}),
+    });
+  }
+}
+const resultsOfState = (st) => resultsRows.filter((r) => r.state === st && r.kind === 'state');
+const resultsOfPlace = (p) => {
+  const ks = new Set((p.counties || []).map(cKey));
+  return resultsRows.filter((r) => r.state === p.state && r.kind === 'county' && r.counties.some((c) => ks.has(cKey(c))));
+};
+const WHEN = /^(\d{4}-\d{2}-\d{2})\b|^Between (\d{4}-\d{2}-\d{2}) and (\d{4}-\d{2}-\d{2})\b/;
+const SOFT = /comput|calculat|tentative|planned|about|estimat|expect|unverified|conflict|likely|if needed/i;
+const nextRows = [];
+report.whatsNext = { kept: 0, left_out: 0 };
+if (fs.existsSync(path.join(DATA, 'whats-next.json'))) {
+  const j = readJson('whats-next.json');
+  for (const r of (j && Array.isArray(j.rows) ? j.rows : [])) {
+    if (!r || r.kind !== 'after_election') continue;
+    const m = isStr(r.when) ? r.when.trim().match(WHEN) : null;
+    const line = str(r.line);
+    const source = isStr(r.source) ? safeUrl(r.source.split(/\s+/)[0]) : null;
+    const ok = ['verified', 'sourced'].includes(String(r.confidence).trim()) && m && !SOFT.test(r.when) && line && !/\u2014/.test(line) && source && isStr(r.state) && ['state', 'county', 'city'].includes(r.level);
+    if (!ok) { report.whatsNext.left_out++; continue; }
+    report.whatsNext.kept++;
+    const date = m[1] || m[3];
+    nextRows.push({ state: r.state.trim().toUpperCase(), level: r.level, jurisdiction: str(r.jurisdiction) || '', date, ...(m[2] ? { from: m[2] } : {}), line, source, confidence: r.confidence.trim() });
+  }
+}
+// The counties the guide knows in each state, so a county row's jurisdiction can name the ones it speaks for.
+const knownCounties = new Map();
+for (const [, p] of places) for (const c of p.counties || []) { const k = cKey(c); if (!k) continue; if (!knownCounties.has(p.state)) knownCounties.set(p.state, new Set()); knownCounties.get(p.state).add(k); }
+const escRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const namesIn = (st, text) => [...(knownCounties.get(st) || [])].filter((k) => new RegExp(`(^|[^a-z])${escRe(k)}([^a-z]|$)`, 'i').test(text));
+const byDate = (a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0);
+const nextOfState = (st) => nextRows.filter((r) => r.state === st && r.level === 'state').sort(byDate);
+const nextOfPlace = (p) => {
+  const ks = new Set((p.counties || []).map(cKey));
+  // `counties`: the counties a row names, so a ballot whose voter's county is known can leave out another county's
+  // dates (Hays's canvass on a Travis voter's Austin ballot). Absent: the row speaks for every county.
+  return nextRows.flatMap((r) => {
+    if (r.state !== p.state || r.level === 'state') return [];
+    const head = r.jurisdiction.replace(/\s*\(.*?\)\s*/g, ' ');
+    if (/\b(all|every|each)\b|\bcounties\b/i.test(head)) return [r];
+    const named = namesIn(p.state, head);
+    if (!named.length) return [r];
+    const mine = (p.counties || []).filter((c) => named.includes(cKey(c))).map((c) => c.replace(/\s*\(.*?\)\s*/g, ' ').trim());
+    return mine.length ? [{ ...r, counties: mine }] : [];
+  }).sort(byDate);
+};
+
 fs.mkdirSync(OUT, { recursive: true });
 const write = (name, obj) => { fs.writeFileSync(path.join(OUT, name), JSON.stringify(obj)); return fs.statSync(path.join(OUT, name)).size; };
 
@@ -1046,7 +1132,7 @@ for (const [st, s] of states) {
   const b = bundleFor(ordered);
   // Where phones are "restricted", My plan prints the state's one-line rule (phones_short), if it is one plain line.
   if (s.in_the_booth && s.in_the_booth.phones_short != null) s.in_the_booth.phones_short = helpShort(s.in_the_booth.phones_short, `${st} in_the_booth.phones_short`);
-  const bundle = { state: st, name: CONFIG.stateNames[st] || st, howto: s, order: ordered, ...b };
+  const bundle = { state: st, name: CONFIG.stateNames[st] || st, howto: s, order: ordered, ...b, results: { sources: resultsOfState(st), next: nextOfState(st) } };
   sizes[`state-${st}.json`] = write(`state-${st}.json`, bundle);
   stateBundles.set(st, bundle);
   // How many sources a statewide-only ballot has, how many made picks, and when it was last checked
@@ -1069,7 +1155,7 @@ for (const [id, p] of places) {
   const local = p.order.filter((x) => !sw.has(x));
   const b = bundleFor(local, id);
   const pm = placeMaps.get(id) || [];
-  const bundle = { ...p, file: undefined, local, ...b, ...(pm.length ? { maps: pm } : {}) };
+  const bundle = { ...p, file: undefined, local, ...b, ...(pm.length ? { maps: pm } : {}), results: { sources: resultsOfPlace(p), next: nextOfPlace(p) } };
   sizes[`place-${id}.json`] = write(`place-${id}.json`, bundle);
   // The place's map files too, so an address typed on the first page can start them loading as soon
   // as the Census names the place, beside its bundle. And the same coverage numbers for this place's
@@ -1119,6 +1205,7 @@ report.maps = Object.fromEntries([...placeMaps].map(([id, ms]) => [id, { maps: m
 report.counts = {
   states: states.size, places: places.size, contests: contests.size, measures: measures.size,
   endorsers: endorsers.size, endorsements: endorsementByKey.size, zips: Object.keys(index.zips).length,
+  results: resultsRows.length, whats_next: nextRows.length,
   maps: mapCopies.length, sites: Object.fromEntries([...siteLists].map(([id, l]) => [id, { listed: l.sites.length, official: l.count_official }])),
 };
 report.sizes = sizes;

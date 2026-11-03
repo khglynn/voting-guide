@@ -333,7 +333,8 @@
       "lookups": {
         "early_in_person": "https://www.douglasco.gov/elections/voter-service-and-polling-centers/",
         "election_day": "https://www.douglasco.gov/elections/voter-service-and-polling-centers/",
-        "drop_box": "https://www.douglasco.gov/elections/ballot-drop-box-locations/"
+        "drop_box": "https://www.douglasco.gov/elections/ballot-drop-box-locations/",
+        "results": "https://results.enr.clarityelections.com/CO/Douglas/127427/"
       },
       "source": "https://www.douglasco.gov/elections/voter-service-and-polling-centers/",
       "confidence": "verified",
@@ -342,7 +343,8 @@
         "url": "https://www.douglasco.gov/elections/voter-service-and-polling-centers/",
         "phone": "303-660-7444",
         "source": "https://www.douglasco.gov/elections/voter-service-and-polling-centers/"
-      }
+      },
+      "results_source": "Douglas County Elections"
     }
   ]
 }

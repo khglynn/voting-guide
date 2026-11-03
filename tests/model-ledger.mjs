@@ -358,10 +358,11 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('lens: Progressive alone turns on no union, and Unions stays off', !unions.some((e) => S.b.sources.includes(e.id)) && lens.chipState(la, 'unions') === 'off' && views.lens.lensSummary() === 'Newspapers and guides, progressive groups', views.lens.lensSummary());
     S.b.sources = [...S.b.sources, 'la-fed'];
     check('lens: a labor council on by hand reads some unions', views.lens.lensSummary() === 'Newspapers and guides, progressive groups, some unions', views.lens.lensSummary());
-    // The review's case: San Diego, where every union with picks is a labor council rated left by its mission.
+    // The review's case: San Diego, whose unions with picks include labor councils rated left by their mission
+    // (until the west unions came in, Nov 3, they were all such councils; the new ones are Not rated).
     const sd = open('CA', ['san-diego-ca']);
     const sdUnions = lens.withPicks(sd, lens.chipMembers(sd, 'unions'));
-    check('lens: San Diego has unions with picks, every one rated left by its mission', sdUnions.length > 0 && sdUnions.every((e) => ['left', 'lean_left'].includes(e.lean)) && lens.chipState(sd, 'progressive') !== 'empty', sdUnions.map((e) => e.id).join());
+    check('lens: San Diego has unions with picks, labor councils rated left by their mission among them', sdUnions.some((e) => ['left', 'lean_left'].includes(e.lean)) && lens.chipState(sd, 'progressive') !== 'empty', sdUnions.map((e) => e.id).join());
     lens.toggleChip(sd, 'progressive');
     check('lens: San Diego, Progressive on leaves Unions off', lens.chipState(sd, 'progressive') === 'on' && lens.chipState(sd, 'unions') === 'off' && /data-k="unions" aria-pressed="false"/.test(views.lens.chipsHTML()));
     lens.toggleChip(sd, 'progressive');

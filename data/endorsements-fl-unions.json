@@ -1,0 +1,970 @@
+[
+ {
+  "endorser_id": "fl-education-assn",
+  "target_id": "fl-senate-10",
+  "status": "endorsed",
+  "choice": "John Lowndes",
+  "why": "Listed in FEA's Voter Guide (Endorsed Candidates) for the November 3 general election.",
+  "url": "https://feaweb.org/action-center/voter-toolkit/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-education-assn",
+  "target_id": "fl-house-35",
+  "status": "endorsed",
+  "choice": "Eric Gray",
+  "why": "Listed in FEA's Voter Guide (Endorsed Candidates) for the November 3 general election.",
+  "url": "https://feaweb.org/action-center/voter-toolkit/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-education-assn",
+  "target_id": "fl-house-37",
+  "status": "endorsed",
+  "choice": "Jane Aman",
+  "why": "Listed in FEA's Voter Guide (Endorsed Candidates) for the November 3 general election.",
+  "url": "https://feaweb.org/action-center/voter-toolkit/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-education-assn",
+  "target_id": "fl-house-39",
+  "status": "endorsed",
+  "choice": "Jarod Fox",
+  "why": "Listed in FEA's Voter Guide (Endorsed Candidates) for the November 3 general election.",
+  "url": "https://feaweb.org/action-center/voter-toolkit/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-education-assn",
+  "target_id": "fl-house-40",
+  "status": "endorsed",
+  "choice": "Ra'Shon Young",
+  "why": "Listed in FEA's Voter Guide (Endorsed Candidates) for the November 3 general election.",
+  "url": "https://feaweb.org/action-center/voter-toolkit/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-education-assn",
+  "target_id": "fl-house-42",
+  "status": "endorsed",
+  "choice": "Felipe Sousa Lazaballet",
+  "why": "Listed in FEA's Voter Guide (Endorsed Candidates) for the November 3 general election (spelled \"Felipe Sousa Lazabellet\" there).",
+  "url": "https://feaweb.org/action-center/voter-toolkit/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-education-assn",
+  "target_id": "fl-house-43",
+  "status": "endorsed",
+  "choice": "Samuel Vilchez Santiago",
+  "why": "Listed in FEA's Voter Guide (Endorsed Candidates) for the November 3 general election.",
+  "url": "https://feaweb.org/action-center/voter-toolkit/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-education-assn",
+  "target_id": "fl-house-45",
+  "status": "endorsed",
+  "choice": "Leonard Spencer",
+  "why": "Listed in FEA's Voter Guide (Endorsed Candidates) for the November 3 general election.",
+  "url": "https://feaweb.org/action-center/voter-toolkit/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-education-assn",
+  "target_id": "fl-house-1",
+  "status": "no_position",
+  "why": "FEA's Voter Guide lists \"No action\" for House District 1.",
+  "url": "https://feaweb.org/action-center/voter-toolkit/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-education-assn",
+  "target_id": "fl-house-2",
+  "status": "no_position",
+  "why": "FEA's Voter Guide lists \"No action\" for House District 2.",
+  "url": "https://feaweb.org/action-center/voter-toolkit/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-education-assn",
+  "target_id": "fl-house-7",
+  "status": "no_position",
+  "why": "FEA's Voter Guide lists \"No action\" for House District 7.",
+  "url": "https://feaweb.org/action-center/voter-toolkit/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-education-assn",
+  "target_id": "fl-house-8",
+  "status": "endorsed",
+  "choice": "Gallop P. Franklin",
+  "why": "Listed in FEA's Voter Guide (Endorsed Candidates) for the November 3 general election, as \"Gallop Franklin\".",
+  "url": "https://feaweb.org/action-center/voter-toolkit/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-education-assn",
+  "target_id": "fl-house-9",
+  "status": "endorsed",
+  "choice": "Allison Tant",
+  "why": "Listed in FEA's Voter Guide (Endorsed Candidates) for the November 3 general election.",
+  "url": "https://feaweb.org/action-center/voter-toolkit/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-education-assn",
+  "target_id": "fl-us-house-1",
+  "status": "no_position",
+  "why": "FEA's Voter Guide lists \"No action\" for U.S. House District 1.",
+  "url": "https://feaweb.org/action-center/voter-toolkit/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-education-assn",
+  "target_id": "fl-us-house-2",
+  "status": "endorsed",
+  "choice": "Amanda Marie Green",
+  "why": "Listed in FEA's Voter Guide (Endorsed Candidates) for the November 3 general election, as \"Amanda Green\".",
+  "url": "https://feaweb.org/action-center/voter-toolkit/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-education-assn",
+  "target_id": "fl-us-house-8",
+  "status": "endorsed",
+  "choice": "Jennifer Jenkins",
+  "why": "Listed in FEA's Voter Guide (Endorsed Candidates) for the November 3 general election.",
+  "url": "https://feaweb.org/action-center/voter-toolkit/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-education-assn",
+  "target_id": "fl-us-house-9",
+  "status": "endorsed",
+  "choice": "Darren Soto",
+  "why": "Listed in FEA's Voter Guide (Endorsed Candidates) for the November 3 general election.",
+  "url": "https://feaweb.org/action-center/voter-toolkit/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-education-assn",
+  "target_id": "fl-us-house-10",
+  "status": "endorsed",
+  "choice": "Maxwell Frost",
+  "why": "Listed in FEA's Voter Guide (Endorsed Candidates) for the November 3 general election.",
+  "url": "https://feaweb.org/action-center/voter-toolkit/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-education-assn",
+  "target_id": "fl-us-house-11",
+  "status": "no_position",
+  "why": "FEA's Voter Guide lists \"No action\" for U.S. House District 11.",
+  "url": "https://feaweb.org/action-center/voter-toolkit/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-education-assn",
+  "target_id": "fl-orange-school-board-3",
+  "status": "endorsed",
+  "choice": "Susanne Peña",
+  "why": "Listed in FEA's school board endorsements for the November 3 general election.",
+  "url": "https://feaweb.org/action-center/voter-toolkit/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-education-assn",
+  "target_id": "fl-orange-ocps-millage",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "FEA's Voter Guide lists Orange County's 1 mill renewal among \"local referenda on the November ballot that will help their communities\".",
+  "url": "https://feaweb.org/action-center/voter-toolkit/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-education-assn",
+  "target_id": "fl-leon-school-millage",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "FEA's Voter Guide lists Leon County's new 1 mill tax among \"local referenda on the November ballot that will help their communities\".",
+  "url": "https://feaweb.org/action-center/voter-toolkit/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-education-assn",
+  "target_id": "fl-leon-school-surtax",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "FEA's Voter Guide lists Leon County's half-cent sales tax renewal among \"local referenda on the November ballot that will help their communities\".",
+  "url": "https://feaweb.org/action-center/voter-toolkit/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-afl-cio",
+  "target_id": "fl-us-house-2",
+  "status": "endorsed",
+  "choice": "Amanda Marie Green",
+  "why": "Listed in the Florida AFL-CIO Labor 2026 Endorsements.",
+  "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-afl-cio",
+  "target_id": "fl-house-9",
+  "status": "endorsed",
+  "choice": "Allison Tant",
+  "why": "Listed in the Florida AFL-CIO Labor 2026 Endorsements.",
+  "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-amendment-3",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "AFSCME Florida's 2026 midterm endorsements say: Vote NO on \"No. 3 Constitutional Amendment\".",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-governor",
+  "status": "endorsed",
+  "choice": "David Jolly (Lt. Gov.: Gwen Graham)",
+  "why": "Listed for Governor in AFSCME Florida's 2026 midterm endorsements, as \"David Jolly / Gwen Graham\".",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-attorney-general",
+  "status": "endorsed",
+  "choice": "Jose Javier Rodriguez",
+  "why": "Listed for Attorney General in AFSCME Florida's 2026 midterm endorsements.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-cfo",
+  "status": "endorsed",
+  "choice": "Annette Taddeo",
+  "why": "Listed for CFO in AFSCME Florida's 2026 midterm endorsements.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-us-senate-special",
+  "status": "endorsed",
+  "choice": "Angie Nixon",
+  "why": "Listed for U.S. Senate in AFSCME Florida's 2026 midterm endorsements.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-us-house-9",
+  "status": "endorsed",
+  "choice": "Darren Soto",
+  "why": "Listed for Congressional District 9 in AFSCME Florida's 2026 midterm endorsements.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-house-35",
+  "status": "endorsed",
+  "choice": "Eric Gray",
+  "why": "Listed for House District 35 in AFSCME Florida's 2026 midterm endorsements.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-house-37",
+  "status": "endorsed",
+  "choice": "Jane Aman",
+  "why": "Listed for House District 37 in AFSCME Florida's 2026 midterm endorsements, as \"Dr. Jane Aman\".",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-house-39",
+  "status": "endorsed",
+  "choice": "Jarod Fox",
+  "why": "Listed for House District 39 in AFSCME Florida's 2026 midterm endorsements, as \"Dr. Jarod Fox\".",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-house-43",
+  "status": "endorsed",
+  "choice": "Samuel Vilchez Santiago",
+  "why": "Listed for House District 43 in AFSCME Florida's 2026 midterm endorsements.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-house-45",
+  "status": "endorsed",
+  "choice": "Leonard Spencer",
+  "why": "Listed for House District 45 in AFSCME Florida's 2026 midterm endorsements, as \"Rep. Leonard Spencer\".",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-senate-10",
+  "status": "endorsed",
+  "choice": "John Lowndes",
+  "why": "Listed for Senate District 10 in AFSCME Florida's 2026 midterm endorsements, spelled \"John Lowdes\".",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-agriculture-commissioner",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-retention-muniz",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-retention-1dca-lewis",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-retention-1dca-nordby",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-retention-1dca-osterhaus",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-retention-1dca-roberts",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-retention-1dca-treadwell",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-amendment-1",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-amendment-2",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-orange-mayor",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-orange-clerk",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-9th-circuit-group-1",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-us-house-8",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-us-house-10",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-us-house-11",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-house-40",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-house-42",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-orange-commission-2",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-orange-commission-4",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-orange-commission-6",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-orange-commission-7",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-orange-commission-8",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-orange-school-board-3",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-orange-soil-water-1",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-orange-soil-water-3",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-orange-soil-water-5",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-vista-lakes-cdd-3",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-orange-ocps-millage",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-us-house-1",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-house-1",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-house-2",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-escambia-lost",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-escambia-commission-2",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-escambia-commission-4",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-escambia-ecua-2",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-escambia-ecua-4",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-pensacola-council-2",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-pensacola-council-4",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-us-house-2",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-house-7",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-house-8",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-house-9",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-2nd-circuit-group-4",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-2nd-circuit-group-9",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-leon-county-judge-5",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-leon-commission-at-large-2",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-leon-commission-1",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-leon-commission-3",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-leon-commission-5",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-leon-school-board-1",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-leon-school-board-3",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-tallahassee-mayor",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-tallahassee-commission-3",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-tallahassee-commission-5",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-leon-soil-water-1",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-leon-soil-water-5",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-canopy-cdd-1",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-capital-region-cdd-5",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-piney-z-cdd-3",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-leon-charter-county-ordinances-prevail",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-leon-charter-street-naming",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-leon-charter-human-dignity",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-leon-charter-statutory-references",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-leon-charter-community-impact",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-leon-school-surtax",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-leon-school-millage",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-florida",
+  "target_id": "fl-leon-consolidation-straw-ballot",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ }
+]

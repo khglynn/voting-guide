@@ -130,7 +130,7 @@
     {
       "id": "moved_in_state",
       "question": "I moved to a new address in Illinois.",
-      "short": "Re-register and vote in one visit at an early voting site or polling place, with two IDs.",
+      "short": "Re-register and vote in one visit at your polling place or a Chicago vote center, with two IDs.",
       "actions": [
         {
           "label": "Find early voting places",
@@ -168,7 +168,7 @@
     {
       "id": "not_registered",
       "question": "I'm not registered to vote.",
-      "short": "Register and vote in one visit at an early voting site or your polling place; bring two IDs.",
+      "short": "Register and vote in one visit at your polling place or, in Chicago, any vote center; bring two IDs.",
       "actions": [
         {
           "label": "Check my registration",

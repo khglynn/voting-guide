@@ -114,8 +114,8 @@
       "short": "After Oct 19, vote by affidavit ballot at your new address's poll site."
     },
     {
-      "text": "Nobody mails you a ballot unless you ask. If you want to vote by mail, request an early mail ballot (no reason needed). Once a mail ballot is issued to you, you can't vote on a machine in person; you'd vote an affidavit ballot instead, and only one of the two counts.",
-      "short": "To vote by mail, request an early mail ballot; no reason needed."
+      "text": "Mail ballot applications have closed. If one was issued to you, hand it in at any poll site in your county by 9 PM. If you vote in person instead, you’ll use an affidavit ballot, and only one of the two counts.",
+      "short": "Mail ballot? Hand it in at any poll site in your county by 9 PM."
     },
     {
       "text": "Fusion voting: the same candidate appears on more than one line. Hochul is on Democratic and Working Families; Blakeman is on Republican, Conservative and Vote Affordable. Votes on every line add up for that person. Fill in ONE oval. Two ovals for the same person still count once; two ovals for different people in one race void that race.",
@@ -231,18 +231,18 @@
     {
       "id": "no_mail_ballot_or_lost",
       "question": "My mail ballot never came, or I lost it.",
-      "short": "Online requests closed Oct 24; apply in person at your county board by Nov 2, or vote in person.",
+      "short": "It’s too late for a new one. Vote at your own poll site by 9 PM, on an affidavit ballot.",
       "actions": [
         {
           "label": "Track my ballot",
           "url": "https://voterlookup.elections.ny.gov/"
         }
       ],
-      "answer": "Check its status, then ask for a new one or vote in person. In person you'll vote an affidavit ballot, which counts as long as your first mail ballot never comes back.",
+      "answer": "It’s too late to get a new mail ballot. Vote at your own poll site on Election Day, 6 AM to 9 PM, on an affidavit ballot. It counts as long as your first mail ballot never comes back.",
       "steps": [
         "Track your ballot at voterlookup.elections.ny.gov.",
-        "Online requests closed Saturday, October 24. You can still apply in person at your county board through Monday, November 2 (Sullivan County: 100 North Street, Monticello).",
-        "Or vote in person during early voting (through Sunday, November 1) or on Election Day, on an affidavit ballot. It counts only if your first ballot never reaches the board."
+        "Mail ballot applications closed Monday, November 2.",
+        "Vote at your own poll site on Election Day, 6 AM to 9 PM, on an affidavit ballot. It counts only if your first ballot never reaches the board."
       ],
       "deadline": "2026-10-24",
       "source": "https://elections.ny.gov/request-ballot",

@@ -1,0 +1,3512 @@
+[
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-prop-1",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Support' on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-prop-2",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Support' on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-prop-3",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Support' on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-prop-37",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Support' on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-prop-38",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Support' on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-prop-39",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'Oppose' on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-prop-4",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Support' on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-prop-40",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Support' on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-prop-41",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'Oppose' on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-prop-42",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'Oppose' on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-prop-43",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'Oppose' on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-prop-44",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Support' on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-prop-45",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'Oppose' on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-prop-5",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Support' on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "ca-prop-1",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Marked 'Support' in AFSCME California's 2026 general election endorsements.",
+    "url": "https://afscme57.org/system/files/2026-10/AFSCME%20CALIFORNIA%20PEOPLE%202026%20General%20Endorsements.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "ca-prop-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme57.org/political-and-legislative/afscme-california-people-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "ca-prop-3",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Marked 'Support' in AFSCME California's 2026 general election endorsements.",
+    "url": "https://afscme57.org/system/files/2026-10/AFSCME%20CALIFORNIA%20PEOPLE%202026%20General%20Endorsements.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "ca-prop-37",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Marked 'Support' in AFSCME California's 2026 general election endorsements.",
+    "url": "https://afscme57.org/system/files/2026-10/AFSCME%20CALIFORNIA%20PEOPLE%202026%20General%20Endorsements.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "ca-prop-38",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Marked 'Support' in AFSCME California's 2026 general election endorsements.",
+    "url": "https://afscme57.org/system/files/2026-10/AFSCME%20CALIFORNIA%20PEOPLE%202026%20General%20Endorsements.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "ca-prop-39",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Marked 'Oppose' in AFSCME California's 2026 general election endorsements.",
+    "url": "https://afscme57.org/system/files/2026-10/AFSCME%20CALIFORNIA%20PEOPLE%202026%20General%20Endorsements.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "ca-prop-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme57.org/political-and-legislative/afscme-california-people-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "ca-prop-40",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Marked 'Support' in AFSCME California's 2026 general election endorsements.",
+    "url": "https://afscme57.org/system/files/2026-10/AFSCME%20CALIFORNIA%20PEOPLE%202026%20General%20Endorsements.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "ca-prop-41",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Marked 'Oppose' in AFSCME California's 2026 general election endorsements.",
+    "url": "https://afscme57.org/system/files/2026-10/AFSCME%20CALIFORNIA%20PEOPLE%202026%20General%20Endorsements.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "ca-prop-42",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Marked 'Oppose' in AFSCME California's 2026 general election endorsements.",
+    "url": "https://afscme57.org/system/files/2026-10/AFSCME%20CALIFORNIA%20PEOPLE%202026%20General%20Endorsements.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "ca-prop-43",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Marked 'Oppose' in AFSCME California's 2026 general election endorsements.",
+    "url": "https://afscme57.org/system/files/2026-10/AFSCME%20CALIFORNIA%20PEOPLE%202026%20General%20Endorsements.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "ca-prop-44",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme57.org/political-and-legislative/afscme-california-people-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "ca-prop-45",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme57.org/political-and-legislative/afscme-california-people-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "ca-prop-5",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Marked 'Support' in AFSCME California's 2026 general election endorsements.",
+    "url": "https://afscme57.org/system/files/2026-10/AFSCME%20CALIFORNIA%20PEOPLE%202026%20General%20Endorsements.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "ca-prop-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 Educator Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "ca-prop-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 Educator Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "ca-prop-3",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "'Fund our schools: Yes on Prop 3!'",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "ca-prop-37",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 Educator Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "ca-prop-38",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 Educator Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "ca-prop-39",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 Educator Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "ca-prop-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 Educator Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "ca-prop-40",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "'Tax the billionaires: Yes on Prop 40!'",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "ca-prop-41",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as No on Prop 41 in its November 2026 Educator Voter Guide.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "ca-prop-42",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as No on Prop 42 in its November 2026 Educator Voter Guide.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "ca-prop-43",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 Educator Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "ca-prop-44",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 Educator Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "ca-prop-45",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 Educator Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "ca-prop-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 Educator Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-prop-1",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Marked 'Support' in its 2026 General Election Voter Guide.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-prop-2",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Marked 'Support' in its 2026 General Election Voter Guide.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-prop-3",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Marked 'Support' in its 2026 General Election Voter Guide.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-prop-37",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Marked 'Support' in its 2026 General Election Voter Guide.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-prop-38",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-prop-39",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Marked 'Oppose' in its 2026 General Election Voter Guide.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-prop-4",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Marked 'Support' in its 2026 General Election Voter Guide.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-prop-40",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-prop-41",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-prop-42",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-prop-43",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Marked 'Oppose' in its 2026 General Election Voter Guide.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-prop-44",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-prop-45",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Marked 'Oppose' in its 2026 General Election Voter Guide.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-prop-5",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Marked 'Support' in its 2026 General Election Voter Guide.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-prop-1",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-prop-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "Marked 'Neutral' in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-prop-3",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-prop-37",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-prop-38",
+    "status": "no_position",
+    "choice": null,
+    "why": "Marked 'Neutral' in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-prop-39",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-prop-4",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-prop-40",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-prop-41",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-prop-42",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-prop-43",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-prop-44",
+    "status": "no_position",
+    "choice": null,
+    "why": "Marked 'Neutral' in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-prop-45",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-prop-5",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-prop-1",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-prop-2",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-prop-3",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-prop-37",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-prop-39",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-prop-4",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-prop-41",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-prop-42",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-prop-43",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-prop-45",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-prop-5",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "ca-prop-1",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "ca-prop-2",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "ca-prop-3",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "ca-prop-37",
+    "status": "no_position",
+    "choice": null,
+    "why": "\"Neutral / No Stance\" in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "ca-prop-38",
+    "status": "no_position",
+    "choice": null,
+    "why": "\"No Recommendation\" in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "ca-prop-39",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "ca-prop-4",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "ca-prop-40",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "ca-prop-41",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "ca-prop-42",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "ca-prop-43",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "ca-prop-44",
+    "status": "no_position",
+    "choice": null,
+    "why": "\"Neutral / No Stance\" in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "ca-prop-45",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "ca-prop-5",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "ca-prop-1",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Yes' in its Nov 3, 2026 endorsements.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "ca-prop-2",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Yes' in its Nov 3, 2026 endorsements.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "ca-prop-3",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Yes' in its Nov 3, 2026 endorsements.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "ca-prop-37",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Yes' in its Nov 3, 2026 endorsements.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "ca-prop-38",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "ca-prop-39",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'No' in its Nov 3, 2026 endorsements.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "ca-prop-4",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Yes' in its Nov 3, 2026 endorsements.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "ca-prop-40",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Yes' in its Nov 3, 2026 endorsements.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "ca-prop-41",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'No' in its Nov 3, 2026 endorsements.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "ca-prop-42",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'No' in its Nov 3, 2026 endorsements.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "ca-prop-43",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'No' in its Nov 3, 2026 endorsements.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "ca-prop-44",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Yes' in its Nov 3, 2026 endorsements.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "ca-prop-45",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'No' in its Nov 3, 2026 endorsements.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "ca-prop-5",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Yes' in its Nov 3, 2026 endorsements.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "ca-prop-1",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Says Yes: it would fund veterans housing and put members to work.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "ca-prop-2",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Says Yes: a bigger rainy day fund protects public employees' jobs in a downturn.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "ca-prop-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "ca-prop-37",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "ca-prop-38",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "ca-prop-39",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "ca-prop-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "ca-prop-40",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Says No: billionaires who fund projects might pull those funds out of the state.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "ca-prop-41",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "ca-prop-42",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "ca-prop-43",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Says No: it puts major obstacles in the way of funding projects that employ its members.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "ca-prop-44",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "ca-prop-45",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Says No: it could compromise labor standards on projects.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "ca-prop-5",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Says Yes: it means more stability for projects that need government positions filled.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-prop-1",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Prop 1: Yes' on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-prop-2",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Prop 2: Yes' on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-prop-3",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Prop 3: Yes' on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-prop-37",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Prop 37: Yes' on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-prop-38",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-prop-39",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'Prop 39: No' on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-prop-4",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Prop 4: Yes' on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-prop-40",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Prop 40: Yes' on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-prop-41",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'Prop 41: No' on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-prop-42",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'Prop 42: No' on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-prop-43",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'Prop 43: No' on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-prop-44",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'Prop 44: No' on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-prop-45",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'Prop 45: No' on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-prop-5",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Prop 5: Yes' on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-imperial-labor-council",
+    "target_id": "ca-prop-1",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its November 3, 2026 general election union endorsements.",
+    "url": "https://www.unionyes.org/2026-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-imperial-labor-council",
+    "target_id": "ca-prop-2",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its November 3, 2026 general election union endorsements.",
+    "url": "https://www.unionyes.org/2026-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-imperial-labor-council",
+    "target_id": "ca-prop-3",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its November 3, 2026 general election union endorsements.",
+    "url": "https://www.unionyes.org/2026-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-imperial-labor-council",
+    "target_id": "ca-prop-37",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its November 3, 2026 general election union endorsements.",
+    "url": "https://www.unionyes.org/2026-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-imperial-labor-council",
+    "target_id": "ca-prop-38",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 3, 2026 general election union endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unionyes.org/2026-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-imperial-labor-council",
+    "target_id": "ca-prop-39",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its November 3, 2026 general election union endorsements.",
+    "url": "https://www.unionyes.org/2026-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-imperial-labor-council",
+    "target_id": "ca-prop-4",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its November 3, 2026 general election union endorsements.",
+    "url": "https://www.unionyes.org/2026-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-imperial-labor-council",
+    "target_id": "ca-prop-40",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its November 3, 2026 general election union endorsements.",
+    "url": "https://www.unionyes.org/2026-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-imperial-labor-council",
+    "target_id": "ca-prop-41",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its November 3, 2026 general election union endorsements.",
+    "url": "https://www.unionyes.org/2026-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-imperial-labor-council",
+    "target_id": "ca-prop-42",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its November 3, 2026 general election union endorsements.",
+    "url": "https://www.unionyes.org/2026-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-imperial-labor-council",
+    "target_id": "ca-prop-43",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its November 3, 2026 general election union endorsements.",
+    "url": "https://www.unionyes.org/2026-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-imperial-labor-council",
+    "target_id": "ca-prop-44",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its November 3, 2026 general election union endorsements.",
+    "url": "https://www.unionyes.org/2026-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-imperial-labor-council",
+    "target_id": "ca-prop-45",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its November 3, 2026 general election union endorsements.",
+    "url": "https://www.unionyes.org/2026-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-imperial-labor-council",
+    "target_id": "ca-prop-5",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its November 3, 2026 general election union endorsements.",
+    "url": "https://www.unionyes.org/2026-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "ca-prop-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "ca-prop-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "ca-prop-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "ca-prop-37",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "ca-prop-38",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "ca-prop-39",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "ca-prop-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "ca-prop-40",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "ca-prop-41",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "ca-prop-42",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "ca-prop-43",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "ca-prop-44",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "ca-prop-45",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "ca-prop-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-prop-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-prop-2",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as support on its 2026 elections page.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-prop-3",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as support on its 2026 elections page.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-prop-37",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-prop-38",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-prop-39",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as oppose on its 2026 elections page.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-prop-4",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as support on its 2026 elections page.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-prop-40",
+    "status": "no_position",
+    "choice": null,
+    "why": "Listed as a neutral position on its 2026 elections page.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-prop-41",
+    "status": "no_position",
+    "choice": null,
+    "why": "Listed as a neutral position on its 2026 elections page.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-prop-42",
+    "status": "no_position",
+    "choice": null,
+    "why": "Listed as a neutral position on its 2026 elections page.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-prop-43",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as oppose on its 2026 elections page.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-prop-44",
+    "status": "no_position",
+    "choice": null,
+    "why": "Listed as a neutral position on its 2026 elections page.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-prop-45",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-prop-5",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as support on its 2026 elections page.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "ca-prop-1",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Vote Yes.'",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "ca-prop-2",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Vote Yes.'",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "ca-prop-3",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Vote Yes.'",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "ca-prop-37",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3, 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "ca-prop-38",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3, 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "ca-prop-39",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'Vote No.'",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "ca-prop-4",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Vote Yes.'",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "ca-prop-40",
+    "status": "no_position",
+    "choice": null,
+    "why": "Listed as neutral in its Nov 3 endorsements.",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "ca-prop-41",
+    "status": "no_position",
+    "choice": null,
+    "why": "Listed as neutral in its Nov 3 endorsements.",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "ca-prop-42",
+    "status": "no_position",
+    "choice": null,
+    "why": "Listed as neutral in its Nov 3 endorsements.",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "ca-prop-43",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'Vote No.'",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "ca-prop-44",
+    "status": "no_position",
+    "choice": null,
+    "why": "Listed as neutral in its Nov 3 endorsements.",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "ca-prop-45",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3, 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "ca-prop-5",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Vote Yes.'",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "ca-prop-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Fall 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "ca-prop-2",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its Fall 2026 voter guide for the November 3 election.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "ca-prop-3",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its Fall 2026 voter guide for the November 3 election.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "ca-prop-37",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Fall 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "ca-prop-38",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Fall 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "ca-prop-39",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its Fall 2026 voter guide for the November 3 election.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "ca-prop-4",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its Fall 2026 voter guide for the November 3 election.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "ca-prop-40",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Fall 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "ca-prop-41",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Fall 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "ca-prop-42",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Fall 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "ca-prop-43",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its Fall 2026 voter guide for the November 3 election.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "ca-prop-44",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Fall 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "ca-prop-45",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Fall 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "ca-prop-5",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its Fall 2026 voter guide for the November 3 election.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "ca-prop-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "ca-prop-2",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its November 2026 endorsements.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "ca-prop-3",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its November 2026 endorsements.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "ca-prop-37",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "ca-prop-38",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "ca-prop-39",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its November 2026 endorsements.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "ca-prop-4",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its November 2026 endorsements.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "ca-prop-40",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "ca-prop-41",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "ca-prop-42",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "ca-prop-43",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its November 2026 endorsements.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "ca-prop-44",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "ca-prop-45",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "ca-prop-5",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its November 2026 endorsements.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "ca-prop-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its final November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "ca-prop-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its final November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "ca-prop-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its final November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "ca-prop-37",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its final November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "ca-prop-38",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its final November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "ca-prop-39",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its final November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "ca-prop-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its final November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "ca-prop-40",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its final November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "ca-prop-41",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its final November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "ca-prop-42",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its final November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "ca-prop-43",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its final November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "ca-prop-44",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its final November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "ca-prop-45",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its final November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "ca-prop-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its final November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "ca-prop-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its endorsements for the Nov 3, 2026 general election on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "ca-prop-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its endorsements for the Nov 3, 2026 general election on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "ca-prop-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its endorsements for the Nov 3, 2026 general election on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "ca-prop-37",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its endorsements for the Nov 3, 2026 general election on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "ca-prop-38",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its endorsements for the Nov 3, 2026 general election on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "ca-prop-39",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its endorsements for the Nov 3, 2026 general election on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "ca-prop-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its endorsements for the Nov 3, 2026 general election on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "ca-prop-40",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its endorsements for the Nov 3, 2026 general election on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "ca-prop-41",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its endorsements for the Nov 3, 2026 general election on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "ca-prop-42",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its endorsements for the Nov 3, 2026 general election on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "ca-prop-43",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its endorsements for the Nov 3, 2026 general election on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "ca-prop-44",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its endorsements for the Nov 3, 2026 general election on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "ca-prop-45",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its endorsements for the Nov 3, 2026 general election on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-labor-council",
+    "target_id": "ca-prop-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its endorsements for the Nov 3, 2026 general election on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "ca-prop-1",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as Yes in its 2026 General Election endorsements.",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "ca-prop-2",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as Yes in its 2026 General Election endorsements.",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "ca-prop-3",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as Yes in its 2026 General Election endorsements.",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "ca-prop-37",
+    "status": "no_position",
+    "choice": null,
+    "why": "Listed as 'No Position.'",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "ca-prop-38",
+    "status": "no_position",
+    "choice": null,
+    "why": "Listed as 'No Position.'",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "ca-prop-39",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as No in its 2026 General Election endorsements.",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "ca-prop-4",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as Yes in its 2026 General Election endorsements.",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "ca-prop-40",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as Yes in its 2026 General Election endorsements.",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "ca-prop-41",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as No in its 2026 General Election endorsements.",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "ca-prop-42",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as No in its 2026 General Election endorsements.",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "ca-prop-43",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as No in its 2026 General Election endorsements.",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "ca-prop-44",
+    "status": "no_position",
+    "choice": null,
+    "why": "Listed as 'No Position.'",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "ca-prop-45",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as No in its 2026 General Election endorsements.",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "ca-prop-5",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as Yes in its 2026 General Election endorsements.",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "udw-3930",
+    "target_id": "ca-prop-1",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed on its Vote 2026 page for the November election.",
+    "url": "https://www.udw.org/vote/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "udw-3930",
+    "target_id": "ca-prop-2",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed on its Vote 2026 page for the November election.",
+    "url": "https://www.udw.org/vote/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "udw-3930",
+    "target_id": "ca-prop-3",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed on its Vote 2026 page for the November election.",
+    "url": "https://www.udw.org/vote/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "udw-3930",
+    "target_id": "ca-prop-38",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed on its Vote 2026 page for the November election.",
+    "url": "https://www.udw.org/vote/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "udw-3930",
+    "target_id": "ca-prop-39",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed on its Vote 2026 page for the November election.",
+    "url": "https://www.udw.org/vote/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "udw-3930",
+    "target_id": "ca-prop-4",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed on its Vote 2026 page for the November election.",
+    "url": "https://www.udw.org/vote/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "udw-3930",
+    "target_id": "ca-prop-40",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed on its Vote 2026 page for the November election.",
+    "url": "https://www.udw.org/vote/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "udw-3930",
+    "target_id": "ca-prop-41",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed on its Vote 2026 page for the November election.",
+    "url": "https://www.udw.org/vote/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "udw-3930",
+    "target_id": "ca-prop-42",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed on its Vote 2026 page for the November election.",
+    "url": "https://www.udw.org/vote/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "udw-3930",
+    "target_id": "ca-prop-43",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed on its Vote 2026 page for the November election.",
+    "url": "https://www.udw.org/vote/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "udw-3930",
+    "target_id": "ca-prop-45",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed on its Vote 2026 page for the November election.",
+    "url": "https://www.udw.org/vote/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "udw-3930",
+    "target_id": "ca-prop-5",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed on its Vote 2026 page for the November election.",
+    "url": "https://www.udw.org/vote/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "ca-prop-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "ca-prop-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "ca-prop-3",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "'Vote Yes on Prop 3: Protect School Funding.'",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "ca-prop-37",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "ca-prop-38",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "ca-prop-39",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "ca-prop-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "ca-prop-40",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "'Yes on Prop 40: Billionaires tax to protect healthcare.'",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "ca-prop-41",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "'No on Prop 41: Unnecessary hurdles for voter approved initiatives.'",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "ca-prop-42",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "'No on Prop 42: Tax free luxury assets for the wealthy.'",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "ca-prop-43",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "'No on Prop 43: Raise Vote threshold for funding public services.'",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "ca-prop-44",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "ca-prop-45",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "ca-prop-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "ca-prop-1",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its Orange County voter guide for November 2026.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "ca-prop-2",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its Orange County voter guide for November 2026.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "ca-prop-3",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its Orange County voter guide for November 2026.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "ca-prop-37",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its Orange County voter guide for November 2026.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "ca-prop-38",
+    "status": "no_position",
+    "choice": null,
+    "why": "\"No Recommendation\" in its Orange County voter guide for November 2026.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "ca-prop-39",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its Orange County voter guide for November 2026.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "ca-prop-4",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its Orange County voter guide for November 2026.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "ca-prop-40",
+    "status": "no_position",
+    "choice": null,
+    "why": "\"No Recommendation\" in its Orange County voter guide for November 2026.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "ca-prop-41",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its Orange County voter guide for November 2026.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "ca-prop-42",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its Orange County voter guide for November 2026.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "ca-prop-43",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its Orange County voter guide for November 2026.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "ca-prop-44",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its Orange County voter guide for November 2026.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "ca-prop-45",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its Orange County voter guide for November 2026.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "ca-prop-5",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its Orange County voter guide for November 2026.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-local-5",
+    "target_id": "ca-prop-1",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Recommends Yes in its Nov 3, 2026 voter education guide.",
+    "url": "https://www.flipsnack.com/FA896A99E8C/ufcw5-voter-education-guide-pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-local-5",
+    "target_id": "ca-prop-2",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Recommends Yes in its Nov 3, 2026 voter education guide.",
+    "url": "https://www.flipsnack.com/FA896A99E8C/ufcw5-voter-education-guide-pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-local-5",
+    "target_id": "ca-prop-3",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Recommends Yes in its Nov 3, 2026 voter education guide.",
+    "url": "https://www.flipsnack.com/FA896A99E8C/ufcw5-voter-education-guide-pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-local-5",
+    "target_id": "ca-prop-37",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Recommends Yes in its Nov 3, 2026 voter education guide.",
+    "url": "https://www.flipsnack.com/FA896A99E8C/ufcw5-voter-education-guide-pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-local-5",
+    "target_id": "ca-prop-38",
+    "status": "no_position",
+    "choice": null,
+    "why": "Listed as 'No Recommendation.'",
+    "url": "https://www.flipsnack.com/FA896A99E8C/ufcw5-voter-education-guide-pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-local-5",
+    "target_id": "ca-prop-39",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Recommends No in its Nov 3, 2026 voter education guide.",
+    "url": "https://www.flipsnack.com/FA896A99E8C/ufcw5-voter-education-guide-pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-local-5",
+    "target_id": "ca-prop-4",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Recommends Yes in its Nov 3, 2026 voter education guide.",
+    "url": "https://www.flipsnack.com/FA896A99E8C/ufcw5-voter-education-guide-pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-local-5",
+    "target_id": "ca-prop-40",
+    "status": "no_position",
+    "choice": null,
+    "why": "Listed as 'No Recommendation.'",
+    "url": "https://www.flipsnack.com/FA896A99E8C/ufcw5-voter-education-guide-pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-local-5",
+    "target_id": "ca-prop-41",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Recommends No in its Nov 3, 2026 voter education guide.",
+    "url": "https://www.flipsnack.com/FA896A99E8C/ufcw5-voter-education-guide-pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-local-5",
+    "target_id": "ca-prop-42",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Recommends No in its Nov 3, 2026 voter education guide.",
+    "url": "https://www.flipsnack.com/FA896A99E8C/ufcw5-voter-education-guide-pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-local-5",
+    "target_id": "ca-prop-43",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Recommends No in its Nov 3, 2026 voter education guide.",
+    "url": "https://www.flipsnack.com/FA896A99E8C/ufcw5-voter-education-guide-pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-local-5",
+    "target_id": "ca-prop-44",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Recommends Yes in its Nov 3, 2026 voter education guide.",
+    "url": "https://www.flipsnack.com/FA896A99E8C/ufcw5-voter-education-guide-pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-local-5",
+    "target_id": "ca-prop-45",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Recommends No in its Nov 3, 2026 voter education guide.",
+    "url": "https://www.flipsnack.com/FA896A99E8C/ufcw5-voter-education-guide-pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-local-5",
+    "target_id": "ca-prop-5",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Recommends Yes in its Nov 3, 2026 voter education guide.",
+    "url": "https://www.flipsnack.com/FA896A99E8C/ufcw5-voter-education-guide-pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-prop-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-prop-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-prop-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-prop-37",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its general election endorsements.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-prop-38",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-prop-39",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-prop-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-prop-40",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-prop-41",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-prop-42",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-prop-43",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-prop-44",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-prop-45",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-prop-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "ca-prop-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "ca-prop-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "ca-prop-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "ca-prop-37",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "ca-prop-38",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "ca-prop-39",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "ca-prop-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "ca-prop-40",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as Yes on Proposition 40 (Wealth Tax) in its November 2026 endorsements.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "ca-prop-41",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "ca-prop-42",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "ca-prop-43",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "ca-prop-44",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "ca-prop-45",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "ca-prop-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "ca-prop-1",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its 2026 Orange County voter guide; its San Diego & Imperial County guide lists the same statewide picks.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_Orange-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "ca-prop-3",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its 2026 Orange County voter guide; its San Diego & Imperial County guide lists the same statewide picks.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_Orange-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "ca-prop-37",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its 2026 Orange County voter guide; its San Diego & Imperial County guide lists the same statewide picks.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_Orange-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "ca-prop-39",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its 2026 Orange County voter guide; its San Diego & Imperial County guide lists the same statewide picks.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_Orange-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "ca-prop-40",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its 2026 Orange County voter guide; its San Diego & Imperial County guide lists the same statewide picks.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_Orange-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "ca-prop-43",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its 2026 Orange County voter guide; its San Diego & Imperial County guide lists the same statewide picks.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_Orange-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  }
+]

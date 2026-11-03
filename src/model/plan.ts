@@ -162,13 +162,21 @@ function placeHowto(h0: HowTo, places: PlaceBundle[], county: string | null): Ho
   // The county's own where-to-vote tools win over the state's statewide lookups, when every
   // place on the ballot points to the same one.
   const looks = places.map((p) => lookupsFor(p, county));
+  const spans = !county && places.length > 0 && places.every((p) => p.by_county && p.by_county.length > 1);
+  // Unknown county on a ballot whose every place spans counties: a tool every county shares is the ballot's own
+  // (Nov 3: Travis, Williamson and Hays all send Election Day voters to Vote.org's address lookup), so the plan
+  // shows one button for it, not one per county that all open the same page.
+  const shared = (k: keyof Lookups): string | null => {
+    const urls = spans ? [...new Set(places.flatMap((p) => p.by_county!.map((c) => c.lookups[k] || null)))] : [];
+    return urls.length === 1 && urls[0] ? urls[0] : null;
+  };
   const one = (k: keyof Lookups): string | null => {
     const urls = [...new Set(looks.map((l) => l?.[k] || null))];
-    return places.length && urls.length === 1 && urls[0] ? urls[0] : null;
+    return (places.length && urls.length === 1 && urls[0] ? urls[0] : null) || shared(k);
   };
   // Unknown county on a ballot whose every place spans counties: each county's tools, labeled, in the
   // order the first place lists them. (A county the Census names that no place lists keeps the state's.)
-  if (!county && places.length && places.every((p) => p.by_county && p.by_county.length > 1)) {
+  if (spans) {
     const seen = new Map<string, { county: string; lookups: Lookups }>();
     for (const p of places) for (const c of p.by_county!) if (!seen.has(countyKey(c.county))) seen.set(countyKey(c.county), { county: c.county, lookups: c.lookups });
     h = { ...h, county_links: [...seen.values()] };
@@ -194,6 +202,9 @@ function placeHowto(h0: HowTo, places: PlaceBundle[], county: string | null): Ho
       mail_ballot: lb || lt ? { ...h.mail_ballot, ...(lb ? { drop_box_lookup_url: lb } : {}), ...(lt ? { tracking_url: lt } : {}) } : h.mail_ballot,
     };
   }
+  // The county's live Election Day wait times (Nov 3), the same rule: only when every place on the ballot gives the same page.
+  const lw = one('election_day_waits');
+  if (lw) h = { ...h, election_day: { ...h.election_day, waits_url: lw } };
   // The county's own mail-ballot facts and opening time (Oct 29), when every place on the ballot gives the same ones:
   // the City of St. Louis's ballots go back only to its own Board, Nashville's polls open at 7.
   const same = <T>(xs: (T | undefined)[]): T | null => (xs.length && xs.every((x) => x != null) && new Set(xs.map((x) => JSON.stringify(x))).size === 1 ? xs[0]! : null);

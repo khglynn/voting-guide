@@ -231,7 +231,8 @@
   ],
   "lookups": {
     "early_in_person": "https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Early%20Voting%20Dashboard.html",
-    "election_day": "https://www.wilcotx.gov/DocumentCenter/View/22255/Notice-of-General-Election-Williamson-County"
+    "election_day": "https://www.vote.org/polling-place-locator/",
+    "election_day_waits": "https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Election%20Day%20Voting%20Dashboard.html"
   },
   "by_county": [
     {
@@ -244,7 +245,8 @@
       ],
       "lookups": {
         "early_in_person": "https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Early%20Voting%20Dashboard.html",
-        "election_day": "https://www.wilcotx.gov/DocumentCenter/View/22255/Notice-of-General-Election-Williamson-County"
+        "election_day": "https://www.vote.org/polling-place-locator/",
+        "election_day_waits": "https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Election%20Day%20Voting%20Dashboard.html"
       },
       "source": "https://www.wilcotx.gov/elections",
       "confidence": "verified"

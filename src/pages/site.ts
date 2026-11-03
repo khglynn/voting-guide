@@ -231,13 +231,17 @@ function whereHTML(h: HowTo, p: PlaceBundle | null): string {
   // A place across county lines (Austin: Travis, Williamson, Hays): each county's own tools, labeled, as My plan
   // shows them before it knows your county; the state's statewide lookup stands in for none of them.
   const counties = h.county_links && h.county_links.length > 1 ? h.county_links.filter((c) => c && c.county) : [];
+  // A link every county shares (Nov 3: Travis, Williamson and Hays all send Election Day voters to Vote.org's address
+  // lookup) is listed once with the general links, as My plan shows one button for it, not once per county.
+  const shared = (k: keyof Lookups): string | null => (counties.length > 1 && counties.every((c) => c.lookups[k] && c.lookups[k] === counties[0].lookups[k]) ? counties[0].lookups[k]! : null);
   // Each county's links first: a county left with none (Atlanta's after Oct 30: early voting over, drop box links
   // dated) has no row, and with no row at all there's no heading.
-  const rows = counties.map((c) => ({ county: c.county, ls: LOOK_LABEL.filter(([k]) => c.lookups[k] && !(k === 'early_in_person' && earlyOver)).map(([k, l]) => ext(c.lookups[k]!, l)) })).filter((r) => r.ls.length);
+  const rows = counties.map((c) => ({ county: c.county, ls: LOOK_LABEL.filter(([k]) => c.lookups[k] && !shared(k) && !(k === 'early_in_person' && earlyOver)).map(([k, l]) => ext(c.lookups[k]!, l)) })).filter((r) => r.ls.length);
   const byCounty = rows.length ? `<p class="pg-cty"><b>Find your county’s voting places:</b></p><ul class="pg-ctys">${rows.map((r) => `<li><b>${esc(`${r.county} County`)}</b> ${r.ls.join(' · ')}</li>`).join('')}</ul>` : '';
   // The state's lookup stays for any kind not every county has (Atlanta's counties list no Election Day page).
-  const own = (k: keyof Lookups): boolean => counties.length > 0 && counties.every((c) => !!c.lookups[k]);
-  const e = own('early_in_person') ? null : early, dd = own('election_day') ? null : day;
+  const own = (k: keyof Lookups): boolean => counties.length > 0 && counties.every((c) => !!c.lookups[k]) && !shared(k);
+  const e = own('early_in_person') || !early ? null : shared('early_in_person') || early;
+  const dd = own('election_day') ? null : shared('election_day') || day;
   if (e && e === dd) links.push(ext(e, 'Find where to vote'));
   else {
     if (e) links.push(ext(e, mail ? 'Find a vote center' : 'Find early voting locations'));

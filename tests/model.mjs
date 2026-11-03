@@ -1016,9 +1016,12 @@ function roundTrip(name, stCode, places, mutate) {
   const plan = mods.plan;
   const ps = views.planstrip;
   const TRAVIS_EARLY = 'https://www.google.com/maps/d/viewer?mid=1t_vWJgd_BRfKnJn_fQoHE25IV2i_0Jo';
-  // Nov 3: the county's Election Day tab embeds a new map ("G26 Election Day Locations - Updated"), so the plan links
-  // it instead of the Nov 1 PDF list.
-  const TRAVIS_DAY = 'https://www.google.com/maps/d/viewer?mid=1zqK0dRaFZQEYLkYi54gtLcxIZaeCsOQ';
+  // Nov 3, Election Day: Travis, Williamson and Hays list their sites only as a map with no address search or a PDF, so
+  // the button opens Vote.org's address lookup (today's sites, nearest first; 201 for Travis, the county's count), and
+  // the county's live wait times sit under it.
+  const TRAVIS_DAY = 'https://www.vote.org/polling-place-locator/';
+  const TRAVIS_WAIT = 'https://updates.electionlink.net/widgets/travistx/2026-11-03/Election%20Day%20Voting%20Dashboard.html';
+  const WILCO_WAIT = 'https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Election%20Day%20Voting%20Dashboard.html';
   const WILCO_EARLY = 'https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Early%20Voting%20Dashboard.html';
   const keep = { ballot: st.S.ballot, b: st.S.b, open: st.S.ui.open };
   const aus = read('place-austin-tx.json');
@@ -1032,16 +1035,60 @@ function roundTrip(name, stCode, places, mutate) {
   check('where: on a Travis ZIP, the plan\u2019s early voting and Election Day links are Travis\u2019s own (early map, Election Day map)', b.county === 'Travis' && b.howto.early_in_person.lookup_url === TRAVIS_EARLY && b.howto.election_day.lookup_url === TRAVIS_DAY && !b.howto.county_links, `${b.county} ${b.howto.early_in_person.lookup_url}`);
   const early = plan.nextStep(b.howto, '2026-10-28');
   const day = plan.nextStep(b.howto, '2026-11-03', false, 600);
-  check('where: during early voting the button opens the early map, on Election Day the Election Day map', early.primary.url === TRAVIS_EARLY && early.primary.look === 'early_in_person' && day.primary.url === TRAVIS_DAY && day.primary.look === 'election_day', `${early.primary.url} ${day.primary.url}`);
+  check('where: during early voting the button opens the early map, on Election Day the address lookup', early.primary.url === TRAVIS_EARLY && early.primary.look === 'early_in_person' && day.primary.url === TRAVIS_DAY && day.primary.look === 'election_day', `${early.primary.url} ${day.primary.url}`);
+  check('where: the bundle keeps each county\u2019s wait-times page (Travis, Williamson; none for Hays) and a Travis ballot carries Travis\u2019s', aus.by_county.map((c) => c.lookups.election_day_waits || '-').join('|') === `${TRAVIS_WAIT}|${WILCO_WAIT}|-` && b.howto.election_day.waits_url === TRAVIS_WAIT, b.howto.election_day.waits_url);
   b = open('TX', ['austin-tx']);
   bl.localize(b, '78729', null);
   check('where: on a split ZIP, the state\u2019s lookup stays and each county\u2019s links are listed', b.county === null && b.howto.early_in_person.lookup_url === tx.early_in_person.lookup_url && (b.howto.county_links || []).map((c) => c.county).join('|') === 'Travis|Williamson|Hays');
   st.S.ui.open = new Set();
+  // During early voting (pinned: the step depends on the day), when each county's early voting page differs.
+  const hadLoc = Object.getOwnPropertyDescriptor(globalThis, 'location');
+  Object.defineProperty(globalThis, 'location', { configurable: true, value: { search: '?today=2026-10-28', origin: 'http://x', pathname: '/' } });
   const html = ps.planHTML();
+  if (hadLoc) Object.defineProperty(globalThis, 'location', hadLoc); else delete globalThis.location;
   const btns = [...html.matchAll(/<a class="pbtn (gold|line)" href="([^"]+)"[^>]*data-county="([^"]+)">([^<]+)<\/a>/g)].map((m) => `${m[1]} ${m[3]} ${m[4]}`);
-  check('where: a split ZIP\u2019s plan shows one labeled button per county, Travis first in gold', btns.join('|') === 'gold Travis Travis County|line Williamson Williamson County|line Hays Hays County' && /<p class="plan-cty">Find [a-z ]+ in your county:<\/p>/.test(html), btns.join('|'));
+  check('where: a split ZIP\u2019s plan during early voting shows one labeled button per county, Travis first in gold', btns.join('|') === 'gold Travis Travis County|line Williamson Williamson County|line Hays Hays County' && /<p class="plan-cty">Find [a-z ]+ in your county:<\/p>/.test(html), btns.join('|'));
   bl.localize(b, '78729', 'Williamson');
-  check('where: once the address lookup says Williamson, Williamson\u2019s links, and one button again', b.county === 'Williamson' && b.howto.early_in_person.lookup_url === WILCO_EARLY && b.howto.election_day.lookup_url === 'https://www.wilcotx.gov/DocumentCenter/View/22255/Notice-of-General-Election-Williamson-County' && !b.howto.county_links && !/data-county=/.test(ps.planHTML()));
+  check('where: once the address lookup says Williamson, Williamson\u2019s links, and one button again', b.county === 'Williamson' && b.howto.early_in_person.lookup_url === WILCO_EARLY && b.howto.election_day.lookup_url === TRAVIS_DAY && b.howto.election_day.waits_url === WILCO_WAIT && !b.howto.county_links && !/data-county=/.test(ps.planHTML()));
+  // The wait-times link shows only on Election Day while the polls are open (Nov 3).
+  {
+    const had = Object.getOwnPropertyDescriptor(globalThis, 'location');
+    const at = (q) => Object.defineProperty(globalThis, 'location', { configurable: true, value: { search: q, origin: 'http://x', pathname: '/' } });
+    const waits = (html) => [...html.matchAll(/<p class="plan-hint plan-waits">(.*?)<\/p>/g)].map((m) => m[1]).join('');
+    try {
+      at('?today=2026-11-03&now=10:00');
+      let bb = open('TX', ['austin-tx']);
+      bl.localize(bb, '78702', null);
+      let html = ps.planHTML();
+      check('where: an Austin 78702 plan on Election Day: "Find where to vote" opens Vote.org, "See live wait times" Travis\u2019s dashboard', html.includes(`<a class="pbtn gold" href="${TRAVIS_DAY}" target="_blank" rel="noopener">Find where to vote</a>`) && waits(html) === `<a href="${TRAVIS_WAIT}" target="_blank" rel="noopener">See live wait times</a>`, waits(html));
+      at('?today=2026-11-03&now=19:05');
+      check('where: no wait-times link once the polls have closed', !waits(ps.planHTML()) && /Polls closed/.test(ps.planHTML()));
+      at('?today=2026-11-02');
+      check('where: no wait-times link before Election Day', !waits(ps.planHTML()));
+      at('?today=2026-11-03&now=10:00');
+      // Every county's Election Day button would open the same Vote.org page: one button, and each county's wait link.
+      for (const zip of ['78729', '78750']) {
+        bb = open('TX', ['austin-tx']);
+        bl.localize(bb, zip, null);
+        html = ps.planHTML();
+        const where = [...html.matchAll(/<a class="pbtn gold" href="([^"]+)"[^>]*>([^<]+)<\/a>/g)].map((m) => `${m[2]} ${m[1]}`);
+        check(`where: a split ZIP (${zip}) on Election Day shows one where-to-vote button, to Vote.org, and a wait-times link for Travis and Williamson`, bb.county === null && (bb.howto.county_links || []).length === 3 && !/data-county=/.test(html) && !/plan-cty/.test(html) && where.join('|') === `Find where to vote ${TRAVIS_DAY}` && waits(html) === `See live wait times: <a href="${TRAVIS_WAIT}" target="_blank" rel="noopener">Travis County</a> · <a href="${WILCO_WAIT}" target="_blank" rel="noopener">Williamson County</a>`, `${bb.county} ${where.join('|')} ${waits(html)}`);
+      }
+      bb = open('TX', ['san-antonio-tx']);
+      check('where: San Antonio\u2019s Election Day button is Bexar County\u2019s own address map, with no second wait link', bb.howto.election_day.lookup_url === 'https://maps.bexar.org/ElectionWaitTimes/' && !waits(ps.planHTML()));
+      open('TX', ['austin-williamson-tx']);
+      const pub = views.pass.messages().pub || '';
+      check('where: the work and school message keeps official links (Williamson\u2019s page, never Vote.org)', !/vote\.org/.test(pub) && /Find where to vote in .*: https:\/\/www\.wilcotx\.gov\/elections/.test(pub), pub);
+      at('?today=2026-10-28');
+      bb = open('TX', ['austin-tx']);
+      bl.localize(bb, '78729', null);
+      html = ps.planHTML();
+      const cb = [...html.matchAll(/data-county="([^"]+)"/g)].map((m) => m[1]).join('|');
+      check('where: the same split ZIP during early voting keeps a button per county (their early voting pages differ), and no wait link', cb === 'Travis|Williamson|Hays' && /Find early voting places in your county:/.test(html) && !waits(html), cb);
+    } finally {
+      if (had) Object.defineProperty(globalThis, 'location', had); else delete globalThis.location;
+    }
+  }
   // Nov 1: Lakewood's own Jefferson County mail and hours text, not the state's Denver, Adams and Arapahoe lines.
   // (The state's other mail fields keep statewide facts with a Denver aside; only these four are county-specific.)
   const lkw = open('CO', ['lakewood-co']).howto;

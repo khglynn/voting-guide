@@ -33,6 +33,7 @@ export function planHTML(): string {
       ${countyActs(h, step)}
       <div class="plan-acts">${step.primary && !countyActs(h, step) ? `<a class="pbtn gold" href="${esc(step.primary.url)}" target="_blank" rel="noopener">${esc(step.primary.label)}</a>` : ''}
         ${check ? `<a class="pbtn line" href="${esc(check)}" target="_blank" rel="noopener">Check my registration</a>` : ''}</div>
+      ${waitsHTML(h, step)}
       ${check && (h.situations || []).some((x) => x.id === 'lookup_cant_find') ? `<p class="plan-hint">Lookup can’t find you? <button class="linkbtn" data-act="whatif-sit" data-k="lookup_cant_find" data-fk="plan-cant-find">Try your name these ways</button></p>` : ''}
       <div class="plan-row"><button class="whatif-tog" data-act="open" data-k="whatif" aria-expanded="${open}" data-fk="whatif"><span>Dates, ID, and if you moved or lost <span class="nw">your ballot<svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span></span></button>
         <button class="voted" data-act="view" data-v="pass" data-voted="1" data-fk="voted">I already voted</button></div>
@@ -48,11 +49,24 @@ function countyActs(h: HowTo, step: Step): string {
   const links = h.county_links || [];
   const look = step.primary?.look;
   if (links.length < 2 || !look) return '';
-  const btns = links.map((l, i) => {
-    const url = l.lookups[look] || (look === 'drop_box' ? l.lookups.election_day : null) || step.primary!.url;
-    return `<a class="pbtn ${i ? 'line' : 'gold'}" href="${esc(url)}" target="_blank" rel="noopener" data-county="${esc(l.county)}">${esc(`${l.county} County`)}</a>`;
-  }).join('');
+  const urls = links.map((l) => l.lookups[look] || (look === 'drop_box' ? l.lookups.election_day : null) || step.primary!.url);
+  // Every county's button would open the same page (Nov 3: Vote.org's address lookup on Election Day): the step's
+  // one button instead, which plan.ts points at that page. Kevin wants no "which one do I tap?" today.
+  if (new Set(urls).size === 1 && urls[0] === step.primary!.url) return '';
+  const btns = links.map((l, i) => `<a class="pbtn ${i ? 'line' : 'gold'}" href="${esc(urls[i])}" target="_blank" rel="noopener" data-county="${esc(l.county)}">${esc(`${l.county} County`)}</a>`).join('');
   return `<p class="plan-cty">${esc(step.primary!.label)} in your county:</p><div class="plan-acts plan-ctys">${btns}</div>`;
+}
+
+/* The county's live wait times (Nov 3), a quiet link under the where-to-vote button, only on Election Day while the
+   polls are open (the step's own phase). Kevin, Election Day morning: a site where you put in your address and get your
+   voting location; any site in the county works, so the next question is which one has a short line. On a ballot
+   across county lines whose county isn't known, one link per county that has a page, by name. */
+function waitsHTML(h: HowTo, step: Step): string {
+  if (step.phase !== 'election_day' || !step.primary) return '';
+  const a = (url: string, text: string): string => `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(text)}</a>`;
+  if (h.election_day.waits_url) return `<p class="plan-hint plan-waits">${a(h.election_day.waits_url, 'See live wait times')}</p>`;
+  const ws = (h.county_links || []).filter((l) => l.lookups.election_day_waits);
+  return ws.length ? `<p class="plan-hint plan-waits">See live wait times: ${ws.map((l) => a(l.lookups.election_day_waits!, `${l.county} County`)).join(' · ')}</p>` : '';
 }
 
 /* The line under the next step. While you can vote in person (not in a mail state), "Bring a

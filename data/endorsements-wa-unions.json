@@ -3111,16 +3111,6 @@
   },
   {
     "endorser_id": "teamsters-117",
-    "target_id": "seattle-prop-1",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
-    "url": "https://www.teamsters117.org/endorsements_2026",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "teamsters-117",
     "target_id": "wa-coa-1-1-pos-5",
     "status": "not_found",
     "choice": null,
@@ -3255,36 +3245,6 @@
     "status": "endorsed",
     "choice": "Darya Farivar",
     "why": "Listed in its General Election 2026 endorsements.",
-    "url": "https://www.teamsters117.org/endorsements_2026",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "teamsters-117",
-    "target_id": "wa-initiative-001",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
-    "url": "https://www.teamsters117.org/endorsements_2026",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "teamsters-117",
-    "target_id": "wa-initiative-638",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
-    "url": "https://www.teamsters117.org/endorsements_2026",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "teamsters-117",
-    "target_id": "wa-initiative-645",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
     "url": "https://www.teamsters117.org/endorsements_2026",
     "date": "2026-11-02",
     "confidence": "verified"
@@ -5951,16 +5911,6 @@
   },
   {
     "endorser_id": "wsna",
-    "target_id": "seattle-prop-1",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its PAC's 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
-    "url": "https://cdn.wsna.org/assets/entry-assets/893445/26-wsna-pac-endorsements.pdf",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "wsna",
     "target_id": "wa-coa-1-1-pos-5",
     "status": "not_found",
     "choice": null,
@@ -6095,36 +6045,6 @@
     "status": "endorsed",
     "choice": "Darya Farivar",
     "why": "Listed in its PAC's endorsements for the November 3rd General Election.",
-    "url": "https://cdn.wsna.org/assets/entry-assets/893445/26-wsna-pac-endorsements.pdf",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "wsna",
-    "target_id": "wa-initiative-001",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its PAC's 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
-    "url": "https://cdn.wsna.org/assets/entry-assets/893445/26-wsna-pac-endorsements.pdf",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "wsna",
-    "target_id": "wa-initiative-638",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its PAC's 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
-    "url": "https://cdn.wsna.org/assets/entry-assets/893445/26-wsna-pac-endorsements.pdf",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "wsna",
-    "target_id": "wa-initiative-645",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its PAC's 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
     "url": "https://cdn.wsna.org/assets/entry-assets/893445/26-wsna-pac-endorsements.pdf",
     "date": "2026-11-02",
     "confidence": "verified"

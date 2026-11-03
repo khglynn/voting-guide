@@ -124,7 +124,7 @@ function placeLookups(x, where) {
   if (x == null) return null;
   if (typeof x !== 'object') { warn(`${where}: lookups is not an object; dropped it`); return null; }
   const out = {};
-  for (const k of ['early_in_person', 'election_day', 'election_day_waits', 'drop_box', 'tracking']) {
+  for (const k of ['early_in_person', 'election_day', 'election_day_waits', 'drop_box', 'tracking', 'results']) {
     if (x[k] == null) continue;
     const u = safeUrl(x[k]);
     if (u) out[k] = u; else warn(`${where}: lookups.${k} is not an http(s) URL; dropped it`);
@@ -158,7 +158,9 @@ function placeByCounty(list, p, where) {
       if (l && ck(l.county) === ck(c.county) && l.state === String(p.state || '').toUpperCase()) sites = c.sites.trim();
       else warn(`${where}: by_county ${c.county} sites "${c.sites}" names no usable data/sites list for that county; dropped it`);
     }
-    out.push({ county: c.county.trim(), zips, lookups, source: safeUrl(c.source), confidence: conf(c.confidence), ...optional({ office, sites }) });
+    // Who publishes its results page (Nov 3), only beside a results link.
+    const results_source = lookups.results ? str(c.results_source) : null;
+    out.push({ county: c.county.trim(), zips, lookups, source: safeUrl(c.source), confidence: conf(c.confidence), ...optional({ office, sites, results_source }) });
   }
   // One county is allowed: it names the county the place's own links belong to (San Marcos's are Hays's), so a
   // voter the address lookup puts in another county gets the state's links instead.
@@ -360,6 +362,15 @@ function stateHelp(s, f) {
   if (s.sample_ballot_url != null) {
     const u = safeUrl(s.sample_ballot_url);
     if (u) s.sample_ballot_url = u; else { warn(`${f}: sample_ballot_url is not an http(s) URL; dropped it`); delete s.sample_ballot_url; }
+  }
+  // The state's official results page and who publishes it (Nov 3), shown once its polls close.
+  if (s.results_url != null) {
+    const u = safeUrl(s.results_url);
+    if (u) s.results_url = u; else { warn(`${f}: results_url is not an http(s) URL; dropped it`); delete s.results_url; }
+  }
+  if (s.results_source != null) {
+    const n = s.results_url ? str(s.results_source) : null;
+    if (n) s.results_source = n; else { if (s.results_url) warn(`${f}: results_source is not text; dropped it`); delete s.results_source; }
   }
 }
 function ownWordsChecked(x, where) {
@@ -713,6 +724,7 @@ for (const f of listJson('places')) {
     district_finders: districtFinders(p.district_finders, f),
     heads_up: headsUp(p.heads_up, f),
     ...optional({ early_in_person: placeEarly(p.early_in_person, f), lookups: placeLookups(p.lookups, f), by_county: placeByCounty(p.by_county, p, f), situations: placeSituations(p.situations, f),
+      results_source: p.lookups && safeUrl(p.lookups.results) ? str(p.results_source) : null,
       mail_ballot: placeMail(p.mail_ballot, f), election_day: placeElectionDay(p.election_day, f),
       county_fips: placeCountyFips(p.county_fips, f), zip_outside: placeZipOutside(p.zip_outside, p, f),
       local_picks_checked: localPicksChecked(p.local_picks_checked, f),
@@ -1045,6 +1057,10 @@ for (const [st, s] of states) {
     election_date: s.election_date,
     official_site: s.official_site,
     places: [],
+    // The first page's results lead (Nov 3): when each state's polls close, its official results page, and its
+    // mail-ballot tracker (shown once every state has closed).
+    polls_close: s.election_day.polls_close,
+    ...optional({ results_url: s.results_url, results_source: s.results_source, mail_tracking_url: safeUrl(s.mail_ballot && s.mail_ballot.tracking_url) }),
     ...coverageOf(bundle, []),
   };
 }

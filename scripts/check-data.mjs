@@ -87,7 +87,7 @@ const BUILD_WARNINGS = [
   [/is ranked choice with no usable rank_up_to; using /, 'build-rank-guessed'],
   [/: short ".*" isn't words from the name; used /, 'build-candidate-short'],
   [/is missing yes_means or no_means/, 'measure-means'],
-  [/: short is not one plain line; dropped it|: actions is not a list; dropped it|: an action needs a label and an http\(s\) URL; dropped it|: more than 2 actions; dropped the rest|: a gotcha has no text; dropped it|: registration\.register_url(_source)? is not an http\(s\) URL; dropped it|: sample_ballot_url is not an http\(s\) URL; dropped it/, 'build-dropped-help'],
+  [/: short is not one plain line; dropped it|: actions is not a list; dropped it|: an action needs a label and an http\(s\) URL; dropped it|: more than 2 actions; dropped the rest|: a gotcha has no text; dropped it|: registration\.register_url(_source)? is not an http\(s\) URL; dropped it|: sample_ballot_url is not an http\(s\) URL; dropped it|: results_url is not an http\(s\) URL; dropped it|: results_source is not text; dropped it/, 'build-dropped-help'],
   [/: early_in_person\.latest_end needs .*; dropped it/, 'date-order'],
   [/: heads_up (until_address|zips) is not .*; dropped the field/, 'heads-up-field'],
   [/: by_county .* sites ".*" names no usable data\/sites list for that county; dropped it/, 'sites-link-dropped'],

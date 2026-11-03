@@ -1057,3 +1057,27 @@ body.v-cheat .plan, body.v-pass .plan, body.v-cheat #r-mast, body.v-pass #r-mast
 /* Paywalled sources (Oct 19): a quiet note with a link to send the picks. */
 .pw-note { margin-top: 8px; font-size: 13.5px; color: var(--ink-2); line-height: 1.45; }
 .srow .pw-note { margin-top: 4px; }
+
+/* Once polls start closing (Nov 3, Kevin: "results are rolling in", not "voting has ended"). The first page's
+   results lead (mast.ts resultsDoorHTML): one row per covered state, its name linking to the official results,
+   who publishes them beside it; a state still voting says when it ends. The plan strip's results block
+   (planstrip.ts resultsActs): who publishes the page, and the desks that call races. */
+.front.res .res-h { margin-top: 2px; }
+.res-sub { margin-top: 10px; font-size: 17px; line-height: 1.4; color: var(--ink-2); }
+.res-list { margin-top: 16px; border-top: 1px solid var(--rule); }
+.res-row { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 12px; padding: 6px 0; border-bottom: 1px solid var(--rule); }
+.res-st { font-family: var(--f-display); font-weight: 600; font-size: 18px; line-height: 1.3; padding: 6px 0; }
+a.res-st { color: var(--ink); text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.res-src { flex: 1 1 10em; font-size: 14.5px; line-height: 1.35; color: var(--muted); }
+.res-row.is-open .res-st { color: var(--ink-2); }
+.res-track { flex-basis: 100%; font-size: 14.5px; color: var(--ink); padding: 2px 0 6px; }
+.res-calls { margin-top: 12px; font-size: 15px; color: var(--muted); }
+.res-calls a { color: var(--ink); display: inline-block; padding: 6px 0; }
+.res-zip-h { margin-top: 28px; font-family: var(--f-display); font-weight: 600; font-size: 20px; line-height: 1.25; }
+.front.res [data-part="saved"]:not(:empty) { margin-top: 18px; }
+.front.res .door-saved { margin: 0; }
+.door-after { margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--rule); }
+.res-zip-l { display: block; font-size: 16px; line-height: 1.35; margin-bottom: 8px; color: var(--ink-2); }
+.door-after .row-btns { margin-top: 10px; }
+.plan-src { margin-top: 8px; }
+.plan-calls a { color: var(--on-dusk); display: inline-block; padding: 4px 0; }

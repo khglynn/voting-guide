@@ -6,7 +6,7 @@
 import type { HowTo, HelpAction, OfficeLine, PlaceEarly } from '../types';
 import { S } from '../state';
 import { esc, fmtDate, todayISO, host } from '../util';
-import { nextStep, registrationAlert, registerAction, isMailState, applyDated, countyKey, type Step } from '../model/plan';
+import { nextStep, registrationAlert, registerAction, isMailState, applyDated, countyKey, RACE_CALLS, type Step } from '../model/plan';
 import { ext, isOpen, bulletsHTML, leadBulletsHTML, escP, srcLink, sentences, telHTML, wordCount, deshout } from './common';
 import { queryOf, textOf, best, type Item } from '../model/search';
 import { nearNow, fmtMiles, directionsURL, type NearNow } from '../model/sites';
@@ -31,16 +31,17 @@ export function planHTML(): string {
   const open = isOpen('whatif');
   const check = h.registration.check_url;
   const sub = planSub(step);
+  const res = resultsActs(h, step);
   return `<section class="plan" id="plan" aria-labelledby="plan-h"><div class="wrap plan-in">
       <h2 class="vh" id="plan-k" tabindex="-1" data-fk="plan-k">Your next step</h2>
       <p class="plan-h" id="plan-h">${head}</p>
       ${sub.length ? `<p class="plan-sub">${esc(sub.join(' '))}</p>` : ''}
       ${reg ? `<div class="plan-reg"><p>${esc(reg)}</p>${regBtn ? `<a class="pbtn line" href="${esc(regBtn.url)}" target="_blank" rel="noopener" data-fk="plan-register">${esc(regBtn.label)}</a>` : ''}</div>` : ''}
-      ${countyActs(h, step)}
+      ${res || `${countyActs(h, step)}
       <div class="plan-acts">${step.primary && !countyActs(h, step) ? `<a class="pbtn gold" href="${esc(step.primary.url)}" target="_blank" rel="noopener">${esc(step.primary.label)}</a>` : ''}
-        ${check ? `<a class="pbtn line" href="${esc(check)}" target="_blank" rel="noopener">Check my registration</a>` : ''}</div>
+        ${check ? `<a class="pbtn line" href="${esc(check)}" target="_blank" rel="noopener">Check my registration</a>` : ''}</div>`}
       ${closestHTML(h, step)}${waitsHTML(h, step)}
-      ${check && (h.situations || []).some((x) => x.id === 'lookup_cant_find') ? `<p class="plan-hint">Lookup can’t find you? <button class="linkbtn" data-act="whatif-sit" data-k="lookup_cant_find" data-fk="plan-cant-find">Try your name these ways</button></p>` : ''}
+      ${check && !res && (h.situations || []).some((x) => x.id === 'lookup_cant_find') ? `<p class="plan-hint">Lookup can’t find you? <button class="linkbtn" data-act="whatif-sit" data-k="lookup_cant_find" data-fk="plan-cant-find">Try your name these ways</button></p>` : ''}
       <div class="plan-row"><button class="whatif-tog" data-act="open" data-k="whatif" aria-expanded="${open}" data-fk="whatif"><span>Dates, ID, and if you moved or lost <span class="nw">your ballot<svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span></span></button>
         <button class="voted" data-act="view" data-v="pass" data-voted="1" data-fk="voted">I already voted</button></div>
       ${open ? whatIfHTML(h) : ''}
@@ -299,4 +300,23 @@ function whatIfHTML(h: HowTo): string {
     <div class="wi-res" id="wi-res">${whatIfBody(h)}</div>
     <p class="meta">Checked ${esc(h.last_verified || '')}. Official info: ${ext(h.official_site.url, h.official_site.name)}.</p>
   </div>`;
+}
+
+/* Once the polls close (Kevin, Nov 3: results, not "voting has ended"): "Official results", the most local official
+   page the ballot has (the voter's county's after an address lookup or a one-county place's, else the state's;
+   plan.localHowto), who publishes it, "Track your ballot" beside it, and the desks that call races, once, under it.
+   A ballot across county lines whose county isn't known keeps the state's and adds each county's, by name. No
+   registration check here: that's past. */
+const RESULTS_PHASES: Step['phase'][] = ['polls_closed', 'closed'];
+function resultsActs(h: HowTo, step: Step): string {
+  if (!RESULTS_PHASES.includes(step.phase)) return '';
+  const a = (url: string, text: string, cls: string, attrs = ''): string => `<a class="${cls}" href="${esc(url)}" target="_blank" rel="noopener"${attrs}>${esc(text)}</a>`;
+  const p = step.primary, two = step.secondary;
+  const isRes = p?.look === 'results';
+  const ctys = isRes ? (h.county_links || []).filter((l) => l.lookups.results && l.lookups.results !== p!.url) : [];
+  const btns = `<div class="plan-acts">${p ? a(p.url, p.label, 'pbtn gold', ' data-fk="plan-results"') : ''}${two ? a(two.url, two.label, 'pbtn line') : ''}</div>`;
+  const src = isRes && h.results_source ? `<p class="plan-hint plan-src">Source: ${esc(h.results_source)}</p>` : '';
+  const cty = ctys.length ? `<p class="plan-cty">Your county’s results:</p><div class="plan-acts plan-ctys">${ctys.map((l) => a(l.lookups.results!, `${l.county} County`, 'pbtn line', ` data-county="${esc(l.county)}"`)).join('')}</div>` : '';
+  const calls = `<p class="plan-hint plan-calls">Race calls: ${RACE_CALLS.map((d) => `<a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.name)}</a>`).join(' · ')}</p>`;
+  return `${btns}${src}${cty}${calls}`;
 }

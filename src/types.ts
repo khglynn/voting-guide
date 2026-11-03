@@ -180,6 +180,10 @@ export interface HowTo {
   election_date: string;
   last_verified: string | null;
   official_site: Src;
+  /* The official results page and who publishes it (Nov 3): the state's in its file; plan.localHowto puts the
+     voter's county's (a place's `lookups.results`) in its place when it knows one. Shown once the polls close. */
+  results_url?: string | null;
+  results_source?: string | null;
   voting_model: 'all_mail' | 'mail_to_all_plus_in_person' | 'in_person_first' | string;
   model_plain: string | null;
   registration: {
@@ -280,7 +284,9 @@ export interface HelpAction { label: string; url: string }
 
 /* `election_day_waits` (Nov 3): the county's live Election Day wait-time page, shown beside the where-to-vote button
    only on Election Day while the polls are open. */
-export type Lookups = { early_in_person?: string; election_day?: string; election_day_waits?: string; drop_box?: string; tracking?: string };
+/* `results` (Nov 3): the county's official results page, shown once the polls close; `results_source` on the place
+   or its by_county entry names who publishes it. */
+export type Lookups = { early_in_person?: string; election_day?: string; election_day_waits?: string; drop_box?: string; tracking?: string; results?: string };
 export type Office = { name: string; url: string | null; phone: string | null; phone_label?: string; lines?: OfficeLine[]; hours?: string; source?: string };
 /* Text that changes on its own date (Oct 28): from `from` (the voter's local date) on, the slot at `path`
    reads `text`. Paths are the bundle's: "situations.<id>.short", "gotchas.4", "gotcha_shorts.4", "notes". */
@@ -289,7 +295,7 @@ export interface Dated { path: string; from: string; text: string }
    in this county (by the Census's ZIP-to-county file and the place's own research both), so a ZIP alone can
    name the county. `sites`: the county's list of Election Day vote centers (public/data/sites/<id>.json, Nov 3),
    for the plan's "Closest to your address" after an address lookup (model/sites.ts). */
-export interface CountyLinks { county: string; zips: string[]; lookups: Lookups; source: string; confidence: Confidence; office?: Office; sites?: string }
+export interface CountyLinks { county: string; zips: string[]; lookups: Lookups; source: string; confidence: Confidence; office?: Office; sites?: string; results_source?: string }
 /* A county's own answer to a state question: what it gives replaces the state's (steps: null means none). */
 export interface PlaceSituation { id: string; short?: string; answer?: string; steps?: string[] | null; source: string; confidence: Confidence }
 export interface OfficeLine { label: string; phone: string; hours?: string }
@@ -329,6 +335,8 @@ export interface PlaceBundle {
   early_in_person?: PlaceEarly;
   /* the county's own where-to-vote tools; plan.ts prefers them over the state's */
   lookups?: Lookups;
+  /* who publishes `lookups.results` (Nov 3) */
+  results_source?: string;
   /* the county's own mail-ballot deadline and ways back, and its Election Day opening time (Oct 29); plan.ts
      prefers them over the state's when every place on the ballot agrees */
   mail_ballot?: PlaceMail;
@@ -388,7 +396,9 @@ export interface PlaceCoverage extends Coverage {
 }
 export interface Index {
   generated: string;
-  states: Record<string, { name: string; as_of: string | null; election_date: string; official_site: Src; places: string[] } & Coverage>;
+  /* polls_close, the results page and the mail-ballot tracker (Nov 3): the first page leads with each state's official
+     results once its polls close, and its tracker once every state has closed */
+  states: Record<string, { name: string; as_of: string | null; election_date: string; official_site: Src; places: string[]; polls_close?: string; results_url?: string; results_source?: string; mail_tracking_url?: string } & Coverage>;
   /* county_fips and zip_outside as in PlaceBundle, so the first page can use them before a bundle loads;
      local_picks_checked beside the coverage it speaks for */
   places: Record<string, { label: string; state: string; counties: string[]; local_count: number; maps?: string[]; county_fips?: string[]; zip_outside?: Record<string, string>; local_picks_checked?: LocalPicksChecked } & PlaceCoverage>;

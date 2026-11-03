@@ -1,0 +1,78 @@
+[
+ {
+  "id": "uaw-region-9a",
+  "name": "UAW Region 9A (New York City CAP Council)",
+  "short": "UAW Region 9A",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union region whose members it describes as “active and retired workers in a wide variety of industries including manufacturing, design, gaming, legal services, child care, higher education, cultural institutions, government, and more” (https://region9a.uaw.org/about). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://region9a.uaw.org/news/NYCEndorsements826",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "nyc-bronx-ny",
+   "nyc-brooklyn-ny",
+   "nyc-manhattan-ny",
+   "nyc-queens-ny",
+   "nyc-staten-island-ny"
+  ]
+ },
+ {
+  "id": "dc37",
+  "name": "District Council 37, AFSCME",
+  "short": "DC 37",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says it is “New York City’s largest union, with 150,000 members and 89,000 retirees in the public, private, and nonprofit sectors” (https://www.dc37.net/take-action/dc-37-votes/). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://www.dc37.net/take-action/dc-37-votes/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "geography": [
+   "nyc-bronx-ny",
+   "nyc-brooklyn-ny",
+   "nyc-manhattan-ny",
+   "nyc-queens-ny",
+   "nyc-staten-island-ny"
+  ]
+ },
+ {
+  "id": "seiu-32bj",
+  "name": "32BJ SEIU",
+  "short": "32BJ SEIU",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says “With more than 185,000 members, we are the largest union of property service workers in the U.S.” (https://www.seiu32bj.org/about-us/). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://www.seiu32bj.org/buildingpoliticalpower/new-york/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "nyc-bronx-ny",
+   "nyc-brooklyn-ny",
+   "nyc-manhattan-ny",
+   "nyc-queens-ny",
+   "nyc-staten-island-ny"
+  ]
+ },
+ {
+  "id": "psc-cuny",
+  "name": "Professional Staff Congress/CUNY (AFT Local 2334)",
+  "short": "PSC-CUNY",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that calls itself “the union that represents 30,000 faculty and staff at the City University of New York and the CUNY Research Foundation” (https://psc-cuny.org/). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://psc-cuny.org/issues/psc-endorsements-general-election-2026/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "nyc-bronx-ny",
+   "nyc-brooklyn-ny",
+   "nyc-manhattan-ny",
+   "nyc-queens-ny",
+   "nyc-staten-island-ny"
+  ]
+ }
+]

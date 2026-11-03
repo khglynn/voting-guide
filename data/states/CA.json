@@ -41,7 +41,7 @@
     "who_gets_one": "Automatic. Every active registered voter in California is mailed a ballot for every election. No request and no excuse needed. Counties had to begin mailing by October 5, 2026. LA County mailed all ballots on October 1; San Francisco mailed in early October. The Secretary of State confirmed on October 6 that ballots had gone out statewide. If yours never came, get a replacement in person or just vote in person; mailed replacements ended October 27.",
     "request_deadline": {
       "date": "2026-10-27",
-      "rule": "You don't need to request a ballot. If yours is lost, damaged, or never arrived, ask your county for a replacement. LA County's last day to request a mailed replacement was Tuesday, October 27 (the state form is at https://elections.cdn.sos.ca.gov/vote-by-mail/pdf/replacement-application.pdf). Now get a replacement in person at any vote center or county elections office, or just vote in person.",
+      "rule": "You don’t need to ask for a ballot: every active voter gets one in the mail. LA County’s last day to ask for a mailed replacement was Tuesday, Oct. 27. Now get a replacement in person at any vote center or county elections office, or just vote in person.",
       "source": "https://content.lavote.gov/docs/rrcc/documents/media-kit-final.pdf"
     },
     "return_deadline": {
@@ -51,11 +51,11 @@
       "source": "https://www.sos.ca.gov/elections/upcoming-elections/general-election-november-3-2026/key-dates-deadlines"
     },
     "return_options": [
-      "any official ballot drop box in California (LA County has 429, open since Oct 1; San Francisco has 37, open since Oct 5; all counties opened boxes by Oct 6; boxes lock at 8:00 PM on Nov 3)",
-      "any vote center in your county (LA, Orange, San Diego: open Oct 24 or Oct 31 through Election Day)",
-      "any polling place in California on Election Day (7 AM to 8 PM)",
-      "your county elections office (SF: City Hall Room 48, early voting Oct 5 through Nov 3)",
-      "mail (USPS), postage prepaid, postmarked by Nov 3. The state recommends mailing at least 7 days before Election Day; the SOS USPS FAQ says at least 5 days."
+      "any official ballot drop box in California, until 8 PM on Nov 3",
+      "any vote center in your county, until 8 PM on Nov 3",
+      "any polling place in California on Election Day, 7 AM to 8 PM",
+      "your county elections office (in San Francisco, City Hall Room 48)",
+      "the mail, postage paid. It must be postmarked by Nov 3 and arrive by Nov 10. This late, a drop box or vote center is safer."
     ],
     "postage": "prepaid. Every California vote-by-mail return envelope comes with First Class postage already paid. No stamp needed.",
     "signature_witness_rules": "Sign the back of the return envelope. No witness, no notary, no ID copy for most voters. The county compares your envelope signature to the signature on file from your registration (if you registered online, that's your DMV signature). Sign the way you signed your license. Only a small group of first-time voters who registered without a California DL/ID or SSN may need to include a copy of ID; your county will tell you if that applies.",
@@ -69,7 +69,7 @@
     "available": true,
     "start": "2026-10-05",
     "end": "2026-11-02",
-    "hours_note": "Two systems. Vote center counties (LA, Orange, San Diego and 27 others under the Voter's Choice Act): a first wave of vote centers opens Saturday, October 24 (the '11-day' centers), and every vote center opens Saturday, October 31 (the '4-day' centers), all running daily through Election Day. LA County: 123 eleven-day centers and 523 four-day centers (646 total), open 10 AM to 7 PM, then 7 AM to 8 PM on Nov 3. Orange County: select centers Oct 24 to 30 and all centers Oct 31 to Nov 2, 10 AM to 6 PM, then 7 AM to 8 PM on Nov 3. San Diego County: vote centers 8 AM to 5 PM daily, Oct 24 to Nov 2 (select centers from Oct 24, all from Oct 31), then 7 AM to 8 PM on Nov 3; the Registrar's office is a vote center too. You can use any vote center in your county, not an assigned one. Polling place counties (San Francisco): early voting is at the City Hall Voting Center (Room 48) from October 5 through November 3, weekdays 8 AM to 5 PM (closed Oct 12), weekends Oct 24-25 and Oct 31-Nov 1 10 AM to 4 PM, and 7 AM to 8 PM on Election Day. In-person early voting sites statewide are open Saturday, October 31. Early voting sites opened statewide October 5.",
+    "hours_note": "LA, Orange and San Diego counties use vote centers. Some opened Oct. 24, and all were open from Oct. 31. You can use any vote center in your county. San Francisco’s early voting was at the City Hall Voting Center, from Oct. 5. On Election Day, vote centers and polling places are open 7 AM to 8 PM.",
     "vote_centers": true,
     "lookup_url": "https://caearlyvoting.sos.ca.gov/",
     "confidence": "verified"

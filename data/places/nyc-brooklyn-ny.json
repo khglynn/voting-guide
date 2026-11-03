@@ -12,7 +12,7 @@
     "name": "NYC Board of Elections, Brooklyn borough office: 345 Adams Street, 4th Floor, Brooklyn, NY 11201",
     "url": "https://vote.nyc/page/contact-us",
     "phone": "1-718-797-8800 (citywide: 1-866-VOTE-NYC)",
-    "hours": "Monday to Friday, 9 AM to 5 PM, except the special hours in Notes for Oct 28 to Nov 1. Citywide: 1-866-VOTE-NYC (1-866-868-3692)."
+    "hours": "Election Day, Nov 3: 6 AM to 9 PM. Regular hours: Monday to Friday, 9 AM to 5 PM. Citywide: 1-866-VOTE-NYC (1-866-868-3692)."
   },
   "sample_ballot_url": "https://findmypollsite.vote.nyc/",
   "zips": [
@@ -197,6 +197,10 @@
     {
       "name": "U.S. Census Bureau: county codes (Kings County is 36047)",
       "url": "https://www.census.gov/library/reference/code-lists/ansi.html"
+    },
+    {
+      "name": "NYC311: Board of Elections borough offices (Election Day hours 6 AM to 9 PM)",
+      "url": "https://portal.311.nyc.gov/article/?kanumber=KA-03689"
     }
   ]
 }

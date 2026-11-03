@@ -48,7 +48,7 @@
     "registration_lookup_url": "https://apps.dcboe.org/VRS",
     "sample_ballots_url": "https://dcboe.org/elections/2026-elections"
   },
-  "notes": "Ward 3 ballot: districtwide races, then Ward 3 Council (one candidate), Ward 3 State Board of Education (two candidates, pick one), your ANC race, and Initiative 86 last. You can vote at any Vote Center in DC, early (Oct 26 to Nov 1, 8:30 AM to 7 PM) or on Election Day (7 AM to 8 PM); you don't have to stay in your ward.",
+  "notes": "Ward 3 ballot: districtwide races, then Ward 3 Council (one candidate), Ward 3 State Board of Education (two candidates, pick one), your ANC race, and Initiative 86 last. On Election Day you can vote at any Vote Center in DC, 7 AM to 8 PM; you don't have to stay in your ward.",
   "superseded_statewide_placeholders": [
     "dc-council-ward-seats-2026",
     "dc-sboe-ward-seats-2026",

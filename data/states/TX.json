@@ -52,10 +52,10 @@
       "source": "https://www.votetexas.gov/voting-by-mail/carrier-envelope.html"
     },
     "return_options": [
-      "mail (USPS) to your county Early Voting Clerk, arriving by 7:00 PM Nov. 3, OR postmarked by 7:00 PM Nov. 3 and arriving by 5:00 PM Wednesday, Nov. 4",
-      "common or contract carrier (FedEx, UPS) arriving by 7:00 PM Nov. 3, or by 5:00 PM Wednesday, Nov. 4 if the carrier's receipt mark shows a time before 7:00 PM Nov. 3 (Travis County lists this)",
-      "hand-deliver it yourself, in person, to the county Early Voting Clerk's office, but only on Election Day (Nov. 3) while polls are open, with your photo ID (Election Code 86.006(a-1))",
-      "Texas does not use ballot drop boxes"
+      "Mail it (USPS) to your county’s Early Voting Clerk, arriving by 7:00 PM Nov. 3, or postmarked by 7:00 PM Nov. 3 and arriving by 5:00 PM Wednesday, Nov. 4.",
+      "FedEx, UPS or another carrier: it must arrive by 7 PM Nov. 3, or by 5 PM Nov. 4 if the carrier’s receipt shows a time before 7 PM Nov. 3.",
+      "Hand it in yourself at your county’s Early Voting Clerk’s office, only on Election Day while polls are open, with your photo ID.",
+      "Texas has no ballot drop boxes."
     ],
     "postage": "Varies by county; check your return envelope. Dallas County: no stamp needed, the envelope is prepaid. Harris County says it takes two standard stamps ($1.10 total postage), but that a ballot mailed without postage will still be delivered and counted. Bexar County's page doesn't say. Mailing this late is risky either way.",
     "signature_witness_rules": "Sign the carrier envelope, and write your ID number in the space provided: your Texas driver license, personal ID or Election Identification Certificate number, or the last 4 of your SSN if DPS never issued you one of those. The number must match what's on your voter registration record. No notary. No witness unless you cannot sign; then a witness signs and prints their name and address. If someone helps you mark or mail the ballot, their name, address and signature must go on the envelope too. Election Code 86.006 and VoteTexas carrier envelope page.",
@@ -69,7 +69,7 @@
     "available": true,
     "start": "2026-10-19",
     "end": "2026-10-30",
-    "hours_note": "Monday, Oct. 19 through Friday, Oct. 30, including the weekend of Oct. 24 and 25. Hours are set by each county. Travis: every day 7 AM to 7 PM, with some sites open until 10 PM on Oct. 29 and 30. Harris: Mon through Sat 7 AM to 7 PM, Sunday Oct. 25 noon to 7 PM. Dallas: Mon through Sat 7 AM to 7 PM, Sunday Oct. 25 noon to 6 PM. Bexar regular sites: October 19 to 23, 8 AM to 6 PM; October 24, 7 AM to 7 PM; October 25, noon to 6 PM; October 26 to 30, 7 AM to 7 PM. Two branch sites, Bexar County Justice Center and Valley Ranch Community Center, open weekdays only, 8 AM to 6 PM, throughout October 19 to 30. Check your county's site for exact hours at your location.",
+    "hours_note": "Each county set its own hours.",
     "vote_centers": true,
     "lookup_url": "https://www.votetexas.gov/voting/where.html",
     "confidence": "verified"

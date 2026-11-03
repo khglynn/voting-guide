@@ -203,7 +203,7 @@
     "election_day": "https://www.google.com/maps/d/viewer?mid=1dFZZ-5j0KhIBiy8ZcHMyRGxBc6EPfmE&ll=45.51686500000002%2C-122.65462900000001&z=12",
     "drop_box": "https://www.google.com/maps/d/viewer?mid=1dFZZ-5j0KhIBiy8ZcHMyRGxBc6EPfmE&ll=45.51686500000002%2C-122.65462900000001&z=12"
   },
-  "notes": "If your ballot came from Washington County, call 503-846-5800 and use washingtoncountyor.gov/elections/ballot-dropsites. If it came from Clackamas County, call 503-655-8510 and use clackamas.us/elections/official-ballot-drop-sites. To find your precinct, use the county's precinct map with an address search.",
+  "notes": "If your ballot came from Washington or Clackamas County, call that county: Washington 503-846-5800, Clackamas 503-655-8510.",
   "sources": [
     {
       "name": "Multnomah County: extended office hours",

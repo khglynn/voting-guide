@@ -47,37 +47,6 @@
     ]
   },
   {
-    "id": "sd-deputy-sheriffs-assn",
-    "name": "Deputy Sheriffs’ Association of San Diego County",
-    "short": "SD Deputy Sheriffs (DSA)",
-    "type": "labor",
-    "lean": null,
-    "lean_basis": "Not rated: a union that says it is “The professional labor organization of more than 2,500 sworn deputies of the San Diego County Sheriff’s Department” (https://dsasd.org/about-us/). Its own words name no political side, and no outside rating was found.",
-    "guide_url": "https://dsasd.org/endorsements/",
-    "default_on": false,
-    "endorses_candidates": true,
-    "endorses_measures": false,
-    "geography": [
-      "san-diego-ca"
-    ]
-  },
-  {
-    "id": "ocea",
-    "name": "Orange County Employees Association",
-    "short": "OCEA",
-    "type": "labor",
-    "lean": null,
-    "lean_basis": "Not rated: a union that says “OCEA’s mission is to advocate for the rights and well-being of our members and their families” (https://ocea.org/2026-general-election-endorsements/). Its own words name no political side, and no outside rating was found.",
-    "guide_url": "https://ocea.org/2026-general-election-endorsements/",
-    "default_on": false,
-    "endorses_candidates": true,
-    "endorses_measures": false,
-    "geography": [
-      "dana-point-ca",
-      "fullerton-ca"
-    ]
-  },
-  {
     "id": "ufcw-324",
     "name": "UFCW Local 324",
     "short": "UFCW 324",
@@ -123,21 +92,6 @@
       "san-diego-ca",
       "dana-point-ca",
       "fullerton-ca"
-    ]
-  },
-  {
-    "id": "afscme-127",
-    "name": "AFSCME Local 127",
-    "short": "AFSCME 127",
-    "type": "labor",
-    "lean": null,
-    "lean_basis": "Not rated: a union that says “AFSCME believes that every person working to sustain their community deserves respect” (https://afscme127.org/about-us). Its own words name no political side, and no outside rating was found.",
-    "guide_url": "https://afscme127.org/Endorsement2026",
-    "default_on": false,
-    "endorses_candidates": true,
-    "endorses_measures": false,
-    "geography": [
-      "san-diego-ca"
     ]
   },
   {
@@ -435,21 +389,5 @@
       "fullerton-ca",
       "dana-point-ca"
     ]
-  },
-  {
-    "id": "oc-labor-fed",
-    "name": "Orange County Labor Federation, AFL-CIO",
-    "type": "labor",
-    "lean": "lean_left",
-    "lean_basis": "Federation of more than ninety local unions in Orange County that says it 'strives to better the lives of all workers' (https://www.oclabor.org/about-oclf/). No outside rating found; lean reflects its stated mission.",
-    "geography": [
-      "fullerton-ca"
-    ],
-    "guide_url": "https://oclabor.org/cope-endorsements-2026/",
-    "default_on": false,
-    "endorses_candidates": true,
-    "endorses_measures": false,
-    "lean_basis_kind": "mission",
-    "short": "OC Labor Federation"
   }
 ]

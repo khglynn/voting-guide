@@ -81,7 +81,17 @@ async function loadSites(id: string): Promise<boolean> {
    caller just painted it. Nothing happens for a voter with no address looked up this visit. */
 export function repaintNear(head = true): void {
   if (S.view !== 'ballot' || !S.ballot || S.ui.view !== 'ballot' || !S.ui.addrPoint) return;
-  anchored(() => { render(['plan']); if (head && !S.ui.addrOpen) renderAddr(); });
+  anchored(() => { render(['plan']); if (head && !S.ui.addrOpen) renderAddr(); }, nearAnchor());
+}
+/* What stays still while the block comes or goes: the plan, while the voter is reading it (the block opens under its
+   buttons, and what's below moves down); the ballot's heading, while they're at the address box (the block above is
+   off screen, and the line opens under "Found:"); else the ballot's rows, anchored's own pick. Anchoring on the rows
+   alone moved the page 261px under a voter reading the plan at the top (Nov 3, a statewide ballot's first lookup). */
+function nearAnchor(): string | undefined {
+  const plan = document.getElementById('plan')?.getBoundingClientRect();
+  if (plan && plan.bottom > window.innerHeight / 3) return 'plan';
+  const head = document.querySelector('.wrap-led')?.getBoundingClientRect();
+  return head && head.bottom > 0 && document.getElementById('ballot-h') ? 'ballot-h' : undefined;
 }
 onWantSites(loadSites);
 

@@ -480,12 +480,11 @@
   {
     "endorser_id": "mddc-afl-cio",
     "target_id": "md-question-3",
-    "status": "endorsed",
-    "choice": "FOR",
-    "why": "Maryland Matters (Sept 25) reports unions joined Democrats in pushing for a FOR vote. Confirm on the federation's Airtable slate.",
-    "url": "https://marylandmatters.org/2026/09/25/democrats-unions-advocates-push-for-support-on-question-3-on-redistricting/",
-    "date": "2026-09-25",
-    "confidence": "unverified"
+    "status": "not_found",
+    "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+    "url": "https://mddclabor.org/endorsements-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "md-state-education-association",

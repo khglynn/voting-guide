@@ -124,7 +124,7 @@
   "target_id": "md-hd-41",
   "status": "endorsed",
   "choice": "S. I. \"Sandy\" Rosenberg",
-  "why": "Listed in its 2026 AFSCME Maryland Council 3 Endorsements on its general election page. Its list spells the name “Rosenburg”.",
+  "why": "Listed in its 2026 AFSCME Maryland Council 3 Endorsements on its general election page, which spells Rosenberg’s name “Rosenburg”.",
   "url": "https://afscmemd.org/vote",
   "date": "2026-11-02",
   "confidence": "verified"
@@ -134,7 +134,7 @@
   "target_id": "md-hd-41",
   "status": "endorsed",
   "choice": "Sean A. Stinnett",
-  "why": "Listed in its 2026 AFSCME Maryland Council 3 Endorsements on its general election page.",
+  "why": "Listed in its 2026 AFSCME Maryland Council 3 Endorsements on its general election page, which spells Rosenberg’s name “Rosenburg”.",
   "url": "https://afscmemd.org/vote",
   "date": "2026-11-02",
   "confidence": "verified"
@@ -144,7 +144,7 @@
   "target_id": "md-hd-41",
   "status": "endorsed",
   "choice": "Ryan Turner",
-  "why": "Listed in its 2026 AFSCME Maryland Council 3 Endorsements on its general election page.",
+  "why": "Listed in its 2026 AFSCME Maryland Council 3 Endorsements on its general election page, which spells Rosenberg’s name “Rosenburg”.",
   "url": "https://afscmemd.org/vote",
   "date": "2026-11-02",
   "confidence": "verified"
@@ -377,6 +377,15 @@
   "why": "Its 2026 endorsements say “Yes on Question 3”.",
   "url": "https://www.atulocal689.org/endorsements",
   "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "md-question-2",
+  "status": "not_found",
+  "why": "On Nov 3, 2026, we checked its 2026 endorsements; they list Maryland Questions 1 and 3, and no pick for this question.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-03",
   "confidence": "verified"
  },
  {
@@ -2776,9 +2785,9 @@
   "endorser_id": "md-state-education-association",
   "target_id": "md-retention-killough",
   "status": "not_found",
-  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
-  "date": "2026-11-02",
+  "why": "On Nov 3, 2026, we checked its Apple Ballot for Prince George’s County, where this vote is on the ballot; no pick for this contest was listed.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Prince+George%27s+County",
+  "date": "2026-11-03",
   "confidence": "verified"
  },
  {

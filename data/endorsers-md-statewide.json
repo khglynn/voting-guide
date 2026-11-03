@@ -118,7 +118,7 @@
     "geography": [
       "MD"
     ],
-    "guide_url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+    "guide_url": "https://mdappleballot.com/",
     "default_on": false,
     "endorses_candidates": true,
     "endorses_measures": true,

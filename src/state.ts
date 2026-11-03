@@ -143,7 +143,7 @@ export const S = {
   zipChoice: null as null | { zip: string; placeIds: string[] },
   /* The place question just answered (its ZIP and places), so the place line's Change can ask again. */
   picked: null as null | { zip: string; placeIds: string[] },
-  door: { chips: { papers: true, progressive: false, conservative: false }, party: null, fill: true, only: false } as Door,
+  door: { chips: { papers: true, progressive: false, conservative: false, unions: false }, party: null, fill: true, only: false } as Door,
   coverage: null as null | { kind: 'not_covered'; state: string | null; zip: string },
   ballot: null as Ballot | null,
   b: emptyBallotState(),

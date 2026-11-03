@@ -587,7 +587,7 @@ A.ends = () => {
   if (S.view !== 'ballot') {
     // With a ballot found, the switch shows that ballot's choice (it may have its own): turn that over.
     const off = doorBallot() ? !noEndorsements() : !doorNone();
-    S.door.chips = { papers: !off, progressive: false, conservative: false };
+    S.door.chips = { papers: !off, progressive: false, conservative: false, unions: false };
     S.door.party = null;
     if (off) S.door.fill = false;
     else if (!S.door.fillSet) S.door.fill = !(doorBallot() && S.b.setupDone); // back to its default

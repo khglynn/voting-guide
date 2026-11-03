@@ -13578,6 +13578,16 @@
  },
  {
   "endorser_id": "atu-local-689",
+  "target_id": "dc-council-at-large",
+  "status": "endorsed",
+  "choice": "Oye Owolewa",
+  "why": "Its 2026 endorsements say to rank Elissa Silverman 1st and Oye Owolewa 2nd for at-large.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "atu-local-689",
   "target_id": "md-governor",
   "status": "endorsed",
   "choice": "Wes Moore and Aruna Miller",
@@ -13614,7 +13624,7 @@
   "why": "Listed under its 2026 Primary Endorsements; its page says its later 2026 endorsements are “in addition to” these.",
   "url": "https://www.atulocal689.org/endorsements",
   "date": "2026-11-02",
-  "confidence": "verified"
+  "confidence": "sourced"
  },
  {
   "endorser_id": "atu-local-689",
@@ -13624,7 +13634,7 @@
   "why": "Listed under its 2026 Primary Endorsements; its page says its later 2026 endorsements are “in addition to” these.",
   "url": "https://www.atulocal689.org/endorsements",
   "date": "2026-11-02",
-  "confidence": "verified"
+  "confidence": "sourced"
  },
  {
   "endorser_id": "atu-local-689",
@@ -13634,7 +13644,7 @@
   "why": "Listed under its 2026 Primary Endorsements; its page says its later 2026 endorsements are “in addition to” these.",
   "url": "https://www.atulocal689.org/endorsements",
   "date": "2026-11-02",
-  "confidence": "verified"
+  "confidence": "sourced"
  },
  {
   "endorser_id": "atu-local-689",
@@ -13644,7 +13654,7 @@
   "why": "Listed under its 2026 Primary Endorsements; its page says its later 2026 endorsements are “in addition to” these.",
   "url": "https://www.atulocal689.org/endorsements",
   "date": "2026-11-02",
-  "confidence": "verified"
+  "confidence": "sourced"
  },
  {
   "endorser_id": "atu-local-689",
@@ -13654,7 +13664,7 @@
   "why": "Listed under its 2026 Primary Endorsements; its page says its later 2026 endorsements are “in addition to” these.",
   "url": "https://www.atulocal689.org/endorsements",
   "date": "2026-11-02",
-  "confidence": "verified"
+  "confidence": "sourced"
  },
  {
   "endorser_id": "atu-local-689",
@@ -13664,7 +13674,7 @@
   "why": "Listed under its 2026 Primary Endorsements; its page says its later 2026 endorsements are “in addition to” these.",
   "url": "https://www.atulocal689.org/endorsements",
   "date": "2026-11-02",
-  "confidence": "verified"
+  "confidence": "sourced"
  },
  {
   "endorser_id": "atu-local-689",
@@ -13674,7 +13684,7 @@
   "why": "Listed under its 2026 Primary Endorsements; its page says its later 2026 endorsements are “in addition to” these.",
   "url": "https://www.atulocal689.org/endorsements",
   "date": "2026-11-02",
-  "confidence": "verified"
+  "confidence": "sourced"
  },
  {
   "endorser_id": "atu-local-689",
@@ -13684,7 +13694,7 @@
   "why": "Listed under its 2026 Primary Endorsements; its page says its later 2026 endorsements are “in addition to” these.",
   "url": "https://www.atulocal689.org/endorsements",
   "date": "2026-11-02",
-  "confidence": "verified"
+  "confidence": "sourced"
  },
  {
   "endorser_id": "atu-local-689",
@@ -13694,7 +13704,7 @@
   "why": "Listed under its 2026 Primary Endorsements; its page says its later 2026 endorsements are “in addition to” these.",
   "url": "https://www.atulocal689.org/endorsements",
   "date": "2026-11-02",
-  "confidence": "verified"
+  "confidence": "sourced"
  },
  {
   "endorser_id": "afscme-dc-47",
@@ -15099,7 +15109,7 @@
   "why": "Named among “the UFCW Local 400-supported candidates who won their races” in the June primary, who it says “will be on the November 3 general election ballot”.",
   "url": "https://www.ufcw400.org/2026/06/22/ufcw-local-400-backed-candidates-win-d-c-primary-elections/",
   "date": "2026-11-02",
-  "confidence": "verified"
+  "confidence": "sourced"
  },
  {
   "endorser_id": "ufcw-local-400",
@@ -15109,7 +15119,7 @@
   "why": "Named among “the UFCW Local 400-supported candidates who won their races” in the June primary, who it says “will be on the November 3 general election ballot”.",
   "url": "https://www.ufcw400.org/2026/06/22/ufcw-local-400-backed-candidates-win-d-c-primary-elections/",
   "date": "2026-11-02",
-  "confidence": "verified"
+  "confidence": "sourced"
  },
  {
   "endorser_id": "ufcw-local-400",
@@ -15119,7 +15129,7 @@
   "why": "Named among “the UFCW Local 400-supported candidates who won their races” in the June primary, who it says “will be on the November 3 general election ballot”.",
   "url": "https://www.ufcw400.org/2026/06/22/ufcw-local-400-backed-candidates-win-d-c-primary-elections/",
   "date": "2026-11-02",
-  "confidence": "verified"
+  "confidence": "sourced"
  },
  {
   "endorser_id": "ufcw-local-400",
@@ -15129,7 +15139,7 @@
   "why": "Named among “the UFCW Local 400-supported candidates who won their races” in the June primary, who it says “will be on the November 3 general election ballot”.",
   "url": "https://www.ufcw400.org/2026/06/22/ufcw-local-400-backed-candidates-win-d-c-primary-elections/",
   "date": "2026-11-02",
-  "confidence": "verified"
+  "confidence": "sourced"
  },
  {
   "endorser_id": "ufcw-local-400",
@@ -15139,7 +15149,7 @@
   "why": "Named among “the UFCW Local 400-supported candidates who won their races” in the June primary, who it says “will be on the November 3 general election ballot”.",
   "url": "https://www.ufcw400.org/2026/06/22/ufcw-local-400-backed-candidates-win-d-c-primary-elections/",
   "date": "2026-11-02",
-  "confidence": "verified"
+  "confidence": "sourced"
  },
  {
   "endorser_id": "ufcw-local-400",
@@ -15149,7 +15159,7 @@
   "why": "Named among “the UFCW Local 400-supported candidates who won their races” in the June primary, who it says “will be on the November 3 general election ballot”.",
   "url": "https://www.ufcw400.org/2026/06/22/ufcw-local-400-backed-candidates-win-d-c-primary-elections/",
   "date": "2026-11-02",
-  "confidence": "verified"
+  "confidence": "sourced"
  },
  {
   "endorser_id": "ufcw-local-400",
@@ -15159,7 +15169,7 @@
   "why": "Named among “the UFCW Local 400-supported candidates who won their races” in the June primary, who it says “will be on the November 3 general election ballot”.",
   "url": "https://www.ufcw400.org/2026/06/22/ufcw-local-400-backed-candidates-win-d-c-primary-elections/",
   "date": "2026-11-02",
-  "confidence": "verified"
+  "confidence": "sourced"
  },
  {
   "endorser_id": "ufcw-local-400",
@@ -15169,7 +15179,7 @@
   "why": "Named among “the UFCW Local 400-supported candidates who won their races” in the June primary, who it says “will be on the November 3 general election ballot”.",
   "url": "https://www.ufcw400.org/2026/06/22/ufcw-local-400-backed-candidates-win-d-c-primary-elections/",
   "date": "2026-11-02",
-  "confidence": "verified"
+  "confidence": "sourced"
  },
  {
   "endorser_id": "fl-education-assn",
@@ -22120,7 +22130,7 @@
   "target_id": "il-cps-board-4b",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://www.ift-aft.org/vote",
+  "url": "https://www.ctulocal1.org/posts/chicago-teachers-union-endorses-candidates-running-as-public-school-champions-in-school-board-race-says-students-educational-experience-to-be-decided-in-november/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -22129,7 +22139,7 @@
   "target_id": "il-cps-board-6b",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://www.ift-aft.org/vote",
+  "url": "https://www.ctulocal1.org/posts/chicago-teachers-union-endorses-candidates-running-as-public-school-champions-in-school-board-race-says-students-educational-experience-to-be-decided-in-november/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -22138,7 +22148,7 @@
   "target_id": "il-cps-board-7b",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://www.ift-aft.org/vote",
+  "url": "https://www.ctulocal1.org/posts/chicago-teachers-union-endorses-candidates-running-as-public-school-champions-in-school-board-race-says-students-educational-experience-to-be-decided-in-november/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -22147,7 +22157,7 @@
   "target_id": "il-cps-board-8a",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://www.ift-aft.org/vote",
+  "url": "https://www.ctulocal1.org/posts/chicago-teachers-union-endorses-candidates-running-as-public-school-champions-in-school-board-race-says-students-educational-experience-to-be-decided-in-november/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -22156,7 +22166,7 @@
   "target_id": "il-cps-board-8b",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://www.ift-aft.org/vote",
+  "url": "https://www.ctulocal1.org/posts/chicago-teachers-union-endorses-candidates-running-as-public-school-champions-in-school-board-race-says-students-educational-experience-to-be-decided-in-november/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -22165,7 +22175,7 @@
   "target_id": "il-cps-board-9a",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://www.ift-aft.org/vote",
+  "url": "https://www.ctulocal1.org/posts/chicago-teachers-union-endorses-candidates-running-as-public-school-champions-in-school-board-race-says-students-educational-experience-to-be-decided-in-november/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -22174,7 +22184,7 @@
   "target_id": "il-cps-board-10a",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://www.ift-aft.org/vote",
+  "url": "https://www.ctulocal1.org/posts/chicago-teachers-union-endorses-candidates-running-as-public-school-champions-in-school-board-race-says-students-educational-experience-to-be-decided-in-november/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26341,7 +26351,7 @@
   "target_id": "mo-state-auditor",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26350,7 +26360,7 @@
   "target_id": "mo-retention-wilson",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26359,7 +26369,7 @@
   "target_id": "mo-retention-lay",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26368,7 +26378,7 @@
   "target_id": "mo-retention-navarro-mckelvey",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26377,7 +26387,7 @@
   "target_id": "mo-retention-quigless",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26386,7 +26396,7 @@
   "target_id": "mo-amendment-7",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26395,7 +26405,7 @@
   "target_id": "mo-amendment-8",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26404,7 +26414,7 @@
   "target_id": "mo-us-house-2",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26413,7 +26423,7 @@
   "target_id": "mo-hd-100",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26422,7 +26432,7 @@
   "target_id": "mo-hd-88",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26431,7 +26441,7 @@
   "target_id": "mo-hd-110",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26440,7 +26450,7 @@
   "target_id": "mo-hd-98",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26449,7 +26459,7 @@
   "target_id": "mo-hd-89",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26458,7 +26468,7 @@
   "target_id": "mo-hd-101",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26467,7 +26477,7 @@
   "target_id": "stlco-county-executive",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26476,7 +26486,7 @@
   "target_id": "stlco-prosecuting-attorney",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26485,7 +26495,7 @@
   "target_id": "stlco-assessor",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26494,7 +26504,7 @@
   "target_id": "stlco-council-7",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26503,7 +26513,7 @@
   "target_id": "stlco-council-3",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26512,7 +26522,7 @@
   "target_id": "stlco-retention-stewart",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26521,7 +26531,7 @@
   "target_id": "stlco-retention-borbonus",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26530,7 +26540,7 @@
   "target_id": "stlco-retention-ott",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26539,7 +26549,7 @@
   "target_id": "stlco-retention-mcnelley",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26548,7 +26558,7 @@
   "target_id": "stlco-retention-mcpherson",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26557,7 +26567,7 @@
   "target_id": "stlco-retention-baker",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26566,7 +26576,7 @@
   "target_id": "stlco-retention-hearne",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26575,7 +26585,7 @@
   "target_id": "stlco-retention-dunne",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26584,7 +26594,7 @@
   "target_id": "stlco-retention-lasater",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26593,7 +26603,7 @@
   "target_id": "stlco-retention-klapp",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26602,7 +26612,7 @@
   "target_id": "stlco-retention-ruth",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26611,7 +26621,7 @@
   "target_id": "stlco-retention-lewis",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26620,7 +26630,7 @@
   "target_id": "stlco-retention-snyder",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26629,7 +26639,7 @@
   "target_id": "stlco-retention-ghasedi",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26638,7 +26648,7 @@
   "target_id": "stlco-retention-dillon-amelung",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26647,7 +26657,7 @@
   "target_id": "stlco-prop-a",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26656,7 +26666,7 @@
   "target_id": "stlco-prop-s",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26665,7 +26675,7 @@
   "target_id": "parkway-sd-prop-p",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26674,7 +26684,7 @@
   "target_id": "mo-us-house-1",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26683,7 +26693,7 @@
   "target_id": "mo-sd-4",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26692,7 +26702,7 @@
   "target_id": "mo-sd-14",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26701,7 +26711,7 @@
   "target_id": "mo-sd-24",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26710,7 +26720,7 @@
   "target_id": "mo-hd-99",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26719,7 +26729,7 @@
   "target_id": "mo-hd-86",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26728,7 +26738,7 @@
   "target_id": "stlco-council-5",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26737,7 +26747,7 @@
   "target_id": "mo-hd-76",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26746,7 +26756,7 @@
   "target_id": "mo-hd-77",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26755,7 +26765,7 @@
   "target_id": "mo-hd-78",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26764,7 +26774,7 @@
   "target_id": "mo-hd-79",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26773,7 +26783,7 @@
   "target_id": "mo-hd-80",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26782,7 +26792,7 @@
   "target_id": "mo-hd-81",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26791,7 +26801,7 @@
   "target_id": "mo-hd-82",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26800,7 +26810,7 @@
   "target_id": "mo-hd-84",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26809,7 +26819,7 @@
   "target_id": "stlcity-collector-revenue",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26818,7 +26828,7 @@
   "target_id": "stlcity-license-collector",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26827,7 +26837,7 @@
   "target_id": "stlcity-recorder-deeds",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26836,7 +26846,7 @@
   "target_id": "stlcity-retention-wright",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26845,7 +26855,7 @@
   "target_id": "stlcity-retention-hogan",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26854,7 +26864,7 @@
   "target_id": "stlcity-retention-fowler",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26863,7 +26873,7 @@
   "target_id": "stlcity-retention-llewellyn",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26872,7 +26882,7 @@
   "target_id": "stlcity-retention-whyte",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26881,7 +26891,7 @@
   "target_id": "stlcity-retention-boyer",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26890,7 +26900,7 @@
   "target_id": "stlcity-retention-millikan",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26899,7 +26909,7 @@
   "target_id": "stlcity-retention-stovall-reid",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26908,7 +26918,7 @@
   "target_id": "stlcity-retention-connolly",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26917,7 +26927,7 @@
   "target_id": "stlcity-retention-hays",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26926,7 +26936,7 @@
   "target_id": "stlcity-retention-roither",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26935,7 +26945,7 @@
   "target_id": "stlcity-retention-stelzer",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26944,7 +26954,7 @@
   "target_id": "stlcity-retention-dauphin",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26953,7 +26963,7 @@
   "target_id": "slps-board",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26962,7 +26972,7 @@
   "target_id": "stlcity-prop-1",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26971,7 +26981,7 @@
   "target_id": "stlcity-prop-b",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26980,7 +26990,7 @@
   "target_id": "mo-hd-91",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26989,7 +26999,7 @@
   "target_id": "mo-hd-83",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -26998,7 +27008,7 @@
   "target_id": "mo-hd-90",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -27007,7 +27017,7 @@
   "target_id": "mo-hd-96",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -27016,7 +27026,7 @@
   "target_id": "webster-groves-sd-prop-w",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },
@@ -27025,7 +27035,7 @@
   "target_id": "webster-groves-city-amendment-1",
   "status": "not_found",
   "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
-  "url": "https://seiuhcilin.org/resources/election-information/",
+  "url": "https://seiuhcilin.org/resources/election-information/missouri/",
   "date": "2026-11-02",
   "confidence": "verified"
  },

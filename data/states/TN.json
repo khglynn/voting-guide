@@ -75,7 +75,7 @@
   "election_day": {
     "polls_open": "Each county sets its own opening time",
     "polls_close": "7:00 PM Central (8:00 PM Eastern)",
-    "in_line_rule": "All Tennessee polls close at 7 PM Central time, which is 8 PM Eastern (Knoxville, Chattanooga and the rest of East Tennessee). If you're in line when the polls close, you'll be allowed to vote. Opening times vary by county: check yours in the GoVoteTN app.",
+    "in_line_rule": "In line when the polls close? You still get to vote.",
     "vote_centers": false,
     "lookup_url": "https://web.go-vote-tn.elections.tn.gov/",
     "confidence": "verified"

@@ -77,7 +77,7 @@
   "election_day": {
     "polls_open": "7:00 AM",
     "polls_close": "7:00 PM",
-    "in_line_rule": "If you are in line by 7:00 PM, you get to vote. The official Voter Guide: 'Anyone who attempts to join the voting line after 7:00 P.M. shall not be permitted to vote.' Hours are local time; Mobile and nearly all of Alabama are on Central Time (a few polling places near the Georgia line run on Eastern).",
+    "in_line_rule": "In line by 7 PM local time? You still get to vote. A few polling places near the Georgia line run on Eastern time.",
     "vote_centers": false,
     "lookup_url": "https://myinfo.alabamavotes.gov/voterview",
     "confidence": "verified"

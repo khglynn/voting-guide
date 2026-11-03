@@ -76,7 +76,7 @@
   "election_day": {
     "polls_open": "7:00 AM",
     "polls_close": "7:00 PM",
-    "in_line_rule": "Georgia.gov: 'As long as you are in line by 7 p.m., you are allowed to cast your ballot.' On Election Day you must vote at your assigned precinct (look it up on My Voter Page; it may differ from where you voted early). If you show up at the wrong precinct before 5:00 PM you'll be sent to the right one. After 5:00 PM you may cast a provisional ballot there only if you sign a statement that you can't get to your own precinct in time (SB 202, O.C.G.A. 21-2-418).",
+    "in_line_rule": "In line by 7 PM? You still get to vote. On Election Day you must vote at your assigned precinct, which may not be where you voted early.",
     "vote_centers": false,
     "lookup_url": "https://mvp.sos.ga.gov/",
     "confidence": "verified"

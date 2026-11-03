@@ -77,7 +77,7 @@
   "election_day": {
     "polls_open": "8:30 AM at the six King County vote centers. Other counties: check your local elections office.",
     "polls_close": "8:00 PM",
-    "in_line_rule": "Drop boxes close at '8 p.m. sharp' on Election Day (King County). If you are inside a voting center or in its line at 8:00 PM you can still register and vote. Don't plan on 7:58.",
+    "in_line_rule": "Drop boxes lock at 8 PM sharp. In line at a vote center at 8 PM? You can still register and vote.",
     "vote_centers": true,
     "lookup_url": "https://www.sos.wa.gov/elections/voters/voter-registration/drop-box-and-voting-center-locations",
     "confidence": "verified"

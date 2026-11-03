@@ -78,7 +78,7 @@
   "election_day": {
     "polls_open": "6:00 AM",
     "polls_close": "7:00 PM",
-    "in_line_rule": "If you are in line at 7:00 PM, stay in line. You get to vote. Chicago voters can vote at their home precinct OR at any of 51 vote centers (the Downtown Supersite at 137 S. State and all 50 ward sites), per the Chicago Board: 'Voters can choose whatever voting site is most convenient for them, including on Election Day.' Outside Chicago, go to your assigned precinct unless your county says otherwise.",
+    "in_line_rule": "In line by 7 PM? You still get to vote. In Chicago, you can vote at your home precinct or at any of the city’s 51 vote centers.",
     "vote_centers": true,
     "lookup_url": "https://ova.elections.il.gov/PollingPlaceLookup.aspx",
     "confidence": "verified"

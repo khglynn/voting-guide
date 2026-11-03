@@ -79,7 +79,7 @@
   "election_day": {
     "polls_open": "7:00 AM",
     "polls_close": "7:00 PM",
-    "in_line_rule": "Official: 'The polls are open on Election Day, from 7 a.m. until 7 p.m. (local time).' 'Any voters waiting in line at 7:00 p.m. will have the opportunity to cast a ballot.' On Election Day you 'must vote at his or her assigned precinct/polling location.' Orlando and Tallahassee are on Eastern Time; Pensacola and the western Panhandle are on Central Time.",
+    "in_line_rule": "In line by 7 PM local time? You still get to vote. On Election Day you must vote at your assigned polling place.",
     "vote_centers": false,
     "lookup_url": "https://registration.dos.fl.gov/CheckVoterStatus",
     "confidence": "verified"

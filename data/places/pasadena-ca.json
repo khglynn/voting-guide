@@ -122,9 +122,10 @@
  ],
  "heads_up": [
   {
-   "text": "Most of Pasadena is in Congressional District 28: about 130,000 of the city's 139,000 people. About 9,000 people on the west side, in Linda Vista and nearby blocks along the Arroyo Seco, are in District 30. Your address or your official sample ballot tells you which one is yours.",
+   "text": "Most of Pasadena is in Congressional District 28. Linda Vista and nearby blocks on the west side are in District 30. Your address or your sample ballot shows which one is yours.",
    "applies_to": "section:federal",
-   "source": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
+   "source": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf",
+   "until_address": true
   }
  ],
  "lookups": {

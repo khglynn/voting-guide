@@ -75,7 +75,7 @@
   "election_day": {
     "polls_open": "7:00 AM",
     "polls_close": "8:00 PM",
-    "in_line_rule": "There are no polls. Your ballot must be in an official drop box or at a county elections office by 8:00 PM, but Multnomah County says 'Voters who are in line at 8:00 PM may drop off their ballot.' County elections offices are open 7 AM to 8 PM on Election Day. A mailed ballot must carry a USPS postmark dated Nov. 3 or earlier, and must reach the county by Nov. 10.",
+    "in_line_rule": "Get your ballot into any official drop box in Oregon, or to a county elections office, by 8 PM. Multnomah County says if you’re in line at 8 PM, you can still drop it off.",
     "vote_centers": true,
     "lookup_url": "https://sos.oregon.gov/elections/Pages/drop-box-locator.aspx",
     "confidence": "verified"

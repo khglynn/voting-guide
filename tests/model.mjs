@@ -1028,6 +1028,20 @@ function roundTrip(name, stCode, places, mutate) {
     check('adds: and the held source is one more hash in the link, as any switch', gapLink === st.encodeShare(liveB, gapState)
       && gapLink.split('~')[7] === '' && gapLink.split('~')[10] === `d+${util.hash('aura')}`, gapLink.split('~').slice(7).join('~'));
     mem.set('vg-adds', JSON.stringify([{ code: 'abcdefghijkl', name: 'AURA', at: Date.now(), ids: ['aura'] }]));
+    // The other direction (Codex review of the lens recipe, Nov 3): the link made WHILE the preview is on the ballot,
+    // opened in a reload gap (the ballot lacks it). "Every source", a chip or two chips would fold AURA in with no
+    // hash of its own; with a preview turned on, the link keeps the plain list, so AURA survives the gap.
+    const nbDef = nb.endorsers.filter((e) => e.default_on).map((e) => e.id);
+    const nbChip = (k) => mods.lens.chipMembers(nb, k).map((e) => e.id);
+    const previewCases = [['every source', nb.endorsers.map((e) => e.id)], ['Progressive', nbChip('progressive')], ['defaults + Progressive', [...nbDef, ...nbChip('progressive')]], ['defaults + AURA', [...nbDef, 'aura']]];
+    const lost = previewCases.filter(([, sources]) => {
+      const l = st.encodeShare(nb, { ...st.emptyBallotState('78704'), sources });
+      const back = st.decodeShare(liveB, head(l)).state.sources;
+      return !sources.includes('aura') || l.split('~').length !== 8 || !Array.isArray(back) || !back.includes('aura') || JSON.stringify([...st.decodeShare(nb, head(l)).state.sources].sort()) !== JSON.stringify([...new Set(sources)].sort());
+    }).map(([n]) => n);
+    check('adds: a link made with the preview on and opened in the reload gap keeps it (plain list, never a recipe)', lost.length === 0, lost.join(', '));
+    const noPreview = st.encodeShare(liveB, { ...st.emptyBallotState('78704'), sources: liveB.endorsers.map((e) => e.id) });
+    check('adds: without a preview turned on, the same lens is a recipe again', noPreview.split('~')[10] === 'a', noPreview.split('~').slice(7).join('~'));
     st.S.ballot = nb;
     mods.lens.setSources(nb, st.S.b.sources.filter((id) => id !== 'aura'));
     check('adds: once the ballot has it, its own switch turns it off', !(st.S.b.sources || []).includes('aura'), JSON.stringify(st.S.b.sources));

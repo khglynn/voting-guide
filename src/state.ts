@@ -273,10 +273,14 @@ const LENS: [string, (e: Endorser) => boolean][] = [
   ['u', (e) => chipOf(e) === 'unions'],
 ];
 const RECIPE = /^([adplru]*)((?:[+-][0-9a-z]{5})*)$/;
-/* The shortest recipe for this list on this ballot, or null when two of its sources share a hash
-   (none do today; then the plain list is written, as before). */
+/* The shortest recipe for this list on this ballot, or null (the plain list is written, as before) when:
+   - two of its sources share a hash (none do today);
+   - a source you turned on is still a preview (Add a source, model/adds.ts). A recipe would fold it into "a" or a
+     chip with no hash of its own, so a reload before the preview answers again would lose it for good; the plain
+     list keeps its hash, which decodeShare reads back while the request is held (Codex review, Nov 3). */
 function lensRecipe(ballot: Ballot, ids: string[]): string | null {
   if (new Set(ballot.endorsers.map((e) => hash(e.id))).size !== ballot.endorsers.length) return null;
+  if (ids.some((id) => ballot.eById.get(id)?.preview)) return null;
   const want = new Set(ids);
   let best: string | null = null;
   for (let mask = 1; mask < 1 << LENS.length; mask++) {

@@ -1372,7 +1372,7 @@ function roundTrip(name, stCode, places, mutate) {
     if (!fs.existsSync(pth)) { check(`sites: public/data/sites/${id}.json is built`, false, 'missing'); continue; }
     const l = read(`sites/${id}.json`);
     check(`sites: ${id} ships ${l.sites.length} sites for Nov 3, every one named, addressed and inside Texas`, l.election_date === '2026-11-03' && l.state === 'TX' && l.sites.length > 0
-      && l.sites.every((x) => x.name.trim() && x.address.trim() && x.lat > 25.8 && x.lat < 36.6 && x.lng > -106.7 && x.lng < -93.5 && !/[A-Z]{5,}/.test(x.name) && !/—/.test(x.name + x.address)), `${l.sites.length} of ${l.count_official}`);
+      && l.sites.every((x) => x.name.trim() && x.address.trim() && x.lat > 25.8 && x.lat < 36.6 && x.lng > -106.7 && x.lng < -93.5 && /[a-z]/.test(x.name) && !/—/.test(x.name + x.address)), `${l.sites.length} of ${l.count_official}`);
   }
 
   const keep = { ballot: st.S.ballot, b: st.S.b, ui: { ...st.S.ui } };

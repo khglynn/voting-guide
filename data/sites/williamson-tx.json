@@ -1,0 +1,455 @@
+{
+  "county": "Williamson",
+  "state": "TX",
+  "election_date": "2026-11-03",
+  "list_source": "https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Election%20Day%20Voting%20Dashboard.html",
+  "coords_source": "https://www.vote.org/polling-place-locator/ (Vote.org public locator feed)",
+  "fetched": "2026-11-03T18:16:30.470Z",
+  "count_official": 74,
+  "sites": [
+    {
+      "name": "ACC Cypress Creek",
+      "address": "1555 Cypress Creek Rd, Cedar Park, TX 78613",
+      "lat": 30.479821,
+      "lng": -97.834802
+    },
+    {
+      "name": "Allen R. Baca Center",
+      "address": "301 W Bagdad Ave, Round Rock, TX 78664",
+      "lat": 30.506665,
+      "lng": -97.680922
+    },
+    {
+      "name": "Anderson Mill Limited District",
+      "address": "11500 El Salido Pkwy, Austin, TX 78750",
+      "lat": 30.455927,
+      "lng": -97.819117
+    },
+    {
+      "name": "Austin Sports Center",
+      "address": "1420 Toro Grande Blvd, Cedar Park, TX 78613",
+      "lat": 30.544175,
+      "lng": -97.777063
+    },
+    {
+      "name": "Bait-ul-Muqeet Mosque",
+      "address": "800 Deep Wood Dr, Round Rock, TX 78681",
+      "lat": 30.500974,
+      "lng": -97.698638
+    },
+    {
+      "name": "Bartlett City Hall",
+      "address": "140 W Clark St, Bartlett, TX 76511",
+      "lat": 30.796027,
+      "lng": -97.42965
+    },
+    {
+      "name": "Benold Middle School",
+      "address": "1401 N Parmer Ranch Blvd, Georgetown, TX 78633",
+      "lat": 30.747392,
+      "lng": -97.798836
+    },
+    {
+      "name": "Bethany United Methodist Church",
+      "address": "10010 Anderson Mill Rd, Austin, TX 78750",
+      "lat": 30.447533,
+      "lng": -97.79934
+    },
+    {
+      "name": "Bob Bennett Building",
+      "address": "3400 Sunrise Rd, Round Rock, TX 78665",
+      "lat": 30.548332,
+      "lng": -97.675885
+    },
+    {
+      "name": "Boys & Girls Club of Georgetown",
+      "address": "1100 Thousand Oaks Blvd, Georgetown, TX 78628",
+      "lat": 30.614536,
+      "lng": -97.698923
+    },
+    {
+      "name": "Brushy Creek MUD Community Center",
+      "address": "16318 Great Oaks Dr, Round Rock, TX 78681",
+      "lat": 30.496012,
+      "lng": -97.735495
+    },
+    {
+      "name": "Carver Center for Families",
+      "address": "1200 W 17th St, Georgetown, TX 78626",
+      "lat": 30.628448,
+      "lng": -97.686955
+    },
+    {
+      "name": "Cedar Park Recreation Center",
+      "address": "1435 Main St, Cedar Park, TX 78613",
+      "lat": 30.527103,
+      "lng": -97.825808
+    },
+    {
+      "name": "Cedar Ridge High School Auditorium",
+      "address": "2801 Gattis School Rd, Round Rock, TX 78664",
+      "lat": 30.493409,
+      "lng": -97.641576
+    },
+    {
+      "name": "Community Bible Church of Weir",
+      "address": "315 FM 1105, Weir, TX 78626",
+      "lat": 30.676973,
+      "lng": -97.587689
+    },
+    {
+      "name": "Cool Water MUD Clubhouse",
+      "address": "401 Fighting Seabees Run, Jarrell, TX 76537",
+      "lat": 30.80557,
+      "lng": -97.562388
+    },
+    {
+      "name": "Danielson Middle School",
+      "address": "1061 Collaborative Way, Leander, TX 78641",
+      "lat": 30.603206,
+      "lng": -97.879874
+    },
+    {
+      "name": "East View High School",
+      "address": "4490 E University Ave, Georgetown, TX 78626",
+      "lat": 30.642475,
+      "lng": -97.618119
+    },
+    {
+      "name": "Fern Bluff MUD Community Center",
+      "address": "7320 Wyoming Springs Dr, Round Rock, TX 78681",
+      "lat": 30.518614,
+      "lng": -97.718959
+    },
+    {
+      "name": "First Baptist Church Leander",
+      "address": "10000 FM 2243, Leander, TX 78641",
+      "lat": 30.582974,
+      "lng": -97.840654
+    },
+    {
+      "name": "Florence City Hall",
+      "address": "851 FM 970, Florence, TX 76527",
+      "lat": 30.829992,
+      "lng": -97.804174
+    },
+    {
+      "name": "Gateway Church",
+      "address": "7104 McNeil Dr, Austin, TX 78729",
+      "lat": 30.437231,
+      "lng": -97.764521
+    },
+    {
+      "name": "Georgetown City Hall",
+      "address": "808 Martin Luther King Jr St, Georgetown, TX 78626",
+      "lat": 30.636255,
+      "lng": -97.681116
+    },
+    {
+      "name": "Georgetown Film Alley",
+      "address": "420 Wolf Ranch Pkwy, Georgetown, TX 78628",
+      "lat": 30.650006,
+      "lng": -97.690649
+    },
+    {
+      "name": "Georgetown Fire Station #6",
+      "address": "6700 Williams Dr, Georgetown, TX 78633",
+      "lat": 30.712707,
+      "lng": -97.763471
+    },
+    {
+      "name": "Georgetown High School",
+      "address": "2211 N Austin Ave, Georgetown, TX 78626",
+      "lat": 30.661393,
+      "lng": -97.663098
+    },
+    {
+      "name": "Georgetown ISD Technology & Nutrition Bldg",
+      "address": "603 Lakeway Dr, Georgetown, TX 78628",
+      "lat": 30.668387,
+      "lng": -97.688798
+    },
+    {
+      "name": "Glad Tidings Church - Leander",
+      "address": "1003 Leander Dr, Leander, TX 78641",
+      "lat": 30.566136,
+      "lng": -97.845805
+    },
+    {
+      "name": "Grace Presbyterian Church",
+      "address": "1705 Gattis School Rd, Round Rock, TX 78664",
+      "lat": 30.49566,
+      "lng": -97.659289
+    },
+    {
+      "name": "Hammerlun Center for Leadership and Learning",
+      "address": "507 E University Ave, Georgetown, TX 78626",
+      "lat": 30.634094,
+      "lng": -97.672492
+    },
+    {
+      "name": "Hartfield Performing Arts Center",
+      "address": "5800 McNeil Dr, Austin, TX 78729",
+      "lat": 30.447668,
+      "lng": -97.735981
+    },
+    {
+      "name": "Heritage Baptist Church",
+      "address": "1601 FM 971, Georgetown, TX 78626",
+      "lat": 30.665784,
+      "lng": -97.64826
+    },
+    {
+      "name": "Highland Estates",
+      "address": "1500 Lakeline Blvd, Cedar Park, TX 78613",
+      "lat": 30.522057,
+      "lng": -97.853205
+    },
+    {
+      "name": "Hutto City Hall",
+      "address": "500 W Live Oak St, Hutto, TX 78634",
+      "lat": 30.545137,
+      "lng": -97.551951
+    },
+    {
+      "name": "Islamic Center of Brushy Creek",
+      "address": "1950 Brushy Creek Rd, Cedar Park, TX 78613",
+      "lat": 30.507795,
+      "lng": -97.79257
+    },
+    {
+      "name": "Jarrell Memorial Park Community Center",
+      "address": "1651 CR 305, Jarrell, TX 76537",
+      "lat": 30.836646,
+      "lng": -97.621559
+    },
+    {
+      "name": "Kelly Reeves Athletic Complex",
+      "address": "10211 W Parmer Ln, Austin, TX 78717",
+      "lat": 30.492488,
+      "lng": -97.7741
+    },
+    {
+      "name": "Lakeline Oaks MUD",
+      "address": "1000 Old Mill Rd, Cedar Park, TX 78613",
+      "lat": 30.474746,
+      "lng": -97.823836
+    },
+    {
+      "name": "Larkspur Elementary School",
+      "address": "424 Rusk Bluff Ave, Leander, TX 78641",
+      "lat": 30.628879,
+      "lng": -97.852174
+    },
+    {
+      "name": "Leander Park Apartments",
+      "address": "14801 Ronald Reagan Blvd Bldg 10, Leander, TX 78641",
+      "lat": 30.554584,
+      "lng": -97.797278
+    },
+    {
+      "name": "Leander Senior Activity Center",
+      "address": "709 Municipal Dr, Leander, TX 78641",
+      "lat": 30.571768,
+      "lng": -97.861862
+    },
+    {
+      "name": "Liberty Hill ISD Gym Annex",
+      "address": "301 Forrest St, Liberty Hill, TX 78642",
+      "lat": 30.666925,
+      "lng": -97.920946
+    },
+    {
+      "name": "LISD Information Technology Services",
+      "address": "315 S West Dr, Leander, TX 78641",
+      "lat": 30.574581,
+      "lng": -97.85527
+    },
+    {
+      "name": "LISD Support Services",
+      "address": "1900 Cougar Country Dr, Cedar Park, TX 78613",
+      "lat": 30.527184,
+      "lng": -97.86243
+    },
+    {
+      "name": "Moonshine Yoga - Liberty Hill",
+      "address": "15050 W SH 29 Ste 130, Liberty Hill, TX 78642",
+      "lat": 30.675435,
+      "lng": -97.931416
+    },
+    {
+      "name": "Palm Valley Lutheran Church",
+      "address": "2500 E Palm Valley Blvd, Round Rock, TX 78665",
+      "lat": 30.521887,
+      "lng": -97.646136
+    },
+    {
+      "name": "Pinballz Lake Creek",
+      "address": "13729 Research Blvd, Austin, TX 78750",
+      "lat": 30.459875,
+      "lng": -97.790169
+    },
+    {
+      "name": "Radiant Church",
+      "address": "1205 Round Rock Ave Ste 109, Round Rock, TX 78681",
+      "lat": 30.510651,
+      "lng": -97.694154
+    },
+    {
+      "name": "Rattan Creek Park Community Center",
+      "address": "7617 Elkhorn Mountain Trl, Austin, TX 78729",
+      "lat": 30.4489,
+      "lng": -97.757235
+    },
+    {
+      "name": "Rockbridge Church",
+      "address": "2001 W New Hope Dr, Cedar Park, TX 78613",
+      "lat": 30.526123,
+      "lng": -97.862166
+    },
+    {
+      "name": "Round Rock Presbyterian Church",
+      "address": "4010 Sam Bass Rd, Round Rock, TX 78681",
+      "lat": 30.535665,
+      "lng": -97.740981
+    },
+    {
+      "name": "Round Rock Sports Center",
+      "address": "2400 Chisholm Trl, Round Rock, TX 78664",
+      "lat": 30.536803,
+      "lng": -97.695182
+    },
+    {
+      "name": "Santa Rita Ranch",
+      "address": "175 Elizabeth Park Blvd, Liberty Hill, TX 78642",
+      "lat": 30.666032,
+      "lng": -97.838334
+    },
+    {
+      "name": "Sleep Inn & Suites",
+      "address": "1980 S IH 35, Round Rock, TX 78681",
+      "lat": 30.491914,
+      "lng": -97.678569
+    },
+    {
+      "name": "Southwestern University",
+      "address": "1001 Southwestern Blvd, Georgetown, TX 78626",
+      "lat": 30.635739,
+      "lng": -97.66189
+    },
+    {
+      "name": "Spicewood Springs Library",
+      "address": "8637 Spicewood Springs Rd, Austin, TX 78759",
+      "lat": 30.433571,
+      "lng": -97.772902
+    },
+    {
+      "name": "St Peter's Church of Coupland",
+      "address": "108 Wathen St, Coupland, TX 78615",
+      "lat": 30.45794,
+      "lng": -97.390939
+    },
+    {
+      "name": "St. Vincent de Paul Catholic Church",
+      "address": "9500 Neenah Ave, Austin, TX 78717",
+      "lat": 30.489288,
+      "lng": -97.763653
+    },
+    {
+      "name": "Tarvin Elementary School",
+      "address": "1280 Logan Del Way, Leander, TX 78641",
+      "lat": 30.604596,
+      "lng": -97.827926
+    },
+    {
+      "name": "Taylor City Hall",
+      "address": "400 Porter St, Taylor, TX 76574",
+      "lat": 30.571341,
+      "lng": -97.40795
+    },
+    {
+      "name": "The Delaney at Georgetown Village",
+      "address": "359 Village Commons Blvd, Georgetown, TX 78633",
+      "lat": 30.695054,
+      "lng": -97.710371
+    },
+    {
+      "name": "The Oaks Community Center - Sun City",
+      "address": "301 Del Webb Blvd, Georgetown, TX 78633",
+      "lat": 30.712763,
+      "lng": -97.718221
+    },
+    {
+      "name": "The Springs Healthcare & Rehabilitation",
+      "address": "1500 Cottonwood Creek Trail, Cedar Park, TX 78613",
+      "lat": 30.535849,
+      "lng": -97.808029
+    },
+    {
+      "name": "Thrall ISD",
+      "address": "111 S Bounds St, Thrall, TX 76578",
+      "lat": 30.589518,
+      "lng": -97.295238
+    },
+    {
+      "name": "Unity Ismaili Recreation Center",
+      "address": "820 Old Mill Rd, Cedar Park, TX 78613",
+      "lat": 30.476125,
+      "lng": -97.820211
+    },
+    {
+      "name": "Verena at Leander",
+      "address": "11350 Hero Way West, Leander, TX 78641",
+      "lat": 30.580472,
+      "lng": -97.862108
+    },
+    {
+      "name": "Vintage Church Liberty Hill",
+      "address": "170 CR 214, Liberty Hill, TX 78642",
+      "lat": 30.670932,
+      "lng": -97.911803
+    },
+    {
+      "name": "Walburg Community Center",
+      "address": "4000 FM 972, Walburg, TX 78626",
+      "lat": 30.736352,
+      "lng": -97.584109
+    },
+    {
+      "name": "Wilco Central Maintenance Facility",
+      "address": "3151 SE Inner Loop, Georgetown, TX 78626",
+      "lat": 30.627948,
+      "lng": -97.644628
+    },
+    {
+      "name": "Wilco ESD #3 Fire Station",
+      "address": "1545 Chris Kelley Blvd, Hutto, TX 78634",
+      "lat": 30.517927,
+      "lng": -97.571237
+    },
+    {
+      "name": "Wilco Expo Center",
+      "address": "5350 Bill Picket Trl, Taylor, TX 76574",
+      "lat": 30.604158,
+      "lng": -97.427574
+    },
+    {
+      "name": "Wilco Georgetown Annex",
+      "address": "100 Wilco Way, Georgetown, TX 78626",
+      "lat": 30.615856,
+      "lng": -97.658464
+    },
+    {
+      "name": "Wilco Jester Annex",
+      "address": "1801 E Old Settlers Blvd, Round Rock, TX 78664",
+      "lat": 30.539324,
+      "lng": -97.660019
+    },
+    {
+      "name": "Wilco Round Rock Annex",
+      "address": "211 Commerce Blvd, Round Rock, TX 78664",
+      "lat": 30.531937,
+      "lng": -97.685233
+    }
+  ]
+}

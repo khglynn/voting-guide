@@ -12,7 +12,7 @@
     "name": "NYC Board of Elections, Bronx borough office: 1780 Grand Concourse, 5th Floor, Bronx, NY 10457",
     "url": "https://vote.nyc/page/contact-us",
     "phone": "1-718-299-9017 (citywide: 1-866-VOTE-NYC)",
-    "hours": "Monday to Friday, 9 AM to 5 PM. Citywide: 1-866-VOTE-NYC (1-866-868-3692)."
+    "hours": "Election Day, Nov 3: 6 AM to 9 PM. Regular hours: Monday to Friday, 9 AM to 5 PM. Citywide: 1-866-VOTE-NYC (1-866-868-3692)."
   },
   "sample_ballot_url": "https://findmypollsite.vote.nyc/",
   "zips": [
@@ -163,6 +163,10 @@
     {
       "name": "U.S. Census Bureau: county codes (Bronx County is 36005)",
       "url": "https://www.census.gov/library/reference/code-lists/ansi.html"
+    },
+    {
+      "name": "NYC311: Board of Elections borough offices (Election Day hours 6 AM to 9 PM)",
+      "url": "https://portal.311.nyc.gov/article/?kanumber=KA-03689"
     }
   ]
 }

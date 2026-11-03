@@ -587,7 +587,8 @@ interface AddrParts { lines: string; form: string; btns: string[] }
 function nearLineHTML(): string {
   try {
     const h = S.ballot?.howto;
-    const n = h ? nearNow(h, nextStep(h)) : null;
+    // No lookup this visit (nearly everyone): nothing to work out on each repaint of the head.
+    const n = h && S.ui.addrPoint ? nearNow(h, nextStep(h)) : null;
     if (!n) return '';
     const { site, mi } = n.rows[0];
     const more = ` <button class="linkbtn" data-act="near" data-fk="addr-near">${n.rows.length > 1 ? `See all ${n.rows.length}` : 'See directions'}</button>`;

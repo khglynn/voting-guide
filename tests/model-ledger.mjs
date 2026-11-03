@@ -2126,6 +2126,11 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('errors: and so is a mixed-case one in a stack', newest().at === 'i-B9.js:7:9' && !PRIV.test(newest().at), JSON.stringify(newest()));
     errs.note('Saved link v1~TX~austin-tx~78704~zz9 did not open');
     check('errors: a save link’s own words go wherever they stand', newest().msg === 'Saved link [save link] did not open', JSON.stringify(newest()));
+    // Nov 3: a link written with its "#" encoded ("%23v1~...") has no word boundary before the v.
+    errs.note('Opened https://vote.kevinhg.com/%23v1~TX~austin-tx~78704~zz9~~bm90ZQ did not load');
+    check('errors: an encoded save link in a URL goes, from its %23 on', newest().msg === 'Opened https://vote.kevinhg.com/', JSON.stringify(newest()));
+    errs.note('Pasted %23v1~TX~austin-tx~78704~zz9~~bm90ZQ here');
+    check('errors: and so does one standing alone', newest().msg === 'Pasted %23[save link] here', JSON.stringify(newest()));
     const census = new Error('script failed');
     census.stack = 'Error: script failed\n    at s.onerror (https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=12+Main:1:1)';
     errs.note(census);

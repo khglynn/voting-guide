@@ -276,6 +276,17 @@ function roundTrip(name, stCode, places, mutate) {
   check('lens recipe: an unknown hash is dropped, as in the plain form', same(read(`d+zzzzz`), lwDef));
   check('lens recipe: a field it can’t read (a letter it doesn’t know) falls back to the sources field: the defaults', read('dq') === null && read('d+abc') === null && read('A') === null);
   check('lens recipe: an empty 11th field changes nothing', st.decodeShare(lw, head('v1~CO~lakewood-co~80226~ra8yvi07~~~mlkqq~~~')).state.sources.join() === 'denver-post-eb');
+
+  // The 11th field is the link's last: a chat app that keeps the "." or ")" after a link, or a "%20", mustn't wipe the
+  // lens back to the defaults (Opus review, Nov 3). Both a recipe ending in a letter and one ending in a +hash.
+  const endsInHash = st.encodeShare(ballot, { ...b, sources: [...def, chip('unions')[0]] });
+  const tails = ['.', ')', ',', '%20', ').', '.%20'];
+  const smeared = [];
+  for (const l of [link, endsInHash]) {
+    const want = st.decodeShare(ballot, head(l)).state.sources;
+    for (const t of tails) if (!same(st.decodeShare(ballot, head(l + t)).state.sources, want)) smeared.push(`${l.split('~')[10]}${t}`);
+  }
+  check('lens recipe: trailing punctuation after the link reads the same sources', /^d\+[0-9a-z]{5}$/.test(endsInHash.split('~')[10]) && smeared.length === 0, `${endsInHash.split('~')[10]} ${smeared.join(' ')}`);
 }
 
 /* ---------- 2b. saved state: a field added since a save is back-filled; the new one is kept ---------- */
@@ -1028,20 +1039,30 @@ function roundTrip(name, stCode, places, mutate) {
     check('adds: and the held source is one more hash in the link, as any switch', gapLink === st.encodeShare(liveB, gapState)
       && gapLink.split('~')[7] === '' && gapLink.split('~')[10] === `d+${util.hash('aura')}`, gapLink.split('~').slice(7).join('~'));
     mem.set('vg-adds', JSON.stringify([{ code: 'abcdefghijkl', name: 'AURA', at: Date.now(), ids: ['aura'] }]));
-    // The other direction (Codex review of the lens recipe, Nov 3): the link made WHILE the preview is on the ballot,
-    // opened in a reload gap (the ballot lacks it). "Every source", a chip or two chips would fold AURA in with no
-    // hash of its own; with a preview turned on, the link keeps the plain list, so AURA survives the gap.
+    // The other direction (Codex and Opus reviews of the lens recipe, Nov 3): the link made WHILE the preview is on the
+    // ballot, opened in a reload gap (the ballot lacks it). A letter never covers a preview, so AURA always travels as
+    // its own +hash and survives the gap; without that, "every source" or a chip folded it in and lost it for good.
+    const auraH = `+${util.hash('aura')}`;
     const nbDef = nb.endorsers.filter((e) => e.default_on).map((e) => e.id);
     const nbChip = (k) => mods.lens.chipMembers(nb, k).map((e) => e.id);
     const previewCases = [['every source', nb.endorsers.map((e) => e.id)], ['Progressive', nbChip('progressive')], ['defaults + Progressive', [...nbDef, ...nbChip('progressive')]], ['defaults + AURA', [...nbDef, 'aura']]];
+    const sorted = (l) => JSON.stringify([...new Set(l || [])].sort());
     const lost = previewCases.filter(([, sources]) => {
       const l = st.encodeShare(nb, { ...st.emptyBallotState('78704'), sources });
+      const f = l.split('~');
       const back = st.decodeShare(liveB, head(l)).state.sources;
-      return !sources.includes('aura') || l.split('~').length !== 8 || !Array.isArray(back) || !back.includes('aura') || JSON.stringify([...st.decodeShare(nb, head(l)).state.sources].sort()) !== JSON.stringify([...new Set(sources)].sort());
+      return !sources.includes('aura') || f.length !== 11 || !f[10].endsWith(auraH) || !Array.isArray(back) || !back.includes('aura')
+        || sorted(st.decodeShare(nb, head(l)).state.sources) !== sorted(sources);
     }).map(([n]) => n);
-    check('adds: a link made with the preview on and opened in the reload gap keeps it (plain list, never a recipe)', lost.length === 0, lost.join(', '));
-    const noPreview = st.encodeShare(liveB, { ...st.emptyBallotState('78704'), sources: liveB.endorsers.map((e) => e.id) });
-    check('adds: without a preview turned on, the same lens is a recipe again', noPreview.split('~')[10] === 'a', noPreview.split('~').slice(7).join('~'));
+    check('adds: a link made with the preview on and opened in the reload gap keeps it (its own +hash in the recipe)', lost.length === 0, lost.join(', '));
+    // The preview turned off: "every source but AURA" is plain "a", with no -hash to carry.
+    const allButAura = st.encodeShare(nb, { ...st.emptyBallotState('78704'), sources: nb.endorsers.map((e) => e.id).filter((id) => id !== 'aura') });
+    check('adds: a preview you left off needs no -hash: every other source is just "a"', allButAura.split('~')[10] === 'a' && !st.decodeShare(nb, head(allButAura)).state.sources.includes('aura'), allButAura.split('~').slice(7).join('~'));
+    // A friend's "every source" link, made where AURA isn't a preview (live data without it), opened on this device,
+    // which holds AURA as a preview: it doesn't switch AURA on for you.
+    const friendA = st.encodeShare(liveB, { ...st.emptyBallotState('78704'), sources: liveB.endorsers.map((e) => e.id) });
+    const opened = st.decodeShare(nb, head(friendA)).state.sources;
+    check('adds: a friend\'s "a" link doesn\'t switch on a preview this device holds', friendA.split('~')[10] === 'a' && Array.isArray(opened) && !opened.includes('aura') && sorted(opened) === sorted(liveB.endorsers.map((e) => e.id)), JSON.stringify(opened && opened.length));
     st.S.ballot = nb;
     mods.lens.setSources(nb, st.S.b.sources.filter((id) => id !== 'aura'));
     check('adds: once the ballot has it, its own switch turns it off', !(st.S.b.sources || []).includes('aura'), JSON.stringify(st.S.b.sources));

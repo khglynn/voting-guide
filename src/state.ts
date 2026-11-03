@@ -262,8 +262,8 @@ const UNCODE: Record<string, string> = { Y: 'YES', N: 'NO', S: 'SKIP', D: 'DONE'
    added on top and -hash for one taken out. a = every source on the ballot, d = the defaults,
    p l r u = the four chips (Newspapers and guides, Progressive, Conservative, Unions). The sets are
    read from the data when the link opens, the way a default lens (an empty sources field) always
-   has been: a source added to a chip since the link was made comes with it. Picks never depend on
-   it; it only says whose endorsements show. */
+   has been: a source added to a chip since the link was made comes with it, and one re-rated out of
+   it drops off. Picks never depend on it; it only says whose endorsements show. */
 const LENS: [string, (e: Endorser) => boolean][] = [
   ['a', () => true],
   ['d', (e) => !!e.default_on],
@@ -273,20 +273,21 @@ const LENS: [string, (e: Endorser) => boolean][] = [
   ['u', (e) => chipOf(e) === 'unions'],
 ];
 const RECIPE = /^([adplru]*)((?:[+-][0-9a-z]{5})*)$/;
-/* The shortest recipe for this list on this ballot, or null (the plain list is written, as before) when:
-   - two of its sources share a hash (none do today);
-   - a source you turned on is still a preview (Add a source, model/adds.ts). A recipe would fold it into "a" or a
-     chip with no hash of its own, so a reload before the preview answers again would lose it for good; the plain
-     list keeps its hash, which decodeShare reads back while the request is held (Codex review, Nov 3). */
+/* Whether a letter covers a source, the same when the link is written and when it opens. A source still in
+   preview (Add a source, model/adds.ts) is never covered: one you turned on always travels as its own +hash, which
+   decodeShare reads back in the reload gap while the request is held, and a friend's "a" link never switches on a
+   preview this device holds (Codex and Opus reviews, Nov 3). */
+const covered = (e: Endorser, sets: typeof LENS): boolean => !e.preview && sets.some(([, f]) => f(e));
+/* The shortest recipe for this list on this ballot, or null when two of its sources share a hash
+   (none do today; then the plain list is written, as before). */
 function lensRecipe(ballot: Ballot, ids: string[]): string | null {
   if (new Set(ballot.endorsers.map((e) => hash(e.id))).size !== ballot.endorsers.length) return null;
-  if (ids.some((id) => ballot.eById.get(id)?.preview)) return null;
   const want = new Set(ids);
   let best: string | null = null;
   for (let mask = 1; mask < 1 << LENS.length; mask++) {
     if (mask & 1 && mask !== 1) continue; // "a" already holds every other set
     const sets = LENS.filter((_, i) => mask & (1 << i));
-    const base = ballot.endorsers.filter((e) => sets.some(([, f]) => f(e))).map((e) => e.id);
+    const base = ballot.endorsers.filter((e) => covered(e, sets)).map((e) => e.id);
     const s = sets.map(([k]) => k).join('')
       + [...want].filter((id) => !base.includes(id)).map((id) => `+${hash(id)}`).join('')
       + base.filter((id) => !want.has(id)).map((id) => `-${hash(id)}`).join('');
@@ -367,14 +368,17 @@ export function decodeShare(ballot: Ballot, head: ShareHead): { state: BallotSta
     ballot.endorsers.forEach((e) => m.set(hash(e.id), e.id));
     return m;
   };
-  const recipe = lens ? lens.match(RECIPE) : null;
+  // The 11th field is the link's last, so a chat app that keeps a trailing "." or ")" (or "%20") would make it
+  // unreadable and the lens would fall back to the defaults: the recipe ends at the first character it can't hold.
+  const lensTxt = lens.split(/[^0-9a-z+-]/)[0];
+  const recipe = lensTxt ? lensTxt.match(RECIPE) : null;
   if (recipe) {
     // The 11th field (Nov 3): the named sets as this ballot's data has them now, less each -hash, plus each +hash.
     const sets = LENS.filter(([k]) => recipe[1].includes(k));
     const toks = recipe[2].match(/[+-][0-9a-z]{5}/g) || [];
     const out = new Set(toks.filter((t) => t[0] === '-').map((t) => t.slice(1)));
     const byHash = eByHash();
-    const base = ballot.endorsers.filter((e) => sets.some(([, f]) => f(e)) && !out.has(hash(e.id))).map((e) => e.id);
+    const base = ballot.endorsers.filter((e) => covered(e, sets) && !out.has(hash(e.id))).map((e) => e.id);
     const added = toks.filter((t) => t[0] === '+').map((t) => byHash.get(t.slice(1))).filter((x): x is string => !!x);
     st.sources = [...new Set([...base, ...added])];
   } else if (src === '0') st.sources = [];

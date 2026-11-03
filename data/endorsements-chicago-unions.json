@@ -5329,7 +5329,7 @@
   "endorser_id": "iuoe-150",
   "target_id": "il-cps-board-5a",
   "status": "not_found",
-  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements: it lists “5A: Anthony Hargrove”, but he runs in 5B, so no candidate in 5A has its pick.",
   "url": "https://local150.org/election/",
   "date": "2026-11-02",
   "confidence": "verified"
@@ -5338,7 +5338,7 @@
   "endorser_id": "iuoe-150",
   "target_id": "il-cps-board-5b",
   "status": "not_found",
-  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements: it lists Anthony Hargrove under “5A”, not 5B, where he runs, so we didn’t record it as a pick here.",
   "url": "https://local150.org/election/",
   "date": "2026-11-02",
   "confidence": "verified"

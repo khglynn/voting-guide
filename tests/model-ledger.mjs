@@ -356,6 +356,20 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('lens: Progressive alone, with the LA Fed in it, reads as progressive groups, not some unions', lens.chipState(la, 'unions') === 'some' && chosen.progressive && !chosen.unions && views.lens.lensSummary() === 'Newspapers and guides, progressive groups', views.lens.lensSummary());
     S.b.sources = [...S.b.sources, 'lappl'];
     check('lens: a union of its own on as well, and it says some unions', lens.chipsChosen(la).unions && views.lens.lensSummary() === 'Newspapers and guides, progressive groups, some unions', views.lens.lensSummary());
+    // The overlap is one rule (review of #102): a labor council in both chips counts for one of them only.
+    S.b.sources = null;
+    lens.toggleChip(la, 'unions');
+    const chipsNow = views.lens.chipsHTML();
+    check('lens: Unions tapped alone leaves Progressive looking off', lens.chipState(la, 'progressive') === 'some' && /data-k="progressive" aria-pressed="false"/.test(chipsNow) && !/class="chip some" data-act="chip" data-k="progressive"/.test(chipsNow) && /data-k="unions" aria-pressed="true"/.test(chipsNow), chipsNow);
+    lens.toggleChip(la, 'progressive');
+    lens.toggleChip(la, 'unions');
+    check('lens: Unions off with Progressive on keeps the labor councils, so Progressive stays wholly on', lens.chipState(la, 'progressive') === 'on' && S.b.sources.includes('la-fed') && !S.b.sources.includes('lappl') && views.lens.lensSummary() === 'Newspapers and guides, progressive groups', views.lens.lensSummary());
+    const progOwn = lens.chipMembers(la, 'progressive').find((e) => e.type !== 'labor' && lens.picksOnBallot(la, e.id) > 0);
+    S.b.sources = S.b.sources.filter((id) => id !== progOwn.id);
+    const partly = lens.chipsChosen(la);
+    check('lens: Progressive with one of its groups off reads some progressive groups, never some unions, and carries no union to the next ZIP', partly.progressive && !partly.unions && views.lens.lensSummary() === 'Newspapers and guides, some progressive groups', views.lens.lensSummary());
+    S.b.sources = [...lens.chipMembers(la, 'papers').map((e) => e.id), 'la-fed'];
+    check('lens: a labor council on by hand reads some progressive groups, as before Unions', !lens.chipsChosen(la).unions && views.lens.lensSummary() === 'Newspapers and guides, some progressive groups', views.lens.lensSummary());
     const parties = lens.partiesOnBallot(b).map((p) => p.party);
     check('lens: Colorado parties include Democratic, Republican, Working Families', ['Democratic', 'Republican', 'Working Families'].every((p) => parties.includes(p)), parties.join(', '));
     const jd = b.eById.get('jeffco-democrats');

@@ -8,7 +8,7 @@ import { S } from '../state';
 import { chosenIds, isPartisan, entriesBySection, status, isDecision, unclaimed } from '../ballot';
 import { heldIds } from './adds';
 
-export type ChipKey = 'papers' | 'progressive' | 'conservative';
+export type ChipKey = 'papers' | 'progressive' | 'conservative' | 'unions';
 const LEFT = ['left', 'lean_left'];
 const RIGHT = ['lean_right', 'right'];
 
@@ -34,12 +34,30 @@ export const CHIPS: { key: ChipKey; label: string; empty: string }[] = [
   { key: 'papers', label: 'Newspapers and guides', empty: 'None of the newspapers here made endorsements on this ballot. Try another group.' },
   { key: 'progressive', label: 'Progressive groups', empty: 'No progressive groups we checked made endorsements on this ballot.' },
   { key: 'conservative', label: 'Conservative groups', empty: 'No conservative groups we checked made endorsements on this ballot.' },
+  { key: 'unions', label: 'Unions', empty: 'No unions we checked made endorsements on this ballot.' },
 ];
 
-export function chipMembers(b: Ballot, key: ChipKey): Endorser[] {
-  if (key === 'papers') return b.endorsers.filter(isPaper);
-  if (key === 'progressive') return b.endorsers.filter((e) => isGroup(e) && !!e.lean && LEFT.includes(e.lean));
-  return b.endorsers.filter((e) => isGroup(e) && !!e.lean && RIGHT.includes(e.lean));
+/* The one chip a source belongs to, or none (a party, a group with no lean). One each, so a tap on a chip
+   moves only its own sources and never lights or dims another (Nov 3: two reviews of #102 found chips that
+   shared the labor councils misbehaving, so the sharing was cut, not patched again).
+   Unions (Kevin, Nov 2: LA friends asked for the unions' picks) is the one chip by kind, not lean: every
+   source whose type is labor, so police, deputies' and firefighters' unions sit beside the teachers, nurses
+   and labor councils, whatever their lean or none (the build brief's call, which Kevin knows of and can change:
+   ledger 2026-11-02-voting-guide-unions). That includes a labor council rated left or right by its
+   mission, so it is in Unions and not in Progressive or Conservative; the sources sheet still lists it
+   under its lean. */
+const sideOf = (e: Endorser): ChipKey | null => (!e.lean ? null : LEFT.includes(e.lean) ? 'progressive' : RIGHT.includes(e.lean) ? 'conservative' : null);
+export function chipOf(e: Endorser): ChipKey | null {
+  if (isPaper(e)) return 'papers';
+  if (e.type === 'labor') return 'unions';
+  return isGroup(e) ? sideOf(e) : null;
+}
+export const chipMembers = (b: Ballot, key: ChipKey): Endorser[] => b.endorsers.filter((e) => chipOf(e) === key);
+/* What a chip with nothing on this ballot says (the sources sheet). Where a union on that side has picks (Florida's
+   AFL-CIO, rated left by its mission, is under Unions, and the sheet lists it under its lean), it says so. */
+export function emptyNote(b: Ballot, key: ChipKey): string {
+  const { empty } = CHIPS.find((c) => c.key === key)!;
+  return withPicks(b, chipMembers(b, 'unions')).some((e) => sideOf(e) === key) ? `Apart from unions, ${empty[0].toLowerCase()}${empty.slice(1)}` : empty;
 }
 
 /* How many items on this ballot a source made a pick on. */

@@ -253,7 +253,7 @@ async function mapsSettled(page, timeout = 10000) {
     && (await text(page, SETUP)) === 'Show my ballot' && (await page.$$('.front button.bigbtn')).length === 1 && !(await page.$('form[data-form="zip"] button')), `${await text(page, 'label[for="zip"]')} | ${await text(page, '#su-h')}`);
   check('First page: steps 1 and 2 sit on the pad’s sheet, with "Show my ballot" at its foot', !!(await page.$('.pad.door > .sheet-top')) && !!(await page.$('.pad.door #zip')) && !!(await page.$('.pad.door #su-h')) && !!(await page.$(`.pad.door > ${SETUP}`)));
   const pressed = (k) => page.getAttribute(`#setup [data-act="chip"][data-k="${k}"]`, 'aria-pressed');
-  check('First page: before a ZIP, Newspapers and guides is on, the groups off, no party, no counts', (await pressed('papers')) === 'true' && (await pressed('progressive')) === 'false' && (await pressed('conservative')) === 'false'
+  check('First page: before a ZIP, Newspapers and guides is on, the groups and unions off, no party, no counts', (await pressed('papers')) === 'true' && (await pressed('progressive')) === 'false' && (await pressed('conservative')) === 'false' && (await pressed('unions')) === 'false'
     && (await text(page, '#setup [data-fk="chip-party"]')) === 'A party' && !(await page.$('.su-src')));
   check('First page: the switches read "Fill in my ballot with their picks" (on to start) and "Hide races I’ve decided" (off)', (await text(page, '[data-act="setup-fill"] b')) === 'Fill in my ballot with their picks' && (await text(page, '[data-act="setup-only"] b')) === 'Hide races I’ve decided'
     && (await page.getAttribute('[data-act="setup-fill"]', 'aria-checked')) === 'true' && (await page.getAttribute('[data-act="setup-only"]', 'aria-checked')) === 'false');
@@ -320,11 +320,12 @@ async function mapsSettled(page, timeout = 10000) {
   await tap(page, '#setup [data-act="party-off"]');
   check('After the ZIP: tapping the party again turns it off', (await text(page, '#setup [data-fk="chip-party"]')) === 'A party');
   // The fill line repaints in place (the coverage count lives in the sources sheet since Oct 28).
+  // With Unions: since the labor councils left Progressive (Nov 3), Progressive off happens to leave Austin's count at 20.
   const cov1 = await text(page, '[data-act="setup-fill"] small');
-  await tap(page, '#setup [data-act="chip"][data-k="progressive"]');
+  await tap(page, '#setup [data-act="chip"][data-k="unions"]');
   const cov2 = await text(page, '[data-act="setup-fill"] small');
-  check('After the ZIP: a chip changes the counts in place', (await pressed('progressive')) === 'false' && cov2 !== cov1, `${cov1} -> ${cov2}`);
-  await tap(page, '#setup [data-act="chip"][data-k="progressive"]');
+  check('After the ZIP: a chip changes the counts in place', (await pressed('unions')) === 'true' && (await pressed('progressive')) === 'true' && cov2 !== cov1, `${cov1} -> ${cov2}`);
+  await tap(page, '#setup [data-act="chip"][data-k="unions"]');
   check('After the ZIP: nothing is saved yet', (await savedVG(page)) === null);
   check('After the ZIP: nothing in all caps', (await upperCased(page)).length === 0);
   await noSideScroll(page, 'Steps 1 and 2');

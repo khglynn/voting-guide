@@ -205,7 +205,7 @@ function doorFromBallot(b: Ballot): void {
   S.door.only = S.b.hideDecided;
   // A ballot this device has shown starts with the fill off, so it can't refill races you cleared.
   if (!S.door.fillSet) S.door.fill = false;
-  if (noEndorsements()) { S.door.chips = { papers: false, progressive: false, conservative: false }; S.door.party = null; return; }
+  if (noEndorsements()) { S.door.chips = { papers: false, progressive: false, conservative: false, unions: false }; S.door.party = null; return; }
   for (const c of CHIPS) {
     const st = chipState(b, c.key);
     if (st !== 'empty' || c.key === 'papers') S.door.chips[c.key] = st === 'on' || st === 'some';

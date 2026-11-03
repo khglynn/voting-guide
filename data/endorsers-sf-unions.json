@@ -1,0 +1,287 @@
+[
+  {
+    "id": "csea",
+    "name": "California School Employees Association",
+    "short": "CSEA",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says “The California School Employees Association is the largest classified school employee union in the United States, representing more than 250,000 school support staff throughout California” (https://csea.com/about-csea). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "san-francisco-ca"
+    ]
+  },
+  {
+    "id": "seiu-1021",
+    "name": "SEIU Local 1021",
+    "short": "SEIU 1021",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it “represents over 60,000 employees in local governments, non-profit agencies, health care programs, and schools throughout Northern California” (https://www.seiu1021.org/about-us). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "san-francisco-ca"
+    ]
+  },
+  {
+    "id": "uesf",
+    "name": "United Educators of San Francisco (UESF)",
+    "short": "UESF",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it is “the collective voice of San Francisco Unified School District teachers and paraprofessionals” (https://uesf.org/about/mission-and-vision/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "san-francisco-ca"
+    ]
+  },
+  {
+    "id": "ifpte-local-21",
+    "name": "IFPTE Local 21",
+    "short": "IFPTE Local 21",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that describes itself as “Representing Public Sector professional and technical workers in the bay area” (https://ifpte21.org/about/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://ifpte21.org/endorsements/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "san-francisco-ca"
+    ]
+  },
+  {
+    "id": "unite-here-local-2",
+    "name": "UNITE HERE Local 2",
+    "short": "UNITE HERE 2",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it is “the hotel and restaurant workers’ union in San Francisco, San Mateo County, and the East and North Bay, with over 15,000 members” (https://www.unitehere2.org/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "san-francisco-ca"
+    ]
+  },
+  {
+    "id": "sf-building-trades-council",
+    "name": "San Francisco Building and Construction Trades Council",
+    "short": "SF Building Trades",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it “builds power for workers across 27 unions in the construction and building trades” (https://www.sfbuildingtradescouncil.org/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "san-francisco-ca"
+    ]
+  },
+  {
+    "id": "aft-2121",
+    "name": "AFT Local 2121",
+    "short": "AFT 2121",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it is “City College of San Francisco Faculty Union” (https://www.aft2121.org/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "san-francisco-ca"
+    ]
+  },
+  {
+    "id": "sf-police-officers-association",
+    "name": "San Francisco Police Officers Association",
+    "short": "SF POA",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that describes itself as “Dedicated to improving the working conditions of its members as well as being actively involved in the community we serve” (https://sfpoa.org/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://sfpoa.org/mayor-lurie-joined-by-firefighters-and-police-officers-in-strong-opposition-to-proposition-i/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true,
+    "geography": [
+      "san-francisco-ca"
+    ]
+  },
+  {
+    "id": "teamsters-joint-council-7",
+    "name": "Teamsters Joint Council 7",
+    "short": "Teamsters JC7",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it “represents more than 100,000 members in 20 Local Unions in 48 counties of Northern California, and the Central Valley and 14 Northern Nevada counties” (https://teamstersjc7.org/who-we-are). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://teamstersjc7.org/endorsements",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "san-francisco-ca"
+    ]
+  },
+  {
+    "id": "afscme-3299",
+    "name": "AFSCME Local 3299",
+    "short": "AFSCME 3299",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it is “The University of California's Largest Employee Union, representing more than 42,000 workers at UC's 10 campuses, 5 medical centers, numerous clinics and research laboratories” (https://afscme3299.org/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "san-francisco-ca"
+    ]
+  },
+  {
+    "id": "nuhw",
+    "name": "National Union of Healthcare Workers (NUHW)",
+    "short": "NUHW",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it is “a member-led movement for quality patient care and a stronger voice in the workplace” (https://home.nuhw.org/about/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://home.nuhw.org/political-action",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "san-francisco-ca"
+    ]
+  },
+  {
+    "id": "iuoe-local-3",
+    "name": "Operating Engineers Local 3",
+    "short": "OE3",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it “represents the interests of people who build, serve and protect” (https://www.oe3.org/about-us/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "san-francisco-ca"
+    ]
+  },
+  {
+    "id": "seiu-1000",
+    "name": "SEIU Local 1000",
+    "short": "SEIU 1000",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it is “a united front of more than 100,000 working people employed by the State of California” (https://www.seiu1000.org/about/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://www.seiu1000.org/2026elections/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "san-francisco-ca"
+    ]
+  },
+  {
+    "id": "afscme-council-57",
+    "name": "AFSCME Council 57",
+    "short": "AFSCME 57",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it is “26 local unions representing 35,000 members throughout Northern California and the Central Valley” (https://afscme57.org/about). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://afscme57.org/political-and-legislative/afscme-california-people-2026-general-election",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "san-francisco-ca"
+    ]
+  },
+  {
+    "id": "california-federation-of-teachers",
+    "name": "California Federation of Teachers (CFT)",
+    "short": "CFT",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it is “147 local unions representing dedicated education workers from early childhood through university” (https://www.cft.org/about-us). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "san-francisco-ca"
+    ]
+  },
+  {
+    "id": "california-faculty-association",
+    "name": "California Faculty Association",
+    "short": "CFA",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it is “a union of 29,000 professors, lecturers, librarians, counselors, and coaches who teach and provide services to the California State University system” (https://www.calfac.org/about-cfa/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://www.calfac.org/politics/endorsements/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "san-francisco-ca"
+    ]
+  },
+  {
+    "id": "california-nurses-association",
+    "name": "California Nurses Association",
+    "short": "California Nurses",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it is “a premiere organization of registered nurses” (https://www.nationalnursesunited.org/about-cna). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://www.nationalnursesunited.org/california-endorsements",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "san-francisco-ca"
+    ]
+  },
+  {
+    "id": "seiu-california",
+    "name": "SEIU California State Council",
+    "short": "SEIU California",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it is “over 750,000 members strong in California” (https://seiuca.org/elections/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://seiuca.org/elections/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "san-francisco-ca"
+    ]
+  },
+  {
+    "id": "seiu-2015",
+    "name": "SEIU Local 2015",
+    "short": "SEIU 2015",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it is “the largest union in California, representing more than half a million long-term care workers” (https://www.seiu2015.org/who-we-are/about-seiu-local-2015/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "san-francisco-ca"
+    ]
+  }
+]

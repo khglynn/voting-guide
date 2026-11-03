@@ -51,8 +51,16 @@ async function runSource({ map, fetch, store, archive, sched, now, ping }) {
   const { raw, ...read } = r;
   // The falling-total baseline is the last good read, never a blocked one (security review, Nov 3).
   const baseline = prevRec && !prevRec.blocked_only ? prevRec.read : null;
-  const check = checkRead(read, map, baseline);
   const hash = (await sha256(JSON.stringify(raw || read))).slice(0, 12);
+  if (prevRec && !prevRec.blocked && prevRec.hash === hash) {
+    // A full re-read (a new map, a lost token) that found the same bytes: unchanged, nothing to store or archive.
+    const status = sourceStatus(prevRec.read, map, now);
+    S[map.id] = nextEntry(S[map.id], { kind: 'ok', changed: false, status, allComplete: status === 'complete' }, now, map);
+    S[map.id].token = r.changed_token;
+    S[map.id].map_hash = mh;
+    return { id: map.id, outcome: 'unchanged' };
+  }
+  const check = checkRead(read, map, baseline);
   if (archive) await archive.put(`raw/${map.id}/${now}-${hash}.json`, JSON.stringify({ fetched: now, source: map.id, election: read.election, raw }));
   if (check.readBlocked) {
     S[map.id] = nextEntry(S[map.id], { kind: 'error', error: check.problems.map((p) => p.detail).join('; ') }, now, map);
@@ -71,7 +79,7 @@ async function runSource({ map, fetch, store, archive, sched, now, ping }) {
     delete S[map.id].token;
     return { id: map.id, outcome: 'election mismatch', problems: check.problems };
   }
-  const rec = { read, fetched: now, blocked: false, problems: check.problems, raw_key: `raw/${map.id}/${now}-${hash}.json` };
+  const rec = { read, fetched: now, hash, blocked: false, problems: check.problems, raw_key: `raw/${map.id}/${now}-${hash}.json` };
   await store.put(`src:${map.id}`, JSON.stringify(rec));
   await store.delete(`blocked:${map.id}`);
   for (const p of check.problems) if (p.reason === 'falling total') await ping(map.id, 'falling total', `${map.name}: ${p.detail}.`);

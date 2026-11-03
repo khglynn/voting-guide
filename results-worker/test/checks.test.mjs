@@ -115,3 +115,19 @@ test('checkFile: percentages must match their counts', () => {
   f.items.a.final = { winners: ['A'] };
   assert.ok(checkFile(f).some((p) => /final result on a count that isn't complete/.test(p)));
 });
+
+test('tick: a full re-read of identical bytes is unchanged (no new snapshot)', async () => {
+  const map = mapFor('bexar-tx');
+  const routes = { '/127291/current_ver.txt': 'clarity-bexar.current_ver.txt', '/127291/379718/json/en/summary.json': 'clarity-bexar.summary.json', '/127291/379718/json/en/electionsettings.json': 'clarity-bexar.electionsettings.json' };
+  const store = memStore();
+  const puts = [];
+  const archive = { put: async (k) => puts.push(k) };
+  await runTick({ fetch: fakeFetch(routes), store, archive, maps: [map], now: '2026-11-03T22:00:00.000Z' });
+  const sched = JSON.parse(await store.get('sched:2026-11-03'));
+  delete sched.sources['bexar-tx'].token; // as after a deploy that changed the map
+  sched.sources['bexar-tx'].next_due = null;
+  await store.put('sched:2026-11-03', JSON.stringify(sched));
+  const out = await runTick({ fetch: fakeFetch(routes), store, archive, maps: [map], now: '2026-11-03T22:05:00.000Z' });
+  assert.equal(out.ran[0].outcome, 'unchanged');
+  assert.equal(puts.filter((k) => k.startsWith('raw/')).length, 1);
+});

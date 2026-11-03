@@ -1,0 +1,453 @@
+[
+ {
+  "id": "malibu-city-council",
+  "state": "CA",
+  "level": "city",
+  "office": "Malibu City Council",
+  "district": null,
+  "scope_plain": "All of Malibu votes in this race: the council is elected citywide, not by district. You can vote for up to two candidates. People who live outside city limits, in the Santa Monica Mountains or at Pepperdine, don't see it.",
+  "office_explainer": "One of five members who set Malibu's budget, building rules and city services. Members pick the mayor each year.",
+  "why_it_matters": "Two of the five seats are up, and both members who hold them are running again. The council is steering Malibu's rebuild after the January 2025 Palisades Fire and its push to leave the Santa Monica-Malibu school district. One write-in candidate also qualified.",
+  "vote_for": 2,
+  "incumbent": "Doug Stewart and Marianne Riggins (both running)",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "A. Sam Dibaei",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.dibaeiforcouncil.com",
+    "website_confidence": "verified",
+    "background": "No ballot designation. His official statement gives no age or job. It names fire, water, highway safety and education as the issues and gives a campaign website.",
+    "own_words": [
+     {
+      "text": "The issues are simple. Fire. Water. Highway Safety. Education",
+      "is_quote": true,
+      "source": "https://www.malibucity.org/DocumentCenter/View/38839/Candidate-Statements"
+     },
+     {
+      "text": "Says he will always make himself available to voters.",
+      "is_quote": false,
+      "source": "https://www.malibucity.org/DocumentCenter/View/38839/Candidate-Statements"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Danny Smith",
+    "party": null,
+    "incumbent": false,
+    "website": "https://danny4malibu.com",
+    "website_confidence": "verified",
+    "background": "No ballot designation. Age 44. Lost his home in the Palisades Fire. Member of the Malibu Rebuild Task Force and a zone captain for the La Costa and Carbon Beach neighborhoods (his official statement).",
+    "own_words": [
+     {
+      "text": "use the full power of the city council to spearhead efforts to empower our recovery",
+      "is_quote": true,
+      "source": "https://www.malibucity.org/DocumentCenter/View/38839/Candidate-Statements"
+     },
+     {
+      "text": "His site lists a district to revive fire-hit areas, faster permits, community microgrids, buying the empty courthouse for city use, and an independent Malibu school district.",
+      "is_quote": false,
+      "source": "https://danny4malibu.com"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Doug Stewart",
+    "party": null,
+    "incumbent": true,
+    "website": "https://stewart4malibu.com",
+    "website_confidence": "verified",
+    "background": "Ballot designation: Councilmember/Business Owner. Age 78. On the council since 2022 and has served as mayor. Malibu resident for more than 25 years with a career in finance and budgeting; served on the city's Public Safety Commission and CERT (his official statement).",
+    "own_words": [
+     {
+      "text": "completing the recovery, maintaining strong finances, and protecting the unique character that makes Malibu special",
+      "is_quote": true,
+      "source": "https://www.malibucity.org/DocumentCenter/View/38839/Candidate-Statements"
+     },
+     {
+      "text": "Points to the Highway Patrol's return to PCH, speed cameras coming to dangerous stretches, homelessness down from more than 250 people to fewer than 50, and over $4 million in new city revenue without local taxes.",
+      "is_quote": false,
+      "source": "https://www.malibucity.org/DocumentCenter/View/38839/Candidate-Statements"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Marianne Riggins",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Incumbent. Age 59; her official statement lists her job as retired. Elected to the council in 2022. Sits on the council's School Separation Ad Hoc committee (her statement). Born and raised in Malibu (Malibu.FM).",
+    "own_words": [
+     {
+      "text": "My top priority remains local control over our children's education.",
+      "is_quote": true,
+      "source": "https://www.malibucity.org/DocumentCenter/View/38839/Candidate-Statements"
+     },
+     {
+      "text": "Wants faster fire rebuilding, and points to a permanent skate park, youth soccer fields and a recreation center for all ages that she has worked on.",
+      "is_quote": false,
+      "source": "https://www.malibucity.org/DocumentCenter/View/38839/Candidate-Statements"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Jason Herz",
+    "party": "Write-in",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Qualified write-in candidate (City of Malibu). The name is not printed on the ballot: to vote for this candidate, you write the name in.",
+    "own_words": [],
+    "own_words_status": "none_found",
+    "own_words_checked": {
+     "on": "2026-10-31",
+     "where": [
+      "the City of Malibu’s election page",
+      "Malibu.FM’s stories and its search"
+     ]
+    },
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "City of Malibu: election information (candidates and write-in)",
+    "url": "https://www.malibucity.org/190/Election-Information"
+   },
+   {
+    "name": "City of Malibu: notice of nominees (ballot order)",
+    "url": "https://www.malibucity.org/DocumentCenter/View/38838/Notice-of-Nominees"
+   },
+   {
+    "name": "City of Malibu: notice of election (two seats)",
+    "url": "https://www.malibucity.org/DocumentCenter/View/38139/Notice-of-Candidates-Election-"
+   },
+   {
+    "name": "City of Malibu: candidate statements (LA County statement pages)",
+    "url": "https://www.malibucity.org/DocumentCenter/View/38839/Candidate-Statements"
+   },
+   {
+    "name": "California Secretary of State: randomized alphabet for Nov 3, 2026",
+    "url": "https://www.sos.ca.gov/administration/news-releases-and-advisories/2026-news-releases-and-advisories/california-secretary-state-shirley-n-weber-phd-announces-results-randomized-alphabet-drawing-november-3-2026-general-election"
+   },
+   {
+    "name": "Malibu.FM: meet the four candidates (Sept 24, 2026)",
+    "url": "https://malibu.fm/story/meet-the-four-candidates-for-malibu-city-council-20260924"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "smmusd-board",
+  "state": "CA",
+  "level": "school",
+  "office": "Santa Monica-Malibu Unified School District Board of Education",
+  "district": null,
+  "scope_plain": "All of Malibu and all of Santa Monica vote in this race. The board is elected at large, so everyone in the district can vote for up to four candidates, whichever city they live in.",
+  "office_explainer": "One of seven board members who run Santa Monica's and Malibu's public schools: budget, superintendent and policies.",
+  "why_it_matters": "Five candidates for four seats, so one will lose. Three board members are running again; a fourth, Richard Tahvildaran-Jesswein, is not. Stacy Rouse is the only Malibu resident running. Malibu is working to form its own school district: in December 2025 the board voted 7-0 for the agreements to split, and a state bill to carve Malibu out (AB 745) was introduced in June 2026.",
+  "vote_for": 4,
+  "incumbent": "Laurie Lieberman, Alicia Mignano and Stacy Rouse (running); Richard Tahvildaran-Jesswein (not running)",
+  "open_seat": null,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Laurie Lieberman",
+    "party": null,
+    "incumbent": true,
+    "website": "https://www.lieberman4schoolboard.com",
+    "website_confidence": "verified",
+    "background": "Ballot designation: School Board Vice-President. On the board since 2010 (Malibu.FM). Former parent activist with a legal and policy background (her official statement).",
+    "own_words": [
+     {
+      "text": "strong public schools are key to preserving democracy and opportunity",
+      "is_quote": true,
+      "source": "https://www.santamonica.gov/elections/2026-11-03/candidates/laurie-lieberman"
+     },
+     {
+      "text": "Lists transitional kindergarten, help for students who are behind, a careful look at technology in schools, music and arts, and a balanced budget with strong reserves.",
+      "is_quote": false,
+      "source": "https://www.santamonica.gov/elections/2026-11-03/candidates/laurie-lieberman"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Harry Leshner",
+    "party": null,
+    "incumbent": false,
+    "website": "https://leshnerforsmmusd.com",
+    "website_confidence": "verified",
+    "background": "Ballot designation: Executive/Education Advisor. Santa Monica resident for 18 years, tech partnerships executive and education nonprofit board member, with a first grader and a toddler (his official statement).",
+    "own_words": [
+     {
+      "text": "Affordable After-Care for All: Expand care and enrichment programs for all families.",
+      "is_quote": true,
+      "source": "https://www.santamonica.gov/elections/2026-11-03/candidates/harry-leshner"
+     },
+     {
+      "text": "Wants limits on screen time and classroom AI, greener campuses and safer walking and biking routes to school. Says the board needs members whose kids attend district schools now.",
+      "is_quote": false,
+      "source": "https://www.santamonica.gov/elections/2026-11-03/candidates/harry-leshner"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Robbie Staenberg",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.robbiestaenberg.com",
+    "website_confidence": "verified",
+    "background": "Ballot designation: Teacher/Legislative Advisor. Grew up in Santa Monica and went to its public schools. Taught social studies at a high school in Oakland from 2018 to 2023, then went to work for Assemblymember Rick Chavez Zbur (his official statement).",
+    "own_words": [
+     {
+      "text": "Expanding access to early childhood education and after-school programs",
+      "is_quote": true,
+      "source": "https://www.santamonica.gov/elections/2026-11-03/candidates/robbie-staenberg"
+     },
+     {
+      "text": "Says he would be the only board member who has taught full time and the only one who went to the district's schools. Also lists openness with the community and closing gaps in student results.",
+      "is_quote": false,
+      "source": "https://www.santamonica.gov/elections/2026-11-03/candidates/robbie-staenberg"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Stacy Rouse",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Boardmember/Conflict Specialist. Malibu resident for 24 years, finishing her first term on the board. Former PTA president and Malibu Schools Leadership Council president; her two children went through Malibu's public schools (her official statement).",
+    "own_words": [
+     {
+      "text": "I hope to continue my work for the Malibu community, and SM-MUSD students, families and staff.",
+      "is_quote": true,
+      "source": "https://www.santamonica.gov/elections/2026-11-03/candidates/stacy-j-rouse"
+     },
+     {
+      "text": "Says she has worked to bring the two cities together by listening and working through disagreements, after fires, the pandemic and tension between Santa Monica and Malibu.",
+      "is_quote": false,
+      "source": "https://www.santamonica.gov/elections/2026-11-03/candidates/stacy-j-rouse"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Alicia Mignano",
+    "party": null,
+    "incumbent": true,
+    "website": "https://aliciaforsmmusd.com",
+    "website_confidence": "verified",
+    "background": "Ballot designation: School Board President. Elected to the board in 2022. Renter in Santa Monica's Pico neighborhood, immigrant from Mexico, and parent of a sixth grader in the district (her official statement).",
+    "own_words": [
+     {
+      "text": "I serve because I know what education can do for a child",
+      "is_quote": true,
+      "source": "https://www.santamonica.gov/elections/2026-11-03/candidates/alicia-mignano"
+     },
+     {
+      "text": "Points to work for students learning English, keeping early reading teachers through budget cuts, cleaner classroom air and long-delayed repairs.",
+      "is_quote": false,
+      "source": "https://www.santamonica.gov/elections/2026-11-03/candidates/alicia-mignano"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "City of Santa Monica: General Election 2026 (school board candidates and ballot designations)",
+    "url": "https://www.santamonica.gov/elections/2026-11-03"
+   },
+   {
+    "name": "City of Santa Monica: nomination period opens (four school board seats)",
+    "url": "https://www.santamonica.gov/press/2026/07/07/election-nomination-period-begins-july-13"
+   },
+   {
+    "name": "SMMUSD: board members and terms",
+    "url": "https://www.smmusd.org/board-of-education/board-members"
+   },
+   {
+    "name": "SMMUSD: Malibu unification",
+    "url": "https://www.smmusd.org/our-district/superintendent/malibu-unification"
+   },
+   {
+    "name": "California Secretary of State: randomized alphabet for Nov 3, 2026",
+    "url": "https://www.sos.ca.gov/administration/news-releases-and-advisories/2026-news-releases-and-advisories/california-secretary-state-shirley-n-weber-phd-announces-results-randomized-alphabet-drawing-november-3-2026-general-election"
+   },
+   {
+    "name": "Malibu.FM: five candidates vie for four seats (Aug 14, 2026)",
+    "url": "https://malibu.fm/story/five-candidates-vie-for-four-seats-on-smmusd-board-20260814"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "smccd-board",
+  "state": "CA",
+  "level": "school",
+  "office": "Santa Monica Community College District Board of Trustees",
+  "district": null,
+  "scope_plain": "All of Malibu and all of Santa Monica vote in this race. Trustees are elected at large, so everyone in the college district can vote for up to four candidates.",
+  "office_explainer": "Trustees govern Santa Monica College: its budget, its president, its programs and its campuses, including Malibu's.",
+  "why_it_matters": "Five candidates for four seats, so one will lose. Three are sitting trustees: board chair Sion Roy, vice chair Tom Peters and Luis Barrera Castanon, appointed in 2025. Tom Peters's statement says the college gets a new superintendent/president in January 2027.",
+  "vote_for": 4,
+  "incumbent": "Sion Roy, Tom Peters and Luis Barrera Castanon (appointed in 2025) are running",
+  "open_seat": null,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Tom Peters",
+    "party": null,
+    "incumbent": true,
+    "website": "https://www.tompeters4trustee.org",
+    "website_confidence": "verified",
+    "background": "Ballot designation: SMC Board Vice-Chair. On the board since 2022. Former tenured SMC faculty member in the Center for Students with Disabilities, with a doctorate in business administration (his official statement).",
+    "own_words": [
+     {
+      "text": "Work with state legislators to secure new ongoing funding sources",
+      "is_quote": true,
+      "source": "https://www.santamonica.gov/elections/2026-11-03/candidates/thomas-peters"
+     },
+     {
+      "text": "Wants affordable student housing paid for by Measure SMC, an upgraded veterans center, a new campus police station and a new cloud computing bachelor's degree.",
+      "is_quote": false,
+      "source": "https://www.santamonica.gov/elections/2026-11-03/candidates/thomas-peters"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Oscar de la Torre",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.vote4oscar.org",
+    "website_confidence": "verified",
+    "background": "Ballot designation: Youth Center Director. Served 18 years on the Santa Monica-Malibu school board (2002 to 2020) and four years on the Santa Monica City Council (2020 to 2024). Founded a youth center in Santa Monica (his official statement; Santa Monica Next).",
+    "own_words": [
+     {
+      "text": "Santa Monica College (SMC) is facing an unprecedented fiscal and enrollment crisis.",
+      "is_quote": true,
+      "source": "https://www.santamonica.gov/elections/2026-11-03/candidates/oscar-de-la-torre"
+     },
+     {
+      "text": "Wants better retention and graduation rates, student and worker housing, and a retraining program for residents.",
+      "is_quote": false,
+      "source": "https://www.santamonica.gov/elections/2026-11-03/candidates/oscar-de-la-torre"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Luis Barrera Castanon",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Appointed Santa Monica College Board Trustee. Appointed to the board in February 2025. A former SMC student who went on to a doctorate and more than 20 years with LA County nonprofits (his official statement).",
+    "own_words": [
+     {
+      "text": "I commit to keep SMC affordable, accountable, and open to all.",
+      "is_quote": true,
+      "source": "https://www.santamonica.gov/elections/2026-11-03/candidates/luis-barrera-castanon"
+     },
+     {
+      "text": "Focuses on student success, career paths built with employers, and openness; says he posts the board's votes online.",
+      "is_quote": false,
+      "source": "https://www.santamonica.gov/elections/2026-11-03/candidates/luis-barrera-castanon"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Kera Blades-Snell",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.blades-snell4smctrustee.com",
+    "website_confidence": "verified",
+    "background": "Ballot designation: Entrepreneur/Nonprofit Director. Executive director of the Santa Monica Black Empowerment Association, small business owner and president of SMC Associates. Started at a community college in Belize and finished her degrees as an adult (her official statement).",
+    "own_words": [
+     {
+      "text": "keep Santa Monica College accessible, affordable, and responsive to every student",
+      "is_quote": true,
+      "source": "https://www.santamonica.gov/elections/2026-11-03/candidates/kera-blades-snell"
+     },
+     {
+      "text": "Promises teamwork on the board and careful spending, with attention to students who come back to school later in life.",
+      "is_quote": false,
+      "source": "https://www.santamonica.gov/elections/2026-11-03/candidates/kera-blades-snell"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Sion Roy",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Santa Monica College Board Chair/Physician. On the board since 2017. Physician at Harbor-UCLA and past president of the Los Angeles County Medical Association (his official statement; Santa Monica Next).",
+    "own_words": [
+     {
+      "text": "help as many students as possible achieve their goals as the #1 transfer school to UC",
+      "is_quote": true,
+      "source": "https://www.santamonica.gov/elections/2026-11-03/candidates/sion-roy"
+     },
+     {
+      "text": "Wants more classes for high schoolers in the district, and growth in SMC's Emeritus program and its new Malibu campus. Started the board's health care job training task force.",
+      "is_quote": false,
+      "source": "https://www.santamonica.gov/elections/2026-11-03/candidates/sion-roy"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "City of Santa Monica: General Election 2026 (college board candidates and ballot designations)",
+    "url": "https://www.santamonica.gov/elections/2026-11-03"
+   },
+   {
+    "name": "City of Santa Monica: nomination period opens (four college board seats)",
+    "url": "https://www.santamonica.gov/press/2026/07/07/election-nomination-period-begins-july-13"
+   },
+   {
+    "name": "California Secretary of State: randomized alphabet for Nov 3, 2026",
+    "url": "https://www.sos.ca.gov/administration/news-releases-and-advisories/2026-news-releases-and-advisories/california-secretary-state-shirley-n-weber-phd-announces-results-randomized-alphabet-drawing-november-3-2026-general-election"
+   },
+   {
+    "name": "Santa Monica Next: meet the five candidates for the SMC board",
+    "url": "https://santamonicanext.org/2026/06/meet-the-five-candidates-for-the-smc-college-board/"
+   }
+  ],
+  "confidence": "verified"
+ }
+]

@@ -78,7 +78,7 @@
   "election_day": {
     "polls_open": "6:00 AM",
     "polls_close": "9:00 PM",
-    "in_line_rule": "If you are in line at 9 PM, stay in line. NYC311: 'If you are in line by 9 PM, you can stay in line to cast a ballot.'",
+    "in_line_rule": "In line by 9 PM? You still get to vote.",
     "vote_centers": false,
     "lookup_url": "https://voterlookup.elections.ny.gov/",
     "confidence": "verified"
@@ -291,7 +291,7 @@
         "If asked, a photo ID works, or a current utility bill, bank statement, paycheck, government check or government document with your name and address."
       ],
       "deadline": null,
-      "source": "https://elections.ulstercountyny.gov/?p=482",
+      "source": "https://vote.nyc/page/voter-id",
       "confidence": "verified"
     },
     {
@@ -489,8 +489,8 @@
       "url": "https://www.sullivanny.gov/Departments/Elections"
     },
     {
-      "name": "Ulster County Board of Elections: What Do I Need When I Go to Vote? (first-time voter ID; affidavit ballot if no ID; same rule statewide)",
-      "url": "https://elections.ulstercountyny.gov/?p=482"
+      "name": "NYC Board of Elections: Voter ID (first-time voter ID; affidavit ballot if no ID; same rule statewide)",
+      "url": "https://vote.nyc/page/voter-id"
     },
     {
       "name": "NYC Board of Elections: Contact Us (borough office addresses and phones)",
@@ -555,6 +555,108 @@
     {
       "text": "Check how many judges each race lets you choose. Some races elect several judges, and each person counts as one choice.",
       "applies_to": "section:judicial"
+    }
+  ],
+  "dated": [
+    {
+      "path": "mail_ballot.mail_cutoff_advice",
+      "from": "2026-10-28",
+      "text": "Postmarks count, but USPS warns that a ballot dropped after the last pickup on Election Day 'will not be postmarked until the following business day,' which would miss the deadline. The safest way is to hand your ballot in: at your county board, any early voting site in your county through Nov 1, or any poll site in your county on Nov 3 by 9 PM."
+    },
+    {
+      "path": "mail_ballot.mail_cutoff_advice",
+      "from": "2026-11-02",
+      "text": "Postmarks count, but USPS warns that a ballot dropped after the last pickup on Election Day 'will not be postmarked until the following business day,' which would miss the deadline. The safest way is to hand your ballot in: at your county board, or any poll site in your county on Nov 3 by 9 PM."
+    },
+    {
+      "path": "situations.away_on_election_day.answer",
+      "from": "2026-11-02",
+      "text": "Early voting ended Sunday, November 1. Online mail-ballot requests closed October 24. You can still apply in person at your county board through today, November 2, and vote your ballot there."
+    },
+    {
+      "path": "situations.away_on_election_day.short",
+      "from": "2026-11-02",
+      "text": "Early voting ended; apply for and vote a mail ballot at your county board today, Nov 2."
+    },
+    {
+      "path": "situations.away_on_election_day.steps.2",
+      "from": "2026-11-02",
+      "text": "Already have a mail ballot? Don't count on the mail now. Hand it in at any poll site in your county on November 3 until 9 PM, or at your county board."
+    },
+    {
+      "path": "situations.away_on_election_day.answer",
+      "from": "2026-11-03",
+      "text": "Early voting ended Sunday, November 1. The last day to apply for a mail ballot in person was November 2. If you already have a mail ballot, hand it in at any poll site in your county by 9 PM today, or at your county board."
+    },
+    {
+      "path": "situations.away_on_election_day.short",
+      "from": "2026-11-03",
+      "text": "Early voting is over; hand in a mail ballot you have at any poll site by 9 PM."
+    },
+    {
+      "path": "situations.away_on_election_day.steps.0",
+      "from": "2026-11-02",
+      "text": "NYC: look up your Election Day poll site at findmypollsite.vote.nyc."
+    },
+    {
+      "path": "situations.away_on_election_day.steps.1",
+      "from": "2026-11-02",
+      "text": "Sullivan County: early voting at Monticello and Liberty ended Nov 1."
+    },
+    {
+      "path": "situations.away_on_election_day.actions.0.label",
+      "from": "2026-11-02",
+      "text": "Find my poll site"
+    },
+    {
+      "path": "situations.college_student.short",
+      "from": "2026-11-02",
+      "text": "Early voting ended Nov 1; apply at your home county board by Nov 2, or vote there Nov 3."
+    },
+    {
+      "path": "situations.college_student.answer",
+      "from": "2026-11-02",
+      "text": "Registered at home but away at school? Online mail-ballot requests closed Saturday, October 24, and early voting ended Sunday, November 1. You can still apply in person at your home county board through November 2. You can also name someone to deliver your application and pick up your ballot. Or vote at your home poll site on Election Day, November 3, 6 AM to 9 PM."
+    },
+    {
+      "path": "gotchas.0.short",
+      "from": "2026-11-02",
+      "text": "Registration and online mail-ballot requests closed Oct 24; vote on Nov 3."
+    },
+    {
+      "path": "gotchas.0.text",
+      "from": "2026-11-02",
+      "text": "October 24 was the last day to register and the last day to request a mail ballot online or by mail. Both have passed, and early voting ended November 1. You can still apply for a mail ballot in person at your county board through Monday, November 2, or vote on Election Day. No same-day registration in New York."
+    },
+    {
+      "path": "situations.college_student.short",
+      "from": "2026-11-03",
+      "text": "Mail-ballot applications closed Nov 2; vote at your home poll site by 9 PM today."
+    },
+    {
+      "path": "situations.college_student.answer",
+      "from": "2026-11-03",
+      "text": "Registered at home but away at school? Online mail-ballot requests closed October 24, early voting ended November 1, and in-person applications at your county board closed November 2. Today you can vote at your home poll site until 9 PM. Already have a mail ballot? Hand it in at any poll site in your home county or at your county board by 9 PM."
+    },
+    {
+      "path": "gotchas.0.short",
+      "from": "2026-11-03",
+      "text": "Registration and mail-ballot applications have closed; vote at your poll site by 9 PM."
+    },
+    {
+      "path": "gotchas.0.text",
+      "from": "2026-11-03",
+      "text": "October 24 was the last day to register and the last day to request a mail ballot online or by mail, and in-person applications at your county board closed Monday, November 2. Early voting ended November 1. Today, vote at your own poll site, 6 AM to 9 PM. No same-day registration in New York."
+    },
+    {
+      "path": "situations.away_on_election_day.actions.1.label",
+      "from": "2026-11-03",
+      "text": "Track my ballot"
+    },
+    {
+      "path": "situations.away_on_election_day.actions.1.url",
+      "from": "2026-11-03",
+      "text": "https://voterlookup.elections.ny.gov/"
     }
   ]
 }

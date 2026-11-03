@@ -15,7 +15,7 @@
     "phone": "(800) 696-0136"
    }
   ],
-  "hours": "Open 8 AM to 5 PM Monday to Friday, with longer hours in election season."
+  "hours": "Open for voting 8 AM to 5 PM every day through November 2, and 7 AM to 8 PM on Election Day, November 3. Other weeks: 8 AM to 5 PM Monday to Friday."
  },
  "sample_ballot_url": "https://www.sdvote.com/content/rov/en/sample-ballot-info-lookup.html",
  "zips": [
@@ -192,6 +192,24 @@
   "election_day": "https://experience.arcgis.com/experience/b3cb0808081a40808324b9ae9be37e49",
   "drop_box": "https://experience.arcgis.com/template/ab3d24dcf7e74ccc9c1be49e9fec623b"
  },
+ "early_in_person": {
+  "start": "2026-10-05",
+  "end": "2026-11-02",
+  "hours_note": "Every San Diego County vote center, including the Registrar's office at 5600 Overland Ave., is open 8 AM to 5 PM every day from Saturday, October 31, through November 2. On Election Day, November 3, every center is open 7 AM to 8 PM. The Registrar's office has taken early votes since October 5, and some centers opened October 24. You can use any vote center in San Diego County.",
+  "hours_short": "San Diego County vote centers are open 8 AM to 5 PM every day.",
+  "lookup_url": "https://experience.arcgis.com/experience/b3cb0808081a40808324b9ae9be37e49",
+  "source": "https://www.sdvote.com/content/rov/en/elections/vote-center-locations.html",
+  "confidence": "verified"
+ },
+ "mail_ballot": {
+  "request_deadline": {
+   "date": "2026-10-27",
+   "rule": "You don't need to ask for a ballot: every voter gets one in the mail. San Diego County's last day to ask for a replacement by mail was Tuesday, October 27, at 5 PM. You can now vote in person at any San Diego County vote center, including the Registrar's office: all are open 8 AM to 5 PM through Nov 2, and 7 AM to 8 PM on Election Day.",
+   "source": "https://www.sdvote.com/content/rov/en/how-to-vote-by-mail/info-for-replacement-ballot.html"
+  },
+  "source": "https://www.sdvote.com/content/rov/en/how-to-vote-by-mail/info-for-replacement-ballot.html",
+  "confidence": "verified"
+ },
  "situations": [
   {
    "id": "no_mail_ballot_or_lost",
@@ -199,6 +217,13 @@
    "answer": "San Diego County's deadline for a mailed replacement was 5 PM on October 27. Vote centers are open 8 AM to 5 PM through Nov 2, and 7 AM to 8 PM on Election Day. The Registrar's office at 5600 Overland Ave. is also a vote center. You can vote at any San Diego County vote center.",
    "steps": null,
    "source": "https://www.sdvote.com/content/rov/en/how-to-vote-by-mail/info-for-replacement-ballot.html",
+   "confidence": "verified"
+  },
+  {
+   "id": "wrong_polling_place",
+   "short": "San Diego County uses vote centers: you can vote at any vote center in the county.",
+   "answer": "San Diego County uses vote centers, so you can vote at any one in the county, including the Registrar's office. Go to the nearest one; the county's vote center map shows them all.",
+   "source": "https://www.sdvote.com/content/rov/en/voting-options.html",
    "confidence": "verified"
   }
  ],

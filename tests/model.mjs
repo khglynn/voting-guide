@@ -57,6 +57,14 @@ function open(stCode, placeIds, b = null) {
   st.S.b = b || st.emptyBallotState('');
   return ballot;
 }
+/* The same, with its dated text as it reads on `day`. A check about something else compares with the file's own
+   text, so it must not change with the day CI runs (Oct 30: Florida's answers switch on Nov 1 and 2); the dated
+   lines have their own checks ("stale lines" in model-ledger.mjs). */
+function openOn(day, stCode, placeIds) {
+  const ballot = open(stCode, placeIds);
+  ballot.howto = mods.plan.localHowto(ballot.stateHowto, ballot.places, ballot.county, day);
+  return ballot;
+}
 const head = (link) => st.parseShareHead(link);
 
 /* ---------- 0. the address lookup adds the state and ZIP the guide already knows ---------- */
@@ -223,6 +231,18 @@ function roundTrip(name, stCode, places, mutate) {
   const cleared = st.normalizeRanks(ballot, b);
   check('normalizeRanks: a pick-one choice on a ranked race becomes 1st choice', (b.ranks['portland-council-3'] || []).join() === 'Steve Novick' && b.picks['portland-council-3'] === 'DONE' && cleared === 0);
   check('normalizeRanks: unknown names drop out', !b.ranks['multnomah-chair']);
+}
+
+/* ---------- 3b. two candidates with one last name ---------- */
+{
+  const c = read('state-TX.json').items.find((x) => x.id === 'tx-supreme-court-place-7');
+  check('candidates: the two Hawkinses in one race each show a full name', !!c && c.candidates.map((k) => k.short).join() === 'Kyle Hawkins,Kristen Hawkins');
+  // The data's `short` for a two-word surname (review of #71, Nov 1): "Reyes Uranga", never "Uranga".
+  const wrd = read('place-long-beach-ca.json').items.find((x) => x.id === 'wrd-division-3');
+  check('candidates: a two-word surname from the data shows whole', !!wrd && wrd.candidates.find((k) => k.name === 'Tonia Reyes Uranga')?.short === 'Reyes Uranga', wrd && wrd.candidates.map((k) => k.short).join());
+  const dupes = fs.readdirSync(DATA).filter((f) => /^(state|place)-.*\.json$/.test(f)).flatMap((f) => (read(f).items || [])
+    .filter((x) => x.kind === 'contest' && new Set(x.candidates.map((k) => k.short)).size < x.candidates.length).map((x) => `${f} ${x.id}`));
+  check('candidates: no race shows two candidates under one short name', dupes.length === 0, dupes.join(', '));
 }
 
 /* ---------- 4. districts ---------- */
@@ -763,6 +783,9 @@ function roundTrip(name, stCode, places, mutate) {
   }).map(([s, ids]) => ids.join('+') || s);
   check('stats: every ballot the index can open counts as its state code, which has a statewide ballot of its own', opens.length > Object.keys(INDEX.states).length && odd.length === 0, JSON.stringify(odd));
   check('stats: the places one ZIP alone leads to (Ballwin, Clayton, Webster Groves) are in the index, and count as their state', ['ballwin-mo', 'clayton-mo', 'webster-groves-mo'].every((id) => Object.values(INDEX.zips).filter((ids) => ids.includes(id)).length === 1 && ballotOf('MO', [id]).st === 'MO'));
+  // Torrance is wholly in Assembly District 66, so the shared LA race is on its ballot outright (its scope says "all of Torrance"), not a "may apply".
+  const torr = ballotOf('CA', ['torrance-ca']);
+  check('torrance: Assembly District 66 is on the ballot, not a maybe', torr.order.includes('ca-assembly-66') && !torr.mayApply.has('ca-assembly-66'));
   // The referring site, as Vercel's script may see it once startStats() has shadowed document.referrer.
   check('stats: referrerOrigin keeps the origin and drops the path and the query', stats.referrerOrigin('https://referrer.example/search?zip=78704&q=a@b.co#x') === 'https://referrer.example' && stats.referrerOrigin('http://news.example.org:8080/a/b') === 'http://news.example.org:8080' && stats.referrerOrigin('https://me:pw@referrer.example/') === 'https://referrer.example');
   check('stats: referrerOrigin gives nothing for no referrer or one that isn’t a web address', ['', 'not an address', 'about:blank', 'android-app://com.google.android.gm/', 'javascript:alert(1)', 'file:///etc/hosts', null, undefined].every((r) => stats.referrerOrigin(r) === ''));
@@ -867,7 +890,7 @@ function roundTrip(name, stCode, places, mutate) {
     const auraRows = Object.entries(real.endorsements).filter(([t, r]) => r.aura && liveB.byId.has(t));
     check('adds: a preview brings only the source the live data lacks', f.endorsers.map((e) => e.id).join() === 'aura', f.endorsers.map((e) => e.id).join());
     const ae = f.endorsers[0];
-    check('adds: its record starts off for everyone, is marked as a preview, and keeps its fields', ae.default_on === false && ae.preview === true && ae.name === 'AURA' && ae.type === 'advocacy' && ae.lean === 'lean_left' && ae.lean_basis_kind === 'mission' && ae.guide_url === real.endorsers.find((e) => e.id === 'aura').guide_url && ae.home_places.join() === 'austin-tx', JSON.stringify(ae).slice(0, 200));
+    check('adds: its record starts off for everyone, is marked as a preview, and keeps its fields', ae.default_on === false && ae.preview === true && ae.name === 'AURA' && ae.type === 'advocacy' && ae.lean === 'lean_left' && ae.lean_basis_kind === 'mission' && ae.guide_url === real.endorsers.find((e) => e.id === 'aura').guide_url && ae.home_places.join() === 'austin-hays-tx,austin-tx,austin-williamson-tx', JSON.stringify(ae).slice(0, 200));
     const same = (a, b) => ['s', 'c', 'note', 'why', 'url', 'date', 'conf'].every((k) => JSON.stringify(a[k] ?? null) === JSON.stringify(b[k] ?? null));
     check('adds: every one of its rows on this ballot comes along, as the data has it', auraRows.length > 10 && Object.keys(f.rows).length === auraRows.length && auraRows.every(([t, r]) => f.rows[t] && same(f.rows[t].aura, r.aura)), `${Object.keys(f.rows).length} of ${auraRows.length}`);
     const nb = bl.buildBallot(ad.withFound(sbx, f), [liveP]);
@@ -993,7 +1016,9 @@ function roundTrip(name, stCode, places, mutate) {
   const plan = mods.plan;
   const ps = views.planstrip;
   const TRAVIS_EARLY = 'https://www.google.com/maps/d/viewer?mid=1t_vWJgd_BRfKnJn_fQoHE25IV2i_0Jo';
-  const TRAVIS_DAY = 'https://www.google.com/maps/d/viewer?mid=1Y86BIAffVIw2L_WEkSls_0OWg7NpvX8';
+  // Nov 3: the county's Election Day tab embeds a new map ("G26 Election Day Locations - Updated"), so the plan links
+  // it instead of the Nov 1 PDF list.
+  const TRAVIS_DAY = 'https://www.google.com/maps/d/viewer?mid=1zqK0dRaFZQEYLkYi54gtLcxIZaeCsOQ';
   const WILCO_EARLY = 'https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Early%20Voting%20Dashboard.html';
   const keep = { ballot: st.S.ballot, b: st.S.b, open: st.S.ui.open };
   const aus = read('place-austin-tx.json');
@@ -1004,7 +1029,7 @@ function roundTrip(name, stCode, places, mutate) {
   const tx = read('state-TX.json').howto;
   let b = open('TX', ['austin-tx']);
   bl.localize(b, '78704', null);
-  check('where: on a Travis ZIP, the plan\u2019s early voting and Election Day links are Travis\u2019s own maps', b.county === 'Travis' && b.howto.early_in_person.lookup_url === TRAVIS_EARLY && b.howto.election_day.lookup_url === TRAVIS_DAY && !b.howto.county_links, `${b.county} ${b.howto.early_in_person.lookup_url}`);
+  check('where: on a Travis ZIP, the plan\u2019s early voting and Election Day links are Travis\u2019s own (early map, Election Day map)', b.county === 'Travis' && b.howto.early_in_person.lookup_url === TRAVIS_EARLY && b.howto.election_day.lookup_url === TRAVIS_DAY && !b.howto.county_links, `${b.county} ${b.howto.early_in_person.lookup_url}`);
   const early = plan.nextStep(b.howto, '2026-10-28');
   const day = plan.nextStep(b.howto, '2026-11-03', false, 600);
   check('where: during early voting the button opens the early map, on Election Day the Election Day map', early.primary.url === TRAVIS_EARLY && early.primary.look === 'early_in_person' && day.primary.url === TRAVIS_DAY && day.primary.look === 'election_day', `${early.primary.url} ${day.primary.url}`);
@@ -1016,18 +1041,24 @@ function roundTrip(name, stCode, places, mutate) {
   const btns = [...html.matchAll(/<a class="pbtn (gold|line)" href="([^"]+)"[^>]*data-county="([^"]+)">([^<]+)<\/a>/g)].map((m) => `${m[1]} ${m[3]} ${m[4]}`);
   check('where: a split ZIP\u2019s plan shows one labeled button per county, Travis first in gold', btns.join('|') === 'gold Travis Travis County|line Williamson Williamson County|line Hays Hays County' && /<p class="plan-cty">Find [a-z ]+ in your county:<\/p>/.test(html), btns.join('|'));
   bl.localize(b, '78729', 'Williamson');
-  check('where: once the address lookup says Williamson, Williamson\u2019s links, and one button again', b.county === 'Williamson' && b.howto.early_in_person.lookup_url === WILCO_EARLY && b.howto.election_day.lookup_url === 'https://www.wilcotx.gov/elections' && !b.howto.county_links && !/data-county=/.test(ps.planHTML()));
+  check('where: once the address lookup says Williamson, Williamson\u2019s links, and one button again', b.county === 'Williamson' && b.howto.early_in_person.lookup_url === WILCO_EARLY && b.howto.election_day.lookup_url === 'https://www.wilcotx.gov/DocumentCenter/View/22255/Notice-of-General-Election-Williamson-County' && !b.howto.county_links && !/data-county=/.test(ps.planHTML()));
+  // Nov 1: Lakewood's own Jefferson County mail and hours text, not the state's Denver, Adams and Arapahoe lines.
+  // (The state's other mail fields keep statewide facts with a Denver aside; only these four are county-specific.)
+  const lkw = open('CO', ['lakewood-co']).howto;
+  const lkwText = JSON.stringify([lkw.mail_ballot.request_deadline, lkw.mail_ballot.return_options, lkw.early_in_person.hours_note, lkw.early_in_person.hours_short]);
+  check('where: Lakewood’s mail and vote center text is Jefferson County’s, naming no other county', /Jefferson County/.test(lkwText) && !/Denver|Adams|Arapahoe/.test(lkwText), lkwText.slice(0, 200));
   b = open('TX', ['pflugerville-tx']);
   bl.localize(b, '78660', null);
   check('where: Pflugerville\u2019s 78660 is split, so Travis and Williamson both show', b.county === null && (b.howto.county_links || []).map((c) => c.county).join('|') === 'Travis|Williamson');
   // A county's own answer: Orange's lost mail ballot, with its own line; the state's question and buttons stay.
+  // As of Oct 30: these answers switch on Nov 1 and 2 (openOn).
   const fl = read('state-FL.json').howto.situations.find((x) => x.id === 'no_mail_ballot_or_lost');
-  b = open('FL', ['orlando-fl']);
+  b = openOn('2026-10-30', 'FL', ['orlando-fl']);
   const own = b.howto.situations.find((x) => x.id === 'no_mail_ballot_or_lost');
   check('where: Orlando\u2019s lost-ballot answer is Orange County\u2019s, with its vote-by-mail line', own.question === fl.question && own.actions.length === fl.actions.length && /27 sites/.test(own.answer) && own.steps.some((x) => /407-836-8683/.test(x)) && own.source === 'https://voteorangefl.gov/request-a-mail-ballot/', own.short);
-  b = open('FL', ['pensacola-fl']);
+  b = openOn('2026-10-30', 'FL', ['pensacola-fl']);
   check('where: Pensacola\u2019s answer stands alone (steps: null) and the state\u2019s other questions are untouched', b.howto.situations.find((x) => x.id === 'no_mail_ballot_or_lost').steps === null && JSON.stringify(b.howto.situations.find((x) => x.id === 'college_student')) === JSON.stringify(read('state-FL.json').howto.situations.find((x) => x.id === 'college_student')));
-  b = open('FL', []);
+  b = openOn('2026-10-30', 'FL', []);
   check('where: a statewide Florida ballot keeps the state\u2019s answer', JSON.stringify(b.howto.situations.find((x) => x.id === 'no_mail_ballot_or_lost')) === JSON.stringify(fl));
   open('FL', ['orlando-fl']);
   st.S.ui.open = new Set(['whatif', 'bx-office']);
@@ -1065,12 +1096,12 @@ function roundTrip(name, stCode, places, mutate) {
   check('dated: Pensacola\u2019s drop-off note says early voting closed once it has (Nov 1)', /^Drop boxes/.test(plan.applyDated(pen, pen.dated, '2026-10-31').notes) && /^Early voting and its drop boxes closed/.test(plan.applyDated(pen, pen.dated, '2026-11-01').notes));
   // The help buttons open the county's tools where the place has them (west-mail-25, fl-10, ny-11, south-midwest-19, east-18).
   const act = (h, sid, label) => ((h.situations.find((x) => x.id === sid) || {}).actions || []).find((a) => a.label === label);
-  let b = open('FL', ['orlando-fl']);
+  let b = openOn('2026-10-30', 'FL', ['orlando-fl']); // before the button switches on Nov 1 ("stale lines" in model-ledger)
   check('help buttons: Orlando\u2019s "Find early voting places" opens Orange County\u2019s early voting page', act(b.howto, 'away_on_election_day', 'Find early voting places').url === 'https://voteorangefl.gov/vote-early/', JSON.stringify(act(b.howto, 'away_on_election_day', 'Find early voting places')));
   check('help buttons: Orlando\u2019s tracking link is Orange County\u2019s BallotTrax', b.howto.mail_ballot.tracking_url === 'https://floridaorangevotes.ballottrax.net/voter/' && act(b.howto, 'no_mail_ballot_or_lost', 'Track my ballot').url === 'https://floridaorangevotes.ballottrax.net/voter/');
   b = open('FL', ['tallahassee-fl']);
   check('help buttons: Tallahassee keeps the state\u2019s tracker (Leon\u2019s link is held until someone opens it)', b.howto.mail_ballot.tracking_url === read('state-FL.json').howto.mail_ballot.tracking_url);
-  b = open('FL', []);
+  b = openOn('2026-10-30', 'FL', []); // before Florida's dated answers (Nov 1 and 2)
   check('help buttons: a statewide Florida ballot keeps the state\u2019s buttons', JSON.stringify(b.howto.situations) === JSON.stringify(read('state-FL.json').howto.situations));
   b = open('NY', ['nyc-queens-ny']);
   const ny = read('state-NY.json').howto;

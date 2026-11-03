@@ -1,0 +1,972 @@
+[
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "pasadena-measure-pfd",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Says the new tax is 'a blow few homeowners need just now,' about $300 a year on a 1,600-square-foot home, and that voters should 'tell City Hall to get its priorities straight.' Published in the Pasadena Star-News.",
+  "url": "https://www.pasadenastarnews.com/2026/09/09/endorsement-no-on-measure-pfd-pasadenas-newest-parcel-tax/",
+  "date": "2026-09-09",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "ca-assembly-41",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group board's endorsement list as printed in the Pasadena Star-News (updated Oct 20, 2026; read Oct 31, 2026). The board says the list 'will be constantly updated.'",
+  "url": "https://www.pasadenastarnews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "pasadena-pccd-measure-up",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group board's endorsement list as printed in the Pasadena Star-News (updated Oct 20, 2026; read Oct 31, 2026). The board says the list 'will be constantly updated.'",
+  "url": "https://www.pasadenastarnews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "pasadena-pccd-area-1",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group board's endorsement list as printed in the Pasadena Star-News (updated Oct 20, 2026; read Oct 31, 2026). The board says the list 'will be constantly updated.'",
+  "url": "https://www.pasadenastarnews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "pasadena-pccd-area-3",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group board's endorsement list as printed in the Pasadena Star-News (updated Oct 20, 2026; read Oct 31, 2026). The board says the list 'will be constantly updated.'",
+  "url": "https://www.pasadenastarnews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "pasadena-pusd-district-1",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group board's endorsement list as printed in the Pasadena Star-News (updated Oct 20, 2026; read Oct 31, 2026). The board says the list 'will be constantly updated.'",
+  "url": "https://www.pasadenastarnews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "pasadena-pusd-district-3",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group board's endorsement list as printed in the Pasadena Star-News (updated Oct 20, 2026; read Oct 31, 2026). The board says the list 'will be constantly updated.'",
+  "url": "https://www.pasadenastarnews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "pasadena-pusd-district-7",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group board's endorsement list as printed in the Pasadena Star-News (updated Oct 20, 2026; read Oct 31, 2026). The board says the list 'will be constantly updated.'",
+  "url": "https://www.pasadenastarnews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-times-eb",
+  "target_id": "ca-assembly-41",
+  "status": "not_found",
+  "choice": null,
+  "why": "No endorsement found. The Times made no local endorsements in the June 2026 primary (L.A. Material, June 17, 2026), and none were found for this race as of Oct 31, 2026. Its newsroom publishes a voter guide instead. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
+  "date": "2026-11-01",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "lacdp",
+  "target_id": "ca-assembly-41",
+  "status": "endorsed",
+  "choice": "John Harabedian",
+  "why": "On the LA County Democratic Party's Nov 3, 2026 endorsement page (saved copy of Oct 29, 2026).",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lacdp",
+  "target_id": "pasadena-pccd-area-1",
+  "status": "endorsed",
+  "choice": "Francis Pollara",
+  "why": "On the LA County Democratic Party's Nov 3, 2026 endorsement page (saved copy of Oct 29, 2026).",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lacdp",
+  "target_id": "pasadena-pccd-area-3",
+  "status": "endorsed",
+  "choice": "Steve Gibson",
+  "why": "On the LA County Democratic Party's Nov 3, 2026 endorsement page (saved copy of Oct 29, 2026).",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lacdp",
+  "target_id": "pasadena-pusd-district-1",
+  "status": "endorsed",
+  "choice": "Felita Kealing",
+  "why": "On the LA County Democratic Party's Nov 3, 2026 endorsement page (saved copy of Oct 29, 2026).",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lacdp",
+  "target_id": "pasadena-pusd-district-3",
+  "status": "endorsed",
+  "choice": "Michelle Richardson Bailey",
+  "why": "On the LA County Democratic Party's Nov 3, 2026 endorsement page (saved copy of Oct 29, 2026).",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lacdp",
+  "target_id": "pasadena-pusd-district-7",
+  "status": "endorsed",
+  "choice": "Cynthia Torres",
+  "why": "On the LA County Democratic Party's Nov 3, 2026 endorsement page (saved copy of Oct 29, 2026).",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lacdp",
+  "target_id": "pasadena-measure-pfd",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Listed as YES in the LA County Democratic Party's Nov 3, 2026 ballot measure positions (saved copy of Oct 29, 2026).",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lacdp",
+  "target_id": "pasadena-pccd-measure-up",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Listed as YES in the LA County Democratic Party's Nov 3, 2026 ballot measure positions (saved copy of Oct 29, 2026).",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "ca-assembly-41",
+  "status": "endorsed",
+  "choice": "Adam Christopher Vena",
+  "why": "The party’s public lookup lists this choice. Its source label is 'LAGOP.'",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "pasadena-measure-pfd",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its lookup tool says no, describing PFD as a 'Property tax increase.'",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "pasadena-pccd-measure-up",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its lookup tool says no on the 'PCC Facilities Bond - $485M.'",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "pasadena-pccd-area-1",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its lookup tool lists no pick for Pasadena City College trustees or the Pasadena Unified board (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "pasadena-pccd-area-3",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its lookup tool lists no pick for Pasadena City College trustees or the Pasadena Unified board (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "pasadena-pusd-district-1",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its lookup tool lists no pick for Pasadena City College trustees or the Pasadena Unified board (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "pasadena-pusd-district-3",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its lookup tool lists no pick for Pasadena City College trustees or the Pasadena Unified board (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "pasadena-pusd-district-7",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its lookup tool lists no pick for Pasadena City College trustees or the Pasadena Unified board (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-fed",
+  "target_id": "ca-assembly-41",
+  "status": "endorsed",
+  "choice": "John Harabedian",
+  "why": "Listed in its Nov 2026 labor voter guide under State Assembly: 'John Harabedian (i) - AD 41.'",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-fed",
+  "target_id": "pasadena-pccd-area-1",
+  "status": "endorsed",
+  "choice": "Francis Pollara",
+  "why": "Listed in its Nov 2026 labor voter guide under Pasadena City College: 'Francis Pollara - Seat 1.'",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-fed",
+  "target_id": "pasadena-pccd-area-3",
+  "status": "endorsed",
+  "choice": "Steve Gibson",
+  "why": "Listed in its Nov 2026 labor voter guide under Pasadena City College: 'Dr. Steve Gibson (i) - Seat 3.'",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-fed",
+  "target_id": "pasadena-measure-pfd",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Listed in its Nov 2026 labor voter guide under City of Pasadena: 'Measure PFD - Yes.'",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-fed",
+  "target_id": "pasadena-pccd-measure-up",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its Nov 2026 labor voter guide lists no position on Measure UP (read Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-fed",
+  "target_id": "pasadena-pusd-district-1",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its Nov 2026 labor voter guide lists no Pasadena Unified races (read Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-fed",
+  "target_id": "pasadena-pusd-district-3",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its Nov 2026 labor voter guide lists no Pasadena Unified races (read Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-fed",
+  "target_id": "pasadena-pusd-district-7",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its Nov 2026 labor voter guide lists no Pasadena Unified races (read Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "ca-assembly-41",
+  "status": "endorsed",
+  "choice": "John Harabedian",
+  "why": "'Recommended' in the LA Forward guide, which says he 'has been heavily focused on fire recovery during his first term in the Legislature.'",
+  "url": "https://laforwardguide.org/guide/state-assembly",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "pasadena-measure-pfd",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Rated 'Support' in its Pasadena guide; its written analysis is marked 'forthcoming.'",
+  "url": "https://laforwardguide.org/guide/pasadena",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "pasadena-pccd-measure-up",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Rated 'Support' in its Pasadena guide; its written analysis is marked 'forthcoming.'",
+  "url": "https://laforwardguide.org/guide/pasadena",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "pasadena-pccd-area-1",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its Pasadena guide lists only the Area 7 college trustee seat, which is not on the ballot, and no pick in this race (read Oct 31, 2026).",
+  "url": "https://laforwardguide.org/guide/pasadena",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "pasadena-pccd-area-3",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its Pasadena guide lists only the Area 7 college trustee seat, which is not on the ballot, and no pick in this race (read Oct 31, 2026).",
+  "url": "https://laforwardguide.org/guide/pasadena",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "pasadena-pusd-district-1",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its Pasadena guide lists no Pasadena Unified board races (read Oct 31, 2026).",
+  "url": "https://laforwardguide.org/guide/pasadena",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "pasadena-pusd-district-3",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its Pasadena guide lists no Pasadena Unified board races (read Oct 31, 2026).",
+  "url": "https://laforwardguide.org/guide/pasadena",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "pasadena-pusd-district-7",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its Pasadena guide lists no Pasadena Unified board races (read Oct 31, 2026).",
+  "url": "https://laforwardguide.org/guide/pasadena",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-assembly-41",
+  "status": "endorsed",
+  "choice": "John Harabedian",
+  "why": "Says he 'compiled a strong voting record in his first term in the assembly, supporting progressive initiatives on affordable housing, criminal justice reform, and consumer protection.'",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "thrive-la",
+  "target_id": "ca-assembly-41",
+  "status": "no_position",
+  "choice": null,
+  "why": "Thrive LA says a race is left out of its guide when 'we have not identified a DSA-backed or affiliated candidate in that race.' Assembly District 41 is not in its guide (read Oct 31, 2026).",
+  "url": "https://www.thrivelosangeles.org/voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lalcv",
+  "target_id": "pasadena-pccd-area-1",
+  "status": "endorsed",
+  "choice": "Geoff Baum or Francis Pollara",
+  "why": "Its 2026 endorsement list names both Area 1 candidates: 'Geoff Baum (Area 1)' and 'Francis Pollara (Area 1).'",
+  "url": "https://lalcv.org/current-endorsements/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lalcv",
+  "target_id": "pasadena-pccd-area-3",
+  "status": "endorsed",
+  "choice": "Steve Gibson",
+  "why": "Listed on its 2026 endorsement list as 'Seve Gibson (Area 3)', as the page spells it.",
+  "url": "https://lalcv.org/current-endorsements/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lalcv",
+  "target_id": "pasadena-pusd-district-1",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 endorsement list names no Pasadena Unified board candidates (read Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://lalcv.org/current-endorsements/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lalcv",
+  "target_id": "pasadena-pusd-district-3",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 endorsement list names no Pasadena Unified board candidates (read Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://lalcv.org/current-endorsements/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lalcv",
+  "target_id": "pasadena-pusd-district-7",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 endorsement list names no Pasadena Unified board candidates (read Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://lalcv.org/current-endorsements/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "reform-california",
+  "target_id": "ca-assembly-41",
+  "status": "endorsed",
+  "choice": "Adam Christopher Vena",
+  "why": "Listed in its Los Angeles County guide as 'District 41: Adam Vena.'",
+  "url": "https://www.reformcalifornia.org/voter-guides/los-angeles",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "reform-california",
+  "target_id": "ca-us-house-28",
+  "status": "endorsed",
+  "choice": "April A. Verlato",
+  "why": "Listed in its Los Angeles County guide as 'District 28: April Verlato.'",
+  "url": "https://www.reformcalifornia.org/voter-guides/los-angeles",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "reform-california",
+  "target_id": "ca-us-house-30",
+  "status": "endorsed",
+  "choice": "Scott Alan Meyers",
+  "why": "Listed in its Los Angeles County guide as 'District 30: Scott Meyers.'",
+  "url": "https://www.reformcalifornia.org/voter-guides/los-angeles",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "reform-california",
+  "target_id": "pasadena-measure-pfd",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Says it 'imposes a costly property tax despite massive levels of wasteful spending, giving government workers massive salary hikes and pension spikes.'",
+  "url": "https://www.reformcalifornia.org/voter-guides/los-angeles",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "reform-california",
+  "target_id": "pasadena-pccd-measure-up",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Says it 'authorizes costly bond funded by taxpayer dollars despite massive levels of wasteful spending.'",
+  "url": "https://www.reformcalifornia.org/voter-guides/los-angeles",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "reform-california",
+  "target_id": "pasadena-pccd-area-1",
+  "status": "no_position",
+  "choice": null,
+  "why": "Marks the Pasadena Community College District \"You're Doomed\" and names no candidate. Its guide says a race with no recommendation means \"we either could not support the measure or candidates running in that race, or do not have enough information to make an informed recommendation.\"",
+  "url": "https://www.reformcalifornia.org/voter-guides/los-angeles",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "reform-california",
+  "target_id": "pasadena-pccd-area-3",
+  "status": "no_position",
+  "choice": null,
+  "why": "Marks the Pasadena Community College District \"You're Doomed\" and names no candidate. Its guide says a race with no recommendation means \"we either could not support the measure or candidates running in that race, or do not have enough information to make an informed recommendation.\"",
+  "url": "https://www.reformcalifornia.org/voter-guides/los-angeles",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "reform-california",
+  "target_id": "pasadena-pusd-district-1",
+  "status": "no_position",
+  "choice": null,
+  "why": "Its Los Angeles County guide lists no Pasadena Unified race. Its guide says a race with no recommendation means \"we either could not support the measure or candidates running in that race, or do not have enough information to make an informed recommendation.\"",
+  "url": "https://www.reformcalifornia.org/voter-guides/los-angeles",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "reform-california",
+  "target_id": "pasadena-pusd-district-3",
+  "status": "no_position",
+  "choice": null,
+  "why": "Its Los Angeles County guide lists no Pasadena Unified race. Its guide says a race with no recommendation means \"we either could not support the measure or candidates running in that race, or do not have enough information to make an informed recommendation.\"",
+  "url": "https://www.reformcalifornia.org/voter-guides/los-angeles",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "reform-california",
+  "target_id": "pasadena-pusd-district-7",
+  "status": "no_position",
+  "choice": null,
+  "why": "Its Los Angeles County guide lists no Pasadena Unified race. Its guide says a race with no recommendation means \"we either could not support the measure or candidates running in that race, or do not have enough information to make an informed recommendation.\"",
+  "url": "https://www.reformcalifornia.org/voter-guides/los-angeles",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "reform-california",
+  "target_id": "la-county-measure-a",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Says it 'prohibits essential employees in public safety roles from going on strike, ensuring that essential services will be available to citizens at all times.'",
+  "url": "https://www.reformcalifornia.org/voter-guides/los-angeles",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "reform-california",
+  "target_id": "la-county-measure-e",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Says the measure fixes flaws in Measure G but then 'goes on to reaffirm wasteful government spending.'",
+  "url": "https://www.reformcalifornia.org/voter-guides/los-angeles",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "reform-california",
+  "target_id": "la-county-sheriff",
+  "status": "endorsed",
+  "choice": "Alex Villanueva",
+  "why": "Listed in its Los Angeles County guide under Sheriff, with no reason given.",
+  "url": "https://www.reformcalifornia.org/voter-guides/los-angeles",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "reform-california",
+  "target_id": "la-county-judge-131",
+  "status": "no_position",
+  "choice": null,
+  "why": "Marks Office 131 \"You Are You're Doomed\" and names no candidate. Its guide says a race with no recommendation means \"we either could not support the measure or candidates running in that race, or do not have enough information to make an informed recommendation.\"",
+  "url": "https://www.reformcalifornia.org/voter-guides/los-angeles",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "reform-california",
+  "target_id": "ca-boe-3",
+  "status": "no_position",
+  "choice": null,
+  "why": "Marks Board of Equalization District 3 \"You are Doomed\" and names no candidate. Its guide says a race with no recommendation means \"we either could not support the measure or candidates running in that race, or do not have enough information to make an informed recommendation.\"",
+  "url": "https://www.reformcalifornia.org/voter-guides/los-angeles",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-assembly-41",
+  "status": "endorsed",
+  "choice": "John Harabedian",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-08-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-assembly-41",
+  "status": "endorsed",
+  "choice": "John Harabedian",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-21",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "cta",
+  "target_id": "ca-assembly-41",
+  "status": "endorsed",
+  "choice": "John Harabedian",
+  "why": "On CTA's 2026 Candidate Recommendations document (cta.org).",
+  "url": "https://www.cta.org/document/2026-candidate-recommendations",
+  "date": "2026-10-21",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-assembly-41",
+  "status": "endorsed",
+  "choice": "Adam Christopher Vena",
+  "why": "Listed in the California Republican Party's 2026 endorsements as 'AD 41: Adam Vena' (checked Oct 30, 2026).",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-30",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-california",
+  "target_id": "ca-assembly-41",
+  "status": "endorsed",
+  "choice": "John Harabedian",
+  "why": "Listed on Equality California's 2026 Election Center endorsements (checked Oct 27, 2026).",
+  "url": "https://www.eqca.org/elections/",
+  "date": "2026-10-27",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-envirovoters",
+  "target_id": "ca-assembly-41",
+  "status": "endorsed",
+  "choice": "John Harabedian",
+  "why": "On California Environmental Voters' 2026 endorsements page for the November 3 election (checked Oct 29, 2026).",
+  "url": "https://envirovoters.org/2026-endorsements/",
+  "date": "2026-10-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sierra-club-ca",
+  "target_id": "ca-assembly-41",
+  "status": "endorsed",
+  "choice": "John Harabedian",
+  "why": "On Sierra Club California's 2026 endorsements page for the state legislature (read Oct 21, 2026).",
+  "url": "https://www.sierraclub.org/california/2026-endorsements-scc-political-committee",
+  "date": "2026-10-21",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "hjta-pac",
+  "target_id": "ca-assembly-41",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its November 2026 voting guide lists Assembly picks but none for District 41 (checked Oct 29, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.hjta.org/2026VotingGuide/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pasadena-chamber",
+  "target_id": "pasadena-pccd-measure-up",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Its board voted to support Measure UP 'in large part because the bond measure ... replaces an expiring measure so would not add costs to taxpayers or property owners.'",
+  "url": "https://www.pasadena-chamber.org/blog/community-news-and-updates",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pasadena-chamber",
+  "target_id": "pasadena-measure-pfd",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its board's Nov 3 positions name Measure UP as its only local measure and say nothing on Measure PFD (read Oct 31, 2026).",
+  "url": "https://www.pasadena-chamber.org/blog/community-news-and-updates",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pasadena-chamber",
+  "target_id": "ca-prop-1",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Its board supports it, describing $11.25 billion in bonds for multifamily housing, the CalVet Home Loan Program and housing for youth.",
+  "url": "https://www.pasadena-chamber.org/blog/community-news-and-updates",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pasadena-chamber",
+  "target_id": "ca-prop-2",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its board says the larger reserve 'could become another way for the state legislature to circumvent voter mandated spending limits.'",
+  "url": "https://www.pasadena-chamber.org/blog/community-news-and-updates",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pasadena-chamber",
+  "target_id": "ca-prop-3",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its board says extending the tax 'circumvents the expectations of voters' who approved it to end, and risks losing more high-income residents to other states.",
+  "url": "https://www.pasadena-chamber.org/blog/community-news-and-updates",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pasadena-chamber",
+  "target_id": "ca-prop-37",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Its board says the down payment loans would be paid back by borrowers, 'so would not be a burden on taxpayers.'",
+  "url": "https://www.pasadena-chamber.org/blog/community-news-and-updates",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pasadena-chamber",
+  "target_id": "ca-prop-40",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its board says the tax could drive high earners and their companies out of California, and that tax reform should come from the federal government.",
+  "url": "https://www.pasadena-chamber.org/blog/community-news-and-updates",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pasadena-chamber",
+  "target_id": "ca-prop-42",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Its board supports barring taxes on forms of income not already taxed, such as retirement accounts.",
+  "url": "https://www.pasadena-chamber.org/blog/community-news-and-updates",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pasadena-chamber",
+  "target_id": "ca-prop-43",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Its board supports bringing back supermajority requirements for local governments to impose new taxes.",
+  "url": "https://www.pasadena-chamber.org/blog/community-news-and-updates",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pasadena-chamber",
+  "target_id": "ca-prop-44",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its board opposes it, describing it as imposing spending restrictions on healthcare providers.",
+  "url": "https://www.pasadena-chamber.org/blog/community-news-and-updates",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pasadena-chamber",
+  "target_id": "ca-prop-45",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Its board supports it, saying it would ease California Environmental Quality Act requirements for infrastructure, housing and other projects by putting time limits on appeals.",
+  "url": "https://www.pasadena-chamber.org/blog/community-news-and-updates",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pasadena-chamber",
+  "target_id": "ca-prop-4",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its board's Nov 3 positions on state measures skip this one (read Oct 31, 2026).",
+  "url": "https://www.pasadena-chamber.org/blog/community-news-and-updates",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pasadena-chamber",
+  "target_id": "ca-prop-5",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its board's Nov 3 positions on state measures skip this one (read Oct 31, 2026).",
+  "url": "https://www.pasadena-chamber.org/blog/community-news-and-updates",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pasadena-chamber",
+  "target_id": "ca-prop-38",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its board's Nov 3 positions on state measures skip this one (read Oct 31, 2026).",
+  "url": "https://www.pasadena-chamber.org/blog/community-news-and-updates",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pasadena-chamber",
+  "target_id": "ca-prop-39",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its board's Nov 3 positions on state measures skip this one (read Oct 31, 2026).",
+  "url": "https://www.pasadena-chamber.org/blog/community-news-and-updates",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pasadena-chamber",
+  "target_id": "ca-prop-41",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its board's Nov 3 positions on state measures skip this one (read Oct 31, 2026).",
+  "url": "https://www.pasadena-chamber.org/blog/community-news-and-updates",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pcc-faculty-association",
+  "target_id": "pasadena-pccd-area-1",
+  "status": "endorsed",
+  "choice": "Francis Pollara",
+  "why": "Its executive board says these candidates 'have demonstrated a willingness to listen, an understanding of the role of PCC in our community, and a commitment to engaging with the issues facing our students, faculty, staff, and institution.'",
+  "url": "https://pccfacultyassociation.org/pccfa-endorsement-of-candidates-for-the-pasadena-area-community-college-district-board-of-trustees/",
+  "date": "2026-10-14",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pcc-faculty-association",
+  "target_id": "pasadena-pccd-area-3",
+  "status": "endorsed",
+  "choice": "Steve Gibson",
+  "why": "Its executive board says these candidates 'have demonstrated a willingness to listen, an understanding of the role of PCC in our community, and a commitment to engaging with the issues facing our students, faculty, staff, and institution.'",
+  "url": "https://pccfacultyassociation.org/pccfa-endorsement-of-candidates-for-the-pasadena-area-community-college-district-board-of-trustees/",
+  "date": "2026-10-14",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aagla",
+  "target_id": "pasadena-measure-pfd",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its executive director writes that 'Measure PFD is the wrong solution' because it puts a broad-benefit tax on property owners alone, and says the city should look at its costs first.",
+  "url": "https://aagla.org/pasadena-pfd/",
+  "date": "2026-10-06",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "colorado-boulevard-eb",
+  "target_id": "la-county-judge-64",
+  "status": "endorsed",
+  "choice": "Maria Ghobadi",
+  "why": "Its editorial board's Oct 9 recommendations for the Superior Court put a check mark beside Maria Ghobadi for Office 64. The board says that in these races it \"found distinctions in experience and courtroom readiness significant enough to recommend one candidate over others.\"",
+  "url": "https://www.coloradoboulevard.net/2026-general-election-recommendations-for-l-a-county-superior-court-judges/",
+  "date": "2026-10-09",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "colorado-boulevard-eb",
+  "target_id": "la-county-judge-65",
+  "status": "endorsed",
+  "choice": "Justin Allen Clayton",
+  "why": "Its editorial board's Oct 9 recommendations for the Superior Court put a check mark beside Justin Allen Clayton for Office 65. The board says that in these races it \"found distinctions in experience and courtroom readiness significant enough to recommend one candidate over others.\"",
+  "url": "https://www.coloradoboulevard.net/2026-general-election-recommendations-for-l-a-county-superior-court-judges/",
+  "date": "2026-10-09",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "colorado-boulevard-eb",
+  "target_id": "la-county-judge-87",
+  "status": "endorsed",
+  "choice": "Anthony (A.J.) Bayne",
+  "why": "Its editorial board's Oct 9 recommendations for the Superior Court put a check mark beside Anthony (A.J.) Bayne for Office 87. The board says that in these races it \"found distinctions in experience and courtroom readiness significant enough to recommend one candidate over others.\"",
+  "url": "https://www.coloradoboulevard.net/2026-general-election-recommendations-for-l-a-county-superior-court-judges/",
+  "date": "2026-10-09",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "colorado-boulevard-eb",
+  "target_id": "la-county-judge-131",
+  "status": "endorsed",
+  "choice": "Donna Tryfman",
+  "why": "Its editorial board's Oct 9 recommendations for the Superior Court put a check mark beside Donna Tryfman for Office 131. The board says that in these races it \"found distinctions in experience and courtroom readiness significant enough to recommend one candidate over others.\"",
+  "url": "https://www.coloradoboulevard.net/2026-general-election-recommendations-for-l-a-county-superior-court-judges/",
+  "date": "2026-10-09",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "reform-california",
+  "target_id": "la-county-judge-64",
+  "status": "no_position",
+  "choice": null,
+  "why": "Marks Office 64 \"Definitely NOT Rhonda A. Haymon\" and names no one to vote for. Its guide says a race with no recommendation means \"we either could not support the measure or candidates running in that race, or do not have enough information to make an informed recommendation.\"",
+  "url": "https://www.reformcalifornia.org/voter-guides/los-angeles",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "reform-california",
+  "target_id": "la-county-judge-65",
+  "status": "no_position",
+  "choice": null,
+  "why": "Marks Office 65 \"Definitely NOT Justin Clayton\" and names no one to vote for. Its guide says a race with no recommendation means \"we either could not support the measure or candidates running in that race, or do not have enough information to make an informed recommendation.\"",
+  "url": "https://www.reformcalifornia.org/voter-guides/los-angeles",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "reform-california",
+  "target_id": "la-county-judge-87",
+  "status": "no_position",
+  "choice": null,
+  "why": "Marks Office 87 \"Definitely NOT A.J. Bayne\" and names no one to vote for. Its guide says a race with no recommendation means \"we either could not support the measure or candidates running in that race, or do not have enough information to make an informed recommendation.\"",
+  "url": "https://www.reformcalifornia.org/voter-guides/los-angeles",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ }
+]

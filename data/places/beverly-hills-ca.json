@@ -1,0 +1,151 @@
+{
+ "id": "beverly-hills-ca",
+ "label": "Beverly Hills",
+ "state": "CA",
+ "counties": [
+  "Los Angeles"
+ ],
+ "county_fips": [
+  "06037"
+ ],
+ "county_election_office": {
+  "name": "Los Angeles County Registrar-Recorder/County Clerk (LAVote.gov), 12400 Imperial Hwy, Norwalk",
+  "url": "https://lavote.gov",
+  "phone": "(800) 815-2666",
+  "phone_label": "General line",
+  "lines": [
+   {
+    "label": "Mail ballot help",
+    "phone": "(800) 815-2666",
+    "hours": "press 2, then 3"
+   },
+   {
+    "label": "Vote center questions",
+    "phone": "(800) 815-2666",
+    "hours": "press 1"
+   }
+  ]
+ },
+ "sample_ballot_url": "https://isb.lavote.gov/",
+ "zips": [
+  "90210",
+  "90211",
+  "90212"
+ ],
+ "zip_caveats": "90211 and 90212 are all Beverly Hills except a few homes at the edge that are in the City of Los Angeles. 90210 is shared: about 6 in 10 of its residents live in Beverly Hills, and most of the rest live in the City of LA's hills above it, like Beverly Crest and Benedict Canyon, so the guide asks which city you live in. If your home is in the City of LA, pick Los Angeles: you get LA's mayor, city attorney and city measures, and you don't vote in the Beverly Hills school board race. All of Beverly Hills is in the 36th Congressional District, the 24th State Senate District and the 51st Assembly District, and in the Los Angeles Community College District. Your official sample ballot at lavote.gov shows your exact ballot.",
+ "contest_ids": [
+  "ca-governor",
+  "ca-lt-governor",
+  "ca-secretary-of-state",
+  "ca-controller",
+  "ca-treasurer",
+  "ca-attorney-general",
+  "ca-insurance-commissioner",
+  "ca-superintendent",
+  "ca-boe-3",
+  "ca-supreme-court-evans",
+  "ca-supreme-court-groban",
+  "ca-coa-2d-retention",
+  "ca-prop-1",
+  "ca-prop-2",
+  "ca-prop-3",
+  "ca-prop-4",
+  "ca-prop-5",
+  "ca-prop-37",
+  "ca-prop-38",
+  "ca-prop-39",
+  "ca-prop-40",
+  "ca-prop-41",
+  "ca-prop-42",
+  "ca-prop-43",
+  "ca-prop-44",
+  "ca-prop-45",
+  "la-county-measure-a",
+  "la-county-measure-e",
+  "la-county-sheriff",
+  "la-county-judge-64",
+  "la-county-judge-65",
+  "la-county-judge-87",
+  "la-county-judge-131",
+  "beverly-hills-usd-board",
+  "la-laccd-seat-2",
+  "la-laccd-seat-4",
+  "la-laccd-seat-6",
+  "ca-us-house-36",
+  "ca-state-senate-24",
+  "ca-assembly-51"
+ ],
+ "district_finders": [
+  {
+   "office_match": "U.S. Representative",
+   "label": "Check your district on your official ballot",
+   "url": "https://isb.lavote.gov/"
+  },
+  {
+   "office_match": "State Senator",
+   "label": "Check your district on your official ballot",
+   "url": "https://isb.lavote.gov/"
+  },
+  {
+   "office_match": "Member of the State Assembly",
+   "label": "Check your district on your official ballot",
+   "url": "https://isb.lavote.gov/"
+  }
+ ],
+ "lookups": {
+  "early_in_person": "https://locator.lavote.gov/locations/vc?culture=en",
+  "election_day": "https://locator.lavote.gov/locations/vc?culture=en",
+  "drop_box": "https://locator.lavote.gov/locations/vbm?culture=en"
+ },
+ "situations": [
+  {
+   "id": "no_mail_ballot_or_lost",
+   "short": "Get a replacement at any LA County vote center or just vote there.",
+   "answer": "The last day to ask for a ballot by mail was October 27. You can still go to any LA County vote center and ask for a replacement or vote there in person. Questions? Call (800) 815-2666, press 2, then 3.",
+   "steps": [
+    "Use the county's locator to find a vote center near you."
+   ],
+   "source": "https://www.lavote.gov/home/voting-elections/voting-options/vote-by-mail/how-to-vote-by-mail",
+   "confidence": "verified"
+  }
+ ],
+ "notes": "Beverly Hills has no city races or city measures this time: its city council and treasurer election was June 2. Your local races are the Beverly Hills school board and the college board. Beverly Hills has four vote centers open through Election Day, November 3: the Beverly Hills Library auditorium (open since October 24), Roxbury Park Clubhouse, the La Cienega Tennis Center's Rodeo Room and All Saints' Episcopal Church (these three from October 31). They are open 10 AM to 7 PM each day, and 7 AM to 8 PM on November 3. The city says parking is free at its vote center sites. You can use any vote center in LA County; the county's locator has hours and wait times.",
+ "sources": [
+  {
+   "name": "City of Beverly Hills: Election Information (Nov 3 vote centers; June 2 city election concluded)",
+   "url": "https://www.beverlyhills.org/167/Election-Information"
+  },
+  {
+   "name": "LA County: how to vote by mail",
+   "url": "https://www.lavote.gov/home/voting-elections/voting-options/vote-by-mail/how-to-vote-by-mail"
+  },
+  {
+   "name": "LA County: contact (phone menu)",
+   "url": "https://www.lavote.gov/contact-us/contact-us"
+  },
+  {
+   "name": "LA County: drop box locator",
+   "url": "https://locator.lavote.gov/locations/vbm?culture=en"
+  },
+  {
+   "name": "LA County: interactive sample ballot",
+   "url": "https://isb.lavote.gov/"
+  },
+  {
+   "name": "Statewide Database: AB 604 (2026 congressional lines) city splits report, Beverly Hills all in CD-36",
+   "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
+  },
+  {
+   "name": "Citizens Redistricting Commission 2021 final maps (Assembly, Senate and BOE block files)",
+   "url": "https://statewidedatabase.org/pub/data/D20/FINAL_MAPS/"
+  },
+  {
+   "name": "Census 2020 ZIP area to city relationship file",
+   "url": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_place20_natl.txt"
+  },
+  {
+   "name": "Census 2020 ZIP area to block relationship file (90210's people by city)",
+   "url": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_tabblock20_natl.txt"
+  }
+ ]
+}

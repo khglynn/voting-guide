@@ -1,0 +1,141 @@
+[
+ {
+  "id": "lacdp",
+  "name": "Los Angeles County Democratic Party",
+  "type": "party",
+  "lean": "left",
+  "lean_basis": "Official county Democratic Party organization. Its candidates page lists its Nov 2026 candidate endorsements and a table of positions on statewide and local measures (read Oct 17, 2026).",
+  "geography": [
+   "burbank-ca"
+  ],
+  "guide_url": "https://www.lacdp.org/candidates",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "party": "Democratic",
+  "lean_basis_kind": "party"
+ },
+ {
+  "id": "la-county-gop",
+  "name": "Republican Party of Los Angeles County",
+  "type": "party",
+  "lean": "right",
+  "lean_basis": "Official county Republican Party organization. Its Nov 3, 2026 candidate picks and its positions on LA city and county measures are published in an address-lookup tool linked from lagop.org (read Oct 17, 2026). It marks some candidate picks as recommended rather than formally endorsed.",
+  "geography": [
+   "burbank-ca"
+  ],
+  "guide_url": "https://lagop-endorsement-lookup.vercel.app/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "party": "Republican",
+  "lean_basis_kind": "party",
+  "short": "LA County Republican Party"
+ },
+ {
+  "id": "la-forward",
+  "name": "LA Forward (LA Forward Action Fund voter guide)",
+  "type": "advocacy",
+  "lean": "left",
+  "lean_basis": "Its stated mission or political identity includes: \"Los Angeles Progressive Voter Guide\". Source: https://laforwardguide.org/.",
+  "geography": [
+   "burbank-ca"
+  ],
+  "guide_url": "https://laforwardguide.org/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
+ },
+ {
+  "id": "knock-la",
+  "name": "Knock LA",
+  "type": "publication",
+  "lean": "left",
+  "lean_basis": "Its stated mission or political identity includes: \"We are dedicated to giving a voice to the left and uplifting marginalized communities\". Source: https://knock-la.com/about-us/.",
+  "geography": [
+   "burbank-ca"
+  ],
+  "guide_url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "default_on": true,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
+ },
+ {
+  "id": "lalcv",
+  "name": "Los Angeles League of Conservation Voters",
+  "type": "advocacy",
+  "lean": "lean_left",
+  "lean_basis": "Environmental group that calls itself 'the only environmental Political Action Committee (PAC) in Los Angeles County' (https://lalcv.org/about/). No outside rating found; lean reflects its stated mission.",
+  "geography": [
+   "burbank-ca"
+  ],
+  "guide_url": "https://lalcv.org/category/featured/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "lean_basis_kind": "mission",
+  "short": "LA League of Conservation Voters"
+ },
+ {
+  "id": "abundant-housing-la",
+  "name": "Abundant Housing LA",
+  "type": "advocacy",
+  "lean": "lean_left",
+  "lean_basis": "Pro-housing group that says more homes near transit are needed to 'lower housing costs, solve our climate crisis, and avoid displacement' (https://www.abundanthousingla.org/about-us). No outside rating found; lean reflects its stated mission.",
+  "geography": [
+   "burbank-ca"
+  ],
+  "guide_url": "https://www.abundanthousingla.org/2026-endorsements",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "lean_basis_kind": "mission"
+ },
+ {
+  "id": "streets-for-all",
+  "name": "Streets For All",
+  "type": "advocacy",
+  "lean": "lean_left",
+  "lean_basis": "Safe-streets and transit group that says 'we believe our air doesn’t have to be polluted' (https://www.streetsforall.org/). No outside rating found; lean reflects its stated mission.",
+  "geography": [
+   "burbank-ca"
+  ],
+  "guide_url": "https://www.streetsforall.org/endorsements",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
+ },
+ {
+  "id": "la-fed",
+  "name": "Los Angeles County Federation of Labor, AFL-CIO",
+  "type": "labor",
+  "lean": "lean_left",
+  "lean_basis": "Federation of about 300 unions in LA County that says 'We empower workers to organize and take collective action to win better wages and respect in the workplace' (https://thelafed.org/about/). No outside rating found; lean reflects its stated mission.",
+  "geography": [
+   "burbank-ca"
+  ],
+  "guide_url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
+ },
+ {
+  "id": "myburbank",
+  "name": "myBurbank",
+  "type": "publication",
+  "lean": null,
+  "lean_basis": "Not rated: no AllSides or Ad Fontes rating was found, and its About page states no political mission. It calls itself 'a locally produced website that tries to capture not only the Burbank community but the outside events that affect Burbank and its citizens' (https://myburbank.com/about/).",
+  "lean_basis_kind": null,
+  "geography": [
+   "burbank-ca"
+  ],
+  "guide_url": "https://myburbank.com/myburbanks-position-vote-no-on-measures-cc-and-cd-yes-on-c/",
+  "default_on": true,
+  "endorses_candidates": false,
+  "endorses_measures": true
+ }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "goodlettsville-sales-tax",
+    "state": "TN",
+    "level": "city",
+    "jurisdiction": "City of Goodlettsville voters only (the city's Sumner County voters see it on Sumner's ballot)",
+    "number": "Sales and Use Tax Referendum",
+    "short_title": "Goodlettsville sales tax",
+    "official_title": "City of Goodlettsville Sales and Use Tax Referendum. Shall the Goodlettsville Investment Act (Ordinance No. 26-1146) for the purpose of investing in vital City services such as parks, roads, and public safety, by increasing the City’s sales tax by a half-penny per dollar, be approved?",
+    "plain_summary": "Raises the sales tax in Goodlettsville by half a cent per dollar, 50 cents on every $100 spent. The city says the money would go to public safety, roads, sidewalks and parks.",
+    "yes_means": "The sales tax in Goodlettsville goes up by half a cent per dollar.",
+    "no_means": "Goodlettsville's sales tax stays where it is.",
+    "current_law": null,
+    "fiscal_impact": "The city estimates about $3 million more a year. WSMV reports the rate on the Davidson County side of the city would become 10.25%, the highest in Tennessee, and 9.75% on the Sumner County side. The ordinance doesn't require the money to go to any particular project.",
+    "pass_threshold": "simple majority",
+    "referred_by": "council",
+    "confusing_wording_note": "You'll mark For or Against, not Yes or No. For means you approve the tax increase.",
+    "supporters_case": {
+      "text": "Goodlettsville's city manager, Julie High, told WSMV a sales tax is “shared by everyone who shops and dines in our city,” not only residents, and that costs for police and fire have grown faster than revenue.",
+      "source": "https://www.wsmv.com/2026/10/12/goodlettsville-referendum-would-create-highest-sales-tax-tennessee/"
+    },
+    "opponents_case": {
+      "text": "We found no organized campaign or official argument on this side.",
+      "source": "https://fox17.com/news/local/its-high-enough-goodlettsville-shoppers-react-to-proposed-sales-tax-hike"
+    },
+    "official_text_url": "https://www.nashville.gov/sites/default/files/2026-09/Sample_Ballot_November_3_2026_State_Fed_Gen_Mun_Elections.pdf?ct=1790110765",
+    "official_guide_url": null,
+    "explainers": [
+      {
+        "source": "WSMV",
+        "title": "Goodlettsville referendum would create highest sales tax in Tennessee",
+        "url": "https://www.wsmv.com/2026/10/12/goodlettsville-referendum-would-create-highest-sales-tax-tennessee/"
+      },
+      {
+        "source": "NewsChannel 5",
+        "title": "Goodlettsville voters to decide on sales tax increase that would fund police, fire and park upgrades",
+        "url": "https://www.newschannel5.com/news/state/tennessee/sumner-county/goodlettsville-voters-to-decide-on-sales-tax-increase-that-would-fund-police-fire-and-park-upgrades"
+      }
+    ],
+    "confidence": "verified"
+  }
+]

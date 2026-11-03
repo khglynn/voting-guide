@@ -8,7 +8,7 @@
   },
   "sample_ballot_url": "https://content.govdelivery.com/attachments/TXSOS/2026/08/28/file_attachments/3762824/2026%20Sample%20Ballot-final.pdf",
   "voting_model": "in_person_first",
-  "model_plain": "Most Texans vote in person, either during early voting (Oct. 19 to 30) or on Election Day (Nov. 3). Mail ballots are only for people who qualify: 65 or older, sick or disabled, out of the county, expecting a baby, or in jail.",
+  "model_plain": "Most Texans vote in person, either during early voting (Oct. 19 to 30, now over) or on Election Day (Nov. 3). Mail ballots are only for people who qualify: 65 or older, sick or disabled, out of the county, expecting a baby, or in jail.",
   "registration": {
     "check_url": "https://goelect.txelections.civixapps.com/ivis-mvp-ui/#/login",
     "register_url": "https://vote.gov/register/texas",
@@ -39,7 +39,7 @@
     "confidence": "verified"
   },
   "mail_ballot": {
-    "who_gets_one": "You must apply, and you must qualify. Texas allows voting by mail only if you: are 65 or older on Election Day; are sick or have a disability that keeps you from going to the polls without help or risk to your health; expect to give birth within three weeks before or after Election Day; will be out of your county during all of early voting and on Election Day; or are confined in jail but otherwise eligible. Nobody is mailed a ballot automatically. If you're 65+ or have a disability you can file one 'annual' application that covers every election in the calendar year.",
+    "who_gets_one": "You must apply, and you must qualify. For this election, applications had to arrive by Oct 23, so it's too late to apply now. Texas allows voting by mail only if you: are 65 or older on Election Day; are sick or have a disability that keeps you from going to the polls without help or risk to your health; expect to give birth within three weeks before or after Election Day; will be out of your county during all of early voting and on Election Day; or are confined in jail but otherwise eligible. Nobody is mailed a ballot automatically. If you're 65+ or have a disability you can file one 'annual' application that covers every election in the calendar year.",
     "request_deadline": {
       "date": "2026-10-23",
       "rule": "Your application must be received (not postmarked) by your county's Early Voting Clerk by Friday, October 23, 2026. Get the form (6-1f) at VoteTexas.gov or from your county. You can submit it by mail, in person, by fax or by email as a signed scanned attachment, but if you fax or email it the signed original must arrive by mail within 4 business days. The application must include your Texas driver license, personal ID or Election Identification Certificate number (NOT your VUID), or if you have none of those, the last 4 digits of your Social Security number. Send it to the Early Voting Clerk in the county where you're registered.",
@@ -53,7 +53,7 @@
     },
     "return_options": [
       "mail (USPS) to your county Early Voting Clerk, arriving by 7:00 PM Nov. 3, OR postmarked by 7:00 PM Nov. 3 and arriving by 5:00 PM Wednesday, Nov. 4",
-      "common or contract carrier (FedEx, UPS) arriving by 7:00 PM Nov. 3",
+      "common or contract carrier (FedEx, UPS) arriving by 7:00 PM Nov. 3, or by 5:00 PM Wednesday, Nov. 4 if the carrier's receipt mark shows a time before 7:00 PM Nov. 3 (Travis County lists this)",
       "hand-deliver it yourself, in person, to the county Early Voting Clerk's office, but only on Election Day (Nov. 3) while polls are open, with your photo ID (Election Code 86.006(a-1))",
       "Texas does not use ballot drop boxes"
     ],
@@ -77,7 +77,7 @@
   "election_day": {
     "polls_open": "7:00 AM",
     "polls_close": "7:00 PM",
-    "in_line_rule": "If you are inside or in line at the polling place at 7:00 PM, you get to vote. Stay in line. (Election Code 41.032)",
+    "in_line_rule": "Inside or in line by 7 PM? You still get to vote.",
     "vote_centers": true,
     "lookup_url": "https://www.votetexas.gov/voting/where.html",
     "confidence": "verified"
@@ -230,7 +230,7 @@
           "url": "https://www.votetexas.gov/voting/where.html"
         }
       ],
-      "answer": "Dallas, Harris, Bexar, Travis, Williamson, Hays and other big counties use vote centers, so you can vote at any polling place in your county, early or on Election Day. Go to the closest one in the county where you're registered.",
+      "answer": "Dallas, Harris, Bexar, Travis, Williamson, Hays and other big counties use vote centers, so you can vote at any polling place in your county on Election Day. Go to the closest one in the county where you're registered.",
       "steps": [
         "Find locations (and wait times, in many counties) on your county elections site or the My Voter Portal.",
         "In a different county? Go back to your own county; that's where your ballot is."
@@ -253,7 +253,7 @@
           "url": "https://www.votetexas.gov/voting/where.html"
         }
       ],
-      "answer": "Texas only mails ballots to voters who applied and qualified. If yours never came or got lost, you can vote in person instead, or cancel it in writing and apply for a new one.",
+      "answer": "Texas only mails ballots to voters who applied and qualified. If yours never came or got lost, it's too late to apply for a new one: applications had to arrive by Oct 23. You can still vote in person on Election Day, Nov 3.",
       "steps": [
         "Check the Ballot by Mail Tracker to see whether it was mailed.",
         "To vote in person, sign a cancellation form at the polls. Without the ballot to hand in, you vote a provisional ballot, counted once the county confirms your mail ballot wasn't returned.",
@@ -613,7 +613,7 @@
   ],
   "judicial_review": {
     "how_judges_get_here": "Texas judges run with party labels. You choose between candidates, rather than voting yes or no on retaining a judge. Governors can appoint judges to fill vacancies between elections.",
-    "who_reviews": "There is no official job-review commission for these elections. Bar associations sometimes poll lawyers. The State Bar’s 2026 poll covered primary candidates; Houston’s separate general-election poll covers statewide and Houston-area races.",
+    "who_reviews": "There is no official job-review commission for these elections. Bar associations sometimes poll lawyers. The State Bar’s 2026 poll covered primary candidates; Houston’s separate general-election poll covers statewide and Houston-area races. Collin County’s bar has published no poll since 2017, so we found no current reviews of Collin County’s own judges (checked Oct 29, 2026).",
     "what_the_rating_means": "A preference poll counts which candidate responding lawyers prefer. It is different from a commission’s assessment of whether a judge meets job standards.",
     "what_it_doesnt_mean": "The bar’s poll is not its endorsement. Only responding lawyers are counted; it is not a poll of all lawyers or all voters.",
     "to_keep_a_judge": "Vote for the candidate you want. In the general election, the candidate with the most votes wins the seat.",
@@ -634,6 +634,10 @@
       {
         "name": "Houston Bar: 2026 poll methodology",
         "url": "https://www.hba.org/docDownload/3137156"
+      },
+      {
+        "name": "Collin County Bar Association: documents (Judicial Polls: 2014, 2016, 2017)",
+        "url": "https://www.collincountybar.org/council/documents"
       }
     ]
   },
@@ -643,7 +647,7 @@
       "applies_to": "section:judicial"
     },
     {
-      "text": "Bring your plan on paper. You may use written notes, but phones and other wireless devices cannot be used within 100 feet of a voting station.",
+      "text": "Bring your plan on paper. You can’t use your phone in the room where people vote.",
       "applies_to": "ballot"
     }
   ],
@@ -652,6 +656,61 @@
       "path": "gotchas.4.text",
       "from": "2026-10-31",
       "text": "Vote centers: in Travis, Williamson, Hays, Dallas, Collin, Tarrant, Harris, Fort Bend and Bexar counties you can vote at any polling location in your county on Election Day. You are not tied to a precinct."
+    },
+    {
+      "path": "situations.moved_in_state.short",
+      "from": "2026-10-31",
+      "text": "Same county: vote anywhere with a Statement of Residence; new county: the limited ballot ended Oct 30."
+    },
+    {
+      "path": "situations.moved_in_state.steps.1",
+      "from": "2026-10-31",
+      "text": "New county, such as Travis to Williamson or Hays: the limited ballot was available only during early voting, which ended October 30. Your new county's voter registrar can tell you your options."
+    },
+    {
+      "path": "situations.moved_in_state.answer",
+      "from": "2026-10-31",
+      "text": "If you moved within the same county, you can still vote: go to any polling place in your county and fill out a short Statement of Residence. If you moved to a different Texas county and didn't re-register there by October 5, the limited ballot was available only during early voting, which ended October 30. Your new county's voter registrar can tell you your options."
+    },
+    {
+      "path": "registration.still_possible_now",
+      "from": "2026-10-31",
+      "text": "No. The deadline to register for the November 3 election was Monday, October 5, 2026, and it has passed. If you registered before then, confirm it worked at the My Voter Portal (link above). If you moved to a new Texas county and didn't re-register there by October 5, the 'limited ballot' (only the races your old and new county share) was available only during early voting, which ended October 30. If you moved within the same county, you can still vote: go to a polling place and fill out a Statement of Residence."
+    },
+    {
+      "path": "situations.no_mail_ballot_or_lost.steps.2",
+      "from": "2026-10-31",
+      "text": "It's too late to apply for a new mail ballot: applications had to arrive by Oct 23. Early voting ended Oct 30, so vote on Election Day, Nov 3, 7 AM to 7 PM."
+    },
+    {
+      "path": "situations.college_student.answer",
+      "from": "2026-10-31",
+      "text": "Registration closed October 5, so you vote where you're already registered. The deadline to apply for a mail ballot was Friday, October 23, and early voting ended Friday, October 30, so you'll need to vote in person in that county on Election Day, November 3."
+    },
+    {
+      "path": "situations.away_on_election_day.short",
+      "from": "2026-10-31",
+      "text": "Early voting has ended; if you're back before polls close Nov 3, vote in your county."
+    },
+    {
+      "path": "situations.away_on_election_day.answer",
+      "from": "2026-10-31",
+      "text": "Early voting ended Friday, October 30, and the deadline to apply for a mail ballot was Friday, October 23. If you can get back before the polls close at 7 PM on Nov 3, vote in your county. If you already have a mail ballot, it must arrive by 7 PM Nov 3, or be postmarked by then and arrive by 5 PM Nov 4."
+    },
+    {
+      "path": "situations.away_on_election_day.steps.0",
+      "from": "2026-10-31",
+      "text": "Check your county's Election Day polling places (Dallas, Harris, Bexar, Travis, Williamson, Hays and Collin each post their own)."
+    },
+    {
+      "path": "situations.away_on_election_day.actions.0.label",
+      "from": "2026-10-31",
+      "text": "Find voting places"
+    },
+    {
+      "path": "situations.mistake_on_ballot.answer",
+      "from": "2026-10-31",
+      "text": "At the polls, don't cast it: Texas law gives you a new ballot when you hand the spoiled one back to an election worker. On a mail ballot, bring the whole packet to your Election Day polling place, surrender it, and vote in person."
     }
   ]
 }

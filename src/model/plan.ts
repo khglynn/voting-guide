@@ -23,6 +23,10 @@ export function clock(s: string | null | undefined): string | null {
   if (/\bnoon\b/i.test(s || '')) return 'noon';
   return null;
 }
+/* "7:00 AM", "8 PM PT": a time and nothing else. A qualified one ("8:30 AM at the six King County vote centers",
+   "7:00 AM in Davidson County; each county sets its own") isn't a statewide opening time, so it never
+   becomes "Polls are open 7 AM to ..." or "You can vote from ...". */
+export const PLAIN_TIME = /^\s*\d{1,2}(?::\d{2})?\s*[ap]\.?m\.?(?:\s+[A-Z]{2,3})?\s*$/i;
 /* Poll times are local. Each state's zones, the zone most of it uses first; a place in a
    state's other zone is pinned here. A statewide-only ballot in a two-zone state says "your
    local polls close at" and says they have closed only once they have closed in every zone,
@@ -31,13 +35,22 @@ const STATE_ZONES: Record<string, string[]> = {
   AL: ['America/Chicago'], CA: ['America/Los_Angeles'], CO: ['America/Denver'], DC: ['America/New_York'],
   FL: ['America/New_York', 'America/Chicago'], GA: ['America/New_York'], IL: ['America/Chicago'],
   MD: ['America/New_York'], MO: ['America/Chicago'], NY: ['America/New_York'], OR: ['America/Los_Angeles', 'America/Boise'],
-  PA: ['America/New_York'], TX: ['America/Chicago', 'America/Denver'], WA: ['America/Los_Angeles'],
+  PA: ['America/New_York'], TN: ['America/Chicago', 'America/New_York'], TX: ['America/Chicago', 'America/Denver'],
+  WA: ['America/Los_Angeles'],
 };
 const PLACE_ZONE: Record<string, string> = { 'pensacola-fl': 'America/Chicago' };
 export function zonesFor(st: string, places: { id: string }[]): string[] {
   const all = STATE_ZONES[st] || [];
   if (!places.length) return all;
   return [...new Set(places.map((p) => PLACE_ZONE[p.id] || all[0]).filter(Boolean))];
+}
+/* The close a ballot names, for the plan and the place pages alike. Polls that close at one moment in two zones
+   ("7:00 PM Central (8:00 PM Eastern)", Tennessee) keep both times on a ballot that spans the zones, where
+   "7 PM" would be an hour early for half of it; a ballot in the first zone gets its own "7 PM". A place in the
+   second zone (Knoxville, Eastern) would get "7 PM" too, as would the closing check: give it that zone's time first. */
+export function closeOf(pollsClose: string, zones: string[]): { close: string; both: boolean } {
+  const both = zones.length > 1 && /\b(Eastern|Central|Mountain|Pacific)\b/.test(pollsClose);
+  return { close: both ? pollsClose : clock(pollsClose) || pollsClose, both };
 }
 
 /* "7:00 PM" -> 1140 (minutes after midnight); null when there is no time. */
@@ -115,7 +128,10 @@ export function applyDated<T extends object>(o: T, dated: Dated[] | undefined, t
    the county's. A button changes only when its label says what kind of page it is, since a state can use one
    page for several jobs (Illinois's election-office directory is also its tracking fallback; New York uses one
    lookup for all four). A general one ("Find voting places", "Find a vote center") that could be either opens
-   the early voting page while early voting is open, then the Election Day one (Codex on part B). */
+   the early voting page while early voting is open, then the Election Day one (Codex on part B). One that names
+   early voting follows the county's own window (Oct 30: Escambia's ends Oct 31, Orange's and Leon's Nov 1, while
+   Florida's state buttons switch by date on Nov 2): once it has ended, it is "Find my polling place" and opens the
+   county's Election Day page, so it never opens a closed county's early voting list. */
 const KINDS = ['early_in_person', 'election_day', 'drop_box', 'tracking'] as const;
 type Kind = (typeof KINDS)[number];
 const urlsOf = (x: HowTo): Record<Kind, string | null> => ({
@@ -134,6 +150,8 @@ function localActions(base: HowTo, h: HowTo, today: string): HowTo {
     const fits = KINDS.filter((k) => was[k] && was[k] === a.url && FITS[k].test(a.label));
     let k: Kind | undefined = fits.length === 1 ? fits[0] : fits.find((x) => NAMES[x]?.test(a.label));
     if (!k && fits.length > 1) k = earlyOpen && fits.includes('early_in_person') ? 'early_in_person' : fits.includes('election_day') ? 'election_day' : fits[0];
+    // Only a label that says early voting: "Find a vote center" (California, Colorado) stays right on Election Day.
+    if (k === 'early_in_person' && !earlyOpen && NAMES.early_in_person!.test(a.label) && now.election_day) return { label: 'Find my polling place', url: now.election_day };
     return k && now[k] && now[k] !== a.url ? { ...a, url: now[k]! } : a;
   };
   return { ...h, situations: h.situations!.map((x) => (x.actions && x.actions.length ? { ...x, actions: x.actions.map(swap) } : x)) };
@@ -176,16 +194,24 @@ function placeHowto(h0: HowTo, places: PlaceBundle[], county: string | null): Ho
       mail_ballot: lb || lt ? { ...h.mail_ballot, ...(lb ? { drop_box_lookup_url: lb } : {}), ...(lt ? { tracking_url: lt } : {}) } : h.mail_ballot,
     };
   }
+  // The county's own mail-ballot facts and opening time (Oct 29), when every place on the ballot gives the same ones:
+  // the City of St. Louis's ballots go back only to its own Board, Nashville's polls open at 7.
+  const same = <T>(xs: (T | undefined)[]): T | null => (xs.length && xs.every((x) => x != null) && new Set(xs.map((x) => JSON.stringify(x))).size === 1 ? xs[0]! : null);
+  const mail = same(places.map((p) => p.mail_ballot));
+  if (mail) h = { ...h, mail_ballot: { ...h.mail_ballot, ...(mail.request_deadline ? { request_deadline: mail.request_deadline } : {}), ...(mail.return_options ? { return_options: mail.return_options } : {}) } };
+  const opening = same(places.map((p) => p.election_day));
+  if (opening) h = { ...h, election_day: { ...h.election_day, polls_open: opening.polls_open } };
   const eps = places.map((p) => p.early_in_person);
   if (!eps.length || eps.some((e) => !e)) return h;
   const first = eps[0]!;
   if (eps.some((e) => e!.start !== first.start || e!.end !== first.end)) return h;
   const notes = [...new Set(eps.map((e) => e!.hours_note).filter((n): n is string => !!n))];
   const pages = [...new Set(eps.map((e) => e!.lookup_url))];
+  // The place's own window is its county's real dates, so the state's latest possible county day goes with the state's window.
   return {
     ...h,
     early_in_person: {
-      ...h.early_in_person, available: true, start: first.start, end: first.end,
+      ...h.early_in_person, available: true, start: first.start, end: first.end, latest_end: null,
       hours_note: notes.length ? notes.join(' ') : h.early_in_person.hours_note,
       lookup_url: le || (pages.length === 1 && pages[0] ? pages[0] : h.early_in_person.lookup_url),
     },
@@ -202,13 +228,13 @@ export function nextStep(h: HowTo, t = todayISO(), absolute = false, now: number
   const ed = h.election_day;
   const mb = h.mail_ballot;
   const ep = h.early_in_person;
-  const close = clock(ed.polls_close) || ed.polls_close;
+  const zones = h.zones || STATE_ZONES[h.state] || [];
+  const { close, both } = closeOf(ed.polls_close, zones);
   if (t > h.election_date) {
     return { phase: 'closed', head: [['Voting has closed. Thank you for taking part.', false]], sub: mb.tracking_url ? ['Mailed a ballot? You can check that it was counted.'] : [], primary: mb.tracking_url ? { label: 'Track your ballot', url: mb.tracking_url } : null };
   }
   if (t === h.election_date) {
     const closesAt = clockMinutes(ed.polls_close);
-    const zones = h.zones || STATE_ZONES[h.state] || [];
     const at = now instanceof Date ? now : new Date();
     // Closed in a zone once that zone's own date and time are past Election Day's close there.
     const past = (z: string | null): boolean => {
@@ -229,8 +255,8 @@ export function nextStep(h: HowTo, t = todayISO(), absolute = false, now: number
     const url = isMailState(h) ? mb.drop_box_lookup_url || ed.lookup_url : ed.lookup_url;
     return {
       phase: 'election_day',
-      head: absolute ? [[`Election Day is ${fmtDate(h.election_date)}. ${zones.length > 1 ? 'Your local polls' : 'Polls'} close at `, false], [close, true], ['.', false]]
-        : [[`Today is Election Day. ${zones.length > 1 ? 'Your local polls' : 'Polls'} close at `, false], [close, true], ['.', false]],
+      head: absolute ? [[`Election Day is ${fmtDate(h.election_date)}. ${zones.length > 1 && !both ? 'Your local polls' : 'Polls'} close at `, false], [close, true], ['.', false]]
+        : [[`Today is Election Day. ${zones.length > 1 && !both ? 'Your local polls' : 'Polls'} close at `, false], [close, true], ['.', false]],
       sub, primary: url ? { label: isMailState(h) && mb.drop_box_lookup_url ? 'Find a drop box or vote center' : 'Find where to vote', url, look: isMailState(h) && mb.drop_box_lookup_url ? 'drop_box' : 'election_day' } : null,
     };
   }
@@ -277,17 +303,23 @@ export function nextStep(h: HowTo, t = todayISO(), absolute = false, now: number
       sub: [ep.end ? `It runs through ${fmtDate(ep.end)}.` : '', /counties may add days|some counties open earlier/i.test(ep.hours_note || '') ? 'Some counties open sooner. Check yours.' : '', ...sub].filter(Boolean), primary: look ? { label: 'Find early voting places', url: look, look: lookKind } : null,
     };
   }
-  if (ep.available && ep.start && ep.end && t <= ep.end) {
-    const head: Part[] = absolute ? [['Early voting is open through ', false], [fmtDate(ep.end), true], ['.', false]]
-      : t === ep.start ? [['Early voting starts today, ', false], [dayNoWeek(ep.start), true], ['.', false]]
-        : t === ep.end ? [['Today is the last day of early voting.', false]]
-          : [['Early voting is open through ', false], [fmtDate(ep.end), true], ['.', false]];
-    return { phase: 'early_open', head, sub: [...sub, `Or vote on Election Day, ${fmtDate(h.election_date)}, until ${close}.`], primary: look ? { label: 'Find early voting places', url: look, look: lookKind } : null };
+  // A window that is only a minimum (statewide Florida's ends Oct 31) runs on in some counties to its last possible
+  // county day (Nov 1, when Orange and Leon still vote early): the other end of "Some counties open sooner". Until
+  // that day the step stays early voting, its button the state's early voting page, as the state's dated notes do.
+  const later = ep.available && ep.end && ep.latest_end && ep.latest_end > ep.end ? ep.latest_end : null;
+  if (ep.available && ep.start && ep.end && t <= (later || ep.end)) {
+    const head: Part[] = t > ep.end ? (absolute ? [['Some counties offer early voting through ', false], [fmtDate(later || ep.end), true], ['.', false]] : [['Some counties still offer early voting today.', false]])
+      : absolute ? [['Early voting is open through ', false], [fmtDate(ep.end), true], ['.', false]]
+        : t === ep.start ? [['Early voting starts today, ', false], [dayNoWeek(ep.start), true], ['.', false]]
+          : t === ep.end ? [[later ? 'Early voting ends today in some counties.' : 'Today is the last day of early voting.', false]]
+            : [['Early voting is open through ', false], [fmtDate(ep.end), true], ['.', false]];
+    const more = !later ? [] : t > ep.end ? ['Check whether yours does.'] : [`${t === ep.end && !absolute ? 'Others stay' : 'Some counties stay'} open through ${fmtDate(later)}. Check yours.`];
+    return { phase: 'early_open', head, sub: [...more, ...sub, `Or vote on Election Day, ${fmtDate(h.election_date)}, until ${close}.`], primary: look ? { label: 'Find early voting places', url: look, look: lookKind } : null };
   }
   return {
     phase: 'election_day_next',
     head: [['Vote on Election Day, ', false], [fmtDate(h.election_date), true], ['.', false]],
-    sub: [`Polls are open ${clock(ed.polls_open) || ed.polls_open} to ${close}.`], primary: ed.lookup_url ? { label: 'Find your polling place', url: ed.lookup_url, look: 'election_day' } : null,
+    sub: [PLAIN_TIME.test(ed.polls_open || '') ? `Polls are open ${clock(ed.polls_open)} to ${close}.` : `Polls close at ${close}.`], primary: ed.lookup_url ? { label: 'Find your polling place', url: ed.lookup_url, look: 'election_day' } : null,
   };
 }
 /* The state's suggested last day to mail a ballot, read from its own advice ("Monday, October
@@ -313,9 +345,21 @@ const firstSentence = (s: string): string => { const m = s.match(/^(.+?[.!?])(\s
 
 /* The button beside "Not registered?": the state's register page (registration.register_url, from
    the data track). "Register now" while any deadline is still ahead; once they have all passed,
-   "Register for next time". Null when the state file has no register page. */
+   "Register for next time". When the only way left is in person (California after its online deadline:
+   same-day registration at a vote center; audit, Oct 29), it opens where you can do that: the early
+   voting page while early voting is open, then the Election Day one. Null when the state file has no
+   register page and nothing else fits. */
+const inPersonOnly = (h: HowTo, t: string): boolean => {
+  const open = h.registration.deadlines.filter((d) => !!d.date && d.date >= t);
+  return open.length > 0 && open.every((d) => d.method === 'in_person');
+};
 export function registerAction(h: HowTo, t = todayISO()): { label: string; url: string } | null {
   const url = h.registration.register_url;
+  if (inPersonOnly(h, t)) {
+    const ep = h.early_in_person;
+    const where = (ep.available && ep.lookup_url && (!ep.end || t <= ep.end) ? ep.lookup_url : null) || h.election_day.lookup_url;
+    if (where) return { label: 'Find where to register and vote', url: where };
+  }
   if (!url) return null;
   const open = h.registration.deadlines.some((d) => !!d.date && d.date >= t);
   return { label: open ? 'Register now' : 'Register for next time', url };
@@ -326,6 +370,11 @@ export function registrationAlert(h: HowTo, t = todayISO(), absolute = false): s
   if (!open.length) return null;
   const first = open[0];
   if (daysBetween(t, first.date!) > 7) return null;
+  if (inPersonOnly(h, t)) {
+    const last = open[open.length - 1];
+    const same = h.registration.same_day_registration ? ' and vote' : '';
+    return last.date === t && !absolute ? `Not registered? You can still register in person${same} today.` : `Not registered? You can still register in person${same} through ${day(last.date!, t, absolute)}.`;
+  }
   const how = (m: string) => (m === 'online' ? 'online' : m === 'mail' ? 'by mail' : 'in person');
   const allSame = open.every((d) => d.date === first.date);
   const today = first.date === t && !absolute;

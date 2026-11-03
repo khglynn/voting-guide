@@ -200,6 +200,16 @@
       "path": "notes",
       "from": "2026-11-02",
       "text": "Drop off a mail ballot only at the elections office, 119 W. Kaley St.: Mon, Nov 2, 8 AM to 5 PM, and Election Day, 7 AM to 7 PM. Never at a polling place. Looking up your polling place? Type your house number and street name; there is no Enter button."
+    },
+    {
+      "path": "situations.no_mail_ballot_or_lost.short",
+      "from": "2026-11-02",
+      "text": "Early voting ended Nov 1, so vote at your own precinct on Nov 3, 7 AM to 7 PM."
+    },
+    {
+      "path": "situations.no_mail_ballot_or_lost.answer",
+      "from": "2026-11-02",
+      "text": "The deadline to have a new ballot mailed was October 22, and early voting ended Sunday, November 1, so vote at your own precinct on Election Day, 7 AM to 7 PM. Still have the mail ballot? Bring it and trade it for a regular ballot."
     }
   ]
 }

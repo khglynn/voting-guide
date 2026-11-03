@@ -556,5 +556,12 @@
       "name": "Allegheny County: voting events calendar",
       "url": "https://www.alleghenycounty.us/Government/Elections/Pre-Election-Day-Voting-Options/Voting-Events-Calendar"
     }
+  ],
+  "dated": [
+    {
+      "path": "mail_ballot.mail_cutoff_advice",
+      "from": "2026-10-28",
+      "text": "It's too late to count on the mail. Your ballot must reach your county election office by 8 PM on November 3. DOS says 'A postmark by 8 p.m. Nov. 3 is not sufficient.' Hand it in instead: at your county election office, a satellite office, a Philadelphia drop box or an Allegheny return site."
+    }
   ]
 }

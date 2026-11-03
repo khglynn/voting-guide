@@ -1,0 +1,89 @@
+[
+ {
+  "state": "CA",
+  "level": "city",
+  "jurisdiction": "City of Burbank",
+  "pass_threshold": "simple majority",
+  "referred_by": "council",
+  "official_text_url": "https://content.lavote.gov/docs/rrcc/documents/measures-appearing-on-the-ballot---november-3-2026-rev-8-14-2026-v-4.pdf",
+  "official_guide_url": "https://www.burbankca.gov/tot-measure",
+  "explainers": [],
+  "confidence": "sourced",
+  "id": "burbank-measure-c",
+  "number": "Measure C",
+  "short_title": "Hotel tax, 10% to 12%",
+  "official_title": "City of Burbank City Services Measure. To maintain services including fire, paramedic, police, 911 response; prepare for/respond to wildfires/other disasters; prevent property crimes; keep public areas/neighborhoods clean/safe; address homelessness; support youth programs, senior services, other general city services; shall the measure increasing Burbank's transient occupancy tax, paid only by hotel/motel guests, from 10% to 12%, providing approximately $3,000,000 annually until ended by voters, requiring audits, spending disclosures, funds used locally, be adopted?",
+  "plain_summary": "Raises Burbank's hotel tax, which guests pay on stays shorter than 30 days, from 10% to 12% of the room bill. The city expects about $3 million more a year for city services. The higher rate would start January 1, 2027, and last until voters end it. The measure requires audits and public spending reports.",
+  "yes_means": "Burbank's hotel tax goes from 10% to 12%, bringing in about $3 million more a year for city services.",
+  "no_means": "Burbank's hotel tax stays at 10%.",
+  "current_law": "Hotels, motels and inns add a 10% tax to the bills of guests staying under 30 days and send all of it to the city's general fund. The city says the rate hasn't changed since 1983.",
+  "fiscal_impact": "About $3 million a year more for the city, by the ballot question's own estimate. City staff told the council in June that Burbank faces deficits of $2.7 million this budget year, $3 million in 2028-29 and $3.2 million in 2029-30.",
+  "confusing_wording_note": "Only hotel and motel guests pay this tax, not residents at home. The money goes into the general fund, which pays for city services in general.",
+  "supporters_case": {
+   "text": "The City Council put this on the ballot. City staff told the council that even after cutting costs Burbank will keep running deficits, because it “has limited tools to generate revenue.”",
+   "source": "https://outlooknewspapers.com/burbankleader/voters-to-see-tax-hike-election-measures-in-november/article_636f9af5-f657-4687-8f71-6014ee06e4bc.html"
+  },
+  "opponents_case": {
+   "text": "The LA County Republican Party says vote no. Its guide calls Measure C a “General tax, no sunset,” meaning the money can pay for any city service and the higher rate has no end date.",
+   "source": "https://lagop-endorsement-lookup.vercel.app/"
+  }
+ },
+ {
+  "state": "CA",
+  "level": "city",
+  "jurisdiction": "City of Burbank",
+  "pass_threshold": "simple majority",
+  "referred_by": "council",
+  "official_text_url": "https://content.lavote.gov/docs/rrcc/documents/measures-appearing-on-the-ballot---november-3-2026-rev-8-14-2026-v-4.pdf",
+  "official_guide_url": "https://www.burbankca.gov/election-measures",
+  "explainers": [],
+  "confidence": "sourced",
+  "id": "burbank-measure-cc",
+  "number": "Measure CC",
+  "short_title": "Charter: drop at-large rule",
+  "official_title": "Charter Amendment Measure. Shall the Burbank City Charter be amended to remove the requirement for at-large elections of City Council members and permit the City's electoral system to be specified by ordinance adopted by the City Council or by the voters by initiative?",
+  "plain_summary": "Takes the rule that council members must be elected citywide out of Burbank's charter, the city's constitution. After that, the way council members are elected could be set by a regular city law passed by the council or by voters. By itself it doesn't create districts: Measure CD does that, and CD works only if CC passes too.",
+  "yes_means": "The charter stops requiring citywide council elections, which lets Measure CD's districts take effect if CD also passes.",
+  "no_means": "The charter keeps requiring citywide council elections, and Measure CD can't take effect.",
+  "current_law": "Burbank elects its five council members at large: every voter votes for all the open seats, wherever they live. In 2023 a resident sued the city under the California Voting Rights Act over these citywide elections. To settle the case in 2026, the city agreed to put Measures CC and CD on this ballot.",
+  "fiscal_impact": null,
+  "confusing_wording_note": "If CC passes and CD fails, council elections stay citywide for now, but a future council could change the system by ordinance without another charter vote.",
+  "supporters_case": {
+   "text": "The city says CC gives the council and voters flexibility to respond to future changes in state law, election rules or court rulings, and could lower the risk of costly lawsuits.",
+   "source": "https://burbankvotes.com/measures/"
+  },
+  "opponents_case": {
+   "text": "myBurbank's editor says that if CC passes and CD fails, the council could still adopt a different district map by ordinance, without a charter vote. He writes that “the method we use to elect our representatives is important enough to keep under direct voter control.”",
+   "source": "https://myburbank.com/myburbanks-position-vote-no-on-measures-cc-and-cd-yes-on-c/"
+  }
+ },
+ {
+  "state": "CA",
+  "level": "city",
+  "jurisdiction": "City of Burbank",
+  "pass_threshold": "simple majority",
+  "referred_by": "council",
+  "official_text_url": "https://content.lavote.gov/docs/rrcc/documents/measures-appearing-on-the-ballot---november-3-2026-rev-8-14-2026-v-4.pdf",
+  "official_guide_url": "https://www.burbankca.gov/election-measures",
+  "explainers": [],
+  "confidence": "sourced",
+  "id": "burbank-measure-cd",
+  "number": "Measure CD",
+  "short_title": "Council elected by district",
+  "official_title": "By-District Council Elections Measure. Shall the Ordinance be adopted adding Chapter 3 to Title 2 of the Municipal Code changing the City's electoral system for City Council elections from at-large to by-district elections in the districts reflected in Map 130?",
+  "plain_summary": "Splits Burbank into five council districts, drawn on Map 130. You would vote only for the council member from your own district instead of for every open seat. Districts 2 and 4 would vote first, in November 2028, and Districts 1, 3 and 5 in 2030. It works only if Measure CC also passes.",
+  "yes_means": "If Measure CC also passes, Burbank elects one council member from each of five districts, starting in 2028.",
+  "no_means": "Council members keep being elected citywide.",
+  "current_law": "Burbank elects its five council members at large: every voter votes for all the open seats, wherever they live. In 2023 a resident sued the city under the California Voting Rights Act over these citywide elections. To settle the case in 2026, the city agreed to put Measures CC and CD on this ballot.",
+  "fiscal_impact": null,
+  "confusing_wording_note": "A yes on CD does nothing unless Measure CC passes too. This year's council race is still citywide either way.",
+  "supporters_case": {
+   "text": "We found no official argument for CD. A resident's letter in myBurbank argues that a district “gives each neighborhood one person whose job is to answer to it,” and that smaller races cost less to run, so people without big donors could win a seat.",
+   "source": "https://myburbank.com/letter-to-the-editor-resident-disagrees-with-myburbanks-ballot-position/"
+  },
+  "opponents_case": {
+   "text": "myBurbank's editor says districts would limit your vote to the one council seat for your district, once every four years, with no say in choosing the other four members, whose decisions still affect your neighborhood. “Every resident should have a vote in choosing the entire council.”",
+   "source": "https://myburbank.com/myburbanks-position-vote-no-on-measures-cc-and-cd-yes-on-c/"
+  }
+ }
+]

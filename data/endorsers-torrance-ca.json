@@ -1,0 +1,172 @@
+[
+ {
+  "id": "lacdp",
+  "name": "Los Angeles County Democratic Party",
+  "type": "party",
+  "lean": "left",
+  "lean_basis": "Official county Democratic Party organization. Its candidates page lists its Nov 2026 candidate endorsements and a table of positions on statewide and local measures (read Oct 17, 2026).",
+  "geography": [
+   "torrance-ca"
+  ],
+  "guide_url": "https://www.lacdp.org/candidates",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "party": "Democratic",
+  "lean_basis_kind": "party"
+ },
+ {
+  "id": "la-county-gop",
+  "name": "Republican Party of Los Angeles County",
+  "type": "party",
+  "lean": "right",
+  "lean_basis": "Official county Republican Party organization. Its Nov 3, 2026 candidate picks and its positions on LA city and county measures are published in an address-lookup tool linked from lagop.org (read Oct 17, 2026). It marks some candidate picks as recommended rather than formally endorsed.",
+  "geography": [
+   "torrance-ca"
+  ],
+  "guide_url": "https://lagop-endorsement-lookup.vercel.app/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "party": "Republican",
+  "lean_basis_kind": "party",
+  "short": "LA County Republican Party"
+ },
+ {
+  "id": "la-fed",
+  "name": "Los Angeles County Federation of Labor, AFL-CIO",
+  "type": "labor",
+  "lean": "lean_left",
+  "lean_basis": "Federation of about 300 unions in LA County that says 'We empower workers to organize and take collective action to win better wages and respect in the workplace' (https://thelafed.org/about/). No outside rating found; lean reflects its stated mission.",
+  "geography": [
+   "torrance-ca"
+  ],
+  "guide_url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
+ },
+ {
+  "id": "la-forward",
+  "name": "LA Forward (LA Forward Action Fund voter guide)",
+  "type": "advocacy",
+  "lean": "left",
+  "lean_basis": "Its stated mission or political identity includes: \"Los Angeles Progressive Voter Guide\". Source: https://laforwardguide.org/.",
+  "geography": [
+   "torrance-ca"
+  ],
+  "guide_url": "https://laforwardguide.org/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
+ },
+ {
+  "id": "knock-la",
+  "name": "Knock LA",
+  "type": "publication",
+  "lean": "left",
+  "lean_basis": "Its stated mission or political identity includes: \"We are dedicated to giving a voice to the left and uplifting marginalized communities\". Source: https://knock-la.com/about-us/.",
+  "geography": [
+   "torrance-ca"
+  ],
+  "guide_url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "default_on": true,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
+ },
+ {
+  "id": "thrive-la",
+  "name": "Thrive LA",
+  "type": "advocacy",
+  "lean": "neutral",
+  "lean_basis": "Describes itself as 'a pragmatic, nonpartisan voter guide' (https://www.thrivelosangeles.org/voter-guide), with no stated ideological mission. No outside rating found; lean reflects its stated mission.",
+  "geography": [
+   "torrance-ca"
+  ],
+  "guide_url": "https://www.thrivelosangeles.org/voter-guide",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
+ },
+ {
+  "id": "la-daily-news-eb",
+  "name": "Los Angeles Daily News / Southern California News Group editorial board",
+  "type": "publication",
+  "lean": "neutral",
+  "lean_basis": "AllSides rates the Los Angeles Daily News Center (independent review, initial rating July 2020; low or initial confidence as of Sept. 2026). Its editorials come from the Southern California News Group board it shares with the OC Register, whose news AllSides rates Lean Right. Rating source: https://www.allsides.com/news-source/los-angeles-daily-news-media-bias.",
+  "geography": [
+   "torrance-ca"
+  ],
+  "guide_url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "default_on": true,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "lean_basis_kind": "outside_rating"
+ },
+ {
+  "id": "torrance-democratic-club",
+  "name": "Torrance Democratic Club",
+  "type": "advocacy",
+  "lean": "left",
+  "lean_basis": "Describes itself on its home page as a club that works 'to unite Democrats in the city' and builds power 'by electing candidates who share our values' (https://www.torrancedems.com/). No outside rating found; lean reflects its stated mission.",
+  "lean_basis_kind": "mission",
+  "geography": [
+   "torrance-ca"
+  ],
+  "guide_url": "https://www.torrancedems.com/upcoming-elections-endorsements",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "indivisible-south-bay-la",
+  "name": "Indivisible South Bay LA",
+  "type": "advocacy",
+  "lean": "lean_left",
+  "lean_basis": "Describes itself on its About page as 'a left-of-center “big-tent” organization' (https://www.indivisiblesouthbay.com/about/). No outside rating found; lean reflects its stated mission.",
+  "lean_basis_kind": "mission",
+  "geography": [
+   "torrance-ca"
+  ],
+  "guide_url": "https://indivisiblesouthbay.com/endorsements/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false
+ },
+ {
+  "id": "south-bay-republicans",
+  "name": "South Bay Republicans (66th Assembly District Republican Central Committee)",
+  "short": "South Bay Republicans",
+  "type": "party",
+  "party": "Republican",
+  "lean": "right",
+  "lean_basis": "Official Republican Party committee for the 66th Assembly District, which includes Torrance; its home page calls it 'the official organization representing Republican voters within the district' (https://www.southbayrepublicans.com/).",
+  "lean_basis_kind": "party",
+  "geography": [
+   "torrance-ca"
+  ],
+  "guide_url": "https://www.southbayrepublicans.com/candidates-endorsements",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false
+ },
+ {
+  "id": "torrance-teachers-association",
+  "name": "Torrance Teachers Association",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: no AllSides or Ad Fontes rating found. It is the union for Torrance Unified's teachers, an affiliate of the California Teachers Association and the NEA. Its home page says it 'exists as the exclusive bargaining representative for its members, to protect TUSD teachers’ interests' and works to improve their working conditions 'in order to improve students’ learning environment' (https://torranceteachers.org/), which names no political side.",
+  "lean_basis_kind": "mission",
+  "geography": [
+   "torrance-ca"
+  ],
+  "guide_url": "https://torranceteachers.org/wp-content/uploads/2026/10/10-2-26.pdf",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ }
+]

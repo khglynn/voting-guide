@@ -1,0 +1,49 @@
+[
+  {
+    "id": "collin-county-democrats",
+    "name": "Collin County Democratic Party",
+    "type": "party",
+    "lean": "left",
+    "lean_basis": "Official county party organization. Its 2026 slate card lists the Democrats on Collin County's November ballot and asks voters to take it to the polls (its own nominee list, not a separate endorsement vote).",
+    "geography": [
+      "allen-tx"
+    ],
+    "guide_url": "https://www.collindemocrats.org/?p=15028",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "party": "Democratic",
+    "lean_basis_kind": "party"
+  },
+  {
+    "id": "collin-county-gop",
+    "name": "Collin County Republican Party",
+    "type": "party",
+    "lean": "right",
+    "lean_basis": "Official county party organization. Its 2026 Republican Candidates page lists the Republicans on Collin County's November ballot (its own nominee list, not a separate endorsement vote).",
+    "geography": [
+      "allen-tx"
+    ],
+    "guide_url": "https://www.collincountygop.org/2026candidates/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "party": "Republican",
+    "lean_basis_kind": "party"
+  },
+  {
+    "id": "lwv-collin-county",
+    "name": "League of Women Voters of Collin County",
+    "type": "civic_nonpartisan",
+    "lean": "neutral",
+    "lean_basis": "Its own mission: \"The League of Women Voters is a nonpartisan organization that does not support or oppose political parties or candidates.\" (lwvcollin.org)",
+    "geography": [
+      "allen-tx"
+    ],
+    "guide_url": "https://www.lwvcollin.org/content.aspx?page_id=22&club_id=980754&module_id=491963",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
+  }
+]

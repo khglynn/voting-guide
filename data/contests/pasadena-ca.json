@@ -1,0 +1,488 @@
+[
+ {
+  "id": "ca-assembly-41",
+  "state": "CA",
+  "level": "state",
+  "office": "Member of the State Assembly",
+  "district": "AD-41 (all of Pasadena; Altadena and other foothill towns, east into San Bernardino County)",
+  "scope_plain": "Voters in the 41st Assembly District, which includes all of Pasadena and Altadena and reaches east into San Bernardino County, including part of Rancho Cucamonga. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
+  "why_it_matters": "A first-term Democrat against a Republican newcomer in a district hit hard by the Eaton fire. Only two people ran in June, so both advanced; Harabedian got 63.3%.",
+  "vote_for": 1,
+  "incumbent": "John Harabedian",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "John Harabedian",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://johnharabedian.com/",
+    "website_confidence": "verified",
+    "background": "Assemblymember since December 2024. Attorney, former Los Angeles County prosecutor, and former mayor and city councilmember of Sierra Madre, where he was born. Yale, Oxford and Stanford Law. Ballot designation: California State Assemblymember. First in June with 63.3%.",
+    "own_words": [
+     {
+      "text": "His campaign site lists his work as “build affordable housing to reduce homelessness and make homeownership possible for young families.”",
+      "is_quote": true,
+      "source": "https://johnharabedian.com/"
+     },
+     {
+      "text": "Also lists climate and water infrastructure, mental health treatment, higher education, K-12 teacher pay, gun law enforcement, public transit and reproductive rights.",
+      "is_quote": false,
+      "source": "https://johnharabedian.com/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Adam Christopher Vena",
+    "party": "Republican",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Father/Sanitation Employee. LAist found no campaign website. Second in the two-person June primary with 36.7%.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null,
+    "own_words_status": "none_found",
+    "own_words_checked": {
+     "on": "2026-10-31",
+     "where": [
+      "LAist State Assembly voter guide (no website listed)",
+      "Ballotpedia candidate page (survey not completed)",
+      "California Secretary of State certified candidate list"
+     ]
+    }
+   }
+  ],
+  "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
+    "name": "CA Secretary of State: randomized alphabet for the Nov 3, 2026 ballot",
+    "url": "https://elections.cdn.sos.ca.gov/ccrov/2026/august/26210wk.pdf"
+   },
+   {
+    "name": "LAist: State Assembly races (District 41)",
+    "url": "https://laist.com/news/politics/voter-guides/2026-election-california-general-state-assembly"
+   },
+   {
+    "name": "Ballotpedia: Adam Vena (June primary results)",
+    "url": "https://ballotpedia.org/Adam_Christopher_Vena"
+   },
+   {
+    "name": "Ballotpedia: John Harabedian",
+    "url": "https://ballotpedia.org/John_Harabedian"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "pasadena-pccd-area-1",
+  "state": "CA",
+  "level": "special_district",
+  "office": "Pasadena Area Community College District Board of Trustees",
+  "district": "Trustee Area 1 (west Pasadena, Oak Knoll, Madison Heights and La Cañada Flintridge)",
+  "scope_plain": "Only voters in Pasadena City College's Trustee Area 1: Pasadena's west and south sides (Linda Vista, San Rafael, Annandale, Oak Knoll, Madison Heights and parts of downtown and Old Pasadena) and La Cañada Flintridge. Northwest Pasadena votes in Area 3. Areas 2 and 4, which cover the rest of Pasadena, are not up this year. Nonpartisan; most votes wins.",
+  "office_explainer": "One of seven trustees who run Pasadena City College: its budget, its president, its policies and its building bonds.",
+  "why_it_matters": "Open seat; trustee Sandra Chen Lau is not on the ballot. If Measure UP passes, this board decides how to spend $485 million in new bonds.",
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": true,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Francis Pollara",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.francispollara.com/",
+    "website_confidence": "verified",
+    "background": "Pasadena City College alumnus and first-generation American who works in economic development and public-private infrastructure projects. A former entrepreneur-in-residence with the City of Los Angeles; LAist describes him as a businessman and city commissioner.",
+    "own_words": [
+     {
+      "text": "“I would strengthen fiscal oversight by closely reviewing finances, major contracts, capital projects and expenditures.”",
+      "is_quote": true,
+      "source": "https://laist.com/news/politics/voter-guides/2026-election-california-pasadena-community-college-board"
+     },
+     {
+      "text": "Wants more apprenticeships, internships and employer partnerships, plus more dual enrollment and zero-textbook-cost classes.",
+      "is_quote": false,
+      "source": "https://laist.com/news/politics/voter-guides/2026-election-california-pasadena-community-college-board"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Geoff Baum",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.geoffreybaum.com/",
+    "website_confidence": "verified",
+    "background": "Former PCC trustee who was board president twice, and a former member of the state community college Board of Governors. Began as a high school English teacher; has held jobs at USC and Claremont McKenna College.",
+    "own_words": [
+     {
+      "text": "“I have spent my professional career and public service work making education a ladder of opportunity.”",
+      "is_quote": true,
+      "source": "https://laist.com/news/politics/voter-guides/2026-election-california-pasadena-community-college-board"
+     },
+     {
+      "text": "Wants PCC to train more electricians, plumbers, framers and inspectors for the Eaton fire rebuild, and to cut costs like textbooks.",
+      "is_quote": false,
+      "source": "https://www.geoffreybaum.com/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "LAist: Pasadena Area Community College District Board of Trustees",
+    "url": "https://laist.com/news/politics/voter-guides/2026-election-california-pasadena-community-college-board"
+   },
+   {
+    "name": "Pasadena City College: trustee area map",
+    "url": "https://pasadena.edu/about/board-of-trustees/district-map.php"
+   },
+   {
+    "name": "Pasadena City College: board members and their areas",
+    "url": "https://pasadena.edu/about/board-of-trustees/members/index.php"
+   },
+   {
+    "name": "Francis Pollara campaign: Trustee Area 1 neighborhoods",
+    "url": "https://www.francispollara.com/"
+   },
+   {
+    "name": "CA Secretary of State: randomized alphabet for the Nov 3, 2026 ballot",
+    "url": "https://elections.cdn.sos.ca.gov/ccrov/2026/august/26210wk.pdf"
+   }
+  ],
+  "confidence": "sourced"
+ },
+ {
+  "id": "pasadena-pccd-area-3",
+  "state": "CA",
+  "level": "special_district",
+  "office": "Pasadena Area Community College District Board of Trustees",
+  "district": "Trustee Area 3 (northwest Pasadena and part of southwest Altadena)",
+  "scope_plain": "Only voters in Pasadena City College's Trustee Area 3: northwest Pasadena and part of southwest Altadena, including the area around John Muir High School. Pasadena's west and south sides vote in Area 1. Areas 2 and 4, which cover the rest of Pasadena, are not up this year. Nonpartisan; most votes wins.",
+  "office_explainer": "One of seven trustees who run Pasadena City College: its budget, its president, its policies and its building bonds.",
+  "why_it_matters": "The board's president, first elected in 2022, against a Pasadena planning commissioner. If Measure UP passes, this board decides how to spend $485 million in new bonds.",
+  "vote_for": 1,
+  "incumbent": "Steve Gibson",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "David Coher",
+    "party": null,
+    "incumbent": false,
+    "website": "https://coher4pcc.com/",
+    "website_confidence": "verified",
+    "background": "Pasadena mediator, attorney and business leader who has served on Pasadena's Planning Commission and Board of Zoning Appeals. Started at Long Beach City College, then USC and Georgetown Law.",
+    "own_words": [
+     {
+      "text": "“Pasadena City College changes lives, just as community college changed mine.”",
+      "is_quote": true,
+      "source": "https://coher4pcc.com/"
+     },
+     {
+      "text": "Says he would scrutinize spending, push for long-term financial planning, and grow programs in skilled trades, health care, technology and public safety.",
+      "is_quote": false,
+      "source": "https://laist.com/news/politics/voter-guides/2026-election-california-pasadena-community-college-board"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Steve Gibson",
+    "party": null,
+    "incumbent": true,
+    "website": "https://www.stevegibson4pcc.com/",
+    "website_confidence": "verified",
+    "background": "Trustee since 2022 and current board president. A former PCC student with a doctorate in education. A longtime Altadena resident who lost his home in the Eaton fire.",
+    "own_words": [
+     {
+      "text": "His campaign says he believes “education is a human right” and has worked to make PCC more accessible.",
+      "is_quote": true,
+      "source": "https://www.stevegibson4pcc.com/priorities"
+     },
+     {
+      "text": "Wants more non-credit adult education and skilled-trades programs, and points to PCC's help for fire-hit businesses after the Eaton fire.",
+      "is_quote": false,
+      "source": "https://www.stevegibson4pcc.com/about"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "LAist: Pasadena Area Community College District Board of Trustees",
+    "url": "https://laist.com/news/politics/voter-guides/2026-election-california-pasadena-community-college-board"
+   },
+   {
+    "name": "Pasadena City College: board members and their areas",
+    "url": "https://pasadena.edu/about/board-of-trustees/members/index.php"
+   },
+   {
+    "name": "Pasadena City College: trustee area map",
+    "url": "https://pasadena.edu/about/board-of-trustees/district-map.php"
+   },
+   {
+    "name": "CA Secretary of State: randomized alphabet for the Nov 3, 2026 ballot",
+    "url": "https://elections.cdn.sos.ca.gov/ccrov/2026/august/26210wk.pdf"
+   }
+  ],
+  "confidence": "sourced"
+ },
+ {
+  "id": "pasadena-pusd-district-1",
+  "state": "CA",
+  "level": "school",
+  "office": "Pasadena Unified School District Board of Education",
+  "district": "District 1 (mostly Altadena)",
+  "scope_plain": "Voters in Pasadena Unified School District Board District 1 only. It is mostly Altadena and takes in only a small corner of northwest Pasadena along the Arroyo Seco. Districts 3 and 7 also vote this year; Districts 2, 4 and 6 don't, and District 5's race was canceled because only the incumbent filed. Nonpartisan; most votes wins.",
+  "office_explainer": "One of seven board members who run Pasadena's public schools: the budget, the superintendent, school closures.",
+  "why_it_matters": "A board member since 2011 who voted for last year's $24.5 million in cuts and a process that could close schools, against a student recruiter who says she would have voted no on both.",
+  "vote_for": 1,
+  "incumbent": "Kimberly Kenne",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Felita Kealing",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.healingwithkealing.com/",
+    "website_confidence": "verified",
+    "background": "Works in marketing and student recruitment at Thurgood Marshall Secondary School and has been a Pasadena Unified parent. Grew up in northwest Pasadena and Altadena and went to Pasadena Unified schools, including Blair High. Ballot designation: School Student Recruiter.",
+    "own_words": [
+     {
+      "text": "Says her top priority is student achievement, with “transparent accountability systems, utilizing performance metrics to assess student advancement.”",
+      "is_quote": true,
+      "source": "https://laist.com/news/politics/voter-guides/2026-general-election-pasadena-unified-board-of-education-voter-guide"
+     },
+     {
+      "text": "Would have voted against last year's budget cuts and the District Transformation Process; says closing schools drives families out of the district.",
+      "is_quote": false,
+      "source": "https://laist.com/news/politics/voter-guides/2026-general-election-pasadena-unified-board-of-education-voter-guide"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Kimberly Kenne",
+    "party": null,
+    "incumbent": true,
+    "website": "https://kenneforpusd.com",
+    "website_confidence": "sourced",
+    "background": "On the board since 2011 and twice its president. Has lived in Altadena for 32 years; her children went to Pasadena Unified schools. Worked in information technology for banks. Voted for last year's cuts and for starting the District Transformation Process. Ballot designation: Board of Education Member, Pasadena Unified School District.",
+    "own_words": [
+     {
+      "text": "“My top priority is that our spending is aligned with our values.”",
+      "is_quote": true,
+      "source": "https://laist.com/news/politics/voter-guides/2026-general-election-pasadena-unified-board-of-education-voter-guide"
+     },
+     {
+      "text": "Says declining enrollment and painful cuts mean the district must look at all its options: “This may mean having fewer schools open.”",
+      "is_quote": true,
+      "source": "https://laist.com/news/politics/voter-guides/2026-general-election-pasadena-unified-board-of-education-voter-guide"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "City of Pasadena: Pasadena Unified qualified candidates and ballot designations, in ballot order",
+    "url": "https://www.cityofpasadena.net/city-clerk/wp-content/uploads/sites/21/2026-General-Election-PUSD-Qualified-Candidates-EN.pdf"
+   },
+   {
+    "name": "City of Pasadena: Pasadena Unified Board of Education election information",
+    "url": "https://www.cityofpasadena.net/city-clerk/wp-content/uploads/sites/21/2026-General-Election-Board-of-Education-Candidate-Information.pdf"
+   },
+   {
+    "name": "Pasadena Unified: board district map and boundary descriptions (Feb 2, 2022)",
+    "url": "https://resources.finalsite.net/images/v1707482714/pusdus/peeovbnon0h72varoxpm/pusdboardmembersgeographicsubdistrictmapandexhibit.pdf"
+   },
+   {
+    "name": "LAist: Pasadena Unified Board of Education",
+    "url": "https://laist.com/news/politics/voter-guides/2026-general-election-pasadena-unified-board-of-education-voter-guide"
+   },
+   {
+    "name": "Pasadena Now: uncontested District 5 race canceled (Aug 10, 2026)",
+    "url": "https://pasadenanow.com/main/uncontested-district-5-race-to-be-canceled-in-school-board-race"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "pasadena-pusd-district-3",
+  "state": "CA",
+  "level": "school",
+  "office": "Pasadena Unified School District Board of Education",
+  "district": "District 3 (northwest Pasadena)",
+  "scope_plain": "Voters in Pasadena Unified School District Board District 3 only, in northwest Pasadena, around John Muir High School and the Jackie Robinson Community Center. Districts 1 and 7 also vote this year; Districts 2, 4 and 6 don't, and District 5's race was canceled because only the incumbent filed. Nonpartisan; most votes wins.",
+  "office_explainer": "One of seven board members who run Pasadena's public schools: the budget, the superintendent, school closures.",
+  "why_it_matters": "A board member since 2017 who voted against last year's $24.5 million in cuts and a process that could close schools, against an educator and former charter school principal who says she would have voted against the cuts but for the process.",
+  "vote_for": 1,
+  "incumbent": "Michelle Richardson Bailey",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Michelle Richardson Bailey",
+    "party": null,
+    "incumbent": true,
+    "website": "https://www.michelleforpusd.com/",
+    "website_confidence": "verified",
+    "background": "On the board since 2017. A Pasadena native who went to Pasadena Unified schools and worked 14 years in the district; her children went there and grandchildren go now. Voted against last year's cuts and against starting the District Transformation Process. Ballot designation: Board Member, Pasadena Unified School District.",
+    "own_words": [
+     {
+      "text": "“At the heart of every decision should be one question: How will this help every student succeed?”",
+      "is_quote": true,
+      "source": "https://www.michelleforpusd.com/platform"
+     },
+     {
+      "text": "Her three priorities: giving students a real voice in decisions, accountability with honest communication, and keeping money and attention on the classroom.",
+      "is_quote": false,
+      "source": "https://www.michelleforpusd.com/platform"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Veronica Elias",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.eliasforpusd.com/",
+    "website_confidence": "verified",
+    "background": "Pasadena Unified parent. Taught for 14 years and has worked more than 10 years in school administration, including as principal of a Los Angeles charter school. Ballot designation: Educator/Parent.",
+    "own_words": [
+     {
+      "text": "Top priority: “stabilizing the district’s budget while protecting classroom instruction.”",
+      "is_quote": true,
+      "source": "https://laist.com/news/politics/voter-guides/2026-general-election-pasadena-unified-board-of-education-voter-guide"
+     },
+     {
+      "text": "Wants an independent audit of the district office before more cuts reach schools. Would have voted against last year's cuts but for the District Transformation Process.",
+      "is_quote": false,
+      "source": "https://laist.com/news/politics/voter-guides/2026-general-election-pasadena-unified-board-of-education-voter-guide"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "City of Pasadena: Pasadena Unified qualified candidates and ballot designations, in ballot order",
+    "url": "https://www.cityofpasadena.net/city-clerk/wp-content/uploads/sites/21/2026-General-Election-PUSD-Qualified-Candidates-EN.pdf"
+   },
+   {
+    "name": "Pasadena Unified: board district map and boundary descriptions (Feb 2, 2022)",
+    "url": "https://resources.finalsite.net/images/v1707482714/pusdus/peeovbnon0h72varoxpm/pusdboardmembersgeographicsubdistrictmapandexhibit.pdf"
+   },
+   {
+    "name": "LAist: Pasadena Unified Board of Education",
+    "url": "https://laist.com/news/politics/voter-guides/2026-general-election-pasadena-unified-board-of-education-voter-guide"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "pasadena-pusd-district-7",
+  "state": "CA",
+  "level": "school",
+  "office": "Pasadena Unified School District Board of Education",
+  "district": "District 7 (west and southwest Pasadena)",
+  "scope_plain": "Voters in Pasadena Unified School District Board District 7 only, which covers west and southwest Pasadena: the Rose Bowl and the Arroyo, Linda Vista, and the neighborhoods around Huntington Hospital. Districts 1 and 3 also vote this year; Districts 2, 4 and 6 don't, and District 5's race was canceled because only the incumbent filed. Nonpartisan; most votes wins.",
+  "office_explainer": "One of seven board members who run Pasadena's public schools: the budget, the superintendent, school closures.",
+  "why_it_matters": "Open seat: board member Yarma Velázquez didn't file to run again. A retired finance executive against an education consultant.",
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": true,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Dennis J. McNamara",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.dennisforpusd.com/",
+    "website_confidence": "verified",
+    "background": "Retired after nearly 40 years in investment management. Chairs Pasadena Unified's bond oversight committee and volunteers as a math tutor in the district. Ballot designation: Retired Finance Executive.",
+    "own_words": [
+     {
+      "text": "Top priority: “raising academic achievement in core academic subjects,” especially English and math, with progress on every board agenda.",
+      "is_quote": true,
+      "source": "https://laist.com/news/politics/voter-guides/2026-general-election-pasadena-unified-board-of-education-voter-guide"
+     },
+     {
+      "text": "Would have voted for last year's cuts to avoid a county takeover, but says they hit classrooms too hard and more should have come from district headquarters.",
+      "is_quote": false,
+      "source": "https://laist.com/news/politics/voter-guides/2026-general-election-pasadena-unified-board-of-education-voter-guide"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Cynthia Torres",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.torres4pusd.com/",
+    "website_confidence": "verified",
+    "background": "Certified educational planner who advises families on college admissions. Has worked in finance at Pasadena Unified and chaired Santa Monica-Malibu Unified's financial oversight committee. Ballot designation: Education Services Consultant.",
+    "own_words": [
+     {
+      "text": "Top priority: “Developing a financial sustainability plan.”",
+      "is_quote": true,
+      "source": "https://laist.com/news/politics/voter-guides/2026-general-election-pasadena-unified-board-of-education-voter-guide"
+     },
+     {
+      "text": "Proposes a middle path on school consolidation, weighing budget realities, community concerns and new revenue, and cites research that closing schools may not save money.",
+      "is_quote": false,
+      "source": "https://laist.com/news/politics/voter-guides/2026-general-election-pasadena-unified-board-of-education-voter-guide"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "City of Pasadena: Pasadena Unified qualified candidates and ballot designations, in ballot order",
+    "url": "https://www.cityofpasadena.net/city-clerk/wp-content/uploads/sites/21/2026-General-Election-PUSD-Qualified-Candidates-EN.pdf"
+   },
+   {
+    "name": "Pasadena Unified: board district map and boundary descriptions (Feb 2, 2022)",
+    "url": "https://resources.finalsite.net/images/v1707482714/pusdus/peeovbnon0h72varoxpm/pusdboardmembersgeographicsubdistrictmapandexhibit.pdf"
+   },
+   {
+    "name": "LAist: Pasadena Unified Board of Education",
+    "url": "https://laist.com/news/politics/voter-guides/2026-general-election-pasadena-unified-board-of-education-voter-guide"
+   },
+   {
+    "name": "Pasadena Now: District 7 field set after Velázquez did not file (Aug 10, 2026)",
+    "url": "https://pasadenanow.com/main/uncontested-district-5-race-to-be-canceled-in-school-board-race"
+   }
+  ],
+  "confidence": "verified"
+ }
+]

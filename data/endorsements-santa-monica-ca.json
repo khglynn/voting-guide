@@ -1,0 +1,1863 @@
+[
+ {
+  "endorser_id": "smrr",
+  "target_id": "santa-monica-city-council",
+  "status": "endorsed",
+  "choice": "Daniel Ivanov, Brett Morrow, Caroline M. Torosis",
+  "why": "SMRR home page: \"SMRR Supported Candidates and Measures for the November 3, 2026 Election in Santa Monica\" lists Danny Ivanov, Brett Morrow and Caroline Torosis; the 9/9/26 convention itself chose only Torosis and Ivanov and the steering committee later added Morrow (Santa Monica Next, Daily Press).",
+  "url": "https://smrr.org",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smrr",
+  "target_id": "santa-monica-rent-board",
+  "status": "endorsed",
+  "choice": "Sue Himmelrich, Kurt Gonska, Heather Thomason",
+  "why": "SMRR home page lists Kurt Gonska, Sue Himmelrich and Heather Thomason (Santa Monica Next spells her \"Thomasson\").",
+  "url": "https://smrr.org",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smrr",
+  "target_id": "santa-monica-measure-es",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "SMRR home page lists a YES position on Measure ES.",
+  "url": "https://smrr.org",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smrr",
+  "target_id": "santa-monica-measure-gg",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "SMRR home page lists a YES position on Measure GG.",
+  "url": "https://smrr.org",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smrr",
+  "target_id": "santa-monica-measure-rr",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "SMRR home page lists a YES position on Measure RR.",
+  "url": "https://smrr.org",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smrr",
+  "target_id": "santa-monica-measure-vv",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "SMRR home page lists a YES position on Measure VV.",
+  "url": "https://smrr.org",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smrr",
+  "target_id": "santa-monica-measure-tt",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "SMRR home page lists a YES position on Measure TT.",
+  "url": "https://smrr.org",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-dem-club",
+  "target_id": "santa-monica-city-council",
+  "status": "no_position",
+  "choice": null,
+  "why": "Club bylaws need 55% for a contested endorsement; after two rounds the club posted \"The Club did not reach consensus in this race\" (Torosis 50%, Negrete 47%, Trussler 47% in round two).",
+  "url": "https://santamonicademocrats.com/local-endorsement-results/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-dem-club",
+  "target_id": "santa-monica-rent-board",
+  "status": "endorsed",
+  "choice": "Sue Himmelrich, Kurt Gonska, Heather Thomason",
+  "why": "Club list \"SM Rent Control Board\": Heather Thomason, Sue Himmelrich, Kurt Gonska (Soledad Marcial and Zoe Muntaner were not endorsed).",
+  "url": "https://santamonicademocrats.com/full-2026-endorsements/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-dem-club",
+  "target_id": "santa-monica-measure-es",
+  "status": "no_position",
+  "choice": null,
+  "why": "Club post on its Aug 26 vote: Measure ES got Yes 52%, No 44% and \"Result = The Club did not reach consensus on this race\" (55% needed).",
+  "url": "https://santamonicademocrats.com/sd24-debate-local-measure-endorsements/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-dem-club",
+  "target_id": "santa-monica-measure-gg",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Club list, Local ballot measures: \"GG - Yes\".",
+  "url": "https://santamonicademocrats.com/full-2026-endorsements/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-dem-club",
+  "target_id": "santa-monica-measure-rr",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Club list, Local ballot measures: \"RR - Yes\".",
+  "url": "https://santamonicademocrats.com/full-2026-endorsements/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-dem-club",
+  "target_id": "santa-monica-measure-vv",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Club list, Local ballot measures: \"VV - Yes\".",
+  "url": "https://santamonicademocrats.com/full-2026-endorsements/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-dem-club",
+  "target_id": "santa-monica-measure-tt",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Club list, Local ballot measures: \"TT - Yes\".",
+  "url": "https://santamonicademocrats.com/full-2026-endorsements/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ceps-santa-monica",
+  "target_id": "santa-monica-city-council",
+  "status": "endorsed",
+  "choice": "Lana Negrete, Caroline M. Torosis",
+  "why": "CEPS \"Our Endorsements for 2026\" lists Lana Negrete and Caroline Torosis only (two names for three seats).",
+  "url": "https://www.cepssm.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ceps-santa-monica",
+  "target_id": "santa-monica-rent-board",
+  "status": "not_found",
+  "choice": null,
+  "why": "CEPS 2026 endorsements page does not list this.",
+  "url": "https://www.cepssm.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ceps-santa-monica",
+  "target_id": "santa-monica-measure-es",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "CEPS page: \"CEPS urges a YES vote on Measure ES\".",
+  "url": "https://www.cepssm.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ceps-santa-monica",
+  "target_id": "santa-monica-measure-gg",
+  "status": "not_found",
+  "choice": null,
+  "why": "CEPS 2026 endorsements page does not list this.",
+  "url": "https://www.cepssm.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ceps-santa-monica",
+  "target_id": "santa-monica-measure-rr",
+  "status": "not_found",
+  "choice": null,
+  "why": "CEPS 2026 endorsements page does not list this.",
+  "url": "https://www.cepssm.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ceps-santa-monica",
+  "target_id": "santa-monica-measure-vv",
+  "status": "not_found",
+  "choice": null,
+  "why": "CEPS 2026 endorsements page does not list this.",
+  "url": "https://www.cepssm.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ceps-santa-monica",
+  "target_id": "santa-monica-measure-tt",
+  "status": "not_found",
+  "choice": null,
+  "why": "CEPS 2026 endorsements page does not list this.",
+  "url": "https://www.cepssm.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smmcta",
+  "target_id": "santa-monica-city-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "SMMCTA political action page does not mention this race. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smmcta.com/political-action.html",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smmcta",
+  "target_id": "santa-monica-rent-board",
+  "status": "not_found",
+  "choice": null,
+  "why": "SMMCTA political action page does not mention this race. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smmcta.com/political-action.html",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smmcta",
+  "target_id": "santa-monica-measure-es",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "SMMCTA page: \"We do support and endorse the Santa Monicans For Reliable School Funding MEASURE ES\"; \"VOTE YES\".",
+  "url": "https://www.smmcta.com/political-action.html",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smmcta",
+  "target_id": "santa-monica-measure-gg",
+  "status": "not_found",
+  "choice": null,
+  "why": "SMMCTA political action page does not mention this race. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smmcta.com/political-action.html",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smmcta",
+  "target_id": "santa-monica-measure-rr",
+  "status": "not_found",
+  "choice": null,
+  "why": "SMMCTA political action page does not mention this race. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smmcta.com/political-action.html",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smmcta",
+  "target_id": "santa-monica-measure-vv",
+  "status": "not_found",
+  "choice": null,
+  "why": "SMMCTA political action page does not mention this race. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smmcta.com/political-action.html",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smmcta",
+  "target_id": "santa-monica-measure-tt",
+  "status": "not_found",
+  "choice": null,
+  "why": "SMMCTA political action page does not mention this race. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smmcta.com/political-action.html",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "unite-here-local-11",
+  "target_id": "santa-monica-city-council",
+  "status": "endorsed",
+  "choice": "Caroline M. Torosis, Daniel Ivanov, Brett Morrow, Doug Trussler",
+  "why": "Daily Press, Sept 10, 2026: the union backs four candidates for three seats: Torosis, Ivanov, Morrow and Trussler. It also says it opposes Lana Negrete and Phil Brock.",
+  "url": "https://www.smdp.com/hotel-union-endorses-four-candidates-for-three-open-spots-on-the-city-council/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "unite-here-local-11",
+  "target_id": "santa-monica-rent-board",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Santa Monica Daily Press report of the union's Sept 2026 slate and the Lookout Oct 30 guide name no position on this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smdp.com/hotel-union-endorses-four-candidates-for-three-open-spots-on-the-city-council/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "unite-here-local-11",
+  "target_id": "santa-monica-measure-es",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Santa Monica Daily Press report of the union's Sept 2026 slate and the Lookout Oct 30 guide name no position on this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smdp.com/hotel-union-endorses-four-candidates-for-three-open-spots-on-the-city-council/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "unite-here-local-11",
+  "target_id": "santa-monica-measure-gg",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Santa Monica Daily Press report of the union's Sept 2026 slate and the Lookout Oct 30 guide name no position on this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smdp.com/hotel-union-endorses-four-candidates-for-three-open-spots-on-the-city-council/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "unite-here-local-11",
+  "target_id": "santa-monica-measure-rr",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Santa Monica Daily Press report of the union's Sept 2026 slate and the Lookout Oct 30 guide name no position on this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smdp.com/hotel-union-endorses-four-candidates-for-three-open-spots-on-the-city-council/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "unite-here-local-11",
+  "target_id": "santa-monica-measure-vv",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Santa Monica Daily Press report of the union's Sept 2026 slate and the Lookout Oct 30 guide name no position on this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smdp.com/hotel-union-endorses-four-candidates-for-three-open-spots-on-the-city-council/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "unite-here-local-11",
+  "target_id": "santa-monica-measure-tt",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Santa Monica Daily Press report of the union's Sept 2026 slate and the Lookout Oct 30 guide name no position on this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smdp.com/hotel-union-endorses-four-candidates-for-three-open-spots-on-the-city-council/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-police-officers",
+  "target_id": "santa-monica-city-council",
+  "status": "endorsed",
+  "choice": "Lana Negrete, Doug Trussler, Ashley Oelsen",
+  "why": "Daily Press, Sept 16, 2026: the police and firefighter unions jointly back Lana Negrete, Doug Trussler and Ashley Oelsen (Lookout Oct 30 confirms).",
+  "url": "https://www.smdp.com/public-safety-unions-expand-endorsements-alongside-new-survey-saying-the-city-is-on-the-wrong-track/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-police-officers",
+  "target_id": "santa-monica-rent-board",
+  "status": "not_found",
+  "choice": null,
+  "why": "Daily Press Sept 16, 2026 and Lookout Oct 30 name no position by the Santa Monica Police Officers Association on this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smdp.com/public-safety-unions-expand-endorsements-alongside-new-survey-saying-the-city-is-on-the-wrong-track/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-police-officers",
+  "target_id": "santa-monica-measure-es",
+  "status": "not_found",
+  "choice": null,
+  "why": "Daily Press Sept 16, 2026 and Lookout Oct 30 name no position by the Santa Monica Police Officers Association on this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smdp.com/public-safety-unions-expand-endorsements-alongside-new-survey-saying-the-city-is-on-the-wrong-track/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-police-officers",
+  "target_id": "santa-monica-measure-gg",
+  "status": "not_found",
+  "choice": null,
+  "why": "Daily Press Sept 16, 2026 and Lookout Oct 30 name no position by the Santa Monica Police Officers Association on this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smdp.com/public-safety-unions-expand-endorsements-alongside-new-survey-saying-the-city-is-on-the-wrong-track/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-police-officers",
+  "target_id": "santa-monica-measure-rr",
+  "status": "not_found",
+  "choice": null,
+  "why": "Daily Press Sept 16, 2026 and Lookout Oct 30 name no position by the Santa Monica Police Officers Association on this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smdp.com/public-safety-unions-expand-endorsements-alongside-new-survey-saying-the-city-is-on-the-wrong-track/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-police-officers",
+  "target_id": "santa-monica-measure-vv",
+  "status": "not_found",
+  "choice": null,
+  "why": "Daily Press Sept 16, 2026 and Lookout Oct 30 name no position by the Santa Monica Police Officers Association on this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smdp.com/public-safety-unions-expand-endorsements-alongside-new-survey-saying-the-city-is-on-the-wrong-track/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-police-officers",
+  "target_id": "santa-monica-measure-tt",
+  "status": "not_found",
+  "choice": null,
+  "why": "Daily Press Sept 16, 2026 and Lookout Oct 30 name no position by the Santa Monica Police Officers Association on this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smdp.com/public-safety-unions-expand-endorsements-alongside-new-survey-saying-the-city-is-on-the-wrong-track/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-firefighters-1109",
+  "target_id": "santa-monica-city-council",
+  "status": "endorsed",
+  "choice": "Lana Negrete, Doug Trussler, Ashley Oelsen",
+  "why": "Daily Press, Sept 16, 2026: the police and firefighter unions jointly back Lana Negrete, Doug Trussler and Ashley Oelsen (Lookout Oct 30 confirms).",
+  "url": "https://www.smdp.com/public-safety-unions-expand-endorsements-alongside-new-survey-saying-the-city-is-on-the-wrong-track/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-firefighters-1109",
+  "target_id": "santa-monica-rent-board",
+  "status": "not_found",
+  "choice": null,
+  "why": "Daily Press Sept 16, 2026 and Lookout Oct 30 name no position by the Santa Monica Firefighters Local 1109 on this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smdp.com/public-safety-unions-expand-endorsements-alongside-new-survey-saying-the-city-is-on-the-wrong-track/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-firefighters-1109",
+  "target_id": "santa-monica-measure-es",
+  "status": "not_found",
+  "choice": null,
+  "why": "Daily Press Sept 16, 2026 and Lookout Oct 30 name no position by the Santa Monica Firefighters Local 1109 on this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smdp.com/public-safety-unions-expand-endorsements-alongside-new-survey-saying-the-city-is-on-the-wrong-track/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-firefighters-1109",
+  "target_id": "santa-monica-measure-gg",
+  "status": "not_found",
+  "choice": null,
+  "why": "Daily Press Sept 16, 2026 and Lookout Oct 30 name no position by the Santa Monica Firefighters Local 1109 on this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smdp.com/public-safety-unions-expand-endorsements-alongside-new-survey-saying-the-city-is-on-the-wrong-track/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-firefighters-1109",
+  "target_id": "santa-monica-measure-rr",
+  "status": "not_found",
+  "choice": null,
+  "why": "Daily Press Sept 16, 2026 and Lookout Oct 30 name no position by the Santa Monica Firefighters Local 1109 on this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smdp.com/public-safety-unions-expand-endorsements-alongside-new-survey-saying-the-city-is-on-the-wrong-track/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-firefighters-1109",
+  "target_id": "santa-monica-measure-vv",
+  "status": "not_found",
+  "choice": null,
+  "why": "Daily Press Sept 16, 2026 and Lookout Oct 30 name no position by the Santa Monica Firefighters Local 1109 on this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smdp.com/public-safety-unions-expand-endorsements-alongside-new-survey-saying-the-city-is-on-the-wrong-track/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-firefighters-1109",
+  "target_id": "santa-monica-measure-tt",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "The county's list of measures names Santa Monica Firefighters Local 1109 first among Measure TT's supporters (no argument against was submitted).",
+  "url": "https://content.lavote.gov/docs/rrcc/documents/final-measures-appearing-on-the-ballot-9-22-2026-v-2.pdf",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smclc",
+  "target_id": "santa-monica-city-council",
+  "status": "endorsed",
+  "choice": "Lana Negrete, Ashley Oelsen",
+  "why": "Santa Monica Next, Sept 3, 2026: SMCLC endorsed Lana Negrete and Ashley Oelsen and dropped longtime ally Phil Brock (two names for three seats).",
+  "url": "https://santamonicanext.org/?p=31446",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smclc",
+  "target_id": "santa-monica-rent-board",
+  "status": "not_found",
+  "choice": null,
+  "why": "Santa Monica Next Sept 3, 2026 report of SMCLC's endorsements and smclc.org (which shows only older posts) name no position on this.",
+  "url": "https://santamonicanext.org/?p=31446",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smclc",
+  "target_id": "santa-monica-measure-es",
+  "status": "not_found",
+  "choice": null,
+  "why": "Santa Monica Next Sept 3, 2026 report of SMCLC's endorsements and smclc.org (which shows only older posts) name no position on this.",
+  "url": "https://santamonicanext.org/?p=31446",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smclc",
+  "target_id": "santa-monica-measure-gg",
+  "status": "not_found",
+  "choice": null,
+  "why": "Santa Monica Next Sept 3, 2026 report of SMCLC's endorsements and smclc.org (which shows only older posts) name no position on this.",
+  "url": "https://santamonicanext.org/?p=31446",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smclc",
+  "target_id": "santa-monica-measure-rr",
+  "status": "not_found",
+  "choice": null,
+  "why": "Santa Monica Next Sept 3, 2026 report of SMCLC's endorsements and smclc.org (which shows only older posts) name no position on this.",
+  "url": "https://santamonicanext.org/?p=31446",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smclc",
+  "target_id": "santa-monica-measure-vv",
+  "status": "not_found",
+  "choice": null,
+  "why": "Santa Monica Next Sept 3, 2026 report of SMCLC's endorsements and smclc.org (which shows only older posts) name no position on this.",
+  "url": "https://santamonicanext.org/?p=31446",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smclc",
+  "target_id": "santa-monica-measure-tt",
+  "status": "not_found",
+  "choice": null,
+  "why": "Santa Monica Next Sept 3, 2026 report of SMCLC's endorsements and smclc.org (which shows only older posts) name no position on this.",
+  "url": "https://santamonicanext.org/?p=31446",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-forward",
+  "target_id": "santa-monica-city-council",
+  "status": "endorsed",
+  "choice": "Caroline M. Torosis, Eli Gill, Brett Morrow",
+  "why": "Its own blog, July 9, 2026: \"Santa Monica Forward Endorses Torosis, Gill, and Morrow for City Council.\" The Lookout's Oct 30 guide lists its picks differently; this follows the group's own post.",
+  "url": "https://www.santamonicaforward.org/blog",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-forward",
+  "target_id": "santa-monica-rent-board",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its blog's 2026 posts are its council endorsement and a council-meeting recap; neither names a position on this (checked Oct 31, 2026).",
+  "url": "https://www.santamonicaforward.org/blog",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-forward",
+  "target_id": "santa-monica-measure-es",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its blog's 2026 posts are its council endorsement and a council-meeting recap; neither names a position on this (checked Oct 31, 2026).",
+  "url": "https://www.santamonicaforward.org/blog",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-forward",
+  "target_id": "santa-monica-measure-gg",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its blog's 2026 posts are its council endorsement and a council-meeting recap; neither names a position on this (checked Oct 31, 2026).",
+  "url": "https://www.santamonicaforward.org/blog",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-forward",
+  "target_id": "santa-monica-measure-rr",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its blog's 2026 posts are its council endorsement and a council-meeting recap; neither names a position on this (checked Oct 31, 2026).",
+  "url": "https://www.santamonicaforward.org/blog",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-forward",
+  "target_id": "santa-monica-measure-vv",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its blog's 2026 posts are its council endorsement and a council-meeting recap; neither names a position on this (checked Oct 31, 2026).",
+  "url": "https://www.santamonicaforward.org/blog",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-forward",
+  "target_id": "santa-monica-measure-tt",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its blog's 2026 posts are its council endorsement and a council-meeting recap; neither names a position on this (checked Oct 31, 2026).",
+  "url": "https://www.santamonicaforward.org/blog",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-chamber",
+  "target_id": "santa-monica-city-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "No Nov 2026 slate found on the Chamber's site, in the Daily Press or in the Lookout; its only 2026 stand found is on Measure ES, where the county's measures list names it a supporter. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://smchamber.com",
+  "date": "2026-11-01",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "sm-chamber",
+  "target_id": "santa-monica-rent-board",
+  "status": "not_found",
+  "choice": null,
+  "why": "No Nov 2026 slate found on the Chamber's site, in the Daily Press or in the Lookout; its only 2026 stand found is on Measure ES, where the county's measures list names it a supporter. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://smchamber.com",
+  "date": "2026-11-01",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "sm-chamber",
+  "target_id": "santa-monica-measure-es",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "The county's list of measures names the SM Chamber of Commerce among Measure ES's supporters, and the Chamber's board chair, Addie Van Gessel, signed the argument for it.",
+  "url": "https://content.lavote.gov/docs/rrcc/documents/final-measures-appearing-on-the-ballot-9-22-2026-v-2.pdf",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-chamber",
+  "target_id": "santa-monica-measure-gg",
+  "status": "not_found",
+  "choice": null,
+  "why": "No Nov 2026 slate found on the Chamber's site, in the Daily Press or in the Lookout; its only 2026 stand found is on Measure ES, where the county's measures list names it a supporter. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://smchamber.com",
+  "date": "2026-11-01",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "sm-chamber",
+  "target_id": "santa-monica-measure-rr",
+  "status": "not_found",
+  "choice": null,
+  "why": "No Nov 2026 slate found on the Chamber's site, in the Daily Press or in the Lookout; its only 2026 stand found is on Measure ES, where the county's measures list names it a supporter. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://smchamber.com",
+  "date": "2026-11-01",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "sm-chamber",
+  "target_id": "santa-monica-measure-vv",
+  "status": "not_found",
+  "choice": null,
+  "why": "No Nov 2026 slate found on the Chamber's site, in the Daily Press or in the Lookout; its only 2026 stand found is on Measure ES, where the county's measures list names it a supporter. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://smchamber.com",
+  "date": "2026-11-01",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "sm-chamber",
+  "target_id": "santa-monica-measure-tt",
+  "status": "not_found",
+  "choice": null,
+  "why": "No Nov 2026 slate found on the Chamber's site, in the Daily Press or in the Lookout; its only 2026 stand found is on Measure ES, where the county's measures list names it a supporter. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://smchamber.com",
+  "date": "2026-11-01",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "residocracy",
+  "target_id": "santa-monica-city-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "No Residocracy 2026 Santa Monica slate found in searches or local coverage.",
+  "url": "https://www.residocracy.com",
+  "date": "2026-10-31",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "residocracy",
+  "target_id": "santa-monica-rent-board",
+  "status": "not_found",
+  "choice": null,
+  "why": "No Residocracy 2026 Santa Monica slate found in searches or local coverage.",
+  "url": "https://www.residocracy.com",
+  "date": "2026-10-31",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "residocracy",
+  "target_id": "santa-monica-measure-es",
+  "status": "not_found",
+  "choice": null,
+  "why": "No Residocracy 2026 Santa Monica slate found in searches or local coverage.",
+  "url": "https://www.residocracy.com",
+  "date": "2026-10-31",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "residocracy",
+  "target_id": "santa-monica-measure-gg",
+  "status": "not_found",
+  "choice": null,
+  "why": "No Residocracy 2026 Santa Monica slate found in searches or local coverage.",
+  "url": "https://www.residocracy.com",
+  "date": "2026-10-31",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "residocracy",
+  "target_id": "santa-monica-measure-rr",
+  "status": "not_found",
+  "choice": null,
+  "why": "No Residocracy 2026 Santa Monica slate found in searches or local coverage.",
+  "url": "https://www.residocracy.com",
+  "date": "2026-10-31",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "residocracy",
+  "target_id": "santa-monica-measure-vv",
+  "status": "not_found",
+  "choice": null,
+  "why": "No Residocracy 2026 Santa Monica slate found in searches or local coverage.",
+  "url": "https://www.residocracy.com",
+  "date": "2026-10-31",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "residocracy",
+  "target_id": "santa-monica-measure-tt",
+  "status": "not_found",
+  "choice": null,
+  "why": "No Residocracy 2026 Santa Monica slate found in searches or local coverage.",
+  "url": "https://www.residocracy.com",
+  "date": "2026-10-31",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "smdp",
+  "target_id": "santa-monica-city-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "No Daily Press editorial board endorsement for the Nov 2026 general found; only news reports and opinion columns (e.g. a column urging No on ES). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smdp.com/election/",
+  "date": "2026-11-01",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "smdp",
+  "target_id": "santa-monica-rent-board",
+  "status": "not_found",
+  "choice": null,
+  "why": "No Daily Press editorial board endorsement for the Nov 2026 general found; only news reports and opinion columns (e.g. a column urging No on ES). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smdp.com/election/",
+  "date": "2026-11-01",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "smdp",
+  "target_id": "santa-monica-measure-es",
+  "status": "not_found",
+  "choice": null,
+  "why": "No Daily Press editorial board endorsement for the Nov 2026 general found; only news reports and opinion columns (e.g. a column urging No on ES). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smdp.com/election/",
+  "date": "2026-11-01",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "smdp",
+  "target_id": "santa-monica-measure-gg",
+  "status": "not_found",
+  "choice": null,
+  "why": "No Daily Press editorial board endorsement for the Nov 2026 general found; only news reports and opinion columns (e.g. a column urging No on ES). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smdp.com/election/",
+  "date": "2026-11-01",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "smdp",
+  "target_id": "santa-monica-measure-rr",
+  "status": "not_found",
+  "choice": null,
+  "why": "No Daily Press editorial board endorsement for the Nov 2026 general found; only news reports and opinion columns (e.g. a column urging No on ES). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smdp.com/election/",
+  "date": "2026-11-01",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "smdp",
+  "target_id": "santa-monica-measure-vv",
+  "status": "not_found",
+  "choice": null,
+  "why": "No Daily Press editorial board endorsement for the Nov 2026 general found; only news reports and opinion columns (e.g. a column urging No on ES). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smdp.com/election/",
+  "date": "2026-11-01",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "smdp",
+  "target_id": "santa-monica-measure-tt",
+  "status": "not_found",
+  "choice": null,
+  "why": "No Daily Press editorial board endorsement for the Nov 2026 general found; only news reports and opinion columns (e.g. a column urging No on ES). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smdp.com/election/",
+  "date": "2026-11-01",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "aagla",
+  "target_id": "santa-monica-city-council",
+  "status": "endorsed",
+  "choice": "Lana Negrete, Doug Trussler",
+  "why": "AAGLA slate: Santa Monica City Council Lana Negrete (Incumbent) and Douglas Trussler.",
+  "url": "https://members.aagla.org/news/apartment-association-of-greater-los-angeles--voting-slate-candidate-endorsements-election-tuesday",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aagla",
+  "target_id": "santa-monica-rent-board",
+  "status": "not_found",
+  "choice": null,
+  "why": "AAGLA voting slate (as of Sept 23, 2026) does not list this race. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://members.aagla.org/news/apartment-association-of-greater-los-angeles--voting-slate-candidate-endorsements-election-tuesday",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aagla",
+  "target_id": "santa-monica-measure-es",
+  "status": "not_found",
+  "choice": null,
+  "why": "AAGLA voting slate (as of Sept 23, 2026) does not list this race. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://members.aagla.org/news/apartment-association-of-greater-los-angeles--voting-slate-candidate-endorsements-election-tuesday",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aagla",
+  "target_id": "santa-monica-measure-gg",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "AAGLA slate: \"Measure GG: Support\".",
+  "url": "https://members.aagla.org/news/apartment-association-of-greater-los-angeles--voting-slate-candidate-endorsements-election-tuesday",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aagla",
+  "target_id": "santa-monica-measure-rr",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "AAGLA slate: \"Measure RR: Opposed\".",
+  "url": "https://members.aagla.org/news/apartment-association-of-greater-los-angeles--voting-slate-candidate-endorsements-election-tuesday",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aagla",
+  "target_id": "santa-monica-measure-vv",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "AAGLA slate: \"Measure VV: Opposed\".",
+  "url": "https://members.aagla.org/news/apartment-association-of-greater-los-angeles--voting-slate-candidate-endorsements-election-tuesday",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aagla",
+  "target_id": "santa-monica-measure-tt",
+  "status": "no_position",
+  "choice": null,
+  "why": "AAGLA slate: \"Measure TT: No Position\".",
+  "url": "https://members.aagla.org/news/apartment-association-of-greater-los-angeles--voting-slate-candidate-endorsements-election-tuesday",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pico-neighborhood-assoc",
+  "target_id": "santa-monica-city-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "Daily Press Oct 20, 2026 report names no position by the Pico Neighborhood Association on this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smdp.com/pico-neighborhood-association-urges-no-on-local-measures-gg-and-es/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pico-neighborhood-assoc",
+  "target_id": "santa-monica-rent-board",
+  "status": "not_found",
+  "choice": null,
+  "why": "Daily Press Oct 20, 2026 report names no position by the Pico Neighborhood Association on this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smdp.com/pico-neighborhood-association-urges-no-on-local-measures-gg-and-es/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pico-neighborhood-assoc",
+  "target_id": "santa-monica-measure-es",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Daily Press: \"The Pico Neighborhood Association urges all Santa Monica voters to vote NO on Measure GG and NO on Measure ES.\"",
+  "url": "https://www.smdp.com/pico-neighborhood-association-urges-no-on-local-measures-gg-and-es/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pico-neighborhood-assoc",
+  "target_id": "santa-monica-measure-gg",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Daily Press: \"The Pico Neighborhood Association urges all Santa Monica voters to vote NO on Measure GG and NO on Measure ES.\"",
+  "url": "https://www.smdp.com/pico-neighborhood-association-urges-no-on-local-measures-gg-and-es/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pico-neighborhood-assoc",
+  "target_id": "santa-monica-measure-rr",
+  "status": "not_found",
+  "choice": null,
+  "why": "Daily Press Oct 20, 2026 report names no position by the Pico Neighborhood Association on this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smdp.com/pico-neighborhood-association-urges-no-on-local-measures-gg-and-es/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pico-neighborhood-assoc",
+  "target_id": "santa-monica-measure-vv",
+  "status": "not_found",
+  "choice": null,
+  "why": "Daily Press Oct 20, 2026 report names no position by the Pico Neighborhood Association on this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smdp.com/pico-neighborhood-association-urges-no-on-local-measures-gg-and-es/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pico-neighborhood-assoc",
+  "target_id": "santa-monica-measure-tt",
+  "status": "not_found",
+  "choice": null,
+  "why": "Daily Press Oct 20, 2026 report names no position by the Pico Neighborhood Association on this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smdp.com/pico-neighborhood-association-urges-no-on-local-measures-gg-and-es/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "santa-monica-city-council",
+  "status": "endorsed",
+  "choice": "Caroline M. Torosis, Daniel Ivanov, Brett Morrow",
+  "why": "LA Forward Santa Monica guide: Caroline Torosis \"Endorsed\"; Danny Ivanov and Brett Morrow \"Recommended\".",
+  "url": "https://laforwardguide.org/guide/santa-monica",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "santa-monica-rent-board",
+  "status": "endorsed",
+  "choice": "Sue Himmelrich, Kurt Gonska, Heather Thomason",
+  "why": "LA Forward guide: Heather Thomason, Sue Himmelrich and Kurt Gonska \"Recommended\".",
+  "url": "https://laforwardguide.org/guide/santa-monica",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "santa-monica-measure-es",
+  "status": "not_found",
+  "choice": null,
+  "why": "LA Forward Santa Monica guide has no entry for this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://laforwardguide.org/guide/santa-monica",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "santa-monica-measure-gg",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "LA Forward guide: Measure GG \"Support\".",
+  "url": "https://laforwardguide.org/guide/santa-monica",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "santa-monica-measure-rr",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "LA Forward guide: Measure RR \"Support\".",
+  "url": "https://laforwardguide.org/guide/santa-monica",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "santa-monica-measure-vv",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "LA Forward guide: Measure VV \"Support\".",
+  "url": "https://laforwardguide.org/guide/santa-monica",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "santa-monica-measure-tt",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "LA Forward guide: Measure TT \"Support\".",
+  "url": "https://laforwardguide.org/guide/santa-monica",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lacdp",
+  "target_id": "santa-monica-city-council",
+  "status": "endorsed",
+  "choice": "Caroline M. Torosis, Brett Morrow, Daniel Ivanov",
+  "why": "LACDP list \"Santa Monica City Council, At Large\": Caroline Torosis, Brett Morrow, Danny Ivanov.",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lacdp",
+  "target_id": "santa-monica-rent-board",
+  "status": "endorsed",
+  "choice": "Sue Himmelrich, Kurt Gonska, Heather Thomason",
+  "why": "LACDP list \"Santa Monica Rent Control Board, At Large\": Heather Thomason, Kurt Gonska, Sue Himmelrich.",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lacdp",
+  "target_id": "santa-monica-measure-es",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "LACDP measure list: ES (Excellent Santa Monica Public Schools Parcel Tax) YES.",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lacdp",
+  "target_id": "santa-monica-measure-gg",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "LACDP measure list: GG YES.",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lacdp",
+  "target_id": "santa-monica-measure-rr",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "LACDP measure list: RR YES.",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lacdp",
+  "target_id": "santa-monica-measure-vv",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "LACDP measure list: VV YES.",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lacdp",
+  "target_id": "santa-monica-measure-tt",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "LACDP measure list: TT YES.",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lalcv",
+  "target_id": "santa-monica-city-council",
+  "status": "endorsed",
+  "choice": "Brett Morrow, Ashley Oelsen, Caroline M. Torosis",
+  "why": "LALCV current endorsements, \"Santa Monica City Council\": Brett Morrow, Ashley Oelsen, Caroline Torosis (page headed \"Endorsements in the Year 2026\"; Santa Monica council is only on the Nov 3 ballot).",
+  "url": "https://lalcv.org/current-endorsements/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lalcv",
+  "target_id": "santa-monica-rent-board",
+  "status": "not_found",
+  "choice": null,
+  "why": "LALCV 2026 page lists no entry for this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://lalcv.org/current-endorsements/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lalcv",
+  "target_id": "santa-monica-measure-es",
+  "status": "not_found",
+  "choice": null,
+  "why": "LALCV 2026 page lists no entry for this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://lalcv.org/current-endorsements/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lalcv",
+  "target_id": "santa-monica-measure-gg",
+  "status": "not_found",
+  "choice": null,
+  "why": "LALCV 2026 page lists no entry for this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://lalcv.org/current-endorsements/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lalcv",
+  "target_id": "santa-monica-measure-rr",
+  "status": "not_found",
+  "choice": null,
+  "why": "LALCV 2026 page lists no entry for this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://lalcv.org/current-endorsements/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lalcv",
+  "target_id": "santa-monica-measure-vv",
+  "status": "not_found",
+  "choice": null,
+  "why": "LALCV 2026 page lists no entry for this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://lalcv.org/current-endorsements/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lalcv",
+  "target_id": "santa-monica-measure-tt",
+  "status": "not_found",
+  "choice": null,
+  "why": "LALCV 2026 page lists no entry for this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://lalcv.org/current-endorsements/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "streets-for-all",
+  "target_id": "santa-monica-city-council",
+  "status": "endorsed",
+  "choice": "Daniel Ivanov, Brett Morrow, Caroline M. Torosis",
+  "why": "Streets For All 2026: \"Danny Ivanov, Brett Morrow, and Caroline Torosis - Santa Monica City Council\".",
+  "url": "https://www.streetsforall.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "streets-for-all",
+  "target_id": "santa-monica-rent-board",
+  "status": "not_found",
+  "choice": null,
+  "why": "Streets For All 2026 page has no entry for this.",
+  "url": "https://www.streetsforall.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "streets-for-all",
+  "target_id": "santa-monica-measure-es",
+  "status": "not_found",
+  "choice": null,
+  "why": "Streets For All 2026 page has no entry for this.",
+  "url": "https://www.streetsforall.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "streets-for-all",
+  "target_id": "santa-monica-measure-gg",
+  "status": "not_found",
+  "choice": null,
+  "why": "Streets For All 2026 page has no entry for this.",
+  "url": "https://www.streetsforall.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "streets-for-all",
+  "target_id": "santa-monica-measure-rr",
+  "status": "not_found",
+  "choice": null,
+  "why": "Streets For All 2026 page has no entry for this.",
+  "url": "https://www.streetsforall.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "streets-for-all",
+  "target_id": "santa-monica-measure-vv",
+  "status": "not_found",
+  "choice": null,
+  "why": "Streets For All 2026 page has no entry for this.",
+  "url": "https://www.streetsforall.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "streets-for-all",
+  "target_id": "santa-monica-measure-tt",
+  "status": "not_found",
+  "choice": null,
+  "why": "Streets For All 2026 page has no entry for this.",
+  "url": "https://www.streetsforall.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "santa-monica-city-council",
+  "status": "endorsed",
+  "choice": "Caroline M. Torosis, Daniel Ivanov, Brett Morrow",
+  "why": "Knock LA 2026 guide, Santa Monica City Council (3 Seats): Mayor Caroline Torosis, Danny Ivanov, and Brett Morrow.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "santa-monica-rent-board",
+  "status": "endorsed",
+  "choice": "Sue Himmelrich, Kurt Gonska, Heather Thomason",
+  "why": "Knock LA 2026 guide, Santa Monica Rent Stabilization Board (3 Seats): Sue Himmelrich, Heather Thomason, and Kurt Gonska.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "santa-monica-measure-es",
+  "status": "not_found",
+  "choice": null,
+  "why": "Knock LA 2026 guide covers Santa Monica council and rent board but gives no pick for this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "santa-monica-measure-gg",
+  "status": "not_found",
+  "choice": null,
+  "why": "Knock LA 2026 guide covers Santa Monica council and rent board but gives no pick for this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "santa-monica-measure-rr",
+  "status": "not_found",
+  "choice": null,
+  "why": "Knock LA 2026 guide covers Santa Monica council and rent board but gives no pick for this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "santa-monica-measure-vv",
+  "status": "not_found",
+  "choice": null,
+  "why": "Knock LA 2026 guide covers Santa Monica council and rent board but gives no pick for this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "santa-monica-measure-tt",
+  "status": "not_found",
+  "choice": null,
+  "why": "Knock LA 2026 guide covers Santa Monica council and rent board but gives no pick for this. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "thrive-la",
+  "target_id": "santa-monica-city-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "Thrive LA 2026 guide covers LA City, LA County and state races only; Santa Monica is not covered. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.thrivelosangeles.org/voter-guide",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "thrive-la",
+  "target_id": "santa-monica-rent-board",
+  "status": "not_found",
+  "choice": null,
+  "why": "Thrive LA 2026 guide covers LA City, LA County and state races only; Santa Monica is not covered. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.thrivelosangeles.org/voter-guide",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "thrive-la",
+  "target_id": "santa-monica-measure-es",
+  "status": "not_found",
+  "choice": null,
+  "why": "Thrive LA 2026 guide covers LA City, LA County and state races only; Santa Monica is not covered. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.thrivelosangeles.org/voter-guide",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "thrive-la",
+  "target_id": "santa-monica-measure-gg",
+  "status": "not_found",
+  "choice": null,
+  "why": "Thrive LA 2026 guide covers LA City, LA County and state races only; Santa Monica is not covered. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.thrivelosangeles.org/voter-guide",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "thrive-la",
+  "target_id": "santa-monica-measure-rr",
+  "status": "not_found",
+  "choice": null,
+  "why": "Thrive LA 2026 guide covers LA City, LA County and state races only; Santa Monica is not covered. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.thrivelosangeles.org/voter-guide",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "thrive-la",
+  "target_id": "santa-monica-measure-vv",
+  "status": "not_found",
+  "choice": null,
+  "why": "Thrive LA 2026 guide covers LA City, LA County and state races only; Santa Monica is not covered. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.thrivelosangeles.org/voter-guide",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "thrive-la",
+  "target_id": "santa-monica-measure-tt",
+  "status": "not_found",
+  "choice": null,
+  "why": "Thrive LA 2026 guide covers LA City, LA County and state races only; Santa Monica is not covered. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.thrivelosangeles.org/voter-guide",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-times-eb",
+  "target_id": "santa-monica-city-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "LA Times 2026 general election voter guide has no Santa Monica city race or measure endorsement. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-times-eb",
+  "target_id": "santa-monica-rent-board",
+  "status": "not_found",
+  "choice": null,
+  "why": "LA Times 2026 general election voter guide has no Santa Monica city race or measure endorsement. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-times-eb",
+  "target_id": "santa-monica-measure-es",
+  "status": "not_found",
+  "choice": null,
+  "why": "LA Times 2026 general election voter guide has no Santa Monica city race or measure endorsement. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-times-eb",
+  "target_id": "santa-monica-measure-gg",
+  "status": "not_found",
+  "choice": null,
+  "why": "LA Times 2026 general election voter guide has no Santa Monica city race or measure endorsement. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-times-eb",
+  "target_id": "santa-monica-measure-rr",
+  "status": "not_found",
+  "choice": null,
+  "why": "LA Times 2026 general election voter guide has no Santa Monica city race or measure endorsement. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-times-eb",
+  "target_id": "santa-monica-measure-vv",
+  "status": "not_found",
+  "choice": null,
+  "why": "LA Times 2026 general election voter guide has no Santa Monica city race or measure endorsement. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-times-eb",
+  "target_id": "santa-monica-measure-tt",
+  "status": "not_found",
+  "choice": null,
+  "why": "LA Times 2026 general election voter guide has no Santa Monica city race or measure endorsement. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "santa-monica-city-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "Southern California News Group Nov 3 endorsements list has no Santa Monica entry. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "santa-monica-rent-board",
+  "status": "not_found",
+  "choice": null,
+  "why": "Southern California News Group Nov 3 endorsements list has no Santa Monica entry. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "santa-monica-measure-es",
+  "status": "not_found",
+  "choice": null,
+  "why": "Southern California News Group Nov 3 endorsements list has no Santa Monica entry. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "santa-monica-measure-gg",
+  "status": "not_found",
+  "choice": null,
+  "why": "Southern California News Group Nov 3 endorsements list has no Santa Monica entry. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "santa-monica-measure-rr",
+  "status": "not_found",
+  "choice": null,
+  "why": "Southern California News Group Nov 3 endorsements list has no Santa Monica entry. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "santa-monica-measure-vv",
+  "status": "not_found",
+  "choice": null,
+  "why": "Southern California News Group Nov 3 endorsements list has no Santa Monica entry. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "santa-monica-measure-tt",
+  "status": "not_found",
+  "choice": null,
+  "why": "Southern California News Group Nov 3 endorsements list has no Santa Monica entry. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "santa-monica-city-council",
+  "status": "endorsed",
+  "choice": "Derrick Townsend",
+  "why": "Its endorsement lookup lists Derrick Townsend as \"Recommended\" (\"in races without a formal party endorsement\"), its only pick for Santa Monica City Council (checked Oct 31, 2026).",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "santa-monica-rent-board",
+  "status": "not_found",
+  "why": "Its endorsement lookup has no pick for Santa Monica's Rent Control Board (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "santa-monica-measure-es",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its endorsement lookup gives a no vote on Santa Monica's Measure ES (\"School Parcel Tax - $495/Parcel (Permanent)\"), with no reason given.",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "santa-monica-measure-gg",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its endorsement lookup gives a no vote on Santa Monica's Measure GG (\"Rent Control Charter Changes (Just Cause, Board Terms, Fees)\"), with no reason given.",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "santa-monica-measure-rr",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its endorsement lookup gives a no vote on Santa Monica's Measure RR (\"Prohibit Eviction for Small Rent Debts\"), with no reason given.",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "santa-monica-measure-vv",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its endorsement lookup gives a no vote on Santa Monica's Measure VV (\"Expanded Eviction Protections (Occupants, Single-Family, Owner Move-In)\"), with no reason given.",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "santa-monica-measure-tt",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its endorsement lookup gives a no vote on Santa Monica's Measure TT (\"Hotel Tax Increase\"), with no reason given.",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "reform-california",
+  "target_id": "santa-monica-measure-es",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its Los Angeles guide: \"Measure ES (NO) City of Santa Monica Property Tax Increase: Imposes a costly property tax despite massive levels of wasteful spending, giving government workers massive salary hikes and pension spikes, and awarding contracts to political supporters without fair and open competition.\"",
+  "url": "https://www.reformcalifornia.org/voter-guides/los-angeles",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "reform-california",
+  "target_id": "santa-monica-measure-gg",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its Los Angeles guide: \"Measure GG (NO) City of Santa Monica Rent Control Board: Expands the board's regulatory power, increases fees, and strips property owners of power when it comes to rental agreements.\"",
+  "url": "https://www.reformcalifornia.org/voter-guides/los-angeles",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "reform-california",
+  "target_id": "santa-monica-measure-rr",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its Los Angeles guide: \"Measure RR (NO) City of Santa Monica Prohibition of Evictions: Prevents property owners from evicting tenants if they are late on rent or violate other terms of the lease.\"",
+  "url": "https://www.reformcalifornia.org/voter-guides/los-angeles",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "reform-california",
+  "target_id": "santa-monica-measure-vv",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its Los Angeles guide: \"Measure VV (NO) City of Santa Monica Eviction Exclusions: Puts onerous requirements on property owners when conducting evictions, limiting the rights of those property owners.\"",
+  "url": "https://www.reformcalifornia.org/voter-guides/los-angeles",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "reform-california",
+  "target_id": "santa-monica-measure-tt",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its Los Angeles guide: \"Measure TT (NO) City of Santa Monica Hotel Tax Increase: Imposes a new costly hotel tax despite massive levels of wasteful spending and awarding contracts without fair and open competition.\"",
+  "url": "https://www.reformcalifornia.org/voter-guides/los-angeles",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "reform-california",
+  "target_id": "santa-monica-city-council",
+  "status": "not_found",
+  "why": "Its Los Angeles guide covers Santa Monica's five measures and names no candidate for this race. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.reformcalifornia.org/voter-guides/los-angeles",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "reform-california",
+  "target_id": "santa-monica-rent-board",
+  "status": "not_found",
+  "why": "Its Los Angeles guide covers Santa Monica's five measures and names no candidate for this race. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.reformcalifornia.org/voter-guides/los-angeles",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-fed",
+  "target_id": "santa-monica-city-council",
+  "status": "endorsed",
+  "choice": "Brett Morrow, Caroline M. Torosis, Daniel Ivanov",
+  "why": "The federation's 2026 voter guide (page 6) lists Brett Morrow, Caroline Torosis and Danny Ivanov for Santa Monica City Council, with no reason given.",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-fed",
+  "target_id": "santa-monica-rent-board",
+  "status": "not_found",
+  "why": "The federation's 2026 voter guide has picks for Santa Monica City Council (page 6) but none for its Rent Control Board. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-fed",
+  "target_id": "santa-monica-measure-es",
+  "status": "not_found",
+  "why": "The federation's 2026 voter guide lists local measures on page 8 and has none for Santa Monica's Measure ES. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-fed",
+  "target_id": "santa-monica-measure-gg",
+  "status": "not_found",
+  "why": "The federation's 2026 voter guide lists local measures on page 8 and has none for Santa Monica's Measure GG. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-fed",
+  "target_id": "santa-monica-measure-rr",
+  "status": "not_found",
+  "why": "The federation's 2026 voter guide lists local measures on page 8 and has none for Santa Monica's Measure RR. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-fed",
+  "target_id": "santa-monica-measure-vv",
+  "status": "not_found",
+  "why": "The federation's 2026 voter guide lists local measures on page 8 and has none for Santa Monica's Measure VV. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-fed",
+  "target_id": "santa-monica-measure-tt",
+  "status": "not_found",
+  "why": "The federation's 2026 voter guide lists local measures on page 8 and has none for Santa Monica's Measure TT. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smrr",
+  "target_id": "smmusd-board",
+  "status": "endorsed",
+  "choice": "Laurie Lieberman, Alicia Mignano, Stacy Rouse, Robbie Staenberg",
+  "why": "SMRR home page: \"SMRR Supported Candidates and Measures for the November 3, 2026 Election in Santa Monica\", SMMUSD Board of Education: Laurie Lieberman, Alicia Mignano, Stacy Rouse, Robbie Staenberg.",
+  "url": "https://smrr.org",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smrr",
+  "target_id": "smccd-board",
+  "status": "endorsed",
+  "choice": "Kera Blades-Snell, Luis Barrera Castanon, Tom Peters, Sion Roy",
+  "why": "SMRR home page: \"SMRR Supported Candidates and Measures for the November 3, 2026 Election in Santa Monica\", Santa Monica College Board of Trustees: Kera Blades-Snell, Luis B. Castañón, Tom Peters, Sion Roy.",
+  "url": "https://smrr.org",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-dem-club",
+  "target_id": "smmusd-board",
+  "status": "endorsed",
+  "choice": "Alicia Mignano, Stacy Rouse, Robbie Staenberg",
+  "why": "Club list \"Full 2026 Endorsements\" (Oct 8, 2026), SMMUSD Board of Education: Alicia Mignano, Stacy Rouse, Robbie Staenberg (three names for four seats).",
+  "url": "https://santamonicademocrats.com/full-2026-endorsements/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sm-dem-club",
+  "target_id": "smccd-board",
+  "status": "endorsed",
+  "choice": "Sion Roy, Luis Barrera Castanon, Tom Peters, Kera Blades-Snell",
+  "why": "Club list \"Full 2026 Endorsements\" (Oct 8, 2026), SMC Board of Trustees: Sion Roy, Luis Barrera Castañon, Tom Peters, Kera Blades Snell.",
+  "url": "https://santamonicademocrats.com/full-2026-endorsements/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "santa-monica-city-council",
+  "status": "endorsed",
+  "choice": "Caroline M. Torosis",
+  "why": "Its Nov 3, 2026 California voter guide lists \"Caroline Torosis, Santa Monica City Council\" under Los Angeles, its only name in the race.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "santa-monica-rent-board",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its Nov 3, 2026 California voter guide names no one for the Santa Monica Rent Control Board.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "santa-monica-measure-es",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its Nov 3, 2026 California voter guide takes up no Santa Monica measure.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "santa-monica-measure-gg",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its Nov 3, 2026 California voter guide takes up no Santa Monica measure.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "santa-monica-measure-rr",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its Nov 3, 2026 California voter guide takes up no Santa Monica measure.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "santa-monica-measure-vv",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its Nov 3, 2026 California voter guide takes up no Santa Monica measure.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "santa-monica-measure-tt",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its Nov 3, 2026 California voter guide takes up no Santa Monica measure.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-working-families-party",
+  "target_id": "ca-us-house-36",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its Nov 3, 2026 California voter guide names its U.S. House picks (the 7th to the 34th districts) and no one in the 36th.",
+  "url": "https://www.caworkingfamilies.org/2026-voter-guide",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ }
+]

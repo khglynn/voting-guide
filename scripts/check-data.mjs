@@ -85,8 +85,11 @@ const BUILD_WARNINGS = [
   [/two files disagree .*; kept /, 'build-endorsement-conflict-dropped'],
   [/couldn't match .* to a candidate; shown as text/, 'build-endorsement-unlinked'],
   [/is ranked choice with no usable rank_up_to; using /, 'build-rank-guessed'],
+  [/: short ".*" isn't words from the name; used /, 'build-candidate-short'],
   [/is missing yes_means or no_means/, 'measure-means'],
   [/: short is not one plain line; dropped it|: actions is not a list; dropped it|: an action needs a label and an http\(s\) URL; dropped it|: more than 2 actions; dropped the rest|: a gotcha has no text; dropped it|: registration\.register_url(_source)? is not an http\(s\) URL; dropped it|: sample_ballot_url is not an http\(s\) URL; dropped it/, 'build-dropped-help'],
+  [/: early_in_person\.latest_end needs .*; dropped it/, 'date-order'],
+  [/: heads_up (until_address|zips) is not .*; dropped the field/, 'heads-up-field'],
 ];
 const reportFile = path.join(ROOT, 'public', 'data', 'build-report.json');
 const BUNDLES = path.join(ROOT, 'public', 'data');
@@ -244,6 +247,8 @@ for (const r of all.endorsements) {
 
 /* ---------- 7. places ---------- */
 const stateIds = new Set(all.states.map((s) => s.state));
+// The Census's state codes, the first two digits of a county's: the states the guide covers.
+const STATE_FIPS = { AL: '01', CA: '06', CO: '08', DC: '11', FL: '12', GA: '13', IL: '17', MD: '24', MO: '29', NY: '36', OR: '41', PA: '42', TN: '47', TX: '48', WA: '53' };
 for (const p of all.places) {
   if (!stateIds.has(p.state)) err('place-state', `${p._f}: no states/${p.state}.json`);
   if (!Array.isArray(p.zips) || !p.zips.length) err('place-zips', `${p._f}: no ZIPs`);
@@ -251,6 +256,26 @@ for (const p of all.places) {
   for (const id of [...(p.contest_ids || []), ...(p.measure_ids || [])]) if (!targets.has(id)) err('place-dangling', `${p._f}: lists ${id}, which no file defines`);
   const ids = [...(p.contest_ids || []), ...(p.measure_ids || [])];
   if (new Set(ids).size !== ids.length) warn('place-duplicate-ids', `${p._f}: lists an id twice`);
+  // Oct 29: a city that is its own county names its Census county code, and a ZIP that also reaches a town
+  // the guide doesn't cover names that town for the first page's question (build-data would drop either).
+  if (p.county_fips != null && (!Array.isArray(p.county_fips) || !p.county_fips.length || p.county_fips.some((c) => !/^\d{5}$/.test(String(c))))) err('place-county-fips', `${p._f}: county_fips must be a list of 5-digit Census county codes`);
+  // A code from another state would put every address in the place outside it (geo.ts outsideOf).
+  else if (p.county_fips && p.county_fips.some((c) => String(c).slice(0, 2) !== STATE_FIPS[p.state])) err('place-county-fips', `${p._f}: county_fips ${p.county_fips.join(', ')} must start with ${p.state}'s code, ${STATE_FIPS[p.state] || '(add it to STATE_FIPS)'}`);
+  if (p.zip_outside != null) {
+    if (typeof p.zip_outside !== 'object' || Array.isArray(p.zip_outside)) err('place-zip-outside', `${p._f}: zip_outside must be an object of ZIP to name`);
+    else for (const [z, name] of Object.entries(p.zip_outside)) {
+      if (!(p.zips || []).map(String).includes(z)) err('place-zip-outside', `${p._f}: zip_outside lists ${z}, which isn't one of its ZIPs`);
+      if (!isStr(name) || name.trim().length > 80) err('place-zip-outside', `${p._f}: zip_outside ${z} needs a short name (80 characters at most)`);
+    }
+  }
+}
+// Nov 1: a ZIP one place marks as reaching an outside town gets the split card, which tells a voter who isn't
+// sure to use their address and promises their city's ballot. From the state's races, an address opens a place
+// only when that place names its county codes (geo.ts ballotFor), so every place on such a ZIP needs them
+// (the review of #80: Los Angeles shares 90810 with Long Beach and had none).
+const splitZips = new Set(all.places.flatMap((p) => (p.zip_outside && typeof p.zip_outside === 'object' ? Object.keys(p.zip_outside) : [])));
+for (const p of all.places) for (const z of (p.zips || []).map(String)) {
+  if (splitZips.has(z) && !(Array.isArray(p.county_fips) && p.county_fips.length)) err('place-county-fips', `${p._f}: shares ${z}, which a place marks as reaching a town outside, so it needs county_fips for the split card's address step to open it`);
 }
 
 /* ---------- 7b. what the build wrote, bundle by bundle ----------
@@ -332,7 +357,7 @@ if (fs.existsSync(INDEX_FILE)) {
   try { idx = JSON.parse(fs.readFileSync(INDEX_FILE, 'utf8')); } catch { err('bundle-unreadable', 'index.json'); }
   for (const [id, p] of Object.entries((idx && idx.places) || {})) {
     if (!(p.local_sources > 0 && p.local_with_picks === 0) && !isThin(p)) continue;
-    warn('place-thin', `${id}: ${p.local_sources} local sources, none with picks; ${p.local_races_with_picks} of its ${p.local_races} own races have a pick from anyone${isThin(p) ? '. The first page offers to gather its endorsements.' : ''}`);
+    warn('place-thin', `${id}: ${p.local_sources} local sources, none with picks; ${p.local_races_with_picks} of its ${p.local_races} own races have a pick from anyone${!isThin(p) ? '' : p.local_picks_checked ? `. We looked hard for its picks on ${p.local_picks_checked.on}, so the guide says so and asks nothing.` : '. The first page offers to gather its endorsements.'}`);
   }
 }
 
@@ -379,6 +404,8 @@ all.contests.forEach((c) => walk(c, `${c._f} ${c.id}`));
 all.measures.forEach((m) => walk(m, `${m._f} ${m.id}`));
 all.states.forEach((s) => walk(s, `states/${s.state}`));
 all.places.forEach((p) => walk(p, `places/${p.id}`));
+// The first page shows these names as written ("Pine Lawn, in St. Louis County"), keyed by ZIP, so walk skips them.
+all.places.forEach((p) => Object.entries(p.zip_outside && typeof p.zip_outside === 'object' ? p.zip_outside : {}).forEach(([z, name]) => scanCopy(name, `places/${p.id}.zip_outside.${z}`)));
 all.endorsers.forEach((e) => walk(e, `${e._f} ${e.id}`));
 
 /* ---------- 9. common questions: quick answers and their buttons (Oct 20) ---------- */
@@ -411,6 +438,15 @@ for (const s of all.states) {
     });
   });
   (s.gotchas || []).forEach((g, i) => { if (g && typeof g === 'object') shortOk(g.short, 15, `${st} gotcha ${i + 1}`); });
+  // A button's link or label dated to change (Oct 30) keeps the same rules: a URL this state file already holds, 2 to 5 words.
+  (s.dated || []).forEach((d) => {
+    const m = d && /^situations\.([a-z_]+)\.actions\.\d+\.(url|label)$/.exec(d.path || '');
+    if (!m) return;
+    const where = `${st} dated ${d.path} from ${d.from}`;
+    const x = (s.situations || []).find((y) => y && y.id === m[1]);
+    if (m[2] === 'url' && !known.has(String(d.text).trim()) && String(d.text).trim() !== ((x && x.source) || '').trim()) err('help-action-url', `${where}: ${d.text} is not a URL this state file already holds`);
+    if (m[2] === 'label') { const n = words(d.text); if (n < 2 || n > 5) warn('help-action-label', `${where}: "${d.text}" is ${n} words (2 to 5)`); }
+  });
 }
 all.places.forEach((p) => shortOk(p.early_in_person?.hours_short, 20, `places/${p.id} early_in_person.hours_short`));
 // A county's own quick answers, and text dated to change on its own date (Oct 28), keep the same limits.

@@ -62,7 +62,7 @@
   {
     "endorser_id": "co-springs-gazette-eb",
     "target_id": "co-us-senate",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Gazette's Oct. 12 full ballot slate recommends in only one statewide candidate race (attorney general). This race is not listed.",
     "url": "https://gazette.com/2026/10/12/gazette-editorial-board-recommendations-nov-3-ballot/",
@@ -72,7 +72,7 @@
   {
     "endorser_id": "co-springs-gazette-eb",
     "target_id": "co-governor",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Gazette's Oct. 12 full ballot slate recommends in only one statewide candidate race (attorney general). This race is not listed.",
     "url": "https://gazette.com/2026/10/12/gazette-editorial-board-recommendations-nov-3-ballot/",
@@ -82,7 +82,7 @@
   {
     "endorser_id": "co-springs-gazette-eb",
     "target_id": "co-secretary-of-state",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Gazette's Oct. 12 full ballot slate recommends in only one statewide candidate race (attorney general). This race is not listed.",
     "url": "https://gazette.com/2026/10/12/gazette-editorial-board-recommendations-nov-3-ballot/",
@@ -92,7 +92,7 @@
   {
     "endorser_id": "co-springs-gazette-eb",
     "target_id": "co-treasurer",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Gazette's Oct. 12 full ballot slate recommends in only one statewide candidate race (attorney general). This race is not listed.",
     "url": "https://gazette.com/2026/10/12/gazette-editorial-board-recommendations-nov-3-ballot/",
@@ -112,7 +112,7 @@
   {
     "endorser_id": "denver-gazette-eb",
     "target_id": "co-us-senate",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Denver Gazette's Oct. 12 full ballot slate recommends in only one statewide candidate race (attorney general). This race is not listed.",
     "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
@@ -122,7 +122,7 @@
   {
     "endorser_id": "denver-gazette-eb",
     "target_id": "co-governor",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Denver Gazette's Oct. 12 full ballot slate recommends in only one statewide candidate race (attorney general). This race is not listed.",
     "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
@@ -132,7 +132,7 @@
   {
     "endorser_id": "denver-gazette-eb",
     "target_id": "co-secretary-of-state",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Denver Gazette's Oct. 12 full ballot slate recommends in only one statewide candidate race (attorney general). This race is not listed.",
     "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
@@ -142,7 +142,7 @@
   {
     "endorser_id": "denver-gazette-eb",
     "target_id": "co-treasurer",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The Denver Gazette's Oct. 12 full ballot slate recommends in only one statewide candidate race (attorney general). This race is not listed.",
     "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
@@ -392,7 +392,7 @@
   {
     "endorser_id": "co-afl-cio",
     "target_id": "co-us-senate",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The AFL-CIO's 2026 slate (Aug. 19, unchanged when re-read Oct. 17) lists governor, the other statewide offices and Congress but makes no U.S. Senate pick.",
     "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
@@ -492,7 +492,7 @@
   {
     "endorser_id": "conservation-colorado",
     "target_id": "co-us-senate",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Not on the group's 2026 endorsement page, which covers statewide, legislative and county races; it made no U.S. Senate pick.",
     "url": "https://conservationco.org/resources/endorsements/",
@@ -542,11 +542,11 @@
   {
     "endorser_id": "planned-parenthood-votes-co",
     "target_id": "co-us-senate",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not on the group's 'full 2026 endorsement slate'; it made no U.S. Senate pick.",
+    "why": "Not on the group's 'full 2026 endorsement slate'; it made no U.S. Senate pick. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.plannedparenthoodaction.org/planned-parenthood-votes-colorado/blog-copy-2/planned-parenthood-votes-colorado-announces-full-2026-endorsement-slate",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -582,21 +582,21 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "co-secretary-of-state",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The NRA-PVF Colorado grades page does not grade this race, so it made no pick.",
+    "why": "The NRA-PVF Colorado grades page does not grade this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.nrapvf.org/grades/colorado",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
     "endorser_id": "nra-pvf",
     "target_id": "co-treasurer",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The NRA-PVF Colorado grades page does not grade this race, so it made no pick.",
+    "why": "The NRA-PVF Colorado grades page does not grade this race. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.nrapvf.org/grades/colorado",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -604,9 +604,9 @@
     "target_id": "co-us-senate",
     "status": "not_found",
     "choice": null,
-    "why": "RMGO's endorsement page lists only state House, state Senate and local races as of Sept. 25. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "RMGO's endorsement page lists only state House, state Senate and local races as of Sept. 25. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://rmgo.org/endorsement/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -614,9 +614,9 @@
     "target_id": "co-governor",
     "status": "not_found",
     "choice": null,
-    "why": "RMGO's endorsement page lists only state House, state Senate and local races as of Sept. 25. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "RMGO's endorsement page lists only state House, state Senate and local races as of Sept. 25. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://rmgo.org/endorsement/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -624,9 +624,9 @@
     "target_id": "co-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "RMGO's endorsement page lists only state House, state Senate and local races as of Sept. 25. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "RMGO's endorsement page lists only state House, state Senate and local races as of Sept. 25. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://rmgo.org/endorsement/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -634,9 +634,9 @@
     "target_id": "co-secretary-of-state",
     "status": "not_found",
     "choice": null,
-    "why": "RMGO's endorsement page lists only state House, state Senate and local races as of Sept. 25. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "RMGO's endorsement page lists only state House, state Senate and local races as of Sept. 25. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://rmgo.org/endorsement/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -644,59 +644,59 @@
     "target_id": "co-treasurer",
     "status": "not_found",
     "choice": null,
-    "why": "RMGO's endorsement page lists only state House, state Senate and local races as of Sept. 25. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "RMGO's endorsement page lists only state House, state Senate and local races as of Sept. 25. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://rmgo.org/endorsement/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
     "endorser_id": "colorado-chamber-pac",
     "target_id": "co-us-senate",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The Chamber PAC's general-election endorsements cover state legislative candidates only.",
+    "why": "The Chamber PAC's general-election endorsements cover state legislative candidates only. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://cochamber.com/2026/07/10/colorado-chamber-announces-general-election-endorsements/",
-    "date": "2026-07-10",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
     "endorser_id": "colorado-chamber-pac",
     "target_id": "co-governor",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The Chamber PAC's general-election endorsements cover state legislative candidates only.",
+    "why": "The Chamber PAC's general-election endorsements cover state legislative candidates only. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://cochamber.com/2026/07/10/colorado-chamber-announces-general-election-endorsements/",
-    "date": "2026-07-10",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
     "endorser_id": "colorado-chamber-pac",
     "target_id": "co-attorney-general",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The Chamber PAC's general-election endorsements cover state legislative candidates only.",
+    "why": "The Chamber PAC's general-election endorsements cover state legislative candidates only. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://cochamber.com/2026/07/10/colorado-chamber-announces-general-election-endorsements/",
-    "date": "2026-07-10",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
     "endorser_id": "colorado-chamber-pac",
     "target_id": "co-secretary-of-state",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The Chamber PAC's general-election endorsements cover state legislative candidates only.",
+    "why": "The Chamber PAC's general-election endorsements cover state legislative candidates only. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://cochamber.com/2026/07/10/colorado-chamber-announces-general-election-endorsements/",
-    "date": "2026-07-10",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
     "endorser_id": "colorado-chamber-pac",
     "target_id": "co-treasurer",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The Chamber PAC's general-election endorsements cover state legislative candidates only.",
+    "why": "The Chamber PAC's general-election endorsements cover state legislative candidates only. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://cochamber.com/2026/07/10/colorado-chamber-announces-general-election-endorsements/",
-    "date": "2026-07-10",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -714,9 +714,9 @@
     "target_id": "co-us-senate",
     "status": "not_found",
     "choice": null,
-    "why": "No FOP endorsement found in this race. The FOP's own 2026 endorsement page was not located. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "No FOP endorsement found in this race. The FOP's own 2026 endorsement page was not located. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.denverpost.com/2026/10/15/phil-weiser-endorsements-republicans-ken-buck-police-union/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -724,9 +724,9 @@
     "target_id": "co-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "No FOP endorsement found in this race. The FOP's own 2026 endorsement page was not located. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "No FOP endorsement found in this race. The FOP's own 2026 endorsement page was not located. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.denverpost.com/2026/10/15/phil-weiser-endorsements-republicans-ken-buck-police-union/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -734,9 +734,9 @@
     "target_id": "co-secretary-of-state",
     "status": "not_found",
     "choice": null,
-    "why": "No FOP endorsement found in this race. The FOP's own 2026 endorsement page was not located. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "No FOP endorsement found in this race. The FOP's own 2026 endorsement page was not located. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.denverpost.com/2026/10/15/phil-weiser-endorsements-republicans-ken-buck-police-union/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -744,9 +744,9 @@
     "target_id": "co-treasurer",
     "status": "not_found",
     "choice": null,
-    "why": "No FOP endorsement found in this race. The FOP's own 2026 endorsement page was not located. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "No FOP endorsement found in this race. The FOP's own 2026 endorsement page was not located. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.denverpost.com/2026/10/15/phil-weiser-endorsements-republicans-ken-buck-police-union/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -754,9 +754,9 @@
     "target_id": "co-retention-freyre",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the Post’s roundup and endorsement index on Oct 19, 2026; no pick found for this item. U.S. House endorsements are still announced for the week of Oct 19. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "Checked the Post’s roundup and endorsement index on Oct 19, 2026; no pick found for this item. U.S. House endorsements are still announced for the week of Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -764,9 +764,9 @@
     "target_id": "co-retention-harris",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the Post’s roundup and endorsement index on Oct 19, 2026; no pick found for this item. U.S. House endorsements are still announced for the week of Oct 19. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "Checked the Post’s roundup and endorsement index on Oct 19, 2026; no pick found for this item. U.S. House endorsements are still announced for the week of Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -774,9 +774,9 @@
     "target_id": "co-retention-hood",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the Post’s roundup and endorsement index on Oct 19, 2026; no pick found for this item. U.S. House endorsements are still announced for the week of Oct 19. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "Checked the Post’s roundup and endorsement index on Oct 19, 2026; no pick found for this item. U.S. House endorsements are still announced for the week of Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -784,9 +784,9 @@
     "target_id": "co-retention-lum",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the Post’s roundup and endorsement index on Oct 19, 2026; no pick found for this item. U.S. House endorsements are still announced for the week of Oct 19. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "Checked the Post’s roundup and endorsement index on Oct 19, 2026; no pick found for this item. U.S. House endorsements are still announced for the week of Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -794,9 +794,9 @@
     "target_id": "co-retention-moultrie",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the Post’s roundup and endorsement index on Oct 19, 2026; no pick found for this item. U.S. House endorsements are still announced for the week of Oct 19. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "Checked the Post’s roundup and endorsement index on Oct 19, 2026; no pick found for this item. U.S. House endorsements are still announced for the week of Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -804,9 +804,9 @@
     "target_id": "co-retention-schock",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the Post’s roundup and endorsement index on Oct 19, 2026; no pick found for this item. U.S. House endorsements are still announced for the week of Oct 19. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "Checked the Post’s roundup and endorsement index on Oct 19, 2026; no pick found for this item. U.S. House endorsements are still announced for the week of Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -814,9 +814,9 @@
     "target_id": "co-retention-sullivan",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the Post’s roundup and endorsement index on Oct 19, 2026; no pick found for this item. U.S. House endorsements are still announced for the week of Oct 19. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "Checked the Post’s roundup and endorsement index on Oct 19, 2026; no pick found for this item. U.S. House endorsements are still announced for the week of Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {

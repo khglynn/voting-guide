@@ -54,9 +54,9 @@
     "target_id": "reynolds-sd-26-268",
     "status": "not_found",
     "choice": null,
-    "why": "The published November measure page does not list this Reynolds school measure; checked Oct 19. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "The published November measure page does not list this Reynolds school measure; checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements-measures/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -72,7 +72,7 @@
   {
     "endorser_id": "willamette-week-eb",
     "target_id": "or-us-house-3",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its federal endorsements page skips the 3rd District.",
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
@@ -182,7 +182,7 @@
   {
     "endorser_id": "willamette-week-eb",
     "target_id": "or-sd-24",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its Oct. 14 legislature endorsements skip this race.",
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
@@ -192,7 +192,7 @@
   {
     "endorser_id": "willamette-week-eb",
     "target_id": "or-hd-34",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its Oct. 14 legislature endorsements skip this race.",
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
@@ -202,7 +202,7 @@
   {
     "endorser_id": "willamette-week-eb",
     "target_id": "or-hd-38",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its Oct. 14 legislature endorsements skip this race.",
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
@@ -212,7 +212,7 @@
   {
     "endorser_id": "willamette-week-eb",
     "target_id": "or-hd-44",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its Oct. 14 legislature endorsements skip this race.",
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
@@ -222,7 +222,7 @@
   {
     "endorser_id": "willamette-week-eb",
     "target_id": "or-hd-45",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its Oct. 14 legislature endorsements skip this race.",
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
@@ -232,7 +232,7 @@
   {
     "endorser_id": "willamette-week-eb",
     "target_id": "or-hd-46",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its Oct. 14 legislature endorsements skip this race.",
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
@@ -242,7 +242,7 @@
   {
     "endorser_id": "willamette-week-eb",
     "target_id": "or-hd-47",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its Oct. 14 legislature endorsements skip this race.",
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
@@ -252,7 +252,7 @@
   {
     "endorser_id": "willamette-week-eb",
     "target_id": "or-hd-50",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Its Oct. 14 legislature endorsements skip this race.",
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
@@ -322,13 +322,12 @@
   {
     "endorser_id": "oregonian-eb",
     "target_id": "portland-26-267",
-    "status": "not_found",
-    "unreadable": true,
-    "choice": null,
-    "why": "The Oregonian's endorsement page is behind a paywall we couldn't read. We only saw a pick for this secondhand, so we're not showing one. Checked Oct 19, 2026.",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "The board says Portlanders already frustrated with high taxes and low service should resist another funding silo and vote no on Measure 26-267.",
     "url": "https://www.oregonlive.com/opinion/2026/09/editorial-endorsement-november-2026-vote-no-on-portlands-participatory-budgeting-measure.html",
-    "date": "2026-10-19",
-    "confidence": "sourced"
+    "date": "2026-09-27",
+    "confidence": "verified"
   },
   {
     "endorser_id": "multnomah-county-democrats",
@@ -345,9 +344,9 @@
     "target_id": "reynolds-sd-26-268",
     "status": "not_found",
     "choice": null,
-    "why": "Its ballot measures page covers only Portland's Measure 26-267. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "Its ballot measures page covers only Portland's Measure 26-267. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://multdems.org/2026-election-hub/ballot-measures-november-2026-general-election/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -763,41 +762,41 @@
   {
     "endorser_id": "multnomah-county-gop",
     "target_id": "or-sd-24",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "No Republican is on the ballot; the guide lists no one.",
+    "why": "No Republican is on the ballot; the guide lists no one. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://multco.gop/candidate-measure-guide-for-general-election-nov-2026/",
-    "date": "2026-10-13",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
     "endorser_id": "multnomah-county-gop",
     "target_id": "or-hd-38",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Daniel Loc Nguyen holds both the Democratic and Republican nominations; the guide lists no one.",
+    "why": "Daniel Loc Nguyen holds both the Democratic and Republican nominations; the guide lists no one. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://multco.gop/candidate-measure-guide-for-general-election-nov-2026/",
-    "date": "2026-10-13",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
     "endorser_id": "multnomah-county-gop",
     "target_id": "or-hd-42",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "No Republican is on the ballot; the guide lists no one.",
+    "why": "No Republican is on the ballot; the guide lists no one. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://multco.gop/candidate-measure-guide-for-general-election-nov-2026/",
-    "date": "2026-10-13",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
     "endorser_id": "multnomah-county-gop",
     "target_id": "or-hd-47",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "No Republican is on the ballot; the guide lists no one.",
+    "why": "No Republican is on the ballot; the guide lists no one. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://multco.gop/candidate-measure-guide-for-general-election-nov-2026/",
-    "date": "2026-10-13",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -805,9 +804,9 @@
     "target_id": "or-hd-44",
     "status": "not_found",
     "choice": null,
-    "why": "The guide does not list HD 44, although Margo Logan is the Republican nominee. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "The guide does not list HD 44, although Margo Logan is the Republican nominee. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://multco.gop/candidate-measure-guide-for-general-election-nov-2026/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -825,9 +824,9 @@
     "target_id": "portland-council-4",
     "status": "not_found",
     "choice": null,
-    "why": "The guide names no District 4 candidates. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "The guide names no District 4 candidates. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://multco.gop/candidate-measure-guide-for-general-election-nov-2026/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -835,9 +834,9 @@
     "target_id": "multnomah-chair",
     "status": "not_found",
     "choice": null,
-    "why": "The guide does not cover the county chair race. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "The guide does not cover the county chair race. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://multco.gop/candidate-measure-guide-for-general-election-nov-2026/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -845,9 +844,9 @@
     "target_id": "multnomah-commissioner-2",
     "status": "not_found",
     "choice": null,
-    "why": "The guide does not cover this race. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "The guide does not cover this race. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://multco.gop/candidate-measure-guide-for-general-election-nov-2026/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -855,9 +854,9 @@
     "target_id": "portland-26-267",
     "status": "not_found",
     "choice": null,
-    "why": "The guide takes positions on two other local measures but says nothing about 26-267. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "The guide takes positions on two other local measures but says nothing about 26-267. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://multco.gop/candidate-measure-guide-for-general-election-nov-2026/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -884,61 +883,61 @@
     "endorser_id": "nw-oregon-labor-council",
     "target_id": "portland-council-3",
     "status": "endorsed",
-    "choice": "Steve Novick and Kellie Torres",
-    "why": "NOLC's own endorsement page requires a login. Each candidate's signed Voters' Pamphlet endorsement list names the Northwest Oregon Labor Council (the county requires a signed form from each listed endorser). NOLC is also a member of Unity PAC, which recommends ranking only Novick and Torres.",
-    "url": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download",
-    "date": null,
-    "confidence": "sourced"
+    "choice": "Kellie Torres, Steve Novick",
+    "why": "Listed in its 2026 election recommendations; it advises ranking no more than two council candidates.",
+    "url": "https://www.nworegonlaborcouncil.com/post/information-for-our-upcoming-election-season",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "nw-oregon-labor-council",
     "target_id": "portland-council-4",
     "status": "endorsed",
-    "choice": "Olivia Clark and Eric Zimmerman",
-    "why": "NOLC's own endorsement page requires a login. Each candidate's signed Voters' Pamphlet endorsement list names the Northwest Oregon Labor Council (the county requires a signed form from each listed endorser). Unity PAC recommends ranking only Clark and Zimmerman.",
-    "url": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download",
-    "date": null,
-    "confidence": "sourced"
+    "choice": "Eric Zimmerman, Olivia Clark",
+    "why": "Listed in its 2026 election recommendations; it advises ranking no more than two council candidates.",
+    "url": "https://www.nworegonlaborcouncil.com/post/information-for-our-upcoming-election-season",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "nw-oregon-labor-council",
     "target_id": "multnomah-chair",
     "status": "endorsed",
     "choice": "Julia Brim-Edwards",
-    "why": "NOLC's own endorsement page requires a login. Brim-Edwards's signed Voters' Pamphlet endorsement list names the Northwest Oregon Labor Council (the county requires a signed form from each listed endorser).",
-    "url": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download",
-    "date": null,
-    "confidence": "sourced"
+    "why": "Listed in its 2026 election recommendations for Multnomah County Chair.",
+    "url": "https://www.nworegonlaborcouncil.com/post/information-for-our-upcoming-election-season",
+    "date": "2026-11-03",
+    "confidence": "verified"
   },
   {
     "endorser_id": "nw-oregon-labor-council",
     "target_id": "multnomah-commissioner-2",
     "status": "endorsed",
     "choice": "Serena Cruz",
-    "why": "NOLC's own endorsement page requires a login. Cruz's signed Voters' Pamphlet endorsement list names the Northwest Oregon Labor Council (the county requires a signed form from each listed endorser).",
-    "url": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download",
-    "date": null,
-    "confidence": "sourced"
+    "why": "Listed in its 2026 election recommendations for Multnomah County Commission, District 2.",
+    "url": "https://www.nworegonlaborcouncil.com/post/information-for-our-upcoming-election-season",
+    "date": "2026-11-03",
+    "confidence": "verified"
   },
   {
     "endorser_id": "nw-oregon-labor-council",
     "target_id": "multnomah-circuit-judge-2",
     "status": "endorsed",
     "choice": "Diane S Sykes",
-    "why": "NOLC's own endorsement page requires a login. Sykes's signed Voters' Pamphlet endorsement list names the Northwest Oregon Labor Council (the county and state require a signed form from each listed endorser).",
-    "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf",
-    "date": null,
-    "confidence": "sourced"
+    "why": "Listed in its 2026 election recommendations for Multnomah County Circuit Court, Position 2.",
+    "url": "https://www.nworegonlaborcouncil.com/post/information-for-our-upcoming-election-season",
+    "date": "2026-11-03",
+    "confidence": "verified"
   },
   {
     "endorser_id": "nw-oregon-labor-council",
     "target_id": "multnomah-circuit-judge-14",
     "status": "endorsed",
     "choice": "Elizabeth Savage",
-    "why": "NOLC's own endorsement page requires a login. Savage's signed Voters' Pamphlet endorsement list names the Northwest Oregon Labor Council (the county and state require a signed form from each listed endorser).",
-    "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf",
-    "date": null,
-    "confidence": "sourced"
+    "why": "Listed in its 2026 election recommendations for Multnomah County Circuit Court, Position 14.",
+    "url": "https://www.nworegonlaborcouncil.com/post/information-for-our-upcoming-election-season",
+    "date": "2026-11-03",
+    "confidence": "verified"
   },
   {
     "endorser_id": "portland-metro-chamber",
@@ -995,9 +994,9 @@
     "target_id": "portland-26-267",
     "status": "not_found",
     "choice": null,
-    "why": "The Chamber's 2026 election post does not mention Measure 26-267. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "The Chamber's 2026 election post does not mention Measure 26-267. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://portlandmetrochamber.com/resources/2026-regional-election-candidates-portlands-future-is-on-the-ballot/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1143,81 +1142,81 @@
   {
     "endorser_id": "basic-rights-oregon",
     "target_id": "or-hd-33",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement.",
+    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.basicrights.org/2026endorsements",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
     "endorser_id": "basic-rights-oregon",
     "target_id": "or-hd-34",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement.",
+    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.basicrights.org/2026endorsements",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
     "endorser_id": "basic-rights-oregon",
     "target_id": "or-hd-38",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement.",
+    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.basicrights.org/2026endorsements",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
     "endorser_id": "basic-rights-oregon",
     "target_id": "or-hd-41",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement.",
+    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.basicrights.org/2026endorsements",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
     "endorser_id": "basic-rights-oregon",
     "target_id": "or-hd-45",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement.",
+    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.basicrights.org/2026endorsements",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
     "endorser_id": "basic-rights-oregon",
     "target_id": "or-hd-46",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement.",
+    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.basicrights.org/2026endorsements",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
     "endorser_id": "basic-rights-oregon",
     "target_id": "or-hd-48",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement.",
+    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.basicrights.org/2026endorsements",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
     "endorser_id": "basic-rights-oregon",
     "target_id": "or-hd-50",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement.",
+    "why": "Not on BRO PAC's 2026 list; BRO says it considers only candidates who ask for its endorsement. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.basicrights.org/2026endorsements",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1255,9 +1254,9 @@
     "target_id": "portland-26-267",
     "status": "not_found",
     "choice": null,
-    "why": "The research index still lists its March 2025 participatory-budgeting study; no November 2026 ballot recommendation was found on Oct 19. A policy study is not a ballot endorsement. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "The research index still lists its March 2025 participatory-budgeting study; no November 2026 ballot recommendation was found on Oct 19. A policy study is not a ballot endorsement. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://pdxcityclub.org/research/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1266,8 +1265,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.portlandmercury.com/election-2026/the-mercurys-2026-november-endorsement-cheat-sheet/",
-    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1276,8 +1275,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.portlandmercury.com/election-2026/the-mercurys-2026-november-endorsement-cheat-sheet/",
-    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1286,8 +1285,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.portlandmercury.com/election-2026/the-mercurys-2026-november-endorsement-cheat-sheet/",
-    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1326,8 +1325,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.portlandmercury.com/election-2026/the-mercurys-2026-november-endorsement-cheat-sheet/",
-    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1346,8 +1345,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.portlandmercury.com/election-2026/the-mercurys-2026-november-endorsement-cheat-sheet/",
-    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1386,8 +1385,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.portlandmercury.com/election-2026/the-mercurys-2026-november-endorsement-cheat-sheet/",
-    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1466,8 +1465,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.portlandmercury.com/election-2026/the-mercurys-2026-november-endorsement-cheat-sheet/",
-    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1476,8 +1475,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.portlandmercury.com/election-2026/the-mercurys-2026-november-endorsement-cheat-sheet/",
-    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1486,8 +1485,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.portlandmercury.com/election-2026/the-mercurys-2026-november-endorsement-cheat-sheet/",
-    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1516,8 +1515,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.portlandmercury.com/election-2026/the-mercurys-2026-november-endorsement-cheat-sheet/",
-    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1566,8 +1565,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.portlandmercury.com/election-2026/the-mercurys-2026-november-endorsement-cheat-sheet/",
-    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1596,8 +1595,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.portlandmercury.com/election-2026/the-mercurys-2026-november-endorsement-cheat-sheet/",
-    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1606,8 +1605,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.portlandmercury.com/election-2026/the-mercurys-2026-november-endorsement-cheat-sheet/",
-    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1616,8 +1615,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.portlandmercury.com/election-2026/the-mercurys-2026-november-endorsement-cheat-sheet/",
-    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1626,8 +1625,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.portlandmercury.com/election-2026/the-mercurys-2026-november-endorsement-cheat-sheet/",
-    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1636,8 +1635,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.portlandmercury.com/election-2026/the-mercurys-2026-november-endorsement-cheat-sheet/",
-    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1646,8 +1645,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.portlandmercury.com/election-2026/the-mercurys-2026-november-endorsement-cheat-sheet/",
-    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1656,8 +1655,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.portlandmercury.com/election-2026/the-mercurys-2026-november-endorsement-cheat-sheet/",
-    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1666,8 +1665,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
-    "why": "Checked all seven sections of WW’s published general-election issue on Oct 19; this race was not listed. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "Checked all seven sections of WW’s published general-election issue on Oct 19; this race was not listed. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1676,8 +1675,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
-    "why": "Checked all seven sections of WW’s published general-election issue on Oct 19; this race was not listed. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "Checked all seven sections of WW’s published general-election issue on Oct 19; this race was not listed. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1686,8 +1685,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
-    "why": "Checked all seven sections of WW’s published general-election issue on Oct 19; this race was not listed. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "Checked all seven sections of WW’s published general-election issue on Oct 19; this race was not listed. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1696,8 +1695,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
-    "why": "Checked all seven sections of WW’s published general-election issue on Oct 19; this race was not listed. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "Checked all seven sections of WW’s published general-election issue on Oct 19; this race was not listed. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1706,8 +1705,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
-    "why": "Checked all seven sections of WW’s published general-election issue on Oct 19; this race was not listed. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "Checked all seven sections of WW’s published general-election issue on Oct 19; this race was not listed. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1716,8 +1715,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
-    "why": "Checked all seven sections of WW’s published general-election issue on Oct 19; this race was not listed. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "Checked all seven sections of WW’s published general-election issue on Oct 19; this race was not listed. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1726,8 +1725,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
-    "why": "Checked all seven sections of WW’s published general-election issue on Oct 19; this race was not listed. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "Checked all seven sections of WW’s published general-election issue on Oct 19; this race was not listed. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1736,8 +1735,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
-    "why": "Checked all seven sections of WW’s published general-election issue on Oct 19; this race was not listed. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "Checked all seven sections of WW’s published general-election issue on Oct 19; this race was not listed. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1746,8 +1745,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
-    "why": "Checked all seven sections of WW’s published general-election issue on Oct 19; this race was not listed. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "Checked all seven sections of WW’s published general-election issue on Oct 19; this race was not listed. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1756,8 +1755,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
-    "why": "Checked all seven sections of WW’s published general-election issue on Oct 19; this race was not listed. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "Checked all seven sections of WW’s published general-election issue on Oct 19; this race was not listed. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1766,8 +1765,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
-    "why": "Checked all seven sections of WW’s published general-election issue on Oct 19; this race was not listed. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "Checked all seven sections of WW’s published general-election issue on Oct 19; this race was not listed. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1776,8 +1775,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
-    "why": "Checked all seven sections of WW’s published general-election issue on Oct 19; this race was not listed. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "Checked all seven sections of WW’s published general-election issue on Oct 19; this race was not listed. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   },
   {
@@ -1806,8 +1805,8 @@
     "status": "not_found",
     "choice": null,
     "url": "https://pdxcityclub.org/research/",
-    "why": "No recommendation for this school measure was found in the research index checked Oct 19. Checked again on Oct 28, 2026; still no pick on this page.",
-    "date": "2026-10-28",
+    "why": "No recommendation for this school measure was found in the research index checked Oct 19. Checked again on Nov 1, 2026; still no pick on this page.",
+    "date": "2026-11-01",
     "confidence": "verified"
   }
 ]

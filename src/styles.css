@@ -204,6 +204,8 @@ b, strong { font-weight: 600; }
 .door-found { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; column-gap: 12px; margin-top: 2px; font-size: 15.5px; color: var(--ink-2); }
 .door-found b { color: var(--ink); }
 .door-found .linkbtn { margin: 0; flex: none; }
+/* Why an address opened the state's races and not the place its ZIP opens (app.ts movedWhy). */
+.door-place + .addr-moved { margin-top: 4px; font-size: 15.5px; color: var(--ink-2); }
 .door-picks { margin-top: 18px; padding-top: 4px; border-top: 1px solid var(--rule); }
 /* The ballot you left, saved: one line above step 1 with the way back. */
 .door-saved { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: -6px 0 18px; padding: 10px 12px; border-left: 3px solid var(--gold); background: var(--gold-wash); font-size: 15px; line-height: 1.35; }
@@ -326,7 +328,7 @@ b, strong { font-weight: 600; }
 .addrbox > p + p { margin-top: 8px; }
 .addrbox .addr-found .linkbtn { margin: -12px 0; padding: 0; }
 .addrbox .addr-set { color: var(--ink-2); }
-.addrbox .addr-map { color: var(--ink-2); }
+.addrbox .addr-map, .addrbox .addr-route { color: var(--ink-2); }
 /* Under the picks line: how many sources, scoped to the ballot. A quiet line, no button. */
 .picks-cov { margin-top: 8px; font-size: 14.5px; line-height: 1.45; color: var(--muted); }
 

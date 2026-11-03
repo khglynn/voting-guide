@@ -39,6 +39,11 @@ export interface GeoResult {
   matched: string;           // the address as Census matched it (shown back, never stored)
   state: string | null;      // two-letter
   county: string | null;     // "Travis"
+  /* The county's Census code, state then county ("29510"), and its full name ("St. Louis County", "the City of
+     St. Louis"). The Census gives the City of St. Louis and the county beside it one short name, "St. Louis"
+     (Baltimore too), so only the code tells them apart (Oct 29, outsideOf). */
+  countyId?: string | null;
+  countyName?: string | null;
   place: string | null;      // "Austin"
   cd: number | null;         // congressional district
   upper: number | null;      // state senate
@@ -60,6 +65,23 @@ const STATE_FIPS: Record<string, string> = {
   '45': 'SC', '46': 'SD', '47': 'TN', '48': 'TX', '49': 'UT', '50': 'VT', '51': 'VA', '53': 'WA', '54': 'WV', '55': 'WI',
   '56': 'WY', '72': 'PR',
 };
+
+/* A place's own: what the index (and a place bundle) says about where its voters live. */
+type PlaceLike = { label: string; state: string; county_fips?: string[]; zip_outside?: Record<string, string> };
+
+/* An address the Census puts outside this place: the place names its Census county codes and the address's
+   county isn't one of them (Oct 29: a Pine Lawn address in 63120 is St. Louis County's, 29189, never the
+   City's, 29510). With no code on either side, nothing is ruled out. */
+export const outsideOf = (p: PlaceLike | undefined, r: GeoResult): boolean =>
+  !!p && !!p.county_fips && p.county_fips.length > 0 && !!r.countyId && !p.county_fips.includes(r.countyId);
+
+/* A place as a sentence names it: "Brooklyn", "Baltimore City", and "the City of St. Louis" where the label
+   alone would read like the county beside it. */
+export function placeName(p: { label: string; counties?: string[] }): string {
+  const name = p.label.replace(/\s*\(.*\)$/, '');
+  const city = p.counties && p.counties.length === 1 ? /^(.+) City$/.exec(p.counties[0]) : null;
+  return city && city[1] === name ? `the City of ${name}` : name;
+}
 
 /* Which of these places a Census result points to. The state has to match first: Aurora,
    Illinois is not Aurora, Colorado, and applying one state's district numbers to the other's
@@ -83,29 +105,59 @@ export type AddressHit =
   | { kind: 'choose'; zip: string; ids: string[] }
   | { kind: 'out'; st: string; zip: string }
   | { kind: 'none' };
-interface IndexLike { places: Record<string, { label: string; state: string }>; zips: Record<string, string[]>; states: Record<string, unknown> }
+interface IndexLike { places: Record<string, PlaceLike>; zips: Record<string, string[]>; states: Record<string, unknown> }
+/* Which of these places the Census names the address's own, by name: as placeFromGeo matches, then the label
+   without its note ("Los Angeles (city)", "St. Louis (the City of St. Louis, ...)"), and New York City by
+   borough county. A place the address's county rules out never answers (outsideOf). */
+export function whichPlace(places: Record<string, PlaceLike>, ids: string[], r: GeoResult): string | null {
+  if (!r.state) return null;
+  const ok = ids.filter((id) => places[id] && places[id].state === r.state && !outsideOf(places[id], r));
+  const hit = placeFromGeo(places, ok, r);
+  if (hit || !r.place) return hit;
+  const name = r.place.toLowerCase();
+  if (name === 'new york' && r.county) {
+    const nyc = ok.find((id) => (places[id].label.match(/\(([^)]*) County\)$/) || [])[1] === r.county);
+    if (nyc) return nyc;
+  }
+  const bare = (l: string) => l.replace(/\s*\(.*\)$/, '').toLowerCase();
+  return ok.find((id) => bare(places[id].label) === name) || null;
+}
+/* The places a ZIP opens by itself, less any the address's county rules out, and whether they're sure: a ZIP
+   one of them marks as also reaching a town the guide doesn't cover (zip_outside: 63120 is the City and Pine
+   Lawn) is never sure, so the first page asks rather than opening a place the voter may not be in. */
+export function zipPlaces(idx: IndexLike, zip: string, r?: GeoResult): { ids: string[]; sure: boolean } {
+  const ids = (idx.zips[zip] || []).filter((id) => idx.places[id] && (!r || (idx.places[id].state === r.state && !outsideOf(idx.places[id], r))));
+  return { ids, sure: ids.length === 1 && !(idx.places[ids[0]].zip_outside || {})[zip] };
+}
 export function settleAddress(idx: IndexLike, r: GeoResult): AddressHit {
   const st = r.state;
   if (!st) return { kind: 'none' };
   const zip = r.zip && /^\d{5}$/.test(r.zip) ? r.zip : '';
   const inState = Object.keys(idx.places).filter((id) => idx.places[id].state === st);
-  const bare = (l: string) => l.replace(/\s*\(.*\)$/, '').toLowerCase();
-  const byName = (): string | null => {
-    if (!r.place) return null;
-    const name = r.place.toLowerCase();
-    if (name === 'new york' && r.county) {
-      const nyc = inState.find((id) => (idx.places[id].label.match(/\(([^)]*) County\)$/) || [])[1] === r.county);
-      if (nyc) return nyc;
-    }
-    return inState.find((id) => bare(idx.places[id].label) === name) || null;
-  };
-  const hit = placeFromGeo(idx.places, inState, r) || byName();
+  const hit = whichPlace(idx.places, inState, r);
   if (hit) return { kind: 'open', st, ids: [hit], zip };
-  const ids = zip ? (idx.zips[zip] || []).filter((id) => inState.includes(id)) : [];
-  if (ids.length === 1) return { kind: 'open', st, ids, zip };
-  if (ids.length > 1) return { kind: 'choose', zip, ids };
+  const { ids, sure } = zip ? zipPlaces(idx, zip, r) : { ids: [], sure: false };
+  if (sure) return { kind: 'open', st, ids, zip };
+  if (ids.length) return { kind: 'choose', zip, ids };
   if (!(st in idx.states)) return { kind: 'out', st, zip };
   return zip ? { kind: 'open', st, ids: [], zip } : { kind: 'none' };
+}
+/* Which ballot an address belongs on, from the one open (`here`, its places; none for the state's races):
+   null keeps it, `to` [] is the state's races, [id] a place, and `out` says the address's county ruled out
+   every place open. Ruled out, the place the Census names, as the first page would open it, else the
+   state's races (Denver's ballot, an Aurora address in Arapahoe County: Aurora's, which lists each of its
+   three counties' races with who votes in them). Several places narrow to the one the address is in. The
+   state's races take the place the Census names only where its county codes can rule out the wrong county:
+   a place without them stays the state's races, as before Oct 29, rather than open with county races that
+   may not be the voter's (the review of #46: Portland reaches into Washington County, its ballot is
+   Multnomah's). */
+export function ballotFor(idx: IndexLike, here: string[], r: GeoResult): { to: string[]; out: boolean } | null {
+  const all = Object.keys(idx.places);
+  const out = here.length > 0 && here.every((id) => outsideOf(idx.places[id], r));
+  if (out) { const n = whichPlace(idx.places, all, r); return { to: n ? [n] : [], out }; }
+  const n = !here.length ? whichPlace(idx.places, all, r) : here.length > 1 ? whichPlace(idx.places, here, r) : null;
+  if (!n || (!here.length && !idx.places[n].county_fips?.length)) return null;
+  return { to: [n], out };
 }
 
 /* Most people type just the street ("2 Main St"), and the Census geocoder can't place a street
@@ -158,10 +210,17 @@ export function parseCensus(data: any): GeoResult[] {
     const ll = (x: unknown, y: unknown) => { const lon = Number(x), lat = Number(y); return Number.isFinite(lon) && Number.isFinite(lat) && Math.abs(lon) <= 180 && Math.abs(lat) <= 90 && (lon !== 0 || lat !== 0) ? { lon, lat } : null; };
     const blk = layer(/^2020 Census Blocks$/) || layer(/Census Blocks/);
     const zipAt = matched.match(/(\d{5})(?:-\d{4})?\s*$/);
+    // The county's code from GEOID, else STATE and COUNTY; an independent city's name ("St. Louis city") reads
+    // the way people say it ("the City of St. Louis").
+    const fips = county ? (/^\d{5}$/.test(String(county.GEOID || '')) ? String(county.GEOID)
+      : /^\d{2}$/.test(String(county.STATE || '')) && /^\d{3}$/.test(String(county.COUNTY || '')) ? `${county.STATE}${county.COUNTY}` : null) : null;
+    const cname = county ? String(county.NAME || '').trim() : '';
     const r: GeoResult = {
       matched,
       state: st ? STATE_FIPS[String(st.STATE)] || null : null,
       county: county ? String(county.BASENAME || '').trim() || null : null, // a blank name is no county
+      countyId: fips,
+      countyName: cname ? cname.replace(/^(.+) city$/, 'the City of $1') : null,
       place: place ? String(place.BASENAME || '') : null,
       cd: num(newest(/^(\d+)\w* Congressional Districts/) || layer(/Congressional Districts/)),
       upper: num(newest(/^(\d{4}) State Legislative Districts - Upper/) || layer(/State Legislative Districts - Upper/)),

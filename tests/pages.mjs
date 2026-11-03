@@ -37,6 +37,7 @@ const site = await vite.ssrLoadModule('/src/pages/site.ts');
 const bl = await vite.ssrLoadModule('/src/ballot.ts');
 const labels = await vite.ssrLoadModule('/src/model/labels.ts');
 const st8 = await vite.ssrLoadModule('/src/state.ts');
+const { fmtDate } = await vite.ssrLoadModule('/src/util.ts');
 
 const results = [];
 const check = (name, ok, extra = '') => { results.push({ name, ok }); console.log(`${ok ? 'PASS' : 'FAIL'}  ${name}${!ok && extra ? `  (${extra})` : ''}`); };
@@ -62,7 +63,7 @@ const OUR_WORDS = /—|–|\b[A-Z]{4,}\b/;
 for (const id of placeIds) {
   const p = pages.find((x) => x.path === `/${id}`);
   const pb = data.places[id];
-  const short = site.shortLabel(pb.label);
+  const short = site.pageLabel(data, id);
   if (!p) { bad.title.push(`${id}: no page`); continue; }
   if (!p.title.includes(short) || p.title.length > 65 || !p.description.includes(short) || p.description.length > 160) bad.title.push(`${id}: "${p.title}" / ${p.description.length} chars`);
   if (!p.html.includes(`<link rel="canonical" href="${site.ORIGIN}/${id}">`)) bad.canon.push(id);
@@ -117,6 +118,26 @@ check('page titles and descriptions: no em dashes, no all caps', !bad.copy.lengt
   check('Austin: lastmod is the newest date its own facts carry, never after today', p.lastmod === (lastmod > TODAY ? TODAY : lastmod), `${p.lastmod} vs ${lastmod}`);
   check('a date in the data past today never becomes a lastmod in the future', site.allPages(data, A, '2026-10-01').every((x) => x.lastmod <= '2026-10-01'));
 }
+/* ---------- why a race is only on some ballots (audit, Oct 29) ---------- */
+// A city's own race the whole city votes in reads "Only inside city limits", never "Only in parts of Columbia";
+// a race for part of the place keeps "Only in parts of"; a race the scope puts on all of the place has no label.
+{
+  const rowOf = (path, place, item) => {
+    const p = pages.find((x) => x.path === path);
+    const b = bl.buildBallot(data.states[data.places[place].state], [data.places[place]]);
+    const t = labels.rowTitle(b.byId.get(item)).title;
+    const i = p ? p.html.indexOf(`<b>${t}</b>`) : -1;
+    return i < 0 ? '' : p.html.slice(i, p.html.indexOf('</li>', i));
+  };
+  const at = [['/columbia-tn', 'columbia-tn', 'columbia-tn-mayor'], ['/columbia-tn', 'columbia-tn', 'columbia-tn-vice-mayor'], ['/mount-pleasant-tn', 'mount-pleasant-tn', 'mount-pleasant-tn-commission'], ['/tallahassee-fl', 'tallahassee-fl', 'fl-tallahassee-mayor']]
+    .map(([path, place, item]) => [path, item, rowOf(path, place, item)]);
+  const wrongAt = at.filter(([, , r]) => !/Only inside city limits/.test(r) || /Only in parts of/.test(r));
+  check('pages: a city\'s own at-large race says "Only inside city limits", not "Only in parts of"', wrongAt.length === 0, wrongAt.map(([p, i, r]) => `${p} ${i}: ${r.slice(0, 120) || '(no row)'}`).join(' | '));
+  const part = rowOf('/nashville-tn', 'nashville-tn', 'belle-meade-city-commission');
+  check('pages: a small city\'s race inside a bigger place keeps "Only in parts of"', /Only in parts of Nashville/.test(part), part.slice(0, 160));
+  const boe = rowOf('/dana-point-ca', 'dana-point-ca', 'ca-boe-4');
+  check('pages: BOE District 4 on the Dana Point page has no "Only in parts of" (all of Orange County is in it)', !!boe && !/pg-may/.test(boe), boe.slice(0, 160));
+}
 /* ---------- dates say what the data says, qualifications included (Codex, Oct 28) ---------- */
 {
   const norm = (x) => unesc(String(x || '')).replace(/\s+/g, ' ').trim();
@@ -142,15 +163,34 @@ check('page titles and descriptions: no em dashes, no all caps', !bad.copy.lengt
     const st = p.kind === 'state' ? stateCodes.find((x) => site.statePath(data, x) === p.path) : data.places[p.path.slice(1)].state;
     const text = textOf(bodyOf(p.html));
     // Case aside: the app's deshout writes the data's "NOT at your polling place" as "not".
-    const gone = (data.states[st].howto.mail_ballot.return_options || []).filter((o) => !text.toLowerCase().includes(norm(o).slice(0, 60).toLowerCase()));
+    // A place with its own ways back (the City of St. Louis, Oct 29) lists those instead of the state's.
+    // As the page reads it: a way back a `dated` entry names never goes on a static page (site.undated; Georgia's
+    // drop boxes and Maryland's early voting centers close, Oct 30), so it isn't looked for.
+    const place = p.kind === 'place' ? site.undated(data.places[p.path.slice(1)]) : null;
+    const opts = (place?.mail_ballot?.return_options || site.undated(data.states[st].howto).mail_ballot.return_options || []).filter(Boolean);
+    const gone = opts.filter((o) => !text.toLowerCase().includes(norm(o).slice(0, 60).toLowerCase()));
     const oneRule = /Your mail ballot must/.test(p.html) || !/Mail ballot deadline: <b>/.test(p.html);
     if (gone.length || oneRule) ways.push(`${p.path}: ${gone.length} way(s) missing${oneRule ? ', a one-rule heading' : ''}`);
   }
   check('every page lists each way to return a mail ballot, and its heading names no single rule', !ways.length, ways.slice(0, 4).join('; '));
+  // The City of St. Louis's page lists only the City's own ways back, never St. Louis County's office in St. Ann.
+  const stl = textOf(bodyOf(pages.find((x) => x.path === '/st-louis-city-mo').html));
+  check('the City of St. Louis page: its own ways back only, not the County office in St. Ann', /300 N\. Tucker/.test(stl) && !/Northwest Plaza/.test(stl) && !/boecabsentee/.test(stl));
+  // Orange County places: in-person voting starts Oct 24 (the county's vote center page), and the replacement deadline cites the county.
+  const dpg = textOf(bodyOf(pages.find((x) => x.path === '/dana-point-ca').html));
+  check('Dana Point page: in-person voting from Oct 24, and Orange County\'s own replacement deadline', /In-person voting: Sat, Oct 24 to(\s|&nbsp;)Mon, Nov 2/.test(dpg) && /Orange County's last day to mail you a replacement/.test(dpg) && !/LA County's last day/.test(dpg), dpg.match(/In-person voting:[^.]*/)?.[0] || '');
+  const npg = textOf(bodyOf(pages.find((x) => x.path === '/nashville-tn').html));
+  check('Nashville page: polls open 7 AM to 7 PM on Election Day', /You can vote from 7 AM to 7 PM/.test(npg), npg.match(/Election Day: [^.]*\.[^.]*/)?.[0] || '');
   check('Texas: the USPS postmark exception is on the page', textOf(bodyOf(pages.find((x) => x.path === '/texas').html)).includes('postmarked by 7:00 PM Nov. 3 and arriving by 5:00 PM'));
-  const early = stateCodes.filter((st) => { const n = data.states[st].howto.early_in_person.hours_note; const text = textOf(bodyOf(pages.find((x) => x.path === site.statePath(data, st)).html)).toLowerCase(); return n && !text.includes(norm(n).slice(0, 60).toLowerCase()); });
+  // As the page reads it: a dated note (Tennessee's, "is over" from Oct 30) never goes on a static page.
+  const early = stateCodes.filter((st) => { const n = site.undated(data.states[st].howto).early_in_person.hours_note; const text = textOf(bodyOf(pages.find((x) => x.path === site.statePath(data, st)).html)).toLowerCase(); return n && !text.includes(norm(n).slice(0, 60).toLowerCase()); });
   check('state pages: the early voting note, in the data\'s words, even where there is no window (Alabama, Pennsylvania)', !early.length, early.join(' '));
   check('Maryland: the request deadline says how it depends on delivery (fax or email); Washington: no blanket opening time', /fax or email/.test(md) && !/You can vote from/.test(wa) && /Polls close at 8 PM/.test(wa));
+  // Tennessee closes at one moment in two zones: its state page names both, Nashville's its own 7 PM, as the plan does.
+  const tn = textOf(bodyOf(pages.find((x) => x.path === '/tennessee').html));
+  const nash = textOf(bodyOf(pages.find((x) => x.path === '/nashville-tn').html));
+  // Since Oct 29 Nashville carries its own 7 AM opening (the county's sample ballot), so its page gives the whole day.
+  check('Tennessee: the state page names both closing times, Nashville its own', tn.includes('Polls close at 7:00 PM Central (8:00 PM Eastern).') && nash.includes('You can vote from 7 AM to 7 PM.') && !/You can vote from/.test(tn), `${tn.match(/Polls close[^.]*\.[^.]*\./)} | ${nash.match(/You can vote from[^.]*\./)}`);
 }
 /* ---------- per-county links and dated text (main's where-to-vote parts A and B, Oct 28) ---------- */
 {
@@ -174,6 +214,36 @@ check('page titles and descriptions: no em dashes, no all caps', !bad.copy.lengt
     }
   }
   check('every place page keeps a way to find early voting and Election Day places (county\'s or state\'s)', !lost.length, lost.join(' '));
+  // Once early voting has ended by the build day (Oct 30), a page drops its early voting links, the state's and each
+  // county's, and keeps Election Day's (Maryland's ended Oct 29, Travis's, Williamson's and Hays's Oct 30).
+  const md = (day) => site.statePage(data, 'MD', A, day).html;
+  const aus = (day) => site.placePage(data, 'austin-tx', A, day).html;
+  check('a page built after early voting ended has no early voting link and keeps Election Day\'s', md('2026-10-29').includes('>Find early voting locations</a>') && !md('2026-10-30').includes('>Find early voting locations</a>') && md('2026-10-30').includes('>Find your Election Day polling place</a>'));
+  check('Austin built after early voting: no county\'s early voting link, every county\'s Election Day link stays', aus('2026-10-30').includes('>Early voting locations</a>') && !aus('2026-10-31').includes('>Early voting locations</a>') && (aus('2026-10-31').match(/>Election Day locations<\/a>/g) || []).length === (data.places['austin-tx'].by_county || []).filter((c) => c.lookups.election_day).length);
+  // Florida's window is only a minimum: its page keeps the state's early voting link through the last day a county may
+  // still vote early (Nov 1, s. 101.657, when Orange and Leon do), while each place keeps its own last day and dates.
+  const fl = (day) => site.statePage(data, 'FL', A, day).html;
+  const flEp = data.states.FL.howto.early_in_person;
+  const flLink = `<a href="${flEp.lookup_url}" rel="noopener">Find early voting locations</a>`;
+  check('Florida\'s page built Nov 1 keeps the state\'s early voting link, and built Nov 2 drops it', flEp.latest_end === '2026-11-01' && fl('2026-11-01').includes(flLink) && !fl('2026-11-02').includes(flLink) && fl('2026-11-02').includes('>Find your Election Day polling place</a>'));
+  const dayAfter = (iso) => new Date(Date.parse(`${iso}T12:00:00Z`) + 864e5).toISOString().slice(0, 10);
+  const flOff = ['pensacola-fl', 'orlando-fl', 'tallahassee-fl'].filter((id) => {
+    const end = data.places[id].early_in_person.end;
+    const pg = (day) => site.placePage(data, id, A, day).html;
+    const dates = `<b>${fmtDate(data.places[id].early_in_person.start)} to&nbsp;${fmtDate(end)}</b>`;
+    return !(pg(end).includes('>Find early voting locations</a>') && !pg(dayAfter(end)).includes('>Find early voting locations</a>') && pg(flEp.latest_end).includes(dates));
+  });
+  check('Florida places keep their own last day of early voting (Pensacola\'s Oct 31, before the state\'s latest county day) and dates', !flOff.length && data.places['pensacola-fl'].early_in_person.end < flEp.latest_end, flOff.join(' '));
+  // A county row always has a link, and the heading never stands alone (Atlanta from Oct 31: its counties' early
+  // voting links go with early voting, and their drop box links are dated, so no row is left).
+  const bareRows = (html) => {
+    const lis = ((html.match(/<ul class="pg-ctys">([\s\S]*?)<\/ul>/) || [])[1] || '').match(/<li>[\s\S]*?<\/li>/g) || [];
+    return (html.includes('class="pg-cty"') && !lis.length) || lis.some((li) => !li.includes('<a '));
+  };
+  const atl = (day) => site.placePage(data, 'atlanta-ga', A, day).html;
+  check('Atlanta built Oct 31: no county row without a link (Oct 28 still lists both counties\' links)', atl('2026-10-28').includes('class="pg-cty"') && !bareRows(atl('2026-10-28')) && !bareRows(atl('2026-10-31')));
+  const bare = ['2026-10-31', '2026-11-01', '2026-11-02', '2026-11-03'].flatMap((day) => placeIds.filter((id) => bareRows(site.placePage(data, id, A, day).html)).map((id) => `${id} ${day}`));
+  check('no place page built Oct 31 to Nov 3 has a county row without a link, or the heading alone', !bare.length, bare.join(' '));
   // Dated text never goes on a page, whatever the build date (Codex on 217e8df): it can say "today", and a page keeps
   // it until the next deploy. The app shows it as it reads on the day.
   const dn = placeIds.filter((id) => (data.places[id].dated || []).some((x) => x.path === 'notes'));

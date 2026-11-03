@@ -86,18 +86,23 @@ export const contestDistrict = districtNum;
 /* Read from the measure's own jurisdiction note, the way coversPlace reads a race's scope: a
    district named as covering only part of the place ("including part of northwest Houston",
    "central San Antonio", "only voters inside this territory"), one county of a place that spans
-   several, or a school district that names neither the place nor its county, may apply. */
+   several, or a school district that names neither the place nor its county, may apply. So does
+   a city question for only some of the place's voters: a small city's own inside a county-wide
+   place (Goodlettsville's sales tax on a Nashville ballot: "City of Goodlettsville voters only"),
+   whose scope never names the place, or a ward's or precinct's (Chicago's advisory questions:
+   "City of Chicago, 4th Ward only"). */
 const PARTIAL = /\b(part of|parts of|small part|much of|touching|only|not already|except|excluding|outside|reaches|central|far (north|south|east|west)\w*|northwest|northeast|southwest|southeast)\b/i;
 function measureCovers(m: Measure, places: PlaceBundle[]): boolean {
   if (!places.length) return true;
   const j = m.jurisdiction || '';
   if (/\bevery\b[^)]*\bvoter/i.test(j)) return true;
+  const named = (c: string) => new RegExp(`\\b${c.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i').test(j);
+  if (m.level === 'city' && PARTIAL.test(j) && (DISTRICTISH.test(j) || !places.some((p) => named(p.label.replace(/\s*\(.*\)$/, ''))))) return false;
   if (!['school', 'special_district', 'county'].includes(m.level)) return true;
   if (PARTIAL.test(j)) return false;
   const counties = (p: PlaceBundle) => p.counties.map((c) => c.replace(/\s*\([^)]*\)/g, '').replace(/\s+County$/i, '').trim()).filter(Boolean);
   // A place in several counties: a measure that names some of them but not all (Aurora: "17th
   // Judicial District (Adams County and ...)") reaches only part of it.
-  const named = (c: string) => new RegExp(`\\b${c.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i').test(j);
   if (places.some((p) => counties(p).length > 1 && counties(p).some(named) && !counties(p).every(named))) return false;
   if (m.level === 'school') {
     const names = places.flatMap((p) => [p.label.replace(/\s*\(.*\)$/, ''), ...counties(p)]).map((x) => x.toLowerCase());
@@ -116,14 +121,40 @@ const DISTRICTISH = /precinct|ward\b|trustee area|congressional|\bseat\b|\bplace
    many single-member districts. */
 const OWN_WARD = /^only ward (\d+) voters\b/i;
 const placeWard = (p: PlaceBundle): string | null => (p.label.match(/\bward (\d+)$/i) || [])[1] || null;
+/* A scope that says the whole place is inside the race's area: "which includes all of Fullerton",
+   "all of Lakewood, Golden ...", or one "all of ... counties" list that names every county the place
+   is in ("All of Imperial, Orange, Riverside and San Diego counties vote in Board of Equalization
+   District 4"). Read before DISTRICTISH, so a race named by its own district number still covers a
+   place that is wholly in it (audit, Oct 29: BOE District 4 read "Maybe on your ballot" on every
+   Orange County and San Diego ballot, though both counties are all in it). "Almost all of", "all of
+   Portland west of the river", "all of Lakewood's ..." and a county list with "part of" inside it say
+   nothing about the whole place. */
+const escRe = (s: string): string => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const NOT_WHOLE = String.raw`(?<!\b(?:almost|nearly|virtually|not)\s)`;
+const QUALIFIED = String.raw`(?!\s*['’]s\b|\s+(?:west|east|north|south|except|outside|inside|but|between|along|above|below|beyond)\b)`;
+const placeName = (p: PlaceBundle): string => p.label.replace(/\s*\(.*\)$/, '').trim();
+const countyName = (county: string): string => county.replace(/\s*\(.*\)\s*/, '').replace(/\s+County$/i, '').trim();
+function wholePlace(scope: string, p: PlaceBundle): boolean {
+  const name = placeName(p);
+  if (name.length > 2 && new RegExp(String.raw`${NOT_WHOLE}\ball of (?:the )?(?:city of )?${escRe(name)}\b${QUALIFIED}`, 'i').test(scope)) return true;
+  const counties = p.counties.map(countyName).filter((x) => x.length > 2);
+  if (!counties.length) return false;
+  for (const m of scope.matchAll(new RegExp(String.raw`${NOT_WHOLE}\ball of ([^.;:()]*?)\bcount(?:y|ies)\b`, 'gi'))) {
+    const list = m[1];
+    if (/\b(?:part|parts|most|much|half)\s+of\b/i.test(list)) continue;
+    if (counties.every((c) => new RegExp(String.raw`\b${escRe(c)}\b`, 'i').test(list))) return true;
+  }
+  return false;
+}
 function coversPlace(c: Contest, places: PlaceBundle[]): boolean {
   if (!places.length || !places.every((p) => p.order.includes(c.id))) return false;
   const scope = c.scope_plain || '';
   const ward = (scope.match(OWN_WARD) || [])[1];
   if (ward && places.every((p) => placeWard(p) === ward)) return true;
+  if (places.every((p) => wholePlace(scope, p))) return true;
   if (DISTRICTISH.test(scope)) return false;
   return places.every((p) => p.counties.some((county) => {
-    const name = county.replace(/\s*\(.*\)\s*/, '').replace(/\s+County$/i, '').trim();
+    const name = countyName(county);
     return name.length > 2 && scope.toLowerCase().includes(name.toLowerCase());
   }));
 }

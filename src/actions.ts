@@ -587,7 +587,7 @@ A.ends = () => {
   if (S.view !== 'ballot') {
     // With a ballot found, the switch shows that ballot's choice (it may have its own): turn that over.
     const off = doorBallot() ? !noEndorsements() : !doorNone();
-    S.door.chips = { papers: !off, progressive: false, conservative: false };
+    S.door.chips = { papers: !off, progressive: false, conservative: false, unions: false };
     S.door.party = null;
     if (off) S.door.fill = false;
     else if (!S.door.fillSet) S.door.fill = !(doorBallot() && S.b.setupDone); // back to its default
@@ -1029,6 +1029,14 @@ A['choose-place'] = (d) => {
   const browse = d.from === 'browse';
   if (browse) fromList();
   void openChosen(d.ids!.split('+'), !browse && S.zipChoice ? S.zipChoice.zip : '', browse ? 'list' : undefined);
+};
+/* The place question's town the guide doesn't cover ("Pine Lawn, in St. Louis County"), or its "I'm not sure"
+   when there is one: the state's races. The town is remembered as not being any place the ZIP offered
+   (S.b.away), so that ballot never offers one as the voter's city; "not sure" remembers nothing. */
+A['choose-outside'] = (d) => {
+  const zc = S.zipChoice;
+  if (!zc || !S.index) return;
+  void openChosen([], zc.zip, undefined, S.index.places[zc.placeIds[0]].state, d.away ? zc.placeIds : []);
 };
 A['choose-state'] = (d) => {
   fromList();

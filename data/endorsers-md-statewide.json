@@ -100,7 +100,8 @@
     "lean": "lean_left",
     "lean_basis": "State labor federation (AFL-CIO) that calls itself 'dedicated to represent the interests of working people at the state and local level' (https://mddclabor.org/about-us). No outside rating found; lean reflects its stated mission.",
     "geography": [
-      "MD"
+      "MD",
+      "DC"
     ],
     "guide_url": "https://mddclabor.org/endorsements-2026",
     "default_on": false,
@@ -117,7 +118,7 @@
     "geography": [
       "MD"
     ],
-    "guide_url": "https://marylandeducators.org/",
+    "guide_url": "https://mdappleballot.com/",
     "default_on": false,
     "endorses_candidates": true,
     "endorses_measures": true,

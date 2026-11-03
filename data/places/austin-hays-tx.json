@@ -1,0 +1,213 @@
+{
+  "id": "austin-hays-tx",
+  "label": "Austin (Hays County)",
+  "state": "TX",
+  "counties": [
+    "Hays"
+  ],
+  "county_fips": [
+    "48209"
+  ],
+  "county_election_office": {
+    "name": "Hays County Elections Office, 120 Stagecoach Trail, San Marcos 78666",
+    "url": "https://www.hayscountytx.gov/873/November-3-2026-General-Election",
+    "phone": "512-393-7310",
+    "hours": "Open Monday to Friday, 8 AM to 5 PM. Mail ballot questions: ballotbymail@hayscountytx.gov."
+  },
+  "sample_ballot_url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en",
+  "zips": [
+    "78737",
+    "78739"
+  ],
+  "zip_caveats": "These ZIPs reach into Travis County too, so a ZIP alone cannot tell. If your address is in Travis County, pick Austin instead. Hays County voters in Austin get Austin City Council District 8, the Austin ballot measures (Props A to J) and Austin Community College trustees. Congress after the 2025 redraw is CD-21 or CD-27, and the Texas House seat is HD-45 or HD-73; the Hays sample ballot shows yours.",
+  "contest_ids": [
+    "tx-us-senate",
+    "tx-governor",
+    "tx-lt-governor",
+    "tx-attorney-general",
+    "tx-comptroller",
+    "tx-land-commissioner",
+    "tx-agriculture-commissioner",
+    "tx-railroad-commissioner",
+    "tx-supreme-court-chief",
+    "tx-supreme-court-place-2",
+    "tx-supreme-court-place-7",
+    "tx-supreme-court-place-8",
+    "tx-cca-place-3",
+    "tx-cca-place-4",
+    "tx-cca-place-9",
+    "tx-15th-coa-chief",
+    "tx-15th-coa-place-2",
+    "tx-15th-coa-place-3",
+    "tx-us-house-21",
+    "tx-us-house-27",
+    "tx-sboe-5",
+    "tx-senate-21",
+    "tx-house-45",
+    "tx-house-73",
+    "tx-3rd-coa-chief",
+    "tx-hays-district-court-207",
+    "tx-hays-district-court-274",
+    "tx-hays-district-court-428",
+    "tx-hays-cda",
+    "tx-hays-county-judge",
+    "tx-hays-commissioner-2",
+    "tx-hays-commissioner-4",
+    "tx-hays-ccl-1",
+    "tx-hays-ccl-2",
+    "tx-hays-district-clerk",
+    "tx-hays-county-clerk",
+    "tx-hays-treasurer",
+    "tx-hays-jp-1-2",
+    "tx-austin-council-8",
+    "tx-acc-trustee-1",
+    "tx-acc-trustee-2",
+    "tx-acc-trustee-3"
+  ],
+  "measure_ids": [
+    "tx-austin-prop-a",
+    "tx-austin-prop-b",
+    "tx-austin-prop-c",
+    "tx-austin-prop-d",
+    "tx-austin-prop-e",
+    "tx-austin-prop-f",
+    "tx-austin-prop-g",
+    "tx-austin-prop-h",
+    "tx-austin-prop-i",
+    "tx-austin-prop-j"
+  ],
+  "notes": "Election Day: Tue Nov 3, 7 AM to 7 PM. Any Hays voter can use any Hays vote center. This list follows Hays County's own combined sample ballot. Not listed here, so check your sample ballot: the Hays Trinity Groundwater Conservation District director races, and the Justice of the Peace precinct 3, 4 and 5 races.",
+  "district_finders": [
+    {
+      "office_match": "U.S. Representative",
+      "label": "Find your 2026 district on the Hays County election page",
+      "url": "https://www.hayscountytx.gov/873/November-3-2026-General-Election"
+    },
+    {
+      "office_match": "State Representative",
+      "label": "Find your district",
+      "url": "https://wrm.capitol.texas.gov/home"
+    },
+    {
+      "office_match": "County Commissioner",
+      "label": "Find your Hays commissioner precinct",
+      "url": "https://www.hayscountytx.gov/771/Precinct-Maps"
+    },
+    {
+      "office_match": "Chief Justice, 15th Court of Appeals",
+      "label": "Find your precinct and Hays County ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Chief Justice, 3rd Court of Appeals",
+      "label": "Find your precinct and Hays County ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Chief Justice, Supreme Court",
+      "label": "Find your precinct and Hays County ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "County Commissioner",
+      "label": "Find your precinct and Hays County ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "District Judge",
+      "label": "Find your precinct and Hays County ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Judge, County Court at Law",
+      "label": "Find your precinct and Hays County ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Judge, Court of Criminal Appeals",
+      "label": "Find your precinct and Hays County ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Justice of the Peace",
+      "label": "Find your precinct and Hays County ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Justice, 15th Court of Appeals",
+      "label": "Find your precinct and Hays County ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Justice, Supreme Court",
+      "label": "Find your precinct and Hays County ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "State Representative",
+      "label": "Find your precinct and Hays County ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "State Senator",
+      "label": "Find your precinct and Hays County ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "U.S. Representative",
+      "label": "Find your precinct and Hays County ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Austin City Council Member",
+      "label": "Find your precinct and Hays County ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Austin Community College Trustee",
+      "label": "Find your precinct and Hays County ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    }
+  ],
+  "lookups": {
+    "early_in_person": "https://updates.electionlink.net/widgets/haystx/2026-11-03/Early%20Voting%20Dashboard.html",
+    "election_day": "https://www.hayscountytx.gov/DocumentCenter/View/5053/Vote-Centers-20261103-General-Election"
+  },
+  "by_county": [
+    {
+      "county": "Hays",
+      "zips": [
+        "78737",
+        "78739"
+      ],
+      "lookups": {
+        "early_in_person": "https://updates.electionlink.net/widgets/haystx/2026-11-03/Early%20Voting%20Dashboard.html",
+        "election_day": "https://www.hayscountytx.gov/DocumentCenter/View/5053/Vote-Centers-20261103-General-Election"
+      },
+      "source": "https://www.hayscountytx.gov/873/November-3-2026-General-Election",
+      "confidence": "verified"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Hays County combined sample ballot, Nov 3, 2026 (PDF, saved Nov 1)",
+      "url": "https://www.hayscountytx.gov/DocumentCenter/View/5305/Hays-County-Combined-Sample-Ballot-11x17"
+    },
+    {
+      "name": "Hays County: Nov 3, 2026 election",
+      "url": "https://www.hayscountytx.gov/873/November-3-2026-General-Election"
+    },
+    {
+      "name": "Census 2020 ZIP code (ZCTA) to county relationship file",
+      "url": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_county20_natl.txt"
+    }
+  ],
+  "heads_up": [
+    {
+      "text": "This page is for the part of Austin in Hays County. In Travis County? Use your address and we’ll open the right page.",
+      "applies_to": "ballot",
+      "until_address": true,
+      "source": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_county20_natl.txt"
+    }
+  ]
+}

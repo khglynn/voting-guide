@@ -76,7 +76,7 @@
   "election_day": {
     "polls_open": "7:00 AM",
     "polls_close": "7:00 PM",
-    "in_line_rule": "Georgia.gov: 'As long as you are in line by 7 p.m., you are allowed to cast your ballot.' On Election Day you must vote at your assigned precinct (look it up on My Voter Page; it may differ from where you voted early). If you show up at the wrong precinct before 5:00 PM you'll be sent to the right one. After 5:00 PM you may cast a provisional ballot there only if you sign a statement that you can't get to your own precinct in time (SB 202, O.C.G.A. 21-2-418).",
+    "in_line_rule": "In line by 7 PM? You still get to vote. On Election Day you must vote at your assigned precinct, which may not be where you voted early.",
     "vote_centers": false,
     "lookup_url": "https://mvp.sos.ga.gov/",
     "confidence": "verified"
@@ -600,6 +600,128 @@
     {
       "text": "If no candidate gets more than half the votes, the top two go to a Dec. 1 runoff.",
       "applies_to": "ballot"
+    }
+  ],
+  "dated": [
+    {
+      "path": "mail_ballot.mail_cutoff_advice",
+      "from": "2026-10-31",
+      "text": "Election officials and USPS say to mail at least 7 days before Election Day. Don't mail it now. Drop boxes at early voting sites closed with early voting on Friday, October 30. Hand your ballot to your county elections office by 7 PM on Tuesday, November 3. Call for hours: Fulton 404-612-7020, DeKalb 404-298-4020. If you decide to vote in person instead, bring the mail ballot so the poll manager can cancel it. If you never received it, you can still vote in person. Georgia.gov says you'll 'sign a document attesting that you are only voting once.' Once you've returned your absentee ballot, you've voted and can't vote in person."
+    },
+    {
+      "path": "model_plain",
+      "from": "2026-10-31",
+      "text": "Most Georgians vote in person. Early voting ended Friday, October 30, so now you vote on Election Day, Tuesday, November 3, at your assigned precinct. Mail ballot requests closed October 23, and drop boxes closed with early voting. If you have a mail ballot, hand it to your county elections office by 7 PM on November 3."
+    },
+    {
+      "path": "mail_ballot.return_options.0",
+      "from": "2026-10-31",
+      "text": "drop box: closed. Georgia's boxes sat inside early voting sites and were open only through the last day of early voting (Friday, October 30). Georgia.gov: 'Drop boxes are available inside early voting locations, during early voting hours only.' Fulton: 'Last day to return the Absentee Ballot in the Drop Box: Friday, October 30.'"
+    },
+    {
+      "path": "gotchas.1.text",
+      "from": "2026-10-31",
+      "text": "Drop boxes closed with early voting on Friday, October 30. Since 2021 Georgia's boxes sit inside early voting sites and are open only during early voting. Now the only ways to return a mail ballot are to hand it to your county elections office by 7:00 PM Nov. 3 or to mail it and hope it arrives in time. Postmarks do not count. If in doubt, vote in person at your precinct and bring the mail ballot with you to cancel it."
+    },
+    {
+      "path": "gotchas.1.short",
+      "from": "2026-10-31",
+      "text": "Drop boxes closed. Hand your ballot to the county office by 7 PM Nov 3."
+    },
+    {
+      "path": "situations.wrong_polling_place.short",
+      "from": "2026-10-31",
+      "text": "Early voting ended Oct 30; on Election Day, go to your assigned precinct."
+    },
+    {
+      "path": "situations.wrong_polling_place.answer",
+      "from": "2026-10-31",
+      "text": "Early voting ended Friday, October 30. On Election Day you must vote at your assigned precinct; before 5 PM the poll workers will send you there."
+    },
+    {
+      "path": "situations.no_mail_ballot_or_lost.steps.2",
+      "from": "2026-10-31",
+      "text": "Early voting ended Oct 30, so vote at your own precinct on Nov 3."
+    },
+    {
+      "path": "situations.mistake_on_ballot.steps.0",
+      "from": "2026-10-31",
+      "text": "Absentee: take the ballot to your precinct on Election Day, Nov 3."
+    },
+    {
+      "path": "situations.college_student.answer",
+      "from": "2026-10-31",
+      "text": "Registration closed October 5, so you vote where you're already registered. Absentee requests closed Friday, October 23, and early voting ended Friday, October 30. Already have your ballot? Drop boxes closed with early voting, so hand it to your county elections office by 7 PM Nov 3 (call for hours: Fulton 404-612-7020, DeKalb 404-298-4020). If not, vote at your precinct on Nov 3."
+    },
+    {
+      "path": "situations.college_student.steps.0",
+      "from": "2026-10-31",
+      "text": "Already have your ballot? Drop boxes closed Oct 30, so hand it to your county elections office by 7 PM Nov 3 (call for hours: Fulton 404-612-7020, DeKalb 404-298-4020)."
+    },
+    {
+      "path": "situations.college_student.steps.2",
+      "from": "2026-10-31",
+      "text": "Registered at school in Fulton? Early voting ended Oct 30, so vote at your assigned Fulton precinct on Nov 3."
+    },
+    {
+      "path": "situations.away_on_election_day.short",
+      "from": "2026-10-31",
+      "text": "Early voting has ended; if you're back before polls close Nov 3, vote at your precinct."
+    },
+    {
+      "path": "situations.away_on_election_day.answer",
+      "from": "2026-10-31",
+      "text": "Absentee requests closed Oct 23, and early voting ended Friday, Oct 30. If you can get back before the polls close on Nov 3, vote at your assigned precinct. Already have your mail ballot? It must reach your county elections office by 7 PM Nov 3. Postmarks don't count."
+    },
+    {
+      "path": "situations.away_on_election_day.steps.0",
+      "from": "2026-10-31",
+      "text": "Drop boxes closed with early voting on Oct 30."
+    },
+    {
+      "path": "situations.away_on_election_day.steps.1",
+      "from": "2026-10-31",
+      "text": "Hand your mail ballot to your county elections office by 7 PM Nov 3, or have a family member, someone in your household or your caregiver do it (call for hours: Fulton 404-612-7020, DeKalb 404-298-4020)."
+    },
+    {
+      "path": "situations.away_on_election_day.actions.0.label",
+      "from": "2026-10-31",
+      "text": "Find my polling place"
+    },
+    {
+      "path": "gotchas.4.text",
+      "from": "2026-11-03",
+      "text": "Georgia makes you win a majority. If no candidate gets more than 50 percent, the top two meet in a runoff on Tuesday, December 1, 2026 (four weeks later). This year that is unlikely in the statewide races: the Libertarian Party failed to collect the roughly 70,000 signatures it needed, so every statewide race is a straight two-candidate contest (write-ins exist for Senate and governor but rarely move the number). If a runoff does happen anywhere, the early voting window is tiny: counties must offer it no later than Monday, November 23 through Wednesday, November 25 (georgia.gov: 'abbreviated due to the Thanksgiving holiday'), and some start sooner; Fulton lists Saturday, November 21 through Wednesday, November 25. Registration for a runoff closed November 2 for federal races (U.S. Senate, U.S. House); state and local runoffs kept the October 5 deadline. If you vote by mail, you would need to apply again, by Friday, November 20 (Fulton and Gordon County calendars), unless you are 65+, disabled, or military/overseas."
+    },
+    {
+      "path": "registration.still_possible_now",
+      "from": "2026-11-03",
+      "text": "Not for November 3. The deadline was Monday, October 5, 2026. If you think you registered, confirm it now at mvp.sos.ga.gov; if your record is wrong or missing, call your county elections office before you go vote. One exception worth knowing: if a federal race (U.S. Senate or U.S. House) goes to a December 1 runoff, registration for that runoff closed Monday, November 2 (Fulton County listed 'Voter Registration Deadline (Federal races): Monday, November 2'). For a runoff in a state or local race, the October 5 deadline still applies. If you moved within the same county after October 5, you can still vote (go to your old precinct, or update your address at the registrar's office and vote in the new one). If you moved to a different Georgia county within 30 days of the election (on or after October 4), vote in your old county. If you moved counties before that and didn't re-register there by October 5, call your county registrar; you may not be eligible this time (O.C.G.A. 21-2-218)."
+    },
+    {
+      "path": "mail_ballot.postage",
+      "from": "2026-10-31",
+      "text": "Not prepaid statewide. Most Georgia counties require you to put a First-Class stamp on the return envelope; a few provide prepaid envelopes. Follow the instructions printed on your envelope. Drop boxes closed with early voting on October 30, so to skip postage now, hand your ballot to your county elections office by 7 PM Nov 3. Confidence: unverified for your county; check your envelope."
+    },
+    {
+      "path": "situations.moved_in_state.answer",
+      "from": "2026-10-31",
+      "text": "If you moved within the same county (say, within Fulton) and didn't update your registration in time, you can vote at your old polling place this time. If you moved to a different Georgia county within 30 days of the election, go back to your old county's precinct on Election Day, November 3; early voting ended October 30."
+    },
+    {
+      "path": "gotchas.2.text",
+      "from": "2026-10-31",
+      "text": "Election Day is 'only your precinct.' Early voting, when any site in your county worked, ended October 30. On November 3 you must go to your assigned precinct, which may be a different building. Look it up on My Voter Page the night before."
+    },
+    {
+      "path": "gotchas.2.short",
+      "from": "2026-10-31",
+      "text": "Early voting is over; on Election Day, vote only at your assigned precinct."
+    },
+    {
+      "path": "mail_ballot.drop_box_lookup_url",
+      "from": "2026-10-31",
+      "text": ""
     }
   ]
 }

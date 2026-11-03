@@ -48,8 +48,11 @@ export interface Evaluation {
    including "no opinion", so yes and no need not add to 100. */
 export interface SurveyRow { yes_pct: number; no_pct: number | null; n: number | null }
 
-/* A short note on a known confusion point, shown once where it applies. */
-export interface HeadsUp { text: string; applies_to: string; source?: string | null }
+/* A short note on a known confusion point, shown once where it applies. Two optional fields hold it back
+   when it isn't yours (views/ledger.ts headsUp): `until_address`, a note about which page or county you're
+   on, hides once an address lookup has placed this ballot; `zips` shows it only to a voter whose ZIP is in
+   the list, or whose ZIP we don't know. */
+export interface HeadsUp { text: string; applies_to: string; source?: string | null; until_address?: boolean; zips?: string[] }
 
 export interface Contest {
   kind: 'contest';
@@ -208,6 +211,12 @@ export interface HowTo {
     hours_note: string | null;
     vote_centers: boolean | null;
     lookup_url: string | null;
+    /* "minimum": the state's window is a floor every county offers (Florida); "varies": there is
+       no statewide window, only a common last day (Illinois). */
+    counties_vary?: 'minimum' | 'varies';
+    /* Where the window is a minimum, the last day any county may still offer early voting
+       (Florida's 2nd day before the election, s. 101.657, F.S.). A place's own window drops it. */
+    latest_end?: string | null;
   };
   election_day: {
     polls_open: string;
@@ -276,6 +285,11 @@ export interface CountyLinks { county: string; zips: string[]; lookups: Lookups;
 export interface PlaceSituation { id: string; short?: string; answer?: string; steps?: string[] | null; source: string; confidence: Confidence }
 export interface OfficeLine { label: string; phone: string; hours?: string }
 
+/* A county's own mail-ballot facts, where they differ from the state's (Oct 29): its request or replacement deadline,
+   and the ways back it takes. plan.ts uses them when every place on the ballot gives the same ones. */
+export interface PlaceMail { request_deadline?: { date: string | null; rule: string; source: string | null }; return_options?: string[]; source: string; confidence: Confidence }
+/* A county's own Election Day opening time, a plain time ("7:00 AM"), where the state's isn't one. */
+export interface PlaceElectionDay { polls_open: string; source: string; confidence: Confidence }
 /* `hours_short`: the county's early voting hours in one line ("Travis County sites are open 7 AM to 7 PM every day.") */
 export interface PlaceEarly { start: string; end: string; hours_note: string | null; hours_short?: string; lookup_url: string | null; source: string | null; confidence: string }
 
@@ -289,6 +303,15 @@ export interface PlaceBundle {
   sample_ballot_url: string | null;
   zips: string[];
   zip_caveats: string | null;
+  /* the Census county codes its voters all live in (Oct 29: the City of St. Louis is 29510); an address in
+     another county is never this place's (geo.ts outsideOf) */
+  county_fips?: string[];
+  /* a ZIP that also reaches a town the guide doesn't cover, named for the chooser ("Pine Lawn, in St. Louis
+     County"): it never opens the place by itself (app.ts lookZip, geo.ts settleAddress) */
+  zip_outside?: Record<string, string>;
+  /* a hard look for the place's own picks that came up empty: the day, and the papers and groups checked
+     (Oct 29). While it stays thin the coverage card says we looked instead of offering to (model/coverage.ts) */
+  local_picks_checked?: LocalPicksChecked;
   notes: string | null;
   county_label?: string | null;
   district_finders?: { office_match: string; label: string; url: string }[];
@@ -297,6 +320,10 @@ export interface PlaceBundle {
   early_in_person?: PlaceEarly;
   /* the county's own where-to-vote tools; plan.ts prefers them over the state's */
   lookups?: Lookups;
+  /* the county's own mail-ballot deadline and ways back, and its Election Day opening time (Oct 29); plan.ts
+     prefers them over the state's when every place on the ballot agrees */
+  mail_ballot?: PlaceMail;
+  election_day?: PlaceElectionDay;
   /* a place across county lines keeps each county's tools (Oct 28): plan.localHowto uses the voter's county's
      when it knows the county, and lists each county's, labeled, when it doesn't */
   by_county?: CountyLinks[];
@@ -344,6 +371,7 @@ export interface Coverage {
   local_with_picks: number;
   checked: string | null;
 }
+export interface LocalPicksChecked { on: string; where: string[] }
 export interface PlaceCoverage extends Coverage {
   /* the place's own races a voter decides, and how many of them have a pick from anyone */
   local_races: number;
@@ -352,7 +380,9 @@ export interface PlaceCoverage extends Coverage {
 export interface Index {
   generated: string;
   states: Record<string, { name: string; as_of: string | null; election_date: string; official_site: Src; places: string[] } & Coverage>;
-  places: Record<string, { label: string; state: string; counties: string[]; local_count: number; maps?: string[] } & PlaceCoverage>;
+  /* county_fips and zip_outside as in PlaceBundle, so the first page can use them before a bundle loads;
+     local_picks_checked beside the coverage it speaks for */
+  places: Record<string, { label: string; state: string; counties: string[]; local_count: number; maps?: string[]; county_fips?: string[]; zip_outside?: Record<string, string>; local_picks_checked?: LocalPicksChecked } & PlaceCoverage>;
   zips: Record<string, string[]>;
   /* true when data/get-involved.json was bundled (the app never asks for a file that isn't there) */
   involved?: boolean;

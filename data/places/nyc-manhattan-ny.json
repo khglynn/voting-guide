@@ -5,6 +5,9 @@
   "counties": [
     "New York"
   ],
+  "county_fips": [
+    "36061"
+  ],
   "county_election_office": {
     "name": "NYC Board of Elections, Manhattan borough office: 200 Varick Street, 10th Floor, New York, NY 10014",
     "url": "https://vote.nyc/page/contact-us",
@@ -194,6 +197,10 @@
     {
       "name": "NYC Board of Elections: elections and early voting hours",
       "url": "https://www.vote.nyc/elections"
+    },
+    {
+      "name": "U.S. Census Bureau: county codes (New York County is 36061)",
+      "url": "https://www.census.gov/library/reference/code-lists/ansi.html"
     }
   ]
 }

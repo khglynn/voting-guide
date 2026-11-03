@@ -1,0 +1,82 @@
+[
+  {
+    "id": "stlcity-prop-1",
+    "state": "MO",
+    "level": "city",
+    "jurisdiction": "City of St. Louis (not St. Louis County)",
+    "number": "Proposition 1",
+    "official_title": "Shall the City of St. Louis use the same non-partisan, top-two runoff system in special elections that is used in regular city elections by repealing Section 5 of Article IV of the Charter?",
+    "plain_summary": "Changes how the City fills a vacant seat on the Board of Aldermen. The charter says those special elections are partisan. Prop 1 removes that section, so they would use the nonpartisan system the City already uses for its regular elections: in the first round you vote for as many candidates as you like, and the top two meet in a runoff.",
+    "yes_means": "Special elections for a vacant aldermanic seat become nonpartisan and use the same approval voting, top two to a runoff, as regular City elections.",
+    "no_means": "The charter keeps its rule that a vacant aldermanic seat is filled in a partisan election, which conflicts with the rules City voters passed in 2020.",
+    "current_law": "In 2020 City voters passed Proposition D, which set up nonpartisan approval voting for mayor, Board of Aldermen president, comptroller and aldermen and said it applied to special elections too. The charter still says vacancies are filled in partisan elections. All five single-ward special elections since then used a partisan nominating process. In 2025 the City left party labels off the 8th Ward special election ballot, and the City's Democratic Central Committee sued (St. Louis Public Radio).",
+    "fiscal_impact": "No tax. City election officials say each round of a single-ward special election costs about $30,000; when only two candidates file, the first round is skipped (St. Louis Public Radio).",
+    "pass_threshold": "60% (amendment to the City charter)",
+    "referred_by": "council",
+    "confusing_wording_note": "The ballot calls it a 'non-partisan, top-two runoff system.' That is the City's approval voting: in the first round you can vote for as many candidates as you like, and the top two go on to a runoff.",
+    "supporters_case": {
+      "text": "Alderwoman Daniela Velazquez (6th Ward), who sponsored it, says it ends a conflict between the charter and Proposition D: 'What we're trying to do here is make sure that we don't have a conflict within our own laws.' Supporters say one system for every City election is less confusing for voters.",
+      "source": "https://www.stlpr.org/government-politics-issues/2026-10-12/st-louis-residents-city-fills-vacancies-board-aldermen"
+    },
+    "opponents_case": {
+      "text": "The City's Democratic Central Committee objects to nonpartisan elections in general. Its chair, Sean Fauss, says they remove 'transparency from voters,' who can't see a candidate's party on the ballot, and that expanding approval voting may conflict with a 2024 Missouri constitutional amendment banning it, though St. Louis was carved out of that ban.",
+      "source": "https://www.stlpr.org/government-politics-issues/2026-10-12/st-louis-residents-city-fills-vacancies-board-aldermen"
+    },
+    "official_text_url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf",
+    "official_guide_url": null,
+    "explainers": [
+      {
+        "source": "St. Louis Public Radio",
+        "title": "St. Louis residents may change how the city fills vacancies at the Board of Aldermen",
+        "url": "https://www.stlpr.org/government-politics-issues/2026-10-12/st-louis-residents-city-fills-vacancies-board-aldermen"
+      },
+      {
+        "source": "St. Louis Public Radio",
+        "title": "St. Louis Voter Guide: What to know about the 2026 election in Missouri and Illinois",
+        "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+      }
+    ],
+    "confidence": "sourced",
+    "short_title": "Special election rules"
+  },
+  {
+    "id": "stlcity-prop-b",
+    "state": "MO",
+    "level": "city",
+    "jurisdiction": "City of St. Louis (not St. Louis County)",
+    "number": "Proposition B",
+    "official_title": "Proposed by Initiative Petition. Shall the City of St. Louis, by Charter amendment, impose a citywide sales tax of one-half of one percent on all retail sales in the City of St. Louis for the purpose of establishing an Early Childhood Education Fund to support programs and services relating to the quality, affordability, and access to early childhood education for children aged 5 (five) years and younger, with revenues administered by a newly-established St. Louis Early Childhood Education Board of Trustees pursuant to a contract with the City of St. Louis?",
+    "plain_summary": "Adds a half-cent sales tax on retail sales in the City to start an Early Childhood Education Fund for children 5 and younger. A new board appointed by the mayor would give the money out as help with child care costs for parents or as support for early childhood providers. It reached the ballot by petition.",
+    "yes_means": "The City's sales tax goes up half a cent on the dollar (50 cents on a $100 purchase), raising about $22 million a year for early childhood education for children 5 and younger.",
+    "no_means": "No new sales tax, and no City early childhood fund or board is created.",
+    "current_law": "Families pay for child care, with state and federal subsidies for some. St. Louis Public Radio reports that infant care can cost up to $31,000 a year, that changes to state and federal subsidy programs mean the need is outstripping supply, and that a Harris-Stowe early childhood center closed this year after years of losses.",
+    "fiscal_impact": "Half a cent on each dollar of retail sales in the City, about $22 million a year (St. Louis Public Radio). Backers predict it could help about 2,000 more families. No official fiscal note was retrieved.",
+    "pass_threshold": "60% (amendment to the City charter)",
+    "referred_by": "citizen_initiative",
+    "confusing_wording_note": "It is a sales tax and a charter amendment at once, so it needs 60% yes to pass, not a simple majority.",
+    "supporters_case": {
+      "text": "Backers, including the nonprofit WEPOWER, say providers can't charge tuition high enough to pay the wages good care needs, so centers lose staff or close. 'The numbers don't number,' says WEPOWER founder Charli Cooksey. Lindsey Baker of SouthSide Early Childhood Center says 'people are literally going broke trying to pay for childcare.'",
+      "source": "https://www.stlpr.org/education/2026-10-13/proposition-b-seeks-more-money-early-childhood-education-st-louis"
+    },
+    "opponents_case": {
+      "text": "The St. Louis Post-Dispatch editorial board says vote no, calling City Prop B and County Prop S 'two misguided tax hikes.' St. Louis Public Radio notes that sales taxes are 'generally more regressive,' taking a bigger share of what lower-income families earn.",
+      "source": "https://www.stltoday.com/opinion/editorial/article_ef192b84-9b22-4f63-9137-38b9ffd44160.html"
+    },
+    "official_text_url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/upload/Nov26-All-Races-Sample-Ballot.pdf",
+    "official_guide_url": null,
+    "explainers": [
+      {
+        "source": "St. Louis Public Radio",
+        "title": "Proposition B seeks more money for early childhood education in St. Louis",
+        "url": "https://www.stlpr.org/education/2026-10-13/proposition-b-seeks-more-money-early-childhood-education-st-louis"
+      },
+      {
+        "source": "St. Louis Public Radio",
+        "title": "St. Louis Voter Guide: What to know about the 2026 election in Missouri and Illinois",
+        "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+      }
+    ],
+    "confidence": "sourced",
+    "short_title": "Early childhood sales tax"
+  }
+]

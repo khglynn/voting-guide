@@ -36,6 +36,12 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('may apply: Denver Public Schools measures cover Denver', dn.items.filter((x) => x.kind === 'measure' && /Denver Public Schools/.test(x.jurisdiction)).every((x) => !dn.mayApply.has(x.id)));
     const ch = open('IL', ['chicago-il']);
     check('may apply: Chicago Public Schools covers every Chicago voter; the mental health areas may apply', ch.items.filter((x) => x.kind === 'measure' && /Chicago Public Schools/.test(x.jurisdiction)).every((x) => !ch.mayApply.has(x.id)) && ch.items.filter((x) => x.kind === 'measure' && /Mental Health/.test(x.jurisdiction)).every((x) => ch.mayApply.has(x.id)));
+    // A city question for one ward or a few precincts ("City of Chicago, 4th Ward only") may apply; one for every Chicago voter doesn't.
+    const wards = ch.items.filter((x) => x.kind === 'measure' && x.level === 'city' && /\b(ward|precinct)/i.test(x.jurisdiction));
+    const whole = ch.items.filter((x) => x.kind === 'measure' && x.level === 'city' && /every Chicago voter/.test(x.jurisdiction));
+    check('may apply: Chicago\'s ward and precinct questions may apply; its citywide ones are on every ballot', wards.length >= 7 && wards.every((x) => ch.mayApply.has(x.id)) && whole.length >= 3 && whole.every((x) => !ch.mayApply.has(x.id)), [...wards.filter((x) => !ch.mayApply.has(x.id)), ...whole.filter((x) => ch.mayApply.has(x.id))].map((x) => x.id).join(', '));
+    // A small city's own question inside a county-wide place: Goodlettsville's sales tax on a Nashville ballot.
+    check('may apply: Goodlettsville\'s sales tax (city voters only) may apply on a Nashville ballot', open('TN', ['nashville-tn']).mayApply.has('goodlettsville-sales-tax'));
     // Codex r3: restrictive notes win over a place-name match.
     const au = open('CO', ['aurora-co']);
     check('may apply: Aurora\'s 17th Judicial District measure (Adams County only) may apply', au.mayApply.has('adams-broomfield-da-7e'));
@@ -45,6 +51,10 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('may apply: ACC\'s Pflugerville measure (area not already in ACC) may apply', pf.mayApply.has('tx-acc-prop-a-pflugerville'));
     const lk = open('CO', ['lakewood-co']);
     check('may apply: Jeffco schools cover Lakewood', lk.items.filter((x) => x.kind === 'measure' && /Jeffco/.test(x.jurisdiction)).every((x) => !lk.mayApply.has(x.id)));
+    // Codex, Oct 29: the City's county is "St. Louis City", so a scope that says only "City of St. Louis" left
+    // MO-1 and the three Eastern District judges as maybes. Only Senate District 4 splits the City.
+    const stl = open('MO', ['st-louis-city-mo']);
+    check('may apply: on a City of St. Louis ballot only Senate District 4 may apply', [...stl.mayApply].join() === 'mo-sd-4', [...stl.mayApply].join(', '));
   }
 
   /* ---------- one source, one endorsement state per row (Orlando and LA walks, Oct 20) ----------
@@ -262,7 +272,47 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('may apply: BOE District 3 is still not every Californian\'s race', !la.byId.get('ca-boe-3').every);
     const ca = open('CA', []);
     check('may apply: a statewide-only California ballot still asks which BOE district', ca.groups.some((g) => g.members.includes('ca-boe-3') && g.members.length === 4));
-    check('may apply: other places\' BOE races are unchanged', ['fullerton-ca', 'san-diego-ca'].every((p) => open('CA', [p]).mayApply.has('ca-boe-4')) && !open('CA', ['fullerton-ca']).items.some((x) => x.id === 'ca-boe-3'));
+    check('may apply: Fullerton never gets LA\'s BOE race', !open('CA', ['fullerton-ca']).items.some((x) => x.id === 'ca-boe-3'));
+  }
+
+  /* ---------- a scope that says the whole place is in (audit, Oct 29) ---------- */
+  // BOE District 4 read "Maybe on your ballot" on every Orange County and San Diego ballot: its scope
+  // named "District 4", which reads as part of a place. A scope that says all of the place, or all of
+  // every county it's in, is in the race's area wins over that; "almost all of", "all of X west of"
+  // and a county list with "part of" in it don't.
+  {
+    const sure = [['CA', 'dana-point-ca', 'ca-boe-4'], ['CA', 'fullerton-ca', 'ca-boe-4'], ['CA', 'san-diego-ca', 'ca-boe-4'], ['CA', 'san-francisco-ca', 'ca-boe-2'],
+      ['CA', 'fullerton-ca', 'oc-supervisor-4'], ['CO', 'lakewood-co', 'co-us-house-7'], ['CO', 'lakewood-co', 'co-sboe-7'], ['CO', 'englewood-co', 'co-hd-3'],
+      ['NY', 'callicoon-ny', 'ny-us-house-19'], ['NY', 'callicoon-ny', 'ny-sd-51'], ['NY', 'nyc-staten-island-ny', 'ny-us-house-11'], ['TX', 'san-marcos-tx', 'tx-senate-21']];
+    const off = sure.filter(([s, p, id]) => { const b = open(s, [p]); return !b.items.some((x) => x.id === id) || b.mayApply.has(id) || b.groupOf[id]; });
+    check('may apply: a race whose scope says all of the place (or all of its county) is a sure thing there', off.length === 0, off.map((x) => x.join(' ')).join(', '));
+    const maybe = [['CO', 'aurora-co', 'co-us-house-6'], ['CO', 'englewood-co', 'co-us-house-6'], ['TX', 'austin-tx', 'tx-senate-21'], ['GA', 'atlanta-ga', 'fulton-commission-4-special'], ['NY', 'callicoon-ny', 'ny-ad-100'], ['FL', 'tallahassee-fl', 'fl-tallahassee-mayor']];
+    const on = maybe.filter(([s, p, id]) => !open(s, [p]).mayApply.has(id));
+    check('may apply: a scope that names part of the place, or another place\'s "all of", stays a maybe', on.length === 0, on.map((x) => x.join(' ')).join(', '));
+    const dp = open('CA', ['dana-point-ca']);
+    check('may apply: BOE District 4 is on a Dana Point ballot and never every Californian\'s race', dp.items.some((x) => x.id === 'ca-boe-4') && !dp.byId.get('ca-boe-4').every && !open('CA', ['los-angeles-ca']).items.some((x) => x.id === 'ca-boe-4'));
+    // The rule itself, on scopes no place has yet (a made-up race on Lakewood's ballot).
+    const lk = read('place-lakewood-co.json');
+    const sb = read('state-CO.json');
+    const fake = (scope) => {
+      const c = { ...lk.items.find((x) => x.id === 'co-us-house-7'), id: 'zz-test', office: 'Zz Test Office', scope_plain: scope };
+      const b = bl.buildBallot(sb, [{ ...lk, items: [...lk.items, c], order: [...lk.order, 'zz-test'] }]);
+      return !b.mayApply.has('zz-test');
+    };
+    const cases = [['Voters in District 9, which includes all of Lakewood.', true], ['Almost all of Lakewood votes in District 9.', false], ['All of Lakewood west of Wadsworth.', false],
+      ['All of Lakewood\'s south side, in District 9.', false], ['All of Jefferson and Adams counties vote in District 9.', true], ['All of Adams and part of Jefferson counties, District 9.', false],
+      ['Voters in District 9: all of Golden and Arvada.', false], ['Not all of Lakewood is in District 9.', false]];
+    const wrong = cases.filter(([s, want]) => fake(s) !== want);
+    check('may apply: the whole-place rule reads "all of" and nothing looser', wrong.length === 0, wrong.map((x) => x[0]).join(' | '));
+    // Dana Point's precinct 41818 votes in CD-49 and SD-38 (the county's precinct maps): both are questions there,
+    // and an address answers them.
+    const dpb = open('CA', ['dana-point-ca']);
+    const q = (a, c) => dpb.groups.some((g) => g.members.includes(a) && g.members.includes(c) && g.members.length === 2);
+    check('Dana Point: U.S. House (47 or 49) and State Senate (36 or 38) are district questions', q('ca-us-house-47', 'ca-us-house-49') && q('ca-state-senate-36', 'ca-state-senate-38'));
+    const dset = mods.address.setFromAddress(dpb, S.b, { cd: 49, upper: 38, lower: 74 });
+    const gk = (id) => dpb.groupOf[id];
+    check('Dana Point: an address in precinct 41818 puts CD-49 and SD-38 on the ballot', S.b.districts[gk('ca-us-house-49')] === 'ca-us-house-49' && S.b.districts[gk('ca-state-senate-38')] === 'ca-state-senate-38', dset.join(' | '));
+    check('Dana Point: CD-47\'s scope no longer says all of Dana Point', /^Almost all of Dana Point/.test(dpb.byId.get('ca-us-house-47').scope_plain) && /precinct 41818/.test(dpb.byId.get('ca-us-house-49').scope_plain));
   }
 
   /* ---------- the seat rule ---------- */
@@ -292,6 +342,69 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('lens: turning it off again returns to the defaults (null, short link)', S.b.sources === null);
     lens.toggleChip(b, 'papers');
     check('lens: turning Papers off leaves an explicit empty list', Array.isArray(S.b.sources) && S.b.sources.length === 0);
+    // Unions (Nov 2): every labor source, by kind and whatever its lean, police unions too.
+    const la = open('CA', ['los-angeles-ca']);
+    const unions = lens.chipMembers(la, 'unions');
+    check('lens: Unions are every union on the ballot, the police and deputies\' unions too', unions.length > 0 && unions.every((e) => e.type === 'labor') && unions.length === la.endorsers.filter((e) => e.type === 'labor').length && ['lappl', 'alads', 'la-fed'].every((id) => unions.some((e) => e.id === id)), unions.map((e) => e.id).join());
+    check('lens: Unions start off, and the chip shows on Los Angeles\'s ballot', lens.chipState(la, 'unions') === 'off' && /data-k="unions"[^>]*>.*Unions<\/button>/.test(views.lens.chipsHTML()));
+    lens.toggleChip(la, 'unions');
+    check('lens: one tap on Unions turns every union on beside the papers', unions.every((e) => S.b.sources.includes(e.id)) && lens.chipState(la, 'papers') === 'on' && views.lens.lensSummary() === 'Newspapers and guides, unions', views.lens.lensSummary());
+    lens.toggleChip(la, 'unions');
+    check('lens: and off again, back to the defaults', S.b.sources === null);
+    // One chip per source (Nov 3, after two reviews of #102 found shared labor councils misbehaving): a labor
+    // council rated left by its mission is in Unions only, and the sources sheet still lists it under its lean.
+    check('lens: the LA Fed, CTA and the California Labor Federation are in Unions, not Progressive', ['la-fed', 'cta', 'ca-labor-fed'].every((id) => unions.some((e) => e.id === id) && !lens.chipMembers(la, 'progressive').some((e) => e.id === id)) && ['left', 'lean_left'].includes(la.eById.get('la-fed').lean));
+    lens.toggleChip(la, 'progressive');
+    check('lens: Progressive alone turns on no union, and Unions stays off', !unions.some((e) => S.b.sources.includes(e.id)) && lens.chipState(la, 'unions') === 'off' && views.lens.lensSummary() === 'Newspapers and guides, progressive groups', views.lens.lensSummary());
+    S.b.sources = [...S.b.sources, 'la-fed'];
+    check('lens: a labor council on by hand reads some unions', views.lens.lensSummary() === 'Newspapers and guides, progressive groups, some unions', views.lens.lensSummary());
+    // The review's case: San Diego, whose unions with picks include labor councils rated left by their mission
+    // (until the west unions came in, Nov 3, they were all such councils; the new ones are Not rated).
+    const sd = open('CA', ['san-diego-ca']);
+    const sdUnions = lens.withPicks(sd, lens.chipMembers(sd, 'unions'));
+    check('lens: San Diego has unions with picks, labor councils rated left by their mission among them', sdUnions.some((e) => ['left', 'lean_left'].includes(e.lean)) && lens.chipState(sd, 'progressive') !== 'empty', sdUnions.map((e) => e.id).join());
+    lens.toggleChip(sd, 'progressive');
+    check('lens: San Diego, Progressive on leaves Unions off', lens.chipState(sd, 'progressive') === 'on' && lens.chipState(sd, 'unions') === 'off' && /data-k="unions" aria-pressed="false"/.test(views.lens.chipsHTML()));
+    lens.toggleChip(sd, 'progressive');
+    check('lens: San Diego, Progressive on then off ends on the defaults', S.b.sources === null);
+    lens.toggleChip(sd, 'progressive');
+    lens.toggleChip(sd, 'unions');
+    lens.toggleChip(sd, 'unions');
+    check('lens: San Diego, Unions turns off while Progressive is on, and Progressive stays wholly on', lens.chipState(sd, 'unions') === 'off' && lens.chipState(sd, 'progressive') === 'on' && !sdUnions.some((e) => S.b.sources.includes(e.id)) && views.lens.lensSummary() === 'Newspapers and guides, progressive groups', views.lens.lensSummary());
+    // Tallahassee: its only left-rated groups with picks are unions, so Progressive steps aside and the sheet says why.
+    const tl = open('FL', ['tallahassee-fl']);
+    const tlSheet = views.lens.sourcesSheetHTML();
+    check('lens: Tallahassee, whose left-rated groups with picks are all unions, has them under Unions, and the sheet says "Apart from unions, no progressive groups ..."', lens.chipState(tl, 'progressive') === 'empty' && lens.chipState(tl, 'unions') !== 'empty' && tlSheet.includes('Apart from unions, no progressive groups we checked made endorsements on this ballot.') && !tlSheet.includes('Apart from unions, no conservative') && !/data-k="progressive"/.test(views.lens.chipsHTML()));
+    // Every ballot the guide can open, each ZIP's places and each state's: no source is in two chips, and each
+    // tap on a chip turns that chip wholly on or off and leaves every other chip as it was. All on in order, all
+    // off in the other order, then the chips that started on, on again: each chip ends as it started.
+    const sets = [...new Set(Object.values(INDEX.zips).map((ids) => ids.join('+')))].filter(Boolean).map((k) => k.split('+'));
+    const ballots = [...sets.map((ids) => [INDEX.places[ids[0]].state, ids]), ...Object.keys(INDEX.states).map((s) => [s, []])];
+    const tapsWrong = [];
+    for (const [s, ids] of ballots) {
+      const bb = open(s, ids);
+      const where = ids.join('+') || s;
+      const twice = bb.endorsers.filter((e) => lens.CHIPS.filter((c) => lens.chipMembers(bb, c.key).includes(e)).length > 1);
+      if (twice.length) tapsWrong.push(`${where}: ${twice.map((e) => e.id).join()} in two chips`);
+      const live = lens.CHIPS.map((c) => c.key).filter((k) => lens.chipState(bb, k) !== 'empty');
+      const looks = () => Object.fromEntries(lens.CHIPS.map((c) => [c.key, lens.chipState(bb, c.key)]));
+      const tap = (k) => {
+        const before = looks();
+        const on = lens.toggleChip(bb, k);
+        const after = looks();
+        const own = on ? after[k] === 'on' : ['off', 'empty'].includes(after[k]);
+        const moved = lens.CHIPS.map((c) => c.key).filter((o) => o !== k && before[o] !== after[o]);
+        if (!own || moved.length) tapsWrong.push(`${where}: ${k} ${on ? 'on' : 'off'} left it ${after[k]}${moved.length ? `, moved ${moved.join()}` : ''}`);
+      };
+      const start = looks();
+      for (const k of live) if (lens.chipState(bb, k) !== 'on') tap(k);
+      for (const k of [...live].reverse()) tap(k);
+      for (const k of live) if (start[k] === 'on') tap(k);
+      const end = looks();
+      const changed = live.filter((k) => start[k] !== 'some' && (start[k] === 'on') !== (end[k] === 'on'));
+      if (changed.length) tapsWrong.push(`${where}: ${changed.map((k) => `${k} started ${start[k]}, ended ${end[k]}`).join()}`);
+    }
+    check(`lens: on every ballot the guide can open (${ballots.length}), no source is in two chips and a tap moves only its own chip`, ballots.length > 60 && tapsWrong.length === 0, tapsWrong.slice(0, 8).join(' | '));
     const parties = lens.partiesOnBallot(b).map((p) => p.party);
     check('lens: Colorado parties include Democratic, Republican, Working Families', ['Democratic', 'Republican', 'Working Families'].every((p) => parties.includes(p)), parties.join(', '));
     const jd = b.eById.get('jeffco-democrats');
@@ -908,6 +1021,79 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('address: a Maryland "Ward 2" never picks DC Ward 2', geo.placeFromGeo(INDEX.places, dc, r('MD', null, 2)) === null);
   }
 
+  /* ---------- the City of St. Louis and St. Louis County (review of #46, Oct 29) ----------
+     The Census names both "St. Louis"; only the county code tells them apart (29510 the City, 29189 the
+     County). 63120 is the City's and Pine Lawn's (County), and eight more ZIPs are mostly County with a few
+     City blocks. No County address may open the City's ballot, whatever its ZIP. Made-up addresses only. */
+  {
+    const CITY = 'st-louis-city-mo';
+    const r = (place, countyId, zip) => ({ matched: '', state: 'MO', county: 'St. Louis', countyId, countyName: countyId === '29510' ? 'the City of St. Louis' : countyId ? 'St. Louis County' : null, place, cd: null, upper: null, lower: null, zip });
+    const go = (x) => geo.settleAddress(INDEX, x);
+    const city = INDEX.places[CITY];
+    check('St. Louis: the City carries its county code and marks 63120 as shared with Pine Lawn', city.county_fips.join() === '29510' && /Pine Lawn/.test(city.zip_outside['63120']), JSON.stringify([city.county_fips, city.zip_outside]));
+    check('St. Louis: 63120 alone is never sure, so the first page asks', geo.zipPlaces(INDEX, '63120').sure === false && geo.zipPlaces(INDEX, '63120').ids.join() === CITY);
+    check('St. Louis: 63110 is all City, so it opens', geo.zipPlaces(INDEX, '63110').sure === true);
+    const pine = go(r('Pine Lawn', '29189', '63120'));
+    check('St. Louis: a Pine Lawn address in 63120 gets Missouri’s statewide races, never the City', pine.kind === 'open' && pine.ids.length === 0 && pine.zip === '63120', JSON.stringify(pine));
+    const uninc = go(r(null, '29189', '63120'));
+    check('St. Louis: a County address in 63120 with no town named does too', uninc.kind === 'open' && uninc.ids.length === 0, JSON.stringify(uninc));
+    const nocode = go(r('Pine Lawn', null, '63120'));
+    check('St. Louis: with no county code, 63120 asks rather than opening the City', nocode.kind === 'choose' && nocode.ids.join() === CITY, JSON.stringify(nocode));
+    for (const zip of ['63120', '63110', '63143', '63117', '63130', '63136', '63137', '63133', '63119', '63123']) {
+      const c = go(r('St. Louis', '29510', zip));
+      check(`St. Louis: a City address in ${zip} opens the City`, c.kind === 'open' && c.ids.join() === CITY, JSON.stringify(c));
+    }
+    // The eight edge ZIPs, with the County towns in them and unincorporated County: never the City.
+    const edge = { 63143: 'Maplewood', 63117: 'Richmond Heights', 63130: 'University City', 63136: 'Jennings', 63137: 'Bellefontaine Neighbors', 63133: 'Pagedale', 63119: 'Webster Groves', 63123: null };
+    for (const [zip, town] of Object.entries(edge)) {
+      for (const place of [town, 'St. Louis', null]) {
+        const c = go(r(place, '29189', zip));
+        check(`St. Louis: a County address in ${zip}${place ? ` (${place})` : ''} never opens the City`, c.kind !== 'none' && !(c.ids || []).includes(CITY), JSON.stringify(c));
+      }
+    }
+    check('St. Louis: a County address in 63119 still opens Webster Groves', go(r('Webster Groves', '29189', '63119')).ids?.join() === 'webster-groves-mo');
+    check('St. Louis: whichPlace never names a place the county code rules out', geo.whichPlace(INDEX.places, [CITY], r('St. Louis', '29189', '63120')) === null && geo.whichPlace(INDEX.places, [CITY], r('St. Louis', '29510', '63120')) === CITY);
+    check('St. Louis: no county code rules nothing out', !geo.outsideOf(city, r('St. Louis', null, '63120')) && geo.outsideOf(city, r('St. Louis', '29189', '63120')) && !geo.outsideOf({ state: 'MO', label: 'x' }, r(null, '29189', '63120')));
+    check('St. Louis: the City’s name reads "the City of St. Louis"; Baltimore City keeps its own', geo.placeName(city) === 'the City of St. Louis' && geo.placeName(INDEX.places['baltimore-md']) === 'Baltimore City' && geo.placeName(INDEX.places['webster-groves-mo']) === 'Webster Groves');
+    const layer = (GEOID, NAME) => geo.parseCensus({ result: { addressMatches: [{ matchedAddress: 'TEST, ST LOUIS, MO, 63120', geographies: {
+      States: [{ STATE: '29' }], Counties: [{ GEOID, STATE: '29', COUNTY: GEOID.slice(2), NAME, BASENAME: 'St. Louis' }] } }] } })[0];
+    const a = layer('29510', 'St. Louis city'), b = layer('29189', 'St. Louis County');
+    check('St. Louis: parseCensus keeps the county code and its full name', a.countyId === '29510' && a.countyName === 'the City of St. Louis' && b.countyId === '29189' && b.countyName === 'St. Louis County' && a.county === b.county, JSON.stringify([a, b]));
+    // Every place with county codes: each covers the counties it lists, so a place's own address never reads outside it.
+    for (const [id, p] of Object.entries(INDEX.places)) if (p.county_fips) check(`St. Louis: ${id}’s own Census county opens it`, geo.whichPlace(INDEX.places, [id], { state: p.state, place: p.label.replace(/\s*\(.*\)$/, ''), county: null, countyId: p.county_fips[0], cd: null, upper: null, lower: null }) === id, JSON.stringify(p.county_fips));
+    // An address on a ballot already open (app.ts useMatch, through ballotFor): null stays, `to` [] is the state's races.
+    const on = (here, x) => JSON.stringify(geo.ballotFor(INDEX, here, x));
+    const moves = (here, x, want) => on(here, x) === JSON.stringify(want);
+    check('St. Louis: on the City’s ballot, a Pine Lawn address moves to Missouri’s statewide races', moves([CITY], r('Pine Lawn', '29189', '63120'), { to: [], out: true }), on([CITY], r('Pine Lawn', '29189', '63120')));
+    check('St. Louis: on the City’s ballot, a County address in an edge ZIP moves too', moves([CITY], r('University City', '29189', '63130'), { to: [], out: true }), on([CITY], r('University City', '29189', '63130')));
+    check('St. Louis: on the City’s ballot, a City address stays', on([CITY], r('St. Louis', '29510', '63120')) === 'null');
+    check('St. Louis: on Webster Groves’s ballot, a City address in 63119 moves to the City', moves(['webster-groves-mo'], r('St. Louis', '29510', '63119'), { to: [CITY], out: true }), on(['webster-groves-mo'], r('St. Louis', '29510', '63119')));
+    check('St. Louis: on Missouri’s statewide races, a City address opens the City', moves([], r('St. Louis', '29510', '63120'), { to: [CITY], out: false }), on([], r('St. Louis', '29510', '63120')));
+    check('St. Louis: on Missouri’s statewide races, a County address stays there', on([], r('Pine Lawn', '29189', '63120')) === 'null' && on([], r('St. Louis', '29189', '63143')) === 'null' && on([], r(null, '29189', '63123')) === 'null');
+  }
+
+  /* ---------- an address on a ballot already open, elsewhere (review of #46, Oct 29) ---------- */
+  {
+    const at = (state, place, countyId) => ({ matched: '', state, county: null, countyId, countyName: null, place, cd: null, upper: null, lower: null, zip: null });
+    const on = (here, x) => JSON.stringify(geo.ballotFor(INDEX, here, x));
+    check('address on a ballot: the state’s races never open a place without county codes (Portland reaches past Multnomah)', on([], at('OR', 'Portland', '41067')) === 'null' && on([], at('TX', 'Round Rock', '48453')) === 'null', on([], at('OR', 'Portland', '41067')));
+    // Nov 1: Austin has county codes now, so the state's races open the Austin page of the address's own county.
+    check('address on a ballot: Austin on the state’s races opens its own county’s page (Travis, Williamson, Hays)', on([], at('TX', 'Austin', '48453')) === JSON.stringify({ to: ['austin-tx'], out: false }) && on([], at('TX', 'Austin', '48491')) === JSON.stringify({ to: ['austin-williamson-tx'], out: false }) && on([], at('TX', 'Austin', '48209')) === JSON.stringify({ to: ['austin-hays-tx'], out: false }), on([], at('TX', 'Austin', '48491')));
+    check('address on a ballot: on Travis’s Austin page, a Williamson or Hays address moves to its own county’s page, a Travis address stays', on(['austin-tx'], at('TX', 'Austin', '48491')) === JSON.stringify({ to: ['austin-williamson-tx'], out: true }) && on(['austin-tx'], at('TX', 'Austin', '48209')) === JSON.stringify({ to: ['austin-hays-tx'], out: true }) && on(['austin-tx'], at('TX', 'Austin', '48453')) === 'null', on(['austin-tx'], at('TX', 'Austin', '48491')));
+    check('address on a ballot: Aurora and Denver narrow to Aurora', on(['aurora-co', 'denver-co'], at('CO', 'Aurora', '08005')) === JSON.stringify({ to: ['aurora-co'], out: false }), on(['aurora-co', 'denver-co'], at('CO', 'Aurora', '08005')));
+    check('address on a ballot: Denver’s, with an Aurora address in Arapahoe County, moves to Aurora', on(['denver-co'], at('CO', 'Aurora', '08005')) === JSON.stringify({ to: ['aurora-co'], out: true }), on(['denver-co'], at('CO', 'Aurora', '08005')));
+    check('address on a ballot: one place, its own address, stays (no county code rules nothing out)', on(['round-rock-tx'], at('TX', 'Round Rock', '48453')) === 'null' && on(['denver-co'], at('CO', 'Denver', '08031')) === 'null');
+    // The review of #80: the split card ("90810 is split between Long Beach, Los Angeles and Carson") tells a voter
+    // on the state's races to use their address, and promises their city's ballot. Every place on such a ZIP keeps it.
+    check('address on a ballot: 90810’s statewide races open Los Angeles for a Los Angeles address', on([], at('CA', 'Los Angeles', '06037')) === JSON.stringify({ to: ['los-angeles-ca'], out: false }), on([], at('CA', 'Los Angeles', '06037')));
+    check('address on a ballot: and Long Beach for a Long Beach address; a Carson address stays', on([], at('CA', 'Long Beach', '06037')) === JSON.stringify({ to: ['long-beach-ca'], out: false }) && on([], at('CA', 'Carson', '06037')) === 'null');
+    const split = Object.entries(INDEX.zips).filter(([z, ids]) => ids.some((id) => (INDEX.places[id]?.zip_outside || {})[z]));
+    for (const [z, ids] of split) for (const id of ids) {
+      const p = INDEX.places[id];
+      check(`address on a ballot: the split card for ${z} keeps its promise for ${id}`, !!p.county_fips?.length && on([], at(p.state, p.label.replace(/\s*\(.*\)$/, ''), p.county_fips[0])) === JSON.stringify({ to: [id], out: false }), JSON.stringify(p.county_fips || null));
+    }
+  }
+
   /* ---------- the first page (flow, Oct 20): an address before any ZIP, step 2, the city count ---------- */
   {
     const r = (state, place, extra = {}) => ({ matched: '', state, county: null, place, cd: null, upper: null, lower: null, zip: null, ...extra });
@@ -948,7 +1134,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const before = st.encodeShare(au, b);
     b.setupDone = true;
     check('step 2: finishing it never changes the save link', st.encodeShare(au, b) === before);
-    check('first page: the city count counts DC\'s wards and New York City\'s boroughs once', views.mast.cityCount(INDEX) === Object.keys(INDEX.places).length - (Object.keys(INDEX.places).filter((id) => id.startsWith('dc-ward-')).length - 1) - (Object.keys(INDEX.places).filter((id) => id.startsWith('nyc-')).length - 1), String(views.mast.cityCount(INDEX)));
+    check('first page: the city count counts DC\'s wards, New York City\'s boroughs and Austin\'s county pages once', views.mast.cityCount(INDEX) === Object.keys(INDEX.places).length - (Object.keys(INDEX.places).filter((id) => id.startsWith('dc-ward-')).length - 1) - (Object.keys(INDEX.places).filter((id) => id.startsWith('nyc-')).length - 1) - Object.keys(INDEX.places).filter((id) => /^austin-(williamson|hays)-tx$/.test(id)).length, String(views.mast.cityCount(INDEX)));
     check('step 2: the place line reads like the mock-up', views.setup.placeLine(au) === 'Austin, Texas' && views.setup.placeLine(open('DC', ['dc-ward-1'])) === 'Ward 1, Washington, DC' && views.setup.placeLine(open('NY', ['nyc-brooklyn-ny'])) === 'Brooklyn, New York' && views.setup.placeLine(open('WA', [])) === 'Washington');
 
     // Round 3 (Oct 20): the fill switch's words, the first page before a ZIP, and the parties it offers.
@@ -968,10 +1154,10 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const door = views.setup.pickControlsHTML();
     check('first page before a ZIP: the chips from memory, no counts, the fill switch says what it does', /data-k="papers" aria-pressed="true"/.test(door) && /data-k="progressive" aria-pressed="false"/.test(door) && !/su-src|data-s="sources"/.test(door)
       && door.includes('Fill in my ballot with their picks') && door.includes('Fills the races where they agree. Races where picks split stay open.') && door.includes('Hide races I’ve decided'));
-    S.door.chips = { papers: false, progressive: false, conservative: false };
+    S.door.chips = { papers: false, progressive: false, conservative: false, unions: false };
     const doorNone = views.setup.pickControlsHTML();
     check('first page before a ZIP: every chip off is "Show endorsements" off, with no chips and no fill switch', lens.doorNone() && /data-act="ends" data-fk="ends"/.test(doorNone) && /role="switch" aria-checked="false" data-act="ends"/.test(doorNone) && !/data-act="chip"/.test(doorNone) && !/setup-fill/.test(doorNone));
-    S.door.chips = { papers: true, progressive: false, conservative: false };
+    S.door.chips = { papers: true, progressive: false, conservative: false, unions: false };
     S.ui.open.add('su-party');
     const listed = [...views.setup.pickControlsHTML().matchAll(/data-act="party-set" data-p="([^"]+)"/g)].map((m) => m[1]);
     S.ui.open.delete('su-party');
@@ -1172,6 +1358,36 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('go check: "Register now" before the deadline, "Register for next time" after', plan.registerAction(txr, '2026-10-01').label === 'Register now' && plan.registerAction(txr, '2026-10-20').label === 'Register for next time' && plan.registerAction(txr, '2026-10-01').url === 'https://vote.gov/register/texas');
     const { register_url, ...noUrl } = txr.registration;
     check('go check: no button without a register link', plan.registerAction({ ...txr, registration: noUrl }, '2026-10-01') === null);
+    // California after its online deadline (audit, Oct 29): same-day registration is in person, so the button opens
+    // where you can do it (the county's vote centers on an Orange County ballot), and the line says so.
+    const dpH = plan.localHowto(read('state-CA.json').howto, [read('place-dana-point-ca.json')], null, '2026-10-29');
+    const ra = plan.registerAction(dpH, '2026-10-29');
+    check('go check: in person is the only way left, so the button finds where to register and vote', ra && ra.label === 'Find where to register and vote' && ra.url === 'https://ocvote.gov/elections/vote-center-locations', JSON.stringify(ra));
+    check('go check: and the line says you can still register in person and vote', plan.registrationAlert(dpH, '2026-10-29') === 'Not registered? You can still register in person and vote through Tue, Nov 3.' && plan.registrationAlert(dpH, '2026-11-03') === 'Not registered? You can still register in person and vote today.', plan.registrationAlert(dpH, '2026-10-29'));
+    check('go check: before the online deadline it is still "Register now"', plan.registerAction(dpH, '2026-10-15').label === 'Register now');
+  }
+
+  /* ---------- a county's own mail-ballot facts and opening time (audit, Oct 29) ---------- */
+  {
+    const moH = read('state-MO.json').howto;
+    const city = plan.localHowto(moH, [read('place-st-louis-city-mo.json')], null, '2026-10-29');
+    const wg = plan.localHowto(moH, [read('place-webster-groves-mo.json')], null, '2026-10-29');
+    check('place mail: the City of St. Louis lists only its own ways back, never the County office', city.mail_ballot.return_options.length > 0 && city.mail_ballot.return_options.every((o) => !/Northwest Plaza|St\. Ann/.test(o)) && city.mail_ballot.return_options.some((o) => /300 N\. Tucker/.test(o)));
+    check('place mail: a County ballot keeps the state\'s list', JSON.stringify(wg.mail_ballot.return_options) === JSON.stringify(moH.mail_ballot.return_options));
+    check('place mail: the City\'s request line is its own, the deadline unchanged', city.mail_ballot.request_deadline.date === moH.mail_ballot.request_deadline.date && /City Election Board/.test(city.mail_ballot.request_deadline.rule));
+    const caH = read('state-CA.json').howto;
+    const dp = plan.localHowto(caH, [read('place-dana-point-ca.json')], null, '2026-10-29');
+    const la = plan.localHowto(caH, [read('place-los-angeles-ca.json')], null, '2026-10-29');
+    check('place mail: Orange County\'s replacement deadline cites the county, LA\'s still LA\'s', /ocvote\.gov/.test(dp.mail_ballot.request_deadline.source) && /Orange County/.test(dp.mail_ballot.request_deadline.rule) && la.mail_ballot.request_deadline.source === caH.mail_ballot.request_deadline.source);
+    check('place early: Orange County\'s in-person voting starts Oct 24, the state\'s Oct 5 stays elsewhere', dp.early_in_person.start === '2026-10-24' && la.early_in_person.start === caH.early_in_person.start);
+    const tnH = read('state-TN.json').howto;
+    const nash = plan.localHowto(tnH, [read('place-nashville-tn.json')], null, '2026-10-30');
+    const col = plan.localHowto(tnH, [read('place-columbia-tn.json')], null, '2026-10-30');
+    const sub = (h) => plan.nextStep(h, '2026-10-30', false, null).sub.join(' ');
+    check('place polls: Nashville says polls are open 7 AM to 7 PM; Columbia, whose county hasn\'t posted, only the close', /Polls are open 7 AM to 7 PM\./.test(sub(nash)) && /Polls close at 7 PM\./.test(sub(col)) && !/Polls are open/.test(sub(col)), `${sub(nash)} | ${sub(col)}`);
+    // Two places that disagree keep the state's (a Nashville and a Columbia ballot together never happens, but the rule holds).
+    const both = plan.localHowto(moH, [read('place-st-louis-city-mo.json'), read('place-webster-groves-mo.json')], null, '2026-10-29');
+    check('place mail: places that disagree keep the state\'s list', JSON.stringify(both.mail_ballot.return_options) === JSON.stringify(moH.mail_ballot.return_options));
   }
 
   /* ---------- flow, Oct 20: My plan ---------- */
@@ -1193,8 +1409,69 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('My plan: once voting has closed, no save line', cheat.saveLine('2026-11-04') === null);
     open('CA', ['los-angeles-ca']);
     check('My plan: where phones are allowed, "Print it, copy it, or take a screenshot."', cheat.saveLine('2026-10-20') === 'Print it, copy it, or take a screenshot.');
+    // The state's text as it read on that day: its mail-by advice changes on Oct 28 (dated), so the ballot's howto is
+    // made for Oct 20 here, not for the day the tests run.
+    S.ballot.howto = plan.localHowto(S.ballot.stateHowto, S.ballot.places, null, '2026-10-20');
     const la = cheat.essentials('2026-10-20');
     check('My plan: a mail phase leads with the mail steps and drops the booth line', /^Mail your ballot by/.test(la[0]) && la.some((x) => /drop box/.test(x)) && !la.some((x) => /In the booth/.test(x)), la.join(' | '));
+    // From Oct 28 the mail-by advice says what's true now, by each state's own rule (stale-date check, Oct 29): a
+    // postmark state still counts a ballot postmarked by Nov 3; a receipt state's ballot must arrive by Election Day.
+    const adv = (x, d) => plan.localHowto(read(`state-${x}.json`).howto, [], null, d).mail_ballot.mail_cutoff_advice || '';
+    // Affirmative: it says a postmark counts. Never: that it's too late to mail, or that postmarks don't count.
+    const COUNTS = /counts?(?: [\w ]{0,25})? if (?:it's |it is )?postmarked by Nov(?:ember)? 3|Postmarks count/i;
+    const DENIES = /too late (to|for) (count on )?(the )?mail|postmarks? (do not|don't|doesn't) count/i;
+    const pm = ['CA', 'DC', 'MD', 'NY', 'OR', 'WA'].filter((x) => !COUNTS.test(adv(x, '2026-10-29')) || DENIES.test(adv(x, '2026-10-29')) || /by (about )?(Tuesday, )?October 27/.test(adv(x, '2026-10-29')));
+    check('mail advice, Oct 29: postmark states say a ballot postmarked by Nov 3 still counts, and no "mail by Oct 27"', pm.length === 0, pm.join(' '));
+    check('mail advice, Oct 29: receipt states (Florida, Pennsylvania) say not to count on the mail, and never that a postmark counts', ['FL', 'PA'].every((x) => /too late to count on the mail/.test(adv(x, '2026-10-29')) && !COUNTS.test(adv(x, '2026-10-29'))));
+    check('mail advice: the postmark check itself rejects "too late to mail" and accepts the real lines', !(COUNTS.test('It is too late to mail. Postmarks do not count. Hand it in by Nov 3.') && !DENIES.test('It is too late to mail. Postmarks do not count. Hand it in by Nov 3.')) && DENIES.test('It is too late to mail. Postmarks do not count.'));
+    check('mail advice, Oct 20: the suggested mail-by day still reads, so the plan says mail by Oct 27', plan.mailBy(plan.localHowto(read('state-CA.json').howto, [], null, '2026-10-20'))?.date === '2026-10-27');
+    // Lines that go stale before Nov 3 flip on their own (dated, Oct 29): each says what's true from the day after.
+    const hw = (x, d) => plan.localHowto(read(`state-${x}.json`).howto, [], null, d);
+    const sit = (h, id) => h.situations.find((x) => x.id === id);
+    const lost = (p, d) => sit(plan.localHowto(read('state-FL.json').howto, [read(`place-${p}.json`)], null, d), 'no_mail_ballot_or_lost').answer;
+    // Buttons and links dated to change (Oct 30): every help button on a ballot built for that day, and its drop box links.
+    const hp = (x, ps, d) => plan.localHowto(read(`state-${x}.json`).howto, ps.map((p) => read(`place-${p}.json`)), null, d);
+    const btns = (h) => h.situations.flatMap((x) => x.actions || []);
+    const early = (h) => btns(h).filter((a) => /early/i.test(a.label));
+    const mdAway = (d) => sit(hw('MD', d), 'away_on_election_day').actions[1];
+    const flAway = (ps, d) => sit(hp('FL', ps, d), 'away_on_election_day').actions[0];
+    const ilPoll = 'https://ova.elections.il.gov/PollingPlaceLookup.aspx';
+    const flips = [
+      ['AL Oct 30', /only for emergencies/.test(hw('AL', '2026-10-30').gotcha_shorts[1]) && /regular applications closed/i.test(hw('AL', '2026-10-30').gotchas[1])],
+      ['AL Nov 3', /applications have closed/.test(hw('AL', '2026-11-03').gotchas[1]) && !/until 5 PM Monday/.test(hw('AL', '2026-11-03').gotchas[1])],
+      ['IL Oct 30', /closed Thursday, October 29/.test(sit(hw('IL', '2026-10-30'), 'away_on_election_day').answer) && !/apply by Oct/.test(hw('IL', '2026-10-30').model_plain)],
+      ['MD Oct 31', /closed October 30/.test(sit(hw('MD', '2026-10-31'), 'away_on_election_day').steps[0])],
+      ['NY Nov 3', /hand in a mail ballot/.test(sit(hw('NY', '2026-11-03'), 'away_on_election_day').short)],
+      ['TX Oct 31', /ended Oct 30/.test(sit(hw('TX', '2026-10-31'), 'moved_in_state').short)],
+      ['GA Oct 31', /closed with early voting/.test(hw('GA', '2026-10-31').mail_ballot.mail_cutoff_advice)],
+      ['IL Nov 3', !/through (Monday, )?Nov(ember|\.)? 2|Vote early/.test(sit(hw('IL', '2026-11-03'), 'away_on_election_day').answer + sit(hw('IL', '2026-11-03'), 'college_student').answer + hw('IL', '2026-11-03').model_plain)],
+      ['FL Oct 29', /while early voting is open/.test(hw('FL', '2026-10-29').mail_ballot.mail_cutoff_advice)],
+      // Oct 30 (#59): the lines the Oct 29 run missed, and Florida's, New York's and DC's for when early voting ends.
+      ['MD Oct 30', ![...hw('MD', '2026-10-30').situations.map((x) => x.short), ...hw('MD', '2026-10-30').gotcha_shorts].some((t) => /vote early|early voting cent/i.test(t || '')) && !hw('MD', '2026-10-30').situations.some((x) => (x.actions || []).some((a) => /early/i.test(a.label)))],
+      ['GA Oct 31', /using a drop box/.test(hw('GA', '2026-10-30').mail_ballot.postage) && !/using a drop box/.test(hw('GA', '2026-10-31').mail_ballot.postage) && /vote early there/.test(sit(hw('GA', '2026-10-30'), 'moved_in_state').answer) && !/vote early/.test(sit(hw('GA', '2026-10-31'), 'moved_in_state').answer) && /^Early voting is over/.test(hw('GA', '2026-10-31').gotcha_shorts[2])],
+      ['TX Oct 31 mistake', /early voting site/.test(sit(hw('TX', '2026-10-30'), 'mistake_on_ballot').answer) && !/early voting site/.test(sit(hw('TX', '2026-10-31'), 'mistake_on_ballot').answer)],
+      ['FL Nov 1', /^Vote early/.test(sit(hw('FL', '2026-10-31'), 'away_on_election_day').short) && /ends today/.test(sit(hw('FL', '2026-11-01'), 'away_on_election_day').short) && /ends today in Orange and Leon/.test(hw('FL', '2026-11-01').gotcha_shorts[2])],
+      ['FL Nov 2', /has ended/.test(sit(hw('FL', '2026-11-02'), 'away_on_election_day').short) && !/early voting site/.test(sit(hw('FL', '2026-11-02'), 'mistake_on_ballot').answer) && /closed/.test(hw('FL', '2026-11-02').mail_ballot.return_options[1]) && /^Early voting is over/.test(hw('FL', '2026-11-02').gotcha_shorts[2])],
+      ['Pensacola Nov 1', /runs through Saturday, October 31/.test(lost('pensacola-fl', '2026-10-31')) && /ended Saturday, October 31/.test(lost('pensacola-fl', '2026-11-01'))],
+      ['Orlando and Tallahassee Nov 2', /27 sites/.test(lost('orlando-fl', '2026-11-01')) && /ended Sunday, November 1/.test(lost('orlando-fl', '2026-11-02')) && /open through Sunday/.test(lost('tallahassee-fl', '2026-11-01')) && /ended Sunday, November 1/.test(lost('tallahassee-fl', '2026-11-02'))],
+      ['NY Nov 2', /vote early/.test(sit(hw('NY', '2026-11-01'), 'college_student').short) && !/vote early/i.test([sit(hw('NY', '2026-11-02'), 'college_student').short, hw('NY', '2026-11-02').gotcha_shorts[0], ...sit(hw('NY', '2026-11-02'), 'away_on_election_day').steps].join(' ')) && sit(hw('NY', '2026-11-02'), 'away_on_election_day').actions[0].label === 'Find my poll site'],
+      ['NY Nov 3', !/(by|through) (Monday, )?Nov(ember)? 2/.test([sit(hw('NY', '2026-11-03'), 'college_student').short, sit(hw('NY', '2026-11-03'), 'college_student').answer, hw('NY', '2026-11-03').gotcha_shorts[0], hw('NY', '2026-11-03').gotchas[0]].join(' ')) && /9 PM/.test(sit(hw('NY', '2026-11-03'), 'college_student').short)],
+      ['DC Nov 2', /^Or vote early/.test(sit(hw('DC', '2026-11-01'), 'away_on_election_day').steps[0]) && /any Vote Center/.test(sit(hw('DC', '2026-11-02'), 'away_on_election_day').steps[0])],
+      ['MD button Oct 31', mdAway('2026-10-30').label === 'Request a mail-in ballot' && /onlinemailinrequest/.test(mdAway('2026-10-30').url) && mdAway('2026-10-31').label === 'Find a drop box' && mdAway('2026-10-31').url === hw('MD', '2026-10-31').mail_ballot.drop_box_lookup_url],
+      // Florida's early voting buttons follow each county's window (#60, Codex round 2): Escambia's ends Oct 31, Orange's and
+      // Leon's Nov 1; a statewide ballot keeps the state's info page through Nov 1, when some counties still vote early.
+      ['FL buttons, statewide Nov 2', early(hw('FL', '2026-11-01')).length === 5 && early(hw('FL', '2026-11-02')).length === 0 && flAway([], '2026-11-02').label === 'Find my polling place' && flAway([], '2026-11-02').url === hw('FL', '2026-11-02').election_day.lookup_url],
+      ['FL buttons, Pensacola Nov 1', early(hp('FL', ['pensacola-fl'], '2026-10-31')).length === 5 && flAway(['pensacola-fl'], '2026-10-31').url === 'https://escambiavotes.gov/early-voting-locations' && early(hp('FL', ['pensacola-fl'], '2026-11-01')).length === 0 && flAway(['pensacola-fl'], '2026-11-01').label === 'Find my polling place' && flAway(['pensacola-fl'], '2026-11-01').url === 'https://escambiavotes.gov/precinct-finder' && flAway(['pensacola-fl'], '2026-11-02').url === 'https://escambiavotes.gov/precinct-finder'],
+      ['FL buttons, Orlando Nov 2', early(hp('FL', ['orlando-fl'], '2026-11-01')).length === 5 && flAway(['orlando-fl'], '2026-11-01').url === 'https://voteorangefl.gov/vote-early/' && early(hp('FL', ['orlando-fl'], '2026-11-02')).length === 0 && flAway(['orlando-fl'], '2026-11-02').label === 'Find my polling place' && flAway(['orlando-fl'], '2026-11-02').url === 'https://voteorangefl.gov/find-your-polling-place/'],
+      ['FL buttons, Tallahassee Nov 2', early(hp('FL', ['tallahassee-fl'], '2026-11-01')).length === 5 && flAway(['tallahassee-fl'], '2026-11-01').url === 'https://www.leonvotes.gov/Voting/Early-Voting' && early(hp('FL', ['tallahassee-fl'], '2026-11-02')).length === 0 && flAway(['tallahassee-fl'], '2026-11-02').url === 'https://www.leonvotes.gov/Records/Sample-Ballots/Sample-Ballot-By-Address'],
+      ['IL buttons Nov 3', early(hw('IL', '2026-11-02')).length === 8 && early(hp('IL', ['chicago-il'], '2026-11-03')).length === 0 && btns(hw('IL', '2026-11-03')).filter((a) => a.label === 'Find my polling place').length === 9 && btns(hw('IL', '2026-11-03')).filter((a) => a.label === 'Find my polling place').every((a) => a.url === ilPoll)],
+      ['GA drop boxes Oct 31', !!hw('GA', '2026-10-30').mail_ballot.drop_box_lookup_url && !hw('GA', '2026-10-31').mail_ballot.drop_box_lookup_url && !hp('GA', ['atlanta-ga'], '2026-10-31').mail_ballot.drop_box_lookup_url && (hp('GA', ['atlanta-ga'], '2026-10-31').county_links || []).every((c) => !c.lookups.drop_box) && (hp('GA', ['atlanta-ga'], '2026-10-30').county_links || []).every((c) => !!c.lookups.drop_box)],
+      ['Pensacola drop box Nov 1', hp('FL', ['pensacola-fl'], '2026-10-31').mail_ballot.drop_box_lookup_url === 'https://escambiavotes.gov/early-voting-locations' && hp('FL', ['pensacola-fl'], '2026-11-01').mail_ballot.drop_box_lookup_url === hw('FL', '2026-11-01').mail_ballot.drop_box_lookup_url],
+      // New York's in-person applications close Nov 2, so the away answer's request button becomes its tracker (the city's on NYC ballots).
+      ['NY button Nov 3', sit(hw('NY', '2026-11-02'), 'away_on_election_day').actions[1].label === 'Request a mail ballot' && sit(hw('NY', '2026-11-03'), 'away_on_election_day').actions[1].label === 'Track my ballot' && sit(hw('NY', '2026-11-03'), 'away_on_election_day').actions[1].url === hw('NY', '2026-11-03').mail_ballot.tracking_url && sit(hp('NY', ['nyc-queens-ny'], '2026-11-03'), 'away_on_election_day').actions[1].url === 'https://requestballot.vote.nyc/tracking'],
+      ['Oct 29 unchanged', /apply by Oct\. 29/.test(hw('IL', '2026-10-29').model_plain) && /through Oct 29/.test(hw('AL', '2026-10-29').gotcha_shorts[1])],
+    ].filter(([, ok]) => !ok).map(([n]) => n);
+    check('stale lines: each flips to what is true the day after its deadline, and not before', flips.length === 0, flips.join(', '));
     open('NY', ['nyc-manhattan-ny']);
     check('My plan: where phones are restricted, "Print it or copy it."', cheat.saveLine('2026-10-20') === 'Print it or copy it.');
     open('TX', ['austin-tx']);
@@ -1234,10 +1511,23 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       on('2026-10-20');
       open('CA', ['los-angeles-ca']);
       pub = pass.messages().pub || '';
-      check('share: a mail state keeps its own where-to-vote page', /Find where to vote in Los Angeles: https:\/\/locator\.lavote\.net/.test(pub) && !/early voting places/.test(pub), pub);
+      check('share: a mail state keeps its own where-to-vote page', /Find where to vote in Los Angeles: https:\/\/locator\.lavote\.gov/.test(pub) && !/early voting places/.test(pub), pub);
       open('FL', []);
       pub = pass.messages().pub || '';
       check('share: a statewide ballot before early voting opens gets no where-to-vote line', !/Find (early voting places|where to vote)/.test(pub), pub);
+      // Florida's statewide window is a minimum (Oct 24 to 31); on Nov 1 some counties still vote early, so the
+      // message says so and links the state's early voting page, as the plan does. Nov 2, neither.
+      on('2026-11-01');
+      pub = pass.messages().pub || '';
+      check('share: statewide Florida on Nov 1 says some counties still vote early and links the state’s page', /Some Florida counties offer early voting through Sun, Nov 1; check yours\./.test(pub) && /\nFind early voting places: https:\/\/dos\.fl\.gov\/elections\/for-voters\/voting\/early-voting\/\n/.test(pub) && !/Every Florida county/.test(pub), pub);
+      on('2026-11-02');
+      pub = pass.messages().pub || '';
+      check('share: statewide Florida on Nov 2 has no early voting line or link', !/early voting/i.test(pub), pub);
+      open('FL', ['pensacola-fl']);
+      on('2026-11-01');
+      pub = pass.messages().pub || '';
+      check('share: Pensacola on Nov 1 keeps its county’s closing day (Oct 31): no early voting line', !/early voting/i.test(pub), pub);
+      on('2026-10-20');
       open('TX', []);
       pub = pass.messages().pub || '';
       check('share: a statewide Texas ballot during early voting gets the state’s early voting page', /Find early voting places: https:\/\/www\.votetexas\.gov\/voting\/where\.html/.test(pub), pub);
@@ -1293,6 +1583,19 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('plan: after midnight Central on Nov 4, a Pacific device still on Nov 3 says closed', plan.nextStep(austin, '2026-11-03', false, new Date('2026-11-04T06:10:00Z')).phase === 'polls_closed');
     check('plan: a statewide Texas ballot after midnight in both zones says closed', plan.nextStep(tx, '2026-11-03', false, new Date('2026-11-04T07:30:00Z')).phase === 'polls_closed');
     check('plan: Pensacola is on Central time, Orlando Eastern', JSON.stringify(open('FL', ['pensacola-fl']).howto.zones) === '["America/Chicago"]' && JSON.stringify(open('FL', ['orlando-fl']).howto.zones) === '["America/New_York"]');
+    // Tennessee's polls close at one moment, 7 PM Central and 8 PM Eastern: a statewide ballot names both, Nashville its own.
+    const tn = read('state-TN.json').howto;
+    const tnDay = plan.nextStep(tn, '2026-11-03', false, new Date('2026-11-04T00:30:00Z'));
+    check('plan: a statewide Tennessee ballot names both closing times', tnDay.phase === 'election_day' && /^Today is Election Day\. Polls close at 7:00 PM Central \(8:00 PM Eastern\)\.$/.test(words(tnDay)), words(tnDay));
+    check('plan: and says closed at 7 PM Central, when East Tennessee closes too', plan.nextStep(tn, '2026-11-03', false, new Date('2026-11-04T01:01:00Z')).phase === 'polls_closed');
+    const nash = plan.nextStep(open('TN', ['nashville-tn']).howto, '2026-11-03', false, new Date('2026-11-04T00:30:00Z'));
+    check('plan: Nashville says its own 7 PM', nash.phase === 'election_day' && /^Today is Election Day\. Polls close at 7 PM\.$/.test(words(nash)), words(nash));
+    // Each Tennessee county sets its own opening time (Knox and Hamilton open at 8 AM Eastern), so the day before
+    // gives only the close; a state with one plain opening time still gives both.
+    const tnEve = plan.nextStep(tn, '2026-11-02');
+    check('plan: the day before, Tennessee gives the close and no opening time', tnEve.phase === 'election_day_next' && tnEve.sub.join(' ') === 'Polls close at 7:00 PM Central (8:00 PM Eastern).', tnEve.sub.join(' | '));
+    const txEve = plan.nextStep(austin, '2026-11-02');
+    check('plan: the day before, Austin gives both times', txEve.sub.join(' ') === 'Polls are open 7 AM to 7 PM.', txEve.sub.join(' | '));
     // Codex #12: after the polls close on Election Day, say so, and keep the in-line rule.
     const shut = plan.nextStep(tx, '2026-11-03', false, 19 * 60);
     check('plan: at 7 PM on Election Day Texas says the polls closed', shut.phase === 'polls_closed' && /^Polls closed at 7 PM\. Already in line\? Stay in line\.$/.test(words(shut)), words(shut));
@@ -1338,6 +1641,34 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const flAll = plan.nextStep(open('FL', []).howto, '2026-10-19');
     check('plan: statewide Florida on Oct 19 says early voting starts Sat, Oct 24, and that some counties open sooner', /^Early voting starts Sat, Oct 24\.$/.test(words(flAll)) && flAll.sub.some((x) => /Some counties open sooner/.test(x)), `${words(flAll)} | ${flAll.sub.join(' | ')}`);
     check('plan: Orlando on Oct 19 still says early voting starts today', /^Early voting starts today, Oct 19\.$/.test(words(plan.nextStep(open('FL', ['orlando-fl']).howto, '2026-10-19'))));
+    // Round 3 gate on #60: Florida's Oct 31 is a minimum, and counties may vote early to Nov 1 (s. 101.657, F.S.).
+    const flOn = (t, absolute) => plan.nextStep(open('FL', []).howto, t, absolute);
+    const fl30 = flOn('2026-10-30'), fl31 = flOn('2026-10-31'), fl31a = flOn('2026-10-31', true), fl1 = flOn('2026-11-01'), fl1a = flOn('2026-11-01', true), fl2 = flOn('2026-11-02');
+    check('plan: statewide Florida on Oct 30 says some counties stay open through Sun, Nov 1', fl30.phase === 'early_open' && fl30.sub[0] === 'Some counties stay open through Sun, Nov 1. Check yours.', fl30.sub.join(' | '));
+    check('plan: statewide Florida on Oct 31 never says it is the last day of early voting', fl31.phase === 'early_open' && words(fl31) === 'Early voting ends today in some counties.' && fl31.sub[0] === 'Others stay open through Sun, Nov 1. Check yours.', `${words(fl31)} | ${fl31.sub.join(' | ')}`);
+    check('plan: statewide Florida\'s plan on Oct 31 says open through Oct 31 and some counties through Nov 1', /^Early voting is open through Sat, Oct 31\.$/.test(words(fl31a)) && fl31a.sub[0] === 'Some counties stay open through Sun, Nov 1. Check yours.', `${words(fl31a)} | ${fl31a.sub.join(' | ')}`);
+    check('plan: statewide Florida on Nov 1 says some counties still vote early today, with the state\'s early voting page and Election Day after', fl1.phase === 'early_open' && words(fl1) === 'Some counties still offer early voting today.' && fl1.sub[0] === 'Check whether yours does.' && fl1.sub.at(-1) === 'Or vote on Election Day, Tue, Nov 3, until 7 PM.' && fl1.primary.label === 'Find early voting places' && fl1.primary.url === fl.early_in_person.lookup_url && words(fl1a) === 'Some counties offer early voting through Sun, Nov 1.', `${words(fl1)} | ${fl1.sub.join(' | ')} | ${JSON.stringify(fl1.primary)} || ${words(fl1a)}`);
+    check('plan: statewide Florida on Nov 2 says nothing more about early voting', fl2.phase === 'election_day_next' && !fl2.sub.some((x) => /early voting/.test(x)), fl2.sub.join(' | '));
+    const placeSteps = ['orlando-fl', 'pensacola-fl', 'tallahassee-fl'].flatMap((id) => ['2026-10-30', '2026-10-31', '2026-11-01'].map((t) => plan.nextStep(open('FL', [id]).howto, t)));
+    check('plan: a Florida place keeps its own county\'s last day, with no latest-county-day line', orl.latest_end === null && pen.latest_end === null && !placeSteps.some((st) => [words(st), ...st.sub].some((x) => /Some counties|Others stay|yours does/.test(x))) && words(plan.nextStep(open('FL', ['pensacola-fl']).howto, '2026-10-31')) === 'Today is the last day of early voting.', placeSteps.map((st) => st.sub.join(' | ')).join(' || '));
+    // Self-review on #62: the Key dates list says the same as the step, both ends for the state, one for a place.
+    // Gate round 1 on #62: only the list itself, built as of Nov 1, so the dated gotchas beside it (Florida's third
+    // reads "Early voting ends today in Orange and Leon" on Nov 1) can't change what it reads with the day CI runs.
+    const keyDates = (places, day = '2026-11-01') => {
+      const loc = Object.getOwnPropertyDescriptor(globalThis, 'location');
+      const wq = S.ui.wiQ, had = S.ui.open.has('bx-dates'); S.ui.wiQ = ''; S.ui.open.add('bx-dates');
+      Object.defineProperty(globalThis, 'location', { configurable: true, value: { search: `?today=${day}`, origin: 'http://x', pathname: '/' } });
+      try {
+        const list = (views.planstrip.whatIfBody(open('FL', places).howto).match(/<ol class="pdates">[\s\S]*?<\/ol>/) || [''])[0];
+        return list.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+      } finally {
+        if (loc) Object.defineProperty(globalThis, 'location', loc); else delete globalThis.location;
+        S.ui.wiQ = wq; if (!had) S.ui.open.delete('bx-dates');
+      }
+    };
+    const kdFl = keyDates([]), kdPen = keyDates(['pensacola-fl']);
+    check('plan: statewide Florida\'s key dates on Nov 1 end early voting in some counties Oct 31 (passed) and in the rest Nov 1 (not passed)', /Sat, Oct 31 Early voting ends in some counties passed\b/.test(kdFl) && /Sun, Nov 1 Early voting ends in the rest(?! passed)/.test(kdFl) && !/Early voting ends(?! in)/.test(kdFl), kdFl);
+    check('plan: Pensacola\'s key dates end early voting once, on Oct 31', /Sat, Oct 31 Early voting ends(?! in)/.test(kdPen) && !/in the rest|in some counties/.test(kdPen), kdPen);
     const a1 = { early_in_person: { start: '2026-10-19', end: '2026-11-01', hours_note: 'A', lookup_url: 'https://a.example', source: 'https://a.example', confidence: 'verified' } };
     const a2 = { early_in_person: { start: '2026-10-24', end: '2026-10-31', hours_note: 'B', lookup_url: 'https://b.example', source: 'https://b.example', confidence: 'verified' } };
     check('plan: places that disagree keep the state window', plan.localHowto(fl, [a1, a2]).early_in_person === fl.early_in_person && plan.localHowto(fl, [a1, {}]).early_in_person === fl.early_in_person);
@@ -1535,10 +1866,15 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     // DC: the "upper" layer is the ward, which the place already settles.
     const dc = open('DC', ['dc-ward-1']);
     check('address: DC sets nothing from its ward layer', address.setFromAddress(dc, S.b, { cd: null, upper: 1, lower: null }).length === 0);
-    // Lakewood: three races by congressional district may apply; District 7 puts them on the ballot.
+    // Englewood: two races by congressional district may apply; District 6 puts them on the ballot. (Lakewood's
+    // three District 7 races were this check until Oct 29: their scopes say all of Lakewood is in District 7,
+    // so they are sure things there and no address moves them.)
+    const ew = open('CO', ['englewood-co']);
+    const eset = address.setFromAddress(ew, S.b, { cd: 6, upper: 26, lower: 3 });
+    check('address: Englewood names each office District 6 set', eset.filter((x) => /District 6$/.test(x)).length === 2 && ['co-us-house-6', 'co-cu-regent-6'].every((id) => S.b.mine.includes(id) && !bl.isMaybe(id)), eset.join(' | '));
     const lk = open('CO', ['lakewood-co']);
-    const lset = address.setFromAddress(lk, S.b, { cd: 7, upper: 22, lower: 24 });
-    check('address: Lakewood names each office District 7 set', lset.filter((x) => /District 7$/.test(x)).length === 3 && ['co-us-house-7', 'co-sboe-7', 'co-cu-regent-7'].every((id) => S.b.mine.includes(id) && !bl.isMaybe(id)), lset.join(' | '));
+    const lset = address.setFromAddress(lk, S.b, { cd: 8, upper: 22, lower: 24 });
+    check('address: Lakewood\'s District 7 races stay on for any address, since all of Lakewood is District 7', ['co-us-house-7', 'co-sboe-7', 'co-cu-regent-7'].every((id) => lk.items.some((x) => x.id === id) && !S.b.notMine.includes(id) && !bl.isMaybe(id)), lset.join(' | '));
 
     // The other ways the research writes Census districts (Oct 20): each is read, so an address settles
     // the House and legislature in Atlanta, Seattle, Chicago, Portland and New York too. Washington's
@@ -1650,6 +1986,67 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     S.ui.addrOpen = false; S.ui.addrFound = null;
     check('address box: a DC ward after a reload has no box', !hasBox(), box());
     S.view = view0; S.ui.addrFound = null;
+  }
+
+  /* ---------- heads-ups that wait on what we know (Nov 3) ----------
+     Kevin, on Election Day: a 645-character "Austin also reaches into Williamson and Hays" callout right under
+     the precinct his address had just found. `zips` shows a note only for a listed ZIP, or when we don't know
+     the ZIP; `until_address` hides a which-page note once a lookup has placed the ballot (S.b.addrNote). At the
+     top of the ballot such a note is a quiet line in the address box, above Use my address. */
+  {
+    const { address } = mods;
+    const ledger = views.ledger;
+    const keep = { view: S.view, addrOpen: S.ui.addrOpen, addrFound: S.ui.addrFound };
+    S.view = 'ballot'; S.ui.addrOpen = false; S.ui.addrFound = null;
+    const ROUTE = /far north or far south Austin/;
+    const at = (zip) => { open('TX', ['austin-tx'], st.emptyBallotState(zip)); return ledger.ballotHeadHTML(); };
+    const boxOf = (h) => (h.match(/<div class="addrbox">[\s\S]*?<\/div><\/div>/) || [''])[0];
+    const callout = (h, re) => [...h.matchAll(/<p class="heads">[\s\S]*?<\/p>/g)].some((m) => re.test(m[0]));
+    let h = at('78702');
+    check('heads-up zips: Austin on a ZIP wholly in Travis (78702) shows no county note, in the box or as a callout', !ROUTE.test(h) && !ledger.headsUp('ballot').some((t) => ROUTE.test(t)));
+    h = at('78750');
+    const box = boxOf(h);
+    check('heads-up zips: on a split ZIP (78750) it shows as a quiet line in the address box, above Use my address, not as a callout',
+      /<p class="addr-route">Live in far north or far south Austin\?/.test(box) && box.indexOf('addr-route') < box.indexOf('data-act="addr-open"') && !callout(h, ROUTE), box.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').slice(0, 240));
+    check('heads-up zips: with no ZIP known (a link without one) it shows too', ROUTE.test(boxOf(at(''))));
+    at('78750');
+    S.b.addrNote = address.addrSummary(address.setFromAddress(S.ballot, S.b, { cd: 37, upper: 14, lower: 49 }));
+    check('heads-up until_address: gone once a lookup has placed the ballot, even on a listed ZIP', !ROUTE.test(ledger.ballotHeadHTML()) && !ledger.headsUp('ballot').some((t) => ROUTE.test(t)));
+    S.b.addrNote = address.FOUND_ONLY;
+    check('heads-up until_address: gone after a lookup that set no race too ("Found your address.")', !ROUTE.test(ledger.ballotHeadHTML()));
+    // Every target honors both fields, and a note is still shown once.
+    const ab = open('TX', ['austin-tx'], st.emptyBallotState('78702'));
+    const it = ab.items.find((x) => x.kind === 'contest');
+    ab.places[0].heads_up = [...(ab.places[0].heads_up || []),
+      { text: 'Test: for 78750 only.', applies_to: 'section:county', zips: ['78750'] },
+      { text: 'Test: until an address.', applies_to: `item:${it.id}`, until_address: true },
+      { text: 'Test: twice.', applies_to: 'section:county' }, { text: 'Test: twice.', applies_to: 'section:county' }];
+    const sec = () => ledger.headsUp('section:county').filter((t) => /^Test:/.test(t)).join('|');
+    check('heads-up zips: a section note listed for 78750 hides on 78702, and a note twice shows once', sec() === 'Test: twice.', sec());
+    S.b.zip = '78750';
+    check('heads-up zips: and shows on 78750', sec() === 'Test: for 78750 only.|Test: twice.', sec());
+    check('heads-up until_address: an item note shows before a lookup', ledger.headsUp(`item:${it.id}`).includes('Test: until an address.'));
+    S.b.addrNote = address.FOUND_ONLY;
+    check('heads-up until_address: and hides after one', !ledger.headsUp(`item:${it.id}`).includes('Test: until an address.'));
+    // With no address box (nothing on the ballot turns on the address), a which-page note keeps the callout spot.
+    const dc = open('DC', ['dc-ward-1']);
+    dc.places[0].heads_up = [...(dc.places[0].heads_up || []), { text: 'Test: which page.', applies_to: 'ballot', until_address: true }];
+    h = ledger.ballotHeadHTML();
+    check('heads-up until_address: with no address box it falls back to a callout', !/class="addrbox"/.test(h) && callout(h, /Test: which page\./), h.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').slice(-200));
+    S.view = keep.view; S.ui.addrOpen = keep.addrOpen; S.ui.addrFound = keep.addrFound;
+  }
+
+  /* ---------- the printed plan's name (Nov 3) ----------
+     Browsers name a saved PDF after the page's title, and print headers show it, so while printing the title says
+     whose plan it is: the election's year and month (from the data), the place, the ZIP when known. */
+  {
+    const pt = views.mast.printTitle;
+    open('TX', ['austin-tx'], st.emptyBallotState('78702'));
+    check('print title: Austin on 78702', pt() === '2611 Austin 78702 Voting Guide from vote.kevinhg.com', pt());
+    open('TX', ['austin-williamson-tx'], st.emptyBallotState('78750'));
+    check('print title: the place without its note ("Austin (Williamson County)" is Austin)', pt() === '2611 Austin 78750 Voting Guide from vote.kevinhg.com', pt());
+    open('FL', []);
+    check('print title: a statewide ballot with no ZIP names its state', pt() === '2611 Florida Voting Guide from vote.kevinhg.com', pt());
   }
 
   /* ---------- the shelf's two forms (Oct 21): what goes into Kevin's Google Form ----------
@@ -1921,6 +2318,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('coverage: index.json’s source counts match the ballot the app builds, every place and state', off.length === 0, off.slice(0, 4).join(' | '));
     check('coverage: a place with a local source that picks is never thin', Object.values(INDEX.places).every((p) => p.local_with_picks === 0 || !mc.isThin(p)));
     check('coverage: Chicago isn’t thin', !mc.isThin(INDEX.places['chicago-il']), JSON.stringify(INDEX.places['chicago-il']));
+    check('coverage: Austin’s Williamson and Hays pages aren’t thin either: the city-wide sources name them', ['austin-williamson-tx', 'austin-hays-tx'].every((id) => !mc.isThin(INDEX.places[id]) && INDEX.places[id].local_with_picks > 0), JSON.stringify([INDEX.places['austin-williamson-tx'], INDEX.places['austin-hays-tx']].map((p) => [p.local_with_picks, p.local_races_with_picks, p.local_races])));
     // Codex, Oct 26: the Pensacola News Journal is Pensacola's own paper, so it counts as one of its local
     // sources (5, none with picks); Ballwin's three are the Post-Dispatch (one pick), LWV Metro STL and STLPR.
     const pn = INDEX.places['pensacola-fl'], bw = INDEX.places['ballwin-mo'];
@@ -1938,13 +2336,41 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('coverage: the same place with a local source’s pick reads full, with no offer', mc.ballotCoverage(pen, idx, '32501').kind === 'full' && mc.ballotCoverage(pen, idx, '32501').ask === null);
     idx.places['pensacola-fl'].local_with_picks = 0;
     const mo = open('MO', []);
-    const c2 = mc.ballotCoverage(mo, idx, '63110', '2026-10-25');
+    const c2 = mc.ballotCoverage(mo, idx, '65806', '2026-10-25');
     check('coverage: a statewide ballot found by its ZIP offers to add the city, the way Request a city asks',
-      c2.kind === 'statewide' && c2.state === 'none' && c2.ask.key === 'z:63110' && c2.ask.what === 'Please add my city' && c2.ask.wrong === 'Please add the city for ZIP 63110 in Missouri (one-tap from the page)' && c2.checked === INDEX.states.MO.checked, JSON.stringify(c2));
+      c2.kind === 'statewide' && c2.state === 'none' && c2.ask.key === 'z:65806' && c2.ask.what === 'Please add my city' && c2.ask.wrong === 'Please add the city for ZIP 65806 in Missouri (one-tap from the page)' && c2.checked === INDEX.states.MO.checked, JSON.stringify(c2));
     check('coverage: one picked from the list (no ZIP) can’t ask in one tap', mc.ballotCoverage(mo, idx, '').ask === null);
-    idx.zips['63110'] = ['ballwin-mo'];
-    check('coverage: once its ZIP has a place, it says the city is in', mc.ballotCoverage(mo, idx, '63110').state === 'landed');
-    delete idx.zips['63110'];
+    idx.zips['65806'] = ['ballwin-mo'];
+    check('coverage: once its ZIP has a place, it says the city is in', mc.ballotCoverage(mo, idx, '65806').state === 'landed');
+    delete idx.zips['65806'];
+    // Review of #46, Oct 29: 63120 is the City of St. Louis and Pine Lawn. Its statewide ballot never says the
+    // city is in (Pine Lawn's isn't); not sure which, it says the ZIP is split; from Pine Lawn (away), it asks as usual.
+    const unsure = mc.ballotCoverage(mo, idx, '63120', '2026-10-29');
+    check('coverage: a split ZIP’s statewide ballot isn’t "landed" and names both sides', unsure.state === 'none' && unsure.shared?.places.join() === 'the City of St. Louis' && /Pine Lawn/.test(unsure.shared.outside), JSON.stringify(unsure));
+    // Review of #71, Nov 1: 90810 is Long Beach's and Los Angeles's, and Long Beach marks its Carson side. Los
+    // Angeles not marking it doesn't make the ZIP land: the voter may be in Carson. The card names all three.
+    const ca = open('CA', []);
+    const lbz = mc.ballotCoverage(ca, idx, '90810', '2026-11-01');
+    check('coverage: a ZIP two places share, one marking a town outside the guide, isn’t "landed" and names all three', lbz.state === 'none' && [...lbz.shared?.places || []].sort().join() === 'Long Beach,Los Angeles' && lbz.shared.outside === 'Carson', JSON.stringify(lbz));
+    const carson = mc.ballotCoverage(ca, idx, '90810', '2026-11-01', ['long-beach-ca', 'los-angeles-ca']);
+    check('coverage: from Carson (both places away), it offers to add the city, without the split', carson.state === 'none' && carson.shared === null && carson.ask?.key === 'z:90810', JSON.stringify(carson));
+    const pine = mc.ballotCoverage(mo, idx, '63120', '2026-10-29', ['st-louis-city-mo']);
+    check('coverage: from outside the City (away), it offers to add the city, without the split', pine.state === 'none' && pine.shared === null && pine.ask?.key === 'z:63120', JSON.stringify(pine));
+    check('coverage: a place-only ZIP still lands', mc.ballotCoverage(mo, idx, '63110').state === 'landed' && mc.ballotCoverage(mo, idx, '63110').shared === null);
+    check('coverage: a ZIP whose only place is away doesn’t', mc.ballotCoverage(mo, idx, '63110', undefined, ['st-louis-city-mo']).state !== 'landed');
+    // Kevin, Oct 29: "request city is based on whether we've done a robust run for that spot not the number of
+    // sources we've found". A thin place we looked hard for says so and asks nothing; a local pick found later
+    // makes it full, so the date never hides one.
+    const looked = { on: '2026-10-26', where: ['Paper A', 'Weekly B', 'Group C'] };
+    idx.places['pensacola-fl'].local_picks_checked = looked;
+    const cs = mc.ballotCoverage(pen, idx, '32501', '2026-10-27');
+    check('coverage: a thin place we looked hard for stays thin, keeps the look, and has nothing to ask', cs.kind === 'thin' && cs.searched === looked && cs.ask === null && cs.state === 'none' && cs.localRaces === 10 && cs.localRacesWithPicks === 7, JSON.stringify(cs));
+    idx.places['pensacola-fl'].local_with_picks = 1;
+    check('coverage: a local pick found after the look reads full, the look set aside', mc.ballotCoverage(pen, idx, '32501').kind === 'full' && mc.ballotCoverage(pen, idx, '32501').searched === null);
+    idx.places['pensacola-fl'].local_with_picks = 0;
+    delete idx.places['pensacola-fl'].local_picks_checked;
+    const nash = INDEX.places['nashville-tn'];
+    check('coverage: Nashville’s look (Oct 29, #50) reaches the index with the newsrooms checked', nash.local_picks_checked?.on === '2026-10-29' && nash.local_picks_checked.where.includes('The Tennessean') && !('local_picks_checked' in pn), JSON.stringify(nash));
 
     // Remembered on this device, apart from the saved ballots, until the data lands or three days pass.
     const mem = {};
@@ -1957,10 +2383,16 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       check('coverage: data checked after the request day ends it', mc.ballotCoverage(pen, idx, '32501', '2026-10-26').state === 'none');
       idx.places['pensacola-fl'].checked = '2026-10-25';
       check('coverage: data checked the same day doesn’t (the request may have come after it)', mc.ballotCoverage(pen, idx, '32501', '2026-10-25').state === 'asked');
+      // A hard look on or after the request day answers it; one before it (data that landed after the tap) doesn't.
+      idx.places['pensacola-fl'].local_picks_checked = { on: '2026-10-25', where: ['Paper A'] };
+      check('coverage: a hard look on the request day answers the request', mc.ballotCoverage(pen, idx, '32501', '2026-10-25').state === 'none' && mc.ballotCoverage(pen, idx, '32501', '2026-10-25').askedOn === null);
+      idx.places['pensacola-fl'].local_picks_checked = { on: '2026-10-24', where: ['Paper A'] };
+      check('coverage: a look before the request day leaves it sent', mc.ballotCoverage(pen, idx, '32501', '2026-10-25').state === 'asked');
+      delete idx.places['pensacola-fl'].local_picks_checked;
       // Codex, Oct 26: three days means three (an Oct 25 request counts on the 25th, 26th and 27th), not four.
       check('coverage: after three days with nothing landed, the offer comes back', mc.ballotCoverage(pen, idx, '32501', '2026-10-27').state === 'asked' && mc.ballotCoverage(pen, idx, '32501', '2026-10-28').state === 'none');
-      mc.rememberAsk('z:63110', '2026-10-28');
-      check('coverage: a new request lets go of ones past the window, from the third day on', !('p:pensacola-fl' in JSON.parse(mem['vg-asked'])) && JSON.parse(mem['vg-asked'])['z:63110'] === '2026-10-28');
+      mc.rememberAsk('z:65806', '2026-10-28');
+      check('coverage: a new request lets go of ones past the window, from the third day on', !('p:pensacola-fl' in JSON.parse(mem['vg-asked'])) && JSON.parse(mem['vg-asked'])['z:65806'] === '2026-10-28');
       // Codex, Oct 26: a record that isn't a plain object (an array left by something else) reads as empty,
       // so the request is kept and acknowledged instead of vanishing when it's written back.
       mem['vg-asked'] = '[]';
@@ -2017,10 +2449,12 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       const tc = views.coverage.covCardHTML('door');
       check('coverage: a thin place’s card leads with what’s missing, then what’s here and what isn’t, with the gap counted', txt(tc) === 'Pensacola’s local picks aren’t in yet. Here now: every race on your ballot, with picks from newspapers and groups across Florida. Not here yet: picks from Pensacola’s own paper and groups. 3 of your 10 local races have no picks from anyone. Ask Kevin to look for local picks One tap. It sends Kevin the place and nothing about you. He’ll look within about a day.', txt(tc));
       check('coverage: its button is the dark one, and it is a gold card', darkOf(tc).join() === 'Ask Kevin to look for local picks' && /class="notice strong cov-card"/.test(tc) && /data-act="cov-ask"/.test(tc));
-      check('coverage: the sources sheet says it quietly, with no button, and step 2 has its one line', txt(views.coverage.sheetCovHTML()) === '21 sources, 13 with picks, none from Pensacola’s own paper and groups. Last checked Oct 19.' && !/class="mini/.test(views.coverage.sheetCovHTML()) && lineOf(views.setup.pickControlsHTML()) === one, txt(views.coverage.sheetCovHTML()));
+      const pn = idx.places['pensacola-fl'];
+      const pnQuiet = `${pn.sources} sources, ${pn.with_picks} with picks, none from Pensacola’s own paper and groups.`;
+      check('coverage: the sources sheet says it quietly, with no button, and step 2 has its one line', txt(views.coverage.sheetCovHTML()) === `${pnQuiet} Last checked Oct 19.` && !/class="mini/.test(views.coverage.sheetCovHTML()) && lineOf(views.setup.pickControlsHTML()) === one, txt(views.coverage.sheetCovHTML()));
       S.view = 'ballot';
       const th = views.ledger.ballotHeadHTML();
-      check('coverage: the head’s line is quiet, and while the card asks the address box has no dark button', txt(views.coverage.headCovHTML()) === '21 sources, 13 with picks, none from Pensacola’s own paper and groups. Last checked Oct 19.' && darkOf(th).length === 0 && /Use my address/.test(th), darkOf(th).join());
+      check('coverage: the head’s line is quiet, and while the card asks the address box has no dark button', txt(views.coverage.headCovHTML()) === `${pnQuiet} Last checked Oct 19.` && darkOf(th).length === 0 && /Use my address/.test(th), darkOf(th).join());
       check('coverage: on the ballot the card sits in the slot under the masthead', /class="notice strong cov-card wrap"/.test(views.mast.restoreHTML()));
       S.pending = { kind: 'shared', key: 'x', incoming: S.b, summary: 'This link brought 2 picks.' };
       check('coverage: under a shared link’s question its button is an outline, so the slot has one dark button', darkOf(views.mast.restoreHTML()).join() === 'Use the link’s picks' && /class="mini" data-act="cov-ask"/.test(views.mast.restoreHTML()), darkOf(views.mast.restoreHTML()).join());
@@ -2041,9 +2475,23 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       setToday('2026-10-25');
       delete store['vg-asked'];
 
-      // A statewide ballot found by ZIP (St. Louis City).
+      // Looked hard (Oct 29): the card says when and where, where the picks come from, and asks nothing.
+      idx.places['pensacola-fl'].local_picks_checked = { on: '2026-10-24', where: ['Paper A', 'Weekly B', 'Group C'] };
+      const tl = views.coverage.covCardHTML('ballot');
+      check('coverage: looked hard, the card says when and where, where the picks come from, and the gap', txt(tl) === 'We looked hard for Pensacola’s local picks. On Oct 24 we checked Paper A, Weekly B and Group C. None of them had picks we could find. The picks here come from newspapers and groups across Florida. 3 of your 10 local races have no picks from anyone. Know a local paper or group with picks? Add a source', txt(tl));
+      check('coverage: looked hard, nothing to ask: no one-tap, no dark button, and Add a source opens its shelf', !/cov-ask|Ask Kevin/.test(tl) && darkOf(tl).length === 0 && /<button class="linkbtn" data-act="shelf" data-kind="source" aria-haspopup="dialog" data-fk="cov-add">Add a source<\/button>/.test(tl) && /class="notice strong cov-card wrap" role="region"/.test(tl) && !views.coverage.cardAsks(views.coverage.covOf()));
+      check('coverage: looked hard, the address box’s Use my address is the dark button again', darkOf(views.ledger.ballotHeadHTML()).join() === 'Use my address', darkOf(views.ledger.ballotHeadHTML()).join());
+      check('coverage: looked hard, the quiet lines add the day', txt(views.coverage.headCovHTML()) === `${pnQuiet} We looked hard on Oct 24. Last checked Oct 19.` && txt(views.coverage.sheetCovHTML()) === txt(views.coverage.headCovHTML()), txt(views.coverage.headCovHTML()));
+      idx.places['pensacola-fl'].checked = '2026-10-24';
+      check('coverage: and say the day once when the look is the last check', txt(views.coverage.headCovHTML()).endsWith('none from Pensacola’s own paper and groups. We looked hard on Oct 24.'), txt(views.coverage.headCovHTML()));
+      idx.places['pensacola-fl'].checked = '2026-10-19';
+      idx.places['pensacola-fl'].local_picks_checked.where.push('Group D', 'Group E');
+      check('coverage: more than four checked, the card names three and counts the rest', /On Oct 24 we checked Paper A, Weekly B, Group C and 2 more\./.test(txt(views.coverage.covCardHTML('door'))));
+      delete idx.places['pensacola-fl'].local_picks_checked;
+
+      // A statewide ballot found by ZIP (Springfield, Missouri).
       open('MO', []);
-      S.b.zip = '63110';
+      S.b.zip = '65806';
       S.view = 'setup';
       const sc = views.coverage.covCardHTML('door');
       check('coverage: a statewide ballot’s card leads with the missing races, says the statewide picks are here, and asks Kevin', txt(sc).startsWith(`Your city’s races aren’t in the guide yet. Here now: Missouri’s statewide races, with picks from ${INDEX.states.MO.with_picks} of ${INDEX.states.MO.sources} sources. Not here yet: races for your city, county and districts. Ask Kevin to add my city One tap. It sends Kevin your ZIP and nothing about you. It usually takes about a day. Voting before then? Your official sample ballot lists every race.`) && darkOf(sc).join() === 'Ask Kevin to add my city', txt(sc));
@@ -2058,27 +2506,27 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       setToday('2026-11-02');
       check('coverage: two days out, the fine print says it may not land before Election Day', /One tap\. It sends Kevin your ZIP and nothing about you\. Kevin may not get to it before Election Day\./.test(txt(views.coverage.covCardHTML('ballot'))));
       setToday('2026-10-25');
-      mc.rememberAsk('z:63110', '2026-10-25');
+      mc.rememberAsk('z:65806', '2026-10-25');
       const sa = views.coverage.covCardHTML('ballot');
       check('coverage: asked, the statewide card says Request sent, check back tomorrow, and offers Tell me when it’s in', txt(sa) === 'Request sent. Kevin is adding your city. You asked today. It usually takes about a day, so check back tomorrow. Until then, you can pick your statewide races below. Voting before then? Your official sample ballot lists every race. Tell me when it’s in' && darkOf(sa).length === 0, txt(sa));
       check('coverage: and the quiet lines add the day', txt(views.coverage.headCovHTML()).endsWith('You asked for your city’s races today.') && txt(views.coverage.sheetCovHTML()).endsWith('You asked for your city’s races today.'));
       setToday('2026-11-02');
-      mc.rememberAsk('z:63110', '2026-11-01');
+      mc.rememberAsk('z:65806', '2026-11-01');
       check('coverage: asked two days out, it says it may not be in before you vote', /You asked Nov 1\. It may not be in before you vote\./.test(txt(views.coverage.covCardHTML('ballot'))), txt(views.coverage.covCardHTML('ballot')));
       setToday('2026-10-25');
-      mc.rememberAsk('z:63110', '2026-10-25');
+      mc.rememberAsk('z:65806', '2026-10-25');
 
       // "Tell me when it's in": a follow-up, never a second "Please add my city".
       const F2 = common.FORM;
-      const fa = { page: 'Your ballot', where: 'Missouri, 63110', url: 'https://vote.kevinhg.com/', data: '2026-10-25 12:00 UTC', build: 'abc1234', device: 'x', errors: [] };
+      const fa = { page: 'Your ballot', where: 'Missouri, 65806', url: 'https://vote.kevinhg.com/', data: '2026-10-25 12:00 UTC', build: 'abc1234', device: 'x', errors: [] };
       S.ui.report = { kind: 'city', f: { reach: '' }, what: '', tag: '', hint: 'follow', along: fa, state: 'edit', err: false, fk: 'cov-hear', back: null };
       const fh = views.shelf.shelfHTML();
-      check('follow-up: titled Tell me when it’s in, the request shown as text, an email or phone the one field, required', /<h2 id="sh-h">Tell me when it’s in<\/h2>/.test(fh) && /<b>Your request:<\/b> your city’s races, for ZIP 63110 in Missouri\. Sent today\./.test(fh) && (fh.match(/data-rf="/g) || []).length === 1 && /id="rf-reach"[^>]*aria-required="true"/.test(fh) && !/Which city or town/.test(fh) && views.shelf.requiredOf(S.ui.report) === 'reach', txt(fh).slice(0, 300));
+      check('follow-up: titled Tell me when it’s in, the request shown as text, an email or phone the one field, required', /<h2 id="sh-h">Tell me when it’s in<\/h2>/.test(fh) && /<b>Your request:<\/b> your city’s races, for ZIP 65806 in Missouri\. Sent today\./.test(fh) && (fh.match(/data-rf="/g) || []).length === 1 && /id="rf-reach"[^>]*aria-required="true"/.test(fh) && !/Which city or town/.test(fh) && views.shelf.requiredOf(S.ui.report) === 'reach', txt(fh).slice(0, 300));
       check('follow-up: its button says what it does, and what goes along is folded under it', />Tell me when it’s in<\/button>/.test(fh) && /<details class="rp-along"/.test(fh) && fh.indexOf('<details') > fh.indexOf('report-send') && !/Add anything else in your note/.test(fh));
       S.ui.report.f.reach = 'friend@example.org';
       const fb = views.shelf.reportBody(S.ui.report);
-      check('follow-up: it posts a follow-up with the place, ZIP and request day, never "Please add my city"', fb[F2.what] === 'Follow-up: tell me when it’s in' && fb[F2.where] === 'Missouri, 63110' && fb[F2.reach] === 'friend@example.org'
-        && fb[F2.wrong].startsWith('Tell me when the city for ZIP 63110 is in. Follow-up to the one-tap request from Oct 25.\n\nSent along:\n') && !/Please add/.test(Object.values(fb).join('\n')), JSON.stringify(fb));
+      check('follow-up: it posts a follow-up with the place, ZIP and request day, never "Please add my city"', fb[F2.what] === 'Follow-up: tell me when it’s in' && fb[F2.where] === 'Missouri, 65806' && fb[F2.reach] === 'friend@example.org'
+        && fb[F2.wrong].startsWith('Tell me when the city for ZIP 65806 is in. Follow-up to the one-tap request from Oct 25.\n\nSent along:\n') && !/Please add/.test(Object.values(fb).join('\n')), JSON.stringify(fb));
       S.ui.report.state = 'sent';
       check('follow-up: sent, "Got it." and never the email or phone back', /<b>Got it\.<\/b> Kevin will tell you when it’s in\./.test(views.shelf.shelfHTML()) && !/friend@example\.org/.test(views.shelf.shelfHTML()));
       S.ui.report = null;

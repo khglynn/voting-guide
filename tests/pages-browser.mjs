@@ -33,7 +33,7 @@ const firstLocal = place.items.find((i) => i.kind === 'measure') || place.items[
   const r = await get('/austin-tx');
   const html = await r.text();
   check('crawler: /austin-tx is a 200 HTML page', r.status === 200 && /text\/html/.test(r.headers.get('content-type') || ''), `${r.status} ${r.headers.get('content-type')}`);
-  check('crawler: it names Austin, has its dates and its canonical, with no JavaScript run', html.includes('<h1 class="place">Austin</h1>') && /Election Day: (<b>)?Tue, Nov 3/.test(html) && html.includes(`<link rel="canonical" href="${ORIGIN}/austin-tx">`));
+  check('crawler: it names Austin, has its dates and its canonical, with no JavaScript run', html.includes('<h1 class="place">Austin (Travis County)</h1>') && /Election Day: (<b>)?Tue, Nov 3/.test(html) && html.includes(`<link rel="canonical" href="${ORIGIN}/austin-tx">`));
   check('crawler: its ballot items are in the HTML (a local measure, a statewide race)', html.includes(firstLocal.kind === 'measure' ? firstLocal.number : firstLocal.office) && html.includes('U.S. Senator'), firstLocal.number || firstLocal.office);
   check('crawler: no noindex on a place page', !/noindex/i.test(html) && !/noindex/i.test(r.headers.get('x-robots-tag') || '') || !LOCAL && /vercel\.app$/.test(new URL(BASE).hostname));
 }
@@ -90,7 +90,7 @@ const canonical = (page) => page.evaluate(() => document.querySelector('link[rel
   const { ctx, page, insights } = await newPage();
   await page.goto(`${BASE}/austin-tx`);
   await page.waitForSelector('h1.place');
-  check('Austin\'s page: its name is the heading', (await page.textContent('h1.place')).trim() === 'Austin');
+  check('Austin\'s page: its name is the heading', (await page.textContent('h1.place')).trim() === 'Austin (Travis County)');
   check('Austin\'s page: nothing wider than a 380px phone', await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1), String(await page.evaluate(() => document.documentElement.scrollWidth)));
   await page.screenshot({ path: path.join(SHOTS, 'austin-top.png') });
   await page.screenshot({ path: path.join(SHOTS, 'austin-full.png'), fullPage: true });

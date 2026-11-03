@@ -6,6 +6,7 @@ import { stepKey, planKey } from './views/planstrip';
 import { render, anchored } from './render';
 import { localize } from './ballot';
 import { RAIL_AT } from './views/ledger';
+import { printTitle } from './views/mast';
 import { ensureIndex, openBallot, openChosen, zipTyped, offerResume, dismissResume, lookZip, viewed } from './app';
 import { A, runAddress, sendReport, reportInput, srcSearch, clearSearch, wiSearch, clearWi } from './actions';
 import { startStats } from './stats';
@@ -105,7 +106,17 @@ document.addEventListener('keydown', (e) => {
   else if (S.ui.reader) A['reader-close']({}, document.body);
   else if (S.ui.sheet) A['sheet-close']({}, document.body);
 });
-window.addEventListener('beforeprint', () => render(['print']));
+/* A saved PDF takes the page's title as its name, and print headers show it: while printing it says whose plan
+   this is (mast.ts printTitle), and afterward it is the page's own title again. */
+let titleBefore: string | null = null;
+window.addEventListener('beforeprint', () => {
+  render(['print']);
+  const t = printTitle();
+  if (!t) return;
+  if (titleBefore === null) titleBefore = document.title;
+  document.title = t;
+});
+window.addEventListener('afterprint', () => { if (titleBefore !== null) { document.title = titleBefore; titleBefore = null; } });
 /* From 1180px the menu stands as a rail in the margin (drawn with the bar): crossing that width
    redraws the bar, and a menu sheet left open closes, since the rail now shows it. */
 try {

@@ -213,7 +213,7 @@
   "level": "city",
   "office": "Los Angeles City Council",
   "district": "Council District 3 (southwest San Fernando Valley: Woodland Hills, Tarzana, Canoga Park, Winnetka, Reseda)",
-  "scope_plain": "Only voters in Council District 3. None of the neighborhoods on Kevin's list (Westside, Hollywood, Mid-City, Downtown, Boyle Heights) are in CD3; it is here because it is one of two council runoffs citywide. Los Angeles city offices are nonpartisan. If no one won a majority in the June 2 primary, the top two meet in this November runoff; most votes wins.",
+  "scope_plain": "Only voters in Council District 3. It is one of two City Council runoffs this year. Los Angeles city offices are nonpartisan. If no one won a majority in the June 2 primary, the top two meet in this November runoff; most votes wins.",
   "office_explainer": "One of 15 councilmembers who pass city laws, adopt the budget and control land use in their district.",
   "why_it_matters": "Open seat; Bob Blumenfield is termed out. This race and CD9 decide the ideological balance of the Council. Both candidates are Democrats; the split is business and police union backing (Gaspar) versus labor and the County Democratic Party (Worth Girvan).",
   "vote_for": 1,
@@ -1303,7 +1303,7 @@
   "level": "federal",
   "office": "U.S. Representative",
   "district": "CD-34 (Downtown LA, the Arts District, Boyle Heights, Koreatown, Eagle Rock, Highland Park, El Sereno)",
-  "scope_plain": "Voters in the 34th Congressional District. Covers Downtown, the Arts District and Boyle Heights on Kevin's list. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Two Democrats.",
+  "scope_plain": "Voters in the 34th Congressional District. In the City of LA that includes Downtown, the Arts District and Boyle Heights. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Two Democrats.",
   "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
   "why_it_matters": "A Democrat-versus-Democrat race between a nine-year incumbent and a democratic socialist challenger, one of several DSA-backed challenges in LA this year. Both oppose the Trump administration's immigration enforcement; they differ on crypto votes, campaign money and how far left to go on health care and housing.",
   "vote_for": 1,
@@ -1388,8 +1388,8 @@
   "state": "CA",
   "level": "federal",
   "office": "U.S. Representative",
-  "district": "CD-36 (Westside and South Bay: Mar Vista, Westchester, Venice, Santa Monica, Beverly Hills, Torrance, Palos Verdes)",
-  "scope_plain": "Voters in the 36th Congressional District. Covers Mar Vista and Westchester on Kevin's list. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "district": "CD-36 (Westside and South Bay: Mar Vista, Westchester, Venice, Santa Monica, Beverly Hills, Culver City west of the 405, Torrance, Palos Verdes)",
+  "scope_plain": "Voters in the 36th Congressional District. In the City of LA that includes Mar Vista and Westchester. It also covers all of Santa Monica and all of Beverly Hills. About 5,900 Culver City residents, west of the 405, are in it too. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
   "why_it_matters": "A six-term incumbent and vice chair of the House Democratic Caucus against a Republican with no public campaign presence. Lieu won the June primary with 61%.",
   "vote_for": 1,
@@ -1465,6 +1465,10 @@
    {
     "name": "City Hall Pass: CA-36",
     "url": "https://cityhallpass.com/election-2026/races/congress-36"
+   },
+   {
+    "name": "Statewide Database: which cities each 2025 congressional district holds (AB 604 city splits report)",
+    "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
    }
   ],
   "confidence": "verified"
@@ -1474,8 +1478,8 @@
   "state": "CA",
   "level": "federal",
   "office": "U.S. Representative",
-  "district": "CD-37 (Mid-City, Fairfax area south of Wilshire, Culver City, Crenshaw, Baldwin Hills, parts of Koreatown and South LA)",
-  "scope_plain": "Voters in the 37th Congressional District. Covers much of Mid-City on Kevin's list; the Fairfax District north of Wilshire is mostly CD-30. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Two Democrats.",
+  "district": "CD-37 (Mid-City, Fairfax area south of Wilshire, most of Culver City, east of the 405, Crenshaw, Baldwin Hills, parts of Koreatown and South LA)",
+  "scope_plain": "Voters in the 37th Congressional District. In the City of LA that includes much of Mid-City; the Fairfax District north of Wilshire is mostly CD-30. It also covers most of Culver City (about 35,000 residents east of the 405). California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Two Democrats.",
   "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
   "why_it_matters": "An incumbent who won 55% in June against a 27-year-old community advocate who got under 12%. Both Democrats.",
   "vote_for": 1,
@@ -1488,8 +1492,8 @@
     "name": "Sydney Kamlager-Dove",
     "party": "Democratic",
     "incumbent": true,
-    "website": "https://www.sydneykamlagerdove.com",
-    "website_confidence": "unverified",
+    "website": "https://sydneykamlager.com",
+    "website_confidence": "sourced",
     "background": "In Congress since 2023; earlier LACCD trustee, State Assembly and State Senate. USC graduate. Foreign Affairs and Judiciary committees; Whip of the Congressional Black Caucus. First in June with 55.2%.",
     "own_words": [
      {
@@ -1551,6 +1555,10 @@
    {
     "name": "City Hall Pass: CA-37",
     "url": "https://cityhallpass.com/election-2026/races/congress-37"
+   },
+   {
+    "name": "Statewide Database: which cities each 2025 congressional district holds (AB 604 city splits report)",
+    "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
    }
   ],
   "confidence": "verified"
@@ -1560,8 +1568,8 @@
   "state": "CA",
   "level": "federal",
   "office": "U.S. Representative",
-  "district": "CD-30 (Hollywood, the Hollywood Hills, Fairfax, Los Feliz, Silver Lake, Burbank, Glendale, Pasadena)",
-  "scope_plain": "Voters in the 30th Congressional District. Covers Hollywood, the Hollywood Hills and the Fairfax District on Kevin's list. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "district": "CD-30 (Hollywood, the Hollywood Hills, Fairfax, Los Feliz, Silver Lake, Burbank, Glendale, part of Pasadena, the Sand Canyon edge of Santa Clarita)",
+  "scope_plain": "Voters in the 30th Congressional District. In the City of LA that includes Hollywood, the Hollywood Hills and the Fairfax District. It also covers all of Glendale, all of Burbank and all of West Hollywood. About 9,000 people on Pasadena’s west side and about 8,600 near Sand Canyon in Santa Clarita are in it too. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
   "why_it_matters": "A first-term Democrat who succeeded Adam Schiff, against a Republican attorney. Friedman won 53% in a seven-way June primary.",
   "vote_for": 1,
@@ -1627,6 +1635,10 @@
    {
     "name": "City Hall Pass: CA-30",
     "url": "https://cityhallpass.com/election-2026/races/congress-30"
+   },
+   {
+    "name": "Statewide Database: which cities each 2025 congressional district holds (AB 604 city splits report)",
+    "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
    }
   ],
   "confidence": "verified"
@@ -1636,8 +1648,8 @@
   "state": "CA",
   "level": "state",
   "office": "State Senator",
-  "district": "SD-24 (Westside and Hollywood: Pacific Palisades, Brentwood, Venice, Mar Vista, Westchester, Hollywood, West Hollywood, Santa Monica, Beverly Hills, the South Bay coast)",
-  "scope_plain": "Voters in the 24th State Senate District. Covers the Westside and Hollywood neighborhoods on Kevin's list. Only even-numbered Senate districts vote in 2026. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Two Democrats.",
+  "district": "SD-24 (Westside and Hollywood: Pacific Palisades, Brentwood, Venice, Mar Vista, Westchester, Hollywood, West Hollywood, Santa Monica, Beverly Hills, the South Bay coast, Torrance)",
+  "scope_plain": "Voters in the 24th State Senate District. In the City of LA that includes the Westside and Hollywood. It also includes all of Malibu, all of Santa Monica, all of Beverly Hills, all of West Hollywood and all of Torrance. Only even-numbered Senate districts vote in 2026. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Two Democrats.",
   "office_explainer": "One of 40 state senators. Writes California laws and passes the state budget with the Assembly. Four-year term.",
   "why_it_matters": "Open seat (Ben Allen is termed out) and the most expensive legislative race in LA. Two Democrats: a West Hollywood councilmember backed by labor and the housing groups, and a media consultant who has put $1.85 million of his own money in and is backed by Pelosi, Hillary Clinton and the police union. Outside groups have spent millions against Erickson.",
   "vote_for": 1,
@@ -1713,6 +1725,10 @@
    {
     "name": "City Hall Pass: SD-24",
     "url": "https://cityhallpass.com/election-2026/races/senate-24"
+   },
+   {
+    "name": "Citizens Redistricting Commission 2021: cities in each district (place report)",
+    "url": "https://sdmg.senate.ca.gov/sites/sdmg.senate.ca.gov/files/2021/crc_2021_place_report_v2.pdf"
    }
   ],
   "confidence": "verified"
@@ -1723,7 +1739,7 @@
   "level": "state",
   "office": "State Senator",
   "district": "SD-26 (Downtown LA, Boyle Heights, Koreatown, Echo Park, Silver Lake, Los Feliz, Eagle Rock, Highland Park, East LA)",
-  "scope_plain": "Voters in the 26th State Senate District. Covers Downtown, the Arts District and Boyle Heights on Kevin's list. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Two Democrats.",
+  "scope_plain": "Voters in the 26th State Senate District. In the City of LA that includes Downtown, the Arts District and Boyle Heights. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Two Democrats.",
   "office_explainer": "One of 40 state senators. Writes California laws and passes the state budget with the Assembly. Four-year term.",
   "why_it_matters": "Open seat (María Elena Durazo is termed out and endorsed Rascón). Two Democrats: an LACCD trustee and housing lawyer backed by teachers' unions and Abundant Housing, with nearly $4 million in outside support, against a conservation agency staffer backed by the DSA, Controller Mejia and the progressive councilmembers.",
   "vote_for": 1,
@@ -1809,7 +1825,7 @@
   "level": "state",
   "office": "State Senator",
   "district": "SD-28 (Mid-City, West Adams, Crenshaw, Culver City, parts of Downtown and South LA, west to the Westside)",
-  "scope_plain": "Voters in the 28th State Senate District. Covers Mid-City on Kevin's list. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "scope_plain": "Voters in the 28th State Senate District. In the City of LA that includes Mid-City. It also includes all of Culver City. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 40 state senators. Writes California laws and passes the state budget with the Assembly. Four-year term.",
   "why_it_matters": "The incumbent won 77.5% in June against a Republican neighborhood council member with no campaign committee.",
   "vote_for": 1,
@@ -1875,6 +1891,10 @@
    {
     "name": "City Hall Pass: SD-28",
     "url": "https://cityhallpass.com/election-2026/races/senate-28"
+   },
+   {
+    "name": "Citizens Redistricting Commission 2021: cities in each district (place report)",
+    "url": "https://sdmg.senate.ca.gov/sites/sdmg.senate.ca.gov/files/2021/crc_2021_place_report_v2.pdf"
    }
   ],
   "confidence": "verified"
@@ -1885,7 +1905,7 @@
   "level": "state",
   "office": "Member of the State Assembly",
   "district": "AD-51 (Hollywood, the Hollywood Hills, Fairfax, Westwood, Bel Air, Atwater Village, West Hollywood, Santa Monica, Beverly Hills)",
-  "scope_plain": "Voters in the 51st Assembly District. Covers Hollywood, the Hollywood Hills and the Fairfax District on Kevin's list. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Two Democrats.",
+  "scope_plain": "Voters in the 51st Assembly District. In the City of LA that includes Hollywood, the Hollywood Hills and the Fairfax District. It also includes all of Santa Monica, all of West Hollywood and all of Beverly Hills. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Two Democrats.",
   "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
   "why_it_matters": "The Assembly Democratic Caucus chair against a democratic socialist challenger. Zbur won 54% in June. The clearest left-versus-center contrast on housing (he voted no on SB 79; Hernandez wants to repeal Costa-Hawkins) and on AB 715, Zbur's antisemitism-in-schools law.",
   "vote_for": 1,
@@ -1961,6 +1981,14 @@
    {
     "name": "City Hall Pass: AD-51",
     "url": "https://cityhallpass.com/election-2026/races/assembly-51"
+   },
+   {
+    "name": "Senate Office of Demographics: Assembly districts by ZIP code (2021 lines)",
+    "url": "https://sdmg.senate.ca.gov/system/files/2024-12/2025-state-assembly-zip-codes-zip-code-order.pdf"
+   },
+   {
+    "name": "Census TIGERweb: 2026 State Legislative Districts, Lower (every part of Santa Monica is in AD-51)",
+    "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer/58"
    }
   ],
   "confidence": "verified"
@@ -1971,7 +1999,7 @@
   "level": "state",
   "office": "Member of the State Assembly",
   "district": "AD-54 (Downtown LA, Boyle Heights, Koreatown, Westlake, Pico-Union, Lincoln Heights, Montebello, Commerce)",
-  "scope_plain": "Voters in the 54th Assembly District. Covers Downtown, the Arts District and Boyle Heights on Kevin's list. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "scope_plain": "Voters in the 54th Assembly District. In the City of LA that includes Downtown, the Arts District and Boyle Heights. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
   "why_it_matters": "Effectively uncontested. Gonzalez got 99.7% in June; his opponent reached the ballot as a write-in with 137 votes.",
   "vote_for": 1,
@@ -2042,7 +2070,7 @@
   "level": "state",
   "office": "Member of the State Assembly",
   "district": "AD-55 (Mar Vista, Del Rey, Palms, Mid-City, West Adams, Crenshaw, Culver City, Ladera Heights)",
-  "scope_plain": "Voters in the 55th Assembly District. Covers Mar Vista and Mid-City on Kevin's list. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Two Democrats.",
+  "scope_plain": "Voters in the 55th Assembly District. In the City of LA that includes Mar Vista and Mid-City. It also includes all of Culver City. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Two Democrats.",
   "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
   "why_it_matters": "The chair of the Assembly Natural Resources Committee against an LAUSD school social worker. Bryan won 64.6% in June.",
   "vote_for": 1,
@@ -2118,6 +2146,10 @@
    {
     "name": "City Hall Pass: AD-55",
     "url": "https://cityhallpass.com/election-2026/races/assembly-55"
+   },
+   {
+    "name": "Senate Office of Demographics: Assembly districts by ZIP code (2021 lines)",
+    "url": "https://sdmg.senate.ca.gov/system/files/2024-12/2025-state-assembly-zip-codes-zip-code-order.pdf"
    }
   ],
   "confidence": "verified"
@@ -2128,7 +2160,7 @@
   "level": "state",
   "office": "Member of the State Assembly",
   "district": "AD-61 (Westchester, Playa del Rey, Venice, LAX, Inglewood, Hawthorne, Lawndale, Marina del Rey)",
-  "scope_plain": "Voters in the 61st Assembly District. Covers Westchester on Kevin's list. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "scope_plain": "Voters in the 61st Assembly District. In the City of LA that includes Westchester. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
   "why_it_matters": "Effectively uncontested. McKinnor got 98.6% in June; Lockwood reached the ballot as a write-in with 1,104 votes.",
   "vote_for": 1,
@@ -2214,7 +2246,7 @@
   "level": "state",
   "office": "Member of the State Assembly",
   "district": "AD-57 (South LA, Exposition Park, much of Downtown, Florence-Graham)",
-  "scope_plain": "Voters in the 57th Assembly District. Covers parts of Downtown on Kevin's list (Downtown is split among AD-54 and AD-57; check the sample ballot). California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "scope_plain": "Voters in the 57th Assembly District. In the City of LA that includes parts of Downtown (Downtown is split among AD-54 and AD-57; check the sample ballot). California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
   "why_it_matters": "The incumbent won 85.7% in June against a Republican with no campaign presence.",
   "vote_for": 1,
@@ -3234,8 +3266,8 @@
   "state": "CA",
   "level": "federal",
   "office": "U.S. Representative",
-  "district": "CD-27 (northwest Valley: Granada Hills, most of Northridge, parts of Reseda, Lake Balboa, North Hills)",
-  "scope_plain": "Voters in the 27th Congressional District (new map approved with Prop 50). In the City of LA that is Granada Hills, most of Northridge and parts of Reseda, Lake Balboa and North Hills, about 144,000 residents. The rest is Santa Clarita and the Antelope Valley. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "district": "CD-27 (northwest Valley: Granada Hills, most of Northridge, parts of Reseda, Lake Balboa, North Hills; plus most of Santa Clarita and the Antelope Valley)",
+  "scope_plain": "Voters in the 27th Congressional District (new map approved with Prop 50). In the City of LA that is Granada Hills, most of Northridge and parts of Reseda, Lake Balboa and North Hills, about 144,000 residents. The rest is most of Santa Clarita and the Antelope Valley. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
   "why_it_matters": "One of the closest House races in LA County. In June the Republican finished just ahead of the first-term Democrat, 41.0% to 40.6%.",
   "vote_for": 1,
@@ -3324,10 +3356,10 @@
   "state": "CA",
   "level": "federal",
   "office": "U.S. Representative",
-  "district": "CD-28 (San Gabriel Valley; only about 150 City of LA residents, at the edge near Highland Park)",
-  "scope_plain": "Voters in the 28th Congressional District (new map approved with Prop 50). Only about 154 City of LA residents live in it, at the city’s northeast edge near Highland Park. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "district": "CD-28 (San Gabriel Valley, including most of Pasadena; in the City of LA only about 150 residents near Highland Park)",
+  "scope_plain": "Voters in the 28th Congressional District (new map approved with Prop 50). It covers most of Pasadena (about 130,000 of its 139,000 residents) and much of the San Gabriel Valley. Only about 154 City of LA residents live in it, at the city’s northeast edge near Highland Park. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
-  "why_it_matters": "A long-time incumbent against the Arcadia Republican she beat in 2024. Very few City of LA voters will see this race.",
+  "why_it_matters": "A long-time incumbent against the Arcadia Republican she beat in 2024. Most Pasadena voters see it; very few City of LA voters do.",
   "vote_for": 1,
   "incumbent": "Judy Chu",
   "open_seat": false,
@@ -3501,7 +3533,7 @@
   "level": "federal",
   "office": "U.S. Representative",
   "district": "CD-32 (south and west Valley, Bel Air, Brentwood, Pacific Palisades)",
-  "scope_plain": "Voters in the 32th Congressional District (new map approved with Prop 50). In the City of LA that is most of the south and west San Fernando Valley, from Studio City, Sherman Oaks and Encino to Woodland Hills, Chatsworth and Porter Ranch, plus Bel Air, Brentwood and Pacific Palisades, about 598,000 residents. It also covers Malibu and Simi Valley. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "scope_plain": "Voters in the 32nd Congressional District (new map approved with Prop 50). In the City of LA that is most of the south and west San Fernando Valley, from Studio City, Sherman Oaks and Encino to Woodland Hills, Chatsworth and Porter Ranch, plus Bel Air, Brentwood and Pacific Palisades, about 598,000 residents. It also covers all of Malibu, and Simi Valley. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
   "why_it_matters": "A 15-term incumbent against the Malibu Republican he beat in 2024. They differ sharply on crypto rules, immigration, voter ID and federal income taxes.",
   "vote_for": 1,
@@ -3587,7 +3619,7 @@
   "level": "federal",
   "office": "U.S. Representative",
   "district": "CD-43 (Watts, Harbor Gateway North, parts of South LA and Westchester; plus Inglewood, Hawthorne, Gardena, Compton)",
-  "scope_plain": "Voters in the 43th Congressional District (new map approved with Prop 50). In the City of LA that is Watts, Harbor Gateway North and parts of South LA and Westchester, about 156,000 residents. It also covers Inglewood, Compton, Hawthorne, Gardena, Lawndale and part of Torrance. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "scope_plain": "Voters in the 43rd Congressional District (new map approved with Prop 50). In the City of LA that is Watts, Harbor Gateway North and parts of South LA and Westchester, about 156,000 residents. It also covers Inglewood, Compton, Hawthorne, Gardena, Lawndale and part of Torrance. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
   "why_it_matters": "A 35-year incumbent, the top Democrat on the House Financial Services Committee, faces a Republican with no published platform.",
   "vote_for": 1,
@@ -3676,7 +3708,7 @@
   "state": "CA",
   "level": "federal",
   "office": "U.S. Representative",
-  "district": "CD-44 (San Pedro, Wilmington, Harbor City, Harbor Gateway South; plus Carson, South Gate, Lynwood)",
+  "district": "CD-44 (San Pedro, Wilmington, Harbor City, Harbor Gateway South; plus north and west Long Beach, Carson, South Gate, Lynwood)",
   "scope_plain": "Voters in the 44th Congressional District (new map approved with Prop 50). In the City of LA that is San Pedro, Wilmington, Harbor City and Harbor Gateway South, about 169,000 residents. It also covers Carson, South Gate, Lynwood, Huntington Park, Paramount and part of Long Beach. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
   "why_it_matters": "The incumbent Democrat against a Republican nurse practitioner. Barragán got 77.0% in June.",
@@ -3767,7 +3799,7 @@
   "level": "state",
   "office": "State Senator",
   "district": "SD-20 (north and east Valley: Sylmar, Pacoima, Sun Valley, Sunland-Tujunga, Panorama City, Van Nuys, Lake Balboa, Reseda, Canoga Park)",
-  "scope_plain": "Voters in the 20th State Senate District. About 86% of its residents (and 97% of its land) are in the City of LA: Sylmar, Pacoima, Arleta, Sun Valley, Sunland-Tujunga, Mission Hills, North Hills, Panorama City, Van Nuys, Lake Balboa, Reseda, Winnetka, Canoga Park and part of North Hollywood. Only even-numbered Senate districts vote in 2026. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "scope_plain": "Voters in the 20th State Senate District. About 86% of its residents (and 97% of its land) are in the City of LA: Sylmar, Pacoima, Arleta, Sun Valley, Sunland-Tujunga, Mission Hills, North Hills, Panorama City, Van Nuys, Lake Balboa, Reseda, Winnetka, Canoga Park and part of North Hollywood. It also includes all of Burbank. Only even-numbered Senate districts vote in 2026. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 40 state senators. Writes California laws and passes the state budget with the Assembly. Four-year term.",
   "why_it_matters": "The incumbent Democrat faces a Republican who ran for Assembly in 2024. They split on taxes to close the budget gap, health coverage for undocumented immigrants and housing density.",
   "vote_for": 1,
@@ -3843,6 +3875,10 @@
    {
     "name": "City Hall Pass: SD-20",
     "url": "https://cityhallpass.com/election-2026/races/senate-20"
+   },
+   {
+    "name": "Citizens Redistricting Commission 2021: cities in each district (place report)",
+    "url": "https://sdmg.senate.ca.gov/sites/sdmg.senate.ca.gov/files/2021/crc_2021_place_report_v2.pdf"
    }
   ],
   "confidence": "verified"
@@ -3853,7 +3889,7 @@
   "level": "state",
   "office": "Member of the State Assembly",
   "district": "AD-40 (Chatsworth, Porter Ranch, Granada Hills, Northridge, part of North Hills; plus Santa Clarita)",
-  "scope_plain": "Voters in the 40th Assembly District. In the City of LA that is Chatsworth, Porter Ranch, Granada Hills, Northridge and part of North Hills, about 228,000 residents. The rest is the Santa Clarita Valley. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "scope_plain": "Voters in the 40th Assembly District. In the City of LA that is Chatsworth, Porter Ranch, Granada Hills, Northridge and part of North Hills, about 228,000 residents. The rest is the Santa Clarita Valley, including all of Santa Clarita. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
   "why_it_matters": "A seat both parties contest: Schiavo first won it by 522 votes in 2022. She got 55.6% in June against three Republicans.",
   "vote_for": 1,
@@ -3933,6 +3969,10 @@
    {
     "name": "LA Forward guide: State Assembly (2022 margin)",
     "url": "https://laforwardguide.org/guide/state-assembly"
+   },
+   {
+    "name": "Senate Office of Demographics: Assembly districts by ZIP code (2021 lines)",
+    "url": "https://sdmg.senate.ca.gov/system/files/2024-12/2025-state-assembly-zip-codes-zip-code-order.pdf"
    }
   ],
   "confidence": "verified"
@@ -3943,7 +3983,7 @@
   "level": "state",
   "office": "Member of the State Assembly",
   "district": "AD-42 (Pacific Palisades and Bel Air area; plus Malibu, Calabasas, Thousand Oaks, Simi Valley)",
-  "scope_plain": "Voters in the 42nd Assembly District. In the City of LA that is the Pacific Palisades and Bel Air area, about 76,000 residents. The rest runs from Malibu, Topanga and Calabasas into Ventura County. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "scope_plain": "Voters in the 42nd Assembly District. In the City of LA that is the Pacific Palisades and Bel Air area, about 76,000 residents. The rest takes in all of Malibu, plus Topanga and Calabasas, and runs into Ventura County. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
   "why_it_matters": "Open seat: Jacqui Irwin is termed out and running for Congress. An Agoura Hills councilmember faces the Republican who got about 46.5% here in 2024.",
   "vote_for": 1,
@@ -4015,6 +4055,10 @@
    {
     "name": "City Hall Pass: AD-42",
     "url": "https://cityhallpass.com/election-2026/races/assembly-42"
+   },
+   {
+    "name": "Senate Office of Demographics: Assembly districts by ZIP code (2021 lines)",
+    "url": "https://sdmg.senate.ca.gov/system/files/2024-12/2025-state-assembly-zip-codes-zip-code-order.pdf"
    }
   ],
   "confidence": "verified"
@@ -4103,7 +4147,7 @@
   "level": "state",
   "office": "Member of the State Assembly",
   "district": "AD-44 (Sunland-Tujunga, North Hollywood, Studio City, Sherman Oaks, Toluca Lake, Valley Village; plus Burbank, Glendale)",
-  "scope_plain": "Voters in the 44th Assembly District. In the City of LA that is Sunland-Tujunga, Sherman Oaks, Studio City, North Hollywood, Valley Village and Toluca Lake, about 270,000 residents. It also covers Burbank and most of Glendale. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "scope_plain": "Voters in the 44th Assembly District. In the City of LA that is Sunland-Tujunga, Sherman Oaks, Studio City, North Hollywood, Valley Village and Toluca Lake, about 270,000 residents. It also covers all of Burbank and most of Glendale. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
   "why_it_matters": "A first-term Democrat who chairs the Public Safety Committee, against a Republican former Miss America. Schultz got 71.2% in June.",
   "vote_for": 1,
@@ -4174,6 +4218,10 @@
    {
     "name": "City Hall Pass: AD-44",
     "url": "https://cityhallpass.com/election-2026/races/assembly-44"
+   },
+   {
+    "name": "Senate Office of Demographics: Assembly districts by ZIP code (2021 lines)",
+    "url": "https://sdmg.senate.ca.gov/system/files/2024-12/2025-state-assembly-zip-codes-zip-code-order.pdf"
    }
   ],
   "confidence": "verified"
@@ -4265,8 +4313,8 @@
   "state": "CA",
   "level": "state",
   "office": "Member of the State Assembly",
-  "district": "AD-52 (Eagle Rock, Highland Park, El Sereno, Echo Park, Silver Lake, Los Feliz, Glassell Park, Atwater Village)",
-  "scope_plain": "Voters in the 52nd Assembly District. In the City of LA that is El Sereno, Eagle Rock, Echo Park, Highland Park, Silver Lake, Glassell Park, Los Feliz, Atwater Village, Lincoln Heights, Cypress Park and Elysian Valley. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "district": "AD-52 (Eagle Rock, Highland Park, El Sereno, Echo Park, Silver Lake, Los Feliz, Glassell Park, Atwater Village; plus south Glendale)",
+  "scope_plain": "Voters in the 52nd Assembly District. In the City of LA that is El Sereno, Eagle Rock, Echo Park, Highland Park, Silver Lake, Glassell Park, Los Feliz, Atwater Village, Lincoln Heights, Cypress Park and Elysian Valley. It also covers south Glendale. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
   "why_it_matters": "A first-term Democrat against a Republican musician with no ballot designation. Caloza got 85.8% in June.",
   "vote_for": 1,
@@ -4332,6 +4380,10 @@
    {
     "name": "City Hall Pass: AD-52",
     "url": "https://cityhallpass.com/election-2026/races/assembly-52"
+   },
+   {
+    "name": "Senate Office of Demographics: Assembly districts by ZIP code (2021 lines)",
+    "url": "https://sdmg.senate.ca.gov/system/files/2024-12/2025-state-assembly-zip-codes-zip-code-order.pdf"
    }
   ],
   "confidence": "verified"
@@ -4341,7 +4393,7 @@
   "state": "CA",
   "level": "state",
   "office": "Member of the State Assembly",
-  "district": "AD-65 (Wilmington, Harbor City, Harbor Gateway, much of San Pedro, Watts; plus Compton, Carson)",
+  "district": "AD-65 (Wilmington, Harbor City, Harbor Gateway, much of San Pedro, Watts; plus North Long Beach, Compton, Carson)",
   "scope_plain": "Voters in the 65th Assembly District. In the City of LA that is Wilmington, Harbor City, Harbor Gateway, much of San Pedro, the Port and Watts. It also covers Compton, Carson and part of Long Beach. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
   "why_it_matters": "Open seat: Mike Gipson is termed out and running for the Board of Equalization. A Compton school board member faces a Republican Long Beach teacher. Davis got 46.3% in June.",
@@ -4418,7 +4470,7 @@
   "level": "state",
   "office": "Member of the State Assembly",
   "district": "AD-66 (northwest and coastal San Pedro; plus Torrance, Redondo Beach, Palos Verdes, Manhattan Beach)",
-  "scope_plain": "Voters in the 66th Assembly District. In the City of LA that is only northwest and coastal San Pedro. The rest is South Bay cities from Torrance and Palos Verdes to Manhattan Beach. Two Democrats. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "scope_plain": "Voters in the 66th Assembly District. In the City of LA that is only northwest and coastal San Pedro. The rest is South Bay cities, including all of Torrance, from Palos Verdes to Manhattan Beach. Two Democrats. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
   "why_it_matters": "Open seat (Al Muratsuchi is termed out) with two Democrats. A school board president backed by teachers and housing groups faces a mayor and prosecutor backed by the state party, labor and police unions. They differ on refineries and single-payer health care.",
   "vote_for": 1,
@@ -4494,6 +4546,10 @@
    {
     "name": "City Hall Pass: AD-66",
     "url": "https://cityhallpass.com/election-2026/races/assembly-66"
+   },
+   {
+    "name": "Senate Office of Demographics: Assembly districts by ZIP code (2021 lines)",
+    "url": "https://sdmg.senate.ca.gov/system/files/2024-12/2025-state-assembly-zip-codes-zip-code-order.pdf"
    }
   ],
   "confidence": "verified"
@@ -4503,8 +4559,8 @@
   "state": "CA",
   "level": "federal",
   "office": "U.S. Representative",
-  "district": "CD-41 (north edge of Fullerton; plus La Habra, Brea, Whittier, Downey, Bellflower)",
-  "scope_plain": "Voters in the 41st Congressional District (new map approved with Prop 50). About 17,000 Fullerton residents live in it, at the north end of the city next to La Habra and Brea. Most of the district is in southeast LA County. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "district": "CD-41 (north edge of Fullerton and a slice of east Long Beach; plus La Habra, Brea, Whittier, Downey, Bellflower)",
+  "scope_plain": "Voters in the 41st Congressional District (new map approved with Prop 50). About 17,000 Fullerton residents live in it, at the north end of the city next to La Habra and Brea. About 30,000 Long Beach residents live in it too, in east Long Beach next to Lakewood. Most of the district is in southeast LA County. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
   "why_it_matters": "Prop 50 redrew this seat into a Democratic-leaning district. A Democrat who has been in Congress since 2003 (most recently for the old 38th) faces a Republican plumbing contractor. The current CD-41 member, Ken Calvert, is running in CD-40.",
   "vote_for": 1,

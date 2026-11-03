@@ -4,8 +4,8 @@
     "state": "CA",
     "level": "federal",
     "office": "U.S. Representative",
-    "district": "CD-47 (all of Dana Point; Irvine, Laguna Beach, Laguna Niguel, Aliso Viejo, Laguna Hills, Laguna Woods, Lake Forest, Tustin, parts of Newport Beach and Mission Viejo)",
-    "scope_plain": "All of Dana Point votes in this race. California's 47th District, on the new map voters approved with Prop 50, runs along the Orange County coast and inland: Dana Point, Irvine, Laguna Beach, Laguna Niguel, Aliso Viejo, Lake Forest, Tustin and parts of Newport Beach and Mission Viejo. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+    "district": "CD-47 (almost all of Dana Point; Irvine, Laguna Beach, Laguna Niguel, Aliso Viejo, Laguna Hills, Laguna Woods, Lake Forest, Tustin, parts of Newport Beach and Mission Viejo)",
+    "scope_plain": "Almost all of Dana Point votes in this race. The only exception is a small area east of San Juan Creek, north of Pacific Coast Highway near Doheny Park Road in Capistrano Beach (precinct 41818). That area votes in the 49th District. California's 47th District, on the new map voters approved with Prop 50, runs along the Orange County coast and inland: Dana Point, Irvine, Laguna Beach, Laguna Niguel, Aliso Viejo, Lake Forest, Tustin and parts of Newport Beach and Mission Viejo. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
     "office_explainer": "One of 435 House members. Writes federal laws and votes on the budget and taxes. Two-year term.",
     "why_it_matters": "A first-term Democrat against a Republican business owner, in a seat Prop 50 redrew: Min's campaign says about 60% of the district is new to him, Dana Point included. In June, Min led a field of nine with 45.4%; Le Roux was second with 25.0%.",
     "vote_for": 1,
@@ -83,6 +83,14 @@
       {
         "name": "OC Registrar candidate log",
         "url": "https://ocvote.gov/fileadmin/user_upload/data/candlog/GEN2026/candlog.pdf"
+      },
+      {
+        "name": "Orange County (CA): 47th Congressional District precinct map (no precinct 41818)",
+        "url": "https://ocvote.gov/bin/maps/pdf/Congressional/Map_47th%20Congressional%20District.pdf"
+      },
+      {
+        "name": "Orange County (CA): 49th Congressional District precinct map (lists Dana Point's precinct 41818)",
+        "url": "https://ocvote.gov/bin/maps/pdf/Congressional/Map_49th%20Congressional%20District.pdf"
       }
     ],
     "confidence": "verified"
@@ -92,8 +100,8 @@
     "state": "CA",
     "level": "state",
     "office": "State Senator",
-    "district": "SD-36 (all of Dana Point; the Orange County coast north to Seal Beach, inland Orange County cities and a few in Los Angeles County)",
-    "scope_plain": "All of Dana Point votes in this race. Besides Dana Point, the senator's office lists San Clemente, Laguna Beach, Newport Beach, Huntington Beach, Seal Beach, Fountain Valley, Westminster, Garden Grove, Stanton, Cypress, Buena Park, La Palma, Los Alamitos and Rossmoor in Orange County, and Cerritos, Artesia and Hawaiian Gardens in Los Angeles County. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+    "district": "SD-36 (almost all of Dana Point; the Orange County coast north to Seal Beach, inland Orange County cities and a few in Los Angeles County)",
+    "scope_plain": "Almost all of Dana Point votes in this race. The only exception is a small area east of San Juan Creek, north of Pacific Coast Highway near Doheny Park Road in Capistrano Beach (precinct 41818). That area votes in the 38th District. Besides Dana Point, the senator's office lists San Clemente, Laguna Beach, Newport Beach, Huntington Beach, Seal Beach, Fountain Valley, Westminster, Garden Grove, Stanton, Cypress, Buena Park, La Palma, Los Alamitos and Rossmoor in Orange County, and Cerritos, Artesia and Hawaiian Gardens in Los Angeles County. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
     "office_explainer": "One of 40 state senators. Writes California laws and passes the state budget. Four-year term.",
     "why_it_matters": "The Republican incumbent, who won this seat in a 2025 special election, faces a Democratic San Clemente councilmember. Only these two ran in June: Strickland 53.4%, Duncan 46.6%.",
     "vote_for": 1,
@@ -171,6 +179,14 @@
       {
         "name": "OC Registrar candidate log",
         "url": "https://ocvote.gov/fileadmin/user_upload/data/candlog/GEN2026/candlog.pdf"
+      },
+      {
+        "name": "Orange County (CA): 36th Senate District precinct map (no precinct 41818)",
+        "url": "https://ocvote.gov/bin/maps/pdf/StateSenate/Map_36th%20Senate%20District.pdf"
+      },
+      {
+        "name": "Orange County (CA): 38th Senate District precinct map (lists Dana Point's precinct 41818)",
+        "url": "https://ocvote.gov/bin/maps/pdf/StateSenate/Map_38th%20Senate%20District.pdf"
       }
     ],
     "confidence": "verified"

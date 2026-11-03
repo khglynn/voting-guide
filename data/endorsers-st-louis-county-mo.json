@@ -9,7 +9,8 @@
       "MO",
       "webster-groves-mo",
       "clayton-mo",
-      "ballwin-mo"
+      "ballwin-mo",
+      "st-louis-city-mo"
     ],
     "guide_url": "https://www.stltoday.com/opinion/editorial/",
     "default_on": true,
@@ -28,7 +29,8 @@
     "geography": [
       "webster-groves-mo",
       "clayton-mo",
-      "ballwin-mo"
+      "ballwin-mo",
+      "st-louis-city-mo"
     ],
     "guide_url": "https://www.vote411.org/mo-lwvstl",
     "default_on": true,
@@ -46,9 +48,10 @@
       "MO",
       "webster-groves-mo",
       "clayton-mo",
-      "ballwin-mo"
+      "ballwin-mo",
+      "st-louis-city-mo"
     ],
-    "guide_url": "https://yourmissourijudges.org/judges/circuit/st-louis-county/",
+    "guide_url": "https://yourmissourijudges.org/judges/",
     "default_on": true,
     "endorses_candidates": true,
     "endorses_measures": false,
@@ -64,7 +67,8 @@
       "MO",
       "webster-groves-mo",
       "clayton-mo",
-      "ballwin-mo"
+      "ballwin-mo",
+      "st-louis-city-mo"
     ],
     "guide_url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
     "default_on": true,

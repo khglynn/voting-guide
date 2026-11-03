@@ -1,0 +1,29 @@
+[
+ {
+  "id": "mnea",
+  "name": "Missouri National Education Association",
+  "short": "Missouri NEA",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says it “is the largest union for public school teachers and education support staff in Missouri” (https://www.mnea.org/about). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://mnea.org/vote4education",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "geography": [
+   "MO"
+  ]
+ },
+ {
+  "id": "seiu-healthcare-il",
+  "name": "SEIU Healthcare Illinois Indiana Missouri Kansas",
+  "short": "SEIU Healthcare",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says it is “the fastest-growing union of healthcare, child care, home care and nursing home workers in the Midwest” (https://seiuhcilin.org/about/). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://seiuhcilin.org/resources/election-information/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ }
+]

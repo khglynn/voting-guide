@@ -20,16 +20,18 @@
    went through the workbench's GPT pass (claude-plans/2026-10-21-third-pass/discovery-log.md).
 
    scripts/build-pages.mjs loads this module through Vite's SSR loader, as tests/model.mjs loads the model. */
-import type { Contest, Dated, HowTo, Index, Lookups, PlaceBundle, StateBundle } from '../types';
+import type { Contest, Dated, HowTo, Index, Item, Lookups, PlaceBundle, StateBundle } from '../types';
 import { buildBallot, sectionOf, SECTIONS, type Ballot, type SectionKey } from '../ballot';
 import { S } from '../state';
 import { cleanOffice, rowTitle } from '../model/labels';
-import { applyDated, clock, isMailState, localHowto } from '../model/plan';
+import { applyDated, clock, closeOf, isMailState, localHowto, PLAIN_TIME, zonesFor } from '../model/plan';
 import { esc, fmtDate } from '../util';
 import { escP, telHTML } from '../views/common';
 
 export const ORIGIN = 'https://vote.kevinhg.com';
-export const SITE_NAME = 'Your ballot, explained';
+/* The guide's name in breadcrumbs, structured data, og:site_name, the 404's title, robots.txt and llms.txt: the
+   tagline (views/mast.ts, the home page's <title>) without its period, since it sits mid-line in most of them. */
+export const SITE_NAME = 'Quickly make your voting plan';
 const ELECTION = 'Nov 3, 2026';
 
 export interface SiteData {
@@ -58,9 +60,19 @@ export const statePath = (d: SiteData, st: string): string => `/${slug(d.index.s
 export const placePath = (id: string): string => `/${id}`;
 /* "Austin", "Los Angeles", "Brooklyn", "Ballwin area": the label without its parenthetical. */
 export const shortLabel = (label: string): string => label.replace(/\s*\(.*\)\s*$/, '').trim();
+/* The name a page goes by: shortLabel, except where another place in the state has the same one
+   (Austin's three county pages), which keeps its county so the pages tell apart ("Austin (Williamson County)"). */
+export function pageLabel(d: SiteData, id: string): string {
+  const p = d.index.places[id];
+  const bare = shortLabel(p.label);
+  const twin = Object.values(d.index.places).some((x) => x !== p && x.state === p.state && shortLabel(x.label) === bare);
+  if (!twin) return bare;
+  const county = /\(([^)]*)\)\s*$/.exec(p.label);
+  return `${bare} (${county ? county[1] : `${p.counties[0]} County`})`;
+}
 /* "Austin, TX"; a label that already names its state ("DC Ward 1") keeps it as it is. */
-export function placeName(p: { label: string; state: string }): string {
-  const s = shortLabel(p.label);
+export function placeName(p: { label: string; state: string }, label = shortLabel(p.label)): string {
+  const s = label;
   return p.state === 'DC' ? s : `${s}, ${p.state}`;
 }
 const countyName = (c: string): string => c.replace(/\s*\([^)]*\)/g, '').replace(/\s+County$/i, '').trim();
@@ -77,8 +89,10 @@ const year = (iso: string): string => {
   const [y, m, d] = iso.split('-').map(Number);
   return new Date(Date.UTC(y, m - 1, d)).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 };
+// A date past the build day counts as the build day: dropping it instead fell back to an older date (a re-check that
+// re-dated rows to the day after the tests' fixed day turned Austin's lastmod into Oct 16, Oct 29).
 const newest = (dates: (string | null | undefined)[], cap: string): string => {
-  const ok = dates.filter((d): d is string => !!d && /^\d{4}-\d{2}-\d{2}$/.test(d) && d <= cap).sort();
+  const ok = dates.filter((d): d is string => !!d && /^\d{4}-\d{2}-\d{2}$/.test(d)).map((d) => (d > cap ? cap : d)).sort();
   return ok.length ? ok[ok.length - 1] : cap;
 };
 
@@ -102,6 +116,12 @@ function memberHTML(c: Contest): string {
   const line = !names.length ? '' : c.is_retention ? `Vote to keep or remove: ${names.join(', ')}` : `${c.candidates.length === 1 ? 'Unopposed: ' : ''}${names.join(', ')}`;
   return `<li><b>${escP(label)}</b>${line ? ` <span class="pg-c">${line}</span>` : ''}</li>`;
 }
+/* Why a race is on only some of a place's ballots, in the few words a page row has room for. A city's own race
+   that the whole city votes in, on a place whose ZIPs reach past the city (Columbia's mayor, for ZIP 38401), is
+   "Only inside city limits": "Only in parts of Columbia" read as if some of the city didn't get it (audit, Oct 29). */
+const CITY_LIMITS = /\binside\b[^.;]*\bcity limits\b/i;
+export const mayLabel = (it: Item, where: string): string =>
+  it.level === 'city' && CITY_LIMITS.test(it.kind === 'contest' ? it.scope_plain || '' : it.jurisdiction || '') ? 'Only inside city limits' : `Only in parts of ${where}`;
 /* Past this many districts a statewide page says how many instead of listing them (Texas has 150 House seats). */
 const LIST_UP_TO = 12;
 interface Row { html: string; text: string }
@@ -110,7 +130,7 @@ function ballotRows(b: Ballot, where: string): Map<SectionKey, Row[]> {
   const out = new Map<SectionKey, Row[]>();
   const seen = new Set<string>();
   const add = (sec: SectionKey, html: string, text: string) => out.set(sec, [...(out.get(sec) || []), { html, text }]);
-  const maybe = `<span class="pg-may">Only in parts of ${esc(where)}</span>`;
+  const maybe = (it: Item) => `<span class="pg-may">${esc(mayLabel(it, where))}</span>`;
   for (const it of b.items) {
     const sec = sectionOf(it);
     const g = b.groupOf[it.id];
@@ -125,7 +145,7 @@ function ballotRows(b: Ballot, where: string): Map<SectionKey, Row[]> {
       continue;
     }
     const { title, sub } = rowTitle(it);
-    const may = b.mayApply.has(it.id) ? ` ${maybe}` : '';
+    const may = b.mayApply.has(it.id) ? ` ${maybe(it)}` : '';
     if (it.kind === 'measure') {
       add(sec, `<li><b>${escP(title)}</b>${sub && sub !== title ? `<span class="pg-sub">: ${escP(sub)}</span>` : ''}${may}</li>`, `${title}${sub ? `: ${sub}` : ''}`);
     } else {
@@ -147,9 +167,6 @@ function ballotHTML(b: Ballot, where: string): string {
 
 /* ---------- dates, places to vote, the office ---------- */
 interface DateRow { date: string; lead: string; when: string; detail: string | null; list?: string[] }
-/* "7:00 AM", "8 PM PT": a time and nothing else. A qualified one ("8:30 AM at the six King County vote centers")
-   isn't a statewide opening time, so it never becomes "You can vote from ...". */
-const PLAIN_TIME = /^\s*\d{1,2}(?::\d{2})?\s*[ap]\.?m\.?(?:\s+[A-Z]{2,3})?\s*$/i;
 
 /* Text the data dates to change (`dated`, plan.applyDated) never goes on a static page, whatever the build date
    (Codex, Oct 28): it can say "today" or "tomorrow", and a page keeps what it says until the next deploy. So before
@@ -190,8 +207,9 @@ function dateRows(h: HowTo, place: PlaceBundle | null): DateRow[] {
   // that arrives the next day; Georgia doesn't count postmarks; Codex round 2), so the heading names none of them.
   if (r && r.date) out.push({ date: r.date, lead: 'Mail ballot deadline: ', when: fmtDate(r.date), detail: r.time || null, list: (h.mail_ballot.return_options || []).filter(Boolean) });
   const ed = h.election_day;
-  const close = clock(ed.polls_close) || ed.polls_close;
-  const hours = !close ? '' : !mail && PLAIN_TIME.test(ed.polls_open || '') && PLAIN_TIME.test(ed.polls_close || '') ? `You can vote from ${clock(ed.polls_open)} to ${close}.` : `Polls close at ${close}.`;
+  const { close } = closeOf(ed.polls_close, zonesFor(h.state, place ? [place] : []));
+  // A place's own opening time (Nashville's 7 AM, Oct 29) pairs with its own zone's close; a state's two-zone close never does.
+  const hours = !close ? '' : !mail && PLAIN_TIME.test(ed.polls_open || '') && (PLAIN_TIME.test(ed.polls_close || '') || !!place?.election_day) ? `You can vote from ${clock(ed.polls_open)} to ${close}.` : `Polls close at ${close}.`;
   if (h.election_date) out.push({ date: h.election_date, lead: 'Election Day: ', when: fmtDate(h.election_date), detail: [hours, ed.in_line_rule].filter(Boolean).join(' ') || null });
   return out.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
 }
@@ -201,12 +219,22 @@ const LOOK_LABEL: [keyof Lookups, string][] = [['early_in_person', 'Early voting
 function whereHTML(h: HowTo, p: PlaceBundle | null): string {
   const links: string[] = [];
   const mail = isMailState(h);
-  const early = h.early_in_person.available ? h.early_in_person.lookup_url : null;
+  // Once early voting has ended by the build day (h.day, Oct 30), its links go and the Election Day link stays;
+  // a page built during early voting keeps its link until the next deploy. Where the state's window is only a
+  // minimum, that's its last possible county day (Florida's page keeps its link Nov 1, when Orange and Leon still
+  // vote early); a place's own window has no such day (Pensacola's link goes Nov 1, Orlando's Nov 2).
+  const ep = h.early_in_person;
+  const last = ep.latest_end || ep.end;
+  const earlyOver = !!(last && h.day && h.day > last);
+  const early = ep.available && !earlyOver ? ep.lookup_url : null;
   const day = h.election_day.lookup_url;
   // A place across county lines (Austin: Travis, Williamson, Hays): each county's own tools, labeled, as My plan
   // shows them before it knows your county; the state's statewide lookup stands in for none of them.
   const counties = h.county_links && h.county_links.length > 1 ? h.county_links.filter((c) => c && c.county) : [];
-  const byCounty = counties.length ? `<p class="pg-cty"><b>Find your county’s voting places:</b></p><ul class="pg-ctys">${counties.map((c) => `<li><b>${esc(`${c.county} County`)}</b> ${LOOK_LABEL.filter(([k]) => c.lookups[k]).map(([k, l]) => ext(c.lookups[k]!, l)).join(' · ')}</li>`).join('')}</ul>` : '';
+  // Each county's links first: a county left with none (Atlanta's after Oct 30: early voting over, drop box links
+  // dated) has no row, and with no row at all there's no heading.
+  const rows = counties.map((c) => ({ county: c.county, ls: LOOK_LABEL.filter(([k]) => c.lookups[k] && !(k === 'early_in_person' && earlyOver)).map(([k, l]) => ext(c.lookups[k]!, l)) })).filter((r) => r.ls.length);
+  const byCounty = rows.length ? `<p class="pg-cty"><b>Find your county’s voting places:</b></p><ul class="pg-ctys">${rows.map((r) => `<li><b>${esc(`${r.county} County`)}</b> ${r.ls.join(' · ')}</li>`).join('')}</ul>` : '';
   // The state's lookup stays for any kind not every county has (Atlanta's counties list no Election Day page).
   const own = (k: keyof Lookups): boolean => counties.length > 0 && counties.every((c) => !!c.lookups[k]);
   const e = own('early_in_person') ? null : early, dd = own('election_day') ? null : day;
@@ -359,13 +387,14 @@ export function placePage(d: SiteData, id: string, a: Assets, today: string): Pa
   const b = buildBallot(sb, [p]);
   b.howto = localHowto(sh, [p], null, today);
   const h = b.howto;
-  const name = placeName(p);
-  const short = shortLabel(p.label);
+  const short = pageLabel(d, id);
+  const name = placeName(p, short);
   const stName = d.index.states[p.state].name;
   const { races, measures } = countItems(b);
   const counties = countiesLine(p);
   const lastmod = newest([sb.howto.last_verified, ix.checked, d.index.states[p.state].checked], today);
-  const title = `${name} voting guide: your ${ELECTION} ballot`;
+  // A county in the name (Austin's pages) takes the room "your" had, to stay under a title's 65.
+  const title = `${name} voting guide: ${short === shortLabel(p.label) ? 'your ' : ''}${ELECTION} ballot`;
   const summary = `${plural(races, 'race')}, ${plural(measures, 'measure')}, key dates and where to vote`;
   const description = `Your ${short} ballot for ${ELECTION}, in plain English: ${summary}.`;
   const others = d.index.states[p.state].places.filter((x) => x !== id);
@@ -386,7 +415,7 @@ ${idHTML(h, false)}<p><a href="${esc(statePath(d, p.state))}#id">What counts as 
 <p>${plural(races, 'race')} and ${plural(measures, 'measure')} across ${esc(short)}.${b.groups.length || b.mayApply.size ? ' Your address decides which ones are on your ballot. Enter it in the guide to see yours.' : ''}</p>
 ${ballotHTML(b, short)}
 <p style="margin-top:22px"><a class="bigbtn" href="/?place=${esc(id)}">Open your ${esc(short)} ballot</a></p>
-${others.length ? `<h2 class="pg-h2">Other places in ${esc(stName)}</h2><ul class="pg-places">${others.map((x) => `<li><a href="${esc(placePath(x))}">${esc(shortLabel(d.index.places[x].label))}</a></li>`).join('')}</ul>` : ''}
+${others.length ? `<h2 class="pg-h2">Other places in ${esc(stName)}</h2><ul class="pg-places">${others.map((x) => `<li><a href="${esc(placePath(x))}">${esc(pageLabel(d, x))}</a></li>`).join('')}</ul>` : ''}
 <p><a href="${esc(statePath(d, p.state))}">See the statewide ballot for ${esc(stName)}</a></p>`;
   const path = placePath(id);
   const html = shell({
@@ -416,7 +445,7 @@ export function statePage(d: SiteData, st: string, a: Assets, today: string): Pa
 <a class="bigbtn" href="/?state=${esc(st)}">Open your ${esc(s.name)} ballot</a>
 <p class="fine">Enter your ZIP code in the guide to add your local races. Your picks stay on your device.</p>
 <h2 class="pg-h2">Local guides in ${esc(s.name)}</h2>
-<ul class="pg-places">${s.places.map((id) => `<li><a href="${esc(placePath(id))}">${esc(shortLabel(d.index.places[id].label))}</a></li>`).join('')}</ul>
+<ul class="pg-places">${s.places.map((id) => `<li><a href="${esc(placePath(id))}">${esc(pageLabel(d, id))}</a></li>`).join('')}</ul>
 <h2 class="pg-h2" id="dates">Key dates</h2>
 ${datesHTML(dateRows(h, null))}
 ${h.model_plain ? `<h2 class="pg-h2">How voting works in ${esc(s.name)}</h2><p>${escP(h.model_plain)}</p>` : ''}
@@ -452,7 +481,7 @@ export function homeExtras(d: SiteData): { jsonLd: string; noscript: string } {
       publisher: { '@type': 'Person', name: 'Kevin HG', url: 'https://kevinhg.com' },
     }],
   }).replace(/</g, '\\u003c');
-  const list = byState(d).map((st) => `<li><a href="${esc(statePath(d, st))}">${esc(d.index.states[st].name)}</a>: ${d.index.states[st].places.map((id) => `<a href="${esc(placePath(id))}">${esc(shortLabel(d.index.places[id].label))}</a>`).join(', ')}</li>`).join('');
+  const list = byState(d).map((st) => `<li><a href="${esc(statePath(d, st))}">${esc(d.index.states[st].name)}</a>: ${d.index.states[st].places.map((id) => `<a href="${esc(placePath(id))}">${esc(pageLabel(d, id))}</a>`).join(', ')}</li>`).join('');
   const noscript = `<noscript><div style="padding:16px;font-family:Georgia,serif;max-width:640px"><p>Turn on JavaScript to build your ballot. Find official voting info for every state at <a href="https://vote.gov/">vote.gov</a>.</p><p>You can still read about the ballot where you live:</p><ul>${list}</ul></div></noscript>`;
   return { jsonLd: ld, noscript };
 }

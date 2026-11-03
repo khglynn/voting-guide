@@ -64,9 +64,9 @@
     "target_id": "fl-retention-1dca-lewis",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the current general-election slate on October 19. It lists Fifth District appellate retention picks but no First District pick. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "Checked the current general-election slate on October 19. It lists Fifth District appellate retention picks but no First District pick. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.orlandosentinel.com/2026/10/15/list-of-orlando-sentinels-endorsements-recommendations-for-the-november-general-election/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -74,9 +74,9 @@
     "target_id": "fl-retention-1dca-nordby",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the current general-election slate on October 19. It lists Fifth District appellate retention picks but no First District pick. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "Checked the current general-election slate on October 19. It lists Fifth District appellate retention picks but no First District pick. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.orlandosentinel.com/2026/10/15/list-of-orlando-sentinels-endorsements-recommendations-for-the-november-general-election/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -84,9 +84,9 @@
     "target_id": "fl-retention-1dca-osterhaus",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the current general-election slate on October 19. It lists Fifth District appellate retention picks but no First District pick. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "Checked the current general-election slate on October 19. It lists Fifth District appellate retention picks but no First District pick. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.orlandosentinel.com/2026/10/15/list-of-orlando-sentinels-endorsements-recommendations-for-the-november-general-election/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -94,9 +94,9 @@
     "target_id": "fl-retention-1dca-roberts",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the current general-election slate on October 19. It lists Fifth District appellate retention picks but no First District pick. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "Checked the current general-election slate on October 19. It lists Fifth District appellate retention picks but no First District pick. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.orlandosentinel.com/2026/10/15/list-of-orlando-sentinels-endorsements-recommendations-for-the-november-general-election/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -104,9 +104,9 @@
     "target_id": "fl-retention-1dca-treadwell",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the current general-election slate on October 19. It lists Fifth District appellate retention picks but no First District pick. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "Checked the current general-election slate on October 19. It lists Fifth District appellate retention picks but no First District pick. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.orlandosentinel.com/2026/10/15/list-of-orlando-sentinels-endorsements-recommendations-for-the-november-general-election/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -162,13 +162,12 @@
   {
     "endorser_id": "sun-sentinel-eb",
     "target_id": "fl-attorney-general",
-    "status": "not_found",
-    "unreadable": true,
-    "choice": null,
-    "why": "We could not read the Sun Sentinel's Cabinet and retention picks. Its slate may mirror the Orlando Sentinel's, but that is not confirmed.",
+    "status": "endorsed",
+    "choice": "Jose Javier Rodriguez",
+    "why": "Listed in its complete list of endorsements; its Sept. 12 editorial says he promises to pick up the trail of corruption in the Hope Florida case.",
     "url": "https://www.sun-sentinel.com/opinion/endorsements/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "date": "2026-09-12",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "sun-sentinel-eb",
@@ -193,13 +192,12 @@
   {
     "endorser_id": "sun-sentinel-eb",
     "target_id": "fl-retention-muniz",
-    "status": "not_found",
-    "unreadable": true,
-    "choice": null,
-    "why": "We could not read the Sun Sentinel's Cabinet and retention picks. Its slate may mirror the Orlando Sentinel's, but that is not confirmed.",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed in its complete list of endorsements; its Sept. 28 editorial is titled \"It's only fair to retire this Florida justice.\"",
     "url": "https://www.sun-sentinel.com/opinion/endorsements/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "date": "2026-09-28",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "sun-sentinel-eb",
@@ -1157,9 +1155,9 @@
     "target_id": "fl-amendment-1",
     "status": "not_found",
     "choice": null,
-    "why": "LWV Florida's 2026 positions on Amendments 1 and 2 were not found; only the Amendment 3 opposition surfaced. Check lwvfl.org's 2026 voter guide. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "LWV Florida's 2026 positions on Amendments 1 and 2 were not found; only the Amendment 3 opposition surfaced. Check lwvfl.org's 2026 voter guide. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://lwvfl.org/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "unverified"
   },
   {
@@ -1167,9 +1165,9 @@
     "target_id": "fl-amendment-2",
     "status": "not_found",
     "choice": null,
-    "why": "LWV Florida's 2026 positions on Amendments 1 and 2 were not found; only the Amendment 3 opposition surfaced. Check lwvfl.org's 2026 voter guide. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "LWV Florida's 2026 positions on Amendments 1 and 2 were not found; only the Amendment 3 opposition surfaced. Check lwvfl.org's 2026 voter guide. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://lwvfl.org/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "unverified"
   },
   {
@@ -1327,9 +1325,9 @@
     "target_id": "fl-us-senate-special",
     "status": "not_found",
     "choice": null,
-    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.floridadems.org/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -1337,9 +1335,9 @@
     "target_id": "fl-governor",
     "status": "not_found",
     "choice": null,
-    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.floridadems.org/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -1347,9 +1345,9 @@
     "target_id": "fl-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.floridadems.org/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -1357,9 +1355,9 @@
     "target_id": "fl-cfo",
     "status": "not_found",
     "choice": null,
-    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.floridadems.org/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -1367,69 +1365,69 @@
     "target_id": "fl-agriculture-commissioner",
     "status": "not_found",
     "choice": null,
-    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.floridadems.org/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
     "endorser_id": "fl-democratic-party",
     "target_id": "fl-retention-muniz",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.floridadems.org/",
-    "date": "2026-10-16",
+    "date": "2026-11-02",
     "confidence": "sourced"
   },
   {
     "endorser_id": "fl-democratic-party",
     "target_id": "fl-retention-1dca-lewis",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.floridadems.org/",
-    "date": "2026-10-16",
+    "date": "2026-11-02",
     "confidence": "sourced"
   },
   {
     "endorser_id": "fl-democratic-party",
     "target_id": "fl-retention-1dca-nordby",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.floridadems.org/",
-    "date": "2026-10-16",
+    "date": "2026-11-02",
     "confidence": "sourced"
   },
   {
     "endorser_id": "fl-democratic-party",
     "target_id": "fl-retention-1dca-osterhaus",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.floridadems.org/",
-    "date": "2026-10-16",
+    "date": "2026-11-02",
     "confidence": "sourced"
   },
   {
     "endorser_id": "fl-democratic-party",
     "target_id": "fl-retention-1dca-roberts",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.floridadems.org/",
-    "date": "2026-10-16",
+    "date": "2026-11-02",
     "confidence": "sourced"
   },
   {
     "endorser_id": "fl-democratic-party",
     "target_id": "fl-retention-1dca-treadwell",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.floridadems.org/",
-    "date": "2026-10-16",
+    "date": "2026-11-02",
     "confidence": "sourced"
   },
   {
@@ -1437,9 +1435,9 @@
     "target_id": "fl-amendment-1",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "No 2026 endorsement found. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.floridadems.org/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "unverified"
   },
   {
@@ -1447,9 +1445,9 @@
     "target_id": "fl-amendment-2",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "No 2026 endorsement found. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.floridadems.org/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "unverified"
   },
   {
@@ -1525,19 +1523,19 @@
   {
     "endorser_id": "fl-republican-party",
     "target_id": "fl-retention-1dca-lewis",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://florida.gop/",
-    "date": "2026-10-16",
+    "date": "2026-11-02",
     "confidence": "sourced"
   },
   {
     "endorser_id": "fl-republican-party",
     "target_id": "fl-retention-1dca-nordby",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://florida.gop/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1545,9 +1543,9 @@
   {
     "endorser_id": "fl-republican-party",
     "target_id": "fl-retention-1dca-osterhaus",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://florida.gop/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1555,9 +1553,9 @@
   {
     "endorser_id": "fl-republican-party",
     "target_id": "fl-retention-1dca-roberts",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://florida.gop/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1565,9 +1563,9 @@
   {
     "endorser_id": "fl-republican-party",
     "target_id": "fl-retention-1dca-treadwell",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://florida.gop/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1607,29 +1605,29 @@
     "target_id": "fl-us-senate-special",
     "status": "endorsed",
     "choice": "Angie Nixon",
-    "why": "Listed on the Florida AFL-CIO's official 2026 endorsement list, voted by its Committee on Public Education (COPE).",
+    "why": "Listed in the Florida AFL-CIO Labor 2026 Endorsements.",
     "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
     "endorser_id": "fl-afl-cio",
     "target_id": "fl-governor",
     "status": "endorsed",
-    "choice": "David Jolly",
-    "why": "Endorsed with the Florida Education Association in June 2026.",
-    "url": "https://floridianpress.com/2026/06/florida-afl-cio-florida-education-association-endorse-david-jolly-for-governor/",
-    "date": "2026-06-01",
-    "confidence": "sourced"
+    "choice": "David Jolly (Lt. Gov.: Gwen Graham)",
+    "why": "Listed in the Florida AFL-CIO Labor 2026 Endorsements, as \"David Jolly / Gwen Graham\".",
+    "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fl-afl-cio",
     "target_id": "fl-attorney-general",
     "status": "endorsed",
     "choice": "Jose Javier Rodriguez",
-    "why": "Listed on the Florida AFL-CIO's official 2026 endorsement list, voted by its Committee on Public Education (COPE). Marked (EE), an early endorsement.",
+    "why": "Listed in the Florida AFL-CIO Labor 2026 Endorsements.",
     "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1637,9 +1635,9 @@
     "target_id": "fl-cfo",
     "status": "endorsed",
     "choice": "Annette Taddeo",
-    "why": "Listed on the Florida AFL-CIO's official 2026 endorsement list, voted by its Committee on Public Education (COPE).",
+    "why": "Listed in the Florida AFL-CIO Labor 2026 Endorsements.",
     "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1647,17 +1645,17 @@
     "target_id": "fl-agriculture-commissioner",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the Florida AFL-CIO's 2026 endorsement list on Oct 16: it names no Agriculture Commissioner endorsement. The page says it is not the full list of races the group considered, so this is not a stated 'no position'. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "Checked the Florida AFL-CIO's 2026 endorsement list on Oct 16: it names no Agriculture Commissioner endorsement. The page says it is not the full list of races the group considered, so this is not a stated 'no position'. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
     "endorser_id": "fl-afl-cio",
     "target_id": "fl-retention-muniz",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://flaflcio.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1665,9 +1663,9 @@
   {
     "endorser_id": "fl-afl-cio",
     "target_id": "fl-retention-1dca-lewis",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://flaflcio.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1675,9 +1673,9 @@
   {
     "endorser_id": "fl-afl-cio",
     "target_id": "fl-retention-1dca-nordby",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://flaflcio.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1685,9 +1683,9 @@
   {
     "endorser_id": "fl-afl-cio",
     "target_id": "fl-retention-1dca-osterhaus",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://flaflcio.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1695,9 +1693,9 @@
   {
     "endorser_id": "fl-afl-cio",
     "target_id": "fl-retention-1dca-roberts",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://flaflcio.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1705,9 +1703,9 @@
   {
     "endorser_id": "fl-afl-cio",
     "target_id": "fl-retention-1dca-treadwell",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://flaflcio.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1717,9 +1715,9 @@
     "target_id": "fl-amendment-1",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "No 2026 endorsement found. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://flaflcio.org/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "unverified"
   },
   {
@@ -1727,9 +1725,9 @@
     "target_id": "fl-amendment-2",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "No 2026 endorsement found. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://flaflcio.org/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "unverified"
   },
   {
@@ -1737,9 +1735,9 @@
     "target_id": "fl-amendment-3",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "No 2026 endorsement found. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://flaflcio.org/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "unverified"
   },
   {
@@ -1757,9 +1755,9 @@
     "target_id": "fl-governor",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "No 2026 endorsement found. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.flchamber.com/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "unverified"
   },
   {
@@ -1767,9 +1765,9 @@
     "target_id": "fl-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "No 2026 endorsement found. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.flchamber.com/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "unverified"
   },
   {
@@ -1777,9 +1775,9 @@
     "target_id": "fl-cfo",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "No 2026 endorsement found. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.flchamber.com/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "unverified"
   },
   {
@@ -1787,17 +1785,17 @@
     "target_id": "fl-agriculture-commissioner",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "No 2026 endorsement found. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.flchamber.com/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "unverified"
   },
   {
     "endorser_id": "fl-chamber",
     "target_id": "fl-retention-muniz",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://www.flchamber.com/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1805,9 +1803,9 @@
   {
     "endorser_id": "fl-chamber",
     "target_id": "fl-retention-1dca-lewis",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://www.flchamber.com/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1815,9 +1813,9 @@
   {
     "endorser_id": "fl-chamber",
     "target_id": "fl-retention-1dca-nordby",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://www.flchamber.com/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1825,9 +1823,9 @@
   {
     "endorser_id": "fl-chamber",
     "target_id": "fl-retention-1dca-osterhaus",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://www.flchamber.com/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1835,9 +1833,9 @@
   {
     "endorser_id": "fl-chamber",
     "target_id": "fl-retention-1dca-roberts",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://www.flchamber.com/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1845,9 +1843,9 @@
   {
     "endorser_id": "fl-chamber",
     "target_id": "fl-retention-1dca-treadwell",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://www.flchamber.com/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1857,9 +1855,9 @@
     "target_id": "fl-amendment-1",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "No 2026 endorsement found. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.flchamber.com/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "unverified"
   },
   {
@@ -1867,9 +1865,9 @@
     "target_id": "fl-amendment-2",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "No 2026 endorsement found. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.flchamber.com/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "unverified"
   },
   {
@@ -1877,9 +1875,9 @@
     "target_id": "fl-amendment-3",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "No 2026 endorsement found. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.flchamber.com/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "unverified"
   },
   {
@@ -1917,9 +1915,9 @@
     "target_id": "fl-cfo",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "No 2026 endorsement found. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.nrapvf.org/grades/florida/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "unverified"
   },
   {
@@ -1935,9 +1933,9 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "fl-retention-muniz",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://www.nrapvf.org/grades/florida/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1945,9 +1943,9 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "fl-retention-1dca-lewis",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://www.nrapvf.org/grades/florida/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1955,9 +1953,9 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "fl-retention-1dca-nordby",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://www.nrapvf.org/grades/florida/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1965,9 +1963,9 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "fl-retention-1dca-osterhaus",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://www.nrapvf.org/grades/florida/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1975,9 +1973,9 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "fl-retention-1dca-roberts",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://www.nrapvf.org/grades/florida/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1985,9 +1983,9 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "fl-retention-1dca-treadwell",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://www.nrapvf.org/grades/florida/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1995,9 +1993,9 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "fl-amendment-1",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "NRA-PVF grades candidates only.",
+    "why": "No NRA-PVF position on this measure found; its grades cover candidates.",
     "url": "https://www.nrapvf.org/grades/florida/",
     "date": "2026-10-16",
     "confidence": "verified"
@@ -2005,9 +2003,9 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "fl-amendment-2",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "NRA-PVF grades candidates only.",
+    "why": "No NRA-PVF position on this measure found; its grades cover candidates.",
     "url": "https://www.nrapvf.org/grades/florida/",
     "date": "2026-10-16",
     "confidence": "verified"
@@ -2015,9 +2013,9 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "fl-amendment-3",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "NRA-PVF grades candidates only.",
+    "why": "No NRA-PVF position on this measure found; its grades cover candidates.",
     "url": "https://www.nrapvf.org/grades/florida/",
     "date": "2026-10-16",
     "confidence": "verified"
@@ -2075,9 +2073,9 @@
   {
     "endorser_id": "fl-sheriffs-assn",
     "target_id": "fl-retention-muniz",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://www.flsheriffs.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -2085,9 +2083,9 @@
   {
     "endorser_id": "fl-sheriffs-assn",
     "target_id": "fl-retention-1dca-lewis",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://www.flsheriffs.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -2095,9 +2093,9 @@
   {
     "endorser_id": "fl-sheriffs-assn",
     "target_id": "fl-retention-1dca-nordby",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://www.flsheriffs.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -2105,9 +2103,9 @@
   {
     "endorser_id": "fl-sheriffs-assn",
     "target_id": "fl-retention-1dca-osterhaus",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://www.flsheriffs.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -2115,9 +2113,9 @@
   {
     "endorser_id": "fl-sheriffs-assn",
     "target_id": "fl-retention-1dca-roberts",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://www.flsheriffs.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -2125,9 +2123,9 @@
   {
     "endorser_id": "fl-sheriffs-assn",
     "target_id": "fl-retention-1dca-treadwell",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://www.flsheriffs.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -2167,57 +2165,55 @@
     "target_id": "fl-us-senate-special",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "No 2026 endorsement found. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://feaweb.org/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "unverified"
   },
   {
     "endorser_id": "fl-education-assn",
     "target_id": "fl-governor",
     "status": "endorsed",
-    "choice": "David Jolly",
-    "why": "FEA release: \"Educators, workers endorse David Jolly for Florida governor.\"",
-    "url": "https://feaweb.org/release/educators-workers-endorse-david-jolly-for-florida-governor/",
-    "date": "2026-06-01",
-    "confidence": "sourced"
+    "choice": "David Jolly (Lt. Gov.: Gwen Graham)",
+    "why": "Listed in FEA's Voter Guide (Endorsed Candidates) for the November 3 general election.",
+    "url": "https://feaweb.org/action-center/voter-toolkit/",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fl-education-assn",
     "target_id": "fl-attorney-general",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Oct 28, 2026; still no pick on this page.",
-    "url": "https://feaweb.org/",
-    "date": "2026-10-28",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Jose Javier Rodriguez",
+    "why": "Listed in FEA's Voter Guide (Endorsed Candidates) for the November 3 general election (spelled \"Jose Javier Rodridugez\" there).",
+    "url": "https://feaweb.org/action-center/voter-toolkit/",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fl-education-assn",
     "target_id": "fl-cfo",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Oct 28, 2026; still no pick on this page.",
-    "url": "https://feaweb.org/",
-    "date": "2026-10-28",
-    "confidence": "unverified"
+    "status": "no_position",
+    "why": "FEA's Voter Guide lists \"No Action\" for Chief Financial Officer.",
+    "url": "https://feaweb.org/action-center/voter-toolkit/",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fl-education-assn",
     "target_id": "fl-agriculture-commissioner",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Oct 28, 2026; still no pick on this page.",
-    "url": "https://feaweb.org/",
-    "date": "2026-10-28",
-    "confidence": "unverified"
+    "status": "no_position",
+    "why": "FEA's Voter Guide lists \"No Action\" for Commissioner of Agriculture.",
+    "url": "https://feaweb.org/action-center/voter-toolkit/",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fl-education-assn",
     "target_id": "fl-retention-muniz",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://feaweb.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -2225,9 +2221,9 @@
   {
     "endorser_id": "fl-education-assn",
     "target_id": "fl-retention-1dca-lewis",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://feaweb.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -2235,9 +2231,9 @@
   {
     "endorser_id": "fl-education-assn",
     "target_id": "fl-retention-1dca-nordby",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://feaweb.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -2245,9 +2241,9 @@
   {
     "endorser_id": "fl-education-assn",
     "target_id": "fl-retention-1dca-osterhaus",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://feaweb.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -2255,9 +2251,9 @@
   {
     "endorser_id": "fl-education-assn",
     "target_id": "fl-retention-1dca-roberts",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://feaweb.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -2265,9 +2261,9 @@
   {
     "endorser_id": "fl-education-assn",
     "target_id": "fl-retention-1dca-treadwell",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://feaweb.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -2277,9 +2273,9 @@
     "target_id": "fl-amendment-1",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "No 2026 endorsement found. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://feaweb.org/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "unverified"
   },
   {
@@ -2287,9 +2283,9 @@
     "target_id": "fl-amendment-2",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "No 2026 endorsement found. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://feaweb.org/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "unverified"
   },
   {
@@ -2297,9 +2293,9 @@
     "target_id": "fl-amendment-3",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "No 2026 endorsement found. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://feaweb.org/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "unverified"
   },
   {
@@ -2315,49 +2311,49 @@
   {
     "endorser_id": "fl-realtors",
     "target_id": "fl-governor",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Oct 28, 2026; still no pick on this page.",
-    "url": "https://www.floridarealtors.org/",
-    "date": "2026-10-28",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Byron Donalds (Lt. Gov.: Bryan Avila)",
+    "why": "Listed for governor on Florida Realtors PAC's endorsements page.",
+    "url": "https://www.floridarealtors.org/advocacy/pac/endorsements",
+    "date": "2026-10-21",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fl-realtors",
     "target_id": "fl-attorney-general",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Oct 28, 2026; still no pick on this page.",
-    "url": "https://www.floridarealtors.org/",
-    "date": "2026-10-28",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "James Uthmeier",
+    "why": "Listed for attorney general on Florida Realtors PAC's endorsements page.",
+    "url": "https://www.floridarealtors.org/advocacy/pac/endorsements",
+    "date": "2026-10-21",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fl-realtors",
     "target_id": "fl-cfo",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Oct 28, 2026; still no pick on this page.",
-    "url": "https://www.floridarealtors.org/",
-    "date": "2026-10-28",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Blaise Ingoglia",
+    "why": "Listed for chief financial officer on Florida Realtors PAC's endorsements page.",
+    "url": "https://www.floridarealtors.org/advocacy/pac/endorsements",
+    "date": "2026-10-21",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fl-realtors",
     "target_id": "fl-agriculture-commissioner",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Oct 28, 2026; still no pick on this page.",
-    "url": "https://www.floridarealtors.org/",
-    "date": "2026-10-28",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Wilton Simpson",
+    "why": "Listed for commissioner of agriculture on Florida Realtors PAC's endorsements page.",
+    "url": "https://www.floridarealtors.org/advocacy/pac/endorsements",
+    "date": "2026-10-21",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fl-realtors",
     "target_id": "fl-retention-muniz",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://www.floridarealtors.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -2365,9 +2361,9 @@
   {
     "endorser_id": "fl-realtors",
     "target_id": "fl-retention-1dca-lewis",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://www.floridarealtors.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -2375,9 +2371,9 @@
   {
     "endorser_id": "fl-realtors",
     "target_id": "fl-retention-1dca-nordby",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://www.floridarealtors.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -2385,9 +2381,9 @@
   {
     "endorser_id": "fl-realtors",
     "target_id": "fl-retention-1dca-osterhaus",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://www.floridarealtors.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -2395,9 +2391,9 @@
   {
     "endorser_id": "fl-realtors",
     "target_id": "fl-retention-1dca-roberts",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://www.floridarealtors.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -2405,9 +2401,9 @@
   {
     "endorser_id": "fl-realtors",
     "target_id": "fl-retention-1dca-treadwell",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "why": "No position on this retention vote found for 2026.",
     "url": "https://www.floridarealtors.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -2417,9 +2413,9 @@
     "target_id": "fl-amendment-1",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "No 2026 endorsement found. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.floridarealtors.org/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "unverified"
   },
   {
@@ -2427,9 +2423,9 @@
     "target_id": "fl-amendment-2",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "No 2026 endorsement found. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.floridarealtors.org/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "unverified"
   },
   {
@@ -2577,9 +2573,9 @@
     "target_id": "fl-retention-1dca-lewis",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://gopguide.online/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -2597,9 +2593,9 @@
     "target_id": "fl-retention-1dca-nordby",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://gopguide.online/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -2617,9 +2613,9 @@
     "target_id": "fl-retention-1dca-osterhaus",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://gopguide.online/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -2637,9 +2633,9 @@
     "target_id": "fl-retention-1dca-roberts",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://gopguide.online/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -2657,9 +2653,9 @@
     "target_id": "fl-retention-1dca-treadwell",
     "status": "not_found",
     "choice": null,
-    "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://gopguide.online/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {

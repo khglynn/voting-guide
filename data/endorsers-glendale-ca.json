@@ -1,0 +1,143 @@
+[
+ {
+  "id": "lacdp",
+  "name": "Los Angeles County Democratic Party",
+  "type": "party",
+  "lean": "left",
+  "lean_basis": "Official county Democratic Party organization. Its candidates page lists its Nov 2026 candidate endorsements and a table of positions on statewide and local measures (read Oct 17, 2026).",
+  "geography": [
+   "glendale-ca"
+  ],
+  "guide_url": "https://www.lacdp.org/candidates",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "party": "Democratic",
+  "lean_basis_kind": "party"
+ },
+ {
+  "id": "la-county-gop",
+  "name": "Republican Party of Los Angeles County",
+  "type": "party",
+  "lean": "right",
+  "lean_basis": "Official county Republican Party organization. Its Nov 3, 2026 candidate picks and its positions on LA city and county measures are published in an address-lookup tool linked from lagop.org (read Oct 17, 2026). It marks some candidate picks as recommended rather than formally endorsed.",
+  "geography": [
+   "glendale-ca"
+  ],
+  "guide_url": "https://lagop-endorsement-lookup.vercel.app/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "party": "Republican",
+  "lean_basis_kind": "party",
+  "short": "LA County Republican Party"
+ },
+ {
+  "id": "la-fed",
+  "name": "Los Angeles County Federation of Labor, AFL-CIO",
+  "type": "labor",
+  "lean": "lean_left",
+  "lean_basis": "Federation of about 300 unions in LA County that says 'We empower workers to organize and take collective action to win better wages and respect in the workplace' (https://thelafed.org/about/). No outside rating found; lean reflects its stated mission.",
+  "geography": [
+   "glendale-ca"
+  ],
+  "guide_url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
+ },
+ {
+  "id": "la-daily-news-eb",
+  "name": "Los Angeles Daily News / Southern California News Group editorial board",
+  "type": "publication",
+  "lean": "neutral",
+  "lean_basis": "AllSides rates the Los Angeles Daily News Center (independent review, initial rating July 2020; low or initial confidence as of Sept. 2026). Its editorials come from the Southern California News Group board it shares with the OC Register, whose news AllSides rates Lean Right. Rating source: https://www.allsides.com/news-source/los-angeles-daily-news-media-bias.",
+  "geography": [
+   "glendale-ca"
+  ],
+  "guide_url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "default_on": true,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "lean_basis_kind": "outside_rating"
+ },
+ {
+  "id": "lalcv",
+  "name": "Los Angeles League of Conservation Voters",
+  "type": "advocacy",
+  "lean": "lean_left",
+  "lean_basis": "Environmental group that calls itself 'the only environmental Political Action Committee (PAC) in Los Angeles County' (https://lalcv.org/about/). No outside rating found; lean reflects its stated mission.",
+  "geography": [
+   "glendale-ca"
+  ],
+  "guide_url": "https://lalcv.org/category/featured/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "lean_basis_kind": "mission",
+  "short": "LA League of Conservation Voters"
+ },
+ {
+  "id": "reform-california",
+  "name": "Reform California",
+  "type": "advocacy",
+  "lean": "right",
+  "lean_basis": "Its own stated mission (About page, https://www.reformcalifornia.org/about): \"dedicated to taking back our state from the far-Left politicians and special interests,\" and it runs campaigns against \"tax increases\" (it says it has defeated \"over 300 tax hike proposals\"). No AllSides or Ad Fontes rating found. Its About page also says it is led by Carl DeMaio and funded as a project of his Assembly campaign committee; DeMaio is on the ballot in AD-75.",
+  "geography": [
+   "glendale-ca"
+  ],
+  "guide_url": "https://www.reformcalifornia.org/voter-guides-list",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
+ },
+ {
+  "id": "anca-wr",
+  "name": "Armenian National Committee of America, Western Region",
+  "short": "ANCA-WR",
+  "type": "advocacy",
+  "lean": null,
+  "lean_basis": "Not rated. Its About page (https://ancawr.org/about/) calls it \"a grassroots public affairs organization devoted to advancing issues of concern to the Armenian American community,\" which names no side on the political scale. Its 2026 slate page says its \"sole measure\" for backing a candidate is \"commitment to the Armenian Cause.\" Not yet checked for an AllSides or Ad Fontes rating.",
+  "lean_basis_kind": "mission",
+  "geography": [
+   "glendale-ca"
+  ],
+  "guide_url": "https://ancawr.org/elect26/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false
+ },
+ {
+  "id": "courage-california",
+  "name": "Courage California Voter Guide",
+  "short": "Courage California",
+  "type": "advocacy",
+  "lean": "left",
+  "lean_basis": "Its own stated mission (About this Guide page, https://www.progressivevotersguide.com/california/2026/general/about): the guide \"helps you evaluate candidates and measures from a progressive perspective,\" and Courage California says the state \"must be a beacon of progressive, equitable, and truly representative democracy.\" Not yet checked for an AllSides or Ad Fontes rating.",
+  "lean_basis_kind": "mission",
+  "geography": [
+   "glendale-ca"
+  ],
+  "guide_url": "https://www.progressivevotersguide.com/california/2026/general/city/glendale",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "knock-la",
+  "name": "Knock LA",
+  "type": "publication",
+  "lean": "left",
+  "lean_basis": "Its stated mission or political identity includes: \"We are dedicated to giving a voice to the left and uplifting marginalized communities\". Source: https://knock-la.com/about-us/.",
+  "geography": [
+   "glendale-ca"
+  ],
+  "guide_url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "default_on": true,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
+ }
+]

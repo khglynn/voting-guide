@@ -1,0 +1,138 @@
+[
+ {
+  "id": "afscme-maryland-council-3",
+  "name": "AFSCME Maryland Council 3",
+  "short": "AFSCME Maryland",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that calls itself the “State’s largest union for city, county, and state employees” (https://afscmemd.org/press-room/press-release-afscme-maryland-announces-2026-endorsements). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://afscmemd.org/vote",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "geography": [
+   "MD"
+  ]
+ },
+ {
+  "id": "aft-pennsylvania",
+  "name": "AFT Pennsylvania",
+  "short": "AFT Pennsylvania",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says it “represents more than 36,000 members in 76 local affiliates throughout the Commonwealth, including teachers and school-related personnel, higher education faculty and staff, and state employees” (https://pa.aft.org/about-us). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://pa.aft.org/aftpa-endorsements",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "PA"
+  ]
+ },
+ {
+  "id": "atu-local-689",
+  "name": "Amalgamated Transit Union Local 689",
+  "short": "ATU Local 689",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says “Local 689 is a democratic and collective organization of workers from diverse backgrounds, opinions, and views” (https://www.atulocal689.org/endorsements). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://www.atulocal689.org/endorsements",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "geography": [
+   "DC",
+   "MD"
+  ]
+ },
+ {
+  "id": "afscme-dc-47",
+  "name": "AFSCME District Council 47",
+  "short": "AFSCME DC 47",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that calls itself “a progressive labor union that represents workers and retirees in the Non-profit, Higher Education, Cultural/Arts, & Government sectors of the greater Philadelphia, PA area” (https://dc47.org/aboutus/). No outside rating was found.",
+  "guide_url": "https://dc47.org/2026generalelectionendorsements/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "geography": [
+   "philadelphia-pa"
+  ]
+ },
+ {
+  "id": "pft",
+  "name": "Philadelphia Federation of Teachers (AFT Local 3)",
+  "short": "Phila. Teachers (PFT)",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says it represents “over 14,400 dedicated individuals working in Philadelphia public schools” and “advocates politically on behalf of members and students” (https://pft.org/about). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://pft.org/pft-votes",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "philadelphia-pa"
+  ]
+ },
+ {
+  "id": "pittsburgh-federation-of-teachers",
+  "name": "Pittsburgh Federation of Teachers (AFT Local 400)",
+  "short": "Pgh. Teachers (PFT 400)",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says it represents “over 2600 teachers, paraprofessionals, other professionals, technical/clerical staff and the PMOIU#2 unit in Pittsburgh Public Schools” (https://pft400.com/why-union/). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://pft400.com/wp-content/uploads/2026/08/2026-PFT-Endorsed-Candidates-GENERAL.pdf",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "pittsburgh-pa"
+  ]
+ },
+ {
+  "id": "seiu-local-668",
+  "name": "SEIU Local 668",
+  "short": "SEIU 668",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says it is “a member-driven, statewide Union united in our mission to raise living standards for working families” (https://www.seiu668.org/about). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "PA"
+  ]
+ },
+ {
+  "id": "pa-conference-of-teamsters",
+  "name": "Pennsylvania Conference of Teamsters",
+  "short": "PA Teamsters",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says the Teamsters “are America’s largest, most diverse union” (https://teamster.org/about/). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "PA"
+  ]
+ },
+ {
+  "id": "ufcw-local-400",
+  "name": "UFCW Local 400",
+  "short": "UFCW 400",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says it “represents 35,000 members working in the retail food, health care, retail department store, food processing, service and other industries” (https://www.ufcw400.org/about/). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://www.ufcw400.org/2026/06/22/ufcw-local-400-backed-candidates-win-d-c-primary-elections/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "DC"
+  ]
+ }
+]

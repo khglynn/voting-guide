@@ -1,0 +1,209 @@
+{
+ "id": "pasadena-ca",
+ "label": "Pasadena",
+ "state": "CA",
+ "counties": [
+  "Los Angeles"
+ ],
+ "county_fips": [
+  "06037"
+ ],
+ "county_election_office": {
+  "name": "Los Angeles County Registrar-Recorder/County Clerk (LAVote.gov), 12400 Imperial Hwy, Norwalk",
+  "url": "https://lavote.gov",
+  "phone": "(800) 815-2666",
+  "phone_label": "General line",
+  "lines": [
+   {
+    "label": "Mail ballot help",
+    "phone": "(800) 815-2666",
+    "hours": "press 2, then 3"
+   },
+   {
+    "label": "Vote center questions",
+    "phone": "(800) 815-2666",
+    "hours": "press 1"
+   }
+  ]
+ },
+ "sample_ballot_url": "https://isb.lavote.gov/",
+ "zips": [
+  "91001",
+  "91101",
+  "91103",
+  "91104",
+  "91105",
+  "91106",
+  "91107",
+  "91125"
+ ],
+ "zip_outside": {
+  "91001": "Altadena (unincorporated)",
+  "91104": "Altadena (unincorporated)",
+  "91107": "East Pasadena or San Pasqual (unincorporated)"
+ },
+ "zip_caveats": "A Pasadena mailing address doesn't always mean the City of Pasadena. 91101, 91103, 91105, 91106 and 91125 (Caltech) are nearly all city; 91105 also has a sliver of the City of Los Angeles. 91104 is mostly Pasadena, but about a fifth of it is unincorporated Altadena. 91107 is a little over half Pasadena; the rest is unincorporated East Pasadena, San Pasqual and other county land. 91001 is almost all Altadena, with a small piece of Pasadena. Voters in Altadena, East Pasadena and San Pasqual share the Pasadena Unified and Pasadena City College races and Measure UP, but they don't vote on Measure PFD, the city's fire tax. There are no Pasadena City Council races: Districts 3, 5 and 7 were all settled in the June 2 primary. Districts: all of Pasadena is in Assembly District 41 and in State Senate District 25, which isn't up this year, so there is no State Senate race. Most of Pasadena (about 130,000 people) is in Congressional District 28; about 9,000 people on the west side, in Linda Vista and nearby blocks along the Arroyo Seco, are in District 30. School board: Pasadena Unified Districts 1, 3 and 7 vote this year (District 5's race was canceled). Pasadena City College trustee races are in Area 1 (west Pasadena, Oak Knoll and Madison Heights) and Area 3 (northwest Pasadena); the rest of the city (Areas 2 and 4) has no trustee race this year. A few blocks at the city's northwest edge, by Hahamongna and JPL, are in La Cañada Unified, not Pasadena Unified. LA County's sample ballot lookup shows your exact ballot.",
+ "contest_ids": [
+  "ca-governor",
+  "ca-lt-governor",
+  "ca-secretary-of-state",
+  "ca-controller",
+  "ca-treasurer",
+  "ca-attorney-general",
+  "ca-insurance-commissioner",
+  "ca-superintendent",
+  "ca-boe-3",
+  "ca-supreme-court-evans",
+  "ca-supreme-court-groban",
+  "ca-coa-2d-retention",
+  "ca-prop-1",
+  "ca-prop-2",
+  "ca-prop-3",
+  "ca-prop-4",
+  "ca-prop-5",
+  "ca-prop-37",
+  "ca-prop-38",
+  "ca-prop-39",
+  "ca-prop-40",
+  "ca-prop-41",
+  "ca-prop-42",
+  "ca-prop-43",
+  "ca-prop-44",
+  "ca-prop-45",
+  "ca-us-house-28",
+  "ca-us-house-30",
+  "ca-assembly-41",
+  "la-county-sheriff",
+  "la-county-judge-64",
+  "la-county-judge-65",
+  "la-county-judge-87",
+  "la-county-judge-131",
+  "pasadena-pccd-area-1",
+  "pasadena-pccd-area-3",
+  "pasadena-pusd-district-1",
+  "pasadena-pusd-district-3",
+  "pasadena-pusd-district-7",
+  "la-county-measure-a",
+  "la-county-measure-e",
+  "pasadena-measure-pfd",
+  "pasadena-pccd-measure-up"
+ ],
+ "district_finders": [
+  {
+   "office_match": "Pasadena Unified School District Board of Education",
+   "label": "Look up your address on the city's district map",
+   "url": "https://www.cityofpasadena.net/find-my-district/"
+  },
+  {
+   "office_match": "Pasadena Unified School District Board of Education",
+   "label": "See Pasadena Unified's board district map (2022)",
+   "url": "https://resources.finalsite.net/images/v1707482714/pusdus/peeovbnon0h72varoxpm/pusdboardmembersgeographicsubdistrictmapandexhibit.pdf"
+  },
+  {
+   "office_match": "Pasadena Area Community College District Board of Trustees",
+   "label": "See Pasadena City College's trustee area map",
+   "url": "https://pasadena.edu/about/board-of-trustees/district-map.php"
+  },
+  {
+   "office_match": "U.S. Representative",
+   "label": "Find your district on your official ballot",
+   "url": "https://isb.lavote.gov/"
+  },
+  {
+   "office_match": "Pasadena Unified School District Board of Education",
+   "label": "Check your district on your official sample ballot",
+   "url": "https://isb.lavote.gov/"
+  },
+  {
+   "office_match": "Pasadena Area Community College District Board of Trustees",
+   "label": "Check your area on your official sample ballot",
+   "url": "https://isb.lavote.gov/"
+  }
+ ],
+ "heads_up": [
+  {
+   "text": "Most of Pasadena is in Congressional District 28. Linda Vista and nearby blocks on the west side are in District 30. Your address or your sample ballot shows which one is yours.",
+   "applies_to": "section:federal",
+   "source": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf",
+   "until_address": true
+  }
+ ],
+ "lookups": {
+  "early_in_person": "https://locator.lavote.gov/locations/vc?culture=en",
+  "election_day": "https://locator.lavote.gov/locations/vc?culture=en",
+  "drop_box": "https://locator.lavote.gov/locations/vbm?culture=en"
+ },
+ "early_in_person": {
+  "start": "2026-10-24",
+  "end": "2026-11-02",
+  "hours_note": "LA County's first vote centers opened Saturday, October 24, and every vote center is open from Saturday, October 31. They're open 10 AM to 7 PM through Monday, November 2, and 7 AM to 8 PM on Election Day, November 3. You can use any vote center in LA County.",
+  "hours_short": "LA County vote centers are open 10 AM to 7 PM every day.",
+  "lookup_url": "https://locator.lavote.gov/locations/vc?culture=en",
+  "source": "https://www.cityofpasadena.net/city-clerk/wp-content/uploads/sites/21/VOTING-IN-PASADENA-EN.pdf",
+  "confidence": "verified"
+ },
+ "mail_ballot": {
+  "return_options": [
+   "any LA County vote center, by 8 PM on Tuesday, November 3",
+   "any official ballot drop box in LA County, by 8 PM on November 3 (Pasadena has eight, including one at City Hall)",
+   "the mail, in the postage-paid envelope: it must be postmarked by November 3 and reach the county within seven days. This late, a drop box or vote center is safer."
+  ],
+  "source": "https://www.cityofpasadena.net/fire/wp-content/uploads/sites/25/Measure-PFD-City-of-Pasadena-Voter-Guide-2026.pdf",
+  "confidence": "verified"
+ },
+ "situations": [
+  {
+   "id": "no_mail_ballot_or_lost",
+   "short": "Get a replacement at any LA County vote center or just vote there.",
+   "answer": "The last day to ask for a ballot by mail was October 27. You can still go to any LA County vote center and ask for a replacement or vote there in person. Questions? Call (800) 815-2666, press 2, then 3.",
+   "steps": [
+    "Use the county's locator to find a vote center near you."
+   ],
+   "source": "https://www.lavote.gov/home/voting-elections/voting-options/vote-by-mail/how-to-vote-by-mail",
+   "confidence": "verified"
+  }
+ ],
+ "notes": "Pasadena has 12 vote centers, all open through Election Day: 10 AM to 7 PM through Monday, Nov 2, and 7 AM to 8 PM on Tuesday, Nov 3. They include Robinson Park Recreation Center, Victory Park Recreation Center, Villa Park Community Center, Jefferson Branch Library, Webster Elementary and Pasadena City College's Creveling Lounge. The city has eight ballot drop boxes, including one at City Hall, open around the clock until 8 PM on Nov 3. LA County's locator has the full list.",
+ "sources": [
+  {
+   "name": "LA County: how to vote by mail",
+   "url": "https://www.lavote.gov/home/voting-elections/voting-options/vote-by-mail/how-to-vote-by-mail"
+  },
+  {
+   "name": "LA County: contact (phone menu)",
+   "url": "https://www.lavote.gov/contact-us/contact-us"
+  },
+  {
+   "name": "LA County: drop box locator",
+   "url": "https://locator.lavote.gov/locations/vbm?culture=en"
+  },
+  {
+   "name": "LA County: interactive sample ballot",
+   "url": "https://isb.lavote.gov/"
+  },
+  {
+   "name": "City of Pasadena: voting in Pasadena (vote centers and drop boxes)",
+   "url": "https://www.cityofpasadena.net/city-clerk/wp-content/uploads/sites/21/VOTING-IN-PASADENA-EN.pdf"
+  },
+  {
+   "name": "City of Pasadena: General Election 2026",
+   "url": "https://www.cityofpasadena.net/city-clerk/general-election-2026/"
+  },
+  {
+   "name": "Census 2020 ZIP area to place relationship file",
+   "url": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_place20_natl.txt"
+  },
+  {
+   "name": "Statewide Database: AB 604 (Prop 50) congressional city splits",
+   "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
+  },
+  {
+   "name": "City of Pasadena: Measure PFD voter guide (how to return a mail ballot, key dates)",
+   "url": "https://www.cityofpasadena.net/fire/wp-content/uploads/sites/25/Measure-PFD-City-of-Pasadena-Voter-Guide-2026.pdf"
+  },
+  {
+   "name": "Pasadena Unified: board district map and boundary descriptions (Feb 2, 2022)",
+   "url": "https://resources.finalsite.net/images/v1707482714/pusdus/peeovbnon0h72varoxpm/pusdboardmembersgeographicsubdistrictmapandexhibit.pdf"
+  }
+ ]
+}

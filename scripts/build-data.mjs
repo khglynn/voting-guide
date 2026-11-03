@@ -77,6 +77,10 @@ function evaluations(list, where) {
   return out;
 }
 const APPLIES = /^(ballot|section:(federal|state|judicial|county|city|school|special_district|measures)|item:\S+)$/;
+/* until_address (a "which page are you on" note, hidden once an address lookup places the ballot) and zips
+   (shown only to a voter whose ZIP is listed) are optional. A bad one is dropped with a warning, which
+   check-data blocks on, and the note then shows to everyone: a wrong field never hides a note. */
+const ZIP5 = /^\d{5}$/;
 function headsUp(list, where) {
   if (list == null) return [];
   if (!Array.isArray(list)) { warn(`${where}: heads_up is not a list; dropped it`); return []; }
@@ -84,7 +88,18 @@ function headsUp(list, where) {
     const ok = h && isStr(h.text) && isStr(h.applies_to) && APPLIES.test(h.applies_to.trim());
     if (!ok) warn(`${where}: a heads_up note has no text or a bad applies_to; dropped it`);
     return ok;
-  }).map((h) => ({ text: h.text.trim(), applies_to: h.applies_to.trim(), source: safeUrl(h.source) }));
+  }).map((h) => {
+    const out = { text: h.text.trim(), applies_to: h.applies_to.trim(), source: safeUrl(h.source) };
+    if (h.until_address != null) {
+      if (typeof h.until_address === 'boolean') { if (h.until_address) out.until_address = true; }
+      else warn(`${where}: heads_up until_address is not true or false; dropped the field`);
+    }
+    if (h.zips != null) {
+      if (Array.isArray(h.zips) && h.zips.length && h.zips.every((z) => typeof z === 'string' && ZIP5.test(z))) out.zips = [...new Set(h.zips)];
+      else warn(`${where}: heads_up zips is not a list of 5-digit ZIP strings; dropped the field`);
+    }
+    return out;
+  });
 }
 function districtFinders(list, where) {
   if (list == null) return [];
@@ -141,6 +156,46 @@ function placeByCounty(list, p, where) {
   // voter the address lookup puts in another county gets the state's links instead.
   return out.length ? out : null;
 }
+/* The Census county codes (5 digits, state then county) a place's voters all live in (Oct 29): a city that is
+   its own county, like the City of St. Louis (29510) or Baltimore (24510), whose name the Census also gives the
+   county beside it. An address the Census puts in another county is never this place's (geo.ts outsideOf). */
+function placeCountyFips(list, where) {
+  if (list == null) return null;
+  if (!Array.isArray(list)) { warn(`${where}: county_fips is not a list; dropped it`); return null; }
+  const out = list.map(String).filter((c) => {
+    if (/^\d{5}$/.test(c)) return true;
+    warn(`${where}: county_fips ${c} is not a 5-digit Census county code; dropped it`);
+    return false;
+  });
+  return out.length ? out : null;
+}
+/* A ZIP of the place's that also reaches a town the guide doesn't cover (Oct 29: 63120 is the City of St. Louis
+   and Pine Lawn, in St. Louis County), named the way the chooser says it ("Pine Lawn, in St. Louis County"). A
+   ZIP listed here never opens the place by itself: the first page asks, and the outside choice opens the
+   state's ballot. */
+function placeZipOutside(obj, p, where) {
+  if (obj == null) return null;
+  if (typeof obj !== 'object' || Array.isArray(obj)) { warn(`${where}: zip_outside is not an object; dropped it`); return null; }
+  const placeZips = new Set((p.zips || []).map(String));
+  const out = {};
+  for (const [z, name] of Object.entries(obj)) {
+    if (!placeZips.has(z)) { warn(`${where}: zip_outside lists ZIP ${z}, which the place doesn't; dropped it`); continue; }
+    if (!isStr(name) || name.trim().length > 80) { warn(`${where}: zip_outside ${z} needs a short name (80 characters at most); dropped it`); continue; }
+    out[z] = name.trim();
+  }
+  return Object.keys(out).length ? out : null;
+}
+/* A hard look for the place's own picks that came up empty (Oct 29; Kevin: "if we can't find a bunch of sources
+   and we're really looked let's say that"): the day, and the papers and groups checked, set by the run that
+   looked. While none of the place's own sources has a pick, the coverage card says so instead of offering to
+   look (model/coverage.ts); a local pick found later ends that by itself. */
+function localPicksChecked(x, where) {
+  if (x == null) return null;
+  if (typeof x !== 'object' || Array.isArray(x) || !isDate(x.on)) { warn(`${where}: local_picks_checked needs an "on" date; dropped it`); return null; }
+  const checked = Array.isArray(x.where) ? x.where.filter(isStr).map((w) => w.trim()) : [];
+  if (!checked.length) { warn(`${where}: local_picks_checked needs "where", the papers and groups checked; dropped it`); return null; }
+  return { on: x.on, where: checked };
+}
 /* A county's own answer to one of the state's common questions (Oct 28: Orange County's lost mail ballot,
    with its own phone line and dates), keyed by the state situation's id. plan.ts uses it when every place on
    the ballot gives the same one; the state's question and buttons stay. */
@@ -159,6 +214,35 @@ function placeSituations(list, where) {
     source: safeUrl(x.source), confidence: conf(x.confidence),
   }));
   return out.length ? out : null;
+}
+/* A county's own mail-ballot facts, where they differ from the state's (Oct 29, after the audit of the newest
+   places): the City of St. Louis takes ballots back only at its own Board, not at St. Louis County's office in the
+   state's list, and Orange County's replacement deadline is on its own page, not LA County's. plan.ts uses them when
+   every place on the ballot gives the same ones. */
+function placeMail(x, where) {
+  if (x == null) return null;
+  const rq = x && x.request_deadline;
+  const rqOk = rq == null || (typeof rq === 'object' && (rq.date == null || isDate(rq.date)) && isStr(rq.rule) && safeUrl(rq.source));
+  const opts = x && x.return_options;
+  const optsOk = opts == null || (Array.isArray(opts) && opts.length && opts.every(isStr));
+  if (!x || typeof x !== 'object' || !rqOk || !optsOk || (rq == null && opts == null) || !safeUrl(x.source)) {
+    warn(`${where}: mail_ballot needs a request_deadline (a date or null, a rule, an https source) or return_options (a list of strings), and an https source; dropped it`);
+    return null;
+  }
+  return {
+    ...optional({ request_deadline: rq ? { date: rq.date || null, rule: rq.rule.trim(), source: safeUrl(rq.source) } : null, return_options: opts ? opts.map((o) => o.trim()) : null }),
+    source: safeUrl(x.source), confidence: conf(x.confidence),
+  };
+}
+/* A county's own Election Day opening time, a plain time ("7:00 AM"), where the state's is not one (Tennessee's
+   counties each set their own). */
+function placeElectionDay(x, where) {
+  if (x == null) return null;
+  if (!x || typeof x !== 'object' || !/^\d{1,2}:\d{2} [AP]M$/.test(String(x.polls_open || '').trim()) || !safeUrl(x.source)) {
+    warn(`${where}: election_day needs polls_open as a plain time ("7:00 AM") and an https source; dropped it`);
+    return null;
+  }
+  return { polls_open: x.polls_open.trim(), source: safeUrl(x.source), confidence: conf(x.confidence) };
 }
 /* The election office's phone lines, labeled ("Vote-by-mail line"), and its hours (Oct 28). */
 function officeLines(o, where) {
@@ -208,12 +292,18 @@ function srcPath(o, path) {
   }
   return cur;
 }
+/* A link can change on its date too (Oct 30: Maryland's request button, Florida's and Illinois's early voting
+   buttons, Georgia's drop box links). A path to a link (its last part `url` or `..._url`, or a `lookups` entry)
+   takes an http(s) URL, or "" for no link from that day (Georgia's drop boxes close with early voting); a help
+   button's `url` always takes a URL, and check-data holds it to the URLs its state file already has. */
+const LINK_PATH = /(?:^|\.)(?:url|[a-z_]+_url)$|(?:^|\.)lookups\.[a-z_]+$/;
+const datedTextOk = (path, t) => (!LINK_PATH.test(path) ? isStr(t) : t === '' ? !/\.actions\.\d+\.url$/.test(path) : !!safeUrl(t));
 function datedList(list, src, where) {
   if (list == null) return null;
   if (!Array.isArray(list)) { warn(`${where}: dated is not a list; dropped it`); return null; }
   const out = [];
   for (const x of list) {
-    if (!(x && isStr(x.path) && isDate(x.from) && isStr(x.text))) { warn(`${where}: a dated entry needs a path, a from date and text; dropped it`); continue; }
+    if (!(x && isStr(x.path) && isDate(x.from) && typeof x.text === 'string' && datedTextOk(x.path.trim(), x.text))) { warn(`${where}: a dated entry needs a path, a from date and text (for a link, a URL or "" for none); dropped it`); continue; }
     if (typeof srcPath(src, x.path.trim()) !== 'string') { warn(`${where}: dated path ${x.path} names no text in the file; dropped it`); continue; }
     out.push({ path: x.path.trim(), from: x.from, text: x.text.trim() });
   }
@@ -295,10 +385,21 @@ function partyList(p) {
   return p.split(/\s*,\s*|\s*\/\s*/).map((x) => x.trim()).filter(Boolean)
     .map((x) => (/^democrat(ic)?$/i.test(x) ? 'Democratic' : /^republican$/i.test(x) ? 'Republican' : x));
 }
+const fullCand = (name) => name.split(' / ')[0].replace(/\s*\(.*?\)\s*/g, ' ').trim();
 function shortCand(name) {
-  const first = name.split(' / ')[0].replace(/\s*\(.*?\)\s*/g, ' ').trim();
+  const first = fullCand(name);
   const parts = first.replace(/,/g, '').split(/\s+/).filter((p) => !/^(jr\.?|sr\.?|ii|iii|iv)$/i.test(p));
   return parts.length ? parts[parts.length - 1] : first;
+}
+/* The last word of the name, unless the data gives `short` for a two-word surname (Tonia Reyes Uranga is
+   "Reyes Uranga", not "Uranga"). It must be words from the name itself, or the last word stands. */
+function candShort(k, where) {
+  const auto = shortCand(k.name.trim());
+  if (k.short == null) return auto;
+  const s = isStr(k.short) ? k.short.trim().replace(/\s+/g, ' ') : '';
+  if (s && ` ${fullCand(k.name).replace(/,/g, '')} `.includes(` ${s} `)) return s;
+  warn(`${where}: short "${k.short}" isn't words from the name; used "${auto}"`);
+  return auto;
 }
 function normContest(c, file) {
   if (!c || !isStr(c.id)) return skipRec(file, c && c.id, 'contest missing id');
@@ -311,7 +412,7 @@ function normContest(c, file) {
     if (!k || !isStr(k.name)) { warn(`${file}: ${c.id} has a candidate with no name; dropped it`); continue; }
     cands.push({
       name: k.name.trim(),
-      short: shortCand(k.name.trim()),
+      short: candShort(k, `${file}: ${c.id} / ${k.name.trim()}`),
       party: str(k.party),
       parties: partyList(k.party),
       incumbent: !!k.incumbent,
@@ -334,6 +435,10 @@ function normContest(c, file) {
       }),
     });
   }
+  // Two candidates with one last name (Kyle and Kristen Hawkins, Texas Supreme Court Place 7) would both
+  // read "Hawkins" in the pick, the table head and the screen-reader text: those two get their full names.
+  const shorts = cands.map((k) => k.short);
+  for (const k of cands) if (shorts.filter((s) => s === k.short).length > 1) k.short = fullCand(k.name);
   const scope = str(c.scope_plain) || '';
   const voteFor = Number.isInteger(c.vote_for) && c.vote_for > 0 ? c.vote_for : 1;
   // Ranked choice only when the research says so, with the ballot's own "rank up to" number.
@@ -481,6 +586,13 @@ for (const f of listJson('states')) {
   s.heads_up = headsUp(s.heads_up, f);
   const dated = datedGotchas(datedList(s.dated, s, f), s.gotchas);
   stateHelp(s, f);
+  // The last day any county may still vote early, where the state's window is a minimum (Florida's Nov 1):
+  // after the window's end and before Election Day, or nothing.
+  const ep = s.early_in_person;
+  if (ep && ep.latest_end != null && !(isDate(ep.latest_end) && ep.counties_vary === 'minimum' && isDate(ep.end) && ep.end < ep.latest_end && ep.latest_end < s.election_date)) {
+    warn(`${f}: early_in_person.latest_end needs counties_vary "minimum" and a date after end and before Election Day; dropped it`);
+    ep.latest_end = null;
+  }
   if (dated && dated.length) s.dated = dated; else delete s.dated;
   if (s.judicial_review != null) {
     const jr = s.judicial_review;
@@ -524,6 +636,9 @@ for (const f of listJson('places')) {
     district_finders: districtFinders(p.district_finders, f),
     heads_up: headsUp(p.heads_up, f),
     ...optional({ early_in_person: placeEarly(p.early_in_person, f), lookups: placeLookups(p.lookups, f), by_county: placeByCounty(p.by_county, p, f), situations: placeSituations(p.situations, f),
+      mail_ballot: placeMail(p.mail_ballot, f), election_day: placeElectionDay(p.election_day, f),
+      county_fips: placeCountyFips(p.county_fips, f), zip_outside: placeZipOutside(p.zip_outside, p, f),
+      local_picks_checked: localPicksChecked(p.local_picks_checked, f),
       // the official pages behind the place's own facts (its notes, office lines and answers), for the record
       sources: (Array.isArray(p.sources) ? p.sources : []).filter((x) => x && isStr(x.name) && safeUrl(x.url)).map((x) => ({ name: x.name.trim(), url: safeUrl(x.url) })),
       dated: datedList(p.dated, p, f) }),
@@ -867,7 +982,11 @@ for (const [id, p] of places) {
   // as the Census names the place, beside its bundle. And the same coverage numbers for this place's
   // ballot (statewide races included), plus its own races and how many of them have any pick: a place
   // none of whose own sources has picks reads as thin.
-  index.places[id] = { label: p.label, state: p.state, counties: p.counties, local_count: local.length, ...(pm.length ? { maps: pm.map((m) => m.file) } : {}), ...coverageOf(stateBundles.get(p.state), [bundle], id) };
+  // county_fips and zip_outside too, so the first page can rule a place out of an address, or ask about a ZIP
+  // that reaches past it, before any bundle loads (geo.ts settleAddress, app.ts lookZip). local_picks_checked
+  // beside the coverage it speaks for (model/coverage.ts).
+  index.places[id] = { label: p.label, state: p.state, counties: p.counties, local_count: local.length, ...(pm.length ? { maps: pm.map((m) => m.file) } : {}),
+    ...optional({ county_fips: p.county_fips, zip_outside: p.zip_outside, local_picks_checked: p.local_picks_checked }), ...coverageOf(stateBundles.get(p.state), [bundle], id) };
   index.states[p.state].places.push(id);
   for (const z of p.zips) {
     (index.zips[z] = index.zips[z] || []);

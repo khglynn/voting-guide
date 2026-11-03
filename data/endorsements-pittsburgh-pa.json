@@ -2,7 +2,7 @@
   {
     "endorser_id": "pittsburgh-post-gazette-eb",
     "target_id": "pa-us-house-12",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Published since May 4, 2026 by the Venetoulis Institute, a 501(c)(3) nonprofit, and federal tax law bars 501(c)(3) groups from endorsing candidates. No 2026 endorsements found and no policy statement of its own located.",
     "url": "https://www.post-gazette.com/give",
@@ -44,9 +44,9 @@
     "target_id": "pa-us-house-12",
     "status": "endorsed",
     "choice": "Summer Lee",
-    "why": "On the labor council's 2026 general-election list. It says it \"evaluated the candidates based on the issues that impact workers.\"",
+    "why": "Listed in its 2026 General Election Endorsements.",
     "url": "https://paaflcio.org/system/files/2026-08/ACLC-%202026%20General%20Endorsements.pdf",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -72,7 +72,7 @@
   {
     "endorser_id": "pittsburgh-post-gazette-eb",
     "target_id": "pa-sd-38",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Published since May 4, 2026 by the Venetoulis Institute, a 501(c)(3) nonprofit, and federal tax law bars 501(c)(3) groups from endorsing candidates. No 2026 endorsements found and no policy statement of its own located.",
     "url": "https://www.post-gazette.com/give",
@@ -114,9 +114,9 @@
     "target_id": "pa-sd-38",
     "status": "endorsed",
     "choice": "Lindsey Williams",
-    "why": "On the labor council's 2026 general-election list. It says it \"evaluated the candidates based on the issues that impact workers.\"",
+    "why": "Listed in its 2026 General Election Endorsements.",
     "url": "https://paaflcio.org/system/files/2026-08/ACLC-%202026%20General%20Endorsements.pdf",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -142,7 +142,7 @@
   {
     "endorser_id": "pa-chamberpac",
     "target_id": "pa-sd-38",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
     "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
@@ -152,7 +152,7 @@
   {
     "endorser_id": "pittsburgh-post-gazette-eb",
     "target_id": "pa-sd-42",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Published since May 4, 2026 by the Venetoulis Institute, a 501(c)(3) nonprofit, and federal tax law bars 501(c)(3) groups from endorsing candidates. No 2026 endorsements found and no policy statement of its own located.",
     "url": "https://www.post-gazette.com/give",
@@ -194,9 +194,9 @@
     "target_id": "pa-sd-42",
     "status": "endorsed",
     "choice": "Wayne D. Fontana",
-    "why": "On the labor council's 2026 general-election list. It says it \"evaluated the candidates based on the issues that impact workers.\"",
+    "why": "Listed in its 2026 General Election Endorsements.",
     "url": "https://paaflcio.org/system/files/2026-08/ACLC-%202026%20General%20Endorsements.pdf",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -222,7 +222,7 @@
   {
     "endorser_id": "pa-chamberpac",
     "target_id": "pa-sd-42",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
     "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
@@ -232,7 +232,7 @@
   {
     "endorser_id": "pittsburgh-post-gazette-eb",
     "target_id": "pa-hd-19",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Published since May 4, 2026 by the Venetoulis Institute, a 501(c)(3) nonprofit, and federal tax law bars 501(c)(3) groups from endorsing candidates. No 2026 endorsements found and no policy statement of its own located.",
     "url": "https://www.post-gazette.com/give",
@@ -274,9 +274,9 @@
     "target_id": "pa-hd-19",
     "status": "endorsed",
     "choice": "Aerion Andrew Abney",
-    "why": "On the labor council's 2026 general-election list. It says it \"evaluated the candidates based on the issues that impact workers.\"",
+    "why": "Listed in its 2026 General Election Endorsements.",
     "url": "https://paaflcio.org/system/files/2026-08/ACLC-%202026%20General%20Endorsements.pdf",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -302,7 +302,7 @@
   {
     "endorser_id": "pa-chamberpac",
     "target_id": "pa-hd-19",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
     "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
@@ -312,7 +312,7 @@
   {
     "endorser_id": "pittsburgh-post-gazette-eb",
     "target_id": "pa-hd-20",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Published since May 4, 2026 by the Venetoulis Institute, a 501(c)(3) nonprofit, and federal tax law bars 501(c)(3) groups from endorsing candidates. No 2026 endorsements found and no policy statement of its own located.",
     "url": "https://www.post-gazette.com/give",
@@ -354,9 +354,9 @@
     "target_id": "pa-hd-20",
     "status": "endorsed",
     "choice": "Emily Kinkead",
-    "why": "On the labor council's 2026 general-election list. It says it \"evaluated the candidates based on the issues that impact workers.\"",
+    "why": "Listed in its 2026 General Election Endorsements.",
     "url": "https://paaflcio.org/system/files/2026-08/ACLC-%202026%20General%20Endorsements.pdf",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -382,7 +382,7 @@
   {
     "endorser_id": "pa-chamberpac",
     "target_id": "pa-hd-20",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
     "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
@@ -392,7 +392,7 @@
   {
     "endorser_id": "pittsburgh-post-gazette-eb",
     "target_id": "pa-hd-21",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Published since May 4, 2026 by the Venetoulis Institute, a 501(c)(3) nonprofit, and federal tax law bars 501(c)(3) groups from endorsing candidates. No 2026 endorsements found and no policy statement of its own located.",
     "url": "https://www.post-gazette.com/give",
@@ -434,9 +434,9 @@
     "target_id": "pa-hd-21",
     "status": "endorsed",
     "choice": "Lindsay Powell",
-    "why": "On the labor council's 2026 general-election list. It says it \"evaluated the candidates based on the issues that impact workers.\"",
+    "why": "Listed in its 2026 General Election Endorsements.",
     "url": "https://paaflcio.org/system/files/2026-08/ACLC-%202026%20General%20Endorsements.pdf",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -462,7 +462,7 @@
   {
     "endorser_id": "pa-chamberpac",
     "target_id": "pa-hd-21",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
     "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
@@ -472,7 +472,7 @@
   {
     "endorser_id": "pittsburgh-post-gazette-eb",
     "target_id": "pa-hd-23",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Published since May 4, 2026 by the Venetoulis Institute, a 501(c)(3) nonprofit, and federal tax law bars 501(c)(3) groups from endorsing candidates. No 2026 endorsements found and no policy statement of its own located.",
     "url": "https://www.post-gazette.com/give",
@@ -514,9 +514,9 @@
     "target_id": "pa-hd-23",
     "status": "endorsed",
     "choice": "Dan Frankel",
-    "why": "On the labor council's 2026 general-election list. It says it \"evaluated the candidates based on the issues that impact workers.\"",
+    "why": "Listed in its 2026 General Election Endorsements.",
     "url": "https://paaflcio.org/system/files/2026-08/ACLC-%202026%20General%20Endorsements.pdf",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -542,7 +542,7 @@
   {
     "endorser_id": "pa-chamberpac",
     "target_id": "pa-hd-23",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
     "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
@@ -552,7 +552,7 @@
   {
     "endorser_id": "pittsburgh-post-gazette-eb",
     "target_id": "pa-hd-24",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Published since May 4, 2026 by the Venetoulis Institute, a 501(c)(3) nonprofit, and federal tax law bars 501(c)(3) groups from endorsing candidates. No 2026 endorsements found and no policy statement of its own located.",
     "url": "https://www.post-gazette.com/give",
@@ -594,9 +594,9 @@
     "target_id": "pa-hd-24",
     "status": "endorsed",
     "choice": "La'Tasha D. Mayes",
-    "why": "On the labor council's 2026 general-election list. It says it \"evaluated the candidates based on the issues that impact workers.\"",
+    "why": "Listed in its 2026 General Election Endorsements.",
     "url": "https://paaflcio.org/system/files/2026-08/ACLC-%202026%20General%20Endorsements.pdf",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -622,7 +622,7 @@
   {
     "endorser_id": "pa-chamberpac",
     "target_id": "pa-hd-24",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
     "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
@@ -632,7 +632,7 @@
   {
     "endorser_id": "pittsburgh-post-gazette-eb",
     "target_id": "pa-hd-27",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Published since May 4, 2026 by the Venetoulis Institute, a 501(c)(3) nonprofit, and federal tax law bars 501(c)(3) groups from endorsing candidates. No 2026 endorsements found and no policy statement of its own located.",
     "url": "https://www.post-gazette.com/give",
@@ -674,9 +674,9 @@
     "target_id": "pa-hd-27",
     "status": "endorsed",
     "choice": "Dan Deasy",
-    "why": "On the labor council's 2026 general-election list. It says it \"evaluated the candidates based on the issues that impact workers.\"",
+    "why": "Listed in its 2026 General Election Endorsements.",
     "url": "https://paaflcio.org/system/files/2026-08/ACLC-%202026%20General%20Endorsements.pdf",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -702,7 +702,7 @@
   {
     "endorser_id": "pa-chamberpac",
     "target_id": "pa-hd-27",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
     "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
@@ -712,7 +712,7 @@
   {
     "endorser_id": "pittsburgh-post-gazette-eb",
     "target_id": "pa-hd-34",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Published since May 4, 2026 by the Venetoulis Institute, a 501(c)(3) nonprofit, and federal tax law bars 501(c)(3) groups from endorsing candidates. No 2026 endorsements found and no policy statement of its own located.",
     "url": "https://www.post-gazette.com/give",
@@ -754,9 +754,9 @@
     "target_id": "pa-hd-34",
     "status": "endorsed",
     "choice": "Abigail Salisbury",
-    "why": "On the labor council's 2026 general-election list. It says it \"evaluated the candidates based on the issues that impact workers.\"",
+    "why": "Listed in its 2026 General Election Endorsements.",
     "url": "https://paaflcio.org/system/files/2026-08/ACLC-%202026%20General%20Endorsements.pdf",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -782,7 +782,7 @@
   {
     "endorser_id": "pa-chamberpac",
     "target_id": "pa-hd-34",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
     "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
@@ -792,7 +792,7 @@
   {
     "endorser_id": "pittsburgh-post-gazette-eb",
     "target_id": "pa-hd-36",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Published since May 4, 2026 by the Venetoulis Institute, a 501(c)(3) nonprofit, and federal tax law bars 501(c)(3) groups from endorsing candidates. No 2026 endorsements found and no policy statement of its own located.",
     "url": "https://www.post-gazette.com/give",
@@ -834,9 +834,9 @@
     "target_id": "pa-hd-36",
     "status": "endorsed",
     "choice": "Jessica Benham",
-    "why": "On the labor council's 2026 general-election list. It says it \"evaluated the candidates based on the issues that impact workers.\"",
+    "why": "Listed in its 2026 General Election Endorsements.",
     "url": "https://paaflcio.org/system/files/2026-08/ACLC-%202026%20General%20Endorsements.pdf",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -862,7 +862,7 @@
   {
     "endorser_id": "pa-chamberpac",
     "target_id": "pa-hd-36",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
     "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
@@ -872,7 +872,7 @@
   {
     "endorser_id": "pittsburgh-post-gazette-eb",
     "target_id": "pa-hd-38",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "Published since May 4, 2026 by the Venetoulis Institute, a 501(c)(3) nonprofit, and federal tax law bars 501(c)(3) groups from endorsing candidates. No 2026 endorsements found and no policy statement of its own located.",
     "url": "https://www.post-gazette.com/give",
@@ -914,9 +914,9 @@
     "target_id": "pa-hd-38",
     "status": "endorsed",
     "choice": "John Inglis",
-    "why": "On the labor council's 2026 general-election list. It says it \"evaluated the candidates based on the issues that impact workers.\"",
+    "why": "Listed in its 2026 General Election Endorsements.",
     "url": "https://paaflcio.org/system/files/2026-08/ACLC-%202026%20General%20Endorsements.pdf",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -942,7 +942,7 @@
   {
     "endorser_id": "pa-chamberpac",
     "target_id": "pa-hd-38",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
     "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
@@ -1120,16 +1120,6 @@
     "confidence": "sourced"
   },
   {
-    "endorser_id": "allegheny-fayette-clc",
-    "target_id": "allegheny-charter-7c",
-    "status": "no_position",
-    "choice": null,
-    "why": "The labor council's complete 2026 general-election list covers candidates only and takes no stand on the ballot question.",
-    "url": "https://paaflcio.org/system/files/2026-08/ACLC-%202026%20General%20Endorsements.pdf",
-    "date": "2026-10-17",
-    "confidence": "verified"
-  },
-  {
     "endorser_id": "steel-city-stonewall-democrats",
     "target_id": "allegheny-charter-7c",
     "status": "not_found",
@@ -1192,7 +1182,7 @@
   {
     "endorser_id": "pa-working-families-party",
     "target_id": "pa-sd-42",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The party's full 2026 Pennsylvania candidate list on its own page (including the part behind \"View More\") has no pick in this race.",
     "url": "https://workingfamilies.org/state/pennsylvania",
@@ -1202,7 +1192,7 @@
   {
     "endorser_id": "pa-working-families-party",
     "target_id": "pa-hd-20",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The party's full 2026 Pennsylvania candidate list on its own page (including the part behind \"View More\") has no pick in this race.",
     "url": "https://workingfamilies.org/state/pennsylvania",
@@ -1212,7 +1202,7 @@
   {
     "endorser_id": "pa-working-families-party",
     "target_id": "pa-hd-23",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The party's full 2026 Pennsylvania candidate list on its own page (including the part behind \"View More\") has no pick in this race.",
     "url": "https://workingfamilies.org/state/pennsylvania",
@@ -1222,7 +1212,7 @@
   {
     "endorser_id": "pa-working-families-party",
     "target_id": "pa-hd-27",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The party's full 2026 Pennsylvania candidate list on its own page (including the part behind \"View More\") has no pick in this race.",
     "url": "https://workingfamilies.org/state/pennsylvania",
@@ -1232,7 +1222,7 @@
   {
     "endorser_id": "pa-working-families-party",
     "target_id": "pa-hd-34",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The party's full 2026 Pennsylvania candidate list on its own page (including the part behind \"View More\") has no pick in this race.",
     "url": "https://workingfamilies.org/state/pennsylvania",
@@ -1242,7 +1232,7 @@
   {
     "endorser_id": "pa-working-families-party",
     "target_id": "pa-hd-36",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The party's full 2026 Pennsylvania candidate list on its own page (including the part behind \"View More\") has no pick in this race.",
     "url": "https://workingfamilies.org/state/pennsylvania",
@@ -1252,7 +1242,7 @@
   {
     "endorser_id": "pa-working-families-party",
     "target_id": "pa-hd-38",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
     "why": "The party's full 2026 Pennsylvania candidate list on its own page (including the part behind \"View More\") has no pick in this race.",
     "url": "https://workingfamilies.org/state/pennsylvania",
@@ -1264,9 +1254,9 @@
     "target_id": "allegheny-charter-7c",
     "status": "not_found",
     "choice": null,
-    "why": "No position on the county charter question found on the party's Pennsylvania page, which lists candidates only. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "No position on the county charter question found on the party's Pennsylvania page, which lists candidates only. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://workingfamilies.org/state/pennsylvania",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -1292,91 +1282,91 @@
   {
     "endorser_id": "pa-pro-life-federation",
     "target_id": "pa-sd-38",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The federation's 2026 guide rates West \"No response / Unknown\" and Williams \"Pro-Abortion,\" and marks no one in this race as pro-life.",
+    "why": "The federation's 2026 guide rates West \"No response / Unknown\" and Williams \"Pro-Abortion,\" and marks no one in this race as pro-life. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://paprolife.org/wp-content/uploads/2026/09/2026-Fall-Voter-Guide.pdf",
-    "date": "2026-09-24",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
     "endorser_id": "pa-pro-life-federation",
     "target_id": "pa-sd-42",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The federation's 2026 guide marks no candidate in this race as pro-life.",
+    "why": "The federation's 2026 guide marks no candidate in this race as pro-life. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://paprolife.org/wp-content/uploads/2026/09/2026-Fall-Voter-Guide.pdf",
-    "date": "2026-09-24",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
     "endorser_id": "pa-pro-life-federation",
     "target_id": "pa-hd-19",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The federation's 2026 guide marks no candidate in this race as pro-life.",
+    "why": "The federation's 2026 guide marks no candidate in this race as pro-life. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://paprolife.org/wp-content/uploads/2026/09/2026-Fall-Voter-Guide.pdf",
-    "date": "2026-09-24",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
     "endorser_id": "pa-pro-life-federation",
     "target_id": "pa-hd-20",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The federation's 2026 guide rates Aguglia \"No response / Unknown\" and Kinkead \"Pro-Abortion,\" and marks no one in this race as pro-life. The LifePAC that backs Aguglia is a separate group.",
+    "why": "The federation's 2026 guide rates Aguglia \"No response / Unknown\" and Kinkead \"Pro-Abortion,\" and marks no one in this race as pro-life. The LifePAC that backs Aguglia is a separate group. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://paprolife.org/wp-content/uploads/2026/09/2026-Fall-Voter-Guide.pdf",
-    "date": "2026-09-24",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
     "endorser_id": "pa-pro-life-federation",
     "target_id": "pa-hd-21",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The federation's 2026 guide marks no candidate in this race as pro-life.",
+    "why": "The federation's 2026 guide marks no candidate in this race as pro-life. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://paprolife.org/wp-content/uploads/2026/09/2026-Fall-Voter-Guide.pdf",
-    "date": "2026-09-24",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
     "endorser_id": "pa-pro-life-federation",
     "target_id": "pa-hd-23",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The federation's 2026 guide marks no candidate in this race as pro-life.",
+    "why": "The federation's 2026 guide marks no candidate in this race as pro-life. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://paprolife.org/wp-content/uploads/2026/09/2026-Fall-Voter-Guide.pdf",
-    "date": "2026-09-24",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
     "endorser_id": "pa-pro-life-federation",
     "target_id": "pa-hd-24",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The federation's 2026 guide marks no candidate in this race as pro-life.",
+    "why": "The federation's 2026 guide marks no candidate in this race as pro-life. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://paprolife.org/wp-content/uploads/2026/09/2026-Fall-Voter-Guide.pdf",
-    "date": "2026-09-24",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
     "endorser_id": "pa-pro-life-federation",
     "target_id": "pa-hd-27",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The federation's 2026 guide marks no candidate in this race as pro-life.",
+    "why": "The federation's 2026 guide marks no candidate in this race as pro-life. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://paprolife.org/wp-content/uploads/2026/09/2026-Fall-Voter-Guide.pdf",
-    "date": "2026-09-24",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
     "endorser_id": "pa-pro-life-federation",
     "target_id": "pa-hd-34",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The federation's 2026 guide marks no candidate in this race as pro-life.",
+    "why": "The federation's 2026 guide marks no candidate in this race as pro-life. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://paprolife.org/wp-content/uploads/2026/09/2026-Fall-Voter-Guide.pdf",
-    "date": "2026-09-24",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1392,11 +1382,11 @@
   {
     "endorser_id": "pa-pro-life-federation",
     "target_id": "pa-hd-38",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The federation's 2026 guide rates Sobieralski \"No response / Unknown\" and Inglis \"Pro-Abortion,\" and marks no one in this race as pro-life.",
+    "why": "The federation's 2026 guide rates Sobieralski \"No response / Unknown\" and Inglis \"Pro-Abortion,\" and marks no one in this race as pro-life. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://paprolife.org/wp-content/uploads/2026/09/2026-Fall-Voter-Guide.pdf",
-    "date": "2026-09-24",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1404,9 +1394,9 @@
     "target_id": "pa-us-house-12",
     "status": "not_found",
     "choice": null,
-    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.nrapvf.org/grades/Pennsylvania/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -1414,9 +1404,9 @@
     "target_id": "pa-sd-38",
     "status": "not_found",
     "choice": null,
-    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.nrapvf.org/grades/Pennsylvania/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -1424,9 +1414,9 @@
     "target_id": "pa-sd-42",
     "status": "not_found",
     "choice": null,
-    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.nrapvf.org/grades/Pennsylvania/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -1434,9 +1424,9 @@
     "target_id": "pa-hd-19",
     "status": "not_found",
     "choice": null,
-    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.nrapvf.org/grades/Pennsylvania/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -1444,9 +1434,9 @@
     "target_id": "pa-hd-20",
     "status": "not_found",
     "choice": null,
-    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.nrapvf.org/grades/Pennsylvania/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -1454,9 +1444,9 @@
     "target_id": "pa-hd-21",
     "status": "not_found",
     "choice": null,
-    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.nrapvf.org/grades/Pennsylvania/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -1464,9 +1454,9 @@
     "target_id": "pa-hd-23",
     "status": "not_found",
     "choice": null,
-    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.nrapvf.org/grades/Pennsylvania/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -1474,9 +1464,9 @@
     "target_id": "pa-hd-24",
     "status": "not_found",
     "choice": null,
-    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.nrapvf.org/grades/Pennsylvania/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -1484,9 +1474,9 @@
     "target_id": "pa-hd-27",
     "status": "not_found",
     "choice": null,
-    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.nrapvf.org/grades/Pennsylvania/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -1494,9 +1484,9 @@
     "target_id": "pa-hd-34",
     "status": "not_found",
     "choice": null,
-    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.nrapvf.org/grades/Pennsylvania/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -1504,9 +1494,9 @@
     "target_id": "pa-hd-36",
     "status": "not_found",
     "choice": null,
-    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.nrapvf.org/grades/Pennsylvania/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {
@@ -1514,9 +1504,9 @@
     "target_id": "pa-hd-38",
     "status": "not_found",
     "choice": null,
-    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026. Checked again on Oct 28, 2026; still no pick on this page.",
+    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026. Checked again on Nov 1, 2026; still no pick on this page.",
     "url": "https://www.nrapvf.org/grades/Pennsylvania/",
-    "date": "2026-10-28",
+    "date": "2026-11-01",
     "confidence": "sourced"
   },
   {

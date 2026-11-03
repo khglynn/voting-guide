@@ -189,6 +189,11 @@
    "path": "notes",
    "from": "2026-11-02",
    "text": "Drop off a mail ballot only at the Elections Center, 2990-1 Apalachee Pkwy.: Mon, 8:30 AM to 5 PM, and Election Day, 7 AM to 7 PM. You can't drop it off at an Election Day polling place."
+  },
+  {
+   "path": "situations.no_mail_ballot_or_lost.answer",
+   "from": "2026-11-02",
+   "text": "The deadline to have a ballot mailed was October 22, so voting in person is the easiest fix. Early voting ended Sunday, November 1, so on Election Day, go to your precinct, 7 AM to 7 PM. Still have your mail ballot? Bring it: poll workers can cancel it so you can vote in person."
   }
  ]
 }

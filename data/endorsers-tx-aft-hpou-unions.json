@@ -1,0 +1,32 @@
+[
+ {
+  "id": "texas-aft",
+  "name": "Texas AFT (Texas American Federation of Teachers)",
+  "short": "Texas AFT",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says it is “a statewide union with 66,000 members, including K-12 and community college educators, support staff, and retirees” (https://www.texasaft.org/about). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://www.texasaft.org/our-priorities/current-endorsements",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "geography": [
+   "TX"
+  ]
+ },
+ {
+  "id": "hpou",
+  "name": "Houston Police Officers’ Union",
+  "short": "HPOU",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says it “remained the Majority Bargaining Agent for all officers” of the Houston Police Department (https://hpou.org/hpou-history/). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://bg.hpou.org/2026-november-endorsements/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "houston-tx"
+  ]
+ }
+]

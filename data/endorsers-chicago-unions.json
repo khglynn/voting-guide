@@ -1,0 +1,47 @@
+[
+ {
+  "id": "afscme-council-31",
+  "name": "AFSCME Council 31 (Illinois)",
+  "short": "AFSCME Council 31",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says “AFSCME Council 31’s members in Illinois provide the vital services that make Illinois happen” (https://afscme31.org/about-us). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://www.afscme31.org/news/afscme-illinois-people-recommendations-2026-general-election",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "IL"
+  ]
+ },
+ {
+  "id": "chicago-fop-7",
+  "name": "Fraternal Order of Police, Chicago Lodge 7",
+  "short": "Chicago FOP Lodge 7",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says it became “the collective bargaining agent for the police and the union for 8,202 Chicago Police Officers” (https://www.chicagofop.org/about/about-the-lodge). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://www.chicagofop.org/latest-news/2026-endorsed-candidates",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "chicago-il"
+  ]
+ },
+ {
+  "id": "iuoe-150",
+  "name": "International Union of Operating Engineers Local 150",
+  "short": "Operating Engineers 150",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says it “is a labor union representing over 24,000 working men and women in Illinois, Indiana and Iowa” (https://local150.org/local150/about/). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://local150.org/election/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "chicago-il"
+  ]
+ }
+]

@@ -1,0 +1,742 @@
+[
+ {
+  "endorser_id": "lacdp",
+  "target_id": "burbank-city-council",
+  "status": "endorsed",
+  "choice": "Nikki Perez, Tamala Takahashi, Mike Van Gorder",
+  "why": "Listed under 'Burbank City Council, At Large' in the party's November 2026 endorsements, with no reason given.",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lacdp",
+  "target_id": "burbank-city-clerk",
+  "status": "endorsed",
+  "choice": "Kimberley Clark",
+  "why": "Listed under 'Burbank City Clerk' in the party's November 2026 endorsements, with no reason given.",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lacdp",
+  "target_id": "burbank-city-treasurer",
+  "status": "not_found",
+  "choice": null,
+  "why": "The party's November 2026 endorsements list a Burbank city clerk pick but none for Burbank city treasurer (read Oct 29, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lacdp",
+  "target_id": "burbank-usd-area-3",
+  "status": "endorsed",
+  "choice": "Rosemary T. Morrison",
+  "why": "Listed under 'Burbank Unified, Trustee Area 3' in the party's November 2026 endorsements, with no reason given.",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lacdp",
+  "target_id": "burbank-measure-c",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Its measure table marks Burbank's City Services Measure yes, with no reason given. The table labels it CR; the county's ballot list calls it Measure C.",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lacdp",
+  "target_id": "burbank-measure-cc",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its measure table marks Burbank's Charter Amendment Measure on council election methods no, with no reason given.",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lacdp",
+  "target_id": "burbank-measure-cd",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its measure table marks Burbank's By-District Council Elections Measure no, with no reason given.",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "burbank-city-council",
+  "status": "endorsed",
+  "choice": "Samantha Wick, David Phillip Donahue",
+  "why": "The party's lookup lists Wick as 'Recommended' ('in races without a formal party endorsement') and Donahue as 'Reform CA' ('Endorsed by Reform California, an allied group'). It marks Nolan Southerland and Mike Van Gorder 'Do not vote for', which it explains as 'Backed by the Democratic Socialists of America (DSA-LA).'",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "burbank-city-clerk",
+  "status": "not_found",
+  "choice": null,
+  "why": "The party's lookup lists no pick for Burbank city clerk (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "burbank-city-treasurer",
+  "status": "not_found",
+  "choice": null,
+  "why": "The party's lookup lists no pick for Burbank city treasurer (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "burbank-usd-area-3",
+  "status": "endorsed",
+  "choice": "Dennis M. Connor",
+  "why": "Listed in the party's lookup as 'Endorsed by LAGOP' for Burbank Unified Trustee Area 3, with no reason given.",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "burbank-measure-c",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "The party's lookup says no on Burbank's Measure C, which it titles 'Hotel Tax Increase (TOT 10% to 12%)' and describes as a 'General tax, no sunset.'",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "burbank-measure-cc",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "The party's lookup says yes on Burbank's Measure CC, which it titles 'Convert to District Elections', with no reason given.",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "burbank-measure-cd",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "The party's lookup says yes on Burbank's Measure CD, which it titles 'District Election Standards', with no reason given.",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "burbank-city-council",
+  "status": "endorsed",
+  "choice": "Nikki Perez, Mike Van Gorder, Nolan Southerland",
+  "why": "Endorses all three for the three at-large seats. Says Perez has fought for renters and homelessness services, Van Gorder brings housing policy expertise and 'strong commitments to renter protections', and members were 'deeply impressed' by Southerland's interview.",
+  "url": "https://laforwardguide.org/guide/burbank",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "burbank-city-clerk",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its Burbank page has no city clerk pick. It says its volunteers research 'every contested race', and this race has one candidate. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://laforwardguide.org/guide/burbank",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "burbank-city-treasurer",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its Burbank page has no city treasurer pick. It says its volunteers research 'every contested race', and this race has one candidate. Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://laforwardguide.org/guide/burbank",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "burbank-usd-area-3",
+  "status": "endorsed",
+  "choice": "Rosemary T. Morrison",
+  "why": "Lists 'Trustee Area 3: Rosemary Morrison Recommended', with 'Analysis forthcoming.'",
+  "url": "https://laforwardguide.org/guide/burbank",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "burbank-measure-c",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Lists 'City Services Support' for Burbank's hotel tax measure, with 'Analysis forthcoming.' Its page labels it Measure CR; the county's ballot list calls it Measure C.",
+  "url": "https://laforwardguide.org/guide/burbank",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "burbank-measure-cc",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Lists 'Charter Amendment Support' for Measure CC, with 'Analysis forthcoming.'",
+  "url": "https://laforwardguide.org/guide/burbank",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "burbank-measure-cd",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Lists 'By-District Council Elections Oppose' for Measure CD, with 'Analysis forthcoming.'",
+  "url": "https://laforwardguide.org/guide/burbank",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "burbank-city-council",
+  "status": "endorsed",
+  "choice": "Mike Van Gorder, Nikki Perez, Nolan Southerland",
+  "why": "Says 'Three progressive candidates are running for the three seats available on Burbank City Council.' Says Van Gorder would protect tenants, immigrants and small businesses, Perez has a 'pro-worker/pro-tenant' record, and Southerland would be another 'pro-entertainment worker' voice.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "burbank-city-clerk",
+  "status": "not_found",
+  "choice": null,
+  "why": "Knock LA's Burbank section covers only the City Council race; nothing on city clerk (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "burbank-city-treasurer",
+  "status": "not_found",
+  "choice": null,
+  "why": "Knock LA's Burbank section covers only the City Council race; nothing on city treasurer (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "burbank-usd-area-3",
+  "status": "not_found",
+  "choice": null,
+  "why": "Knock LA's Burbank section covers only the City Council race; nothing on Burbank Unified (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "burbank-measure-c",
+  "status": "not_found",
+  "choice": null,
+  "why": "Knock LA's Burbank section covers only the City Council race; nothing on Measure C (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "burbank-measure-cc",
+  "status": "not_found",
+  "choice": null,
+  "why": "Knock LA's Burbank section covers only the City Council race; nothing on Measure CC (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "burbank-measure-cd",
+  "status": "not_found",
+  "choice": null,
+  "why": "Knock LA's Burbank section covers only the City Council race; nothing on Measure CD (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-california",
+  "target_id": "burbank-city-council",
+  "status": "endorsed",
+  "choice": "Nikki Perez",
+  "why": "Listed under 'Local Offices' as 'Burbank City Council, At-Large: Nikki Perez', with no reason given.",
+  "url": "https://www.eqca.org/elections/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-california",
+  "target_id": "burbank-city-clerk",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its November 2026 election page lists no pick for Burbank city clerk (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.eqca.org/elections/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-california",
+  "target_id": "burbank-city-treasurer",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its November 2026 election page lists no pick for Burbank city treasurer (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.eqca.org/elections/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-california",
+  "target_id": "burbank-usd-area-3",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its November 2026 election page lists no pick for Burbank Unified (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.eqca.org/elections/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-california",
+  "target_id": "burbank-measure-c",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 'Local Ballot Measures' list names no Burbank measure (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.eqca.org/elections/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-california",
+  "target_id": "burbank-measure-cc",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 'Local Ballot Measures' list names no Burbank measure (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.eqca.org/elections/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-california",
+  "target_id": "burbank-measure-cd",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 'Local Ballot Measures' list names no Burbank measure (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.eqca.org/elections/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-california",
+  "target_id": "ca-us-house-30",
+  "status": "endorsed",
+  "choice": "Laura Friedman",
+  "why": "Listed as 'Congressional District 30: Laura Friedman', with no reason given.",
+  "url": "https://www.eqca.org/elections/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-california",
+  "target_id": "ca-state-senate-20",
+  "status": "endorsed",
+  "choice": "Caroline Menjivar",
+  "why": "Listed as 'Senate District 20: Caroline Menjivar', with no reason given.",
+  "url": "https://www.eqca.org/elections/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-california",
+  "target_id": "ca-assembly-44",
+  "status": "endorsed",
+  "choice": "Nicholas \"Nick\" Schultz",
+  "why": "Listed as 'Assembly District 44: Nick Schultz', with no reason given.",
+  "url": "https://www.eqca.org/elections/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lalcv",
+  "target_id": "burbank-city-council",
+  "status": "endorsed",
+  "choice": "Nikki Perez, Eddy Polon, Nolan Southerland, Tamala Takahashi",
+  "why": "Lists four names under 'Burbank City Council' on its 2026 endorsements page, for three seats, with no reason given.",
+  "url": "https://lalcv.org/current-endorsements/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lalcv",
+  "target_id": "burbank-city-clerk",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 endorsements page lists no pick for Burbank city clerk (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://lalcv.org/current-endorsements/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lalcv",
+  "target_id": "burbank-city-treasurer",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 endorsements page lists no pick for Burbank city treasurer (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://lalcv.org/current-endorsements/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lalcv",
+  "target_id": "burbank-usd-area-3",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 endorsements page lists no Burbank Unified pick (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://lalcv.org/current-endorsements/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lalcv",
+  "target_id": "la-laccd-seat-4",
+  "status": "endorsed",
+  "choice": "Nancy Pearlman",
+  "why": "Calls her 'a lifelong environmental champion' and former trustee with 'a proven record of advancing campus sustainability through solar energy, recycling, and sustainable food options.'",
+  "url": "https://lalcv.org/lalcv-endorses-nancy-pearlman-for-laccd-seat-4/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "abundant-housing-la",
+  "target_id": "burbank-city-council",
+  "status": "endorsed",
+  "choice": "Eddy Polon, Mike Van Gorder",
+  "why": "Listed under 'Local Cities' on its 2026 endorsements page. The page gives no reason for each pick; it says its endorsements go to people who share its mission 'to increase housing supply.'",
+  "url": "https://www.abundanthousingla.org/endorsements-pac",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "abundant-housing-la",
+  "target_id": "burbank-city-clerk",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 endorsements page lists no pick for Burbank city clerk (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.abundanthousingla.org/endorsements-pac",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "abundant-housing-la",
+  "target_id": "burbank-city-treasurer",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 endorsements page lists no pick for Burbank city treasurer (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.abundanthousingla.org/endorsements-pac",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "abundant-housing-la",
+  "target_id": "ca-us-house-30",
+  "status": "endorsed",
+  "choice": "Laura Friedman",
+  "why": "Listed under 'U.S House' on its 2026 endorsements page as 'Representative U.S. House CA-30', with no reason given.",
+  "url": "https://www.abundanthousingla.org/endorsements-pac",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "abundant-housing-la",
+  "target_id": "ca-assembly-44",
+  "status": "endorsed",
+  "choice": "Nicholas \"Nick\" Schultz",
+  "why": "Listed on its 2026 endorsements page for 'CA State Assembly District 44', with no reason given.",
+  "url": "https://www.abundanthousingla.org/endorsements-pac",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "abundant-housing-la",
+  "target_id": "ca-state-senate-20",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 endorsements page lists state Senate picks in Districts 24, 26 and 28 only (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.abundanthousingla.org/endorsements-pac",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "streets-for-all",
+  "target_id": "burbank-city-council",
+  "status": "endorsed",
+  "choice": "Eddy Polon, Nolan Southerland, Mike Van Gorder",
+  "why": "Says all three 'are committed to building the Noho-Pas BRT without delay, including a bus lane on Olive,' and want a walkable, bike-able, transit-friendly Burbank.",
+  "url": "https://www.streetsforall.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "streets-for-all",
+  "target_id": "burbank-city-clerk",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 endorsements page lists nothing on Burbank city clerk (checked Oct 31, 2026).",
+  "url": "https://www.streetsforall.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "streets-for-all",
+  "target_id": "burbank-city-treasurer",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 endorsements page lists nothing on Burbank city treasurer (checked Oct 31, 2026).",
+  "url": "https://www.streetsforall.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "streets-for-all",
+  "target_id": "burbank-measure-c",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 endorsements page lists nothing on Burbank's Measure C (checked Oct 31, 2026).",
+  "url": "https://www.streetsforall.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "streets-for-all",
+  "target_id": "burbank-measure-cc",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 endorsements page lists nothing on Burbank's Measure CC (checked Oct 31, 2026).",
+  "url": "https://www.streetsforall.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "streets-for-all",
+  "target_id": "burbank-measure-cd",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 endorsements page lists nothing on Burbank's Measure CD (checked Oct 31, 2026).",
+  "url": "https://www.streetsforall.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "streets-for-all",
+  "target_id": "ca-state-senate-20",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 endorsements page lists state Senate picks in Districts 24 and 26 only (checked Oct 31, 2026).",
+  "url": "https://www.streetsforall.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "streets-for-all",
+  "target_id": "ca-assembly-44",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 endorsements page lists no state Assembly picks (checked Oct 31, 2026).",
+  "url": "https://www.streetsforall.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-fed",
+  "target_id": "burbank-city-council",
+  "status": "endorsed",
+  "choice": "Nikki Perez, Nolan Southerland, Mike Van Gorder",
+  "why": "Listed under 'Burbank City Council' in its November 2026 voter guide (the third of the guide's images on this page), with no reason given.",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "date": "2026-10-31",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-fed",
+  "target_id": "burbank-city-clerk",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its November 2026 voter guide lists picks for Burbank City Council and Burbank Unified, but none for city clerk (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "date": "2026-11-01",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-fed",
+  "target_id": "burbank-city-treasurer",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its November 2026 voter guide lists picks for Burbank City Council and Burbank Unified, but none for city treasurer (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "date": "2026-11-01",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-fed",
+  "target_id": "burbank-usd-area-3",
+  "status": "endorsed",
+  "choice": "Rosemary T. Morrison",
+  "why": "Listed under 'Burbank Unified School District' as 'Rosemary T. Morrison - Area 3' in its November 2026 voter guide, with no reason given.",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "date": "2026-10-31",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-fed",
+  "target_id": "burbank-measure-c",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its November 2026 voter guide's page of local measures lists LA County's Measure A and measures in other cities, but nothing on Burbank's Measure C (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "date": "2026-11-01",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-fed",
+  "target_id": "burbank-measure-cc",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its November 2026 voter guide's page of local measures lists LA County's Measure A and measures in other cities, but nothing on Burbank's Measure CC (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "date": "2026-11-01",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-fed",
+  "target_id": "burbank-measure-cd",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its November 2026 voter guide's page of local measures lists LA County's Measure A and measures in other cities, but nothing on Burbank's Measure CD (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "date": "2026-11-01",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "burbank-city-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Southern California News Group's endorsement list (last updated Oct 20) has nothing on Burbank City Council (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "burbank-city-clerk",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Southern California News Group's endorsement list (last updated Oct 20) has nothing on Burbank city clerk (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "burbank-city-treasurer",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Southern California News Group's endorsement list (last updated Oct 20) has nothing on Burbank city treasurer (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "burbank-usd-area-3",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Southern California News Group's endorsement list (last updated Oct 20) has nothing on Burbank Unified (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "burbank-measure-c",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Southern California News Group's endorsement list (last updated Oct 20) has nothing on Burbank's Measure C (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "burbank-measure-cc",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Southern California News Group's endorsement list (last updated Oct 20) has nothing on Burbank's Measure CC (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "burbank-measure-cd",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Southern California News Group's endorsement list (last updated Oct 20) has nothing on Burbank's Measure CD (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "myburbank",
+  "target_id": "burbank-measure-c",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Says hotel guests use Burbank's police, fire and roads and 'should help support them', and that the rate hasn't changed since 1983. A $200 room would cost $4 more a night.",
+  "url": "https://myburbank.com/myburbanks-position-vote-no-on-measures-cc-and-cd-yes-on-c/",
+  "date": "2026-10-23",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "myburbank",
+  "target_id": "burbank-measure-cc",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Says CC would let the council or voters set up districts by ordinance even if CD fails, and that how Burbank elects its council should stay 'under direct voter control.'",
+  "url": "https://myburbank.com/myburbanks-position-vote-no-on-measures-cc-and-cd-yes-on-c/",
+  "date": "2026-10-23",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "myburbank",
+  "target_id": "burbank-measure-cd",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Says districts would limit your vote to one of five council seats, and that every resident should have a vote in choosing the entire council.",
+  "url": "https://myburbank.com/myburbanks-position-vote-no-on-measures-cc-and-cd-yes-on-c/",
+  "date": "2026-10-23",
+  "confidence": "verified"
+ }
+]

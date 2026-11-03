@@ -77,7 +77,7 @@
   "election_day": {
     "polls_open": "7:00 AM",
     "polls_close": "8:00 PM",
-    "in_line_rule": "DCBOE: 'All voters who are in line at 8:00 p.m. may cast a ballot.' Drop boxes also lock at 8:00 PM, and mailed ballots must be postmarked that day.",
+    "in_line_rule": "In line by 8 PM? You still get to vote. Drop boxes lock at 8 PM, and a mailed ballot must be postmarked by Nov. 3.",
     "vote_centers": true,
     "lookup_url": "https://dcboe.org/voters/find-out-where-to-vote/vote-center-locator-tool",
     "confidence": "verified"
@@ -535,6 +535,18 @@
     {
       "text": "Two at-large council members win, but your ballot counts for one candidate at a time. Rank candidates rather than choosing two equal first choices.",
       "applies_to": "item:dc-council-at-large"
+    }
+  ],
+  "dated": [
+    {
+      "path": "mail_ballot.mail_cutoff_advice",
+      "from": "2026-10-28",
+      "text": "Your ballot counts in DC if it's postmarked by November 3 and reaches DCBOE by Friday, November 13. But a missing or late postmark is a real risk. DCBOE had to clarify USPS postmark rules during the June primary. The safest way is one of the 55 drop boxes, open around the clock until 8:00 PM on November 3. If you mail it, ask a post office counter clerk for a free manual postmark when you hand it over."
+    },
+    {
+      "path": "situations.away_on_election_day.steps.0",
+      "from": "2026-11-02",
+      "text": "Early voting ended November 1. If you're in DC on November 3, vote at any Vote Center, 7 AM to 8 PM."
     }
   ]
 }

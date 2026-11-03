@@ -2,6 +2,9 @@
   "id": "austin-tx",
   "label": "Austin",
   "state": "TX",
+  "county_fips": [
+    "48453"
+  ],
   "counties": [
     "Travis",
     "Williamson (far north Austin)",
@@ -75,7 +78,7 @@
     "78758",
     "78759"
   ],
-  "zip_caveats": "ZIPs do not map to ballots. Kevin's 78702 is split between Council Districts 1 and 3 and between AISD trustee districts; all of it is HD-51, CD-37, Commissioner Pct 4 and JP/Constable 4, but confirm with the Travis County voter lookup. 78717, 78728, 78729 and 78750 are partly in Williamson County (Williamson voters get a Williamson ballot: Wilco county judge, clerk, Round Rock or Leander ISD). 78737, 78739 and 78747 touch Hays County. 78745 to 78749 and 78735 are split between Council Districts 5 and 8. 78704 is split among Districts 3, 5 and 9. 78731, 78746 and 78733 reach into Eanes or Lake Travis ISD, which have no race on this ballot. Congressional lines were redrawn in 2025: central Austin is CD-37, east and southeast Travis is CD-27 or CD-10, and far west and northwest Travis is CD-11; check your registration card or the voter lookup.",
+  "zip_caveats": "ZIPs do not map to ballots. Kevin's 78702 is split between Council Districts 1 and 3 and between AISD trustee districts; all of it is HD-51, CD-37, Commissioner Pct 4 and JP/Constable 4, but confirm with the Travis County voter lookup. 78717, 78728, 78729 and 78750 are partly in Williamson County (Williamson voters get a Williamson ballot: Wilco county judge, clerk, Round Rock or Leander ISD). 78737 and 78739 touch Hays County (Hays voters get a Hays ballot). Those six ZIPs offer you a choice of Austin pages; typing your address picks the right one. 78745 to 78749 and 78735 are split between Council Districts 5 and 8. 78704 is split among Districts 3, 5 and 9. 78731, 78746 and 78733 reach into Eanes or Lake Travis ISD, which have no race on this ballot. Congressional lines were redrawn in 2025: central Austin is CD-37, east and southeast Travis is CD-27 or CD-10, and far west and northwest Travis is CD-11; check your registration card or the voter lookup.",
   "contest_ids": [
     "tx-us-senate",
     "tx-governor",
@@ -190,6 +193,32 @@
     "tx-dvisd-prop-a"
   ],
   "notes": "Any Travis County voter can use any Travis polling place, early or on Election Day. Seven early-voting sites stay open until 10 PM on Oct 29 and 30. Travis also has a generic consolidated ballot PDF at votetravis.gov showing every contest in the county. Travis County: moved here from another Texas county and didn't re-register? You may be able to vote a limited ballot, but only at the Travis County Elections office, 5501 Airport Blvd., during early voting (through Oct 30); call 512-238-8683 first. Have a Travis mail ballot? On Election Day only, 7 AM to 7 PM, you can hand it in yourself, with photo ID, at 5501 Airport Blvd. Mail ballot questions: ebbm@traviscountytx.gov or 512-238-8683.",
+  "dated": [
+    {
+      "path": "notes",
+      "from": "2026-10-31",
+      "text": "Any Travis County voter can use any Travis polling place on Election Day, Tue Nov 3, 7 AM to 7 PM. Early voting ended Fri Oct 30. Travis also has a generic consolidated ballot PDF at votetravis.gov showing every contest in the county. Travis County: moved here from another Texas county and didn't re-register? The limited ballot was available only during early voting, which ended Oct 30; call 512-238-8683 to ask about your options. Have a Travis mail ballot? On Election Day only, 7 AM to 7 PM, you can hand it in yourself, with photo ID, at 5501 Airport Blvd. Mail ballot questions: ebbm@traviscountytx.gov or 512-238-8683."
+    }
+  ],
+  "heads_up": [
+    {
+      "text": "Live in far north or far south Austin? Part of the city is in Williamson or Hays County, each with its own ballot. Use your address and we’ll open the right page.",
+      "applies_to": "ballot",
+      "until_address": true,
+      "zips": [
+        "78717",
+        "78728",
+        "78729",
+        "78750",
+        "78727",
+        "78759",
+        "78737",
+        "78739",
+        "78736"
+      ],
+      "source": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_county20_natl.txt"
+    }
+  ],
   "district_finders": [
     {
       "office_match": "U.S. Representative",
@@ -764,7 +793,7 @@
       "county": "Travis",
       "lookups": {
         "early_in_person": "https://www.google.com/maps/d/viewer?mid=1t_vWJgd_BRfKnJn_fQoHE25IV2i_0Jo",
-        "election_day": "https://www.google.com/maps/d/viewer?mid=1Y86BIAffVIw2L_WEkSls_0OWg7NpvX8"
+        "election_day": "https://www.google.com/maps/d/viewer?mid=1zqK0dRaFZQEYLkYi54gtLcxIZaeCsOQ"
       },
       "source": "https://votetravis.gov/current-election-information/current-election/",
       "confidence": "verified",
@@ -810,7 +839,7 @@
       "zips": [],
       "lookups": {
         "early_in_person": "https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Early%20Voting%20Dashboard.html",
-        "election_day": "https://www.wilcotx.gov/elections"
+        "election_day": "https://www.wilcotx.gov/DocumentCenter/View/22255/Notice-of-General-Election-Williamson-County"
       },
       "source": "https://www.wilcotx.gov/elections",
       "confidence": "verified"
@@ -855,5 +884,6 @@
       "name": "Census 2020 ZIP code (ZCTA) to county relationship file",
       "url": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_county20_natl.txt"
     }
-  ]
+  ],
+  "county_label": "Travis County"
 }

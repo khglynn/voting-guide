@@ -1,0 +1,562 @@
+[
+ {
+  "endorser_id": "malibu-democratic-club",
+  "target_id": "malibu-city-council",
+  "status": "endorsed",
+  "choice": "Danny Smith",
+  "why": "Listed on the club's endorsements for the Nov 3, 2026 general election, one name for the two seats, with no reason given.",
+  "url": "https://www.malibudemocraticclub.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "malibu-democratic-club",
+  "target_id": "smmusd-board",
+  "status": "endorsed",
+  "choice": "Alicia Mignano, Laurie Lieberman, Robbie Staenberg, Stacy Rouse",
+  "why": "Listed on the club's endorsements for the Nov 3, 2026 general election, with no reason given.",
+  "url": "https://www.malibudemocraticclub.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "malibu-democratic-club",
+  "target_id": "smccd-board",
+  "status": "endorsed",
+  "choice": "Kera Blades-Snell, Luis Barrera Castanon, Sion Roy, Tom Peters",
+  "why": "Listed on the club's endorsements for the Nov 3, 2026 general election (it spells the name Castañon), with no reason given.",
+  "url": "https://www.malibudemocraticclub.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "malibu-democratic-club",
+  "target_id": "la-county-sheriff",
+  "status": "endorsed",
+  "choice": "Robert G. Luna",
+  "why": "Listed on the club's endorsements for the Nov 3, 2026 general election, with no reason given.",
+  "url": "https://www.malibudemocraticclub.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "malibu-democratic-club",
+  "target_id": "la-county-judge-65",
+  "status": "endorsed",
+  "choice": "Anna Slotky Reitano",
+  "why": "Listed on the club's endorsements for the Nov 3, 2026 general election, with no reason given.",
+  "url": "https://www.malibudemocraticclub.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "malibu-democratic-club",
+  "target_id": "la-county-judge-87",
+  "status": "endorsed",
+  "choice": "David DeJute",
+  "why": "Listed on the club's endorsements for the Nov 3, 2026 general election, with no reason given.",
+  "url": "https://www.malibudemocraticclub.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "malibu-democratic-club",
+  "target_id": "la-county-judge-64",
+  "status": "no_position",
+  "choice": null,
+  "why": "Its list says 'No consensus, vote for one' and names both candidates: 'Maria Ghobadi or Rhonda Haymon.'",
+  "url": "https://www.malibudemocraticclub.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "malibu-democratic-club",
+  "target_id": "la-county-judge-131",
+  "status": "no_position",
+  "choice": null,
+  "why": "Its list says 'No consensus, vote for one' and names both candidates: 'David Ross or Donna Tryfman.'",
+  "url": "https://www.malibudemocraticclub.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "malibu-democratic-club",
+  "target_id": "ca-assembly-42",
+  "status": "endorsed",
+  "choice": "Deborah Klein Lopez",
+  "why": "Listed on the club's endorsements for the Nov 3, 2026 general election, with no reason given.",
+  "url": "https://www.malibudemocraticclub.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "malibu-democratic-club",
+  "target_id": "ca-governor",
+  "status": "endorsed",
+  "choice": "Xavier Becerra",
+  "why": "Listed on the club's endorsements for the Nov 3, 2026 general election, with no reason given.",
+  "url": "https://www.malibudemocraticclub.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "malibu-democratic-club",
+  "target_id": "ca-lt-governor",
+  "status": "endorsed",
+  "choice": "Fiona Ma",
+  "why": "Listed on the club's endorsements for the Nov 3, 2026 general election, with no reason given.",
+  "url": "https://www.malibudemocraticclub.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "malibu-democratic-club",
+  "target_id": "ca-secretary-of-state",
+  "status": "endorsed",
+  "choice": "Shirley N. Weber",
+  "why": "Listed on the club's endorsements for the Nov 3, 2026 general election, with no reason given.",
+  "url": "https://www.malibudemocraticclub.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "malibu-democratic-club",
+  "target_id": "ca-attorney-general",
+  "status": "endorsed",
+  "choice": "Rob Bonta",
+  "why": "Listed on the club's endorsements for the Nov 3, 2026 general election, with no reason given.",
+  "url": "https://www.malibudemocraticclub.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "malibu-democratic-club",
+  "target_id": "ca-treasurer",
+  "status": "endorsed",
+  "choice": "Eleni Kounalakis",
+  "why": "Listed on the club's endorsements for the Nov 3, 2026 general election, with no reason given.",
+  "url": "https://www.malibudemocraticclub.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "malibu-democratic-club",
+  "target_id": "ca-controller",
+  "status": "endorsed",
+  "choice": "Malia M. Cohen",
+  "why": "Listed on the club's endorsements for the Nov 3, 2026 general election, with no reason given.",
+  "url": "https://www.malibudemocraticclub.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "malibu-democratic-club",
+  "target_id": "ca-superintendent",
+  "status": "endorsed",
+  "choice": "Richard Barrera",
+  "why": "Listed on the club's endorsements for the Nov 3, 2026 general election, with no reason given.",
+  "url": "https://www.malibudemocraticclub.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "malibu-democratic-club",
+  "target_id": "ca-insurance-commissioner",
+  "status": "endorsed",
+  "choice": "Ben Allen",
+  "why": "Listed on the club's endorsements for the Nov 3, 2026 general election, with no reason given.",
+  "url": "https://www.malibudemocraticclub.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "malibu-democratic-club",
+  "target_id": "ca-us-house-32",
+  "status": "not_found",
+  "choice": null,
+  "why": "The club's Nov 3, 2026 endorsement list names no pick in this race (checked Oct 31, 2026).",
+  "url": "https://www.malibudemocraticclub.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "malibu-democratic-club",
+  "target_id": "ca-state-senate-24",
+  "status": "not_found",
+  "choice": null,
+  "why": "The club's Nov 3, 2026 endorsement list names no pick in this race (checked Oct 31, 2026).",
+  "url": "https://www.malibudemocraticclub.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "malibu-democratic-club",
+  "target_id": "ca-boe-3",
+  "status": "not_found",
+  "choice": null,
+  "why": "The club's Nov 3, 2026 endorsement list names no pick in this race (checked Oct 31, 2026).",
+  "url": "https://www.malibudemocraticclub.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "malibu-democratic-club",
+  "target_id": "ca-supreme-court-evans",
+  "status": "not_found",
+  "choice": null,
+  "why": "The club's Nov 3, 2026 endorsement list names no pick in this race (checked Oct 31, 2026).",
+  "url": "https://www.malibudemocraticclub.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "malibu-democratic-club",
+  "target_id": "ca-supreme-court-groban",
+  "status": "not_found",
+  "choice": null,
+  "why": "The club's Nov 3, 2026 endorsement list names no pick in this race (checked Oct 31, 2026).",
+  "url": "https://www.malibudemocraticclub.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "malibu-democratic-club",
+  "target_id": "ca-coa-2d-retention",
+  "status": "not_found",
+  "choice": null,
+  "why": "The club's Nov 3, 2026 endorsement list names no pick in this race (checked Oct 31, 2026).",
+  "url": "https://www.malibudemocraticclub.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lacdp",
+  "target_id": "malibu-city-council",
+  "status": "endorsed",
+  "choice": "Danny Smith",
+  "why": "On the party's Nov 3, 2026 endorsement page, which prints the name as 'Daniel Smith', the only Smith in the race. It names one candidate for the two seats.",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lacdp",
+  "target_id": "smmusd-board",
+  "status": "endorsed",
+  "choice": "Alicia Mignano, Laurie Lieberman, Robbie Staenberg, Stacy Rouse",
+  "why": "On the party's Nov 3, 2026 endorsement page, with no reason given.",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lacdp",
+  "target_id": "smccd-board",
+  "status": "endorsed",
+  "choice": "Kera Blades-Snell, Luis Barrera Castanon, Sion Roy, Tom Peters",
+  "why": "On the party's Nov 3, 2026 endorsement page, which prints 'Kera Snell' for Kera Blades-Snell. No reason given.",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-fed",
+  "target_id": "smmusd-board",
+  "status": "endorsed",
+  "choice": "Alicia Mignano, Laurie Lieberman, Robbie Staenberg",
+  "why": "Listed in the federation's 2026 voter guide, three names for the four seats, with no reason given.",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-fed",
+  "target_id": "smccd-board",
+  "status": "endorsed",
+  "choice": "Oscar de la Torre, Tom Peters",
+  "why": "Listed in the federation's 2026 voter guide, two names for the four seats, with no reason given.",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-fed",
+  "target_id": "malibu-city-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "The federation's 2026 voter guide has no Malibu City Council entry (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "smmusd-board",
+  "status": "endorsed",
+  "choice": "Alicia Mignano, Stacy Rouse",
+  "why": "Both marked 'Recommended' on the guide's Santa Monica page, two names for the four seats. Each entry says 'Analysis forthcoming.'",
+  "url": "https://laforwardguide.org/guide/santa-monica",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "smccd-board",
+  "status": "endorsed",
+  "choice": "Sion Roy, Luis Barrera Castanon, Tom Peters, Kera Blades-Snell",
+  "why": "All four marked 'Recommended' on the guide's Santa Monica page. Each entry says 'Analysis forthcoming.'",
+  "url": "https://laforwardguide.org/guide/santa-monica",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "malibu-city-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "The guide has no Malibu page and no pick in this race (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://laforwardguide.org/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lalcv",
+  "target_id": "smmusd-board",
+  "status": "endorsed",
+  "choice": "Harry Leshner, Robbie Staenberg",
+  "why": "Listed under 'Santa Monica Malibu Unified School District' on its 2026 endorsements page, two names for the four seats, with no reason given.",
+  "url": "https://lalcv.org/current-endorsements/",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lalcv",
+  "target_id": "smccd-board",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 endorsements page lists no pick in this race (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://lalcv.org/current-endorsements/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lalcv",
+  "target_id": "malibu-city-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its 2026 endorsements page lists no pick in this race (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://lalcv.org/current-endorsements/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "malibu-city-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "The party's Nov 3, 2026 endorsement lookup has no record for this race (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "smmusd-board",
+  "status": "not_found",
+  "choice": null,
+  "why": "The party's Nov 3, 2026 endorsement lookup has no record for this race (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "smccd-board",
+  "status": "not_found",
+  "choice": null,
+  "why": "The party's Nov 3, 2026 endorsement lookup has no record for this race (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ceps-santa-monica",
+  "target_id": "smmusd-board",
+  "status": "endorsed",
+  "choice": "Laurie Lieberman, Alicia Mignano, Stacy Rouse, Robbie Staenberg",
+  "why": "Listed on its 2026 endorsements page, which says its candidates 'make education a top priority.' Each name links to the candidate's answers to its questionnaire.",
+  "url": "https://www.cepssm.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ceps-santa-monica",
+  "target_id": "smccd-board",
+  "status": "endorsed",
+  "choice": "Luis Barrera Castanon, Kera Blades-Snell, Tom Peters, Sion Roy",
+  "why": "Listed on its 2026 endorsements page, which says its candidates 'make education a top priority.' Each name links to the candidate's answers to its questionnaire.",
+  "url": "https://www.cepssm.org/endorsements",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smmcta",
+  "target_id": "smmusd-board",
+  "status": "endorsed",
+  "choice": "Laurie Lieberman, Alicia Mignano, Stacy Rouse, Robbie Staenberg",
+  "why": "Listed under 'School Board Endorsements for SMMUSD' on the union's political action page, with no reason given.",
+  "url": "https://www.smmcta.com/political-action.html",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smmcta",
+  "target_id": "smccd-board",
+  "status": "not_found",
+  "choice": null,
+  "why": "The union's political action page lists no pick in this race (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smmcta.com/political-action.html",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smmcta",
+  "target_id": "ca-prop-3",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "The union's political action page says it supports and endorses 'the Statewide Prop 3.'",
+  "url": "https://www.smmcta.com/political-action.html",
+  "date": "2026-10-31",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smmcta",
+  "target_id": "ca-prop-1",
+  "status": "not_found",
+  "choice": null,
+  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smmcta.com/political-action.html",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smmcta",
+  "target_id": "ca-prop-2",
+  "status": "not_found",
+  "choice": null,
+  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smmcta.com/political-action.html",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smmcta",
+  "target_id": "ca-prop-4",
+  "status": "not_found",
+  "choice": null,
+  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smmcta.com/political-action.html",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smmcta",
+  "target_id": "ca-prop-5",
+  "status": "not_found",
+  "choice": null,
+  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smmcta.com/political-action.html",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smmcta",
+  "target_id": "ca-prop-37",
+  "status": "not_found",
+  "choice": null,
+  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smmcta.com/political-action.html",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smmcta",
+  "target_id": "ca-prop-38",
+  "status": "not_found",
+  "choice": null,
+  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smmcta.com/political-action.html",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smmcta",
+  "target_id": "ca-prop-39",
+  "status": "not_found",
+  "choice": null,
+  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smmcta.com/political-action.html",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smmcta",
+  "target_id": "ca-prop-40",
+  "status": "not_found",
+  "choice": null,
+  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smmcta.com/political-action.html",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smmcta",
+  "target_id": "ca-prop-41",
+  "status": "not_found",
+  "choice": null,
+  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smmcta.com/political-action.html",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smmcta",
+  "target_id": "ca-prop-42",
+  "status": "not_found",
+  "choice": null,
+  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smmcta.com/political-action.html",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smmcta",
+  "target_id": "ca-prop-43",
+  "status": "not_found",
+  "choice": null,
+  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smmcta.com/political-action.html",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smmcta",
+  "target_id": "ca-prop-44",
+  "status": "not_found",
+  "choice": null,
+  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smmcta.com/political-action.html",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "smmcta",
+  "target_id": "ca-prop-45",
+  "status": "not_found",
+  "choice": null,
+  "why": "The union's political action page names no pick on this proposition (checked Oct 31, 2026). Checked again on Nov 1, 2026; still no pick on this page.",
+  "url": "https://www.smmcta.com/political-action.html",
+  "date": "2026-11-01",
+  "confidence": "verified"
+ }
+]

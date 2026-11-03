@@ -379,6 +379,51 @@
       "address": "33501 Stonehill Dr.",
       "reason": "Gloria Dei Lutheran Church, an Orange County (CA) vote center (the same address at the end of a sentence).",
       "source": "https://ocvote.gov/elections/vote-center-locations"
+    },
+    {
+      "address": "1281 Murfreesboro Pike",
+      "reason": "Davidson County (TN) Election Commission office.",
+      "source": "https://www.nashville.gov/departments/elections/contact-us"
+    },
+    {
+      "address": "700 President Ronald Reagan Way.",
+      "reason": "Howard Office Building, a Metro Nashville government building and the Nov 3, 2026 Election Day polling place for District 19, Precinct 5 (moved from the Downtown Library).",
+      "source": "https://www.nashville.gov/sites/default/files/2026-09/Election_Day_Voting_Location_Change_November_3_2026.pdf?ct=1790351444"
+    },
+    {
+      "address": "1207A Tradewinds Drive",
+      "reason": "Maury County (TN) Election Commission office.",
+      "source": "https://www.maurycounty-tn.gov/227/Election-Commission"
+    },
+    {
+      "address": "1207 Tradewinds Drive",
+      "reason": "Maury County (TN) Election Commission office, as its early voting site is listed.",
+      "source": "https://www.maurycounty-tn.gov/227/Election-Commission"
+    },
+    {
+      "address": "2010 Redbud Blvd.",
+      "reason": "Collin County (TX) Elections Office: the Early Voting Clerk's mailing address, the main early voting site and where mail ballots are hand-delivered on Election Day.",
+      "source": "https://www.collincountytx.gov/docs/default-source/elections/election-notices/collin-county-bond-notice-of-election.pdf?sfvrsn=23acc969_3"
+    },
+    {
+      "address": "300 N. Allen Dr.",
+      "reason": "Allen Public Library (TX), a Collin County early voting and Election Day vote center for Nov 3, 2026.",
+      "source": "https://www.collincountytx.gov/docs/default-source/elections/election-notices/collin-county-bond-notice-of-election.pdf?sfvrsn=23acc969_3"
+    },
+    {
+      "address": "1451 N. Watters Rd.",
+      "reason": "Allen ISD Service Center (TX), a Collin County early voting and Election Day vote center for Nov 3, 2026.",
+      "source": "https://www.collincountytx.gov/docs/default-source/elections/election-notices/collin-county-bond-notice-of-election.pdf?sfvrsn=23acc969_3"
+    },
+    {
+      "address": "610 E. Bethany Dr.",
+      "reason": "Allen ISD Professional Learning and Auxiliary Services building (TX), a Collin County Election Day vote center for Nov 3, 2026.",
+      "source": "https://www.collincountytx.gov/docs/default-source/elections/election-notices/collin-county-bond-notice-of-election.pdf?sfvrsn=23acc969_3"
+    },
+    {
+      "address": "821 S. Greenville Ave.",
+      "reason": "Christ the Servant Lutheran Church, Fellowship Hall (Allen, TX), a Collin County Election Day vote center for Nov 3, 2026.",
+      "source": "https://www.collincountytx.gov/docs/default-source/elections/election-notices/collin-county-bond-notice-of-election.pdf?sfvrsn=23acc969_3"
     }
   ]
 }

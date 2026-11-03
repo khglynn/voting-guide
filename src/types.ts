@@ -368,7 +368,7 @@ export interface PlaceBundle {
    results, the sentence a voter reads about when (`wait_line`), and the last day it must be made official
    (`official_by`, shown only when `official_by_sure`). */
 export interface ResultsSource {
-  id: string; state: string; kind: 'state' | 'county'; name: string; results_url: string; wait_line: string;
+  id: string; state: string; kind: 'state' | 'county'; name: string; label?: string; results_url: string; wait_line: string;
   certification_date: string; certification_source: string | null; official_by: string | null; official_by_sure: boolean;
   confidence: Confidence; counties?: string[];
 }

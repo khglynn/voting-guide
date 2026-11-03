@@ -677,7 +677,7 @@ export function ballotHTML(): string {
 /* The ballot's last word: save your plan, or once the polls close, what's next. main.ts swaps it alone when the polls
    close on an open page, so a repaint never clears an address being typed (Codex, Nov 3). */
 export function endcapHTML(): string {
-  return afterPolls(S.ballot?.howto) ? `<div class="endcap wrap"><h3>That’s your whole ballot.</h3><p>Next: when the counts become official.</p>
+  return afterPolls(S.ballot?.howto) ? `<div class="endcap wrap"><h3>That’s your whole ballot.</h3><p>More election dates and ballot help.</p>
       <button class="bigbtn" data-act="cheat" data-fk="endcap-cheat">What’s next</button></div>` : `<div class="endcap wrap"><h3>That’s your whole ballot.</h3><p>Next, save your plan.</p>
       <button class="bigbtn" data-act="cheat" data-fk="endcap-cheat">Open my plan</button></div>`;
 }
@@ -708,11 +708,12 @@ export function barHTML(): string {
   }
   const rail = wide() ? `<nav class="rail screen-only" aria-label="Your ballot" data-keep="rail">${menuHTML('rail')}</nav>` : '';
   // Once the polls close (Nov 3, results Phase 0): no count of decided races and no time, since there are no numbers
-  // on the rows yet ("≡ Results"), and What's next where My plan was. `data-results` marks the bar for the tests.
+  // on the rows yet; the left button opens the menu, so it says so ("≡ On this ballot", GPT copy pass), and What's
+  // next is where My plan was. `data-results` marks the bar for the tests.
   if (afterPolls(S.ballot.howto)) {
     return `${rail}<div class="foot screen-only" role="region" aria-label="Results" data-results>
     <div class="foot-in ends">
-      <button class="menu-btn" data-act="toc" aria-haspopup="dialog" data-fk="bar-menu">${BURGER}<span class="bar-txt">Results</span></button>
+      <button class="menu-btn" data-act="toc" aria-haspopup="dialog" data-fk="bar-menu">${BURGER}<span class="bar-txt">On this ballot</span></button>
       <button class="fcta" data-act="cheat" data-fk="bar-cheat">What’s next</button>
     </div></div>`;
   }

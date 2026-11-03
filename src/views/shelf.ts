@@ -361,7 +361,7 @@ function howHTML(): string {
       <li><b>Lean labels.</b> Each source sits on a five-step scale from left to right, set by outside ratings, its party or its stated mission, never by whom it endorses. Tap “Why this lean” to see the basis.</li>
       <li><b>Honest gaps.</b> “Took no stand” means a source looked and chose not to endorse. “No endorsement found” means we looked and found none. “Not checked yet” means we haven’t looked. We never fill gaps to look balanced.</li>
       <li><b>Judges.</b> A review comes from the official body or bar association that wrote it, worded as their rating, not ours.</li>
-      ${after ? '<li class="how-res"><b>Results.</b> Every number comes from the official election office for that place, with that office’s own update time. Numbers stay unofficial until the office makes them official. We never call a race.</li>' : ''}
+      ${after ? '<li class="how-res"><b>Results.</b> Results links open election offices’ own pages. Their counts can change until they make results official. We never call a race.</li>' : ''}
       <li class="how-priv"><b>Your privacy.</b><ul class="how-sub">${PRIVACY.map((t) => `<li>${esc(t)}</li>`).join('')}</ul></li>
       <li><b>Mistakes.</b> Open any race or measure and tap <button class="linkbtn" ${shelfAttrs({ kind: 'report', fk: 'how-report' })}>Report a problem</button>.</li>
     </ul>

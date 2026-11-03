@@ -1073,7 +1073,7 @@ else {
     const counties = r.kind === 'county' ? (Array.isArray(r.counties) ? r.counties.filter(isStr).map((c) => c.trim()) : []) : null;
     if (r.kind === 'county' && !counties.length) { bad('a county row needs `counties`, spelled as the place files spell them'); continue; }
     resultsRows.push({
-      id, state: r.state.trim().toUpperCase(), kind: r.kind, name: r.name.trim(), results_url: url, wait_line: wl,
+      id, state: r.state.trim().toUpperCase(), kind: r.kind, name: r.name.trim(), ...(str(r.label) ? { label: str(r.label) } : {}), results_url: url, wait_line: wl,
       certification_date: r.certification_date.trim(), certification_source: cert,
       // A sure date needs its source: without one it still turns the phase never, and shows as no date (Codex, Nov 3).
       official_by: r.official_by || null, official_by_sure: !!(r.official_by && r.official_by_sure === true && cert), confidence: confOf(r.confidence),

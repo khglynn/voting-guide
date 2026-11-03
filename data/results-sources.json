@@ -1,7 +1,7 @@
 {
   "election": "2026-11-03",
   "written": "2026-11-03",
-  "note": "Where each state and county behind the guide publishes official results. Built by 51 Sonnet scouts and 15 Opus memos on Election Day afternoon (research/results/{ST}.md has the evidence; research/raw/results-{ST}/ the saved pages). results_url_status: live_for_nov3_2026, announced_not_live, prior_election_pattern or unknown. The wait_line is what a voter reads in the guide. Confidence is the memo writer's. Re-verify tonight: each row's verify_tonight list. Site copy (Nov 3, Phase 0 of the results view): three fields added beside each row. `counties` names the counties a county row covers, spelled as data/places/*.json spell them. `official_by` is the last day the row's results must be made official, read from `certification_date` (the legal deadline where a scheduled date comes earlier), or null when the text gives none. `official_by_sure` is false when the registry calls that date computed, calculated, tentative, unverified, conflicting or \"about\"; the guide shows only sure dates and says results are official only when every sure date on a ballot has passed. The Official results buttons read places' `lookups.results` and the state files' `results_url`; check-data compares them with this file.",
+  "note": "Where each state and county behind the guide publishes official results. Built by 51 Sonnet scouts and 15 Opus memos on Election Day afternoon (research/results/{ST}.md has the evidence; research/raw/results-{ST}/ the saved pages). results_url_status: live_for_nov3_2026, announced_not_live, prior_election_pattern or unknown. The wait_line is what a voter reads in the guide. Confidence is the memo writer's. Re-verify tonight: each row's verify_tonight list. Site copy (Nov 3, Phase 0 of the results view): four fields added beside each row. `label` is the short name of the office its button names (\"Travis County results\"). `counties` names the counties a county row covers, spelled as data/places/*.json spell them. `official_by` is the last day the row's results must be made official, read from `certification_date` (the legal deadline where a scheduled date comes earlier), or null when the text gives none. `official_by_sure` is false when the registry calls that date computed, calculated, tentative, unverified, conflicting or \"about\"; the guide shows only sure dates and says results are official only when every sure date on a ballot has passed. The Official results buttons read places' `lookups.results` and the state files' `results_url`; check-data compares them with this file.",
   "sources": [
     {
       "id": "results-TX",
@@ -19,7 +19,7 @@
       "count_window": "Domestic mail received by 5 PM Nov 4 if postmarked Nov 3; overseas by Nov 9; provisional and cured ballots before canvass",
       "certification_date": "State canvass Nov 21 to Dec 7, 2026; local canvass Nov 6 to Nov 17",
       "certification_source": "https://www.sos.texas.gov/elections/laws/advisory2026-28.shtml",
-      "wait_line": "Texas statewide totals trail the county sites; for local races, check your county's results page instead.",
+      "wait_line": "County sites may update sooner. Check your county for local races.",
       "confidence": "sourced",
       "verify_tonight": [
         "Confirm the 2026 Nov 3 general appears in the election picker after 7 PM",
@@ -29,7 +29,8 @@
         "Confirm late mail ballot dates against SOS advisory wording"
       ],
       "official_by": "2026-12-07",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "Texas"
     },
     {
       "id": "travis-tx",
@@ -50,7 +51,7 @@
       "count_window": "Mail ballots received through Nov 4; provisional verified before canvass",
       "certification_date": "Statutory window Nov 6 to Nov 14 (Nov 17 under 14th-day clause); Travis date not posted",
       "certification_source": "https://statutes.capitol.texas.gov/Docs/EL/htm/EL.67.htm",
-      "wait_line": "Travis County posts early and mail votes first, then vote centers through the night. It has not said what time the first numbers come.",
+      "wait_line": "Travis County posts early and mail votes first. No first update time announced.",
       "confidence": "sourced",
       "verify_tonight": [
         "Note the new Clarity election id above 126357",
@@ -63,7 +64,8 @@
         "Travis"
       ],
       "official_by": "2026-11-17",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "Travis County"
     },
     {
       "id": "williamson-tx",
@@ -83,7 +85,7 @@
       "count_window": "Mail received by 5 PM Nov 4; military and overseas through Nov 9; cures about six days",
       "certification_date": "By Nov 14, 2026 (11th day); Commissioners Court date not posted",
       "certification_source": "https://www.wilcotx.gov/2068/Life-Cycle-of-an-Election",
-      "wait_line": "Williamson County posts early votes after 7 PM, then Election Day results as polling places report in.",
+      "wait_line": "Williamson County posts early votes after 7 PM Central, then Election Day votes as sites report.",
       "confidence": "sourced",
       "verify_tonight": [
         "Copy the real ENR link from the Results Archive 2026 tab",
@@ -96,7 +98,8 @@
         "Williamson"
       ],
       "official_by": "2026-11-14",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "Williamson County"
     },
     {
       "id": "hays-tx",
@@ -116,7 +119,7 @@
       "count_window": "Mail received by 5 PM Nov 4 if postmarked Nov 3; provisional before canvass",
       "certification_date": "Mon Nov 9, 2026 (canvass and release of official results)",
       "certification_source": "https://www.hayscountytx.gov/873/November-3-2026-General-Election",
-      "wait_line": "Hays County posts one results report tonight; we have not confirmed its timing, and official results come Nov 9.",
+      "wait_line": "Hays County plans one report tonight. We haven't confirmed when.",
       "confidence": "sourced",
       "verify_tonight": [
         "Open DocumentCenter/View/5567 after 7 PM; note file type, whether URL stays fixed, timestamp",
@@ -128,7 +131,8 @@
         "Hays"
       ],
       "official_by": "2026-11-09",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "Hays County"
     },
     {
       "id": "dallas-county-tx",
@@ -151,7 +155,7 @@
       "count_window": "Provisional ID cure through Nov 10; late mail per state rule (Nov 4)",
       "certification_date": "Canvass window Nov 6 to Nov 17, 2026",
       "certification_source": "https://www.dallascountyvotes.org/event/last-day-to-canvass-5/",
-      "wait_line": "Dallas County posts early votes at 7 PM, then Election Day results hourly starting at 9 PM.",
+      "wait_line": "Dallas County posts early votes at 7 PM Central, then Election Day votes hourly from 9 PM.",
       "confidence": "verified",
       "verify_tonight": [
         "Confirm the office link still points to election id 126485 or note the new id",
@@ -163,7 +167,8 @@
         "Dallas"
       ],
       "official_by": "2026-11-17",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "Dallas County"
     },
     {
       "id": "harris-county-tx",
@@ -186,7 +191,7 @@
       "count_window": "Cures within six days (by Nov 9); mail received by 5 PM Nov 4 per state law",
       "certification_date": "Not posted; statutory window Nov 6 to Nov 17",
       "certification_source": "https://www.harrisvotes.com/Election-Results/Archives",
-      "wait_line": "Harris County has no stated schedule; mail and early votes come first, and its large count often runs past midnight.",
+      "wait_line": "Harris County posts mail and early votes first. No schedule announced; its count often runs past midnight.",
       "confidence": "sourced",
       "verify_tonight": [
         "Check dt moves off 2026-09-17 and vc/vt fill; record first-post time",
@@ -199,7 +204,8 @@
         "Harris"
       ],
       "official_by": "2026-11-17",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "Harris County"
     },
     {
       "id": "bexar-tx",
@@ -222,7 +228,7 @@
       "count_window": "Mail received by 5 PM Nov 4 if postmarked by 7 PM Nov 3; cured and provisional before canvass",
       "certification_date": "Local canvass Nov 6 to Nov 17, 2026; Bexar date not posted",
       "certification_source": "https://bexarcountyherald.com/article/texas-officials-must-certify-midterm-election-resu/",
-      "wait_line": "Bexar County may hold early results until everyone in line has voted, so first numbers could come well after 7 PM.",
+      "wait_line": "Bexar County may wait until everyone in line has voted, so its first numbers may come well after 7 PM Central.",
       "confidence": "sourced",
       "verify_tonight": [
         "Check current_ver moves off 379718 with a browser user agent",
@@ -234,7 +240,8 @@
         "Bexar"
       ],
       "official_by": "2026-11-17",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "Bexar County"
     },
     {
       "id": "collin-tx",
@@ -255,7 +262,7 @@
       "count_window": "Late mail (Nov 4) and cured or provisional ballots before canvass",
       "certification_date": "Mon Nov 16, 2026, 1:30 PM (Commissioners Court canvass)",
       "certification_source": "https://www.collincountytx.gov/docs/default-source/elections/election-notices/notice-of-canvass-nov-26-signed.pdf",
-      "wait_line": "Collin County posts early votes at 7 PM, then updates every half hour starting at 8:30 PM.",
+      "wait_line": "Collin County posts early votes at 7 PM Central, then every half hour from 8:30 PM.",
       "confidence": "verified",
       "verify_tonight": [
         "Find the Nov 3 all-races CSV at 7 PM",
@@ -267,7 +274,8 @@
         "Collin"
       ],
       "official_by": "2026-11-16",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "Collin County"
     },
     {
       "id": "results-CO",
@@ -288,7 +296,7 @@
       "count_window": "Bulk within about 3 days; cures and military/overseas through Nov 12; counties finish tabulating by Nov 13",
       "certification_date": "2026-11-25",
       "certification_source": "C.R.S. 1-10-102(1), 1-10-103(1); https://www.clerkandrecorder.org/2026-general-election",
-      "wait_line": "Colorado posts mail ballots soon after 7 PM, updates through the night, and finishes the unofficial count around Nov 13.",
+      "wait_line": "Colorado posts mail ballots soon after 7 PM Mountain and updates through the night.",
       "confidence": "sourced",
       "verify_tonight": [
         "current_ver.txt moves off 383402 after 7 PM MT",
@@ -297,7 +305,8 @@
         "Human reads SOS ENR FAQ and Nov 2 press release (site bans robots)"
       ],
       "official_by": "2026-11-25",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "Colorado"
     },
     {
       "id": "denver-co",
@@ -318,7 +327,7 @@
       "count_window": "Not stated by Denver; state pattern is about 3 days, cures through Nov 12",
       "certification_date": "2026-11-24",
       "certification_source": "https://www.denvergov.org/Government/Elections/Election-Data-Maps",
-      "wait_line": "Denver posts its first count at 7 PM; it has not said how often it updates after that.",
+      "wait_line": "Denver posts its first count at 7 PM Mountain. No update schedule announced after that.",
       "confidence": "sourced",
       "verify_tonight": [
         "Numbers replace zeros after 7 PM and appear in raw curl HTML",
@@ -330,7 +339,8 @@
         "Denver"
       ],
       "official_by": "2026-11-24",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "Denver"
     },
     {
       "id": "arapahoe-co",
@@ -348,7 +358,7 @@
       "count_window": "Not found; state pattern about 3 days, cures through Nov 12",
       "certification_date": "2026-11-25 (state deadline; county date not found)",
       "certification_source": "https://www.clerkandrecorder.org/2026-general-election (state deadline only)",
-      "wait_line": "Arapahoe County has not said when it posts; Colorado counties usually start after 7 PM.",
+      "wait_line": "Arapahoe County hasn't said when it posts. Colorado counties usually start after 7 PM Mountain.",
       "confidence": "unverified",
       "verify_tonight": [
         "Human opens the county results hub after 7 PM and notes vendor and any feed",
@@ -360,7 +370,8 @@
         "Arapahoe"
       ],
       "official_by": "2026-11-25",
-      "official_by_sure": false
+      "official_by_sure": false,
+      "label": "Arapahoe County"
     },
     {
       "id": "results-CO-adams",
@@ -381,7 +392,7 @@
       "count_window": "Not stated by Adams; cures and military/overseas through Nov 12",
       "certification_date": "2026-11-24 (tentative)",
       "certification_source": "https://adamscountyco.gov/our-county/elected-officials/clerk-recorder/adams-county-elections/2026-elections/important-dates/",
-      "wait_line": "Adams County posts results after 7 PM; it has not said how often it updates through the night.",
+      "wait_line": "Adams County posts after 7 PM Mountain. No update schedule announced.",
       "confidence": "verified",
       "verify_tonight": [
         "current_ver.txt moves off 383292",
@@ -392,7 +403,8 @@
         "Adams"
       ],
       "official_by": "2026-11-24",
-      "official_by_sure": false
+      "official_by_sure": false,
+      "label": "Adams County"
     },
     {
       "id": "results-CO-douglas",
@@ -413,7 +425,7 @@
       "count_window": "Cures and military/overseas through Nov 12",
       "certification_date": "2026-11-20",
       "certification_source": "https://www.douglasco.gov/elections/election-information/",
-      "wait_line": "Douglas County usually posts by 8 PM, again around 9 PM, and at least once more that night.",
+      "wait_line": "Douglas County usually posts by 8 PM Mountain, again around 9 PM, and once more tonight.",
       "confidence": "verified",
       "verify_tonight": [
         "current_ver.txt moves off 383323",
@@ -424,7 +436,8 @@
         "Douglas"
       ],
       "official_by": "2026-11-20",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "Douglas County"
     },
     {
       "id": "boulder-county-co",
@@ -444,7 +457,7 @@
       "count_window": "Not stated by Boulder; cures and military/overseas through Nov 12",
       "certification_date": "2026-11-24",
       "certification_source": "https://bouldercounty.gov/elections/election-events/",
-      "wait_line": "Boulder County's results page goes live after 7 PM; the county has not said how often it updates.",
+      "wait_line": "Boulder County's results page goes live after 7 PM Mountain. No update schedule announced.",
       "confidence": "sourced",
       "verify_tonight": [
         "Placeholder swaps to real tables after 7 PM",
@@ -456,7 +469,8 @@
         "Boulder"
       ],
       "official_by": "2026-11-24",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "Boulder County"
     },
     {
       "id": "results-CO-jefferson",
@@ -477,7 +491,7 @@
       "count_window": "No county date; cures and military/overseas through Nov 12",
       "certification_date": "2026-11-25 (state deadline; Jeffco gives only 'November')",
       "certification_source": "https://www.jeffco.us/5025/Testing-Audits-Certification; https://www.clerkandrecorder.org/2026-general-election",
-      "wait_line": "Jefferson County posts shortly after 7 PM, then about every two hours until counting stops for the night.",
+      "wait_line": "Jefferson County posts soon after 7 PM Mountain, then about every two hours until it stops for the night.",
       "confidence": "sourced",
       "verify_tonight": [
         "jeffco.us/578 links to 127408 (feed found by probing, not yet linked)",
@@ -488,7 +502,8 @@
         "Jefferson"
       ],
       "official_by": "2026-11-25",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "Jefferson County"
     },
     {
       "id": "results-CA",
@@ -506,7 +521,7 @@
       "count_window": "Mail postmarked by Nov 3 and received by Nov 10; signature cures (Nov 25 per some counties, conflicting); provisional, same-day registration and remade ballots; counting takes weeks",
       "certification_date": "Counties by Dec 3, 2026; returns to SOS by Dec 4; SOS certifies Dec 11, 2026",
       "certification_source": "https://www.sos.ca.gov/elections/upcoming-elections/general-election-november-3-2026/key-dates-deadlines ; https://electionresults.sos.ca.gov/unprocessed-ballots-status",
-      "wait_line": "California posts first numbers after 8 PM and counts for weeks; the state certifies December 11.",
+      "wait_line": "California posts first numbers after 8 PM Pacific and keeps counting for weeks.",
       "confidence": "sourced",
       "verify_tonight": [
         "Open https://electionresults.sos.ca.gov/returns/governor in a real browser after 8 PM PT and confirm numbers appear",
@@ -515,7 +530,8 @@
         "Log the first-update time and rhythm"
       ],
       "official_by": "2026-12-11",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "California"
     },
     {
       "id": "los-angeles-county-ca",
@@ -536,7 +552,7 @@
       "count_window": "Mail postmarked by Nov 3 received by Nov 10; provisional, conditional registration, write-in and damaged ballots during the 30-day canvass",
       "certification_date": "Scheduled Fri Nov 27, 2026 (legal deadline Dec 3)",
       "certification_source": "https://content.lavote.gov/docs/rrcc/documents/media-kit-final.pdf",
-      "wait_line": "Los Angeles County posts mail votes around 8:30 PM, then counts for weeks; it plans to certify November 27.",
+      "wait_line": "Los Angeles County posts mail votes around 8:30 PM Pacific, then keeps counting for weeks.",
       "confidence": "sourced",
       "verify_tonight": [
         "After 8:30 PM PT confirm text-results/4348 shows 'Results as of' Nov 3 and votes above zero",
@@ -549,7 +565,8 @@
         "Los Angeles"
       ],
       "official_by": "2026-12-03",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "Los Angeles County"
     },
     {
       "id": "orange-county-ca",
@@ -569,7 +586,7 @@
       "count_window": "Mail postmarked by Nov 3 received by Nov 10 (LAist); signature cures until the office deadline (November date unread); LAist says counting through Nov 26",
       "certification_date": "By Dec 3, 2026 (LAist; office page not read)",
       "certification_source": "https://laist.com/news/politics/voter-guides/2026-midterm-voter-turnout-los-angeles-orange-county ; https://ocvote.gov/feeds/getNewsletter.php/?id=470",
-      "wait_line": "Orange County posts mail votes at 8:05 PM and in-person votes by 10:30 PM, then updates daily for weeks.",
+      "wait_line": "Orange County posts mail votes at 8:05 PM Pacific and in-person votes by 10:30 PM, then daily for weeks.",
       "confidence": "sourced",
       "verify_tonight": [
         "At 8:05 PM PT confirm the iframe still loads folder 24 with the same phkv4sV token",
@@ -582,7 +599,8 @@
         "Orange"
       ],
       "official_by": "2026-12-03",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "Orange County"
     },
     {
       "id": "san-diego-county-ca",
@@ -603,7 +621,7 @@
       "count_window": "Mail postmarked by Nov 3 received by Nov 10; provisional ballots; signature cures until Nov 25",
       "certification_date": "On or before Dec 3, 2026",
       "certification_source": "https://www.sdvote.com/content/rov/en/elections/election-information/important-dates.html",
-      "wait_line": "San Diego County posts mail and early votes soon after 8 PM, then updates by 6 PM on Nov 5, 6 and 9.",
+      "wait_line": "San Diego County posts mail and early votes soon after 8 PM Pacific, then by 6 PM on Nov 5, 6 and 9.",
       "confidence": "verified",
       "verify_tonight": [
         "Confirm TotalBallotsCast in summary_25.xml moves off 0 and GeneratedDate advances",
@@ -615,7 +633,8 @@
         "San Diego"
       ],
       "official_by": "2026-12-03",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "San Diego County"
     },
     {
       "id": "results-CA-san-francisco",
@@ -637,7 +656,7 @@
       "count_window": "Provisional ballots, Election Day mail drop-offs, mail received by Nov 10, ballots needing review; daily updates at least to Nov 13",
       "certification_date": "By Dec 3, 2026",
       "certification_source": "https://www.sfelections.org/results/20261103w/schedule.php",
-      "wait_line": "San Francisco posts mail votes at 8:45 PM and all precincts around midnight, then updates daily at 4 PM.",
+      "wait_line": "San Francisco posts mail votes at 8:45 PM Pacific and in-person votes around midnight, then daily at 4 PM.",
       "confidence": "verified",
       "verify_tonight": [
         "At 8:45 PM PT confirm precincts move off 0 of 514 and Next Update changes",
@@ -649,7 +668,8 @@
         "San Francisco"
       ],
       "official_by": "2026-12-03",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "San Francisco"
     },
     {
       "id": "results-NY",
@@ -670,7 +690,7 @@
       "count_window": "Mail ballots postmarked Nov 3 count if received by Nov 10; military/overseas by Nov 16; counting usually done within 25 days.",
       "certification_date": "Recanvass Nov 18, 2026; counties certify by Nov 28, 2026; State Board of Canvassers by Dec 15, 2026 (Protect Democracy lists Dec 3)",
       "certification_source": "https://elections.ny.gov/2026-political-calendar",
-      "wait_line": "New York polls close at 9 PM. Counties upload one by one, and mail ballots arriving by Nov 10 still count.",
+      "wait_line": "New York counties post one by one after 9 PM Eastern. Mail ballots arriving by Nov 10 still count.",
       "confidence": "verified",
       "verify_tonight": [
         "After 9 PM ET confirm Election Districts Reporting moves off 0 of 13,187",
@@ -679,7 +699,8 @@
         "Read the certification page once past the bot check and confirm Nov 18 / Nov 28 / Dec 15"
       ],
       "official_by": "2026-12-15",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "New York State"
     },
     {
       "id": "results-NY-nyc",
@@ -700,7 +721,7 @@
       "count_window": "Absentee, affidavit and military ballots counted after Election Day; NYC-specific deadlines not verified (state: mail received by Nov 10).",
       "certification_date": "unknown for NYC; state law has counties certify by Nov 28, 2026",
       "certification_source": "https://elections.ny.gov/2026-political-calendar (state calendar; NYC page not read)",
-      "wait_line": "NYC results should start after 9 PM. Absentee and affidavit ballots are counted later, so close races can take weeks.",
+      "wait_line": "New York City posts after 9 PM Eastern. Absentee and affidavit ballots are counted later, so close races can take weeks.",
       "confidence": "sourced",
       "verify_tonight": [
         "Open enr.boenyc.gov after 9 PM ET and see if it serves live results or still redirects",
@@ -717,7 +738,8 @@
         "Richmond"
       ],
       "official_by": "2026-11-28",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "New York City"
     },
     {
       "id": "results-NY-sullivan",
@@ -737,7 +759,7 @@
       "count_window": "Mail ballots received by Nov 10 count; military/overseas and affidavit later; Sullivan's own dates not confirmed.",
       "certification_date": "County certification by Nov 28, 2026 (state law); Sullivan has not posted its own date",
       "certification_source": "https://elections.ny.gov/2026-political-calendar ; https://protectdemocracy.org/wp-content/uploads/2026/09/NY-Handout.pdf",
-      "wait_line": "Sullivan County posts as its 96 districts report after 9 PM. Mail ballots arriving by Nov 10 can still shift close town races.",
+      "wait_line": "Sullivan County posts as its 96 districts report after 9 PM Eastern. Mail ballots arriving by Nov 10 still count.",
       "confidence": "sourced",
       "verify_tonight": [
         "Confirm Last Updated and X/96 change after 9 PM ET",
@@ -749,7 +771,8 @@
         "Sullivan"
       ],
       "official_by": "2026-11-28",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "Sullivan County"
     },
     {
       "id": "results-IL-state",
@@ -767,7 +790,7 @@
       "count_window": "Mail ballots postmarked by Nov 3 count if received by Nov 19 per Capitol News Illinois; 14 days would be Nov 17. Conflict unresolved",
       "certification_date": "2026-12-04 (statewide proclamation of official results)",
       "certification_source": "https://capitolnewsillinois.com/elections/election-guide/ (secondary)",
-      "wait_line": "Illinois counts mail ballots that arrive through mid November, so close statewide races may take weeks; results become official Dec 4.",
+      "wait_line": "Illinois counts mail ballots that arrive into mid-November, so close statewide races may take weeks.",
       "confidence": "unverified",
       "verify_tonight": [
         "Open elections.il.gov in a browser and note the exact Nov 3 results link and vendor",
@@ -776,7 +799,8 @@
         "Confirm the mail receipt date (Nov 17 or Nov 19) and the Dec 4 proclamation on an ISBE page"
       ],
       "official_by": "2026-12-04",
-      "official_by_sure": false
+      "official_by_sure": false,
+      "label": "Illinois"
     },
     {
       "id": "results-IL-chicago",
@@ -796,7 +820,7 @@
       "count_window": "242,230 mail ballots requested and 109,215 returned as of Nov 2 evening; postmarked ballots accepted through Nov 17 or Nov 19 (conflict); provisional materials due Nov 10 (unpinned)",
       "certification_date": "Chicago date not found; statewide proclamation 2026-12-04",
       "certification_source": "https://capitolnewsillinois.com/elections/election-guide/ ; proclamation PDF pattern https://cboeprod.blob.core.usgovcloudapi.net/prod/2024-11/Proclamation%20of%20Official%20Results%20-%20November%205,%202024.pdf",
-      "wait_line": "Chicago will likely post early and mail votes first after 7 PM, but mail ballots arriving into mid November can still change close races.",
+      "wait_line": "Chicago will likely post early and mail votes first after 7 PM Central. Mail ballots arriving into mid-November still count.",
       "confidence": "sourced",
       "verify_tonight": [
         "After 7 PM CT reload chicagoelections.gov/elections/results and record the new numeric ID",
@@ -810,7 +834,8 @@
         "Cook"
       ],
       "official_by": null,
-      "official_by_sure": false
+      "official_by_sure": false,
+      "label": "Chicago"
     },
     {
       "id": "results-MO",
@@ -831,7 +856,7 @@
       "count_window": "Mail and absentee ballots must arrive by 7 PM Election Day; provisionals verified in the local canvass",
       "certification_date": "2026-12-08 (state canvassers by second Tuesday in December; calculated)",
       "certification_source": "https://ballotpedia.org/Election_results_certification_dates,_2024",
-      "wait_line": "Missouri's statewide totals build as counties report after 7 PM; for local races, check your county's page.",
+      "wait_line": "Missouri's statewide totals build as counties report after 7 PM Central. Check your county for local races.",
       "confidence": "sourced",
       "verify_tonight": [
         "Reload the results page after 7 PM CT for a Nov 3, 2026 block",
@@ -840,7 +865,8 @@
         "Look for a last-updated timestamp"
       ],
       "official_by": "2026-12-08",
-      "official_by_sure": false
+      "official_by_sure": false,
+      "label": "Missouri"
     },
     {
       "id": "results-MO-stlouis-county",
@@ -862,7 +888,7 @@
       "count_window": "Mail must arrive by 7 PM Election Day; provisionals verified before canvass",
       "certification_date": "2026-11-17 (calculated from RSMo 115.507)",
       "certification_source": "https://revisor.mo.gov/main/OneSection.aspx?section=115.507",
-      "wait_line": "St. Louis County posts mail votes soon after 7 PM, then precincts through the night; official totals by about Nov 17.",
+      "wait_line": "St. Louis County posts mail votes soon after 7 PM Central, then voting areas through the night.",
       "confidence": "sourced",
       "verify_tonight": [
         "Check eResults folder for el261103 and read the CSV header; does it update during the night?",
@@ -874,7 +900,8 @@
         "St. Louis County"
       ],
       "official_by": "2026-11-17",
-      "official_by_sure": false
+      "official_by_sure": false,
+      "label": "St. Louis County"
     },
     {
       "id": "results-MO-stlouis-city",
@@ -892,7 +919,7 @@
       "count_window": "Mail must arrive by 7 PM Election Day; provisionals verified in canvass",
       "certification_date": "2026-11-17 (calculated from RSMo 115.507; city date not found)",
       "certification_source": "https://revisor.mo.gov/main/OneSection.aspx?section=115.507",
-      "wait_line": "St. Louis City posts absentee votes soon after 7 PM, then ward results as they arrive through the evening.",
+      "wait_line": "St. Louis City posts absentee votes soon after 7 PM Central, then ward results through the evening.",
       "confidence": "sourced",
       "verify_tonight": [
         "See what replaces Results not yet available: file type, host, unofficial label, timestamp",
@@ -904,7 +931,8 @@
         "St. Louis City"
       ],
       "official_by": "2026-11-17",
-      "official_by_sure": false
+      "official_by_sure": false,
+      "label": "St. Louis City"
     },
     {
       "id": "results-MD",
@@ -926,7 +954,7 @@
       "count_window": "Mail canvass Nov 5; provisional canvass Nov 12; late postmarked mail accepted until Nov 13 10 AM with second canvass that day.",
       "certification_date": "Local boards certify from Nov 13, 2026; statewide certification by Dec 3, 2026",
       "certification_source": "https://elections.maryland.gov/elections/2026/2026_Election_Calendar.pdf",
-      "wait_line": "Maryland posts early and mail votes after polls close at 8 PM, then precincts overnight. Mail ballots keep counting until Nov 13.",
+      "wait_line": "Maryland posts early and mail votes after 8 PM Eastern, then precincts (voting areas) overnight. Mail ballots count through Nov 13.",
       "confidence": "sourced",
       "verify_tonight": [
         "Last refreshed moves past 11/02/2026 4:39 PM and 0 of 1979 precincts starts rising",
@@ -937,7 +965,8 @@
         "Winner mark appears per the page legend"
       ],
       "official_by": "2026-12-03",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "Maryland"
     },
     {
       "id": "results-MD-baltimore-city",
@@ -958,7 +987,7 @@
       "count_window": "Mail canvass Nov 5; provisional canvass Nov 12; late postmarked mail until Nov 13 10 AM.",
       "certification_date": "Local certification begins Nov 13, 2026; local recount petitions due Nov 16; statewide certification by Dec 3, 2026",
       "certification_source": "https://elections.maryland.gov/elections/2026/2026_Election_Calendar.pdf",
-      "wait_line": "Baltimore City results post on the state site after 8 PM. Mail and provisional ballots keep counting through Nov 13.",
+      "wait_line": "Baltimore City results post on the state site after 8 PM Eastern. Mail and provisional ballots count through Nov 13.",
       "confidence": "sourced",
       "verify_tonight": [
         "Last refreshed moves and 0 of 295 precincts starts rising",
@@ -970,7 +999,8 @@
         "Baltimore City"
       ],
       "official_by": null,
-      "official_by_sure": false
+      "official_by_sure": false,
+      "label": "Baltimore City"
     },
     {
       "id": "results-FL",
@@ -994,7 +1024,7 @@
       "count_window": "Cure deadline 5 PM Thu Nov 5 (recheck); provisionals in following days; unofficial returns covering all ballots due noon Sat Nov 7",
       "certification_date": "2026-11-17",
       "certification_source": "https://floridaelectionwatch.gov/Timeline",
-      "wait_line": "Florida posts statewide results at 8 PM Eastern, then updates at least every 45 minutes until counties finish.",
+      "wait_line": "Florida posts statewide results at 8 PM Eastern, then at least every 45 minutes until counties finish.",
       "confidence": "verified",
       "verify_tonight": [
         "After 8 PM ET re-fetch 20261103_ElecResultsFL.txt and confirm last-modified changes and CanVotes is nonzero",
@@ -1003,7 +1033,8 @@
         "Confirm city, school board and county measures are absent from the state file"
       ],
       "official_by": "2026-11-17",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "Florida"
     },
     {
       "id": "orange-fl",
@@ -1024,7 +1055,7 @@
       "count_window": "Cure deadline 5 PM Nov 5; provisionals; overseas ballots up to about Nov 13; unofficial to state noon Nov 7",
       "certification_date": "2026-11-16 (county official returns due); state certifies 2026-11-17",
       "certification_source": "https://files.floridados.gov/media/709430/election-results-reporting-timeline-ge-2026-v20250821.pdf",
-      "wait_line": "Orange County posts early and mail votes soon after 7 PM, then precincts at least every 45 minutes.",
+      "wait_line": "Orange County posts early and mail votes soon after 7 PM Eastern, then at least every 45 minutes.",
       "confidence": "sourced",
       "verify_tonight": [
         "Copy the real results.voteorangefl.gov link from voteorangefl.gov/election-results/",
@@ -1037,7 +1068,8 @@
         "Orange"
       ],
       "official_by": "2026-11-16",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "Orange County"
     },
     {
       "id": "escambia-fl",
@@ -1059,7 +1091,7 @@
       "count_window": "Mail ballots due 7 PM Election Day; cure and provisionals before canvass; unofficial to state noon Nov 7",
       "certification_date": "2026-11-16 (county official returns due by statute); state certifies 2026-11-17",
       "certification_source": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0102/Sections/0102.112.html",
-      "wait_line": "Escambia County starts posting at 7 PM Central; watch the precinct count climb toward 80 through the night.",
+      "wait_line": "Escambia County starts posting at 7 PM Central and adds its 80 precincts (voting areas) through the night.",
       "confidence": "sourced",
       "verify_tonight": [
         "Confirm Precincts Reporting moves off 0/80 and the last-updated stamp changes",
@@ -1072,7 +1104,8 @@
         "Escambia"
       ],
       "official_by": "2026-11-16",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "Escambia County"
     },
     {
       "id": "leon-fl",
@@ -1093,7 +1126,7 @@
       "count_window": "1st unofficial results signed Fri Nov 6 at 1 PM (cures, provisionals, write-ins); overseas ballots reviewed Nov 14",
       "certification_date": "2026-11-14",
       "certification_source": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/43/Public-Notice-Leon-County-Canvassing-Board-Activity-for-the-2026-General-Election-Including-Logic-Accuracy-Testing-and-Post-Election-Audit",
-      "wait_line": "Leon County releases preliminary results after 7 PM, but says the full count takes several days.",
+      "wait_line": "Leon County posts early results after 7 PM Eastern. It says the full count takes several days.",
       "confidence": "sourced",
       "verify_tonight": [
         "Find the 2026 General row on leonvotes.gov/Records/Election-Results and copy the new enr.electionsfl.org/LEO/Summary/<id>/ link",
@@ -1106,7 +1139,8 @@
         "Leon"
       ],
       "official_by": "2026-11-14",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "Leon County"
     },
     {
       "id": "results-DC",
@@ -1133,7 +1167,7 @@
       "count_window": "All 144 precincts expected election night. Special and challenged ballot proof by Nov 10, hearings Nov 12 to 13, mail received by Nov 13, cures by Nov 19, tentative final count Nov 20.",
       "certification_date": "2026-12-02 (tentative)",
       "certification_source": "https://dcboe.org/getContentAsset/4d04f4a1-fb2a-4f8a-809f-d3f708f232df/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-Election-Calendar-Version-09292026.pdf?language=en",
-      "wait_line": "DC posts first choices tonight after 8 PM; ranked choice winners come days later, and mail ballots count until about Nov 20.",
+      "wait_line": "DC posts first choices after 8 PM Eastern. Ranked choice results come days later; mail ballots count until about Nov 20.",
       "confidence": "sourced",
       "verify_tonight": [
         "getElectionResultsId lists a 2026 general entry with IsLive true; record its exact UrlText slug",
@@ -1143,7 +1177,8 @@
         "Read the results page note on when round-by-round RCV results post"
       ],
       "official_by": "2026-12-02",
-      "official_by_sure": false
+      "official_by_sure": false,
+      "label": "DC"
     },
     {
       "id": "results-GA",
@@ -1164,7 +1199,7 @@
       "count_window": "Absentee must arrive by 7 PM Nov 3; UOCAVA postmarked by Nov 3 and provisional ID or ballot cures until 5 PM Fri Nov 6 (secondary)",
       "certification_date": "2026-11-20 (state, secondary; conflicting WJCL report says about Nov 13); counties by 2026-11-09",
       "certification_source": "https://northatlantastar.com/georgia-election-night-results-final-count-2026/ (secondary; O.C.G.A. 21-2-493/499 from memory)",
-      "wait_line": "Georgia posts advance and mail votes soon after polls close at 7 PM ET, then precincts through the night. Runoffs are December 1.",
+      "wait_line": "Georgia posts early and mail votes soon after 7 PM Eastern, then precincts (voting areas) through the night. Runoffs are Dec 1.",
       "confidence": "sourced",
       "verify_tonight": [
         "Contest list fills in on the SOS page and which offices appear",
@@ -1173,7 +1208,8 @@
         "Confirm Nov 9, Nov 20 and Dec 1 dates on SOS calendar if bot check allows"
       ],
       "official_by": "2026-11-20",
-      "official_by_sure": false
+      "official_by_sure": false,
+      "label": "Georgia"
     },
     {
       "id": "fulton-ga",
@@ -1195,7 +1231,7 @@
       "count_window": "Mail by 7 PM Nov 3; overseas and military postmarked Nov 3 count through Fri Nov 6 (county key dates); a proposed rescan of 1,069 advance ballots goes to a 6:30 PM board vote",
       "certification_date": "2026-11-09 (county, statute memory, unverified); audit Nov 13-17",
       "certification_source": "https://fultoncountyga.gov/inside-fulton-county/fulton-county-departments/registration-and-elections/election-key-dates",
-      "wait_line": "Fulton County starts counting at 7 PM ET; the results link appears tonight, and late overseas ballots count until Friday.",
+      "wait_line": "Fulton County's results link should appear tonight after 7 PM Eastern. Late overseas ballots count through Nov 6.",
       "confidence": "sourced",
       "verify_tonight": [
         "Find results link on fultonelections.com or Search Elections page after 7 PM ET and note vendor",
@@ -1208,7 +1244,8 @@
         "Fulton"
       ],
       "official_by": "2026-11-09",
-      "official_by_sure": false
+      "official_by_sure": false,
+      "label": "Fulton County"
     },
     {
       "id": "dekalb-ga",
@@ -1229,7 +1266,7 @@
       "count_window": "Unofficial and incomplete pending provisionals and timely absentees; moves until about Fri Nov 6",
       "certification_date": "2026-11-09 (statute memory, unverified); meeting dates not yet announced",
       "certification_source": "https://dekalbcountyga.gov/sites/default/files/2026-10/2026_11-03_General-Special%20Election_Computation%20and%20Canvassing%20Notice_FINAL.pdf",
-      "wait_line": "DeKalb County starts counting at 7 PM ET, with early and mail votes first. Numbers stay unofficial until certification next week.",
+      "wait_line": "DeKalb County posts early and mail votes first, after 7 PM Eastern.",
       "confidence": "sourced",
       "verify_tonight": [
         "Votes replace Not Reported and Last Updated moves",
@@ -1242,7 +1279,8 @@
         "DeKalb"
       ],
       "official_by": "2026-11-09",
-      "official_by_sure": false
+      "official_by_sure": false,
+      "label": "DeKalb County"
     },
     {
       "id": "results-OR",
@@ -1264,7 +1302,7 @@
       "count_window": "Mail ballots postmarked by Nov 3 and received by Nov 10 still count; signature cures add later (statewide cure deadline not found; Multnomah says Nov 24).",
       "certification_date": "Statewide date not found; Multnomah certifies by Nov 30, 2026.",
       "certification_source": "https://multco.us/info/election-results-schedule-nov-2026-general-election (county only); https://sos.oregon.gov/elections/ for Nov 10 receipt date",
-      "wait_line": "Oregon counts mail ballots for days, and ballots arriving by Nov 10 still count, so close races can shift through mid-November.",
+      "wait_line": "Oregon counts mail ballots for days. Ballots arriving by Nov 10 still count, so close races can shift.",
       "confidence": "sourced",
       "verify_tonight": [
         "After 8 PM PT, confirm Ballots Counted moves off 0 and 'Results last updated' changes",
@@ -1272,7 +1310,8 @@
         "Check whether Portland-area city, school and district items appear under Shared County, City and District Races and Measures"
       ],
       "official_by": null,
-      "official_by_sure": false
+      "official_by_sure": false,
+      "label": "Oregon"
     },
     {
       "id": "results-OR-multnomah",
@@ -1295,7 +1334,7 @@
       "count_window": "About 90% of expected ballots by Thu Nov 5. Mail ballots postmarked by Nov 3 and received by Nov 10 count; signature cures through Nov 24.",
       "certification_date": "2026-11-30",
       "certification_source": "https://multco.us/info/election-results-schedule-nov-2026-general-election (cites OAR 165-007-0550(8)); https://multco.us/news/nov-3-2026-election-day-information-multnomah-county",
-      "wait_line": "Multnomah posts about half the ballots at 8 PM, about 90% by Thursday, and Portland races appear only on its ranked choice site.",
+      "wait_line": "Multnomah posts about half the ballots at 8 PM Pacific and about 90% by Nov 5. Portland races are on its ranked choice site.",
       "confidence": "verified (schedule and process); tonight's results URL unverified",
       "verify_tonight": [
         "After 8 PM PT, find and save the exact 2026 results page URL on multco.us/elections (guessed slug /info/november-3-2026-election-results-multnomah-county is unverified)",
@@ -1308,7 +1347,8 @@
         "Multnomah"
       ],
       "official_by": "2026-11-30",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "Multnomah County"
     },
     {
       "id": "results-WA",
@@ -1333,7 +1373,7 @@
       "count_window": "Ballots postmarked by Nov 3 and received later still count, plus cures and provisionals, until counties certify Nov 24",
       "certification_date": "County canvassing boards Nov 24, 2026; Secretary of State by Dec 3, 2026",
       "certification_source": "https://www.sos.wa.gov/elections/calendar",
-      "wait_line": "Washington counts mail ballots for weeks. The first big count posts after 8 PM Pacific, and close races can shift until Nov 24.",
+      "wait_line": "Washington posts its first big count after 8 PM Pacific and counts mail ballots for weeks.",
       "confidence": "verified",
       "verify_tonight": [
         "Re-fetch the statewide API record and watch asOf, nextUpdateAt and contestGroups fill in",
@@ -1343,7 +1383,8 @@
         "Find each covered county's slug on results.votewa.gov for local items"
       ],
       "official_by": "2026-12-03",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "Washington"
     },
     {
       "id": "king-county-wa",
@@ -1370,7 +1411,7 @@
       "count_window": "Late postmarked mail ballots, signature cures and provisionals counted until certification Nov 24",
       "certification_date": "2026-11-24 (county canvassing board); final precinct file by 4 PM Nov 25",
       "certification_source": "https://www.sos.wa.gov/elections/calendar ; https://kingcounty.gov/en/dept/elections/results/2026/november-general",
-      "wait_line": "King County posts its first big count after 8 PM Pacific, then updates weekdays around 4 PM until Nov 24.",
+      "wait_line": "King County posts its first big count after 8 PM Pacific, then weekdays around 4 PM through Nov 24.",
       "confidence": "sourced",
       "verify_tonight": [
         "Reload the viewer after 8 PM PT and check Last Updated moves past Oct 22",
@@ -1383,7 +1424,8 @@
         "King"
       ],
       "official_by": "2026-11-24",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "King County"
     },
     {
       "id": "results-AL",
@@ -1404,7 +1446,7 @@
       "count_window": "Military/overseas ballots until noon Tue Nov 10; provisional ballots and any needed write-ins counted Tue Nov 10; ID cure for provisional voters until 5 PM Fri Nov 6",
       "certification_date": "Counties declare results by noon Fri Nov 13, 2026; state canvass by Wed Nov 25, 2026; certificates of election listed Mon Nov 23",
       "certification_source": "https://www.sos.alabama.gov/sites/default/files/election-2026/AdminCalendar%20-2026.pdf (Ala. Code 17-12-15, 17-12-16, 17-12-17, 17-12-21)",
-      "wait_line": "Alabama posts results as precincts report after polls close at 7 PM Central. Counties declare final results by November 13.",
+      "wait_line": "Alabama posts results as precincts (voting areas) report after 7 PM Central.",
       "confidence": "sourced",
       "verify_tonight": [
         "Reload the statewide page after 7 PM CT and confirm it flips to contest tables",
@@ -1414,7 +1456,8 @@
         "Confirm the county pages use ecode=1001305"
       ],
       "official_by": "2026-11-25",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "Alabama"
     },
     {
       "id": "mobile-county-al",
@@ -1435,7 +1478,7 @@
       "count_window": "Write-ins (if they could change a result) then provisionals on Tue Nov 10; military/overseas until noon Nov 10; ID cure until 5 PM Fri Nov 6",
       "certification_date": "County declaration by noon Fri Nov 13, 2026; Mobile has recorded certified results about 1 to 2 weeks after past elections",
       "certification_source": "https://www.sos.alabama.gov/sites/default/files/election-2026/AdminCalendar%20-2026.pdf; Mobile pattern from https://benchmark.probate.mobilecountyal.gov/uploads/eResults/ElectionResults.pdf",
-      "wait_line": "Mobile County numbers show up after the probate judge reports to the state, sometime after 7 PM. Certified results come about a week later.",
+      "wait_line": "Mobile County's numbers show up on the state site after 7 PM Central, once the probate judge reports.",
       "confidence": "sourced",
       "verify_tonight": [
         "Note when Mobile becomes a link on the county picker and capture its URL",
@@ -1448,7 +1491,8 @@
         "Mobile"
       ],
       "official_by": "2026-11-13",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "Mobile County"
     },
     {
       "id": "results-PA",
@@ -1471,7 +1515,7 @@
       "count_window": "Mail ballots must arrive by 8 PM Nov 3; mail ID proof by Nov 9; military/overseas by 5 PM Nov 10; full unofficial statewide returns due 5 PM Nov 10; county computation done Nov 17",
       "certification_date": "2026-11-23 (county deadline to certify to the Secretary); Secretary's own date not found",
       "certification_source": "https://www.pa.gov/content/dam/copapwp-pagov/en/dos/programs/voting-and-elections/running-for-office/2026/2026-general-election-calendar.pdf",
-      "wait_line": "Pennsylvania posts statewide results in batches after 8 PM; mail and overseas ballots keep arriving through Nov 10.",
+      "wait_line": "Pennsylvania posts statewide results in batches after 8 PM Eastern. Mail and overseas ballots arriving by Nov 10 still count.",
       "confidence": "sourced",
       "verify_tonight": [
         "Confirm the 2026 General appears in the election dropdown after 8 PM ET with an Unofficial Returns headline",
@@ -1480,7 +1524,8 @@
         "Note which counties report in the first hour and whether mail ballots are in"
       ],
       "official_by": null,
-      "official_by_sure": false
+      "official_by_sure": false,
+      "label": "Pennsylvania"
     },
     {
       "id": "philadelphia-pa",
@@ -1504,7 +1549,7 @@
       "count_window": "Mail by 8 PM Nov 3; mail ID proof by Nov 9; military/overseas by 5 PM Nov 10; canvass begins by 9 AM Nov 6; computation done Nov 17",
       "certification_date": "2026-11-23 (state county deadline; Philadelphia's own date not posted)",
       "certification_source": "https://www.pa.gov/content/dam/copapwp-pagov/en/dos/programs/voting-and-elections/running-for-office/2026/2026-general-election-calendar.pdf",
-      "wait_line": "Philadelphia starts posting at 8 PM and updates through the night; overseas and provisional ballots can shift totals until Nov 10.",
+      "wait_line": "Philadelphia starts posting at 8 PM Eastern and updates through the night. Totals can shift until Nov 10.",
       "confidence": "sourced",
       "verify_tonight": [
         "Confirm the Testing in Progress banner is gone and the last-updated stamp moves after 8 PM",
@@ -1517,7 +1562,8 @@
         "Philadelphia"
       ],
       "official_by": "2026-11-23",
-      "official_by_sure": true
+      "official_by_sure": true,
+      "label": "Philadelphia"
     },
     {
       "id": "allegheny-pa",
@@ -1542,7 +1588,7 @@
       "count_window": "Mail by 8 PM Nov 3; canvass and provisional review start 9 AM Fri Nov 6; military/overseas by 5 PM Nov 10",
       "certification_date": "Not posted; expect about 2026-11-23 (state county deadline; primary certified 20 days after)",
       "certification_source": "https://www.alleghenycounty.us/Government/Elections/Election-Updates",
-      "wait_line": "Allegheny County posts after 8 PM, likely mail ballots first, then precincts; provisional ballots are reviewed starting Nov 6.",
+      "wait_line": "Allegheny County posts after 8 PM Eastern, likely mail ballots first.",
       "confidence": "sourced",
       "verify_tonight": [
         "Confirm precincts reporting rises from 0 of 1,327 and the Last updated stamp moves",
@@ -1555,7 +1601,8 @@
         "Allegheny"
       ],
       "official_by": "2026-11-23",
-      "official_by_sure": false
+      "official_by_sure": false,
+      "label": "Allegheny County"
     },
     {
       "id": "results-TN",
@@ -1573,7 +1620,7 @@
       "count_window": "Mostly election night; absentee ballots must arrive by close of polls (unverified); provisional ballots during county canvass, dates not found",
       "certification_date": "Counties by Mon Nov 23, 2026 (third Monday, computed); state certification date not found",
       "certification_source": "T.C.A. 2-8-101 via https://law.justia.com/codes/tennessee/2019/title-2/chapter-8/section-2-8-101/ (2019 third-party copy)",
-      "wait_line": "Tennessee posts early and absentee votes soon after 7 PM Central, then precincts county by county through the night.",
+      "wait_line": "Tennessee posts early and absentee votes soon after 7 PM Central, then county by county through the night.",
       "confidence": "sourced",
       "verify_tonight": [
         "Confirm the counties-completed counter moves off 0 of 95 after 7 PM CT",
@@ -1582,7 +1629,8 @@
         "Look for a state certification date on sos.tn.gov press releases"
       ],
       "official_by": null,
-      "official_by_sure": false
+      "official_by_sure": false,
+      "label": "Tennessee"
     },
     {
       "id": "results-TN-davidson",
@@ -1600,7 +1648,7 @@
       "count_window": "All 179 precincts reported election night in 2024 and Aug 2026; provisional handling dates not found",
       "certification_date": "By Mon Nov 23, 2026 (computed); Aug 2026 precedent certified 14 days after",
       "certification_source": "T.C.A. 2-8-101 (2019 copy, https://law.justia.com/codes/tennessee/2019/title-2/chapter-8/section-2-8-101/); https://www.nashville.gov/departments/elections/260806",
-      "wait_line": "Davidson County usually posts early and absentee votes soon after 7 PM, then all precincts by late tonight.",
+      "wait_line": "Davidson County usually posts early and absentee votes soon after 7 PM Central, then the rest late tonight.",
       "confidence": "sourced",
       "verify_tonight": [
         "Find which URL carries Nov 3 results (predicted /departments/elections/261103 or a new index entry)",
@@ -1612,7 +1660,8 @@
         "Davidson"
       ],
       "official_by": "2026-11-23",
-      "official_by_sure": false
+      "official_by_sure": false,
+      "label": "Davidson County"
     },
     {
       "id": "results-TN-maury",
@@ -1630,7 +1679,7 @@
       "count_window": "Aug 6 report showed 22 of 22 precincts with provisional column by Aug 7 at latest; post-Election Day handling not documented",
       "certification_date": "Likely by Mon Nov 23, 2026 (computed from state law; unverified for Maury)",
       "certification_source": "State law (section number disputed between scouts: 2-8-101 vs 2-8-105); meeting schedule at https://www.maurycounty-tn.gov/227/Election-Commission",
-      "wait_line": "Maury County posts results as PDF reports through the night, early votes first; check back if the link is not up yet.",
+      "wait_line": "Maury County posts PDF reports through the night, early votes first. Check back if the link isn't up yet.",
       "confidence": "sourced",
       "verify_tonight": [
         "Reload the office page and Document Center for a Nov 3 Summary and Precinct Report PDF",
@@ -1642,7 +1691,8 @@
         "Maury"
       ],
       "official_by": "2026-11-23",
-      "official_by_sure": false
+      "official_by_sure": false,
+      "label": "Maury County"
     }
   ],
   "open_questions": [

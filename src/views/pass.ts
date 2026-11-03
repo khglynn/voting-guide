@@ -75,7 +75,7 @@ export const SHARE_TITLE = 'Quickly make your voting plan.';
    instead, so a text never shows it twice. A message worded some other way goes as written. */
 export function shareData(fam: string): { title: string; text: string; url?: string } {
   const at = new RegExp(`:\\s*${GUIDE_URL.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&')}(?=\\n|$)`);
-  const title = S.ballot && afterPolls(S.ballot.howto) ? 'See how your ballot landed.' : SHARE_TITLE;
+  const title = S.ballot && afterPolls(S.ballot.howto) ? 'Find election results.' : SHARE_TITLE;
   return at.test(fam) ? { title, text: fam.replace(at, '.'), url: GUIDE_URL } : { title, text: fam };
 }
 
@@ -86,7 +86,9 @@ function resultsMessages(): { fam: string; pub: string } {
   const b = S.ballot!;
   const h = b.howto;
   const sh = b.stateHowto;
-  const fam = `See how your ballot landed: ${GUIDE_URL}\nIt links the official results for your city, beside the picks you made. Every number is unofficial until it’s made official.`;
+  // Tonight's guide links election offices and keeps your picks; it shows no counts yet (GPT copy pass, Nov 3). Phase 1
+  // brings back "See how your ballot landed" once numbers show.
+  const fam = `Find election results: ${GUIDE_URL}\nOpen your ballot for links to your election office and your saved picks.`;
   const lines = [`Election results for ${b.stateName} are coming in.`, ''];
   if (sh.results_url) lines.push(`Official results for ${b.stateName}: ${sh.results_url}`);
   if (h.results_url && h.results_url !== sh.results_url) lines.push(`${h.results_source || 'Your county'} results: ${h.results_url}`);
@@ -225,9 +227,9 @@ export function passHTML(): string {
     return `<section class="pass" id="pass" aria-labelledby="pass-h"><div class="wrap">
     <button class="back" data-act="view" data-v="cheat" data-fk="pass-back">Back to What’s next</button>
     <div class="step pass-step"><span class="step-n" aria-hidden="true">5</span><h2 id="pass-h">Share the guide</h2></div>
-    <p class="lede">Send it to people who used the guide, so they can see how their ballot landed.</p>
+    <p class="lede">Send friends the results links.</p>
     <div class="msgs fam"><h4>For friends, family and public posts</h4><p class="rule">Includes a link to this guide, not your picks.</p>${msg('fam', m.fam)}</div>
-    <div class="msgs pub"><h4>For work, school and neighborhood groups</h4><p class="rule">Official links only. No link to this guide, so it stays nonpartisan.</p>${msg('pub', m.pub)}</div>
+    <div class="msgs pub"><h4>For work, school and neighborhood groups</h4><p class="rule">Election-office links only, for sharing with your group.</p>${msg('pub', m.pub)}</div>
   </div>${trustHTML()}<div class="crowd" aria-hidden="true"></div></section>`;
   }
   return `<section class="pass" id="pass" aria-labelledby="pass-h"><div class="wrap">

@@ -149,24 +149,29 @@ function resultsDoorHTML(lead: ResultsLead): string {
   // "See how your ballot landed.", the ZIP sheet with step 2 folded away (a new ballot goes straight to the ballot,
   // where Edit and the sources sheet still open; nothing fills, doorFills), then each state's official results under
   // it for anyone whose city the guide doesn't cover.
+  // GPT copy pass, Nov 3: tonight's page links election offices and keeps your picks; it shows no counts yet, so the
+  // promise says so. Phase 1 brings back "See how your ballot landed." once numbers show.
   if (lead.after) {
-    const ticks = ['Plain English', 'Official results for your city', 'Your picks beside them'];
+    const ticks = ['Plain English', 'Links to your election office', 'Your saved picks'];
     return `<header class="mast front res res-after wrap" data-door="after">${tryBanner()}
     <div class="mast-top" data-part="kicker"><p class="dateline">${esc(`Polls have closed. ${lead.head}`)}</p></div>
-    <h1 class="place">See how your ballot landed.</h1>
+    <h1 class="place">Find your election results.</h1>
     <ul class="ticks">${ticks.map((t) => `<li><i aria-hidden="true"></i>${esc(t)}</li>`).join('')}</ul>
     ${padHTML(true, false)}
-    <div data-part="results">${resultsPartHTML(lead, true)}</div>
+    <div data-part="results">${resultsPartHTML(lead)}</div>
     <div class="door-foot" data-part="fine">${trustHTML(true)}</div>
     ${PILE}
   </header>`;
   }
-  const zip = `<h2 class="res-zip-h">Your ballot and local results</h2>${padHTML(false)}`;
-  return `<header class="mast front res wrap" data-door="${lead.after ? 'after' : 'results'}">${tryBanner()}
+  // While some covered states still vote: the head, then the ballot lookup and a saved ballot first, then each state
+  // (GPT copy pass, Nov 3: the lookup is what most people came for).
+  return `<header class="mast front res wrap" data-door="results">${tryBanner()}
     <div class="mast-top" data-part="kicker"><p class="dateline">${esc(dateline())}</p></div>
-    <div data-part="results">${resultsPartHTML(lead)}</div>
+    <h1 class="place res-h">${esc(lead.head)}</h1>
+    <p class="res-sub">${esc(lead.sub.slice(1).join(' '))}</p>
     <div data-part="saved">${savedLineHTML()}</div>
-    ${zip}
+    ${padHTML(false)}
+    <div data-part="results">${resultsPartHTML(lead)}</div>
     <div class="door-foot" data-part="fine">${trustHTML(true)}</div>
     ${PILE}
   </header>`;
@@ -180,13 +185,15 @@ export let doorShown: string | null = null;
    saved ballot got newspaper picks they never saw offered (review, Nov 3). */
 export const doorFills = (): boolean => S.door.fill && !S.tryMode && !resultsLead(S.index?.states)?.after;
 export const doorKey = (): string => keyOf(resultsLead(S.index?.states));
-function resultsPartHTML(lead: ResultsLead, below = false): string {
+function resultsPartHTML(lead: ResultsLead): string {
   const a = (url: string, text: string, cls = ''): string => `<a${cls ? ` class="${cls}"` : ''} href="${esc(url)}" target="_blank" rel="noopener">${esc(text)}</a>`;
-  const rows = lead.rows.map((r) => `<li class="res-row${r.url ? '' : ' is-open'}">${r.url ? a(r.url, r.name, 'res-st') : `<span class="res-st">${esc(r.name)}</span>`}<span class="res-src">${esc(r.url ? r.source || 'Official results' : r.open || '')}</span>${r.track ? a(r.track, 'Track your mail ballot', 'res-track') : ''}</li>`).join('');
-  return `${below ? `<h2 class="res-zip-h">Official results by state</h2>${lead.sub.slice(1).filter((x) => !/^Already in line/.test(x)).map((x) => `<p class="res-sub">${esc(x)}</p>`).join('')}` : `<h1 class="place res-h">${esc(lead.head)}</h1>
-    <p class="res-sub">${esc(lead.sub.join(' '))}</p>`}
+  // A closed state: its name links its results page, with who publishes it. One still voting: when its polls close, in
+  // its own zone, and its voting-information page.
+  const rows = lead.rows.map((r) => `<li class="res-row${r.url ? '' : ' is-open'}">${r.url ? a(r.url, r.name, 'res-st') : `<span class="res-st">${esc(r.name)}</span>`}<span class="res-src">${esc(r.url ? r.source || 'Official results' : r.open || '')}${!r.url && r.info ? ` ${a(r.info, 'Voting information')}` : ''}</span>${r.track ? a(r.track, 'Track your mail ballot', 'res-track') : ''}</li>`).join('');
+  const sub = lead.after ? lead.sub.slice(1).filter((x) => !/^Already in line/.test(x)) : [];
+  return `<h2 class="res-zip-h">Official results by state</h2>${sub.map((x) => `<p class="res-sub">${esc(x)}</p>`).join('')}
     <ul class="res-list" aria-label="Official results by state">${rows}</ul>
-    <p class="res-calls">Race calls: ${RACE_CALLS.map((d) => a(d.url, d.name)).join(' · ')}</p>`;
+    <p class="res-calls">${RACE_CALLS.map((d) => a(d.url, 'AP’s race calls')).join(' · ')}. AP reports who it expects to win. Election offices publish the counts.</p>`;
 }
 
 /* The ballot you went back to the first page from, while anything on it is saved (a pick, a ranking

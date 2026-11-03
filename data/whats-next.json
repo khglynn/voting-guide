@@ -1,7 +1,7 @@
 {
   "election": "2026-11-03",
   "written": "2026-11-03",
-  "note": "When winners take office, when measures take effect, and the dates that still matter after Election Day, per state. Built Nov 3 afternoon by 15 Sonnet scouts and 15 Opus memos (research/results/next-{ST}.md has the evidence). term_start rows match a contest by office name (case-insensitive substring) and level, the more specific row first; measure_effect rows by kind or number; after_election rows are dated events. `line` is what the guide shows. A computed date says so; show those as expected.",
+  "note": "When winners take office, when measures take effect, and the dates that still matter after Election Day, per state. Built Nov 3 afternoon by 15 Sonnet scouts and 15 Opus memos (research/results/next-{ST}.md has the evidence). term_start rows match a contest by office name (case-insensitive substring) and level, the more specific row first; measure_effect rows by kind or number; after_election rows are dated events. `line` is what the guide shows. A computed date says so; show those as expected. Site copy (Nov 3): the lines the guide shows were reworded in plain words (no \"certify\" or \"canvass\").",
   "rows": [
     {
       "kind": "term_start",
@@ -505,7 +505,7 @@
       "level": "state",
       "jurisdiction": "Texas, all counties (Dallas County lists Nov 10)",
       "when": "2026-11-09",
-      "line": "Voted provisionally for ID? Show photo ID at the voter registrar by Nov 9.",
+      "line": "Cast a provisional ballot because you lacked ID? Show photo ID at the voter registrar by Nov 9.",
       "source": "https://www.sos.texas.gov/elections/laws/advisory2026-21-november-3-election-law-calendar.shtml ; conflict: https://www.dallascountyvotes.org/event/last-day-to-cure-provisional-ballot-6/",
       "confidence": "verified"
     },
@@ -1165,7 +1165,7 @@
       "level": "county",
       "jurisdiction": "Denver",
       "when": "2026-11-24",
-      "line": "Denver certifies its results Nov 24.",
+      "line": "Denver makes its results official Nov 24.",
       "source": "https://www.denvergov.org/Government/Elections/Election-Data-Maps (via CO.md); Denver Special-Elections page",
       "confidence": "verified"
     },
@@ -1176,7 +1176,7 @@
       "level": "county",
       "jurisdiction": "Douglas County",
       "when": "2026-11-20",
-      "line": "Douglas County's canvass board meets Nov 20 at 9 AM.",
+      "line": "Douglas County holds its official review of the vote count Nov 20.",
       "source": "https://www.douglasco.gov/elections/election-information/",
       "confidence": "verified"
     },
@@ -1187,7 +1187,7 @@
       "level": "county",
       "jurisdiction": "Adams County",
       "when": "2026-11-24",
-      "line": "Adams County plans to certify Nov 24 at 9 AM.",
+      "line": "Adams County plans to make its results official Nov 24.",
       "source": "https://adamscountyco.gov/our-county/elected-officials/clerk-recorder/adams-county-elections/2026-elections/important-dates/",
       "confidence": "sourced"
     },
@@ -1198,7 +1198,7 @@
       "level": "county",
       "jurisdiction": "Boulder County",
       "when": "2026-11-24",
-      "line": "Boulder County's canvass meets online Nov 24 at 2 PM.",
+      "line": "Boulder County holds its official review of the vote count online Nov 24.",
       "source": "https://bouldercounty.gov/elections/election-events/",
       "confidence": "sourced"
     },
@@ -1209,7 +1209,7 @@
       "level": "state",
       "jurisdiction": "Colorado statewide",
       "when": "2026-11-25",
-      "line": "Every county must certify its results by Nov 25.",
+      "line": "Every county must make its results official by Nov 25.",
       "source": "https://www.clerkandrecorder.org/2026-general-election; research/results/CO.md (C.R.S. 1-10-102(1), 1-10-103(1))",
       "confidence": "verified"
     },
@@ -1836,7 +1836,7 @@
       "level": "county",
       "jurisdiction": "Los Angeles County",
       "when": "2026-11-04",
-      "line": "Official count review, with a 1% hand tally, starts Nov 4.",
+      "line": "The official review of the vote count, with a hand count of 1% of ballots, starts Nov 4.",
       "source": "https://content.lavote.gov/docs/rrcc/documents/media-kit-final.pdf",
       "confidence": "sourced"
     },
@@ -1858,7 +1858,7 @@
       "level": "county",
       "jurisdiction": "all counties",
       "when": "2026-12-03",
-      "line": "Every county must certify its results by Dec 3.",
+      "line": "Every county must make its results official by Dec 3.",
       "source": "https://www.sos.ca.gov/elections/upcoming-elections/general-election-november-3-2026/key-dates-deadlines",
       "confidence": "verified"
     },
@@ -1880,7 +1880,7 @@
       "level": "state",
       "jurisdiction": "statewide",
       "when": "2026-12-11",
-      "line": "The state certifies results and issues election certificates Dec 11.",
+      "line": "The state makes results official Dec 11.",
       "source": "https://www.sos.ca.gov/elections/upcoming-elections/general-election-november-3-2026/key-dates-deadlines",
       "confidence": "verified"
     },
@@ -2221,7 +2221,7 @@
       "level": "county",
       "jurisdiction": "All counties, including the five NYC boroughs and Sullivan",
       "when": "2026-11-28",
-      "line": "County boards certify their final counts by Nov 28.",
+      "line": "County boards make their final counts official by Nov 28.",
       "source": "https://elections.ny.gov/2026-political-calendar ; https://www.nysenate.gov/legislation/laws/ELN/9-214",
       "confidence": "verified"
     },
@@ -3332,7 +3332,7 @@
       "level": "county",
       "jurisdiction": "Baltimore City Board of Elections",
       "when": "2026-11-13",
-      "line": "Baltimore City verifies its count and begins certifying by Nov 13.",
+      "line": "Baltimore City checks its count and starts making results official by Nov 13.",
       "source": "https://elections.maryland.gov/elections/2026/2026_Election_Calendar.pdf (EL 11-308, 11-401(c))",
       "confidence": "verified"
     },
@@ -3365,7 +3365,7 @@
       "level": "state",
       "jurisdiction": "statewide",
       "when": "2026-12-02",
-      "line": "The statewide risk-limiting audit must finish by Dec 2.",
+      "line": "The statewide audit, a hand check of a sample of ballots, must finish by Dec 2.",
       "source": "https://elections.maryland.gov/elections/2026/2026_Election_Calendar.pdf (EL 11-309(b)(4))",
       "confidence": "verified"
     },
@@ -3376,7 +3376,7 @@
       "level": "state",
       "jurisdiction": "statewide",
       "when": "2026-12-03",
-      "line": "The state certifies final results by Dec 3.",
+      "line": "The state makes final results official by Dec 3.",
       "source": "https://elections.maryland.gov/elections/2026/2026_Election_Calendar.pdf (EL 11-503(a)(1)(i))",
       "confidence": "verified"
     },
@@ -3409,7 +3409,7 @@
       "level": "state",
       "jurisdiction": "statewide",
       "when": "None",
-      "line": "No runoff. The top vote-getter wins.",
+      "line": "No runoff. The candidate with the most votes wins.",
       "source": "https://msa.maryland.gov/msa/mdmanual/43const/html/04art4.html (Art. IV, sec. 11); absence in the 2026 calendar",
       "confidence": "sourced"
     },
@@ -3926,7 +3926,7 @@
       "level": "county",
       "jurisdiction": "Leon County",
       "when": "2026-11-14 10 AM",
-      "line": "Leon County signs official results and certifies its audit Saturday, Nov 14.",
+      "line": "Leon County makes its results official Sat Nov 14.",
       "source": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/43/Public-Notice-Leon-County-Canvassing-Board-Activity-for-the-2026-General-Election-Including-Logic-Accuracy-Testing-and-Post-Election-Audit",
       "confidence": "sourced"
     },
@@ -3948,7 +3948,7 @@
       "level": "state",
       "jurisdiction": "Florida",
       "when": "2026-11-17 8 AM",
-      "line": "The state certifies official results at 8 AM Tuesday, Nov 17.",
+      "line": "The state makes results official Tue Nov 17.",
       "source": "https://floridaelectionwatch.gov/Timeline",
       "confidence": "verified"
     },
@@ -4663,7 +4663,7 @@
       "level": "county",
       "jurisdiction": "All Georgia counties, including Fulton and DeKalb",
       "when": "2026-11-09, 5 PM (O.C.G.A. 21-2-493(k))",
-      "line": "Counties certify results by 5 PM Mon Nov 9.",
+      "line": "Counties make results official by Mon Nov 9.",
       "source": "https://sos.ga.gov/sites/default/files/2024-01/2024%20Comp-Cal_State.01.02.24.Rev_..pdf; https://northatlantastar.com/georgia-election-night-results-final-count-2026/",
       "confidence": "sourced"
     },
@@ -5246,7 +5246,7 @@
       "level": "county",
       "jurisdiction": "Every Washington county, including King",
       "when": "2026-11-24",
-      "line": "Counties certify final results Nov 24.",
+      "line": "Counties make final results official Nov 24.",
       "source": "https://www.sos.wa.gov/elections/calendar",
       "confidence": "verified"
     },
@@ -5257,7 +5257,7 @@
       "level": "county",
       "jurisdiction": "King County",
       "when": "2026-11-25, 4 PM",
-      "line": "King County posts its final precinct results by 4 PM Nov 25.",
+      "line": "King County posts its final results by voting area by 4 PM Nov 25.",
       "source": "https://kingcounty.gov/en/dept/elections/results/2026/november-general (via research/results/WA.md)",
       "confidence": "sourced"
     },
@@ -5301,7 +5301,7 @@
       "level": "state",
       "jurisdiction": "Washington statewide",
       "when": "2026-12-03",
-      "line": "The Secretary of State certifies statewide results by Dec 3.",
+      "line": "The Secretary of State makes statewide results official by Dec 3.",
       "source": "https://www.sos.wa.gov/elections/calendar",
       "confidence": "verified"
     },
@@ -5587,7 +5587,7 @@
       "level": "state",
       "jurisdiction": "Alabama",
       "when": "2026-11-06 5 PM",
-      "line": "Voted provisionally without ID? Show ID by 5 PM Friday, Nov 6.",
+      "line": "Cast a provisional ballot because you lacked ID? Show ID by 5 PM Fri Nov 6.",
       "source": "https://www.sos.alabama.gov/sites/default/files/election-2026/AdminCalendar%20-2026.pdf (Sec. 17-10-2(a)(3))",
       "confidence": "verified"
     },
@@ -5675,7 +5675,7 @@
       "level": "state",
       "jurisdiction": "Alabama",
       "when": "2026-11-23",
-      "line": "Legislators and members of Congress get certificates of election Nov 23.",
+      "line": "Winning legislators and members of Congress get their official papers Nov 23.",
       "source": "https://www.sos.alabama.gov/sites/default/files/election-2026/AdminCalendar%20-2026.pdf (Sec. 17-12-21)",
       "confidence": "verified"
     },
@@ -5686,7 +5686,7 @@
       "level": "state",
       "jurisdiction": "Alabama",
       "when": "2026-11-25",
-      "line": "The state certifies final results Wednesday, Nov 25.",
+      "line": "The state makes final results official Wed Nov 25.",
       "source": "https://www.sos.alabama.gov/sites/default/files/election-2026/AdminCalendar%20-2026.pdf (Sec. 17-12-17)",
       "confidence": "verified"
     },

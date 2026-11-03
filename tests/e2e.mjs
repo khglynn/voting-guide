@@ -3619,20 +3619,20 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await page.fill('#zip', '78702');
   await throughSetup(page);
   const strip = await text(page, '.plan-in');
-  check('Results: Austin 78702 at 7:05 PM: Official results opens Travis County’s page, AP links Texas, the wait lines and dates show, no "I already voted"', (await page.getAttribute('[data-fk="plan-results"]', 'href')) === 'https://results.enr.clarityelections.com/TX/Travis/' && (await page.getAttribute('[data-fk="plan-ap"]', 'href')) === 'https://apnews.com/projects/elections-2026/texas-results/' && /Travis County posts early and mail votes first/.test(strip) && /local races by Nov 17, state races by Dec 7\./.test(strip) && !(await page.$('[data-fk="voted"]')), strip.slice(0, 240));
+  check('Results: Austin 78702 at 7:05 PM: Official results opens Travis County’s page, AP links Texas, its one wait line and named button show, no "I already voted"', (await page.getAttribute('[data-fk="plan-results"]', 'href')) === 'https://results.enr.clarityelections.com/TX/Travis/' && (await page.getAttribute('[data-fk="plan-ap"]', 'href')) === 'https://apnews.com/projects/elections-2026/texas-results/' && /Travis County posts early and mail votes first\. No first update time announced\./.test(strip) && /Travis County results/.test(strip) && !/Official results are below/.test(strip) && !(await page.$('[data-fk="voted"]')), strip.slice(0, 240));
   await tap(page, '[data-fk="whatif"]');
   await page.waitForSelector('.nexts');
   const fold = await text(page, '.nexts');
-  check('Results: the fold is What happens next: dated steps with sources, the after-election questions, the office, no search', /What happens next/.test(await text(page, '[data-fk="whatif"]')) && /Mail ballots postmarked by 7 PM Nov 3/.test(fold) && /If you voted by mail or provisionally/.test(fold) && /Your election office/.test(fold) && !(await page.$('#wi-q')) && !/Hays County makes results official/.test(fold), fold.slice(0, 200));
+  check('Results: the fold is Dates and ballot help: the deadlines, Check or fix your ballot, upcoming dates with sources, the office, no search', /Dates and ballot help/.test(await text(page, '[data-fk="whatif"]')) && /Travis County makes its results official by Nov 17\./.test(fold) && /Mail ballots postmarked by 7 PM Nov 3/.test(fold) && /Check or fix your ballot/.test(fold) && /Your election office/.test(fold) && !(await page.$('#wi-q')) && !/Hays County makes results official/.test(fold), fold.slice(0, 200));
   const bar = await text(page, '.foot');
-  check('Results: the bar says Results and What’s next, with no count, and carries data-results', !!(await page.$('.foot[data-results]')) && /^Results What’s next$/.test(bar) && !(await page.$('.foot .bar')), bar);
+  check('Results: the bar says On this ballot and What’s next, with no count, and carries data-results', !!(await page.$('.foot[data-results]')) && /^On this ballot What’s next$/.test(bar) && !(await page.$('.foot .bar')), bar);
   await noSideScroll(page, 'Results strip');
   await tap(page, '.foot [data-act="cheat"]');
   await page.waitForSelector('#cheat');
   check('Results: What’s next opens the dated list, and its next step is Share the guide', (await text(page, '#cs-h')) === 'What’s next' && /Mail ballots postmarked/.test(await text(page, '#cheat')) && /Share the guide/.test(await text(page, '[data-fk="cs-pass"]')));
   await tap(page, '[data-fk="cs-pass"]');
   await page.waitForSelector('#pass');
-  check('Results: Share the guide: the friends message links the guide, never a save link', (await text(page, '#pass-h')) === 'Share the guide' && /^See how your ballot landed: https:\/\/vote\.kevinhg\.com\//.test(await text(page, '#msg-fam')) && !/#v\d~/.test(await text(page, '#msg-fam')));
+  check('Results: Share the guide: the friends message links the guide, never a save link', (await text(page, '#pass-h')) === 'Share the guide' && /^Find election results: https:\/\/vote\.kevinhg\.com\//.test(await text(page, '#msg-fam')) && !/#v\d~/.test(await text(page, '#msg-fam')));
   noErrors(page, 'Results strip');
   await ctx.close();
 }
@@ -3642,7 +3642,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await page.fill('#zip', '78660');
   await throughSetup(page);
   const ctys = await page.$$eval('.plan-ctys a', (as) => as.map((a) => a.textContent.trim()));
-  check('Results: Pflugerville 78660, county unknown: a results button for Travis County and one for Williamson County', ctys.join('|') === 'Travis County|Williamson County', ctys.join('|'));
+  check('Results: Pflugerville 78660, county unknown: a named results button for Travis County and one for Williamson County', ctys.join('|') === 'Travis County results|Williamson County results', ctys.join('|'));
   noErrors(page, 'Results Pflugerville');
   await ctx.close();
 }
@@ -3652,7 +3652,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await page.goto(`${BASE}/?today=2026-11-03`);
   await page.waitForSelector('[data-door="after"]');
   const door = await text(page, '.front');
-  check('Results: the first page after the last close: "See how your ballot landed.", its ticks, no step 2, each state’s results under the ZIP', /Polls have closed\. Results are rolling in\./.test(door) && (await text(page, 'h1.place')) === 'See how your ballot landed.' && /Official results for your city/.test(door) && !(await page.$('#setup')) && !!(await page.$('#zip')) && (await page.$$('.res-row')).length === 15, door.slice(0, 200));
+  check('Results: the first page after the last close: "Find your election results.", its ticks, no step 2, each state’s results under the ZIP', /Polls have closed\. Results are rolling in\./.test(door) && (await text(page, 'h1.place')) === 'Find your election results.' && /Links to your election office/.test(door) && !(await page.$('#setup')) && !!(await page.$('#zip')) && (await page.$$('.res-row')).length === 15, door.slice(0, 200));
   await page.fill('#zip', '78702');
   await tap(page, '[data-act="setup-done"]');
   await page.waitForSelector('#plan');
@@ -3673,7 +3673,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await page.fill('#addr-in', 'Congress Avenue');
   await page.clock.runFor(3 * 60_000);
   await page.waitForTimeout(200);
-  check('Results: the close on an open page with an address half typed: the bar turns, the typing stays', /^Results What’s next$/.test(await text(page, '.foot')) && (await page.inputValue('#addr-in').catch(() => '')) === 'Congress Avenue' && /^Results are rolling in\./.test(await text(page, '.plan-h')), `${await text(page, '.foot')} | ${await page.inputValue('#addr-in').catch(() => 'gone')}`);
+  check('Results: the close on an open page with an address half typed: the bar turns, the typing stays', /^On this ballot What’s next$/.test(await text(page, '.foot')) && (await page.inputValue('#addr-in').catch(() => '')) === 'Congress Avenue' && /^Results are rolling in\./.test(await text(page, '.plan-h')), `${await text(page, '.foot')} | ${await page.inputValue('#addr-in').catch(() => 'gone')}`);
   noErrors(page, 'Results close with typing');
   await ctx.close();
 }
@@ -3690,7 +3690,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   const after = await text(page, '.plan-h');
   check('Austin on a Pacific-time phone: 6:58 PM Central is still Election Day', /^Today is Election Day\. Polls close at 7 PM\.$/.test(before), before);
   check('Austin on a Pacific-time phone: the open page turns to results after 7 PM Central', /^Results are rolling in\./.test(after), after);
-  check('Austin, an open page at the close: the bar and the endcap turn too (Results, What’s next)', /^Results What’s next$/.test(await text(page, '.foot')) && (await text(page, '[data-fk="endcap-cheat"]')) === 'What’s next', await text(page, '.foot'));
+  check('Austin, an open page at the close: the bar and the endcap turn too (On this ballot, What’s next)', /^On this ballot What’s next$/.test(await text(page, '.foot')) && (await text(page, '[data-fk="endcap-cheat"]')) === 'What’s next', await text(page, '.foot'));
   noErrors(page, 'Polls close on an open page');
   await ctx.close();
 }

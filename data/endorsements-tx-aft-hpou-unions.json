@@ -2500,7 +2500,7 @@
   "endorser_id": "texas-aft",
   "target_id": "tx-house-50",
   "status": "not_found",
-  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements: it lists Jeremy Hendricks for HD 50, who isn’t on the ballot, so no candidate here has its pick.",
   "url": "https://www.texasaft.org/our-priorities/current-endorsements",
   "date": "2026-11-02",
   "confidence": "verified"

@@ -1756,7 +1756,7 @@ function roundTrip(name, stCode, places, mutate) {
     bl.localize(b, '78660', null);
     st.S.ui.open = new Set();
     const pf = [...ps.planHTML().matchAll(/data-county="([^"]+)">([^<]+)<\/a>/g)].map((x) => x[2]);
-    check('strip: Pflugerville, county unknown: a button each for Travis and Williamson counties', st.S.ballot.county == null ? pf.join('|') === 'Travis County|Williamson County' : true, `${st.S.ballot.county} ${pf.join('|')}`);
+    check('strip: Pflugerville, county unknown: a button each for Travis and Williamson counties', st.S.ballot.county == null && pf.join('|') === 'Travis County|Williamson County', `${st.S.ballot.county} ${pf.join('|')}`);
     // The bar, the menu, the endcap, What's next, Share the guide and How after the close.
     b = open('TX', ['austin-tx']);
     bl.localize(b, '78702', null);

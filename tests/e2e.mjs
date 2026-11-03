@@ -3611,6 +3611,57 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   noErrors(page, 'Polls closed');
   await ctx.close();
 }
+// Results Phase 0 (Nov 3): the strip, the fold, the bar and What's next after the close; Pflugerville's two counties;
+// the first page once the last covered state has closed.
+{
+  const { ctx, page } = await newPage();
+  await page.goto(`${BASE}/?today=2026-11-03&now=19:05`);
+  await page.fill('#zip', '78702');
+  await throughSetup(page);
+  const strip = await text(page, '.plan-in');
+  check('Results: Austin 78702 at 7:05 PM: Official results opens Travis County’s page, AP links Texas, the wait lines and dates show, no "I already voted"', (await page.getAttribute('[data-fk="plan-results"]', 'href')) === 'https://results.enr.clarityelections.com/TX/Travis/' && (await page.getAttribute('[data-fk="plan-ap"]', 'href')) === 'https://apnews.com/projects/elections-2026/texas-results/' && /Travis County posts early and mail votes first/.test(strip) && /local races by Nov 17, state races by Dec 7\./.test(strip) && !(await page.$('[data-fk="voted"]')), strip.slice(0, 240));
+  await tap(page, '[data-fk="whatif"]');
+  await page.waitForSelector('.nexts');
+  const fold = await text(page, '.nexts');
+  check('Results: the fold is What happens next: dated steps with sources, the after-election questions, the office, no search', /What happens next/.test(await text(page, '[data-fk="whatif"]')) && /Mail ballots postmarked by 7 PM Nov 3/.test(fold) && /If you voted by mail or provisionally/.test(fold) && /Your election office/.test(fold) && !(await page.$('#wi-q')) && !/Hays County makes results official/.test(fold), fold.slice(0, 200));
+  const bar = await text(page, '.foot');
+  check('Results: the bar says Results and What’s next, with no count, and carries data-results', !!(await page.$('.foot[data-results]')) && /^Results What’s next$/.test(bar) && !(await page.$('.foot .bar')), bar);
+  await noSideScroll(page, 'Results strip');
+  await tap(page, '.foot [data-act="cheat"]');
+  await page.waitForSelector('#cheat');
+  check('Results: What’s next opens the dated list, and its next step is Share the guide', (await text(page, '#cs-h')) === 'What’s next' && /Mail ballots postmarked/.test(await text(page, '#cheat')) && /Share the guide/.test(await text(page, '[data-fk="cs-pass"]')));
+  await tap(page, '[data-fk="cs-pass"]');
+  await page.waitForSelector('#pass');
+  check('Results: Share the guide: the friends message links the guide, never a save link', (await text(page, '#pass-h')) === 'Share the guide' && /^See how your ballot landed: https:\/\/vote\.kevinhg\.com\//.test(await text(page, '#msg-fam')) && !/#v\d~/.test(await text(page, '#msg-fam')));
+  noErrors(page, 'Results strip');
+  await ctx.close();
+}
+{
+  const { ctx, page } = await newPage();
+  await page.goto(`${BASE}/?today=2026-11-03&now=19:05`);
+  await page.fill('#zip', '78660');
+  await throughSetup(page);
+  const ctys = await page.$$eval('.plan-ctys a', (as) => as.map((a) => a.textContent.trim()));
+  check('Results: Pflugerville 78660, county unknown: a results button for Travis County and one for Williamson County', ctys.join('|') === 'Travis County|Williamson County', ctys.join('|'));
+  noErrors(page, 'Results Pflugerville');
+  await ctx.close();
+}
+{
+  const { ctx, page } = await newPage({ timezoneId: 'America/Chicago' });
+  await page.clock.install({ time: new Date('2026-11-04T04:05:00Z') });
+  await page.goto(`${BASE}/?today=2026-11-03`);
+  await page.waitForSelector('[data-door="after"]');
+  const door = await text(page, '.front');
+  check('Results: the first page after the last close: "See how your ballot landed.", its ticks, no step 2, each state’s results under the ZIP', /Polls have closed\. Results are rolling in\./.test(door) && (await text(page, 'h1.place')) === 'See how your ballot landed.' && /Official results for your city/.test(door) && !(await page.$('#setup')) && !!(await page.$('#zip')) && (await page.$$('.res-row')).length === 15, door.slice(0, 200));
+  await page.fill('#zip', '78702');
+  await tap(page, '[data-act="setup-done"]');
+  await page.waitForSelector('#plan');
+  const filled = await page.evaluate(() => { try { const s = JSON.parse(localStorage.getItem('vg2') || '{}'); return JSON.stringify(s).includes('"picks":{"'); } catch { return null; } });
+  check('Results: a new ballot after the last close goes straight to the ballot with nothing filled in', filled === false, String(filled));
+  await noSideScroll(page, 'Results first page');
+  noErrors(page, 'Results first page');
+  await ctx.close();
+}
 // Codex r2 (r1 #12): an open page turns over at 7 PM Central on its own, whatever the device's zone.
 {
   const { ctx, page } = await newPage({ timezoneId: 'America/Los_Angeles' });

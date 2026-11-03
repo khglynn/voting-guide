@@ -10,6 +10,7 @@ const FEEDS = {
   'dallas-county-tx': { '/127396/current_ver.txt': 'clarity-dallas.current_ver.txt', '/127396/382636/json/en/summary.json': 'clarity-dallas.summary.json', '/127396/382636/json/en/electionsettings.json': 'clarity-dallas.electionsettings.json' },
   'bexar-tx': { '/127291/current_ver.txt': 'clarity-bexar.current_ver.txt', '/127291/379718/json/en/summary.json': 'clarity-bexar.summary.json', '/127291/379718/json/en/electionsettings.json': 'clarity-bexar.electionsettings.json' },
   'harris-county-tx': { '/1126/resultsbyballot.json': 'harris.resultsbyballot.json' },
+  'williamson-tx': { '/127488/current_ver.txt': 'clarity-williamson.current_ver.txt', '/127488/383157/json/en/summary.json': 'clarity-williamson.summary.json', '/127488/383157/json/en/electionsettings.json': 'clarity-williamson.electionsettings.json' },
 };
 
 test('maps.gen.js matches maps/*.json (run bin/map-check.mjs --write after editing a map)', () => {

@@ -7,7 +7,8 @@
  * Loads the real TypeScript modules through Vite's SSR loader (no new dependencies) and feeds
  * them the real data bundles. What it guards:
  *   - the save link: v1 and v2 formats byte for byte, the pinned pre-ranked-choice v1 link from
- *     the live site, round trips, the optional notMine field
+ *     the live site, round trips, the optional notMine field, the lens recipe (11th field) and how
+ *     an older client reads it
  *   - normalizeRanks migrations, rank order, ranked races never filled by a bulk action
  *   - district filtering and the "every voter sees each seat" rule
  *   - lens membership, the verdict for every state of a lineup, the bulk fills and their undo
@@ -192,6 +193,100 @@ function roundTrip(name, stCode, places, mutate) {
   b.hideDecided = true;
   check('golden: "Hide races I\'ve decided" adds nothing to the link', st.encodeShare(ballot, b) === GOLD);
   check('hideDecided: a link never brings it, so a new ballot from a link starts with it off', st.decodeShare(ballot, head(GOLD)).state.hideDecided === false);
+}
+
+/* ---------- 2a. the lens recipe, an 11th field (Election Day, Nov 3: "our save my plan url is sooooo long") ---------- */
+{
+  const same = (a, b) => (a === null || b === null ? a === b : JSON.stringify([...new Set(a)].sort()) === JSON.stringify([...new Set(b)].sort()));
+  // The plain form of a link: what the encoder wrote before Nov 3 (sources as one hash each in field 8).
+  const plainOf = (link, sources) => {
+    const f = link.split('~');
+    if (f.length < 11) return link;
+    const out = [...f.slice(0, 7), sources.map((id) => util.hash(id)).join('.')];
+    if (f[8] || f[9]) out.push(f[8]);
+    if (f[9]) out.push(f[9]);
+    return out.join('~');
+  };
+  // An older client reads fields by position and stops at the 10th (its decodeShare has no 11th).
+  const oldRead = (ballot, link) => { const h = head(link); return st.decodeShare(ballot, { ...h, raw: h.raw.slice(0, 10) }).state; };
+
+  // The Austin example: ZIP 78702, every district answered, 37 races decided, every source on the ballot on.
+  const ballot = open('TX', ['austin-tx']);
+  const b = st.emptyBallotState('78702');
+  ballot.groups.forEach((g) => { b.districts[g.key] = g.members[0]; });
+  const inDistrict = (id) => { const g = ballot.groups.find((x) => x.members.includes(id)); return !g || b.districts[g.key] === id; };
+  for (const it of ballot.items) {
+    if (Object.keys(b.picks).length >= 37) break;
+    if (ballot.mayApply.has(it.id) || !inDistrict(it.id)) continue;
+    if (it.kind === 'measure') b.picks[it.id] = 'YES';
+    else if (it.is_retention && it.candidates.length === 1) b.picks[it.id] = 'YES';
+    else if (it.candidates.length > 1 && !it.is_retention && !it.ranked_choice && it.vote_for === 1) b.picks[it.id] = it.candidates[1].name;
+  }
+  b.sources = ballot.endorsers.map((e) => e.id);
+  const link = st.encodeShare(ballot, b);
+  const before = plainOf(link, b.sources);
+  const f = link.split('~');
+  check(`lens recipe: the Austin example (${Object.keys(b.picks).length} picks, ${b.sources.length} sources) goes from ${before.length} to ${link.length} characters`,
+    Object.keys(b.picks).length === 37 && b.sources.length > 40 && link.length < before.length * 0.65, `${before.length} -> ${link.length}`);
+  check('lens recipe: written as an 11th field, sources field empty, head still v1', f[0] === 'v1' && f.length === 11 && f[7] === '' && f[10] === 'a', link.slice(-20));
+  const back = st.decodeShare(ballot, head(link)).state;
+  const plainBack = st.decodeShare(ballot, head(before)).state;
+  check('lens recipe: the Austin link brings back every source and every pick and district', same(back.sources, b.sources)
+    && JSON.stringify(back.picks) === JSON.stringify(b.picks) && JSON.stringify(back.districts) === JSON.stringify(b.districts));
+  check('lens recipe: it means what the plain link means', same(back.sources, plainBack.sources) && JSON.stringify(back.picks) === JSON.stringify(plainBack.picks));
+  const old = oldRead(ballot, link);
+  check('lens recipe: an older client keeps every pick and district and falls back to the default lens', old.sources === null
+    && JSON.stringify(old.picks) === JSON.stringify(b.picks) && JSON.stringify(old.districts) === JSON.stringify(b.districts));
+
+  // Every chip mix, a party, one source off, one on, a few by hand: never longer, and the same sources come back.
+  const def = ballot.endorsers.filter((e) => e.default_on).map((e) => e.id);
+  const chip = (k) => mods.lens.chipMembers(ballot, k).map((e) => e.id);
+  const keys = ['papers', 'progressive', 'conservative', 'unions'];
+  const lists = [def, def.slice(1), [...def, ...chip('conservative').slice(0, 1)], ballot.endorsers.slice(0, 3).map((e) => e.id), [], null];
+  for (let m = 1; m < 16; m++) lists.push([...def, ...keys.filter((_, i) => m & (1 << i)).flatMap(chip)]);
+  for (const p of mods.lens.partiesOnBallot(ballot)) lists.push([...def, ...p.sources.map((e) => e.id)]);
+  let longer = 0, wrong = 0, oldWrong = 0, used = 0;
+  for (const sources of lists) {
+    for (const withRanksAndNotMine of [false, true]) {
+      const s = { ...b, sources, notMine: withRanksAndNotMine && ballot.mayApply.size ? [[...ballot.mayApply][0]] : [] };
+      const l = st.encodeShare(ballot, s);
+      if (l.split('~').length === 11) used++;
+      if (sources && sources.length && l.length > plainOf(l, sources).length) longer++;
+      const got = st.decodeShare(ballot, head(l)).state;
+      if (!same(got.sources, sources) || JSON.stringify(got.picks) !== JSON.stringify(s.picks) || JSON.stringify(got.notMine) !== JSON.stringify(s.notMine)) wrong++;
+      const o = oldRead(ballot, l);
+      if (JSON.stringify(o.picks) !== JSON.stringify(s.picks) || JSON.stringify(o.notMine) !== JSON.stringify(s.notMine)) oldWrong++;
+    }
+  }
+  check(`lens recipe: ${lists.length} lenses on Austin, never a longer link (recipe used ${used} times)`, longer === 0 && used > 10, String(longer));
+  check('lens recipe: each lens comes back as the same sources, with the same picks and notMine', wrong === 0, String(wrong));
+  check('lens recipe: an older client keeps the picks and notMine on every one', oldWrong === 0, String(oldWrong));
+  check('lens recipe: no sources, the defaults and three hand picks stay the plain form', st.encodeShare(ballot, { ...b, sources: [] }).split('~')[7] === '0'
+    && st.encodeShare(ballot, { ...b, sources: null }).split('~').length === 8 && st.encodeShare(ballot, { ...b, sources: ballot.endorsers.slice(0, 3).map((e) => e.id) }).split('~').length === 8);
+
+  // What each recipe means, pinned by hand on Lakewood (the data decides the members; the grammar doesn't change).
+  const lw = open('CO', ['lakewood-co']);
+  const base = 'v1~CO~lakewood-co~80226~ra8yvi07~~~~~~';
+  const read = (r) => st.decodeShare(lw, head(base + r)).state.sources;
+  const lwDef = lw.endorsers.filter((e) => e.default_on).map((e) => e.id);
+  const dp = lwDef[0], extra = lw.endorsers.find((e) => !e.default_on).id;
+  check('lens recipe: "a" is every source on the ballot', same(read('a'), lw.endorsers.map((e) => e.id)));
+  check('lens recipe: "d" is the defaults, "u" the Unions chip', same(read('d'), lwDef) && same(read('u'), mods.lens.chipMembers(lw, 'unions').map((e) => e.id)));
+  check('lens recipe: -hash takes one out, +hash adds one', same(read(`d-${util.hash(dp)}`), lwDef.filter((id) => id !== dp)) && same(read(`d+${util.hash(extra)}`), [...lwDef, extra]));
+  check('lens recipe: an unknown hash is dropped, as in the plain form', same(read(`d+zzzzz`), lwDef));
+  check('lens recipe: a field it can’t read (a letter it doesn’t know) falls back to the sources field: the defaults', read('dq') === null && read('d+abc') === null && read('A') === null);
+  check('lens recipe: an empty 11th field changes nothing', st.decodeShare(lw, head('v1~CO~lakewood-co~80226~ra8yvi07~~~mlkqq~~~')).state.sources.join() === 'denver-post-eb');
+
+  // The 11th field is the link's last: a chat app that keeps the "." or ")" after a link, or a "%20", mustn't wipe the
+  // lens back to the defaults (Opus review, Nov 3). Both a recipe ending in a letter and one ending in a +hash.
+  const endsInHash = st.encodeShare(ballot, { ...b, sources: [...def, chip('unions')[0]] });
+  const tails = ['.', ')', ',', '%20', ').', '.%20'];
+  const smeared = [];
+  for (const l of [link, endsInHash]) {
+    const want = st.decodeShare(ballot, head(l)).state.sources;
+    for (const t of tails) if (!same(st.decodeShare(ballot, head(l + t)).state.sources, want)) smeared.push(`${l.split('~')[10]}${t}`);
+  }
+  check('lens recipe: trailing punctuation after the link reads the same sources', /^d\+[0-9a-z]{5}$/.test(endsInHash.split('~')[10]) && smeared.length === 0, `${endsInHash.split('~')[10]} ${smeared.join(' ')}`);
 }
 
 /* ---------- 2b. saved state: a field added since a save is back-filled; the new one is kept ---------- */
@@ -940,8 +1035,34 @@ function roundTrip(name, stCode, places, mutate) {
     check('adds: a save link opened before the preview answers keeps the held source', Array.isArray(gapBack) && gapBack.includes('aura') && gapBack.length === gapState.sources.length, JSON.stringify(gapBack));
     mem.set('vg-adds', '[]');
     check('adds: with nothing held, the link drops a source the ballot lacks, as before', !st.decodeShare(liveB, head(gapLink)).state.sources.includes('aura'));
-    check('adds: and the link’s format is unchanged (the held source is one more hash, as any switch)', gapLink === st.encodeShare(liveB, gapState) && gapLink.split('~')[7].split('.').length === gapState.sources.length);
+    // Since Nov 3 the defaults plus one travel as the lens recipe: the held source is one +hash there, as any switch.
+    check('adds: and the held source is one more hash in the link, as any switch', gapLink === st.encodeShare(liveB, gapState)
+      && gapLink.split('~')[7] === '' && gapLink.split('~')[10] === `d+${util.hash('aura')}`, gapLink.split('~').slice(7).join('~'));
     mem.set('vg-adds', JSON.stringify([{ code: 'abcdefghijkl', name: 'AURA', at: Date.now(), ids: ['aura'] }]));
+    // The other direction (Codex and Opus reviews of the lens recipe, Nov 3): the link made WHILE the preview is on the
+    // ballot, opened in a reload gap (the ballot lacks it). A letter never covers a preview, so AURA always travels as
+    // its own +hash and survives the gap; without that, "every source" or a chip folded it in and lost it for good.
+    const auraH = `+${util.hash('aura')}`;
+    const nbDef = nb.endorsers.filter((e) => e.default_on).map((e) => e.id);
+    const nbChip = (k) => mods.lens.chipMembers(nb, k).map((e) => e.id);
+    const previewCases = [['every source', nb.endorsers.map((e) => e.id)], ['Progressive', nbChip('progressive')], ['defaults + Progressive', [...nbDef, ...nbChip('progressive')]], ['defaults + AURA', [...nbDef, 'aura']]];
+    const sorted = (l) => JSON.stringify([...new Set(l || [])].sort());
+    const lost = previewCases.filter(([, sources]) => {
+      const l = st.encodeShare(nb, { ...st.emptyBallotState('78704'), sources });
+      const f = l.split('~');
+      const back = st.decodeShare(liveB, head(l)).state.sources;
+      return !sources.includes('aura') || f.length !== 11 || !f[10].endsWith(auraH) || !Array.isArray(back) || !back.includes('aura')
+        || sorted(st.decodeShare(nb, head(l)).state.sources) !== sorted(sources);
+    }).map(([n]) => n);
+    check('adds: a link made with the preview on and opened in the reload gap keeps it (its own +hash in the recipe)', lost.length === 0, lost.join(', '));
+    // The preview turned off: "every source but AURA" is plain "a", with no -hash to carry.
+    const allButAura = st.encodeShare(nb, { ...st.emptyBallotState('78704'), sources: nb.endorsers.map((e) => e.id).filter((id) => id !== 'aura') });
+    check('adds: a preview you left off needs no -hash: every other source is just "a"', allButAura.split('~')[10] === 'a' && !st.decodeShare(nb, head(allButAura)).state.sources.includes('aura'), allButAura.split('~').slice(7).join('~'));
+    // A friend's "every source" link, made where AURA isn't a preview (live data without it), opened on this device,
+    // which holds AURA as a preview: it doesn't switch AURA on for you.
+    const friendA = st.encodeShare(liveB, { ...st.emptyBallotState('78704'), sources: liveB.endorsers.map((e) => e.id) });
+    const opened = st.decodeShare(nb, head(friendA)).state.sources;
+    check('adds: a friend\'s "a" link doesn\'t switch on a preview this device holds', friendA.split('~')[10] === 'a' && Array.isArray(opened) && !opened.includes('aura') && sorted(opened) === sorted(liveB.endorsers.map((e) => e.id)), JSON.stringify(opened && opened.length));
     st.S.ballot = nb;
     mods.lens.setSources(nb, st.S.b.sources.filter((id) => id !== 'aura'));
     check('adds: once the ballot has it, its own switch turns it off', !(st.S.b.sources || []).includes('aura'), JSON.stringify(st.S.b.sources));

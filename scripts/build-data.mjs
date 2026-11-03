@@ -1132,7 +1132,9 @@ for (const [st, s] of states) {
   const b = bundleFor(ordered);
   // Where phones are "restricted", My plan prints the state's one-line rule (phones_short), if it is one plain line.
   if (s.in_the_booth && s.in_the_booth.phones_short != null) s.in_the_booth.phones_short = helpShort(s.in_the_booth.phones_short, `${st} in_the_booth.phones_short`);
-  const bundle = { state: st, name: CONFIG.stateNames[st] || st, howto: s, order: ordered, ...b, results: { sources: resultsOfState(st), next: nextOfState(st) } };
+  // The state's own results row and statewide dates ride on its howto, where plan.localHowto adds the ballot's counties'.
+  s.results = { sources: resultsOfState(st), next: nextOfState(st) };
+  const bundle = { state: st, name: CONFIG.stateNames[st] || st, howto: s, order: ordered, ...b };
   sizes[`state-${st}.json`] = write(`state-${st}.json`, bundle);
   stateBundles.set(st, bundle);
   // How many sources a statewide-only ballot has, how many made picks, and when it was last checked

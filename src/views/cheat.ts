@@ -77,7 +77,7 @@ export function essentials(t = todayISO()): string[] {
 export function saveLine(t = todayISO()): string | null {
   const b = S.ballot!;
   const phase = nextStep(b.howto, t).phase;
-  if (phase === 'closed' || phase === 'polls_closed') return null;
+  if (phase === 'results_counting' || phase === 'results_official') return null;
   const phones = b.howto.in_the_booth.phones;
   if (phones === 'prohibited') return 'Print it or write it down.';
   return phones === 'allowed' ? 'Print it, copy it, or take a screenshot.' : 'Print it or copy it.';

@@ -184,6 +184,10 @@ export interface HowTo {
      voter's county's (a place's `lookups.results`) in its place when it knows one. Shown once the polls close. */
   results_url?: string | null;
   results_source?: string | null;
+  /* Where results come from and the dates after Election Day (Nov 3, results Phase 0; data/results-sources.json and
+     data/whats-next.json through build-data): the state file carries its state row and its statewide dates;
+     plan.localHowto adds the ballot's county rows (the voter's county's when known) and their dates. */
+  results?: ResultsData;
   voting_model: 'all_mail' | 'mail_to_all_plus_in_person' | 'in_person_first' | string;
   model_plain: string | null;
   registration: {
@@ -356,7 +360,23 @@ export interface PlaceBundle {
   endorsements: Record<string, Record<string, Endorsement>>;
   /* the district maps this place's ballot reads after an address lookup (data/maps/, model/maps.ts) */
   maps?: MapMeta[];
+  /* the county rows of data/results-sources.json for this place's counties, and its after-election dates (Nov 3) */
+  results?: ResultsData;
 }
+
+/* One row of data/results-sources.json as build-data passes it (Nov 3): where a state or county posts official
+   results, the sentence a voter reads about when (`wait_line`), and the last day it must be made official
+   (`official_by`, shown only when `official_by_sure`). */
+export interface ResultsSource {
+  id: string; state: string; kind: 'state' | 'county'; name: string; results_url: string; wait_line: string;
+  certification_date: string; certification_source: string | null; official_by: string | null; official_by_sure: boolean;
+  confidence: Confidence; counties?: string[];
+}
+/* A dated step after Election Day (data/whats-next.json's after_election rows that build-data keeps): `date` is the
+   day (the last day of a "between" window, which starts `from`), `line` what the guide shows, `counties` the counties
+   a county row names (absent when it speaks for all of them). */
+export interface NextDate { state: string; level: 'state' | 'county' | 'city'; jurisdiction: string; date: string; from?: string; line: string; source: string; confidence: string; counties?: string[] }
+export interface ResultsData { sources: ResultsSource[]; next: NextDate[] }
 
 /* One rule of a district map: the races it settles (office, and scope when the rule names one, both
    regexes) and the district a feature's answer names ("Precinct {commissioner}"). */

@@ -1626,7 +1626,8 @@ function roundTrip(name, stCode, places, mutate) {
     check('results: 7:05 PM Mountain: still some states voting, still the "still open" line', lead('austin').sub.join(' ').includes('Polls are still open in some states.'), JSON.stringify(lead('austin').sub));
     const n = plan.resultsLead(INDEX.states, '2026-11-04', new RealDate(I.next));
     check('results: Nov 4: "still coming in", counting takes days', n.after && n.head === 'Results are still coming in.' && n.sub.join(' ') === 'Official results for each state are below. Counting can take days, especially for mail ballots.');
-    check('results: the race-call desks are AP and Decision Desk HQ, https', plan.RACE_CALLS.map((d) => d.name).join('|') === 'AP|Decision Desk HQ' && plan.RACE_CALLS.every((d) => /^https:\/\//.test(d.url)));
+    check('results: race calls are AP only (Kevin, Nov 3), https', plan.RACE_CALLS.map((d) => d.name).join('|') === 'AP' && plan.RACE_CALLS.every((d) => /^https:\/\//.test(d.url)));
+    check('results: AP’s state page for every covered state, from the registry’s template (DC is district-of-columbia)', plan.apStateURL('Texas') === 'https://apnews.com/projects/elections-2026/texas-results/' && plan.apStateURL('District of Columbia') === 'https://apnews.com/projects/elections-2026/district-of-columbia-results/' && plan.apStateURL('New York') === 'https://apnews.com/projects/elections-2026/new-york-results/');
 
     // The first page at each instant, as the device sees it (Central; ?today pins the device's date).
     st.S.index = INDEX; st.S.view = 'door'; st.S.ballot = null; st.S.zip = ''; st.S.tryMode = null;
@@ -1646,7 +1647,7 @@ function roundTrip(name, stCode, places, mutate) {
     try {
       check('door: the fill runs at 7:05 PM Eastern (switch shown) and not at 8:05 PM Pacific (switch hidden)', fillsAt('east') === true && fillsAt('all') === false);
     } finally { st.S.door.fill = keepFill; }
-    check('door: the race-call line shows once, under the list, with both desks', (d1.match(/class="res-calls"/g) || []).length === 1 && d1.includes(`<a href="${plan.RACE_CALLS[0].url}" target="_blank" rel="noopener">AP</a> · <a href="${plan.RACE_CALLS[1].url}" target="_blank" rel="noopener">Decision Desk HQ</a>`) && d1.indexOf('res-calls') > d1.indexOf('res-list'));
+    check('door: the race-call line shows once, under the list, AP only', (d1.match(/class="res-calls"/g) || []).length === 1 && d1.includes(`Race calls: <a href="${plan.RACE_CALLS[0].url}" target="_blank" rel="noopener">AP</a></p>`) && !/Decision Desk/.test(d1) && d1.indexOf('res-calls') > d1.indexOf('res-list'));
     const d3 = door('all');
     check('door: 8:05 PM Pacific: results, a mail-ballot tracker per state, and the ZIP as one quiet line under the list', /data-door="after"/.test(d3) && (d3.match(/class="res-track"/g) || []).length === Object.keys(INDEX.states).length && /See your ballot and county results/.test(d3) && d3.indexOf('res-zip-l') > d3.indexOf('res-calls') && /id="zip"/.test(d3));
     check('door: once every state has closed, nothing talks about making a plan or picking', !/voting plan|Make your plan|Pick by endorsements|class="bigbtn"|Your ballot and local results/i.test(d3), (d3.match(/voting plan|Make your plan|Pick by endorsements|bigbtn/i) || [''])[0]);
@@ -1658,7 +1659,7 @@ function roundTrip(name, stCode, places, mutate) {
     st.S.ui.open = new Set();
     let b = open('TX', ['austin-tx']);
     bl.localize(b, '78702', null);
-    check('strip: Austin 78702 is still Election Day at 7:05 PM Eastern, and results at 7:05 PM Central', plan.nextStep(b.howto, '2026-11-03', false, new RealDate(I.east)).phase === 'election_day' && plan.nextStep(b.howto, '2026-11-03', false, new RealDate(I.austin)).phase === 'polls_closed');
+    check('strip: Austin 78702 is still Election Day at 7:05 PM Eastern, and results at 7:05 PM Central', plan.nextStep(b.howto, '2026-11-03', false, new RealDate(I.east)).phase === 'election_day' && plan.nextStep(b.howto, '2026-11-03', false, new RealDate(I.austin)).phase === 'results_counting');
     at('?today=2026-11-03&now=19:05');
     const travisRes = read('place-austin-tx.json').by_county.find((c) => c.county === 'Travis').lookups.results;
     let h = ps.planHTML();
@@ -1669,14 +1670,18 @@ function roundTrip(name, stCode, places, mutate) {
     h = ps.planHTML();
     const ctys = [...h.matchAll(/<a class="pbtn line" href="([^"]+)"[^>]*data-county="([^"]+)">([^<]+)<\/a>/g)].map((x) => x[3]);
     check('strip: across county lines, county unknown (78729): the state’s results, then each county’s by name', h.includes(`href="${INDEX.states.TX.results_url}" target="_blank" rel="noopener" data-fk="plan-results">Official results</a>`) && /Your county’s results:/.test(h) && ctys.join('|') === 'Travis County|Williamson County|Hays County', ctys.join('|'));
-    // A county with no results page of its own (Atlanta's Fulton, Aurora's Douglas): no county buttons at all, only
-    // the state's, which covers every county. A lone "DeKalb County" pointed most of Atlanta at the wrong county.
-    for (const [stc, id, zip, cty] of [['GA', 'atlanta-ga', '30306', 'Fulton'], ['CO', 'aurora-co', '80012', 'Douglas']]) {
-      open(stc, [id]);
-      bl.localize(st.S.ballot, zip, null);
-      const hx = ps.planHTML();
-      check(`strip: ${id} ${zip}, county unknown, ${cty} has no results page: the state’s results only, no county buttons`, st.S.ballot.county == null && read(`place-${id}.json`).by_county.some((c) => c.county === cty && !c.lookups.results) && hx.includes(`href="${INDEX.states[stc].results_url}" target="_blank" rel="noopener" data-fk="plan-results">Official results</a>`) && !/Your county’s results/.test(hx) && !/data-county=/.test(hx), (hx.match(/data-county="[^"]+"/g) || []).join(' '));
-    }
+    // Every county on a ballot across county lines gets a button (the where-to-vote pattern). One with no results page of
+    // its own tonight (Atlanta's Fulton) opens the state's, labeled as the state's: a lone "DeKalb County" pointed most
+    // of Atlanta at the wrong county (review, Nov 3). Aurora's Douglas has its own Clarity page for Nov 3.
+    const ctyBtns = (hx) => [...hx.matchAll(/<a class="pbtn line" href="([^"]+)"[^>]*data-county="([^"]+)">([^<]+)<\/a>/g)].map((x) => [x[1], x[3]]);
+    open('GA', ['atlanta-ga']);
+    bl.localize(st.S.ballot, '30306', null);
+    let cb = ctyBtns(ps.planHTML());
+    check('strip: Atlanta 30306, county unknown: Fulton opens Georgia’s page, labeled as the state’s, and DeKalb its own', st.S.ballot.county == null && JSON.stringify(cb) === JSON.stringify([[INDEX.states.GA.results_url, 'Fulton County, on Georgia’s page'], [read('place-atlanta-ga.json').by_county.find((c) => c.county === 'DeKalb').lookups.results, 'DeKalb County']]), JSON.stringify(cb));
+    open('CO', ['aurora-co']);
+    bl.localize(st.S.ballot, '80012', null);
+    cb = ctyBtns(ps.planHTML());
+    check('strip: Aurora 80012, county unknown: Arapahoe, Adams and Douglas each open their own county’s page', cb.map((x) => x[1]).join('|') === 'Arapahoe County|Adams County|Douglas County' && cb.every(([u]) => u !== INDEX.states.CO.results_url) && cb[2][0] === 'https://results.enr.clarityelections.com/CO/Douglas/127427/', JSON.stringify(cb));
     // No "register and vote today" under the results, in any state that offers it.
     const regAt = (q) => { at(q); return Object.keys(INDEX.states).filter((stc) => { open(stc, []); bl.localize(st.S.ballot, null, null); return /class="plan-reg"|Not registered\?/.test(ps.planHTML()); }); };
     const regNoon = regAt('?today=2026-11-03&now=12:00'), regAfter = regAt('?today=2026-11-03&now=23:30');

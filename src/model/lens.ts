@@ -37,15 +37,27 @@ export const CHIPS: { key: ChipKey; label: string; empty: string }[] = [
   { key: 'unions', label: 'Unions', empty: 'No unions we checked made endorsements on this ballot.' },
 ];
 
-/* Unions (Kevin, Nov 2: LA friends asked for the unions' picks) is the one chip by kind, not lean: every
+/* The one chip a source belongs to, or none (a party, a group with no lean). One each, so a tap on a chip
+   moves only its own sources and never lights or dims another (Nov 3: two reviews of #102 found chips that
+   shared the labor councils misbehaving, so the sharing was cut, not patched again).
+   Unions (Kevin, Nov 2: LA friends asked for the unions' picks) is the one chip by kind, not lean: every
    source whose type is labor, so police, deputies' and firefighters' unions sit beside the teachers, nurses
-   and labor councils, whatever their lean or none. A labor council rated by its mission is in Progressive
-   too, so turning either chip off turns it off. */
-export function chipMembers(b: Ballot, key: ChipKey): Endorser[] {
-  if (key === 'papers') return b.endorsers.filter(isPaper);
-  if (key === 'unions') return b.endorsers.filter((e) => e.type === 'labor');
-  if (key === 'progressive') return b.endorsers.filter((e) => isGroup(e) && !!e.lean && LEFT.includes(e.lean));
-  return b.endorsers.filter((e) => isGroup(e) && !!e.lean && RIGHT.includes(e.lean));
+   and labor councils, whatever their lean or none (the build brief's call, which Kevin knows of and can change:
+   ledger 2026-11-02-voting-guide-unions). That includes a labor council rated left or right by its
+   mission, so it is in Unions and not in Progressive or Conservative; the sources sheet still lists it
+   under its lean. */
+const sideOf = (e: Endorser): ChipKey | null => (!e.lean ? null : LEFT.includes(e.lean) ? 'progressive' : RIGHT.includes(e.lean) ? 'conservative' : null);
+export function chipOf(e: Endorser): ChipKey | null {
+  if (isPaper(e)) return 'papers';
+  if (e.type === 'labor') return 'unions';
+  return isGroup(e) ? sideOf(e) : null;
+}
+export const chipMembers = (b: Ballot, key: ChipKey): Endorser[] => b.endorsers.filter((e) => chipOf(e) === key);
+/* What a chip with nothing on this ballot says (the sources sheet). Where a union on that side has picks (Florida's
+   AFL-CIO, rated left by its mission, is under Unions, and the sheet lists it under its lean), it says so. */
+export function emptyNote(b: Ballot, key: ChipKey): string {
+  const { empty } = CHIPS.find((c) => c.key === key)!;
+  return withPicks(b, chipMembers(b, 'unions')).some((e) => sideOf(e) === key) ? `Apart from unions, ${empty[0].toLowerCase()}${empty.slice(1)}` : empty;
 }
 
 /* How many items on this ballot a source made a pick on. */
@@ -140,42 +152,15 @@ export function partiesOnBallot(b: Ballot): PartyChoice[] {
 
 /* ---------- chips over the chosen list ---------- */
 export type ChipState = 'on' | 'some' | 'off' | 'empty';
-/* The sources a chip is judged by: its members with picks on this ballot, or all of them when none has. */
-function chipPool(b: Ballot, key: ChipKey): { pool: Endorser[]; live: boolean } {
+export function chipState(b: Ballot, key: ChipKey): ChipState {
   const members = chipMembers(b, key);
   const live = withPicks(b, members);
-  return { pool: live.length ? live : members, live: live.length > 0 };
-}
-/* How much of a chip's own pool is on, counted alone. The chips draw from chipLooks, which reads the
-   overlap; toggleChip reads this, so a tap on a chip that isn't wholly on turns it all on. */
-export function chipState(b: Ballot, key: ChipKey): ChipState {
-  const { pool, live } = chipPool(b, key);
   const ids = new Set(chosenIds());
+  const pool = live.length ? live : members;
   if (!pool.length) return 'empty';
   const on = pool.filter((e) => ids.has(e.id)).length;
   const st: ChipState = on === pool.length ? 'on' : on ? 'some' : 'off';
-  return !live && st === 'off' ? 'empty' : st;
-}
-/* What each chip shows, and which chips your list amounts to: the one rule for the chips' look, the summary
-   ("some progressive groups"), the choices carried to the next ZIP and a chip turned off. A source two chips
-   hold (a labor council rated left by its mission is in Progressive and in Unions) counts for one of them
-   only: for a chip that's wholly on, else the first in CHIPS that holds it. A chip partly on only through
-   sources another chip accounts for shows off, so Unions tapped alone doesn't light Progressive, Progressive
-   with one of its groups switched off reads "some progressive groups" and never "some unions", and a labor
-   council switched on by hand reads "some progressive groups", as it did before Unions. */
-export function chipLooks(b: Ballot): Record<ChipKey, ChipState> {
-  const st = Object.fromEntries(CHIPS.map((c) => [c.key, chipState(b, c.key)])) as Record<ChipKey, ChipState>;
-  const ids = new Set(chosenIds());
-  const holders = new Map<string, ChipKey[]>();
-  for (const c of CHIPS) for (const e of chipPool(b, c.key).pool) if (ids.has(e.id)) holders.set(e.id, [...(holders.get(e.id) || []), c.key]);
-  const chosen = new Set(CHIPS.filter((c) => st[c.key] === 'on').map((c) => c.key));
-  for (const ks of holders.values()) if (ks.length === 1) chosen.add(ks[0]);
-  for (const ks of holders.values()) if (!ks.some((k) => chosen.has(k))) chosen.add(ks[0]);
-  return Object.fromEntries(CHIPS.map((c) => [c.key, st[c.key] === 'some' && !chosen.has(c.key) ? 'off' : st[c.key]])) as Record<ChipKey, ChipState>;
-}
-export function chipsChosen(b: Ballot): Record<ChipKey, boolean> {
-  const looks = chipLooks(b);
-  return Object.fromEntries(CHIPS.map((c) => [c.key, looks[c.key] === 'on' || looks[c.key] === 'some'])) as Record<ChipKey, boolean>;
+  return !live.length && st === 'off' ? 'empty' : st;
 }
 const defaultIds = (b: Ballot): string[] => b.endorsers.filter((e) => e.default_on).map((e) => e.id);
 /* Write a list back, as null when it is exactly the defaults, so a link stays short and new
@@ -201,17 +186,13 @@ export function backOn(b: Ballot): string[] | null {
    before a ZIP, the same reading of the choices kept so far. */
 export const noEndorsements = (): boolean => !S.b.party && chosenIds().length === 0;
 export const doorNone = (): boolean => !S.door.party && !Object.values(S.door.chips).some(Boolean);
-/* On adds every member; off takes them out, except a source another chosen chip holds too (Unions off with
-   Progressive on keeps the labor councils), so turning one chip off never leaves the other partly on. */
 export function toggleChip(b: Ballot, key: ChipKey): boolean {
+  const st = chipState(b, key);
   const members = chipMembers(b, key).map((e) => e.id);
   const cur = chosenIds();
-  const turnOn = chipState(b, key) !== 'on';
-  if (turnOn) { setSources(b, [...cur, ...members]); return true; }
-  const chosen = chipsChosen(b);
-  const keep = new Set(CHIPS.filter((c) => c.key !== key && chosen[c.key]).flatMap((c) => chipMembers(b, c.key).map((e) => e.id)));
-  setSources(b, cur.filter((id) => !members.includes(id) || keep.has(id)));
-  return false;
+  const turnOn = st !== 'on';
+  setSources(b, turnOn ? [...cur, ...members] : cur.filter((id) => !members.includes(id)));
+  return turnOn;
 }
 /* The party lens: turning a party on adds its sources (and remembers the party, whose candidates
    "Fill in my ballot with their picks" fills first); off removes them. */

@@ -10,7 +10,7 @@ import { growOpen, inkRow, followFold, glideTo, land, stopGlide, shrinkAway, col
 import { openBallot, openChosen, go, openReader, runAddress, reopenAddr, useMatch, toDoor, showBallot, rechoose, openSaved, fillWhy, leaveBallot, viewed, switchOnNow, watchAdds } from './app';
 import { judgeBatch } from './model/judges';
 import { planAgree, planParty, planJudges, planSetup, applyFills, undoFills, emptyPlan, touchUndo, type Plan } from './model/bulk';
-import { toggleChip, setParty, setSources, noEndorsements, doorNone, chipsChosen, unreadHere, backOn, CHIPS, type ChipKey } from './model/lens';
+import { toggleChip, setParty, setSources, noEndorsements, doorNone, chipState, unreadHere, backOn, CHIPS, type ChipKey } from './model/lens';
 import { courtGroup } from './model/labels';
 import { claimAnswer, claimOn, claimOff } from './model/address';
 import { basisWords, LEANS, FORM, reportWhere } from './views/common';
@@ -561,8 +561,7 @@ A['party-set'] = (d) => {
    choices kept for the next ZIP follow the chips that list now makes. */
 function doorFollows(): void {
   if (!doorBallot()) return;
-  const chosen = chipsChosen(B());
-  for (const c of CHIPS) S.door.chips[c.key] = chosen[c.key];
+  for (const c of CHIPS) S.door.chips[c.key] = ['on', 'some'].includes(chipState(B(), c.key));
   S.door.party = S.b.party;
 }
 A.src = (d) => {

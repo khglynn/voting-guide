@@ -351,25 +351,59 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('lens: one tap on Unions turns every union on beside the papers', unions.every((e) => S.b.sources.includes(e.id)) && lens.chipState(la, 'papers') === 'on' && views.lens.lensSummary() === 'Newspapers and guides, unions', views.lens.lensSummary());
     lens.toggleChip(la, 'unions');
     check('lens: and off again, back to the defaults', S.b.sources === null);
+    // One chip per source (Nov 3, after two reviews of #102 found shared labor councils misbehaving): a labor
+    // council rated left by its mission is in Unions only, and the sources sheet still lists it under its lean.
+    check('lens: the LA Fed, CTA and the California Labor Federation are in Unions, not Progressive', ['la-fed', 'cta', 'ca-labor-fed'].every((id) => unions.some((e) => e.id === id) && !lens.chipMembers(la, 'progressive').some((e) => e.id === id)) && ['left', 'lean_left'].includes(la.eById.get('la-fed').lean));
     lens.toggleChip(la, 'progressive');
-    const chosen = lens.chipsChosen(la);
-    check('lens: Progressive alone, with the LA Fed in it, reads as progressive groups, not some unions', lens.chipState(la, 'unions') === 'some' && chosen.progressive && !chosen.unions && views.lens.lensSummary() === 'Newspapers and guides, progressive groups', views.lens.lensSummary());
-    S.b.sources = [...S.b.sources, 'lappl'];
-    check('lens: a union of its own on as well, and it says some unions', lens.chipsChosen(la).unions && views.lens.lensSummary() === 'Newspapers and guides, progressive groups, some unions', views.lens.lensSummary());
-    // The overlap is one rule (review of #102): a labor council in both chips counts for one of them only.
-    S.b.sources = null;
-    lens.toggleChip(la, 'unions');
-    const chipsNow = views.lens.chipsHTML();
-    check('lens: Unions tapped alone leaves Progressive looking off', lens.chipState(la, 'progressive') === 'some' && /data-k="progressive" aria-pressed="false"/.test(chipsNow) && !/class="chip some" data-act="chip" data-k="progressive"/.test(chipsNow) && /data-k="unions" aria-pressed="true"/.test(chipsNow), chipsNow);
-    lens.toggleChip(la, 'progressive');
-    lens.toggleChip(la, 'unions');
-    check('lens: Unions off with Progressive on keeps the labor councils, so Progressive stays wholly on', lens.chipState(la, 'progressive') === 'on' && S.b.sources.includes('la-fed') && !S.b.sources.includes('lappl') && views.lens.lensSummary() === 'Newspapers and guides, progressive groups', views.lens.lensSummary());
-    const progOwn = lens.chipMembers(la, 'progressive').find((e) => e.type !== 'labor' && lens.picksOnBallot(la, e.id) > 0);
-    S.b.sources = S.b.sources.filter((id) => id !== progOwn.id);
-    const partly = lens.chipsChosen(la);
-    check('lens: Progressive with one of its groups off reads some progressive groups, never some unions, and carries no union to the next ZIP', partly.progressive && !partly.unions && views.lens.lensSummary() === 'Newspapers and guides, some progressive groups', views.lens.lensSummary());
-    S.b.sources = [...lens.chipMembers(la, 'papers').map((e) => e.id), 'la-fed'];
-    check('lens: a labor council on by hand reads some progressive groups, as before Unions', !lens.chipsChosen(la).unions && views.lens.lensSummary() === 'Newspapers and guides, some progressive groups', views.lens.lensSummary());
+    check('lens: Progressive alone turns on no union, and Unions stays off', !unions.some((e) => S.b.sources.includes(e.id)) && lens.chipState(la, 'unions') === 'off' && views.lens.lensSummary() === 'Newspapers and guides, progressive groups', views.lens.lensSummary());
+    S.b.sources = [...S.b.sources, 'la-fed'];
+    check('lens: a labor council on by hand reads some unions', views.lens.lensSummary() === 'Newspapers and guides, progressive groups, some unions', views.lens.lensSummary());
+    // The review's case: San Diego, where every union with picks is a labor council rated left by its mission.
+    const sd = open('CA', ['san-diego-ca']);
+    const sdUnions = lens.withPicks(sd, lens.chipMembers(sd, 'unions'));
+    check('lens: San Diego has unions with picks, every one rated left by its mission', sdUnions.length > 0 && sdUnions.every((e) => ['left', 'lean_left'].includes(e.lean)) && lens.chipState(sd, 'progressive') !== 'empty', sdUnions.map((e) => e.id).join());
+    lens.toggleChip(sd, 'progressive');
+    check('lens: San Diego, Progressive on leaves Unions off', lens.chipState(sd, 'progressive') === 'on' && lens.chipState(sd, 'unions') === 'off' && /data-k="unions" aria-pressed="false"/.test(views.lens.chipsHTML()));
+    lens.toggleChip(sd, 'progressive');
+    check('lens: San Diego, Progressive on then off ends on the defaults', S.b.sources === null);
+    lens.toggleChip(sd, 'progressive');
+    lens.toggleChip(sd, 'unions');
+    lens.toggleChip(sd, 'unions');
+    check('lens: San Diego, Unions turns off while Progressive is on, and Progressive stays wholly on', lens.chipState(sd, 'unions') === 'off' && lens.chipState(sd, 'progressive') === 'on' && !sdUnions.some((e) => S.b.sources.includes(e.id)) && views.lens.lensSummary() === 'Newspapers and guides, progressive groups', views.lens.lensSummary());
+    // Tallahassee: its only left-rated groups with picks are unions, so Progressive steps aside and the sheet says why.
+    const tl = open('FL', ['tallahassee-fl']);
+    const tlSheet = views.lens.sourcesSheetHTML();
+    check('lens: Tallahassee, whose left-rated groups with picks are all unions, has them under Unions, and the sheet says "Apart from unions, no progressive groups ..."', lens.chipState(tl, 'progressive') === 'empty' && lens.chipState(tl, 'unions') !== 'empty' && tlSheet.includes('Apart from unions, no progressive groups we checked made endorsements on this ballot.') && !tlSheet.includes('Apart from unions, no conservative') && !/data-k="progressive"/.test(views.lens.chipsHTML()));
+    // Every ballot the guide can open, each ZIP's places and each state's: no source is in two chips, and each
+    // tap on a chip turns that chip wholly on or off and leaves every other chip as it was. All on in order, all
+    // off in the other order, then the chips that started on, on again: each chip ends as it started.
+    const sets = [...new Set(Object.values(INDEX.zips).map((ids) => ids.join('+')))].filter(Boolean).map((k) => k.split('+'));
+    const ballots = [...sets.map((ids) => [INDEX.places[ids[0]].state, ids]), ...Object.keys(INDEX.states).map((s) => [s, []])];
+    const tapsWrong = [];
+    for (const [s, ids] of ballots) {
+      const bb = open(s, ids);
+      const where = ids.join('+') || s;
+      const twice = bb.endorsers.filter((e) => lens.CHIPS.filter((c) => lens.chipMembers(bb, c.key).includes(e)).length > 1);
+      if (twice.length) tapsWrong.push(`${where}: ${twice.map((e) => e.id).join()} in two chips`);
+      const live = lens.CHIPS.map((c) => c.key).filter((k) => lens.chipState(bb, k) !== 'empty');
+      const looks = () => Object.fromEntries(lens.CHIPS.map((c) => [c.key, lens.chipState(bb, c.key)]));
+      const tap = (k) => {
+        const before = looks();
+        const on = lens.toggleChip(bb, k);
+        const after = looks();
+        const own = on ? after[k] === 'on' : ['off', 'empty'].includes(after[k]);
+        const moved = lens.CHIPS.map((c) => c.key).filter((o) => o !== k && before[o] !== after[o]);
+        if (!own || moved.length) tapsWrong.push(`${where}: ${k} ${on ? 'on' : 'off'} left it ${after[k]}${moved.length ? `, moved ${moved.join()}` : ''}`);
+      };
+      const start = looks();
+      for (const k of live) if (lens.chipState(bb, k) !== 'on') tap(k);
+      for (const k of [...live].reverse()) tap(k);
+      for (const k of live) if (start[k] === 'on') tap(k);
+      const end = looks();
+      const changed = live.filter((k) => start[k] !== 'some' && (start[k] === 'on') !== (end[k] === 'on'));
+      if (changed.length) tapsWrong.push(`${where}: ${changed.map((k) => `${k} started ${start[k]}, ended ${end[k]}`).join()}`);
+    }
+    check(`lens: on every ballot the guide can open (${ballots.length}), no source is in two chips and a tap moves only its own chip`, ballots.length > 60 && tapsWrong.length === 0, tapsWrong.slice(0, 8).join(' | '));
     const parties = lens.partiesOnBallot(b).map((p) => p.party);
     check('lens: Colorado parties include Democratic, Republican, Working Families', ['Democratic', 'Republican', 'Working Families'].every((p) => parties.includes(p)), parties.join(', '));
     const jd = b.eById.get('jeffco-democrats');

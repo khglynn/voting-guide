@@ -5,7 +5,7 @@ import type { Contest, Endorser } from '../types';
 import { S } from '../state';
 import { chosenIds, decisionItems } from '../ballot';
 import { esc, plural } from '../util';
-import { CHIPS, chipState, chipLooks, partiesOnBallot, picksOnBallot, picksShown, explainsOnly, noEndorsements, unreadHere } from '../model/lens';
+import { CHIPS, chipState, emptyNote, partiesOnBallot, picksOnBallot, picksShown, explainsOnly, noEndorsements, unreadHere } from '../model/lens';
 import { queryOf, textOf, all as allIn } from '../model/search';
 import { coverage } from '../model/tally';
 import { leanHTML, sourceLean, ext, isOpen, paywallSourceHTML, hasPaywallNote, blockedSourceHTML, unreadWhy, unreadLinkHTML, shelfAttrs } from './common';
@@ -23,9 +23,8 @@ const TYPE_WORD: Record<string, string> = {
    step 2 is still there behind it, inert, and focus must come back to the sheet's own). */
 export function chipsHTML(fk = 'chip'): string {
   const b = S.ballot!;
-  const looks = chipLooks(b);
   return CHIPS.map((c) => {
-    const st = looks[c.key];
+    const st = chipState(b, c.key);
     if (st === 'empty' && c.key !== 'papers') return '';
     const on = st === 'on' || st === 'some';
     return `<button class="chip${st === 'some' ? ' some' : ''}" data-act="chip" data-k="${c.key}" aria-pressed="${on}" data-fk="${fk}-${c.key}">${TICK}${esc(c.label)}</button>`;
@@ -35,8 +34,7 @@ export function chipsHTML(fk = 'chip'): string {
 export function lensSummary(): string {
   const b = S.ballot!;
   if (noEndorsements()) return 'Off';
-  const looks = chipLooks(b);
-  const on = CHIPS.filter((c) => looks[c.key] === 'on' || looks[c.key] === 'some').map((c) => `${looks[c.key] === 'some' ? 'some ' : ''}${c.label.toLowerCase()}`);
+  const on = CHIPS.filter((c) => ['on', 'some'].includes(chipState(b, c.key))).map((c) => `${chipState(b, c.key) === 'some' ? 'some ' : ''}${c.label.toLowerCase()}`);
   if (S.b.party) on.push(`the ${S.b.party} Party`);
   const n = chosenIds().length;
   const list = on.length ? on.join(', ') : n ? plural(n, 'source') : 'none';
@@ -126,7 +124,7 @@ export function matchWords(): string {
    and the sheet keeps its height as matches come and go (styles.css .srcs). */
 export function sourcesSheetHTML(): string {
   const b = S.ballot!;
-  const empties = CHIPS.filter((c) => c.key !== 'papers' && chipState(b, c.key) === 'empty').map((c) => c.empty);
+  const empties = CHIPS.filter((c) => c.key !== 'papers' && chipState(b, c.key) === 'empty').map((c) => emptyNote(b, c.key));
   const q = S.ui.srcQ;
   return `<div class="scrim screen-only" data-act="sheet-close"></div>
   <div class="sheet-panel screen-only srcs" role="dialog" aria-modal="true" aria-labelledby="sh-h">

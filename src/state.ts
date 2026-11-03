@@ -1,10 +1,11 @@
 /* App state, saved state and the save-my-picks link. */
-import type { Index } from './types';
+import type { Endorser, Index } from './types';
 import type { Ballot } from './ballot';
 import type { ChipKey } from './model/lens';
 import type { GeoResult } from './geo';
 import { load, save, hash, b64urlEncode, b64urlDecode } from './util';
 import { heldIds } from './model/adds';
+import { chipOf } from './model/lens';
 
 export interface Prefs {
   parties: string[] | null;   // null = every party shown
@@ -247,10 +248,48 @@ export function leftBallot(count?: number): { key: string; zip: string; n: numbe
    Each pick is hash5(key) + Y|N|S|D|P, or hash5(key) + hash3(candidate name).
    Each ranking is hash5(contest id) + hash3(1st choice) + hash3(2nd choice) + ...; hashes are
    lower-case base36, so the fixed widths parse without separators.
+   Since Nov 3 (Election Day: "our save my plan url is sooooo long"): an 11th field, ~lens, the
+       sources as a short recipe instead of one hash each, written only when that makes the link
+       shorter (lensRecipe below). The sources field is then empty, the ranks and notMine slots fill
+       9 and 10, and the head stays v1 or v2. An older client ignores the 11th field and reads the
+       empty sources field as the default lens: every pick, district, note and ranking still opens.
    Hashes keep the link short and survive data refreshes: a pick whose candidate can't be
    found is dropped and reported, never guessed. */
 const CODE: Record<string, string> = { YES: 'Y', NO: 'N', SKIP: 'S', DONE: 'D', PICK: 'P' };
 const UNCODE: Record<string, string> = { Y: 'YES', N: 'NO', S: 'SKIP', D: 'DONE', P: 'PICK' };
+
+/* The lens recipe: letters naming sets of this ballot's sources, joined, then +hash for a source
+   added on top and -hash for one taken out. a = every source on the ballot, d = the defaults,
+   p l r u = the four chips (Newspapers and guides, Progressive, Conservative, Unions). The sets are
+   read from the data when the link opens, the way a default lens (an empty sources field) always
+   has been: a source added to a chip since the link was made comes with it. Picks never depend on
+   it; it only says whose endorsements show. */
+const LENS: [string, (e: Endorser) => boolean][] = [
+  ['a', () => true],
+  ['d', (e) => !!e.default_on],
+  ['p', (e) => chipOf(e) === 'papers'],
+  ['l', (e) => chipOf(e) === 'progressive'],
+  ['r', (e) => chipOf(e) === 'conservative'],
+  ['u', (e) => chipOf(e) === 'unions'],
+];
+const RECIPE = /^([adplru]*)((?:[+-][0-9a-z]{5})*)$/;
+/* The shortest recipe for this list on this ballot, or null when two of its sources share a hash
+   (none do today; then the plain list is written, as before). */
+function lensRecipe(ballot: Ballot, ids: string[]): string | null {
+  if (new Set(ballot.endorsers.map((e) => hash(e.id))).size !== ballot.endorsers.length) return null;
+  const want = new Set(ids);
+  let best: string | null = null;
+  for (let mask = 1; mask < 1 << LENS.length; mask++) {
+    if (mask & 1 && mask !== 1) continue; // "a" already holds every other set
+    const sets = LENS.filter((_, i) => mask & (1 << i));
+    const base = ballot.endorsers.filter((e) => sets.some(([, f]) => f(e))).map((e) => e.id);
+    const s = sets.map(([k]) => k).join('')
+      + [...want].filter((id) => !base.includes(id)).map((id) => `+${hash(id)}`).join('')
+      + base.filter((id) => !want.has(id)).map((id) => `-${hash(id)}`).join('');
+    if (best === null || s.length < best.length) best = s;
+  }
+  return best;
+}
 
 export function encodeShare(ballot: Ballot, b: BallotState): string {
   const picks = Object.entries(b.picks).map(([k, v]) => hash(k) + (CODE[v] || hash(v, 3))).join('.');
@@ -264,7 +303,11 @@ export function encodeShare(ballot: Ballot, b: BallotState): string {
   const fields = [ranks ? 'v2' : 'v1', ballot.st, places, b.zip || '-', picks, dist, notes, src];
   if (ranks || notMine) fields.push(ranks);
   if (notMine) fields.push(notMine);
-  return fields.join('~');
+  const plain = fields.join('~');
+  const recipe = b.sources && b.sources.length ? lensRecipe(ballot, b.sources) : null;
+  if (recipe === null) return plain;
+  const short = [...fields.slice(0, 7), '', ranks, notMine, recipe].join('~');
+  return short.length < plain.length ? short : plain;
 }
 
 export interface ShareHead { v: number; st: string; places: string[]; zip: string; raw: string[] }
@@ -280,7 +323,7 @@ export function parseShareHead(hashStr: string): ShareHead | null {
 export function decodeShare(ballot: Ballot, head: ShareHead): { state: BallotState; dropped: number } {
   const st = emptyBallotState(head.zip);
   let dropped = 0;
-  const [, , , , picks = '', dist = '', notes = '', src = '', ranks = '', notMine = ''] = head.raw;
+  const [, , , , picks = '', dist = '', notes = '', src = '', ranks = '', notMine = '', lens = ''] = head.raw;
   // Every key this ballot could hold, by hash. A collision makes both ambiguous; we drop them.
   const keyByHash = new Map<string, string | null>();
   const addKey = (k: string) => { const h = hash(k); keyByHash.set(h, keyByHash.has(h) && keyByHash.get(h) !== k ? null : k); };
@@ -313,13 +356,27 @@ export function decodeShare(ballot: Ballot, head: ShareHead): { state: BallotSta
     if (!key) continue;
     try { st.notes[key] = b64urlDecode(e.slice(5)); } catch { /* skip a broken note */ }
   }
-  if (src === '0') st.sources = [];
+  // A source this device asked for and holds, which the ballot doesn't have yet (its preview hasn't answered since
+  // a reload, model/adds.ts), is read back too, so your own link can't drop it (Codex, Oct 28). The link is unchanged.
+  const eByHash = (): Map<string, string> => {
+    const m = new Map([...heldIds()].filter((id) => !ballot.eById.has(id)).map((id) => [hash(id), id]));
+    ballot.endorsers.forEach((e) => m.set(hash(e.id), e.id));
+    return m;
+  };
+  const recipe = lens ? lens.match(RECIPE) : null;
+  if (recipe) {
+    // The 11th field (Nov 3): the named sets as this ballot's data has them now, less each -hash, plus each +hash.
+    const sets = LENS.filter(([k]) => recipe[1].includes(k));
+    const toks = recipe[2].match(/[+-][0-9a-z]{5}/g) || [];
+    const out = new Set(toks.filter((t) => t[0] === '-').map((t) => t.slice(1)));
+    const byHash = eByHash();
+    const base = ballot.endorsers.filter((e) => sets.some(([, f]) => f(e)) && !out.has(hash(e.id))).map((e) => e.id);
+    const added = toks.filter((t) => t[0] === '+').map((t) => byHash.get(t.slice(1))).filter((x): x is string => !!x);
+    st.sources = [...new Set([...base, ...added])];
+  } else if (src === '0') st.sources = [];
   else if (src) {
-    // A source this device asked for and holds, which the ballot doesn't have yet (its preview hasn't answered since
-    // a reload, model/adds.ts), is read back too, so your own link can't drop it (Codex, Oct 28). The link is unchanged.
-    const eByHash = new Map([...heldIds()].filter((id) => !ballot.eById.has(id)).map((id) => [hash(id), id]));
-    ballot.endorsers.forEach((e) => eByHash.set(hash(e.id), e.id));
-    st.sources = src.split('.').map((h) => eByHash.get(h)).filter((x): x is string => !!x);
+    const byHash = eByHash();
+    st.sources = src.split('.').map((h) => byHash.get(h)).filter((x): x is string => !!x);
   }
   if (head.v >= 2) {
     for (const e of ranks.split('.').filter(Boolean)) {

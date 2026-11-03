@@ -1,0 +1,4732 @@
+[
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "bart-director-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "bay-area-rtm",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Support' on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-assembly-17",
+    "status": "endorsed",
+    "choice": "Matt Haney",
+    "why": "Listed on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-assembly-19",
+    "status": "endorsed",
+    "choice": "Catherine Stefani",
+    "why": "Listed on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-coa-1d-retention",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-us-house-11",
+    "status": "endorsed",
+    "choice": "Scott Wiener",
+    "why": "Listed on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-us-house-15",
+    "status": "endorsed",
+    "choice": "Kevin Mullin",
+    "why": "Listed on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sf-assessor-recorder",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sf-board-of-education",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sf-community-college-board",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sf-community-college-board-partial",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sf-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sf-prop-b",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Support' on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sf-prop-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sf-prop-d",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sf-prop-e",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sf-prop-f",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sf-prop-g",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sf-prop-h",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sf-prop-i",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sf-prop-j",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sf-public-defender",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sf-supervisor-10",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sf-supervisor-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sf-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sf-supervisor-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sf-supervisor-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "bart-director-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme57.org/political-and-legislative/afscme-california-people-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "bay-area-rtm",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Lists 'Yes on Measure RTM (Connect Bay Area Transit)' in its 2026 local endorsements.",
+    "url": "https://afscme57.org/political-and-legislative/general-election-local-endorsements-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "ca-assembly-17",
+    "status": "endorsed",
+    "choice": "Matt Haney",
+    "why": "Listed in AFSCME California's 2026 general election endorsements, posted by Council 57.",
+    "url": "https://afscme57.org/system/files/2026-10/AFSCME%20CALIFORNIA%20PEOPLE%202026%20General%20Endorsements.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "ca-assembly-19",
+    "status": "endorsed",
+    "choice": "Catherine Stefani",
+    "why": "Listed in AFSCME California's 2026 general election endorsements, posted by Council 57.",
+    "url": "https://afscme57.org/system/files/2026-10/AFSCME%20CALIFORNIA%20PEOPLE%202026%20General%20Endorsements.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "ca-coa-1d-retention",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme57.org/political-and-legislative/afscme-california-people-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "ca-us-house-11",
+    "status": "endorsed",
+    "choice": "Scott Wiener",
+    "why": "Listed in AFSCME California's 2026 general election endorsements, posted by Council 57.",
+    "url": "https://afscme57.org/system/files/2026-10/AFSCME%20CALIFORNIA%20PEOPLE%202026%20General%20Endorsements.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "ca-us-house-15",
+    "status": "endorsed",
+    "choice": "Kevin Mullin",
+    "why": "Listed in AFSCME California's 2026 general election endorsements, posted by Council 57.",
+    "url": "https://afscme57.org/system/files/2026-10/AFSCME%20CALIFORNIA%20PEOPLE%202026%20General%20Endorsements.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "sf-assessor-recorder",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme57.org/political-and-legislative/afscme-california-people-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "sf-board-of-education",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme57.org/political-and-legislative/afscme-california-people-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "sf-community-college-board",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme57.org/political-and-legislative/afscme-california-people-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "sf-community-college-board-partial",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme57.org/political-and-legislative/afscme-california-people-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "sf-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme57.org/political-and-legislative/afscme-california-people-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "sf-prop-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme57.org/political-and-legislative/afscme-california-people-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "sf-prop-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme57.org/political-and-legislative/afscme-california-people-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "sf-prop-d",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme57.org/political-and-legislative/afscme-california-people-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "sf-prop-e",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme57.org/political-and-legislative/afscme-california-people-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "sf-prop-f",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme57.org/political-and-legislative/afscme-california-people-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "sf-prop-g",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme57.org/political-and-legislative/afscme-california-people-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "sf-prop-h",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme57.org/political-and-legislative/afscme-california-people-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "sf-prop-i",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme57.org/political-and-legislative/afscme-california-people-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "sf-prop-j",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme57.org/political-and-legislative/afscme-california-people-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "sf-public-defender",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme57.org/political-and-legislative/afscme-california-people-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "sf-supervisor-10",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme57.org/political-and-legislative/afscme-california-people-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "sf-supervisor-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme57.org/political-and-legislative/afscme-california-people-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "sf-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme57.org/political-and-legislative/afscme-california-people-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "sf-supervisor-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme57.org/political-and-legislative/afscme-california-people-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-council-57",
+    "target_id": "sf-supervisor-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme57.org/political-and-legislative/afscme-california-people-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "bart-director-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 Educator Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "bay-area-rtm",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 Educator Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "ca-assembly-17",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 Educator Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "ca-assembly-19",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 Educator Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "ca-coa-1d-retention",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 Educator Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "ca-us-house-11",
+    "status": "endorsed",
+    "choice": "Connie Chan",
+    "why": "Listed in its November 2026 Educator Voter Guide.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "ca-us-house-15",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 Educator Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "sf-assessor-recorder",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 Educator Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "sf-board-of-education",
+    "status": "endorsed",
+    "choice": "Reina Tello, Ryan Hazelton, Virginia Cheung",
+    "why": "Listed in its voter guide, 'Following our sister union, UESF!'",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "sf-community-college-board",
+    "status": "endorsed",
+    "choice": "Bunny McFadden, Leah LaCroix, Jeremy Lee",
+    "why": "Listed in its November 2026 Educator Voter Guide.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "sf-community-college-board-partial",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 Educator Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "sf-prop-a",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as No on Prop A in its November 2026 Educator Voter Guide.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "sf-prop-b",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as Yes on Prop B in its November 2026 Educator Voter Guide.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "sf-prop-c",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as Yes on Prop C in its November 2026 Educator Voter Guide.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "sf-prop-d",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as No on Prop D in its November 2026 Educator Voter Guide.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "sf-prop-e",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as No on Prop E in its November 2026 Educator Voter Guide.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "sf-prop-f",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as No on Prop F in its November 2026 Educator Voter Guide.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "sf-prop-g",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 Educator Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "sf-prop-h",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as Yes on Prop H in its November 2026 Educator Voter Guide.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "sf-prop-i",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as Yes on Prop I in its November 2026 Educator Voter Guide.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "sf-prop-j",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 Educator Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "sf-public-defender",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 Educator Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "sf-supervisor-10",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 Educator Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "sf-supervisor-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 Educator Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "sf-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 Educator Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "sf-supervisor-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 Educator Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aft-2121",
+    "target_id": "sf-supervisor-8",
+    "status": "endorsed",
+    "choice": "Gary McCoy",
+    "why": "Listed in its November 2026 Educator Voter Guide.",
+    "url": "https://www.aft2121.org/wp-content/uploads/VOTER-GUIDES-for-socials-2.jpg",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ca-labor-fed",
+    "target_id": "ca-assembly-17",
+    "status": "endorsed",
+    "choice": "Matt Haney",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://calaborfed.org/labor-2026-primary-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ca-labor-fed",
+    "target_id": "ca-assembly-19",
+    "status": "endorsed",
+    "choice": "Catherine Stefani",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://calaborfed.org/labor-2026-primary-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ca-labor-fed",
+    "target_id": "ca-us-house-11",
+    "status": "endorsed",
+    "choice": "Connie Chan",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://calaborfed.org/labor-2026-primary-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ca-labor-fed",
+    "target_id": "ca-us-house-15",
+    "status": "endorsed",
+    "choice": "Kevin Mullin",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://calaborfed.org/labor-2026-primary-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "bart-director-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "bay-area-rtm",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-assembly-17",
+    "status": "endorsed",
+    "choice": "Matt Haney",
+    "why": "Listed in its 2026 General Election Voter Guide.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-assembly-19",
+    "status": "endorsed",
+    "choice": "Catherine Stefani",
+    "why": "Listed in its 2026 General Election Voter Guide.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-coa-1d-retention",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-us-house-11",
+    "status": "endorsed",
+    "choice": "Connie Chan",
+    "why": "Listed in its 2026 General Election Voter Guide.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-us-house-15",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sf-assessor-recorder",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sf-board-of-education",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sf-community-college-board",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sf-community-college-board-partial",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sf-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sf-prop-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sf-prop-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sf-prop-d",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sf-prop-e",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sf-prop-f",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sf-prop-g",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sf-prop-h",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sf-prop-i",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sf-prop-j",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sf-public-defender",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sf-supervisor-10",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sf-supervisor-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sf-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sf-supervisor-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sf-supervisor-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "bart-director-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "bay-area-rtm",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-assembly-17",
+    "status": "endorsed",
+    "choice": "Matt Haney",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-assembly-19",
+    "status": "endorsed",
+    "choice": "Catherine Stefani",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-coa-1d-retention",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-us-house-11",
+    "status": "endorsed",
+    "choice": "Connie Chan",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-us-house-15",
+    "status": "endorsed",
+    "choice": "Kevin Mullin",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sf-assessor-recorder",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sf-board-of-education",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sf-community-college-board",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sf-community-college-board-partial",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sf-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sf-prop-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sf-prop-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sf-prop-d",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sf-prop-e",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sf-prop-f",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sf-prop-g",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sf-prop-h",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sf-prop-i",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sf-prop-j",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sf-public-defender",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sf-supervisor-10",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sf-supervisor-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sf-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sf-supervisor-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sf-supervisor-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "bart-director-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "bay-area-rtm",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "ca-assembly-17",
+    "status": "endorsed",
+    "choice": "Matt Haney",
+    "why": "Listed in its California endorsements.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "ca-assembly-19",
+    "status": "endorsed",
+    "choice": "Catherine Stefani",
+    "why": "Listed in its California endorsements.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "ca-coa-1d-retention",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "ca-us-house-11",
+    "status": "endorsed",
+    "choice": "Connie Chan",
+    "why": "Listed on its national endorsements page under California (CA-11).",
+    "url": "https://www.nationalnursesunited.org/nnu-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "ca-us-house-15",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sf-assessor-recorder",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sf-board-of-education",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sf-community-college-board",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sf-community-college-board-partial",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sf-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sf-prop-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sf-prop-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sf-prop-d",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'San Francisco Measure D ... Oppose.'",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sf-prop-e",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sf-prop-f",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sf-prop-g",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sf-prop-h",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sf-prop-i",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sf-prop-j",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sf-public-defender",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sf-supervisor-10",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sf-supervisor-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sf-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sf-supervisor-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sf-supervisor-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-assembly-17",
+    "status": "endorsed",
+    "choice": "Matt Haney",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-assembly-19",
+    "status": "endorsed",
+    "choice": "Catherine Stefani",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-us-house-11",
+    "status": "endorsed",
+    "choice": "Scott Wiener",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-us-house-15",
+    "status": "endorsed",
+    "choice": "Kevin Mullin",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "cta",
+    "target_id": "ca-assembly-17",
+    "status": "endorsed",
+    "choice": "Matt Haney",
+    "why": "Listed in its 2026 candidate recommendations.",
+    "url": "https://www.cta.org/document/2026-candidate-recommendations",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "cta",
+    "target_id": "ca-assembly-19",
+    "status": "endorsed",
+    "choice": "Catherine Stefani",
+    "why": "Listed in its 2026 candidate recommendations.",
+    "url": "https://www.cta.org/document/2026-candidate-recommendations",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "cta",
+    "target_id": "ca-us-house-11",
+    "status": "endorsed",
+    "choice": "Connie Chan",
+    "why": "Listed in its 2026 candidate recommendations.",
+    "url": "https://www.cta.org/document/2026-candidate-recommendations",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "cta",
+    "target_id": "ca-us-house-15",
+    "status": "endorsed",
+    "choice": "Kevin Mullin",
+    "why": "Listed in its 2026 candidate recommendations.",
+    "url": "https://www.cta.org/document/2026-candidate-recommendations",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "bart-director-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "bay-area-rtm",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Yes' in its Nov 3, 2026 endorsements.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "ca-assembly-17",
+    "status": "endorsed",
+    "choice": "Matt Haney",
+    "why": "Listed in its Nov 3, 2026 endorsements.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "ca-assembly-19",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "ca-coa-1d-retention",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "ca-us-house-11",
+    "status": "endorsed",
+    "choice": "Connie Chan",
+    "why": "Listed in its Nov 3, 2026 endorsements.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "ca-us-house-15",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "sf-assessor-recorder",
+    "status": "endorsed",
+    "choice": "Joaquín Torres",
+    "why": "Listed in its Nov 3, 2026 endorsements.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "sf-board-of-education",
+    "status": "endorsed",
+    "choice": "Virginia Cheung, Ryan Hazelton, Reina Tello",
+    "why": "Listed in its Nov 3, 2026 endorsements.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "sf-community-college-board",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "sf-community-college-board-partial",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "sf-prop-a",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'No' in its Nov 3, 2026 endorsements.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "sf-prop-b",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Yes' in its Nov 3, 2026 endorsements.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "sf-prop-c",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Yes' in its Nov 3, 2026 endorsements.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "sf-prop-d",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'No' in its Nov 3, 2026 endorsements.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "sf-prop-e",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'No' in its Nov 3, 2026 endorsements.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "sf-prop-f",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'No' in its Nov 3, 2026 endorsements.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "sf-prop-g",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "sf-prop-h",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Yes' in its Nov 3, 2026 endorsements.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "sf-prop-i",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Yes' in its Nov 3, 2026 endorsements.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "sf-prop-j",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Yes' in its Nov 3, 2026 endorsements.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "sf-public-defender",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "sf-supervisor-10",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "sf-supervisor-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "sf-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "sf-supervisor-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ifpte-local-21",
+    "target_id": "sf-supervisor-8",
+    "status": "endorsed",
+    "choice": "Gary McCoy",
+    "why": "Listed in its Nov 3, 2026 endorsements.",
+    "url": "https://ifpte21.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "bart-director-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "bay-area-rtm",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Says Yes: it includes capital projects that put its members to work.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "ca-assembly-17",
+    "status": "endorsed",
+    "choice": "Matt Haney",
+    "why": "Listed in its Nov 3 general election endorsements.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "ca-assembly-19",
+    "status": "endorsed",
+    "choice": "Catherine Stefani",
+    "why": "Listed in its Nov 3 general election endorsements.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "ca-coa-1d-retention",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "ca-us-house-11",
+    "status": "endorsed",
+    "choice": "Scott Wiener",
+    "why": "Listed in its Nov 3 general election endorsements.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "ca-us-house-15",
+    "status": "endorsed",
+    "choice": "Kevin Mullin",
+    "why": "Listed in its Nov 3 general election endorsements.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "sf-assessor-recorder",
+    "status": "endorsed",
+    "choice": "Joaquín Torres",
+    "why": "Listed in its Nov 3 general election endorsements.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "sf-board-of-education",
+    "status": "endorsed",
+    "choice": "Tim Tung",
+    "why": "Listed in its Nov 3 general election endorsements (one of three seats).",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "sf-community-college-board",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "sf-community-college-board-partial",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "sf-prop-a",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Says Yes: it helps approvals and processes run more efficiently.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "sf-prop-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "sf-prop-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "sf-prop-d",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Says Yes, as part of the proposed San Francisco Charter Amendments.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "sf-prop-e",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Says Yes, as part of the proposed San Francisco Charter Amendments.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "sf-prop-f",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Says Yes, as part of the proposed San Francisco Charter Amendments.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "sf-prop-g",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "sf-prop-h",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "sf-prop-i",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Says No: it raises the property transfer tax and would make projects harder to build.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "sf-prop-j",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "sf-public-defender",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "sf-supervisor-10",
+    "status": "endorsed",
+    "choice": "Theo Ellington",
+    "why": "Listed in its Nov 3 general election endorsements.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "sf-supervisor-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "sf-supervisor-4",
+    "status": "endorsed",
+    "choice": "Alan Wong",
+    "why": "Listed in its Nov 3 general election endorsements.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "sf-supervisor-6",
+    "status": "endorsed",
+    "choice": "Matt Dorsey",
+    "why": "Listed in its Nov 3 general election endorsements.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-3",
+    "target_id": "sf-supervisor-8",
+    "status": "endorsed",
+    "choice": "Gary McCoy",
+    "why": "Listed in its Nov 3 general election endorsements.",
+    "url": "https://www.oe3.org/wp-content/uploads/2026/11/10.30_CA_Endorsements_Rev.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "bart-director-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "bay-area-rtm",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Connect Bay Area Transit Initiative: Yes' under San Francisco County.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-assembly-17",
+    "status": "endorsed",
+    "choice": "Matt Haney",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-assembly-19",
+    "status": "endorsed",
+    "choice": "Catherine Stefani",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-coa-1d-retention",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-us-house-11",
+    "status": "endorsed",
+    "choice": "Scott Wiener",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-us-house-15",
+    "status": "endorsed",
+    "choice": "Kevin Mullin",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sf-assessor-recorder",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sf-board-of-education",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sf-community-college-board",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sf-community-college-board-partial",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sf-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sf-prop-b",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "'Would make San Francisco the first city in the country to operate a public bank.'",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sf-prop-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sf-prop-d",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sf-prop-e",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sf-prop-f",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sf-prop-g",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sf-prop-h",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sf-prop-i",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sf-prop-j",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sf-public-defender",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sf-supervisor-10",
+    "status": "endorsed",
+    "choice": "Theo Ellington",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sf-supervisor-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sf-supervisor-4",
+    "status": "endorsed",
+    "choice": "Alan Wong",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sf-supervisor-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sf-supervisor-8",
+    "status": "endorsed",
+    "choice": "Gary McCoy",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "bart-director-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "bay-area-rtm",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-assembly-17",
+    "status": "endorsed",
+    "choice": "Matt Haney",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-assembly-19",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-coa-1d-retention",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-us-house-11",
+    "status": "endorsed",
+    "choice": "Connie Chan",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-us-house-15",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sf-assessor-recorder",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sf-board-of-education",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sf-community-college-board",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sf-community-college-board-partial",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sf-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sf-prop-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sf-prop-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sf-prop-d",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sf-prop-e",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sf-prop-f",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sf-prop-g",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sf-prop-h",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sf-prop-i",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sf-prop-j",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sf-public-defender",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sf-supervisor-10",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sf-supervisor-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sf-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sf-supervisor-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sf-supervisor-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "bart-director-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3, 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "bay-area-rtm",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Regional Transit Measure listed as 'Vote Yes!'",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "ca-assembly-17",
+    "status": "endorsed",
+    "choice": "Matt Haney",
+    "why": "Listed in its Nov 3, 2026 endorsements.",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "ca-assembly-19",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3, 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "ca-coa-1d-retention",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3, 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "ca-us-house-11",
+    "status": "endorsed",
+    "choice": "Connie Chan",
+    "why": "Listed in its Nov 3, 2026 endorsements.",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "ca-us-house-15",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3, 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "sf-assessor-recorder",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3, 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "sf-board-of-education",
+    "status": "endorsed",
+    "choice": "Virginia Cheung, Ryan Hazelton, Reina Tello",
+    "why": "Listed as its slate for the three seats.",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "sf-community-college-board",
+    "status": "endorsed",
+    "choice": "Leah LaCroix, Jeremy Lee, Bunny McFadden",
+    "why": "Listed as its slate for the three seats.",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "sf-community-college-board-partial",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3, 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "sf-prop-a",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'Vote No.'",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "sf-prop-b",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Vote Yes.'",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "sf-prop-c",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Vote Yes.'",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "sf-prop-d",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'Vote No.'",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "sf-prop-e",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'Vote No.'",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "sf-prop-f",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'Vote No.'",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "sf-prop-g",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'Vote No.'",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "sf-prop-h",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Vote Yes.'",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "sf-prop-i",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Vote Yes.'",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "sf-prop-j",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Vote Yes.'",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "sf-public-defender",
+    "status": "endorsed",
+    "choice": "Mano Raju",
+    "why": "Listed in its Nov 3, 2026 endorsements (as Manohar Raju).",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "sf-supervisor-10",
+    "status": "endorsed",
+    "choice": "Dionjay Brookter, J.R. Eppler",
+    "why": "Ranks DJ Brookter #1 and JR Eppler #2.",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "sf-supervisor-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3, 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "sf-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3, 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "sf-supervisor-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Nov 3, 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1021",
+    "target_id": "sf-supervisor-8",
+    "status": "endorsed",
+    "choice": "Gary McCoy, Michael T. Nguyen",
+    "why": "Ranks Gary McCoy #1 and Michael T. Nguyen #2.",
+    "url": "https://www.seiu1021.org/post/gotv-election-endorsements-nov-3-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "bart-director-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "bay-area-rtm",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Yes on RTM'.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "ca-assembly-17",
+    "status": "endorsed",
+    "choice": "Matt Haney",
+    "why": "Listed on its ballot recommendations page.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "ca-assembly-19",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "ca-coa-1d-retention",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "ca-us-house-11",
+    "status": "endorsed",
+    "choice": "Connie Chan",
+    "why": "Listed on its ballot recommendations page.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "ca-us-house-15",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sf-assessor-recorder",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sf-board-of-education",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sf-community-college-board",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sf-community-college-board-partial",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sf-prop-a",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'No on Prop A'.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sf-prop-b",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Yes on Prop B'.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sf-prop-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sf-prop-d",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'No on Prop D'.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sf-prop-e",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'No on Prop E'.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sf-prop-f",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'No on Prop F'.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sf-prop-g",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sf-prop-h",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Yes on Prop H'.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sf-prop-i",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Yes on Prop I'.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sf-prop-j",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Yes on Prop J'.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sf-public-defender",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sf-supervisor-10",
+    "status": "endorsed",
+    "choice": "Dionjay (DJ) Brookter",
+    "why": "Listed on its ballot recommendations page.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sf-supervisor-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sf-supervisor-4",
+    "status": "endorsed",
+    "choice": "Alan Wong",
+    "why": "Listed on its ballot recommendations page.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sf-supervisor-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sf-supervisor-8",
+    "status": "endorsed",
+    "choice": "Gary McCoy",
+    "why": "Listed on its ballot recommendations page.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "bart-director-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "bay-area-rtm",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "ca-assembly-17",
+    "status": "endorsed",
+    "choice": "Matt Haney",
+    "why": "Listed in its 2026 election endorsements (AD-17).",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "ca-assembly-19",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "ca-coa-1d-retention",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "ca-us-house-11",
+    "status": "endorsed",
+    "choice": "Connie Chan",
+    "why": "Listed in its 2026 election endorsements (CD-11).",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "ca-us-house-15",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sf-assessor-recorder",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sf-board-of-education",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sf-community-college-board",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sf-community-college-board-partial",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sf-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sf-prop-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sf-prop-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sf-prop-d",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sf-prop-e",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sf-prop-f",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sf-prop-g",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sf-prop-h",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sf-prop-i",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sf-prop-j",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sf-public-defender",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sf-supervisor-10",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sf-supervisor-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sf-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sf-supervisor-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sf-supervisor-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "bart-director-8",
+    "status": "endorsed",
+    "choice": "Sara Barz",
+    "why": "Listed in its final November 2026 endorsements.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "bay-area-rtm",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Yes on Measure RTM' in its final November 2026 endorsements.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "ca-assembly-17",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its final November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "ca-assembly-19",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its final November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "ca-coa-1d-retention",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its final November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "ca-us-house-11",
+    "status": "endorsed",
+    "choice": "Connie Chan",
+    "why": "Listed in its final November 2026 endorsements.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "ca-us-house-15",
+    "status": "endorsed",
+    "choice": "Kevin Mullin",
+    "why": "Listed in its final November 2026 endorsements.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "sf-assessor-recorder",
+    "status": "endorsed",
+    "choice": "Joaquín Torres",
+    "why": "Listed in its final November 2026 endorsements.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "sf-board-of-education",
+    "status": "endorsed",
+    "choice": "Reina Tello, Ryan Hazelton, Virginia Cheung",
+    "why": "Listed in its final November 2026 endorsements.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "sf-community-college-board",
+    "status": "endorsed",
+    "choice": "Jeremy Lee, Bunny McFadden, Leah LaCroix",
+    "why": "Listed in its final November 2026 endorsements.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "sf-community-college-board-partial",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its final November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "sf-prop-a",
+    "status": "no_position",
+    "choice": null,
+    "why": "'No council-affiliated union felt strongly, so we’re taking no position on Measure A.'",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "sf-prop-b",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Yes on Measure B' in its final November 2026 endorsements.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "sf-prop-c",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Yes on Measure C' in its final November 2026 endorsements.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "sf-prop-d",
+    "status": "no_position",
+    "choice": null,
+    "why": "Listed as 'No position on Measure D'; it disagreed with the timing and threshold.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "sf-prop-e",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Yes on Measure E' in its final November 2026 endorsements.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "sf-prop-f",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Yes on Measure F' in its final November 2026 endorsements.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "sf-prop-g",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Yes on Measure G' in its final November 2026 endorsements.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "sf-prop-h",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Yes on Measure H' in its final November 2026 endorsements.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "sf-prop-i",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as 'No on Measure I' in its final November 2026 endorsements.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "sf-prop-j",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as 'Yes on Measure J' in its final November 2026 endorsements.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "sf-public-defender",
+    "status": "endorsed",
+    "choice": "Mano Raju",
+    "why": "Listed in its final November 2026 endorsements.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "sf-supervisor-10",
+    "status": "endorsed",
+    "choice": "Theo Ellington, J.R. Eppler, Dionjay Brookter",
+    "why": "Ranks Theo Ellington No. 1, JR Eppler No. 2 and DJ Brookter No. 3.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "sf-supervisor-2",
+    "status": "endorsed",
+    "choice": "Stephen Sherrill",
+    "why": "Listed in its final November 2026 endorsements.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "sf-supervisor-4",
+    "status": "endorsed",
+    "choice": "Alan Wong",
+    "why": "Listed in its final November 2026 endorsements.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "sf-supervisor-6",
+    "status": "endorsed",
+    "choice": "Matt Dorsey",
+    "why": "Listed in its final November 2026 endorsements.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-building-trades-council",
+    "target_id": "sf-supervisor-8",
+    "status": "endorsed",
+    "choice": "Gary McCoy",
+    "why": "Listed in its final November 2026 endorsements.",
+    "url": "https://www.orglabornews.org/news/update-election-endorsements-from-the-sf-building-trades-the-final-cut",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-police-officers-association",
+    "target_id": "sf-prop-c",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Urges a Yes on Proposition C in the same statement, as the way to fund affordable housing.",
+    "url": "https://sfpoa.org/mayor-lurie-joined-by-firefighters-and-police-officers-in-strong-opposition-to-proposition-i/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sf-police-officers-association",
+    "target_id": "sf-prop-i",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Urges 'vote No on Proposition I' in a joint statement with the mayor and Firefighters Local 798.",
+    "url": "https://sfpoa.org/mayor-lurie-joined-by-firefighters-and-police-officers-in-strong-opposition-to-proposition-i/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "bart-director-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "bay-area-rtm",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as Yes on the Regional Transit Measure in its San Francisco endorsements.",
+    "url": "https://teamstersjc7.org/uncategorized/san-francisco-city-and-county-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "ca-assembly-17",
+    "status": "endorsed",
+    "choice": "Matt Haney",
+    "why": "Listed in its 2026 General Election endorsements.",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "ca-assembly-19",
+    "status": "endorsed",
+    "choice": "Catherine Stefani",
+    "why": "Listed in its 2026 General Election endorsements.",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "ca-coa-1d-retention",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "ca-us-house-11",
+    "status": "endorsed",
+    "choice": "Connie Chan",
+    "why": "Listed in its 2026 General Election endorsements.",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "ca-us-house-15",
+    "status": "endorsed",
+    "choice": "Kevin Mullin",
+    "why": "Listed in its 2026 General Election endorsements.",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "sf-assessor-recorder",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "sf-board-of-education",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "sf-community-college-board",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "sf-community-college-board-partial",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "sf-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "sf-prop-b",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as Yes on Measure B in its San Francisco endorsements.",
+    "url": "https://teamstersjc7.org/uncategorized/san-francisco-city-and-county-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "sf-prop-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "sf-prop-d",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "sf-prop-e",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "sf-prop-f",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "sf-prop-g",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "sf-prop-h",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as Yes on Measure H in its San Francisco endorsements.",
+    "url": "https://teamstersjc7.org/uncategorized/san-francisco-city-and-county-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "sf-prop-i",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "sf-prop-j",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "sf-public-defender",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://teamstersjc7.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "sf-supervisor-10",
+    "status": "endorsed",
+    "choice": "Theo Ellington, Dionjay Brookter",
+    "why": "Lists Theo Ellington, then DJ Brookter, under 'Rank Choice Voting'.",
+    "url": "https://teamstersjc7.org/uncategorized/san-francisco-city-and-county-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "sf-supervisor-2",
+    "status": "endorsed",
+    "choice": "Stephen Sherrill",
+    "why": "Listed in its San Francisco 2026 General Election endorsements.",
+    "url": "https://teamstersjc7.org/uncategorized/san-francisco-city-and-county-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "sf-supervisor-4",
+    "status": "endorsed",
+    "choice": "Alan Wong",
+    "why": "Listed in its San Francisco 2026 General Election endorsements.",
+    "url": "https://teamstersjc7.org/uncategorized/san-francisco-city-and-county-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "sf-supervisor-6",
+    "status": "endorsed",
+    "choice": "Matt Dorsey",
+    "why": "Listed in its San Francisco 2026 General Election endorsements.",
+    "url": "https://teamstersjc7.org/uncategorized/san-francisco-city-and-county-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-7",
+    "target_id": "sf-supervisor-8",
+    "status": "endorsed",
+    "choice": "Gary McCoy",
+    "why": "Listed in its San Francisco 2026 General Election endorsements.",
+    "url": "https://teamstersjc7.org/uncategorized/san-francisco-city-and-county-2026-general-election",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "bart-director-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "bay-area-rtm",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "'Yes on RTM: Regional Transit Measure (RTM) reimagines a system that serves today’s riders.'",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "ca-assembly-17",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "ca-assembly-19",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "ca-coa-1d-retention",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "ca-us-house-11",
+    "status": "endorsed",
+    "choice": "Connie Chan",
+    "why": "Listed in its 2026 voter guide.",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "ca-us-house-15",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "sf-assessor-recorder",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "sf-board-of-education",
+    "status": "endorsed",
+    "choice": "Virginia Cheung, Ryan Hazelton, Reina Tello",
+    "why": "Its slate of three for the school board: 'Vote Nov 3 for the schools our students deserve.'",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "sf-community-college-board",
+    "status": "endorsed",
+    "choice": "Leah LaCroix, Jeremy Lee, Bunny McFadden",
+    "why": "Listed in its 2026 voter guide.",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "sf-community-college-board-partial",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "sf-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "sf-prop-b",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "'Yes on Prop B: San Francisco Public Bank.'",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "sf-prop-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "sf-prop-d",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "'No on Prop D: Changes to San Francisco Ballot Measure Process.'",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "sf-prop-e",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "sf-prop-f",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "sf-prop-g",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "sf-prop-h",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "'Yes on Prop H: Stronger Muni for All.'",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "sf-prop-i",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "'Yes on Prop I: San Francisco Affordable Housing Guarantee Act.'",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "sf-prop-j",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "sf-public-defender",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "sf-supervisor-10",
+    "status": "endorsed",
+    "choice": "Dionjay Brookter, J.R. Eppler, Deandra Bryant",
+    "why": "Ranks DJ Brookter #1; also endorses J.R. Eppler and Deandra Bryant, unranked.",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "sf-supervisor-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "sf-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "sf-supervisor-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "uesf",
+    "target_id": "sf-supervisor-8",
+    "status": "endorsed",
+    "choice": "Gary McCoy or Michael T. Nguyen or Darshini Patel",
+    "why": "Endorses all three, unranked.",
+    "url": "https://uesf.org/wp-content/uploads/2026/10/UESF-Voter-Guide-PDF-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "bart-director-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "bay-area-rtm",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as Yes on Proposition RTM (Fund regional transportation) in its November 2026 endorsements.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "ca-assembly-17",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "ca-assembly-19",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "ca-coa-1d-retention",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "ca-us-house-11",
+    "status": "endorsed",
+    "choice": "Connie Chan",
+    "why": "Listed in its November 2026 election endorsements.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "ca-us-house-15",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "sf-assessor-recorder",
+    "status": "endorsed",
+    "choice": "Joaquín Torres",
+    "why": "Listed in its November 2026 election endorsements.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "sf-board-of-education",
+    "status": "endorsed",
+    "choice": "Virginia Cheung, Ryan Hazelton, Reina Tello",
+    "why": "Listed in its November 2026 election endorsements.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "sf-community-college-board",
+    "status": "endorsed",
+    "choice": "Leah LaCroix, Jeremy Lee, Bunny McFadden",
+    "why": "Listed in its November 2026 election endorsements.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "sf-community-college-board-partial",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "sf-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "sf-prop-b",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as Yes on Proposition B (Public Bank) in its November 2026 endorsements.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "sf-prop-c",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as Yes on Proposition C (Public Housing Contributions) in its November 2026 endorsements.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "sf-prop-d",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed as No on Proposition D (Changes to Ballot Measures) in its November 2026 endorsements.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "sf-prop-e",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "sf-prop-f",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "sf-prop-g",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as Yes on Proposition G (Great Highway Compromise) in its November 2026 endorsements.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "sf-prop-h",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as Yes on Proposition H (Fund Muni) in its November 2026 endorsements.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "sf-prop-i",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "sf-prop-j",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed as Yes on Proposition J in its November 2026 endorsements.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "sf-public-defender",
+    "status": "endorsed",
+    "choice": "Mano Raju",
+    "why": "Listed in its November 2026 election endorsements.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "sf-supervisor-10",
+    "status": "endorsed",
+    "choice": "Dionjay Brookter or Shawn M. Richard",
+    "why": "Endorses both: 'DJ Brookter and Shawn Richard.'",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "sf-supervisor-2",
+    "status": "endorsed",
+    "choice": "Stephen Sherrill",
+    "why": "Listed in its November 2026 election endorsements.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "sf-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "sf-supervisor-6",
+    "status": "endorsed",
+    "choice": "Matt Dorsey",
+    "why": "Listed in its November 2026 election endorsements.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-2",
+    "target_id": "sf-supervisor-8",
+    "status": "endorsed",
+    "choice": "Gary McCoy",
+    "why": "Listed in its November 2026 election endorsements.",
+    "url": "https://www.unitehere2.org/2026/09/november-2026-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  }
+]

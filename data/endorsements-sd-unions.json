@@ -201,26 +201,6 @@
   },
   {
     "endorser_id": "afscme-127",
-    "target_id": "sd-county-measure-a",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
-    "url": "https://afscme127.org/Endorsement2026",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "afscme-127",
-    "target_id": "sd-county-measure-b",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
-    "url": "https://afscme127.org/Endorsement2026",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "afscme-127",
     "target_id": "sd-county-supervisor-4",
     "status": "not_found",
     "choice": null,
@@ -272,16 +252,6 @@
   {
     "endorser_id": "afscme-127",
     "target_id": "sdusd-district-c",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
-    "url": "https://afscme127.org/Endorsement2026",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "afscme-127",
-    "target_id": "sdusd-measure-m",
     "status": "not_found",
     "choice": null,
     "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
@@ -2851,26 +2821,6 @@
   },
   {
     "endorser_id": "sd-deputy-sheriffs-assn",
-    "target_id": "sd-county-measure-a",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
-    "url": "https://dsasd.org/endorsements/",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "sd-deputy-sheriffs-assn",
-    "target_id": "sd-county-measure-b",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
-    "url": "https://dsasd.org/endorsements/",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "sd-deputy-sheriffs-assn",
     "target_id": "sd-county-supervisor-4",
     "status": "not_found",
     "choice": null,
@@ -2922,16 +2872,6 @@
   {
     "endorser_id": "sd-deputy-sheriffs-assn",
     "target_id": "sdusd-district-c",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
-    "url": "https://dsasd.org/endorsements/",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "sd-deputy-sheriffs-assn",
-    "target_id": "sdusd-measure-m",
     "status": "not_found",
     "choice": null,
     "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",

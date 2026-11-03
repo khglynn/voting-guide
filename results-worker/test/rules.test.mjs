@@ -126,3 +126,12 @@ test('the hand-written test file passes the schema', () => {
   assert.deepEqual(validateResultsFile(TEST_FILES.TX), []);
   assert.deepEqual(checkFile(TEST_FILES.TX), []);
 });
+
+test('ladder: never past the polls closing before numbers; every minute after it while nothing is posted', () => {
+  const map = { polls_close: '2026-11-04T01:00:00Z' };
+  let e = { status: 'pending', last_change: '2026-11-03T20:00:00.000Z', unchanged_polls: 40 };
+  e = nextEntry(e, { kind: 'ok', changed: false, status: 'pending' }, '2026-11-04T00:30:00.000Z', map);
+  assert.equal(e.next_due, '2026-11-04T01:00:00.000Z');
+  e = nextEntry(e, { kind: 'ok', changed: false, status: 'pending' }, '2026-11-04T01:00:00.000Z', map);
+  assert.equal(e.next_due, '2026-11-04T01:01:00.000Z');
+});

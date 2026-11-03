@@ -24,6 +24,7 @@
     "election_id_from": "The site's Official results button (data/results-sources.json on results-lead, Nov 3) and Clarity's own electionsettings for 127396: \"General & Joint Election 2026\", 11/3/2026. 126485, the registry's guess, is the June 13, 2026 runoff.",
     "tz": "America/Chicago"
   },
+  "polls_close": "2026-11-04T01:00:00Z",
   "count_closes": "2026-11-04T23:00:00Z",
   "complete_marker": {
     "flag": "final_flag",

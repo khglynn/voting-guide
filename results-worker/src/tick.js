@@ -138,6 +138,25 @@ export async function checkFingerprints({ maps, fetch, sched, now, ping }) {
   sched.meta.fp_at = now;
 }
 
+/* Every ten minutes: read each published file the way the site does, through vote.kevinhg.com/results/, and ping if
+   what people get is more than five minutes behind what we wrote. Quiet until the site's rewrite exists (a 404 or a
+   page that isn't JSON is skipped). */
+export async function checkThroughSite({ maps, fetch, store, sched, now, ping }) {
+  sched.meta.site_at = now;
+  for (const st of [...new Set(maps.map((m) => m.state))]) {
+    const ours = await readJson(store, `file:${st}`);
+    if (!ours) continue;
+    let theirs;
+    try {
+      const r = await fetch(`${SITE}/results/2026-11-03/${st}.json?check=${Date.parse(now)}`, { signal: AbortSignal.timeout(15000) });
+      if (!r.ok) continue;
+      theirs = JSON.parse(await r.text());
+    } catch { continue; }
+    const behind = (Date.parse(ours.generated) - Date.parse(theirs.generated || 0)) / 60000;
+    if (behind > 5) await ping(st, 'site stale', `vote.kevinhg.com serves the ${st} file from ${theirs.generated}, ${Math.round(behind)} minutes behind the one written at ${ours.generated}.`);
+  }
+}
+
 export async function runTick({ fetch, store, archive, maps, now = new Date().toISOString(), only = null, ping = async () => false, budgetMs = 40_000 }) {
   if (!only && (await store.get('stop'))) return { stopped: true };
   const started = Date.now();
@@ -149,11 +168,15 @@ export async function runTick({ fetch, store, archive, maps, now = new Date().to
   const ran = (await Promise.all(ids.map((id) => (Date.now() - started > budgetMs ? null : runSource({ map: byId[id], fetch, store, archive, sched, now, ping }))))).filter(Boolean);
 
   let fpChanged = false;
+  let metaChanged = false;
   if (!only && (!sched.meta.fp_at || Date.parse(now) - Date.parse(sched.meta.fp_at) >= 60 * 60_000)) {
     const before = JSON.stringify(sched.meta.fp || {});
     await checkFingerprints({ maps, fetch, sched, now, ping });
     fpChanged = before !== JSON.stringify(sched.meta.fp);
+    metaChanged = true;
   }
+
+  if (!only && (!sched.meta.site_at || Date.parse(now) - Date.parse(sched.meta.site_at) >= 10 * 60_000)) { await checkThroughSite({ maps, fetch, store, sched, now, ping }); metaChanged = true; }
 
   const states = new Set(ran.map((r) => byId[r.id].state));
   if (fpChanged) for (const m of maps) states.add(m.state);
@@ -164,6 +187,6 @@ export async function runTick({ fetch, store, archive, maps, now = new Date().to
     sched.meta.done_pinged = now;
     await ping('all', 'done', 'every source has stopped (official, past certification, or refused). The fetcher is done for 2026-11-03.');
   }
-  if (ran.length || fpChanged) { sched.meta.last_tick = now; await store.put(SCHED_KEY, JSON.stringify(sched)); }
+  if (ran.length || fpChanged || metaChanged) { sched.meta.last_tick = now; await store.put(SCHED_KEY, JSON.stringify(sched)); }
   return { ran, published };
 }

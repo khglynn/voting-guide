@@ -26,6 +26,7 @@ export const MAPS = [
       "election_id_from": "The registry row and Clarity's electionsettings for 127291: \"2026 General Election\", 11/3/2026, 183 contests.",
       "tz": "America/Chicago"
     },
+    "polls_close": "2026-11-04T01:00:00Z",
     "count_closes": "2026-11-04T23:00:00Z",
     "complete_marker": {
       "flag": "final_flag",
@@ -1344,6 +1345,7 @@ export const MAPS = [
       "election_id_from": "The site's Official results button (data/results-sources.json on results-lead, Nov 3) and Clarity's own electionsettings for 127396: \"General & Joint Election 2026\", 11/3/2026. 126485, the registry's guess, is the June 13, 2026 runoff.",
       "tz": "America/Chicago"
     },
+    "polls_close": "2026-11-04T01:00:00Z",
     "count_closes": "2026-11-04T23:00:00Z",
     "complete_marker": {
       "flag": "final_flag",
@@ -2286,6 +2288,7 @@ export const MAPS = [
       "election_id_from": "Harris's own app reads election code 1126; resultsbyballot.json says \"General and Special Elections\", November 03, 2026.",
       "tz": "America/Chicago"
     },
+    "polls_close": "2026-11-04T01:00:00Z",
     "count_closes": "2026-11-04T23:00:00Z",
     "complete_marker": null,
     "certify_by": "2026-11-17",
@@ -4753,5 +4756,45 @@ export const MAPS = [
     "unmatched_feed": [],
     "unmatched_guide": [],
     "not_here": []
+  },
+  {
+    "id": "williamson-tx",
+    "state": "TX",
+    "name": "Williamson County",
+    "county": "Williamson",
+    "election": {
+      "date": "2026-11-03",
+      "feed_election_id": "127488",
+      "feed_name": "November 3, 2026 Joint General & Special Elections"
+    },
+    "guide": {
+      "fingerprint": "e3b0c44298fc1c14",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-03T21:30:41.017Z",
+      "places": [
+        "austin-williamson-tx",
+        "round-rock-tx",
+        "pflugerville-tx"
+      ]
+    },
+    "feed": {
+      "adapter": "clarity",
+      "base": "https://results.enr.clarityelections.com/TX/Williamson",
+      "results_url": "https://results.enr.clarityelections.com/TX/Williamson/127488/",
+      "identity": "named",
+      "identity_note": "Answered our named User-Agent on Nov 3, 3:10 PM CT (current_ver.txt, summary.json, electionsettings.json all 200).",
+      "election_id_from": "The site's Official results button (data/results-sources.json on results-lead, Nov 3) and Clarity's electionsettings for 127488: \"November 3, 2026 Joint General & Special Elections\", 11/3/2026. The registry guessed livevoterturnout; Williamson moved to Clarity.",
+      "tz": "America/Chicago"
+    },
+    "polls_close": "2026-11-04T01:00:00Z",
+    "count_closes": "2026-11-04T23:00:00Z",
+    "complete_marker": {
+      "flag": "final_flag",
+      "words": "Clarity's final-upload flag (electiondetails.chkisfinalupload)."
+    },
+    "certify_by": "2026-11-17",
+    "official": null,
+    "contests": [],
+    "unmatched_feed": [],
+    "unmatched_guide": []
   }
 ];

@@ -5,7 +5,9 @@
    Quiet hours from Nov 4, 6 AM in the source's zone: no polls 11 PM to 6 AM local unless it changed in the last hour.
    A source whose items are all complete with its count window closed polls daily.
    Failures back off 2, 5, 15, then 60 minutes; `refused` stops the source until a person changes its map.
-   A source stops for good once official, or once `certify_by` plus three days passes with no change. */
+   A source stops for good once official, or once `certify_by` plus three days passes with no change.
+   Added Nov 3 (builder): before the map's `polls_close` the next poll never lands later than the close, and after it a
+   source with nothing posted yet is polled every minute, so the first numbers are read within a minute of posting. */
 import { localHour } from './util.js';
 
 const MIN = 60_000;
@@ -62,12 +64,14 @@ export function nextEntry(entry = {}, result, now, map = {}) {
     const closed = map.count_closes && Date.parse(now) >= Date.parse(map.count_closes);
     wait = closed && result.allComplete ? 24 * 60 : 6 * 60;
   } else if (result.changed) wait = 1;
+  else if (e.status === 'pending' && map.polls_close && Date.parse(now) >= Date.parse(map.polls_close)) wait = 1;
   else if (quietFor >= 120) wait = 60;
   else if (quietFor >= 30) wait = 15;
   else if (e.unchanged_polls >= 3) wait = 5;
   else wait = 1;
   let next = addMin(now, wait);
   if (result.sourceNext && Date.parse(result.sourceNext) > Date.parse(next)) next = result.sourceNext;
+  if (map.polls_close && Date.parse(now) < Date.parse(map.polls_close) && Date.parse(next) > Date.parse(map.polls_close)) next = new Date(Date.parse(map.polls_close)).toISOString();
   e.next_due = afterQuiet(next, e, tz);
   return e;
 }

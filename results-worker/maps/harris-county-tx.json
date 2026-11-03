@@ -24,6 +24,7 @@
     "election_id_from": "Harris's own app reads election code 1126; resultsbyballot.json says \"General and Special Elections\", November 03, 2026.",
     "tz": "America/Chicago"
   },
+  "polls_close": "2026-11-04T01:00:00Z",
   "count_closes": "2026-11-04T23:00:00Z",
   "complete_marker": null,
   "certify_by": "2026-11-17",

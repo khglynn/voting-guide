@@ -24,6 +24,7 @@
     "election_id_from": "The registry row and Clarity's electionsettings for 127291: \"2026 General Election\", 11/3/2026, 183 contests.",
     "tz": "America/Chicago"
   },
+  "polls_close": "2026-11-04T01:00:00Z",
   "count_closes": "2026-11-04T23:00:00Z",
   "complete_marker": {
     "flag": "final_flag",
@@ -63,7 +64,7 @@
       "seats": 1,
       "choices": {
         "Susan Bayne": "Susan Bayne",
-        "Diana Arévalo": "Diana Arévalo"
+        "Diana Ar\u00e9valo": "Diana Ar\u00e9valo"
       },
       "reaches": [
         "Bexar"
@@ -135,7 +136,7 @@
       "kind": "plurality",
       "seats": 1,
       "choices": {
-        "DEM Erica Peña": "Erica Peña"
+        "DEM Erica Pe\u00f1a": "Erica Pe\u00f1a"
       },
       "reaches": [
         "Bexar"
@@ -1181,7 +1182,7 @@
       "seats": 1,
       "choices": {
         "DEM Jose Menendez": "Jose Menendez",
-        "GRN Julián Villarreal": "Julián Villarreal"
+        "GRN Juli\u00e1n Villarreal": "Juli\u00e1n Villarreal"
       },
       "reaches": [
         "Bexar"

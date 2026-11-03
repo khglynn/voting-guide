@@ -183,7 +183,7 @@ export const doorKey = (): string => keyOf(resultsLead(S.index?.states));
 function resultsPartHTML(lead: ResultsLead, below = false): string {
   const a = (url: string, text: string, cls = ''): string => `<a${cls ? ` class="${cls}"` : ''} href="${esc(url)}" target="_blank" rel="noopener">${esc(text)}</a>`;
   const rows = lead.rows.map((r) => `<li class="res-row${r.url ? '' : ' is-open'}">${r.url ? a(r.url, r.name, 'res-st') : `<span class="res-st">${esc(r.name)}</span>`}<span class="res-src">${esc(r.url ? r.source || 'Official results' : r.open || '')}</span>${r.track ? a(r.track, 'Track your mail ballot', 'res-track') : ''}</li>`).join('');
-  return `${below ? `<h2 class="res-zip-h">Official results by state</h2><p class="res-sub">${esc(lead.sub.slice(1).join(' '))}</p>` : `<h1 class="place res-h">${esc(lead.head)}</h1>
+  return `${below ? `<h2 class="res-zip-h">Official results by state</h2>${lead.sub.slice(1).filter((x) => !/^Already in line/.test(x)).map((x) => `<p class="res-sub">${esc(x)}</p>`).join('')}` : `<h1 class="place res-h">${esc(lead.head)}</h1>
     <p class="res-sub">${esc(lead.sub.join(' '))}</p>`}
     <ul class="res-list" aria-label="Official results by state">${rows}</ul>
     <p class="res-calls">Race calls: ${RACE_CALLS.map((d) => a(d.url, d.name)).join(' · ')}</p>`;

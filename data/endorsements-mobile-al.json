@@ -464,9 +464,9 @@
     "target_id": "al-us-house-1",
     "status": "not_found",
     "choice": null,
-    "why": "ARPAC (state) did not endorse for U.S. House; the same article notes the National Association of Realtors' RPAC backed Jerry Carl.",
+    "why": "ARPAC (state) did not endorse for U.S. House; the same article notes the National Association of Realtors' RPAC backed Jerry Carl. Checked again on Nov 2, 2026; still no pick on this page.",
     "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
-    "date": "2026-10-05",
+    "date": "2026-11-02",
     "confidence": "sourced"
   },
   {
@@ -682,12 +682,12 @@
   {
     "endorser_id": "bca-progresspac",
     "target_id": "al-sd-22",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not listed on BCA's ProgressPAC endorsement page as of Oct. 17, 2026. Checked again on Nov 1, 2026; still no pick on this page.",
+    "status": "endorsed",
+    "choice": "Terry L. Waters",
+    "why": "Listed on BCA's ProgressPAC 2026-cycle endorsement page, added after Oct. 29, 2026.",
     "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
-    "date": "2026-11-01",
-    "confidence": "sourced"
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "bca-progresspac",
@@ -702,12 +702,12 @@
   {
     "endorser_id": "bca-progresspac",
     "target_id": "al-sd-34",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not listed on BCA's ProgressPAC endorsement page as of Oct. 17, 2026. Checked again on Nov 1, 2026; still no pick on this page.",
+    "status": "endorsed",
+    "choice": "Rusty Glover",
+    "why": "Listed on BCA's ProgressPAC 2026-cycle endorsement page, added after Oct. 29, 2026.",
     "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
-    "date": "2026-11-01",
-    "confidence": "sourced"
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "bca-progresspac",

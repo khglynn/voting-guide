@@ -1,0 +1,153 @@
+[
+  {
+    "id": "protec17",
+    "name": "PROTEC17",
+    "short": "PROTEC17",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it “represents nearly 9,000 public employees across Washington and Oregon” (https://www.protec17.org/about-us/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://www.protec17.org/endorsements/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "portland-or",
+      "seattle-wa"
+    ]
+  },
+  {
+    "id": "seiu-775",
+    "name": "SEIU 775",
+    "short": "SEIU 775",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it “represents more than 60,000 long-term care workers providing quality home care, nursing home care, and residential services in Washington, Montana, and Alaska” (https://seiu775.org/about/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://seiu775.org/2026endorsements/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "seattle-wa"
+    ]
+  },
+  {
+    "id": "seiu-925",
+    "name": "SEIU Local 925",
+    "short": "SEIU 925",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it “unites 19,000 people in Washington who work in education from early learning through higher education, as well as members who work in local government and nonprofits” (https://www.seiu925.org/our-union/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://www.seiu925.org/?p=3154",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "seattle-wa"
+    ]
+  },
+  {
+    "id": "ufcw-3000",
+    "name": "UFCW 3000",
+    "short": "UFCW 3000",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it is “over 50,000 members working in grocery, retail, health care, meat packing, cannabis, & other industries across Washington state, north-east Oregon, and northern Idaho” (https://ufcw3000.org/who-we-are). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://ufcw3000.org/endorsements",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "seattle-wa"
+    ]
+  },
+  {
+    "id": "seiu-1199nw",
+    "name": "SEIU Healthcare 1199NW",
+    "short": "SEIU 1199NW",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it is “more than 30,000 nurses, healthcare workers, and behavioral health workers across Washington state united for quality patient and client care and good jobs” (https://www.seiu1199nw.org/about/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://endorsements.seiu1199nw.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "seattle-wa"
+    ]
+  },
+  {
+    "id": "teamsters-117",
+    "name": "Teamsters Local 117",
+    "short": "Teamsters 117",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it “represents 19,000 men and women at 200 employers across Washington State” (https://www.teamsters117.org/who_we_are). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://www.teamsters117.org/endorsements_2026",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "geography": [
+      "seattle-wa"
+    ]
+  },
+  {
+    "id": "wsna",
+    "name": "Washington State Nurses Association",
+    "short": "WSNA",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it is “The leading voice and advocate for nurses in Washington state, providing representation, resources and education” (https://www.wsna.org/about). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://cdn.wsna.org/assets/entry-assets/893445/26-wsna-pac-endorsements.pdf",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "geography": [
+      "seattle-wa"
+    ]
+  },
+  {
+    "id": "wfse",
+    "name": "Washington Federation of State Employees (AFSCME Council 28)",
+    "short": "WFSE",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it is “the largest union for state, higher education and public service employees in the state of Washington” (https://wfse.org/join). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://wfse.org/system/files/2026-10/FOR%20WEBSITE-%202026%20RACES%2010.6.26.pdf",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "seattle-wa"
+    ]
+  },
+  {
+    "id": "aft-washington",
+    "name": "AFT Washington",
+    "short": "AFT Washington",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says “We represent about 6,500 members including faculty from community and technical colleges and pre-K through 12 classified employees” (https://aftwa.org/about-us). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://aftwa.org/endorsements-and-elections",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "seattle-wa"
+    ]
+  },
+  {
+    "id": "uaw-4121",
+    "name": "UAW Local 4121",
+    "short": "UAW 4121",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it is “the union of over 8,000 graduate and undergraduate Academic Student Employees” (https://uaw4121.org/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://uaw4121.org/2026-general-election-endorsements-ballots-are-out/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "seattle-wa"
+    ]
+  }
+]

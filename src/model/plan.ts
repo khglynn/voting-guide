@@ -381,6 +381,9 @@ export function nextStep(h: HowTo, t = todayISO(), absolute = false, now: number
     sub: [PLAIN_TIME.test(ed.polls_open || '') ? `Polls are open ${clock(ed.polls_open)} to ${close}.` : `Polls close at ${close}.`], primary: ed.lookup_url ? { label: 'Find your polling place', url: ed.lookup_url, look: 'election_day' } : null,
   };
 }
+/* Whether a ballot's polls have closed and the page is about results now (Nov 3): the strip's phase, which the bar,
+   the endcap, My plan (retitled What's next) and step 5 (Share the guide) all follow. */
+export const afterPolls = (h: HowTo | null | undefined): boolean => { if (!h) return false; const p = nextStep(h).phase; return p === 'results_counting' || p === 'results_official'; };
 /* Results are official on a ballot (Nov 3) once every results source on it (its counties' and its state's) has a sure
    official-by date and every one of those days has passed. Any source without a sure date keeps the count "coming in":
    the guide never says official early. */

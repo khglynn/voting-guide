@@ -24,7 +24,7 @@ import { addrHTML } from './mast';
 import { messages } from './pass';
 import { openHTML, censusSettles, addressSettles } from './open';
 import { mapCounty, seatless } from '../model/maps';
-import { nextStep } from '../model/plan';
+import { nextStep, afterPolls } from '../model/plan';
 import { nearNow, fmtMiles } from '../model/sites';
 
 /* ---------- names ---------- */
@@ -672,8 +672,9 @@ export function ballotHTML(): string {
     ? `<p class="empty"><b>Nothing left to decide here.</b> Turn off “${HIDE}” to see everything.</p>` : '';
   return `<div class="wrap-led">${ballotHeadHTML()}</div><div class="ledger" aria-labelledby="ballot-h">${secs}${empty}</div>
     <div id="r-off">${offHTML()}</div>
-    <div class="endcap wrap"><h3>That’s your whole ballot.</h3><p>Next, save your plan.</p>
-      <button class="bigbtn" data-act="cheat" data-fk="endcap-cheat">Open my plan</button></div>`;
+    ${afterPolls(S.ballot?.howto) ? `<div class="endcap wrap"><h3>That’s your whole ballot.</h3><p>Next: when the counts become official.</p>
+      <button class="bigbtn" data-act="cheat" data-fk="endcap-cheat">What’s next</button></div>` : `<div class="endcap wrap"><h3>That’s your whole ballot.</h3><p>Next, save your plan.</p>
+      <button class="bigbtn" data-act="cheat" data-fk="endcap-cheat">Open my plan</button></div>`}`;
 }
 
 /* ---------- the bottom bar ----------
@@ -691,16 +692,25 @@ export function barHTML(): string {
   if (S.ui.view !== 'ballot') {
     const last = S.ui.view === 'pass';
     const go = last ? (messages().fam ? '<button class="fcta" data-act="share-guide" data-fk="bar-share">Share the guide</button>' : '')
-      : '<button class="fcta" data-act="view" data-v="pass" data-fk="bar-pass">Help friends vote</button>';
+      : `<button class="fcta" data-act="view" data-v="pass" data-fk="bar-pass">${afterPolls(S.ballot.howto) ? 'Share the guide' : 'Help friends vote'}</button>`;
     return `<div class="foot screen-only" role="region" aria-label="Navigation"><div class="foot-in two">
-      <button class="ftog" data-act="view" data-v="${last ? 'cheat' : 'ballot'}" data-fk="bar-back">${last ? 'Back to my plan' : 'Back to the ballot'}</button>
+      <button class="ftog" data-act="view" data-v="${last ? 'cheat' : 'ballot'}" data-fk="bar-back">${last ? (afterPolls(S.ballot.howto) ? 'Back to What’s next' : 'Back to my plan') : 'Back to the ballot'}</button>
       ${go}</div></div>`;
+  }
+  const rail = wide() ? `<nav class="rail screen-only" aria-label="Your ballot" data-keep="rail">${menuHTML('rail')}</nav>` : '';
+  // Once the polls close (Nov 3, results Phase 0): no count of decided races and no time, since there are no numbers
+  // on the rows yet ("≡ Results"), and What's next where My plan was. `data-results` marks the bar for the tests.
+  if (afterPolls(S.ballot.howto)) {
+    return `${rail}<div class="foot screen-only" role="region" aria-label="Results" data-results>
+    <div class="foot-in ends">
+      <button class="menu-btn" data-act="toc" aria-haspopup="dialog" data-fk="bar-menu">${BURGER}<span class="bar-txt">Results</span></button>
+      <button class="fcta" data-act="cheat" data-fk="bar-cheat">What’s next</button>
+    </div></div>`;
   }
   // The one counting rule (ballot.ts): a district question is one race until it's answered.
   const items = decisionItems();
   const done = items.filter((i) => i.done).length;
   const pct = items.length ? Math.round((done / items.length) * 100) : 0;
-  const rail = wide() ? `<nav class="rail screen-only" aria-label="Your ballot" data-keep="rail">${menuHTML('rail')}</nav>` : '';
   // The gold of what you've decided runs along the bottom edge of the screen (Kevin, Oct 21: under
   // the bar's torn top it hung in the air).
   return `${rail}<div class="foot screen-only" role="region" aria-label="Your progress">
@@ -744,11 +754,11 @@ export function menuHTML(where: 'toc' | 'rail'): string {
     return row(`data-act="jump" data-to="${k}"`, k, sectionTitle(k), !t.total ? '' : t.done === t.total ? 'Done' : `${t.total - t.done} left`);
   }).join('');
   return `${next}<ul class="nv-list">
-    ${row('data-act="jump" data-to="plan"', 'plan', 'Your next step')}
+    ${row('data-act="jump" data-to="plan"', 'plan', afterPolls(S.ballot?.howto) ? 'Official results' : 'Your next step')}
     ${row('data-act="picks"', 'picks', 'Quick picks')}</ul>
     ${only}<ul class="nv-list nv-secs">
     ${secs}
-    ${row('data-act="cheat"', 'cheat', 'My plan', '', ' nv-plan')}</ul>
+    ${row('data-act="cheat"', 'cheat', afterPolls(S.ballot?.howto) ? 'What’s next' : 'My plan', '', ' nv-plan')}</ul>
     <ul class="nv-list nv-end"><li><button class="nv nv-report" ${reportAttrs({ fk: `${where}-report` })}><span class="nv-t">Report a problem</span><span class="nv-n"></span>${ARROW}</button></li>
     ${row('data-act="shelf" data-kind="how" aria-haspopup="dialog"', 'how', 'How this guide works', '', ' nv-how')}</ul>`;
 }

@@ -8,7 +8,7 @@
    or this place's own where-to-vote page. */
 import { S } from '../state';
 import { esc, fmtDate, todayISO, host } from '../util';
-import { clock, isMailState, localHowto, nextStep } from '../model/plan';
+import { clock, isMailState, localHowto, nextStep, afterPolls } from '../model/plan';
 import { ext, isOpen } from './common';
 import { countyName } from './ledger';
 import { trustHTML } from './trust';
@@ -75,12 +75,29 @@ export const SHARE_TITLE = 'Quickly make your voting plan.';
    instead, so a text never shows it twice. A message worded some other way goes as written. */
 export function shareData(fam: string): { title: string; text: string; url?: string } {
   const at = new RegExp(`:\\s*${GUIDE_URL.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&')}(?=\\n|$)`);
-  return at.test(fam) ? { title: SHARE_TITLE, text: fam.replace(at, '.'), url: GUIDE_URL } : { title: SHARE_TITLE, text: fam };
+  const title = S.ballot && afterPolls(S.ballot.howto) ? 'See how your ballot landed.' : SHARE_TITLE;
+  return at.test(fam) ? { title, text: fam.replace(at, '.'), url: GUIDE_URL } : { title, text: fam };
+}
+
+/* Once the polls close (Nov 3, results Phase 0; the mock-up's Share the guide): the friends message links the guide
+   itself, never a save link, which would send your picks; the groups message keeps its official-links-only rule, with
+   the state's results page, the county's when this ballot's button opens one, and the ballot tracker. */
+function resultsMessages(): { fam: string; pub: string } {
+  const b = S.ballot!;
+  const h = b.howto;
+  const sh = b.stateHowto;
+  const fam = `See how your ballot landed: ${GUIDE_URL}\nIt links the official results for your city, beside the picks you made. Every number is unofficial until it’s made official.`;
+  const lines = [`Election results for ${b.stateName} are coming in.`, ''];
+  if (sh.results_url) lines.push(`Official results for ${b.stateName}: ${sh.results_url}`);
+  if (h.results_url && h.results_url !== sh.results_url) lines.push(`${h.results_source || 'Your county'} results: ${h.results_url}`);
+  if (h.mail_ballot.tracking_url) lines.push(`Voted by mail? Check that your ballot was counted: ${h.mail_ballot.tracking_url}`);
+  return { fam, pub: lines.join('\n') };
 }
 
 export function messages(): { fam: string | null; pub: string | null } {
   const b = S.ballot!;
   const h = b.howto;
+  if (afterPolls(h)) return resultsMessages();
   const voted = S.ui.open.has('voted');
   const famBody = fillTemplate(involved?.messages?.friends_family?.template || FAM, { guide_url: GUIDE_URL }, ['guide_url']);
   const fam = famBody && voted ? `I just voted! ${famBody}` : famBody;
@@ -204,6 +221,15 @@ export function passHTML(): string {
   const msg = (k: 'fam' | 'pub', text: string | null) => (text
     ? `<div class="msg"><p id="msg-${k}">${esc(text)}</p><button class="copy" data-act="copy-msg" data-k="${k}" data-fk="copy-${k}">${COPY}Copy message</button></div>`
     : '<p class="small">This message isn’t ready for your state yet.</p>');
+  if (afterPolls(S.ballot!.howto)) {
+    return `<section class="pass" id="pass" aria-labelledby="pass-h"><div class="wrap">
+    <button class="back" data-act="view" data-v="cheat" data-fk="pass-back">Back to What’s next</button>
+    <div class="step pass-step"><span class="step-n" aria-hidden="true">5</span><h2 id="pass-h">Share the guide</h2></div>
+    <p class="lede">Send it to people who used the guide, so they can see how their ballot landed.</p>
+    <div class="msgs fam"><h4>For friends, family and public posts</h4><p class="rule">Includes a link to this guide, not your picks.</p>${msg('fam', m.fam)}</div>
+    <div class="msgs pub"><h4>For work, school and neighborhood groups</h4><p class="rule">Official links only. No link to this guide, so it stays nonpartisan.</p>${msg('pub', m.pub)}</div>
+  </div>${trustHTML()}<div class="crowd" aria-hidden="true"></div></section>`;
+  }
   return `<section class="pass" id="pass" aria-labelledby="pass-h"><div class="wrap">
     <button class="back" data-act="view" data-v="cheat" data-fk="pass-back">Back to my plan</button>
     ${voted ? '<div class="voted-head"><p class="kick">You voted. Thank you.</p></div>' : ''}

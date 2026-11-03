@@ -124,7 +124,7 @@ function doorHTML(): string {
     ${PILE}
   </header>`;
 }
-function padHTML(saved: boolean): string {
+function padHTML(saved: boolean, picks = true): string {
   return `<div class="pad door" id="door">
       <span class="sheet-top" aria-hidden="true"></span><span class="sheet-fill" aria-hidden="true"></span><span class="sheet-bot" aria-hidden="true"></span>
       ${saved ? `<div data-part="saved">${savedLineHTML()}</div>` : ''}
@@ -133,7 +133,7 @@ function padHTML(saved: boolean): string {
         ${zipRowHTML()}
       </form>
       <div class="door-where" data-part="where">${whereHTML()}</div>
-      <div class="door-picks" id="setup" data-part="picks">${S.tryMode ? '' : doorPicksHTML()}</div>
+      ${picks ? `<div class="door-picks" id="setup" data-part="picks">${S.tryMode ? '' : doorPicksHTML()}</div>` : ''}
       <button class="bigbtn" data-act="setup-done" data-fk="setup-done">Show my ballot</button>
     </div>`;
 }
@@ -145,13 +145,23 @@ const zipRowHTML = (): string => `<div class="zip-row"><input class="zip-input" 
    sheet follows, under "Your ballot and local results"; once every one has closed, the page is results, mail
    ballot tracking and your saved ballot, and the ZIP is one quiet line under the list. */
 function resultsDoorHTML(lead: ResultsLead): string {
-  const zip = lead.after
-    ? `<div class="door-after">
-      <form class="zipform" data-form="zip" novalidate><label for="zip" class="res-zip-l">See your ballot and county results</label>${zipRowHTML()}</form>
-      <div class="door-where" data-part="where">${whereHTML()}</div>
-      <p class="row-btns"><button class="mini dark" data-act="setup-done" data-fk="setup-done">Show my ballot</button></p>
-    </div>`
-    : `<h2 class="res-zip-h">Your ballot and local results</h2>${padHTML(false)}`;
+  // Once every covered state has closed (the last at 8 PM Pacific), the design's first page (Nov 3, results Phase 0):
+  // "See how your ballot landed.", the ZIP sheet with step 2 folded away (a new ballot goes straight to the ballot,
+  // where Edit and the sources sheet still open; nothing fills, doorFills), then each state's official results under
+  // it for anyone whose city the guide doesn't cover.
+  if (lead.after) {
+    const ticks = ['Plain English', 'Official results for your city', 'Your picks beside them'];
+    return `<header class="mast front res res-after wrap" data-door="after">${tryBanner()}
+    <div class="mast-top" data-part="kicker"><p class="dateline">${esc(`Polls have closed. ${lead.head}`)}</p></div>
+    <h1 class="place">See how your ballot landed.</h1>
+    <ul class="ticks">${ticks.map((t) => `<li><i aria-hidden="true"></i>${esc(t)}</li>`).join('')}</ul>
+    ${padHTML(true, false)}
+    <div data-part="results">${resultsPartHTML(lead, true)}</div>
+    <div class="door-foot" data-part="fine">${trustHTML(true)}</div>
+    ${PILE}
+  </header>`;
+  }
+  const zip = `<h2 class="res-zip-h">Your ballot and local results</h2>${padHTML(false)}`;
   return `<header class="mast front res wrap" data-door="${lead.after ? 'after' : 'results'}">${tryBanner()}
     <div class="mast-top" data-part="kicker"><p class="dateline">${esc(dateline())}</p></div>
     <div data-part="results">${resultsPartHTML(lead)}</div>
@@ -170,11 +180,11 @@ export let doorShown: string | null = null;
    saved ballot got newspaper picks they never saw offered (review, Nov 3). */
 export const doorFills = (): boolean => S.door.fill && !S.tryMode && !resultsLead(S.index?.states)?.after;
 export const doorKey = (): string => keyOf(resultsLead(S.index?.states));
-function resultsPartHTML(lead: ResultsLead): string {
+function resultsPartHTML(lead: ResultsLead, below = false): string {
   const a = (url: string, text: string, cls = ''): string => `<a${cls ? ` class="${cls}"` : ''} href="${esc(url)}" target="_blank" rel="noopener">${esc(text)}</a>`;
   const rows = lead.rows.map((r) => `<li class="res-row${r.url ? '' : ' is-open'}">${r.url ? a(r.url, r.name, 'res-st') : `<span class="res-st">${esc(r.name)}</span>`}<span class="res-src">${esc(r.url ? r.source || 'Official results' : r.open || '')}</span>${r.track ? a(r.track, 'Track your mail ballot', 'res-track') : ''}</li>`).join('');
-  return `<h1 class="place res-h">${esc(lead.head)}</h1>
-    <p class="res-sub">${esc(lead.sub.join(' '))}</p>
+  return `${below ? `<h2 class="res-zip-h">Official results by state</h2><p class="res-sub">${esc(lead.sub.slice(1).join(' '))}</p>` : `<h1 class="place res-h">${esc(lead.head)}</h1>
+    <p class="res-sub">${esc(lead.sub.join(' '))}</p>`}
     <ul class="res-list" aria-label="Official results by state">${rows}</ul>
     <p class="res-calls">Race calls: ${RACE_CALLS.map((d) => a(d.url, d.name)).join(' · ')}</p>`;
 }

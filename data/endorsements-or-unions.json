@@ -311,16 +311,6 @@
   },
   {
     "endorser_id": "aft-oregon",
-    "target_id": "portland-26-267",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its 2026 general election voter's guide on Nov 2, 2026; no pick for this contest was listed.",
-    "url": "https://or.aft.org/political-legislative-news/2026-general-election-voters-guide",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "aft-oregon",
     "target_id": "portland-auditor",
     "status": "not_found",
     "choice": null,
@@ -345,16 +335,6 @@
     "status": "endorsed",
     "choice": "Mitch Green",
     "why": "Listed for District 4 among its matching local union endorsements.",
-    "url": "https://or.aft.org/political-legislative-news/2026-general-election-voters-guide",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "aft-oregon",
-    "target_id": "reynolds-sd-26-268",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its 2026 general election voter's guide on Nov 2, 2026; no pick for this contest was listed.",
     "url": "https://or.aft.org/political-legislative-news/2026-general-election-voters-guide",
     "date": "2026-11-02",
     "confidence": "verified"
@@ -731,16 +711,6 @@
   },
   {
     "endorser_id": "ibew-local-48",
-    "target_id": "portland-26-267",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its 2026 Oregon election endorsements on Nov 2, 2026; no pick for this contest was listed.",
-    "url": "https://www.ibew48.com/about/political-conversations/",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "ibew-local-48",
     "target_id": "portland-auditor",
     "status": "not_found",
     "choice": null,
@@ -765,16 +735,6 @@
     "status": "endorsed",
     "choice": "Eric Zimmerman, Olivia Clark",
     "why": "Listed in its 2026 Oregon election endorsements.",
-    "url": "https://www.ibew48.com/about/political-conversations/",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "ibew-local-48",
-    "target_id": "reynolds-sd-26-268",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its 2026 Oregon election endorsements on Nov 2, 2026; no pick for this contest was listed.",
     "url": "https://www.ibew48.com/about/political-conversations/",
     "date": "2026-11-02",
     "confidence": "verified"
@@ -1151,16 +1111,6 @@
   },
   {
     "endorser_id": "north-coast-carpenters-or",
-    "target_id": "portland-26-267",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its 2026 Oregon voter guide on Nov 2, 2026; no pick for this contest was listed.",
-    "url": "https://www.ncscarpenters.org/images/ORCandidates_Voter_Guide.pdf",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "north-coast-carpenters-or",
     "target_id": "portland-auditor",
     "status": "not_found",
     "choice": null,
@@ -1185,16 +1135,6 @@
     "status": "endorsed",
     "choice": "Olivia Clark, Eric Zimmerman, Mitch Green",
     "why": "Listed in its 2026 Oregon voter guide.",
-    "url": "https://www.ncscarpenters.org/images/ORCandidates_Voter_Guide.pdf",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "north-coast-carpenters-or",
-    "target_id": "reynolds-sd-26-268",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its 2026 Oregon voter guide on Nov 2, 2026; no pick for this contest was listed.",
     "url": "https://www.ncscarpenters.org/images/ORCandidates_Voter_Guide.pdf",
     "date": "2026-11-02",
     "confidence": "verified"
@@ -1921,16 +1861,6 @@
   },
   {
     "endorser_id": "ofnhp",
-    "target_id": "portland-26-267",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its 2026 endorsed candidates on Nov 2, 2026; no pick for this contest was listed.",
-    "url": "https://ofnhp.aft.org/news/its-time-vote-our-midterms",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "ofnhp",
     "target_id": "portland-auditor",
     "status": "not_found",
     "choice": null,
@@ -1952,16 +1882,6 @@
   {
     "endorser_id": "ofnhp",
     "target_id": "portland-council-4",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its 2026 endorsed candidates on Nov 2, 2026; no pick for this contest was listed.",
-    "url": "https://ofnhp.aft.org/news/its-time-vote-our-midterms",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "ofnhp",
-    "target_id": "reynolds-sd-26-268",
     "status": "not_found",
     "choice": null,
     "why": "Checked its 2026 endorsed candidates on Nov 2, 2026; no pick for this contest was listed.",
@@ -2741,16 +2661,6 @@
   },
   {
     "endorser_id": "oregon-afscme",
-    "target_id": "portland-26-267",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
-    "url": "https://www.politicalaction.oregonafscme.org/elections2026",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "oregon-afscme",
     "target_id": "portland-auditor",
     "status": "endorsed",
     "choice": "Simone Rede",
@@ -2775,16 +2685,6 @@
     "status": "endorsed",
     "choice": "Olivia Clark, Jamey Evenstar, Mitch Green, Eric Zimmerman",
     "why": "It lists four names for the three seats, in this order.",
-    "url": "https://www.politicalaction.oregonafscme.org/elections2026",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "oregon-afscme",
-    "target_id": "reynolds-sd-26-268",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
     "url": "https://www.politicalaction.oregonafscme.org/elections2026",
     "date": "2026-11-02",
     "confidence": "verified"
@@ -3161,16 +3061,6 @@
   },
   {
     "endorser_id": "oregon-education-association",
-    "target_id": "portland-26-267",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its 2026 OEA-PAC endorsements on Nov 2, 2026; no pick for this contest was listed.",
-    "url": "https://oregoned.org/2026recommendations",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "oregon-education-association",
     "target_id": "portland-auditor",
     "status": "not_found",
     "choice": null,
@@ -3192,16 +3082,6 @@
   {
     "endorser_id": "oregon-education-association",
     "target_id": "portland-council-4",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its 2026 OEA-PAC endorsements on Nov 2, 2026; no pick for this contest was listed.",
-    "url": "https://oregoned.org/2026recommendations",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "oregon-education-association",
-    "target_id": "reynolds-sd-26-268",
     "status": "not_found",
     "choice": null,
     "why": "Checked its 2026 OEA-PAC endorsements on Nov 2, 2026; no pick for this contest was listed.",
@@ -3581,16 +3461,6 @@
   },
   {
     "endorser_id": "oregon-state-fire-fighters-council",
-    "target_id": "portland-26-267",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
-    "url": "https://www.osffc.org/docs/2026endorsements.general.pdf",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "oregon-state-fire-fighters-council",
     "target_id": "portland-auditor",
     "status": "not_found",
     "choice": null,
@@ -3612,16 +3482,6 @@
   {
     "endorser_id": "oregon-state-fire-fighters-council",
     "target_id": "portland-council-4",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
-    "url": "https://www.osffc.org/docs/2026endorsements.general.pdf",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "oregon-state-fire-fighters-council",
-    "target_id": "reynolds-sd-26-268",
     "status": "not_found",
     "choice": null,
     "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
@@ -4001,16 +3861,6 @@
   },
   {
     "endorser_id": "osea",
-    "target_id": "portland-26-267",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its 2026 nonpartisan endorsements on Nov 2, 2026; no pick for this contest was listed.",
-    "url": "https://www.osea.org/news-releases/election-2026-oseas-nonpartisan-endorsements/",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "osea",
     "target_id": "portland-auditor",
     "status": "not_found",
     "choice": null,
@@ -4032,16 +3882,6 @@
   {
     "endorser_id": "osea",
     "target_id": "portland-council-4",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its 2026 nonpartisan endorsements on Nov 2, 2026; no pick for this contest was listed.",
-    "url": "https://www.osea.org/news-releases/election-2026-oseas-nonpartisan-endorsements/",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "osea",
-    "target_id": "reynolds-sd-26-268",
     "status": "not_found",
     "choice": null,
     "why": "Checked its 2026 nonpartisan endorsements on Nov 2, 2026; no pick for this contest was listed.",
@@ -4421,16 +4261,6 @@
   },
   {
     "endorser_id": "pccffap",
-    "target_id": "portland-26-267",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its 2026 General Election endorsements on Nov 2, 2026; no pick for this contest was listed.",
-    "url": "https://pccffap.org/pccffap-political-and-legislative-action-committee-plac/",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "pccffap",
     "target_id": "portland-auditor",
     "status": "not_found",
     "choice": null,
@@ -4455,16 +4285,6 @@
     "status": "endorsed",
     "choice": "Mitch Green",
     "why": "Listed in its 2026 General Election endorsements.",
-    "url": "https://pccffap.org/pccffap-political-and-legislative-action-committee-plac/",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "pccffap",
-    "target_id": "reynolds-sd-26-268",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its 2026 General Election endorsements on Nov 2, 2026; no pick for this contest was listed.",
     "url": "https://pccffap.org/pccffap-political-and-legislative-action-committee-plac/",
     "date": "2026-11-02",
     "confidence": "verified"
@@ -4841,16 +4661,6 @@
   },
   {
     "endorser_id": "portland-association-of-teachers",
-    "target_id": "portland-26-267",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its PAT PAC endorsements for November 2026 on Nov 2, 2026; no pick for this contest was listed.",
-    "url": "https://www.pdxteachers.org/pat_pac_endorsements_11_26",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "portland-association-of-teachers",
     "target_id": "portland-auditor",
     "status": "not_found",
     "choice": null,
@@ -4875,16 +4685,6 @@
     "status": "endorsed",
     "choice": "Mitch Green, Jamey Evenstar",
     "why": "Listed for District 4 in its November 2026 endorsements.",
-    "url": "https://www.pdxteachers.org/pat_pac_endorsements_11_26",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "portland-association-of-teachers",
-    "target_id": "reynolds-sd-26-268",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its PAT PAC endorsements for November 2026 on Nov 2, 2026; no pick for this contest was listed.",
     "url": "https://www.pdxteachers.org/pat_pac_endorsements_11_26",
     "date": "2026-11-02",
     "confidence": "verified"
@@ -6521,16 +6321,6 @@
   },
   {
     "endorser_id": "seiu-oregon",
-    "target_id": "portland-26-267",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
-    "url": "https://seiu-oregon.org/2026-general-election-endorsements/",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "seiu-oregon",
     "target_id": "portland-auditor",
     "status": "not_found",
     "choice": null,
@@ -6555,16 +6345,6 @@
     "status": "endorsed",
     "choice": "Mitch Green, Eric Zimmerman, Olivia Clark",
     "why": "Lists these three for District 4 in its 2026 general election endorsements.",
-    "url": "https://seiu-oregon.org/2026-general-election-endorsements/",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "seiu-oregon",
-    "target_id": "reynolds-sd-26-268",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
     "url": "https://seiu-oregon.org/2026-general-election-endorsements/",
     "date": "2026-11-02",
     "confidence": "verified"
@@ -6941,16 +6721,6 @@
   },
   {
     "endorser_id": "ufcw-555",
-    "target_id": "portland-26-267",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
-    "url": "https://www.ufcw555.org/endorsements/",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "ufcw-555",
     "target_id": "portland-auditor",
     "status": "not_found",
     "choice": null,
@@ -6975,16 +6745,6 @@
     "status": "endorsed",
     "choice": "Eric Zimmerman, Olivia Clark",
     "why": "Listed in its 2026 general election endorsements.",
-    "url": "https://www.ufcw555.org/endorsements/",
-    "date": "2026-11-02",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "ufcw-555",
-    "target_id": "reynolds-sd-26-268",
-    "status": "not_found",
-    "choice": null,
-    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
     "url": "https://www.ufcw555.org/endorsements/",
     "date": "2026-11-02",
     "confidence": "verified"

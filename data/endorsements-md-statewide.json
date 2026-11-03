@@ -422,62 +422,60 @@
   {
     "endorser_id": "mddc-afl-cio",
     "target_id": "md-governor",
-    "status": "not_found",
-    "choice": null,
-    "why": "The federation's 2026 slate is an embedded table we could not read. The earlier source, the Moore campaign's endorsement page, is its 2022 list, so it does not show a 2026 endorsement.",
-    "url": null,
-    "date": null,
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Wes Moore and Aruna Miller",
+    "why": "Listed in its 2026 MDDC Labor Endorsements.",
+    "url": "https://mddclabor.org/endorsements-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "mddc-afl-cio",
     "target_id": "md-comptroller",
-    "status": "not_found",
-    "choice": null,
-    "why": "We did not find a position from this group.",
-    "url": null,
-    "date": null,
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Brooke Elizabeth Lierman",
+    "why": "Listed in its 2026 MDDC Labor Endorsements.",
+    "url": "https://mddclabor.org/endorsements-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "mddc-afl-cio",
     "target_id": "md-attorney-general",
-    "status": "not_found",
-    "choice": null,
-    "why": "We did not find a position from this group.",
-    "url": null,
-    "date": null,
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Anthony G. Brown",
+    "why": "Listed in its 2026 MDDC Labor Endorsements.",
+    "url": "https://mddclabor.org/endorsements-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "mddc-afl-cio",
     "target_id": "md-retention-friedman",
     "status": "not_found",
-    "choice": null,
-    "why": "No position on this retention question found.",
-    "url": null,
-    "date": null,
-    "confidence": "sourced"
+    "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+    "url": "https://mddclabor.org/endorsements-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "mddc-afl-cio",
     "target_id": "md-question-1",
     "status": "endorsed",
-    "choice": "FOR",
-    "why": "Labor Votes page: 'Question 1: Strengthening Collective Bargaining for Maryland State Workers.'",
+    "choice": "YES",
+    "why": "Its Oct 6, 2026 post says “This November, vote FOR Question 1.”",
     "url": "https://mddclabor.org/laborvotes/question-1-strengthening-collective-bargaining-maryland-state-workers",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
     "endorser_id": "mddc-afl-cio",
     "target_id": "md-question-2",
     "status": "not_found",
-    "choice": null,
-    "why": "We did not find a position from this group.",
-    "url": null,
-    "date": null,
-    "confidence": "unverified"
+    "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+    "url": "https://mddclabor.org/endorsements-2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "mddc-afl-cio",
@@ -494,70 +492,67 @@
     "target_id": "md-governor",
     "status": "endorsed",
     "choice": "Wes Moore and Aruna Miller",
-    "why": "MSEA's Representative Assembly voted to back Moore's reelection with 89% of delegates, citing his school funding and work on the educator shortage.",
-    "url": "https://smnewsnet.com/archives/552713/governor-comptroller-attorney-general-receive-76000-educators-support-at-maryland-state-education-association/",
-    "date": "2025-10-21",
-    "confidence": "sourced"
+    "why": "Listed on its Maryland Apple Ballot for Baltimore City, the general election voter guide.",
+    "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "md-state-education-association",
     "target_id": "md-comptroller",
     "status": "endorsed",
     "choice": "Brooke Elizabeth Lierman",
-    "why": "MSEA's Representative Assembly voted to back Lierman's reelection with 95% of delegates, citing her work to close the tax gap.",
-    "url": "https://smnewsnet.com/archives/552713/governor-comptroller-attorney-general-receive-76000-educators-support-at-maryland-state-education-association/",
-    "date": "2025-10-21",
-    "confidence": "sourced"
+    "why": "Listed on its Maryland Apple Ballot for Baltimore City, the general election voter guide.",
+    "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "md-state-education-association",
     "target_id": "md-attorney-general",
     "status": "endorsed",
     "choice": "Anthony G. Brown",
-    "why": "MSEA's Representative Assembly voted to back Brown's reelection with 95% of delegates, citing his defense of school funding.",
-    "url": "https://smnewsnet.com/archives/552713/governor-comptroller-attorney-general-receive-76000-educators-support-at-maryland-state-education-association/",
-    "date": "2025-10-21",
-    "confidence": "sourced"
+    "why": "Listed on its Maryland Apple Ballot for Baltimore City, the general election voter guide.",
+    "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "md-state-education-association",
     "target_id": "md-retention-friedman",
     "status": "not_found",
-    "choice": null,
-    "why": "No position on this retention question found.",
-    "url": null,
-    "date": null,
-    "confidence": "sourced"
+    "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+    "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "md-state-education-association",
     "target_id": "md-question-1",
-    "status": "not_found",
-    "choice": null,
-    "why": "We did not find a position from this group.",
-    "url": null,
-    "date": null,
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Its Apple Ballot says “YES/FOR on Question 1.”",
+    "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "md-state-education-association",
     "target_id": "md-question-2",
     "status": "not_found",
-    "choice": null,
-    "why": "We did not find a position from this group.",
-    "url": null,
-    "date": null,
-    "confidence": "unverified"
+    "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+    "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "md-state-education-association",
     "target_id": "md-question-3",
     "status": "not_found",
-    "choice": null,
-    "why": "We did not find a position from this group.",
-    "url": null,
-    "date": null,
-    "confidence": "unverified"
+    "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+    "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "md-chamber-of-commerce",

@@ -211,9 +211,11 @@
     "lean": "lean_left",
     "lean_basis": "Healthcare workers' union whose stated mission is 'to stand up for quality healthcare, good jobs and social justice for all' (https://www.1199seiu.org/about). No outside rating found; lean reflects its stated mission.",
     "geography": [
-      "baltimore-md"
+      "baltimore-md",
+      "MD",
+      "DC"
     ],
-    "guide_url": "https://www.thebanner.com/education/k-12-schools/city-board-of-school-commissioners-candidates-2JJ4A3LXOREHXG6X6NU6X6ZJ4M/",
+    "guide_url": "https://www.1199seiu.org/maryland_dc/mddc-general-election-date-november-3",
     "default_on": false,
     "endorses_candidates": true,
     "endorses_measures": false,

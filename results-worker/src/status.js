@@ -14,11 +14,12 @@ export async function statusPage({ store, maps, now = new Date().toISOString() }
     const rec = await store.get(`src:${m.id}`).then((v) => (v ? JSON.parse(v) : null));
     const checked = (await store.get(`checked:${m.id}`)) === (await mapHash(m));
     const fp = sched.meta?.fp?.[m.id];
-    const read = rec?.read;
+    const blockedRec = await store.get(`blocked:${m.id}`).then((v) => (v ? JSON.parse(v) : null));
+    const read = rec?.read || blockedRec?.read;
     const contests = read?.contests?.length ?? 0;
     const votes = read ? read.contests.reduce((a, c) => a + c.choices.reduce((x, ch) => x + (Number(ch.votes) || 0), 0), 0) : 0;
     const state = s.stopped ? `stopped: ${s.stopped}` : s.failing_since ? `failing since ${ct(s.failing_since)}` : (s.status || 'not read yet');
-    const problems = (rec?.problems || []).map((p) => p.reason);
+    const problems = [...(rec?.problems || []), ...(rec?.blocked ? blockedRec?.problems || [] : [])].map((p) => p.detail || p.reason);
     rows.push(`<li><b>${esc(m.name)}</b> <span class="id">${esc(m.id)} · ${esc(m.feed.adapter)}${m.feed.identity === 'browser' ? ' · browser identity' : ''}</span><br>
       ${esc(state)}${rec?.blocked ? ' · <b>election mismatch: links only</b>' : ''} · ${checked ? '<b>checked</b>' : 'not checked yet (preview only)'}${fp === 'mismatch' ? ' · <b>map out of date</b>' : ''}<br>
       read ${esc(ct(s.last_ok) || 'never')} · source updated ${esc(ct(read?.source_updated) || 'n/a')} · next ${esc(s.next_due ? ct(s.next_due) : s.stopped ? 'none' : 'now')}<br>

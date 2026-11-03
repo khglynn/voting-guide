@@ -58,7 +58,7 @@ export async function read({ fetch, map, prevToken = null }) {
     verdict: 'ok',
     changed_token: ver,
     raw: { 'current_ver.txt': ver, 'summary.json': s.body, 'electionsettings.json': e.body },
-    election: { id: String(map.election.feed_election_id), name: String(details.internalname || '').trim(), date: isoDate(details.electiondate) },
+    election: { id: details.electionid === undefined || details.electionid === null ? null : String(details.electionid), name: String(details.internalname || '').trim(), date: isoDate(details.electiondate) },
     source_status: details.chkisfinalupload === true || details.chkisfinalupload === 'true' ? 'final_flag' : null,
     official: false,
     source_updated: parseUsTime(e.json?.websiteupdatedat),

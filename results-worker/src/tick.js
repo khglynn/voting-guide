@@ -27,7 +27,9 @@ async function runSource({ map, fetch, store, archive, sched, now, ping }) {
   const S = sched.sources;
   const prevRec = await readJson(store, `src:${map.id}`);
   let r;
-  try { r = await adapter.read({ fetch, map, prevToken: S[map.id]?.token || null }); } catch (e) { r = { verdict: 'error', error: `adapter threw: ${e.message}` }; }
+  const mh = await mapHash(map);
+  const prevToken = S[map.id]?.token && S[map.id]?.map_hash === mh ? S[map.id].token : null;
+  try { r = await adapter.read({ fetch, map, prevToken }); } catch (e) { r = { verdict: 'error', error: `adapter threw: ${e.message}` }; }
   if (r.verdict === 'refused') {
     S[map.id] = nextEntry(S[map.id], { kind: 'refused', error: r.error }, now, map);
     await ping(map.id, 'refused', `${map.name} refused our request (${r.error}). It stops until its map changes; its rows link out.`);
@@ -40,13 +42,16 @@ async function runSource({ map, fetch, store, archive, sched, now, ping }) {
     return { id: map.id, outcome: 'error', error: r.error };
   }
   if (r.unchanged) {
-    const status = prevRec ? sourceStatus(prevRec.read, map, now) : S[map.id]?.status;
+    const status = prevRec?.read ? sourceStatus(prevRec.read, map, now) : S[map.id]?.status;
     S[map.id] = nextEntry(S[map.id], { kind: 'ok', changed: false, status, allComplete: status === 'complete' }, now, map);
     S[map.id].token = r.changed_token;
+    S[map.id].map_hash = mh;
     return { id: map.id, outcome: 'unchanged' };
   }
   const { raw, ...read } = r;
-  const check = checkRead(read, map, prevRec?.read || null);
+  // The falling-total baseline is the last good read, never a blocked one (security review, Nov 3).
+  const baseline = prevRec && !prevRec.blocked_only ? prevRec.read : null;
+  const check = checkRead(read, map, baseline);
   const hash = (await sha256(JSON.stringify(raw || read))).slice(0, 12);
   if (archive) await archive.put(`raw/${map.id}/${now}-${hash}.json`, JSON.stringify({ fetched: now, source: map.id, election: read.election, raw }));
   if (check.readBlocked) {
@@ -54,16 +59,27 @@ async function runSource({ map, fetch, store, archive, sched, now, ping }) {
     await ping(map.id, 'bad numbers', `${map.name}: ${check.problems[0].detail}. Kept the last good read.`);
     return { id: map.id, outcome: 'bad numbers', problems: check.problems };
   }
-  const rec = { read, fetched: now, blocked: check.sourceBlocked, problems: check.problems, raw_key: `raw/${map.id}/${now}-${hash}.json` };
-  await store.put(`src:${map.id}`, JSON.stringify(rec));
-  for (const p of check.problems) {
-    if (p.reason === 'election mismatch') await ping(map.id, 'election mismatch', `${map.name}: ${p.detail}. Its rows link out until the map is fixed.`);
-    if (p.reason === 'falling total') await ping(map.id, 'falling total', `${map.name}: ${p.detail}.`);
+  if (check.sourceBlocked) {
+    // Keep the last good read untouched as the baseline; mark the source blocked so its rows link out, and keep the
+    // blocked attempt under its own key for the status page. No token is saved, so every poll re-reads in full and a
+    // fixed map (or a feed that comes back to the right election) clears the block on its own.
+    await store.put(`blocked:${map.id}`, JSON.stringify({ read, fetched: now, problems: check.problems, raw_key: `raw/${map.id}/${now}-${hash}.json` }));
+    const kept = prevRec && !prevRec.blocked_only ? { ...prevRec, blocked: true, blocked_at: now } : { read: null, fetched: null, blocked: true, blocked_only: true, blocked_at: now };
+    await store.put(`src:${map.id}`, JSON.stringify(kept));
+    for (const p of check.problems) if (p.reason === 'election mismatch') await ping(map.id, 'election mismatch', `${map.name}: ${p.detail}. Its rows link out until the map is fixed.`);
+    S[map.id] = nextEntry(S[map.id], { kind: 'ok', changed: true, status: S[map.id]?.status || 'pending' }, now, map);
+    delete S[map.id].token;
+    return { id: map.id, outcome: 'election mismatch', problems: check.problems };
   }
+  const rec = { read, fetched: now, blocked: false, problems: check.problems, raw_key: `raw/${map.id}/${now}-${hash}.json` };
+  await store.put(`src:${map.id}`, JSON.stringify(rec));
+  await store.delete(`blocked:${map.id}`);
+  for (const p of check.problems) if (p.reason === 'falling total') await ping(map.id, 'falling total', `${map.name}: ${p.detail}.`);
   const status = sourceStatus(read, map, now);
   S[map.id] = nextEntry(S[map.id], { kind: 'ok', changed: true, status, allComplete: status === 'complete' }, now, map);
   S[map.id].token = r.changed_token;
-  return { id: map.id, outcome: check.sourceBlocked ? 'election mismatch' : 'changed', problems: check.problems };
+  S[map.id].map_hash = mh;
+  return { id: map.id, outcome: 'changed', problems: check.problems };
 }
 
 /* Build and store one state's preview file, and its public file once any source in it has passed its first-run check.

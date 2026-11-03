@@ -7,7 +7,10 @@
 import { pctOf } from './util.js';
 import { outcomeFor, parseThreshold, RETENTION } from './outcome.js';
 
-const OTHER = '__other'; // a feed line that isn't a candidate (write-in totals): counted in the total, never named
+/* A map choice's value: a guide candidate's exact name, "yes"/"no" for a measure, null for a named feed choice who
+   isn't in the guide (counted, and listed in `unmatched`), or "__other" for an aggregate line such as "Write-in"
+   (counted in the total, never named). */
+const OTHER = '__other';
 
 export function sourceStatus(read, map, now) {
   if (read.official || map.official?.at) return 'official';
@@ -118,6 +121,7 @@ export function buildStateFile({ state, maps, srcs, mode, now }) {
     if (map.feed.adapter === 'link_only') reason = 'link only';
     else if (sched.stopped === 'refused') reason = 'source refused us';
     else if (rec?.blocked) reason = 'election mismatch';
+    else if (rec && !rec.read) reason = null;
     else if (s.fpOk === false) reason = 'map out of date';
     else if (mode === 'public' && !s.checked) reason = 'not checked yet';
     else if (!rec) reason = null; // nothing read yet: items read "Not posted yet" (pending, no numbers)

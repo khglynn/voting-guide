@@ -1,0 +1,3738 @@
+[
+ {
+  "endorser_id": "allegheny-fayette-clc",
+  "target_id": "pa-governor",
+  "status": "endorsed",
+  "choice": "Josh Shapiro / Austin Davis",
+  "why": "Listed in its 2026 General Election Endorsements.",
+  "url": "https://paaflcio.org/system/files/2026-08/ACLC-%202026%20General%20Endorsements.pdf",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "md-attorney-general",
+  "status": "endorsed",
+  "choice": "Anthony G. Brown",
+  "why": "Listed in its 2026 AFSCME Maryland Council 3 Endorsements on its general election page.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "md-comptroller",
+  "status": "endorsed",
+  "choice": "Brooke Elizabeth Lierman",
+  "why": "Listed in its 2026 AFSCME Maryland Council 3 Endorsements on its general election page.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "md-question-1",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Its general election page says “Vote FOR Question 1”.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "md-question-3",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Its general election page says “Vote FOR Question 3”.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "md-us-house-2",
+  "status": "endorsed",
+  "choice": "John \"Johnny O\" Olszewski, Jr.",
+  "why": "Listed in its 2026 AFSCME Maryland Council 3 Endorsements on its general election page.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "md-us-house-7",
+  "status": "endorsed",
+  "choice": "Kweisi Mfume",
+  "why": "Listed in its 2026 AFSCME Maryland Council 3 Endorsements on its general election page.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "md-sd-40",
+  "status": "endorsed",
+  "choice": "Antonio Hayes",
+  "why": "Listed in its 2026 AFSCME Maryland Council 3 Endorsements on its general election page.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "md-hd-40",
+  "status": "endorsed",
+  "choice": "Melissa Wells",
+  "why": "Listed in its 2026 AFSCME Maryland Council 3 Endorsements on its general election page.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "md-hd-40",
+  "status": "endorsed",
+  "choice": "Marlon D. Amprey",
+  "why": "Listed in its 2026 AFSCME Maryland Council 3 Endorsements on its general election page.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "md-hd-40",
+  "status": "endorsed",
+  "choice": "Tiffany Welch",
+  "why": "Listed in its 2026 AFSCME Maryland Council 3 Endorsements on its general election page.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "md-sd-41",
+  "status": "endorsed",
+  "choice": "Malcolm P. Ruff",
+  "why": "Listed in its 2026 AFSCME Maryland Council 3 Endorsements on its general election page.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "md-hd-41",
+  "status": "endorsed",
+  "choice": "S. I. \"Sandy\" Rosenberg",
+  "why": "Listed in its 2026 AFSCME Maryland Council 3 Endorsements on its general election page, which spells Rosenberg’s name “Rosenburg”.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "md-hd-41",
+  "status": "endorsed",
+  "choice": "Sean A. Stinnett",
+  "why": "Listed in its 2026 AFSCME Maryland Council 3 Endorsements on its general election page, which spells Rosenberg’s name “Rosenburg”.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "md-hd-41",
+  "status": "endorsed",
+  "choice": "Ryan Turner",
+  "why": "Listed in its 2026 AFSCME Maryland Council 3 Endorsements on its general election page, which spells Rosenberg’s name “Rosenburg”.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "md-sd-43",
+  "status": "endorsed",
+  "choice": "Mary Washington",
+  "why": "Listed in its 2026 AFSCME Maryland Council 3 Endorsements on its general election page.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "md-hd-43a",
+  "status": "endorsed",
+  "choice": "Regina T. Boyce",
+  "why": "Listed in its 2026 AFSCME Maryland Council 3 Endorsements on its general election page.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "md-hd-43a",
+  "status": "endorsed",
+  "choice": "Elizabeth Embry",
+  "why": "Listed in its 2026 AFSCME Maryland Council 3 Endorsements on its general election page.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "md-sd-45",
+  "status": "endorsed",
+  "choice": "Cory V. McCray",
+  "why": "Listed in its 2026 AFSCME Maryland Council 3 Endorsements on its general election page.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "md-hd-45",
+  "status": "endorsed",
+  "choice": "Jackie Addison",
+  "why": "Listed in its 2026 AFSCME Maryland Council 3 Endorsements on its general election page.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "md-hd-45",
+  "status": "endorsed",
+  "choice": "Caylin Young",
+  "why": "Listed in its 2026 AFSCME Maryland Council 3 Endorsements on its general election page.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "md-sd-46",
+  "status": "endorsed",
+  "choice": "Bill Ferguson",
+  "why": "Listed in its 2026 AFSCME Maryland Council 3 Endorsements on its general election page.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "md-hd-46",
+  "status": "endorsed",
+  "choice": "Luke Clippinger",
+  "why": "Listed in its 2026 AFSCME Maryland Council 3 Endorsements on its general election page.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "md-hd-46",
+  "status": "endorsed",
+  "choice": "Mark Edelson",
+  "why": "Listed in its 2026 AFSCME Maryland Council 3 Endorsements on its general election page.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "md-hd-46",
+  "status": "endorsed",
+  "choice": "Robbyn Lewis",
+  "why": "Listed in its 2026 AFSCME Maryland Council 3 Endorsements on its general election page.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-governor",
+  "status": "endorsed",
+  "choice": "Josh Shapiro / Austin Davis",
+  "why": "Listed on its page of endorsements in the 2026 Pennsylvania general election.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-sd-38",
+  "status": "endorsed",
+  "choice": "Lindsey Williams",
+  "why": "Listed on its page of endorsements in the 2026 Pennsylvania general election.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-38",
+  "status": "endorsed",
+  "choice": "John Inglis",
+  "why": "Listed on its page of endorsements in the 2026 Pennsylvania general election.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-170",
+  "status": "endorsed",
+  "choice": "Rob Gurtcheff",
+  "why": "Listed on its page of endorsements in the 2026 Pennsylvania general election.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-186",
+  "status": "endorsed",
+  "choice": "Jordan A. Harris",
+  "why": "Listed on its page of endorsements in the 2026 Pennsylvania general election.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-191",
+  "status": "endorsed",
+  "choice": "Joanna E. McClinton",
+  "why": "Listed on its page of endorsements in the 2026 Pennsylvania general election.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-195",
+  "status": "endorsed",
+  "choice": "Sierra McNeil",
+  "why": "Listed on its page of endorsements in the 2026 Pennsylvania general election.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-198",
+  "status": "endorsed",
+  "choice": "Darisha K. Parker",
+  "why": "Listed on its page of endorsements in the 2026 Pennsylvania general election.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "dc-council-at-large",
+  "status": "endorsed",
+  "choice": "Elissa Silverman",
+  "why": "Its 2026 endorsements say to rank Elissa Silverman 1st and Oye Owolewa 2nd for at-large.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "dc-council-at-large",
+  "status": "endorsed",
+  "choice": "Oye Owolewa",
+  "why": "Its 2026 endorsements say to rank Elissa Silverman 1st and Oye Owolewa 2nd for at-large.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "md-governor",
+  "status": "endorsed",
+  "choice": "Wes Moore and Aruna Miller",
+  "why": "Backs Wes Moore for governor in its 2026 endorsements; the ticket runs together.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "md-question-1",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Its 2026 endorsements say “Yes on Question 1”.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "md-question-3",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Its 2026 endorsements say “Yes on Question 3”.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "md-question-2",
+  "status": "not_found",
+  "why": "On Nov 3, 2026, we checked its 2026 endorsements; they list Maryland Questions 1 and 3, and no pick for this question.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-03",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "dc-mayor",
+  "status": "endorsed",
+  "choice": "Janeese Lewis George",
+  "why": "Listed under its 2026 Primary Endorsements; its page says its later 2026 endorsements are “in addition to” these.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "dc-attorney-general",
+  "status": "endorsed",
+  "choice": "Brian L. Schwalb",
+  "why": "Listed under its 2026 Primary Endorsements; its page says its later 2026 endorsements are “in addition to” these.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "dc-delegate",
+  "status": "endorsed",
+  "choice": "Robert White",
+  "why": "Listed under its 2026 Primary Endorsements; its page says its later 2026 endorsements are “in addition to” these.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "dc-ward-1-council",
+  "status": "endorsed",
+  "choice": "Aparna Raj",
+  "why": "Listed under its 2026 Primary Endorsements; its page says its later 2026 endorsements are “in addition to” these.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "dc-ward-3-council",
+  "status": "endorsed",
+  "choice": "Matthew Frumin",
+  "why": "Listed under its 2026 Primary Endorsements; its page says its later 2026 endorsements are “in addition to” these.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "dc-ward-5-council",
+  "status": "endorsed",
+  "choice": "Zachary Parker",
+  "why": "Listed under its 2026 Primary Endorsements; its page says its later 2026 endorsements are “in addition to” these.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "dc-ward-6-council",
+  "status": "endorsed",
+  "choice": "Charles Allen",
+  "why": "Listed under its 2026 Primary Endorsements; its page says its later 2026 endorsements are “in addition to” these.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "md-attorney-general",
+  "status": "endorsed",
+  "choice": "Anthony G. Brown",
+  "why": "Listed under its 2026 Primary Endorsements; its page says its later 2026 endorsements are “in addition to” these.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "md-comptroller",
+  "status": "endorsed",
+  "choice": "Brooke Elizabeth Lierman",
+  "why": "Listed under its 2026 Primary Endorsements; its page says its later 2026 endorsements are “in addition to” these.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-governor",
+  "status": "endorsed",
+  "choice": "Josh Shapiro / Austin Davis",
+  "why": "Marked “ENDORSED” in its 2026 General Election Endorsements.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-us-house-3",
+  "status": "endorsed",
+  "choice": "Chris Rabb",
+  "why": "Marked “ENDORSED” in its 2026 General Election Endorsements.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-sd-2",
+  "status": "endorsed",
+  "choice": "Christine M. Tartaglione",
+  "why": "Marked “ENDORSED” in its 2026 General Election Endorsements.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-sd-4",
+  "status": "endorsed",
+  "choice": "Art Haywood",
+  "why": "Marked “ENDORSED” in its 2026 General Election Endorsements.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-sd-8",
+  "status": "no_position",
+  "why": "Its 2026 general election list says “NO ENDORSEMENT” for this seat.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-hd-10",
+  "status": "no_position",
+  "why": "Its 2026 general election list says “NO ENDORSEMENT” for this seat.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-hd-170",
+  "status": "no_position",
+  "why": "Its 2026 general election list says “NO ENDORSEMENT” for this seat.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-hd-172",
+  "status": "endorsed",
+  "choice": "Sean M. Dougherty",
+  "why": "Marked “ENDORSED” in its 2026 General Election Endorsements.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-hd-173",
+  "status": "endorsed",
+  "choice": "Pat Gallagher",
+  "why": "Marked “ENDORSED” in its 2026 General Election Endorsements.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-hd-174",
+  "status": "endorsed",
+  "choice": "Ed Neilson",
+  "why": "Marked “ENDORSED” in its 2026 General Election Endorsements.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-hd-175",
+  "status": "endorsed",
+  "choice": "MaryLouise Isaacson",
+  "why": "Marked “ENDORSED” in its 2026 General Election Endorsements.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-hd-177",
+  "status": "endorsed",
+  "choice": "Joe Hohenstein",
+  "why": "Marked “ENDORSED” in its 2026 General Election Endorsements.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-hd-179",
+  "status": "endorsed",
+  "choice": "Jason T. Dawkins",
+  "why": "Marked “ENDORSED” in its 2026 General Election Endorsements.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-hd-180",
+  "status": "endorsed",
+  "choice": "Jose A. Giral",
+  "why": "Marked “ENDORSED” in its 2026 General Election Endorsements.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-hd-181",
+  "status": "endorsed",
+  "choice": "Malcolm Kenyatta",
+  "why": "Marked “ENDORSED” in its 2026 General Election Endorsements.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-hd-182",
+  "status": "endorsed",
+  "choice": "Ben Waxman",
+  "why": "Marked “ENDORSED” in its 2026 General Election Endorsements.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-hd-184",
+  "status": "endorsed",
+  "choice": "Elizabeth Fiedler",
+  "why": "Marked “ENDORSED” in its 2026 General Election Endorsements.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-hd-185",
+  "status": "endorsed",
+  "choice": "Regina Young",
+  "why": "Marked “ENDORSED” in its 2026 General Election Endorsements.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-hd-186",
+  "status": "endorsed",
+  "choice": "Jordan A. Harris",
+  "why": "Marked “ENDORSED” in its 2026 General Election Endorsements.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-hd-188",
+  "status": "endorsed",
+  "choice": "Rick Krajewski",
+  "why": "Marked “ENDORSED” in its 2026 General Election Endorsements.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-hd-190",
+  "status": "endorsed",
+  "choice": "Roni Green",
+  "why": "Marked “ENDORSED” in its 2026 General Election Endorsements.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-hd-191",
+  "status": "endorsed",
+  "choice": "Joanna E. McClinton",
+  "why": "Marked “ENDORSED” in its 2026 General Election Endorsements.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-hd-192",
+  "status": "endorsed",
+  "choice": "Morgan Cephas",
+  "why": "Marked “ENDORSED” in its 2026 General Election Endorsements.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-hd-194",
+  "status": "endorsed",
+  "choice": "Tarik Khan",
+  "why": "Marked “ENDORSED” in its 2026 General Election Endorsements.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-hd-195",
+  "status": "endorsed",
+  "choice": "Sierra McNeil",
+  "why": "Marked “ENDORSED” in its 2026 General Election Endorsements.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-hd-197",
+  "status": "endorsed",
+  "choice": "Danilo Burgos",
+  "why": "Marked “ENDORSED” in its 2026 General Election Endorsements.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-hd-198",
+  "status": "endorsed",
+  "choice": "Darisha K. Parker",
+  "why": "Marked “ENDORSED” in its 2026 General Election Endorsements.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-hd-200",
+  "status": "endorsed",
+  "choice": "Chris Johnson",
+  "why": "Marked “ENDORSED” in its 2026 General Election Endorsements.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-hd-201",
+  "status": "endorsed",
+  "choice": "Andre D. Carroll",
+  "why": "Marked “ENDORSED” in its 2026 General Election Endorsements.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-hd-202",
+  "status": "endorsed",
+  "choice": "Jared Solomon",
+  "why": "Marked “ENDORSED” in its 2026 General Election Endorsements.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-hd-203",
+  "status": "endorsed",
+  "choice": "Anthony Bellmon",
+  "why": "Marked “ENDORSED” in its 2026 General Election Endorsements.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "philadelphia-question-1",
+  "status": "no_position",
+  "why": "Its 2026 general election list says “NO RECOMMENDATIONS” under ballot questions.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "philadelphia-question-2",
+  "status": "no_position",
+  "why": "Its 2026 general election list says “NO RECOMMENDATIONS” under ballot questions.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "md-us-house-2",
+  "status": "endorsed",
+  "choice": "John \"Johnny O\" Olszewski, Jr.",
+  "why": "Listed in its 2026 MDDC Labor Endorsements.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "md-us-house-7",
+  "status": "endorsed",
+  "choice": "Kweisi Mfume",
+  "why": "Listed in its 2026 MDDC Labor Endorsements.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "md-sd-40",
+  "status": "endorsed",
+  "choice": "Antonio Hayes",
+  "why": "Listed in its 2026 MDDC Labor Endorsements.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "md-sd-41",
+  "status": "endorsed",
+  "choice": "Malcolm P. Ruff",
+  "why": "Listed in its 2026 MDDC Labor Endorsements.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "md-sd-43",
+  "status": "endorsed",
+  "choice": "Mary Washington",
+  "why": "Listed in its 2026 MDDC Labor Endorsements.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "md-sd-45",
+  "status": "endorsed",
+  "choice": "Cory V. McCray",
+  "why": "Listed in its 2026 MDDC Labor Endorsements.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "md-sd-46",
+  "status": "endorsed",
+  "choice": "Bill Ferguson",
+  "why": "Listed in its 2026 MDDC Labor Endorsements.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "md-hd-40",
+  "status": "endorsed",
+  "choice": "Melissa Wells",
+  "why": "Listed in its 2026 MDDC Labor Endorsements.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "md-hd-40",
+  "status": "endorsed",
+  "choice": "Marlon D. Amprey",
+  "why": "Listed in its 2026 MDDC Labor Endorsements.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "md-hd-40",
+  "status": "endorsed",
+  "choice": "Tiffany Welch",
+  "why": "Listed in its 2026 MDDC Labor Endorsements.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "md-hd-41",
+  "status": "endorsed",
+  "choice": "Sean A. Stinnett",
+  "why": "Listed in its 2026 MDDC Labor Endorsements.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "md-hd-41",
+  "status": "endorsed",
+  "choice": "S. I. \"Sandy\" Rosenberg",
+  "why": "Listed in its 2026 MDDC Labor Endorsements.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "md-hd-41",
+  "status": "endorsed",
+  "choice": "Ryan Turner",
+  "why": "Listed in its 2026 MDDC Labor Endorsements.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "md-hd-43a",
+  "status": "endorsed",
+  "choice": "Elizabeth Embry",
+  "why": "Listed in its 2026 MDDC Labor Endorsements.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "md-hd-43a",
+  "status": "endorsed",
+  "choice": "Regina T. Boyce",
+  "why": "Listed in its 2026 MDDC Labor Endorsements.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "md-hd-45",
+  "status": "endorsed",
+  "choice": "Chanel A. Branch",
+  "why": "Listed in its 2026 MDDC Labor Endorsements.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "md-hd-45",
+  "status": "endorsed",
+  "choice": "Jackie Addison",
+  "why": "Listed in its 2026 MDDC Labor Endorsements.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "md-hd-45",
+  "status": "endorsed",
+  "choice": "Caylin Young",
+  "why": "Listed in its 2026 MDDC Labor Endorsements.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "md-hd-46",
+  "status": "endorsed",
+  "choice": "Mark Edelson",
+  "why": "Listed in its 2026 MDDC Labor Endorsements.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "md-hd-46",
+  "status": "endorsed",
+  "choice": "Robbyn Lewis",
+  "why": "Listed in its 2026 MDDC Labor Endorsements.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "dc-delegate",
+  "status": "endorsed",
+  "choice": "Robert White",
+  "why": "Listed in its 2026 MDDC Labor Endorsements.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "md-us-house-2",
+  "status": "endorsed",
+  "choice": "John \"Johnny O\" Olszewski, Jr.",
+  "why": "Listed on its Maryland Apple Ballot for Baltimore City, the general election voter guide.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "md-us-house-7",
+  "status": "endorsed",
+  "choice": "Kweisi Mfume",
+  "why": "Listed on its Maryland Apple Ballot for Baltimore City, the general election voter guide.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "md-hd-40",
+  "status": "endorsed",
+  "choice": "Marlon D. Amprey",
+  "why": "Listed on its Maryland Apple Ballot for Baltimore City, the general election voter guide.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "md-hd-40",
+  "status": "endorsed",
+  "choice": "Melissa Wells",
+  "why": "Listed on its Maryland Apple Ballot for Baltimore City, the general election voter guide.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "md-hd-43a",
+  "status": "endorsed",
+  "choice": "Regina T. Boyce",
+  "why": "Listed on its Maryland Apple Ballot for Baltimore City, the general election voter guide.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "md-sd-46",
+  "status": "endorsed",
+  "choice": "Bill Ferguson",
+  "why": "Listed on its Maryland Apple Ballot for Baltimore City, the general election voter guide.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "md-hd-46",
+  "status": "endorsed",
+  "choice": "Mark Edelson",
+  "why": "Listed on its Maryland Apple Ballot for Baltimore City, the general election voter guide.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "md-hd-46",
+  "status": "endorsed",
+  "choice": "Robbyn Lewis",
+  "why": "Listed on its Maryland Apple Ballot for Baltimore City, the general election voter guide.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-governor",
+  "status": "endorsed",
+  "choice": "Josh Shapiro / Austin Davis",
+  "why": "Listed as “Endorsed by PFT” in its 2026 General Election endorsements.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-us-house-2",
+  "status": "endorsed",
+  "choice": "Brendan F. Boyle",
+  "why": "Listed as “Endorsed by PFT” in its 2026 General Election endorsements.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-us-house-3",
+  "status": "endorsed",
+  "choice": "Chris Rabb",
+  "why": "Listed as “Endorsed by PFT” in its 2026 General Election endorsements.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-us-house-5",
+  "status": "endorsed",
+  "choice": "Mary Gay Scanlon",
+  "why": "Listed as “Endorsed by PFT” in its 2026 General Election endorsements.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-sd-2",
+  "status": "endorsed",
+  "choice": "Christine M. Tartaglione",
+  "why": "Listed as “Endorsed by PFT” in its 2026 General Election endorsements.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-sd-4",
+  "status": "endorsed",
+  "choice": "Art Haywood",
+  "why": "Listed as “Endorsed by PFT” in its 2026 General Election endorsements.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-hd-170",
+  "status": "endorsed",
+  "choice": "Rob Gurtcheff",
+  "why": "Listed as “Endorsed by PFT” in its 2026 General Election endorsements.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-hd-172",
+  "status": "endorsed",
+  "choice": "Sean M. Dougherty",
+  "why": "Listed as “Endorsed by PFT” in its 2026 General Election endorsements.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-hd-173",
+  "status": "endorsed",
+  "choice": "Pat Gallagher",
+  "why": "Listed as “Endorsed by PFT” in its 2026 General Election endorsements.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-hd-175",
+  "status": "endorsed",
+  "choice": "MaryLouise Isaacson",
+  "why": "Listed as “Endorsed by PFT” in its 2026 General Election endorsements.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-hd-177",
+  "status": "endorsed",
+  "choice": "Joe Hohenstein",
+  "why": "Listed as “Endorsed by PFT” in its 2026 General Election endorsements.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-hd-179",
+  "status": "endorsed",
+  "choice": "Jason T. Dawkins",
+  "why": "Listed as “Endorsed by PFT” in its 2026 General Election endorsements.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-hd-180",
+  "status": "endorsed",
+  "choice": "Jose A. Giral",
+  "why": "Listed as “Endorsed by PFT” in its 2026 General Election endorsements.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-hd-181",
+  "status": "endorsed",
+  "choice": "Malcolm Kenyatta",
+  "why": "Listed as “Endorsed by PFT” in its 2026 General Election endorsements.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-hd-182",
+  "status": "endorsed",
+  "choice": "Ben Waxman",
+  "why": "Listed as “Endorsed by PFT” in its 2026 General Election endorsements.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-hd-184",
+  "status": "endorsed",
+  "choice": "Elizabeth Fiedler",
+  "why": "Listed as “Endorsed by PFT” in its 2026 General Election endorsements.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-hd-186",
+  "status": "endorsed",
+  "choice": "Jordan A. Harris",
+  "why": "Listed as “Endorsed by PFT” in its 2026 General Election endorsements.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-hd-188",
+  "status": "endorsed",
+  "choice": "Rick Krajewski",
+  "why": "Listed as “Endorsed by PFT” in its 2026 General Election endorsements.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-hd-190",
+  "status": "endorsed",
+  "choice": "Roni Green",
+  "why": "Listed as “Endorsed by PFT” in its 2026 General Election endorsements.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-hd-191",
+  "status": "endorsed",
+  "choice": "Joanna E. McClinton",
+  "why": "Listed as “Endorsed by PFT” in its 2026 General Election endorsements.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-hd-192",
+  "status": "endorsed",
+  "choice": "Morgan Cephas",
+  "why": "Listed as “Endorsed by PFT” in its 2026 General Election endorsements.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-hd-194",
+  "status": "endorsed",
+  "choice": "Tarik Khan",
+  "why": "Listed as “Endorsed by PFT” in its 2026 General Election endorsements.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-hd-195",
+  "status": "endorsed",
+  "choice": "Sierra McNeil",
+  "why": "Listed as “Endorsed by PFT” in its 2026 General Election endorsements.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-hd-197",
+  "status": "endorsed",
+  "choice": "Danilo Burgos",
+  "why": "Listed as “Endorsed by PFT” in its 2026 General Election endorsements.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-hd-198",
+  "status": "endorsed",
+  "choice": "Darisha K. Parker",
+  "why": "Listed as “Endorsed by PFT” in its 2026 General Election endorsements.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-hd-200",
+  "status": "endorsed",
+  "choice": "Chris Johnson",
+  "why": "Listed as “Endorsed by PFT” in its 2026 General Election endorsements.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-hd-201",
+  "status": "endorsed",
+  "choice": "Andre D. Carroll",
+  "why": "Listed as “Endorsed by PFT” in its 2026 General Election endorsements.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-hd-202",
+  "status": "endorsed",
+  "choice": "Jared Solomon",
+  "why": "Listed as “Endorsed by PFT” in its 2026 General Election endorsements.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pittsburgh-federation-of-teachers",
+  "target_id": "pa-governor",
+  "status": "endorsed",
+  "choice": "Josh Shapiro / Austin Davis",
+  "why": "Listed in its “PFT Endorsed Candidates, 2026 PA General Election” flyer.",
+  "url": "https://pft400.com/wp-content/uploads/2026/08/2026-PFT-Endorsed-Candidates-GENERAL.pdf",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pittsburgh-federation-of-teachers",
+  "target_id": "pa-us-house-12",
+  "status": "endorsed",
+  "choice": "Summer Lee",
+  "why": "Listed in its “PFT Endorsed Candidates, 2026 PA General Election” flyer.",
+  "url": "https://pft400.com/wp-content/uploads/2026/08/2026-PFT-Endorsed-Candidates-GENERAL.pdf",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pittsburgh-federation-of-teachers",
+  "target_id": "pa-sd-38",
+  "status": "endorsed",
+  "choice": "Lindsey Williams",
+  "why": "Listed in its “PFT Endorsed Candidates, 2026 PA General Election” flyer.",
+  "url": "https://pft400.com/wp-content/uploads/2026/08/2026-PFT-Endorsed-Candidates-GENERAL.pdf",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pittsburgh-federation-of-teachers",
+  "target_id": "pa-sd-42",
+  "status": "endorsed",
+  "choice": "Wayne D. Fontana",
+  "why": "Listed in its “PFT Endorsed Candidates, 2026 PA General Election” flyer.",
+  "url": "https://pft400.com/wp-content/uploads/2026/08/2026-PFT-Endorsed-Candidates-GENERAL.pdf",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pittsburgh-federation-of-teachers",
+  "target_id": "pa-hd-19",
+  "status": "endorsed",
+  "choice": "Aerion Andrew Abney",
+  "why": "Listed in its “PFT Endorsed Candidates, 2026 PA General Election” flyer.",
+  "url": "https://pft400.com/wp-content/uploads/2026/08/2026-PFT-Endorsed-Candidates-GENERAL.pdf",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pittsburgh-federation-of-teachers",
+  "target_id": "pa-hd-20",
+  "status": "endorsed",
+  "choice": "Emily Kinkead",
+  "why": "Listed in its “PFT Endorsed Candidates, 2026 PA General Election” flyer.",
+  "url": "https://pft400.com/wp-content/uploads/2026/08/2026-PFT-Endorsed-Candidates-GENERAL.pdf",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pittsburgh-federation-of-teachers",
+  "target_id": "pa-hd-21",
+  "status": "endorsed",
+  "choice": "Lindsay Powell",
+  "why": "Listed in its “PFT Endorsed Candidates, 2026 PA General Election” flyer.",
+  "url": "https://pft400.com/wp-content/uploads/2026/08/2026-PFT-Endorsed-Candidates-GENERAL.pdf",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pittsburgh-federation-of-teachers",
+  "target_id": "pa-hd-23",
+  "status": "endorsed",
+  "choice": "Dan Frankel",
+  "why": "Listed in its “PFT Endorsed Candidates, 2026 PA General Election” flyer.",
+  "url": "https://pft400.com/wp-content/uploads/2026/08/2026-PFT-Endorsed-Candidates-GENERAL.pdf",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pittsburgh-federation-of-teachers",
+  "target_id": "pa-hd-24",
+  "status": "endorsed",
+  "choice": "La'Tasha D. Mayes",
+  "why": "Listed in its “PFT Endorsed Candidates, 2026 PA General Election” flyer.",
+  "url": "https://pft400.com/wp-content/uploads/2026/08/2026-PFT-Endorsed-Candidates-GENERAL.pdf",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pittsburgh-federation-of-teachers",
+  "target_id": "pa-hd-27",
+  "status": "endorsed",
+  "choice": "Dan Deasy",
+  "why": "Listed in its “PFT Endorsed Candidates, 2026 PA General Election” flyer.",
+  "url": "https://pft400.com/wp-content/uploads/2026/08/2026-PFT-Endorsed-Candidates-GENERAL.pdf",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pittsburgh-federation-of-teachers",
+  "target_id": "pa-hd-34",
+  "status": "endorsed",
+  "choice": "Abigail Salisbury",
+  "why": "Listed in its “PFT Endorsed Candidates, 2026 PA General Election” flyer.",
+  "url": "https://pft400.com/wp-content/uploads/2026/08/2026-PFT-Endorsed-Candidates-GENERAL.pdf",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pittsburgh-federation-of-teachers",
+  "target_id": "pa-hd-36",
+  "status": "endorsed",
+  "choice": "Jessica Benham",
+  "why": "Listed in its “PFT Endorsed Candidates, 2026 PA General Election” flyer.",
+  "url": "https://pft400.com/wp-content/uploads/2026/08/2026-PFT-Endorsed-Candidates-GENERAL.pdf",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pittsburgh-federation-of-teachers",
+  "target_id": "pa-hd-38",
+  "status": "endorsed",
+  "choice": "John Inglis",
+  "why": "Listed in its “PFT Endorsed Candidates, 2026 PA General Election” flyer.",
+  "url": "https://pft400.com/wp-content/uploads/2026/08/2026-PFT-Endorsed-Candidates-GENERAL.pdf",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-1199",
+  "target_id": "md-governor",
+  "status": "endorsed",
+  "choice": "Wes Moore and Aruna Miller",
+  "why": "Listed under “1199’s endorsements” on its Nov 3 general election page.",
+  "url": "https://www.1199seiu.org/maryland_dc/mddc-general-election-date-november-3",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-1199",
+  "target_id": "md-comptroller",
+  "status": "endorsed",
+  "choice": "Brooke Elizabeth Lierman",
+  "why": "Listed under “1199’s endorsements” on its Nov 3 general election page.",
+  "url": "https://www.1199seiu.org/maryland_dc/mddc-general-election-date-november-3",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-1199",
+  "target_id": "dc-mayor",
+  "status": "endorsed",
+  "choice": "Janeese Lewis George",
+  "why": "Listed under “1199’s endorsements” on its Nov 3 general election page.",
+  "url": "https://www.1199seiu.org/maryland_dc/mddc-general-election-date-november-3",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-1199",
+  "target_id": "dc-delegate",
+  "status": "endorsed",
+  "choice": "Robert White",
+  "why": "Listed under “1199’s endorsements” on its Nov 3 general election page.",
+  "url": "https://www.1199seiu.org/maryland_dc/mddc-general-election-date-november-3",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-governor",
+  "status": "endorsed",
+  "choice": "Josh Shapiro / Austin Davis",
+  "why": "Listed in its 2026 General Election Endorsed Candidates.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-us-house-2",
+  "status": "endorsed",
+  "choice": "Brendan F. Boyle",
+  "why": "Listed in its 2026 General Election Endorsed Candidates.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-us-house-3",
+  "status": "endorsed",
+  "choice": "Chris Rabb",
+  "why": "Listed in its 2026 General Election Endorsed Candidates.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-us-house-5",
+  "status": "endorsed",
+  "choice": "Mary Gay Scanlon",
+  "why": "Listed in its 2026 General Election Endorsed Candidates.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-us-house-12",
+  "status": "endorsed",
+  "choice": "Summer Lee",
+  "why": "Listed in its 2026 General Election Endorsed Candidates.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-sd-4",
+  "status": "endorsed",
+  "choice": "Art Haywood",
+  "why": "Listed in its 2026 General Election Endorsed Candidates.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-sd-38",
+  "status": "endorsed",
+  "choice": "Lindsey Williams",
+  "why": "Listed in its 2026 General Election Endorsed Candidates.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-21",
+  "status": "endorsed",
+  "choice": "Lindsay Powell",
+  "why": "Listed in its 2026 General Election Endorsed Candidates.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-23",
+  "status": "endorsed",
+  "choice": "Dan Frankel",
+  "why": "Listed in its 2026 General Election Endorsed Candidates.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-24",
+  "status": "endorsed",
+  "choice": "La'Tasha D. Mayes",
+  "why": "Listed in its 2026 General Election Endorsed Candidates.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-27",
+  "status": "endorsed",
+  "choice": "Dan Deasy",
+  "why": "Listed in its 2026 General Election Endorsed Candidates.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-36",
+  "status": "endorsed",
+  "choice": "Jessica Benham",
+  "why": "Listed in its 2026 General Election Endorsed Candidates.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-170",
+  "status": "endorsed",
+  "choice": "Rob Gurtcheff",
+  "why": "Listed in its 2026 General Election Endorsed Candidates.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-172",
+  "status": "endorsed",
+  "choice": "Sean M. Dougherty",
+  "why": "Listed in its 2026 General Election Endorsed Candidates.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-177",
+  "status": "endorsed",
+  "choice": "Joe Hohenstein",
+  "why": "Listed in its 2026 General Election Endorsed Candidates.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-180",
+  "status": "endorsed",
+  "choice": "Jose A. Giral",
+  "why": "Listed in its 2026 General Election Endorsed Candidates.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-182",
+  "status": "endorsed",
+  "choice": "Ben Waxman",
+  "why": "Listed in its 2026 General Election Endorsed Candidates.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-184",
+  "status": "endorsed",
+  "choice": "Elizabeth Fiedler",
+  "why": "Listed in its 2026 General Election Endorsed Candidates.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-186",
+  "status": "endorsed",
+  "choice": "Jordan A. Harris",
+  "why": "Listed in its 2026 General Election Endorsed Candidates.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-188",
+  "status": "endorsed",
+  "choice": "Rick Krajewski",
+  "why": "Listed in its 2026 General Election Endorsed Candidates.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-190",
+  "status": "endorsed",
+  "choice": "Roni Green",
+  "why": "Listed in its 2026 General Election Endorsed Candidates.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-191",
+  "status": "endorsed",
+  "choice": "Joanna E. McClinton",
+  "why": "Listed in its 2026 General Election Endorsed Candidates.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-194",
+  "status": "endorsed",
+  "choice": "Tarik Khan",
+  "why": "Listed in its 2026 General Election Endorsed Candidates.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-195",
+  "status": "endorsed",
+  "choice": "Sierra McNeil",
+  "why": "Listed in its 2026 General Election Endorsed Candidates.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-197",
+  "status": "endorsed",
+  "choice": "Danilo Burgos",
+  "why": "Listed in its 2026 General Election Endorsed Candidates.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-198",
+  "status": "endorsed",
+  "choice": "Darisha K. Parker",
+  "why": "Listed in its 2026 General Election Endorsed Candidates.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-200",
+  "status": "endorsed",
+  "choice": "Chris Johnson",
+  "why": "Listed in its 2026 General Election Endorsed Candidates.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-201",
+  "status": "endorsed",
+  "choice": "Andre D. Carroll",
+  "why": "Listed in its 2026 General Election Endorsed Candidates.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-202",
+  "status": "endorsed",
+  "choice": "Jared Solomon",
+  "why": "Listed in its 2026 General Election Endorsed Candidates.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-governor",
+  "status": "endorsed",
+  "choice": "Josh Shapiro / Austin Davis",
+  "why": "Backs Josh Shapiro for governor in its 2026 endorsements; the ticket runs together.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-us-house-2",
+  "status": "endorsed",
+  "choice": "Brendan F. Boyle",
+  "why": "Named in its 2026 U.S. House endorsements.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-us-house-5",
+  "status": "endorsed",
+  "choice": "Mary Gay Scanlon",
+  "why": "Named in its 2026 U.S. House endorsements.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-us-house-12",
+  "status": "endorsed",
+  "choice": "Summer Lee",
+  "why": "Named in its 2026 U.S. House endorsements.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ufcw-local-400",
+  "target_id": "dc-mayor",
+  "status": "endorsed",
+  "choice": "Janeese Lewis George",
+  "why": "Named among “the UFCW Local 400-supported candidates who won their races” in the June primary, who it says “will be on the November 3 general election ballot”.",
+  "url": "https://www.ufcw400.org/2026/06/22/ufcw-local-400-backed-candidates-win-d-c-primary-elections/",
+  "date": "2026-11-02",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "ufcw-local-400",
+  "target_id": "dc-attorney-general",
+  "status": "endorsed",
+  "choice": "Brian L. Schwalb",
+  "why": "Named among “the UFCW Local 400-supported candidates who won their races” in the June primary, who it says “will be on the November 3 general election ballot”.",
+  "url": "https://www.ufcw400.org/2026/06/22/ufcw-local-400-backed-candidates-win-d-c-primary-elections/",
+  "date": "2026-11-02",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "ufcw-local-400",
+  "target_id": "dc-council-chair",
+  "status": "endorsed",
+  "choice": "Phil Mendelson",
+  "why": "Named among “the UFCW Local 400-supported candidates who won their races” in the June primary, who it says “will be on the November 3 general election ballot”.",
+  "url": "https://www.ufcw400.org/2026/06/22/ufcw-local-400-backed-candidates-win-d-c-primary-elections/",
+  "date": "2026-11-02",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "ufcw-local-400",
+  "target_id": "dc-council-at-large",
+  "status": "endorsed",
+  "choice": "Elissa Silverman",
+  "why": "Named among “the UFCW Local 400-supported candidates who won their races” in the June primary, who it says “will be on the November 3 general election ballot”.",
+  "url": "https://www.ufcw400.org/2026/06/22/ufcw-local-400-backed-candidates-win-d-c-primary-elections/",
+  "date": "2026-11-02",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "ufcw-local-400",
+  "target_id": "dc-ward-1-council",
+  "status": "endorsed",
+  "choice": "Aparna Raj",
+  "why": "Named among “the UFCW Local 400-supported candidates who won their races” in the June primary, who it says “will be on the November 3 general election ballot”.",
+  "url": "https://www.ufcw400.org/2026/06/22/ufcw-local-400-backed-candidates-win-d-c-primary-elections/",
+  "date": "2026-11-02",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "ufcw-local-400",
+  "target_id": "dc-ward-3-council",
+  "status": "endorsed",
+  "choice": "Matthew Frumin",
+  "why": "Named among “the UFCW Local 400-supported candidates who won their races” in the June primary, who it says “will be on the November 3 general election ballot”.",
+  "url": "https://www.ufcw400.org/2026/06/22/ufcw-local-400-backed-candidates-win-d-c-primary-elections/",
+  "date": "2026-11-02",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "ufcw-local-400",
+  "target_id": "dc-ward-5-council",
+  "status": "endorsed",
+  "choice": "Zachary Parker",
+  "why": "Named among “the UFCW Local 400-supported candidates who won their races” in the June primary, who it says “will be on the November 3 general election ballot”.",
+  "url": "https://www.ufcw400.org/2026/06/22/ufcw-local-400-backed-candidates-win-d-c-primary-elections/",
+  "date": "2026-11-02",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "ufcw-local-400",
+  "target_id": "dc-ward-6-council",
+  "status": "endorsed",
+  "choice": "Charles Allen",
+  "why": "Named among “the UFCW Local 400-supported candidates who won their races” in the June primary, who it says “will be on the November 3 general election ballot”.",
+  "url": "https://www.ufcw400.org/2026/06/22/ufcw-local-400-backed-candidates-win-d-c-primary-elections/",
+  "date": "2026-11-02",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "md-governor",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "md-retention-killough",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "md-retention-friedman",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "md-question-2",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "baltimore-circuit-court-8",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "baltimore-states-attorney",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "baltimore-clerk-circuit-court",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "baltimore-register-of-wills",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "baltimore-orphans-court",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "baltimore-sheriff",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "baltimore-board-of-education-at-large",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "baltimore-question-a",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "baltimore-question-b",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "baltimore-question-c",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "baltimore-question-d",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "baltimore-question-e",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "baltimore-question-f",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "baltimore-question-g",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "baltimore-question-h",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-maryland-council-3",
+  "target_id": "baltimore-question-i",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://afscmemd.org/vote",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-us-house-2",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-us-house-3",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-us-house-5",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-sd-2",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-sd-4",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-sd-8",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-10",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-172",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-173",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-174",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-175",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-177",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-179",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-180",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-181",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-182",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-184",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-185",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-188",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-190",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-192",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-194",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-197",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-200",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-201",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-202",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-203",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-us-house-12",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-sd-42",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-19",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-20",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-21",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-23",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-24",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-27",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-34",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "aft-pennsylvania",
+  "target_id": "pa-hd-36",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pa.aft.org/aftpa-endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "dc-council-chair",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "dc-shadow-senator",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "dc-shadow-representative",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "dc-initiative-86",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "dc-ward-1-sboe",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "dc-ward-1-anc",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "dc-ward-2-anc",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "dc-ward-3-sboe",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "dc-ward-3-anc",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "dc-ward-4-anc",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "dc-ward-5-sboe",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "dc-ward-5-anc",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "dc-ward-6-sboe",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "dc-ward-6-anc",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "dc-ward-7-anc",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "atu-local-689",
+  "target_id": "dc-ward-8-anc",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.atulocal689.org/endorsements",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-us-house-2",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "afscme-dc-47",
+  "target_id": "pa-us-house-5",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://dc47.org/2026generalelectionendorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "md-retention-killough",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "baltimore-circuit-court-8",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "baltimore-states-attorney",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "baltimore-clerk-circuit-court",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "baltimore-register-of-wills",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "baltimore-orphans-court",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "baltimore-sheriff",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "baltimore-board-of-education-at-large",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "baltimore-question-a",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "baltimore-question-b",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "baltimore-question-c",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "baltimore-question-d",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "baltimore-question-e",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "baltimore-question-f",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "baltimore-question-g",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "baltimore-question-h",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "mddc-afl-cio",
+  "target_id": "baltimore-question-i",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mddclabor.org/endorsements-2026",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "md-retention-killough",
+  "status": "not_found",
+  "why": "On Nov 3, 2026, we checked its Apple Ballot for Prince George’s County, where this vote is on the ballot; no pick for this contest was listed.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Prince+George%27s+County",
+  "date": "2026-11-03",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "md-sd-40",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "md-sd-41",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "md-sd-43",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "md-sd-45",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "md-hd-41",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "md-hd-45",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "baltimore-circuit-court-8",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "baltimore-states-attorney",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "baltimore-clerk-circuit-court",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "baltimore-register-of-wills",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "baltimore-orphans-court",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "baltimore-sheriff",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "baltimore-board-of-education-at-large",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "baltimore-question-a",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "baltimore-question-b",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "baltimore-question-c",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "baltimore-question-d",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "baltimore-question-e",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "baltimore-question-f",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "baltimore-question-g",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "baltimore-question-h",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "md-state-education-association",
+  "target_id": "baltimore-question-i",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://mdappleballot.com/county-results/?cmg_mapped_districts_county_select=Baltimore+City",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-sd-8",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-hd-10",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-hd-174",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-hd-185",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pft",
+  "target_id": "pa-hd-203",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://pft.org/pft-votes",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-1199",
+  "target_id": "md-attorney-general",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.1199seiu.org/maryland_dc/mddc-general-election-date-november-3",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-1199",
+  "target_id": "md-retention-killough",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.1199seiu.org/maryland_dc/mddc-general-election-date-november-3",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-1199",
+  "target_id": "md-retention-friedman",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.1199seiu.org/maryland_dc/mddc-general-election-date-november-3",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-1199",
+  "target_id": "md-us-house-2",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.1199seiu.org/maryland_dc/mddc-general-election-date-november-3",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-1199",
+  "target_id": "md-us-house-7",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.1199seiu.org/maryland_dc/mddc-general-election-date-november-3",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-1199",
+  "target_id": "md-sd-40",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.1199seiu.org/maryland_dc/mddc-general-election-date-november-3",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-1199",
+  "target_id": "md-sd-41",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.1199seiu.org/maryland_dc/mddc-general-election-date-november-3",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-1199",
+  "target_id": "md-sd-43",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.1199seiu.org/maryland_dc/mddc-general-election-date-november-3",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-1199",
+  "target_id": "md-sd-45",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.1199seiu.org/maryland_dc/mddc-general-election-date-november-3",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-1199",
+  "target_id": "md-sd-46",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.1199seiu.org/maryland_dc/mddc-general-election-date-november-3",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-1199",
+  "target_id": "md-hd-40",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.1199seiu.org/maryland_dc/mddc-general-election-date-november-3",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-1199",
+  "target_id": "md-hd-41",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.1199seiu.org/maryland_dc/mddc-general-election-date-november-3",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-1199",
+  "target_id": "md-hd-43a",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.1199seiu.org/maryland_dc/mddc-general-election-date-november-3",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-1199",
+  "target_id": "md-hd-45",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.1199seiu.org/maryland_dc/mddc-general-election-date-november-3",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-1199",
+  "target_id": "md-hd-46",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.1199seiu.org/maryland_dc/mddc-general-election-date-november-3",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-1199",
+  "target_id": "baltimore-circuit-court-8",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.1199seiu.org/maryland_dc/mddc-general-election-date-november-3",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-1199",
+  "target_id": "baltimore-states-attorney",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.1199seiu.org/maryland_dc/mddc-general-election-date-november-3",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-1199",
+  "target_id": "baltimore-clerk-circuit-court",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.1199seiu.org/maryland_dc/mddc-general-election-date-november-3",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-1199",
+  "target_id": "baltimore-register-of-wills",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.1199seiu.org/maryland_dc/mddc-general-election-date-november-3",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-1199",
+  "target_id": "baltimore-orphans-court",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.1199seiu.org/maryland_dc/mddc-general-election-date-november-3",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-1199",
+  "target_id": "baltimore-sheriff",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.1199seiu.org/maryland_dc/mddc-general-election-date-november-3",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-sd-2",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-sd-8",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-10",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-173",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-174",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-175",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-179",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-181",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-185",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-192",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-203",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-sd-42",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-19",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-20",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-34",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "seiu-local-668",
+  "target_id": "pa-hd-38",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-us-house-3",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-sd-2",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-sd-4",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-sd-8",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-10",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-170",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-172",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-173",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-174",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-175",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-177",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-179",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-180",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-181",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-182",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-184",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-185",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-186",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-188",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-190",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-191",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-192",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-194",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-195",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-197",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-198",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-200",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-201",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-202",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-203",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-sd-38",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-sd-42",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-19",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-20",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-21",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-23",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-24",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-27",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-34",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-36",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "pa-conference-of-teamsters",
+  "target_id": "pa-hd-38",
+  "status": "not_found",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "date": "2026-11-02",
+  "confidence": "verified"
+ }
+]

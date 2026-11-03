@@ -46,11 +46,12 @@ export function folderArchive(dir) {
   return { async put(k, v) { const p = path.join(dir, k); fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, String(v)); } };
 }
 
+const BOOLEAN = new Set(['write', 'offline', 'tick']);
 export function flags(argv) {
   const out = { _: [] };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
-    if (a.startsWith('--')) { const k = a.slice(2); const nx = argv[i + 1]; if (nx && !nx.startsWith('--')) { out[k] = nx; i++; } else out[k] = true; } else out._.push(a);
+    if (a.startsWith('--')) { const k = a.slice(2); const nx = argv[i + 1]; if (!BOOLEAN.has(k) && nx && !nx.startsWith('--')) { out[k] = nx; i++; } else out[k] = true; } else out._.push(a);
   }
   return out;
 }

@@ -9,8 +9,8 @@
     "feed_name": "General & Joint Election 2026"
   },
   "guide": {
-    "fingerprint": "e3b0c44298fc1c14",
-    "made_from": "vote.kevinhg.com/data, read 2026-11-03T21:18:11.937Z",
+    "fingerprint": "92494d8f3e1f7ac3",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-03T21:27:21.185Z",
     "places": [
       "dallas-tx"
     ]
@@ -31,7 +31,912 @@
   },
   "certify_by": "2026-11-17",
   "official": null,
-  "contests": [],
+  "contests": [
+    {
+      "feed_id": "0049",
+      "feed_name": "Justice, 5th Court of Appeals District, Place 3",
+      "item": "tx-5th-coa-place-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Matthew Kolodoski": "Matthew Kolodoski",
+        "Amanda Reichek": "Amanda Reichek"
+      },
+      "reaches": [
+        "Dallas",
+        "Collin",
+        "Grayson",
+        "Hunt",
+        "Kaufman",
+        "Rockwall"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0050",
+      "feed_name": "Justice, 5th Court of Appeals District, Place 6",
+      "item": "tx-5th-coa-place-6",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Ben Smith": "Ben Smith",
+        "Monica Purdy": "Monica Purdy"
+      },
+      "reaches": [
+        "Dallas",
+        "Collin",
+        "Grayson",
+        "Hunt",
+        "Kaufman",
+        "Rockwall"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0051",
+      "feed_name": "Justice, 5th Court of Appeals District, Place 8",
+      "item": "tx-5th-coa-place-8",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Ashley Wysocki": "Ashley Wysocki",
+        "Andrea D. Plumlee": "Andrea D. Plumlee"
+      },
+      "reaches": [
+        "Dallas",
+        "Collin",
+        "Grayson",
+        "Hunt",
+        "Kaufman",
+        "Rockwall"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0053",
+      "feed_name": "Criminal District Attorney",
+      "item": "tx-dallas-cda",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Amber Givens": "Amber Givens",
+        "Write-In Votes Cast": "__other"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null,
+      "note": "Write-in candidates are counted together in Dallas County's feed, so they have no number of their own here."
+    },
+    {
+      "feed_id": "0058",
+      "feed_name": "County Commissioner, Precinct No. 2",
+      "item": "tx-dallas-commissioner-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Barry Wernick": "Barry Wernick",
+        "Andy Sommerman": "Andy Sommerman"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0059",
+      "feed_name": "County Commissioner, Precinct No. 4",
+      "item": "tx-dallas-commissioner-4",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Elba Garcia": "Elba Garcia"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0070",
+      "feed_name": "Constable, Precinct No. 1",
+      "item": "tx-dallas-constable-1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Tracey Gulley": "Tracey Gulley"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0071",
+      "feed_name": "Constable, Precinct No. 2",
+      "item": "tx-dallas-constable-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Chad Calvert": "Chad Calvert",
+        "Deanna Hammond": "Deanna Hammond"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0072",
+      "feed_name": "Constable, Precinct No. 3",
+      "item": "tx-dallas-constable-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Henry Curry": "Henry Curry"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0073",
+      "feed_name": "Constable, Precinct No. 4",
+      "item": "tx-dallas-constable-4",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Eddie Brown, Jr": "Eddie Brown, Jr"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0074",
+      "feed_name": "Constable, Precinct No. 5",
+      "item": "tx-dallas-constable-5",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Michael Orozco": "Michael Orozco"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0056",
+      "feed_name": "County Clerk",
+      "item": "tx-dallas-county-clerk",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Skye Garcia": "Skye Garcia",
+        "Damarcus L Offord": "Damarcus L Offord"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0054",
+      "feed_name": "County Judge",
+      "item": "tx-dallas-county-judge",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Mike Immler": "Mike Immler",
+        "Clay Jenkins": "Clay Jenkins"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0075",
+      "feed_name": "DALLAS COUNTY PROPOSITION A",
+      "item": "tx-dallas-county-prop-a",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For (A Favor)": "yes",
+        "Against (En Contra)": "no"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0055",
+      "feed_name": "District Clerk",
+      "item": "tx-dallas-district-clerk",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Dave Muehlhaeusler": "Dave Muehlhaeusler",
+        "Felicia Pitre": "Felicia Pitre"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0052",
+      "feed_name": "District Judge, 298th Judicial District",
+      "item": "tx-dallas-district-court-298th",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Clark B. Will": "Clark B. Will",
+        "Ashley Smith": "Ashley Smith"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0060",
+      "feed_name": "Justice of the Peace, Precinct No. 1, Place 1",
+      "item": "tx-dallas-jp-1-1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Lizbeth Diaz": "Lizbeth Diaz",
+        "Thomas G. Jones": "Thomas G. Jones"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0061",
+      "feed_name": "Justice of the Peace, Precinct No. 1, Place 2",
+      "item": "tx-dallas-jp-1-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Valencia Nash": "Valencia Nash",
+        "Write-In Votes Cast": "__other"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null,
+      "note": "Write-in candidates are counted together in Dallas County's feed, so they have no number of their own here."
+    },
+    {
+      "feed_id": "0062",
+      "feed_name": "Justice of the Peace, Precinct No. 2, Place 1",
+      "item": "tx-dallas-jp-2-1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Vickie Whiteside": "Vickie Whiteside",
+        "Margaret O'Brien": "Margaret O'Brien"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0063",
+      "feed_name": "Justice of the Peace, Precinct No. 2, Place 2",
+      "item": "tx-dallas-jp-2-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Antoinette N Harris": "Antoinette N Harris"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0064",
+      "feed_name": "Justice of the Peace, Precinct No. 3, Place 1",
+      "item": "tx-dallas-jp-3-1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Lynn A. Benedetto": "Lynn A. Benedetto",
+        "Adam M. Swartz": "Adam M. Swartz"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0065",
+      "feed_name": "Justice of the Peace, Precinct No. 3, Place 2",
+      "item": "tx-dallas-jp-3-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Michael L. Geller": "Michael L. Geller",
+        "Paula M Rosales": "Paula M Rosales"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0066",
+      "feed_name": "Justice of the Peace, Precinct No. 4, Place 1",
+      "item": "tx-dallas-jp-4-1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Fred Van Liew": "Fred Van Liew",
+        "Mike Jones": "Mike Jones"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0067",
+      "feed_name": "Justice of the Peace, Precinct No. 4, Place 2",
+      "item": "tx-dallas-jp-4-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Sasha Moreno": "Sasha Moreno"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0068",
+      "feed_name": "Justice of the Peace, Precinct No. 5, Place 1",
+      "item": "tx-dallas-jp-5-1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Sara Martinez": "Sara Martinez"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0069",
+      "feed_name": "Justice of the Peace, Precinct No. 5, Place 2",
+      "item": "tx-dallas-jp-5-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Omar Narvaez": "Omar Narvaez"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0077",
+      "feed_name": "CITY OF DALLAS PROPOSITION A",
+      "item": "tx-dallas-prop-a",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For (A Favor)": "yes",
+        "Against (En Contra)": "no"
+      },
+      "reaches": [
+        "Dallas",
+        "Collin",
+        "Denton",
+        "Kaufman",
+        "Rockwall"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0057",
+      "feed_name": "County Treasurer",
+      "item": "tx-dallas-treasurer",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Corsandra Brigham Phelps": "Corsandra Brigham Phelps",
+        "Pauline Medrano": "Pauline Medrano"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0076",
+      "feed_name": "Uncontested Races",
+      "item": "tx-dallas-uncontested-judges",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Vote for All": "Vote for All",
+        "Vote for None": "Vote for None"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0032",
+      "feed_name": "State Representative, District 100",
+      "item": "tx-house-100",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jordan Scott Hoffnagle": "Jordan Scott Hoffnagle",
+        "Venton Jones": "Venton Jones"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0033",
+      "feed_name": "State Representative, District 102",
+      "item": "tx-house-102",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Bonnie Abadie": "Bonnie Abadie",
+        "Ana-Maria Rodriguez Ramos": "Ana-Maria Rodriguez Ramos"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0034",
+      "feed_name": "State Representative, District 103",
+      "item": "tx-house-103",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Melanie Medley-Thomas": "Melanie Medley-Thomas",
+        "Rafael Anchia": "Rafael Anchia"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0035",
+      "feed_name": "State Representative, District 104",
+      "item": "tx-house-104",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jessica Gonzalez": "Jessica Gonzalez"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0036",
+      "feed_name": "State Representative, District 105",
+      "item": "tx-house-105",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Terry Meza": "Terry Meza"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0037",
+      "feed_name": "State Representative, District 107",
+      "item": "tx-house-107",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Linda Garcia": "Linda Garcia"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0038",
+      "feed_name": "State Representative, District 108",
+      "item": "tx-house-108",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Morgan Meyer": "Morgan Meyer",
+        "Allison Mitchell": "Allison Mitchell"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0039",
+      "feed_name": "State Representative, District 109",
+      "item": "tx-house-109",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Will Campbell": "Will Campbell",
+        "Aicha Davis": "Aicha Davis"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0040",
+      "feed_name": "State Representative, District 110",
+      "item": "tx-house-110",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Toni Rose": "Toni Rose"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0041",
+      "feed_name": "State Representative, District 111",
+      "item": "tx-house-111",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Yvonne Davis": "Yvonne Davis"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0042",
+      "feed_name": "State Representative, District 112",
+      "item": "tx-house-112",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Angie Chen Button": "Angie Chen Button",
+        "Zach Herbert": "Zach Herbert"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0043",
+      "feed_name": "State Representative, District 113",
+      "item": "tx-house-113",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Stephen W. Stanley": "Stephen W. Stanley",
+        "Rhetta Andrews Bowers": "Rhetta Andrews Bowers"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0044",
+      "feed_name": "State Representative, District 114",
+      "item": "tx-house-114",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Tim McDonough": "Tim McDonough",
+        "John Bryant": "John Bryant"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0045",
+      "feed_name": "State Representative, District 115",
+      "item": "tx-house-115",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Danny Rosellini": "Danny Rosellini",
+        "Cassandra Hernandez": "Cassandra Hernandez"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0085",
+      "feed_name": "IRVING ISD PROPOSITION A",
+      "item": "tx-irving-isd-prop-a",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For (A Favor)": "yes",
+        "Against (En Contra)": "no"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0086",
+      "feed_name": "IRVING ISD PROPOSITION B",
+      "item": "tx-irving-isd-prop-b",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For (A Favor)": "yes",
+        "Against (En Contra)": "no"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0087",
+      "feed_name": "IRVING ISD PROPOSITION C",
+      "item": "tx-irving-isd-prop-c",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For (A Favor)": "yes",
+        "Against (En Contra)": "no"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0088",
+      "feed_name": "IRVING ISD PROPOSITION D",
+      "item": "tx-irving-isd-prop-d",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For (A Favor)": "yes",
+        "Against (En Contra)": "no"
+      },
+      "reaches": [
+        "Dallas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0089",
+      "feed_name": "MESQUITE INDEPENDENT SCHOOL DISTRICT PROPOSITION A",
+      "item": "tx-mesquite-isd-prop-a",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For (A Favor)": "yes",
+        "Against (En Contra)": "no"
+      },
+      "reaches": [
+        "Dallas",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0029",
+      "feed_name": "Member, State Board of Education, District 13",
+      "item": "tx-sboe-13",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Carlos (Charlie) Garza": "Carlos (Charlie) Garza",
+        "Tiffany Clark": "Tiffany Clark"
+      },
+      "reaches": [
+        "Dallas",
+        "Tarrant",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0030",
+      "feed_name": "Member, State Board of Education, District 14",
+      "item": "tx-sboe-14",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Mindy Bumgarner": "Mindy Bumgarner",
+        "Amy Taylor": "Amy Taylor"
+      },
+      "reaches": [
+        "Dallas",
+        "Ellis",
+        "McLennan",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0028",
+      "feed_name": "Member, State Board of Education, District 9",
+      "item": "tx-sboe-9",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Kason Huddleston": "Kason Huddleston",
+        "Ericka Ledferd": "Ericka Ledferd"
+      },
+      "reaches": [
+        "Dallas",
+        "Rockwall",
+        "Kaufman",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0031",
+      "feed_name": "State Senator, District 2",
+      "item": "tx-senate-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Bob Hall": "Bob Hall",
+        "Keenen Colbert": "Keenen Colbert"
+      },
+      "reaches": [
+        "Dallas",
+        "Van Zandt",
+        "Navarro",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0010",
+      "feed_name": "United States Representative, District 24",
+      "item": "tx-us-house-24",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Beth Van Duyne": "Beth Van Duyne",
+        "Kevin Burge": "Kevin Burge"
+      },
+      "reaches": [
+        "Dallas",
+        "Tarrant",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0011",
+      "feed_name": "United States Representative, District 30",
+      "item": "tx-us-house-30",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Everett Jackson": "Everett Jackson",
+        "Frederick D. Haynes III": "Frederick D. Haynes III"
+      },
+      "reaches": [
+        "Dallas",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0012",
+      "feed_name": "United States Representative, District 32",
+      "item": "tx-us-house-32",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jace Yarbrough": "Jace Yarbrough",
+        "Dan Barrios": "Dan Barrios"
+      },
+      "reaches": [
+        "Dallas",
+        "Collin",
+        "Rockwall",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0013",
+      "feed_name": "United States Representative, District 33",
+      "item": "tx-us-house-33",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Patrick David Gillespie": "Patrick David Gillespie",
+        "Colin Allred": "Colin Allred",
+        "Write-In Votes Cast": "__other"
+      },
+      "reaches": [
+        "Dallas",
+        "Tarrant",
+        "other counties"
+      ],
+      "item_url": null,
+      "note": "Write-in candidates are counted together in Dallas County's feed, so they have no number of their own here."
+    },
+    {
+      "feed_id": "0008",
+      "feed_name": "United States Representative, District 5",
+      "item": "tx-us-house-5",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Lance Gooden": "Lance Gooden",
+        "Chelsey Hockett": "Chelsey Hockett"
+      },
+      "reaches": [
+        "Dallas",
+        "Kaufman",
+        "Anderson",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0009",
+      "feed_name": "United States Representative, District 6",
+      "item": "tx-us-house-6",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jake Ellzey": "Jake Ellzey",
+        "Danny Minton": "Danny Minton"
+      },
+      "reaches": [
+        "Dallas",
+        "other counties"
+      ],
+      "item_url": null
+    }
+  ],
   "unmatched_feed": [],
-  "unmatched_guide": []
+  "unmatched_guide": [],
+  "not_here": []
 }

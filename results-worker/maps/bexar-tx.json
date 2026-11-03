@@ -9,8 +9,8 @@
     "feed_name": "2026 General Election"
   },
   "guide": {
-    "fingerprint": "e3b0c44298fc1c14",
-    "made_from": "vote.kevinhg.com/data, read 2026-11-03T21:18:11.797Z",
+    "fingerprint": "6fa4be7d0086bcc1",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-03T21:27:38.055Z",
     "places": [
       "san-antonio-tx"
     ]
@@ -31,7 +31,1288 @@
   },
   "certify_by": "2026-11-17",
   "official": null,
-  "contests": [],
+  "contests": [
+    {
+      "feed_id": "0039",
+      "feed_name": "Chief Justice, 4th Court of Appeals District",
+      "item": "tx-4th-coa-chief",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Bert Richardson": "Bert Richardson",
+        "DEM Antonia 'Toni' Arteaga": "Antonia \"Toni\" Arteaga"
+      },
+      "reaches": [
+        "Bexar",
+        "other counties",
+        "Atascosa",
+        "Kendall",
+        "Kerr",
+        "Medina",
+        "Uvalde",
+        "Webb",
+        "Wilson"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0081",
+      "feed_name": "Bexar Central Appraisal District  - For Director, Place No. 1",
+      "item": "tx-bcad-place-1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Susan Bayne": "Susan Bayne",
+        "Diana Arévalo": "Diana Arévalo"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0082",
+      "feed_name": "Bexar Central Appraisal District  - For Director, Place No. 2",
+      "item": "tx-bcad-place-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Leticia Anguiano": "Leticia Anguiano",
+        "Erika Hizel": "Erika Hizel"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0083",
+      "feed_name": "Bexar Central Appraisal District  - For Director, Place No. 3",
+      "item": "tx-bcad-place-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jon Melendez": "Jon Melendez"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0057",
+      "feed_name": "Judge, County Court at Law No. 1",
+      "item": "tx-bexar-ccl-1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Bob Behrens": "Bob Behrens",
+        "DEM Helen Petry Stowe": "Helen Petry Stowe"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0066",
+      "feed_name": "Judge, County Court at Law No. 10",
+      "item": "tx-bexar-ccl-10",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Cesar Garcia": "Cesar Garcia"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0067",
+      "feed_name": "Judge, County Court at Law No. 11",
+      "item": "tx-bexar-ccl-11",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Erica Peña": "Erica Peña"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0068",
+      "feed_name": "Judge, County Court at Law No. 12",
+      "item": "tx-bexar-ccl-12",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Deborah Dietzmann": "Deborah Dietzmann",
+        "DEM Lauren Zamora": "Lauren Zamora"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0069",
+      "feed_name": "Judge, County Court at Law No. 13",
+      "item": "tx-bexar-ccl-13",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Alicia 'Ali' Perez": "Alicia \"Ali\" Perez"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0070",
+      "feed_name": "Judge, County Court at Law No. 14",
+      "item": "tx-bexar-ccl-14",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Audrey Martinez": "Audrey Martinez"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0071",
+      "feed_name": "Judge, County Court at Law No. 15",
+      "item": "tx-bexar-ccl-15",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Melissa Vara": "Melissa Vara"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0058",
+      "feed_name": "Judge, County Court at Law No. 2",
+      "item": "tx-bexar-ccl-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Melissa Saenz": "Melissa Saenz"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0059",
+      "feed_name": "Judge, County Court at Law No. 3",
+      "item": "tx-bexar-ccl-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM David J. Rodriguez": "David J. Rodriguez"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0060",
+      "feed_name": "Judge, County Court at Law No. 4",
+      "item": "tx-bexar-ccl-4",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Jason Roland Garrahan": "Jason Roland Garrahan",
+        "DEM Alfredo Ximenez": "Alfredo Ximenez"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0061",
+      "feed_name": "Judge, County Court at Law No. 5",
+      "item": "tx-bexar-ccl-5",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Andrea Arevalos": "Andrea Arevalos"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0062",
+      "feed_name": "Judge, County Court at Law No. 6",
+      "item": "tx-bexar-ccl-6",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Erica Dominguez": "Erica Dominguez"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0063",
+      "feed_name": "Judge, County Court at Law No. 7",
+      "item": "tx-bexar-ccl-7",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Melanie M. Lira": "Melanie M. Lira"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0064",
+      "feed_name": "Judge, County Court at Law No. 8",
+      "item": "tx-bexar-ccl-8",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Celeste Brown": "Celeste Brown",
+        "DEM Victoria Cruz": "Victoria Cruz"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0065",
+      "feed_name": "Judge, County Court at Law No. 9",
+      "item": "tx-bexar-ccl-9",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Daphne Previti Austin": "Daphne Previti Austin",
+        "DEM Jessica A. Gonzalez": "Jessica A. Gonzalez"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0076",
+      "feed_name": "County Commissioner Precinct 2",
+      "item": "tx-bexar-commissioner-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP David Sherwood Hill": "David Sherwood Hill",
+        "DEM Justin Rodriguez": "Justin Rodriguez"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0077",
+      "feed_name": "County Commissioner Precinct 4",
+      "item": "tx-bexar-commissioner-4",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Tommy Calvert Jr.": "Tommy Calvert Jr.",
+        "IND Roy Anthony II": "Roy Anthony II"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0075",
+      "feed_name": "County Clerk",
+      "item": "tx-bexar-county-clerk",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Lucy Adame-Clark": "Lucy Adame-Clark"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0056",
+      "feed_name": "County Judge",
+      "item": "tx-bexar-county-judge",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Patrick Von Dohlen": "Patrick Von Dohlen",
+        "DEM Ron Nirenberg": "Ron Nirenberg"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0055",
+      "feed_name": "Bexar County Criminal District Attorney",
+      "item": "tx-bexar-criminal-district-attorney",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Ashley Foster": "Ashley Foster",
+        "DEM Luz Elena Chapa": "Luz Elena Chapa",
+        "IND Jason Wolff": "Jason Wolff"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0074",
+      "feed_name": "District Clerk",
+      "item": "tx-bexar-district-clerk",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Christine 'Chris' Castillo": "Christine \"Chris\" Castillo"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0041",
+      "feed_name": "District Judge, 144th Judicial District",
+      "item": "tx-bexar-district-court-144th",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Michael De Leon": "Michael De Leon"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0042",
+      "feed_name": "District Judge, 150th Judicial District",
+      "item": "tx-bexar-district-court-150th",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Monique Diaz": "Monique Diaz"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0043",
+      "feed_name": "District Judge, 186th Judicial District",
+      "item": "tx-bexar-district-court-186th",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Kristina Escalona": "Kristina Escalona"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0044",
+      "feed_name": "District Judge, 187th Judicial District",
+      "item": "tx-bexar-district-court-187th",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Stephanie Franco": "Stephanie Franco"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0045",
+      "feed_name": "District Judge, 224th Judicial District",
+      "item": "tx-bexar-district-court-224th",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Marisa Flores": "Marisa Flores"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0046",
+      "feed_name": "District Judge, 225th Judicial District",
+      "item": "tx-bexar-district-court-225th",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Benjamin Robertson": "Benjamin Robertson",
+        "DEM Christine Vasquez Hortick": "Christine Vasquez Hortick"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0047",
+      "feed_name": "District Judge, 226th Judicial District",
+      "item": "tx-bexar-district-court-226th",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Anastacia 'Ana' Ochoa Nelson": "Anastacia \"Ana\" Ochoa Nelson"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0048",
+      "feed_name": "District Judge, 227th Judicial District",
+      "item": "tx-bexar-district-court-227th",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Christine Del Prado": "Christine Del Prado"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0049",
+      "feed_name": "District Judge, 285th Judicial District",
+      "item": "tx-bexar-district-court-285th",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Nadine Melissa Nieto": "Nadine Melissa Nieto"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0050",
+      "feed_name": "District Judge, 288th Judicial District",
+      "item": "tx-bexar-district-court-288th",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Cynthia Marie Chapa": "Cynthia Marie Chapa"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0051",
+      "feed_name": "District Judge, 289th Judicial District",
+      "item": "tx-bexar-district-court-289th",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Rose Sosa": "Rose Sosa"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0052",
+      "feed_name": "District Judge, 290th Judicial District",
+      "item": "tx-bexar-district-court-290th",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Jennifer Pena": "Jennifer Pena"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0053",
+      "feed_name": "District Judge, 436th Judicial District",
+      "item": "tx-bexar-district-court-436th",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Raymond A. Villareal": "Raymond A. Villareal"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0054",
+      "feed_name": "District Judge, 437th Judicial District",
+      "item": "tx-bexar-district-court-437th",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Joel Perez": "Joel Perez"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0040",
+      "feed_name": "District Judge, 45th Judicial District",
+      "item": "tx-bexar-district-court-45th",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Mary Lou Alvarez": "Mary Lou Alvarez"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0078",
+      "feed_name": "Justice of the Peace Precinct 1",
+      "item": "tx-bexar-jp-1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Armando Cruz Jr.": "Armando Cruz Jr."
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0079",
+      "feed_name": "Justice of the Peace Precinct 3",
+      "item": "tx-bexar-jp-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Julie Bray Patterson": "Julie Bray Patterson"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0080",
+      "feed_name": "Justice of the Peace Precinct 4",
+      "item": "tx-bexar-jp-4",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Anna Campos": "Anna Campos"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0072",
+      "feed_name": "Judge, Probate Court No. 1",
+      "item": "tx-bexar-probate-1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Oscar J. Kazen": "Oscar J. Kazen"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0073",
+      "feed_name": "Judge, Probate Court No. 2",
+      "item": "tx-bexar-probate-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Veronica Vasquez": "Veronica Vasquez"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0109",
+      "feed_name": "COMAL INDEPENDENT SCHOOL DISTRICT - PROPOSITION A",
+      "item": "tx-comal-isd-prop-a",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "FOR": "yes",
+        "AGAINST": "no"
+      },
+      "reaches": [
+        "Bexar",
+        "Comal",
+        "Guadalupe",
+        "Kendall",
+        "Hays",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0110",
+      "feed_name": "COMAL INDEPENDENT SCHOOL DISTRICT - PROPOSITION B",
+      "item": "tx-comal-isd-prop-b",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "FOR": "yes",
+        "AGAINST": "no"
+      },
+      "reaches": [
+        "Bexar",
+        "Comal",
+        "Guadalupe",
+        "Kendall",
+        "Hays",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0136",
+      "feed_name": "For Director Edwards Aquifer Authority District 1",
+      "item": "tx-eaa-district-1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Joey Groff": "Joey Groff",
+        "Carol G. Patterson": "Carol G. Patterson"
+      },
+      "reaches": [
+        "Bexar",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0111",
+      "feed_name": "EAST CENTRAL INDEPENDENT SCHOOL DISTRICT - PROPOSITION A",
+      "item": "tx-ecisd-prop-a",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Bexar",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0112",
+      "feed_name": "For Trustee, Place 1 Edgewood Independent School District",
+      "item": "tx-edgewoodisd-trustee-1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Dora Maldonado": "Dora Maldonado",
+        "James Hernandez": "James Hernandez"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0113",
+      "feed_name": "For Trustee, Place 2 Edgewood Independent School District",
+      "item": "tx-edgewoodisd-trustee-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Frank Espinosa": "Frank Espinosa",
+        "Elias Hernandez": "Elias Hernandez",
+        "Jose 'Joe' Gallegos II": "Jose \"Joe\" Gallegos II"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0114",
+      "feed_name": "For Trustee, Place 3 Edgewood Independent School District",
+      "item": "tx-edgewoodisd-trustee-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Dorothy Borjas": "Dorothy Borjas",
+        "Richard Santoyo": "Richard Santoyo"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0115",
+      "feed_name": "For Trustee, Place 6 Edgewood Independent School District",
+      "item": "tx-edgewoodisd-trustee-6",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Michael Valdez": "Michael Valdez",
+        "Joey Cipriano": "Joey Cipriano"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0026",
+      "feed_name": "State Representative District 116",
+      "item": "tx-house-116",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Rhett Rosenquest Smith": "Rhett Rosenquest Smith",
+        "DEM Trey Martinez Fischer": "Trey Martinez Fischer"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0027",
+      "feed_name": "State Representative District 117",
+      "item": "tx-house-117",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Ben Mostyn": "Ben Mostyn",
+        "DEM Philip Cortez": "Philip Cortez"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0028",
+      "feed_name": "State Representative District 118",
+      "item": "tx-house-118",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Jorge Borrego": "Jorge Borrego",
+        "DEM Kristian Carranza": "Kristian Carranza"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0029",
+      "feed_name": "State Representative District 119",
+      "item": "tx-house-119",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Melva Perez": "Melva Perez",
+        "DEM Elizabeth 'Liz' Campos": "Elizabeth \"Liz\" Campos"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0030",
+      "feed_name": "State Representative District 120",
+      "item": "tx-house-120",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Barbara Gervin Hawkins": "Barbara Gervin-Hawkins"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0031",
+      "feed_name": "State Representative District 121",
+      "item": "tx-house-121",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Marc Lahood": "Marc Lahood",
+        "DEM Zack Dunn": "Zack Dunn"
+      },
+      "reaches": [
+        "Bexar",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0032",
+      "feed_name": "State Representative District 122",
+      "item": "tx-house-122",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Mark Dorazio": "Mark Dorazio",
+        "DEM Shelly Nickels": "Shelly Nickels"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0033",
+      "feed_name": "State Representative District 123",
+      "item": "tx-house-123",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Diego Bernal": "Diego Bernal"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0034",
+      "feed_name": "State Representative District 124",
+      "item": "tx-house-124",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Sylvia Soto": "Sylvia Soto",
+        "DEM Josey Garcia": "Josey Garcia",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null,
+      "note": "Write-in candidates are counted together in Bexar County's feed, so they have no number of their own here."
+    },
+    {
+      "feed_id": "0035",
+      "feed_name": "State Representative District 125",
+      "item": "tx-house-125",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Ricardo 'Rick' Martinez": "Ricardo \"Rick\" Martinez",
+        "DEM Adrian Reyna": "Adrian Reyna"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0116",
+      "feed_name": "NORTHSIDE INDEPENDENT SCHOOL DISTRICT - PROPOSITION A",
+      "item": "tx-nisd-prop-a",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "FOR": "yes",
+        "AGAINST": "no"
+      },
+      "reaches": [
+        "Bexar",
+        "Medina",
+        "Bandera",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0117",
+      "feed_name": "NORTHSIDE INDEPENDENT SCHOOL DISTRICT - PROPOSITION B",
+      "item": "tx-nisd-prop-b",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "FOR": "yes",
+        "AGAINST": "no"
+      },
+      "reaches": [
+        "Bexar",
+        "Medina",
+        "Bandera",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0118",
+      "feed_name": "NORTHSIDE INDEPENDENT SCHOOL DISTRICT - PROPOSITION C",
+      "item": "tx-nisd-prop-c",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "FOR": "yes",
+        "AGAINST": "no"
+      },
+      "reaches": [
+        "Bexar",
+        "Medina",
+        "Bandera",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0119",
+      "feed_name": "NORTHSIDE INDEPENDENT SCHOOL DISTRICT - PROPOSITION D",
+      "item": "tx-nisd-prop-d",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "FOR": "yes",
+        "AGAINST": "no"
+      },
+      "reaches": [
+        "Bexar",
+        "Medina",
+        "Bandera",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0120",
+      "feed_name": "San Antonio Independent School District - Proposition A",
+      "item": "tx-saisd-prop-a",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0121",
+      "feed_name": "San Antonio Independent School District - Proposition B",
+      "item": "tx-saisd-prop-b",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0122",
+      "feed_name": "San Antonio Independent School District - Proposition C",
+      "item": "tx-saisd-prop-c",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0123",
+      "feed_name": "San Antonio Independent School District - Proposition D",
+      "item": "tx-saisd-prop-d",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0098",
+      "feed_name": "CITY OF SAN ANTONIO - PROPOSITION A",
+      "item": "tx-san-antonio-prop-a",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "FOR": "yes",
+        "AGAINST": "no"
+      },
+      "reaches": [
+        "Bexar",
+        "Comal",
+        "Medina"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0124",
+      "feed_name": "SCHERTZ-CIBOLO-UNIVERSAL CITY INDEPENDENT SCHOOL DISTRICT - PROPOSITION A",
+      "item": "tx-scucisd-prop-a",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "FOR": "yes",
+        "AGAINST": "no"
+      },
+      "reaches": [
+        "Bexar",
+        "Guadalupe",
+        "Comal",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0023",
+      "feed_name": "State Senator, District 19",
+      "item": "tx-senate-19",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Marcus Cardenas": "Marcus Cardenas",
+        "DEM Roland Gutierrez": "Roland Gutierrez"
+      },
+      "reaches": [
+        "Bexar",
+        "Uvalde",
+        "other counties",
+        "Medina",
+        "Val Verde"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0024",
+      "feed_name": "State Senator, District 21",
+      "item": "tx-senate-21",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Julie Dahlberg": "Julie Dahlberg",
+        "DEM Judith Zaffirini": "Judith Zaffirini"
+      },
+      "reaches": [
+        "Bexar",
+        "Travis",
+        "Hays",
+        "Webb",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0025",
+      "feed_name": "State Senator, District 26",
+      "item": "tx-senate-26",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Jose Menendez": "Jose Menendez",
+        "GRN Julián Villarreal": "Julián Villarreal"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0126",
+      "feed_name": "Somerset Independent School District - For Trustee, Single Member District 3",
+      "item": "tx-somersetisd-trustee-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Albert Herrera": "Albert Herrera",
+        "Doug Black": "Doug Black"
+      },
+      "reaches": [
+        "Bexar",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0127",
+      "feed_name": "Somerset Independent School District - For Trustee, Single Member District 7",
+      "item": "tx-somersetisd-trustee-7",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Robert A. Casias": "Robert A. Casias",
+        "Emilio G. Arcos": "Emilio G. Arcos"
+      },
+      "reaches": [
+        "Bexar",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0125",
+      "feed_name": "South San Antonio Independent School District - PROPOSITION A",
+      "item": "tx-southsan-isd-prop-a",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Bexar"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0005",
+      "feed_name": "United States Representative District 20",
+      "item": "tx-us-house-20",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Edgardo Rafael Baez": "Edgardo Rafael Baez",
+        "DEM Joaquin Castro": "Joaquin Castro"
+      },
+      "reaches": [
+        "Bexar",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0006",
+      "feed_name": "United States Representative District 21",
+      "item": "tx-us-house-21",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Mark Teixeira": "Mark Teixeira",
+        "DEM Kristin Hook": "Kristin Hook"
+      },
+      "reaches": [
+        "Bexar",
+        "Comal",
+        "Hays",
+        "other counties",
+        "Kendall"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0007",
+      "feed_name": "United States Representative District 23",
+      "item": "tx-us-house-23",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Brandon Herrera": "Brandon Herrera",
+        "DEM Katy Padilla Stout": "Katy Padilla Stout",
+        "IND Ben Mendoza": "Ben Mendoza"
+      },
+      "reaches": [
+        "Bexar",
+        "other counties",
+        "Medina",
+        "Uvalde",
+        "Val Verde",
+        "Maverick",
+        "El Paso"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0008",
+      "feed_name": "United States Representative District 35",
+      "item": "tx-us-house-35",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Carlos De La Cruz": "Carlos De La Cruz",
+        "DEM Johnny C. Garcia": "Johnny C. Garcia"
+      },
+      "reaches": [
+        "Bexar",
+        "Guadalupe",
+        "Karnes",
+        "other counties",
+        "Wilson"
+      ],
+      "item_url": null
+    }
+  ],
   "unmatched_feed": [],
-  "unmatched_guide": []
+  "unmatched_guide": [],
+  "not_here": []
 }

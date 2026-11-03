@@ -11,8 +11,8 @@ export const MAPS = [
       "feed_name": "2026 General Election"
     },
     "guide": {
-      "fingerprint": "e3b0c44298fc1c14",
-      "made_from": "vote.kevinhg.com/data, read 2026-11-03T21:18:11.797Z",
+      "fingerprint": "6fa4be7d0086bcc1",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-03T21:27:38.055Z",
       "places": [
         "san-antonio-tx"
       ]
@@ -33,9 +33,1290 @@ export const MAPS = [
     },
     "certify_by": "2026-11-17",
     "official": null,
-    "contests": [],
+    "contests": [
+      {
+        "feed_id": "0039",
+        "feed_name": "Chief Justice, 4th Court of Appeals District",
+        "item": "tx-4th-coa-chief",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Bert Richardson": "Bert Richardson",
+          "DEM Antonia 'Toni' Arteaga": "Antonia \"Toni\" Arteaga"
+        },
+        "reaches": [
+          "Bexar",
+          "other counties",
+          "Atascosa",
+          "Kendall",
+          "Kerr",
+          "Medina",
+          "Uvalde",
+          "Webb",
+          "Wilson"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0081",
+        "feed_name": "Bexar Central Appraisal District  - For Director, Place No. 1",
+        "item": "tx-bcad-place-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Susan Bayne": "Susan Bayne",
+          "Diana Arévalo": "Diana Arévalo"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0082",
+        "feed_name": "Bexar Central Appraisal District  - For Director, Place No. 2",
+        "item": "tx-bcad-place-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Leticia Anguiano": "Leticia Anguiano",
+          "Erika Hizel": "Erika Hizel"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0083",
+        "feed_name": "Bexar Central Appraisal District  - For Director, Place No. 3",
+        "item": "tx-bcad-place-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jon Melendez": "Jon Melendez"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0057",
+        "feed_name": "Judge, County Court at Law No. 1",
+        "item": "tx-bexar-ccl-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Bob Behrens": "Bob Behrens",
+          "DEM Helen Petry Stowe": "Helen Petry Stowe"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0066",
+        "feed_name": "Judge, County Court at Law No. 10",
+        "item": "tx-bexar-ccl-10",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Cesar Garcia": "Cesar Garcia"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0067",
+        "feed_name": "Judge, County Court at Law No. 11",
+        "item": "tx-bexar-ccl-11",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Erica Peña": "Erica Peña"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0068",
+        "feed_name": "Judge, County Court at Law No. 12",
+        "item": "tx-bexar-ccl-12",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Deborah Dietzmann": "Deborah Dietzmann",
+          "DEM Lauren Zamora": "Lauren Zamora"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0069",
+        "feed_name": "Judge, County Court at Law No. 13",
+        "item": "tx-bexar-ccl-13",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Alicia 'Ali' Perez": "Alicia \"Ali\" Perez"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0070",
+        "feed_name": "Judge, County Court at Law No. 14",
+        "item": "tx-bexar-ccl-14",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Audrey Martinez": "Audrey Martinez"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0071",
+        "feed_name": "Judge, County Court at Law No. 15",
+        "item": "tx-bexar-ccl-15",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Melissa Vara": "Melissa Vara"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0058",
+        "feed_name": "Judge, County Court at Law No. 2",
+        "item": "tx-bexar-ccl-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Melissa Saenz": "Melissa Saenz"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0059",
+        "feed_name": "Judge, County Court at Law No. 3",
+        "item": "tx-bexar-ccl-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM David J. Rodriguez": "David J. Rodriguez"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0060",
+        "feed_name": "Judge, County Court at Law No. 4",
+        "item": "tx-bexar-ccl-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Jason Roland Garrahan": "Jason Roland Garrahan",
+          "DEM Alfredo Ximenez": "Alfredo Ximenez"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0061",
+        "feed_name": "Judge, County Court at Law No. 5",
+        "item": "tx-bexar-ccl-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Andrea Arevalos": "Andrea Arevalos"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0062",
+        "feed_name": "Judge, County Court at Law No. 6",
+        "item": "tx-bexar-ccl-6",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Erica Dominguez": "Erica Dominguez"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0063",
+        "feed_name": "Judge, County Court at Law No. 7",
+        "item": "tx-bexar-ccl-7",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Melanie M. Lira": "Melanie M. Lira"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0064",
+        "feed_name": "Judge, County Court at Law No. 8",
+        "item": "tx-bexar-ccl-8",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Celeste Brown": "Celeste Brown",
+          "DEM Victoria Cruz": "Victoria Cruz"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0065",
+        "feed_name": "Judge, County Court at Law No. 9",
+        "item": "tx-bexar-ccl-9",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Daphne Previti Austin": "Daphne Previti Austin",
+          "DEM Jessica A. Gonzalez": "Jessica A. Gonzalez"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0076",
+        "feed_name": "County Commissioner Precinct 2",
+        "item": "tx-bexar-commissioner-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP David Sherwood Hill": "David Sherwood Hill",
+          "DEM Justin Rodriguez": "Justin Rodriguez"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0077",
+        "feed_name": "County Commissioner Precinct 4",
+        "item": "tx-bexar-commissioner-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Tommy Calvert Jr.": "Tommy Calvert Jr.",
+          "IND Roy Anthony II": "Roy Anthony II"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0075",
+        "feed_name": "County Clerk",
+        "item": "tx-bexar-county-clerk",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Lucy Adame-Clark": "Lucy Adame-Clark"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0056",
+        "feed_name": "County Judge",
+        "item": "tx-bexar-county-judge",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Patrick Von Dohlen": "Patrick Von Dohlen",
+          "DEM Ron Nirenberg": "Ron Nirenberg"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0055",
+        "feed_name": "Bexar County Criminal District Attorney",
+        "item": "tx-bexar-criminal-district-attorney",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Ashley Foster": "Ashley Foster",
+          "DEM Luz Elena Chapa": "Luz Elena Chapa",
+          "IND Jason Wolff": "Jason Wolff"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0074",
+        "feed_name": "District Clerk",
+        "item": "tx-bexar-district-clerk",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Christine 'Chris' Castillo": "Christine \"Chris\" Castillo"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0041",
+        "feed_name": "District Judge, 144th Judicial District",
+        "item": "tx-bexar-district-court-144th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Michael De Leon": "Michael De Leon"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0042",
+        "feed_name": "District Judge, 150th Judicial District",
+        "item": "tx-bexar-district-court-150th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Monique Diaz": "Monique Diaz"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0043",
+        "feed_name": "District Judge, 186th Judicial District",
+        "item": "tx-bexar-district-court-186th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Kristina Escalona": "Kristina Escalona"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0044",
+        "feed_name": "District Judge, 187th Judicial District",
+        "item": "tx-bexar-district-court-187th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Stephanie Franco": "Stephanie Franco"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0045",
+        "feed_name": "District Judge, 224th Judicial District",
+        "item": "tx-bexar-district-court-224th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Marisa Flores": "Marisa Flores"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0046",
+        "feed_name": "District Judge, 225th Judicial District",
+        "item": "tx-bexar-district-court-225th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Benjamin Robertson": "Benjamin Robertson",
+          "DEM Christine Vasquez Hortick": "Christine Vasquez Hortick"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0047",
+        "feed_name": "District Judge, 226th Judicial District",
+        "item": "tx-bexar-district-court-226th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Anastacia 'Ana' Ochoa Nelson": "Anastacia \"Ana\" Ochoa Nelson"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0048",
+        "feed_name": "District Judge, 227th Judicial District",
+        "item": "tx-bexar-district-court-227th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Christine Del Prado": "Christine Del Prado"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0049",
+        "feed_name": "District Judge, 285th Judicial District",
+        "item": "tx-bexar-district-court-285th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Nadine Melissa Nieto": "Nadine Melissa Nieto"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0050",
+        "feed_name": "District Judge, 288th Judicial District",
+        "item": "tx-bexar-district-court-288th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Cynthia Marie Chapa": "Cynthia Marie Chapa"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0051",
+        "feed_name": "District Judge, 289th Judicial District",
+        "item": "tx-bexar-district-court-289th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Rose Sosa": "Rose Sosa"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0052",
+        "feed_name": "District Judge, 290th Judicial District",
+        "item": "tx-bexar-district-court-290th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Jennifer Pena": "Jennifer Pena"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0053",
+        "feed_name": "District Judge, 436th Judicial District",
+        "item": "tx-bexar-district-court-436th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Raymond A. Villareal": "Raymond A. Villareal"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0054",
+        "feed_name": "District Judge, 437th Judicial District",
+        "item": "tx-bexar-district-court-437th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Joel Perez": "Joel Perez"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0040",
+        "feed_name": "District Judge, 45th Judicial District",
+        "item": "tx-bexar-district-court-45th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Mary Lou Alvarez": "Mary Lou Alvarez"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0078",
+        "feed_name": "Justice of the Peace Precinct 1",
+        "item": "tx-bexar-jp-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Armando Cruz Jr.": "Armando Cruz Jr."
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0079",
+        "feed_name": "Justice of the Peace Precinct 3",
+        "item": "tx-bexar-jp-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Julie Bray Patterson": "Julie Bray Patterson"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0080",
+        "feed_name": "Justice of the Peace Precinct 4",
+        "item": "tx-bexar-jp-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Anna Campos": "Anna Campos"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0072",
+        "feed_name": "Judge, Probate Court No. 1",
+        "item": "tx-bexar-probate-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Oscar J. Kazen": "Oscar J. Kazen"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0073",
+        "feed_name": "Judge, Probate Court No. 2",
+        "item": "tx-bexar-probate-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Veronica Vasquez": "Veronica Vasquez"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0109",
+        "feed_name": "COMAL INDEPENDENT SCHOOL DISTRICT - PROPOSITION A",
+        "item": "tx-comal-isd-prop-a",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "FOR": "yes",
+          "AGAINST": "no"
+        },
+        "reaches": [
+          "Bexar",
+          "Comal",
+          "Guadalupe",
+          "Kendall",
+          "Hays",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0110",
+        "feed_name": "COMAL INDEPENDENT SCHOOL DISTRICT - PROPOSITION B",
+        "item": "tx-comal-isd-prop-b",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "FOR": "yes",
+          "AGAINST": "no"
+        },
+        "reaches": [
+          "Bexar",
+          "Comal",
+          "Guadalupe",
+          "Kendall",
+          "Hays",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0136",
+        "feed_name": "For Director Edwards Aquifer Authority District 1",
+        "item": "tx-eaa-district-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Joey Groff": "Joey Groff",
+          "Carol G. Patterson": "Carol G. Patterson"
+        },
+        "reaches": [
+          "Bexar",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0111",
+        "feed_name": "EAST CENTRAL INDEPENDENT SCHOOL DISTRICT - PROPOSITION A",
+        "item": "tx-ecisd-prop-a",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "For": "yes",
+          "Against": "no"
+        },
+        "reaches": [
+          "Bexar",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0112",
+        "feed_name": "For Trustee, Place 1 Edgewood Independent School District",
+        "item": "tx-edgewoodisd-trustee-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Dora Maldonado": "Dora Maldonado",
+          "James Hernandez": "James Hernandez"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0113",
+        "feed_name": "For Trustee, Place 2 Edgewood Independent School District",
+        "item": "tx-edgewoodisd-trustee-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Frank Espinosa": "Frank Espinosa",
+          "Elias Hernandez": "Elias Hernandez",
+          "Jose 'Joe' Gallegos II": "Jose \"Joe\" Gallegos II"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0114",
+        "feed_name": "For Trustee, Place 3 Edgewood Independent School District",
+        "item": "tx-edgewoodisd-trustee-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Dorothy Borjas": "Dorothy Borjas",
+          "Richard Santoyo": "Richard Santoyo"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0115",
+        "feed_name": "For Trustee, Place 6 Edgewood Independent School District",
+        "item": "tx-edgewoodisd-trustee-6",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Michael Valdez": "Michael Valdez",
+          "Joey Cipriano": "Joey Cipriano"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0026",
+        "feed_name": "State Representative District 116",
+        "item": "tx-house-116",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Rhett Rosenquest Smith": "Rhett Rosenquest Smith",
+          "DEM Trey Martinez Fischer": "Trey Martinez Fischer"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0027",
+        "feed_name": "State Representative District 117",
+        "item": "tx-house-117",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Ben Mostyn": "Ben Mostyn",
+          "DEM Philip Cortez": "Philip Cortez"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0028",
+        "feed_name": "State Representative District 118",
+        "item": "tx-house-118",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Jorge Borrego": "Jorge Borrego",
+          "DEM Kristian Carranza": "Kristian Carranza"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0029",
+        "feed_name": "State Representative District 119",
+        "item": "tx-house-119",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Melva Perez": "Melva Perez",
+          "DEM Elizabeth 'Liz' Campos": "Elizabeth \"Liz\" Campos"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0030",
+        "feed_name": "State Representative District 120",
+        "item": "tx-house-120",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Barbara Gervin Hawkins": "Barbara Gervin-Hawkins"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0031",
+        "feed_name": "State Representative District 121",
+        "item": "tx-house-121",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Marc Lahood": "Marc Lahood",
+          "DEM Zack Dunn": "Zack Dunn"
+        },
+        "reaches": [
+          "Bexar",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0032",
+        "feed_name": "State Representative District 122",
+        "item": "tx-house-122",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Mark Dorazio": "Mark Dorazio",
+          "DEM Shelly Nickels": "Shelly Nickels"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0033",
+        "feed_name": "State Representative District 123",
+        "item": "tx-house-123",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Diego Bernal": "Diego Bernal"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0034",
+        "feed_name": "State Representative District 124",
+        "item": "tx-house-124",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Sylvia Soto": "Sylvia Soto",
+          "DEM Josey Garcia": "Josey Garcia",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null,
+        "note": "Write-in candidates are counted together in Bexar County's feed, so they have no number of their own here."
+      },
+      {
+        "feed_id": "0035",
+        "feed_name": "State Representative District 125",
+        "item": "tx-house-125",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Ricardo 'Rick' Martinez": "Ricardo \"Rick\" Martinez",
+          "DEM Adrian Reyna": "Adrian Reyna"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0116",
+        "feed_name": "NORTHSIDE INDEPENDENT SCHOOL DISTRICT - PROPOSITION A",
+        "item": "tx-nisd-prop-a",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "FOR": "yes",
+          "AGAINST": "no"
+        },
+        "reaches": [
+          "Bexar",
+          "Medina",
+          "Bandera",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0117",
+        "feed_name": "NORTHSIDE INDEPENDENT SCHOOL DISTRICT - PROPOSITION B",
+        "item": "tx-nisd-prop-b",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "FOR": "yes",
+          "AGAINST": "no"
+        },
+        "reaches": [
+          "Bexar",
+          "Medina",
+          "Bandera",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0118",
+        "feed_name": "NORTHSIDE INDEPENDENT SCHOOL DISTRICT - PROPOSITION C",
+        "item": "tx-nisd-prop-c",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "FOR": "yes",
+          "AGAINST": "no"
+        },
+        "reaches": [
+          "Bexar",
+          "Medina",
+          "Bandera",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0119",
+        "feed_name": "NORTHSIDE INDEPENDENT SCHOOL DISTRICT - PROPOSITION D",
+        "item": "tx-nisd-prop-d",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "FOR": "yes",
+          "AGAINST": "no"
+        },
+        "reaches": [
+          "Bexar",
+          "Medina",
+          "Bandera",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0120",
+        "feed_name": "San Antonio Independent School District - Proposition A",
+        "item": "tx-saisd-prop-a",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "For": "yes",
+          "Against": "no"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0121",
+        "feed_name": "San Antonio Independent School District - Proposition B",
+        "item": "tx-saisd-prop-b",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "For": "yes",
+          "Against": "no"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0122",
+        "feed_name": "San Antonio Independent School District - Proposition C",
+        "item": "tx-saisd-prop-c",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "For": "yes",
+          "Against": "no"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0123",
+        "feed_name": "San Antonio Independent School District - Proposition D",
+        "item": "tx-saisd-prop-d",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "For": "yes",
+          "Against": "no"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0098",
+        "feed_name": "CITY OF SAN ANTONIO - PROPOSITION A",
+        "item": "tx-san-antonio-prop-a",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "FOR": "yes",
+          "AGAINST": "no"
+        },
+        "reaches": [
+          "Bexar",
+          "Comal",
+          "Medina"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0124",
+        "feed_name": "SCHERTZ-CIBOLO-UNIVERSAL CITY INDEPENDENT SCHOOL DISTRICT - PROPOSITION A",
+        "item": "tx-scucisd-prop-a",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "FOR": "yes",
+          "AGAINST": "no"
+        },
+        "reaches": [
+          "Bexar",
+          "Guadalupe",
+          "Comal",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0023",
+        "feed_name": "State Senator, District 19",
+        "item": "tx-senate-19",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Marcus Cardenas": "Marcus Cardenas",
+          "DEM Roland Gutierrez": "Roland Gutierrez"
+        },
+        "reaches": [
+          "Bexar",
+          "Uvalde",
+          "other counties",
+          "Medina",
+          "Val Verde"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0024",
+        "feed_name": "State Senator, District 21",
+        "item": "tx-senate-21",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Julie Dahlberg": "Julie Dahlberg",
+          "DEM Judith Zaffirini": "Judith Zaffirini"
+        },
+        "reaches": [
+          "Bexar",
+          "Travis",
+          "Hays",
+          "Webb",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0025",
+        "feed_name": "State Senator, District 26",
+        "item": "tx-senate-26",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEM Jose Menendez": "Jose Menendez",
+          "GRN Julián Villarreal": "Julián Villarreal"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0126",
+        "feed_name": "Somerset Independent School District - For Trustee, Single Member District 3",
+        "item": "tx-somersetisd-trustee-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Albert Herrera": "Albert Herrera",
+          "Doug Black": "Doug Black"
+        },
+        "reaches": [
+          "Bexar",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0127",
+        "feed_name": "Somerset Independent School District - For Trustee, Single Member District 7",
+        "item": "tx-somersetisd-trustee-7",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Robert A. Casias": "Robert A. Casias",
+          "Emilio G. Arcos": "Emilio G. Arcos"
+        },
+        "reaches": [
+          "Bexar",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0125",
+        "feed_name": "South San Antonio Independent School District - PROPOSITION A",
+        "item": "tx-southsan-isd-prop-a",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "For": "yes",
+          "Against": "no"
+        },
+        "reaches": [
+          "Bexar"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0005",
+        "feed_name": "United States Representative District 20",
+        "item": "tx-us-house-20",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Edgardo Rafael Baez": "Edgardo Rafael Baez",
+          "DEM Joaquin Castro": "Joaquin Castro"
+        },
+        "reaches": [
+          "Bexar",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0006",
+        "feed_name": "United States Representative District 21",
+        "item": "tx-us-house-21",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Mark Teixeira": "Mark Teixeira",
+          "DEM Kristin Hook": "Kristin Hook"
+        },
+        "reaches": [
+          "Bexar",
+          "Comal",
+          "Hays",
+          "other counties",
+          "Kendall"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0007",
+        "feed_name": "United States Representative District 23",
+        "item": "tx-us-house-23",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Brandon Herrera": "Brandon Herrera",
+          "DEM Katy Padilla Stout": "Katy Padilla Stout",
+          "IND Ben Mendoza": "Ben Mendoza"
+        },
+        "reaches": [
+          "Bexar",
+          "other counties",
+          "Medina",
+          "Uvalde",
+          "Val Verde",
+          "Maverick",
+          "El Paso"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0008",
+        "feed_name": "United States Representative District 35",
+        "item": "tx-us-house-35",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Carlos De La Cruz": "Carlos De La Cruz",
+          "DEM Johnny C. Garcia": "Johnny C. Garcia"
+        },
+        "reaches": [
+          "Bexar",
+          "Guadalupe",
+          "Karnes",
+          "other counties",
+          "Wilson"
+        ],
+        "item_url": null
+      }
+    ],
     "unmatched_feed": [],
-    "unmatched_guide": []
+    "unmatched_guide": [],
+    "not_here": []
   },
   {
     "id": "dallas-county-tx",
@@ -48,8 +1329,8 @@ export const MAPS = [
       "feed_name": "General & Joint Election 2026"
     },
     "guide": {
-      "fingerprint": "e3b0c44298fc1c14",
-      "made_from": "vote.kevinhg.com/data, read 2026-11-03T21:18:11.937Z",
+      "fingerprint": "92494d8f3e1f7ac3",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-03T21:27:21.185Z",
       "places": [
         "dallas-tx"
       ]
@@ -70,9 +1351,914 @@ export const MAPS = [
     },
     "certify_by": "2026-11-17",
     "official": null,
-    "contests": [],
+    "contests": [
+      {
+        "feed_id": "0049",
+        "feed_name": "Justice, 5th Court of Appeals District, Place 3",
+        "item": "tx-5th-coa-place-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Matthew Kolodoski": "Matthew Kolodoski",
+          "Amanda Reichek": "Amanda Reichek"
+        },
+        "reaches": [
+          "Dallas",
+          "Collin",
+          "Grayson",
+          "Hunt",
+          "Kaufman",
+          "Rockwall"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0050",
+        "feed_name": "Justice, 5th Court of Appeals District, Place 6",
+        "item": "tx-5th-coa-place-6",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Ben Smith": "Ben Smith",
+          "Monica Purdy": "Monica Purdy"
+        },
+        "reaches": [
+          "Dallas",
+          "Collin",
+          "Grayson",
+          "Hunt",
+          "Kaufman",
+          "Rockwall"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0051",
+        "feed_name": "Justice, 5th Court of Appeals District, Place 8",
+        "item": "tx-5th-coa-place-8",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Ashley Wysocki": "Ashley Wysocki",
+          "Andrea D. Plumlee": "Andrea D. Plumlee"
+        },
+        "reaches": [
+          "Dallas",
+          "Collin",
+          "Grayson",
+          "Hunt",
+          "Kaufman",
+          "Rockwall"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0053",
+        "feed_name": "Criminal District Attorney",
+        "item": "tx-dallas-cda",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Amber Givens": "Amber Givens",
+          "Write-In Votes Cast": "__other"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null,
+        "note": "Write-in candidates are counted together in Dallas County's feed, so they have no number of their own here."
+      },
+      {
+        "feed_id": "0058",
+        "feed_name": "County Commissioner, Precinct No. 2",
+        "item": "tx-dallas-commissioner-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Barry Wernick": "Barry Wernick",
+          "Andy Sommerman": "Andy Sommerman"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0059",
+        "feed_name": "County Commissioner, Precinct No. 4",
+        "item": "tx-dallas-commissioner-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Elba Garcia": "Elba Garcia"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0070",
+        "feed_name": "Constable, Precinct No. 1",
+        "item": "tx-dallas-constable-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Tracey Gulley": "Tracey Gulley"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0071",
+        "feed_name": "Constable, Precinct No. 2",
+        "item": "tx-dallas-constable-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Chad Calvert": "Chad Calvert",
+          "Deanna Hammond": "Deanna Hammond"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0072",
+        "feed_name": "Constable, Precinct No. 3",
+        "item": "tx-dallas-constable-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Henry Curry": "Henry Curry"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0073",
+        "feed_name": "Constable, Precinct No. 4",
+        "item": "tx-dallas-constable-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Eddie Brown, Jr": "Eddie Brown, Jr"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0074",
+        "feed_name": "Constable, Precinct No. 5",
+        "item": "tx-dallas-constable-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Michael Orozco": "Michael Orozco"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0056",
+        "feed_name": "County Clerk",
+        "item": "tx-dallas-county-clerk",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Skye Garcia": "Skye Garcia",
+          "Damarcus L Offord": "Damarcus L Offord"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0054",
+        "feed_name": "County Judge",
+        "item": "tx-dallas-county-judge",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Mike Immler": "Mike Immler",
+          "Clay Jenkins": "Clay Jenkins"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0075",
+        "feed_name": "DALLAS COUNTY PROPOSITION A",
+        "item": "tx-dallas-county-prop-a",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "For (A Favor)": "yes",
+          "Against (En Contra)": "no"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0055",
+        "feed_name": "District Clerk",
+        "item": "tx-dallas-district-clerk",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Dave Muehlhaeusler": "Dave Muehlhaeusler",
+          "Felicia Pitre": "Felicia Pitre"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0052",
+        "feed_name": "District Judge, 298th Judicial District",
+        "item": "tx-dallas-district-court-298th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Clark B. Will": "Clark B. Will",
+          "Ashley Smith": "Ashley Smith"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0060",
+        "feed_name": "Justice of the Peace, Precinct No. 1, Place 1",
+        "item": "tx-dallas-jp-1-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Lizbeth Diaz": "Lizbeth Diaz",
+          "Thomas G. Jones": "Thomas G. Jones"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0061",
+        "feed_name": "Justice of the Peace, Precinct No. 1, Place 2",
+        "item": "tx-dallas-jp-1-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Valencia Nash": "Valencia Nash",
+          "Write-In Votes Cast": "__other"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null,
+        "note": "Write-in candidates are counted together in Dallas County's feed, so they have no number of their own here."
+      },
+      {
+        "feed_id": "0062",
+        "feed_name": "Justice of the Peace, Precinct No. 2, Place 1",
+        "item": "tx-dallas-jp-2-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Vickie Whiteside": "Vickie Whiteside",
+          "Margaret O'Brien": "Margaret O'Brien"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0063",
+        "feed_name": "Justice of the Peace, Precinct No. 2, Place 2",
+        "item": "tx-dallas-jp-2-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Antoinette N Harris": "Antoinette N Harris"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0064",
+        "feed_name": "Justice of the Peace, Precinct No. 3, Place 1",
+        "item": "tx-dallas-jp-3-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Lynn A. Benedetto": "Lynn A. Benedetto",
+          "Adam M. Swartz": "Adam M. Swartz"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0065",
+        "feed_name": "Justice of the Peace, Precinct No. 3, Place 2",
+        "item": "tx-dallas-jp-3-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Michael L. Geller": "Michael L. Geller",
+          "Paula M Rosales": "Paula M Rosales"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0066",
+        "feed_name": "Justice of the Peace, Precinct No. 4, Place 1",
+        "item": "tx-dallas-jp-4-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Fred Van Liew": "Fred Van Liew",
+          "Mike Jones": "Mike Jones"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0067",
+        "feed_name": "Justice of the Peace, Precinct No. 4, Place 2",
+        "item": "tx-dallas-jp-4-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Sasha Moreno": "Sasha Moreno"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0068",
+        "feed_name": "Justice of the Peace, Precinct No. 5, Place 1",
+        "item": "tx-dallas-jp-5-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Sara Martinez": "Sara Martinez"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0069",
+        "feed_name": "Justice of the Peace, Precinct No. 5, Place 2",
+        "item": "tx-dallas-jp-5-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Omar Narvaez": "Omar Narvaez"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0077",
+        "feed_name": "CITY OF DALLAS PROPOSITION A",
+        "item": "tx-dallas-prop-a",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "For (A Favor)": "yes",
+          "Against (En Contra)": "no"
+        },
+        "reaches": [
+          "Dallas",
+          "Collin",
+          "Denton",
+          "Kaufman",
+          "Rockwall"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0057",
+        "feed_name": "County Treasurer",
+        "item": "tx-dallas-treasurer",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Corsandra Brigham Phelps": "Corsandra Brigham Phelps",
+          "Pauline Medrano": "Pauline Medrano"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0076",
+        "feed_name": "Uncontested Races",
+        "item": "tx-dallas-uncontested-judges",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Vote for All": "Vote for All",
+          "Vote for None": "Vote for None"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0032",
+        "feed_name": "State Representative, District 100",
+        "item": "tx-house-100",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jordan Scott Hoffnagle": "Jordan Scott Hoffnagle",
+          "Venton Jones": "Venton Jones"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0033",
+        "feed_name": "State Representative, District 102",
+        "item": "tx-house-102",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Bonnie Abadie": "Bonnie Abadie",
+          "Ana-Maria Rodriguez Ramos": "Ana-Maria Rodriguez Ramos"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0034",
+        "feed_name": "State Representative, District 103",
+        "item": "tx-house-103",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Melanie Medley-Thomas": "Melanie Medley-Thomas",
+          "Rafael Anchia": "Rafael Anchia"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0035",
+        "feed_name": "State Representative, District 104",
+        "item": "tx-house-104",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jessica Gonzalez": "Jessica Gonzalez"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0036",
+        "feed_name": "State Representative, District 105",
+        "item": "tx-house-105",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Terry Meza": "Terry Meza"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0037",
+        "feed_name": "State Representative, District 107",
+        "item": "tx-house-107",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Linda Garcia": "Linda Garcia"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0038",
+        "feed_name": "State Representative, District 108",
+        "item": "tx-house-108",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Morgan Meyer": "Morgan Meyer",
+          "Allison Mitchell": "Allison Mitchell"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0039",
+        "feed_name": "State Representative, District 109",
+        "item": "tx-house-109",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Will Campbell": "Will Campbell",
+          "Aicha Davis": "Aicha Davis"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0040",
+        "feed_name": "State Representative, District 110",
+        "item": "tx-house-110",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Toni Rose": "Toni Rose"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0041",
+        "feed_name": "State Representative, District 111",
+        "item": "tx-house-111",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Yvonne Davis": "Yvonne Davis"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0042",
+        "feed_name": "State Representative, District 112",
+        "item": "tx-house-112",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Angie Chen Button": "Angie Chen Button",
+          "Zach Herbert": "Zach Herbert"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0043",
+        "feed_name": "State Representative, District 113",
+        "item": "tx-house-113",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Stephen W. Stanley": "Stephen W. Stanley",
+          "Rhetta Andrews Bowers": "Rhetta Andrews Bowers"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0044",
+        "feed_name": "State Representative, District 114",
+        "item": "tx-house-114",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Tim McDonough": "Tim McDonough",
+          "John Bryant": "John Bryant"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0045",
+        "feed_name": "State Representative, District 115",
+        "item": "tx-house-115",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Danny Rosellini": "Danny Rosellini",
+          "Cassandra Hernandez": "Cassandra Hernandez"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0085",
+        "feed_name": "IRVING ISD PROPOSITION A",
+        "item": "tx-irving-isd-prop-a",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "For (A Favor)": "yes",
+          "Against (En Contra)": "no"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0086",
+        "feed_name": "IRVING ISD PROPOSITION B",
+        "item": "tx-irving-isd-prop-b",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "For (A Favor)": "yes",
+          "Against (En Contra)": "no"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0087",
+        "feed_name": "IRVING ISD PROPOSITION C",
+        "item": "tx-irving-isd-prop-c",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "For (A Favor)": "yes",
+          "Against (En Contra)": "no"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0088",
+        "feed_name": "IRVING ISD PROPOSITION D",
+        "item": "tx-irving-isd-prop-d",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "For (A Favor)": "yes",
+          "Against (En Contra)": "no"
+        },
+        "reaches": [
+          "Dallas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0089",
+        "feed_name": "MESQUITE INDEPENDENT SCHOOL DISTRICT PROPOSITION A",
+        "item": "tx-mesquite-isd-prop-a",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "For (A Favor)": "yes",
+          "Against (En Contra)": "no"
+        },
+        "reaches": [
+          "Dallas",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0029",
+        "feed_name": "Member, State Board of Education, District 13",
+        "item": "tx-sboe-13",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Carlos (Charlie) Garza": "Carlos (Charlie) Garza",
+          "Tiffany Clark": "Tiffany Clark"
+        },
+        "reaches": [
+          "Dallas",
+          "Tarrant",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0030",
+        "feed_name": "Member, State Board of Education, District 14",
+        "item": "tx-sboe-14",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Mindy Bumgarner": "Mindy Bumgarner",
+          "Amy Taylor": "Amy Taylor"
+        },
+        "reaches": [
+          "Dallas",
+          "Ellis",
+          "McLennan",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0028",
+        "feed_name": "Member, State Board of Education, District 9",
+        "item": "tx-sboe-9",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Kason Huddleston": "Kason Huddleston",
+          "Ericka Ledferd": "Ericka Ledferd"
+        },
+        "reaches": [
+          "Dallas",
+          "Rockwall",
+          "Kaufman",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0031",
+        "feed_name": "State Senator, District 2",
+        "item": "tx-senate-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Bob Hall": "Bob Hall",
+          "Keenen Colbert": "Keenen Colbert"
+        },
+        "reaches": [
+          "Dallas",
+          "Van Zandt",
+          "Navarro",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0010",
+        "feed_name": "United States Representative, District 24",
+        "item": "tx-us-house-24",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Beth Van Duyne": "Beth Van Duyne",
+          "Kevin Burge": "Kevin Burge"
+        },
+        "reaches": [
+          "Dallas",
+          "Tarrant",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0011",
+        "feed_name": "United States Representative, District 30",
+        "item": "tx-us-house-30",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Everett Jackson": "Everett Jackson",
+          "Frederick D. Haynes III": "Frederick D. Haynes III"
+        },
+        "reaches": [
+          "Dallas",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0012",
+        "feed_name": "United States Representative, District 32",
+        "item": "tx-us-house-32",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jace Yarbrough": "Jace Yarbrough",
+          "Dan Barrios": "Dan Barrios"
+        },
+        "reaches": [
+          "Dallas",
+          "Collin",
+          "Rockwall",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0013",
+        "feed_name": "United States Representative, District 33",
+        "item": "tx-us-house-33",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Patrick David Gillespie": "Patrick David Gillespie",
+          "Colin Allred": "Colin Allred",
+          "Write-In Votes Cast": "__other"
+        },
+        "reaches": [
+          "Dallas",
+          "Tarrant",
+          "other counties"
+        ],
+        "item_url": null,
+        "note": "Write-in candidates are counted together in Dallas County's feed, so they have no number of their own here."
+      },
+      {
+        "feed_id": "0008",
+        "feed_name": "United States Representative, District 5",
+        "item": "tx-us-house-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Lance Gooden": "Lance Gooden",
+          "Chelsey Hockett": "Chelsey Hockett"
+        },
+        "reaches": [
+          "Dallas",
+          "Kaufman",
+          "Anderson",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0009",
+        "feed_name": "United States Representative, District 6",
+        "item": "tx-us-house-6",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jake Ellzey": "Jake Ellzey",
+          "Danny Minton": "Danny Minton"
+        },
+        "reaches": [
+          "Dallas",
+          "other counties"
+        ],
+        "item_url": null
+      }
+    ],
     "unmatched_feed": [],
-    "unmatched_guide": []
+    "unmatched_guide": [],
+    "not_here": []
   },
   {
     "id": "harris-county-tx",
@@ -85,8 +2271,8 @@ export const MAPS = [
       "feed_name": "General and Special Elections"
     },
     "guide": {
-      "fingerprint": "e3b0c44298fc1c14",
-      "made_from": "vote.kevinhg.com/data, read 2026-11-03T21:18:12.273Z",
+      "fingerprint": "8cbc736b15239c50",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-03T21:27:43.469Z",
       "places": [
         "houston-tx"
       ]
@@ -104,8 +2290,2468 @@ export const MAPS = [
     "complete_marker": null,
     "certify_by": "2026-11-17",
     "official": null,
-    "contests": [],
+    "contests": [
+      {
+        "feed_id": "9207",
+        "feed_name": "Chief Justice, 14th Court of Appeals",
+        "item": "tx-14th-coa-chief",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "KEVIN JEWELL (REP)": "Kevin Jewell",
+          "SARAH BETH LANDAU (DEM)": "Sarah Beth Landau"
+        },
+        "reaches": [
+          "Harris",
+          "Austin",
+          "Brazoria",
+          "Chambers",
+          "Colorado",
+          "Fort Bend",
+          "Galveston",
+          "Grimes",
+          "Waller",
+          "Washington"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9211",
+        "feed_name": "Justice, 14th Court of Appeals District, Place 7",
+        "item": "tx-14th-coa-place-7",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "KEN WISE (REP)": "Ken Wise",
+          "WILLIAM DEMOND (DEM)": "William Demond"
+        },
+        "reaches": [
+          "Harris",
+          "Austin",
+          "Brazoria",
+          "Chambers",
+          "Colorado",
+          "Fort Bend",
+          "Galveston",
+          "Grimes",
+          "Waller",
+          "Washington"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9208",
+        "feed_name": "Justice, 1st Court of Appeals District, Place 3",
+        "item": "tx-1st-coa-place-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "TODD FRANKFORT (REP)": "Todd Frankfort",
+          "VERONICA RIVAS-MOLLOY (DEM)": "Veronica Rivas-Molloy"
+        },
+        "reaches": [
+          "Harris",
+          "Austin",
+          "Brazoria",
+          "Chambers",
+          "Colorado",
+          "Fort Bend",
+          "Galveston",
+          "Grimes",
+          "Waller",
+          "Washington"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9209",
+        "feed_name": "Justice, 1st Court of Appeals District, Place 4 - Unexpired Term",
+        "item": "tx-1st-coa-place-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DAVID GUNN (REP)": "David Gunn",
+          "JULIE COUNTISS (DEM)": "Julie Countiss"
+        },
+        "reaches": [
+          "Harris",
+          "Austin",
+          "Brazoria",
+          "Chambers",
+          "Colorado",
+          "Fort Bend",
+          "Galveston",
+          "Grimes",
+          "Waller",
+          "Washington"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9210",
+        "feed_name": "Justice, 1st Court of Appeals District, Place 5",
+        "item": "tx-1st-coa-place-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JESSICA CAIRD (REP)": "Jessica Caird",
+          "AMY GUERRA (DEM)": "Amy Guerra"
+        },
+        "reaches": [
+          "Harris",
+          "Austin",
+          "Brazoria",
+          "Chambers",
+          "Colorado",
+          "Fort Bend",
+          "Galveston",
+          "Grimes",
+          "Waller",
+          "Washington"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9421",
+        "feed_name": "CYPRESS-FAIRBANKS ISD, PROPOSITION A",
+        "item": "tx-cfisd-prop-a",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "FOR": "yes",
+          "AGAINST": "no"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9422",
+        "feed_name": "CYPRESS-FAIRBANKS ISD, PROPOSITION B",
+        "item": "tx-cfisd-prop-b",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "FOR": "yes",
+          "AGAINST": "no"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9423",
+        "feed_name": "CYPRESS-FAIRBANKS ISD, PROPOSITION C",
+        "item": "tx-cfisd-prop-c",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "FOR": "yes",
+          "AGAINST": "no"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9424",
+        "feed_name": "CYPRESS-FAIRBANKS ISD, PROPOSITION D",
+        "item": "tx-cfisd-prop-d",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "FOR": "yes",
+          "AGAINST": "no"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9425",
+        "feed_name": "CYPRESS-FAIRBANKS ISD, PROPOSITION E",
+        "item": "tx-cfisd-prop-e",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "FOR": "yes",
+          "AGAINST": "no"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9463",
+        "feed_name": "CROSBY INDEPENDENT SCHOOL DISTRICT PROPOSITION A",
+        "item": "tx-crosby-isd-prop-a",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "FOR": "yes",
+          "AGAINST": "no"
+        },
+        "reaches": [
+          "Harris",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9551",
+        "feed_name": "CROSBY INDEPENDENT SCHOOL DISTRICT PROPOSITION B",
+        "item": "tx-crosby-isd-prop-b",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "FOR": "yes",
+          "AGAINST": "no"
+        },
+        "reaches": [
+          "Harris",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9253",
+        "feed_name": "Judge, County Civil Court at Law No. 1",
+        "item": "tx-harris-ccl-civil-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JAMIE KING (REP)": "Jamie King",
+          "SONIA LOPEZ (DEM)": "Sonia Lopez"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9254",
+        "feed_name": "Judge, County Civil Court at Law No. 2",
+        "item": "tx-harris-ccl-civil-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MARK MONTGOMERY (REP)": "Mark Montgomery",
+          "EBONY N. WILLIAMS (DEM)": "Ebony N. Williams"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9255",
+        "feed_name": "Judge, County Civil Court at Law No. 3",
+        "item": "tx-harris-ccl-civil-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ISRAEL GARCIA (REP)": "Israel Garcia",
+          "LASHAWN A. WILLIAMS (DEM)": "LaShawn A. Williams"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9256",
+        "feed_name": "Judge, County Civil Court at Law No. 4",
+        "item": "tx-harris-ccl-civil-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JOHN DONOVAN (REP)": "John Donovan",
+          "M. MONICA SINGH (DEM)": "M. Monica Singh"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9284",
+        "feed_name": "Judge, County Civil Court at Law No. 5 - Unexpired Term",
+        "item": "tx-harris-ccl-civil-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "RICHARD LANIER FASON (REP)": "Richard Lanier Fason",
+          "JERMAINE THOMAS (DEM)": "Jermaine Thomas"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9257",
+        "feed_name": "Judge, County Criminal Court at Law No. 1",
+        "item": "tx-harris-ccl-criminal-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ERIN SWANSON (REP)": "Erin Swanson",
+          "ALEX SALGADO (DEM)": "Alex Salgado"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9266",
+        "feed_name": "Judge, County Criminal Court at Law No. 10",
+        "item": "tx-harris-ccl-criminal-10",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "BAO HOANG (REP)": "Bao Hoang",
+          "JUANITA A. JACKSON (DEM)": "Juanita A. Jackson"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9267",
+        "feed_name": "Judge, County Criminal Court at Law No. 11",
+        "item": "tx-harris-ccl-criminal-11",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ELIZABETH BUSS (REP)": "Elizabeth Buss",
+          "SEDRICK T. WALKER II (DEM)": "Sedrick T. Walker II"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9268",
+        "feed_name": "Judge, County Criminal Court at Law No. 12",
+        "item": "tx-harris-ccl-criminal-12",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ANNA EMMONS (REP)": "Anna Emmons",
+          "ASHLEY MAYES GUICE (DEM)": "Ashley Mayes Guice"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9269",
+        "feed_name": "Judge, County Criminal Court at Law No. 13",
+        "item": "tx-harris-ccl-criminal-13",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "AMBER COX (REP)": "Amber Cox",
+          "RAUL RODRIGUEZ (DEM)": "Raul Rodriguez"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9270",
+        "feed_name": "Judge, County Criminal Court at Law No. 14",
+        "item": "tx-harris-ccl-criminal-14",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JESSICA N. PADILLA (REP)": "Jessica N. Padilla",
+          "YAHAIRA QUEZADA (DEM)": "Yahaira Quezada"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9271",
+        "feed_name": "Judge, County Criminal Court at Law No. 15",
+        "item": "tx-harris-ccl-criminal-15",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "STEPHEN C. ST. MARTIN (REP)": "Stephen C. St. Martin",
+          "TONYA JONES (DEM)": "Tonya Jones"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9258",
+        "feed_name": "Judge, County Criminal Court at Law No. 2",
+        "item": "tx-harris-ccl-criminal-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MATT ALFORD (REP)": "Matt Alford",
+          "MATTHEW RUBEN PEREZ (DEM)": "Matthew Ruben Perez"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9259",
+        "feed_name": "Judge, County Criminal Court at Law No. 3",
+        "item": "tx-harris-ccl-criminal-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "LESLIE R. JOHNSON (REP)": "Leslie R. Johnson",
+          "CARLOS ALBERTO AGUAYO (DEM)": "Carlos Alberto Aguayo"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9260",
+        "feed_name": "Judge, County Criminal Court at Law No. 4",
+        "item": "tx-harris-ccl-criminal-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REBECCA PHILIPS ACETO (REP)": "Rebecca Philips Aceto",
+          "SHANNON B. BALDWIN (DEM)": "Shannon B. Baldwin"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9261",
+        "feed_name": "Judge, County Criminal Court at Law No. 5",
+        "item": "tx-harris-ccl-criminal-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "STELLA STEVENS (REP)": "Stella Stevens",
+          "DAVID M. FLEISCHER (DEM)": "David M. Fleischer"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9262",
+        "feed_name": "Judge, County Criminal Court at Law No. 6",
+        "item": "tx-harris-ccl-criminal-6",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JOSHUA NORMAND (REP)": "Joshua Normand",
+          "KELLEY ANDREWS (DEM)": "Kelley Andrews"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9263",
+        "feed_name": "Judge, County Criminal Court at Law No. 7",
+        "item": "tx-harris-ccl-criminal-7",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "THOMAS ADAM BRODRICK (REP)": "Thomas Adam Brodrick",
+          "ANDREW A. WRIGHT (DEM)": "Andrew A. Wright"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9264",
+        "feed_name": "Judge, County Criminal Court at Law No. 8",
+        "item": "tx-harris-ccl-criminal-8",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "VICTOR FLORES (REP)": "Victor Flores",
+          "ERIKA RAMIREZ (DEM)": "Erika Ramirez"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9265",
+        "feed_name": "Judge, County Criminal Court at Law No. 9",
+        "item": "tx-harris-ccl-criminal-9",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "XAVIER ALFARO (REP)": "Xavier Alfaro",
+          "TORIA J. FINCH (DEM)": "Toria J. Finch"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9283",
+        "feed_name": "County Commissioner, Precinct 2",
+        "item": "tx-harris-commissioner-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "RICHARD VEGA (REP)": "Richard Vega",
+          "ADRIAN GARCIA (DEM)": "Adrian Garcia"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9286",
+        "feed_name": "County Commissioner, Precinct 4",
+        "item": "tx-harris-commissioner-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "STEVE RADACK (REP)": "Steve Radack",
+          "LESLEY BRIONES (DEM)": "Lesley Briones",
+          "Michelle Gwinn (W)": "Michelle Gwinn"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9276",
+        "feed_name": "County Attorney - Unexpired Term",
+        "item": "tx-harris-county-attorney",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JACQUELINE LUCCI SMITH (REP)": "Jacqueline Lucci Smith",
+          "ABBIE KAMIN (DEM)": "Abbie Kamin"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9278",
+        "feed_name": "County Clerk",
+        "item": "tx-harris-county-clerk",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MIKE WOLFE (REP)": "Mike Wolfe",
+          "TENESHIA HUDSPETH (DEM)": "Teneshia Hudspeth"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9252",
+        "feed_name": "County Judge",
+        "item": "tx-harris-county-judge",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ORLANDO SANCHEZ (REP)": "Orlando Sanchez",
+          "LETITIA PLUMMER (DEM)": "Letitia Plummer",
+          "Marianne \"Yan\" Hess (W)": "Marianne \"Yan\" Hess",
+          "Vince Duncan (W)": "Vince Duncan"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9277",
+        "feed_name": "District Clerk",
+        "item": "tx-harris-district-clerk",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "CHRIS DANIEL (REP)": "Chris Daniel",
+          "DARRELL JORDAN, JR (DEM)": "Darrell Jordan, Jr"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9213",
+        "feed_name": "Civil District Judge, 113th Judicial District",
+        "item": "tx-harris-district-court-113th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "PAUL M. SULLIVAN (REP)": "Paul M. Sullivan",
+          "RABEEA COLLIER (DEM)": "Rabeea Collier"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9214",
+        "feed_name": "Civil District Judge, 157th Judicial District",
+        "item": "tx-harris-district-court-157th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "GERALD FOWLER (REP)": "Gerald Fowler",
+          "TANYA GARRISON (DEM)": "Tanya Garrison"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9225",
+        "feed_name": "Criminal District Judge, 180th Judicial District",
+        "item": "tx-harris-district-court-180th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "TAMI C. PIERCE (REP)": "Tami C. Pierce",
+          "STEPHANIE MORALES (DEM)": "Stephanie Morales"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9226",
+        "feed_name": "Criminal District Judge, 182nd Judicial District",
+        "item": "tx-harris-district-court-182nd",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "BRENT HAYNES (REP)": "Brent Haynes",
+          "DANILO \"DANNY\" LACAYO (DEM)": "Danilo \"Danny\" Lacayo"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9227",
+        "feed_name": "Criminal District Judge, 183rd Judicial District",
+        "item": "tx-harris-district-court-183rd",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "LANCE LONG (REP)": "Lance Long",
+          "JULIA MALDONADO (DEM)": "Julia Maldonado"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9228",
+        "feed_name": "Criminal District Judge, 184th Judicial District",
+        "item": "tx-harris-district-court-184th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "HEATHER HUDSON (REP)": "Heather Hudson",
+          "KATHERINE \"KAT\" THOMAS (DEM)": "Katherine \"Kat\" Thomas"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9229",
+        "feed_name": "Criminal District Judge, 185th Judicial District",
+        "item": "tx-harris-district-court-185th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MARK GOLDBERG (REP)": "Mark Goldberg",
+          "ANDREA BEALL (DEM)": "Andrea Beall"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9215",
+        "feed_name": "Civil District Judge, 189th Judicial District",
+        "item": "tx-harris-district-court-189th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "VANCE CHRISTOPHER (REP)": "Vance Christopher",
+          "TAMIKA \"TAMI\" CRAFT (DEM)": "Tamika \"Tami\" Craft"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9216",
+        "feed_name": "Civil District Judge, 190th Judicial District",
+        "item": "tx-harris-district-court-190th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "AARON ADAMS (REP)": "Aaron Adams",
+          "BEAU MILLER (DEM)": "Beau Miller"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9230",
+        "feed_name": "Criminal District Judge, 208th Judicial District",
+        "item": "tx-harris-district-court-208th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "STEPHEN F. DRIVER (REP)": "Stephen F. Driver",
+          "BEVERLY D. ARMSTRONG (DEM)": "Beverly D. Armstrong"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9231",
+        "feed_name": "Criminal District Judge, 209th Judicial District",
+        "item": "tx-harris-district-court-209th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "TONY COVENY (REP)": "Tony Coveny",
+          "BRIAN EDWARD WARREN (DEM)": "Brian Edward Warren"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9232",
+        "feed_name": "Criminal District Judge, 228th Judicial District",
+        "item": "tx-harris-district-court-228th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "CAROLINE DOZIER (REP)": "Caroline Dozier",
+          "ALYSON ALMAGUER (DEM)": "Alyson Almaguer"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9233",
+        "feed_name": "Criminal District Judge, 230th Judicial District",
+        "item": "tx-harris-district-court-230th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MEGAN LONG (REP)": "Megan Long",
+          "CHRIS MORTON (DEM)": "Chris Morton"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9234",
+        "feed_name": "Criminal District Judge, 232nd Judicial District",
+        "item": "tx-harris-district-court-232nd",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "CHUCK SILVERMAN (REP)": "Chuck Silverman",
+          "JOSH HILL (DEM)": "Josh Hill"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9217",
+        "feed_name": "Civil District Judge, 234th Judicial District",
+        "item": "tx-harris-district-court-234th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DAVID \"DAVE\" HARVEY (REP)": "David \"Dave\" Harvey",
+          "LAUREN REEDER (DEM)": "Lauren Reeder"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9242",
+        "feed_name": "Family District Judge, 245th Judicial District",
+        "item": "tx-harris-district-court-245th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "PAULA VLAHAKOS (REP)": "Paula Vlahakos",
+          "ANGELA M LANCELIN (DEM)": "Angela M Lancelin"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9243",
+        "feed_name": "Family District Judge, 246th Judicial District",
+        "item": "tx-harris-district-court-246th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ANGELA GRAVES-HARRINGTON (DEM)": "Angela Graves-Harrington"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9244",
+        "feed_name": "Family District Judge, 247th Judicial District",
+        "item": "tx-harris-district-court-247th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JANICE BERG (DEM)": "Janice Berg"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9235",
+        "feed_name": "Criminal District Judge, 248th Judicial District",
+        "item": "tx-harris-district-court-248th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DAVID W. OVERHULS (REP)": "David W. Overhuls",
+          "HILARY UNGER (DEM)": "Hilary Unger"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9245",
+        "feed_name": "Family District Judge, 257th Judicial District",
+        "item": "tx-harris-district-court-257th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "SANDRA PEAKE (DEM)": "Sandra Peake"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9236",
+        "feed_name": "Criminal District Judge, 262nd Judicial District",
+        "item": "tx-harris-district-court-262nd",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "NATHAN MOSS (REP)": "Nathan Moss",
+          "LORI CHAMBERS GRAY (DEM)": "Lori Chambers Gray"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9237",
+        "feed_name": "Criminal District Judge, 263rd Judicial District",
+        "item": "tx-harris-district-court-263rd",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JASON A. CAMPO (REP)": "Jason A. Campo",
+          "MELISSA MARIE MORRIS (DEM)": "Melissa Marie Morris"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9218",
+        "feed_name": "Civil District Judge, 269th Judicial District",
+        "item": "tx-harris-district-court-269th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "CELENA GUERRA PAWLAK (REP)": "Celena Guerra Pawlak",
+          "CORY DON SEPOLIO (DEM)": "Cory Don Sepolio"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9219",
+        "feed_name": "Civil District Judge, 270th Judicial District",
+        "item": "tx-harris-district-court-270th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "BRIAN STALEY (REP)": "Brian Staley",
+          "DEDRA DAVIS (DEM)": "Dedra Davis"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9246",
+        "feed_name": "Family District Judge, 280th Judicial District",
+        "item": "tx-harris-district-court-280th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ROSE CARDENAS (REP)": "Rose Cardenas",
+          "DAMIANE DIANNE CURVEY (DEM)": "Damiane Dianne Curvey"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9220",
+        "feed_name": "Civil District Judge, 281st Judicial District",
+        "item": "tx-harris-district-court-281st",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "CHRIS CARMONA (REP)": "Chris Carmona",
+          "CHRISTINE WEEMS (DEM)": "Christine Weems"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9221",
+        "feed_name": "Civil District Judge, 295th Judicial District",
+        "item": "tx-harris-district-court-295th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "GREG TRAVIS (REP)": "Greg Travis",
+          "DONNA ROTH (DEM)": "Donna Roth"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9247",
+        "feed_name": "Family District Judge, 308th Judicial District",
+        "item": "tx-harris-district-court-308th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "GLORIA LOPEZ (DEM)": "Gloria Lopez"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9248",
+        "feed_name": "Family District Judge, 309th Judicial District",
+        "item": "tx-harris-district-court-309th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MELISSA FERTEL (REP)": "Melissa Fertel",
+          "LINDA MARIE DUNSON (DEM)": "Linda Marie Dunson"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9249",
+        "feed_name": "Family District Judge, 310th Judicial District",
+        "item": "tx-harris-district-court-310th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "SONYA L. HEATH (DEM)": "Sonya L. Heath"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9250",
+        "feed_name": "Family District Judge, 311th Judicial District",
+        "item": "tx-harris-district-court-311th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JOE RADLER (REP)": "Joe Radler",
+          "GERMAINE JANET TANNER (DEM)": "Germaine Janet Tanner"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9251",
+        "feed_name": "Family District Judge, 312th Judicial District",
+        "item": "tx-harris-district-court-312th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JESUS GUILLEN (REP)": "Jesus Guillen",
+          "TERESA WALDROP (DEM)": "Teresa Waldrop"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9222",
+        "feed_name": "Juvenile District Judge, 313th Judicial District",
+        "item": "tx-harris-district-court-313th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "AMY STRICKLING (REP)": "Amy Strickling",
+          "SAMANTHA Y. DAVIS (DEM)": "Samantha Y. Davis"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9223",
+        "feed_name": "Juvenile District Judge, 314th Judicial District",
+        "item": "tx-harris-district-court-314th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MICHELLE MOORE (DEM)": "Michelle Moore"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9224",
+        "feed_name": "Juvenile District Judge, 315th Judicial District",
+        "item": "tx-harris-district-court-315th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MARIA VALERIA BROCK (REP)": "Maria Valeria Brock",
+          "LEAH SHAPIRO (DEM)": "Leah Shapiro"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9238",
+        "feed_name": "Criminal District Judge, 482nd Judicial District",
+        "item": "tx-harris-district-court-482nd",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "BRYAN HONEYCUTT (REP)": "Bryan Honeycutt",
+          "VERONICA M. NELSON (DEM)": "Veronica M. Nelson"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9555",
+        "feed_name": "Criminal District Judge, 486th Judicial District - Unexpired Term",
+        "item": "tx-harris-district-court-486th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "VANESSA VELASQUEZ (REP)": "Vanessa Velasquez",
+          "KATHRYN \"KATIE\" WILSON (DEM)": "Kathryn \"Katie\" Wilson"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9239",
+        "feed_name": "Criminal District Judge, 495th Judicial District",
+        "item": "tx-harris-district-court-495th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "LORI ANN DEANGELO (REP)": "Lori Ann DeAngelo",
+          "TIFFANY M. HILL (DEM)": "Tiffany M. Hill"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9240",
+        "feed_name": "Criminal District Judge, 496th Judicial District",
+        "item": "tx-harris-district-court-496th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DAN SIMONS (REP)": "Dan Simons",
+          "RAMONA FRANKLIN (DEM)": "Ramona Franklin"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9241",
+        "feed_name": "Criminal District Judge, 497th Judicial District",
+        "item": "tx-harris-district-court-497th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "PEYTON PEEBLES (REP)": "Peyton Peebles",
+          "BREANNA SCHWARTZ (DEM)": "Breanna Schwartz"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9212",
+        "feed_name": "Civil District Judge, 55th Judicial District",
+        "item": "tx-harris-district-court-55th",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "NILE COPELAND (REP)": "Nile Copeland",
+          "LATOSHA LEWIS PAYNE (DEM)": "Latosha Lewis Payne"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9279",
+        "feed_name": "County School Trustee, Position 5, At Large",
+        "item": "tx-harris-hcde-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "SARTAJ BAL (REP)": "Sartaj Bal",
+          "ERICA DAVIS (DEM)": "Erica Davis"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9280",
+        "feed_name": "County School Trustee, Position 7, At Large",
+        "item": "tx-harris-hcde-7",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DENISE DICK (REP)": "Denise Dick",
+          "SILKY JOSHI MALIK (DEM)": "Silky Joshi Malik"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9305",
+        "feed_name": "Justice of the Peace, Precinct 1, Place 2",
+        "item": "tx-harris-jp-1-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "STEVE DUBLE (DEM)": "Steve Duble"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9307",
+        "feed_name": "Justice of the Peace, Precinct 2, Place 2",
+        "item": "tx-harris-jp-2-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JACK EZELL (REP)": "Jack Ezell",
+          "DOLORES LOZANO (DEM)": "Dolores Lozano"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9309",
+        "feed_name": "Justice of the Peace, Precinct 3, Place 2",
+        "item": "tx-harris-jp-3-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "LUCIA BATES (DEM)": "Lucia Bates"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9311",
+        "feed_name": "Justice of the Peace, Precinct 4, Place 2",
+        "item": "tx-harris-jp-4-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "LARYSSA KORDUBA (REP)": "Laryssa Korduba",
+          "SEAN SIMON (DEM)": "Sean Simon"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9313",
+        "feed_name": "Justice of the Peace, Precinct 5, Place 2",
+        "item": "tx-harris-jp-5-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MARK FURY (REP)": "Mark Fury",
+          "LISA JEFFERSON (DEM)": "Lisa Jefferson"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9315",
+        "feed_name": "Justice of the Peace, Precinct 6, Place 2",
+        "item": "tx-harris-jp-6-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ANGELA D. RODRIGUEZ (DEM)": "Angela D. Rodriguez"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9317",
+        "feed_name": "Justice of the Peace, Precinct 7, Place 2",
+        "item": "tx-harris-jp-7-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MELANIE MILES (DEM)": "Melanie Miles"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9319",
+        "feed_name": "Justice of the Peace, Precinct 8, Place 2",
+        "item": "tx-harris-jp-8-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "LOUIE DITTA (REP)": "Louie Ditta",
+          "NICOLAS JUAN (DEM)": "Nicolas Juan"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9272",
+        "feed_name": "Judge, County Probate Court No. 1",
+        "item": "tx-harris-probate-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "LOYD H. WRIGHT (REP)": "Loyd H. Wright",
+          "JERRY SIMONEAUX (DEM)": "Jerry Simoneaux"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9273",
+        "feed_name": "Judge, County Probate Court No. 2",
+        "item": "tx-harris-probate-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "PAUL SHANKLIN (REP)": "Paul Shanklin",
+          "PAMELA MEDINA (DEM)": "Pamela Medina"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9274",
+        "feed_name": "Judge, County Probate Court No. 3",
+        "item": "tx-harris-probate-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "RONALD SCHRAMM (REP)": "Ronald Schramm",
+          "JASON COX (DEM)": "Jason Cox"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9275",
+        "feed_name": "Judge, County Probate Court No. 4",
+        "item": "tx-harris-probate-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "KEVIN FULTON (REP)": "Kevin Fulton",
+          "JAMES S. HORWITZ (DEM)": "James S. Horwitz"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9281",
+        "feed_name": "County Treasurer",
+        "item": "tx-harris-treasurer",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MARC COWART (REP)": "Marc Cowart",
+          "CARLA L. WYATT (DEM)": "Carla L. Wyatt"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9390",
+        "feed_name": "HCAD, Director, At-Large, Place 1",
+        "item": "tx-hcad-place-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Kathy Blueford-Daniels": "Kathy Blueford-Daniels",
+          "Beverly Barrett": "Beverly Barrett"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9391",
+        "feed_name": "HCAD, Director, At-Large, Place 2",
+        "item": "tx-hcad-place-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Chris Ehlinger": "Chris Ehlinger",
+          "Jourdyn Wilson": "Jourdyn Wilson",
+          "Claudio Gutierrez": "Claudio Gutierrez"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9392",
+        "feed_name": "HCAD, Director, At-Large, Place 3",
+        "item": "tx-hcad-place-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Cris Moses": "Cris Moses",
+          "Ericka McCrutcheon": "Ericka McCrutcheon",
+          "Jesus Nieto": "Jesus Nieto"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9336",
+        "feed_name": "State Representative, District 126",
+        "item": "tx-house-126",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "STAN STANART (REP)": "Stan Stanart",
+          "STEFANIE BORD (DEM)": "Stefanie Bord"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9338",
+        "feed_name": "State Representative, District 127",
+        "item": "tx-house-127",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "CHARLES CUNNINGHAM (REP)": "Charles Cunningham",
+          "MICHELLE WILLIAMS (DEM)": "Michelle Williams"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9340",
+        "feed_name": "State Representative, District 128",
+        "item": "tx-house-128",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "TOM BUTLER (REP)": "Tom Butler",
+          "DESIREE KLAUS (DEM)": "Desiree Klaus"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9342",
+        "feed_name": "State Representative, District 129",
+        "item": "tx-house-129",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "SCOTT BOWEN (REP)": "Scott Bowen",
+          "ALBERT WITTLIFF (DEM)": "Albert Wittliff"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9344",
+        "feed_name": "State Representative, District 130",
+        "item": "tx-house-130",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "TOM OLIVERSON (REP)": "Tom Oliverson",
+          "BRETT ROBINSON (DEM)": "Brett Robinson"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9346",
+        "feed_name": "State Representative, District 131",
+        "item": "tx-house-131",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "SCOTT WHITMARSH (REP)": "Scott Whitmarsh",
+          "STACI CHILDS (DEM)": "Staci Childs"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9348",
+        "feed_name": "State Representative, District 132",
+        "item": "tx-house-132",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MIKE SCHOFIELD (REP)": "Mike Schofield",
+          "SARA MCGEE (DEM)": "Sara McGee"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9350",
+        "feed_name": "State Representative, District 133",
+        "item": "tx-house-133",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MANO DEAYALA (REP)": "Mano DeAyala",
+          "JOSH WALLENSTEIN (DEM)": "Josh Wallenstein"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9352",
+        "feed_name": "State Representative, District 134",
+        "item": "tx-house-134",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MIKE MICHNA (REP)": "Mike Michna",
+          "ANN JOHNSON (DEM)": "Ann Johnson"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9354",
+        "feed_name": "State Representative, District 135",
+        "item": "tx-house-135",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "LIZ RAMOS (REP)": "Liz Ramos",
+          "ODUS E. EVBAGHARU (DEM)": "Odus E. Evbagharu"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9356",
+        "feed_name": "State Representative, District 137",
+        "item": "tx-house-137",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "HELEN ZHOU (REP)": "Helen Zhou",
+          "GENE WU (DEM)": "Gene Wu"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9358",
+        "feed_name": "State Representative, District 138",
+        "item": "tx-house-138",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "LACEY HULL (REP)": "Lacey Hull",
+          "TYLER SMITH (DEM)": "Tyler Smith"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9360",
+        "feed_name": "State Representative, District 139",
+        "item": "tx-house-139",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "KYLE HARDING (REP)": "Kyle Harding",
+          "CHARLENE WARD JOHNSON (DEM)": "Charlene Ward Johnson"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9362",
+        "feed_name": "State Representative, District 140",
+        "item": "tx-house-140",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "LAURA GARCIA DELEON (REP)": "Laura Garcia DeLeon",
+          "ARMANDO LUCIO WALLE (DEM)": "Armando Lucio Walle"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9364",
+        "feed_name": "State Representative, District 141",
+        "item": "tx-house-141",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JULIE HUNT (REP)": "Julie Hunt",
+          "SENFRONIA THOMPSON (DEM)": "Senfronia Thompson"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9366",
+        "feed_name": "State Representative, District 142",
+        "item": "tx-house-142",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "HEIDI HALL (REP)": "Heidi Hall",
+          "HAROLD V. DUTTON, JR (DEM)": "Harold V. Dutton, Jr"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9368",
+        "feed_name": "State Representative, District 143",
+        "item": "tx-house-143",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "FRANK SALAZAR (REP)": "Frank Salazar",
+          "ANA HERNANDEZ (DEM)": "Ana Hernandez"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9370",
+        "feed_name": "State Representative, District 144",
+        "item": "tx-house-144",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DAVID FLORES (REP)": "David Flores",
+          "MARY ANN PEREZ (DEM)": "Mary Ann Perez"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9372",
+        "feed_name": "State Representative, District 145",
+        "item": "tx-house-145",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "INOCENSIA MORENO (REP)": "Inocensia Moreno",
+          "CHRISTINA MORALES (DEM)": "Christina Morales"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9374",
+        "feed_name": "State Representative, District 146",
+        "item": "tx-house-146",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ALEXANDRIA NICOLE BUTLER (REP)": "Alexandria Nicole Butler",
+          "LAUREN ASHLEY SIMMONS (DEM)": "Lauren Ashley Simmons"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9376",
+        "feed_name": "State Representative, District 147",
+        "item": "tx-house-147",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "THEODIS DANIEL (REP)": "Theodis Daniel",
+          "JOLANDA JONES (DEM)": "Jolanda Jones"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9378",
+        "feed_name": "State Representative, District 148",
+        "item": "tx-house-148",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "AMANDA LABRIE (REP)": "Amanda LaBrie",
+          "PENNY MORALES SHAW (DEM)": "Penny Morales Shaw"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9380",
+        "feed_name": "State Representative, District 149",
+        "item": "tx-house-149",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DAVE BENNETT (REP)": "Dave Bennett",
+          "DARLENE BREAUX (DEM)": "Darlene Breaux"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9382",
+        "feed_name": "State Representative, District 150",
+        "item": "tx-house-150",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "VALOREE SWANSON (REP)": "Valoree Swanson",
+          "A'YONNA KELLUM (DEM)": "A'Yonna Kellum"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9504",
+        "feed_name": "CITY OF HOUSTON, PROPOSITION A",
+        "item": "tx-houston-prop-a",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "FOR": "yes",
+          "AGAINST": "no"
+        },
+        "reaches": [
+          "Harris",
+          "Fort Bend",
+          "Montgomery"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9505",
+        "feed_name": "HUFFMAN INDEPENDENT SCHOOL DISTRICT, PROPOSITION A",
+        "item": "tx-huffman-isd-prop-a",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "FOR": "yes",
+          "AGAINST": "no"
+        },
+        "reaches": [
+          "Harris",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9445",
+        "feed_name": "Huffman ISD, School Trustee, Position #1",
+        "item": "tx-huffmanisd-trustee-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Lori Freshour": "Lori Freshour",
+          "Vernon Reed": "Vernon Reed"
+        },
+        "reaches": [
+          "Harris",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9446",
+        "feed_name": "Huffman ISD, School Trustee, Position #2",
+        "item": "tx-huffmanisd-trustee-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Luke Hight": "Luke Hight"
+        },
+        "reaches": [
+          "Harris",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9447",
+        "feed_name": "Huffman ISD, School Trustee, Position #3",
+        "item": "tx-huffmanisd-trustee-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Ray Burt": "Ray Burt"
+        },
+        "reaches": [
+          "Harris",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9406",
+        "feed_name": "Klein ISD, Position 1",
+        "item": "tx-kleinisd-trustee-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Linda Ford": "Linda Ford",
+          "Dustin Qualls": "Dustin Qualls"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9407",
+        "feed_name": "Klein ISD, Position 2",
+        "item": "tx-kleinisd-trustee-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Doug James": "Doug James"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9439",
+        "feed_name": "New Caney Independent School District, Trustee, Position 1",
+        "item": "tx-newcaneyisd-trustee-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Elizabeth Rhoden Harrell": "Elizabeth Rhoden Harrell"
+        },
+        "reaches": [
+          "Harris",
+          "Montgomery"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9440",
+        "feed_name": "New Caney Independent School District, Trustee, Position 2",
+        "item": "tx-newcaneyisd-trustee-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Ryan Schurdell": "Ryan Schurdell",
+          "Kevin D. Jensen II": "Kevin D. Jensen II",
+          "Chad Turner": "Chad Turner",
+          "Kristina Haggard": "Kristina Haggard"
+        },
+        "reaches": [
+          "Harris",
+          "Montgomery"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9553",
+        "feed_name": "Member, State Board of Education, District 4 - Unexpired Term",
+        "item": "tx-sboe-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "TAMMIE NIELSEN (REP)": "Tammie Nielsen",
+          "CORETTA MALLET-FONTENOT (DEM)": "Coretta Mallet-Fontenot"
+        },
+        "reaches": [
+          "Harris",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9321",
+        "feed_name": "Member, State Board of Education, District 6",
+        "item": "tx-sboe-6",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "TIFFANY NELSON (REP)": "Tiffany Nelson",
+          "MICHELLE PALMER (DEM)": "Michelle Palmer",
+          "Margo Jordan (W)": "Margo Jordan"
+        },
+        "reaches": [
+          "Harris",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9323",
+        "feed_name": "Member, State Board of Education, District 7",
+        "item": "tx-sboe-7",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JULIE PICKREN (REP)": "Julie Pickren",
+          "TIFFANY PERKINZ (DEM)": "Tiffany Perkinz"
+        },
+        "reaches": [
+          "Harris",
+          "other counties",
+          "Fort Bend",
+          "Brazoria",
+          "Galveston"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9325",
+        "feed_name": "Member, State Board of Education, District 8",
+        "item": "tx-sboe-8",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "AUDREY G. YOUNG (REP)": "Audrey G. Young",
+          "DANA VAN DE WALKER (DEM)": "Dana Van De Walker"
+        },
+        "reaches": [
+          "Harris",
+          "other counties",
+          "Montgomery"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9330",
+        "feed_name": "State Senator, District 11",
+        "item": "tx-senate-11",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DENNIS PAUL (REP)": "Dennis Paul",
+          "SHANNON DICELY (DEM)": "Shannon Dicely"
+        },
+        "reaches": [
+          "Harris",
+          "Galveston",
+          "Brazoria",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9332",
+        "feed_name": "State Senator, District 13",
+        "item": "tx-senate-13",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "BORRIS L. MILES (DEM)": "Borris L. Miles"
+        },
+        "reaches": [
+          "Harris",
+          "Fort Bend",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9334",
+        "feed_name": "State Senator, District 18",
+        "item": "tx-senate-18",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "LOIS W. KOLKHORST (REP)": "Lois W. Kolkhorst",
+          "ERICA GILLUM (DEM)": "Erica Gillum"
+        },
+        "reaches": [
+          "Harris",
+          "Fort Bend",
+          "Waller",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9327",
+        "feed_name": "State Senator, District 4",
+        "item": "tx-senate-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "BRETT W. LIGON (REP)": "Brett W. Ligon",
+          "RON C. ANGELETTI (DEM)": "Ron C. Angeletti"
+        },
+        "reaches": [
+          "Harris",
+          "Montgomery",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9426",
+        "feed_name": "Sheldon ISD, Trustee Position 4",
+        "item": "tx-sheldonisd-trustee-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Tiffany Lockett": "Tiffany Lockett",
+          "Fred Rivas": "Fred Rivas"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9435",
+        "feed_name": "Sheldon ISD, Trustee Position 5",
+        "item": "tx-sheldonisd-trustee-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Pamela Smith Robinson": "Pamela Smith Robinson",
+          "Kevin Gaines": "Kevin Gaines",
+          "Bethel Nwachukwu": "Bethel Nwachukwu",
+          "Kristin Williams-White": "Kristin Williams-White"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9436",
+        "feed_name": "Sheldon ISD, Trustee Position 6",
+        "item": "tx-sheldonisd-trustee-6",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Devora Myles": "Devora Myles"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9437",
+        "feed_name": "Sheldon ISD, Trustee Position 7",
+        "item": "tx-sheldonisd-trustee-7",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Erika Martinez": "Erika Martinez",
+          "Nora Banks Willis": "Nora Banks Willis"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9444",
+        "feed_name": "SPRING ISD, PROPOSITION A",
+        "item": "tx-springisd-prop-a",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "FOR": "yes",
+          "AGAINST": "no"
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9394",
+        "feed_name": "Spring ISD, Trustee Election, Position 4",
+        "item": "tx-springisd-trustee-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Winford Adams, Jr.": "Winford Adams, Jr."
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9395",
+        "feed_name": "Spring ISD, Trustee Election, Position 5",
+        "item": "tx-springisd-trustee-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Rhonda Newhouse": "Rhonda Newhouse",
+          "Kenneth Williams Jr.": "Kenneth Williams Jr."
+        },
+        "reaches": [
+          "Harris"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9412",
+        "feed_name": "Tomball Independent School District, Position 1",
+        "item": "tx-tomballisd-trustee-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Lacey Derrington": "Lacey Derrington",
+          "Patrick Beecher": "Patrick Beecher"
+        },
+        "reaches": [
+          "Harris",
+          "Montgomery"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9413",
+        "feed_name": "Tomball Independent School District, Position 2",
+        "item": "tx-tomballisd-trustee-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Michael Pratt": "Michael Pratt"
+        },
+        "reaches": [
+          "Harris",
+          "Montgomery"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9414",
+        "feed_name": "Tomball Independent School District, Position 3",
+        "item": "tx-tomballisd-trustee-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Joseph Ferguson": "Joseph Ferguson",
+          "John E. McStravick": "John E. McStravick"
+        },
+        "reaches": [
+          "Harris",
+          "Montgomery"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9415",
+        "feed_name": "Tomball Independent School District, Position 4",
+        "item": "tx-tomballisd-trustee-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Mark Lewandowski": "Mark Lewandowski"
+        },
+        "reaches": [
+          "Harris",
+          "Montgomery"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9296",
+        "feed_name": "United States Representative, District 18",
+        "item": "tx-us-house-18",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "RONALD DWAYNE WHITFIELD (REP)": "Ronald Dwayne Whitfield",
+          "CHRISTIAN DASHAUN MENEFEE (DEM)": "Christian Dashaun Menefee"
+        },
+        "reaches": [
+          "Harris",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9288",
+        "feed_name": "United States Representative, District 2",
+        "item": "tx-us-house-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "STEVE TOTH (REP)": "Steve Toth",
+          "SHAUN FINNIE (DEM)": "Shaun Finnie"
+        },
+        "reaches": [
+          "Harris",
+          "Montgomery",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9298",
+        "feed_name": "United States Representative, District 22",
+        "item": "tx-us-house-22",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "TREVER NEHLS (REP)": "Trever Nehls",
+          "MARQUETTE GREENE-SCOTT (DEM)": "Marquette Greene-Scott"
+        },
+        "reaches": [
+          "Harris",
+          "Fort Bend",
+          "Brazoria",
+          "Galveston",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9300",
+        "feed_name": "United States Representative, District 29",
+        "item": "tx-us-house-29",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MARTHA FIERRO (REP)": "Martha Fierro",
+          "SYLVIA GARCIA (DEM)": "Sylvia Garcia"
+        },
+        "reaches": [
+          "Harris",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9302",
+        "feed_name": "United States Representative, District 36",
+        "item": "tx-us-house-36",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "BRIAN BABIN (REP)": "Brian Babin",
+          "RHONDA HART (DEM)": "Rhonda Hart"
+        },
+        "reaches": [
+          "Harris",
+          "Chambers",
+          "Jefferson",
+          "Orange",
+          "other counties",
+          "Liberty"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9328",
+        "feed_name": "United States Representative, District 38",
+        "item": "tx-us-house-38",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JON BONCK (REP)": "Jon Bonck",
+          "MELISSA MCDONOUGH (DEM)": "Melissa McDonough",
+          "ALEX MCMENEMY (GRN)": "Alex McMenemy"
+        },
+        "reaches": [
+          "Harris",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9290",
+        "feed_name": "United States Representative, District 7",
+        "item": "tx-us-house-7",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ALEXANDER HALE (REP)": "Alexander Hale",
+          "LIZZIE PANNILL FLETCHER (DEM)": "Lizzie Pannill Fletcher",
+          "ESPOIR NGABO (GRN)": "Espoir Ngabo"
+        },
+        "reaches": [
+          "Harris",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9292",
+        "feed_name": "United States Representative, District 8",
+        "item": "tx-us-house-8",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JESSICA HART STEINMANN (REP)": "Jessica Hart Steinmann",
+          "LAURA JONES (DEM)": "Laura Jones"
+        },
+        "reaches": [
+          "Harris",
+          "Montgomery",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9294",
+        "feed_name": "United States Representative, District 9",
+        "item": "tx-us-house-9",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ALEX MEALER (REP)": "Alex Mealer",
+          "LETICIA GUTIERREZ (DEM)": "Leticia Gutierrez"
+        },
+        "reaches": [
+          "Harris",
+          "other counties"
+        ],
+        "item_url": null
+      }
+    ],
     "unmatched_feed": [],
-    "unmatched_guide": []
+    "unmatched_guide": [],
+    "not_here": []
   }
 ];

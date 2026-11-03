@@ -67,7 +67,7 @@ export function sourceSlices(read, map, now) {
       if (mc.kind === 'multi') slice.seats = mc.seats;
     }
     if (unmatched.length) slice.unmatched = unmatched;
-    if (fc.note) slice.note = fc.note;
+    if (fc.note || mc.note) slice.note = [mc.note, fc.note].filter(Boolean).join(' ');
     slice._kind = mc.kind;
     slice._declared = fc.declared ? fc.declared.map((n) => mc.choices?.[n]).filter((n) => n && n !== OTHER) : null;
     slice._reaches = mc.reaches || [];

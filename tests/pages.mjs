@@ -198,7 +198,13 @@ check('page titles and descriptions: no em dashes, no all caps', !bad.copy.lengt
   const ac = data.places['austin-tx'].by_county || [];
   check('Austin: each county\'s own where-to-vote links, labeled by county (Travis\'s maps, Williamson\'s, Hays\'s)', ac.length === 3 && ac.every((c) => austin.includes(`<b>${c.county} County</b>`) && Object.entries(c.lookups).filter(([k]) => k !== 'election_day_waits' && k !== 'results').map(([, u]) => u).every((u) => austin.includes(`href="${u.replace(/&/g, '&amp;')}"`))));
   check('Austin: the office\'s direct lines for all three counties', (data.places['austin-tx'].county_election_office.lines || []).every((l) => austin.includes(l.label.replace(/&/g, '&amp;')) && austin.includes(l.phone)));
-  // (A county's results page, Nov 3, shows only in the app once its polls close: the static pages are built before.)
+  // Official results (Nov 3, results Phase 0): the page lists each results source on its ballot with its wait line, links only.
+  {
+    const rs = bl.buildBallot(data.states.TX, [data.places['austin-tx']]).howto.results.sources;
+    check('Austin: official results for Travis, Williamson and Hays and the state, each with its wait line, and no numbers', rs.map((r) => r.id).join(' ') === 'travis-tx williamson-tx hays-tx results-TX' && rs.every((r) => austin.includes(`href="${r.results_url.replace(/&/g, '&amp;')}"`) && austin.includes(r.wait_line.replace(/'/g, '&#39;').replace(/&(?!#)/g, '&amp;')) || austin.includes(r.wait_line)), rs.map((r) => r.id).join(' '));
+    const tx = pages.find((x) => x.path === '/texas').html;
+    check('Texas: the state’s official results link and its wait line', tx.includes(`href="${data.states.TX.howto.results.sources[0].results_url}"`) && /<b>Official results:<\/b>/.test(tx));
+  }
   // Every link kind: each county's own where it has one, else the state's, so no page loses a way to find where to vote.
   const lost = [];
   for (const id of placeIds) {

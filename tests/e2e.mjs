@@ -4774,6 +4774,19 @@ const ADDRESS = /testing lane|testing%20lane|testing\+lane|test one/i;
   await ctx.close();
 }
 
+/* The first page's "Use my address for a more exact ballot", once the ZIP has found its ballot (the door repaints as
+   it does, and a tap on the link it replaces opens nothing), then a lookup and its "Found:" line. */
+async function doorLookup(page) {
+  await page.waitForSelector('.door-place [data-act="rechoose"], .door-place, [data-act="setup-done"]', { timeout: 15000 }).catch(() => {});
+  for (let i = 0; i < 3 && !(await page.$('#addr-in')); i++) {
+    await page.waitForSelector('[data-act="addr-open"]', { timeout: 10000 });
+    await tap(page, '[data-act="addr-open"]');
+    await page.waitForSelector('#addr-in', { timeout: 3000 }).catch(() => {});
+  }
+  await page.fill('#addr-in', 'a test lookup');
+  await page.locator('form[data-form="addr"] button[type=submit]').tap();
+  await page.waitForSelector('.door-found', { timeout: 10000 }).catch(() => {});
+}
 // A statewide-only ballot in one of the three counties (Georgetown's 78626: no place in the guide) gets the state's
 // list for the Census's county. Such a ballot has no address box until a lookup, so the lookup is the first page's
 // "Use my address for a more exact ballot". The Census answers with the Williamson County Courthouse, 710 S Main St
@@ -4805,11 +4818,7 @@ const ADDRESS = /testing lane|testing%20lane|testing\+lane|test one/i;
   await page.goto(`${BASE}/?today=2026-11-03&now=12:00`);
   await page.waitForSelector('#zip');
   await page.fill('#zip', '78626');
-  await page.waitForSelector('[data-act="addr-open"]', { timeout: 10000 });
-  await tap(page, '[data-act="addr-open"]');
-  await page.fill('#addr-in', 'a test lookup');
-  await page.locator('form[data-form="addr"] button[type=submit]').tap();
-  await page.waitForSelector('.door-found', { timeout: 10000 }).catch(() => {});
+  await doorLookup(page);
   await throughSetup(page);
   await page.waitForSelector('#plan .plan-near li', { timeout: 10000 }).catch(() => {});
   await page.waitForTimeout(300);
@@ -4850,11 +4859,7 @@ for (const [zip, label, county, place, x, y, first] of [
   await page.waitForSelector('#zip');
   await page.fill('#zip', zip);
   if (zip === '78626') {
-    await page.waitForSelector('[data-act="addr-open"]', { timeout: 10000 });
-    await tap(page, '[data-act="addr-open"]');
-    await page.fill('#addr-in', 'a test lookup');
-    await page.locator('form[data-form="addr"] button[type=submit]').tap();
-    await page.waitForSelector('.door-found', { timeout: 10000 }).catch(() => {});
+    await doorLookup(page);
     await throughSetup(page);
   } else {
     await throughSetup(page);

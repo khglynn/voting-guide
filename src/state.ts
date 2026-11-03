@@ -72,6 +72,10 @@ export interface UI {
   addrMsg: string | null;
   addrFail: '' | 'down' | 'miss'; // the lookup didn't answer (Try again) or matched nothing usable
   addrCounty: string | null;  // the county the Census put that address in ("Travis"), for this visit only: picks a county's where-to-vote links (ballot.localize)
+  /* where the Census put that address, for this visit only (Nov 3): the plan's Election Day step measures the
+     county's closest vote centers from it (model/sites.ts). Memory only: never in BallotState, the save link,
+     storage, a report or a crash report. */
+  addrPoint: { lat: number; lon: number } | null;
   addrMoved: string | null;   // why an address lookup opened another ballot ("Your address is in St. Louis County, so ..."), for this visit only
   addrFound: string | null;   // the address the Census matched, tidied, shown back until a reload or another ballot ("Found: ...")
   addrWhich: GeoResult[] | null; // the Census matched several addresses: "Which one is yours?"
@@ -151,7 +155,7 @@ export const S = {
   prefs: { parties: null, endorsedOnly: false, foldDecided: true, autoPick: false } as Prefs,
   ui: {
     view: 'ballot', open: new Set(), row: null, page: {}, others: new Set(), folded: new Set(), unfolded: new Set(), reveal: new Set(), keep: null, beat: null,
-    noteOpen: new Set(), reader: null, sheet: null, report: null, sheetFrom: null, sheetBack: null, addrOpen: false, addrBusy: false, addrMsg: null, addrFail: '', addrCounty: null, addrFound: null, addrMoved: null, addrWhich: null, addrMaps: [], addrMapsPending: false, saveOpen: false, copyFallback: null, bulk: null, bulkWhy: null, addrFilled: null, lensEmptied: false,
+    noteOpen: new Set(), reader: null, sheet: null, report: null, sheetFrom: null, sheetBack: null, addrOpen: false, addrBusy: false, addrMsg: null, addrFail: '', addrCounty: null, addrPoint: null, addrFound: null, addrMoved: null, addrWhich: null, addrMaps: [], addrMapsPending: false, saveOpen: false, copyFallback: null, bulk: null, bulkWhy: null, addrFilled: null, lensEmptied: false,
     setupFill: false, setupOnly: false, resume: false, covAsk: '', srcQ: '', wiQ: '',
   } as UI,
   /* ?try=fresh|aunt|straight|sources: a scenario on whatever ballot opens, never saved. */

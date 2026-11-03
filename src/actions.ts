@@ -7,7 +7,7 @@ import { status, sectionOf, rankMax, ordinal, chosenIds, entriesBySection, pageW
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
 import { render, renderRow, renderSection, renderSummaries, renderOff, renderLens, flushLens, markBehind, renderBallot, renderAddr, rowEl, scrollRowIntoView, rowTop, holdRow, opensLow, anchored, $ } from './render';
 import { growOpen, inkRow, followFold, glideTo, land, stopGlide, shrinkAway, collapseRow, finishCollapse, glide } from './motion';
-import { openBallot, openChosen, go, openReader, runAddress, reopenAddr, useMatch, toDoor, showBallot, rechoose, openSaved, fillWhy, leaveBallot, viewed, switchOnNow, watchAdds } from './app';
+import { openBallot, openChosen, go, openReader, runAddress, reopenAddr, repaintNear, useMatch, toDoor, showBallot, rechoose, openSaved, fillWhy, leaveBallot, viewed, switchOnNow, watchAdds } from './app';
 import { judgeBatch } from './model/judges';
 import { planAgree, planParty, planJudges, planSetup, applyFills, undoFills, emptyPlan, touchUndo, type Plan } from './model/bulk';
 import { toggleChip, setParty, setSources, noEndorsements, doorNone, chipState, unreadHere, backOn, CHIPS, type ChipKey } from './model/lens';
@@ -1075,7 +1075,7 @@ A['setup-done'] = async () => { await showBallot(); };
 A.rechoose = () => { rechoose(); };
 A['saved-open'] = () => { openSaved(); };
 A['addr-open'] = () => { S.ui.addrOpen = true; S.ui.addrMsg = null; S.ui.addrFail = ''; S.ui.addrWhich = null; glide(['.addrbox', '.door-where'], () => renderAddr()); const i = $('#addr-in'); if (i) { i.scrollIntoView({ block: 'center' }); i.focus({ preventScroll: true }); } };
-A['addr-close'] = () => { S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.addrFail = ''; S.ui.addrWhich = null; glide(['.addrbox', '.door-where'], () => renderAddr()); focusFk($('[data-fk="addr-again"]') ? 'addr-again' : 'addr-open'); };
+A['addr-close'] = () => { S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.addrFail = ''; S.ui.addrWhich = null; glide(['.addrbox', '.door-where'], () => renderAddr()); repaintNear(); focusFk($('[data-fk="addr-again"]') ? 'addr-again' : 'addr-open'); };
 /* "Not it? Try again" beside what the Census found, and "None of these" under several matches: the
    form again, with what you typed. */
 A['addr-again'] = () => { reopenAddr(); };

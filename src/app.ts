@@ -16,6 +16,7 @@ import { ballotMaps, fromTopo, answerAt, edgeOf, type FeatureCollection, type To
 import { partiesOnBallot, toggleChip, setSources, setParty, chipMembers, chipState, doorNone, noEndorsements, CHIPS } from './model/lens';
 import { readAdds, updateAdd, forgetAdd, readStatus, pickNew, mergeFound, withoutIds, withFound, idsIn, settled, typedSource, POLL_MS, WATCH_MS, type Add, type AddStatus, type Found } from './model/adds';
 import { statusOf, addsHTML, addName, ADD_COPY } from './views/adds';
+import { onWantSites, putSites, retrySites } from './model/sites';
 
 /* ---------- data ---------- */
 const BASE = import.meta.env.BASE_URL || '/';
@@ -60,6 +61,26 @@ const warmMaps = (b: Ballot | null): void => { if (b) for (const { meta } of bal
 /* On the first page or the place question, before the ballot opens: the places' maps, from the index. */
 const warmPlaces = (idx: Index | null, ids: string[]): void => { for (const id of ids) for (const f of (idx && idx.places[id]?.maps) || []) loadMap(f).catch(() => { /* counted when it's needed */ }); };
 
+/* A county's Election Day vote centers (model/sites.ts), once per visit, asked for by the plan only when its
+   "Closest to your address" block would show. A list that doesn't load in a few seconds, or doesn't read, shows
+   nothing new and logs nothing; once one lands, the plan repaints in place, the way a lookup's late maps do. */
+const SITES_TIMEOUT_MS = 8000;
+async function loadSites(id: string): Promise<void> {
+  const stop = new AbortController();
+  const timer = window.setTimeout(() => stop.abort(), SITES_TIMEOUT_MS);
+  try {
+    const r = await fetch(`${BASE}data/sites/${id}.json`, { cache: 'no-cache', signal: stop.signal });
+    if (!r.ok || !putSites(id, await r.json())) return;
+  } catch { return; } finally { window.clearTimeout(timer); }
+  repaintNear();
+}
+/* The plan again, in place, when its closest-sites block may have changed: its list landed, or the address form
+   opened or closed. Nothing happens for a voter with no address looked up this visit. */
+export function repaintNear(): void {
+  if (S.view === 'ballot' && S.ballot && S.ui.view === 'ballot' && S.ui.addrPoint) anchored(() => render(['plan']));
+}
+onWantSites((id) => { void loadSites(id); });
+
 /* Optional: ways to get involved, from the data track. A missing file is normal. */
 let involvedTried = false;
 export async function loadInvolved(): Promise<void> {
@@ -88,7 +109,7 @@ export function resetUI(): void {
   // The sections as you left them on this ballot (S.b.secs, saved with it).
   const secs = S.b.secs || noSections();
   u.folded = new Set(secs.folded); u.unfolded = new Set(secs.unfolded); u.reveal = new Set(secs.reveal);
-  u.noteOpen.clear(); u.reader = null; u.sheet = null; u.sheetFrom = null; u.sheetBack = null; u.addrOpen = false; u.addrMsg = null; u.addrFail = ''; u.addrCounty = null; u.addrFound = null; u.addrMoved = null; u.addrWhich = null; u.addrMaps = []; u.addrMapsPending = false; u.saveOpen = false; u.copyFallback = null; u.bulk = null; u.bulkWhy = null; u.addrFilled = null; u.lensEmptied = false;
+  u.noteOpen.clear(); u.reader = null; u.sheet = null; u.sheetFrom = null; u.sheetBack = null; u.addrOpen = false; u.addrMsg = null; u.addrFail = ''; u.addrCounty = null; u.addrPoint = null; u.addrFound = null; u.addrMoved = null; u.addrWhich = null; u.addrMaps = []; u.addrMapsPending = false; u.saveOpen = false; u.copyFallback = null; u.bulk = null; u.bulkWhy = null; u.addrFilled = null; u.lensEmptied = false;
   u.resume = false; u.covAsk = ''; u.srcQ = ''; u.wiQ = '';
   u.open.delete('voted');
 }
@@ -122,7 +143,7 @@ export function toDoor(): void {
   S.doorSaved = leftBallot(S.view === 'ballot' && S.ballot ? decisionItems().filter((x) => x.done).length : undefined);
   cancelLoad();
   S.view = 'start'; S.ballot = null; S.zipChoice = null; S.picked = null; S.coverage = null; S.pending = null; S.loadErr = null; S.retry = null; S.zipErr = '';
-  S.ui.view = 'ballot'; S.ui.reader = null; S.ui.sheet = null; S.ui.sheetBack = null; S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.addrFail = ''; S.ui.addrCounty = null; S.ui.addrFound = null; S.ui.addrMoved = null; S.ui.addrWhich = null; S.ui.resume = false;
+  S.ui.view = 'ballot'; S.ui.reader = null; S.ui.sheet = null; S.ui.sheetBack = null; S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.addrFail = ''; S.ui.addrCounty = null; S.ui.addrPoint = null; S.ui.addrFound = null; S.ui.addrMoved = null; S.ui.addrWhich = null; S.ui.resume = false;
   forgetUndo();
   hideToast();
   render();
@@ -840,6 +861,7 @@ function addrFailed(msg: string, fail: 'down' | 'miss'): void {
 }
 export function reopenAddr(): void {
   S.ui.addrOpen = true; S.ui.addrMsg = null; S.ui.addrFail = ''; S.ui.addrWhich = null;
+  repaintNear(); // "Not it?": the closest sites go with the address found, and come back with it on Cancel
   paintAddr();
   const i = $('#addr-in') as HTMLInputElement | null;
   if (!i) return;
@@ -1032,6 +1054,8 @@ function settleGeo(b: Ballot, r: GeoResult, results: MapResult[], pending: boole
   const was = { districts: { ...S.b.districts }, mine: [...(S.b.mine || [])] };
   // The Census's county picks a county's where-to-vote links on a ballot across county lines (this visit only).
   if (first) { S.ui.addrCounty = r.county || null; localize(b, S.b.zip, S.ui.addrCounty); }
+  // Its point, for the plan's closest Election Day sites (model/sites.ts): this visit only, never saved or sent.
+  if (first) { S.ui.addrPoint = r.point ? { lat: r.point.lat, lon: r.point.lon } : null; retrySites(); }
   S.b.addrNote = addrSummary(pass(b, S.b, r, localAnswers(results, r)));
   S.ui.addrMaps = mapNotes(b, S.b, r, results, pending);
   S.ui.addrMapsPending = pending;

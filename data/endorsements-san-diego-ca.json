@@ -964,9 +964,9 @@
   "target_id": "sdusd-district-b",
   "status": "not_found",
   "choice": null,
-  "why": "Its San Diego Unified entry names only District C (Hayden Gore); District B, where Shana Hazan is unopposed, is not listed.",
+  "why": "Checked its November 3, 2026 general election union endorsements on Nov 2, 2026; no pick for this contest was listed.",
   "url": "https://www.unionyes.org/2026-endorsements",
-  "date": "2026-10-17",
+  "date": "2026-11-02",
   "confidence": "verified"
  },
  {
@@ -1084,9 +1084,9 @@
   "target_id": "ca-assembly-75",
   "status": "not_found",
   "choice": null,
-  "why": "Its Assembly list covers Districts 74 and 76 through 79 and skips 75.",
+  "why": "Checked its November 3, 2026 general election union endorsements on Nov 2, 2026; no pick for this contest was listed.",
   "url": "https://www.unionyes.org/2026-endorsements",
-  "date": "2026-10-17",
+  "date": "2026-11-02",
   "confidence": "verified"
  },
  {
@@ -1094,9 +1094,9 @@
   "target_id": "ca-assembly-80",
   "status": "not_found",
   "choice": null,
-  "why": "Its Assembly list covers Districts 74 and 76 through 79 and skips 80.",
+  "why": "Checked its November 3, 2026 general election union endorsements on Nov 2, 2026; no pick for this contest was listed.",
   "url": "https://www.unionyes.org/2026-endorsements",
-  "date": "2026-10-17",
+  "date": "2026-11-02",
   "confidence": "verified"
  },
  {
@@ -1104,9 +1104,9 @@
   "target_id": "sd-county-assessor",
   "status": "not_found",
   "choice": null,
-  "why": "Its San Diego County section lists supervisors, the treasurer and measures, not the assessor.",
+  "why": "Checked its November 3, 2026 general election union endorsements on Nov 2, 2026; no pick for this contest was listed.",
   "url": "https://www.unionyes.org/2026-endorsements",
-  "date": "2026-10-17",
+  "date": "2026-11-02",
   "confidence": "verified"
  },
  {

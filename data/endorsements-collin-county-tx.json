@@ -1043,30 +1043,27 @@
     "endorser_id": "tsta",
     "target_id": "tx-us-house-3",
     "status": "not_found",
-    "choice": null,
-    "why": "Not on TSTA's 2026 endorsed-candidates sheet, which names picks in other districts. Checked Oct 29, 2026. Checked again on Nov 1, 2026; still no pick on this page.",
+    "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
     "url": "https://tsta.org/wp-content/uploads/2026/08/2026EndorsedCandidates.pdf",
-    "date": "2026-11-01",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
     "endorser_id": "tsta",
     "target_id": "tx-house-67",
     "status": "not_found",
-    "choice": null,
-    "why": "Not on TSTA's 2026 endorsed-candidates sheet, which names picks in other districts. Checked Oct 29, 2026. Checked again on Nov 1, 2026; still no pick on this page.",
+    "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
     "url": "https://tsta.org/wp-content/uploads/2026/08/2026EndorsedCandidates.pdf",
-    "date": "2026-11-01",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
     "endorser_id": "tsta",
     "target_id": "tx-house-89",
     "status": "not_found",
-    "choice": null,
-    "why": "Not on TSTA's 2026 endorsed-candidates sheet, which names picks in other districts. Checked Oct 29, 2026. Checked again on Nov 1, 2026; still no pick on this page.",
+    "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
     "url": "https://tsta.org/wp-content/uploads/2026/08/2026EndorsedCandidates.pdf",
-    "date": "2026-11-01",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {

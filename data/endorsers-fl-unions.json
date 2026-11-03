@@ -1,0 +1,17 @@
+[
+ {
+  "id": "afscme-florida",
+  "name": "AFSCME Florida",
+  "short": "AFSCME FL",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says it is “the nation’s largest and fastest growing public services employees union” (https://www.afscmefl.org/about-us). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "geography": [
+   "FL"
+  ]
+ }
+]

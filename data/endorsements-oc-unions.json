@@ -1,0 +1,4302 @@
+[
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-assembly-59",
+    "status": "endorsed",
+    "choice": "Phillip Chen",
+    "why": "Listed on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-assembly-65",
+    "status": "endorsed",
+    "choice": "Ayanna Davis",
+    "why": "Listed on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-assembly-67",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-assembly-69",
+    "status": "endorsed",
+    "choice": "Josh Lowenthal",
+    "why": "Listed on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-assembly-74",
+    "status": "endorsed",
+    "choice": "Laurie Davies",
+    "why": "Listed on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-state-senate-34",
+    "status": "endorsed",
+    "choice": "Avelino Valencia",
+    "why": "Listed on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-state-senate-36",
+    "status": "endorsed",
+    "choice": "Chris Duncan",
+    "why": "Listed on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-us-house-41",
+    "status": "endorsed",
+    "choice": "Linda Sánchez",
+    "why": "Listed on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-us-house-42",
+    "status": "endorsed",
+    "choice": "Robert Garcia",
+    "why": "Listed on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-us-house-44",
+    "status": "endorsed",
+    "choice": "Nanette Diaz Barragan",
+    "why": "Listed on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-us-house-45",
+    "status": "endorsed",
+    "choice": "Derek Tran",
+    "why": "Listed on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-us-house-46",
+    "status": "endorsed",
+    "choice": "Lou Correa",
+    "why": "Listed on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-us-house-47",
+    "status": "endorsed",
+    "choice": "Dave Min",
+    "why": "Listed on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "fullerton-council-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "fullerton-council-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "fullerton-fjuhsd-area-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "fullerton-fjuhsd-area-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "fullerton-fsd-area-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "la-county-judge-131",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "la-county-judge-64",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "la-county-judge-65",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "la-county-judge-87",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "la-county-measure-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "la-county-measure-e",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "la-county-sheriff",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "lbccd-area-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "mnwd-directors",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "mnwd-short-term",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "nocccd-area-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "oc-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "oc-supervisor-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "socccd-area-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "wrd-division-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "ca-assembly-59",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "ca-assembly-67",
+    "status": "endorsed",
+    "choice": "Mark Pulido",
+    "why": "Listed in its 2026 voter guide for the November election.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "ca-assembly-74",
+    "status": "no_position",
+    "choice": null,
+    "why": "\"No Recommendation\" in its 2026 voter guide for the November election.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "ca-state-senate-34",
+    "status": "endorsed",
+    "choice": "Avelino Valencia",
+    "why": "Listed in its 2026 voter guide for the November election.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "ca-state-senate-36",
+    "status": "endorsed",
+    "choice": "Chris Duncan",
+    "why": "Listed in its 2026 voter guide for the November election.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "ca-us-house-45",
+    "status": "endorsed",
+    "choice": "Derek Tran",
+    "why": "Listed in its 2026 voter guide for the November election.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "ca-us-house-46",
+    "status": "endorsed",
+    "choice": "Lou Correa",
+    "why": "Listed in its 2026 voter guide for the November election.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "ca-us-house-47",
+    "status": "endorsed",
+    "choice": "Dave Min",
+    "why": "Listed in its 2026 voter guide for the November election.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "fullerton-council-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "fullerton-council-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "fullerton-fjuhsd-area-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "fullerton-fjuhsd-area-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "fullerton-fsd-area-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "mnwd-directors",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "mnwd-short-term",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "nocccd-area-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "oc-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "oc-supervisor-5",
+    "status": "endorsed",
+    "choice": "Katrina Foley",
+    "why": "Listed in its 2026 voter guide for the November election.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "socccd-area-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-assembly-59",
+    "status": "endorsed",
+    "choice": "Phillip Chen",
+    "why": "Listed in its 2026 General Election Voter Guide.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-assembly-65",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-assembly-67",
+    "status": "endorsed",
+    "choice": "Mark Pulido",
+    "why": "Listed in its 2026 General Election Voter Guide.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-assembly-69",
+    "status": "endorsed",
+    "choice": "Josh Lowenthal",
+    "why": "Listed in its 2026 General Election Voter Guide.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-assembly-74",
+    "status": "endorsed",
+    "choice": "Sergio Farias",
+    "why": "Listed in its 2026 General Election Voter Guide.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-state-senate-34",
+    "status": "endorsed",
+    "choice": "Avelino Valencia",
+    "why": "Listed in its 2026 General Election Voter Guide.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-state-senate-36",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-us-house-41",
+    "status": "endorsed",
+    "choice": "Linda Sánchez",
+    "why": "Listed in its 2026 General Election Voter Guide.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-us-house-42",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-us-house-44",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-us-house-45",
+    "status": "endorsed",
+    "choice": "Derek Tran",
+    "why": "Listed in its 2026 General Election Voter Guide.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-us-house-46",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-us-house-47",
+    "status": "endorsed",
+    "choice": "Dave Min",
+    "why": "Listed in its 2026 General Election Voter Guide.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "fullerton-council-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "fullerton-council-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "fullerton-fjuhsd-area-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "fullerton-fjuhsd-area-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "fullerton-fsd-area-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "la-county-judge-131",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "la-county-judge-64",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "la-county-judge-65",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "la-county-judge-87",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "la-county-measure-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "la-county-measure-e",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "la-county-sheriff",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "lbccd-area-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "mnwd-directors",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "mnwd-short-term",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "nocccd-area-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "oc-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "oc-supervisor-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "socccd-area-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "wrd-division-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-assembly-59",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-assembly-65",
+    "status": "endorsed",
+    "choice": "Ayanna Davis",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-assembly-67",
+    "status": "endorsed",
+    "choice": "Mark Pulido",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-assembly-69",
+    "status": "endorsed",
+    "choice": "Josh Lowenthal",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-assembly-74",
+    "status": "endorsed",
+    "choice": "Sergio Farias",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-state-senate-34",
+    "status": "endorsed",
+    "choice": "Avelino Valencia",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-state-senate-36",
+    "status": "endorsed",
+    "choice": "Chris Duncan",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-us-house-41",
+    "status": "endorsed",
+    "choice": "Linda Sánchez",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-us-house-42",
+    "status": "endorsed",
+    "choice": "Robert Garcia",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-us-house-44",
+    "status": "endorsed",
+    "choice": "Nanette Diaz Barragan",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-us-house-45",
+    "status": "endorsed",
+    "choice": "Derek Tran",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-us-house-46",
+    "status": "endorsed",
+    "choice": "Lou Correa",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-us-house-47",
+    "status": "endorsed",
+    "choice": "Dave Min",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "fullerton-council-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "fullerton-council-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "fullerton-fjuhsd-area-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "fullerton-fjuhsd-area-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "fullerton-fsd-area-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "la-county-judge-131",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "la-county-judge-64",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "la-county-judge-65",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "la-county-judge-87",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "la-county-measure-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "la-county-measure-e",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "la-county-sheriff",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "lbccd-area-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "mnwd-directors",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "mnwd-short-term",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "nocccd-area-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "oc-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "oc-supervisor-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "socccd-area-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "wrd-division-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "ca-assembly-59",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "ca-assembly-67",
+    "status": "endorsed",
+    "choice": "Mark Pulido",
+    "why": "Listed on its California endorsements page.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "ca-assembly-74",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "ca-state-senate-34",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "ca-state-senate-36",
+    "status": "endorsed",
+    "choice": "Chris Duncan",
+    "why": "Listed on its California endorsements page.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "ca-us-house-45",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "ca-us-house-46",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "ca-us-house-47",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "fullerton-council-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "fullerton-council-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "fullerton-fjuhsd-area-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "fullerton-fjuhsd-area-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "fullerton-fsd-area-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "mnwd-directors",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "mnwd-short-term",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "nocccd-area-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "oc-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "oc-supervisor-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "socccd-area-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-assembly-67",
+    "status": "endorsed",
+    "choice": "Mark Pulido",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-assembly-74",
+    "status": "endorsed",
+    "choice": "Sergio Farias",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-state-senate-34",
+    "status": "endorsed",
+    "choice": "Avelino Valencia",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-state-senate-36",
+    "status": "endorsed",
+    "choice": "Chris Duncan",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-us-house-41",
+    "status": "endorsed",
+    "choice": "Linda Sánchez",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-us-house-46",
+    "status": "endorsed",
+    "choice": "Lou Correa",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-us-house-47",
+    "status": "endorsed",
+    "choice": "Dave Min",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "cta",
+    "target_id": "ca-assembly-67",
+    "status": "endorsed",
+    "choice": "Mark Pulido",
+    "why": "Listed in its 2026 candidate recommendations.",
+    "url": "https://www.cta.org/document/2026-candidate-recommendations",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "cta",
+    "target_id": "ca-state-senate-34",
+    "status": "endorsed",
+    "choice": "Avelino Valencia",
+    "why": "Listed in its 2026 candidate recommendations.",
+    "url": "https://www.cta.org/document/2026-candidate-recommendations",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "cta",
+    "target_id": "ca-us-house-41",
+    "status": "endorsed",
+    "choice": "Linda Sánchez",
+    "why": "Listed in its 2026 candidate recommendations.",
+    "url": "https://www.cta.org/document/2026-candidate-recommendations",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "cta",
+    "target_id": "ca-us-house-45",
+    "status": "endorsed",
+    "choice": "Derek Tran",
+    "why": "Listed in its 2026 candidate recommendations.",
+    "url": "https://www.cta.org/document/2026-candidate-recommendations",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-local-11",
+    "target_id": "ca-assembly-67",
+    "status": "endorsed",
+    "choice": "Mark Pulido",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.ibew11.org/political",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-local-11",
+    "target_id": "ca-state-senate-34",
+    "status": "endorsed",
+    "choice": "Avelino Valencia",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.ibew11.org/political",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-12",
+    "target_id": "ca-assembly-67",
+    "status": "endorsed",
+    "choice": "Mark Pulido",
+    "why": "Listed in its 2026 general election voting recommendations.",
+    "url": "https://local12.org/news-details/news/2024-ca-general-election-recommendations/46178/84627",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-12",
+    "target_id": "ca-state-senate-34",
+    "status": "endorsed",
+    "choice": "Avelino Valencia",
+    "why": "Listed in its 2026 general election voting recommendations.",
+    "url": "https://local12.org/news-details/news/2024-ca-general-election-recommendations/46178/84627",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-12",
+    "target_id": "ca-state-senate-36",
+    "status": "endorsed",
+    "choice": "Chris Duncan",
+    "why": "Listed in its 2026 general election voting recommendations.",
+    "url": "https://local12.org/news-details/news/2024-ca-general-election-recommendations/46178/84627",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "iuoe-local-12",
+    "target_id": "ca-us-house-45",
+    "status": "endorsed",
+    "choice": "Derek Tran",
+    "why": "Listed in its 2026 general election voting recommendations.",
+    "url": "https://local12.org/news-details/news/2024-ca-general-election-recommendations/46178/84627",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "laoc-building-trades",
+    "target_id": "ca-assembly-59",
+    "status": "endorsed",
+    "choice": "Phillip Chen",
+    "why": "Listed in its November 2026 general election endorsements in Building Trades News.",
+    "url": "https://laocbuildingtrades.org/wp-content/uploads/2026/11/BTN-Fall-2026-HI-RES-Revised-10.31.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "laoc-building-trades",
+    "target_id": "ca-assembly-67",
+    "status": "endorsed",
+    "choice": "Mark Pulido",
+    "why": "Listed in its November 2026 general election endorsements in Building Trades News.",
+    "url": "https://laocbuildingtrades.org/wp-content/uploads/2026/11/BTN-Fall-2026-HI-RES-Revised-10.31.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "laoc-building-trades",
+    "target_id": "ca-assembly-74",
+    "status": "endorsed",
+    "choice": "Laurie Davies",
+    "why": "Listed in its November 2026 general election endorsements in Building Trades News.",
+    "url": "https://laocbuildingtrades.org/wp-content/uploads/2026/11/BTN-Fall-2026-HI-RES-Revised-10.31.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "laoc-building-trades",
+    "target_id": "ca-state-senate-34",
+    "status": "endorsed",
+    "choice": "Avelino Valencia",
+    "why": "Listed in its November 2026 general election endorsements in Building Trades News.",
+    "url": "https://laocbuildingtrades.org/wp-content/uploads/2026/11/BTN-Fall-2026-HI-RES-Revised-10.31.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "laoc-building-trades",
+    "target_id": "ca-state-senate-36",
+    "status": "no_position",
+    "choice": null,
+    "why": "'No recommendation' for State Senate District 36 in its November 2026 endorsements.",
+    "url": "https://laocbuildingtrades.org/wp-content/uploads/2026/11/BTN-Fall-2026-HI-RES-Revised-10.31.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "laoc-building-trades",
+    "target_id": "ca-us-house-45",
+    "status": "endorsed",
+    "choice": "Derek Tran",
+    "why": "Listed in its November 2026 general election endorsements in Building Trades News.",
+    "url": "https://laocbuildingtrades.org/wp-content/uploads/2026/11/BTN-Fall-2026-HI-RES-Revised-10.31.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "laoc-building-trades",
+    "target_id": "ca-us-house-46",
+    "status": "endorsed",
+    "choice": "Lou Correa",
+    "why": "Listed in its November 2026 general election endorsements in Building Trades News.",
+    "url": "https://laocbuildingtrades.org/wp-content/uploads/2026/11/BTN-Fall-2026-HI-RES-Revised-10.31.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "laoc-building-trades",
+    "target_id": "ca-us-house-47",
+    "status": "endorsed",
+    "choice": "Dave Min",
+    "why": "Listed in its November 2026 general election endorsements in Building Trades News.",
+    "url": "https://laocbuildingtrades.org/wp-content/uploads/2026/11/BTN-Fall-2026-HI-RES-Revised-10.31.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "laoc-building-trades",
+    "target_id": "fullerton-council-3",
+    "status": "endorsed",
+    "choice": "Shana Charles",
+    "why": "Listed in its November 2026 general election endorsements in Building Trades News.",
+    "url": "https://laocbuildingtrades.org/wp-content/uploads/2026/11/BTN-Fall-2026-HI-RES-Revised-10.31.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "laoc-building-trades",
+    "target_id": "fullerton-council-5",
+    "status": "endorsed",
+    "choice": "Jozef Maldonado",
+    "why": "Listed in its November 2026 general election endorsements in Building Trades News.",
+    "url": "https://laocbuildingtrades.org/wp-content/uploads/2026/11/BTN-Fall-2026-HI-RES-Revised-10.31.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "laoc-building-trades",
+    "target_id": "fullerton-fjuhsd-area-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 November general election endorsements (Building Trades News, Fall 2026) on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://laocbuildingtrades.org/wp-content/uploads/2026/11/BTN-Fall-2026-HI-RES-Revised-10.31.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "laoc-building-trades",
+    "target_id": "fullerton-fjuhsd-area-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 November general election endorsements (Building Trades News, Fall 2026) on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://laocbuildingtrades.org/wp-content/uploads/2026/11/BTN-Fall-2026-HI-RES-Revised-10.31.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "laoc-building-trades",
+    "target_id": "fullerton-fsd-area-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 November general election endorsements (Building Trades News, Fall 2026) on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://laocbuildingtrades.org/wp-content/uploads/2026/11/BTN-Fall-2026-HI-RES-Revised-10.31.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "laoc-building-trades",
+    "target_id": "mnwd-directors",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 November general election endorsements (Building Trades News, Fall 2026) on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://laocbuildingtrades.org/wp-content/uploads/2026/11/BTN-Fall-2026-HI-RES-Revised-10.31.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "laoc-building-trades",
+    "target_id": "mnwd-short-term",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 November general election endorsements (Building Trades News, Fall 2026) on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://laocbuildingtrades.org/wp-content/uploads/2026/11/BTN-Fall-2026-HI-RES-Revised-10.31.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "laoc-building-trades",
+    "target_id": "nocccd-area-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 November general election endorsements (Building Trades News, Fall 2026) on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://laocbuildingtrades.org/wp-content/uploads/2026/11/BTN-Fall-2026-HI-RES-Revised-10.31.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "laoc-building-trades",
+    "target_id": "oc-supervisor-4",
+    "status": "endorsed",
+    "choice": "Connor Traut",
+    "why": "Listed in its November 2026 general election endorsements in Building Trades News.",
+    "url": "https://laocbuildingtrades.org/wp-content/uploads/2026/11/BTN-Fall-2026-HI-RES-Revised-10.31.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "laoc-building-trades",
+    "target_id": "oc-supervisor-5",
+    "status": "endorsed",
+    "choice": "Katrina Foley",
+    "why": "Listed in its November 2026 general election endorsements in Building Trades News.",
+    "url": "https://laocbuildingtrades.org/wp-content/uploads/2026/11/BTN-Fall-2026-HI-RES-Revised-10.31.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "laoc-building-trades",
+    "target_id": "socccd-area-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 November general election endorsements (Building Trades News, Fall 2026) on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://laocbuildingtrades.org/wp-content/uploads/2026/11/BTN-Fall-2026-HI-RES-Revised-10.31.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-assembly-59",
+    "status": "endorsed",
+    "choice": "Phillip Chen",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-assembly-65",
+    "status": "endorsed",
+    "choice": "Ayanna Davis",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-assembly-67",
+    "status": "endorsed",
+    "choice": "Mark Pulido",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-assembly-69",
+    "status": "endorsed",
+    "choice": "Josh Lowenthal",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-assembly-74",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-state-senate-34",
+    "status": "endorsed",
+    "choice": "Avelino Valencia",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-state-senate-36",
+    "status": "endorsed",
+    "choice": "Chris Duncan",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-us-house-41",
+    "status": "endorsed",
+    "choice": "Linda Sánchez",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-us-house-42",
+    "status": "endorsed",
+    "choice": "Robert Garcia",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-us-house-44",
+    "status": "endorsed",
+    "choice": "Nanette Diaz Barragan",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-us-house-45",
+    "status": "endorsed",
+    "choice": "Derek Tran",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-us-house-46",
+    "status": "endorsed",
+    "choice": "Lou Correa",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-us-house-47",
+    "status": "endorsed",
+    "choice": "Dave Min",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "fullerton-council-3",
+    "status": "endorsed",
+    "choice": "Shana Charles",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "fullerton-council-5",
+    "status": "endorsed",
+    "choice": "Jozef Maldonado",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "fullerton-fjuhsd-area-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "fullerton-fjuhsd-area-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "fullerton-fsd-area-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "la-county-judge-131",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "la-county-judge-64",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "la-county-judge-65",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "la-county-judge-87",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "la-county-measure-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "la-county-measure-e",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "la-county-sheriff",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "lbccd-area-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "mnwd-directors",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "mnwd-short-term",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "nocccd-area-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "oc-supervisor-4",
+    "status": "endorsed",
+    "choice": "Connor Traut",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "oc-supervisor-5",
+    "status": "endorsed",
+    "choice": "Katrina Foley",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "socccd-area-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "wrd-division-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-labor-fed",
+    "target_id": "ca-assembly-59",
+    "status": "endorsed",
+    "choice": "Phillip Chen",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://oclabor.org/cope-endorsements-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-labor-fed",
+    "target_id": "ca-assembly-67",
+    "status": "endorsed",
+    "choice": "Mark Pulido",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://oclabor.org/cope-endorsements-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-labor-fed",
+    "target_id": "ca-state-senate-34",
+    "status": "endorsed",
+    "choice": "Avelino Valencia",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://oclabor.org/cope-endorsements-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-labor-fed",
+    "target_id": "ca-us-house-41",
+    "status": "endorsed",
+    "choice": "Linda Sánchez",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://oclabor.org/cope-endorsements-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-labor-fed",
+    "target_id": "ca-us-house-45",
+    "status": "endorsed",
+    "choice": "Derek Tran",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://oclabor.org/cope-endorsements-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-labor-fed",
+    "target_id": "ca-us-house-46",
+    "status": "endorsed",
+    "choice": "Lou Correa",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://oclabor.org/cope-endorsements-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-labor-fed",
+    "target_id": "fullerton-council-3",
+    "status": "endorsed",
+    "choice": "Shana Charles",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://oclabor.org/cope-endorsements-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-labor-fed",
+    "target_id": "fullerton-council-5",
+    "status": "endorsed",
+    "choice": "Jozef Maldonado",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://oclabor.org/cope-endorsements-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-labor-fed",
+    "target_id": "fullerton-fjuhsd-area-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://oclabor.org/cope-endorsements-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-labor-fed",
+    "target_id": "fullerton-fjuhsd-area-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://oclabor.org/cope-endorsements-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-labor-fed",
+    "target_id": "fullerton-fsd-area-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://oclabor.org/cope-endorsements-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-labor-fed",
+    "target_id": "nocccd-area-6",
+    "status": "endorsed",
+    "choice": "Paulette Chaffee or Jesus Silva",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://oclabor.org/cope-endorsements-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-labor-fed",
+    "target_id": "oc-supervisor-4",
+    "status": "endorsed",
+    "choice": "Connor Traut",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://oclabor.org/cope-endorsements-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ocea",
+    "target_id": "ca-assembly-59",
+    "status": "endorsed",
+    "choice": "Phillip Chen",
+    "why": "Listed in its 2026 general election voter guide, under a \"District 55\" heading.",
+    "url": "https://ocea.org/2026-general-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "ocea",
+    "target_id": "ca-assembly-67",
+    "status": "endorsed",
+    "choice": "Mark Pulido",
+    "why": "Listed in its 2026 general election voter guide.",
+    "url": "https://ocea.org/2026-general-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ocea",
+    "target_id": "ca-assembly-74",
+    "status": "endorsed",
+    "choice": "Laurie Davies",
+    "why": "Listed in its 2026 general election voter guide.",
+    "url": "https://ocea.org/2026-general-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ocea",
+    "target_id": "ca-state-senate-34",
+    "status": "endorsed",
+    "choice": "Avelino Valencia",
+    "why": "Listed in its 2026 general election voter guide.",
+    "url": "https://ocea.org/2026-general-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ocea",
+    "target_id": "ca-state-senate-36",
+    "status": "endorsed",
+    "choice": "Chris Duncan or Tony Strickland",
+    "why": "Listed in its 2026 general election voter guide.",
+    "url": "https://ocea.org/2026-general-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ocea",
+    "target_id": "ca-us-house-41",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ocea.org/2026-general-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ocea",
+    "target_id": "ca-us-house-45",
+    "status": "endorsed",
+    "choice": "Derek Tran",
+    "why": "Listed in its 2026 general election voter guide.",
+    "url": "https://ocea.org/2026-general-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ocea",
+    "target_id": "ca-us-house-46",
+    "status": "endorsed",
+    "choice": "Lou Correa",
+    "why": "Listed in its 2026 general election voter guide.",
+    "url": "https://ocea.org/2026-general-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ocea",
+    "target_id": "ca-us-house-47",
+    "status": "endorsed",
+    "choice": "Dave Min",
+    "why": "Listed in its 2026 general election voter guide.",
+    "url": "https://ocea.org/2026-general-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ocea",
+    "target_id": "fullerton-council-3",
+    "status": "endorsed",
+    "choice": "Shana Charles",
+    "why": "Listed in its 2026 general election voter guide.",
+    "url": "https://ocea.org/2026-general-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ocea",
+    "target_id": "fullerton-council-5",
+    "status": "endorsed",
+    "choice": "Jozef Maldonado",
+    "why": "Listed in its 2026 general election voter guide.",
+    "url": "https://ocea.org/2026-general-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ocea",
+    "target_id": "fullerton-fjuhsd-area-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ocea.org/2026-general-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ocea",
+    "target_id": "fullerton-fjuhsd-area-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ocea.org/2026-general-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ocea",
+    "target_id": "fullerton-fsd-area-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ocea.org/2026-general-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ocea",
+    "target_id": "mnwd-directors",
+    "status": "endorsed",
+    "choice": "Brian Parker",
+    "why": "Listed in its 2026 general election voter guide.",
+    "url": "https://ocea.org/2026-general-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ocea",
+    "target_id": "mnwd-short-term",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ocea.org/2026-general-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ocea",
+    "target_id": "nocccd-area-6",
+    "status": "endorsed",
+    "choice": "Paulette Chaffee",
+    "why": "Listed in its 2026 general election voter guide.",
+    "url": "https://ocea.org/2026-general-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ocea",
+    "target_id": "oc-supervisor-4",
+    "status": "endorsed",
+    "choice": "Connor Traut",
+    "why": "Listed in its 2026 general election voter guide.",
+    "url": "https://ocea.org/2026-general-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ocea",
+    "target_id": "oc-supervisor-5",
+    "status": "endorsed",
+    "choice": "Katrina Foley",
+    "why": "Listed in its 2026 general election voter guide.",
+    "url": "https://ocea.org/2026-general-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ocea",
+    "target_id": "socccd-area-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ocea.org/2026-general-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-assembly-59",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-assembly-65",
+    "status": "endorsed",
+    "choice": "Ayanna Davis",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-assembly-67",
+    "status": "endorsed",
+    "choice": "Mark Pulido",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-assembly-69",
+    "status": "endorsed",
+    "choice": "Josh Lowenthal",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-assembly-74",
+    "status": "endorsed",
+    "choice": "Sergio Farias",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-state-senate-34",
+    "status": "endorsed",
+    "choice": "Avelino Valencia",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-state-senate-36",
+    "status": "endorsed",
+    "choice": "Chris Duncan",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-us-house-41",
+    "status": "endorsed",
+    "choice": "Linda Sánchez",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-us-house-42",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-us-house-44",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-us-house-45",
+    "status": "endorsed",
+    "choice": "Derek Tran",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-us-house-46",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-us-house-47",
+    "status": "endorsed",
+    "choice": "Dave Min",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "fullerton-council-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "fullerton-council-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "fullerton-fjuhsd-area-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "fullerton-fjuhsd-area-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "fullerton-fsd-area-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "la-county-judge-131",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "la-county-judge-64",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "la-county-judge-65",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "la-county-judge-87",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "la-county-measure-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "la-county-measure-e",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "la-county-sheriff",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "lbccd-area-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "mnwd-directors",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "mnwd-short-term",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "nocccd-area-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "oc-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "oc-supervisor-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "socccd-area-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "wrd-division-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "ca-assembly-59",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Fall 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "ca-assembly-67",
+    "status": "endorsed",
+    "choice": "Mark Pulido",
+    "why": "Listed in its Fall 2026 voter guide for the November 3 election.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "ca-assembly-74",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Fall 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "ca-state-senate-34",
+    "status": "endorsed",
+    "choice": "Avelino Valencia",
+    "why": "Listed in its Fall 2026 voter guide for the November 3 election.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "ca-state-senate-36",
+    "status": "endorsed",
+    "choice": "Chris Duncan",
+    "why": "Listed in its Fall 2026 voter guide for the November 3 election.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "ca-us-house-41",
+    "status": "endorsed",
+    "choice": "Linda Sánchez",
+    "why": "Listed in its Fall 2026 voter guide for the November 3 election.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "ca-us-house-45",
+    "status": "endorsed",
+    "choice": "Derek Tran",
+    "why": "Listed in its Fall 2026 voter guide for the November 3 election.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "ca-us-house-46",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Fall 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "ca-us-house-47",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Fall 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "fullerton-council-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Fall 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "fullerton-council-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Fall 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "fullerton-fjuhsd-area-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Fall 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "fullerton-fjuhsd-area-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Fall 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "fullerton-fsd-area-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Fall 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "mnwd-directors",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Fall 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "mnwd-short-term",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Fall 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "nocccd-area-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Fall 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "oc-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Fall 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "oc-supervisor-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Fall 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "socccd-area-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Fall 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "ca-assembly-59",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "ca-assembly-67",
+    "status": "endorsed",
+    "choice": "Mark Pulido",
+    "why": "Listed in its ballot recommendations for the November 2026 election.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "ca-assembly-74",
+    "status": "endorsed",
+    "choice": "Sergio Farias",
+    "why": "Listed in its ballot recommendations for the November 2026 election.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "ca-state-senate-34",
+    "status": "endorsed",
+    "choice": "Avelino Valencia",
+    "why": "Listed in its ballot recommendations for the November 2026 election.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "ca-state-senate-36",
+    "status": "endorsed",
+    "choice": "Chris Duncan",
+    "why": "Listed in its ballot recommendations for the November 2026 election.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "ca-us-house-45",
+    "status": "endorsed",
+    "choice": "Derek Tran",
+    "why": "Listed in its ballot recommendations for the November 2026 election.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "ca-us-house-46",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "ca-us-house-47",
+    "status": "endorsed",
+    "choice": "Dave Min",
+    "why": "Listed in its ballot recommendations for the November 2026 election.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "fullerton-council-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "fullerton-council-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "fullerton-fjuhsd-area-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "fullerton-fjuhsd-area-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "fullerton-fsd-area-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "mnwd-directors",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "mnwd-short-term",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "nocccd-area-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "oc-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "oc-supervisor-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "socccd-area-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "ca-assembly-59",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "ca-assembly-67",
+    "status": "endorsed",
+    "choice": "Mark Pulido",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "ca-assembly-74",
+    "status": "endorsed",
+    "choice": "Sergio Farias",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "ca-state-senate-34",
+    "status": "endorsed",
+    "choice": "Avelino Valencia",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "ca-state-senate-36",
+    "status": "endorsed",
+    "choice": "Chris Duncan",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "ca-us-house-45",
+    "status": "endorsed",
+    "choice": "Derek Tran",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "ca-us-house-46",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "ca-us-house-47",
+    "status": "endorsed",
+    "choice": "Dave Min",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "fullerton-council-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "fullerton-council-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "fullerton-fjuhsd-area-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "fullerton-fjuhsd-area-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "fullerton-fsd-area-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "mnwd-directors",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "mnwd-short-term",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "nocccd-area-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "oc-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "oc-supervisor-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "socccd-area-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "ca-assembly-59",
+    "status": "endorsed",
+    "choice": "Phillip Chen",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "ca-assembly-67",
+    "status": "endorsed",
+    "choice": "Mark Pulido",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "ca-assembly-74",
+    "status": "endorsed",
+    "choice": "Laurie Davies",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "ca-state-senate-34",
+    "status": "endorsed",
+    "choice": "Avelino Valencia",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "ca-state-senate-36",
+    "status": "endorsed",
+    "choice": "Chris Duncan",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "ca-us-house-45",
+    "status": "endorsed",
+    "choice": "Derek Tran",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "ca-us-house-46",
+    "status": "endorsed",
+    "choice": "Lou Correa",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "ca-us-house-47",
+    "status": "endorsed",
+    "choice": "Dave Min",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "fullerton-council-3",
+    "status": "endorsed",
+    "choice": "Shana Charles",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "fullerton-council-5",
+    "status": "endorsed",
+    "choice": "Jozef Maldonado",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "fullerton-fjuhsd-area-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "fullerton-fjuhsd-area-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "fullerton-fsd-area-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "mnwd-directors",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "mnwd-short-term",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "nocccd-area-6",
+    "status": "endorsed",
+    "choice": "Paulette Chaffee or Jesus Silva",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "oc-supervisor-4",
+    "status": "endorsed",
+    "choice": "Connor Traut",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "oc-supervisor-5",
+    "status": "endorsed",
+    "choice": "Katrina Foley",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "socccd-area-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "ca-assembly-59",
+    "status": "endorsed",
+    "choice": "Phillip Chen",
+    "why": "Listed in its Orange County voter guide for November 2026.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "ca-assembly-67",
+    "status": "endorsed",
+    "choice": "Mark Pulido",
+    "why": "Listed in its Orange County voter guide for November 2026.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "ca-assembly-74",
+    "status": "endorsed",
+    "choice": "Laurie Davies",
+    "why": "Listed in its Orange County voter guide for November 2026.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "ca-state-senate-34",
+    "status": "endorsed",
+    "choice": "Avelino Valencia",
+    "why": "Listed in its Orange County voter guide for November 2026.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "ca-state-senate-36",
+    "status": "endorsed",
+    "choice": "Chris Duncan",
+    "why": "Listed in its Orange County voter guide for November 2026.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "ca-us-house-41",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Orange County voter guide for November 2026 on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "ca-us-house-45",
+    "status": "endorsed",
+    "choice": "Derek Tran",
+    "why": "Listed in its Orange County voter guide for November 2026.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "ca-us-house-46",
+    "status": "endorsed",
+    "choice": "Lou Correa",
+    "why": "Listed in its Orange County voter guide for November 2026.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "ca-us-house-47",
+    "status": "endorsed",
+    "choice": "Dave Min",
+    "why": "Listed in its Orange County voter guide for November 2026.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "fullerton-council-3",
+    "status": "endorsed",
+    "choice": "Shana Charles",
+    "why": "Listed in its Orange County voter guide for November 2026.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "fullerton-council-5",
+    "status": "endorsed",
+    "choice": "Jozef Maldonado",
+    "why": "Listed in its Orange County voter guide for November 2026.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "fullerton-fjuhsd-area-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Orange County voter guide for November 2026 on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "fullerton-fjuhsd-area-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Orange County voter guide for November 2026 on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "fullerton-fsd-area-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Orange County voter guide for November 2026 on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "mnwd-directors",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Orange County voter guide for November 2026 on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "mnwd-short-term",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Orange County voter guide for November 2026 on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "nocccd-area-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Orange County voter guide for November 2026 on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "oc-supervisor-4",
+    "status": "endorsed",
+    "choice": "Connor Traut",
+    "why": "Listed in its Orange County voter guide for November 2026.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "oc-supervisor-5",
+    "status": "endorsed",
+    "choice": "Katrina Foley",
+    "why": "Listed in its Orange County voter guide for November 2026.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "socccd-area-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Orange County voter guide for November 2026 on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-western-states-council",
+    "target_id": "ca-assembly-67",
+    "status": "endorsed",
+    "choice": "Mark Pulido",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.ufcwwest.org/ufcwvotes/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-western-states-council",
+    "target_id": "ca-assembly-74",
+    "status": "endorsed",
+    "choice": "Sergio Farias",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.ufcwwest.org/ufcwvotes/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-western-states-council",
+    "target_id": "ca-state-senate-34",
+    "status": "endorsed",
+    "choice": "Avelino Valencia",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.ufcwwest.org/ufcwvotes/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-western-states-council",
+    "target_id": "ca-state-senate-36",
+    "status": "endorsed",
+    "choice": "Chris Duncan",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.ufcwwest.org/ufcwvotes/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-western-states-council",
+    "target_id": "ca-us-house-45",
+    "status": "endorsed",
+    "choice": "Derek Tran",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.ufcwwest.org/ufcwvotes/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-western-states-council",
+    "target_id": "ca-us-house-46",
+    "status": "endorsed",
+    "choice": "Lou Correa",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.ufcwwest.org/ufcwvotes/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-western-states-council",
+    "target_id": "ca-us-house-47",
+    "status": "endorsed",
+    "choice": "Dave Min",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.ufcwwest.org/ufcwvotes/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-assembly-59",
+    "status": "endorsed",
+    "choice": "Phillip Chen",
+    "why": "Listed in its general election endorsements.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-assembly-67",
+    "status": "endorsed",
+    "choice": "Mark Pulido",
+    "why": "Listed in its general election endorsements.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-assembly-74",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-state-senate-34",
+    "status": "endorsed",
+    "choice": "Avelino Valencia",
+    "why": "Listed in its general election endorsements.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-state-senate-36",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-us-house-41",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-us-house-45",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-us-house-46",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-us-house-47",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "fullerton-council-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "fullerton-council-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "fullerton-fjuhsd-area-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "fullerton-fjuhsd-area-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "fullerton-fsd-area-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "mnwd-directors",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "mnwd-short-term",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "nocccd-area-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "oc-supervisor-4",
+    "status": "endorsed",
+    "choice": "Connor Traut",
+    "why": "Listed in its general election endorsements.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "oc-supervisor-5",
+    "status": "endorsed",
+    "choice": "Katrina Foley",
+    "why": "Listed in its general election endorsements.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "socccd-area-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-11",
+    "target_id": "ca-assembly-59",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 California voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-11",
+    "target_id": "ca-assembly-67",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 California voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-11",
+    "target_id": "ca-assembly-74",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 California voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-11",
+    "target_id": "ca-state-senate-34",
+    "status": "endorsed",
+    "choice": "Avelino Valencia",
+    "why": "Listed in its November 2026 California voter guide.",
+    "url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-11",
+    "target_id": "ca-state-senate-36",
+    "status": "endorsed",
+    "choice": "Chris Duncan",
+    "why": "Listed in its November 2026 California voter guide.",
+    "url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-11",
+    "target_id": "ca-us-house-45",
+    "status": "endorsed",
+    "choice": "Derek Tran",
+    "why": "Listed in its November 2026 California voter guide.",
+    "url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-11",
+    "target_id": "ca-us-house-46",
+    "status": "endorsed",
+    "choice": "Lou Correa",
+    "why": "Listed in its November 2026 California voter guide.",
+    "url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-11",
+    "target_id": "ca-us-house-47",
+    "status": "endorsed",
+    "choice": "Dave Min",
+    "why": "Listed in its November 2026 California voter guide.",
+    "url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-11",
+    "target_id": "fullerton-council-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 California voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-11",
+    "target_id": "fullerton-council-5",
+    "status": "endorsed",
+    "choice": "Jozef Maldonado",
+    "why": "Listed in its November 2026 California voter guide.",
+    "url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-11",
+    "target_id": "fullerton-fjuhsd-area-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 California voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-11",
+    "target_id": "fullerton-fjuhsd-area-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 California voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-11",
+    "target_id": "fullerton-fsd-area-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 California voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-11",
+    "target_id": "mnwd-directors",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 California voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-11",
+    "target_id": "mnwd-short-term",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 California voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-11",
+    "target_id": "nocccd-area-6",
+    "status": "endorsed",
+    "choice": "Paulette Chaffee",
+    "why": "Listed in its November 2026 California voter guide.",
+    "url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-11",
+    "target_id": "oc-supervisor-4",
+    "status": "endorsed",
+    "choice": "Connor Traut",
+    "why": "Listed in its November 2026 California voter guide.",
+    "url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-11",
+    "target_id": "oc-supervisor-5",
+    "status": "endorsed",
+    "choice": "Katrina Foley",
+    "why": "Listed in its November 2026 California voter guide.",
+    "url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-11",
+    "target_id": "socccd-area-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 California voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "ca-assembly-59",
+    "status": "endorsed",
+    "choice": "Phillip Chen",
+    "why": "Listed in its 2026 Orange County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_Orange-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "ca-assembly-67",
+    "status": "endorsed",
+    "choice": "Mark Pulido",
+    "why": "Listed in its 2026 Orange County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_Orange-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "ca-assembly-74",
+    "status": "endorsed",
+    "choice": "Laurie Davies",
+    "why": "Listed in its 2026 Orange County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_Orange-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "ca-state-senate-34",
+    "status": "endorsed",
+    "choice": "Avelino Valencia",
+    "why": "Listed in its 2026 Orange County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_Orange-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "ca-state-senate-36",
+    "status": "endorsed",
+    "choice": "Tony Strickland",
+    "why": "Listed in its 2026 Orange County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_Orange-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "ca-us-house-41",
+    "status": "endorsed",
+    "choice": "Linda Sánchez",
+    "why": "Listed in its 2026 Orange County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_Orange-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "ca-us-house-45",
+    "status": "endorsed",
+    "choice": "Derek Tran",
+    "why": "Listed in its 2026 Orange County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_Orange-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "ca-us-house-46",
+    "status": "endorsed",
+    "choice": "Lou Correa",
+    "why": "Listed in its 2026 Orange County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_Orange-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "ca-us-house-47",
+    "status": "endorsed",
+    "choice": "Dave Min",
+    "why": "Listed in its 2026 Orange County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_Orange-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "fullerton-council-3",
+    "status": "endorsed",
+    "choice": "Shana Charles",
+    "why": "Listed in its 2026 Orange County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_Orange-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "fullerton-council-5",
+    "status": "endorsed",
+    "choice": "Jozef Maldonado",
+    "why": "Listed in its 2026 Orange County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_Orange-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "fullerton-fjuhsd-area-5",
+    "status": "endorsed",
+    "choice": "Amy Dudich",
+    "why": "Listed in its 2026 Orange County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_Orange-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "oc-supervisor-4",
+    "status": "endorsed",
+    "choice": "Connor Traut",
+    "why": "Listed in its 2026 Orange County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_Orange-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "oc-supervisor-5",
+    "status": "endorsed",
+    "choice": "Katrina Foley",
+    "why": "Listed in its 2026 Orange County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_Orange-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "socccd-area-4",
+    "status": "endorsed",
+    "choice": "Gila Jones",
+    "why": "Listed in its 2026 Orange County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_Orange-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  }
+]

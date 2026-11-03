@@ -342,6 +342,20 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('lens: turning it off again returns to the defaults (null, short link)', S.b.sources === null);
     lens.toggleChip(b, 'papers');
     check('lens: turning Papers off leaves an explicit empty list', Array.isArray(S.b.sources) && S.b.sources.length === 0);
+    // Unions (Nov 2): every labor source, by kind and whatever its lean, police unions too.
+    const la = open('CA', ['los-angeles-ca']);
+    const unions = lens.chipMembers(la, 'unions');
+    check('lens: Unions are every union on the ballot, the police and deputies\' unions too', unions.length > 0 && unions.every((e) => e.type === 'labor') && unions.length === la.endorsers.filter((e) => e.type === 'labor').length && ['lappl', 'alads', 'la-fed'].every((id) => unions.some((e) => e.id === id)), unions.map((e) => e.id).join());
+    check('lens: Unions start off, and the chip shows on Los Angeles\'s ballot', lens.chipState(la, 'unions') === 'off' && /data-k="unions"[^>]*>.*Unions<\/button>/.test(views.lens.chipsHTML()));
+    lens.toggleChip(la, 'unions');
+    check('lens: one tap on Unions turns every union on beside the papers', unions.every((e) => S.b.sources.includes(e.id)) && lens.chipState(la, 'papers') === 'on' && views.lens.lensSummary() === 'Newspapers and guides, unions', views.lens.lensSummary());
+    lens.toggleChip(la, 'unions');
+    check('lens: and off again, back to the defaults', S.b.sources === null);
+    lens.toggleChip(la, 'progressive');
+    const chosen = lens.chipsChosen(la);
+    check('lens: Progressive alone, with the LA Fed in it, reads as progressive groups, not some unions', lens.chipState(la, 'unions') === 'some' && chosen.progressive && !chosen.unions && views.lens.lensSummary() === 'Newspapers and guides, progressive groups', views.lens.lensSummary());
+    S.b.sources = [...S.b.sources, 'lappl'];
+    check('lens: a union of its own on as well, and it says some unions', lens.chipsChosen(la).unions && views.lens.lensSummary() === 'Newspapers and guides, progressive groups, some unions', views.lens.lensSummary());
     const parties = lens.partiesOnBallot(b).map((p) => p.party);
     check('lens: Colorado parties include Democratic, Republican, Working Families', ['Democratic', 'Republican', 'Working Families'].every((p) => parties.includes(p)), parties.join(', '));
     const jd = b.eById.get('jeffco-democrats');
@@ -1091,10 +1105,10 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const door = views.setup.pickControlsHTML();
     check('first page before a ZIP: the chips from memory, no counts, the fill switch says what it does', /data-k="papers" aria-pressed="true"/.test(door) && /data-k="progressive" aria-pressed="false"/.test(door) && !/su-src|data-s="sources"/.test(door)
       && door.includes('Fill in my ballot with their picks') && door.includes('Fills the races where they agree. Races where picks split stay open.') && door.includes('Hide races I’ve decided'));
-    S.door.chips = { papers: false, progressive: false, conservative: false };
+    S.door.chips = { papers: false, progressive: false, conservative: false, unions: false };
     const doorNone = views.setup.pickControlsHTML();
     check('first page before a ZIP: every chip off is "Show endorsements" off, with no chips and no fill switch', lens.doorNone() && /data-act="ends" data-fk="ends"/.test(doorNone) && /role="switch" aria-checked="false" data-act="ends"/.test(doorNone) && !/data-act="chip"/.test(doorNone) && !/setup-fill/.test(doorNone));
-    S.door.chips = { papers: true, progressive: false, conservative: false };
+    S.door.chips = { papers: true, progressive: false, conservative: false, unions: false };
     S.ui.open.add('su-party');
     const listed = [...views.setup.pickControlsHTML().matchAll(/data-act="party-set" data-p="([^"]+)"/g)].map((m) => m[1]);
     S.ui.open.delete('su-party');

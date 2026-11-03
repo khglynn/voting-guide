@@ -5,7 +5,7 @@ import type { Contest, Endorser } from '../types';
 import { S } from '../state';
 import { chosenIds, decisionItems } from '../ballot';
 import { esc, plural } from '../util';
-import { CHIPS, chipState, partiesOnBallot, picksOnBallot, picksShown, explainsOnly, noEndorsements, unreadHere } from '../model/lens';
+import { CHIPS, chipState, chipsChosen, partiesOnBallot, picksOnBallot, picksShown, explainsOnly, noEndorsements, unreadHere } from '../model/lens';
 import { queryOf, textOf, all as allIn } from '../model/search';
 import { coverage } from '../model/tally';
 import { leanHTML, sourceLean, ext, isOpen, paywallSourceHTML, hasPaywallNote, blockedSourceHTML, unreadWhy, unreadLinkHTML, shelfAttrs } from './common';
@@ -18,7 +18,7 @@ const TYPE_WORD: Record<string, string> = {
   labor: 'Union', business: 'Business group', elected_official: 'Officeholder', other: 'Other',
 };
 
-/* The three preset chips. A group chip with no picks on this ballot stays out of the way. `fk` names them
+/* The four preset chips. A group chip with no picks on this ballot stays out of the way. `fk` names them
    for focus: step 2 and the Edit sheet's are chip-<key>, the sources sheet's s-chip-<key> (on the first page
    step 2 is still there behind it, inert, and focus must come back to the sheet's own). */
 export function chipsHTML(fk = 'chip'): string {
@@ -34,7 +34,8 @@ export function chipsHTML(fk = 'chip'): string {
 export function lensSummary(): string {
   const b = S.ballot!;
   if (noEndorsements()) return 'Off';
-  const on = CHIPS.filter((c) => ['on', 'some'].includes(chipState(b, c.key))).map((c) => `${chipState(b, c.key) === 'some' ? 'some ' : ''}${c.label.toLowerCase()}`);
+  const chosen = chipsChosen(b);
+  const on = CHIPS.filter((c) => chosen[c.key]).map((c) => `${chipState(b, c.key) === 'some' ? 'some ' : ''}${c.label.toLowerCase()}`);
   if (S.b.party) on.push(`the ${S.b.party} Party`);
   const n = chosenIds().length;
   const list = on.length ? on.join(', ') : n ? plural(n, 'source') : 'none';

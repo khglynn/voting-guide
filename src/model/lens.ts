@@ -8,7 +8,7 @@ import { S } from '../state';
 import { chosenIds, isPartisan, entriesBySection, status, isDecision, unclaimed } from '../ballot';
 import { heldIds } from './adds';
 
-export type ChipKey = 'papers' | 'progressive' | 'conservative';
+export type ChipKey = 'papers' | 'progressive' | 'conservative' | 'unions';
 const LEFT = ['left', 'lean_left'];
 const RIGHT = ['lean_right', 'right'];
 
@@ -34,10 +34,16 @@ export const CHIPS: { key: ChipKey; label: string; empty: string }[] = [
   { key: 'papers', label: 'Newspapers and guides', empty: 'None of the newspapers here made endorsements on this ballot. Try another group.' },
   { key: 'progressive', label: 'Progressive groups', empty: 'No progressive groups we checked made endorsements on this ballot.' },
   { key: 'conservative', label: 'Conservative groups', empty: 'No conservative groups we checked made endorsements on this ballot.' },
+  { key: 'unions', label: 'Unions', empty: 'No unions we checked made endorsements on this ballot.' },
 ];
 
+/* Unions (Kevin, Nov 2: LA friends asked for the unions' picks) is the one chip by kind, not lean: every
+   source whose type is labor, so police, deputies' and firefighters' unions sit beside the teachers, nurses
+   and labor councils, whatever their lean or none. A labor council rated by its mission is in Progressive
+   too, so turning either chip off turns it off. */
 export function chipMembers(b: Ballot, key: ChipKey): Endorser[] {
   if (key === 'papers') return b.endorsers.filter(isPaper);
+  if (key === 'unions') return b.endorsers.filter((e) => e.type === 'labor');
   if (key === 'progressive') return b.endorsers.filter((e) => isGroup(e) && !!e.lean && LEFT.includes(e.lean));
   return b.endorsers.filter((e) => isGroup(e) && !!e.lean && RIGHT.includes(e.lean));
 }
@@ -143,6 +149,21 @@ export function chipState(b: Ballot, key: ChipKey): ChipState {
   const on = pool.filter((e) => ids.has(e.id)).length;
   const st: ChipState = on === pool.length ? 'on' : on ? 'some' : 'off';
   return !live.length && st === 'off' ? 'empty' : st;
+}
+/* Which chips your list amounts to: each one on, or partly on with a source of its own on. A chip partly
+   on only through sources another chip that's on already holds (the labor councils, in Progressive and
+   Unions) doesn't count, so Progressive alone reads "progressive groups" and carries to the next ZIP as
+   that, never as every union too. */
+export function chipsChosen(b: Ballot): Record<ChipKey, boolean> {
+  const st = Object.fromEntries(CHIPS.map((c) => [c.key, chipState(b, c.key)])) as Record<ChipKey, ChipState>;
+  const ids = new Set(chosenIds());
+  const out = {} as Record<ChipKey, boolean>;
+  for (const c of CHIPS) {
+    if (st[c.key] !== 'some') { out[c.key] = st[c.key] === 'on'; continue; }
+    const others = new Set(CHIPS.filter((o) => o.key !== c.key && st[o.key] === 'on').flatMap((o) => chipMembers(b, o.key).map((e) => e.id)));
+    out[c.key] = chipMembers(b, c.key).some((e) => ids.has(e.id) && !others.has(e.id));
+  }
+  return out;
 }
 const defaultIds = (b: Ballot): string[] => b.endorsers.filter((e) => e.default_on).map((e) => e.id);
 /* Write a list back, as null when it is exactly the defaults, so a link stays short and new

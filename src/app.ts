@@ -13,7 +13,7 @@ import { setInvolved, type GetInvolved } from './views/pass';
 import { planAgree, applyFills, planParty, planSetup, forgetUndo, fillStands, canUndo } from './model/bulk';
 import { addrSummary, localAnswers, mapNotes, lookupPasses, type MapResult } from './model/address';
 import { ballotMaps, fromTopo, answerAt, edgeOf, type FeatureCollection, type Topology } from './model/maps';
-import { partiesOnBallot, toggleChip, setSources, setParty, chipMembers, chipState, doorNone, noEndorsements, CHIPS } from './model/lens';
+import { partiesOnBallot, toggleChip, setSources, setParty, chipMembers, chipState, chipsChosen, doorNone, noEndorsements, CHIPS } from './model/lens';
 import { readAdds, updateAdd, forgetAdd, readStatus, pickNew, mergeFound, withoutIds, withFound, idsIn, settled, typedSource, POLL_MS, WATCH_MS, type Add, type AddStatus, type Found } from './model/adds';
 import { statusOf, addsHTML, addName, ADD_COPY } from './views/adds';
 
@@ -183,17 +183,16 @@ const countPicks = (b: BallotState): number => Object.keys(b.picks).length + Obj
 const needsSetup = (b: BallotState | null): boolean => !b || (!b.setupDone && countPicks(b) === 0 && b.sources === null && b.party === null);
 /* The first page's chips and party, onto a ballot that has nothing yet: each chip on or off as
    chosen (a group with no picks here stays out, as its chip does), then the party if it is on
-   this ballot. A party it doesn't have just drops out. */
+   this ballot. A party it doesn't have just drops out. The chips that are off go first, so a source two
+   chips share (a labor council, in Progressive and Unions) is on when either chip is. */
 function applyDoor(b: Ballot): void {
   // "Fill in my ballot with their picks" starts on for a new ballot (Kevin, Oct 20) unless you set it.
   if (!S.door.fillSet) S.door.fill = true;
   if (doorNone()) { S.b.sources = []; S.b.party = null; return; } // "Don’t show endorsements"
   let ids = chosenIds();
-  for (const c of CHIPS) {
-    if (c.key !== 'papers' && chipState(b, c.key) === 'empty') continue;
-    const members = chipMembers(b, c.key).map((e) => e.id);
-    ids = S.door.chips[c.key] ? [...ids, ...members] : ids.filter((id) => !members.includes(id));
-  }
+  const live = CHIPS.filter((c) => c.key === 'papers' || chipState(b, c.key) !== 'empty');
+  for (const c of live) if (!S.door.chips[c.key]) { const out = new Set(chipMembers(b, c.key).map((e) => e.id)); ids = ids.filter((id) => !out.has(id)); }
+  for (const c of live) if (S.door.chips[c.key]) ids = [...ids, ...chipMembers(b, c.key).map((e) => e.id)];
   setSources(b, ids);
   const p = S.door.party;
   if (p && partiesOnBallot(b).some((x) => x.party === p)) setParty(b, p);
@@ -205,11 +204,9 @@ function doorFromBallot(b: Ballot): void {
   S.door.only = S.b.hideDecided;
   // A ballot this device has shown starts with the fill off, so it can't refill races you cleared.
   if (!S.door.fillSet) S.door.fill = false;
-  if (noEndorsements()) { S.door.chips = { papers: false, progressive: false, conservative: false }; S.door.party = null; return; }
-  for (const c of CHIPS) {
-    const st = chipState(b, c.key);
-    if (st !== 'empty' || c.key === 'papers') S.door.chips[c.key] = st === 'on' || st === 'some';
-  }
+  if (noEndorsements()) { S.door.chips = { papers: false, progressive: false, conservative: false, unions: false }; S.door.party = null; return; }
+  const chosen = chipsChosen(b);
+  for (const c of CHIPS) if (c.key === 'papers' || chipState(b, c.key) !== 'empty') S.door.chips[c.key] = chosen[c.key];
   S.door.party = S.b.party;
 }
 /* Loads race: a ZIP typed again, or cleared, while the last one was still loading. Only the newest

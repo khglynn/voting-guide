@@ -10,7 +10,7 @@ import { growOpen, inkRow, followFold, glideTo, land, stopGlide, shrinkAway, col
 import { openBallot, openChosen, go, openReader, runAddress, reopenAddr, useMatch, toDoor, showBallot, rechoose, openSaved, fillWhy, leaveBallot, viewed, switchOnNow, watchAdds } from './app';
 import { judgeBatch } from './model/judges';
 import { planAgree, planParty, planJudges, planSetup, applyFills, undoFills, emptyPlan, touchUndo, type Plan } from './model/bulk';
-import { toggleChip, setParty, setSources, noEndorsements, doorNone, chipState, unreadHere, backOn, CHIPS, type ChipKey } from './model/lens';
+import { toggleChip, setParty, setSources, noEndorsements, doorNone, chipsChosen, unreadHere, backOn, CHIPS, type ChipKey } from './model/lens';
 import { courtGroup } from './model/labels';
 import { claimAnswer, claimOn, claimOff } from './model/address';
 import { basisWords, LEANS, FORM, reportWhere } from './views/common';
@@ -561,7 +561,8 @@ A['party-set'] = (d) => {
    choices kept for the next ZIP follow the chips that list now makes. */
 function doorFollows(): void {
   if (!doorBallot()) return;
-  for (const c of CHIPS) S.door.chips[c.key] = ['on', 'some'].includes(chipState(B(), c.key));
+  const chosen = chipsChosen(B());
+  for (const c of CHIPS) S.door.chips[c.key] = chosen[c.key];
   S.door.party = S.b.party;
 }
 A.src = (d) => {
@@ -587,7 +588,7 @@ A.ends = () => {
   if (S.view !== 'ballot') {
     // With a ballot found, the switch shows that ballot's choice (it may have its own): turn that over.
     const off = doorBallot() ? !noEndorsements() : !doorNone();
-    S.door.chips = { papers: !off, progressive: false, conservative: false };
+    S.door.chips = { papers: !off, progressive: false, conservative: false, unions: false };
     S.door.party = null;
     if (off) S.door.fill = false;
     else if (!S.door.fillSet) S.door.fill = !(doorBallot() && S.b.setupDone); // back to its default

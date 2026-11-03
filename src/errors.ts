@@ -34,10 +34,11 @@ export function bareURLs(s: string): string {
   let out = s;
   const at = out.search(URL_START);
   if (at >= 0) {
-    const q = out.slice(at).search(/[?#]/);
+    const q = out.slice(at).search(/[?#]|%23|%3f/i);
     if (q >= 0) out = out.slice(0, at + q);
   }
-  return out.replace(/\bv[12]~\S*/gi, '[save link]');
+  // No word boundary: a link written as "%23v1~..." has none between the 3 and the v.
+  return out.replace(/v[12]~\S*/gi, '[save link]');
 }
 /* A script's URL as its file name ("index-Bx9.js"), from the path alone: never its query or hash. */
 function fileOf(u: string): string {

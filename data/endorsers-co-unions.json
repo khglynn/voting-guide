@@ -1,0 +1,140 @@
+[
+  {
+    "id": "denver-classroom-teachers-association",
+    "name": "Denver Classroom Teachers Association",
+    "short": "Denver teachers (DCTA)",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it is “nearly 4,000 members representing educators throughout Denver Public Schools” (https://denverteachers.org/about/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://denverteachers.org/denver-classroom-teachers-association-dcta-announces-recommendations-for-2026-general-election/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "denver-co"
+    ]
+  },
+  {
+    "id": "seiu-colorado",
+    "name": "SEIU Colorado (SEIU Local 105 and Colorado WINS)",
+    "short": "SEIU Colorado",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it “represents over 35,000 workers: healthcare, property service and airport workers organized in Local 105 and state employees in Colorado Workers for Innovative and New Solutions (COWINS)” (https://seiucolorado.org/endorsements/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://seiucolorado.org/endorsements/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "denver-co",
+      "aurora-co",
+      "lakewood-co",
+      "englewood-co",
+      "boulder-co"
+    ]
+  },
+  {
+    "id": "jefferson-county-education-association",
+    "name": "Jefferson County Education Association",
+    "short": "Jeffco teachers (JCEA)",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it is “a member driven organization that works to empower over 5,300 educators in Jefferson County” (https://jcea.coloradoea.org/action/elections/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://jcea.coloradoea.org/action/elections/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true,
+    "geography": [
+      "lakewood-co"
+    ]
+  },
+  {
+    "id": "ufcw-local-7",
+    "name": "UFCW Local 7",
+    "short": "UFCW Local 7",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it “represents 23,000 members in Colorado and Wyoming in Supermarkets, Packing Houses, Food Processing Plants, Cannabis Facilities, Barbers and Cosmetologists, Healthcare Facilities, Counselors, and Distilleries” (https://www.ufcw7.org/about). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://www.ufcw7.org/2026-political-endorsements",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "denver-co",
+      "aurora-co",
+      "lakewood-co",
+      "englewood-co",
+      "boulder-co"
+    ]
+  },
+  {
+    "id": "national-nurses-united",
+    "name": "National Nurses United",
+    "short": "National Nurses United",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it is “the largest union and professional association of registered nurses in U.S. history” (https://www.nationalnursesunited.org/about). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://www.nationalnursesunited.org/nnu-endorsements",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "geography": [
+      "denver-co"
+    ]
+  },
+  {
+    "id": "western-states-carpenters",
+    "name": "Western States Regional Council of Carpenters",
+    "short": "Western States Carpenters",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it “represents members in Southern California, Nevada, Arizona, Utah, New Mexico, Colorado, Idaho, Montana, Wyoming, and Alaska” (https://wscarpenters.org/about/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://wscarpenters.org/vote/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "denver-co",
+      "aurora-co",
+      "lakewood-co",
+      "englewood-co",
+      "boulder-co"
+    ]
+  },
+  {
+    "id": "cwa-local-7799",
+    "name": "CWA Local 7799",
+    "short": "CWA 7799",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it is “a coalition of unions affiliated with Communications Workers of America (CWA)” (https://www.cwa7799.org/whoweare). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://www.cwa7799.org/2026-primary",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true,
+    "geography": [
+      "denver-co",
+      "aurora-co",
+      "lakewood-co",
+      "englewood-co",
+      "boulder-co"
+    ]
+  },
+  {
+    "id": "uaw",
+    "name": "United Auto Workers (UAW)",
+    "short": "UAW",
+    "type": "labor",
+    "lean": null,
+    "lean_basis": "Not rated: a union that says it is “one of the largest and most diverse unions in North America” (https://uaw.org/about/). Its own words name no political side, and no outside rating was found.",
+    "guide_url": "https://uawpower.org/states/colorado",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "geography": [
+      "denver-co",
+      "aurora-co",
+      "englewood-co"
+    ]
+  }
+]

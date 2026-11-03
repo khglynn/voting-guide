@@ -75,10 +75,13 @@ async function loadSites(id: string): Promise<boolean> {
   try { repaintNear(); } catch { /* the list is kept; the next paint shows it */ }
   return true;
 }
-/* The plan again, in place, when its closest-sites block may have changed: its list landed, or the address form
-   opened or closed. Nothing happens for a voter with no address looked up this visit. */
-export function repaintNear(): void {
-  if (S.view === 'ballot' && S.ballot && S.ui.view === 'ballot' && S.ui.addrPoint) anchored(() => render(['plan']));
+/* The plan again, in place, when its closest-sites block may have changed: its list landed, the address form
+   opened or closed, or the polls closed (main.ts refreshPlan). `head`: the ballot head too, for the address box's
+   "Closest vote center" line (views/ledger.ts), unless the form is open (a repaint would clear what's typed) or the
+   caller just painted it. Nothing happens for a voter with no address looked up this visit. */
+export function repaintNear(head = true): void {
+  if (S.view !== 'ballot' || !S.ballot || S.ui.view !== 'ballot' || !S.ui.addrPoint) return;
+  anchored(() => { render(['plan']); if (head && !S.ui.addrOpen) renderAddr(); });
 }
 onWantSites(loadSites);
 

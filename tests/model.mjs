@@ -1535,7 +1535,7 @@ function roundTrip(name, stCode, places, mutate) {
           atInstant('2026-11-04T01:05:00Z');
           const a1 = seen();
           check('sites: Austin at 6:59 PM Central: the block and the line show', a0.block && a0.line, JSON.stringify(a0));
-          check('sites: Austin at 7:05 PM Central: both gone, polls closed', !a1.block && !a1.line && a1.key === '' && /^Polls closed at 7 PM/.test(a1.head), JSON.stringify(a1));
+          check('sites: Austin at 7:05 PM Central: both gone, results lead', !a1.block && !a1.line && a1.key === '' && /^Results are rolling in\./.test(a1.head), JSON.stringify(a1));
         } finally {
           globalThis.Date = RealDate;
           at('?today=2026-11-03&now=12:00');

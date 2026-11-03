@@ -4874,7 +4874,7 @@ for (const [zip, label, county, place, x, y, first] of [
   await page.clock.runFor(3 * 60_000);
   await page.waitForTimeout(300);
   const after = { block: !!(await page.$('#plan .plan-near')), line: !!(await page.$('.addrbox .addr-near')), found: !!(await page.$('.addrbox .addr-found')), head: await text(page, '.plan-h') };
-  const headOk = zip === '78626' ? after.head === before.head && /^Today is Election Day\. Your local polls close at 7 PM\.$/.test(after.head) : /^Polls closed at 7 PM/.test(after.head);
+  const headOk = zip === '78626' ? after.head === before.head && /^Today is Election Day\. Your local polls close at 7 PM\.$/.test(after.head) : /^Results are rolling in\./.test(after.head);
   check(`Closest sites, ${label}: past 7 PM Central the open tab drops the block and the line${zip === '78626' ? ', the statewide step unchanged' : ''}`, !after.block && !after.line && after.found && headOk, JSON.stringify(after));
   noErrors(page, `Closest sites, ${label} at 7 PM`);
   await ctx.close();

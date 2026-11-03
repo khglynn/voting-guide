@@ -76,7 +76,7 @@
   "election_day": {
     "polls_open": "7:00 AM",
     "polls_close": "7:00 PM",
-    "in_line_rule": "If you are in line at a vote center by 7:00 PM you get to vote, no matter how long it takes. Ballots in a drop box or in the clerk's hands by 7:00 PM count; drop boxes lock at 7:00 PM.",
+    "in_line_rule": "In line at a vote center by 7 PM? You still get to vote. Drop boxes lock at 7 PM.",
     "vote_centers": true,
     "lookup_url": "https://www.sos.state.co.us/pubs/elections/VIP.html",
     "confidence": "verified"

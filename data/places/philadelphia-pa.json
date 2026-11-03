@@ -106,8 +106,8 @@
   ],
   "heads_up": [
     {
-      "text": "Check both sides of your mail ballot. The charter questions are on the back.",
-      "applies_to": "ballot"
+      "text": "Voting by mail? The two charter questions are on the back of the paper ballot, so vote both sides.",
+      "applies_to": "section:measures"
     }
   ],
   "district_finders": [

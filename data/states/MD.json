@@ -78,7 +78,7 @@
   "election_day": {
     "polls_open": "7:00 AM",
     "polls_close": "8:00 PM",
-    "in_line_rule": "If you are in line at 8 PM, stay in line. You get to vote, during early voting or on Election Day. SBE's 'Life of a Ballot' guide: 'If a voter is in line before 8, they may stay in line until they cast their vote.'",
+    "in_line_rule": "In line by 8 PM? You still get to vote.",
     "vote_centers": false,
     "lookup_url": "https://voterservices.elections.maryland.gov/PollingPlaceSearch",
     "confidence": "verified"

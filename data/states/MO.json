@@ -77,7 +77,7 @@
   "election_day": {
     "polls_open": "6:00 AM",
     "polls_close": "7:00 PM",
-    "in_line_rule": "SOS: 'polling places are open from 6:00 AM to 7:00 PM on Election Day.' If you are in line at 7:00 PM, you still have the right to vote.",
+    "in_line_rule": "In line by 7 PM? You still get to vote.",
     "vote_centers": true,
     "lookup_url": "https://voteroutreach.sos.mo.gov/portal/",
     "confidence": "verified"
@@ -573,8 +573,32 @@
   },
   "heads_up": [
     {
-      "text": "St. Louis County and the City of St. Louis have separate election offices and different ballots.",
-      "applies_to": "ballot"
+      "text": "The City of St. Louis and St. Louis County have different ballots. Your address shows which one is yours.",
+      "applies_to": "ballot",
+      "until_address": true,
+      "zips": [
+        "63101",
+        "63102",
+        "63103",
+        "63104",
+        "63106",
+        "63107",
+        "63108",
+        "63109",
+        "63110",
+        "63111",
+        "63112",
+        "63113",
+        "63115",
+        "63116",
+        "63118",
+        "63120",
+        "63139",
+        "63147",
+        "63011",
+        "63105",
+        "63119"
+      ]
     }
   ],
   "dated": [

@@ -185,5 +185,6 @@
       "name": "U.S. Census Bureau: 2020 ZIP code areas by city (part of Kyle is in ZIP 78666)",
       "url": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_place20_natl.txt"
     }
-  ]
+  ],
+  "county_label": "Hays County"
 }

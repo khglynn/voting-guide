@@ -98,27 +98,24 @@
  ],
  "heads_up": [
   {
-   "text": "Glendale’s city council, city clerk, city treasurer, school board and college board races were decided in the June 2 election, so none of them are on this ballot.",
-   "applies_to": "ballot",
-   "source": "https://www.glendaleca.gov/government/city-council"
-  },
-  {
    "text": "All of Glendale is in U.S. House District 30, so this race is on every Glendale ballot.",
    "applies_to": "item:ca-us-house-30",
    "source": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
   },
   {
-   "text": "Glendale is split between two Assembly districts. The south (ZIPs 91204, 91205, 91210 and most of 91203) votes in District 52. The north and west (91201, 91202, 91207, 91208 and the Crescenta Valley) vote in District 44. 91203 and 91206 are split, so use your address.",
+   "text": "Glendale has two Assembly districts. The south is in District 52; the north, west and Crescenta Valley are in District 44. ZIPs 91203 and 91206 are split, so use your address.",
    "applies_to": "item:ca-assembly-52",
-   "source": "https://sdmg.senate.ca.gov/media/386"
+   "source": "https://sdmg.senate.ca.gov/media/386",
+   "until_address": true
   },
   {
-   "text": "Glendale is split between two Assembly districts. The north and west (ZIPs 91201, 91202, 91207, 91208 and the Crescenta Valley) vote in District 44. The south (91204, 91205, 91210 and most of 91203) votes in District 52. 91203 and 91206 are split, so use your address.",
+   "text": "Glendale has two Assembly districts. The north, west and Crescenta Valley are in District 44; the south is in District 52. ZIPs 91203 and 91206 are split, so use your address.",
    "applies_to": "item:ca-assembly-44",
-   "source": "https://sdmg.senate.ca.gov/media/386"
+   "source": "https://sdmg.senate.ca.gov/media/386",
+   "until_address": true
   }
  ],
- "notes": "Every LA County vote center is open now: 10 AM to 7 PM through Monday, November 2, and 7 AM to 8 PM on Tuesday, November 3. You can use any of them, anywhere in the county. The city’s list has 11 in Glendale: the Glendale Civic Auditorium and the AYAC Mesdjian Center (both open since October 24), plus Brand Studios, the Chevy Chase Branch Library, Eleanor J. Toll Middle School, Glendale Community College’s Student Center, the Glendale Youth Center, the Glendale Express Hotel, Glendale Church of Christ, the Armenian Church of the Nazarene and The Lighthouse Mission Church. Glendale also has eight 24-hour ballot drop boxes, open until 8 PM on November 3, including the Central, Grandview, Pacific Park and Montrose-Crescenta libraries, Verdugo Park and Dunsmore Park.",
+ "notes": "Glendale’s city council, city clerk, city treasurer, school board and college board races were decided in the June 2 election, so none of them are on this ballot. On Election Day, Nov. 3, every LA County vote center is open 7 AM to 8 PM, and you can use any of them. The city’s list has 11 in Glendale: the Glendale Civic Auditorium, the AYAC Mesdjian Center, Brand Studios, the Chevy Chase Branch Library, Eleanor J. Toll Middle School, Glendale Community College’s Student Center, the Glendale Youth Center, the Glendale Express Hotel, Glendale Church of Christ, the Armenian Church of the Nazarene and The Lighthouse Mission Church. Glendale’s eight ballot drop boxes take ballots until 8 PM on Nov. 3, including the Central, Grandview, Pacific Park and Montrose-Crescenta libraries, Verdugo Park and Dunsmore Park.",
  "lookups": {
   "early_in_person": "https://locator.lavote.net/locations/vc",
   "election_day": "https://locator.lavote.net/locations/vc",

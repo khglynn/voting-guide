@@ -78,7 +78,7 @@
   "election_day": {
     "polls_open": "6:00 AM",
     "polls_close": "9:00 PM",
-    "in_line_rule": "If you are in line at 9 PM, stay in line. NYC311: 'If you are in line by 9 PM, you can stay in line to cast a ballot.'",
+    "in_line_rule": "In line by 9 PM? You still get to vote.",
     "vote_centers": false,
     "lookup_url": "https://voterlookup.elections.ny.gov/",
     "confidence": "verified"

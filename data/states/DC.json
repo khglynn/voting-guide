@@ -77,7 +77,7 @@
   "election_day": {
     "polls_open": "7:00 AM",
     "polls_close": "8:00 PM",
-    "in_line_rule": "DCBOE: 'All voters who are in line at 8:00 p.m. may cast a ballot.' Drop boxes also lock at 8:00 PM, and mailed ballots must be postmarked that day.",
+    "in_line_rule": "In line by 8 PM? You still get to vote. Drop boxes lock at 8 PM, and a mailed ballot must be postmarked by Nov. 3.",
     "vote_centers": true,
     "lookup_url": "https://dcboe.org/voters/find-out-where-to-vote/vote-center-locator-tool",
     "confidence": "verified"

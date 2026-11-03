@@ -111,7 +111,8 @@
     "early_in_person": "https://escambiavotes.gov/early-voting-locations",
     "election_day": "https://escambiavotes.gov/precinct-finder",
     "drop_box": "https://escambiavotes.gov/early-voting-locations",
-    "tracking": "https://escambiavotes.ballottrax.net/voter/"
+    "tracking": "https://escambiavotes.ballottrax.net/voter/",
+    "results": "https://enr.electionsfl.org/ESC/3977/Summary/"
   },
   "situations": [
     {
@@ -158,5 +159,6 @@
       "from": "2026-11-01",
       "text": ""
     }
-  ]
+  ],
+  "results_source": "Escambia County Supervisor of Elections"
 }

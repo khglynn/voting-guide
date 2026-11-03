@@ -126,7 +126,8 @@
  "lookups": {
   "early_in_person": "https://locator.lavote.net/locations/vc",
   "election_day": "https://locator.lavote.net/locations/vc",
-  "drop_box": "https://locator.lavote.gov/locations/vbm?culture=en"
+  "drop_box": "https://locator.lavote.gov/locations/vbm?culture=en",
+  "results": "https://results.lavote.gov/"
  },
  "situations": [
   {
@@ -174,5 +175,6 @@
    "name": "Census 2020 ZIP area to city relationship file",
    "url": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_place20_natl.txt"
   }
- ]
+ ],
+ "results_source": "Los Angeles County Registrar"
 }

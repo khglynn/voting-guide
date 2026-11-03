@@ -72,7 +72,8 @@
   "lookups": {
     "early_in_person": "https://www.alleghenycounty.us/Government/Elections/Pre-Election-Day-Voting-Options/Voting-Events-Calendar",
     "election_day": "https://www.pavoterservices.pa.gov/Pages/PollingPlaceInfo.aspx",
-    "drop_box": "https://www.alleghenycounty.us/Government/Elections/Pre-Election-Day-Voting-Options/Voting-Events-Calendar"
+    "drop_box": "https://www.alleghenycounty.us/Government/Elections/Pre-Election-Day-Voting-Options/Voting-Events-Calendar",
+    "results": "https://results.enr.clarityelections.com/PA/Allegheny/127287/"
   },
   "sources": [
     {
@@ -83,5 +84,6 @@
       "name": "Allegheny County Elections",
       "url": "https://www.alleghenycounty.us/Government/Elections"
     }
-  ]
+  ],
+  "results_source": "Allegheny County Elections"
 }

@@ -294,7 +294,8 @@
       "lookups": {
         "early_in_person": "https://gisportal.arapahoegov.com/portal/apps/instant/nearby/index.html?appid=5aafba02f9df479c833c476960d1b3ff",
         "election_day": "https://gisportal.arapahoegov.com/portal/apps/instant/nearby/index.html?appid=5aafba02f9df479c833c476960d1b3ff",
-        "drop_box": "https://www.arapahoeco.gov/your_county/arapahoevotes/voting_locations/ballot_drop_locations.php"
+        "drop_box": "https://www.arapahoeco.gov/your_county/arapahoevotes/voting_locations/ballot_drop_locations.php",
+        "results": "https://www.arapahoeco.gov/your_county/votes/records_data/election_results.php"
       },
       "source": "https://www.arapahoeco.gov/your_county/arapahoevotes/voting_locations/nearest_voting_location.php",
       "confidence": "verified",
@@ -304,7 +305,8 @@
         "phone": "303-795-4511",
         "hours": "Monday to Friday, 8 AM to 4 PM.",
         "source": "https://www.arapahoeco.gov/your_county/arapahoevotes/contact_us/index.php"
-      }
+      },
+      "results_source": "Arapahoe County Elections"
     },
     {
       "county": "Adams",
@@ -312,7 +314,8 @@
       "lookups": {
         "early_in_person": "https://adamscountyco.gov/our-county/elected-officials/clerk-recorder/adams-county-elections/2026-elections/voter-service-polling-center-locations/",
         "election_day": "https://adamscountyco.gov/our-county/elected-officials/clerk-recorder/adams-county-elections/2026-elections/voter-service-polling-center-locations/",
-        "drop_box": "https://adamscountyco.gov/our-county/elected-officials/clerk-recorder/adams-county-elections/2026-elections/ballot-drop-box-locations/"
+        "drop_box": "https://adamscountyco.gov/our-county/elected-officials/clerk-recorder/adams-county-elections/2026-elections/ballot-drop-box-locations/",
+        "results": "https://results.enr.clarityelections.com/CO/Adams/127410/"
       },
       "source": "https://adamscountyco.gov/our-county/elected-officials/clerk-recorder/adams-county-elections/2026-elections/voter-service-polling-center-locations/",
       "confidence": "verified",
@@ -321,7 +324,8 @@
         "url": "https://adamscountyco.gov/our-county/elected-officials/clerk-recorder/adams-county-elections/2026-elections/voter-service-polling-center-locations/",
         "phone": "720-523-6500",
         "source": "https://adamscountyco.gov/our-county/elected-officials/clerk-recorder/adams-county-elections/2026-elections/voter-service-polling-center-locations/"
-      }
+      },
+      "results_source": "Adams County Elections"
     },
     {
       "county": "Douglas",

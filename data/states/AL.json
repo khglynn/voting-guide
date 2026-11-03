@@ -589,5 +589,7 @@
       "from": "2026-11-03",
       "text": "Mailed ballots must arrive by noon today, November 3. Hand delivery ended at 5 PM on Monday, November 2."
     }
-  ]
+  ],
+  "results_url": "https://www2.alabamavotes.gov/electionNight/statewideResultsByContest.aspx?ecode=1001305",
+  "results_source": "Alabama Secretary of State"
 }

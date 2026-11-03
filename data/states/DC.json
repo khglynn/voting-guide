@@ -548,5 +548,7 @@
       "from": "2026-11-02",
       "text": "Early voting ended November 1. If you're in DC on November 3, vote at any Vote Center, 7 AM to 8 PM."
     }
-  ]
+  ],
+  "results_url": "https://electionresults.dcboe.org/election_results/2026-General-Election",
+  "results_source": "DC Board of Elections"
 }

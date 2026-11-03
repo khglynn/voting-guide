@@ -154,7 +154,8 @@
  "lookups": {
   "early_in_person": "https://www.leonvotes.gov/Voting/Early-Voting",
   "election_day": "https://www.leonvotes.gov/Records/Sample-Ballots/Sample-Ballot-By-Address",
-  "drop_box": "https://www.leonvotes.gov/Voting/Vote-by-Mail/Secure-Ballot-Intake-Stations"
+  "drop_box": "https://www.leonvotes.gov/Voting/Vote-by-Mail/Secure-Ballot-Intake-Stations",
+  "results": "https://enr.electionsfl.org/LEO/4072/Summary/"
  },
  "situations": [
   {
@@ -195,5 +196,6 @@
    "from": "2026-11-02",
    "text": "The deadline to have a ballot mailed was October 22, so voting in person is the easiest fix. Early voting ended Sunday, November 1, so on Election Day, go to your precinct, 7 AM to 7 PM. Still have your mail ballot? Bring it: poll workers can cancel it so you can vote in person."
   }
- ]
+ ],
+ "results_source": "Leon County Supervisor of Elections"
 }

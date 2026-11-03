@@ -1598,10 +1598,10 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('plan: the day before, Austin gives both times', txEve.sub.join(' ') === 'Polls are open 7 AM to 7 PM.', txEve.sub.join(' | '));
     // Codex #12: after the polls close on Election Day, say so, and keep the in-line rule.
     const shut = plan.nextStep(tx, '2026-11-03', false, 19 * 60);
-    check('plan: at 7 PM on Election Day Texas says the polls closed', shut.phase === 'polls_closed' && /^Polls closed at 7 PM\. Already in line\? Stay in line\.$/.test(words(shut)), words(shut));
+    check('plan: at 7 PM on Election Day Texas leads with results (Kevin, Nov 3: not "voting has ended")', shut.phase === 'polls_closed' && words(shut) === 'Results are rolling in.' && shut.primary.label === 'Official results', words(shut));
     check('plan: after close the in-line rule stays', shut.sub.some((x) => /in line/i.test(x)) && !/Find where to vote/.test(JSON.stringify(shut.primary)), shut.sub.join(' | '));
     check('plan: one minute before close it is still Election Day', plan.nextStep(tx, '2026-11-03', false, 18 * 60 + 59).phase === 'election_day');
-    check('plan: a mail state says voting closed, not polls', /^Voting closed at 7 PM/.test(words(plan.nextStep(co, '2026-11-03', false, 21 * 60))));
+    check('plan: a mail state leads with results too once voting closes', plan.nextStep(co, '2026-11-03', false, 21 * 60).phase === 'polls_closed' && words(plan.nextStep(co, '2026-11-03', false, 21 * 60)) === 'Results are rolling in.');
     check('plan: text read later (absolute) never says closed', plan.nextStep(tx, '2026-11-03', true, 23 * 60).phase === 'election_day');
     // Codex #4: a postmark deadline is not a drop-off time.
     for (const s of ['CA', 'DC', 'OR', 'WA']) {

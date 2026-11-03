@@ -3451,7 +3451,7 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
   noErrors(page, 'Lakewood');
   await ctx.close();
 }
-for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close at 7 PM\.$/], ['2026-11-04', /^Voting has closed/]]) {
+for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close at 7 PM\.$/], ['2026-11-04', /^Results are still coming in\.$/]]) {
   const { ctx, page } = await newPage();
   await page.goto(`${BASE}/?today=${day}&now=10:00`);
   await page.fill('#zip', '80226');
@@ -3607,7 +3607,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await page.fill('#zip', '77002');
   await throughSetup(page);
   const head = await text(page, '.plan-h');
-  check('Houston 7:05 PM on Election Day: polls closed, stay in line', /^Polls closed at 7 PM\. Already in line\? Stay in line\.$/.test(head), head);
+  check('Houston 7:05 PM on Election Day: results lead, stay in line', head === 'Results are rolling in.' && /Already in line\? Stay in line\./.test(await text(page, '.plan-sub')), head);
   noErrors(page, 'Polls closed');
   await ctx.close();
 }
@@ -3623,7 +3623,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await page.waitForTimeout(200);
   const after = await text(page, '.plan-h');
   check('Austin on a Pacific-time phone: 6:58 PM Central is still Election Day', /^Today is Election Day\. Polls close at 7 PM\.$/.test(before), before);
-  check('Austin on a Pacific-time phone: the open page turns to "Polls closed" after 7 PM Central', /^Polls closed at 7 PM/.test(after), after);
+  check('Austin on a Pacific-time phone: the open page turns to results after 7 PM Central', /^Results are rolling in\./.test(after), after);
   noErrors(page, 'Polls close on an open page');
   await ctx.close();
 }

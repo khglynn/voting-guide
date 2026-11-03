@@ -129,7 +129,8 @@
   "lookups": {
     "early_in_person": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/voter/polling-places/index.cfm",
     "election_day": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/voter/polling-places/index.cfm",
-    "tracking": "https://voteroutreach.sos.mo.gov/portal/"
+    "tracking": "https://voteroutreach.sos.mo.gov/portal/",
+    "results": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/elections/results/index.cfm"
   },
   "situations": [
     {
@@ -299,5 +300,6 @@
       "from": "2026-11-01",
       "text": "Libraries open at 1 PM Monday, Nov 2. The Board is open 8 AM to 5 PM."
     }
-  ]
+  ],
+  "results_source": "St. Louis Board of Election Commissioners"
 }

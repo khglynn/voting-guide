@@ -713,5 +713,7 @@
       "from": "2026-10-31",
       "text": "At the polls, don't cast it: Texas law gives you a new ballot when you hand the spoiled one back to an election worker. On a mail ballot, bring the whole packet to your Election Day polling place, surrender it, and vote in person."
     }
-  ]
+  ],
+  "results_url": "https://electionresults.sos.state.tx.us/results.html",
+  "results_source": "Texas Secretary of State"
 }

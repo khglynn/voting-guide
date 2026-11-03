@@ -104,6 +104,8 @@ function closestHTML(h: HowTo, step: Step): string {
 const IN_PERSON: Step['phase'][] = ['early_before', 'early_open', 'election_day', 'election_day_next'];
 function planSub(step: Step): string[] {
   const h = S.ballot!.howto;
+  // Once the polls close, the strip says its button is the results (Kevin, Nov 3); the cheat sheet has no button.
+  if (step.primary?.look === 'results') return step.phase === 'closed' ? [...step.sub, 'Official results are below.'] : ['Official results are below.', ...step.sub];
   if (isMailState(h) || !IN_PERSON.includes(step.phase)) return step.sub;
   const id = h.id_rules.required === 'photo' ? ['Bring a photo ID.'] : [];
   const hours = hoursLine(step);

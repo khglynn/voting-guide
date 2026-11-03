@@ -257,7 +257,7 @@ export function nextStep(h: HowTo, t = todayISO(), absolute = false, now: number
   const results = h.results_url ? { label: 'Official results', url: h.results_url, look: 'results' as const } : null;
   const track = mb.tracking_url ? { label: 'Track your ballot', url: mb.tracking_url } : null;
   if (t > h.election_date) {
-    return { phase: 'closed', head: [['Results are still coming in.', false]], sub: ['Counting can take days, especially for mail ballots.', ...(results ? ['Official results are below.'] : [])], primary: results || track, secondary: results ? track : null };
+    return { phase: 'closed', head: [['Results are still coming in.', false]], sub: ['Counting can take days, especially for mail ballots.'], primary: results || track, secondary: results ? track : null };
   }
   if (t === h.election_date) {
     const closesAt = clockMinutes(ed.polls_close);
@@ -272,7 +272,7 @@ export function nextStep(h: HowTo, t = todayISO(), absolute = false, now: number
       return {
         phase: 'polls_closed',
         head: [['Results are rolling in.', false]],
-        sub: [...(results ? ['Official results are below.'] : []), 'Already in line? Stay in line. You still get to vote.'],
+        sub: ['Already in line? Stay in line. You still get to vote.'],
         primary: results || track, secondary: results ? track : null,
       };
     }

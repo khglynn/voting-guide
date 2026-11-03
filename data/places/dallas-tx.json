@@ -245,7 +245,8 @@
   ],
   "lookups": {
     "early_in_person": "https://experience.arcgis.com/experience/8204fc2e36cd4fac8729efcedd4fda7f/page/Page?views=Early-Voting",
-    "election_day": "https://experience.arcgis.com/experience/8204fc2e36cd4fac8729efcedd4fda7f/page/Page?views=Election-Day"
+    "election_day": "https://experience.arcgis.com/experience/8204fc2e36cd4fac8729efcedd4fda7f/page/Page?views=Election-Day",
+    "results": "https://results.enr.clarityelections.com/TX/Dallas/127396/"
   },
   "sources": [
     {
@@ -260,5 +261,6 @@
       "name": "Dallas County Elections: limited and provisional ballots",
       "url": "https://www.dallascountyvotes.org/limited-provisional-ballots/"
     }
-  ]
+  ],
+  "results_source": "Dallas County Elections"
 }

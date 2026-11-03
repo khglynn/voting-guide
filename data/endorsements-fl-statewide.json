@@ -1605,29 +1605,29 @@
     "target_id": "fl-us-senate-special",
     "status": "endorsed",
     "choice": "Angie Nixon",
-    "why": "Listed on the Florida AFL-CIO's official 2026 endorsement list, voted by its Committee on Public Education (COPE).",
+    "why": "Listed in the Florida AFL-CIO Labor 2026 Endorsements.",
     "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
     "endorser_id": "fl-afl-cio",
     "target_id": "fl-governor",
     "status": "endorsed",
-    "choice": "David Jolly",
-    "why": "Endorsed with the Florida Education Association in June 2026.",
-    "url": "https://floridianpress.com/2026/06/florida-afl-cio-florida-education-association-endorse-david-jolly-for-governor/",
-    "date": "2026-06-01",
-    "confidence": "sourced"
+    "choice": "David Jolly (Lt. Gov.: Gwen Graham)",
+    "why": "Listed in the Florida AFL-CIO Labor 2026 Endorsements, as \"David Jolly / Gwen Graham\".",
+    "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fl-afl-cio",
     "target_id": "fl-attorney-general",
     "status": "endorsed",
     "choice": "Jose Javier Rodriguez",
-    "why": "Listed on the Florida AFL-CIO's official 2026 endorsement list, voted by its Committee on Public Education (COPE). Marked (EE), an early endorsement.",
+    "why": "Listed in the Florida AFL-CIO Labor 2026 Endorsements.",
     "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1635,9 +1635,9 @@
     "target_id": "fl-cfo",
     "status": "endorsed",
     "choice": "Annette Taddeo",
-    "why": "Listed on the Florida AFL-CIO's official 2026 endorsement list, voted by its Committee on Public Education (COPE).",
+    "why": "Listed in the Florida AFL-CIO Labor 2026 Endorsements.",
     "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
-    "date": null,
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -2174,41 +2174,39 @@
     "endorser_id": "fl-education-assn",
     "target_id": "fl-governor",
     "status": "endorsed",
-    "choice": "David Jolly",
-    "why": "FEA release: \"Educators, workers endorse David Jolly for Florida governor.\"",
-    "url": "https://feaweb.org/release/educators-workers-endorse-david-jolly-for-florida-governor/",
-    "date": "2026-06-01",
-    "confidence": "sourced"
+    "choice": "David Jolly (Lt. Gov.: Gwen Graham)",
+    "why": "Listed in FEA's Voter Guide (Endorsed Candidates) for the November 3 general election.",
+    "url": "https://feaweb.org/action-center/voter-toolkit/",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fl-education-assn",
     "target_id": "fl-attorney-general",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Nov 1, 2026; still no pick on this page.",
-    "url": "https://feaweb.org/",
-    "date": "2026-11-01",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Jose Javier Rodriguez",
+    "why": "Listed in FEA's Voter Guide (Endorsed Candidates) for the November 3 general election (spelled \"Jose Javier Rodridugez\" there).",
+    "url": "https://feaweb.org/action-center/voter-toolkit/",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fl-education-assn",
     "target_id": "fl-cfo",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Nov 1, 2026; still no pick on this page.",
-    "url": "https://feaweb.org/",
-    "date": "2026-11-01",
-    "confidence": "unverified"
+    "status": "no_position",
+    "why": "FEA's Voter Guide lists \"No Action\" for Chief Financial Officer.",
+    "url": "https://feaweb.org/action-center/voter-toolkit/",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fl-education-assn",
     "target_id": "fl-agriculture-commissioner",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 endorsement found. Checked again on Nov 1, 2026; still no pick on this page.",
-    "url": "https://feaweb.org/",
-    "date": "2026-11-01",
-    "confidence": "unverified"
+    "status": "no_position",
+    "why": "FEA's Voter Guide lists \"No Action\" for Commissioner of Agriculture.",
+    "url": "https://feaweb.org/action-center/voter-toolkit/",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fl-education-assn",

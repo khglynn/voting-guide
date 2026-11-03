@@ -1,0 +1,395 @@
+[
+ {
+  "id": "afscme-council-31",
+  "name": "AFSCME Council 31 (Illinois)",
+  "short": "AFSCME Council 31",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says “AFSCME Council 31’s members in Illinois provide the vital services that make Illinois happen” (https://afscme31.org/about-us). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://www.afscme31.org/news/afscme-illinois-people-recommendations-2026-general-election",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "IL"
+  ]
+ },
+ {
+  "id": "chicago-fop-7",
+  "name": "Fraternal Order of Police, Chicago Lodge 7",
+  "short": "Chicago FOP Lodge 7",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says it became “the collective bargaining agent for the police and the union for 8,202 Chicago Police Officers” (https://www.chicagofop.org/about/about-the-lodge). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://www.chicagofop.org/latest-news/2026-endorsed-candidates",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "chicago-il"
+  ]
+ },
+ {
+  "id": "iuoe-150",
+  "name": "International Union of Operating Engineers Local 150",
+  "short": "Operating Engineers 150",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says it “is a labor union representing over 24,000 working men and women in Illinois, Indiana and Iowa” (https://local150.org/local150/about/). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://local150.org/election/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "chicago-il"
+  ]
+ },
+ {
+  "id": "mnea",
+  "name": "Missouri National Education Association",
+  "short": "Missouri NEA",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says it “is the largest union for public school teachers and education support staff in Missouri” (https://www.mnea.org/about). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://mnea.org/vote4education",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "geography": [
+   "MO"
+  ]
+ },
+ {
+  "id": "seiu-healthcare-il",
+  "name": "SEIU Healthcare Illinois Indiana Missouri Kansas",
+  "short": "SEIU Healthcare",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says it is “the fastest-growing union of healthcare, child care, home care and nursing home workers in the Midwest” (https://seiuhcilin.org/about/). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://seiuhcilin.org/resources/election-information/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "geography": [
+   "IL",
+   "MO"
+  ]
+ },
+ {
+  "id": "uaw-region-9a",
+  "name": "UAW Region 9A (New York City CAP Council)",
+  "short": "UAW Region 9A",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union region whose members it describes as “active and retired workers in a wide variety of industries including manufacturing, design, gaming, legal services, child care, higher education, cultural institutions, government, and more” (https://region9a.uaw.org/about). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://region9a.uaw.org/news/NYCEndorsements826",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "nyc-bronx-ny",
+   "nyc-brooklyn-ny",
+   "nyc-manhattan-ny",
+   "nyc-queens-ny",
+   "nyc-staten-island-ny"
+  ]
+ },
+ {
+  "id": "dc37",
+  "name": "District Council 37, AFSCME",
+  "short": "DC 37",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says it is “New York City’s largest union, with 150,000 members and 89,000 retirees in the public, private, and nonprofit sectors” (https://www.dc37.net/take-action/dc-37-votes/). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://www.dc37.net/take-action/dc-37-votes/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "geography": [
+   "nyc-bronx-ny",
+   "nyc-brooklyn-ny",
+   "nyc-manhattan-ny",
+   "nyc-queens-ny",
+   "nyc-staten-island-ny"
+  ]
+ },
+ {
+  "id": "seiu-32bj",
+  "name": "32BJ SEIU",
+  "short": "32BJ SEIU",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says “With more than 185,000 members, we are the largest union of property service workers in the U.S.” (https://www.seiu32bj.org/about-us/). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://www.seiu32bj.org/buildingpoliticalpower/new-york/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "nyc-bronx-ny",
+   "nyc-brooklyn-ny",
+   "nyc-manhattan-ny",
+   "nyc-queens-ny",
+   "nyc-staten-island-ny"
+  ]
+ },
+ {
+  "id": "cwa-district-1",
+  "name": "Communications Workers of America, District 1",
+  "short": "CWA District 1",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that describes itself as “America’s largest communications & media union” and says “CWA D1 covers CT, ME, MA, NH, NJ, NY, RI, VT” (https://www.cwad1.org/). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://www.cwad1.org/vote2026ny",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "NY"
+  ]
+ },
+ {
+  "id": "csea-ny",
+  "name": "Civil Service Employees Association (AFSCME Local 1000)",
+  "short": "CSEA",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says it has been “making a difference for workers since 1910” (https://cseany.org/about-csea/). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://cseany.org/about-csea/legislative-political-action/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "NY"
+  ]
+ },
+ {
+  "id": "pef",
+  "name": "New York State Public Employees Federation",
+  "short": "PEF",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union whose site says its executive board represents “62,000 professional employees across New York State” (https://www.pef.org/articles/news/pef-executive-board-votes-to-endorse-governor-kathy-hochul/). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://www.pef.org/departments/political-action/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "NY"
+  ]
+ },
+ {
+  "id": "psc-cuny",
+  "name": "Professional Staff Congress/CUNY (AFT Local 2334)",
+  "short": "PSC-CUNY",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that calls itself “the union that represents 30,000 faculty and staff at the City University of New York and the CUNY Research Foundation” (https://psc-cuny.org/). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://psc-cuny.org/issues/psc-endorsements-general-election-2026/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "nyc-bronx-ny",
+   "nyc-brooklyn-ny",
+   "nyc-manhattan-ny",
+   "nyc-queens-ny",
+   "nyc-staten-island-ny"
+  ]
+ },
+ {
+  "id": "nysna",
+  "name": "New York State Nurses Association",
+  "short": "NYSNA",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says “We are New York’s largest union and professional association for registered nurses” (https://www.nysna.org/). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://www.nysna.org/news/nysna-2026-general-election-endorsements",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "NY"
+  ]
+ },
+ {
+  "id": "afscme-maryland-council-3",
+  "name": "AFSCME Maryland Council 3",
+  "short": "AFSCME Maryland",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that calls itself the “State’s largest union for city, county, and state employees” (https://afscmemd.org/press-room/press-release-afscme-maryland-announces-2026-endorsements). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://afscmemd.org/vote",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "geography": [
+   "MD"
+  ]
+ },
+ {
+  "id": "aft-pennsylvania",
+  "name": "AFT Pennsylvania",
+  "short": "AFT Pennsylvania",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says it “represents more than 36,000 members in 76 local affiliates throughout the Commonwealth, including teachers and school-related personnel, higher education faculty and staff, and state employees” (https://pa.aft.org/about-us). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://pa.aft.org/aftpa-endorsements",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "PA"
+  ]
+ },
+ {
+  "id": "atu-local-689",
+  "name": "Amalgamated Transit Union Local 689",
+  "short": "ATU Local 689",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says “Local 689 is a democratic and collective organization of workers from diverse backgrounds, opinions, and views” (https://www.atulocal689.org/endorsements). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://www.atulocal689.org/endorsements",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "geography": [
+   "DC",
+   "MD"
+  ]
+ },
+ {
+  "id": "afscme-dc-47",
+  "name": "AFSCME District Council 47",
+  "short": "AFSCME DC 47",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that calls itself “a progressive labor union that represents workers and retirees in the Non-profit, Higher Education, Cultural/Arts, & Government sectors of the greater Philadelphia, PA area” (https://dc47.org/aboutus/). No outside rating was found.",
+  "guide_url": "https://dc47.org/2026generalelectionendorsements/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "geography": [
+   "philadelphia-pa"
+  ]
+ },
+ {
+  "id": "pft",
+  "name": "Philadelphia Federation of Teachers (AFT Local 3)",
+  "short": "Phila. Teachers (PFT)",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says it represents “over 14,400 dedicated individuals working in Philadelphia public schools” and “advocates politically on behalf of members and students” (https://pft.org/about). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://pft.org/pft-votes",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "philadelphia-pa"
+  ]
+ },
+ {
+  "id": "pittsburgh-federation-of-teachers",
+  "name": "Pittsburgh Federation of Teachers (AFT Local 400)",
+  "short": "Pgh. Teachers (PFT 400)",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says it represents “over 2600 teachers, paraprofessionals, other professionals, technical/clerical staff and the PMOIU#2 unit in Pittsburgh Public Schools” (https://pft400.com/why-union/). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://pft400.com/wp-content/uploads/2026/08/2026-PFT-Endorsed-Candidates-GENERAL.pdf",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "pittsburgh-pa"
+  ]
+ },
+ {
+  "id": "seiu-local-668",
+  "name": "SEIU Local 668",
+  "short": "SEIU 668",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says it is “a member-driven, statewide Union united in our mission to raise living standards for working families” (https://www.seiu668.org/about). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://www.seiu668.org/news/2026-general-election-endorsed-candidates/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "PA"
+  ]
+ },
+ {
+  "id": "pa-conference-of-teamsters",
+  "name": "Pennsylvania Conference of Teamsters",
+  "short": "PA Teamsters",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says the Teamsters “are America’s largest, most diverse union” (https://teamster.org/about/). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://teamster.org/2026/08/pennsylvania-conference-of-teamsters-announce-2026-endorsements/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "PA"
+  ]
+ },
+ {
+  "id": "ufcw-local-400",
+  "name": "UFCW Local 400",
+  "short": "UFCW 400",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says it “represents 35,000 members working in the retail food, health care, retail department store, food processing, service and other industries” (https://www.ufcw400.org/about/). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://www.ufcw400.org/2026/06/22/ufcw-local-400-backed-candidates-win-d-c-primary-elections/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "DC"
+  ]
+ },
+ {
+  "id": "afscme-florida",
+  "name": "AFSCME Florida",
+  "short": "AFSCME FL",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says it is “the nation’s largest and fastest growing public services employees union” (https://www.afscmefl.org/about-us). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://www.afscmefl.org/2026-midterm-endorsements",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "geography": [
+   "FL"
+  ]
+ },
+ {
+  "id": "texas-aft",
+  "name": "Texas AFT (Texas American Federation of Teachers)",
+  "short": "Texas AFT",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says it is “a statewide union with 66,000 members, including K-12 and community college educators, support staff, and retirees” (https://www.texasaft.org/about). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://www.texasaft.org/our-priorities/current-endorsements",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true,
+  "geography": [
+   "TX"
+  ]
+ },
+ {
+  "id": "hpou",
+  "name": "Houston Police Officers’ Union",
+  "short": "HPOU",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says it “remained the Majority Bargaining Agent for all officers” of the Houston Police Department (https://hpou.org/hpou-history/). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://bg.hpou.org/2026-november-endorsements/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "houston-tx"
+  ]
+ }
+]

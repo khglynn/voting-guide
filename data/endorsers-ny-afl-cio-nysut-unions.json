@@ -1,0 +1,17 @@
+[
+ {
+  "id": "nysna",
+  "name": "New York State Nurses Association",
+  "short": "NYSNA",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says “We are New York’s largest union and professional association for registered nurses” (https://www.nysna.org/). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://www.nysna.org/news/nysna-2026-general-election-endorsements",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "NY"
+  ]
+ }
+]

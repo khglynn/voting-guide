@@ -1,0 +1,47 @@
+[
+ {
+  "id": "cwa-district-1",
+  "name": "Communications Workers of America, District 1",
+  "short": "CWA District 1",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that describes itself as “America’s largest communications & media union” and says “CWA D1 covers CT, ME, MA, NH, NJ, NY, RI, VT” (https://www.cwad1.org/). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://www.cwad1.org/vote2026ny",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "NY"
+  ]
+ },
+ {
+  "id": "csea-ny",
+  "name": "Civil Service Employees Association (AFSCME Local 1000)",
+  "short": "CSEA",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union that says it has been “making a difference for workers since 1910” (https://cseany.org/about-csea/). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://cseany.org/about-csea/legislative-political-action/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "NY"
+  ]
+ },
+ {
+  "id": "pef",
+  "name": "New York State Public Employees Federation",
+  "short": "PEF",
+  "type": "labor",
+  "lean": null,
+  "lean_basis": "Not rated: a union whose site says its executive board represents “62,000 professional employees across New York State” (https://www.pef.org/articles/news/pef-executive-board-votes-to-endorse-governor-kathy-hochul/). Its own words name no political side, and no outside rating was found.",
+  "guide_url": "https://www.pef.org/departments/political-action/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false,
+  "geography": [
+   "NY"
+  ]
+ }
+]

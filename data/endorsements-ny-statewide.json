@@ -304,9 +304,9 @@
     "target_id": "ny-governor",
     "status": "endorsed",
     "choice": "Kathy C. Hochul / Adrienne E. Adams",
-    "why": "On the NYS AFL-CIO 2026 endorsement list. The federation says its endorsed candidates 'are committed to advocating for working people in New York State government.' No candidate-specific reasoning given.",
-    "url": "https://nysaflcio.org/content/40849",
-    "date": null,
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://nysaflcio.org/endorsements",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -314,9 +314,9 @@
     "target_id": "ny-attorney-general",
     "status": "endorsed",
     "choice": "Letitia A. James",
-    "why": "On the NYS AFL-CIO 2026 endorsement list. The federation says its endorsed candidates 'are committed to advocating for working people in New York State government.' No candidate-specific reasoning given.",
-    "url": "https://nysaflcio.org/content/40849",
-    "date": null,
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://nysaflcio.org/endorsements",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -324,9 +324,9 @@
     "target_id": "ny-comptroller",
     "status": "endorsed",
     "choice": "Thomas P. DiNapoli",
-    "why": "On the NYS AFL-CIO 2026 endorsement list. The federation says its endorsed candidates 'are committed to advocating for working people in New York State government.' No candidate-specific reasoning given.",
-    "url": "https://nysaflcio.org/content/40849",
-    "date": null,
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://nysaflcio.org/endorsements",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -334,9 +334,9 @@
     "target_id": "ny-governor",
     "status": "endorsed",
     "choice": "Kathy C. Hochul / Adrienne E. Adams",
-    "why": "NYSUT Board of Directors vote, May 29, 2026. President Melinda Person: 'NYSUT is proud to support candidates who have a track record of protecting public education.'",
+    "why": "Listed in its statewide endorsements, announced May 2026.",
     "url": "https://www.nysut.org/news/2026/may/media-release-endorsements",
-    "date": "2026-05-29",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -344,9 +344,9 @@
     "target_id": "ny-attorney-general",
     "status": "endorsed",
     "choice": "Letitia A. James",
-    "why": "NYSUT Board of Directors vote, May 29, 2026. President Melinda Person: 'NYSUT is proud to support candidates who have a track record of protecting public education.'",
+    "why": "Listed in its statewide endorsements, announced May 2026.",
     "url": "https://www.nysut.org/news/2026/may/media-release-endorsements",
-    "date": "2026-05-29",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -354,9 +354,9 @@
     "target_id": "ny-comptroller",
     "status": "endorsed",
     "choice": "Thomas P. DiNapoli",
-    "why": "NYSUT Board of Directors vote, May 29, 2026. President Melinda Person: 'NYSUT is proud to support candidates who have a track record of protecting public education.'",
+    "why": "Listed in its statewide endorsements, announced May 2026.",
     "url": "https://www.nysut.org/news/2026/may/media-release-endorsements",
-    "date": "2026-05-29",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -394,10 +394,10 @@
     "target_id": "ny-governor",
     "status": "endorsed",
     "choice": "Bruce A. Blakeman / Todd Hood",
-    "why": "Sept 25, 2026: 95% of 1,478 voting members backed Blakeman in the union's first-ever governor endorsement, citing 'staffing shortages, mandatory overtime, officer safety, compensation and benefits' and the HALT Act. President Chris Summers: 'For the first time in our organization's history, we took this decision directly to our statewide membership.'",
-    "url": "https://www.fingerlakes1.com/2026/09/25/correction-officers-union-endorses-bruce-blakeman-for-governor-after-statewide-membership-vote/",
-    "date": "2026-09-25",
-    "confidence": "sourced"
+    "why": "Its site says President Summers “announced a historic endorsement of Bruce Blakeman for Governor” after a statewide member vote.",
+    "url": "https://www.nyscopba.org/nyscopba-endorsement/",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "nyscopba",

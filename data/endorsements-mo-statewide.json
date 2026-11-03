@@ -614,9 +614,9 @@
     "target_id": "mo-state-auditor",
     "status": "endorsed",
     "choice": "Quentin Wilson",
-    "why": "Listed on the federation's 2026 General Election endorsement page.",
+    "why": "Listed in its 2026 General Election Endorsements.",
     "url": "https://moaflcio.org/news/2026-endorsements",
-    "date": "2026-10-16",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -624,9 +624,9 @@
     "target_id": "mo-prop-a",
     "status": "endorsed",
     "choice": "NO",
-    "why": "\"NO, OPPOSE. Citizen-led referendum on gerrymandered Congressional maps.\"",
-    "url": "https://moaflcio.org/news/missouri-afl-cio-2026-primary-endorsements",
-    "date": "2026-10-16",
+    "why": "Listed as \"NO, OPPOSE\" in its 2026 General Election Endorsements.",
+    "url": "https://moaflcio.org/news/2026-endorsements",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -634,9 +634,9 @@
     "target_id": "mo-amendment-3",
     "status": "endorsed",
     "choice": "NO",
-    "why": "\"NO, OPPOSE. Repeals abortion rights.\"",
-    "url": "https://moaflcio.org/news/missouri-afl-cio-2026-primary-endorsements",
-    "date": "2026-10-16",
+    "why": "Listed as \"NO, OPPOSE\" in its 2026 General Election Endorsements.",
+    "url": "https://moaflcio.org/news/2026-endorsements",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -644,9 +644,9 @@
     "target_id": "mo-amendment-6",
     "status": "endorsed",
     "choice": "YES",
-    "why": "\"YES, SUPPORT. Protects citizen-led votes and petition rights.\"",
-    "url": "https://moaflcio.org/news/missouri-afl-cio-2026-primary-endorsements",
-    "date": "2026-10-16",
+    "why": "Listed as \"YES, SUPPORT\" in its 2026 General Election Endorsements.",
+    "url": "https://moaflcio.org/news/2026-endorsements",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -654,60 +654,55 @@
     "target_id": "mo-amendment-7",
     "status": "endorsed",
     "choice": "NO",
-    "why": "\"NO, OPPOSE. Allows for private funding of state government.\"",
-    "url": "https://moaflcio.org/news/missouri-afl-cio-2026-primary-endorsements",
-    "date": "2026-10-16",
+    "why": "Listed as \"NO, OPPOSE\" in its 2026 General Election Endorsements.",
+    "url": "https://moaflcio.org/news/2026-endorsements",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
     "endorser_id": "mo-afl-cio",
     "target_id": "mo-amendment-8",
     "status": "not_found",
-    "choice": null,
-    "why": "Amendment 8 is not listed on the federation's endorsement page.",
-    "url": "https://moaflcio.org/news/missouri-afl-cio-2026-primary-endorsements",
-    "date": "2026-10-16",
+    "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+    "url": "https://moaflcio.org/news/2026-endorsements",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
     "endorser_id": "mo-afl-cio",
     "target_id": "mo-retention-wilson",
     "status": "not_found",
-    "choice": null,
-    "why": "No position on this retention vote found.",
-    "url": "https://moaflcio.org/news/missouri-afl-cio-2026-primary-endorsements",
-    "date": "2026-10-16",
-    "confidence": "sourced"
+    "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+    "url": "https://moaflcio.org/news/2026-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "mo-afl-cio",
     "target_id": "mo-retention-lay",
     "status": "not_found",
-    "choice": null,
-    "why": "No position on this retention vote found.",
-    "url": "https://moaflcio.org/news/missouri-afl-cio-2026-primary-endorsements",
-    "date": "2026-10-16",
-    "confidence": "sourced"
+    "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+    "url": "https://moaflcio.org/news/2026-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "mo-afl-cio",
     "target_id": "mo-retention-navarro-mckelvey",
     "status": "not_found",
-    "choice": null,
-    "why": "No position on this retention vote found.",
-    "url": "https://moaflcio.org/news/missouri-afl-cio-2026-primary-endorsements",
-    "date": "2026-10-16",
-    "confidence": "sourced"
+    "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+    "url": "https://moaflcio.org/news/2026-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "mo-afl-cio",
     "target_id": "mo-retention-quigless",
     "status": "not_found",
-    "choice": null,
-    "why": "No position on this retention vote found.",
-    "url": "https://moaflcio.org/news/missouri-afl-cio-2026-primary-endorsements",
-    "date": "2026-10-16",
-    "confidence": "sourced"
+    "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+    "url": "https://moaflcio.org/news/2026-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "mo-right-to-life-pac",

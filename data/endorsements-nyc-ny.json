@@ -9215,20 +9215,20 @@
     "target_id": "ny-us-house-3",
     "status": "endorsed",
     "choice": "Thomas R. Suozzi",
-    "why": "Listed on the Suozzi campaign's endorsement list (\"NY Teachers' Union\"); NYSUT's own page was not opened.",
-    "url": "https://suozziforcongress.com/",
-    "date": null,
-    "confidence": "sourced"
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.nysut.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "ny-afl-cio",
     "target_id": "ny-us-house-3",
     "status": "endorsed",
     "choice": "Thomas R. Suozzi",
-    "why": "Listed on the Suozzi campaign's endorsement list; the AFL-CIO's own page was not opened.",
-    "url": "https://suozziforcongress.com/",
-    "date": null,
-    "confidence": "sourced"
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://nysaflcio.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "ny-democratic-party",

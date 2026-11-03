@@ -129,6 +129,7 @@ try {
 } catch { /* an old browser: the bar redraws on the next tap */ }
 /* The next step can change while the page sits open: the polls close at 7, or midnight passes.
    Check once a minute and whenever the tab comes back; repaint the strip only when it changed. */
+let phaseSeen: string | null = null; // the strip's phase the results repaint last answered
 function refreshPlan(): void {
   if (!S.ballot || S.view !== 'ballot') return;
   const day = S.ballot.howto.day;
@@ -136,6 +137,15 @@ function refreshPlan(): void {
   // The closest sites close at 7 PM Central on their own, even while a statewide ballot's step is still open.
   const nearMoved = S.ui.view === 'ballot' && nearKeyNow(S.ballot.howto) !== nearKey;
   if (stepKey(S.ballot.howto) === planKey && S.ballot.howto.day === day && !nearMoved) return;
+  // The polls closing (or results turning official) changes more than the strip (Nov 3, results Phase 0): the bar, the
+  // endcap, What's next and Share the guide follow the strip's phase, so they repaint with it, once.
+  const phase = stepKey(S.ballot.howto).split('|')[0];
+  const was = phaseSeen ?? planKey.split('|')[0];
+  if (phase !== was && (/^results_/.test(phase) || /^results_/.test(was))) {
+    phaseSeen = phase;
+    anchored(() => render(['plan', 'ballot', 'bar', 'cheat', 'pass']));
+    return;
+  }
   // After a lookup this visit, the address box's "Closest vote center" line goes with the plan's block (app.ts).
   if (S.ui.addrPoint && S.ui.view === 'ballot') repaintNear(); else anchored(() => render(['plan']));
 }

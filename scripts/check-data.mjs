@@ -91,6 +91,7 @@ const BUILD_WARNINGS = [
   [/: early_in_person\.latest_end needs .*; dropped it/, 'date-order'],
   [/: heads_up (until_address|zips) is not .*; dropped the field/, 'heads-up-field'],
   [/: by_county .* sites ".*" names no usable data\/sites list for that county; dropped it/, 'sites-link-dropped'],
+  [/: official_by_sure with no certification_source URL; shown as no date/, 'results-date-unsourced'],
 ];
 const reportFile = path.join(ROOT, 'public', 'data', 'build-report.json');
 const BUNDLES = path.join(ROOT, 'public', 'data');

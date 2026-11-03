@@ -413,7 +413,8 @@ export function resultsNotes(h: HowTo, t: string, official: boolean): string[] {
 /* AP's results page for a state (Nov 3; Kevin chose AP only for race calls): the outlet's own state page, from the
    URL pattern in the workbench's registry/news-links.json, checked for all 15 covered states Nov 3. AP calls races;
    the guide doesn't, so this is a link out, labeled as theirs. */
-export const apStateURL = (stateName: string): string => `https://apnews.com/projects/elections-2026/${stateName.toLowerCase().replace(/[^a-z]+/g, '-').replace(/^-|-$/g, '')}-results/`;
+const AP_NAME: Record<string, string> = { DC: 'District of Columbia' }; // AP's own name where ours differs ("Washington, DC")
+export const apStateURL = (st: string, stateName: string): string => `https://apnews.com/projects/elections-2026/${(AP_NAME[st] || stateName).toLowerCase().replace(/[^a-z]+/g, '-').replace(/^-|-$/g, '')}-results/`;
 
 /* The first page once polls start closing (Kevin, Nov 3: lead with "results are rolling in", not "voting has
    ended"). A state counts as closed by nextStep's own rule: past Election Day, or past its close in every zone it

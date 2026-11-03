@@ -267,9 +267,10 @@ function whereHTML(h: HowTo, p: PlaceBundle | null): string {
   // (scripts/check-addresses.mjs) as someone's home, and tests/pages.mjs runs it over every built page.
   const note = p && p.notes ? `<p class="pg-note">${escP(p.notes)}</p>` : '';
   // Where official results post (Nov 3, results Phase 0): each results source on this page's ballot (its counties', then
-  // the state's) with its own line on when it posts, from data/results-sources.json. Links only, never a number.
+  // the state's) with its own line on when it posts, from data/results-sources.json, dated, since most say "tonight" and
+  // a page keeps it until the next deploy (Codex, Nov 3). Links only, never a number.
   const res = h.results?.sources || [];
-  const resHTML = res.length ? `<p class="pg-resh"><b>Official results:</b></p><ul class="pg-res">${res.map((r) => `<li>${ext(r.results_url, r.name)}<span>${esc(r.wait_line)}</span></li>`).join('')}</ul>` : '';
+  const resHTML = res.length ? `<p class="pg-resh"><b>Official results:</b></p><ul class="pg-res">${res.map((r) => `<li>${ext(r.results_url, r.name)}<span>On election night, Nov 3: ${esc(r.wait_line)}</span></li>`).join('')}</ul>` : '';
   return `${byCounty}<ul class="pg-links">${links.map((l) => `<li>${l}</li>`).join('')}</ul>${resHTML}${note}${officeHTML}`;
 }
 /* The rule, and always what to do without an ID (Texas's "Photo ID required" has a way to vote without one); a state

@@ -327,7 +327,7 @@ function resultsActs(h: HowTo, step: Step): string {
   const btns = `<div class="plan-acts">${p ? a(p.url, p.label, 'pbtn gold', ' data-fk="plan-results"') : ''}${two ? a(two.url, two.label, 'pbtn line') : ''}</div>`;
   const src = isRes && h.results_source ? `<p class="plan-hint plan-src">Source: ${esc(h.results_source)}</p>` : '';
   const cty = ctys.length ? `<p class="plan-cty">Your county’s results:</p><div class="plan-acts plan-ctys">${ctys.map((l) => a(l.url, l.label, 'pbtn line', ` data-county="${esc(l.county)}"`)).join('')}</div>` : '';
-  const calls = `<p class="plan-hint plan-calls">Race calls: <a href="${esc(apStateURL(stName))}" target="_blank" rel="noopener" data-fk="plan-ap">AP</a></p>`;
+  const calls = `<p class="plan-hint plan-calls">Race calls: <a href="${esc(apStateURL(h.state, stName))}" target="_blank" rel="noopener" data-fk="plan-ap">AP</a></p>`;
   const notes = (step.notes || []).map((n) => `<p class="plan-hint plan-note">${esc(n)}</p>`).join('');
   return `${btns}${src}${cty}${calls}${notes}`;
 }

@@ -1047,11 +1047,14 @@ fs.rmSync(OUT, { recursive: true, force: true });
    and city rows to the places whose counties they name, or to every place in the state when they speak for all
    its counties. */
 const RES_KINDS = ['state', 'county'];
+const realDate = (v) => isDate(v) && new Date(`${v}T00:00:00Z`).toISOString().slice(0, 10) === v;
 const cKey = (x) => String(x).replace(/\s*\(.*?\)\s*/g, ' ').replace(/\s+county$/i, '').trim().toLowerCase();
 const confOf = (v) => { const w = isStr(v) ? v.trim().split(/[\s(;,]/)[0].toLowerCase() : ''; return CONF.includes(w) ? w : 'unverified'; };
 const resultsRows = [];
-if (fs.existsSync(path.join(DATA, 'results-sources.json'))) {
+if (!fs.existsSync(path.join(DATA, 'results-sources.json'))) skipRec('results-sources.json', '(file)', 'data/results-sources.json is missing');
+else {
   const j = readJson('results-sources.json');
+  if (!j || !Array.isArray(j.sources) || !j.sources.length) skipRec('results-sources.json', '(file)', 'needs a non-empty `sources` list');
   for (const r of (j && Array.isArray(j.sources) ? j.sources : [])) {
     const id = r && str(r.id);
     const bad = (why) => skipRec('results-sources.json', id || '(no id)', why);
@@ -1062,14 +1065,18 @@ if (fs.existsSync(path.join(DATA, 'results-sources.json'))) {
     if (!wl || wl.split(/\s+/).length >= 25) { bad('wait_line is missing or 25 words or more'); continue; }
     if (/\b(called|won)\b/i.test(wl) || /\u2014/.test(wl)) { bad('wait_line says called or won, or has an em dash'); continue; }
     if (!isStr(r.certification_date)) { bad('certification_date is missing (a date or a plain rule)'); continue; }
-    if (r.official_by != null && !isDate(r.official_by)) { bad('official_by is not YYYY-MM-DD'); continue; }
+    if (r.official_by != null && !realDate(r.official_by)) { bad('official_by is not a real YYYY-MM-DD date'); continue; }
+    // The first http(s) address in the source text (Colorado's starts "C.R.S. 1-10-105 ..."), else none.
+    const cert = (String(r.certification_source || '').match(/https?:\/\/[^\s;,)]+/) || [null])[0];
+    if (r.official_by_sure === true && !cert) warn(`results-sources ${id}: official_by_sure with no certification_source URL; shown as no date`);
     if (!isStr(r.confidence)) { bad('confidence is missing'); continue; }
     const counties = r.kind === 'county' ? (Array.isArray(r.counties) ? r.counties.filter(isStr).map((c) => c.trim()) : []) : null;
     if (r.kind === 'county' && !counties.length) { bad('a county row needs `counties`, spelled as the place files spell them'); continue; }
     resultsRows.push({
       id, state: r.state.trim().toUpperCase(), kind: r.kind, name: r.name.trim(), results_url: url, wait_line: wl,
-      certification_date: r.certification_date.trim(), certification_source: safeUrl(String(r.certification_source || '').split(/\s+/)[0]),
-      official_by: r.official_by || null, official_by_sure: !!(r.official_by && r.official_by_sure === true), confidence: confOf(r.confidence),
+      certification_date: r.certification_date.trim(), certification_source: cert,
+      // A sure date needs its source: without one it still turns the phase never, and shows as no date (Codex, Nov 3).
+      official_by: r.official_by || null, official_by_sure: !!(r.official_by && r.official_by_sure === true && cert), confidence: confOf(r.confidence),
       ...(counties ? { counties } : {}),
     });
   }
@@ -1083,11 +1090,15 @@ const WHEN = /^(\d{4}-\d{2}-\d{2})\b|^Between (\d{4}-\d{2}-\d{2}) and (\d{4}-\d{
 const SOFT = /comput|calculat|tentative|planned|about|estimat|expect|unverified|conflict|likely|if needed/i;
 const nextRows = [];
 report.whatsNext = { kept: 0, left_out: 0 };
-if (fs.existsSync(path.join(DATA, 'whats-next.json'))) {
+if (!fs.existsSync(path.join(DATA, 'whats-next.json'))) skipRec('whats-next.json', '(file)', 'data/whats-next.json is missing');
+else {
   const j = readJson('whats-next.json');
+  if (!j || !Array.isArray(j.rows) || !j.rows.length) skipRec('whats-next.json', '(file)', 'needs a non-empty `rows` list');
   for (const r of (j && Array.isArray(j.rows) ? j.rows : [])) {
     if (!r || r.kind !== 'after_election') continue;
     const m = isStr(r.when) ? r.when.trim().match(WHEN) : null;
+    // A date the research wrote wrong (2026-99-99) is a hole, not a judgment call: it blocks (check-data).
+    if (m && ![m[1], m[2], m[3]].filter(Boolean).every(realDate)) { skipRec('whats-next.json', `${r.state} ${String(r.line || '').slice(0, 40)}`, `when "${r.when}" is not a real date`); continue; }
     const line = str(r.line);
     const source = isStr(r.source) ? safeUrl(r.source.split(/\s+/)[0]) : null;
     const ok = ['verified', 'sourced'].includes(String(r.confidence).trim()) && m && !SOFT.test(r.when) && line && !/\u2014/.test(line) && source && isStr(r.state) && ['state', 'county', 'city'].includes(r.level);

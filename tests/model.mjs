@@ -1016,8 +1016,9 @@ function roundTrip(name, stCode, places, mutate) {
   const plan = mods.plan;
   const ps = views.planstrip;
   const TRAVIS_EARLY = 'https://www.google.com/maps/d/viewer?mid=1t_vWJgd_BRfKnJn_fQoHE25IV2i_0Jo';
-  // Nov 1: the county's Election Day tab dropped the old map and links this list, which marks one site removed.
-  const TRAVIS_DAY = 'https://votetravis.gov/wp-content/uploads/G26-Election-Day-Flyer-FINAL-Website-wNotice.pdf';
+  // Nov 3: the county's Election Day tab embeds a new map ("G26 Election Day Locations - Updated"), so the plan links
+  // it instead of the Nov 1 PDF list.
+  const TRAVIS_DAY = 'https://www.google.com/maps/d/viewer?mid=1zqK0dRaFZQEYLkYi54gtLcxIZaeCsOQ';
   const WILCO_EARLY = 'https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Early%20Voting%20Dashboard.html';
   const keep = { ballot: st.S.ballot, b: st.S.b, open: st.S.ui.open };
   const aus = read('place-austin-tx.json');
@@ -1028,10 +1029,10 @@ function roundTrip(name, stCode, places, mutate) {
   const tx = read('state-TX.json').howto;
   let b = open('TX', ['austin-tx']);
   bl.localize(b, '78704', null);
-  check('where: on a Travis ZIP, the plan\u2019s early voting and Election Day links are Travis\u2019s own (early map, Election Day list)', b.county === 'Travis' && b.howto.early_in_person.lookup_url === TRAVIS_EARLY && b.howto.election_day.lookup_url === TRAVIS_DAY && !b.howto.county_links, `${b.county} ${b.howto.early_in_person.lookup_url}`);
+  check('where: on a Travis ZIP, the plan\u2019s early voting and Election Day links are Travis\u2019s own (early map, Election Day map)', b.county === 'Travis' && b.howto.early_in_person.lookup_url === TRAVIS_EARLY && b.howto.election_day.lookup_url === TRAVIS_DAY && !b.howto.county_links, `${b.county} ${b.howto.early_in_person.lookup_url}`);
   const early = plan.nextStep(b.howto, '2026-10-28');
   const day = plan.nextStep(b.howto, '2026-11-03', false, 600);
-  check('where: during early voting the button opens the early map, on Election Day the Election Day list', early.primary.url === TRAVIS_EARLY && early.primary.look === 'early_in_person' && day.primary.url === TRAVIS_DAY && day.primary.look === 'election_day', `${early.primary.url} ${day.primary.url}`);
+  check('where: during early voting the button opens the early map, on Election Day the Election Day map', early.primary.url === TRAVIS_EARLY && early.primary.look === 'early_in_person' && day.primary.url === TRAVIS_DAY && day.primary.look === 'election_day', `${early.primary.url} ${day.primary.url}`);
   b = open('TX', ['austin-tx']);
   bl.localize(b, '78729', null);
   check('where: on a split ZIP, the state\u2019s lookup stays and each county\u2019s links are listed', b.county === null && b.howto.early_in_person.lookup_url === tx.early_in_person.lookup_url && (b.howto.county_links || []).map((c) => c.county).join('|') === 'Travis|Williamson|Hays');

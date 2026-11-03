@@ -1024,9 +1024,9 @@
     "target_id": "seattle-muni-court-5",
     "status": "not_found",
     "choice": null,
-    "why": "Not on MLK Labor's 2026 endorsement page, which lists only county and Seattle council picks and the transit measure.",
-    "url": null,
-    "date": null,
+    "why": "Checked its 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.mlklabor.org/endorsements/",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {
@@ -1034,9 +1034,9 @@
     "target_id": "kc-district-court-west-1",
     "status": "not_found",
     "choice": null,
-    "why": "Not on MLK Labor's 2026 endorsement page, which lists only county and Seattle council picks and the transit measure.",
-    "url": null,
-    "date": null,
+    "why": "Checked its 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.mlklabor.org/endorsements/",
+    "date": "2026-11-02",
     "confidence": "verified"
   },
   {

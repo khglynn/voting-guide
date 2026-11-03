@@ -883,61 +883,61 @@
     "endorser_id": "nw-oregon-labor-council",
     "target_id": "portland-council-3",
     "status": "endorsed",
-    "choice": "Steve Novick and Kellie Torres",
-    "why": "NOLC's own endorsement page requires a login. Each candidate's signed Voters' Pamphlet endorsement list names the Northwest Oregon Labor Council (the county requires a signed form from each listed endorser). NOLC is also a member of Unity PAC, which recommends ranking only Novick and Torres.",
-    "url": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download",
-    "date": null,
-    "confidence": "sourced"
+    "choice": "Kellie Torres, Steve Novick",
+    "why": "Listed in its 2026 election recommendations; it advises ranking no more than two council candidates.",
+    "url": "https://www.nworegonlaborcouncil.com/post/information-for-our-upcoming-election-season",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "nw-oregon-labor-council",
     "target_id": "portland-council-4",
     "status": "endorsed",
-    "choice": "Olivia Clark and Eric Zimmerman",
-    "why": "NOLC's own endorsement page requires a login. Each candidate's signed Voters' Pamphlet endorsement list names the Northwest Oregon Labor Council (the county requires a signed form from each listed endorser). Unity PAC recommends ranking only Clark and Zimmerman.",
-    "url": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download",
-    "date": null,
-    "confidence": "sourced"
+    "choice": "Eric Zimmerman, Olivia Clark",
+    "why": "Listed in its 2026 election recommendations; it advises ranking no more than two council candidates.",
+    "url": "https://www.nworegonlaborcouncil.com/post/information-for-our-upcoming-election-season",
+    "date": "2026-11-02",
+    "confidence": "verified"
   },
   {
     "endorser_id": "nw-oregon-labor-council",
     "target_id": "multnomah-chair",
     "status": "endorsed",
     "choice": "Julia Brim-Edwards",
-    "why": "NOLC's own endorsement page requires a login. Brim-Edwards's signed Voters' Pamphlet endorsement list names the Northwest Oregon Labor Council (the county requires a signed form from each listed endorser).",
-    "url": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download",
-    "date": null,
-    "confidence": "sourced"
+    "why": "Listed in its 2026 election recommendations for Multnomah County Chair.",
+    "url": "https://www.nworegonlaborcouncil.com/post/information-for-our-upcoming-election-season",
+    "date": "2026-11-03",
+    "confidence": "verified"
   },
   {
     "endorser_id": "nw-oregon-labor-council",
     "target_id": "multnomah-commissioner-2",
     "status": "endorsed",
     "choice": "Serena Cruz",
-    "why": "NOLC's own endorsement page requires a login. Cruz's signed Voters' Pamphlet endorsement list names the Northwest Oregon Labor Council (the county requires a signed form from each listed endorser).",
-    "url": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download",
-    "date": null,
-    "confidence": "sourced"
+    "why": "Listed in its 2026 election recommendations for Multnomah County Commission, District 2.",
+    "url": "https://www.nworegonlaborcouncil.com/post/information-for-our-upcoming-election-season",
+    "date": "2026-11-03",
+    "confidence": "verified"
   },
   {
     "endorser_id": "nw-oregon-labor-council",
     "target_id": "multnomah-circuit-judge-2",
     "status": "endorsed",
     "choice": "Diane S Sykes",
-    "why": "NOLC's own endorsement page requires a login. Sykes's signed Voters' Pamphlet endorsement list names the Northwest Oregon Labor Council (the county and state require a signed form from each listed endorser).",
-    "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf",
-    "date": null,
-    "confidence": "sourced"
+    "why": "Listed in its 2026 election recommendations for Multnomah County Circuit Court, Position 2.",
+    "url": "https://www.nworegonlaborcouncil.com/post/information-for-our-upcoming-election-season",
+    "date": "2026-11-03",
+    "confidence": "verified"
   },
   {
     "endorser_id": "nw-oregon-labor-council",
     "target_id": "multnomah-circuit-judge-14",
     "status": "endorsed",
     "choice": "Elizabeth Savage",
-    "why": "NOLC's own endorsement page requires a login. Savage's signed Voters' Pamphlet endorsement list names the Northwest Oregon Labor Council (the county and state require a signed form from each listed endorser).",
-    "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf",
-    "date": null,
-    "confidence": "sourced"
+    "why": "Listed in its 2026 election recommendations for Multnomah County Circuit Court, Position 14.",
+    "url": "https://www.nworegonlaborcouncil.com/post/information-for-our-upcoming-election-season",
+    "date": "2026-11-03",
+    "confidence": "verified"
   },
   {
     "endorser_id": "portland-metro-chamber",

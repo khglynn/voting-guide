@@ -4831,6 +4831,49 @@ const ADDRESS = /testing lane|testing%20lane|testing\+lane|test one/i;
   noErrors(page, 'Closest sites, Georgetown');
   await ctx.close();
 }
+// Codex on #132: the sites close at 7 PM Central on their own. A statewide Texas ballot's step stays open until
+// El Paso's polls close (8 PM Central), so an open tab must drop the block and the line at 7 PM even though the
+// step doesn't change; Austin's step changes at 7 PM and takes them too. A Pacific-time phone, as above.
+for (const [zip, label, county, place, x, y, first] of [
+  ['78626', 'Georgetown', 'Williamson', 'Georgetown', -97.677112983413, 30.637337671838, 'Georgetown City Hall'],
+  ['78702', 'Austin', 'Travis', 'Austin', -97.746669, 30.26496, 'Austin City Hall'],
+]) {
+  const { ctx, page } = await newPage({ timezoneId: 'America/Los_Angeles' });
+  await page.clock.install({ time: new Date('2026-11-04T00:58:00Z') });
+  const answer = { result: { addressMatches: [{ matchedAddress: `TEST, ${place.toUpperCase()}, TX, ${zip}`, coordinates: { x, y }, geographies: {
+    States: [{ STATE: '48' }], Counties: [{ BASENAME: county }], 'Incorporated Places': [{ BASENAME: place }], '2020 Census Blocks': [{ INTPTLAT: String(y), INTPTLON: String(x) }] } }] } };
+  await page.route('https://geocoding.geo.census.gov/**', (route) => {
+    const cb = new URL(route.request().url()).searchParams.get('callback');
+    return route.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify(answer)})` });
+  });
+  await page.goto(`${BASE}/?today=2026-11-03`);
+  await page.waitForSelector('#zip');
+  await page.fill('#zip', zip);
+  if (zip === '78626') {
+    await page.waitForSelector('[data-act="addr-open"]', { timeout: 10000 });
+    await tap(page, '[data-act="addr-open"]');
+    await page.fill('#addr-in', 'a test lookup');
+    await page.locator('form[data-form="addr"] button[type=submit]').tap();
+    await page.waitForSelector('.door-found', { timeout: 10000 }).catch(() => {});
+    await throughSetup(page);
+  } else {
+    await throughSetup(page);
+    await tap(page, '.addrbox [data-act="addr-open"]');
+    await page.fill('#addr-in', 'a test lookup');
+    await page.locator('form[data-form="addr"] button[type=submit]').tap();
+  }
+  await page.waitForSelector('#plan .plan-near li', { timeout: 10000 }).catch(() => {});
+  await page.waitForTimeout(300);
+  const before = { block: await text(page, '#plan .plan-near .pn-name'), line: await text(page, '.addrbox .addr-near'), head: await text(page, '.plan-h') };
+  check(`Closest sites, ${label} at 6:58 PM Central on an open tab: the block and the line show`, before.block === first && before.line.startsWith(`Closest vote center: ${first},`), JSON.stringify(before));
+  await page.clock.runFor(3 * 60_000);
+  await page.waitForTimeout(300);
+  const after = { block: !!(await page.$('#plan .plan-near')), line: !!(await page.$('.addrbox .addr-near')), found: !!(await page.$('.addrbox .addr-found')), head: await text(page, '.plan-h') };
+  const headOk = zip === '78626' ? after.head === before.head && /^Today is Election Day\. Your local polls close at 7 PM\.$/.test(after.head) : /^Polls closed at 7 PM/.test(after.head);
+  check(`Closest sites, ${label}: past 7 PM Central the open tab drops the block and the line${zip === '78626' ? ', the statewide step unchanged' : ''}`, !after.block && !after.line && after.found && headOk, JSON.stringify(after));
+  noErrors(page, `Closest sites, ${label} at 7 PM`);
+  await ctx.close();
+}
 
 await browser.close();
 const failed = results.filter((r) => !r.ok);

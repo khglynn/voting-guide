@@ -1523,7 +1523,7 @@
   "endorser_id": "mnea",
   "target_id": "mo-hd-101",
   "status": "not_found",
-  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements: it lists “Paul Lentz - pending screening” for District 101, which isn’t an endorsement, so no pick is listed.",
   "url": "https://mnea.org/vote4education",
   "date": "2026-11-02",
   "confidence": "verified"
@@ -2459,7 +2459,7 @@
   "endorser_id": "seiu-healthcare-il",
   "target_id": "il-cook-commissioner-16",
   "status": "not_found",
-  "why": "On Nov 2, 2026, we checked its November 2026 endorsements; no pick for this contest was listed.",
+  "why": "On Nov 2, 2026, we checked its November 2026 endorsements: it lists Frank Aguilar for District 16, who isn’t on the ballot, so no candidate here has its pick.",
   "url": "https://seiuhcilin.org/resources/election-information/",
   "date": "2026-11-02",
   "confidence": "verified"

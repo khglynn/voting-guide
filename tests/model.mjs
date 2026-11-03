@@ -1612,14 +1612,18 @@ function roundTrip(name, stCode, places, mutate) {
     check('results: every covered state carries its official results page, its publisher and its poll close in the index', Object.values(INDEX.states).every((x) => /^https:\/\//.test(x.results_url || '') && x.results_source && x.polls_close), Object.entries(INDEX.states).filter(([, x]) => !x.results_url).map(([k]) => k).join(' '));
     check('results: 5:59 PM Central, before any covered state closes: no results lead', lead('before') === null);
     const e = lead('east');
-    check('results: 7:05 PM Eastern: results lead, still Election Day, the in-line line kept', !!e && !e.after && e.head === 'Results are rolling in.' && e.sub.join(' ') === 'Official results for each state are below. Already in line? Stay in line. You still get to vote.', JSON.stringify(e && e.sub));
-    check('results: 7:05 PM Eastern: Georgia links its official results; Florida (panhandle on Central) still voting', row(e, 'GA').url === INDEX.states.GA.results_url && row(e, 'GA').source === 'Georgia Secretary of State' && !row(e, 'FL').url && row(e, 'FL').open === 'Voting open until 7 PM Central', JSON.stringify(row(e, 'FL')));
-    check('results: 7:05 PM Eastern: California says when it ends, in its own zone, and no results link yet', !row(e, 'CA').url && row(e, 'CA').open === 'Voting open until 8 PM Pacific' && row(e, 'TX').open === 'Voting open until 7 PM Mountain' && row(e, 'NY').open === 'Voting open until 9 PM Eastern', `${row(e, 'CA').open} | ${row(e, 'TX').open} | ${row(e, 'NY').open}`);
+    check('results: 7:05 PM Eastern: results lead, still Election Day, and since some states are still voting, nothing says your polls are past', !!e && !e.after && e.head === 'Results are rolling in.' && e.sub.join(' ') === 'Official results for each state are below. Polls are still open in some states. In line when yours close? Stay in line. You still get to vote.' && !/Already in line/.test(e.sub.join(' ')), JSON.stringify(e && e.sub));
+    check('results: 7:05 PM Eastern: Georgia links its official results; Florida (panhandle on Central) still voting, in local time', row(e, 'GA').url === INDEX.states.GA.results_url && row(e, 'GA').source === 'Georgia Secretary of State' && !row(e, 'FL').url && row(e, 'FL').open === 'Voting open until 7 PM local time', JSON.stringify(row(e, 'FL')));
+    check('results: 7:05 PM Eastern: California says when it ends, in its own zone, and no results link yet', !row(e, 'CA').url && row(e, 'CA').open === 'Voting open until 8 PM Pacific' && row(e, 'NY').open === 'Voting open until 9 PM Eastern' && row(e, 'CO').open === 'Voting open until 7 PM Mountain', `${row(e, 'CA').open} | ${row(e, 'NY').open} | ${row(e, 'CO').open}`);
+    check('results: a state across zones says "local time", never the zone that closes last (Austin read "7 PM Mountain" as 8 PM Central)', row(e, 'TX').open === 'Voting open until 7 PM local time' && row(e, 'OR').open === 'Voting open until 8 PM local time' && !e.rows.some((r) => /Mountain/.test(r.open || '') && ['TX', 'OR'].includes(r.st)), `${row(e, 'TX').open} | ${row(e, 'OR').open}`);
+    check('results: Tennessee keeps both zones from its own data', row(e, 'TN').open === 'Voting open until 7 PM Central (8 PM Eastern)', row(e, 'TN').open);
     check('results: no mail-ballot trackers while any state is still voting', e.rows.every((r) => !r.track));
     const m = lead('mostly');
     check('results: 8:05 PM Mountain: every state but the Pacific ones links its results', m.rows.filter((r) => !r.url).map((r) => r.st).sort().join(' ') === 'CA OR WA' && !m.after, m.rows.filter((r) => !r.url).map((r) => r.st).join(' '));
     const a = lead('all');
     check('results: 8:05 PM Pacific: every state links its results, and its mail-ballot tracker', a.after && a.rows.every((r) => r.url && r.track) && a.head === 'Results are rolling in.', JSON.stringify(a.rows.filter((r) => !r.url || !r.track)));
+    check('results: 8:05 PM Pacific: every state has closed, so the in-line line is the plain one', a.sub.join(' ') === 'Official results for each state are below. Already in line? Stay in line. You still get to vote.', JSON.stringify(a.sub));
+    check('results: 7:05 PM Mountain: still some states voting, still the "still open" line', lead('austin').sub.join(' ').includes('Polls are still open in some states.'), JSON.stringify(lead('austin').sub));
     const n = plan.resultsLead(INDEX.states, '2026-11-04', new RealDate(I.next));
     check('results: Nov 4: "still coming in", counting takes days', n.after && n.head === 'Results are still coming in.' && n.sub.join(' ') === 'Official results for each state are below. Counting can take days, especially for mail ballots.');
     check('results: the race-call desks are AP and Decision Desk HQ, https', plan.RACE_CALLS.map((d) => d.name).join('|') === 'AP|Decision Desk HQ' && plan.RACE_CALLS.every((d) => /^https:\/\//.test(d.url)));
@@ -1634,6 +1638,14 @@ function roundTrip(name, stCode, places, mutate) {
     const d1 = door('east');
     check('door: 7:05 PM Eastern leads with results, says they are below, and keeps the plan sheet under "Your ballot and local results"', /data-door="results"/.test(d1) && /<h1 class="place res-h">Results are rolling in\.<\/h1>/.test(d1) && /Official results for each state are below\./.test(d1) && /Your ballot and local results/.test(d1) && /id="zip"/.test(d1) && /class="bigbtn" data-act="setup-done"/.test(d1) && !/Quickly make your voting plan/.test(d1));
     check('door: 7:05 PM Eastern: Georgia is a results link, California says when voting ends', d1.includes(`<a class="res-st" href="${INDEX.states.GA.results_url}" target="_blank" rel="noopener">Georgia</a>`) && /<span class="res-st">California<\/span><span class="res-src">Voting open until 8 PM Pacific<\/span>/.test(d1));
+    check('door: 7:05 PM Eastern: Texas says "7 PM local time" and the sub says polls are still open in some states', /<span class="res-st">Texas<\/span><span class="res-src">Voting open until 7 PM local time<\/span>/.test(d1) && /Polls are still open in some states\./.test(d1) && !/Already in line/.test(d1));
+    // "Show my ballot" fills only when the first page shows the fill switch: on while some state is voting, off once
+    // every one has closed and the page hides it (a new voter's ballot got newspaper picks they never saw offered).
+    const fillsAt = (k) => { st.S.door.fill = true; pin(I[k]); try { return mast.doorFills(); } finally { globalThis.Date = RealDate; } };
+    const keepFill = st.S.door.fill;
+    try {
+      check('door: the fill runs at 7:05 PM Eastern (switch shown) and not at 8:05 PM Pacific (switch hidden)', fillsAt('east') === true && fillsAt('all') === false);
+    } finally { st.S.door.fill = keepFill; }
     check('door: the race-call line shows once, under the list, with both desks', (d1.match(/class="res-calls"/g) || []).length === 1 && d1.includes(`<a href="${plan.RACE_CALLS[0].url}" target="_blank" rel="noopener">AP</a> · <a href="${plan.RACE_CALLS[1].url}" target="_blank" rel="noopener">Decision Desk HQ</a>`) && d1.indexOf('res-calls') > d1.indexOf('res-list'));
     const d3 = door('all');
     check('door: 8:05 PM Pacific: results, a mail-ballot tracker per state, and the ZIP as one quiet line under the list', /data-door="after"/.test(d3) && (d3.match(/class="res-track"/g) || []).length === Object.keys(INDEX.states).length && /See your ballot and county results/.test(d3) && d3.indexOf('res-zip-l') > d3.indexOf('res-calls') && /id="zip"/.test(d3));
@@ -1657,6 +1669,19 @@ function roundTrip(name, stCode, places, mutate) {
     h = ps.planHTML();
     const ctys = [...h.matchAll(/<a class="pbtn line" href="([^"]+)"[^>]*data-county="([^"]+)">([^<]+)<\/a>/g)].map((x) => x[3]);
     check('strip: across county lines, county unknown (78729): the state’s results, then each county’s by name', h.includes(`href="${INDEX.states.TX.results_url}" target="_blank" rel="noopener" data-fk="plan-results">Official results</a>`) && /Your county’s results:/.test(h) && ctys.join('|') === 'Travis County|Williamson County|Hays County', ctys.join('|'));
+    // A county with no results page of its own (Atlanta's Fulton, Aurora's Douglas): no county buttons at all, only
+    // the state's, which covers every county. A lone "DeKalb County" pointed most of Atlanta at the wrong county.
+    for (const [stc, id, zip, cty] of [['GA', 'atlanta-ga', '30306', 'Fulton'], ['CO', 'aurora-co', '80012', 'Douglas']]) {
+      open(stc, [id]);
+      bl.localize(st.S.ballot, zip, null);
+      const hx = ps.planHTML();
+      check(`strip: ${id} ${zip}, county unknown, ${cty} has no results page: the state’s results only, no county buttons`, st.S.ballot.county == null && read(`place-${id}.json`).by_county.some((c) => c.county === cty && !c.lookups.results) && hx.includes(`href="${INDEX.states[stc].results_url}" target="_blank" rel="noopener" data-fk="plan-results">Official results</a>`) && !/Your county’s results/.test(hx) && !/data-county=/.test(hx), (hx.match(/data-county="[^"]+"/g) || []).join(' '));
+    }
+    // No "register and vote today" under the results, in any state that offers it.
+    const regAt = (q) => { at(q); return Object.keys(INDEX.states).filter((stc) => { open(stc, []); bl.localize(st.S.ballot, null, null); return /class="plan-reg"|Not registered\?/.test(ps.planHTML()); }); };
+    const regNoon = regAt('?today=2026-11-03&now=12:00'), regAfter = regAt('?today=2026-11-03&now=23:30');
+    check('strip: after the polls close, no registration alert in any state (CA, CO, DC, IL, MD, WA said "register in person and vote today")', ['CA', 'CO', 'WA'].every((x) => regNoon.includes(x)) && regAfter.length === 0, `noon: ${regNoon.join(' ')} | after: ${regAfter.join(' ')}`);
+    at('?today=2026-11-03&now=19:05');
     open('TX', ['dallas-tx']);
     bl.localize(st.S.ballot, '75201', null);
     const dallasRes = read('place-dallas-tx.json').lookups.results;

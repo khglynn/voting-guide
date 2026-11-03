@@ -26,7 +26,8 @@ export function planHTML(): string {
   const step = nextStep(h);
   planKey = `${step.phase}|${step.head.map((p) => p[0]).join('')}`;
   const head = step.head.map(([t, em]) => (em ? `<span class="d">${esc(t)}</span>` : esc(t))).join('');
-  const reg = registrationAlert(h);
+  // Once the polls close, no "register and vote today" under the results (review, Nov 3).
+  const reg = RESULTS_PHASES.includes(step.phase) ? null : registrationAlert(h);
   const regBtn = reg ? registerAction(h) : null;
   const open = isOpen('whatif');
   const check = h.registration.check_url;
@@ -307,15 +308,18 @@ function whatIfHTML(h: HowTo): string {
 /* Once the polls close (Kevin, Nov 3: results, not "voting has ended"): "Official results", the most local official
    page the ballot has (the voter's county's after an address lookup or a one-county place's, else the state's;
    plan.localHowto), who publishes it, "Track your ballot" beside it, and the desks that call races, once, under it.
-   A ballot across county lines whose county isn't known keeps the state's and adds each county's, by name. No
-   registration check here: that's past. */
+   A ballot across county lines whose county isn't known keeps the state's and adds each county's, by name, only
+   when every county has its own page: Atlanta's Fulton has none, so a "DeKalb County" button alone would point
+   most of Atlanta at the wrong county (review, Nov 3), and the state's page already covers every county. No
+   registration check or registration alert here: that's past. */
 const RESULTS_PHASES: Step['phase'][] = ['polls_closed', 'closed'];
 function resultsActs(h: HowTo, step: Step): string {
   if (!RESULTS_PHASES.includes(step.phase)) return '';
   const a = (url: string, text: string, cls: string, attrs = ''): string => `<a class="${cls}" href="${esc(url)}" target="_blank" rel="noopener"${attrs}>${esc(text)}</a>`;
   const p = step.primary, two = step.secondary;
   const isRes = p?.look === 'results';
-  const ctys = isRes ? (h.county_links || []).filter((l) => l.lookups.results && l.lookups.results !== p!.url) : [];
+  const links = isRes ? h.county_links || [] : [];
+  const ctys = links.length > 1 && links.every((l) => l.lookups.results) ? links.filter((l) => l.lookups.results !== p!.url) : [];
   const btns = `<div class="plan-acts">${p ? a(p.url, p.label, 'pbtn gold', ' data-fk="plan-results"') : ''}${two ? a(two.url, two.label, 'pbtn line') : ''}</div>`;
   const src = isRes && h.results_source ? `<p class="plan-hint plan-src">Source: ${esc(h.results_source)}</p>` : '';
   const cty = ctys.length ? `<p class="plan-cty">Your county’s results:</p><div class="plan-acts plan-ctys">${ctys.map((l) => a(l.lookups.results!, `${l.county} County`, 'pbtn line', ` data-county="${esc(l.county)}"`)).join('')}</div>` : '';

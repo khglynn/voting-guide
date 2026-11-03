@@ -364,7 +364,14 @@ export function pollsShut(electionDate: string, pollsClose: string, zones: strin
   return zones.length ? zones.every(past) : past(null);
 }
 const ZONE_WORD: Record<string, string> = { 'America/New_York': 'Eastern', 'America/Chicago': 'Central', 'America/Denver': 'Mountain', 'America/Boise': 'Mountain', 'America/Los_Angeles': 'Pacific' };
-const EAST_TO_WEST = ['America/New_York', 'America/Chicago', 'America/Denver', 'America/Boise', 'America/Los_Angeles'];
+/* "8 PM Pacific", "7 PM Central (8 PM Eastern)", "7 PM local time": a still-voting state's close on the first page. */
+function openUntil(pollsClose: string, zones: string[]): string {
+  const at = clock(pollsClose);
+  if (!at) return pollsClose;
+  if (/\b(Eastern|Central|Mountain|Pacific)\b/.test(pollsClose)) return pollsClose.replace(/\b\d{1,2}(?::\d{2})?\s*[ap]\.?m\.?(?=\s|$|\))/gi, (m) => clock(m) || m);
+  if (zones.length > 1) return `${at} local time`;
+  return zones.length && ZONE_WORD[zones[0]] ? `${at} ${ZONE_WORD[zones[0]]}` : at;
+}
 /* One covered state on the first page: its official results page once its polls close (the state's own site when
    we have no results page), or when voting there ends while it's still open; and, once every covered state has
    closed, its mail-ballot tracker. */
@@ -377,10 +384,11 @@ export function resultsLead(states: Index['states'] | null | undefined, t = toda
   const rows = sts.map(([st, s]) => {
     const zones = STATE_ZONES[st] || [];
     const shut = pollsShut(s.election_date, s.polls_close!, zones, t, now);
-    // Still voting: when it ends, in the zone that closes last (Texas's El Paso, Florida's panhandle).
-    const last = [...zones].sort((a, b) => EAST_TO_WEST.indexOf(a) - EAST_TO_WEST.indexOf(b)).pop();
-    const at = clock(s.polls_close);
-    const open = shut ? null : `Voting open until ${at || s.polls_close}${at && last && ZONE_WORD[last] ? ` ${ZONE_WORD[last]}` : ''}`;
+    // Still voting: when it ends. One zone: in that zone ("8 PM Pacific"). A state across zones whose close names
+    // them (Tennessee's "7:00 PM Central (8:00 PM Eastern)") keeps both. One across zones whose close is one local
+    // time (Texas, Florida, Oregon) says "local time": naming the zone that closes last told Austin "7 PM Mountain",
+    // which reads as 8 PM Central (review, Nov 3).
+    const open = shut ? null : `Voting open until ${openUntil(s.polls_close!, zones)}`;
     const url = shut ? s.results_url || s.official_site?.url || null : null;
     const source = shut ? (s.results_url ? s.results_source || null : s.official_site?.name || null) : null;
     return { row: { st, name: s.name, url, source, open, track: s.mail_tracking_url || null }, shut, voting: t <= s.election_date };
@@ -391,7 +399,9 @@ export function resultsLead(states: Index['states'] | null | undefined, t = toda
   return {
     after,
     head: today ? 'Results are rolling in.' : 'Results are still coming in.',
-    sub: ['Official results for each state are below.', today ? 'Already in line? Stay in line. You still get to vote.' : 'Counting can take days, especially for mail ballots.'],
+    // While a covered state is still voting, its voters read this too, so nothing here says their polls are past
+    // (review, Nov 3: a California voter at 4:05 PM Pacific read "Already in line?").
+    sub: ['Official results for each state are below.', !today ? 'Counting can take days, especially for mail ballots.' : after ? 'Already in line? Stay in line. You still get to vote.' : 'Polls are still open in some states. In line when yours close? Stay in line. You still get to vote.'],
     rows: rows.map(({ row }) => ({ ...row, track: after ? row.track : null })).sort((a, b) => a.name.localeCompare(b.name)),
   };
 }

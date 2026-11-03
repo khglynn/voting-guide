@@ -165,6 +165,10 @@ function resultsDoorHTML(lead: ResultsLead): string {
    can repaint it when a state closes while the page sits open. */
 const keyOf = (l: ResultsLead | null): string => (l ? `${l.head}|${l.rows.map((r) => `${r.st}:${r.url ? 1 : 0}${r.track ? 1 : 0}`).join(',')}` : '');
 export let doorShown: string | null = null;
+/* Whether "Show my ballot" fills picks: the switch is on, and the first page shows it. Once every covered state has
+   closed, the page hides the endorsement and fill switches while the fill still defaults on, so a new voter's
+   saved ballot got newspaper picks they never saw offered (review, Nov 3). */
+export const doorFills = (): boolean => S.door.fill && !S.tryMode && !resultsLead(S.index?.states)?.after;
 export const doorKey = (): string => keyOf(resultsLead(S.index?.states));
 function resultsPartHTML(lead: ResultsLead): string {
   const a = (url: string, text: string, cls = ''): string => `<a${cls ? ` class="${cls}"` : ''} href="${esc(url)}" target="_blank" rel="noopener">${esc(text)}</a>`;

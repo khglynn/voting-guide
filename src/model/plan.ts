@@ -162,13 +162,21 @@ function placeHowto(h0: HowTo, places: PlaceBundle[], county: string | null): Ho
   // The county's own where-to-vote tools win over the state's statewide lookups, when every
   // place on the ballot points to the same one.
   const looks = places.map((p) => lookupsFor(p, county));
+  const spans = !county && places.length > 0 && places.every((p) => p.by_county && p.by_county.length > 1);
+  // Unknown county on a ballot whose every place spans counties: a tool every county shares is the ballot's own
+  // (Nov 3: Travis, Williamson and Hays all send Election Day voters to Vote.org's address lookup), so the plan
+  // shows one button for it, not one per county that all open the same page.
+  const shared = (k: keyof Lookups): string | null => {
+    const urls = spans ? [...new Set(places.flatMap((p) => p.by_county!.map((c) => c.lookups[k] || null)))] : [];
+    return urls.length === 1 && urls[0] ? urls[0] : null;
+  };
   const one = (k: keyof Lookups): string | null => {
     const urls = [...new Set(looks.map((l) => l?.[k] || null))];
-    return places.length && urls.length === 1 && urls[0] ? urls[0] : null;
+    return (places.length && urls.length === 1 && urls[0] ? urls[0] : null) || shared(k);
   };
   // Unknown county on a ballot whose every place spans counties: each county's tools, labeled, in the
   // order the first place lists them. (A county the Census names that no place lists keeps the state's.)
-  if (!county && places.length && places.every((p) => p.by_county && p.by_county.length > 1)) {
+  if (spans) {
     const seen = new Map<string, { county: string; lookups: Lookups }>();
     for (const p of places) for (const c of p.by_county!) if (!seen.has(countyKey(c.county))) seen.set(countyKey(c.county), { county: c.county, lookups: c.lookups });
     h = { ...h, county_links: [...seen.values()] };

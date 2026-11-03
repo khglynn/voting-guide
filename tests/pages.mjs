@@ -218,8 +218,11 @@ check('page titles and descriptions: no em dashes, no all caps', !bad.copy.lengt
   // county's, and keeps Election Day's (Maryland's ended Oct 29, Travis's, Williamson's and Hays's Oct 30).
   const md = (day) => site.statePage(data, 'MD', A, day).html;
   const aus = (day) => site.placePage(data, 'austin-tx', A, day).html;
+  // Nov 3: when every county shares one Election Day link (Vote.org's address lookup), it's listed once, not per county.
+  const austinEd = (data.places['austin-tx'].by_county || []).map((c) => c.lookups.election_day).filter(Boolean);
+  const austinEdShared = austinEd.length > 1 && new Set(austinEd).size === 1;
   check('a page built after early voting ended has no early voting link and keeps Election Day\'s', md('2026-10-29').includes('>Find early voting locations</a>') && !md('2026-10-30').includes('>Find early voting locations</a>') && md('2026-10-30').includes('>Find your Election Day polling place</a>'));
-  check('Austin built after early voting: no county\'s early voting link, every county\'s Election Day link stays', aus('2026-10-30').includes('>Early voting locations</a>') && !aus('2026-10-31').includes('>Early voting locations</a>') && (aus('2026-10-31').match(/>Election Day locations<\/a>/g) || []).length === (data.places['austin-tx'].by_county || []).filter((c) => c.lookups.election_day).length);
+  check('Austin built after early voting: no county\'s early voting link, every county\'s Election Day link stays', aus('2026-10-30').includes('>Early voting locations</a>') && !aus('2026-10-31').includes('>Early voting locations</a>') && (aus('2026-10-31').match(/>Election Day locations<\/a>/g) || []).length === (austinEdShared ? 0 : (data.places['austin-tx'].by_county || []).filter((c) => c.lookups.election_day).length) && (!austinEdShared || aus('2026-10-31').includes(`<a href="${austinEd[0]}" rel="noopener">Find your Election Day polling place</a>`)));
   // Florida's window is only a minimum: its page keeps the state's early voting link through the last day a county may
   // still vote early (Nov 1, s. 101.657, when Orange and Leon do), while each place keeps its own last day and dates.
   const fl = (day) => site.statePage(data, 'FL', A, day).html;

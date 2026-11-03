@@ -1507,6 +1507,45 @@ function roundTrip(name, stCode, places, mutate) {
       check('sites: a statewide ballot in Georgetown gets Williamson\u2019s three closest, Georgetown City Hall first', sw.places.length === 0 && swRows.join('|') === 'Georgetown City Hall 0.2 mi|Hammerlun Center for Leadership and Learning 0.4 mi|Carver Center for Families 0.8 mi'
         && /You can vote at any site in Williamson County\./.test(block(swHtml)), swRows.join('|') || 'no block');
       check('sites: and its address box says "Closest vote center: Georgetown City Hall, 0.2 mi. See all 3"', flat(lineOf(headNow())) === 'Closest vote center: Georgetown City Hall, 0.2 mi. See all 3', flat(lineOf(headNow())));
+      // Codex, Nov 3: the sites close at 7 PM Central on their own. A statewide Texas ballot's step stays open until
+      // El Paso's polls close (8 PM Central), and `?now=` reads one time in every zone, so these use real instants.
+      {
+        const RealDate = globalThis.Date;
+        const atInstant = (iso) => { const T = new RealDate(iso).getTime(); globalThis.Date = class extends RealDate { constructor(...a) { super(...(a.length ? a : [T])); } static now() { return T; } }; };
+        const COURT = { lat: 30.637338, lon: -97.677113 };
+        const seen = () => { const p = ps.planHTML(); return { block: !!block(p), line: !!lineOf(headNow()), head: flat((p.match(/<p class="plan-h"[^>]*>[\s\S]*?<\/p>/) || [''])[0]), key: ps.nearKeyNow(st.S.ballot.howto), step: ps.stepKey(st.S.ballot.howto) }; };
+        try {
+          at('?today=2026-11-03');
+          const g = open('TX', []);
+          bl.localize(g, '78626', 'Williamson');
+          lookup('Williamson', COURT);
+          atInstant('2026-11-04T00:59:00Z');
+          const g0 = seen();
+          atInstant('2026-11-04T01:05:00Z');
+          const g1 = seen();
+          check('sites: Georgetown statewide at 6:59 PM Central (00:59Z): the block and the line show', g0.block && g0.line && !!g0.key, JSON.stringify(g0));
+          check('sites: Georgetown statewide at 7:05 PM Central (01:05Z): both gone, the statewide step unchanged ("Your local polls close at 7 PM", for El Paso)', !g1.block && !g1.line && g1.key === ''
+            && g1.head === 'Today is Election Day. Your local polls close at 7 PM.' && g1.step === g0.step, JSON.stringify(g1));
+          check('sites: what main.ts watches flips at 7 PM Central though the step key doesn\u2019t, so an open tab repaints', g0.key !== g1.key && g0.step === g1.step);
+          const a = open('TX', ['austin-tx']);
+          bl.localize(a, '78702', 'Travis');
+          lookup('Travis');
+          atInstant('2026-11-04T00:59:00Z');
+          const a0 = seen();
+          atInstant('2026-11-04T01:05:00Z');
+          const a1 = seen();
+          check('sites: Austin at 6:59 PM Central: the block and the line show', a0.block && a0.line, JSON.stringify(a0));
+          check('sites: Austin at 7:05 PM Central: both gone, polls closed', !a1.block && !a1.line && a1.key === '' && /^Polls closed at 7 PM/.test(a1.head), JSON.stringify(a1));
+        } finally {
+          globalThis.Date = RealDate;
+          at('?today=2026-11-03&now=12:00');
+        }
+        const f = sites.sitesFile('travis-tx');
+        check('sites: a list is open until its own 7 PM, and a list with no zone never shows', sites.listOpen('travis-tx', f, '7:00 PM', 1139) && !sites.listOpen('travis-tx', f, '7:00 PM', 1140)
+          && !sites.listOpen('nowhere-tx', f, '7:00 PM', 600) && !sites.listOpen('travis-tx', f, null, 600));
+        const built = fs.readdirSync(path.join(DATA, 'sites')).map((x) => x.replace(/\.json$/, ''));
+        check('sites: every built list has its county\u2019s time zone', built.length > 0 && built.every((id) => sites.LIST_ZONE[id]), built.filter((id) => !sites.LIST_ZONE[id]).join(',') || built.join(','));
+      }
       const bx = open('TX', []);
       bl.localize(bx, '78205', 'Bexar');
       lookup('Bexar', { lat: 29.4241, lon: -98.4936 });

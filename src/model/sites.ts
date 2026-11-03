@@ -16,7 +16,8 @@
      read nearNow(), so the line shows exactly when the block does. */
 import type { HowTo, PlaceBundle } from '../types';
 import { S } from '../state';
-import { countyKey, type Step } from './plan';
+import { nowOverride, zonedNow } from '../util';
+import { countyKey, clockMinutes, type Step } from './plan';
 
 export interface Site { name: string; address: string; lat: number; lng: number }
 export interface SiteFile {
@@ -108,7 +109,7 @@ export function putSites(id: string, raw: unknown): boolean {
    (once a visit) and says null; anything else is null too, and the caller shows nothing new. `county` is the
    list's, without "County". */
 export interface NearNow { county: string; rows: Near[] }
-export function nearNow(h: HowTo, step: Step): NearNow | null {
+export function nearNow(h: HowTo, step: Step, now: number | Date | null = nowOverride()): NearNow | null {
   const b = S.ballot;
   const at = S.ui.addrPoint;
   if (!b || step.phase !== 'election_day' || step.primary?.look !== 'election_day' || !at || S.ui.addrOpen) return null;
@@ -116,7 +117,23 @@ export function nearNow(h: HowTo, step: Step): NearNow | null {
   if (!id) return null;
   const f = files.get(id);
   if (!f) { wantSites(id); return null; }
-  if (f.election_date !== h.election_date) return null;
+  if (f.election_date !== h.election_date || !listOpen(id, f, b.stateHowto.election_day.polls_close, now)) return null;
   const rows = nearest(f.sites, at, 3);
   return rows.length ? { county: f.county.replace(/\s+county$/i, '').trim(), rows } : null;
+}
+
+/* Each list's county's own time zone. Its sites close at the state's polls-close time there ("7:00 PM"), on the
+   list's election date, whatever the plan's step says: a statewide ballot's step waits for every zone in the state
+   (Texas's says closed at 8 PM Central, once El Paso's Mountain-time polls close), and Codex found the block still
+   up for Georgetown and Kyle voters until then (Nov 3). A list with no zone here shows nothing (model test: every
+   built list has one). */
+export const LIST_ZONE: Record<string, string> = { 'travis-tx': 'America/Chicago', 'williamson-tx': 'America/Chicago', 'hays-tx': 'America/Chicago' };
+/* Whether a list's sites are still open: before its close in its county's zone on its election date. `now` as in
+   plan.nextStep: minutes after midnight where the polls are (`?now=HH:MM`, a test), or an instant. */
+export function listOpen(id: string, f: SiteFile, pollsClose: string | null | undefined, now: number | Date | null = nowOverride()): boolean {
+  const zone = LIST_ZONE[id];
+  const closes = clockMinutes(pollsClose);
+  if (!zone || closes == null) return false;
+  const { date, min } = typeof now === 'number' ? { date: f.election_date, min: now } : zonedNow(zone, now instanceof Date ? now : new Date());
+  return date < f.election_date || (date === f.election_date && min < closes);
 }

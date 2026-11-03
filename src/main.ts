@@ -2,7 +2,7 @@
 import { reportError } from './errors'; // first, so it hears errors from everything after it
 import './styles.css';
 import { S, readSaved, persist, parseShareHead, leftBallot } from './state';
-import { stepKey, planKey } from './views/planstrip';
+import { stepKey, planKey, nearKey, nearKeyNow } from './views/planstrip';
 import { render, anchored } from './render';
 import { localize } from './ballot';
 import { RAIL_AT } from './views/ledger';
@@ -132,7 +132,9 @@ function refreshPlan(): void {
   if (!S.ballot || S.view !== 'ballot') return;
   const day = S.ballot.howto.day;
   localize(S.ballot, S.b.zip, S.ui.addrCounty); // a new day: text dated to change does (plan.applyDated)
-  if (stepKey(S.ballot.howto) === planKey && S.ballot.howto.day === day) return;
+  // The closest sites close at 7 PM Central on their own, even while a statewide ballot's step is still open.
+  const nearMoved = S.ui.view === 'ballot' && nearKeyNow(S.ballot.howto) !== nearKey;
+  if (stepKey(S.ballot.howto) === planKey && S.ballot.howto.day === day && !nearMoved) return;
   // After a lookup this visit, the address box's "Closest vote center" line goes with the plan's block (app.ts).
   if (S.ui.addrPoint && S.ui.view === 'ballot') repaintNear(); else anchored(() => render(['plan']));
 }

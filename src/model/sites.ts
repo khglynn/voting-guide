@@ -62,19 +62,22 @@ export const directionsURL = (s: Site): string => `https://www.google.com/maps/d
    The view asks (wantSites) only when the block would show; app.ts registers the loader (onWantSites), which
    fetches the file and repaints the plan once it lands. Tests seed a list with putSites. */
 const files = new Map<string, SiteFile>();
-const asked = new Set<string>();
-let loader: ((id: string) => void) | null = null;
-export function onWantSites(fn: (id: string) => void): void { loader = fn; }
+const asked = new Set<string>();   // asked for this visit: on its way, here, or missed
+const missed = new Set<string>();  // asked for and didn't load
+let loader: ((id: string) => Promise<boolean> | boolean | void) | null = null;
+export function onWantSites(fn: (id: string) => Promise<boolean> | boolean | void): void { loader = fn; }
 export const sitesFile = (id: string): SiteFile | null => files.get(id) || null;
 export function wantSites(id: string): void {
   if (files.has(id) || asked.has(id) || !loader) return;
   asked.add(id);
   const go = loader;
   // Never inside a paint: the request starts once this render is done.
-  queueMicrotask(() => { try { go(id); } catch { /* shows nothing new */ } });
+  queueMicrotask(() => {
+    Promise.resolve().then(() => go(id)).then((ok) => { if (ok === false) missed.add(id); }, () => { missed.add(id); });
+  });
 }
-/* A new address lookup may try a list that failed to load earlier this visit. */
-export function retrySites(): void { for (const id of [...asked]) if (!files.has(id)) asked.delete(id); }
+/* A new address lookup may try again a list that didn't load earlier this visit (never one still on its way). */
+export function retrySites(): void { for (const id of [...missed]) { missed.delete(id); asked.delete(id); } }
 
 const inRange = (v: unknown, lo: number, hi: number): v is number => typeof v === 'number' && Number.isFinite(v) && v >= lo && v <= hi;
 /* A list as it arrives, checked again on the device (build-data checked it before it shipped): a site with no

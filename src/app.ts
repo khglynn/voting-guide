@@ -65,21 +65,22 @@ const warmPlaces = (idx: Index | null, ids: string[]): void => { for (const id o
    "Closest to your address" block would show. A list that doesn't load in a few seconds, or doesn't read, shows
    nothing new and logs nothing; once one lands, the plan repaints in place, the way a lookup's late maps do. */
 const SITES_TIMEOUT_MS = 8000;
-async function loadSites(id: string): Promise<void> {
+async function loadSites(id: string): Promise<boolean> {
   const stop = new AbortController();
   const timer = window.setTimeout(() => stop.abort(), SITES_TIMEOUT_MS);
   try {
     const r = await fetch(`${BASE}data/sites/${id}.json`, { cache: 'no-cache', signal: stop.signal });
-    if (!r.ok || !putSites(id, await r.json())) return;
-  } catch { return; } finally { window.clearTimeout(timer); }
-  repaintNear();
+    if (!r.ok || !putSites(id, await r.json())) return false;
+  } catch { return false; } finally { window.clearTimeout(timer); }
+  try { repaintNear(); } catch { /* the list is kept; the next paint shows it */ }
+  return true;
 }
 /* The plan again, in place, when its closest-sites block may have changed: its list landed, or the address form
    opened or closed. Nothing happens for a voter with no address looked up this visit. */
 export function repaintNear(): void {
   if (S.view === 'ballot' && S.ballot && S.ui.view === 'ballot' && S.ui.addrPoint) anchored(() => render(['plan']));
 }
-onWantSites((id) => { void loadSites(id); });
+onWantSites(loadSites);
 
 /* Optional: ways to get involved, from the data track. A missing file is normal. */
 let involvedTried = false;

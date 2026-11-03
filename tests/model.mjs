@@ -1399,6 +1399,20 @@ function roundTrip(name, stCode, places, mutate) {
     check('sites: a lookup on Election Day with the list not here yet: nothing new shows, and Travis’s list is asked for once', !block(html) && asked.join(',') === 'travis-tx', asked.join(','));
     ps.planHTML(); await tick();
     check('sites: asked once a visit, not on every paint', asked.join(',') === 'travis-tx', asked.join(','));
+    // A list that didn't load is asked for again after the next lookup; one still on its way never twice.
+    {
+      const seen = [];
+      let pend = null;
+      sites.onWantSites((id) => { seen.push(id); return id === 'miss-x' ? false : new Promise((r) => { pend = r; }); });
+      sites.wantSites('miss-x'); sites.wantSites('slow-x'); await tick(); await tick();
+      sites.wantSites('miss-x'); sites.wantSites('slow-x'); await tick();
+      const before = seen.join(',');
+      sites.retrySites();
+      sites.wantSites('miss-x'); sites.wantSites('slow-x'); await tick(); await tick();
+      check('sites: a list that didn’t load is asked again after a new lookup; one on its way is not asked twice', before === 'miss-x,slow-x' && seen.join(',') === 'miss-x,slow-x,miss-x', seen.join(','));
+      if (pend) pend(true);
+      sites.onWantSites((id) => asked.push(id));
+    }
     sites.putSites('travis-tx', FIX);
     html = ps.planHTML();
     const rows = [...block(html).matchAll(/<li><span class="pn-name">([^<]+)<\/span><span class="pn-mi">([^<]+)<\/span><a class="pn-dir" href="([^"]+)"[^>]*data-fk="(pn-dir-\d)"[^>]*>Directions<\/a><\/li>/g)].map((m) => ({ name: m[1], mi: m[2], href: m[3].replace(/&amp;/g, '&'), fk: m[4] }));

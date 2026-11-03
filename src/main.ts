@@ -5,7 +5,8 @@ import { S, readSaved, persist, parseShareHead, leftBallot } from './state';
 import { stepKey, planKey, nearKey, nearKeyNow } from './views/planstrip';
 import { render, anchored } from './render';
 import { localize } from './ballot';
-import { RAIL_AT } from './views/ledger';
+import { RAIL_AT, barAfter, endcapHTML } from './views/ledger';
+import { afterPolls } from './model/plan';
 import { printTitle } from './views/mast';
 import { ensureIndex, openBallot, openChosen, zipTyped, offerResume, dismissResume, lookZip, viewed, repaintNear } from './app';
 import { A, runAddress, sendReport, reportInput, srcSearch, clearSearch, wiSearch, clearWi } from './actions';
@@ -129,23 +130,25 @@ try {
 } catch { /* an old browser: the bar redraws on the next tap */ }
 /* The next step can change while the page sits open: the polls close at 7, or midnight passes.
    Check once a minute and whenever the tab comes back; repaint the strip only when it changed. */
-let phaseSeen: string | null = null; // the strip's phase the results repaint last answered
 function refreshPlan(): void {
   if (!S.ballot || S.view !== 'ballot') return;
   const day = S.ballot.howto.day;
   localize(S.ballot, S.b.zip, S.ui.addrCounty); // a new day: text dated to change does (plan.applyDated)
   // The closest sites close at 7 PM Central on their own, even while a statewide ballot's step is still open.
   const nearMoved = S.ui.view === 'ballot' && nearKeyNow(S.ballot.howto) !== nearKey;
-  if (stepKey(S.ballot.howto) === planKey && S.ballot.howto.day === day && !nearMoved) return;
-  // The polls closing (or results turning official) changes more than the strip (Nov 3, results Phase 0): the bar, the
-  // endcap, What's next and Share the guide follow the strip's phase, so they repaint with it, once.
-  const phase = stepKey(S.ballot.howto).split('|')[0];
-  const was = phaseSeen ?? planKey.split('|')[0];
-  if (phase !== was && (/^results_/.test(phase) || /^results_/.test(was))) {
-    phaseSeen = phase;
-    anchored(() => render(['plan', 'ballot', 'bar', 'cheat', 'pass']));
+  // The polls closing changes more than the strip (Nov 3, results Phase 0): the bar, the endcap, What's next and Share
+  // the guide follow the strip's phase, so they repaint with it, once. The bar remembers what it last painted, for
+  // whichever ballot is showing; the endcap is swapped alone, so an address being typed in the ballot head stays.
+  if (barAfter !== null && afterPolls(S.ballot.howto) !== barAfter) {
+    anchored(() => {
+      render(['plan', 'bar', 'cheat', 'pass']);
+      const cap = document.querySelector('#r-ballot .endcap');
+      if (cap) cap.outerHTML = endcapHTML();
+    });
+    repaintNear(); // the address box's "Closest vote center" line goes with the plan's block (a no-op without a lookup)
     return;
   }
+  if (stepKey(S.ballot.howto) === planKey && S.ballot.howto.day === day && !nearMoved) return;
   // After a lookup this visit, the address box's "Closest vote center" line goes with the plan's block (app.ts).
   if (S.ui.addrPoint && S.ui.view === 'ballot') repaintNear(); else anchored(() => render(['plan']));
 }

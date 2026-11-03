@@ -3662,6 +3662,21 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   noErrors(page, 'Results first page');
   await ctx.close();
 }
+// Results Phase 0, Codex round 2: the close repaints the bar and the endcap, never the address being typed.
+{
+  const { ctx, page } = await newPage({ timezoneId: 'America/Chicago' });
+  await page.clock.install({ time: new Date('2026-11-04T00:58:00Z') });
+  await page.goto(`${BASE}/?today=2026-11-03`);
+  await page.fill('#zip', '78702');
+  await throughSetup(page);
+  await tap(page, '.addrbox [data-act="addr-open"]');
+  await page.fill('#addr-in', 'Congress Avenue');
+  await page.clock.runFor(3 * 60_000);
+  await page.waitForTimeout(200);
+  check('Results: the close on an open page with an address half typed: the bar turns, the typing stays', /^Results What’s next$/.test(await text(page, '.foot')) && (await page.inputValue('#addr-in').catch(() => '')) === 'Congress Avenue' && /^Results are rolling in\./.test(await text(page, '.plan-h')), `${await text(page, '.foot')} | ${await page.inputValue('#addr-in').catch(() => 'gone')}`);
+  noErrors(page, 'Results close with typing');
+  await ctx.close();
+}
 // Codex r2 (r1 #12): an open page turns over at 7 PM Central on its own, whatever the device's zone.
 {
   const { ctx, page } = await newPage({ timezoneId: 'America/Los_Angeles' });
@@ -3675,6 +3690,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   const after = await text(page, '.plan-h');
   check('Austin on a Pacific-time phone: 6:58 PM Central is still Election Day', /^Today is Election Day\. Polls close at 7 PM\.$/.test(before), before);
   check('Austin on a Pacific-time phone: the open page turns to results after 7 PM Central', /^Results are rolling in\./.test(after), after);
+  check('Austin, an open page at the close: the bar and the endcap turn too (Results, What’s next)', /^Results What’s next$/.test(await text(page, '.foot')) && (await text(page, '[data-fk="endcap-cheat"]')) === 'What’s next', await text(page, '.foot'));
   noErrors(page, 'Polls close on an open page');
   await ctx.close();
 }

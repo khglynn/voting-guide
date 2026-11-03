@@ -672,9 +672,14 @@ export function ballotHTML(): string {
     ? `<p class="empty"><b>Nothing left to decide here.</b> Turn off “${HIDE}” to see everything.</p>` : '';
   return `<div class="wrap-led">${ballotHeadHTML()}</div><div class="ledger" aria-labelledby="ballot-h">${secs}${empty}</div>
     <div id="r-off">${offHTML()}</div>
-    ${afterPolls(S.ballot?.howto) ? `<div class="endcap wrap"><h3>That’s your whole ballot.</h3><p>Next: when the counts become official.</p>
+    ${endcapHTML()}`;
+}
+/* The ballot's last word: save your plan, or once the polls close, what's next. main.ts swaps it alone when the polls
+   close on an open page, so a repaint never clears an address being typed (Codex, Nov 3). */
+export function endcapHTML(): string {
+  return afterPolls(S.ballot?.howto) ? `<div class="endcap wrap"><h3>That’s your whole ballot.</h3><p>Next: when the counts become official.</p>
       <button class="bigbtn" data-act="cheat" data-fk="endcap-cheat">What’s next</button></div>` : `<div class="endcap wrap"><h3>That’s your whole ballot.</h3><p>Next, save your plan.</p>
-      <button class="bigbtn" data-act="cheat" data-fk="endcap-cheat">Open my plan</button></div>`}`;
+      <button class="bigbtn" data-act="cheat" data-fk="endcap-cheat">Open my plan</button></div>`;
 }
 
 /* ---------- the bottom bar ----------
@@ -684,8 +689,12 @@ export function ballotHTML(): string {
 const BURGER = '<svg class="burger" viewBox="0 0 18 14" aria-hidden="true" focusable="false"><path d="M1 1.5h16M1 7h16M1 12.5h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
 export const RAIL_AT = '(min-width: 1180px)';
 const wide = (): boolean => typeof window !== 'undefined' && typeof window.matchMedia === 'function' && window.matchMedia(RAIL_AT).matches;
+/* Whether the bar last painted for results (null before it has painted), so main.ts can tell when the polls closed on an
+   open page, whichever ballot is showing. */
+export let barAfter: boolean | null = null;
 export function barHTML(): string {
   if (!S.ballot) return '';
+  barAfter = afterPolls(S.ballot.howto);
   // My plan (4) and Help friends vote (5): the left button goes back one step, always (Kevin, Oct 28: "the left
   // button always goes back one step"); the green one goes on, and on the last step shares the guide, the
   // step's own action (actions.ts A['share-guide']).

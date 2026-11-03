@@ -196,8 +196,9 @@ check('page titles and descriptions: no em dashes, no all caps', !bad.copy.lengt
 {
   const austin = pages.find((x) => x.path === '/austin-tx').html;
   const ac = data.places['austin-tx'].by_county || [];
-  check('Austin: each county\'s own where-to-vote links, labeled by county (Travis\'s maps, Williamson\'s, Hays\'s)', ac.length === 3 && ac.every((c) => austin.includes(`<b>${c.county} County</b>`) && Object.entries(c.lookups).filter(([k]) => k !== 'election_day_waits').map(([, u]) => u).every((u) => austin.includes(`href="${u.replace(/&/g, '&amp;')}"`))));
+  check('Austin: each county\'s own where-to-vote links, labeled by county (Travis\'s maps, Williamson\'s, Hays\'s)', ac.length === 3 && ac.every((c) => austin.includes(`<b>${c.county} County</b>`) && Object.entries(c.lookups).filter(([k]) => k !== 'election_day_waits' && k !== 'results').map(([, u]) => u).every((u) => austin.includes(`href="${u.replace(/&/g, '&amp;')}"`))));
   check('Austin: the office\'s direct lines for all three counties', (data.places['austin-tx'].county_election_office.lines || []).every((l) => austin.includes(l.label.replace(/&/g, '&amp;')) && austin.includes(l.phone)));
+  // (A county's results page, Nov 3, shows only in the app once its polls close: the static pages are built before.)
   // Every link kind: each county's own where it has one, else the state's, so no page loses a way to find where to vote.
   const lost = [];
   for (const id of placeIds) {

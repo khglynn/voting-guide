@@ -112,6 +112,7 @@ export function mastHTML(): string {
    whole door when that changes. */
 function doorHTML(): string {
   const lead = resultsLead(S.index?.states);
+  doorShown = S.index ? keyOf(lead) : null;
   if (lead) return resultsDoorHTML(lead);
   const ticks = ['Plain English', 'Full local details', 'Pick by endorsements or party'];
   return `<header class="mast front wrap" data-door="plan">${tryBanner()}
@@ -160,8 +161,11 @@ function resultsDoorHTML(lead: ResultsLead): string {
     ${PILE}
   </header>`;
 }
-/* What the first page's results lead says right now, so main.ts can repaint it when a state closes. */
-export const doorKey = (): string => { const l = resultsLead(S.index?.states); return l ? `${l.head}|${l.rows.map((r) => `${r.st}:${r.url ? 1 : 0}${r.track ? 1 : 0}`).join(',')}` : ''; };
+/* What the first page's results lead says (`doorShown`: as last painted, null before the door paints), so main.ts
+   can repaint it when a state closes while the page sits open. */
+const keyOf = (l: ResultsLead | null): string => (l ? `${l.head}|${l.rows.map((r) => `${r.st}:${r.url ? 1 : 0}${r.track ? 1 : 0}`).join(',')}` : '');
+export let doorShown: string | null = null;
+export const doorKey = (): string => keyOf(resultsLead(S.index?.states));
 function resultsPartHTML(lead: ResultsLead): string {
   const a = (url: string, text: string, cls = ''): string => `<a${cls ? ` class="${cls}"` : ''} href="${esc(url)}" target="_blank" rel="noopener">${esc(text)}</a>`;
   const rows = lead.rows.map((r) => `<li class="res-row${r.url ? '' : ' is-open'}">${r.url ? a(r.url, r.name, 'res-st') : `<span class="res-st">${esc(r.name)}</span>`}<span class="res-src">${esc(r.url ? r.source || 'Official results' : r.open || '')}</span>${r.track ? a(r.track, 'Track your mail ballot', 'res-track') : ''}</li>`).join('');

@@ -10,7 +10,7 @@ import { printTitle } from './views/mast';
 import { ensureIndex, openBallot, openChosen, zipTyped, offerResume, dismissResume, lookZip, viewed, repaintNear } from './app';
 import { A, runAddress, sendReport, reportInput, srcSearch, clearSearch, wiSearch, clearWi } from './actions';
 import { startStats } from './stats';
-import { doorKey } from './views/mast';
+import { doorKey, doorShown } from './views/mast';
 
 /* ---------- taps: pointerdown for mouse and pen; touch fires on a still pointerup so a
    scroll never counts as a tap; click covers the keyboard. Tuned on phones in v2.1; the e2e
@@ -144,12 +144,9 @@ window.addEventListener('focus', refreshPlan);
 window.setInterval(refreshPlan, 60_000);
 /* The first page turns to results as each covered state's polls close (mast.ts): the same once-a-minute check,
    repainting only when a state's line changes. render.ts keeps the ZIP box and what's typed in it. */
-let doorWas: string | null = null;
 function refreshDoor(): void {
-  if (S.view === 'ballot' || !S.index) return;
-  const k = doorKey();
-  if (doorWas !== null && k !== doorWas) render(['mast']);
-  doorWas = k;
+  if (S.view === 'ballot' || !S.index || doorShown === null) return;
+  if (doorKey() !== doorShown) render(['mast']);
 }
 document.addEventListener('visibilitychange', () => { if (!document.hidden) refreshDoor(); });
 window.setInterval(refreshDoor, 60_000);

@@ -1,0 +1,5382 @@
+[
+  {
+    "endorser_id": "afscme-127",
+    "target_id": "ca-assembly-75",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme127.org/Endorsement2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-127",
+    "target_id": "ca-assembly-76",
+    "status": "endorsed",
+    "choice": "Darshana Patel",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://afscme127.org/Endorsement2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-127",
+    "target_id": "ca-assembly-77",
+    "status": "endorsed",
+    "choice": "Tasha Boerner",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://afscme127.org/Endorsement2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-127",
+    "target_id": "ca-assembly-78",
+    "status": "endorsed",
+    "choice": "Chris Ward",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://afscme127.org/Endorsement2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-127",
+    "target_id": "ca-assembly-79",
+    "status": "endorsed",
+    "choice": "LaShae Sharp-Collins",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://afscme127.org/Endorsement2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-127",
+    "target_id": "ca-assembly-80",
+    "status": "endorsed",
+    "choice": "David A. Alvarez",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://afscme127.org/Endorsement2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-127",
+    "target_id": "ca-state-senate-18",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme127.org/Endorsement2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-127",
+    "target_id": "ca-state-senate-38",
+    "status": "no_position",
+    "choice": null,
+    "why": "\"No Recommendation\" in its 2026 general election endorsements.",
+    "url": "https://afscme127.org/Endorsement2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-127",
+    "target_id": "ca-state-senate-40",
+    "status": "endorsed",
+    "choice": "Mara Elliott",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://afscme127.org/Endorsement2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-127",
+    "target_id": "ca-us-house-49",
+    "status": "endorsed",
+    "choice": "Mike Levin",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://afscme127.org/Endorsement2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-127",
+    "target_id": "ca-us-house-50",
+    "status": "endorsed",
+    "choice": "Scott Peters",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://afscme127.org/Endorsement2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-127",
+    "target_id": "ca-us-house-51",
+    "status": "endorsed",
+    "choice": "Sara Jacobs",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://afscme127.org/Endorsement2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-127",
+    "target_id": "ca-us-house-52",
+    "status": "endorsed",
+    "choice": "Juan Vargas",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://afscme127.org/Endorsement2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-127",
+    "target_id": "sd-city-council-2",
+    "status": "endorsed",
+    "choice": "Nicole Crosby",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://afscme127.org/Endorsement2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-127",
+    "target_id": "sd-city-council-4",
+    "status": "endorsed",
+    "choice": "Henry Foster III",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://afscme127.org/Endorsement2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-127",
+    "target_id": "sd-city-council-6",
+    "status": "endorsed",
+    "choice": "Kent Lee",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://afscme127.org/Endorsement2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-127",
+    "target_id": "sd-city-council-8",
+    "status": "endorsed",
+    "choice": "Gerardo Ramirez",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://afscme127.org/Endorsement2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-127",
+    "target_id": "sd-county-assessor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme127.org/Endorsement2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-127",
+    "target_id": "sd-county-board-of-ed-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme127.org/Endorsement2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-127",
+    "target_id": "sd-county-board-of-ed-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme127.org/Endorsement2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-127",
+    "target_id": "sd-county-measure-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme127.org/Endorsement2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-127",
+    "target_id": "sd-county-measure-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme127.org/Endorsement2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-127",
+    "target_id": "sd-county-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme127.org/Endorsement2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-127",
+    "target_id": "sd-county-treasurer",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme127.org/Endorsement2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-127",
+    "target_id": "sdccd-district-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme127.org/Endorsement2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-127",
+    "target_id": "sdccd-district-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme127.org/Endorsement2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-127",
+    "target_id": "sdusd-district-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme127.org/Endorsement2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-127",
+    "target_id": "sdusd-district-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme127.org/Endorsement2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-127",
+    "target_id": "sdusd-measure-m",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme127.org/Endorsement2026",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-assembly-75",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-assembly-76",
+    "status": "endorsed",
+    "choice": "Darshana Patel",
+    "why": "Listed on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-assembly-77",
+    "status": "endorsed",
+    "choice": "Tasha Boerner",
+    "why": "Listed on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-assembly-78",
+    "status": "endorsed",
+    "choice": "Chris Ward",
+    "why": "Listed on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-assembly-79",
+    "status": "endorsed",
+    "choice": "LaShae Sharp-Collins",
+    "why": "Listed on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-assembly-80",
+    "status": "endorsed",
+    "choice": "David A. Alvarez",
+    "why": "Listed on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-state-senate-18",
+    "status": "endorsed",
+    "choice": "Steve Padilla",
+    "why": "Listed on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-state-senate-38",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-state-senate-40",
+    "status": "endorsed",
+    "choice": "Mara Elliott",
+    "why": "Listed on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-us-house-49",
+    "status": "endorsed",
+    "choice": "Mike Levin",
+    "why": "Listed on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-us-house-50",
+    "status": "endorsed",
+    "choice": "Scott Peters",
+    "why": "Listed on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-us-house-51",
+    "status": "endorsed",
+    "choice": "Sara Jacobs",
+    "why": "Listed on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "ca-us-house-52",
+    "status": "endorsed",
+    "choice": "Juan Vargas",
+    "why": "Listed on its 2026 General Election Slate Card.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sd-city-council-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sd-city-council-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sd-city-council-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sd-city-council-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sd-county-assessor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sd-county-board-of-ed-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sd-county-board-of-ed-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sd-county-measure-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sd-county-measure-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sd-county-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sd-county-treasurer",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sdccd-district-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sdccd-district-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sdusd-district-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sdusd-district-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-3299",
+    "target_id": "sdusd-measure-m",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Slate Card on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme3299.org/politics/2026-general-election-slate-card/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "ca-assembly-75",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "ca-assembly-76",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "ca-assembly-77",
+    "status": "endorsed",
+    "choice": "Tasha Boerner",
+    "why": "Listed in its 2026 voter guide for the November election.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "ca-assembly-78",
+    "status": "endorsed",
+    "choice": "Chris Ward",
+    "why": "Listed in its 2026 voter guide for the November election.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "ca-assembly-79",
+    "status": "endorsed",
+    "choice": "LaShae Sharp-Collins",
+    "why": "Listed in its 2026 voter guide for the November election.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "ca-assembly-80",
+    "status": "endorsed",
+    "choice": "David A. Alvarez",
+    "why": "Listed in its 2026 voter guide for the November election.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "ca-state-senate-18",
+    "status": "endorsed",
+    "choice": "Steve Padilla",
+    "why": "Listed in its 2026 voter guide for the November election.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "ca-state-senate-38",
+    "status": "no_position",
+    "choice": null,
+    "why": "\"No Recommendation\" in its 2026 voter guide for the November election.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "ca-state-senate-40",
+    "status": "endorsed",
+    "choice": "Mara Elliott",
+    "why": "Listed in its 2026 voter guide for the November election.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "ca-us-house-49",
+    "status": "endorsed",
+    "choice": "Mike Levin",
+    "why": "Listed in its 2026 voter guide for the November election.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "ca-us-house-50",
+    "status": "endorsed",
+    "choice": "Scott Peters",
+    "why": "Listed in its 2026 voter guide for the November election.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "ca-us-house-51",
+    "status": "endorsed",
+    "choice": "Sara Jacobs",
+    "why": "Listed in its 2026 voter guide for the November election.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "ca-us-house-52",
+    "status": "endorsed",
+    "choice": "Juan Vargas",
+    "why": "Listed in its 2026 voter guide for the November election.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "sd-city-council-2",
+    "status": "endorsed",
+    "choice": "Nicole Crosby",
+    "why": "Listed in its 2026 voter guide for the November election.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "sd-city-council-4",
+    "status": "endorsed",
+    "choice": "Henry Foster III",
+    "why": "Listed in its 2026 voter guide for the November election.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "sd-city-council-6",
+    "status": "endorsed",
+    "choice": "Kent Lee",
+    "why": "Listed in its 2026 voter guide for the November election.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "sd-city-council-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "sd-county-assessor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "sd-county-board-of-ed-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "sd-county-board-of-ed-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "sd-county-measure-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "sd-county-measure-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "sd-county-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "sd-county-treasurer",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "sdccd-district-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "sdccd-district-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "sdusd-district-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "sdusd-district-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "afscme-dc-36",
+    "target_id": "sdusd-measure-m",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://afscme36.org/2026-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ca-labor-fed",
+    "target_id": "ca-assembly-75",
+    "status": "no_position",
+    "choice": null,
+    "why": "\"No Recommendation\" in its 2026 general election endorsements.",
+    "url": "https://calaborfed.org/labor-2026-primary-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ca-labor-fed",
+    "target_id": "ca-assembly-76",
+    "status": "endorsed",
+    "choice": "Darshana Patel",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://calaborfed.org/labor-2026-primary-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ca-labor-fed",
+    "target_id": "ca-assembly-77",
+    "status": "endorsed",
+    "choice": "Tasha Boerner",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://calaborfed.org/labor-2026-primary-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ca-labor-fed",
+    "target_id": "ca-assembly-78",
+    "status": "endorsed",
+    "choice": "Chris Ward",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://calaborfed.org/labor-2026-primary-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ca-labor-fed",
+    "target_id": "ca-assembly-79",
+    "status": "endorsed",
+    "choice": "LaShae Sharp-Collins",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://calaborfed.org/labor-2026-primary-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ca-labor-fed",
+    "target_id": "ca-assembly-80",
+    "status": "no_position",
+    "choice": null,
+    "why": "\"No Recommendation\" in its 2026 general election endorsements.",
+    "url": "https://calaborfed.org/labor-2026-primary-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ca-labor-fed",
+    "target_id": "ca-state-senate-18",
+    "status": "endorsed",
+    "choice": "Steve Padilla",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://calaborfed.org/labor-2026-primary-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ca-labor-fed",
+    "target_id": "ca-state-senate-40",
+    "status": "endorsed",
+    "choice": "Mara Elliott",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://calaborfed.org/labor-2026-primary-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ca-labor-fed",
+    "target_id": "ca-us-house-50",
+    "status": "endorsed",
+    "choice": "Scott Peters",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://calaborfed.org/labor-2026-primary-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ca-labor-fed",
+    "target_id": "ca-us-house-51",
+    "status": "endorsed",
+    "choice": "Sara Jacobs",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://calaborfed.org/labor-2026-primary-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ca-labor-fed",
+    "target_id": "ca-us-house-52",
+    "status": "endorsed",
+    "choice": "Juan Vargas",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://calaborfed.org/labor-2026-primary-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-assembly-75",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-assembly-76",
+    "status": "endorsed",
+    "choice": "Darshana Patel",
+    "why": "Listed in its 2026 General Election Voter Guide.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-assembly-77",
+    "status": "endorsed",
+    "choice": "Tasha Boerner",
+    "why": "Listed in its 2026 General Election Voter Guide.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-assembly-78",
+    "status": "endorsed",
+    "choice": "Chris Ward",
+    "why": "Listed in its 2026 General Election Voter Guide.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-assembly-79",
+    "status": "endorsed",
+    "choice": "LaShae Sharp-Collins",
+    "why": "Listed in its 2026 General Election Voter Guide.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-assembly-80",
+    "status": "endorsed",
+    "choice": "David A. Alvarez",
+    "why": "Listed in its 2026 General Election Voter Guide.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-state-senate-18",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-state-senate-38",
+    "status": "endorsed",
+    "choice": "Catherine S. Blakespear",
+    "why": "Listed in its 2026 General Election Voter Guide.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-state-senate-40",
+    "status": "endorsed",
+    "choice": "Mara Elliott",
+    "why": "Listed in its 2026 General Election Voter Guide.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-us-house-49",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-us-house-50",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-us-house-51",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "ca-us-house-52",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sd-city-council-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sd-city-council-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sd-city-council-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sd-city-council-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sd-county-assessor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sd-county-board-of-ed-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sd-county-board-of-ed-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sd-county-measure-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sd-county-measure-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sd-county-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sd-county-treasurer",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sdccd-district-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sdccd-district-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sdusd-district-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sdusd-district-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-faculty-association",
+    "target_id": "sdusd-measure-m",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 General Election Voter Guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.calfac.org/politics/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-assembly-75",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-assembly-76",
+    "status": "endorsed",
+    "choice": "Darshana Patel",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-assembly-77",
+    "status": "endorsed",
+    "choice": "Tasha Boerner",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-assembly-78",
+    "status": "endorsed",
+    "choice": "Chris Ward",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-assembly-79",
+    "status": "endorsed",
+    "choice": "LaShae Sharp-Collins",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-assembly-80",
+    "status": "endorsed",
+    "choice": "David A. Alvarez",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-state-senate-18",
+    "status": "endorsed",
+    "choice": "Steve Padilla",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-state-senate-38",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-state-senate-40",
+    "status": "endorsed",
+    "choice": "Mara Elliott",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-us-house-49",
+    "status": "endorsed",
+    "choice": "Mike Levin",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-us-house-50",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-us-house-51",
+    "status": "endorsed",
+    "choice": "Sara Jacobs",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "ca-us-house-52",
+    "status": "endorsed",
+    "choice": "Juan Vargas",
+    "why": "Listed in its General Election 2026 endorsements.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sd-city-council-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sd-city-council-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sd-city-council-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sd-city-council-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sd-county-assessor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sd-county-board-of-ed-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sd-county-board-of-ed-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sd-county-measure-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sd-county-measure-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sd-county-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sd-county-treasurer",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sdccd-district-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sdccd-district-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sdusd-district-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sdusd-district-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-federation-of-teachers",
+    "target_id": "sdusd-measure-m",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its General Election 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.cft.org/sites/main/files/file-attachments/cft_endorsements-general-election_9.29.2026.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "ca-assembly-75",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "ca-assembly-76",
+    "status": "endorsed",
+    "choice": "Darshana Patel",
+    "why": "Listed on its California endorsements page.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "ca-assembly-77",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "ca-assembly-78",
+    "status": "endorsed",
+    "choice": "Chris Ward",
+    "why": "Listed on its California endorsements page.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "ca-assembly-79",
+    "status": "endorsed",
+    "choice": "LaShae Sharp-Collins",
+    "why": "Listed on its California endorsements page.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "ca-assembly-80",
+    "status": "endorsed",
+    "choice": "David A. Alvarez",
+    "why": "Listed on its California endorsements page.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "ca-state-senate-18",
+    "status": "endorsed",
+    "choice": "Steve Padilla",
+    "why": "Listed on its California endorsements page.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "ca-state-senate-38",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "ca-state-senate-40",
+    "status": "endorsed",
+    "choice": "Mara Elliott",
+    "why": "Listed on its California endorsements page.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "ca-us-house-49",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "ca-us-house-50",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "ca-us-house-51",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "ca-us-house-52",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sd-city-council-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sd-city-council-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sd-city-council-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sd-city-council-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sd-county-assessor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sd-county-board-of-ed-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sd-county-board-of-ed-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sd-county-measure-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sd-county-measure-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sd-county-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sd-county-treasurer",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sdccd-district-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sdccd-district-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sdusd-district-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sdusd-district-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "california-nurses-association",
+    "target_id": "sdusd-measure-m",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its California endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.nationalnursesunited.org/california-endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-assembly-76",
+    "status": "endorsed",
+    "choice": "Darshana Patel",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-assembly-77",
+    "status": "endorsed",
+    "choice": "Tasha Boerner",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-assembly-78",
+    "status": "endorsed",
+    "choice": "Chris Ward",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-assembly-79",
+    "status": "endorsed",
+    "choice": "LaShae Sharp-Collins",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-assembly-80",
+    "status": "endorsed",
+    "choice": "David A. Alvarez",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-state-senate-18",
+    "status": "endorsed",
+    "choice": "Steve Padilla",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-state-senate-40",
+    "status": "endorsed",
+    "choice": "Mara Elliott",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-us-house-49",
+    "status": "endorsed",
+    "choice": "Mike Levin",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "csea",
+    "target_id": "ca-us-house-52",
+    "status": "endorsed",
+    "choice": "Juan Vargas",
+    "why": "Listed in its statewide endorsements for the November 3 election.",
+    "url": "https://csea.com/issues-and-advocacy/election/statewide-voter-guide",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "cta",
+    "target_id": "ca-assembly-76",
+    "status": "endorsed",
+    "choice": "Darshana Patel",
+    "why": "Listed in its 2026 candidate recommendations.",
+    "url": "https://www.cta.org/document/2026-candidate-recommendations",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "cta",
+    "target_id": "ca-assembly-77",
+    "status": "endorsed",
+    "choice": "Tasha Boerner",
+    "why": "Listed in its 2026 candidate recommendations.",
+    "url": "https://www.cta.org/document/2026-candidate-recommendations",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "cta",
+    "target_id": "ca-assembly-78",
+    "status": "endorsed",
+    "choice": "Chris Ward",
+    "why": "Listed in its 2026 candidate recommendations.",
+    "url": "https://www.cta.org/document/2026-candidate-recommendations",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "cta",
+    "target_id": "ca-assembly-79",
+    "status": "endorsed",
+    "choice": "LaShae Sharp-Collins",
+    "why": "Listed in its 2026 candidate recommendations.",
+    "url": "https://www.cta.org/document/2026-candidate-recommendations",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "cta",
+    "target_id": "ca-assembly-80",
+    "status": "endorsed",
+    "choice": "David A. Alvarez",
+    "why": "Listed in its 2026 candidate recommendations.",
+    "url": "https://www.cta.org/document/2026-candidate-recommendations",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "cta",
+    "target_id": "ca-state-senate-18",
+    "status": "endorsed",
+    "choice": "Steve Padilla",
+    "why": "Listed in its 2026 candidate recommendations.",
+    "url": "https://www.cta.org/document/2026-candidate-recommendations",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "cta",
+    "target_id": "ca-state-senate-40",
+    "status": "endorsed",
+    "choice": "Mara Elliott",
+    "why": "Listed in its 2026 candidate recommendations.",
+    "url": "https://www.cta.org/document/2026-candidate-recommendations",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "cta",
+    "target_id": "ca-us-house-50",
+    "status": "endorsed",
+    "choice": "Scott Peters",
+    "why": "Listed in its 2026 candidate recommendations.",
+    "url": "https://www.cta.org/document/2026-candidate-recommendations",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "cta",
+    "target_id": "ca-us-house-51",
+    "status": "endorsed",
+    "choice": "Sara Jacobs",
+    "why": "Listed in its 2026 candidate recommendations.",
+    "url": "https://www.cta.org/document/2026-candidate-recommendations",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "ca-assembly-75",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voting guide for November 3 on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "ca-assembly-76",
+    "status": "endorsed",
+    "choice": "Darshana Patel",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "ca-assembly-77",
+    "status": "endorsed",
+    "choice": "Tasha Boerner",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "ca-assembly-78",
+    "status": "endorsed",
+    "choice": "Chris Ward",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "ca-assembly-79",
+    "status": "endorsed",
+    "choice": "LaShae Sharp-Collins",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "ca-assembly-80",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voting guide for November 3 on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "ca-state-senate-18",
+    "status": "endorsed",
+    "choice": "Steve Padilla",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "ca-state-senate-38",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voting guide for November 3 on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "ca-state-senate-40",
+    "status": "endorsed",
+    "choice": "Mara Elliott",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "ca-us-house-49",
+    "status": "endorsed",
+    "choice": "Mike Levin",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "ca-us-house-50",
+    "status": "endorsed",
+    "choice": "Scott Peters",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "ca-us-house-51",
+    "status": "endorsed",
+    "choice": "Sara Jacobs",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "ca-us-house-52",
+    "status": "endorsed",
+    "choice": "Juan Vargas",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "sd-city-council-2",
+    "status": "endorsed",
+    "choice": "Nicole Crosby",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "sd-city-council-4",
+    "status": "endorsed",
+    "choice": "Henry Foster III",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "sd-city-council-6",
+    "status": "endorsed",
+    "choice": "Kent Lee",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "sd-city-council-8",
+    "status": "endorsed",
+    "choice": "Antonio Martinez",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "sd-county-assessor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voting guide for November 3 on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "sd-county-board-of-ed-3",
+    "status": "endorsed",
+    "choice": "Alicia Muñoz",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "sd-county-board-of-ed-5",
+    "status": "endorsed",
+    "choice": "Rick Shea",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "sd-county-measure-a",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "sd-county-measure-b",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "sd-county-supervisor-4",
+    "status": "endorsed",
+    "choice": "Monica Montgomery Steppe",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "sd-county-treasurer",
+    "status": "endorsed",
+    "choice": "Larry Cohen",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "sdccd-district-a",
+    "status": "endorsed",
+    "choice": "Maria Nieto Senour",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "sdccd-district-c",
+    "status": "endorsed",
+    "choice": "Craig Milgrim",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "sdusd-district-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 voting guide for November 3 on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "sdusd-district-c",
+    "status": "endorsed",
+    "choice": "Hayden Gore",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ibew-569",
+    "target_id": "sdusd-measure-m",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its 2026 voting guide for the November 3 election.",
+    "url": "https://ibew569.org/news/2026-voting-guide-ibew-569/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "laoc-building-trades",
+    "target_id": "ca-state-senate-38",
+    "status": "endorsed",
+    "choice": "Catherine S. Blakespear",
+    "why": "Listed in its November 2026 general election endorsements in Building Trades News.",
+    "url": "https://laocbuildingtrades.org/wp-content/uploads/2026/11/BTN-Fall-2026-HI-RES-Revised-10.31.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "laoc-building-trades",
+    "target_id": "ca-us-house-49",
+    "status": "endorsed",
+    "choice": "Mike Levin",
+    "why": "Listed in its November 2026 general election endorsements in Building Trades News.",
+    "url": "https://laocbuildingtrades.org/wp-content/uploads/2026/11/BTN-Fall-2026-HI-RES-Revised-10.31.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-assembly-75",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-assembly-76",
+    "status": "endorsed",
+    "choice": "Darshana Patel",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-assembly-77",
+    "status": "endorsed",
+    "choice": "Tasha Boerner",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-assembly-78",
+    "status": "endorsed",
+    "choice": "Chris Ward",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-assembly-79",
+    "status": "endorsed",
+    "choice": "LaShae Sharp-Collins",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-assembly-80",
+    "status": "endorsed",
+    "choice": "David A. Alvarez",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-state-senate-18",
+    "status": "endorsed",
+    "choice": "Steve Padilla",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-state-senate-38",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-state-senate-40",
+    "status": "endorsed",
+    "choice": "Mara Elliott",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-us-house-49",
+    "status": "endorsed",
+    "choice": "Mike Levin",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-us-house-50",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-us-house-51",
+    "status": "endorsed",
+    "choice": "Sara Jacobs",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "ca-us-house-52",
+    "status": "endorsed",
+    "choice": "Juan Vargas",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sd-city-council-2",
+    "status": "endorsed",
+    "choice": "Nicole Crosby",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sd-city-council-4",
+    "status": "endorsed",
+    "choice": "Henry Foster III",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sd-city-council-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sd-city-council-8",
+    "status": "endorsed",
+    "choice": "Antonio Martinez",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sd-county-assessor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sd-county-board-of-ed-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sd-county-board-of-ed-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sd-county-measure-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sd-county-measure-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sd-county-supervisor-4",
+    "status": "endorsed",
+    "choice": "Monica Montgomery Steppe",
+    "why": "Listed on its 2026 endorsements page.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sd-county-treasurer",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sdccd-district-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sdccd-district-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sdusd-district-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sdusd-district-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nuhw",
+    "target_id": "sdusd-measure-m",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 endorsements, 'top to bottom of the ballot' on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://home.nuhw.org/political-action",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ocea",
+    "target_id": "ca-state-senate-38",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ocea.org/2026-general-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ocea",
+    "target_id": "ca-us-house-49",
+    "status": "endorsed",
+    "choice": "Mike Levin",
+    "why": "Listed in its 2026 general election voter guide.",
+    "url": "https://ocea.org/2026-general-election-endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-deputy-sheriffs-assn",
+    "target_id": "ca-assembly-75",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://dsasd.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-deputy-sheriffs-assn",
+    "target_id": "ca-assembly-76",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://dsasd.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-deputy-sheriffs-assn",
+    "target_id": "ca-assembly-77",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://dsasd.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-deputy-sheriffs-assn",
+    "target_id": "ca-assembly-78",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://dsasd.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-deputy-sheriffs-assn",
+    "target_id": "ca-assembly-79",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://dsasd.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-deputy-sheriffs-assn",
+    "target_id": "ca-assembly-80",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://dsasd.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-deputy-sheriffs-assn",
+    "target_id": "ca-state-senate-18",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://dsasd.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-deputy-sheriffs-assn",
+    "target_id": "ca-state-senate-38",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://dsasd.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-deputy-sheriffs-assn",
+    "target_id": "ca-state-senate-40",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://dsasd.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-deputy-sheriffs-assn",
+    "target_id": "ca-us-house-49",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://dsasd.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-deputy-sheriffs-assn",
+    "target_id": "ca-us-house-50",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://dsasd.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-deputy-sheriffs-assn",
+    "target_id": "ca-us-house-51",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://dsasd.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-deputy-sheriffs-assn",
+    "target_id": "ca-us-house-52",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://dsasd.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-deputy-sheriffs-assn",
+    "target_id": "sd-city-council-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://dsasd.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-deputy-sheriffs-assn",
+    "target_id": "sd-city-council-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://dsasd.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-deputy-sheriffs-assn",
+    "target_id": "sd-city-council-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://dsasd.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-deputy-sheriffs-assn",
+    "target_id": "sd-city-council-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://dsasd.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-deputy-sheriffs-assn",
+    "target_id": "sd-county-assessor",
+    "status": "endorsed",
+    "choice": "Jordan Z. Marks",
+    "why": "Listed in its November 3, 2026 general election endorsements.",
+    "url": "https://dsasd.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-deputy-sheriffs-assn",
+    "target_id": "sd-county-board-of-ed-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://dsasd.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-deputy-sheriffs-assn",
+    "target_id": "sd-county-board-of-ed-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://dsasd.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-deputy-sheriffs-assn",
+    "target_id": "sd-county-measure-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://dsasd.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-deputy-sheriffs-assn",
+    "target_id": "sd-county-measure-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://dsasd.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-deputy-sheriffs-assn",
+    "target_id": "sd-county-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://dsasd.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-deputy-sheriffs-assn",
+    "target_id": "sd-county-treasurer",
+    "status": "endorsed",
+    "choice": "Larry Cohen",
+    "why": "Listed in its November 3, 2026 general election endorsements.",
+    "url": "https://dsasd.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-deputy-sheriffs-assn",
+    "target_id": "sdccd-district-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://dsasd.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-deputy-sheriffs-assn",
+    "target_id": "sdccd-district-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://dsasd.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-deputy-sheriffs-assn",
+    "target_id": "sdusd-district-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://dsasd.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-deputy-sheriffs-assn",
+    "target_id": "sdusd-district-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://dsasd.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sd-deputy-sheriffs-assn",
+    "target_id": "sdusd-measure-m",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 3, 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://dsasd.org/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "ca-assembly-75",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "ca-assembly-76",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "ca-assembly-77",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "ca-assembly-78",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "ca-assembly-79",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "ca-assembly-80",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "ca-state-senate-18",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "ca-state-senate-38",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "ca-state-senate-40",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "ca-us-house-49",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "ca-us-house-50",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "ca-us-house-51",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "ca-us-house-52",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "sd-city-council-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "sd-city-council-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "sd-city-council-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "sd-city-council-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "sd-county-assessor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "sd-county-board-of-ed-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "sd-county-board-of-ed-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "sd-county-measure-a",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Endorsed by SDEA in its \"Vote Union: November 3, 2026\" post.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "sd-county-measure-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "sd-county-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "sd-county-treasurer",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "sdccd-district-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "sdccd-district-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "sdusd-district-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its \"Vote Union: November 3, 2026\" endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "sdusd-district-c",
+    "status": "endorsed",
+    "choice": "Hayden Gore",
+    "why": "Endorsed by SDEA in its \"Vote Union: November 3, 2026\" post.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sdea",
+    "target_id": "sdusd-measure-m",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Endorsed by SDEA in its \"Vote Union: November 3, 2026\" post.",
+    "url": "https://www.sdea.net/2026/10/vote-union-nov-3/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-assembly-75",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-assembly-76",
+    "status": "endorsed",
+    "choice": "Darshana Patel",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-assembly-77",
+    "status": "endorsed",
+    "choice": "Tasha Boerner",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-assembly-78",
+    "status": "endorsed",
+    "choice": "Chris Ward",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-assembly-79",
+    "status": "endorsed",
+    "choice": "LaShae Sharp-Collins",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-assembly-80",
+    "status": "endorsed",
+    "choice": "David A. Alvarez",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-state-senate-18",
+    "status": "endorsed",
+    "choice": "Steve Padilla",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-state-senate-38",
+    "status": "endorsed",
+    "choice": "Catherine S. Blakespear",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-state-senate-40",
+    "status": "endorsed",
+    "choice": "Mara Elliott",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-us-house-49",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-us-house-50",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-us-house-51",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "ca-us-house-52",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sd-city-council-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sd-city-council-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sd-city-council-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sd-city-council-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sd-county-assessor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sd-county-board-of-ed-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sd-county-board-of-ed-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sd-county-measure-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sd-county-measure-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sd-county-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sd-county-treasurer",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sdccd-district-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sdccd-district-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sdusd-district-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sdusd-district-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-1000",
+    "target_id": "sdusd-measure-m",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu1000.org/2026elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "ca-state-senate-38",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Fall 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-121rn",
+    "target_id": "ca-us-house-49",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Fall 2026 voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiu121rn.org/2026/10/08/seiu-121rns-fall-2026-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "ca-assembly-75",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "ca-assembly-76",
+    "status": "endorsed",
+    "choice": "Darshana Patel",
+    "why": "Listed in its ballot recommendations for the November 2026 election.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "ca-assembly-77",
+    "status": "endorsed",
+    "choice": "Tasha Boerner",
+    "why": "Listed in its ballot recommendations for the November 2026 election.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "ca-assembly-78",
+    "status": "endorsed",
+    "choice": "Chris Ward",
+    "why": "Listed in its ballot recommendations for the November 2026 election.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "ca-assembly-79",
+    "status": "endorsed",
+    "choice": "LaShae Sharp-Collins",
+    "why": "Listed in its ballot recommendations for the November 2026 election.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "ca-assembly-80",
+    "status": "endorsed",
+    "choice": "David A. Alvarez",
+    "why": "Listed in its ballot recommendations for the November 2026 election.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "ca-state-senate-18",
+    "status": "endorsed",
+    "choice": "Steve Padilla",
+    "why": "Listed in its ballot recommendations for the November 2026 election.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "ca-state-senate-38",
+    "status": "endorsed",
+    "choice": "Catherine S. Blakespear",
+    "why": "Listed in its ballot recommendations for the November 2026 election.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "ca-state-senate-40",
+    "status": "endorsed",
+    "choice": "Mara Elliott",
+    "why": "Listed in its ballot recommendations for the November 2026 election.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "ca-us-house-49",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "ca-us-house-50",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "ca-us-house-51",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "ca-us-house-52",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sd-city-council-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sd-city-council-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sd-city-council-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sd-city-council-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sd-county-assessor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sd-county-board-of-ed-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sd-county-board-of-ed-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sd-county-measure-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sd-county-measure-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sd-county-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sd-county-treasurer",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sdccd-district-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sdccd-district-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sdusd-district-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sdusd-district-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-2015",
+    "target_id": "sdusd-measure-m",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its ballot recommendations on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu2015.org/justice-for-all/democracy-for-all/ballot-recommendations/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "ca-assembly-75",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "ca-assembly-76",
+    "status": "endorsed",
+    "choice": "Darshana Patel",
+    "why": "Listed in its November 2026 endorsements.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "ca-assembly-77",
+    "status": "endorsed",
+    "choice": "Tasha Boerner",
+    "why": "Listed in its November 2026 endorsements.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "ca-assembly-78",
+    "status": "endorsed",
+    "choice": "Chris Ward",
+    "why": "Listed in its November 2026 endorsements.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "ca-assembly-79",
+    "status": "endorsed",
+    "choice": "LaShae Sharp-Collins",
+    "why": "Listed in its November 2026 endorsements.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "ca-assembly-80",
+    "status": "endorsed",
+    "choice": "David A. Alvarez",
+    "why": "Listed in its November 2026 endorsements.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "ca-state-senate-18",
+    "status": "endorsed",
+    "choice": "Steve Padilla",
+    "why": "Listed in its November 2026 endorsements.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "ca-state-senate-38",
+    "status": "endorsed",
+    "choice": "Catherine S. Blakespear",
+    "why": "Listed in its November 2026 endorsements.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "ca-state-senate-40",
+    "status": "endorsed",
+    "choice": "Mara Elliott",
+    "why": "Listed in its November 2026 endorsements.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "ca-us-house-49",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "ca-us-house-50",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "ca-us-house-51",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "ca-us-house-52",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "sd-city-council-2",
+    "status": "endorsed",
+    "choice": "Nicole Crosby",
+    "why": "Listed in its November 2026 endorsements.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "sd-city-council-4",
+    "status": "endorsed",
+    "choice": "Henry Foster III",
+    "why": "Listed in its November 2026 endorsements.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "sd-city-council-6",
+    "status": "endorsed",
+    "choice": "Kent Lee",
+    "why": "Listed in its November 2026 endorsements.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "sd-city-council-8",
+    "status": "endorsed",
+    "choice": "Antonio Martinez",
+    "why": "Listed in its November 2026 endorsements.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "sd-county-assessor",
+    "status": "endorsed",
+    "choice": "Jordan Z. Marks",
+    "why": "Listed in its November 2026 endorsements.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "sd-county-board-of-ed-3",
+    "status": "endorsed",
+    "choice": "Alicia Muñoz",
+    "why": "Listed in its November 2026 endorsements.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "sd-county-board-of-ed-5",
+    "status": "endorsed",
+    "choice": "Rick Shea",
+    "why": "Listed in its November 2026 endorsements.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "sd-county-measure-a",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its November 2026 endorsements.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "sd-county-measure-b",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its November 2026 endorsements.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "sd-county-supervisor-4",
+    "status": "endorsed",
+    "choice": "Monica Montgomery Steppe",
+    "why": "Listed in its November 2026 endorsements.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "sd-county-treasurer",
+    "status": "endorsed",
+    "choice": "Larry Cohen",
+    "why": "Listed in its November 2026 endorsements.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "sdccd-district-a",
+    "status": "endorsed",
+    "choice": "Maria Nieto Senour",
+    "why": "Listed in its November 2026 endorsements.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "sdccd-district-c",
+    "status": "endorsed",
+    "choice": "Craig Milgrim",
+    "why": "Listed in its November 2026 endorsements.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "sdusd-district-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its November 2026 endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "sdusd-district-c",
+    "status": "endorsed",
+    "choice": "Hayden Gore",
+    "why": "Listed in its November 2026 endorsements.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-221",
+    "target_id": "sdusd-measure-m",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its November 2026 endorsements.",
+    "url": "https://www.seiu221.org/endorsements",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "ca-assembly-75",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "ca-assembly-76",
+    "status": "endorsed",
+    "choice": "Darshana Patel",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "ca-assembly-77",
+    "status": "endorsed",
+    "choice": "Tasha Boerner",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "ca-assembly-78",
+    "status": "endorsed",
+    "choice": "Chris Ward",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "ca-assembly-79",
+    "status": "endorsed",
+    "choice": "LaShae Sharp-Collins",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "ca-assembly-80",
+    "status": "endorsed",
+    "choice": "David A. Alvarez",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "ca-state-senate-18",
+    "status": "endorsed",
+    "choice": "Steve Padilla",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "ca-state-senate-38",
+    "status": "endorsed",
+    "choice": "Catherine S. Blakespear",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "ca-state-senate-40",
+    "status": "endorsed",
+    "choice": "Mara Elliott",
+    "why": "Listed in its 2026 election endorsements.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "ca-us-house-49",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "ca-us-house-50",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "ca-us-house-51",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "ca-us-house-52",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sd-city-council-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sd-city-council-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sd-city-council-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sd-city-council-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sd-county-assessor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sd-county-board-of-ed-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sd-county-board-of-ed-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sd-county-measure-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sd-county-measure-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sd-county-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sd-county-treasurer",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sdccd-district-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sdccd-district-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sdusd-district-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sdusd-district-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "seiu-california",
+    "target_id": "sdusd-measure-m",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://seiuca.org/elections/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "ca-assembly-75",
+    "status": "no_position",
+    "choice": null,
+    "why": "\"No endorsement\" in its 2026 general election endorsements.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "ca-assembly-76",
+    "status": "endorsed",
+    "choice": "Darshana Patel",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "ca-assembly-77",
+    "status": "endorsed",
+    "choice": "Tasha Boerner",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "ca-assembly-78",
+    "status": "endorsed",
+    "choice": "Chris Ward",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "ca-assembly-79",
+    "status": "endorsed",
+    "choice": "LaShae Sharp-Collins",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "ca-assembly-80",
+    "status": "endorsed",
+    "choice": "David A. Alvarez",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "ca-state-senate-18",
+    "status": "endorsed",
+    "choice": "Steve Padilla",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "ca-state-senate-38",
+    "status": "endorsed",
+    "choice": "Catherine S. Blakespear",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "ca-state-senate-40",
+    "status": "endorsed",
+    "choice": "Mara Elliott",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "ca-us-house-49",
+    "status": "endorsed",
+    "choice": "Mike Levin",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "ca-us-house-50",
+    "status": "endorsed",
+    "choice": "Scott Peters",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "ca-us-house-51",
+    "status": "endorsed",
+    "choice": "Sara Jacobs",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "ca-us-house-52",
+    "status": "endorsed",
+    "choice": "Juan Vargas",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "sd-city-council-2",
+    "status": "endorsed",
+    "choice": "Nicole Crosby",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "sd-city-council-4",
+    "status": "endorsed",
+    "choice": "Martha Abraham or Henry Foster III",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "sd-city-council-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "sd-city-council-8",
+    "status": "endorsed",
+    "choice": "Antonio Martinez",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "sd-county-assessor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "sd-county-board-of-ed-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "sd-county-board-of-ed-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "sd-county-measure-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "sd-county-measure-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "sd-county-supervisor-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "sd-county-treasurer",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "sdccd-district-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "sdccd-district-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "sdusd-district-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "sdusd-district-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "teamsters-joint-council-42",
+    "target_id": "sdusd-measure-m",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.teamstersjc42.com/endorsements/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "ca-state-senate-38",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its Orange County voter guide for November 2026 on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-324",
+    "target_id": "ca-us-house-49",
+    "status": "endorsed",
+    "choice": "Mike Levin",
+    "why": "Listed in its Orange County voter guide for November 2026.",
+    "url": "https://ufcw324.org/oc-voter-guide/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-western-states-council",
+    "target_id": "ca-assembly-76",
+    "status": "endorsed",
+    "choice": "Darshana Patel",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.ufcwwest.org/ufcwvotes/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-western-states-council",
+    "target_id": "ca-assembly-77",
+    "status": "endorsed",
+    "choice": "Tasha Boerner",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.ufcwwest.org/ufcwvotes/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-western-states-council",
+    "target_id": "ca-assembly-78",
+    "status": "endorsed",
+    "choice": "Chris Ward",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.ufcwwest.org/ufcwvotes/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-western-states-council",
+    "target_id": "ca-assembly-79",
+    "status": "endorsed",
+    "choice": "LaShae Sharp-Collins",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.ufcwwest.org/ufcwvotes/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-western-states-council",
+    "target_id": "ca-assembly-80",
+    "status": "endorsed",
+    "choice": "David A. Alvarez",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.ufcwwest.org/ufcwvotes/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-western-states-council",
+    "target_id": "ca-state-senate-18",
+    "status": "endorsed",
+    "choice": "Steve Padilla",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.ufcwwest.org/ufcwvotes/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-western-states-council",
+    "target_id": "ca-state-senate-38",
+    "status": "endorsed",
+    "choice": "Catherine S. Blakespear",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.ufcwwest.org/ufcwvotes/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-western-states-council",
+    "target_id": "ca-state-senate-40",
+    "status": "endorsed",
+    "choice": "Mara Elliott",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.ufcwwest.org/ufcwvotes/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-western-states-council",
+    "target_id": "ca-us-house-49",
+    "status": "endorsed",
+    "choice": "Mike Levin",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.ufcwwest.org/ufcwvotes/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-western-states-council",
+    "target_id": "ca-us-house-50",
+    "status": "endorsed",
+    "choice": "Scott Peters",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.ufcwwest.org/ufcwvotes/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-western-states-council",
+    "target_id": "ca-us-house-51",
+    "status": "endorsed",
+    "choice": "Sara Jacobs",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.ufcwwest.org/ufcwvotes/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ufcw-western-states-council",
+    "target_id": "ca-us-house-52",
+    "status": "endorsed",
+    "choice": "Juan Vargas",
+    "why": "Listed in its 2026 general election endorsements.",
+    "url": "https://www.ufcwwest.org/ufcwvotes/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-assembly-75",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-assembly-76",
+    "status": "endorsed",
+    "choice": "Darshana Patel",
+    "why": "Listed in its general election endorsements.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-assembly-77",
+    "status": "endorsed",
+    "choice": "Tasha Boerner",
+    "why": "Listed in its general election endorsements.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-assembly-78",
+    "status": "endorsed",
+    "choice": "Chris Ward",
+    "why": "Listed in its general election endorsements.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-assembly-79",
+    "status": "endorsed",
+    "choice": "LaShae Sharp-Collins",
+    "why": "Listed in its general election endorsements.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-assembly-80",
+    "status": "endorsed",
+    "choice": "David A. Alvarez",
+    "why": "Listed in its general election endorsements.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-state-senate-18",
+    "status": "endorsed",
+    "choice": "Steve Padilla",
+    "why": "Listed in its general election endorsements.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-state-senate-38",
+    "status": "endorsed",
+    "choice": "Catherine S. Blakespear",
+    "why": "Listed in its general election endorsements.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-state-senate-40",
+    "status": "endorsed",
+    "choice": "Mara Elliott",
+    "why": "Listed in its general election endorsements.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-us-house-49",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-us-house-50",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-us-house-51",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "ca-us-house-52",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "sd-city-council-2",
+    "status": "endorsed",
+    "choice": "Nicole Crosby",
+    "why": "Listed in its general election endorsements.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "sd-city-council-4",
+    "status": "endorsed",
+    "choice": "Martha Abraham",
+    "why": "Listed in its general election endorsements.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "sd-city-council-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "sd-city-council-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "sd-county-assessor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "sd-county-board-of-ed-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "sd-county-board-of-ed-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "sd-county-measure-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "sd-county-measure-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "sd-county-supervisor-4",
+    "status": "endorsed",
+    "choice": "Monica Montgomery Steppe",
+    "why": "Listed in its general election endorsements.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "sd-county-treasurer",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "sdccd-district-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "sdccd-district-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "sdusd-district-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "sdusd-district-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unac-uhcp",
+    "target_id": "sdusd-measure-m",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its general election endorsements on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://unacuhcp.org/political/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-11",
+    "target_id": "ca-state-senate-38",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked its 2026 California voter guide on Nov 2, 2026; no pick for this contest was listed.",
+    "url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "unite-here-local-11",
+    "target_id": "ca-us-house-49",
+    "status": "endorsed",
+    "choice": "Mike Levin",
+    "why": "Listed in its November 2026 California voter guide.",
+    "url": "https://www.unitehere11.org/ca-voter-guide-nov-2026/",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "ca-assembly-76",
+    "status": "endorsed",
+    "choice": "Darshana Patel",
+    "why": "Listed in its 2026 San Diego & Imperial County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_San-Diego-and-Imperial-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "ca-assembly-77",
+    "status": "endorsed",
+    "choice": "Tasha Boerner",
+    "why": "Listed in its 2026 San Diego & Imperial County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_San-Diego-and-Imperial-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "ca-assembly-78",
+    "status": "endorsed",
+    "choice": "Chris Ward",
+    "why": "Listed in its 2026 San Diego & Imperial County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_San-Diego-and-Imperial-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "ca-assembly-79",
+    "status": "endorsed",
+    "choice": "LaShae Sharp-Collins",
+    "why": "Listed in its 2026 San Diego & Imperial County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_San-Diego-and-Imperial-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "ca-assembly-80",
+    "status": "endorsed",
+    "choice": "David A. Alvarez",
+    "why": "Listed in its 2026 San Diego & Imperial County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_San-Diego-and-Imperial-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "ca-state-senate-18",
+    "status": "endorsed",
+    "choice": "Steve Padilla",
+    "why": "Listed in its 2026 San Diego & Imperial County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_San-Diego-and-Imperial-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "ca-state-senate-38",
+    "status": "endorsed",
+    "choice": "Catherine S. Blakespear",
+    "why": "Listed in its 2026 San Diego & Imperial County voter guide; its Orange County guide lists the same pick.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_San-Diego-and-Imperial-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "ca-state-senate-40",
+    "status": "endorsed",
+    "choice": "Mara Elliott",
+    "why": "Listed in its 2026 San Diego & Imperial County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_San-Diego-and-Imperial-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "ca-us-house-49",
+    "status": "endorsed",
+    "choice": "Mike Levin",
+    "why": "Listed in its 2026 San Diego & Imperial County voter guide; its Orange County guide lists the same pick.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_San-Diego-and-Imperial-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "ca-us-house-50",
+    "status": "endorsed",
+    "choice": "Scott Peters",
+    "why": "Listed in its 2026 San Diego & Imperial County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_San-Diego-and-Imperial-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "ca-us-house-51",
+    "status": "endorsed",
+    "choice": "Sara Jacobs",
+    "why": "Listed in its 2026 San Diego & Imperial County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_San-Diego-and-Imperial-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "ca-us-house-52",
+    "status": "endorsed",
+    "choice": "Juan Vargas",
+    "why": "Listed in its 2026 San Diego & Imperial County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_San-Diego-and-Imperial-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "sd-city-council-2",
+    "status": "endorsed",
+    "choice": "Nicole Crosby",
+    "why": "Listed in its 2026 San Diego & Imperial County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_San-Diego-and-Imperial-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "sd-city-council-4",
+    "status": "endorsed",
+    "choice": "Henry Foster III",
+    "why": "Listed in its 2026 San Diego & Imperial County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_San-Diego-and-Imperial-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "sd-city-council-6",
+    "status": "endorsed",
+    "choice": "Kent Lee",
+    "why": "Listed in its 2026 San Diego & Imperial County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_San-Diego-and-Imperial-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "sd-city-council-8",
+    "status": "endorsed",
+    "choice": "Gerardo Ramirez",
+    "why": "Listed in its 2026 San Diego & Imperial County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_San-Diego-and-Imperial-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "sd-county-assessor",
+    "status": "endorsed",
+    "choice": "Jordan Z. Marks",
+    "why": "Listed in its 2026 San Diego & Imperial County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_San-Diego-and-Imperial-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "sd-county-supervisor-4",
+    "status": "endorsed",
+    "choice": "Monica Montgomery Steppe",
+    "why": "Listed in its 2026 San Diego & Imperial County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_San-Diego-and-Imperial-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "sd-county-treasurer",
+    "status": "endorsed",
+    "choice": "Larry Cohen",
+    "why": "Listed in its 2026 San Diego & Imperial County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_San-Diego-and-Imperial-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "sdccd-district-a",
+    "status": "endorsed",
+    "choice": "Maria Nieto Senour",
+    "why": "Listed in its 2026 San Diego & Imperial County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_San-Diego-and-Imperial-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "sdccd-district-c",
+    "status": "endorsed",
+    "choice": "Craig Milgrim",
+    "why": "Listed in its 2026 San Diego & Imperial County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_San-Diego-and-Imperial-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "sdusd-district-b",
+    "status": "endorsed",
+    "choice": "Shana Hazan",
+    "why": "Listed in its 2026 San Diego & Imperial County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_San-Diego-and-Imperial-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "western-states-carpenters",
+    "target_id": "sdusd-measure-m",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed in its 2026 San Diego & Imperial County voter guide.",
+    "url": "https://wscarpenters.org/wp-content/uploads/2026/10/WSRCC_San-Diego-and-Imperial-County_Voter-Guide-FINAL.pdf",
+    "date": "2026-11-02",
+    "confidence": "verified"
+  }
+]

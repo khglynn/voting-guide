@@ -330,7 +330,7 @@
   ],
   "lookups": {
     "early_in_person": "https://maps.bexar.org/ElectionWaitTimes/",
-    "election_day": "https://elections.bexar.gov/DocumentCenter/View/1713/Election-Day-Vote-Centers"
+    "election_day": "https://maps.bexar.org/ElectionWaitTimes/"
   },
   "sources": [
     {

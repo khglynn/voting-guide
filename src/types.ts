@@ -224,6 +224,8 @@ export interface HowTo {
     in_line_rule: string | null;
     vote_centers: boolean | null;
     lookup_url: string | null;
+    /* The county's live wait times, from a place's `lookups.election_day_waits` (never the state's). */
+    waits_url?: string | null;
   };
   id_rules: { required: string; accepted: string[]; no_id_option: string | null };
   in_the_booth: {
@@ -272,7 +274,9 @@ export interface StateBundle {
 
 export interface HelpAction { label: string; url: string }
 
-export type Lookups = { early_in_person?: string; election_day?: string; drop_box?: string; tracking?: string };
+/* `election_day_waits` (Nov 3): the county's live Election Day wait-time page, shown beside the where-to-vote button
+   only on Election Day while the polls are open. */
+export type Lookups = { early_in_person?: string; election_day?: string; election_day_waits?: string; drop_box?: string; tracking?: string };
 export type Office = { name: string; url: string | null; phone: string | null; phone_label?: string; lines?: OfficeLine[]; hours?: string; source?: string };
 /* Text that changes on its own date (Oct 28): from `from` (the voter's local date) on, the slot at `path`
    reads `text`. Paths are the bundle's: "situations.<id>.short", "gotchas.4", "gotcha_shorts.4", "notes". */

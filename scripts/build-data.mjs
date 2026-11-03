@@ -124,7 +124,7 @@ function placeLookups(x, where) {
   if (x == null) return null;
   if (typeof x !== 'object') { warn(`${where}: lookups is not an object; dropped it`); return null; }
   const out = {};
-  for (const k of ['early_in_person', 'election_day', 'drop_box', 'tracking']) {
+  for (const k of ['early_in_person', 'election_day', 'election_day_waits', 'drop_box', 'tracking']) {
     if (x[k] == null) continue;
     const u = safeUrl(x[k]);
     if (u) out[k] = u; else warn(`${where}: lookups.${k} is not an http(s) URL; dropped it`);

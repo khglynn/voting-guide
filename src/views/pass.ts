@@ -7,7 +7,7 @@
    things to do). Every link in the official-links message is a statewide one from the state file,
    or this place's own where-to-vote page. */
 import { S } from '../state';
-import { esc, fmtDate, todayISO } from '../util';
+import { esc, fmtDate, todayISO, host } from '../util';
 import { clock, isMailState, localHowto, nextStep } from '../model/plan';
 import { ext, isOpen } from './common';
 import { countyName } from './ledger';
@@ -41,6 +41,7 @@ const COPY = '<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rec
    without it. The public one carries only statewide official links: never this guide, a
    local office's page, a saved ballot or a partisan group, and never
    election_day.lookup_url (in IL, MO, OR, PA and WA that one is a local office's page). */
+const THIRD_PARTY = /(^|\.)vote\.org$/i;
 const FAM = 'Got a plan to vote? Here’s a guide to help you sort through your ballot: {guide_url}\n\nIf you’ve already voted, text three people and ask if they have a plan too. Message me if you have questions.';
 const PUB = 'Here are the official voting links for {state_name}:\nCheck your registration: {registration_check_url}\nOfficial election info: {official_voting_url}\n\nAlready voted? Text three people and ask if they have a plan too. Message me if you have questions.';
 
@@ -136,6 +137,9 @@ export function messages(): { fam: string | null; pub: string | null } {
     whereLine = `Find early voting places${own ? ` in ${name}` : ''}: ${where}`;
   } else {
     where = place && place.lookups ? place.lookups.election_day || place.lookups.early_in_person || '' : '';
+    // Official links only (Nov 3): where a place's Election Day button is Vote.org's address lookup (Travis,
+    // Williamson and Hays list their sites only as maps and PDFs), the message gives the county's own page.
+    if (THIRD_PARTY.test(host(where))) where = place && place.by_county && place.by_county.length === 1 ? place.by_county[0].source : '';
     whereLine = `Find where to vote in ${name}: ${where}`;
   }
   let pub: string | null = null;

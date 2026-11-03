@@ -793,7 +793,8 @@
       "county": "Travis",
       "lookups": {
         "early_in_person": "https://www.google.com/maps/d/viewer?mid=1t_vWJgd_BRfKnJn_fQoHE25IV2i_0Jo",
-        "election_day": "https://www.google.com/maps/d/viewer?mid=1zqK0dRaFZQEYLkYi54gtLcxIZaeCsOQ"
+        "election_day": "https://www.vote.org/polling-place-locator/",
+        "election_day_waits": "https://updates.electionlink.net/widgets/travistx/2026-11-03/Election%20Day%20Voting%20Dashboard.html"
       },
       "source": "https://votetravis.gov/current-election-information/current-election/",
       "confidence": "verified",
@@ -839,7 +840,8 @@
       "zips": [],
       "lookups": {
         "early_in_person": "https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Early%20Voting%20Dashboard.html",
-        "election_day": "https://www.wilcotx.gov/DocumentCenter/View/22255/Notice-of-General-Election-Williamson-County"
+        "election_day": "https://www.vote.org/polling-place-locator/",
+        "election_day_waits": "https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Election%20Day%20Voting%20Dashboard.html"
       },
       "source": "https://www.wilcotx.gov/elections",
       "confidence": "verified"
@@ -849,7 +851,7 @@
       "zips": [],
       "lookups": {
         "early_in_person": "https://updates.electionlink.net/widgets/haystx/2026-11-03/Early%20Voting%20Dashboard.html",
-        "election_day": "https://www.hayscountytx.gov/DocumentCenter/View/5053/Vote-Centers-20261103-General-Election"
+        "election_day": "https://www.vote.org/polling-place-locator/"
       },
       "source": "https://www.hayscountytx.gov/873/November-3-2026-General-Election",
       "confidence": "verified"

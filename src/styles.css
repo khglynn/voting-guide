@@ -262,6 +262,7 @@ b, strong { font-weight: 600; }
 .plan-acts { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; }
 .plan-hint { margin-top: 10px; font-size: 14px; color: var(--on-dusk-2); line-height: 1.4; }
 .plan-hint .linkbtn { color: var(--on-dusk); }
+.plan-waits a { color: var(--on-dusk); display: inline-block; padding: 4px 0; }
 .pbtn { display: flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 10px; font-weight: 600; font-size: 15px; text-decoration: none; border-radius: 2px; text-align: center; line-height: 1.2; }
 .pbtn.gold { background: #F3EDDD; color: #1F2623; box-shadow: var(--lie); }
 .pbtn.line { border: 1.25px solid var(--on-dusk-2); color: var(--on-dusk); }

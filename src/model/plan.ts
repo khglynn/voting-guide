@@ -194,6 +194,9 @@ function placeHowto(h0: HowTo, places: PlaceBundle[], county: string | null): Ho
       mail_ballot: lb || lt ? { ...h.mail_ballot, ...(lb ? { drop_box_lookup_url: lb } : {}), ...(lt ? { tracking_url: lt } : {}) } : h.mail_ballot,
     };
   }
+  // The county's live Election Day wait times (Nov 3), the same rule: only when every place on the ballot gives the same page.
+  const lw = one('election_day_waits');
+  if (lw) h = { ...h, election_day: { ...h.election_day, waits_url: lw } };
   // The county's own mail-ballot facts and opening time (Oct 29), when every place on the ballot gives the same ones:
   // the City of St. Louis's ballots go back only to its own Board, Nashville's polls open at 7.
   const same = <T>(xs: (T | undefined)[]): T | null => (xs.length && xs.every((x) => x != null) && new Set(xs.map((x) => JSON.stringify(x))).size === 1 ? xs[0]! : null);

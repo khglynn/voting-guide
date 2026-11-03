@@ -1,0 +1,1217 @@
+{
+  "county": "Travis",
+  "state": "TX",
+  "election_date": "2026-11-03",
+  "list_source": "https://votetravis.gov/wp-content/uploads/G26-Election-Day-Flyer-FINAL-Website-wNotice.pdf",
+  "coords_source": "https://www.vote.org/polling-place-locator/ (Vote.org public locator feed, with 4 points corrected from the county's Election Day dashboard map)",
+  "fetched": "2026-11-03T18:16:19.585Z",
+  "count_official": 201,
+  "sites": [
+    {
+      "name": "Affinity at Wells Branch",
+      "address": "14508 Owen Tech Blvd, Austin, TX 78728",
+      "lat": 30.437413,
+      "lng": -97.671362
+    },
+    {
+      "name": "Akins High School",
+      "address": "10701 S 1st St, Austin, TX 78748",
+      "lat": 30.150414,
+      "lng": -97.801454
+    },
+    {
+      "name": "All Nations Church",
+      "address": "16804 Radholme Ct, Round Rock, TX 78664",
+      "lat": 30.468564,
+      "lng": -97.659422
+    },
+    {
+      "name": "Alternative Learning Center at Sims Elementary School",
+      "address": "1203 Springdale Rd, Austin, TX 78721",
+      "lat": 30.279335,
+      "lng": -97.686533
+    },
+    {
+      "name": "Anderson High School",
+      "address": "8403 Mesa Dr, Austin, TX 78759",
+      "lat": 30.376359,
+      "lng": -97.753916
+    },
+    {
+      "name": "Atria at The Arboretum",
+      "address": "9306 Great Hills Trl, Austin, TX 78759",
+      "lat": 30.392109,
+      "lng": -97.757118
+    },
+    {
+      "name": "Austin Achieve Northeast Campus",
+      "address": "7424 E Hwy 290, Austin, TX 78723",
+      "lat": 30.323476,
+      "lng": -97.678077
+    },
+    {
+      "name": "Austin City Hall",
+      "address": "301 W 2nd St, Austin, TX 78701",
+      "lat": 30.26488,
+      "lng": -97.746989
+    },
+    {
+      "name": "Austin Energy Headquarters",
+      "address": "4815 Mueller Blvd, Austin, TX 78723",
+      "lat": 30.301989,
+      "lng": -97.704438
+    },
+    {
+      "name": "Austin Fire Station No 41",
+      "address": "11205 Harris Branch Pkwy, Austin, TX 78754",
+      "lat": 30.347046,
+      "lng": -97.613222
+    },
+    {
+      "name": "Austin Hills Church",
+      "address": "8203 W State Hwy 71, Austin, TX 78735",
+      "lat": 30.246281,
+      "lng": -97.887255
+    },
+    {
+      "name": "Austin Oaks Church",
+      "address": "4220 Monterey Oaks Blvd, Austin, TX 78749",
+      "lat": 30.22999,
+      "lng": -97.832487
+    },
+    {
+      "name": "Austin Permitting and Development Center",
+      "address": "6310 Wilhelmina Delco Dr, Austin, TX 78752",
+      "lat": 30.325226,
+      "lng": -97.709851
+    },
+    {
+      "name": "Austin Presbyterian Theological Seminary",
+      "address": "100 E 27th St, Austin, TX 78705",
+      "lat": 30.292581,
+      "lng": -97.737718
+    },
+    {
+      "name": "Austin Recreation Center",
+      "address": "1301 Shoal Creek Blvd, Austin, TX 78701",
+      "lat": 30.278043,
+      "lng": -97.749221
+    },
+    {
+      "name": "Bailey Middle School",
+      "address": "4020 Lost Oasis Hollow, Austin, TX 78739",
+      "lat": 30.164329,
+      "lng": -97.872255
+    },
+    {
+      "name": "Baker Center",
+      "address": "3908 Avenue B, Austin, TX 78751",
+      "lat": 30.304064,
+      "lng": -97.735707
+    },
+    {
+      "name": "Balcones Bingo",
+      "address": "13096 US 183, Austin, TX 78750",
+      "lat": 30.439193,
+      "lng": -97.780478
+    },
+    {
+      "name": "Bear Creek Elementary School",
+      "address": "12801 Escarpment Blvd, Austin, TX 78739",
+      "lat": 30.170296,
+      "lng": -97.909751
+    },
+    {
+      "name": "Bedichek Middle School",
+      "address": "6800 Bill Hughes Rd, Austin, TX 78745",
+      "lat": 30.195283,
+      "lng": -97.785924
+    },
+    {
+      "name": "Bee Cave City Hall",
+      "address": "4000 Galleria Pkwy, Bee Cave, TX 78738",
+      "lat": 30.3085,
+      "lng": -97.939912
+    },
+    {
+      "name": "Ben Hur Shrine Center",
+      "address": "7811 Rockwood Ln, Austin, TX 78757",
+      "lat": 30.358148,
+      "lng": -97.738345
+    },
+    {
+      "name": "Berkeley United Methodist Church",
+      "address": "2407 Berkeley Ave, Austin, TX 78745",
+      "lat": 30.209977,
+      "lng": -97.808288
+    },
+    {
+      "name": "Bible Baptist Church of Pflugerville",
+      "address": "14400 Immanuel Rd, Pflugerville, TX 78660",
+      "lat": 30.412184,
+      "lng": -97.624937
+    },
+    {
+      "name": "Blazier Intermediate",
+      "address": "8801 Vertex Blvd, Austin, TX 78747",
+      "lat": 30.152551,
+      "lng": -97.752599
+    },
+    {
+      "name": "Boone Elementary School",
+      "address": "8101 Croftwood Dr, Austin, TX 78749",
+      "lat": 30.203724,
+      "lng": -97.840351
+    },
+    {
+      "name": "Boulder Ridge Clubhouse",
+      "address": "3300 Killingsworth Ln, Pflugerville, TX 78660",
+      "lat": 30.41297,
+      "lng": -97.60561
+    },
+    {
+      "name": "Bowie High School",
+      "address": "4103 W Slaughter Ln, Austin, TX 78749",
+      "lat": 30.18892,
+      "lng": -97.857356
+    },
+    {
+      "name": "Briarcliff POA Community Center",
+      "address": "22801 Briarcliff Dr, Briarcliff, TX 78669",
+      "lat": 30.406507,
+      "lng": -98.057632
+    },
+    {
+      "name": "Cambridge Villas",
+      "address": "15711 Dessau Rd, Pflugerville, TX 78660",
+      "lat": 30.430993,
+      "lng": -97.621607
+    },
+    {
+      "name": "Campbell Elementary School",
+      "address": "2613 Rogers Ave, Austin, TX 78722",
+      "lat": 30.282528,
+      "lng": -97.713378
+    },
+    {
+      "name": "Cantu Pan Am Recreation Center",
+      "address": "2100 E 3rd St, Austin, TX 78702",
+      "lat": 30.257993,
+      "lng": -97.720696
+    },
+    {
+      "name": "Canyon Ridge Middle School",
+      "address": "12601 Country Trails Ln, Austin, TX 78732",
+      "lat": 30.365521,
+      "lng": -97.901554
+    },
+    {
+      "name": "Carver Branch Library",
+      "address": "1161 Angelina St, Austin, TX 78702",
+      "lat": 30.269997,
+      "lng": -97.724289
+    },
+    {
+      "name": "Ce Bar Fire Department",
+      "address": "353 S Commons Ford Rd, Austin, TX 78733",
+      "lat": 30.323696,
+      "lng": -97.875151
+    },
+    {
+      "name": "Central City Austin",
+      "address": "9023 Old Lampasas Trl, Austin, TX 78750",
+      "lat": 30.42027,
+      "lng": -97.798758
+    },
+    {
+      "name": "Cepeda Branch Library",
+      "address": "651 N Pleasant Valley Rd, Austin, TX 78702",
+      "lat": 30.259086,
+      "lng": -97.708905
+    },
+    {
+      "name": "Chinatown Center",
+      "address": "10901 N Lamar Blvd, Austin, TX 78753",
+      "lat": 30.3783,
+      "lng": -97.687731
+    },
+    {
+      "name": "Christ Episcopal Church",
+      "address": "3520 W Whitestone Blvd, Cedar Park, TX 78613",
+      "lat": 30.511149,
+      "lng": -97.881535
+    },
+    {
+      "name": "Christ Our Savior Lutheran Church",
+      "address": "21900 RM 1431, Lago Vista, TX 78645",
+      "lat": 30.498997,
+      "lng": -97.98174
+    },
+    {
+      "name": "Church at Highland Park",
+      "address": "5206 Balcones Dr, Austin, TX 78731",
+      "lat": 30.33451,
+      "lng": -97.759805
+    },
+    {
+      "name": "Church on Congress Avenue",
+      "address": "1511 S Congress Ave, Austin, TX 78704",
+      "lat": 30.248263,
+      "lng": -97.749611
+    },
+    {
+      "name": "Circle C Community Center",
+      "address": "7817 La Crosse Ave, Austin, TX 78739",
+      "lat": 30.193612,
+      "lng": -97.90861
+    },
+    {
+      "name": "Communities in Schools Central Texas",
+      "address": "2521 E St Elmo Rd, Austin, TX 78744",
+      "lat": 30.207422,
+      "lng": -97.742988
+    },
+    {
+      "name": "Community Center at Del Valle",
+      "address": "3518 S FM 973, Del Valle, TX 78617",
+      "lat": 30.19894,
+      "lng": -97.642824
+    },
+    {
+      "name": "Community Center at Jonestown",
+      "address": "18649 RM 1431 Ste 6A, Jonestown, TX 78645",
+      "lat": 30.49284,
+      "lng": -97.92338
+    },
+    {
+      "name": "Community Center at Oak Hill",
+      "address": "8656 W State Hwy 71, Austin, TX 78735",
+      "lat": 30.250004,
+      "lng": -97.893867
+    },
+    {
+      "name": "Community First! Village",
+      "address": "9301 Hog Eye Rd, Austin, TX 78724",
+      "lat": 30.282182,
+      "lng": -97.623304
+    },
+    {
+      "name": "Congregation Beth Israel",
+      "address": "3901 Shoal Creek Blvd, Austin, TX 78756",
+      "lat": 30.30825,
+      "lng": -97.747567
+    },
+    {
+      "name": "Conley Guerrero Senior Activity Center",
+      "address": "808 Nile St, Austin, TX 78702",
+      "lat": 30.26587,
+      "lng": -97.711006
+    },
+    {
+      "name": "Connally High School",
+      "address": "13212 N Lamar Blvd, Austin, TX 78753",
+      "lat": 30.417652,
+      "lng": -97.675945
+    },
+    {
+      "name": "Cook Elementary School",
+      "address": "1511 Cripple Creek Dr, Austin, TX 78758",
+      "lat": 30.378251,
+      "lng": -97.704376
+    },
+    {
+      "name": "Creedmoor Community Center",
+      "address": "12513 FM 1625, Creedmoor, TX 78610",
+      "lat": 30.085932,
+      "lng": -97.734864
+    },
+    {
+      "name": "Dailey Middle School",
+      "address": "14000 Westall St, Austin, TX 78725",
+      "lat": 30.242566,
+      "lng": -97.589936
+    },
+    {
+      "name": "Dan Ruiz Branch Library",
+      "address": "1600 Grove Blvd, Austin, TX 78741",
+      "lat": 30.230273,
+      "lng": -97.706852
+    },
+    {
+      "name": "Davis Elementary School",
+      "address": "5214 Duval Rd, Austin, TX 78727",
+      "lat": 30.417659,
+      "lng": -97.741796
+    },
+    {
+      "name": "Deer Creek Elementary School",
+      "address": "2420 Zeppelin Dr, Cedar Park, TX 78613",
+      "lat": 30.482545,
+      "lng": -97.852968
+    },
+    {
+      "name": "Del Valle ISD Admin Building",
+      "address": "5301 Ross Rd, Del Valle, TX 78617",
+      "lat": 30.17599,
+      "lng": -97.613395
+    },
+    {
+      "name": "Disability Rights Texas",
+      "address": "2222 W Braker Ln, Austin, TX 78758",
+      "lat": 30.392829,
+      "lng": -97.712905
+    },
+    {
+      "name": "Dittmar Recreation Center",
+      "address": "1009 W Dittmar Rd, Austin, TX 78745",
+      "lat": 30.18442,
+      "lng": -97.801778
+    },
+    {
+      "name": "East Nineteenth St Baptist Church",
+      "address": "3401 Rogge Ln, Austin, TX 78723",
+      "lat": 30.302021,
+      "lng": -97.676622
+    },
+    {
+      "name": "Elroy Community Library",
+      "address": "13512 FM 812, Del Valle, TX 78617",
+      "lat": 30.123896,
+      "lng": -97.638769
+    },
+    {
+      "name": "Emma S Barrientos Mexican American Cultural Center",
+      "address": "600 River St, Austin, TX 78701",
+      "lat": 30.258218,
+      "lng": -97.739836
+    },
+    {
+      "name": "Eternal Faith Baptist Church",
+      "address": "12720 FM 973, Manor, TX 78653",
+      "lat": 30.343742,
+      "lng": -97.542319
+    },
+    {
+      "name": "Former Verizon",
+      "address": "9705 Research Blvd, Austin, TX 78759",
+      "lat": 30.394055,
+      "lng": -97.745829
+    },
+    {
+      "name": "General Marshall Middle School",
+      "address": "4401 Tilley St, Austin, TX 78723",
+      "lat": 30.295885,
+      "lng": -97.693897
+    },
+    {
+      "name": "Genesis Presbyterian Church",
+      "address": "1507 Wilshire Blvd, Austin, TX 78722",
+      "lat": 30.295874,
+      "lng": -97.710986
+    },
+    {
+      "name": "George Morales Dove Springs Recreation Center",
+      "address": "5801 Ainez Dr, Austin, TX 78744",
+      "lat": 30.186835,
+      "lng": -97.738217
+    },
+    {
+      "name": "Good Shepherd on the Hill",
+      "address": "1700 Woodland Ave, Austin, TX 78741",
+      "lat": 30.239732,
+      "lng": -97.734956
+    },
+    {
+      "name": "Gorzycki Middle School",
+      "address": "7412 W Slaughter Ln, Austin, TX 78749",
+      "lat": 30.214617,
+      "lng": -97.89159
+    },
+    {
+      "name": "Grace + Peace Austin",
+      "address": "6301 Woodrow Ave, Austin, TX 78757",
+      "lat": 30.334501,
+      "lng": -97.729561
+    },
+    {
+      "name": "Grandview Hills Elementary School",
+      "address": "12024 Vista Parke Dr, Austin, TX 78726",
+      "lat": 30.415636,
+      "lng": -97.853713
+    },
+    {
+      "name": "Grant Worship Center",
+      "address": "1701 Kramer Ln, Austin, TX 78758",
+      "lat": 30.385239,
+      "lng": -97.704018
+    },
+    {
+      "name": "Greater Mt Zion Baptist Church",
+      "address": "4301 Tannehill Ln, Austin, TX 78721",
+      "lat": 30.280676,
+      "lng": -97.672244
+    },
+    {
+      "name": "Gus Garcia Recreation Center",
+      "address": "1201 E Rundberg Ln, Austin, TX 78753",
+      "lat": 30.353822,
+      "lng": -97.681651
+    },
+    {
+      "name": "Harris Elementary School",
+      "address": "6105 Berkman Dr, Austin, TX 78723",
+      "lat": 30.315184,
+      "lng": -97.691549
+    },
+    {
+      "name": "Hope Lutheran Church",
+      "address": "6414 N Hampton Dr, Austin, TX 78723",
+      "lat": 30.314317,
+      "lng": -97.681719
+    },
+    {
+      "name": "Howson Branch Library",
+      "address": "2500 Exposition Blvd, Austin, TX 78703",
+      "lat": 30.298242,
+      "lng": -97.767533
+    },
+    {
+      "name": "Huston-Tillotson University",
+      "address": "900 Chicon St, Austin, TX 78702",
+      "lat": 30.264668,
+      "lng": -97.721364
+    },
+    {
+      "name": "Jaime Padron Elementary School",
+      "address": "2011 W Rundberg Ln, Austin, TX 78758",
+      "lat": 30.373441,
+      "lng": -97.719861
+    },
+    {
+      "name": "John Gillum Branch Library",
+      "address": "2505 Steck Ave, Austin, TX 78757",
+      "lat": 30.362339,
+      "lng": -97.730758
+    },
+    {
+      "name": "Josephine Houston Elementary School",
+      "address": "5409 Ponciana Dr, Austin, TX 78744",
+      "lat": 30.197785,
+      "lng": -97.755164
+    },
+    {
+      "name": "Juan P Navarro Early College High School",
+      "address": "1201 Payton Gin Rd, Austin, TX 78758",
+      "lat": 30.361342,
+      "lng": -97.708505
+    },
+    {
+      "name": "Junior League of Austin",
+      "address": "5330 Bluffstone Ln, Austin, TX 78759",
+      "lat": 30.387413,
+      "lng": -97.766832
+    },
+    {
+      "name": "K Oaks Clubhouse",
+      "address": "7000 Bar K Ranch Rd, Lago Vista, TX 78645",
+      "lat": 30.471537,
+      "lng": -97.993363
+    },
+    {
+      "name": "Lago Vista Public Library",
+      "address": "5803 Thunderbird St Ste 40, Lago Vista, TX 78645",
+      "lat": 30.453597,
+      "lng": -97.987222
+    },
+    {
+      "name": "Lake Travis Community Library",
+      "address": "21209 State Hwy 71 W, Spicewood, TX 78669",
+      "lat": 30.355239,
+      "lng": -98.066239
+    },
+    {
+      "name": "Lake Travis ISD Educational Development Center",
+      "address": "607 Ranch Road 620 N, Austin, TX 78734",
+      "lat": 30.370281,
+      "lng": -97.948221
+    },
+    {
+      "name": "Lakeway Activity Center",
+      "address": "105 Cross Creek, Lakeway, TX 78734",
+      "lat": 30.362714,
+      "lng": -97.980803
+    },
+    {
+      "name": "Lakewood HOA",
+      "address": "7317 Lakewood Dr, Austin, TX 78750",
+      "lat": 30.375153,
+      "lng": -97.789108
+    },
+    {
+      "name": "Lamar Senior Activity Center",
+      "address": "2874 Shoal Crest Ave, Austin, TX 78705",
+      "lat": 30.297705,
+      "lng": -97.747968
+    },
+    {
+      "name": "Laura Bush Community Library",
+      "address": "9411 Bee Caves Rd, Austin, TX 78733",
+      "lat": 30.315941,
+      "lng": -97.871719
+    },
+    {
+      "name": "LBJ Early College High School",
+      "address": "7309 Lazy Creek Dr, Austin, TX 78724",
+      "lat": 30.314121,
+      "lng": -97.657016
+    },
+    {
+      "name": "LBJ School of Public Affairs",
+      "address": "2315 Red River St, Austin, TX 78712",
+      "lat": 30.284762,
+      "lng": -97.727304
+    },
+    {
+      "name": "Liberal Arts and Science Academy",
+      "address": "1012 Arthur Stiles Rd, Austin, TX 78721",
+      "lat": 30.257781,
+      "lng": -97.681667
+    },
+    {
+      "name": "Lost Creek Limited District",
+      "address": "1305 Quaker Ridge Dr, Austin, TX 78746",
+      "lat": 30.283734,
+      "lng": -97.833488
+    },
+    {
+      "name": "Manchaca United Methodist Church",
+      "address": "1011 FM 1626, Manchaca, TX 78652",
+      "lat": 30.140085,
+      "lng": -97.8323
+    },
+    {
+      "name": "Manor High School Ninth Grade Center",
+      "address": "12700 Gregg Manor Rd, Manor, TX 78653",
+      "lat": 30.353289,
+      "lng": -97.562292
+    },
+    {
+      "name": "Manor ISD Admin Building",
+      "address": "10335 Hwy 290, Manor, TX 78653",
+      "lat": 30.34443,
+      "lng": -97.572173
+    },
+    {
+      "name": "Mary Lee Foundation",
+      "address": "1339 Lamar Square Dr, Austin, TX 78704",
+      "lat": 30.254438,
+      "lng": -97.763594
+    },
+    {
+      "name": "McCallum High School",
+      "address": "5600 Sunshine Dr, Austin, TX 78756",
+      "lat": 30.326245,
+      "lng": -97.729829
+    },
+    {
+      "name": "Menchaca Road Branch Public Library",
+      "address": "5500 Menchaca Rd, Austin, TX 78745",
+      "lat": 30.2166,
+      "lng": -97.797303
+    },
+    {
+      "name": "Millennium Youth Entertainment Complex",
+      "address": "1156 Hargrave St, Austin, TX 78702",
+      "lat": 30.272635,
+      "lng": -97.709697
+    },
+    {
+      "name": "Mills Elementary School",
+      "address": "6201 Davis Ln, Austin, TX 78749",
+      "lat": 30.210976,
+      "lng": -97.878159
+    },
+    {
+      "name": "Milwood Branch Library",
+      "address": "12500 Amherst Dr, Austin, TX 78727",
+      "lat": 30.422347,
+      "lng": -97.715867
+    },
+    {
+      "name": "Ministerios Filadelfia Iglesia Cristiana",
+      "address": "13704 County Line Rd, Elgin, TX 78621",
+      "lat": 30.36135,
+      "lng": -97.406516
+    },
+    {
+      "name": "Montopolis Recreation Center",
+      "address": "1200 Montopolis Dr, Austin, TX 78741",
+      "lat": 30.232134,
+      "lng": -97.699341
+    },
+    {
+      "name": "Mt Zion Baptist Church",
+      "address": "2938 E 13th St, Austin, TX 78702",
+      "lat": 30.277444,
+      "lng": -97.705671
+    },
+    {
+      "name": "New Hope Missionary Baptist Church",
+      "address": "9300 Decker Ln, Austin, TX 78724",
+      "lat": 30.319599,
+      "lng": -97.610293
+    },
+    {
+      "name": "New Life Baptist Church",
+      "address": "19715 Hodde Ln, Pflugerville, TX 78660",
+      "lat": 30.460781,
+      "lng": -97.552379
+    },
+    {
+      "name": "New Sweden Lutheran Church",
+      "address": "12809 New Sweden Church Rd, Manor, TX 78653",
+      "lat": 30.405849,
+      "lng": -97.486616
+    },
+    {
+      "name": "North Austin Muslim Community Center",
+      "address": "11900 N Lamar Blvd, Austin, TX 78753",
+      "lat": 30.390059,
+      "lng": -97.6836
+    },
+    {
+      "name": "Northlake Church",
+      "address": "3610 Lohman Ford Rd, Lago Vista, TX 78645",
+      "lat": 30.41843,
+      "lng": -97.974863
+    },
+    {
+      "name": "Northtown MUD",
+      "address": "700 E Wells Branch Pkwy, Pflugerville, TX 78660",
+      "lat": 30.429317,
+      "lng": -97.642121
+    },
+    {
+      "name": "Northwest Hills United Methodist Church Youth Center",
+      "address": "7027 Hart Ln, Austin, TX 78731",
+      "lat": 30.353506,
+      "lng": -97.757819
+    },
+    {
+      "name": "Northwest Recreation Center",
+      "address": "2913 Northland Dr, Austin, TX 78757",
+      "lat": 30.333674,
+      "lng": -97.751925
+    },
+    {
+      "name": "O Henry Middle School",
+      "address": "2610 W 10th St, Austin, TX 78703",
+      "lat": 30.285398,
+      "lng": -97.774234
+    },
+    {
+      "name": "Oak Hill Fire Dept No 301",
+      "address": "9211 Circle Dr, Austin, TX 78736",
+      "lat": 30.238901,
+      "lng": -97.919552
+    },
+    {
+      "name": "Oak Hill Fire Dept No 302",
+      "address": "4111 Barton Creek Blvd, Austin, TX 78735",
+      "lat": 30.278874,
+      "lng": -97.883244
+    },
+    {
+      "name": "Odom Elementary School",
+      "address": "1010 Turtle Creek Blvd, Austin, TX 78745",
+      "lat": 30.205587,
+      "lng": -97.789485
+    },
+    {
+      "name": "Ojeda Middle School",
+      "address": "4900 McKinney Falls Pky, Austin, TX 78744",
+      "lat": 30.190265,
+      "lng": -97.709962
+    },
+    {
+      "name": "Our Savior Lutheran Church",
+      "address": "1513 E Yager Ln, Austin, TX 78753",
+      "lat": 30.387041,
+      "lng": -97.652017
+    },
+    {
+      "name": "Palm Elementary School",
+      "address": "7601 Dixie Dr, Austin, TX 78744",
+      "lat": 30.164825,
+      "lng": -97.744277
+    },
+    {
+      "name": "Paredes Middle School",
+      "address": "10100 S Mary Moore Searight Dr, Austin, TX 78748",
+      "lat": 30.173905,
+      "lng": -97.807408
+    },
+    {
+      "name": "Peace Lutheran Church",
+      "address": "10625 N FM 620 Rd, Austin, TX 78726",
+      "lat": 30.445751,
+      "lng": -97.831326
+    },
+    {
+      "name": "Perez Elementary School",
+      "address": "7500 S Pleasant Valley Rd, Austin, TX 78744",
+      "lat": 30.1704,
+      "lng": -97.753878
+    },
+    {
+      "name": "PfISD Rock Gym",
+      "address": "702 W Pecan St, Pflugerville, TX 78660",
+      "lat": 30.443033,
+      "lng": -97.627282
+    },
+    {
+      "name": "Pfluger Hall and Conference Center",
+      "address": "203 E Pecan St, Pflugerville, TX 78660",
+      "lat": 30.438887,
+      "lng": -97.619469
+    },
+    {
+      "name": "Pflugerville Fire Station No 6",
+      "address": "17401 Weiss Ln, Pflugerville, TX 78660",
+      "lat": 30.432875,
+      "lng": -97.569154
+    },
+    {
+      "name": "Pflugerville Lions Club",
+      "address": "500 N Railroad Ave, Pflugerville, TX 78660",
+      "lat": 30.442802,
+      "lng": -97.618543
+    },
+    {
+      "name": "Pflugerville Public Library",
+      "address": "1008 W Pfluger St, Pflugerville, TX 78660",
+      "lat": 30.442583,
+      "lng": -97.629028
+    },
+    {
+      "name": "Pleasant Hill Branch Library",
+      "address": "211 E William Cannon Dr, Austin, TX 78745",
+      "lat": 30.192258,
+      "lng": -97.777148
+    },
+    {
+      "name": "Presbyterian Church of Lake Travis",
+      "address": "14820 Hamilton Pool Rd, Austin, TX 78738",
+      "lat": 30.307097,
+      "lng": -97.976833
+    },
+    {
+      "name": "Primera Iglesia Bautista de Austin",
+      "address": "2100 E Ben White Blvd, Austin, TX 78741",
+      "lat": 30.216974,
+      "lng": -97.741507
+    },
+    {
+      "name": "Randalls Brodie",
+      "address": "9911 Brodie Ln, Austin, TX 78748",
+      "lat": 30.184523,
+      "lng": -97.848586
+    },
+    {
+      "name": "Randalls Flagship West Lake Hills",
+      "address": "3300 Bee Caves Rd, West Lake Hills, TX 78746",
+      "lat": 30.275732,
+      "lng": -97.800159
+    },
+    {
+      "name": "Randalls Steiner Ranch",
+      "address": "5145 N FM 620, Austin, TX 78732",
+      "lat": 30.389179,
+      "lng": -97.883575
+    },
+    {
+      "name": "Region 13 Education Service Center",
+      "address": "5701 Springdale Rd, Austin, TX 78723",
+      "lat": 30.300001,
+      "lng": -97.671327
+    },
+    {
+      "name": "Riata Trace",
+      "address": "12221 Riata Trace Pkwy, Austin, TX 78727",
+      "lat": 30.428777,
+      "lng": -97.750686
+    },
+    {
+      "name": "River Place Elementary School",
+      "address": "6500 Sitio Del Rio Blvd, Austin, TX 78730",
+      "lat": 30.390057,
+      "lng": -97.844006
+    },
+    {
+      "name": "Riverbend Centre",
+      "address": "4214 N Capital of Texas Hwy, Austin, TX 78746",
+      "lat": 30.341413,
+      "lng": -97.804192
+    },
+    {
+      "name": "Rosedale School",
+      "address": "7505 Silvercrest Dr, Austin, TX 78757",
+      "lat": 30.352845,
+      "lng": -97.736791
+    },
+    {
+      "name": "Round Mountain Baptist Church",
+      "address": "14500 Round Mountain Rd, Leander, TX 78641",
+      "lat": 30.574821,
+      "lng": -97.949318
+    },
+    {
+      "name": "RRISD Hartfield Performing Arts Center",
+      "address": "5800 McNeil Dr, Austin, TX 78729",
+      "lat": 30.447668,
+      "lng": -97.735981
+    },
+    {
+      "name": "Sage Park Austin",
+      "address": "4401 Spicewood Springs Rd, Austin, TX 78759",
+      "lat": 30.372155,
+      "lng": -97.758891
+    },
+    {
+      "name": "Sam Houston Building",
+      "address": "201 E 14th St, Austin, TX 78701",
+      "lat": 30.275312,
+      "lng": -97.738425
+    },
+    {
+      "name": "Sawyer Hall Event Center",
+      "address": "1320 E 51st St, Austin, TX 78723",
+      "lat": 30.307164,
+      "lng": -97.704554
+    },
+    {
+      "name": "Shepherd of the Hills Presbyterian Church",
+      "address": "5226 W William Cannon Dr, Austin, TX 78749",
+      "lat": 30.224993,
+      "lng": -97.852995
+    },
+    {
+      "name": "Shops at Arbor Walk",
+      "address": "10515 N Mopac Expy, Austin, TX 78759",
+      "lat": 30.38694,
+      "lng": -97.733983
+    },
+    {
+      "name": "South Austin Recreation Center",
+      "address": "1100 Cumberland Rd, Austin, TX 78704",
+      "lat": 30.241407,
+      "lng": -97.768676
+    },
+    {
+      "name": "South Austin Senior Activity Center",
+      "address": "3911 Menchaca Rd, Austin, TX 78704",
+      "lat": 30.233404,
+      "lng": -97.784572
+    },
+    {
+      "name": "St Albans Episcopal Church",
+      "address": "11819 IH 35 S, Austin, TX 78747",
+      "lat": 30.129931,
+      "lng": -97.798518
+    },
+    {
+      "name": "St Edwards University",
+      "address": "3001 S Congress Ave, Austin, TX 78704",
+      "lat": 30.232095,
+      "lng": -97.757127
+    },
+    {
+      "name": "St Elmo Elementary School",
+      "address": "600 W St Elmo Rd, Austin, TX 78745",
+      "lat": 30.22164,
+      "lng": -97.77357
+    },
+    {
+      "name": "St Johns United Methodist Church",
+      "address": "2140 Allandale Rd, Austin, TX 78756",
+      "lat": 30.335347,
+      "lng": -97.741425
+    },
+    {
+      "name": "St Marks Episcopal Church",
+      "address": "2128 Barton Hills Dr #4651, Austin, TX 78704",
+      "lat": 30.253424,
+      "lng": -97.785658
+    },
+    {
+      "name": "St Matthews Episcopal Church",
+      "address": "4121 Steck Ave, Austin, TX 78759",
+      "lat": 30.373963,
+      "lng": -97.75646
+    },
+    {
+      "name": "Stone Hill Apartments",
+      "address": "17900 Pfluger Farm Ln, Pflugerville, TX 78660",
+      "lat": 30.461079,
+      "lng": -97.609952
+    },
+    {
+      "name": "Sunset Valley City Hall",
+      "address": "3205 Jones Rd, Austin, TX 78745",
+      "lat": 30.228329,
+      "lng": -97.81026
+    },
+    {
+      "name": "TA Brown Elementary School",
+      "address": "7801 Guadalupe St, Austin, TX 78752",
+      "lat": 30.344708,
+      "lng": -97.709387
+    },
+    {
+      "name": "TCC Complex",
+      "address": "3614 Bill Price Rd, Del Valle, TX 78617",
+      "lat": 30.196591,
+      "lng": -97.647088
+    },
+    {
+      "name": "Terrazas Branch Library",
+      "address": "1105 E Cesar Chavez St, Austin, TX 78702",
+      "lat": 30.259883,
+      "lng": -97.733292
+    },
+    {
+      "name": "The Union at Easton Park",
+      "address": "7604 Solari Dr, Austin, TX 78744",
+      "lat": 30.155565,
+      "lng": -97.719241
+    },
+    {
+      "name": "Travis County Civil and Family Courts Facility",
+      "address": "1700 Guadalupe St, Austin, TX 78701",
+      "lat": 30.280104,
+      "lng": -97.742539
+    },
+    {
+      "name": "Travis County Clerk",
+      "address": "5501 Airport Blvd, Austin, TX 78751",
+      "lat": 30.316373,
+      "lng": -97.712767
+    },
+    {
+      "name": "Travis County HHS Pflugerville Community Center",
+      "address": "15822 Foothill Farms Loop, Pflugerville, TX 78660",
+      "lat": 30.449064,
+      "lng": -97.651985
+    },
+    {
+      "name": "Travis County Services for the Deaf and Hard of Hearing",
+      "address": "2201 Post Rd, Austin, TX 78704",
+      "lat": 30.240816,
+      "lng": -97.751305
+    },
+    {
+      "name": "Travis County Sheriff East Command",
+      "address": "7811 Burleson Manor Rd, Manor, TX 78653",
+      "lat": 30.265947,
+      "lng": -97.52225
+    },
+    {
+      "name": "Travis County Sheriff West Command",
+      "address": "3800 Hudson Bend Rd, Austin, TX 78734",
+      "lat": 30.39855,
+      "lng": -97.929438
+    },
+    {
+      "name": "Travis Early College High School",
+      "address": "1211 E Oltorf St, Austin, TX 78704",
+      "lat": 30.234241,
+      "lng": -97.743777
+    },
+    {
+      "name": "Trinity Baptist Church",
+      "address": "2305 Forbes Dr, Austin, TX 78754",
+      "lat": 30.333459,
+      "lng": -97.671953
+    },
+    {
+      "name": "Turner Roberts Recreation Center",
+      "address": "7201 Colony Loop Dr, Austin, TX 78724",
+      "lat": 30.300394,
+      "lng": -97.636029
+    },
+    {
+      "name": "Twin Oaks Branch Library",
+      "address": "1800 S 5th St, Austin, TX 78704",
+      "lat": 30.248975,
+      "lng": -97.761913
+    },
+    {
+      "name": "Typhoon Texas Waterpark",
+      "address": "18500 TX 130 Service Rd, Pflugerville, TX 78660",
+      "lat": 30.460168,
+      "lng": -97.595547
+    },
+    {
+      "name": "United Christian Church",
+      "address": "3500 W Parmer Ln, Austin, TX 78727",
+      "lat": 30.423816,
+      "lng": -97.70903
+    },
+    {
+      "name": "University Hills Branch Library",
+      "address": "4721 Loyola Ln, Austin, TX 78723",
+      "lat": 30.308849,
+      "lng": -97.666536
+    },
+    {
+      "name": "University Presbyterian Church",
+      "address": "2203 San Antonio St, Austin, TX 78705",
+      "lat": 30.285551,
+      "lng": -97.742478
+    },
+    {
+      "name": "Uprising Austin",
+      "address": "8601 S 1st St, Austin, TX 78748",
+      "lat": 30.17642,
+      "lng": -97.797745
+    },
+    {
+      "name": "UT Texas Union",
+      "address": "2308 Whitis Ave, Austin, TX 78712",
+      "lat": 30.286412,
+      "lng": -97.741177
+    },
+    {
+      "name": "Valley View Elementary",
+      "address": "1201 S Capital of Texas Hwy, Austin, TX 78746",
+      "lat": 30.282786,
+      "lng": -97.821032
+    },
+    {
+      "name": "Village at Collinwood",
+      "address": "1001 Collinwood West Dr, Austin, TX 78753",
+      "lat": 30.371117,
+      "lng": -97.674749
+    },
+    {
+      "name": "Villages of Shady Hollow Amenity Center",
+      "address": "12006 Gatling Gun Ln, Austin, TX 78748",
+      "lat": 30.154111,
+      "lng": -97.854167
+    },
+    {
+      "name": "Virginia L Brown Recreation Center",
+      "address": "7500 Blessing Ave, Austin, TX 78752",
+      "lat": 30.332055,
+      "lng": -97.693226
+    },
+    {
+      "name": "Volente Fire Department",
+      "address": "15406 FM 2769, Leander, TX 78641",
+      "lat": 30.435698,
+      "lng": -97.903981
+    },
+    {
+      "name": "Wells Branch Community Center",
+      "address": "2106 Klattenhoff Dr, Austin, TX 78728",
+      "lat": 30.442336,
+      "lng": -97.679638
+    },
+    {
+      "name": "Wells Branch MUD Recreation Center",
+      "address": "3000 Shoreline Dr, Austin, TX 78728",
+      "lat": 30.454778,
+      "lng": -97.683139
+    },
+    {
+      "name": "Western Hills Church of Christ",
+      "address": "6211 Parkwood Dr, Austin, TX 78735",
+      "lat": 30.236941,
+      "lng": -97.855186
+    },
+    {
+      "name": "Westlake United Methodist Church",
+      "address": "1460 Redbud Trl, Austin, TX 78746",
+      "lat": 30.295054,
+      "lng": -97.82094
+    },
+    {
+      "name": "Westminster Presbyterian Church",
+      "address": "3208 Exposition Blvd, Austin, TX 78703",
+      "lat": 30.30847,
+      "lng": -97.763671
+    },
+    {
+      "name": "Westoak Woods Baptist Church",
+      "address": "2900 W Slaughter Ln, Austin, TX 78748",
+      "lat": 30.178676,
+      "lng": -97.839039
+    },
+    {
+      "name": "Wheatsville Food Coop South Lamar",
+      "address": "4001 S Lamar Blvd, Austin, TX 78704",
+      "lat": 30.235207,
+      "lng": -97.79137
+    },
+    {
+      "name": "Whisper Valley Discovery and Amenity Center",
+      "address": "9400 Petrichor Blvd, Manor, TX 78653",
+      "lat": 30.292385,
+      "lng": -97.554361
+    },
+    {
+      "name": "Will Hampton Branch Library",
+      "address": "5125 Convict Hill Rd, Austin, TX 78749",
+      "lat": 30.217593,
+      "lng": -97.854968
+    },
+    {
+      "name": "Windsor Park Branch Library",
+      "address": "5833 Westminster Dr, Austin, TX 78723",
+      "lat": 30.311272,
+      "lng": -97.690207
+    },
+    {
+      "name": "Winters Building",
+      "address": "701 W 51st St, Austin, TX 78751",
+      "lat": 30.316143,
+      "lng": -97.730694
+    },
+    {
+      "name": "Woodway Village",
+      "address": "4600 Nuckols Crossing Rd, Austin, TX 78744",
+      "lat": 30.199635,
+      "lng": -97.735211
+    },
+    {
+      "name": "Wooten Elementary School",
+      "address": "1405 Wooten Dr, Austin, TX 78757",
+      "lat": 30.354609,
+      "lng": -97.719236
+    },
+    {
+      "name": "Yarborough Branch Library",
+      "address": "2200 Hancock Dr, Austin, TX 78756",
+      "lat": 30.323548,
+      "lng": -97.740627
+    },
+    {
+      "name": "YMCA East Communities Y",
+      "address": "5315 Ed Bluestein Blvd, Austin, TX 78723",
+      "lat": 30.290968,
+      "lng": -97.66372
+    },
+    {
+      "name": "YMCA North Austin",
+      "address": "1000 W Rundberg Ln, Austin, TX 78758",
+      "lat": 30.364751,
+      "lng": -97.699854
+    },
+    {
+      "name": "Zilker Elementary School",
+      "address": "1900 Bluebonnet Ln, Austin, TX 78704",
+      "lat": 30.252748,
+      "lng": -97.774358
+    }
+  ]
+}

@@ -90,6 +90,7 @@ const BUILD_WARNINGS = [
   [/: short is not one plain line; dropped it|: actions is not a list; dropped it|: an action needs a label and an http\(s\) URL; dropped it|: more than 2 actions; dropped the rest|: a gotcha has no text; dropped it|: registration\.register_url(_source)? is not an http\(s\) URL; dropped it|: sample_ballot_url is not an http\(s\) URL; dropped it/, 'build-dropped-help'],
   [/: early_in_person\.latest_end needs .*; dropped it/, 'date-order'],
   [/: heads_up (until_address|zips) is not .*; dropped the field/, 'heads-up-field'],
+  [/: by_county .* sites ".*" names no usable data\/sites list for that county; dropped it/, 'sites-link-dropped'],
 ];
 const reportFile = path.join(ROOT, 'public', 'data', 'build-report.json');
 const BUNDLES = path.join(ROOT, 'public', 'data');
@@ -496,6 +497,22 @@ if (fs.existsSync(MAPS_DIR)) {
     }
   }
 }
+
+/* ---------- 11. Election Day vote centers (data/sites/{id}.json, Nov 3) ----------
+   build-data checks each list's shape and points and skips a bad one (blocked above as build-skipped-file). Here:
+   a list shorter than the county's own count, which could leave a closer site out of "Closest to your address",
+   is reported; and a place's county that names a list must name one that exists. */
+const SITES_DIR = path.join(DATA, 'sites');
+const siteIds = new Set(fs.existsSync(SITES_DIR) ? fs.readdirSync(SITES_DIR).filter((x) => x.endsWith('.json')).map((x) => x.slice(0, -5)) : []);
+for (const id of siteIds) {
+  const j = load(path.join(SITES_DIR, `${id}.json`));
+  if (!j || !Array.isArray(j.sites)) continue;
+  if (Number.isInteger(j.count_official) && j.sites.length < j.count_official) warn('sites-short-of-official', `sites/${id}.json: ${j.sites.length} sites with points, the county lists ${j.count_official}`);
+  if (Number.isInteger(j.count_official) && j.sites.length > j.count_official) err('sites-more-than-official', `sites/${id}.json: ${j.sites.length} sites, more than the ${j.count_official} the county lists`);
+}
+all.places.forEach((p) => (p.by_county || []).forEach((c) => {
+  if (c && c.sites != null && !siteIds.has(String(c.sites))) err('sites-link-missing', `places/${p.id} by_county ${c.county}: sites "${c.sites}" has no data/sites/${c.sites}.json`);
+}));
 
 /* ---------- report with the ratchet ---------- */
 // WARN rules ratchet by count. ERROR rules ratchet by exact finding, so fixing one old problem

@@ -150,7 +150,15 @@ function placeByCounty(list, p, where) {
     });
     const office = c.office && isStr(c.office.name)
       ? { name: c.office.name.trim(), url: safeUrl(c.office.url), phone: str(c.office.phone), ...officeLines(c.office, `${where} by_county ${c.county}`) } : null;
-    out.push({ county: c.county.trim(), zips, lookups, source: safeUrl(c.source), confidence: conf(c.confidence), ...optional({ office }) });
+    // Its Election Day vote centers (Nov 3): a list built above, for this county in this place's state.
+    let sites = null;
+    if (c.sites != null) {
+      const l = isStr(c.sites) ? siteLists.get(c.sites.trim()) : null;
+      const ck = (x) => x.replace(/\s+county$/i, '').trim().toLowerCase();
+      if (l && ck(l.county) === ck(c.county) && l.state === String(p.state || '').toUpperCase()) sites = c.sites.trim();
+      else warn(`${where}: by_county ${c.county} sites "${c.sites}" names no usable data/sites list for that county; dropped it`);
+    }
+    out.push({ county: c.county.trim(), zips, lookups, source: safeUrl(c.source), confidence: conf(c.confidence), ...optional({ office, sites }) });
   }
   // One county is allowed: it names the county the place's own links belong to (San Marcos's are Hays's), so a
   // voter the address lookup puts in another county gets the state's links instead.
@@ -609,6 +617,59 @@ for (const f of listJson('states')) {
   states.set(s.state, s);
 }
 
+/* ---------- Election Day vote centers (Nov 3) ----------
+   data/sites/{id}.json: one county's official list of today's Election Day vote centers, each with its point, for
+   the plan's "Closest to your address" after an address lookup (src/model/sites.ts). A place's by_county entry
+   names its county's list (`sites`). Checked here: the shape, the election date (the state's), every site's name,
+   address and point (inside the state's box), and names that aren't shouting or carry an em dash. A file that
+   fails is skipped (check-data blocks on that). Written to public/data/sites/{id}.json, sorted by name, fetched
+   only when the block would show. */
+const STATE_BOX = { TX: { lat: [25.8, 36.6], lng: [-106.7, -93.5] } };
+const SITE_FIELDS = ['county', 'state', 'election_date', 'list_source', 'coords_source', 'fetched', 'count_official', 'sites'];
+const siteLists = new Map(); // id -> the published list
+// A name in capitals ("AUSTIN CITY HALL") shouts; an acronym inside a name ("Del Valle ISD") doesn't.
+const shouts = (t) => !/[a-z]/.test(t) && /[A-Z]{2,}[^A-Z]*[A-Z]{2,}|[A-Z]{5,}/.test(t);
+function checkSites(id, j) {
+  if (!/^[a-z0-9-]+$/.test(id)) return 'the file name must be lowercase letters, digits and dashes';
+  if (!j || typeof j !== 'object' || Array.isArray(j)) return 'not an object';
+  const miss = SITE_FIELDS.filter((k) => j[k] == null);
+  if (miss.length) return `missing ${miss.join(', ')}`;
+  if (!isStr(j.county)) return 'county must be text';
+  const st = isStr(j.state) ? j.state.trim().toUpperCase() : '';
+  const s = states.get(st);
+  if (!s) return `state "${j.state}" has no data/states file`;
+  if (j.election_date !== s.election_date) return `election_date ${j.election_date} is not ${st}'s election date (${s.election_date})`;
+  if (!safeUrl(j.list_source) || !safeUrl(j.coords_source)) return 'list_source and coords_source must be http(s) URLs';
+  if (!isStr(j.fetched) || !Number.isFinite(Date.parse(j.fetched))) return `fetched "${j.fetched}" is not a date and time`;
+  if (!Number.isInteger(j.count_official) || j.count_official < 1) return 'count_official must be a whole number of sites';
+  if (!Array.isArray(j.sites) || !j.sites.length) return 'sites must list at least one site';
+  const box = STATE_BOX[st];
+  if (!box) return `no bounding box for ${st} (STATE_BOX in build-data.mjs)`;
+  for (const [i, x] of j.sites.entries()) {
+    const at = `site ${i + 1}${x && isStr(x.name) ? ` (${x.name.trim()})` : ''}`;
+    if (!x || !isStr(x.name) || !isStr(x.address)) return `${at} needs a name and an address`;
+    const num = (v) => typeof v === 'number' && Number.isFinite(v);
+    if (!num(x.lat) || !num(x.lng) || x.lat < box.lat[0] || x.lat > box.lat[1] || x.lng < box.lng[0] || x.lng > box.lng[1]) return `${at}: ${x.lat},${x.lng} is not a point in ${st}`;
+    if (shouts(x.name)) return `${at}: the name is in capitals; write it in title case`;
+    if (/[\u2014]/.test(`${x.name} ${x.address}`)) return `${at}: an em dash in the name or address`;
+  }
+  return null;
+}
+for (const f of listJson('sites')) {
+  const id = path.basename(f, '.json');
+  const j = readJson(f);
+  if (!j) continue;
+  const why = checkSites(id, j);
+  if (why) { report.skippedFiles.push({ file: f, why: `Election Day sites: ${why}` }); continue; }
+  const round = (v) => Math.round(v * 1e6) / 1e6;
+  const sites = j.sites.map((x) => ({ name: x.name.trim(), address: x.address.trim(), lat: round(x.lat), lng: round(x.lng) }))
+    .sort((a, b) => (a.name < b.name ? -1 : a.name > b.name ? 1 : 0));
+  siteLists.set(id, {
+    county: j.county.trim(), state: j.state.trim().toUpperCase(), election_date: j.election_date,
+    list_source: safeUrl(j.list_source), coords_source: safeUrl(j.coords_source), fetched: j.fetched, count_official: j.count_official, sites,
+  });
+}
+
 const places = new Map();
 for (const f of listJson('places')) {
   const p = readJson(f);
@@ -1015,13 +1076,18 @@ for (const [from, to] of mapCopies) {
   fs.copyFileSync(path.join(DATA, from), path.join(OUT, to));
   sizes[to] = fs.statSync(path.join(OUT, to)).size;
 }
+// Each county's Election Day vote centers, fetched only when the plan's closest-sites block would show.
+for (const [id, l] of siteLists) {
+  fs.mkdirSync(path.join(OUT, 'sites'), { recursive: true });
+  sizes[`sites/${id}.json`] = write(`sites/${id}.json`, l);
+}
 // What each place's ballot reads after a lookup, and its total, for the size budget (about 150 KB a place).
 report.maps = Object.fromEntries([...placeMaps].map(([id, ms]) => [id, { maps: ms.map((m) => m.file), bytes: ms.reduce((a, m) => a + m.bytes, 0) }]));
 
 report.counts = {
   states: states.size, places: places.size, contests: contests.size, measures: measures.size,
   endorsers: endorsers.size, endorsements: endorsementByKey.size, zips: Object.keys(index.zips).length,
-  maps: mapCopies.length,
+  maps: mapCopies.length, sites: Object.fromEntries([...siteLists].map(([id, l]) => [id, { listed: l.sites.length, official: l.count_official }])),
 };
 report.sizes = sizes;
 fs.writeFileSync(path.join(OUT, 'build-report.json'), JSON.stringify(report, null, 2));

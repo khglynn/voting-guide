@@ -9,6 +9,7 @@ import { esc, fmtDate, todayISO, host } from '../util';
 import { nextStep, registrationAlert, registerAction, isMailState, applyDated, countyKey, type Step } from '../model/plan';
 import { ext, isOpen, bulletsHTML, leadBulletsHTML, escP, srcLink, sentences, telHTML, wordCount, deshout } from './common';
 import { queryOf, textOf, best, type Item } from '../model/search';
+import { sitesIdFor, sitesFile, wantSites, nearest, fmtMiles, directionsURL } from '../model/sites';
 
 /* What the strip last showed, so main.ts can repaint it when the step changes while the page
    sits open (the polls close, midnight passes). */
@@ -33,7 +34,7 @@ export function planHTML(): string {
       ${countyActs(h, step)}
       <div class="plan-acts">${step.primary && !countyActs(h, step) ? `<a class="pbtn gold" href="${esc(step.primary.url)}" target="_blank" rel="noopener">${esc(step.primary.label)}</a>` : ''}
         ${check ? `<a class="pbtn line" href="${esc(check)}" target="_blank" rel="noopener">Check my registration</a>` : ''}</div>
-      ${waitsHTML(h, step)}
+      ${closestHTML(h, step)}${waitsHTML(h, step)}
       ${check && (h.situations || []).some((x) => x.id === 'lookup_cant_find') ? `<p class="plan-hint">Lookup can’t find you? <button class="linkbtn" data-act="whatif-sit" data-k="lookup_cant_find" data-fk="plan-cant-find">Try your name these ways</button></p>` : ''}
       <div class="plan-row"><button class="whatif-tog" data-act="open" data-k="whatif" aria-expanded="${open}" data-fk="whatif"><span>Dates, ID, and if you moved or lost <span class="nw">your ballot<svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span></span></button>
         <button class="voted" data-act="view" data-v="pass" data-voted="1" data-fk="voted">I already voted</button></div>
@@ -67,6 +68,29 @@ function waitsHTML(h: HowTo, step: Step): string {
   if (h.election_day.waits_url) return `<p class="plan-hint plan-waits">${a(h.election_day.waits_url, 'See live wait times')}</p>`;
   const ws = (h.county_links || []).filter((l) => l.lookups.election_day_waits);
   return ws.length ? `<p class="plan-hint plan-waits">See live wait times: ${ws.map((l) => a(l.lookups.election_day_waits!, `${l.county} County`)).join(' · ')}</p>` : '';
+}
+
+/* The closest Election Day vote centers to the address looked up this visit (Nov 3): in Travis, Williamson and
+   Hays any voter can vote at any vote center in their county, so after "Use my address" the step names the three
+   nearest, each with its distance and directions, under the where-to-vote button. Only on Election Day while the
+   polls are open, only while the address found shows (the form closed: "Not it? Try again" hides it, Cancel
+   brings it back), and only for a county whose list the place names. Its list loads when this would show and
+   not before (model/sites.ts); until then, or if it never loads, nothing new shows. The distances come from the
+   Census's point in memory; the links carry only each site's own address. Anything wrong here shows nothing
+   rather than breaking the step. */
+function closestHTML(h: HowTo, step: Step): string {
+  try {
+    const at = S.ui.addrPoint;
+    if (step.phase !== 'election_day' || step.primary?.look !== 'election_day' || !at || S.ui.addrOpen) return '';
+    const id = sitesIdFor(S.ballot!.places, S.ui.addrCounty);
+    if (!id) return '';
+    const f = sitesFile(id);
+    if (!f) { wantSites(id); return ''; }
+    if (f.election_date !== h.election_date) return '';
+    const rows = nearest(f.sites, at, 3).map(({ site, mi }, i) => `<li><span class="pn-name">${esc(site.name)}</span><span class="pn-mi">${esc(fmtMiles(mi))}</span><a class="pn-dir" href="${esc(directionsURL(site))}" target="_blank" rel="noopener" data-fk="pn-dir-${i}" aria-label="${esc(`Directions to ${site.name}`)}">Directions</a></li>`).join('');
+    if (!rows) return '';
+    return `<div class="plan-near"><p class="plan-near-h" id="plan-near-h">Closest to your address:</p><ol class="plan-near-list" aria-labelledby="plan-near-h">${rows}</ol><p class="plan-hint plan-near-any">${esc(`You can vote at any site in ${f.county.replace(/\s+county$/i, '')} County.`)}</p></div>`;
+  } catch { return ''; }
 }
 
 /* The line under the next step. While you can vote in person (not in a mail state), "Bring a

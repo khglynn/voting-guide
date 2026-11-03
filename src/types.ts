@@ -283,8 +283,9 @@ export type Office = { name: string; url: string | null; phone: string | null; p
 export interface Dated { path: string; from: string; text: string }
 /* One county's where-to-vote tools for a place that spans counties. `zips`: the place's ZIPs that lie wholly
    in this county (by the Census's ZIP-to-county file and the place's own research both), so a ZIP alone can
-   name the county. */
-export interface CountyLinks { county: string; zips: string[]; lookups: Lookups; source: string; confidence: Confidence; office?: Office }
+   name the county. `sites`: the county's list of Election Day vote centers (public/data/sites/<id>.json, Nov 3),
+   for the plan's "Closest to your address" after an address lookup (model/sites.ts). */
+export interface CountyLinks { county: string; zips: string[]; lookups: Lookups; source: string; confidence: Confidence; office?: Office; sites?: string }
 /* A county's own answer to a state question: what it gives replaces the state's (steps: null means none). */
 export interface PlaceSituation { id: string; short?: string; answer?: string; steps?: string[] | null; source: string; confidence: Confidence }
 export interface OfficeLine { label: string; phone: string; hours?: string }

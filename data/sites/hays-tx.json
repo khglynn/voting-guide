@@ -1,0 +1,215 @@
+{
+  "county": "Hays",
+  "state": "TX",
+  "election_date": "2026-11-03",
+  "list_source": "https://www.hayscountytx.gov/DocumentCenter/View/5053/Vote-Centers-20261103-General-Election",
+  "coords_source": "https://www.vote.org/polling-place-locator/ (Vote.org public locator feed)",
+  "fetched": "2026-11-03T18:16:32.573Z",
+  "count_official": 34,
+  "sites": [
+    {
+      "name": "Belterra Centre",
+      "address": "151 Trinity Hills Dr, Austin, TX 78737",
+      "lat": 30.193598,
+      "lng": -97.989074
+    },
+    {
+      "name": "Broadway Polling Location",
+      "address": "401 Broadway St #A, San Marcos, TX 78666",
+      "lat": 29.861592,
+      "lng": -97.942956
+    },
+    {
+      "name": "Buda City Hall and Library",
+      "address": "405 E Loop St, Building 100, Buda, TX 78610",
+      "lat": 30.086623,
+      "lng": -97.837443
+    },
+    {
+      "name": "Centro Cultural Hispano de San Marcos",
+      "address": "211 Lee St, San Marcos, TX 78666",
+      "lat": 29.874883,
+      "lng": -97.938118
+    },
+    {
+      "name": "Child Nutrition, HCISD Support Services",
+      "address": "5750 Dacy Ln, Buda, TX 78610",
+      "lat": 30.055098,
+      "lng": -97.827856
+    },
+    {
+      "name": "Dripping Springs Ranch Park and Event Center",
+      "address": "1042 Event Center Dr, Dripping Springs, TX 78620",
+      "lat": 30.220552,
+      "lng": -98.090385
+    },
+    {
+      "name": "Dunbar Center",
+      "address": "801 W Martin Luther King Dr, San Marcos, TX 78666",
+      "lat": 29.876366,
+      "lng": -97.947778
+    },
+    {
+      "name": "First Baptist Church San Marcos",
+      "address": "325 W McCarty Ln, San Marcos, TX 78666",
+      "lat": 29.847855,
+      "lng": -97.984424
+    },
+    {
+      "name": "Gemstone Palace",
+      "address": "1101 Bunton Creek Rd, Suite 200, Kyle, TX 78640",
+      "lat": 30.003843,
+      "lng": -97.85434
+    },
+    {
+      "name": "Hays County Election Center",
+      "address": "120 Stagecoach Trl, San Marcos, TX 78666",
+      "lat": 29.864822,
+      "lng": -97.965381
+    },
+    {
+      "name": "Hays Hills Baptist Church",
+      "address": "1401 N FM 1626, Buda, TX 78610",
+      "lat": 30.11768,
+      "lng": -97.873637
+    },
+    {
+      "name": "HCISD Academic Support Center",
+      "address": "21003 IH 35 Frontage Rd, Kyle, TX 78640",
+      "lat": 30.008452,
+      "lng": -97.862544
+    },
+    {
+      "name": "Kyle City Hall",
+      "address": "100 W Center St, Kyle, TX 78640",
+      "lat": 29.988752,
+      "lng": -97.875744
+    },
+    {
+      "name": "Kyle Fire Department Station #4, Hays County ESD #5",
+      "address": "110 High Rd, Kyle, TX 78640",
+      "lat": 29.998521,
+      "lng": -97.819935
+    },
+    {
+      "name": "La Cima Amenity Center",
+      "address": "301 A Central Park Loop, San Marcos, TX 78666",
+      "lat": 29.878893,
+      "lng": -97.94323
+    },
+    {
+      "name": "LBJ Student Center, TXST",
+      "address": "301 Student Center Dr, San Marcos, TX 78666",
+      "lat": 29.889498,
+      "lng": -97.944514
+    },
+    {
+      "name": "Patriots' Hall of Dripping Springs",
+      "address": "231 Patriots' Hall Blvd, Dripping Springs, TX 78620",
+      "lat": 30.193295,
+      "lng": -98.028514
+    },
+    {
+      "name": "Pegasus Landing of San Marcos",
+      "address": "1720 Old Ranch Road 12, San Marcos, TX 78666",
+      "lat": 29.89638,
+      "lng": -97.964707
+    },
+    {
+      "name": "Plum Creek North Amenity Center",
+      "address": "350 Jack Ryan, Kyle, TX 78640",
+      "lat": 30.03306,
+      "lng": -97.881207
+    },
+    {
+      "name": "Precinct 2 Office, Hays County",
+      "address": "5458 FM 2770, Kyle, TX 78640",
+      "lat": 30.024164,
+      "lng": -97.890803
+    },
+    {
+      "name": "Precinct 4 Office, Hays County",
+      "address": "195 Roger Hanks Pkwy, Dripping Springs, TX 78620",
+      "lat": 30.195666,
+      "lng": -98.106063
+    },
+    {
+      "name": "Promiseland Church",
+      "address": "1650 Lime Kiln Rd, San Marcos, TX 78666",
+      "lat": 29.918086,
+      "lng": -97.9329
+    },
+    {
+      "name": "San Marcos Fire Department Station #5",
+      "address": "100 Carlson Cir, San Marcos, TX 78666",
+      "lat": 29.905619,
+      "lng": -97.904467
+    },
+    {
+      "name": "San Marcos Housing Authority, C.M. Allen Homes",
+      "address": "820 Sturgeon Dr, San Marcos, TX 78666",
+      "lat": 29.87408,
+      "lng": -97.922623
+    },
+    {
+      "name": "San Marcos Public Library",
+      "address": "625 E Hopkins St, San Marcos, TX 78666",
+      "lat": 29.885471,
+      "lng": -97.931325
+    },
+    {
+      "name": "Sinai Pentecostal Church",
+      "address": "208 Laredo St, San Marcos, TX 78666",
+      "lat": 29.864775,
+      "lng": -97.936737
+    },
+    {
+      "name": "South Hays Fire Department Station #12",
+      "address": "8301 Ranch Road 12, San Marcos, TX 78666",
+      "lat": 29.93482,
+      "lng": -98.079575
+    },
+    {
+      "name": "Southern Hills Church of Christ",
+      "address": "3740 FM 967, Buda, TX 78610",
+      "lat": 30.097389,
+      "lng": -97.884511
+    },
+    {
+      "name": "Sunfield Station",
+      "address": "2610 Main St #100, Buda, TX 78610",
+      "lat": 30.08971,
+      "lng": -97.808176
+    },
+    {
+      "name": "Texan Academy at Scudder",
+      "address": "400 Green Acres Dr, Wimberley, TX 78676",
+      "lat": 30.002502,
+      "lng": -98.110809
+    },
+    {
+      "name": "The Philomena Assisted Living and Memory Care",
+      "address": "350 Philomena Dr, Kyle, TX 78640",
+      "lat": 29.995554,
+      "lng": -97.866113
+    },
+    {
+      "name": "VFW Post #6441",
+      "address": "401 Jacobs Well Rd, Wimberley, TX 78676",
+      "lat": 30.042344,
+      "lng": -98.108831
+    },
+    {
+      "name": "Wimberley Community Center",
+      "address": "14068 Ranch Road 12, Wimberley, TX 78676",
+      "lat": 29.998932,
+      "lng": -98.098767
+    },
+    {
+      "name": "Yarrington, Hays County Transportation Department",
+      "address": "2171 Yarrington Rd, Kyle, TX 78640",
+      "lat": 29.935122,
+      "lng": -97.871446
+    }
+  ]
+}

@@ -4703,6 +4703,63 @@ const ADDRESS = /testing lane|testing%20lane|testing\+lane|test one/i;
   await ctx.close();
 }
 
+// Nov 3: after "Use my address" on Election Day, the plan names the three vote centers closest to the address in
+// the voter's county, with distances and directions (model/sites.ts). The Census answers with Austin City Hall's
+// point (a public building; the address line is made up). Without a lookup the plan is as it was and no list loads.
+{
+  const { ctx, page } = await newPage();
+  const sitesAsked = [];
+  page.on('request', (r) => { if (/\/data\/sites\//.test(r.url())) sitesAsked.push(new URL(r.url()).pathname); });
+  await page.goto(`${BASE}/?today=2026-11-03&now=12:00`);
+  await page.waitForSelector('#zip');
+  await page.fill('#zip', '78702');
+  await throughSetup(page);
+  await page.waitForTimeout(200);
+  const where = await page.$$eval('#plan .plan-acts a.pbtn', (els) => els.map((e) => `${e.textContent.trim()} ${e.getAttribute('href')}`));
+  check('Closest sites: before a lookup, the plan is as it was (no block) and no list loads', !(await page.$('#plan .plan-near')) && sitesAsked.length === 0 && /^Find where to vote https:\/\/www\.vote\.org\/polling-place-locator\/$/.test(where[0] || ''), `${where.join(' | ')} ${sitesAsked.join(' ')}`);
+  await page.locator('#plan').screenshot({ path: path.join(SHOTS, 'closest-sites-nolookup-380.png') });
+  const answer = { result: { addressMatches: [{ matchedAddress: 'TEST CITY HALL, AUSTIN, TX, 78701', coordinates: { x: -97.746669, y: 30.26496 }, geographies: {
+    States: [{ STATE: '48' }], Counties: [{ BASENAME: 'Travis' }], 'Incorporated Places': [{ BASENAME: 'Austin' }], '120th Congressional Districts': [{ BASENAME: '10' }],
+    '2026 State Legislative Districts - Upper': [{ BASENAME: '14' }], '2026 State Legislative Districts - Lower': [{ BASENAME: '49' }],
+    'Unified School Districts': [{ NAME: 'Austin Independent School District' }], '2020 Census Blocks': [{ INTPTLAT: '+30.2646818', INTPTLON: '-097.7472987' }] } }] } };
+  await page.route('https://geocoding.geo.census.gov/**', (route) => {
+    const cb = new URL(route.request().url()).searchParams.get('callback');
+    return route.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify(answer)})` });
+  });
+  await tap(page, '.addrbox [data-act="addr-open"]');
+  await page.fill('#addr-in', 'a test lookup');
+  await page.locator('form[data-form="addr"] button[type=submit]').tap();
+  await page.waitForSelector('#plan .plan-near li', { timeout: 10000 }).catch(() => {});
+  await page.waitForTimeout(200);
+  const rows = await page.$$eval('#plan .plan-near li', (els) => els.map((li) => ({ name: li.querySelector('.pn-name')?.textContent || '', mi: li.querySelector('.pn-mi')?.textContent || '', href: li.querySelector('a.pn-dir')?.getAttribute('href') || '', link: li.querySelector('a.pn-dir')?.textContent || '' })));
+  const miles = rows.map((r) => (/^under 0\.1 mi$/.test(r.mi) ? 0 : Number((r.mi.match(/^([\d.]+) mi$/) || [])[1])));
+  check('Closest sites: after a lookup, "Closest to your address:" and three rows, nearest first', (await text(page, '#plan .plan-near-h')) === 'Closest to your address:' && rows.length === 3 && miles.every((m, i) => Number.isFinite(m) && (!i || m >= miles[i - 1])), rows.map((r) => `${r.name} ${r.mi}`).join(' | '));
+  check('Closest sites: Austin City Hall, at the address, comes first', rows[0]?.name === 'Austin City Hall' && rows[0]?.mi === 'under 0.1 mi', rows[0] && `${rows[0].name} ${rows[0].mi}`);
+  check('Closest sites: each Directions link is Google Maps to the site’s address, never the voter’s point', rows.every((r) => r.link === 'Directions' && r.href.startsWith('https://www.google.com/maps/dir/?api=1&destination=') && !/30\.26|97\.74|origin=/.test(r.href)), rows.map((r) => r.href).join(' '));
+  check('Closest sites: "You can vote at any site in Travis County." under them', (await text(page, '#plan .plan-near-any')) === 'You can vote at any site in Travis County.');
+  check('Closest sites: Travis’s list loaded once, and no other', sitesAsked.join(' ') === '/data/sites/travis-tx.json', sitesAsked.join(' '));
+  const after = await page.$$eval('#plan .plan-acts a.pbtn', (els) => els.map((e) => `${e.textContent.trim()} ${e.getAttribute('href')}`));
+  check('Closest sites: the where-to-vote button and the wait-times line stay', after[0] === where[0] && /See live wait times/.test(await text(page, '#plan .plan-waits')), after.join(' | '));
+  check('Closest sites: nothing in all caps', (await upperCased(page)).length === 0, (await upperCased(page)).join(' | '));
+  await noSideScroll(page, 'Closest sites');
+  const tall = await page.$$eval('#plan .plan-near a.pn-dir', (els) => els.map((e) => Math.round(e.getBoundingClientRect().height)));
+  check('Closest sites: each Directions link is a 44px tap', tall.length === 3 && tall.every((h) => h >= 44), tall.join(','));
+  await page.locator('#plan').screenshot({ path: path.join(SHOTS, 'closest-sites-380.png') });
+  await page.waitForTimeout(400);
+  const stored = (await savedVG(page)) || '';
+  check('Closest sites: the point is never saved or in the page’s address', !!stored && !/30\.26|97\.74|2649|7466/.test(stored) && !/30\.26|97\.74/.test(page.url()), page.url());
+  await tap(page, '.addrbox [data-act="addr-again"]');
+  check('Closest sites: "Not it? Try again" takes the block away', !(await page.$('#plan .plan-near')));
+  await tap(page, '.addrbox [data-act="addr-close"]');
+  check('Closest sites: Cancel brings it back with the address found', !!(await page.$('#plan .plan-near li')) && !!(await page.$('.addrbox .addr-found')));
+  await page.reload();
+  await page.waitForSelector('#plan', { timeout: 15000 });
+  await page.waitForTimeout(200);
+  check('Closest sites: after a reload the block is gone (the point was this visit only)', !(await page.$('#plan .plan-near')));
+  noErrors(page, 'Closest sites');
+  await ctx.close();
+}
+
 await browser.close();
 const failed = results.filter((r) => !r.ok);
 console.log(`\n${results.length - failed.length} of ${results.length} checks passed.`);

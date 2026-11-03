@@ -176,6 +176,7 @@
   "by_county": [
     {
       "county": "Hays",
+      "sites": "hays-tx",
       "zips": [
         "78737",
         "78739"

@@ -159,6 +159,7 @@
   "by_county": [
     {
       "county": "Hays",
+      "sites": "hays-tx",
       "zips": [],
       "lookups": {
         "early_in_person": "https://updates.electionlink.net/widgets/haystx/2026-11-03/Early%20Voting%20Dashboard.html",

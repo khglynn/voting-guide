@@ -263,6 +263,17 @@ b, strong { font-weight: 600; }
 .plan-hint { margin-top: 10px; font-size: 14px; color: var(--on-dusk-2); line-height: 1.4; }
 .plan-hint .linkbtn { color: var(--on-dusk); }
 .plan-waits a { color: var(--on-dusk); display: inline-block; padding: 4px 0; }
+/* The closest Election Day sites after an address lookup (Nov 3): quiet rows in the paper's own inks, a name
+   that wraps, its distance and a tappable "Directions". */
+.plan-near { margin-top: 12px; }
+.plan-near-h { font-size: 14px; color: var(--on-dusk-2); line-height: 1.4; }
+.plan-near-list { margin-top: 4px; }
+.plan-near-list li { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; column-gap: 12px; min-height: 44px; border-top: 1px solid var(--dusk-rule); font-size: 14.5px; line-height: 1.3; color: var(--on-dusk); }
+.plan-near-list li:last-child { border-bottom: 1px solid var(--dusk-rule); }
+.pn-name { padding: 6px 0; overflow-wrap: anywhere; }
+.pn-mi { color: var(--on-dusk-2); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.pn-dir { color: var(--on-dusk); display: inline-flex; align-items: center; min-height: 44px; white-space: nowrap; }
+.plan-near-any { margin-top: 8px; }
 .pbtn { display: flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 10px; font-weight: 600; font-size: 15px; text-decoration: none; border-radius: 2px; text-align: center; line-height: 1.2; }
 .pbtn.gold { background: #F3EDDD; color: #1F2623; box-shadow: var(--lie); }
 .pbtn.line { border: 1.25px solid var(--on-dusk-2); color: var(--on-dusk); }

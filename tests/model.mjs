@@ -36,7 +36,7 @@ const util = await load('/src/util.ts');
 const geo = await load('/src/geo.ts');
 const common = await load('/src/views/common.ts');
 const mods = {};
-for (const m of ['lens', 'tally', 'bulk', 'judges', 'labels', 'plan', 'address', 'coverage', 'adds', 'search']) {
+for (const m of ['lens', 'tally', 'bulk', 'judges', 'labels', 'plan', 'address', 'coverage', 'adds', 'search', 'sites']) {
   const f = path.join(ROOT, 'src', 'model', `${m}.ts`);
   if (fs.existsSync(f)) mods[m] = await load(`/src/model/${m}.ts`);
 }
@@ -1338,6 +1338,143 @@ function roundTrip(name, stCode, places, mutate) {
     if (had) Object.defineProperty(globalThis, 'location', had); else delete globalThis.location;
   }
   st.S.ballot = keep.ballot; st.S.b = keep.b; st.S.ui.open = keep.open;
+}
+
+/* ---------- the closest Election Day sites (Nov 3) ----------
+   After an address lookup this visit, the plan's Election Day step names the three vote centers nearest the
+   Census's point in the voter's county (Travis, Williamson, Hays), with distances and directions. Everyone else
+   sees the plan exactly as before, and nothing is fetched for them. The point never reaches a link or a save. */
+{
+  const sites = mods.sites;
+  const ps = views.planstrip;
+  // Three of Travis's real vote centers, and one made-up far one, out of order on purpose.
+  const FIX = { county: 'Travis', state: 'TX', election_date: '2026-11-03', list_source: 'https://countyclerk.traviscountytx.gov/', coords_source: 'https://www.vote.org/polling-place-locator/', fetched: '2026-11-03T12:00:00Z', count_official: 4, sites: [
+    { name: 'Fixture Far Site', address: 'Far Site, Austin, TX 78653', lat: 30.5, lng: -97.6 },
+    { name: 'Terrazas Branch Library', address: '1105 E Cesar Chavez St, Austin, TX 78702', lat: 30.259883, lng: -97.733292 },
+    { name: 'Austin City Hall', address: '301 W 2nd St, Austin, TX 78701', lat: 30.26488, lng: -97.746989 },
+    { name: 'Emma S Barrientos Mexican American Cultural Center', address: '600 River St, Austin, TX 78701', lat: 30.258218, lng: -97.739836 },
+  ] };
+  // The Census's point for Austin City Hall (the public building tests/e2e.mjs looks up too).
+  const AT = { lat: 30.26496, lon: -97.746669 };
+  const near = sites.nearest(FIX.sites, AT, 3);
+  check('sites: the three nearest, nearest first, the far one left out', near.map((n) => n.site.name).join('|') === 'Austin City Hall|Emma S Barrientos Mexican American Cultural Center|Terrazas Branch Library', near.map((n) => `${n.site.name} ${n.mi.toFixed(3)}`).join('|'));
+  check('sites: distances as the crow flies, in miles (0.02, 0.62, 0.87)', near.map((n) => n.mi.toFixed(2)).join('|') === '0.02|0.62|0.87', near.map((n) => n.mi).join('|'));
+  const f = sites.fmtMiles;
+  check('sites: distance reads "0.4 mi" under 10 miles, whole miles from 10, "under 0.1 mi" at the door', f(0.44) === '0.4 mi' && f(0.62) === '0.6 mi' && f(9.94) === '9.9 mi' && f(9.96) === '10 mi' && f(12.4) === '12 mi' && f(0.02) === 'under 0.1 mi' && f(0.06) === '0.1 mi', [0.44, 9.94, 9.96, 12.4, 0.02, 0.06].map(f).join('|'));
+  const dir = sites.directionsURL(FIX.sites[2]);
+  check('sites: directions carry the site’s own address and nothing else', dir === 'https://www.google.com/maps/dir/?api=1&destination=301%20W%202nd%20St%2C%20Austin%2C%20TX%2078701' && !/origin|30\.26|97\.74/.test(dir), dir);
+  check('sites: a list that won’t read is not kept', !sites.putSites('bad-tx', { county: 'Travis', election_date: '2026-11-03', sites: [{ name: 'X', address: 'Y', lat: 'no', lng: 0 }] }) && !sites.sitesFile('bad-tx') && !sites.putSites('bad-tx', null));
+  check('sites: Austin’s three counties each name their list; San Marcos names Hays’s only', ['Travis', 'Williamson', 'Hays'].map((c) => sites.sitesIdFor([read('place-austin-tx.json')], c)).join('|') === 'travis-tx|williamson-tx|hays-tx'
+    && sites.sitesIdFor([read('place-san-marcos-tx.json')], 'Hays County') === 'hays-tx' && sites.sitesIdFor([read('place-san-marcos-tx.json')], 'Caldwell') === null && sites.sitesIdFor([read('place-dallas-tx.json')], 'Dallas') === null);
+  // Every list that ships: in Texas, today's date, at least one site, each with a name, an address and a point.
+  for (const id of ['travis-tx', 'williamson-tx', 'hays-tx']) {
+    const pth = path.join(DATA, 'sites', `${id}.json`);
+    if (!fs.existsSync(pth)) { check(`sites: public/data/sites/${id}.json is built`, false, 'missing'); continue; }
+    const l = read(`sites/${id}.json`);
+    check(`sites: ${id} ships ${l.sites.length} sites for Nov 3, every one named, addressed and inside Texas`, l.election_date === '2026-11-03' && l.state === 'TX' && l.sites.length > 0
+      && l.sites.every((x) => x.name.trim() && x.address.trim() && x.lat > 25.8 && x.lat < 36.6 && x.lng > -106.7 && x.lng < -93.5 && /[a-z]/.test(x.name) && !/—/.test(x.name + x.address)), `${l.sites.length} of ${l.count_official}`);
+  }
+
+  const keep = { ballot: st.S.ballot, b: st.S.b, ui: { ...st.S.ui } };
+  const had = Object.getOwnPropertyDescriptor(globalThis, 'location');
+  const at = (q) => Object.defineProperty(globalThis, 'location', { configurable: true, value: { search: q, origin: 'http://x', pathname: '/' } });
+  const asked = [];
+  sites.onWantSites((id) => asked.push(id));
+  const block = (html) => (html.match(/<div class="plan-near">[\s\S]*?<\/div>/) || [''])[0];
+  const lookup = (county, point = AT) => { st.S.ui.addrCounty = county; st.S.ui.addrPoint = point; st.S.ui.addrFound = 'Test One, Austin, TX 78701'; st.S.ui.addrOpen = false; };
+  const forget = () => { st.S.ui.addrCounty = null; st.S.ui.addrPoint = null; st.S.ui.addrFound = null; st.S.ui.addrOpen = false; };
+  const tick = () => new Promise((r) => setTimeout(r, 0));
+  try {
+    at('?today=2026-11-03&now=12:00');
+    let b = open('TX', ['austin-tx']);
+    bl.localize(b, '78702', null);
+    forget();
+    const plain = ps.planHTML();
+    await tick();
+    check('sites: no address looked up: no block, and nothing asked for', !block(plain) && !/Closest to your address/.test(plain) && asked.length === 0, asked.join(','));
+    lookup('Travis');
+    bl.localize(b, '78702', 'Travis');
+    let html = ps.planHTML();
+    await tick();
+    check('sites: a lookup on Election Day with the list not here yet: nothing new shows, and Travis’s list is asked for once', !block(html) && asked.join(',') === 'travis-tx', asked.join(','));
+    ps.planHTML(); await tick();
+    check('sites: asked once a visit, not on every paint', asked.join(',') === 'travis-tx', asked.join(','));
+    // A list that didn't load is asked for again after the next lookup; one still on its way never twice.
+    {
+      const seen = [];
+      let pend = null;
+      sites.onWantSites((id) => { seen.push(id); return id === 'miss-x' ? false : new Promise((r) => { pend = r; }); });
+      sites.wantSites('miss-x'); sites.wantSites('slow-x'); await tick(); await tick();
+      sites.wantSites('miss-x'); sites.wantSites('slow-x'); await tick();
+      const before = seen.join(',');
+      sites.retrySites();
+      sites.wantSites('miss-x'); sites.wantSites('slow-x'); await tick(); await tick();
+      check('sites: a list that didn’t load is asked again after a new lookup; one on its way is not asked twice', before === 'miss-x,slow-x' && seen.join(',') === 'miss-x,slow-x,miss-x', seen.join(','));
+      if (pend) pend(true);
+      sites.onWantSites((id) => asked.push(id));
+    }
+    sites.putSites('travis-tx', FIX);
+    html = ps.planHTML();
+    const rows = [...block(html).matchAll(/<li><span class="pn-name">([^<]+)<\/span><span class="pn-mi">([^<]+)<\/span><a class="pn-dir" href="([^"]+)"[^>]*data-fk="(pn-dir-\d)"[^>]*>Directions<\/a><\/li>/g)].map((m) => ({ name: m[1], mi: m[2], href: m[3].replace(/&amp;/g, '&'), fk: m[4] }));
+    check('sites: once it lands: "Closest to your address:", three rows nearest first, each with its distance and Directions', /<p class="plan-near-h"[^>]*>Closest to your address:<\/p>/.test(html) && rows.map((r) => `${r.name} ${r.mi}`).join('|') === 'Austin City Hall under 0.1 mi|Emma S Barrientos Mexican American Cultural Center 0.6 mi|Terrazas Branch Library 0.9 mi', rows.map((r) => `${r.name} ${r.mi}`).join('|'));
+    check('sites: each Directions link is Google Maps to that site’s address, never the voter’s point', rows.length === 3 && rows.every((r, i) => r.href === sites.directionsURL(near[i].site) && !/30\.26|97\.74|origin=/.test(r.href)) && rows.map((r) => r.fk).join(',') === 'pn-dir-0,pn-dir-1,pn-dir-2', rows.map((r) => r.href).join(' '));
+    check('sites: one line under it: "You can vote at any site in Travis County."', /<p class="plan-hint plan-near-any">You can vote at any site in Travis County\.<\/p>/.test(html));
+    check('sites: the "Find where to vote" button and "See live wait times" stay exactly as they were', html.replace(block(html), '').replace(/\s+/g, ' ') === plain.replace(/\s+/g, ' '), 'the plan without the block differs from the plan before the lookup');
+    check('sites: the block sits under the buttons, above the wait times', html.indexOf('class="plan-acts"') < html.indexOf('class="plan-near"') && html.indexOf('class="plan-near"') < html.indexOf('plan-waits'));
+    check('sites: no em dashes, nothing in capitals', !/—/.test(block(html)) && !/uppercase/.test(block(html)));
+    st.S.ui.addrOpen = true;
+    check('sites: "Not it? Try again" (the form open) hides it', !block(ps.planHTML()));
+    st.S.ui.addrOpen = false;
+    check('sites: Cancel brings it back', !!block(ps.planHTML()));
+    st.S.ui.addrPoint = null;
+    check('sites: a lookup with no point shows none', !block(ps.planHTML()));
+    lookup('Travis');
+    const n0 = asked.length;
+    at('?today=2026-11-02');
+    check('sites: the day before Election Day: none', !block(ps.planHTML()));
+    at('?today=2026-11-03&now=19:05');
+    check('sites: once the polls have closed: none', !block(ps.planHTML()) && /Polls closed/.test(ps.planHTML()));
+    at('?today=2026-11-03&now=12:00');
+    b = open('TX', ['san-marcos-tx']);
+    lookup('Caldwell');
+    bl.localize(b, '78666', 'Caldwell');
+    check('sites: a county the place names no list for (Caldwell on San Marcos’s ballot): none', !block(ps.planHTML()));
+    b = open('TX', ['dallas-tx']);
+    lookup('Dallas');
+    bl.localize(b, '75201', 'Dallas');
+    html = ps.planHTML();
+    await tick();
+    check('sites: a place with no lists (Dallas): none, and nothing more asked for', !block(html) && asked.length === n0, asked.join(','));
+    // A list for another election day is never used.
+    sites.putSites('travis-tx', { ...FIX, election_date: '2026-11-04' });
+    b = open('TX', ['austin-tx']);
+    lookup('Travis');
+    bl.localize(b, '78702', 'Travis');
+    check('sites: a list dated for another day shows nothing', !block(ps.planHTML()));
+    sites.putSites('travis-tx', FIX);
+    // The point never reaches the save link or saved state.
+    const mem = new Map();
+    const hadW = Object.getOwnPropertyDescriptor(globalThis, 'window');
+    Object.defineProperty(globalThis, 'window', { configurable: true, writable: true, value: { localStorage: { getItem: (k) => (mem.has(k) ? mem.get(k) : null), setItem: (k, v) => { mem.set(k, String(v)); } }, setTimeout, clearTimeout } });
+    try {
+      const view = st.S.view;
+      st.S.view = 'ballot';
+      st.S.b.picks['tx-governor'] = st.S.b.picks['tx-governor'] || 'SKIP';
+      st.persist(true);
+      st.S.view = view;
+      const link = st.encodeShare(b, st.S.b);
+      const share = views.cheat.shareURL();
+      const saved = mem.get('vg2') || '';
+      const coords = /30\.26|97\.74|2649|7466|addrPoint/;
+      check('sites: after a lookup, the save link, the share link and saved state carry no coordinates', !!saved && !coords.test(saved) && !coords.test(link) && !coords.test(share) && !coords.test(JSON.stringify(st.S.b)) && !('addrPoint' in st.S.b), `${saved.length} ${link}`);
+    } finally {
+      if (hadW) Object.defineProperty(globalThis, 'window', hadW); else delete globalThis.window;
+    }
+  } finally {
+    if (had) Object.defineProperty(globalThis, 'location', had); else delete globalThis.location;
+    sites.onWantSites(() => {});
+    st.S.ballot = keep.ballot; st.S.b = keep.b; Object.assign(st.S.ui, keep.ui);
+  }
 }
 
 /* ---------- extension points: run when the ledger's model modules exist ---------- */

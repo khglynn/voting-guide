@@ -4,7 +4,7 @@
   "type": "module",
   "description": "The voting guide's results fetcher: a Cloudflare Worker that reads official results feeds on a one-minute cron and serves one file per state.",
   "scripts": {
-    "test": "node --test test/",
+    "test": "node --test 'test/*.test.mjs'",
     "map-check": "node bin/map-check.mjs",
     "dev": "wrangler dev --test-scheduled"
   },

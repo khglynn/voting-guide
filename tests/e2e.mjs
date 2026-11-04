@@ -3625,7 +3625,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await page.fill('#zip', '78702');
   await throughSetup(page);
   const strip = await text(page, '.plan-in');
-  check('Results: Austin 78702 at 7:05 PM: Official results opens Travis County’s page, AP links Texas, its one wait line and named button show, no "I already voted"', (await page.getAttribute('[data-fk="plan-results"]', 'href')) === 'https://results.enr.clarityelections.com/TX/Travis/' && (await page.getAttribute('[data-fk="plan-ap"]', 'href')) === 'https://apnews.com/projects/elections-2026/texas-results/' && /Travis County posts early and mail votes first\. No first update time announced\./.test(strip) && /Travis County results/.test(strip) && !/Official results are below/.test(strip) && !(await page.$('[data-fk="voted"]')), strip.slice(0, 240));
+  check('Results: Austin 78702 at 7:05 PM: Official results opens Travis County’s page, AP links Texas, its one wait line and named button show, no "I already voted"', (await page.getAttribute('[data-fk="plan-results"]', 'href')) === 'https://results.enr.clarityelections.com/TX/Travis/127492/' && (await page.getAttribute('[data-fk="plan-ap"]', 'href')) === 'https://apnews.com/projects/elections-2026/texas-results/' && /Travis County posts early and mail votes first\. No first update time announced\./.test(strip) && /Travis County results/.test(strip) && !/Official results are below/.test(strip) && !(await page.$('[data-fk="voted"]')), strip.slice(0, 240));
   await tap(page, '[data-fk="whatif"]');
   await page.waitForSelector('.nexts');
   const fold = await text(page, '.nexts');

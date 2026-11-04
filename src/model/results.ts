@@ -90,18 +90,32 @@ export const pct0 = (p: number): string => pctText(p, 0);
 export const pct1 = (p: number): string => pctText(p, 1);
 /* Yes as a share of yes and no, unrounded. */
 const yesShare = (m: { yes: number; no: number }): number => (m.yes + m.no ? (m.yes / (m.yes + m.no)) * 100 : 0);
-/* A measure's bar to pass, as a percent: the file's own, else the guide's rule when it leads with one. 50 is a plain
-   majority. Retention: the file's (the Worker holds each state's), else a plain majority. */
-export function thresholdOf(it: Item, r: ItemResult): number {
-  if (r.measure && typeof r.measure.threshold === 'number') return r.measure.threshold;
-  if (it.kind !== 'measure') return 50;
+/* A measure's bar to pass, as a fraction of the yes-and-no vote (n/d): the file's own percent, else the guide's rule when
+   it leads with one (a majority is 1/2, two-thirds 2/3). Retention: the file's (the Worker holds each state's), else a
+   plain majority. Null when the rule isn't a share of yes and no (Tennessee's amendments also count the governor's race;
+   an either-or question): then nothing here says which side is ahead (Codex, Nov 3). */
+export interface Bar { n: number; d: number; pct: number }
+export function barOf(it: Item, r: ItemResult): Bar | null {
+  if (r.measure && typeof r.measure.threshold === 'number' && r.measure.threshold > 0 && r.measure.threshold < 100) return { n: r.measure.threshold, d: 100, pct: r.measure.threshold };
+  if (it.kind !== 'measure') return { n: 1, d: 2, pct: 50 };
   const t = (it.pass_threshold || '').trim();
+  if (/^(a\s+)?(simple\s+)?majority\b/i.test(t) || !t) return { n: 1, d: 2, pct: 50 };
   const p = t.match(/^(\d{2}(?:\.\d+)?)\s*(%|percent)/i);
-  if (p) return +p[1];
-  if (/^two[- ]thirds\b/i.test(t)) return 200 / 3;
-  if (/^three[- ]fifths\b/i.test(t)) return 60;
-  return 50;
+  if (p) return { n: +p[1], d: 100, pct: +p[1] };
+  if (/^two[- ]thirds\b/i.test(t)) return { n: 2, d: 3, pct: 200 / 3 };
+  if (/^three[- ]fifths\b/i.test(t)) return { n: 3, d: 5, pct: 60 };
+  return null;
 }
+export const thresholdOf = (it: Item, r: ItemResult): number | null => barOf(it, r)?.pct ?? null;
+/* Which side the count favors against the bar, by whole counts (cross-multiplied, so 55 of 100 against 55% is exactly
+   at the bar, never a float's guess): 'yes', 'no', 'at' (exactly at the bar), or null with no rule we hold. */
+export function sideOf(it: Item, r: ItemResult): 'yes' | 'no' | 'at' | null {
+  const b = barOf(it, r);
+  if (!b || !r.measure) return null;
+  const lhs = r.measure.yes * b.d, rhs = b.n * (r.measure.yes + r.measure.no);
+  return lhs > rhs ? 'yes' : lhs < rhs ? 'no' : 'at';
+}
+const plainBar = (b: Bar | null): boolean => !!b && b.n * 2 === b.d;
 const isMeasureLike = (it: Item): boolean => it.kind === 'measure' || (it.kind === 'contest' && it.is_retention);
 /* The guide's name for a candidate in the file ("Paxton" for "Ken Paxton"). */
 export function shortOf(it: Item, name: string): string {
@@ -145,13 +159,14 @@ export function resCol(it: Item, r: ItemResult): ResCol {
   const sub0 = county ? `${county} count` : word;
   if (isMeasureLike(it) && r.measure) {
     const y = yesShare(r.measure);
-    const t = thresholdOf(it, r);
+    const b = barOf(it, r);
     const pass = passedOf(r);
     const yes = it.kind === 'measure' ? `Yes ${pct0(y)}` : `Keep the judge: ${pct0(y)}`;
     if (pass !== null && !county) return { main: pass ? 'Passed' : 'Did not pass', sub: `${it.kind === 'measure' ? `Yes ${pct0(y)}` : `Keep ${pct0(y)}`} · ${word}`, pick, kind: 'num' };
     // A bar above a plain majority goes beside the share, or "Yes 53%" reads as passing (Florida, 2024: 57% failed).
-    if (t !== 50) return { main: yes, sub: `needs ${pct0(t)}${it.kind === 'measure' ? ' to pass' : ' to stay'}${county ? ` · ${county} count` : ''}`, pick, kind: 'num' };
-    if (it.kind === 'measure' && y < 50) return { main: `No ${pct0(100 - y)}`, sub: sub0, pick, kind: 'num' };
+    if (b && !plainBar(b)) return { main: yes, sub: `needs ${pct0(b.pct)}${it.kind === 'measure' ? ' to pass' : ' to stay'}${county ? ` · ${county} count` : ''}`, pick, kind: 'num' };
+    // No rule we hold: the yes share alone, never "No N%" as if no were winning.
+    if (b && it.kind === 'measure' && sideOf(it, r) === 'no') return { main: `No ${pct0(100 - y)}`, sub: sub0, pick, kind: 'num' };
     return { main: yes, sub: sub0, pick, kind: 'num' };
   }
   const c = it as Contest;
@@ -180,9 +195,9 @@ export function compare(it: Item, r: ItemResult | null): Cmp {
     if (side !== 'YES' && side !== 'NO') return 'nc';
     const pass = passedOf(r);
     if (pass !== null) return (pass === (side === 'YES')) ? 'won' : 'lost';
-    const y = yesShare(r.measure), t = thresholdOf(it, r);
-    if (y === t) return 'nc';
-    return (y > t) === (side === 'YES') ? 'ahead' : 'behind';
+    const at = sideOf(it, r);
+    if (at === null || at === 'at') return 'nc';
+    return (at === 'yes') === (side === 'YES') ? 'ahead' : 'behind';
   }
   if (it.kind !== 'contest') return 'nc';
   const w = winnersOf(r);
@@ -216,16 +231,18 @@ export function resOpen(it: Item, r: ItemResult): ResOpen {
   const low = (t: string): string => (lead ? t.charAt(0).toLowerCase() + t.slice(1) : t);
   const out: ResOpen = { word, line: '', rows: [], unmatched: [...(r.unmatched || [])] };
   if (isMeasureLike(it) && r.measure) {
-    const y = yesShare(r.measure), t = thresholdOf(it, r), pass = passedOf(r);
+    const y = yesShare(r.measure), b = barOf(it, r), pass = passedOf(r), at = sideOf(it, r);
     const judge = it.kind !== 'measure';
     const p = S.b.picks[it.id];
     out.rows = [
       { name: judge ? 'Keep' : 'Yes', party: '', votes: r.measure.yes, pct: r.measure.yes_pct, mine: p === 'YES' },
       { name: judge ? 'Remove' : 'No', party: '', votes: r.measure.no, pct: 100 - r.measure.yes_pct, mine: p === 'NO' },
     ];
-    const bar = t !== 50 ? ` It needs ${pct0(t)} yes to ${judge ? 'stay' : 'pass'}.` : '';
+    const bar = !b ? ' Passing takes more than a share of yes and no. See the office’s results.' : !plainBar(b) ? ` It needs ${pct0(b.pct)} yes to ${judge ? 'stay' : 'pass'}.` : '';
+    const Y = judge ? 'keep' : 'yes', N = judge ? 'remove' : 'no';
+    const where = at === null ? `${Y} has ${pct0(y)} so far.` : at === 'at' ? (plainBar(b) ? `${Y} and ${N} are even so far.` : `${Y} is right at the ${pct0(b!.pct)} it needs so far.`) : at === 'yes' ? `${Y} is ahead so far.` : `${N} is ahead so far.`;
     if (pass !== null && !county) out.line = judge ? (pass ? 'The judge stays.' : 'The judge does not stay.') : pass ? 'It passed.' : 'It did not pass.';
-    else if (r.status === 'counting' || county) out.line = `${lead}${y === t ? (lead ? 'yes and no are even so far.' : 'Yes and no are even so far.') : y > t ? `${judge ? 'keep' : 'yes'} is ahead so far.` : `${judge ? 'remove' : 'no'} is ahead so far.`}${bar}`.replace(/^([a-z])/, (m) => m.toUpperCase());
+    else if (r.status === 'counting' || county) out.line = `${lead}${where}${at === 'at' && !plainBar(b) ? '' : bar}`.replace(/^([a-z])/, (m) => m.toUpperCase());
     else out.line = `The office marks the count complete.${bar}`;
     return out;
   }
@@ -326,7 +343,7 @@ export const fetchedSig = (f: ResultsFile | null): string => (f ? f.sources.map(
 
 /* ---------- the figure ---------- */
 export type DotKind = 'up' | 'down' | 'wp' | 'po' | 'w';
-export interface Dot { id: string; sec: SectionKey; pick: boolean; cmp: Cmp; kind: DotKind; posted: boolean; why: '' | 'rcv' | 'multi' | 'span' | 'tie' }
+export interface Dot { id: string; sec: SectionKey; pick: boolean; cmp: Cmp; kind: DotKind; posted: boolean; why: '' | 'rcv' | 'multi' | 'span' | 'tie' | 'rule' | 'edge' }
 export interface Figure {
   word: 'Counting' | 'Unofficial' | 'Official';
   explain: string;
@@ -363,7 +380,8 @@ export function figure(): Figure | null {
     if (num) posted++;
     let w: Dot['why'] = '';
     if (pick && cmp === 'nc' && num) {
-      w = spans(r!) ? 'span' : it.kind === 'contest' && isRCV(it) ? 'rcv' : it.kind === 'contest' && isMultiSeat(it) ? 'multi' : 'tie';
+      w = spans(r!) ? 'span' : it.kind === 'contest' && isRCV(it) ? 'rcv' : it.kind === 'contest' && isMultiSeat(it) ? 'multi'
+        : isMeasureLike(it) ? (sideOf(it, r!) === null ? 'rule' : 'edge') : 'tie';
       why.add(w);
     }
     const kind: DotKind = pick ? (cmp === 'won' || cmp === 'ahead' ? 'up' : cmp === 'lost' || cmp === 'behind' ? 'down' : 'wp') : num ? 'po' : 'w';
@@ -383,6 +401,8 @@ export function figure(): Figure | null {
   if (why.has('multi')) notes.push('Races that fill more than one seat aren’t compared until the count is complete.');
   if (why.has('span')) notes.push('Races across county lines aren’t compared: each county posts its own count, and we don’t add them up.');
   if (why.has('tie')) notes.push('A race tied at the top isn’t compared.');
+  if (why.has('edge')) notes.push('A measure exactly at its bar to pass isn’t compared.');
+  if (why.has('rule')) notes.push('A measure whose rule to pass is more than a share of yes and no isn’t compared.');
   return { word, explain, rows, picks: Object.values(counts).reduce((a, n) => a + n, 0), counts, others, othersKinds: kinds, posted, total, questions: { n: qn, first }, notes };
 }
 /* "Your 25 picks: 15 ahead · 9 behind · 1 we can't compare yet" */

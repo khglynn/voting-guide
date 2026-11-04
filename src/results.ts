@@ -23,39 +23,48 @@ export function wanted(): string | null {
   return b.st;
 }
 
-let inflight: Promise<boolean> | null = null;
+/* The read in flight, for which state; and a sequence number, so a slower read that started earlier (an automatic one
+   overtaken by Refresh) can never replace what a later one brought (Codex, Nov 3). */
+let inflight: { st: string; p: Promise<boolean> } | null = null;
+let seq = 0;
 /* Read the file once. Resolves true when what the page shows changed. `bust`: Refresh, past any cache. */
 export function loadResults(bust = false): Promise<boolean> {
   const st = wanted();
   if (!st) return Promise.resolve(false);
   if (R.st !== st) resetResults(st);
-  if (inflight && !bust) return inflight;
+  if (inflight && inflight.st === st && !bust) return inflight.p;
+  const mine = ++seq;
+  const stale = (): boolean => R.st !== st || mine !== seq;
   const run = async (): Promise<boolean> => {
     const before = R.file ? R.file.generated : '';
     const wasFailed = R.failed, wasNone = R.none;
     try {
       const res = await fetch(`/results/${ELECTION}/${st}.json${bust ? `?t=${Date.now()}` : ''}`, { cache: bust ? 'no-store' : 'default' });
-      if (R.st !== st) return false; // the voter opened another state's ballot meanwhile
-      if (res.status === 404) { R.none = true; R.failed = false; return !wasNone; }
+      if (stale()) return false; // another ballot, or a later read, owns the page now
+      // No file for this state: nothing about results shows. After a good file, though, a 404 is a failed read: the
+      // numbers already on the rows stay, and the strip says it couldn't check.
+      if (res.status === 404 && !R.file) { R.none = true; R.failed = false; return !wasNone; }
       if (!res.ok) throw new Error(`results ${res.status}`);
       const f: unknown = await res.json();
-      if (R.st !== st) return false;
+      if (stale()) return false;
       if (!readable(f, st)) throw new Error('results file unreadable');
       if (f.test && !testOK()) { R.none = !R.file; R.failed = false; return wasNone !== R.none; }
+      // A cached copy older than the file already shown never replaces it.
+      if (R.file && Date.parse(f.generated) < Date.parse(R.file.generated)) { R.failed = false; return wasFailed; }
       R.none = false;
       R.failed = false;
       R.file = f;
       return f.generated !== before || wasFailed;
     } catch (e) {
-      if (R.st !== st) return false;
+      if (stale()) return false;
       // A network blip is normal on a phone: say so on the page, keep the last numbers. An unreadable file is ours to fix.
       if (e instanceof Error && /unreadable/.test(e.message)) reportError(e);
       R.failed = true;
       return !wasFailed;
     }
   };
-  const p = run().finally(() => { if (inflight === p) inflight = null; });
-  inflight = p;
+  const p = run().finally(() => { if (inflight && inflight.p === p) inflight = null; });
+  inflight = { st, p };
   return p;
 }
 
@@ -66,6 +75,8 @@ export function repaintResults(): void {
   anchored(() => {
     render(['plan']);
     if (!S.ui.addrOpen) { render(['ballot']); return; }
+    // The head always carries #vz once the polls close (a hidden placeholder before the first file), so the figure
+    // can arrive while the address form stays open.
     const fig = document.getElementById('vz');
     if (fig) fig.outerHTML = figureHTML();
     document.querySelectorAll<HTMLElement>('#r-ballot li.row[data-item]').forEach((el) => renderRow(el.dataset.item!, false));

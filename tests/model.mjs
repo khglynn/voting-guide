@@ -1878,6 +1878,25 @@ function roundTrip(name, stCode, places, mutate) {
     globalThis.fetch = async () => ({ ok: true, status: 200, json: async () => ({ ...tx, items: 'nope' }) });
     await rl.loadResults(true);
     check('results: an unreadable file keeps the last good one too', rm.R.file === tx && rm.R.failed === true);
+    {
+      // Codex round 1: a slower read overtaken by Refresh never replaces the newer file; a 404 after a good file is a
+      // failed read, not "no results".
+      const newer = { ...tx, generated: '2026-11-04T03:50:00Z' };
+      let release;
+      const slow = new Promise((res) => { release = res; });
+      globalThis.fetch = async () => { await slow; return { ok: true, status: 200, json: async () => tx }; };
+      rm.R.file = null; rm.R.failed = false;
+      const first = rl.loadResults();
+      globalThis.fetch = async () => ({ ok: true, status: 200, json: async () => newer });
+      await rl.loadResults(true);
+      release();
+      await first;
+      check('results: a slower read that started first never replaces the newer file', rm.R.file === newer, rm.R.file && rm.R.file.generated);
+      globalThis.fetch = async () => ({ ok: false, status: 404, json: async () => ({}) });
+      await rl.loadResults(true);
+      check('results: a 404 after a good file keeps the numbers and says it couldn’t check', rm.R.file === newer && rm.R.failed && !rm.R.none && /Couldn’t check just now/.test(txt(views.planstrip.freshHTML())));
+      rm.R.file = tx; rm.R.failed = false;
+    }
     rm.resetResults('TX');
     globalThis.fetch = async () => ({ ok: true, status: 200, json: async () => ({ ...tx, test: true }) });
     await rl.loadResults(true);
@@ -1895,6 +1914,17 @@ function roundTrip(name, stCode, places, mutate) {
     check('results column: retention reads "Keep the judge"', col('co-retention-hood') === 'Keep the judge: 72% counting', col('co-retention-hood'));
     st.S.b.picks['co-amendment-81'] = 'YES';
     check('results figure: 53% yes against a 55% bar is behind for a yes pick', rm.compare(st.S.ballot.byId.get('co-amendment-81'), rm.R.file.items['co-amendment-81']) === 'behind');
+    {
+      // Codex round 1: a measure exactly at its bar, by whole counts; a plain-majority tie; a rule that isn't a share of yes and no.
+      const it81 = st.S.ballot.byId.get('co-amendment-81');
+      const at = { source: 'results-CO', status: 'counting', reporting: null, updated: null, url: 'https://x.y/', measure: { yes: 55, no: 45, yes_pct: 55, threshold: 55 }, final: null };
+      check('results: 55 of 100 against a 55% bar is "right at" it, never ahead and never "even"', rm.sideOf(it81, at) === 'at' && rm.compare(it81, at) === 'nc' && /^Counting\. Yes is right at the 55% it needs so far\.$/.test(`${rm.resOpen(it81, at).word} ${rm.resOpen(it81, at).line}`), rm.resOpen(it81, at).line);
+      const nn = st.S.ballot.byId.get('co-proposition-nn');
+      const even = { ...at, measure: { yes: 50, no: 50, yes_pct: 50, threshold: null } };
+      check('results: a plain majority split evenly reads "even so far"', rm.resOpen(nn, even).line === 'Yes and no are even so far.', rm.resOpen(nn, even).line);
+      const tn = { ...nn, pass_threshold: 'more yes votes than no votes, and more yes votes than half of all the votes cast for governor' };
+      check('results: a rule beyond yes and no (Tennessee) is never compared or called ahead', rm.barOf(tn, even) === null && rm.sideOf(tn, { ...even, measure: { yes: 70, no: 30, yes_pct: 70, threshold: null } }) === null && txt(rm.resCol(tn, { ...even, measure: { yes: 70, no: 30, yes_pct: 70, threshold: null } }).main) === 'Yes 70%' && /Passing takes more than a share of yes and no/.test(rm.resOpen(tn, { ...even, measure: { yes: 70, no: 30, yes_pct: 70, threshold: null } }).line));
+    }
     // Portland: ranked choice stays "First choices only" and is never compared before the final round.
     withRows('OR', ['portland-or'], []);
     useFile('OR', FX('OR'));

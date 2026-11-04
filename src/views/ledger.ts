@@ -676,7 +676,7 @@ export function ballotHeadHTML(): string {
   const rest = top.filter((h) => !h.until_address || !box).map((h) => h.text);
   // Once results show (Nov 3, results Phase 1; GPT copy pass): the figure right under the heading, then the endorsement
   // controls and the rest.
-  const fig = resultsOn() ? figureHTML() : '';
+  const fig = afterPolls(S.ballot?.howto) ? figureHTML() : '';
   return `<div class="bhead"><h2 class="step su-h bal-h" id="ballot-h"><span class="step-n" aria-hidden="true">3</span>Your ballot</h2>
       ${fig}<p class="picks-line"><span>Endorsements: ${esc(lensSummary())}</span><button class="mini" data-act="picks" data-fk="picks-edit">Edit</button></p>
       ${cov}${filled}${box}

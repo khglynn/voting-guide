@@ -1,0 +1,529 @@
+{
+  "id": "philadelphia-pa",
+  "state": "PA",
+  "name": "Philadelphia City Commissioners",
+  "county": "Philadelphia",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "2026 General Election Results",
+    "feed_name": "2026 General Election Results"
+  },
+  "guide": {
+    "fingerprint": "1b15975222eb2edb",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:37:37.338Z",
+    "places": [
+      "philadelphia-pa"
+    ]
+  },
+  "feed": {
+    "adapter": "philadelphia",
+    "base": "https://philadelphiaresults.azurewebsites.us",
+    "results_url": "https://philadelphiaresults.azurewebsites.us/",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent with 200 on Nov 3, 8:46 PM CT (capture round 1) and 10:21 PM CT (builder; the statewide tab timed out once, then answered).",
+    "election_id_from": "The page's own heading, \"Unofficial 2026 General Election Results\" over \"November 3, 2026\" (vote.phila.gov/results/ frames this host). The page has no election id.",
+    "tabs": [
+      "QUE",
+      "CON",
+      "STS",
+      "STR"
+    ],
+    "tabs_note": "Statewide (STW) is left out: the governor's race comes only from the state source. State House (STR) is read at its first page; its second page is reached only by a form post.",
+    "tz": "America/New_York"
+  },
+  "polls_close": "2026-11-04T01:00:00Z",
+  "count_closes": "2026-11-11T04:59:00Z",
+  "complete_marker": null,
+  "certify_by": "2026-11-23",
+  "official": null,
+  "contests": [
+    {
+      "feed_id": "401352",
+      "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 10TH DISTRICT",
+      "item": "pa-hd-10",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "AMEN BROWN DEM": "Amen Brown",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "401364",
+      "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 170TH DISTRICT",
+      "item": "pa-hd-170",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "MARTINA WHITE REP": "Martina White",
+        "ROB GURTCHEFF DEM": "Rob Gurtcheff",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "401353",
+      "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 172ND DISTRICT",
+      "item": "pa-hd-172",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "SEAN M DOUGHERTY DEM": "Sean M. Dougherty",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "401365",
+      "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 173RD DISTRICT",
+      "item": "pa-hd-173",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "PAT GALLAGHER DEM": "Pat Gallagher",
+        "BILL GRIFFIN REP": "Bill Griffin",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "401345",
+      "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 174TH DISTRICT",
+      "item": "pa-hd-174",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "ED NEILSON DEM": "Ed Neilson",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "401341",
+      "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 175TH DISTRICT",
+      "item": "pa-hd-175",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "MARYLOUISE ISAACSON DEM": "MaryLouise Isaacson",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "401342",
+      "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 177TH DISTRICT",
+      "item": "pa-hd-177",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "JOE HOHENSTEIN DEM": "Joe Hohenstein",
+        "ROBYN BIRD REP": "Robyn Bird",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "401368",
+      "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 179TH DISTRICT",
+      "item": "pa-hd-179",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "JASON T DAWKINS DEM": "Jason T. Dawkins",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "401358",
+      "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 180TH DISTRICT",
+      "item": "pa-hd-180",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "JOSE A GIRAL DEM": "Jose A. Giral",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "401359",
+      "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 181ST DISTRICT",
+      "item": "pa-hd-181",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "MALCOLM KENYATTA DEM": "Malcolm Kenyatta",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "401346",
+      "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 182ND DISTRICT",
+      "item": "pa-hd-182",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "BEN WAXMAN DEM": "Ben Waxman",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "401347",
+      "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 184TH DISTRICT",
+      "item": "pa-hd-184",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "ELIZABETH FIEDLER DEM": "Elizabeth Fiedler",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "401335",
+      "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 185TH DISTRICT",
+      "item": "pa-hd-185",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REGINA YOUNG DEM": "Regina Young",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "401366",
+      "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 186TH DISTRICT",
+      "item": "pa-hd-186",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "JORDAN A HARRIS DEM": "Jordan A. Harris",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "401337",
+      "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 188TH DISTRICT",
+      "item": "pa-hd-188",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "RICK KRAJEWSKI DEM": "Rick Krajewski",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "401348",
+      "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 190TH DISTRICT",
+      "item": "pa-hd-190",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "RONI GREEN DEM": "Roni Green",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "401336",
+      "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 191ST DISTRICT",
+      "item": "pa-hd-191",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "JOANNA E MCCLINTON DEM": "Joanna E. McClinton",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "Delaware"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "401343",
+      "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 192ND DISTRICT",
+      "item": "pa-hd-192",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "MORGAN CEPHAS DEM": "Morgan Cephas",
+        "TIFFANY VANN BROWN REP": "Tiffany Vann Brown",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "401338",
+      "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 194TH DISTRICT",
+      "item": "pa-hd-194",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "TARIK KHAN DEM": "Tarik Khan",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "401349",
+      "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 195TH DISTRICT",
+      "item": "pa-hd-195",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "SIERRA MCNEIL DEM": "Sierra McNeil",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "401344",
+      "feed_name": "SENATOR IN THE GENERAL ASSEMBLY 2ND DISTRICT",
+      "item": "pa-sd-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "CHRISTINE M TARTAGLIONE DEM": "Christine M. Tartaglione",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "401355",
+      "feed_name": "SENATOR IN THE GENERAL ASSEMBLY 4TH DISTRICT",
+      "item": "pa-sd-4",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "ART HAYWOOD DEM": "Art Haywood",
+        "TODD JOHNSON REP": "Todd Johnson",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "Montgomery"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "401361",
+      "feed_name": "SENATOR IN THE GENERAL ASSEMBLY 8TH DISTRICT",
+      "item": "pa-sd-8",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "ANTHONY HARDY WILLIAMS DEM": "Anthony Hardy Williams",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "Delaware"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "401363",
+      "feed_name": "REPRESENTATIVE IN CONGRESS 2ND DISTRICT",
+      "item": "pa-us-house-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "BRENDAN F BOYLE DEM": "Brendan F. Boyle",
+        "JESSICA ARRIAGA REP": "Jessica Arriaga",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "401357",
+      "feed_name": "REPRESENTATIVE IN CONGRESS 3RD DISTRICT",
+      "item": "pa-us-house-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "CHRIS RABB DEM": "Chris Rabb",
+        "DENNIS MAHONEY TIP": "Dennis Mahoney",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "401340",
+      "feed_name": "REPRESENTATIVE IN CONGRESS 5TH DISTRICT",
+      "item": "pa-us-house-5",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "MARY GAY SCANLON DEM": "Mary Gay Scanlon",
+        "NICK MANGANARO REP": "Nick Manganaro",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "Delaware",
+        "Chester",
+        "Montgomery"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "401356",
+      "feed_name": "QUESTION #1",
+      "item": "philadelphia-question-1",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes": "yes",
+        "No": "no"
+      },
+      "reaches": [
+        "Philadelphia"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "401351",
+      "feed_name": "QUESTION #2",
+      "item": "philadelphia-question-2",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes": "yes",
+        "No": "no"
+      },
+      "reaches": [
+        "Philadelphia"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    }
+  ],
+  "unmatched_feed": [],
+  "unmatched_guide": [
+    "pa-hd-197",
+    "pa-hd-198",
+    "pa-hd-200",
+    "pa-hd-201",
+    "pa-hd-202",
+    "pa-hd-203"
+  ],
+  "not_here": []
+}

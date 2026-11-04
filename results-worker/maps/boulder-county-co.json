@@ -1,0 +1,537 @@
+{
+  "id": "boulder-county-co",
+  "state": "CO",
+  "name": "Boulder County Elections",
+  "county": "Boulder",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "2026 General Election",
+    "feed_name": "2026 General Election"
+  },
+  "guide": {
+    "fingerprint": "1906c441a543a81d",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:37:39.013Z",
+    "places": [
+      "boulder-co"
+    ]
+  },
+  "feed": {
+    "adapter": "boulder",
+    "base": "https://electionresults.bouldercounty.gov",
+    "page": "https://electionresults.bouldercounty.gov/",
+    "results_url": "https://electionresults.bouldercounty.gov/",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent with 200 on Nov 3, 8:41 PM CT (capture round 1) and 10:23 PM CT (builder). The page is a static copy of election.boco.solutions/ElectionResults2026G/, which also answered 200.",
+    "election_id_from": "The page's own heading, \"2026 General Election\", \"November 3, 2026\", \"Unofficial Results\". The page has no election id.",
+    "tz": "America/Denver"
+  },
+  "polls_close": "2026-11-04T02:00:00Z",
+  "count_closes": "2026-11-13T06:59:00Z",
+  "complete_marker": null,
+  "certify_by": "2026-11-24",
+  "official": null,
+  "contests": [
+    {
+      "feed_id": "59",
+      "feed_name": "City of Boulder Ballot Issue 2J",
+      "item": "boulder-2j",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes/For": "yes",
+        "No/Against": "no"
+      },
+      "reaches": [
+        "Boulder"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "60",
+      "feed_name": "City of Boulder Ballot Issue 2K",
+      "item": "boulder-2k",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes/For": "yes",
+        "No/Against": "no"
+      },
+      "reaches": [
+        "Boulder"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "61",
+      "feed_name": "City of Boulder Ballot Question 2L",
+      "item": "boulder-2l",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For the Measure": "yes",
+        "Against the Measure": "no"
+      },
+      "reaches": [
+        "Boulder"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "62",
+      "feed_name": "City of Boulder Ballot Question 2M",
+      "item": "boulder-2m",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For the Measure": "yes",
+        "Against the Measure": "no"
+      },
+      "reaches": [
+        "Boulder"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "24",
+      "feed_name": "City of Boulder Council Candidates",
+      "item": "boulder-council",
+      "kind": "multi",
+      "seats": 5,
+      "choices": {
+        "Lee Gilbert": "Lee Gilbert",
+        "Sam Fuqua": "Sam Fuqua",
+        "Ryan Schuchard": "Ryan Schuchard",
+        "Jamillah Richmond": "Jamillah Richmond",
+        "Benita Duran": "Benita Duran",
+        "Tara Winer": "Tara Winer",
+        "Rachel Rose Isaacson": "Rachel Rose Isaacson",
+        "Dave Martus": "Dave Martus",
+        "Scott Rendleman": "Scott Rendleman",
+        "Jill Adler Grano": "Jill Adler Grano",
+        "Ryan Jamieson": "Ryan Jamieson",
+        "Lynn Segal": "Lynn Segal",
+        "Tina Marquis": "Tina Marquis"
+      },
+      "reaches": [
+        "Boulder"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "56",
+      "feed_name": "Boulder County Ballot Issue 1A",
+      "item": "boulder-county-1a",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes/For": "yes",
+        "No/Against": "no"
+      },
+      "reaches": [
+        "Boulder"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "57",
+      "feed_name": "Boulder County Ballot Question 200",
+      "item": "boulder-county-200",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes/For": "yes",
+        "No/Against": "no"
+      },
+      "reaches": [
+        "Boulder"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "19",
+      "feed_name": "Boulder County Assessor",
+      "item": "boulder-county-assessor",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Cynthia Braddock - Democratic": "Cynthia Braddock"
+      },
+      "reaches": [
+        "Boulder"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "17",
+      "feed_name": "Boulder County Clerk and Recorder",
+      "item": "boulder-county-clerk",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Molly Fitzpatrick - Democratic": "Molly Fitzpatrick"
+      },
+      "reaches": [
+        "Boulder"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "16",
+      "feed_name": "Boulder County Commissioner - District 3",
+      "item": "boulder-county-commissioner-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Ashley Stolzmann - Democratic": "Ashley Stolzmann"
+      },
+      "reaches": [
+        "Boulder"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "22",
+      "feed_name": "Boulder County Coroner",
+      "item": "boulder-county-coroner",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jeff Martin - Democratic": "Jeff Martin"
+      },
+      "reaches": [
+        "Boulder"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "20",
+      "feed_name": "Boulder County Sheriff",
+      "item": "boulder-county-sheriff",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Curtis Johnson - Democratic": "Curtis Johnson"
+      },
+      "reaches": [
+        "Boulder"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "21",
+      "feed_name": "Boulder County Surveyor",
+      "item": "boulder-county-surveyor",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Kayce D. W. Keane - Democratic": "Kayce D. W. Keane"
+      },
+      "reaches": [
+        "Boulder"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "18",
+      "feed_name": "Boulder County Treasurer",
+      "item": "boulder-county-treasurer",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Rachel Friend - Democratic": "Rachel Friend"
+      },
+      "reaches": [
+        "Boulder"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "7",
+      "feed_name": "Regent of the University of Colorado - Congressional District 2",
+      "item": "co-cu-regent-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Marty Neilson - Republican": "Marty Neilson",
+        "Edie Hooton - Democratic": "Edie Hooton",
+        "Richard Friend - Libertarian": "Richard Friend"
+      },
+      "reaches": [
+        "Boulder",
+        "Larimer",
+        "Broomfield",
+        "Clear Creek",
+        "Gilpin",
+        "Grand",
+        "Summit",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "89",
+      "feed_name": "Front Range Passenger Rail District Ballot Issue 7A",
+      "item": "co-frpr-7a",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes/For": "yes",
+        "No/Against": "no"
+      },
+      "reaches": [
+        "Denver",
+        "Boulder",
+        "Adams",
+        "Arapahoe",
+        "Jefferson",
+        "Broomfield",
+        "Douglas",
+        "Larimer",
+        "Weld",
+        "El Paso",
+        "Pueblo",
+        "other counties"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority of voters in the rail district"
+    },
+    {
+      "feed_id": "10",
+      "feed_name": "State Representative - District 10",
+      "item": "co-hd-10",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Junie Joseph - Democratic": "Junie Joseph"
+      },
+      "reaches": [
+        "Boulder",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "12",
+      "feed_name": "State Representative - District 12",
+      "item": "co-hd-12",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Ryan Rhatigan - Republican": "Ryan Rhatigan",
+        "Kyle Brown - Democratic": "Kyle Brown"
+      },
+      "reaches": [
+        "Boulder",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "14",
+      "feed_name": "State Representative - District 49",
+      "item": "co-hd-49",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Michael Sheperek - Republican": "Michael Sheperek",
+        "Lesley Smith - Democratic": "Lesley Smith"
+      },
+      "reaches": [
+        "Boulder",
+        "Larimer",
+        "Clear Creek",
+        "Gilpin",
+        "Grand",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "39",
+      "feed_name": "Boulder County Court Judge - Brodsky",
+      "item": "co-retention-brodsky",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "Yes": "yes",
+        "No": "no"
+      },
+      "reaches": [
+        "Boulder"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "40",
+      "feed_name": "Boulder County Court Judge - Haenselman",
+      "item": "co-retention-haenselman",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "Yes": "yes",
+        "No": "no"
+      },
+      "reaches": [
+        "Boulder"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "36",
+      "feed_name": "District Court Judge - 20th Judicial District - Kotlarczyk",
+      "item": "co-retention-kotlarczyk",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "Yes": "yes",
+        "No": "no"
+      },
+      "reaches": [
+        "Boulder"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "37",
+      "feed_name": "District Court Judge - 20th Judicial District - Larson",
+      "item": "co-retention-larson-chris",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "Yes": "yes",
+        "No": "no"
+      },
+      "reaches": [
+        "Boulder"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "41",
+      "feed_name": "Boulder County Court Judge - Malkinson",
+      "item": "co-retention-malkinson",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "Yes": "yes",
+        "No": "no"
+      },
+      "reaches": [
+        "Boulder"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "38",
+      "feed_name": "District Court Judge - 20th Judicial District - Salomone",
+      "item": "co-retention-salomone",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "Yes": "yes",
+        "No": "no"
+      },
+      "reaches": [
+        "Boulder"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "15",
+      "feed_name": "Regional Transportation District Director - District O",
+      "item": "co-rtd-o",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jack Rosenthal": "Jack Rosenthal",
+        "Audrey DeBarros": "Audrey DeBarros"
+      },
+      "reaches": [
+        "Boulder",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "8",
+      "feed_name": "State Senator - District 15",
+      "item": "co-sd-15",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Rob Woodward - Republican": "Rob Woodward",
+        "Janice Marchman - Democratic": "Janice Marchman"
+      },
+      "reaches": [
+        "Boulder",
+        "Larimer",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "9",
+      "feed_name": "State Senator - District 17",
+      "item": "co-sd-17",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Katie Wallace - Democratic": "Katie Wallace",
+        "Pat Miller - Republican": "Pat Miller"
+      },
+      "reaches": [
+        "Boulder",
+        "Weld",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "2",
+      "feed_name": "Representative to the 120th United States Congress - District 2",
+      "item": "co-us-house-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Joe Neguse - Democratic": "Joe Neguse",
+        "Kelley Anne Dennison - Republican": "Kelley Anne Dennison",
+        "Gaylon Kent - Libertarian": "Gaylon Kent"
+      },
+      "reaches": [
+        "Boulder",
+        "Larimer",
+        "Broomfield",
+        "Clear Creek",
+        "Gilpin",
+        "Grand",
+        "Summit",
+        "other counties"
+      ],
+      "item_url": null
+    }
+  ],
+  "unmatched_feed": [
+    {
+      "feed_id": "23",
+      "feed_name": "City of Boulder Mayoral Candidates",
+      "why": "looks like boulder-mayor, but the page has no vote rows for it, only a link to a separate ranked-choice results page (Home/RcvContest/23)"
+    },
+    {
+      "feed_id": "58",
+      "feed_name": "Boulder County Ballot Question 201",
+      "why": "is boulder-county-201, but its two choices are options (five district-elected commissioners vs three plus two at-large), not yes/no, and the map format pairs a measure only by yes and no"
+    }
+  ],
+  "unmatched_guide": [
+    "boulder-county-201",
+    "boulder-mayor"
+  ],
+  "not_here": []
+}

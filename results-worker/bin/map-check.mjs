@@ -72,6 +72,9 @@ for (const m of maps) {
       if (!mc.pass_threshold && !mc.threshold) err(m, `${w}: a measure with no pass_threshold (run with --write to copy the guide's)`);
       else if (!parseThreshold(mc.pass_threshold) && !mc.threshold) err(m, `${w}: pass_threshold "${mc.pass_threshold}" isn't a rule outcome.js can read`);
     }
+    // Over and under votes are votes for no one: `__skip`, never `__other`, or they count in the total and lower every
+    // candidate's percent (Orange FL, pre-deploy review, Nov 3).
+    for (const [k, v] of Object.entries(mc.choices || {})) if (v === '__other' && /\b(?:over|under)[\s-]*votes?\b|\b(?:over|under)votes?\b/i.test(k)) err(m, `${w}: "${k}" is votes for no one; map it to __skip, not __other`);
     const vals = Object.values(mc.choices || {});
     if (want === 'measure' || want === 'retention') {
       if (vals.filter((v) => v === 'yes').length !== 1 || vals.filter((v) => v === 'no').length !== 1) err(m, `${w}: a measure needs exactly one yes and one no choice`);

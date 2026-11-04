@@ -10654,8 +10654,8 @@ export const MAPS = [
         "choices": {
           "Temika Hampton-Johnson": "Temika Hampton-Johnson",
           "Charles Hart": "Charles Hart",
-          "Over Votes": "__other",
-          "Under Votes": "__other"
+          "Over Votes": "__skip",
+          "Under Votes": "__skip"
         },
         "reaches": [
           "Orange",
@@ -10672,8 +10672,8 @@ export const MAPS = [
         "choices": {
           "Erika Booth": "Erika Booth",
           "Eric Gray": "Eric Gray",
-          "Over Votes": "__other",
-          "Under Votes": "__other"
+          "Over Votes": "__skip",
+          "Under Votes": "__skip"
         },
         "reaches": [
           "Orange",
@@ -10691,8 +10691,8 @@ export const MAPS = [
         "choices": {
           "Robert Prater": "Robert Prater",
           "Jane Aman": "Jane Aman",
-          "Over Votes": "__other",
-          "Under Votes": "__other"
+          "Over Votes": "__skip",
+          "Under Votes": "__skip"
         },
         "reaches": [
           "Orange",
@@ -10709,8 +10709,8 @@ export const MAPS = [
         "choices": {
           "Doug Bankson": "Doug Bankson",
           "Jarod Fox": "Jarod Fox",
-          "Over Votes": "__other",
-          "Under Votes": "__other"
+          "Over Votes": "__skip",
+          "Under Votes": "__skip"
         },
         "reaches": [
           "Orange",
@@ -10727,8 +10727,8 @@ export const MAPS = [
         "choices": {
           "Tuan Le": "Tuan Le",
           "Ra'Shon Young": "Ra'Shon Young",
-          "Over Votes": "__other",
-          "Under Votes": "__other"
+          "Over Votes": "__skip",
+          "Under Votes": "__skip"
         },
         "reaches": [
           "Orange",
@@ -10745,8 +10745,8 @@ export const MAPS = [
         "choices": {
           "Bonnie Jackson": "Bonnie Jackson",
           "Felipe Sousa Lazaballet": "Felipe Sousa Lazaballet",
-          "Over Votes": "__other",
-          "Under Votes": "__other"
+          "Over Votes": "__skip",
+          "Under Votes": "__skip"
         },
         "reaches": [
           "Orange",
@@ -10763,8 +10763,8 @@ export const MAPS = [
         "choices": {
           "Jorge Malavet": "Jorge Malavet",
           "Samuel Vilchez Santiago": "Samuel Vilchez Santiago",
-          "Over Votes": "__other",
-          "Under Votes": "__other"
+          "Over Votes": "__skip",
+          "Under Votes": "__skip"
         },
         "reaches": [
           "Orange",
@@ -10781,8 +10781,8 @@ export const MAPS = [
         "choices": {
           "Erin Huntley": "Erin Huntley",
           "Leonard Spencer": "Leonard Spencer",
-          "Over Votes": "__other",
-          "Under Votes": "__other"
+          "Over Votes": "__skip",
+          "Under Votes": "__skip"
         },
         "reaches": [
           "Orange",
@@ -10799,8 +10799,8 @@ export const MAPS = [
         "choices": {
           "Roberta Walton Johnson": "Roberta Walton Johnson",
           "Terrell Thomas": "Terrell Thomas",
-          "Over Votes": "__other",
-          "Under Votes": "__other"
+          "Over Votes": "__skip",
+          "Under Votes": "__skip"
         },
         "reaches": [
           "Orange"
@@ -10816,8 +10816,8 @@ export const MAPS = [
         "choices": {
           "Kamia Brown": "Kamia Brown",
           "Mike Crabb": "Mike Crabb",
-          "Over Votes": "__other",
-          "Under Votes": "__other"
+          "Over Votes": "__skip",
+          "Under Votes": "__skip"
         },
         "reaches": [
           "Orange"
@@ -10834,8 +10834,8 @@ export const MAPS = [
           "Brian Jones": "Brian Jones",
           "Johanna Lopez": "Johanna Lopez",
           "Write-in": "__other",
-          "Over Votes": "__other",
-          "Under Votes": "__other"
+          "Over Votes": "__skip",
+          "Under Votes": "__skip"
         },
         "reaches": [
           "Orange"
@@ -10851,8 +10851,8 @@ export const MAPS = [
         "choices": {
           "Lawanna Gelzer": "Lawanna Gelzer",
           "Michael 'Mike' Scott": "Michael \"Mike\" Scott",
-          "Over Votes": "__other",
-          "Under Votes": "__other"
+          "Over Votes": "__skip",
+          "Under Votes": "__skip"
         },
         "reaches": [
           "Orange"
@@ -10868,8 +10868,8 @@ export const MAPS = [
         "choices": {
           "Patricia Rumph": "Patricia Rumph",
           "Vicki Vargo": "Vicki Vargo",
-          "Over Votes": "__other",
-          "Under Votes": "__other"
+          "Over Votes": "__skip",
+          "Under Votes": "__skip"
         },
         "reaches": [
           "Orange"
@@ -10885,8 +10885,8 @@ export const MAPS = [
         "choices": {
           "Jeannette Quinones Hernandez": "Jeannette Quinones Hernandez",
           "Victor M.Torres Jr.": "Victor M. Torres Jr.",
-          "Over Votes": "__other",
-          "Under Votes": "__other"
+          "Over Votes": "__skip",
+          "Under Votes": "__skip"
         },
         "reaches": [
           "Orange"
@@ -10902,8 +10902,8 @@ export const MAPS = [
         "choices": {
           "Chris Messina": "Chris Messina",
           "Tiffany Moore Russell": "Tiffany Moore Russell",
-          "Over Votes": "__other",
-          "Under Votes": "__other"
+          "Over Votes": "__skip",
+          "Under Votes": "__skip"
         },
         "reaches": [
           "Orange"
@@ -10919,8 +10919,8 @@ export const MAPS = [
         "choices": {
           "Yes for Approval": "yes",
           "No for Rejection": "no",
-          "Over Votes": "__other",
-          "Under Votes": "__other"
+          "Over Votes": "__skip",
+          "Under Votes": "__skip"
         },
         "reaches": [
           "Orange"
@@ -10937,8 +10937,8 @@ export const MAPS = [
         "choices": {
           "Diana Moore": "Diana Moore",
           "Susanne Peña": "Susanne Peña",
-          "Over Votes": "__other",
-          "Under Votes": "__other"
+          "Over Votes": "__skip",
+          "Under Votes": "__skip"
         },
         "reaches": [
           "Orange"
@@ -10955,8 +10955,8 @@ export const MAPS = [
           "Quinnie Perez": "Quinnie Perez",
           "Vicente Rafael Perez Carreno": "Vicente Rafael Perez Carreno",
           "Doug Sahr": "Doug Sahr",
-          "Over Votes": "__other",
-          "Under Votes": "__other"
+          "Over Votes": "__skip",
+          "Under Votes": "__skip"
         },
         "reaches": [
           "Orange"
@@ -10973,8 +10973,8 @@ export const MAPS = [
           "Chuck Drake": "Chuck Drake",
           "Erik LaMont Melear": "Erik LaMont Melear",
           "José Antonio Rodriguez": "José Antonio Rodriguez",
-          "Over Votes": "__other",
-          "Under Votes": "__other"
+          "Over Votes": "__skip",
+          "Under Votes": "__skip"
         },
         "reaches": [
           "Orange"
@@ -10990,8 +10990,8 @@ export const MAPS = [
         "choices": {
           "Zack Green": "Zack Green",
           "Jimm Middleton": "Jimm Middleton",
-          "Over Votes": "__other",
-          "Under Votes": "__other"
+          "Over Votes": "__skip",
+          "Under Votes": "__skip"
         },
         "reaches": [
           "Orange"
@@ -11007,8 +11007,8 @@ export const MAPS = [
         "choices": {
           "Jason Brodeur": "Jason Brodeur",
           "John Lowndes": "John Lowndes",
-          "Over Votes": "__other",
-          "Under Votes": "__other"
+          "Over Votes": "__skip",
+          "Under Votes": "__skip"
         },
         "reaches": [
           "Orange",
@@ -11027,8 +11027,8 @@ export const MAPS = [
           "Joe Strada": "Joe Strada",
           "James Pericola": "James Pericola",
           "Ralph Groves": "Ralph Groves",
-          "Over Votes": "__other",
-          "Under Votes": "__other"
+          "Over Votes": "__skip",
+          "Under Votes": "__skip"
         },
         "reaches": [
           "Orange",
@@ -11047,8 +11047,8 @@ export const MAPS = [
         "choices": {
           "Mike Haridopolos": "Mike Haridopolos",
           "Jennifer Jenkins": "Jennifer Jenkins",
-          "Over Votes": "__other",
-          "Under Votes": "__other"
+          "Over Votes": "__skip",
+          "Under Votes": "__skip"
         },
         "reaches": [
           "Orange",
@@ -11067,8 +11067,8 @@ export const MAPS = [
         "choices": {
           "Dan Green": "Dan Green",
           "Darren Soto": "Darren Soto",
-          "Over Votes": "__other",
-          "Under Votes": "__other"
+          "Over Votes": "__skip",
+          "Under Votes": "__skip"
         },
         "reaches": [
           "Orange",
@@ -11087,8 +11087,8 @@ export const MAPS = [
         "choices": {
           "Bennie Hichez": "Bennie Hichez",
           "Frank J. Sebestyen": "Frank J. Sebestyen",
-          "Over Votes": "__other",
-          "Under Votes": "__other"
+          "Over Votes": "__skip",
+          "Under Votes": "__skip"
         },
         "reaches": [
           "Orange"

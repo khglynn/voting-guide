@@ -229,3 +229,15 @@ test('ladder: on election night itself a quiet source waits at most 5 minutes', 
   const later = nextEntry({ status: 'counting', last_change: '2026-11-05T13:00:00.000Z', unchanged_polls: 20 }, { kind: 'ok', changed: false, status: 'counting' }, '2026-11-05T16:00:00.000Z', map);
   assert.equal(later.next_due, '2026-11-05T17:00:00.000Z', 'after election night the plan\'s hourly rung stands');
 });
+
+test('ladder: a source parked on the old ladder is pulled in to 5 minutes on election night', async () => {
+  const { clampElectionNight } = await import('../src/schedule.js');
+  const maps = [{ id: 'w', feed: { tz: 'America/Chicago' } }, { id: 'x', feed: { tz: 'America/Chicago' } }, { id: 'y', feed: { tz: 'America/Chicago' } }];
+  const sched = { w: { next_due: '2026-11-04T04:11:00.000Z' }, x: { next_due: '2026-11-04T03:57:00.000Z' }, y: { next_due: null, stopped: 'refused' } };
+  assert.equal(clampElectionNight(sched, maps, '2026-11-04T03:55:00.000Z'), true);
+  assert.equal(sched.w.next_due, '2026-11-04T04:00:00.000Z');
+  assert.equal(sched.x.next_due, '2026-11-04T03:57:00.000Z', 'a sooner poll is left alone');
+  assert.equal(sched.y.next_due, null, 'a stopped source stays stopped');
+  const later = { w: { next_due: '2026-11-05T18:00:00.000Z' } };
+  assert.equal(clampElectionNight(later, maps, '2026-11-05T16:00:00.000Z'), false, 'after election night the ladder stands');
+});

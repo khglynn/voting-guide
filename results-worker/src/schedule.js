@@ -91,3 +91,18 @@ export function dueSources(sched, ids, now, limit = 6) {
     .sort((a, b) => Date.parse(sched[a]?.next_due || 0) - Date.parse(sched[b]?.next_due || 0))
     .slice(0, limit);
 }
+
+/* The election-night cap applied to schedules written before it existed: on each tick, any source whose stored
+   next_due is more than 5 minutes out is pulled in to 5 minutes, until quiet hours start in its zone. Returns
+   whether anything moved. (Coordinator, Nov 3: Williamson sat parked until 10:11 PM after the cap shipped.) */
+export function clampElectionNight(sched, maps, now) {
+  let moved = false;
+  for (const m of maps) {
+    const e = sched[m.id];
+    const tz = m.feed?.tz;
+    if (!e || e.stopped || !e.next_due || !tz || Date.parse(now) >= quietStart(tz)) continue;
+    const cap = Date.parse(now) + 5 * MIN;
+    if (Date.parse(e.next_due) > cap) { e.next_due = new Date(cap).toISOString(); moved = true; }
+  }
+  return moved;
+}

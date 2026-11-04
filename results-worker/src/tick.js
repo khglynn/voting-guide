@@ -8,7 +8,7 @@
 import { ADAPTERS } from './adapters/index.js';
 import { checkRead, checkFile } from './checks.js';
 import { buildStateFile, sourceStatus } from './merge.js';
-import { nextEntry, dueSources } from './schedule.js';
+import { nextEntry, dueSources, clampElectionNight } from './schedule.js';
 import { fingerprint, mapHash } from './fingerprint.js';
 import { sha256, ELECTION } from './util.js';
 
@@ -193,12 +193,13 @@ export async function runTick({ fetch, store, archive, maps, now = new Date().to
   const sched = await loadSched(store);
   sched.meta ??= {};
   const live = maps.filter((m) => ADAPTERS[m.feed.adapter]);
+  const clamped = !only && clampElectionNight(sched.sources, live, now);
   const ids = only ? live.filter((m) => m.id === only).map((m) => m.id) : dueSources(sched.sources, live.map((m) => m.id), now);
   const byId = Object.fromEntries(maps.map((m) => [m.id, m]));
   const ran = (await Promise.all(ids.map((id) => (Date.now() - started > budgetMs ? null : runSource({ map: byId[id], fetch, store, archive, sched, now, ping }))))).filter(Boolean);
 
   let fpChanged = false;
-  let metaChanged = false;
+  let metaChanged = clamped;
   if (!only && (!sched.meta.fp_at || Date.parse(now) - Date.parse(sched.meta.fp_at) >= 60 * 60_000)) {
     const before = JSON.stringify(sched.meta.fp || {});
     await checkFingerprints({ maps, fetch, sched, now, ping });

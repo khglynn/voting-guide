@@ -141,3 +141,14 @@ test('tx_sos: the SOS page parses; a race cut off mid-table (Nov 3, 8:58 PM) is 
   assert.deepEqual(sen.choices.slice(0, 2).map((c) => [c.name, c.votes]), [['KEN PAXTON', 2553979], ['JAMES TALARICO', 3410265]]);
   assert.ok(!p.contests.some((c) => c.feed_id.endsWith('DISTRICT 9')));
 });
+
+test('clarity: no progress words when no precinct has reported but votes are in', async () => {
+  const { fixture } = await import('./helpers.mjs');
+  const sum = JSON.parse(fixture('clarity-bexar.summary.json'));
+  sum[0] = { ...sum[0], PR: 0, TP: 210, V: [100, 50, 0, 0] };
+  sum[1] = { ...sum[1], PR: 5, TP: 210 };
+  const f = fakeFetch({ ...bexarRoutes, '/127291/379718/json/en/summary.json': { status: 200, body: JSON.stringify(sum) } });
+  const r = await clarity.read({ fetch: f, map: mapFor('bexar-tx') });
+  assert.equal(r.contests[0].reporting, null);
+  assert.equal(r.contests[1].reporting, '5 of 210 precincts reporting');
+});

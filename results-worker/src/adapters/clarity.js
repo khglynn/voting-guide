@@ -55,7 +55,10 @@ export async function read({ fetch, map, prevToken = null }) {
       choices: names.map((n, i) => ({ name: String(n).trim(), votes: votes[i] })),
       total: num(c.T),
       source_pct: c.PCT || null,
-      reporting: Number(c.TP) > 0 ? `${c.PR} of ${c.TP} precincts reporting` : null,
+      // "0 of 210 precincts reporting" beside 160,000 counted votes (Douglas CO, Williamson TX early on Nov 3) reads as
+      // wrong: mail and early votes post before any precinct reports. With votes in and no precinct reported, there are
+      // no progress words to quote, so none are shown (coordinator and the Douglas check, Nov 3).
+      reporting: Number(c.TP) > 0 && !(Number(c.PR) === 0 && votes.some((x) => Number(x) > 0)) ? `${c.PR} of ${c.TP} precincts reporting` : null,
       precincts: { reported: Number(c.PR || 0), total: Number(c.TP || 0) },
       is_rcv: !!c.IsRCV,
       updated: null,

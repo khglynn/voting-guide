@@ -28,7 +28,7 @@ test('outcome: nothing while counting; plurality, ties, multi, measures, retenti
 });
 
 test('ladder: 1, 5, 15, 60 minutes; complete every 6 hours; official stops; refused stops', () => {
-  const t0 = '2026-11-04T02:00:00.000Z';
+  const t0 = '2026-11-05T02:00:00.000Z';
   const at = (m) => new Date(Date.parse(t0) + m * 60000).toISOString();
   let e = nextEntry({}, { kind: 'ok', changed: true, status: 'counting' }, t0);
   assert.equal(e.next_due, at(1));
@@ -220,4 +220,12 @@ test('file: over and under votes (__skip) are neither counted nor named; ranked 
   assert.equal(x.ranked_choice, true);
   assert.equal(x.final, null);
   assert.deepEqual(checkFile(f), []);
+});
+
+test('ladder: on election night itself a quiet source waits at most 5 minutes', () => {
+  const map = { feed: { tz: 'America/Chicago' } };
+  const e = nextEntry({ status: 'counting', last_change: '2026-11-04T01:00:00.000Z', unchanged_polls: 20 }, { kind: 'ok', changed: false, status: 'counting' }, '2026-11-04T03:50:00.000Z', map);
+  assert.equal(e.next_due, '2026-11-04T03:55:00.000Z');
+  const later = nextEntry({ status: 'counting', last_change: '2026-11-05T13:00:00.000Z', unchanged_polls: 20 }, { kind: 'ok', changed: false, status: 'counting' }, '2026-11-05T16:00:00.000Z', map);
+  assert.equal(later.next_due, '2026-11-05T17:00:00.000Z', 'after election night the plan\'s hourly rung stands');
 });

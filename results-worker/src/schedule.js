@@ -73,6 +73,10 @@ export function nextEntry(entry = {}, result, now, map = {}) {
   else if (quietFor >= 30) wait = 15;
   else if (e.unchanged_polls >= 3) wait = 5;
   else wait = 1;
+  // Election night itself (until 6 AM local on Nov 4, when quiet hours begin): never more than 5 minutes between
+  // polls. Counties post early votes at 7 PM and then go quiet for hours before Election Day batches (Williamson,
+  // Nov 3: nothing between 7:04 PM and at least 9:50 PM), and an unchanged poll costs one tiny request.
+  if (tz && Date.parse(now) < quietStart(tz)) wait = Math.min(wait, 5);
   let next = addMin(now, wait);
   if (result.sourceNext && Date.parse(result.sourceNext) > Date.parse(next)) next = result.sourceNext;
   if (map.polls_close && Date.parse(now) < Date.parse(map.polls_close) && Date.parse(next) > Date.parse(map.polls_close)) next = new Date(Date.parse(map.polls_close)).toISOString();

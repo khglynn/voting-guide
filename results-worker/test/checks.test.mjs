@@ -100,6 +100,25 @@ test('a falling total keeps its numbers with their own time; three lower reads i
   assert.equal(a3.contests[0].falls, 1);
 });
 
+test('TX-10 on the Texas SOS, Nov 3: a contest kept by the old code (no time of its own) gives way to the source\'s count', () => {
+  const map = { election: { date: '2026-11-03' }, feed: { tz: 'America/Chicago' } };
+  const tx10 = (gober, rourk, extra = {}) => ({ feed_id: 'U. S. REPRESENTATIVE DISTRICT 10', feed_name: 'U. S. REPRESENTATIVE DISTRICT 10', updated: null, reporting: 'Polling Locations Reporting: 27%', choices: [{ name: 'CHRIS GOBER', votes: gober }, { name: 'CAITLIN ROURK', votes: rourk }], ...extra });
+  // What the live file held at 04:40Z: the earlier 124,544 kept under the 04:34 read, with the old note and no time.
+  const stored = { election: { date: '2026-11-03' }, source_updated: '2026-11-04T04:34:00.000Z', contests: [tx10(76000, 48544, { note: "The source's total fell from 124544 to 124424 at its 2026-11-04T04:34:00.000Z update; we kept the earlier numbers." })] };
+  const next = { election: { date: '2026-11-03' }, source_updated: '2026-11-04T04:45:00.000Z', contests: [tx10(75930, 48494)] };
+  const c = checkRead(next, map, stored);
+  assert.deepEqual(c.kept, []);
+  assert.equal(next.contests[0].choices[0].votes, 75930, "the source's own count, with the source's own time");
+  assert.equal(next.contests[0].note, undefined);
+  assert.ok(c.problems.some((p) => p.reason === 'falling total accepted'));
+  // The same drop under the new code keeps 124,544 with the time it is from.
+  const before = { election: { date: '2026-11-03' }, source_updated: '2026-11-04T04:20:00.000Z', contests: [tx10(76000, 48544)] };
+  const fell = { election: { date: '2026-11-03' }, source_updated: '2026-11-04T04:34:00.000Z', contests: [tx10(75930, 48494)] };
+  checkRead(fell, map, before);
+  assert.equal(fell.contests[0].updated, '2026-11-04T04:20:00.000Z');
+  assert.equal(fell.contests[0].note, "The source's total fell from 124,544 to 124,424 at its 10:34 PM update, so these are its numbers from 10:20 PM.");
+});
+
 test('tick: a blocked read keeps the previous good read as the baseline', async () => {
   const map = mapFor('dallas-county-tx');
   const good = {

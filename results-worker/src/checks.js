@@ -37,7 +37,10 @@ export function checkRead(read, map, prev = null) {
       const now = votesIn(c);
       const was = votesIn(p);
       if (!p || now >= was) return c;
-      const falls = (p.falls || 0) + 1;
+      // A contest kept by the code before this fix has no time of its own (TX-10 on the Texas SOS, Nov 3: 124,544 kept,
+      // stamped with the 10:34 PM read that fell). Its real time can't be named, so the source's own count stands.
+      const untimed = !p.falls && /fell from/.test(p.note || '');
+      const falls = untimed ? FALLS_TO_ACCEPT : (p.falls || 0) + 1;
       if (falls >= FALLS_TO_ACCEPT) {
         problems.push({ reason: 'falling total accepted', block: null, detail: `${c.feed_name}: total stayed below ${was} for ${falls} reads in a row; took the source's ${now} as a correction` });
         return c;

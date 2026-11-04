@@ -351,6 +351,42 @@ test('tick: an older tick that saves last never undoes a newer tick\'s refusal',
   const s = JSON.parse(await store.get('sched:2026-11-03')).sources[dc.id];
   assert.equal(s.stopped, 'refused', "A's later save kept B's newer refusal");
   assert.equal(s.last_run, '2026-11-04T05:01:00.000Z');
+  // A published DC from its older read after B did, so the next tick publishes DC again from the stored refusal.
+  assert.deepEqual(JSON.parse(await store.get('sched:2026-11-03')).meta.republish, ['DC']);
+  const next = await runTick({ fetch: fakeFetch(DC_OK), store, archive: null, maps: [dc], now: '2026-11-04T05:02:00.000Z', log: () => {} });
+  assert.equal(next.ran.length, 0, 'DC stays stopped');
+  assert.equal(JSON.parse(await store.get('preview:DC')).sources[0].note, 'source refused us', 'and its file says so');
+  assert.equal(JSON.parse(await store.get('sched:2026-11-03')).meta.republish, undefined);
+});
+
+test('tick: a publish that stalls (here on its archive write) fails only that state, which goes out again next tick; the schedule is still saved', async () => {
+  const dc = mapFor('results-DC');
+  const store = memStore({ 'checked:results-DC': await checkHash(dc) });
+  const archive = { put: async (k) => (k.startsWith('raw/') ? undefined : new Promise(() => {})) };
+  const t0 = Date.now();
+  const out = await runTick({ fetch: fakeFetch(DC_OK), store, archive, maps: [dc], now: '2026-11-04T05:00:00.000Z', publishMs: 150, log: () => {} });
+  assert.ok(Date.now() - t0 < 2000, 'the tick did not wait on the stalled write');
+  assert.match(out.published.find((p) => p.state === 'DC').error, /longer than/);
+  const sched = JSON.parse(await store.get('sched:2026-11-03'));
+  assert.equal(sched.sources[dc.id].last_run, '2026-11-04T05:00:00.000Z', 'schedule saved');
+  assert.deepEqual(sched.meta.republish, ['DC']);
+  // With the usual 8 s per state, a stalled archive write alone (3 s each) never fails the publish: it is a record.
+  const store2 = memStore({ 'checked:results-DC': await checkHash(dc) });
+  const lines = [];
+  const ok = await runTick({ fetch: fakeFetch(DC_OK), store: store2, archive, maps: [dc], now: '2026-11-04T05:00:00.000Z', log: (l) => lines.push(l) });
+  assert.equal(ok.published.find((p) => p.state === 'DC').public, true);
+  assert.ok(lines.some((l) => /archive_failed.*no answer in 3 s/.test(l)));
+});
+
+test('Enhanced Voting: an official record over older cached contests is not official yet (official would stop the source for good)', async () => {
+  const map = mapFor('results-GA');
+  const rec = JSON.parse(fixture('ev-georgia.election.json'));
+  const evRoutes = (record) => ({ '/ballot-items': 'ev-georgia.ballot-items.json', [`/${map.election.feed_election_id}`]: { status: 200, body: JSON.stringify(record) } });
+  const r = await ev.read({ fetch: fakeFetch(evRoutes({ ...rec, isOfficialResults: true, asOf: '2026-11-20T20:00:00.000Z', publishVersionId: 'certified' })), map });
+  assert.equal(r.official, false);
+  assert.equal(r.changed_token, null);
+  const agreed = await ev.read({ fetch: fakeFetch(evRoutes({ ...rec, isOfficialResults: true })), map });
+  assert.equal(agreed.official, true, 'once the contests match the record, official stands');
 });
 
 test('fetch: an error page whose template loads reCAPTCHA is an error that backs off, not a refusal; a visible CAPTCHA still is one', async () => {

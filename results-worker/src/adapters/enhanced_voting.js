@@ -136,7 +136,9 @@ export async function read({ fetch, map, prevToken = null }) {
     // The public election id is the one in the address; every contest names it too, and they must agree.
     election: { id: ids.length === 1 ? ids[0] : ids.length ? ids.join(',') : String(map.election.feed_election_id), name: en(e.name), date: isoDate(e.electionDate) },
     source_status: null,
-    official: e.isOfficialResults === true,
+    // Never official from a record newer than the contests read under it: official stops the source for good, and
+    // the counts would be the cached copy's (Codex, Nov 3). The next poll reads in full; once both agree it stands.
+    official: e.isOfficialResults === true && !behind,
     source_updated: behind ? newest : (iso(e.asOf) || iso(e.lastUpdated)),
     reporting: progressWords(top, units, Number(e.ballotsCast) > 0),
     labels: labels(e),

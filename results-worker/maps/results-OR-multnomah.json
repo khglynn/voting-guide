@@ -1,0 +1,39 @@
+{
+  "id": "results-OR-multnomah",
+  "state": "OR",
+  "name": "Multnomah County Elections",
+  "county": "Multnomah",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "November 3, 2026 General Election",
+    "feed_name": "November 3, 2026 General Election"
+  },
+  "guide": {
+    "fingerprint": null,
+    "made_from": null,
+    "places": [
+      "portland-or"
+    ]
+  },
+  "feed": {
+    "adapter": "multco",
+    "base": "https://rcvresults.multco.us",
+    "state_base": "https://results.oregonvotes.gov",
+    "county_page": "ResultsSW.aspx?type=CTYALL&cty=26&map=CTY",
+    "results_url": "https://rcvresults.multco.us/",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent on Nov 3, 10:19 to 10:24 PM CT: rcvresults.multco.us home and a report page 200, the report's JSON on Azure blob storage 200, the SOS county page 200.",
+    "election_id_from": "The ranked-choice site's own election heading \"November 3, 2026 General Election\"; each report's JSON says date 2026-11-03; the SOS county page's hidden election date 11/3/2026.",
+    "tz": "America/Los_Angeles"
+  },
+  "polls_close": "2026-11-04T04:00:00Z",
+  "count_closes": "2026-11-25T07:59:00Z",
+  "count_closes_note": "Ballots received by Nov 10 count; signature cures through Nov 24 (multco.us election results schedule).",
+  "complete_marker": null,
+  "certify_by": "2026-11-30",
+  "official": null,
+  "contests": [],
+  "unmatched_feed": [],
+  "unmatched_guide": [],
+  "not_here": []
+}

@@ -1,0 +1,50 @@
+{
+  "id": "results-OR",
+  "state": "OR",
+  "name": "Oregon Secretary of State",
+  "county": "Oregon",
+  "scope": "state",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "General 11/3/2026",
+    "feed_name": "General Election November 3, 2026"
+  },
+  "guide": {
+    "fingerprint": null,
+    "made_from": null,
+    "locals": true,
+    "places": [
+      "state-OR",
+      "portland-or"
+    ]
+  },
+  "feed": {
+    "adapter": "or_sos",
+    "base": "https://results.oregonvotes.gov",
+    "pages": [
+      "resultsSW.aspx?type=FED&map=CTY",
+      "resultsSW.aspx?type=SWPAR&map=CTY",
+      "resultsSW.aspx?type=SENATE&map=CTY",
+      "resultsSW.aspx?type=HOUSE&map=CTY",
+      "resultsSW.aspx?type=SWNON&map=CTY",
+      "resultsSW.aspx?type=LMEA&map=CTY",
+      "resultsSW.aspx?type=MCR&map=CTY"
+    ],
+    "results_url": "https://results.oregonvotes.gov/",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent on Nov 3, 10:19 to 10:24 PM CT: 200 on the home page and all seven results pages, no challenge.",
+    "election_id_from": "The page's own hidden fields hidElectionType \"General\" and hidElectionDate \"11/3/2026\", and its header \"General Election November 3, 2026\" under \"Unofficial\".",
+    "tz": "America/Los_Angeles"
+  },
+  "polls_close": "2026-11-04T04:00:00Z",
+  "count_closes": "2026-11-25T07:59:00Z",
+  "count_closes_note": "Ballots postmarked by Nov 3 and received by Nov 10 count; signature cures run to Nov 24 (Multnomah's date; the statewide cure date wasn't found).",
+  "complete_marker": null,
+  "certify_by": "2026-12-10",
+  "certify_note": "The statewide certification date wasn't found (registry row results-OR); set late on purpose, so the fetcher never stops early.",
+  "official": null,
+  "contests": [],
+  "unmatched_feed": [],
+  "unmatched_guide": [],
+  "not_here": []
+}

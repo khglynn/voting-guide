@@ -1,0 +1,54 @@
+{
+  "id": "results-MO-stlouis-county",
+  "state": "MO",
+  "name": "St. Louis County Board of Elections",
+  "county": "St. Louis County",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "St. Louis County media.csv, Nov 3, 2026 general",
+    "feed_name": null
+  },
+  "guide": {
+    "fingerprint": null,
+    "made_from": null,
+    "places": [
+      "ballwin-mo",
+      "clayton-mo",
+      "webster-groves-mo"
+    ]
+  },
+  "feed": {
+    "adapter": "stlouis_csv",
+    "base": "https://extcontent.stlouisco.com/BOE/eResults/media",
+    "results_url": "https://extcontent.stlouisco.com/BOE/eResults/media/media.csv",
+    "results_url_note": "The county's only readable results address tonight is this CSV (a 6.6 MB download); its office site stlouiscountymo.gov refused scripted reads in capture round 1, so no friendlier page is known.",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent on Nov 3, 10:19 PM CT (200, Last-Modified 03:58:42 GMT) and a conditional read at 10:20 PM (304).",
+    "election_id_from": "The file names no election. Its Last-Modified must fall between Nov 3 and certification, and it must hold the contests below by id and title (only this election has them).",
+    "identity_contests": [
+      {
+        "id": "35",
+        "name": "ST. LOUIS COUNTY - COUNTY EXECUTIVE"
+      },
+      {
+        "id": "48",
+        "name": "ST. LOUIS COUNTY - PROPOSITION S"
+      },
+      {
+        "id": "73",
+        "name": "CITY OF WEBSTER GROVES - AMENDMENT 1"
+      }
+    ],
+    "tz": "America/Chicago"
+  },
+  "polls_close": "2026-11-04T01:00:00Z",
+  "count_closes": "2026-11-18T05:59:00Z",
+  "count_closes_note": "Mail had to arrive by 7 PM Nov 3; provisional ballots are added before the canvass, so the count stays open to certification.",
+  "complete_marker": null,
+  "certify_by": "2026-11-17",
+  "official": null,
+  "contests": [],
+  "unmatched_feed": [],
+  "unmatched_guide": [],
+  "not_here": []
+}

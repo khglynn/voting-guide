@@ -6,5 +6,8 @@ import * as clarity from './clarity.js';
 import * as harris from './harris.js';
 import * as tx_sos from './tx_sos.js';
 import * as dc from './dc.js';
+import * as stlouis_csv from './stlouis_csv.js';
+import * as or_sos from './or_sos.js';
+import * as multco from './multco.js';
 
-export const ADAPTERS = { clarity, harris, tx_sos, dc };
+export const ADAPTERS = { clarity, harris, tx_sos, dc, stlouis_csv, or_sos, multco };

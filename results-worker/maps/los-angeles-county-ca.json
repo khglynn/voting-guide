@@ -22,7 +22,9 @@
       "santa-monica-ca",
       "torrance-ca",
       "west-hollywood-ca"
-    ]
+    ],
+    "fingerprint": "e3b0c44298fc1c14",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:28:55.127Z"
   },
   "feed": {
     "adapter": "la_county",

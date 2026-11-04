@@ -5625,6 +5625,50 @@ export const MAPS = [
     "not_here": []
   },
   {
+    "id": "los-angeles-county-ca",
+    "state": "CA",
+    "name": "Los Angeles County",
+    "county": "Los Angeles",
+    "election": {
+      "date": "2026-11-03",
+      "feed_election_id": "4348",
+      "feed_name": "General Election"
+    },
+    "guide": {
+      "places": [
+        "beverly-hills-ca",
+        "burbank-ca",
+        "culver-city-ca",
+        "glendale-ca",
+        "long-beach-ca",
+        "los-angeles-ca",
+        "malibu-ca",
+        "pasadena-ca",
+        "santa-clarita-ca",
+        "santa-monica-ca",
+        "torrance-ca",
+        "west-hollywood-ca"
+      ],
+      "fingerprint": "e3b0c44298fc1c14",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:28:55.127Z"
+    },
+    "feed": {
+      "adapter": "la_county",
+      "base": "https://results.lavote.gov",
+      "results_url": "https://results.lavote.gov/#year=2026&election=4348",
+      "identity": "named",
+      "identity_note": "Answered our named User-Agent on Nov 3, 8:18 to 8:23 PM PT from Kevin's Mac (the app page, /text-results/4348, its JS, GetElectionData and GetCounterData all 200 through Imperva, no challenge). Not yet tried from the Worker's Cloudflare addresses.",
+      "election_id_from": "The county's own app: GetElectionData?electionID=4348 says ID 4348, \"General Election\", 2026-11-03 (the registry row's text-results/4348 and the Oct 31 saved candidate list lavote.gov/Apps/CandidateList/Index?id=4348 agree). GetCounterData's first bulletin: \"11/3/2026 8:17:00 PM\", 1,439,924 ballots, all vote by mail.",
+      "tz": "America/Los_Angeles"
+    },
+    "polls_close": "2026-11-04T04:00:00Z",
+    "count_closes": "2026-11-11T07:59:00Z",
+    "complete_marker": null,
+    "certify_by": "2026-11-27",
+    "official": null,
+    "contests": []
+  },
+  {
     "id": "results-CO-adams",
     "state": "CO",
     "name": "Adams County",

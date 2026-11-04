@@ -9,8 +9,9 @@
 import { S } from '../state';
 import { esc, load, save } from '../util';
 import { rowTitle } from '../model/labels';
-import { figure, countLine, othersLine, dotLine, checkedLine, sourceLines, R, type Dot, type Figure } from '../model/results';
-import { sectionTitle } from './ledger';
+import { figure, countLine, othersLine, dotLine, checkedLine, sourceLines, R, resultsMode, resultsWaiting, type Dot, type Figure } from '../model/results';
+import { sectionTitle, resColOf } from './ledger';
+import { ext, isOpen } from './common';
 
 const HIDE_KEY = 'vg-tally';
 /* "Hide summary" is remembered on this device in its own key, never in vg2 or the save link. */
@@ -36,15 +37,22 @@ function listHTML(dots: Dot[]): string {
 /* `forPrint`: the same figure on What's next's printed page (black marks there), with no ids and nothing to tap. */
 export function figureHTML(forPrint = false): string {
   const f = figure();
-  if (!f) return forPrint ? '' : '<div id="vz" hidden></div>';
+  if (!f) {
+    if (forPrint) return '';
+    // No file for this state (California tonight), or the first read failed: one line and the offices' own pages, so a
+    // friend's city still reads as results, not as a guide from before the polls closed.
+    if (resultsMode() && !resultsWaiting() && (R.none || R.failed)) {
+      return `<section class="vz vz-links" id="vz"><p class="vz-ex">${esc(R.failed && !R.none ? 'Couldn’t check the election offices just now. Their own pages have the counts.' : 'This guide doesn’t copy counts for these races yet. The election offices’ own pages have them.')}</p>${officesHTML()}</section>`;
+    }
+    return '<div id="vz" hidden></div>';
+  }
   const hidden = !forPrint && figHidden();
   if (forPrint) return printHTML(f);
   const hd = `<div class="vz-hd"><h3 class="vz-st" id="vz-h">${esc(f.word)}</h3><button class="linkbtn" data-act="fig-hide" data-fk="vz-hide" aria-expanded="${!hidden}" aria-controls="vz-bd">${hidden ? 'Show summary' : 'Hide summary'}</button></div>
     <p class="vz-ex">${esc(f.explain)}</p>`;
-  const srcs = [checkedLine(), ...sourceLines()].filter(Boolean);
   const failed = R.failed ? '<p class="vz-src">Couldn’t check the election office’s results just now. These are the last numbers we read.</p>' : '';
   // Every race here links to the office's own page (Manhattan): no figure, no Refresh, one line (DESIGN, link-only places).
-  if (f.allLinks) return `<section class="vz vz-links" id="vz"><p class="vz-ex">${esc(linksLine())}</p></section>`;
+  if (f.allLinks) return `<section class="vz vz-links" id="vz"><p class="vz-ex">${esc(linksLine())}</p>${officesHTML()}</section>`;
   if (hidden) return `<section class="vz is-hidden" id="vz" aria-labelledby="vz-h">${hd}</section>`;
   const picks = f.picks > 0;
   const key = keyHTML(f);
@@ -59,12 +67,49 @@ export function figureHTML(forPrint = false): string {
   }).join('');
   const sum = `<p class="vz-sum">${esc(picks ? countLine(f) : noPicksLine(f))}</p>`;
   const other = picks && f.others ? esc(othersLine(f)) : '';
-  const q = f.questions.n ? `<button class="linkbtn" data-act="goto" data-q="${esc(f.questions.first!.slice(2))}" data-fk="vz-q">${f.questions.n === 1 ? '1 district question still needs an answer' : `${f.questions.n} district questions still need an answer`}</button>` : '';
+  const q = f.questions.n ? `<button class="linkbtn" data-act="goto" data-q="${esc(f.questions.first!.slice(2))}" data-fk="vz-q">${f.questions.n === 1 ? '1 more race needs your district' : `${f.questions.n} more races need your district`}</button>` : '';
   const more = other || q ? `<p class="vz-more">${[other, q].filter(Boolean).join('<span class="dot" aria-hidden="true"> · </span>')}</p>` : '';
   const notes = f.notes.map((n) => `<p class="vz-note">${esc(n)}</p>`).join('');
-  return `<section class="vz" id="vz" aria-labelledby="vz-h">${hd}
-    <div id="vz-bd">${key}<div class="vz-fig">${rows}</div>${sum}${more}${notes}
-    ${failed}${srcs.length ? `<div class="vz-src">${srcs.map((s) => `<p>${esc(s)}</p>`).join('')}</div>` : ''}</div></section>`;
+  // No picks (a friend's city): where races stand, as a list, in place of the dots (overnight).
+  const body = picks ? `${key}<div class="vz-fig">${rows}</div>${sum}` : standHTML(f);
+  return `<section class="vz${picks ? '' : ' vz-stand'}" id="vz" aria-labelledby="vz-h">${hd}
+    <div id="vz-bd">${body}${more}${notes}${failed}${srcFoldHTML()}</div></section>`;
+}
+/* Where the numbers come from, folded under one link (overnight: the run of each office's times was a paragraph at the
+   top of the ballot). Open: when we checked, then each office's own update time and words. The menu has the same. */
+function srcFoldHTML(): string {
+  const srcs = [checkedLine(), ...sourceLines()].filter(Boolean);
+  if (!srcs.length) return '';
+  const k = 'vz-src';
+  const open = isOpen(k);
+  return `<p class="vz-srcs"><button class="linkbtn" data-act="open" data-k="${k}" aria-expanded="${open}" data-fk="${k}">Where these numbers come from</button></p>${open ? `<div class="vz-src">${srcs.map((x) => `<p>${esc(x)}</p>`).join('')}</div>` : ''}`;
+}
+/* The offices' own results pages for this ballot, as links: the voter's county first, then the state. */
+function officesHTML(): string {
+  const rows = (S.ballot?.howto.results?.sources || []).filter((x) => /^https:\/\//i.test(x.results_url));
+  return rows.length ? `<p class="vz-offs">${rows.map((x) => ext(x.results_url, `${x.label || x.name} results`)).join('')}</p>` : '';
+}
+/* No picks on this ballot (overnight, Kevin: "I keep checking out states my friends are in and it's hard to see
+   summaries"): where races stand, grouped like the ballot, the first few races of each section, top of the ballot
+   first. Each line says what the row's own column says: the leader and share with its status word or county, a
+   measure's yes share beside its bar, "Not posted yet", or the office's page as a link. A section's title jumps to it. */
+const STAND_N = 3;
+function standHTML(f: Figure): string {
+  const b = S.ballot!;
+  return `<div class="st">${f.rows.map(({ sec, dots }) => {
+    const shown = dots.slice(0, STAND_N);
+    const more = dots.length - shown.length;
+    const lines = shown.map((d) => {
+      const it = b.byId.get(d.id)!;
+      const t = rowTitle(it);
+      const c = resColOf(it);
+      const v = !c ? '' : c.kind === 'link' && c.url ? ext(c.url, c.main, 'st-go')
+        : c.kind === 'num' ? `<b>${esc(c.main)}</b>${c.sub ? `<small>${esc(c.sub)}</small>` : ''}` : `<span class="st-none">${esc(c.main)}</span>`;
+      return `<li><button class="st-t" data-act="goto" data-id="${esc(d.id)}" data-fk="st-go-${esc(d.id)}">${esc(t.title)}${t.sub ? `<small>${esc(it.kind === 'measure' && it.short_title ? it.short_title : t.sub)}</small>` : it.kind === 'measure' && it.short_title ? `<small>${esc(it.short_title)}</small>` : ''}</button><span class="st-v">${v}</span></li>`;
+    }).join('');
+    return `<div class="st-sec" data-sec="${sec}"><h4 class="st-h"><button class="linkbtn" data-act="jump" data-to="${sec}" data-fk="st-${sec}">${esc(sectionTitle(sec))}</button></h4>
+      <ul class="st-list">${lines}</ul>${more ? `<p class="st-more"><button class="linkbtn" data-act="jump" data-to="${sec}" data-fk="st-more-${sec}">${more === 1 ? '1 more race' : `${more} more races`} in ${esc(sectionTitle(sec))}</button></p>` : ''}</div>`;
+  }).join('')}</div>`;
 }
 
 /* The key, above the dots: the shapes on this ballot, and nothing it doesn't use. */
@@ -81,7 +126,7 @@ const noPicksLine = (f: Figure): string => `No picks on this ballot. ${f.posted}
 function linksLine(): string {
   const ids = new Set(S.ballot!.items.map((it) => R.file?.items[it.id]?.source).filter(Boolean));
   const names = (R.file?.sources || []).filter((x) => ids.has(x.id)).map((x) => x.name);
-  return `Results for your races are on ${names.length === 1 ? `the ${names[0]}’s site` : 'the election offices’ own sites'}. Your picks stay here.`;
+  return `${names.length === 1 ? `The ${names[0]} posts` : 'The election offices post'} results for your races on ${names.length === 1 ? 'its' : 'their'} own site. Your picks stay here.`;
 }
 export const allLinksNow = (): boolean => !!figure()?.allLinks;
 function printHTML(f: Figure): string {

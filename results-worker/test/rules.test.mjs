@@ -196,6 +196,23 @@ test('file: a whole-race source is the item; county counts ride beneath as count
   assert.deepEqual(checkFile(f), []);
 });
 
+test('file: a county slice bigger than the state\'s whole-race count keeps the state on top, with a plain note', () => {
+  const STATE = { id: 'st', state: 'TX', name: 'Texas Secretary of State', county: 'Texas', scope: 'state', feed: { adapter: 'tx_sos', results_url: 'https://sos.example/', tz: 'America/Chicago' },
+    contests: [{ feed_id: 'MAYOR', feed_name: 'MAYOR', item: 'mayor', kind: 'plurality', seats: 1, whole: true, reaches: ['Texas'], choices: { 'ANN SMITH': 'Ann Smith', 'BO JONES': 'Bo Jones' } }] };
+  const stateRead = (a, b) => ({ record: { read: readOf([{ feed_id: 'MAYOR', feed_name: 'MAYOR', choices: [{ name: 'ANN SMITH', votes: a }, { name: 'BO JONES', votes: b }] }]), fetched: '2026-11-04T02:00:00.000Z' }, checked: true, sched: {} });
+  const county = { record: { read: readOf([{ feed_id: '1', feed_name: 'Mayor', choices: [{ name: 'SMITH, ANN', votes: 600 }, { name: 'JONES, BO', votes: 300 }, { name: 'Write-in', votes: 0 }, { name: 'Cy Doe (W)', votes: 0 }] }, { feed_id: '2', feed_name: 'Prop A', choices: [{ name: 'FOR', votes: 1 }, { name: 'AGAINST', votes: 1 }] }]), fetched: '2026-11-04T02:00:00.000Z' }, checked: true, sched: {} };
+  let f = buildStateFile({ state: 'TX', maps: [STATE, MAP_A], srcs: { st: stateRead(500, 300), 'a-tx': county }, mode: 'public', now: '2026-11-04T02:00:00.000Z' });
+  const x = f.items.mayor;
+  assert.equal(x.source, 'st', 'the state count stays the whole race');
+  assert.equal(x.total_votes, 800, 'never summed, never swapped for the county');
+  assert.equal(x.county_slices[0].total_votes, 900);
+  assert.equal(x.note, "The state's count is behind A County's own count, which already has more votes.");
+  assert.equal(x.county_slices[0]._name, undefined, 'private fields stay out of the file');
+  assert.deepEqual(checkFile(f), []);
+  f = buildStateFile({ state: 'TX', maps: [STATE, MAP_A], srcs: { st: stateRead(5000, 4000), 'a-tx': county }, mode: 'public', now: '2026-11-04T02:00:00.000Z' });
+  assert.equal(f.items.mayor.note, undefined, 'no note while the state count is the bigger one');
+});
+
 test('file: a whole-race count of zero, or an emptied race, never hides county numbers', () => {
   const STATE = { id: 'st', state: 'TX', name: 'Secretary of State', county: 'Texas', scope: 'state', feed: { adapter: 'tx_sos', results_url: 'https://sos.example/', tz: 'America/Chicago' },
     contests: [{ feed_id: 'MAYOR', feed_name: 'MAYOR', item: 'mayor', kind: 'plurality', seats: 1, whole: true, reaches: ['Texas'], choices: { 'ANN SMITH': 'Ann Smith', 'BO JONES': 'Bo Jones' } }] };

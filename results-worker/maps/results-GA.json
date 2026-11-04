@@ -1,0 +1,40 @@
+{
+  "id": "results-GA",
+  "state": "GA",
+  "name": "Georgia Secretary of State",
+  "county": "Georgia",
+  "scope": "state",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "11032026GeneralAndSpecialElection",
+    "feed_name": "November 3, 2026 - General & Special Elections"
+  },
+  "guide": {
+    "fingerprint": "e3b0c44298fc1c14",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:26:40.241Z",
+    "locals": true,
+    "places": [
+      "state-GA",
+      "atlanta-ga"
+    ]
+  },
+  "feed": {
+    "adapter": "enhanced_voting",
+    "base": "https://results.sos.ga.gov/results/public/api/elections/Georgia",
+    "results_url": "https://results.sos.ga.gov/results/public/Georgia/11032026GeneralAndSpecialElection",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent on Nov 3, 2026 at 10:20 PM CT (election record and ballot-items both 200, JSON), builder of the enhanced-voting family; capture round 1 saw the same.",
+    "election_id_from": "The registry row results-GA (capture round 1, Nov 3, 7:52 PM CT); the election record says \"November 3, 2026 - General & Special Elections\", electionDate 2026-11-03, and every contest names publishPublicElectionId 11032026GeneralAndSpecialElection. Progress: each contest counts counties (159).",
+    "units": "counties",
+    "tz": "America/New_York"
+  },
+  "polls_close": "2026-11-04T00:00:00Z",
+  "count_closes": "2026-11-06T22:00:00Z",
+  "complete_marker": null,
+  "certify_by": "2026-11-20",
+  "official": null,
+  "contests": [],
+  "unmatched_feed": [],
+  "unmatched_guide": [],
+  "not_here": []
+}

@@ -1,0 +1,37 @@
+{
+  "id": "dekalb-ga",
+  "state": "GA",
+  "name": "DeKalb County",
+  "county": "DeKalb",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "11032026GeneralAndSpecialElection",
+    "feed_name": "November 3, 2026 - General & Special Elections"
+  },
+  "guide": {
+    "fingerprint": "e3b0c44298fc1c14",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:26:39.865Z",
+    "places": [
+      "atlanta-ga"
+    ]
+  },
+  "feed": {
+    "adapter": "enhanced_voting",
+    "base": "https://app.enhancedvoting.com/results/public/api/elections/dekalb-county-ga",
+    "results_url": "https://app.enhancedvoting.com/results/public/dekalb-county-ga/elections/11032026GeneralAndSpecialElection",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent on Nov 3, 2026 at 10:20 PM CT (election record and ballot-items both 200, JSON), builder of the enhanced-voting family; capture round 1 saw the same.",
+    "election_id_from": "The registry row dekalb-ga (capture round 1, Nov 3, 6:36 PM CT; the county office page names the Nov 3 General / Special Election); the election record and every contest agree on 11032026GeneralAndSpecialElection, dated 2026-11-03. 191 precincts.",
+    "units": "precincts",
+    "tz": "America/New_York"
+  },
+  "polls_close": "2026-11-04T00:00:00Z",
+  "count_closes": "2026-11-06T22:00:00Z",
+  "complete_marker": null,
+  "certify_by": "2026-11-09",
+  "official": null,
+  "contests": [],
+  "unmatched_feed": [],
+  "unmatched_guide": [],
+  "not_here": []
+}

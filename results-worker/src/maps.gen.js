@@ -3096,6 +3096,43 @@ export const MAPS = [
     "not_here": []
   },
   {
+    "id": "dekalb-ga",
+    "state": "GA",
+    "name": "DeKalb County",
+    "county": "DeKalb",
+    "election": {
+      "date": "2026-11-03",
+      "feed_election_id": "11032026GeneralAndSpecialElection",
+      "feed_name": "November 3, 2026 - General & Special Elections"
+    },
+    "guide": {
+      "fingerprint": "e3b0c44298fc1c14",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:26:39.865Z",
+      "places": [
+        "atlanta-ga"
+      ]
+    },
+    "feed": {
+      "adapter": "enhanced_voting",
+      "base": "https://app.enhancedvoting.com/results/public/api/elections/dekalb-county-ga",
+      "results_url": "https://app.enhancedvoting.com/results/public/dekalb-county-ga/elections/11032026GeneralAndSpecialElection",
+      "identity": "named",
+      "identity_note": "Answered our named User-Agent on Nov 3, 2026 at 10:20 PM CT (election record and ballot-items both 200, JSON), builder of the enhanced-voting family; capture round 1 saw the same.",
+      "election_id_from": "The registry row dekalb-ga (capture round 1, Nov 3, 6:36 PM CT; the county office page names the Nov 3 General / Special Election); the election record and every contest agree on 11032026GeneralAndSpecialElection, dated 2026-11-03. 191 precincts.",
+      "units": "precincts",
+      "tz": "America/New_York"
+    },
+    "polls_close": "2026-11-04T00:00:00Z",
+    "count_closes": "2026-11-06T22:00:00Z",
+    "complete_marker": null,
+    "certify_by": "2026-11-09",
+    "official": null,
+    "contests": [],
+    "unmatched_feed": [],
+    "unmatched_guide": [],
+    "not_here": []
+  },
+  {
     "id": "harris-county-tx",
     "state": "TX",
     "name": "Harris County",
@@ -5625,6 +5662,43 @@ export const MAPS = [
     "not_here": []
   },
   {
+    "id": "king-county-wa",
+    "state": "WA",
+    "name": "King County",
+    "county": "King",
+    "election": {
+      "date": "2026-11-03",
+      "feed_election_id": "20261103",
+      "feed_name": "2026 General"
+    },
+    "guide": {
+      "fingerprint": "e3b0c44298fc1c14",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:26:40.068Z",
+      "places": [
+        "seattle-wa"
+      ]
+    },
+    "feed": {
+      "adapter": "enhanced_voting",
+      "base": "https://results.votewa.gov/results/public/api/elections/king-county-wa",
+      "results_url": "https://results.votewa.gov/results/public/king-county-wa/elections/20261103",
+      "identity": "named",
+      "identity_note": "Answered our named User-Agent on Nov 3, 2026 at 10:20 PM CT (election record and ballot-items both 200, JSON), builder of the enhanced-voting family; capture round 1 saw the same.",
+      "election_id_from": "The registry row king-county-wa (endpoints on results.votewa.gov; the county hub kingcounty.gov/en/dept/elections/results/2026/november-general links this viewer); the election record says \"2026 General\", 2026-11-03, every contest names 20261103. The feed gives no precinct counts per contest tonight (totalUnits 0) and nextUpdateAt 2026-11-05T00:00Z (4 PM PT Nov 4).",
+      "units": "precincts",
+      "tz": "America/Los_Angeles"
+    },
+    "polls_close": "2026-11-04T04:00:00Z",
+    "count_closes": "2026-11-25T07:59:00Z",
+    "complete_marker": null,
+    "certify_by": "2026-11-24",
+    "official": null,
+    "contests": [],
+    "unmatched_feed": [],
+    "unmatched_guide": [],
+    "not_here": []
+  },
+  {
     "id": "results-CO-adams",
     "state": "CO",
     "name": "Adams County",
@@ -7359,6 +7433,83 @@ export const MAPS = [
     "not_here": []
   },
   {
+    "id": "results-GA",
+    "state": "GA",
+    "name": "Georgia Secretary of State",
+    "county": "Georgia",
+    "scope": "state",
+    "election": {
+      "date": "2026-11-03",
+      "feed_election_id": "11032026GeneralAndSpecialElection",
+      "feed_name": "November 3, 2026 - General & Special Elections"
+    },
+    "guide": {
+      "fingerprint": "e3b0c44298fc1c14",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:26:40.241Z",
+      "locals": true,
+      "places": [
+        "state-GA",
+        "atlanta-ga"
+      ]
+    },
+    "feed": {
+      "adapter": "enhanced_voting",
+      "base": "https://results.sos.ga.gov/results/public/api/elections/Georgia",
+      "results_url": "https://results.sos.ga.gov/results/public/Georgia/11032026GeneralAndSpecialElection",
+      "identity": "named",
+      "identity_note": "Answered our named User-Agent on Nov 3, 2026 at 10:20 PM CT (election record and ballot-items both 200, JSON), builder of the enhanced-voting family; capture round 1 saw the same.",
+      "election_id_from": "The registry row results-GA (capture round 1, Nov 3, 7:52 PM CT); the election record says \"November 3, 2026 - General & Special Elections\", electionDate 2026-11-03, and every contest names publishPublicElectionId 11032026GeneralAndSpecialElection. Progress: each contest counts counties (159).",
+      "units": "counties",
+      "tz": "America/New_York"
+    },
+    "polls_close": "2026-11-04T00:00:00Z",
+    "count_closes": "2026-11-06T22:00:00Z",
+    "complete_marker": null,
+    "certify_by": "2026-11-20",
+    "official": null,
+    "contests": [],
+    "unmatched_feed": [],
+    "unmatched_guide": [],
+    "not_here": []
+  },
+  {
+    "id": "results-NY-sullivan",
+    "state": "NY",
+    "name": "Sullivan County Board of Elections",
+    "county": "Sullivan",
+    "election": {
+      "date": "2026-11-03",
+      "feed_election_id": "GE2026",
+      "feed_name": "2026 General Election"
+    },
+    "guide": {
+      "fingerprint": "e3b0c44298fc1c14",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:26:40.354Z",
+      "places": [
+        "callicoon-ny"
+      ]
+    },
+    "feed": {
+      "adapter": "enhanced_voting",
+      "base": "https://app.enhancedvoting.com/results/public/api/elections/sullivan-county-ny",
+      "results_url": "https://app.enhancedvoting.com/results/public/sullivan-county-ny/GE2026",
+      "identity": "named",
+      "identity_note": "Answered our named User-Agent on Nov 3, 2026 at 10:20 PM CT (election record and ballot-items both 200, JSON), builder of the enhanced-voting family; capture round 1 saw the same.",
+      "election_id_from": "The registry row results-NY-sullivan (capture round 1, Nov 3, 8:41 PM CT; sullivanny.gov/Departments/Elections links GE2026); the election record says \"2026 General Election\", 2026-11-03, every contest names GE2026. 96 election districts. Contests come from /ballot-items, which the capture did not try (it answered 200 at 10:20 PM CT). New York fusion: the adapter adds a candidate's party lines together.",
+      "units": "election districts",
+      "tz": "America/New_York"
+    },
+    "polls_close": "2026-11-04T02:00:00Z",
+    "count_closes": "2026-11-11T04:59:00Z",
+    "complete_marker": null,
+    "certify_by": "2026-11-28",
+    "official": null,
+    "contests": [],
+    "unmatched_feed": [],
+    "unmatched_guide": [],
+    "not_here": []
+  },
+  {
     "id": "results-TX",
     "state": "TX",
     "name": "Texas Secretary of State",
@@ -8124,6 +8275,46 @@ export const MAPS = [
         "why": "the SOS page lists no candidates for it at 9:12 PM; Travis's count stands for it"
       }
     ],
+    "unmatched_guide": [],
+    "not_here": []
+  },
+  {
+    "id": "results-WA",
+    "state": "WA",
+    "name": "Washington Secretary of State",
+    "county": "Washington",
+    "scope": "state",
+    "election": {
+      "date": "2026-11-03",
+      "feed_election_id": "20261103",
+      "feed_name": "2026 General"
+    },
+    "guide": {
+      "fingerprint": "e3b0c44298fc1c14",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:26:40.471Z",
+      "locals": true,
+      "places": [
+        "state-WA",
+        "seattle-wa"
+      ]
+    },
+    "feed": {
+      "adapter": "enhanced_voting",
+      "base": "https://results.votewa.gov/results/public/api/elections/washington",
+      "results_url": "https://results.votewa.gov/results/public/washington/20261103",
+      "identity": "named",
+      "identity_note": "Answered our named User-Agent on Nov 3, 2026 at 10:20 PM CT (election record and ballot-items both 200, JSON), builder of the enhanced-voting family; capture round 1 saw the same.",
+      "election_id_from": "The registry row results-WA (verified Nov 3); the election record says \"2026 General\", electionDate 2026-11-03, every contest names 20261103. Its message: counties report until certification on Nov 24, 2026; results before then are unofficial. Progress: each contest counts counties (39 statewide).",
+      "units": "counties",
+      "tz": "America/Los_Angeles"
+    },
+    "polls_close": "2026-11-04T04:00:00Z",
+    "count_closes": "2026-11-25T07:59:00Z",
+    "complete_marker": null,
+    "certify_by": "2026-12-03",
+    "official": null,
+    "contests": [],
+    "unmatched_feed": [],
     "unmatched_guide": [],
     "not_here": []
   },

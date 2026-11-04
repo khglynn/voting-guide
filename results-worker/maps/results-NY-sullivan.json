@@ -1,0 +1,37 @@
+{
+  "id": "results-NY-sullivan",
+  "state": "NY",
+  "name": "Sullivan County Board of Elections",
+  "county": "Sullivan",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "GE2026",
+    "feed_name": "2026 General Election"
+  },
+  "guide": {
+    "fingerprint": "e3b0c44298fc1c14",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:26:40.354Z",
+    "places": [
+      "callicoon-ny"
+    ]
+  },
+  "feed": {
+    "adapter": "enhanced_voting",
+    "base": "https://app.enhancedvoting.com/results/public/api/elections/sullivan-county-ny",
+    "results_url": "https://app.enhancedvoting.com/results/public/sullivan-county-ny/GE2026",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent on Nov 3, 2026 at 10:20 PM CT (election record and ballot-items both 200, JSON), builder of the enhanced-voting family; capture round 1 saw the same.",
+    "election_id_from": "The registry row results-NY-sullivan (capture round 1, Nov 3, 8:41 PM CT; sullivanny.gov/Departments/Elections links GE2026); the election record says \"2026 General Election\", 2026-11-03, every contest names GE2026. 96 election districts. Contests come from /ballot-items, which the capture did not try (it answered 200 at 10:20 PM CT). New York fusion: the adapter adds a candidate's party lines together.",
+    "units": "election districts",
+    "tz": "America/New_York"
+  },
+  "polls_close": "2026-11-04T02:00:00Z",
+  "count_closes": "2026-11-11T04:59:00Z",
+  "complete_marker": null,
+  "certify_by": "2026-11-28",
+  "official": null,
+  "contests": [],
+  "unmatched_feed": [],
+  "unmatched_guide": [],
+  "not_here": []
+}

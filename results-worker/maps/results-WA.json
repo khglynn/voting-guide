@@ -1,0 +1,40 @@
+{
+  "id": "results-WA",
+  "state": "WA",
+  "name": "Washington Secretary of State",
+  "county": "Washington",
+  "scope": "state",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "20261103",
+    "feed_name": "2026 General"
+  },
+  "guide": {
+    "fingerprint": "e3b0c44298fc1c14",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:26:40.471Z",
+    "locals": true,
+    "places": [
+      "state-WA",
+      "seattle-wa"
+    ]
+  },
+  "feed": {
+    "adapter": "enhanced_voting",
+    "base": "https://results.votewa.gov/results/public/api/elections/washington",
+    "results_url": "https://results.votewa.gov/results/public/washington/20261103",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent on Nov 3, 2026 at 10:20 PM CT (election record and ballot-items both 200, JSON), builder of the enhanced-voting family; capture round 1 saw the same.",
+    "election_id_from": "The registry row results-WA (verified Nov 3); the election record says \"2026 General\", electionDate 2026-11-03, every contest names 20261103. Its message: counties report until certification on Nov 24, 2026; results before then are unofficial. Progress: each contest counts counties (39 statewide).",
+    "units": "counties",
+    "tz": "America/Los_Angeles"
+  },
+  "polls_close": "2026-11-04T04:00:00Z",
+  "count_closes": "2026-11-25T07:59:00Z",
+  "complete_marker": null,
+  "certify_by": "2026-12-03",
+  "official": null,
+  "contests": [],
+  "unmatched_feed": [],
+  "unmatched_guide": [],
+  "not_here": []
+}

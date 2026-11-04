@@ -1,0 +1,37 @@
+{
+  "id": "king-county-wa",
+  "state": "WA",
+  "name": "King County",
+  "county": "King",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "20261103",
+    "feed_name": "2026 General"
+  },
+  "guide": {
+    "fingerprint": "e3b0c44298fc1c14",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:26:40.068Z",
+    "places": [
+      "seattle-wa"
+    ]
+  },
+  "feed": {
+    "adapter": "enhanced_voting",
+    "base": "https://results.votewa.gov/results/public/api/elections/king-county-wa",
+    "results_url": "https://results.votewa.gov/results/public/king-county-wa/elections/20261103",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent on Nov 3, 2026 at 10:20 PM CT (election record and ballot-items both 200, JSON), builder of the enhanced-voting family; capture round 1 saw the same.",
+    "election_id_from": "The registry row king-county-wa (endpoints on results.votewa.gov; the county hub kingcounty.gov/en/dept/elections/results/2026/november-general links this viewer); the election record says \"2026 General\", 2026-11-03, every contest names 20261103. The feed gives no precinct counts per contest tonight (totalUnits 0) and nextUpdateAt 2026-11-05T00:00Z (4 PM PT Nov 4).",
+    "units": "precincts",
+    "tz": "America/Los_Angeles"
+  },
+  "polls_close": "2026-11-04T04:00:00Z",
+  "count_closes": "2026-11-25T07:59:00Z",
+  "complete_marker": null,
+  "certify_by": "2026-11-24",
+  "official": null,
+  "contests": [],
+  "unmatched_feed": [],
+  "unmatched_guide": [],
+  "not_here": []
+}

@@ -10,8 +10,10 @@
    is Eastern (seen at 8:44 PM CT on Nov 3), so the first tab's stamp is the change token: an unchanged poll is one
    request. A tab that pages (State House, Nov 3: "Next Page" to a page 2 reached only by a form post) is read at its
    first page only; races past it are simply not in this feed, and the state's own feed counts them.
-   The "*** Testing in Progress ***" banner is in the page as a hidden div (display:none) on Nov 3 over real counts; it
-   is quoted as a label only when the page serves it visible. Nothing here is an outcome. */
+   The "*** Testing in Progress ***" banner is in the page as a hidden div (display:none) on Nov 3 over real counts.
+   Served visible on any tab, it means test counts: the read is an error, so the last good numbers stay up and nothing
+   from a test page is ever published (pre-deploy review, Nov 3; it used to ride only as a label). Nothing here is an
+   outcome. */
 import { get } from '../fetch.js';
 import { parseUsTime, isoDate } from '../util.js';
 
@@ -51,12 +53,15 @@ export async function read({ fetch, map, prevToken = null }) {
   if (first.verdict !== 'ok') return { verdict: first.verdict, error: first.error, status: first.status, url: first.url };
   const p0 = parse(first.body || '');
   if (!p0.updated) return { verdict: 'error', error: 'no "Results Last Updated" stamp on the page (not the results page?)', url: first.url };
+  // Before the unchanged check, so a saved token can never hide it.
+  if (p0.banner) return { verdict: 'error', error: `the ${tabs[0]} tab shows its "${p0.banner}" banner (test counts)`, url: first.url };
   if (prevToken && p0.updated === prevToken) return { verdict: 'ok', unchanged: true, changed_token: p0.updated };
   const pages = [{ tab: tabs[0], body: first.body, p: p0 }];
   for (const t of tabs.slice(1)) {
     const r = await get(fetch, url(t), { identity, expect: 'html' });
     if (r.verdict !== 'ok') return { verdict: r.verdict, error: r.error, status: r.status, url: r.url };
     const p = parse(r.body || '');
+    if (p.banner) return { verdict: 'error', error: `the ${t} tab shows its "${p.banner}" banner (test counts)`, url: r.url };
     // The tabs are separate requests; a tab read across an update would mix two counts, so try again next poll.
     if (p.updated !== p0.updated) return { verdict: 'error', error: `the ${t} tab says ${p.updated}, the ${tabs[0]} tab ${p0.updated} (read across an update)`, url: r.url };
     pages.push({ tab: t, body: r.body, p });
@@ -74,7 +79,7 @@ export async function read({ fetch, map, prevToken = null }) {
     official: false,
     source_updated: parseUsTime(p0.updated, -5),
     reporting: p0.divisions,
-    labels: [p0.banner, p0.status ? `${p0.status} ${p0.name}`.trim() : null].filter(Boolean),
+    labels: [p0.status ? `${p0.status} ${p0.name}`.trim() : null].filter(Boolean),
     contests,
   };
 }

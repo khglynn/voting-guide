@@ -100,7 +100,7 @@ test('philadelphia: four tabs read with the page\'s own Eastern stamp, each race
   for (const c of f.calls) assert.equal(c.headers['User-Agent'], NAMED_UA);
 });
 
-test('philadelphia: an unchanged stamp costs one request; tabs read across an update are an error; a visible banner is quoted', async () => {
+test('philadelphia: an unchanged stamp costs one request; tabs read across an update are an error; a visible test banner is an error', async () => {
   const f = fakeFetch(PH_ROUTES);
   const r = await philly.read({ fetch: f, map: PH_MAP, prevToken: '11/3/2026 11:12:47 PM' });
   assert.equal(r.unchanged, true);
@@ -111,7 +111,14 @@ test('philadelphia: an unchanged stamp costs one request; tabs read across an up
   assert.match(across.error, /read across an update/);
   const shown = fixture('philadelphia.QUE.html').replace(/(<div id="pnlTestBanner"[^>]*?) display:none;/, '$1');
   const b = await philly.read({ fetch: fakeFetch({ ...PH_ROUTES, 'type=QUE': { status: 200, body: shown } }), map: PH_MAP });
-  assert.equal(b.labels[0], '*** Testing in Progress ***');
+  assert.equal(b.verdict, 'error', 'test counts are never published');
+  assert.match(b.error, /Testing in Progress/);
+  const cached = await philly.read({ fetch: fakeFetch({ ...PH_ROUTES, 'type=QUE': { status: 200, body: shown } }), map: PH_MAP, prevToken: '11/3/2026 11:12:47 PM' });
+  assert.equal(cached.verdict, 'error', 'a saved token never hides the banner');
+  const strShown = fixture('philadelphia.STR.html').replace(/(<div id="pnlTestBanner"[^>]*?) display:none;/, '$1');
+  const onStr = await philly.read({ fetch: fakeFetch({ ...PH_ROUTES, 'type=STR': { status: 200, body: strShown } }), map: PH_MAP });
+  assert.equal(onStr.verdict, 'error', 'every tab is checked, not only the first');
+  assert.match(onStr.error, /STR tab/);
 });
 
 test('denver: the header\'s time is the token; under and over votes are left out; "Winning" is never an outcome', async () => {

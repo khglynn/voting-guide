@@ -9,7 +9,7 @@
 import { S } from '../state';
 import { esc, load, save } from '../util';
 import { rowTitle } from '../model/labels';
-import { figure, countLine, splitLine, dotLine, checkedLine, sourceLines, R, resultsMode, resultsWaiting, anyPick, anyChoice, selName, type Dot, type Figure, type CmpSel } from '../model/results';
+import { figure, countLine, splitLine, dotLine, checkedLine, sourceLines, R, resultsMode, resultsWaiting, anyPick, anyChoice, selName, viewFor, type Dot, type Figure, type CmpSel } from '../model/results';
 import { CHIPS, emptyNote, partiesOnBallot, chipMembers } from '../model/lens';
 import { planAgree, planParty } from '../model/bulk';
 import { sectionTitle, resColOf } from './ledger';
@@ -159,7 +159,8 @@ function keyHTML(f: Figure): string {
 const noPicksLine = (f: Figure): string => `No picks on this ballot. ${f.posted} of ${f.total} ${f.total === 1 ? 'race has' : 'races have'} numbers here${f.links ? `; ${f.links} more ${f.links === 1 ? 'links' : 'link'} to official results` : ''}.`;
 /* "Results for your races are on the NYC Board of Elections site. Your picks stay here." */
 function linksLine(): string {
-  const ids = new Set(S.ballot!.items.map((it) => R.file?.items[it.id]?.source).filter(Boolean));
+  // The office behind each row as the row shows it (viewFor: a county's share of a statewide race only in that county).
+  const ids = new Set(S.ballot!.items.map((it) => { const r = R.file?.items[it.id]; return r ? viewFor(it, r)?.source : undefined; }).filter(Boolean));
   const names = (R.file?.sources || []).filter((x) => ids.has(x.id)).map((x) => x.name);
   return `${names.length === 1 ? `The ${names[0]} posts` : 'The election offices post'} results for your races on ${names.length === 1 ? 'its' : 'their'} own site. Your picks stay here.`;
 }

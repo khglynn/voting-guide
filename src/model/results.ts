@@ -8,7 +8,8 @@
       own complete or official mark. "won" is kept to the open row and the figure.
    3. Progress is the source's own words, quoted. We never compute a percent of precincts.
    4. A county's slice is never shown as the whole: a race across counties names the county whose count it shows,
-      and the figure doesn't compare it at all (we never add counties up).
+      and the figure doesn't compare it at all (we never add counties up). A statewide race held only as county shares
+      shows a county's share only on that county's ballots; elsewhere it's the state's own page (viewFor).
    5. Unmatched is a link, never a guess. Results are ink; gold stays your pick. */
 import type { Contest, Item, ItemResult, ResultCand, ResultSlice, ResultsFile, ResultsSourceEntry, ResultsSource, Measure } from '../types';
 import { S } from '../state';
@@ -67,7 +68,7 @@ export function resultOf(it: Item): ItemResult | null {
   const r = R.file!.items[it.id];
   // A multi-judge row is one item in the guide and several questions on the ballot: the file has no single answer.
   if (!r || (it.kind === 'contest' && isMultiJudge(it))) return null;
-  return viewOf(r);
+  return viewFor(it, r);
 }
 /* Still waiting on the first read of this state's file (nothing to say yet, not even "not posted"). */
 export const resultsWaiting = (): boolean => resultsMode() && !!(S.ballot!.howto.results?.sources || []).length
@@ -122,7 +123,11 @@ export function viewOf(r: ItemResult): ItemResult {
   const mine = k ? sl.find((x) => countyKey(bare(x.county)) === k && sliceHas(x)) : undefined;
   const own = sl.find((x) => x.source === r.source);
   const pick = mine || (own && sliceHas(own) ? own : undefined) || [...sl].filter(sliceHas).sort((a, b) => total(b) - total(a))[0];
-  if (!pick || pick.source === r.source) return r;
+  return pick ? withSlice(r, pick) : r;
+}
+/* The item with one county's slice in its place (viewOf says what stays the race's own). */
+function withSlice(r: ItemResult, pick: ResultSlice): ItemResult {
+  if (pick.source === r.source) return r;
   return {
     ...r, source: pick.source, reporting: pick.reporting, updated: pick.updated, url: pick.url,
     total_votes: pick.total_votes, candidates: pick.candidates, measure: pick.measure, seats: pick.seats ?? r.seats,
@@ -218,6 +223,45 @@ export function officeFor(it: Item): { url: string; text: string } | null {
   const r = b.statewide.has(it.id) ? state || county : county || state;
   if (r) return { url: r.results_url, text: `${r.label || r.name} results` };
   return httpsOK(b.howto.results_url) ? { url: b.howto.results_url!, text: `${b.howto.results_source || b.stateName} results` } : null;
+}
+
+/* ---------- a statewide race held only as county shares ----------
+   Rule 9 as amended Nov 4: where the state's own site turns us away, a county's count may carry a statewide race, named
+   as that county's and never as the whole race (Los Angeles County's for California's statewide races, Philadelphia's
+   and Allegheny's for Pennsylvania's governor). Such a share is about the voters of that county only, so it shows only
+   on a ballot in that county; anywhere else ("Los Angeles votes only" on a San Diego voter's governor row) the row is
+   the state's own page, as for any race we can't read. */
+/* A race every voter in the state sees (a statewide office, or a measure in the state's file), counted here by counties
+   only: the item is one of its own county slices. A statewide race with the state's own count isn't one (the Worker
+   keeps that count whole, its counties never in `slices`), and neither is a local race across county lines. */
+export function sharesOnly(it: Item, r: ItemResult): boolean {
+  const b = S.ballot;
+  if (!b || !b.statewide.has(it.id) || !(it.kind === 'measure' || (it.kind === 'contest' && it.every))) return false;
+  return spans(r) && (r.slices || []).some((x) => x.source === r.source);
+}
+/* The counties this ballot's voter is in, as far as the guide knows: the address lookup's county (this visit), else
+   the ZIP's (ballot.county), else every county the ballot's places list. None on a statewide-only ballot before a
+   lookup. */
+function ballotCounties(): string[] {
+  const b = S.ballot;
+  if (!b) return [];
+  const known = (S.ui.addrCounty || b.county || '').trim();
+  return known ? [known] : b.places.flatMap((p) => p.counties || []);
+}
+/* The ballot's state row in data/results-sources.json, when its results page passes the rows' https-only guard. */
+export function stateRow(): ResultsSource | undefined {
+  return (S.ballot?.howto.results?.sources || []).find((x) => x.kind === 'state' && httpsOK(x.results_url));
+}
+/* What a row shows from the file's item: a statewide race held only as county shares shows the share of a county this
+   ballot is in, else the state's own page as a link (no state page: nothing, so the row is a race the file doesn't
+   hold, noResCol). Every other race: viewOf. */
+export function viewFor(it: Item, r: ItemResult): ItemResult | null {
+  if (!sharesOnly(it, r)) return viewOf(r);
+  const sl = r.slices || [];
+  const mine = ballotCounties().map((c) => sl.find((x) => countyKey(bare(x.county)) === countyKey(bare(c)) && sliceHas(x))).find(Boolean);
+  if (mine) return withSlice(r, mine);
+  const st = stateRow();
+  return st ? { source: st.id, status: 'link_only', reporting: null, updated: null, url: st.results_url, final: null } : null;
 }
 
 /* ---------- the row's right column ----------
@@ -421,9 +465,11 @@ export function ballotSources(): ResultsSourceEntry[] {
   const ids = new Set<string>();
   for (const it of shownItems()) {
     const r = R.file!.items[it.id];
-    if (!r) continue;
-    ids.add(viewOf(r).source);
-    for (const s of r.slices || []) ids.add(s.source);
+    // The office behind what the row shows: never a county whose share this ballot doesn't show (viewFor).
+    const v = r ? viewFor(it, r) : null;
+    if (!v) continue;
+    ids.add(v.source);
+    for (const s of v.slices || []) ids.add(s.source);
   }
   return R.file!.sources.filter((s) => ids.has(s.id));
 }

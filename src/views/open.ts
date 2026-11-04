@@ -12,7 +12,7 @@ import { sourceLean, leanHTML, ext, clampP, escP, sampleBallot, isOpen, leadRest
 import { headsUp, headsHTML, addressCount } from './ledger';
 import { schoolOf } from '../model/address';
 import { mapSettles, seatless } from '../model/maps';
-import { resultOf, hasNumbers, resOpen, shortOf, leaders, pct0, pct1, fmtTime, sourceName, countyLabel, statusWord, labelWords, sourceDown, R, resultsMode, resultsWaiting, officeFor, officeShort, officeText } from '../model/results';
+import { resultOf, hasNumbers, resOpen, shortOf, leaders, pct0, pct1, fmtTime, sourceName, countyLabel, statusWord, labelWords, sourceDown, R, resultsMode, resultsWaiting, officeFor, officeShort, officeText, sharesOnly, stateRow } from '../model/results';
 import { apRaceURL } from '../model/news';
 import type { ItemResult } from '../types';
 
@@ -595,7 +595,13 @@ function slicesHTML(it: Item, r: ItemResult): string {
     const at = sl.updated ? `, updated ${fmtTime(sl.updated)}` : '';
     return `<li><b>${esc(name)}:</b> ${esc(nums)}${word ? ` (${esc(word)})` : ''}${esc(at)}.${sl.reporting ? ` “${esc(sl.reporting.replace(/\.$/, ''))}.”` : ''} ${ext(sl.url, `${name} results`)}</li>`;
   }).join('');
-  const miss = (r.missing || []).map((c) => `<li><b>${esc(countyLabel(c))}:</b> not in this guide’s results. Its election office posts its own count.</li>`).join('');
+  // A statewide race held only as county shares (rule 9, Nov 4): the counties we don't hold point at the state's own
+  // page, which has the statewide count. Elsewhere a county we don't hold posts its own count, "other counties" theirs.
+  const st = sharesOnly(it, r) ? stateRow() : undefined;
+  const miss = (r.missing || []).map((c) => {
+    const say = st ? `The statewide count is on ${st.label || st.name}’s page.` : /\bcounties\b/i.test(c) ? 'Their election offices post their own counts.' : 'Its election office posts its own count.';
+    return `<li><b>${esc(countyLabel(c))}:</b> not in this guide’s results. ${esc(say)}${st ? ` ${ext(st.results_url, `${st.label || st.name} results`)}` : ''}</li>`;
+  }).join('');
   return `<p class="rs-src"><b>This race crosses county lines.</b> Each county posts its own count, and we don’t add them up.</p><ul class="rs-sl">${rows}${miss}</ul>`;
 }
 function tableHTML(it: Item, o: ReturnType<typeof resOpen>): string {

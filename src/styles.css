@@ -319,6 +319,7 @@ b, strong { font-weight: 600; }
 /* A dated line's source, as a small arrow after it (overnight: "sos.texas.gov" on every line read as clutter). */
 .pd-src { display: inline-flex; align-items: center; justify-content: center; min-width: 28px; min-height: 28px; margin: -6px -4px -6px 0; vertical-align: middle; color: var(--muted); text-decoration: none; }
 .pd-src svg { width: 11px; height: 11px; }
+.pd-end { white-space: nowrap; }
 .pdates li.past { color: var(--muted); }
 .pd-d { font-weight: 600; font-variant-numeric: tabular-nums; }
 .pd-more { background: none; border: 0; padding: 4px 2px; margin: -4px 0; font: inherit; font-size: .9em; color: var(--gold-ink); text-decoration: underline; text-underline-offset: 2px; cursor: pointer; min-height: 32px; }

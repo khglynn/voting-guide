@@ -169,3 +169,11 @@ test('file: an unmatched leader never gets a final; a race with no reaches is on
   assert.equal(g.items.mayor.status, 'counting', 'never complete while a part is missing');
   assert.equal(g.items.mayor.final, null);
 });
+
+test('ladder: before the count window closes, a failing source waits at most 5 minutes', () => {
+  let e = {};
+  let t = '2026-11-04T02:00:00.000Z';
+  const waits = [];
+  for (let i = 0; i < 6; i++) { e = nextEntry(e, { kind: 'error', error: 'HTTP 502' }, t, { count_closes: '2026-11-04T23:00:00Z' }); waits.push((Date.parse(e.next_due) - Date.parse(t)) / 60000); t = e.next_due; }
+  assert.deepEqual(waits, [1, 2, 5, 5, 5, 5]);
+});

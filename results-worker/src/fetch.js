@@ -36,7 +36,7 @@ export async function get(fetchFn, url, { identity = 'named', expect = 'json', h
   if (res.url && res.url !== url) return { verdict: 'refused', ...meta, error: `served from ${res.url}, not the address asked for` };
   if (res.status === 304) return { verdict: 'not_modified', ...meta };
   if ([401, 403, 429].includes(res.status)) return { verdict: 'refused', ...meta, error: `HTTP ${res.status}` };
-  if (!res.ok) return { verdict: 'error', ...meta, error: `HTTP ${res.status}` };
+  if (!res.ok) { const via = [res.headers.get('server'), res.headers.get('x-cache'), res.headers.get('cf-ray') ? 'cf' : null].filter(Boolean).join(', '); return { verdict: 'error', ...meta, error: `HTTP ${res.status} on ${url.split('/').slice(-3).join('/')}${via ? ` (${via})` : ''}` }; }
   const body = await bodyText(res);
   if (expect === 'json') {
     if (/^\s*</.test(body)) return { verdict: 'refused', ...meta, error: 'an HTML page came back where data was expected (a bot check?)' };

@@ -45,7 +45,10 @@ export function nextEntry(entry = {}, result, now, map = {}) {
     e.fail_count = (e.fail_count || 0) + 1;
     e.failing_since ??= now;
     e.last_error = result.error || 'error';
-    const back = [1, 2, 5, 15, 60][Math.min(e.fail_count, 5) - 1];
+    let back = [1, 2, 5, 15, 60][Math.min(e.fail_count, 5) - 1];
+    // While the count is still running (before the count window closes), never wait more than 5 minutes after a
+    // failure: a CDN that answers 502 under election-night load comes back, and a long wait costs a fresh post.
+    if (map.count_closes && Date.parse(now) < Date.parse(map.count_closes)) back = Math.min(back, 5);
     e.next_due = afterQuiet(addMin(now, back), e, tz);
     return e;
   }

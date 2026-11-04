@@ -140,7 +140,8 @@ export function buildStateFile({ state, maps, srcs, mode, now }) {
     // Reads stored before the banner filter keep their old labels until the source changes; filter here too.
     const labels = (rec?.read?.labels || []).filter((t) => !hasProgressCount(t));
     if (labels.length) entry.labels = labels;
-    if (rec?.read?.feed_version) entry.feed_version = rec.read.feed_version; // which Clarity version the numbers are from
+    if (rec?.read?.feed_version) entry.feed_version = rec.read.feed_version; // which Clarity or Enhanced Voting version the numbers are from
+    if (rec?.read?.next_update) entry.next_update = rec.read.next_update; // the source's own next scheduled update (King County: Nov 4, 4 PM PT)
     if (sched.next_due) entry.next_due = sched.next_due;
     if (sched.failing_since) entry.failing_since = sched.failing_since;
     if (mode === 'preview') entry.checked = !!s.checked;

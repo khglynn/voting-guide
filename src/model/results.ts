@@ -8,7 +8,8 @@
       own complete or official mark. "won" is kept to the open row and the figure.
    3. Progress is the source's own words, quoted. We never compute a percent of precincts.
    4. A county's slice is never shown as the whole: a race across counties names the county whose count it shows,
-      and the figure doesn't compare it at all (we never add counties up).
+      and the figure doesn't compare it at all (we never add counties up). A statewide race held only as county shares
+      shows a county's share only on that county's ballots; elsewhere it's the state's own page (viewFor).
    5. Unmatched is a link, never a guess. Results are ink; gold stays your pick. */
 import type { Contest, Item, ItemResult, ResultCand, ResultSlice, ResultsFile, ResultsSourceEntry, ResultsSource, Measure } from '../types';
 import { S } from '../state';

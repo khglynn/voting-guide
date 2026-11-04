@@ -28,7 +28,8 @@ async function runSource({ map, fetch, store, archive, sched, now, ping }) {
   const prevRec = await readJson(store, `src:${map.id}`);
   let r;
   const mh = await mapHash(map);
-  const prevToken = S[map.id]?.token && S[map.id]?.map_hash === mh ? S[map.id].token : null;
+  // A token only stands when its read is still stored: with no good read on hand, read in full.
+  const prevToken = prevRec?.read && S[map.id]?.token && S[map.id]?.map_hash === mh ? S[map.id].token : null;
   const attempt = async () => { try { return await adapter.read({ fetch, map, prevToken }); } catch (e) { return { verdict: 'error', error: `adapter threw: ${e.message}` }; } };
   r = await attempt();
   // One quick retry inside the tick for a blip (a timeout, a 5xx, a version whose files aren't up yet); never for a

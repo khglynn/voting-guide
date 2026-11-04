@@ -77,7 +77,10 @@ for (const m of maps) {
   // the feed side
   if (!f.offline && ADAPTERS[m.feed?.adapter] && m.election?.feed_election_id) {
     const r = await ADAPTERS[m.feed.adapter].read({ fetch, map: m });
-    if (r.verdict !== 'ok') err(m, `feed read: ${r.verdict} ${r.error || ''}`);
+    // A feed that errors (a 5xx, a timeout) is the vendor having a bad minute, not a bad map: warn and go on, so an
+    // outage never blocks a code deploy. A refusal is an error.
+    if (r.verdict === 'error') warn(m, `feed read: ${r.error || 'error'} (skipped the feed side of the lint)`);
+    else if (r.verdict !== 'ok') err(m, `feed read: ${r.verdict} ${r.error || ''}`);
     else {
       if (r.election.date !== '2026-11-03') err(m, `the feed's election is dated ${r.election.date}`);
       if (m.election.feed_name && r.election.name !== m.election.feed_name) err(m, `the feed calls the election "${r.election.name}"`);

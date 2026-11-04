@@ -131,3 +131,16 @@ test('tick: a full re-read of identical bytes is unchanged (no new snapshot)', a
   assert.equal(out.ran[0].outcome, 'unchanged');
   assert.equal(puts.filter((k) => k.startsWith('raw/')).length, 1);
 });
+
+test('tick: a stored read that went missing is read again in full, token or not', async () => {
+  const map = mapFor('bexar-tx');
+  const routes = { '/127291/current_ver.txt': 'clarity-bexar.current_ver.txt', '/127291/379718/json/en/summary.json': 'clarity-bexar.summary.json', '/127291/379718/json/en/electionsettings.json': 'clarity-bexar.electionsettings.json' };
+  const store = memStore();
+  await runTick({ fetch: fakeFetch(routes), store, archive: null, maps: [map], now: '2026-11-03T22:00:00.000Z' });
+  await store.delete('src:bexar-tx');
+  const sched = JSON.parse(await store.get('sched:2026-11-03'));
+  sched.sources['bexar-tx'].next_due = null;
+  await store.put('sched:2026-11-03', JSON.stringify(sched));
+  await runTick({ fetch: fakeFetch(routes), store, archive: null, maps: [map], now: '2026-11-03T22:05:00.000Z' });
+  assert.ok(JSON.parse(await store.get('src:bexar-tx')).read, 'the read is back');
+});

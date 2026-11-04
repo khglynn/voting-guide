@@ -5,7 +5,7 @@ import type { Contest, Item } from './types';
 import { S, persist, emptyBallotState, type View, type Shelf, type ShelfKind } from './state';
 import { status, sectionOf, rankMax, ordinal, chosenIds, entriesBySection, pageWalk, sameSeat, OTH_KEY, type SectionKey } from './ballot';
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
-import { render, renderRow, renderSection, renderSummaries, renderOff, renderLens, flushLens, markBehind, renderBallot, renderAddr, rowEl, scrollRowIntoView, rowTop, holdRow, opensLow, anchored, $ } from './render';
+import { render, renderRow, renderSection, renderSummaries, renderOff, renderLens, flushLens, markBehind, renderBallot, renderAddr, rowEl, scrollRowIntoView, rowTop, holdRow, opensLow, anchored, $, withFocusKept } from './render';
 import { growOpen, inkRow, followFold, glideTo, land, stopGlide, shrinkAway, collapseRow, finishCollapse, glide } from './motion';
 import { openBallot, openChosen, go, openReader, runAddress, reopenAddr, repaintNear, useMatch, toDoor, showBallot, rechoose, openSaved, fillWhy, leaveBallot, viewed, switchOnNow, watchAdds } from './app';
 import { judgeBatch } from './model/judges';
@@ -24,6 +24,8 @@ import { messages, shareData, GUIDE_URL, SHARE_TITLE } from './views/pass';
 import { nextUp, sectionTally, sectionFolded, hiddenByOnly, qId } from './views/ledger';
 import { sourceListHTML, matchWords } from './views/lens';
 import { whatIfBody, wiMatchWords } from './views/planstrip';
+import { refreshResults } from './results';
+import { figureHTML, figHidden, setFigHidden } from './views/figure';
 
 export type Act = (d: DOMStringMap, el: HTMLElement) => void | Promise<void>;
 export const A: Record<string, Act> = {};
@@ -1016,6 +1018,21 @@ A['whatif-sit'] = (d) => {
   // page now goes; the glide and the mark are the motion.
   const el = $(`[data-fk="${CSS.escape(k)}"]`);
   if (el) { glideTo(el, 12, () => land(el.closest('li') || el)); el.focus({ preventScroll: true }); }
+};
+/* ---------- results (Nov 3, results Phase 1) ---------- */
+/* Refresh, in the strip: read the results file now (src/results.ts). */
+A['results-refresh'] = () => { void refreshResults(); };
+/* The figure's "Hide summary" / "Show summary", remembered on this device (views/figure.ts, vg-tally). */
+A['fig-hide'] = () => {
+  setFigHidden(!figHidden());
+  glide(['#vz'], () => { const el = $('#vz'); if (el) withFocusKept(() => { el.outerHTML = figureHTML(); }); });
+  focusFk('vz-hide');
+};
+/* A figure row's chevron: its races, each a link to its row, opened under it. */
+A['fig-row'] = (d) => {
+  const k = `vz-${d.sec}`;
+  S.ui.open.has(k) ? S.ui.open.delete(k) : S.ui.open.add(k);
+  glide(['#vz'], () => { const el = $('#vz'); if (el) withFocusKept(() => { el.outerHTML = figureHTML(); }); });
 };
 A.open = (d, el) => {
   const k = d.k!;

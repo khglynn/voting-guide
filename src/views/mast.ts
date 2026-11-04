@@ -149,13 +149,13 @@ function resultsDoorHTML(lead: ResultsLead): string {
   // "See how your ballot landed.", the ZIP sheet with step 2 folded away (a new ballot goes straight to the ballot,
   // where Edit and the sources sheet still open; nothing fills, doorFills), then each state's official results under
   // it for anyone whose city the guide doesn't cover.
-  // GPT copy pass, Nov 3: tonight's page links election offices and keeps your picks; it shows no counts yet, so the
-  // promise says so. Phase 1 brings back "See how your ballot landed." once numbers show.
+  // Phase 1 (Nov 3, evening): the rows carry the counts now, so the design's promise comes back (Phase 0 had softened
+  // it to links while no numbers showed).
   if (lead.after) {
-    const ticks = ['Plain English', 'Links to your election office', 'Your saved picks'];
+    const ticks = ['Plain English', 'Official results for your city', 'Your picks beside them'];
     return `<header class="mast front res res-after wrap" data-door="after">${tryBanner()}
     <div class="mast-top" data-part="kicker"><p class="dateline">${esc(`Polls have closed. ${lead.head}`)}</p></div>
-    <h1 class="place">Find your election results.</h1>
+    <h1 class="place">See how your ballot landed.</h1>
     <ul class="ticks">${ticks.map((t) => `<li><i aria-hidden="true"></i>${esc(t)}</li>`).join('')}</ul>
     ${padHTML(true, false)}
     <div data-part="results">${resultsPartHTML(lead)}</div>

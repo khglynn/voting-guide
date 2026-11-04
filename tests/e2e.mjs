@@ -3652,7 +3652,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await page.goto(`${BASE}/?today=2026-11-03`);
   await page.waitForSelector('[data-door="after"]');
   const door = await text(page, '.front');
-  check('Results: the first page after the last close: "Find your election results.", its ticks, no step 2, each state’s results under the ZIP', /Polls have closed\. Results are rolling in\./.test(door) && (await text(page, 'h1.place')) === 'Find your election results.' && /Links to your election office/.test(door) && !(await page.$('#setup')) && !!(await page.$('#zip')) && (await page.$$('.res-row')).length === 15, door.slice(0, 200));
+  check('Results: the first page after the last close: "See how your ballot landed.", its ticks, no step 2, each state’s results under the ZIP', /Polls have closed\. Results are rolling in\./.test(door) && (await text(page, 'h1.place')) === 'See how your ballot landed.' && /Official results for your city/.test(door) && !(await page.$('#setup')) && !!(await page.$('#zip')) && (await page.$$('.res-row')).length === 15, door.slice(0, 200));
   await page.fill('#zip', '78702');
   await tap(page, '[data-act="setup-done"]');
   await page.waitForSelector('#plan');

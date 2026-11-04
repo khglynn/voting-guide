@@ -1,0 +1,102 @@
+{
+ "election": "2026-11-03",
+ "state": "OR",
+ "generated": "2026-11-04T05:02:30Z",
+ "sources": [
+  {
+   "id": "results-OR",
+   "name": "Oregon Secretary of State",
+   "url": "https://results.oregonvotes.gov/",
+   "updated": "2026-11-04T04:55:00Z",
+   "status": "counting",
+   "reporting": "Ballots counted: 1,402,113",
+   "fetched": "2026-11-04T05:02:00Z"
+  },
+  {
+   "id": "results-OR-multnomah",
+   "name": "Multnomah County",
+   "url": "https://multco.us/info/election-results",
+   "updated": "2026-11-04T04:50:00Z",
+   "status": "counting",
+   "reporting": "Preliminary results",
+   "fetched": "2026-11-04T05:01:00Z"
+  }
+ ],
+ "items": {
+  "or-governor": {
+   "source": "results-OR",
+   "status": "counting",
+   "reporting": "Ballots counted: 1,402,113",
+   "updated": "2026-11-04T04:55:00Z",
+   "url": "https://results.oregonvotes.gov/",
+   "candidates": [
+    {
+     "name": "Tina Kotek",
+     "votes": 700000,
+     "pct": 51.09
+    },
+    {
+     "name": "Christine Drazan",
+     "votes": 640000,
+     "pct": 46.72
+    },
+    {
+     "name": "Brett Smith",
+     "votes": 30000,
+     "pct": 2.19
+    }
+   ],
+   "total_votes": 1370000,
+   "final": null
+  },
+  "multnomah-chair": {
+   "source": "results-OR-multnomah",
+   "status": "counting",
+   "reporting": "Preliminary results",
+   "updated": "2026-11-04T04:50:00Z",
+   "url": "https://multco.us/info/election-results",
+   "candidates": [
+    {
+     "name": "Shannon Singleton",
+     "votes": 80000,
+     "pct": 38.1
+    },
+    {
+     "name": "Julia Brim-Edwards",
+     "votes": 72000,
+     "pct": 34.29
+    },
+    {
+     "name": "Sharon Meieran",
+     "votes": 58000,
+     "pct": 27.62
+    }
+   ],
+   "total_votes": 210000,
+   "final": null
+  },
+  "portland-council-3": {
+   "source": "results-OR-multnomah",
+   "status": "link_only",
+   "reporting": null,
+   "updated": null,
+   "url": "https://multco.us/info/election-results",
+   "reason": "not matched"
+  },
+  "portland-26-267": {
+   "source": "results-OR-multnomah",
+   "status": "counting",
+   "reporting": "Preliminary results",
+   "updated": "2026-11-04T04:50:00Z",
+   "url": "https://multco.us/info/election-results",
+   "measure": {
+    "yes": 120000,
+    "no": 90000,
+    "yes_pct": 57.14,
+    "threshold": null
+   },
+   "total_votes": 210000,
+   "final": null
+  }
+ }
+}

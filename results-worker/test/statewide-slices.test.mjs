@@ -4,9 +4,11 @@
    never the whole race, when the state source is refused or a link. */
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { buildStateFile } from '../src/merge.js';
-import { checkFile } from '../src/checks.js';
+import { buildStateFile, sourceSlices } from '../src/merge.js';
+import { checkFile, checkRead } from '../src/checks.js';
+import { ADAPTERS } from '../src/adapters/index.js';
 import { lintGuide } from '../bin/map-lint.mjs';
+import { mapFor, fakeFetch } from './helpers.mjs';
 
 const NOW = '2026-11-04T15:00:00.000Z';
 const readOf = (contests) => ({ election: { date: '2026-11-03' }, source_updated: '2026-11-04T14:00:00.000Z', reporting: null, contests });
@@ -117,4 +119,71 @@ test('map lint: a statewide item in a county map passes only as that county\'s s
   assert.match(lint(own).errors.join('\n'), /only for a statewide item/);
   const st = { ...lintMap({ statewide: true, whole: true, reaches: ['Pennsylvania'] }), scope: 'state', county: 'Pennsylvania' };
   assert.match(lint(st).errors.join('\n'), /only for a statewide item/);
+});
+test('the three maps carry their statewide items only as county slices', () => {
+  for (const id of ['philadelphia-pa', 'allegheny-pa', 'los-angeles-county-ca']) {
+    const m = mapFor(id);
+    const sw = m.contests.filter((c) => c.statewide);
+    assert.ok(sw.length > 0, `${id} carries statewide slices`);
+    assert.ok(m.guide.places.includes(`state-${m.state}`), `${id} lists its state's bundle`);
+    for (const c of sw) {
+      assert.equal(c.whole, undefined, `${id} ${c.item}`);
+      assert.ok(c.reaches.includes(m.county) && c.reaches.includes('other counties'), `${id} ${c.item}`);
+    }
+  }
+});
+
+/* End to end on real reads: Los Angeles County's own file (Nov 3, 8:17 PM PT bulletin) with the SOS media files
+   (Nov 4, 6:27 AM PT), and Allegheny's Clarity files (Nov 4, version 384942, a paced read) with Pennsylvania refused. */
+const LA_ROUTES = { 'GetCounterData?electionID=4348': 'la-county.counterdata.json', 'GetElectionData?electionID=4348': 'la-county.electiondata.json' };
+const MEDIA = ['governor', 'lieutenant-governor', 'secretary-of-state', 'controller', 'treasurer', 'attorney-general', 'insurance-commissioner', 'superintendent-of-public-instruction', 'supreme-court', 'ballot-measures', 'board-of-equalization', 'us-rep'];
+const CA_ROUTES = Object.fromEntries(MEDIA.map((f) => [`/media/${f}.json`, `ca-media.${f}.json`]));
+const ALL_ROUTES = { '/127287/current_ver.txt': 'clarity-allegheny-nov4.current_ver.txt', '/127287/384942/json/en/summary.json': 'clarity-allegheny-nov4.summary.json', '/127287/384942/json/en/electionsettings.json': 'clarity-allegheny-nov4.electionsettings.json' };
+const readWith = async (id, routes) => { const map = mapFor(id); const { raw, ...read } = await ADAPTERS[map.feed.adapter].read({ fetch: fakeFetch(routes), map }); assert.equal(checkRead(read, map).ok, true, id); return { map, read }; };
+
+test('real reads: Los Angeles County\'s share of California\'s statewide races, alone when the state is refused, beneath it when not', async () => {
+  const la = await readWith('los-angeles-county-ca', LA_ROUTES);
+  const ca = await readWith('results-CA', CA_ROUTES);
+  const { problems, slices } = sourceSlices(la.read, la.map, NOW);
+  assert.deepEqual(problems, []);
+  const sw = la.map.contests.filter((c) => c.statewide);
+  assert.equal(sw.length, 25);
+  for (const c of sw) { assert.ok(slices[c.item], c.item); assert.equal(slices[c.item].unmatched, undefined, `${c.item}: every feed choice listed`); }
+  const at = (mode, caSrc) => buildStateFile({ state: 'CA', maps: [la.map, ca.map], srcs: { 'los-angeles-county-ca': { record: { read: la.read, fetched: NOW }, checked: true, sched: {} }, 'results-CA': caSrc }, mode, now: NOW });
+  // The state refused: Los Angeles County's own count, named, never the whole race.
+  let f = at('public', { record: null, checked: true, sched: { stopped: 'refused' } });
+  assert.deepEqual(checkFile(f), []);
+  for (const c of sw) {
+    const x = f.items[c.item];
+    assert.equal(x.source, 'los-angeles-county-ca', c.item);
+    assert.deepEqual(x.missing, ['other counties'], c.item);
+    assert.equal(x.final, null, c.item);
+    assert.equal(x.slices.length, 1, c.item);
+    assert.equal(x.slices[0].county, 'Los Angeles', c.item);
+  }
+  assert.equal(f.items['ca-governor'].total_votes, slices['ca-governor'].total_votes);
+  assert.equal(f.items['ca-coa-2d-retention'].status, 'link_only', 'a statewide race Los Angeles doesn\'t carry stays the state\'s link');
+  assert.equal(f.items['ca-coa-2d-retention'].source, 'results-CA');
+  // The state's numbers in: the state's count is the race, Los Angeles rides beneath.
+  f = at('public', { record: { read: ca.read, fetched: NOW }, checked: true, sched: {} });
+  assert.deepEqual(checkFile(f), []);
+  for (const c of sw) {
+    const x = f.items[c.item];
+    assert.equal(x.source, 'results-CA', c.item);
+    assert.equal(x.slices, undefined, c.item);
+    assert.deepEqual(x.county_slices.map((s) => s.source), ['los-angeles-county-ca'], c.item);
+  }
+  assert.ok(f.items['ca-prop-1'].measure.yes > f.items['ca-prop-1'].county_slices[0].measure.yes);
+});
+
+test('real reads: Allegheny\'s share of Pennsylvania\'s governor with the state refused', async () => {
+  const all = await readWith('allegheny-pa', ALL_ROUTES);
+  const f = buildStateFile({ state: 'PA', maps: [all.map, mapFor('philadelphia-pa'), mapFor('results-PA')], srcs: { 'allegheny-pa': { record: { read: all.read, fetched: NOW }, checked: true, sched: {} }, 'philadelphia-pa': { record: null, checked: true, sched: {} }, 'results-PA': { record: null, checked: true, sched: { stopped: 'refused' } } }, mode: 'public', now: NOW });
+  assert.deepEqual(checkFile(f), []);
+  const x = f.items['pa-governor'];
+  assert.equal(x.source, 'allegheny-pa');
+  assert.deepEqual(x.candidates.map((c) => [c.name, c.votes]), [['Josh Shapiro / Austin Davis', 367885], ['Stacy Garrity / Jason Richey', 142598], ['Ken Krawchuk / John Thomas', 5513]]);
+  assert.deepEqual(x.missing, ['other counties']);
+  assert.equal(x.final, null);
+  assert.equal(x.slices[0].county, 'Allegheny');
 });

@@ -8590,10 +8590,11 @@ export const MAPS = [
         "santa-clarita-ca",
         "santa-monica-ca",
         "torrance-ca",
-        "west-hollywood-ca"
+        "west-hollywood-ca",
+        "state-CA"
       ],
-      "fingerprint": "ef23e85b7c9aacff",
-      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:32:50.483Z"
+      "fingerprint": "54bfeb53bc6aed53",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T14:52:04.545Z"
     },
     "feed": {
       "adapter": "la_county",
@@ -8996,6 +8997,377 @@ export const MAPS = [
         "item_url": null
       },
       {
+        "feed_id": "10833",
+        "feed_name": "ATTORNEY GENERAL",
+        "item": "ca-attorney-general",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MICHAEL E. GATES": "Michael E. Gates",
+          "ROB BONTA": "Rob Bonta"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null,
+        "statewide": true
+      },
+      {
+        "feed_id": "10835",
+        "feed_name": "MEMBER STATE BOARD OF EQUALIZATION 3rd District",
+        "item": "ca-boe-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MIKE GIPSON": "Mike Gipson",
+          "SAMUEL P. SUKATON": "Samuel P. Sukaton"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null,
+        "statewide": true
+      },
+      {
+        "feed_id": "10831",
+        "feed_name": "CONTROLLER",
+        "item": "ca-controller",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "HERB W. MORGAN": "Herb W Morgan",
+          "MALIA M. COHEN": "Malia M. Cohen"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null,
+        "statewide": true
+      },
+      {
+        "feed_id": "10828",
+        "feed_name": "GOVERNOR",
+        "item": "ca-governor",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "STEVE HILTON": "Steve Hilton",
+          "XAVIER BECERRA": "Xavier Becerra"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null,
+        "statewide": true
+      },
+      {
+        "feed_id": "10834",
+        "feed_name": "INSURANCE COMMISSIONER",
+        "item": "ca-insurance-commissioner",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "BEN ALLEN": "Ben Allen",
+          "JANE KIM": "Jane Kim"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null,
+        "statewide": true
+      },
+      {
+        "feed_id": "10829",
+        "feed_name": "LIEUTENANT GOVERNOR",
+        "item": "ca-lt-governor",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "FIONA MA": "Fiona Ma",
+          "GLORIA ROMERO": "Gloria Romero"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null,
+        "statewide": true
+      },
+      {
+        "feed_id": "10853",
+        "feed_name": "STATE MEASURE 1",
+        "item": "ca-prop-1",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null,
+        "statewide": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10854",
+        "feed_name": "STATE MEASURE 2",
+        "item": "ca-prop-2",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null,
+        "statewide": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10855",
+        "feed_name": "STATE MEASURE 3",
+        "item": "ca-prop-3",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null,
+        "statewide": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10858",
+        "feed_name": "STATE MEASURE 37",
+        "item": "ca-prop-37",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null,
+        "statewide": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10859",
+        "feed_name": "STATE MEASURE 38",
+        "item": "ca-prop-38",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null,
+        "statewide": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10860",
+        "feed_name": "STATE MEASURE 39",
+        "item": "ca-prop-39",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null,
+        "statewide": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10856",
+        "feed_name": "STATE MEASURE 4",
+        "item": "ca-prop-4",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null,
+        "statewide": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10861",
+        "feed_name": "STATE MEASURE 40",
+        "item": "ca-prop-40",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null,
+        "statewide": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10862",
+        "feed_name": "STATE MEASURE 41",
+        "item": "ca-prop-41",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null,
+        "statewide": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10863",
+        "feed_name": "STATE MEASURE 42",
+        "item": "ca-prop-42",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null,
+        "statewide": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10864",
+        "feed_name": "STATE MEASURE 43",
+        "item": "ca-prop-43",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null,
+        "statewide": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10865",
+        "feed_name": "STATE MEASURE 44",
+        "item": "ca-prop-44",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null,
+        "statewide": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10866",
+        "feed_name": "STATE MEASURE 45",
+        "item": "ca-prop-45",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null,
+        "statewide": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10857",
+        "feed_name": "STATE MEASURE 5",
+        "item": "ca-prop-5",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null,
+        "statewide": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10830",
+        "feed_name": "SECRETARY OF STATE",
+        "item": "ca-secretary-of-state",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DONALD P. (DON) WAGNER": "Donald P. (Don) Wagner",
+          "SHIRLEY N. WEBER": "Shirley N. Weber"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null,
+        "statewide": true
+      },
+      {
         "feed_id": "10773",
         "feed_name": "STATE SENATOR, 20th District",
         "item": "ca-state-senate-20",
@@ -9058,6 +9430,75 @@ export const MAPS = [
           "other counties"
         ],
         "item_url": null
+      },
+      {
+        "feed_id": "10836",
+        "feed_name": "SUPERINTENDENT OF PUBLIC INSTRUCTION",
+        "item": "ca-superintendent",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "RICHARD BARRERA": "Richard Barrera",
+          "SONJA SHAW": "Sonja Shaw",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null,
+        "statewide": true
+      },
+      {
+        "feed_id": "10889",
+        "feed_name": "For Associate Justice of the Supreme Court - KELLI M. EVANS",
+        "item": "ca-supreme-court-evans",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null,
+        "statewide": true
+      },
+      {
+        "feed_id": "10888",
+        "feed_name": "For Associate Justice of the Supreme Court - JOSHUA GROBAN",
+        "item": "ca-supreme-court-groban",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null,
+        "statewide": true
+      },
+      {
+        "feed_id": "10832",
+        "feed_name": "TREASURER",
+        "item": "ca-treasurer",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ELENI KOUNALAKIS": "Eleni Kounalakis",
+          "JENNIFER HAWKS": "Jennifer Hawks"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null,
+        "statewide": true
       },
       {
         "feed_id": "10806",
@@ -10288,8 +10729,17 @@ export const MAPS = [
       }
     ],
     "unmatched_guide": [],
-    "unmatched_feed": [],
-    "not_here": []
+    "unmatched_feed": [
+      {
+        "feed_id": "10890-10906, 10962, 10963",
+        "feed_name": "Court of Appeal, Second District retentions (18 contests, one per justice)",
+        "why": "looks like ca-coa-2d-retention, but the guide holds all 18 justices as one item; one feed contest per justice can't pair with one item"
+      }
+    ],
+    "not_here": [],
+    "statewide_unmatched": [
+      "ca-coa-2d-retention"
+    ]
   },
   {
     "id": "orange-county-ca",

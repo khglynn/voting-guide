@@ -5649,8 +5649,8 @@ export const MAPS = [
         "torrance-ca",
         "west-hollywood-ca"
       ],
-      "fingerprint": "e3b0c44298fc1c14",
-      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:28:55.127Z"
+      "fingerprint": "ef23e85b7c9aacff",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:32:50.483Z"
     },
     "feed": {
       "adapter": "la_county",
@@ -5666,7 +5666,1687 @@ export const MAPS = [
     "complete_marker": null,
     "certify_by": "2026-11-27",
     "official": null,
-    "contests": []
+    "contests": [
+      {
+        "feed_id": "10622",
+        "feed_name": "BEVERLY HILLS UNIFIED SCHOOL DISTRICT Governing Board Member",
+        "item": "beverly-hills-usd-board",
+        "kind": "multi",
+        "seats": 2,
+        "choices": {
+          "DAVID CIENFUEGOS": "David Cienfuegos",
+          "JACKIE R. KRUGER": "Jackie R. Kruger",
+          "JARED GONZALES": "Jared Gonzales",
+          "JUDITH MANOUCHEHRI": "Judith Manouchehri",
+          "KIMBERLY LIFSCHITZ": "Kimberly Lifschitz",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10426",
+        "feed_name": "CITY OF BURBANK GENERAL MUNICIPAL ELECTION City Clerk",
+        "item": "burbank-city-clerk",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "KIMBERLEY CLARK": "Kimberley Clark",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10425",
+        "feed_name": "CITY OF BURBANK GENERAL MUNICIPAL ELECTION Member of the City Council",
+        "item": "burbank-city-council",
+        "kind": "multi",
+        "seats": 3,
+        "choices": {
+          "CHRIS YOOSEFI": "Chris Yoosefi",
+          "DAVID PHILLIP DONAHUE": "David Phillip Donahue",
+          "EDDY POLON": "Eddy Polon",
+          "HOVANES \"HOV\" TONOYAN": "Hovanes \"Hov\" Tonoyan",
+          "JACKIE WALTMAN": "Jackie Waltman",
+          "JONATHAN ONTIVEROS": "Jonathan Ontiveros",
+          "JT PARR": "JT Parr",
+          "MIKE VAN GORDER": "Mike Van Gorder",
+          "NIKKI PEREZ": "Nikki Perez",
+          "NOLAN SOUTHERLAND": "Nolan Southerland",
+          "ROBBIE BRODY": "Robbie Brody",
+          "SAMANTHA WICK": "Samantha Wick",
+          "TAMALA TAKAHASHI": "Tamala Takahashi",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10427",
+        "feed_name": "CITY OF BURBANK GENERAL MUNICIPAL ELECTION City Treasurer",
+        "item": "burbank-city-treasurer",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "KRYSTLE PALMER": "Krystle Palmer",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10880",
+        "feed_name": "CITY OF BURBANK GENERAL MUNICIPAL ELECTION - MEASURE C",
+        "item": "burbank-measure-c",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10942",
+        "feed_name": "CITY OF BURBANK GENERAL MUNICIPAL ELECTION - MEASURE CC",
+        "item": "burbank-measure-cc",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10943",
+        "feed_name": "CITY OF BURBANK GENERAL MUNICIPAL ELECTION - MEASURE CD",
+        "item": "burbank-measure-cd",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10625",
+        "feed_name": "BURBANK UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 3",
+        "item": "burbank-usd-area-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DENNIS M. CONNOR": "Dennis M. Connor",
+          "EVREN OZBEY": "Evren Ozbey",
+          "HAI HO": "Hai Ho",
+          "PAUL GERARD": "Paul Gerard",
+          "ROSEMARY T. MORRISON": "Rosemary T. Morrison",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10783",
+        "feed_name": "MEMBER OF THE STATE ASSEMBLY, 40th District",
+        "item": "ca-assembly-40",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "PILAR SCHIAVO": "Pilar Schiavo",
+          "RICKEY TRACY HAYES II": "Rickey Tracy Hayes II"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10784",
+        "feed_name": "MEMBER OF THE STATE ASSEMBLY, 41st District",
+        "item": "ca-assembly-41",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ADAM CHRISTOPHER VENA": "Adam Christopher Vena",
+          "JOHN HARABEDIAN": "John Harabedian"
+        },
+        "reaches": [
+          "Los Angeles",
+          "San Bernardino",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10785",
+        "feed_name": "MEMBER OF THE STATE ASSEMBLY, 42nd District",
+        "item": "ca-assembly-42",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEBORAH KLEIN LOPEZ": "Deborah Klein Lopez",
+          "TED NORDBLUM": "Ted Nordblum"
+        },
+        "reaches": [
+          "Los Angeles",
+          "Ventura",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10786",
+        "feed_name": "MEMBER OF THE STATE ASSEMBLY, 43rd District",
+        "item": "ca-assembly-43",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "CELESTE RODRIGUEZ": "Celeste Rodriguez",
+          "RICARDO BENITEZ": "Ricardo Benitez"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10787",
+        "feed_name": "MEMBER OF THE STATE ASSEMBLY, 44th District",
+        "item": "ca-assembly-44",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "CAROLYN DANIELS": "Carolyn Daniels",
+          "NICHOLAS \"NICK\" SCHULTZ": "Nicholas \"Nick\" Schultz"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10788",
+        "feed_name": "MEMBER OF THE STATE ASSEMBLY, 46th District",
+        "item": "ca-assembly-46",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JESSE GABRIEL": "Jesse Gabriel",
+          "TRACEY SCHROEDER": "Tracey Schroeder"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10791",
+        "feed_name": "MEMBER OF THE STATE ASSEMBLY, 51st District",
+        "item": "ca-assembly-51",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "COLIN D. HERNANDEZ": "Colin D. Hernandez",
+          "RICK CHAVEZ ZBUR": "Rick Chavez Zbur"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10792",
+        "feed_name": "MEMBER OF THE STATE ASSEMBLY, 52nd District",
+        "item": "ca-assembly-52",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ANDREA LEE ANDERSON": "Andrea Lee Anderson",
+          "JESSICA CALOZA": "Jessica Caloza"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10794",
+        "feed_name": "MEMBER OF THE STATE ASSEMBLY, 54th District",
+        "item": "ca-assembly-54",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ALEXANDRA BRISENO": "Alexandra Briseno",
+          "MARK GONZALEZ": "Mark Gonzalez"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10795",
+        "feed_name": "MEMBER OF THE STATE ASSEMBLY, 55th District",
+        "item": "ca-assembly-55",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ASHLEY M. BROWN": "Ashley M. Brown",
+          "ISAAC G. BRYAN": "Isaac G. Bryan"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10797",
+        "feed_name": "MEMBER OF THE STATE ASSEMBLY, 57th District",
+        "item": "ca-assembly-57",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "CONSTANCE JEWEL MENZIES": "Constance Jewel Menzies",
+          "SADE ELHAWARY": "Sade Elhawary"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10798",
+        "feed_name": "MEMBER OF THE STATE ASSEMBLY, 61st District",
+        "item": "ca-assembly-61",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "BRIAN LOCKWOOD": "Brian Lockwood",
+          "TINA SIMONE MCKINNOR": "Tina Simone McKinnor"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10801",
+        "feed_name": "MEMBER OF THE STATE ASSEMBLY, 65th District",
+        "item": "ca-assembly-65",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "AYANNA DAVIS": "Ayanna Davis",
+          "LYDIA A. GUTIÉRREZ": "Lydia A. Gutiérrez"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10802",
+        "feed_name": "MEMBER OF THE STATE ASSEMBLY, 66th District",
+        "item": "ca-assembly-66",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "PAUL SEO": "Paul Seo",
+          "SARA DEEN": "Sara Deen"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10804",
+        "feed_name": "MEMBER OF THE STATE ASSEMBLY, 69th District",
+        "item": "ca-assembly-69",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "CAROLYN J. ESSEX": "Carolyn J. Essex",
+          "JOSH LOWENTHAL": "Josh Lowenthal"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10773",
+        "feed_name": "STATE SENATOR, 20th District",
+        "item": "ca-state-senate-20",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "CAROLINE MENJIVAR": "Caroline Menjivar",
+          "TONY RODRIGUEZ": "Tony Rodriguez"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10775",
+        "feed_name": "STATE SENATOR, 24th District",
+        "item": "ca-state-senate-24",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "BRIAN GOLDSMITH": "Brian Goldsmith",
+          "JOHN M. ERICKSON": "John M. Erickson"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10776",
+        "feed_name": "STATE SENATOR, 26th District",
+        "item": "ca-state-senate-26",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "SARA HERNANDEZ": "Sara Hernandez",
+          "SARAH RASCÓN": "Sarah Rascón"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10777",
+        "feed_name": "STATE SENATOR, 28th District",
+        "item": "ca-state-senate-28",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JOE LISUZZO": "Joe Lisuzzo",
+          "LOLA SMALLWOOD-CUEVAS": "Lola Smallwood-Cuevas"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10806",
+        "feed_name": "UNITED STATES REPRESENTATIVE, 26th District",
+        "item": "ca-us-house-26",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JACQUI IRWIN": "Jacqui Irwin",
+          "SAM GALLUCCI": "Sam Gallucci"
+        },
+        "reaches": [
+          "Los Angeles",
+          "Ventura",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10807",
+        "feed_name": "UNITED STATES REPRESENTATIVE, 27th District",
+        "item": "ca-us-house-27",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "GEORGE WHITESIDES": "George Whitesides",
+          "JASON GIBBS": "Jason Gibbs"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10808",
+        "feed_name": "UNITED STATES REPRESENTATIVE, 28th District",
+        "item": "ca-us-house-28",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "APRIL A. VERLATO": "April A. Verlato",
+          "JUDY CHU": "Judy Chu"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10809",
+        "feed_name": "UNITED STATES REPRESENTATIVE, 29th District",
+        "item": "ca-us-house-29",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ANGÉLICA MARÍA DUEÑAS": "Angélica María Dueñas",
+          "LUZ MARIA RIVAS": "Luz Maria Rivas"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10810",
+        "feed_name": "UNITED STATES REPRESENTATIVE, 30th District",
+        "item": "ca-us-house-30",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "LAURA FRIEDMAN": "Laura Friedman",
+          "SCOTT ALAN MEYERS": "Scott Alan Meyers"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10812",
+        "feed_name": "UNITED STATES REPRESENTATIVE, 32nd District",
+        "item": "ca-us-house-32",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "BRAD SHERMAN": "Brad Sherman",
+          "LARRY THOMPSON": "Larry Thompson"
+        },
+        "reaches": [
+          "Los Angeles",
+          "Ventura",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10813",
+        "feed_name": "UNITED STATES REPRESENTATIVE, 34th District",
+        "item": "ca-us-house-34",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ANGELA GONZALES-TORRES": "Angela Gonzales-Torres",
+          "JIMMY GOMEZ": "Jimmy Gomez"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10815",
+        "feed_name": "UNITED STATES REPRESENTATIVE, 36th District",
+        "item": "ca-us-house-36",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "HOUSTON BRIGNANO": "Houston Brignano",
+          "TED W. LIEU": "Ted W. Lieu"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10816",
+        "feed_name": "UNITED STATES REPRESENTATIVE, 37th District",
+        "item": "ca-us-house-37",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "SAMANTHA MOTA": "Samantha Mota",
+          "SYDNEY KAMLAGER-DOVE": "Sydney Kamlager-Dove"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10818",
+        "feed_name": "UNITED STATES REPRESENTATIVE, 41st District",
+        "item": "ca-us-house-41",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "LINDA SÁNCHEZ": "Linda Sánchez",
+          "MITCH CLEMMONS": "Mitch Clemmons"
+        },
+        "reaches": [
+          "Los Angeles",
+          "Orange",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10819",
+        "feed_name": "UNITED STATES REPRESENTATIVE, 42nd District",
+        "item": "ca-us-house-42",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "BRIAN BURLEY": "Brian Burley",
+          "ROBERT GARCIA": "Robert Garcia"
+        },
+        "reaches": [
+          "Los Angeles",
+          "Orange",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10820",
+        "feed_name": "UNITED STATES REPRESENTATIVE, 43rd District",
+        "item": "ca-us-house-43",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "CRISTIAN MORALES": "Cristian Morales",
+          "MAXINE WATERS": "Maxine Waters"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10821",
+        "feed_name": "UNITED STATES REPRESENTATIVE, 44th District",
+        "item": "ca-us-house-44",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "GENEVIEVE ANGEL": "Genevieve Angel",
+          "NANETTE DIAZ BARRAGAN": "Nanette Diaz Barragan"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10636",
+        "feed_name": "CULVER CITY UNIFIED SCHOOL DISTRICT Governing Board Member",
+        "item": "culver-city-ccusd-board",
+        "kind": "multi",
+        "seats": 3,
+        "choices": {
+          "BRIAN GUERRERO": "Brian Guerrero",
+          "DARREL MENTHE": "Darrel Menthe",
+          "STEPHANIE LOREDO": "Stephanie Loredo",
+          "TRISTON EZIDORE": "Triston Ezidore",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10439",
+        "feed_name": "CITY OF CULVER CITY GENERAL MUNICIPAL ELECTION Member of the City Council",
+        "item": "culver-city-council",
+        "kind": "multi",
+        "seats": 2,
+        "choices": {
+          "FRANKLIN CARVAJAL": "Franklin Carvajal",
+          "FREDDY PUZA": "Freddy Puza",
+          "JEANNINE WISNOSKY STEHLIN": "Jeannine Wisnosky Stehlin",
+          "KIMBERLEY \"KIM\" GRIFFIN": "Kimberley “Kim” Griffin",
+          "THOMAS AUJERO SMALL": "Thomas Aujero Small",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10908",
+        "feed_name": "CITY OF CULVER CITY GENERAL MUNICIPAL ELECTION - MEASURE AA",
+        "item": "culver-city-measure-aa",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10929",
+        "feed_name": "CITY OF CULVER CITY GENERAL MUNICIPAL ELECTION - MEASURE T",
+        "item": "culver-city-measure-t",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10907",
+        "feed_name": "CITY OF CULVER CITY GENERAL MUNICIPAL ELECTION - MEASURE YV",
+        "item": "culver-city-measure-yv",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10584",
+        "feed_name": "EL CAMINO COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 5",
+        "item": "el-camino-ccd-area-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "KEICY CHUNG": "Keicy Chung",
+          "MYLOC DINH": "MyLoc Dinh",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10845",
+        "feed_name": "WILLIAM S. HART UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",
+        "item": "hart-uhsd-area-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "BRYAN BIGGERS": "Bryan Biggers",
+          "JULEE BROOKS": "Julee Brooks",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10848",
+        "feed_name": "WILLIAM S. HART UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",
+        "item": "hart-uhsd-area-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JOE MESSINA": "Joe Messina",
+          "STACY FORTNER": "Stacy Fortner",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10768",
+        "feed_name": "LOS ANGELES CITY GENERAL MUNICIPAL ELECTION City Attorney",
+        "item": "la-city-attorney",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JOHN MCKINNEY": "John McKinney",
+          "MARISSA ROY": "Marissa Roy"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10924",
+        "feed_name": "LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE EE",
+        "item": "la-city-charter-ee",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10922",
+        "feed_name": "LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE LA",
+        "item": "la-city-charter-la",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10923",
+        "feed_name": "LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE PL",
+        "item": "la-city-charter-pl",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10925",
+        "feed_name": "LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE PRK",
+        "item": "la-city-charter-prk",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10926",
+        "feed_name": "LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE PRT",
+        "item": "la-city-charter-prt",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10928",
+        "feed_name": "LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE SC",
+        "item": "la-city-charter-sc",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority of LAUSD voters"
+      },
+      {
+        "feed_id": "10770",
+        "feed_name": "LOS ANGELES CITY GENERAL MUNICIPAL ELECTION Member of the City Council, 3rd District",
+        "item": "la-city-council-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "BARRI WORTH GIRVAN": "Barri Worth Girvan",
+          "TIMOTHY K. GASPAR": "Timothy K. Gaspar"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10771",
+        "feed_name": "LOS ANGELES CITY GENERAL MUNICIPAL ELECTION Member of the City Council, 9th District",
+        "item": "la-city-council-9",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ESTUARDO MAZARIEGOS": "Estuardo Mazariegos",
+          "JOSE UGARTE": "Jose Ugarte"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10767",
+        "feed_name": "LOS ANGELES CITY GENERAL MUNICIPAL ELECTION Mayor",
+        "item": "la-city-mayor",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "KAREN RUTH BASS": "Karen Ruth Bass",
+          "NITHYA RAMAN": "Nithya Raman"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10927",
+        "feed_name": "LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE FD",
+        "item": "la-city-ordinance-fd",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10921",
+        "feed_name": "LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE TE",
+        "item": "la-city-prop-te",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10827",
+        "feed_name": "JUDGE OF THE SUPERIOR COURT Office No. 131",
+        "item": "la-county-judge-131",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DAVID ROSS": "David Ross",
+          "DONNA TRYFMAN": "Donna Tryfman",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10824",
+        "feed_name": "JUDGE OF THE SUPERIOR COURT Office No. 64",
+        "item": "la-county-judge-64",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MARIA GHOBADI": "Maria Ghobadi",
+          "RHONDA A. HAYMON": "Rhonda A. Haymon",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10825",
+        "feed_name": "JUDGE OF THE SUPERIOR COURT Office No. 65",
+        "item": "la-county-judge-65",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ANNA SLOTKY REITANO": "Anna Slotky Reitano",
+          "JUSTIN ALLEN CLAYTON": "Justin Allen Clayton",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10826",
+        "feed_name": "JUDGE OF THE SUPERIOR COURT Office No. 87",
+        "item": "la-county-judge-87",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ANTHONY (A.J.) BAYNE": "Anthony (A.J.) Bayne",
+          "DAVID DEJUTE": "David DeJute",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10534",
+        "feed_name": "COUNTY MEASURE A",
+        "item": "la-county-measure-a",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10959",
+        "feed_name": "COUNTY MEASURE E",
+        "item": "la-county-measure-e",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10823",
+        "feed_name": "SHERIFF",
+        "item": "la-county-sheriff",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ALEX VILLANUEVA": "Alex Villanueva",
+          "ROBERT G. LUNA": "Robert G. Luna",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10588",
+        "feed_name": "LOS ANGELES COMMUNITY COLLEGE DISTRICT Member of the Board of Trustees, Seat 2",
+        "item": "la-laccd-seat-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ADRIANA CABRERA": "Adriana Cabrera",
+          "KRISTINA IRWIN": "Kristina Irwin",
+          "ROBERT PAYNE": "Robert Payne",
+          "ROY PAYAN": "Roy Payan",
+          "STEVEN F. VERES": "Steven F. Veres",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10589",
+        "feed_name": "LOS ANGELES COMMUNITY COLLEGE DISTRICT Member of the Board of Trustees, Seat 4",
+        "item": "la-laccd-seat-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ADAM BRUNO": "Adam Bruno",
+          "DARRYN HARRIS": "Darryn Harris",
+          "ELAINE ALANIZ": "Elaine Alaniz",
+          "ISIDRO J. ARMENTA": "Isidro J. Armenta",
+          "JASON R. AULA": "Jason R. Aula",
+          "NANCY PEARLMAN": "Nancy Pearlman",
+          "PRISCILLA UMANA": "Priscilla Umana",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10590",
+        "feed_name": "LOS ANGELES COMMUNITY COLLEGE DISTRICT Member of the Board of Trustees, Seat 6",
+        "item": "la-laccd-seat-6",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "GABRIEL BUELNA": "Gabriel Buelna",
+          "RANDALL WINSTON": "Randall Winston",
+          "ROBERTO DAVID LACARRA": "Roberto David LaCarra",
+          "TONIA AREY": "Tonia Arey",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10587",
+        "feed_name": "LONG BEACH COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 5",
+        "item": "lbccd-area-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "HUY \"HENRY\" NGUYEN": "Huy \"Henry\" Nguyen",
+          "SUSANA GONZALEZ EDMOND": "Susana Gonzalez Edmond",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10478",
+        "feed_name": "CITY OF MALIBU GENERAL MUNICIPAL ELECTION Member of the City Council",
+        "item": "malibu-city-council",
+        "kind": "multi",
+        "seats": 2,
+        "choices": {
+          "A. SAM DIBAEI": "A. Sam Dibaei",
+          "DANNY SMITH": "Danny Smith",
+          "DOUG STEWART": "Doug Stewart",
+          "MARIANNE RIGGINS": "Marianne Riggins",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10954",
+        "feed_name": "CITY OF PASADENA REGULAR MUNICIPAL ELECTION - MEASURE PFD",
+        "item": "pasadena-measure-pfd",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "pass_threshold": "two-thirds of votes cast (special tax)"
+      },
+      {
+        "feed_id": "10595",
+        "feed_name": "PASADENA AREA COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 1",
+        "item": "pasadena-pccd-area-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "FRANCIS POLLARA": "Francis Pollara",
+          "GEOFF BAUM": "Geoff Baum",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10596",
+        "feed_name": "PASADENA AREA COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 3",
+        "item": "pasadena-pccd-area-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DAVID COHER": "David Coher",
+          "STEVE GIBSON": "Steve Gibson",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10935",
+        "feed_name": "PASADENA AREA COMMUNITY COLLEGE DISTRICT SPECIAL ELECTION - MEASURE UP",
+        "item": "pasadena-pccd-measure-up",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "pass_threshold": "55% (school bond under Prop 39)"
+      },
+      {
+        "feed_id": "10499",
+        "feed_name": "PASADENA UNIFIED SCHOOL DISTRICT Board of Education, District No. 1",
+        "item": "pasadena-pusd-district-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "FELITA KEALING": "Felita Kealing",
+          "KIMBERLY KENNE": "Kimberly Kenne",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10500",
+        "feed_name": "PASADENA UNIFIED SCHOOL DISTRICT Board of Education, District No. 3",
+        "item": "pasadena-pusd-district-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MICHELLE RICHARDSON BAILEY": "Michelle Richardson Bailey",
+          "VERONICA ELIAS": "Veronica Elias",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10502",
+        "feed_name": "PASADENA UNIFIED SCHOOL DISTRICT Board of Education, District No. 7",
+        "item": "pasadena-pusd-district-7",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "CYNTHIA TORRES": "Cynthia Torres",
+          "DENNIS J. MCNAMARA": "Dennis J. McNamara",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10837",
+        "feed_name": "CITY OF SANTA CLARITA GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District",
+        "item": "santa-clarita-council-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "BRETT HADDOAK": "Brett Haddoak",
+          "DENISE LITE": "Denise Lite",
+          "GLORIA MERCADO-FORTINE": "Gloria Mercado-Fortine",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10838",
+        "feed_name": "CITY OF SANTA CLARITA GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",
+        "item": "santa-clarita-council-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JEFFREY BERMAN": "Jeffrey Berman",
+          "LAURENE WESTE": "Laurene Weste",
+          "NICK SOMERS": "Nick Somers",
+          "PETER YAHIAYAN": "Peter Yahiayan",
+          "VALERIE BRADFORD": "Valerie Bradford",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10839",
+        "feed_name": "CITY OF SANTA CLARITA GENERAL MUNICIPAL ELECTION Member of the City Council, 5th District",
+        "item": "santa-clarita-council-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "BOB KHALSA": "Bob Khalsa",
+          "KELVIN DRISCOLL": "Kelvin Driscoll",
+          "LILIIA CHERNOVA": "Liliia Chernova",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10514",
+        "feed_name": "CITY OF SANTA MONICA GENERAL MUNICIPAL ELECTION Member of the City Council",
+        "item": "santa-monica-city-council",
+        "kind": "multi",
+        "seats": 3,
+        "choices": {
+          "ASHLEY OELSEN": "Ashley Oelsen",
+          "BRETT MORROW": "Brett Morrow",
+          "CAROLINE M. TOROSIS": "Caroline M. Torosis",
+          "DANIEL IVANOV": "Daniel Ivanov",
+          "DERRICK TOWNSEND": "Derrick Townsend",
+          "DOUG TRUSSLER": "Doug Trussler",
+          "ELI GILL": "Eli Gill",
+          "ERICKA LESLEY": "Ericka Lesley",
+          "LANA NEGRETE": "Lana Negrete",
+          "LINDSAY DAVIS": "Lindsay Davis",
+          "PHIL BROCK": "Phil Brock",
+          "WADE KELLEY": "Wade Kelley",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10916",
+        "feed_name": "CITY OF SANTA MONICA SPECIAL MUNICIPAL ELECTION - MEASURE ES",
+        "item": "santa-monica-measure-es",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10917",
+        "feed_name": "CITY OF SANTA MONICA SPECIAL MUNICIPAL ELECTION - MEASURE GG",
+        "item": "santa-monica-measure-gg",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10918",
+        "feed_name": "CITY OF SANTA MONICA SPECIAL MUNICIPAL ELECTION - MEASURE RR",
+        "item": "santa-monica-measure-rr",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10958",
+        "feed_name": "CITY OF SANTA MONICA SPECIAL MUNICIPAL ELECTION - MEASURE TT",
+        "item": "santa-monica-measure-tt",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10919",
+        "feed_name": "CITY OF SANTA MONICA SPECIAL MUNICIPAL ELECTION - MEASURE VV",
+        "item": "santa-monica-measure-vv",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "10515",
+        "feed_name": "CITY OF SANTA MONICA GENERAL MUNICIPAL ELECTION Member of the Rent Control Board",
+        "item": "santa-monica-rent-board",
+        "kind": "multi",
+        "seats": 3,
+        "choices": {
+          "HEATHER THOMASON": "Heather Thomason",
+          "KURT GONSKA": "Kurt Gonska",
+          "SOLEDAD MARCIAL": "Soledad Marcial",
+          "SUE HIMMELRICH": "Sue Himmelrich",
+          "ZOË MUNTANER": "Zoë Muntaner",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10722",
+        "feed_name": "SAUGUS UNION SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",
+        "item": "saugus-usd-area-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "KEVIN KIM": "Kevin Kim",
+          "LARRY GRABLE": "Larry Grable",
+          "NATALIE EPSTEIN": "Natalie Epstein",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10723",
+        "feed_name": "SAUGUS UNION SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",
+        "item": "saugus-usd-area-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ALISA GENTRY": "Alisa Gentry",
+          "ANNA GRIESE": "Anna Griese",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10724",
+        "feed_name": "SAUGUS UNION SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",
+        "item": "saugus-usd-area-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "CHRISTOPHER TRUNKEY": "Chris Trunkey",
+          "CINDY LARAE HALLMAN": "Cindy Hallman",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10602",
+        "feed_name": "SANTA CLARITA COMMUNITY COLLEGE DISTRICT Member of the Board of Trustees, Trustee Area 1",
+        "item": "scccd-area-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DARLENE TREVINO": "Darlene Trevino",
+          "REZA RASSOOL": "Reza Rassool",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10565",
+        "feed_name": "SANTA CLARITA VALLEY WATER AGENCY Member, Board of Directors, Division 1",
+        "item": "scv-water-division-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "BILL COOPER": "Bill Cooper",
+          "NOAH M. ROPP": "Noah M. Ropp",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10567",
+        "feed_name": "SANTA CLARITA VALLEY WATER AGENCY Member, Board of Directors, Division 3",
+        "item": "scv-water-division-3",
+        "kind": "multi",
+        "seats": 2,
+        "choices": {
+          "KENNETH \"KEN\" PETERSEN": "Kenneth \"Ken\" Petersen",
+          "LYNNE PLAMBECK": "Lynne Plambeck",
+          "MARIA A. GUTZEIT": "Maria A. Gutzeit",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10516",
+        "feed_name": "SANTA MONICA COMMUNITY COLLEGE DISTRICT Member of the Board of Trustees",
+        "item": "smccd-board",
+        "kind": "multi",
+        "seats": 4,
+        "choices": {
+          "KERA BLADES-SNELL": "Kera Blades-Snell",
+          "LUIS BARRERA CASTANON": "Luis Barrera Castanon",
+          "OSCAR DE LA TORRE": "Oscar de la Torre",
+          "SION ROY": "Sion Roy",
+          "TOM PETERS": "Tom Peters",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10517",
+        "feed_name": "SANTA MONICA-MALIBU UNIFIED SCHOOL DISTRICT Member of the Board of Education",
+        "item": "smmusd-board",
+        "kind": "multi",
+        "seats": 4,
+        "choices": {
+          "ALICIA MIGNANO": "Alicia Mignano",
+          "HARRY LESHNER": "Harry Leshner",
+          "LAURIE LIEBERMAN": "Laurie Lieberman",
+          "ROBBIE STAENBERG": "Robbie Staenberg",
+          "STACY ROUSE": "Stacy Rouse",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10747",
+        "feed_name": "TORRANCE UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area D",
+        "item": "torrance-usd-area-d",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JENNIFER MAK": "Jennifer Mak",
+          "RYAN RAUZON": "Ryan Rauzon",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10533",
+        "feed_name": "CITY OF WEST HOLLYWOOD GENERAL MUNICIPAL ELECTION Member of the City Council",
+        "item": "west-hollywood-city-council",
+        "kind": "multi",
+        "seats": 3,
+        "choices": {
+          "ALDEN \"MARLON\" GOBEL": "Alden \"Marlon\" Gobel",
+          "CHELSEA BYERS": "Chelsea Byers",
+          "CHUKWUDUBEM \"CHIEDU\" EGBUNIWE": "Chukwudubem \"Chiedu\" Egbuniwe",
+          "HELEN KRIEGER": "Helen Krieger",
+          "JÖEL ZALDÍVAR": "Joel Zaldivar",
+          "JOHN DURAN": "John Duran",
+          "JONATHAN COTTRELL": "Jonathan Cottrell",
+          "KEVIN L. LIGON": "Kevin Ligon",
+          "KODY CHRISTIANSEN": "Kody Christiansen",
+          "KYLE BRAZEAL": "Kyle Brazeal",
+          "LARRY BLOCK": "Larry Block",
+          "STEPHEN J. POST": "Stephen Post",
+          "TATYANA \"TANYA\" TSIKANOVSKY": "Tatyana \"Tanya\" Tsikanovsky",
+          "TOM DEMILLE": "Tom Demille",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10570",
+        "feed_name": "WATER REPLENISHMENT DISTRICT OF SOUTHERN CALIFORNIA Member, Board of Directors, Division 3",
+        "item": "wrd-division-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "AL AUSTIN": "Al Austin",
+          "MIKE MURCHISON": "Mike Murchison",
+          "TONIA REYES URANGA": "Tonia Reyes Uranga",
+          "TRACY BURNS": "Tracy Burns",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Los Angeles"
+        ],
+        "item_url": null
+      }
+    ],
+    "unmatched_guide": [],
+    "unmatched_feed": [],
+    "not_here": []
   },
   {
     "id": "results-CO-adams",

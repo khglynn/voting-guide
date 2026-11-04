@@ -113,3 +113,14 @@ test('clarity: a summary.json sent gzipped without Content-Encoding (Fulton, Nov
   assert.equal(r.verdict, 'ok');
   assert.equal(r.contests.length, 183);
 });
+
+test('clarity: the source\'s own banner words come through as labels', async () => {
+  const { fixture } = await import('./helpers.mjs');
+  const settings = JSON.parse(fixture('clarity-dallas.electionsettings.json'));
+  settings.pagesettings.web.header = '<div>Early Voting Totals Only</div>';
+  settings.pagesettings['global settings'].header = '<center><span style="color: red">\r\nEarly Voting Totals Only</span></center>';
+  settings.pagesettings['global settings']['mobile header'] = 'Unofficial Results';
+  const f = fakeFetch({ '/127396/current_ver.txt': 'clarity-dallas.current_ver.txt', '/127396/382636/json/en/summary.json': 'clarity-dallas.summary.json', '/127396/382636/json/en/electionsettings.json': { status: 200, body: JSON.stringify(settings) } });
+  const r = await clarity.read({ fetch: f, map: mapFor('dallas-county-tx') });
+  assert.deepEqual(r.labels, ['Early Voting Totals Only', 'Unofficial Results']);
+});

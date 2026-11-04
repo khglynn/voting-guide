@@ -107,6 +107,9 @@ test('file: counting race, spanning measure never summed, unmatched and unchecke
   assert.equal(pv.items['prop-a'].slices.length, 2);
   assert.deepEqual(pv.items['prop-a'].missing, ['C']);
   assert.equal(pv.items['prop-a'].source, 'a-tx', 'the largest slice on top');
+  const withNote = buildStateFile({ state: 'TX', maps: [{ ...MAP_A, contests: MAP_A.contests.map((c) => (c.item === 'mayor' ? { ...c, reaches: ['A', 'other counties'], note: 'Write-in candidates are counted together.' } : c)) }], srcs, mode: 'preview', now });
+  assert.equal(withNote.items.mayor.note, 'Write-in candidates are counted together.', 'a spanning race keeps its note');
+  assert.deepEqual(withNote.items.mayor.unmatched, ['Cy Doe (W)']);
 });
 
 test('file: complete only after the count window closes, and an outcome only then', () => {

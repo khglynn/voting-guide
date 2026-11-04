@@ -97,6 +97,9 @@ function spanning(list, reaches) {
   if (top.candidates) out.candidates = top.candidates;
   if (top.measure) out.measure = top.measure;
   if (top.seats) out.seats = top.seats;
+  if (top.unmatched) out.unmatched = top.unmatched;
+  const notes = [...new Set(sorted.map((s) => s.note).filter(Boolean))];
+  if (notes.length) out.note = notes.join(' ');
   out.slices = sorted.map(strip);
   if (missing.length) out.missing = missing;
   out.final = null;
@@ -114,6 +117,7 @@ export function buildStateFile({ state, maps, srcs, mode, now }) {
     const rec = s.record;
     const sched = s.sched || {};
     const entry = { id: map.id, name: map.name, url: map.feed.results_url, updated: rec?.read?.source_updated ?? null, status: 'pending', reporting: rec?.read?.reporting ?? null, fetched: rec?.fetched ?? null };
+    if (rec?.read?.labels?.length) entry.labels = rec.read.labels;
     if (sched.next_due) entry.next_due = sched.next_due;
     if (sched.failing_since) entry.failing_since = sched.failing_since;
     if (mode === 'preview') entry.checked = !!s.checked;

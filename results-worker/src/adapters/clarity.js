@@ -7,6 +7,14 @@
 import { get } from '../fetch.js';
 import { parseUsTime, isoDate } from '../util.js';
 
+/* The source's own banner words, as plain text: "Early Voting Totals Only" (Dallas, 7 PM), "Unofficial Results". */
+const plain = (h) => String(h || '').replace(/<[^>]*>/g, ' ').replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+function labels(ps = {}) {
+  const out = [];
+  for (const v of [ps.web?.header, ps['global settings']?.header, ps['global settings']?.['mobile header']]) { const t = plain(v); if (t && t.length <= 160 && !out.includes(t)) out.push(t); }
+  return out;
+}
+
 const num = (v) => (Array.isArray(v) ? Number(v[0] ?? 0) : Number(v ?? 0));
 
 export async function listElections({ fetch, base, identity }) {
@@ -62,6 +70,7 @@ export async function read({ fetch, map, prevToken = null }) {
     source_status: details.chkisfinalupload === true || details.chkisfinalupload === 'true' ? 'final_flag' : null,
     official: false,
     source_updated: parseUsTime(e.json?.websiteupdatedat),
+    labels: labels(e.json?.pagesettings),
     reporting: totalPr > 0 ? `${nowPr} of ${totalPr} precincts reporting` : null,
     contests,
   };

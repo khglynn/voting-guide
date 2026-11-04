@@ -1889,7 +1889,7 @@ function roundTrip(name, stCode, places, mutate) {
     {
       // No picks (a friend's city): where races stand, as a list grouped like the ballot, in place of the dots.
       const h0 = fig.figureHTML(), t0 = txt(h0);
-      check('results figure: no picks: no gold, no dots, a list of where races stand grouped like the ballot, each line the row’s own words', f0.picks === 0 && rm.countLine(f0) === '' && /class="vz vz-stand"/.test(h0) && !/class="d /.test(h0) && /<div class="st-sec" data-sec="federal">/.test(h0) && /U\.S\. Representative District 37 Casar 71% counting/.test(t0) && /class="st-go" href="https:/.test(h0) && /data-act="goto" data-id="tx-us-house-37"/.test(h0), t0.slice(0, 400));
+      check('results figure: no picks: no gold, no dots, a list of where races stand grouped like the ballot, each line the row’s own words', f0.picks === 0 && rm.countLine(f0) === '' && /class="vz vz-stand"/.test(h0) && !/class="d /.test(h0) && /<div class="st-sec" data-sec="federal">/.test(h0) && /U\.S\. Representative District 37 Casar 71% counting/.test(t0) && /<a href="https:[^"]+" target="_blank" rel="noopener" class="st-go">/.test(h0) && /data-act="goto" data-id="tx-us-house-37"/.test(h0), t0.slice(0, 400));
       check('results figure: no picks: a long section lists its first three, then jumps to the rest', (() => { const secs = f0.rows.filter((r) => r.dots.length > 3); return !secs.length || secs.every((r) => new RegExp(`data-fk="st-more-${r.sec}">${r.dots.length - 3} more race`).test(h0)); })());
     }
     check('results: a source that’s down says so and when its numbers are from', rm.sourceLines(tx.sources).includes('Couldn’t reach Harris County. Showing its 9:12 PM CT numbers.'), rm.sourceLines(tx.sources).join(' | '));

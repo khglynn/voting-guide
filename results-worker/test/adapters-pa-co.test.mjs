@@ -122,6 +122,9 @@ test('philadelphia: a later page must be the next page under the same stamp; a p
   const many = await philly.read({ fetch: fakeFetch({ ...PH_ROUTES, 'type=STR': strPages(fixture('philadelphia.STR.html').replace('hidLastPage" value="2"', 'hidLastPage" value="9"')) }), map: PH_MAP });
   assert.equal(many.verdict, 'error');
   assert.match(many.error, /says it has 9 pages/);
+  const grows = await philly.read({ fetch: fakeFetch({ ...PH_ROUTES, 'type=STR': strPages(undefined, p2.replace('hidLastPage" value="2"', 'hidLastPage" value="3"')) }), map: PH_MAP });
+  assert.equal(grows.verdict, 'error', 'a later page can\'t raise the page count past what the first page said');
+  assert.match(grows.error, /page 2 says 3 pages, its first page 2/);
   const refused = await philly.read({ fetch: fakeFetch({ ...PH_ROUTES, 'type=STR': (url, opts) => (opts.method === 'POST' ? { status: 403, body: 'no' } : { status: 200, body: fixture('philadelphia.STR.html') }) }), map: PH_MAP });
   assert.equal(refused.verdict, 'refused', 'a refused post stops the source like a refused read');
 });

@@ -42,8 +42,10 @@ async function laterPages(fetch, u, tab, html, stamp, identity) {
     if (p.updated !== stamp) return { verdict: 'error', error: `the ${tab} tab's page ${at + 1} says ${p.updated}, the first tab ${stamp} (read across an update)`, url: r.url };
     const next = pageOf(r.body);
     if (next.at !== at + 1) return { verdict: 'error', error: `the ${tab} tab's Next Page went to page ${next.at}, not ${at + 1}`, url: r.url };
+    // The first page's count bounds the loop: a later page can't add pages (security review, Nov 4).
+    if (next.last !== last) return { verdict: 'error', error: `the ${tab} tab's page ${next.at} says ${next.last} pages, its first page ${last}`, url: r.url };
     out.push({ tab, page: next.at, body: r.body, p });
-    ({ at, last } = next);
+    at = next.at;
     html = r.body;
   }
   return { verdict: 'ok', pages: out };

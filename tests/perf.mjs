@@ -155,7 +155,8 @@ const res = [];
   await page.goto(`${BASE}/?today=2026-11-03&now=21:42`);
   await page.fill('#zip', '77002');
   await page.locator('[data-act="setup-done"]').click();
-  await page.waitForSelector('#vz .vz-fig');
+  // No picks yet: the summary is the where-races-stand list; after the pick below it is the dots again.
+  await page.waitForSelector('#vz .st, #vz .vz-fig');
   await cdp.send('Emulation.setCPUThrottlingRate', { rate: 4 });
   const t = (sel) => page.evaluate((s) => new Promise((resolve) => {
     const el = document.querySelector(s);

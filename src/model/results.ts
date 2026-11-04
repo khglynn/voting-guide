@@ -10,11 +10,11 @@
    4. A county's slice is never shown as the whole: a race across counties names the county whose count it shows,
       and the figure doesn't compare it at all (we never add counties up).
    5. Unmatched is a link, never a guess. Results are ink; gold stays your pick. */
-import type { Contest, Item, ItemResult, ResultCand, ResultsFile, ResultsSourceEntry, Measure } from '../types';
+import type { Contest, Item, ItemResult, ResultCand, ResultSlice, ResultsFile, ResultsSourceEntry, ResultsSource, Measure } from '../types';
 import { S } from '../state';
 import { isRCV, isMultiSeat, isMultiJudge, status, pageWalk, ranksOf, type SectionKey } from '../ballot';
 import { pickShort } from './labels';
-import { afterPolls } from './plan';
+import { afterPolls, countyKey } from './plan';
 
 /* ---------- the file in memory ---------- */
 export interface ResultsStore {
@@ -53,6 +53,10 @@ export function readable(f: unknown, st: string): f is ResultsFile {
     && nums(r) && (!r.slices || (Array.isArray(r.slices) && r.slices.every((s) => s && typeof s.county === 'string' && typeof s.url === 'string' && /^https:\/\//.test(s.url) && nums(s)))));
 }
 
+/* Results mode (overnight, Nov 3): the ballot's polls have closed. From then on a row's right column speaks about
+   results only, never the sources' tally, file or no file (Kevin's 9:24 PM screenshot: Colorado's amendments still read
+   "No 6, Yes 1 / picks split" because the state's count wasn't in the file yet). The tally lives in the open row. */
+export const resultsMode = (): boolean => !!S.ballot && afterPolls(S.ballot.howto);
 /* Results show on a ballot once its polls have closed and the file for its state has been read. */
 export const resultsOn = (): boolean => !!S.ballot && !!R.file && R.st === S.ballot.st && afterPolls(S.ballot.howto);
 export function resultOf(it: Item): ItemResult | null {
@@ -60,12 +64,16 @@ export function resultOf(it: Item): ItemResult | null {
   const r = R.file!.items[it.id];
   // A multi-judge row is one item in the guide and several questions on the ballot: the file has no single answer.
   if (!r || (it.kind === 'contest' && isMultiJudge(it))) return null;
-  return r;
+  return viewOf(r);
 }
+/* Still waiting on the first read of this state's file (nothing to say yet, not even "not posted"). */
+export const resultsWaiting = (): boolean => resultsMode() && !!(S.ballot!.howto.results?.sources || []).length
+  && (R.st !== S.ballot!.st || (!R.file && !R.none && !R.failed));
 
 /* ---------- small rules ---------- */
-const total = (r: { candidates?: ResultCand[]; measure?: { yes: number; no: number }; total_votes?: number }): number =>
-  r.measure ? r.measure.yes + r.measure.no : (r.candidates || []).reduce((a, c) => a + c.votes, 0);
+function total(r: { candidates?: ResultCand[]; measure?: { yes: number; no: number }; total_votes?: number }): number {
+  return r.measure ? r.measure.yes + r.measure.no : (r.candidates || []).reduce((a, c) => a + c.votes, 0);
+}
 /* Numbers to show: a count that isn't link_only or pending and has votes in it. */
 export const hasNumbers = (r: ItemResult | null): r is ItemResult => !!r && r.status !== 'link_only' && r.status !== 'pending' && total(r) > 0;
 export const isLink = (r: ItemResult | null): boolean => !!r && r.status === 'link_only';
@@ -79,11 +87,44 @@ export const countyLabel = (c: string): string => {
   if (/\b(county|counties|city|parish|borough|district|areas?)\b/i.test(t)) return t.charAt(0).toUpperCase() + t.slice(1);
   return `${t} County`;
 };
-/* The county whose count a race across counties shows: the slice from the item's own source (the largest). */
+/* The county whose count a race across counties shows: the slice from the item's source (viewOf picks it). */
 export function shownCounty(r: ItemResult): string | null {
   if (!spans(r)) return null;
   const sl = (r.slices || []).find((s) => s.source === r.source) || (r.slices || [])[0];
   return sl ? countyLabel(sl.county) : null;
+}
+/* The same county, briefly, for the row's column ("Travis count"): the Worker's own phrases stay whole. */
+export const shortCounty = (c: string): string => c.replace(/\s+County$/i, '');
+const bare = (c: string): string => c.replace(/\s*\(.*?\)\s*/g, ' ').trim();
+const sliceHas = (s: ResultSlice): boolean => s.status !== 'link_only' && s.status !== 'pending' && total(s) > 0;
+/* The voter's county: the address lookup's or the ZIP's (ballot.county), else the first county the ballot's first
+   place lists (Travis for Austin). Null on a statewide-only ballot. */
+export function homeCounty(): string | null {
+  const b = S.ballot;
+  if (!b) return null;
+  return b.county || b.places[0]?.counties?.[0] || null;
+}
+/* A race across counties shows one county's count, named (rule 9). Which county (overnight brief, after Kevin's 9:09 PM
+   screenshot of ACC trustee reading "Williamson County count" on an Austin ballot): the voter's own county when its
+   slice has numbers, else the Worker's pick (the largest county), else the largest slice that has numbers. The item
+   comes back with that slice's numbers, words, time and link in its place, but the race's own status: a county that
+   finished counting never makes the race read "Unofficial." while other counties count (Opus review, Nov 4). Its
+   slices and missing stay, so it still spans and is never compared or called. Only when the item's own source is one
+   of its slices: a whole-race count (a state's) is never swapped for a county's piece of it. */
+export function viewOf(r: ItemResult): ItemResult {
+  const sl = r.slices || [];
+  if (!spans(r) || !sl.some((x) => x.source === r.source)) return r;
+  const home = homeCounty();
+  const k = home ? countyKey(bare(home)) : null;
+  const mine = k ? sl.find((x) => countyKey(bare(x.county)) === k && sliceHas(x)) : undefined;
+  const own = sl.find((x) => x.source === r.source);
+  const pick = mine || (own && sliceHas(own) ? own : undefined) || [...sl].filter(sliceHas).sort((a, b) => total(b) - total(a))[0];
+  if (!pick || pick.source === r.source) return r;
+  return {
+    ...r, source: pick.source, reporting: pick.reporting, updated: pick.updated, url: pick.url,
+    total_votes: pick.total_votes, candidates: pick.candidates, measure: pick.measure, seats: pick.seats ?? r.seats,
+    unmatched: pick.unmatched, note: [r.note, pick.note].filter(Boolean).join(' ') || undefined, final: null, rounds: undefined,
+  };
 }
 const pctText = (p: number, dp = 0): string => (p > 0 && p < (dp ? 0.1 : 1) ? `<${dp ? '0.1' : '1'}%` : `${(Math.round(p * 10 ** dp) / 10 ** dp).toFixed(dp)}%`);
 export const pct0 = (p: number): string => pctText(p, 0);
@@ -156,17 +197,61 @@ function pickNames(it: Item): string[] {
   return p[it.id] ? [p[it.id]] : [];
 }
 
-/* ---------- the row's right column ---------- */
-export interface ResCol { main: string; sub: string; pick: string; kind: 'num' | 'none' | 'link' }
+/* ---------- the offices ---------- */
+/* The ballot's row in data/results-sources.json for a source id (the place bundles carry them, voter's county first). */
+const rowFor = (id: string): ResultsSource | undefined => (S.ballot?.howto.results?.sources || []).find((x) => x.id === id);
+/* An office's short name: the row's label ("Travis County", "Texas", "DC"), else the file's name for it. */
+export const officeShort = (id: string): string => rowFor(id)?.label || R.file?.sources.find((s) => s.id === id)?.name || 'Official';
+/* What a link to an office's results says: "Travis County results", "Texas results". */
+export const officeText = (id: string): string => `${officeShort(id)} results`;
+const httpsOK = (u: string | null | undefined): u is string => !!u && /^https:\/\//i.test(u.trim());
+/* Where a row with nothing in the file sends you (overnight): a race in the state's file to the state's results, the
+   rest to the voter's county's (the ballot's first county row), else whatever results page the ballot has. */
+export function officeFor(it: Item): { url: string; text: string } | null {
+  const b = S.ballot;
+  if (!b) return null;
+  const rows = (b.howto.results?.sources || []).filter((x) => httpsOK(x.results_url));
+  const state = rows.find((x) => x.kind === 'state'), county = rows.find((x) => x.kind === 'county');
+  const r = b.statewide.has(it.id) ? state || county : county || state;
+  if (r) return { url: r.results_url, text: `${r.label || r.name} results` };
+  return httpsOK(b.howto.results_url) ? { url: b.howto.results_url!, text: `${b.howto.results_source || b.stateName} results` } : null;
+}
+
+/* ---------- the row's right column ----------
+   One short state per row (overnight, Kevin: "see election office results" was "unclear and wordy and misplaced in some
+   spots and hard to act on"): the leader and share with the status word or the county whose count it is; "Not posted
+   yet" while the office hasn't posted (its expected time is in the open row); or, where the office posts the race but
+   we don't show it here, a real link named for the office ("Travis County results"). "Your pick" only beside numbers,
+   never stacked under a non-answer, and just "Your pick" when it's the name right above it. */
+export interface ResCol { main: string; sub: string; pick: string; kind: 'num' | 'none' | 'link' | 'wait'; url?: string; area?: string }
+const linkCol = (text: string, url: string): ResCol => ({ main: text, sub: '', pick: '', kind: 'link', url });
 export function resCol(it: Item, r: ItemResult): ResCol {
-  const pick = picked(it) ? `Your pick: ${pickShort(it)}` : '';
-  if (r.status === 'link_only') return { main: 'See election office results', sub: '', pick, kind: 'link' };
-  if (!hasNumbers(r)) return { main: 'No numbers posted yet', sub: '', pick, kind: 'none' };
+  if (r.status === 'link_only') return linkCol(officeText(r.source), r.url);
+  if (!hasNumbers(r)) return { main: 'Not posted yet', sub: '', pick: '', kind: 'none' };
+  const col = numCol(it, r);
+  // A race across counties: the status word stays (it's the whole race's), and a line under it says the numbers are one
+  // county's votes (Opus review, Nov 4: "Travis only" read as "this race is only in Travis"; GPT chose the words).
+  const county = shownCounty(r);
+  if (county && col.kind === 'num') col.area = `${shortCounty(county)} votes only`;
+  const pk = picked(it) ? pickShort(it) : '';
+  if (col.kind === 'num' && pk) col.pick = col.main.startsWith(`${pk} `) && !col.main.includes(',') ? 'Your pick' : `Your pick: ${pk}`;
+  return col;
+}
+/* The column when the file has nothing for this row, once the polls have closed: "Checking…" until the first read of
+   the state's file, then a link to the office that posts it (a state with no file at all, Colorado's amendments before
+   the state's count was in). Null before the polls close: the sources' tally, as before. */
+export function noResCol(it: Item): ResCol | null {
+  if (!resultsMode()) return null;
+  if (resultsWaiting()) return { main: 'Checking…', sub: '', pick: '', kind: 'wait' };
+  const o = officeFor(it);
+  return o ? linkCol(o.text, o.url) : { main: 'Not in this guide', sub: '', pick: '', kind: 'none' };
+}
+function numCol(it: Item, r: ItemResult): ResCol {
+  const pick = '';
   const word = statusWord(r.status);
   const county = shownCounty(r);
-  // A race across counties: the county named in place of the status word ("Travis County count"), since its status
-  // is the whole race's, and no number here is the whole.
-  const sub0 = county ? `${county} count` : word;
+  // The status word is the whole race's (viewOf keeps it); resCol adds the county line for a race across counties.
+  const sub0 = word;
   if (isMeasureLike(it) && r.measure) {
     const y = yesShare(r.measure);
     const b = barOf(it, r);
@@ -185,13 +270,14 @@ export function resCol(it: Item, r: ItemResult): ResCol {
   const top = leaders(r);
   const cs = [...(r.candidates || [])].sort((a, b) => b.votes - a.votes);
   const w = winnersOf(r);
-  // A name we couldn't match could be leading: no leader named (rule 8); the open row says why.
-  if (!w && unknownLead(r)) return { main: 'See election office results', sub: sub0, pick, kind: 'link' };
+  // A name we couldn't match could be leading: no leader named (rule 8); the column is the office's page, and the open
+  // row says why.
+  if (!w && unknownLead(r)) return linkCol(officeText(r.source), r.url);
   // Ranked choice: first choices until the file names the winner after the final round (the column never says "won").
   if (isRCV(c)) return w && !county ? { main: w.map((n) => shortOf(it, n)).join(', '), sub: `final round · ${word}`, pick, kind: 'num' } : { main: top.length === 1 ? `${shortOf(it, top[0].name)} ${pct0(top[0].pct)}` : 'Tied', sub: 'First choices only', pick, kind: 'num' };
   if (isMultiSeat(c)) {
     const n = r.seats || c.winners || c.vote_for;
-    return { main: cs.slice(0, n).map((k) => shortOf(it, k.name)).join(', '), sub: `top ${n} · ${county ? `${county} count` : word}`, pick, kind: 'num' };
+    return { main: cs.slice(0, n).map((k) => shortOf(it, k.name)).join(', '), sub: `top ${n} · ${sub0}`, pick, kind: 'num' };
   }
   if (top.length > 1) return { main: `Tied: ${top.map((k) => shortOf(it, k.name)).join(', ')}`, sub: sub0, pick, kind: 'num' };
   return { main: `${shortOf(it, top[0].name)} ${pct0(top[0].pct)}`, sub: sub0, pick, kind: 'num' };
@@ -316,13 +402,20 @@ export function fmtTime(iso: string | null | undefined, zone: string | null = zo
 }
 
 /* ---------- the sources behind this ballot's numbers ---------- */
+/* The races the page shows, in page order (not the other districts' races a district question holds: those brought
+   Bexar County into an Austin ballot's sources, overnight). */
+export function shownItems(): Item[] {
+  const b = S.ballot;
+  if (!b) return [];
+  return pageWalk().filter((x) => !x.question && !x.folded).map((x) => b.byId.get(x.key)).filter((x): x is Item => !!x);
+}
 export function ballotSources(): ResultsSourceEntry[] {
   if (!resultsOn()) return [];
   const ids = new Set<string>();
-  for (const it of S.ballot!.items) {
+  for (const it of shownItems()) {
     const r = R.file!.items[it.id];
     if (!r) continue;
-    ids.add(r.source);
+    ids.add(viewOf(r).source);
     for (const s of r.slices || []) ids.add(s.source);
   }
   return R.file!.sources.filter((s) => ids.has(s.id));
@@ -330,20 +423,62 @@ export function ballotSources(): ResultsSourceEntry[] {
 /* A source we couldn't reach. A link-only source (not checked yet, a link by design) is never "down" here: its rows are
    links, and its fetch failing says nothing about numbers we show. */
 export const sourceDown = (s: ResultsSourceEntry): boolean => s.status !== 'link_only' && (!!s.failing_since || s.status === 'failing');
+/* A banner that counts something can contradict the numbers beside it (Nov 3: Travis's "Unofficial Results 0/201 Vote
+   Centers Reporting" over six-figure counts, Williamson's template "X of X Vote Centers Completely Reported"), so a
+   label with a count in it is never quoted; progress comes from the source's `reporting` only. */
+const COUNTS = /\b(\d+|X)\s*(of|\/)\s*(\d+|X)\b/i;
+export function cleanLabels(s: ResultsSourceEntry | undefined): string[] {
+  const seen = new Set<string>();
+  return (s?.labels || []).filter((x) => typeof x === 'string' && x.trim() && !COUNTS.test(x)).map((x) => x.trim().replace(/\.$/, ''))
+    .filter((x) => (seen.has(x.toLowerCase()) ? false : (seen.add(x.toLowerCase()), true)));
+}
 /* The source's own banner words, quoted ("“Early Voting Totals Only.”"), or ''. */
 export const labelWords = (s: ResultsSourceEntry | undefined): string => {
-  const l = (s?.labels || []).filter((x) => typeof x === 'string' && x.trim()).map((x) => x.trim().replace(/\.$/, ''));
+  const l = cleanLabels(s);
   return l.length ? ` “${l.slice(0, 2).join('. ')}.”` : '';
 };
+/* An office's progress in its own words: its own `reporting`, or nothing. Never one race's words passed off as the
+   office's (Opus review, Nov 4: Bexar's "7 of 7" was one district's), never a label, never a percent of our own (rule
+   5). Each race's own progress is in its open row. */
+export function progressOf(s: ResultsSourceEntry): string {
+  const t = s.reporting && s.reporting.trim();
+  return t ? t.replace(/\.$/, '') : '';
+}
+/* How many rows on this page each office's numbers fill (after viewOf picks a county). */
+function rowsBy(): Map<string, number> {
+  const n = new Map<string, number>();
+  for (const it of shownItems()) { const r = resultOf(it); if (r && hasNumbers(r)) n.set(r.source, (n.get(r.source) || 0) + 1); }
+  return n;
+}
+/* The offices the bottom bar speaks for (Opus review, Nov 4): the one behind most of this page's rows, and the voter's
+   own county's when its numbers are on rows here too, each with its own update time, so the age of the local numbers
+   is always on screen. Only offices whose numbers fill a row: never one county's slice of a district race (Bexar on an
+   Austin ballot), never a link-only office. */
+export function barSources(): ResultsSourceEntry[] {
+  const n = rowsBy();
+  const fed = ballotSources().filter((x) => x.status !== 'link_only' && (n.get(x.id) || 0) > 0);
+  if (!fed.length) return [];
+  const most = [...fed].sort((a, b) => (n.get(b.id) || 0) - (n.get(a.id) || 0))[0];
+  const home = homeCounty();
+  const k = home ? countyKey(bare(home)) : null;
+  const rows = (S.ballot?.howto.results?.sources || []).filter((x) => x.kind === 'county');
+  const hc = k ? rows.find((x) => [...(x.counties || []), x.label || '', x.name].some((c) => c && countyKey(bare(c)) === k)) : undefined;
+  const mine = hc ? fed.find((x) => x.id === hc.id) : undefined;
+  return mine && mine.id !== most.id ? [most, mine] : [most];
+}
 export const sourceName = (id: string): string => R.file?.sources.find((s) => s.id === id)?.name || 'The election office';
-/* "We checked: 9:42 PM CT", or per source on a ballot across counties ("We checked Travis County: 9:42 PM CT ·
-   Williamson County: 9:41 PM CT"). Each time is when our fetcher last read that source, never the page's own load. */
-export function checkedLine(srcs = ballotSources()): string {
-  const read = srcs.filter((s) => s.fetched && s.status !== 'link_only' && !sourceDown(s));
+/* "We checked 10:13 PM CT": when our fetcher last read the sources, never the page's own load. With several sources,
+   the oldest of their times, so it never claims a newer read than every one of them had (overnight: the run of each
+   county's time was a paragraph; each one's own update time is in the menu and the figure). A source that is down
+   still counts at its last good read, since its numbers stay on the page (Codex); the outage is said apart. */
+export function checkedAt(srcs = ballotSources()): string {
+  const read = srcs.filter((s) => s.fetched && s.status !== 'link_only').map((s) => s.fetched!).filter((t) => !Number.isNaN(Date.parse(t)));
   if (!read.length) return '';
-  const times = [...new Set(read.map((s) => fmtTime(s.fetched)))];
-  if (times.length === 1) return `We checked: ${times[0]}`;
-  return `We checked ${read.map((s) => `${s.name}: ${fmtTime(s.fetched)}`).join(' · ')}`;
+  return fmtTime(read.sort((a, b) => Date.parse(a) - Date.parse(b))[0]);
+}
+export function checkedLine(srcs = ballotSources()): string {
+  const t = checkedAt(srcs);
+  return t ? `We checked ${t}` : '';
 }
 /* Each source in its own words: "Travis County updated: 9:35 PM CT. “120 of 200 precincts reporting.”", or
    "Couldn't reach Travis County. Showing its 9:12 PM CT numbers." */
@@ -352,9 +487,33 @@ export function sourceLines(srcs = ballotSources()): string[] {
     if (sourceDown(s)) return `Couldn’t reach ${s.name}. Showing its ${s.updated ? `${fmtTime(s.updated)} ` : 'last '}numbers.`;
     if (s.status === 'refused') return `${s.name} isn’t letting us read its results. See its own page.`;
     const when = s.updated ? `${s.name} updated: ${fmtTime(s.updated)}.` : `${s.name}: source update time unavailable.`;
-    return `${when}${labelWords(s)}${s.reporting ? ` “${s.reporting.replace(/\.$/, '')}.”` : ''}`;
+    const p = progressOf(s);
+    return `${when}${labelWords(s)}${p ? ` “${p}.”` : ''}`;
   });
 }
+/* The bottom bar's results line (overnight; Opus review, Nov 4): the status word, when we last checked, and Refresh;
+   under it each office the bar speaks for (barSources) with its own update time and, only when the office gives them,
+   its own progress words. `kind`: 'wait' before the first read, 'links' when nothing on this page has numbers here (it
+   then carries the office's link), 'failed' when the first read failed. */
+export interface FootSrc { who: string; at: string; words: string; down: boolean }
+export interface FootInfo { kind: 'res' | 'wait' | 'links' | 'failed'; word: string; at: string; srcs: FootSrc[]; link: { url: string; text: string } | null }
+export function footInfo(): FootInfo | null {
+  if (!resultsMode()) return null;
+  const b = S.ballot!;
+  const rows = (b.howto.results?.sources || []).filter((x) => httpsOK(x.results_url));
+  const home = rows.find((x) => x.kind === 'county') || rows.find((x) => x.kind === 'state');
+  const link = home ? { url: home.results_url, text: `${home.label || home.name} results` } : httpsOK(b.howto.results_url) ? { url: b.howto.results_url!, text: `${b.howto.results_source || b.stateName} results` } : null;
+  const base: FootInfo = { kind: 'res', word: '', at: '', srcs: [], link };
+  if (resultsWaiting()) return { ...base, kind: 'wait' };
+  if (!resultsOn()) return { ...base, kind: R.failed ? 'failed' : 'links' };
+  const f = figure();
+  const srcs = barSources();
+  if (!f || !f.posted || !srcs.length) return { ...base, kind: 'links' };
+  return { ...base, word: f.word, at: checkedAt(), srcs: srcs.map((m) => ({ who: officeShort(m.id), at: m.updated ? fmtTime(m.updated) : '', words: sourceDown(m) ? '' : progressOf(m), down: sourceDown(m) })) };
+}
+/* "Hide races I've decided" only before the close (Opus review, Nov 4): after it, every row carries its count, so the
+   switch (still saved as it was) hides nothing. */
+export const hideDecidedNow = (): boolean => !!S.b?.hideDecided && !resultsMode();
 /* The newest source time we hold, for "No change since 9:35 PM CT". */
 export function newestUpdate(srcs = ballotSources()): string {
   const t = srcs.map((s) => s.updated || s.fetched || '').filter(Boolean).sort().pop();
@@ -398,11 +557,12 @@ export function figure(): Figure | null {
     const pick = picked(it);
     const cmp = pick ? compare(it, r) : 'nc';
     const num = hasNumbers(r);
-    const link = isLink(r);
+    // A row the file has nothing for is a link to its office now (noResCol), so it counts as one.
+    const link = isLink(r) || (!r && !!officeFor(it));
     total++;
     if (num) { posted++; if (r!.status === 'complete' || r!.status === 'official') done++; if (r!.status === 'official') official++; }
     else if (link) links++;
-    else if (r) pending++;
+    else pending++;
     let w: Dot['why'] = '';
     if (pick && cmp === 'nc' && num) {
       const c = it.kind === 'contest' ? it : null;
@@ -456,9 +616,9 @@ export function othersLine(f: Figure): string {
 export function dotLine(it: Item): string {
   const r = resultOf(it);
   const pk = picked(it) ? pickShort(it) : null;
-  if (!r) return pk ? `Not in this guide’s results · your pick ${pk}` : 'Not in this guide’s results';
-  const col = resCol(it, r);
-  const main = col.kind === 'num' ? `${col.main}${col.sub ? ` ${col.sub}` : ''}` : col.main;
+  const col = r ? resCol(it, r) : noResCol(it);
+  if (!col) return pk ? `Not in this guide’s results · your pick ${pk}` : 'Not in this guide’s results';
+  const main = col.kind === 'num' ? `${col.main}${col.sub ? ` ${col.sub}` : ''}${col.area ? ` · ${col.area}` : ''}` : col.main;
   return `${main}${pk ? ` · your pick ${pk}` : ''}`;
 }
 export type { Measure };

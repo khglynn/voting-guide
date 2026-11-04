@@ -26,6 +26,7 @@ import { sourceListHTML, matchWords } from './views/lens';
 import { whatIfBody, wiMatchWords } from './views/planstrip';
 import { refreshResults } from './results';
 import { figureHTML, figHidden, setFigHidden } from './views/figure';
+import { hideDecidedNow } from './model/results';
 
 export type Act = (d: DOMStringMap, el: HTMLElement) => void | Promise<void>;
 export const A: Record<string, Act> = {};
@@ -243,7 +244,7 @@ A.jump = (d, el) => {
   const wasFolded = !!$(`#sec-${sec}.folded`);
   S.ui.folded.delete(sec);
   S.ui.unfolded.add(sec);
-  if (S.b.hideDecided && t.total > 0 && t.done === t.total) S.ui.reveal.add(sec);
+  if (hideDecidedNow() && t.total > 0 && t.done === t.total) S.ui.reveal.add(sec);
   if (wasFolded || !$(`#sec-${sec}`)) renderSection(sec);
   glideTo($(`#sec-${sec}`), 0, () => land($(`#sec-${sec}`)));
   focusFk(`sec-${sec}`);
@@ -267,7 +268,7 @@ A.sec = (d, btn) => {
   const el = $(`#sec-${s}`);
   const folded = !!el && el.classList.contains('folded');
   // Under "Hide races I've decided" a folded band opens as its count does: with its decided rows.
-  if (folded && S.b.hideDecided) { A['sec-count'](d, btn); focusFk(`sec-${s}`); return; }
+  if (folded && hideDecidedNow()) { A['sec-count'](d, btn); focusFk(`sec-${s}`); return; }
   // A section still being decided doesn't fold on a stray tap; the band takes you to its next
   // undecided row instead.
   if (!folded && el && el.querySelector('.row[data-undecided], .row[data-q]')) {
@@ -293,7 +294,7 @@ A['sec-count'] = (d) => {
   const el = $(`#sec-${s}`);
   const folded = !!el && el.classList.contains('folded');
   const entries = entriesBySection().get(s) || [];
-  if (S.b.hideDecided && sectionTally(entries).total > 0) {
+  if (hideDecidedNow() && sectionTally(entries).total > 0) {
     if (folded) { S.ui.folded.delete(s); S.ui.reveal.add(s); }
     else if (S.ui.reveal.has(s)) S.ui.reveal.delete(s);
     else S.ui.reveal.add(s);
@@ -1029,6 +1030,11 @@ A['fig-hide'] = () => {
   focusFk('vz-hide');
 };
 /* A figure row's chevron: its races, each a link to its row, opened under it. */
+/* "Where these numbers come from" (overnight): the figure repaints alone, so an address being typed above stays (Codex). */
+A['fig-src'] = () => {
+  S.ui.open.has('vz-src') ? S.ui.open.delete('vz-src') : S.ui.open.add('vz-src');
+  glide(['#vz'], () => { const el = $('#vz'); if (el) withFocusKept(() => { el.outerHTML = figureHTML(); }); });
+};
 A['fig-row'] = (d) => {
   const k = `vz-${d.sec}`;
   S.ui.open.has(k) ? S.ui.open.delete(k) : S.ui.open.add(k);

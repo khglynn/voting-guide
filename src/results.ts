@@ -9,6 +9,7 @@ import { R, resetResults, readable, fetchedSig, newestUpdate } from './model/res
 import { render, anchored, renderRow } from './render';
 import { reportError } from './errors';
 import { figureHTML } from './views/figure';
+import { menuHTML } from './views/ledger';
 
 const ELECTION = '2026-11-03';
 const EVERY = 60_000;
@@ -39,7 +40,11 @@ export function loadResults(bust = false): Promise<boolean> {
     const before = R.file ? R.file.generated : '';
     const wasFailed = R.failed, wasNone = R.none;
     try {
-      const res = await fetch(`/results/${ELECTION}/${st}.json${bust ? `?t=${Date.now()}` : ''}`, { cache: bust ? 'no-store' : 'default' });
+      // A read that hangs counts as failed after 15 seconds, so the rows never wait on "Checking…" for good (overnight).
+      const ac = typeof AbortController !== 'undefined' ? new AbortController() : null;
+      const timer = ac ? setTimeout(() => ac.abort(), 15_000) : null;
+      const res = await fetch(`/results/${ELECTION}/${st}.json${bust ? `?t=${Date.now()}` : ''}`, { cache: bust ? 'no-store' : 'default', ...(ac ? { signal: ac.signal } : {}) })
+        .finally(() => { if (timer) clearTimeout(timer); });
       if (stale()) return false; // another ballot, or a later read, owns the page now
       // No file for this state: nothing about results shows. After a good file, though, a 404 is a failed read: the
       // numbers already on the rows stay, and the strip says it couldn't check.
@@ -72,8 +77,15 @@ export function loadResults(bust = false): Promise<boolean> {
    address form is open in the ballot head, the rows repaint one by one instead, so nothing typed is lost. */
 export function repaintResults(): void {
   if (!S.ballot || S.view !== 'ballot' || S.ui.view !== 'ballot') return;
+  // The menu sheet, when open, is results-first too: its body repaints in place, scroll and focus kept where they can be.
+  const toc = S.ui.sheet === 'toc' ? document.querySelector<HTMLElement>('.sheet-panel.toc .sheet-bd') : null;
+  if (toc) {
+    const fk = (document.activeElement as HTMLElement | null)?.dataset?.fk;
+    toc.innerHTML = menuHTML('toc');
+    if (fk) document.querySelector<HTMLElement>(`.sheet-panel.toc [data-fk="${CSS.escape(fk)}"]`)?.focus();
+  }
   anchored(() => {
-    render(['plan']);
+    render(['plan', 'bar']);
     if (!S.ui.addrOpen) { render(['ballot']); return; }
     // The head always carries #vz once the polls close (a hidden placeholder before the first file), so the figure
     // can arrive while the address form stays open.
@@ -90,7 +102,9 @@ export async function refreshResults(): Promise<void> {
   const sig = fetchedSig(R.file);
   R.checking = true;
   R.nochange = null;
-  render(['plan']);
+  render(['plan', 'bar']);
+  const toc = S.ui.sheet === 'toc' ? document.querySelector<HTMLElement>('.sheet-panel.toc .sheet-bd') : null;
+  if (toc) { const fk = (document.activeElement as HTMLElement | null)?.dataset?.fk; toc.innerHTML = menuHTML('toc'); if (fk) document.querySelector<HTMLElement>(`.sheet-panel.toc [data-fk="${CSS.escape(fk)}"]`)?.focus(); }
   try {
     await loadResults(true);
   } finally {

@@ -12,7 +12,7 @@ import { sourceLean, leanHTML, ext, clampP, escP, sampleBallot, isOpen, leadRest
 import { headsUp, headsHTML, addressCount } from './ledger';
 import { schoolOf } from '../model/address';
 import { mapSettles, seatless } from '../model/maps';
-import { resultOf, hasNumbers, resOpen, shortOf, leaders, pct0, pct1, fmtTime, sourceName, countyLabel, statusWord, labelWords, sourceDown, R } from '../model/results';
+import { resultOf, hasNumbers, resOpen, shortOf, leaders, pct0, pct1, fmtTime, sourceName, countyLabel, statusWord, labelWords, sourceDown, R, resultsMode, resultsWaiting, officeFor, officeShort, officeText } from '../model/results';
 import { apRaceURL } from '../model/news';
 import type { ItemResult } from '../types';
 
@@ -568,6 +568,13 @@ function footHTML(it: Item): string {
    numbers, open while it has none), then the rest as today. Words are the honesty rules' (model/results.ts). */
 const CHEV_S = '<span class="cv" aria-hidden="true"><svg class="chev" viewBox="0 0 14 14"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span>';
 const officeLink = (r: { url: string; source: string }, name = sourceName(r.source)): string => ext(r.url, `${name} results`);
+/* The office's page as the open row's one button (overnight): "Travis County results", named as on the row. */
+const officeBtn = (url: string, text: string): string => `<p class="rs-go">${ext(url, text, 'mini')}</p>`;
+/* When the office says it posts (data/results-sources.json's wait_line), for a race it hasn't posted yet. */
+const waitLine = (id: string): string => (S.ballot?.howto.results?.sources || []).find((x) => x.id === id)?.wait_line || '';
+/* The office's own note on this race (the Worker's `note`: a feed cut off at an earlier update, a measure counted in
+   two parts), shown as written. */
+const noteHTML = (r: ItemResult): string => (r.note && r.note.trim() ? `<p class="rs-src rs-note">${esc(r.note.trim())}</p>` : '');
 function sourceLineHTML(r: ItemResult): string {
   const s = R.file?.sources.find((x) => x.id === r.source);
   const name = s?.name || sourceName(r.source);
@@ -600,12 +607,16 @@ export function resultsHTML(it: Item, r: ItemResult): string {
   const b = S.ballot!;
   const ap = apRaceURL(it, b.st, b.stateName);
   const apLine = ap ? `<p class="rs-ap">${ext(ap, 'AP’s race calls')}</p>` : '';
+  const office = officeShort(r.source);
   if (r.status === 'link_only') {
     const unmatched = r.reason === 'not matched';
-    return `<div class="rs" data-res="link"><p class="rs-h">${unmatched ? 'We couldn’t match this race to the office’s results.' : 'Results not shown in this guide.'}</p>
-      <p class="rs-src">${officeLink(r)}</p>${apLine}</div>`;
+    return `<div class="rs" data-res="link"><p class="rs-h">${esc(unmatched ? `${office} lists this race under another name, so we link to its count instead.` : `This race’s count is on ${office}’s page.`)}</p>
+      ${officeBtn(r.url, officeText(r.source))}${noteHTML(r)}${apLine}</div>`;
   }
-  if (!hasNumbers(r)) return `<div class="rs" data-res="pending"><p class="rs-h">No numbers posted yet.</p>${sourceLineHTML(r)}${apLine}</div>`;
+  if (!hasNumbers(r as ItemResult | null)) {
+    const wl = waitLine(r.source);
+    return `<div class="rs" data-res="pending"><p class="rs-h"><b>Not posted yet.</b>${wl ? ` ${esc(wl)}` : ''}</p>${sourceLineHTML(r)}${noteHTML(r)}${apLine}</div>`;
+  }
   const o = resOpen(it, r);
   const spansCounties = (r.slices || []).length > 1 || (r.missing || []).length > 0;
   const rcv = it.kind === 'contest' && isRCV(it);
@@ -613,9 +624,21 @@ export function resultsHTML(it: Item, r: ItemResult): string {
   return `<div class="rs" data-res="${esc(r.status)}"><p class="rs-h">${o.word ? `<b>${esc(o.word)}</b> ` : ''}${esc(o.line)}</p>
     ${tableHTML(it, o)}
     ${o.unmatched.length ? `<p class="rs-src">Also in the office’s count, not in this guide: ${esc(o.unmatched.join(', '))}.</p>` : ''}
+    ${noteHTML(r)}
     ${spansCounties ? slicesHTML(it, r) : sourceLineHTML(r)}
     ${rounds ? `<p class="rs-src">${ext(rounds, 'See the round-by-round count')}</p>` : ''}
     ${apLine}</div>`;
+}
+/* A race the results file has nothing for, once the polls close (a state with no file yet, Colorado's amendments before
+   the state's count was in): where its office posts it. */
+function noResultHTML(it: Item): string {
+  const b = S.ballot!;
+  const ap = apRaceURL(it, b.st, b.stateName);
+  const apLine = ap ? `<p class="rs-ap">${ext(ap, 'AP’s race calls')}</p>` : '';
+  if (resultsWaiting()) return `<div class="rs" data-res="wait"><p class="rs-h">Checking the election office’s results…</p></div>`;
+  const o = officeFor(it);
+  return `<div class="rs" data-res="none"><p class="rs-h">${esc(o ? 'This guide has no count for this race yet.' : 'This guide has no count for this race. Your election office posts it.')}</p>
+    ${o ? officeBtn(o.url, o.text) : ''}${apLine}</div>`;
 }
 /* "Endorsement sources", one line under the count: who among your sources picked what, then the grid as today. */
 function sourcesSum(it: Item): string {
@@ -632,12 +655,14 @@ export function openHTML(it: Item): string {
   else if (it.is_retention) body = judgeHTML(it);
   else body = raceHTML(it);
   const r = resultOf(it);
-  if (r) {
+  // Once the polls close, every open row leads with results: the count, or where the office posts it (overnight).
+  const res = r ? resultsHTML(it, r) : resultsMode() ? noResultHTML(it) : '';
+  if (res) {
     const k = `es-${it.id}`;
     // Closed by default once the race has numbers, open while it has none; a tap flips it either way.
     const open = hasNumbers(r) ? isOpen(k) : !isOpen(k);
     const fold = `<button class="rs-fold" data-act="open" data-k="${esc(k)}" aria-expanded="${open}" data-fk="${esc(k)}"><span class="rf-t"><span class="rf-h">Endorsement sources</span><span class="rf-s">${esc(chosen().length ? sourcesSum(it) : 'Your picks and the candidates')}</span></span>${CHEV_S}</button>`;
-    return `<div class="ob" id="ob-${esc(it.id)}">${whereHTML(it)}${resultsHTML(it, r)}${fold}${open ? `<div class="rs-was">${body}</div>` : ''}${footHTML(it)}</div>`;
+    return `<div class="ob" id="ob-${esc(it.id)}">${whereHTML(it)}${res}${fold}${open ? `<div class="rs-was">${body}</div>` : ''}${footHTML(it)}</div>`;
   }
   return `<div class="ob" id="ob-${esc(it.id)}">${whereHTML(it)}${body}${footHTML(it)}</div>`;
 }

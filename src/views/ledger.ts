@@ -16,7 +16,7 @@ import { verdict, type Verdict } from '../model/tally';
 import { canUndo } from '../model/bulk';
 import { FOUND_ONLY, CHECKING, addressKinds } from '../model/address';
 import { judgeBatch, judicialReview, judgesLead, judgesRule } from '../model/judges';
-import { ext, sampleBallot, isOpen, escP, leadRest, reportAttrs, HIDE } from './common';
+import { ext, sampleBallot, isOpen, escP, leadRest, reportAttrs, HIDE, safeURL } from './common';
 import { lensSummary } from './lens';
 import { covOf, cardShows, cardAsks, headCovHTML } from './coverage';
 import { noEndorsements } from '../model/lens';
@@ -26,7 +26,7 @@ import { openHTML, censusSettles, addressSettles } from './open';
 import { mapCounty, seatless } from '../model/maps';
 import { nextStep, afterPolls } from '../model/plan';
 import { nearNow, fmtMiles } from '../model/sites';
-import { resultOf, resCol, resultsOn } from '../model/results';
+import { resultOf, resCol, noResCol, resultsOn, resultsMode, hasNumbers, footInfo, ballotSources, sourceDown, progressOf, fmtTime, checkedAt, figure, R, hideDecidedNow, type ResCol } from '../model/results';
 import { figureHTML } from './figure';
 
 /* ---------- names ---------- */
@@ -94,13 +94,23 @@ export function verdictHTML(v: Verdict): string {
 /* Once the polls close and the results file is read (Nov 3, results Phase 1): the leader and share ("Paxton 51%"), the
    status word ("counting", "unofficial", "official"), and your pick in gold ink ("Your pick: Talarico"). No new color:
    results are ink, gold stays your pick. Your sources' verdict moves inside the open row (open.ts). */
-export function resColHTML(it: Item): string | null {
+export function resColOf(it: Item): ResCol | null {
   const r = resultOf(it);
-  if (!r) return null;
-  const c = resCol(it, r);
-  const cls = c.kind === 'num' ? 'res' : `res none${c.kind === 'link' ? ' link' : ''}`;
-  return `<span class="vd ${cls}"><span class="m">${esc(c.main)}</span>${c.sub ? `<span class="s">${esc(c.sub)}</span>` : ''}${c.pick ? `<span class="p">${esc(c.pick)}</span>` : ''}</span>`;
+  return r ? resCol(it, r) : noResCol(it);
 }
+/* A link column (overnight): the office's own results page, as a real link. A link can't sit inside the row's button,
+   so the button keeps an empty column (its rule line) and the link sits over it in the same grid cell (.row.has-go). */
+const GO = '<svg class="go-a" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M3.5 2.5h6v6M9.5 2.5l-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+export function resColHTML(it: Item, c = resColOf(it)): string | null {
+  if (!c) return null;
+  if (c.kind === 'link') return '<span class="vd res go" aria-hidden="true"></span>';
+  const cls = c.kind === 'num' ? 'res' : `res none${c.kind === 'wait' ? ' wait' : ''}`;
+  return `<span class="vd ${cls}"><span class="m">${esc(c.main)}</span>${c.sub ? `<span class="s">${esc(c.sub)}</span>` : ''}${c.area ? `<span class="s ar">${esc(c.area)}</span>` : ''}${c.pick ? `<span class="p">${esc(c.pick)}</span>` : ''}</span>`;
+}
+const goHTML = (it: Item, c: ResCol | null): string => (c && c.kind === 'link' && c.url && safeURL(c.url)
+  ? `<a class="vd-go" href="${esc(safeURL(c.url))}" target="_blank" rel="noopener" data-fk="go-${esc(it.id)}"><span class="m">${lastWordWith(c.main, GO)}</span></a>` : '');
+/* The arrow rides with the last word, so it never wraps onto a line by itself. */
+const lastWordWith = (t: string, icon: string): string => { const i = t.lastIndexOf(' '); return `${esc(t.slice(0, i + 1))}<span class="go-w">${esc(t.slice(i + 1))}${icon}</span>`; };
 const qVerdict = (main: string, sub = ''): string => `<span class="vd q"><span class="m">${esc(main)}</span>${sub ? `<span class="s">${esc(sub)}</span>` : ''}</span>`;
 
 /* ---------- rows ---------- */
@@ -126,16 +136,19 @@ export function rowHTML(it: Item): string {
   const open = S.ui.row === it.id;
   const decided = s === 'decided' || s === 'auto' || s === 'skipped';
   let vd: string;
+  // Once the polls close, the column is results only (resColOf), whatever the file holds.
+  const rc = resultsMode() ? resColOf(it) : null;
+  const go = goHTML(it, rc);
   // The candidates depend on your exact address, so they aren't in this guide: your sample ballot has them.
-  if (s === 'info') vd = '<span class="vd none"><span class="m">On your sample ballot</span></span>';
-  else vd = resColHTML(it) ?? verdictHTML(verdict(it));
+  if (s === 'info' && !rc) vd = '<span class="vd none"><span class="m">On your sample ballot</span></span>';
+  else vd = resColHTML(it, rc) ?? verdictHTML(verdict(it));
   const tags: string[] = [];
   if (b.onlyIn[it.id]) tags.push(`Only in ${b.onlyIn[it.id].join(', ')}`);
   else if (isMaybe(it.id)) tags.push('Maybe on your ballot');
-  const cls = ['row', decided ? 'is-done' : '', open ? 'is-open' : '', s === 'info' ? 'is-info' : '', S.ui.keep === it.id ? 'just' : ''].filter(Boolean).join(' ');
+  const cls = ['row', decided ? 'is-done' : '', open ? 'is-open' : '', s === 'info' ? 'is-info' : '', S.ui.keep === it.id ? 'just' : '', go ? 'has-go' : ''].filter(Boolean).join(' ');
   return `<li class="${cls}" id="i-${esc(it.id)}" data-item="${esc(it.id)}"${s === 'open' ? ' data-undecided' : ''}${S.ui.beat === it.id ? ' data-beat' : ''}>
     <button class="row-hd" data-act="row" data-id="${esc(it.id)}" aria-expanded="${open}" data-fk="row-${esc(it.id)}">
-      <span class="mk" aria-hidden="true"><i></i></span>${titleHTML(it, tags.length ? `<span class="tags">${tags.map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</span>` : '')}${vd}${CHEV}</button>
+      <span class="mk" aria-hidden="true"><i></i></span>${titleHTML(it, tags.length ? `<span class="tags">${tags.map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</span>` : '')}${vd}${CHEV}</button>${go}
     ${open ? openHTML(it) : ''}
   </li>`;
 }
@@ -206,7 +219,7 @@ function questionBodyHTML(g: Group): string {
     <h3 class="dq-h">Pick your ${esc(cleanOffice(g.office))} district</h3>
     <p class="ob-lede">${esc(where())} has ${choices.length} of these districts. Your official sample ballot lists yours.</p>
     <div class="opts">${addressSettles(members[0]) && !S.b.addrNote ? `<button class="opt opt-addr" data-act="addr-open" data-fk="dq-addr"><b>Use my address</b><small>${censusSettles(members[0]) ? 'The Census lookup finds it for you' : 'Your address finds it on the official map'}</small></button>` : ''}${choices.map((c) => { const [l, sub] = optionLabel(c); return `<button class="opt" data-act="district" data-g="${esc(g.key)}" data-v="${esc(c.id)}" data-fk="d-${esc(c.id)}"><b>${esc(choices.length < members.length ? seatless(l) : l)}</b>${sub ? `<small>${esc(sub)}</small>` : ''}</button>`; }).join('')}
-      <button class="opt opt-unsure" data-act="district" data-g="${esc(g.key)}" data-v="*" data-fk="d-${hash(g.key)}-x"><b>Not sure? Skip for now</b><small>Show all ${members.length}, each marked “Maybe on your ballot”</small></button>
+      <button class="opt opt-unsure" data-act="district" data-g="${esc(g.key)}" data-v="*" data-fk="d-${hash(g.key)}-x">${resultsMode() ? `<b>Show all ${members.length}</b><small>See each one’s count, marked “Maybe on your ballot”</small>` : `<b>Not sure? Skip for now</b><small>Show all ${members.length}, each marked “Maybe on your ballot”</small>`}</button>
       <button class="opt opt-unsure" data-act="district" data-g="${esc(g.key)}" data-v="none" data-fk="d-${hash(g.key)}-n"><b>${esc(noneLabel(g))}</b></button></div>
     ${dqHelpHTML(finders, sb)}
   </div>`;
@@ -265,7 +278,7 @@ function unoppHTML(sec: SectionKey, list: Contest[]): string {
   if (!list.length) return '';
   const k = `unopp-${sec}`;
   const b = S.ballot!;
-  return `<li class="row unopp"><button class="disc" data-act="open" data-k="${k}" aria-expanded="${isOpen(k)}" data-fk="${k}">${plural(list.length, 'unopposed race')}. Nothing to decide.</button>
+  return `<li class="row unopp"><button class="disc" data-act="open" data-k="${k}" aria-expanded="${isOpen(k)}" data-fk="${k}">${plural(list.length, 'unopposed race')}${resultsMode() ? '' : '. Nothing to decide'}.</button>
     ${isOpen(k) ? `<ul class="unopp-list">${list.map((c) => {
       const k1 = c.candidates[0];
       const r = rowTitle(c);
@@ -308,7 +321,7 @@ export const sectionFolded = (sec: SectionKey, entries: Entry[]): boolean => {
   if (S.ui.folded.has(sec)) return true;
   // Once results show, a finished section stays open: its rows carry the numbers now (Nov 3, results Phase 1).
   if (!sectionDone(entries) || resultsOn()) return false;
-  return !(S.b.hideDecided ? S.ui.reveal.has(sec) : S.ui.unfolded.has(sec));
+  return !(hideDecidedNow() ? S.ui.reveal.has(sec) : S.ui.unfolded.has(sec));
 };
 /* The band's count, "2 of 5 decided", is a button with a word after it (Kevin, Oct 20: "a quick and
    easy way to expand and hide is tapping any of those numbers"). Under "Hide races I've decided" it
@@ -319,10 +332,10 @@ export const sectionFolded = (sec: SectionKey, entries: Entry[]): boolean => {
 export function countHTML(sec: SectionKey, entries: Entry[], folded = sectionFolded(sec, entries)): string {
   const t = sectionTally(entries);
   // Once results show, the band drops "N of M decided" (every row is about the count now) and keeps Hide (DESIGN 3b).
-  if (resultsOn() && !S.b.hideDecided) return `<button class="sec-r sec-cb" data-act="sec-count" data-sec="${sec}" aria-expanded="${!folded}" data-fk="secn-${sec}"><span class="sec-count"></span><span class="sec-edit">${folded ? 'Show' : 'Hide'}</span></button>`;
+  if (resultsOn()) return `<button class="sec-r sec-cb" data-act="sec-count" data-sec="${sec}" aria-expanded="${!folded}" data-fk="secn-${sec}"><span class="sec-count"></span><span class="sec-edit">${folded ? 'Show' : 'Hide'}</span></button>`;
   const count = sectionCount(entries);
-  if ((!t.total && !folded) || (S.b.hideDecided && !folded && !t.done)) return count ? `<span class="sec-r"><span class="sec-count">${esc(count)}</span></span>` : '';
-  const open = S.b.hideDecided ? !folded && S.ui.reveal.has(sec) : !folded;
+  if ((!t.total && !folded) || (hideDecidedNow() && !folded && !t.done)) return count ? `<span class="sec-r"><span class="sec-count">${esc(count)}</span></span>` : '';
+  const open = hideDecidedNow() ? !folded && S.ui.reveal.has(sec) : !folded;
   return `<button class="sec-r sec-cb" data-act="sec-count" data-sec="${sec}" aria-expanded="${open}" data-fk="secn-${sec}"><span class="sec-count">${esc(count)}</span> <span class="sec-edit">${open ? 'Hide' : 'Show'}</span></button>`;
 }
 function foldSummary(entries: Entry[]): string {
@@ -382,7 +395,8 @@ function entryHTML(e: Entry): string {
    decided rows you asked to see (its count, tapped). render.ts uses the same rule for one-row
    repaints. */
 export const hiddenByOnly = (e: Entry, sec: SectionKey): boolean => {
-  if (!S.b.hideDecided) return false;
+  // After the close every row carries its count, so the filter hides nothing (model/results.ts hideDecidedNow).
+  if (!hideDecidedNow()) return false;
   if (e.t === 'question' || S.ui.reveal.has(sec)) return false;
   if (e.t !== 'item') return true;
   if (e.id === S.ui.beat || e.id === S.ui.row) return false;
@@ -686,7 +700,7 @@ export function ballotHeadHTML(): string {
 export function ballotHTML(): string {
   const by = entriesBySection();
   const secs = SECTIONS.map(([k]) => sectionHTML(k, by.get(k) || [])).join('');
-  const empty = S.b.hideDecided && !decisionItems().some((i) => !i.done)
+  const empty = hideDecidedNow() && !decisionItems().some((i) => !i.done)
     ? `<p class="empty"><b>Nothing left to decide here.</b> Turn off “${HIDE}” to see everything.</p>` : '';
   return `<div class="wrap-led">${ballotHeadHTML()}</div><div class="ledger" aria-labelledby="ballot-h">${secs}${empty}</div>
     <div id="r-off">${offHTML()}</div>
@@ -729,7 +743,7 @@ export function barHTML(): string {
   // on the rows yet; the left button opens the menu, so it says so ("≡ On this ballot", GPT copy pass), and What's
   // next is where My plan was. `data-results` marks the bar for the tests.
   if (afterPolls(S.ballot.howto)) {
-    return `${rail}<div class="foot screen-only" role="region" aria-label="Results" data-results>
+    return `${rail}<div class="foot screen-only" role="region" aria-label="Results" data-results>${footResHTML()}
     <div class="foot-in ends">
       <button class="menu-btn" data-act="toc" aria-haspopup="dialog" data-fk="bar-menu">${BURGER}<span class="bar-txt">On this ballot</span></button>
       <button class="fcta" data-act="cheat" data-fk="bar-cheat">What’s next</button>
@@ -747,6 +761,31 @@ export function barHTML(): string {
       <button class="fcta" data-act="cheat" data-fk="bar-cheat">My plan</button>
     </div>
     <div class="bar" aria-hidden="true"><i style="width:${pct}%"></i></div></div>`;
+}
+
+/* The bar's results line, above its two buttons (overnight, Kevin: "Show % reporting in the footer", "probs near the
+   hamburger"): the status word, the main source's own progress words (model/results.ts footInfo), when we last
+   checked, and Refresh. Before the first read, "Checking results…"; with nothing on the page from the file, the
+   voter's office's results as a link. Quiet, one line where it fits. */
+const REFRESH = '<svg class="rf-i" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M11.6 5.2A5 5 0 1 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12.2 1.8v3.6H8.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+export const refreshBtn = (fk: string): string => `<button class="linkbtn fr-btn" data-act="results-refresh" data-fk="${fk}"${R.checking ? ' aria-busy="true"' : ''}>${REFRESH}${R.checking ? 'Checking…' : 'Refresh'}</button>`;
+export function footResHTML(): string {
+  const f = footInfo();
+  if (!f) return '';
+  const link = (x: { url: string; text: string } | null): string => (x ? ext(x.url, x.text) : '');
+  let body: string;
+  if (f.kind === 'wait') body = '<span class="fr-t"><span class="fr-p">Checking results…</span></span>';
+  else if (f.kind === 'links' || f.kind === 'failed') body = `<span class="fr-t">${f.kind === 'failed' ? '<span class="fr-p">Couldn’t check just now.</span> ' : ''}${link(f.link) || '<span class="fr-p">Results are on the election offices’ sites.</span>'}</span>${f.kind === 'failed' ? refreshBtn('bar-refresh') : ''}`;
+  // Two short lines (Opus review, Nov 4): the word and when we checked, with Refresh; then each office the bar speaks
+  // for with its own update time (the office behind most rows, and the voter's county's), and only an office's own
+  // progress words, quoted. The zone is said once, on the first line.
+  else {
+    const noZ = (t: string): string => t.replace(/ [A-Z]T$/, '');
+    const src = f.srcs.map((x) => `<span class="fr-s">${x.down ? `Couldn’t reach ${esc(x.who)}. Showing its ${esc(noZ(x.at) || 'last')} numbers.` : `${x.at ? `${esc(x.who)} updated ${esc(noZ(x.at))}` : `${esc(x.who)} doesn’t give an update time`}${x.words ? ` · “${esc(x.words)}”` : ''}`}</span>`).join(' ');
+    body = `<span class="fr-a"><b class="fr-w">${esc(f.word)}</b>${R.failed ? '<span class="fr-sep" aria-hidden="true"> · </span><span class="fr-at">Couldn’t check just now</span>' : f.at ? `<span class="fr-sep" aria-hidden="true"> · </span><span class="fr-at">Checked ${esc(f.at)}</span>` : ''}</span> ${refreshBtn('bar-refresh')}
+      <span class="fr-b">${src}</span>`;
+  }
+  return `<div class="foot-res${f.kind === 'res' ? ' fr-grid' : ''}" data-kind="${f.kind}">${body}</div>`;
 }
 
 /* ---------- the menu: a sheet under 1180px, a rail from there ----------
@@ -768,7 +807,56 @@ export function nextUp(): { key: string; title: string } | null {
   return { key: pick.key, title: g ? cleanOffice(g.office) : rowTitle(b.byId.get(pick.key)!).title };
 }
 const ARROW = '<i class="nv-a" aria-hidden="true">›</i>';
+/* The menu once the polls close (overnight, Kevin: "update the menu to be more results focused"): where results stand
+   first (the status word, when we checked, Refresh, each source with its own progress words and update time, and the
+   offices' own results pages), then each section with how many of its races have numbers here, What's next, and the
+   end rows. No "Next up" or Quick picks: deciding is done. No "Hide races I've decided" either: after the close it
+   hides nothing (hideDecidedNow), so every row shows its count. */
+function resMenuHTML(where: 'toc' | 'rail'): string {
+  const by = entriesBySection();
+  const h = S.ballot!.howto;
+  const row = (attrs: string, fk: string, label: string, right = '', cls = '') =>
+    `<li><button class="nv${cls}" ${attrs} data-fk="${where}-${fk}"><span class="nv-t">${esc(label)}</span><span class="nv-n">${esc(right)}</span>${ARROW}</button></li>`;
+  const f = footInfo();
+  const fig = resultsOn() ? figure() : null;
+  const srcs = resultsOn() ? ballotSources().filter((x) => x.status !== 'link_only') : [];
+  const at = checkedAt();
+  const head = !f || f.kind === 'wait' ? '<p class="nv-rw"><b>Results</b> <span>Checking…</span></p>'
+    : !srcs.length || !fig || !fig.posted ? `<p class="nv-rw"><b>Results</b></p><p class="nv-rx">${R.failed && !resultsOn() ? 'Couldn’t check the election offices just now. ' : ''}These races’ counts are on the election offices’ own pages.</p>${R.failed && !resultsOn() ? `<p class="nv-rw">${refreshBtn(`${where}-refresh`)}</p>` : ''}`
+    : `<p class="nv-rw"><b>${esc(fig.word)}</b>${R.failed ? ' <span>Couldn’t check just now</span>' : at ? ` <span>We checked ${esc(at)}</span>` : ''} ${refreshBtn(`${where}-refresh`)}</p>`;
+  // Each office's own words and update time, under the sections (GPT copy pass: navigation before source detail).
+  const srcList = !srcs.length || !fig || !fig.posted ? '' : `<h3 class="nv-sh">Where these numbers come from</h3><ul class="nv-srcs">${srcs.map((x) => {
+        const p = progressOf(x);
+        const line = sourceDown(x) ? `Couldn’t reach it. Showing its ${x.updated ? `${fmtTime(x.updated)} ` : 'last '}numbers.`
+          : x.status === 'refused' ? 'Isn’t letting us read its results.'
+          : [p, x.updated ? `updated ${fmtTime(x.updated)}` : ''].filter(Boolean).join(' · ');
+        return `<li><b>${esc(x.name)}</b>${line ? `<span>${esc(line)}</span>` : ''}</li>`;
+      }).join('')}</ul>`;
+  const offices = (h.results?.sources || []).filter((x) => /^https:\/\//i.test(x.results_url));
+  const links = offices.length ? `<p class="nv-offs">${offices.map((x) => ext(x.results_url, `${x.label || x.name} results`)).join('')}</p>` : '';
+  const secs = SECTIONS.map(([k]) => {
+    const entries = (by.get(k) || []).filter((e) => !offEntry(e));
+    if (!entries.length || !sectionShows(entries)) return '';
+    const items = pageWalk().filter((x) => x.sec === k && !x.question && !x.folded).map((x) => S.ballot!.byId.get(x.key)).filter((x): x is Item => !!x);
+    const posted = items.filter((it) => hasNumbers(resultOf(it))).length;
+    // District questions count as races without numbers until answered (Opus review: "Numbers for all" beside
+    // "Pick your district" rows), and a section of only questions says what to do.
+    const qs = pageWalk().filter((x) => x.sec === k && x.question).length;
+    const all = items.length + qs;
+    // Coverage, never completeness (GPT copy pass: "posted" read as "the count is done").
+    const right = !all ? '' : !items.length ? 'Pick your district' : posted === all ? 'Numbers for all' : posted ? `Numbers for ${posted} of ${all}` : resultsOn() || R.none ? 'On office sites' : '';
+    return row(`data-act="jump" data-to="${k}"`, k, sectionTitle(k), right);
+  }).join('');
+  return `<div class="nv-res" data-fk="${where}-res">${head}</div>
+    <ul class="nv-list nv-secs">
+    ${secs}</ul>
+    <div class="nv-from">${srcList}${links}</div>
+    <ul class="nv-list nv-end nv-next-step">${row('data-act="cheat"', 'cheat', 'What’s next', '', ' nv-plan')}</ul>
+    <ul class="nv-list nv-end"><li><button class="nv nv-report" ${reportAttrs({ fk: `${where}-report` })}><span class="nv-t">Report a problem</span><span class="nv-n"></span>${ARROW}</button></li>
+    ${row('data-act="shelf" data-kind="how" aria-haspopup="dialog"', 'how', 'How this guide works', '', ' nv-how')}</ul>`;
+}
 export function menuHTML(where: 'toc' | 'rail'): string {
+  if (resultsMode()) return resMenuHTML(where);
   const by = entriesBySection();
   const up = nextUp();
   const next = up ? `<button class="nv-next" data-act="next" data-k="${esc(up.key)}" data-fk="${where}-next"><span>Next up: ${esc(up.title)}</span>${ARROW}</button>` : '';
@@ -793,7 +881,7 @@ export function menuHTML(where: 'toc' | 'rail'): string {
 export function tocSheetHTML(): string {
   return `<div class="scrim screen-only" data-act="sheet-close"></div>
   <div class="sheet-panel screen-only toc" role="dialog" aria-modal="true" aria-labelledby="sh-h">
-    <div class="sheet-hd"><h2 id="sh-h">Your ballot</h2><button class="closebtn" data-act="sheet-close" data-fk="sheet-x">Close</button></div>
+    <div class="sheet-hd"><h2 id="sh-h">${resultsMode() ? 'Results on this ballot' : 'Your ballot'}</h2><button class="closebtn" data-act="sheet-close" data-fk="sheet-x">Close</button></div>
     <div class="sheet-bd" data-keep="toc">${menuHTML('toc')}</div></div>`;
 }
 export { sectionOf };

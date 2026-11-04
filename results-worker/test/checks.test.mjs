@@ -337,3 +337,36 @@ test('tick: a Clarity CAPTCHA (405) stops the source after one request, with no 
   assert.equal(again.ran.length, 0, 'stays stopped');
   assert.equal(clarityCalls(), 1);
 });
+
+test('tick: a refused source starts again when its map changes or a run by hand reads it fine, and only then', async () => {
+  const map = mapFor('bexar-tx');
+  const good = { '/127291/current_ver.txt': 'clarity-bexar.current_ver.txt', '/127291/379718/json/en/summary.json': 'clarity-bexar.summary.json', '/127291/379718/json/en/electionsettings.json': 'clarity-bexar.electionsettings.json' };
+  const refuse = { '/127291/current_ver.txt': { status: 429, body: '' } };
+  const quiet = () => {};
+  const store = memStore();
+  await runTick({ fetch: fakeFetch(refuse), store, archive: null, maps: [map], now: '2026-11-04T03:00:00.000Z', log: quiet });
+  let sched = JSON.parse(await store.get('sched:2026-11-03'));
+  assert.equal(sched.sources['bexar-tx'].stopped, 'refused');
+  assert.ok(sched.sources['bexar-tx'].refused_hash);
+  // same map: stays stopped
+  let out = await runTick({ fetch: fakeFetch(good), store, archive: null, maps: [map], now: '2026-11-04T03:05:00.000Z', log: quiet });
+  assert.equal(out.ran.length, 0);
+  // the map changes (a deploy): read again on the next tick, and a good read runs as usual
+  const fixed = { ...map, contests: map.contests.map((c, i) => (i === 0 ? { ...c, item_url: 'https://results.example/fixed' } : c)) };
+  const lines = [];
+  out = await runTick({ fetch: fakeFetch(good), store, archive: null, maps: [fixed], now: '2026-11-04T03:06:00.000Z', log: (l) => lines.push(l) });
+  assert.equal(out.ran[0].outcome, 'changed');
+  assert.ok(lines.some((l) => /refusal_cleared/.test(l)));
+  sched = JSON.parse(await store.get('sched:2026-11-03'));
+  assert.equal(sched.sources['bexar-tx'].stopped, undefined);
+  assert.notEqual(sched.sources['bexar-tx'].status, 'refused');
+  // refused again, then run by hand: a refusal keeps it stopped, a good read lifts it
+  await runTick({ fetch: fakeFetch(refuse), store, archive: null, maps: [fixed], now: '2026-11-04T03:08:00.000Z', only: 'bexar-tx', log: quiet });
+  assert.equal(JSON.parse(await store.get('sched:2026-11-03')).sources['bexar-tx'].stopped, 'refused');
+  await runTick({ fetch: fakeFetch(good), store, archive: null, maps: [fixed], now: '2026-11-04T03:09:00.000Z', only: 'bexar-tx', log: quiet });
+  sched = JSON.parse(await store.get('sched:2026-11-03'));
+  assert.equal(sched.sources['bexar-tx'].stopped, undefined);
+  assert.equal(sched.sources['bexar-tx'].refused_hash, undefined);
+  const pv = JSON.parse(await store.get('preview:TX'));
+  assert.notEqual(pv.sources[0].note, 'source refused us', 'its rows come back');
+});

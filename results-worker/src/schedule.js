@@ -39,6 +39,8 @@ export function nextEntry(entry = {}, result, now, map = {}) {
   const tz = map.feed?.tz;
   if (result.kind === 'refused') {
     e.status = 'refused'; e.stopped = 'refused'; e.next_due = null; e.failing_since ??= now; e.last_error = result.error || 'refused';
+    // The map it was refused under: a changed map (a deploy) clears the stop on the next tick (runTick).
+    e.refused_hash = result.mapHash ?? e.map_hash ?? null;
     return e;
   }
   if (result.kind === 'error') {
@@ -52,7 +54,9 @@ export function nextEntry(entry = {}, result, now, map = {}) {
     e.next_due = afterQuiet(addMin(now, back), e, tz);
     return e;
   }
-  // a good read (changed or not)
+  // a good read (changed or not). A good read of a refused source (a run by hand) lifts the refusal.
+  if (e.stopped === 'refused') { delete e.stopped; delete e.refused_hash; }
+  if (e.status === 'refused') delete e.status;
   e.fail_count = 0; delete e.failing_since; delete e.last_error;
   e.last_ok = now;
   if (result.status) e.status = result.status;

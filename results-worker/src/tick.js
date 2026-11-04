@@ -47,7 +47,7 @@ async function runSource({ map, fetch, store, archive, sched, now, ping, log }) 
   // refusal. Election night, Nov 3: three blips in a row parked Bexar in back-off while it posted its first numbers.
   if (r.verdict === 'error') { await new Promise((ok) => setTimeout(ok, 3000)); const again = await attempt(); r = again.verdict === 'ok' ? again : { ...again, error: `${again.error} (and before the retry: ${r.error})` }; }
   if (r.verdict === 'refused') {
-    S[map.id] = nextEntry(S[map.id], { kind: 'refused', error: r.error }, now, map);
+    S[map.id] = nextEntry(S[map.id], { kind: 'refused', error: r.error, mapHash: mh }, now, map);
     // Stopped, never past it: say so in the log as well as the ping (pings need the Worker secrets).
     log(JSON.stringify({ source: map.id, refused: r.error, stopped: 'until its map changes or it is run by hand' }));
     await ping(map.id, 'refused', `${map.name} refused our request (${r.error}). It stops until its map changes or someone runs it by hand; its rows link out.`);
@@ -211,7 +211,21 @@ export async function runTick({ fetch, store, archive, maps, now = new Date().to
   const sched = await loadSched(store);
   sched.meta ??= {};
   const live = maps.filter((m) => ADAPTERS[m.feed.adapter]);
-  const clamped = !only && clampElectionNight(sched.sources, live, now);
+  // A refusal stops a source until a person acts (overnight review, Nov 3: it used to stay stopped for good). A changed
+  // map, which means a deploy, clears it here; a run by hand clears it on a good read (schedule.js).
+  let unstuck = false;
+  if (!only) {
+    for (const m of live) {
+      const e = sched.sources[m.id];
+      if (e?.stopped !== 'refused') continue;
+      const at = e.refused_hash ?? e.map_hash;
+      if (!at || at === (await mapHash(m))) continue;
+      delete e.stopped; delete e.refused_hash; e.next_due = null;
+      log(JSON.stringify({ source: m.id, refusal_cleared: 'its map changed' }));
+      unstuck = true;
+    }
+  }
+  const clamped = (!only && clampElectionNight(sched.sources, live, now)) || unstuck;
   const ids = only ? live.filter((m) => m.id === only).map((m) => m.id) : dueSources(sched.sources, live.map((m) => m.id), now);
   const byId = Object.fromEntries(maps.map((m) => [m.id, m]));
   const ran = (await Promise.all(ids.map(async (id) => {

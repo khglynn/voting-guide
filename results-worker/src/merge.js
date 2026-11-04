@@ -86,6 +86,9 @@ export function sourceSlices(read, map, now) {
     // missing (site builder's review, Nov 3). `reaches: [this county]` is the map saying it is wholly inside.
     slice._whole = !!mc.whole;
     slice._reaches = mc.reaches && mc.reaches.length ? mc.reaches : [map.county || map.name, 'other counties'];
+    // A count the source itself marks as one part of a bigger race (the NYC board's asterisk, "the City of New York
+    // portion of the contests only") is never taken as the whole race, whatever the map's reaches say.
+    if (fc.portion && !mc.whole && slice._reaches.length < 2) slice._reaches = [...slice._reaches, 'other counties'];
     slice._unmatchedVotes = unmatchedVotes;
     slice._otherVotes = otherVotes;
     slices[mc.item] = slice;

@@ -19560,10 +19560,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 24th Assembly District",
@@ -19577,10 +19577,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 25th Assembly District",
@@ -19593,10 +19593,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 26th Assembly District",
@@ -19610,10 +19610,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 27th Assembly District",
@@ -19626,10 +19626,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 28th Assembly District",
@@ -19644,10 +19644,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 29th Assembly District",
@@ -19660,10 +19660,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 30th Assembly District",
@@ -19677,10 +19677,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 31st Assembly District",
@@ -19693,10 +19693,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 32nd Assembly District",
@@ -19710,10 +19710,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 33rd Assembly District",
@@ -19727,10 +19727,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 34th Assembly District",
@@ -19743,10 +19743,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 35th Assembly District",
@@ -19759,10 +19759,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 36th Assembly District",
@@ -19776,10 +19776,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 37th Assembly District",
@@ -19792,11 +19792,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 38th Assembly District",
@@ -19810,10 +19809,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 39th Assembly District",
@@ -19827,10 +19826,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 40th Assembly District",
@@ -19843,10 +19842,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 41st Assembly District",
@@ -19859,10 +19858,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 42nd Assembly District",
@@ -19876,10 +19875,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 43rd Assembly District",
@@ -19893,10 +19892,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 44th Assembly District",
@@ -19910,10 +19909,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 45th Assembly District",
@@ -19927,10 +19926,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 46th Assembly District",
@@ -19944,10 +19943,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 47th Assembly District",
@@ -19961,10 +19960,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 48th Assembly District",
@@ -19977,10 +19976,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 49th Assembly District",
@@ -19994,10 +19993,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 50th Assembly District",
@@ -20010,10 +20009,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 51st Assembly District",
@@ -20027,10 +20026,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 52nd Assembly District",
@@ -20044,10 +20043,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 53rd Assembly District",
@@ -20060,10 +20059,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 54th Assembly District",
@@ -20076,10 +20075,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 55th Assembly District",
@@ -20092,10 +20091,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 56th Assembly District",
@@ -20108,10 +20107,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 57th Assembly District",
@@ -20125,10 +20124,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 58th Assembly District",
@@ -20141,10 +20140,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 59th Assembly District",
@@ -20158,10 +20157,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 60th Assembly District",
@@ -20175,10 +20174,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 61st Assembly District",
@@ -20192,12 +20191,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York",
-          "Kings",
-          "Richmond"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 62nd Assembly District",
@@ -20210,10 +20207,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Richmond"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 63rd Assembly District",
@@ -20227,10 +20224,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Richmond"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 64th Assembly District",
@@ -20244,11 +20241,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings",
-          "Richmond"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 65th Assembly District",
@@ -20262,10 +20258,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 66th Assembly District",
@@ -20278,10 +20274,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 67th Assembly District",
@@ -20294,10 +20290,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 68th Assembly District",
@@ -20310,10 +20306,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 69th Assembly District",
@@ -20326,10 +20322,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 70th Assembly District",
@@ -20342,10 +20338,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 71st Assembly District",
@@ -20358,10 +20354,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 72nd Assembly District",
@@ -20374,10 +20370,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 73rd Assembly District",
@@ -20390,10 +20386,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 74th Assembly District",
@@ -20407,10 +20403,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 75th Assembly District",
@@ -20424,10 +20420,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 76th Assembly District",
@@ -20441,10 +20437,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 77th Assembly District",
@@ -20457,10 +20453,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Bronx"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 78th Assembly District",
@@ -20473,10 +20469,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Bronx"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 79th Assembly District",
@@ -20490,10 +20486,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Bronx"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 80th Assembly District",
@@ -20507,10 +20503,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Bronx"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 81st Assembly District",
@@ -20523,10 +20519,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Bronx"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 82nd Assembly District",
@@ -20540,10 +20536,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Bronx"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 83rd Assembly District",
@@ -20557,10 +20553,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Bronx"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 84th Assembly District",
@@ -20574,10 +20570,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Bronx"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 85th Assembly District",
@@ -20590,10 +20586,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Bronx"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 86th Assembly District",
@@ -20608,10 +20604,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Bronx"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the Assembly 87th Assembly District",
@@ -20626,10 +20622,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Bronx"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "State Senator 10th Senatorial District",
@@ -20642,10 +20638,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "State Senator 11th Senatorial District",
@@ -20659,11 +20655,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Bronx",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "State Senator 12th Senatorial District",
@@ -20677,11 +20672,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "State Senator 13th Senatorial District",
@@ -20695,10 +20689,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "State Senator 14th Senatorial District",
@@ -20711,10 +20705,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "State Senator 15th Senatorial District",
@@ -20728,11 +20722,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "State Senator 16th Senatorial District",
@@ -20745,10 +20738,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "State Senator 17th Senatorial District",
@@ -20762,10 +20755,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "State Senator 18th Senatorial District",
@@ -20778,11 +20771,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "State Senator 19th Senatorial District",
@@ -20795,11 +20787,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "State Senator 20th Senatorial District",
@@ -20812,10 +20803,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "State Senator 21st Senatorial District",
@@ -20829,10 +20820,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "State Senator 22nd Senatorial District",
@@ -20846,10 +20837,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "State Senator 23rd Senatorial District",
@@ -20863,11 +20854,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings",
-          "Richmond"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "State Senator 24th Senatorial District",
@@ -20881,10 +20871,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Richmond"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "State Senator 25th Senatorial District",
@@ -20897,10 +20887,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "State Senator 26th Senatorial District",
@@ -20914,11 +20904,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "State Senator 27th Senatorial District",
@@ -20932,10 +20921,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "State Senator 28th Senatorial District",
@@ -20949,10 +20938,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "State Senator 29th Senatorial District",
@@ -20965,11 +20954,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York",
-          "Bronx"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "State Senator 30th Senatorial District",
@@ -20982,10 +20970,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "State Senator 31st Senatorial District",
@@ -20998,11 +20986,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York",
-          "Bronx"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "State Senator 32nd Senatorial District",
@@ -21015,10 +21002,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Bronx"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "State Senator 33rd Senatorial District",
@@ -21031,10 +21018,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Bronx"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "State Senator 34th Senatorial District",
@@ -21050,8 +21037,7 @@ export const MAPS = [
         "reaches": [
           "New York City",
           "Westchester",
-          "other counties",
-          "Bronx"
+          "other counties"
         ],
         "item_url": null
       },
@@ -21069,8 +21055,7 @@ export const MAPS = [
         "reaches": [
           "New York City",
           "Westchester",
-          "other counties",
-          "Bronx"
+          "other counties"
         ],
         "item_url": null
       },
@@ -21086,10 +21071,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "State Senator 59th Senatorial District",
@@ -21102,12 +21087,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York",
-          "Kings",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Justice of the Supreme Court 1st Judicial District",
@@ -21130,10 +21113,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Justice of the Supreme Court 11th Judicial District",
@@ -21150,10 +21133,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Justice of the Supreme Court 12th Judicial District",
@@ -21166,10 +21149,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Bronx"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Justice of the Supreme Court 13th Judicial District",
@@ -21183,10 +21166,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Richmond"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Justice of the Supreme Court 2nd Judicial District",
@@ -21203,10 +21186,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Representative in Congress 10th Congressional District",
@@ -21220,11 +21203,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Representative in Congress 11th Congressional District",
@@ -21238,11 +21220,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings",
-          "Richmond"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Representative in Congress 12th Congressional District",
@@ -21258,10 +21239,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Representative in Congress 13th Congressional District",
@@ -21275,11 +21256,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York",
-          "Bronx"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Representative in Congress 14th Congressional District",
@@ -21293,11 +21273,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Bronx",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Representative in Congress 15th Congressional District",
@@ -21314,10 +21293,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Bronx"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Representative in Congress 16th Congressional District",
@@ -21333,8 +21312,7 @@ export const MAPS = [
         "reaches": [
           "New York City",
           "Westchester",
-          "other counties",
-          "Bronx"
+          "other counties"
         ],
         "item_url": null
       },
@@ -21352,8 +21330,7 @@ export const MAPS = [
         "reaches": [
           "New York City",
           "Nassau",
-          "other counties",
-          "Queens"
+          "other counties"
         ],
         "item_url": null
       },
@@ -21369,10 +21346,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Representative in Congress 6th Congressional District",
@@ -21386,10 +21363,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Representative in Congress 7th Congressional District",
@@ -21404,11 +21381,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Representative in Congress 8th Congressional District",
@@ -21422,10 +21398,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Representative in Congress 9th Congressional District",
@@ -21439,10 +21415,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Judge of the Civil Court - District 1st Municipal Court District - Bronx",
@@ -21455,10 +21431,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Bronx"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Judge of the Civil Court - District 2nd Municipal Court District - Bronx",
@@ -21471,10 +21447,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Bronx"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Judge of the Civil Court - County Kings",
@@ -21490,10 +21466,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Judge of the Civil Court - District 2nd Municipal Court District - Kings",
@@ -21506,10 +21482,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Judge of the Civil Court - District 3rd Municipal Court District - Kings",
@@ -21522,10 +21498,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Judge of the Civil Court - District 4th Municipal Court District - Kings",
@@ -21540,10 +21516,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Judge of the Civil Court - District 6th Municipal Court District - Kings",
@@ -21557,10 +21533,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Judge of the Civil Court - District 7th Municipal Court District - Kings",
@@ -21573,10 +21549,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Judge of the Civil Court - District 8th Municipal Court District - Kings",
@@ -21590,10 +21566,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Kings"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Judge of the Civil Court - County New York",
@@ -21608,10 +21584,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Judge of the Civil Court - District 1st Municipal Court District - New York",
@@ -21624,10 +21600,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Judge of the Civil Court - District 3rd Municipal Court District - New York",
@@ -21640,10 +21616,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Judge of the Civil Court - District 4th Municipal Court District - New York",
@@ -21656,10 +21632,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Judge of the Civil Court - District 7th Municipal Court District - New York",
@@ -21675,10 +21651,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Judge of the Civil Court - District 9th Municipal Court District - New York",
@@ -21692,10 +21668,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Judge of the Civil Court - County Queens",
@@ -21712,10 +21688,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Judge of the Civil Court - District 2nd Municipal Court District - Queens",
@@ -21729,10 +21705,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Judge of the Civil Court - District 3rd Municipal Court District - Queens",
@@ -21746,10 +21722,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Judge of the Civil Court - District 4th Municipal Court District - Queens",
@@ -21762,10 +21738,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Queens"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Judge of the Civil Court - County Richmond",
@@ -21779,10 +21755,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Richmond"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Judge of the Civil Court - District 1st Municipal Court District - Richmond",
@@ -21796,10 +21772,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Richmond"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Member of the City Council 3rd Council District",
@@ -21813,10 +21789,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Proposal Number 1",
@@ -21829,15 +21805,11 @@ export const MAPS = [
           "NO": "no"
         },
         "reaches": [
-          "New York City",
-          "New York",
-          "Kings",
-          "Bronx",
-          "Queens",
-          "Richmond"
+          "New York City"
         ],
         "item_url": null,
-        "pass_threshold": "Simple majority of NYC voters who vote on the question. Each proposal passes or fails on its own."
+        "pass_threshold": "Simple majority of NYC voters who vote on the question. Each proposal passes or fails on its own.",
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Proposal Number 2",
@@ -21850,15 +21822,11 @@ export const MAPS = [
           "NO": "no"
         },
         "reaches": [
-          "New York City",
-          "New York",
-          "Kings",
-          "Bronx",
-          "Queens",
-          "Richmond"
+          "New York City"
         ],
         "item_url": null,
-        "pass_threshold": "Simple majority of NYC voters who vote on the question. Each proposal passes or fails on its own."
+        "pass_threshold": "Simple majority of NYC voters who vote on the question. Each proposal passes or fails on its own.",
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Proposal Number 3",
@@ -21871,15 +21839,11 @@ export const MAPS = [
           "NO": "no"
         },
         "reaches": [
-          "New York City",
-          "New York",
-          "Kings",
-          "Bronx",
-          "Queens",
-          "Richmond"
+          "New York City"
         ],
         "item_url": null,
-        "pass_threshold": "Simple majority of NYC voters who vote on the question. Each proposal passes or fails on its own."
+        "pass_threshold": "Simple majority of NYC voters who vote on the question. Each proposal passes or fails on its own.",
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Proposal Number 4",
@@ -21892,15 +21856,11 @@ export const MAPS = [
           "NO": "no"
         },
         "reaches": [
-          "New York City",
-          "New York",
-          "Kings",
-          "Bronx",
-          "Queens",
-          "Richmond"
+          "New York City"
         ],
         "item_url": null,
-        "pass_threshold": "Simple majority of NYC voters who vote on the question. Each proposal passes or fails on its own."
+        "pass_threshold": "Simple majority of NYC voters who vote on the question. Each proposal passes or fails on its own.",
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Proposal Number 5",
@@ -21913,15 +21873,11 @@ export const MAPS = [
           "NO": "no"
         },
         "reaches": [
-          "New York City",
-          "New York",
-          "Kings",
-          "Bronx",
-          "Queens",
-          "Richmond"
+          "New York City"
         ],
         "item_url": null,
-        "pass_threshold": "Simple majority of NYC voters who vote on the question. Each proposal passes or fails on its own."
+        "pass_threshold": "Simple majority of NYC voters who vote on the question. Each proposal passes or fails on its own.",
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Surrogate Bronx",
@@ -21934,10 +21890,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "Bronx"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       },
       {
         "feed_id": "Surrogate New York",
@@ -21950,10 +21906,10 @@ export const MAPS = [
           "WRITE-IN": "__other"
         },
         "reaches": [
-          "New York City",
-          "New York"
+          "New York City"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_source": "The Board marks a contest that crosses the city line with an asterisk, \"the City of New York portion of the contests only\" (enr.boenyc.gov, Nov 3, 2026); this one has none, so its count is the whole race."
       }
     ],
     "unmatched_feed": [],

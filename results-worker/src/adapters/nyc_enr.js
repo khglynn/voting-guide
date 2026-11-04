@@ -71,6 +71,7 @@ export function parsePage(html) {
       feed_id: heading.replace(/, a Question:.*$/, ''),
       feed_name: heading,
       category: h[2] ? PORTION : null,
+      ...(h[2] ? { portion: true } : {}), // merge.js never takes a portion as the whole race, whatever the map says
       vote_for: voteFor(h[3]),
       choices,
       total: choices.reduce((a, c) => a + (Number.isFinite(c.votes) ? c.votes : 0), 0),

@@ -3724,7 +3724,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   // The bar's line opens the menu right at where these numbers come from (DESIGN-OVERNIGHT-2 section 2).
   await tap(page, '.foot-res .fr-line');
   await page.waitForSelector('.sheet-panel.toc #toc-src');
-  const srcSeen = await page.evaluate(() => { const h = document.querySelector('.sheet-panel.toc #toc-src'); const bd = document.querySelector('.sheet-panel.toc .sheet-bd'); if (!h || !bd) return false; const a = h.getBoundingClientRect(), b = bd.getBoundingClientRect(); return a.top >= b.top - 2 && a.top < b.top + 120 && document.activeElement === h; });
+  const srcSeen = await page.evaluate(() => { const h = document.querySelector('.sheet-panel.toc #toc-src'); const bd = document.querySelector('.sheet-panel.toc .sheet-bd'); if (!h || !bd) return false; const a = h.getBoundingClientRect(), b = bd.getBoundingClientRect(); const end = bd.scrollTop + bd.clientHeight >= bd.scrollHeight - 2; return a.top >= b.top - 2 && a.bottom <= b.bottom && (a.top < b.top + 120 || end) && document.activeElement === h; });
   check('Results rows: the bar’s line opens the menu at where these numbers come from', srcSeen);
   await tap(page, '.sheet-panel.toc [data-act="sheet-close"]');
   // Compare with a group: its count leads, your pick stays yours, and tapping it again clears it.

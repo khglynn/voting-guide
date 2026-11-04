@@ -5,6 +5,7 @@ import assert from 'node:assert/strict';
 import { fakeFetch, mapFor } from './helpers.mjs';
 import * as clarity from '../src/adapters/clarity.js';
 import * as nyc from '../src/adapters/nyc_enr.js';
+import * as multco from '../src/adapters/multco.js';
 import { checkFile } from '../src/checks.js';
 import { sourceSlices, buildStateFile } from '../src/merge.js';
 
@@ -77,4 +78,43 @@ test('NYC: a contest the board marks as the city portion is never the whole race
   const f = buildStateFile({ state: 'NY', maps: [{ ...map, official: { at: '2026-11-28' } }], srcs: { [map.id]: { record: { read, fetched: '2026-11-04T04:30:00.000Z' }, checked: true, sched: {} } }, mode: 'public', now: '2026-11-04T05:00:00.000Z' });
   assert.deepEqual(f.items['ny-us-house-3'].missing, ['other counties']);
   assert.equal(f.items['ny-us-house-3'].final, null);
+});
+
+test('Portland: the county\'s ranked-choice report covers the whole city, so it is the whole race (no "Multnomah County count", nothing missing), still first choices with no outcome', () => {
+  const map = mapFor('results-OR-multnomah');
+  const ids = ['portland-auditor', 'portland-council-3', 'portland-council-4'];
+  const contests = map.contests.filter((c) => ids.includes(c.item)).map((mc) => ({ feed_id: mc.feed_id, feed_name: mc.feed_name, reporting: null, updated: '2026-11-04T04:00:00.000Z', note: 'First choices only.',
+    choices: Object.keys(mc.choices).map((name, i) => ({ name, votes: 1000 * (i + 1) })) }));
+  const read = { verdict: 'ok', election: { id: map.election.feed_election_id, name: map.election.feed_name, date: '2026-11-03' }, source_updated: '2026-11-04T04:00:00.000Z', reporting: null, labels: [], contests };
+  for (const official of [null, { at: '2026-11-30' }]) {
+    const f = buildStateFile({ state: 'OR', maps: [{ ...map, official }], srcs: { [map.id]: { record: { read, fetched: '2026-11-04T04:30:00.000Z' }, checked: true, sched: {} } }, mode: 'public', now: '2026-11-04T04:30:00.000Z' });
+    assert.deepEqual(checkFile(f), []);
+    for (const id of ids) {
+      const x = f.items[id];
+      assert.equal(x.source, map.id, id);
+      assert.equal(x.slices, undefined, id);
+      assert.equal(x.missing, undefined, id);
+      assert.equal(x.ranked_choice, true, id);
+      assert.equal(x.final, null, `${id}: ranked choice never gets an outcome from us`);
+      assert.equal(x.status, official ? 'official' : 'counting', id);
+    }
+  }
+});
+
+test('Multnomah: the ranked-choice note quotes the tabulation time, never the report\'s description', () => {
+  // The header of City_of_Portland_Councilor_-_District_4, read Nov 3, 2026, 9:21 PM PT.
+  const page = `<h1 id="report-title" class="h2">City of Portland Councilor - District 4 – Preliminary Results 1</h1>
+          <p class="fst-italic fw-bold">3 Seats Up for Election</p>
+          <p>
+            Consolidated Multnomah County, Washington County, and Clackamas County Election Results
+          </p>
+        <p>November 03, 2026 06:56:26 PM</p>
+        <p>Published: November 3, 2026 8:00 PM</p>
+      </div>`;
+  const rep = multco.parseReport(page);
+  assert.equal(rep.tabulated, 'November 03, 2026 06:56:26 PM');
+  assert.equal(rep.tabulated_at, '2026-11-04T02:56:26.000Z');
+  assert.equal(rep.published_at, '2026-11-04T04:00:00.000Z');
+  const none = multco.parseReport(page.replace('<p>November 03, 2026 06:56:26 PM</p>', ''));
+  assert.equal(none.tabulated, null, 'no time paragraph: no time, not the description');
 });

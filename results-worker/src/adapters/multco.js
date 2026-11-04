@@ -55,7 +55,9 @@ export function parseReport(html) {
   const h = String(html || '');
   const head = (h.match(/<h1 id="report-title"[^>]*>[\s\S]*?<\/h1>([\s\S]*?)<\/div>/) || [])[1] || '';
   const ps = [...head.matchAll(/<p>([\s\S]*?)<\/p>/g)].map((m) => text(m[1]));
-  const tabulated = ps.find((p) => !/^Published/i.test(p)) || null;
+  // Only a paragraph that reads as a time: Portland's pages put a description first ("Consolidated Multnomah County,
+  // Washington County, and Clackamas County Election Results"), which the note once quoted as the time (pre-deploy review).
+  const tabulated = ps.find((p) => !/^Published/i.test(p) && pacific(p)) || null;
   const published = (ps.find((p) => /^Published:/i.test(p)) || '').replace(/^Published:\s*/i, '') || null;
   const json = (h.match(/href="(https:\/\/[^"]+\.blob\.core\.windows\.net\/[^"]+\.json\?[^"]+)"/) || [])[1] || null;
   return { tabulated, tabulated_at: pacific(tabulated), published, published_at: pacific(published), json: json ? new URL(unescape(json)).href : null };
@@ -113,7 +115,7 @@ export async function read({ fetch, map, prevToken = null }) {
       total: choices.reduce((a, c) => a + (Number.isFinite(c.votes) ? c.votes : 0), 0),
       reporting: null,
       updated: rep.published_at,
-      note: `First choices only, from the county's ${o.label}${rep.tabulated ? ` (ballots counted to ${rep.tabulated.replace(/^\w+ \d+, \d{4}\s*/, '')})` : ''}.`,
+      note: `First choices only, from the county's ${o.label}${rep.tabulated_at ? ` (ballots counted to ${rep.tabulated.replace(/^\w+ \d+, \d{4}\s*/, '')})` : ''}.`,
       declared: null,
       is_rcv: true,
     });

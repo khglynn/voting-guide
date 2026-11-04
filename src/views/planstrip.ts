@@ -10,6 +10,8 @@ import { nextStep, registrationAlert, registerAction, isMailState, applyDated, c
 import { ext, isOpen, bulletsHTML, leadBulletsHTML, escP, srcLink, sentences, telHTML, wordCount, deshout } from './common';
 import { queryOf, textOf, best, type Item } from '../model/search';
 import { nearNow, fmtMiles, directionsURL, type NearNow } from '../model/sites';
+import { allLinksNow } from './figure';
+import { R, resultsOn, checkedLine, ballotSources, sourceDown, fmtTime } from '../model/results';
 
 /* What the strip last showed, so main.ts can repaint it when the step changes while the page
    sits open (the polls close, midnight passes). */
@@ -36,7 +38,7 @@ export function planHTML(): string {
   return `<section class="plan" id="plan" aria-labelledby="plan-h"><div class="wrap plan-in">
       <h2 class="vh" id="plan-k" tabindex="-1" data-fk="plan-k">Your next step</h2>
       <p class="plan-h" id="plan-h">${head}</p>
-      ${sub.length ? `<p class="plan-sub">${esc(sub.join(' '))}</p>` : ''}${res ? resultsNoteHTML(step) : ''}
+      ${sub.length ? `<p class="plan-sub">${esc(sub.join(' '))}</p>` : ''}${res ? resultsNoteHTML(step) + freshHTML() : ''}
       ${reg ? `<div class="plan-reg"><p>${esc(reg)}</p>${regBtn ? `<a class="pbtn line" href="${esc(regBtn.url)}" target="_blank" rel="noopener" data-fk="plan-register">${esc(regBtn.label)}</a>` : ''}</div>` : ''}
       ${res || `${countyActs(h, step)}
       <div class="plan-acts">${step.primary && !countyActs(h, step) ? `<a class="pbtn gold" href="${esc(step.primary.url)}" target="_blank" rel="noopener">${esc(step.primary.label)}</a>` : ''}
@@ -335,6 +337,27 @@ function resultsActs(h: HowTo, step: Step): string {
   const track = two ? `<div class="plan-acts">${a(two.url, two.label, 'pbtn line', ' data-fk="plan-track"')}</div>` : '';
   const calls = `<p class="plan-hint plan-calls"><a href="${esc(apStateURL(h.state, stName))}" target="_blank" rel="noopener" data-fk="plan-ap">AP’s race calls</a>. AP reports who it expects to win. Election offices publish the counts.</p>`;
   return `${res}${track}${calls}`;
+}
+/* When we last read the election offices, with Refresh (Nov 3, results Phase 1), under the wait line: "We checked:
+   9:42 PM CT. Refresh", per source on a ballot across counties. A source we couldn't reach says so and when its last
+   numbers are from; a Refresh that found nothing new says "No change since 9:35 PM CT", never a fresh time. Nothing
+   until the results file has been read for this ballot (a state with no file shows nothing). */
+export function freshHTML(): string {
+  if (!S.ballot || R.st !== S.ballot.st || R.none) return '';
+  if (!R.file && !R.failed) return '';
+  const btn = `<button class="linkbtn" data-act="results-refresh" data-fk="res-refresh"${R.checking ? ' aria-busy="true"' : ''}>${R.checking ? 'Checking…' : 'Refresh'}</button>`;
+  if (!resultsOn()) return `<p class="plan-fresh">Couldn’t check the election office’s results just now. ${btn}</p>`;
+  // Every race a link (Manhattan): nothing of ours to check or refresh (DESIGN, link-only places).
+  if (allLinksNow()) return '';
+  const srcs = ballotSources();
+  const checked = checkedLine(srcs);
+  const down = srcs.filter(sourceDown).map((x) => `Couldn’t reach ${x.name}. Showing its ${x.updated ? `${fmtTime(x.updated)} ` : 'last '}numbers.`);
+  const lines = [
+    R.failed ? 'Couldn’t check just now. These are the last numbers we read.' : '',
+    ...down,
+    R.nochange ? `No change since ${R.nochange}.` : '',
+  ].filter(Boolean);
+  return `<p class="plan-fresh" role="status">${checked ? `${esc(checked)}. ` : ''}${btn}</p>${lines.map((l) => `<p class="plan-fresh">${esc(l)}</p>`).join('')}`;
 }
 /* The one line on when the county posts, right under the head (plan.resultsNotes). */
 function resultsNoteHTML(step: Step): string {

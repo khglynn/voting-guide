@@ -26,6 +26,8 @@ import { openHTML, censusSettles, addressSettles } from './open';
 import { mapCounty, seatless } from '../model/maps';
 import { nextStep, afterPolls } from '../model/plan';
 import { nearNow, fmtMiles } from '../model/sites';
+import { resultOf, resCol, resultsOn } from '../model/results';
+import { figureHTML } from './figure';
 
 /* ---------- names ---------- */
 export function countyName(p: PlaceBundle): string {
@@ -89,6 +91,16 @@ export function verdictHTML(v: Verdict): string {
   const main = v.kind === 'split' ? v.main.split(', ').map((p, i, a) => `<span class="nw">${esc(p)}${i < a.length - 1 ? ',' : ''}</span>`).join(' ') : esc(v.main);
   return `<span class="vd ${cls}"><span class="m"><span class="vh">${label}</span>${main}</span>${sub ? `<span class="s">${esc(sub)}</span>` : ''}</span>`;
 }
+/* Once the polls close and the results file is read (Nov 3, results Phase 1): the leader and share ("Paxton 51%"), the
+   status word ("counting", "unofficial", "official"), and your pick in gold ink ("Your pick: Talarico"). No new color:
+   results are ink, gold stays your pick. Your sources' verdict moves inside the open row (open.ts). */
+export function resColHTML(it: Item): string | null {
+  const r = resultOf(it);
+  if (!r) return null;
+  const c = resCol(it, r);
+  const cls = c.kind === 'num' ? 'res' : `res none${c.kind === 'link' ? ' link' : ''}`;
+  return `<span class="vd ${cls}"><span class="m">${esc(c.main)}</span>${c.sub ? `<span class="s">${esc(c.sub)}</span>` : ''}${c.pick ? `<span class="p">${esc(c.pick)}</span>` : ''}</span>`;
+}
 const qVerdict = (main: string, sub = ''): string => `<span class="vd q"><span class="m">${esc(main)}</span>${sub ? `<span class="s">${esc(sub)}</span>` : ''}</span>`;
 
 /* ---------- rows ---------- */
@@ -116,7 +128,7 @@ export function rowHTML(it: Item): string {
   let vd: string;
   // The candidates depend on your exact address, so they aren't in this guide: your sample ballot has them.
   if (s === 'info') vd = '<span class="vd none"><span class="m">On your sample ballot</span></span>';
-  else vd = verdictHTML(verdict(it));
+  else vd = resColHTML(it) ?? verdictHTML(verdict(it));
   const tags: string[] = [];
   if (b.onlyIn[it.id]) tags.push(`Only in ${b.onlyIn[it.id].join(', ')}`);
   else if (isMaybe(it.id)) tags.push('Maybe on your ballot');
@@ -294,7 +306,8 @@ function sectionDone(entries: Entry[]): boolean {
 export const sectionFolded = (sec: SectionKey, entries: Entry[]): boolean => {
   if (entries.some((e) => e.t === 'item' && (e.id === S.ui.row || e.id === S.ui.beat))) return false;
   if (S.ui.folded.has(sec)) return true;
-  if (!sectionDone(entries)) return false;
+  // Once results show, a finished section stays open: its rows carry the numbers now (Nov 3, results Phase 1).
+  if (!sectionDone(entries) || resultsOn()) return false;
   return !(S.b.hideDecided ? S.ui.reveal.has(sec) : S.ui.unfolded.has(sec));
 };
 /* The band's count, "2 of 5 decided", is a button with a word after it (Kevin, Oct 20: "a quick and
@@ -305,6 +318,8 @@ export const sectionFolded = (sec: SectionKey, entries: Entry[]): boolean => {
    pick. */
 export function countHTML(sec: SectionKey, entries: Entry[], folded = sectionFolded(sec, entries)): string {
   const t = sectionTally(entries);
+  // Once results show, the band drops "N of M decided" (every row is about the count now) and keeps Hide (DESIGN 3b).
+  if (resultsOn() && !S.b.hideDecided) return `<button class="sec-r sec-cb" data-act="sec-count" data-sec="${sec}" aria-expanded="${!folded}" data-fk="secn-${sec}"><span class="sec-count"></span><span class="sec-edit">${folded ? 'Show' : 'Hide'}</span></button>`;
   const count = sectionCount(entries);
   if ((!t.total && !folded) || (S.b.hideDecided && !folded && !t.done)) return count ? `<span class="sec-r"><span class="sec-count">${esc(count)}</span></span>` : '';
   const open = S.b.hideDecided ? !folded && S.ui.reveal.has(sec) : !folded;
@@ -659,8 +674,11 @@ export function ballotHeadHTML(): string {
   const route = top.filter((h) => h.until_address).map((h) => h.text);
   const box = addrBoxHTML(route);
   const rest = top.filter((h) => !h.until_address || !box).map((h) => h.text);
+  // Once results show (Nov 3, results Phase 1; GPT copy pass): the figure right under the heading, then the endorsement
+  // controls and the rest.
+  const fig = afterPolls(S.ballot?.howto) ? figureHTML() : '';
   return `<div class="bhead"><h2 class="step su-h bal-h" id="ballot-h"><span class="step-n" aria-hidden="true">3</span>Your ballot</h2>
-      <p class="picks-line"><span>Endorsements: ${esc(lensSummary())}</span><button class="mini" data-act="picks" data-fk="picks-edit">Edit</button></p>
+      ${fig}<p class="picks-line"><span>Endorsements: ${esc(lensSummary())}</span><button class="mini" data-act="picks" data-fk="picks-edit">Edit</button></p>
       ${cov}${filled}${box}
     </div>
     ${headsHTML(rest)}`;

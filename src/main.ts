@@ -11,6 +11,7 @@ import { printTitle } from './views/mast';
 import { ensureIndex, openBallot, openChosen, zipTyped, offerResume, dismissResume, lookZip, viewed, repaintNear } from './app';
 import { A, runAddress, sendReport, reportInput, srcSearch, clearSearch, wiSearch, clearWi } from './actions';
 import { startStats } from './stats';
+import { startResults, tickResults } from './results';
 import { doorKey, doorShown } from './views/mast';
 
 /* ---------- taps: pointerdown for mouse and pen; touch fires on a still pointerup so a
@@ -146,6 +147,7 @@ function refreshPlan(): void {
       if (cap) cap.outerHTML = endcapHTML();
     });
     repaintNear(); // the address box's "Closest vote center" line goes with the plan's block (a no-op without a lookup)
+    tickResults(); // the polls just closed: read the results file now (src/results.ts)
     return;
   }
   if (stepKey(S.ballot.howto) === planKey && S.ballot.howto.day === day && !nearMoved) return;
@@ -231,5 +233,7 @@ async function boot(): Promise<void> {
 document.addEventListener('pointerdown', (e) => { if (e.pointerType === 'touch') document.documentElement.classList.add('touch'); }, { capture: true, passive: true });
 document.addEventListener('keydown', () => { document.documentElement.classList.remove('touch'); }, { capture: true });
 void boot();
+/* Results (Nov 3, Phase 1): the once-a-minute read of the results file while the tab is visible (src/results.ts). */
+startResults();
 /* Visit counts (stats.ts): on the guide's Vercel hosts only, once the page has loaded and gone idle. */
 startStats();

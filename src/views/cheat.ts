@@ -2,6 +2,7 @@
    ranked choices in order, the plan essentials and "Save it before you go"; Print (a real print
    sheet), Copy as text, Save a link. It ends there; Pass it
    on is its own step after it. Test hooks: #cheat and #r-print tables, tr[data-cs] rows. */
+import { figureHTML } from './figure';
 import type { Contest, Item } from '../types';
 import { S, encodeShare } from '../state';
 import { SECTIONS, entriesBySection, status, decisionItems, unclaimed, isMultiJudge, isRCV, isMaybe, ranksOf, ordinal } from '../ballot';
@@ -116,6 +117,7 @@ function whatsNextHTML(forPrint: boolean): string {
       ${forPrint ? '<h2 id="cs-p">What’s next</h2>' : '<div class="step cs-step"><span class="step-n" aria-hidden="true">4</span><h2 id="cs-h">What’s next</h2></div>'}
       <p class="sub">Your ballot, and the dates that still matter.</p>
       <div class="remind">${officialLines(h).map((x) => `<p>${esc(x)}</p>`).join('')}</div></div>
+    ${forPrint ? figureHTML(true) : ''}
     <div class="nexts nx-page">${nextBodyHTML(h, forPrint, false)}</div>
     <p class="fine cs-foot">From Kevin’s 2026 voting guide. Official info: <span class="p-url" data-url="${esc(h.official_site.url)}">${esc(h.official_site.name)}</span>.</p>
   </div>`;

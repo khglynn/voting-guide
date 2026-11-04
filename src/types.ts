@@ -428,3 +428,59 @@ export interface Index {
   /* the parties whose own organizations have endorsements in the data, A to Z ("A party" before a ZIP) */
   parties?: string[];
 }
+
+/* ---------- election results (Nov 3, results Phase 1) ----------
+   The results Worker's file for one state, read through the site's /results/ rewrite (src/results.ts): DIRECTION.md's
+   `ResultsFile` in the workbench, plus the Worker's own additions (results-worker/src/merge.js): `total_votes`, a
+   link_only item's `reason`, and on each source `next_due`, `failing_since` and `note`. Nothing from it is ever saved. */
+export type ResultStatus = 'pending' | 'counting' | 'complete' | 'official' | 'link_only';
+export interface ResultCand { name: string; votes: number; pct: number }
+export interface ResultMeasure { yes: number; no: number; yes_pct: number; threshold?: number | null }
+export interface ResultSlice {
+  source: string; county: string; status: ResultStatus; reporting: string | null; updated: string | null; url: string;
+  total_votes?: number; candidates?: ResultCand[]; measure?: ResultMeasure; seats?: number; unmatched?: string[]; note?: string;
+}
+export interface ItemResult {
+  source: string;
+  status: ResultStatus;
+  /* the source's own progress words, quoted as they are ("120 of 200 precincts reporting") */
+  reporting: string | null;
+  /* the source's own update time for this item, if it gives one */
+  updated: string | null;
+  url: string;
+  total_votes?: number;
+  candidates?: ResultCand[];
+  seats?: number;
+  measure?: ResultMeasure;
+  rounds?: { round: number; tallies: { name: string; votes: number }[]; eliminated: string[] }[];
+  /* set by the Worker only when the source marks the count complete or official, never for a race across sources */
+  final?: { winners: string[] } | { passed: boolean } | null;
+  unmatched?: string[];
+  /* a race whose voters span sources: one slice per source, largest first; the app never adds them up */
+  slices?: ResultSlice[];
+  missing?: string[];
+  /* why a link_only item is a link: "not matched", "not checked yet", "election mismatch", "source refused us", ... */
+  reason?: string;
+  note?: string;
+}
+export interface ResultsSourceEntry {
+  id: string; name: string; url: string;
+  /* the source's own update time */
+  updated: string | null;
+  status: 'pending' | 'counting' | 'complete' | 'official' | 'failing' | 'refused' | 'link_only';
+  reporting: string | null;
+  /* when our fetcher last read the source successfully: the "We checked" time */
+  fetched: string | null;
+  next_due?: string; failing_since?: string; note?: string; checked?: boolean;
+  /* the source's own banner words, as it shows them ("Early Voting Totals Only", "Unofficial Results") */
+  labels?: string[];
+}
+export interface ResultsFile {
+  election: string;
+  state: string;
+  generated: string;
+  /* a hand-written file for checking the plumbing: ignored unless the page's address has ?results=test */
+  test?: boolean;
+  sources: ResultsSourceEntry[];
+  items: Record<string, ItemResult>;
+}

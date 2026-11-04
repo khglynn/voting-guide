@@ -7,6 +7,7 @@ import { buildBallot, localize, entriesBySection, status, isRCV, isMultiSeat, is
 import { zipState, censusLookup, settleAddress, ballotFor, whichPlace, outsideOf, zipPlaces, placeName, withPlace, tidyAddress, type GeoResult } from './geo';
 import { toast, hideToast } from './util';
 import { keepPrivate } from './errors';
+import { tickResults } from './results';
 import { track, type Events } from './stats';
 import { render, renderBallot, renderAddr, anchored, $ } from './render';
 import { setInvolved, type GetInvolved } from './views/pass';
@@ -113,6 +114,7 @@ export async function loadInvolved(): Promise<void> {
 let lastView = '';
 export function viewed(): void {
   if (S.view === 'loading') return;
+  if (S.view === 'ballot') tickResults(); // a ballot whose polls have closed reads its results file (src/results.ts)
   const name: Events['view']['name'] = S.view !== 'ballot' ? 'start' : S.ui.reader ? 'reader' : S.ui.view === 'cheat' ? 'plan' : S.ui.view === 'pass' ? 'share' : 'ballot';
   if (name === lastView) return;
   lastView = name;

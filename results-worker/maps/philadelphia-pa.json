@@ -9,8 +9,8 @@
     "feed_name": "2026 General Election Results"
   },
   "guide": {
-    "fingerprint": "1b15975222eb2edb",
-    "made_from": "vote.kevinhg.com/data, read 2026-11-04T15:31:47.123Z",
+    "fingerprint": "0aaeed9e307b1c74",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T16:04:10.259Z",
     "places": [
       "philadelphia-pa",
       "state-PA"
@@ -31,7 +31,7 @@
       "STR",
       "STW"
     ],
-    "tabs_note": "Statewide (STW) is read for Philadelphia's own count of the governor's race, a county slice beneath the state's count (Kevin, Nov 4); it is last so the first tab's stamp stays the change token. State House (STR) is read at its first page; its second page is reached only by a form post.",
+    "tabs_note": "Statewide (STW) is read for Philadelphia's own count of the governor's race, a county slice beneath the state's count (Kevin, Nov 4); it is last so the first tab's stamp stays the change token. State House (STR) has two pages; the second is read by the page's own Next Page form post (Nov 4), so HD-197 to HD-203 are mapped like the rest.",
     "tz": "America/New_York"
   },
   "polls_close": "2026-11-04T01:00:00Z",
@@ -401,6 +401,108 @@
       "reaches_unconfirmed": true
     },
     {
+      "feed_id": "401360",
+      "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 197TH DISTRICT",
+      "item": "pa-hd-197",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DANILO BURGOS DEM": "Danilo Burgos",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "401339",
+      "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 198TH DISTRICT",
+      "item": "pa-hd-198",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DARISHA K PARKER DEM": "Darisha K. Parker",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "401354",
+      "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 200TH DISTRICT",
+      "item": "pa-hd-200",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "CHRIS JOHNSON DEM": "Chris Johnson",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "401367",
+      "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 201ST DISTRICT",
+      "item": "pa-hd-201",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "ANDRE D CARROLL DEM": "Andre D. Carroll",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "401369",
+      "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 202ND DISTRICT",
+      "item": "pa-hd-202",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "JARED SOLOMON DEM": "Jared Solomon",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "401350",
+      "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 203RD DISTRICT",
+      "item": "pa-hd-203",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "ANTHONY BELLMON DEM": "Anthony Bellmon",
+        "Write-In": "__other"
+      },
+      "reaches": [
+        "Philadelphia",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
       "feed_id": "401344",
       "feed_name": "SENATOR IN THE GENERAL ASSEMBLY 2ND DISTRICT",
       "item": "pa-sd-2",
@@ -539,13 +641,6 @@
     }
   ],
   "unmatched_feed": [],
-  "unmatched_guide": [
-    "pa-hd-197",
-    "pa-hd-198",
-    "pa-hd-200",
-    "pa-hd-201",
-    "pa-hd-202",
-    "pa-hd-203"
-  ],
+  "unmatched_guide": [],
   "not_here": []
 }

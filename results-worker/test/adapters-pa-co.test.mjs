@@ -17,7 +17,10 @@ const NOW = '2026-11-04T04:30:00.000Z';
 const PA_ROUTES = { GetElectionList: 'pa-dos.electionlist.json', GetDashboardMessage: 'pa-dos.dashboard.json', GetSummaryData: 'pa-dos.summary.json', 'officeId=11&': 'pa-dos.office11.json', 'officeId=12&': 'pa-dos.office12.json', 'officeId=13&': 'pa-dos.office13.json' };
 const PA_MAP = { id: 'results-PA', state: 'PA', name: 'Pennsylvania Department of State', county: 'Pennsylvania', scope: 'state', election: { date: '2026-11-03', feed_election_id: '117', feed_name: '2026 General Election' }, feed: { adapter: 'pa_dos', base: 'https://www.electionreturns.pa.gov', results_url: 'https://www.electionreturns.pa.gov/', election_type: 'G', offices: ['11', '12', '13'] } };
 
-const PH_ROUTES = { 'type=QUE': 'philadelphia.QUE.html', 'type=CON': 'philadelphia.CON.html', 'type=STS': 'philadelphia.STS.html', 'type=STR': 'philadelphia.STR.html' };
+/* State House pages: page 1 by a plain read, page 2 by the page's own "Next Page" post. The page 2 file is Nov 4's
+   (10:52 AM), its stamp set to the Nov 3 page 1's so the two read as one update. */
+const strPages = (p1 = fixture('philadelphia.STR.html'), p2 = fixture('philadelphia.STR.p2.html')) => (url, opts) => ({ status: 200, body: opts.method === 'POST' ? p2 : p1 });
+const PH_ROUTES = { 'type=QUE': 'philadelphia.QUE.html', 'type=CON': 'philadelphia.CON.html', 'type=STS': 'philadelphia.STS.html', 'type=STR': strPages() };
 const PH_MAP = { id: 'philadelphia-pa', state: 'PA', name: 'Philadelphia City Commissioners', county: 'Philadelphia', election: { date: '2026-11-03', feed_election_id: '2026 General Election Results', feed_name: '2026 General Election Results' }, feed: { adapter: 'philadelphia', base: 'https://philadelphiaresults.azurewebsites.us', results_url: 'https://philadelphiaresults.azurewebsites.us/', tabs: ['QUE', 'CON', 'STS', 'STR'] } };
 
 const DE_ROUTES = { GetElectionHeaderinfo: 'denver.header.json', 'api/Election': 'denver.election.json' };
@@ -86,7 +89,7 @@ test('philadelphia: four tabs read with the page\'s own Eastern stamp, each race
   assert.equal(r.source_updated, '2026-11-04T04:12:47.000Z', '11:12:47 PM Eastern');
   assert.equal(r.reporting, '1,684 of 1,703 divisions reported');
   assert.deepEqual(r.labels, ['Unofficial 2026 General Election Results'], 'the testing banner is served hidden tonight, so it is not quoted');
-  assert.equal(r.contests.length, 2 + 3 + 3 + 20);
+  assert.equal(r.contests.length, 2 + 3 + 3 + 20 + 6, 'State House page 2 included');
   const q1 = r.contests.find((c) => c.feed_id === '401356');
   assert.equal(q1.feed_name, 'QUESTION #1');
   assert.deepEqual(q1.choices, [{ name: 'Yes', votes: 343793 }, { name: 'No', votes: 92551 }]);
@@ -96,8 +99,31 @@ test('philadelphia: four tabs read with the page\'s own Eastern stamp, each race
   assert.deepEqual(cd2.choices.map((c) => c.name), ['BRENDAN F BOYLE DEM', 'JESSICA ARRIAGA REP', 'Write-In']);
   assert.equal(cd2.reporting, 'Divisions Reported: 726 / 737');
   for (const c of r.contests) assert.equal(c.total, c.source_total, `${c.feed_name}: our sum equals the page's Total Votes`);
-  assert.equal(f.calls.length, 4);
+  assert.equal(f.calls.length, 5, 'four tabs and one Next Page post');
   for (const c of f.calls) assert.equal(c.headers['User-Agent'], NAMED_UA);
+  assert.equal(f.calls[4].headers['Content-Type'], 'application/x-www-form-urlencoded');
+  const hd197 = r.contests.find((c) => c.feed_id === '401360');
+  assert.equal(hd197.feed_name, 'REPRESENTATIVE IN THE GENERAL ASSEMBLY 197TH DISTRICT');
+  assert.equal(hd197.reporting, 'Divisions Reported: 74 / 74');
+  assert.deepEqual(Object.keys(r.raw).sort(), ['CON.html', 'QUE.html', 'STR.html', 'STR.p2.html', 'STS.html']);
+});
+
+test('philadelphia: a later page must be the next page under the same stamp; a page count past five is an error', async () => {
+  const p2 = fixture('philadelphia.STR.p2.html');
+  const later = await philly.read({ fetch: fakeFetch({ ...PH_ROUTES, 'type=STR': strPages(undefined, p2.replace('11/3/2026 11:12:47 PM', '11/3/2026 11:20:02 PM')) }), map: PH_MAP });
+  assert.equal(later.verdict, 'error', 'a page 2 from a newer update would mix two counts');
+  assert.match(later.error, /page 2 says 11\/3\/2026 11:20:02 PM.*read across an update/);
+  const same = await philly.read({ fetch: fakeFetch({ ...PH_ROUTES, 'type=STR': strPages(undefined, fixture('philadelphia.STR.html')) }), map: PH_MAP });
+  assert.equal(same.verdict, 'error', 'a post that comes back as page 1 is not page 2');
+  assert.match(same.error, /Next Page went to page 1, not 2/);
+  const shown = await philly.read({ fetch: fakeFetch({ ...PH_ROUTES, 'type=STR': strPages(undefined, p2.replace(/(<div id="pnlTestBanner"[^>]*?) display:none;/, '$1')) }), map: PH_MAP });
+  assert.equal(shown.verdict, 'error', 'test counts on a later page are never published');
+  assert.match(shown.error, /page 2 shows its/);
+  const many = await philly.read({ fetch: fakeFetch({ ...PH_ROUTES, 'type=STR': strPages(fixture('philadelphia.STR.html').replace('hidLastPage" value="2"', 'hidLastPage" value="9"')) }), map: PH_MAP });
+  assert.equal(many.verdict, 'error');
+  assert.match(many.error, /says it has 9 pages/);
+  const refused = await philly.read({ fetch: fakeFetch({ ...PH_ROUTES, 'type=STR': (url, opts) => (opts.method === 'POST' ? { status: 403, body: 'no' } : { status: 200, body: fixture('philadelphia.STR.html') }) }), map: PH_MAP });
+  assert.equal(refused.verdict, 'refused', 'a refused post stops the source like a refused read');
 });
 
 test('philadelphia: an unchanged stamp costs one request; tabs read across an update are an error; a visible test banner is an error', async () => {

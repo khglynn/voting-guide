@@ -322,11 +322,10 @@
         "John H. Bucy III": "John H. Bucy III"
       },
       "reaches": [
-        "Williamson",
-        "other counties"
+        "Williamson"
       ],
       "item_url": null,
-      "reaches_unconfirmed": true
+      "reaches_source": "https://data.capitol.texas.gov/dataset/71af633c-21bf-42cf-ad48-4fe95593a897/resource/4d3dea56-d572-4794-af00-91975614049b/download/planh2316r100.pdf (Texas Legislative Council, PLANH2316 District Population Analysis with County Subtotals, read Nov 3, 2026: only Williamson County)"
     },
     {
       "feed_id": "0026",
@@ -339,11 +338,10 @@
         "Chris Jimenez": "Chris Jimenez"
       },
       "reaches": [
-        "Williamson",
-        "other counties"
+        "Williamson"
       ],
       "item_url": null,
-      "reaches_unconfirmed": true
+      "reaches_source": "https://data.capitol.texas.gov/dataset/71af633c-21bf-42cf-ad48-4fe95593a897/resource/4d3dea56-d572-4794-af00-91975614049b/download/planh2316r100.pdf (Texas Legislative Council, PLANH2316 District Population Analysis with County Subtotals, read Nov 3, 2026: only Williamson County)"
     },
     {
       "feed_id": "0108",

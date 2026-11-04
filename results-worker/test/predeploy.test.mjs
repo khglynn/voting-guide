@@ -11,6 +11,7 @@ import * as lvt from '../src/adapters/lvt.js';
 import * as ev from '../src/adapters/enhanced_voting.js';
 import * as orsos from '../src/adapters/or_sos.js';
 import { checkFile } from '../src/checks.js';
+import { checkHash } from '../src/fingerprint.js';
 import { sourceSlices, buildStateFile } from '../src/merge.js';
 
 const route = (eid, ver, pre) => ({ [`/${eid}/current_ver.txt`]: `${pre}.current_ver.txt`, [`/${eid}/${ver}/json/en/summary.json`]: `${pre}.summary.json`, [`/${eid}/${ver}/json/en/electionsettings.json`]: `${pre}.electionsettings.json` });
@@ -235,4 +236,26 @@ test('Multnomah: an SOS county page older than the SOS home page is an error', a
   const r = await multco.read({ fetch: fakeFetch(routes), map: mapFor('results-OR-multnomah') });
   assert.equal(r.verdict, 'error');
   assert.match(r.error, /cached copy/);
+});
+
+test('Georgia: every one-seat race in Fulton, DeKalb and the state needs more than half (runoff Dec 1), so none gets a winner from us, and the check hash is unchanged', async () => {
+  for (const id of ['fulton-ga', 'dekalb-ga', 'results-GA']) {
+    const map = mapFor(id);
+    const asPlurality = { ...map, contests: map.contests.map((c) => (c.checked_kind ? (({ checked_kind, rule_note, ...x }) => ({ ...x, kind: 'plurality' }))(c) : c)) };
+    assert.equal(await checkHash(map), await checkHash(asPlurality), `${id}: numbers are built the same way, so a check stands`);
+    for (const c of map.contests.filter((x) => Number(x.seats) === 1 && x.kind !== 'measure')) {
+      assert.equal(c.kind, 'rule_unknown', `${id} ${c.item}`);
+      assert.equal(c.checked_kind, 'plurality', `${id} ${c.item}`);
+      assert.match(c.rule_note, /21-2-501/);
+    }
+  }
+  // Fulton's four-way special, at its final-upload flag after the count window: the count shows, with no winner.
+  const map = mapFor('fulton-ga');
+  const mc = map.contests.find((c) => c.item === 'fulton-commission-4-special');
+  const names = Object.keys(mc.choices).filter((k) => mc.choices[k] && mc.choices[k] !== '__other');
+  const read = { verdict: 'ok', election: { id: map.election.feed_election_id, name: map.election.feed_name, date: '2026-11-03' }, source_status: 'final_flag', source_updated: '2026-11-08T00:00:00.000Z', reporting: null, labels: [],
+    contests: [{ feed_id: mc.feed_id, feed_name: mc.feed_name, reporting: null, choices: names.map((n, i) => ({ name: n, votes: [3800, 3000, 2000, 1200][i] || 0 })) }] };
+  const f = buildStateFile({ state: 'GA', maps: [{ ...map, contests: [mc] }], srcs: { [map.id]: { record: { read, fetched: '2026-11-08T00:00:00.000Z' }, checked: true, sched: {} } }, mode: 'public', now: '2026-11-08T00:10:00.000Z' });
+  assert.equal(f.items[mc.item].status, 'complete');
+  assert.equal(f.items[mc.item].final, null, 'a 38% leader is headed to a runoff, not a winner');
 });

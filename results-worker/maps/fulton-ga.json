@@ -37,7 +37,7 @@
       "feed_id": "48",
       "feed_name": "County Commissioner - District 3",
       "item": "fulton-commission-3",
-      "kind": "plurality",
+      "kind": "rule_unknown",
       "seats": 1,
       "choices": {
         "Paul Burton (Rep)": "Paul Burton",
@@ -46,13 +46,15 @@
       "reaches": [
         "Fulton"
       ],
-      "item_url": null
+      "item_url": null,
+      "checked_kind": "plurality",
+      "rule_note": "Georgia requires more than half the votes, or the top two meet in a Dec. 1 runoff (O.C.G.A. 21-2-501; the guide's own text for Georgia ballots), so no winner word from us."
     },
     {
       "feed_id": "54",
       "feed_name": "Special County Commissioner - District 4",
       "item": "fulton-commission-4-special",
-      "kind": "plurality",
+      "kind": "rule_unknown",
       "seats": 1,
       "choices": {
         "Natalie Hall": "Natalie Hall",
@@ -63,13 +65,15 @@
       "reaches": [
         "Fulton"
       ],
-      "item_url": null
+      "item_url": null,
+      "checked_kind": "plurality",
+      "rule_note": "Georgia requires more than half the votes, or the top two meet in a Dec. 1 runoff (O.C.G.A. 21-2-501; the guide's own text for Georgia ballots), so no winner word from us."
     },
     {
       "feed_id": "49",
       "feed_name": "County Commissioner - District 5",
       "item": "fulton-commission-5",
-      "kind": "plurality",
+      "kind": "rule_unknown",
       "seats": 1,
       "choices": {
         "Tiffany A. Henyard (Rep)": "Tiffany A. Henyard",
@@ -78,13 +82,15 @@
       "reaches": [
         "Fulton"
       ],
-      "item_url": null
+      "item_url": null,
+      "checked_kind": "plurality",
+      "rule_note": "Georgia requires more than half the votes, or the top two meet in a Dec. 1 runoff (O.C.G.A. 21-2-501; the guide's own text for Georgia ballots), so no winner word from us."
     },
     {
       "feed_id": "46",
       "feed_name": "County Commission Chairperson",
       "item": "fulton-commission-chair",
-      "kind": "plurality",
+      "kind": "rule_unknown",
       "seats": 1,
       "choices": {
         "Eric J. Tatum (Rep)": "Eric J. Tatum",
@@ -93,7 +99,9 @@
       "reaches": [
         "Fulton"
       ],
-      "item_url": null
+      "item_url": null,
+      "checked_kind": "plurality",
+      "rule_note": "Georgia requires more than half the votes, or the top two meet in a Dec. 1 runoff (O.C.G.A. 21-2-501; the guide's own text for Georgia ballots), so no winner word from us."
     },
     {
       "feed_id": "55",
@@ -131,7 +139,7 @@
       "feed_id": "31",
       "feed_name": "State House of Representatives - District 53",
       "item": "ga-hd-53",
-      "kind": "plurality",
+      "kind": "rule_unknown",
       "seats": 1,
       "choices": {
         "Deborah Silcox (I)(Rep)": "Deborah Silcox",
@@ -141,13 +149,15 @@
         "Fulton",
         "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "checked_kind": "plurality",
+      "rule_note": "Georgia requires more than half the votes, or the top two meet in a Dec. 1 runoff (O.C.G.A. 21-2-501; the guide's own text for Georgia ballots), so no winner word from us."
     },
     {
       "feed_id": "32",
       "feed_name": "State House of Representatives - District 54",
       "item": "ga-hd-54",
-      "kind": "plurality",
+      "kind": "rule_unknown",
       "seats": 1,
       "choices": {
         "Greg Miller (Rep)": "Greg Miller",
@@ -157,13 +167,15 @@
         "Fulton",
         "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "checked_kind": "plurality",
+      "rule_note": "Georgia requires more than half the votes, or the top two meet in a Dec. 1 runoff (O.C.G.A. 21-2-501; the guide's own text for Georgia ballots), so no winner word from us."
     },
     {
       "feed_id": "33",
       "feed_name": "State House of Representatives - District 55",
       "item": "ga-hd-55",
-      "kind": "plurality",
+      "kind": "rule_unknown",
       "seats": 1,
       "choices": {
         "Samuel S. Lenaeus (Rep)": "Samuel S. Lenaeus",
@@ -173,13 +185,15 @@
         "Fulton",
         "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "checked_kind": "plurality",
+      "rule_note": "Georgia requires more than half the votes, or the top two meet in a Dec. 1 runoff (O.C.G.A. 21-2-501; the guide's own text for Georgia ballots), so no winner word from us."
     },
     {
       "feed_id": "34",
       "feed_name": "State House of Representatives - District 56",
       "item": "ga-hd-56",
-      "kind": "plurality",
+      "kind": "rule_unknown",
       "seats": 1,
       "choices": {
         "Bryce Berry (I)(Dem)": "Bryce Berry"
@@ -188,13 +202,15 @@
         "Fulton",
         "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "checked_kind": "plurality",
+      "rule_note": "Georgia requires more than half the votes, or the top two meet in a Dec. 1 runoff (O.C.G.A. 21-2-501; the guide's own text for Georgia ballots), so no winner word from us."
     },
     {
       "feed_id": "35",
       "feed_name": "State House of Representatives - District 57",
       "item": "ga-hd-57",
-      "kind": "plurality",
+      "kind": "rule_unknown",
       "seats": 1,
       "choices": {
         "Helmut Lucero Love (Rep)": "Helmut Lucero Love",
@@ -204,13 +220,15 @@
         "Fulton",
         "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "checked_kind": "plurality",
+      "rule_note": "Georgia requires more than half the votes, or the top two meet in a Dec. 1 runoff (O.C.G.A. 21-2-501; the guide's own text for Georgia ballots), so no winner word from us."
     },
     {
       "feed_id": "36",
       "feed_name": "State House of Representatives - District 58",
       "item": "ga-hd-58",
-      "kind": "plurality",
+      "kind": "rule_unknown",
       "seats": 1,
       "choices": {
         "Torrey Balam (Rep)": "Torrey Balam",
@@ -220,13 +238,15 @@
         "Fulton",
         "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "checked_kind": "plurality",
+      "rule_note": "Georgia requires more than half the votes, or the top two meet in a Dec. 1 runoff (O.C.G.A. 21-2-501; the guide's own text for Georgia ballots), so no winner word from us."
     },
     {
       "feed_id": "37",
       "feed_name": "State House of Representatives - District 59",
       "item": "ga-hd-59",
-      "kind": "plurality",
+      "kind": "rule_unknown",
       "seats": 1,
       "choices": {
         "Devanta ''Sully'' Sullivan (Rep)": "Devanta \"Sully\" Sullivan",
@@ -236,13 +256,15 @@
         "Fulton",
         "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "checked_kind": "plurality",
+      "rule_note": "Georgia requires more than half the votes, or the top two meet in a Dec. 1 runoff (O.C.G.A. 21-2-501; the guide's own text for Georgia ballots), so no winner word from us."
     },
     {
       "feed_id": "38",
       "feed_name": "State House of Representatives - District 60",
       "item": "ga-hd-60",
-      "kind": "plurality",
+      "kind": "rule_unknown",
       "seats": 1,
       "choices": {
         "Sheila Jones (I)(Dem)": "Sheila Jones"
@@ -251,13 +273,15 @@
         "Fulton",
         "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "checked_kind": "plurality",
+      "rule_note": "Georgia requires more than half the votes, or the top two meet in a Dec. 1 runoff (O.C.G.A. 21-2-501; the guide's own text for Georgia ballots), so no winner word from us."
     },
     {
       "feed_id": "39",
       "feed_name": "State House of Representatives - District 61",
       "item": "ga-hd-61",
-      "kind": "plurality",
+      "kind": "rule_unknown",
       "seats": 1,
       "choices": {
         "Damita Bishop (Rep)": "Damita Bishop",
@@ -267,13 +291,15 @@
         "Fulton",
         "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "checked_kind": "plurality",
+      "rule_note": "Georgia requires more than half the votes, or the top two meet in a Dec. 1 runoff (O.C.G.A. 21-2-501; the guide's own text for Georgia ballots), so no winner word from us."
     },
     {
       "feed_id": "40",
       "feed_name": "State House of Representatives - District 62",
       "item": "ga-hd-62",
-      "kind": "plurality",
+      "kind": "rule_unknown",
       "seats": 1,
       "choices": {
         "Kenn Collier (Dem)": "Kenn Collier"
@@ -282,13 +308,15 @@
         "Fulton",
         "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "checked_kind": "plurality",
+      "rule_note": "Georgia requires more than half the votes, or the top two meet in a Dec. 1 runoff (O.C.G.A. 21-2-501; the guide's own text for Georgia ballots), so no winner word from us."
     },
     {
       "feed_id": "41",
       "feed_name": "State House of Representatives - District 63",
       "item": "ga-hd-63",
-      "kind": "plurality",
+      "kind": "rule_unknown",
       "seats": 1,
       "choices": {
         "Kim Schofield (I)(Dem)": "Kim Schofield"
@@ -297,13 +325,15 @@
         "Fulton",
         "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "checked_kind": "plurality",
+      "rule_note": "Georgia requires more than half the votes, or the top two meet in a Dec. 1 runoff (O.C.G.A. 21-2-501; the guide's own text for Georgia ballots), so no winner word from us."
     },
     {
       "feed_id": "18",
       "feed_name": "State Senate - District 35",
       "item": "ga-sd-35",
-      "kind": "plurality",
+      "kind": "rule_unknown",
       "seats": 1,
       "choices": {
         "Jaha V. Howard (I)(Dem)": "Jaha V. Howard"
@@ -312,13 +342,15 @@
         "Fulton",
         "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "checked_kind": "plurality",
+      "rule_note": "Georgia requires more than half the votes, or the top two meet in a Dec. 1 runoff (O.C.G.A. 21-2-501; the guide's own text for Georgia ballots), so no winner word from us."
     },
     {
       "feed_id": "19",
       "feed_name": "State Senate - District 36",
       "item": "ga-sd-36",
-      "kind": "plurality",
+      "kind": "rule_unknown",
       "seats": 1,
       "choices": {
         "Katie Corkren (Rep)": "Katie Corkren",
@@ -328,13 +360,15 @@
         "Fulton",
         "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "checked_kind": "plurality",
+      "rule_note": "Georgia requires more than half the votes, or the top two meet in a Dec. 1 runoff (O.C.G.A. 21-2-501; the guide's own text for Georgia ballots), so no winner word from us."
     },
     {
       "feed_id": "20",
       "feed_name": "State Senate - District 38",
       "item": "ga-sd-38",
-      "kind": "plurality",
+      "kind": "rule_unknown",
       "seats": 1,
       "choices": {
         "Eric Helvy (Rep)": "Eric Helvy",
@@ -344,13 +378,15 @@
         "Fulton",
         "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "checked_kind": "plurality",
+      "rule_note": "Georgia requires more than half the votes, or the top two meet in a Dec. 1 runoff (O.C.G.A. 21-2-501; the guide's own text for Georgia ballots), so no winner word from us."
     },
     {
       "feed_id": "21",
       "feed_name": "State Senate - District 39",
       "item": "ga-sd-39",
-      "kind": "plurality",
+      "kind": "rule_unknown",
       "seats": 1,
       "choices": {
         "John F. Guest, Jr. (Rep)": "John F. Guest, Jr.",
@@ -360,13 +396,15 @@
         "Fulton",
         "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "checked_kind": "plurality",
+      "rule_note": "Georgia requires more than half the votes, or the top two meet in a Dec. 1 runoff (O.C.G.A. 21-2-501; the guide's own text for Georgia ballots), so no winner word from us."
     },
     {
       "feed_id": "12",
       "feed_name": "US House of Representatives - District 5",
       "item": "ga-us-house-5",
-      "kind": "plurality",
+      "kind": "rule_unknown",
       "seats": 1,
       "choices": {
         "John ''Bongo'' Salvesen (Rep)": "John \"Bongo\" Salvesen",
@@ -378,13 +416,15 @@
         "Clayton",
         "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "checked_kind": "plurality",
+      "rule_note": "Georgia requires more than half the votes, or the top two meet in a Dec. 1 runoff (O.C.G.A. 21-2-501; the guide's own text for Georgia ballots), so no winner word from us."
     },
     {
       "feed_id": "13",
       "feed_name": "US House of Representatives - District 6",
       "item": "ga-us-house-6",
-      "kind": "plurality",
+      "kind": "rule_unknown",
       "seats": 1,
       "choices": {
         "Kevin E. Martin (Rep)": "Kevin E. Martin",
@@ -396,7 +436,9 @@
         "Douglas",
         "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "checked_kind": "plurality",
+      "rule_note": "Georgia requires more than half the votes, or the top two meet in a Dec. 1 runoff (O.C.G.A. 21-2-501; the guide's own text for Georgia ballots), so no winner word from us."
     }
   ],
   "unmatched_guide": [],

@@ -27,6 +27,10 @@ if (!fs.existsSync(path.join(DATA, 'index.json'))) {
 }
 const read = (f) => JSON.parse(fs.readFileSync(path.join(DATA, f), 'utf8'));
 const INDEX = read('index.json');
+/* Every check runs on one fixed day and time unless it sets its own (Nov 3): the app reads `?today=` and `?now=` from
+   location, and with none it read the real clock, so once the polls closed on Election Day the checks written for a
+   ballot still voting (the bar's count, My plan) failed on main. Midday on Election Day, as the e2e pins its own date. */
+if (!('location' in globalThis)) Object.defineProperty(globalThis, 'location', { configurable: true, writable: true, value: { search: '?today=2026-10-28', origin: 'http://x', pathname: '/', hostname: 'localhost', host: 'localhost', href: 'http://x/?today=2026-10-28', hash: '' } });
 
 const vite = await createServer({ root: ROOT, configFile: false, logLevel: 'error', server: { middlewareMode: true, hmr: false }, appType: 'custom', optimizeDeps: { noDiscovery: true, include: [] } });
 const load = (p) => vite.ssrLoadModule(p);

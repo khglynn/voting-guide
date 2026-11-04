@@ -209,6 +209,15 @@ export async function runTick({ fetch, store, archive, maps, now = new Date().to
   if (!only && (!sched.meta.site_at || Date.parse(now) - Date.parse(sched.meta.site_at) >= 10 * 60_000)) { await checkThroughSite({ maps, fetch, store, sched, now, ping }); metaChanged = true; }
 
   const states = new Set(ran.map((r) => byId[r.id].state));
+  // A first-run check that passes sets checked:{id} by hand; rebuild that state's files on the next tick rather than
+  // waiting for its source's next change (DC's poll had backed off toward an hour when it was checked, Nov 3).
+  if (!only) {
+    sched.meta.checked ??= {};
+    for (const m of maps) {
+      const v = (await store.get(`checked:${m.id}`)) || '';
+      if (sched.meta.checked[m.id] !== v) { sched.meta.checked[m.id] = v; states.add(m.state); metaChanged = true; }
+    }
+  }
   if (fpChanged) for (const m of maps) states.add(m.state);
   const published = [];
   for (const st of states) published.push(await publishState({ state: st, maps, store, archive, sched, now, ping }));

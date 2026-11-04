@@ -8,6 +8,7 @@ import * as nyc from '../src/adapters/nyc_enr.js';
 import * as multco from '../src/adapters/multco.js';
 import * as ca_sos from '../src/adapters/ca_sos.js';
 import * as lvt from '../src/adapters/lvt.js';
+import * as ev from '../src/adapters/enhanced_voting.js';
 import { checkFile } from '../src/checks.js';
 import { sourceSlices, buildStateFile } from '../src/merge.js';
 
@@ -179,4 +180,20 @@ test('LVT: a summary file read mid-upload (no closing </NewDataSet>) is an error
   assert.equal(r.changed_token, undefined, 'no token saved, so the next poll reads it again');
   assert.equal((await lvt.read({ fetch: fakeFetch(at(full)), map: mapFor('san-diego-county-ca') })).verdict, 'ok');
   assert.equal((await lvt.read({ fetch: fakeFetch(at(`${full}\r\n  `)), map: mapFor('san-diego-county-ca') })).verdict, 'ok', 'trailing whitespace is fine');
+});
+
+test('Enhanced Voting: a record newer than its ballot-items (a cached copy) keeps no token, and the source time is the contests\' own', async () => {
+  const map = mapFor('results-GA');
+  const rec = JSON.parse(fixture('ev-georgia.election.json'));
+  const evRoutes = (record) => ({ '/ballot-items': 'ev-georgia.ballot-items.json', [`/${map.election.feed_election_id}`]: { status: 200, body: JSON.stringify(record) } });
+  const newer = { ...rec, asOf: '2026-11-04T04:40:00.000Z', publishVersionId: 'next-publish' };
+  const r = await ev.read({ fetch: fakeFetch(evRoutes(newer)), map });
+  assert.equal(r.verdict, 'ok');
+  assert.equal(r.changed_token, null, 'the next poll reads again in full');
+  assert.equal(r.source_updated, '2026-11-04T04:10:18.165Z', "the contests' time, not the record's");
+  const same = await ev.read({ fetch: fakeFetch(evRoutes(rec)), map });
+  assert.equal(same.changed_token, '30f00d01-f8d8-4735-990c-c41e6b72c01e|2026-11-04T04:10:18.165767Z', 'record and contests agree: the token stands');
+  // Washington, Nov 3: its contests were a minute newer than its record. Newer contests are never "behind".
+  const wa = await ev.read({ fetch: fakeFetch({ '/ballot-items': 'ev-washington.ballot-items.json', [`/${mapFor('results-WA').election.feed_election_id}`]: 'ev-washington.election.json' }), map: mapFor('results-WA') });
+  assert.ok(wa.changed_token);
 });

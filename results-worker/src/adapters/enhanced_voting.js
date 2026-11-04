@@ -120,18 +120,24 @@ export async function read({ fetch, map, prevToken = null }) {
   if (Number.isInteger(b.json.totalRecordCount) && data.length < b.json.totalRecordCount) return { verdict: 'error', error: `ballot-items held ${data.length} of ${b.json.totalRecordCount} contests`, url: b.url };
   const ids = [...new Set(data.map((c) => c.publishPublicElectionId).filter(Boolean))];
 
+  // The record and ballot-items are cached apart (max-age 60 each, King and GA, Nov 3), so for up to a minute after a
+  // publish the record can name it while ballot-items still serves the one before. Contests older than the record are
+  // read but their token isn't kept, so the next poll reads again in full, and the source's time is the contests' own
+  // (pre-deploy review, Nov 3; King publishes once a day after tonight, so a kept token could freeze it a day).
+  const newest = data.map((c) => iso(c.reportingStatus?.asOf)).filter(Boolean).sort().pop() || null;
+  const behind = !!(newest && iso(e.asOf) && newest < iso(e.asOf));
   const groups = Object.fromEntries((e.contestGroups || []).map((g) => [g.id, en(g.groupHeading)]));
   const units = map.feed.units || 'reporting units';
   const top = { totalUnits: (e.precinctReportingStatus || []).reduce((a, g) => a + (Number(g.value) || 0), 0), reportingStatusDetails: e.precinctReportingStatus || [] };
   return {
     verdict: 'ok',
-    changed_token: token,
+    changed_token: behind ? null : token,
     raw: { 'election.json': s.body, 'ballot-items.json': b.body },
     // The public election id is the one in the address; every contest names it too, and they must agree.
     election: { id: ids.length === 1 ? ids[0] : ids.length ? ids.join(',') : String(map.election.feed_election_id), name: en(e.name), date: isoDate(e.electionDate) },
     source_status: null,
     official: e.isOfficialResults === true,
-    source_updated: iso(e.asOf) || iso(e.lastUpdated),
+    source_updated: behind ? newest : (iso(e.asOf) || iso(e.lastUpdated)),
     reporting: progressWords(top, units, Number(e.ballotsCast) > 0),
     labels: labels(e),
     feed_version: e.publishVersionId || null,

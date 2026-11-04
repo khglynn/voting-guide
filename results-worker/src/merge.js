@@ -221,10 +221,11 @@ export function buildStateFile({ state, maps, srcs, mode, now }) {
     }
     const counties = real.filter((s) => !s._whole);
     if (!counties.length) { items[item] = single(wholeCand); continue; }
-    // The whole race set aside (not read yet, or at zero): the counties name who is missing. A whole-race source's
-    // reaches lead with the state's own name ("California", "all 58 California counties"), which are not counties and
-    // must never be listed as missing ones (statewide review, Nov 4). Every county map that shares a race with a whole
-    // count names those counties itself or says "other counties" (test/maps.test.mjs), so nothing real is lost.
+    // A spanning race's reaches, and so its missing list, come from the county counts only. A whole-race count set
+    // aside here (not read yet, or at zero) has reaches that lead with the state's own name ("California", "all 58
+    // California counties"), which are not counties and must never be listed as missing ones (statewide review, Nov 4).
+    // Every county map that shares a race with a whole count names its counties itself or says "other counties"
+    // (test/maps.test.mjs), so nothing real is lost.
     const reaches = [...new Set(list.filter((s) => !s._whole).flatMap((s) => s._reaches))];
     items[item] = reaches.length > 1 || counties.length > 1 ? spanning(counties, reaches.length ? reaches : counties.map((s) => s.county)) : single(counties[0]);
   }

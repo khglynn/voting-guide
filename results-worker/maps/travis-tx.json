@@ -1,0 +1,40 @@
+{
+  "id": "travis-tx",
+  "state": "TX",
+  "name": "Travis County",
+  "county": "Travis",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "127492",
+    "feed_name": "2026 November Joint General and Special Elections"
+  },
+  "guide": {
+    "fingerprint": "e3b0c44298fc1c14",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T01:03:40.262Z",
+    "places": [
+      "austin-tx",
+      "pflugerville-tx",
+      "round-rock-tx"
+    ]
+  },
+  "feed": {
+    "adapter": "clarity",
+    "base": "https://results.enr.clarityelections.com/TX/Travis",
+    "results_url": "https://results.enr.clarityelections.com/TX/Travis/127492/",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent on Nov 3, 7:02 PM CT (current_ver.txt, summary.json, electionsettings.json all 200).",
+    "election_id_from": "Clarity's Travis list (elections.json) showed 127492, \"2026 November Joint General and Special Elections\", 11/3/2026, at 7:02 PM CT; its electionsettings agree (electionid 127492, 11/3/2026, 223 contests). votetravis.gov's results page didn't expose the link to a plain fetch.",
+    "tz": "America/Chicago"
+  },
+  "polls_close": "2026-11-04T01:00:00Z",
+  "count_closes": "2026-11-04T23:00:00Z",
+  "complete_marker": {
+    "flag": "final_flag",
+    "words": "Clarity's final-upload flag (electiondetails.chkisfinalupload)."
+  },
+  "certify_by": "2026-11-17",
+  "official": null,
+  "contests": [],
+  "unmatched_feed": [],
+  "unmatched_guide": []
+}

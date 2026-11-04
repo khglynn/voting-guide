@@ -1,0 +1,16 @@
+{
+  "election": "2026-11-03",
+  "state": "CA",
+  "generated": "2026-11-04T05:41:30Z",
+  "sources": [
+    {"id": "results-CA", "name": "California Secretary of State", "url": "https://electionresults.sos.ca.gov/", "updated": null, "status": "refused", "reporting": null, "fetched": null, "note": "source refused us"},
+    {"id": "los-angeles-county-ca", "name": "Los Angeles County", "url": "https://results.lavote.gov/", "updated": "2026-11-04T05:35:00Z", "status": "counting", "reporting": "Ballots counted: 1,204,000", "fetched": "2026-11-04T05:41:00Z"},
+    {"id": "san-diego-county-ca", "name": "San Diego County", "url": "https://www.livevoterturnout.com/ENR/sandiegocaenr/25/en/Index_25.html", "updated": "2026-11-04T05:30:00Z", "status": "counting", "reporting": null, "fetched": "2026-11-04T05:40:00Z"}
+  ],
+  "items": {
+    "ca-governor": {"source": "los-angeles-county-ca", "status": "counting", "reporting": null, "updated": "2026-11-04T05:35:00Z", "url": "https://results.lavote.gov/", "total_votes": 1000000, "candidates": [{"name": "Xavier Becerra", "votes": 640000, "pct": 64}, {"name": "Steve Hilton", "votes": 360000, "pct": 36}], "slices": [{"source": "los-angeles-county-ca", "county": "Los Angeles", "status": "counting", "reporting": null, "updated": "2026-11-04T05:35:00Z", "url": "https://results.lavote.gov/", "total_votes": 1000000, "candidates": [{"name": "Xavier Becerra", "votes": 640000, "pct": 64}, {"name": "Steve Hilton", "votes": 360000, "pct": 36}]}], "missing": ["other counties"], "final": null},
+    "ca-prop-1": {"source": "los-angeles-county-ca", "status": "counting", "reporting": null, "updated": "2026-11-04T05:35:00Z", "url": "https://results.lavote.gov/", "total_votes": 950000, "measure": {"yes": 551000, "no": 399000, "yes_pct": 58}, "slices": [{"source": "los-angeles-county-ca", "county": "Los Angeles", "status": "counting", "reporting": null, "updated": "2026-11-04T05:35:00Z", "url": "https://results.lavote.gov/", "total_votes": 950000, "measure": {"yes": 551000, "no": 399000, "yes_pct": 58}}], "missing": ["other counties"], "final": null},
+    "ca-boe-3": {"source": "los-angeles-county-ca", "status": "counting", "reporting": null, "updated": "2026-11-04T05:35:00Z", "url": "https://results.lavote.gov/", "total_votes": 900000, "candidates": [{"name": "Mike Gipson", "votes": 600000, "pct": 66.67}, {"name": "Samuel P. Sukaton", "votes": 300000, "pct": 33.33}], "slices": [{"source": "los-angeles-county-ca", "county": "Los Angeles", "status": "counting", "reporting": null, "updated": "2026-11-04T05:35:00Z", "url": "https://results.lavote.gov/", "total_votes": 900000, "candidates": [{"name": "Mike Gipson", "votes": 600000, "pct": 66.67}, {"name": "Samuel P. Sukaton", "votes": 300000, "pct": 33.33}]}], "missing": ["other counties"], "final": null},
+    "sd-city-council-2": {"source": "san-diego-county-ca", "status": "counting", "reporting": null, "updated": "2026-11-04T05:30:00Z", "url": "https://www.livevoterturnout.com/ENR/sandiegocaenr/25/en/Index_25.html", "total_votes": 40000, "candidates": [{"name": "Richard Bailey", "votes": 22000, "pct": 55}, {"name": "Nicole Crosby", "votes": 18000, "pct": 45}], "final": null}
+  }
+}

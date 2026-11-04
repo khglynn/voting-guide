@@ -2160,6 +2160,83 @@ function roundTrip(name, stCode, places, mutate) {
       check('results menu: the Endorsements row lives in the menu after the close, not in the ballot head', /data-act="picks" data-fk="toc-picks"><span class="nv-t">Endorsements<\/span><span class="nv-n">[^<]+<\/span>/.test(led.menuHTML('toc')) && !/class="picks-line"/.test(led.ballotHeadHTML()));
       check('results card: a maybe row counts for no group or party, only for you', st.S.ballot.items.filter((it) => isMaybeId(it.id)).every((it) => rm.lensNames(it, { kind: 'group', key: 'papers' }) === null && rm.lensNames(it, { kind: 'party', party: 'Democratic' }) === null) && !!ch);
     }
+    {
+      // Rule 9 as amended Nov 4: where the state's own site turns us away, a county's count may carry a statewide race.
+      // That share shows only on a ballot in that county (its places' counties, or the address lookup's county); every
+      // other ballot shows the race as the state's own page, as for any race we can't read, and the figure, the no-picks
+      // list, the menu and the bar agree with the row. A statewide race with the state's own count, and a race across
+      // county lines that isn't statewide, are unchanged.
+      at('?today=2026-11-03&now=21:42');
+      const ca = FX('CA'), pa = FX('PA');
+      const keepCounty = st.S.ui.addrCounty;
+      const it = (id) => st.S.ballot.byId.get(id);
+      const stateUrl = () => (st.S.ballot.howto.results.sources.find((x) => x.kind === 'state') || {}).results_url;
+      check('results: the California and Pennsylvania county-share fixtures read', rm.readable(ca, 'CA') && rm.readable(pa, 'PA'));
+      // Los Angeles: Los Angeles County's share, named, never the whole race, never compared; the open row points the
+      // counties we don't hold at California's page.
+      withRows('CA', ['los-angeles-ca'], []);
+      useFile('CA', ca);
+      st.S.ui.addrCounty = null;
+      st.S.b.picks['ca-governor'] = 'Xavier Becerra';
+      const laOpen = op.resultsHTML(it('ca-governor'), rm.resultOf(it('ca-governor')));
+      check('results: a statewide race held only as Los Angeles County’s share shows that share on a Los Angeles ballot, named, never compared', col('ca-governor') === 'Becerra 64% counting Los Angeles votes only Your pick' && col('ca-prop-1') === 'Yes 58% counting Los Angeles votes only' && rm.sharesOnly(it('ca-governor'), ca.items['ca-governor']) && rm.compare(it('ca-governor'), rm.resultOf(it('ca-governor'))) === 'nc' && rm.ballotSources().some((x) => x.id === 'los-angeles-county-ca'), `${col('ca-governor')} | ${col('ca-prop-1')}`);
+      check('results open row: on a ballot showing a county’s share of a statewide race, the counties we don’t hold point at the state’s page', /^Counting\. In Los Angeles County’s count, Becerra is ahead so far\./.test(txt(laOpen)) && /Other counties: not in this guide’s results\. The statewide count is on California’s page\. California results/.test(txt(laOpen)) && laOpen.includes(`href="${stateUrl()}"`), txt(laOpen).slice(-260));
+      st.S.ui.addrCounty = 'Orange';
+      check('results: the address lookup’s county wins: an Orange County address on a Los Angeles ballot gets the state’s page', col('ca-governor') === 'California results', col('ca-governor'));
+      st.S.ui.addrCounty = null;
+      // San Diego, Dana Point and San Francisco: not Los Angeles County's voters, so the state's own page, as for a race we
+      // can't read; never "Los Angeles votes only".
+      for (const place of ['san-diego-ca', 'dana-point-ca', 'san-francisco-ca']) {
+        withRows('CA', [place], place === 'san-diego-ca' ? ['sd-city-council-2'] : []);
+        useFile('CA', ca);
+        const c = led.resColOf(it('ca-governor')), v = rm.resultOf(it('ca-governor'));
+        check(`results: ${place}: a statewide race held only as another county’s share is a link to the state’s page`, col('ca-governor') === 'California results' && c.kind === 'link' && c.url === stateUrl() && /^https:\/\//.test(c.url) && v.status === 'link_only' && v.source === 'results-CA' && col('ca-prop-1') === 'California results' && !st.S.ballot.items.some((x) => /Los Angeles/.test(col(x.id))), `${col('ca-governor')} | ${c.url}`);
+      }
+      {
+        // San Diego, row by row: the open row, the no-picks list, the figure, the menu and the bar all say what the row says.
+        withRows('CA', ['san-diego-ca'], ['sd-city-council-2']);
+        useFile('CA', ca);
+        const gov = it('ca-governor');
+        // The open row's results part (its folded endorsements below may name the Los Angeles Times; that's not a count).
+        const oh = txt(op.resultsHTML(gov, rm.resultOf(gov)));
+        st.S.ui.row = 'ca-governor';
+        const ob = op.openHTML(gov);
+        st.S.ui.row = null;
+        const f = rm.figure(), dotOf = (id) => f.rows.flatMap((r) => r.dots).find((d) => d.id === id);
+        const h = fig.figureHTML(), menu = txt(led.menuHTML('toc')), bar = txt(led.footResHTML());
+        check('results: San Diego, no picks: the open row, the list of where races stand, the figure and the dot line all read as the state’s page', /^This race’s count is on California’s page\. California results/.test(oh) && !/Los Angeles|64%/.test(oh) && ob.includes('data-res="link"') && ob.includes(`href="${stateUrl()}"`) && dotOf('ca-governor').kind === 'ln' && !dotOf('ca-governor').posted && f.posted === 1 && f.links > 0 && h.includes(`href="${stateUrl()}" target="_blank" rel="noopener" class="st-go">California results</a>`) && !/Los Angeles/.test(txt(h)) && rm.dotLine(gov) === 'California results', `${oh.slice(0, 160)} | ${rm.dotLine(gov)}`);
+        check('results: San Diego: the menu and the bar never name Los Angeles County, whose share this ballot doesn’t show; California’s refusal is said', !rm.ballotSources().some((x) => x.id === 'los-angeles-county-ca') && !/Los Angeles/.test(menu) && !/Los Angeles/.test(bar) && rm.footInfo().who === 'San Diego' && rm.sourceLines().includes('California Secretary of State isn’t letting us read its results. See its own page.') && /California offices On office sites/.test(menu), `${menu.slice(0, 300)} | ${bar}`);
+        st.S.b.picks['ca-governor'] = 'Xavier Becerra';
+        check('results: San Diego, a pick on it: never compared, the dot line keeps the state’s page', rm.compare(gov, rm.resultOf(gov)) === 'nc' && rm.figure().counts.nc === 1 && rm.dotLine(gov) === 'California results · your pick Becerra', rm.dotLine(gov));
+        // A statewide count of the state's own stays whole on any ballot; a race across county lines that isn't statewide
+        // (Board of Equalization District 3) keeps Los Angeles County's share as before.
+        const whole = { source: 'results-CA', status: 'counting', reporting: null, updated: null, url: 'https://electionresults.sos.ca.gov/', total_votes: 100, candidates: [{ name: 'Xavier Becerra', votes: 60, pct: 60 }, { name: 'Steve Hilton', votes: 40, pct: 40 }], final: null };
+        const wholeOver = { ...whole, slices: ca.items['ca-governor'].slices, missing: ['other counties'] };
+        check('results: a statewide race with the state’s own count, and a local race across county lines, are unchanged', rm.viewFor(gov, whole) === whole && rm.viewFor(gov, wholeOver) === wholeOver && !rm.sharesOnly(it('ca-boe-3'), ca.items['ca-boe-3']) && rm.viewFor(it('ca-boe-3'), ca.items['ca-boe-3']).source === 'los-angeles-county-ca');
+      }
+      {
+        // A statewide-only California ballot: the state's page, until an address lookup puts the voter in Los Angeles County.
+        withRows('CA', [], []);
+        useFile('CA', ca);
+        const before = col('ca-governor');
+        st.S.ui.addrCounty = 'Los Angeles';
+        const after = col('ca-governor');
+        st.S.ui.addrCounty = null;
+        check('results: a statewide-only ballot: the state’s page, and Los Angeles County’s share once the address lookup puts the voter there', before === 'California results' && after === 'Becerra 64% counting Los Angeles votes only', `${before} | ${after}`);
+      }
+      // Pennsylvania's governor, carried by Philadelphia and Allegheny: each county's own share on its own ballot.
+      withRows('PA', ['philadelphia-pa'], []);
+      useFile('PA', pa);
+      const phl = { col: col('pa-governor'), src: rm.resultOf(it('pa-governor')).source };
+      withRows('PA', ['pittsburgh-pa'], []);
+      useFile('PA', pa);
+      const pgh = { col: col('pa-governor'), src: rm.resultOf(it('pa-governor')).source, line: txt(op.resultsHTML(it('pa-governor'), rm.resultOf(it('pa-governor')))), who: rm.footInfo().who };
+      withRows('PA', [], []);
+      useFile('PA', pa);
+      const pas = col('pa-governor');
+      check('results: Pennsylvania’s governor: Philadelphia’s share on Philadelphia, Allegheny’s on Pittsburgh, the state’s page on a statewide-only ballot', phl.col === 'Shapiro 78% counting Philadelphia votes only' && phl.src === 'philadelphia-pa' && pgh.col === 'Shapiro 61% counting Allegheny votes only' && pgh.src === 'allegheny-pa' && /^Counting\. In Allegheny County’s count, Shapiro is ahead so far\./.test(pgh.line) && /Philadelphia County: Shapiro 78%/.test(pgh.line) && pgh.who === 'Allegheny' && pas === 'Pennsylvania results', `${phl.col} | ${pgh.col} | ${pas} | ${pgh.who}`);
+      st.S.ui.addrCounty = keepCounty;
+    }
     check('results copy: no em dashes, no all caps', !/—/.test(txt(fig.figureHTML()) + txt(views.planstrip.freshHTML())));
   } finally {
     globalThis.fetch = hadFetch;

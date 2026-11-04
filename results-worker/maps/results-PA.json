@@ -1,0 +1,46 @@
+{
+  "id": "results-PA",
+  "state": "PA",
+  "name": "Pennsylvania Department of State",
+  "county": "Pennsylvania",
+  "scope": "state",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "117",
+    "feed_name": "2026 General Election"
+  },
+  "guide": {
+    "fingerprint": null,
+    "made_from": null,
+    "locals": true,
+    "places": [
+      "state-PA",
+      "philadelphia-pa",
+      "pittsburgh-pa"
+    ]
+  },
+  "feed": {
+    "adapter": "pa_dos",
+    "base": "https://www.electionreturns.pa.gov",
+    "results_url": "https://www.electionreturns.pa.gov/",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent with 200 on Nov 3, 8:46 PM CT (capture round 1) and 10:20 PM CT (builder); Incapsula set cookies but did not block. The bare host redirects to www, so the map names www.",
+    "election_id_from": "The state's own election list (api/Reports/GetElectionList): Electionid 117, ElectionType G, \"2026 General Election\", 11/03/2026, ElectionStatus U. Id 117 is also the May primary (type P), so the map names the type too.",
+    "election_type": "G",
+    "offices": [
+      "11",
+      "12",
+      "13"
+    ],
+    "tz": "America/New_York"
+  },
+  "polls_close": "2026-11-04T01:00:00Z",
+  "count_closes": "2026-11-11T04:59:00Z",
+  "complete_marker": null,
+  "certify_by": "2026-11-23",
+  "official": null,
+  "contests": [],
+  "unmatched_feed": [],
+  "unmatched_guide": [],
+  "not_here": []
+}

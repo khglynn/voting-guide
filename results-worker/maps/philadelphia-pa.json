@@ -1,0 +1,43 @@
+{
+  "id": "philadelphia-pa",
+  "state": "PA",
+  "name": "Philadelphia City Commissioners",
+  "county": "Philadelphia",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "2026 General Election Results",
+    "feed_name": "2026 General Election Results"
+  },
+  "guide": {
+    "fingerprint": null,
+    "made_from": null,
+    "places": [
+      "philadelphia-pa"
+    ]
+  },
+  "feed": {
+    "adapter": "philadelphia",
+    "base": "https://philadelphiaresults.azurewebsites.us",
+    "results_url": "https://philadelphiaresults.azurewebsites.us/",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent with 200 on Nov 3, 8:46 PM CT (capture round 1) and 10:21 PM CT (builder; the statewide tab timed out once, then answered).",
+    "election_id_from": "The page's own heading, \"Unofficial 2026 General Election Results\" over \"November 3, 2026\" (vote.phila.gov/results/ frames this host). The page has no election id.",
+    "tabs": [
+      "QUE",
+      "CON",
+      "STS",
+      "STR"
+    ],
+    "tabs_note": "Statewide (STW) is left out: the governor's race comes only from the state source. State House (STR) is read at its first page; its second page is reached only by a form post.",
+    "tz": "America/New_York"
+  },
+  "polls_close": "2026-11-04T01:00:00Z",
+  "count_closes": "2026-11-11T04:59:00Z",
+  "complete_marker": null,
+  "certify_by": "2026-11-23",
+  "official": null,
+  "contests": [],
+  "unmatched_feed": [],
+  "unmatched_guide": [],
+  "not_here": []
+}

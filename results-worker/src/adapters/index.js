@@ -6,5 +6,9 @@ import * as clarity from './clarity.js';
 import * as harris from './harris.js';
 import * as tx_sos from './tx_sos.js';
 import * as dc from './dc.js';
+import * as pa_dos from './pa_dos.js';
+import * as philadelphia from './philadelphia.js';
+import * as denver from './denver.js';
+import * as boulder from './boulder.js';
 
-export const ADAPTERS = { clarity, harris, tx_sos, dc };
+export const ADAPTERS = { clarity, harris, tx_sos, dc, pa_dos, philadelphia, denver, boulder };

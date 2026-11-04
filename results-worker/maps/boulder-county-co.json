@@ -1,0 +1,37 @@
+{
+  "id": "boulder-county-co",
+  "state": "CO",
+  "name": "Boulder County Elections",
+  "county": "Boulder",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "2026 General Election",
+    "feed_name": "2026 General Election"
+  },
+  "guide": {
+    "fingerprint": null,
+    "made_from": null,
+    "places": [
+      "boulder-co"
+    ]
+  },
+  "feed": {
+    "adapter": "boulder",
+    "base": "https://electionresults.bouldercounty.gov",
+    "page": "https://electionresults.bouldercounty.gov/",
+    "results_url": "https://electionresults.bouldercounty.gov/",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent with 200 on Nov 3, 8:41 PM CT (capture round 1) and 10:23 PM CT (builder). The page is a static copy of election.boco.solutions/ElectionResults2026G/, which also answered 200.",
+    "election_id_from": "The page's own heading, \"2026 General Election\", \"November 3, 2026\", \"Unofficial Results\". The page has no election id.",
+    "tz": "America/Denver"
+  },
+  "polls_close": "2026-11-04T02:00:00Z",
+  "count_closes": "2026-11-13T06:59:00Z",
+  "complete_marker": null,
+  "certify_by": "2026-11-24",
+  "official": null,
+  "contests": [],
+  "unmatched_feed": [],
+  "unmatched_guide": [],
+  "not_here": []
+}

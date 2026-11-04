@@ -13,7 +13,7 @@
 import type { Contest, Item, ItemResult, ResultCand, ResultSlice, ResultsFile, ResultsSourceEntry, ResultsSource, Measure } from '../types';
 import { S } from '../state';
 import { isRCV, isMultiSeat, isMultiJudge, isPartisan, status, pageWalk, ranksOf, type SectionKey } from '../ballot';
-import { lineup, weighedIn } from './tally';
+import { lineup, agreed } from './tally';
 import { chipMembers, CHIPS, type ChipKey } from './lens';
 import { pickShort } from './labels';
 import { afterPolls, countyKey } from './plan';
@@ -560,8 +560,11 @@ export type CmpSel = { kind: 'mine' } | { kind: 'group'; key: ChipKey } | { kind
    with their picks" rule (bulk.ts planAgree: every source in the group that weighed in made the same pick; anything
    else is split). 'majority' takes the pick most of them made, a tie being split. */
 export const GROUP_RULE: 'agree' | 'majority' = 'agree';
-/* Whether this ballot has a pick of your own on a race the page shows. */
+/* Whether this ballot has a pick of your own on a race the page shows (what "Your picks" compares). */
 export const anyPick = (): boolean => !!S.ballot && shownItems().some((it) => picked(it));
+/* Whether you've made any choice at all on this ballot, finished or not: a pick, a skip, a seat of several, a ranking
+   started (Codex, Nov 4). "Make these my picks" is offered only without one, so it never overwrites your own work. */
+export const anyChoice = (): boolean => !!S.ballot && (Object.keys(S.b.picks || {}).length > 0 || Object.values(S.b.ranks || {}).some((r) => Array.isArray(r) && r.length > 0));
 /* What the card compares with now: what you chose this visit, else your picks when you have some, else nothing. */
 export function cmpSel(): CmpSel | null {
   const v = S.ui.cmp;
@@ -586,17 +589,17 @@ export function lensNames(it: Item, sel: CmpSel): string[] | 'split' | null {
   const members = chipMembers(S.ballot!, sel.key);
   if (!members.length) return null;
   const l = lineup(it, members);
-  if (!weighedIn(l).length) return null;
-  const groups = l.groups.filter((g) => g.choices.length);
-  if (!groups.length) return null;
-  let g = groups[0];
-  if (groups.length > 1 || l.both.length) {
-    if (GROUP_RULE !== 'majority' || groups.length < 2) return 'split';
-    const top = [...groups].sort((a, z) => z.sources.length - a.sources.length);
-    if (top[0].sources.length === top[1].sources.length) return 'split';
-    g = top[0];
+  let ch: string[];
+  const ag = agreed(l);
+  if (ag === null) return null;
+  if (ag !== 'split') ch = ag;
+  else {
+    // The majority rule counts every group, a group without a pick included; a tie, or a top group with no pick, is split.
+    if (GROUP_RULE !== 'majority' || l.groups.length < 2) return 'split';
+    const top = [...l.groups].sort((a, z) => z.sources.length - a.sources.length);
+    if (top[0].sources.length === top[1].sources.length || !top[0].choices.length) return 'split';
+    ch = top[0].choices;
   }
-  const ch = g.choices;
   if (isMeasureLike(it)) return ch.length === 1 && (ch[0] === 'YES' || ch[0] === 'NO') ? [ch[0]] : null;
   if (it.kind !== 'contest' || isRCV(it)) return null;
   const names = ch.filter((n) => it.candidates.some((c) => c.name === n));

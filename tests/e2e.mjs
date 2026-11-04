@@ -3691,7 +3691,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   const head = await text(page, '#vz');
   // No picks yet, so the summary is the list of where races stand (the dots and their key come with the first pick).
   const order = await page.evaluate(() => { const v = document.querySelector('#vz'); const l = v && v.querySelector('.st'); const pl = document.querySelector('.picks-line'); return !!(l && pl) && !!(v.compareDocumentPosition(pl) & 4); });
-  check('Results rows: the summary under "Your ballot": status word, its line, where races stand, then the endorsement line', /^Counting/.test(head) && /Election offices are still counting/.test(head) && order && reads >= 1, head.slice(0, 160));
+  check('Results rows: the summary under "Your ballot": status word, its line, where races stand, then the endorsement line', /^Counting/.test(head) && /Offices are still counting/.test(head) && order && reads >= 1, head.slice(0, 160));
   check('Results rows: the strip: "We checked" with the oldest of the offices’ reads, and Refresh', /We checked 9:41 PM CT\. Refresh/.test(await text(page, '#plan')), await text(page, '.plan-fresh'));
   check('Results rows: the bar’s results line: one line, the status word, Travis’s own progress words and update time, a Refresh icon', /^Counting · Travis 128 of 186 vote centers/.test(await text(page, '.foot-res .fr-line')) && /9:35 PM$/.test(await text(page, '.foot-res .fr-line')) && !!(await page.$('.foot-res .fr-rf[aria-label="Refresh results"]')) && /^On this ballot What’s next$/.test(await text(page, '.foot-in')) && (await page.evaluate(() => { const l = document.querySelector('.foot-res .fr-line'); return !!l && l.scrollWidth <= l.clientWidth + 1 && l.getBoundingClientRect().height < 44; })), await text(page, '.foot-res'));
   // No picks yet: where races stand, as a list, in place of the dots.
@@ -3734,7 +3734,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
     await tap(page, '#vz [data-act="cmp"][data-k="papers"]');
     const gh = await text(page, '#vz');
     const after = await page.evaluate(() => JSON.parse(localStorage.getItem('vg2')).ballots['TX|austin-tx'].picks['tx-us-house-37']);
-    check('Results rows: comparing with a group leads with its count and changes no pick', /Newspapers and guides agree on picks in \d+ races?:|No shared picks from newspapers and guides/.test(gh) && after === pickBefore && (await page.getAttribute('#vz [data-act="cmp"][data-k="papers"]', 'aria-pressed')) === 'true' && !(await page.$('#vz [data-act="cmp-take"]')), gh.slice(0, 200));
+    check('Results rows: comparing with a group leads with its count and changes no pick', /Newspapers and guides agree on picks in \d+ races?:|No shared picks from newspapers and guides/.test(gh) && after === pickBefore && (await page.getAttribute('#vz [data-act="cmp"][data-k="papers"]', 'aria-pressed')) === 'true', gh.slice(0, 200));
     await tap(page, '#vz [data-act="cmp"][data-k="papers"]');
     check('Results rows: tapping the chosen group again clears it: where races stand', !!(await page.$('#vz .st')) && (await page.getAttribute('#vz [data-act="cmp"][data-k="papers"]', 'aria-pressed')) === 'false');
   }

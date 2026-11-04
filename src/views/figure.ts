@@ -9,7 +9,7 @@
 import { S } from '../state';
 import { esc, load, save } from '../util';
 import { rowTitle } from '../model/labels';
-import { figure, countLine, splitLine, dotLine, checkedLine, sourceLines, R, resultsMode, resultsWaiting, anyPick, selName, type Dot, type Figure, type CmpSel } from '../model/results';
+import { figure, countLine, splitLine, dotLine, checkedLine, sourceLines, R, resultsMode, resultsWaiting, anyPick, anyChoice, selName, type Dot, type Figure, type CmpSel } from '../model/results';
 import { CHIPS, emptyNote, partiesOnBallot, chipMembers } from '../model/lens';
 import { sectionTitle, resColOf } from './ledger';
 import { ext } from './common';
@@ -80,8 +80,8 @@ function cmpHTML(f: Figure): string {
   ].join('');
   const prow = partyOpen && parties.length ? `<div class="cmp-parties" role="group" aria-label="A party">${parties.map((p) => `<button class="chip" data-act="cmp-party" data-p="${esc(p.party)}" aria-pressed="${!!sel && sel.kind === 'party' && sel.party === p.party}" data-fk="cmp-p-${esc(p.party)}">${esc(p.party)}</button>`).join('')}</div>` : '';
   // With a group or party chosen over picks of your own, say plainly what it doesn't do (GPT copy pass).
-  const own = !sel && !anyPick() ? '<p class="cmp-own"><button class="linkbtn" data-act="picks" data-fk="cmp-own">Or make your own picks</button></p>'
-    : sel && sel.kind !== 'mine' && anyPick() ? '<p class="cmp-own cmp-hint">Your picks don’t change. Tap it again to clear.</p>' : '';
+  const own = !sel && !anyChoice() ? '<p class="cmp-own"><button class="linkbtn" data-act="picks" data-fk="cmp-own">Or make your own picks</button></p>'
+    : sel && sel.kind !== 'mine' && anyChoice() ? '<p class="cmp-own cmp-hint">Your picks don’t change. Tap it again to clear.</p>' : '';
   return `<div class="cmp" role="group" aria-labelledby="cmp-l"><p class="cmp-l" id="cmp-l">Compare with</p><div class="cmp-chips">${chips}</div>${prow}${own}</div>`;
 }
 /* The answer for a choice: the count line as the headline, the dot figure by section with its key in one line above,
@@ -102,7 +102,7 @@ function selHTML(f: Figure, sel: CmpSel): string {
       ${open ? listHTML(dots) : ''}`;
   }).join('');
   const split = splitLine(f);
-  const take = sel.kind !== 'mine' && !anyPick() ? `<div class="cmp-take"><button class="mini dark" data-act="cmp-take" data-fk="cmp-take">Make these my picks</button><span>You can undo it.</span></div>` : '';
+  const take = sel.kind !== 'mine' && !anyChoice() ? `<div class="cmp-take"><button class="mini dark" data-act="cmp-take" data-fk="cmp-take">Make these my picks</button><span>You can undo it.</span></div>` : '';
   const notes = f.notes.map((n) => `<p class="vz-note">${esc(n)}</p>`).join('');
   return `<p class="vz-sum vz-head">${esc(countLine(f))}</p>${split ? `<p class="vz-more">${esc(split)}</p>` : ''}
     ${keyHTML(f)}<div class="vz-fig">${rows}</div>${take}${notes}`;

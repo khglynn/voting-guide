@@ -2115,6 +2115,17 @@ function roundTrip(name, stCode, places, mutate) {
       withRows('NY', ['nyc-manhattan-ny'], []);
       useFile('NY', FX('NY'));
     }
+    {
+      // Codex, Nov 4: the comparison and the fill share one agreement rule: a group without a pick (a board split) makes
+      // the race split, never "agreed"; and "Make these my picks" waits for a ballot with no choice of yours at all.
+      const tally = await load('/src/model/tally.ts');
+      const g1 = { label: 'No', choices: ['NO'], sources: [{ id: 'a' }] }, g2 = { label: 'Noted', choices: [], sources: [{ id: 'b' }] };
+      check('results: one agreement rule: a group with no pick beside a group with one is split', tally.agreed({ groups: [g1, g2], both: [] }) === 'split' && JSON.stringify(tally.agreed({ groups: [g1], both: [] })) === '["NO"]' && tally.agreed({ groups: [g2], both: [] }) === null && tally.agreed({ groups: [], both: [] }) === null);
+      const keepB = st.S.b;
+      st.S.b = { ...keepB, picks: {}, ranks: { 'multnomah-chair': ['Shannon Singleton'] } };
+      check('results: a ranking started counts as a choice of yours, so "Make these my picks" isn’t offered', rm.anyChoice() && !rm.anyPick());
+      st.S.b = keepB;
+    }
     check('results copy: no em dashes, no all caps', !/—/.test(txt(fig.figureHTML()) + txt(views.planstrip.freshHTML())));
   } finally {
     globalThis.fetch = hadFetch;

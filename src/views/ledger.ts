@@ -849,7 +849,7 @@ function resMenuHTML(where: 'toc' | 'rail'): string {
       : [p ? `“${p}”` : '', x.updated ? `Updated ${fmtTime(x.updated)}` : 'No update time given'].filter(Boolean).join(' · ');
     const banner = labelWords(x).trim();
     const ck = x.fetched ? `We checked ${fmtTime(x.fetched).replace(/ [A-Z]T$/, '')}` : '';
-    return `<li><span class="nv-sr"><b>${esc(x.name)}</b>${ext(page, 'Results', 'nv-go')}</span><span>${esc(said)}${banner ? ` ${esc(banner)}` : ''}${ck ? ` · ${esc(ck)}` : ''}</span></li>`;
+    return `<li><span class="nv-sr"><b>${esc(x.name)}</b>${ext(page, 'Results', 'nv-go')}</span><span>${banner ? `${esc(banner)} · ` : ''}${esc(said)}${ck ? ` · ${esc(ck)}` : ''}</span></li>`;
   }).join('');
   const rest = offices.filter((o) => !used.has(o.id));
   const srcList = `<h3 class="nv-sh" id="${where}-src" tabindex="-1">Where these numbers come from</h3>${srcRows ? `<ul class="nv-srcs">${srcRows}</ul>` : ''}`;

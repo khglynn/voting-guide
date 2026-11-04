@@ -24,9 +24,9 @@ import { messages, shareData, GUIDE_URL, SHARE_TITLE } from './views/pass';
 import { nextUp, sectionTally, sectionFolded, hiddenByOnly, qId } from './views/ledger';
 import { sourceListHTML, matchWords } from './views/lens';
 import { whatIfBody, wiMatchWords } from './views/planstrip';
-import { refreshResults } from './results';
+import { refreshResults, repaintResults } from './results';
 import { figureHTML, figHidden, setFigHidden } from './views/figure';
-import { hideDecidedNow, cmpSel, anyPick } from './model/results';
+import { hideDecidedNow, cmpSel, anyPick, anyChoice } from './model/results';
 import { chipMembers } from './model/lens';
 
 export type Act = (d: DOMStringMap, el: HTMLElement) => void | Promise<void>;
@@ -1057,7 +1057,7 @@ A['cmp-party'] = (d) => {
    become yours, then where they agree) or the party (its candidates), with the usual Undo. */
 A['cmp-take'] = () => {
   const sel = cmpSel();
-  if (!sel || sel.kind === 'mine' || anyPick()) return;
+  if (!sel || sel.kind === 'mine' || anyChoice()) return;
   const b = B();
   let sp: SetupPlan;
   if (sel.kind === 'group') { setSources(b, chipMembers(b, sel.key).map((e) => e.id)); const a = planAgree(); sp = { party: null, agree: a, fills: a.fills }; } else { setParty(b, sel.party); const p = planParty(sel.party); sp = { party: p, agree: emptyPlan(), fills: p.fills }; }
@@ -1065,7 +1065,8 @@ A['cmp-take'] = () => {
   S.ui.cmp = undefined;
   if (n) { S.ui.bulk = String(n); S.ui.bulkWhy = fillWhy(sp); S.ui.row = null; S.ui.keep = null; }
   persist();
-  anchored(() => render(['ballot', 'bar']));
+  // The rows and the card repaint; with the address form open, row by row, so what's typed there stays (Codex).
+  repaintResults();
   focusFk('vz-h');
   if (n) fillToast(fillHead(n, sp), setupPlan(sp));
 };

@@ -17,7 +17,7 @@ import { runTick } from '../src/tick.js';
 import { nextEntry, dueSources, clampElectionNight, previewFloor, TICK_LIMIT } from '../src/schedule.js';
 import { MAPS } from '../src/maps.gen.js';
 import { ADAPTERS } from '../src/adapters/index.js';
-import { get } from '../src/fetch.js';
+import { get, visible } from '../src/fetch.js';
 import { gzipSync } from 'node:zlib';
 import { sourceSlices, buildStateFile } from '../src/merge.js';
 
@@ -396,4 +396,22 @@ test('Pennsylvania: a refusal on any request wins over a plain error on another,
   const e = await pa.read({ fetch: fakeFetch({ ...PA_ROUTES, GetElectionList: { status: 500, body: 'oops' } }), map });
   assert.equal(e.verdict, 'error', 'a plain error alone still backs off and retries');
   assert.equal((await pa.read({ fetch: fakeFetch(PA_ROUTES), map })).verdict, 'ok');
+});
+
+test('fetch: a hostile or broken error page (10,000 unclosed <script openers, or "<" with no ">") is judged in well under 100 ms', async () => {
+  const pages = {
+    scripts: `<html><body>${'<script>x'.repeat(10_000)}`,
+    styles: `${'<style a'.repeat(10_000)}<p>Please complete the CAPTCHA</p>`,
+    brackets: '<'.repeat(150_000),
+    titles: '<title'.repeat(30_000),
+  };
+  for (const [name, body] of Object.entries(pages)) {
+    const t0 = performance.now();
+    const r = await get(fakeFetch({ x: { status: 503, body } }), 'https://results.example/x', { expect: 'html' });
+    const ms = performance.now() - t0;
+    assert.ok(ms < 100, `${name}: ${ms.toFixed(1)} ms`);
+    assert.equal(r.verdict, 'error', `${name}: an unclosed script or style hides the rest, so this is a plain error`);
+  }
+  assert.equal(visible('<p>a</p><script>var b = "captcha";</script><style>.c{}</style><p>Please complete the CAPTCHA</p>').replace(/\s+/g, ' ').trim(), 'a Please complete the CAPTCHA');
+  assert.equal(visible('ok <SCRIPT src="x">unclosed').trim(), 'ok');
 });

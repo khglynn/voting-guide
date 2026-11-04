@@ -60,15 +60,63 @@ const CHALLENGE_TITLE = /just a moment|attention required|captcha|human verifica
 const CHALLENGE_WORDS = /\bcaptcha\b|human verification|confirm you are (?:a )?human|verify you are (?:a )?human|are you a robot/i;
 /* What a reader of an error page would see: no scripts, styles or tags. An ordinary 503 or 404 from a site whose
    template loads reCAPTCHA for a contact form (`google.com/recaptcha/api.js`, `class="g-recaptcha"`) is not a bot check
-   and must stay an error that backs off, never a refusal that stops the source (pre-deploy review, Nov 3). */
-const visible = (s) => String(s).slice(0, 200_000).replace(/<(script|style)\b[\s\S]*?<\/\1\s*>/gi, ' ').replace(/<[^>]*>/g, ' ');
+   and must stay an error that backs off, never a refusal that stops the source (pre-deploy review, Nov 3).
+   Linear passes only, never a backtracking regex: a hostile or broken page (thousands of unclosed "<script" openers,
+   or "<" with no ">") must not burn the tick's CPU (security review, Nov 3). */
+export function visible(s) {
+  const src = String(s).slice(0, 200_000);
+  const low = src.toLowerCase();
+  let kept = '';
+  let i = 0;
+  let nextScript = low.indexOf('<script'), nextStyle = low.indexOf('<style');
+  for (;;) {
+    if (nextScript >= 0 && nextScript < i) nextScript = low.indexOf('<script', i);
+    if (nextStyle >= 0 && nextStyle < i) nextStyle = low.indexOf('<style', i);
+    const at = nextScript < 0 ? nextStyle : nextStyle < 0 ? nextScript : Math.min(nextScript, nextStyle);
+    if (at < 0) { kept += src.slice(i); break; }
+    kept += `${src.slice(i, at)} `;
+    const close = low.indexOf(at === nextScript ? '</script' : '</style', at);
+    const end = close < 0 ? -1 : low.indexOf('>', close);
+    if (end < 0) break; // never closed: the rest is script, dropped
+    i = end + 1;
+  }
+  return stripTags(kept);
+}
+
+/* Tags out, text kept; a "<" with no ">" after it ends the text. */
+function stripTags(s) {
+  let out = '';
+  let i = 0;
+  for (;;) {
+    const lt = s.indexOf('<', i);
+    if (lt < 0) { out += s.slice(i); break; }
+    out += `${s.slice(i, lt)} `;
+    const gt = s.indexOf('>', lt);
+    if (gt < 0) break;
+    i = gt + 1;
+  }
+  return out;
+}
+
+/* A page's <title> text, by indexOf, for the same reason. */
+function titleOf(body) {
+  const src = String(body).slice(0, 200_000);
+  const low = src.toLowerCase();
+  const open = low.indexOf('<title');
+  if (open < 0) return '';
+  const gt = low.indexOf('>', open);
+  if (gt < 0) return '';
+  const close = low.indexOf('</title', gt);
+  if (close < 0 || close - gt - 1 > 200) return '';
+  return src.slice(gt + 1, close);
+}
 export function challengeOf(res, body = '', { page = false, method = 'GET' } = {}) {
   // A bare 405 is a bot check on a GET (Clarity's WAF); on the Oregon form POST it can be a real "method not allowed".
   if (res.status === 405 && method === 'GET') return 'HTTP 405, a bot check';
   const waf = res.headers.get('x-amzn-waf-action');
   if (waf) return `HTTP ${res.status}, a bot check (x-amzn-waf-action: ${waf})`;
   if (/challenge/i.test(res.headers.get('cf-mitigated') || '')) return `HTTP ${res.status}, a bot check (cf-mitigated: challenge)`;
-  const title = (String(body).match(/<title[^>]*>([\s\S]{0,200}?)<\/title>/i) || [])[1] || '';
+  const title = titleOf(body);
   if (CHALLENGE_TITLE.test(title)) return `HTTP ${res.status}, a bot check page came back ("${title.replace(/\s+/g, ' ').trim().slice(0, 60)}")`;
   if (!page && body && CHALLENGE_WORDS.test(visible(body).slice(0, 50_000))) return `HTTP ${res.status}, a bot check page came back`;
   return null;

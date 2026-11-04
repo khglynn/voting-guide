@@ -1,0 +1,415 @@
+{
+  "id": "fulton-ga",
+  "state": "GA",
+  "name": "Fulton County, GA",
+  "county": "Fulton",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "127295",
+    "feed_name": "November 3, 2026 - General Primary -Nonpartisan General Special Election"
+  },
+  "guide": {
+    "fingerprint": "85ad179670bd1574",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:34:24.955Z",
+    "places": [
+      "atlanta-ga"
+    ]
+  },
+  "feed": {
+    "adapter": "clarity",
+    "base": "https://results.enr.clarityelections.com/GA/Fulton",
+    "results_url": "https://results.enr.clarityelections.com/GA/Fulton/127295/",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent on Nov 3, about 10:20 PM CT (current_ver.txt 200; read one request every 30 s, JSON files only).",
+    "election_id_from": "Fulton's \"November 3 Election Results\" news page (https://fultoncountyga.gov/News/2026/11/03/November-3-Election-Results) links Clarity 127295 (workbench registry row fulton-ga, capture round 1, Nov 3); Clarity's own electionsettings for 127295.",
+    "tz": "America/New_York"
+  },
+  "polls_close": "2026-11-04T00:00:00Z",
+  "count_closes": "2026-11-07T04:59:00Z",
+  "complete_marker": {
+    "flag": "final_flag",
+    "words": "Clarity's final-upload flag (electiondetails.chkisfinalupload)."
+  },
+  "certify_by": "2026-11-09",
+  "official": null,
+  "contests": [
+    {
+      "feed_id": "48",
+      "feed_name": "County Commissioner - District 3",
+      "item": "fulton-commission-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Paul Burton (Rep)": "Paul Burton",
+        "Jodi Merriday (Dem)": "Jodi Merriday"
+      },
+      "reaches": [
+        "Fulton"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "54",
+      "feed_name": "Special County Commissioner - District 4",
+      "item": "fulton-commission-4-special",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Natalie Hall": "Natalie Hall",
+        "Rohit Malhotra (Dem)": "Rohit Malhotra",
+        "Karen Rene": "Karen Rene",
+        "Aaron A. Sampson, Jr. (Dem)": "Aaron A. Sampson Jr"
+      },
+      "reaches": [
+        "Fulton"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "49",
+      "feed_name": "County Commissioner - District 5",
+      "item": "fulton-commission-5",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Tiffany A. Henyard (Rep)": "Tiffany A. Henyard",
+        "Helen Zenobia Willis (Dem)": "Helen Zenobia Willis"
+      },
+      "reaches": [
+        "Fulton"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "46",
+      "feed_name": "County Commission Chairperson",
+      "item": "fulton-commission-chair",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Eric J. Tatum (Rep)": "Eric J. Tatum",
+        "Mo Ivory (Dem)": "Mo Ivory"
+      },
+      "reaches": [
+        "Fulton"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "55",
+      "feed_name": "Special ESPLOST",
+      "item": "fulton-esplost-2026",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes": "yes",
+        "No": "no"
+      },
+      "reaches": [
+        "Fulton"
+      ],
+      "item_url": null,
+      "pass_threshold": "Simple majority of Fulton County voters"
+    },
+    {
+      "feed_id": "50",
+      "feed_name": "Fulton County Soil and Water Conservation District Supervisor",
+      "item": "fulton-soil-water",
+      "kind": "multi",
+      "seats": 2,
+      "choices": {
+        "Zane Placie": "Zane Placie",
+        "Walter S. Rekuc, Jr. (I)": "Walter S. Rekuc Jr.",
+        "Jason Ulseth (I)": "Jason Ulseth"
+      },
+      "reaches": [
+        "Fulton"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "31",
+      "feed_name": "State House of Representatives - District 53",
+      "item": "ga-hd-53",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Deborah Silcox (I)(Rep)": "Deborah Silcox",
+        "Beth Fuller (Dem)": "Beth Fuller"
+      },
+      "reaches": [
+        "Fulton",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "32",
+      "feed_name": "State House of Representatives - District 54",
+      "item": "ga-hd-54",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Greg Miller (Rep)": "Greg Miller",
+        "Betsy Holland (I)(Dem)": "Betsy Holland"
+      },
+      "reaches": [
+        "Fulton",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "33",
+      "feed_name": "State House of Representatives - District 55",
+      "item": "ga-hd-55",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Samuel S. Lenaeus (Rep)": "Samuel S. Lenaeus",
+        "Inga S. Willis (I)(Dem)": "Inga S Willis"
+      },
+      "reaches": [
+        "Fulton",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "34",
+      "feed_name": "State House of Representatives - District 56",
+      "item": "ga-hd-56",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Bryce Berry (I)(Dem)": "Bryce Berry"
+      },
+      "reaches": [
+        "Fulton",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "35",
+      "feed_name": "State House of Representatives - District 57",
+      "item": "ga-hd-57",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Helmut Lucero Love (Rep)": "Helmut Lucero Love",
+        "Stacey Evans (I)(Dem)": "Stacey Evans"
+      },
+      "reaches": [
+        "Fulton",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "36",
+      "feed_name": "State House of Representatives - District 58",
+      "item": "ga-hd-58",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Torrey Balam (Rep)": "Torrey Balam",
+        "Mathewos Samson (Dem)": "Mathewos Samson"
+      },
+      "reaches": [
+        "Fulton",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "37",
+      "feed_name": "State House of Representatives - District 59",
+      "item": "ga-hd-59",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Devanta ''Sully'' Sullivan (Rep)": "Devanta \"Sully\" Sullivan",
+        "Phil A. Olaleye (I)(Dem)": "Phil A. Olaleye"
+      },
+      "reaches": [
+        "Fulton",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "38",
+      "feed_name": "State House of Representatives - District 60",
+      "item": "ga-hd-60",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Sheila Jones (I)(Dem)": "Sheila Jones"
+      },
+      "reaches": [
+        "Fulton",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "39",
+      "feed_name": "State House of Representatives - District 61",
+      "item": "ga-hd-61",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Damita Bishop (Rep)": "Damita Bishop",
+        "Mekyah McQueen (I)(Dem)": "Mekyah McQueen"
+      },
+      "reaches": [
+        "Fulton",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "40",
+      "feed_name": "State House of Representatives - District 62",
+      "item": "ga-hd-62",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Kenn Collier (Dem)": "Kenn Collier"
+      },
+      "reaches": [
+        "Fulton",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "41",
+      "feed_name": "State House of Representatives - District 63",
+      "item": "ga-hd-63",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Kim Schofield (I)(Dem)": "Kim Schofield"
+      },
+      "reaches": [
+        "Fulton",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "18",
+      "feed_name": "State Senate - District 35",
+      "item": "ga-sd-35",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jaha V. Howard (I)(Dem)": "Jaha V. Howard"
+      },
+      "reaches": [
+        "Fulton",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "19",
+      "feed_name": "State Senate - District 36",
+      "item": "ga-sd-36",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Katie Corkren (Rep)": "Katie Corkren",
+        "Nan Grogan Orrock (I)(Dem)": "Nan Grogan Orrock"
+      },
+      "reaches": [
+        "Fulton",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "20",
+      "feed_name": "State Senate - District 38",
+      "item": "ga-sd-38",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Eric Helvy (Rep)": "Eric Helvy",
+        "Rashaun Kemp (I)(Dem)": "Rashaun Kemp"
+      },
+      "reaches": [
+        "Fulton",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "21",
+      "feed_name": "State Senate - District 39",
+      "item": "ga-sd-39",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "John F. Guest, Jr. (Rep)": "John F. Guest, Jr.",
+        "Sonya Halpern (I)(Dem)": "Sonya Halpern"
+      },
+      "reaches": [
+        "Fulton",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "12",
+      "feed_name": "US House of Representatives - District 5",
+      "item": "ga-us-house-5",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "John ''Bongo'' Salvesen (Rep)": "John \"Bongo\" Salvesen",
+        "Nikema Williams (I)(Dem)": "Nikema Williams"
+      },
+      "reaches": [
+        "Fulton",
+        "DeKalb",
+        "Clayton",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "13",
+      "feed_name": "US House of Representatives - District 6",
+      "item": "ga-us-house-6",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Kevin E. Martin (Rep)": "Kevin E. Martin",
+        "Lucy McBath (I)(Dem)": "Lucy McBath"
+      },
+      "reaches": [
+        "Fulton",
+        "Cobb",
+        "Douglas",
+        "other counties"
+      ],
+      "item_url": null
+    }
+  ],
+  "unmatched_guide": [],
+  "unmatched_feed": [],
+  "not_here": [
+    "dekalb-commission-2",
+    "dekalb-commission-3",
+    "dekalb-commission-7",
+    "dekalb-esplost-vii",
+    "dekalb-soil-water",
+    "ga-hd-84",
+    "ga-hd-89",
+    "ga-hd-90",
+    "ga-sd-44"
+  ]
+}

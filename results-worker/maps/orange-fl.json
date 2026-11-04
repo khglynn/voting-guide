@@ -1,0 +1,492 @@
+{
+  "id": "orange-fl",
+  "state": "FL",
+  "name": "Orange County, FL",
+  "county": "Orange",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "127356",
+    "feed_name": "2026 General Election"
+  },
+  "guide": {
+    "fingerprint": "42f2840255baaad7",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:34:24.313Z",
+    "places": [
+      "orlando-fl"
+    ]
+  },
+  "feed": {
+    "adapter": "clarity",
+    "base": "https://results.voteorangefl.gov/FL/Orange",
+    "results_url": "https://results.voteorangefl.gov/FL/Orange/127356/web.345435/#/summary",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent on Nov 3, about 10:20 PM CT (current_ver.txt 200; read one request every 30 s, JSON files only).",
+    "election_id_from": "voteorangefl.gov/election-results/ links election 127356 (workbench registry row orange-fl, capture round 1, Nov 3; not the primary's 127178); Clarity's own electionsettings for 127356.",
+    "tz": "America/New_York"
+  },
+  "polls_close": "2026-11-04T00:00:00Z",
+  "count_closes": "2026-11-14T04:59:00Z",
+  "complete_marker": {
+    "flag": "final_flag",
+    "words": "Clarity's final-upload flag (electiondetails.chkisfinalupload). Orange's page says \"Unofficial Results\" tonight."
+  },
+  "certify_by": "2026-11-16",
+  "official": null,
+  "contests": [
+    {
+      "feed_id": "0022",
+      "feed_name": "Circuit Judge, 9th Judicial, Group 1",
+      "item": "fl-9th-circuit-group-1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Temika Hampton-Johnson": "Temika Hampton-Johnson",
+        "Charles Hart": "Charles Hart",
+        "Over Votes": "__other",
+        "Under Votes": "__other"
+      },
+      "reaches": [
+        "Orange",
+        "Osceola"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0013",
+      "feed_name": "State Representative, District 35",
+      "item": "fl-house-35",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Erika Booth": "Erika Booth",
+        "Eric Gray": "Eric Gray",
+        "Over Votes": "__other",
+        "Under Votes": "__other"
+      },
+      "reaches": [
+        "Orange",
+        "other counties",
+        "Osceola"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0014",
+      "feed_name": "State Representative, District 37",
+      "item": "fl-house-37",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Robert Prater": "Robert Prater",
+        "Jane Aman": "Jane Aman",
+        "Over Votes": "__other",
+        "Under Votes": "__other"
+      },
+      "reaches": [
+        "Orange",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0015",
+      "feed_name": "State Representative, District 39",
+      "item": "fl-house-39",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Doug Bankson": "Doug Bankson",
+        "Jarod Fox": "Jarod Fox",
+        "Over Votes": "__other",
+        "Under Votes": "__other"
+      },
+      "reaches": [
+        "Orange",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0016",
+      "feed_name": "State Representative, District 40",
+      "item": "fl-house-40",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Tuan Le": "Tuan Le",
+        "Ra'Shon Young": "Ra'Shon Young",
+        "Over Votes": "__other",
+        "Under Votes": "__other"
+      },
+      "reaches": [
+        "Orange",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0017",
+      "feed_name": "State Representative, District 42",
+      "item": "fl-house-42",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Bonnie Jackson": "Bonnie Jackson",
+        "Felipe Sousa Lazaballet": "Felipe Sousa Lazaballet",
+        "Over Votes": "__other",
+        "Under Votes": "__other"
+      },
+      "reaches": [
+        "Orange",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0018",
+      "feed_name": "State Representative, District 43",
+      "item": "fl-house-43",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jorge Malavet": "Jorge Malavet",
+        "Samuel Vilchez Santiago": "Samuel Vilchez Santiago",
+        "Over Votes": "__other",
+        "Under Votes": "__other"
+      },
+      "reaches": [
+        "Orange",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0019",
+      "feed_name": "State Representative, District 45",
+      "item": "fl-house-45",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Erin Huntley": "Erin Huntley",
+        "Leonard Spencer": "Leonard Spencer",
+        "Over Votes": "__other",
+        "Under Votes": "__other"
+      },
+      "reaches": [
+        "Orange",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0020",
+      "feed_name": "Clerk of Courts",
+      "item": "fl-orange-clerk",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Roberta Walton Johnson": "Roberta Walton Johnson",
+        "Terrell Thomas": "Terrell Thomas",
+        "Over Votes": "__other",
+        "Under Votes": "__other"
+      },
+      "reaches": [
+        "Orange"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0024",
+      "feed_name": "County Commissioner, District 2",
+      "item": "fl-orange-commission-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Kamia Brown": "Kamia Brown",
+        "Mike Crabb": "Mike Crabb",
+        "Over Votes": "__other",
+        "Under Votes": "__other"
+      },
+      "reaches": [
+        "Orange"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0025",
+      "feed_name": "County Commissioner, District 4",
+      "item": "fl-orange-commission-4",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Brian Jones": "Brian Jones",
+        "Johanna Lopez": "Johanna Lopez",
+        "Write-in": "__other",
+        "Over Votes": "__other",
+        "Under Votes": "__other"
+      },
+      "reaches": [
+        "Orange"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0026",
+      "feed_name": "County Commissioner, District 6",
+      "item": "fl-orange-commission-6",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Lawanna Gelzer": "Lawanna Gelzer",
+        "Michael 'Mike' Scott": "Michael \"Mike\" Scott",
+        "Over Votes": "__other",
+        "Under Votes": "__other"
+      },
+      "reaches": [
+        "Orange"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0027",
+      "feed_name": "County Commissioner, District 7",
+      "item": "fl-orange-commission-7",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Patricia Rumph": "Patricia Rumph",
+        "Vicki Vargo": "Vicki Vargo",
+        "Over Votes": "__other",
+        "Under Votes": "__other"
+      },
+      "reaches": [
+        "Orange"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0028",
+      "feed_name": "County Commissioner, District 8",
+      "item": "fl-orange-commission-8",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jeannette Quinones Hernandez": "Jeannette Quinones Hernandez",
+        "Victor M.Torres Jr.": "Victor M. Torres Jr.",
+        "Over Votes": "__other",
+        "Under Votes": "__other"
+      },
+      "reaches": [
+        "Orange"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0023",
+      "feed_name": "County Mayor",
+      "item": "fl-orange-mayor",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Chris Messina": "Chris Messina",
+        "Tiffany Moore Russell": "Tiffany Moore Russell",
+        "Over Votes": "__other",
+        "Under Votes": "__other"
+      },
+      "reaches": [
+        "Orange"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0037",
+      "feed_name": "School Board Question",
+      "item": "fl-orange-ocps-millage",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes for Approval": "yes",
+        "No for Rejection": "no",
+        "Over Votes": "__other",
+        "Under Votes": "__other"
+      },
+      "reaches": [
+        "Orange"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "0029",
+      "feed_name": "School Board Member, District 3",
+      "item": "fl-orange-school-board-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Diana Moore": "Diana Moore",
+        "Susanne Peña": "Susanne Peña",
+        "Over Votes": "__other",
+        "Under Votes": "__other"
+      },
+      "reaches": [
+        "Orange"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0030",
+      "feed_name": "Soil and Water, District 1",
+      "item": "fl-orange-soil-water-1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Quinnie Perez": "Quinnie Perez",
+        "Vicente Rafael Perez Carreno": "Vicente Rafael Perez Carreno",
+        "Doug Sahr": "Doug Sahr",
+        "Over Votes": "__other",
+        "Under Votes": "__other"
+      },
+      "reaches": [
+        "Orange"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0031",
+      "feed_name": "Soil and Water, District 3",
+      "item": "fl-orange-soil-water-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Chuck Drake": "Chuck Drake",
+        "Erik LaMont Melear": "Erik LaMont Melear",
+        "José Antonio Rodriguez": "José Antonio Rodriguez",
+        "Over Votes": "__other",
+        "Under Votes": "__other"
+      },
+      "reaches": [
+        "Orange"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0032",
+      "feed_name": "Soil and Water, District 5",
+      "item": "fl-orange-soil-water-5",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Zack Green": "Zack Green",
+        "Jimm Middleton": "Jimm Middleton",
+        "Over Votes": "__other",
+        "Under Votes": "__other"
+      },
+      "reaches": [
+        "Orange"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0012",
+      "feed_name": "State Senator, District 10",
+      "item": "fl-senate-10",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jason Brodeur": "Jason Brodeur",
+        "John Lowndes": "John Lowndes",
+        "Over Votes": "__other",
+        "Under Votes": "__other"
+      },
+      "reaches": [
+        "Orange",
+        "Seminole",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0007",
+      "feed_name": "U.S. Congress, District 11",
+      "item": "fl-us-house-11",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Joe Strada": "Joe Strada",
+        "James Pericola": "James Pericola",
+        "Ralph Groves": "Ralph Groves",
+        "Over Votes": "__other",
+        "Under Votes": "__other"
+      },
+      "reaches": [
+        "Orange",
+        "Lake",
+        "Sumter",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0005",
+      "feed_name": "U.S. Congress, District 8",
+      "item": "fl-us-house-8",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Mike Haridopolos": "Mike Haridopolos",
+        "Jennifer Jenkins": "Jennifer Jenkins",
+        "Over Votes": "__other",
+        "Under Votes": "__other"
+      },
+      "reaches": [
+        "Orange",
+        "Brevard",
+        "Indian River",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0006",
+      "feed_name": "U.S. Congress, District 9",
+      "item": "fl-us-house-9",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Dan Green": "Dan Green",
+        "Darren Soto": "Darren Soto",
+        "Over Votes": "__other",
+        "Under Votes": "__other"
+      },
+      "reaches": [
+        "Orange",
+        "Osceola",
+        "Polk",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0033",
+      "feed_name": "Vista Lakes CDD Seat 3",
+      "item": "fl-vista-lakes-cdd-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Bennie Hichez": "Bennie Hichez",
+        "Frank J. Sebestyen": "Frank J. Sebestyen",
+        "Over Votes": "__other",
+        "Under Votes": "__other"
+      },
+      "reaches": [
+        "Orange"
+      ],
+      "item_url": null
+    }
+  ],
+  "unmatched_guide": [],
+  "unmatched_feed": [],
+  "not_here": [
+    "fl-us-house-10"
+  ]
+}

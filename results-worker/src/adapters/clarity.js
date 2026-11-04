@@ -8,11 +8,20 @@ import { get } from '../fetch.js';
 import { parseUsTime, isoDate, hasProgressCount } from '../util.js';
 
 /* The source's own banner words, as plain text: "Early Voting Totals Only" (Dallas, 7 PM), "Unofficial Results".
-   A banner holding a progress count is left out (see hasProgressCount). */
-const plain = (h) => String(h || '').replace(/<[^>]*>/g, ' ').replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
-function labels(ps = {}) {
+   A banner holding a progress count is left out (see hasProgressCount).
+   Colorado's state header (Nov 3) is "Unofficial Results" followed by a whole pasted HTML page (a 7A table), so a
+   header is cut where a pasted document starts. Its other header still reads "UNOFFICIAL RESULTS June 28, 2016 Primary
+   Election": a label that names a year other than the election's is a leftover and is dropped. Repeats that differ only
+   in capitals (Fulton's "Unofficial Results" and "UNOFFICIAL RESULTS") show once. */
+const plain = (h) => String(h || '').split(/<!doctype|<html/i)[0].replace(/<[^>]*>/g, ' ').replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+export function labels(ps = {}, year = null) {
   const out = [];
-  for (const v of [ps.web?.header, ps['global settings']?.header, ps['global settings']?.['mobile header']]) { const t = plain(v); if (t && t.length <= 160 && !hasProgressCount(t) && !out.includes(t)) out.push(t); }
+  for (const v of [ps.web?.header, ps['global settings']?.header, ps['global settings']?.['mobile header']]) {
+    const t = plain(v);
+    if (!t || t.length > 160 || hasProgressCount(t) || out.some((o) => o.toLowerCase() === t.toLowerCase())) continue;
+    if (year && (t.match(/\b(19|20)\d\d\b/g) || []).some((y) => y !== String(year))) continue;
+    out.push(t);
+  }
   return out;
 }
 
@@ -40,6 +49,10 @@ export async function read({ fetch, map, prevToken = null }) {
   for (const r of [s, e]) if (r.verdict !== 'ok') return { verdict: r.verdict, error: r.error, status: r.status, url: r.url };
   if (!Array.isArray(s.json)) return { verdict: 'error', error: 'summary.json was not a list of contests', url: s.url };
 
+  // A state's Clarity site counts counties, not precincts, in each contest's PR and TP (Colorado, Nov 3: the Senate's TP
+  // is 64, the number of counties; HD-23's is 1), while its electionsettings totals are still precincts (4,297).
+  // Its map says so with `feed.contest_unit: "counties"`.
+  const unit = map.feed.contest_unit || 'precincts';
   const settings = e.json?.settings || {};
   const details = settings.electiondetails || {};
   const totalPr = Number(settings.totalprecinctsreporting || e.json?.stateprecinctsparticipating || 0);
@@ -59,7 +72,7 @@ export async function read({ fetch, map, prevToken = null }) {
       // "0 of 210 precincts reporting" beside 160,000 counted votes (Douglas CO, Williamson TX early on Nov 3) reads as
       // wrong: mail and early votes post before any precinct reports. With votes in and no precinct reported, there are
       // no progress words to quote, so none are shown (coordinator and the Douglas check, Nov 3).
-      reporting: Number(c.TP) > 0 && !(Number(c.PR) === 0 && votes.some((x) => Number(x) > 0)) ? `${c.PR} of ${c.TP} precincts reporting` : null,
+      reporting: Number(c.TP) > 0 && !(Number(c.PR) === 0 && votes.some((x) => Number(x) > 0)) ? `${c.PR} of ${c.TP} ${unit} reporting` : null,
       precincts: { reported: Number(c.PR || 0), total: Number(c.TP || 0) },
       is_rcv: !!c.IsRCV,
       updated: null,
@@ -74,7 +87,7 @@ export async function read({ fetch, map, prevToken = null }) {
     source_status: details.chkisfinalupload === true || details.chkisfinalupload === 'true' ? 'final_flag' : null,
     official: false,
     source_updated: parseUsTime(e.json?.websiteupdatedat),
-    labels: labels(e.json?.pagesettings),
+    labels: labels(e.json?.pagesettings, isoDate(details.electiondate)?.slice(0, 4) || null),
     feed_version: ver,
     reporting: totalPr > 0 ? `${nowPr} of ${totalPr} precincts reporting` : null,
     contests,

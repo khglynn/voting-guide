@@ -1,7 +1,7 @@
 /* Adapters by name, as a map's `feed.adapter` names them. Each one's `read({ fetch, map, prevToken })` returns
    { verdict, unchanged?, changed_token, election: {id, name, date}, source_status, official, source_updated, reporting,
    contests: [{ feed_id, feed_name, choices: [{name, votes}], total, reporting, updated, declared }], raw }.
-   enhanced_voting joined on Nov 3 (GA, DeKalb, WA, King, Sullivan). Later adapters (lvt, the custom JSONs, csv, html_table) join this list in sub-phases 5 and 6. */
+   Election night, Nov 3: the first four ran Texas, Colorado and DC; the rest joined from the per-family source branches. */
 import * as clarity from './clarity.js';
 import * as harris from './harris.js';
 import * as tx_sos from './tx_sos.js';
@@ -10,5 +10,7 @@ import * as enhanced_voting from './enhanced_voting.js';
 import * as la_county from './la_county.js';
 import * as lvt from './lvt.js';
 import * as ca_sos from './ca_sos.js';
+import * as fl_dos from './fl_dos.js';
+import * as vr_enr from './vr_enr.js';
 
-export const ADAPTERS = { clarity, harris, tx_sos, dc, enhanced_voting, la_county, lvt, ca_sos };
+export const ADAPTERS = { clarity, harris, tx_sos, dc, enhanced_voting, la_county, lvt, ca_sos, fl_dos, vr_enr };

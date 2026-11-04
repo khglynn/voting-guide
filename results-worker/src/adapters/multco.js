@@ -84,10 +84,15 @@ export async function read({ fetch, map, prevToken = null }) {
   const contests = [];
   let latest = null;
   const labels = new Set();
+  const skipped = [];
   for (const o of idx.offices) {
     const page = await get(fetch, `${map.feed.base}${o.href}`, { identity, expect: 'html' });
     if (page.verdict !== 'ok') return { verdict: page.verdict, error: page.error, status: page.status, url: page.url };
     const rep = parseReport(page.body);
+    // An office with one filed candidate isn't tabulated as ranked choice: its page shows a small table and no JSON,
+    // and on Nov 3 that table's "Total votes" (205,507 for County Auditor) didn't equal its own rows (133,298 plus
+    // 2,210 write-ins). We don't read a count that disagrees with itself: the office stays a link.
+    if (!rep.json && /This is not an RCV contest/i.test(page.body)) { skipped.push(o.office); continue; }
     if (!rep.json) return { verdict: 'error', error: `${o.office}: the report page has no JSON link`, url: page.url };
     const j = await get(fetch, rep.json, { identity });
     if (j.verdict !== 'ok') return { verdict: j.verdict, error: `${o.office}: ${j.error}`, status: j.status, url: rep.json.split('?')[0] };
@@ -140,6 +145,7 @@ export async function read({ fetch, map, prevToken = null }) {
     reporting: null,
     labels: [...labels],
     dropped,
+    skipped,
     contests,
   };
 }

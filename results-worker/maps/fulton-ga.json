@@ -1,0 +1,39 @@
+{
+  "id": "fulton-ga",
+  "state": "GA",
+  "name": "Fulton County, GA",
+  "county": "Fulton",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "127295",
+    "feed_name": "November 3, 2026 - General Primary -Nonpartisan General Special Election"
+  },
+  "guide": {
+    "fingerprint": null,
+    "made_from": null,
+    "places": [
+      "atlanta-ga"
+    ]
+  },
+  "feed": {
+    "adapter": "clarity",
+    "base": "https://results.enr.clarityelections.com/GA/Fulton",
+    "results_url": "https://results.enr.clarityelections.com/GA/Fulton/127295/",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent on Nov 3, about 10:20 PM CT (current_ver.txt 200; read one request every 30 s, JSON files only).",
+    "election_id_from": "Fulton's \"November 3 Election Results\" news page (https://fultoncountyga.gov/News/2026/11/03/November-3-Election-Results) links Clarity 127295 (workbench registry row fulton-ga, capture round 1, Nov 3); Clarity's own electionsettings for 127295.",
+    "tz": "America/New_York"
+  },
+  "polls_close": "2026-11-04T00:00:00Z",
+  "count_closes": "2026-11-07T04:59:00Z",
+  "complete_marker": {
+    "flag": "final_flag",
+    "words": "Clarity's final-upload flag (electiondetails.chkisfinalupload)."
+  },
+  "certify_by": "2026-11-09",
+  "official": null,
+  "contests": [],
+  "unmatched_guide": [],
+  "unmatched_feed": [],
+  "not_here": []
+}

@@ -40,3 +40,29 @@ for (const [id, routes] of Object.entries(FEEDS)) {
     assert.deepEqual(checkFile(f), []);
   });
 }
+
+/* Colorado's state feed as a whole-race source (draft map, Nov 3): an amendment carries the inclusive 55% rule, and a
+   county's count for the same race rides beneath the state's, never summed. */
+test('results-CO: amendment threshold 55 inclusive; the state count is the item and a county count is a county slice', async () => {
+  const base = mapFor('results-CO');
+  const map = { ...base, contests: [
+    { feed_id: '6000', feed_name: 'Amendment 81 (CONSTITUTIONAL)', item: 'co-amendment-81', kind: 'measure', seats: 1, choices: { 'Yes/For': 'yes', 'No/Against': 'no' }, reaches: ['Colorado'], whole: true, threshold: { pct: 55, inclusive: true }, pass_threshold: '55% (constitutional amendment that adds language)' },
+    { feed_id: '7306', feed_name: 'City of Aurora Ballot Issue 3A', item: 'aurora-3a', kind: 'measure', seats: 1, choices: { 'Yes/For': 'yes', 'No/Against': 'no' }, reaches: ['Colorado'], whole: true, pass_threshold: 'simple majority' },
+  ] };
+  const r = await ADAPTERS.clarity.read({ fetch: fakeFetch({ '/127407/current_ver.txt': 'clarity-co-state.current_ver.txt', '/127407/385063/json/en/summary.json': 'clarity-co-state.summary.json', '/127407/385063/json/en/electionsettings.json': 'clarity-co-state.electionsettings.json' }), map });
+  const { raw, ...read } = r;
+  assert.equal(checkRead(read, map).ok, true);
+  const { slices } = sourceSlices(read, map, '2026-11-04T04:30:00.000Z');
+  assert.equal(slices['co-amendment-81'].measure.threshold, 55);
+  const county = { id: 'arapahoe-test', state: 'CO', name: 'Arapahoe', county: 'Arapahoe', election: { date: '2026-11-03', feed_election_id: 'x' }, feed: { adapter: 'clarity', results_url: 'https://example.org/' }, contests: [{ feed_id: 'k', item: 'aurora-3a', kind: 'measure', choices: { Yes: 'yes', No: 'no' }, reaches: ['Arapahoe', 'Adams', 'Douglas'] }] };
+  const countyRead = { verdict: 'ok', election: read.election, source_updated: '2026-11-04T03:35:06.000Z', reporting: null, contests: [{ feed_id: 'k', feed_name: 'Aurora 3A', choices: [{ name: 'Yes', votes: 31143 }, { name: 'No', votes: 45522 }], reporting: null }] };
+  const f = buildStateFile({ state: 'CO', maps: [map, county], srcs: { 'results-CO': { record: { read, fetched: '2026-11-04T04:30:00.000Z' }, checked: true, sched: {} }, 'arapahoe-test': { record: { read: countyRead, fetched: '2026-11-04T04:30:00.000Z' }, checked: true, sched: {} } }, mode: 'preview', now: '2026-11-04T04:30:00.000Z' });
+  const a = f.items['aurora-3a'];
+  assert.equal(a.source, 'results-CO');
+  assert.deepEqual([a.measure.yes, a.measure.no], [35386, 51662]);
+  assert.equal(a.final, null);
+  assert.equal(a.county_slices.length, 1);
+  assert.equal(a.county_slices[0].measure.yes, 31143);
+  assert.equal(a.slices, undefined);
+  assert.deepEqual(checkFile(f), []);
+});

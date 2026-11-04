@@ -1,0 +1,39 @@
+{
+  "id": "orange-fl",
+  "state": "FL",
+  "name": "Orange County, FL",
+  "county": "Orange",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "127356",
+    "feed_name": "2026 General Election"
+  },
+  "guide": {
+    "fingerprint": null,
+    "made_from": null,
+    "places": [
+      "orlando-fl"
+    ]
+  },
+  "feed": {
+    "adapter": "clarity",
+    "base": "https://results.voteorangefl.gov/FL/Orange",
+    "results_url": "https://results.voteorangefl.gov/FL/Orange/127356/web.345435/#/summary",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent on Nov 3, about 10:20 PM CT (current_ver.txt 200; read one request every 30 s, JSON files only).",
+    "election_id_from": "voteorangefl.gov/election-results/ links election 127356 (workbench registry row orange-fl, capture round 1, Nov 3; not the primary's 127178); Clarity's own electionsettings for 127356.",
+    "tz": "America/New_York"
+  },
+  "polls_close": "2026-11-04T00:00:00Z",
+  "count_closes": "2026-11-14T04:59:00Z",
+  "complete_marker": {
+    "flag": "final_flag",
+    "words": "Clarity's final-upload flag (electiondetails.chkisfinalupload). Orange's page says \"Unofficial Results\" tonight."
+  },
+  "certify_by": "2026-11-16",
+  "official": null,
+  "contests": [],
+  "unmatched_guide": [],
+  "unmatched_feed": [],
+  "not_here": []
+}

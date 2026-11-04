@@ -169,3 +169,69 @@ test('dc: the board\'s JSON reads with its own time and words; IsWinner is never
   const again = await dc.read({ fetch: f, map, prevToken: r.changed_token });
   assert.equal(again.unchanged, true);
 });
+
+/* More Clarity sources, read once each with the named fetcher on Nov 3 at about 10:20 PM CT (one request every 30 s):
+   Colorado's statewide site, Orange County FL (its own domain) and Fulton County GA. Fixtures are trimmed copies. */
+const route = (e, v, n) => ({ [`/${e}/current_ver.txt`]: `${n}.current_ver.txt`, [`/${e}/${v}/json/en/summary.json`]: `${n}.summary.json`, [`/${e}/${v}/json/en/electionsettings.json`]: `${n}.electionsettings.json` });
+
+test('clarity: Colorado statewide 127407 counts counties per contest, keeps precincts for the source line, drops a 2016 header', async () => {
+  const f = fakeFetch(route('127407', '385063', 'clarity-co-state'));
+  const r = await clarity.read({ fetch: f, map: mapFor('results-CO') });
+  assert.equal(r.verdict, 'ok');
+  assert.deepEqual(r.election, { id: '127407', name: '2026 General', date: '2026-11-03' });
+  assert.equal(r.feed_version, '385063');
+  assert.equal(r.source_updated, '2026-11-04T04:18:06.000Z'); // "11/3/2026 9:18:06 PM MST"
+  // One header is "Unofficial Results" plus a pasted HTML page; the other still says "June 28, 2016 Primary Election".
+  assert.deepEqual(r.labels, ['Unofficial Results']);
+  assert.equal(r.reporting, '1132 of 4297 precincts reporting');
+  const senate = r.contests.find((c) => c.feed_id === '20');
+  assert.equal(senate.feed_name, 'United States Senator');
+  assert.deepEqual(senate.choices.map((c) => c.name), ['Mark Baisley', 'John Hickenlooper', 'Bob Chew', 'Christopher Baum', 'Blake Huber', 'Adam Withrow']);
+  assert.equal(senate.choices.find((c) => c.name === 'John Hickenlooper').votes, 1211963);
+  assert.equal(senate.reporting, '15 of 64 counties reporting');
+  const a81 = r.contests.find((c) => c.feed_name === 'Amendment 81 (CONSTITUTIONAL)');
+  assert.deepEqual(a81.choices.map((c) => c.name), ['Yes/For', 'No/Against']);
+  // Aurora 3A: the state's count is the sum of Adams, Arapahoe and Douglas, with PR 0 of 3 beside it: no progress words.
+  const a3a = r.contests.find((c) => c.feed_id === '7306');
+  assert.deepEqual(a3a.choices.map((c) => c.votes), [35386, 51662]);
+  assert.equal(a3a.reporting, null);
+  assert.equal(r.contests.find((c) => c.feed_id === '2023').reporting, null); // HD-23, 0 of 1 counties with votes in
+  assert.ok(f.calls.every((c) => c.headers['User-Agent'] === NAMED_UA));
+});
+
+test('clarity: Orange County FL 127356 on its own domain, over and under votes listed as choices', async () => {
+  const r = await clarity.read({ fetch: fakeFetch(route('127356', '384974', 'clarity-orange')), map: mapFor('orange-fl') });
+  assert.equal(r.verdict, 'ok');
+  assert.deepEqual(r.election, { id: '127356', name: '2026 General Election', date: '2026-11-03' });
+  assert.equal(r.contests.length, 34);
+  assert.equal(r.source_updated, '2026-11-04T04:03:00.000Z'); // "11/3/2026 11:03:00 PM EST"
+  assert.deepEqual(r.labels, ['Unofficial Results']);
+  assert.equal(r.reporting, null); // its settings say 0 of 0
+  const mayor = r.contests.find((c) => c.feed_name === 'County Mayor');
+  assert.deepEqual(mayor.choices.map((c) => c.name), ['Chris Messina', 'Tiffany Moore Russell', 'Over Votes', 'Under Votes']);
+  const senate = r.contests.find((c) => c.feed_id === '0004');
+  assert.equal(senate.reporting, '261 of 263 precincts reporting');
+  assert.equal(senate.choices.reduce((a, c) => a + c.votes, 0), senate.total); // T includes over and under votes
+  const q = r.contests.find((c) => c.feed_name === 'School Board Question');
+  assert.deepEqual(q.choices.map((c) => c.name), ['Yes for Approval', 'No for Rejection', 'Over Votes', 'Under Votes']);
+});
+
+test('clarity: Fulton County GA 127295, party tags on names, one label for two spellings of it', async () => {
+  const r = await clarity.read({ fetch: fakeFetch(route('127295', '384970', 'clarity-fulton')), map: mapFor('fulton-ga') });
+  assert.equal(r.verdict, 'ok');
+  assert.deepEqual(r.election, { id: '127295', name: 'November 3, 2026 - General Primary -Nonpartisan General Special Election', date: '2026-11-03' });
+  assert.equal(r.contests.length, 58);
+  assert.equal(r.source_updated, '2026-11-04T03:58:39.000Z'); // "11/3/2026 10:58:39 PM EST"
+  assert.deepEqual(r.labels, ['Unofficial Results']); // "Unofficial Results" and "UNOFFICIAL RESULTS"
+  const cd5 = r.contests.find((c) => c.feed_id === '12');
+  assert.deepEqual(cd5.choices.map((c) => c.name), ["John ''Bongo'' Salvesen (Rep)", 'Nikema Williams (I)(Dem)']);
+  assert.deepEqual(cd5.choices.map((c) => c.votes), [8526, 113827]);
+  assert.equal(cd5.reporting, '67 of 155 precincts reporting');
+  const sw = r.contests.find((c) => c.feed_id === '50');
+  assert.equal(sw.vote_for, 2);
+});
+
+test('clarity labels: a pasted page is cut off, another year is dropped, capitals-only repeats show once', () => {
+  assert.deepEqual(clarity.labels({ web: { header: '<span>Unofficial Results</span>\r\n<!DOCTYPE html><html><body><table>7A</table></body></html>' }, 'global settings': { header: 'UNOFFICIAL RESULTS<br/>June 28, 2016 Primary Election', 'mobile header': 'unofficial results' } }, '2026'), ['Unofficial Results']);
+  assert.deepEqual(clarity.labels({ web: { header: 'Early Voting Totals Only' }, 'global settings': { header: 'Unofficial Results November 3, 2026' } }, '2026'), ['Early Voting Totals Only', 'Unofficial Results November 3, 2026']);
+});

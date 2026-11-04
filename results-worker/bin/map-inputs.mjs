@@ -1,7 +1,11 @@
 #!/usr/bin/env node
 /* Step one of making a map (PLAN-PHASE-1 section 3.3): the feed's contest list beside the guide's items for the map's
    places, so a model can draft the pairs. Writes .local/map-inputs/{id}.json and prints its path.
-   Usage: node bin/map-inputs.mjs <map id> [--bundles ../public/data]
+   Usage: node bin/map-inputs.mjs <map id> [--bundles ../public/data] [--raw <dir>]
+   `--raw <dir>` replays a feed read already saved by hand (each file named by the last part of its address, e.g.
+   current_ver.txt, summary.json, electionsettings.json) instead of reading the feed again: under a pace rule
+   (Clarity after the Nov 3 CAPTCHA, at most 5 requests a source, 30 s apart) the read that made the fixture is the one
+   the map is drafted from.
    Guide items are each place bundle's `local` items (statewide items come only from a state source, so they're left
    out), with what the map needs to agree with: kind, seats (vote_for), retention, thresholds, candidate names, the
    places that carry the item and those places' counties, and the guide's own words on who votes (`scope_plain`). */
@@ -16,7 +20,12 @@ const map = loadMaps([id])[0];
 if (!map) { console.error(`no map ${id}`); process.exit(1); }
 const bundleDir = typeof f.bundles === 'string' ? f.bundles : null;
 
-const r = await ADAPTERS[map.feed.adapter].read({ fetch, map });
+const rawDir = typeof f.raw === 'string' ? f.raw : null;
+const replay = async (url) => {
+  const file = path.join(rawDir, decodeURIComponent(new URL(url).pathname.split('/').pop()));
+  return fs.existsSync(file) ? new Response(fs.readFileSync(file), { status: 200 }) : new Response('not saved', { status: 404 });
+};
+const r = await ADAPTERS[map.feed.adapter].read({ fetch: rawDir ? replay : fetch, map });
 if (r.verdict !== 'ok') { console.error(`feed read: ${r.verdict} ${r.error}`); process.exit(1); }
 
 const items = new Map();

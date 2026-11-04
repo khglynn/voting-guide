@@ -1102,7 +1102,7 @@ a.res-st { color: var(--ink); text-decoration: underline; text-decoration-color:
 .row.has-go > * { grid-column: 1 / -1; }
 .row.has-go > .row-hd { grid-row: 1; }
 .row.has-go > .vd-go { grid-column: 2; grid-row: 1; z-index: 1; display: flex; flex-direction: column; justify-content: center; align-items: flex-end; text-align: right; padding: 8px 0 8px 10px; min-height: 44px; color: var(--ink); text-decoration: none; }
-.vd-go .m { font-size: 14.5px; font-weight: 600; line-height: 1.22; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; text-decoration-color: var(--muted); overflow-wrap: break-word; }
+.vd-go .m { font-size: 14.5px; font-weight: 400; color: var(--ink-2); line-height: 1.22; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; text-decoration-color: var(--muted); overflow-wrap: break-word; }
 .vd-go .go-w { white-space: nowrap; }
 .vd-go .go-a { display: inline-block; width: 10px; height: 10px; margin-left: 4px; vertical-align: 0; }
 .vd-go:active .m, .vd-go:hover .m { text-decoration-color: currentColor; }
@@ -1189,7 +1189,7 @@ a.res-st { color: var(--ink); text-decoration: underline; text-decoration-color:
 .cheat .pbtn.gold { background: var(--paper-green); color: var(--on-dusk); }
 /* The bar's results line, above its two buttons: quiet, one line where it fits. */
 :root:has(.foot-res) { --foot-h: 100px; }
-.foot-res { display: flex; align-items: center; justify-content: space-between; gap: 4px 12px; max-width: 640px; margin: 0 auto; padding: 8px 16px 0; font-size: 13.5px; line-height: 1.3; color: var(--ink-2); }
+.foot-res { display: flex; align-items: center; justify-content: space-between; gap: 4px 12px; max-width: 640px; margin: 0 auto; padding: 8px 16px 0; font-family: var(--f-display); font-variation-settings: "wdth" 84; letter-spacing: .01em; font-size: 14px; line-height: 1.3; color: var(--ink-2); }
 .foot-res + .foot-in { min-height: 58px; }
 .fr-t { min-width: 0; }
 /* With numbers: two short lines on a phone (the word and whose count, Refresh; then the office's own words and when we
@@ -1197,7 +1197,7 @@ a.res-st { color: var(--ink); text-decoration: underline; text-decoration-color:
 .foot-res.fr-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "a r" "b b"; align-items: center; column-gap: 12px; padding-top: 6px; }
 .fr-grid .fr-a { grid-area: a; }
 .fr-grid .fr-btn { grid-area: r; min-height: 32px; margin: 0; }
-.fr-grid .fr-b { grid-area: b; display: flex; flex-wrap: wrap; column-gap: 10px; color: var(--ink-2); }
+.fr-grid .fr-b { grid-area: b; display: flex; flex-wrap: wrap; column-gap: 5px; color: var(--ink-2); }
 .fr-grid .fr-b > * + .fr-at::before { content: "· "; }
 @media (min-width: 600px) {
   .foot-res.fr-grid { grid-template-columns: auto minmax(0, 1fr) auto; grid-template-areas: "a b r"; }

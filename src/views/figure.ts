@@ -112,7 +112,7 @@ function selHTML(f: Figure, sel: CmpSel): string {
   // "Make these my picks" says exactly what it fills: the plan it runs (today's fill leaves ranked races to rank, and a
   // race of several seats unless the group names a full set), so the promise and the result never differ.
   const fills = sel.kind === 'mine' || anyChoice() ? 0 : sel.kind === 'group' ? planAgree(chipMembers(S.ballot!, sel.key)).fills.length : planParty(sel.party).fills.length;
-  const take = fills ? `<div class="cmp-take"><button class="mini dark" data-act="cmp-take" data-fk="cmp-take">Make these my picks</button><span>${esc(fills === f.picks ? `Fills ${fills === 1 ? 'this race' : `these ${fills} races`}.` : `Fills ${fills} of these races.`)} You can undo it.</span></div>` : '';
+  const take = fills ? `<div class="cmp-take"><button class="mini dark" data-act="cmp-take" data-fk="cmp-take">Make these my picks</button><span>${esc(fills === f.picks ? `Fills ${fills === 1 ? 'this race' : `these ${fills} races`}.` : `Fills ${fills} of these ${f.picks} races.`)} You can undo it.</span></div>` : '';
   const notes = f.notes.map((n) => `<p class="vz-note">${esc(n)}</p>`).join('');
   return `<p class="vz-sum vz-head">${esc(countLine(f))}</p>${split ? `<p class="vz-more">${esc(split)}</p>` : ''}
     ${keyHTML(f)}<div class="vz-fig">${rows}</div>${take}${notes}`;
@@ -153,7 +153,7 @@ function keyHTML(f: Figure): string {
   const bits: [Dot['kind'], string][] = f.picks
     ? [['up', final ? 'Ahead or won' : 'Ahead'], ['down', final ? 'Behind or didn’t win' : 'Behind'], ['wp', 'Not compared'], ['po', f.sel && f.sel.kind === 'mine' ? 'Not picked' : 'No pick']]
     : [['po', 'Numbers posted'], ['w', 'No numbers yet']];
-  if (has('ln')) bits.push(['ln', 'On office site']);
+  if (has('ln')) bits.push(['ln', 'On the office’s site']);
   return `<p class="vz-key">${bits.map(([k, t]) => `<span>${dot(k)}${esc(t)}</span>`).join('')}</p>`;
 }
 const noPicksLine = (f: Figure): string => `No picks on this ballot. ${f.posted} of ${f.total} ${f.total === 1 ? 'race has' : 'races have'} numbers here${f.links ? `; ${f.links} more ${f.links === 1 ? 'links' : 'link'} to official results` : ''}.`;

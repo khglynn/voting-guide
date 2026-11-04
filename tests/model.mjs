@@ -1911,7 +1911,7 @@ function roundTrip(name, stCode, places, mutate) {
       const key = ['papers', 'progressive', 'conservative', 'unions'].find((k) => rm.figure({ kind: 'group', key: k }).picks > 0);
       st.S.ui.cmp = key;
       const h1 = fig.figureHTML();
-      check('results card, no picks: no "Your picks" chip, "Or make your own picks" opens the Edit sheet; a group chosen offers "Make these my picks"', !/data-k="mine"/.test(h0) && /data-act="picks" data-fk="cmp-own">Or make your own picks/.test(h0) && /data-act="cmp-take"[^>]*>Make these my picks/.test(h1) && /Fills (these \d+ races|\d+ of these races|this race)\. You can undo it\./.test(h1), txt(h1).slice(0, 200));
+      check('results card, no picks: no "Your picks" chip, "Or make your own picks" opens the Edit sheet; a group chosen offers "Make these my picks"', !/data-k="mine"/.test(h0) && /data-act="picks" data-fk="cmp-own">Or make your own picks/.test(h0) && /data-act="cmp-take"[^>]*>Make these my picks/.test(h1) && /Fills (these \d+ races|\d+ of these \d+ races|this race)\. You can undo it\./.test(h1), txt(h1).slice(0, 200));
       // A party: its candidates in partisan races, never a pick of yours.
       const party = ((await load('/src/model/lens.ts')).partiesOnBallot(st.S.ballot)[0] || {}).party;
       st.S.ui.cmp = party ? `party:${party}` : undefined;

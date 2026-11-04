@@ -1839,7 +1839,7 @@
       "line": "Mail ballots postmarked Nov 3 count if they arrive by Nov 10.",
       "source": "https://electionresults.sos.ca.gov/unprocessed-ballots-status; https://www.sdvote.com/content/rov/en/election-results-explained.html",
       "confidence": "sourced",
-      "short": "Mail ballots postmarked Nov 3 must arrive"
+      "short": "Mail postmarked by Nov 3 must arrive"
     },
     {
       "kind": "after_election",
@@ -2206,7 +2206,7 @@
       "line": "Mail ballots postmarked by Nov 3 count if they arrive by Nov 10.",
       "source": "https://elections.ny.gov/2026-political-calendar",
       "confidence": "verified",
-      "short": "Mail ballots postmarked Nov 3 must arrive"
+      "short": "Mail postmarked by Nov 3 must arrive"
     },
     {
       "kind": "after_election",
@@ -2601,7 +2601,7 @@
       "line": "Mail ballots postmarked by Nov 3 count if they arrive by Nov 17.",
       "source": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=001000050K19-8",
       "confidence": "verified",
-      "short": "Mail ballots postmarked Nov 3 must arrive"
+      "short": "Mail postmarked by Nov 3 must arrive"
     },
     {
       "kind": "after_election",
@@ -4217,7 +4217,7 @@
       "line": "Mail ballots postmarked by Nov 3 count if they arrive by Nov 13.",
       "source": "DCBOE 2026 General Election calendar rev. 10/1/2026",
       "confidence": "verified",
-      "short": "Mail ballots postmarked Nov 3 must arrive"
+      "short": "Mail postmarked by Nov 3 must arrive"
     },
     {
       "kind": "after_election",
@@ -5065,7 +5065,7 @@
       "line": "Mail ballots postmarked by Nov 3 count if they arrive by Nov 10.",
       "source": "https://www.oregonlegislature.gov/bills_laws/ors/ors254.html (ORS 254.470) ; https://multco.us/news/nov-3-2026-election-day-information-multnomah-county",
       "confidence": "verified",
-      "short": "Mail ballots postmarked Nov 3 must arrive"
+      "short": "Mail postmarked by Nov 3 must arrive"
     },
     {
       "kind": "after_election",

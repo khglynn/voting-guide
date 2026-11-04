@@ -37,13 +37,13 @@
       "state": "TX",
       "kind": "county",
       "name": "Travis County",
-      "results_url": "https://results.enr.clarityelections.com/TX/Travis/",
+      "results_url": "https://results.enr.clarityelections.com/TX/Travis/127492/",
       "results_url_status": "announced_not_live",
       "format": "Clarity Election Night Reporting plus PDF reconciliation forms",
       "adapter_guess": "clarity",
       "endpoints": [
-        "https://results.enr.clarityelections.com/TX/Travis/<id>/current_ver.txt",
-        "https://results.enr.clarityelections.com/TX/Travis/<id>/<ver>/json/en/summary.json"
+        "https://results.enr.clarityelections.com/TX/Travis/127492/current_ver.txt",
+        "https://results.enr.clarityelections.com/TX/Travis/127492/{ver}/json/en/summary.json"
       ],
       "covers_local": "Yes; 2025 page had Cities (33), Schools (8), Other Districts (47) contests including Austin, Pflugerville, Round Rock (Travis part)",
       "first_post": "Unverified; prior pattern is early and mail votes first after 7 PM, then vote centers",
@@ -144,10 +144,10 @@
       "format": "Clarity Election Night Reporting with summary, xlsx, xml, txt zips",
       "adapter_guess": "clarity",
       "endpoints": [
-        "https://results.enr.clarityelections.com/TX/Dallas/126485/current_ver.txt",
-        "https://results.enr.clarityelections.com/TX/Dallas/126485/{ver}/json/en/summary.json",
-        "https://results.enr.clarityelections.com/TX/Dallas/126485/{ver}/json/electionsettings.json",
-        "https://results.enr.clarityelections.com/TX/Dallas/126485/{ver}/reports/detailxml.zip"
+        "https://results.enr.clarityelections.com/TX/Dallas/127396/current_ver.txt",
+        "https://results.enr.clarityelections.com/TX/Dallas/127396/{ver}/json/en/summary.json",
+        "https://results.enr.clarityelections.com/TX/Dallas/127396/{ver}/json/electionsettings.json",
+        "https://results.enr.clarityelections.com/TX/Dallas/127396/{ver}/reports/detailxml.zip"
       ],
       "covers_local": "Yes; City of Dallas bond, Garland, University Park, Wylie, Irving ISD, Mesquite ISD, appraisal district board",
       "first_post": "7 PM CT early voting and mail summary; Election Day results start 9 PM",

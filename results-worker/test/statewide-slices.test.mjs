@@ -8,7 +8,10 @@ import { buildStateFile, sourceSlices } from '../src/merge.js';
 import { checkFile, checkRead } from '../src/checks.js';
 import { ADAPTERS } from '../src/adapters/index.js';
 import { lintGuide } from '../bin/map-lint.mjs';
-import { mapFor, fakeFetch } from './helpers.mjs';
+import { checkFingerprints, publishState } from '../src/tick.js';
+import { fingerprint, statewideFingerprint, checkHash } from '../src/fingerprint.js';
+import { MAPS } from '../src/maps.gen.js';
+import { mapFor, fakeFetch, memStore } from './helpers.mjs';
 
 const NOW = '2026-11-04T15:00:00.000Z';
 const readOf = (contests) => ({ election: { date: '2026-11-03' }, source_updated: '2026-11-04T14:00:00.000Z', reporting: null, contests });
@@ -134,6 +137,44 @@ test('the three maps carry their statewide items only as county slices', () => {
       assert.deepEqual(c.reaches, [m.county, 'other counties'], `${id} ${c.item}`);
     }
   }
+  // A statewide fingerprint exactly where there are statewide slices (bin/map-check.mjs --write writes it).
+  for (const m of MAPS) {
+    const has = (m.contests || []).some((c) => c.statewide);
+    if (has) assert.match(m.guide?.statewide_fingerprint || '', /^[0-9a-f]{16}$/, m.id);
+    else assert.equal(m.guide?.statewide_fingerprint, undefined, m.id);
+  }
+});
+
+/* The guide bundles a map was made against, rebuilt from the map itself (each item's kind, seats and candidate names,
+   or a measure's threshold); statewide items go in the state's bundle, the rest in the map's first place. */
+function bundlesFrom(map) {
+  const out = Object.fromEntries(map.guide.places.map((p) => [p, { items: [] }]));
+  const first = map.guide.places.find((p) => !p.startsWith('state-'));
+  for (const mc of map.contests) {
+    const names = [...new Set(Object.values(mc.choices || {}).filter((v) => v && !['yes', 'no', '__other', '__skip'].includes(v)))];
+    const it = mc.kind === 'measure' ? { id: mc.item, kind: 'measure', pass_threshold: mc.pass_threshold || null }
+      : { id: mc.item, kind: 'contest', is_retention: mc.kind === 'retention', vote_for: mc.seats || 1, candidates: names.map((name) => ({ name })) };
+    out[mc.statewide ? `state-${map.state}` : first].items.push(it);
+  }
+  return out;
+}
+const madeAgainst = async (map, b) => ({ ...map, guide: { ...map.guide, fingerprint: await fingerprint(map, b), statewide_fingerprint: await statewideFingerprint(map, b) } });
+const bundleFetch = (b) => async (url) => ({ ok: true, json: async () => structuredClone(b[url.match(/\/data\/(?:place-)?(.+)\.json$/)[1]]) });
+const editItem = (b, id, fn) => { const c = structuredClone(b); for (const x of Object.values(c)) for (const it of x.items) if (it.id === id) fn(it); return c; };
+
+test('fingerprints: a county map\'s own races and its statewide slices hash apart', async () => {
+  const la = mapFor('los-angeles-county-ca');
+  const b = bundlesFrom(la);
+  const own = await fingerprint(la, b);
+  const sw = await statewideFingerprint(la, b);
+  const prop = editItem(b, 'ca-prop-44', (it) => { it.pass_threshold += ' '; });
+  assert.equal(await fingerprint(la, prop), own, 'a state item\'s change leaves the own-races hash alone');
+  assert.notEqual(await statewideFingerprint(la, prop), sw);
+  const localId = la.contests.find((c) => !c.statewide && c.kind === 'plurality').item;
+  const local = editItem(b, localId, (it) => { it.candidates[0].name += ' Jr.'; });
+  assert.notEqual(await fingerprint(la, local), own);
+  assert.equal(await statewideFingerprint(la, local), sw, 'a local item\'s change leaves the statewide hash alone');
+  assert.equal(await statewideFingerprint(mapFor('travis-tx'), {}), null, 'no statewide slices, no statewide hash');
 });
 
 /* End to end on real reads: Los Angeles County's own file (Nov 3, 8:17 PM PT bulletin) with the SOS media files
@@ -189,4 +230,127 @@ test('real reads: Allegheny\'s share of Pennsylvania\'s governor with the state 
   assert.deepEqual(x.missing, ['other counties']);
   assert.equal(x.final, null);
   assert.equal(x.slices[0].county, 'Allegheny');
+});
+
+/* Verdict 3 of the statewide review (Nov 4): a guide edit to a statewide item used to mark the whole county map out of
+   date, turning all of Los Angeles County's live local races into links. Now only its statewide slices drop out. Runs
+   the Worker's own hourly check and publish on the saved Los Angeles and SOS reads. */
+test('real reads: a changed state-CA item drops only Los Angeles County\'s statewide slices; its own races stay live', async () => {
+  const la0 = await readWith('los-angeles-county-ca', LA_ROUTES);
+  const ca = await readWith('results-CA', CA_ROUTES);
+  const bundles = bundlesFrom(la0.map);
+  const la = await madeAgainst(la0.map, bundles);
+  const LA = la.id;
+  const run = async (b, { caRefused = false } = {}) => {
+    const pings = [];
+    const ping = async (id, reason) => { pings.push(`${id}: ${reason}`); };
+    const sched = { sources: caRefused ? { 'results-CA': { stopped: 'refused' } } : {}, meta: {} };
+    await checkFingerprints({ maps: [la], fetch: bundleFetch(b), sched, now: NOW, ping });
+    const store = memStore({
+      [`src:${LA}`]: JSON.stringify({ read: la0.read, fetched: NOW }),
+      [`checked:${LA}`]: await checkHash(la),
+      'checked:results-CA': await checkHash(ca.map),
+      ...(caRefused ? {} : { 'src:results-CA': JSON.stringify({ read: ca.read, fetched: NOW }) }),
+    });
+    const out = await publishState({ state: 'CA', maps: [la, ca.map], store, sched, now: NOW, ping, log: () => {} });
+    assert.equal(out.public, true, JSON.stringify(out));
+    return { sched, pings, file: JSON.parse(await store.get('file:CA')) };
+  };
+  // Where Los Angeles County's count shows in an item: as the item, or as a slice beside or beneath another count.
+  const fromLA = (x) => !!x && x.status !== 'link_only' && (x.source === LA || (x.slices || []).some((s) => s.source === LA) || (x.county_slices || []).some((s) => s.source === LA));
+  const own = la.contests.filter((c) => !c.statewide).map((c) => c.item);
+  const sw = la.contests.filter((c) => c.statewide).map((c) => c.item);
+  const liveOwn = (f) => own.filter((id) => fromLA(f.items[id]));
+
+  const before = await run(bundles);
+  assert.deepEqual([before.sched.meta.fp[LA], before.sched.meta.fp_sw[LA]], ['ok', 'ok']);
+  assert.deepEqual(before.pings, []);
+  assert.ok(liveOwn(before.file).length >= 90, `${liveOwn(before.file).length} of Los Angeles County's own races live`);
+  for (const id of sw) assert.ok(fromLA(before.file.items[id]), `${id}: Los Angeles's share beneath the state's count`);
+
+  // The guide edits one state item (a measure's threshold): the statewide hash moves, the own-races hash doesn't.
+  const edited = editItem(bundles, 'ca-prop-44', (it) => { it.pass_threshold = `${it.pass_threshold} `; });
+  const after = await run(edited);
+  assert.deepEqual([after.sched.meta.fp[LA], after.sched.meta.fp_sw[LA]], ['ok', 'mismatch']);
+  assert.deepEqual(after.pings, [`${LA}: statewide slices out of date`]);
+  assert.deepEqual(liveOwn(after.file), liveOwn(before.file), 'every one of the county\'s own races stays live');
+  for (const id of own) assert.notEqual(after.file.items[id]?.reason, 'map out of date', id);
+  for (const id of sw) {
+    const x = after.file.items[id];
+    assert.equal(x.source, 'results-CA', id);
+    assert.equal(fromLA(x), false, `${id}: the county's statewide slice is left out`);
+    // The state's own result is untouched; only Los Angeles's slice (and any "behind Los Angeles" note) is gone.
+    const { county_slices: _cs, note: _n1, ...was } = before.file.items[id];
+    const { note: _n2, ...now } = x;
+    assert.deepEqual(now, was, `${id}: the state's own result is unchanged`);
+  }
+
+  // The state refused: those races are the state's link, never Los Angeles's share; the county's own races stay live.
+  const refused = await run(edited, { caRefused: true });
+  for (const id of sw) {
+    const x = refused.file.items[id];
+    assert.equal(x.status, 'link_only', id);
+    assert.equal(x.source, 'results-CA', id);
+    assert.equal(x.reason, 'source refused us', id);
+  }
+  assert.ok(liveOwn(refused.file).length >= 90);
+
+  // Unchanged: an edit to one of the county's own items still links out the whole map until it is remade.
+  const localId = la.contests.find((c) => !c.statewide && c.kind === 'plurality').item;
+  const ownEdit = await run(editItem(bundles, localId, (it) => { it.candidates[0].name += ' Jr.'; }));
+  assert.equal(ownEdit.sched.meta.fp[LA], 'mismatch');
+  assert.deepEqual(liveOwn(ownEdit.file), []);
+  assert.equal(ownEdit.file.items[localId].reason, 'map out of date');
+});
+
+/* Verdict 5 of the statewide review (Nov 4): with the state's whole-race count unread or at zero, a county's share used
+   to list the state map's reaches ("Pennsylvania", "California", "all 58 California counties") as missing counties. */
+test('statewide slice: with the state\'s count unread or at zero, the missing list names counties only, never the state', () => {
+  const both = { phl: src([gov(500000, 100000), house]), all: src([gov(300000, 200000), house]) };
+  const cases = {
+    'state not read yet': { record: null, checked: true, sched: {} },
+    'state at zero': src([{ feed_id: '3:1', feed_name: 'Governor', choices: [{ name: 'JOSH SHAPIRO', votes: 0 }, { name: 'STACY GARRITY', votes: 0 }] }]),
+  };
+  for (const [why, st] of Object.entries(cases)) {
+    for (const order of [[PHL, STATE], [STATE, PHL]]) {
+      const f = file(order, { phl: both.phl, 'results-PA': st });
+      const x = f.items['pa-governor'];
+      assert.equal(x.source, 'phl', why);
+      assert.deepEqual(x.missing, ['other counties'], why);
+      assert.equal(x.status, 'counting', why);
+      assert.equal(x.final, null, why);
+      assert.deepEqual(checkFile(f), [], why);
+    }
+    const f = file([PHL, STATE, ALL], { ...both, 'results-PA': st });
+    const x = f.items['pa-governor'];
+    assert.deepEqual(x.slices.map((s) => s.county), ['Philadelphia', 'Allegheny'], why);
+    assert.deepEqual(x.missing, ['other counties'], why);
+    assert.deepEqual(checkFile(f), [], why);
+  }
+});
+
+test('real reads: with the SOS count unread or at zero, Los Angeles County\'s shares list no state or "all 58 counties" as missing', async () => {
+  const la = await readWith('los-angeles-county-ca', LA_ROUTES);
+  const ca = await readWith('results-CA', CA_ROUTES);
+  const zeroed = structuredClone(ca.read);
+  for (const c of zeroed.contests) for (const ch of c.choices) ch.votes = 0;
+  const sw = la.map.contests.filter((c) => c.statewide);
+  const cases = {
+    'SOS not read yet': { record: null, checked: true, sched: {} },
+    'SOS at zero': { record: { read: zeroed, fetched: NOW }, checked: true, sched: {} },
+  };
+  for (const [why, caSrc] of Object.entries(cases)) {
+    const f = buildStateFile({ state: 'CA', maps: [la.map, ca.map], srcs: { 'los-angeles-county-ca': { record: { read: la.read, fetched: NOW }, checked: true, sched: {} }, 'results-CA': caSrc }, mode: 'public', now: NOW });
+    assert.deepEqual(checkFile(f), [], why);
+    for (const c of sw) {
+      const x = f.items[c.item];
+      assert.equal(x.source, 'los-angeles-county-ca', `${why}: ${c.item}`);
+      assert.deepEqual(x.missing, ['other counties'], `${why}: ${c.item}`);
+      assert.equal(x.final, null, `${why}: ${c.item}`);
+    }
+    // Every missing name in the file is a county or "other counties": never the state, never "all 58 ... counties".
+    for (const [id, x] of Object.entries(f.items)) for (const n of x.missing || []) assert.ok(n !== 'California' && !/^(all \d+|every) /.test(n), `${why}: ${id} lists "${n}" as missing`);
+    // A House race Los Angeles shares with Ventura still names Ventura.
+    assert.deepEqual(f.items['ca-us-house-26'].missing, ['Ventura', 'other counties'], why);
+  }
 });

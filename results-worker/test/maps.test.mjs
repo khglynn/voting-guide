@@ -23,6 +23,26 @@ test('maps.gen.js matches maps/*.json, every map (run bin/map-check.mjs --write 
   for (const id of ids) assert.deepEqual(MAPS.find((m) => m.id === id), mapFor(id), id);
 });
 
+/* src/merge.js builds a spanning race's missing list from county counts only, since a whole-race source's reaches lead
+   with the state's own name ("California", "all 58 California counties"; statewide review, Nov 4). That is safe only
+   while every county map that shares a race with a whole count names that race's counties itself or says "other
+   counties"; otherwise, with the state's count unread or at zero, a county's share could pass as the whole race. */
+test('a county map that shares a race with a whole-race count names its counties too, or says "other counties"', () => {
+  const whole = {};
+  for (const m of MAPS) for (const c of m.contests || []) if (c.whole) (whole[m.state] ??= {})[c.item] = { m, c };
+  let shared = 0;
+  for (const m of MAPS) {
+    for (const c of m.contests || []) {
+      const w = whole[m.state]?.[c.item];
+      if (c.whole || !w || w.m.id === m.id) continue;
+      shared++;
+      if (c.reaches.includes('other counties')) continue;
+      for (const k of w.c.reaches.filter((x) => x !== w.m.county)) assert.ok(c.reaches.includes(k), `${m.id} ${c.item}: ${w.m.id} says the race reaches ${k}; this map says only ${c.reaches.join(', ')}`);
+    }
+  }
+  assert.ok(shared > 200, `${shared} shared races checked`);
+});
+
 for (const [id, routes] of Object.entries(FEEDS)) {
   test(`${id}: every mapped contest and choice is in the saved feed; the preview file is clean`, async () => {
     const map = mapFor(id);

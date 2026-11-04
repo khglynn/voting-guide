@@ -93,6 +93,8 @@ export function sourceSlices(read, map, now) {
   return { status, slices, problems };
 }
 
+/* A slice's votes for the guide's own choices: its candidates' votes, or a measure's yes and no. */
+const counted = (s) => (s.measure ? s.measure.yes + s.measure.no : (s.candidates || []).reduce((a, c) => a + (Number(c.votes) || 0), 0));
 const strip = (s) => Object.fromEntries(Object.entries(s).filter(([k]) => !k.startsWith('_')));
 const RANK = { pending: 0, counting: 1, complete: 2, official: 3 };
 
@@ -186,7 +188,9 @@ export function buildStateFile({ state, maps, srcs, mode, now }) {
       if (others.length) out.county_slices = others.map(strip).sort((a, b) => b.total_votes - a.total_votes);
       // The state's count can lag a county's own uploads (TX-20 on Nov 3: the SOS at 148,206, Bexar alone at 154,165).
       // It stays the whole race, never summed or swapped for the county's, and a plain note says why a part is bigger.
-      const ahead = others.filter((s) => s.total_votes > whole.total_votes).map((s) => s._name || s.county);
+      // Compared on the guide's own choices only (candidate votes, or yes and no): a county that lists write-in, over or
+      // under lines the state's feed leaves out isn't ahead of it (pre-deploy review, Nov 3: 17 false notes in PA, 3 in FL).
+      const ahead = others.filter((s) => counted(s) > counted(whole)).map((s) => s._name || s.county);
       if (ahead.length) {
         const behind = ahead.length === 1 ? `The state's count is behind ${ahead[0]}'s own count, which already has more votes.` : `The state's count is behind the counts from ${ahead.slice(0, -1).join(', ')} and ${ahead[ahead.length - 1]}, which already have more votes.`;
         out.note = [out.note, behind].filter(Boolean).join(' ');

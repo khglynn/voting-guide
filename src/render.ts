@@ -6,7 +6,7 @@ import { S } from './state';
 import { entriesBySection, sectionOf, type SectionKey } from './ballot';
 import { mastHTML, restoreHTML } from './views/mast';
 import { planHTML } from './views/planstrip';
-import { ballotHTML, sectionHTML, rowHTML, barHTML, qId, ballotHeadHTML, sectionFolded, countHTML, groupCounts, hiddenByOnly, tocSheetHTML, offHTML } from './views/ledger';
+import { ballotHTML, sectionHTML, rowHTML, barHTML, qId, ballotHeadHTML, sectionFolded, countHTML, groupCounts, hiddenByOnly, tocSheetHTML, offHTML, fitFoot } from './views/ledger';
 import { sourcesSheetHTML, partySheetHTML } from './views/lens';
 import { picksSheetHTML } from './views/setup';
 import { cheatSectionHTML, cheatHTML } from './views/cheat';
@@ -142,6 +142,7 @@ export function render(regions: Region[] = ALL): void {
     setModal(!!(S.ui.sheet || S.ui.reader));
     ['ballot', 'cheat', 'pass'].forEach((v) => document.body.classList.toggle(`v-${v}`, shown() && S.ui.view === v));
   });
+  if (regions.includes('bar')) fitFoot();
 }
 
 /* While a sheet or Full details is open, everything behind it is inert: no Tab, no taps, no

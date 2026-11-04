@@ -1760,13 +1760,13 @@ function roundTrip(name, stCode, places, mutate) {
     check('strip: after the close, AP’s Texas page said to be AP’s, no "I already voted", the fold named "Dates and ballot help"', h.includes('<a href="https://apnews.com/projects/elections-2026/texas-results/" target="_blank" rel="noopener" data-fk="plan-ap">AP’s race calls</a>. AP reports who it expects to win. Election offices publish the counts.') && !/Decision Desk/.test(h) && !/data-fk="voted"/.test(h) && /Dates and ballot <span class="nw">help/.test(h) && !/Dates, ID, and if you moved|What happens next/.test(h));
     st.S.ui.open = new Set(['whatif']);
     h = ps.planHTML();
-    check('fold: the deadlines, then "Check or fix your ballot" (the three questions and the office), then upcoming dates with sources, and no search', /aria-label="Dates and ballot help"/.test(h) && /Travis County makes its results official by Nov 17\./.test(h) && h.indexOf('Check or fix your ballot') < h.indexOf('Upcoming dates') && h.replace(/<[^>]+>/g, '').includes('Mail ballots postmarked by 7 PM Nov 3 count if they arrive by 5 PM Nov 4.') && /data-k="wi-check_ballot_counted"/.test(h) && /data-k="wi-signature_problem"/.test(h) && /data-k="wi-provisional_ballot"/.test(h) && /Your election office/.test(h) && !/id="wi-q"/.test(h) && !/class="passed"/.test(h));
+    check('fold: the deadlines, then "Check or fix your ballot" (the three questions and the office), then upcoming dates with sources, and no search', /aria-label="Dates and ballot help"/.test(h) && /Travis County makes its results official by Nov 17\./.test(h) && h.indexOf('Check or fix your ballot') < h.indexOf('Upcoming dates') && /<button class="pd-s" data-act="open" data-k="nx-[a-z0-9]+" aria-expanded="false"[^>]*><span>Mail ballots must arrive by 5 PM<\/span>/.test(h) && /data-k="wi-check_ballot_counted"/.test(h) && /data-k="wi-signature_problem"/.test(h) && /data-k="wi-provisional_ballot"/.test(h) && /Your election office/.test(h) && !/id="wi-q"/.test(h) && !/class="passed"/.test(h));
     check('fold: a Travis voter’s list leaves out Hays County’s own date; an unknown county keeps it', !/Hays County makes results official/.test(h) && (() => { const bb = open('TX', ['austin-tx']); bl.localize(bb, '78729', null); return /Hays County makes results official/.test(ps.planHTML()); })());
     at('?today=2026-11-10');
     b = open('TX', ['austin-tx']);
     bl.localize(b, '78702', null);
     h = ps.planHTML();
-    check('fold: Nov 10: past dates fold under "Earlier dates", none marked "passed"', /data-k="nx-earlier"[^>]*>Earlier dates<\/button>/.test(h) && !h.includes('Mail ballots postmarked by 7 PM Nov 3 count if they arrive by 5 PM Nov 4.') && !/class="passed"/.test(h));
+    check('fold: Nov 10: past dates fold under "Earlier dates", none marked "passed"', /data-k="nx-earlier"[^>]*>Earlier dates<\/button>/.test(h) && !h.includes('Mail ballots must arrive by 5 PM') && !/class="passed"/.test(h));
     at('?today=2026-11-03&now=19:05');
     b = open('TX', ['pflugerville-tx']);
     bl.localize(b, '78660', null);
@@ -1781,7 +1781,7 @@ function roundTrip(name, stCode, places, mutate) {
     check('bar: after the close, "≡ On this ballot" with no count, What’s next on the right (still [data-act="cheat"]), and data-results', /data-results/.test(bar) && /<span class="bar-txt">On this ballot<\/span>/.test(bar) && /data-act="cheat" data-fk="bar-cheat">What’s next<\/button>/.test(bar) && !/ of \d|decided/.test(bar), bar);
     check('endcap and menu: What’s next, and "More election dates and ballot help."', /More election dates and ballot help\./.test(views.ledger.ballotHTML()) && /data-fk="endcap-cheat">What’s next<\/button>/.test(views.ledger.ballotHTML()) && /What’s next/.test(views.ledger.menuHTML('toc')));
     const wn = views.cheat.cheatHTML(false), wnp = views.cheat.cheatHTML(true), wnt = views.cheat.cheatText();
-    check('What’s next: "Check or fix your ballot" first, then upcoming dates; print and copy-as-text carry the dates and the deadlines', /<h2 id="cs-h">What’s next<\/h2>/.test(wn) && /<h2 id="cs-p">What’s next<\/h2>/.test(wnp) && wn.indexOf('Check or fix your ballot') < wn.indexOf('Upcoming dates') && [wn, wnp].every((x) => x.replace(/<[^>]+>/g, '').includes('Mail ballots postmarked by 7 PM Nov 3 count if they arrive by 5 PM Nov 4.') && x.includes('Travis County makes its results official by Nov 17.')) && /^What's next: Austin/.test(wnt) && wnt.includes('Mail ballots postmarked by 7 PM Nov 3 count if they arrive by 5 PM Nov 4.') && wnt.includes('Texas makes statewide results official by Dec 7.') && !/data-act=/.test(wnp), wnt.slice(0, 300));
+    check('What’s next: "Check or fix your ballot" first, then upcoming dates; print and copy-as-text carry the dates and the deadlines', /<h2 id="cs-h">What’s next<\/h2>/.test(wn) && /<h2 id="cs-p">What’s next<\/h2>/.test(wnp) && wn.indexOf('Check or fix your ballot') < wn.indexOf('Upcoming dates') && wn.includes('Mail ballots must arrive by 5 PM') && wnp.replace(/<[^>]+>/g, '').includes('Mail ballots postmarked by 7 PM Nov 3 count if they arrive by 5 PM Nov 4.') && [wn, wnp].every((x) => x.includes('Travis County makes its results official by Nov 17.')) && /^What's next: Austin/.test(wnt) && wnt.includes('Mail ballots postmarked by 7 PM Nov 3 count if they arrive by 5 PM Nov 4.') && wnt.includes('Texas makes statewide results official by Dec 7.') && !/data-act=/.test(wnp), wnt.slice(0, 300));
     st.S.ui.view = 'pass';
     const ph2 = views.pass.passHTML(), m2 = views.pass.messages();
     check('Share the guide: the friends message links the guide and promises only links and saved picks, never a save link; the groups one election-office links only', /<h2 id="pass-h">Share the guide<\/h2>/.test(ph2) && /Send friends the results links\./.test(ph2) && /Election-office links only, for sharing with your group\./.test(ph2) && m2.fam === 'Find election results: https://vote.kevinhg.com/\nOpen your ballot for links to your election office and your saved picks.' && views.pass.shareData(m2.fam).title === 'Find election results.' && m2.pub.startsWith('Election results for Texas are coming in.') && !/kevinhg\.com/.test(m2.pub) && m2.pub.includes(INDEX.states.TX.results_url) && !/Good spots to post/.test(ph2), m2.fam);
@@ -1877,19 +1877,46 @@ function roundTrip(name, stCode, places, mutate) {
     check('results open row: "Endorsement sources" folded once the race has numbers, open while it has none', /data-k="es-tx-us-house-37" aria-expanded="false"/.test(openRow) && !/class="rs-was"/.test(openRow) && /data-k="es-tx-sboe-5" aria-expanded="true"/.test(openPending) && /class="rs-was"/.test(openPending));
     st.S.ui.row = null;
     const f = rm.figure();
-    check('results figure: your picks counted (won, behind, can’t compare), the other races apart', rm.countLine(f) === 'Your 9 picks: 2 won · 3 behind · 4 we can’t compare yet' && f.others > 0 && /^\d+ other races and measures$/.test(rm.othersLine(f)), `${rm.countLine(f)} | ${rm.othersLine(f)}`);
-    check('results figure: Counting, the notes for a race across counties and a tie', f.word === 'Counting' && f.notes.some((n) => /across county lines/.test(n)) && f.notes.some((n) => /tied/.test(n)));
+    check('results figure: your picks counted (won, behind, not compared yet), the other races apart', f.sel && f.sel.kind === 'mine' && rm.countLine(f) === 'Your 9 picks: 2 won · 3 behind · 4 not compared yet' && f.others > 0, `${rm.countLine(f)}`);
+    check('results figure: Counting; a tie explained, the cross-county sentence left to that race’s open row', f.word === 'Counting' && !f.notes.some((n) => /county lines/.test(n)) && f.notes.some((n) => /tied/.test(n)) && /This race crosses county lines/.test(txt(op.resultsHTML(st.S.ballot.byId.get('tx-austin-prop-a'), rm.R.file.items['tx-austin-prop-a']))));
     const fh = fig.figureHTML();
-    check('results figure: the key above the dots, shape classes on every dot, the counts, the sources folded under one link, a district question link', fh.indexOf('vz-key') < fh.indexOf('vz-fig') && /class="d up"/.test(fh) && /class="d down"/.test(fh) && /class="d wp"/.test(fh) && /data-k="vz-src" aria-expanded="false"[^>]*>Where these numbers come from/.test(fh) && !/We checked/.test(fh) && /data-act="goto" data-q="/.test(fh), txt(fh).slice(0, 300));
-    st.S.ui.open.add('vz-src');
+    check('results card: status word and one sentence, "Compare with" with Your picks chosen first, the count as headline, the key above the dots, no offices or times', /Offices are still counting\. Numbers will change\./.test(txt(fh)) && /<p class="cmp-l" id="cmp-l">Compare with<\/p>/.test(fh) && /data-act="cmp" data-k="mine" aria-pressed="true"/.test(fh) && fh.indexOf('data-k="mine"') < fh.indexOf('data-k="papers"') && fh.indexOf('vz-head') < fh.indexOf('vz-key') && fh.indexOf('vz-key') < fh.indexOf('vz-fig') && /class="d up"/.test(fh) && /class="d down"/.test(fh) && /class="d wp"/.test(fh) && !/We checked|updated|Where these numbers come from|county lines/.test(txt(fh)) && /data-act="goto" data-q="/.test(fh) && !/cmp-take/.test(fh), txt(fh).slice(0, 300));
+    {
+      // Compare with a group (DESIGN-OVERNIGHT-2 section 1): never changes your picks; counts the races its sources agree
+      // on by the fill rule (GROUP_RULE, one constant); no "Make these my picks" while you have picks; tapping it again
+      // clears it.
+      const before = JSON.stringify(st.S.b.picks);
+      const key = ['papers', 'progressive', 'conservative', 'unions'].find((k) => rm.figure({ kind: 'group', key: k }).picks > 0);
+      st.S.ui.cmp = key;
+      const fg = rm.figure(), hg = fig.figureHTML();
+      check('results card: a group chosen counts the races its sources agree on, changes no pick, and offers no overwrite while you have picks', rm.GROUP_RULE === 'agree' && !!key && fg.sel.kind === 'group' && /agree on \d+ races?: /.test(rm.countLine(fg)) && JSON.stringify(st.S.b.picks) === before && new RegExp(`data-k="${key}" aria-pressed="true"`).test(hg) && /data-k="mine" aria-pressed="false"/.test(hg) && !/cmp-take/.test(hg), `${key} | ${rm.countLine(fg)}`);
+      // lensNames by the fill rule: a race the group splits on is 'split', never compared.
+      const anySplit = st.S.ballot.items.some((it) => rm.lensNames(it, { kind: 'group', key }) === 'split');
+      check('results card: a race a group splits on is listed as split, never compared', !anySplit || (rm.figure().splits > 0 && /They split on \d+ more races?\./.test(rm.splitLine(rm.figure()))), String(rm.figure().splits));
+      st.S.ui.cmp = null;
+      check('results card: nothing chosen is "where races stand", with your picks still there to choose', rm.cmpSel() === null && /class="vz vz-stand"/.test(fig.figureHTML()) && /data-k="mine" aria-pressed="false"/.test(fig.figureHTML()) && !/cmp-own/.test(fig.figureHTML()));
+      st.S.ui.cmp = undefined;
+    }
     {
       // Codex: a source that's down keeps its numbers on the page, so its last good read still counts in "We checked".
       const down = tx.sources.map((x) => (/williamson/i.test(x.id) ? { ...x, failing_since: '2026-11-04T03:50:00Z' } : x));
       check('results: "We checked" stays at the oldest read even when that office is down now', rm.checkedAt(down.filter((x) => ['travis-tx', 'williamson-tx'].includes(x.id) || /travis|williamson/i.test(x.id))) === rm.checkedAt(tx.sources.filter((x) => /travis|williamson/i.test(x.id))), rm.checkedAt(down));
     }
-    check('results figure: opened, the sources say when we checked (the oldest read) and each office’s own time and words', /We checked 9:41 PM CT/.test(txt(fig.figureHTML())) && /Travis County updated: 9:35 PM CT\. “128 of 186 vote centers reporting\.”/.test(txt(fig.figureHTML())), txt(fig.figureHTML()).slice(-300));
-    st.S.ui.open.delete('vz-src');
     st.S.b.picks = {};
+    {
+      // No picks: Your picks isn't offered, "Or make your own picks" is; a group chosen offers "Make these my picks".
+      st.S.ui.cmp = undefined;
+      const h0 = fig.figureHTML();
+      const key = ['papers', 'progressive', 'conservative', 'unions'].find((k) => rm.figure({ kind: 'group', key: k }).picks > 0);
+      st.S.ui.cmp = key;
+      const h1 = fig.figureHTML();
+      check('results card, no picks: no "Your picks" chip, "Or make your own picks" opens the Edit sheet; a group chosen offers "Make these my picks"', !/data-k="mine"/.test(h0) && /data-act="picks" data-fk="cmp-own">Or make your own picks/.test(h0) && /data-act="cmp-take"[^>]*>Make these my picks/.test(h1) && /You can undo it\./.test(h1), txt(h1).slice(0, 200));
+      // A party: its candidates in partisan races, never a pick of yours.
+      const party = ((await load('/src/model/lens.ts')).partiesOnBallot(st.S.ballot)[0] || {}).party;
+      st.S.ui.cmp = party ? `party:${party}` : undefined;
+      check('results card: a party chosen compares its candidates and changes nothing', !party || (rm.cmpSel().kind === 'party' && (rm.figure().picks === 0 || new RegExp(`^${party} Party candidates in \\d+ races?: `).test(rm.countLine(rm.figure()))) && Object.keys(st.S.b.picks).length === 0), party ? rm.countLine(rm.figure()) : 'no party');
+      st.S.ui.cmp = undefined;
+    }
     const f0 = rm.figure();
     {
       // No picks (a friend's city): where races stand, as a list grouped like the ballot, in place of the dots.
@@ -1904,9 +1931,11 @@ function roundTrip(name, stCode, places, mutate) {
       // The bar's results line and the results-first menu (overnight).
       const fi = rm.footInfo();
       const bar = txt(led.footResHTML());
-      check('results bar: the status word, when we checked, Refresh, then the office behind the rows with its own update time and its own words', fi.kind === 'res' && fi.word === 'Counting' && fi.srcs.length === 1 && fi.srcs[0].who === 'Travis County' && fi.srcs[0].words === '128 of 186 vote centers reporting' && /^Counting · Checked 9:41 PM CT Refresh Travis County updated 9:35 PM · “128 of 186 vote centers reporting”$/.test(bar) && /data-act="results-refresh" data-fk="bar-refresh"/.test(led.barHTML()), bar);
+      const fhtml = led.footResHTML();
+      check('results bar: one line: the status word, the voter’s county office with its own progress words (filler dropped), its own update time, a Refresh icon; the line opens the menu at its sources', fi.kind === 'res' && fi.word === 'Counting' && fi.who === 'Travis' && fi.prog === '128 of 186 vote centers' && fi.progShort === '128 of 186' && fi.at === '9:35 PM' && /<button class="fr-line" data-act="res-src" data-fk="bar-res"/.test(fhtml) && /<button class="fr-rf" data-act="results-refresh" data-fk="bar-refresh" aria-label="Refresh results">/.test(fhtml) && /^Counting · Travis 128 of 186 vote centers/.test(bar) && /· 9:35 PM$/.test(bar), bar);
+      check('results bar: progress words lose only their filler, never become a number the office didn’t print', rm.shortProgress('Polling Locations Reporting: 27%') === '27% of polling places' && rm.shortProgress('Polling Locations Reporting: 27%', true) === '27%' && rm.shortProgress('128 of 186 Vote Centers Reporting') === '128 of 186 vote centers' && rm.shortProgress('0/201 Vote Centers Reporting') === '0 of 201 vote centers' && rm.shortProgress('144 of 144 precincts counted') === '144 of 144 precincts counted' && rm.shortProgress('744 of 806 precincts reporting', true) === '744 of 806' && rm.shortProgress('Total Ballots Counted: 118,836') === 'Total Ballots Counted: 118,836', rm.shortProgress('0/201 Vote Centers Reporting'));
       const menu = led.menuHTML('toc'), mt = txt(menu);
-      check('results menu: results first: the word, when we checked, Refresh, each source’s words and time, the offices’ pages, each section’s posted count; no Next up or Quick picks', /^Counting We checked 9:41 PM CT Refresh Federal offices Numbers for 1 of 2/.test(mt) && /Austin Numbers for all/.test(mt) && /Where these numbers come from Travis County 128 of 186 vote centers reporting · updated 9:35 PM CT/.test(mt) && /Travis County results Williamson County results/.test(mt) && mt.indexOf('Federal offices') < mt.indexOf('Where these numbers come from') && /data-act="jump" data-to="federal"/.test(menu) && !/data-act="next"|Quick picks|data-act="only"/.test(menu) && /What’s next/.test(mt), mt.slice(0, 300));
+      check('results menu: results first: the word, when we checked, Refresh, each source’s words and time, the offices’ pages, each section’s posted count; no Next up or Quick picks', /^Counting We checked 9:41 PM CT Refresh Federal offices Numbers for 1 of 2/.test(mt) && /Austin Numbers for all/.test(mt) && /Where these numbers come from Travis County Results “128 of 186 vote centers reporting” · Updated 9:35 PM CT · We checked 9:42 PM/.test(mt) && /id="toc-src"/.test(menu) && /Hays County results/.test(mt) && mt.indexOf('Federal offices') < mt.indexOf('Where these numbers come from') && /data-act="jump" data-to="federal"/.test(menu) && !/data-act="next"|Quick picks|data-act="only"/.test(menu) && /What’s next/.test(mt), mt.slice(0, 300));
       // Opus review, Nov 4 (9): after the close "Hide races I've decided" hides nothing, so every picked race shows its
       // count; the saved switch is untouched, and the menu no longer offers it.
       st.S.b.hideDecided = true;
@@ -1959,7 +1988,13 @@ function roundTrip(name, stCode, places, mutate) {
         rm.R.file = f3;
         const fb = rm.footInfo();
         const bt = txt(led.footResHTML());
-        check('results bar: never speaks for a county that only holds a slice (Bexar on Austin), never quotes a race’s words as an office’s, always shows the local office’s own update time', !!sd && !fb.srcs.some((x) => x.who === 'Bexar County') && !/7 of 7/.test(bt) && fb.srcs.some((x) => x.who === 'Travis County' && x.at) && /Travis County updated 9:35 PM/.test(bt), bt);
+        check('results bar: never speaks for a county that only holds a slice (Bexar on Austin), never quotes a race’s words as an office’s; with no office giving words, the voter’s county and its own time', !!sd && fb.who === 'Travis' && fb.at === '9:35 PM' && !fb.prog && !/Bexar|7 of 7/.test(bt), bt);
+        // The state office speaks when the voter's county gives no words and the state does.
+        f3.sources = f3.sources.map((x) => (/^results-TX/.test(x.id) ? { ...x, status: 'counting', failing_since: undefined, reporting: 'Polling Locations Reporting: 27%' } : x));
+        const sos = f3.sources.find((x) => /^results-TX/.test(x.id));
+        if (sos) f3.items['tx-us-house-37'] = { ...f3.items['tx-us-house-37'], source: sos.id }; // the state's numbers on a row here
+        const fs2 = rm.footInfo();
+        check('results bar: the state office’s own words when the voter’s county gives none', fs2.who === 'Texas' && fs2.prog === '27% of polling places', `${fs2.who} ${fs2.prog}`);
         rm.R.file = keepF;
       }
       if (!(tSl && wSl)) check('results: the ACC fixture has Travis and Williamson slices', false);
@@ -2064,6 +2099,21 @@ function roundTrip(name, stCode, places, mutate) {
       // Opus review, Nov 4 (8): What's next's dates: each line's source arrow rides with its last word, never alone.
       const nb = views.planstrip.nextBodyHTML(st.S.ballot.howto);
       check('results: What’s next dates keep each source arrow on the line with its last word', !/ <a class="pd-src"/.test(nb) && (!/pd-src/.test(nb) || /<span class="pd-end">[^<\s]+&nbsp;<a class="pd-src"/.test(nb)), nb.slice(0, 300));
+    }
+    {
+      // What's next dates (DESIGN-OVERNIGHT-2 section 4): grouped by date, a range as a range, short labels opening the
+      // full sentence and its source; the printed page keeps full sentences.
+      withRows('TX', ['austin-tx'], []);
+      const nb = views.planstrip.nextBodyHTML(st.S.ballot.howto);
+      const nbt = txt(nb);
+      check('results: What’s next dates grouped, a range shown as a range, short labels with the full sentence a tap away', /Nov 6 to 17/.test(nbt) && /Nov 21 to Dec 7/.test(nbt) && /Mon, Nov 9 Overseas and military ballots due Fix an ID or signature problem/.test(nbt) && !/Overseas and military ballots sent by Nov 3/.test(nbt) && /aria-expanded="false"/.test(nb), nbt.slice(0, 300));
+      const k = (nb.match(/data-k="(nx-[a-z0-9]+)"[^>]*><span>Overseas and military ballots due/) || [])[1];
+      if (k) st.S.ui.open.add(k);
+      const nb2 = txt(views.planstrip.nextBodyHTML(st.S.ballot.howto));
+      if (k) st.S.ui.open.delete(k);
+      check('results: a date’s short label opens its full sentence and source', !!k && /Overseas and military ballots sent by Nov 3 count if they arrive by Nov 9\./.test(nb2), nb2.slice(0, 200));
+      withRows('NY', ['nyc-manhattan-ny'], []);
+      useFile('NY', FX('NY'));
     }
     check('results copy: no em dashes, no all caps', !/—/.test(txt(fig.figureHTML()) + txt(views.planstrip.freshHTML())));
   } finally {

@@ -474,7 +474,8 @@
       "when": "2026-11-04 5 PM",
       "line": "Mail ballots postmarked by 7 PM Nov 3 count if they arrive by 5 PM Nov 4.",
       "source": "https://www.sos.texas.gov/elections/laws/advisory2026-21-november-3-election-law-calendar.shtml",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Mail ballots must arrive by 5 PM"
     },
     {
       "kind": "after_election",
@@ -485,7 +486,8 @@
       "when": "2026-11-09",
       "line": "Overseas and military ballots sent by Nov 3 count if they arrive by Nov 9.",
       "source": "https://www.sos.texas.gov/elections/laws/advisory2026-21-november-3-election-law-calendar.shtml ; https://www.sos.texas.gov/elections/laws/advisory2026-28.shtml",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Overseas and military ballots due"
     },
     {
       "kind": "after_election",
@@ -496,7 +498,8 @@
       "when": "2026-11-09",
       "line": "If your mail ballot had an ID or signature problem, fix it in person by Nov 9.",
       "source": "https://www.sos.texas.gov/elections/laws/advisory2026-21-november-3-election-law-calendar.shtml",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Fix an ID or signature problem"
     },
     {
       "kind": "after_election",
@@ -507,7 +510,8 @@
       "when": "2026-11-09",
       "line": "Cast a provisional ballot because you lacked ID? Show photo ID at the voter registrar by Nov 9.",
       "source": "https://www.sos.texas.gov/elections/laws/advisory2026-21-november-3-election-law-calendar.shtml ; conflict: https://www.dallascountyvotes.org/event/last-day-to-cure-provisional-ballot-6/",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Bring ID for a provisional ballot"
     },
     {
       "kind": "after_election",
@@ -518,7 +522,8 @@
       "when": "2026-11-09",
       "line": "Hays County makes results official on Nov 9.",
       "source": "https://www.hayscountytx.gov/873/November-3-2026-General-Election",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Hays County makes results official"
     },
     {
       "kind": "after_election",
@@ -529,7 +534,8 @@
       "when": "2026-11-16 1:30 PM",
       "line": "Collin County makes results official on Nov 16.",
       "source": "https://www.collincountytx.gov/docs/default-source/elections/election-notices/notice-of-canvass-nov-26-signed.pdf",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Collin County makes results official"
     },
     {
       "kind": "after_election",
@@ -540,7 +546,8 @@
       "when": "Between 2026-11-06 and 2026-11-17",
       "line": "Counties, cities and school boards make results official between Nov 6 and Nov 17.",
       "source": "https://statutes.capitol.texas.gov/Docs/EL/htm/EL.67.htm ; https://www.sos.texas.gov/elections/laws/advisory2026-21-november-3-election-law-calendar.shtml",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Counties and cities make results official"
     },
     {
       "kind": "after_election",
@@ -573,7 +580,8 @@
       "when": "Between 2026-11-21 and 2026-12-07; SOS sets the date",
       "line": "The state makes statewide, congressional and district results official between Nov 21 and Dec 7.",
       "source": "https://www.sos.texas.gov/elections/laws/advisory2026-28.shtml",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "The state makes results official"
     },
     {
       "kind": "after_election",
@@ -606,7 +614,8 @@
       "when": "2026-11-23",
       "line": "Governments report bond vote totals to the state Bond Review Board by Nov 23.",
       "source": "https://www.sos.texas.gov/elections/laws/advisory2026-21-november-3-election-law-calendar.shtml",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Bond results go to the state"
     },
     {
       "kind": "after_election",
@@ -628,7 +637,8 @@
       "when": "2026-12-12",
       "line": "Local races that need a runoff hold it Sat Dec 12.",
       "source": "https://www.sos.texas.gov/elections/laws/advisory2026-21-november-3-election-law-calendar.shtml",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Runoffs"
     },
     {
       "kind": "after_election",

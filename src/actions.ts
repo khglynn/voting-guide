@@ -26,7 +26,8 @@ import { sourceListHTML, matchWords } from './views/lens';
 import { whatIfBody, wiMatchWords } from './views/planstrip';
 import { refreshResults } from './results';
 import { figureHTML, figHidden, setFigHidden } from './views/figure';
-import { hideDecidedNow } from './model/results';
+import { hideDecidedNow, cmpSel, anyPick } from './model/results';
+import { chipMembers } from './model/lens';
 
 export type Act = (d: DOMStringMap, el: HTMLElement) => void | Promise<void>;
 export const A: Record<string, Act> = {};
@@ -1028,6 +1029,50 @@ A['fig-hide'] = () => {
   setFigHidden(!figHidden());
   glide(['#vz'], () => { const el = $('#vz'); if (el) withFocusKept(() => { el.outerHTML = figureHTML(); }); });
   focusFk('vz-hide');
+};
+/* "Compare with" (DESIGN-OVERNIGHT-2 section 1): one choice at a time, for this visit only; tapping the chosen one
+   clears it. "A party" opens its parties inline. The card repaints alone, so an address being typed stays. */
+const repaintFig = (): void => glide(['#vz'], () => { const el = $('#vz'); if (el) withFocusKept(() => { el.outerHTML = figureHTML(); }); });
+A.cmp = (d) => {
+  const k = d.k!;
+  const sel = cmpSel();
+  const cur = !sel ? null : sel.kind === 'mine' ? 'mine' : sel.kind === 'group' ? sel.key : 'party';
+  if (k === 'party') {
+    if (cur === 'party') { S.ui.cmp = null; S.ui.open.delete('cmp-party'); } else if (S.ui.open.has('cmp-party')) S.ui.open.delete('cmp-party'); else S.ui.open.add('cmp-party');
+  } else {
+    S.ui.open.delete('cmp-party');
+    S.ui.cmp = cur === k ? null : k;
+  }
+  repaintFig();
+  focusFk(`cmp-${k}`);
+};
+A['cmp-party'] = (d) => {
+  S.ui.cmp = `party:${d.p}`;
+  S.ui.open.delete('cmp-party');
+  repaintFig();
+  focusFk('cmp-party');
+};
+/* "Make these my picks", only on a ballot with no picks of your own: today's fill with the chosen group (its sources
+   become yours, then where they agree) or the party (its candidates), with the usual Undo. */
+A['cmp-take'] = () => {
+  const sel = cmpSel();
+  if (!sel || sel.kind === 'mine' || anyPick()) return;
+  const b = B();
+  let sp: SetupPlan;
+  if (sel.kind === 'group') { setSources(b, chipMembers(b, sel.key).map((e) => e.id)); const a = planAgree(); sp = { party: null, agree: a, fills: a.fills }; } else { setParty(b, sel.party); const p = planParty(sel.party); sp = { party: p, agree: emptyPlan(), fills: p.fills }; }
+  const n = sp.fills.length ? applyFills(sp.fills) : 0;
+  S.ui.cmp = undefined;
+  if (n) { S.ui.bulk = String(n); S.ui.bulkWhy = fillWhy(sp); S.ui.row = null; S.ui.keep = null; }
+  persist();
+  anchored(() => render(['ballot', 'bar']));
+  focusFk('vz-h');
+  if (n) fillToast(fillHead(n, sp), setupPlan(sp));
+};
+/* The bar's results line: the menu, at where these numbers come from. */
+A['res-src'] = (_d, el) => {
+  A.toc({}, el);
+  const t = document.querySelector<HTMLElement>('.sheet-panel.toc #toc-src');
+  if (t) { t.scrollIntoView({ block: 'start' }); t.focus({ preventScroll: true }); }
 };
 /* A figure row's chevron: its races, each a link to its row, opened under it. */
 /* "Where these numbers come from" (overnight): the figure repaints alone, so an address being typed above stays (Codex). */

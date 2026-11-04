@@ -9,9 +9,11 @@
 import { S } from '../state';
 import { esc, load, save } from '../util';
 import { rowTitle } from '../model/labels';
-import { figure, countLine, othersLine, dotLine, checkedLine, sourceLines, R, resultsMode, resultsWaiting, type Dot, type Figure } from '../model/results';
+import { figure, countLine, splitLine, dotLine, checkedLine, sourceLines, R, resultsMode, resultsWaiting, anyPick, selName, type Dot, type Figure, type CmpSel } from '../model/results';
+import { CHIPS, emptyNote, partiesOnBallot, chipMembers } from '../model/lens';
 import { sectionTitle, resColOf } from './ledger';
-import { ext, isOpen } from './common';
+import { ext } from './common';
+import { TICK } from './lens';
 
 const HIDE_KEY = 'vg-tally';
 /* "Hide summary" is remembered on this device in its own key, never in vg2 or the save link. */
@@ -50,12 +52,44 @@ export function figureHTML(forPrint = false): string {
   if (forPrint) return printHTML(f);
   const hd = `<div class="vz-hd"><h3 class="vz-st" id="vz-h">${esc(f.word)}</h3><button class="linkbtn" data-act="fig-hide" data-fk="vz-hide" aria-expanded="${!hidden}" aria-controls="vz-bd">${hidden ? 'Show summary' : 'Hide summary'}</button></div>
     <p class="vz-ex">${esc(f.explain)}</p>`;
-  const failed = R.failed ? '<p class="vz-src">Couldn’t check the election office’s results just now. These are the last numbers we read.</p>' : '';
+  const failed = R.failed ? '<p class="vz-note">Couldn’t check the election offices just now. These are the last numbers we read.</p>' : '';
   // Every race here links to the office's own page (Manhattan): no figure, no Refresh, one line (DESIGN, link-only places).
   if (f.allLinks) return `<section class="vz vz-links" id="vz"><p class="vz-ex">${esc(linksLine())}</p>${officesHTML()}</section>`;
   if (hidden) return `<section class="vz is-hidden" id="vz" aria-labelledby="vz-h">${hd}</section>`;
-  const picks = f.picks > 0;
-  const key = keyHTML(f);
+  const q = f.questions.n ? `<p class="vz-more"><button class="linkbtn" data-act="goto" data-q="${esc(f.questions.first!.slice(2))}" data-fk="vz-q">${f.questions.n === 1 ? '1 more race needs your district' : `${f.questions.n} more races need your district`}</button></p>` : '';
+  // Something chosen: how it's doing, headline first, then the dots. Nothing chosen: where races stand.
+  const body = f.sel ? selHTML(f, f.sel) : standHTML(f);
+  return `<section class="vz${f.sel ? '' : ' vz-stand'}" id="vz" aria-labelledby="vz-h">${hd}
+    <div id="vz-bd">${cmpHTML(f)}${body}${q}${failed}</div></section>`;
+}
+
+/* "Compare with" (DESIGN-OVERNIGHT-2 section 1; Kevin, on the group switch: "how does this work with 'your picks'?").
+   Your picks first, only when this ballot has one, and chosen by default; then the picking step's groups, same names
+   and order, and A party (its parties open inline, as on the first page, so choosing one never changes the ballot's
+   party). One at a time; tapping the chosen one clears it. Nothing here saves or changes a pick. */
+function cmpHTML(f: Figure): string {
+  const sel = f.sel;
+  const on = (k: string): boolean => !!sel && (sel.kind === 'mine' ? k === 'mine' : sel.kind === 'group' ? k === sel.key : k === 'party');
+  const chip = (k: string, label: string, extra = ''): string => `<button class="chip" data-act="cmp" data-k="${k}" aria-pressed="${on(k)}" data-fk="cmp-${k}"${extra}>${TICK}${esc(label)}</button>`;
+  const partyOpen = S.ui.open.has('cmp-party');
+  const parties = partiesOnBallot(S.ballot!);
+  const chips = [
+    anyPick() ? chip('mine', 'Your picks') : '',
+    ...CHIPS.map((c) => chip(c.key, c.label)),
+    parties.length ? chip('party', sel && sel.kind === 'party' ? selName(sel) : 'A party', ` aria-expanded="${partyOpen}"`) : '',
+  ].join('');
+  const prow = partyOpen && parties.length ? `<div class="cmp-parties" role="group" aria-label="A party">${parties.map((p) => `<button class="chip" data-act="cmp-party" data-p="${esc(p.party)}" aria-pressed="${!!sel && sel.kind === 'party' && sel.party === p.party}" data-fk="cmp-p-${esc(p.party)}">${esc(p.party)}</button>`).join('')}</div>` : '';
+  const own = !sel && !anyPick() ? '<p class="cmp-own"><button class="linkbtn" data-act="picks" data-fk="cmp-own">Or make your own picks</button></p>' : '';
+  return `<div class="cmp" role="group" aria-labelledby="cmp-l"><p class="cmp-l" id="cmp-l">Compare with</p><div class="cmp-chips">${chips}</div>${prow}${own}</div>`;
+}
+/* The answer for a choice: the count line as the headline, the dot figure by section with its key in one line above,
+   and for a group or party on a ballot with no picks of your own, "Make these my picks" (today's fill, with Undo). */
+function selHTML(f: Figure, sel: CmpSel): string {
+  if (!f.picks) {
+    const empty = sel.kind === 'group' ? (chipMembers(S.ballot!, sel.key).length ? `${selName(sel)} don’t agree on any race here yet.${f.splits ? ` ${splitLine(f)}` : ''}` : emptyNote(S.ballot!, sel.key))
+      : sel.kind === 'party' ? `No ${selName(sel)} candidates on this ballot.` : '';
+    return empty ? `<p class="vz-sum">${esc(empty)}</p>` : '';
+  }
   const rows = f.rows.map(({ sec, dots }) => {
     const label = sectionTitle(sec);
     const k = `vz-${sec}`;
@@ -65,24 +99,11 @@ export function figureHTML(forPrint = false): string {
       <button class="vz-cv" data-act="fig-row" data-sec="${sec}" aria-expanded="${open}" aria-label="${esc(`${open ? 'Hide' : 'List'} the races in ${label}`)}" data-fk="vz-cv-${sec}">${CHEV}</button></div>
       ${open ? listHTML(dots) : ''}`;
   }).join('');
-  const sum = `<p class="vz-sum">${esc(picks ? countLine(f) : noPicksLine(f))}</p>`;
-  const other = picks && f.others ? esc(othersLine(f)) : '';
-  const q = f.questions.n ? `<button class="linkbtn" data-act="goto" data-q="${esc(f.questions.first!.slice(2))}" data-fk="vz-q">${f.questions.n === 1 ? '1 more race needs your district' : `${f.questions.n} more races need your district`}</button>` : '';
-  const more = other || q ? `<p class="vz-more">${[other, q].filter(Boolean).join('<span class="dot" aria-hidden="true"> · </span>')}</p>` : '';
+  const split = splitLine(f);
+  const take = sel.kind !== 'mine' && !anyPick() ? `<div class="cmp-take"><button class="mini dark" data-act="cmp-take" data-fk="cmp-take">Make these my picks</button><span>You can undo it.</span></div>` : '';
   const notes = f.notes.map((n) => `<p class="vz-note">${esc(n)}</p>`).join('');
-  // No picks (a friend's city): where races stand, as a list, in place of the dots (overnight).
-  const body = picks ? `${key}<div class="vz-fig">${rows}</div>${sum}` : standHTML(f);
-  return `<section class="vz${picks ? '' : ' vz-stand'}" id="vz" aria-labelledby="vz-h">${hd}
-    <div id="vz-bd">${body}${more}${notes}${failed}${srcFoldHTML()}</div></section>`;
-}
-/* Where the numbers come from, folded under one link (overnight: the run of each office's times was a paragraph at the
-   top of the ballot). Open: when we checked, then each office's own update time and words. The menu has the same. */
-function srcFoldHTML(): string {
-  const srcs = [checkedLine(), ...sourceLines()].filter(Boolean);
-  if (!srcs.length) return '';
-  const k = 'vz-src';
-  const open = isOpen(k);
-  return `<p class="vz-srcs"><button class="linkbtn" data-act="fig-src" data-k="${k}" aria-expanded="${open}" data-fk="${k}">Where these numbers come from</button></p>${open ? `<div class="vz-src">${srcs.map((x) => `<p>${esc(x)}</p>`).join('')}</div>` : ''}`;
+  return `<p class="vz-sum vz-head">${esc(countLine(f))}</p>${split ? `<p class="vz-more">${esc(split)}</p>` : ''}
+    ${keyHTML(f)}<div class="vz-fig">${rows}</div>${take}${notes}`;
 }
 /* The offices' own results pages for this ballot, as links: the voter's county first, then the state. */
 function officesHTML(): string {
@@ -115,10 +136,12 @@ function standHTML(f: Figure): string {
 /* The key, above the dots: the shapes on this ballot, and nothing it doesn't use. */
 function keyHTML(f: Figure): string {
   const has = (k: Dot['kind']) => f.rows.some((r) => r.dots.some((d) => d.kind === k));
+  // One compact line (DESIGN-OVERNIGHT-2): "Ahead" and "Behind" until a count is final, "Won" and "Didn't win" join then.
+  const final = f.counts.won + f.counts.lost > 0;
   const bits: [Dot['kind'], string][] = f.picks
-    ? [['up', 'Ahead or won'], ['down', 'Behind or didn’t win'], ['wp', 'No comparison'], ['po', 'Races you didn’t pick']]
+    ? [['up', final ? 'Ahead or won' : 'Ahead'], ['down', final ? 'Behind or didn’t win' : 'Behind'], ['wp', 'Not compared'], ['po', f.sel && f.sel.kind === 'mine' ? 'Not picked' : 'No pick']]
     : [['po', 'Numbers posted'], ['w', 'No numbers yet']];
-  if (has('ln')) bits.push(['ln', 'On the office’s site']);
+  if (has('ln')) bits.push(['ln', 'Office link']);
   return `<p class="vz-key">${bits.map(([k, t]) => `<span>${dot(k)}${esc(t)}</span>`).join('')}</p>`;
 }
 const noPicksLine = (f: Figure): string => `No picks on this ballot. ${f.posted} of ${f.total} ${f.total === 1 ? 'race has' : 'races have'} numbers here${f.links ? `; ${f.links} more ${f.links === 1 ? 'links' : 'link'} to official results` : ''}.`;

@@ -1105,7 +1105,11 @@ else {
     if (!ok) { report.whatsNext.left_out++; continue; }
     report.whatsNext.kept++;
     const date = m[1] || m[3];
-    nextRows.push({ state: r.state.trim().toUpperCase(), level: r.level, jurisdiction: str(r.jurisdiction) || '', date, ...(m[2] ? { from: m[2] } : {}), line, source, confidence: r.confidence.trim() });
+    // `short` (Nov 4): What's next's label, seven words or fewer, no em dash; a bad one is dropped (the full line shows)
+    // and reported, never fatal.
+    let short = str(r.short);
+    if (short && (short.split(/\s+/).length > 7 || /\u2014/.test(short) || /[A-Z]{3,}/.test(short.replace(/\b(ID|SOS|DC|NYC|USPS)\b/g, '')))) { skipRec('whats-next.json', `${r.state} short "${short}"`, 'short is over seven words, has an em dash or all caps; the full line shows'); short = null; }
+    nextRows.push({ state: r.state.trim().toUpperCase(), level: r.level, jurisdiction: str(r.jurisdiction) || '', date, ...(m[2] ? { from: m[2] } : {}), line, ...(short ? { short } : {}), source, confidence: r.confidence.trim() });
   }
 }
 // The counties the guide knows in each state, so a county row's jurisdiction can name the ones it speaks for.

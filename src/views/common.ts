@@ -156,8 +156,12 @@ export const sourceLean = (e: Endorser, words = true): string => {
 export const confLabel = (c: string | null | undefined): string =>
   c === 'unverified' ? 'Not yet confirmed' : c === 'sourced' ? 'Secondhand source' : '';
 
+/* A link out. Only http(s) ever becomes an href (Nov 3, results Phase 1 security review): some URLs now come from
+   the results Worker, which builds its file from feeds we don't control, so anything else (javascript:, data:) is
+   shown as plain text. */
+export const safeURL = (url: string | null | undefined): string | null => (url && /^https?:\/\//i.test(url.trim()) ? url.trim() : null);
 export const ext = (url: string | null | undefined, text: string, cls = ''): string =>
-  url ? `<a href="${esc(url)}" target="_blank" rel="noopener"${cls ? ` class="${cls}"` : ''}>${esc(text)}</a>` : esc(text);
+  safeURL(url) ? `<a href="${esc(safeURL(url))}" target="_blank" rel="noopener"${cls ? ` class="${cls}"` : ''}>${esc(text)}</a>` : esc(text);
 
 export const srcLink = (url: string | null | undefined): string =>
   url ? `<a class="src" href="${esc(url)}" target="_blank" rel="noopener">${esc(host(url))}</a>` : '';

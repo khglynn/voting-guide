@@ -130,14 +130,6 @@
     ]
    }
   },
-  "tx-house-47": {
-   "source": "travis-tx",
-   "status": "pending",
-   "reporting": null,
-   "updated": null,
-   "url": "https://results.enr.clarityelections.com/TX/Travis/127500/",
-   "final": null
-  },
   "tx-senate-21": {
    "source": "travis-tx",
    "status": "counting",
@@ -362,6 +354,14 @@
     }
    ],
    "total_votes": 50000,
+   "final": null
+  },
+  "tx-sboe-5": {
+   "source": "travis-tx",
+   "status": "pending",
+   "reporting": null,
+   "updated": null,
+   "url": "https://results.enr.clarityelections.com/TX/Travis/127500/",
    "final": null
   }
  }

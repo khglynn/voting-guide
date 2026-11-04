@@ -51,6 +51,12 @@ async function newPage(opts = {}) {
   // read them answer with fixtures (fakeAdds), which come before this.
   await ctx.route('https://script.google.com/macros/**', (route) => route.abort());
   await ctx.route(/^https:\/\/voting-guide-git-src-[a-z]{12}-kevinhg\.vercel\.app\//, (route) => route.abort());
+  // Nor the live results Worker (src/results.ts, Nov 3): every page reads a results file once its polls close, so each
+  // gets one marked `test`, which the page ignores. The results checks serve tests/fixtures/results/ with page.route.
+  await ctx.route((u) => /^\/results\/2026-11-03\/[A-Z]{2}\.json$/.test(u.pathname), (route) => {
+    const st = route.request().url().match(/([A-Z]{2})\.json/)[1];
+    return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ election: '2026-11-03', state: st, generated: '2026-11-04T00:00:00Z', test: true, sources: [], items: {} }) });
+  });
   const page = await ctx.newPage();
   page.errors = [];
   // Only our own origin counts: a slow Google Fonts request is not a bug in the guide.
@@ -3660,6 +3666,66 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   check('Results: a new ballot after the last close goes straight to the ballot with nothing filled in', filled === false, String(filled));
   await noSideScroll(page, 'Results first page');
   noErrors(page, 'Results first page');
+  await ctx.close();
+}
+// Results Phase 1 (Nov 3): the Worker's file on the rows, served from tests/fixtures/results/. The column, the open row,
+// the figure, Refresh, a failed fetch keeping the last numbers, and a reload that loses no pick.
+{
+  const { ctx, page } = await newPage({ timezoneId: 'America/Chicago' });
+  const FX = fs.readFileSync(path.join(ROOT, 'tests', 'fixtures', 'results', 'TX.json'), 'utf8');
+  let reads = 0, busted = 0, fail = false;
+  await page.route((u) => u.pathname === '/results/2026-11-03/TX.json', (route) => {
+    reads++;
+    if (/[?&]t=\d/.test(route.request().url())) busted++;
+    return fail ? route.fulfill({ status: 503, body: 'down' }) : route.fulfill({ status: 200, contentType: 'application/json', body: FX });
+  });
+  await page.goto(`${BASE}/?today=2026-11-03&now=21:42`);
+  await page.fill('#zip', '78704');
+  await throughSetup(page);
+  await page.waitForSelector('#vz .vz-st', { timeout: 8000 }).catch(() => {});
+  const head = await text(page, '#vz');
+  const order = await page.evaluate(() => { const v = document.querySelector('#vz'); const k = v && v.querySelector('.vz-key'); const f = v && v.querySelector('.vz-fig'); const pl = document.querySelector('.picks-line'); return !!(k && f && pl) && !!(k.compareDocumentPosition(f) & 4) && !!(v.compareDocumentPosition(pl) & 4); });
+  check('Results rows: the figure under "Your ballot": status word, its line, the key above the dots, then the endorsement line', /^Counting/.test(head) && /Election offices are still counting/.test(head) && order && reads >= 1, head.slice(0, 160));
+  check('Results rows: the strip: "We checked" with each county’s time, and Refresh', /We checked Travis County: 9:42 PM CT · Williamson County: 9:41 PM CT\. Refresh/.test(await text(page, '#plan')), await text(page, '.plan-fresh'));
+  // U.S. House 37: answer the district question, then the row shows the count.
+  await tap(page, 'li.is-q:has-text("U.S. Representative") .row-hd');
+  await tap(page, '[data-fk="d-tx-us-house-37"]');
+  await page.waitForSelector('#i-tx-us-house-37');
+  check('Results rows: the column: leader and share over "counting"', (await text(page, '#i-tx-us-house-37 .vd')) === 'Casar 71% counting', await text(page, '#i-tx-us-house-37 .vd'));
+  check('Results rows: link_only and complete', (await text(page, '#i-tx-us-senate .vd')) === 'See election office results' && (await text(page, '#i-tx-austin-prop-b .vd')) === 'Passed Yes 64% · unofficial', `${await text(page, '#i-tx-us-senate .vd')} | ${await text(page, '#i-tx-austin-prop-b .vd')}`);
+  await tap(page, '[data-fk="row-tx-us-house-37"]');
+  await page.waitForSelector('#ob-tx-us-house-37 .rtab');
+  const ob = await text(page, '#ob-tx-us-house-37');
+  check('Results rows: the open row: count line, the table, the office’s time and words, AP, sources folded', /^Counting\. Casar is ahead so far\./.test(ob) && /Vote %/.test(ob) && /Travis County updated: 9:35 PM CT/.test(ob) && /AP’s race calls/.test(ob) && (await page.getAttribute('[data-fk="es-tx-us-house-37"]', 'aria-expanded')) === 'false', ob.slice(0, 200));
+  await tap(page, '[data-fk="es-tx-us-house-37"]');
+  await page.waitForSelector('#ob-tx-us-house-37 .rs-was');
+  await tap(page, '#ob-tx-us-house-37 [data-act="pick"][data-v="Lauren B. Peña"]');
+  await page.waitForTimeout(400);
+  check('Results rows: a pick still works, and the column says "Your pick" in gold ink', (await text(page, '#i-tx-us-house-37 .vd')) === 'Casar 71% counting Your pick: Peña' && !!(await page.$('#i-tx-us-house-37 .vd .p')), await text(page, '#i-tx-us-house-37 .vd'));
+  check('Results rows: the figure counts it behind', /Your 1 pick: 1 behind/.test(await text(page, '#vz .vz-sum')) && !!(await page.$('#vz .d.down[data-id="tx-us-house-37"]')), await text(page, '#vz .vz-sum'));
+  // A figure row's chevron lists its races; its label jumps to the section.
+  await tap(page, '#vz [data-act="fig-row"][data-sec="federal"]');
+  check('Results rows: a figure row lists its races, each linking its row', /U\.S\. Representative/.test(await text(page, '#vz .vz-list')) && !!(await page.$('#vz .vz-list [data-act="goto"][data-id="tx-us-house-37"]')), await text(page, '#vz .vz-list'));
+  // Refresh: a read past the cache; the same fetch times say "No change since", never a fresh time.
+  const before = busted;
+  await tap(page, '[data-fk="res-refresh"]');
+  await page.waitForTimeout(500);
+  check('Results rows: Refresh reads again past the cache, and nothing new says "No change since 9:35 PM CT"', busted === before + 1 && /No change since 9:35 PM CT\./.test(await text(page, '#plan')), await text(page, '#plan .plan-fresh'));
+  // Hide summary folds the figure to its head, remembered on this device apart from the picks.
+  await tap(page, '[data-fk="vz-hide"]');
+  check('Results rows: Hide summary folds the figure, in its own storage key', !(await page.$('#vz .vz-fig')) && (await page.evaluate(() => localStorage.getItem('vg-tally'))) === 'true' && !/vg-tally|vz-/.test(await page.evaluate(() => localStorage.getItem('vg2') || '')));
+  await tap(page, '[data-fk="vz-hide"]');
+  await noSideScroll(page, 'Results rows');
+  noErrors(page, 'Results rows');
+  // A reload keeps every pick and shows the numbers again.
+  await page.reload();
+  await page.waitForSelector('#i-tx-us-house-37 .vd.res', { timeout: 8000 }).catch(() => {});
+  check('Results rows: a reload loses no pick', (await text(page, '#i-tx-us-house-37 .vd')) === 'Casar 71% counting Your pick: Peña' && (await page.evaluate(() => JSON.parse(localStorage.getItem('vg2')).ballots['TX|austin-tx'].picks['tx-us-house-37'])) === 'Lauren B. Peña', await text(page, '#i-tx-us-house-37 .vd'));
+  // The Worker unreachable: the last numbers stay and the strip says so.
+  fail = true;
+  await tap(page, '[data-fk="res-refresh"]');
+  await page.waitForTimeout(500);
+  check('Results rows: a failed read keeps the last numbers and says so', /Couldn’t check just now/.test(await text(page, '#plan')) && (await text(page, '#i-tx-us-house-37 .vd')).startsWith('Casar 71%'), await text(page, '#plan .plan-fresh'));
   await ctx.close();
 }
 // Results Phase 0, Codex round 2: the close repaints the bar and the endcap, never the address being typed.

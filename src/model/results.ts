@@ -50,7 +50,7 @@ export function readable(f: unknown, st: string): f is ResultsFile {
     (!r.candidates || (Array.isArray(r.candidates) && r.candidates.every((c) => c && typeof c.name === 'string' && whole(c.votes) && typeof c.pct === 'number')))
     && (!r.measure || (whole(r.measure.yes) && whole(r.measure.no)));
   return Object.values(x.items).every((r) => !!r && typeof r.source === 'string' && ITEM_ST.includes(r.status) && typeof r.url === 'string' && /^https:\/\//.test(r.url)
-    && nums(r) && (!r.slices || (Array.isArray(r.slices) && r.slices.every((s) => s && typeof s.county === 'string' && nums(s)))));
+    && nums(r) && (!r.slices || (Array.isArray(r.slices) && r.slices.every((s) => s && typeof s.county === 'string' && typeof s.url === 'string' && /^https:\/\//.test(s.url) && nums(s)))));
 }
 
 /* Results show on a ballot once its polls have closed and the file for its state has been read. */

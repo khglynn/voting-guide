@@ -126,6 +126,26 @@ test('clarity: the source\'s own banner words come through as labels', async () 
   assert.deepEqual(r.labels, ['Early Voting Totals Only', 'Unofficial Results']);
 });
 
+test('clarity: a banner that carries a progress count is dropped (Travis 0/201, Williamson\'s unfilled X of X)', async () => {
+  const { fixture } = await import('./helpers.mjs');
+  const { hasProgressCount } = await import('../src/util.js');
+  const settings = JSON.parse(fixture('clarity-dallas.electionsettings.json'));
+  settings.pagesettings.web.header = 'Unofficial Results 0/201 Vote Centers Reporting';
+  settings.pagesettings['global settings'].header = '<b>UNOFFICIAL RESULTS X of X Vote Centers Completely Reported</b>';
+  settings.pagesettings['global settings']['mobile header'] = 'Unofficial Results';
+  const f = fakeFetch({ '/127396/current_ver.txt': 'clarity-dallas.current_ver.txt', '/127396/382636/json/en/summary.json': 'clarity-dallas.summary.json', '/127396/382636/json/en/electionsettings.json': { status: 200, body: JSON.stringify(settings) } });
+  const r = await clarity.read({ fetch: f, map: mapFor('dallas-county-tx') });
+  assert.deepEqual(r.labels, ['Unofficial Results']);
+  for (const t of ['245 of 1,327 Precincts Reported', 'Precincts Reporting: 15%', 'x of x reporting']) assert.equal(hasProgressCount(t), true, t);
+  for (const t of ['Early Voting Totals Only', 'Unofficial Cumulative Results', 'Ranked-choice rounds available 11/4/2026', 'Election Night Unofficial Results']) assert.equal(hasProgressCount(t), false, t);
+  // A read stored before the filter keeps its old labels; the file leaves them out anyway.
+  const { buildStateFile } = await import('../src/merge.js');
+  const map = { id: 't', state: 'TX', name: 'T County', county: 'T', feed: { adapter: 'clarity', results_url: 'https://t.example/', tz: 'America/Chicago' }, contests: [] };
+  const read = { election: { date: '2026-11-03' }, source_updated: '2026-11-04T03:46:01.000Z', labels: ['Unofficial Results 0/201 Vote Centers Reporting'], contests: [] };
+  const file = buildStateFile({ state: 'TX', maps: [map], srcs: { t: { record: { read, fetched: '2026-11-04T03:47:00.000Z' }, checked: true, sched: {} } }, mode: 'public', now: '2026-11-04T03:47:00.000Z' });
+  assert.equal(file.sources[0].labels, undefined);
+});
+
 test('tx_sos: the SOS page parses; a race cut off mid-table (Nov 3, 8:58 PM) is dropped, never read as finished', async () => {
   const { parse } = await import('../src/adapters/tx_sos.js');
   const { fixture } = await import('./helpers.mjs');

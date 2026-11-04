@@ -5,13 +5,14 @@
    The election id comes from the map, which takes it from the office's own link or Clarity's list page
    (`{base}/elections.json`); `listElections` reads that list for the map-making step. */
 import { get } from '../fetch.js';
-import { parseUsTime, isoDate } from '../util.js';
+import { parseUsTime, isoDate, hasProgressCount } from '../util.js';
 
-/* The source's own banner words, as plain text: "Early Voting Totals Only" (Dallas, 7 PM), "Unofficial Results". */
+/* The source's own banner words, as plain text: "Early Voting Totals Only" (Dallas, 7 PM), "Unofficial Results".
+   A banner holding a progress count is left out (see hasProgressCount). */
 const plain = (h) => String(h || '').replace(/<[^>]*>/g, ' ').replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
 function labels(ps = {}) {
   const out = [];
-  for (const v of [ps.web?.header, ps['global settings']?.header, ps['global settings']?.['mobile header']]) { const t = plain(v); if (t && t.length <= 160 && !out.includes(t)) out.push(t); }
+  for (const v of [ps.web?.header, ps['global settings']?.header, ps['global settings']?.['mobile header']]) { const t = plain(v); if (t && t.length <= 160 && !hasProgressCount(t) && !out.includes(t)) out.push(t); }
   return out;
 }
 

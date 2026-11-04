@@ -4,7 +4,7 @@
    "not checked yet", "election mismatch", "source refused us", "map out of date"), and on each source `checked`,
    `next_due` and `failing_since`. Nothing here sums slices: a race whose voters span sources (its map entry's
    `reaches` names more than one county, or two sources carry it) keeps one slice per source, the largest on top. */
-import { pctOf } from './util.js';
+import { pctOf, hasProgressCount } from './util.js';
 import { outcomeFor, parseThreshold, RETENTION } from './outcome.js';
 
 /* A map choice's value: a guide candidate's exact name, "yes"/"no" for a measure, null for a named feed choice who
@@ -136,7 +136,9 @@ export function buildStateFile({ state, maps, srcs, mode, now }) {
     const rec = s.record;
     const sched = s.sched || {};
     const entry = { id: map.id, name: map.name, url: map.feed.results_url, updated: rec?.read?.source_updated ?? null, status: 'pending', reporting: rec?.read?.reporting ?? null, fetched: rec?.fetched ?? null };
-    if (rec?.read?.labels?.length) entry.labels = rec.read.labels;
+    // Reads stored before the banner filter keep their old labels until the source changes; filter here too.
+    const labels = (rec?.read?.labels || []).filter((t) => !hasProgressCount(t));
+    if (labels.length) entry.labels = labels;
     if (rec?.read?.feed_version) entry.feed_version = rec.read.feed_version; // which Clarity version the numbers are from
     if (sched.next_due) entry.next_due = sched.next_due;
     if (sched.failing_since) entry.failing_since = sched.failing_since;

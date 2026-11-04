@@ -44,6 +44,12 @@ export function isoDate(s) {
   return null;
 }
 
+/* A banner that carries a count of what has reported: Travis's "Unofficial Results 0/201 Vote Centers Reporting" beside
+   254,511 counted votes, Williamson's unfilled template "X of X Vote Centers Completely Reported", "15%". Progress words
+   come only from a source's own precinct fields, under the rule that hides "0 of N" once votes are in, so a banner like
+   these is dropped whole (overnight review, Nov 3). A date such as "11/4/2026" is not a count. */
+export const hasProgressCount = (t) => /(?<![\/\d])\b(?:\d[\d,]*|x)\s*(?:of|\/)\s*(?:\d[\d,]*|x)\b(?!\s*\/)/i.test(String(t || '')) || /\d\s*%/.test(String(t || ''));
+
 export const isWhole = (n) => Number.isInteger(n) && n >= 0;
 
 /* Percent of a total, two decimals, from unrounded counts. Zero total gives 0, never NaN. */

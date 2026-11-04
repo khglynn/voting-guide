@@ -1,0 +1,75 @@
+{
+  "id": "results-CA",
+  "state": "CA",
+  "name": "California Secretary of State",
+  "county": "California",
+  "scope": "state",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "gubernatorial-general",
+    "feed_name": null
+  },
+  "guide": {
+    "places": [
+      "state-CA",
+      "beverly-hills-ca",
+      "burbank-ca",
+      "culver-city-ca",
+      "dana-point-ca",
+      "fullerton-ca",
+      "glendale-ca",
+      "long-beach-ca",
+      "los-angeles-ca",
+      "malibu-ca",
+      "pasadena-ca",
+      "san-diego-ca",
+      "san-francisco-ca",
+      "santa-clarita-ca",
+      "santa-monica-ca",
+      "torrance-ca",
+      "west-hollywood-ca"
+    ]
+  },
+  "feed": {
+    "adapter": "ca_sos",
+    "base": "https://api.sos.ca.gov",
+    "results_url": "https://electionresults.sos.ca.gov/",
+    "paths": [
+      "query?r=[\"02000000000059\",\"03000000000059\",\"04000000000059\",\"05000000000059\",\"06000000000059\",\"07000000000059\",\"08000000000059\",\"16000000000059\",\"14000000000459\",\"14000000000659\"]",
+      "ballot-measures",
+      "board-of-equalization/district/all",
+      "us-rep/district/all"
+    ],
+    "expect_props": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "identity": "named",
+    "identity_note": "The SOS's documented JSON feed (api.sos.ca.gov) answered our named User-Agent with 200s on Nov 3, 8:20 to 8:27 PM PT. Its results site electionresults.sos.ca.gov served an Incapsula bot-check page to the same request (8:18 PM PT), so we never read the site; rows link to it.",
+    "election_id_from": "The feed names no election. media.sos.ca.gov/media/api-endpoints.csv, read Nov 3 8:23 PM PT, lists these endpoints for 'the California November 3, 2026 Statewide General Election' (status endpoint returns/status/gubernatorial-general, the id used here). Each read confirms the ballot by its measure numbers (feed.expect_props: 1 to 5 and 37 to 45).",
+    "query_ids_from": "Contest ids from the same endpoints list: 02 to 08 the statewide offices, 16 Superintendent, 14 ... 04 and 06 the two Supreme Court retentions, each with county code 59 (statewide); the SOS allows ten per query.",
+    "labels": [],
+    "tz": "America/Los_Angeles"
+  },
+  "certify_by": "2026-12-11",
+  "polls_close": "2026-11-04T04:00:00Z",
+  "count_closes": "2026-12-04T07:59:00Z",
+  "complete_marker": null,
+  "official": null,
+  "contests": [],
+  "unmatched_feed": [],
+  "unmatched_guide": [],
+  "not_here": []
+}

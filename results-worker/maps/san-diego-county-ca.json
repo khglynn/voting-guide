@@ -1,0 +1,38 @@
+{
+  "id": "san-diego-county-ca",
+  "state": "CA",
+  "name": "San Diego County",
+  "county": "San Diego",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "25",
+    "feed_name": null
+  },
+  "guide": {
+    "places": [
+      "san-diego-ca"
+    ]
+  },
+  "feed": {
+    "adapter": "lvt",
+    "base": "https://www.livevoterturnout.com/ENR/sandiegocaenr/25",
+    "results_url": "https://www.livevoterturnout.com/ENR/sandiegocaenr/25/en/Index_25.html",
+    "identity": "named",
+    "identity_note": "summary_25.xml and Index_25.html answered our named User-Agent with 200 on Nov 3, 8:18 and 8:21 PM PT (GeneratedDate 7:57:42 PM PT, 689,666 ballots counted).",
+    "election_id_from": "The registry's capture (verified) found sdvote.com's results link on folder 25; the XML's ElectionID is 25 on every row. The XML names no election or date, so the folder is the identity.",
+    "labels": [
+      "Unofficial Election Results"
+    ],
+    "labels_note": "The banner on Index_25.html (shown in capitals), read Nov 3, 8:21 PM PT; the XML carries no status words.",
+    "tz": "America/Los_Angeles"
+  },
+  "certify_by": "2026-12-03",
+  "polls_close": "2026-11-04T04:00:00Z",
+  "count_closes": "2026-12-04T07:59:00Z",
+  "complete_marker": null,
+  "official": null,
+  "contests": [],
+  "unmatched_feed": [],
+  "unmatched_guide": [],
+  "not_here": []
+}

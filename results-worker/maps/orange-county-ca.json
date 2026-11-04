@@ -1,0 +1,39 @@
+{
+  "id": "orange-county-ca",
+  "state": "CA",
+  "name": "Orange County",
+  "county": "Orange",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "24",
+    "feed_name": null
+  },
+  "guide": {
+    "places": [
+      "dana-point-ca",
+      "fullerton-ca"
+    ]
+  },
+  "feed": {
+    "adapter": "lvt",
+    "base": "https://www.livevoterturnout.com/ENR/orangecaenr/24",
+    "results_url": "https://ocvote.gov/results/current-election-results",
+    "identity": "named",
+    "identity_note": "summary_24.xml and the iframe page phkv4sV_Index_24.html answered our named User-Agent with 200 on Nov 3, 8:18 and 8:19 PM PT (GeneratedDate 8:04:59 PM PT, 604,945 ballots counted).",
+    "election_id_from": "ocvote.gov's current-election-results page frames folder 24 (registry capture); the page heads it '2026 General Election' and the XML's ElectionID is 24 on every row. The XML names no election or date, so the folder is the identity.",
+    "labels": [
+      "Unofficial Election Results"
+    ],
+    "labels_note": "The banner on the folder 24 page, read Nov 3, 8:19 PM PT; the XML carries no status words.",
+    "tz": "America/Los_Angeles"
+  },
+  "certify_by": "2026-12-03",
+  "polls_close": "2026-11-04T04:00:00Z",
+  "count_closes": "2026-12-04T07:59:00Z",
+  "complete_marker": null,
+  "official": null,
+  "contests": [],
+  "unmatched_feed": [],
+  "unmatched_guide": [],
+  "not_here": []
+}

@@ -144,3 +144,23 @@ test('tick: a stored read that went missing is read again in full, token or not'
   await runTick({ fetch: fakeFetch(routes), store, archive: null, maps: [map], now: '2026-11-03T22:05:00.000Z' });
   assert.ok(JSON.parse(await store.get('src:bexar-tx')).read, 'the read is back');
 });
+
+test('tick: a cut-off page keeps the last good numbers for the races it dropped, marked with their update', async () => {
+  const { fixture } = await import('./helpers.mjs');
+  const map = { id: 'results-TX', state: 'TX', name: 'Texas Secretary of State', county: 'Texas', scope: 'state', election: { date: '2026-11-03', feed_election_id: '2026 NOVEMBER GENERAL ELECTION', feed_name: '2026 NOVEMBER GENERAL ELECTION' }, feed: { adapter: 'tx_sos', base: 'https://electionresults.sos.state.tx.us', results_url: 'https://electionresults.sos.state.tx.us/results.html', tz: 'America/Chicago' },
+    contests: [{ feed_id: 'U. S. SENATOR', feed_name: 'U. S. SENATOR', item: 'tx-us-senate', kind: 'plurality', seats: 1, whole: true, reaches: ['Texas'], choices: { 'KEN PAXTON': 'Ken Paxton', 'JAMES TALARICO': 'James Talarico', 'TED BROWN': 'Ted Brown', 'AVERY AYERS': 'Avery Ayers', 'JADE SIMMONS': 'Jade Simmons', "BRADFORD 'BRAD' HALL": "Bradford 'Brad' Hall", 'ZUL MOHAMED': 'Zul Mohamed' } }] };
+  const full = fixture('tx-sos.results.html');
+  const store = memStore();
+  await runTick({ fetch: fakeFetch({ 'results.html': { status: 200, body: full, headers: { 'Last-Modified': 'A' } } }), store, archive: null, maps: [map], now: '2026-11-04T03:00:00.000Z' });
+  // the next update cuts the page before the Senate (a later, shorter page with only House District 1)
+  const cut = full.replace(/<div class="election">U\. S\. SENATOR[\s\S]*?<\/table><\/div>/, '').replace('08:56 PM', '09:12 PM');
+  const out = await runTick({ fetch: fakeFetch({ 'results.html': { status: 200, body: cut, headers: { 'Last-Modified': 'B' } } }), store, archive: null, maps: [map], now: '2026-11-04T03:13:00.000Z' });
+  assert.equal(out.ran[0].outcome, 'changed');
+  const rec = JSON.parse(await store.get('src:results-TX'));
+  const sen = rec.read.contests.find((c) => c.feed_id === 'U. S. SENATOR');
+  assert.ok(sen, 'the Senate is kept');
+  assert.match(sen.note, /cut off at its latest update, so these numbers are from its 8:56 PM update/);
+  const pv = JSON.parse(await store.get('preview:TX'));
+  assert.equal(pv.items['tx-us-senate'].candidates[0].votes, 3410265);
+  assert.match(pv.items['tx-us-senate'].note, /8:56 PM/);
+});

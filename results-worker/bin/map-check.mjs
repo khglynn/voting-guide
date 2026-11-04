@@ -94,7 +94,7 @@ for (const m of maps) {
       const byId = new Map(r.contests.map((c) => [c.feed_id, c]));
       for (const mc of m.contests || []) {
         const fc = byId.get(String(mc.feed_id));
-        if (!fc) { err(m, `${mc.feed_name} (${mc.feed_id}) isn't in the feed`); continue; }
+        if (!fc) { (r.dropped > 0 ? warn : err)(m, `${mc.feed_name} (${mc.feed_id}) isn't in the feed${r.dropped > 0 ? ' (the page was served cut off; it may be past the cut)' : ''}`); continue; }
         if (fc.feed_name !== mc.feed_name) err(m, `${mc.feed_id} is "${fc.feed_name}" in the feed, "${mc.feed_name}" in the map`);
         for (const ch of fc.choices) if (!(ch.name in (mc.choices || {}))) err(m, `${mc.feed_name}: feed choice "${ch.name}" is neither matched nor listed`);
         for (const k of Object.keys(mc.choices || {})) if (!fc.choices.some((ch) => ch.name === k)) err(m, `${mc.feed_name}: map choice "${k}" isn't in the feed`);

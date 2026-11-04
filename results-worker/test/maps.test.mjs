@@ -27,12 +27,13 @@ for (const [id, routes] of Object.entries(FEEDS)) {
     const { raw, ...read } = r;
     assert.equal(checkRead(read, map).ok, true);
     const { status, slices, problems } = sourceSlices(read, map, '2026-11-03T22:00:00.000Z');
-    assert.deepEqual(problems, []);
+    // A page served cut off (the Texas SOS snapshot) may miss mapped races; nothing else may go wrong.
+    assert.deepEqual(problems.filter((p) => !(read.dropped > 0 && p.reason === 'contest missing')), []);
     const votes = read.contests.some((c) => c.choices.some((ch) => ch.votes > 0));
     assert.equal(status, votes ? 'counting' : 'pending');
-    assert.equal(Object.keys(slices).length, map.contests.length);
+    if (!read.dropped) assert.equal(Object.keys(slices).length, map.contests.length);
     const byId = new Map(read.contests.map((c) => [c.feed_id, c]));
-    for (const mc of map.contests) for (const ch of byId.get(mc.feed_id).choices) assert.ok(ch.name in mc.choices, `${mc.feed_name}: ${ch.name}`);
+    for (const mc of map.contests) for (const ch of byId.get(mc.feed_id)?.choices || []) assert.ok(ch.name in mc.choices, `${mc.feed_name}: ${ch.name}`);
     for (const s of Object.values(slices)) assert.equal(s.unmatched, undefined, 'no feed choice left unlisted');
     for (const s of Object.values(slices)) if (s.measure) assert.equal(s.measure.threshold, 50, 'every measure carries its threshold (simple majority tonight)');
     const f = buildStateFile({ state: 'TX', maps: [map], srcs: { [id]: { record: { read, fetched: '2026-11-03T22:00:00.000Z' }, checked: false, sched: {} } }, mode: 'preview', now: '2026-11-03T22:00:00.000Z' });

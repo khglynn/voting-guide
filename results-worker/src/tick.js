@@ -65,6 +65,16 @@ async function runSource({ map, fetch, store, archive, sched, now, ping }) {
     S[map.id].map_hash = mh;
     return { id: map.id, outcome: 'unchanged' };
   }
+  // A page served cut off (the Texas SOS, Nov 3: its length changed with each update) keeps the last good numbers for
+  // any race it dropped, marked with the update they came from, so a race never flickers between numbers and a link.
+  if (read.dropped > 0 && baseline?.contests) {
+    const have = new Set(read.contests.map((c) => c.feed_id));
+    const at = baseline.source_updated ? new Date(baseline.source_updated).toLocaleTimeString('en-US', { timeZone: map.feed.tz || 'America/Chicago', hour: 'numeric', minute: '2-digit' }) : 'an earlier';
+    for (const c of baseline.contests) {
+      if (have.has(c.feed_id)) continue;
+      read.contests.push({ ...c, updated: c.updated || baseline.source_updated || null, note: `The ${map.name}'s page was cut off at its latest update, so these numbers are from its ${at} update.` });
+    }
+  }
   const check = checkRead(read, map, baseline);
   if (archive) await archive.put(`raw/${map.id}/${now}-${hash}.json`, JSON.stringify({ fetched: now, source: map.id, election: read.election, raw }));
   if (check.readBlocked) {

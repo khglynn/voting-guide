@@ -10,8 +10,8 @@
     "feed_name": "2026 NOVEMBER GENERAL ELECTION"
   },
   "guide": {
-    "fingerprint": "c416b40d30a73434",
-    "made_from": "vote.kevinhg.com/data, read 2026-11-04T03:05:55.275Z",
+    "fingerprint": "9a46ae8545c2901d",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T03:14:24.819Z",
     "places": [
       "state-TX",
       "allen-tx",
@@ -42,6 +42,358 @@
   "official": null,
   "contests": [
     {
+      "feed_id": "CHIEF JUSTICE, 15TH COURT OF APPEALS DISTRICT",
+      "feed_name": "CHIEF JUSTICE, 15TH COURT OF APPEALS DISTRICT",
+      "item": "tx-15th-coa-chief",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "SCOTT BRISTER (I)": "Scott Brister",
+        "JERRY ZIMMERER": "Jerry Zimmerer"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "JUSTICE, 15TH COURT OF APPEALS DISTRICT, PLACE 2",
+      "feed_name": "JUSTICE, 15TH COURT OF APPEALS DISTRICT, PLACE 2",
+      "item": "tx-15th-coa-place-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "SCOTT K. FIELD (I)": "Scott K. Field",
+        "TOM BAKER": "Tom Baker"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "JUSTICE, 15TH COURT OF APPEALS DISTRICT, PLACE 3",
+      "feed_name": "JUSTICE, 15TH COURT OF APPEALS DISTRICT, PLACE 3",
+      "item": "tx-15th-coa-place-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "APRIL FARRIS (I)": "April Farris",
+        "MARC M. MEYER": "Marc M. Meyer"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "COMMISSIONER OF AGRICULTURE",
+      "feed_name": "COMMISSIONER OF AGRICULTURE",
+      "item": "tx-agriculture-commissioner",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "NATE SHEETS": "Nate Sheets",
+        "CLAYTON TUCKER": "Clayton Tucker",
+        "AUSTIN R. KELLY": "Austin R. Kelly"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "ATTORNEY GENERAL",
+      "feed_name": "ATTORNEY GENERAL",
+      "item": "tx-attorney-general",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "MAYES MIDDLETON": "Mayes Middleton",
+        "NATHAN JOHNSON": "Nathan Johnson",
+        "TOM OXFORD": "Tom Oxford"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "JUDGE, COURT OF CRIMINAL APPEALS, PLACE 3",
+      "feed_name": "JUDGE, COURT OF CRIMINAL APPEALS, PLACE 3",
+      "item": "tx-cca-place-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "THOMAS SMITH": "Thomas Smith",
+        "OKEY ANYIAM": "Okey Anyiam",
+        "MARK ASH": "Mark Ash"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "JUDGE, COURT OF CRIMINAL APPEALS, PLACE 4",
+      "feed_name": "JUDGE, COURT OF CRIMINAL APPEALS, PLACE 4",
+      "item": "tx-cca-place-4",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "KEVIN PATRICK YEARY (I)": "Kevin Patrick Yeary",
+        "AUDRA RILEY": "Audra Riley"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "JUDGE, COURT OF CRIMINAL APPEALS, PLACE 9",
+      "feed_name": "JUDGE, COURT OF CRIMINAL APPEALS, PLACE 9",
+      "item": "tx-cca-place-9",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "JOHN MESSINGER": "John Messinger",
+        "HOLLY TAYLOR": "Holly Taylor"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "COMPTROLLER OF PUBLIC ACCOUNTS",
+      "feed_name": "COMPTROLLER OF PUBLIC ACCOUNTS",
+      "item": "tx-comptroller",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DON HUFFINES": "Don Huffines",
+        "SARAH ECKHARDT": "Sarah Eckhardt",
+        "V. ALONZO ECHAVARRIA-GARZA": "V. Alonzo Echavarria-Garza",
+        "SHEHLA FAIZI": "Shehla Faizi"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "GOVERNOR",
+      "feed_name": "GOVERNOR",
+      "item": "tx-governor",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "GREG ABBOTT (I)": "Greg Abbott",
+        "GINA HINOJOSA": "Gina Hinojosa",
+        "PAT DIXON": "Pat Dixon",
+        "JENN MACK": "Jenn Mack",
+        "MIKE MILLER": "Mike Miller",
+        "EDWARD EARL GILES": "Edward Earl Giles",
+        "JINGHPAW MAJOISHINGRA": "Jinghpaw Majoishingra"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "COMMISSIONER OF THE GENERAL LAND OFFICE",
+      "feed_name": "COMMISSIONER OF THE GENERAL LAND OFFICE",
+      "item": "tx-land-commissioner",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DAWN BUCKINGHAM (I)": "Dawn Buckingham",
+        "BENJAMIN FLORES": "Benjamin Flores",
+        "NEILL SNIDER": "Neill Snider"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "LIEUTENANT GOVERNOR",
+      "feed_name": "LIEUTENANT GOVERNOR",
+      "item": "tx-lt-governor",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DAN PATRICK (I)": "Dan Patrick",
+        "VIKKI GOODWIN": "Vikki Goodwin",
+        "ANTHONY CRISTO": "Anthony Cristo",
+        "KEVIN MCCORMICK": "Kevin McCormick",
+        "STEPHEN SAMUELSON": "Stephen Samuelson",
+        "ARTURO ESPINOSA": "Arturo Espinosa"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "RAILROAD COMMISSIONER",
+      "feed_name": "RAILROAD COMMISSIONER",
+      "item": "tx-railroad-commissioner",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "BO FRENCH": "Bo French",
+        "JON ROSENTHAL": "Jon Rosenthal",
+        "ARTHUR DIBIANCA": "Arthur DiBianca"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "CHIEF JUSTICE, SUPREME COURT",
+      "feed_name": "CHIEF JUSTICE, SUPREME COURT",
+      "item": "tx-supreme-court-chief",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "JIMMY BLACKLOCK (I)": "Jimmy Blacklock",
+        "MAGGIE ELLIS": "Maggie Ellis"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "JUSTICE, SUPREME COURT, PLACE 2",
+      "feed_name": "JUSTICE, SUPREME COURT, PLACE 2",
+      "item": "tx-supreme-court-place-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "JAMES P. SULLIVAN (I)": "James P. Sullivan",
+        "CHARI KELLY": "Chari Kelly"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "JUSTICE, SUPREME COURT, PLACE 7",
+      "feed_name": "JUSTICE, SUPREME COURT, PLACE 7",
+      "item": "tx-supreme-court-place-7",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "KYLE HAWKINS (I)": "Kyle Hawkins",
+        "KRISTEN HAWKINS": "Kristen Hawkins"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "JUSTICE, SUPREME COURT, PLACE 8",
+      "feed_name": "JUSTICE, SUPREME COURT, PLACE 8",
+      "item": "tx-supreme-court-place-8",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "BRETT BUSBY (I)": "Brett Busby",
+        "GISELA D. TRIANA": "Gisela D. Triana"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "U. S. REPRESENTATIVE DISTRICT 10",
+      "feed_name": "U. S. REPRESENTATIVE DISTRICT 10",
+      "item": "tx-us-house-10",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "CHRIS GOBER": "Chris Gober",
+        "CAITLIN ROURK": "Caitlin Rourk"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "U. S. REPRESENTATIVE DISTRICT 11",
+      "feed_name": "U. S. REPRESENTATIVE DISTRICT 11",
+      "item": "tx-us-house-11",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "AUGUST PFLUGER (I)": "August Pfluger",
+        "CLAIRE REYNOLDS": "Claire Reynolds"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "U. S. REPRESENTATIVE DISTRICT 17",
+      "feed_name": "U. S. REPRESENTATIVE DISTRICT 17",
+      "item": "tx-us-house-17",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "PETE SESSIONS (I)": "Pete Sessions",
+        "CASEY SHEPARD": "Casey Shepard"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "U. S. REPRESENTATIVE DISTRICT 18",
+      "feed_name": "U. S. REPRESENTATIVE DISTRICT 18",
+      "item": "tx-us-house-18",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "RONALD DWAYNE WHITFIELD": "Ronald Dwayne Whitfield",
+        "CHRISTIAN DASHAUN MENEFEE": "Christian Dashaun Menefee"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
       "feed_id": "U. S. REPRESENTATIVE DISTRICT 2",
       "feed_name": "U. S. REPRESENTATIVE DISTRICT 2",
       "item": "tx-us-house-2",
@@ -58,6 +410,120 @@
       "whole": true
     },
     {
+      "feed_id": "U. S. REPRESENTATIVE DISTRICT 20",
+      "feed_name": "U. S. REPRESENTATIVE DISTRICT 20",
+      "item": "tx-us-house-20",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "EDGARDO RAFAEL BAEZ": "Edgardo Rafael Baez",
+        "JOAQUIN CASTRO (I)": "Joaquin Castro"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "U. S. REPRESENTATIVE DISTRICT 21",
+      "feed_name": "U. S. REPRESENTATIVE DISTRICT 21",
+      "item": "tx-us-house-21",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "MARK TEIXEIRA": "Mark Teixeira",
+        "KRISTIN HOOK": "Kristin Hook"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "U. S. REPRESENTATIVE DISTRICT 22",
+      "feed_name": "U. S. REPRESENTATIVE DISTRICT 22",
+      "item": "tx-us-house-22",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "TREVER NEHLS": "Trever Nehls",
+        "MARQUETTE GREENE-SCOTT": "Marquette Greene-Scott"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "U. S. REPRESENTATIVE DISTRICT 23",
+      "feed_name": "U. S. REPRESENTATIVE DISTRICT 23",
+      "item": "tx-us-house-23",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "BRANDON HERRERA": "Brandon Herrera",
+        "KATY PADILLA STOUT": "Katy Padilla Stout",
+        "BEN MENDOZA": "Ben Mendoza"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "U. S. REPRESENTATIVE DISTRICT 24",
+      "feed_name": "U. S. REPRESENTATIVE DISTRICT 24",
+      "item": "tx-us-house-24",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "BETH VAN DUYNE (I)": "Beth Van Duyne",
+        "KEVIN BURGE": "Kevin Burge"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "U. S. REPRESENTATIVE DISTRICT 27",
+      "feed_name": "U. S. REPRESENTATIVE DISTRICT 27",
+      "item": "tx-us-house-27",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "MICHAEL CLOUD (I)": "Michael Cloud",
+        "TANYA LLOYD": "Tanya Lloyd",
+        "WAYNE RAASCH": null
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "U. S. REPRESENTATIVE DISTRICT 29",
+      "feed_name": "U. S. REPRESENTATIVE DISTRICT 29",
+      "item": "tx-us-house-29",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "MARTHA FIERRO": "Martha Fierro",
+        "SYLVIA GARCIA (I)": "Sylvia Garcia"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
       "feed_id": "U. S. REPRESENTATIVE DISTRICT 3",
       "feed_name": "U. S. REPRESENTATIVE DISTRICT 3",
       "item": "tx-us-house-3",
@@ -66,6 +532,121 @@
       "choices": {
         "KEITH SELF (I)": "Keith Self",
         "EVAN HUNT": "Evan Hunt"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "U. S. REPRESENTATIVE DISTRICT 30",
+      "feed_name": "U. S. REPRESENTATIVE DISTRICT 30",
+      "item": "tx-us-house-30",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "EVERETT JACKSON": "Everett Jackson",
+        "FREDERICK D. HAYNES III": "Frederick D. Haynes III"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "U. S. REPRESENTATIVE DISTRICT 31",
+      "feed_name": "U. S. REPRESENTATIVE DISTRICT 31",
+      "item": "tx-us-house-31",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "JOHN CARTER (I)": "John Carter",
+        "JUSTIN EARLY": "Justin Early",
+        "GREG STOKER": "Greg Stoker"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "U. S. REPRESENTATIVE DISTRICT 32",
+      "feed_name": "U. S. REPRESENTATIVE DISTRICT 32",
+      "item": "tx-us-house-32",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "JACE YARBROUGH": "Jace Yarbrough",
+        "DAN BARRIOS": "Dan Barrios"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "U. S. REPRESENTATIVE DISTRICT 33",
+      "feed_name": "U. S. REPRESENTATIVE DISTRICT 33",
+      "item": "tx-us-house-33",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "PATRICK DAVID GILLESPIE": "Patrick David Gillespie",
+        "COLIN ALLRED": "Colin Allred"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "note": "Write-in candidates are not listed on the Secretary of State's page, so they have no number of their own here.",
+      "whole": true
+    },
+    {
+      "feed_id": "U. S. REPRESENTATIVE DISTRICT 35",
+      "feed_name": "U. S. REPRESENTATIVE DISTRICT 35",
+      "item": "tx-us-house-35",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "CARLOS DE LA CRUZ": "Carlos De La Cruz",
+        "JOHNNY C. GARCIA": "Johnny C. Garcia"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "U. S. REPRESENTATIVE DISTRICT 36",
+      "feed_name": "U. S. REPRESENTATIVE DISTRICT 36",
+      "item": "tx-us-house-36",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "BRIAN BABIN (I)": "Brian Babin",
+        "RHONDA HART": "Rhonda Hart"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "U. S. REPRESENTATIVE DISTRICT 38",
+      "feed_name": "U. S. REPRESENTATIVE DISTRICT 38",
+      "item": "tx-us-house-38",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "JON BONCK": "Jon Bonck",
+        "MELISSA MCDONOUGH": "Melissa McDonough",
+        "ALEX MCMENEMY": "Alex McMenemy"
       },
       "reaches": [
         "Texas"
@@ -139,6 +720,22 @@
       "whole": true
     },
     {
+      "feed_id": "U. S. REPRESENTATIVE DISTRICT 9",
+      "feed_name": "U. S. REPRESENTATIVE DISTRICT 9",
+      "item": "tx-us-house-9",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "ALEX MEALER": "Alex Mealer",
+        "LETICIA GUTIERREZ": "Leticia Gutierrez"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
       "feed_id": "U. S. SENATOR",
       "feed_name": "U. S. SENATOR",
       "item": "tx-us-senate",
@@ -160,7 +757,13 @@
       "whole": true
     }
   ],
-  "unmatched_feed": [],
+  "unmatched_feed": [
+    {
+      "feed_id": "U. S. REPRESENTATIVE DISTRICT 37",
+      "feed_name": "U. S. REPRESENTATIVE DISTRICT 37",
+      "why": "the SOS page lists no candidates for it at 9:12 PM; Travis's count stands for it"
+    }
+  ],
   "unmatched_guide": [],
   "not_here": []
 }

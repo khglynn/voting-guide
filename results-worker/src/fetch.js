@@ -25,11 +25,11 @@ export async function bodyText(res) {
 
 /* `method` and `body` exist for one case: an ASP.NET page whose second half sits behind its own form button (the
    Oregon SOS House races 31 to 60, Nov 3). The post carries only what the page itself put in the form. */
-export async function get(fetchFn, url, { identity = 'named', expect = 'json', headers = {}, timeoutMs = 15000, method = 'GET', body = undefined } = {}) {
+export async function get(fetchFn, url, { identity = 'named', expect = 'json', headers = {}, timeoutMs = 15000, method = 'GET', body: postBody = undefined } = {}) {
   const h = { 'User-Agent': identity === 'browser' ? BROWSER_UA : NAMED_UA, Accept: expect === 'json' ? 'application/json, text/plain, */*' : '*/*', ...headers };
   let res;
   try {
-    res = await fetchFn(url, { method, body, headers: h, signal: AbortSignal.timeout(timeoutMs), redirect: 'manual' });
+    res = await fetchFn(url, { method, body: postBody, headers: h, signal: AbortSignal.timeout(timeoutMs), redirect: 'manual' });
   } catch (e) {
     return { verdict: 'error', status: 0, url, error: e?.name === 'TimeoutError' ? 'timed out after 15 s' : String(e?.message || e) };
   }

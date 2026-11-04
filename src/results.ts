@@ -91,14 +91,20 @@ export async function refreshResults(): Promise<void> {
 
 /* Called when a ballot opens, the polls close on an open page, the tab comes back, and once a minute. */
 let lastAt = 0;
+let owed = false;
+const typing = (): boolean => { const a = typeof document !== 'undefined' ? document.activeElement : null; return !!a && (a.tagName === 'TEXTAREA' || (a.tagName === 'INPUT' && (a as HTMLInputElement).type !== 'checkbox')); };
 export function tickResults(): void {
   const st = wanted();
   if (!st) { if (R.st && (!S.ballot || S.ballot.st !== R.st)) resetResults(); return; }
   if (typeof document !== 'undefined' && document.hidden) return;
   // A screen change calls this too: no second read within 20 seconds of the last, unless it's another state's ballot.
-  if (R.st === st && Date.now() - lastAt < 20_000) return;
+  if (R.st === st && Date.now() - lastAt < 20_000) { if (owed && !typing()) { owed = false; repaintResults(); } return; }
   lastAt = Date.now();
-  void loadResults().then((changed) => { if (changed) { R.nochange = null; repaintResults(); } });
+  void loadResults().then((changed) => {
+    if (changed) { R.nochange = null; owed = true; }
+    // Never under someone's typing (a note in an open row): the new numbers wait for the next minute.
+    if (owed && !typing()) { owed = false; repaintResults(); }
+  });
 }
 let started = false;
 export function startResults(): void {

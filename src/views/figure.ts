@@ -33,10 +33,12 @@ function listHTML(dots: Dot[]): string {
     return `<li>${dot(d.kind)}<span><button class="linkbtn" data-act="goto" data-id="${esc(d.id)}" data-fk="vz-go-${esc(d.id)}">${esc(rowTitle(it).title)}${rowTitle(it).sub ? `, ${esc(rowTitle(it).sub!)}` : ''}</button><small>${esc(dotLine(it))}</small></span></li>`;
   }).join('')}</ul>`;
 }
-export function figureHTML(): string {
+/* `forPrint`: the same figure on What's next's printed page (black marks there), with no ids and nothing to tap. */
+export function figureHTML(forPrint = false): string {
   const f = figure();
-  if (!f) return '<div id="vz" hidden></div>';
-  const hidden = figHidden();
+  if (!f) return forPrint ? '' : '<div id="vz" hidden></div>';
+  const hidden = !forPrint && figHidden();
+  if (forPrint) return printHTML(f);
   const hd = `<div class="vz-hd"><h3 class="vz-st" id="vz-h">${esc(f.word)}</h3><button class="linkbtn" data-act="fig-hide" data-fk="vz-hide" aria-expanded="${!hidden}" aria-controls="vz-bd">${hidden ? 'Show summary' : 'Hide summary'}</button></div>
     <p class="vz-ex">${esc(f.explain)}</p>`;
   const srcs = [checkedLine(), ...sourceLines()].filter(Boolean);
@@ -63,4 +65,14 @@ export function figureHTML(): string {
   return `<section class="vz" id="vz" aria-labelledby="vz-h">${hd}
     <div id="vz-bd">${key}<div class="vz-fig">${rows}</div>${sum}${more}${notes}
     ${failed}${srcs.length ? `<div class="vz-src">${srcs.map((s) => `<p>${esc(s)}</p>`).join('')}</div>` : ''}</div></section>`;
+}
+
+function printHTML(f: Figure): string {
+  const rows = f.rows.map(({ sec, dots }) => `<div class="vz-r"><span class="vz-l">${esc(sectionTitle(sec))}</span><span class="vz-dots">${dots.map((d) => dot(d.kind)).join('')}</span><span></span></div>`).join('');
+  const key = f.picks
+    ? `<p class="vz-key"><span>${dot('up')}Ahead or won</span><span>${dot('down')}Behind or didn’t win</span><span>${dot('wp')}No comparison</span><span>${dot('po')}Races you didn’t pick</span></p>`
+    : `<p class="vz-key"><span>${dot('po')}Numbers posted</span><span>${dot('w')}No numbers yet</span></p>`;
+  const sum = f.picks ? countLine(f) : `No picks on this ballot. ${f.posted} of ${f.total} races have numbers posted.`;
+  const srcs = [checkedLine(), ...sourceLines()].filter(Boolean);
+  return `<section class="vz vz-print"><div class="vz-hd"><h3 class="vz-st">${esc(f.word)}</h3></div><p class="vz-ex">${esc(f.explain)}</p>${key}<div class="vz-fig">${rows}</div><p class="vz-sum">${esc(sum)}</p>${f.notes.map((n) => `<p class="vz-note">${esc(n)}</p>`).join('')}${srcs.length ? `<div class="vz-src">${srcs.map((x) => `<p>${esc(x)}</p>`).join('')}</div>` : ''}</section>`;
 }

@@ -57,7 +57,8 @@ export function parse(text) {
     return {
       feed_id: r.feed_id, feed_name: r.feed_name, category: r.category, vote_for: 1, choices,
       total: choices.reduce((a, c) => a + (Number.isFinite(c.votes) ? c.votes : 0), 0),
-      reporting: total > 0 && Number.isFinite(reported) ? `${reported} of ${total} precincts reporting` : null,
+      // "0 of 5626 precincts reporting" beside early and mail votes is no progress at all (the Clarity rule; Codex, Nov 4).
+      reporting: total > 0 && Number.isFinite(reported) && !(reported === 0 && choices.some((c) => Number(c.votes) > 0)) ? `${reported} of ${total} precincts reporting` : null,
       precincts: { reported, total },
       counties: cs.map((c) => c.name),
       updated: null, declared: null,

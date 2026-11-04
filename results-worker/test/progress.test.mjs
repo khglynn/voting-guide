@@ -14,6 +14,7 @@ import * as ev from '../src/adapters/enhanced_voting.js';
 import * as fl_dos from '../src/adapters/fl_dos.js';
 import { wholeProgress } from '../src/util.js';
 import { buildStateFile } from '../src/merge.js';
+import { checkRead } from '../src/checks.js';
 
 const S = (n) => JSON.parse(fixture(`clarity-${n}.summary.json`));
 const E = (n) => JSON.parse(fixture(`clarity-${n}.electionsettings.json`));
@@ -190,4 +191,33 @@ test('progress, wholeProgress: the rules on their own', () => {
   assert.equal(wholeProgress([c('A', 5, 10), c('B', 5, 10)], { total: 12 }), null);
   assert.equal(wholeProgress([c('A', 5, 10), c('B', 0, 10, null)]), null);
   assert.equal(wholeProgress([c('A', 5, 10), c('B', 2, 4)], { covers: (x) => x.feed_name === 'B' }), null, 'the proof has to hold at the top count');
+});
+
+test('progress, fl_dos: "0 of 5626" beside early and mail votes is no line, on the races or the source (Codex, Nov 4)', async () => {
+  const lines = fixture('fl-dos.ElecResultsFL-nov2-zeros.txt').split(/\r?\n/).filter(Boolean);
+  // The Nov 2 template with one vote in: every county still at 0 precincts reporting.
+  const head = lines[0].split('\t');
+  const votes = head.indexOf('CanVotes');
+  const one = lines[1].split('\t'); one[votes] = '1';
+  const r = await flRead([lines[0], one.join('\t'), ...lines.slice(2)].join('\n'));
+  assert.equal(r.contests[0].reporting, null);
+  assert.equal(r.reporting, null);
+  // Before any vote, "0 of 5626" stands, as the state prints it.
+  assert.equal((await flRead(lines.join('\n'))).reporting, '0 of 5626 precincts reporting');
+});
+
+test('progress: a count kept under a falling total never brings back words the adapter now withholds (Codex, Nov 4)', () => {
+  const map = mapFor('results-WA');
+  const contest = (votes, reporting) => ({ feed_id: 'pos-4', feed_name: 'Supreme Court Position 4', updated: '2026-11-04T05:53:00.000Z', reporting, choices: [{ name: 'A', votes }, { name: 'B', votes: 1000 }] });
+  const read = (c) => ({ election: { id: '20261103', name: '2026 General', date: '2026-11-03' }, source_updated: '2026-11-04T06:30:00.000Z', contests: [c] });
+  const prev = { ...read(contest(5000, '22 of 39 counties reporting')), source_updated: '2026-11-04T05:53:00.000Z' };
+  const next = read(contest(4999, null));
+  const check = checkRead(next, map, prev);
+  assert.deepEqual(check.kept, ['pos-4']);
+  assert.equal(next.contests[0].choices[0].votes, 5000, 'the earlier count is kept');
+  assert.equal(next.contests[0].reporting, null, 'without the words the adapter no longer quotes');
+  // Words the adapter still gives stay with the earlier numbers they belong to.
+  const again = read(contest(4999, '23 of 39 counties reporting'));
+  checkRead(again, map, prev);
+  assert.equal(again.contests[0].reporting, '22 of 39 counties reporting');
 });

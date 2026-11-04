@@ -49,7 +49,11 @@ export function checkRead(read, map, prev = null) {
       const when = p.carried_from || p.updated || prev.source_updated || null;
       problems.push({ reason: 'falling total', block: null, detail: `${c.feed_name}: total fell from ${was} to ${now}; kept the earlier numbers` });
       const n = (x) => x.toLocaleString('en-US');
-      return { ...p, updated: when, carried_from: when, falls, note: `The source's total fell from ${n(was)} to ${n(now)} at its ${clock(read.source_updated, tz) || 'latest'} update, so these are its numbers from ${clock(when, tz) || 'before that'}.` };
+      // The earlier numbers keep their own progress words, unless the newer read has none for this contest: words the
+      // adapter now withholds (not on the office's page, or "0 of N" beside counted votes) never come back through a
+      // kept count (Codex, Nov 4: Washington's "22 of 39" restored under a one-vote drop).
+      const words = c.reporting === null || c.reporting === undefined ? { reporting: null } : {};
+      return { ...p, ...words, updated: when, carried_from: when, falls, note: `The source's total fell from ${n(was)} to ${n(now)} at its ${clock(read.source_updated, tz) || 'latest'} update, so these are its numbers from ${clock(when, tz) || 'before that'}.` };
     });
   }
   return { ok: !problems.some((p) => p.block), sourceBlocked: problems.some((p) => p.block === 'source'), readBlocked: problems.some((p) => p.block === 'read'), problems, kept };

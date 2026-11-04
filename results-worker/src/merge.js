@@ -30,6 +30,7 @@ export function sourceSlices(read, map, now) {
   for (const mc of map.contests || []) {
     const fc = byId.get(String(mc.feed_id));
     if (!fc) { problems.push({ reason: 'contest missing', detail: `${mc.feed_name} (${mc.feed_id}) isn't in the feed` }); continue; }
+    if (!fc.choices.length) { problems.push({ reason: 'contest empty', detail: `${mc.feed_name} lists no choices right now` }); continue; }
     if (mc.feed_name && fc.feed_name.replace(/\s+/g, ' ').toUpperCase() !== mc.feed_name.replace(/\s+/g, ' ').toUpperCase()) {
       problems.push({ reason: 'contest renamed', detail: `feed id ${mc.feed_id} is now "${fc.feed_name}", the map says "${mc.feed_name}"` });
       continue;
@@ -163,7 +164,10 @@ export function buildStateFile({ state, maps, srcs, mode, now }) {
     if (real.length === 0) { const e = list[0]; items[item] = { source: e.source, status: 'pending', reporting: null, updated: null, url: e.url, final: null }; continue; }
     // A source that counts the whole race (the state's own count) is the item; county counts for the same race ride
     // beneath it as `county_slices`, never summed with it and never deciding its outcome.
-    const whole = real.find((s) => s._whole);
+    // The whole-race count stands only once it has votes, or when no county count does: an SOS race posted as zeros
+    // (or emptied) never hides counties' real numbers.
+    const wholeCand = real.find((s) => s._whole);
+    const whole = wholeCand && (wholeCand.total_votes > 0 || !real.some((s) => !s._whole && s.total_votes > 0)) ? wholeCand : null;
     if (whole) {
       const out = single(whole);
       const parts = real.filter((s) => s !== whole).map(strip);
@@ -172,6 +176,7 @@ export function buildStateFile({ state, maps, srcs, mode, now }) {
       continue;
     }
     const counties = real.filter((s) => !s._whole);
+    if (!counties.length) { items[item] = single(wholeCand); continue; }
     items[item] = reaches.length > 1 || counties.length > 1 ? spanning(counties, reaches.length ? reaches : counties.map((s) => s.county)) : single(counties[0]);
   }
   for (const [item, l] of Object.entries(links)) if (!items[item]) items[item] = l;

@@ -195,3 +195,15 @@ test('file: a whole-race source is the item; county counts ride beneath as count
   assert.equal(x.county_slices[0].total_votes, 900);
   assert.deepEqual(checkFile(f), []);
 });
+
+test('file: a whole-race count of zero, or an emptied race, never hides county numbers', () => {
+  const STATE = { id: 'st', state: 'TX', name: 'Secretary of State', county: 'Texas', scope: 'state', feed: { adapter: 'tx_sos', results_url: 'https://sos.example/', tz: 'America/Chicago' },
+    contests: [{ feed_id: 'MAYOR', feed_name: 'MAYOR', item: 'mayor', kind: 'plurality', seats: 1, whole: true, reaches: ['Texas'], choices: { 'ANN SMITH': 'Ann Smith', 'BO JONES': 'Bo Jones' } }] };
+  const county = { record: { read: readOf([{ feed_id: '1', feed_name: 'Mayor', choices: [{ name: 'SMITH, ANN', votes: 600 }, { name: 'JONES, BO', votes: 300 }, { name: 'Write-in', votes: 0 }, { name: 'Cy Doe (W)', votes: 100 }] }, { feed_id: '2', feed_name: 'Prop A', choices: [{ name: 'FOR', votes: 1 }, { name: 'AGAINST', votes: 1 }] }]), fetched: '2026-11-04T02:00:00.000Z' }, checked: true, sched: {} };
+  for (const choices of [[{ name: 'ANN SMITH', votes: 0 }, { name: 'BO JONES', votes: 0 }], []]) {
+    const srcs = { st: { record: { read: readOf([{ feed_id: 'MAYOR', feed_name: 'MAYOR', choices }]), fetched: '2026-11-04T02:00:00.000Z' }, checked: true, sched: {} }, 'a-tx': county };
+    const f = buildStateFile({ state: 'TX', maps: [STATE, MAP_A], srcs, mode: 'public', now: '2026-11-04T02:00:00.000Z' });
+    assert.equal(f.items.mayor.source, 'a-tx');
+    assert.equal(f.items.mayor.total_votes, 1000);
+  }
+});

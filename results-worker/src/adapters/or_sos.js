@@ -90,10 +90,18 @@ export async function read({ fetch, map, prevToken = null }) {
   const seen = new Set();
   const contests = [];
   let dropped = 0;
-  for (const page of map.feed.pages || []) {
-    const r = await get(fetch, `${map.feed.base}/${page}`, { identity, expect: 'html' });
+  for (const entry of map.feed.pages || []) {
+    // A page is a path, or { page, post: { name, value } }: the same page's own form button (House 31 to 60).
+    const page = typeof entry === 'string' ? entry : entry.page;
+    const key = typeof entry === 'string' ? page : `${page}#${entry.post.name}`;
+    let r;
+    if (typeof entry === 'string') r = await get(fetch, `${map.feed.base}/${page}`, { identity, expect: 'html' });
+    else {
+      if (!raw[page]) return { verdict: 'error', error: `${key}: its page must be read first`, url: top.url };
+      r = await get(fetch, `${map.feed.base}/${page}`, { identity, expect: 'html', method: 'POST', body: formBody(raw[page], entry.post), headers: { 'Content-Type': 'application/x-www-form-urlencoded' } });
+    }
     if (r.verdict !== 'ok') return { verdict: r.verdict, error: r.error, status: r.status, url: r.url };
-    raw[page] = r.body;
+    raw[key] = r.body;
     const p = parsePage(r.body);
     if (p.id !== hd.id) return { verdict: 'ok', ...shell(map, hd, token, raw), election: { id: p.id, name: p.name, date: p.date }, contests: [] };
     dropped += p.dropped;
@@ -101,6 +109,18 @@ export async function read({ fetch, map, prevToken = null }) {
   }
   if (!contests.length) return { verdict: 'error', error: 'no finished race on any results page', url: top.url };
   return { verdict: 'ok', ...shell(map, hd, token, raw), dropped, contests };
+}
+
+/* The page's own hidden form fields plus the one button, as the browser would send them. */
+const unent = (v) => String(v || '').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+export function formBody(html, button) {
+  const pairs = [];
+  for (const m of String(html || '').matchAll(/<input[^>]*type="hidden"[^>]*>/g)) {
+    const name = (m[0].match(/name="([^"]*)"/) || [])[1];
+    if (name) pairs.push([unent(name), unent((m[0].match(/value="([^"]*)"/) || [])[1] || '')]);
+  }
+  pairs.push([button.name, button.value]);
+  return pairs.map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v)}`).join('&');
 }
 
 function shell(map, hd, token, raw) {

@@ -26,6 +26,13 @@
       "resultsSW.aspx?type=SWPAR&map=CTY",
       "resultsSW.aspx?type=SENATE&map=CTY",
       "resultsSW.aspx?type=HOUSE&map=CTY",
+      {
+        "page": "resultsSW.aspx?type=HOUSE&map=CTY",
+        "post": {
+          "name": "ctl00$MainContent$btnHouse4",
+          "value": "31 - 60"
+        }
+      },
       "resultsSW.aspx?type=SWNON&map=CTY",
       "resultsSW.aspx?type=LMEA&map=CTY",
       "resultsSW.aspx?type=MCR&map=CTY"
@@ -34,7 +41,8 @@
     "identity": "named",
     "identity_note": "Answered our named User-Agent on Nov 3, 10:19 to 10:24 PM CT: 200 on the home page and all seven results pages, no challenge.",
     "election_id_from": "The page's own hidden fields hidElectionType \"General\" and hidElectionDate \"11/3/2026\", and its header \"General Election November 3, 2026\" under \"Unofficial\".",
-    "tz": "America/Los_Angeles"
+    "tz": "America/Los_Angeles",
+    "pages_note": "The House page shows districts 1 to 30; 31 to 60 sit behind the page's own \"31 - 60\" button (an ASP.NET form post with the page's hidden fields), checked Nov 3 10:40 PM CT with our named User-Agent: 200, districts 31 to 60."
   },
   "polls_close": "2026-11-04T04:00:00Z",
   "count_closes": "2026-11-25T07:59:00Z",

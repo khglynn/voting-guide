@@ -74,6 +74,7 @@ export async function read({ fetch, map, prevToken = null }) {
     official: false,
     source_updated: parseUsTime(e.json?.websiteupdatedat),
     labels: labels(e.json?.pagesettings),
+    feed_version: ver,
     reporting: totalPr > 0 ? `${nowPr} of ${totalPr} precincts reporting` : null,
     contests,
   };

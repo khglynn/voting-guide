@@ -48,6 +48,8 @@ export default {
   },
 
   async scheduled(event, env, ctx) {
-    ctx.waitUntil(runTick({ fetch: (...a) => fetch(...a), store: env.RESULTS, archive: env.ARCHIVE, maps: MAPS, now: new Date(event.scheduledTime).toISOString(), ping: pinger(env) }).then((r) => console.log(JSON.stringify({ tick: r.stopped ? 'stopped' : r.ran?.map((x) => `${x.id}:${x.outcome}${x.error ? `:${x.error}` : ''}`) }))));
+    ctx.waitUntil(runTick({ fetch: (...a) => fetch(...a), store: env.RESULTS, archive: env.ARCHIVE, maps: MAPS, now: new Date(event.scheduledTime).toISOString(), ping: pinger(env) }).then((r) => console.log(JSON.stringify({ tick: r.stopped ? 'stopped' : r.ran?.map((x) => `${x.id}:${x.outcome}${x.error ? `:${x.error}` : ''}`), ...(r.published?.some((p) => p.error) ? { publish_errors: r.published.filter((p) => p.error) } : {}) })))
+      // What still escapes (the schedule's own KV read or write) is logged, never a silent stop.
+      .catch((e) => console.log(JSON.stringify({ tick: 'crashed', error: String(e?.message || e) }))));
   },
 };

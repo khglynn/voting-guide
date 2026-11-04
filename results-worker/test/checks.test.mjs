@@ -260,3 +260,40 @@ test('tick: a stored read made by older adapter code is redone in full and repla
   assert.equal(out.ran[0].outcome, 'changed');
   assert.notEqual(JSON.parse(await store.get('src:bexar-tx')).read.contests[0].reporting, 'stale words');
 });
+
+test('tick: one failed KV or R2 write is logged and stays with its own source or state; the rest still run and publish', async () => {
+  const bexar = mapFor('bexar-tx');
+  const dc = mapFor('results-DC');
+  const routes = { '/127291/current_ver.txt': 'clarity-bexar.current_ver.txt', '/127291/379718/json/en/summary.json': 'clarity-bexar.summary.json', '/127291/379718/json/en/electionsettings.json': 'clarity-bexar.electionsettings.json', 'getElectionInfo/2026-General-Election': 'dc.info.json', 'getCityWide/2026-General-Election': 'dc.citywide.json' };
+  const lines = [];
+  const log = (l) => lines.push(l);
+  // KV refuses the Bexar record (a 429 under load), R2 is down, and Slack's dedupe key write fails.
+  const store = memStore();
+  const put = store.put.bind(store);
+  store.put = async (k, v) => { if (k === 'src:bexar-tx' || k.startsWith('alert:')) throw new Error('KV PUT failed: 429 Too Many Requests'); return put(k, v); };
+  const archive = { put: async () => { throw new Error('R2 500'); } };
+  const ping = async () => { throw new Error('ping exploded'); };
+  const out = await runTick({ fetch: fakeFetch(routes), store, archive, maps: [bexar, dc], now: '2026-11-04T02:00:00.000Z', ping, log });
+  const by = Object.fromEntries(out.ran.map((r) => [r.id, r]));
+  assert.equal(by['bexar-tx'].outcome, 'error');
+  assert.match(by['bexar-tx'].error, /crashed: KV PUT failed/);
+  assert.equal(by['results-DC'].outcome, 'changed', 'DC still read');
+  assert.ok(await store.get('src:results-DC'));
+  assert.ok(await store.get('preview:DC'), 'DC still published');
+  assert.ok(await store.get('preview:TX'), 'TX still published from what it had');
+  const sched = JSON.parse(await store.get('sched:2026-11-03'));
+  assert.ok(sched.sources['bexar-tx'].failing_since, 'Bexar backs off like any failed poll');
+  assert.ok(sched.sources['bexar-tx'].next_due);
+  assert.ok(lines.some((l) => /archive_failed/.test(l)), 'the R2 failure is logged');
+  assert.ok(lines.some((l) => /"source":"bexar-tx"/.test(l) && /crashed/.test(l)), 'the source failure is logged');
+
+  // A state whose file write fails is logged; the other state's file still goes out.
+  const store2 = memStore();
+  const put2 = store2.put.bind(store2);
+  store2.put = async (k, v) => { if (k === 'preview:TX') throw new Error('KV PUT failed: 500'); return put2(k, v); };
+  const out2 = await runTick({ fetch: fakeFetch(routes), store: store2, archive: null, maps: [bexar, dc], now: '2026-11-04T02:00:00.000Z', log });
+  const tx = out2.published.find((p) => p.state === 'TX');
+  assert.match(tx.error, /crashed: KV PUT failed: 500/);
+  assert.ok(await store2.get('preview:DC'));
+  assert.ok(await store2.get('sched:2026-11-03'), 'the schedule is still saved');
+});

@@ -3674,6 +3674,8 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   const { ctx, page } = await newPage({ timezoneId: 'America/Chicago' });
   const FX = fs.readFileSync(path.join(ROOT, 'tests', 'fixtures', 'results', 'TX.json'), 'utf8');
   let reads = 0, busted = 0, fail = false;
+  // A row's column, its lines joined by a space ("Casar 71% counting Your pick: Peña").
+  const vd = (id) => page.$$eval(`#i-${id} .vd > span`, (els) => els.map((e) => e.textContent.trim()).join(' ')).catch(() => '');
   await page.route((u) => u.pathname === '/results/2026-11-03/TX.json', (route) => {
     reads++;
     if (/[?&]t=\d/.test(route.request().url())) busted++;
@@ -3691,17 +3693,18 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await tap(page, 'li.is-q:has-text("U.S. Representative") .row-hd');
   await tap(page, '[data-fk="d-tx-us-house-37"]');
   await page.waitForSelector('#i-tx-us-house-37');
-  check('Results rows: the column: leader and share over "counting"', (await text(page, '#i-tx-us-house-37 .vd')) === 'Casar 71% counting', await text(page, '#i-tx-us-house-37 .vd'));
-  check('Results rows: link_only and complete', (await text(page, '#i-tx-us-senate .vd')) === 'See election office results' && (await text(page, '#i-tx-austin-prop-b .vd')) === 'Passed Yes 64% · unofficial', `${await text(page, '#i-tx-us-senate .vd')} | ${await text(page, '#i-tx-austin-prop-b .vd')}`);
-  await tap(page, '[data-fk="row-tx-us-house-37"]');
+  check('Results rows: the column: leader and share over "counting"', (await vd('tx-us-house-37')) === 'Casar 71% counting', await vd('tx-us-house-37'));
+  check('Results rows: link_only and complete', (await vd('tx-us-senate')) === 'See election office results' && (await vd('tx-austin-prop-b')) === 'Passed Yes 64% · unofficial', `${await vd('tx-us-senate')} | ${await vd('tx-austin-prop-b')}`);
+  // Answering the question may open the race already; open it if not.
+  if ((await page.getAttribute('[data-fk="row-tx-us-house-37"]', 'aria-expanded')) !== 'true') await tap(page, '[data-fk="row-tx-us-house-37"]');
   await page.waitForSelector('#ob-tx-us-house-37 .rtab');
   const ob = await text(page, '#ob-tx-us-house-37');
-  check('Results rows: the open row: count line, the table, the office’s time and words, AP, sources folded', /^Counting\. Casar is ahead so far\./.test(ob) && /Vote %/.test(ob) && /Travis County updated: 9:35 PM CT/.test(ob) && /AP’s race calls/.test(ob) && (await page.getAttribute('[data-fk="es-tx-us-house-37"]', 'aria-expanded')) === 'false', ob.slice(0, 200));
+  check('Results rows: the open row: count line, the table, the office’s time and words, AP, sources folded', /Counting\. Casar is ahead so far\./.test(ob) && /Vote %/.test(ob) && /Travis County updated: 9:35 PM CT/.test(ob) && /AP’s race calls/.test(ob) && (await page.getAttribute('[data-fk="es-tx-us-house-37"]', 'aria-expanded')) === 'false', ob.slice(0, 200));
   await tap(page, '[data-fk="es-tx-us-house-37"]');
   await page.waitForSelector('#ob-tx-us-house-37 .rs-was');
   await tap(page, '#ob-tx-us-house-37 [data-act="pick"][data-v="Lauren B. Peña"]');
   await page.waitForTimeout(400);
-  check('Results rows: a pick still works, and the column says "Your pick" in gold ink', (await text(page, '#i-tx-us-house-37 .vd')) === 'Casar 71% counting Your pick: Peña' && !!(await page.$('#i-tx-us-house-37 .vd .p')), await text(page, '#i-tx-us-house-37 .vd'));
+  check('Results rows: a pick still works, and the column says "Your pick" in gold ink', (await vd('tx-us-house-37')) === 'Casar 71% counting Your pick: Peña' && !!(await page.$('#i-tx-us-house-37 .vd .p')), await vd('tx-us-house-37'));
   check('Results rows: the figure counts it behind', /Your 1 pick: 1 behind/.test(await text(page, '#vz .vz-sum')) && !!(await page.$('#vz .d.down[data-id="tx-us-house-37"]')), await text(page, '#vz .vz-sum'));
   // A figure row's chevron lists its races; its label jumps to the section.
   await tap(page, '#vz [data-act="fig-row"][data-sec="federal"]');
@@ -3720,12 +3723,12 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   // A reload keeps every pick and shows the numbers again.
   await page.reload();
   await page.waitForSelector('#i-tx-us-house-37 .vd.res', { timeout: 8000 }).catch(() => {});
-  check('Results rows: a reload loses no pick', (await text(page, '#i-tx-us-house-37 .vd')) === 'Casar 71% counting Your pick: Peña' && (await page.evaluate(() => JSON.parse(localStorage.getItem('vg2')).ballots['TX|austin-tx'].picks['tx-us-house-37'])) === 'Lauren B. Peña', await text(page, '#i-tx-us-house-37 .vd'));
+  check('Results rows: a reload loses no pick', (await vd('tx-us-house-37')) === 'Casar 71% counting Your pick: Peña' && (await page.evaluate(() => JSON.parse(localStorage.getItem('vg2')).ballots['TX|austin-tx'].picks['tx-us-house-37'])) === 'Lauren B. Peña', await vd('tx-us-house-37'));
   // The Worker unreachable: the last numbers stay and the strip says so.
   fail = true;
   await tap(page, '[data-fk="res-refresh"]');
   await page.waitForTimeout(500);
-  check('Results rows: a failed read keeps the last numbers and says so', /Couldn’t check just now/.test(await text(page, '#plan')) && (await text(page, '#i-tx-us-house-37 .vd')).startsWith('Casar 71%'), await text(page, '#plan .plan-fresh'));
+  check('Results rows: a failed read keeps the last numbers and says so', /Couldn’t check just now/.test(await text(page, '#plan')) && (await vd('tx-us-house-37')).startsWith('Casar 71%'), await text(page, '#plan .plan-fresh'));
   await ctx.close();
 }
 // Results Phase 0, Codex round 2: the close repaints the bar and the endcap, never the address being typed.

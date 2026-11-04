@@ -73,7 +73,12 @@ export const isLink = (r: ItemResult | null): boolean => !!r && r.status === 'li
 export const spans = (r: ItemResult): boolean => (r.slices || []).length > 1 || (r.missing || []).length > 0;
 export const statusWord = (s: ItemResult['status']): string => (s === 'complete' ? 'unofficial' : s === 'official' ? 'official' : s === 'counting' ? 'counting' : '');
 /* "Travis County" from a slice's "Travis". */
-export const countyLabel = (c: string): string => (/\b(county|city|parish|borough|district)$/i.test(c.trim()) ? c.trim() : `${c.trim()} County`);
+export const countyLabel = (c: string): string => {
+  const t = c.trim();
+  // The Worker's own phrases ("other counties", "Austin's limited-purpose areas (reported apart)") stay as written.
+  if (/\b(county|counties|city|parish|borough|district|areas?)\b/i.test(t)) return t.charAt(0).toUpperCase() + t.slice(1);
+  return `${t} County`;
+};
 /* The county whose count a race across counties shows: the slice from the item's own source (the largest). */
 export function shownCounty(r: ItemResult): string | null {
   if (!spans(r)) return null;

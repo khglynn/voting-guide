@@ -312,7 +312,9 @@ b, strong { font-weight: 600; }
 .wi-a ul { list-style: disc; padding-left: 20px; }
 .meta { margin-top: 8px; font-size: 13.5px; color: var(--muted); }
 .pdates li { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 8px; padding: 6px 0; border-bottom: 1px solid var(--rule); }
-.nx-dates li { grid-template-columns: max-content minmax(0, 1fr); column-gap: 14px; }
+/* One date column for every line (Opus review: each line sized its own, so the descriptions started at three places). */
+.nx-dates { display: grid; grid-template-columns: max-content minmax(0, 1fr); column-gap: 14px; }
+.nx-dates li { grid-column: 1 / -1; grid-template-columns: subgrid; column-gap: 14px; }
 .nx-dates .pd-d { white-space: nowrap; }
 /* A dated line's source, as a small arrow after it (overnight: "sos.texas.gov" on every line read as clutter). */
 .pd-src { display: inline-flex; align-items: center; justify-content: center; min-width: 28px; min-height: 28px; margin: -6px -4px -6px 0; vertical-align: middle; color: var(--muted); text-decoration: none; }
@@ -1092,6 +1094,7 @@ a.res-st { color: var(--ink); text-decoration: underline; text-decoration-color:
    ink: no new color, material or motion. Gold keeps its one job (your pick), as --gold-ink text and the pen tick. */
 /* The row's right column: the leader and share, the status word, your pick. */
 .vd.res .m { font-variant-numeric: tabular-nums; }
+.vd.res .ar { color: var(--muted); font-weight: 500; }
 .vd.res .p { font-family: var(--f-display); font-weight: 600; font-variation-settings: "wdth" 88; letter-spacing: .015em; font-size: 13px; color: var(--gold-ink); overflow-wrap: anywhere; }
 .vd.res.none .m { color: var(--muted); font-weight: 400; font-size: 14.5px; }
 .vd.res.wait .m { font-style: italic; }
@@ -1101,7 +1104,8 @@ a.res-st { color: var(--ink); text-decoration: underline; text-decoration-color:
 .row.has-go { display: grid; grid-template-columns: minmax(0, 1fr) 128px 20px; }
 .row.has-go > * { grid-column: 1 / -1; }
 .row.has-go > .row-hd { grid-row: 1; }
-.row.has-go > .vd-go { grid-column: 2; grid-row: 1; z-index: 1; display: flex; flex-direction: column; justify-content: center; align-items: flex-end; text-align: right; padding: 8px 0 8px 10px; min-height: 44px; color: var(--ink); text-decoration: none; }
+.row.has-go > .vd-go { grid-column: 2; grid-row: 1; z-index: 1; justify-self: end; align-self: center; max-width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: flex-end; text-align: right; padding: 6px 0 6px 10px; min-height: 44px; color: var(--ink); text-decoration: none; }
+/* The link is only its words (Opus review, Nov 4): the empty column above and below it still opens the row. */
 .vd-go .m { font-size: 14.5px; font-weight: 400; color: var(--ink-2); line-height: 1.22; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; text-decoration-color: var(--muted); overflow-wrap: break-word; }
 .vd-go .go-w { white-space: nowrap; }
 .vd-go .go-a { display: inline-block; width: 10px; height: 10px; margin-left: 4px; vertical-align: 0; }
@@ -1188,20 +1192,17 @@ a.res-st { color: var(--ink); text-decoration: underline; text-decoration-color:
 .cheat .pbtn.line { border-color: var(--ink); color: var(--ink); }
 .cheat .pbtn.gold { background: var(--paper-green); color: var(--on-dusk); }
 /* The bar's results line, above its two buttons: quiet, one line where it fits. */
-:root:has(.foot-res) { --foot-h: 100px; }
+:root:has(.foot-res) { --foot-h: 116px; }
+@media (max-width: 359px) { :root:has(.foot-res) { --foot-h: 140px; } }
 .foot-res { display: flex; align-items: center; justify-content: space-between; gap: 4px 12px; max-width: 640px; margin: 0 auto; padding: 8px 16px 0; font-family: var(--f-display); font-variation-settings: "wdth" 84; letter-spacing: .01em; font-size: 14px; line-height: 1.3; color: var(--ink-2); }
 .foot-res + .foot-in { min-height: 58px; }
 .fr-t { min-width: 0; }
-/* With numbers: two short lines on a phone (the word and whose count, Refresh; then the office's own words and when we
-   checked), one line from 600px. */
+/* With numbers: two short lines (the word and when we checked, Refresh; then each office's own update time). */
 .foot-res.fr-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "a r" "b b"; align-items: center; column-gap: 12px; padding-top: 6px; }
 .fr-grid .fr-a { grid-area: a; }
 .fr-grid .fr-btn { grid-area: r; min-height: 32px; margin: 0; }
-.fr-grid .fr-b { grid-area: b; display: flex; flex-wrap: wrap; column-gap: 5px; color: var(--ink-2); }
-.fr-grid .fr-b > * + .fr-at::before { content: "· "; }
-@media (min-width: 600px) {
-  .foot-res.fr-grid { grid-template-columns: auto minmax(0, 1fr) auto; grid-template-areas: "a b r"; }
-  .fr-grid .fr-b::before { content: "· "; color: var(--muted); margin-right: -6px; }
+.fr-grid .fr-b { grid-area: b; color: var(--ink-2); }
+.fr-s + .fr-s::before { content: "· "; color: var(--muted); }
 }
 /* The source's own words move to a second line as a whole when they don't fit, never split mid-phrase. */
 .fr-p { display: inline-block; max-width: 100%; }

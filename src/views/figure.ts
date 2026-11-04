@@ -104,7 +104,7 @@ function standHTML(f: Figure): string {
       const t = rowTitle(it);
       const c = resColOf(it);
       const v = !c ? '' : c.kind === 'link' && c.url ? ext(c.url, c.main, 'st-go')
-        : c.kind === 'num' ? `<b>${esc(c.main)}</b>${c.sub ? `<small>${esc(c.sub)}</small>` : ''}` : `<span class="st-none">${esc(c.main)}</span>`;
+        : c.kind === 'num' ? `<b>${esc(c.main)}</b>${c.sub ? `<small>${esc(c.sub)}</small>` : ''}${c.area ? `<small>${esc(c.area)}</small>` : ''}` : `<span class="st-none">${esc(c.main)}</span>`;
       return `<li><button class="st-t" data-act="goto" data-id="${esc(d.id)}" data-fk="st-go-${esc(d.id)}">${esc(t.title)}${t.sub ? `<small>${esc(it.kind === 'measure' && it.short_title ? it.short_title : t.sub)}</small>` : it.kind === 'measure' && it.short_title ? `<small>${esc(it.short_title)}</small>` : ''}</button><span class="st-v">${v}</span></li>`;
     }).join('');
     return `<div class="st-sec" data-sec="${sec}"><h4 class="st-h"><button class="linkbtn" data-act="jump" data-to="${sec}" data-fk="st-${sec}">${esc(sectionTitle(sec))}</button></h4>

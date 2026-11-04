@@ -1814,7 +1814,7 @@ function roundTrip(name, stCode, places, mutate) {
   const at = (q) => Object.defineProperty(globalThis, 'location', { configurable: true, value: { search: q, origin: 'http://x', pathname: '/', hostname: 'localhost' } });
   const txt = (h) => (h || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
   // A row's column as words: main, sub, your pick (the model's own, so a link column reads as its office's name).
-  const col = (id) => { const c = led.resColOf(st.S.ballot.byId.get(id)); return c ? [c.main, c.sub, c.pick].filter(Boolean).join(' ') : ''; };
+  const col = (id) => { const c = led.resColOf(st.S.ballot.byId.get(id)); return c ? [c.main, c.sub, c.area, c.pick].filter(Boolean).join(' ') : ''; };
   /* A ballot with the district questions answered for the races named, so they're rows. */
   const withRows = (stc, places, ids) => {
     const b = open(stc, places);
@@ -1852,7 +1852,7 @@ function roundTrip(name, stCode, places, mutate) {
     }
     check('results column: a measure once complete says Passed over the share and "unofficial"', col('tx-austin-prop-b') === 'Passed Yes 64% · unofficial Your pick: Yes', col('tx-austin-prop-b'));
     check('results column: a measure behind shows the side ahead', col('tx-austin-prop-c') === 'No 59% counting Your pick: Yes', col('tx-austin-prop-c'));
-    check('results column: a race across counties names the county whose count it shows, never a sum, never "unofficial" while a slice counts', col('tx-austin-prop-a') === 'Yes 56% Travis only Your pick' && col('tx-acc-trustee-1') === 'Walker 56% Travis only', `${col('tx-austin-prop-a')} | ${col('tx-acc-trustee-1')}`);
+    check('results column: a race across counties names the county whose count it shows, never a sum, never "unofficial" while a slice counts', col('tx-austin-prop-a') === 'Yes 56% counting Travis votes only Your pick' && col('tx-acc-trustee-1') === 'Walker 56% counting Travis votes only', `${col('tx-austin-prop-a')} | ${col('tx-acc-trustee-1')}`);
     check('results column: a tie names both', col('tx-senate-21') === 'Tied: Dahlberg, Zaffirini counting Your pick: Zaffirini', col('tx-senate-21'));
     check('results column: an item the file doesn’t hold is the office’s page once the polls close, never the sources’ tally', col('tx-3rd-coa-chief') === 'Travis County results' && led.resColOf(st.S.ballot.byId.get('tx-3rd-coa-chief')).kind === 'link' && !/vd (agree|split|done)/.test(led.rowHTML(st.S.ballot.byId.get('tx-3rd-coa-chief'))));
     const ob = (id) => txt(op.resultsHTML(st.S.ballot.byId.get(id), rm.R.file.items[id]));
@@ -1904,12 +1904,21 @@ function roundTrip(name, stCode, places, mutate) {
       // The bar's results line and the results-first menu (overnight).
       const fi = rm.footInfo();
       const bar = txt(led.footResHTML());
-      check('results bar: the status word, the main source with its own progress words, when we checked, Refresh', fi.kind === 'res' && fi.word === 'Counting' && fi.who === 'Travis County' && fi.words === '128 of 186 vote centers reporting' && /^Counting · Travis County 128 of 186 vote centers reporting Checked 9:41 PM CT Refresh$/.test(bar) && /data-act="results-refresh" data-fk="bar-refresh"/.test(led.barHTML()), bar);
+      check('results bar: the status word, when we checked, Refresh, then the office behind the rows with its own update time and its own words', fi.kind === 'res' && fi.word === 'Counting' && fi.srcs.length === 1 && fi.srcs[0].who === 'Travis County' && fi.srcs[0].words === '128 of 186 vote centers reporting' && /^Counting · Checked 9:41 PM CT Refresh Travis County updated 9:35 PM, “128 of 186 vote centers reporting”$/.test(bar) && /data-act="results-refresh" data-fk="bar-refresh"/.test(led.barHTML()), bar);
       const menu = led.menuHTML('toc'), mt = txt(menu);
-      check('results menu: results first: the word, when we checked, Refresh, each source’s words and time, the offices’ pages, each section’s posted count; no Next up or Quick picks', /^Counting We checked 9:41 PM CT Refresh Federal offices Numbers for 1 of 2/.test(mt) && /Austin Numbers for all/.test(mt) && /Where the numbers come from Travis County 128 of 186 vote centers reporting · updated 9:35 PM CT/.test(mt) && /Travis County results Williamson County results/.test(mt) && mt.indexOf('Federal offices') < mt.indexOf('Where the numbers come from') && /data-act="jump" data-to="federal"/.test(menu) && !/data-act="next"|Quick picks|data-act="only"/.test(menu) && /What’s next/.test(mt), mt.slice(0, 300));
+      check('results menu: results first: the word, when we checked, Refresh, each source’s words and time, the offices’ pages, each section’s posted count; no Next up or Quick picks', /^Counting We checked 9:41 PM CT Refresh Federal offices Numbers for 1 of 2/.test(mt) && /Austin Numbers for all/.test(mt) && /Where these numbers come from Travis County 128 of 186 vote centers reporting · updated 9:35 PM CT/.test(mt) && /Travis County results Williamson County results/.test(mt) && mt.indexOf('Federal offices') < mt.indexOf('Where these numbers come from') && /data-act="jump" data-to="federal"/.test(menu) && !/data-act="next"|Quick picks|data-act="only"/.test(menu) && /What’s next/.test(mt), mt.slice(0, 300));
+      // Opus review, Nov 4 (9): after the close "Hide races I've decided" hides nothing, so every picked race shows its
+      // count; the saved switch is untouched, and the menu no longer offers it.
       st.S.b.hideDecided = true;
-      check('results menu: "Hide races I’ve decided" shows while it’s on, so it can be turned off', /data-act="only"/.test(led.menuHTML('toc')));
+      const hid = led.ballotHTML();
+      check('results: after the close "Hide races I’ve decided" hides no row (the saved switch stays), and the menu doesn’t offer it', !rm.hideDecidedNow() && st.S.b.hideDecided === true && /id="i-tx-us-house-37"/.test(hid) && /id="i-tx-house-49"/.test(hid) && !/data-act="only"/.test(led.menuHTML('toc')) && !/decided/.test(txt(hid.match(/<section[^>]*data-sec="federal"[\s\S]*?<\/h2>/)?.[0] || '')));
       st.S.b.hideDecided = false;
+      // A section made only of district questions says what to do, and a question counts as a race without numbers.
+      const qsec = led.menuHTML('toc');
+      check('results menu: a section of only district questions says "Pick your district"; a question counts as a race without numbers', /Travis County Pick your district/.test(txt(qsec)) && /Federal offices Numbers for 1 of 2/.test(txt(qsec)), txt(qsec).slice(0, 400));
+      // The question's "show all" names what it does after the close: each district's count.
+      const g0 = st.S.ballot.groups.find((g) => !st.S.b.districts[g.key]);
+      if (g0) { st.S.ui.row = `q:${g0.key}`; const qh = txt(led.ballotHTML()); st.S.ui.row = null; check('results: an open district question offers "Show all N" with each one’s count after the close', /Show all \d+ See each one’s count/.test(qh), (qh.match(/Show all[^.]{0,80}/) || [''])[0]); }
     }
     {
       // The coordinator's ask (overnight): a banner that counts can contradict the numbers, so it's never quoted.
@@ -1921,11 +1930,39 @@ function roundTrip(name, stCode, places, mutate) {
       const acc = JSON.parse(JSON.stringify(rm.R.file.items['tx-acc-trustee-1']));
       const tSl = acc.slices.find((x) => /travis/i.test(x.county)), wSl = acc.slices.find((x) => /williamson/i.test(x.county));
       if (tSl && wSl) {
-        const asW = { ...acc, source: wSl.source, candidates: wSl.candidates, status: wSl.status, url: wSl.url };
+        const asW = { ...acc, source: wSl.source, candidates: wSl.candidates, status: acc.status, url: wSl.url };
         const v = rm.viewOf(asW);
         const whole = { ...acc, source: 'results-TX', slices: acc.slices };
         check('results: a race across counties shows the voter’s county (Travis on an Austin ballot) over the Worker’s pick; a whole-race count stays whole', v.source === tSl.source && JSON.stringify(v.candidates) === JSON.stringify(tSl.candidates) && rm.shownCounty(v) === 'Travis County' && rm.viewOf(whole) === whole, `${v.source} | ${rm.shownCounty(v)}`);
-      } else check('results: the ACC fixture has Travis and Williamson slices', false);
+        // Opus review, Nov 4 (1): the voter's county finished counting while another county still counts: the race stays
+        // "counting" in the column, the open row and the figure, never "Unofficial."
+        const mixed = { ...asW, status: 'counting', slices: acc.slices.map((x) => (x === tSl ? { ...x, status: 'complete' } : { ...x, status: 'counting' })) };
+        const vm = rm.viewOf(mixed);
+        const accIt = st.S.ballot.byId.get('tx-acc-trustee-1');
+        check('results: a county that finished never makes a race across counties read "Unofficial" while another county counts', vm.status === 'counting' && rm.resOpen(accIt, vm).word === 'Counting.' && rm.resCol(accIt, vm).sub === 'counting' && rm.resCol(accIt, vm).area === 'Travis votes only', `${vm.status} | ${rm.resOpen(accIt, vm).word} | ${rm.resCol(accIt, vm).sub}`);
+      }
+      {
+        // Opus review, Nov 4 (2): an office's progress is its own `reporting` or nothing, never one race's words.
+        const wsrc = { id: 'williamson-tx', name: 'Williamson County', url: 'https://x.y/', updated: '2026-11-04T03:10:00Z', status: 'counting', reporting: null, fetched: '2026-11-04T03:41:00Z' };
+        check('results: an office’s progress is its own words only, never a race’s', rm.progressOf(wsrc) === '' && rm.progressOf({ ...wsrc, reporting: '40 of 96 vote centers reporting.' }) === '40 of 96 vote centers reporting' && !/“/.test(rm.sourceLines([wsrc])[0]), rm.sourceLines([wsrc])[0]);
+      }
+      {
+        // Opus review, Nov 4 (3, 4, 7): the Texas SOS down and Travis giving no words: the bar never speaks for Bexar
+        // (one slice of State Senate 21), names the offices behind the rows with their own update times, and the voter's
+        // county's time is always there.
+        const keepF = rm.R.file;
+        const f3 = JSON.parse(JSON.stringify(keepF));
+        f3.sources = f3.sources.map((x) => (x.id === 'travis-tx' ? { ...x, reporting: null } : /^results-TX/.test(x.id) ? { ...x, failing_since: '2026-11-04T03:30:00Z' } : x));
+        f3.sources.push({ id: 'bexar-tx', name: 'Bexar County', url: 'https://results.enr.clarityelections.com/TX/Bexar/1/', updated: '2026-11-04T04:22:00Z', status: 'counting', reporting: '7 of 7 precincts reporting', fetched: '2026-11-04T04:22:30Z' });
+        const sd = f3.items['tx-senate-21'];
+        if (sd) sd.slices = [{ source: sd.source, county: 'Travis', status: 'counting', reporting: null, updated: sd.updated, url: sd.url, candidates: sd.candidates }, { source: 'bexar-tx', county: 'Bexar', status: 'counting', reporting: '7 of 7 precincts reporting', updated: '2026-11-04T04:22:00Z', url: 'https://results.enr.clarityelections.com/TX/Bexar/1/', candidates: sd.candidates }];
+        rm.R.file = f3;
+        const fb = rm.footInfo();
+        const bt = txt(led.footResHTML());
+        check('results bar: never speaks for a county that only holds a slice (Bexar on Austin), never quotes a race’s words as an office’s, always shows the local office’s own update time', !!sd && !fb.srcs.some((x) => x.who === 'Bexar County') && !/7 of 7/.test(bt) && fb.srcs.some((x) => x.who === 'Travis County' && x.at) && /Travis County updated 9:35 PM/.test(bt), bt);
+        rm.R.file = keepF;
+      }
+      if (!(tSl && wSl)) check('results: the ACC fixture has Travis and Williamson slices', false);
     }
     // A failed fetch keeps the last good file; a test file is ignored without ?results=test.
     globalThis.fetch = async () => ({ ok: false, status: 503, json: async () => ({}) });
@@ -2022,6 +2059,11 @@ function roundTrip(name, stCode, places, mutate) {
       rm.resetResults('NY');
       check('results: before the first read, rows say "Checking…" and the bar does too', col('nyc-proposal-1') === 'Checking…' && /Checking results…/.test(txt(led.footResHTML())));
       useFile('NY', FX('NY'));
+    }
+    {
+      // Opus review, Nov 4 (8): What's next's dates: each line's source arrow rides with its last word, never alone.
+      const nb = views.planstrip.nextBodyHTML(st.S.ballot.howto);
+      check('results: What’s next dates keep each source arrow on the line with its last word', !/ <a class="pd-src"/.test(nb) && (!/pd-src/.test(nb) || /&nbsp;<a class="pd-src"/.test(nb)), nb.slice(0, 200));
     }
     check('results copy: no em dashes, no all caps', !/—/.test(txt(fig.figureHTML()) + txt(views.planstrip.freshHTML())));
   } finally {

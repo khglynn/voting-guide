@@ -3691,7 +3691,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   const order = await page.evaluate(() => { const v = document.querySelector('#vz'); const l = v && v.querySelector('.st'); const pl = document.querySelector('.picks-line'); return !!(l && pl) && !!(v.compareDocumentPosition(pl) & 4); });
   check('Results rows: the summary under "Your ballot": status word, its line, where races stand, then the endorsement line', /^Counting/.test(head) && /Election offices are still counting/.test(head) && order && reads >= 1, head.slice(0, 160));
   check('Results rows: the strip: "We checked" with the oldest of the offices’ reads, and Refresh', /We checked 9:41 PM CT\. Refresh/.test(await text(page, '#plan')), await text(page, '.plan-fresh'));
-  check('Results rows: the bar’s results line: the status word, Travis County’s own progress words, when we checked, Refresh', /^Counting · Travis County 128 of 186 vote centers reporting Checked 9:41 PM CT Refresh$/.test(await text(page, '.foot-res')) && /^On this ballot What’s next$/.test(await text(page, '.foot-in')), await text(page, '.foot-res'));
+  check('Results rows: the bar’s results line: the status word, when we checked, Refresh, then Travis County’s own update time and words', /^Counting · Checked 9:41 PM CT Refresh Travis County updated 9:35 PM, “128 of 186 vote centers reporting”$/.test(await text(page, '.foot-res')) && /^On this ballot What’s next$/.test(await text(page, '.foot-in')), await text(page, '.foot-res'));
   // No picks yet: where races stand, as a list, in place of the dots.
   check('Results rows: no picks: the summary is a list of where races stand, grouped like the ballot, no dots', !!(await page.$('#vz .st .st-sec[data-sec="federal"]')) && !(await page.$('#vz .d')) && /Casar 71%|Texas results/.test(await text(page, '#vz .st')), (await text(page, '#vz .st')).slice(0, 160));
   // A row the file doesn't hold, after the close: the office's page, never the sources' tally.
@@ -3702,6 +3702,11 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await page.waitForSelector('#i-tx-us-house-37');
   check('Results rows: the column: leader and share over "counting"', (await vd('tx-us-house-37')) === 'Casar 71% counting', await vd('tx-us-house-37'));
   check('Results rows: link_only is a real link to the office, beside the row’s button, and complete says Passed', (await vd('tx-us-senate')) === 'Texas results' && (await page.getAttribute('#i-tx-us-senate > a.vd-go', 'href') || '').startsWith('https://') && !(await page.$('#i-tx-us-senate .row-hd a')) && (await vd('tx-austin-prop-b')) === 'Passed Yes 64% · unofficial', `${await vd('tx-us-senate')} | ${await vd('tx-austin-prop-b')}`);
+  // The link is only its words (Opus review, Nov 4): narrower than the column, and the column's empty part opens the row.
+  {
+    const box = await page.evaluate(() => { const a = document.querySelector('#i-tx-us-senate > a.vd-go'); const c = document.querySelector('#i-tx-us-senate .row-hd > .vd'); if (!a || !c) return null; const ra = a.getBoundingClientRect(), rc = c.getBoundingClientRect(); return { aw: ra.width, ah: ra.height, cw: rc.width, ch: rc.height, cx: rc.left + 4, cy: rc.bottom - 4, hit: document.elementFromPoint(rc.left + 4, rc.bottom - 4)?.closest('a.vd-go') ? 'link' : 'row' }; });
+    check('Results rows: the office link is a smaller target than its column, and the column’s empty corner opens the row', !!box && box.aw < box.cw && box.hit === 'row', JSON.stringify(box));
+  }
   // Tapping the link column opens the office in a new tab; the row stays shut.
   {
     const [pop] = await Promise.all([page.context().waitForEvent('page', { timeout: 5000 }).catch(() => null), page.locator('#i-tx-us-senate > a.vd-go').tap()]);
@@ -3712,7 +3717,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await tap(page, '[data-fk="bar-menu"]');
   await page.waitForSelector('.sheet-panel.toc .nv-res');
   const menu = await text(page, '.sheet-panel.toc');
-  check('Results rows: the menu is results first: the word, when we checked, Refresh, each office’s words, the offices’ pages, posted counts per section, no Next up', /^Results on this ballot ?Close Counting We checked 9:41 PM CT ?Refresh Federal offices ?Numbers for/.test(menu) && /Where the numbers come from ?Travis County ?128 of 186 vote centers reporting/.test(menu) && !!(await page.$('.sheet-panel.toc [data-fk="toc-refresh"]')) && !(await page.$('.sheet-panel.toc [data-act="next"]')) && !!(await page.$('.sheet-panel.toc [data-act="jump"][data-to="federal"]')), menu.slice(0, 260));
+  check('Results rows: the menu is results first: the word, when we checked, Refresh, each office’s words, the offices’ pages, posted counts per section, no Next up', /^Results on this ballot ?Close Counting We checked 9:41 PM CT ?Refresh Federal offices ?Numbers for/.test(menu) && /Where these numbers come from ?Travis County ?128 of 186 vote centers reporting/.test(menu) && !!(await page.$('.sheet-panel.toc [data-fk="toc-refresh"]')) && !(await page.$('.sheet-panel.toc [data-act="next"]')) && !!(await page.$('.sheet-panel.toc [data-act="jump"][data-to="federal"]')), menu.slice(0, 260));
   await tap(page, '.sheet-panel.toc [data-act="sheet-close"]');
   // Answering the question may open the race already; open it if not.
   if ((await page.getAttribute('[data-fk="row-tx-us-house-37"]', 'aria-expanded')) !== 'true') await tap(page, '[data-fk="row-tx-us-house-37"]');
@@ -3748,6 +3753,23 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await tap(page, '[data-fk="res-refresh"]');
   await page.waitForTimeout(500);
   check('Results rows: a failed read keeps the last numbers and says so', /Couldn’t check just now/.test(await text(page, '#plan')) && (await vd('tx-us-house-37')).startsWith('Casar 71%'), await text(page, '#plan .plan-fresh'));
+  await ctx.close();
+}
+// Opus review, Nov 4: "Hide races I've decided" on from before the close hides nothing after it: every picked race
+// shows its count, and the bands say nothing about deciding.
+{
+  const { ctx, page } = await newPage({ timezoneId: 'America/Chicago' });
+  const FX = fs.readFileSync(path.join(ROOT, 'tests', 'fixtures', 'results', 'TX.json'), 'utf8');
+  await page.route((u) => u.pathname === '/results/2026-11-03/TX.json', (route) => route.fulfill({ status: 200, contentType: 'application/json', body: FX }));
+  await page.goto(`${BASE}/?today=2026-10-28`);
+  await page.fill('#zip', '78704');
+  await throughSetup(page);
+  await page.evaluate(() => { const s = JSON.parse(localStorage.getItem('vg2')); const b = s.ballots['TX|austin-tx']; b.hideDecided = true; b.picks['tx-us-senate'] = 'James Talarico'; b.picks['tx-austin-prop-b'] = 'YES'; localStorage.setItem('vg2', JSON.stringify(s)); });
+  await page.goto(`${BASE}/?today=2026-11-03&now=21:42`);
+  await page.waitForSelector('#i-tx-austin-prop-b .vd.res', { timeout: 10000 }).catch(() => {});
+  const bands = (await page.$$eval('.sec .sec-r', (els) => els.map((e) => e.textContent.trim()))).join(' | ');
+  check('Results: "Hide races I’ve decided" from before the close hides nothing after it: picked races show their counts, no band says "decided"', !!(await page.$('#i-tx-austin-prop-b .vd.res')) && !!(await page.$('#i-tx-us-senate')) && !/decided/.test(bands) && (await page.evaluate(() => JSON.parse(localStorage.getItem('vg2')).ballots['TX|austin-tx'].hideDecided)) === true, bands.slice(0, 160));
+  noErrors(page, 'Hide decided after the close');
   await ctx.close();
 }
 // Results Phase 0, Codex round 2: the close repaints the bar and the endcap, never the address being typed.

@@ -377,7 +377,7 @@ export function nextBodyHTML(h: HowTo, forPrint = false, official = true): strin
   const up = rows.filter((r) => r.date >= t), past = rows.filter((r) => r.date < t);
   const link = (url: string, text: string): string => (forPrint ? esc(text) : ext(url, text));
   // Each line's source as a small arrow, named for screen readers (overnight: "sos.texas.gov" on every line was clutter).
-  const srcA = (url: string, when: string): string => (/^https?:\/\//i.test(url || '') ? ` <a class="pd-src" href="${esc(url)}" target="_blank" rel="noopener" aria-label="${esc(`Source for ${when}: ${host(url)}`)}" title="${esc(host(url))}"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M3.5 2.5h6v6M9.5 2.5l-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>` : '');
+  const srcA = (url: string, when: string): string => (/^https?:\/\//i.test(url || '') ? `&nbsp;<a class="pd-src" href="${esc(url)}" target="_blank" rel="noopener" aria-label="${esc(`Source for ${when}: ${host(url)}`)}" title="${esc(host(url))}"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M3.5 2.5h6v6M9.5 2.5l-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>` : '');
   const list = (rs: typeof rows) => `<ol class="pdates nx-dates">${rs.map((r) => `<li><span class="pd-d">${esc(fmtDate(r.date))}</span><span class="pd-l">${esc(r.line)}${forPrint ? '' : srcA(r.source, fmtDate(r.date))}</span></li>`).join('')}</ol>`;
   const sits = AFTER_SITS.map((id) => sitsOf(h).find((x) => x.id === id)).filter((x): x is Situation => !!x);
   const o = S.ballot ? officeOf() : null;

@@ -107,9 +107,10 @@ export function homeCounty(): string | null {
 /* A race across counties shows one county's count, named (rule 9). Which county (overnight brief, after Kevin's 9:09 PM
    screenshot of ACC trustee reading "Williamson County count" on an Austin ballot): the voter's own county when its
    slice has numbers, else the Worker's pick (the largest county), else the largest slice that has numbers. The item
-   comes back with that slice's numbers, status, words, time and link in its place; its slices and missing stay, so it
-   still spans and is never compared or called. Only when the item's own source is one of its slices: a whole-race
-   count (a state's) is never swapped for a county's piece of it. */
+   comes back with that slice's numbers, words, time and link in its place, but the race's own status: a county that
+   finished counting never makes the race read "Unofficial." while other counties count (Opus review, Nov 4). Its
+   slices and missing stay, so it still spans and is never compared or called. Only when the item's own source is one
+   of its slices: a whole-race count (a state's) is never swapped for a county's piece of it. */
 export function viewOf(r: ItemResult): ItemResult {
   const sl = r.slices || [];
   if (!spans(r) || !sl.some((x) => x.source === r.source)) return r;
@@ -120,7 +121,7 @@ export function viewOf(r: ItemResult): ItemResult {
   const pick = mine || (own && sliceHas(own) ? own : undefined) || [...sl].filter(sliceHas).sort((a, b) => total(b) - total(a))[0];
   if (!pick || pick.source === r.source) return r;
   return {
-    ...r, source: pick.source, status: pick.status, reporting: pick.reporting, updated: pick.updated, url: pick.url,
+    ...r, source: pick.source, reporting: pick.reporting, updated: pick.updated, url: pick.url,
     total_votes: pick.total_votes, candidates: pick.candidates, measure: pick.measure, seats: pick.seats ?? r.seats,
     unmatched: pick.unmatched, note: [r.note, pick.note].filter(Boolean).join(' ') || undefined, final: null, rounds: undefined,
   };
@@ -222,12 +223,16 @@ export function officeFor(it: Item): { url: string; text: string } | null {
    yet" while the office hasn't posted (its expected time is in the open row); or, where the office posts the race but
    we don't show it here, a real link named for the office ("Travis County results"). "Your pick" only beside numbers,
    never stacked under a non-answer, and just "Your pick" when it's the name right above it. */
-export interface ResCol { main: string; sub: string; pick: string; kind: 'num' | 'none' | 'link' | 'wait'; url?: string }
+export interface ResCol { main: string; sub: string; pick: string; kind: 'num' | 'none' | 'link' | 'wait'; url?: string; area?: string }
 const linkCol = (text: string, url: string): ResCol => ({ main: text, sub: '', pick: '', kind: 'link', url });
 export function resCol(it: Item, r: ItemResult): ResCol {
   if (r.status === 'link_only') return linkCol(officeText(r.source), r.url);
   if (!hasNumbers(r)) return { main: 'Not posted yet', sub: '', pick: '', kind: 'none' };
   const col = numCol(it, r);
+  // A race across counties: the status word stays (it's the whole race's), and a line under it says the numbers are one
+  // county's votes (Opus review, Nov 4: "Travis only" read as "this race is only in Travis"; GPT chose the words).
+  const county = shownCounty(r);
+  if (county && col.kind === 'num') col.area = `${shortCounty(county)} votes only`;
   const pk = picked(it) ? pickShort(it) : '';
   if (col.kind === 'num' && pk) col.pick = col.main.startsWith(`${pk} `) && !col.main.includes(',') ? 'Your pick' : `Your pick: ${pk}`;
   return col;
@@ -245,9 +250,8 @@ function numCol(it: Item, r: ItemResult): ResCol {
   const pick = '';
   const word = statusWord(r.status);
   const county = shownCounty(r);
-  // A race across counties: the county named in place of the status word ("Travis only": one county's piece, GPT copy
-  // pass), since its status is the whole race's, and no number here is the whole.
-  const sub0 = county ? `${shortCounty(county)} only` : word;
+  // The status word is the whole race's (viewOf keeps it); resCol adds the county line for a race across counties.
+  const sub0 = word;
   if (isMeasureLike(it) && r.measure) {
     const y = yesShare(r.measure);
     const b = barOf(it, r);
@@ -433,36 +437,34 @@ export const labelWords = (s: ResultsSourceEntry | undefined): string => {
   const l = cleanLabels(s);
   return l.length ? ` “${l.slice(0, 2).join('. ')}.”` : '';
 };
-/* A source's progress in its own words: its `reporting`, else that of the first race on this page it reads ("Polling
-   Locations Reporting: 25%" from the Texas SOS's first race). Never a label and never a percent of our own (rule 5). */
+/* An office's progress in its own words: its own `reporting`, or nothing. Never one race's words passed off as the
+   office's (Opus review, Nov 4: Bexar's "7 of 7" was one district's), never a label, never a percent of our own (rule
+   5). Each race's own progress is in its open row. */
 export function progressOf(s: ResultsSourceEntry): string {
-  const clean = (t: string | null | undefined): string => (t && t.trim() ? t.trim().replace(/\.$/, '') : '');
-  if (clean(s.reporting)) return clean(s.reporting);
-  for (const it of shownItems()) {
-    const r = R.file?.items[it.id];
-    if (!r) continue;
-    const v = r.source === s.id ? r : (r.slices || []).find((x) => x.source === s.id);
-    if (v && clean(v.reporting)) return clean(v.reporting);
-  }
-  return '';
+  const t = s.reporting && s.reporting.trim();
+  return t ? t.replace(/\.$/, '') : '';
 }
-/* The one source the bottom bar speaks for (Kevin: "Show % reporting in the footer"): among the sources whose numbers
-   are on this page, those that give progress words first; of those, the voter's county's, else the one that reads the
-   most races here. Never a link-only source (none of its numbers are on the rows). */
-export function mainSource(): ResultsSourceEntry | null {
-  const all = ballotSources().filter((x) => x.status !== 'link_only');
-  const worded = all.filter((x) => !sourceDown(x) && !!progressOf(x));
-  const srcs = worded.length ? worded : all;
-  if (!srcs.length) return null;
+/* How many rows on this page each office's numbers fill (after viewOf picks a county). */
+function rowsBy(): Map<string, number> {
+  const n = new Map<string, number>();
+  for (const it of shownItems()) { const r = resultOf(it); if (r && hasNumbers(r)) n.set(r.source, (n.get(r.source) || 0) + 1); }
+  return n;
+}
+/* The offices the bottom bar speaks for (Opus review, Nov 4): the one behind most of this page's rows, and the voter's
+   own county's when its numbers are on rows here too, each with its own update time, so the age of the local numbers
+   is always on screen. Only offices whose numbers fill a row: never one county's slice of a district race (Bexar on an
+   Austin ballot), never a link-only office. */
+export function barSources(): ResultsSourceEntry[] {
+  const n = rowsBy();
+  const fed = ballotSources().filter((x) => x.status !== 'link_only' && (n.get(x.id) || 0) > 0);
+  if (!fed.length) return [];
+  const most = [...fed].sort((a, b) => (n.get(b.id) || 0) - (n.get(a.id) || 0))[0];
   const home = homeCounty();
   const k = home ? countyKey(bare(home)) : null;
   const rows = (S.ballot?.howto.results?.sources || []).filter((x) => x.kind === 'county');
   const hc = k ? rows.find((x) => [...(x.counties || []), x.label || '', x.name].some((c) => c && countyKey(bare(c)) === k)) : undefined;
-  const mine = hc ? srcs.find((x) => x.id === hc.id) : undefined;
-  if (mine) return mine;
-  const n = new Map<string, number>();
-  for (const it of shownItems()) { const r = resultOf(it); if (r && hasNumbers(r)) n.set(r.source, (n.get(r.source) || 0) + 1); }
-  return [...srcs].sort((a, b) => (n.get(b.id) || 0) - (n.get(a.id) || 0))[0];
+  const mine = hc ? fed.find((x) => x.id === hc.id) : undefined;
+  return mine && mine.id !== most.id ? [most, mine] : [most];
 }
 export const sourceName = (id: string): string => R.file?.sources.find((s) => s.id === id)?.name || 'The election office';
 /* "We checked 10:13 PM CT": when our fetcher last read the sources, never the page's own load. With several sources,
@@ -489,27 +491,29 @@ export function sourceLines(srcs = ballotSources()): string[] {
     return `${when}${labelWords(s)}${p ? ` “${p}.”` : ''}`;
   });
 }
-/* The bottom bar's results line (overnight): the status word, the main source's own progress words (or its update time
-   when it gives none), when we last checked, and Refresh. `kind`: 'wait' before the first read, 'links' when nothing
-   on this page has numbers here (it then carries the office's link), 'failed' when the first read failed. */
-export interface FootInfo { kind: 'res' | 'wait' | 'links' | 'failed'; word: string; who: string; words: string; at: string; link: { url: string; text: string } | null; down: boolean }
+/* The bottom bar's results line (overnight; Opus review, Nov 4): the status word, when we last checked, and Refresh;
+   under it each office the bar speaks for (barSources) with its own update time and, only when the office gives them,
+   its own progress words. `kind`: 'wait' before the first read, 'links' when nothing on this page has numbers here (it
+   then carries the office's link), 'failed' when the first read failed. */
+export interface FootSrc { who: string; at: string; words: string; down: boolean }
+export interface FootInfo { kind: 'res' | 'wait' | 'links' | 'failed'; word: string; at: string; srcs: FootSrc[]; link: { url: string; text: string } | null }
 export function footInfo(): FootInfo | null {
   if (!resultsMode()) return null;
   const b = S.ballot!;
   const rows = (b.howto.results?.sources || []).filter((x) => httpsOK(x.results_url));
   const home = rows.find((x) => x.kind === 'county') || rows.find((x) => x.kind === 'state');
   const link = home ? { url: home.results_url, text: `${home.label || home.name} results` } : httpsOK(b.howto.results_url) ? { url: b.howto.results_url!, text: `${b.howto.results_source || b.stateName} results` } : null;
-  const base: FootInfo = { kind: 'res', word: '', who: '', words: '', at: '', link, down: false };
+  const base: FootInfo = { kind: 'res', word: '', at: '', srcs: [], link };
   if (resultsWaiting()) return { ...base, kind: 'wait' };
   if (!resultsOn()) return { ...base, kind: R.failed ? 'failed' : 'links' };
   const f = figure();
-  if (!f || !f.posted) return { ...base, kind: 'links' };
-  const m = mainSource();
-  if (!m) return { ...base, kind: 'links' };
-  const down = sourceDown(m);
-  const p = down ? '' : progressOf(m);
-  return { ...base, word: f.word, who: officeShort(m.id), words: down ? `couldn’t reach it, showing its ${m.updated ? fmtTime(m.updated) : 'last'} numbers` : p || (m.updated ? `updated ${fmtTime(m.updated)}` : ''), at: checkedAt(), down };
+  const srcs = barSources();
+  if (!f || !f.posted || !srcs.length) return { ...base, kind: 'links' };
+  return { ...base, word: f.word, at: checkedAt(), srcs: srcs.map((m) => ({ who: officeShort(m.id), at: m.updated ? fmtTime(m.updated) : '', words: sourceDown(m) ? '' : progressOf(m), down: sourceDown(m) })) };
 }
+/* "Hide races I've decided" only before the close (Opus review, Nov 4): after it, every row carries its count, so the
+   switch (still saved as it was) hides nothing. */
+export const hideDecidedNow = (): boolean => !!S.b?.hideDecided && !resultsMode();
 /* The newest source time we hold, for "No change since 9:35 PM CT". */
 export function newestUpdate(srcs = ballotSources()): string {
   const t = srcs.map((s) => s.updated || s.fetched || '').filter(Boolean).sort().pop();
@@ -614,7 +618,7 @@ export function dotLine(it: Item): string {
   const pk = picked(it) ? pickShort(it) : null;
   const col = r ? resCol(it, r) : noResCol(it);
   if (!col) return pk ? `Not in this guide’s results · your pick ${pk}` : 'Not in this guide’s results';
-  const main = col.kind === 'num' ? `${col.main}${col.sub ? ` ${col.sub}` : ''}` : col.main;
+  const main = col.kind === 'num' ? `${col.main}${col.sub ? ` ${col.sub}` : ''}${col.area ? ` · ${col.area}` : ''}` : col.main;
   return `${main}${pk ? ` · your pick ${pk}` : ''}`;
 }
 export type { Measure };

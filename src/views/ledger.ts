@@ -16,7 +16,7 @@ import { verdict, type Verdict } from '../model/tally';
 import { canUndo } from '../model/bulk';
 import { FOUND_ONLY, CHECKING, addressKinds } from '../model/address';
 import { judgeBatch, judicialReview, judgesLead, judgesRule } from '../model/judges';
-import { ext, sampleBallot, isOpen, escP, leadRest, reportAttrs, HIDE } from './common';
+import { ext, sampleBallot, isOpen, escP, leadRest, reportAttrs, HIDE, safeURL } from './common';
 import { lensSummary } from './lens';
 import { covOf, cardShows, cardAsks, headCovHTML } from './coverage';
 import { noEndorsements } from '../model/lens';
@@ -26,7 +26,7 @@ import { openHTML, censusSettles, addressSettles } from './open';
 import { mapCounty, seatless } from '../model/maps';
 import { nextStep, afterPolls } from '../model/plan';
 import { nearNow, fmtMiles } from '../model/sites';
-import { resultOf, resCol, noResCol, resultsOn, resultsMode, hasNumbers, footInfo, ballotSources, sourceDown, progressOf, fmtTime, checkedAt, figure, R, type ResCol } from '../model/results';
+import { resultOf, resCol, noResCol, resultsOn, resultsMode, hasNumbers, footInfo, ballotSources, sourceDown, progressOf, fmtTime, checkedAt, figure, R, hideDecidedNow, type ResCol } from '../model/results';
 import { figureHTML } from './figure';
 
 /* ---------- names ---------- */
@@ -105,10 +105,10 @@ export function resColHTML(it: Item, c = resColOf(it)): string | null {
   if (!c) return null;
   if (c.kind === 'link') return '<span class="vd res go" aria-hidden="true"></span>';
   const cls = c.kind === 'num' ? 'res' : `res none${c.kind === 'wait' ? ' wait' : ''}`;
-  return `<span class="vd ${cls}"><span class="m">${esc(c.main)}</span>${c.sub ? `<span class="s">${esc(c.sub)}</span>` : ''}${c.pick ? `<span class="p">${esc(c.pick)}</span>` : ''}</span>`;
+  return `<span class="vd ${cls}"><span class="m">${esc(c.main)}</span>${c.sub ? `<span class="s">${esc(c.sub)}</span>` : ''}${c.area ? `<span class="s ar">${esc(c.area)}</span>` : ''}${c.pick ? `<span class="p">${esc(c.pick)}</span>` : ''}</span>`;
 }
-const goHTML = (it: Item, c: ResCol | null): string => (c && c.kind === 'link' && c.url
-  ? `<a class="vd-go" href="${esc(c.url)}" target="_blank" rel="noopener" data-fk="go-${esc(it.id)}"><span class="m">${lastWordWith(c.main, GO)}</span></a>` : '');
+const goHTML = (it: Item, c: ResCol | null): string => (c && c.kind === 'link' && c.url && safeURL(c.url)
+  ? `<a class="vd-go" href="${esc(safeURL(c.url))}" target="_blank" rel="noopener" data-fk="go-${esc(it.id)}"><span class="m">${lastWordWith(c.main, GO)}</span></a>` : '');
 /* The arrow rides with the last word, so it never wraps onto a line by itself. */
 const lastWordWith = (t: string, icon: string): string => { const i = t.lastIndexOf(' '); return `${esc(t.slice(0, i + 1))}<span class="go-w">${esc(t.slice(i + 1))}${icon}</span>`; };
 const qVerdict = (main: string, sub = ''): string => `<span class="vd q"><span class="m">${esc(main)}</span>${sub ? `<span class="s">${esc(sub)}</span>` : ''}</span>`;
@@ -219,7 +219,7 @@ function questionBodyHTML(g: Group): string {
     <h3 class="dq-h">Pick your ${esc(cleanOffice(g.office))} district</h3>
     <p class="ob-lede">${esc(where())} has ${choices.length} of these districts. Your official sample ballot lists yours.</p>
     <div class="opts">${addressSettles(members[0]) && !S.b.addrNote ? `<button class="opt opt-addr" data-act="addr-open" data-fk="dq-addr"><b>Use my address</b><small>${censusSettles(members[0]) ? 'The Census lookup finds it for you' : 'Your address finds it on the official map'}</small></button>` : ''}${choices.map((c) => { const [l, sub] = optionLabel(c); return `<button class="opt" data-act="district" data-g="${esc(g.key)}" data-v="${esc(c.id)}" data-fk="d-${esc(c.id)}"><b>${esc(choices.length < members.length ? seatless(l) : l)}</b>${sub ? `<small>${esc(sub)}</small>` : ''}</button>`; }).join('')}
-      <button class="opt opt-unsure" data-act="district" data-g="${esc(g.key)}" data-v="*" data-fk="d-${hash(g.key)}-x"><b>Not sure? Skip for now</b><small>Show all ${members.length}, each marked “Maybe on your ballot”</small></button>
+      <button class="opt opt-unsure" data-act="district" data-g="${esc(g.key)}" data-v="*" data-fk="d-${hash(g.key)}-x">${resultsMode() ? `<b>Show all ${members.length}</b><small>See each one’s count, marked “Maybe on your ballot”</small>` : `<b>Not sure? Skip for now</b><small>Show all ${members.length}, each marked “Maybe on your ballot”</small>`}</button>
       <button class="opt opt-unsure" data-act="district" data-g="${esc(g.key)}" data-v="none" data-fk="d-${hash(g.key)}-n"><b>${esc(noneLabel(g))}</b></button></div>
     ${dqHelpHTML(finders, sb)}
   </div>`;
@@ -321,7 +321,7 @@ export const sectionFolded = (sec: SectionKey, entries: Entry[]): boolean => {
   if (S.ui.folded.has(sec)) return true;
   // Once results show, a finished section stays open: its rows carry the numbers now (Nov 3, results Phase 1).
   if (!sectionDone(entries) || resultsOn()) return false;
-  return !(S.b.hideDecided ? S.ui.reveal.has(sec) : S.ui.unfolded.has(sec));
+  return !(hideDecidedNow() ? S.ui.reveal.has(sec) : S.ui.unfolded.has(sec));
 };
 /* The band's count, "2 of 5 decided", is a button with a word after it (Kevin, Oct 20: "a quick and
    easy way to expand and hide is tapping any of those numbers"). Under "Hide races I've decided" it
@@ -332,10 +332,10 @@ export const sectionFolded = (sec: SectionKey, entries: Entry[]): boolean => {
 export function countHTML(sec: SectionKey, entries: Entry[], folded = sectionFolded(sec, entries)): string {
   const t = sectionTally(entries);
   // Once results show, the band drops "N of M decided" (every row is about the count now) and keeps Hide (DESIGN 3b).
-  if (resultsOn() && !S.b.hideDecided) return `<button class="sec-r sec-cb" data-act="sec-count" data-sec="${sec}" aria-expanded="${!folded}" data-fk="secn-${sec}"><span class="sec-count"></span><span class="sec-edit">${folded ? 'Show' : 'Hide'}</span></button>`;
+  if (resultsOn()) return `<button class="sec-r sec-cb" data-act="sec-count" data-sec="${sec}" aria-expanded="${!folded}" data-fk="secn-${sec}"><span class="sec-count"></span><span class="sec-edit">${folded ? 'Show' : 'Hide'}</span></button>`;
   const count = sectionCount(entries);
-  if ((!t.total && !folded) || (S.b.hideDecided && !folded && !t.done)) return count ? `<span class="sec-r"><span class="sec-count">${esc(count)}</span></span>` : '';
-  const open = S.b.hideDecided ? !folded && S.ui.reveal.has(sec) : !folded;
+  if ((!t.total && !folded) || (hideDecidedNow() && !folded && !t.done)) return count ? `<span class="sec-r"><span class="sec-count">${esc(count)}</span></span>` : '';
+  const open = hideDecidedNow() ? !folded && S.ui.reveal.has(sec) : !folded;
   return `<button class="sec-r sec-cb" data-act="sec-count" data-sec="${sec}" aria-expanded="${open}" data-fk="secn-${sec}"><span class="sec-count">${esc(count)}</span> <span class="sec-edit">${open ? 'Hide' : 'Show'}</span></button>`;
 }
 function foldSummary(entries: Entry[]): string {
@@ -395,7 +395,8 @@ function entryHTML(e: Entry): string {
    decided rows you asked to see (its count, tapped). render.ts uses the same rule for one-row
    repaints. */
 export const hiddenByOnly = (e: Entry, sec: SectionKey): boolean => {
-  if (!S.b.hideDecided) return false;
+  // After the close every row carries its count, so the filter hides nothing (model/results.ts hideDecidedNow).
+  if (!hideDecidedNow()) return false;
   if (e.t === 'question' || S.ui.reveal.has(sec)) return false;
   if (e.t !== 'item') return true;
   if (e.id === S.ui.beat || e.id === S.ui.row) return false;
@@ -699,7 +700,7 @@ export function ballotHeadHTML(): string {
 export function ballotHTML(): string {
   const by = entriesBySection();
   const secs = SECTIONS.map(([k]) => sectionHTML(k, by.get(k) || [])).join('');
-  const empty = S.b.hideDecided && !decisionItems().some((i) => !i.done)
+  const empty = hideDecidedNow() && !decisionItems().some((i) => !i.done)
     ? `<p class="empty"><b>Nothing left to decide here.</b> Turn off “${HIDE}” to see everything.</p>` : '';
   return `<div class="wrap-led">${ballotHeadHTML()}</div><div class="ledger" aria-labelledby="ballot-h">${secs}${empty}</div>
     <div id="r-off">${offHTML()}</div>
@@ -775,10 +776,15 @@ export function footResHTML(): string {
   let body: string;
   if (f.kind === 'wait') body = '<span class="fr-t"><span class="fr-p">Checking results…</span></span>';
   else if (f.kind === 'links' || f.kind === 'failed') body = `<span class="fr-t">${f.kind === 'failed' ? '<span class="fr-p">Couldn’t check just now.</span> ' : ''}${link(f.link) || '<span class="fr-p">Results are on the election offices’ sites.</span>'}</span>${f.kind === 'failed' ? refreshBtn('bar-refresh') : ''}`;
-  // Two short lines on a phone, one from 600px (GPT copy pass): the word and whose count; then the office's own
-  // words and when we checked; Refresh at the end of the first.
-  else body = `<span class="fr-a"><b class="fr-w">${esc(f.word)}</b>${f.who ? `<span class="fr-sep" aria-hidden="true"> · </span><span class="fr-who">${esc(f.who)}</span>` : ''}</span>
-      <span class="fr-b">${f.words ? `<span class="fr-p">${esc(f.words)}</span> ` : ''}${R.failed ? '<span class="fr-at">Couldn’t check just now</span>' : f.at ? `<span class="fr-at">Checked ${esc(f.at)}</span>` : ''}</span> ${refreshBtn('bar-refresh')}`;
+  // Two short lines (Opus review, Nov 4): the word and when we checked, with Refresh; then each office the bar speaks
+  // for with its own update time (the office behind most rows, and the voter's county's), and only an office's own
+  // progress words, quoted. The zone is said once, on the first line.
+  else {
+    const noZ = (t: string): string => t.replace(/ [A-Z]T$/, '');
+    const src = f.srcs.map((x) => `<span class="fr-s">${x.down ? `Couldn’t reach ${esc(x.who)}; its ${esc(noZ(x.at) || 'last')} numbers` : `${esc(x.who)} updated ${esc(noZ(x.at) || 'at a time it doesn’t give')}${x.words ? `, “${esc(x.words)}”` : ''}`}</span>`).join(' ');
+    body = `<span class="fr-a"><b class="fr-w">${esc(f.word)}</b>${R.failed ? '<span class="fr-sep" aria-hidden="true"> · </span><span class="fr-at">Couldn’t check just now</span>' : f.at ? `<span class="fr-sep" aria-hidden="true"> · </span><span class="fr-at">Checked ${esc(f.at)}</span>` : ''}</span> ${refreshBtn('bar-refresh')}
+      <span class="fr-b">${src}</span>`;
+  }
   return `<div class="foot-res${f.kind === 'res' ? ' fr-grid' : ''}" data-kind="${f.kind}">${body}</div>`;
 }
 
@@ -804,8 +810,8 @@ const ARROW = '<i class="nv-a" aria-hidden="true">›</i>';
 /* The menu once the polls close (overnight, Kevin: "update the menu to be more results focused"): where results stand
    first (the status word, when we checked, Refresh, each source with its own progress words and update time, and the
    offices' own results pages), then each section with how many of its races have numbers here, What's next, and the
-   end rows. No "Next up" or Quick picks: deciding is done. "Hide races I've decided" shows only while it's on, so a
-   voter who had it on can still see the rows it hides. */
+   end rows. No "Next up" or Quick picks: deciding is done. No "Hide races I've decided" either: after the close it
+   hides nothing (hideDecidedNow), so every row shows its count. */
 function resMenuHTML(where: 'toc' | 'rail'): string {
   const by = entriesBySection();
   const h = S.ballot!.howto;
@@ -819,7 +825,7 @@ function resMenuHTML(where: 'toc' | 'rail'): string {
     : !srcs.length || !fig || !fig.posted ? `<p class="nv-rw"><b>Results</b></p><p class="nv-rx">${R.failed && !resultsOn() ? 'Couldn’t check the election offices just now. ' : ''}These races’ counts are on the election offices’ own pages.</p>${R.failed && !resultsOn() ? `<p class="nv-rw">${refreshBtn(`${where}-refresh`)}</p>` : ''}`
     : `<p class="nv-rw"><b>${esc(fig.word)}</b>${R.failed ? ' <span>Couldn’t check just now</span>' : at ? ` <span>We checked ${esc(at)}</span>` : ''} ${refreshBtn(`${where}-refresh`)}</p>`;
   // Each office's own words and update time, under the sections (GPT copy pass: navigation before source detail).
-  const srcList = !srcs.length || !fig || !fig.posted ? '' : `<h3 class="nv-sh">Where the numbers come from</h3><ul class="nv-srcs">${srcs.map((x) => {
+  const srcList = !srcs.length || !fig || !fig.posted ? '' : `<h3 class="nv-sh">Where these numbers come from</h3><ul class="nv-srcs">${srcs.map((x) => {
         const p = progressOf(x);
         const line = sourceDown(x) ? `Couldn’t reach it. Showing its ${x.updated ? `${fmtTime(x.updated)} ` : 'last '}numbers.`
           : x.status === 'refused' ? 'Isn’t letting us read its results.'
@@ -833,13 +839,16 @@ function resMenuHTML(where: 'toc' | 'rail'): string {
     if (!entries.length || !sectionShows(entries)) return '';
     const items = pageWalk().filter((x) => x.sec === k && !x.question && !x.folded).map((x) => S.ballot!.byId.get(x.key)).filter((x): x is Item => !!x);
     const posted = items.filter((it) => hasNumbers(resultOf(it))).length;
+    // District questions count as races without numbers until answered (Opus review: "Numbers for all" beside
+    // "Pick your district" rows), and a section of only questions says what to do.
+    const qs = pageWalk().filter((x) => x.sec === k && x.question).length;
+    const all = items.length + qs;
     // Coverage, never completeness (GPT copy pass: "posted" read as "the count is done").
-    const right = !items.length ? '' : posted === items.length ? 'Numbers for all' : posted ? `Numbers for ${posted} of ${items.length}` : resultsOn() || R.none ? 'On office sites' : '';
+    const right = !all ? '' : !items.length ? 'Pick your district' : posted === all ? 'Numbers for all' : posted ? `Numbers for ${posted} of ${all}` : resultsOn() || R.none ? 'On office sites' : '';
     return row(`data-act="jump" data-to="${k}"`, k, sectionTitle(k), right);
   }).join('');
-  const only = S.b.hideDecided ? `<button class="su-sw nv-sw" role="switch" aria-checked="true" data-act="only" data-fk="${where}-only"><span class="su-l"><b>${HIDE}</b></span><span class="tg" aria-hidden="true"><span></span></span></button>` : '';
   return `<div class="nv-res" data-fk="${where}-res">${head}</div>
-    ${only}<ul class="nv-list nv-secs">
+    <ul class="nv-list nv-secs">
     ${secs}</ul>
     <div class="nv-from">${srcList}${links}</div>
     <ul class="nv-list nv-end nv-next-step">${row('data-act="cheat"', 'cheat', 'What’s next', '', ' nv-plan')}</ul>

@@ -28,9 +28,13 @@ function meets(yes, no, th) {
   return lhs > rhs;
 }
 
-export function outcomeFor({ status, kind, seats = 1, candidates = [], measure = null, declared = null, threshold = null, spanning = false }) {
+/* `unmatchedVotes`: votes for named feed choices that aren't guide candidates; `otherVotes`: votes on aggregate lines
+   such as "Write-in". Either could hold the real winner, so (site builder's review, Nov 3): no outcome while any
+   unmatched name holds votes, and none when the aggregate line could reach the last winning seat. */
+export function outcomeFor({ status, kind, seats = 1, candidates = [], measure = null, declared = null, threshold = null, spanning = false, unmatchedVotes = 0, otherVotes = 0 }) {
   if (status !== 'complete' && status !== 'official') return null;
   if (spanning) return null;
+  if (unmatchedVotes > 0) return null;
   if (declared && declared.length && (kind === 'plurality' || kind === 'multi')) return { winners: declared.slice() };
   switch (kind) {
     case 'plurality': {
@@ -38,11 +42,14 @@ export function outcomeFor({ status, kind, seats = 1, candidates = [], measure =
       const s = [...candidates].sort((a, b) => b.votes - a.votes);
       if (s.length > 1 && s[0].votes === s[1].votes) return null;
       if (s[0].votes <= 0) return null;
+      if (otherVotes >= s[0].votes) return null;
       return { winners: [s[0].name] };
     }
     case 'multi': {
       const n = Number(seats) || 1;
       const s = [...candidates].sort((a, b) => b.votes - a.votes);
+      const last = s[Math.min(n, s.length) - 1];
+      if (last && otherVotes >= last.votes) return null;
       if (s.length <= n) return s.every((c) => c.votes > 0) ? { winners: s.map((c) => c.name) } : null;
       if (s[n - 1].votes === s[n].votes) return null;
       return { winners: s.slice(0, n).map((c) => c.name) };

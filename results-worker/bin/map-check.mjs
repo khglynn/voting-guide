@@ -53,6 +53,9 @@ for (const m of maps) {
     if (statewide.has(mc.item) && !local.has(mc.item)) { err(m, `${w}: a statewide item from a county source`); continue; }
     const it = guide.get(mc.item);
     if (!it) { err(m, `${w}: not an item on ${places.join(', ')}`); continue; }
+    // Federal and state-level races rarely sit inside one county; flag every one a map calls single-county so a person
+    // looks (Texas House districts inside Dallas, Harris or Bexar are real cases).
+    if (['federal', 'state'].includes(it.level) && Array.isArray(mc.reaches) && mc.reaches.length === 1) warn(m, `${w}: a ${it.level} race marked wholly inside ${m.county}; confirm`);
     const want = it.kind === 'measure' ? 'measure' : it.is_retention ? 'retention' : it.ranked_choice ? 'rcv' : (it.vote_for || 1) > 1 ? 'multi' : 'plurality';
     if (mc.kind !== want && mc.kind !== 'rule_unknown') err(m, `${w}: kind ${mc.kind}, the guide says ${want}`);
     if (want === 'multi' && Number(mc.seats) !== Number(it.vote_for)) err(m, `${w}: seats ${mc.seats}, the guide votes for ${it.vote_for}`);

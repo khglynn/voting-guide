@@ -46,6 +46,12 @@ export function sourceSlices(read, map, now) {
       total_votes: total,
     };
     const unmatched = [];
+    let unmatchedVotes = 0, otherVotes = 0;
+    for (const ch of fc.choices) {
+      const to = mc.choices?.[ch.name];
+      if (to === OTHER) otherVotes += Number(ch.votes) || 0;
+      else if (to === null || to === undefined || ((mc.kind === 'measure' || mc.kind === 'retention') && to !== 'yes' && to !== 'no')) unmatchedVotes += Number(ch.votes) || 0;
+    }
     if (mc.kind === 'measure' || mc.kind === 'retention') {
       let yes = 0, no = 0;
       for (const ch of fc.choices) {
@@ -70,7 +76,11 @@ export function sourceSlices(read, map, now) {
     if (fc.note || mc.note) slice.note = [mc.note, fc.note].filter(Boolean).join(' ');
     slice._kind = mc.kind;
     slice._declared = fc.declared ? fc.declared.map((n) => mc.choices?.[n]).filter((n) => n && n !== OTHER) : null;
-    slice._reaches = mc.reaches || [];
+    // A race whose map gives no `reaches` is never taken as the whole race: one county's slice, "other counties"
+    // missing (site builder's review, Nov 3). `reaches: [this county]` is the map saying it is wholly inside.
+    slice._reaches = mc.reaches && mc.reaches.length ? mc.reaches : [map.county || map.name, 'other counties'];
+    slice._unmatchedVotes = unmatchedVotes;
+    slice._otherVotes = otherVotes;
     slices[mc.item] = slice;
   }
   return { status, slices, problems };
@@ -82,7 +92,7 @@ const RANK = { pending: 0, counting: 1, complete: 2, official: 3 };
 function single(sl) {
   const out = strip(sl);
   delete out.county;
-  out.final = outcomeFor({ status: sl.status, kind: sl._kind, seats: sl.seats, candidates: sl.candidates, measure: sl.measure, declared: sl._declared, threshold: sl._threshold, spanning: false });
+  out.final = outcomeFor({ status: sl.status, kind: sl._kind, seats: sl.seats, candidates: sl.candidates, measure: sl.measure, declared: sl._declared, threshold: sl._threshold, spanning: false, unmatchedVotes: sl._unmatchedVotes, otherVotes: sl._otherVotes });
   return out;
 }
 
@@ -136,7 +146,7 @@ export function buildStateFile({ state, maps, srcs, mode, now }) {
     for (const id of map.unmatched_guide || []) links[id] ??= { source: map.id, status: 'link_only', reporting: null, updated: null, url: map.feed.results_url, reason: 'not matched' };
     if (reason) { linkAll(reason); continue; }
     if (!rec) {
-      for (const mc of map.contests || []) (contributions[mc.item] ??= []).push({ source: map.id, county: map.county || map.name, status: 'pending', reporting: null, updated: null, url: mc.item_url || map.feed.results_url, total_votes: 0, _kind: mc.kind, _reaches: mc.reaches || [], _empty: true });
+      for (const mc of map.contests || []) (contributions[mc.item] ??= []).push({ source: map.id, county: map.county || map.name, status: 'pending', reporting: null, updated: null, url: mc.item_url || map.feed.results_url, total_votes: 0, _kind: mc.kind, _reaches: mc.reaches && mc.reaches.length ? mc.reaches : [map.county || map.name, 'other counties'], _empty: true });
       continue;
     }
     const { status, slices } = sourceSlices(rec.read, map, now);

@@ -146,3 +146,26 @@ test('a placeholder precinct count (0 of N) with votes posted is counting, and k
   assert.equal(f.items.mayor.reporting, '0 of 437 precincts reporting');
   assert.equal(f.items['prop-a'].status, 'counting', 'every precinct in is still not complete without the source\'s own marker');
 });
+
+test('outcome: none while an unmatched name holds votes, or when the write-in line could reach the winner', () => {
+  const done = { status: 'complete', kind: 'plurality', candidates: [c('A', 60), c('B', 30)] };
+  assert.deepEqual(outcomeFor(done), { winners: ['A'] });
+  assert.equal(outcomeFor({ ...done, unmatchedVotes: 1 }), null);
+  assert.equal(outcomeFor({ ...done, otherVotes: 60 }), null);
+  assert.deepEqual(outcomeFor({ ...done, otherVotes: 5 }), { winners: ['A'] });
+  assert.equal(outcomeFor({ status: 'complete', kind: 'measure', measure: { yes: 60, no: 40 }, threshold: { pct: 50, inclusive: false }, unmatchedVotes: 3 }), null);
+});
+
+test('file: an unmatched leader never gets a final; a race with no reaches is one county\'s slice', () => {
+  const read = readOf([{ feed_id: '1', feed_name: 'Mayor', choices: [{ name: 'SMITH, ANN', votes: 300 }, { name: 'JONES, BO', votes: 200 }, { name: 'Write-in', votes: 0 }, { name: 'Cy Doe (W)', votes: 900 }] }, { feed_id: '2', feed_name: 'Prop A', choices: [{ name: 'FOR', votes: 7 }, { name: 'AGAINST', votes: 3 }] }], { source_status: 'final_flag' });
+  const srcs = { 'a-tx': { record: { read, fetched: '2026-11-05T00:00:00.000Z' }, checked: true, sched: {} } };
+  const f = buildStateFile({ state: 'TX', maps: [MAP_A], srcs, mode: 'public', now: '2026-11-05T00:00:00.000Z' });
+  assert.equal(f.items.mayor.status, 'complete');
+  assert.equal(f.items.mayor.final, null, 'Cy Doe leads and is not a guide candidate');
+  const noReach = { ...MAP_A, contests: MAP_A.contests.map((x) => (x.item === 'mayor' ? { ...x, reaches: undefined } : x)) };
+  const g = buildStateFile({ state: 'TX', maps: [noReach], srcs, mode: 'public', now: '2026-11-05T00:00:00.000Z' });
+  assert.deepEqual(g.items.mayor.missing, ['other counties']);
+  assert.equal(g.items.mayor.slices.length, 1);
+  assert.equal(g.items.mayor.status, 'counting', 'never complete while a part is missing');
+  assert.equal(g.items.mayor.final, null);
+});

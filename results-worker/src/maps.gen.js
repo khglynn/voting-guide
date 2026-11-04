@@ -3096,6 +3096,43 @@ export const MAPS = [
     "not_here": []
   },
   {
+    "id": "escambia-fl",
+    "state": "FL",
+    "name": "Escambia County Supervisor of Elections",
+    "county": "Escambia",
+    "election": {
+      "date": "2026-11-03",
+      "feed_election_id": "3977",
+      "feed_name": "2026 General Election"
+    },
+    "guide": {
+      "fingerprint": "e3b0c44298fc1c14",
+      "made_from": "skeleton, Nov 3 10:30 PM CT",
+      "places": [
+        "pensacola-fl"
+      ]
+    },
+    "feed": {
+      "adapter": "vr_enr",
+      "base": "https://enr.electionsfl.org/ESC/3977",
+      "results_url": "https://enr.electionsfl.org/ESC/3977/Summary/",
+      "identity": "named",
+      "identity_note": "Answered our named User-Agent on Nov 3, 10:20 PM CT (200, S3 behind CloudFront, Last-Modified Wed, 04 Nov 2026 02:23:19 GMT).",
+      "election_id_from": "The county's own results page (https://escambiavotes.gov/election-results) links https://enr.electionsfl.org/ESC/3977/Summary/ as \"2026 General\"; the page itself says \"2026 General Election\", \"Election Date: 11/3/2026\" and links /ESC/3977/Precincts.",
+      "tz": "America/Chicago",
+      "utc_offset": -6
+    },
+    "polls_close": "2026-11-04T01:00:00Z",
+    "count_closes": "2026-11-14T05:59:00Z",
+    "complete_marker": null,
+    "complete_marker_note": "None: the page's \"Completely Reported\" per vote type is election-night progress, not a finished count (cures until 5 PM Nov 5, provisionals and overseas ballots after), so Escambia reads counting until official.",
+    "certify_by": "2026-11-16",
+    "official": null,
+    "contests": [],
+    "unmatched_feed": [],
+    "unmatched_guide": []
+  },
+  {
     "id": "harris-county-tx",
     "state": "TX",
     "name": "Harris County",
@@ -7357,6 +7394,48 @@ export const MAPS = [
       "dc-ward-8-anc"
     ],
     "not_here": []
+  },
+  {
+    "id": "results-FL",
+    "state": "FL",
+    "name": "Florida Division of Elections",
+    "county": "Florida",
+    "scope": "state",
+    "election": {
+      "date": "2026-11-03",
+      "feed_election_id": "11/03/2026",
+      "feed_name": null
+    },
+    "guide": {
+      "fingerprint": "e3b0c44298fc1c14",
+      "made_from": "skeleton, Nov 3 10:30 PM CT",
+      "locals": true,
+      "places": [
+        "state-FL",
+        "orlando-fl",
+        "pensacola-fl",
+        "tallahassee-fl"
+      ]
+    },
+    "feed": {
+      "adapter": "fl_dos",
+      "base": "https://flelectionfiles.floridados.gov/enightfilespublic",
+      "file": "20261103_ElecResultsFL.txt",
+      "results_url": "https://floridaelectionwatch.gov/",
+      "identity": "named",
+      "identity_note": "Answered our named User-Agent on Nov 3, 10:18 PM CT (200). A read without a ?v= key got Azure Front Door's Nov 2 copy (all zeros, TCP_HIT); with the key the office's Downloads page uses, a fresh copy (TCP_MISS, Last-Modified Wed, 04 Nov 2026 04:18:03 GMT).",
+      "election_id_from": "The file's own ElectionDate column (every row 11/03/2026) and the file name the office's Downloads page links (https://floridaelectionwatch.gov/Downloads, \"2026 General Election, November 3, 2026, Unofficial Election Night Results\"). The file carries no election name or id.",
+      "tz": "America/New_York"
+    },
+    "polls_close": "2026-11-04T01:00:00Z",
+    "count_closes": "2026-11-14T04:59:00Z",
+    "complete_marker": null,
+    "complete_marker_note": "None: the state file has no complete flag, and the count runs past election night (cure deadline 5 PM Nov 5, unofficial returns due noon Nov 7, overseas ballots through Nov 13), so Florida reads counting until official.",
+    "certify_by": "2026-11-17",
+    "official": null,
+    "contests": [],
+    "unmatched_feed": [],
+    "unmatched_guide": []
   },
   {
     "id": "results-TX",

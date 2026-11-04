@@ -1,0 +1,42 @@
+{
+  "id": "results-FL",
+  "state": "FL",
+  "name": "Florida Division of Elections",
+  "county": "Florida",
+  "scope": "state",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "11/03/2026",
+    "feed_name": null
+  },
+  "guide": {
+    "fingerprint": "e3b0c44298fc1c14",
+    "made_from": "skeleton, Nov 3 10:30 PM CT",
+    "locals": true,
+    "places": [
+      "state-FL",
+      "orlando-fl",
+      "pensacola-fl",
+      "tallahassee-fl"
+    ]
+  },
+  "feed": {
+    "adapter": "fl_dos",
+    "base": "https://flelectionfiles.floridados.gov/enightfilespublic",
+    "file": "20261103_ElecResultsFL.txt",
+    "results_url": "https://floridaelectionwatch.gov/",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent on Nov 3, 10:18 PM CT (200). A read without a ?v= key got Azure Front Door's Nov 2 copy (all zeros, TCP_HIT); with the key the office's Downloads page uses, a fresh copy (TCP_MISS, Last-Modified Wed, 04 Nov 2026 04:18:03 GMT).",
+    "election_id_from": "The file's own ElectionDate column (every row 11/03/2026) and the file name the office's Downloads page links (https://floridaelectionwatch.gov/Downloads, \"2026 General Election, November 3, 2026, Unofficial Election Night Results\"). The file carries no election name or id.",
+    "tz": "America/New_York"
+  },
+  "polls_close": "2026-11-04T01:00:00Z",
+  "count_closes": "2026-11-14T04:59:00Z",
+  "complete_marker": null,
+  "complete_marker_note": "None: the state file has no complete flag, and the count runs past election night (cure deadline 5 PM Nov 5, unofficial returns due noon Nov 7, overseas ballots through Nov 13), so Florida reads counting until official.",
+  "certify_by": "2026-11-17",
+  "official": null,
+  "contests": [],
+  "unmatched_feed": [],
+  "unmatched_guide": []
+}

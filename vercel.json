@@ -6,10 +6,6 @@
   "framework": null,
   "cleanUrls": true,
   "trailingSlash": false,
-  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- . ':(exclude)results-worker'",
-  "rewrites": [
-    { "source": "/results/:path*", "destination": "https://vg-results.kevinhg.workers.dev/results/:path*" }
-  ],
   "headers": [
     { "source": "/data/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=300, must-revalidate" }, { "key": "Access-Control-Allow-Origin", "value": "*" }, { "key": "X-Robots-Tag", "value": "noindex" }] },
     { "source": "/(.*)", "headers": [{ "key": "Referrer-Policy", "value": "no-referrer" }, { "key": "X-Content-Type-Options", "value": "nosniff" }] }

@@ -10,8 +10,8 @@
     "feed_name": "General Election 2026"
   },
   "guide": {
-    "fingerprint": "e3b0c44298fc1c14",
-    "made_from": "vote.kevinhg.com/data, read 2026-11-04T03:23:13.329Z",
+    "fingerprint": "c02eaf8ef6edb3a6",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T03:23:50.376Z",
     "locals": true,
     "places": [
       "state-DC",
@@ -39,7 +39,314 @@
   "complete_marker": null,
   "certify_by": "2026-12-02",
   "official": null,
-  "contests": [],
-  "unmatched_feed": [],
-  "unmatched_guide": []
+  "contests": [
+    {
+      "feed_id": "12",
+      "feed_name": "ATTORNEY GENERAL FOR THE DISTRICT OF COLUMBIA",
+      "item": "dc-attorney-general",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Manuel Rivera": "Manuel Rivera",
+        "DEM Brian L. Schwalb": "Brian L. Schwalb",
+        "Write-in": "__other",
+        "OVER VOTES": "__skip",
+        "UNDER VOTES": "__skip"
+      },
+      "reaches": [
+        "District of Columbia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "6",
+      "feed_name": "CHAIRMAN OF THE COUNCIL OF THE DISTRICT OF COLUMBIA",
+      "item": "dc-council-chair",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Phil Mendelson": "Phil Mendelson",
+        "REP Abi-Ananiah Prudent": "Abi-Ananiah Prudent",
+        "Write-in": "__other",
+        "OVER VOTES": "__skip",
+        "UNDER VOTES": "__skip"
+      },
+      "reaches": [
+        "District of Columbia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "4",
+      "feed_name": "DELEGATE TO THE HOUSE OF REPRESENTATIVES FROM THE DISTRICT OF COLUMBIA",
+      "item": "dc-delegate",
+      "kind": "rcv",
+      "seats": 1,
+      "choices": {
+        "REP Denise Rosado": "Denise Rosado",
+        "DEM Robert White": "Robert White",
+        "STG Kymone Freeman": "Kymone Freeman",
+        "Write-in": "__other",
+        "OVER VOTES": "__skip",
+        "UNDER VOTES": "__skip"
+      },
+      "reaches": [
+        "District of Columbia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "364",
+      "feed_name": "INITIATIVE MEASURE NO. 86",
+      "item": "dc-initiative-86",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes, to approve": "yes",
+        "No, to reject": "no",
+        "OVER VOTES": "__skip",
+        "UNDER VOTES": "__skip"
+      },
+      "reaches": [
+        "District of Columbia"
+      ],
+      "item_url": null,
+      "whole": true,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "5",
+      "feed_name": "MAYOR OF THE DISTRICT OF COLUMBIA",
+      "item": "dc-mayor",
+      "kind": "rcv",
+      "seats": 1,
+      "choices": {
+        "IND Rhonda Hamilton": "Rhonda Hamilton",
+        "DEM Janeese Lewis George": "Janeese Lewis George",
+        "STG Robert L. Gross": "Robert L. Gross",
+        "Write-in": "__other",
+        "OVER VOTES": "__skip",
+        "UNDER VOTES": "__skip"
+      },
+      "reaches": [
+        "District of Columbia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "14",
+      "feed_name": "UNITED STATES REPRESENTATIVE CITYWIDE",
+      "item": "dc-shadow-representative",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Ciprian Ivanof": "Ciprian Ivanof",
+        "DEM Franklin Garcia": "Franklin Garcia",
+        "Write-in": "__other",
+        "OVER VOTES": "__skip",
+        "UNDER VOTES": "__skip"
+      },
+      "reaches": [
+        "District of Columbia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13",
+      "feed_name": "UNITED STATES SENATOR",
+      "item": "dc-shadow-senator",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Robert Simmons": "Robert Simmons",
+        "DEM Paul Strauss": "Paul Strauss",
+        "Write-in": "__other",
+        "OVER VOTES": "__skip",
+        "UNDER VOTES": "__skip"
+      },
+      "reaches": [
+        "District of Columbia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "8",
+      "feed_name": "WARD ONE MEMBER OF THE COUNCIL OF THE DISTRICT OF COLUMBIA",
+      "item": "dc-ward-1-council",
+      "kind": "rcv",
+      "seats": 1,
+      "choices": {
+        "REP Jett James Jasper": "Jett James Jasper",
+        "IND Ryan Prince": "Ryan Prince",
+        "STG Jude Crannitch": "Jude Crannitch",
+        "DEM Aparna Raj": "Aparna Raj",
+        "Write-in": "__other",
+        "OVER VOTES": "__skip",
+        "UNDER VOTES": "__skip"
+      },
+      "reaches": [
+        "District of Columbia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "15",
+      "feed_name": "WARD ONE MEMBER OF THE STATE BOARD OF EDUCATION",
+      "item": "dc-ward-1-sboe",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Ben Williams": "Ben Williams",
+        "Write-in": "__other",
+        "OVER VOTES": "__skip",
+        "UNDER VOTES": "__skip"
+      },
+      "reaches": [
+        "District of Columbia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "9",
+      "feed_name": "WARD THREE MEMBER OF THE COUNCIL OF THE DISTRICT OF COLUMBIA",
+      "item": "dc-ward-3-council",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Matthew Frumin": "Matthew Frumin",
+        "Write-in": "__other",
+        "OVER VOTES": "__skip",
+        "UNDER VOTES": "__skip"
+      },
+      "reaches": [
+        "District of Columbia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "16",
+      "feed_name": "WARD THREE MEMBER OF THE STATE BOARD OF EDUCATION",
+      "item": "dc-ward-3-sboe",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Eric Goulet": "Eric Goulet",
+        "Aaron Wesolowski": "Aaron Wesolowski",
+        "Write-in": "__other",
+        "OVER VOTES": "__skip",
+        "UNDER VOTES": "__skip"
+      },
+      "reaches": [
+        "District of Columbia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "10",
+      "feed_name": "WARD FIVE MEMBER OF THE COUNCIL OF THE DISTRICT OF COLUMBIA",
+      "item": "dc-ward-5-council",
+      "kind": "rcv",
+      "seats": 1,
+      "choices": {
+        "DEM Zachary Parker": "Zachary Parker",
+        "STG Joyce Robinson-Paul": "Joyce Robinson-Paul",
+        "REP Jeffrey Kihien-Palza": "Jeffrey Kihien-Palza",
+        "Write-in": "__other",
+        "OVER VOTES": "__skip",
+        "UNDER VOTES": "__skip"
+      },
+      "reaches": [
+        "District of Columbia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "17",
+      "feed_name": "WARD FIVE MEMBER OF THE STATE BOARD OF EDUCATION",
+      "item": "dc-ward-5-sboe",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jon Alfuth": "Jon Alfuth",
+        "Lynn Jennings": "Lynn Jennings",
+        "Write-in": "__other",
+        "OVER VOTES": "__skip",
+        "UNDER VOTES": "__skip"
+      },
+      "reaches": [
+        "District of Columbia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "11",
+      "feed_name": "WARD SIX MEMBER OF THE COUNCIL OF THE DISTRICT OF COLUMBIA",
+      "item": "dc-ward-6-council",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEM Charles Allen": "Charles Allen",
+        "REP Jorge Rice": "Jorge Rice",
+        "Write-in": "__other",
+        "OVER VOTES": "__skip",
+        "UNDER VOTES": "__skip"
+      },
+      "reaches": [
+        "District of Columbia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "18",
+      "feed_name": "WARD SIX MEMBER OF THE STATE BOARD OF EDUCATION",
+      "item": "dc-ward-6-sboe",
+      "kind": "rcv",
+      "seats": 1,
+      "choices": {
+        "Amber A. Williams": "Amber A. Williams",
+        "David Parker": "David Parker",
+        "Joshua Wiley": "Joshua Wiley",
+        "Write-in": "__other",
+        "OVER VOTES": "__skip",
+        "UNDER VOTES": "__skip"
+      },
+      "reaches": [
+        "District of Columbia"
+      ],
+      "item_url": null,
+      "whole": true
+    }
+  ],
+  "unmatched_feed": [
+    {
+      "feed_id": "7",
+      "feed_name": "AT-LARGE MEMBER OF THE COUNCIL OF THE DISTRICT OF COLUMBIA",
+      "why": "judge disagreed: Pair says seats 1 but the guide item fills 2 seats (two at-large seats, multi-winner ranked choice); feed vote_for 1 is the per-ballot rule, not the seat count. Fix seats to 2 before showing a winner."
+    }
+  ],
+  "unmatched_guide": [
+    "dc-council-at-large",
+    "dc-ward-1-anc",
+    "dc-ward-2-anc",
+    "dc-ward-3-anc",
+    "dc-ward-4-anc",
+    "dc-ward-5-anc",
+    "dc-ward-6-anc",
+    "dc-ward-7-anc",
+    "dc-ward-8-anc"
+  ],
+  "not_here": []
 }

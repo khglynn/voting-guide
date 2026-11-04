@@ -3096,6 +3096,421 @@ export const MAPS = [
     "not_here": []
   },
   {
+    "id": "fulton-ga",
+    "state": "GA",
+    "name": "Fulton County, GA",
+    "county": "Fulton",
+    "election": {
+      "date": "2026-11-03",
+      "feed_election_id": "127295",
+      "feed_name": "November 3, 2026 - General Primary -Nonpartisan General Special Election"
+    },
+    "guide": {
+      "fingerprint": "85ad179670bd1574",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:34:24.955Z",
+      "places": [
+        "atlanta-ga"
+      ]
+    },
+    "feed": {
+      "adapter": "clarity",
+      "base": "https://results.enr.clarityelections.com/GA/Fulton",
+      "results_url": "https://results.enr.clarityelections.com/GA/Fulton/127295/",
+      "identity": "named",
+      "identity_note": "Answered our named User-Agent on Nov 3, about 10:20 PM CT (current_ver.txt 200; read one request every 30 s, JSON files only).",
+      "election_id_from": "Fulton's \"November 3 Election Results\" news page (https://fultoncountyga.gov/News/2026/11/03/November-3-Election-Results) links Clarity 127295 (workbench registry row fulton-ga, capture round 1, Nov 3); Clarity's own electionsettings for 127295.",
+      "tz": "America/New_York"
+    },
+    "polls_close": "2026-11-04T00:00:00Z",
+    "count_closes": "2026-11-07T04:59:00Z",
+    "complete_marker": {
+      "flag": "final_flag",
+      "words": "Clarity's final-upload flag (electiondetails.chkisfinalupload)."
+    },
+    "certify_by": "2026-11-09",
+    "official": null,
+    "contests": [
+      {
+        "feed_id": "48",
+        "feed_name": "County Commissioner - District 3",
+        "item": "fulton-commission-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Paul Burton (Rep)": "Paul Burton",
+          "Jodi Merriday (Dem)": "Jodi Merriday"
+        },
+        "reaches": [
+          "Fulton"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "54",
+        "feed_name": "Special County Commissioner - District 4",
+        "item": "fulton-commission-4-special",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Natalie Hall": "Natalie Hall",
+          "Rohit Malhotra (Dem)": "Rohit Malhotra",
+          "Karen Rene": "Karen Rene",
+          "Aaron A. Sampson, Jr. (Dem)": "Aaron A. Sampson Jr"
+        },
+        "reaches": [
+          "Fulton"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "49",
+        "feed_name": "County Commissioner - District 5",
+        "item": "fulton-commission-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Tiffany A. Henyard (Rep)": "Tiffany A. Henyard",
+          "Helen Zenobia Willis (Dem)": "Helen Zenobia Willis"
+        },
+        "reaches": [
+          "Fulton"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "46",
+        "feed_name": "County Commission Chairperson",
+        "item": "fulton-commission-chair",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Eric J. Tatum (Rep)": "Eric J. Tatum",
+          "Mo Ivory (Dem)": "Mo Ivory"
+        },
+        "reaches": [
+          "Fulton"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "55",
+        "feed_name": "Special ESPLOST",
+        "item": "fulton-esplost-2026",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Fulton"
+        ],
+        "item_url": null,
+        "pass_threshold": "Simple majority of Fulton County voters"
+      },
+      {
+        "feed_id": "50",
+        "feed_name": "Fulton County Soil and Water Conservation District Supervisor",
+        "item": "fulton-soil-water",
+        "kind": "multi",
+        "seats": 2,
+        "choices": {
+          "Zane Placie": "Zane Placie",
+          "Walter S. Rekuc, Jr. (I)": "Walter S. Rekuc Jr.",
+          "Jason Ulseth (I)": "Jason Ulseth"
+        },
+        "reaches": [
+          "Fulton"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "31",
+        "feed_name": "State House of Representatives - District 53",
+        "item": "ga-hd-53",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Deborah Silcox (I)(Rep)": "Deborah Silcox",
+          "Beth Fuller (Dem)": "Beth Fuller"
+        },
+        "reaches": [
+          "Fulton",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "32",
+        "feed_name": "State House of Representatives - District 54",
+        "item": "ga-hd-54",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Greg Miller (Rep)": "Greg Miller",
+          "Betsy Holland (I)(Dem)": "Betsy Holland"
+        },
+        "reaches": [
+          "Fulton",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "33",
+        "feed_name": "State House of Representatives - District 55",
+        "item": "ga-hd-55",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Samuel S. Lenaeus (Rep)": "Samuel S. Lenaeus",
+          "Inga S. Willis (I)(Dem)": "Inga S Willis"
+        },
+        "reaches": [
+          "Fulton",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "34",
+        "feed_name": "State House of Representatives - District 56",
+        "item": "ga-hd-56",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Bryce Berry (I)(Dem)": "Bryce Berry"
+        },
+        "reaches": [
+          "Fulton",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "35",
+        "feed_name": "State House of Representatives - District 57",
+        "item": "ga-hd-57",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Helmut Lucero Love (Rep)": "Helmut Lucero Love",
+          "Stacey Evans (I)(Dem)": "Stacey Evans"
+        },
+        "reaches": [
+          "Fulton",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "36",
+        "feed_name": "State House of Representatives - District 58",
+        "item": "ga-hd-58",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Torrey Balam (Rep)": "Torrey Balam",
+          "Mathewos Samson (Dem)": "Mathewos Samson"
+        },
+        "reaches": [
+          "Fulton",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "37",
+        "feed_name": "State House of Representatives - District 59",
+        "item": "ga-hd-59",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Devanta ''Sully'' Sullivan (Rep)": "Devanta \"Sully\" Sullivan",
+          "Phil A. Olaleye (I)(Dem)": "Phil A. Olaleye"
+        },
+        "reaches": [
+          "Fulton",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "38",
+        "feed_name": "State House of Representatives - District 60",
+        "item": "ga-hd-60",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Sheila Jones (I)(Dem)": "Sheila Jones"
+        },
+        "reaches": [
+          "Fulton",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "39",
+        "feed_name": "State House of Representatives - District 61",
+        "item": "ga-hd-61",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Damita Bishop (Rep)": "Damita Bishop",
+          "Mekyah McQueen (I)(Dem)": "Mekyah McQueen"
+        },
+        "reaches": [
+          "Fulton",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "40",
+        "feed_name": "State House of Representatives - District 62",
+        "item": "ga-hd-62",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Kenn Collier (Dem)": "Kenn Collier"
+        },
+        "reaches": [
+          "Fulton",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "41",
+        "feed_name": "State House of Representatives - District 63",
+        "item": "ga-hd-63",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Kim Schofield (I)(Dem)": "Kim Schofield"
+        },
+        "reaches": [
+          "Fulton",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "18",
+        "feed_name": "State Senate - District 35",
+        "item": "ga-sd-35",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jaha V. Howard (I)(Dem)": "Jaha V. Howard"
+        },
+        "reaches": [
+          "Fulton",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "19",
+        "feed_name": "State Senate - District 36",
+        "item": "ga-sd-36",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Katie Corkren (Rep)": "Katie Corkren",
+          "Nan Grogan Orrock (I)(Dem)": "Nan Grogan Orrock"
+        },
+        "reaches": [
+          "Fulton",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "20",
+        "feed_name": "State Senate - District 38",
+        "item": "ga-sd-38",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Eric Helvy (Rep)": "Eric Helvy",
+          "Rashaun Kemp (I)(Dem)": "Rashaun Kemp"
+        },
+        "reaches": [
+          "Fulton",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "21",
+        "feed_name": "State Senate - District 39",
+        "item": "ga-sd-39",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "John F. Guest, Jr. (Rep)": "John F. Guest, Jr.",
+          "Sonya Halpern (I)(Dem)": "Sonya Halpern"
+        },
+        "reaches": [
+          "Fulton",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "12",
+        "feed_name": "US House of Representatives - District 5",
+        "item": "ga-us-house-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "John ''Bongo'' Salvesen (Rep)": "John \"Bongo\" Salvesen",
+          "Nikema Williams (I)(Dem)": "Nikema Williams"
+        },
+        "reaches": [
+          "Fulton",
+          "DeKalb",
+          "Clayton",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "13",
+        "feed_name": "US House of Representatives - District 6",
+        "item": "ga-us-house-6",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Kevin E. Martin (Rep)": "Kevin E. Martin",
+          "Lucy McBath (I)(Dem)": "Lucy McBath"
+        },
+        "reaches": [
+          "Fulton",
+          "Cobb",
+          "Douglas",
+          "other counties"
+        ],
+        "item_url": null
+      }
+    ],
+    "unmatched_guide": [],
+    "unmatched_feed": [],
+    "not_here": [
+      "dekalb-commission-2",
+      "dekalb-commission-3",
+      "dekalb-commission-7",
+      "dekalb-esplost-vii",
+      "dekalb-soil-water",
+      "ga-hd-84",
+      "ga-hd-89",
+      "ga-hd-90",
+      "ga-sd-44"
+    ]
+  },
+  {
     "id": "harris-county-tx",
     "state": "TX",
     "name": "Harris County",
@@ -5625,6 +6040,498 @@ export const MAPS = [
     "not_here": []
   },
   {
+    "id": "orange-fl",
+    "state": "FL",
+    "name": "Orange County, FL",
+    "county": "Orange",
+    "election": {
+      "date": "2026-11-03",
+      "feed_election_id": "127356",
+      "feed_name": "2026 General Election"
+    },
+    "guide": {
+      "fingerprint": "42f2840255baaad7",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:34:24.313Z",
+      "places": [
+        "orlando-fl"
+      ]
+    },
+    "feed": {
+      "adapter": "clarity",
+      "base": "https://results.voteorangefl.gov/FL/Orange",
+      "results_url": "https://results.voteorangefl.gov/FL/Orange/127356/web.345435/#/summary",
+      "identity": "named",
+      "identity_note": "Answered our named User-Agent on Nov 3, about 10:20 PM CT (current_ver.txt 200; read one request every 30 s, JSON files only).",
+      "election_id_from": "voteorangefl.gov/election-results/ links election 127356 (workbench registry row orange-fl, capture round 1, Nov 3; not the primary's 127178); Clarity's own electionsettings for 127356.",
+      "tz": "America/New_York"
+    },
+    "polls_close": "2026-11-04T00:00:00Z",
+    "count_closes": "2026-11-14T04:59:00Z",
+    "complete_marker": {
+      "flag": "final_flag",
+      "words": "Clarity's final-upload flag (electiondetails.chkisfinalupload). Orange's page says \"Unofficial Results\" tonight."
+    },
+    "certify_by": "2026-11-16",
+    "official": null,
+    "contests": [
+      {
+        "feed_id": "0022",
+        "feed_name": "Circuit Judge, 9th Judicial, Group 1",
+        "item": "fl-9th-circuit-group-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Temika Hampton-Johnson": "Temika Hampton-Johnson",
+          "Charles Hart": "Charles Hart",
+          "Over Votes": "__other",
+          "Under Votes": "__other"
+        },
+        "reaches": [
+          "Orange",
+          "Osceola"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0013",
+        "feed_name": "State Representative, District 35",
+        "item": "fl-house-35",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Erika Booth": "Erika Booth",
+          "Eric Gray": "Eric Gray",
+          "Over Votes": "__other",
+          "Under Votes": "__other"
+        },
+        "reaches": [
+          "Orange",
+          "other counties",
+          "Osceola"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0014",
+        "feed_name": "State Representative, District 37",
+        "item": "fl-house-37",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Robert Prater": "Robert Prater",
+          "Jane Aman": "Jane Aman",
+          "Over Votes": "__other",
+          "Under Votes": "__other"
+        },
+        "reaches": [
+          "Orange",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0015",
+        "feed_name": "State Representative, District 39",
+        "item": "fl-house-39",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Doug Bankson": "Doug Bankson",
+          "Jarod Fox": "Jarod Fox",
+          "Over Votes": "__other",
+          "Under Votes": "__other"
+        },
+        "reaches": [
+          "Orange",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0016",
+        "feed_name": "State Representative, District 40",
+        "item": "fl-house-40",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Tuan Le": "Tuan Le",
+          "Ra'Shon Young": "Ra'Shon Young",
+          "Over Votes": "__other",
+          "Under Votes": "__other"
+        },
+        "reaches": [
+          "Orange",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0017",
+        "feed_name": "State Representative, District 42",
+        "item": "fl-house-42",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Bonnie Jackson": "Bonnie Jackson",
+          "Felipe Sousa Lazaballet": "Felipe Sousa Lazaballet",
+          "Over Votes": "__other",
+          "Under Votes": "__other"
+        },
+        "reaches": [
+          "Orange",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0018",
+        "feed_name": "State Representative, District 43",
+        "item": "fl-house-43",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jorge Malavet": "Jorge Malavet",
+          "Samuel Vilchez Santiago": "Samuel Vilchez Santiago",
+          "Over Votes": "__other",
+          "Under Votes": "__other"
+        },
+        "reaches": [
+          "Orange",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0019",
+        "feed_name": "State Representative, District 45",
+        "item": "fl-house-45",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Erin Huntley": "Erin Huntley",
+          "Leonard Spencer": "Leonard Spencer",
+          "Over Votes": "__other",
+          "Under Votes": "__other"
+        },
+        "reaches": [
+          "Orange",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0020",
+        "feed_name": "Clerk of Courts",
+        "item": "fl-orange-clerk",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Roberta Walton Johnson": "Roberta Walton Johnson",
+          "Terrell Thomas": "Terrell Thomas",
+          "Over Votes": "__other",
+          "Under Votes": "__other"
+        },
+        "reaches": [
+          "Orange"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0024",
+        "feed_name": "County Commissioner, District 2",
+        "item": "fl-orange-commission-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Kamia Brown": "Kamia Brown",
+          "Mike Crabb": "Mike Crabb",
+          "Over Votes": "__other",
+          "Under Votes": "__other"
+        },
+        "reaches": [
+          "Orange"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0025",
+        "feed_name": "County Commissioner, District 4",
+        "item": "fl-orange-commission-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Brian Jones": "Brian Jones",
+          "Johanna Lopez": "Johanna Lopez",
+          "Write-in": "__other",
+          "Over Votes": "__other",
+          "Under Votes": "__other"
+        },
+        "reaches": [
+          "Orange"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0026",
+        "feed_name": "County Commissioner, District 6",
+        "item": "fl-orange-commission-6",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Lawanna Gelzer": "Lawanna Gelzer",
+          "Michael 'Mike' Scott": "Michael \"Mike\" Scott",
+          "Over Votes": "__other",
+          "Under Votes": "__other"
+        },
+        "reaches": [
+          "Orange"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0027",
+        "feed_name": "County Commissioner, District 7",
+        "item": "fl-orange-commission-7",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Patricia Rumph": "Patricia Rumph",
+          "Vicki Vargo": "Vicki Vargo",
+          "Over Votes": "__other",
+          "Under Votes": "__other"
+        },
+        "reaches": [
+          "Orange"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0028",
+        "feed_name": "County Commissioner, District 8",
+        "item": "fl-orange-commission-8",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jeannette Quinones Hernandez": "Jeannette Quinones Hernandez",
+          "Victor M.Torres Jr.": "Victor M. Torres Jr.",
+          "Over Votes": "__other",
+          "Under Votes": "__other"
+        },
+        "reaches": [
+          "Orange"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0023",
+        "feed_name": "County Mayor",
+        "item": "fl-orange-mayor",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Chris Messina": "Chris Messina",
+          "Tiffany Moore Russell": "Tiffany Moore Russell",
+          "Over Votes": "__other",
+          "Under Votes": "__other"
+        },
+        "reaches": [
+          "Orange"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0037",
+        "feed_name": "School Board Question",
+        "item": "fl-orange-ocps-millage",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes for Approval": "yes",
+          "No for Rejection": "no",
+          "Over Votes": "__other",
+          "Under Votes": "__other"
+        },
+        "reaches": [
+          "Orange"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "0029",
+        "feed_name": "School Board Member, District 3",
+        "item": "fl-orange-school-board-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Diana Moore": "Diana Moore",
+          "Susanne Peña": "Susanne Peña",
+          "Over Votes": "__other",
+          "Under Votes": "__other"
+        },
+        "reaches": [
+          "Orange"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0030",
+        "feed_name": "Soil and Water, District 1",
+        "item": "fl-orange-soil-water-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Quinnie Perez": "Quinnie Perez",
+          "Vicente Rafael Perez Carreno": "Vicente Rafael Perez Carreno",
+          "Doug Sahr": "Doug Sahr",
+          "Over Votes": "__other",
+          "Under Votes": "__other"
+        },
+        "reaches": [
+          "Orange"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0031",
+        "feed_name": "Soil and Water, District 3",
+        "item": "fl-orange-soil-water-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Chuck Drake": "Chuck Drake",
+          "Erik LaMont Melear": "Erik LaMont Melear",
+          "José Antonio Rodriguez": "José Antonio Rodriguez",
+          "Over Votes": "__other",
+          "Under Votes": "__other"
+        },
+        "reaches": [
+          "Orange"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0032",
+        "feed_name": "Soil and Water, District 5",
+        "item": "fl-orange-soil-water-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Zack Green": "Zack Green",
+          "Jimm Middleton": "Jimm Middleton",
+          "Over Votes": "__other",
+          "Under Votes": "__other"
+        },
+        "reaches": [
+          "Orange"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0012",
+        "feed_name": "State Senator, District 10",
+        "item": "fl-senate-10",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jason Brodeur": "Jason Brodeur",
+          "John Lowndes": "John Lowndes",
+          "Over Votes": "__other",
+          "Under Votes": "__other"
+        },
+        "reaches": [
+          "Orange",
+          "Seminole",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0007",
+        "feed_name": "U.S. Congress, District 11",
+        "item": "fl-us-house-11",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Joe Strada": "Joe Strada",
+          "James Pericola": "James Pericola",
+          "Ralph Groves": "Ralph Groves",
+          "Over Votes": "__other",
+          "Under Votes": "__other"
+        },
+        "reaches": [
+          "Orange",
+          "Lake",
+          "Sumter",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0005",
+        "feed_name": "U.S. Congress, District 8",
+        "item": "fl-us-house-8",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Mike Haridopolos": "Mike Haridopolos",
+          "Jennifer Jenkins": "Jennifer Jenkins",
+          "Over Votes": "__other",
+          "Under Votes": "__other"
+        },
+        "reaches": [
+          "Orange",
+          "Brevard",
+          "Indian River",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0006",
+        "feed_name": "U.S. Congress, District 9",
+        "item": "fl-us-house-9",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Dan Green": "Dan Green",
+          "Darren Soto": "Darren Soto",
+          "Over Votes": "__other",
+          "Under Votes": "__other"
+        },
+        "reaches": [
+          "Orange",
+          "Osceola",
+          "Polk",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "0033",
+        "feed_name": "Vista Lakes CDD Seat 3",
+        "item": "fl-vista-lakes-cdd-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Bennie Hichez": "Bennie Hichez",
+          "Frank J. Sebestyen": "Frank J. Sebestyen",
+          "Over Votes": "__other",
+          "Under Votes": "__other"
+        },
+        "reaches": [
+          "Orange"
+        ],
+        "item_url": null
+      }
+    ],
+    "unmatched_guide": [],
+    "unmatched_feed": [],
+    "not_here": [
+      "fl-us-house-10"
+    ]
+  },
+  {
     "id": "results-CO-adams",
     "state": "CO",
     "name": "Adams County",
@@ -7005,6 +7912,2439 @@ export const MAPS = [
     "unmatched_feed": [],
     "unmatched_guide": [],
     "not_here": []
+  },
+  {
+    "id": "results-CO",
+    "state": "CO",
+    "name": "Colorado Secretary of State",
+    "county": "Colorado",
+    "scope": "state",
+    "election": {
+      "date": "2026-11-03",
+      "feed_election_id": "127407",
+      "feed_name": "2026 General"
+    },
+    "guide": {
+      "fingerprint": "6f985331d5fbbeda",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:34:23.411Z",
+      "places": [
+        "state-CO",
+        "aurora-co",
+        "boulder-co",
+        "denver-co",
+        "englewood-co",
+        "lakewood-co"
+      ],
+      "locals": true
+    },
+    "feed": {
+      "adapter": "clarity",
+      "base": "https://results.enr.clarityelections.com/CO",
+      "results_url": "https://results.enr.clarityelections.com/CO/127407/",
+      "identity": "named",
+      "identity_note": "Answered our named User-Agent on Nov 3, about 10:20 PM CT (current_ver.txt 200; read one request every 30 s, JSON files only).",
+      "election_id_from": "coloradosos.gov's home page links https://results.enr.clarityelections.com/CO/127407/ (workbench registry row results-CO, capture round 1, Nov 3); Clarity's own electionsettings for 127407.",
+      "tz": "America/Denver",
+      "contest_unit": "counties"
+    },
+    "polls_close": "2026-11-04T02:00:00Z",
+    "count_closes": "2026-11-13T06:59:00Z",
+    "complete_marker": null,
+    "certify_by": "2026-11-25",
+    "official": null,
+    "contests": [
+      {
+        "feed_id": "7702",
+        "feed_name": "17th Judicial District Ballot Question 7E",
+        "item": "adams-broomfield-da-7e",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes/For": "yes",
+          "No/Against": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Adams",
+          "Broomfield"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "simple majority of voters in the 17th Judicial District (Adams County and Broomfield)"
+      },
+      {
+        "feed_id": "7306",
+        "feed_name": "City of Aurora Ballot Issue 3A",
+        "item": "aurora-3a",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes/For": "yes",
+          "No/Against": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Arapahoe",
+          "Adams",
+          "Douglas"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "7308",
+        "feed_name": "City of Aurora Ballot Issue 3B",
+        "item": "aurora-3b",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes/For": "yes",
+          "No/Against": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Arapahoe",
+          "Adams",
+          "Douglas"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "7310",
+        "feed_name": "City of Aurora Ballot Issue 3C",
+        "item": "aurora-3c",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes/For": "yes",
+          "No/Against": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Arapahoe",
+          "Adams",
+          "Douglas"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "7312",
+        "feed_name": "City of Aurora Ballot Question 3D",
+        "item": "aurora-3d",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes/For": "yes",
+          "No/Against": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Arapahoe",
+          "Adams",
+          "Douglas"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "6000",
+        "feed_name": "Amendment 81 (CONSTITUTIONAL)",
+        "item": "co-amendment-81",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes/For": "yes",
+          "No/Against": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "Boulder",
+          "Jefferson",
+          "Arapahoe",
+          "Adams",
+          "Douglas",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "threshold": {
+          "pct": 55,
+          "inclusive": true
+        },
+        "pass_threshold": "55% (constitutional amendment that adds language)"
+      },
+      {
+        "feed_id": "6010",
+        "feed_name": "Amendment 82 (CONSTITUTIONAL)",
+        "item": "co-amendment-82",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes/For": "yes",
+          "No/Against": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "Boulder",
+          "Jefferson",
+          "Arapahoe",
+          "Adams",
+          "Douglas",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "threshold": {
+          "pct": 55,
+          "inclusive": true
+        },
+        "pass_threshold": "55% (constitutional amendment that adds language)"
+      },
+      {
+        "feed_id": "6020",
+        "feed_name": "Amendment 83 (CONSTITUTIONAL)",
+        "item": "co-amendment-83",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes/For": "yes",
+          "No/Against": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "Boulder",
+          "Jefferson",
+          "Arapahoe",
+          "Adams",
+          "Douglas",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "threshold": {
+          "pct": 55,
+          "inclusive": true
+        },
+        "pass_threshold": "55% (constitutional amendment that adds language)"
+      },
+      {
+        "feed_id": "6030",
+        "feed_name": "Amendment 84 (CONSTITUTIONAL)",
+        "item": "co-amendment-84",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes/For": "yes",
+          "No/Against": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "Boulder",
+          "Jefferson",
+          "Arapahoe",
+          "Adams",
+          "Douglas",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "threshold": {
+          "pct": 55,
+          "inclusive": true
+        },
+        "pass_threshold": "55% (constitutional amendment that adds language)"
+      },
+      {
+        "feed_id": "6040",
+        "feed_name": "Amendment 85 (CONSTITUTIONAL)",
+        "item": "co-amendment-85",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes/For": "yes",
+          "No/Against": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "Boulder",
+          "Jefferson",
+          "Arapahoe",
+          "Adams",
+          "Douglas",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "threshold": {
+          "pct": 55,
+          "inclusive": true
+        },
+        "pass_threshold": "55% (constitutional amendment that adds language)"
+      },
+      {
+        "feed_id": "6050",
+        "feed_name": "Amendment 86 (CONSTITUTIONAL)",
+        "item": "co-amendment-86",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes/For": "yes",
+          "No/Against": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "Boulder",
+          "Jefferson",
+          "Arapahoe",
+          "Adams",
+          "Douglas",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "threshold": {
+          "pct": 55,
+          "inclusive": true
+        },
+        "pass_threshold": "55% (constitutional amendment that adds language)"
+      },
+      {
+        "feed_id": "6060",
+        "feed_name": "Amendment 87 (CONSTITUTIONAL)",
+        "item": "co-amendment-87",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes/For": "yes",
+          "No/Against": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "Boulder",
+          "Jefferson",
+          "Arapahoe",
+          "Adams",
+          "Douglas",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "Simple majority (the constitutional change only repeals existing language)"
+      },
+      {
+        "feed_id": "240",
+        "feed_name": "Attorney General",
+        "item": "co-attorney-general",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Michael J. Allen": "Michael J. Allen",
+          "Jena Griswold": "Jena Griswold"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "Boulder",
+          "Jefferson",
+          "Arapahoe",
+          "Adams",
+          "Douglas",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "420",
+        "feed_name": "Regent of the University of Colorado - Congressional District 2",
+        "item": "co-cu-regent-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Marty Neilson": "Marty Neilson",
+          "Edie Hooton": "Edie Hooton",
+          "Richard Friend": "Richard Friend"
+        },
+        "reaches": [
+          "Colorado",
+          "Boulder",
+          "Larimer",
+          "Broomfield",
+          "Clear Creek",
+          "Gilpin",
+          "Grand",
+          "Summit",
+          "Eagle",
+          "Routt",
+          "Jackson",
+          "Moffat",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "460",
+        "feed_name": "Regent of the University of Colorado - Congressional District 6",
+        "item": "co-cu-regent-6",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Veanessa Burbage": "Veanessa Burbage",
+          "Ilana Spiegel": "Ilana Spiegel",
+          "Joe Johnson": "Joe Johnson"
+        },
+        "reaches": [
+          "Colorado",
+          "Arapahoe",
+          "Adams",
+          "Douglas",
+          "Denver",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "470",
+        "feed_name": "Regent of the University of Colorado - Congressional District 7",
+        "item": "co-cu-regent-7",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Paul Mueller": "Paul Mueller",
+          "Nolbert Chavez": "Nolbert Chavez",
+          "BetteRose Ryan": "BetteRose Ryan"
+        },
+        "reaches": [
+          "Colorado",
+          "Jefferson",
+          "Lake",
+          "Chaffee",
+          "Park",
+          "Teller",
+          "Fremont",
+          "Custer",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "210",
+        "feed_name": "Governor / Lieutenant Governor",
+        "item": "co-governor",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Victor Marx / George Washington Markert": "Victor Marx / George Washington Markert",
+          "Phil Weiser / Lesley Dahlkemper": "Phil Weiser / Lesley Dahlkemper",
+          "Stephen T. Hamilton / James K Treibert": "Stephen T. Hamilton / James K Treibert",
+          "Eric Mulder / Wayne Harlos": "Eric Mulder / Wayne Harlos",
+          "Jeff Peckman / T.J. Cole": "Jeff Peckman / T.J. Cole",
+          "Erik Underwood / Frank Atwood": "Erik Underwood / Frank Atwood",
+          "Greg Lopez / Taralyn Romero": "Greg Lopez / Taralyn Romero"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "Boulder",
+          "Jefferson",
+          "Arapahoe",
+          "Adams",
+          "Douglas",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "2001",
+        "feed_name": "State Representative - District 1",
+        "item": "co-hd-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Javier Mabrey": "Javier Mabrey",
+          "Joseph Montoya": "Joseph Montoya"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "2010",
+        "feed_name": "State Representative - District 10",
+        "item": "co-hd-10",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Junie Joseph": "Junie Joseph"
+        },
+        "reaches": [
+          "Colorado",
+          "Boulder"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "2012",
+        "feed_name": "State Representative - District 12",
+        "item": "co-hd-12",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Ryan Rhatigan": "Ryan Rhatigan",
+          "Kyle Brown": "Kyle Brown"
+        },
+        "reaches": [
+          "Colorado",
+          "Boulder"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "2002",
+        "feed_name": "State Representative - District 2",
+        "item": "co-hd-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Scott Baldermann": "Scott Baldermann",
+          "Carey Marin": "Carey Marin"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "2023",
+        "feed_name": "State Representative - District 23",
+        "item": "co-hd-23",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Alexis Hoffkling": "Alexis Hoffkling",
+          "Ross Metler": "Ross Metler"
+        },
+        "reaches": [
+          "Colorado",
+          "Jefferson"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "2028",
+        "feed_name": "State Representative - District 28",
+        "item": "co-hd-28",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "David Rein": "David Rein"
+        },
+        "reaches": [
+          "Colorado",
+          "Jefferson"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "2003",
+        "feed_name": "State Representative - District 3",
+        "item": "co-hd-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Gena Ozols": "Gena Ozols",
+          "Rebecca Winegar": "Rebecca Winegar"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "Arapahoe"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "2030",
+        "feed_name": "State Representative - District 30",
+        "item": "co-hd-30",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Rebekah Stewart": "Rebekah Stewart",
+          "William Tyler Switzer": "William Tyler Switzer"
+        },
+        "reaches": [
+          "Colorado",
+          "Jefferson"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "2036",
+        "feed_name": "State Representative - District 36",
+        "item": "co-hd-36",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Michael Carter": "Michael Carter",
+          "Paul E. Nelson": "Paul E. Nelson",
+          "Andrew Gibson": "Andrew Gibson"
+        },
+        "reaches": [
+          "Colorado",
+          "Arapahoe",
+          "Adams"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "2037",
+        "feed_name": "State Representative - District 37",
+        "item": "co-hd-37",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jill Thompson": "Jill Thompson",
+          "Chad Clifford": "Chad Clifford"
+        },
+        "reaches": [
+          "Colorado",
+          "Arapahoe"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "2004",
+        "feed_name": "State Representative - District 4",
+        "item": "co-hd-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Ellwood Ervin": "Ellwood Ervin",
+          "Cecelia Espenoza": "Cecelia Espenoza",
+          "Bill Hare": "Bill Hare"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "2040",
+        "feed_name": "State Representative - District 40",
+        "item": "co-hd-40",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Clinton Porter": "Clinton Porter",
+          "Naquetta Ricks": "Naquetta Ricks"
+        },
+        "reaches": [
+          "Colorado",
+          "Arapahoe"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "2041",
+        "feed_name": "State Representative - District 41",
+        "item": "co-hd-41",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jamie Jackson": "Jamie Jackson"
+        },
+        "reaches": [
+          "Colorado",
+          "Arapahoe"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "2042",
+        "feed_name": "State Representative - District 42",
+        "item": "co-hd-42",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Sarah Amelia Woodson": "Sarah Amelia Woodson"
+        },
+        "reaches": [
+          "Colorado",
+          "Arapahoe"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "2049",
+        "feed_name": "State Representative - District 49",
+        "item": "co-hd-49",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Michael Sheperek": "Michael Sheperek",
+          "Lesley Smith": "Lesley Smith"
+        },
+        "reaches": [
+          "Colorado",
+          "Boulder",
+          "Larimer",
+          "Grand",
+          "Clear Creek",
+          "Gilpin",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "2005",
+        "feed_name": "State Representative - District 5",
+        "item": "co-hd-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Justine Sandoval": "Justine Sandoval",
+          "Johnnie W. Johnson": "Johnnie W. Johnson"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "2056",
+        "feed_name": "State Representative - District 56",
+        "item": "co-hd-56",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Chris Richardson": "Chris Richardson",
+          "Amy L. Lunde": "Amy L. Lunde"
+        },
+        "reaches": [
+          "Colorado",
+          "Arapahoe",
+          "Adams",
+          "Elbert",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "2006",
+        "feed_name": "State Representative - District 6",
+        "item": "co-hd-6",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Iris Halpern": "Iris Halpern",
+          "Kathleen Angel": "Kathleen Angel"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "2061",
+        "feed_name": "State Representative - District 61",
+        "item": "co-hd-61",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Scott Shamblin": "Scott Shamblin",
+          "Eliza Hamrick": "Eliza Hamrick",
+          "Kevin Gulbranson": "Kevin Gulbranson"
+        },
+        "reaches": [
+          "Colorado",
+          "Arapahoe",
+          "Douglas"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "2007",
+        "feed_name": "State Representative - District 7",
+        "item": "co-hd-7",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jennifer Bacon": "Jennifer Bacon",
+          "Jeff Wilson": "Jeff Wilson"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "2008",
+        "feed_name": "State Representative - District 8",
+        "item": "co-hd-8",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Carolyn Barnes": "Carolyn Barnes",
+          "Lindsay Gilchrist": "Lindsay Gilchrist",
+          "Jesse Lashawn Parris": "Jesse Lashawn Parris"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "2009",
+        "feed_name": "State Representative - District 9",
+        "item": "co-hd-9",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Tom Cowhick": "Tom Cowhick",
+          "Monica VanBuskirk": "Monica VanBuskirk"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "6080",
+        "feed_name": "Proposition 132 (STATUTORY)",
+        "item": "co-proposition-132",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes/For": "yes",
+          "No/Against": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "Boulder",
+          "Jefferson",
+          "Arapahoe",
+          "Adams",
+          "Douglas",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "Simple majority (statutory measure)"
+      },
+      {
+        "feed_id": "6090",
+        "feed_name": "Proposition 133 (STATUTORY)",
+        "item": "co-proposition-133",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes/For": "yes",
+          "No/Against": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "Boulder",
+          "Jefferson",
+          "Arapahoe",
+          "Adams",
+          "Douglas",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "Simple majority (statutory measure)"
+      },
+      {
+        "feed_id": "6100",
+        "feed_name": "Proposition 134 (STATUTORY)",
+        "item": "co-proposition-134",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes/For": "yes",
+          "No/Against": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "Boulder",
+          "Jefferson",
+          "Arapahoe",
+          "Adams",
+          "Douglas",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "Simple majority (statutory measure)"
+      },
+      {
+        "feed_id": "6110",
+        "feed_name": "Proposition 135 (STATUTORY)",
+        "item": "co-proposition-135",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes/For": "yes",
+          "No/Against": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "Boulder",
+          "Jefferson",
+          "Arapahoe",
+          "Adams",
+          "Douglas",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "Simple majority (statutory measure)"
+      },
+      {
+        "feed_id": "6120",
+        "feed_name": "Proposition 136 (STATUTORY)",
+        "item": "co-proposition-136",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes/For": "yes",
+          "No/Against": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "Boulder",
+          "Jefferson",
+          "Arapahoe",
+          "Adams",
+          "Douglas",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "Simple majority (statutory measure)"
+      },
+      {
+        "feed_id": "6130",
+        "feed_name": "Proposition 137 (STATUTORY)",
+        "item": "co-proposition-137",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes/For": "yes",
+          "No/Against": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "Boulder",
+          "Jefferson",
+          "Arapahoe",
+          "Adams",
+          "Douglas",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "Simple majority (statutory measure)"
+      },
+      {
+        "feed_id": "6070",
+        "feed_name": "Proposition NN (STATUTORY)",
+        "item": "co-proposition-nn",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes/For": "yes",
+          "No/Against": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "Boulder",
+          "Jefferson",
+          "Arapahoe",
+          "Adams",
+          "Douglas",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "Simple majority (statutory measure)"
+      },
+      {
+        "feed_id": "4020",
+        "feed_name": "District Court Judge - 2nd Judicial District - Angel",
+        "item": "co-retention-angel",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "4021",
+        "feed_name": "District Court Judge - 2nd Judicial District - Baumann",
+        "item": "co-retention-baumann",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "5060",
+        "feed_name": "County Court Judge - Boulder - Brodsky",
+        "item": "co-retention-brodsky",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Boulder"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "4010",
+        "feed_name": "District Court Judge - 1st Judicial District - Contiguglia",
+        "item": "co-retention-contiguglia",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Jefferson",
+          "Gilpin"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "5120",
+        "feed_name": "County Court Judge - Denver - Eddy",
+        "item": "co-retention-eddy",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "4022",
+        "feed_name": "District Court Judge - 2nd Judicial District - Elliff",
+        "item": "co-retention-elliff",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "5130",
+        "feed_name": "County Court Judge - Denver - Fay",
+        "item": "co-retention-fay",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "3610",
+        "feed_name": "Colorado Court of Appeals Judge - Freyre",
+        "item": "co-retention-freyre",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "Boulder",
+          "Jefferson",
+          "Arapahoe",
+          "Adams",
+          "Douglas",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "5330",
+        "feed_name": "County Court Judge - Jefferson - Garrido",
+        "item": "co-retention-garrido",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Jefferson"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "4026",
+        "feed_name": "District Court Judge - 2nd Judicial District/Juvenile - Gomez",
+        "item": "co-retention-gomez",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "5070",
+        "feed_name": "County Court Judge - Boulder - Haenselman",
+        "item": "co-retention-haenselman",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Boulder"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "3620",
+        "feed_name": "Colorado Court of Appeals Judge - Harris",
+        "item": "co-retention-harris",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "Boulder",
+          "Jefferson",
+          "Arapahoe",
+          "Adams",
+          "Douglas",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "3600",
+        "feed_name": "Colorado Supreme Court Justice - Hood",
+        "item": "co-retention-hood",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "Boulder",
+          "Jefferson",
+          "Arapahoe",
+          "Adams",
+          "Douglas",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "4200",
+        "feed_name": "District Court Judge - 20th Judicial District - Kotlarczyk",
+        "item": "co-retention-kotlarczyk",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Boulder"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "4201",
+        "feed_name": "District Court Judge - 20th Judicial District - Larson",
+        "item": "co-retention-larson-chris",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Boulder"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "4028",
+        "feed_name": "District Court Judge - 2nd Judicial District/Probate - Leith",
+        "item": "co-retention-leith",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "4011",
+        "feed_name": "District Court Judge - 1st Judicial District - Loewer",
+        "item": "co-retention-loewer",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Jefferson",
+          "Gilpin"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "5140",
+        "feed_name": "County Court Judge - Denver - Lombardi",
+        "item": "co-retention-lombardi",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "3630",
+        "feed_name": "Colorado Court of Appeals Judge - Lum",
+        "item": "co-retention-lum",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "Boulder",
+          "Jefferson",
+          "Arapahoe",
+          "Adams",
+          "Douglas",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "4023",
+        "feed_name": "District Court Judge - 2nd Judicial District - Luxen",
+        "item": "co-retention-luxen",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "5340",
+        "feed_name": "County Court Judge - Jefferson - Magid",
+        "item": "co-retention-magid",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Jefferson"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "5080",
+        "feed_name": "County Court Judge - Boulder - Malkinson",
+        "item": "co-retention-malkinson",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Boulder"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "5150",
+        "feed_name": "County Court Judge - Denver - Malone",
+        "item": "co-retention-malone",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "5160",
+        "feed_name": "County Court Judge - Denver - Martinez-Thomas",
+        "item": "co-retention-martinez-thomas",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "4027",
+        "feed_name": "District Court Judge - 2nd Judicial District/Juvenile - McCarthy",
+        "item": "co-retention-mccarthy",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "5350",
+        "feed_name": "County Court Judge - Jefferson - Melton",
+        "item": "co-retention-melton",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Jefferson"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "4012",
+        "feed_name": "District Court Judge - 1st Judicial District - Miloud",
+        "item": "co-retention-miloud",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Jefferson",
+          "Gilpin"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "3640",
+        "feed_name": "Colorado Court of Appeals Judge - Moultrie",
+        "item": "co-retention-moultrie",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "Boulder",
+          "Jefferson",
+          "Arapahoe",
+          "Adams",
+          "Douglas",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "4024",
+        "feed_name": "District Court Judge - 2nd Judicial District - Olafson",
+        "item": "co-retention-olafson",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "4013",
+        "feed_name": "District Court Judge - 1st Judicial District - Poland",
+        "item": "co-retention-poland",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Jefferson",
+          "Gilpin"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "4014",
+        "feed_name": "District Court Judge - 1st Judicial District - Rhamey",
+        "item": "co-retention-rhamey",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Jefferson",
+          "Gilpin"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "4015",
+        "feed_name": "District Court Judge - 1st Judicial District - Russell",
+        "item": "co-retention-russell",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Jefferson",
+          "Gilpin"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "4202",
+        "feed_name": "District Court Judge - 20th Judicial District - Salomone",
+        "item": "co-retention-salomone",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Boulder"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "3650",
+        "feed_name": "Colorado Court of Appeals Judge - Schock",
+        "item": "co-retention-schock",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "Boulder",
+          "Jefferson",
+          "Arapahoe",
+          "Adams",
+          "Douglas",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "5170",
+        "feed_name": "County Court Judge - Denver - Shamsid-Deen",
+        "item": "co-retention-shamsid-deen",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "5180",
+        "feed_name": "County Court Judge - Denver - Smith",
+        "item": "co-retention-smith",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "3660",
+        "feed_name": "Colorado Court of Appeals Judge - Sullivan",
+        "item": "co-retention-sullivan",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "Boulder",
+          "Jefferson",
+          "Arapahoe",
+          "Adams",
+          "Douglas",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "4025",
+        "feed_name": "District Court Judge - 2nd Judicial District - Wallace",
+        "item": "co-retention-wallace",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "4016",
+        "feed_name": "District Court Judge - 1st Judicial District - Zenisek",
+        "item": "co-retention-zenisek",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Jefferson",
+          "Gilpin"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "3510",
+        "feed_name": "Regional Transportation District Director - District B",
+        "item": "co-rtd-b",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "John Glenn": "John Glenn",
+          "Bianka Emerson": "Bianka Emerson"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "Adams",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "3520",
+        "feed_name": "Regional Transportation District Director - District C",
+        "item": "co-rtd-c",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Joe Meyer": "Joe Meyer"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "3560",
+        "feed_name": "Regional Transportation District Director - District N",
+        "item": "co-rtd-n",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Cindy Arcuri": "Cindy Arcuri"
+        },
+        "reaches": [
+          "Colorado",
+          "Jefferson",
+          "Arapahoe",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "3570",
+        "feed_name": "Regional Transportation District Director - District O",
+        "item": "co-rtd-o",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jack Rosenthal": "Jack Rosenthal",
+          "Audrey DeBarros": "Audrey DeBarros"
+        },
+        "reaches": [
+          "Colorado",
+          "Boulder",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "310",
+        "feed_name": "State Board of Education Member - Congressional District 1",
+        "item": "co-sboe-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Lisa Escárcega": "Lisa Escárcega",
+          "Frederick Espinoza": "Frederick Espinoza",
+          "Clayton Casciato": "Clayton Casciato"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "Arapahoe"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "370",
+        "feed_name": "State Board of Education Member - Congressional District 7",
+        "item": "co-sboe-7",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Karla Esser": "Karla Esser",
+          "Steve Barton": "Steve Barton",
+          "Ross Klopf": "Ross Klopf"
+        },
+        "reaches": [
+          "Colorado",
+          "Jefferson",
+          "Lake",
+          "Chaffee",
+          "Park",
+          "Teller",
+          "Fremont",
+          "Custer",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "1150",
+        "feed_name": "State Senator - District 15",
+        "item": "co-sd-15",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Rob Woodward": "Rob Woodward",
+          "Janice Marchman": "Janice Marchman"
+        },
+        "reaches": [
+          "Colorado",
+          "Larimer",
+          "Boulder"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "1170",
+        "feed_name": "State Senator - District 17",
+        "item": "co-sd-17",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Katie Wallace": "Katie Wallace",
+          "Pat Miller": "Pat Miller"
+        },
+        "reaches": [
+          "Colorado",
+          "Boulder",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "1220",
+        "feed_name": "State Senator - District 20",
+        "item": "co-sd-20",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Richard (Rich) Mancuso": "Richard (Rich) Mancuso",
+          "Sheila Lieder": "Sheila Lieder"
+        },
+        "reaches": [
+          "Colorado",
+          "Jefferson"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "1222",
+        "feed_name": "State Senator - District 22",
+        "item": "co-sd-22",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Steve Harkess": "Steve Harkess",
+          "Monica Irasema Duran": "Monica Irasema Duran"
+        },
+        "reaches": [
+          "Colorado",
+          "Jefferson"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "1227",
+        "feed_name": "State Senator - District 27",
+        "item": "co-sd-27",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Danielle Lammon": "Danielle Lammon",
+          "Tom Sullivan": "Tom Sullivan",
+          "Michele Poague": "Michele Poague"
+        },
+        "reaches": [
+          "Colorado",
+          "Arapahoe",
+          "Douglas"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "1229",
+        "feed_name": "State Senator - District 29",
+        "item": "co-sd-29",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Iman M. Jodeh": "Iman M. Jodeh",
+          "Robert McKenna": "Robert McKenna"
+        },
+        "reaches": [
+          "Colorado",
+          "Arapahoe"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "1231",
+        "feed_name": "State Senator - District 31",
+        "item": "co-sd-31",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Matt Ball": "Matt Ball"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "1232",
+        "feed_name": "State Senator - District 32",
+        "item": "co-sd-32",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Emily Sirota": "Emily Sirota",
+          "Sydnnia Wulff": "Sydnnia Wulff"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "1234",
+        "feed_name": "State Senator - District 34",
+        "item": "co-sd-34",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Chela Garcia Irlando": "Chela Garcia Irlando",
+          "Jennifer Qualteri": "Jennifer Qualteri",
+          "Jacob Luria": "Jacob Luria"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "220",
+        "feed_name": "Secretary of State",
+        "item": "co-secretary-of-state",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Amanda Gonzalez": "Amanda Gonzalez",
+          "James Wiley": "James Wiley",
+          "Sean Vadney": "Sean Vadney",
+          "Amanda Campbell": "Amanda Campbell",
+          "Celeste Landry": "Celeste Landry"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "Boulder",
+          "Jefferson",
+          "Arapahoe",
+          "Adams",
+          "Douglas",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "230",
+        "feed_name": "State Treasurer",
+        "item": "co-treasurer",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jeff Bridges": "Jeff Bridges",
+          "Kevin Grantham": "Kevin Grantham",
+          "Jodie Barr": "Jodie Barr",
+          "Marilee Langner Sturgis": "Marilee Langner Sturgis"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "Boulder",
+          "Jefferson",
+          "Arapahoe",
+          "Adams",
+          "Douglas",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "110",
+        "feed_name": "Representative to the 120th United States Congress - District 1",
+        "item": "co-us-house-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Melat Kiros": "Melat Kiros",
+          "Christy Peterson": "Christy Peterson",
+          "Critter Milton": "Critter Milton",
+          "Chad Humphrey": "Chad Humphrey",
+          "Shimon Blau": "Shimon Blau"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "Arapahoe"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "120",
+        "feed_name": "Representative to the 120th United States Congress - District 2",
+        "item": "co-us-house-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Joe Neguse": "Joe Neguse",
+          "Kelley Anne Dennison": "Kelley Anne Dennison",
+          "Gaylon Kent": "Gaylon Kent"
+        },
+        "reaches": [
+          "Colorado",
+          "Boulder",
+          "Larimer",
+          "Broomfield",
+          "Clear Creek",
+          "Gilpin",
+          "Grand",
+          "Summit",
+          "Eagle",
+          "Routt",
+          "Jackson",
+          "Moffat",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "160",
+        "feed_name": "Representative to the 120th United States Congress - District 6",
+        "item": "co-us-house-6",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jason Crow": "Jason Crow",
+          "Jason Clark": "Jason Clark",
+          "Patty McMahon": "Patty McMahon",
+          "Meredith Ryan": "Meredith Ryan",
+          "Samir Witta": "Samir Witta"
+        },
+        "reaches": [
+          "Colorado",
+          "Arapahoe",
+          "Adams",
+          "Douglas",
+          "Denver",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "170",
+        "feed_name": "Representative to the 120th United States Congress - District 7",
+        "item": "co-us-house-7",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Tim Bennett": "Tim Bennett",
+          "Brittany Pettersen": "Brittany Pettersen",
+          "Susan Hall": "Susan Hall",
+          "Lawrence Kyle Clark": "Lawrence Kyle Clark",
+          "Dan ''Kilo'' Sallis": "Dan \"Kilo\" Sallis",
+          "Joe Krzeczkowski": "Joe Krzeczkowski"
+        },
+        "reaches": [
+          "Colorado",
+          "Jefferson",
+          "Lake",
+          "Chaffee",
+          "Park",
+          "Teller",
+          "Fremont",
+          "Custer",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "20",
+        "feed_name": "United States Senator",
+        "item": "co-us-senate",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Mark Baisley": "Mark Baisley",
+          "John Hickenlooper": "John Hickenlooper",
+          "Bob Chew": "Bob Chew",
+          "Christopher Baum": "Christopher Baum",
+          "Blake Huber": "Blake Huber",
+          "Adam Withrow": "Adam Withrow"
+        },
+        "reaches": [
+          "Colorado",
+          "Denver",
+          "Boulder",
+          "Jefferson",
+          "Arapahoe",
+          "Adams",
+          "Douglas",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "7514",
+        "feed_name": "Jefferson County School District R-1 Ballot Issue 5A",
+        "item": "jeffco-schools-5a",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes/For": "yes",
+          "No/Against": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Jefferson"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "7516",
+        "feed_name": "Jefferson County School District R-1 Ballot Issue 5B",
+        "item": "jeffco-schools-5b",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes/For": "yes",
+          "No/Against": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Jefferson"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "7734",
+        "feed_name": "West Metro Fire Protection District Ballot Issue 7C",
+        "item": "west-metro-fire-7c",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes/For": "yes",
+          "No/Against": "no"
+        },
+        "reaches": [
+          "Colorado",
+          "Jefferson",
+          "Douglas"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "simple majority"
+      }
+    ],
+    "unmatched_guide": [
+      "adams-county-judges",
+      "adams-district-judges",
+      "arapahoe-county-judges",
+      "arapahoe-district-judges",
+      "co-frpr-7a",
+      "douglas-county-judges",
+      "douglas-district-judges"
+    ],
+    "unmatched_feed": [
+      {
+        "feed_id": "7720",
+        "feed_name": "Front Range Passenger Rail District Ballot Issue 7A",
+        "why": "Is guide item co-frpr-7a, but not the whole race here: the state's own page header (electionsettings pagesettings, read 10:24 PM CT) tables 7A as Adams County + Arapahoe County + Other FRPRD Counties = District Total and sends readers to Adams's and Arapahoe's own sites for their 7A counts, so the state feed's 7A count leaves those counties' votes out. The county maps' slices carry it instead."
+      },
+      {
+        "feed_id": "4170",
+        "feed_name": "District Court Judge - 17th Judicial District - Datz",
+        "why": "One judge's retention inside guide item adams-district-judges, which groups 5 judges in one item; a map pairs an item once with one yes and one no, so one judge's numbers can't stand for the item (the same gap as the county maps)."
+      },
+      {
+        "feed_id": "4171",
+        "feed_name": "District Court Judge - 17th Judicial District - Finn",
+        "why": "One judge's retention inside guide item adams-district-judges, which groups 5 judges in one item; a map pairs an item once with one yes and one no, so one judge's numbers can't stand for the item (the same gap as the county maps)."
+      },
+      {
+        "feed_id": "4172",
+        "feed_name": "District Court Judge - 17th Judicial District - Loew",
+        "why": "One judge's retention inside guide item adams-district-judges, which groups 5 judges in one item; a map pairs an item once with one yes and one no, so one judge's numbers can't stand for the item (the same gap as the county maps)."
+      },
+      {
+        "feed_id": "4173",
+        "feed_name": "District Court Judge - 17th Judicial District - Ruff",
+        "why": "One judge's retention inside guide item adams-district-judges, which groups 5 judges in one item; a map pairs an item once with one yes and one no, so one judge's numbers can't stand for the item (the same gap as the county maps)."
+      },
+      {
+        "feed_id": "4174",
+        "feed_name": "District Court Judge - 17th Judicial District - Southerland",
+        "why": "One judge's retention inside guide item adams-district-judges, which groups 5 judges in one item; a map pairs an item once with one yes and one no, so one judge's numbers can't stand for the item (the same gap as the county maps)."
+      },
+      {
+        "feed_id": "4180",
+        "feed_name": "District Court Judge - 18th Judicial District - Amico",
+        "why": "One judge's retention inside guide item arapahoe-district-judges, which groups 9 judges in one item; a map pairs an item once with one yes and one no, so one judge's numbers can't stand for the item (the same gap as the county maps)."
+      },
+      {
+        "feed_id": "4181",
+        "feed_name": "District Court Judge - 18th Judicial District - Baker-McKay",
+        "why": "One judge's retention inside guide item arapahoe-district-judges, which groups 9 judges in one item; a map pairs an item once with one yes and one no, so one judge's numbers can't stand for the item (the same gap as the county maps)."
+      },
+      {
+        "feed_id": "4182",
+        "feed_name": "District Court Judge - 18th Judicial District - Edson",
+        "why": "One judge's retention inside guide item arapahoe-district-judges, which groups 9 judges in one item; a map pairs an item once with one yes and one no, so one judge's numbers can't stand for the item (the same gap as the county maps)."
+      },
+      {
+        "feed_id": "4183",
+        "feed_name": "District Court Judge - 18th Judicial District - Henderson",
+        "why": "One judge's retention inside guide item arapahoe-district-judges, which groups 9 judges in one item; a map pairs an item once with one yes and one no, so one judge's numbers can't stand for the item (the same gap as the county maps)."
+      },
+      {
+        "feed_id": "4184",
+        "feed_name": "District Court Judge - 18th Judicial District - Jones",
+        "why": "One judge's retention inside guide item arapahoe-district-judges, which groups 9 judges in one item; a map pairs an item once with one yes and one no, so one judge's numbers can't stand for the item (the same gap as the county maps)."
+      },
+      {
+        "feed_id": "4185",
+        "feed_name": "District Court Judge - 18th Judicial District - Karpel",
+        "why": "One judge's retention inside guide item arapahoe-district-judges, which groups 9 judges in one item; a map pairs an item once with one yes and one no, so one judge's numbers can't stand for the item (the same gap as the county maps)."
+      },
+      {
+        "feed_id": "4186",
+        "feed_name": "District Court Judge - 18th Judicial District - Stricklin",
+        "why": "One judge's retention inside guide item arapahoe-district-judges, which groups 9 judges in one item; a map pairs an item once with one yes and one no, so one judge's numbers can't stand for the item (the same gap as the county maps)."
+      },
+      {
+        "feed_id": "4187",
+        "feed_name": "District Court Judge - 18th Judicial District - Vahle",
+        "why": "One judge's retention inside guide item arapahoe-district-judges, which groups 9 judges in one item; a map pairs an item once with one yes and one no, so one judge's numbers can't stand for the item (the same gap as the county maps)."
+      },
+      {
+        "feed_id": "4188",
+        "feed_name": "District Court Judge - 18th Judicial District - Washburn",
+        "why": "One judge's retention inside guide item arapahoe-district-judges, which groups 9 judges in one item; a map pairs an item once with one yes and one no, so one judge's numbers can't stand for the item (the same gap as the county maps)."
+      },
+      {
+        "feed_id": "4230",
+        "feed_name": "District Court Judge - 23rd Judicial District - Baum",
+        "why": "One judge's retention inside guide item douglas-district-judges, which groups 4 judges in one item; a map pairs an item once with one yes and one no, so one judge's numbers can't stand for the item (the same gap as the county maps)."
+      },
+      {
+        "feed_id": "4231",
+        "feed_name": "District Court Judge - 23rd Judicial District - Klingensmith",
+        "why": "One judge's retention inside guide item douglas-district-judges, which groups 4 judges in one item; a map pairs an item once with one yes and one no, so one judge's numbers can't stand for the item (the same gap as the county maps)."
+      },
+      {
+        "feed_id": "4232",
+        "feed_name": "District Court Judge - 23rd Judicial District - Slade",
+        "why": "One judge's retention inside guide item douglas-district-judges, which groups 4 judges in one item; a map pairs an item once with one yes and one no, so one judge's numbers can't stand for the item (the same gap as the county maps)."
+      },
+      {
+        "feed_id": "4233",
+        "feed_name": "District Court Judge - 23rd Judicial District - Warhola",
+        "why": "One judge's retention inside guide item douglas-district-judges, which groups 4 judges in one item; a map pairs an item once with one yes and one no, so one judge's numbers can't stand for the item (the same gap as the county maps)."
+      },
+      {
+        "feed_id": "5000",
+        "feed_name": "County Court Judge - Adams - Jimenez",
+        "why": "One judge's retention inside guide item adams-county-judges, which groups 2 judges in one item; a map pairs an item once with one yes and one no, so one judge's numbers can't stand for the item (the same gap as the county maps)."
+      },
+      {
+        "feed_id": "5010",
+        "feed_name": "County Court Judge - Adams - Vielma",
+        "why": "One judge's retention inside guide item adams-county-judges, which groups 2 judges in one item; a map pairs an item once with one yes and one no, so one judge's numbers can't stand for the item (the same gap as the county maps)."
+      },
+      {
+        "feed_id": "5030",
+        "feed_name": "County Court Judge - Arapahoe - Apostoli",
+        "why": "One judge's retention inside guide item arapahoe-county-judges, which groups 3 judges in one item; a map pairs an item once with one yes and one no, so one judge's numbers can't stand for the item (the same gap as the county maps)."
+      },
+      {
+        "feed_id": "5040",
+        "feed_name": "County Court Judge - Arapahoe - Clark",
+        "why": "One judge's retention inside guide item arapahoe-county-judges, which groups 3 judges in one item; a map pairs an item once with one yes and one no, so one judge's numbers can't stand for the item (the same gap as the county maps)."
+      },
+      {
+        "feed_id": "5050",
+        "feed_name": "County Court Judge - Arapahoe - Rowles-Stokes",
+        "why": "One judge's retention inside guide item arapahoe-county-judges, which groups 3 judges in one item; a map pairs an item once with one yes and one no, so one judge's numbers can't stand for the item (the same gap as the county maps)."
+      },
+      {
+        "feed_id": "5190",
+        "feed_name": "County Court Judge - Douglas - Bowling",
+        "why": "One judge's retention inside guide item douglas-county-judges, which groups 2 judges in one item; a map pairs an item once with one yes and one no, so one judge's numbers can't stand for the item (the same gap as the county maps)."
+      },
+      {
+        "feed_id": "5200",
+        "feed_name": "County Court Judge - Douglas - Fields",
+        "why": "One judge's retention inside guide item douglas-county-judges, which groups 2 judges in one item; a map pairs an item once with one yes and one no, so one judge's numbers can't stand for the item (the same gap as the county maps)."
+      }
+    ],
+    "not_here": [
+      "adams-assessor",
+      "adams-clerk",
+      "adams-commissioner-3",
+      "adams-commissioner-4",
+      "adams-coroner",
+      "adams-sheriff",
+      "adams-surveyor",
+      "adams-treasurer",
+      "arapahoe-assessor",
+      "arapahoe-clerk",
+      "arapahoe-commissioner-2",
+      "arapahoe-commissioner-4",
+      "arapahoe-coroner",
+      "arapahoe-sheriff",
+      "arapahoe-treasurer",
+      "boulder-2j",
+      "boulder-2k",
+      "boulder-2l",
+      "boulder-2m",
+      "boulder-council",
+      "boulder-county-1a",
+      "boulder-county-200",
+      "boulder-county-201",
+      "boulder-county-assessor",
+      "boulder-county-clerk",
+      "boulder-county-commissioner-3",
+      "boulder-county-coroner",
+      "boulder-county-sheriff",
+      "boulder-county-surveyor",
+      "boulder-county-treasurer",
+      "boulder-mayor",
+      "denver-2h",
+      "denver-2i",
+      "denver-2j",
+      "denver-2k",
+      "denver-311",
+      "denver-council-at-large-b",
+      "denver-dps-4a",
+      "douglas-assessor",
+      "douglas-clerk",
+      "douglas-commissioner-1",
+      "douglas-coroner",
+      "douglas-sheriff",
+      "douglas-surveyor",
+      "douglas-treasurer",
+      "jefferson-assessor",
+      "jefferson-clerk",
+      "jefferson-commissioner-3",
+      "jefferson-coroner",
+      "jefferson-sheriff",
+      "jefferson-surveyor",
+      "jefferson-treasurer",
+      "lakewood-2g",
+      "lakewood-2h",
+      "lakewood-2i",
+      "lakewood-2j",
+      "littleton-schools-4a"
+    ]
   },
   {
     "id": "results-DC",

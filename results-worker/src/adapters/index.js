@@ -12,5 +12,7 @@ import * as lvt from './lvt.js';
 import * as ca_sos from './ca_sos.js';
 import * as fl_dos from './fl_dos.js';
 import * as vr_enr from './vr_enr.js';
+import * as nyc_enr from './nyc_enr.js';
+import * as md_sbe from './md_sbe.js';
 
-export const ADAPTERS = { clarity, harris, tx_sos, dc, enhanced_voting, la_county, lvt, ca_sos, fl_dos, vr_enr };
+export const ADAPTERS = { clarity, harris, tx_sos, dc, enhanced_voting, la_county, lvt, ca_sos, fl_dos, vr_enr, nyc_enr, md_sbe };

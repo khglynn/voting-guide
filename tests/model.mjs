@@ -1852,14 +1852,14 @@ function roundTrip(name, stCode, places, mutate) {
     }
     check('results column: a measure once complete says Passed over the share and "unofficial"', col('tx-austin-prop-b') === 'Passed Yes 64% · unofficial Your pick: Yes', col('tx-austin-prop-b'));
     check('results column: a measure behind shows the side ahead', col('tx-austin-prop-c') === 'No 59% counting Your pick: Yes', col('tx-austin-prop-c'));
-    check('results column: a race across counties names the county whose count it shows, never a sum, never "unofficial" while a slice counts', col('tx-austin-prop-a') === 'Yes 56% Travis count Your pick' && col('tx-acc-trustee-1') === 'Walker 56% Travis count', `${col('tx-austin-prop-a')} | ${col('tx-acc-trustee-1')}`);
+    check('results column: a race across counties names the county whose count it shows, never a sum, never "unofficial" while a slice counts', col('tx-austin-prop-a') === 'Yes 56% Travis only Your pick' && col('tx-acc-trustee-1') === 'Walker 56% Travis only', `${col('tx-austin-prop-a')} | ${col('tx-acc-trustee-1')}`);
     check('results column: a tie names both', col('tx-senate-21') === 'Tied: Dahlberg, Zaffirini counting Your pick: Zaffirini', col('tx-senate-21'));
     check('results column: an item the file doesn’t hold is the office’s page once the polls close, never the sources’ tally', col('tx-3rd-coa-chief') === 'Travis County results' && led.resColOf(st.S.ballot.byId.get('tx-3rd-coa-chief')).kind === 'link' && !/vd (agree|split|done)/.test(led.rowHTML(st.S.ballot.byId.get('tx-3rd-coa-chief'))));
     const ob = (id) => txt(op.resultsHTML(st.S.ballot.byId.get(id), rm.R.file.items[id]));
     check('results open row: counting says "is ahead so far", the table ticks your pick, the office’s time and words, its link', /^Counting\. Casar is ahead so far\./.test(ob('tx-us-house-37')) && /Peña .*Your pick/.test(ob('tx-us-house-37')) && /Travis County updated: 9:35 PM CT\. “128 of 186 vote centers reporting\.” Travis County results/.test(ob('tx-us-house-37')) && !/\bwon\b/.test(ob('tx-us-house-37')), ob('tx-us-house-37'));
     check('results open row: "won" only with the file’s final', /^Unofficial\. Garibay won\./.test(ob('tx-house-49')) && /^Unofficial\. It passed\./.test(ob('tx-austin-prop-b')), ob('tx-house-49'));
     check('results open row: a race across counties: one county’s count, each slice with its own time, the county we don’t hold named', /^Counting\. In Travis County’s count, yes is ahead so far\./.test(ob('tx-austin-prop-a')) && /Travis County: Yes 56% \(counting\), updated 9:35 PM CT/.test(ob('tx-austin-prop-a')) && /Williamson County: Yes 40%/.test(ob('tx-austin-prop-a')) && /Hays County: not in this guide’s results/.test(ob('tx-austin-prop-a')) && !/100,000|59,000/.test(ob('tx-austin-prop-a')), ob('tx-austin-prop-a'));
-    check('results open row: unmatched says why in plain words, then the office’s page', /^Travis County names this race differently than we do, so we don’t copy its count here\. Travis County has it\. Travis County results/.test(ob('tx-aisd-at-large-9')), ob('tx-aisd-at-large-9'));
+    check('results open row: unmatched says why in plain words, then the office’s page', /^Travis County lists this race under another name, so we link to its count instead\. Travis County results/.test(ob('tx-aisd-at-large-9')), ob('tx-aisd-at-large-9'));
     {
       // The office's own note on a race (a feed cut off at an earlier update) shows as written; nothing posted gives the
       // office's expected time.
@@ -1899,9 +1899,9 @@ function roundTrip(name, stCode, places, mutate) {
       // The bar's results line and the results-first menu (overnight).
       const fi = rm.footInfo();
       const bar = txt(led.footResHTML());
-      check('results bar: the status word, the main source with its own progress words, when we checked, Refresh', fi.kind === 'res' && fi.word === 'Counting' && fi.who === 'Travis County' && fi.words === '128 of 186 vote centers reporting' && /^Counting · Travis County 128 of 186 vote centers reporting We checked 9:41 PM Refresh$/.test(bar) && /data-act="results-refresh" data-fk="bar-refresh"/.test(led.barHTML()), bar);
+      check('results bar: the status word, the main source with its own progress words, when we checked, Refresh', fi.kind === 'res' && fi.word === 'Counting' && fi.who === 'Travis County' && fi.words === '128 of 186 vote centers reporting' && /^Counting · Travis County 128 of 186 vote centers reporting Checked 9:41 PM CT Refresh$/.test(bar) && /data-act="results-refresh" data-fk="bar-refresh"/.test(led.barHTML()), bar);
       const menu = led.menuHTML('toc'), mt = txt(menu);
-      check('results menu: results first: the word, when we checked, Refresh, each source’s words and time, the offices’ pages, each section’s posted count; no Next up or Quick picks', /^Counting We checked 9:41 PM CT Refresh Travis County 128 of 186 vote centers reporting · updated 9:35 PM CT/.test(mt) && /Travis County results Williamson County results/.test(mt) && /Federal offices 1 of 2 posted/.test(mt) && /Austin All posted/.test(mt) && /data-act="jump" data-to="federal"/.test(menu) && !/data-act="next"|Quick picks|data-act="only"/.test(menu) && /What’s next/.test(mt), mt.slice(0, 300));
+      check('results menu: results first: the word, when we checked, Refresh, each source’s words and time, the offices’ pages, each section’s posted count; no Next up or Quick picks', /^Counting We checked 9:41 PM CT Refresh Federal offices Numbers for 1 of 2/.test(mt) && /Austin Numbers for all/.test(mt) && /Where the numbers come from Travis County 128 of 186 vote centers reporting · updated 9:35 PM CT/.test(mt) && /Travis County results Williamson County results/.test(mt) && mt.indexOf('Federal offices') < mt.indexOf('Where the numbers come from') && /data-act="jump" data-to="federal"/.test(menu) && !/data-act="next"|Quick picks|data-act="only"/.test(menu) && /What’s next/.test(mt), mt.slice(0, 300));
       st.S.b.hideDecided = true;
       check('results menu: "Hide races I’ve decided" shows while it’s on, so it can be turned off', /data-act="only"/.test(led.menuHTML('toc')));
       st.S.b.hideDecided = false;
@@ -2013,7 +2013,7 @@ function roundTrip(name, stCode, places, mutate) {
       // A state with no file at all (California tonight): every row the office's page, a line and the pages on top, the
       // bar's line the voter's office. Before the first read: "Checking…", never a guess.
       rm.resetResults('NY'); rm.R.none = true;
-      check('results: no file for the state: rows are the offices’ pages, never the sources’ tally', col('nyc-proposal-1') === 'New York City results' && /doesn’t copy counts for these races yet/.test(txt(fig.figureHTML())) && rm.footInfo().kind === 'links', `${col('nyc-proposal-1')} | ${txt(fig.figureHTML())}`);
+      check('results: no file for the state: rows are the offices’ pages, never the sources’ tally', col('nyc-proposal-1') === 'New York City results' && /has no counts for these races yet/.test(txt(fig.figureHTML())) && rm.footInfo().kind === 'links', `${col('nyc-proposal-1')} | ${txt(fig.figureHTML())}`);
       rm.resetResults('NY');
       check('results: before the first read, rows say "Checking…" and the bar does too', col('nyc-proposal-1') === 'Checking…' && /Checking results…/.test(txt(led.footResHTML())));
       useFile('NY', FX('NY'));

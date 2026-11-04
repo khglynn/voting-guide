@@ -3630,8 +3630,9 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await page.waitForSelector('.nexts');
   const fold = await text(page, '.nexts');
   check('Results: the fold is Dates and ballot help: the deadlines, Check or fix your ballot, upcoming dates with sources, the office, no search', /Dates and ballot help/.test(await text(page, '[data-fk="whatif"]')) && /Travis County makes its results official by Nov 17\./.test(fold) && /Mail ballots postmarked by 7 PM Nov 3/.test(fold) && /Check or fix your ballot/.test(fold) && /Your election office/.test(fold) && !(await page.$('#wi-q')) && !/Hays County makes results official/.test(fold), fold.slice(0, 200));
-  const bar = await text(page, '.foot');
-  check('Results: the bar says On this ballot and What’s next, with no count, and carries data-results', !!(await page.$('.foot[data-results]')) && /^On this ballot What’s next$/.test(bar) && !(await page.$('.foot .bar')), bar);
+  const bar = await text(page, '.foot-in');
+  // No numbers for this ballot (the default test file is ignored): the bar's results line is the county's own page.
+  check('Results: the bar says On this ballot and What’s next, with no count, and carries data-results; its results line is Travis County’s page', !!(await page.$('.foot[data-results]')) && /^On this ballot What’s next$/.test(bar) && !(await page.$('.foot .bar')) && (await page.getAttribute('.foot-res a', 'href')) === 'https://results.enr.clarityelections.com/TX/Travis/127492/' && (await text(page, '.foot-res')) === 'Travis County results', `${bar} | ${await text(page, '.foot-res')}`);
   await noSideScroll(page, 'Results strip');
   await tap(page, '.foot [data-act="cheat"]');
   await page.waitForSelector('#cheat');
@@ -3674,8 +3675,8 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   const { ctx, page } = await newPage({ timezoneId: 'America/Chicago' });
   const FX = fs.readFileSync(path.join(ROOT, 'tests', 'fixtures', 'results', 'TX.json'), 'utf8');
   let reads = 0, busted = 0, fail = false;
-  // A row's column, its lines joined by a space ("Casar 71% counting Your pick: Peña").
-  const vd = (id) => page.$$eval(`#i-${id} .vd > span`, (els) => els.map((e) => e.textContent.trim()).join(' ')).catch(() => '');
+  // A row's column, its lines joined by a space ("Casar 71% counting Your pick: Peña"), or its office link's words.
+  const vd = (id) => page.$$eval(`#i-${id} .vd > span, #i-${id} > .vd-go`, (els) => els.map((e) => e.textContent.trim()).filter(Boolean).join(' ')).catch(() => '');
   await page.route((u) => u.pathname === '/results/2026-11-03/TX.json', (route) => {
     reads++;
     if (/[?&]t=\d/.test(route.request().url())) busted++;
@@ -3686,15 +3687,33 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await throughSetup(page);
   await page.waitForSelector('#vz .vz-st', { timeout: 8000 }).catch(() => {});
   const head = await text(page, '#vz');
-  const order = await page.evaluate(() => { const v = document.querySelector('#vz'); const k = v && v.querySelector('.vz-key'); const f = v && v.querySelector('.vz-fig'); const pl = document.querySelector('.picks-line'); return !!(k && f && pl) && !!(k.compareDocumentPosition(f) & 4) && !!(v.compareDocumentPosition(pl) & 4); });
-  check('Results rows: the figure under "Your ballot": status word, its line, the key above the dots, then the endorsement line', /^Counting/.test(head) && /Election offices are still counting/.test(head) && order && reads >= 1, head.slice(0, 160));
-  check('Results rows: the strip: "We checked" with each county’s time, and Refresh', /We checked Travis County: 9:42 PM CT · Williamson County: 9:41 PM CT\. Refresh/.test(await text(page, '#plan')), await text(page, '.plan-fresh'));
+  // No picks yet, so the summary is the list of where races stand (the dots and their key come with the first pick).
+  const order = await page.evaluate(() => { const v = document.querySelector('#vz'); const l = v && v.querySelector('.st'); const pl = document.querySelector('.picks-line'); return !!(l && pl) && !!(v.compareDocumentPosition(pl) & 4); });
+  check('Results rows: the summary under "Your ballot": status word, its line, where races stand, then the endorsement line', /^Counting/.test(head) && /Election offices are still counting/.test(head) && order && reads >= 1, head.slice(0, 160));
+  check('Results rows: the strip: "We checked" with the oldest of the offices’ reads, and Refresh', /We checked 9:41 PM CT\. Refresh/.test(await text(page, '#plan')), await text(page, '.plan-fresh'));
+  check('Results rows: the bar’s results line: the status word, Travis County’s own progress words, when we checked, Refresh', /^Counting · Travis County 128 of 186 vote centers reporting Checked 9:41 PM CT Refresh$/.test(await text(page, '.foot-res')) && /^On this ballot What’s next$/.test(await text(page, '.foot-in')), await text(page, '.foot-res'));
+  // No picks yet: where races stand, as a list, in place of the dots.
+  check('Results rows: no picks: the summary is a list of where races stand, grouped like the ballot, no dots', !!(await page.$('#vz .st .st-sec[data-sec="federal"]')) && !(await page.$('#vz .d')) && /Casar 71%|Texas results/.test(await text(page, '#vz .st')), (await text(page, '#vz .st')).slice(0, 160));
+  // A row the file doesn't hold, after the close: the office's page, never the sources' tally.
+  check('Results rows: a race the file doesn’t hold is a link to its office, never the sources’ tally', !!(await page.$('#i-tx-3rd-coa-chief > a.vd-go[href^="https://"]')) && !(await page.$('#i-tx-3rd-coa-chief .vd.agree, #i-tx-3rd-coa-chief .vd.split')), await vd('tx-3rd-coa-chief'));
   // U.S. House 37: answer the district question, then the row shows the count.
   await tap(page, 'li.is-q:has-text("U.S. Representative") .row-hd');
   await tap(page, '[data-fk="d-tx-us-house-37"]');
   await page.waitForSelector('#i-tx-us-house-37');
   check('Results rows: the column: leader and share over "counting"', (await vd('tx-us-house-37')) === 'Casar 71% counting', await vd('tx-us-house-37'));
-  check('Results rows: link_only and complete', (await vd('tx-us-senate')) === 'See election office results' && (await vd('tx-austin-prop-b')) === 'Passed Yes 64% · unofficial', `${await vd('tx-us-senate')} | ${await vd('tx-austin-prop-b')}`);
+  check('Results rows: link_only is a real link to the office, beside the row’s button, and complete says Passed', (await vd('tx-us-senate')) === 'Texas results' && (await page.getAttribute('#i-tx-us-senate > a.vd-go', 'href') || '').startsWith('https://') && !(await page.$('#i-tx-us-senate .row-hd a')) && (await vd('tx-austin-prop-b')) === 'Passed Yes 64% · unofficial', `${await vd('tx-us-senate')} | ${await vd('tx-austin-prop-b')}`);
+  // Tapping the link column opens the office in a new tab; the row stays shut.
+  {
+    const [pop] = await Promise.all([page.context().waitForEvent('page', { timeout: 5000 }).catch(() => null), page.locator('#i-tx-us-senate > a.vd-go').tap()]);
+    check('Results rows: the link column opens the office’s page, and doesn’t open the row', !!pop && (await page.getAttribute('[data-fk="row-tx-us-senate"]', 'aria-expanded')) === 'false', pop ? pop.url() : 'no new tab');
+    if (pop) await pop.close();
+  }
+  // The menu once the polls close: results first, each section's posted count, Refresh; no Next up.
+  await tap(page, '[data-fk="bar-menu"]');
+  await page.waitForSelector('.sheet-panel.toc .nv-res');
+  const menu = await text(page, '.sheet-panel.toc');
+  check('Results rows: the menu is results first: the word, when we checked, Refresh, each office’s words, the offices’ pages, posted counts per section, no Next up', /^Results on this ballot Close Counting We checked 9:41 PM CT Refresh Federal offices Numbers for/.test(menu) && /Where the numbers come from Travis County 128 of 186 vote centers reporting/.test(menu) && !!(await page.$('.sheet-panel.toc [data-fk="toc-refresh"]')) && !(await page.$('.sheet-panel.toc [data-act="next"]')) && !!(await page.$('.sheet-panel.toc [data-act="jump"][data-to="federal"]')), menu.slice(0, 260));
+  await tap(page, '.sheet-panel.toc [data-act="sheet-close"]');
   // Answering the question may open the race already; open it if not.
   if ((await page.getAttribute('[data-fk="row-tx-us-house-37"]', 'aria-expanded')) !== 'true') await tap(page, '[data-fk="row-tx-us-house-37"]');
   await page.waitForSelector('#ob-tx-us-house-37 .rtab');
@@ -3742,7 +3761,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await page.fill('#addr-in', 'Congress Avenue');
   await page.clock.runFor(3 * 60_000);
   await page.waitForTimeout(200);
-  check('Results: the close on an open page with an address half typed: the bar turns, the typing stays', /^On this ballot What’s next$/.test(await text(page, '.foot')) && (await page.inputValue('#addr-in').catch(() => '')) === 'Congress Avenue' && /^Results are rolling in\./.test(await text(page, '.plan-h')), `${await text(page, '.foot')} | ${await page.inputValue('#addr-in').catch(() => 'gone')}`);
+  check('Results: the close on an open page with an address half typed: the bar turns, the typing stays', /^On this ballot What’s next$/.test(await text(page, '.foot-in')) && (await page.inputValue('#addr-in').catch(() => '')) === 'Congress Avenue' && /^Results are rolling in\./.test(await text(page, '.plan-h')), `${await text(page, '.foot-in')} | ${await page.inputValue('#addr-in').catch(() => 'gone')}`);
   noErrors(page, 'Results close with typing');
   await ctx.close();
 }
@@ -3759,7 +3778,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   const after = await text(page, '.plan-h');
   check('Austin on a Pacific-time phone: 6:58 PM Central is still Election Day', /^Today is Election Day\. Polls close at 7 PM\.$/.test(before), before);
   check('Austin on a Pacific-time phone: the open page turns to results after 7 PM Central', /^Results are rolling in\./.test(after), after);
-  check('Austin, an open page at the close: the bar and the endcap turn too (On this ballot, What’s next)', /^On this ballot What’s next$/.test(await text(page, '.foot')) && (await text(page, '[data-fk="endcap-cheat"]')) === 'What’s next', await text(page, '.foot'));
+  check('Austin, an open page at the close: the bar and the endcap turn too (On this ballot, What’s next)', /^On this ballot What’s next$/.test(await text(page, '.foot-in')) && (await text(page, '[data-fk="endcap-cheat"]')) === 'What’s next', await text(page, '.foot-in'));
   noErrors(page, 'Polls close on an open page');
   await ctx.close();
 }

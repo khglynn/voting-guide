@@ -278,7 +278,7 @@ function unoppHTML(sec: SectionKey, list: Contest[]): string {
   if (!list.length) return '';
   const k = `unopp-${sec}`;
   const b = S.ballot!;
-  return `<li class="row unopp"><button class="disc" data-act="open" data-k="${k}" aria-expanded="${isOpen(k)}" data-fk="${k}">${plural(list.length, 'unopposed race')}. Nothing to decide.</button>
+  return `<li class="row unopp"><button class="disc" data-act="open" data-k="${k}" aria-expanded="${isOpen(k)}" data-fk="${k}">${plural(list.length, 'unopposed race')}${resultsMode() ? '' : '. Nothing to decide'}.</button>
     ${isOpen(k) ? `<ul class="unopp-list">${list.map((c) => {
       const k1 = c.candidates[0];
       const r = rowTitle(c);
@@ -775,9 +775,11 @@ export function footResHTML(): string {
   let body: string;
   if (f.kind === 'wait') body = '<span class="fr-t"><span class="fr-p">Checking results…</span></span>';
   else if (f.kind === 'links' || f.kind === 'failed') body = `<span class="fr-t">${f.kind === 'failed' ? '<span class="fr-p">Couldn’t check just now.</span> ' : ''}${link(f.link) || '<span class="fr-p">Results are on the election offices’ sites.</span>'}</span>${f.kind === 'failed' ? refreshBtn('bar-refresh') : ''}`;
-  else body = `<span class="fr-t"><b class="fr-w">${esc(f.word)}</b>${f.who ? `<span class="fr-sep" aria-hidden="true"> · </span><span class="fr-who">${esc(f.who)}</span> <span class="fr-p">${esc(f.words)}</span>` : ''}</span>
-      <span class="fr-r">${R.failed ? '<span class="fr-at">Couldn’t check</span>' : f.at ? `<span class="fr-at"><span class="vh">We checked </span>${esc(f.at.replace(/ [A-Z]T$/, ''))}</span>` : ''}${refreshBtn('bar-refresh')}</span>`;
-  return `<div class="foot-res" data-kind="${f.kind}">${body}</div>`;
+  // Two short lines on a phone, one from 600px (GPT copy pass): the word and whose count; then the office's own
+  // words and when we checked; Refresh at the end of the first.
+  else body = `<span class="fr-a"><b class="fr-w">${esc(f.word)}</b>${f.who ? `<span class="fr-sep" aria-hidden="true"> · </span><span class="fr-who">${esc(f.who)}</span>` : ''}</span>
+      <span class="fr-b">${f.words ? `<span class="fr-p">${esc(f.words)}</span>` : ''}${R.failed ? '<span class="fr-at">Couldn’t check just now</span>' : f.at ? `<span class="fr-at">Checked ${esc(f.at)}</span>` : ''}</span>${refreshBtn('bar-refresh')}`;
+  return `<div class="foot-res${f.kind === 'res' ? ' fr-grid' : ''}" data-kind="${f.kind}">${body}</div>`;
 }
 
 /* ---------- the menu: a sheet under 1180px, a rail from there ----------
@@ -815,8 +817,9 @@ function resMenuHTML(where: 'toc' | 'rail'): string {
   const at = checkedAt();
   const head = !f || f.kind === 'wait' ? '<p class="nv-rw"><b>Results</b> <span>Checking…</span></p>'
     : !srcs.length || !fig || !fig.posted ? `<p class="nv-rw"><b>Results</b></p><p class="nv-rx">${R.failed && !resultsOn() ? 'Couldn’t check the election offices just now. ' : ''}These races’ counts are on the election offices’ own pages.</p>${R.failed && !resultsOn() ? `<p class="nv-rw">${refreshBtn(`${where}-refresh`)}</p>` : ''}`
-    : `<p class="nv-rw"><b>${esc(fig.word)}</b>${R.failed ? ' <span>Couldn’t check just now</span>' : at ? ` <span>We checked ${esc(at)}</span>` : ''}${refreshBtn(`${where}-refresh`)}</p>
-      <ul class="nv-srcs">${srcs.map((x) => {
+    : `<p class="nv-rw"><b>${esc(fig.word)}</b>${R.failed ? ' <span>Couldn’t check just now</span>' : at ? ` <span>We checked ${esc(at)}</span>` : ''}${refreshBtn(`${where}-refresh`)}</p>`;
+  // Each office's own words and update time, under the sections (GPT copy pass: navigation before source detail).
+  const srcList = !srcs.length || !fig || !fig.posted ? '' : `<h3 class="nv-sh">Where the numbers come from</h3><ul class="nv-srcs">${srcs.map((x) => {
         const p = progressOf(x);
         const line = sourceDown(x) ? `Couldn’t reach it. Showing its ${x.updated ? `${fmtTime(x.updated)} ` : 'last '}numbers.`
           : x.status === 'refused' ? 'Isn’t letting us read its results.'
@@ -830,14 +833,16 @@ function resMenuHTML(where: 'toc' | 'rail'): string {
     if (!entries.length || !sectionShows(entries)) return '';
     const items = pageWalk().filter((x) => x.sec === k && !x.question && !x.folded).map((x) => S.ballot!.byId.get(x.key)).filter((x): x is Item => !!x);
     const posted = items.filter((it) => hasNumbers(resultOf(it))).length;
-    const right = !items.length ? '' : posted === items.length ? 'All posted' : posted ? `${posted} of ${items.length} posted` : resultsOn() || R.none ? 'Office links' : '';
+    // Coverage, never completeness (GPT copy pass: "posted" read as "the count is done").
+    const right = !items.length ? '' : posted === items.length ? 'Numbers for all' : posted ? `Numbers for ${posted} of ${items.length}` : resultsOn() || R.none ? 'On office sites' : '';
     return row(`data-act="jump" data-to="${k}"`, k, sectionTitle(k), right);
   }).join('');
   const only = S.b.hideDecided ? `<button class="su-sw nv-sw" role="switch" aria-checked="true" data-act="only" data-fk="${where}-only"><span class="su-l"><b>${HIDE}</b></span><span class="tg" aria-hidden="true"><span></span></span></button>` : '';
-  return `<div class="nv-res" data-fk="${where}-res">${head}${links}</div>
+  return `<div class="nv-res" data-fk="${where}-res">${head}</div>
     ${only}<ul class="nv-list nv-secs">
-    ${secs}
-    ${row('data-act="cheat"', 'cheat', 'What’s next', '', ' nv-plan')}</ul>
+    ${secs}</ul>
+    <div class="nv-from">${srcList}${links}</div>
+    <ul class="nv-list nv-end nv-next-step">${row('data-act="cheat"', 'cheat', 'What’s next', '', ' nv-plan')}</ul>
     <ul class="nv-list nv-end"><li><button class="nv nv-report" ${reportAttrs({ fk: `${where}-report` })}><span class="nv-t">Report a problem</span><span class="nv-n"></span>${ARROW}</button></li>
     ${row('data-act="shelf" data-kind="how" aria-haspopup="dialog"', 'how', 'How this guide works', '', ' nv-how')}</ul>`;
 }

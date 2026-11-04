@@ -42,7 +42,7 @@ export function figureHTML(forPrint = false): string {
     // No file for this state (California tonight), or the first read failed: one line and the offices' own pages, so a
     // friend's city still reads as results, not as a guide from before the polls closed.
     if (resultsMode() && !resultsWaiting() && (R.none || R.failed)) {
-      return `<section class="vz vz-links" id="vz"><p class="vz-ex">${esc(R.failed && !R.none ? 'Couldn’t check the election offices just now. Their own pages have the counts.' : 'This guide doesn’t copy counts for these races yet. The election offices’ own pages have them.')}</p>${officesHTML()}</section>`;
+      return `<section class="vz vz-links" id="vz"><p class="vz-ex">${esc(R.failed && !R.none ? 'Couldn’t check the election offices just now. Their own pages have the counts:' : 'This guide has no counts for these races yet. The election offices’ own pages have them:')}</p>${officesHTML()}</section>`;
     }
     return '<div id="vz" hidden></div>';
   }

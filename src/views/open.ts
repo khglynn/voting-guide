@@ -610,7 +610,7 @@ export function resultsHTML(it: Item, r: ItemResult): string {
   const office = officeShort(r.source);
   if (r.status === 'link_only') {
     const unmatched = r.reason === 'not matched';
-    return `<div class="rs" data-res="link"><p class="rs-h">${esc(unmatched ? `${office} names this race differently than we do, so we don’t copy its count here. ${office} has it.` : `We don’t copy this race’s count here. ${office} has it.`)}</p>
+    return `<div class="rs" data-res="link"><p class="rs-h">${esc(unmatched ? `${office} lists this race under another name, so we link to its count instead.` : `This race’s count is on ${office}’s page.`)}</p>
       ${officeBtn(r.url, officeText(r.source))}${noteHTML(r)}${apLine}</div>`;
   }
   if (!hasNumbers(r as ItemResult | null)) {
@@ -637,7 +637,7 @@ function noResultHTML(it: Item): string {
   const apLine = ap ? `<p class="rs-ap">${ext(ap, 'AP’s race calls')}</p>` : '';
   if (resultsWaiting()) return `<div class="rs" data-res="wait"><p class="rs-h">Checking the election office’s results…</p></div>`;
   const o = officeFor(it);
-  return `<div class="rs" data-res="none"><p class="rs-h">${esc(o ? `This guide doesn’t have this race’s count yet. ${o.text.replace(/ results$/, '')} posts it.` : 'This guide doesn’t have this race’s count. Your election office posts it.')}</p>
+  return `<div class="rs" data-res="none"><p class="rs-h">${esc(o ? 'This guide has no count for this race yet.' : 'This guide has no count for this race. Your election office posts it.')}</p>
     ${o ? officeBtn(o.url, o.text) : ''}${apLine}</div>`;
 }
 /* "Endorsement sources", one line under the count: who among your sources picked what, then the grid as today. */

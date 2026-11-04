@@ -245,9 +245,9 @@ function numCol(it: Item, r: ItemResult): ResCol {
   const pick = '';
   const word = statusWord(r.status);
   const county = shownCounty(r);
-  // A race across counties: the county named in place of the status word ("Travis count"), since its status is the
-  // whole race's, and no number here is the whole.
-  const sub0 = county ? `${shortCounty(county)} count` : word;
+  // A race across counties: the county named in place of the status word ("Travis only": one county's piece, GPT copy
+  // pass), since its status is the whole race's, and no number here is the whole.
+  const sub0 = county ? `${shortCounty(county)} only` : word;
   if (isMeasureLike(it) && r.measure) {
     const y = yesShare(r.measure);
     const b = barOf(it, r);

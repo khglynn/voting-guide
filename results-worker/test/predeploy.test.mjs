@@ -2,10 +2,11 @@
    in the workbench's claude-plans/2026-11-03-results. One test or more per finding, in the order they were fixed. */
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { fakeFetch, mapFor } from './helpers.mjs';
+import { fakeFetch, fixture, mapFor } from './helpers.mjs';
 import * as clarity from '../src/adapters/clarity.js';
 import * as nyc from '../src/adapters/nyc_enr.js';
 import * as multco from '../src/adapters/multco.js';
+import * as ca_sos from '../src/adapters/ca_sos.js';
 import { checkFile } from '../src/checks.js';
 import { sourceSlices, buildStateFile } from '../src/merge.js';
 
@@ -117,4 +118,42 @@ test('Multnomah: the ranked-choice note quotes the tabulation time, never the re
   assert.equal(rep.published_at, '2026-11-04T04:00:00.000Z');
   const none = multco.parseReport(page.replace('<p>November 03, 2026 06:56:26 PM</p>', ''));
   assert.equal(none.tabulated, null, 'no time paragraph: no time, not the description');
+});
+
+const sosRoutes = {
+  '/returns/query?r=': 'ca-sos.query-statewide.json',
+  '/returns/ballot-measures': 'ca-sos.ballot-measures.json',
+  '/returns/board-of-equalization/district/all': 'ca-sos.boe-all.json',
+  '/returns/us-rep/district/all': 'ca-sos.us-rep-all.json',
+};
+const withHouse = (edit) => { const j = JSON.parse(fixture('ca-sos.us-rep-all.json')); edit(Array.isArray(j) ? j : [j]); return { ...sosRoutes, '/returns/us-rep/district/all': { status: 200, body: JSON.stringify(j) } }; };
+
+test('CA SOS: "0% (0 of N) precincts reporting" beside counted votes is left out; with no votes it stays', async () => {
+  assert.equal(ca_sos.progress('0% (0 of 561) precincts reporting', 155542), null);
+  assert.equal(ca_sos.progress('0% (0 of 561) precincts reporting', 0), '0% (0 of 561) precincts reporting');
+  assert.equal(ca_sos.progress('24.1% (190 of 788) precincts reporting', 1000), '24.1% (190 of 788) precincts reporting');
+  // The saved House file's second race reads "0% (0 of 453)"; give it mail votes, as CA-47 had at 9:03 PM PT.
+  let title;
+  const routes = withHouse((races) => { title = races[1].raceTitle.replace(/\s+/g, ' ').trim(); races[1].candidates[0].Votes = '155,542'; });
+  const r = await ca_sos.read({ fetch: fakeFetch(routes), map: mapFor('results-CA') });
+  assert.equal(r.contests.find((c) => c.feed_id === title).reporting, null);
+  assert.equal(r.contests.find((c) => /\(0 of 299\)/.test(c.reporting || '')).total, 0, 'a race with no votes keeps its words');
+  for (const c of r.contests) if (c.total > 0) assert.doesNotMatch(c.reporting || '', /\(0 of /, c.feed_id);
+});
+
+test('CA SOS: each race keeps its own time, and the source time is the newest', async () => {
+  const routes = withHouse((races) => { races[0].ReportingTime = 'November 3, 2026, 8:30 p.m.'; });
+  const r = await ca_sos.read({ fetch: fakeFetch(routes), map: mapFor('results-CA') });
+  const house = JSON.parse(routes['/returns/us-rep/district/all'].body)[0];
+  assert.equal(r.contests.find((c) => c.feed_id === house.raceTitle.replace(/\s+/g, ' ').trim()).updated, '2026-11-04T04:30:00.000Z');
+  assert.equal(r.contests.find((c) => c.feed_id === 'Governor - Statewide Results').updated, '2026-11-04T04:15:00.000Z');
+  assert.equal(r.source_updated, '2026-11-04T04:30:00.000Z');
+});
+
+test('CA SOS: a House race or measure that changes while the governor\'s line stays the same is read, not skipped', async () => {
+  const first = await ca_sos.read({ fetch: fakeFetch(sosRoutes), map: mapFor('results-CA') });
+  const routes = withHouse((races) => { races[0].candidates[0].Votes = String(Number(String(races[0].candidates[0].Votes).replace(/,/g, '')) + 1); });
+  const r = await ca_sos.read({ fetch: fakeFetch(routes), map: mapFor('results-CA'), prevToken: first.changed_token });
+  assert.equal(r.unchanged, undefined);
+  assert.notEqual(r.changed_token, first.changed_token);
 });

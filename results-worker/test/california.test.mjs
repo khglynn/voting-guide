@@ -114,7 +114,7 @@ test('ca_sos: statewide offices, retentions, measures, BOE and House from four r
   assert.deepEqual(r.election, { id: 'gubernatorial-general', name: null, date: '2026-11-03' });
   assert.equal(r.source_updated, '2026-11-04T04:15:00.000Z');
   assert.equal(r.reporting, '23.8% (5,688 of 23,860) precincts reporting');
-  assert.equal(r.changed_token, 'November 3, 2026, 8:15 p.m.|23.8% (5,688 of 23,860) precincts reporting');
+  assert.match(r.changed_token, /^[0-9a-f]{16}$/, 'the token is every path\'s bytes, hashed');
   assert.equal(r.contests.length, 10 + 14 + 4 + 5);
   const gov = r.contests.find((c) => c.feed_id === 'Governor - Statewide Results');
   assert.deepEqual(gov.choices, [{ name: 'Xavier Becerra', votes: 1231614 }, { name: 'Steve Hilton', votes: 831273 }]);
@@ -131,11 +131,12 @@ test('ca_sos: statewide offices, retentions, measures, BOE and House from four r
   assert.equal(checkRead(r, map).ok, true);
 });
 
-test('ca_sos: an unchanged ReportingTime costs one request', async () => {
+test('ca_sos: an unchanged poll reads each path once and finds the same bytes', async () => {
+  const first = await ca_sos.read({ fetch: fakeFetch(sosRoutes), map: mapFor('results-CA') });
   const f = fakeFetch(sosRoutes);
-  const r = await ca_sos.read({ fetch: f, map: mapFor('results-CA'), prevToken: 'November 3, 2026, 8:15 p.m.|23.8% (5,688 of 23,860) precincts reporting' });
+  const r = await ca_sos.read({ fetch: f, map: mapFor('results-CA'), prevToken: first.changed_token });
   assert.equal(r.unchanged, true);
-  assert.equal(f.calls.length, 1);
+  assert.equal(f.calls.length, 4);
 });
 
 test('ca_sos: a ballot whose measure numbers differ is not taken as tonight', async () => {

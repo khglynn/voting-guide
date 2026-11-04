@@ -3629,14 +3629,14 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await tap(page, '[data-fk="whatif"]');
   await page.waitForSelector('.nexts');
   const fold = await text(page, '.nexts');
-  check('Results: the fold is Dates and ballot help: the deadlines, Check or fix your ballot, upcoming dates with sources, the office, no search', /Dates and ballot help/.test(await text(page, '[data-fk="whatif"]')) && /Travis County makes its results official by Nov 17\./.test(fold) && /Mail ballots postmarked by 7 PM Nov 3/.test(fold) && /Check or fix your ballot/.test(fold) && /Your election office/.test(fold) && !(await page.$('#wi-q')) && !/Hays County makes results official/.test(fold), fold.slice(0, 200));
+  check('Results: the fold is Dates and ballot help: the deadlines, Check or fix your ballot, upcoming dates with sources, the office, no search', /Dates and ballot help/.test(await text(page, '[data-fk="whatif"]')) && /Travis County makes its results official by Nov 17\./.test(fold) && /Mail postmarked Nov 3 due 5 PM/.test(fold) && /Check or fix your ballot/.test(fold) && /Your election office/.test(fold) && !(await page.$('#wi-q')) && !/Hays County makes results official/.test(fold), fold.slice(0, 200));
   const bar = await text(page, '.foot-in');
   // No numbers for this ballot (the default test file is ignored): the bar's results line is the county's own page.
   check('Results: the bar says On this ballot and What’s next, with no count, and carries data-results; its results line is Travis County’s page', !!(await page.$('.foot[data-results]')) && /^On this ballot What’s next$/.test(bar) && !(await page.$('.foot .bar')) && (await page.getAttribute('.foot-res a', 'href')) === 'https://results.enr.clarityelections.com/TX/Travis/127492/' && (await text(page, '.foot-res')) === 'Travis County results', `${bar} | ${await text(page, '.foot-res')}`);
   await noSideScroll(page, 'Results strip');
   await tap(page, '.foot [data-act="cheat"]');
   await page.waitForSelector('#cheat');
-  check('Results: What’s next opens the dated list, and its next step is Share the guide', (await text(page, '#cs-h')) === 'What’s next' && /Mail ballots postmarked/.test(await text(page, '#cheat')) && /Share the guide/.test(await text(page, '[data-fk="cs-pass"]')));
+  check('Results: What’s next opens the dated list, and its next step is Share the guide', (await text(page, '#cs-h')) === 'What’s next' && /Mail postmarked Nov 3 due 5 PM/.test(await text(page, '#cheat')) && /Share the guide/.test(await text(page, '[data-fk="cs-pass"]')));
   await tap(page, '[data-fk="cs-pass"]');
   await page.waitForSelector('#pass');
   check('Results: Share the guide: the friends message links the guide, never a save link', (await text(page, '#pass-h')) === 'Share the guide' && /^Find election results: https:\/\/vote\.kevinhg\.com\//.test(await text(page, '#msg-fam')) && !/#v\d~/.test(await text(page, '#msg-fam')));
@@ -3690,10 +3690,10 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await page.waitForSelector('#vz .vz-st', { timeout: 8000 }).catch(() => {});
   const head = await text(page, '#vz');
   // No picks yet, so the summary is the list of where races stand (the dots and their key come with the first pick).
-  const order = await page.evaluate(() => { const v = document.querySelector('#vz'); const l = v && v.querySelector('.st'); const pl = document.querySelector('.picks-line'); return !!(l && pl) && !!(v.compareDocumentPosition(pl) & 4); });
-  check('Results rows: the summary under "Your ballot": status word, its line, where races stand, then the endorsement line', /^Counting/.test(head) && /Election offices are still counting/.test(head) && order && reads >= 1, head.slice(0, 160));
+  const order = await page.evaluate(() => { const v = document.querySelector('#vz'); const l = v && v.querySelector('.st'); return !!l && !document.querySelector('.bhead .picks-line'); });
+  check('Results rows: the summary under "Your ballot": status word, its line, where races stand; the endorsement line moves to the menu after the close', /^Counting/.test(head) && /Offices are still counting/.test(head) && order && reads >= 1, head.slice(0, 160));
   check('Results rows: the strip: "We checked" with the oldest of the offices’ reads, and Refresh', /We checked 9:41 PM CT\. Refresh/.test(await text(page, '#plan')), await text(page, '.plan-fresh'));
-  check('Results rows: the bar’s results line: the status word, when we checked, Refresh, then Travis County’s own update time and words', /^Counting · Checked 9:41 PM CT Refresh Travis County updated 9:35 PM · “128 of 186 vote centers reporting”$/.test(await text(page, '.foot-res')) && /^On this ballot What’s next$/.test(await text(page, '.foot-in')), await text(page, '.foot-res'));
+  check('Results rows: the bar’s results line: one line, the status word, Travis’s own progress words and update time, a Refresh icon', /^Counting · Travis 128 of 186 vote centers/.test(await text(page, '.foot-res .fr-line')) && /9:35 PM$/.test(await text(page, '.foot-res .fr-line')) && !!(await page.$('.foot-res .fr-rf[aria-label="Refresh results"]')) && /^On this ballot What’s next$/.test(await text(page, '.foot-in')) && (await page.evaluate(() => { const l = document.querySelector('.foot-res .fr-line'); return !!l && l.scrollWidth <= l.clientWidth + 1 && l.getBoundingClientRect().height < 44; })), await text(page, '.foot-res'));
   // No picks yet: where races stand, as a list, in place of the dots.
   check('Results rows: no picks: the summary is a list of where races stand, grouped like the ballot, no dots', !!(await page.$('#vz .st .st-sec[data-sec="federal"]')) && !(await page.$('#vz .d')) && /Casar 71%|Texas results/.test(await text(page, '#vz .st')), (await text(page, '#vz .st')).slice(0, 160));
   // A row the file doesn't hold, after the close: the office's page, never the sources' tally.
@@ -3719,8 +3719,25 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await tap(page, '[data-fk="bar-menu"]');
   await page.waitForSelector('.sheet-panel.toc .nv-res');
   const menu = await text(page, '.sheet-panel.toc');
-  check('Results rows: the menu is results first: the word, when we checked, Refresh, each office’s words, the offices’ pages, posted counts per section, no Next up', /^Results on this ballot ?Close Counting We checked 9:41 PM CT ?Refresh Federal offices ?Numbers for/.test(menu) && /Where these numbers come from ?Travis County ?128 of 186 vote centers reporting/.test(menu) && !!(await page.$('.sheet-panel.toc [data-fk="toc-refresh"]')) && !(await page.$('.sheet-panel.toc [data-act="next"]')) && !!(await page.$('.sheet-panel.toc [data-act="jump"][data-to="federal"]')), menu.slice(0, 260));
+  check('Results rows: the menu is results first: the word, when we checked, Refresh, each office’s words, the offices’ pages, posted counts per section, no Next up', /^Results on this ballot ?Close Counting We checked 9:41 PM CT ?Refresh Federal offices ?Numbers for/.test(menu) && /Where these numbers come from ?Travis County ?Results ?“128 of 186 vote centers reporting” · Updated 9:35 PM CT · We checked/.test(menu) && !!(await page.$('.sheet-panel.toc [data-fk="toc-refresh"]')) && !(await page.$('.sheet-panel.toc [data-act="next"]')) && !!(await page.$('.sheet-panel.toc [data-act="jump"][data-to="federal"]')), menu.slice(0, 260));
   await tap(page, '.sheet-panel.toc [data-act="sheet-close"]');
+  // The bar's line opens the menu right at where these numbers come from (DESIGN-OVERNIGHT-2 section 2).
+  await tap(page, '.foot-res .fr-line');
+  await page.waitForSelector('.sheet-panel.toc #toc-src');
+  const srcSeen = await page.evaluate(() => { const h = document.querySelector('.sheet-panel.toc #toc-src'); const bd = document.querySelector('.sheet-panel.toc .sheet-bd'); if (!h || !bd) return false; const a = h.getBoundingClientRect(), b = bd.getBoundingClientRect(); const end = bd.scrollTop + bd.clientHeight >= bd.scrollHeight - 2; return a.top >= b.top - 2 && a.bottom <= b.bottom && (a.top < b.top + 120 || end) && document.activeElement === h; });
+  check('Results rows: the bar’s line opens the menu at where these numbers come from', srcSeen);
+  await tap(page, '.sheet-panel.toc [data-act="sheet-close"]');
+  // Compare with a group: its count leads, your pick stays yours, and tapping it again clears it.
+  const pickBefore = await page.evaluate(() => JSON.parse(localStorage.getItem('vg2')).ballots['TX|austin-tx'].picks['tx-us-house-37']);
+  const grp = await page.$('#vz [data-act="cmp"][data-k="papers"]');
+  if (grp) {
+    await tap(page, '#vz [data-act="cmp"][data-k="papers"]');
+    const gh = await text(page, '#vz');
+    const after = await page.evaluate(() => JSON.parse(localStorage.getItem('vg2')).ballots['TX|austin-tx'].picks['tx-us-house-37']);
+    check('Results rows: comparing with a group leads with its count and changes no pick', /Picks from newspapers and guides in \d+ races?:|No shared picks from newspapers and guides/.test(gh) && after === pickBefore && (await page.getAttribute('#vz [data-act="cmp"][data-k="papers"]', 'aria-pressed')) === 'true', gh.slice(0, 200));
+    await tap(page, '#vz [data-act="cmp"][data-k="papers"]');
+    check('Results rows: tapping the chosen group again clears it: where races stand', !!(await page.$('#vz .st')) && (await page.getAttribute('#vz [data-act="cmp"][data-k="papers"]', 'aria-pressed')) === 'false');
+  }
   // Answering the question may open the race already; open it if not.
   if ((await page.getAttribute('[data-fk="row-tx-us-house-37"]', 'aria-expanded')) !== 'true') await tap(page, '[data-fk="row-tx-us-house-37"]');
   await page.waitForSelector('#ob-tx-us-house-37 .rtab');
@@ -3772,6 +3789,57 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   const bands = (await page.$$eval('.sec .sec-r', (els) => els.map((e) => e.textContent.trim()))).join(' | ');
   check('Results: "Hide races I’ve decided" from before the close hides nothing after it: picked races show their counts, no band says "decided"', !!(await page.$('#i-tx-austin-prop-b .vd.res')) && !!(await page.$('#i-tx-us-senate')) && !/decided/.test(bands) && (await page.evaluate(() => JSON.parse(localStorage.getItem('vg2')).ballots['TX|austin-tx'].hideDecided)) === true, bands.slice(0, 160));
   noErrors(page, 'Hide decided after the close');
+  await ctx.close();
+}
+// Second pass (DESIGN-OVERNIGHT-2): a friend's ballot with no picks: compare with a group, then make those picks yours
+// (today's fill, with Undo); and What's next's dates, a short label opening its full sentence and source.
+{
+  const { ctx, page } = await newPage({ timezoneId: 'America/Chicago' });
+  const FX = fs.readFileSync(path.join(ROOT, 'tests', 'fixtures', 'results', 'TX.json'), 'utf8');
+  await page.route((u) => u.pathname === '/results/2026-11-03/TX.json', (route) => route.fulfill({ status: 200, contentType: 'application/json', body: FX }));
+  await page.goto(`${BASE}/?today=2026-11-03&now=21:42`);
+  await page.fill('#zip', '78704');
+  await throughSetup(page);
+  await page.waitForSelector('#vz .cmp', { timeout: 10000 }).catch(() => {});
+  check('Compare with, no picks: no "Your picks" chip; "Or make your own picks" is offered', !(await page.$('#vz [data-act="cmp"][data-k="mine"]')) && !!(await page.$('#vz [data-fk="cmp-own"]')) && !!(await page.$('#vz .st')));
+  // A lens of your own first (Unions on, through the Edit sheet), so Undo has something distinct to put back (Codex).
+  await tap(page, '#vz [data-fk="cmp-own"]');
+  await page.waitForSelector('.sheet-panel.picks');
+  await tap(page, '.sheet-panel [data-act="chip"][data-k="unions"]');
+  await tap(page, '.sheet-panel [data-fk="sheet-x"]');
+  await page.waitForTimeout(300);
+  const lensOf = () => page.evaluate(() => { const b = JSON.parse(localStorage.getItem('vg2')).ballots['TX|austin-tx']; return JSON.stringify({ sources: b.sources === undefined ? null : b.sources, party: b.party === undefined ? null : b.party }); });
+  const lens0 = await lensOf();
+  // Compact chips: two rows at most at this width, and A party's choices take the groups' place, never more rows.
+  const rows = await page.evaluate(() => new Set([...document.querySelectorAll('#vz .cmp-chips .chip')].map((c) => Math.round(c.getBoundingClientRect().top))).size);
+  await tap(page, '#vz [data-act="cmp"][data-k="party"]');
+  const prows = await page.evaluate(() => new Set([...document.querySelectorAll('#vz .cmp-chips .chip')].map((c) => Math.round(c.getBoundingClientRect().top))).size);
+  check('Compare with: the chips take two rows at most, and A party’s choices replace them in place', rows <= 2 && prows <= rows + 1 && !!(await page.$('#vz .cmp-back')), `${rows} | ${prows}`);
+  await tap(page, '#vz .cmp-back');
+  for (const k of ['papers', 'progressive', 'conservative', 'unions']) {
+    await tap(page, `#vz [data-act="cmp"][data-k="${k}"]`);
+    if (await page.$('#vz [data-act="cmp-take"]')) break;
+  }
+  if (await page.$('#vz [data-act="cmp-take"]')) {
+    await tap(page, '#vz [data-act="cmp-take"]');
+    await page.waitForTimeout(500);
+    const n = await page.evaluate(() => Object.keys(JSON.parse(localStorage.getItem('vg2')).ballots['TX|austin-tx'].picks || {}).length);
+    check('Compare with: "Make these my picks" fills from the group with an Undo, the card now compares with Your picks, focus on its headline', n > 0 && !!(await page.$('.toast')) && (await page.getAttribute('#vz [data-act="cmp"][data-k="mine"]', 'aria-pressed')) === 'true' && !(await page.$('#vz [data-act="cmp-take"]')) && (await page.evaluate(() => document.activeElement && document.activeElement.id)) === 'vz-h', String(n));
+    const lensTaken = await lensOf();
+    await tap(page, '.toast [data-act="undo-bulk"]');
+    await page.waitForTimeout(400);
+    const nAfter = await page.evaluate(() => Object.keys(JSON.parse(localStorage.getItem('vg2')).ballots['TX|austin-tx'].picks || {}).length);
+    const lens1 = await lensOf();
+    check('Compare with: the take switched the lens to the group, and Undo puts back the picks and the sources and party exactly', lensTaken !== lens0 && nAfter === 0 && lens1 === lens0, `${lens0} | ${lensTaken} | ${lens1}`);
+  } else check('Compare with: some group agrees on a race in Austin', false);
+  await tap(page, '[data-fk="bar-cheat"]');
+  await page.waitForSelector('#cheat .pd-s');
+  const first = await page.getAttribute('#cheat .pd-s', 'data-k');
+  await tap(page, `#cheat .pd-s[data-k="${first}"]`);
+  await page.waitForTimeout(300);
+  check('What’s next: a date’s short label opens its full sentence and its source', (await page.getAttribute(`#cheat .pd-s[data-k="${first}"]`, 'aria-expanded')) === 'true' && !!(await page.$('#cheat .pd-x a.pd-src[href^="https://"]')) && /\.\s*$/.test((await text(page, '#cheat .pd-x')) || ''), await text(page, '#cheat .pd-x'));
+  await noSideScroll(page, 'Compare with and dates');
+  noErrors(page, 'Compare with and dates');
   await ctx.close();
 }
 // Results Phase 0, Codex round 2: the close repaints the bar and the endcap, never the address being typed.

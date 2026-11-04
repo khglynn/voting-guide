@@ -26,7 +26,7 @@ import { openHTML, censusSettles, addressSettles } from './open';
 import { mapCounty, seatless } from '../model/maps';
 import { nextStep, afterPolls } from '../model/plan';
 import { nearNow, fmtMiles } from '../model/sites';
-import { resultOf, resCol, noResCol, resultsOn, resultsMode, hasNumbers, footInfo, ballotSources, sourceDown, progressOf, fmtTime, checkedAt, figure, R, hideDecidedNow, type ResCol } from '../model/results';
+import { resultOf, resCol, noResCol, resultsOn, resultsMode, hasNumbers, footInfo, ballotSources, sourceDown, progressOf, fmtTime, checkedAt, figure, R, hideDecidedNow, labelWords, type ResCol } from '../model/results';
 import { figureHTML } from './figure';
 
 /* ---------- names ---------- */
@@ -692,8 +692,8 @@ export function ballotHeadHTML(): string {
   // controls and the rest.
   const fig = afterPolls(S.ballot?.howto) ? figureHTML() : '';
   return `<div class="bhead"><h2 class="step su-h bal-h" id="ballot-h"><span class="step-n" aria-hidden="true">3</span>Your ballot</h2>
-      ${fig}<p class="picks-line"><span>Endorsements: ${esc(lensSummary())}</span><button class="mini" data-act="picks" data-fk="picks-edit">Edit</button></p>
-      ${cov}${filled}${box}
+      ${fig}${fig && afterPolls(S.ballot?.howto) ? '' : `<p class="picks-line"><span>Endorsements: ${esc(lensSummary())}</span><button class="mini" data-act="picks" data-fk="picks-edit">Edit</button></p>
+      ${cov}`}${filled}${box}
     </div>
     ${headsHTML(rest)}`;
 }
@@ -763,29 +763,45 @@ export function barHTML(): string {
     <div class="bar" aria-hidden="true"><i style="width:${pct}%"></i></div></div>`;
 }
 
-/* The bar's results line, above its two buttons (overnight, Kevin: "Show % reporting in the footer", "probs near the
-   hamburger"): the status word, the main source's own progress words (model/results.ts footInfo), when we last
-   checked, and Refresh. Before the first read, "Checking results…"; with nothing on the page from the file, the
-   voter's office's results as a link. Quiet, one line where it fits. */
+/* The bar's results line, above its two buttons (second overnight pass, DESIGN-OVERNIGHT-2 section 2; Kevin: the
+   footer "still has two lines and no % reporting? there has to be a cleaner clearer design"). One line at every width:
+   "Counting · Travis 64 of 201 vote centers · 9:46 PM" and a Refresh icon. The line itself opens the menu at its
+   sources, where every office's words, times and our check time live. When it would overflow, fitFoot drops the
+   office's name first, then shortens the progress, never the status word. */
 const REFRESH = '<svg class="rf-i" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M11.6 5.2A5 5 0 1 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12.2 1.8v3.6H8.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 export const refreshBtn = (fk: string): string => `<button class="linkbtn fr-btn" data-act="results-refresh" data-fk="${fk}"${R.checking ? ' aria-busy="true"' : ''}>${REFRESH}${R.checking ? 'Checking…' : 'Refresh'}</button>`;
+const refreshIcon = (): string => `<button class="fr-rf" data-act="results-refresh" data-fk="bar-refresh" aria-label="${R.checking ? 'Checking for new results' : 'Refresh results'}"${R.checking ? ' aria-busy="true"' : ''}>${REFRESH}</button>`;
+const DOT = '<i class="fr-d" aria-hidden="true"> · </i>';
 export function footResHTML(): string {
   const f = footInfo();
   if (!f) return '';
-  const link = (x: { url: string; text: string } | null): string => (x ? ext(x.url, x.text) : '');
-  let body: string;
-  if (f.kind === 'wait') body = '<span class="fr-t"><span class="fr-p">Checking results…</span></span>';
-  else if (f.kind === 'links' || f.kind === 'failed') body = `<span class="fr-t">${f.kind === 'failed' ? '<span class="fr-p">Couldn’t check just now.</span> ' : ''}${link(f.link) || '<span class="fr-p">Results are on the election offices’ sites.</span>'}</span>${f.kind === 'failed' ? refreshBtn('bar-refresh') : ''}`;
-  // Two short lines (Opus review, Nov 4): the word and when we checked, with Refresh; then each office the bar speaks
-  // for with its own update time (the office behind most rows, and the voter's county's), and only an office's own
-  // progress words, quoted. The zone is said once, on the first line.
-  else {
-    const noZ = (t: string): string => t.replace(/ [A-Z]T$/, '');
-    const src = f.srcs.map((x) => `<span class="fr-s">${x.down ? `Couldn’t reach ${esc(x.who)}. Showing its ${esc(noZ(x.at) || 'last')} numbers.` : `${x.at ? `${esc(x.who)} updated ${esc(noZ(x.at))}` : `${esc(x.who)} doesn’t give an update time`}${x.words ? ` · “${esc(x.words)}”` : ''}`}</span>`).join(' ');
-    body = `<span class="fr-a"><b class="fr-w">${esc(f.word)}</b>${R.failed ? '<span class="fr-sep" aria-hidden="true"> · </span><span class="fr-at">Couldn’t check just now</span>' : f.at ? `<span class="fr-sep" aria-hidden="true"> · </span><span class="fr-at">Checked ${esc(f.at)}</span>` : ''}</span> ${refreshBtn('bar-refresh')}
-      <span class="fr-b">${src}</span>`;
+  if (f.kind === 'wait') return '<div class="foot-res" data-kind="wait"><span class="fr-line"><span class="fr-p">Checking results…</span></span></div>';
+  if (f.kind === 'links' || f.kind === 'failed') {
+    const lead = f.kind === 'failed' ? `<span class="fr-p">Couldn’t check just now</span>${f.link ? DOT : ''}` : '';
+    return `<div class="foot-res" data-kind="${f.kind}"><span class="fr-line">${lead}${f.link ? ext(f.link.url, f.link.text, 'fr-go') : ''}</span>${f.kind === 'failed' ? refreshIcon() : ''}</div>`;
   }
-  return `<div class="foot-res${f.kind === 'res' ? ' fr-grid' : ''}" data-kind="${f.kind}">${body}</div>`;
+  // An office we can't reach keeps "Can't reach Travis" through every fit step; only "showing its 9:12 PM numbers" can
+  // drop (the menu has it). Our own failed read keeps its words too. The office's time and day never drop.
+  if (f.down) {
+    const said = `${f.word}, can’t reach ${f.who}${f.at ? `, showing its ${f.at} numbers` : ''}`;
+    return `<div class="foot-res" data-kind="res"><button class="fr-line" data-act="res-src" data-fk="bar-res" aria-label="${esc(`${said}. Opens where these numbers come from.`)}"><b class="fr-w">${esc(f.word)}</b><span class="fr-dn">${DOT}Can’t reach ${esc(f.who)}</span>${f.at ? `<span class="fr-at dn">${DOT}showing its ${esc(f.at)} numbers</span>` : ''}</button>${refreshIcon()}</div>`;
+  }
+  const at = R.failed ? 'couldn’t check for updates' : f.at;
+  const mid = f.who || f.prog ? `<span class="fr-mid${f.prog ? '' : ' nop'}">${DOT}<span class="fr-who">${esc(f.who)}${f.prog ? ' ' : ''}</span>${f.prog ? `<span class="fr-pl">${esc(f.prog)}</span><span class="fr-ps">${esc(f.progShort)}</span>` : ''}</span>` : '';
+  const said = [f.word, [f.who, f.prog].filter(Boolean).join(' '), at].filter(Boolean).join(', ');
+  return `<div class="foot-res" data-kind="res"><button class="fr-line" data-act="res-src" data-fk="bar-res" aria-label="${esc(`${said}. Opens where these numbers come from.`)}"><b class="fr-w">${esc(f.word)}</b>${mid}${at ? `<span class="fr-at${R.failed ? ' fr-keep' : ''}">${DOT}${esc(at)}</span>` : ''}</button>${refreshIcon()}</div>`;
+}
+/* Fit the bar's line to one line: without the office's name, then with the shortest progress words, then without them.
+   Called after the bar paints and when the window resizes (render.ts, main.ts). */
+export function fitFoot(): void {
+  const el = typeof document !== 'undefined' ? document.querySelector<HTMLElement>('.foot-res[data-kind="res"]') : null;
+  const line = el?.querySelector<HTMLElement>('.fr-line');
+  if (!el || !line) return;
+  el.classList.remove('f1', 'f2', 'f3');
+  for (const c of ['f1', 'f2', 'f3']) {
+    if (line.scrollWidth <= line.clientWidth + 1) break;
+    el.classList.add(c);
+  }
 }
 
 /* ---------- the menu: a sheet under 1180px, a rail from there ----------
@@ -824,16 +840,25 @@ function resMenuHTML(where: 'toc' | 'rail'): string {
   const head = !f || f.kind === 'wait' ? '<p class="nv-rw"><b>Results</b> <span>Checking…</span></p>'
     : !srcs.length || !fig || !fig.posted ? `<p class="nv-rw"><b>Results</b></p><p class="nv-rx">${R.failed && !resultsOn() ? 'Couldn’t check the election offices just now. ' : ''}These races’ counts are on the election offices’ own pages.</p>${R.failed && !resultsOn() ? `<p class="nv-rw">${refreshBtn(`${where}-refresh`)}</p>` : ''}`
     : `<p class="nv-rw"><b>${esc(fig.word)}</b>${R.failed ? ' <span>Couldn’t check just now</span>' : at ? ` <span>We checked ${esc(at)}</span>` : ''} ${refreshBtn(`${where}-refresh`)}</p>`;
-  // Each office's own words and update time, under the sections (GPT copy pass: navigation before source detail).
-  const srcList = !srcs.length || !fig || !fig.posted ? '' : `<h3 class="nv-sh">Where these numbers come from</h3><ul class="nv-srcs">${srcs.map((x) => {
-        const p = progressOf(x);
-        const line = sourceDown(x) ? `Couldn’t reach it. Showing its ${x.updated ? `${fmtTime(x.updated)} ` : 'last '}numbers.`
-          : x.status === 'refused' ? 'Isn’t letting us read its results.'
-          : [p, x.updated ? `updated ${fmtTime(x.updated)}` : ''].filter(Boolean).join(' · ');
-        return `<li><b>${esc(x.name)}</b>${line ? `<span>${esc(line)}</span>` : ''}</li>`;
-      }).join('')}</ul>`;
+  // Where these numbers come from: the one home for detail (DESIGN-OVERNIGHT-2 section 3). Each office with its own
+  // progress words, its own update time, when we last read it, and its results page; then any office on this ballot
+  // whose numbers aren't here, as its page. The bar's line opens the menu here (#<where>-src).
   const offices = (h.results?.sources || []).filter((x) => /^https:\/\//i.test(x.results_url));
-  const links = offices.length ? `<p class="nv-offs">${offices.map((x) => ext(x.results_url, `${x.label || x.name} results`)).join('')}</p>` : '';
+  const used = new Set<string>();
+  const srcRows = srcs.map((x) => {
+    used.add(x.id);
+    const p = progressOf(x);
+    const page = offices.find((o) => o.id === x.id)?.results_url || x.url;
+    const said = sourceDown(x) ? `Couldn’t reach it. Showing its ${x.updated ? `${fmtTime(x.updated)} ` : 'last '}numbers.`
+      : x.status === 'refused' ? 'We can’t read this office’s results. See them on its site.'
+      : [p ? `“${p}”` : '', x.updated ? `Updated ${fmtTime(x.updated)}` : 'No update time given'].filter(Boolean).join(' · ');
+    const banner = labelWords(x).trim();
+    const ck = x.fetched ? `We checked ${fmtTime(x.fetched).replace(/ [A-Z]T$/, '')}` : '';
+    return `<li><span class="nv-sr"><b>${esc(x.name)}</b>${ext(page, 'Results', 'nv-go')}</span><span>${banner ? `${esc(banner)} · ` : ''}${esc(said)}${ck ? ` · ${esc(ck)}` : ''}</span></li>`;
+  }).join('');
+  const rest = offices.filter((o) => !used.has(o.id));
+  const srcList = `<h3 class="nv-sh" id="${where}-src" tabindex="-1">Where these numbers come from</h3>${srcRows ? `<ul class="nv-srcs">${srcRows}</ul>` : ''}`;
+  const links = rest.length ? `<p class="nv-offs">${rest.map((x) => ext(x.results_url, `${x.label || x.name} results`)).join('')}</p>` : '';
   const secs = SECTIONS.map(([k]) => {
     const entries = (by.get(k) || []).filter((e) => !offEntry(e));
     if (!entries.length || !sectionShows(entries)) return '';
@@ -851,7 +876,8 @@ function resMenuHTML(where: 'toc' | 'rail'): string {
     <ul class="nv-list nv-secs">
     ${secs}</ul>
     <div class="nv-from">${srcList}${links}</div>
-    <ul class="nv-list nv-end nv-next-step">${row('data-act="cheat"', 'cheat', 'What’s next', '', ' nv-plan')}</ul>
+    <ul class="nv-list nv-end nv-next-step">${row('data-act="cheat"', 'cheat', 'What’s next', '', ' nv-plan')}
+    ${row('data-act="picks"', 'picks', 'Endorsements', noEndorsements() ? 'Off' : lensSummary())}</ul>
     <ul class="nv-list nv-end"><li><button class="nv nv-report" ${reportAttrs({ fk: `${where}-report` })}><span class="nv-t">Report a problem</span><span class="nv-n"></span>${ARROW}</button></li>
     ${row('data-act="shelf" data-kind="how" aria-haspopup="dialog"', 'how', 'How this guide works', '', ' nv-how')}</ul>`;
 }

@@ -5,7 +5,7 @@
    something goes wrong: everything the v2 plan card held, one tap away. Every date is read from the state file. */
 import type { HowTo, HelpAction, OfficeLine, PlaceEarly } from '../types';
 import { S } from '../state';
-import { esc, fmtDate, todayISO, host } from '../util';
+import { esc, fmtDate, todayISO, host, hash } from '../util';
 import { nextStep, registrationAlert, registerAction, isMailState, applyDated, countyKey, apStateURL, officialLines, type Step } from '../model/plan';
 import { ext, isOpen, bulletsHTML, leadBulletsHTML, escP, srcLink, sentences, telHTML, wordCount, deshout } from './common';
 import { queryOf, textOf, best, type Item } from '../model/search';
@@ -381,7 +381,25 @@ export function nextBodyHTML(h: HowTo, forPrint = false, official = true): strin
   // The arrow rides with the line's last word in a span that never wraps (an inline-flex link breaks off even after a
   // no-break space; Opus review, Nov 4).
   const withEnd = (line: string, tail: string): string => { if (!tail) return esc(line); const i = line.lastIndexOf(' '); return `${esc(line.slice(0, i + 1))}<span class="pd-end">${esc(line.slice(i + 1))}${tail}</span>`; };
-  const list = (rs: typeof rows) => `<ol class="pdates nx-dates">${rs.map((r) => `<li><span class="pd-d">${esc(fmtDate(r.date))}</span><span class="pd-l">${withEnd(r.line, forPrint ? '' : srcA(r.source, fmtDate(r.date)))}</span></li>`).join('')}</ol>`;
+  // Dates you can scan (DESIGN-OVERNIGHT-2 section 4; Kevin: "this text is toooo much"): grouped by date, a range shown
+  // as a range ("Nov 6 to 17", never its last day), each row its short label, with the full sentence and its source
+  // opening under it. A row with no label, and the printed page, show the full sentence.
+  const when = (r: (typeof rows)[number]): string => {
+    if (!r.from) return fmtDate(r.date);
+    const a = fmtDate(r.from, { weekday: false }), b = fmtDate(r.date, { weekday: false });
+    return a.split(' ')[0] === b.split(' ')[0] ? `${a} to ${b.split(' ')[1]}` : `${a} to ${b}`;
+  };
+  const item = (r: (typeof rows)[number]): string => {
+    if (forPrint || !r.short) return `<li class="pd-i">${withEnd(r.line, forPrint ? '' : srcA(r.source, when(r)))}</li>`;
+    const k = `nx-${hash(`${r.date}|${r.line}`)}`;
+    const open = isOpen(k);
+    return `<li class="pd-i"><button class="pd-s" data-act="open" data-k="${k}" aria-expanded="${open}" data-fk="${k}"><span>${esc(r.short)}</span>${CHEV}</button>${open ? `<p class="pd-x">${withEnd(r.line, srcA(r.source, when(r)))}</p>` : ''}</li>`;
+  };
+  const list = (rs: typeof rows) => {
+    const groups = new Map<string, typeof rows>();
+    for (const r of rs) { const k = `${r.from || ''}|${r.date}`; const g = groups.get(k); if (g) g.push(r); else groups.set(k, [r]); }
+    return `<ol class="pdates nx-dates">${[...groups.values()].map((g) => `<li><span class="pd-d">${esc(when(g[0]))}</span><ul class="pd-g">${g.map(item).join('')}</ul></li>`).join('')}</ol>`;
+  };
   const sits = AFTER_SITS.map((id) => sitsOf(h).find((x) => x.id === id)).filter((x): x is Situation => !!x);
   const o = S.ballot ? officeOf() : null;
   const fix = forPrint

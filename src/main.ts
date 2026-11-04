@@ -237,3 +237,8 @@ void boot();
 startResults();
 /* Visit counts (stats.ts): on the guide's Vercel hosts only, once the page has loaded and gone idle. */
 startStats();
+
+/* The bar's results line stays one line when the window changes width (views/ledger.ts fitFoot). */
+import { fitFoot } from './views/ledger';
+let fitT = 0;
+window.addEventListener('resize', () => { window.clearTimeout(fitT); fitT = window.setTimeout(fitFoot, 120); });

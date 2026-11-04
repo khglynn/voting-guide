@@ -1191,29 +1191,28 @@ a.res-st { color: var(--ink); text-decoration: underline; text-decoration-color:
 /* What's next is paper in both themes: its outline buttons were white on paper (Kevin's 9:10 PM screenshot). */
 .cheat .pbtn.line { border-color: var(--ink); color: var(--ink); }
 .cheat .pbtn.gold { background: var(--paper-green); color: var(--on-dusk); }
-/* The bar's results line, above its two buttons: quiet, one line where it fits. */
-:root:has(.foot-res) { --foot-h: 116px; }
-@media (max-width: 359px) { :root:has(.foot-res) { --foot-h: 140px; } }
-.foot-res { display: flex; align-items: center; justify-content: space-between; gap: 4px 12px; max-width: 640px; margin: 0 auto; padding: 8px 16px 0; font-family: var(--f-display); font-variation-settings: "wdth" 84; letter-spacing: .01em; font-size: 14px; line-height: 1.3; color: var(--ink-2); }
+/* The bar's results line, above its two buttons: one line at every width (DESIGN-OVERNIGHT-2 section 2). The line opens
+   the menu at its sources; the icon is Refresh. fitFoot (views/ledger.ts) drops the office's name, then shortens the
+   progress words, when the line would overflow. */
+:root:has(.foot-res) { --foot-h: 98px; }
+.foot-res { display: flex; align-items: center; gap: 4px; max-width: 640px; margin: 0 auto; padding: 4px 6px 0 16px; font-family: var(--f-display); font-variation-settings: "wdth" 84; letter-spacing: .01em; font-size: 14.5px; line-height: 1.25; color: var(--ink-2); }
 .foot-res + .foot-in { min-height: 58px; }
-.fr-t { min-width: 0; }
-/* With numbers: two short lines (the word and when we checked, Refresh; then each office's own update time). */
-.foot-res.fr-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "a r" "b b"; align-items: center; column-gap: 12px; padding-top: 6px; }
-.fr-grid .fr-a { grid-area: a; }
-.fr-grid .fr-btn { grid-area: r; min-height: 32px; margin: 0; }
-.fr-grid .fr-b { grid-area: b; color: var(--ink-2); }
-.fr-s + .fr-s::before { content: "· "; color: var(--muted); }
-/* The source's own words move to a second line as a whole when they don't fit, never split mid-phrase. */
-.fr-p { display: inline-block; max-width: 100%; }
-.fr-w { font-family: var(--f-display); font-weight: 600; font-variation-settings: "wdth" 84; letter-spacing: .015em; font-size: 14.5px; color: var(--ink); }
-.fr-sep, .fr-who, .fr-at { color: var(--muted); }
-.fr-r { display: inline-flex; align-items: center; gap: 10px; flex: none; white-space: nowrap; }
-.fr-at { font-variant-numeric: tabular-nums; }
+.fr-line { flex: 1 1 auto; min-width: 0; display: block; min-height: 36px; padding: 9px 0 8px; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--ink-2); }
+.fr-w { font-weight: 600; color: var(--ink); }
+.fr-d { font-style: normal; color: var(--muted); }
+.fr-at { color: var(--muted); font-variant-numeric: tabular-nums; }
+.fr-ps { display: none; }
+.foot-res.f1 .fr-who, .foot-res.f1 .fr-mid.nop { display: none; }
+.foot-res.f2 .fr-pl { display: none; }
+.foot-res.f2 .fr-ps { display: inline; }
+.foot-res.f3 .fr-mid { display: none; }
+.fr-rf { flex: none; width: 44px; height: 40px; display: inline-flex; align-items: center; justify-content: center; color: var(--ink); border-radius: 2px; }
+.fr-rf .rf-i { width: 18px; height: 18px; }
+.fr-rf[aria-busy="true"] .rf-i, .fr-btn[aria-busy="true"] .rf-i { animation: spin .9s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.foot-res a.fr-go { color: var(--ink); }
 .fr-btn { gap: 5px; font-size: 13.5px; color: var(--ink); }
 .fr-btn .rf-i { width: 13px; height: 13px; flex: none; }
-.fr-btn[aria-busy="true"] .rf-i { animation: spin .9s linear infinite; }
-@keyframes spin { to { transform: rotate(360deg); } }
-.foot-res a { display: inline-block; padding: 4px 0; color: var(--ink); }
 /* The menu once the polls close: where results stand first. */
 .nv-res { padding: 2px 0 10px; border-bottom: 1px solid var(--rule-2); }
 .nv-rw { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; }
@@ -1252,3 +1251,43 @@ a.st-go { display: inline-block; padding: 6px 0; font-size: 14.5px; color: var(-
 .nv-sh { font-family: var(--f-display); font-weight: 600; font-variation-settings: "wdth" 88; letter-spacing: .015em; font-size: 14px; color: var(--muted); margin-bottom: 2px; }
 .nv-from .nv-srcs { margin-top: 0; }
 .nv-next-step { margin-top: 10px; }
+/* ---------- the results card, second pass (DESIGN-OVERNIGHT-2 section 1) ----------
+   "Compare with": your picks first when you have some, then the picking step's groups and A party, one at a time. A
+   little more compact than step 2's chips, since they sit above the answer. */
+.cmp { margin-top: 12px; }
+.cmp-l { font-family: var(--f-display); font-weight: 600; font-variation-settings: "wdth" 88; letter-spacing: .015em; font-size: 14px; color: var(--muted); }
+.cmp-chips, .cmp-parties { display: flex; flex-wrap: wrap; gap: 6px 8px; margin-top: 6px; }
+.cmp .chip { min-height: 40px; padding: 0 11px; font-size: 14.5px; }
+.cmp-parties { margin-top: 8px; padding-left: 10px; border-left: 2px solid var(--rule-2); }
+.cmp-own { margin-top: 6px; font-size: 14.5px; }
+.cmp-own .linkbtn { color: var(--ink-2); }
+.vz-head { margin-top: 14px; font-weight: 600; }
+.vz-head + .vz-more { margin-top: 2px; }
+.cmp-take { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; margin-top: 12px; }
+.cmp-take span { font-size: 14px; color: var(--muted); }
+/* The menu's sources: each office's own words and time, our check and its page. */
+.nv-srcs .nv-ck { color: var(--muted); }
+.nv-srcs .nv-ck a { color: var(--ink-2); display: inline-block; padding: 4px 0; }
+.nv-sh:focus { outline: none; }
+/* What's next dates, grouped (DESIGN-OVERNIGHT-2 section 4): a date (or range) and its short rows; each row opens to
+   its full sentence and source. The nested list doesn't take the date list's grid. */
+.nx-dates > li { align-items: start; }
+.nx-dates .pd-g { display: grid; min-width: 0; }
+.nx-dates .pd-g > li { display: block; grid-column: auto; padding: 0; border: 0; }
+.nx-dates .pd-g > li + li { border-top: 1px dotted var(--rule); }
+.pd-s { display: flex; width: 100%; justify-content: space-between; align-items: center; gap: 10px; min-height: 36px; padding: 2px 0; text-align: left; line-height: 1.3; }
+.pd-s .chev { width: 12px; height: 12px; flex: none; color: var(--muted); }
+.pd-s[aria-expanded="true"] .chev { transform: rotate(180deg); }
+.pd-x { padding: 0 0 8px; font-size: 14.5px; line-height: 1.4; color: var(--ink-2); }
+.nx-dates .pd-i { line-height: 1.35; }
+.nv-srcs .nv-sr { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.nv-srcs a.nv-go { flex: none; color: var(--ink-2); padding: 4px 0; }
+.vz .vz-key { gap: 4px 12px; font-size: 13px; }
+.cmp-hint { color: var(--muted); }
+/* Compare with, compact (PR #139 review): pill chips, two rows at most at 390 px with Your picks. */
+.cmp .chip.cmp-c { min-height: 34px; padding: 0 11px; font-size: 14px; border-width: 1px; border-radius: 17px; gap: 5px; }
+.cmp .chip.cmp-c .tick { width: 11px; height: 11px; }
+.cmp .chip.cmp-back { color: var(--muted); }
+.cmp-chips { gap: 6px; }
+.vz-st:focus { outline: none; }
+.foot-res.f1 .fr-at.dn { display: none; }

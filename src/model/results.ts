@@ -12,8 +12,11 @@
    5. Unmatched is a link, never a guess. Results are ink; gold stays your pick. */
 import type { Contest, Item, ItemResult, ResultCand, ResultSlice, ResultsFile, ResultsSourceEntry, ResultsSource, Measure } from '../types';
 import { S } from '../state';
-import { isRCV, isMultiSeat, isMultiJudge, status, pageWalk, ranksOf, type SectionKey } from '../ballot';
+import { isRCV, isMultiSeat, isMultiJudge, isPartisan, isMaybe, status, pageWalk, ranksOf, type SectionKey } from '../ballot';
+import { lineup, agreed } from './tally';
+import { chipMembers, CHIPS, type ChipKey } from './lens';
 import { pickShort } from './labels';
+import { todayISO } from '../util';
 import { afterPolls, countyKey } from './plan';
 
 /* ---------- the file in memory ---------- */
@@ -289,11 +292,15 @@ function numCol(it: Item, r: ItemResult): ResCol {
    complete, or a tie at the top. */
 export type Cmp = 'won' | 'lost' | 'ahead' | 'behind' | 'nc';
 export function compare(it: Item, r: ItemResult | null): Cmp {
+  return compareNames(it, r, pickNames(it));
+}
+/* The same comparison for any set of names: your picks, or a group's or a party's (the card's "Compare with"). For a
+   measure or a judge, the names are "YES" or "NO". */
+export function compareNames(it: Item, r: ItemResult | null, names: string[]): Cmp {
   if (!hasNumbers(r) || spans(r)) return 'nc';
-  const names = pickNames(it);
   if (!names.length) return 'nc';
   if (isMeasureLike(it) && r.measure) {
-    const side = it.kind === 'measure' ? names[0] : S.b.picks[it.id];
+    const side = names[0];
     if (side !== 'YES' && side !== 'NO') return 'nc';
     const pass = passedOf(r);
     if (pass !== null) return (pass === (side === 'YES')) ? 'won' : 'lost';
@@ -450,22 +457,6 @@ function rowsBy(): Map<string, number> {
   for (const it of shownItems()) { const r = resultOf(it); if (r && hasNumbers(r)) n.set(r.source, (n.get(r.source) || 0) + 1); }
   return n;
 }
-/* The offices the bottom bar speaks for (Opus review, Nov 4): the one behind most of this page's rows, and the voter's
-   own county's when its numbers are on rows here too, each with its own update time, so the age of the local numbers
-   is always on screen. Only offices whose numbers fill a row: never one county's slice of a district race (Bexar on an
-   Austin ballot), never a link-only office. */
-export function barSources(): ResultsSourceEntry[] {
-  const n = rowsBy();
-  const fed = ballotSources().filter((x) => x.status !== 'link_only' && (n.get(x.id) || 0) > 0);
-  if (!fed.length) return [];
-  const most = [...fed].sort((a, b) => (n.get(b.id) || 0) - (n.get(a.id) || 0))[0];
-  const home = homeCounty();
-  const k = home ? countyKey(bare(home)) : null;
-  const rows = (S.ballot?.howto.results?.sources || []).filter((x) => x.kind === 'county');
-  const hc = k ? rows.find((x) => [...(x.counties || []), x.label || '', x.name].some((c) => c && countyKey(bare(c)) === k)) : undefined;
-  const mine = hc ? fed.find((x) => x.id === hc.id) : undefined;
-  return mine && mine.id !== most.id ? [most, mine] : [most];
-}
 export const sourceName = (id: string): string => R.file?.sources.find((s) => s.id === id)?.name || 'The election office';
 /* "We checked 10:13 PM CT": when our fetcher last read the sources, never the page's own load. With several sources,
    the oldest of their times, so it never claims a newer read than every one of them had (overnight: the run of each
@@ -491,25 +482,83 @@ export function sourceLines(srcs = ballotSources()): string[] {
     return `${when}${labelWords(s)}${p ? ` “${p}.”` : ''}`;
   });
 }
-/* The bottom bar's results line (overnight; Opus review, Nov 4): the status word, when we last checked, and Refresh;
-   under it each office the bar speaks for (barSources) with its own update time and, only when the office gives them,
-   its own progress words. `kind`: 'wait' before the first read, 'links' when nothing on this page has numbers here (it
-   then carries the office's link), 'failed' when the first read failed. */
-export interface FootSrc { who: string; at: string; words: string; down: boolean }
-export interface FootInfo { kind: 'res' | 'wait' | 'links' | 'failed'; word: string; at: string; srcs: FootSrc[]; link: { url: string; text: string } | null }
+/* The bottom bar's results line (second overnight pass, DESIGN-OVERNIGHT-2 section 2): one line, never wrapping on a
+   phone. The status word, one office's own progress words shortened by dropping filler, that office's own update
+   time, and Refresh. Which office: the voter's county's when it gives progress words, else the state's, else the one
+   behind most rows on this page; with none giving words, the voter's county's (so the age of the local numbers is on
+   screen), else the one behind most rows. Our check time is in the menu. `kind`: 'wait' before the first read,
+   'links' when nothing on this page has numbers here (it then carries the office's link), 'failed' when the first
+   read failed. */
+export interface FootInfo { kind: 'res' | 'wait' | 'links' | 'failed'; word: string; who: string; prog: string; progShort: string; at: string; down: boolean; link: { url: string; text: string } | null }
+export function footSource(): ResultsSourceEntry | null {
+  const n = rowsBy();
+  const fed = ballotSources().filter((x) => x.status !== 'link_only' && (n.get(x.id) || 0) > 0);
+  if (!fed.length) return null;
+  const most = [...fed].sort((a, z) => (n.get(z.id) || 0) - (n.get(a.id) || 0))[0];
+  const home = homeSource(fed);
+  const state = fed.find((x) => rowFor(x.id)?.kind === 'state');
+  const worded = (x: ResultsSourceEntry | undefined): boolean => !!x && !sourceDown(x) && !!progressOf(x);
+  return [home, state, most].find(worded) || home || most;
+}
+/* The voter's county's office among these: the address or ZIP's county, else the place's first county. */
+function homeSource(srcs: ResultsSourceEntry[]): ResultsSourceEntry | undefined {
+  const home = homeCounty();
+  const k = home ? countyKey(bare(home)) : null;
+  if (!k) return undefined;
+  const rows = (S.ballot?.howto.results?.sources || []).filter((x) => x.kind === 'county');
+  const hc = rows.find((x) => [...(x.counties || []), x.label || '', x.name].some((c) => c && countyKey(bare(c)) === k));
+  return hc ? srcs.find((x) => x.id === hc.id) : undefined;
+}
+/* An office's progress words with the filler dropped, never reworded into a number it didn't print: "Polling Locations
+   Reporting: 27%" is "27% of polling places", "128 of 186 Vote Centers Reporting" is "128 of 186 vote centers".
+   `tiny`: the shortest honest form, for a line that would overflow ("27%", "128 of 186"). Anything else stays as the
+   office wrote it. */
+export function shortProgress(p: string, tiny = false): string {
+  const t = p.trim().replace(/\.$/, '').replace(/\s+/g, ' ');
+  const noun = (x: string): string => x.trim().toLowerCase().replace(/\bpolling locations\b/, 'polling places').replace(/\bvoting locations\b/, 'voting places');
+  let m = t.match(/^(.+?)\s+reporting:?\s*(\d+(?:\.\d+)?%)$/i);
+  // A percent keeps its noun even in the shortest form: a bare "27%" says nothing about what was counted (PR #139 review).
+  if (m) return `${m[2]} of ${noun(m[1])}`;
+  m = t.match(/^(\d+(?:\.\d+)?%)\s+(?:of\s+)?(.+?)(?:\s+(?:reporting|reported))?$/i);
+  if (m) return `${m[1]} of ${noun(m[2])}`;
+  m = t.match(/^([\d,]+)\s*(?:of|\/)\s*([\d,]+)\s+(.+?)(?:\s+(?:completely\s+)?(?:reporting|reported))?$/i);
+  if (m) return tiny ? `${m[1]} of ${m[2]}` : `${m[1]} of ${m[2]} ${noun(m[3])}`;
+  return t;
+}
+function footTime(iso: string): string {
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return '';
+  const tz = zoneOf() || undefined;
+  try {
+    const t = d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: tz });
+    const day = d.toLocaleDateString('en-CA', { timeZone: tz });
+    // Today where the polls are (the page's own clock honors ?today= for checks).
+    const today = /[?&]today=\d{4}-\d{2}-\d{2}/.test(typeof location !== 'undefined' ? location.search : '') ? todayISO() : new Date().toLocaleDateString('en-CA', { timeZone: tz });
+    const date = day === today ? '' : `${d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: tz })}, `;
+    const ab = tz ? ZONE_ABBR[tz] || '' : '';
+    let viewer = '';
+    try { viewer = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch { /* keep the zone */ }
+    return `${date}${t}${ab && ZONE_ABBR[viewer] !== ab ? ` ${ab}` : ''}`;
+  } catch { return fmtTime(iso); }
+}
 export function footInfo(): FootInfo | null {
   if (!resultsMode()) return null;
   const b = S.ballot!;
   const rows = (b.howto.results?.sources || []).filter((x) => httpsOK(x.results_url));
   const home = rows.find((x) => x.kind === 'county') || rows.find((x) => x.kind === 'state');
   const link = home ? { url: home.results_url, text: `${home.label || home.name} results` } : httpsOK(b.howto.results_url) ? { url: b.howto.results_url!, text: `${b.howto.results_source || b.stateName} results` } : null;
-  const base: FootInfo = { kind: 'res', word: '', at: '', srcs: [], link };
+  const base: FootInfo = { kind: 'res', word: '', who: '', prog: '', progShort: '', at: '', down: false, link };
   if (resultsWaiting()) return { ...base, kind: 'wait' };
   if (!resultsOn()) return { ...base, kind: R.failed ? 'failed' : 'links' };
-  const f = figure();
-  const srcs = barSources();
-  if (!f || !f.posted || !srcs.length) return { ...base, kind: 'links' };
-  return { ...base, word: f.word, at: checkedAt(), srcs: srcs.map((m) => ({ who: officeShort(m.id), at: m.updated ? fmtTime(m.updated) : '', words: sourceDown(m) ? '' : progressOf(m), down: sourceDown(m) })) };
+  const f = figure(null);
+  const m = footSource();
+  if (!f || !f.posted || !m) return { ...base, kind: 'links' };
+  const down = sourceDown(m);
+  const p = down ? '' : progressOf(m);
+  // The office's own time: its day whenever it isn't today where the polls are, and its zone whenever the viewer is in
+  // another one, so an old update never reads as today's (PR #139 review). fitFoot never drops it.
+  const at = m.updated ? footTime(m.updated) : '';
+  return { ...base, word: f.word, who: shortCounty(officeShort(m.id)), prog: p ? shortProgress(p) : '', progShort: p ? shortProgress(p, true) : '', at, down };
 }
 /* "Hide races I've decided" only before the close (Opus review, Nov 4): after it, every row carries its count, so the
    switch (still saved as it was) hides nothing. */
@@ -521,6 +570,70 @@ export function newestUpdate(srcs = ballotSources()): string {
 }
 /* What each source's fetch time is, to tell a Refresh that really read something from one that didn't. */
 export const fetchedSig = (f: ResultsFile | null): string => (f ? f.sources.map((s) => `${s.id}:${s.fetched || ''}`).join('|') : '');
+
+/* ---------- compare with (second overnight pass, DESIGN-OVERNIGHT-2 section 1) ----------
+   What the results card compares the count with: your own picks, a group from the picking step, or a party. Chosen for
+   this visit only (S.ui.cmp), never saved; choosing a group or a party never changes your picks or your sources. */
+export type CmpSel = { kind: 'mine' } | { kind: 'group'; key: ChipKey } | { kind: 'party'; party: string };
+/* A group's pick on a race, in one place so Kevin can switch it in the morning. 'agree' is today's "Fill in my ballot
+   with their picks" rule (bulk.ts planAgree: every source in the group that weighed in made the same pick; anything
+   else is split). 'majority' takes the pick most of them made, a tie being split. */
+export const GROUP_RULE: 'agree' | 'majority' = 'agree';
+/* Whether this ballot has a pick of your own on a race the page shows (what "Your picks" compares). */
+export const anyPick = (): boolean => !!S.ballot && shownItems().some((it) => picked(it));
+/* Whether you've made any choice at all on this ballot, finished or not: a pick, a skip, a seat of several, a ranking
+   started (Codex, Nov 4). "Make these my picks" is offered only without one, so it never overwrites your own work. */
+export const anyChoice = (): boolean => !!S.ballot && (Object.keys(S.b.picks || {}).length > 0 || Object.values(S.b.ranks || {}).some((r) => Array.isArray(r) && r.length > 0));
+/* Compare with starts over on each ballot: Your picks whenever it has some (PR #139 review). app.ts resetUI calls this. */
+export function resetCompare(): void { S.ui.cmp = undefined; S.ui.takeWas = null; S.ui.open.delete('cmp-party'); }
+/* What the card compares with now: what you chose this visit, else your picks when you have some, else nothing. */
+export function cmpSel(): CmpSel | null {
+  const v = S.ui.cmp;
+  if (v === undefined || v === 'mine') return anyPick() ? { kind: 'mine' } : null;
+  if (!v) return null;
+  if (v.startsWith('party:')) return { kind: 'party', party: v.slice(6) };
+  return CHIPS.some((c) => c.key === v) ? { kind: 'group', key: v as ChipKey } : null;
+}
+/* The names a choice picks on a row ("YES" or "NO" for a measure or a judge), 'split' when a group's sources split,
+   or null when it has no pick there. A party picks its own candidate in a partisan race, and nothing where it has two
+   (a top-two race) or none. */
+export function lensNames(it: Item, sel: CmpSel): string[] | 'split' | null {
+  if (sel.kind === 'mine') return picked(it) ? pickNames(it) : null;
+  // A row that may not be on this ballot ("Maybe on your ballot") counts for nobody but you: the fill leaves it too.
+  if (isMaybe(it.id)) return null;
+  if (it.kind === 'contest' && isMultiJudge(it)) return null;
+  if (sel.kind === 'party') {
+    if (it.kind !== 'contest' || it.is_retention || !isPartisan(it)) return null;
+    const theirs = it.candidates.filter((c) => c.parties.includes(sel.party));
+    if (!theirs.length) return null;
+    if (isMultiSeat(it)) return theirs.length <= it.vote_for ? theirs.map((c) => c.name) : null;
+    return theirs.length === 1 ? [theirs[0].name] : null;
+  }
+  const members = chipMembers(S.ballot!, sel.key);
+  if (!members.length) return null;
+  const l = lineup(it, members);
+  let ch: string[];
+  const ag = agreed(l);
+  if (ag === null) return null;
+  if (ag !== 'split') ch = ag;
+  else {
+    // The majority rule counts every group, a group without a pick included; a tie, or a top group with no pick, is split.
+    if (GROUP_RULE !== 'majority' || l.groups.length < 2) return 'split';
+    const top = [...l.groups].sort((a, z) => z.sources.length - a.sources.length);
+    if (top[0].sources.length === top[1].sources.length || !top[0].choices.length) return 'split';
+    ch = top[0].choices;
+  }
+  if (isMeasureLike(it)) return ch.length === 1 && (ch[0] === 'YES' || ch[0] === 'NO') ? [ch[0]] : null;
+  if (it.kind !== 'contest') return null;
+  const names = ch.filter((n) => it.candidates.some((c) => c.name === n));
+  if (names.length !== ch.length) return null;
+  // Several seats: up to the seat count, as for a party. Ranked choice: one agreed first choice, never compared until the
+  // final round (compareNames), as for a party or your own ranking (PR #139 review).
+  if (isMultiSeat(it)) return names.length >= 1 && names.length <= it.vote_for ? names : null;
+  return names.length === 1 ? names : null;
+}
+/* How a choice is named in the card ("Your picks", "Progressive groups", "the Democratic Party"). */
+export const selName = (sel: CmpSel): string => (sel.kind === 'mine' ? 'Your picks' : sel.kind === 'group' ? CHIPS.find((c) => c.key === sel.key)!.label : `${sel.party} Party`);
 
 /* ---------- the figure ---------- */
 export type DotKind = 'up' | 'down' | 'wp' | 'po' | 'w' | 'ln';
@@ -538,15 +651,18 @@ export interface Figure {
   links: number; allLinks: boolean;
   questions: { n: number; first: string | null };
   notes: string[];
+  /* what the dots compare with (null: nothing chosen), and how many races a group's sources split on */
+  sel: CmpSel | null;
+  splits: number;
 }
-export function figure(): Figure | null {
+export function figure(sel: CmpSel | null = cmpSel()): Figure | null {
   if (!resultsOn()) return null;
   const b = S.ballot!;
   const walk = pageWalk().filter((x) => !x.folded);
   const rows: Figure['rows'] = [];
   const counts: Record<Cmp, number> = { won: 0, lost: 0, ahead: 0, behind: 0, nc: 0 };
   const why = new Set<string>();
-  let others = 0, posted = 0, total = 0, links = 0, pending = 0, done = 0, official = 0;
+  let others = 0, posted = 0, total = 0, links = 0, pending = 0, done = 0, official = 0, splits = 0;
   const kinds = { races: 0, measures: 0 };
   let qn = 0; let first: string | null = null;
   for (const x of walk) {
@@ -554,8 +670,11 @@ export function figure(): Figure | null {
     const it = b.byId.get(x.key);
     if (!it) continue;
     const r = resultOf(it);
-    const pick = picked(it);
-    const cmp = pick ? compare(it, r) : 'nc';
+    const ln = sel ? lensNames(it, sel) : null;
+    if (ln === 'split') splits++;
+    const names = Array.isArray(ln) && ln.length ? ln : null;
+    const pick = !!names;
+    const cmp = names ? compareNames(it, r, names) : 'nc';
     const num = hasNumbers(r);
     // A row the file has nothing for is a link to its office now (noResCol), so it counts as one.
     const link = isLink(r) || (!r && !!officeFor(it));
@@ -580,45 +699,58 @@ export function figure(): Figure | null {
   // "Unofficial" and "Official" only when every race on the ballot has a count here marked so; a race that links out or
   // isn't in the file may still be counting (adversarial pass, Nov 3).
   const word: Figure['word'] = total && done === total ? (official === total ? 'Official' : 'Unofficial') : 'Counting';
-  const explain = !posted ? (links && !pending ? 'Results for these races are on the election offices’ own sites.' : 'No numbers posted yet. Election offices post as they count.')
-    : word === 'Counting' ? (done === posted ? 'The counts here are marked complete. Other races may still be counting.' : 'Election offices are still counting, so these numbers will change.')
-    : word === 'Unofficial' ? 'The election offices marked their counts complete. They become official later.'
-    : 'The election offices made these counts official.';
+  // One short sentence under the status word, and nothing else: offices and times are in the bar and the menu.
+  const explain = !posted ? (links && !pending ? 'Results for these races are on the election offices’ own sites.' : 'No numbers posted yet. Offices post as they count.')
+    : word === 'Counting' ? (done === posted ? 'These results are unofficial. Other races may still be counting.' : 'Offices are still counting. Numbers may change.')
+    : word === 'Unofficial' ? 'Offices marked their counts complete. They become official later.'
+    : 'Offices made these counts official.';
   const notes: string[] = [];
   if (why.has('rcv')) notes.push('Ranked choice races aren’t compared until the final round.');
   if (why.has('multi')) notes.push('Races that fill more than one seat aren’t compared until the count is complete.');
   if (why.has('partial')) notes.push('A pick for several seats where some won and some didn’t isn’t counted either way.');
-  if (why.has('span')) notes.push('Races across county lines aren’t compared: each county posts its own count, and we don’t add them up.');
+  // Races across county lines: the open row of such a race says why (each county posts its own count); not here.
   if (why.has('tie')) notes.push('A race tied at the top isn’t compared.');
   if (why.has('unknown')) notes.push('A race where a name not in this guide could be leading isn’t compared.');
   if (why.has('edge')) notes.push('A measure exactly at its bar to pass isn’t compared.');
   if (why.has('rule')) notes.push('A measure whose rule to pass is more than a share of yes and no isn’t compared.');
   if (why.has('block')) notes.push('A block vote that elects everyone either way isn’t compared.');
-  return { word, explain, rows, picks: Object.values(counts).reduce((a, n) => a + n, 0), counts, others, othersKinds: kinds, posted, total, links, allLinks: !posted && !pending && links > 0, questions: { n: qn, first }, notes };
+  return { word, explain, rows, picks: Object.values(counts).reduce((a, n) => a + n, 0), counts, others, othersKinds: kinds, posted, total, links, allLinks: !posted && !pending && links > 0, questions: { n: qn, first }, notes, sel, splits };
 }
-/* "Your 25 picks: 15 ahead · 9 behind · 1 we can't compare yet" */
+/* The card's headline once something is chosen: "Your 16 picks: 8 ahead · 3 behind · 5 not compared yet", "Picks from
+   progressive groups in 16 races: ..." (true whether one source or several weighed in; PR #139 review), "Democratic Party
+   candidates in 12 races: ...". */
 export function countLine(f: Figure): string {
-  if (!f.picks) return '';
+  if (!f.picks || !f.sel) return '';
   const c = f.counts;
   const parts = [
     c.won ? `${c.won} won` : '', c.ahead ? `${c.ahead} ahead` : '', c.lost ? `${c.lost} didn’t win` : '', c.behind ? `${c.behind} behind` : '',
-    c.nc ? `${c.nc} we can’t compare yet` : '',
+    c.nc ? `${c.nc} not compared yet` : '',
   ].filter(Boolean);
-  return `Your ${f.picks === 1 ? '1 pick' : `${f.picks} picks`}: ${parts.join(' · ')}`;
+  const n = f.picks;
+  const head = f.sel.kind === 'mine' ? `Your ${n === 1 ? '1 pick' : `${n} picks`}`
+    : f.sel.kind === 'group' ? `Picks from ${selName(f.sel).toLowerCase()} in ${n === 1 ? '1 race' : `${n} races`}`
+    : `${selName(f.sel)} candidates in ${n === 1 ? '1 race' : `${n} races`}`;
+  return `${head}: ${parts.join(' · ')}`;
 }
+/* A group's sources that split: listed, never compared. */
+export const splitLine = (f: Figure): string => (f.sel && f.sel.kind === 'group' && f.splits ? `Their picks differ in ${f.splits === 1 ? '1 more race' : `${f.splits} more races`}.` : '');
 export function othersLine(f: Figure): string {
   if (!f.others) return '';
   const { races, measures } = f.othersKinds;
   const what = races && measures ? 'races and measures' : measures ? (measures === 1 ? 'measure' : 'measures') : races === 1 ? 'race' : 'races';
   return `${f.others} other ${what}${f.picks ? '' : ''}`;
 }
-/* The open row's line about one dot, for the figure's list: "Paxton 51% · your pick Talarico". */
-export function dotLine(it: Item): string {
+/* The open row's line about one dot, for the figure's list: "Paxton 51% · your pick Talarico", or with a group chosen
+   "Paxton 51% · counting · their pick Talarico" or "· their picks differ". */
+export function dotLine(it: Item, sel: CmpSel | null = cmpSel()): string {
   const r = resultOf(it);
-  const pk = picked(it) ? pickShort(it) : null;
+  const ln = sel && sel.kind !== 'mine' ? lensNames(it, sel) : null;
+  const pk = sel && sel.kind !== 'mine'
+    ? (ln === 'split' ? 'their picks differ' : Array.isArray(ln) && ln.length ? `their pick ${ln.map((n) => (n === 'YES' ? 'Yes' : n === 'NO' ? 'No' : shortOf(it, n))).join(', ')}` : null)
+    : picked(it) ? `your pick ${pickShort(it)}` : null;
   const col = r ? resCol(it, r) : noResCol(it);
-  if (!col) return pk ? `Not in this guide’s results · your pick ${pk}` : 'Not in this guide’s results';
-  const main = col.kind === 'num' ? `${col.main}${col.sub ? ` ${col.sub}` : ''}${col.area ? ` · ${col.area}` : ''}` : col.main;
-  return `${main}${pk ? ` · your pick ${pk}` : ''}`;
+  if (!col) return pk ? `Not in this guide’s results · ${pk}` : 'Not in this guide’s results';
+  const main = col.kind === 'num' ? `${col.main}${col.sub ? ` · ${col.sub}` : ''}${col.area ? ` · ${col.area}` : ''}` : col.main;
+  return `${main}${pk ? ` · ${pk}` : ''}`;
 }
 export type { Measure };

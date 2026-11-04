@@ -375,7 +375,9 @@ export interface ResultsSource {
 /* A dated step after Election Day (data/whats-next.json's after_election rows that build-data keeps): `date` is the
    day (the last day of a "between" window, which starts `from`), `line` what the guide shows, `counties` the counties
    a county row names (absent when it speaks for all of them). */
-export interface NextDate { state: string; level: 'state' | 'county' | 'city'; jurisdiction: string; date: string; from?: string; line: string; source: string; confidence: string; counties?: string[] }
+/* `short` (Nov 4): the row's label in seven words or fewer, for What's next's scannable list; the full `line` and its
+   source open under it. Absent, the list shows the full line. */
+export interface NextDate { state: string; level: 'state' | 'county' | 'city'; jurisdiction: string; date: string; from?: string; line: string; short?: string; source: string; confidence: string; counties?: string[] }
 export interface ResultsData { sources: ResultsSource[]; next: NextDate[] }
 
 /* One rule of a district map: the races it settles (office, and scope when the rule names one, both

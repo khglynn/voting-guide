@@ -32,8 +32,9 @@ export async function bodyText(res) {
    injects a "/cdn-cgi/challenge-platform/" script into ordinary pages, so words in the body would stop a real source. */
 const CHALLENGE_TITLE = /just a moment|attention required|captcha|human verification|verify you are (?:a )?human|are you a robot/i;
 const CHALLENGE_WORDS = /captcha|human verification|confirm you are (?:a )?human|verify you are (?:a )?human|are you a robot/i;
-export function challengeOf(res, body = '', { page = false } = {}) {
-  if (res.status === 405) return 'HTTP 405, a bot check';
+export function challengeOf(res, body = '', { page = false, method = 'GET' } = {}) {
+  // A bare 405 is a bot check on a GET (Clarity's WAF); on the Oregon form POST it can be a real "method not allowed".
+  if (res.status === 405 && method === 'GET') return 'HTTP 405, a bot check';
   const waf = res.headers.get('x-amzn-waf-action');
   if (waf) return `HTTP ${res.status}, a bot check (x-amzn-waf-action: ${waf})`;
   if (/challenge/i.test(res.headers.get('cf-mitigated') || '')) return `HTTP ${res.status}, a bot check (cf-mitigated: challenge)`;
@@ -57,13 +58,13 @@ export async function get(fetchFn, url, { identity = 'named', expect = 'json', h
   if (res.status >= 300 && res.status < 400 && res.status !== 304) return { verdict: 'refused', ...meta, error: `HTTP ${res.status}: redirected to ${res.headers.get('location') || 'somewhere else'}` };
   if (res.url && res.url !== url) return { verdict: 'refused', ...meta, error: `served from ${res.url}, not the address asked for` };
   if (res.status === 304) return { verdict: 'not_modified', ...meta };
-  const marked = challengeOf(res);
+  const marked = challengeOf(res, '', { method });
   if (marked) return { verdict: 'refused', challenge: true, ...meta, error: marked };
   if ([401, 403, 429].includes(res.status)) return { verdict: 'refused', ...meta, error: `HTTP ${res.status}` };
   if (!res.ok) {
     let page = '';
     try { page = await bodyText(res); } catch { /* an unreadable error body is just an error */ }
-    const ch = challengeOf(res, page);
+    const ch = challengeOf(res, page, { method });
     if (ch) return { verdict: 'refused', challenge: true, ...meta, error: ch };
     const via = [res.headers.get('server'), res.headers.get('x-cache'), res.headers.get('cf-ray') ? 'cf' : null].filter(Boolean).join(', '); return { verdict: 'error', ...meta, error: `HTTP ${res.status} on ${url.split('/').slice(-3).join('/')}${via ? ` (${via})` : ''}` };
   }
@@ -73,6 +74,6 @@ export async function get(fetchFn, url, { identity = 'named', expect = 'json', h
     try { return { verdict: 'ok', ...meta, body, json: JSON.parse(body) }; } catch { return { verdict: 'error', ...meta, error: 'the data was not valid JSON' }; }
   }
   if (expect === 'text' && /^\s*<(!doctype|html)/i.test(body)) return { verdict: 'refused', ...meta, error: 'an HTML page came back where a short text file was expected' };
-  if (expect === 'html') { const ch = challengeOf(res, body, { page: true }); if (ch) return { verdict: 'refused', challenge: true, ...meta, error: ch }; }
+  if (expect === 'html') { const ch = challengeOf(res, body, { page: true, method }); if (ch) return { verdict: 'refused', challenge: true, ...meta, error: ch }; }
   return { verdict: 'ok', ...meta, body };
 }

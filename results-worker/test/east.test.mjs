@@ -78,7 +78,7 @@ test('nyc_enr: a refusal or a challenge page is never read as results', async ()
   let r = await nyc.read({ fetch: fakeFetch({ '/index.html': { status: 403, body: 'Just a moment...' } }), map: mapFor('results-NY-nyc') });
   assert.equal(r.verdict, 'refused');
   r = await nyc.read({ fetch: fakeFetch({ '/index.html': { status: 200, body: '<html><title>Just a moment...</title></html>' } }), map: mapFor('results-NY-nyc') });
-  assert.equal(r.verdict, 'error');
+  assert.equal(r.verdict, 'refused', 'a challenge page stops the source, never retried (overnight review fix 6)');
   r = await nyc.read({ fetch: fakeFetch({ '/index.html': { status: 302, body: '', headers: { location: 'https://vote.nyc/' } } }), map: mapFor('results-NY-nyc') });
   assert.equal(r.verdict, 'refused');
 });

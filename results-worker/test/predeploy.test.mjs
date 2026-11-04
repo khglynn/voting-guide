@@ -9,6 +9,7 @@ import * as multco from '../src/adapters/multco.js';
 import * as ca_sos from '../src/adapters/ca_sos.js';
 import * as lvt from '../src/adapters/lvt.js';
 import * as ev from '../src/adapters/enhanced_voting.js';
+import * as orsos from '../src/adapters/or_sos.js';
 import { checkFile } from '../src/checks.js';
 import { sourceSlices, buildStateFile } from '../src/merge.js';
 
@@ -196,4 +197,42 @@ test('Enhanced Voting: a record newer than its ballot-items (a cached copy) keep
   // Washington, Nov 3: its contests were a minute newer than its record. Newer contests are never "behind".
   const wa = await ev.read({ fetch: fakeFetch({ '/ballot-items': 'ev-washington.ballot-items.json', [`/${mapFor('results-WA').election.feed_election_id}`]: 'ev-washington.election.json' }), map: mapFor('results-WA') });
   assert.ok(wa.changed_token);
+});
+
+const orRoutes = (fed = fixture('or-sos.fed.html')) => ({
+  'type=FED': { status: 200, body: fed },
+  'type=SWNON': 'or-sos.swnon.html',
+  'type=HOUSE': (url, opts) => ({ status: 200, body: fixture(opts.method === 'POST' ? 'or-sos.house-31-60.html' : 'or-sos.house.html') }),
+  'oregonvotes.gov/': 'or-sos.index.html',
+});
+const orMap = () => {
+  const m = mapFor('results-OR');
+  m.feed.pages = ['resultsSW.aspx?type=FED&map=CTY', 'resultsSW.aspx?type=SWNON&map=CTY', 'resultsSW.aspx?type=HOUSE&map=CTY', { page: 'resultsSW.aspx?type=HOUSE&map=CTY', post: { name: 'ctl00$MainContent$btnHouse4', value: '31 - 60' } }];
+  return m;
+};
+
+test('Oregon SOS: a results page older than the home page (a cached copy) is an error, so its numbers are never kept under the new token', async () => {
+  const ok = await orsos.read({ fetch: fakeFetch(orRoutes()), map: orMap() });
+  assert.equal(ok.verdict, 'ok');
+  const old = fixture('or-sos.fed.html').replace('11/3/2026 | 8:15 PM PT', '11/3/2026 | 8:00 PM PT');
+  const r = await orsos.read({ fetch: fakeFetch(orRoutes(old)), map: orMap() });
+  assert.equal(r.verdict, 'error');
+  assert.match(r.error, /cached copy/);
+  assert.equal(r.changed_token, undefined);
+  const labelled = fixture('or-sos.fed.html').replace(/(<div class="col header-box1">\s*<h3>)([\s\S]*?)(<\/h3>)/, '$1Official$3');
+  assert.equal((await orsos.read({ fetch: fakeFetch(orRoutes(labelled)), map: orMap() })).verdict, 'error', 'a label that differs from the home page is a cached copy too');
+});
+
+test('Multnomah: an SOS county page older than the SOS home page is an error', async () => {
+  const routes = {
+    'Multnomah_County_Chair': 'multco.chair.html',
+    'Multnomah_County_Auditor': 'multco.auditor.html',
+    'blob.core.windows.net': 'multco.chair.json',
+    'type=CTYALL': { status: 200, body: fixture('or-sos.multnomah.html').replace('11/3/2026 | 8:15 PM PT', '11/3/2026 | 8:00 PM PT') },
+    'oregonvotes.gov/': 'or-sos.index.html',
+    'rcvresults.multco.us/': 'multco.index.html',
+  };
+  const r = await multco.read({ fetch: fakeFetch(routes), map: mapFor('results-OR-multnomah') });
+  assert.equal(r.verdict, 'error');
+  assert.match(r.error, /cached copy/);
 });

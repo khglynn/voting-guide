@@ -104,6 +104,11 @@ export async function read({ fetch, map, prevToken = null }) {
     raw[key] = r.body;
     const p = parsePage(r.body);
     if (p.id !== hd.id) return { verdict: 'ok', ...shell(map, hd, token, raw), election: { id: p.id, name: p.name, date: p.date }, contests: [] };
+    // Each page is cached apart (the home page for 29 s, a results page for 60 s, Nov 3), so a page can still serve the
+    // update before the one the home page names. Its numbers would be kept under the new token until the next update
+    // (about once a day after tonight), and an Official label could stand over unofficial counts: try again instead
+    // (pre-deploy review, Nov 3).
+    if (p.stamp !== hd.stamp || p.label !== hd.label) return { verdict: 'error', error: `${key}: the page says ${p.stamp || 'no time'} (${p.label || 'no label'}), the home page ${hd.stamp} (${hd.label || 'no label'}): a cached copy`, url: r.url };
     dropped += p.dropped;
     for (const c of p.contests) if (!seen.has(c.feed_id)) { seen.add(c.feed_id); contests.push(c); }
   }

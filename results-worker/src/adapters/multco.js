@@ -127,6 +127,8 @@ export async function read({ fetch, map, prevToken = null }) {
     if (cp.verdict !== 'ok') return { verdict: cp.verdict, error: cp.error, status: cp.status, url: cp.url };
     raw['county_page.html'] = cp.body;
     const p = parsePage(cp.body);
+    // The same cached-copy check as or_sos: the county page must carry the update the SOS home page names.
+    if (p.date === map.election.date && (p.stamp !== hd.stamp || p.label !== hd.label)) return { verdict: 'error', error: `the SOS county page says ${p.stamp || 'no time'} (${p.label || 'no label'}), the home page ${hd.stamp} (${hd.label || 'no label'}): a cached copy`, url: cp.url };
     // The county's upload counts only while the SOS page says it is this election.
     if (p.date === map.election.date) {
       dropped = p.dropped;

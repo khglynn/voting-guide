@@ -6,8 +6,8 @@
    A drafter's `note` (say, "write-ins are one total in this feed") rides along to the item.
    `--statewide` (Nov 4): the pairs are this county's slices of statewide races (drafted from map-inputs --statewide).
    They are added beside the map's own pairs, which stay exactly as they were (a re-run replaces only the earlier
-   statewide slices), each marked `statewide: true` and reaching this county and "other counties", so it is never the
-   whole race. Statewide items with no confident pair go to `statewide_unmatched`, a record the Worker never reads:
+   statewide slices), each marked `statewide: true` and reaching exactly this county and "other counties", so it is
+   never the whole race. Statewide items with no confident pair go to `statewide_unmatched`, a record the Worker never reads:
    the state source keeps those races' links.
    Usage: node bin/map-assemble.mjs <id> [--statewide] [--draft f] [--judge f]   then run bin/map-check.mjs --write <id> */
 import fs from 'node:fs';
@@ -36,9 +36,9 @@ for (const c of draft.contests) {
     disagreements.push(`${c.item} <- ${c.feed_name}: ${v ? v.problem : 'no verdict'}`);
     continue;
   }
-  let reaches = [...new Set([...(c.reaches || []), ...(v.reaches || [])])];
-  // A county's slice of a statewide race always names this county and "other counties" (never the whole race).
-  if (sw) reaches = [...new Set([map.county, ...reaches.filter((r) => r !== 'other counties'), 'other counties'])];
+  // A county's slice of a statewide race reaches exactly this county and "other counties": never the whole race, and
+  // no list of the state's other counties for the open row to name one by one.
+  const reaches = sw ? [map.county, 'other counties'] : [...new Set([...(c.reaches || []), ...(v.reaches || [])])];
   const out = { feed_id: c.feed_id, feed_name: c.feed_name, item: c.item, kind: c.kind, seats: c.seats ?? 1, choices: c.choices, reaches, item_url: null };
   if (sw) out.statewide = true;
   if (c.note) out.note = c.note;
@@ -65,5 +65,7 @@ if (sw) {
   map.not_here = (draft.not_this_county || []).sort();
 }
 writeMap(map);
-console.log(`${id}: ${contests.length} pairs kept, ${disagreements.length} sent to links, ${map.unmatched_guide.length} unmatched guide items`);
+console.log(sw
+  ? `${id}: ${contests.length} statewide slices kept, ${disagreements.length} left to the state source, ${(map.statewide_unmatched || []).length} statewide items unmatched`
+  : `${id}: ${contests.length} pairs kept, ${disagreements.length} sent to links, ${map.unmatched_guide.length} unmatched guide items`);
 for (const d of disagreements) console.log(`  link: ${d}`);

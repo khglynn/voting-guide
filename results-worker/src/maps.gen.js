@@ -11,10 +11,11 @@ export const MAPS = [
       "feed_name": "2026 General"
     },
     "guide": {
-      "fingerprint": "6bd19731c9681963",
-      "made_from": "vote.kevinhg.com/data, read 2026-11-04T03:05:34.662Z",
+      "fingerprint": "0f8693f4008a5767",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T14:50:44.268Z",
       "places": [
-        "pittsburgh-pa"
+        "pittsburgh-pa",
+        "state-PA"
       ]
     },
     "feed": {
@@ -50,6 +51,25 @@ export const MAPS = [
         ],
         "item_url": null,
         "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "0004",
+        "feed_name": "Governor and Lieutenant Governor",
+        "item": "pa-governor",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Josh Shapiro": "Josh Shapiro / Austin Davis",
+          "Stacy Garrity": "Stacy Garrity / Jason Richey",
+          "Ken Krawchuk": "Ken Krawchuk / John Thomas",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Allegheny",
+          "other counties"
+        ],
+        "item_url": null,
+        "statewide": true
       },
       {
         "feed_id": "0009",
@@ -11171,10 +11191,11 @@ export const MAPS = [
       "feed_name": "2026 General Election Results"
     },
     "guide": {
-      "fingerprint": "1b15975222eb2edb",
-      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:37:37.338Z",
+      "fingerprint": "1a3784fb5ba624b0",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T14:50:44.405Z",
       "places": [
-        "philadelphia-pa"
+        "philadelphia-pa",
+        "state-PA"
       ]
     },
     "feed": {
@@ -11188,9 +11209,10 @@ export const MAPS = [
         "QUE",
         "CON",
         "STS",
-        "STR"
+        "STR",
+        "STW"
       ],
-      "tabs_note": "Statewide (STW) is left out: the governor's race comes only from the state source. State House (STR) is read at its first page; its second page is reached only by a form post.",
+      "tabs_note": "Statewide (STW) is read for Philadelphia's own count of the governor's race, a county slice beneath the state's count (Kevin, Nov 4); it is last so the first tab's stamp stays the change token. State House (STR) is read at its first page; its second page is reached only by a form post.",
       "tz": "America/New_York"
     },
     "polls_close": "2026-11-04T01:00:00Z",
@@ -11199,6 +11221,25 @@ export const MAPS = [
     "certify_by": "2026-11-23",
     "official": null,
     "contests": [
+      {
+        "feed_id": "401362",
+        "feed_name": "GOVERNOR AND LIEUTENANT GOVERNOR",
+        "item": "pa-governor",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JOSH SHAPIRO & AUSTIN DAVIS DEM": "Josh Shapiro / Austin Davis",
+          "STACY GARRITY & JASON RICHEY REP": "Stacy Garrity / Jason Richey",
+          "KEN KRAWCHUK & JOHN THOMAS LIB": "Ken Krawchuk / John Thomas",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Philadelphia",
+          "other counties"
+        ],
+        "item_url": null,
+        "statewide": true
+      },
       {
         "feed_id": "401352",
         "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 10TH DISTRICT",

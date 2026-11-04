@@ -9,10 +9,11 @@
     "feed_name": "2026 General"
   },
   "guide": {
-    "fingerprint": "6bd19731c9681963",
-    "made_from": "vote.kevinhg.com/data, read 2026-11-04T03:05:34.662Z",
+    "fingerprint": "0f8693f4008a5767",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T14:50:44.268Z",
     "places": [
-      "pittsburgh-pa"
+      "pittsburgh-pa",
+      "state-PA"
     ]
   },
   "feed": {
@@ -48,6 +49,25 @@
       ],
       "item_url": null,
       "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "0004",
+      "feed_name": "Governor and Lieutenant Governor",
+      "item": "pa-governor",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Josh Shapiro": "Josh Shapiro / Austin Davis",
+        "Stacy Garrity": "Stacy Garrity / Jason Richey",
+        "Ken Krawchuk": "Ken Krawchuk / John Thomas",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Allegheny",
+        "other counties"
+      ],
+      "item_url": null,
+      "statewide": true
     },
     {
       "feed_id": "0009",

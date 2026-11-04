@@ -11,15 +11,41 @@
 export const NAMED_UA = 'vote.kevinhg.com results fetcher (+https://vote.kevinhg.com)';
 export const BROWSER_UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36';
 
+/* Every source in a tick shares one Worker run's 128 MB, and a read's raw copy is turned into a string again for its
+   hash and its archive copy, so one oversized body (a mis-posted export, a small gzip that unpacks to hundreds of MB)
+   could end the run before any state publishes, and again every minute (pre-deploy review, Nov 3). The largest real
+   feed tonight is St. Louis County's 6.6 MB CSV; past these caps a read is an error with a plain reason. */
+export const MAX_BYTES = 16_000_000;
+export const MAX_UNZIPPED = 32_000_000;
+const mb = (n) => `${Math.round(n / 1e6)} MB`;
+
+async function readCapped(stream, cap, what) {
+  const reader = stream.getReader();
+  const chunks = [];
+  let n = 0;
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    n += value.byteLength;
+    if (n > cap) { try { await reader.cancel(); } catch { /* already closed */ } throw new Error(`${what} is larger than ${mb(cap)}`); }
+    chunks.push(value);
+  }
+  const out = new Uint8Array(n);
+  let at = 0;
+  for (const c of chunks) { out.set(c, at); at += c.byteLength; }
+  return out;
+}
+
 /* Some Clarity hosts (Fulton GA, Nov 3) send summary.json gzipped with no Content-Encoding header, so the platform
    never unzips it. Read the bytes, and when they start with gzip's magic (1f 8b), unzip them by hand.
-   DecompressionStream exists in both Workers and Node 18+. */
+   DecompressionStream exists in both Workers and Node 18+. Both reads stop at their cap. */
 export async function bodyText(res) {
-  if (typeof res.arrayBuffer !== 'function') return res.text();
-  let bytes = new Uint8Array(await res.arrayBuffer());
+  let bytes;
+  if (res.body && typeof res.body.getReader === 'function') bytes = await readCapped(res.body, MAX_BYTES, 'the response');
+  else if (typeof res.arrayBuffer === 'function') { bytes = new Uint8Array(await res.arrayBuffer()); if (bytes.length > MAX_BYTES) throw new Error(`the response is larger than ${mb(MAX_BYTES)}`); }
+  else { const t = await res.text(); if (t.length > MAX_BYTES) throw new Error(`the response is larger than ${mb(MAX_BYTES)}`); return t; }
   if (bytes.length > 2 && bytes[0] === 0x1f && bytes[1] === 0x8b) {
-    const out = new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip')));
-    bytes = new Uint8Array(await out.arrayBuffer());
+    bytes = await readCapped(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip')), MAX_UNZIPPED, 'the unzipped data');
   }
   return new TextDecoder('utf-8').decode(bytes);
 }
@@ -68,7 +94,9 @@ export async function get(fetchFn, url, { identity = 'named', expect = 'json', h
     if (ch) return { verdict: 'refused', challenge: true, ...meta, error: ch };
     const via = [res.headers.get('server'), res.headers.get('x-cache'), res.headers.get('cf-ray') ? 'cf' : null].filter(Boolean).join(', '); return { verdict: 'error', ...meta, error: `HTTP ${res.status} on ${url.split('/').slice(-3).join('/')}${via ? ` (${via})` : ''}` };
   }
-  const body = await bodyText(res);
+  if (Number(res.headers.get('content-length')) > MAX_BYTES) return { verdict: 'error', ...meta, error: `the response is larger than ${mb(MAX_BYTES)} (Content-Length ${res.headers.get('content-length')})` };
+  let body;
+  try { body = await bodyText(res); } catch (e) { return { verdict: 'error', ...meta, error: String(e?.message || e) }; }
   if (expect === 'json') {
     if (/^\s*</.test(body)) return { verdict: 'refused', ...meta, error: 'an HTML page came back where data was expected (a bot check?)' };
     try { return { verdict: 'ok', ...meta, body, json: JSON.parse(body) }; } catch { return { verdict: 'error', ...meta, error: 'the data was not valid JSON' }; }

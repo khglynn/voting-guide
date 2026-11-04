@@ -16,6 +16,8 @@ import { runTick } from '../src/tick.js';
 import { nextEntry, dueSources, clampElectionNight, previewFloor, TICK_LIMIT } from '../src/schedule.js';
 import { MAPS } from '../src/maps.gen.js';
 import { ADAPTERS } from '../src/adapters/index.js';
+import { get } from '../src/fetch.js';
+import { gzipSync } from 'node:zlib';
 import { sourceSlices, buildStateFile } from '../src/merge.js';
 
 const route = (eid, ver, pre) => ({ [`/${eid}/current_ver.txt`]: `${pre}.current_ver.txt`, [`/${eid}/${ver}/json/en/summary.json`]: `${pre}.summary.json`, [`/${eid}/${ver}/json/en/electionsettings.json`]: `${pre}.electionsettings.json` });
@@ -348,4 +350,27 @@ test('tick: an older tick that saves last never undoes a newer tick\'s refusal',
   const s = JSON.parse(await store.get('sched:2026-11-03')).sources[dc.id];
   assert.equal(s.stopped, 'refused', "A's later save kept B's newer refusal");
   assert.equal(s.last_run, '2026-11-04T05:01:00.000Z');
+});
+
+test('fetch: a body past 16 MB, or a gzip that unpacks past 32 MB, is an error with a plain reason; real sizes read fine', async () => {
+  const resp = (body, headers = {}) => async () => new Response(body, { status: 200, headers });
+  let r = await get(resp('{}', { 'content-length': '30000000' }), 'https://results.example/x');
+  assert.equal(r.verdict, 'error');
+  assert.match(r.error, /larger than 16 MB/);
+  // No Content-Length: the stream is counted as it comes.
+  const big = new ReadableStream({ start(c) { for (let i = 0; i < 17; i++) c.enqueue(new Uint8Array(1_000_000).fill(32)); c.close(); } });
+  r = await get(resp(big), 'https://results.example/x', { expect: 'text' });
+  assert.equal(r.verdict, 'error');
+  assert.match(r.error, /larger than 16 MB/);
+  const bomb = new Uint8Array(gzipSync(Buffer.alloc(33_000_000, 32)));
+  assert.ok(bomb.length < 200_000);
+  r = await get(resp(bomb), 'https://results.example/x', { expect: 'text' });
+  assert.equal(r.verdict, 'error');
+  assert.match(r.error, /unzipped data is larger than 32 MB/);
+  // The size of St. Louis County's CSV (6.6 MB), and a small gzipped summary, read as usual.
+  r = await get(resp('a,b\n'.repeat(1_650_000)), 'https://results.example/x', { expect: 'text' });
+  assert.equal(r.verdict, 'ok');
+  assert.equal(r.body.length, 6_600_000);
+  r = await get(resp(new Uint8Array(gzipSync(Buffer.from('{"a":1}')))), 'https://results.example/x');
+  assert.deepEqual(r.json, { a: 1 });
 });

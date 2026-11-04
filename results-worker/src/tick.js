@@ -13,6 +13,7 @@ import { fingerprint, mapHash } from './fingerprint.js';
 import { sha256, ELECTION } from './util.js';
 
 export const SCHED_KEY = `sched:${ELECTION}`;
+const MAX_CARRY = 3; // cut-off reads in a row a dropped race keeps its last numbers through
 const SITE = 'https://vote.kevinhg.com';
 
 const readJson = async (store, key, dflt = null) => { const v = await store.get(key); if (!v) return dflt; try { return JSON.parse(v); } catch { return dflt; } };
@@ -66,13 +67,19 @@ async function runSource({ map, fetch, store, archive, sched, now, ping }) {
     return { id: map.id, outcome: 'unchanged' };
   }
   // A page served cut off (the Texas SOS, Nov 3: its length changed with each update) keeps the last good numbers for
-  // any race it dropped, marked with the update they came from, so a race never flickers between numbers and a link.
+  // any race it dropped, so a race doesn't flicker between numbers and a link. Honest freshness (security review,
+  // Nov 3): a carried race keeps its own time (`updated`, `carried_from`) and note through any number of cut-off reads,
+  // never re-timed to a newer page, and after MAX_CARRY cut-off reads in a row it is let go, so its row falls back to
+  // the county counts or the link.
   if (read.dropped > 0 && baseline?.contests) {
     const have = new Set(read.contests.map((c) => c.feed_id));
-    const at = baseline.source_updated ? new Date(baseline.source_updated).toLocaleTimeString('en-US', { timeZone: map.feed.tz || 'America/Chicago', hour: 'numeric', minute: '2-digit' }) : 'an earlier';
     for (const c of baseline.contests) {
       if (have.has(c.feed_id)) continue;
-      read.contests.push({ ...c, updated: c.updated || baseline.source_updated || null, note: `The ${map.name}'s page was cut off at its latest update, so these numbers are from its ${at} update.` });
+      const carries = (c.carries || 0) + 1;
+      if (carries > MAX_CARRY) { read.let_go = [...(read.let_go || []), c.feed_id]; continue; }
+      const when = c.carried_from || c.updated || baseline.source_updated || null;
+      const at = when ? new Date(when).toLocaleTimeString('en-US', { timeZone: map.feed.tz || 'America/Chicago', hour: 'numeric', minute: '2-digit' }) : 'an earlier';
+      read.contests.push({ ...c, updated: when, carried_from: when, carries, note: c.carried_from ? c.note : `The ${map.name}'s page was cut off at its latest update, so these numbers are from its ${at} update.` });
     }
   }
   const check = checkRead(read, map, baseline);
@@ -102,7 +109,7 @@ async function runSource({ map, fetch, store, archive, sched, now, ping }) {
   S[map.id] = nextEntry(S[map.id], { kind: 'ok', changed: true, status, allComplete: status === 'complete' }, now, map);
   S[map.id].token = r.changed_token;
   S[map.id].map_hash = mh;
-  return { id: map.id, outcome: 'changed', problems: check.problems };
+  return { id: map.id, outcome: 'changed', problems: check.problems, ...(read.let_go ? { error: `stopped carrying ${read.let_go.length} race(s) after ${MAX_CARRY} cut-off reads: ${read.let_go.join('; ')}` } : {}) };
 }
 
 /* Build and store one state's preview file, and its public file once any source in it has passed its first-run check.

@@ -164,3 +164,27 @@ test('tick: a cut-off page keeps the last good numbers for the races it dropped,
   assert.equal(pv.items['tx-us-senate'].candidates[0].votes, 3410265);
   assert.match(pv.items['tx-us-senate'].note, /8:56 PM/);
 });
+
+test('tick: a race carried through two cut-off reads keeps its own time; after three it is let go', async () => {
+  const { fixture } = await import('./helpers.mjs');
+  const map = { id: 'results-TX', state: 'TX', name: 'Texas Secretary of State', county: 'Texas', scope: 'state', election: { date: '2026-11-03', feed_election_id: '2026 NOVEMBER GENERAL ELECTION', feed_name: '2026 NOVEMBER GENERAL ELECTION' }, feed: { adapter: 'tx_sos', base: 'https://electionresults.sos.state.tx.us', results_url: 'https://electionresults.sos.state.tx.us/results.html', tz: 'America/Chicago' },
+    contests: [{ feed_id: 'U. S. SENATOR', feed_name: 'U. S. SENATOR', item: 'tx-us-senate', kind: 'plurality', seats: 1, whole: true, reaches: ['Texas'], choices: { 'KEN PAXTON': 'Ken Paxton', 'JAMES TALARICO': 'James Talarico', 'TED BROWN': 'Ted Brown', 'AVERY AYERS': 'Avery Ayers', 'JADE SIMMONS': 'Jade Simmons', "BRADFORD 'BRAD' HALL": "Bradford 'Brad' Hall", 'ZUL MOHAMED': 'Zul Mohamed' } }] };
+  const full = fixture('tx-sos.results.html');
+  const noSenate = (t) => full.replace(/<div class="election">U\. S\. SENATOR[\s\S]*?<\/table><\/div>/, '').replace('08:56 PM', t);
+  const store = memStore();
+  const tick = (body, lm, now) => runTick({ fetch: fakeFetch({ 'results.html': { status: 200, body, headers: { 'Last-Modified': lm } } }), store, archive: null, maps: [map], now });
+  await tick(full, 'A', '2026-11-04T03:00:00.000Z');
+  const times = ['09:12 PM', '09:20 PM', '09:30 PM', '09:40 PM'];
+  const seen = [];
+  for (const [i, t] of times.entries()) {
+    const out = await tick(noSenate(t), `B${i}`, `2026-11-04T03:${String(13 + i * 10).padStart(2, '0')}:00.000Z`);
+    const pv = JSON.parse(await store.get('preview:TX'));
+    seen.push({ item: pv.items['tx-us-senate'], error: out.ran[0].error });
+  }
+  for (const s of seen.slice(0, 3)) {
+    assert.equal(s.item.updated, '2026-11-04T02:56:00.000Z', 'never re-timed to a newer page');
+    assert.match(s.item.note, /from its 8:56 PM update/);
+  }
+  assert.notEqual(seen[3].item.status, 'counting', 'let go after three cut-off reads');
+  assert.match(seen[3].error, /stopped carrying 1 race/);
+});

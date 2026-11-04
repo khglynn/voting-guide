@@ -3734,7 +3734,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
     await tap(page, '#vz [data-act="cmp"][data-k="papers"]');
     const gh = await text(page, '#vz');
     const after = await page.evaluate(() => JSON.parse(localStorage.getItem('vg2')).ballots['TX|austin-tx'].picks['tx-us-house-37']);
-    check('Results rows: comparing with a group leads with its count and changes no pick', /Newspapers and guides (agree on \d+ races?:|don’t agree)/.test(gh) && after === pickBefore && (await page.getAttribute('#vz [data-act="cmp"][data-k="papers"]', 'aria-pressed')) === 'true' && !(await page.$('#vz [data-act="cmp-take"]')), gh.slice(0, 200));
+    check('Results rows: comparing with a group leads with its count and changes no pick', /Newspapers and guides agree on picks in \d+ races?:|No shared picks from newspapers and guides/.test(gh) && after === pickBefore && (await page.getAttribute('#vz [data-act="cmp"][data-k="papers"]', 'aria-pressed')) === 'true' && !(await page.$('#vz [data-act="cmp-take"]')), gh.slice(0, 200));
     await tap(page, '#vz [data-act="cmp"][data-k="papers"]');
     check('Results rows: tapping the chosen group again clears it: where races stand', !!(await page.$('#vz .st')) && (await page.getAttribute('#vz [data-act="cmp"][data-k="papers"]', 'aria-pressed')) === 'false');
   }

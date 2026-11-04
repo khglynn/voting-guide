@@ -56,7 +56,7 @@ export function figureHTML(forPrint = false): string {
   // Every race here links to the office's own page (Manhattan): no figure, no Refresh, one line (DESIGN, link-only places).
   if (f.allLinks) return `<section class="vz vz-links" id="vz"><p class="vz-ex">${esc(linksLine())}</p>${officesHTML()}</section>`;
   if (hidden) return `<section class="vz is-hidden" id="vz" aria-labelledby="vz-h">${hd}</section>`;
-  const q = f.questions.n ? `<p class="vz-more"><button class="linkbtn" data-act="goto" data-q="${esc(f.questions.first!.slice(2))}" data-fk="vz-q">${f.questions.n === 1 ? '1 more race needs your district' : `${f.questions.n} more races need your district`}</button></p>` : '';
+  const q = f.questions.n ? `<p class="vz-more"><button class="linkbtn" data-act="goto" data-q="${esc(f.questions.first!.slice(2))}" data-fk="vz-q">${f.questions.n === 1 ? 'Choose your district to see 1 more race' : `Choose your district to see ${f.questions.n} more races`}</button></p>` : '';
   // Something chosen: how it's doing, headline first, then the dots. Nothing chosen: where races stand.
   const body = f.sel ? selHTML(f, f.sel) : standHTML(f);
   return `<section class="vz${f.sel ? '' : ' vz-stand'}" id="vz" aria-labelledby="vz-h">${hd}
@@ -79,14 +79,16 @@ function cmpHTML(f: Figure): string {
     parties.length ? chip('party', sel && sel.kind === 'party' ? selName(sel) : 'A party', ` aria-expanded="${partyOpen}"`) : '',
   ].join('');
   const prow = partyOpen && parties.length ? `<div class="cmp-parties" role="group" aria-label="A party">${parties.map((p) => `<button class="chip" data-act="cmp-party" data-p="${esc(p.party)}" aria-pressed="${!!sel && sel.kind === 'party' && sel.party === p.party}" data-fk="cmp-p-${esc(p.party)}">${esc(p.party)}</button>`).join('')}</div>` : '';
-  const own = !sel && !anyPick() ? '<p class="cmp-own"><button class="linkbtn" data-act="picks" data-fk="cmp-own">Or make your own picks</button></p>' : '';
+  // With a group or party chosen over picks of your own, say plainly what it doesn't do (GPT copy pass).
+  const own = !sel && !anyPick() ? '<p class="cmp-own"><button class="linkbtn" data-act="picks" data-fk="cmp-own">Or make your own picks</button></p>'
+    : sel && sel.kind !== 'mine' && anyPick() ? '<p class="cmp-own cmp-hint">Your picks don’t change. Tap it again to clear.</p>' : '';
   return `<div class="cmp" role="group" aria-labelledby="cmp-l"><p class="cmp-l" id="cmp-l">Compare with</p><div class="cmp-chips">${chips}</div>${prow}${own}</div>`;
 }
 /* The answer for a choice: the count line as the headline, the dot figure by section with its key in one line above,
    and for a group or party on a ballot with no picks of your own, "Make these my picks" (today's fill, with Undo). */
 function selHTML(f: Figure, sel: CmpSel): string {
   if (!f.picks) {
-    const empty = sel.kind === 'group' ? (chipMembers(S.ballot!, sel.key).length ? `${selName(sel)} don’t agree on any race here yet.${f.splits ? ` ${splitLine(f)}` : ''}` : emptyNote(S.ballot!, sel.key))
+    const empty = sel.kind === 'group' ? (chipMembers(S.ballot!, sel.key).length ? `No shared picks from ${selName(sel).toLowerCase()} on this ballot.${f.splits ? ` ${splitLine(f)}` : ''}` : emptyNote(S.ballot!, sel.key))
       : sel.kind === 'party' ? `No ${selName(sel)} candidates on this ballot.` : '';
     return empty ? `<p class="vz-sum">${esc(empty)}</p>` : '';
   }
@@ -141,7 +143,7 @@ function keyHTML(f: Figure): string {
   const bits: [Dot['kind'], string][] = f.picks
     ? [['up', final ? 'Ahead or won' : 'Ahead'], ['down', final ? 'Behind or didn’t win' : 'Behind'], ['wp', 'Not compared'], ['po', f.sel && f.sel.kind === 'mine' ? 'Not picked' : 'No pick']]
     : [['po', 'Numbers posted'], ['w', 'No numbers yet']];
-  if (has('ln')) bits.push(['ln', 'Office link']);
+  if (has('ln')) bits.push(['ln', 'Office results']);
   return `<p class="vz-key">${bits.map(([k, t]) => `<span>${dot(k)}${esc(t)}</span>`).join('')}</p>`;
 }
 const noPicksLine = (f: Figure): string => `No picks on this ballot. ${f.posted} of ${f.total} ${f.total === 1 ? 'race has' : 'races have'} numbers here${f.links ? `; ${f.links} more ${f.links === 1 ? 'links' : 'link'} to official results` : ''}.`;

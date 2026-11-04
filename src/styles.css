@@ -1283,3 +1283,4 @@ a.st-go { display: inline-block; padding: 6px 0; font-size: 14.5px; color: var(-
 .nv-srcs .nv-sr { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
 .nv-srcs a.nv-go { flex: none; color: var(--ink-2); padding: 4px 0; }
 .vz .vz-key { gap: 4px 12px; font-size: 13px; }
+.cmp-hint { color: var(--muted); }

@@ -673,7 +673,7 @@ export function figure(sel: CmpSel | null = cmpSel()): Figure | null {
   const word: Figure['word'] = total && done === total ? (official === total ? 'Official' : 'Unofficial') : 'Counting';
   // One short sentence under the status word, and nothing else: offices and times are in the bar and the menu.
   const explain = !posted ? (links && !pending ? 'Results for these races are on the election offices’ own sites.' : 'No numbers posted yet. Offices post as they count.')
-    : word === 'Counting' ? (done === posted ? 'These counts are marked complete. Other races may still be counting.' : 'Offices are still counting. Numbers will change.')
+    : word === 'Counting' ? (done === posted ? 'These results are unofficial. Other races may still be counting.' : 'Offices are still counting. Numbers may change.')
     : word === 'Unofficial' ? 'Offices marked their counts complete. They become official later.'
     : 'Offices made these counts official.';
   const notes: string[] = [];
@@ -699,12 +699,12 @@ export function countLine(f: Figure): string {
   ].filter(Boolean);
   const n = f.picks;
   const head = f.sel.kind === 'mine' ? `Your ${n === 1 ? '1 pick' : `${n} picks`}`
-    : f.sel.kind === 'group' ? `${selName(f.sel)} agree on ${n === 1 ? '1 race' : `${n} races`}`
+    : f.sel.kind === 'group' ? `${selName(f.sel)} agree on picks in ${n === 1 ? '1 race' : `${n} races`}`
     : `${selName(f.sel)} candidates in ${n === 1 ? '1 race' : `${n} races`}`;
   return `${head}: ${parts.join(' · ')}`;
 }
 /* A group's sources that split: listed, never compared. */
-export const splitLine = (f: Figure): string => (f.sel && f.sel.kind === 'group' && f.splits ? `They split on ${f.splits === 1 ? '1 more race' : `${f.splits} more races`}.` : '');
+export const splitLine = (f: Figure): string => (f.sel && f.sel.kind === 'group' && f.splits ? `Their picks differ in ${f.splits === 1 ? '1 more race' : `${f.splits} more races`}.` : '');
 export function othersLine(f: Figure): string {
   if (!f.others) return '';
   const { races, measures } = f.othersKinds;
@@ -712,16 +712,16 @@ export function othersLine(f: Figure): string {
   return `${f.others} other ${what}${f.picks ? '' : ''}`;
 }
 /* The open row's line about one dot, for the figure's list: "Paxton 51% · your pick Talarico", or with a group chosen
-   "Paxton 51% · their pick Talarico" or "· their sources split". */
+   "Paxton 51% · counting · their pick Talarico" or "· their picks differ". */
 export function dotLine(it: Item, sel: CmpSel | null = cmpSel()): string {
   const r = resultOf(it);
   const ln = sel && sel.kind !== 'mine' ? lensNames(it, sel) : null;
   const pk = sel && sel.kind !== 'mine'
-    ? (ln === 'split' ? 'their sources split' : Array.isArray(ln) && ln.length ? `their pick ${ln.map((n) => (n === 'YES' ? 'Yes' : n === 'NO' ? 'No' : shortOf(it, n))).join(', ')}` : null)
+    ? (ln === 'split' ? 'their picks differ' : Array.isArray(ln) && ln.length ? `their pick ${ln.map((n) => (n === 'YES' ? 'Yes' : n === 'NO' ? 'No' : shortOf(it, n))).join(', ')}` : null)
     : picked(it) ? `your pick ${pickShort(it)}` : null;
   const col = r ? resCol(it, r) : noResCol(it);
   if (!col) return pk ? `Not in this guide’s results · ${pk}` : 'Not in this guide’s results';
-  const main = col.kind === 'num' ? `${col.main}${col.sub ? ` ${col.sub}` : ''}${col.area ? ` · ${col.area}` : ''}` : col.main;
+  const main = col.kind === 'num' ? `${col.main}${col.sub ? ` · ${col.sub}` : ''}${col.area ? ` · ${col.area}` : ''}` : col.main;
   return `${main}${pk ? ` · ${pk}` : ''}`;
 }
 export type { Measure };

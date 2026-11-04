@@ -780,7 +780,7 @@ export function footResHTML(): string {
     const lead = f.kind === 'failed' ? `<span class="fr-p">Couldn’t check just now</span>${f.link ? DOT : ''}` : '';
     return `<div class="foot-res" data-kind="${f.kind}"><span class="fr-line">${lead}${f.link ? ext(f.link.url, f.link.text, 'fr-go') : ''}</span>${f.kind === 'failed' ? refreshIcon() : ''}</div>`;
   }
-  const at = R.failed ? 'couldn’t check just now' : f.down ? (f.at ? `its ${f.at} numbers` : 'its last numbers') : f.at;
+  const at = R.failed ? 'couldn’t check for updates' : f.down ? (f.at ? `showing its ${f.at} numbers` : 'showing its last numbers') : f.at;
   const who = f.down ? `Can’t reach ${f.who}` : f.who;
   const mid = who || f.prog ? `<span class="fr-mid${f.prog ? '' : ' nop'}">${DOT}<span class="fr-who">${esc(who)}${f.prog ? ' ' : ''}</span>${f.prog ? `<span class="fr-pl">${esc(f.prog)}</span><span class="fr-ps">${esc(f.progShort)}</span>` : ''}</span>` : '';
   const said = [f.word, f.down ? who : [who, f.prog].filter(Boolean).join(' '), at].filter(Boolean).join(', ');
@@ -845,7 +845,7 @@ function resMenuHTML(where: 'toc' | 'rail'): string {
     const p = progressOf(x);
     const page = offices.find((o) => o.id === x.id)?.results_url || x.url;
     const said = sourceDown(x) ? `Couldn’t reach it. Showing its ${x.updated ? `${fmtTime(x.updated)} ` : 'last '}numbers.`
-      : x.status === 'refused' ? 'It isn’t letting us read its results.'
+      : x.status === 'refused' ? 'We can’t read this office’s results. See them on its site.'
       : [p ? `“${p}”` : '', x.updated ? `Updated ${fmtTime(x.updated)}` : 'No update time given'].filter(Boolean).join(' · ');
     const banner = labelWords(x).trim();
     const ck = x.fetched ? `We checked ${fmtTime(x.fetched).replace(/ [A-Z]T$/, '')}` : '';

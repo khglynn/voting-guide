@@ -18,7 +18,7 @@ const out = [];
 const bad = (s) => out.push(s);
 if (file.test) bad('this is still the hand-written test file');
 for (const p of checkFile(file)) bad(`schema: ${p}`);
-const writeIns = new Set(loadMaps().flatMap((m) => m.contests.filter((c) => c.note).map((c) => c.item)));
+const noted = new Set(loadMaps().flatMap((m) => m.contests.filter((c) => c.note).map((c) => `${m.id}|${c.item}`)));
 const counts = { counting: 0, pending: 0, complete: 0, official: 0, link_only: 0, spanning: 0 };
 for (const [id, x] of Object.entries(file.items)) {
   counts[x.status]++;
@@ -29,9 +29,10 @@ for (const [id, x] of Object.entries(file.items)) {
     const top = x.slices.find((s) => s.source === x.source);
     if (!top || top.total_votes !== x.total_votes) bad(`${id}: top-level numbers aren't the named slice's`);
     const sum = x.slices.reduce((a, s) => a + s.total_votes, 0);
-    if (x.slices.length > 1 && x.total_votes === sum) bad(`${id}: top total equals the sum of slices`);
+    if (x.slices.filter((sl) => sl.total_votes > 0).length > 1 && x.total_votes === sum) bad(`${id}: top total equals the sum of slices`);
   }
-  if (writeIns.has(id) && x.status !== 'link_only' && !/Write-in/.test(x.note || '')) bad(`${id}: write-in note missing`);
+  const from = x.slices ? x.slices.map((sl) => sl.source) : [x.source];
+  if (x.status !== 'link_only' && from.some((src) => noted.has(`${src}|${id}`)) && !x.note) bad(`${id}: a map note is missing`);
   if (x.status === 'link_only' && (!x.reason || x.candidates || x.measure)) bad(`${id}: link_only without a reason, or with numbers`);
   if (/fell from/.test(x.note || '')) bad(`${id}: falling-total note: ${x.note}`);
 }

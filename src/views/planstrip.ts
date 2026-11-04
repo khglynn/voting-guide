@@ -10,6 +10,7 @@ import { nextStep, registrationAlert, registerAction, isMailState, applyDated, c
 import { ext, isOpen, bulletsHTML, leadBulletsHTML, escP, srcLink, sentences, telHTML, wordCount, deshout } from './common';
 import { queryOf, textOf, best, type Item } from '../model/search';
 import { nearNow, fmtMiles, directionsURL, type NearNow } from '../model/sites';
+import { allLinksNow } from './figure';
 import { R, resultsOn, checkedLine, ballotSources, sourceDown, fmtTime } from '../model/results';
 
 /* What the strip last showed, so main.ts can repaint it when the step changes while the page
@@ -346,6 +347,8 @@ export function freshHTML(): string {
   if (!R.file && !R.failed) return '';
   const btn = `<button class="linkbtn" data-act="results-refresh" data-fk="res-refresh"${R.checking ? ' aria-busy="true"' : ''}>${R.checking ? 'Checking…' : 'Refresh'}</button>`;
   if (!resultsOn()) return `<p class="plan-fresh">Couldn’t check the election office’s results just now. ${btn}</p>`;
+  // Every race a link (Manhattan): nothing of ours to check or refresh (DESIGN, link-only places).
+  if (allLinksNow()) return '';
   const srcs = ballotSources();
   const checked = checkedLine(srcs);
   const down = srcs.filter(sourceDown).map((x) => `Couldn’t reach ${x.name}. Showing its ${x.updated ? `${fmtTime(x.updated)} ` : 'last '}numbers.`);

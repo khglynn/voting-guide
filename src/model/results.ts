@@ -116,9 +116,19 @@ export function sideOf(it: Item, r: ItemResult): 'yes' | 'no' | 'at' | null {
   return lhs > rhs ? 'yes' : lhs < rhs ? 'no' : 'at';
 }
 const plainBar = (b: Bar | null): boolean => !!b && b.n * 2 === b.d;
+/* A yes share beside its bar: within a point of it, one decimal cut down (never rounded up), so 59.6% against 60% never
+   reads "60%" and 54.96% never reads "55.0%" (adversarial pass, Nov 3). */
+export const pctNear = (y: number, b: Bar | null): string => (b && !plainBar(b) && Math.abs(y - b.pct) < 1 ? `${(Math.floor(y * 10) / 10).toFixed(1)}%` : pct0(y));
+/* Votes in the count for names the guide doesn't hold (unmatched names, a feed's write-in line). When they could match
+   the leader, we can't honestly say who leads (rule 8). */
+export const otherVotes = (r: ItemResult): number => Math.max(0, (r.total_votes || 0) - (r.candidates || []).reduce((a, c) => a + c.votes, 0));
+export const unknownLead = (r: ItemResult): boolean => { const top = leaders(r); return !!top.length && otherVotes(r) >= top[0].votes; };
+/* A block vote that elects everyone either way (Dallas's "Uncontested Races": "Vote for All" or "Vote for None"). */
+const blockVote = (it: Item): boolean => it.kind === 'contest' && it.candidates.some((k) => /^vote for (all|none)\b/i.test(k.name));
 const isMeasureLike = (it: Item): boolean => it.kind === 'measure' || (it.kind === 'contest' && it.is_retention);
 /* The guide's name for a candidate in the file ("Paxton" for "Ken Paxton"). */
 export function shortOf(it: Item, name: string): string {
+  if (/^vote for /i.test(name)) return name;
   if (it.kind === 'contest') { const k = it.candidates.find((c) => c.name === name); if (k) return k.short; }
   return name.replace(/,?\s+(jr|sr|ii|iii|iv)\.?$/i, '').split(/\s+/).pop() || name;
 }
@@ -161,10 +171,12 @@ export function resCol(it: Item, r: ItemResult): ResCol {
     const y = yesShare(r.measure);
     const b = barOf(it, r);
     const pass = passedOf(r);
-    const yes = it.kind === 'measure' ? `Yes ${pct0(y)}` : `Keep the judge: ${pct0(y)}`;
-    if (pass !== null && !county) return { main: pass ? 'Passed' : 'Did not pass', sub: `${it.kind === 'measure' ? `Yes ${pct0(y)}` : `Keep ${pct0(y)}`} · ${word}`, pick, kind: 'num' };
+    const judge = it.kind !== 'measure';
+    const yes = !judge ? `Yes ${pctNear(y, b)}` : `Keep the judge: ${pctNear(y, b)}`;
+    const need = b && !plainBar(b) ? ` · needs ${pct0(b.pct)}` : '';
+    if (pass !== null && !county) return { main: judge ? (pass ? 'Stays' : 'Doesn’t stay') : pass ? 'Passed' : 'Did not pass', sub: `${judge ? 'Keep' : 'Yes'} ${pctNear(y, b)}${need} · ${word}`, pick, kind: 'num' };
     // A bar above a plain majority goes beside the share, or "Yes 53%" reads as passing (Florida, 2024: 57% failed).
-    if (b && !plainBar(b)) return { main: yes, sub: `needs ${pct0(b.pct)}${it.kind === 'measure' ? ' to pass' : ' to stay'}${county ? ` · ${county} count` : ''}`, pick, kind: 'num' };
+    if (b && !plainBar(b)) return { main: yes, sub: `needs ${pct0(b.pct)}${judge ? ' to stay' : ' to pass'} · ${sub0}`, pick, kind: 'num' };
     // No rule we hold: the yes share alone, never "No N%" as if no were winning.
     if (b && it.kind === 'measure' && sideOf(it, r) === 'no') return { main: `No ${pct0(100 - y)}`, sub: sub0, pick, kind: 'num' };
     return { main: yes, sub: sub0, pick, kind: 'num' };
@@ -172,7 +184,11 @@ export function resCol(it: Item, r: ItemResult): ResCol {
   const c = it as Contest;
   const top = leaders(r);
   const cs = [...(r.candidates || [])].sort((a, b) => b.votes - a.votes);
-  if (isRCV(c)) return { main: top.length === 1 ? `${shortOf(it, top[0].name)} ${pct0(top[0].pct)}` : 'Tied', sub: 'First choices only', pick, kind: 'num' };
+  const w = winnersOf(r);
+  // A name we couldn't match could be leading: no leader named (rule 8); the open row says why.
+  if (!w && unknownLead(r)) return { main: 'See election office results', sub: sub0, pick, kind: 'link' };
+  // Ranked choice: first choices until the file names the winner after the final round (the column never says "won").
+  if (isRCV(c)) return w && !county ? { main: w.map((n) => shortOf(it, n)).join(', '), sub: `final round · ${word}`, pick, kind: 'num' } : { main: top.length === 1 ? `${shortOf(it, top[0].name)} ${pct0(top[0].pct)}` : 'Tied', sub: 'First choices only', pick, kind: 'num' };
   if (isMultiSeat(c)) {
     const n = r.seats || c.winners || c.vote_for;
     return { main: cs.slice(0, n).map((k) => shortOf(it, k.name)).join(', '), sub: `top ${n} · ${county ? `${county} count` : word}`, pick, kind: 'num' };
@@ -199,8 +215,9 @@ export function compare(it: Item, r: ItemResult | null): Cmp {
     if (at === null || at === 'at') return 'nc';
     return (at === 'yes') === (side === 'YES') ? 'ahead' : 'behind';
   }
-  if (it.kind !== 'contest') return 'nc';
+  if (it.kind !== 'contest' || blockVote(it)) return 'nc';
   const w = winnersOf(r);
+  if (!w && unknownLead(r)) return 'nc';
   if (isRCV(it) || isMultiSeat(it)) {
     if (!w) return 'nc';
     const inW = names.filter((n) => w.includes(n)).length;
@@ -240,9 +257,12 @@ export function resOpen(it: Item, r: ItemResult): ResOpen {
     ];
     const bar = !b ? ' Passing takes more than a share of yes and no. See the office’s results.' : !plainBar(b) ? ` It needs ${pct0(b.pct)} yes to ${judge ? 'stay' : 'pass'}.` : '';
     const Y = judge ? 'keep' : 'yes', N = judge ? 'remove' : 'no';
-    const where = at === null ? `${Y} has ${pct0(y)} so far.` : at === 'at' ? (plainBar(b) ? `${Y} and ${N} are even so far.` : `${Y} is right at the ${pct0(b!.pct)} it needs so far.`) : at === 'yes' ? `${Y} is ahead so far.` : `${N} is ahead so far.`;
-    if (pass !== null && !county) out.line = judge ? (pass ? 'The judge stays.' : 'The judge does not stay.') : pass ? 'It passed.' : 'It did not pass.';
-    else if (r.status === 'counting' || county) out.line = `${lead}${where}${at === 'at' && !plainBar(b) ? '' : bar}`.replace(/^([a-z])/, (m) => m.toUpperCase());
+    // Against a bar above half, the sentence is about yes and its bar, never "no is ahead" while yes leads no.
+    const where = at === null ? `${Y} has ${pct0(y)} so far.`
+      : !plainBar(b) ? (at === 'at' ? `${Y} is right at the ${pct0(b!.pct)} it needs so far.` : at === 'yes' ? `${Y} is above the ${pct0(b!.pct)} it needs so far.` : `${Y} is short of the ${pct0(b!.pct)} it needs so far.`)
+      : at === 'at' ? `${Y} and ${N} are even so far.` : at === 'yes' ? `${Y} is ahead so far.` : `${N} is ahead so far.`;
+    if (pass !== null && !county) out.line = `${judge ? (pass ? 'The judge stays.' : 'The judge does not stay.') : pass ? 'It passed.' : 'It did not pass.'}${b && !plainBar(b) ? ` It needed ${pct0(b.pct)} yes.` : ''}`;
+    else if (r.status === 'counting' || county) out.line = `${lead}${where}${b && !plainBar(b) ? '' : bar}`.replace(/^([a-z])/, (m) => m.toUpperCase());
     else out.line = `The office marks the count complete.${bar}`;
     return out;
   }
@@ -260,9 +280,11 @@ export function resOpen(it: Item, r: ItemResult): ResOpen {
   const top = leaders(r);
   const w = winnersOf(r);
   if (isRCV(c)) {
-    out.line = w ? `${w.map((n) => shortOf(it, n)).join(' and ')} won.` : 'First choices only. Ranked choice counts go in rounds, so the winner can be someone other than the first-choice leader.';
+    out.line = w && !county ? `${w.map((n) => shortOf(it, n)).join(' and ')} won after the final round. The table shows first choices.` : 'First choices only. Ranked choice counts go in rounds, so the winner can be someone other than the first-choice leader.';
     return out;
   }
+  if (!w && unknownLead(r)) { out.line = `${lead}A name in the office’s count isn’t in this guide, so we don’t say who’s ahead. See the office’s results.`.replace(/^In (.*?), A/, 'In $1, a'); return out; }
+  if (blockVote(it) && top.length === 1) { out.line = `${lead}${shortOf(it, top[0].name)} has ${pct0(top[0].pct)} so far.`; return out; }
   if (w && !county) { out.line = `${w.map((n) => shortOf(it, n)).join(', ').replace(/, ([^,]*)$/, ' and $1')} won.`; return out; }
   if (isMultiSeat(c)) {
     const n = r.seats || c.winners || c.vote_for;
@@ -342,8 +364,8 @@ export function newestUpdate(srcs = ballotSources()): string {
 export const fetchedSig = (f: ResultsFile | null): string => (f ? f.sources.map((s) => `${s.id}:${s.fetched || ''}`).join('|') : '');
 
 /* ---------- the figure ---------- */
-export type DotKind = 'up' | 'down' | 'wp' | 'po' | 'w';
-export interface Dot { id: string; sec: SectionKey; pick: boolean; cmp: Cmp; kind: DotKind; posted: boolean; why: '' | 'rcv' | 'multi' | 'span' | 'tie' | 'rule' | 'edge' }
+export type DotKind = 'up' | 'down' | 'wp' | 'po' | 'w' | 'ln';
+export interface Dot { id: string; sec: SectionKey; pick: boolean; cmp: Cmp; kind: DotKind; posted: boolean; why: '' | 'rcv' | 'multi' | 'span' | 'tie' | 'rule' | 'edge' | 'partial' | 'unknown' | 'block' }
 export interface Figure {
   word: 'Counting' | 'Unofficial' | 'Official';
   explain: string;
@@ -353,6 +375,8 @@ export interface Figure {
   others: number;
   othersKinds: { races: number; measures: number };
   posted: number; total: number;
+  /* races whose results are a link to the office's own page, and whether every race on the ballot is one */
+  links: number; allLinks: boolean;
   questions: { n: number; first: string | null };
   notes: string[];
 }
@@ -363,47 +387,54 @@ export function figure(): Figure | null {
   const rows: Figure['rows'] = [];
   const counts: Record<Cmp, number> = { won: 0, lost: 0, ahead: 0, behind: 0, nc: 0 };
   const why = new Set<string>();
-  let others = 0, posted = 0, total = 0;
+  let others = 0, posted = 0, total = 0, links = 0, pending = 0, done = 0, official = 0;
   const kinds = { races: 0, measures: 0 };
   let qn = 0; let first: string | null = null;
-  const sts: ItemResult['status'][] = [];
   for (const x of walk) {
     if (x.question) { if (!x.done) { qn++; first = first || x.key; } continue; }
     const it = b.byId.get(x.key);
     if (!it) continue;
     const r = resultOf(it);
-    if (r && r.status !== 'link_only') sts.push(r.status);
     const pick = picked(it);
     const cmp = pick ? compare(it, r) : 'nc';
     const num = hasNumbers(r);
+    const link = isLink(r);
     total++;
-    if (num) posted++;
+    if (num) { posted++; if (r!.status === 'complete' || r!.status === 'official') done++; if (r!.status === 'official') official++; }
+    else if (link) links++;
+    else if (r) pending++;
     let w: Dot['why'] = '';
     if (pick && cmp === 'nc' && num) {
-      w = spans(r!) ? 'span' : it.kind === 'contest' && isRCV(it) ? 'rcv' : it.kind === 'contest' && isMultiSeat(it) ? 'multi'
+      const c = it.kind === 'contest' ? it : null;
+      w = spans(r!) ? 'span' : c && blockVote(c) ? 'block' : c && !winnersOf(r!) && unknownLead(r!) ? 'unknown'
+        : c && (isRCV(c) || isMultiSeat(c)) ? (winnersOf(r!) ? 'partial' : isRCV(c) ? 'rcv' : 'multi')
         : isMeasureLike(it) ? (sideOf(it, r!) === null ? 'rule' : 'edge') : 'tie';
       why.add(w);
     }
-    const kind: DotKind = pick ? (cmp === 'won' || cmp === 'ahead' ? 'up' : cmp === 'lost' || cmp === 'behind' ? 'down' : 'wp') : num ? 'po' : 'w';
+    const kind: DotKind = pick ? (cmp === 'won' || cmp === 'ahead' ? 'up' : cmp === 'lost' || cmp === 'behind' ? 'down' : 'wp') : num ? 'po' : link ? 'ln' : 'w';
     if (pick) counts[cmp]++; else { others++; if (it.kind === 'measure') kinds.measures++; else kinds.races++; }
     const dot: Dot = { id: it.id, sec: x.sec, pick, cmp, kind, posted: num, why: w };
     const last = rows[rows.length - 1];
     if (last && last.sec === x.sec) last.dots.push(dot); else rows.push({ sec: x.sec, dots: [dot] });
   }
-  const live = sts.filter((s) => s !== 'pending');
-  const word: Figure['word'] = !live.length || sts.some((s) => s === 'counting' || s === 'pending') ? 'Counting' : live.every((s) => s === 'official') ? 'Official' : 'Unofficial';
-  const explain = !live.length ? 'No numbers posted yet. Election offices post as they count.'
-    : word === 'Counting' ? 'Election offices are still counting, so these numbers will change.'
+  // "Unofficial" and "Official" only when every race on the ballot has a count here marked so; a race that links out or
+  // isn't in the file may still be counting (adversarial pass, Nov 3).
+  const word: Figure['word'] = total && done === total ? (official === total ? 'Official' : 'Unofficial') : 'Counting';
+  const explain = !posted ? (links && !pending ? 'Results for these races are on the election offices’ own sites.' : 'No numbers posted yet. Election offices post as they count.')
+    : word === 'Counting' ? (done === posted ? 'The counts here are marked complete. Other races may still be counting.' : 'Election offices are still counting, so these numbers will change.')
     : word === 'Unofficial' ? 'The election offices marked their counts complete. They become official later.'
     : 'The election offices made these counts official.';
   const notes: string[] = [];
   if (why.has('rcv')) notes.push('Ranked choice races aren’t compared until the final round.');
   if (why.has('multi')) notes.push('Races that fill more than one seat aren’t compared until the count is complete.');
+  if (why.has('partial')) notes.push('A pick for several seats where some won and some didn’t isn’t counted either way.');
   if (why.has('span')) notes.push('Races across county lines aren’t compared: each county posts its own count, and we don’t add them up.');
   if (why.has('tie')) notes.push('A race tied at the top isn’t compared.');
+  if (why.has('unknown')) notes.push('A race where a name not in this guide could be leading isn’t compared.');
   if (why.has('edge')) notes.push('A measure exactly at its bar to pass isn’t compared.');
   if (why.has('rule')) notes.push('A measure whose rule to pass is more than a share of yes and no isn’t compared.');
-  return { word, explain, rows, picks: Object.values(counts).reduce((a, n) => a + n, 0), counts, others, othersKinds: kinds, posted, total, questions: { n: qn, first }, notes };
+  if (why.has('block')) notes.push('A block vote that elects everyone either way isn’t compared.');
+  return { word, explain, rows, picks: Object.values(counts).reduce((a, n) => a + n, 0), counts, others, othersKinds: kinds, posted, total, links, allLinks: !posted && !pending && links > 0, questions: { n: qn, first }, notes };
 }
 /* "Your 25 picks: 15 ahead · 9 behind · 1 we can't compare yet" */
 export function countLine(f: Figure): string {

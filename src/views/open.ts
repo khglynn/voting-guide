@@ -592,7 +592,7 @@ function slicesHTML(it: Item, r: ItemResult): string {
   return `<p class="rs-src"><b>This race crosses county lines.</b> Each county posts its own count, and we don’t add them up.</p><ul class="rs-sl">${rows}${miss}</ul>`;
 }
 function tableHTML(it: Item, o: ReturnType<typeof resOpen>): string {
-  const head = it.kind === 'measure' ? 'Vote' : it.kind === 'contest' && it.is_retention ? 'Vote' : 'Candidate';
+  const head = it.kind === 'measure' ? 'Vote' : it.kind === 'contest' && it.is_retention ? 'Vote' : it.kind === 'contest' && isRCV(it) ? 'First choices' : 'Candidate';
   const body = o.rows.map((x) => `<tr class="${x.mine ? 'mine' : ''}${x.other ? ' wi' : ''}"><td><span class="nm">${x.mine ? '<i class="tk" aria-hidden="true"></i>' : ''}${esc(x.name)}</span>${x.party ? `<span class="py">${esc(x.party)}</span>` : ''}${x.mine ? '<span class="rk">Your pick</span>' : ''}</td><td class="n">${x.votes.toLocaleString('en-US')}</td><td class="n">${esc(pct1(x.pct))}</td></tr>`).join('');
   return `<table class="rtab"><thead><tr><th scope="col">${head}</th><th scope="col" class="n">Votes</th><th scope="col" class="n">Vote %</th></tr></thead><tbody>${body}</tbody></table>`;
 }

@@ -1867,7 +1867,7 @@ function roundTrip(name, stCode, places, mutate) {
     check('results figure: the key above the dots, shape classes on every dot, the counts, the checked times, a district question link', fh.indexOf('vz-key') < fh.indexOf('vz-fig') && /class="d up"/.test(fh) && /class="d down"/.test(fh) && /class="d wp"/.test(fh) && /We checked Travis County: 9:42 PM CT · Williamson County: 9:41 PM CT/.test(fh) && /data-act="goto" data-q="/.test(fh), txt(fh).slice(0, 300));
     st.S.b.picks = {};
     const f0 = rm.figure();
-    check('results figure: no picks: no gold, how many races have numbers', f0.picks === 0 && rm.countLine(f0) === '' && /No picks on this ballot\. \d+ of \d+ races have numbers posted\./.test(txt(fig.figureHTML())) && !/class="d (up|down|wp)"/.test(fig.figureHTML()));
+    check('results figure: no picks: no gold, how many races have numbers', f0.picks === 0 && rm.countLine(f0) === '' && /No picks on this ballot\. \d+ of \d+ races have numbers here; \d+ more link to official results\./.test(txt(fig.figureHTML())) && /class="d ln"/.test(fig.figureHTML()) && !/class="d (up|down|wp)"/.test(fig.figureHTML()));
     check('results: a source that’s down says so and when its numbers are from', rm.sourceLines(tx.sources).includes('Couldn’t reach Harris County. Showing its 9:12 PM CT numbers.'), rm.sourceLines(tx.sources).join(' | '));
     check('results: a link-only source whose read failed isn’t "couldn’t reach" (its rows are links), and a source’s banner words are quoted', rm.sourceLines([{ id: 'b', name: 'Bexar County', url: 'https://x.y/', updated: null, status: 'link_only', reporting: null, fetched: null, failing_since: '2026-11-04T01:35:00Z' }]).length === 0 && !rm.sourceDown({ status: 'link_only', failing_since: 'x' }) && rm.sourceLines([{ id: 'd', name: 'Dallas County', url: 'https://x.y/', updated: '2026-11-04T00:50:31Z', status: 'counting', reporting: null, fetched: '2026-11-04T01:51:00Z', labels: ['Early Voting Totals Only'] }])[0] === 'Dallas County updated: 6:50 PM CT. “Early Voting Totals Only.”', rm.sourceLines([{ id: 'd', name: 'Dallas County', url: 'https://x.y/', updated: '2026-11-04T00:50:31Z', status: 'counting', reporting: null, fetched: '2026-11-04T01:51:00Z', labels: ['Early Voting Totals Only'] }]).join('|'));
     check('results: the strip’s freshness line and Refresh', /We checked Travis County: 9:42 PM CT · Williamson County: 9:41 PM CT\. Refresh/.test(txt(views.planstrip.planHTML())), txt(views.planstrip.freshHTML()));
@@ -1910,7 +1910,7 @@ function roundTrip(name, stCode, places, mutate) {
     // Lakewood: a 55% amendment and a retention judge.
     withRows('CO', ['lakewood-co'], []);
     useFile('CO', FX('CO'));
-    check('results column: a measure with a bar above half shows it ("needs 55% to pass")', col('co-amendment-81') === 'Yes 53% needs 55% to pass', col('co-amendment-81'));
+    check('results column: a measure with a bar above half shows it ("needs 55% to pass")', col('co-amendment-81') === 'Yes 53% needs 55% to pass · counting', col('co-amendment-81'));
     check('results column: retention reads "Keep the judge"', col('co-retention-hood') === 'Keep the judge: 72% counting', col('co-retention-hood'));
     st.S.b.picks['co-amendment-81'] = 'YES';
     check('results figure: 53% yes against a 55% bar is behind for a yes pick', rm.compare(st.S.ballot.byId.get('co-amendment-81'), rm.R.file.items['co-amendment-81']) === 'behind');
@@ -1925,16 +1925,39 @@ function roundTrip(name, stCode, places, mutate) {
       const tn = { ...nn, pass_threshold: 'more yes votes than no votes, and more yes votes than half of all the votes cast for governor' };
       check('results: a rule beyond yes and no (Tennessee) is never compared or called ahead', rm.barOf(tn, even) === null && rm.sideOf(tn, { ...even, measure: { yes: 70, no: 30, yes_pct: 70, threshold: null } }) === null && txt(rm.resCol(tn, { ...even, measure: { yes: 70, no: 30, yes_pct: 70, threshold: null } }).main) === 'Yes 70%' && /Passing takes more than a share of yes and no/.test(rm.resOpen(tn, { ...even, measure: { yes: 70, no: 30, yes_pct: 70, threshold: null } }).line));
     }
+    {
+      // The adversarial pass (Nov 3): a bar above half never reads "no is ahead" while yes leads no; near the bar, one
+      // decimal cut down; a final keeps its bar; a judge "Stays"; a name not in the guide that could lead names no leader.
+      const it81 = st.S.ballot.byId.get('co-amendment-81');
+      const r81 = rm.R.file.items['co-amendment-81'];
+      check('results: Yes 53% against a 55% bar reads "short of the 55% it needs", never "no is ahead"', rm.resOpen(it81, r81).line === 'Yes is short of the 55% it needs so far.', rm.resOpen(it81, r81).line);
+      const near = { ...r81, measure: { yes: 596, no: 404, yes_pct: 59.6, threshold: 60 } };
+      const fin = { ...r81, status: 'complete', final: { passed: false }, measure: { yes: 5496, no: 4504, yes_pct: 54.96, threshold: 55 } };
+      check('results: near its bar the share isn’t rounded up across it, and a final keeps the bar', rm.resCol(it81, near).main === 'Yes 59.6%' && rm.resCol(it81, fin).main === 'Did not pass' && rm.resCol(it81, fin).sub === 'Yes 54.9% · needs 55% · unofficial' && /It needed 55% yes\./.test(rm.resOpen(it81, fin).line), `${rm.resCol(it81, near).main} | ${rm.resCol(it81, fin).sub}`);
+      const hood = st.S.ballot.byId.get('co-retention-hood');
+      check('results: a retained judge reads "Stays" in the column', rm.resCol(hood, { ...rm.R.file.items['co-retention-hood'], status: 'complete', final: { passed: true } }).main === 'Stays');
+      const sher = st.S.ballot.byId.get('jefferson-sheriff');
+      const big = { ...rm.R.file.items['jefferson-sheriff'], total_votes: 600000, unmatched: ['Someone Big'] };
+      st.S.b.picks['jefferson-sheriff'] = 'Randall Doizaki';
+      check('results: a name not in the guide that could be leading: no leader named, no comparison', rm.resCol(sher, big).main === 'See election office results' && rm.compare(sher, big) === 'nc' && /isn’t in this guide, so we don’t say who’s ahead/.test(rm.resOpen(sher, big).line), rm.resCol(sher, big).main);
+      delete st.S.b.picks['jefferson-sheriff'];
+      check('results figure: "Counting" while any race on the ballot isn’t in the file, even when every count read is complete', (() => { const f2 = JSON.parse(JSON.stringify(rm.R.file)); for (const v of Object.values(f2.items)) { v.status = 'complete'; } const keepF = rm.R.file; rm.R.file = f2; const w = rm.figure().word; rm.R.file = keepF; return w === 'Counting'; })());
+    }
     // Portland: ranked choice stays "First choices only" and is never compared before the final round.
     withRows('OR', ['portland-or'], []);
     useFile('OR', FX('OR'));
     st.S.b.ranks['multnomah-chair'] = ['Shannon Singleton', 'Julia Brim-Edwards', 'Sharon Meieran'];
     check('results column: ranked choice: first choices only', col('multnomah-chair') === 'Singleton 38% First choices only Your pick: 1. Singleton +2', col('multnomah-chair'));
+    {
+      const ch = st.S.ballot.byId.get('multnomah-chair');
+      const fin = { ...rm.R.file.items['multnomah-chair'], status: 'complete', final: { winners: ['Julia Brim-Edwards'] } };
+      check('results: ranked choice once the file names the winner: the column names them without "won", the table stays first choices', rm.resCol(ch, fin).main === 'Brim-Edwards' && rm.resCol(ch, fin).sub === 'final round · unofficial' && /won after the final round\. The table shows first choices\./.test(rm.resOpen(ch, fin).line) && /<th scope="col">First choices<\/th>/.test(op.resultsHTML(ch, fin)));
+    }
     check('results figure: ranked choice isn’t compared before the final round, and says why', rm.compare(st.S.ballot.byId.get('multnomah-chair'), rm.R.file.items['multnomah-chair']) === 'nc' && rm.figure().notes.some((n) => /Ranked choice races aren’t compared until the final round/.test(n)));
     // Manhattan: every row a link, nothing posted.
     withRows('NY', ['nyc-manhattan-ny'], []);
     useFile('NY', FX('NY'));
-    check('results: Manhattan, link only: rows say "See election office results", the figure has no numbers', col('nyc-proposal-1') === 'See election office results' && rm.figure().posted === 0 && !rm.checkedLine());
+    check('results: Manhattan, link only: rows say "See election office results", one line instead of the figure, no Refresh', col('nyc-proposal-1') === 'See election office results' && rm.figure().allLinks && /^Results for your races are on the NYC Board of Elections’s site\. Your picks stay here\.$/.test(txt(fig.figureHTML())) && views.planstrip.freshHTML() === '', txt(fig.figureHTML()));
     check('results copy: no em dashes, no all caps', !/—/.test(txt(fig.figureHTML()) + txt(views.planstrip.freshHTML())));
   } finally {
     globalThis.fetch = hadFetch;

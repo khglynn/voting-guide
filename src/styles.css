@@ -1159,3 +1159,4 @@ a.res-st { color: var(--ink); text-decoration: underline; text-decoration-color:
 @media (max-width: 420px) { .vz-r { grid-template-columns: 78px minmax(0, 1fr) 32px; } .vz-list { padding-left: 0; } }
 @media print { .vz-cv, .vz-hd .linkbtn, .rs-fold .cv { display: none; } }
 @media print { .vz-print { margin: 8pt 0 10pt; padding-bottom: 6pt; } .vz-print .vz-r { min-height: 0; } }
+.d.ln::after { content: ""; position: absolute; inset: 3px; border-radius: 50%; border: 1.3px solid var(--faint); }

@@ -13,6 +13,9 @@ import { fingerprint, mapHash } from './fingerprint.js';
 import { sha256, ELECTION } from './util.js';
 
 export const SCHED_KEY = `sched:${ELECTION}`;
+/* Bump when an adapter's output changes for the same feed bytes (Nov 3: no progress words when no precinct has
+   reported), so stored reads made by older code are redone in full and replaced in place, never left stale. */
+export const READ_VERSION = 2;
 const MAX_CARRY = 3; // cut-off reads in a row a dropped race keeps its last numbers through
 const SITE = 'https://vote.kevinhg.com';
 
@@ -30,7 +33,8 @@ async function runSource({ map, fetch, store, archive, sched, now, ping }) {
   let r;
   const mh = await mapHash(map);
   // A token only stands when its read is still stored: with no good read on hand, read in full.
-  const prevToken = prevRec?.read && S[map.id]?.token && S[map.id]?.map_hash === mh ? S[map.id].token : null;
+  const current = prevRec?.read_version === READ_VERSION;
+  const prevToken = current && prevRec?.read && S[map.id]?.token && S[map.id]?.map_hash === mh ? S[map.id].token : null;
   const attempt = async () => { try { return await adapter.read({ fetch, map, prevToken }); } catch (e) { return { verdict: 'error', error: `adapter threw: ${e.message}` }; } };
   r = await attempt();
   // One quick retry inside the tick for a blip (a timeout, a 5xx, a version whose files aren't up yet); never for a
@@ -58,7 +62,7 @@ async function runSource({ map, fetch, store, archive, sched, now, ping }) {
   // The falling-total baseline is the last good read, never a blocked one (security review, Nov 3).
   const baseline = prevRec && !prevRec.blocked_only ? prevRec.read : null;
   const hash = (await sha256(JSON.stringify(raw || read))).slice(0, 12);
-  if (prevRec && !prevRec.blocked && prevRec.hash === hash) {
+  if (current && prevRec && !prevRec.blocked && prevRec.hash === hash) {
     // A full re-read (a new map, a lost token) that found the same bytes: unchanged, nothing to store or archive.
     const status = sourceStatus(prevRec.read, map, now);
     S[map.id] = nextEntry(S[map.id], { kind: 'ok', changed: false, status, allComplete: status === 'complete' }, now, map);
@@ -101,7 +105,7 @@ async function runSource({ map, fetch, store, archive, sched, now, ping }) {
     delete S[map.id].token;
     return { id: map.id, outcome: 'election mismatch', problems: check.problems };
   }
-  const rec = { read, fetched: now, hash, blocked: false, problems: check.problems, raw_key: `raw/${map.id}/${now}-${hash}.json` };
+  const rec = { read, fetched: now, hash, read_version: READ_VERSION, blocked: false, problems: check.problems, raw_key: `raw/${map.id}/${now}-${hash}.json` };
   await store.put(`src:${map.id}`, JSON.stringify(rec));
   await store.delete(`blocked:${map.id}`);
   for (const p of check.problems) if (p.reason === 'falling total') await ping(map.id, 'falling total', `${map.name}: ${p.detail}.`);

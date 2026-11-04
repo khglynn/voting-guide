@@ -188,3 +188,19 @@ test('tick: a race carried through two cut-off reads keeps its own time; after t
   assert.notEqual(seen[3].item.status, 'counting', 'let go after three cut-off reads');
   assert.match(seen[3].error, /stopped carrying 1 race/);
 });
+
+test('tick: a stored read made by older adapter code is redone in full and replaced in place', async () => {
+  const map = mapFor('bexar-tx');
+  const routes = { '/127291/current_ver.txt': 'clarity-bexar.current_ver.txt', '/127291/379718/json/en/summary.json': 'clarity-bexar.summary.json', '/127291/379718/json/en/electionsettings.json': 'clarity-bexar.electionsettings.json' };
+  const store = memStore();
+  await runTick({ fetch: fakeFetch(routes), store, archive: null, maps: [map], now: '2026-11-03T22:00:00.000Z' });
+  const rec = JSON.parse(await store.get('src:bexar-tx'));
+  rec.read_version = 1; rec.read.contests[0].reporting = 'stale words';
+  await store.put('src:bexar-tx', JSON.stringify(rec));
+  const sched = JSON.parse(await store.get('sched:2026-11-03'));
+  sched.sources['bexar-tx'].next_due = null;
+  await store.put('sched:2026-11-03', JSON.stringify(sched));
+  const out = await runTick({ fetch: fakeFetch(routes), store, archive: null, maps: [map], now: '2026-11-03T22:05:00.000Z' });
+  assert.equal(out.ran[0].outcome, 'changed');
+  assert.notEqual(JSON.parse(await store.get('src:bexar-tx')).read.contests[0].reporting, 'stale words');
+});

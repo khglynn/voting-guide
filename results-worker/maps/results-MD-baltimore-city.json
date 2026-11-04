@@ -1,0 +1,45 @@
+{
+  "id": "results-MD-baltimore-city",
+  "state": "MD",
+  "name": "Baltimore City (Maryland State Board of Elections)",
+  "county": "Baltimore City",
+  "scope": "county",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "2026 Gubernatorial General Election",
+    "feed_name": "2026 Gubernatorial General Election"
+  },
+  "guide": {
+    "fingerprint": null,
+    "made_from": null,
+    "places": [
+      "baltimore-md"
+    ]
+  },
+  "feed": {
+    "adapter": "md_sbe",
+    "base": "https://results.elections.maryland.gov/elections/2026/general_results",
+    "results_url": "https://results.elections.maryland.gov/elections/2026/general_results/gen_results_2026_by_county_3.html",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent on Nov 3, 10:21 to 10:25 PM CT (src-east builder): 200s from Cloudflare, no challenge. The old host elections.maryland.gov now answers 302 to results.elections.maryland.gov.",
+    "election_id_from": "Each page's own heading, \"Unofficial 2026 Gubernatorial General Election Results for ...\". The pages carry no date; election_dates pairs the board's name with Nov 3, 2026 (the SBE's 2026 Election Calendar, research/raw/results-MD/elections-maryland-gov-elections-2026-2026-election-calendar-pdf-ad7db3--20261103-1251.pdf).",
+    "election_dates": {
+      "2026 Gubernatorial General Election": "2026-11-03"
+    },
+    "pages": [
+      "gen_results_2026_by_county_3_P.html"
+    ],
+    "pages_note": "Baltimore City's county page (printer twin) holds every contest on a city ballot, its local Questions A to I included.",
+    "reporting_contest": "Governor / Lt. Governor",
+    "tz": "America/New_York"
+  },
+  "polls_close": "2026-11-04T01:00:00Z",
+  "count_closes": "2026-11-14T04:59:00Z",
+  "complete_marker": null,
+  "certify_by": "2026-12-03",
+  "official": null,
+  "contests": [],
+  "unmatched_feed": [],
+  "unmatched_guide": [],
+  "not_here": []
+}

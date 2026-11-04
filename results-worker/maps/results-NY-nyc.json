@@ -1,0 +1,59 @@
+{
+  "id": "results-NY-nyc",
+  "state": "NY",
+  "name": "New York City Board of Elections",
+  "county": "New York City",
+  "scope": "county",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "SPECIAL NOVEMBER 3, 2026",
+    "feed_name": "SPECIAL NOVEMBER 3, 2026"
+  },
+  "guide": {
+    "fingerprint": null,
+    "made_from": null,
+    "places": [
+      "nyc-manhattan-ny",
+      "nyc-brooklyn-ny",
+      "nyc-bronx-ny",
+      "nyc-queens-ny",
+      "nyc-staten-island-ny"
+    ]
+  },
+  "feed": {
+    "adapter": "nyc_enr",
+    "base": "https://enr.boenyc.gov",
+    "results_url": "https://enr.boenyc.gov/index.html",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent on Nov 3, 10:19 to 10:23 PM CT (src-east builder): 200s from Cloudflare, Last-Modified on every page, no challenge.",
+    "election_id_from": "index.html's own heading, \"SPECIAL<BR>NOVEMBER 3, 2026\", above \"UNOFFICIAL ELECTION NIGHT RESULTS\" (the board's wording; the ballot is the Nov 3 general). The site has no election id.",
+    "token_page": "index.html",
+    "pages": [
+      "OFA3CY0PY3.html",
+      "OFA7CY0PY1.html",
+      "OFA8CY0PY15.html",
+      "OFA9CY0PY1.html",
+      "OFA10CY0PY1.html",
+      "OFA16CY0PY1.html",
+      "OFA17CY0PY1.html",
+      "OF18CY0PY1.html",
+      "OF10080CY0PY0.html",
+      "OF10081CY0PY0.html",
+      "OF10082CY0PY0.html",
+      "OF10083CY0PY0.html",
+      "OF10084CY0PY0.html"
+    ],
+    "pages_note": "Each office's Expand List page (every district on one page) plus the single-contest pages for the City Council special and Proposals 1 to 5. Governor, Comptroller and Attorney General (OF4, OF52, OF53) are left out: statewide items come only from a state source, and New York State's own site refuses scripts.",
+    "reporting_contest": "Proposal Number 1",
+    "tz": "America/New_York"
+  },
+  "polls_close": "2026-11-04T02:00:00Z",
+  "count_closes": "2026-11-17T04:59:00Z",
+  "complete_marker": null,
+  "certify_by": "2026-11-28",
+  "official": null,
+  "contests": [],
+  "unmatched_feed": [],
+  "unmatched_guide": [],
+  "not_here": []
+}

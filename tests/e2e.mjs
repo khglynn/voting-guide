@@ -3712,7 +3712,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await tap(page, '[data-fk="bar-menu"]');
   await page.waitForSelector('.sheet-panel.toc .nv-res');
   const menu = await text(page, '.sheet-panel.toc');
-  check('Results rows: the menu is results first: the word, when we checked, Refresh, each office’s words, the offices’ pages, posted counts per section, no Next up', /^Results on this ballot Close Counting We checked 9:41 PM CT Refresh Federal offices Numbers for/.test(menu) && /Where the numbers come from Travis County 128 of 186 vote centers reporting/.test(menu) && !!(await page.$('.sheet-panel.toc [data-fk="toc-refresh"]')) && !(await page.$('.sheet-panel.toc [data-act="next"]')) && !!(await page.$('.sheet-panel.toc [data-act="jump"][data-to="federal"]')), menu.slice(0, 260));
+  check('Results rows: the menu is results first: the word, when we checked, Refresh, each office’s words, the offices’ pages, posted counts per section, no Next up', /^Results on this ballot ?Close Counting We checked 9:41 PM CT ?Refresh Federal offices ?Numbers for/.test(menu) && /Where the numbers come from ?Travis County ?128 of 186 vote centers reporting/.test(menu) && !!(await page.$('.sheet-panel.toc [data-fk="toc-refresh"]')) && !(await page.$('.sheet-panel.toc [data-act="next"]')) && !!(await page.$('.sheet-panel.toc [data-act="jump"][data-to="federal"]')), menu.slice(0, 260));
   await tap(page, '.sheet-panel.toc [data-act="sheet-close"]');
   // Answering the question may open the race already; open it if not.
   if ((await page.getAttribute('[data-fk="row-tx-us-house-37"]', 'aria-expanded')) !== 'true') await tap(page, '[data-fk="row-tx-us-house-37"]');

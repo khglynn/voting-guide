@@ -778,7 +778,7 @@ export function footResHTML(): string {
   // Two short lines on a phone, one from 600px (GPT copy pass): the word and whose count; then the office's own
   // words and when we checked; Refresh at the end of the first.
   else body = `<span class="fr-a"><b class="fr-w">${esc(f.word)}</b>${f.who ? `<span class="fr-sep" aria-hidden="true"> · </span><span class="fr-who">${esc(f.who)}</span>` : ''}</span>
-      <span class="fr-b">${f.words ? `<span class="fr-p">${esc(f.words)}</span>` : ''}${R.failed ? '<span class="fr-at">Couldn’t check just now</span>' : f.at ? `<span class="fr-at">Checked ${esc(f.at)}</span>` : ''}</span>${refreshBtn('bar-refresh')}`;
+      <span class="fr-b">${f.words ? `<span class="fr-p">${esc(f.words)}</span> ` : ''}${R.failed ? '<span class="fr-at">Couldn’t check just now</span>' : f.at ? `<span class="fr-at">Checked ${esc(f.at)}</span>` : ''}</span> ${refreshBtn('bar-refresh')}`;
   return `<div class="foot-res${f.kind === 'res' ? ' fr-grid' : ''}" data-kind="${f.kind}">${body}</div>`;
 }
 
@@ -817,7 +817,7 @@ function resMenuHTML(where: 'toc' | 'rail'): string {
   const at = checkedAt();
   const head = !f || f.kind === 'wait' ? '<p class="nv-rw"><b>Results</b> <span>Checking…</span></p>'
     : !srcs.length || !fig || !fig.posted ? `<p class="nv-rw"><b>Results</b></p><p class="nv-rx">${R.failed && !resultsOn() ? 'Couldn’t check the election offices just now. ' : ''}These races’ counts are on the election offices’ own pages.</p>${R.failed && !resultsOn() ? `<p class="nv-rw">${refreshBtn(`${where}-refresh`)}</p>` : ''}`
-    : `<p class="nv-rw"><b>${esc(fig.word)}</b>${R.failed ? ' <span>Couldn’t check just now</span>' : at ? ` <span>We checked ${esc(at)}</span>` : ''}${refreshBtn(`${where}-refresh`)}</p>`;
+    : `<p class="nv-rw"><b>${esc(fig.word)}</b>${R.failed ? ' <span>Couldn’t check just now</span>' : at ? ` <span>We checked ${esc(at)}</span>` : ''} ${refreshBtn(`${where}-refresh`)}</p>`;
   // Each office's own words and update time, under the sections (GPT copy pass: navigation before source detail).
   const srcList = !srcs.length || !fig || !fig.posted ? '' : `<h3 class="nv-sh">Where the numbers come from</h3><ul class="nv-srcs">${srcs.map((x) => {
         const p = progressOf(x);

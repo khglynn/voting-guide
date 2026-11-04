@@ -3,7 +3,10 @@
    vote in that contest, matched or not, so percentages can be rechecked), `reason` on a link_only item ("not matched",
    "not checked yet", "election mismatch", "source refused us", "map out of date"), and on each source `checked`,
    `next_due` and `failing_since`. Nothing here sums slices: a race whose voters span sources (its map entry's
-   `reaches` names more than one county, or two sources carry it) keeps one slice per source, the largest on top. */
+   `reaches` names more than one county, or two sources carry it) keeps one slice per source, the largest on top.
+   A county map may carry a statewide race as that county's slice (`statewide: true`, reaches [county, "other
+   counties"], Nov 4): beneath the state's own count while the state source has numbers, and on its own, named by
+   county and never the whole race, when the state source is refused or a link. */
 import { pctOf, hasProgressCount } from './util.js';
 import { outcomeFor, parseThreshold, RETENTION } from './outcome.js';
 
@@ -85,6 +88,7 @@ export function sourceSlices(read, map, now) {
     // A race whose map gives no `reaches` is never taken as the whole race: one county's slice, "other counties"
     // missing (site builder's review, Nov 3). `reaches: [this county]` is the map saying it is wholly inside.
     slice._whole = !!mc.whole;
+    slice._statewide = !!mc.statewide; // a county's share of a statewide race (see buildStateFile)
     slice._reaches = mc.reaches && mc.reaches.length ? mc.reaches : [map.county || map.name, 'other counties'];
     // A count the source itself marks as one part of a bigger race (the NYC board's asterisk, "the City of New York
     // portion of the contests only") is never taken as the whole race, whatever the map's reaches say.
@@ -161,21 +165,29 @@ export function buildStateFile({ state, maps, srcs, mode, now }) {
     if (reason) { entry.status = 'link_only'; entry.note = reason; }
     sources.push(entry);
 
-    const linkAll = (r) => { for (const mc of map.contests || []) links[mc.item] ??= { source: map.id, status: 'link_only', reporting: null, updated: null, url: mc.item_url || map.feed.results_url, reason: r }; };
+    // A county's slice of a statewide race (`statewide: true`, Nov 4) never speaks for the race when it has no numbers:
+    // no link, no "not posted yet". The state source's own link (or numbers) stands, so a county that is refused or not
+    // read yet can't put "not posted yet" or its own page over the state's.
+    const own = (map.contests || []).filter((mc) => !mc.statewide);
+    const linkAll = (r) => { for (const mc of own) links[mc.item] ??= { source: map.id, status: 'link_only', reporting: null, updated: null, url: mc.item_url || map.feed.results_url, reason: r }; };
     for (const id of map.unmatched_guide || []) links[id] ??= { source: map.id, status: 'link_only', reporting: null, updated: null, url: map.feed.results_url, reason: 'not matched' };
     if (reason) { linkAll(reason); continue; }
     if (!rec) {
-      for (const mc of map.contests || []) (contributions[mc.item] ??= []).push({ source: map.id, county: map.county || map.name, status: 'pending', reporting: null, updated: null, url: mc.item_url || map.feed.results_url, total_votes: 0, _kind: mc.kind, _reaches: mc.reaches && mc.reaches.length ? mc.reaches : [map.county || map.name, 'other counties'], _empty: true });
+      for (const mc of own) (contributions[mc.item] ??= []).push({ source: map.id, county: map.county || map.name, status: 'pending', reporting: null, updated: null, url: mc.item_url || map.feed.results_url, total_votes: 0, _kind: mc.kind, _reaches: mc.reaches && mc.reaches.length ? mc.reaches : [map.county || map.name, 'other counties'], _empty: true });
       continue;
     }
     const { status, slices } = sourceSlices(rec.read, map, now);
     entry.status = status;
     for (const [item, sl] of Object.entries(slices)) (contributions[item] ??= []).push(sl);
-    for (const mc of map.contests || []) if (!slices[mc.item]) links[mc.item] ??= { source: map.id, status: 'link_only', reporting: null, updated: null, url: mc.item_url || map.feed.results_url, reason: 'not in the feed' };
+    for (const mc of own) if (!slices[mc.item]) links[mc.item] ??= { source: map.id, status: 'link_only', reporting: null, updated: null, url: mc.item_url || map.feed.results_url, reason: 'not in the feed' };
   }
 
   const items = {};
-  for (const [item, list] of Object.entries(contributions)) {
+  for (const [item, all] of Object.entries(contributions)) {
+    // A county's share of a statewide race counts only once it has votes: with none, the state source's numbers or
+    // link stand (a refused state never turns into a county's "not posted yet").
+    const list = all.filter((s) => !(s._statewide && !(s.total_votes > 0)));
+    if (!list.length) continue;
     const reaches = [...new Set(list.flatMap((s) => s._reaches))];
     const real = list.filter((s) => !s._empty);
     if (real.length === 0) { const e = list[0]; items[item] = { source: e.source, status: 'pending', reporting: null, updated: null, url: e.url, final: null }; continue; }

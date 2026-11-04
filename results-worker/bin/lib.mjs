@@ -46,7 +46,7 @@ export function folderArchive(dir) {
   return { async put(k, v) { const p = path.join(dir, k); fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, String(v)); } };
 }
 
-const BOOLEAN = new Set(['write', 'offline', 'tick']);
+const BOOLEAN = new Set(['write', 'offline', 'tick', 'statewide', 'add']);
 export function flags(argv) {
   const out = { _: [] };
   for (let i = 0; i < argv.length; i++) {

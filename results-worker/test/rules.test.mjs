@@ -48,13 +48,13 @@ test('ladder: 1, 5, 15, 60 minutes; complete every 6 hours; official stops; refu
   assert.deepEqual(dueSources({ a: r, b: {} }, ['a', 'b'], t0), ['b']);
 });
 
-test('ladder: failures back off 2, 5, 15, 60', () => {
+test('ladder: failures back off 1, 2, 5, 15, 60', () => {
   const t0 = '2026-11-04T02:00:00.000Z';
   let e = {};
   const waits = [];
   let t = t0;
-  for (let i = 0; i < 5; i++) { e = nextEntry(e, { kind: 'error', error: 'x' }, t); waits.push((Date.parse(e.next_due) - Date.parse(t)) / 60000); t = e.next_due; }
-  assert.deepEqual(waits, [2, 5, 15, 60, 60]);
+  for (let i = 0; i < 6; i++) { e = nextEntry(e, { kind: 'error', error: 'x' }, t); waits.push((Date.parse(e.next_due) - Date.parse(t)) / 60000); t = e.next_due; }
+  assert.deepEqual(waits, [1, 2, 5, 15, 60, 60]);
   assert.equal(e.failing_since, t0);
 });
 

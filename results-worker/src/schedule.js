@@ -4,7 +4,8 @@
      complete: every 6 hours; official: stopped; never earlier than the source's own next-update time.
    Quiet hours from Nov 4, 6 AM in the source's zone: no polls 11 PM to 6 AM local unless it changed in the last hour.
    A source whose items are all complete with its count window closed polls daily.
-   Failures back off 2, 5, 15, then 60 minutes; `refused` stops the source until a person changes its map.
+   Failures back off 1, 2, 5, 15, then 60 minutes (the plan said 2, 5, 15, 60; election night showed Clarity's blips
+   come in runs, and a 15-minute wait cost Bexar's first post), after one retry inside the tick; `refused` stops the source until a person changes its map.
    A source stops for good once official, or once `certify_by` plus three days passes with no change.
    Added Nov 3 (builder): before the map's `polls_close` the next poll never lands later than the close, and after it a
    source with nothing posted yet is polled every minute, so the first numbers are read within a minute of posting. */
@@ -44,7 +45,7 @@ export function nextEntry(entry = {}, result, now, map = {}) {
     e.fail_count = (e.fail_count || 0) + 1;
     e.failing_since ??= now;
     e.last_error = result.error || 'error';
-    const back = [2, 5, 15, 60][Math.min(e.fail_count, 4) - 1];
+    const back = [1, 2, 5, 15, 60][Math.min(e.fail_count, 5) - 1];
     e.next_due = afterQuiet(addMin(now, back), e, tz);
     return e;
   }

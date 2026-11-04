@@ -29,7 +29,11 @@ async function runSource({ map, fetch, store, archive, sched, now, ping }) {
   let r;
   const mh = await mapHash(map);
   const prevToken = S[map.id]?.token && S[map.id]?.map_hash === mh ? S[map.id].token : null;
-  try { r = await adapter.read({ fetch, map, prevToken }); } catch (e) { r = { verdict: 'error', error: `adapter threw: ${e.message}` }; }
+  const attempt = async () => { try { return await adapter.read({ fetch, map, prevToken }); } catch (e) { return { verdict: 'error', error: `adapter threw: ${e.message}` }; } };
+  r = await attempt();
+  // One quick retry inside the tick for a blip (a timeout, a 5xx, a version whose files aren't up yet); never for a
+  // refusal. Election night, Nov 3: three blips in a row parked Bexar in back-off while it posted its first numbers.
+  if (r.verdict === 'error') { await new Promise((ok) => setTimeout(ok, 3000)); const again = await attempt(); r = again.verdict === 'ok' ? again : { ...again, error: `${again.error} (and before the retry: ${r.error})` }; }
   if (r.verdict === 'refused') {
     S[map.id] = nextEntry(S[map.id], { kind: 'refused', error: r.error }, now, map);
     await ping(map.id, 'refused', `${map.name} refused our request (${r.error}). It stops until its map changes; its rows link out.`);

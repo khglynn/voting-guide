@@ -48,6 +48,6 @@ export default {
   },
 
   async scheduled(event, env, ctx) {
-    ctx.waitUntil(runTick({ fetch: (...a) => fetch(...a), store: env.RESULTS, archive: env.ARCHIVE, maps: MAPS, now: new Date(event.scheduledTime).toISOString(), ping: pinger(env) }).then((r) => console.log(JSON.stringify({ tick: r.stopped ? 'stopped' : r.ran?.map((x) => `${x.id}:${x.outcome}`) }))));
+    ctx.waitUntil(runTick({ fetch: (...a) => fetch(...a), store: env.RESULTS, archive: env.ARCHIVE, maps: MAPS, now: new Date(event.scheduledTime).toISOString(), ping: pinger(env) }).then((r) => console.log(JSON.stringify({ tick: r.stopped ? 'stopped' : r.ran?.map((x) => `${x.id}:${x.outcome}${x.error ? `:${x.error}` : ''}`) }))));
   },
 };

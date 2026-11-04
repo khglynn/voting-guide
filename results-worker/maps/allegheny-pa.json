@@ -9,12 +9,13 @@
     "feed_name": "2026 General"
   },
   "guide": {
-    "fingerprint": "0f8693f4008a5767",
-    "made_from": "vote.kevinhg.com/data, read 2026-11-04T14:50:44.268Z",
+    "fingerprint": "6bd19731c9681963",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T15:31:44.415Z",
     "places": [
       "pittsburgh-pa",
       "state-PA"
-    ]
+    ],
+    "statewide_fingerprint": "76ad2cef8758ef08"
   },
   "feed": {
     "adapter": "clarity",

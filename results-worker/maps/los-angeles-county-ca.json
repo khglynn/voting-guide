@@ -24,8 +24,9 @@
       "west-hollywood-ca",
       "state-CA"
     ],
-    "fingerprint": "54bfeb53bc6aed53",
-    "made_from": "vote.kevinhg.com/data, read 2026-11-04T14:52:04.545Z"
+    "fingerprint": "ef23e85b7c9aacff",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T15:31:46.829Z",
+    "statewide_fingerprint": "430838b248034e85"
   },
   "feed": {
     "adapter": "la_county",

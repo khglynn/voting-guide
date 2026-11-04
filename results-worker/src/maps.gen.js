@@ -11,12 +11,13 @@ export const MAPS = [
       "feed_name": "2026 General"
     },
     "guide": {
-      "fingerprint": "0f8693f4008a5767",
-      "made_from": "vote.kevinhg.com/data, read 2026-11-04T14:50:44.268Z",
+      "fingerprint": "6bd19731c9681963",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T15:31:44.415Z",
       "places": [
         "pittsburgh-pa",
         "state-PA"
-      ]
+      ],
+      "statewide_fingerprint": "76ad2cef8758ef08"
     },
     "feed": {
       "adapter": "clarity",
@@ -8593,8 +8594,9 @@ export const MAPS = [
         "west-hollywood-ca",
         "state-CA"
       ],
-      "fingerprint": "54bfeb53bc6aed53",
-      "made_from": "vote.kevinhg.com/data, read 2026-11-04T14:52:04.545Z"
+      "fingerprint": "ef23e85b7c9aacff",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T15:31:46.829Z",
+      "statewide_fingerprint": "430838b248034e85"
     },
     "feed": {
       "adapter": "la_county",
@@ -11641,12 +11643,13 @@ export const MAPS = [
       "feed_name": "2026 General Election Results"
     },
     "guide": {
-      "fingerprint": "1a3784fb5ba624b0",
-      "made_from": "vote.kevinhg.com/data, read 2026-11-04T14:50:44.405Z",
+      "fingerprint": "1b15975222eb2edb",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T15:31:47.123Z",
       "places": [
         "philadelphia-pa",
         "state-PA"
-      ]
+      ],
+      "statewide_fingerprint": "76ad2cef8758ef08"
     },
     "feed": {
       "adapter": "philadelphia",

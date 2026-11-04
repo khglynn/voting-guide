@@ -70,7 +70,9 @@ for (const m of maps) {
   if (m.guide?.fingerprint && m.guide.fingerprint !== fp) warn(m, `fingerprint ${m.guide.fingerprint} is stale; the guide now gives ${fp}`);
   if (sw && m.guide?.statewide_fingerprint !== sw) warn(m, m.guide?.statewide_fingerprint ? `statewide fingerprint ${m.guide.statewide_fingerprint} is stale; the guide now gives ${sw}` : `no statewide fingerprint (the guide gives ${sw}); the Worker leaves its statewide slices out until --write records one`);
   if (f.write) writeMap(m);
-  if (f.write && (m.guide?.fingerprint !== fp || (m.guide?.statewide_fingerprint ?? null) !== sw)) {
+  // A skeleton map with no contests binds nothing (results-MD, entry 75): its fingerprint stays null, so a full --write
+  // run leaves its check hash alone and the hourly check skips it.
+  if (f.write && m.contests?.length && (m.guide?.fingerprint !== fp || (m.guide?.statewide_fingerprint ?? null) !== sw)) {
     const g = { ...m.guide, fingerprint: fp, made_from: bundleDir ? `local bundles ${bundleDir}` : `vote.kevinhg.com/data, read ${new Date().toISOString()}` };
     if (sw) g.statewide_fingerprint = sw; else delete g.statewide_fingerprint;
     m.guide = g;

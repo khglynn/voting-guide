@@ -9,12 +9,13 @@
     "feed_name": "2026 General Election Results"
   },
   "guide": {
-    "fingerprint": "1a3784fb5ba624b0",
-    "made_from": "vote.kevinhg.com/data, read 2026-11-04T14:50:44.405Z",
+    "fingerprint": "1b15975222eb2edb",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T15:31:47.123Z",
     "places": [
       "philadelphia-pa",
       "state-PA"
-    ]
+    ],
+    "statewide_fingerprint": "76ad2cef8758ef08"
   },
   "feed": {
     "adapter": "philadelphia",

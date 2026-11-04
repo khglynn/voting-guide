@@ -3389,7 +3389,7 @@
       "line": "Mail ballots postmarked or dated by Nov 3 count if they arrive by Nov 13, 10 AM.",
       "source": "https://elections.maryland.gov/elections/2026/2026_Election_Calendar.pdf (COMAR 33.11.03.08B(2))",
       "confidence": "verified",
-      "short": "Mail postmarked Nov 3 due 10 AM"
+      "short": "Mail postmarked or dated by Nov 3"
     },
     {
       "kind": "after_election",

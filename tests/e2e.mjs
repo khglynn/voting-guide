@@ -3802,7 +3802,14 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await throughSetup(page);
   await page.waitForSelector('#vz .cmp', { timeout: 10000 }).catch(() => {});
   check('Compare with, no picks: no "Your picks" chip; "Or make your own picks" is offered', !(await page.$('#vz [data-act="cmp"][data-k="mine"]')) && !!(await page.$('#vz [data-fk="cmp-own"]')) && !!(await page.$('#vz .st')));
-  const lens0 = await page.evaluate(() => { const b = JSON.parse(localStorage.getItem('vg2')).ballots['TX|austin-tx']; return { sources: b.sources === undefined ? null : b.sources, party: b.party === undefined ? null : b.party }; });
+  // A lens of your own first (Unions on, through the Edit sheet), so Undo has something distinct to put back (Codex).
+  await tap(page, '#vz [data-fk="cmp-own"]');
+  await page.waitForSelector('.sheet-panel.picks');
+  await tap(page, '.sheet-panel [data-act="chip"][data-k="unions"]');
+  await tap(page, '.sheet-panel [data-fk="sheet-x"]');
+  await page.waitForTimeout(300);
+  const lensOf = () => page.evaluate(() => { const b = JSON.parse(localStorage.getItem('vg2')).ballots['TX|austin-tx']; return JSON.stringify({ sources: b.sources === undefined ? null : b.sources, party: b.party === undefined ? null : b.party }); });
+  const lens0 = await lensOf();
   // Compact chips: two rows at most at this width, and A party's choices take the groups' place, never more rows.
   const rows = await page.evaluate(() => new Set([...document.querySelectorAll('#vz .cmp-chips .chip')].map((c) => Math.round(c.getBoundingClientRect().top))).size);
   await tap(page, '#vz [data-act="cmp"][data-k="party"]');
@@ -3818,10 +3825,12 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
     await page.waitForTimeout(500);
     const n = await page.evaluate(() => Object.keys(JSON.parse(localStorage.getItem('vg2')).ballots['TX|austin-tx'].picks || {}).length);
     check('Compare with: "Make these my picks" fills from the group with an Undo, the card now compares with Your picks, focus on its headline', n > 0 && !!(await page.$('.toast')) && (await page.getAttribute('#vz [data-act="cmp"][data-k="mine"]', 'aria-pressed')) === 'true' && !(await page.$('#vz [data-act="cmp-take"]')) && (await page.evaluate(() => document.activeElement && document.activeElement.id)) === 'vz-h', String(n));
+    const lensTaken = await lensOf();
     await tap(page, '.toast [data-act="undo-bulk"]');
     await page.waitForTimeout(400);
-    const after = await page.evaluate(() => { const b = JSON.parse(localStorage.getItem('vg2')).ballots['TX|austin-tx']; return { n: Object.keys(b.picks || {}).length, sources: b.sources, party: b.party }; });
-    check('Compare with: Undo puts back the picks and the sources and party as they were', after.n === 0 && after.sources === lens0.sources && after.party === lens0.party, JSON.stringify(after));
+    const nAfter = await page.evaluate(() => Object.keys(JSON.parse(localStorage.getItem('vg2')).ballots['TX|austin-tx'].picks || {}).length);
+    const lens1 = await lensOf();
+    check('Compare with: the take switched the lens to the group, and Undo puts back the picks and the sources and party exactly', lensTaken !== lens0 && nAfter === 0 && lens1 === lens0, `${lens0} | ${lensTaken} | ${lens1}`);
   } else check('Compare with: some group agrees on a race in Austin', false);
   await tap(page, '[data-fk="bar-cheat"]');
   await page.waitForSelector('#cheat .pd-s');

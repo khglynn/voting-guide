@@ -48,7 +48,9 @@ async function runSource({ map, fetch, store, archive, sched, now, ping, log }) 
   if (r.verdict === 'error') { await new Promise((ok) => setTimeout(ok, 3000)); const again = await attempt(); r = again.verdict === 'ok' ? again : { ...again, error: `${again.error} (and before the retry: ${r.error})` }; }
   if (r.verdict === 'refused') {
     S[map.id] = nextEntry(S[map.id], { kind: 'refused', error: r.error }, now, map);
-    await ping(map.id, 'refused', `${map.name} refused our request (${r.error}). It stops until its map changes; its rows link out.`);
+    // Stopped, never past it: say so in the log as well as the ping (pings need the Worker secrets).
+    log(JSON.stringify({ source: map.id, refused: r.error, stopped: 'until its map changes or it is run by hand' }));
+    await ping(map.id, 'refused', `${map.name} refused our request (${r.error}). It stops until its map changes or someone runs it by hand; its rows link out.`);
     return { id: map.id, outcome: 'refused', error: r.error };
   }
   if (r.verdict !== 'ok') {

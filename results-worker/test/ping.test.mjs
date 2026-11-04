@@ -91,6 +91,46 @@ test('a reply refused because the thread is gone: a plain post now, and the next
   assert.equal(JSON.parse(store.m.get(THREAD_KEY)).ts, '1793900000.000003');
 });
 
+test('a thread gone under alerts in flight: the slower one keeps the parent another alert has just made', async () => {
+  const OLD = '1793800000.000100';
+  const store = memStore({ [THREAD_KEY]: JSON.stringify({ channel: LOG, ts: OLD }) });
+  let release;
+  const gate = new Promise((ok) => { release = ok; });
+  const calls = [];
+  let n = 0;
+  const fetch = async (url, opts) => {
+    const b = JSON.parse(opts.body);
+    calls.push(b);
+    if (b.thread_ts === OLD) {
+      if (b.text.includes('slow')) await gate;
+      return { status: 200, json: async () => ({ ok: false, error: 'thread_not_found' }) };
+    }
+    return { status: 200, json: async () => ({ ok: true, channel: b.channel, ts: `1793900000.00000${++n}` }) };
+  };
+  const ping = pinger(fetch, store);
+  const fast = ping('a', 'refused', 'fast one');
+  const slow = ping('b', 'refused', 'slow one');
+  assert.equal(await fast, true);
+  assert.equal(await ping('c', 'refused', 'third one'), true); // makes the new parent
+  const made = JSON.parse(store.m.get(THREAD_KEY)).ts;
+  release();
+  assert.equal(await slow, true);
+  assert.equal(await ping('d', 'refused', 'fourth one'), true);
+  assert.equal(calls.filter((c) => c.text === PARENT_TEXT).length, 1, 'one new parent, not two');
+  assert.equal(JSON.parse(store.m.get(THREAD_KEY)).ts, made, 'the slow failure left the new parent in KV');
+  assert.equal(calls.find((c) => c.text === 'Results fetcher: fourth one').thread_ts, made);
+});
+
+test('a KV read of the parent that fails: a plain post, and no second parent', async () => {
+  const store = memStore({ [THREAD_KEY]: JSON.stringify({ channel: LOG, ts: '1793800000.000100' }) });
+  const get = store.get;
+  store.get = async (k) => { if (k === THREAD_KEY) throw new Error('KV 429'); return get(k); };
+  const slack = fakeSlack();
+  assert.equal(await pinger(slack, store)('la', 'refused', 'Los Angeles County refused our request.'), true);
+  assert.deepEqual(slack.calls.map((c) => [c.text, c.thread_ts]), [['Results fetcher: Los Angeles County refused our request.', undefined]]);
+  assert.equal(JSON.parse(store.m.get(THREAD_KEY)).ts, '1793800000.000100');
+});
+
 test('a reply refused by a rate limit: a plain post, and the parent is kept', async () => {
   const kept = JSON.stringify({ channel: LOG, ts: '1793800000.000100' });
   const store = memStore({ [THREAD_KEY]: kept });

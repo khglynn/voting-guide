@@ -30,10 +30,15 @@ export function makePinger({ fetch, store, token, channel, log = console.log, ti
       return await r.json().catch(() => ({ ok: false, error: `HTTP ${r.status}` }));
     } catch (e) { return { ok: false, error: String(e?.message || e) }; }
   };
+  const keptTs = async () => {
+    const raw = await store.get(THREAD_KEY);
+    try { const kept = JSON.parse(raw || 'null'); return kept?.channel === channel && kept.ts ? kept.ts : null; } catch { return null; }
+  };
   const findParent = async () => {
-    let kept = null;
-    try { kept = JSON.parse((await store.get(THREAD_KEY)) || 'null'); } catch (e) { log(`slack thread key: ${e.message}`); }
-    if (kept?.channel === channel && kept.ts) return kept.ts;
+    // A KV read that fails says nothing about the parent: post plain this tick rather than make a second one.
+    let kept;
+    try { kept = await keptTs(); } catch (e) { log(`slack thread key: ${e.message}`); return null; }
+    if (kept) return kept;
     const made = await post(PARENT_TEXT);
     if (!made.ok) { log(`slack parent: ${made.error}`); return null; }
     // A failed write still threads this tick's alerts; the next tick would start a second parent, so say so.
@@ -55,9 +60,10 @@ export function makePinger({ fetch, store, token, channel, log = console.log, ti
       const reply = await post(line, ts);
       if (reply.ok) return true;
       log(`slack reply: ${reply.error}`);
+      // Forget only the parent that failed: another alert may already have made the next one.
       if (THREAD_GONE.test(reply.error)) {
         if (parent === asked) parent = null;
-        try { await store.delete(THREAD_KEY); } catch (e) { log(`slack thread key: ${e.message}`); }
+        try { if ((await keptTs()) === ts) await store.delete(THREAD_KEY); } catch (e) { log(`slack thread key: ${e.message}`); }
       }
     }
     const sent = await post(line);

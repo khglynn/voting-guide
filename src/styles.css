@@ -1203,7 +1203,6 @@ a.res-st { color: var(--ink); text-decoration: underline; text-decoration-color:
 .fr-grid .fr-btn { grid-area: r; min-height: 32px; margin: 0; }
 .fr-grid .fr-b { grid-area: b; color: var(--ink-2); }
 .fr-s + .fr-s::before { content: "· "; color: var(--muted); }
-}
 /* The source's own words move to a second line as a whole when they don't fit, never split mid-phrase. */
 .fr-p { display: inline-block; max-width: 100%; }
 .fr-w { font-family: var(--f-display); font-weight: 600; font-variation-settings: "wdth" 84; letter-spacing: .015em; font-size: 14.5px; color: var(--ink); }

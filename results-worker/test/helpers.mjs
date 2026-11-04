@@ -29,3 +29,23 @@ export function memStore(init = {}) {
 }
 
 export const mapFor = (id) => JSON.parse(fs.readFileSync(path.join(FIX, '..', '..', 'maps', `${id}.json`), 'utf8'));
+
+/* California's SOS data in its first layout (api.sos.ca.gov, Nov 3): the map as it read that feed, so the saved api
+   reads keep testing the parse they share with the media files the map reads now (Nov 4). */
+export const caApiMap = () => {
+  const m = mapFor('results-CA');
+  const { layout, paths_from, ...feed } = m.feed;
+  return {
+    ...m,
+    feed: {
+      ...feed,
+      base: 'https://api.sos.ca.gov',
+      paths: [
+        'query?r=["02000000000059","03000000000059","04000000000059","05000000000059","06000000000059","07000000000059","08000000000059","16000000000059","14000000000459","14000000000659"]',
+        'ballot-measures',
+        'board-of-equalization/district/all',
+        'us-rep/district/all',
+      ],
+    },
+  };
+};

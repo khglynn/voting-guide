@@ -2,7 +2,7 @@
    in the workbench's claude-plans/2026-11-03-results. One test or more per finding, in the order they were fixed. */
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { fakeFetch, fixture, mapFor, memStore } from './helpers.mjs';
+import { fakeFetch, fixture, mapFor, memStore, caApiMap } from './helpers.mjs';
 import * as clarity from '../src/adapters/clarity.js';
 import * as nyc from '../src/adapters/nyc_enr.js';
 import * as multco from '../src/adapters/multco.js';
@@ -146,7 +146,7 @@ test('CA SOS: "0% (0 of N) precincts reporting" beside counted votes is left out
   // The saved House file's second race reads "0% (0 of 453)"; give it mail votes, as CA-47 had at 9:03 PM PT.
   let title;
   const routes = withHouse((races) => { title = races[1].raceTitle.replace(/\s+/g, ' ').trim(); races[1].candidates[0].Votes = '155,542'; });
-  const r = await ca_sos.read({ fetch: fakeFetch(routes), map: mapFor('results-CA') });
+  const r = await ca_sos.read({ fetch: fakeFetch(routes), map: caApiMap() });
   assert.equal(r.contests.find((c) => c.feed_id === title).reporting, null);
   assert.equal(r.contests.find((c) => /\(0 of 299\)/.test(c.reporting || '')).total, 0, 'a race with no votes keeps its words');
   for (const c of r.contests) if (c.total > 0) assert.doesNotMatch(c.reporting || '', /\(0 of /, c.feed_id);
@@ -154,7 +154,7 @@ test('CA SOS: "0% (0 of N) precincts reporting" beside counted votes is left out
 
 test('CA SOS: each race keeps its own time, and the source time is the newest', async () => {
   const routes = withHouse((races) => { races[0].ReportingTime = 'November 3, 2026, 8:30 p.m.'; });
-  const r = await ca_sos.read({ fetch: fakeFetch(routes), map: mapFor('results-CA') });
+  const r = await ca_sos.read({ fetch: fakeFetch(routes), map: caApiMap() });
   const house = JSON.parse(routes['/returns/us-rep/district/all'].body)[0];
   assert.equal(r.contests.find((c) => c.feed_id === house.raceTitle.replace(/\s+/g, ' ').trim()).updated, '2026-11-04T04:30:00.000Z');
   assert.equal(r.contests.find((c) => c.feed_id === 'Governor - Statewide Results').updated, '2026-11-04T04:15:00.000Z');
@@ -162,9 +162,9 @@ test('CA SOS: each race keeps its own time, and the source time is the newest', 
 });
 
 test('CA SOS: a House race or measure that changes while the governor\'s line stays the same is read, not skipped', async () => {
-  const first = await ca_sos.read({ fetch: fakeFetch(sosRoutes), map: mapFor('results-CA') });
+  const first = await ca_sos.read({ fetch: fakeFetch(sosRoutes), map: caApiMap() });
   const routes = withHouse((races) => { races[0].candidates[0].Votes = String(Number(String(races[0].candidates[0].Votes).replace(/,/g, '')) + 1); });
-  const r = await ca_sos.read({ fetch: fakeFetch(routes), map: mapFor('results-CA'), prevToken: first.changed_token });
+  const r = await ca_sos.read({ fetch: fakeFetch(routes), map: caApiMap(), prevToken: first.changed_token });
   assert.equal(r.unchanged, undefined);
   assert.notEqual(r.changed_token, first.changed_token);
 });

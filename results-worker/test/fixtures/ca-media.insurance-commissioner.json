@@ -1,0 +1,65 @@
+[
+  {
+    "raceTitle": "Insurance Commissioner - Statewide Results",
+    "Reporting": "99.9% (23,837 of 23,860) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Ben Allen",
+        "Party": "Dem",
+        "Votes": "3,198,600",
+        "Percent": "48.0",
+        "incumbent": false
+      },
+      {
+        "Name": "Jane Kim",
+        "Party": "Dem",
+        "Votes": "3,464,276",
+        "Percent": "52.0",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Insurance Commissioner - Alameda County Results",
+    "Reporting": "100% (627 of 627) precincts reporting",
+    "ReportingTime": "November 4, 2026, 2:19 a.m.",
+    "candidates": [
+      {
+        "Name": "Ben Allen",
+        "Party": "Dem",
+        "Votes": "134,764",
+        "Percent": "48.1",
+        "incumbent": false
+      },
+      {
+        "Name": "Jane Kim",
+        "Party": "Dem",
+        "Votes": "145,591",
+        "Percent": "51.9",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Insurance Commissioner - Los Angeles County Results",
+    "Reporting": "100% (2,853 of 2,853) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "candidates": [
+      {
+        "Name": "Ben Allen",
+        "Party": "Dem",
+        "Votes": "867,266",
+        "Percent": "46.7",
+        "incumbent": false
+      },
+      {
+        "Name": "Jane Kim",
+        "Party": "Dem",
+        "Votes": "990,433",
+        "Percent": "53.3",
+        "incumbent": false
+      }
+    ]
+  }
+]

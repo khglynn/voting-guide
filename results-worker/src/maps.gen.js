@@ -11725,13 +11725,22 @@ export const MAPS = [
     },
     "feed": {
       "adapter": "ca_sos",
-      "base": "https://api.sos.ca.gov",
+      "layout": "media",
+      "base": "https://media.sos.ca.gov/media",
       "results_url": "https://electionresults.sos.ca.gov/",
       "paths": [
-        "query?r=[\"02000000000059\",\"03000000000059\",\"04000000000059\",\"05000000000059\",\"06000000000059\",\"07000000000059\",\"08000000000059\",\"16000000000059\",\"14000000000459\",\"14000000000659\"]",
-        "ballot-measures",
-        "board-of-equalization/district/all",
-        "us-rep/district/all"
+        "governor.json",
+        "lieutenant-governor.json",
+        "secretary-of-state.json",
+        "controller.json",
+        "treasurer.json",
+        "attorney-general.json",
+        "insurance-commissioner.json",
+        "superintendent-of-public-instruction.json",
+        "supreme-court.json",
+        "ballot-measures.json",
+        "board-of-equalization.json",
+        "us-rep.json"
       ],
       "expect_props": [
         "01",
@@ -11750,9 +11759,9 @@ export const MAPS = [
         "45"
       ],
       "identity": "named",
-      "identity_note": "The SOS's documented JSON feed (api.sos.ca.gov) answered our named User-Agent with 200s on Nov 3, 8:20 to 8:27 PM PT. Its results site electionresults.sos.ca.gov served an Incapsula bot-check page to the same request (8:18 PM PT), so we never read the site; rows link to it.",
-      "election_id_from": "The feed names no election. media.sos.ca.gov/media/api-endpoints.csv, read Nov 3 8:23 PM PT, lists these endpoints for 'the California November 3, 2026 Statewide General Election' (status endpoint returns/status/gubernatorial-general, the id used here). Each read confirms the ballot by its measure numbers (feed.expect_props: 1 to 5 and 37 to 45).",
-      "query_ids_from": "Contest ids from the same endpoints list: 02 to 08 the statewide offices, 16 Superintendent, 14 ... 04 and 06 the two Supreme Court retentions, each with county code 59 (statewide); the SOS allows ten per query.",
+      "identity_note": "The SOS publishes these files for media and automated readers (listing: media.sos.ca.gov/media/json-endpoints.csv, \"all available JSON endpoints for the California November 3, 2026 Statewide General Election\"). They answered our named User-Agent with 200s on Nov 4, 8:30 to 8:38 AM CT (S3 behind CloudFront, x-cdn: Imperva). The results site electionresults.sos.ca.gov and the api.sos.ca.gov feed sit behind an Incapsula check that refused the Worker on Cloudflare, so we never read them from there; rows link to the results site.",
+      "election_id_from": "The files name no election. The listing above names the November 3, 2026 Statewide General Election; gubernatorial-general is the id api.sos.ca.gov uses for it (media.sos.ca.gov/media/api-endpoints.csv, read Nov 3 8:23 PM PT). Each read confirms the ballot by its measure numbers (feed.expect_props: 1 to 5 and 37 to 45).",
+      "paths_from": "One file per contest family from the listing: the eight statewide offices, the two Supreme Court retentions, ballot measures, Board of Equalization and U.S. House. Only each race’s own section is read (\"- Statewide Results\", \"- Districtwide Results\"), never a county’s. On Nov 4 at the 6:27 AM PT update every one of the 80 whole-race sections matched api.sos.ca.gov’s count, words and time exactly (both read from a laptop).",
       "labels": [],
       "tz": "America/Los_Angeles"
     },
@@ -11780,8 +11789,8 @@ export const MAPS = [
         "whole": true
       },
       {
-        "feed_id": "Board of Equalization District 1 - Districtwide Results",
-        "feed_name": "Board of Equalization District 1 - Districtwide Results",
+        "feed_id": "Board of Equalization Member District 1 - Districtwide Results",
+        "feed_name": "Board of Equalization Member District 1 - Districtwide Results",
         "item": "ca-boe-1",
         "kind": "plurality",
         "seats": 1,
@@ -11830,8 +11839,8 @@ export const MAPS = [
         "whole": true
       },
       {
-        "feed_id": "Board of Equalization District 2 - Districtwide Results",
-        "feed_name": "Board of Equalization District 2 - Districtwide Results",
+        "feed_id": "Board of Equalization Member District 2 - Districtwide Results",
+        "feed_name": "Board of Equalization Member District 2 - Districtwide Results",
         "item": "ca-boe-2",
         "kind": "plurality",
         "seats": 1,
@@ -11865,8 +11874,8 @@ export const MAPS = [
         "whole": true
       },
       {
-        "feed_id": "Board of Equalization District 3 - Districtwide Results",
-        "feed_name": "Board of Equalization District 3 - Districtwide Results",
+        "feed_id": "Board of Equalization Member District 3 - Districtwide Results",
+        "feed_name": "Board of Equalization Member District 3 - Districtwide Results",
         "item": "ca-boe-3",
         "kind": "plurality",
         "seats": 1,
@@ -11882,8 +11891,8 @@ export const MAPS = [
         "whole": true
       },
       {
-        "feed_id": "Board of Equalization District 4 - Districtwide Results",
-        "feed_name": "Board of Equalization District 4 - Districtwide Results",
+        "feed_id": "Board of Equalization Member District 4 - Districtwide Results",
+        "feed_name": "Board of Equalization Member District 4 - Districtwide Results",
         "item": "ca-boe-4",
         "kind": "plurality",
         "seats": 1,
@@ -12308,8 +12317,8 @@ export const MAPS = [
         "whole": true
       },
       {
-        "feed_id": "U.S. House of Representatives District 11 - Districtwide Results",
-        "feed_name": "U.S. House of Representatives District 11 - Districtwide Results",
+        "feed_id": "United States Representative District 11 - Districtwide Results",
+        "feed_name": "United States Representative District 11 - Districtwide Results",
         "item": "ca-us-house-11",
         "kind": "plurality",
         "seats": 1,
@@ -12325,8 +12334,8 @@ export const MAPS = [
         "whole": true
       },
       {
-        "feed_id": "U.S. House of Representatives District 15 - Districtwide Results",
-        "feed_name": "U.S. House of Representatives District 15 - Districtwide Results",
+        "feed_id": "United States Representative District 15 - Districtwide Results",
+        "feed_name": "United States Representative District 15 - Districtwide Results",
         "item": "ca-us-house-15",
         "kind": "plurality",
         "seats": 1,
@@ -12343,8 +12352,8 @@ export const MAPS = [
         "whole": true
       },
       {
-        "feed_id": "U.S. House of Representatives District 26 - Districtwide Results",
-        "feed_name": "U.S. House of Representatives District 26 - Districtwide Results",
+        "feed_id": "United States Representative District 26 - Districtwide Results",
+        "feed_name": "United States Representative District 26 - Districtwide Results",
         "item": "ca-us-house-26",
         "kind": "plurality",
         "seats": 1,
@@ -12361,8 +12370,8 @@ export const MAPS = [
         "whole": true
       },
       {
-        "feed_id": "U.S. House of Representatives District 27 - Districtwide Results",
-        "feed_name": "U.S. House of Representatives District 27 - Districtwide Results",
+        "feed_id": "United States Representative District 27 - Districtwide Results",
+        "feed_name": "United States Representative District 27 - Districtwide Results",
         "item": "ca-us-house-27",
         "kind": "plurality",
         "seats": 1,
@@ -12379,8 +12388,8 @@ export const MAPS = [
         "whole": true
       },
       {
-        "feed_id": "U.S. House of Representatives District 28 - Districtwide Results",
-        "feed_name": "U.S. House of Representatives District 28 - Districtwide Results",
+        "feed_id": "United States Representative District 28 - Districtwide Results",
+        "feed_name": "United States Representative District 28 - Districtwide Results",
         "item": "ca-us-house-28",
         "kind": "plurality",
         "seats": 1,
@@ -12397,8 +12406,8 @@ export const MAPS = [
         "whole": true
       },
       {
-        "feed_id": "U.S. House of Representatives District 29 - Districtwide Results",
-        "feed_name": "U.S. House of Representatives District 29 - Districtwide Results",
+        "feed_id": "United States Representative District 29 - Districtwide Results",
+        "feed_name": "United States Representative District 29 - Districtwide Results",
         "item": "ca-us-house-29",
         "kind": "plurality",
         "seats": 1,
@@ -12414,8 +12423,8 @@ export const MAPS = [
         "whole": true
       },
       {
-        "feed_id": "U.S. House of Representatives District 30 - Districtwide Results",
-        "feed_name": "U.S. House of Representatives District 30 - Districtwide Results",
+        "feed_id": "United States Representative District 30 - Districtwide Results",
+        "feed_name": "United States Representative District 30 - Districtwide Results",
         "item": "ca-us-house-30",
         "kind": "plurality",
         "seats": 1,
@@ -12431,8 +12440,8 @@ export const MAPS = [
         "whole": true
       },
       {
-        "feed_id": "U.S. House of Representatives District 32 - Districtwide Results",
-        "feed_name": "U.S. House of Representatives District 32 - Districtwide Results",
+        "feed_id": "United States Representative District 32 - Districtwide Results",
+        "feed_name": "United States Representative District 32 - Districtwide Results",
         "item": "ca-us-house-32",
         "kind": "plurality",
         "seats": 1,
@@ -12449,8 +12458,8 @@ export const MAPS = [
         "whole": true
       },
       {
-        "feed_id": "U.S. House of Representatives District 34 - Districtwide Results",
-        "feed_name": "U.S. House of Representatives District 34 - Districtwide Results",
+        "feed_id": "United States Representative District 34 - Districtwide Results",
+        "feed_name": "United States Representative District 34 - Districtwide Results",
         "item": "ca-us-house-34",
         "kind": "plurality",
         "seats": 1,
@@ -12466,8 +12475,8 @@ export const MAPS = [
         "whole": true
       },
       {
-        "feed_id": "U.S. House of Representatives District 36 - Districtwide Results",
-        "feed_name": "U.S. House of Representatives District 36 - Districtwide Results",
+        "feed_id": "United States Representative District 36 - Districtwide Results",
+        "feed_name": "United States Representative District 36 - Districtwide Results",
         "item": "ca-us-house-36",
         "kind": "plurality",
         "seats": 1,
@@ -12483,8 +12492,8 @@ export const MAPS = [
         "whole": true
       },
       {
-        "feed_id": "U.S. House of Representatives District 37 - Districtwide Results",
-        "feed_name": "U.S. House of Representatives District 37 - Districtwide Results",
+        "feed_id": "United States Representative District 37 - Districtwide Results",
+        "feed_name": "United States Representative District 37 - Districtwide Results",
         "item": "ca-us-house-37",
         "kind": "plurality",
         "seats": 1,
@@ -12500,8 +12509,8 @@ export const MAPS = [
         "whole": true
       },
       {
-        "feed_id": "U.S. House of Representatives District 41 - Districtwide Results",
-        "feed_name": "U.S. House of Representatives District 41 - Districtwide Results",
+        "feed_id": "United States Representative District 41 - Districtwide Results",
+        "feed_name": "United States Representative District 41 - Districtwide Results",
         "item": "ca-us-house-41",
         "kind": "plurality",
         "seats": 1,
@@ -12518,8 +12527,8 @@ export const MAPS = [
         "whole": true
       },
       {
-        "feed_id": "U.S. House of Representatives District 42 - Districtwide Results",
-        "feed_name": "U.S. House of Representatives District 42 - Districtwide Results",
+        "feed_id": "United States Representative District 42 - Districtwide Results",
+        "feed_name": "United States Representative District 42 - Districtwide Results",
         "item": "ca-us-house-42",
         "kind": "plurality",
         "seats": 1,
@@ -12536,8 +12545,8 @@ export const MAPS = [
         "whole": true
       },
       {
-        "feed_id": "U.S. House of Representatives District 43 - Districtwide Results",
-        "feed_name": "U.S. House of Representatives District 43 - Districtwide Results",
+        "feed_id": "United States Representative District 43 - Districtwide Results",
+        "feed_name": "United States Representative District 43 - Districtwide Results",
         "item": "ca-us-house-43",
         "kind": "plurality",
         "seats": 1,
@@ -12553,8 +12562,8 @@ export const MAPS = [
         "whole": true
       },
       {
-        "feed_id": "U.S. House of Representatives District 44 - Districtwide Results",
-        "feed_name": "U.S. House of Representatives District 44 - Districtwide Results",
+        "feed_id": "United States Representative District 44 - Districtwide Results",
+        "feed_name": "United States Representative District 44 - Districtwide Results",
         "item": "ca-us-house-44",
         "kind": "plurality",
         "seats": 1,
@@ -12570,8 +12579,8 @@ export const MAPS = [
         "whole": true
       },
       {
-        "feed_id": "U.S. House of Representatives District 45 - Districtwide Results",
-        "feed_name": "U.S. House of Representatives District 45 - Districtwide Results",
+        "feed_id": "United States Representative District 45 - Districtwide Results",
+        "feed_name": "United States Representative District 45 - Districtwide Results",
         "item": "ca-us-house-45",
         "kind": "plurality",
         "seats": 1,
@@ -12588,8 +12597,8 @@ export const MAPS = [
         "whole": true
       },
       {
-        "feed_id": "U.S. House of Representatives District 46 - Districtwide Results",
-        "feed_name": "U.S. House of Representatives District 46 - Districtwide Results",
+        "feed_id": "United States Representative District 46 - Districtwide Results",
+        "feed_name": "United States Representative District 46 - Districtwide Results",
         "item": "ca-us-house-46",
         "kind": "plurality",
         "seats": 1,
@@ -12605,8 +12614,8 @@ export const MAPS = [
         "whole": true
       },
       {
-        "feed_id": "U.S. House of Representatives District 47 - Districtwide Results",
-        "feed_name": "U.S. House of Representatives District 47 - Districtwide Results",
+        "feed_id": "United States Representative District 47 - Districtwide Results",
+        "feed_name": "United States Representative District 47 - Districtwide Results",
         "item": "ca-us-house-47",
         "kind": "plurality",
         "seats": 1,
@@ -12622,8 +12631,8 @@ export const MAPS = [
         "whole": true
       },
       {
-        "feed_id": "U.S. House of Representatives District 49 - Districtwide Results",
-        "feed_name": "U.S. House of Representatives District 49 - Districtwide Results",
+        "feed_id": "United States Representative District 49 - Districtwide Results",
+        "feed_name": "United States Representative District 49 - Districtwide Results",
         "item": "ca-us-house-49",
         "kind": "plurality",
         "seats": 1,
@@ -12640,8 +12649,8 @@ export const MAPS = [
         "whole": true
       },
       {
-        "feed_id": "U.S. House of Representatives District 50 - Districtwide Results",
-        "feed_name": "U.S. House of Representatives District 50 - Districtwide Results",
+        "feed_id": "United States Representative District 50 - Districtwide Results",
+        "feed_name": "United States Representative District 50 - Districtwide Results",
         "item": "ca-us-house-50",
         "kind": "plurality",
         "seats": 1,
@@ -12657,8 +12666,8 @@ export const MAPS = [
         "whole": true
       },
       {
-        "feed_id": "U.S. House of Representatives District 51 - Districtwide Results",
-        "feed_name": "U.S. House of Representatives District 51 - Districtwide Results",
+        "feed_id": "United States Representative District 51 - Districtwide Results",
+        "feed_name": "United States Representative District 51 - Districtwide Results",
         "item": "ca-us-house-51",
         "kind": "plurality",
         "seats": 1,
@@ -12674,8 +12683,8 @@ export const MAPS = [
         "whole": true
       },
       {
-        "feed_id": "U.S. House of Representatives District 52 - Districtwide Results",
-        "feed_name": "U.S. House of Representatives District 52 - Districtwide Results",
+        "feed_id": "United States Representative District 52 - Districtwide Results",
+        "feed_name": "United States Representative District 52 - Districtwide Results",
         "item": "ca-us-house-52",
         "kind": "plurality",
         "seats": 1,

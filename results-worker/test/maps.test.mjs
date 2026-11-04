@@ -1,6 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { fakeFetch, fixture, mapFor } from './helpers.mjs';
+import fs from 'node:fs';
+import path from 'node:path';
+import { fakeFetch, fixture, mapFor, FIX } from './helpers.mjs';
 import { ADAPTERS } from '../src/adapters/index.js';
 import { sourceSlices, buildStateFile } from '../src/merge.js';
 import { checkRead, checkFile } from '../src/checks.js';
@@ -15,8 +17,10 @@ const FEEDS = {
   'williamson-tx': { '/127488/current_ver.txt': 'clarity-williamson.current_ver.txt', '/127488/383157/json/en/summary.json': 'clarity-williamson.summary.json', '/127488/383157/json/en/electionsettings.json': 'clarity-williamson.electionsettings.json' },
 };
 
-test('maps.gen.js matches maps/*.json (run bin/map-check.mjs --write after editing a map)', () => {
-  for (const id of Object.keys(FEEDS)) assert.deepEqual(MAPS.find((m) => m.id === id), mapFor(id), id);
+test('maps.gen.js matches maps/*.json, every map (run bin/map-check.mjs --write after editing a map)', () => {
+  const ids = fs.readdirSync(path.join(FIX, '..', '..', 'maps')).filter((f) => f.endsWith('.json')).map((f) => f.replace(/\.json$/, ''));
+  assert.deepEqual(MAPS.map((m) => m.id).sort(), ids.sort());
+  for (const id of ids) assert.deepEqual(MAPS.find((m) => m.id === id), mapFor(id), id);
 });
 
 for (const [id, routes] of Object.entries(FEEDS)) {

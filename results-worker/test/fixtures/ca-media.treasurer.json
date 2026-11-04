@@ -1,0 +1,65 @@
+[
+  {
+    "raceTitle": "Treasurer - Statewide Results",
+    "Reporting": "99.9% (23,837 of 23,860) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Eleni Kounalakis",
+        "Party": "Dem",
+        "Votes": "4,904,998",
+        "Percent": "64.0",
+        "incumbent": false
+      },
+      {
+        "Name": "Jennifer Hawks",
+        "Party": "Rep",
+        "Votes": "2,763,420",
+        "Percent": "36.0",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Treasurer - Alameda County Results",
+    "Reporting": "100% (627 of 627) precincts reporting",
+    "ReportingTime": "November 4, 2026, 2:19 a.m.",
+    "candidates": [
+      {
+        "Name": "Eleni Kounalakis",
+        "Party": "Dem",
+        "Votes": "240,401",
+        "Percent": "79.1",
+        "incumbent": false
+      },
+      {
+        "Name": "Jennifer Hawks",
+        "Party": "Rep",
+        "Votes": "63,689",
+        "Percent": "20.9",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Treasurer - Los Angeles County Results",
+    "Reporting": "100% (2,853 of 2,853) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "candidates": [
+      {
+        "Name": "Eleni Kounalakis",
+        "Party": "Dem",
+        "Votes": "1,464,618",
+        "Percent": "71.2",
+        "incumbent": false
+      },
+      {
+        "Name": "Jennifer Hawks",
+        "Party": "Rep",
+        "Votes": "591,119",
+        "Percent": "28.8",
+        "incumbent": false
+      }
+    ]
+  }
+]

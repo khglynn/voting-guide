@@ -1,0 +1,1556 @@
+[
+  {
+    "raceTitle": "United States Representative District 1 - Districtwide Results",
+    "Reporting": "100% (788 of 788) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Mike McGuire",
+        "Party": "Dem",
+        "Votes": "88,089",
+        "Percent": "57.0",
+        "incumbent": false
+      },
+      {
+        "Name": "James Gallagher",
+        "Party": "Rep",
+        "Votes": "66,369",
+        "Percent": "43.0",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 2 - Districtwide Results",
+    "Reporting": "96.1% (572 of 595) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Jared Huffman",
+        "Party": "Dem",
+        "Votes": "106,520",
+        "Percent": "66.9",
+        "incumbent": false
+      },
+      {
+        "Name": "Robin Littau",
+        "Party": "Rep",
+        "Votes": "52,627",
+        "Percent": "33.1",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 3 - Districtwide Results",
+    "Reporting": "100% (531 of 531) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Ami Bera",
+        "Party": "Dem",
+        "Votes": "95,372",
+        "Percent": "57.1",
+        "incumbent": false
+      },
+      {
+        "Name": "Robb Tucker",
+        "Party": "Rep",
+        "Votes": "71,774",
+        "Percent": "42.9",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 4 - Districtwide Results",
+    "Reporting": "100% (500 of 500) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Eric Jones",
+        "Party": "Dem",
+        "Votes": "61,299",
+        "Percent": "51.5",
+        "incumbent": false
+      },
+      {
+        "Name": "Mike Thompson",
+        "Party": "Dem",
+        "Votes": "57,671",
+        "Percent": "48.5",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 5 - Districtwide Results",
+    "Reporting": "100% (399 of 399) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Michael Masuda",
+        "Party": "Dem",
+        "Votes": "79,957",
+        "Percent": "43.8",
+        "incumbent": false
+      },
+      {
+        "Name": "Tom McClintock",
+        "Party": "Rep",
+        "Votes": "102,646",
+        "Percent": "56.2",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 6 - Districtwide Results",
+    "Reporting": "100% (309 of 309) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Richard Pan",
+        "Party": "Dem",
+        "Votes": "86,732",
+        "Percent": "57.5",
+        "incumbent": false
+      },
+      {
+        "Name": "Kevin Kiley",
+        "Party": "NPP",
+        "Votes": "64,143",
+        "Percent": "42.5",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 7 - Districtwide Results",
+    "Reporting": "100% (414 of 414) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Doris Matsui",
+        "Party": "Dem",
+        "Votes": "75,732",
+        "Percent": "57.4",
+        "incumbent": false
+      },
+      {
+        "Name": "Mai Vang",
+        "Party": "Dem",
+        "Votes": "56,248",
+        "Percent": "42.6",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 8 - Districtwide Results",
+    "Reporting": "100% (396 of 396) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "John Garamendi",
+        "Party": "Dem",
+        "Votes": "111,130",
+        "Percent": "72.3",
+        "incumbent": false
+      },
+      {
+        "Name": "Rudy Recile",
+        "Party": "Rep",
+        "Votes": "42,498",
+        "Percent": "27.7",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 9 - Districtwide Results",
+    "Reporting": "100% (322 of 322) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Josh Harder",
+        "Party": "Dem",
+        "Votes": "78,226",
+        "Percent": "65.8",
+        "incumbent": false
+      },
+      {
+        "Name": "John McBride",
+        "Party": "Rep",
+        "Votes": "40,665",
+        "Percent": "34.2",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 10 - Districtwide Results",
+    "Reporting": "100% (728 of 728) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Mark DeSaulnier",
+        "Party": "Dem",
+        "Votes": "131,901",
+        "Percent": "69.1",
+        "incumbent": false
+      },
+      {
+        "Name": "Jeff Frese",
+        "Party": "Rep",
+        "Votes": "59,082",
+        "Percent": "30.9",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 10 - Alameda County Results",
+    "Reporting": "100% (63 of 63) precincts reporting",
+    "ReportingTime": "November 4, 2026, 2:19 a.m.",
+    "candidates": [
+      {
+        "Name": "Mark DeSaulnier",
+        "Party": "Dem",
+        "Votes": "10,822",
+        "Percent": "72.0",
+        "incumbent": false
+      },
+      {
+        "Name": "Jeff Frese",
+        "Party": "Rep",
+        "Votes": "4,208",
+        "Percent": "28.0",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 11 - Districtwide Results",
+    "Reporting": "100% (453 of 453) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Connie Chan",
+        "Party": "Dem",
+        "Votes": "70,511",
+        "Percent": "44.6",
+        "incumbent": false
+      },
+      {
+        "Name": "Scott Wiener",
+        "Party": "Dem",
+        "Votes": "87,641",
+        "Percent": "55.4",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 12 - Districtwide Results",
+    "Reporting": "100% (190 of 190) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Jamie Joyce",
+        "Party": "Dem",
+        "Votes": "27,460",
+        "Percent": "20.2",
+        "incumbent": false
+      },
+      {
+        "Name": "Lateefah Simon",
+        "Party": "Dem",
+        "Votes": "108,161",
+        "Percent": "79.8",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 12 - Alameda County Results",
+    "Reporting": "100% (190 of 190) precincts reporting",
+    "ReportingTime": "November 4, 2026, 2:19 a.m.",
+    "candidates": [
+      {
+        "Name": "Jamie Joyce",
+        "Party": "Dem",
+        "Votes": "27,460",
+        "Percent": "20.2",
+        "incumbent": false
+      },
+      {
+        "Name": "Lateefah Simon",
+        "Party": "Dem",
+        "Votes": "108,161",
+        "Percent": "79.8",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 13 - Districtwide Results",
+    "Reporting": "100% (974 of 974) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Adam Gray",
+        "Party": "Dem",
+        "Votes": "58,217",
+        "Percent": "61.3",
+        "incumbent": false
+      },
+      {
+        "Name": "Kevin Lincoln",
+        "Party": "Rep",
+        "Votes": "36,724",
+        "Percent": "38.7",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 14 - Districtwide Results",
+    "Reporting": "100% (351 of 351) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Melissa Hernandez",
+        "Party": "Dem",
+        "Votes": "52,755",
+        "Percent": "43.5",
+        "incumbent": false
+      },
+      {
+        "Name": "Aisha Wahab",
+        "Party": "Dem",
+        "Votes": "68,612",
+        "Percent": "56.5",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 14 - Alameda County Results",
+    "Reporting": "100% (351 of 351) precincts reporting",
+    "ReportingTime": "November 4, 2026, 2:19 a.m.",
+    "candidates": [
+      {
+        "Name": "Melissa Hernandez",
+        "Party": "Dem",
+        "Votes": "52,755",
+        "Percent": "43.5",
+        "incumbent": false
+      },
+      {
+        "Name": "Aisha Wahab",
+        "Party": "Dem",
+        "Votes": "68,612",
+        "Percent": "56.5",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 15 - Districtwide Results",
+    "Reporting": "100% (299 of 299) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Kevin Mullin",
+        "Party": "Dem",
+        "Votes": "101,072",
+        "Percent": "77.4",
+        "incumbent": false
+      },
+      {
+        "Name": "Charles Hoelter",
+        "Party": "Rep",
+        "Votes": "29,546",
+        "Percent": "22.6",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 16 - Districtwide Results",
+    "Reporting": "100% (337 of 337) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Sam Liccardo",
+        "Party": "Dem",
+        "Votes": "109,418",
+        "Percent": "75.9",
+        "incumbent": false
+      },
+      {
+        "Name": "Peter Sundin Soulé",
+        "Party": "Rep",
+        "Votes": "34,765",
+        "Percent": "24.1",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 17 - Districtwide Results",
+    "Reporting": "100% (241 of 241) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Ro Khanna",
+        "Party": "Dem",
+        "Votes": "72,364",
+        "Percent": "70.5",
+        "incumbent": false
+      },
+      {
+        "Name": "Ritesh Tandon",
+        "Party": "Rep",
+        "Votes": "30,251",
+        "Percent": "29.5",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 17 - Alameda County Results",
+    "Reporting": "100% (23 of 23) precincts reporting",
+    "ReportingTime": "November 4, 2026, 2:19 a.m.",
+    "candidates": [
+      {
+        "Name": "Ro Khanna",
+        "Party": "Dem",
+        "Votes": "10,260",
+        "Percent": "69.6",
+        "incumbent": false
+      },
+      {
+        "Name": "Ritesh Tandon",
+        "Party": "Rep",
+        "Votes": "4,479",
+        "Percent": "30.4",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 18 - Districtwide Results",
+    "Reporting": "100% (376 of 376) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Zoe Lofgren",
+        "Party": "Dem",
+        "Votes": "71,383",
+        "Percent": "71.7",
+        "incumbent": false
+      },
+      {
+        "Name": "Shane Lewis",
+        "Party": "Rep",
+        "Votes": "28,238",
+        "Percent": "28.3",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 19 - Districtwide Results",
+    "Reporting": "100% (428 of 428) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Jimmy Panetta",
+        "Party": "Dem",
+        "Votes": "130,744",
+        "Percent": "72.0",
+        "incumbent": false
+      },
+      {
+        "Name": "Peter Coe Verbica",
+        "Party": "Rep",
+        "Votes": "50,899",
+        "Percent": "28.0",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 20 - Districtwide Results",
+    "Reporting": "100% (764 of 764) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Sandra Van Scotter",
+        "Party": "Dem",
+        "Votes": "54,329",
+        "Percent": "37.4",
+        "incumbent": false
+      },
+      {
+        "Name": "Vince Fong",
+        "Party": "Rep",
+        "Votes": "90,999",
+        "Percent": "62.6",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 21 - Districtwide Results",
+    "Reporting": "100% (323 of 323) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Jim Costa",
+        "Party": "Dem",
+        "Votes": "53,874",
+        "Percent": "62.2",
+        "incumbent": false
+      },
+      {
+        "Name": "Kyle Kirkland",
+        "Party": "Rep",
+        "Votes": "32,732",
+        "Percent": "37.8",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 22 - Districtwide Results",
+    "Reporting": "100% (575 of 575) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Randy Villegas",
+        "Party": "Dem",
+        "Votes": "54,337",
+        "Percent": "66.4",
+        "incumbent": false
+      },
+      {
+        "Name": "David G. Valadao",
+        "Party": "Rep",
+        "Votes": "27,480",
+        "Percent": "33.6",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 23 - Districtwide Results",
+    "Reporting": "100% (1,324 of 1,324) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Tessa Lynn Hodge",
+        "Party": "Dem",
+        "Votes": "63,681",
+        "Percent": "48.7",
+        "incumbent": false
+      },
+      {
+        "Name": "Jay Obernolte",
+        "Party": "Rep",
+        "Votes": "67,169",
+        "Percent": "51.3",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 23 - Los Angeles County Results",
+    "Reporting": "100% (32 of 32) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "candidates": [
+      {
+        "Name": "Tessa Lynn Hodge",
+        "Party": "Dem",
+        "Votes": "1,649",
+        "Percent": "57.9",
+        "incumbent": false
+      },
+      {
+        "Name": "Jay Obernolte",
+        "Party": "Rep",
+        "Votes": "1,197",
+        "Percent": "42.1",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 24 - Districtwide Results",
+    "Reporting": "100% (627 of 627) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Salud Carbajal",
+        "Party": "Dem",
+        "Votes": "109,061",
+        "Percent": "65.8",
+        "incumbent": false
+      },
+      {
+        "Name": "Bob Smith",
+        "Party": "Rep",
+        "Votes": "56,606",
+        "Percent": "34.2",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 25 - Districtwide Results",
+    "Reporting": "100% (656 of 656) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Raul Ruiz",
+        "Party": "Dem",
+        "Votes": "69,581",
+        "Percent": "64.4",
+        "incumbent": false
+      },
+      {
+        "Name": "Joe Males",
+        "Party": "Rep",
+        "Votes": "38,455",
+        "Percent": "35.6",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 26 - Districtwide Results",
+    "Reporting": "100% (1,087 of 1,087) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Jacqui Irwin",
+        "Party": "Dem",
+        "Votes": "109,558",
+        "Percent": "61.6",
+        "incumbent": false
+      },
+      {
+        "Name": "Sam Gallucci",
+        "Party": "Rep",
+        "Votes": "68,307",
+        "Percent": "38.4",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 26 - Los Angeles County Results",
+    "Reporting": "100% (90 of 90) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "candidates": [
+      {
+        "Name": "Jacqui Irwin",
+        "Party": "Dem",
+        "Votes": "30,264",
+        "Percent": "56.9",
+        "incumbent": false
+      },
+      {
+        "Name": "Sam Gallucci",
+        "Party": "Rep",
+        "Votes": "22,923",
+        "Percent": "43.1",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 27 - Districtwide Results",
+    "Reporting": "100% (378 of 378) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "George Whitesides",
+        "Party": "Dem",
+        "Votes": "101,352",
+        "Percent": "61.7",
+        "incumbent": false
+      },
+      {
+        "Name": "Jason Gibbs",
+        "Party": "Rep",
+        "Votes": "62,911",
+        "Percent": "38.3",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 27 - Los Angeles County Results",
+    "Reporting": "100% (378 of 378) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "candidates": [
+      {
+        "Name": "George Whitesides",
+        "Party": "Dem",
+        "Votes": "101,352",
+        "Percent": "61.7",
+        "incumbent": false
+      },
+      {
+        "Name": "Jason Gibbs",
+        "Party": "Rep",
+        "Votes": "62,911",
+        "Percent": "38.3",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 28 - Districtwide Results",
+    "Reporting": "100% (391 of 391) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Judy Chu",
+        "Party": "Dem",
+        "Votes": "121,906",
+        "Percent": "68.4",
+        "incumbent": false
+      },
+      {
+        "Name": "April A. Verlato",
+        "Party": "Rep",
+        "Votes": "56,394",
+        "Percent": "31.6",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 28 - Los Angeles County Results",
+    "Reporting": "100% (242 of 242) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "candidates": [
+      {
+        "Name": "Judy Chu",
+        "Party": "Dem",
+        "Votes": "106,049",
+        "Percent": "72.3",
+        "incumbent": false
+      },
+      {
+        "Name": "April A. Verlato",
+        "Party": "Rep",
+        "Votes": "40,575",
+        "Percent": "27.7",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 29 - Districtwide Results",
+    "Reporting": "100% (115 of 115) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Angélica María Dueñas",
+        "Party": "Dem",
+        "Votes": "45,955",
+        "Percent": "39.8",
+        "incumbent": false
+      },
+      {
+        "Name": "Luz Maria Rivas",
+        "Party": "Dem",
+        "Votes": "69,450",
+        "Percent": "60.2",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 29 - Los Angeles County Results",
+    "Reporting": "100% (115 of 115) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "candidates": [
+      {
+        "Name": "Angélica María Dueñas",
+        "Party": "Dem",
+        "Votes": "45,955",
+        "Percent": "39.8",
+        "incumbent": false
+      },
+      {
+        "Name": "Luz Maria Rivas",
+        "Party": "Dem",
+        "Votes": "69,450",
+        "Percent": "60.2",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 30 - Districtwide Results",
+    "Reporting": "100% (193 of 193) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Laura Friedman",
+        "Party": "Dem",
+        "Votes": "133,724",
+        "Percent": "75.5",
+        "incumbent": false
+      },
+      {
+        "Name": "Scott Alan Meyers",
+        "Party": "Rep",
+        "Votes": "43,453",
+        "Percent": "24.5",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 30 - Los Angeles County Results",
+    "Reporting": "100% (193 of 193) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "candidates": [
+      {
+        "Name": "Laura Friedman",
+        "Party": "Dem",
+        "Votes": "133,724",
+        "Percent": "75.5",
+        "incumbent": false
+      },
+      {
+        "Name": "Scott Alan Meyers",
+        "Party": "Rep",
+        "Votes": "43,453",
+        "Percent": "24.5",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 31 - Districtwide Results",
+    "Reporting": "100% (360 of 360) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Gil Cisneros",
+        "Party": "Dem",
+        "Votes": "104,133",
+        "Percent": "63.8",
+        "incumbent": false
+      },
+      {
+        "Name": "Eric Ching",
+        "Party": "Rep",
+        "Votes": "58,969",
+        "Percent": "36.2",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 31 - Los Angeles County Results",
+    "Reporting": "100% (302 of 302) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "candidates": [
+      {
+        "Name": "Gil Cisneros",
+        "Party": "Dem",
+        "Votes": "91,707",
+        "Percent": "64.4",
+        "incumbent": false
+      },
+      {
+        "Name": "Eric Ching",
+        "Party": "Rep",
+        "Votes": "50,794",
+        "Percent": "35.6",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 32 - Districtwide Results",
+    "Reporting": "100% (268 of 268) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Brad Sherman",
+        "Party": "Dem",
+        "Votes": "124,371",
+        "Percent": "65.8",
+        "incumbent": false
+      },
+      {
+        "Name": "Larry Thompson",
+        "Party": "Rep",
+        "Votes": "64,635",
+        "Percent": "34.2",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 32 - Los Angeles County Results",
+    "Reporting": "100% (128 of 128) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "candidates": [
+      {
+        "Name": "Brad Sherman",
+        "Party": "Dem",
+        "Votes": "108,116",
+        "Percent": "68.8",
+        "incumbent": false
+      },
+      {
+        "Name": "Larry Thompson",
+        "Party": "Rep",
+        "Votes": "49,105",
+        "Percent": "31.2",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 33 - Districtwide Results",
+    "Reporting": "100% (491 of 491) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Pete Aguilar",
+        "Party": "Dem",
+        "Votes": "76,663",
+        "Percent": "67.7",
+        "incumbent": false
+      },
+      {
+        "Name": "Stephanie M. Vargas",
+        "Party": "Rep",
+        "Votes": "36,648",
+        "Percent": "32.3",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 34 - Districtwide Results",
+    "Reporting": "100% (116 of 116) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Jimmy Gomez",
+        "Party": "Dem",
+        "Votes": "46,641",
+        "Percent": "41.3",
+        "incumbent": false
+      },
+      {
+        "Name": "Angela Gonzales-Torres",
+        "Party": "Dem",
+        "Votes": "66,187",
+        "Percent": "58.7",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 34 - Los Angeles County Results",
+    "Reporting": "100% (116 of 116) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "candidates": [
+      {
+        "Name": "Jimmy Gomez",
+        "Party": "Dem",
+        "Votes": "46,641",
+        "Percent": "41.3",
+        "incumbent": false
+      },
+      {
+        "Name": "Angela Gonzales-Torres",
+        "Party": "Dem",
+        "Votes": "66,187",
+        "Percent": "58.7",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 35 - Districtwide Results",
+    "Reporting": "100% (272 of 272) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Norma J. Torres",
+        "Party": "Dem",
+        "Votes": "72,707",
+        "Percent": "65.6",
+        "incumbent": false
+      },
+      {
+        "Name": "Mike Cargile",
+        "Party": "Rep",
+        "Votes": "38,102",
+        "Percent": "34.4",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 35 - Los Angeles County Results",
+    "Reporting": "100% (37 of 37) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "candidates": [
+      {
+        "Name": "Norma J. Torres",
+        "Party": "Dem",
+        "Votes": "17,765",
+        "Percent": "73.2",
+        "incumbent": false
+      },
+      {
+        "Name": "Mike Cargile",
+        "Party": "Rep",
+        "Votes": "6,492",
+        "Percent": "26.8",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 36 - Districtwide Results",
+    "Reporting": "100% (156 of 156) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Ted W. Lieu",
+        "Party": "Dem",
+        "Votes": "148,056",
+        "Percent": "70.7",
+        "incumbent": false
+      },
+      {
+        "Name": "Houston Brignano",
+        "Party": "Rep",
+        "Votes": "61,486",
+        "Percent": "29.3",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 36 - Los Angeles County Results",
+    "Reporting": "100% (156 of 156) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "candidates": [
+      {
+        "Name": "Ted W. Lieu",
+        "Party": "Dem",
+        "Votes": "148,056",
+        "Percent": "70.7",
+        "incumbent": false
+      },
+      {
+        "Name": "Houston Brignano",
+        "Party": "Rep",
+        "Votes": "61,486",
+        "Percent": "29.3",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 37 - Districtwide Results",
+    "Reporting": "100% (140 of 140) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Sydney Kamlager-Dove",
+        "Party": "Dem",
+        "Votes": "73,622",
+        "Percent": "62.0",
+        "incumbent": false
+      },
+      {
+        "Name": "Samantha Mota",
+        "Party": "Dem",
+        "Votes": "45,170",
+        "Percent": "38.0",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 37 - Los Angeles County Results",
+    "Reporting": "100% (140 of 140) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "candidates": [
+      {
+        "Name": "Sydney Kamlager-Dove",
+        "Party": "Dem",
+        "Votes": "73,622",
+        "Percent": "62.0",
+        "incumbent": false
+      },
+      {
+        "Name": "Samantha Mota",
+        "Party": "Dem",
+        "Votes": "45,170",
+        "Percent": "38.0",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 38 - Districtwide Results",
+    "Reporting": "100% (415 of 415) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Hilda Solis",
+        "Party": "Dem",
+        "Votes": "97,536",
+        "Percent": "65.0",
+        "incumbent": false
+      },
+      {
+        "Name": "Pedro Antonio Casas",
+        "Party": "Rep",
+        "Votes": "52,489",
+        "Percent": "35.0",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 38 - Los Angeles County Results",
+    "Reporting": "100% (274 of 274) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "candidates": [
+      {
+        "Name": "Hilda Solis",
+        "Party": "Dem",
+        "Votes": "80,754",
+        "Percent": "72.3",
+        "incumbent": false
+      },
+      {
+        "Name": "Pedro Antonio Casas",
+        "Party": "Rep",
+        "Votes": "31,006",
+        "Percent": "27.7",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 39 - Districtwide Results",
+    "Reporting": "100% (210 of 210) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Mark Takano",
+        "Party": "Dem",
+        "Votes": "48,095",
+        "Percent": "65.3",
+        "incumbent": false
+      },
+      {
+        "Name": "Steve Manos",
+        "Party": "Rep",
+        "Votes": "25,504",
+        "Percent": "34.7",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 40 - Districtwide Results",
+    "Reporting": "100% (558 of 558) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Ken Calvert",
+        "Party": "Rep",
+        "Votes": "70,550",
+        "Percent": "54.5",
+        "incumbent": false
+      },
+      {
+        "Name": "Young Kim",
+        "Party": "Rep",
+        "Votes": "58,817",
+        "Percent": "45.5",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 41 - Districtwide Results",
+    "Reporting": "100% (281 of 281) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Linda Sánchez",
+        "Party": "Dem",
+        "Votes": "109,542",
+        "Percent": "64.9",
+        "incumbent": false
+      },
+      {
+        "Name": "Mitch Clemmons",
+        "Party": "Rep",
+        "Votes": "59,126",
+        "Percent": "35.1",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 41 - Los Angeles County Results",
+    "Reporting": "100% (183 of 183) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "candidates": [
+      {
+        "Name": "Linda Sánchez",
+        "Party": "Dem",
+        "Votes": "90,513",
+        "Percent": "67.7",
+        "incumbent": false
+      },
+      {
+        "Name": "Mitch Clemmons",
+        "Party": "Rep",
+        "Votes": "43,147",
+        "Percent": "32.3",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 42 - Districtwide Results",
+    "Reporting": "100% (402 of 402) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Robert Garcia",
+        "Party": "Dem",
+        "Votes": "115,522",
+        "Percent": "59.6",
+        "incumbent": false
+      },
+      {
+        "Name": "Brian Burley",
+        "Party": "Rep",
+        "Votes": "78,160",
+        "Percent": "40.4",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 42 - Los Angeles County Results",
+    "Reporting": "100% (59 of 59) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "candidates": [
+      {
+        "Name": "Robert Garcia",
+        "Party": "Dem",
+        "Votes": "55,377",
+        "Percent": "76.1",
+        "incumbent": false
+      },
+      {
+        "Name": "Brian Burley",
+        "Party": "Rep",
+        "Votes": "17,400",
+        "Percent": "23.9",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 43 - Districtwide Results",
+    "Reporting": "100% (193 of 193) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Maxine Waters",
+        "Party": "Dem",
+        "Votes": "99,258",
+        "Percent": "81.2",
+        "incumbent": false
+      },
+      {
+        "Name": "Cristian Morales",
+        "Party": "Rep",
+        "Votes": "22,906",
+        "Percent": "18.8",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 43 - Los Angeles County Results",
+    "Reporting": "100% (193 of 193) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "candidates": [
+      {
+        "Name": "Maxine Waters",
+        "Party": "Dem",
+        "Votes": "99,258",
+        "Percent": "81.2",
+        "incumbent": false
+      },
+      {
+        "Name": "Cristian Morales",
+        "Party": "Rep",
+        "Votes": "22,906",
+        "Percent": "18.8",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 44 - Districtwide Results",
+    "Reporting": "100% (179 of 179) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Nanette Diaz Barragan",
+        "Party": "Dem",
+        "Votes": "96,194",
+        "Percent": "79.8",
+        "incumbent": false
+      },
+      {
+        "Name": "Genevieve Angel",
+        "Party": "Rep",
+        "Votes": "24,340",
+        "Percent": "20.2",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 44 - Los Angeles County Results",
+    "Reporting": "100% (179 of 179) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "candidates": [
+      {
+        "Name": "Nanette Diaz Barragan",
+        "Party": "Dem",
+        "Votes": "96,194",
+        "Percent": "79.8",
+        "incumbent": false
+      },
+      {
+        "Name": "Genevieve Angel",
+        "Party": "Rep",
+        "Votes": "24,340",
+        "Percent": "20.2",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 45 - Districtwide Results",
+    "Reporting": "100% (424 of 424) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Derek Tran",
+        "Party": "Dem",
+        "Votes": "102,552",
+        "Percent": "58.7",
+        "incumbent": false
+      },
+      {
+        "Name": "Chuong V. Vo",
+        "Party": "Rep",
+        "Votes": "72,049",
+        "Percent": "41.3",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 45 - Los Angeles County Results",
+    "Reporting": "100% (36 of 36) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "candidates": [
+      {
+        "Name": "Derek Tran",
+        "Party": "Dem",
+        "Votes": "24,443",
+        "Percent": "68.6",
+        "incumbent": false
+      },
+      {
+        "Name": "Chuong V. Vo",
+        "Party": "Rep",
+        "Votes": "11,213",
+        "Percent": "31.4",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 46 - Districtwide Results",
+    "Reporting": "100% (423 of 423) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Lou Correa",
+        "Party": "Dem",
+        "Votes": "82,766",
+        "Percent": "68.1",
+        "incumbent": false
+      },
+      {
+        "Name": "David Pan",
+        "Party": "Rep",
+        "Votes": "38,843",
+        "Percent": "31.9",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 47 - Districtwide Results",
+    "Reporting": "100% (561 of 561) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Dave Min",
+        "Party": "Dem",
+        "Votes": "113,811",
+        "Percent": "56.7",
+        "incumbent": false
+      },
+      {
+        "Name": "Jenny Rae Le Roux",
+        "Party": "Rep",
+        "Votes": "86,784",
+        "Percent": "43.3",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 48 - Districtwide Results",
+    "Reporting": "100% (692 of 692) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Marni von Wilpert",
+        "Party": "Dem",
+        "Votes": "92,924",
+        "Percent": "59.6",
+        "incumbent": false
+      },
+      {
+        "Name": "Jim Desmond",
+        "Party": "Rep",
+        "Votes": "63,015",
+        "Percent": "40.4",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 49 - Districtwide Results",
+    "Reporting": "100% (699 of 699) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Mike Levin",
+        "Party": "Dem",
+        "Votes": "120,614",
+        "Percent": "57.5",
+        "incumbent": false
+      },
+      {
+        "Name": "Armen Kurdian",
+        "Party": "Rep",
+        "Votes": "89,194",
+        "Percent": "42.5",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 50 - Districtwide Results",
+    "Reporting": "100% (713 of 713) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Scott Peters",
+        "Party": "Dem",
+        "Votes": "117,694",
+        "Percent": "61.0",
+        "incumbent": false
+      },
+      {
+        "Name": "Steve Cohen",
+        "Party": "Rep",
+        "Votes": "75,182",
+        "Percent": "39.0",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 51 - Districtwide Results",
+    "Reporting": "100% (663 of 663) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Sara Jacobs",
+        "Party": "Dem",
+        "Votes": "109,166",
+        "Percent": "63.1",
+        "incumbent": false
+      },
+      {
+        "Name": "Ricardo Cabrera",
+        "Party": "Rep",
+        "Votes": "63,712",
+        "Percent": "36.9",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "United States Representative District 52 - Districtwide Results",
+    "Reporting": "100% (580 of 580) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Juan Vargas",
+        "Party": "Dem",
+        "Votes": "90,084",
+        "Percent": "68.9",
+        "incumbent": false
+      },
+      {
+        "Name": "Jeff Belle",
+        "Party": "Rep",
+        "Votes": "40,604",
+        "Percent": "31.1",
+        "incumbent": false
+      }
+    ]
+  }
+]

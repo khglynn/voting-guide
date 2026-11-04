@@ -1,0 +1,65 @@
+[
+  {
+    "raceTitle": "Controller - Statewide Results",
+    "Reporting": "99.9% (23,837 of 23,860) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Malia M. Cohen",
+        "Party": "Dem",
+        "Votes": "4,890,964",
+        "Percent": "63.8",
+        "incumbent": true
+      },
+      {
+        "Name": "Herb W Morgan",
+        "Party": "Rep",
+        "Votes": "2,778,176",
+        "Percent": "36.2",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Controller - Alameda County Results",
+    "Reporting": "100% (627 of 627) precincts reporting",
+    "ReportingTime": "November 4, 2026, 2:19 a.m.",
+    "candidates": [
+      {
+        "Name": "Malia M. Cohen",
+        "Party": "Dem",
+        "Votes": "239,832",
+        "Percent": "78.5",
+        "incumbent": true
+      },
+      {
+        "Name": "Herb W Morgan",
+        "Party": "Rep",
+        "Votes": "65,686",
+        "Percent": "21.5",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Controller - Los Angeles County Results",
+    "Reporting": "100% (2,853 of 2,853) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "candidates": [
+      {
+        "Name": "Malia M. Cohen",
+        "Party": "Dem",
+        "Votes": "1,459,666",
+        "Percent": "71.0",
+        "incumbent": true
+      },
+      {
+        "Name": "Herb W Morgan",
+        "Party": "Rep",
+        "Votes": "597,192",
+        "Percent": "29.0",
+        "incumbent": false
+      }
+    ]
+  }
+]

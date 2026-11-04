@@ -1,0 +1,65 @@
+[
+  {
+    "raceTitle": "Attorney General - Statewide Results",
+    "Reporting": "99.9% (23,837 of 23,860) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Rob Bonta",
+        "Party": "Dem",
+        "Votes": "4,910,761",
+        "Percent": "63.8",
+        "incumbent": true
+      },
+      {
+        "Name": "Michael E. Gates",
+        "Party": "Rep",
+        "Votes": "2,790,609",
+        "Percent": "36.2",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Attorney General - Alameda County Results",
+    "Reporting": "100% (627 of 627) precincts reporting",
+    "ReportingTime": "November 4, 2026, 2:19 a.m.",
+    "candidates": [
+      {
+        "Name": "Rob Bonta",
+        "Party": "Dem",
+        "Votes": "241,248",
+        "Percent": "78.8",
+        "incumbent": true
+      },
+      {
+        "Name": "Michael E. Gates",
+        "Party": "Rep",
+        "Votes": "64,896",
+        "Percent": "21.2",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Attorney General - Los Angeles County Results",
+    "Reporting": "100% (2,853 of 2,853) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "candidates": [
+      {
+        "Name": "Rob Bonta",
+        "Party": "Dem",
+        "Votes": "1,468,685",
+        "Percent": "71.1",
+        "incumbent": true
+      },
+      {
+        "Name": "Michael E. Gates",
+        "Party": "Rep",
+        "Votes": "596,517",
+        "Percent": "28.9",
+        "incumbent": false
+      }
+    ]
+  }
+]

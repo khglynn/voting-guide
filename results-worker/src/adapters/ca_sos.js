@@ -18,7 +18,16 @@
    mail votes is left out, as every other adapter does (no progress words rather than wrong ones).
    The feed has no documented revision for the whole election, so the change token is a hash of every path's body: an
    unchanged poll is one request per path (four), and a change to any race, or a correction within the same minute, is
-   read (pre-deploy review, Nov 3: one governor time used to stand for every race). */
+   read (pre-deploy review, Nov 3: one governor time used to stand for every race).
+   Two layouts of the same SOS data. `api` (the default): `{base}/returns/{path}` on api.sos.ca.gov. `media`
+   (`feed.layout: "media"`, Nov 4): `{base}/{file}` on media.sos.ca.gov, the files the SOS publishes for media and
+   automated readers (listing: https://media.sos.ca.gov/media/json-endpoints.csv), one per contest family, each holding
+   the whole race's section and every county's. api.sos.ca.gov sits behind the same Incapsula check as the results
+   site and refused the Worker on Cloudflare on Nov 3 and 4, while the media files answered our named reader (S3 behind
+   CloudFront and Imperva, Nov 4, 8:30 AM CT); we never work around a refusal, we read the copy published for us.
+   Only whole-race sections are read: a title ending "- Statewide Results" or "- Districtwide Results". A county's
+   section ("Governor - Alameda County Results", "Ballot Measures - Alameda Results") is one county's slice and never
+   stands in for the race; read here it would also repeat each measure's number once per county. */
 import { get } from '../fetch.js';
 import { parseUsTime, sha256 } from '../util.js';
 
@@ -67,30 +76,40 @@ export function contestsOf(race) {
   return out;
 }
 
+/* A whole race's own section in a media file: the statewide count, or a district's count across all its counties. */
+export const WHOLE_SECTION = / - (?:Statewide|Districtwide) Results$/;
+
 export async function read({ fetch, map, prevToken = null }) {
   const identity = map.feed.identity || 'named';
   const paths = map.feed.paths || [];
   if (!paths.length) return { verdict: 'error', error: 'the map lists no feed paths' };
+  const media = map.feed.layout === 'media';
+  if (map.feed.layout && !media) return { verdict: 'error', error: `feed layout "${map.feed.layout}" unknown` };
   // A path's query values are written readably in the map (query?r=["02000000000059",...]) and encoded here.
   const url = (p) => {
+    if (media) return `${map.feed.base}/${p}`;
     const [path, q] = String(p).split('?');
     if (!q) return `${map.feed.base}/returns/${path}`;
     const qs = q.split('&').map((kv) => { const i = kv.indexOf('='); return i < 0 ? kv : `${kv.slice(0, i)}=${encodeURIComponent(kv.slice(i + 1))}`; }).join('&');
     return `${map.feed.base}/returns/${path}?${qs}`;
   };
+  const key = (p) => (media ? String(p) : `${p}.json`);
   const raw = {};
-  const races = [];
+  let races = [];
   for (const p of paths) {
     const r = await get(fetch, url(p), { identity });
     if (r.verdict !== 'ok') return { verdict: r.verdict, error: r.error, status: r.status, url: r.url };
-    raw[`${p}.json`] = r.body;
+    raw[key(p)] = r.body;
     races.push(...(Array.isArray(r.json) ? r.json : [r.json]));
   }
-  const lead = races[0] || {};
-  if (!lead.raceTitle || !lead.ReportingTime) return { verdict: 'error', error: 'the first feed answer had no raceTitle or ReportingTime', url: url(paths[0]) };
-  const token = (await sha256(paths.map((p) => raw[`${p}.json`]).join('\n'))).slice(0, 16);
-  if (prevToken && token === prevToken) return { verdict: 'ok', unchanged: true, changed_token: token };
   if (races.some((x) => !x || typeof x !== 'object' || !x.raceTitle)) return { verdict: 'error', error: 'a feed answer held something other than races', url: map.feed.base };
+  if (media) races = races.filter((x) => WHOLE_SECTION.test(clean(x.raceTitle)));
+  // The source's own line comes from a race that covers the whole state: the first statewide section in the media
+  // files (the governor's, first path), or the api query's first race (the governor's, the query's first id).
+  const lead = (media ? races.find((x) => / - Statewide Results$/.test(clean(x.raceTitle))) : races[0]) || {};
+  if (!lead.raceTitle || !lead.ReportingTime) return { verdict: 'error', error: media ? 'no statewide section with a raceTitle and ReportingTime in the media files' : 'the first feed answer had no raceTitle or ReportingTime', url: url(paths[0]) };
+  const token = (await sha256(paths.map((p) => raw[key(p)]).join('\n'))).slice(0, 16);
+  if (prevToken && token === prevToken) return { verdict: 'ok', unchanged: true, changed_token: token };
   const contests = races.flatMap(contestsOf);
   const seen = new Set();
   for (const c of contests) { if (seen.has(c.feed_id)) return { verdict: 'error', error: `the feed lists "${c.feed_id}" twice`, url: map.feed.base }; seen.add(c.feed_id); }

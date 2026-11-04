@@ -2,11 +2,12 @@
    San Diego and Orange County on Live Voter Turnout's summary XML, and the Secretary of State's JSON feed. */
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { fakeFetch, fixture, mapFor } from './helpers.mjs';
+import { fakeFetch, fixture, mapFor, caApiMap } from './helpers.mjs';
 import * as lvt from '../src/adapters/lvt.js';
 import * as ca_sos from '../src/adapters/ca_sos.js';
 import { ADAPTERS } from '../src/adapters/index.js';
 import { checkRead } from '../src/checks.js';
+import { sourceSlices } from '../src/merge.js';
 import { NAMED_UA } from '../src/fetch.js';
 
 const LM = 'Wed, 04 Nov 2026 04:05:49 GMT';
@@ -105,7 +106,7 @@ test('ca_sos: the SOS time reads as Pacific', () => {
 
 test('ca_sos: statewide offices, retentions, measures, BOE and House from four requests, named, with the race progress words', async () => {
   const f = fakeFetch(sosRoutes);
-  const map = mapFor('results-CA');
+  const map = caApiMap();
   const r = await ca_sos.read({ fetch: f, map });
   assert.equal(r.verdict, 'ok');
   assert.equal(f.calls.length, 4);
@@ -132,9 +133,9 @@ test('ca_sos: statewide offices, retentions, measures, BOE and House from four r
 });
 
 test('ca_sos: an unchanged poll reads each path once and finds the same bytes', async () => {
-  const first = await ca_sos.read({ fetch: fakeFetch(sosRoutes), map: mapFor('results-CA') });
+  const first = await ca_sos.read({ fetch: fakeFetch(sosRoutes), map: caApiMap() });
   const f = fakeFetch(sosRoutes);
-  const r = await ca_sos.read({ fetch: f, map: mapFor('results-CA'), prevToken: first.changed_token });
+  const r = await ca_sos.read({ fetch: f, map: caApiMap(), prevToken: first.changed_token });
   assert.equal(r.unchanged, true);
   assert.equal(f.calls.length, 4);
 });
@@ -142,18 +143,110 @@ test('ca_sos: an unchanged poll reads each path once and finds the same bytes', 
 test('ca_sos: a ballot whose measure numbers differ is not taken as tonight', async () => {
   const bm = JSON.parse(fixture('ca-sos.ballot-measures.json'));
   bm['ballot-measures'] = bm['ballot-measures'].filter((m) => m.Number !== '45');
-  const r = await ca_sos.read({ fetch: fakeFetch({ ...sosRoutes, '/returns/ballot-measures': { status: 200, body: JSON.stringify(bm) } }), map: mapFor('results-CA') });
+  const r = await ca_sos.read({ fetch: fakeFetch({ ...sosRoutes, '/returns/ballot-measures': { status: 200, body: JSON.stringify(bm) } }), map: caApiMap() });
   assert.equal(r.election.date, null);
-  assert.equal(checkRead(r, mapFor('results-CA')).sourceBlocked, true);
+  assert.equal(checkRead(r, caApiMap()).sourceBlocked, true);
 });
 
 test('ca_sos: the results site\'s Incapsula page, an error, and a duplicate race', async () => {
-  let r = await ca_sos.read({ fetch: fakeFetch({ ...sosRoutes, '/returns/query?r=': { status: 200, body: fixture('ca-sos.site-incapsula.html') } }), map: mapFor('results-CA') });
+  let r = await ca_sos.read({ fetch: fakeFetch({ ...sosRoutes, '/returns/query?r=': { status: 200, body: fixture('ca-sos.site-incapsula.html') } }), map: caApiMap() });
   assert.equal(r.verdict, 'refused');
-  r = await ca_sos.read({ fetch: fakeFetch({ ...sosRoutes, '/returns/us-rep/district/all': { status: 500, body: '' } }), map: mapFor('results-CA') });
+  r = await ca_sos.read({ fetch: fakeFetch({ ...sosRoutes, '/returns/us-rep/district/all': { status: 500, body: '' } }), map: caApiMap() });
   assert.equal(r.verdict, 'error');
   const boe = fixture('ca-sos.boe-all.json');
-  r = await ca_sos.read({ fetch: fakeFetch({ ...sosRoutes, '/returns/us-rep/district/all': { status: 200, body: boe } }), map: mapFor('results-CA') });
+  r = await ca_sos.read({ fetch: fakeFetch({ ...sosRoutes, '/returns/us-rep/district/all': { status: 200, body: boe } }), map: caApiMap() });
   assert.equal(r.verdict, 'error');
   assert.match(r.error, /twice/);
+});
+
+/* The SOS media files (Nov 4): the map's twelve files, read from one real read at the 6:27 AM PT update (trimmed to
+   every whole-race section plus Alameda's and Los Angeles's county sections). */
+const MEDIA = ['governor', 'lieutenant-governor', 'secretary-of-state', 'controller', 'treasurer', 'attorney-general', 'insurance-commissioner', 'superintendent-of-public-instruction', 'supreme-court', 'ballot-measures', 'board-of-equalization', 'us-rep'];
+const mediaRoutes = (edit = {}) => Object.fromEntries(MEDIA.map((f) => [`/media/${f}.json`, edit[f] ? { status: 200, body: JSON.stringify(edit[f](JSON.parse(fixture(`ca-media.${f}.json`)))) } : `ca-media.${f}.json`]));
+
+test('ca_sos media: the map reads the twelve media files by name, whole-race sections only, every mapped race and choice found', async () => {
+  const f = fakeFetch(mediaRoutes());
+  const map = mapFor('results-CA');
+  assert.equal(map.feed.layout, 'media');
+  const r = await ca_sos.read({ fetch: f, map });
+  assert.equal(r.verdict, 'ok');
+  assert.deepEqual(f.calls.map((c) => c.url), MEDIA.map((x) => `https://media.sos.ca.gov/media/${x}.json`));
+  assert.ok(f.calls.every((c) => c.headers['User-Agent'] === NAMED_UA), 'every request names us');
+  assert.deepEqual(r.election, { id: 'gubernatorial-general', name: null, date: '2026-11-03' });
+  assert.equal(r.source_updated, '2026-11-04T14:27:00.000Z');
+  assert.equal(r.reporting, '99.9% (23,837 of 23,860) precincts reporting', 'the governor\'s statewide line');
+  assert.equal(r.contests.length, 8 + 2 + 14 + 4 + 52);
+  assert.ok(r.contests.every((c) => /^Proposition \d\d$/.test(c.feed_id) || / - (Statewide|Districtwide) Results/.test(c.feed_id)), 'no county section is read');
+  assert.equal(r.contests.filter((c) => /^Proposition /.test(c.feed_id)).length, 14, 'each measure once, from its statewide section');
+  assert.ok(!r.contests.some((c) => /Alameda|Los Angeles/.test(c.feed_id)));
+  const gov = r.contests.find((c) => c.feed_id === 'Governor - Statewide Results');
+  assert.deepEqual(gov.choices, [{ name: 'Xavier Becerra', votes: 4991891 }, { name: 'Steve Hilton', votes: 2814373 }]);
+  const p1 = r.contests.find((c) => c.feed_id === 'Proposition 01');
+  assert.deepEqual(p1.choices.map((c) => c.name), ['Yes', 'No']);
+  assert.ok(p1.total > 7_000_000, 'the statewide count, not a county\'s');
+  const evans = r.contests.find((c) => c.feed_id === 'Supreme Court Justice - Statewide Results: Kelli M. Evans');
+  assert.ok(evans.total > 6_000_000);
+  // What map-check's feed side checks: every pair's race is there under the same name, every feed choice is listed.
+  const byId = new Map(r.contests.map((c) => [c.feed_id, c]));
+  for (const mc of map.contests) {
+    const fc = byId.get(mc.feed_id);
+    assert.ok(fc, mc.feed_id);
+    assert.equal(fc.feed_name, mc.feed_name);
+    assert.deepEqual(fc.choices.map((c) => c.name).sort(), Object.keys(mc.choices).sort(), mc.feed_id);
+  }
+  const { raw, ...read } = r;
+  assert.deepEqual(Object.keys(raw), MEDIA.map((x) => `${x}.json`));
+  assert.equal(checkRead(read, map).ok, true);
+  const { problems } = sourceSlices(read, map, '2026-11-04T15:00:00.000Z');
+  assert.deepEqual(problems, []);
+});
+
+test('ca_sos media: an unchanged poll is twelve reads that find the same bytes; a change in any file is read', async () => {
+  const first = await ca_sos.read({ fetch: fakeFetch(mediaRoutes()), map: mapFor('results-CA') });
+  const f = fakeFetch(mediaRoutes());
+  const same = await ca_sos.read({ fetch: f, map: mapFor('results-CA'), prevToken: first.changed_token });
+  assert.equal(same.unchanged, true);
+  assert.equal(f.calls.length, 12);
+  const bump = (races) => { races[0].candidates[0].Votes = String(Number(races[0].candidates[0].Votes.replace(/,/g, '')) + 1); return races; };
+  const changed = await ca_sos.read({ fetch: fakeFetch(mediaRoutes({ 'us-rep': bump })), map: mapFor('results-CA'), prevToken: first.changed_token });
+  assert.equal(changed.unchanged, undefined);
+  assert.notEqual(changed.changed_token, first.changed_token);
+});
+
+test('ca_sos media: each race keeps its own time; "0 of N" beside votes is dropped; a county section never stands in', async () => {
+  const r = await ca_sos.read({
+    fetch: fakeFetch(mediaRoutes({
+      'us-rep': (races) => { races[0].ReportingTime = 'November 4, 2026, 6:40 a.m.'; races[1].Reporting = '0% (0 of 299) precincts reporting'; return races; },
+      // The governor's own section gone: a county's section must not take its place.
+      governor: (races) => races.filter((x) => !/Statewide/.test(x.raceTitle)),
+    })),
+    map: mapFor('results-CA'),
+  });
+  assert.equal(r.verdict, 'ok');
+  const house = JSON.parse(fixture('ca-media.us-rep.json'));
+  assert.equal(r.contests.find((c) => c.feed_id === house[0].raceTitle.trim()).updated, '2026-11-04T14:40:00.000Z');
+  assert.equal(r.source_updated, '2026-11-04T14:40:00.000Z');
+  assert.equal(r.contests.find((c) => c.feed_id === house[1].raceTitle.trim()).reporting, null);
+  assert.ok(!r.contests.some((c) => /^Governor/.test(c.feed_id)), 'no governor race at all, not Alameda\'s or Los Angeles\'s');
+  assert.equal(r.reporting, '99.9% (23,837 of 23,860) precincts reporting', 'the next statewide section\'s line (the lieutenant governor\'s)');
+  const { problems } = sourceSlices(r, mapFor('results-CA'), '2026-11-04T15:00:00.000Z');
+  assert.deepEqual(problems.map((p) => p.reason), ['contest missing'], 'the governor\'s row links out');
+});
+
+test('ca_sos media: the ballot is confirmed from the statewide measures only; Incapsula, an error, a doubled section', async () => {
+  // Proposition 45's statewide section gone while every county still lists it: not tonight's ballot as far as we can tell.
+  let r = await ca_sos.read({ fetch: fakeFetch(mediaRoutes({ 'ballot-measures': (races) => races.filter((x) => !(/Statewide/.test(x.raceTitle) && x['ballot-measures'][0].Number === '45')) })), map: mapFor('results-CA') });
+  assert.equal(r.election.date, null);
+  assert.equal(checkRead(r, mapFor('results-CA')).sourceBlocked, true);
+  r = await ca_sos.read({ fetch: fakeFetch({ ...mediaRoutes(), '/media/treasurer.json': { status: 200, body: fixture('ca-sos.site-incapsula.html') } }), map: mapFor('results-CA') });
+  assert.equal(r.verdict, 'refused');
+  r = await ca_sos.read({ fetch: fakeFetch({ ...mediaRoutes(), '/media/ballot-measures.json': { status: 503, body: '' } }), map: mapFor('results-CA') });
+  assert.equal(r.verdict, 'error');
+  r = await ca_sos.read({ fetch: fakeFetch(mediaRoutes({ 'board-of-equalization': (races) => [...races, races.find((x) => /Districtwide/.test(x.raceTitle))] })), map: mapFor('results-CA') });
+  assert.equal(r.verdict, 'error');
+  assert.match(r.error, /twice/);
+  r = await ca_sos.read({ fetch: fakeFetch(Object.fromEntries(MEDIA.map((x) => [`/media/${x}.json`, { status: 200, body: JSON.stringify(JSON.parse(fixture(`ca-media.${x}.json`)).filter((y) => !/ - (Statewide|Districtwide) Results$/.test(y.raceTitle))) }]))), map: mapFor('results-CA') });
+  assert.equal(r.verdict, 'error', 'county sections alone are never a read');
+  r = await ca_sos.read({ fetch: fakeFetch(mediaRoutes()), map: { ...mapFor('results-CA'), feed: { ...mapFor('results-CA').feed, layout: 'other' } } });
+  assert.equal(r.verdict, 'error');
 });

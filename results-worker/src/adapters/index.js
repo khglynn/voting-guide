@@ -5,5 +5,6 @@
 import * as clarity from './clarity.js';
 import * as harris from './harris.js';
 import * as tx_sos from './tx_sos.js';
+import * as dc from './dc.js';
 
-export const ADAPTERS = { clarity, harris, tx_sos };
+export const ADAPTERS = { clarity, harris, tx_sos, dc };

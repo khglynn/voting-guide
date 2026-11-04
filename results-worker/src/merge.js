@@ -11,6 +11,7 @@ import { outcomeFor, parseThreshold, RETENTION } from './outcome.js';
    isn't in the guide (counted, and listed in `unmatched`), or "__other" for an aggregate line such as "Write-in"
    (counted in the total, never named). */
 const OTHER = '__other';
+const SKIP = '__skip'; // over and under votes: listed by some feeds, votes for no one, never counted
 
 export function sourceStatus(read, map, now) {
   if (read.official || map.official?.at) return 'official';
@@ -35,7 +36,7 @@ export function sourceSlices(read, map, now) {
       problems.push({ reason: 'contest renamed', detail: `feed id ${mc.feed_id} is now "${fc.feed_name}", the map says "${mc.feed_name}"` });
       continue;
     }
-    const total = fc.choices.reduce((a, ch) => a + (Number(ch.votes) || 0), 0);
+    const total = fc.choices.reduce((a, ch) => a + (mc.choices?.[ch.name] === SKIP ? 0 : Number(ch.votes) || 0), 0);
     const st = status === 'pending' || total === 0 ? 'pending' : status;
     const slice = {
       source: map.id,
@@ -50,6 +51,7 @@ export function sourceSlices(read, map, now) {
     let unmatchedVotes = 0, otherVotes = 0;
     for (const ch of fc.choices) {
       const to = mc.choices?.[ch.name];
+      if (to === SKIP) continue;
       if (to === OTHER) otherVotes += Number(ch.votes) || 0;
       else if (to === null || to === undefined || ((mc.kind === 'measure' || mc.kind === 'retention') && to !== 'yes' && to !== 'no')) unmatchedVotes += Number(ch.votes) || 0;
     }
@@ -57,6 +59,7 @@ export function sourceSlices(read, map, now) {
       let yes = 0, no = 0;
       for (const ch of fc.choices) {
         const to = mc.choices?.[ch.name];
+        if (to === SKIP) continue;
         if (to === 'yes') yes += ch.votes; else if (to === 'no') no += ch.votes; else if (to !== OTHER) unmatched.push(ch.name);
       }
       const th = mc.kind === 'retention' ? (RETENTION[map.state] || { pct: 50, inclusive: false }) : (mc.threshold || parseThreshold(mc.pass_threshold));
@@ -67,6 +70,7 @@ export function sourceSlices(read, map, now) {
       const cands = [];
       for (const ch of fc.choices) {
         const to = mc.choices?.[ch.name];
+        if (to === SKIP) continue;
         if (to && to !== OTHER) cands.push({ name: to, votes: ch.votes, pct: pctOf(ch.votes, total) });
         else if (to !== OTHER) unmatched.push(ch.name);
       }
@@ -94,6 +98,8 @@ const RANK = { pending: 0, counting: 1, complete: 2, official: 3 };
 function single(sl) {
   const out = strip(sl);
   delete out.county;
+  // Ranked choice: tonight's numbers are first choices, never an outcome (DESIGN.md rule 7); the site labels them.
+  if (sl._kind === 'rcv') out.ranked_choice = true;
   out.final = outcomeFor({ status: sl.status, kind: sl._kind, seats: sl.seats, candidates: sl.candidates, measure: sl.measure, declared: sl._declared, threshold: sl._threshold, spanning: false, unmatchedVotes: sl._unmatchedVotes, otherVotes: sl._otherVotes });
   return out;
 }
@@ -106,6 +112,7 @@ function spanning(list, reaches) {
   const allDone = missing.length === 0 && sorted.every((s) => RANK[s.status] >= 2);
   const status = allDone ? (sorted.every((s) => s.status === 'official') ? 'official' : 'complete') : (sorted.some((s) => s.status !== 'pending') ? 'counting' : 'pending');
   const out = { source: top.source, status, reporting: top.reporting, updated: top.updated, url: top.url, total_votes: top.total_votes };
+  if (top._kind === 'rcv') out.ranked_choice = true;
   if (top.candidates) out.candidates = top.candidates;
   if (top.measure) out.measure = top.measure;
   if (top.seats) out.seats = top.seats;

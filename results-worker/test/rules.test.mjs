@@ -207,3 +207,17 @@ test('file: a whole-race count of zero, or an emptied race, never hides county n
     assert.equal(f.items.mayor.total_votes, 1000);
   }
 });
+
+test('file: over and under votes (__skip) are neither counted nor named; ranked choice is marked', () => {
+  const MAP = { id: 'dc', state: 'DC', name: 'DC Board', county: 'District of Columbia', scope: 'state', feed: { adapter: 'dc', results_url: 'https://dc.example/', tz: 'America/New_York' },
+    contests: [{ feed_id: '5', feed_name: 'MAYOR', item: 'dc-mayor', kind: 'rcv', seats: 1, whole: true, reaches: ['District of Columbia'], choices: { 'DEM A B': 'A B', 'IND C D': 'C D', 'Write-in': '__other', 'OVER VOTES': '__skip', 'UNDER VOTES': '__skip' } }] };
+  const read = readOf([{ feed_id: '5', feed_name: 'MAYOR', choices: [{ name: 'DEM A B', votes: 80 }, { name: 'IND C D', votes: 15 }, { name: 'Write-in', votes: 5 }, { name: 'OVER VOTES', votes: 40 }, { name: 'UNDER VOTES', votes: 900 }] }]);
+  const f = buildStateFile({ state: 'DC', maps: [MAP], srcs: { dc: { record: { read, fetched: '2026-11-04T02:00:00.000Z' }, checked: true, sched: {} } }, mode: 'public', now: '2026-11-04T02:00:00.000Z' });
+  const x = f.items['dc-mayor'];
+  assert.equal(x.total_votes, 100);
+  assert.deepEqual(x.candidates.map((c) => [c.name, c.pct]), [['A B', 80], ['C D', 15]]);
+  assert.equal(x.unmatched, undefined);
+  assert.equal(x.ranked_choice, true);
+  assert.equal(x.final, null);
+  assert.deepEqual(checkFile(f), []);
+});

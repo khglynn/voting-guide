@@ -152,3 +152,20 @@ test('clarity: no progress words when no precinct has reported but votes are in'
   assert.equal(r.contests[0].reporting, null);
   assert.equal(r.contests[1].reporting, '5 of 210 precincts reporting');
 });
+
+test('dc: the board\'s JSON reads with its own time and words; IsWinner is never taken as an outcome', async () => {
+  const dc = await import('../src/adapters/dc.js');
+  const map = { election: { feed_election_id: '2026-General-Election' }, feed: { base: 'https://electionresults.dcboe.org', identity: 'named' } };
+  const f = fakeFetch({ 'getElectionInfo/2026-General-Election': 'dc.info.json', 'getCityWide/2026-General-Election': 'dc.citywide.json' });
+  const r = await dc.read({ fetch: f, map });
+  assert.equal(r.verdict, 'ok');
+  assert.deepEqual(r.election, { id: '2026-General-Election', name: 'General Election 2026', date: '2026-11-03' });
+  assert.equal(r.source_updated, '2026-11-04T02:30:16.197Z');
+  assert.equal(r.reporting, '144 of 144 precincts counted');
+  assert.equal(r.labels[0], 'Election Night Unofficial Results');
+  assert.equal(r.official, false);
+  assert.equal(r.contests.length, 16);
+  assert.ok(r.contests.every((c) => c.declared === null), 'IsWinner is ignored');
+  const again = await dc.read({ fetch: f, map, prevToken: r.changed_token });
+  assert.equal(again.unchanged, true);
+});

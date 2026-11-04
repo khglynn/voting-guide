@@ -72,10 +72,10 @@ for (const m of maps) {
     const vals = Object.values(mc.choices || {});
     if (want === 'measure' || want === 'retention') {
       if (vals.filter((v) => v === 'yes').length !== 1 || vals.filter((v) => v === 'no').length !== 1) err(m, `${w}: a measure needs exactly one yes and one no choice`);
-      if (vals.some((v) => !['yes', 'no', '__other', null].includes(v))) err(m, `${w}: measure choices must be yes, no, __other or null`);
+      if (vals.some((v) => !['yes', 'no', '__other', '__skip', null].includes(v))) err(m, `${w}: measure choices must be yes, no, __other or null`);
     } else {
       const names = (it.candidates || []).map((c) => c.name);
-      for (const v of vals) if (v !== null && v !== '__other' && !names.includes(v)) err(m, `${w}: "${v}" isn't a guide candidate (${names.join(', ')})`);
+      for (const v of vals) if (v !== null && v !== '__other' && v !== '__skip' && !names.includes(v)) err(m, `${w}: "${v}" isn't a guide candidate (${names.join(', ')})`);
       for (const n of names) { const k = vals.filter((v) => v === n).length; if (k > 1) err(m, `${w}: guide candidate ${n} mapped ${k} times`); if (k === 0) warn(m, `${w}: guide candidate ${n} isn't in the feed`); }
     }
   }

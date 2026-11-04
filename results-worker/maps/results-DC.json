@@ -1,0 +1,45 @@
+{
+  "id": "results-DC",
+  "state": "DC",
+  "name": "DC Board of Elections",
+  "county": "District of Columbia",
+  "scope": "state",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "2026-General-Election",
+    "feed_name": "General Election 2026"
+  },
+  "guide": {
+    "fingerprint": "e3b0c44298fc1c14",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T03:23:13.329Z",
+    "locals": true,
+    "places": [
+      "state-DC",
+      "dc-ward-1",
+      "dc-ward-2",
+      "dc-ward-3",
+      "dc-ward-4",
+      "dc-ward-5",
+      "dc-ward-6",
+      "dc-ward-7",
+      "dc-ward-8"
+    ]
+  },
+  "feed": {
+    "adapter": "dc",
+    "base": "https://electionresults.dcboe.org",
+    "results_url": "https://electionresults.dcboe.org/election_results/2026-General-Election",
+    "identity": "named",
+    "identity_note": "Answered plain requests on Nov 3, 8:46 PM CT (capture round 1); re-checked by the builder.",
+    "election_id_from": "getElectionResultsId lists ElectionResultsId 1159, \"General Election\", 2026-11-03, UrlText 2026-General-Election (its IsLive still false); getElectionInfo agrees.",
+    "tz": "America/New_York"
+  },
+  "polls_close": "2026-11-04T01:00:00Z",
+  "count_closes": "2026-11-14T04:59:00Z",
+  "complete_marker": null,
+  "certify_by": "2026-12-02",
+  "official": null,
+  "contests": [],
+  "unmatched_feed": [],
+  "unmatched_guide": []
+}

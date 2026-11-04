@@ -28,7 +28,7 @@ for (const p of map.guide.places) {
   for (const it of b.items) {
     // A state source (map.scope "state") takes the state bundle's items, and from place bundles only the district
     // races it counts whole (U.S. House); a county source takes each place's local items.
-    if (map.scope === 'state' ? !(isState || /us-house/.test(it.id)) : !local.has(it.id)) continue;
+    if (map.scope === 'state' ? !(isState || /us-house/.test(it.id) || (map.guide.locals && local.has(it.id))) : !local.has(it.id)) continue;
     const e = items.get(it.id) || {
       item: it.id,
       kind: it.kind === 'measure' ? 'measure' : it.is_retention ? 'retention' : it.ranked_choice ? 'rcv' : (it.vote_for || 1) > 1 ? 'multi' : 'plurality',

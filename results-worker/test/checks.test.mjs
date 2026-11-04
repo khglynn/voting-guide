@@ -4,7 +4,7 @@ import { fakeFetch, mapFor, memStore, fixture } from './helpers.mjs';
 import * as clarity from '../src/adapters/clarity.js';
 import { checkRead, checkFile } from '../src/checks.js';
 import { get } from '../src/fetch.js';
-import { runTick } from '../src/tick.js';
+import { runTick, READ_VERSION } from '../src/tick.js';
 
 const dallasJune = {
   '/126485/current_ver.txt': 'clarity-dallas-june.current_ver.txt',
@@ -430,5 +430,5 @@ test('tick: a stored read from before READ_VERSION 3 with an untimed kept contes
   const after = JSON.parse(await store.get('src:bexar-tx'));
   assert.deepEqual(after.read.contests[0].choices, fresh.choices, "the source's own count");
   assert.equal(after.read.contests[0].note, undefined);
-  assert.equal(after.read_version, 3);
+  assert.equal(after.read_version, READ_VERSION);
 });

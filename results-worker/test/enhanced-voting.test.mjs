@@ -24,8 +24,10 @@ test('enhanced_voting: Georgia SOS reads as the Nov 3 election with 273 contests
   assert.equal(senate.total, 1654533 + 2370291);
   assert.equal(senate.reporting, '159 of 159 counties reporting');
   assert.equal(senate.updated, '2026-11-04T04:10:18.165Z');
-  // The election record claims nothing reported (ballotsCast 0, no precinct status), so the source line has no words.
-  assert.equal(r.reporting, null);
+  // The election record claims nothing reported (ballotsCast 0, no precinct status), so the source line is a
+  // whole-state contest's own words (14 contests at 159 counties), never the record's.
+  assert.equal(r.reporting, '159 of 159 counties reporting');
+  assert.equal(r.reporting_from, 'US Senate');
   assert.equal(r.source_updated, '2026-11-04T04:10:18.165Z');
   assert.equal(r.official, false);
   assert.deepEqual(r.labels, ['Unofficial Results']);

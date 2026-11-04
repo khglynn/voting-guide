@@ -62,3 +62,31 @@ export function localHour(iso, tz) {
   const parts = new Intl.DateTimeFormat('en-US', { timeZone: tz, hour: 'numeric', hourCycle: 'h23' }).formatToParts(new Date(iso));
   return Number(parts.find((p) => p.type === 'hour').value);
 }
+
+/* The office's progress for its whole county or state, for a source that prints none at that level (most Clarity
+   counties, the Florida, Georgia and Washington state files): the progress line of one contest that covers the whole
+   jurisdiction, exactly as that contest gives it. A site helper that quoted the first race's line instead read one
+   district's "14 of 14 precincts" as a whole county's (site review, Nov 3), so the contest has to prove its reach:
+   - its unit count (`precincts.total`) is the largest in the feed, and equals the jurisdiction's own total where the
+     feed gives one (`total`, in the same units);
+   - it passes the adapter's own proof where it has one (`covers`: Florida's race lists every county in the file);
+   - where the feed proves nothing beyond the count, at least `shared` contests sit at that count. A county's whole
+     count is shared by its statewide slate and county offices (2 to 58 races in each Clarity feed on Nov 3); one
+     contest alone at the top is what a feed without a county-wide race looks like (Dallas County's June 2026 city
+     runoff, where the Farmers Branch mayor's 34 precincts lead).
+   Every contest at the whole count must have words: one left without them (votes in and no precinct reported) means
+   the office's progress has none either, so we never fall back to a smaller race. Where they differ, the lowest count
+   is quoted, so progress is never overstated. The line is one contest's own `reporting`, never a count or a percent we
+   made; otherwise null. Returns { reporting, from } (the contest's feed name, for tracing) or null. */
+export function wholeProgress(contests, { total = null, covers = null, shared = 1 } = {}) {
+  const units = (c) => Number(c?.precincts?.total);
+  const counted = (contests || []).filter((c) => Number.isInteger(units(c)) && units(c) > 0);
+  if (!counted.length) return null;
+  const max = Math.max(...counted.map(units));
+  if (total !== null && total !== undefined && Number(total) > 0 && Number(total) !== max) return null;
+  const whole = counted.filter((c) => units(c) === max && (!covers || covers(c)));
+  if (whole.length < Math.max(1, shared)) return null;
+  if (whole.some((c) => typeof c.reporting !== 'string' || !c.reporting.trim() || !Number.isInteger(Number(c.precincts.reported)))) return null;
+  const pick = whole.reduce((a, c) => (Number(c.precincts.reported) < Number(a.precincts.reported) ? c : a));
+  return { reporting: pick.reporting, from: pick.feed_name || pick.feed_id || null };
+}

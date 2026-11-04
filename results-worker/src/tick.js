@@ -16,8 +16,11 @@ export const SCHED_KEY = `sched:${ELECTION}`;
 /* Bump when an adapter's output changes for the same feed bytes (Nov 3: no progress words when no precinct has
    reported), so stored reads made by older code are redone in full and replaced in place, never left stale.
    3 (Nov 3, 10:55 PM): a contest kept after a falling total by the old code had no time of its own (TX-10); a full
-   re-read lets checkRead hand it back to the source's count even when the feed hasn't changed. */
-export const READ_VERSION = 3;
+   re-read lets checkRead hand it back to the source's count even when the feed hasn't changed.
+   4 (Nov 4, 1 AM): Clarity counties and the Florida, Georgia and Washington state files now carry the office's progress
+   from a whole-jurisdiction contest (src/util.js wholeProgress); a feed that has gone quiet would otherwise keep a
+   stored read with no progress line until its next publish, which after election night can be a day away. */
+export const READ_VERSION = 4;
 const PUBLISH_MS = 8_000; // one state's files, at most
 const MAX_CARRY = 3; // cut-off reads in a row a dropped race keeps its last numbers through
 const SITE = 'https://vote.kevinhg.com';

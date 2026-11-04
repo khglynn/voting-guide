@@ -16,7 +16,7 @@
    state sites, precincts for DeKalb, election districts for Sullivan) comes from the map's `feed.units`.
    `voteFor` is free text: "Vote for 2", but also "Legislative" or "Judicial" (Washington), so only "Vote for N" counts. */
 import { get } from '../fetch.js';
-import { isoDate } from '../util.js';
+import { isoDate, wholeProgress } from '../util.js';
 
 const en = (list) => {
   if (!Array.isArray(list) || !list.length) return '';
@@ -129,6 +129,13 @@ export async function read({ fetch, map, prevToken = null }) {
   const groups = Object.fromEntries((e.contestGroups || []).map((g) => [g.id, en(g.groupHeading)]));
   const units = map.feed.units || 'reporting units';
   const top = { totalUnits: (e.precinctReportingStatus || []).reduce((a, g) => a + (Number(g.value) || 0), 0), reportingStatusDetails: e.precinctReportingStatus || [] };
+  const contests = parseContests(data, { units, groups });
+  // The record's own line where it has one (DeKalb, Sullivan); the state sites' records say nothing has reported
+  // (Georgia and Washington, Nov 3), so their line is the whole-state contest's own (src/util.js wholeProgress), at
+  // least two contests at the largest count. The record counts precincts, so its total checks that count only where
+  // the contests count precincts too, never a state site's counties.
+  const recordWords = progressWords(top, units, Number(e.ballotsCast) > 0);
+  const whole = recordWords ? null : wholeProgress(contests, { total: /count(y|ies)/i.test(units) ? null : top.totalUnits, shared: 2 });
   return {
     verdict: 'ok',
     changed_token: behind ? null : token,
@@ -140,10 +147,11 @@ export async function read({ fetch, map, prevToken = null }) {
     // the counts would be the cached copy's (Codex, Nov 3). The next poll reads in full; once both agree it stands.
     official: e.isOfficialResults === true && !behind,
     source_updated: behind ? newest : (iso(e.asOf) || iso(e.lastUpdated)),
-    reporting: progressWords(top, units, Number(e.ballotsCast) > 0),
+    reporting: recordWords ?? whole?.reporting ?? null,
+    ...(whole ? { reporting_from: whole.from } : {}),
     labels: labels(e),
     feed_version: e.publishVersionId || null,
     next_update: iso(e.nextUpdateAt?.time ?? e.nextUpdateAt),
-    contests: parseContests(data, { units, groups }),
+    contests,
   };
 }

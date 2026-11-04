@@ -5,7 +5,7 @@
    The election id comes from the map, which takes it from the office's own link or Clarity's list page
    (`{base}/elections.json`); `listElections` reads that list for the map-making step. */
 import { get } from '../fetch.js';
-import { parseUsTime, isoDate, hasProgressCount } from '../util.js';
+import { parseUsTime, isoDate, hasProgressCount, wholeProgress } from '../util.js';
 
 /* The source's own banner words, as plain text: "Early Voting Totals Only" (Dallas, 7 PM), "Unofficial Results".
    A banner holding a progress count is left out (see hasProgressCount).
@@ -81,6 +81,14 @@ export async function read({ fetch, map, prevToken = null }) {
       declared: winners.length ? winners : null,
     };
   });
+  // The office's own line for the whole election, from electionsettings, where it gives one (Colorado's state site:
+  // 1,132 of 4,297 precincts), under the contest rule above: "0 of N" beside counted votes is no progress at all.
+  // Most counties give 0 there (Bexar, Dallas, Travis, Fulton, Orange, Nov 3), so the line is the whole-county contest's
+  // own (src/util.js wholeProgress): the largest TP, matching the settings' total when there is one in the same
+  // units, shared by at least two contests, since Clarity names no county total to prove a lone contest's reach.
+  const anyVotes = contests.some((c) => c.choices.some((ch) => Number(ch.votes) > 0));
+  const settingsWords = totalPr > 0 && !(nowPr === 0 && anyVotes) ? `${nowPr} of ${totalPr} precincts reporting` : null;
+  const whole = settingsWords ? null : wholeProgress(contests, { total: unit === 'precincts' ? totalPr : null, shared: 2 });
   return {
     verdict: 'ok',
     changed_token: ver,
@@ -91,7 +99,8 @@ export async function read({ fetch, map, prevToken = null }) {
     source_updated: parseUsTime(e.json?.websiteupdatedat),
     labels: labels(e.json?.pagesettings, isoDate(details.electiondate)?.slice(0, 4) || null),
     feed_version: ver,
-    reporting: totalPr > 0 ? `${nowPr} of ${totalPr} precincts reporting` : null,
+    reporting: settingsWords ?? whole?.reporting ?? null,
+    ...(whole ? { reporting_from: whole.from } : {}),
     contests,
   };
 }

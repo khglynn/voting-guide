@@ -17,7 +17,7 @@
      "Donalds / Avila". Measures and retentions are "Yes" and "No" in CanNameLast.
    - Race names are unique in the file (176 races, 176 names), so the name is the feed id, as on the Texas SOS page. */
 import { get } from '../fetch.js';
-import { isoDate } from '../util.js';
+import { isoDate, wholeProgress } from '../util.js';
 
 const COLS = ['ElectionDate', 'PartyCode', 'PartyName', 'RaceCode', 'RaceName', 'CountyCode', 'CountyName', 'Juris1num', 'Juris2num', 'Precincts', 'PrecinctsReporting', 'CanNameLast', 'CanNameFirst', 'CanNameMiddle', 'CanVotes'];
 const clean = (s) => String(s ?? '').replace(/\s+/g, ' ').trim();
@@ -79,6 +79,11 @@ export async function read({ fetch, map, prevToken = null, now = Date.now() }) {
   const token = r.lastModified || null;
   if (prevToken && token && token === prevToken) return { verdict: 'ok', unchanged: true, changed_token: token };
   const lm = r.lastModified ? new Date(r.lastModified) : null;
+  // The file has no statewide line of its own, so the state's progress is a statewide race's own line: the largest
+  // precinct count, on a race that lists every county in the file (src/util.js wholeProgress). A district race never
+  // lists all 67, so it can't stand in for the state.
+  const counties = new Set(p.contests.flatMap((c) => c.counties));
+  const whole = wholeProgress(p.contests, { covers: (c) => c.counties.length === counties.size && c.counties.every((n) => counties.has(n)) });
   return {
     verdict: 'ok',
     changed_token: token,
@@ -87,7 +92,8 @@ export async function read({ fetch, map, prevToken = null, now = Date.now() }) {
     source_status: null,
     official: false,
     source_updated: lm && !Number.isNaN(lm.getTime()) ? lm.toISOString() : null,
-    reporting: null,
+    reporting: whole?.reporting ?? null,
+    ...(whole ? { reporting_from: whole.from } : {}),
     contests: p.contests,
   };
 }

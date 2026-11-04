@@ -226,7 +226,9 @@ test('clarity: Orange County FL 127356 on its own domain, over and under votes l
   assert.equal(r.contests.length, 34);
   assert.equal(r.source_updated, '2026-11-04T04:03:00.000Z'); // "11/3/2026 11:03:00 PM EST"
   assert.deepEqual(r.labels, ['Unofficial Results']);
-  assert.equal(r.reporting, null); // its settings say 0 of 0
+  // Its settings say 0 of 0, so the office's line is its whole-county races' own (13 at 263 precincts).
+  assert.equal(r.reporting, '261 of 263 precincts reporting');
+  assert.equal(r.reporting_from, 'United States Senator');
   const mayor = r.contests.find((c) => c.feed_name === 'County Mayor');
   assert.deepEqual(mayor.choices.map((c) => c.name), ['Chris Messina', 'Tiffany Moore Russell', 'Over Votes', 'Under Votes']);
   const senate = r.contests.find((c) => c.feed_id === '0004');

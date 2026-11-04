@@ -192,7 +192,8 @@
   "lookups": {
     "early_in_person": "https://experience.arcgis.com/experience/efe6ef1eca984454b5f5c247cdb64f61",
     "election_day": "https://experience.arcgis.com/experience/efe6ef1eca984454b5f5c247cdb64f61",
-    "drop_box": "https://experience.arcgis.com/experience/efe6ef1eca984454b5f5c247cdb64f61"
+    "drop_box": "https://experience.arcgis.com/experience/efe6ef1eca984454b5f5c247cdb64f61",
+    "results": "https://www.denvergov.org/electionresults"
   },
   "sources": [
     {
@@ -211,5 +212,6 @@
       "name": "U.S. Census Bureau: county codes (the City and County of Denver is 08031)",
       "url": "https://www.census.gov/library/reference/code-lists/ansi.html"
     }
-  ]
+  ],
+  "results_source": "Denver Elections Division"
 }

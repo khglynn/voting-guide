@@ -146,7 +146,8 @@
   "lookups": {
     "early_in_person": "https://www.nashville.gov/departments/elections/voters/find-early-voting-information",
     "election_day": "https://maps.nashville.gov/PollingPlaceFinder",
-    "tracking": "https://tnmap.tn.gov/voterlookup/"
+    "tracking": "https://tnmap.tn.gov/voterlookup/",
+    "results": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results"
   },
   "election_day": {
     "polls_open": "7:00 AM",
@@ -255,5 +256,6 @@
       "from": "2026-10-30",
       "text": "The deadline to ask for an absentee ballot was Saturday, October 24, and early voting ended October 29. If yours hasn't come, call the Davidson absentee office at 615-862-8815. On Election Day, Tuesday, November 3, vote at your own polling place, 7 AM to 7 PM."
     }
-  ]
+  ],
+  "results_source": "Nashville Election Commission"
 }

@@ -232,7 +232,8 @@
   "lookups": {
     "early_in_person": "https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Early%20Voting%20Dashboard.html",
     "election_day": "https://www.vote.org/polling-place-locator/",
-    "election_day_waits": "https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Election%20Day%20Voting%20Dashboard.html"
+    "election_day_waits": "https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Election%20Day%20Voting%20Dashboard.html",
+    "results": "https://results.enr.clarityelections.com/TX/Williamson/127488/"
   },
   "by_county": [
     {
@@ -247,10 +248,12 @@
       "lookups": {
         "early_in_person": "https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Early%20Voting%20Dashboard.html",
         "election_day": "https://www.vote.org/polling-place-locator/",
-        "election_day_waits": "https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Election%20Day%20Voting%20Dashboard.html"
+        "election_day_waits": "https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Election%20Day%20Voting%20Dashboard.html",
+        "results": "https://results.enr.clarityelections.com/TX/Williamson/127488/"
       },
       "source": "https://www.wilcotx.gov/elections",
-      "confidence": "verified"
+      "confidence": "verified",
+      "results_source": "Williamson County Elections"
     }
   ],
   "sources": [
@@ -274,5 +277,6 @@
       "until_address": true,
       "source": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_county20_natl.txt"
     }
-  ]
+  ],
+  "results_source": "Williamson County Elections"
 }

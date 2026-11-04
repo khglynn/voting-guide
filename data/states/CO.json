@@ -629,5 +629,7 @@
       "text": "Some ballots outside the rail district show Issue 7A by mistake. Your ballot is still valid; only eligible district votes on 7A count.",
       "applies_to": "item:co-frpr-7a"
     }
-  ]
+  ],
+  "results_url": "https://results.enr.clarityelections.com/CO/127407/",
+  "results_source": "Colorado Secretary of State"
 }

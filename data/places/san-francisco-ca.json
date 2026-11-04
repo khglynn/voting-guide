@@ -153,7 +153,8 @@
   "lookups": {
     "early_in_person": "https://www.sf.gov/vote-in-person",
     "election_day": "https://sfelections.org/tools/map_poll_time/",
-    "drop_box": "https://www.google.com/maps/d/viewer?mid=1LiRzGpYK1HVoJ1yB7lV_WzmPQ1I3yWg&ll=37.75034430815189%2C-122.46331686821289&z=12"
+    "drop_box": "https://www.google.com/maps/d/viewer?mid=1LiRzGpYK1HVoJ1yB7lV_WzmPQ1I3yWg&ll=37.75034430815189%2C-122.46331686821289&z=12",
+    "results": "https://www.sfelections.org/results/20261103w/index.html"
   },
   "mail_ballot": {
     "request_deadline": {
@@ -201,5 +202,6 @@
       "name": "U.S. Census Bureau: county codes (the City and County of San Francisco is 06075)",
       "url": "https://www.census.gov/library/reference/code-lists/ansi.html"
     }
-  ]
+  ],
+  "results_source": "San Francisco Department of Elections"
 }

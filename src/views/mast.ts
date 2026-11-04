@@ -11,6 +11,7 @@ import { covCardHTML } from './coverage';
 import { stateName, tidyAddress } from '../geo';
 import { pageWalk, decisionItems, type Ballot } from '../ballot';
 import { addsHTML } from './adds';
+import { resultsLead, RACE_CALLS, type ResultsLead } from '../model/plan';
 
 function electionDate(): string {
   if (S.ballot) return S.ballot.howto.election_date;
@@ -106,27 +107,93 @@ export function mastHTML(): string {
 /* The first page: Kevin's line and the three ticks, then steps 1 and 2 on one sheet torn off the
    pad My plan is written on, so the plan you start here is the sheet you finish with; "Show my
    ballot" at its foot. The parts marked data-part repaint on their own (render.ts), so the ZIP box
-   keeps its caret while the place line and the counts change under it. */
+   keeps its caret while the place line and the counts change under it. Once the first covered state's polls
+   close, results lead instead (resultsDoorHTML); `data-door` names which page it is, so render.ts repaints the
+   whole door when that changes. */
 function doorHTML(): string {
+  const lead = resultsLead(S.index?.states);
+  doorShown = S.index ? keyOf(lead) : null;
+  if (lead) return resultsDoorHTML(lead);
   const ticks = ['Plain English', 'Full local details', 'Pick by endorsements or party'];
-  return `<header class="mast front wrap">${tryBanner()}
+  return `<header class="mast front wrap" data-door="plan">${tryBanner()}
     <div class="mast-top" data-part="kicker"><p class="dateline">${kickerHTML()}</p></div>
     <h1 class="place">Quickly make your voting plan.</h1>
     <ul class="ticks">${ticks.map((t) => `<li><i aria-hidden="true"></i>${esc(t)}</li>`).join('')}</ul>
-    <div class="pad door" id="door">
-      <span class="sheet-top" aria-hidden="true"></span><span class="sheet-fill" aria-hidden="true"></span><span class="sheet-bot" aria-hidden="true"></span>
-      <div data-part="saved">${savedLineHTML()}</div>
-      <form class="zipform" data-form="zip" novalidate>
-        <label for="zip" class="step su-h zip-h"><span class="step-n" aria-hidden="true">1</span>Where do you vote?</label>
-        <div class="zip-row"><input class="zip-input" id="zip" name="zip" data-fk="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="ZIP code" value="${esc(S.zip)}" ${S.zipErr ? 'aria-describedby="zip-err" aria-invalid="true"' : ''}></div>
-      </form>
-      <div class="door-where" data-part="where">${whereHTML()}</div>
-      <div class="door-picks" id="setup" data-part="picks">${S.tryMode ? '' : doorPicksHTML()}</div>
-      <button class="bigbtn" data-act="setup-done" data-fk="setup-done">Show my ballot</button>
-    </div>
+    ${padHTML(true)}
     <div class="door-foot" data-part="fine">${trustHTML(true)}</div>
     ${PILE}
   </header>`;
+}
+function padHTML(saved: boolean, picks = true): string {
+  return `<div class="pad door" id="door">
+      <span class="sheet-top" aria-hidden="true"></span><span class="sheet-fill" aria-hidden="true"></span><span class="sheet-bot" aria-hidden="true"></span>
+      ${saved ? `<div data-part="saved">${savedLineHTML()}</div>` : ''}
+      <form class="zipform" data-form="zip" novalidate>
+        <label for="zip" class="step su-h zip-h"><span class="step-n" aria-hidden="true">1</span>Where do you vote?</label>
+        ${zipRowHTML()}
+      </form>
+      <div class="door-where" data-part="where">${whereHTML()}</div>
+      ${picks ? `<div class="door-picks" id="setup" data-part="picks">${S.tryMode ? '' : doorPicksHTML()}</div>` : ''}
+      <button class="bigbtn" data-act="setup-done" data-fk="setup-done">Show my ballot</button>
+    </div>`;
+}
+const zipRowHTML = (): string => `<div class="zip-row"><input class="zip-input" id="zip" name="zip" data-fk="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="ZIP code" value="${esc(S.zip)}" ${S.zipErr ? 'aria-describedby="zip-err" aria-invalid="true"' : ''}></div>`;
+
+/* The first page once polls start closing (Kevin, Nov 3: "results are rolling in", not "voting has ended"):
+   each covered state's official results, a state still voting labeled with when it ends, and the desks that call
+   races, once, under them. A saved ballot stays a tap away. While any covered state is still voting, the plan's
+   sheet follows, under "Your ballot and local results"; once every one has closed, the page is results, mail
+   ballot tracking and your saved ballot, and the ZIP is one quiet line under the list. */
+function resultsDoorHTML(lead: ResultsLead): string {
+  // Once every covered state has closed (the last at 8 PM Pacific), the design's first page (Nov 3, results Phase 0):
+  // "See how your ballot landed.", the ZIP sheet with step 2 folded away (a new ballot goes straight to the ballot,
+  // where Edit and the sources sheet still open; nothing fills, doorFills), then each state's official results under
+  // it for anyone whose city the guide doesn't cover.
+  // GPT copy pass, Nov 3: tonight's page links election offices and keeps your picks; it shows no counts yet, so the
+  // promise says so. Phase 1 brings back "See how your ballot landed." once numbers show.
+  if (lead.after) {
+    const ticks = ['Plain English', 'Links to your election office', 'Your saved picks'];
+    return `<header class="mast front res res-after wrap" data-door="after">${tryBanner()}
+    <div class="mast-top" data-part="kicker"><p class="dateline">${esc(`Polls have closed. ${lead.head}`)}</p></div>
+    <h1 class="place">Find your election results.</h1>
+    <ul class="ticks">${ticks.map((t) => `<li><i aria-hidden="true"></i>${esc(t)}</li>`).join('')}</ul>
+    ${padHTML(true, false)}
+    <div data-part="results">${resultsPartHTML(lead)}</div>
+    <div class="door-foot" data-part="fine">${trustHTML(true)}</div>
+    ${PILE}
+  </header>`;
+  }
+  // While some covered states still vote: the head, then the ballot lookup and a saved ballot first, then each state
+  // (GPT copy pass, Nov 3: the lookup is what most people came for).
+  return `<header class="mast front res wrap" data-door="results">${tryBanner()}
+    <div class="mast-top" data-part="kicker"><p class="dateline">${esc(dateline())}</p></div>
+    <h1 class="place res-h">${esc(lead.head)}</h1>
+    <p class="res-sub">${esc(lead.sub.slice(1).join(' '))}</p>
+    <div data-part="saved">${savedLineHTML()}</div>
+    ${padHTML(false)}
+    <div data-part="results">${resultsPartHTML(lead)}</div>
+    <div class="door-foot" data-part="fine">${trustHTML(true)}</div>
+    ${PILE}
+  </header>`;
+}
+/* What the first page's results lead says (`doorShown`: as last painted, null before the door paints), so main.ts
+   can repaint it when a state closes while the page sits open. */
+const keyOf = (l: ResultsLead | null): string => (l ? `${l.head}|${l.rows.map((r) => `${r.st}:${r.url ? 1 : 0}${r.track ? 1 : 0}`).join(',')}` : '');
+export let doorShown: string | null = null;
+/* Whether "Show my ballot" fills picks: the switch is on, and the first page shows it. Once every covered state has
+   closed, the page hides the endorsement and fill switches while the fill still defaults on, so a new voter's
+   saved ballot got newspaper picks they never saw offered (review, Nov 3). */
+export const doorFills = (): boolean => S.door.fill && !S.tryMode && !resultsLead(S.index?.states)?.after;
+export const doorKey = (): string => keyOf(resultsLead(S.index?.states));
+function resultsPartHTML(lead: ResultsLead): string {
+  const a = (url: string, text: string, cls = ''): string => `<a${cls ? ` class="${cls}"` : ''} href="${esc(url)}" target="_blank" rel="noopener">${esc(text)}</a>`;
+  // A closed state: its name links its results page, with who publishes it. One still voting: when its polls close, in
+  // its own zone, and its voting-information page.
+  const rows = lead.rows.map((r) => `<li class="res-row${r.url ? '' : ' is-open'}">${r.url ? a(r.url, r.name, 'res-st') : `<span class="res-st">${esc(r.name)}</span>`}<span class="res-src">${esc(r.url ? r.source || 'Official results' : r.open || '')}${!r.url && r.info ? ` ${a(r.info, 'Voting information')}` : ''}</span>${r.track ? a(r.track, 'Track your mail ballot', 'res-track') : ''}</li>`).join('');
+  const sub = lead.after ? lead.sub.slice(1).filter((x) => !/^Already in line/.test(x)) : [];
+  return `<h2 class="res-zip-h">Official results by state</h2>${sub.map((x) => `<p class="res-sub">${esc(x)}</p>`).join('')}
+    <ul class="res-list" aria-label="Official results by state">${rows}</ul>
+    <p class="res-calls">${RACE_CALLS.map((d) => a(d.url, 'AP’s race calls')).join(' · ')}. AP reports who it expects to win. Election offices publish the counts.</p>`;
 }
 
 /* The ballot you went back to the first page from, while anything on it is saved (a pick, a ranking

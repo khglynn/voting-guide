@@ -612,5 +612,7 @@
       "from": "2026-11-03",
       "text": "Early voting ended Monday, November 2, and the deadline to ask for a mail ballot was October 21. If you're back before polls close at 7 PM, you can still vote in person today. Already mailed your ballot? It counts if it arrives by 7 PM today."
     }
-  ]
+  ],
+  "results_url": "https://www.sos.mo.gov/elections/results",
+  "results_source": "Missouri Secretary of State"
 }

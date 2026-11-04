@@ -795,7 +795,8 @@
       "lookups": {
         "early_in_person": "https://www.google.com/maps/d/viewer?mid=1t_vWJgd_BRfKnJn_fQoHE25IV2i_0Jo",
         "election_day": "https://www.vote.org/polling-place-locator/",
-        "election_day_waits": "https://updates.electionlink.net/widgets/travistx/2026-11-03/Election%20Day%20Voting%20Dashboard.html"
+        "election_day_waits": "https://updates.electionlink.net/widgets/travistx/2026-11-03/Election%20Day%20Voting%20Dashboard.html",
+        "results": "https://results.enr.clarityelections.com/TX/Travis/"
       },
       "source": "https://votetravis.gov/current-election-information/current-election/",
       "confidence": "verified",
@@ -834,7 +835,8 @@
         "78756",
         "78757",
         "78758"
-      ]
+      ],
+      "results_source": "Travis County Clerk"
     },
     {
       "county": "Williamson",
@@ -843,10 +845,12 @@
       "lookups": {
         "early_in_person": "https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Early%20Voting%20Dashboard.html",
         "election_day": "https://www.vote.org/polling-place-locator/",
-        "election_day_waits": "https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Election%20Day%20Voting%20Dashboard.html"
+        "election_day_waits": "https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Election%20Day%20Voting%20Dashboard.html",
+        "results": "https://results.enr.clarityelections.com/TX/Williamson/127488/"
       },
       "source": "https://www.wilcotx.gov/elections",
-      "confidence": "verified"
+      "confidence": "verified",
+      "results_source": "Williamson County Elections"
     },
     {
       "county": "Hays",
@@ -854,10 +858,12 @@
       "zips": [],
       "lookups": {
         "early_in_person": "https://updates.electionlink.net/widgets/haystx/2026-11-03/Early%20Voting%20Dashboard.html",
-        "election_day": "https://www.vote.org/polling-place-locator/"
+        "election_day": "https://www.vote.org/polling-place-locator/",
+        "results": "https://www.hayscountytx.gov/873/November-3-2026-General-Election"
       },
       "source": "https://www.hayscountytx.gov/873/November-3-2026-General-Election",
-      "confidence": "verified"
+      "confidence": "verified",
+      "results_source": "Hays County Elections"
     }
   ],
   "sources": [

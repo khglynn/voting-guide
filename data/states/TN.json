@@ -593,5 +593,7 @@
       "from": "2026-10-30",
       "text": "Find my polling place"
     }
-  ]
+  ],
+  "results_url": "https://www.elections.tn.gov/",
+  "results_source": "Tennessee Secretary of State"
 }

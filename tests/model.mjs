@@ -1183,7 +1183,7 @@ function roundTrip(name, stCode, places, mutate) {
       let html = ps.planHTML();
       check('where: an Austin 78702 plan on Election Day: "Find where to vote" opens Vote.org, "See live wait times" Travis\u2019s dashboard', html.includes(`<a class="pbtn gold" href="${TRAVIS_DAY}" target="_blank" rel="noopener">Find where to vote</a>`) && waits(html) === `<a href="${TRAVIS_WAIT}" target="_blank" rel="noopener">See live wait times</a>`, waits(html));
       at('?today=2026-11-03&now=19:05');
-      check('where: no wait-times link once the polls have closed', !waits(ps.planHTML()) && /Polls closed/.test(ps.planHTML()));
+      check('where: no wait-times link once the polls have closed', !waits(ps.planHTML()) && /Results are rolling in/.test(ps.planHTML()));
       at('?today=2026-11-02');
       check('where: no wait-times link before Election Day', !waits(ps.planHTML()));
       at('?today=2026-11-03&now=10:00');
@@ -1460,7 +1460,7 @@ function roundTrip(name, stCode, places, mutate) {
     check('sites: the day before Election Day: none', !block(ps.planHTML()));
     noLine('the day before');
     at('?today=2026-11-03&now=19:05');
-    check('sites: once the polls have closed: none', !block(ps.planHTML()) && /Polls closed/.test(ps.planHTML()));
+    check('sites: once the polls have closed: none', !block(ps.planHTML()) && /Results are rolling in/.test(ps.planHTML()));
     noLine('the polls closed');
     at('?today=2026-11-03&now=12:00');
     b = open('TX', ['san-marcos-tx']);
@@ -1535,7 +1535,7 @@ function roundTrip(name, stCode, places, mutate) {
           atInstant('2026-11-04T01:05:00Z');
           const a1 = seen();
           check('sites: Austin at 6:59 PM Central: the block and the line show', a0.block && a0.line, JSON.stringify(a0));
-          check('sites: Austin at 7:05 PM Central: both gone, polls closed', !a1.block && !a1.line && a1.key === '' && /^Polls closed at 7 PM/.test(a1.head), JSON.stringify(a1));
+          check('sites: Austin at 7:05 PM Central: both gone, results lead', !a1.block && !a1.line && a1.key === '' && /^Results are rolling in\./.test(a1.head), JSON.stringify(a1));
         } finally {
           globalThis.Date = RealDate;
           at('?today=2026-11-03&now=12:00');
@@ -1584,6 +1584,213 @@ function roundTrip(name, stCode, places, mutate) {
     if (had) Object.defineProperty(globalThis, 'location', had); else delete globalThis.location;
     sites.onWantSites(() => {});
     st.S.ballot = keep.ballot; st.S.b = keep.b; Object.assign(st.S.ui, keep.ui);
+  }
+}
+
+/* ---------- results once polls close (Nov 3) ----------
+   Kevin: "I want the site not to lead with 'voting has ended'; that gives a 'you missed it' vibe. Instead a 'results
+   are rolling in' lead." The first page turns once the first covered state closes (7 PM Eastern), by the same
+   every-zone rule as the plan, so a state still voting says when it ends; the plan strip's "Official results" opens
+   the most local official page the ballot has. Checked at absolute instants, since states span zones. */
+{
+  const plan = mods.plan;
+  const ps = views.planstrip;
+  const mast = views.mast;
+  const RealDate = globalThis.Date;
+  const hadLoc = Object.getOwnPropertyDescriptor(globalThis, 'location');
+  const keep = { ballot: st.S.ballot, b: st.S.b, view: st.S.view, index: st.S.index, zip: st.S.zip, tryMode: st.S.tryMode, open: st.S.ui.open };
+  const at = (q) => Object.defineProperty(globalThis, 'location', { configurable: true, value: { search: q, origin: 'http://x', pathname: '/' } });
+  // The device's clock at one instant: `new Date()` and Date.now() read it; everything else is the real Date.
+  const pin = (iso) => {
+    const t = new RealDate(iso).getTime();
+    globalThis.Date = class extends RealDate { constructor(...a) { super(...(a.length ? a : [t])); } static now() { return t; } };
+  };
+  const I = { before: '2026-11-03T22:59:00Z', east: '2026-11-04T00:05:00Z', austin: '2026-11-04T01:05:00Z', mostly: '2026-11-04T02:05:00Z', all: '2026-11-04T04:05:00Z', next: '2026-11-04T15:00:00Z' };
+  const lead = (k, t = '2026-11-03') => plan.resultsLead(INDEX.states, t, new RealDate(I[k]));
+  const row = (l, stc) => l.rows.find((r) => r.st === stc);
+  try {
+    check('results: every covered state carries its official results page, its publisher and its poll close in the index', Object.values(INDEX.states).every((x) => /^https:\/\//.test(x.results_url || '') && x.results_source && x.polls_close), Object.entries(INDEX.states).filter(([, x]) => !x.results_url).map(([k]) => k).join(' '));
+    check('results: 5:59 PM Central, before any covered state closes: no results lead', lead('before') === null);
+    const e = lead('east');
+    check('results: 7:05 PM Eastern: results lead, still Election Day, and since some states are still voting, nothing says your polls are past', !!e && !e.after && e.head === 'Results are rolling in.' && e.sub.join(' ') === 'Official results for each state are below. Polls are still open in some states. In line when yours close? Stay in line. You still get to vote.' && !/Already in line/.test(e.sub.join(' ')), JSON.stringify(e && e.sub));
+    check('results: 7:05 PM Eastern: Georgia links its official results; Florida (panhandle on Central) still voting, in local time, with its voting information', row(e, 'GA').url === INDEX.states.GA.results_url && row(e, 'GA').source === 'Georgia Secretary of State' && !row(e, 'FL').url && row(e, 'FL').open === 'Polls close at 7 PM local time.' && row(e, 'FL').info === INDEX.states.FL.official_site.url, JSON.stringify(row(e, 'FL')));
+    check('results: 7:05 PM Eastern: a still-voting state names its close in its own zone', !row(e, 'CA').url && row(e, 'CA').open === 'Polls close at 8 PM Pacific.' && row(e, 'NY').open === 'Polls close at 9 PM Eastern.' && row(e, 'CO').open === 'Polls close at 7 PM Mountain.', `${row(e, 'CA').open} | ${row(e, 'NY').open} | ${row(e, 'CO').open}`);
+    check('results: a state across zones says "local time", never the zone that closes last (Austin read "7 PM Mountain" as 8 PM Central)', row(e, 'TX').open === 'Polls close at 7 PM local time.' && row(e, 'OR').open === 'Polls close at 8 PM local time.', `${row(e, 'TX').open} | ${row(e, 'OR').open}`);
+    check('results: Tennessee keeps both zones from its own data', row(e, 'TN').open === 'Polls close at 7 PM Central (8 PM Eastern).', row(e, 'TN').open);
+    check('results: no mail-ballot trackers while any state is still voting', e.rows.every((r) => !r.track));
+    const m = lead('mostly');
+    check('results: 8:05 PM Mountain: every state but the Pacific ones links its results', m.rows.filter((r) => !r.url).map((r) => r.st).sort().join(' ') === 'CA OR WA' && !m.after, m.rows.filter((r) => !r.url).map((r) => r.st).join(' '));
+    const a = lead('all');
+    check('results: 8:05 PM Pacific: every state links its results, and its mail-ballot tracker', a.after && a.rows.every((r) => r.url && r.track) && a.head === 'Results are rolling in.', JSON.stringify(a.rows.filter((r) => !r.url || !r.track)));
+    const n = plan.resultsLead(INDEX.states, '2026-11-04', new RealDate(I.next));
+    check('results: Nov 4: "still coming in", counting takes days', n.after && n.head === 'Results are still coming in.' && n.sub.join(' ') === 'Official results for each state are below. Counting can take days, especially for mail ballots.');
+    check('results: race calls are AP only (Kevin, Nov 3), https', plan.RACE_CALLS.map((d) => d.name).join('|') === 'AP' && plan.RACE_CALLS.every((d) => /^https:\/\//.test(d.url)));
+    check('results: AP’s state page for every covered state, from the registry’s template (DC is district-of-columbia)', plan.apStateURL('TX', 'Texas') === 'https://apnews.com/projects/elections-2026/texas-results/' && plan.apStateURL('DC', 'Washington, DC') === 'https://apnews.com/projects/elections-2026/district-of-columbia-results/' && plan.apStateURL('NY', 'New York') === 'https://apnews.com/projects/elections-2026/new-york-results/' && (() => { at('?today=2026-11-03&now=21:05'); open('DC', ['dc-ward-1']); return ps.planHTML().includes('href="https://apnews.com/projects/elections-2026/district-of-columbia-results/"'); })());
+
+    // The first page at each instant, as the device sees it (Central; ?today pins the device's date).
+    st.S.index = INDEX; st.S.view = 'door'; st.S.ballot = null; st.S.zip = ''; st.S.tryMode = null;
+    const door = (k, today = '2026-11-03') => { at(`?today=${today}`); pin(I[k]); try { return mast.mastHTML(); } finally { globalThis.Date = RealDate; } };
+    at('?today=2026-11-03&now=10:00');
+    const morning = mast.mastHTML();
+    const d0 = door('before');
+    check('door: before the first close it is exactly the plan page it was this morning', d0 === morning && /data-door="plan"/.test(d0) && /Quickly make your voting plan\./.test(d0) && !/Results are/.test(d0));
+    const d1 = door('east');
+    check('door: 7:05 PM Eastern leads with results, then the ballot lookup, then each state (GPT copy pass)', /data-door="results"/.test(d1) && /<h1 class="place res-h">Results are rolling in\.<\/h1>/.test(d1) && /id="zip"/.test(d1) && /class="bigbtn" data-act="setup-done"/.test(d1) && d1.indexOf('id="zip"') < d1.indexOf('res-list') && /Official results by state/.test(d1) && !/Quickly make your voting plan/.test(d1));
+    check('door: 7:05 PM Eastern: Georgia is a results link; California says when its polls close and links its voting information', d1.includes(`<a class="res-st" href="${INDEX.states.GA.results_url}" target="_blank" rel="noopener">Georgia</a>`) && d1.includes(`<span class="res-st">California</span><span class="res-src">Polls close at 8 PM Pacific. <a href="${INDEX.states.CA.official_site.url}" target="_blank" rel="noopener">Voting information</a></span>`));
+    check('door: 7:05 PM Eastern: Texas says "7 PM local time" and the sub says polls are still open in some states', /<span class="res-st">Texas<\/span><span class="res-src">Polls close at 7 PM local time\./.test(d1) && /Polls are still open in some states\./.test(d1) && !/Already in line/.test(d1));
+    // "Show my ballot" fills only when the first page shows the fill switch: on while some state is voting, off once
+    // every one has closed and the page hides it (a new voter's ballot got newspaper picks they never saw offered).
+    const fillsAt = (k) => { st.S.door.fill = true; pin(I[k]); try { return mast.doorFills(); } finally { globalThis.Date = RealDate; } };
+    const keepFill = st.S.door.fill;
+    try {
+      check('door: the fill runs at 7:05 PM Eastern (switch shown) and not at 8:05 PM Pacific (switch hidden)', fillsAt('east') === true && fillsAt('all') === false);
+    } finally { st.S.door.fill = keepFill; }
+    check('door: AP’s race calls show once, under the list, said to be AP’s', (d1.match(/class="res-calls"/g) || []).length === 1 && d1.includes(`<a href="${plan.RACE_CALLS[0].url}" target="_blank" rel="noopener">AP’s race calls</a>. AP reports who it expects to win. Election offices publish the counts.`) && !/Decision Desk/.test(d1) && d1.indexOf('res-calls') > d1.indexOf('res-list'));
+    const d3 = door('all');
+    // Once the last covered state closes (8 PM Pacific): ballot lookup first, then each state's results and tracker.
+    // Tonight's promise matches tonight's page: links and your saved picks, no counts (GPT copy pass, Nov 3).
+    check('door: 8:05 PM Pacific: "Find your election results.", its ticks, the ZIP sheet and Show my ballot', /data-door="after"/.test(d3) && /<p class="dateline">Polls have closed\. Results are rolling in\.<\/p>/.test(d3) && /<h1 class="place">Find your election results\.<\/h1>/.test(d3) && ['Plain English', 'Links to your election office', 'Your saved picks'].every((t) => d3.includes(`</i>${t}</li>`)) && !/See how your ballot landed|Your picks beside them/.test(d3) && /id="zip"/.test(d3) && /class="bigbtn" data-act="setup-done"/.test(d3), d3.slice(0, 600));
+    check('door: 8:05 PM Pacific: step 2 folds away (no sources or fill switches), and each state’s results and tracker follow the sheet', !/id="setup"|data-part="picks"|Pick by endorsements|voting plan/i.test(d3) && (d3.match(/class="res-track"/g) || []).length === Object.keys(INDEX.states).length && d3.indexOf('res-list') > d3.indexOf('setup-done') && /Official results by state/.test(d3) && !/Already in line/.test(d3));
+    const d4 = door('next', '2026-11-04');
+    check('door: Nov 4: "Results are still coming in."', /Results are still coming in\./.test(d4) && /Counting can take days/.test(d4) && /data-door="after"/.test(d4));
+    check('door: copy has no em dashes', ![d1, d3, d4].some((x) => /—/.test(x.replace(/<[^>]+>/g, ''))));
+
+    // The plan strip once the polls close: one line on when the county posts, the results buttons each naming its office,
+    // "Track your mail ballot", AP's race calls (GPT copy pass, Nov 3).
+    st.S.ui.open = new Set();
+    let b = open('TX', ['austin-tx']);
+    bl.localize(b, '78702', null);
+    check('strip: Austin 78702 is still Election Day at 7:05 PM Eastern, and results at 7:05 PM Central', plan.nextStep(b.howto, '2026-11-03', false, new RealDate(I.east)).phase === 'election_day' && plan.nextStep(b.howto, '2026-11-03', false, new RealDate(I.austin)).phase === 'results_counting');
+    at('?today=2026-11-03&now=19:05');
+    const travisRes = read('place-austin-tx.json').by_county.find((c) => c.county === 'Travis').lookups.results;
+    let h = ps.planHTML();
+    const travisLine = 'Travis County posts early and mail votes first. No first update time announced.';
+    check('strip: county known (78702, Travis): head, the in-line line, Travis County’s one wait line, then "Travis County results"', h.includes(`<a class="pbtn gold" href="${travisRes}" target="_blank" rel="noopener" data-fk="plan-results">Travis County results</a>`) && /<p class="plan-sub">Already in line\? Stay in line\. You still get to vote\.<\/p><p class="plan-sub plan-note">Travis County posts early and mail votes first\. No first update time announced\.<\/p>/.test(h) && !/Official results are below|Source:/.test(h) && h.indexOf('plan-note') < h.indexOf('plan-results'), h.slice(h.indexOf('plan-h'), h.indexOf('plan-h') + 700));
+    check('strip: "Track your mail ballot" after the results, AP’s race calls after it, no registration check after the polls close', /data-fk="plan-track">Track your mail ballot<\/a>/.test(h) && h.indexOf('plan-results') < h.indexOf('plan-track') && h.indexOf('plan-track') < h.indexOf('plan-calls') && (h.match(/class="plan-hint plan-calls"/g) || []).length === 1 && !/Check my registration/.test(h));
+    at('?today=2026-11-03&now=20:30');
+    check('strip: "Already in line?" only in the first hour after the close', !/Already in line/.test(ps.planHTML()) && /Travis County posts early/.test(ps.planHTML()));
+    at('?today=2026-11-03&now=19:05');
+    b = open('TX', ['austin-tx']);
+    bl.localize(b, '78729', null);
+    h = ps.planHTML();
+    const ctyBtns = (hx) => [...hx.matchAll(/<a class="pbtn (?:gold|line)" href="([^"]+)"[^>]*data-county="([^"]+)">([^<]+)<\/a>/g)].map((x) => [x[1], x[3]]);
+    let cb = ctyBtns(h);
+    check('strip: across county lines, county unknown (78729): one named button per county, no generic button, no wait line', cb.map((x) => x[1]).join('|') === 'Travis County results|Williamson County results|Hays County results' && !h.includes(`href="${INDEX.states.TX.results_url}"`) && !/plan-note/.test(h) && /data-fk="plan-results" data-county="Travis"/.test(h), cb.map((x) => x[1]).join('|'));
+    // A county with no results page of its own tonight (Atlanta's Fulton) opens the state's, labeled as the state's: a lone
+    // "DeKalb County" pointed most of Atlanta at the wrong county (review, Nov 3). Aurora's Douglas has its own for Nov 3.
+    open('GA', ['atlanta-ga']);
+    bl.localize(st.S.ballot, '30306', null);
+    cb = ctyBtns(ps.planHTML());
+    check('strip: Atlanta 30306, county unknown: Fulton opens Georgia’s page, labeled as the state’s, and DeKalb its own', st.S.ballot.county == null && JSON.stringify(cb) === JSON.stringify([[INDEX.states.GA.results_url, 'Fulton County, on Georgia’s page'], [read('place-atlanta-ga.json').by_county.find((c) => c.county === 'DeKalb').lookups.results, 'DeKalb County results']]), JSON.stringify(cb));
+    open('CO', ['aurora-co']);
+    bl.localize(st.S.ballot, '80012', null);
+    cb = ctyBtns(ps.planHTML());
+    check('strip: Aurora 80012, county unknown: Arapahoe, Adams and Douglas each open their own county’s page', cb.map((x) => x[1]).join('|') === 'Arapahoe County results|Adams County results|Douglas County results' && cb.every(([u]) => u !== INDEX.states.CO.results_url) && cb[2][0] === 'https://results.enr.clarityelections.com/CO/Douglas/127427/', JSON.stringify(cb));
+    // No "register and vote today" under the results, in any state that offers it.
+    const regAt = (q) => { at(q); return Object.keys(INDEX.states).filter((stc) => { open(stc, []); bl.localize(st.S.ballot, null, null); return /class="plan-reg"|Not registered\?/.test(ps.planHTML()); }); };
+    const regNoon = regAt('?today=2026-11-03&now=12:00'), regAfter = regAt('?today=2026-11-03&now=23:30');
+    check('strip: after the polls close, no registration alert in any state (CA, CO, DC, IL, MD, WA said "register in person and vote today")', ['CA', 'CO', 'WA'].every((x) => regNoon.includes(x)) && regAfter.length === 0, `noon: ${regNoon.join(' ')} | after: ${regAfter.join(' ')}`);
+    at('?today=2026-11-03&now=19:05');
+    open('TX', ['dallas-tx']);
+    bl.localize(st.S.ballot, '75201', null);
+    const dallasRes = read('place-dallas-tx.json').lookups.results;
+    check('strip: a one-county place (Dallas): "Dallas County results"', ps.planHTML().includes(`href="${dallasRes}" target="_blank" rel="noopener" data-fk="plan-results">Dallas County results</a>`));
+    open('TX', []);
+    bl.localize(st.S.ballot, '79901', null);
+    h = ps.planHTML();
+    check('strip: a statewide ballot: "Texas results", and the state’s wait line', h.includes(`href="${INDEX.states.TX.results_url}" target="_blank" rel="noopener" data-fk="plan-results">Texas results</a>`) && /County sites may update sooner\. Check your county for local races\./.test(h) && !/data-county=/.test(h));
+    at('?today=2026-11-04');
+    open('TX', ['dallas-tx']);
+    bl.localize(st.S.ballot, '75201', null);
+    h = ps.planHTML();
+    check('strip: Nov 4: "Results are still coming in.", counting takes days, no "tonight" line', /<p class="plan-h" id="plan-h">Results are still coming in\.<\/p>/.test(h) && /<p class="plan-sub">Counting can take days, especially for mail ballots\.<\/p>/.test(h) && !/plan-note/.test(h) && /Dallas County results<\/a>/.test(h));
+    at('?today=2026-11-03&now=18:59');
+    h = ps.planHTML();
+    check('strip: a minute before close, the Election Day step is as it was (no results, registration check kept)', /Today is Election Day/.test(h) && !/plan-results/.test(h) && !/plan-calls/.test(h));
+
+    // ---------- results Phase 0 (Nov 3): phases, the registry's lines and dates, the fold, the bar, What's next ----------
+    // Every covered ballot (each state alone and each place) turns to results_counting a minute after its own close, in
+    // its own zone's minutes (?now=), and not a minute before.
+    const flips = [];
+    for (const stc of Object.keys(INDEX.states)) {
+      for (const ids of [[], ...INDEX.states[stc].places.map((id) => [id])]) {
+        const bx = open(stc, ids);
+        const close = plan.clockMinutes(bx.howto.election_day.polls_close);
+        const before = plan.nextStep(bx.howto, '2026-11-03', false, close - 1).phase, after = plan.nextStep(bx.howto, '2026-11-03', false, close + 1).phase;
+        if (before === 'results_counting' || after !== 'results_counting') flips.push(`${stc}:${ids[0] || '-'} ${before}/${after}`);
+      }
+    }
+    check('phase: every covered ballot is results_counting a minute after its close and not a minute before', flips.length === 0, flips.slice(0, 6).join(' '));
+    b = open('TX', ['austin-tx']);
+    bl.localize(b, '78702', null);
+    const sAt = (t, now = null) => plan.nextStep(b.howto, t, false, now);
+    let sx = sAt('2026-11-03', 19 * 60 + 5);
+    check('phase: Austin 78702 (Travis) at 7:05 PM: "Results are rolling in." and Travis County’s one wait line', sx.phase === 'results_counting' && sx.head[0][0] === 'Results are rolling in.' && JSON.stringify(sx.notes) === JSON.stringify([travisLine]) && b.howto.results.sources.map((r) => r.id).join(' ') === 'travis-tx results-TX', JSON.stringify(sx.notes));
+    check('phase: the official-by dates read as deadlines, never as done', JSON.stringify(plan.officialLines(b.howto, '2026-11-04')) === JSON.stringify(['Travis County makes its results official by Nov 17.', 'Texas makes statewide results official by Dec 7.']), JSON.stringify(plan.officialLines(b.howto, '2026-11-04')));
+    sx = sAt('2026-11-04');
+    check('phase: Nov 4: still counting, "Results are still coming in.", no "tonight" wait lines', sx.phase === 'results_counting' && sx.head[0][0] === 'Results are still coming in.' && JSON.stringify(sx.notes) === '[]', JSON.stringify(sx.notes));
+    check('phase: Nov 20, past Travis’s deadline: still counting, and "check your election office" in its place', sAt('2026-11-20').phase === 'results_counting' && JSON.stringify(plan.officialLines(b.howto, '2026-11-20')) === JSON.stringify(['Texas makes statewide results official by Dec 7.', 'Official results: check your election office.']), JSON.stringify(plan.officialLines(b.howto, '2026-11-20')));
+    sx = sAt('2026-12-08');
+    check('phase: Dec 8, past every deadline: never "official" from a passed date; it says to check the election office', sx.phase === 'results_counting' && !/official\./i.test(sx.head[0][0]) && JSON.stringify(plan.officialLines(b.howto, '2026-12-08')) === JSON.stringify(['Official results: check your election office.']), JSON.stringify(plan.officialLines(b.howto, '2026-12-08')));
+    const ga = open('GA', ['atlanta-ga']);
+    bl.localize(ga, '30306', null);
+    check('phase: a ballot whose dates the registry isn’t sure of (Georgia) names no date', plan.nextStep(ga.howto, '2027-01-15').phase === 'results_counting' && plan.officialLines(ga.howto, '2026-11-04').join(' ') === 'Counts can change until the election office makes results official.', plan.officialLines(ga.howto, '2026-11-04').join(' '));
+    const pdx = open('OR', ['portland-or']);
+    check('phase: Portland: Multnomah’s sure date only, Oregon has none', plan.officialLines(pdx.howto, '2026-11-04').join(' ') === 'Multnomah County makes its results official by Nov 30.', plan.officialLines(pdx.howto, '2026-11-04').join(' '));
+    const txs = open('TX', []);
+    const txRow = txs.howto.results.sources[0];
+    check('phase: statewide Texas: the state’s wait line and its own date', JSON.stringify(plan.nextStep(txs.howto, '2026-11-03', false, 21 * 60).notes) === JSON.stringify([txRow.wait_line]) && plan.officialLines(txs.howto, '2026-11-04').join(' ') === 'Texas makes results official by Dec 7.', plan.officialLines(txs.howto, '2026-11-04').join(' '));
+    const wl = Object.keys(INDEX.states).flatMap((stc) => read(`state-${stc}.json`).howto.results.sources);
+    const allRows = [...wl, ...Object.keys(INDEX.places).flatMap((id) => read(`place-${id}.json`).results.sources)];
+    check('data: every state has its results row; every wait line short, with no "called", "won", "certif" or "canvass", and a zone beside any time', wl.length === Object.keys(INDEX.states).length && allRows.every((r) => r.wait_line.split(/\s+/).length < 25 && !/\b(called|won)\b|certif|canvass/i.test(r.wait_line) && /^https:\/\//.test(r.results_url) && (!/\d(:\d\d)? ?[AP]M/.test(r.wait_line) || /(Eastern|Central|Mountain|Pacific)/.test(r.wait_line))), allRows.filter((r) => /\d(:\d\d)? ?[AP]M/.test(r.wait_line) && !/(Eastern|Central|Mountain|Pacific)/.test(r.wait_line)).map((r) => r.id).join(' '));
+    check('data: every place reads at least one results row (DC’s wards read DC’s state row), and every row has a short label', Object.keys(INDEX.places).every((id) => read(`place-${id}.json`).results.sources.length || INDEX.places[id].state === 'DC') && allRows.every((r) => r.label && r.label.length < 25));
+    check('data: dates are dated, sourced and never computed or tentative, in plain words', Object.keys(INDEX.states).every((stc) => read(`state-${stc}.json`).howto.results.next.every((r) => /^\d{4}-\d{2}-\d{2}$/.test(r.date) && /^https?:\/\//.test(r.source) && ['verified', 'sourced'].includes(r.confidence) && !/certif|canvass|provisionally/i.test(r.line))));
+
+    // The strip's fold after the close: "Dates and ballot help".
+    at('?today=2026-11-03&now=19:05');
+    b = open('TX', ['austin-tx']);
+    bl.localize(b, '78702', null);
+    st.S.ui.open = new Set();
+    h = ps.planHTML();
+    check('strip: after the close, AP’s Texas page said to be AP’s, no "I already voted", the fold named "Dates and ballot help"', h.includes('<a href="https://apnews.com/projects/elections-2026/texas-results/" target="_blank" rel="noopener" data-fk="plan-ap">AP’s race calls</a>. AP reports who it expects to win. Election offices publish the counts.') && !/Decision Desk/.test(h) && !/data-fk="voted"/.test(h) && /Dates and ballot <span class="nw">help/.test(h) && !/Dates, ID, and if you moved|What happens next/.test(h));
+    st.S.ui.open = new Set(['whatif']);
+    h = ps.planHTML();
+    check('fold: the deadlines, then "Check or fix your ballot" (the three questions and the office), then upcoming dates with sources, and no search', /aria-label="Dates and ballot help"/.test(h) && /Travis County makes its results official by Nov 17\./.test(h) && h.indexOf('Check or fix your ballot') < h.indexOf('Upcoming dates') && h.includes('Mail ballots postmarked by 7 PM Nov 3 count if they arrive by 5 PM Nov 4.') && /data-k="wi-check_ballot_counted"/.test(h) && /data-k="wi-signature_problem"/.test(h) && /data-k="wi-provisional_ballot"/.test(h) && /Your election office/.test(h) && !/id="wi-q"/.test(h) && !/class="passed"/.test(h));
+    check('fold: a Travis voter’s list leaves out Hays County’s own date; an unknown county keeps it', !/Hays County makes results official/.test(h) && (() => { const bb = open('TX', ['austin-tx']); bl.localize(bb, '78729', null); return /Hays County makes results official/.test(ps.planHTML()); })());
+    at('?today=2026-11-10');
+    b = open('TX', ['austin-tx']);
+    bl.localize(b, '78702', null);
+    h = ps.planHTML();
+    check('fold: Nov 10: past dates fold under "Earlier dates", none marked "passed"', /data-k="nx-earlier"[^>]*>Earlier dates<\/button>/.test(h) && !h.includes('Mail ballots postmarked by 7 PM Nov 3 count if they arrive by 5 PM Nov 4.') && !/class="passed"/.test(h));
+    at('?today=2026-11-03&now=19:05');
+    b = open('TX', ['pflugerville-tx']);
+    bl.localize(b, '78660', null);
+    st.S.ui.open = new Set();
+    const pf = [...ps.planHTML().matchAll(/data-county="([^"]+)">([^<]+)<\/a>/g)].map((x) => x[2]);
+    check('strip: Pflugerville, county unknown: a named button each for Travis and Williamson counties', st.S.ballot.county == null && pf.join('|') === 'Travis County results|Williamson County results', `${st.S.ballot.county} ${pf.join('|')}`);
+    // The bar, the menu, the endcap, What's next, Share the guide and How after the close.
+    b = open('TX', ['austin-tx']);
+    bl.localize(b, '78702', null);
+    st.S.ui.view = 'ballot';
+    const bar = views.ledger.barHTML();
+    check('bar: after the close, "≡ On this ballot" with no count, What’s next on the right (still [data-act="cheat"]), and data-results', /data-results/.test(bar) && /<span class="bar-txt">On this ballot<\/span>/.test(bar) && /data-act="cheat" data-fk="bar-cheat">What’s next<\/button>/.test(bar) && !/ of \d|decided/.test(bar), bar);
+    check('endcap and menu: What’s next, and "More election dates and ballot help."', /More election dates and ballot help\./.test(views.ledger.ballotHTML()) && /data-fk="endcap-cheat">What’s next<\/button>/.test(views.ledger.ballotHTML()) && /What’s next/.test(views.ledger.menuHTML('toc')));
+    const wn = views.cheat.cheatHTML(false), wnp = views.cheat.cheatHTML(true), wnt = views.cheat.cheatText();
+    check('What’s next: "Check or fix your ballot" first, then upcoming dates; print and copy-as-text carry the dates and the deadlines', /<h2 id="cs-h">What’s next<\/h2>/.test(wn) && /<h2 id="cs-p">What’s next<\/h2>/.test(wnp) && wn.indexOf('Check or fix your ballot') < wn.indexOf('Upcoming dates') && [wn, wnp].every((x) => x.includes('Mail ballots postmarked by 7 PM Nov 3 count if they arrive by 5 PM Nov 4.') && x.includes('Travis County makes its results official by Nov 17.')) && /^What's next: Austin/.test(wnt) && wnt.includes('Mail ballots postmarked by 7 PM Nov 3 count if they arrive by 5 PM Nov 4.') && wnt.includes('Texas makes statewide results official by Dec 7.') && !/data-act=/.test(wnp), wnt.slice(0, 300));
+    st.S.ui.view = 'pass';
+    const ph2 = views.pass.passHTML(), m2 = views.pass.messages();
+    check('Share the guide: the friends message links the guide and promises only links and saved picks, never a save link; the groups one election-office links only', /<h2 id="pass-h">Share the guide<\/h2>/.test(ph2) && /Send friends the results links\./.test(ph2) && /Election-office links only, for sharing with your group\./.test(ph2) && m2.fam === 'Find election results: https://vote.kevinhg.com/\nOpen your ballot for links to your election office and your saved picks.' && views.pass.shareData(m2.fam).title === 'Find election results.' && m2.pub.startsWith('Election results for Texas are coming in.') && !/kevinhg\.com/.test(m2.pub) && m2.pub.includes(INDEX.states.TX.results_url) && !/Good spots to post/.test(ph2), m2.fam);
+    st.S.ui.view = 'ballot';
+    const keepRep = st.S.ui.report;
+    st.S.ui.report = { kind: 'how', f: {}, what: '', tag: '', hint: '', along: null, state: 'edit', err: false, fk: '', back: null };
+    const how2 = views.shelf.shelfHTML();
+    st.S.ui.report = keepRep;
+    check('How: tonight’s Results line, and official results links in place of the registration check', /<b>Results\.<\/b> Results links open election offices’ own pages\. Their counts can change until they make results official\. We never call a race\./.test(how2) && /Official results: /.test(how2) && !/Check your registration/.test(how2));
+    check('results copy: no em dashes in what the strip, fold and pages say', ![ps.planHTML(), wn, ph2, how2].some((x) => /—/.test(x.replace(/<[^>]+>/g, ''))));
+  } finally {
+    globalThis.Date = RealDate;
+    if (hadLoc) Object.defineProperty(globalThis, 'location', hadLoc); else delete globalThis.location;
+    st.S.ballot = keep.ballot; st.S.b = keep.b; st.S.view = keep.view; st.S.index = keep.index; st.S.zip = keep.zip; st.S.tryMode = keep.tryMode; st.S.ui.open = keep.open;
   }
 }
 

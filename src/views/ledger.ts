@@ -24,7 +24,7 @@ import { addrHTML } from './mast';
 import { messages } from './pass';
 import { openHTML, censusSettles, addressSettles } from './open';
 import { mapCounty, seatless } from '../model/maps';
-import { nextStep } from '../model/plan';
+import { nextStep, afterPolls } from '../model/plan';
 import { nearNow, fmtMiles } from '../model/sites';
 
 /* ---------- names ---------- */
@@ -672,7 +672,13 @@ export function ballotHTML(): string {
     ? `<p class="empty"><b>Nothing left to decide here.</b> Turn off “${HIDE}” to see everything.</p>` : '';
   return `<div class="wrap-led">${ballotHeadHTML()}</div><div class="ledger" aria-labelledby="ballot-h">${secs}${empty}</div>
     <div id="r-off">${offHTML()}</div>
-    <div class="endcap wrap"><h3>That’s your whole ballot.</h3><p>Next, save your plan.</p>
+    ${endcapHTML()}`;
+}
+/* The ballot's last word: save your plan, or once the polls close, what's next. main.ts swaps it alone when the polls
+   close on an open page, so a repaint never clears an address being typed (Codex, Nov 3). */
+export function endcapHTML(): string {
+  return afterPolls(S.ballot?.howto) ? `<div class="endcap wrap"><h3>That’s your whole ballot.</h3><p>More election dates and ballot help.</p>
+      <button class="bigbtn" data-act="cheat" data-fk="endcap-cheat">What’s next</button></div>` : `<div class="endcap wrap"><h3>That’s your whole ballot.</h3><p>Next, save your plan.</p>
       <button class="bigbtn" data-act="cheat" data-fk="endcap-cheat">Open my plan</button></div>`;
 }
 
@@ -683,24 +689,38 @@ export function ballotHTML(): string {
 const BURGER = '<svg class="burger" viewBox="0 0 18 14" aria-hidden="true" focusable="false"><path d="M1 1.5h16M1 7h16M1 12.5h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
 export const RAIL_AT = '(min-width: 1180px)';
 const wide = (): boolean => typeof window !== 'undefined' && typeof window.matchMedia === 'function' && window.matchMedia(RAIL_AT).matches;
+/* Whether the bar last painted for results (null before it has painted), so main.ts can tell when the polls closed on an
+   open page, whichever ballot is showing. */
+export let barAfter: boolean | null = null;
 export function barHTML(): string {
   if (!S.ballot) return '';
+  barAfter = afterPolls(S.ballot.howto);
   // My plan (4) and Help friends vote (5): the left button goes back one step, always (Kevin, Oct 28: "the left
   // button always goes back one step"); the green one goes on, and on the last step shares the guide, the
   // step's own action (actions.ts A['share-guide']).
   if (S.ui.view !== 'ballot') {
     const last = S.ui.view === 'pass';
     const go = last ? (messages().fam ? '<button class="fcta" data-act="share-guide" data-fk="bar-share">Share the guide</button>' : '')
-      : '<button class="fcta" data-act="view" data-v="pass" data-fk="bar-pass">Help friends vote</button>';
+      : `<button class="fcta" data-act="view" data-v="pass" data-fk="bar-pass">${afterPolls(S.ballot.howto) ? 'Share the guide' : 'Help friends vote'}</button>`;
     return `<div class="foot screen-only" role="region" aria-label="Navigation"><div class="foot-in two">
-      <button class="ftog" data-act="view" data-v="${last ? 'cheat' : 'ballot'}" data-fk="bar-back">${last ? 'Back to my plan' : 'Back to the ballot'}</button>
+      <button class="ftog" data-act="view" data-v="${last ? 'cheat' : 'ballot'}" data-fk="bar-back">${last ? (afterPolls(S.ballot.howto) ? 'Back to What’s next' : 'Back to my plan') : 'Back to the ballot'}</button>
       ${go}</div></div>`;
+  }
+  const rail = wide() ? `<nav class="rail screen-only" aria-label="Your ballot" data-keep="rail">${menuHTML('rail')}</nav>` : '';
+  // Once the polls close (Nov 3, results Phase 0): no count of decided races and no time, since there are no numbers
+  // on the rows yet; the left button opens the menu, so it says so ("≡ On this ballot", GPT copy pass), and What's
+  // next is where My plan was. `data-results` marks the bar for the tests.
+  if (afterPolls(S.ballot.howto)) {
+    return `${rail}<div class="foot screen-only" role="region" aria-label="Results" data-results>
+    <div class="foot-in ends">
+      <button class="menu-btn" data-act="toc" aria-haspopup="dialog" data-fk="bar-menu">${BURGER}<span class="bar-txt">On this ballot</span></button>
+      <button class="fcta" data-act="cheat" data-fk="bar-cheat">What’s next</button>
+    </div></div>`;
   }
   // The one counting rule (ballot.ts): a district question is one race until it's answered.
   const items = decisionItems();
   const done = items.filter((i) => i.done).length;
   const pct = items.length ? Math.round((done / items.length) * 100) : 0;
-  const rail = wide() ? `<nav class="rail screen-only" aria-label="Your ballot" data-keep="rail">${menuHTML('rail')}</nav>` : '';
   // The gold of what you've decided runs along the bottom edge of the screen (Kevin, Oct 21: under
   // the bar's torn top it hung in the air).
   return `${rail}<div class="foot screen-only" role="region" aria-label="Your progress">
@@ -744,11 +764,11 @@ export function menuHTML(where: 'toc' | 'rail'): string {
     return row(`data-act="jump" data-to="${k}"`, k, sectionTitle(k), !t.total ? '' : t.done === t.total ? 'Done' : `${t.total - t.done} left`);
   }).join('');
   return `${next}<ul class="nv-list">
-    ${row('data-act="jump" data-to="plan"', 'plan', 'Your next step')}
+    ${row('data-act="jump" data-to="plan"', 'plan', afterPolls(S.ballot?.howto) ? 'Official results' : 'Your next step')}
     ${row('data-act="picks"', 'picks', 'Quick picks')}</ul>
     ${only}<ul class="nv-list nv-secs">
     ${secs}
-    ${row('data-act="cheat"', 'cheat', 'My plan', '', ' nv-plan')}</ul>
+    ${row('data-act="cheat"', 'cheat', afterPolls(S.ballot?.howto) ? 'What’s next' : 'My plan', '', ' nv-plan')}</ul>
     <ul class="nv-list nv-end"><li><button class="nv nv-report" ${reportAttrs({ fk: `${where}-report` })}><span class="nv-t">Report a problem</span><span class="nv-n"></span>${ARROW}</button></li>
     ${row('data-act="shelf" data-kind="how" aria-haspopup="dialog"', 'how', 'How this guide works', '', ' nv-how')}</ul>`;
 }

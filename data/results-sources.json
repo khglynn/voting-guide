@@ -1,0 +1,1793 @@
+{
+  "election": "2026-11-03",
+  "written": "2026-11-03",
+  "note": "Where each state and county behind the guide publishes official results. Built by 51 Sonnet scouts and 15 Opus memos on Election Day afternoon (research/results/{ST}.md has the evidence; research/raw/results-{ST}/ the saved pages). results_url_status: live_for_nov3_2026, announced_not_live, prior_election_pattern or unknown. The wait_line is what a voter reads in the guide. Confidence is the memo writer's. Re-verify tonight: each row's verify_tonight list. Site copy (Nov 3, Phase 0 of the results view): four fields added beside each row. `label` is the short name of the office its button names (\"Travis County results\"). `counties` names the counties a county row covers, spelled as data/places/*.json spell them. `official_by` is the last day the row's results must be made official, read from `certification_date` (the legal deadline where a scheduled date comes earlier), or null when the text gives none. `official_by_sure` is false when the registry calls that date computed, calculated, tentative, unverified, conflicting or \"about\"; the guide shows only sure dates and says results are official only when every sure date on a ballot has passed. The Official results buttons read places' `lookups.results` and the state files' `results_url`; check-data compares them with this file.",
+  "sources": [
+    {
+      "id": "results-TX",
+      "state": "TX",
+      "kind": "state",
+      "name": "Texas Secretary of State (statewide election night results)",
+      "results_url": "https://electionresults.sos.state.tx.us/results.html",
+      "results_url_status": "prior_election_pattern",
+      "format": "Custom Angular single-page app; data loaded by script, no visible feed",
+      "adapter_guess": "link_only",
+      "endpoints": [],
+      "covers_local": "Statewide, district and some multicounty offices; no city, school or special district items seen (2024 view)",
+      "first_post": "Shortly after 7 PM CT as counties enter early votes; lags county pages (Texas Tribune)",
+      "cadence": "Not stated; counties post rounds through the night; Election Day totals due to state within 24 hours",
+      "count_window": "Domestic mail received by 5 PM Nov 4 if postmarked Nov 3; overseas by Nov 9; provisional and cured ballots before canvass",
+      "certification_date": "State canvass Nov 21 to Dec 7, 2026; local canvass Nov 6 to Nov 17",
+      "certification_source": "https://www.sos.texas.gov/elections/laws/advisory2026-28.shtml",
+      "wait_line": "County sites may update sooner. Check your county for local races.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "Confirm the 2026 Nov 3 general appears in the election picker after 7 PM",
+        "Resolve conflict with https://electionresults.sos.state.tx.us/results.html (Hays scout saw it live, updated 10/14/2026)",
+        "Check network tab and Reports page for a feed",
+        "Compare one statewide race with a county page",
+        "Confirm late mail ballot dates against SOS advisory wording"
+      ],
+      "official_by": "2026-12-07",
+      "official_by_sure": true,
+      "label": "Texas"
+    },
+    {
+      "id": "travis-tx",
+      "state": "TX",
+      "kind": "county",
+      "name": "Travis County",
+      "results_url": "https://results.enr.clarityelections.com/TX/Travis/",
+      "results_url_status": "announced_not_live",
+      "format": "Clarity Election Night Reporting plus PDF reconciliation forms",
+      "adapter_guess": "clarity",
+      "endpoints": [
+        "https://results.enr.clarityelections.com/TX/Travis/<id>/current_ver.txt",
+        "https://results.enr.clarityelections.com/TX/Travis/<id>/<ver>/json/en/summary.json"
+      ],
+      "covers_local": "Yes; 2025 page had Cities (33), Schools (8), Other Districts (47) contests including Austin, Pflugerville, Round Rock (Travis part)",
+      "first_post": "Unverified; prior pattern is early and mail votes first after 7 PM, then vote centers",
+      "cadence": "Unverified; multiple runs through the night as 150+ vote centers report",
+      "count_window": "Mail ballots received through Nov 4; provisional verified before canvass",
+      "certification_date": "Statutory window Nov 6 to Nov 14 (Nov 17 under 14th-day clause); Travis date not posted",
+      "certification_source": "https://statutes.capitol.texas.gov/Docs/EL/htm/EL.67.htm",
+      "wait_line": "Travis County posts early and mail votes first. No first update time announced.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "Note the new Clarity election id above 126357",
+        "Try current_ver.txt and summary.json with our fetcher; if 403, link out",
+        "Confirm Austin, Pflugerville and Round Rock items under Cities",
+        "Record first-post time",
+        "Watch for the canvass date"
+      ],
+      "counties": [
+        "Travis"
+      ],
+      "official_by": "2026-11-17",
+      "official_by_sure": true,
+      "label": "Travis County"
+    },
+    {
+      "id": "williamson-tx",
+      "state": "TX",
+      "kind": "county",
+      "name": "Williamson County",
+      "results_url": "https://results.enr.clarityelections.com/TX/Williamson/127488/",
+      "results_url_status": "live_for_nov3_2026",
+      "format": "livevoterturnout ENR server-rendered HTML with updated-at stamp; precinct PDFs later",
+      "adapter_guess": "html_table",
+      "endpoints": [
+        "https://www.livevoterturnout.com/ENR/williamsontxenr/<n>/en/Index_<n>.html (n unknown; /17/ to /21/ 404 at 12:45 CT)"
+      ],
+      "covers_local": "Likely; countywide joint election. Round Rock, Pflugerville and north Austin items unconfirmed",
+      "first_post": "Not before 7 PM by law; early and mail first, then Election Day as judges return",
+      "cadence": "Released throughout the night; no fixed interval stated",
+      "count_window": "Mail received by 5 PM Nov 4; military and overseas through Nov 9; cures about six days",
+      "certification_date": "By Nov 14, 2026 (11th day); Commissioners Court date not posted",
+      "certification_source": "https://www.wilcotx.gov/2068/Life-Cycle-of-an-Election",
+      "wait_line": "Williamson County posts early votes after 7 PM Central, then Election Day votes as sites report.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "Copy the real ENR link from the Results Archive 2026 tab",
+        "Confirm Round Rock, Pflugerville and Austin contests",
+        "Read the updated-at stamp twice to measure cadence",
+        "Check network tab for a JSON or XML feed",
+        "Watch Commissioners Court agenda for canvass date"
+      ],
+      "counties": [
+        "Williamson"
+      ],
+      "official_by": "2026-11-14",
+      "official_by_sure": true,
+      "label": "Williamson County"
+    },
+    {
+      "id": "hays-tx",
+      "state": "TX",
+      "kind": "county",
+      "name": "Hays County",
+      "results_url": "https://www.hayscountytx.gov/873/November-3-2026-General-Election",
+      "results_url_status": "live_for_nov3_2026",
+      "format": "County page linking a Cumulative Results Report document (likely PDF); behind Cloudflare bot check",
+      "adapter_guess": "pdf",
+      "endpoints": [
+        "https://www.hayscountytx.gov/DocumentCenter/View/5567/Cumulative-Results-Report-20261103---unofficial"
+      ],
+      "covers_local": "Likely; county runs elections for San Marcos, Austin, Buda, Kyle, Woodcreek, Hays CISD and others",
+      "first_post": "Not stated by the office; general Texas pattern is early and mail soon after 7 PM",
+      "cadence": "Not stated; likely one cumulative file refreshed through the night",
+      "count_window": "Mail received by 5 PM Nov 4 if postmarked Nov 3; provisional before canvass",
+      "certification_date": "Mon Nov 9, 2026 (canvass and release of official results)",
+      "certification_source": "https://www.hayscountytx.gov/873/November-3-2026-General-Election",
+      "wait_line": "Hays County plans one report tonight. We haven't confirmed when.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "Open DocumentCenter/View/5567 after 7 PM; note file type, whether URL stays fixed, timestamp",
+        "Check it lists San Marcos, Austin, Buda, Kyle and school contests",
+        "Look for any new results link or /elections/20261103",
+        "Confirm Nov 9 canvass"
+      ],
+      "counties": [
+        "Hays"
+      ],
+      "official_by": "2026-11-09",
+      "official_by_sure": true,
+      "label": "Hays County"
+    },
+    {
+      "id": "dallas-county-tx",
+      "state": "TX",
+      "kind": "county",
+      "name": "Dallas County",
+      "results_url": "https://results.enr.clarityelections.com/TX/Dallas/127396/",
+      "results_url_status": "live_for_nov3_2026",
+      "format": "Clarity Election Night Reporting with summary, xlsx, xml, txt zips",
+      "adapter_guess": "clarity",
+      "endpoints": [
+        "https://results.enr.clarityelections.com/TX/Dallas/126485/current_ver.txt",
+        "https://results.enr.clarityelections.com/TX/Dallas/126485/{ver}/json/en/summary.json",
+        "https://results.enr.clarityelections.com/TX/Dallas/126485/{ver}/json/electionsettings.json",
+        "https://results.enr.clarityelections.com/TX/Dallas/126485/{ver}/reports/detailxml.zip"
+      ],
+      "covers_local": "Yes; City of Dallas bond, Garland, University Park, Wylie, Irving ISD, Mesquite ISD, appraisal district board",
+      "first_post": "7 PM CT early voting and mail summary; Election Day results start 9 PM",
+      "cadence": "Hourly from 9 PM (9, 10, 11 PM, then Final Unofficial)",
+      "count_window": "Provisional ID cure through Nov 10; late mail per state rule (Nov 4)",
+      "certification_date": "Canvass window Nov 6 to Nov 17, 2026",
+      "certification_source": "https://www.dallascountyvotes.org/event/last-day-to-canvass-5/",
+      "wait_line": "Dallas County posts early votes at 7 PM Central, then Election Day votes hourly from 9 PM.",
+      "confidence": "verified",
+      "verify_tonight": [
+        "Confirm the office link still points to election id 126485 or note the new id",
+        "Check current_ver moves off 375921 and summary.json lists Nov 3 contests",
+        "Confirm 7 PM and 9 PM timing",
+        "Check PR/TP precinct counts"
+      ],
+      "counties": [
+        "Dallas"
+      ],
+      "official_by": "2026-11-17",
+      "official_by_sure": true,
+      "label": "Dallas County"
+    },
+    {
+      "id": "harris-county-tx",
+      "state": "TX",
+      "kind": "county",
+      "name": "Harris County",
+      "results_url": "https://www.harrisvotes.com/Election-Results/Live-Results",
+      "results_url_status": "live_for_nov3_2026",
+      "format": "Custom in-house app reading static JSON (60 s cache); cumulative and canvass PDFs",
+      "adapter_guess": "json_custom",
+      "endpoints": [
+        "https://appfiles.harrisvotes.com/harrisvotes/prd/Data/1126/resultsbyballot.json",
+        "https://appfiles.harrisvotes.com/harrisvotes/prd/Data/1126/pr.json",
+        "https://appfiles.harrisvotes.com/harrisvotes/prd/Data/1126/pv-{contestId}.json",
+        "https://appfiles.harrisvotes.com/harrisvotes/prd/Data/1126/cumulative.pdf"
+      ],
+      "covers_local": "Yes; 231 contests including City of Houston Prop A, school districts, MUDs, ESDs; no Houston ISD item seen",
+      "first_post": "After 7 PM; no office statement on exact time (news says first results at poll close)",
+      "cadence": "Unknown; JSON can change once a minute; measure with dt field",
+      "count_window": "Cures within six days (by Nov 9); mail received by 5 PM Nov 4 per state law",
+      "certification_date": "Not posted; statutory window Nov 6 to Nov 17",
+      "certification_source": "https://www.harrisvotes.com/Election-Results/Archives",
+      "wait_line": "Harris County posts mail and early votes first. No schedule announced; its count often runs past midnight.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "Check dt moves off 2026-09-17 and vc/vt fill; record first-post time",
+        "Log dt every few minutes to measure cadence",
+        "Match Houston Prop A contest id",
+        "Look for Houston ISD or HCC contests",
+        "Watch o flag and Archives for canvass"
+      ],
+      "counties": [
+        "Harris"
+      ],
+      "official_by": "2026-11-17",
+      "official_by_sure": true,
+      "label": "Harris County"
+    },
+    {
+      "id": "bexar-tx",
+      "state": "TX",
+      "kind": "county",
+      "name": "Bexar County",
+      "results_url": "https://results.enr.clarityelections.com/TX/Bexar/127291/",
+      "results_url_status": "live_for_nov3_2026",
+      "format": "Clarity Election Night Reporting",
+      "adapter_guess": "clarity",
+      "endpoints": [
+        "https://results.enr.clarityelections.com/TX/Bexar/127291/current_ver.txt",
+        "https://results.enr.clarityelections.com/TX/Bexar/127291/{ver}/json/en/summary.json",
+        "https://results.enr.clarityelections.com/TX/Bexar/127291/{ver}/json/en/electionsettings.json",
+        "https://results.enr.clarityelections.com/TX/Bexar/127291/reports/detailxml.zip"
+      ],
+      "covers_local": "Yes; 183 contests including San Antonio Prop A, SAISD, NISD, Edgewood ISD, suburban cities, MUD and appraisal district",
+      "first_post": "Possibly late: administrator says early results held until the line clears; KSAT says 7 PM (conflict)",
+      "cadence": "Not stated; new current_ver per upload",
+      "count_window": "Mail received by 5 PM Nov 4 if postmarked by 7 PM Nov 3; cured and provisional before canvass",
+      "certification_date": "Local canvass Nov 6 to Nov 17, 2026; Bexar date not posted",
+      "certification_source": "https://bexarcountyherald.com/article/texas-officials-must-certify-midterm-election-resu/",
+      "wait_line": "Bexar County may wait until everyone in line has voted, so its first numbers may come well after 7 PM Central.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "Check current_ver moves off 379718 with a browser user agent",
+        "Note when the first post lands and whether it includes early and mail",
+        "Read PR vs TP",
+        "Confirm San Antonio Prop A, SAISD, NISD, Edgewood show votes"
+      ],
+      "counties": [
+        "Bexar"
+      ],
+      "official_by": "2026-11-17",
+      "official_by_sure": true,
+      "label": "Bexar County"
+    },
+    {
+      "id": "collin-tx",
+      "state": "TX",
+      "kind": "county",
+      "name": "Collin County",
+      "results_url": "https://www.collincountytx.gov/elections/election-results",
+      "results_url_status": "announced_not_live",
+      "format": "Sitefinity page linking PDF, XLSX and an all-races CSV",
+      "adapter_guess": "csv_download",
+      "endpoints": [
+        "https://www.collincountytx.gov/elections/election-results (scrape newest all-races CSV link)",
+        "https://www.collincountytx.gov/docs/default-source/elections/election-results/june-13th-2026---joint-general-runoff---all-races.CSV (prior pattern)"
+      ],
+      "covers_local": "Expected: Allen City Council Places 1, 3, 5 and Allen ISD; not confirmed",
+      "first_post": "7 PM CT early voting results",
+      "cadence": "Every half hour from 8:30 PM until tabulation is done; reload the page",
+      "count_window": "Late mail (Nov 4) and cured or provisional ballots before canvass",
+      "certification_date": "Mon Nov 16, 2026, 1:30 PM (Commissioners Court canvass)",
+      "certification_source": "https://www.collincountytx.gov/docs/default-source/elections/election-notices/notice-of-canvass-nov-26-signed.pdf",
+      "wait_line": "Collin County posts early votes at 7 PM Central, then every half hour from 8:30 PM.",
+      "confidence": "verified",
+      "verify_tonight": [
+        "Find the Nov 3 all-races CSV at 7 PM",
+        "Confirm Allen City Council and Allen ISD appear",
+        "Check the latest-returns stamp and half-hour updates",
+        "Check whether CSV name changes per update"
+      ],
+      "counties": [
+        "Collin"
+      ],
+      "official_by": "2026-11-16",
+      "official_by_sure": true,
+      "label": "Collin County"
+    },
+    {
+      "id": "results-CO",
+      "state": "CO",
+      "kind": "state",
+      "name": "Colorado Secretary of State (statewide)",
+      "results_url": "https://results.enr.clarityelections.com/CO/127407/",
+      "results_url_status": "live_for_nov3_2026",
+      "format": "Scytl/Clarity ENR, JSON summary feed",
+      "adapter_guess": "clarity",
+      "endpoints": [
+        "https://results.enr.clarityelections.com/CO/127407/current_ver.txt",
+        "https://results.enr.clarityelections.com/CO/127407/{ver}/json/en/summary.json"
+      ],
+      "covers_local": "Partial: state, legislative, RTD, judges, and multi-county contests including Aurora 3A-3D summed across 3 counties and Jeffco R-1 5A/5B; no single-county city or school items",
+      "first_post": "Just after 7 PM MT as counties upload; mostly mail and early ballots",
+      "cadence": "Follows county uploads through the night; current_ver.txt changes on each upload",
+      "count_window": "Bulk within about 3 days; cures and military/overseas through Nov 12; counties finish tabulating by Nov 13",
+      "certification_date": "2026-11-25",
+      "certification_source": "C.R.S. 1-10-102(1), 1-10-103(1); https://www.clerkandrecorder.org/2026-general-election",
+      "wait_line": "Colorado posts mail ballots soon after 7 PM Mountain and updates through the night.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "current_ver.txt moves off 383402 after 7 PM MT",
+        "U.S. Senate shows nonzero TV",
+        "Aurora 3A total equals the sum of Adams, Arapahoe and Douglas slices",
+        "Human reads SOS ENR FAQ and Nov 2 press release (site bans robots)"
+      ],
+      "official_by": "2026-11-25",
+      "official_by_sure": true,
+      "label": "Colorado"
+    },
+    {
+      "id": "denver-co",
+      "state": "CO",
+      "kind": "county",
+      "name": "Denver (City and County)",
+      "results_url": "https://www.denvergov.org/electionresults",
+      "results_url_status": "live_for_nov3_2026",
+      "format": "Custom HTML race blocks plus Tableau dashboard and PDF precinct maps",
+      "adapter_guess": "html_table",
+      "endpoints": [
+        "https://denvergov.org/electionresults",
+        "https://www.denvergov.org/Government/Elections/Election-Data-Maps"
+      ],
+      "covers_local": "Yes: Council At-Large Seat B, 2H-2K, Ordinance 311, DPS 4A, Front Range Rail 7A",
+      "first_post": "7 PM MT per the results page",
+      "cadence": "Not stated",
+      "count_window": "Not stated by Denver; state pattern is about 3 days, cures through Nov 12",
+      "certification_date": "2026-11-24",
+      "certification_source": "https://www.denvergov.org/Government/Elections/Election-Data-Maps",
+      "wait_line": "Denver posts its first count at 7 PM Mountain. No update schedule announced after that.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "Numbers replace zeros after 7 PM and appear in raw curl HTML",
+        "Last-updated stamp appears",
+        "Note Tableau workbook URL and precinct file types",
+        "Log update times"
+      ],
+      "counties": [
+        "Denver"
+      ],
+      "official_by": "2026-11-24",
+      "official_by_sure": true,
+      "label": "Denver"
+    },
+    {
+      "id": "arapahoe-co",
+      "state": "CO",
+      "kind": "county",
+      "name": "Arapahoe County",
+      "results_url": "https://www.arapahoeco.gov/your_county/votes/records_data/election_results.php",
+      "results_url_status": "unknown",
+      "format": "Unknown; 2024 results were PDF reports on the county site",
+      "adapter_guess": "link_only",
+      "endpoints": [],
+      "covers_local": "Unknown; should carry Arapahoe part of Aurora and Englewood. Aurora 3A-3D combined totals are in the statewide feed.",
+      "first_post": "Not found; Colorado pattern is after 7 PM MT",
+      "cadence": "Not found",
+      "count_window": "Not found; state pattern about 3 days, cures through Nov 12",
+      "certification_date": "2026-11-25 (state deadline; county date not found)",
+      "certification_source": "https://www.clerkandrecorder.org/2026-general-election (state deadline only)",
+      "wait_line": "Arapahoe County hasn't said when it posts. Colorado counties usually start after 7 PM Mountain.",
+      "confidence": "unverified",
+      "verify_tonight": [
+        "Human opens the county results hub after 7 PM and notes vendor and any feed",
+        "Check whether Aurora and Englewood items appear",
+        "Look for an update schedule and canvass date",
+        "County robots.txt blocks bots, so no scraping"
+      ],
+      "counties": [
+        "Arapahoe"
+      ],
+      "official_by": "2026-11-25",
+      "official_by_sure": false,
+      "label": "Arapahoe County"
+    },
+    {
+      "id": "results-CO-adams",
+      "state": "CO",
+      "kind": "county",
+      "name": "Adams County",
+      "results_url": "https://results.enr.clarityelections.com/CO/Adams/127410/",
+      "results_url_status": "live_for_nov3_2026",
+      "format": "Scytl/Clarity ENR, JSON summary feed",
+      "adapter_guess": "clarity",
+      "endpoints": [
+        "https://results.enr.clarityelections.com/CO/Adams/127410/current_ver.txt",
+        "https://results.enr.clarityelections.com/CO/Adams/127410/{ver}/json/en/summary.json"
+      ],
+      "covers_local": "Yes: Thornton, Northglenn, Westminster schools, Bennett, fire and metro districts, Aurora 3A-3D (Adams part, 19 precincts)",
+      "first_post": "After 7 PM MT per county elections page",
+      "cadence": "Not stated",
+      "count_window": "Not stated by Adams; cures and military/overseas through Nov 12",
+      "certification_date": "2026-11-24 (tentative)",
+      "certification_source": "https://adamscountyco.gov/our-county/elected-officials/clerk-recorder/adams-county-elections/2026-elections/important-dates/",
+      "wait_line": "Adams County posts after 7 PM Mountain. No update schedule announced.",
+      "confidence": "verified",
+      "verify_tonight": [
+        "current_ver.txt moves off 383292",
+        "Log each version change time",
+        "Check for precinct reports or downloads"
+      ],
+      "counties": [
+        "Adams"
+      ],
+      "official_by": "2026-11-24",
+      "official_by_sure": false,
+      "label": "Adams County"
+    },
+    {
+      "id": "results-CO-douglas",
+      "state": "CO",
+      "kind": "county",
+      "name": "Douglas County",
+      "results_url": "https://results.enr.clarityelections.com/CO/Douglas/127427/",
+      "results_url_status": "live_for_nov3_2026",
+      "format": "Scytl/Clarity ENR, JSON summary feed",
+      "adapter_guess": "clarity",
+      "endpoints": [
+        "https://results.enr.clarityelections.com/CO/Douglas/127427/current_ver.txt",
+        "https://results.enr.clarityelections.com/CO/Douglas/127427/{ver}/json/en/summary.json"
+      ],
+      "covers_local": "Yes: Parker, Castle Rock, Castle Pines, DCSD 5A, county questions, districts, Aurora 3A-3D (Douglas part, 2 precincts)",
+      "first_post": "By 8 PM MT (wording from the 2026 primary page)",
+      "cadence": "At least 3 posts on election night: by 8 PM, about 9 PM, then at least once more (primary pattern)",
+      "count_window": "Cures and military/overseas through Nov 12",
+      "certification_date": "2026-11-20",
+      "certification_source": "https://www.douglasco.gov/elections/election-information/",
+      "wait_line": "Douglas County usually posts by 8 PM Mountain, again around 9 PM, and once more tonight.",
+      "confidence": "verified",
+      "verify_tonight": [
+        "current_ver.txt moves off 383323",
+        "Confirm 3-post pattern holds for the general",
+        "Check for a county unofficial-results page like the primary's"
+      ],
+      "counties": [
+        "Douglas"
+      ],
+      "official_by": "2026-11-20",
+      "official_by_sure": true,
+      "label": "Douglas County"
+    },
+    {
+      "id": "boulder-county-co",
+      "state": "CO",
+      "kind": "county",
+      "name": "Boulder County",
+      "results_url": "https://electionresults.bouldercounty.gov/",
+      "results_url_status": "announced_not_live",
+      "format": "Custom county ASP.NET/Kendo app at election.boco.solutions/ElectionResults2026G/; Excel Statement of Votes after canvass",
+      "adapter_guess": "html_table",
+      "endpoints": [
+        "https://election.boco.solutions/ElectionResults2026G/"
+      ],
+      "covers_local": "Expected (all county-run contests), not confirmed until live",
+      "first_post": "After 7 PM MT per placeholder page",
+      "cadence": "Not stated",
+      "count_window": "Not stated by Boulder; cures and military/overseas through Nov 12",
+      "certification_date": "2026-11-24",
+      "certification_source": "https://bouldercounty.gov/elections/election-events/",
+      "wait_line": "Boulder County's results page goes live after 7 PM Mountain. No update schedule announced.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "Placeholder swaps to real tables after 7 PM",
+        "Network tab for XHR/JSON or Excel export",
+        "Boulder city and BVSD items appear",
+        "Log update times"
+      ],
+      "counties": [
+        "Boulder"
+      ],
+      "official_by": "2026-11-24",
+      "official_by_sure": true,
+      "label": "Boulder County"
+    },
+    {
+      "id": "results-CO-jefferson",
+      "state": "CO",
+      "kind": "county",
+      "name": "Jefferson County",
+      "results_url": "https://results.enr.clarityelections.com/CO/Jefferson/127408/",
+      "results_url_status": "live_for_nov3_2026",
+      "format": "Scytl/Clarity ENR, JSON summary feed",
+      "adapter_guess": "clarity",
+      "endpoints": [
+        "https://results.enr.clarityelections.com/CO/Jefferson/127408/current_ver.txt",
+        "https://results.enr.clarityelections.com/CO/Jefferson/127408/{ver}/json/en/summary.json"
+      ],
+      "covers_local": "Yes: Lakewood 2G, 2H, 2I, 2J; Jeffco R-1 5A and 5B; Wheat Ridge, Mountain View, Morrison",
+      "first_post": "Shortly after 7 PM MT per jeffco.us/578",
+      "cadence": "About every two hours until counting stops for the night, then periodically",
+      "count_window": "No county date; cures and military/overseas through Nov 12",
+      "certification_date": "2026-11-25 (state deadline; Jeffco gives only 'November')",
+      "certification_source": "https://www.jeffco.us/5025/Testing-Audits-Certification; https://www.clerkandrecorder.org/2026-general-election",
+      "wait_line": "Jefferson County posts soon after 7 PM Mountain, then about every two hours until it stops for the night.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "jeffco.us/578 links to 127408 (feed found by probing, not yet linked)",
+        "current_ver.txt moves off 383355 about every two hours",
+        "Lakewood 2G-2J labels match the guide"
+      ],
+      "counties": [
+        "Jefferson"
+      ],
+      "official_by": "2026-11-25",
+      "official_by_sure": true,
+      "label": "Jefferson County"
+    },
+    {
+      "id": "results-CA",
+      "state": "CA",
+      "kind": "state",
+      "name": "California Secretary of State",
+      "results_url": "https://electionresults.sos.ca.gov/",
+      "results_url_status": "live_for_nov3_2026 (shell live, numbers after 8 PM PT)",
+      "format": "Custom SOS HTML, per-contest pages at /returns/<slug>, behind Incapsula bot protection",
+      "adapter_guess": "html_table",
+      "endpoints": [],
+      "covers_local": "No. State, federal and legislative contests only; local results are on county sites.",
+      "first_post": "From 8:00 PM PT as counties report",
+      "cadence": "As county data arrives; counties must report at least every two hours until the semifinal canvass is done",
+      "count_window": "Mail postmarked by Nov 3 and received by Nov 10; signature cures (Nov 25 per some counties, conflicting); provisional, same-day registration and remade ballots; counting takes weeks",
+      "certification_date": "Counties by Dec 3, 2026; returns to SOS by Dec 4; SOS certifies Dec 11, 2026",
+      "certification_source": "https://www.sos.ca.gov/elections/upcoming-elections/general-election-november-3-2026/key-dates-deadlines ; https://electionresults.sos.ca.gov/unprocessed-ballots-status",
+      "wait_line": "California posts first numbers after 8 PM Pacific and keeps counting for weeks.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "Open https://electionresults.sos.ca.gov/returns/governor in a real browser after 8 PM PT and confirm numbers appear",
+        "Look for a download or data link and watch the Network tab for a JSON or CSV feed",
+        "Check County Reporting Status and Unprocessed Ballots Status for last-updated times",
+        "Log the first-update time and rhythm"
+      ],
+      "official_by": "2026-12-11",
+      "official_by_sure": true,
+      "label": "California"
+    },
+    {
+      "id": "los-angeles-county-ca",
+      "state": "CA",
+      "kind": "county",
+      "name": "Los Angeles County Registrar-Recorder/County Clerk",
+      "results_url": "https://results.lavote.gov/",
+      "results_url_status": "announced_not_live (zero-vote placeholder from Oct 14 test load)",
+      "format": "Custom LA single-page app plus server-rendered text pages, behind Imperva/Incapsula (curl 403)",
+      "adapter_guess": "html_table",
+      "endpoints": [
+        "https://results.lavote.gov/text-results/4348",
+        "https://results.lavote.gov/election-list/text"
+      ],
+      "covers_local": "Yes: cities, schools, library, water, recreation and park districts, county measures (Glendale and some city councils not found in saved text)",
+      "first_post": "About 8:30 PM PT (pre-Election Day mail), 8:45 PM (early Vote Center ballots), then semi-final late night",
+      "cadence": "Election night in three stages; 9 AM and 4 PM Nov 4 to Nov 6; then daily 4 to 5 PM from Nov 7",
+      "count_window": "Mail postmarked by Nov 3 received by Nov 10; provisional, conditional registration, write-in and damaged ballots during the 30-day canvass",
+      "certification_date": "Scheduled Fri Nov 27, 2026 (legal deadline Dec 3)",
+      "certification_source": "https://content.lavote.gov/docs/rrcc/documents/media-kit-final.pdf",
+      "wait_line": "Los Angeles County posts mail votes around 8:30 PM Pacific, then keeps counting for weeks.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "After 8:30 PM PT confirm text-results/4348 shows 'Results as of' Nov 3 and votes above zero",
+        "Check the Cities, Schools and district tabs for our 12 LA County places, including Glendale",
+        "Find the real data feed in the Network tab",
+        "Check whether our fetcher clears the Imperva wall",
+        "Confirm post-election update times on the live-results page"
+      ],
+      "counties": [
+        "Los Angeles"
+      ],
+      "official_by": "2026-12-03",
+      "official_by_sure": true,
+      "label": "Los Angeles County"
+    },
+    {
+      "id": "orange-county-ca",
+      "state": "CA",
+      "kind": "county",
+      "name": "Orange County Registrar of Voters (OC Vote)",
+      "results_url": "https://ocvote.gov/results/current-election-results",
+      "results_url_status": "live_for_nov3_2026 (contest list up, no counts)",
+      "format": "Live Voter Turnout ENR in an iframe (folder 24, tokenized file name), plus ArcGIS precinct map",
+      "adapter_guess": "unknown",
+      "endpoints": [
+        "https://www.livevoterturnout.com/ENR/orangecaenr/24/en/phkv4sV_Index_24.html"
+      ],
+      "covers_local": "Yes: Fullerton council 3 and 5, Fullerton SD and FJUHSD trustee areas, Capistrano Unified areas, county-run city measures; no Dana Point council contest seen",
+      "first_post": "8:05 PM PT, mail ballots only",
+      "cadence": "In-person releases 9:30, 10:00, 10:30 PM; then about 5 PM daily from Nov 4, weekdays during canvass",
+      "count_window": "Mail postmarked by Nov 3 received by Nov 10 (LAist); signature cures until the office deadline (November date unread); LAist says counting through Nov 26",
+      "certification_date": "By Dec 3, 2026 (LAist; office page not read)",
+      "certification_source": "https://laist.com/news/politics/voter-guides/2026-midterm-voter-turnout-los-angeles-orange-county ; https://ocvote.gov/feeds/getNewsletter.php/?id=470",
+      "wait_line": "Orange County posts mail votes at 8:05 PM Pacific and in-person votes by 10:30 PM, then daily for weeks.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "At 8:05 PM PT confirm the iframe still loads folder 24 with the same phkv4sV token",
+        "Capture the ENR data request; test whether a summary_24.xml exists like San Diego's",
+        "Find Fullerton contests and which Capistrano Unified area covers Dana Point",
+        "Look for a last-updated stamp",
+        "Confirm 9:30, 10:00 and 10:30 PM releases; check whats-left-to-count Wednesday"
+      ],
+      "counties": [
+        "Orange"
+      ],
+      "official_by": "2026-12-03",
+      "official_by_sure": true,
+      "label": "Orange County"
+    },
+    {
+      "id": "san-diego-county-ca",
+      "state": "CA",
+      "kind": "county",
+      "name": "San Diego County Registrar of Voters",
+      "results_url": "https://www.livevoterturnout.com/ENR/sandiegocaenr/25/en/Index_25.html",
+      "results_url_status": "live_for_nov3_2026 (all contests listed, 0 ballots)",
+      "format": "Live Voter Turnout ENR, HTML app loading a public XML summary",
+      "adapter_guess": "json_custom",
+      "endpoints": [
+        "https://www.livevoterturnout.com/ENR/sandiegocaenr/25/summary_25.xml",
+        "https://www.livevoterturnout.com/ENR/sandiegocaenr/25/summary_25.csv (inferred from page script, not fetched)"
+      ],
+      "covers_local": "Yes: San Diego council districts 2, 4, 6, 8; SDUSD B, C and Measure M; SDCCD; all cities, schools, special districts; precinct CSV",
+      "first_post": "Shortly after 8 PM PT: pre-Election Day mail plus early Vote Center ballots",
+      "cadence": "Election Day Vote Center ballots through the night; then by 6 PM Nov 5, Nov 6 and Nov 9; later dates posted on sdvote.com",
+      "count_window": "Mail postmarked by Nov 3 received by Nov 10; provisional ballots; signature cures until Nov 25",
+      "certification_date": "On or before Dec 3, 2026",
+      "certification_source": "https://www.sdvote.com/content/rov/en/elections/election-information/important-dates.html",
+      "wait_line": "San Diego County posts mail and early votes soon after 8 PM Pacific, then by 6 PM on Nov 5, 6 and 9.",
+      "confidence": "verified",
+      "verify_tonight": [
+        "Confirm TotalBallotsCast in summary_25.xml moves off 0 and GeneratedDate advances",
+        "Confirm summary_25.csv downloads and matches the XML",
+        "Check Council 2, 4, 6, 8 and SDUSD Measure M, B and C carry votes",
+        "Watch the results-explained page for schedule changes"
+      ],
+      "counties": [
+        "San Diego"
+      ],
+      "official_by": "2026-12-03",
+      "official_by_sure": true,
+      "label": "San Diego County"
+    },
+    {
+      "id": "results-CA-san-francisco",
+      "state": "CA",
+      "kind": "county",
+      "name": "San Francisco Department of Elections",
+      "results_url": "https://www.sfelections.org/results/20261103w/index.html",
+      "results_url_status": "live_for_nov3_2026 (zero report, 0 of 514 precincts)",
+      "format": "Custom in-house HTML with PDF, Excel and XML report downloads in a per-report folder",
+      "adapter_guess": "json_custom",
+      "endpoints": [
+        "https://www.sfelections.org/results/20261103/data/<report-date>/summary.xml (folder name read from detail.html; 20261002 for the zero report)",
+        "https://www.sfelections.org/results/20261103/data/<report-date>/sov.xlsx",
+        "https://www.sfelections.org/results/20261103/index.html"
+      ],
+      "covers_local": "Yes, whole city-county: Supervisors 2/4/6/8/10 (ranked choice), school and college boards, BART 8, local Props 37-45 and Measures RTM, A-J",
+      "first_post": "8:45 PM PT, most pre-Election Day mail ballots",
+      "cadence": "9:45 PM, 10:45 PM, about midnight; then about 4 PM daily Nov 4 to Nov 13 (not Nov 11); then as counted",
+      "count_window": "Provisional ballots, Election Day mail drop-offs, mail received by Nov 10, ballots needing review; daily updates at least to Nov 13",
+      "certification_date": "By Dec 3, 2026",
+      "certification_source": "https://www.sfelections.org/results/20261103w/schedule.php",
+      "wait_line": "San Francisco posts mail votes at 8:45 PM Pacific and in-person votes around midnight, then daily at 4 PM.",
+      "confidence": "verified",
+      "verify_tonight": [
+        "At 8:45 PM PT confirm precincts move off 0 of 514 and Next Update changes",
+        "Note the new report folder name on detail.html and confirm summary.xml loads",
+        "Confirm the 9:45 and 10:45 PM reports",
+        "Check RCV final-round reports for Supervisors"
+      ],
+      "counties": [
+        "San Francisco"
+      ],
+      "official_by": "2026-12-03",
+      "official_by_sure": true,
+      "label": "San Francisco"
+    },
+    {
+      "id": "results-NY",
+      "state": "NY",
+      "kind": "state",
+      "name": "New York State Board of Elections",
+      "results_url": "https://nyenr.elections.ny.gov/",
+      "results_url_status": "live_for_nov3_2026",
+      "format": "Custom ASP.NET HTML tables with Auto Refresh; no-JS version at HomeNoJS.aspx",
+      "adapter_guess": "html_table",
+      "endpoints": [
+        "https://nyenr.elections.ny.gov/",
+        "https://nyenr.elections.ny.gov/HomeNoJS.aspx (linked as no-JS version; exact path seen as link text)"
+      ],
+      "covers_local": "No. Statewide, congressional, state legislative and Supreme Court only; page says local results come from county boards.",
+      "first_post": "Some time after the 9 PM ET close; each county uploads on its own schedule. First-batch contents not stated.",
+      "cadence": "Auto Refresh as counties upload; actual pace not stated.",
+      "count_window": "Mail ballots postmarked Nov 3 count if received by Nov 10; military/overseas by Nov 16; counting usually done within 25 days.",
+      "certification_date": "Recanvass Nov 18, 2026; counties certify by Nov 28, 2026; State Board of Canvassers by Dec 15, 2026 (Protect Democracy lists Dec 3)",
+      "certification_source": "https://elections.ny.gov/2026-political-calendar",
+      "wait_line": "New York counties post one by one after 9 PM Eastern. Mail ballots arriving by Nov 10 still count.",
+      "confidence": "verified",
+      "verify_tonight": [
+        "After 9 PM ET confirm Election Districts Reporting moves off 0 of 13,187",
+        "Note which counties have uploaded",
+        "Check HomeNoJS.aspx and network calls for a cleaner feed before scraping",
+        "Read the certification page once past the bot check and confirm Nov 18 / Nov 28 / Dec 15"
+      ],
+      "official_by": "2026-12-15",
+      "official_by_sure": true,
+      "label": "New York State"
+    },
+    {
+      "id": "results-NY-nyc",
+      "state": "NY",
+      "kind": "county",
+      "name": "New York City Board of Elections (Manhattan, Brooklyn, Queens, the Bronx, Staten Island)",
+      "results_url": "https://vote.nyc/page/election-results-summary",
+      "results_url_status": "announced_not_live",
+      "format": "Custom BOE election night site; certified results as per-contest CSV and PDF (Recap and EDLevel) on vote.nyc",
+      "adapter_guess": "link_only",
+      "endpoints": [
+        "https://enr.boenyc.gov/ (redirects today; live shape unknown)",
+        "https://vote.nyc/page/election-results-summary (certified CSVs, prior-election pattern: /sites/default/files/pdf/election_results/2026/20260623Primary Election/<contest> Recap.csv and EDLevel.csv)"
+      ],
+      "covers_local": "Certified ED-level files cover every contest on NYC ballots; no council or mayor races this year. Election night coverage of every local item unconfirmed.",
+      "first_post": "Not stated; likely shortly after the 9 PM close (unverified).",
+      "cadence": "Not stated.",
+      "count_window": "Absentee, affidavit and military ballots counted after Election Day; NYC-specific deadlines not verified (state: mail received by Nov 10).",
+      "certification_date": "unknown for NYC; state law has counties certify by Nov 28, 2026",
+      "certification_source": "https://elections.ny.gov/2026-political-calendar (state calendar; NYC page not read)",
+      "wait_line": "New York City posts after 9 PM Eastern. Absentee and affidavit ballots are counted later, so close races can take weeks.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "Open enr.boenyc.gov after 9 PM ET and see if it serves live results or still redirects",
+        "Find the feed URL in the network tab",
+        "Confirm every borough and a sample ballot's contests appear",
+        "Track the last-updated stamp cadence",
+        "Read the Extended Mail Ballot Voting Hours notice and the Certificate Filing Calendar notice"
+      ],
+      "counties": [
+        "New York",
+        "Kings",
+        "Queens",
+        "Bronx",
+        "Richmond"
+      ],
+      "official_by": "2026-11-28",
+      "official_by_sure": true,
+      "label": "New York City"
+    },
+    {
+      "id": "results-NY-sullivan",
+      "state": "NY",
+      "kind": "county",
+      "name": "Sullivan County Board of Elections",
+      "results_url": "https://app.enhancedvoting.com/results/public/sullivan-county-ny/GE2026",
+      "results_url_status": "live_for_nov3_2026",
+      "format": "Enhanced Voting Angular app with Download Reports",
+      "adapter_guess": "enhanced_voting",
+      "endpoints": [
+        "https://app.enhancedvoting.com/results/public/sullivan-county-ny/GE2026 (JSON endpoint behind the app not yet identified)"
+      ],
+      "covers_local": "Yes. Town supervisor and highway superintendent races in all 15 towns plus Village of Woodridge mayor; 96 election districts.",
+      "first_post": "Not stated; page says it updates in real time after polls close at 9 PM ET.",
+      "cadence": "Real time per page; shows districts reporting X/96 and an as-of time per contest.",
+      "count_window": "Mail ballots received by Nov 10 count; military/overseas and affidavit later; Sullivan's own dates not confirmed.",
+      "certification_date": "County certification by Nov 28, 2026 (state law); Sullivan has not posted its own date",
+      "certification_source": "https://elections.ny.gov/2026-political-calendar ; https://protectdemocracy.org/wp-content/uploads/2026/09/NY-Handout.pdf",
+      "wait_line": "Sullivan County posts as its 96 districts report after 9 PM Eastern. Mail ballots arriving by Nov 10 still count.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "Confirm Last Updated and X/96 change after 9 PM ET",
+        "Capture the JSON endpoint and Download Reports file types",
+        "Confirm Town of Callicoon contests show names and votes",
+        "Check the Vote Method tab for early and mail splits"
+      ],
+      "counties": [
+        "Sullivan"
+      ],
+      "official_by": "2026-11-28",
+      "official_by_sure": true,
+      "label": "Sullivan County"
+    },
+    {
+      "id": "results-IL-state",
+      "state": "IL",
+      "kind": "state",
+      "name": "Illinois State Board of Elections",
+      "results_url": "https://elections.il.gov/ElectionOperations/ElectionVoteTotals.aspx",
+      "results_url_status": "unknown: robots.txt disallows all crawling, not opened. Candidate vote totals page https://www.elections.il.gov/ElectionOperations/ElectionVoteTotals.aspx is unconfirmed",
+      "format": "unknown",
+      "adapter_guess": "link_only",
+      "endpoints": [],
+      "covers_local": "Not confirmed. Normally statewide and federal contests with county breakdowns",
+      "first_post": "Unknown. Likely early and mail totals soon after 7 PM CT (inference)",
+      "cadence": "Unknown",
+      "count_window": "Mail ballots postmarked by Nov 3 count if received by Nov 19 per Capitol News Illinois; 14 days would be Nov 17. Conflict unresolved",
+      "certification_date": "2026-12-04 (statewide proclamation of official results)",
+      "certification_source": "https://capitolnewsillinois.com/elections/election-guide/ (secondary)",
+      "wait_line": "Illinois counts mail ballots that arrive into mid-November, so close statewide races may take weeks.",
+      "confidence": "unverified",
+      "verify_tonight": [
+        "Open elections.il.gov in a browser and note the exact Nov 3 results link and vendor",
+        "Check ElectionVoteTotals.aspx for a CSV or download link",
+        "Confirm whether any local items appear or only state and federal",
+        "Confirm the mail receipt date (Nov 17 or Nov 19) and the Dec 4 proclamation on an ISBE page"
+      ],
+      "official_by": "2026-12-04",
+      "official_by_sure": false,
+      "label": "Illinois"
+    },
+    {
+      "id": "results-IL-chicago",
+      "state": "IL",
+      "kind": "county",
+      "name": "City of Chicago (Chicago Board of Election Commissioners)",
+      "results_url": "https://chicagoelections.gov/",
+      "results_url_status": "live index, no Nov 3, 2026 entry yet; prior pattern /elections/results/41 (2024 general); tonight's numeric ID cannot be predicted",
+      "format": "Custom Drupal 11 HTML form with contest and ward dropdowns, AJAX render; Proclamation of Official Results PDF after canvass",
+      "adapter_guess": "html_table",
+      "endpoints": [
+        "POST https://chicagoelections.gov/elections/results/<id>?ajax_form=1 (fields: contest, ward, submit; returns AJAX HTML; untested)"
+      ],
+      "covers_local": "Yes within city limits: referenda, US House, state legislature, MWRD, Cook County offices, judges, and the first elected Board of Education seats, with a ward filter. Not suburban Cook. No mayor or aldermen (next municipal election Feb 23, 2027)",
+      "first_post": "Unverified. Likely early and mail totals soon after 7 PM CT, then precincts",
+      "cadence": "Unknown; not stated on the office site",
+      "count_window": "242,230 mail ballots requested and 109,215 returned as of Nov 2 evening; postmarked ballots accepted through Nov 17 or Nov 19 (conflict); provisional materials due Nov 10 (unpinned)",
+      "certification_date": "Chicago date not found; statewide proclamation 2026-12-04",
+      "certification_source": "https://capitolnewsillinois.com/elections/election-guide/ ; proclamation PDF pattern https://cboeprod.blob.core.usgovcloudapi.net/prod/2024-11/Proclamation%20of%20Official%20Results%20-%20November%205,%202024.pdf",
+      "wait_line": "Chicago will likely post early and mail votes first after 7 PM Central. Mail ballots arriving into mid-November still count.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "After 7 PM CT reload chicagoelections.gov/elections/results and record the new numeric ID",
+        "Inspect the ?ajax_form=1 POST in the network tab: HTML or JSON, and whether a form build ID is needed",
+        "Check for a timestamp, precincts-reported count, and whether early and mail post first; time the update interval",
+        "Confirm Board of Education, referenda, MWRD, judges and Cook County contests appear and suburban Cook does not",
+        "Look for the board's canvass date and counting-time statement",
+        "Confirm the mail receipt deadline (Nov 17 vs Nov 19)"
+      ],
+      "counties": [
+        "Cook"
+      ],
+      "official_by": null,
+      "official_by_sure": false,
+      "label": "Chicago"
+    },
+    {
+      "id": "results-MO",
+      "state": "MO",
+      "kind": "state",
+      "name": "Missouri Secretary of State, Elections Division",
+      "results_url": "https://www.sos.mo.gov/elections/results",
+      "results_url_status": "live entry page; no Nov 3, 2026 block yet (newest listed is the Aug 4, 2026 primary). enr.sos.mo.gov 307-redirects here",
+      "format": "Custom SOS Election Night Reporting page linking PDFs (Grand Totals, Results by County); live view possibly an Angular app",
+      "adapter_guess": "link_only",
+      "endpoints": [
+        "https://www.sos.mo.gov/CMSImages/ElectionResultsStatistics/2026GeneralElection.pdf (predicted, unverified)",
+        "https://www.sos.mo.gov/CMSImages/ElectionResultsStatistics/ActualResults-November32026.pdf (predicted, unverified)"
+      ],
+      "covers_local": "no: statewide, federal and legislative with county breakdowns",
+      "first_post": "Not stated; trails county reports after the 7 PM CT close (unverified)",
+      "cadence": "Not stated; page says it automatically displays current-election results",
+      "count_window": "Mail and absentee ballots must arrive by 7 PM Election Day; provisionals verified in the local canvass",
+      "certification_date": "2026-12-08 (state canvassers by second Tuesday in December; calculated)",
+      "certification_source": "https://ballotpedia.org/Election_results_certification_dates,_2024",
+      "wait_line": "Missouri's statewide totals build as counties report after 7 PM Central. Check your county for local races.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "Reload the results page after 7 PM CT for a Nov 3, 2026 block",
+        "Live table or PDFs? Capture network requests for a JSON feed",
+        "Check PDF names against the predicted pattern",
+        "Look for a last-updated timestamp"
+      ],
+      "official_by": "2026-12-08",
+      "official_by_sure": false,
+      "label": "Missouri"
+    },
+    {
+      "id": "results-MO-stlouis-county",
+      "state": "MO",
+      "kind": "county",
+      "name": "St. Louis County Board of Elections",
+      "results_url": "https://extcontent.stlouisco.com/BOE/eResults/el261103/",
+      "results_url_status": "prior_election_pattern: predicted from el260804 (Aug 4, 2026 primary); 404 at 12:51 CT. Election-night link stlouis.totalvote.com did not resolve",
+      "format": "County file folder with CSV.csv, Results.pdf, Precincts.pdf per election; probably TotalVote for election night",
+      "adapter_guess": "csv_download",
+      "endpoints": [
+        "https://extcontent.stlouisco.com/BOE/eResults/el261103/CSV.csv (predicted)",
+        "https://extcontent.stlouisco.com/BOE/eResults/el260804/CSV.csv (confirmed shape)",
+        "https://extcontent.stlouisco.com/BOE/eResults/ (open folder listing)"
+      ],
+      "covers_local": "yes: county offices, charter amendments, judicial retention; Ballwin, Clayton, Webster Groves city and school items likely, unconfirmed",
+      "first_post": "Not stated; likely absentee totals soon after 7 PM CT (inference)",
+      "cadence": "As new tabulations are reported; CSV carries Polls Reporting n/N",
+      "count_window": "Mail must arrive by 7 PM Election Day; provisionals verified before canvass",
+      "certification_date": "2026-11-17 (calculated from RSMo 115.507)",
+      "certification_source": "https://revisor.mo.gov/main/OneSection.aspx?section=115.507",
+      "wait_line": "St. Louis County posts mail votes soon after 7 PM Central, then voting areas through the night.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "Check eResults folder for el261103 and read the CSV header; does it update during the night?",
+        "Does stlouis.totalvote.com resolve? If not, find the live link on the county BOE home page",
+        "Look for Ballwin, Clayton, Webster Groves and school district contests",
+        "Time how long Polls Reporting takes to reach full"
+      ],
+      "counties": [
+        "St. Louis County"
+      ],
+      "official_by": "2026-11-17",
+      "official_by_sure": false,
+      "label": "St. Louis County"
+    },
+    {
+      "id": "results-MO-stlouis-city",
+      "state": "MO",
+      "kind": "county",
+      "name": "City of St. Louis Board of Election Commissioners",
+      "results_url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/elections/results/index.cfm",
+      "results_url_status": "live_for_nov3_2026: Nov 3 heading present, says Results not yet available until polls close",
+      "format": "City CMS page with posted PDFs (summary, precinct, ward by ward)",
+      "adapter_guess": "pdf",
+      "endpoints": [],
+      "covers_local": "yes: federal, state, city county-level offices, ballot measures, city items, with ward and precinct detail",
+      "first_post": "Absentee results as soon as possible after 7 PM CT (stated on official page)",
+      "cadence": "Periodic through the evening as ward materials arrive; no set interval",
+      "count_window": "Mail must arrive by 7 PM Election Day; provisionals verified in canvass",
+      "certification_date": "2026-11-17 (calculated from RSMo 115.507; city date not found)",
+      "certification_source": "https://revisor.mo.gov/main/OneSection.aspx?section=115.507",
+      "wait_line": "St. Louis City posts absentee votes soon after 7 PM Central, then ward results through the evening.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "See what replaces Results not yet available: file type, host, unofficial label, timestamp",
+        "Watch for a Nov 3, 2026 election detail page",
+        "Check facebook.com/STLElections for first-post time",
+        "Note when the last ward reports"
+      ],
+      "counties": [
+        "St. Louis City"
+      ],
+      "official_by": "2026-11-17",
+      "official_by_sure": false,
+      "label": "St. Louis City"
+    },
+    {
+      "id": "results-MD",
+      "state": "MD",
+      "kind": "state",
+      "name": "Maryland State Board of Elections",
+      "results_url": "https://elections.maryland.gov/elections/2026/general_results/index.html",
+      "results_url_status": "live_for_nov3_2026 (pre-staged, all NR, last refreshed 11/02/2026 4:39 PM)",
+      "format": "Custom static HTML tables by the SBE, one page per contest (gen_results_2026_<n>.html) and per county (gen_results_2026_by_county_<1-24>.html), each with a Last refreshed stamp and a printer-friendly _P twin",
+      "adapter_guess": "html_table",
+      "endpoints": [
+        "https://elections.maryland.gov/elections/2026/general_results/gen_results_2026_1.html",
+        "https://elections.maryland.gov/elections/2026/general_results/gen_results_2026_by_county_1.html",
+        "https://elections.maryland.gov/elections/2026/general_results/gen_qresults_2026_1_00_ALL.html"
+      ],
+      "covers_local": "Yes. Statewide offices, Congress, legislature, judges, statewide Questions 1-3, and 24 county pages with county offices, school boards, some town councils and local questions. Town-run elections may be on the separate municipal page.",
+      "first_post": "Not stated. Inferred soon after 8 PM ET with early voting and pre-processed mail (mail processing began Oct 13), then Election Day precincts.",
+      "cadence": "Not stated. Pages carry a Last refreshed stamp; measure tonight.",
+      "count_window": "Mail canvass Nov 5; provisional canvass Nov 12; late postmarked mail accepted until Nov 13 10 AM with second canvass that day.",
+      "certification_date": "Local boards certify from Nov 13, 2026; statewide certification by Dec 3, 2026",
+      "certification_source": "https://elections.maryland.gov/elections/2026/2026_Election_Calendar.pdf",
+      "wait_line": "Maryland posts early and mail votes after 8 PM Eastern, then precincts (voting areas) overnight. Mail ballots count through Nov 13.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "Last refreshed moves past 11/02/2026 4:39 PM and 0 of 1979 precincts starts rising",
+        "Time of first post and which columns fill first",
+        "Gap between Last refreshed stamps (cadence)",
+        "Any CSV or download link on index or county pages",
+        "gen_status.html stops returning the 404 page",
+        "Winner mark appears per the page legend"
+      ],
+      "official_by": "2026-12-03",
+      "official_by_sure": true,
+      "label": "Maryland"
+    },
+    {
+      "id": "results-MD-baltimore-city",
+      "state": "MD",
+      "kind": "county",
+      "name": "Baltimore City (results published by the Maryland State Board of Elections)",
+      "results_url": "https://elections.maryland.gov/elections/2026/general_results/gen_results_2026_by_county_3.html",
+      "results_url_status": "live_for_nov3_2026 (pre-staged, all NR, 0 of 295 precincts)",
+      "format": "Same SBE static HTML; printer-friendly _P page is leanest to parse",
+      "adapter_guess": "html_table",
+      "endpoints": [
+        "https://elections.maryland.gov/elections/2026/general_results/gen_results_2026_by_county_3_P.html",
+        "https://elections.maryland.gov/elections/2026/general_results/gen_qresults_2026_by_county_3.html"
+      ],
+      "covers_local": "Yes. State's Attorney, Clerk of the Circuit Court, Register of Wills, Orphans' Court, Sheriff, Board of Education At Large, city Questions A-D (bonds) and E-I (charter), plus state and federal races for city districts. No Mayor or Council in 2026.",
+      "first_post": "Not stated. Inferred soon after 8 PM ET with early and pre-processed mail votes, then Election Day precincts.",
+      "cadence": "Not stated. Last refreshed stamp on page; measure tonight.",
+      "count_window": "Mail canvass Nov 5; provisional canvass Nov 12; late postmarked mail until Nov 13 10 AM.",
+      "certification_date": "Local certification begins Nov 13, 2026; local recount petitions due Nov 16; statewide certification by Dec 3, 2026",
+      "certification_source": "https://elections.maryland.gov/elections/2026/2026_Election_Calendar.pdf",
+      "wait_line": "Baltimore City results post on the state site after 8 PM Eastern. Mail and provisional ballots count through Nov 13.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "Last refreshed moves and 0 of 295 precincts starts rising",
+        "_P page updates at the same moment as the main page",
+        "State's Attorney, Sheriff, Register of Wills, Board of Education and Questions A-I rows fill",
+        "Statewide Questions 1-3 on the city page match the state page"
+      ],
+      "counties": [
+        "Baltimore City"
+      ],
+      "official_by": null,
+      "official_by_sure": false,
+      "label": "Baltimore City"
+    },
+    {
+      "id": "results-FL",
+      "state": "FL",
+      "kind": "state",
+      "name": "Florida Division of Elections (Florida Election Watch)",
+      "results_url": "https://floridaelectionwatch.gov/",
+      "results_url_status": "live_for_nov3_2026",
+      "format": "Custom state site fed by tab-delimited, pipe-delimited and xls flat files",
+      "adapter_guess": "csv_download",
+      "endpoints": [
+        "https://flelectionfiles.floridados.gov/enightfilespublic/20261103_ElecResultsFL.txt",
+        "https://flelectionfiles.floridados.gov/enightfilespublic/20261103_ElecResultsFL.xls",
+        "https://flelectionfiles.floridados.gov/enightfilespublic/20261103_ElecResultsFL_PipeDlm_Votes.txt",
+        "https://flelectionfiles.floridados.gov/enightfilespublic/20261103_ElecResultsFL_PipeDlm_Info.txt",
+        "https://flelectionfiles.floridados.gov/enightfilespublic/ResultsFileLayoutPipeDelimited.pdf"
+      ],
+      "covers_local": "no (federal, statewide, legislative, judicial, amendments, a few special districts; no city, school board or county measures)",
+      "first_post": "8:00 PM ET statewide release; counties report early and tabulated mail ballots by 7:30 PM local",
+      "cadence": "At least every 45 minutes per county after first post",
+      "count_window": "Cure deadline 5 PM Thu Nov 5 (recheck); provisionals in following days; unofficial returns covering all ballots due noon Sat Nov 7",
+      "certification_date": "2026-11-17",
+      "certification_source": "https://floridaelectionwatch.gov/Timeline",
+      "wait_line": "Florida posts statewide results at 8 PM Eastern, then at least every 45 minutes until counties finish.",
+      "confidence": "verified",
+      "verify_tonight": [
+        "After 8 PM ET re-fetch 20261103_ElecResultsFL.txt and confirm last-modified changes and CanVotes is nonzero",
+        "Compute progress from PrecinctsReporting vs Precincts",
+        "Open County Reporting Status on floridaelectionwatch.gov",
+        "Confirm city, school board and county measures are absent from the state file"
+      ],
+      "official_by": "2026-11-17",
+      "official_by_sure": true,
+      "label": "Florida"
+    },
+    {
+      "id": "orange-fl",
+      "state": "FL",
+      "kind": "county",
+      "name": "Orange County, FL Supervisor of Elections (Orlando)",
+      "results_url": "https://voteorangefl.gov/election-results/",
+      "results_url_status": "announced_not_live",
+      "format": "Scytl/Clarity-style ENR at results.voteorangefl.gov with report zips; general election id unknown until tonight (prior pattern /FL/Orange/127178/web.345435/)",
+      "adapter_guess": "clarity",
+      "endpoints": [
+        "https://results.voteorangefl.gov/FL/Orange/<electionId>/<versionId>/reports/summary.zip (pattern from Aug 2026 primary)",
+        "https://results.voteorangefl.gov/FL/Orange/<electionId>/<versionId>/reports/detailxml.zip (pattern)"
+      ],
+      "covers_local": "yes for county offices, school board, Soil and Water, county mayor; Orlando city items unconfirmed",
+      "first_post": "After 7 PM ET; early and mail first per state timeline; media expect about 8 PM",
+      "cadence": "At least every 45 minutes (state rule); county cadence not published",
+      "count_window": "Cure deadline 5 PM Nov 5; provisionals; overseas ballots up to about Nov 13; unofficial to state noon Nov 7",
+      "certification_date": "2026-11-16 (county official returns due); state certifies 2026-11-17",
+      "certification_source": "https://files.floridados.gov/media/709430/election-results-reporting-timeline-ge-2026-v20250821.pdf",
+      "wait_line": "Orange County posts early and mail votes soon after 7 PM Eastern, then at least every 45 minutes.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "Copy the real results.voteorangefl.gov link from voteorangefl.gov/election-results/",
+        "Confirm header says 2026 General and 263 precincts",
+        "Test summary.zip and json/en/summary.json for the new id without spoofing a browser",
+        "Check for Orlando contests and the county mayor item",
+        "Do not use enr.electionsfl.org/ORA/3998, which shows Escambia contests"
+      ],
+      "counties": [
+        "Orange"
+      ],
+      "official_by": "2026-11-16",
+      "official_by_sure": true,
+      "label": "Orange County"
+    },
+    {
+      "id": "escambia-fl",
+      "state": "FL",
+      "kind": "county",
+      "name": "Escambia County, FL Supervisor of Elections (Pensacola)",
+      "results_url": "https://enr.electionsfl.org/ESC/3977/Summary/",
+      "results_url_status": "live_for_nov3_2026",
+      "format": "VR Systems / VoterFocus ENR, server-rendered HTML with last-updated stamp; CSV exports on Reports page (timestamped names)",
+      "adapter_guess": "html_table",
+      "endpoints": [
+        "https://enr.electionsfl.org/ESC/3977/Summary/",
+        "https://enr.electionsfl.org/ESC/3977/Precincts",
+        "https://enr.electionsfl.org/ESC/3977/Reports (expected; primary pattern /ESC/3976/Reports)"
+      ],
+      "covers_local": "yes (Pensacola City Council Districts 2 and 4, county one-cent sales tax referendum, precinct detail)",
+      "first_post": "Starting 7 PM CT after polls close (office page)",
+      "cadence": "Not stated; use the page's last-updated stamp and 0/80 precinct counter",
+      "count_window": "Mail ballots due 7 PM Election Day; cure and provisionals before canvass; unofficial to state noon Nov 7",
+      "certification_date": "2026-11-16 (county official returns due by statute); state certifies 2026-11-17",
+      "certification_source": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0102/Sections/0102.112.html",
+      "wait_line": "Escambia County starts posting at 7 PM Central and adds its 80 precincts (voting areas) through the night.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "Confirm Precincts Reporting moves off 0/80 and the last-updated stamp changes",
+        "Check Pensacola council and sales tax referendum show votes",
+        "Look for school board or mayor items",
+        "See whether /ESC/3977/Reports lists CSV links during the night",
+        "Treat a dash as a count under 30, not zero"
+      ],
+      "counties": [
+        "Escambia"
+      ],
+      "official_by": "2026-11-16",
+      "official_by_sure": true,
+      "label": "Escambia County"
+    },
+    {
+      "id": "leon-fl",
+      "state": "FL",
+      "kind": "county",
+      "name": "Leon County, FL Supervisor of Elections (Tallahassee)",
+      "results_url": "https://enr.electionsfl.org/LEO/4072/Summary/",
+      "results_url_status": "announced_not_live",
+      "format": "ASP.NET HTML ENR on enr.electionsfl.org; general id unknown (prior pattern /LEO/Summary/3994/ for Aug 2026 primary)",
+      "adapter_guess": "html_table",
+      "endpoints": [
+        "https://enr.electionsfl.org/LEO/Summary/<id>/ (pattern; 3994 was the primary)",
+        "https://enr.electionsfl.org/LEO/<id>/Precincts (pattern)"
+      ],
+      "covers_local": "likely (primary had Tallahassee City Commission, Mayor, School Board); unconfirmed for the general",
+      "first_post": "Preliminary results after 7 PM ET (Leon canvassing notice)",
+      "cadence": "Not stated; election-night session runs until done, sometimes past midnight",
+      "count_window": "1st unofficial results signed Fri Nov 6 at 1 PM (cures, provisionals, write-ins); overseas ballots reviewed Nov 14",
+      "certification_date": "2026-11-14",
+      "certification_source": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/43/Public-Notice-Leon-County-Canvassing-Board-Activity-for-the-2026-General-Election-Including-Logic-Accuracy-Testing-and-Post-Election-Audit",
+      "wait_line": "Leon County posts early results after 7 PM Eastern. It says the full count takes several days.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "Find the 2026 General row on leonvotes.gov/Records/Election-Results and copy the new enr.electionsfl.org/LEO/Summary/<id>/ link",
+        "Check for City Commission, Mayor, School Board and local measures",
+        "Read 'Website last updated at' for our last-checked line",
+        "Look for any CSV/JSON export link",
+        "Confirm mail ballots are in the first drop"
+      ],
+      "counties": [
+        "Leon"
+      ],
+      "official_by": "2026-11-14",
+      "official_by_sure": true,
+      "label": "Leon County"
+    },
+    {
+      "id": "results-DC",
+      "state": "DC",
+      "kind": "state",
+      "name": "District of Columbia (DC Board of Elections)",
+      "results_url": "https://electionresults.dcboe.org/election_results/2026-General-Election",
+      "results_url_status": "Home is live; the 2026 General entry is not listed yet. Expected page https://electionresults.dcboe.org/election_results/2026-General-Election is a prior-election pattern, not confirmed.",
+      "format": "Custom DCBOE React app with its own unauthenticated JSON API, plus PDF, XML and CSV report downloads",
+      "adapter_guess": "json_custom",
+      "endpoints": [
+        "https://electionresults.dcboe.org/electionResults/getElectionResultsId",
+        "https://electionresults.dcboe.org/electionResults/getElectionInfo/{UrlText}",
+        "https://electionresults.dcboe.org/electionResults/getOfficeCodes/{UrlText}",
+        "https://electionresults.dcboe.org/cityWide/getCityWide/{UrlText}",
+        "https://electionresults.dcboe.org/cityWide/getVoterSummaryInfo/{id}",
+        "https://electionresults.dcboe.org/precinct/getPrecinct/{a}/{b}",
+        "https://electionresults.dcboe.org/mapStats/getMapDetails/{a}/{b}/{c}",
+        "https://electionresults.dcboe.org/Downloads/Reports/November_5_2024_General_Election_Certified_Results.{pdf,xml,csv} (2024 pattern)"
+      ],
+      "covers_local": "Citywide, all DC offices with ward and precinct breakdowns. ANC races were absent from the 2024 feed; 2026 ANC and ballot-measure coverage unverified.",
+      "first_post": "Not published for tonight. June 2026 primary precedent: election-night unofficial results showing ranked choice races as first-rank only (PoPville quoting DCBOE).",
+      "cadence": "Not published. Primary precedent: unofficial results election night, round-by-round ranked choice results about five days later.",
+      "count_window": "All 144 precincts expected election night. Special and challenged ballot proof by Nov 10, hearings Nov 12 to 13, mail received by Nov 13, cures by Nov 19, tentative final count Nov 20.",
+      "certification_date": "2026-12-02 (tentative)",
+      "certification_source": "https://dcboe.org/getContentAsset/4d04f4a1-fb2a-4f8a-809f-d3f708f232df/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-Election-Calendar-Version-09292026.pdf?language=en",
+      "wait_line": "DC posts first choices after 8 PM Eastern. Ranked choice results come days later; mail ballots count until about Nov 20.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "getElectionResultsId lists a 2026 general entry with IsLive true; record its exact UrlText slug",
+        "getElectionInfo/{slug} returns 200; watch PrecinctsCounted, TotalPrecincts, LastUpdated, ElectionResultsTypeName",
+        "getCityWide/{slug} has mayor, AG, delegate, chairman and council; check IsRCV and whether only First Rank is shown",
+        "getOfficeCodes/{slug}: are ANC races and any ballot measures included",
+        "Read the results page note on when round-by-round RCV results post"
+      ],
+      "official_by": "2026-12-02",
+      "official_by_sure": false,
+      "label": "DC"
+    },
+    {
+      "id": "results-GA",
+      "state": "GA",
+      "kind": "state",
+      "name": "Georgia Secretary of State (statewide)",
+      "results_url": "https://results.sos.ga.gov/results/public/Georgia/11032026GeneralAndSpecialElection",
+      "results_url_status": "live_for_nov3_2026",
+      "format": "Enhanced Voting Angular app over an open JSON API",
+      "adapter_guess": "enhanced_voting",
+      "endpoints": [
+        "https://results.sos.ga.gov/results/public/api/elections/Georgia/11032026GeneralAndSpecialElection",
+        "https://results.sos.ga.gov/results/public/api/elections/Georgia/2024NovGen"
+      ],
+      "covers_local": "no: statewide offices and measures only; county breakdowns unconfirmed (feed shows 1 ballot item so far)",
+      "first_post": "Polls close 7 PM ET; advance and mail votes often post within minutes, before precincts (North Atlanta Star, secondary). Not on an SOS page.",
+      "cadence": "Not stated; feed has nextUpdateAt (null today) and lastUpdated. Unverified until tonight.",
+      "count_window": "Absentee must arrive by 7 PM Nov 3; UOCAVA postmarked by Nov 3 and provisional ID or ballot cures until 5 PM Fri Nov 6 (secondary)",
+      "certification_date": "2026-11-20 (state, secondary; conflicting WJCL report says about Nov 13); counties by 2026-11-09",
+      "certification_source": "https://northatlantastar.com/georgia-election-night-results-final-count-2026/ (secondary; O.C.G.A. 21-2-493/499 from memory)",
+      "wait_line": "Georgia posts early and mail votes soon after 7 PM Eastern, then precincts (voting areas) through the night. Runoffs are Dec 1.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "Contest list fills in on the SOS page and which offices appear",
+        "Poll JSON lastUpdated, nextUpdateAt, isOfficialResults to set cadence",
+        "Whether county breakdowns appear",
+        "Confirm Nov 9, Nov 20 and Dec 1 dates on SOS calendar if bot check allows"
+      ],
+      "official_by": "2026-11-20",
+      "official_by_sure": false,
+      "label": "Georgia"
+    },
+    {
+      "id": "fulton-ga",
+      "state": "GA",
+      "kind": "county",
+      "name": "Fulton County Registration and Elections",
+      "results_url": "https://www.fultonelections.com",
+      "results_url_status": "announced_not_live (tonight's results link unknown; prior pattern Clarity https://results.enr.clarityelections.com/GA/Fulton/124753/ for Nov 2025)",
+      "format": "Clarity ENR (Nov 2025 general) or Enhanced Voting (Nov 2025 special); vendor tonight unconfirmed",
+      "adapter_guess": "clarity",
+      "endpoints": [
+        "https://results.enr.clarityelections.com/GA/Fulton/<id>/current_ver.txt",
+        "https://results.enr.clarityelections.com/GA/Fulton/<id>/<ver>/json/en/summary.json",
+        "https://app.enhancedvoting.com/results/public/fulton-county-ga/elections/<slug>"
+      ],
+      "covers_local": "yes: Atlanta city contests (Fulton side), other city items, APS/Fulton ESPLOST, TSPLOST, Commission District 4 special",
+      "first_post": "Tabulation begins 7 PM ET (county notice); advance and absentee likely first (inference)",
+      "cadence": "Not stated; Clarity current_ver.txt changes per upload",
+      "count_window": "Mail by 7 PM Nov 3; overseas and military postmarked Nov 3 count through Fri Nov 6 (county key dates); a proposed rescan of 1,069 advance ballots goes to a 6:30 PM board vote",
+      "certification_date": "2026-11-09 (county, statute memory, unverified); audit Nov 13-17",
+      "certification_source": "https://fultoncountyga.gov/inside-fulton-county/fulton-county-departments/registration-and-elections/election-key-dates",
+      "wait_line": "Fulton County's results link should appear tonight after 7 PM Eastern. Late overseas ballots count through Nov 6.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "Find results link on fultonelections.com or Search Elections page after 7 PM ET and note vendor",
+        "Get new Clarity id and fetch current_ver.txt then summary.json, or the Enhanced Voting slug",
+        "Confirm Atlanta city, ESPLOST, TSPLOST, District 4 special and precinct breakouts",
+        "Rescan vote outcome from 6:30 PM board meeting",
+        "Record first-post time and which ballots came first"
+      ],
+      "counties": [
+        "Fulton"
+      ],
+      "official_by": "2026-11-09",
+      "official_by_sure": false,
+      "label": "Fulton County"
+    },
+    {
+      "id": "dekalb-ga",
+      "state": "GA",
+      "kind": "county",
+      "name": "DeKalb County Voter Registration and Elections",
+      "results_url": "https://app.enhancedvoting.com/results/public/dekalb-county-ga/elections/11032026GeneralAndSpecialElection",
+      "results_url_status": "live_for_nov3_2026",
+      "format": "Enhanced Voting Angular app; county PDFs for election-night data and official reports; turnout in Google Sheets",
+      "adapter_guess": "enhanced_voting",
+      "endpoints": [
+        "https://app.enhancedvoting.com/results/public/dekalb-county-ga/elections/11032026GeneralAndSpecialElection",
+        "https://dekalbcountyga.gov/departments/voter-registration-and-elections/election-results"
+      ],
+      "covers_local": "yes: county commission, Brookhaven, Doraville, Pine Lake, Stonecrest items, DeKalb ESPLOST, Tucker annexation, amendments; not Atlanta council or APS board",
+      "first_post": "Computation starts 7 PM ET; mail processed early Oct 19 to Nov 3, so early and mail totals likely first",
+      "cadence": "Page claims auto-refresh in real time; untested (last updated 4:28 AM)",
+      "count_window": "Unofficial and incomplete pending provisionals and timely absentees; moves until about Fri Nov 6",
+      "certification_date": "2026-11-09 (statute memory, unverified); meeting dates not yet announced",
+      "certification_source": "https://dekalbcountyga.gov/sites/default/files/2026-10/2026_11-03_General-Special%20Election_Computation%20and%20Canvassing%20Notice_FINAL.pdf",
+      "wait_line": "DeKalb County posts early and mail votes first, after 7 PM Eastern.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "Votes replace Not Reported and Last Updated moves",
+        "Find JSON feed URL in browser network tab",
+        "ESPLOST and Amendments 1-3 show totals",
+        "New county PDFs and certification meeting dates",
+        "Polls-close time and any extended-hours orders"
+      ],
+      "counties": [
+        "DeKalb"
+      ],
+      "official_by": "2026-11-09",
+      "official_by_sure": false,
+      "label": "DeKalb County"
+    },
+    {
+      "id": "results-OR",
+      "state": "OR",
+      "kind": "state",
+      "name": "Oregon Secretary of State, Elections Division",
+      "results_url": "https://results.oregonvotes.gov/",
+      "results_url_status": "live_for_nov3_2026 (header shows Nov 3, 2026 general, Ballots Counted 0, last updated 10/30/2026 3:30 PM PT)",
+      "format": "Custom state ENR site (ASP.NET pages, JS-driven; scripts from orresultswebservices.azureedge.us in Azure Government). Vendor not named. Has a 'Statewide and County Exports' menu.",
+      "adapter_guess": "json_custom",
+      "endpoints": [
+        "https://results.oregonvotes.gov/",
+        "https://results.oregonvotes.gov/resultsSW.aspx?type=LMEA&map=CTY",
+        "https://orresultswebservices.azureedge.us/Scripts/utils.js"
+      ],
+      "covers_local": "Partial. Has sections for local measures and shared county, city and district races; full city council and school board coverage unknown until results load. No write-ins. No Portland or Multnomah ranked choice contests (those are only at rcvresults.multco.us).",
+      "first_post": "Follows counties after 8 PM PT polls close; state site's own first-post time not stated.",
+      "cadence": "Not stated on the state site; follows county uploads (Multnomah: 8 PM, 10 PM, midnight, then 6 PM daily updates).",
+      "count_window": "Mail ballots postmarked by Nov 3 and received by Nov 10 still count; signature cures add later (statewide cure deadline not found; Multnomah says Nov 24).",
+      "certification_date": "Statewide date not found; Multnomah certifies by Nov 30, 2026.",
+      "certification_source": "https://multco.us/info/election-results-schedule-nov-2026-general-election (county only); https://sos.oregon.gov/elections/ for Nov 10 receipt date",
+      "wait_line": "Oregon counts mail ballots for days. Ballots arriving by Nov 10 still count, so close races can shift.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "After 8 PM PT, confirm Ballots Counted moves off 0 and 'Results last updated' changes",
+        "Open the network tab and record the export or JSON feed URL",
+        "Check whether Portland-area city, school and district items appear under Shared County, City and District Races and Measures"
+      ],
+      "official_by": null,
+      "official_by_sure": false,
+      "label": "Oregon"
+    },
+    {
+      "id": "results-OR-multnomah",
+      "state": "OR",
+      "kind": "county",
+      "name": "Multnomah County Elections Division (Portland area)",
+      "results_url": "https://multco.us/info/november-3-2026-election-results-multnomah-county",
+      "results_url_status": "announced_not_live; no 2026 results page yet. Prior pattern: https://multco.us/info/november-5-2024-election-results-multnomah-county. Portland city and county candidate races only at https://rcvresults.multco.us (announced, not live).",
+      "format": "Custom Drupal pages with PDF summary and precinct reports; custom ranked choice voting web app (rcvresults.multco.us); also feeds the state ENR; Tableau dashboard for turnout only.",
+      "adapter_guess": "pdf",
+      "endpoints": [
+        "https://rcvresults.multco.us",
+        "https://multco.us/info/election-results-schedule-nov-2026-general-election",
+        "https://results.oregonvotes.gov/",
+        "https://public.tableau.com/app/profile/multco.ballot.returns/viz/Multco_Elections_Dashboard_Nov2026/OFFICIALDashboard"
+      ],
+      "covers_local": "Yes. Portland mayor, council, auditor and city measures on the RCV site only. 2024 precinct PDFs covered Gresham, Fairview, Lake Oswego, Maywood Park, East Multnomah SWCD. Portland school board and special districts not confirmed for 2026.",
+      "first_post": "8:00 PM PT Nov 3; office typically releases about half of expected ballots on Election Day.",
+      "cadence": "Nov 3 8:00 PM and 10:00 PM (10 PM skips RCV); Nov 4 midnight and 6 PM; Nov 5, 6, 12, 25 and 30 at 6 PM. May update more often.",
+      "count_window": "About 90% of expected ballots by Thu Nov 5. Mail ballots postmarked by Nov 3 and received by Nov 10 count; signature cures through Nov 24.",
+      "certification_date": "2026-11-30",
+      "certification_source": "https://multco.us/info/election-results-schedule-nov-2026-general-election (cites OAR 165-007-0550(8)); https://multco.us/news/nov-3-2026-election-day-information-multnomah-county",
+      "wait_line": "Multnomah posts about half the ballots at 8 PM Pacific and about 90% by Nov 5. Portland races are on its ranked choice site.",
+      "confidence": "verified (schedule and process); tonight's results URL unverified",
+      "verify_tonight": [
+        "After 8 PM PT, find and save the exact 2026 results page URL on multco.us/elections (guessed slug /info/november-3-2026-election-results-multnomah-county is unverified)",
+        "Confirm Portland mayor, council and auditor show at rcvresults.multco.us and record any JSON or CSV feed in the network tab",
+        "Confirm the 10 PM update posted and the RCV site did not update at 10 PM",
+        "Confirm where Portland school board and special district results appear",
+        "Check the Tableau turnout dashboard still loads"
+      ],
+      "counties": [
+        "Multnomah"
+      ],
+      "official_by": "2026-11-30",
+      "official_by_sure": true,
+      "label": "Multnomah County"
+    },
+    {
+      "id": "results-WA",
+      "state": "WA",
+      "kind": "state",
+      "name": "Washington Secretary of State (statewide results)",
+      "results_url": "https://results.votewa.gov/results/public/washington/20261103",
+      "results_url_status": "live_for_nov3_2026",
+      "format": "Enhanced Voting (Angular app with JSON API)",
+      "adapter_guess": "enhanced_voting",
+      "endpoints": [
+        "https://results.votewa.gov/results/public/api/elections/washington/20261103",
+        "https://results.votewa.gov/results/public/api/elections/washington/20261103/localities",
+        "https://results.votewa.gov/results/public/api/elections/washington/20261103/stats",
+        "https://results.votewa.gov/results/public/api/elections/washington/20261103/turnout",
+        "https://results.votewa.gov/results/public/api/elections/washington/20261103/vr",
+        "https://results.votewa.gov/results/public/api/jurisdictions/washington"
+      ],
+      "covers_local": "partial: state measures, U.S. House, legislature, judges, other contests; no city, school or district items (those are in each county's view)",
+      "first_post": "Soon after 8 PM PT (10 PM CT), mostly mail ballots already received (unverified, past practice)",
+      "cadence": "Not published; per-county asOf and nextUpdateAt fields show updates; counties usually post weekday afternoons until certification (unverified)",
+      "count_window": "Ballots postmarked by Nov 3 and received later still count, plus cures and provisionals, until counties certify Nov 24",
+      "certification_date": "County canvassing boards Nov 24, 2026; Secretary of State by Dec 3, 2026",
+      "certification_source": "https://www.sos.wa.gov/elections/calendar",
+      "wait_line": "Washington posts its first big count after 8 PM Pacific and counts mail ballots for weeks.",
+      "confidence": "verified",
+      "verify_tonight": [
+        "Re-fetch the statewide API record and watch asOf, nextUpdateAt and contestGroups fill in",
+        "Find the contest-level JSON call in the viewer's network tab once candidates appear",
+        "Check /stats for Estimated Ballots Left to Count by county after the first drop",
+        "Confirm customPublicMessages still says certification Nov 24",
+        "Find each covered county's slug on results.votewa.gov for local items"
+      ],
+      "official_by": "2026-12-03",
+      "official_by_sure": true,
+      "label": "Washington"
+    },
+    {
+      "id": "king-county-wa",
+      "state": "WA",
+      "kind": "county",
+      "name": "King County, Washington",
+      "results_url": "https://kingcounty.gov/en/dept/elections/results/2026/november-general",
+      "results_url_status": "live_for_nov3_2026",
+      "format": "Enhanced Voting viewer on the state site, plus county PDF, CSV, daily CSV archive and open data precinct files",
+      "adapter_guess": "enhanced_voting",
+      "endpoints": [
+        "https://results.votewa.gov/results/public/king-county-wa/elections/20261103",
+        "https://results.votewa.gov/results/public/api/elections/king-county-wa/20261103",
+        "https://results.votewa.gov/results/public/api/elections/king-county-wa/20261103/stats",
+        "https://results.votewa.gov/results/public/api/elections/king-county-wa/20261103/turnout",
+        "https://results.votewa.gov/results/public/api/elections/king-county-wa/20261103/localities",
+        "https://election-results-csv.kingcounty.gov",
+        "https://election-results-pdf.kingcounty.gov",
+        "https://data.kingcounty.gov/"
+      ],
+      "covers_local": "yes: city propositions (Bothell, Clyde Hill, Issaquah, Kenmore, Lake Forest Park, Milton), school and fire district measures; Seattle contests not confirmed",
+      "first_post": "Soon after 8 PM PT (10 PM CT), a large first count of mail ballots (unverified, past practice)",
+      "cadence": "Weekdays at about 4 PM PT until certification (August primary pattern); report dates listed Nov 3 to Nov 24; prior reports archived by 4:30 PM next day",
+      "count_window": "Late postmarked mail ballots, signature cures and provisionals counted until certification Nov 24",
+      "certification_date": "2026-11-24 (county canvassing board); final precinct file by 4 PM Nov 25",
+      "certification_source": "https://www.sos.wa.gov/elections/calendar ; https://kingcounty.gov/en/dept/elections/results/2026/november-general",
+      "wait_line": "King County posts its first big count after 8 PM Pacific, then weekdays around 4 PM through Nov 24.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "Reload the viewer after 8 PM PT and check Last Updated moves past Oct 22",
+        "Find the contest results call in the viewer's network tab",
+        "Confirm Seattle city and school items appear and match the county CSV and PDF",
+        "Find the 2026/11 daily CSV path on the November hub",
+        "Look for the office's counting-time statement and cure deadline"
+      ],
+      "counties": [
+        "King"
+      ],
+      "official_by": "2026-11-24",
+      "official_by_sure": true,
+      "label": "King County"
+    },
+    {
+      "id": "results-AL",
+      "state": "AL",
+      "kind": "state",
+      "name": "Alabama (Secretary of State)",
+      "results_url": "https://www2.alabamavotes.gov/electionNight/statewideResultsByContest.aspx?ecode=1001305",
+      "results_url_status": "live URL for Nov 3, 2026; showed 'Results Coming Soon' at 12:55 PM CT",
+      "format": "Custom state ASP.NET election-night site (Statewide and County tabs, Export Data postback); HTML tables; Excel of totals posted later on SOS 2026 page",
+      "adapter_guess": "html_table",
+      "endpoints": [
+        "https://www2.alabamavotes.gov/electionNight/statewideResultsByContest.aspx?ecode=1001305",
+        "https://www2.alabamavotes.gov/electionNight/chooseCounty.aspx?ecode=1001305"
+      ],
+      "covers_local": "Statewide contests and amendments with county breakdowns; no city, school or local measures expected; legislative races unverified until live",
+      "first_post": "After 7:00 PM Central as precincts report (state page wording); exact time and whether absentee posts first not stated",
+      "cadence": "Not stated beyond 'updated as precincts begin to report'; unverified",
+      "count_window": "Military/overseas ballots until noon Tue Nov 10; provisional ballots and any needed write-ins counted Tue Nov 10; ID cure for provisional voters until 5 PM Fri Nov 6",
+      "certification_date": "Counties declare results by noon Fri Nov 13, 2026; state canvass by Wed Nov 25, 2026; certificates of election listed Mon Nov 23",
+      "certification_source": "https://www.sos.alabama.gov/sites/default/files/election-2026/AdminCalendar%20-2026.pdf (Ala. Code 17-12-15, 17-12-16, 17-12-17, 17-12-21)",
+      "wait_line": "Alabama posts results as precincts (voting areas) report after 7 PM Central.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "Reload the statewide page after 7 PM CT and confirm it flips to contest tables",
+        "Note any 'last updated' stamp and how often it changes in the first hour",
+        "Try Export Data (POST with viewstate) and note format and precinct detail",
+        "Check whether legislative and judicial races appear on the by-contest list",
+        "Confirm the county pages use ecode=1001305"
+      ],
+      "official_by": "2026-11-25",
+      "official_by_sure": true,
+      "label": "Alabama"
+    },
+    {
+      "id": "mobile-county-al",
+      "state": "AL",
+      "kind": "county",
+      "name": "Mobile County, Alabama (Probate Court, Elections)",
+      "results_url": "https://www2.alabamavotes.gov/electionNight/chooseCounty.aspx?ecode=1001305",
+      "results_url_status": "live URL for Nov 3, 2026; Mobile listed but not linked at 12:55 PM CT. Certified results later in https://benchmark.probate.mobilecountyal.gov/uploads/eResults/ElectionResults.pdf (prior-election pattern, no Nov 3 entry yet)",
+      "format": "State ASP.NET county page on election night; certified results as recorded-instrument PDFs",
+      "adapter_guess": "html_table",
+      "endpoints": [
+        "https://www2.alabamavotes.gov/electionNight/chooseCounty.aspx?ecode=1001305",
+        "https://benchmark.probate.mobilecountyal.gov/uploads/eResults/ElectionResults.pdf"
+      ],
+      "covers_local": "Unknown; county-run contests expected on the county page but not confirmed, and Mobile's Nov 3 local items not confirmed",
+      "first_post": "After 7 PM Central, but only once Mobile's probate judge sends results to the state, so it may lag statewide",
+      "cadence": "No stated interval; WKRG and Fox10 are useful cross-checks",
+      "count_window": "Write-ins (if they could change a result) then provisionals on Tue Nov 10; military/overseas until noon Nov 10; ID cure until 5 PM Fri Nov 6",
+      "certification_date": "County declaration by noon Fri Nov 13, 2026; Mobile has recorded certified results about 1 to 2 weeks after past elections",
+      "certification_source": "https://www.sos.alabama.gov/sites/default/files/election-2026/AdminCalendar%20-2026.pdf; Mobile pattern from https://benchmark.probate.mobilecountyal.gov/uploads/eResults/ElectionResults.pdf",
+      "wait_line": "Mobile County's numbers show up on the state site after 7 PM Central, once the probate judge reports.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "Note when Mobile becomes a link on the county picker and capture its URL",
+        "Check whether the Mobile page lists constables, county offices, local measures and precinct detail",
+        "Watch probate.mobilecountyal.gov press releases for a 2026 results notice",
+        "Note whether the first numbers include absentee ballots",
+        "Check the probate ElectionResults.pdf index around Nov 10 to 20 for the Nov 3 entry"
+      ],
+      "counties": [
+        "Mobile"
+      ],
+      "official_by": "2026-11-13",
+      "official_by_sure": true,
+      "label": "Mobile County"
+    },
+    {
+      "id": "results-PA",
+      "state": "PA",
+      "kind": "state",
+      "name": "Pennsylvania Department of State",
+      "results_url": "https://www.electionreturns.pa.gov/",
+      "results_url_status": "announced_not_live (empty Angular shell at 12:55 CT Nov 3; named in DOS release Oct 27, 2026). Landing page https://www.pa.gov/agencies/vote/elections/election-results is live",
+      "format": "Custom ASP.NET/AngularJS app behind Incapsula bot protection; not Clarity",
+      "adapter_guess": "json_custom",
+      "endpoints": [
+        "https://electionreturns.pa.gov/Home/SummaryResults?ElectionID=<id>&ElectionType=<type>&IsActive=<0|1>",
+        "https://electionreturns.pa.gov/Home/CountyBreakDownResults?officeId=<n>&districtId=<n>&ElectionID=<id>&ElectionType=<type>&IsActive=<0|1>",
+        "https://electionreturns.pa.gov/Home/CountyResultsVM?countyName=<name>&ElectionID=<id>&ElectionType=<type>&IsActive=<0|1>&OfficeName=<office>",
+        "https://electionreturns.pa.gov/scripts/Details.json"
+      ],
+      "covers_local": "No. Statewide, U.S. House and state legislature with county breakdowns; local items are on county sites",
+      "first_post": "After polls close at 8 PM ET; posts as counties upload (DOS, sourced). First batch contents not stated",
+      "cadence": "Rolling county batches for several hours (Spotlight PA); no fixed interval. Election night returns due to DOS by 3 AM Nov 4",
+      "count_window": "Mail ballots must arrive by 8 PM Nov 3; mail ID proof by Nov 9; military/overseas by 5 PM Nov 10; full unofficial statewide returns due 5 PM Nov 10; county computation done Nov 17",
+      "certification_date": "2026-11-23 (county deadline to certify to the Secretary); Secretary's own date not found",
+      "certification_source": "https://www.pa.gov/content/dam/copapwp-pagov/en/dos/programs/voting-and-elections/running-for-office/2026/2026-general-election-calendar.pdf",
+      "wait_line": "Pennsylvania posts statewide results in batches after 8 PM Eastern. Mail and overseas ballots arriving by Nov 10 still count.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "Confirm the 2026 General appears in the election dropdown after 8 PM ET with an Unofficial Returns headline",
+        "Record the 2026 ElectionID and ElectionType and the real JSON calls from the browser network panel",
+        "Check whether the Election Feed menu offers a downloadable JSON or CSV, and whether curl is still blocked by Incapsula",
+        "Note which counties report in the first hour and whether mail ballots are in"
+      ],
+      "official_by": null,
+      "official_by_sure": false,
+      "label": "Pennsylvania"
+    },
+    {
+      "id": "philadelphia-pa",
+      "state": "PA",
+      "kind": "county",
+      "name": "Philadelphia County (City Commissioners)",
+      "results_url": "https://vote.phila.gov/results/",
+      "results_url_status": "live_for_nov3_2026 (0-vote test shell, 0 of 1,703 divisions, 'Testing in Progress', last updated Nov 1)",
+      "format": "Custom server-rendered ASP.NET app on Azure Government (philadelphiaresults.azurewebsites.us) embedded in vote.phila.gov; vendor not named",
+      "adapter_guess": "html_table",
+      "endpoints": [
+        "https://philadelphiaresults.azurewebsites.us/",
+        "https://philadelphiaresults.azurewebsites.us/ResultsSW.aspx?type=STW&map=CTY (also CON, STS, STR, QUE)",
+        "https://philadelphiaresults.azurewebsites.us/ResultsExport.aspx",
+        "https://philadelphiaresults.azurewebsites.us/VoterTurnoutDetails.aspx",
+        "https://philadelphiaresults.azurewebsites.us/Scroller/Scroller2.aspx"
+      ],
+      "covers_local": "No city offices in 2026 (odd-year city elections). Covers statewide, Congress, state senate, state house and ballot questions inside the city",
+      "first_post": "8 PM when polls close (2024 office notice, prior pattern); 2026 contents unconfirmed",
+      "cadence": "Not stated; office calls it real-time. Watch 'Results Last Updated' and divisions reported of 1,703",
+      "count_window": "Mail by 8 PM Nov 3; mail ID proof by Nov 9; military/overseas by 5 PM Nov 10; canvass begins by 9 AM Nov 6; computation done Nov 17",
+      "certification_date": "2026-11-23 (state county deadline; Philadelphia's own date not posted)",
+      "certification_source": "https://www.pa.gov/content/dam/copapwp-pagov/en/dos/programs/voting-and-elections/running-for-office/2026/2026-general-election-calendar.pdf",
+      "wait_line": "Philadelphia starts posting at 8 PM Eastern and updates through the night. Totals can shift until Nov 10.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "Confirm the Testing in Progress banner is gone and the last-updated stamp moves after 8 PM",
+        "Check ResultsExport.aspx for file links and formats (CSV, XLSX, XML)",
+        "List the races and ballot questions on each ResultsSW.aspx tab and check the HTML is scrapeable",
+        "Note whether mail ballots post first",
+        "Read the Nov 2 mail ballot status update in a browser"
+      ],
+      "counties": [
+        "Philadelphia"
+      ],
+      "official_by": "2026-11-23",
+      "official_by_sure": true,
+      "label": "Philadelphia"
+    },
+    {
+      "id": "allegheny-pa",
+      "state": "PA",
+      "kind": "county",
+      "name": "Allegheny County",
+      "results_url": "https://results.enr.clarityelections.com/PA/Allegheny/127287/",
+      "results_url_status": "live_for_nov3_2026 (0 of 1,327 precincts, setup stamp Oct 26)",
+      "format": "Clarity (SOE Software) election night reporting, Angular site, with CSV/XLS/XML/TXT report zips",
+      "adapter_guess": "clarity",
+      "endpoints": [
+        "https://results.enr.clarityelections.com/PA/Allegheny/127287/reports/summary.zip",
+        "https://results.enr.clarityelections.com/PA/Allegheny/127287/reports/detailxml.zip",
+        "https://results.enr.clarityelections.com/PA/Allegheny/127287/reports/detailtxt.zip",
+        "https://results.enr.clarityelections.com/PA/Allegheny/127287/reports/detailxlsx.zip",
+        "https://results.enr.clarityelections.com/PA/Allegheny/127287/current_ver.txt (inferred)",
+        "https://results.enr.clarityelections.com/PA/Allegheny/127287/<ver>/json/en/summary.json (inferred)"
+      ],
+      "covers_local": "Yes. 2 federal, 24 state, 1 municipal contest and 4 referenda including Duquesne home rule charter and a Penn Hills charter amendment; no school board items listed",
+      "first_post": "After 8 PM; mail ballots pre-canvassed from 7 AM likely post first (secondary 2025 snippet, unverified for 2026)",
+      "cadence": "Not stated; Clarity versioned batches through the night (unverified)",
+      "count_window": "Mail by 8 PM Nov 3; canvass and provisional review start 9 AM Fri Nov 6; military/overseas by 5 PM Nov 10",
+      "certification_date": "Not posted; expect about 2026-11-23 (state county deadline; primary certified 20 days after)",
+      "certification_source": "https://www.alleghenycounty.us/Government/Elections/Election-Updates",
+      "wait_line": "Allegheny County posts after 8 PM Eastern, likely mail ballots first.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "Confirm precincts reporting rises from 0 of 1,327 and the Last updated stamp moves",
+        "Download summary.zip and detailxml.zip; test current_ver.txt and json/en/summary.json from a normal browser without header spoofing",
+        "Note whether the first batch is mail ballots and when it lands",
+        "Open the Municipal and referendum contests and record their names",
+        "Watch the county updates page for the certification meeting notice"
+      ],
+      "counties": [
+        "Allegheny"
+      ],
+      "official_by": "2026-11-23",
+      "official_by_sure": false,
+      "label": "Allegheny County"
+    },
+    {
+      "id": "results-TN",
+      "state": "TN",
+      "kind": "state",
+      "name": "Tennessee Secretary of State, Division of Elections",
+      "results_url": "https://www.elections.tn.gov/",
+      "results_url_status": "live_for_nov3_2026",
+      "format": "Custom SOS Election Night Reporting dashboard (Bootstrap, jQuery, D3), auto-updating; mirror at gm.tnelectionresults.com",
+      "adapter_guess": "link_only",
+      "endpoints": [],
+      "covers_local": "no: Governor, Congress, General Assembly and constitutional amendments, with 95-county breakdown; no city or school items seen (inferred from tabs)",
+      "first_post": "Shortly after 7 PM CT, early and absentee totals first (Tennessean, Nov 3, 2026)",
+      "cadence": "Updates itself as each county reports; interval not stated",
+      "count_window": "Mostly election night; absentee ballots must arrive by close of polls (unverified); provisional ballots during county canvass, dates not found",
+      "certification_date": "Counties by Mon Nov 23, 2026 (third Monday, computed); state certification date not found",
+      "certification_source": "T.C.A. 2-8-101 via https://law.justia.com/codes/tennessee/2019/title-2/chapter-8/section-2-8-101/ (2019 third-party copy)",
+      "wait_line": "Tennessee posts early and absentee votes soon after 7 PM Central, then county by county through the night.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "Confirm the counties-completed counter moves off 0 of 95 after 7 PM CT",
+        "Capture the JSON/XHR feed URL in the browser network tab; switch adapter to json_custom if found",
+        "Confirm gm.tnelectionresults.com/county-breakdown/<race> pattern for 2026",
+        "Look for a state certification date on sos.tn.gov press releases"
+      ],
+      "official_by": null,
+      "official_by_sure": false,
+      "label": "Tennessee"
+    },
+    {
+      "id": "results-TN-davidson",
+      "state": "TN",
+      "kind": "county",
+      "name": "Davidson County Election Commission (Nashville)",
+      "results_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+      "results_url_status": "prior_election_pattern: index is live but has no Nov 3 entry yet; predicted results page https://www.nashville.gov/departments/elections/261103 (guess from the 260806 pattern, not confirmed)",
+      "format": "Server-rendered HTML tables (Election Day, Absentee, Early, Total, N of N Precincts Reporting); certified precinct PDF later",
+      "adapter_guess": "html_table",
+      "endpoints": [],
+      "covers_local": "yes: every Davidson contest in one list; tonight Belle Meade, Forest Hills and Goodlettsville municipal races plus state and federal; no Metro Nashville race",
+      "first_post": "Shortly after 7 PM CT, early and absentee totals first (about 35% voted early)",
+      "cadence": "Refreshed as precincts report (179 precincts); interval not documented",
+      "count_window": "All 179 precincts reported election night in 2024 and Aug 2026; provisional handling dates not found",
+      "certification_date": "By Mon Nov 23, 2026 (computed); Aug 2026 precedent certified 14 days after",
+      "certification_source": "T.C.A. 2-8-101 (2019 copy, https://law.justia.com/codes/tennessee/2019/title-2/chapter-8/section-2-8-101/); https://www.nashville.gov/departments/elections/260806",
+      "wait_line": "Davidson County usually posts early and absentee votes soon after 7 PM Central, then the rest late tonight.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "Find which URL carries Nov 3 results (predicted /departments/elections/261103 or a new index entry)",
+        "Confirm columns and the Precincts Reporting line, and note any last-updated time",
+        "Confirm Belle Meade, Forest Hills and Goodlettsville races appear",
+        "Note how often numbers change"
+      ],
+      "counties": [
+        "Davidson"
+      ],
+      "official_by": "2026-11-23",
+      "official_by_sure": false,
+      "label": "Davidson County"
+    },
+    {
+      "id": "results-TN-maury",
+      "state": "TN",
+      "kind": "county",
+      "name": "Maury County Election Commission",
+      "results_url": "https://www.maurycounty-tn.gov/227/Election-Commission",
+      "results_url_status": "prior_election_pattern: office page live with no results link yet; Aug 6, 2026 pattern https://www.maurycounty-tn.gov/DocumentCenter/View/7437/Aug26-Summary-Report; Nov file number unknown",
+      "format": "PDF Summary Results Report and Precinct Report in the county Document Center (Electionware-style layout, vendor inferred)",
+      "adapter_guess": "pdf",
+      "endpoints": [],
+      "covers_local": "likely yes: Columbia mayor and vice mayor, Mt. Pleasant two commissioners, plus state and federal (inferred from Aug report; not confirmed)",
+      "first_post": "After 7 PM CT, early vote first (Aug 6 pattern per Main Street Maury)",
+      "cadence": "Periodic PDF uploads through the night; interval not documented (unverified)",
+      "count_window": "Aug 6 report showed 22 of 22 precincts with provisional column by Aug 7 at latest; post-Election Day handling not documented",
+      "certification_date": "Likely by Mon Nov 23, 2026 (computed from state law; unverified for Maury)",
+      "certification_source": "State law (section number disputed between scouts: 2-8-101 vs 2-8-105); meeting schedule at https://www.maurycounty-tn.gov/227/Election-Commission",
+      "wait_line": "Maury County posts PDF reports through the night, early votes first. Check back if the link isn't up yet.",
+      "confidence": "sourced",
+      "verify_tonight": [
+        "Reload the office page and Document Center for a Nov 3 Summary and Precinct Report PDF",
+        "Confirm Columbia mayor, vice mayor and Mt. Pleasant commissioner contests appear and read Precincts Reporting X of 22",
+        "Confirm Maury canvass or certification date",
+        "Confirm provisional and late absentee handling"
+      ],
+      "counties": [
+        "Maury"
+      ],
+      "official_by": "2026-11-23",
+      "official_by_sure": false,
+      "label": "Maury County"
+    }
+  ],
+  "open_questions": [
+    "Which statewide SOS results URL is live for 2026: results.texas-election.com (showed 2024 at 12:44 CT) or electionresults.sos.state.tx.us/results.html (Hays scout saw it with 'Updated 10/14/2026')?",
+    "Local runoff date: SOS calendar read as Sat Dec 12 by Williamson scout and Dallas calendar, but statewide scout read a Dec 9 window; confirm Dec 12.",
+    "Cure deadline conflict: Harris says six days (Nov 9), Dallas says Nov 10; and which five-day deadline the SOS advisory moves for the Sunday rollover.",
+    "Bexar first post: held until the line clears (San Antonio Report) or 7 PM (KSAT)?",
+    "Can our fetcher read Clarity feeds (Travis returned CloudFront 403 to plain curl; Dallas and Bexar worked with a browser user agent)? Policy on user agent needs a decision, since the scouts declined to spoof.",
+    "Hays and Williamson sites sit behind bot walls; link-out with 'last checked' may be the only honest option for those two.",
+    "Arapahoe: a person needs to open the county results hub in a browser tonight. Its robots.txt blocks bots, so the vendor, local coverage and schedule are unknown.",
+    "Jefferson 127408 was found by probing and the county had not linked it as of 12:47 CT. Confirm it is the general before showing it to voters.",
+    "Colorado SOS pages ban robots. A person should read the ENR FAQ and the Nov 2 press release for the office's own wording on how long counting takes.",
+    "Use the statewide feed for Aurora 3A-3D, since it sums all three counties? I recommend it, and the build should check that it equals the sum of the county slices.",
+    "Boulder's data feed and local coverage are unknown until the page goes live after 7 PM MT.",
+    "Does the CA SOS site expose any download or data feed behind its bot wall, or must statewide rows be scraped with a real browser?",
+    "What JSON feed does results.lavote.gov call, and can our fetcher get past Imperva tonight without paying Firecrawl per poll?",
+    "Does Orange County's Live Voter Turnout folder 24 publish a summary_24.xml like San Diego's? (inferred by analogy, unverified)",
+    "Does Glendale have local contests on the LA ballot, and where do Long Beach, Torrance and Los Angeles city council races appear?",
+    "Which Capistrano Unified trustee area covers Dana Point, and does Dana Point have any local item?",
+    "What is Orange County's November signature-cure deadline, and does the June rule delaying certification apply in November?",
+    "Recount and city-charter runoff rules were not read on an official page beyond the LA media kit's Elections Code citations.",
+    "Does nyenr.elections.ny.gov expose a JSON/CSV feed, or is HomeNoJS.aspx the cleanest scrape?",
+    "Does enr.boenyc.gov go live at 9 PM ET, and what is its feed shape?",
+    "State certification: Dec 15 is the legal deadline (state calendar), but Protect Democracy lists Dec 3. Which date should the guide show?",
+    "Exact automatic recount thresholds under Election Law 9-216 / 16-106 are unconfirmed.",
+    "Only NYC and Sullivan were inventoried; guide users in other NY counties need their own county board results pages for local races.",
+    "NYC's own canvass date and absentee/affidavit deadlines are not confirmed.",
+    "Mail-ballot receipt deadline: Capitol News Illinois says Nov 19, a 14-day window gives Nov 17. Which does ISBE or the Chicago board state?",
+    "ISBE blocks crawlers via robots.txt. Is link_only acceptable for statewide Illinois, or does someone check it by hand tonight?",
+    "Chicago results sit behind a Drupal AJAX form that needs one POST per contest and ward. Is a stateful scraper worth it this cycle, or link out with 'last checked' until the response shape is known?",
+    "Suburban Cook (Cook County Clerk) and the collar counties are not mapped. Do any guide users live there?",
+    "Scouts gave St. Louis County the same id as the state (results-MO); I used results-MO-stlouis-county and results-MO-stlouis-city. Confirm the registry id convention.",
+    "Does the SOS live view have a JSON feed behind it? Needs browser network capture after 7 PM CT.",
+    "Is the St. Louis County CSV updated during the night, or only dropped after counting? Decides csv_download vs link_only tonight.",
+    "Is stlouis.totalvote.com the county's election-night site this year? It did not resolve at 12:51 CT.",
+    "County's 'two weeks' precinct-results phrase was scout-read but not found in the saved copies; re-save the Election Results Archive page.",
+    "Provisional cure dates and recount thresholds for Missouri were not read from statute or any official page.",
+    "No SBE source says when results first post or how often pages refresh; the order (early and mail first) is inferred from mail processing starting Oct 13 and the column layout.",
+    "No CSV, JSON or XML endpoint found; html_table scraping of the _P pages is the plan unless a download link appears tonight.",
+    "gen_status.html serves the site's 404 page today and the index's Reporting Status link points to the site home; may go live tonight.",
+    "Scout notes corrected on reread: Governor names are real (match guide data, Cox won the June 2026 primary), county pages do include school board and some town councils, and there are exactly 24 county pages.",
+    "Municipal results page not opened; check whether any town contest in our guide lives there instead of the county page.",
+    "Recount margin thresholds and a direct no-runoff rule were not read.",
+    "Orange: tonight's election id, and whether summary.json or summary.zip is reachable without a browser user agent (current_ver.txt returned 403)",
+    "Do Orlando city contests appear on Orange's county results page?",
+    "Leon: the 2026 general id, and whether the general page lists Tallahassee and county measures",
+    "Escambia: are school board or mayor items on the general ballot, and do CSV exports show up on election night?",
+    "The Nov 5 mail-ballot cure deadline came from garbled PDF text and needs a recheck",
+    "Domestic mail receipt deadline (7 PM Election Day) and the overseas 10-day rule have not been read on a state page or in statute",
+    "Only 3 of Florida's 67 counties are mapped; local items everywhere else need county sources",
+    "The enr.electionsfl.org path order differs by county (/LEO/Summary/<id>/ vs /ESC/<id>/Summary/), so one shared adapter has to handle both",
+    "Will the 2026 general feed include ANC races? They were missing in 2024, and ANC is the most hyperlocal DC item; if absent, the guide needs a link-only fallback.",
+    "How will the API mark round-by-round RCV results (same slug with a new results type, or a separate election entry)? The guide must not show a leader from first-rank data.",
+    "What does the DCBOE home page's 'November 6 to 10' note mean, given the calendar's Nov 13 mail receipt deadline?",
+    "The scout's report that getElectionInfo/2026-General-Election returned 500 is not in the saved-pages index; only the numeric-id 500 is recorded.",
+    "The claim that long lines delayed June primary results past 8 PM is not in the saved PoPville text; unverified.",
+    "Fulton's results vendor tonight (Clarity or Enhanced Voting) and its new election id or slug appear only after 7 PM ET.",
+    "DeKalb's Enhanced Voting JSON feed path is unknown; a guessed /results/public/api path returned 404.",
+    "Statewide certification date conflict: Nov 20 (North Atlanta Star) vs about Nov 13 (WJCL). The SOS calendar is behind a bot check.",
+    "The Fulton scout reported the SOS path /Georgia/elections/2026NovGen, but the state scout and DeKalb use 11032026GeneralAndSpecialElection. The memo treats the latter as canonical.",
+    "Atlanta voters on the DeKalb side need the Fulton feed for city council and APS items. Which State House and Congressional districts cover that slice is unconfirmed.",
+    "The SOS feed shows 1 ballot item so far, so it's unconfirmed whether it carries county breakdowns or all statewide offices.",
+    "What is the export or JSON feed URL behind results.oregonvotes.gov once results load?",
+    "Does rcvresults.multco.us expose a JSON feed for ranked choice rounds, and how fast do rounds appear?",
+    "What is tonight's exact Multnomah results page URL?",
+    "What is the statewide certification date and the statute behind it?",
+    "What are Oregon's recount thresholds and statewide signature cure deadline?",
+    "Do Portland school board and special district contests appear on the county site, the state ENR, or both?",
+    "Only Multnomah was scouted: do Washington, Clackamas or Lane counties matter for the guide's users?",
+    "Recount thresholds (machine under 2,000 votes and 0.5%, hand under 150 and 0.25%) are background knowledge only; the SOS Recount FAQ was not fetched.",
+    "Contest-level JSON shape on Enhanced Voting is unseen until totals post tonight, so the parser cannot be finished ahead of time.",
+    "Which other WA counties do we cover (Pierce, Snohomish, Spokane, Clark)? Each needs its results.votewa.gov slug for local items.",
+    "Scout error corrected in memo: 8 PM Pacific is 10 PM Central, not 11 PM.",
+    "Seattle contests on the Nov 3 ballot were not confirmed.",
+    "Postmark arrival cutoff and signature cure deadline were not read on an official page.",
+    "Do legislative district races appear on the statewide by-contest page, or only on county pages? (County canvass covers state House and Senate per the calendar.)",
+    "What URL does Mobile's county page use once linked, and does it carry local contests?",
+    "Does Export Data return CSV/Excel with precinct detail, and can it be fetched with a viewstate POST?",
+    "Which local contests are on Mobile County's Nov 3 ballot?",
+    "Recount threshold and runoff rules for the general were not read on an official page.",
+    "The other 66 Alabama counties' probate results pages were not mapped; does the guide cover any other AL places?",
+    "Correction to scouts: the Nov 6 5 PM ID-cure deadline IS on the 2026 admin calendar (Sec. 17-10-2(a)(3)), so it is verified, not unverified.",
+    "What are the 2026 ElectionID and the real JSON or Election Feed URLs on electionreturns.pa.gov, and can a polite fetch get past Incapsula?",
+    "Will Philadelphia's ResultsExport.aspx publish CSV or XML tonight, or must we scrape HTML tables?",
+    "Are Philadelphia and Allegheny Election Integrity Grant counties (that changes when they count mail ballots and whether they post a mail-received count by 12:01 AM Nov 4)?",
+    "Do Allegheny's Clarity current_ver.txt and json/en/summary.json exist as inferred?",
+    "What is the Secretary of the Commonwealth's statewide certification date?",
+    "Correction to a scout note: the Philadelphia scout said canvass starts 9 AM Wed Nov 4; the state calendar says return boards begin by 9 AM Fri Nov 6, and the memo uses Nov 6.",
+    "Allegheny polling place Pittsburgh 14-13 moved to Carnegie Library of Pittsburgh, Homewood (Oct 30 notice); check this matches the guide's voting location data.",
+    "Where is the JSON feed behind the SOS dashboard? Needs a browser network-tab look after 7 PM CT.",
+    "Which URL will Davidson use for Nov 3 results? /departments/elections/261103 is only a guess.",
+    "What Document Center number will Maury's Nov PDF get? It can't be predicted, so someone has to find it each election.",
+    "Which statute section governs county certification (2-8-101 or 2-8-105), and when does the state certify in 2026?",
+    "How are provisional ballots counted after Election Day, and when? No official page was found.",
+    "Where SOS and county numbers both cover a state race, which one should the guide treat as its source?",
+    "The scouts gave Davidson and the state the same id (results-TN). The registry rows use results-TN-davidson and results-TN-maury instead."
+  ]
+}

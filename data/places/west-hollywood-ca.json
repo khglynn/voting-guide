@@ -96,7 +96,8 @@
  "lookups": {
   "early_in_person": "https://locator.lavote.gov/locations/vc?culture=en",
   "election_day": "https://locator.lavote.gov/locations/vc?culture=en",
-  "drop_box": "https://locator.lavote.gov/locations/vbm?culture=en"
+  "drop_box": "https://locator.lavote.gov/locations/vbm?culture=en",
+  "results": "https://results.lavote.gov/"
  },
  "situations": [
   {
@@ -164,5 +165,6 @@
    "name": "Ballotpedia: LA County 2026 (West Basin Division 4 election canceled)",
    "url": "https://ballotpedia.org/Municipal_elections_in_Los_Angeles_County,_California_(2026)"
   }
- ]
+ ],
+ "results_source": "Los Angeles County Registrar"
 }

@@ -323,7 +323,8 @@
       "lookups": {
         "early_in_person": "https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Early%20Voting%20Dashboard.html",
         "election_day": "https://www.vote.org/polling-place-locator/",
-        "election_day_waits": "https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Election%20Day%20Voting%20Dashboard.html"
+        "election_day_waits": "https://updates.electionlink.net/widgets/williamsontx/2026-11-03/Election%20Day%20Voting%20Dashboard.html",
+        "results": "https://results.enr.clarityelections.com/TX/Williamson/127488/"
       },
       "source": "https://www.wilcotx.gov/elections",
       "confidence": "verified",
@@ -332,7 +333,8 @@
         "url": "https://www.wilcotx.gov/elections",
         "phone": "512-943-1630",
         "source": "https://www.wilcotx.gov/elections"
-      }
+      },
+      "results_source": "Williamson County Elections"
     },
     {
       "county": "Travis",
@@ -341,7 +343,8 @@
       "lookups": {
         "early_in_person": "https://www.google.com/maps/d/viewer?mid=1t_vWJgd_BRfKnJn_fQoHE25IV2i_0Jo",
         "election_day": "https://www.vote.org/polling-place-locator/",
-        "election_day_waits": "https://updates.electionlink.net/widgets/travistx/2026-11-03/Election%20Day%20Voting%20Dashboard.html"
+        "election_day_waits": "https://updates.electionlink.net/widgets/travistx/2026-11-03/Election%20Day%20Voting%20Dashboard.html",
+        "results": "https://results.enr.clarityelections.com/TX/Travis/"
       },
       "source": "https://votetravis.gov/current-election-information/current-election/",
       "confidence": "verified",
@@ -356,7 +359,8 @@
           }
         ],
         "source": "https://votetravis.gov/current-election-information/current-election/"
-      }
+      },
+      "results_source": "Travis County Clerk"
     }
   ],
   "sources": [

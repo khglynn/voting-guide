@@ -100,7 +100,8 @@
   "lookups": {
     "early_in_person": "https://www.jeffco.us/3907/Find-a-Voting-Location",
     "election_day": "https://www.jeffco.us/3907/Find-a-Voting-Location",
-    "drop_box": "https://www.jeffco.us/3907/Find-a-Voting-Location"
+    "drop_box": "https://www.jeffco.us/3907/Find-a-Voting-Location",
+    "results": "https://results.enr.clarityelections.com/CO/Jefferson/127408/"
   },
   "early_in_person": {
     "start": "2026-10-19",
@@ -135,5 +136,6 @@
       "name": "Jefferson County: upcoming election and key dates",
       "url": "https://www.jeffco.us/5015/Upcoming-Election"
     }
-  ]
+  ],
+  "results_source": "Jefferson County Elections"
 }

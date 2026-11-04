@@ -621,5 +621,7 @@
       "from": "2026-10-31",
       "text": "https://elections.maryland.gov/elections/2026/2026_General_Drop_Box_Locations.pdf"
     }
-  ]
+  ],
+  "results_url": "https://elections.maryland.gov/elections/2026/general_results/index.html",
+  "results_source": "Maryland State Board of Elections"
 }

@@ -724,5 +724,7 @@
       "from": "2026-11-03",
       "text": "https://ova.elections.il.gov/PollingPlaceLookup.aspx"
     }
-  ]
+  ],
+  "results_url": "https://elections.il.gov/ElectionOperations/ElectionVoteTotals.aspx",
+  "results_source": "Illinois State Board of Elections"
 }

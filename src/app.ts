@@ -17,6 +17,7 @@ import { partiesOnBallot, toggleChip, setSources, setParty, chipMembers, chipSta
 import { readAdds, updateAdd, forgetAdd, readStatus, pickNew, mergeFound, withoutIds, withFound, idsIn, settled, typedSource, POLL_MS, WATCH_MS, type Add, type AddStatus, type Found } from './model/adds';
 import { statusOf, addsHTML, addName, ADD_COPY } from './views/adds';
 import { onWantSites, putSites, retrySites } from './model/sites';
+import { doorFills } from './views/mast';
 
 /* ---------- data ---------- */
 const BASE = import.meta.env.BASE_URL || '/';
@@ -477,7 +478,7 @@ export async function showBallot(): Promise<{ n: number; plan: ReturnType<typeof
     if (first) first.focus(); else if (S.retry) $('[data-fk="retry"]')?.focus(); else $('#zip')?.focus();
     return null;
   }
-  const plan = S.door.fill && !S.tryMode ? planSetup(S.b.party) : null;
+  const plan = doorFills() ? planSetup(S.b.party) : null;
   const n = plan && plan.fills.length ? applyFills(plan.fills) : 0;
   // A fill runs once: back on the first page later, the switch is off, so it can't refill races
   // you've since cleared. A new ZIP's ballot starts with it on again.

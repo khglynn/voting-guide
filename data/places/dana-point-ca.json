@@ -105,7 +105,8 @@
  "lookups": {
   "early_in_person": "https://ocvote.gov/elections/vote-center-locations",
   "election_day": "https://ocvote.gov/elections/vote-center-locations",
-  "drop_box": "https://ocvote.gov/elections/ballot-drop-box-locations"
+  "drop_box": "https://ocvote.gov/elections/ballot-drop-box-locations",
+  "results": "https://ocvote.gov/results/current-election-results"
  },
  "early_in_person": {
   "start": "2026-10-24",
@@ -216,5 +217,6 @@
    "name": "Orange County (CA): 38th Senate District precinct map",
    "url": "https://ocvote.gov/bin/maps/pdf/StateSenate/Map_38th%20Senate%20District.pdf"
   }
- ]
+ ],
+ "results_source": "Orange County Registrar of Voters"
 }

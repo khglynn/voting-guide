@@ -85,7 +85,8 @@
  "lookups": {
   "early_in_person": "https://locator.lavote.gov/locations/vc?culture=en",
   "election_day": "https://locator.lavote.gov/locations/vc?culture=en",
-  "drop_box": "https://locator.lavote.gov/locations/vbm?culture=en"
+  "drop_box": "https://locator.lavote.gov/locations/vbm?culture=en",
+  "results": "https://results.lavote.gov/"
  },
  "situations": [
   {
@@ -153,5 +154,6 @@
    "name": "LA County Registrar: final list of measures on the Nov 3, 2026 ballot (Sept 22, 2026)",
    "url": "https://content.lavote.gov/docs/rrcc/documents/final-measures-appearing-on-the-ballot-9-22-2026-v-2.pdf"
   }
- ]
+ ],
+ "results_source": "Los Angeles County Registrar"
 }

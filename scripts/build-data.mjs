@@ -124,7 +124,7 @@ function placeLookups(x, where) {
   if (x == null) return null;
   if (typeof x !== 'object') { warn(`${where}: lookups is not an object; dropped it`); return null; }
   const out = {};
-  for (const k of ['early_in_person', 'election_day', 'election_day_waits', 'drop_box', 'tracking']) {
+  for (const k of ['early_in_person', 'election_day', 'election_day_waits', 'drop_box', 'tracking', 'results']) {
     if (x[k] == null) continue;
     const u = safeUrl(x[k]);
     if (u) out[k] = u; else warn(`${where}: lookups.${k} is not an http(s) URL; dropped it`);
@@ -158,7 +158,9 @@ function placeByCounty(list, p, where) {
       if (l && ck(l.county) === ck(c.county) && l.state === String(p.state || '').toUpperCase()) sites = c.sites.trim();
       else warn(`${where}: by_county ${c.county} sites "${c.sites}" names no usable data/sites list for that county; dropped it`);
     }
-    out.push({ county: c.county.trim(), zips, lookups, source: safeUrl(c.source), confidence: conf(c.confidence), ...optional({ office, sites }) });
+    // Who publishes its results page (Nov 3), only beside a results link.
+    const results_source = lookups.results ? str(c.results_source) : null;
+    out.push({ county: c.county.trim(), zips, lookups, source: safeUrl(c.source), confidence: conf(c.confidence), ...optional({ office, sites, results_source }) });
   }
   // One county is allowed: it names the county the place's own links belong to (San Marcos's are Hays's), so a
   // voter the address lookup puts in another county gets the state's links instead.
@@ -360,6 +362,15 @@ function stateHelp(s, f) {
   if (s.sample_ballot_url != null) {
     const u = safeUrl(s.sample_ballot_url);
     if (u) s.sample_ballot_url = u; else { warn(`${f}: sample_ballot_url is not an http(s) URL; dropped it`); delete s.sample_ballot_url; }
+  }
+  // The state's official results page and who publishes it (Nov 3), shown once its polls close.
+  if (s.results_url != null) {
+    const u = safeUrl(s.results_url);
+    if (u) s.results_url = u; else { warn(`${f}: results_url is not an http(s) URL; dropped it`); delete s.results_url; }
+  }
+  if (s.results_source != null) {
+    const n = s.results_url ? str(s.results_source) : null;
+    if (n) s.results_source = n; else { if (s.results_url) warn(`${f}: results_source is not text; dropped it`); delete s.results_source; }
   }
 }
 function ownWordsChecked(x, where) {
@@ -713,6 +724,7 @@ for (const f of listJson('places')) {
     district_finders: districtFinders(p.district_finders, f),
     heads_up: headsUp(p.heads_up, f),
     ...optional({ early_in_person: placeEarly(p.early_in_person, f), lookups: placeLookups(p.lookups, f), by_county: placeByCounty(p.by_county, p, f), situations: placeSituations(p.situations, f),
+      results_source: p.lookups && safeUrl(p.lookups.results) ? str(p.results_source) : null,
       mail_ballot: placeMail(p.mail_ballot, f), election_day: placeElectionDay(p.election_day, f),
       county_fips: placeCountyFips(p.county_fips, f), zip_outside: placeZipOutside(p.zip_outside, p, f),
       local_picks_checked: localPicksChecked(p.local_picks_checked, f),
@@ -1021,6 +1033,103 @@ function bundleFor(ids, placeId = null) {
   return { items, endorsements: ends, endorsers: [...used].map((id) => endorsers.get(id)) };
 }
 fs.rmSync(OUT, { recursive: true, force: true });
+/* ---------- results (Nov 3, Phase 0 of the results view: links only) ----------
+   data/results-sources.json is the workbench registry of where each state and county posts official results,
+   copied in with three fields of the site's (its `note` says which). A row must have an id, a state, a kind
+   (state or county), a name, an https results_url, a wait line (the sentence a voter reads: under 25 words, never
+   "called" or "won", since the guide calls nothing), a certification_date (a date or a plain rule) and a
+   confidence; a bad row is skipped and blocks the deploy (check-data). Each state bundle carries its state row
+   and each place bundle the county rows for its counties, as `results.sources`. Wait lines and dates are shown as
+   the data says them, never computed.
+   data/whats-next.json's `after_election` rows are the dated steps after Election Day: only rows marked verified
+   or sourced, whose `when` is a date (or "Between date and date") the registry didn't compute, estimate or mark
+   tentative; the rest stay out, counted in the report. State rows go to the state bundle (`results.next`); county
+   and city rows to the places whose counties they name, or to every place in the state when they speak for all
+   its counties. */
+const RES_KINDS = ['state', 'county'];
+const realDate = (v) => isDate(v) && new Date(`${v}T00:00:00Z`).toISOString().slice(0, 10) === v;
+const cKey = (x) => String(x).replace(/\s*\(.*?\)\s*/g, ' ').replace(/\s+county$/i, '').trim().toLowerCase();
+const confOf = (v) => { const w = isStr(v) ? v.trim().split(/[\s(;,]/)[0].toLowerCase() : ''; return CONF.includes(w) ? w : 'unverified'; };
+const resultsRows = [];
+if (!fs.existsSync(path.join(DATA, 'results-sources.json'))) skipRec('results-sources.json', '(file)', 'data/results-sources.json is missing');
+else {
+  const j = readJson('results-sources.json');
+  if (!j || !Array.isArray(j.sources) || !j.sources.length) skipRec('results-sources.json', '(file)', 'needs a non-empty `sources` list');
+  for (const r of (j && Array.isArray(j.sources) ? j.sources : [])) {
+    const id = r && str(r.id);
+    const bad = (why) => skipRec('results-sources.json', id || '(no id)', why);
+    if (!id || !isStr(r.state) || !RES_KINDS.includes(r.kind) || !isStr(r.name)) { bad('needs id, state, kind (state or county) and name'); continue; }
+    const url = isStr(r.results_url) && /^https:\/\/\S+$/.test(r.results_url.trim()) ? r.results_url.trim() : null;
+    if (!url) { bad('results_url is not an https URL'); continue; }
+    const wl = str(r.wait_line);
+    if (!wl || wl.split(/\s+/).length >= 25) { bad('wait_line is missing or 25 words or more'); continue; }
+    if (/\b(called|won)\b/i.test(wl) || /\u2014/.test(wl)) { bad('wait_line says called or won, or has an em dash'); continue; }
+    if (!isStr(r.certification_date)) { bad('certification_date is missing (a date or a plain rule)'); continue; }
+    if (r.official_by != null && !realDate(r.official_by)) { bad('official_by is not a real YYYY-MM-DD date'); continue; }
+    // The first http(s) address in the source text (Colorado's starts "C.R.S. 1-10-105 ..."), else none.
+    const cert = (String(r.certification_source || '').match(/https?:\/\/[^\s;,)]+/) || [null])[0];
+    if (r.official_by_sure === true && !cert) warn(`results-sources ${id}: official_by_sure with no certification_source URL; shown as no date`);
+    if (!isStr(r.confidence)) { bad('confidence is missing'); continue; }
+    const counties = r.kind === 'county' ? (Array.isArray(r.counties) ? r.counties.filter(isStr).map((c) => c.trim()) : []) : null;
+    if (r.kind === 'county' && !counties.length) { bad('a county row needs `counties`, spelled as the place files spell them'); continue; }
+    resultsRows.push({
+      id, state: r.state.trim().toUpperCase(), kind: r.kind, name: r.name.trim(), ...(str(r.label) ? { label: str(r.label) } : {}), results_url: url, wait_line: wl,
+      certification_date: r.certification_date.trim(), certification_source: cert,
+      // A sure date needs its source: without one it still turns the phase never, and shows as no date (Codex, Nov 3).
+      official_by: r.official_by || null, official_by_sure: !!(r.official_by && r.official_by_sure === true && cert), confidence: confOf(r.confidence),
+      ...(counties ? { counties } : {}),
+    });
+  }
+}
+const resultsOfState = (st) => resultsRows.filter((r) => r.state === st && r.kind === 'state');
+const resultsOfPlace = (p) => {
+  const ks = new Set((p.counties || []).map(cKey));
+  return resultsRows.filter((r) => r.state === p.state && r.kind === 'county' && r.counties.some((c) => ks.has(cKey(c))));
+};
+const WHEN = /^(\d{4}-\d{2}-\d{2})\b|^Between (\d{4}-\d{2}-\d{2}) and (\d{4}-\d{2}-\d{2})\b/;
+const SOFT = /comput|calculat|tentative|planned|about|estimat|expect|unverified|conflict|likely|if needed/i;
+const nextRows = [];
+report.whatsNext = { kept: 0, left_out: 0 };
+if (!fs.existsSync(path.join(DATA, 'whats-next.json'))) skipRec('whats-next.json', '(file)', 'data/whats-next.json is missing');
+else {
+  const j = readJson('whats-next.json');
+  if (!j || !Array.isArray(j.rows) || !j.rows.length) skipRec('whats-next.json', '(file)', 'needs a non-empty `rows` list');
+  for (const r of (j && Array.isArray(j.rows) ? j.rows : [])) {
+    if (!r || r.kind !== 'after_election') continue;
+    const m = isStr(r.when) ? r.when.trim().match(WHEN) : null;
+    // A date the research wrote wrong (2026-99-99) is a hole, not a judgment call: it blocks (check-data).
+    if (m && ![m[1], m[2], m[3]].filter(Boolean).every(realDate)) { skipRec('whats-next.json', `${r.state} ${String(r.line || '').slice(0, 40)}`, `when "${r.when}" is not a real date`); continue; }
+    const line = str(r.line);
+    const source = isStr(r.source) ? safeUrl(r.source.split(/\s+/)[0]) : null;
+    const ok = ['verified', 'sourced'].includes(String(r.confidence).trim()) && m && !SOFT.test(r.when) && line && !/\u2014/.test(line) && source && isStr(r.state) && ['state', 'county', 'city'].includes(r.level);
+    if (!ok) { report.whatsNext.left_out++; continue; }
+    report.whatsNext.kept++;
+    const date = m[1] || m[3];
+    nextRows.push({ state: r.state.trim().toUpperCase(), level: r.level, jurisdiction: str(r.jurisdiction) || '', date, ...(m[2] ? { from: m[2] } : {}), line, source, confidence: r.confidence.trim() });
+  }
+}
+// The counties the guide knows in each state, so a county row's jurisdiction can name the ones it speaks for.
+const knownCounties = new Map();
+for (const [, p] of places) for (const c of p.counties || []) { const k = cKey(c); if (!k) continue; if (!knownCounties.has(p.state)) knownCounties.set(p.state, new Set()); knownCounties.get(p.state).add(k); }
+const escRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const namesIn = (st, text) => [...(knownCounties.get(st) || [])].filter((k) => new RegExp(`(^|[^a-z])${escRe(k)}([^a-z]|$)`, 'i').test(text));
+const byDate = (a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0);
+const nextOfState = (st) => nextRows.filter((r) => r.state === st && r.level === 'state').sort(byDate);
+const nextOfPlace = (p) => {
+  const ks = new Set((p.counties || []).map(cKey));
+  // `counties`: the counties a row names, so a ballot whose voter's county is known can leave out another county's
+  // dates (Hays's canvass on a Travis voter's Austin ballot). Absent: the row speaks for every county.
+  return nextRows.flatMap((r) => {
+    if (r.state !== p.state || r.level === 'state') return [];
+    const head = r.jurisdiction.replace(/\s*\(.*?\)\s*/g, ' ');
+    if (/\b(all|every|each)\b|\bcounties\b/i.test(head)) return [r];
+    const named = namesIn(p.state, head);
+    if (!named.length) return [r];
+    const mine = (p.counties || []).filter((c) => named.includes(cKey(c))).map((c) => c.replace(/\s*\(.*?\)\s*/g, ' ').trim());
+    return mine.length ? [{ ...r, counties: mine }] : [];
+  }).sort(byDate);
+};
+
 fs.mkdirSync(OUT, { recursive: true });
 const write = (name, obj) => { fs.writeFileSync(path.join(OUT, name), JSON.stringify(obj)); return fs.statSync(path.join(OUT, name)).size; };
 
@@ -1034,6 +1143,8 @@ for (const [st, s] of states) {
   const b = bundleFor(ordered);
   // Where phones are "restricted", My plan prints the state's one-line rule (phones_short), if it is one plain line.
   if (s.in_the_booth && s.in_the_booth.phones_short != null) s.in_the_booth.phones_short = helpShort(s.in_the_booth.phones_short, `${st} in_the_booth.phones_short`);
+  // The state's own results row and statewide dates ride on its howto, where plan.localHowto adds the ballot's counties'.
+  s.results = { sources: resultsOfState(st), next: nextOfState(st) };
   const bundle = { state: st, name: CONFIG.stateNames[st] || st, howto: s, order: ordered, ...b };
   sizes[`state-${st}.json`] = write(`state-${st}.json`, bundle);
   stateBundles.set(st, bundle);
@@ -1045,6 +1156,10 @@ for (const [st, s] of states) {
     election_date: s.election_date,
     official_site: s.official_site,
     places: [],
+    // The first page's results lead (Nov 3): when each state's polls close, its official results page, and its
+    // mail-ballot tracker (shown once every state has closed).
+    polls_close: s.election_day.polls_close,
+    ...optional({ results_url: s.results_url, results_source: s.results_source, mail_tracking_url: safeUrl(s.mail_ballot && s.mail_ballot.tracking_url) }),
     ...coverageOf(bundle, []),
   };
 }
@@ -1053,7 +1168,7 @@ for (const [id, p] of places) {
   const local = p.order.filter((x) => !sw.has(x));
   const b = bundleFor(local, id);
   const pm = placeMaps.get(id) || [];
-  const bundle = { ...p, file: undefined, local, ...b, ...(pm.length ? { maps: pm } : {}) };
+  const bundle = { ...p, file: undefined, local, ...b, ...(pm.length ? { maps: pm } : {}), results: { sources: resultsOfPlace(p), next: nextOfPlace(p) } };
   sizes[`place-${id}.json`] = write(`place-${id}.json`, bundle);
   // The place's map files too, so an address typed on the first page can start them loading as soon
   // as the Census names the place, beside its bundle. And the same coverage numbers for this place's
@@ -1103,6 +1218,7 @@ report.maps = Object.fromEntries([...placeMaps].map(([id, ms]) => [id, { maps: m
 report.counts = {
   states: states.size, places: places.size, contests: contests.size, measures: measures.size,
   endorsers: endorsers.size, endorsements: endorsementByKey.size, zips: Object.keys(index.zips).length,
+  results: resultsRows.length, whats_next: nextRows.length,
   maps: mapCopies.length, sites: Object.fromEntries([...siteLists].map(([id, l]) => [id, { listed: l.sites.length, official: l.count_official }])),
 };
 report.sizes = sizes;

@@ -538,5 +538,7 @@
       "from": "2026-10-31",
       "text": "Every active registered voter is mailed a ballot automatically. No request or excuse is needed. Counties began mailing Wednesday, October 14, and must finish by October 20. Multnomah County ballots started arriving October 14. Still don't have yours? Call your county now. You can order a replacement and pick it up in person through 8 PM on Election Day (Multnomah: 503-988-VOTE (8683), 1040 SE Morrison St. in Portland or the Gresham Voting Center Express)."
     }
-  ]
+  ],
+  "results_url": "https://results.oregonvotes.gov/",
+  "results_source": "Oregon Secretary of State"
 }

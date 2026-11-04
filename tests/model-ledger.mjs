@@ -1574,20 +1574,20 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     // Codex r2 (r1 #12): poll times are compared where the polls are, never on the device's clock.
     const austin = open('TX', ['austin-tx']).howto;
     check('plan: Austin is on Central time', JSON.stringify(austin.zones) === '["America/Chicago"]');
-    check('plan: at 7:30 PM Central (01:30 UTC) Austin says the polls closed, on any device', plan.nextStep(austin, '2026-11-03', false, new Date('2026-11-04T01:30:00Z')).phase === 'polls_closed');
+    check('plan: at 7:30 PM Central (01:30 UTC) Austin says the polls closed, on any device', plan.nextStep(austin, '2026-11-03', false, new Date('2026-11-04T01:30:00Z')).phase === 'results_counting');
     check('plan: at 6:59 PM Central Austin is still voting', plan.nextStep(austin, '2026-11-03', false, new Date('2026-11-04T00:59:00Z')).phase === 'election_day');
     const txAll = plan.nextStep(tx, '2026-11-03', false, new Date('2026-11-04T01:30:00Z'));
     check('plan: a statewide Texas ballot waits for El Paso (Mountain time) before saying closed', txAll.phase === 'election_day' && /Your local polls close at 7 PM/.test(words(txAll)), words(txAll));
-    check('plan: and says closed once every Texas zone has closed', plan.nextStep(tx, '2026-11-03', false, new Date('2026-11-04T02:01:00Z')).phase === 'polls_closed');
+    check('plan: and says closed once every Texas zone has closed', plan.nextStep(tx, '2026-11-03', false, new Date('2026-11-04T02:01:00Z')).phase === 'results_counting');
     // Codex r3: after midnight in Texas (10:10 PM on a Pacific device) the polls must not reopen.
-    check('plan: after midnight Central on Nov 4, a Pacific device still on Nov 3 says closed', plan.nextStep(austin, '2026-11-03', false, new Date('2026-11-04T06:10:00Z')).phase === 'polls_closed');
-    check('plan: a statewide Texas ballot after midnight in both zones says closed', plan.nextStep(tx, '2026-11-03', false, new Date('2026-11-04T07:30:00Z')).phase === 'polls_closed');
+    check('plan: after midnight Central on Nov 4, a Pacific device still on Nov 3 says closed', plan.nextStep(austin, '2026-11-03', false, new Date('2026-11-04T06:10:00Z')).phase === 'results_counting');
+    check('plan: a statewide Texas ballot after midnight in both zones says closed', plan.nextStep(tx, '2026-11-03', false, new Date('2026-11-04T07:30:00Z')).phase === 'results_counting');
     check('plan: Pensacola is on Central time, Orlando Eastern', JSON.stringify(open('FL', ['pensacola-fl']).howto.zones) === '["America/Chicago"]' && JSON.stringify(open('FL', ['orlando-fl']).howto.zones) === '["America/New_York"]');
     // Tennessee's polls close at one moment, 7 PM Central and 8 PM Eastern: a statewide ballot names both, Nashville its own.
     const tn = read('state-TN.json').howto;
     const tnDay = plan.nextStep(tn, '2026-11-03', false, new Date('2026-11-04T00:30:00Z'));
     check('plan: a statewide Tennessee ballot names both closing times', tnDay.phase === 'election_day' && /^Today is Election Day\. Polls close at 7:00 PM Central \(8:00 PM Eastern\)\.$/.test(words(tnDay)), words(tnDay));
-    check('plan: and says closed at 7 PM Central, when East Tennessee closes too', plan.nextStep(tn, '2026-11-03', false, new Date('2026-11-04T01:01:00Z')).phase === 'polls_closed');
+    check('plan: and says closed at 7 PM Central, when East Tennessee closes too', plan.nextStep(tn, '2026-11-03', false, new Date('2026-11-04T01:01:00Z')).phase === 'results_counting');
     const nash = plan.nextStep(open('TN', ['nashville-tn']).howto, '2026-11-03', false, new Date('2026-11-04T00:30:00Z'));
     check('plan: Nashville says its own 7 PM', nash.phase === 'election_day' && /^Today is Election Day\. Polls close at 7 PM\.$/.test(words(nash)), words(nash));
     // Each Tennessee county sets its own opening time (Knox and Hamilton open at 8 AM Eastern), so the day before
@@ -1598,10 +1598,10 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('plan: the day before, Austin gives both times', txEve.sub.join(' ') === 'Polls are open 7 AM to 7 PM.', txEve.sub.join(' | '));
     // Codex #12: after the polls close on Election Day, say so, and keep the in-line rule.
     const shut = plan.nextStep(tx, '2026-11-03', false, 19 * 60);
-    check('plan: at 7 PM on Election Day Texas says the polls closed', shut.phase === 'polls_closed' && /^Polls closed at 7 PM\. Already in line\? Stay in line\.$/.test(words(shut)), words(shut));
+    check('plan: at 7 PM on Election Day Texas leads with results (Kevin, Nov 3: not "voting has ended")', shut.phase === 'results_counting' && words(shut) === 'Results are rolling in.' && shut.primary.label === 'Official results', words(shut));
     check('plan: after close the in-line rule stays', shut.sub.some((x) => /in line/i.test(x)) && !/Find where to vote/.test(JSON.stringify(shut.primary)), shut.sub.join(' | '));
     check('plan: one minute before close it is still Election Day', plan.nextStep(tx, '2026-11-03', false, 18 * 60 + 59).phase === 'election_day');
-    check('plan: a mail state says voting closed, not polls', /^Voting closed at 7 PM/.test(words(plan.nextStep(co, '2026-11-03', false, 21 * 60))));
+    check('plan: a mail state leads with results too once voting closes', plan.nextStep(co, '2026-11-03', false, 21 * 60).phase === 'results_counting' && words(plan.nextStep(co, '2026-11-03', false, 21 * 60)) === 'Results are rolling in.');
     check('plan: text read later (absolute) never says closed', plan.nextStep(tx, '2026-11-03', true, 23 * 60).phase === 'election_day');
     // Codex #4: a postmark deadline is not a drop-off time.
     for (const s of ['CA', 'DC', 'OR', 'WA']) {
@@ -1673,7 +1673,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const a2 = { early_in_person: { start: '2026-10-24', end: '2026-10-31', hours_note: 'B', lookup_url: 'https://b.example', source: 'https://b.example', confidence: 'verified' } };
     check('plan: places that disagree keep the state window', plan.localHowto(fl, [a1, a2]).early_in_person === fl.early_in_person && plan.localHowto(fl, [a1, {}]).early_in_person === fl.early_in_person);
     check('plan: places that agree on dates but not pages keep the state page', plan.localHowto(fl, [a1, { early_in_person: { ...a1.early_in_person, lookup_url: 'https://c.example' } }]).early_in_person.lookup_url === fl.early_in_person.lookup_url);
-    check('plan: after Election Day says voting has closed', plan.nextStep(co, '2026-11-04').phase === 'closed');
+    check('plan: after Election Day says voting has closed', plan.nextStep(co, '2026-11-04').phase === 'results_counting');
     check('plan: never a countdown', !/days? (left|until|to Election)/i.test(JSON.stringify([step, cs])));
     check('plan: clockMinutes reads 7:00 PM, 8 p.m. and noon', plan.clockMinutes('7:00 PM') === 1140 && plan.clockMinutes('8 p.m. sharp') === 1200 && plan.clockMinutes('by noon') === 720 && plan.clockMinutes('12:30 AM') === 30);
   }

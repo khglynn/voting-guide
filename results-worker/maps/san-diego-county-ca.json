@@ -1,0 +1,491 @@
+{
+  "id": "san-diego-county-ca",
+  "state": "CA",
+  "name": "San Diego County",
+  "county": "San Diego",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "25",
+    "feed_name": null
+  },
+  "guide": {
+    "places": [
+      "san-diego-ca"
+    ],
+    "fingerprint": "2037544dcdc306d9",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:34:35.315Z"
+  },
+  "feed": {
+    "adapter": "lvt",
+    "base": "https://www.livevoterturnout.com/ENR/sandiegocaenr/25",
+    "results_url": "https://www.livevoterturnout.com/ENR/sandiegocaenr/25/en/Index_25.html",
+    "identity": "named",
+    "identity_note": "summary_25.xml and Index_25.html answered our named User-Agent with 200 on Nov 3, 8:18 and 8:21 PM PT (GeneratedDate 7:57:42 PM PT, 689,666 ballots counted).",
+    "election_id_from": "The registry's capture (verified) found sdvote.com's results link on folder 25; the XML's ElectionID is 25 on every row. The XML names no election or date, so the folder is the identity.",
+    "labels": [
+      "Unofficial Election Results"
+    ],
+    "labels_note": "The banner on Index_25.html (shown in capitals), read Nov 3, 8:21 PM PT; the XML carries no status words.",
+    "tz": "America/Los_Angeles"
+  },
+  "certify_by": "2026-12-03",
+  "polls_close": "2026-11-04T04:00:00Z",
+  "count_closes": "2026-12-04T07:59:00Z",
+  "complete_marker": null,
+  "official": null,
+  "contests": [
+    {
+      "feed_id": "19",
+      "feed_name": "MEMBER OF THE STATE ASSEMBLY 75TH DISTRICT",
+      "item": "ca-assembly-75",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "CARL DEMAIO": "Carl DeMaio",
+        "GERALD C. BOURSIQUOT": "Gerald C. Boursiquot"
+      },
+      "reaches": [
+        "San Diego",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "20",
+      "feed_name": "MEMBER OF THE STATE ASSEMBLY 76TH DISTRICT",
+      "item": "ca-assembly-76",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DARSHANA PATEL": "Darshana Patel",
+        "CARRIE S. ESPINOZA VILLANUEVA": "Carrie S. Espinoza Villanueva"
+      },
+      "reaches": [
+        "San Diego",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "21",
+      "feed_name": "MEMBER OF THE STATE ASSEMBLY 77TH DISTRICT",
+      "item": "ca-assembly-77",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "TASHA BOERNER": "Tasha Boerner",
+        "TRINITY HANNAWAY": "Trinity Hannaway"
+      },
+      "reaches": [
+        "San Diego",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "22",
+      "feed_name": "MEMBER OF THE STATE ASSEMBLY 78TH DISTRICT",
+      "item": "ca-assembly-78",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "CHRIS WARD": "Chris Ward",
+        "PAYTON GALVEZ": "Payton Galvez"
+      },
+      "reaches": [
+        "San Diego",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "23",
+      "feed_name": "MEMBER OF THE STATE ASSEMBLY 79TH DISTRICT",
+      "item": "ca-assembly-79",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "LASHAE SHARP-COLLINS": "LaShae Sharp-Collins",
+        "ANDREW LAWSON": "Andrew Lawson"
+      },
+      "reaches": [
+        "San Diego",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "24",
+      "feed_name": "MEMBER OF THE STATE ASSEMBLY 80TH DISTRICT",
+      "item": "ca-assembly-80",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DAVID A. ALVAREZ": "David A. Alvarez",
+        "ALEJANDRO GALICIA": "Alejandro Galicia"
+      },
+      "reaches": [
+        "San Diego",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "14",
+      "feed_name": "STATE SENATOR 18TH DISTRICT (SAN DIEGO PORTION ONLY)",
+      "item": "ca-state-senate-18",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "STEVE PADILLA": "Steve Padilla",
+        "ART HODGES": "Art Hodges"
+      },
+      "reaches": [
+        "San Diego",
+        "Imperial",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "16",
+      "feed_name": "STATE SENATOR 38TH DISTRICT (SAN DIEGO PORTION ONLY)",
+      "item": "ca-state-senate-38",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "CATHERINE S. BLAKESPEAR": "Catherine S. Blakespear",
+        "LAURA BASSETT": "Laura Bassett"
+      },
+      "reaches": [
+        "San Diego",
+        "Orange",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "17",
+      "feed_name": "STATE SENATOR 40TH DISTRICT",
+      "item": "ca-state-senate-40",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "MARA ELLIOTT": "Mara Elliott",
+        "KRISTIE BRUCE-LANE": "Kristie Bruce-Lane"
+      },
+      "reaches": [
+        "San Diego",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "10",
+      "feed_name": "UNITED STATES REPRESENTATIVE 49TH DISTRICT (SAN DIEGO PORTION ONLY)",
+      "item": "ca-us-house-49",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "MIKE LEVIN": "Mike Levin",
+        "ARMEN KURDIAN": "Armen Kurdian"
+      },
+      "reaches": [
+        "San Diego",
+        "Orange"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "11",
+      "feed_name": "UNITED STATES REPRESENTATIVE 50TH DISTRICT",
+      "item": "ca-us-house-50",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "SCOTT PETERS": "Scott Peters",
+        "STEVE COHEN": "Steve Cohen"
+      },
+      "reaches": [
+        "San Diego",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "12",
+      "feed_name": "UNITED STATES REPRESENTATIVE 51ST DISTRICT",
+      "item": "ca-us-house-51",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "SARA JACOBS": "Sara Jacobs",
+        "RICARDO CABRERA": "Ricardo Cabrera"
+      },
+      "reaches": [
+        "San Diego",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "13",
+      "feed_name": "UNITED STATES REPRESENTATIVE 52ND DISTRICT",
+      "item": "ca-us-house-52",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "JUAN VARGAS": "Juan Vargas",
+        "JEFF BELLE": "Jeff Belle"
+      },
+      "reaches": [
+        "San Diego",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "148",
+      "feed_name": "CITY OF SAN DIEGO MEMBER, CITY COUNCIL DISTRICT NO. 2",
+      "item": "sd-city-council-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "NICOLE CROSBY": "Nicole Crosby",
+        "RICHARD BAILEY": "Richard Bailey"
+      },
+      "reaches": [
+        "San Diego"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "149",
+      "feed_name": "CITY OF SAN DIEGO MEMBER, CITY COUNCIL DISTRICT NO. 4",
+      "item": "sd-city-council-4",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "MARTHA ABRAHAM": "Martha Abraham",
+        "HENRY FOSTER III": "Henry Foster III"
+      },
+      "reaches": [
+        "San Diego"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "150",
+      "feed_name": "CITY OF SAN DIEGO MEMBER, CITY COUNCIL DISTRICT NO. 6",
+      "item": "sd-city-council-6",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "KENT LEE": "Kent Lee",
+        "MARK POWELL": "Mark Powell"
+      },
+      "reaches": [
+        "San Diego"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "151",
+      "feed_name": "CITY OF SAN DIEGO MEMBER, CITY COUNCIL DISTRICT NO. 8",
+      "item": "sd-city-council-8",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "ANTONIO MARTINEZ": "Antonio Martinez",
+        "GERARDO RAMIREZ": "Gerardo Ramirez"
+      },
+      "reaches": [
+        "San Diego"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "111",
+      "feed_name": "ASSESSOR/RECORDER/COUNTY CLERK",
+      "item": "sd-county-assessor",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "JORDAN Z. MARKS": "Jordan Z. Marks"
+      },
+      "reaches": [
+        "San Diego"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "43",
+      "feed_name": "COUNTY BOARD OF EDUCATION 3RD DISTRICT",
+      "item": "sd-county-board-of-ed-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "ALICIA MUÑOZ": "Alicia Muñoz",
+        "CORY BROWN": "Cory Brown"
+      },
+      "reaches": [
+        "San Diego"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "44",
+      "feed_name": "COUNTY BOARD OF EDUCATION 5TH DISTRICT",
+      "item": "sd-county-board-of-ed-5",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "RICK SHEA": "Rick Shea",
+        "BIANCA RAGONESI-LASCHE": "Bianca Ragonesi-Lasche"
+      },
+      "reaches": [
+        "San Diego"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "201",
+      "feed_name": "COUNTY OF SAN DIEGO - MEASURE A - Majority Required To Pass",
+      "item": "sd-county-measure-a",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "YES": "yes",
+        "NO": "no"
+      },
+      "reaches": [
+        "San Diego"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "202",
+      "feed_name": "COUNTY OF SAN DIEGO - MEASURE B - Majority Required To Pass",
+      "item": "sd-county-measure-b",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "YES": "yes",
+        "NO": "no"
+      },
+      "reaches": [
+        "San Diego"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority, 50% plus one (Registrar's voter pamphlet; it is a special tax for set purposes, but because citizens put it on the ballot, a majority is enough)"
+    },
+    {
+      "feed_id": "109",
+      "feed_name": "MEMBER, BOARD OF SUPERVISORS DISTRICT NO. 4",
+      "item": "sd-county-supervisor-4",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "MONICA MONTGOMERY STEPPE": "Monica Montgomery Steppe",
+        "KRISTINE C. ALESSIO": "Kristine C. Alessio"
+      },
+      "reaches": [
+        "San Diego"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "112",
+      "feed_name": "TREASURER-TAX COLLECTOR",
+      "item": "sd-county-treasurer",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "LARRY COHEN": "Larry Cohen",
+        "SHIRLEY NAKAWATASE": "Shirley Nakawatase"
+      },
+      "reaches": [
+        "San Diego"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "48",
+      "feed_name": "SAN DIEGO COMMUNITY COLLEGE DISTRICT MEMBER, BOARD OF TRUSTEES DISTRICT A",
+      "item": "sdccd-district-a",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "MARIA NIETO SENOUR": "Maria Nieto Senour",
+        "JONNY BROWN": "Jonny Brown"
+      },
+      "reaches": [
+        "San Diego"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "49",
+      "feed_name": "SAN DIEGO COMMUNITY COLLEGE DISTRICT MEMBER, BOARD OF TRUSTEES DISTRICT C",
+      "item": "sdccd-district-c",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "CRAIG MILGRIM": "Craig Milgrim",
+        "SAMANTHA ELY": "Samantha Ely"
+      },
+      "reaches": [
+        "San Diego"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "66",
+      "feed_name": "SAN DIEGO UNIFIED SCHOOL DISTRICT MEMBER, BOARD OF EDUCATION DISTRICT B",
+      "item": "sdusd-district-b",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "SHANA HAZAN": "Shana Hazan"
+      },
+      "reaches": [
+        "San Diego"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "67",
+      "feed_name": "SAN DIEGO UNIFIED SCHOOL DISTRICT MEMBER, BOARD OF EDUCATION DISTRICT C",
+      "item": "sdusd-district-c",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "HAYDEN GORE": "Hayden Gore"
+      },
+      "reaches": [
+        "San Diego"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "215",
+      "feed_name": "SAN DIEGO UNIFIED SCHOOL DISTRICT - MEASURE M - 55% Required To Pass",
+      "item": "sdusd-measure-m",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "BONDS - YES": "yes",
+        "BONDS - NO": "no"
+      },
+      "reaches": [
+        "San Diego"
+      ],
+      "item_url": null,
+      "pass_threshold": "55% (school bond under Prop 39)"
+    }
+  ],
+  "unmatched_feed": [],
+  "unmatched_guide": [],
+  "not_here": []
+}

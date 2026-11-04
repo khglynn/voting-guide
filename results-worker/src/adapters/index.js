@@ -8,5 +8,7 @@ import * as tx_sos from './tx_sos.js';
 import * as dc from './dc.js';
 import * as enhanced_voting from './enhanced_voting.js';
 import * as la_county from './la_county.js';
+import * as lvt from './lvt.js';
+import * as ca_sos from './ca_sos.js';
 
-export const ADAPTERS = { clarity, harris, tx_sos, dc, enhanced_voting, la_county };
+export const ADAPTERS = { clarity, harris, tx_sos, dc, enhanced_voting, la_county, lvt, ca_sos };

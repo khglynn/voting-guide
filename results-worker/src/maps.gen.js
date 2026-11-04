@@ -8333,6 +8333,1412 @@ export const MAPS = [
     "not_here": []
   },
   {
+    "id": "orange-county-ca",
+    "state": "CA",
+    "name": "Orange County",
+    "county": "Orange",
+    "election": {
+      "date": "2026-11-03",
+      "feed_election_id": "24",
+      "feed_name": null
+    },
+    "guide": {
+      "places": [
+        "dana-point-ca",
+        "fullerton-ca"
+      ],
+      "fingerprint": "71066bd96ba4b1f7",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:34:36.163Z"
+    },
+    "feed": {
+      "adapter": "lvt",
+      "base": "https://www.livevoterturnout.com/ENR/orangecaenr/24",
+      "results_url": "https://ocvote.gov/results/current-election-results",
+      "identity": "named",
+      "identity_note": "summary_24.xml and the iframe page phkv4sV_Index_24.html answered our named User-Agent with 200 on Nov 3, 8:18 and 8:19 PM PT (GeneratedDate 8:04:59 PM PT, 604,945 ballots counted).",
+      "election_id_from": "ocvote.gov's current-election-results page frames folder 24 (registry capture); the page heads it '2026 General Election' and the XML's ElectionID is 24 on every row. The XML names no election or date, so the folder is the identity.",
+      "labels": [
+        "Unofficial Election Results"
+      ],
+      "labels_note": "The banner on the folder 24 page, read Nov 3, 8:19 PM PT; the XML carries no status words.",
+      "tz": "America/Los_Angeles"
+    },
+    "certify_by": "2026-12-03",
+    "polls_close": "2026-11-04T04:00:00Z",
+    "count_closes": "2026-12-04T07:59:00Z",
+    "complete_marker": null,
+    "official": null,
+    "contests": [
+      {
+        "feed_id": "1300",
+        "feed_name": "MEMBER OF THE STATE ASSEMBLY 59th District",
+        "item": "ca-assembly-59",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "*PHILLIP CHEN (REP)": "Phillip Chen",
+          "VICTOR HERNANDEZ (GRN)": "Victor Hernandez"
+        },
+        "reaches": [
+          "Orange",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "1320",
+        "feed_name": "MEMBER OF THE STATE ASSEMBLY 67th District",
+        "item": "ca-assembly-67",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MARK PULIDO (DEM)": "Mark Pulido",
+          "PAULO MORALES (REP)": "Paulo Morales"
+        },
+        "reaches": [
+          "Orange",
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "1380",
+        "feed_name": "MEMBER OF THE STATE ASSEMBLY 74th District",
+        "item": "ca-assembly-74",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "*LAURIE DAVIES (REP)": "Laurie Davies",
+          "SERGIO FARIAS (DEM)": "Sergio Farias"
+        },
+        "reaches": [
+          "Orange",
+          "San Diego"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "1220",
+        "feed_name": "STATE SENATOR 34th District",
+        "item": "ca-state-senate-34",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "AVELINO VALENCIA (DEM)": "Avelino Valencia",
+          "RHONDA SHADER (REP)": "Rhonda Shader"
+        },
+        "reaches": [
+          "Orange",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "1230",
+        "feed_name": "STATE SENATOR 36th District",
+        "item": "ca-state-senate-36",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "CHRIS DUNCAN (DEM)": "Chris Duncan",
+          "*TONY STRICKLAND (REP)": "Tony Strickland"
+        },
+        "reaches": [
+          "Orange",
+          "other counties",
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "1250",
+        "feed_name": "STATE SENATOR 38th District",
+        "item": "ca-state-senate-38",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "*CATHERINE S. BLAKESPEAR (DEM)": "Catherine S. Blakespear",
+          "LAURA BASSETT (REP)": "Laura Bassett"
+        },
+        "reaches": [
+          "Orange",
+          "San Diego"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "1145",
+        "feed_name": "UNITED STATES REPRESENTATIVE 41st District",
+        "item": "ca-us-house-41",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "LINDA SÁNCHEZ (DEM)": "Linda Sánchez",
+          "MITCH CLEMMONS (REP)": "Mitch Clemmons"
+        },
+        "reaches": [
+          "Orange",
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "1165",
+        "feed_name": "UNITED STATES REPRESENTATIVE 45th District",
+        "item": "ca-us-house-45",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DEREK TRAN (DEM)": "Derek Tran",
+          "CHUONG V. VO (REP)": "Chuong V. Vo"
+        },
+        "reaches": [
+          "Orange",
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "1175",
+        "feed_name": "UNITED STATES REPRESENTATIVE 46th District",
+        "item": "ca-us-house-46",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "LOU CORREA (DEM)": "Lou Correa",
+          "DAVID PAN (REP)": "David Pan"
+        },
+        "reaches": [
+          "Orange",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "1185",
+        "feed_name": "UNITED STATES REPRESENTATIVE 47th District",
+        "item": "ca-us-house-47",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DAVE MIN (DEM)": "Dave Min",
+          "JENNY RAE LE ROUX (REP)": "Jenny Rae Le Roux"
+        },
+        "reaches": [
+          "Orange",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "1195",
+        "feed_name": "UNITED STATES REPRESENTATIVE 49th District",
+        "item": "ca-us-house-49",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MIKE LEVIN (DEM)": "Mike Levin",
+          "ARMEN KURDIAN (REP)": "Armen Kurdian"
+        },
+        "reaches": [
+          "Orange",
+          "San Diego"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "5073",
+        "feed_name": "CITY OF FULLERTON Member, City Council District 3",
+        "item": "fullerton-council-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "*SHANA CHARLES": "Shana Charles",
+          "DANIEL H. KIM": "Daniel Kim"
+        },
+        "reaches": [
+          "Orange"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "5075",
+        "feed_name": "CITY OF FULLERTON Member, City Council District 5",
+        "item": "fullerton-council-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "OSCAR VALADEZ": "Oscar Valadez",
+          "JOZEF MALDONADO": "Jozef Maldonado",
+          "DAVID FISCHBEIN": "David Fischbein"
+        },
+        "reaches": [
+          "Orange"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "3233",
+        "feed_name": "FULLERTON JOINT UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area 1",
+        "item": "fullerton-fjuhsd-area-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REGINA CUADRA": "Regina Cuadra",
+          "MATTHEW MATIAS": "Matthew Matias"
+        },
+        "reaches": [
+          "Orange",
+          "Los Angeles"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "3237",
+        "feed_name": "FULLERTON JOINT UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area 5",
+        "item": "fullerton-fjuhsd-area-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "*MARILYN BUCHI": "Marilyn Buchi",
+          "AMY DUDICH": "Amy Dudich"
+        },
+        "reaches": [
+          "Orange",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "3305",
+        "feed_name": "FULLERTON SCHOOL DISTRICT Governing Board Member, Trustee Area 3",
+        "item": "fullerton-fsd-area-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "AMY CHOI-WON": "Amy Choi-Won",
+          "JORDAN ABUSHAWISH": "Jordan Abushawish"
+        },
+        "reaches": [
+          "Orange"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "6177",
+        "feed_name": "MOULTON NIGUEL WATER DISTRICT Director, Full Term",
+        "item": "mnwd-directors",
+        "kind": "multi",
+        "seats": 3,
+        "choices": {
+          "*WILLIAM \"BILL\" MOORHEAD": "William \"Bill\" Moorhead",
+          "*BRIAN PARKER": "Brian Parker",
+          "JENNIFER ENGLE": "Jennifer Engle",
+          "PATRICIA \"TRISH\" KELLEY": "Patricia \"Trish\" Kelley",
+          "MICHAEL CRUIKSHANK": "Michael Cruikshank",
+          "KURT LIND": "Kurt Lind",
+          "LEENA RAY": "Leena Ray"
+        },
+        "reaches": [
+          "Orange"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "6178",
+        "feed_name": "MOULTON NIGUEL WATER DISTRICT Director, Short Term",
+        "item": "mnwd-short-term",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "PATRICIA C. 'PAT' BATES": "Patricia C. \"Pat\" Bates",
+          "DAVID PETTY": "David Petty",
+          "JOEL BISHOP": "Joel Bishop"
+        },
+        "reaches": [
+          "Orange"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "3039",
+        "feed_name": "NORTH ORANGE COUNTY COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area 6",
+        "item": "nocccd-area-6",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "PAULETTE CHAFFEE": "Paulette Chaffee",
+          "JESUS SILVA": "Jesus Silva",
+          "ZONYA TOWNSEND": "Zonya Townsend",
+          "*JEFFREY P. BROWN": "Jeffrey P. Brown"
+        },
+        "reaches": [
+          "Orange"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "4004",
+        "feed_name": "County Supervisor 4th District",
+        "item": "oc-supervisor-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "CONNOR TRAUT": "Connor Traut",
+          "TIM SHAW": "Tim Shaw"
+        },
+        "reaches": [
+          "Orange"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "4005",
+        "feed_name": "County Supervisor 5th District",
+        "item": "oc-supervisor-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "*KATRINA FOLEY": "Katrina Foley",
+          "DIANE DIXON": "Diane Dixon"
+        },
+        "reaches": [
+          "Orange"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "3061",
+        "feed_name": "SOUTH ORANGE COUNTY COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area 4",
+        "item": "socccd-area-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JOHN BLACK": "John Black",
+          "GILA JONES": "Gila Jones",
+          "KARIMA FELDHUS": "Karima Feldhus",
+          "NARGES RAKIN": "Narges Rakin"
+        },
+        "reaches": [
+          "Orange"
+        ],
+        "item_url": null
+      }
+    ],
+    "unmatched_feed": [],
+    "unmatched_guide": [],
+    "not_here": []
+  },
+  {
+    "id": "results-CA",
+    "state": "CA",
+    "name": "California Secretary of State",
+    "county": "California",
+    "scope": "state",
+    "election": {
+      "date": "2026-11-03",
+      "feed_election_id": "gubernatorial-general",
+      "feed_name": null
+    },
+    "guide": {
+      "places": [
+        "state-CA",
+        "beverly-hills-ca",
+        "burbank-ca",
+        "culver-city-ca",
+        "dana-point-ca",
+        "fullerton-ca",
+        "glendale-ca",
+        "long-beach-ca",
+        "los-angeles-ca",
+        "malibu-ca",
+        "pasadena-ca",
+        "san-diego-ca",
+        "san-francisco-ca",
+        "santa-clarita-ca",
+        "santa-monica-ca",
+        "torrance-ca",
+        "west-hollywood-ca"
+      ],
+      "fingerprint": "3a00c753df648ad1",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:34:34.556Z"
+    },
+    "feed": {
+      "adapter": "ca_sos",
+      "base": "https://api.sos.ca.gov",
+      "results_url": "https://electionresults.sos.ca.gov/",
+      "paths": [
+        "query?r=[\"02000000000059\",\"03000000000059\",\"04000000000059\",\"05000000000059\",\"06000000000059\",\"07000000000059\",\"08000000000059\",\"16000000000059\",\"14000000000459\",\"14000000000659\"]",
+        "ballot-measures",
+        "board-of-equalization/district/all",
+        "us-rep/district/all"
+      ],
+      "expect_props": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45"
+      ],
+      "identity": "named",
+      "identity_note": "The SOS's documented JSON feed (api.sos.ca.gov) answered our named User-Agent with 200s on Nov 3, 8:20 to 8:27 PM PT. Its results site electionresults.sos.ca.gov served an Incapsula bot-check page to the same request (8:18 PM PT), so we never read the site; rows link to it.",
+      "election_id_from": "The feed names no election. media.sos.ca.gov/media/api-endpoints.csv, read Nov 3 8:23 PM PT, lists these endpoints for 'the California November 3, 2026 Statewide General Election' (status endpoint returns/status/gubernatorial-general, the id used here). Each read confirms the ballot by its measure numbers (feed.expect_props: 1 to 5 and 37 to 45).",
+      "query_ids_from": "Contest ids from the same endpoints list: 02 to 08 the statewide offices, 16 Superintendent, 14 ... 04 and 06 the two Supreme Court retentions, each with county code 59 (statewide); the SOS allows ten per query.",
+      "labels": [],
+      "tz": "America/Los_Angeles"
+    },
+    "certify_by": "2026-12-11",
+    "polls_close": "2026-11-04T04:00:00Z",
+    "count_closes": "2026-12-04T07:59:00Z",
+    "complete_marker": null,
+    "official": null,
+    "contests": [
+      {
+        "feed_id": "Attorney General - Statewide Results",
+        "feed_name": "Attorney General - Statewide Results",
+        "item": "ca-attorney-general",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Rob Bonta": "Rob Bonta",
+          "Michael E. Gates": "Michael E. Gates"
+        },
+        "reaches": [
+          "California",
+          "all 58 California counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "Board of Equalization District 1 - Districtwide Results",
+        "feed_name": "Board of Equalization District 1 - Districtwide Results",
+        "item": "ca-boe-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Nelson Esparza": "Nelson Esparza",
+          "Shannon Grove": "Shannon Grove"
+        },
+        "reaches": [
+          "California",
+          "Alpine",
+          "Amador",
+          "Butte",
+          "Calaveras",
+          "Colusa",
+          "El Dorado",
+          "Fresno",
+          "Glenn",
+          "Inyo",
+          "Kern",
+          "Kings",
+          "Lassen",
+          "Madera",
+          "Mariposa",
+          "Merced",
+          "Modoc",
+          "Mono",
+          "Nevada",
+          "Placer",
+          "Plumas",
+          "Sacramento",
+          "San Bernardino",
+          "San Joaquin",
+          "Shasta",
+          "Sierra",
+          "Siskiyou",
+          "Solano",
+          "Stanislaus",
+          "Sutter",
+          "Tehama",
+          "Tulare",
+          "Tuolumne",
+          "Yolo",
+          "Yuba"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "Board of Equalization District 2 - Districtwide Results",
+        "feed_name": "Board of Equalization District 2 - Districtwide Results",
+        "item": "ca-boe-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Sally J. Lieber": "Sally J. Lieber",
+          "John Pimentel": "John Pimentel"
+        },
+        "reaches": [
+          "California",
+          "Alameda",
+          "Contra Costa",
+          "Del Norte",
+          "Humboldt",
+          "Lake",
+          "Marin",
+          "Mendocino",
+          "Monterey",
+          "Napa",
+          "San Benito",
+          "San Francisco",
+          "San Luis Obispo",
+          "San Mateo",
+          "Santa Barbara",
+          "Santa Clara",
+          "Santa Cruz",
+          "Sonoma",
+          "Trinity",
+          "Ventura"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "Board of Equalization District 3 - Districtwide Results",
+        "feed_name": "Board of Equalization District 3 - Districtwide Results",
+        "item": "ca-boe-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Mike Gipson": "Mike Gipson",
+          "Samuel P. Sukaton": "Samuel P. Sukaton"
+        },
+        "reaches": [
+          "California",
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "Board of Equalization District 4 - Districtwide Results",
+        "feed_name": "Board of Equalization District 4 - Districtwide Results",
+        "item": "ca-boe-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Tom Umberg": "Tom Umberg",
+          "Denis Bilodeau": "Denis Bilodeau"
+        },
+        "reaches": [
+          "California",
+          "Imperial",
+          "Orange",
+          "Riverside",
+          "San Diego",
+          "San Bernardino"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "Controller - Statewide Results",
+        "feed_name": "Controller - Statewide Results",
+        "item": "ca-controller",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Malia M. Cohen": "Malia M. Cohen",
+          "Herb W Morgan": "Herb W Morgan"
+        },
+        "reaches": [
+          "California",
+          "all 58 California counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "Governor - Statewide Results",
+        "feed_name": "Governor - Statewide Results",
+        "item": "ca-governor",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Xavier Becerra": "Xavier Becerra",
+          "Steve Hilton": "Steve Hilton"
+        },
+        "reaches": [
+          "California",
+          "all 58 California counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "Insurance Commissioner - Statewide Results",
+        "feed_name": "Insurance Commissioner - Statewide Results",
+        "item": "ca-insurance-commissioner",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Ben Allen": "Ben Allen",
+          "Jane Kim": "Jane Kim"
+        },
+        "reaches": [
+          "California",
+          "all 58 California counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "Lieutenant Governor - Statewide Results",
+        "feed_name": "Lieutenant Governor - Statewide Results",
+        "item": "ca-lt-governor",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Fiona Ma": "Fiona Ma",
+          "Gloria Romero": "Gloria Romero"
+        },
+        "reaches": [
+          "California",
+          "all 58 California counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "Proposition 01",
+        "feed_name": "Proposition 01: Authorizes Bonds For Housing Affordability Programs. Legislative Statute.",
+        "item": "ca-prop-1",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "California",
+          "all 58 California counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "Proposition 02",
+        "feed_name": "Proposition 02: Increases State's Rainy Day Fund. Legislative Constitutional Amendment.",
+        "item": "ca-prop-2",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "California",
+          "all 58 California counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "Proposition 03",
+        "feed_name": "Proposition 03: Provides Permanent Funding For Schools And Health Care By Extending Existing Tax On High Incomes. Initiative Constitutional Amendment.",
+        "item": "ca-prop-3",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "California",
+          "all 58 California counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "Proposition 37",
+        "feed_name": "Proposition 37: Creates Loan Program For Middle-Income Buyers Of Qualified New Homes. Initiative Statute.",
+        "item": "ca-prop-37",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "California",
+          "all 58 California counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "Proposition 38",
+        "feed_name": "Proposition 38: Authorizes Bonds For Immunology Medical Research. Initiative Statute.",
+        "item": "ca-prop-38",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "California",
+          "all 58 California counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "Proposition 39",
+        "feed_name": "Proposition 39: Prohibits Citizens From Voting Unless They Present Government-Issued Identification. Initiative Constitutional Amendment.",
+        "item": "ca-prop-39",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "California",
+          "all 58 California counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "Proposition 04",
+        "feed_name": "Proposition 04: Repeals Prohibition Against Public Funding Of Election Campaigns. Legislative Statute.",
+        "item": "ca-prop-4",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "California",
+          "all 58 California counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "Proposition 40",
+        "feed_name": "Proposition 40: Imposes One-Time Tax On Certain Taxpayers. Initiative Constitutional Amendment And Statute.",
+        "item": "ca-prop-40",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "California",
+          "all 58 California counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "Proposition 41",
+        "feed_name": "Proposition 41: Prohibits New State Taxes That Exclude Revenues From State Spending Limit. Requires Audits For New State Special Taxes. Initiative Constitutional Amendment.",
+        "item": "ca-prop-41",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "California",
+          "all 58 California counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "Proposition 42",
+        "feed_name": "Proposition 42: Prohibits New State Personal Property Taxes And Certain Retroactive State Taxes. Initiative Constitutional Amendment.",
+        "item": "ca-prop-42",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "California",
+          "all 58 California counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "Proposition 43",
+        "feed_name": "Proposition 43: Limits Voters' Ability To Raise Revenues For Local Government Services. Legislative Constitutional Amendment.",
+        "item": "ca-prop-43",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "California",
+          "all 58 California counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "Proposition 44",
+        "feed_name": "Proposition 44: Requires Community Health Clinics Spend 90% Of Revenue On Program Services. Initiative Statute.",
+        "item": "ca-prop-44",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "California",
+          "all 58 California counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "Proposition 45",
+        "feed_name": "Proposition 45: Modifies Environmental Review For Certain Projects. Initiative Statute.",
+        "item": "ca-prop-45",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "California",
+          "all 58 California counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "Proposition 05",
+        "feed_name": "Proposition 05: Changes Recall Election Process For Statewide Officers. Legislative Constitutional Amendment.",
+        "item": "ca-prop-5",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "California",
+          "all 58 California counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "Secretary of State - Statewide Results",
+        "feed_name": "Secretary of State - Statewide Results",
+        "item": "ca-secretary-of-state",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Shirley N. Weber": "Shirley N. Weber",
+          "Donald P. (Don) Wagner": "Donald P. (Don) Wagner"
+        },
+        "reaches": [
+          "California",
+          "all 58 California counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "Superintendent of Public Instruction - Statewide Results",
+        "feed_name": "Superintendent of Public Instruction - Statewide Results",
+        "item": "ca-superintendent",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Richard Barrera": "Richard Barrera",
+          "Sonja Shaw": "Sonja Shaw"
+        },
+        "reaches": [
+          "California",
+          "all 58 California counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "Supreme Court Justice - Statewide Results: Kelli M. Evans",
+        "feed_name": "Supreme Court Justice - Statewide Results: Kelli M. Evans",
+        "item": "ca-supreme-court-evans",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "California",
+          "all 58 California counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "Supreme Court Justice - Statewide Results: Joshua Groban",
+        "feed_name": "Supreme Court Justice - Statewide Results: Joshua Groban",
+        "item": "ca-supreme-court-groban",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "California",
+          "all 58 California counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "Treasurer - Statewide Results",
+        "feed_name": "Treasurer - Statewide Results",
+        "item": "ca-treasurer",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Eleni Kounalakis": "Eleni Kounalakis",
+          "Jennifer Hawks": "Jennifer Hawks"
+        },
+        "reaches": [
+          "California",
+          "all 58 California counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "U.S. House of Representatives District 11 - Districtwide Results",
+        "feed_name": "U.S. House of Representatives District 11 - Districtwide Results",
+        "item": "ca-us-house-11",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Connie Chan": "Connie Chan",
+          "Scott Wiener": "Scott Wiener"
+        },
+        "reaches": [
+          "California",
+          "San Francisco"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "U.S. House of Representatives District 15 - Districtwide Results",
+        "feed_name": "U.S. House of Representatives District 15 - Districtwide Results",
+        "item": "ca-us-house-15",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Kevin Mullin": "Kevin Mullin",
+          "Charles Hoelter": "Charles Hoelter"
+        },
+        "reaches": [
+          "California",
+          "San Mateo",
+          "San Francisco"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "U.S. House of Representatives District 26 - Districtwide Results",
+        "feed_name": "U.S. House of Representatives District 26 - Districtwide Results",
+        "item": "ca-us-house-26",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jacqui Irwin": "Jacqui Irwin",
+          "Sam Gallucci": "Sam Gallucci"
+        },
+        "reaches": [
+          "California",
+          "Ventura",
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "U.S. House of Representatives District 27 - Districtwide Results",
+        "feed_name": "U.S. House of Representatives District 27 - Districtwide Results",
+        "item": "ca-us-house-27",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "George Whitesides": "George Whitesides",
+          "Jason Gibbs": "Jason Gibbs"
+        },
+        "reaches": [
+          "California",
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "U.S. House of Representatives District 28 - Districtwide Results",
+        "feed_name": "U.S. House of Representatives District 28 - Districtwide Results",
+        "item": "ca-us-house-28",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Judy Chu": "Judy Chu",
+          "April A. Verlato": "April A. Verlato"
+        },
+        "reaches": [
+          "California",
+          "Los Angeles",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "U.S. House of Representatives District 29 - Districtwide Results",
+        "feed_name": "U.S. House of Representatives District 29 - Districtwide Results",
+        "item": "ca-us-house-29",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Angélica María Dueñas": "Angélica María Dueñas",
+          "Luz Maria Rivas": "Luz Maria Rivas"
+        },
+        "reaches": [
+          "California",
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "U.S. House of Representatives District 30 - Districtwide Results",
+        "feed_name": "U.S. House of Representatives District 30 - Districtwide Results",
+        "item": "ca-us-house-30",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Laura Friedman": "Laura Friedman",
+          "Scott Alan Meyers": "Scott Alan Meyers"
+        },
+        "reaches": [
+          "California",
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "U.S. House of Representatives District 32 - Districtwide Results",
+        "feed_name": "U.S. House of Representatives District 32 - Districtwide Results",
+        "item": "ca-us-house-32",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Brad Sherman": "Brad Sherman",
+          "Larry Thompson": "Larry Thompson"
+        },
+        "reaches": [
+          "California",
+          "Los Angeles",
+          "Ventura"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "U.S. House of Representatives District 34 - Districtwide Results",
+        "feed_name": "U.S. House of Representatives District 34 - Districtwide Results",
+        "item": "ca-us-house-34",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jimmy Gomez": "Jimmy Gomez",
+          "Angela Gonzales-Torres": "Angela Gonzales-Torres"
+        },
+        "reaches": [
+          "California",
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "U.S. House of Representatives District 36 - Districtwide Results",
+        "feed_name": "U.S. House of Representatives District 36 - Districtwide Results",
+        "item": "ca-us-house-36",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Ted W. Lieu": "Ted W. Lieu",
+          "Houston Brignano": "Houston Brignano"
+        },
+        "reaches": [
+          "California",
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "U.S. House of Representatives District 37 - Districtwide Results",
+        "feed_name": "U.S. House of Representatives District 37 - Districtwide Results",
+        "item": "ca-us-house-37",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Sydney Kamlager-Dove": "Sydney Kamlager-Dove",
+          "Samantha Mota": "Samantha Mota"
+        },
+        "reaches": [
+          "California",
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "U.S. House of Representatives District 41 - Districtwide Results",
+        "feed_name": "U.S. House of Representatives District 41 - Districtwide Results",
+        "item": "ca-us-house-41",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Linda Sánchez": "Linda Sánchez",
+          "Mitch Clemmons": "Mitch Clemmons"
+        },
+        "reaches": [
+          "California",
+          "Los Angeles",
+          "Orange"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "U.S. House of Representatives District 42 - Districtwide Results",
+        "feed_name": "U.S. House of Representatives District 42 - Districtwide Results",
+        "item": "ca-us-house-42",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Robert Garcia": "Robert Garcia",
+          "Brian Burley": "Brian Burley"
+        },
+        "reaches": [
+          "California",
+          "Los Angeles",
+          "Orange"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "U.S. House of Representatives District 43 - Districtwide Results",
+        "feed_name": "U.S. House of Representatives District 43 - Districtwide Results",
+        "item": "ca-us-house-43",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Maxine Waters": "Maxine Waters",
+          "Cristian Morales": "Cristian Morales"
+        },
+        "reaches": [
+          "California",
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "U.S. House of Representatives District 44 - Districtwide Results",
+        "feed_name": "U.S. House of Representatives District 44 - Districtwide Results",
+        "item": "ca-us-house-44",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Nanette Diaz Barragan": "Nanette Diaz Barragan",
+          "Genevieve Angel": "Genevieve Angel"
+        },
+        "reaches": [
+          "California",
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "U.S. House of Representatives District 45 - Districtwide Results",
+        "feed_name": "U.S. House of Representatives District 45 - Districtwide Results",
+        "item": "ca-us-house-45",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Derek Tran": "Derek Tran",
+          "Chuong V. Vo": "Chuong V. Vo"
+        },
+        "reaches": [
+          "California",
+          "Orange",
+          "Los Angeles"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "U.S. House of Representatives District 46 - Districtwide Results",
+        "feed_name": "U.S. House of Representatives District 46 - Districtwide Results",
+        "item": "ca-us-house-46",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Lou Correa": "Lou Correa",
+          "David Pan": "David Pan"
+        },
+        "reaches": [
+          "California",
+          "Orange"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "U.S. House of Representatives District 47 - Districtwide Results",
+        "feed_name": "U.S. House of Representatives District 47 - Districtwide Results",
+        "item": "ca-us-house-47",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Dave Min": "Dave Min",
+          "Jenny Rae Le Roux": "Jenny Rae Le Roux"
+        },
+        "reaches": [
+          "California",
+          "Orange"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "U.S. House of Representatives District 49 - Districtwide Results",
+        "feed_name": "U.S. House of Representatives District 49 - Districtwide Results",
+        "item": "ca-us-house-49",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Mike Levin": "Mike Levin",
+          "Armen Kurdian": "Armen Kurdian"
+        },
+        "reaches": [
+          "California",
+          "Orange",
+          "San Diego"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "U.S. House of Representatives District 50 - Districtwide Results",
+        "feed_name": "U.S. House of Representatives District 50 - Districtwide Results",
+        "item": "ca-us-house-50",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Scott Peters": "Scott Peters",
+          "Steve Cohen": "Steve Cohen"
+        },
+        "reaches": [
+          "California",
+          "San Diego"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "U.S. House of Representatives District 51 - Districtwide Results",
+        "feed_name": "U.S. House of Representatives District 51 - Districtwide Results",
+        "item": "ca-us-house-51",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Sara Jacobs": "Sara Jacobs",
+          "Ricardo Cabrera": "Ricardo Cabrera"
+        },
+        "reaches": [
+          "California",
+          "San Diego"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "U.S. House of Representatives District 52 - Districtwide Results",
+        "feed_name": "U.S. House of Representatives District 52 - Districtwide Results",
+        "item": "ca-us-house-52",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Juan Vargas": "Juan Vargas",
+          "Jeff Belle": "Jeff Belle"
+        },
+        "reaches": [
+          "California",
+          "San Diego"
+        ],
+        "item_url": null,
+        "whole": true
+      }
+    ],
+    "unmatched_feed": [],
+    "unmatched_guide": [
+      "ca-coa-2d-retention",
+      "ca-coa-4d-retention"
+    ],
+    "not_here": []
+  },
+  {
     "id": "results-CO-adams",
     "state": "CO",
     "name": "Adams County",
@@ -12235,6 +13641,497 @@ export const MAPS = [
       "seattle-muni-court-7",
       "seattle-prop-1"
     ]
+  },
+  {
+    "id": "san-diego-county-ca",
+    "state": "CA",
+    "name": "San Diego County",
+    "county": "San Diego",
+    "election": {
+      "date": "2026-11-03",
+      "feed_election_id": "25",
+      "feed_name": null
+    },
+    "guide": {
+      "places": [
+        "san-diego-ca"
+      ],
+      "fingerprint": "2037544dcdc306d9",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:34:35.315Z"
+    },
+    "feed": {
+      "adapter": "lvt",
+      "base": "https://www.livevoterturnout.com/ENR/sandiegocaenr/25",
+      "results_url": "https://www.livevoterturnout.com/ENR/sandiegocaenr/25/en/Index_25.html",
+      "identity": "named",
+      "identity_note": "summary_25.xml and Index_25.html answered our named User-Agent with 200 on Nov 3, 8:18 and 8:21 PM PT (GeneratedDate 7:57:42 PM PT, 689,666 ballots counted).",
+      "election_id_from": "The registry's capture (verified) found sdvote.com's results link on folder 25; the XML's ElectionID is 25 on every row. The XML names no election or date, so the folder is the identity.",
+      "labels": [
+        "Unofficial Election Results"
+      ],
+      "labels_note": "The banner on Index_25.html (shown in capitals), read Nov 3, 8:21 PM PT; the XML carries no status words.",
+      "tz": "America/Los_Angeles"
+    },
+    "certify_by": "2026-12-03",
+    "polls_close": "2026-11-04T04:00:00Z",
+    "count_closes": "2026-12-04T07:59:00Z",
+    "complete_marker": null,
+    "official": null,
+    "contests": [
+      {
+        "feed_id": "19",
+        "feed_name": "MEMBER OF THE STATE ASSEMBLY 75TH DISTRICT",
+        "item": "ca-assembly-75",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "CARL DEMAIO": "Carl DeMaio",
+          "GERALD C. BOURSIQUOT": "Gerald C. Boursiquot"
+        },
+        "reaches": [
+          "San Diego",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "20",
+        "feed_name": "MEMBER OF THE STATE ASSEMBLY 76TH DISTRICT",
+        "item": "ca-assembly-76",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DARSHANA PATEL": "Darshana Patel",
+          "CARRIE S. ESPINOZA VILLANUEVA": "Carrie S. Espinoza Villanueva"
+        },
+        "reaches": [
+          "San Diego",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "21",
+        "feed_name": "MEMBER OF THE STATE ASSEMBLY 77TH DISTRICT",
+        "item": "ca-assembly-77",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "TASHA BOERNER": "Tasha Boerner",
+          "TRINITY HANNAWAY": "Trinity Hannaway"
+        },
+        "reaches": [
+          "San Diego",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "22",
+        "feed_name": "MEMBER OF THE STATE ASSEMBLY 78TH DISTRICT",
+        "item": "ca-assembly-78",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "CHRIS WARD": "Chris Ward",
+          "PAYTON GALVEZ": "Payton Galvez"
+        },
+        "reaches": [
+          "San Diego",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "23",
+        "feed_name": "MEMBER OF THE STATE ASSEMBLY 79TH DISTRICT",
+        "item": "ca-assembly-79",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "LASHAE SHARP-COLLINS": "LaShae Sharp-Collins",
+          "ANDREW LAWSON": "Andrew Lawson"
+        },
+        "reaches": [
+          "San Diego",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "24",
+        "feed_name": "MEMBER OF THE STATE ASSEMBLY 80TH DISTRICT",
+        "item": "ca-assembly-80",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DAVID A. ALVAREZ": "David A. Alvarez",
+          "ALEJANDRO GALICIA": "Alejandro Galicia"
+        },
+        "reaches": [
+          "San Diego",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "14",
+        "feed_name": "STATE SENATOR 18TH DISTRICT (SAN DIEGO PORTION ONLY)",
+        "item": "ca-state-senate-18",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "STEVE PADILLA": "Steve Padilla",
+          "ART HODGES": "Art Hodges"
+        },
+        "reaches": [
+          "San Diego",
+          "Imperial",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "16",
+        "feed_name": "STATE SENATOR 38TH DISTRICT (SAN DIEGO PORTION ONLY)",
+        "item": "ca-state-senate-38",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "CATHERINE S. BLAKESPEAR": "Catherine S. Blakespear",
+          "LAURA BASSETT": "Laura Bassett"
+        },
+        "reaches": [
+          "San Diego",
+          "Orange",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "17",
+        "feed_name": "STATE SENATOR 40TH DISTRICT",
+        "item": "ca-state-senate-40",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MARA ELLIOTT": "Mara Elliott",
+          "KRISTIE BRUCE-LANE": "Kristie Bruce-Lane"
+        },
+        "reaches": [
+          "San Diego",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10",
+        "feed_name": "UNITED STATES REPRESENTATIVE 49TH DISTRICT (SAN DIEGO PORTION ONLY)",
+        "item": "ca-us-house-49",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MIKE LEVIN": "Mike Levin",
+          "ARMEN KURDIAN": "Armen Kurdian"
+        },
+        "reaches": [
+          "San Diego",
+          "Orange"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "11",
+        "feed_name": "UNITED STATES REPRESENTATIVE 50TH DISTRICT",
+        "item": "ca-us-house-50",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "SCOTT PETERS": "Scott Peters",
+          "STEVE COHEN": "Steve Cohen"
+        },
+        "reaches": [
+          "San Diego",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "12",
+        "feed_name": "UNITED STATES REPRESENTATIVE 51ST DISTRICT",
+        "item": "ca-us-house-51",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "SARA JACOBS": "Sara Jacobs",
+          "RICARDO CABRERA": "Ricardo Cabrera"
+        },
+        "reaches": [
+          "San Diego",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "13",
+        "feed_name": "UNITED STATES REPRESENTATIVE 52ND DISTRICT",
+        "item": "ca-us-house-52",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JUAN VARGAS": "Juan Vargas",
+          "JEFF BELLE": "Jeff Belle"
+        },
+        "reaches": [
+          "San Diego",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "148",
+        "feed_name": "CITY OF SAN DIEGO MEMBER, CITY COUNCIL DISTRICT NO. 2",
+        "item": "sd-city-council-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "NICOLE CROSBY": "Nicole Crosby",
+          "RICHARD BAILEY": "Richard Bailey"
+        },
+        "reaches": [
+          "San Diego"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "149",
+        "feed_name": "CITY OF SAN DIEGO MEMBER, CITY COUNCIL DISTRICT NO. 4",
+        "item": "sd-city-council-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MARTHA ABRAHAM": "Martha Abraham",
+          "HENRY FOSTER III": "Henry Foster III"
+        },
+        "reaches": [
+          "San Diego"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "150",
+        "feed_name": "CITY OF SAN DIEGO MEMBER, CITY COUNCIL DISTRICT NO. 6",
+        "item": "sd-city-council-6",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "KENT LEE": "Kent Lee",
+          "MARK POWELL": "Mark Powell"
+        },
+        "reaches": [
+          "San Diego"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "151",
+        "feed_name": "CITY OF SAN DIEGO MEMBER, CITY COUNCIL DISTRICT NO. 8",
+        "item": "sd-city-council-8",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ANTONIO MARTINEZ": "Antonio Martinez",
+          "GERARDO RAMIREZ": "Gerardo Ramirez"
+        },
+        "reaches": [
+          "San Diego"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "111",
+        "feed_name": "ASSESSOR/RECORDER/COUNTY CLERK",
+        "item": "sd-county-assessor",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JORDAN Z. MARKS": "Jordan Z. Marks"
+        },
+        "reaches": [
+          "San Diego"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "43",
+        "feed_name": "COUNTY BOARD OF EDUCATION 3RD DISTRICT",
+        "item": "sd-county-board-of-ed-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ALICIA MUÑOZ": "Alicia Muñoz",
+          "CORY BROWN": "Cory Brown"
+        },
+        "reaches": [
+          "San Diego"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "44",
+        "feed_name": "COUNTY BOARD OF EDUCATION 5TH DISTRICT",
+        "item": "sd-county-board-of-ed-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "RICK SHEA": "Rick Shea",
+          "BIANCA RAGONESI-LASCHE": "Bianca Ragonesi-Lasche"
+        },
+        "reaches": [
+          "San Diego"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "201",
+        "feed_name": "COUNTY OF SAN DIEGO - MEASURE A - Majority Required To Pass",
+        "item": "sd-county-measure-a",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "San Diego"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "202",
+        "feed_name": "COUNTY OF SAN DIEGO - MEASURE B - Majority Required To Pass",
+        "item": "sd-county-measure-b",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "San Diego"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority, 50% plus one (Registrar's voter pamphlet; it is a special tax for set purposes, but because citizens put it on the ballot, a majority is enough)"
+      },
+      {
+        "feed_id": "109",
+        "feed_name": "MEMBER, BOARD OF SUPERVISORS DISTRICT NO. 4",
+        "item": "sd-county-supervisor-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MONICA MONTGOMERY STEPPE": "Monica Montgomery Steppe",
+          "KRISTINE C. ALESSIO": "Kristine C. Alessio"
+        },
+        "reaches": [
+          "San Diego"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "112",
+        "feed_name": "TREASURER-TAX COLLECTOR",
+        "item": "sd-county-treasurer",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "LARRY COHEN": "Larry Cohen",
+          "SHIRLEY NAKAWATASE": "Shirley Nakawatase"
+        },
+        "reaches": [
+          "San Diego"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "48",
+        "feed_name": "SAN DIEGO COMMUNITY COLLEGE DISTRICT MEMBER, BOARD OF TRUSTEES DISTRICT A",
+        "item": "sdccd-district-a",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MARIA NIETO SENOUR": "Maria Nieto Senour",
+          "JONNY BROWN": "Jonny Brown"
+        },
+        "reaches": [
+          "San Diego"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "49",
+        "feed_name": "SAN DIEGO COMMUNITY COLLEGE DISTRICT MEMBER, BOARD OF TRUSTEES DISTRICT C",
+        "item": "sdccd-district-c",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "CRAIG MILGRIM": "Craig Milgrim",
+          "SAMANTHA ELY": "Samantha Ely"
+        },
+        "reaches": [
+          "San Diego"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "66",
+        "feed_name": "SAN DIEGO UNIFIED SCHOOL DISTRICT MEMBER, BOARD OF EDUCATION DISTRICT B",
+        "item": "sdusd-district-b",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "SHANA HAZAN": "Shana Hazan"
+        },
+        "reaches": [
+          "San Diego"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "67",
+        "feed_name": "SAN DIEGO UNIFIED SCHOOL DISTRICT MEMBER, BOARD OF EDUCATION DISTRICT C",
+        "item": "sdusd-district-c",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "HAYDEN GORE": "Hayden Gore"
+        },
+        "reaches": [
+          "San Diego"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "215",
+        "feed_name": "SAN DIEGO UNIFIED SCHOOL DISTRICT - MEASURE M - 55% Required To Pass",
+        "item": "sdusd-measure-m",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "BONDS - YES": "yes",
+          "BONDS - NO": "no"
+        },
+        "reaches": [
+          "San Diego"
+        ],
+        "item_url": null,
+        "pass_threshold": "55% (school bond under Prop 39)"
+      }
+    ],
+    "unmatched_feed": [],
+    "unmatched_guide": [],
+    "not_here": []
   },
   {
     "id": "travis-tx",

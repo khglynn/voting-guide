@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<NewDataSet>
+  <TotalBallotsCast>604945</TotalBallotsCast>
+  <VoterTurnout>31.56%</VoterTurnout>
+  <RegisteredVoters>1916510</RegisteredVoters>
+  <GeneratedDate>2026-11-03T20:04:59.446-08:00</GeneratedDate>
+    <Table>
+    <ElectionID>24</ElectionID>
+    <RaceID>1020</RaceID>
+    <GroupID>56</GroupID>
+    <GroupName>State of California</GroupName>
+    <GroupSequence>1</GroupSequence>
+    <RaceName>Governor</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>12708</ContestantID>
+    <ContestantName>XAVIER BECERRA (DEM)</ContestantName>
+    <Party>DEM</Party>
+    <PartyName />
+    <EarlyVotingBallotsVotes>0</EarlyVotingBallotsVotes>
+    <VotebyMailBallotsVotes>334685</VotebyMailBallotsVotes>
+    <VoteCenterBallotsVotes>0</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>334685</TotalVotes>
+    <NumberOfPrec>2377</NumberOfPrec>
+    <PrecReported>0</PrecReported>
+    <TimesCounted>604945</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>87</OverVotes>
+    <UnderVotes>6506</UnderVotes>
+    <ContestantColor>#F27935</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>55.93%</ContestantVotePercent>
+    <ContestantSeqNoExt>12708</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>24</ElectionID>
+    <RaceID>1020</RaceID>
+    <GroupID>56</GroupID>
+    <GroupName>State of California</GroupName>
+    <GroupSequence>1</GroupSequence>
+    <RaceName>Governor</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>12709</ContestantID>
+    <ContestantName>STEVE HILTON (REP)</ContestantName>
+    <Party>REP</Party>
+    <PartyName />
+    <EarlyVotingBallotsVotes>0</EarlyVotingBallotsVotes>
+    <VotebyMailBallotsVotes>263667</VotebyMailBallotsVotes>
+    <VoteCenterBallotsVotes>0</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>263667</TotalVotes>
+    <NumberOfPrec>2377</NumberOfPrec>
+    <PrecReported>0</PrecReported>
+    <TimesCounted>604945</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>87</OverVotes>
+    <UnderVotes>6506</UnderVotes>
+    <ContestantColor>#0000ff</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>44.07%</ContestantVotePercent>
+    <ContestantSeqNoExt>12709</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>24</ElectionID>
+    <RaceID>3114</RaceID>
+    <GroupID>61</GroupID>
+    <GroupName>School</GroupName>
+    <GroupSequence>6</GroupSequence>
+    <RaceName>CAPISTRANO UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area 4</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>13269</ContestantID>
+    <ContestantName>MELISSA CALDWELL</ContestantName>
+    <Party />
+    <PartyName />
+    <EarlyVotingBallotsVotes>0</EarlyVotingBallotsVotes>
+    <VotebyMailBallotsVotes>6203</VotebyMailBallotsVotes>
+    <VoteCenterBallotsVotes>0</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>6203</TotalVotes>
+    <NumberOfPrec>31</NumberOfPrec>
+    <PrecReported>0</PrecReported>
+    <TimesCounted>14811</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>3</OverVotes>
+    <UnderVotes>3365</UnderVotes>
+    <ContestantColor>#0000ff</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>54.49%</ContestantVotePercent>
+    <ContestantSeqNoExt>13269</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>24</ElectionID>
+    <RaceID>3114</RaceID>
+    <GroupID>61</GroupID>
+    <GroupName>School</GroupName>
+    <GroupSequence>6</GroupSequence>
+    <RaceName>CAPISTRANO UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area 4</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>13119</ContestantID>
+    <ContestantName>MARCO CARRALERO</ContestantName>
+    <Party />
+    <PartyName />
+    <EarlyVotingBallotsVotes>0</EarlyVotingBallotsVotes>
+    <VotebyMailBallotsVotes>5180</VotebyMailBallotsVotes>
+    <VoteCenterBallotsVotes>0</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>5180</TotalVotes>
+    <NumberOfPrec>31</NumberOfPrec>
+    <PrecReported>0</PrecReported>
+    <TimesCounted>14811</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>3</OverVotes>
+    <UnderVotes>3365</UnderVotes>
+    <ContestantColor>#F27935</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>45.51%</ContestantVotePercent>
+    <ContestantSeqNoExt>13119</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>24</ElectionID>
+    <RaceID>5073</RaceID>
+    <GroupID>63</GroupID>
+    <GroupName>City</GroupName>
+    <GroupSequence>8</GroupSequence>
+    <RaceName>CITY OF FULLERTON Member, City Council District 3</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>13215</ContestantID>
+    <ContestantName>*SHANA CHARLES</ContestantName>
+    <Party />
+    <PartyName />
+    <EarlyVotingBallotsVotes>0</EarlyVotingBallotsVotes>
+    <VotebyMailBallotsVotes>1771</VotebyMailBallotsVotes>
+    <VoteCenterBallotsVotes>0</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>1771</TotalVotes>
+    <NumberOfPrec>22</NumberOfPrec>
+    <PrecReported>0</PrecReported>
+    <TimesCounted>3428</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>0</OverVotes>
+    <UnderVotes>408</UnderVotes>
+    <ContestantColor>#F27935</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>59.21%</ContestantVotePercent>
+    <ContestantSeqNoExt>13215</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>24</ElectionID>
+    <RaceID>5073</RaceID>
+    <GroupID>63</GroupID>
+    <GroupName>City</GroupName>
+    <GroupSequence>8</GroupSequence>
+    <RaceName>CITY OF FULLERTON Member, City Council District 3</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>13227</ContestantID>
+    <ContestantName>DANIEL H. KIM</ContestantName>
+    <Party />
+    <PartyName />
+    <EarlyVotingBallotsVotes>0</EarlyVotingBallotsVotes>
+    <VotebyMailBallotsVotes>1220</VotebyMailBallotsVotes>
+    <VoteCenterBallotsVotes>0</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>1220</TotalVotes>
+    <NumberOfPrec>22</NumberOfPrec>
+    <PrecReported>0</PrecReported>
+    <TimesCounted>3428</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>0</OverVotes>
+    <UnderVotes>408</UnderVotes>
+    <ContestantColor>#0000ff</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>40.79%</ContestantVotePercent>
+    <ContestantSeqNoExt>13227</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>24</ElectionID>
+    <RaceID>8600</RaceID>
+    <GroupID>65</GroupID>
+    <GroupName>Measures Submitted to the Voters</GroupName>
+    <GroupSequence>10</GroupSequence>
+    <RaceName>A – Laguna Beach Unified School District, Bond Measure</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>13950</ContestantID>
+    <ContestantName>Bonds - Yes</ContestantName>
+    <Party />
+    <PartyName />
+    <EarlyVotingBallotsVotes>0</EarlyVotingBallotsVotes>
+    <VotebyMailBallotsVotes>5885</VotebyMailBallotsVotes>
+    <VoteCenterBallotsVotes>0</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>5885</TotalVotes>
+    <NumberOfPrec>46</NumberOfPrec>
+    <PrecReported>0</PrecReported>
+    <TimesCounted>9232</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>1</OverVotes>
+    <UnderVotes>623</UnderVotes>
+    <ContestantColor>#0000ff</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>68.45%</ContestantVotePercent>
+    <ContestantSeqNoExt>13950</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>24</ElectionID>
+    <RaceID>8600</RaceID>
+    <GroupID>65</GroupID>
+    <GroupName>Measures Submitted to the Voters</GroupName>
+    <GroupSequence>10</GroupSequence>
+    <RaceName>A – Laguna Beach Unified School District, Bond Measure</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>-13950</ContestantID>
+    <ContestantName>Bonds - No</ContestantName>
+    <Party />
+    <PartyName />
+    <EarlyVotingBallotsVotes>0</EarlyVotingBallotsVotes>
+    <VotebyMailBallotsVotes>2713</VotebyMailBallotsVotes>
+    <VoteCenterBallotsVotes>0</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>2713</TotalVotes>
+    <NumberOfPrec>46</NumberOfPrec>
+    <PrecReported>0</PrecReported>
+    <TimesCounted>9232</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>1</OverVotes>
+    <UnderVotes>623</UnderVotes>
+    <ContestantColor>#F27935</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>31.55%</ContestantVotePercent>
+    <ContestantSeqNoExt>-13950</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+</NewDataSet>

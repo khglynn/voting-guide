@@ -1,0 +1,107 @@
+[
+  {
+    "raceTitle": "U.S. House of Representatives District 1 - Districtwide Results",
+    "Reporting": "24.1% (190 of 788) precincts reporting",
+    "ReportingTime": "November 3, 2026, 8:15 p.m.",
+    "candidates": [
+      {
+        "Name": "Mike McGuire",
+        "Party": "Dem",
+        "Votes": "41,566",
+        "Percent": "70.5",
+        "incumbent": false
+      },
+      {
+        "Name": "James Gallagher",
+        "Party": "Rep",
+        "Votes": "17,432",
+        "Percent": "29.5",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "U.S. House of Representatives District 11 - Districtwide Results",
+    "Reporting": "0% (0 of 453) precincts reporting",
+    "ReportingTime": "November 3, 2026, 8:15 p.m.",
+    "candidates": [
+      {
+        "Name": "Connie Chan",
+        "Party": "Dem",
+        "Votes": "0",
+        "Percent": "0.0",
+        "incumbent": false
+      },
+      {
+        "Name": "Scott Wiener",
+        "Party": "Dem",
+        "Votes": "0",
+        "Percent": "0.0",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "U.S. House of Representatives District 15 - Districtwide Results",
+    "Reporting": "0% (0 of 299) precincts reporting",
+    "ReportingTime": "November 3, 2026, 8:15 p.m.",
+    "candidates": [
+      {
+        "Name": "Kevin Mullin",
+        "Party": "Dem",
+        "Votes": "0",
+        "Percent": "0.0",
+        "incumbent": false
+      },
+      {
+        "Name": "Charles Hoelter",
+        "Party": "Rep",
+        "Votes": "0",
+        "Percent": "0.0",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "U.S. House of Representatives District 50 - Districtwide Results",
+    "Reporting": "68.3% (487 of 713) precincts reporting",
+    "ReportingTime": "November 3, 2026, 8:15 p.m.",
+    "candidates": [
+      {
+        "Name": "Scott Peters",
+        "Party": "Dem",
+        "Votes": "107,567",
+        "Percent": "61.1",
+        "incumbent": false
+      },
+      {
+        "Name": "Steve Cohen",
+        "Party": "Rep",
+        "Votes": "68,571",
+        "Percent": "38.9",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "U.S. House of Representatives District 52 - Districtwide Results",
+    "Reporting": "72.4% (420 of 580) precincts reporting",
+    "ReportingTime": "November 3, 2026, 8:15 p.m.",
+    "candidates": [
+      {
+        "Name": "Juan Vargas",
+        "Party": "Dem",
+        "Votes": "77,001",
+        "Percent": "68.4",
+        "incumbent": false
+      },
+      {
+        "Name": "Jeff Belle",
+        "Party": "Rep",
+        "Votes": "35,610",
+        "Percent": "31.6",
+        "incumbent": false
+      }
+    ]
+  }
+]

@@ -319,6 +319,14 @@ test('fetch: a bot check or CAPTCHA is a refusal whatever its status; a plain 5x
   assert.equal(r.verdict, 'refused');
   r = await tx.read({ fetch: fakeFetch({ 'results.html': 'tx-sos.results.html' }), map });
   assert.equal(r.verdict, 'ok');
+  // Cloudflare's script injected into an ordinary page is not a bot check; neither is an error page that carries it.
+  const page = fixture('tx-sos.results.html');
+  const injected = page.replace('<head>', '<head><script>(function(){var a=document.createElement("script");a.src="/cdn-cgi/challenge-platform/scripts/jsd/main.js";document.head.appendChild(a)})();</script>');
+  assert.notEqual(injected, page, 'the script really went in');
+  r = await tx.read({ fetch: fakeFetch({ 'results.html': { status: 200, body: injected } }), map });
+  assert.equal(r.verdict, 'ok', 'the real SOS page with the injected script still reads');
+  r = await at({ status: 503, body: '<html><head><title>503 Service Unavailable</title></head><body><script src="/cdn-cgi/challenge-platform/scripts/jsd/main.js"></script></body></html>' });
+  assert.equal(r.verdict, 'error');
 });
 
 test('tick: a Clarity CAPTCHA (405) stops the source after one request, with no retry, and says so in the log', async () => {

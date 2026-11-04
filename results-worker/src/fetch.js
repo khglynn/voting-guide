@@ -26,15 +26,20 @@ export async function bodyText(res) {
 
 /* A bot check or CAPTCHA is a refusal whatever status it comes with: the source stops, its rows link out, and we never
    try to get past it (Kevin's call 6). Clarity's AWS WAF answered with a 405 "Human Verification" page on Nov 3 at
-   9:09 PM, and marks its challenges with x-amzn-waf-action; Cloudflare marks its own with cf-mitigated; a 200 page can
-   carry one (the Texas SOS sits behind Cloudflare). A plain 500, 502 or 504 is not one, so real blips still recover. */
-const CHALLENGE_WORDS = /captcha|human verification|confirm you are (?:a )?human|verify you are (?:a )?human|just a moment\.\.\.|attention required|cf-chl-|challenge-platform|are you a robot/i;
-export function challengeOf(res, body = '') {
+   9:09 PM, and marks its challenges with x-amzn-waf-action; Cloudflare marks its own with cf-mitigated and titles them
+   "Just a moment..." or "Attention Required!"; a 200 page can be one (the Texas SOS sits behind Cloudflare). A plain
+   500, 502, 503 or 504 is not one, so real blips still recover. A good page is judged by its <title> only: Cloudflare
+   injects a "/cdn-cgi/challenge-platform/" script into ordinary pages, so words in the body would stop a real source. */
+const CHALLENGE_TITLE = /just a moment|attention required|captcha|human verification|verify you are (?:a )?human|are you a robot/i;
+const CHALLENGE_WORDS = /captcha|human verification|confirm you are (?:a )?human|verify you are (?:a )?human|are you a robot/i;
+export function challengeOf(res, body = '', { page = false } = {}) {
   if (res.status === 405) return 'HTTP 405, a bot check';
   const waf = res.headers.get('x-amzn-waf-action');
   if (waf) return `HTTP ${res.status}, a bot check (x-amzn-waf-action: ${waf})`;
   if (/challenge/i.test(res.headers.get('cf-mitigated') || '')) return `HTTP ${res.status}, a bot check (cf-mitigated: challenge)`;
-  if (body && CHALLENGE_WORDS.test(body.slice(0, 50000))) return `HTTP ${res.status}, a bot check page came back`;
+  const title = (String(body).match(/<title[^>]*>([\s\S]{0,200}?)<\/title>/i) || [])[1] || '';
+  if (CHALLENGE_TITLE.test(title)) return `HTTP ${res.status}, a bot check page came back ("${title.replace(/\s+/g, ' ').trim().slice(0, 60)}")`;
+  if (!page && body && CHALLENGE_WORDS.test(String(body).slice(0, 50000))) return `HTTP ${res.status}, a bot check page came back`;
   return null;
 }
 
@@ -68,6 +73,6 @@ export async function get(fetchFn, url, { identity = 'named', expect = 'json', h
     try { return { verdict: 'ok', ...meta, body, json: JSON.parse(body) }; } catch { return { verdict: 'error', ...meta, error: 'the data was not valid JSON' }; }
   }
   if (expect === 'text' && /^\s*<(!doctype|html)/i.test(body)) return { verdict: 'refused', ...meta, error: 'an HTML page came back where a short text file was expected' };
-  if (expect === 'html') { const ch = challengeOf(res, body); if (ch) return { verdict: 'refused', challenge: true, ...meta, error: ch }; }
+  if (expect === 'html') { const ch = challengeOf(res, body, { page: true }); if (ch) return { verdict: 'refused', challenge: true, ...meta, error: ch }; }
   return { verdict: 'ok', ...meta, body };
 }

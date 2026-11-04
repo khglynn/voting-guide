@@ -80,6 +80,6 @@ export async function read({ fetch, map, prevToken = null }) {
     source_updated: parseUsTime(p.updated, -7),
     reporting: p.ballots ? `Total Ballots Counted: ${p.ballots}` : null,
     labels: [p.subtitle].filter(Boolean),
-    contests,
+    contests: p.contests,
   };
 }

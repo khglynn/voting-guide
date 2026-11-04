@@ -108,7 +108,7 @@ async function runSource({ map, fetch, store, archive, sched, now, ping }) {
   const rec = { read, fetched: now, hash, read_version: READ_VERSION, blocked: false, problems: check.problems, raw_key: `raw/${map.id}/${now}-${hash}.json` };
   await store.put(`src:${map.id}`, JSON.stringify(rec));
   await store.delete(`blocked:${map.id}`);
-  for (const p of check.problems) if (p.reason === 'falling total') await ping(map.id, 'falling total', `${map.name}: ${p.detail}.`);
+  for (const p of check.problems) if (p.reason === 'falling total' || p.reason === 'falling total accepted') await ping(map.id, p.reason, `${map.name}: ${p.detail}.`);
   const status = sourceStatus(read, map, now);
   S[map.id] = nextEntry(S[map.id], { kind: 'ok', changed: true, status, allComplete: status === 'complete' }, now, map);
   S[map.id].token = r.changed_token;

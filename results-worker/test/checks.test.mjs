@@ -63,6 +63,43 @@ test('bad numbers block the read; a falling total keeps the earlier numbers', ()
   assert.match(now.contests[0].note, /fell from 55 to 15/);
 });
 
+test('a falling total keeps its numbers with their own time; three lower reads in a row land as a correction', async () => {
+  const { sourceSlices } = await import('../src/merge.js');
+  const map = { id: 't', name: 'T County', county: 'T', election: { date: '2026-11-03' }, feed: { tz: 'America/Chicago', results_url: 'https://t.example/' }, contests: [{ feed_id: '1', feed_name: 'X', item: 'x', kind: 'plurality', seats: 1, choices: { A: 'A', B: 'B' }, reaches: ['T'] }] };
+  const mk = (v, at) => ({ election: { date: '2026-11-03' }, source_updated: at, contests: [{ feed_id: '1', feed_name: 'X', updated: null, reporting: `at ${at}`, choices: [{ name: 'A', votes: v }, { name: 'B', votes: 0 }] }] });
+  const nine = '2026-11-04T03:00:00.000Z';
+  const r0 = mk(1200, nine);
+  const r1 = mk(1000, '2026-11-04T04:30:00.000Z');
+  let c = checkRead(r1, map, r0);
+  assert.deepEqual(c.kept, ['1']);
+  const k = r1.contests[0];
+  assert.equal(k.choices[0].votes, 1200);
+  assert.equal(k.updated, nine, 'kept numbers keep the time they are from');
+  assert.equal(k.carried_from, nine);
+  assert.equal(k.reporting, `at ${nine}`, 'and their own progress words');
+  assert.equal(k.note, "The source's total fell from 1,200 to 1,000 at its 10:30 PM update, so these are its numbers from 9:00 PM.");
+  assert.equal(sourceSlices(r1, map, '2026-11-04T04:31:00.000Z').slices.x.updated, nine, 'the file shows 9:00 PM, not 10:30 PM');
+  // a second lower read: still kept, still 9:00 PM
+  const r2 = mk(1010, '2026-11-04T05:00:00.000Z');
+  c = checkRead(r2, map, r1);
+  assert.deepEqual(c.kept, ['1']);
+  assert.equal(r2.contests[0].updated, nine);
+  // the third lower read in a row: the source's own count stands (a correction)
+  const r3 = mk(1020, '2026-11-04T05:30:00.000Z');
+  c = checkRead(r3, map, r2);
+  assert.deepEqual(c.kept, []);
+  assert.equal(r3.contests[0].choices[0].votes, 1020);
+  assert.equal(r3.contests[0].updated, null);
+  assert.equal(r3.contests[0].note, undefined);
+  assert.ok(c.problems.some((p) => p.reason === 'falling total accepted'));
+  // a read back at or above the kept total in between starts the count over
+  const a1 = mk(1000, '2026-11-04T04:30:00.000Z'); checkRead(a1, map, mk(1200, nine));
+  const a2 = mk(1300, '2026-11-04T05:00:00.000Z'); checkRead(a2, map, a1);
+  assert.equal(a2.contests[0].falls, undefined);
+  const a3 = mk(1250, '2026-11-04T05:30:00.000Z'); assert.deepEqual(checkRead(a3, map, a2).kept, ['1']);
+  assert.equal(a3.contests[0].falls, 1);
+});
+
 test('tick: a blocked read keeps the previous good read as the baseline', async () => {
   const map = mapFor('dallas-county-tx');
   const good = {

@@ -15,7 +15,7 @@ export function fakeFetch(routes) {
       if (!url.includes(k)) continue;
       const spec = typeof v === 'function' ? v(url, opts) : typeof v === 'string' ? { status: 200, body: fixture(v) } : v;
       const headers = new Map(Object.entries(spec.headers || {}).map(([a, b]) => [a.toLowerCase(), b]));
-      return { status: spec.status, ok: spec.status >= 200 && spec.status < 300, headers: { get: (h) => headers.get(h.toLowerCase()) ?? null }, text: async () => spec.body ?? '' };
+      return { status: spec.status, ok: spec.status >= 200 && spec.status < 300, headers: { get: (h) => headers.get(h.toLowerCase()) ?? null }, text: async () => (typeof spec.body === 'string' ? spec.body : ''), arrayBuffer: async () => (spec.bytes ? spec.bytes : new TextEncoder().encode(spec.body ?? '')).buffer };
     }
     return { status: 404, ok: false, headers: { get: () => null }, text: async () => 'not found' };
   };

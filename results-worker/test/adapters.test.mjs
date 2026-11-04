@@ -103,3 +103,13 @@ test('harris: official flag and counts', async () => {
   assert.equal(r.contests[0].total, 15);
   assert.equal(r.contests[0].reporting, '3 of 3 precincts reporting');
 });
+
+test('clarity: a summary.json sent gzipped without Content-Encoding (Fulton, Nov 3) is unzipped by hand', async () => {
+  const { gzipSync } = await import('node:zlib');
+  const { fixture } = await import('./helpers.mjs');
+  const zipped = new Uint8Array(gzipSync(Buffer.from(fixture('clarity-bexar.summary.json'))));
+  const f = fakeFetch({ ...bexarRoutes, '/127291/379718/json/en/summary.json': { status: 200, bytes: zipped } });
+  const r = await clarity.read({ fetch: f, map: mapFor('bexar-tx') });
+  assert.equal(r.verdict, 'ok');
+  assert.equal(r.contests.length, 183);
+});

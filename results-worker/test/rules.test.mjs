@@ -135,3 +135,11 @@ test('ladder: never past the polls closing before numbers; every minute after it
   e = nextEntry(e, { kind: 'ok', changed: false, status: 'pending' }, '2026-11-04T01:00:00.000Z', map);
   assert.equal(e.next_due, '2026-11-04T01:01:00.000Z');
 });
+
+test('a placeholder precinct count (0 of N) with votes posted is counting, and keeps the source words', () => {
+  const read = readOf([{ feed_id: '1', feed_name: 'Mayor', reporting: '0 of 437 precincts reporting', choices: [{ name: 'SMITH, ANN', votes: 60 }, { name: 'JONES, BO', votes: 40 }, { name: 'Write-in', votes: 0 }, { name: 'Cy Doe (W)', votes: 0 }] }, { feed_id: '2', feed_name: 'Prop A', reporting: '437 of 437 precincts reporting', choices: [{ name: 'FOR', votes: 1 }, { name: 'AGAINST', votes: 1 }] }]);
+  const f = buildStateFile({ state: 'TX', maps: [MAP_A], srcs: { 'a-tx': { record: { read, fetched: '2026-11-04T02:00:00.000Z' }, checked: true, sched: {} } }, mode: 'public', now: '2026-11-04T02:00:00.000Z' });
+  assert.equal(f.items.mayor.status, 'counting');
+  assert.equal(f.items.mayor.reporting, '0 of 437 precincts reporting');
+  assert.equal(f.items['prop-a'].status, 'counting', 'every precinct in is still not complete without the source\'s own marker');
+});

@@ -10,6 +10,19 @@
 export const NAMED_UA = 'vote.kevinhg.com results fetcher (+https://vote.kevinhg.com)';
 export const BROWSER_UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36';
 
+/* Some Clarity hosts (Fulton GA, Nov 3) send summary.json gzipped with no Content-Encoding header, so the platform
+   never unzips it. Read the bytes, and when they start with gzip's magic (1f 8b), unzip them by hand.
+   DecompressionStream exists in both Workers and Node 18+. */
+export async function bodyText(res) {
+  if (typeof res.arrayBuffer !== 'function') return res.text();
+  let bytes = new Uint8Array(await res.arrayBuffer());
+  if (bytes.length > 2 && bytes[0] === 0x1f && bytes[1] === 0x8b) {
+    const out = new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip')));
+    bytes = new Uint8Array(await out.arrayBuffer());
+  }
+  return new TextDecoder('utf-8').decode(bytes);
+}
+
 export async function get(fetchFn, url, { identity = 'named', expect = 'json', headers = {}, timeoutMs = 15000 } = {}) {
   const h = { 'User-Agent': identity === 'browser' ? BROWSER_UA : NAMED_UA, Accept: expect === 'json' ? 'application/json, text/plain, */*' : '*/*', ...headers };
   let res;
@@ -24,7 +37,7 @@ export async function get(fetchFn, url, { identity = 'named', expect = 'json', h
   if (res.status === 304) return { verdict: 'not_modified', ...meta };
   if ([401, 403, 429].includes(res.status)) return { verdict: 'refused', ...meta, error: `HTTP ${res.status}` };
   if (!res.ok) return { verdict: 'error', ...meta, error: `HTTP ${res.status}` };
-  const body = await res.text();
+  const body = await bodyText(res);
   if (expect === 'json') {
     if (/^\s*</.test(body)) return { verdict: 'refused', ...meta, error: 'an HTML page came back where data was expected (a bot check?)' };
     try { return { verdict: 'ok', ...meta, body, json: JSON.parse(body) }; } catch { return { verdict: 'error', ...meta, error: 'the data was not valid JSON' }; }
